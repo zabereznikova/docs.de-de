@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="architecture-of-syndication"></a>Architektur von Syndication
 Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell zu bieten, mit dem es möglich ist, Schlagzeilen in verschiedenen Formaten zu schreiben und direkt zu übertragen. Das abstrakte Datenmodell besteht aus den folgenden Klassen:  
@@ -43,7 +43,7 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Syndication-Unterstützung baut auf dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST-Programmiermodell auf, das die <xref:System.ServiceModel.WebHttpBinding>-Bindung definiert. Diese wird zusammen mit <xref:System.ServiceModel.Description.WebHttpBehavior> dazu verwendet, Feeds als Dienste verfügbar zu machen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST-Programmiermodell finden Sie unter [Web-HTTP-Programmierung Überblick über WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Syndication-Unterstützung baut auf dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST-Programmiermodell auf, das die <xref:System.ServiceModel.WebHttpBinding>-Bindung definiert. Diese wird zusammen mit <xref:System.ServiceModel.Description.WebHttpBehavior> dazu verwendet, Feeds als Dienste verfügbar zu machen. Weitere Informationen zu den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST-Programmiermodell finden Sie unter [Web-HTTP-Programmierung Überblick über WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 >  Die Atom&#160;1.0-Spezifikation lässt zu, dass Sekundenbruchteile in beliebigen Datenkonstrukten angegeben werden. Beim Serialisieren und Deserialisieren ignoriert die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Implementierung die Sekundenbruchteile.  

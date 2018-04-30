@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 331e71f26b1c703f7df27086d943e799b4eb13e2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="introduction-to-extensibility"></a>Einführung in die Erweiterbarkeit
 Mit dem [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungsmodell wird den meisten Kommunikationsanforderungen aller beliebigen verteilten Anwendungen entsprochen. Es treten jedoch häufig Szenarien auf, die das Standardanwendungsmodell und vom System bereitgestellte Implementierungen nicht unterstützen. Mit dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Erweiterbarkeitsmodell werden benutzerdefinierte Szenarien unterstützt, indem das Systemverhalten auf jeder Ebene geändert werden kann. Dies ist sogar bis zum Ersatz des gesamten Anwendungsmodells möglich. Dieses Thema gliedert die verschiedenen Bereiche der Erweiterung und verweist auf weitere Informationen zu jeder Erweiterung.  
@@ -43,7 +43,7 @@ Mit dem [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungsmodell wi
   
  Anwendungsnachrichten beinhalten Daten für einen Client- oder einen Dienstvorgang, der von Ihnen oder einem Kunden erstellt wurde. Diese Nachrichten sind je nach Anforderung für das Erweiterungssystem auf Anwendungsebene in Nachrichten- oder Objektform verfügbar.  
   
- Alle Nachrichten durchlaufen das Kanalsystem; nur Anwendungsnachrichten werden vom Kanalsystem an die Anwendung weitergegeben. Um neue Funktionen auf Kanalebene zu erstellen, muss das Kanalsystem erweitert werden. Sollen neue Funktionen auf Anwendungsebene erstellt werden, muss die Dienst- oder Clientlaufzeit (Verteiler bzw. Kanalfactorys) erweitert werden. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Erweitern der Anwendungslaufzeit finden Sie unter [Erweitern von ServiceHost und der Dienstmodellebene](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Alle Nachrichten durchlaufen das Kanalsystem; nur Anwendungsnachrichten werden vom Kanalsystem an die Anwendung weitergegeben. Um neue Funktionen auf Kanalebene zu erstellen, muss das Kanalsystem erweitert werden. Sollen neue Funktionen auf Anwendungsebene erstellt werden, muss die Dienst- oder Clientlaufzeit (Verteiler bzw. Kanalfactorys) erweitert werden. Weitere Informationen zum Erweitern der Anwendungslaufzeit finden Sie unter [Erweitern von ServiceHost und der Dienstmodellebene](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Erweitern der Sicherheit  
  Um benutzerdefinierte Sicherheitsmechanismen (zum Beispiel Token und Anmeldeinformationen) zu erstellen, muss das Sicherheitssystem erweitert werden. Weitere Informationen finden Sie unter [Erweitern der Sicherheit](../../../docs/framework/wcf/extending/extending-security.md).  

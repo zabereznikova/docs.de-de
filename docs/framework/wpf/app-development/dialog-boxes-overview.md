@@ -1,12 +1,13 @@
 ---
-title: "Übersicht über Dialogfelder"
-ms.custom: 
+title: Übersicht über Dialogfelder
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfe22dec0827f0ceb880b9410b64668f219a422f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="dialog-boxes-overview"></a>Übersicht über Dialogfelder
 Eigenständige Anwendungen verfügen in der Regel ein Hauptfenster, dass beide zeigt die wichtigsten Daten über den die Anwendung ausgeführt wird, und macht die Funktionalität zum Verarbeiten von Daten über [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Mechanismen wie Menüs, Symbolleisten und Statusleisten. Eine nicht triviale Anwendung kann auch zusätzliche Fenster anzeigen, um Folgendes auszuführen:  
@@ -43,7 +45,7 @@ Eigenständige Anwendungen verfügen in der Regel ein Hauptfenster, dass beide z
   
  Ein *nicht modalen* (Dialogfeld), auf der anderen Seite wird nicht verhindert einen Benutzer andere Fenster aktiviert, während er geöffnet ist. Wenn ein Benutzer z. B. Vorkommen eines bestimmten Worts in einem Dokument finden möchte, wird in einem Hauptfenster oft ein Dialogfeld geöffnet, um den Benutzer zu fragen, nach welchem Wort er sucht. Da die Suche nach einem Wort einen Benutzer aber nicht an der Bearbeitung des Dokuments hindert, muss das Dialogfeld nicht unbedingt modal sein. Mindestens ein nicht modales Dialogfeld bietet eine **schließen** Schaltfläche, um das Dialogfeld zu schließen, und möglicherweise weitere Schaltflächen, um bestimmte Funktionen auszuführen, z. B. eine **Weitersuchen** Schaltfläche, um die nächste, die in word entspricht einer Word-Suche die Suchkriterien an.  
   
- Mit [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] können Sie mehrere Typen von Dialogfeldern erstellen. Dazu zählen Meldungsfelder, Standarddialogfelder und benutzerdefinierte Dialogfelder. In diesem Thema wird erläutert, und die [Dialog Box Sample](http://go.microsoft.com/fwlink/?LinkID=159984) enthält entsprechende Beispiele.  
+ Windows Presentation Foundation (WPF) können Sie mehrere Typen von Dialogfeldern, einschließlich Meldungsfelder, häufig verwendete Dialogfelder und benutzerdefinierte Dialogfelder zu erstellen. In diesem Thema wird erläutert, und die [Dialog Box Sample](http://go.microsoft.com/fwlink/?LinkID=159984) enthält entsprechende Beispiele.  
   
  
   
@@ -53,7 +55,7 @@ Eigenständige Anwendungen verfügen in der Regel ein Hauptfenster, dass beide z
   
  ![Dialogfeld für Textverarbeitung](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
   
- Um ein Meldungsfeld zu erstellen, verwenden Sie die <xref:System.Windows.MessageBox> Klasse. <xref:System.Windows.MessageBox>können Sie Text in Meldungsfeldern, Titel, Symbol und die Schaltflächen, mit Code wie folgt zu konfigurieren.  
+ Um ein Meldungsfeld zu erstellen, verwenden Sie die <xref:System.Windows.MessageBox> Klasse. <xref:System.Windows.MessageBox> können Sie Text in Meldungsfeldern, Titel, Symbol und die Schaltflächen, mit Code wie folgt zu konfigurieren.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
@@ -72,13 +74,13 @@ Eigenständige Anwendungen verfügen in der Regel ein Hauptfenster, dass beide z
   
  Obwohl <xref:System.Windows.MessageBox> möglicherweise bieten eine einfache Dialogfeld Feld Benutzer erzielen Sie, den Vorteil der Verwendung von <xref:System.Windows.MessageBox> ist, ist der einzige Typ von Fenster, das von Anwendungen angezeigt werden kann, die innerhalb einer Sicherheits-Sandbox teilweiser Vertrauenswürdigkeit ausgeführt (finden Sie unter [Sicherheit](../../../../docs/framework/wpf/security-wpf.md)), wie z. B. [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
- In den meisten Dialogfeldern werden komplexere Daten angezeigt und gesammelt als im Ergebnis eines Meldungsfelds. Dazu zählen Text, Auswahlmöglichkeiten (Kontrollkästchen), sich gegenseitig ausschließende Auswahlmöglichkeiten (Optionsfelder) und Auswahlmöglichkeiten in einer Liste (Listenfelder, Kombinationsfelder, Dropdown-Listenfelder). Für diese [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] enthält einige häufig verwendete Dialogfelder und ermöglicht Ihnen das Erstellen eigener Dialogfelder zwar die Verwendung von entweder auf Anwendungen mit voller Vertrauenswürdigkeit ausgeführt beschränkt ist.  
+ In den meisten Dialogfeldern werden komplexere Daten angezeigt und gesammelt als im Ergebnis eines Meldungsfelds. Dazu zählen Text, Auswahlmöglichkeiten (Kontrollkästchen), sich gegenseitig ausschließende Auswahlmöglichkeiten (Optionsfelder) und Auswahlmöglichkeiten in einer Liste (Listenfelder, Kombinationsfelder, Dropdown-Listenfelder). Für diese Windows Presentation Foundation (WPF) bietet einige häufig verwendete Dialogfelder und ermöglicht Ihnen das Erstellen eigener Dialogfelder zwar die Verwendung von entweder auf Anwendungen mit voller Vertrauenswürdigkeit ausgeführt beschränkt ist.  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Häufig verwendete Dialogfelder  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementiert eine Reihe von wiederverwendbaren Dialogfeldern, die für alle Anwendungen gleich sind. Dazu zählen Dialogfelder zum Öffnen und Speichern von Dateien und zum Drucken. Da diese Dialogfelder durch das Betriebssystem implementiert werden, können sie von allen Anwendungen, die unter dem Betriebssystem ausgeführt werden, genutzt werden. Dies trägt zu einer konsistenten Benutzererfahrung bei: Wenn Benutzer mit der Verwendung eines durch das Betriebssystem bereitgestellten Dialogfelds in einer Anwendung vertraut sind, müssen Sie nicht lernen, wie sie dieses Dialogfeld in anderen Anwendungen verwenden. Da diese Dialogfelder für alle Anwendungen stehen und weil sie dabei helfen, eine konsistente benutzererfahrung zu gewährleisten, werden sie als bezeichnet *häufig verwendete Dialogfelder*.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] kapselt die Standarddialogfelder zum Öffnen und Speichern von Dateien sowie zum Drucken und stellt sie als verwaltete Klassen für die Verwendung in eigenständigen Anwendungen zur Verfügung. Dieses Thema enthält eine kurze Übersicht über die einzelnen Dialogfelder.  
+ Windows Presentation Foundation (WPF) kapselt die geöffnete Datei, speichern Sie die Datei, und Drucken häufig verwendete Dialogfelder und macht sie als verwaltete Klassen für die Sie in eigenständigen Anwendungen verwenden. Dieses Thema enthält eine kurze Übersicht über die einzelnen Dialogfelder.  
   
 <a name="Open_File_Dialog"></a>   
 ### <a name="open-file-dialog"></a>Dialogfeld „Datei öffnen“  
@@ -94,7 +96,7 @@ Eigenständige Anwendungen verfügen in der Regel ein Hauptfenster, dass beide z
  Weitere Informationen im Dialogfeld Datei öffnen können, finden Sie unter <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog>dienen zum Dateinamen sicher Abrufen von Anwendungen, die mit teilweiser Vertrauenswürdigkeit ausgeführt (siehe [Sicherheit](../../../../docs/framework/wpf/security-wpf.md)).  
+>  <xref:Microsoft.Win32.OpenFileDialog> dienen zum Dateinamen sicher Abrufen von Anwendungen, die mit teilweiser Vertrauenswürdigkeit ausgeführt (siehe [Sicherheit](../../../../docs/framework/wpf/security-wpf.md)).  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>Dialogfeld „Datei speichern“  
@@ -124,7 +126,7 @@ Eigenständige Anwendungen verfügen in der Regel ein Hauptfenster, dass beide z
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>Benutzerdefinierte Dialogfelder  
- Obwohl Standarddialogfelder hilfreich sind und nach Möglichkeit verwendet werden sollten, unterstützen sie nicht die Anforderungen von domänenspezifischen Dialogfeldern. In diesen Fällen müssen Sie eigene Dialogfelder erstellen. Wie später ersichtlich wird, ist ein Dialogfeld ein Fenster mit besonderen Verhaltensweisen. <xref:System.Windows.Window>Diese Verhalten implementiert, und verwenden Sie daher <xref:System.Windows.Window> benutzerdefinierte modale und nicht modale Dialogfelder zu erstellen.  
+ Obwohl Standarddialogfelder hilfreich sind und nach Möglichkeit verwendet werden sollten, unterstützen sie nicht die Anforderungen von domänenspezifischen Dialogfeldern. In diesen Fällen müssen Sie eigene Dialogfelder erstellen. Wie später ersichtlich wird, ist ein Dialogfeld ein Fenster mit besonderen Verhaltensweisen. <xref:System.Windows.Window> Diese Verhalten implementiert, und verwenden Sie daher <xref:System.Windows.Window> benutzerdefinierte modale und nicht modale Dialogfelder zu erstellen.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Erstellen eines modalen benutzerdefinierten Dialogfelds  
@@ -307,7 +309,7 @@ Eigenständige Anwendungen verfügen in der Regel ein Hauptfenster, dass beide z
  Im Gegensatz zu <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> wird sofort zurückgegeben. Dementsprechend kann das aufrufende Fenster nicht erkennen, wann das nicht modale Dialogfeld geschlossen wird, und weiß deshalb auch nicht, wann es ein Dialogfeldergebnis überprüfen oder Daten vom Dialogfeld zur weiteren Verarbeitung abrufen soll. Stattdessen muss vom Dialogfeld eine andere Möglichkeit erstellt werden, um Daten an das aufrufende Fenster zur Verarbeitung zurückzugeben.  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Verarbeiten von Daten, die von einem nicht modalen Dialogfeld zurückgegeben werden  
- In diesem Beispiel wird die `FindDialogBox` möglicherweise eine oder mehrere Suchergebnisse an das Hauptfenster, je nach den Text gesucht wird, ohne bestimmten Häufigkeit zurück. Wie ein modales Dialogfeld kann auch ein nicht modales Dialogfeld Ergebnisse mithilfe von Eigenschaften zurückgeben. Das Fenster, das Besitzer des Dialogfelds ist, muss jedoch wissen, wann es diese Eigenschaften überprüfen soll. Diese Funktionalität kann z. B. dadurch aktiviert werden, dass das Dialogfeld ein Ereignis implementiert, das jedes Mal ausgelöst wird, wenn Text gefunden wird. `FindDialogBox`implementiert die `TextFoundEvent` zu diesem Zweck wird benötigt, durch den zuerst einen Delegaten.  
+ In diesem Beispiel wird die `FindDialogBox` möglicherweise eine oder mehrere Suchergebnisse an das Hauptfenster, je nach den Text gesucht wird, ohne bestimmten Häufigkeit zurück. Wie ein modales Dialogfeld kann auch ein nicht modales Dialogfeld Ergebnisse mithilfe von Eigenschaften zurückgeben. Das Fenster, das Besitzer des Dialogfelds ist, muss jedoch wissen, wann es diese Eigenschaften überprüfen soll. Diese Funktionalität kann z. B. dadurch aktiviert werden, dass das Dialogfeld ein Ereignis implementiert, das jedes Mal ausgelöst wird, wenn Text gefunden wird. `FindDialogBox` implementiert die `TextFoundEvent` zu diesem Zweck wird benötigt, durch den zuerst einen Delegaten.  
   
  [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
  [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  

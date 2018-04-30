@@ -1,24 +1,26 @@
 ---
-title: "Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client"
-ms.custom: 
+title: 'Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client
 In diesem Thema wird erläutert, wie Sie erreichen, dass ein [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst erkennbar ist und danach gesucht werden kann. Es basiert auf der [Selbsthosting](http://go.microsoft.com/fwlink/?LinkId=145523) Beispiel.  
@@ -231,7 +233,7 @@ In diesem Thema wird erläutert, wie Sie erreichen, dass ein [!INCLUDE[indigo1](
     ```  
   
 ## <a name="example"></a>Beispiel  
- Es folgt eine Auflistung des Codes für dieses Beispiel. Dieser Code basiert auf der [Selbsthosting](http://go.microsoft.com/fwlink/?LinkId=145523) Beispiel nur die Dateien, die geändert werden, werden aufgeführt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Das Beispiel Selbsthosting finden Sie unter [Setupanweisungen](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ Es folgt eine Auflistung des Codes für dieses Beispiel. Dieser Code basiert auf der [Selbsthosting](http://go.microsoft.com/fwlink/?LinkId=145523) Beispiel nur die Dateien, die geändert werden, werden aufgeführt. Weitere Informationen zu dem Beispiel Selbsthosting finden Sie unter [Setupanweisungen](http://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

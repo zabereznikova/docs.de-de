@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queuing-in-wcf"></a>Warteschlangen in WCF
 In diesem Abschnitt wird beschrieben, wie der Warteschlange hinzugefügte Kommunikation in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet wird.  
@@ -51,7 +51,7 @@ In diesem Abschnitt wird beschrieben, wie der Warteschlange hinzugefügte Kommun
   
  MSMQ-Warteschlangen können auch mit einer Windows-Identität, die im Active Directory-Verzeichnisdienst registriert wird, gesichert werden. Bei der Installation von MSMQ kann die Active Directory-Integration installiert werden. Der Computer muss in diesem Fall Teil eines Windows-Domänennetzwerks sein.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, finden Sie unter [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ Weitere Informationen zu MSMQ, finden Sie unter [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Die [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) wird von die Bindung [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden für zwei [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Endpunkte für die Kommunikation über MSMQ. Die Bindung macht deshalb MSMQ-spezifische Eigenschaften verfügbar. Allerdings sind nicht alle MSMQ-Features und -Eigenschaften in `NetMsmqBinding` verfügbar. Die kompakte `NetMsmqBinding` verfügt über ein optimales Spektrum an Features, die für die meisten Kunden ausreichend sind.  
@@ -79,12 +79,12 @@ In diesem Abschnitt wird beschrieben, wie der Warteschlange hinzugefügte Kommun
   
  Die Bindung verfügt über zwei wichtige Eigenschaften:  
   
--   `DeadLetterQueue`: Diese Eigenschaft ist eine Enumeration, die angibt, ob eine Warteschlange für unzustellbare Nachrichten angefordert wird. Die Enumeration enthält auch die Art der Warteschlange für unzustellbare Nachrichten, sofern eine Warteschlange angefordert wird. Die Werte sind `None`, `System` und `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die Interpretation dieser Eigenschaften finden Sie unter [behandeln übertragen Nachrichtenfehlern unzustellbare Warteschlangen verwenden](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: Diese Eigenschaft ist eine Enumeration, die angibt, ob eine Warteschlange für unzustellbare Nachrichten angefordert wird. Die Enumeration enthält auch die Art der Warteschlange für unzustellbare Nachrichten, sofern eine Warteschlange angefordert wird. Die Werte sind `None`, `System` und `Custom`. Weitere Informationen zur Interpretation dieser Eigenschaften finden Sie unter [behandeln übertragen Nachrichtenfehlern unzustellbare Warteschlangen verwenden](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: Diese Eigenschaft ist die Uniform Resource Identifier (URI)-Adresse der anwendungsspezifischen Warteschlange für unzustellbare Nachrichten. Dies ist erforderlich, wenn `DeadLetterQueue`.`Custom` wird ausgewählt.  
   
 #### <a name="poison-message-handling-properties"></a>Eigenschaften der Behandlung nicht verarbeitbarer Nachrichten  
- Liest der Dienst im Rahmen einer Transaktion Nachrichten aus der Zielwarteschlange, kann die Nachricht vom Dienst aus verschiedenen Gründen möglicherweise nicht verarbeitet werden. Die Nachricht wird anschließend zum erneuten Lesen in die Warteschlange zurückgestellt. Zur Verarbeitung von Nachrichten, die mehrmals nicht zugestellt werden konnten, kann in der Bindung ein Satz Eigenschaften zur Behandlung nicht verarbeitbarer Nachrichten konfiguriert werden. Es gibt vier Eigenschaften: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` und `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Diese Eigenschaften finden Sie unter [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Liest der Dienst im Rahmen einer Transaktion Nachrichten aus der Zielwarteschlange, kann die Nachricht vom Dienst aus verschiedenen Gründen möglicherweise nicht verarbeitet werden. Die Nachricht wird anschließend zum erneuten Lesen in die Warteschlange zurückgestellt. Zur Verarbeitung von Nachrichten, die mehrmals nicht zugestellt werden konnten, kann in der Bindung ein Satz Eigenschaften zur Behandlung nicht verarbeitbarer Nachrichten konfiguriert werden. Es gibt vier Eigenschaften: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` und `ReceiveErrorHandling`. Weitere Informationen zu diesen Eigenschaften finden Sie unter [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Sicherheitseigenschaften  
  MSMQ verfügt über ein eigenes Sicherheitsmodell, zu dem beispielsweise Zugriffssteuerungslisten in einer Warteschlange oder das Senden von authentifizierten Nachrichten gehören. `NetMsmqBinding` macht diese Sicherheitseigenschaften als Teil der Transportsicherheitseinstellungen verfügbar. Die Bindung für Transportsicherheit besitzt zwei Eigenschaften: `MsmqAuthenticationMode` und `MsmqProtectionLevel`. Einstellungen in diesen Eigenschaften sind von der Konfiguration von MSMQ abhängig. Weitere Informationen finden Sie unter [Sichern von Nachrichten mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  

@@ -1,28 +1,28 @@
 ---
-title: "Übersicht über Windows Communication Foundation-Bindungen"
-ms.custom: 
+title: Übersicht über Windows Communication Foundation-Bindungen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Übersicht über Windows Communication Foundation-Bindungen
 Bindungen sind Objekte, die die zum Herstellen einer Verbindung zum Endpunkt eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstes erforderlichen Kommunikationsdetails angeben. Jeder Endpunkt in einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst erfordert eine korrekt angegebene Bindung. In diesem Thema werden die Typen von Kommunikationsdetails, die die Bindungen definieren, die Elemente einer Bindung, die in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthaltenen Bindungen und Methoden zum Angeben einer Bindung für einen Endpunkt aufgeführt.  
@@ -40,7 +40,7 @@ Bindungen sind Objekte, die die zum Herstellen einer Verbindung zum Endpunkt ein
  Bestimmt das zu verwendende zugrunde liegende Transportprotokoll (z. B. TCP oder HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Die Elemente einer Bindung  
- Eine Bindung besteht im Allgemeinen aus einem geordneten Stapel von Bindungselementen, die jeweils einen Teil der für die Verbindung zu einem Dienstendpunkt erforderlichen Kommunikationsinformationen angeben. Die beiden niedrigsten Ebenen im Stapel sind jeweils erforderlich. An der Basis des Stapels befindet sich das Transportbindungselement und unmittelbar darüber das Element, das die Spezifikationen für die Nachrichtencodierung enthält. Die optionalen Bindungselemente, die die anderen Kommunikationsprotokolle angeben, befinden sich in den Ebenen oberhalb dieser beiden erforderlichen Elemente. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Diese Bindungselemente und die richtige Reihenfolge finden Sie unter [benutzerdefinierte Bindungen](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Eine Bindung besteht im Allgemeinen aus einem geordneten Stapel von Bindungselementen, die jeweils einen Teil der für die Verbindung zu einem Dienstendpunkt erforderlichen Kommunikationsinformationen angeben. Die beiden niedrigsten Ebenen im Stapel sind jeweils erforderlich. An der Basis des Stapels befindet sich das Transportbindungselement und unmittelbar darüber das Element, das die Spezifikationen für die Nachrichtencodierung enthält. Die optionalen Bindungselemente, die die anderen Kommunikationsprotokolle angeben, befinden sich in den Ebenen oberhalb dieser beiden erforderlichen Elemente. Weitere Informationen zu diesen Bindungselementen und die richtige Reihenfolge, finden Sie unter [benutzerdefinierte Bindungen](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen  
  Die Informationen in einer Bindung können komplex sein, und einige Einstellungen sind möglicherweise mit anderen nicht kompatibel. Aus diesem Grund schließt [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] einen Satz vom System bereitgestellter Bindungen ein. Diese Bindungen sind für die meisten Anwendungsanforderungen vorgesehen. Die folgenden Klassen stellen einige Beispiele für vom System bereitgestellte Bindungen dar:  
@@ -56,7 +56,7 @@ Bindungen sind Objekte, die die zum Herstellen einer Verbindung zum Endpunkt ein
  Eine vollständige Liste mit Beschreibungen aller der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-bereitgestellten Bindungen, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="using-your-own-bindings"></a>Verwenden der eigenen Bindungen  
- Wenn keine der vom System bereitgestellten Bindungen über die richtige Kombination von Funktionen verfügt, die für eine Dienstanwendung erforderlich sind, können Sie eine eigene Bindung erstellen. Hierfür gibt es zwei Möglichkeiten. Sie können eine neue Bindung entweder mithilfe eines <xref:System.ServiceModel.Channels.CustomBinding>-Objekts aus bereits vorhandenen Bindungselementen erstellen oder durch Ableiten von der <xref:System.ServiceModel.Channels.Binding>-Bindung eine vollständig benutzerdefinierte Bindung erstellen. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Erstellen eine eigene Bindung mithilfe der folgenden beiden Ansätze finden Sie unter [benutzerdefinierte Bindungen](../../../docs/framework/wcf/extending/custom-bindings.md) und [Erstellen benutzerdefinierter Bindungen](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Wenn keine der vom System bereitgestellten Bindungen über die richtige Kombination von Funktionen verfügt, die für eine Dienstanwendung erforderlich sind, können Sie eine eigene Bindung erstellen. Hierfür gibt es zwei Möglichkeiten. Sie können eine neue Bindung entweder mithilfe eines <xref:System.ServiceModel.Channels.CustomBinding>-Objekts aus bereits vorhandenen Bindungselementen erstellen oder durch Ableiten von der <xref:System.ServiceModel.Channels.Binding>-Bindung eine vollständig benutzerdefinierte Bindung erstellen. Weitere Informationen zum Erstellen einer eigene Bindung, die mithilfe der folgenden zwei Ansätze, finden Sie unter [benutzerdefinierte Bindungen](../../../docs/framework/wcf/extending/custom-bindings.md) und [Erstellen benutzerdefinierter Bindungen](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 ## <a name="using-bindings"></a>Verwenden von Bindungen  
  Das Verwenden von Bindungen umfasst zwei grundlegende Schritte:  

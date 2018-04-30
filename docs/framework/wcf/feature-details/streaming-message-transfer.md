@@ -1,24 +1,26 @@
 ---
-title: "Nachrichtenübertragung per Stream"
-ms.custom: 
+title: Nachrichtenübertragung per Stream
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-message-transfer"></a>Nachrichtenübertragung per Stream
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Transporte unterstützen zwei Modi zum Übertragen von Nachrichten:  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  Einige Funktionen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], darunter zuverlässiges Messaging, Transaktionen und die SOAP-Nachrichtensicherheit, verwenden gepufferte Nachrichten für Übertragungen. Dadurch können mögliche Leistungsvorteile durch das Streaming reduziert oder zunichte gemacht werden. Mit der Sicherheit auf Transportebene oder mit der Sicherheit auf Transportebene sowie dem Authentifizierungsmodus für die Nachrichtensicherheit können Sie eine Streamübertragung absichern.  
   
- SOAP-Header werden immer gepuffert, auch wenn eine Streamübertragung verwendet wird. Die Nachrichtenheader dürfen nicht größer sein als das `MaxBufferSize`-Transportkontingent. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Diese finden Sie unter [Transportkontingente](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ SOAP-Header werden immer gepuffert, auch wenn eine Streamübertragung verwendet wird. Die Nachrichtenheader dürfen nicht größer sein als das `MaxBufferSize`-Transportkontingent. Weitere Informationen zu dieser Einstellung finden Sie unter [Transportkontingente](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Unterschiede zwischen gepufferten und Streamingübertragungen  
  Durch das Ändern des Übertragungsmodus von gepuffert in gestreamt wird auch die systemeigene Kanalform von TCP- und Named Pipe-Transporten geändert. Die systemeigene Kanalform für gepufferte Übertragungen ist <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Die systemeigenen Kanäle für Streamingübertragungen sind <xref:System.ServiceModel.Channels.IRequestChannel> und <xref:System.ServiceModel.Channels.IReplyChannel>. Wenn Sie den Übertragungsmodus in einer bestehenden Anwendung ändern möchten, die diese Transporte unmittelbar (d. h. nicht über einen Dienstvertrag) verwendet, müssen Sie die erwartete Kanalform für Kanalfactorys und -listener ändern.  

@@ -1,24 +1,26 @@
 ---
-title: "Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei"
-ms.custom: 
+title: 'Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42f70cd34f65d5393d79b8ace4f9eb704f309d0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d30031db590b424688cc0af6a573c1042099e64e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei
 Dies ist eines der beiden "Gewusst wie"-Themen, die veranschaulichen, wie Sie Metadaten für einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst veröffentlichen. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei dargestellt.  
@@ -26,7 +28,7 @@ Dies ist eines der beiden "Gewusst wie"-Themen, die veranschaulichen, wie Sie Me
 > [!CAUTION]
 >  In diesem Thema wird das Veröffentlichen von Metadaten auf unsichere Weise dargestellt. Jeder Client kann Metadaten vom Dienst abrufen. Wenn Sie den Dienst zum Veröffentlichen von Metadaten auf sichere Weise benötigen, finden Sie unter [benutzerdefinierter sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Veröffentlichen von Metadaten im Code finden Sie unter [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Die Veröffentlichung von Metadaten ermöglicht Clients, Metadaten über eine WS-Transfer-GET-Anforderung oder eine HTTP/GET-Anforderung mithilfe einer `?wsdl`-Abfragezeichenfolge abzurufen. Erstellen Sie einen grundlegenden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, um sicherzustellen, dass der Code funktioniert. Der Einfachheit halber wird im folgenden Code ein grundlegender, selbst gehosteter Dienst bereitgestellt.  
+ Weitere Informationen zum Veröffentlichen von Metadaten im Code finden Sie unter [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Die Veröffentlichung von Metadaten ermöglicht Clients, Metadaten über eine WS-Transfer-GET-Anforderung oder eine HTTP/GET-Anforderung mithilfe einer `?wsdl`-Abfragezeichenfolge abzurufen. Erstellen Sie einen grundlegenden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, um sicherzustellen, dass der Code funktioniert. Der Einfachheit halber wird im folgenden Code ein grundlegender, selbst gehosteter Dienst bereitgestellt.  
   
 ```csharp  
 using System;  
@@ -177,7 +179,7 @@ namespace Metadata.Samples
   
 9. Erstellen Sie die Konsolenanwendung und führen Sie sie aus.  
   
-10. Rufen Sie mithilfe des Internet Explorers die Basisadresse des Diensts auf (in diesem Beispiel http://localhost:8001/MetadataSample), und stellen Sie sicher, dass die Metadatenveröffentlichung aktiviert ist. Wenn nicht, wird oben auf der Ergebnisseite folgende Meldung angezeigt: "Das Veröffentlichen von Metadaten für diesen Dienst ist derzeit deaktiviert."  
+10. Verwenden Sie Internet Explorer, um die Basisadresse des Diensts zu suchen (http://localhost:8001/MetadataSample in diesem Beispiel) und stellen Sie sicher, dass die Metadatenveröffentlichung aktiviert ist. Wenn nicht, wird oben auf der Ergebnisseite folgende Meldung angezeigt: "Das Veröffentlichen von Metadaten für diesen Dienst ist derzeit deaktiviert."  
   
 ### <a name="to-use-default-endpoints"></a>So verwenden Sie Standardendpunkte  
   
@@ -198,7 +200,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     Da für den Dienst das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> mit `httpGetEnabled` auf `true` festgelegt wurde, ist für den Dienst die Veröffentlichung von Metadaten aktiviert. Und da keine Endpunkte explizit hinzugefügt wurden, fügt die Runtime die Standardendpunkte hinzu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Standardendpunkte, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Da für den Dienst das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> mit `httpGetEnabled` auf `true` festgelegt wurde, ist für den Dienst die Veröffentlichung von Metadaten aktiviert. Und da keine Endpunkte explizit hinzugefügt wurden, fügt die Runtime die Standardendpunkte hinzu. Weitere Informationen zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird die Implementierung eines einfachen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts und der Konfigurationsdatei, die für diesen Dienst Metadaten veröffentlicht, veranschaulicht.  

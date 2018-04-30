@@ -1,27 +1,29 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99ee624ef6198ed67141d3d92e63fb9ba815c4fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cf9f6c1ad5be3a2d63140f03f74713809624e277
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen
 In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldeinformationen implementiert und benutzerdefinierte Anmeldeinformationen aus Anwendungscode genutzt werden.  
@@ -35,7 +37,7 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
   
  Sowohl die <xref:System.ServiceModel.Description.ClientCredentials>- als auch die <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse erben von der abstrakten <xref:System.ServiceModel.Security.SecurityCredentialsManager>-Klasse, die den Vertrag für die Rückgabe des <xref:System.IdentityModel.Selectors.SecurityTokenManager> definieren.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die Clientanmeldeinformationen-Klassen und wie sie passt den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheitsarchitektur, finden Sie unter [Sicherheitsarchitektur](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Weitere Informationen zu den Clientanmeldeinformationen-Klassen und wie sie passt den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheitsarchitektur, finden Sie unter [Sicherheitsarchitektur](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  Die in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereitgestellten Standardimplementierungen unterstützen die vom System bereitgestellten Anmeldeinformationstypen und erstellen einen Sicherheitstoken-Manager, der in der Lage ist, diese Anmeldeinformationstypen zu handhaben.  
   
@@ -81,11 +83,11 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
   
 1.  Definieren Sie eine neue Klasse, die von <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> abgeleitet ist.  
   
-2.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>-Methode, wenn eine benutzerdefinierte <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Implementierung erstellt werden muss. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Benutzerdefinierte Sicherheitstokenanbieter, finden Sie unter [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstokenanbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>-Methode, wenn eine benutzerdefinierte <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Implementierung erstellt werden muss. Weitere Informationen zu benutzerdefinierten Sicherheitstokenanbieter, finden Sie unter [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstokenanbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29>-Methode, wenn eine benutzerdefinierte <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>-Implementierung erstellt werden muss. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Benutzerdefinierte Sicherheitstokenauthentifizierer, finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+3.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29>-Methode, wenn eine benutzerdefinierte <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>-Implementierung erstellt werden muss. Weitere Informationen zu benutzerdefinierten Sicherheitstokenauthentifizierer, finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
-4.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>-Methode, wenn ein benutzerdefinierter <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> erstellt werden muss. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Benutzerdefinierte Sicherheitstoken und benutzerdefinierten Sicherheitstoken-Serialisierungsprogramme, finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Tokens](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>-Methode, wenn ein benutzerdefinierter <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> erstellt werden muss. Weitere Informationen zu benutzerdefinierten Sicherheitstoken und benutzerdefinierten Sicherheitstoken-Serialisierungsprogramme, finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Tokens](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
@@ -169,11 +171,11 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
   
 1.  Definieren Sie eine neue von der <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>-Klasse abgeleitete Klasse.  
   
-2.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A>-Methode, wenn eine benutzerdefinierte <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Implementierung erstellt werden muss. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Benutzerdefinierte Sicherheitstokenanbieter, finden Sie unter [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstokenanbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A>-Methode, wenn eine benutzerdefinierte <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Implementierung erstellt werden muss. Weitere Informationen zu benutzerdefinierten Sicherheitstokenanbieter, finden Sie unter [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstokenanbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>-Methode, wenn eine benutzerdefinierte <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>-Implementierung erstellt werden muss. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Benutzerdefinierte Sicherheitstokenauthentifizierer, finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) Thema.  
+3.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>-Methode, wenn eine benutzerdefinierte <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>-Implementierung erstellt werden muss. Weitere Informationen zu benutzerdefinierten Sicherheitstokenauthentifizierer, finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) Thema.  
   
-4.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>-Methode, wenn ein benutzerdefinierter <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> erstellt werden muss. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Benutzerdefinierte Sicherheitstoken und benutzerdefinierten Sicherheitstoken-Serialisierungsprogramme, finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Tokens](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>-Methode, wenn ein benutzerdefinierter <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> erstellt werden muss. Weitere Informationen zu benutzerdefinierten Sicherheitstoken und benutzerdefinierten Sicherheitstoken-Serialisierungsprogramme, finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Tokens](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  

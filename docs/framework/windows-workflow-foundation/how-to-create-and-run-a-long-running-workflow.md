@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10ca88533297e56d48b73b6368c2e8457380f543
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: c7776c9155ef2c2c5c4ea804285cd67e995ef119
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Vorgehensweise: Erstellen und Ausführen eines Workflows mit langer Laufzeit
 Eine der zentralen Funktionen von Windows Workflow Foundation (WF) wird die Common Language Runtime Möglichkeit zum Speichern und Entladen von Workflows im Leerlauf in einer Datenbank. Die Schritte im [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) veranschaulicht die Grundlagen der workflowhosting mithilfe einer Konsolenanwendung. Anhand von Beispielen wurde gezeigt, wie Workflows und Workflowlebenszyklus-Handler gestartet und Lesezeichen wiederaufgenommen werden. Um die Workflowpersistenz effektiv zu veranschaulichen, ist ein komplexerer Workflowhost erforderlich, der das Starten und Fortsetzen mehrerer Workflowinstanzen unterstützt. In diesem Schritt des Lernprogramms wird veranschaulicht, wie eine Windows-Formularhostanwendung erstellt wird, die das Starten und Fortsetzen mehrerer Workflowinstanzen und die Workflowpersistenz unterstützt sowie die Grundlage für erweiterte Funktionen wie Nachverfolgung und Versionsverwaltung bildet, die in den folgenden Schritten des Lernprogramms veranschaulicht werden.  
@@ -703,7 +703,7 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) wird die Comm
     ```  
   
 ###  <a name="BKMK_WorkflowVersionMap"></a> So aktivieren Sie starten und fortsetzen mehrerer Workflowtypen  
- Um eine Workflowinstanz fortzusetzen, muss der Host die Workflowdefinition bereitstellen. In diesem Lernprogramm werden drei Workflowtypen verwendet, von denen in den folgenden Schritten mehrere Versionen vorgestellt werden. `WorkflowIdentity` ermöglicht einer Hostanwendung, einer persistenten Workflowinstanz Identifikationsinformationen zuzuordnen. Die Schritte in diesem Abschnitt veranschaulichen das Erstellen einer Hilfsprogrammklasse, die das Zuordnen der Workflowidentität von einer persistenten Workflowinstanz zur entsprechenden Workflowdefinition unterstützt. [!INCLUDE[crabout](../../../includes/crabout-md.md)] `WorkflowIdentity` und versionsverwaltung verwendet, finden Sie unter [Verwenden von WorkflowIdentity und Versionsverwaltung](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+ Um eine Workflowinstanz fortzusetzen, muss der Host die Workflowdefinition bereitstellen. In diesem Lernprogramm werden drei Workflowtypen verwendet, von denen in den folgenden Schritten mehrere Versionen vorgestellt werden. `WorkflowIdentity` ermöglicht einer Hostanwendung, einer persistenten Workflowinstanz Identifikationsinformationen zuzuordnen. Die Schritte in diesem Abschnitt veranschaulichen das Erstellen einer Hilfsprogrammklasse, die das Zuordnen der Workflowidentität von einer persistenten Workflowinstanz zur entsprechenden Workflowdefinition unterstützt. Weitere Informationen zu `WorkflowIdentity` und versionsverwaltung verwendet, finden Sie unter [Verwenden von WorkflowIdentity und Versionsverwaltung](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
 1.  Mit der rechten Maustaste **NumberGuessWorkflowHost** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **Klasse**. Typ `WorkflowVersionMap` in der **Namen** Feld, und klicken Sie auf **hinzufügen**.  
   

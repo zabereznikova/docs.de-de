@@ -1,38 +1,40 @@
 ---
 title: 'Gewusst wie: Hosten eines WCF-Diensts in IIS'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3b23d3f69d52299fcf3ca8b5ff56d0c4673026b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4699475db18ac84c4379c7bc102d93648060ed3d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Gewusst wie: Hosten eines WCF-Diensts in IIS
-In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erstellung eines in Internetinformationsdienste (IIS) gehosteten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts erforderlich sind. Es wird vorausgesetzt, dass Sie mit IIS vertraut sind und wissen, wie mithilfe des IIS-Verwaltungstools IIS-Anwendungen erstellt und verwaltet werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]IIS finden Sie unter [Internetinformationsdienste (IIS)](http://go.microsoft.com/fwlink/?LinkId=132449). Ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, der in der IIS-Umgebung ausgeführt wird, kann alle Funktionen von IIS nutzen, beispielsweise die Prozesswiederverwendung, das Herunterfahren der Anwendung und ihrer Dienste bei Leerlauf, die Prozessüberwachung und die nachrichtenbasierte Aktivierung. Diese Hostingoption erfordert, dass IIS korrekt konfiguriert wurde, jedoch muss keinerlei Hostcode für die Anwendung geschrieben werden. Sie können IIS-Hosting nur mit einem HTTP-Transport verwenden.  
+In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erstellung eines in Internetinformationsdienste (IIS) gehosteten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts erforderlich sind. Es wird vorausgesetzt, dass Sie mit IIS vertraut sind und wissen, wie mithilfe des IIS-Verwaltungstools IIS-Anwendungen erstellt und verwaltet werden. Weitere Informationen zu IIS finden Sie unter [Internetinformationsdienste (IIS)](http://go.microsoft.com/fwlink/?LinkId=132449). Ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, der in der IIS-Umgebung ausgeführt wird, kann alle Funktionen von IIS nutzen, beispielsweise die Prozesswiederverwendung, das Herunterfahren der Anwendung und ihrer Dienste bei Leerlauf, die Prozessüberwachung und die nachrichtenbasierte Aktivierung. Diese Hostingoption erfordert, dass IIS korrekt konfiguriert wurde, jedoch muss keinerlei Hostcode für die Anwendung geschrieben werden. Sie können IIS-Hosting nur mit einem HTTP-Transport verwenden.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] interagieren, finden Sie unter [WCF-Dienste und ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Konfigurieren der Sicherheit, finden Sie unter [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md).  
+ Weitere Informationen dazu, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] interagieren, finden Sie unter [WCF-Dienste und ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Weitere Informationen zum Konfigurieren der Sicherheit finden Sie unter [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md).  
   
  Eine Kopie der Quelle dieses Beispiels, finden Sie unter [IIS-Hosting mithilfe von Inlinecode](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md).  
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>So erstellen Sie einen von IIS gehosteten Dienst  
   
-1.  Vergewissern Sie sich, dass IIS installiert ist und auf dem Computer ausgeführt wird. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Installieren und Konfigurieren von IIS finden Sie unter [installieren und Konfigurieren von IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=132128)  
+1.  Vergewissern Sie sich, dass IIS installiert ist und auf dem Computer ausgeführt wird. Weitere Informationen zum Installieren und Konfigurieren von IIS finden Sie unter [installieren und Konfigurieren von IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=132128)  
   
 2.  Erstellen Sie einen neuen Ordner namens "IISHostedCalcService" für die Anwendungsdateien, stellen Sie sicher, dass [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] auf den Inhalt des Ordners zugreifen kann, und verwenden Sie das IIS-Verwaltungstool, um eine neue IIS-Anwendung zu erstellen, die physisch in diesem Anwendungsverzeichnis gespeichert wird. Verwenden Sie "IISHostedCalc", wenn Sie einen Alias für das Anwendungsverzeichnis erstellen.  
   
@@ -75,7 +77,7 @@ In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erst
   
      [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]      
   
-     In diesem Beispiel werden die Endpunkte in der Konfigurationsdatei explizit angegeben. Wenn Sie dem Dienst keine Endpunkte hinzufügen, werden von der Runtime automatisch Standardendpunkte hinzugefügt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Standard-Endpunkte, Bindungen und Verhalten finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     In diesem Beispiel werden die Endpunkte in der Konfigurationsdatei explizit angegeben. Wenn Sie dem Dienst keine Endpunkte hinzufügen, werden von der Runtime automatisch Standardendpunkte hinzugefügt. Weitere Informationen zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 11. Um sicherzustellen, dass der Dienst korrekt gehostet wird, öffnen Sie eine Instanz von Internet Explorer, und navigieren Sie zur URL des Diensts: `http://localhost/IISHostedCalc/Service.svc`  
   

@@ -1,12 +1,13 @@
 ---
 title: 'Optimieren der Leistung: Weitere Empfehlungen'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e45296befd51af5e4b03f123241efba030fd3754
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: afe0e93706089e1893d46316b33c2568df83ffd3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimieren der Leistung: Weitere Empfehlungen
 <a name="introduction"></a> Dieses Thema enthält Empfehlungen zur Leistung zusätzlich zu denen im Abschnitt [Optimierung der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).  
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Konfigurieren des Diensts für den Schriftartencache zur Reduzierung der Startzeit  
- Der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Dienst für den Schriftartencache stellt Schriftartdaten über [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen hinweg zur Verfügung. Die erste [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung, die Sie ausführen, startet diesen Dienst, wenn er noch nicht ausgeführt wird. Bei Verwendung von [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] können Sie den „[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Schriftartcache 3.0.0.0“-Dienst von „Manuell“ (Standard) auf „Automatisch (Verzögerter Start)“ umstellen, um die anfängliche Startzeit von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen zu reduzieren.  
+ Der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Dienst für den Schriftartencache stellt Schriftartdaten über [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen hinweg zur Verfügung. Die erste [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung, die Sie ausführen, startet diesen Dienst, wenn er noch nicht ausgeführt wird. Bei Verwendung von [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], Sie können den Dienst "Windows Presentation Foundation (WPF) Schriftart Cache 3.0.0.0" auf "Automatisch (Start durch verzögerte)" aus "Manuell" (Standard) festlegen, reduzieren Sie die anfängliche Startzeit des [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Planen der Anwendungsleistung](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  

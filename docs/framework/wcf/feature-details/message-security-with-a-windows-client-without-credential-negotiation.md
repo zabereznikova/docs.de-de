@@ -1,27 +1,29 @@
 ---
 title: Nachrichtensicherheit mit einem Windows-Client ohne Anmeldeinformationen-Aushandlung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f069ff100a2fba1f6bace1d9a81ed69314261eae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Nachrichtensicherheit mit einem Windows-Client ohne Anmeldeinformationen-Aushandlung
 Das folgende Szenario zeigt einen durch das Kerberos-Protokoll gesicherten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client und -Dienst.  
@@ -61,7 +63,7 @@ Das folgende Szenario zeigt einen durch das Kerberos-Protokoll gesicherten [!INC
   
 2.  Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. In diesem Fall muss für das Domänenkonto ein SPN eingerichtet werden. Eine mögliche Vorgehensweise hierzu besteht in der Verwendung des Tools Setspn.exe. Konfigurieren Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nach dem Erstellen des SPNs für das Konto so, dass dieser SPN für die Clients des Diensts über seine Metadaten (WSDL) veröffentlicht wird. Legen Sie hierzu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest. Im folgenden Beispiel wird die Identität programmgesteuert veröffentlicht:  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SPNs, Kerberos-Protokoll und Active Directory finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Endpunkt-Identitäten, finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Weitere Informationen zu SPNs, die Kerberos-Protokoll und Active Directory finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Weitere Informationen über Identitäten Endpunkt finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
@@ -117,9 +119,9 @@ Das folgende Szenario zeigt einen durch das Kerberos-Protokoll gesicherten [!INC
  Der folgende Code dient zum Konfigurieren des Clients. Der Sicherheitsmodus ist auf Nachrichtensicherheit, der Typ der Clientanmeldeinformationen auf Windows festgelegt. Die Eigenschaften <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> und <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> sind auf `false` festgelegt.  
   
 > [!NOTE]
->  Zur Verwendung des Windows-Anmeldeinformationstyps ohne Aushandlung muss der Client vor dem Starten der Kommunikation mit dem Dienst mit dem Konto-SPN des Diensts konfiguriert werden. Der SPN wird vom Client zum Abrufen des Kerberos-Tokens verwendet, um damit die Kommunikation mit dem Dienst zu authentifizieren und zu sichern. Im folgenden Beispiel wird das Konfigurieren des Clients mit dem SPN des Diensts veranschaulicht. Bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) um den Client zu generieren, den SPN des Diensts wird automatisch weitergegeben werden an den Client aus Dienstmetadaten (WSDL), wenn die Metadaten des Diensts enthält Diese Informationen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Konfigurieren des Diensts, sodass der SPN in die Dienstmetadaten aufgenommen wird, finden Sie weiter unten in diesem Thema im Abschnitt "Dienst".  
+>  Zur Verwendung des Windows-Anmeldeinformationstyps ohne Aushandlung muss der Client vor dem Starten der Kommunikation mit dem Dienst mit dem Konto-SPN des Diensts konfiguriert werden. Der SPN wird vom Client zum Abrufen des Kerberos-Tokens verwendet, um damit die Kommunikation mit dem Dienst zu authentifizieren und zu sichern. Im folgenden Beispiel wird das Konfigurieren des Clients mit dem SPN des Diensts veranschaulicht. Bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) um den Client zu generieren, den SPN des Diensts wird automatisch weitergegeben werden an den Client aus Dienstmetadaten (WSDL), wenn die Metadaten des Diensts enthält Diese Informationen. Weitere Informationen zur Konfiguration des Diensts, um einen SPN in den Metadaten des Diensts eingeschlossen werden sollen finden Sie unter im Abschnitt "Dienst" weiter unten in diesem Thema.  
 >   
->  Weitere Informationen über SPNs, Kerberos und Active Directory finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Endpunkt-Identitäten, finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) Thema.  
+>  Weitere Informationen über SPNs, Kerberos und Active Directory finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Weitere Informationen über Identitäten Endpunkt finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) Thema.  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  

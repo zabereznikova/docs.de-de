@@ -1,13 +1,13 @@
 ---
-title: "Übersicht über WPF-Pinsel"
-ms.custom: 
+title: Übersicht über WPF-Pinsel
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>Übersicht über WPF-Pinsel
 Alles, was auf dem Bildschirm sichtbar ist sichtbar, da er von einem Pinsel gezeichnet wurde. Z. B. wird ein Pinsel verwendet, um den Hintergrund einer Schaltfläche, die Vordergrundfarbe des Texts und der Ausfüllen einer Form zu beschreiben. In diesem Thema werden die Konzepte der Zeichnung mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel und stellt Beispiele bereit. Mithilfe von Pinseln können Sie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-Objekte, angefangen von einfachen Objekten, über Objekte in Volltonfarbe bis hin zu Objekten mit komplexen von Mustern und Bildern, zeichnen.  
@@ -142,7 +142,7 @@ Ein mit einem VisualBrush gezeichnetes Rechteck
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>Zeichnen Sie mit vordefinierten und Systempinsel  
- Der Einfachheit halber [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] bietet einen Satz vordefinierter und System Pinsel, dass Sie zum Zeichnen von Objekten verwenden können.  
+ Der Einfachheit halber bietet Windows Presentation Foundation (WPF), einen Satz vordefinierter und System Pinsel, dass Sie zum Zeichnen von Objekten verwenden können.  
   
 -   Eine Liste der verfügbaren vordefinierten Pinsel, finden Sie unter der <xref:System.Windows.Media.Brushes> Klasse. Ein Beispiel zum Verwenden eines vordefinierten Pinsels finden Sie unter [Zeichnen eines Bereichs mit einer Volltonfarbe](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
   
@@ -150,7 +150,7 @@ Ein mit einem VisualBrush gezeichnetes Rechteck
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Allgemeine Pinsel-Funktionen  
- <xref:System.Windows.Media.Brush>-Objekte stellen eine <xref:System.Windows.Media.Brush.Opacity%2A> -Eigenschaft, die verwendet werden kann, um einen Pinsel transparent oder teilweise transparent machen. Ein <xref:System.Windows.Media.Brush.Opacity%2A> der Wert 0 wird ein Pinsel völlig transparent, während ein <xref:System.Windows.Media.Brush.Opacity%2A> Wert 1 wird ein Pinsel vollständig deckend. Im folgenden Beispiel wird die <xref:System.Windows.Media.Brush.Opacity%2A> Eigenschaft, um eine <xref:System.Windows.Media.SolidColorBrush> 25 Prozent.  
+ <xref:System.Windows.Media.Brush> -Objekte stellen eine <xref:System.Windows.Media.Brush.Opacity%2A> -Eigenschaft, die verwendet werden kann, um einen Pinsel transparent oder teilweise transparent machen. Ein <xref:System.Windows.Media.Brush.Opacity%2A> der Wert 0 wird ein Pinsel völlig transparent, während ein <xref:System.Windows.Media.Brush.Opacity%2A> Wert 1 wird ein Pinsel vollständig deckend. Im folgenden Beispiel wird die <xref:System.Windows.Media.Brush.Opacity%2A> Eigenschaft, um eine <xref:System.Windows.Media.SolidColorBrush> 25 Prozent.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   

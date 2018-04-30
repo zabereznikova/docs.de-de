@@ -2,7 +2,8 @@
 title: 'Das Freihandobjektmodell: Windows Forms und COM im Vergleich zu WPF'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +16,21 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38c7692d433fb91584718984ef2ad81e563517db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06a2c2049ec7fe7046bd6dae2711fe8e46592fcf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Das Freihandobjektmodell: Windows Forms und COM im Vergleich zu WPF
 
-Bestehen im Wesentlichen drei Plattformen, die Freihandeingaben unterstützen: die Tablet PC Windows Forms-Plattform, die Tablet PC COM-Plattform und die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Plattform.  Die Freigabe für Windows Forms und COM-Plattformen ein ähnliches Objektmodell jedoch stattdessen das Modell für die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Plattform unterscheidet sich deutlich.  Dieses Thema erläutert die Unterschiede auf hoher Ebene, damit Entwickler, die mit einem Objektmodell gearbeitet haben, können die anderen besser verstehen.  
+Es gibt im Wesentlichen drei Plattformen, die Freihandeingaben unterstützen: die Tablet PC Windows Forms-Plattform, die Tablet PC COM-Plattform und die Plattform Windows Presentation Foundation (WPF).  Die Freigabe für Windows Forms und COM-Plattformen ein ähnliches Objektmodell jedoch stattdessen das Modell für die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Plattform unterscheidet sich deutlich.  Dieses Thema erläutert die Unterschiede auf hoher Ebene, damit Entwickler, die mit einem Objektmodell gearbeitet haben, können die anderen besser verstehen.  
   
 ## <a name="enabling-ink-in-an-application"></a>Aktivieren von Freihandeingaben in einer Anwendung  
  Alle drei Plattformen enthalten Objekte und Steuerelemente, die eine Anwendung zum Empfangen von Eingaben von einem Tablettstift zu aktivieren.  Die Windows Forms und COM-Plattformen sind im Lieferumfang [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx), [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx), [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) und [ Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) Klassen.  [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx) und [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx) sind Steuerelemente, die Sie hinzufügen können, um eine Anwendung zum Erfassen von Freihandeingaben.  Die [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) und [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) an ein vorhandenes Fenster an Freihand-Enable-Fenstern und benutzerdefinierten Steuerelementen angefügt werden können.  
@@ -49,7 +51,7 @@ Bestehen im Wesentlichen drei Plattformen, die Freihandeingaben unterstützen: d
   
  Die folgenden zwei Abbildungen vergleicht die Freihand-Datenmodelle-Objekt.  Auf dem Windows Forms und COM-Plattformen die [Microsoft.Ink.Ink](https://msdn.microsoft.com/library/aa515768.aspx?displayProperty=nameWithType) Objekt schränkt die Lebensdauer der [Microsoft.Ink.Stroke](https://msdn.microsoft.com/library/ms827842.aspx?displayProperty=nameWithType) Objekte und gehören zu den einzelnen Strichen Tablettstiftpakete.  Zwei oder mehr Striche können verweisen, die gleiche [Microsoft.Ink.DrawingAttributes](https://msdn.microsoft.com/library/ms837931.aspx?displayProperty=nameWithType) -Objekts, wie in der folgenden Abbildung dargestellt.  
   
- ![Diagramm des Freihandeingabe-Objektmodells für COM &#47; WinForms. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
+ ![Diagramm des Freihandeingabe-Objektmodells für COM-&#47;Winforms. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
   
  Auf der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], die jeweils <xref:System.Windows.Ink.Stroke?displayProperty=nameWithType> ist ein Objekt von common Language Runtime, die vorhanden ist, als ein Element einen Verweis darauf verfügt.  Jede <xref:System.Windows.Ink.Stroke> Verweise ein <xref:System.Windows.Input.StylusPointCollection> und <xref:System.Windows.Ink.DrawingAttributes?displayProperty=nameWithType> -Objekt, das common Language Runtime-Objekte ebenfalls enthalten sind.  
   
@@ -64,7 +66,7 @@ Bestehen im Wesentlichen drei Plattformen, die Freihandeingaben unterstützen: d
 |Treffertests|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://msdn.microsoft.com/library/aa515934.aspx)|  
 |Freihand kopieren|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardcopy(v=vs.100).aspx)|  
 |Fügen Sie Freihandeingaben|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardpaste(v=vs.100).aspx)|  
-|Zugriff auf benutzerdefinierte Eigenschaften für eine Sammlung von Konturen|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>(die Eigenschaften werden intern gespeichert und Zugriff erfolgt über <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, und <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Verwendung [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
+|Zugriff auf benutzerdefinierte Eigenschaften für eine Sammlung von Konturen|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (die Eigenschaften werden intern gespeichert und Zugriff erfolgt über <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, und <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Verwendung [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
   
 ### <a name="sharing-ink-between-platforms"></a>Freigeben von verschiedenen Plattformen Freihandeingaben  
  Obwohl die Plattformen unterschiedliche Objektmodelle für die Freihanddaten verfügen, ist die Freigabe von Daten zwischen den Plattformen sehr einfach. In den folgenden Beispielen Freihandeingaben aus einer Windows Forms-Anwendung gespeichert und in einer Windows Presentation Foundation-Anwendung geladen.  

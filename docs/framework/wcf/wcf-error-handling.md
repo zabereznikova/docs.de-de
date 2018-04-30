@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b85ef2b0c077b67cc341a48c9260393e158033c5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d951c0d85294dfcef56e231f7702cb2d37efa967
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-error-handling"></a>WCF-Fehlerbehandlung
 Die bei einer WCF-Anwendung aufgetretenen Fehler gehören zu einer von drei Gruppen:  
@@ -51,7 +51,7 @@ Die bei einer WCF-Anwendung aufgetretenen Fehler gehören zu einer von drei Grup
  Mithilfe von Fehlerverträgen können Sie die Fehler, die während eines Dienstvorgangs auftreten können, auf plattformunabhängige Weise definieren. Standardmäßig werden alle innerhalb eines Dienstvorgangs ausgelösten Ausnahmen an den Client als <xref:System.ServiceModel.FaultException>-Objekt zurückgegeben. Das <xref:System.ServiceModel.FaultException>-Objekt enthält sehr wenig Informationen. Sie können die an den Client gesendeten Informationen durch Definieren eines Fehlervertrags und Zurückgeben des Fehlers als <xref:System.ServiceModel.FaultException%601> steuern. Weitere Informationen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="ierrorhandler"></a>IErrorHandler  
- Die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle ermöglicht Ihnen mehr Kontrolle darüber, wie die WCF-Anwendung auf Fehler reagiert.  Sie gibt Ihnen volle Kontrolle über die Fehlermeldung, die an den Client zurückgegeben wird, und ermöglicht Ihnen, die benutzerdefinierte Fehlerverarbeitung auszuführen, z. B. die Protokollierung.  [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Dispatcher.IErrorHandler> und [Erweitern der Kontrolle über Fehlerbehandlung und-Meldung](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ Die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle ermöglicht Ihnen mehr Kontrolle darüber, wie die WCF-Anwendung auf Fehler reagiert.  Sie gibt Ihnen volle Kontrolle über die Fehlermeldung, die an den Client zurückgegeben wird, und ermöglicht Ihnen, die benutzerdefinierte Fehlerverarbeitung auszuführen, z. B. die Protokollierung.  Weitere Informationen zu <xref:System.ServiceModel.Dispatcher.IErrorHandler> und [erweitern Steuerelement über Fehlerbehandlung und Berichterstellung](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>ServiceHost-Ereignisse  
  Die <xref:System.ServiceModel.ServiceHost>-Klasse hostet Dienste und definiert mehrere Ereignisse, die möglicherweise zur Fehlerbehandlung benötigt werden. Zum Beispiel:  

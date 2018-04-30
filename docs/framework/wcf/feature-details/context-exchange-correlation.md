@@ -1,24 +1,26 @@
 ---
 title: Kontextaustauschkorrelation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bf84dfce2b2164d78bf07f840d66d6089a16ff23
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="context-exchange-correlation"></a>Kontextaustauschkorrelation
 Kontextkorrelation basiert auf dem kontextaustauschmechanismus, der gemäß der [.NET Context Exchange Protocol Specification](http://go.microsoft.com/fwlink/?LinkId=166059). Bei der Kontextkorrelation wird ein bekannter Kontextheader oder ein Cookie verwendet, um Nachrichten der richtigen Instanz zuzuordnen. Zur Durchführung der Kontextkorrelation muss eine kontextbasierte Bindung wie <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> oder <xref:System.ServiceModel.NetTcpContextBinding> auf dem Endpunkt verwendet werden, der für <xref:System.ServiceModel.Activities.WorkflowServiceHost> bereitgestellt wird. In diesem Thema wird erläutert, wie die Kontextkorrelation mit Messagingaktivitäten in einem Workflowdienst verwendet wird.  
@@ -54,7 +56,7 @@ SendReply ReplyToStartOrder = new SendReply
 ```  
   
 > [!NOTE]
->  In diesem Beispiel werden zwei Korrelationstypen verwendet: die Kontextkorrelation und die Anforderung-Antwort-Korrelation. Die Kontextkorrelation wird verwendet, damit Aufrufe von Clients an die richtige Instanz weitergeleitet werden. Die Anforderung-Antwort-Korrelation wird von den <xref:System.ServiceModel.Activities.Receive>-Aktivitäten und den <xref:System.ServiceModel.Activities.SendReply>-Aktivitäten gemeinsam verwendet, um den von diesen Aktivitäten modellierten bidirektionalen Vorgang zu implementieren. In diesem Beispiel nur die kontextkorrelation explizit konfiguriert ist, und die <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> -Paar verwendet die standardmäßige Anforderung / Antwort-Korrelation, die über die implizite bereitgestellt wird <xref:System.ServiceModel.Activities.CorrelationHandle> Verwaltung von <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Bei Verwendung der **ReceiveAndSendReply** -Aktivitätsvorlage im Workflow-Designer, Anforderung / Antwort-Korrelation explizit konfiguriert. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Anforderung-Antwort-Korrelation und implizite korrelationshandleverwaltung finden Sie unter [Anforderung / Antwort-](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md) und [Übersicht über die Korrelation](../../../../docs/framework/wcf/feature-details/correlation-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die **ReceiveAndSendReply** Aktivitätsvorlage, finden Sie unter [ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer).  
+>  In diesem Beispiel werden zwei Korrelationstypen verwendet: die Kontextkorrelation und die Anforderung-Antwort-Korrelation. Die Kontextkorrelation wird verwendet, damit Aufrufe von Clients an die richtige Instanz weitergeleitet werden. Die Anforderung-Antwort-Korrelation wird von den <xref:System.ServiceModel.Activities.Receive>-Aktivitäten und den <xref:System.ServiceModel.Activities.SendReply>-Aktivitäten gemeinsam verwendet, um den von diesen Aktivitäten modellierten bidirektionalen Vorgang zu implementieren. In diesem Beispiel nur die kontextkorrelation explizit konfiguriert ist, und die <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> -Paar verwendet die standardmäßige Anforderung / Antwort-Korrelation, die über die implizite bereitgestellt wird <xref:System.ServiceModel.Activities.CorrelationHandle> Verwaltung von <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Bei Verwendung der **ReceiveAndSendReply** -Aktivitätsvorlage im Workflow-Designer, Anforderung / Antwort-Korrelation explizit konfiguriert. Weitere Informationen zur Anforderung / Antwort-Korrelation und implizite korrelationshandleverwaltung finden Sie unter [Anforderung / Antwort-](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md) und [Übersicht über die Korrelation](../../../../docs/framework/wcf/feature-details/correlation-overview.md). Weitere Informationen zu den **ReceiveAndSendReply** Aktivitätsvorlage, finden Sie unter [ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer).  
   
  In den nachfolgenden <xref:System.ServiceModel.Activities.Receive>-Aktivitäten im Workflowdienst können auf das <xref:System.ServiceModel.Activities.CorrelationHandle>-Objekt verweisen, das im vorherigen Beispiel von <xref:System.ServiceModel.Activities.SendReply> initialisiert wurde.  
   
@@ -109,6 +111,6 @@ Send request2 = new Send
 };  
 ```  
   
- Beachten Sie, dass die Kontextkorrelation in diesen Beispielen explizit konfiguriert wurde. Wenn der Clientworkflow nicht auch in einem <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Objekt gehostet wird, muss die Korrelation explizit konfiguriert werden, es sei denn, die Aktivitäten sind in einer <xref:System.ServiceModel.Activities.CorrelationScope>-Aktivität enthalten. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kontextkorrelation, finden Sie unter der [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) Beispiel.  
+ Beachten Sie, dass die Kontextkorrelation in diesen Beispielen explizit konfiguriert wurde. Wenn der Clientworkflow nicht auch in einem <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Objekt gehostet wird, muss die Korrelation explizit konfiguriert werden, es sei denn, die Aktivitäten sind in einer <xref:System.ServiceModel.Activities.CorrelationScope>-Aktivität enthalten. Weitere Informationen zu kontextkorrelation, finden Sie unter der [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) Beispiel.  
   
  Wenn der Client, der die Aufrufe an den Workflowdienst durchführt, kein Workflow ist, kann er trotzdem wiederholte Aufrufe ausführen. Es muss nur gewährleistet sein, dass er den explizit den Kontext übergibt, den der erste Aufruf an den Workflowdienst zurückgibt. Proxys, die durch das Hinzufügen eines Dienstverweises in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] generiert werden, speichern und übergeben diesen Kontext standardmäßig.

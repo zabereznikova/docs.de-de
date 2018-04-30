@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d9427d091855a4f658cc971ceca1116cfd74e2ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP-Anschlussfreigabe
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet ein neues, TCP-basiertes Netzwerkprotokoll (net.tcp://) für Hochleistungskommunikation. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] führt außerdem eine neue Systemkomponente ein, den TCP-Portfreigabedienst, mit dem net.tcp-Ports für mehrfache Benutzervorgänge freigegeben werden können.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Verwenden der Net.tcp-Anschlussfreigabe in einer Anwendung  
  Der einfachste Weg, um die net.tcp://-Anschlussfreigabe in Ihrer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung zu verwenden, besteht darin, einen Dienst mit der <xref:System.ServiceModel.NetTcpBinding> verfügbar zu machen, und dann den Net.TCP-Portfreigabedienst mithilfe der <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>-Eigenschaft zu aktivieren.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Vorgehensweise hierzu finden Sie unter [Vorgehensweise: Konfigurieren eines WCF-Diensts, um die Portfreigabe verwenden](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ Weitere Informationen hierzu finden Sie unter [Vorgehensweise: Konfigurieren eines WCF-Diensts, um die Portfreigabe verwenden](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Sicherheitsauswirkungen der Anschlussfreigabe  
  Obwohl der Net.TCP-Portfreigabedienst eine Verarbeitungsschicht zwischen Anwendungen und dem Netzwerk bereitstellt, sollten Anwendungen, die die Anschlussfreigabe nutzen, zusätzlich so gesichert werden, als würden sie das Netzwerk direkt überwachen. Insbesondere sollten Anwendungen, die die Anschlussfreigabe nutzen, die Prozessprivilegien auswerten, unter denen sie ausgeführt werden. Ziehen Sie in Betracht, die Anwendung unter dem integrierten Netzwerkdienstkonto auszuführen, das mit der minimalen Gruppe der zur Netzwerkkommunikation erforderlichen Privilegien ausgeführt wird.  

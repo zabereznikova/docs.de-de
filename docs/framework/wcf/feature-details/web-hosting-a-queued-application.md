@@ -1,31 +1,33 @@
 ---
 title: Webhosting einer Anwendung mit Queuing
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Webhosting einer Anwendung mit Queuing
 Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste hostende Anwendungen enthalten. Das WAS-Prozessmodell verallgemeinert das [!INCLUDE[iis601](../../../../includes/iis601-md.md)]-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dies ermöglicht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten die Verwendung von HTTP- und andere Protokollen wie net.msmq und msmq.formatname in einer Hostumgebung, die nachrichtenbasierte Aktivierung unterstützt und die Möglichkeit zum Hosten vieler Anwendungen auf einem bestimmten Computer bietet.  
   
  WAS enthält einen Message Queuing (MSMQ)-Aktivierungsdienst, der eine Anwendung mit Queuing aktiviert, wenn mindestens eine Nachricht in einer der von der Anwendung verwendeten Warteschlangen platziert wird. Der MSMQ-Aktivierungsdienst ist ein NT-Dienst, der standardmäßig automatisch gestartet wird.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WAS und seine Vorteile finden Sie unter [Hosten in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ, finden Sie unter [Nachrichtenwarteschlangen (Übersicht)](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ Weitere Informationen zur WAS und seine Vorteile finden Sie unter [Hosten in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Weitere Informationen zu MSMQ, finden Sie unter [Nachrichtenwarteschlangen (Übersicht)](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
   
 ## <a name="queue-addressing-in-was"></a>Adressieren von Warteschlangen in WAS  
  WAS-Anwendungen weisen Uniform Resource Identifier (URI)-Adressen auf. Anwendungsadressen haben zwei Teile: einen Basis-URI-Präfix und eine anwendungsspezifische, relative Adresse (Pfad). Diese beiden Teile stellen beim Zusammenfügen die externe Adresse für eine Anwendung bereit. Die base-URI-Präfix wird aus der sitebindung erstellt und wird für alle Anwendungen innerhalb der Website, z. B. "MSMQ://localhost", "Formatname://localhost" oder "Net. TCP://localhost" verwendet. Anwendungsadressen werden anschließend erstellt, indem Sie anwendungsspezifische pfadfragmente (wie z. B. "/ ApplicationOne") und Anfügen an den Basis-URI-Präfix, das den vollständigen Anwendungs-URI, z. B. ankommen "MSMQ://localhost/applicationone".  

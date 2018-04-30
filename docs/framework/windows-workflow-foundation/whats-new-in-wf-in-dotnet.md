@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d862865057f9978a0b815f3026f2ba67c87eac7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Was&#39;s neu in Windows Workflow Foundation in .NET 4.5
-Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] verfügt über viele neue Funktionen wie neue Aktivitäten, Designer-Funktionen und Modelle für die Workflowentwicklung. Viele, aber nicht alle der neuen mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführten Workflowfunktionen werden im neu gehosteten Workflow-Designer unterstützt. [!INCLUDE[crabout](../../../includes/crabout-md.md)] die neuen Funktionen, die unterstützt werden, finden Sie unter [Unterstützung für neue Workflow Foundation 4.5-Funktionen im Workflow-Designer neu gehostet](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrieren von .NET 3.0 und .NET 3.5 workflowanwendungen verwenden Sie die neueste Version finden Sie unter [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Dieses Thema bietet eine Übersicht über die neuen Workflowfunktionen, die mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführt wurden.  
+Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] verfügt über viele neue Funktionen wie neue Aktivitäten, Designer-Funktionen und Modelle für die Workflowentwicklung. Viele, aber nicht alle der neuen mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführten Workflowfunktionen werden im neu gehosteten Workflow-Designer unterstützt. Weitere Informationen zu den neuen Features, die unterstützt werden, finden Sie unter [Unterstützung für neue Workflow Foundation 4.5-Funktionen im Workflow-Designer neu gehostet](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Weitere Informationen zum Migrieren von .NET 3.0 und .NET 3.5-workflowanwendungen auf die neueste Version verwenden, finden Sie unter [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Dieses Thema bietet eine Übersicht über die neuen Workflowfunktionen, die mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführt wurden.  
   
 > [!WARNING]
 >  Die neue Windows Workflow Foundation-Funktionen in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stehen nicht für Projekte, die auf frühere Versionen des Frameworks abzielen. Wenn ein Projekt, das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] als Zielframework verwendet, auf eine frühere Frameworkversion verwiesen wird, treten mehrere Probleme auf.  
@@ -158,7 +158,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
   
  C#-Ausdrücke werden zur Entwurfszeit validiert. Fehler in C#-Ausdrücken werden mit einer roten wellenförmigen Unterstreichung gekennzeichnet.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] C#-Ausdrücke finden Sie unter [C#-Ausdrücke](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ Weitere Informationen zu C#-Ausdrücken finden Sie unter [C#-Ausdrücke](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
 ###  <a name="BKMK_Visibility"></a> Mehr Kontrolle über die Sichtbarkeit der shellleiste und Headerelemente Elemente  
  In einem neu gehosteten Designer sind einige standardmäßigen Benutzeroberflächen-Steuerelemente für einen bestimmten Workflow möglicherweise bedeutungslos und deaktiviert. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] wird diese Anpassung nur von der Shellleiste im unteren Bereich des Designers unterstützt. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kann die Sichtbarkeit der Shellheaderelemente am oberen Rand des Designers angepasst werden, indem <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> mit dem entsprechenden <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>-Wert festgelegt wird.  

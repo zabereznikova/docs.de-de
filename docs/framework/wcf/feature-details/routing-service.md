@@ -1,24 +1,26 @@
 ---
 title: Routingdienst
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>Routingdienst
 Der Routingdienst ist ein generischer SOAP-Vermittler, der als Nachrichtenrouter fungiert. Die Kernfunktion des Routingdiensts ist die Fähigkeit, Nachrichten basierend auf Nachrichteninhalt weiterzuleiten. So können Nachrichten anhand eines Werts innerhalb der Nachricht selbst (im Header oder im Text) an einen Clientendpunkt weitergeleitet werden.  
@@ -98,12 +100,12 @@ Der Routingdienst ist ein generischer SOAP-Vermittler, der als Nachrichtenrouter
   
  Wenn der Routingdienst beim versuchten Senden einer Nachricht auf eine <xref:System.ServiceModel.CommunicationException> trifft, wird die Fehlerbehandlung durchgeführt.  Diese Ausnahmen weisen in der Regel darauf hin, dass beim Versuch der Kommunikation mit dem definierten Clientendpunkt ein Problem aufgetreten ist, z. B. <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> oder <xref:System.ServiceModel.CommunicationObjectFaultedException>.  Der Fehlerbehandlungscode ebenfalls abfangen und versuchen, erneut zu senden, wenn eine **TimeoutException** auftritt, also in eine andere häufige Ausnahme, die nicht von abgeleitet ist **CommunicationException**.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Fehler bei der Verarbeitung, finden Sie unter [Routing Einführung](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Weitere Informationen zur Fehlerbehandlung finden Sie unter [Routing Einführung](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="backup-endpoints"></a>Sicherungsendpunkte  
  Zusätzlich zu den Ziel-Clientendpunkten, die in der Filtertabelle den einzelnen Filterdefinitionen zugeordnet sind, können Sie auch eine Liste von Sicherungsendpunkten erstellen, an die die Nachricht im Fall eines Übertragungsfehlers weitergeleitet wird. Wenn ein Fehler auftritt und eine Sicherungsliste für den Filtereintrag definiert wird, versucht der Routingdienst, die Nachricht an den ersten in der Liste definierten Endpunkt zu senden. Falls bei diesem Übertragungsversuch ein Fehler auftritt, versucht es der Dienst mit dem nächsten Endpunkt und setzt diesen Vorgang so lange fort, bis die Übertragung erfolgreich ist, einen nicht die Übertragung betreffenden Fehler zurückgibt oder alle Endpunkte in der Sicherungsliste einen Übertragungsfehler zurückgegeben haben.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Sichern von Endpunkten, finden Sie unter [Routing Einführung](../../../../docs/framework/wcf/feature-details/routing-introduction.md) und [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Weitere Informationen zu den sicherungsendpunkten, finden Sie unter [Routing Einführung](../../../../docs/framework/wcf/feature-details/routing-introduction.md) und [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ## <a name="streaming"></a>Streaming  
  Der Routingdienst kann Nachrichten erfolgreich streamen, wenn Sie die Bindung für die Unterstützung von Streaming festlegen.  Es gibt jedoch einige Bedingungen, die möglicherweise das Puffern von Nachrichten erfordern:  

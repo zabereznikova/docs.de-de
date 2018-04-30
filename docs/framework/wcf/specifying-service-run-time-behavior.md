@@ -1,35 +1,37 @@
 ---
 title: Angeben des Dienstlaufzeitverhaltens
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>Angeben des Dienstlaufzeitverhaltens
-Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) und implementiert ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) haben, können Sie das Vorgangsverhalten der Dienstlaufzeit konfigurieren. In diesem Thema werden vom System bereitgestellte Dienste und Vorhangsverhalten erörtert und beschrieben, wo Sie weitere Informationen zur Erstellung neuer Verhalten finden. Einige Verhalten werden als Attribute angewendet, aber viele Verhalten werden mithilfe einer Konfigurationsdatei oder programmgesteuert angewendet. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zur Konfiguration einer Dienstanwendung finden Sie unter [Configuring Services](../../../docs/framework/wcf/configuring-services.md).  
+Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) und implementiert ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) haben, können Sie das Vorgangsverhalten der Dienstlaufzeit konfigurieren. In diesem Thema werden vom System bereitgestellte Dienste und Vorhangsverhalten erörtert und beschrieben, wo Sie weitere Informationen zur Erstellung neuer Verhalten finden. Einige Verhalten werden als Attribute angewendet, aber viele Verhalten werden mithilfe einer Konfigurationsdatei oder programmgesteuert angewendet. Weitere Informationen zum Konfigurieren der Service-Anwendung finden Sie unter [Konfigurieren von Services](../../../docs/framework/wcf/configuring-services.md).  
   
 ## <a name="overview"></a>Übersicht  
  Der Vertrag definiert die Eingaben, Ausgaben, Datentypen und Fähigkeiten eines Diensts dieses Typs. Durch die Implementierung eines Dienstvertrags wird eine Klasse erstellt, die den durch sie implementierten Vertrag erfüllt, wenn sie mit einer Bindung an einer Adresse konfiguriert wird. Der Vertrag kennt Vertrags-, Bindungs- und Adressinformationen. Ohne sie kann der Client den Dienst nicht nutzen.  
   
- Aber Vorgangseinzelheiten, z.&#160;B. Threadingprobleme oder Instanzenverwaltung, sind für Clients nicht transparent. Nachdem ein Dienstvertrag implementiert wurde, können Sie mithilfe von *Verhalten*eine Vielzahl von Vorgangseigenschaften konfigurieren. Verhalten sind die Objekte, die das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Laufzeitmodul verändern, indem eine Laufzeiteigenschaft festgelegt oder ein Anpassungstyp in das Laufzeitmodul eingefügt wird. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zur Änderung des Laufzeitmoduls durch benutzerdefinierte Verhalten finden Sie unter [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Aber Vorgangseinzelheiten, z.&#160;B. Threadingprobleme oder Instanzenverwaltung, sind für Clients nicht transparent. Nachdem ein Dienstvertrag implementiert wurde, können Sie mithilfe von *Verhalten*eine Vielzahl von Vorgangseigenschaften konfigurieren. Verhalten sind die Objekte, die das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Laufzeitmodul verändern, indem eine Laufzeiteigenschaft festgelegt oder ein Anpassungstyp in das Laufzeitmodul eingefügt wird. Weitere Informationen zum Ändern von der Laufzeitmoduls durch das Erstellen von benutzerdefinierten Verhalten, finden Sie unter [Erweitern von ServiceHost und der Dienstmodellebene](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
  Das <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType>-Attribut und das <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType>-Attribute sind die Verhalten, die am häufigsten verwendet werden, und sie machen die am häufigsten angeforderten Vorgangsfunktionen verfügbar. Weil es sich um Attribute handelt, wenden Sie sie auf die Dienst- oder Vorgangsimplementierung an. Andere Verhalten, wie z.&#160;B. <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, werden in der Regel mithilfe einer Anwendungskonfigurationsdatei angewendet, obwohl sie auch im Code verwendet werden können.  
   

@@ -1,27 +1,29 @@
 ---
-title: "Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, die verwendet wird, um Signaturen (WCF) zu überprüfen"
-ms.custom: 
+title: 'Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, die verwendet wird, um Signaturen (WCF) zu überprüfen'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29637ea7f0a1e533a6735ebfa6f428fe20039e48
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, die verwendet wird, um Signaturen (WCF) zu überprüfen
 Wenn [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] eine mit einem X.509-Zertifikat signierte SOAP-Nachricht empfängt, wird standardmäßig überprüft, ob das X.509-Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde. Dies erfolgt, indem ein Zertifikatspeicher überprüft und bestimmt wird, ob das Zertifikat für diese Zertifizierungsstelle als vertrauenswürdig bestimmt wurde. Damit diese Bestimmung durch [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erfolgen kann, muss die Zertifizierungsstellenzertifikatkette im richtigen Zertifikatspeicher installiert werden.  
@@ -42,7 +44,7 @@ Wenn [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] eine mit einem X.50
   
          Öffnen Sie das Zertifikats-Snap-in in der Microsoft Management Console (MMC). Für das Zertifikat zu speichern, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] konfiguriert ist, zum Abrufen von x. 509-Zertifikate aus, wählen Sie die **vertrauenswürdigen Stamm** **Zertifizierungsstellen**Ordner. Unter den **Trusted Root Certification Authorities** Ordner mit der rechten Maustaste die **Zertifikate**Ordner, zeigen Sie auf **alle Aufgaben**, und klicken Sie dann auf **importieren** . Geben Sie die in Schritt a exportierte Datei an.  
   
-         [!INCLUDE[crabout](../../../../includes/crabout-md.md)]finden Sie in MMC das Zertifikate-Snap-in mit [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+         Weitere Informationen zur Verwendung von mit MMC das Zertifikate-Snap-in finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

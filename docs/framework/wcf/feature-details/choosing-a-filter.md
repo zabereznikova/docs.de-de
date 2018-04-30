@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 653013de37278f051f37fdda52e68fc3d84c2cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-filter"></a>Auswählen eines Filters
 Beim Konfigurieren des Routingdiensts ist es wichtig, richtige Nachrichtenfilter auszuwählen und so zu konfigurieren, dass Sie genaue Übereinstimmungen mit den Nachrichten erzielen können, die Sie empfangen. Falls die ausgewählten Filter in Bezug auf die Übereinstimmungen zu ungenau oder falsch konfiguriert sind, werden die Nachrichten nicht korrekt weitergeleitet. Wenn die Filter zu restriktiv sind, kann es sein, dass für einige Nachrichten keine gültigen Weiterleitungsrouten verfügbar sind.  
@@ -29,7 +29,7 @@ Beim Konfigurieren des Routingdiensts ist es wichtig, richtige Nachrichtenfilter
  Beim Auswählen der vom Routingdienst verwendeten Filter ist es wichtig, dass Sie verstehen, wie die einzelnen Filter funktionieren. Außerdem sollten Sie wissen, welche Informationen in Verbindung mit den eingehenden Nachrichten verfügbar sind. Falls beispielsweise alle Nachrichten über den gleichen Endpunkt empfangen werden, sind die Adress- und EndpointName-Filter nicht hilfreich, weil alle Nachrichten Übereinstimmungen mit diesen Filtern aufweisen.  
   
 ### <a name="action"></a>Aktion  
- Der Action-Filter überprüft die <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>-Eigenschaft. Falls der Inhalt des Action-Headers in der Nachricht mit dem Filterdatenwert übereinstimmt, der in der Filterkonfiguration angegeben ist, gibt dieser Filter `true` zurück. Das folgende Beispiel definiert eine `FilterElement` , der den Aktionsfilter verwendet, um Nachrichten mit einer Action-Header entsprechen, die den Wert "http://namespace/contract/operation/" enthält.  
+ Der Action-Filter überprüft die <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>-Eigenschaft. Falls der Inhalt des Action-Headers in der Nachricht mit dem Filterdatenwert übereinstimmt, der in der Filterkonfiguration angegeben ist, gibt dieser Filter `true` zurück. Das folgende Beispiel definiert eine `FilterElement` , der den Aktionsfilter verwendet, um Nachrichten mit einer Action-Header entsprechen, die den Wert "http://namespace/contract/operation/".  
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -144,9 +144,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Dieser Filter ist nützlich, wenn Sie wissen, dass die empfangenen Nachrichten einen bestimmten Wert enthalten. Wenn Sie beispielsweise zwei Versionen des gleichen Diensts hosten und wissen, dass an die neuere Version des Diensts adressierte Nachrichten in einem benutzerdefinierten Header einen eindeutigen Wert enthalten, können Sie einen speziellen Filter erstellen. Der Filter verwendet XPath zum Navigieren zu diesem Header und vergleicht den im Header enthaltenen Wert mit einem anderen Wert in der Filterkonfiguration, um zu bestimmen, ob der Filter eine Übereinstimmung ergibt.  
   
- Da XPath-Abfragen häufig eindeutige Namespaces enthalten, bei denen es sich oft um lange oder komplexe Zeichenfolgenwerte handelt, können Sie mit dem XPath-Filter die Namespacetabelle zum Definieren eindeutiger Präfixe für die Namespaces verwenden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die namespacetabelle finden Sie unter [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Da XPath-Abfragen häufig eindeutige Namespaces enthalten, bei denen es sich oft um lange oder komplexe Zeichenfolgenwerte handelt, können Sie mit dem XPath-Filter die Namespacetabelle zum Definieren eindeutiger Präfixe für die Namespaces verwenden. Weitere Informationen zu der namespacetabelle, finden Sie unter [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Entwerfen der XPath-Abfragen finden Sie unter [XPath-Syntax](http://go.microsoft.com/fwlink/?LinkId=164592).  
+ Weitere Informationen zum Entwerfen von XPath-Abfragen finden Sie unter [XPath-Syntax](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md)  

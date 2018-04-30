@@ -1,32 +1,34 @@
 ---
 title: '&lt;security&gt; von &lt;customBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e35f10071f8931c551645d4d07ca0f2113c52002
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15f2dd3eac33a54e53a609fc706397eef5e7dbe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;security&gt; von &lt;customBinding&gt;
 Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.  
   
- \<system.serviceModel >  
-\<Bindungen >  
-\<CustomBinding >  
-\<Binden von >  
+ \<system.serviceModel>  
+\<bindings>  
+\<customBinding>  
+\<binding>  
 \<Sicherheit >  
   
 ## <a name="syntax"></a>Syntax  
@@ -103,7 +105,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<IssuedTokenParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Gibt ein aktuell ausgegebenes Token an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Gibt ein aktuell ausgegebenes Token an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<LocalClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung fest. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
 |[\<LocalServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Legt die Sicherheitseinstellungen für einen lokalen Dienst für diese Bindung fest. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
 |[\<SecureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Gibt die Standardwerte an, die zum Initiieren eines sicheren Konversationsdiensts verwendet werden.|  
@@ -112,10 +114,10 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Binden von >](../../../../../docs/framework/misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="remarks"></a>Hinweise  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Mithilfe dieses Elements finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) und [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+ Weitere Informationen zur Verwendung dieses Elements finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) und [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die Sicherheitsfunktion mit einer benutzerdefinierten Bindung konfiguriert wird. Es zeigt, wie Sicherheit auf Nachrichtenebene und ein sicherer Transport mithilfe einer benutzerdefinierten Bindung aktiviert wird. Dies ist hilfreich, wenn ein sicherer Transport zum Übertragen von Nachrichten zwischen Client und Dienst erforderlich ist und daher die Nachrichten auf Nachrichtenebene gesichert werden müssen. Diese Konfiguration wird nicht von Bindungen unterstützt, die vom System bereitgestellt werden.  
@@ -185,6 +187,6 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<CustomBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Sicherheit mit benutzerdefinierten Bindungen](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

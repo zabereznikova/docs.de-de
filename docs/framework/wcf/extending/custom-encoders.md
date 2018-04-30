@@ -1,24 +1,26 @@
 ---
 title: Benutzerdefinierte Encoder
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-encoders"></a>Benutzerdefinierte Encoder
 In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.  
@@ -34,7 +36,7 @@ In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.
 ## <a name="system-provided-encoders"></a>Vom System bereitgestellte Encoder  
  Von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden mehrere systemeigene Bindungen bereitgestellt, um die häufigsten Anwendungsszenarios abzudecken. In jeder dieser Bindungen wird ein Transport mit einem Nachrichtenencoder und anderen Optionen (beispielsweise Sicherheit) kombiniert. In diesem Thema wird das Erweitern der in `Text` integrierten Nachrichtenencoder vom Typ `Binary`, `MTOM` und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erläutert. Darüber hinaus erhalten Sie Informationen zum Erstellen benutzerdefinierter Encoder. Der Textnachrichtenencoder unterstützt sowohl reine XML-Codierung als auch SOAP-Codierungen. Der reine XML-Codierungsmodus des Textnachrichtenencoders wird als POX-Encoder ("Plain Old XML") bezeichnet, um ihn von der textbasierten SOAP-Codierung zu unterscheiden.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die Kombinationen von gebotenen vom System bereitgestellten Bindungen, Bindungselemente finden Sie im entsprechenden Abschnitt in [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Weitere Informationen zu den möglichen Kombinationen von Bindungselementen, die vom System bereitgestellten Bindungen gebotenen finden Sie im entsprechenden Abschnitt in [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>Arbeiten mit vom System bereitgestellten Encodern  
  Das Hinzufügen einer Codierung zu einem Bindungselement erfolgt mithilfe einer von <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> abgeleiteten Klasse.  
@@ -45,7 +47,7 @@ In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.
   
 -   Die <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>-Klasse stellt das Bindungselement dar, von dem die Zeichencodierung und die für binäre XML-Nachrichten verwendete Nachrichtenversion angegeben werden. Hierbei handelt es sich um die effizienteste Codierungsoption, diese besitzt jedoch gleichzeitig die geringste Interoperabilität, da sie lediglich von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkten unterstützt wird.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: stellt das Bindungselement, der angibt, das die zeichencodierung und Nachrichtenversion für eine Meldung mit MTOM Message Transmission Optimization Mechanism (MTOM). MTOM ist eine effiziente Technologie zum Senden von Binärdaten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Meldungen. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu erschaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung.  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: stellt das Bindungselement, der angibt, das die zeichencodierung und Nachrichtenversion für eine Meldung mit MTOM Message Transmission Optimization Mechanism (MTOM). MTOM ist eine effiziente Technologie zum Senden von Binärdaten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Meldungen. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu erschaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung.  
   
  Vom Bindungselement wird eine Binär-, MTOM- oder Text-<xref:System.ServiceModel.Channels.MessageEncoderFactory> erstellt. Von der Factory wird eine <xref:System.ServiceModel.Channels.MessageEncoderFactory>-Binär-, MTOM- oder Textinstanz erstellt. Üblicherweise ist lediglich eine einzelne Instanz vorhanden. Bei Verwendung von Sitzungen kann jedoch für jede Sitzung ein anderer Encoder bereitgestellt werden. Vom Binärencoder wird diese Möglichkeit zum Koordinieren dynamischer Wörterbücher genutzt (siehe XML-Infrastruktur).  
   

@@ -19,11 +19,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9bb7efa82e14f899ddcbb2fdfd26eba2023bdd61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e31c7a9e53e8b918661c0c6c544e697e2a772e6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>Nachrichtensicherheit durch einem Zertifikatclient
 Das folgende Szenario zeigt, wie ein Client und ein Dienst von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mit dem Nachrichtensicherheitsmodus gesichert werden. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert. Weitere Informationen finden Sie unter [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
@@ -114,7 +114,7 @@ Das folgende Szenario zeigt, wie ein Client und ein Dienst von [!INCLUDE[indigo1
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Konfiguration  
- Die folgende Konfiguration gibt das Clientzertifikat mit einem Endpunktverhalten an. Weitere Informationen zu Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Der Code verwendet zudem eine <`identity`> Element, um einen DNS Domain Name System () der Serveridentität des erwarteten anzugeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Identität, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Die folgende Konfiguration gibt das Clientzertifikat mit einem Endpunktverhalten an. Weitere Informationen zu Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Der Code verwendet zudem eine <`identity`> Element, um einen DNS Domain Name System () der Serveridentität des erwarteten anzugeben. Weitere Informationen zur Identität finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

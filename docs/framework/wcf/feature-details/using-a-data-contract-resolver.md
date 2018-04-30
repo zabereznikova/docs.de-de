@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 53459517591c36430b9326d6605c4eb1b28a13e7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>Verwenden eines Datenvertragsresolvers
-Mithilfe eines Datenvertragsresolver können Sie bekannte Typen dynamisch konfigurieren. Bekannte Typen sind erforderlich, wenn ein Typ serialisiert oder deserialisiert wird, der von einem Datenvertrag nicht erwartet wird. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)exportiert werden. Bekannte Typen werden in der Regel statisch angegeben. Das bedeutet, dass Sie beim Implementieren eines Vorgangs alle möglichen Typen kennen müssen, die der Vorgang erhalten kann. In einigen Szenarios trifft dies nicht zu, und es ist wichtig, bekannte Typen dynamisch angeben zu können.  
+Mithilfe eines Datenvertragsresolver können Sie bekannte Typen dynamisch konfigurieren. Bekannte Typen sind erforderlich, wenn ein Typ serialisiert oder deserialisiert wird, der von einem Datenvertrag nicht erwartet wird. Weitere Informationen über bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Bekannte Typen werden in der Regel statisch angegeben. Das bedeutet, dass Sie beim Implementieren eines Vorgangs alle möglichen Typen kennen müssen, die der Vorgang erhalten kann. In einigen Szenarios trifft dies nicht zu, und es ist wichtig, bekannte Typen dynamisch angeben zu können.  
   
 ## <a name="creating-a-data-contract-resolver"></a>Erstellen eines Datenvertragsresolvers  
  Das Erstellen eines Datenvertragsresolvers umfasst die Implementierung von zwei Methoden: <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> und <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Diese beiden Methoden implementieren Rückrufe, die jeweils während der Serialisierung und der Deserialisierung verwendet werden. Die <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A>-Methode wird während der Serialisierung aufgerufen. Sie verwendet einen Datenvertragstyp und ordnet diesen einem `xsi:type`-Namen und einem Namespace zu. Die <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>-Methode wird während der Deserialisierung aufgerufen. Sie verwendet einen `xsi:type`-Namen und einen Namespace und löst diesen zu einem Datenvertragstyp auf. Beide Methoden verfügen über einen `knownTypeResolver`-Parameter, der verwendet werden kann, um den standardmäßigen bekannten Typresolver in der Implementierung zu verwenden.  

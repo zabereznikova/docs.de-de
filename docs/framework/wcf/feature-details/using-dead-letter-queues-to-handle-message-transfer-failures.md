@@ -1,27 +1,29 @@
 ---
-title: "Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern"
-ms.custom: 
+title: Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern
 Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen. Diese fehlgeschlagenen Nachrichten werden in einer Warteschlange für unzustellbare Nachrichten aufgezeichnet. Das Fehlschlagen der Zustellung kann beispielsweise durch Netzwerkfehler, eine gelöschte Warteschlange, eine volle Warteschlange, einen Authentifizierungsfehler oder eine zu späte Zustellung verursacht werden.  
@@ -54,7 +56,7 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
   
 -   Um eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten gelesen werden kann, muss der URI von der Form: Net.msmq://localhost/private/\<*benutzerdefinierte Dlq Namen*>, in denen *benutzerdefinierte Dlq Namen* ist der Name des benutzerdefinierten Dead Letter-Warteschlange.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zum Adressieren von Warteschlangen finden Sie unter [Dienstendpunkte und Adressieren von Warteschlangen](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Weitere Informationen zu Adresse Warteschlangen finden Sie unter [Dienstendpunkte und Adressieren von Warteschlangen](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
  Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Stapel des Empfängers gleicht Adressen, die der Dienst überwacht, mit der Adresse auf der Nachricht ab. Wenn die Adressen übereinstimmen, wird die Nachricht weitergeleitet; stimmen sie nicht überein, wird die Nachricht nicht weitergeleitet. Dies kann Probleme beim Lesen aus der Warteschlange für unzustellbare Nachrichten verursachen, da die Nachrichten in der Warteschlange in der Regel an den Dienst und nicht an den Dienst der Warteschlange für unzustellbare Nachrichten adressiert sind. Daher muss der Dienst, der aus der Warteschlange für unzustellbare Nachrichten liest, einen Adressfilter `ServiceBehavior` installieren, der den Stapel auffordert, alle Nachrichten in der Warteschlange unabhängig vom Adressaten abzugleichen. Genau genommen müssen Sie dem Dienst, der die Nachrichten aus der Warteschlange für unzustellbare Nachrichten liest, ein `ServiceBehavior` mit dem Parameter <xref:System.ServiceModel.AddressFilterMode.Any> hinzufügen.  
   

@@ -1,27 +1,29 @@
 ---
 title: Hosten in einer Windows-Dienstanwendung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c1f0d2336c2682bd525a66c6e5b12ce2d17ad219
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hosten in einer Windows-Dienstanwendung
-Windows-Dienste (früher Windows NT-Dienste) bieten ein Prozessmodell, das besonders für Anwendungen geeignet ist, die sich in ausführbaren Dateien mit langer Laufzeit befinden müssen und keinerlei Benutzeroberfläche anzeigen. Die Prozesslebensdauer einer Windows-Dienstanwendung wird vom Dienststeuerungs-Manager (Service Control Manager, SCM) verwaltet, mit dem Sie Windows-Dienstanwendungen starten, beenden und anhalten können. Sie können ein Windows-Dienstprozess für den automatischen start beim Starten des Computers somit eine angemessene Hostingumgebung für "immer aktiviert" Anwendungen konfigurieren. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows-dienstanwendungen finden Sie unter [Windows-Dienstanwendungen](http://go.microsoft.com/fwlink/?LinkId=89450).  
+Windows-Dienste (früher Windows NT-Dienste) bieten ein Prozessmodell, das besonders für Anwendungen geeignet ist, die sich in ausführbaren Dateien mit langer Laufzeit befinden müssen und keinerlei Benutzeroberfläche anzeigen. Die Prozesslebensdauer einer Windows-Dienstanwendung wird vom Dienststeuerungs-Manager (Service Control Manager, SCM) verwaltet, mit dem Sie Windows-Dienstanwendungen starten, beenden und anhalten können. Sie können ein Windows-Dienstprozess für den automatischen start beim Starten des Computers somit eine angemessene Hostingumgebung für "immer aktiviert" Anwendungen konfigurieren. Weitere Informationen zu Windows-dienstanwendungen, finden Sie unter [Windows-Dienstanwendungen](http://go.microsoft.com/fwlink/?LinkId=89450).  
   
  Anwendungen, die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste mit langer Laufzeit hosten, haben viele Gemeinsamkeiten mit Windows-Diensten. Dies gilt insbesondere für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste, die ausführbare Serverdateien mit langer Laufzeit sind, nicht direkt mit dem Benutzer interagieren und deswegen keinerlei Benutzeroberfläche implementieren. Damit ist das Hosten von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten innerhalb einer Windows-Dienstanwendung eine gute Möglichkeit für die Erstellung robuster [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen mit langer Laufzeit.  
   

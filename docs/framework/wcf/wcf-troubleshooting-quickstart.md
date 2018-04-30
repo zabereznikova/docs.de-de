@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 490b756a9beae09b20a36d3fc6a20c85aad76618
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 24ca6899e6ac2bb316c0543932d70abc13626aa2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Schnelleinstieg zur Problembehandlung in WCF
 In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden beim Entwickeln von WCF-Clients und -Diensten begegnet sind. Wenn Ihr spezifisches Problem nicht in dieser Liste enthalten ist, sollten Sie die Ablaufverfolgung für den Dienst konfigurieren. Dadurch wird eine Ablaufverfolgungsdatei generiert, die Sie im Ablaufverfolgungsdatei-Viewer anzeigen können, um detaillierte Informationen zu Ausnahmen im Dienst zu erhalten. Weitere Informationen zum Konfigurieren der Ablaufverfolgung finden Sie unter [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Weitere Informationen zum Ablaufverfolgungsdatei-Viewer finden Sie unter [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -64,7 +64,7 @@ In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden bei
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>Manchmal wird eine MessageSecurityException bei der zweiten Anforderung ausgelöst, wenn sich der Client nach der ersten Anforderung eine Weile im Leerlauf befunden hat. Woran liegt das?  
- Die zweite Anforderung kann in erster Linie aus zwei Gründen fehlschlagen: (1) Das Timeout der Sitzung wurde überschritten. (2) Der Webserver, der diesen Dienst hostet, wird wiederverwendet. Im ersten Fall ist die Sitzung so lange gültig, bis das Timeout des Dienstes überschrietten wird. Wenn der Dienst innerhalb des Zeitrahmens, der in der Bindung des Dienstes angegeben ist (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) keine Anforderung vom Client erhält, beendet der Dienst die Sicherheitssitzung. Nachfolgende Clientnachrichten führen zu <xref:System.ServiceModel.Security.MessageSecurityException>. Der Code muss erneut eine Sicherheitssitzung mit dem Dienst herstellen, um weitere Nachrichten senden oder ein Token für den Sicherheitszustandskontext verwenden zu können. Token für den Sicherheitszustandskontext sorgen auch dafür, dass eine Sicherheitssitzung das Wiederverwenden eines Webservers überdauert. [!INCLUDE[crabout](../../../includes/crabout-md.md)] sicherheitszustandskontext in einer sicheren Sitzung verwenden, finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontexttoken für eine Sicherheitssitzung](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Stattdessen können Sie Sicherheitssitzungen auch deaktivieren. Bei Verwendung der [ \<WsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) binden, können Sie festlegen der `establishSecurityContext` Eigenschaft `false` um sichere Sitzungen zu deaktivieren. Wenn Sie Sicherheitssitzungen für andere Bindungen deaktivieren möchten, müssen Sie eine benutzerdefinierte Bindung erstellen. Ausführliche Informationen zum Erstellen einer benutzerdefinierten Bindung finden Sie unter [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bevor Sie eine dieser Optionen anwenden, müssen Sie die Sicherheitsanforderungen der Anwendung kennen.  
+ Die zweite Anforderung kann in erster Linie aus zwei Gründen fehlschlagen: (1) Das Timeout der Sitzung wurde überschritten. (2) Der Webserver, der diesen Dienst hostet, wird wiederverwendet. Im ersten Fall ist die Sitzung so lange gültig, bis das Timeout des Dienstes überschrietten wird. Wenn der Dienst innerhalb des Zeitrahmens, der in der Bindung des Dienstes angegeben ist (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) keine Anforderung vom Client erhält, beendet der Dienst die Sicherheitssitzung. Nachfolgende Clientnachrichten führen zu <xref:System.ServiceModel.Security.MessageSecurityException>. Der Code muss erneut eine Sicherheitssitzung mit dem Dienst herstellen, um weitere Nachrichten senden oder ein Token für den Sicherheitszustandskontext verwenden zu können. Token für den Sicherheitszustandskontext sorgen auch dafür, dass eine Sicherheitssitzung das Wiederverwenden eines Webservers überdauert. Weitere Informationen zur Verwendung von sicherheitszustandskontext in einer sicheren Sitzung finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontexttoken für eine Sicherheitssitzung](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Stattdessen können Sie Sicherheitssitzungen auch deaktivieren. Bei Verwendung der [ \<WsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) binden, können Sie festlegen der `establishSecurityContext` Eigenschaft `false` um sichere Sitzungen zu deaktivieren. Wenn Sie Sicherheitssitzungen für andere Bindungen deaktivieren möchten, müssen Sie eine benutzerdefinierte Bindung erstellen. Ausführliche Informationen zum Erstellen einer benutzerdefinierten Bindung finden Sie unter [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bevor Sie eine dieser Optionen anwenden, müssen Sie die Sicherheitsanforderungen der Anwendung kennen.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Der Dienst lehnt nach einer Interaktion mit ungefähr 10 Clients weitere Clients ab. Woran liegt das?  
@@ -145,7 +145,7 @@ public class MyServiceHost : ServiceHost
   
     4.  Registrieren Sie mit SetSPN einen neuen Dienstprinzipalnamen bei der Domäne. Sie müssen dazu ein Domänenadministrator sein.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] zum Kerberos-Protokoll finden Sie unter [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) und:  
+ Weitere Informationen zum Kerberos-Protokoll finden Sie unter [in WCF verwendete Sicherheitsbegriffe](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) und:  
   
 -   [Debuggen von Windows-Authentifizierungsfehlern](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
@@ -175,7 +175,7 @@ public class MyServiceHost : ServiceHost
   
  In diesem Fall müssen Sie dem Konto des Prozesses Leseberechtigungen für die Datei mit dem Schlüssel erteilen. Wenn z. B. der IIS-Arbeitsprozess unter dem Konto Bob ausgeführt wird, müssen Sie Bob den Lesezugriff auf die Datei erteilen, die den privaten Schlüssel enthält.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] zur Vorgehensweise beim Erteilen der richtigen Zugriffsrechte für das Benutzerkonto auf die Datei, die den privaten Schlüssel für ein bestimmtes X.509-Zertifikat enthält, finden Sie unter [How to: Make X.509 Certificates Accessible to WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
+ Weitere Informationen dazu, wie Sie die richtige Benutzerkonto den Zugriff auf die Datei erteilen, die den privaten Schlüssel für ein bestimmtes x. 509-Zertifikat enthält, finden Sie unter [Vorgehensweise: Stellen Sie x. 509-Zertifikate für WCF zugänglich](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>Ich habe den ersten Parameter eines Vorgangs von Groß- in Kleinbuchstaben geändert, und der Client löst nun eine Ausnahme aus. Woran liegt das?  

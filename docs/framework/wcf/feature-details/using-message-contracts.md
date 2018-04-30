@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
 Üblicherweise achten Entwickler bei der Erstellung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungen streng auf die Datenstrukturen und Serialisierungsprobleme und müssen nicht auf die Struktur der Nachrichten achten, in denen die Daten transportiert werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/28/2018
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalerweise ist ein Datenvertrag ausreichend, um das Schema für die Nachrichten zu definieren. Beispielsweise reicht es im vorherigen Beispiel für die meisten Anwendungen aus, wenn `BankingTransaction` und `BankingTransactionResponse` über Datenverträge für die Inhaltsdefinition der zugrunde liegenden SOAP-Nachrichten verfügen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Datenverträge, finden Sie unter [mithilfe von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalerweise ist ein Datenvertrag ausreichend, um das Schema für die Nachrichten zu definieren. Beispielsweise reicht es im vorherigen Beispiel für die meisten Anwendungen aus, wenn `BankingTransaction` und `BankingTransactionResponse` über Datenverträge für die Inhaltsdefinition der zugrunde liegenden SOAP-Nachrichten verfügen. Weitere Informationen zu Datenverträgen finden Sie unter [mithilfe von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Zuweilen ist es allerdings notwendig, die Struktur der übertragenen SOAP-Nachricht genau zu steuern. Das gängigste Szenario hierfür besteht aus dem Einfügen von benutzerdefinierten SOAP-Headern. Ein weiteres übliches Szenario ist die Definition von Sicherheitseigenschaften für Nachrichtenheader und -text, das heißt, die Entscheidung, ob diese Elemente digital signiert und verschlüsselt werden. Schließlich erfordern eine Reihe von Drittanbieter-SOAP-Stapeln Nachrichten in einem bestimmten Format. Vorgänge im Messagingstil bieten diese Kontrolle.  
   

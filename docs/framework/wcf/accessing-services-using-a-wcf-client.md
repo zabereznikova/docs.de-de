@@ -1,13 +1,13 @@
 ---
 title: Zugreifen auf Dienste mithilfe eines WCF-Clients
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69352ba5c12267f5075ae38c5bdcc0665b3fe050
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Zugreifen auf Dienste mithilfe eines WCF-Clients
 Nach dem Erstellen eines Diensts ist der nächste Schritt das Erstellen eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientproxys. Eine Clientanwendung verwendet den [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientproxy, um mit dem Dienst zu kommunizieren. Clientanwendungen importieren normalerweise Metadaten eines Dienstes zum Generieren von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientcode, mit dem der Dienst aufgerufen werden kann.  
@@ -61,7 +61,7 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>  
 ```  
   
- Wenn nur ein Dateiname angegeben wird, ist das der Name der Ausgabedatei. Wenn zwei Dateinamen angegeben werden, ist die erste Datei eine Eingabekonfigurationsdatei, deren Inhalt mit der generierten Konfiguration zusammengeführt und in die zweite Datei geschrieben wird. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Konfiguration finden Sie unter [Konfigurieren von Bindungen für Dienste](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
+ Wenn nur ein Dateiname angegeben wird, ist das der Name der Ausgabedatei. Wenn zwei Dateinamen angegeben werden, ist die erste Datei eine Eingabekonfigurationsdatei, deren Inhalt mit der generierten Konfiguration zusammengeführt und in die zweite Datei geschrieben wird. Weitere Informationen zur Konfiguration finden Sie unter [Konfigurieren von Bindungen für Dienste](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Nicht gesicherte Metadatenanforderungen stellen genau wie nicht gesicherte Netzwerkanforderungen ein gewisses Risiko dar: Wenn Sie sich nicht sicher sind, ob der Endpunkt, mit dem Sie kommunizieren, der vorgegebenen Identität entspricht, stammen die abgerufenen Informationen unter Umständen von einem bösartigen Dienst.  
@@ -194,7 +194,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
 -   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Die Socketverbindung wurde abgebrochen. Mögliche Ursache: Ein Fehler beim Verarbeiten der Nachricht, eine Zeitüberschreitung durch den Remotehost beim Empfang oder ein Problem mit einer zugrunde liegenden Netzwerkressource.  
   
- Tritt eine Ausnahme dieses Typs auf, aktivieren Sie die Ablaufverfolgung auf der Dienstseite, und ermitteln Sie die dort aufgetretene Ausnahme. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Ablaufverfolgung, finden Sie unter [Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/index.md) und [mithilfe-Ablaufverfolgung zum Beheben der Anwendung](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ Tritt eine Ausnahme dieses Typs auf, aktivieren Sie die Ablaufverfolgung auf der Dienstseite, und ermitteln Sie die dort aufgetretene Ausnahme. Weitere Informationen zur Ablaufverfolgung finden Sie unter [Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/index.md) und [mithilfe-Ablaufverfolgung zum Beheben der Anwendung](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

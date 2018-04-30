@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung
 Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine vollständige Übersicht und normative versionsverwaltungsanleitung finden Sie unter [Vorgehensweisen: versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -125,7 +125,7 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
  Das Hinzufügen oder Entfernen einer Enumeration ist ein "Breaking Change". Die Änderung des Namens einer Enumeration ist "breaking", sofern nicht der Vertragsname durch die Verwendung des Attributs `EnumMemberAtttribute` der gleiche wie in der alten Version geblieben ist. Weitere Informationen finden Sie unter [Enumerationstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Auflistungen  
- Die meisten Sammlungsänderungen sind "non-breaking", da die meisten Sammlungstypen im Datenvertragsmodell gegeneinander austauschbar sind. Eine nicht angepasste Sammlung angepasst zu machen oder umgekehrt ist jedoch ein "Breaking Change". Außerdem ist die Änderung der Anpassungseinstellungen der Sammlung ein "Breaking Change", d. h. eine Änderung des Namens und Namespace ihres Datenvertrags und eine Wiederholung des Elementnamens, des Schlüsselelementnamens und des Wertelementnamens. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sammlungsanpassung finden Sie unter [Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ Die meisten Sammlungsänderungen sind "non-breaking", da die meisten Sammlungstypen im Datenvertragsmodell gegeneinander austauschbar sind. Eine nicht angepasste Sammlung angepasst zu machen oder umgekehrt ist jedoch ein "Breaking Change". Außerdem ist die Änderung der Anpassungseinstellungen der Sammlung ein "Breaking Change", d. h. eine Änderung des Namens und Namespace ihres Datenvertrags und eine Wiederholung des Elementnamens, des Schlüsselelementnamens und des Wertelementnamens. Weitere Informationen zu sammlungsanpassung finden Sie unter [Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Natürlich ist die Änderung des Datenvertrags der Inhalte einer Sammlung (z. B. die Änderung von einer Liste ganzer Zahlen zu einer Liste von Zeichenfolgen) ein "Breaking Change".  
   
 ## <a name="see-also"></a>Siehe auch  

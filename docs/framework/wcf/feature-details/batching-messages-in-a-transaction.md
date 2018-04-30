@@ -1,31 +1,31 @@
 ---
 title: Batchverarbeitung von Nachrichten in einer Transaktion
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0587624dd3b9bc12c6e421343ad2cdc1da6b970f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17d9bd3b58e8320bfe1f62ac56aff59ba52f4374
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="batching-messages-in-a-transaction"></a>Batchverarbeitung von Nachrichten in einer Transaktion
-Anwendungen, die mit Warteschlangen arbeiten, verwenden Transaktionen, um eine richtige und zuverlässige Zustellung der Nachrichten zu gewährleisten. Transaktionen sind jedoch teuer und können den Nachrichtendurchsatz stark senken. Eine Möglichkeit, den Nachrichtendurchsatz zu verbessern, ist, dass mehrere Nachrichten in einer Transaktion von einer Anwendung gelesen und verarbeitet werden. Dabei muss zwischen Leistung und Wiederherstellungsaufwand abgewogen werden: Je mehr Nachrichten sich in einem Batch befinden, desto umfangreicher ist die Wiederherstellungsarbeit, die anfällt, falls Transaktionen zurückgesetzt werden. Beachten Sie dabei den Unterschied zwischen der Batchverarbeitung von Nachrichten in einer Transaktion und in Sitzungen. Ein *Sitzung* ist eine Gruppierung verwandter Nachrichten, die von einer einzigen Anwendung verarbeitet werden und als einzelne Einheit ein Commit. Sitzungen werden in der Regel verwendet, wenn eine Gruppe verwandter Nachrichten gemeinsam verarbeitet werden muss. Ein Beispiel hierfür ist eine Website für Online-Shopping. *Batches* werden verwendet, um die Verarbeitung mehrerer, unzusammenhängender Nachrichten so, dass Nachrichtendurchsatz zu erhöhen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Sitzungen, finden Sie unter [Gruppierung in der Warteschlange Nachrichten in einer Sitzung](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Nachrichten in einem Batch werden auch nur von einer Anwendung verarbeitet und als Einheit festgeschrieben (COMMIT), die Nachrichten im Batch stehen jedoch ggf. in keinem Zusammenhang zueinander. Die Batchverarbeitung von Nachrichten in einer Transaktion ist eine Optimierung, die sich nicht auf die Ausführung der Anwendung auswirkt.  
+Anwendungen, die mit Warteschlangen arbeiten, verwenden Transaktionen, um eine richtige und zuverlässige Zustellung der Nachrichten zu gewährleisten. Transaktionen sind jedoch teuer und können den Nachrichtendurchsatz stark senken. Eine Möglichkeit, den Nachrichtendurchsatz zu verbessern, ist, dass mehrere Nachrichten in einer Transaktion von einer Anwendung gelesen und verarbeitet werden. Dabei muss zwischen Leistung und Wiederherstellungsaufwand abgewogen werden: Je mehr Nachrichten sich in einem Batch befinden, desto umfangreicher ist die Wiederherstellungsarbeit, die anfällt, falls Transaktionen zurückgesetzt werden. Beachten Sie dabei den Unterschied zwischen der Batchverarbeitung von Nachrichten in einer Transaktion und in Sitzungen. Ein *Sitzung* ist eine Gruppierung verwandter Nachrichten, die von einer einzigen Anwendung verarbeitet werden und als einzelne Einheit ein Commit. Sitzungen werden in der Regel verwendet, wenn eine Gruppe verwandter Nachrichten gemeinsam verarbeitet werden muss. Ein Beispiel hierfür ist eine Website für Online-Shopping. *Batches* werden verwendet, um die Verarbeitung mehrerer, unzusammenhängender Nachrichten so, dass Nachrichtendurchsatz zu erhöhen. Weitere Informationen zu Sitzungen finden Sie unter [Gruppierung in der Warteschlange Nachrichten in einer Sitzung](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Nachrichten in einem Batch werden auch nur von einer Anwendung verarbeitet und als Einheit festgeschrieben (COMMIT), die Nachrichten im Batch stehen jedoch ggf. in keinem Zusammenhang zueinander. Die Batchverarbeitung von Nachrichten in einer Transaktion ist eine Optimierung, die sich nicht auf die Ausführung der Anwendung auswirkt.  
   
 ## <a name="entering-batching-mode"></a>Aktivieren des Batchmodus  
  Die Batchverarbeitung wird durch das <xref:System.ServiceModel.Description.TransactedBatchingBehavior>-Endpunktverhalten gesteuert. Wenn Sie einem Dienstendpunkt dieses Endpunktverhalten hinzufügen, weiß [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], dass Nachrichten in einem Batch in einer Transaktion verarbeitet werden sollen. Nicht alle Nachrichten erfordern eine Transaktion nur Nachrichten, die eine Transaktion müssen in einem Batch platziert werden, und nur Nachrichten von Vorgängen mit markierten `TransactionScopeRequired`  =  `true` und `TransactionAutoComplete`  =  `true` sind für einen Batch berücksichtigt. Wenn alle Vorgänge im Dienstvertrag mit gekennzeichnet sind `TransactionScopeRequired`  =  `false` und `TransactionAutoComplete`  =  `false`, und klicken Sie dann Batchmodus nie ist.  

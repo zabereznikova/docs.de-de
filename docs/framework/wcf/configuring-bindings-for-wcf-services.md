@@ -1,28 +1,28 @@
 ---
-title: "Konfigurieren von Bindungen für Windows Communication Foundation-Dienste"
-ms.custom: 
+title: Konfigurieren von Bindungen für Windows Communication Foundation-Dienste
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurieren von Bindungen für Windows Communication Foundation-Dienste
 Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellung der Anwendung möglicherweise Entscheidungen mitteilen. Beispielsweise wissen Sie häufig nicht im Voraus, welche Dienstadresse oder welcher URI (Uniform Resource Identifier) verwendet wird. Anstatt eine Adresse fest zu programmieren, sollte diese Aufgabe einem Administrator nach dem Erstellen eines Diensts übergeben werden. Diese Flexibilität wird durch Konfiguration ermöglicht.  
@@ -47,13 +47,13 @@ Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellun
 ```  
   
 ### <a name="servicemodel-elements"></a>ServiceModel-Elemente  
- Der Abschnitt "" durch begrenzt, die die `system.ServiceModel` Element so konfigurieren Sie einen Diensttyp mit einem oder mehreren Endpunkten sowie Einstellungen für einen Dienst. Jeder Endpunkt kann dann mit einer Adresse, einem Vertrag und einer Bindung konfiguriert werden. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Endpunkte, finden Sie unter [Endpunkterstellung](../../../docs/framework/wcf/endpoint-creation-overview.md). Wenn Sie keine Endpunkte angeben, werden von der Runtime automatisch Standardendpunkte hinzugefügt. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Der Abschnitt "" durch begrenzt, die die `system.ServiceModel` Element so konfigurieren Sie einen Diensttyp mit einem oder mehreren Endpunkten sowie Einstellungen für einen Dienst. Jeder Endpunkt kann dann mit einer Adresse, einem Vertrag und einer Bindung konfiguriert werden. Weitere Informationen über Endpunkte finden Sie unter [Endpunkterstellung](../../../docs/framework/wcf/endpoint-creation-overview.md). Wenn Sie keine Endpunkte angeben, werden von der Runtime automatisch Standardendpunkte hinzugefügt. Weitere Informationen zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
  Eine Bindung gibt Transporte (HTTP, TCP, Pipes und Message Queuing) sowie Protokolle (Sicherheit, Verlässlichkeit, Transaktionsflüsse) an und besteht aus Bindungselementen, von denen jedes einen Aspekt der Kommunikation eines Endpunkts mit der Welt angibt.  
   
  Z. B. die [ \<BasicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element gibt an, dass um HTTP als Transport für einen Endpunkt zu nutzen. Auf diese Weise wird der Endpunkt zur Laufzeit aktiviert, wenn der Dienst, der diesen Endpunkt verwendet, geöffnet wird.  
   
- Es gibt zwei Arten von Bindungen: vordefinierte und benutzerdefinierte. Vordefinierte Bindungen enthalten nützliche Kombinationen von Elementen, die in allgemeinen Szenarien verwendet werden. Eine Liste der vordefinierten Bindungen Datentypen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bereitstellt, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../docs/framework/wcf/system-provided-bindings.md). Wenn keine vordefinierte Bindungsauflistung über die korrekte Kombination von Funktionen verfügt, die eine Dienstanwendung benötigt, können Sie benutzerdefinierte Bindungen erstellen, um den Anforderungen der Anwendung zu entsprechen. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Benutzerdefinierte Bindungen finden Sie unter [ \<CustomBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Es gibt zwei Arten von Bindungen: vordefinierte und benutzerdefinierte. Vordefinierte Bindungen enthalten nützliche Kombinationen von Elementen, die in allgemeinen Szenarien verwendet werden. Eine Liste der vordefinierten Bindungen Datentypen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bereitstellt, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../docs/framework/wcf/system-provided-bindings.md). Wenn keine vordefinierte Bindungsauflistung über die korrekte Kombination von Funktionen verfügt, die eine Dienstanwendung benötigt, können Sie benutzerdefinierte Bindungen erstellen, um den Anforderungen der Anwendung zu entsprechen. Weitere Informationen über benutzerdefinierte Bindungen finden Sie unter [ \<CustomBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
  In den folgenden vier Beispielen werden die am häufigsten verwendeten Bindungskonfigurationen dargestellt, die zum Einrichten eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensts verwendet werden.  
   

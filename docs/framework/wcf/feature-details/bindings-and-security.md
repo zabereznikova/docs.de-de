@@ -21,23 +21,23 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bindings-and-security"></a>Bindungen und Sicherheit
 Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] integrierten Bindungen bieten eine schnelle Möglichkeit, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen zu programmieren. Mit einer Ausnahme haben alle Bindungen ein standardmäßig aktiviertes Sicherheitsschema. Dieses Thema hilft Ihnen, die richtige Bindung für die benötigte Sicherheit auszuwählen.  
   
- Eine Übersicht über [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Programmieren von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bindungen, finden Sie unter [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Eine Übersicht über [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zur Programmierung [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bindungen, finden Sie unter [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Wenn Sie bereits eine Bindung ausgewählt haben, finden Sie weitere Informationen über das Laufzeitverhalten, die unter Berücksichtigung von Sicherheitsaspekten einhergehen [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Einige Sicherheitsfunktionen sind mit den vom System bereitgestellten Bindungen nicht programmierbar. Mehr Kontrolle über eine benutzerdefinierte Bindung, finden Sie unter [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Sicherheitsfunktionen von Bindungen  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet einige vom System bereitgestellte Bindungen, die die meisten Bedürfnisse erfüllen. Wenn eine bestimmte Bindung nicht ausreicht, können Sie auch eine benutzerdefinierte Bindung erstellen. Eine Liste der vom System bereitgestellte Bindungen, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Benutzerdefinierte Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet einige vom System bereitgestellte Bindungen, die die meisten Bedürfnisse erfüllen. Wenn eine bestimmte Bindung nicht ausreicht, können Sie auch eine benutzerdefinierte Bindung erstellen. Eine Liste der vom System bereitgestellte Bindungen, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md). Weitere Informationen über benutzerdefinierte Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Jede Bindung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erscheint in zwei Formen: als API- und als XML-Element, die in einer Konfigurationsdatei verwendet werden. Z. B. die `WSHttpBinding` (API) hat eine Entsprechung den [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   

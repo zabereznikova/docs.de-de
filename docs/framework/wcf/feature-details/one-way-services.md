@@ -1,28 +1,30 @@
 ---
 title: Unidirektionale Dienste
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-way-services"></a>Unidirektionale Dienste
 Das Standardverhalten eines Dienstvorgangs ist das Anforderung-Antwort-Muster. Bei einem Anforderung-Antwort-Muster wartet der Client auch dann auf die Antwortnachricht, wenn der Dienstvorgang im Code als `void`-Methode dargestellt wird. Mit einem unidirektionalen Vorgang wird nur eine Nachricht gesendet. Der Empfänger sendet keine Antwortnachricht, und vom Absender wird keine erwartet.  
@@ -31,7 +33,7 @@ Das Standardverhalten eines Dienstvorgangs ist das Anforderung-Antwort-Muster. B
   
 -   Wenn der Client Vorgänge aufrufen muss und vom Ergebnis des Vorgangs auf Vorgangsebene nicht betroffen ist.  
   
--   Wenn die <xref:System.ServiceModel.NetMsmqBinding>-Klasse oder die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Klasse verwendet wird. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] dieses Szenario finden Sie unter [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+-   Wenn die <xref:System.ServiceModel.NetMsmqBinding>-Klasse oder die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Klasse verwendet wird. (Weitere Informationen zu diesem Szenario finden Sie unter [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Bei einem unidirektionalen Vorgang gibt es keine Antwortnachricht, über die Fehlerinformationen zurück an den Client übertragen werden. Sie können Fehlerbedingungen mit den Funktionen der zugrunde liegenden Bindung, z.&#160;B. zuverlässige Sitzungen, ermitteln oder durch den Entwurf eines Duplexdienstvertrags, der zwei unidirektionale Vorgänge verwendet: einen unidirektionalen Vertrag vom Client zum Dienst zum Aufrufen von Dienstvorgängen sowie einen anderen unidirektionalen Vertrag zwischen dem Dienst und dem Client, damit der Dienst über einen vom Client implementierten Rückruf Fehler an den Client zurücksenden kann.  
   

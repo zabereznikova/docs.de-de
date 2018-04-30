@@ -1,23 +1,24 @@
 ---
-title: "Übersicht über Windows-Workflow"
-ms.custom: 
+title: Übersicht über Windows-Workflow
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dce6962feb0f425958f89182ee7695332389b567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-workflow-overview"></a>Übersicht über Windows-Workflow
 Ein Workflow ist ein Satz von elementaren Einheiten, den sogenannten *Aktivitäten* als, die einen reelle Prozess beschreibendes Modell gespeichert sind. Mit Workflows können die Reihenfolge der Ausführung sowie abhängige Beziehungen zwischen kurz- und langfristiger Arbeit beschrieben werden. Diese Arbeit durchläuft das Modell vom Anfang bis zum Ende, und Aktivitäten werden unter Umständen von Personen oder Systemfunktionen ausgeführt.  
@@ -45,11 +46,11 @@ Workflowkomponenten im Hostprozess
   
  Im vorangehenden Diagramm wird die <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Methode der <xref:System.Activities.WorkflowInvoker>-Klasse verwendet, um mehrere Instanzen eines Workflows aufzurufen. <xref:System.Activities.WorkflowInvoker> wird für einfache Workflows verwendet, die keine Verwaltung durch den Host benötigen. Workflows, die eine Verwaltung durch den Host erfordern (z. B. eine <xref:System.Activities.Bookmark>-Wiederaufnahme), müssen stattdessen mithilfe von <xref:System.Activities.WorkflowApplication.Run%2A> ausgeführt werden. Es ist nicht erforderlich, auf den Abschluss einer Workflowinstanz zu warten, bevor ein weiterer Workflow aufgerufen wird. Das Laufzeitmodul unterstützt die Ausführung mehrerer Workflowinstanzen gleichzeitig.  Die aufgerufenen Workflows sind:  
   
--   Eine <xref:System.Activities.Statements.Sequence>-Aktivität, die eine untergeordnete <xref:System.Activities.Statements.WriteLine>-Aktivität enthält. <xref:System.Activities.Variable> der übergeordneten Aktivität wird an <xref:System.Activities.InArgument> der untergeordneten Aktivität gebunden. [!INCLUDE[crabout](../../../includes/crabout-md.md)]auf Variablen, Argumente und der Bindung, finden Sie unter [Variablen und Argumente](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
+-   Eine <xref:System.Activities.Statements.Sequence>-Aktivität, die eine untergeordnete <xref:System.Activities.Statements.WriteLine>-Aktivität enthält. <xref:System.Activities.Variable> der übergeordneten Aktivität wird an <xref:System.Activities.InArgument> der untergeordneten Aktivität gebunden. Weitere Informationen zu Variablen, Argumente und Bindung finden Sie unter [Variablen und Argumente](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
 -   Eine benutzerdefinierte Aktivität mit dem Namen `ReadLine`. Ein <xref:System.Activities.OutArgument> der `ReadLine`-Aktivität wird an die aufrufende <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Methode zurückgegeben.  
   
--   Eine benutzerdefinierte Aktivität, die von der abstrakten <xref:System.Activities.CodeActivity>-Klasse abgeleitet wird. <xref:System.Activities.CodeActivity> kann auf Laufzeitfunktionen (z. B. Nachverfolgung und Eigenschaften) mit dem <xref:System.Activities.CodeActivityContext> zugreifen, der als Parameter über die <xref:System.Activities.CodeActivity.Execute%2A>-Methode verfügbar ist. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Diese Funktionen zur Laufzeit finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) und [Workflowausführungseigenschaften](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
+-   Eine benutzerdefinierte Aktivität, die von der abstrakten <xref:System.Activities.CodeActivity>-Klasse abgeleitet wird. <xref:System.Activities.CodeActivity> kann auf Laufzeitfunktionen (z. B. Nachverfolgung und Eigenschaften) mit dem <xref:System.Activities.CodeActivityContext> zugreifen, der als Parameter über die <xref:System.Activities.CodeActivity.Execute%2A>-Methode verfügbar ist. Weitere Informationen zu diesen Funktionen zur Laufzeit finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) und [Workflowausführungseigenschaften](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [BizTalk Server 2006 oder WF? Auswählen des richtigen Workflowtools für Ihr Projekt](http://go.microsoft.com/fwlink/?LinkId=154901)

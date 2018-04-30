@@ -1,13 +1,13 @@
 ---
 title: 'Vorgehensweise: Erstellen eines Duplexvertrags'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 003b07326612f3b51390d691c7bba0ef1c1b85dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c06bd4f050eda3c3374684b5401b8c85fb9e1df9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Vorgehensweise: Erstellen eines Duplexvertrags
-Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die einen Duplexvertrag (bidirektionalen Vertrag) verwenden. Ein Duplexvertrag ermöglicht die unabhängige Kommunikation zwischen Clients und Servern, sodass beide Aufrufe des jeweils Anderen initiieren können. Der Duplexvertrag ist eines der drei Nachrichtenmuster, die für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste verfügbar sind. Die anderen beiden Nachrichtenmuster zeichnen sich durch unidirektionale Anforderungen bzw. Antworten aus. Ein Duplexvertrag besteht aus zwei unidirektionalen Verträgen zwischen Client und Server und erfordert nicht, dass die Methodenaufrufe korrelieren. Sie verwenden diese Art von Vertrag, wenn der Dienst vom Client weitere Informationen anfordern muss oder auf dem Client ausdrücklich Ereignisse auslösen muss. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellen eine Clientanwendung für einen Duplexvertrag finden Sie unter [Vorgehensweise: Access Services mit einem Duplexvertrag](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Ein funktionierendes Beispiel finden Sie unter der [Duplex](../../../../docs/framework/wcf/samples/duplex.md) Beispiel.  
+Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die einen Duplexvertrag (bidirektionalen Vertrag) verwenden. Ein Duplexvertrag ermöglicht die unabhängige Kommunikation zwischen Clients und Servern, sodass beide Aufrufe des jeweils Anderen initiieren können. Der Duplexvertrag ist eines der drei Nachrichtenmuster, die für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste verfügbar sind. Die anderen beiden Nachrichtenmuster zeichnen sich durch unidirektionale Anforderungen bzw. Antworten aus. Ein Duplexvertrag besteht aus zwei unidirektionalen Verträgen zwischen Client und Server und erfordert nicht, dass die Methodenaufrufe korrelieren. Sie verwenden diese Art von Vertrag, wenn der Dienst vom Client weitere Informationen anfordern muss oder auf dem Client ausdrücklich Ereignisse auslösen muss. Weitere Informationen zum Erstellen von einer Clientanwendung für einen Duplexvertrag, finden Sie unter [Vorgehensweise: Access Services mit einem Duplexvertrag](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Ein funktionierendes Beispiel finden Sie unter der [Duplex](../../../../docs/framework/wcf/samples/duplex.md) Beispiel.  
   
 ### <a name="to-create-a-duplex-contract"></a>So erstellen Sie einen Duplexvertrag  
   

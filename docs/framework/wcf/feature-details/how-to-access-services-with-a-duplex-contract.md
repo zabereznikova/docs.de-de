@@ -1,13 +1,13 @@
 ---
 title: 'Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 425d17fa34b61985ad3600f992e028e156f6adb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag
 Eine Funktion von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] besteht in der Fähigkeit, einen Dienst zu erstellen, der ein Duplexnachrichtenmuster verwendet. Anhand dieses Musters kann ein Dienst mit dem Client über einen Rückruf kommunizieren Dieses Thema beschreibt die Schritte, mit denen Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client in einer Client-Klasse, die die Rückrufschnittstelle implementiert, erstellen können.  
@@ -36,7 +36,7 @@ Eine Funktion von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] besteh
   
 ### <a name="to-access-a-duplex-service"></a>So greifen Sie auf einen Duplexdienst zu  
   
-1.  Erstellen Sie einen Dienst, der zwei Schnittstellen enthält. Die erste Schnittstelle ist dem Dienst vorbehalten, die zweite Schnittstelle wird für den Rückruf verwendet. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellen einen Duplexdienst finden Sie unter [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+1.  Erstellen Sie einen Dienst, der zwei Schnittstellen enthält. Die erste Schnittstelle ist dem Dienst vorbehalten, die zweite Schnittstelle wird für den Rückruf verwendet. Weitere Informationen zu einen Duplexdienst zu erstellen, finden Sie unter [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 2.  Führen Sie den Dienst aus.  
   

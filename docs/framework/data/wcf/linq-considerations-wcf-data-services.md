@@ -23,14 +23,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c20817e791ae95efecd00a41a44c14eedec017d4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 365bab484be17fd7bd1466a39d5af53f116ad06f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Überlegungen zu LINQ (WCF Data Services)
-Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfragen bei der Verwendung des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients und zu den Einschränkungen, die gelten, wenn Sie einen Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, mithilfe von LINQ abfragen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Verfassen und Ausführen von Abfragen für eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Datendienst, finden Sie unter [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfragen bei der Verwendung des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients und zu den Einschränkungen, die gelten, wenn Sie einen Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, mithilfe von LINQ abfragen. Weitere Informationen zu verfassen und Ausführen von Abfragen für eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Datendienst, finden Sie unter [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Verfassen von LINQ-Abfragen  
  LINQ ermöglicht es Ihnen, Abfragen für eine Auflistung von Objekten zu verfassen, die <xref:System.Collections.Generic.IEnumerable%601> implementiert. Sowohl die **Hinzufügen eines Dienstverweises** in Visual Studio im Dialogfeld und das Tool DataSvcUtil.exe dienen zum Generieren einer Darstellung eines ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Diensts als entitätscontainerklasse, die von erben <xref:System.Data.Services.Client.DataServiceContext>, als auch Objekte, die die zurückgegebenen Entitäten im Feeds darstellen. Diese Tools generieren auch Eigenschaften der Entitätscontainerklasse für die Auflistungen, die als Feeds vom Dienst verfügbar gemacht werden. Jede Eigenschaft der Klasse, die den Datendienst kapselt, gibt eine <xref:System.Data.Services.Client.DataServiceQuery%601> zurück. Da die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse die von LINQ definierte <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert, können Sie eine LINQ-Abfrage für vom Datendienst verfügbar gemachte Feeds verfassen. Diese Abfrage wird von der Clientbibliothek in einen Abfrageanforderungs-URI übersetzt, der bei der Ausführung an den Datendienst gesendet wird.  

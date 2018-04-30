@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Eigenständige JSON-Serialisierung.
 JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendung von JavaScript-Code entworfen wurde, der auf Webseiten innerhalb des Browsers ausgeführt wird. Es ist das von ASP.NET AJAX-Diensten, die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erstellt wurden, verwendete Standarddatenformat.  
@@ -53,7 +53,7 @@ JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendu
 |`Null`-Wert für jeden Typ|Null|Typen, die NULL-Werte zulassen, werden ebenfalls unterstützt und JSON-Typen auf die gleiche Weise zugeordnet wie nicht auf NULL festlegbare Typen.|  
   
 ### <a name="enumerations-and-json"></a>Enumerationen und JSON  
- Enumerationsmemberwerte werden in JSON als Zahlen behandelt. Dies unterscheidet sich von ihrer Behandlung in Datenverträgen, in die sie als Membernamen eingefügt werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] der Datenvertrag behandelt, finden Sie unter [Enumerationstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Enumerationsmemberwerte werden in JSON als Zahlen behandelt. Dies unterscheidet sich von ihrer Behandlung in Datenverträgen, in die sie als Membernamen eingefügt werden. Weitere Informationen zur Behandlung Vertrag Daten finden Sie unter [Enumerationstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Wenn beispielsweise `public enum Color {red, green, blue, yellow, pink}` gegeben ist, ergibt die Serialisierung von `yellow` die Zahl&#160;3 und nicht die Zeichenfolge "yellow".  
   

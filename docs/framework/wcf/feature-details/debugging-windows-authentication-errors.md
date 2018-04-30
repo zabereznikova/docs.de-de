@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debuggen von Windows-Authentifizierungsfehlern
 Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt die Security Support Provider-Schnittstelle (SSPI) Sicherheitsprozesse ab. Wenn Sicherheitsfehler auf der SSPI-Schicht auftreten, werden sie von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] festgestellt. Dieses Thema enthält ein Framework und eine Reihe von Fragen zur Diagnose der Fehler.  
@@ -75,7 +75,7 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
 ### <a name="kerberos-protocol"></a>Kerberos-Protokoll  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>SPN-/UPN-Probleme mit dem Kerberos-Protokoll  
- Bei Verwendung der Windows-Authentifizierung und des Kerberos-Protokolls oder der Aushandlung durch SSPI muss die vom Clientendpunkt verwendete URL den vollqualifizierten Domänennamen des Diensthosts in der Dienst-URL enthalten. Dabei wird vorausgesetzt, dass das Konto, unter dem der Dienst ausgeführt wird, Zugriff auf den (Standard-) Dienstprinzipalnamen (SPN) Dienstschlüssel, die erstellt wird hat, wenn der Computer der Active Directory-Domäne, der am häufigsten hinzugefügt wurde durch Ausführen des Dienstes unter erfolgt die Netzwerkdienstkonto. Wenn der Dienst keinen Zugriff auf den SPN-Schlüssel des Computers hat, müssen Sie den korrekten SPN oder Benutzerprinzipalnamen (UPN) des Kontos, unter dem der Dienst ausgeführt wird, in der Endpunktidentität des Clients angeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit SPN- und UPN, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Bei Verwendung der Windows-Authentifizierung und des Kerberos-Protokolls oder der Aushandlung durch SSPI muss die vom Clientendpunkt verwendete URL den vollqualifizierten Domänennamen des Diensthosts in der Dienst-URL enthalten. Dabei wird vorausgesetzt, dass das Konto, unter dem der Dienst ausgeführt wird, Zugriff auf den (Standard-) Dienstprinzipalnamen (SPN) Dienstschlüssel, die erstellt wird hat, wenn der Computer der Active Directory-Domäne, der am häufigsten hinzugefügt wurde durch Ausführen des Dienstes unter erfolgt die Netzwerkdienstkonto. Wenn der Dienst keinen Zugriff auf den SPN-Schlüssel des Computers hat, müssen Sie den korrekten SPN oder Benutzerprinzipalnamen (UPN) des Kontos, unter dem der Dienst ausgeführt wird, in der Endpunktidentität des Clients angeben. Weitere Informationen dazu, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit SPN- und UPN, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  Eine gängige Praxis für Lastenausgleichszenarien (beispielsweise bei Webfarmen und Webgärten) ist das Definieren eines eindeutigen Kontos für die einzelnen Anwendungen. Anschließend wird dem Konto ein SPN zugewiesen und sichergestellt, dass alle Dienste der Anwendung in diesem Konto ausgeführt werden.  
   
@@ -134,7 +134,7 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Identitätswechsel finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Weitere Informationen zum Identitätswechsel finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  Alternativ wird der Client als Windows-Dienst ausgeführt und verwendet das integrierte Konto-SYSTEM.  
   

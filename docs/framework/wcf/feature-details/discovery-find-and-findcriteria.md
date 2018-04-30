@@ -1,27 +1,29 @@
 ---
 title: Suche und FindCriteria
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Suche und FindCriteria
-Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste zu ermitteln, und ist eine der Hauptaktionen bei der Suche. Beim Durchführen einer Suche wird eine WS-Discovery-Probe-Nachricht über das Netzwerk gesendet. Dienste, die die angegebenen Kriterien erfüllen, antworten mit WS-Discovery-ProbeMatch-Nachrichten. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Discovery-Nachrichten finden Sie unter der [WS-Discovery-Spezifikation](http://go.microsoft.com/fwlink/?LinkID=122347).  
+Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste zu ermitteln, und ist eine der Hauptaktionen bei der Suche. Beim Durchführen einer Suche wird eine WS-Discovery-Probe-Nachricht über das Netzwerk gesendet. Dienste, die die angegebenen Kriterien erfüllen, antworten mit WS-Discovery-ProbeMatch-Nachrichten. Weitere Informationen zu Discovery-Nachrichten finden Sie unter der [WS-Discovery-Spezifikation](http://go.microsoft.com/fwlink/?LinkID=122347).  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  Die <xref:System.ServiceModel.Discovery.DiscoveryClient>-Klasse stellt den Mechanismus zur Durchführung von Suchvorgängen bereit und ermöglicht eine einfache Durchführung von Suchclientvorgängen. Sie enthält eine <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>-Methode, die eine synchrone (blockierende) Suche ausführt, und eine <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A>-Methode, die eine asynchrone (nicht blockierende) Suche initiiert. Beide Methoden verwenden einen <xref:System.ServiceModel.Discovery.FindCriteria>-Parameter und stellen dem Benutzer Ergebnisse über ein <xref:System.ServiceModel.Discovery.FindResponse>-Objekt bereit.  
@@ -39,7 +41,7 @@ Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste z
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> führt einen grundlegenden Zeichenfolgenvergleich aus, bei dem die Groß-/Kleinschreibung beachtet wird.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>ermittelt Übereinstimmungen nach Segmenten getrennt durch "/". Eine Suche nach "http://contoso/building1" führt zu einer Übereinstimmung mit dem Bereich "http://contoso/building/floor1". Beachten Sie, dass sich für "http://contoso/building100" keine Übereinstimmung ergibt, weil die letzten beiden Segmente nicht übereinstimmen.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> ermittelt Übereinstimmungen nach Segmenten getrennt durch "/". Eine Suche nach http://contoso/building1 Übereinstimmung mit dem Bereich http://contoso/building/floor1. Beachten Sie, die sie nicht übereinstimmen http://contoso/building100 weil die letzten beiden Segmente nicht übereinstimmen.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> ermittelt für Bereiche Übereinstimmungen nach Segmenten unter Verwendung einer LDAP-URL.  
   

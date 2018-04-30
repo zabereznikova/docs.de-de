@@ -1,12 +1,13 @@
 ---
 title: WPF-Anwendungsressource, Inhalts- und Datendateien
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcf0a725b7b3467a50a9f51850709dd972da217d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]Anwendungen sind Dateien, die nicht ausführbare Daten, z. B. enthalten häufig abhängig [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Bilder, Video und Audio. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] bietet spezielle Unterstützung zum Konfigurieren, Identifizieren und Verwenden dieser Datendateitypen, die als Anwendungsdatendateien bezeichnet werden. Diese Unterstützung bezieht sich auf einen bestimmten Satz von Anwendungsdatendateitypen, einschließlich:  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Anwendungen sind Dateien, die nicht ausführbare Daten, z. B. enthalten häufig abhängig [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Bilder, Video und Audio. Windows Presentation Foundation (WPF) bietet spezielle Unterstützung zum Konfigurieren, identifizieren und Verwendung dieser Typen von Datendateien, die Datendateien der Anwendung aufgerufen werden. Diese Unterstützung bezieht sich auf einen bestimmten Satz von Anwendungsdatendateitypen, einschließlich:  
   
 -   **Ressourcendateien**: Datendateien, die entweder eine ausführbare Datei oder Bibliothek kompiliert werden [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Assembly.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  Ein wichtiger Unterschied zwischen diesen drei Dateitypen besteht darin, dass die Ressourcen- und Inhaltsdateien zur Buildzeit bekannt sind. Sie sind einer Assembly explizit bekannt. Für die Website der Origin-Dateien, jedoch eine Assembly kann haben keine Kenntnis davon überhaupt oder implizite Kenntnisse über eine Pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Referenz; die Groß-/Kleinschreibung letzteren Fall besteht keine Garantie, dass die Website verwiesen wird, für die Ursprungsdatei tatsächlich vorhanden ist.  
   
- Auf die Datendateien der Anwendung verweisen [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] verwendet das Pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Authentifizierungsschema, das ausführlich beschrieben wird [Paket-URIs in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
+ Um Anwendungsdatendateien verweisen, verwendet Windows Presentation Foundation (WPF) das Pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Authentifizierungsschema, das ausführlich beschrieben wird [Paket-URIs in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
   
  In diesem Thema wird beschrieben, wie Sie Anwendungsdatendateien konfigurieren und verwenden.  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
  Wenn das Projekt erstellt wird, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] wird die Ressource in die Assembly kompiliert.  
   
 ### <a name="using-resource-files"></a>Verwenden von Ressourcendateien  
- Um eine Ressourcendatei zu laden, rufen Sie die <xref:System.Windows.Application.GetResourceStream%2A> Methode der <xref:System.Windows.Application> Klasse, und übergeben ein Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , die die gewünschte Ressourcendatei identifiziert. <xref:System.Windows.Application.GetResourceStream%2A>Gibt eine <xref:System.Windows.Resources.StreamResourceInfo> -Objekt, das die Ressourcendatei als macht eine <xref:System.IO.Stream> und den Inhaltstyp beschreibt.  
+ Um eine Ressourcendatei zu laden, rufen Sie die <xref:System.Windows.Application.GetResourceStream%2A> Methode der <xref:System.Windows.Application> Klasse, und übergeben ein Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , die die gewünschte Ressourcendatei identifiziert. <xref:System.Windows.Application.GetResourceStream%2A> Gibt eine <xref:System.Windows.Resources.StreamResourceInfo> -Objekt, das die Ressourcendatei als macht eine <xref:System.IO.Stream> und den Inhaltstyp beschreibt.  
   
  Als Beispiel der folgende Code wird gezeigt, wie mit <xref:System.Windows.Application.GetResourceStream%2A> beim Laden einer <xref:System.Windows.Controls.Page> Ressource Datei, und legen Sie es als Inhalt eine <xref:System.Windows.Controls.Frame> (`pageFrame`):  
   
@@ -165,7 +167,7 @@ ms.lasthandoff: 12/22/2017
  Die <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> Wert ist auch der Wert des Pfads der Inhaltsdatei im Buildausgabeordner.  
   
 ### <a name="using-content-files"></a>Verwenden von Inhaltsdateien  
- Um eine Datei zu laden, rufen Sie die <xref:System.Windows.Application.GetContentStream%2A> Methode der <xref:System.Windows.Application> Klasse, und übergeben ein Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , die die gewünschte Inhaltsdatei identifiziert. <xref:System.Windows.Application.GetContentStream%2A>Gibt eine <xref:System.Windows.Resources.StreamResourceInfo> -Objekt, das die Inhaltsdatei als macht eine <xref:System.IO.Stream> und den Inhaltstyp beschreibt.  
+ Um eine Datei zu laden, rufen Sie die <xref:System.Windows.Application.GetContentStream%2A> Methode der <xref:System.Windows.Application> Klasse, und übergeben ein Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , die die gewünschte Inhaltsdatei identifiziert. <xref:System.Windows.Application.GetContentStream%2A> Gibt eine <xref:System.Windows.Resources.StreamResourceInfo> -Objekt, das die Inhaltsdatei als macht eine <xref:System.IO.Stream> und den Inhaltstyp beschreibt.  
   
  Als Beispiel der folgende Code wird gezeigt, wie mit <xref:System.Windows.Application.GetContentStream%2A> beim Laden einer <xref:System.Windows.Controls.Page> Inhalt der Datei, und legen Sie es als Inhalt eine <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 12/22/2017
  Wenn das Projekt erstellt wird, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] kopiert die angegebenen Dateien in den Buildausgabeordner.  
   
 ### <a name="using-site-of-origin-files"></a>Verwenden der Dateien der Ursprungssite  
- Um einen Standort für die Ursprungsdatei zu laden, rufen Sie die <xref:System.Windows.Application.GetRemoteStream%2A> Methode der <xref:System.Windows.Application> Klasse, und übergeben ein Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , die die gewünschte Website für die Ursprungsdatei identifiziert. <xref:System.Windows.Application.GetRemoteStream%2A>Gibt eine <xref:System.Windows.Resources.StreamResourceInfo> -Objekt, das den Standort für die Ursprungsdatei als macht eine <xref:System.IO.Stream> und den Inhaltstyp beschreibt.  
+ Um einen Standort für die Ursprungsdatei zu laden, rufen Sie die <xref:System.Windows.Application.GetRemoteStream%2A> Methode der <xref:System.Windows.Application> Klasse, und übergeben ein Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , die die gewünschte Website für die Ursprungsdatei identifiziert. <xref:System.Windows.Application.GetRemoteStream%2A> Gibt eine <xref:System.Windows.Resources.StreamResourceInfo> -Objekt, das den Standort für die Ursprungsdatei als macht eine <xref:System.IO.Stream> und den Inhaltstyp beschreibt.  
   
  Als Beispiel der folgende Code wird gezeigt, wie mit <xref:System.Windows.Application.GetRemoteStream%2A> beim Laden einer <xref:System.Windows.Controls.Page> Ursprungssite Datei, und legen Sie es als Inhalt eine <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   

@@ -1,27 +1,29 @@
 ---
 title: 'Gewusst wie: Austauschen von Nachrichten in einer Warteschlange mit WCD-Endpunkten'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba057a0b96d393a5efbaf054e75c34f446c7dde6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Gewusst wie: Austauschen von Nachrichten in einer Warteschlange mit WCD-Endpunkten
 Warteschlangen stellen sicher, dass ein zuverlässiger Nachrichtenaustausch zwischen einem Client und einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst stattfinden kann, selbst wenn der Dienst zum Zeitpunkt der Kommunikation nicht verfügbar ist. Die folgenden Vorgänge zeigen, wie Sie eine stabile Kommunikation zwischen einem Client und einem Dienst sicherstellen können, indem Sie die Standardbindung in der Warteschlange beim Implementieren des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts verwenden.  
@@ -52,7 +54,7 @@ Warteschlangen stellen sicher, dass ein zuverlässiger Nachrichtenaustausch zwis
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Definieren Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> in einer Konfiguration, der die Dienstadresse festlegt und die Standard-<xref:System.ServiceModel.NetMsmqBinding>-Bindung verwendet. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Konfiguration finden Sie unter [Konfigurieren von Windows Communication Foundation-Anwendungen](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Definieren Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> in einer Konfiguration, der die Dienstadresse festlegt und die Standard-<xref:System.ServiceModel.NetMsmqBinding>-Bindung verwendet. Weitere Informationen zur Verwendung von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Konfiguration finden Sie unter [Konfigurieren von Windows Communication Foundation-Anwendungen](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   

@@ -18,16 +18,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 530f6ce3d253cfc50818c82fc70e401382b50b85
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="analytic-tracing-overview"></a>Übersicht über die analytische Ablaufverfolgung
 Die analytische Ablaufverfolgung in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] ist eine Ablaufverfolgungsfunktion mit hoher Leistung und geringer Ausführlichkeit, die auf ETW (Ereignisablaufverfolgung für Windows) aufbaut. ETW wird auf Kernelebene ausgeführt, um den Mehraufwand durch Ablaufverfolgungsvorgänge so weit wie möglich zu reduzieren. Dabei werden Benutzer- und Kernelmodusereignisse auf effiziente Weise gepuffert, und das dynamische Aktivieren ist ohne Neustarts des Diensts möglich. Die Ablaufverfolgungsdaten sind in den Ereignisprotokollen verfügbar, nachdem sie ausgegeben und empfangen wurden.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] zu ETW finden Sie unter [Verbessertes Debugging und Leistungsoptimierung mit ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
+ Weitere Informationen zu ETW finden Sie unter [verbessertes Debugging und Leistungsoptimierung mit ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
   
  Zusätzlich zur Verwendung der Windows-Ereignisprotokolle für System, Sicherheit und Anwendung zum Analysieren der Anwendung wurden mit [!INCLUDE[wv](../../../../../includes/wv-md.md)] und [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] unter dem Knoten "Anwendungs- und Dienstprotokolle" der obersten Ebene zusätzliche Protokolle eingeführt. Der Zweck dieser neuen Protokolle ist das Speichern von Ereignissen für eine bestimmte Anwendung oder eine bestimmte Komponente anstelle von globalen Ereignissen, die systemweite Auswirkungen haben (z. B. der Typ von Ereignissen, die das Sicherheitsereignisprotokoll ggf. aufzeichnet). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] vereinheitlicht und korreliert die Protokollierung von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] -Ablaufverfolgungsereignissen, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] -Nachrichtenprotokollen und [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] -Nachverfolgungsdatensätzen mit den Anwendungs- und Dienstprotokollen.  
   
@@ -57,7 +57,7 @@ Die analytische Ablaufverfolgung in [!INCLUDE[netfx_current_long](../../../../..
  Die ETW-Infrastruktur ermöglicht das dynamische Aktivieren und Konfigurieren der Ablaufverfolgung mit Windows-Standardtools. Weitere Informationen finden Sie unter [dynamisch Aktivieren der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
   
 ### <a name="message-flow-tracing"></a>Ablaufverfolgung des Nachrichtenflusses  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] zur Aktivierung der Ablaufverfolgung des Nachrichtenflusses finden Sie unter [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
+ Weitere Informationen zum Aktivieren der Ablaufverfolgung des Nachrichtenflusses finden Sie unter [Konfigurieren des Nachrichtenflusses](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Stichwörter  
  Schlüsselwörter werden verwendet, um Ablaufverfolgungsnachrichten zu filtern und zu definieren, welche Komponente von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] das Ereignis ausgegeben hat. Weitere Informationen finden Sie unter [dynamisch Aktivieren der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

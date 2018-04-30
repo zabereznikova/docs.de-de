@@ -1,24 +1,26 @@
 ---
 title: WCF-Web-HTTP-Fehlerbehandlung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c5f397d50a5a97801241afd8e64abf2e56b05dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF-Web-HTTP-Fehlerbehandlung
 Die Web-HTTP-Fehlerbehandlung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht es Ihnen, Fehler von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Diensten zurückzugeben, die einen HTTP-Statuscode angeben, sowie Fehlerdetails im gleichen Format wie der Vorgang (z. B. XML oder JSON) zurückzugeben.  
@@ -56,7 +58,7 @@ Public string Operation2()
   
 -   Der Wert der <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>-Eigenschaft, indem auf <xref:System.ServiceModel.Web.OutgoingWebResponseContext> zugegriffen wird.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Diese Werte beeinflussen die Formatierung des Vorgangs, finden Sie unter [WCF Web-HTTP-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+ Weitere Informationen darüber, wie diese Werte beeinflussen die Formatierung des Vorgangs finden Sie unter [WCF Web-HTTP-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
  <xref:System.ServiceModel.Web.WebFaultException> ist ein <xref:System.ServiceModel.FaultException>-Objekt und kann daher als Fehlerausnahme-Programmiermodell für Dienste verwendet werden, die SOAP-Endpunkte sowie Web-HTTP-Endpunkte verfügbar machen.  
   

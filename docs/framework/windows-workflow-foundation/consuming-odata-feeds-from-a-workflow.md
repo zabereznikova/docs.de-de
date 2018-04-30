@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ce7d7812eadea2d9472a62bd007d2eca6ae07891
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Verarbeiten von OData-Feeds eines Workflows
 WCF Data Services ist eine Komponente von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zum Erstellen von Diensten, die Daten mithilfe des Open Data Protocol (OData) und unter Verwendung von REST (Representational State Transfer)-Semantik via Internet oder Intranet verfügbar und nutzbar machen. OData macht Daten als durch URIs adressierbare Ressourcen verfügbar. Mit einem OData-basierten Datendienst kann jede Anwendung interagieren, die HTTP-Anforderungen senden und von einem Datendienst zurückgegebene OData-Feeds verarbeiten kann. WCF Data Services enthält außerdem Clientbibliotheken, die umfangreichere Programmierfunktionen bieten, wenn Sie OData-Feeds aus [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] -Anwendungen verarbeiten. Dieses Thema bietet einen Überblick über die Verarbeitung von OData-Feeds in einem Workflow mit bzw. ohne Clientbibliotheken.  
@@ -78,7 +78,7 @@ WCF Data Services ist eine Komponente von [!INCLUDE[dnprdnshort](../../../includ
  Im folgenden Beispiel wird eine `ListCustomers` -Aktivität definiert. Mit dieser Aktivität wird der Beispieldatendienst Northwind abgefragt und eine `List<Customer>` mit allen Kunden in der Northwind-Datenbank zurückgegeben. Der asynchrone Vorgang wird von der `GetCustomers` -Methode ausgeführt. Mit dieser Methode wird der Dienst für alle Kunden abgefragt, und das Ergebnis wird in eine `List<Customer>`kopiert. Im Anschluss wird überprüft, ob die Ergebnisse seitenweise angegeben sind. Wenn dies der Fall ist, wird die nachfolgende Ergebnisseite vom Dienst abgefragt, die Ergebnisse werden der Liste hinzugefügt, und der Vorgang wird fortgesetzt, bis alle Daten abgerufen wurden.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] Paging in WCF Data Services finden Sie unter. [Gewusst wie: Laden von ausgelagerten Ergebnissen (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).  
+>  Weitere Informationen über Paging in WCF Data Services finden Sie unter. [Gewusst wie: Laden von ausgelagerten Ergebnissen (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).  
   
  Sobald alle Kunden hinzugefügt wurden, wird die Liste zurückgegeben. Die `GetCustomers` -Methode wird in der <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> -Überschreibung der Aktivität angegeben. Da die Methode über einen Rückgabewert verfügt, wird eine `Func<string, List<Customer>>` erstellt, um die Methode anzugeben.  
   
@@ -143,4 +143,4 @@ WCF Data Services ist eine Komponente von [!INCLUDE[dnprdnshort](../../../includ
  **\<Link Rel = "edit" Title = "Order" href="Orders(10643)" / >**  
  **\<Link Rel = "http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **Typ = "Application/Atom + Xml; Geben Sie = Entry" Title = "Kunde" Href = "Bestellungen (10643) / Kundennummer" / >**  
-**...**  Dieses Beispiel enthält eine Methode, die Workflowanwendungsautoren verwenden können, um die Rohdaten zu nutzen, die von einem OData-Dienst zurückgegeben werden. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zum Zugreifen auf WCF Data Services mit URIs finden Sie unter [Zugreifen auf Datendienstressourcen (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) und [OData: URI-Konventionen](http://go.microsoft.com/fwlink/?LinkId=185564).
+**...**  Dieses Beispiel enthält eine Methode, die Workflowanwendungsautoren verwenden können, um die Rohdaten zu nutzen, die von einem OData-Dienst zurückgegeben werden. Weitere Informationen zum Zugreifen auf WCF Data Services mit URIs finden Sie unter [zugreifen auf Datendienstressourcen (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) und [OData: URI-Konventionen](http://go.microsoft.com/fwlink/?LinkId=185564).

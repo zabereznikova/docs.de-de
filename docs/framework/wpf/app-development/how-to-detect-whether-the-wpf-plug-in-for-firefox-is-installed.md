@@ -1,12 +1,13 @@
 ---
-title: "Gewusst wie: Erkennen einer Installation des WPF-Plug-Ins für Firefox"
-ms.custom: 
+title: 'Gewusst wie: Erkennen einer Installation des WPF-Plug-Ins für Firefox'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - plug-in for Firefox [WPF]
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87e821bd95679372fd169b7880e969fd10b5d03c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2b58abda33aa48372e4642dca48599867f389045
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>Gewusst wie: Erkennen einer Installation des WPF-Plug-Ins für Firefox
-Die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] -Plug-In für Firefox ermöglicht [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und loose XAML-Dateien in den Mozilla Firefox-Browser ausgeführt werden. Dieses Thema enthält ein Skript geschrieben in HTML und JavaScript, die Administratoren verwenden können, um zu bestimmen, ob das WPF-Plug-In für Firefox installiert ist.  
+Der Windows Presentation Foundation-Plug-In für Firefox (WPF) können [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und loose XAML-Dateien in den Mozilla Firefox-Browser ausgeführt werden. Dieses Thema enthält ein Skript geschrieben in HTML und JavaScript, die Administratoren verwenden können, um zu bestimmen, ob das WPF-Plug-In für Firefox installiert ist.  
   
 > [!NOTE]
 >  Weitere Informationen zum Installieren und Bereitstellen von erkennen die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], finden Sie unter [installieren Sie .NET Framework für Entwickler](../../../../docs/framework/install/guide-for-developers.md).  

@@ -1,24 +1,26 @@
 ---
 title: Inhaltsbasierte Korrelation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="content-based-correlation"></a>Inhaltsbasierte Korrelation
 Wenn Workflowdienste mit Clients und anderen Diensten kommunizieren, sind in den ausgetauschten Nachrichten häufig Daten enthalten, die eine Nachricht eindeutig mit einer bestimmten Instanz verknüpfen. Die inhaltsbasierte Korrelation verwendet diese Daten in der Nachricht, z. B. eine Kundennummer oder Bestellt-ID, um Nachrichten an die richtige Workflowinstanz weiterzuleiten. In diesem Thema wird erklärt, wie Sie die inhaltsbasierte Korrelation in Workflows verwenden.  
@@ -27,7 +29,7 @@ Wenn Workflowdienste mit Clients und anderen Diensten kommunizieren, sind in den
  Die inhaltsbasierte Korrelation wird verwendet, wenn ein Workflowdienst über mehrere Methoden verfügt, auf die von einem einzelnen Client zugegriffen wird, und ein Datenelement in den ausgetauschten Nachrichten die gewünschte Instanz angibt.  
   
 > [!NOTE]
->  Die inhaltsbasierte Korrelation ist nützlich, wenn die Kontextkorrelation nicht verwendet werden kann, weil es sich bei der Bindung nicht um eine der unterstützten Bindungen für den Kontextaustausch handelt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kontextkorrelation, finden Sie unter [Kontextaustausch](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+>  Die inhaltsbasierte Korrelation ist nützlich, wenn die Kontextkorrelation nicht verwendet werden kann, weil es sich bei der Bindung nicht um eine der unterstützten Bindungen für den Kontextaustausch handelt. Weitere Informationen zu kontextkorrelation, finden Sie unter [Kontextaustausch](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
  Jede bei dieser Kommunikation verwendete Messagingaktivität muss die Position der Daten in der Nachricht angeben, die die Instanz eindeutig identifizieren. Dazu wird <xref:System.ServiceModel.MessageQuerySet> mit <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> oder <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> bereitgestellt, um die Nachricht nach einem oder mehreren Datenelementen abzufragen, die die Instanz eindeutig identifizieren.  
   

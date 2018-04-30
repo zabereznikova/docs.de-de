@@ -19,11 +19,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1475891cf83c05552da247ffb04a866d80a396ea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist eine auf SOAP-Nachrichten basierende verteilte Programmierplattform. Das Sichern von Nachrichten zwischen Clients und Diensten ist für den Datenschutz außerordentlich wichtig. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet eine vielseitige und interoperable Plattform für den Austausch sicherer Nachrichten auf Grundlage der vorhandenen Sicherheitsinfrastruktur und der anerkannten Sicherheitsstandards für SOAP-Nachrichten.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/28/2018
   
 -   *Nachrichtensicherheitsmodus*, auf der anderen Seite, WS-Security-verwendet (und andere Spezifikationen) zum Implementieren von übertragungssicherheit. Da die Nachrichtensicherheit direkt für die SOAP-Nachrichten übernommen wird und zusammen mit den Anwendungsdaten in den SOAP-Umschlägen enthalten ist, besitzt sie den Vorteil der Unabhängigkeit von Transportprotokollen, der größeren Erweiterbarkeit und der Gewährleistung von End-to-End-Sicherheit (im Vergleich zu Point-to-Point); der Modus hat den Nachteil deutlich langsamer als der Transportsicherheitsmodus zu sein, da das XML-Format der SOAP-Nachrichten verarbeitet werden muss.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Diese Unterschiede finden Sie unter [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ Weitere Informationen zu diesen Unterschieden finden Sie unter [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
  Ein dritter Sicherheitsmodus verwendet beide zuvor beschriebenen Modi und vereint deren Vorteile. Dieser Modus wird als `TransportWithMessageCredential` bezeichnet. In diesem Modus wird die Nachrichtensicherheit zum Authentifizieren des Clients verwendet, wohingegen die Transportsicherheit zum Authentifizieren des Servers und zum Sicherstellen von Nachrichtenvertraulichkeit und -integrität dient. Daher ist der `TransportWithMessageCredential`-Sicherheitsmodus beinahe so schnell wie der Transportsicherheitsmodus und ermöglicht die Erweiterbarkeit der Clientauthentifizierung auf dieselbe Weise wie die Nachrichtensicherheit. Im Gegensatz zum Nachrichtensicherheitsmodus bietet dieser Modus keine vollständige End-to-End-Sicherheit.  
   

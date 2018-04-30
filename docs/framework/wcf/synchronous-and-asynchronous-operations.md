@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Synchrone und asynchrone Vorgänge
 In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvorgänge erörtert.  
@@ -51,7 +51,7 @@ In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvor
   
 -   Verwenden Sie in den folgenden Fällen einen asynchronen Ansatz in einem Client oder in einer aufrufenden Anwendung:  
   
--   Wenn Sie Vorgänge von einer Anwendung der mittleren Ebene aufrufen. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] finden Sie in einem solchen Szenario [Clientanwendungen mittlerer Ebene](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+-   Wenn Sie Vorgänge von einer Anwendung der mittleren Ebene aufrufen. (Weitere Informationen zu solchen Szenarien finden Sie unter [Clientanwendungen mittlerer Ebene](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
 -   Verwenden Sie asynchrone Seiten, wenn Sie Vorgänge innerhalb einer ASP.NET-Seite aufrufen.  
   

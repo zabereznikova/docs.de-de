@@ -1,30 +1,32 @@
 ---
 title: 'Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ba82242d0d3d42d4a2e3774186f2a282e279938
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe823fc8b86dd20cfa344c9889eca9dff21514ec
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs
-In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen kann ein Dienstvorgang asynchron oder synchron implementiert werden, ohne dem Client vorzuschreiben, wie er ihn aufzurufen hat. So können z. B. asynchrone Dienstvorgänge synchron aufrufen, und synchrone Dienstvorgänge können asynchron aufgerufen werden. Ein Beispiel, das zeigt, wie einen Vorgang asynchron in einer Clientanwendung aufgerufen werden, finden Sie unter [Vorgehensweise: Aufrufen Service Vorgänge asynchron](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]synchrone und asynchrone Vorgänge finden Sie unter [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md) und [synchrone und asynchrone Vorgänge](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). In diesem Thema wird die grundlegende Struktur eines asynchronen Dienstvorgangs beschrieben (der Code ist nicht vollständig). Ein vollständiges Beispiel sowohl im Dienst-als auch Seiten finden Sie unter [asynchrone](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
+In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen kann ein Dienstvorgang asynchron oder synchron implementiert werden, ohne dem Client vorzuschreiben, wie er ihn aufzurufen hat. So können z. B. asynchrone Dienstvorgänge synchron aufrufen, und synchrone Dienstvorgänge können asynchron aufgerufen werden. Ein Beispiel, das zeigt, wie einen Vorgang asynchron in einer Clientanwendung aufgerufen werden, finden Sie unter [Vorgehensweise: Aufrufen Service Vorgänge asynchron](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Weitere Informationen zu synchronen und asynchronen Vorgängen finden Sie unter [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md) und [synchrone und asynchrone Vorgänge](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). In diesem Thema wird die grundlegende Struktur eines asynchronen Dienstvorgangs beschrieben (der Code ist nicht vollständig). Ein vollständiges Beispiel sowohl im Dienst-als auch Seiten finden Sie unter [asynchrone](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Asynchrones Implementieren eines Dienstvorgangs  
   

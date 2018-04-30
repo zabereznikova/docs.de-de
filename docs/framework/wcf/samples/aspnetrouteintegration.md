@@ -1,27 +1,29 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-In diesem Beispiel wird veranschaulicht, wie ein [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST-Dienst mit ASP.NET-Routen gehostet wird. Die [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel zeigt eine selbst gehostete Version dieses Szenarios und die dienstimplementierung ausführlich erläutert. In diesem Thema steht die ASP.NET-Integrationsfunktion im Vordergrund. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu ASP.NET-Routing finden Sie unter <xref:System.Web.Routing>.  
+In diesem Beispiel wird veranschaulicht, wie ein [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST-Dienst mit ASP.NET-Routen gehostet wird. Die [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel zeigt eine selbst gehostete Version dieses Szenarios und die dienstimplementierung ausführlich erläutert. In diesem Thema steht die ASP.NET-Integrationsfunktion im Vordergrund. Weitere Informationen zu ASP.NET-Routing finden Sie unter <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Beispieldetails  
  Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst macht eine Auflistung der Kunden auf ressourcenorientierte/REST-Weise verfügbar. Wie ein SOAP-basierter [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst kann der Dienst in ASP.NET mithilfe einer SVC-Datei gehostet werden. Diese Vorgehensweise empfiehlt sich in HTTP-Szenarien jedoch häufig nicht, da sie erfordert, dass die URL für den Dienst .svc enthält. Darüber hinaus muss dafür eine SVC-Datei mit der Dienstbibliothek bereitgestellt werden. Diese Einschränkungen lassen sich vermeiden, wenn der Dienst mit ASP.NET-Routen gehostet wird, wie in diesem Beispiel gezeigt.  

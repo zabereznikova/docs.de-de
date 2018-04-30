@@ -1,29 +1,30 @@
 ---
 title: Visuelle Workflownachverfolgung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 687cc2acbff7c85b89c4502fff863e48dada97de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6bf9a053eaf21f1e0612ea7b91c79755b9ef0e29
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="visual-workflow-tracking"></a>Visuelle Workflownachverfolgung
 In diesem Beispiel wird veranschaulicht, wie eine visuelle Anwendung zur Workflownachverfolgung mit der Debugfunktionalität in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] geschrieben wird.  
   
 ## <a name="sample-details"></a>Beispieldetails  
- Die Anwendung führt einen einfachen Flussdiagramm-Workflow (definiert in "Workflow.xaml") aus und hostet den Workflow-Designer neu, um den ausgeführten Workflow anzuzeigen. Bei Ausführung des Workflows wird die jeweils gerade ausgeführte Aktivität mit einem gelben Rahmen und Pfeil angezeigt. Außerdem werden vom Workflow generierte Nachverfolgungsdatensätze ebenfalls im Anwendungsfenster angezeigt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]workflownachverfolgung verwendet wird, finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erneutes hosting von Workflow-Designer finden Sie unter [erneutes Hosten des Workflow-Designers](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md).  
+ Die Anwendung führt einen einfachen Flussdiagramm-Workflow (definiert in "Workflow.xaml") aus und hostet den Workflow-Designer neu, um den ausgeführten Workflow anzuzeigen. Bei Ausführung des Workflows wird die jeweils gerade ausgeführte Aktivität mit einem gelben Rahmen und Pfeil angezeigt. Außerdem werden vom Workflow generierte Nachverfolgungsdatensätze ebenfalls im Anwendungsfenster angezeigt. Weitere Informationen zur workflownachverfolgung finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Weitere Informationen zum Workflow-Designer neu hosten, finden Sie unter [erneutes Hosten des Workflow-Designers](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md).  
   
  Der Workflowsimulator funktioniert mit zwei Wörterbüchern. Das eine enthält eine Zuordnung zwischen dem gerade ausgeführten Aktivitätsobjekt und der XAML-Zeilennummer, mit der die Aktivität instanziiert wird. Das andere enthält eine Zuordnung zwischen der Aktivitätsinstanz-ID und dem Aktivitätsobjekt. Wenn Nachverfolgungsdatensätze mit einem benutzerdefinierten Nachverfolgungsprofil ausgegeben werden, bestimmt die Anwendung die Instanz-ID der gerade ausgeführten Aktivität und ordnet diese erneut der XAML-Datei zu, mit der sie instanziiert wird. Der neu gehostete Workflow-Designer wird dann angewiesen, die Aktivität auf der Designeroberfläche hervorzuheben und die gleiche Methode wie der Workflowdebugger zu verwenden, d. h. einen gelben Rahmen und einen gelben Pfeil auf der linken Seite des Designers.  
   

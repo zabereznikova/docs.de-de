@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11e61e1d702572af10cf4e46b9d1b284022fa56e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 60eaef2bbbb2ff7653aeac832163276c32bc696b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-workflow-instance-store"></a>SQL-Workflowinstanzspeicher
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] enthält den SQL-Workflowinstanzspeicher, mit dem Workflows die Zustandsinformationen zu Workflowinstanzen in einer Datenbank von SQL Server 2005 oder SQL Server 2008 speichern können. Diese Funktion wird hauptsächlich in Form der <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Klasse implementiert, die von der abstrakten <xref:System.Runtime.DurableInstancing.InstanceStore>-Klasse des Persistenzframeworks abgeleitet wird. Die Funktion SQL-Workflowinstanzspeicher besteht aus einem SQL-Persistenzanbieter, der eine konkrete Implementierung der Persistenz-API darstellt, mit der ein Host Persistenzbefehle an den Speicher sendet.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/28/2018
   
  In den Themen in diesem Abschnitt werden die Eigenschaften und Funktionen des SQL-Workflowinstanzspeichers beschrieben, und Sie finden Informationen zum Konfigurieren des Speichers.  
   
- Windows Server AppFabric stellt einen eigenen Instanzspeicher und eigene Tools bereit, um die Konfiguration und die Verwendung des Instanzspeichers zu vereinfachen. Weitere Informationen finden Sie unter finden Sie unter [Windows Server AppFabric-Instanzspeicher](http://go.microsoft.com/fwlink/?LinkId=201201). [!INCLUDE[crabout](../../../includes/crabout-md.md)] die App Fabric SQL Server-Persistenzdatenbank finden Sie unter [App Fabric SQL Server-Persistenzdatenbank](http://go.microsoft.com/fwlink/?LinkId=201202)  
+ Windows Server AppFabric stellt einen eigenen Instanzspeicher und eigene Tools bereit, um die Konfiguration und die Verwendung des Instanzspeichers zu vereinfachen. Weitere Informationen finden Sie unter finden Sie unter [Windows Server AppFabric-Instanzspeicher](http://go.microsoft.com/fwlink/?LinkId=201201). Weitere Informationen finden Sie in der App Fabric SQL Server-Persistenzdatenbank [App Fabric SQL Server-Persistenzdatenbank](http://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

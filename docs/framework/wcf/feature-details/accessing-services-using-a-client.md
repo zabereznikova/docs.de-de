@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2138a412af30812b4ff443963604dda52eafea11
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-client"></a>Zugreifen auf Dienste mithilfe eines Clients
 Clientanwendungen müssen für die Kommunikation mit Diensten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client- oder Kanalobjekte erstellen, konfigurieren und verwenden. Die [Überblick über WCF-Client](../../../../docs/framework/wcf/wcf-client-overview.md) Thema bietet einen Überblick über die Objekte und die Schritte zum Erstellen von Objekten für grundlegende Client- und kanalobjekten und deren Verwendung.  
@@ -76,7 +76,7 @@ Clientanwendungen müssen für die Kommunikation mit Diensten [!INCLUDE[indigo2]
   
  Datagrammkanäle schlagen nie fehl, auch wenn beim Schließen Ausnahmen auftreten. Außerdem lösen Nichtduplex-Clients, bei denen keine Authentifizierung über eine sichere Konversation möglich ist, in der Regel eine <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType> aus. Wenn jedoch für den Duplexclient, der eine sichere Konversation verwendet, keine Authentifizierung möglich ist, erhält der Client stattdessen eine <xref:System.TimeoutException?displayProperty=nameWithType>.  
   
- Weitere Informationen zum Arbeiten mit Fehlerinformationen auf Anwendungsebene, finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Erwartete Ausnahmen](../../../../docs/framework/wcf/samples/expected-exceptions.md) erwartete Ausnahmen beschreibt und zeigt, wie sie behandelt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Behandeln von Fehlern beim Entwickeln von Kanälen finden Sie unter [Behandlung von Ausnahmen und Fehlern](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
+ Weitere Informationen zum Arbeiten mit Fehlerinformationen auf Anwendungsebene, finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Erwartete Ausnahmen](../../../../docs/framework/wcf/samples/expected-exceptions.md) erwartete Ausnahmen beschreibt und zeigt, wie sie behandelt. Weitere Informationen zum Umgang mit Fehlern beim Entwickeln von Kanälen finden Sie unter [Behandlung von Ausnahmen und Fehlern](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>Clientblockierung und Leistung  
  Wenn eine Anwendung synchron einen Anforderungs-/Antwortvorgang aufruft, wird der Client blockiert, bis ein Rückgabewert empfangen oder eine Ausnahme (wie <xref:System.TimeoutException?displayProperty=nameWithType>) ausgelöst wird. Dieses Verhalten ähnelt lokalem Verhalten. Ruft eine Anwendung synchron einen Vorgang auf einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientobjekt oder -kanal auf, wird der Client erst dann zurückgegeben, wenn die Kanalebene die Daten an das Netzwerk schreiben kann oder bis eine Ausnahme ausgelöst wird. Und während das unidirektionale Nachrichtenaustauschmuster (angegeben durch die Markierung eines Vorgangs, wobei <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> auf `true` festgelegt ist) die Reaktionsgeschwindigkeit einiger Clients verbessern kann, können unidirektionale Vorgänge abhängig von der Bindung und den bisher gesendeten Nachrichten auch blockiert werden. Bei unidirektionalen Vorgängen geht es nur um den Nachrichtenaustausch. Weitere Informationen finden Sie unter [unidirektionaler Services](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
@@ -85,7 +85,7 @@ Clientanwendungen müssen für die Kommunikation mit Diensten [!INCLUDE[indigo2]
   
  Wenn die Anwendung beim Abschluss eines Vorgangs mehr arbeiten muss, sollten Sie ein asynchrones Methodenpaar an der Dienstvertragschnittstelle erstellen, das der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client implementiert. Die einfachste Möglichkeit hierzu ist die Verwendung der `/async` wechseln Sie auf die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Ein Beispiel finden Sie unter [Vorgehensweise: Aufrufen Service Vorgänge asynchron](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Clientleistung zu erhöhen, finden Sie unter [Clientanwendungen mittlerer Ebene](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
+ Weitere Informationen zu erhöht die Leistung des Clients finden Sie unter [Clientanwendungen mittlerer Ebene](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Dynamisches Auswählen von Anmeldeinformationen durch den Benutzer  
  Über die <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer>-Schnittstelle können Anwendungen eine Benutzeroberfläche anzeigen, auf der der Benutzer Anmeldeinformationen zum Erstellen eines Kanals auswählen kann, bevor die Timeout-Zeitgeber starten.  

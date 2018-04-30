@@ -1,24 +1,26 @@
 ---
 title: Nachrichtensicherheit in WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ef96dd25903076fedc59ad1507674dd40dcfcc5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-in-wcf"></a>Nachrichtensicherheit in WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verfügt über zwei Hauptmodi zum Bereitstellen von Sicherheit (`Transport` und `Message`) und einen dritten Modus (`TransportWithMessageCredential`), der diese zwei Modi kombiniert. In diesem Thema werden die Nachrichtensicherheit und die Gründe für deren Verwendung erläutert.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Unterstützung mehrerer Transporte. Sie können gesicherte Nachrichten über viele verschiedene Transporte senden, z. B. benannte Pipes und TCP, ohne sich hinsichtlich Sicherheit auf das Protokoll verlassen zu müssen. Bei Sicherheit auf Transportebene sind alle Sicherheitsinformationen auf eine einzelne Transportverbindung beschränkt und nicht im Nachrichteninhalt selbst verfügbar. Bei Nachrichtensicherheit wird die Nachricht unabhängig von dem für die Übertragung der Nachricht verwendeten Transport gesichert, und der Sicherheitskontext ist direkt in die Nachricht eingebettet.  
   
--   Unterstützung eines umfangreichen Satzes von Anmeldeinformationen und Ansprüchen. Die Nachrichtensicherheit basiert auf der WS-Sicherheitsspezifikation. Diese bietet ein erweiterungsfähiges Framework, mit dem jegliche Art von Anspruch innerhalb der SOAP-Nachricht übertragen werden kann. Im Gegensatz zur Transportsicherheit ist der Satz von Authentifizierungsmechanismen oder Ansprüchen, die Sie verwenden können, nicht durch die Transportfunktionen beschränkt. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichtensicherheit umfasst mehrere Typen der Authentifizierung und Anspruchsübertragung und kann bei Bedarf auf zusätzliche Typen erweitert werden. Aus diesen Gründen ist beispielsweise ein Szenario mit verbundenen Anmeldeinformationen ohne Nachrichtensicherheit nicht möglich. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Verbundszenarien WCF unterstützt, finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+-   Unterstützung eines umfangreichen Satzes von Anmeldeinformationen und Ansprüchen. Die Nachrichtensicherheit basiert auf der WS-Sicherheitsspezifikation. Diese bietet ein erweiterungsfähiges Framework, mit dem jegliche Art von Anspruch innerhalb der SOAP-Nachricht übertragen werden kann. Im Gegensatz zur Transportsicherheit ist der Satz von Authentifizierungsmechanismen oder Ansprüchen, die Sie verwenden können, nicht durch die Transportfunktionen beschränkt. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichtensicherheit umfasst mehrere Typen der Authentifizierung und Anspruchsübertragung und kann bei Bedarf auf zusätzliche Typen erweitert werden. Aus diesen Gründen ist beispielsweise ein Szenario mit verbundenen Anmeldeinformationen ohne Nachrichtensicherheit nicht möglich. Weitere Informationen zu den Verbund Szenarien WCF unterstützt, finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="how-message-and-transport-security-compare"></a>Vergleich von Nachrichten- und Transportsicherheit  
   

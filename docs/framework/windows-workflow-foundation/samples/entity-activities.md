@@ -14,23 +14,23 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ff7e505f6e2040e847b711030d310a70ede65413
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="entity-activities"></a>Entitätsaktivitäten
 In diesem Beispiel wird gezeigt, wie das ADO.NET Entity Framework mit Windows Workflow Foundation zu verwenden, um den Datenzugriff zu vereinfachen.  
   
- Das ADO.NET Entity Framework ermöglicht es Entwicklern, in Form von domänenspezifischen Objekten, Eigenschaften und Beziehungen, z. B. Kunden, Bestellungen, Bestelldetails und den Beziehungen zwischen diesen Entitäten, mit Daten zu arbeiten. Das ADO.NET Entity Framework ermöglicht dies, indem eine Abstraktionsebene bereitgestellt wird, die das Programmieren mit einem konzeptionellen Anwendungsmodell anstelle des direkten Programmierens mit einem Speicherschema ermöglicht. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Das ADO.NET Entity Framework finden Sie unter [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ Das ADO.NET Entity Framework ermöglicht es Entwicklern, in Form von domänenspezifischen Objekten, Eigenschaften und Beziehungen, z. B. Kunden, Bestellungen, Bestelldetails und den Beziehungen zwischen diesen Entitäten, mit Daten zu arbeiten. Das ADO.NET Entity Framework ermöglicht dies, indem eine Abstraktionsebene bereitgestellt wird, die das Programmieren mit einem konzeptionellen Anwendungsmodell anstelle des direkten Programmierens mit einem Speicherschema ermöglicht. Weitere Informationen zu der ADO.NET Entity Framework finden Sie unter [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Beispieldetails  
  In diesem Beispiel wird die Datenbank `Northwind` verwendet; es umfasst Skripts zum Erstellen und Entfernen der Datenbank `Northwind` (Setup.cmd und Cleanup.cmd). Die Projekte in diesem Beispiel umfassen ein Entity Data Model auf Grundlage der Datenbank `Northwind`. Sie finden das Modell, indem Sie die Datei `Northwind.edmx` öffnen, die im Projekt enthalten ist. Dies ist das Modell, das die Form der Objekte definiert, auf die mit dem ADO.NET Entity Framework zugegriffen werden kann.  
   
  Die folgenden Aktivitäten sind in diesem Beispiel enthalten:  
   
--   `EntitySQLQuery`: Mit der `EntitySQLQuery`-Aktivität können Sie Objekte aus der Datenbank auf Grundlage einer Entity SQL-Abfragezeichenfolge abrufen. Entity SQL ist eine speicherunabhängige Sprache, die SQL ähnlich ist und es Ihnen, Abfragen auf Grundlage des konzeptionellen Modells und der Entitäten anzugeben, die ein Teil des Modells oder der Domäne sind. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Entity SQL-Sprache finden Sie unter [Entity SQL-Sprache](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: Mit der `EntitySQLQuery`-Aktivität können Sie Objekte aus der Datenbank auf Grundlage einer Entity SQL-Abfragezeichenfolge abrufen. Entity SQL ist eine speicherunabhängige Sprache, die SQL ähnlich ist und es Ihnen, Abfragen auf Grundlage des konzeptionellen Modells und der Entitäten anzugeben, die ein Teil des Modells oder der Domäne sind. Weitere Informationen über Entity SQL-Sprache finden Sie unter [Entity SQL-Sprache](http://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: Mit dieser Aktivität können Sie Objekte aus der Datenbank auf Grundlage einer LINQ-Abfrage oder eines Prädikats abrufen.  
   

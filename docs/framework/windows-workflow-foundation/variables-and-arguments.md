@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c81d05120f8cf0decc7c6036e2a722ba6271dab8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 66b11dda1b245fa88548cf70268a6ca10ee27708
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="variables-and-arguments"></a>Variablen und Argumente
 In Windows Workflow Foundation (WF) Variablen stellen die Speicherung von Daten während Argumente den Fluss der Daten in und aus einer Aktivität darstellen. Eine Aktivität verfügt über einen Satz von Argumenten, die die Signatur der Aktivität ausmachen. Darüber hinaus kann eine Aktivität eine Liste von Variablen verwalten. Ein Entwickler kann während des Entwurfs eines Workflows Variablen zu dieser Liste hinzufügen oder daraus löschen. Ein Argument wird mit einem Ausdruck gebunden, der einen Wert zurückgibt.  
@@ -152,4 +152,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Arbeiten mit Argumenten, Variablen und Ausdrücke im Code finden Sie unter [Entwickeln von Workflows, Aktivitäten und Ausdrücken mithilfe von imperativem Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) und [erforderliche Argumente und Überladungsgruppen](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ Weitere Informationen zum Arbeiten mit Argumenten, Variablen und Ausdrücke im Code finden Sie unter [Entwickeln von Workflows, Aktivitäten und Ausdrücken mithilfe von imperativem Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) und [erforderliche Argumente und Überladungsgruppen](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).

@@ -1,32 +1,34 @@
 ---
 title: 'Vorgehensweise: Erstellen eines unidirektionalen Vertrags'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d08fcb955c972ffbd7ef0a48625f1005ab366dd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a54b64826735d912bdf6507023da56118fb9a69
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Vorgehensweise: Erstellen eines unidirektionalen Vertrags
 Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die einen unidirektionalen Vertrag verwenden. Solche Methoden rufen Vorgänge in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst von einem Client auf, erwarten aber keine Antwort. Dieser Vertragstyp kann verwendet werden, um z.&#160;B. Benachrichtigungen für viele Abonnenten zu veröffentlichen. Sie können unidirektionale Verträge auch beim Erstellen eines Duplexvertrags (bidirektionalen Vertrags) verwenden. Dies ermöglicht eine unabhängige Kommunikation zwischen Clients und Servern, sodass beide Aufrufe des jeweils anderen initiieren können. So wird insbesondere dem Server ermöglicht, unidirektionale Aufrufe an den Client durchzuführen, die der Client als Ereignisse behandeln kann. Ausführliche Informationen zum Angeben von unidirektionalen Methoden finden Sie in der Beschreibung zur <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Methode und zur <xref:System.ServiceModel.OperationContractAttribute>-Klasse.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellen eine Clientanwendung für einen Duplexvertrag finden Sie unter [Vorgehensweise: Access Services mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Ein funktionierendes Beispiel finden Sie unter der [unidirektionale](../../../../docs/framework/wcf/samples/one-way.md) Beispiel.  
+ Weitere Informationen zum Erstellen von einer Clientanwendung für einen Duplexvertrag, finden Sie unter [Vorgehensweise: Access Services mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Ein funktionierendes Beispiel finden Sie unter der [unidirektionale](../../../../docs/framework/wcf/samples/one-way.md) Beispiel.  
   
 ### <a name="to-create-a-one-way-contract"></a>So erstellen Sie einen unidirektionalen Vertrag  
   

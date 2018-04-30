@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung
 In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung, das Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen, das Festlegen von Ablaufverfolgungsebenen, das Festlegen der Aktivitätsablaufverfolgung und -weitergabe zur Unterstützung der End-to-End-Ablaufverfolgungskorrelation sowie das Festlegen von Ablaufverfolgungslistenern für den Zugriff auf Ablaufverfolgungen.  
@@ -146,7 +146,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Erstellen eine benutzerdefinierte Ablaufverfolgungsquellen, finden Sie unter [erweitern Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Weitere Informationen zum Erstellen von benutzerdefinierten Ablaufverfolgungsquellen, finden Sie unter [erweitern Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Konfigurieren von Ablaufverfolgungslistenern zur Verwendung von Ablaufverfolgungen  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] übergibt während der Laufzeit Ablaufverfolgungsdaten an die Listener, die die Daten verarbeiten. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stellt verschiedene vordefinierte Listener für <xref:System.Diagnostics> bereit. Diese Listener unterscheiden sich im Format, das für die Ausgabe verwendet wird. Sie können auch benutzerdefinierte Listenertypen hinzufügen.  
@@ -187,7 +187,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
  Das `propagateActivity`-Attribut gibt an, ob die Aktivität an andere Endpunkte weitergegeben werden soll, die an dem Nachrichtenaustausch teilnehmen. Wenn Sie diesen Wert auf `true` festlegen, können Sie anhand von Ablaufverfolgungsdateien, die durch zwei Endpunkte generiert wurden, feststellen, wie eine Reihe von Ablaufverfolgungen an einem Endpunkt zu einer Reihe von Ablaufverfolgungen an einem anderen Endpunkt übergegangen sind.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] aktivitätsablaufverfolgung und Weitergabe, finden Sie unter [Weitergabe](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Weitere Informationen zu aktivitätsablaufverfolgung und Weitergabe, finden Sie unter [Weitergabe](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Beide `propagateActivity` und `ActivityTracing` boolesche Werte gelten für die System.ServiceModel TraceSource. Die `ActivityTracing` Wert gilt auch für jede Ablaufverfolgungsquelle einschließlich [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] oder eine benutzerdefinierte Pakete.  
   

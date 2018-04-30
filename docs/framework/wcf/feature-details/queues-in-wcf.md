@@ -1,28 +1,28 @@
 ---
 title: Warteschlangen in Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Warteschlangen in Windows Communication Foundation
 Die Themen in diesem Abschnitt erläutern die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Unterstützung für Warteschlangen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt Warteschlangen, indem Microsoft Message Queuing (vormals MSMQ) als Transport herangezogen wird. Hierdurch werden die folgenden Szenarien möglich:  
@@ -35,7 +35,7 @@ Die Themen in diesem Abschnitt erläutern die [!INCLUDE[indigo1](../../../../inc
   
 -   Getrennte Vorgänge: Die Vorgänge des Sendens, Empfangens und Verarbeitens können bei der Kommunikation über Netzwerke mit hoher Latenz oder eingeschränkter Verfügbarkeit, wie dies zum Beispiel bei mobilen Geräten der Fall ist, voneinander getrennt werden. Warteschlangen ermöglichen die Fortsetzung dieser Vorgänge, selbst wenn die Endpunkte nicht erreichbar sind. Sobald die Verbindung wiederhergestellt ist, leitet die Warteschlange die Nachrichten an die empfangende Anwendung weiter.  
   
- Wenn Sie die Warteschlangenfunktion in einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung einsetzen möchten, können Sie eine Standardbindung verwenden oder Ihre eigene Bindung erstellen, falls die Standardbindungen Ihre Anforderungen nicht erfüllen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]relevante standardbindungen und auswählen, finden Sie in [Vorgehensweise: Exchange-Nachrichten mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellung benutzerdefinierter Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Wenn Sie die Warteschlangenfunktion in einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung einsetzen möchten, können Sie eine Standardbindung verwenden oder Ihre eigene Bindung erstellen, falls die Standardbindungen Ihre Anforderungen nicht erfüllen. Weitere Informationen zu den relevanten standardbindungen und wie Sie eine auswählen, finden Sie unter [Vorgehensweise: Exchange-Nachrichten mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

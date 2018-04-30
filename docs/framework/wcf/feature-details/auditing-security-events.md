@@ -18,18 +18,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
 Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erstellte Anwendungen können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
   
  Mithilfe der Überwachung können Administratoren bereits stattgefundene oder gerade laufende Angriffe erkennen. Darüber hinaus können Entwickler mittels Überwachung sicherheitsrelevante Probleme debuggen. Falls beispielsweise berechtigten Benutzern versehentlich aufgrund eines Fehlers in der Konfiguration der Autorisierung oder Überprüfungsrichtlinie der Zugriff verweigert wird, kann die Ursache für diesen Fehler schnell durch Überprüfung des Ereignisprotokolls erkannt und isoliert werden.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Programmieren von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Weitere Informationen zu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zur Programmierung [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Überwachungsstufe und Überwachungsverhalten  
  Es gibt zwei Stufen für die Sicherheitsüberwachung:  

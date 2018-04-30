@@ -1,27 +1,29 @@
 ---
 title: Konfigurieren der Serialisierung in einem Workflowdienst
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8138fb94de953f133ab21cc2320e0914bc380fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47c66077da051fd70300e1961593e906fe8e77aa
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>Konfigurieren der Serialisierung in einem Workflowdienst
-Workflowdienste sind [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste und können daher entweder <xref:System.Runtime.Serialization.DataContractSerializer> (Standard) oder <xref:System.Xml.Serialization.XmlSerializer> verwenden. Beim Schreiben von Nicht-Workflowdiensten wird der Typ des zu verwendenden Serialisierungsprogramms im Dienstvertrag oder Vorgangsvertrag angegeben. Beim Erstellen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Workflowdiensten geben Sie diese Verträge nicht im Code an, sie werden vielmehr zur Laufzeit durch Vertragsrückschluss generiert. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]mithilfe eines Rückschlusses Vertrag, finden Sie unter [Verwenden von Verträgen im Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Das Serialisierungsprogramm wird mithilfe der <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>-Eigenschaft angegeben. Diese kann im Designer festgelegt werden, wie in der folgenden Abbildung dargestellt.  
+Workflowdienste sind [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste und können daher entweder <xref:System.Runtime.Serialization.DataContractSerializer> (Standard) oder <xref:System.Xml.Serialization.XmlSerializer> verwenden. Beim Schreiben von Nicht-Workflowdiensten wird der Typ des zu verwendenden Serialisierungsprogramms im Dienstvertrag oder Vorgangsvertrag angegeben. Beim Erstellen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Workflowdiensten geben Sie diese Verträge nicht im Code an, sie werden vielmehr zur Laufzeit durch Vertragsrückschluss generiert. Weitere Informationen zu vertragsrückschluss, finden Sie unter [Verwenden von Verträgen im Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Das Serialisierungsprogramm wird mithilfe der <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>-Eigenschaft angegeben. Diese kann im Designer festgelegt werden, wie in der folgenden Abbildung dargestellt.  
   
  ![Festlegen des Serialisierungsprogramms](../../../../docs/framework/wcf/feature-details/media/settingserialzier.png "SettingSerialzier")  
   
@@ -38,7 +40,7 @@ Receive approveExpense = new Receive
             };  
 ```  
   
- Bekannte Typen können auch für Workflowdienste angegeben werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Bekannte Typen können im Designer oder im Code angegeben werden. Um bekannte Typen im Designer anzugeben, klicken Sie im Eigenschaftenfenster für eine <xref:System.ServiceModel.Activities.Receive>-Aktivität neben der KnownTypes-Eigenschaft auf die Schaltfläche mit den Auslassungspunkten, wie in der folgenden Abbildung gezeigt.  
+ Bekannte Typen können auch für Workflowdienste angegeben werden. Weitere Informationen über bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Bekannte Typen können im Designer oder im Code angegeben werden. Um bekannte Typen im Designer anzugeben, klicken Sie im Eigenschaftenfenster für eine <xref:System.ServiceModel.Activities.Receive>-Aktivität neben der KnownTypes-Eigenschaft auf die Schaltfläche mit den Auslassungspunkten, wie in der folgenden Abbildung gezeigt.  
   
  ![KnownTypes-Eigenschaft](../../../../docs/framework/wcf/feature-details/media/knowntypes.png "bekannte Typen")  
   

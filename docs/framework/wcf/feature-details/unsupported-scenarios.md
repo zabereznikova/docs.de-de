@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 Aus verschiedenen Gründen unterstützt [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] einige bestimmte Sicherheitsszenarien nicht. Beispielsweise implementiert [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI- oder Kerberos-Authentifizierungsprotokolle nicht, weshalb [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auch die Ausführung eines Diensts mit der Windows-Authentifizierung auf dieser Plattform nicht unterstützt. Andere Authentifizierungsmechanismen, beispielsweise Benutzername/Kennwort und die HTTP/HTTPS-integrierte Authentifizierung, werden beim Ausführen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unter Windows&#160;XP Home Edition unterstützt.  
@@ -58,7 +58,7 @@ Aus verschiedenen Gründen unterstützt [!INCLUDE[indigo1](../../../../includes/
 >  Der Standardwert für die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>-Eigenschaft der <xref:System.ServiceModel.Security.WindowsClientCredential>-Klasse ist <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. In den meisten Fällen hat ein Identitätswechsel auf Identifizierungsebene nicht die Berechtigung, zusätzliche Assemblys zu laden. Dies ist der Standardwert. Es handelt sich somit um eine sehr übliche Bedingung, derer Sie sich bewusst sein sollten. Der Identitätswechsel auf Identifizierungsebene kann auch dann auftreten, wenn der Identitätswechselvorgang nicht die `SeImpersonate`-Berechtigung hat. Weitere Informationen finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>Delegierung erfordert eine Anmeldeinformationen-Aushandlung  
- Um das Kerberos-Authentifizierungsprotokoll mit Delegierung zu verwenden, müssen Sie das Kerberos-Protokoll mit Anmeldeinformationen-Aushandlung (mitunter als bilaterales oder mehrstufiges Kerberos bezeichnet) implementieren. Wenn Sie die Kerberos-Authentifizierung ohne Anmeldeinformationen-Aushandlung (mitunter als One-Shot-Kerberos bezeichnet) implementieren, wird eine Ausnahme ausgelöst. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Implementieren von Anmeldeinformationen-Aushandlung finden Sie unter [Debuggen von Windows-Authentifizierungsfehlern](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Um das Kerberos-Authentifizierungsprotokoll mit Delegierung zu verwenden, müssen Sie das Kerberos-Protokoll mit Anmeldeinformationen-Aushandlung (mitunter als bilaterales oder mehrstufiges Kerberos bezeichnet) implementieren. Wenn Sie die Kerberos-Authentifizierung ohne Anmeldeinformationen-Aushandlung (mitunter als One-Shot-Kerberos bezeichnet) implementieren, wird eine Ausnahme ausgelöst. Weitere Informationen über das Anmeldeinformationen-Aushandlung zu implementieren, finden Sie unter [Debuggen von Windows-Authentifizierungsfehlern](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Kryptografie  
   

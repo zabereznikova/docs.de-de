@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Vorgehensweise: Erstellen einer WSFederationHttpBinding
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> Klasse ([\<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) im Configuration) bietet einen Mechanismus zum Bereitstellen eines verbundenen Diensts. Hierbei handelt es sich um einen Dienst, der eine Clientauthentifizierung mithilfe eines von einem Sicherheitstokendienst ausgestellten Sicherheitstokens erfordert. In diesem Thema wird erläutert, wie <xref:System.ServiceModel.WSFederationHttpBinding> sowohl im Code als auch in der Konfiguration eingerichtet werden kann. Nach dem Erstellen der Bindung können Sie einen Endpunkt einrichten, von dem diese Bindung verwendet wird.  
@@ -48,7 +48,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.Service
   
      Der URI für ein SAML 1.1-Token lautet "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
   
-4.  Dies ist optional. Legen Sie bei Verbunddiensten die <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>-Eigenschaft auf die Metadaten-URL eines Sicherheitstokendiensts fest. Der Metadatenendpunkt ermöglicht den Clients des Diensts das Auswählen eines geeigneten Bindungs-/Endpunktpaars, sofern der Dienst zum Veröffentlichen von Metadaten konfiguriert ist. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Veröffentlichen von Metadaten, finden Sie unter [Veröffentlichungsmetadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  Dies ist optional. Legen Sie bei Verbunddiensten die <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>-Eigenschaft auf die Metadaten-URL eines Sicherheitstokendiensts fest. Der Metadatenendpunkt ermöglicht den Clients des Diensts das Auswählen eines geeigneten Bindungs-/Endpunktpaars, sofern der Dienst zum Veröffentlichen von Metadaten konfiguriert ist. Weitere Informationen zum Veröffentlichen von Metadaten finden Sie unter [Veröffentlichungsmetadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  Auch andere Eigenschaften können festgelegt werden. Dazu zählen unter anderem der Schlüsseltyp, der im ausgestellten Token als Prüfschlüssel verwendet wird, die zwischen Client und Dienst verwendete Algorithmussammlung, die Einstellung, ob die Dienstanmeldeinformationen ausgehandelt oder explizit angegeben werden, bestimmte Ansprüche, die vom Dienst im ausgestellten Token erwartet werden, sowie sämtliche zusätzliche XML-Elemente, die der vom Client an den Sicherheitstokendienst gesendeten Anforderung hinzugefügt werden müssen.  
   
@@ -103,7 +103,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.Service
   
 12. Weitere Informationen finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Erforderlich für den Client, wenn kein lokaler Aussteller angegeben ist. Wird nicht für den Dienst verwendet. Erstellen einer [ \<Bindung >](../../../../docs/framework/misc/binding.md) Element im Bindungsabschnitt, die für die Kommunikation mit dem Sicherheitstokendienst verwendet werden kann. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Erstellen einer Bindung finden Sie unter [wie: Angeben einer Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Erforderlich für den Client, wenn kein lokaler Aussteller angegeben ist. Wird nicht für den Dienst verwendet. Erstellen einer [ \<Bindung >](../../../../docs/framework/misc/binding.md) Element im Bindungsabschnitt, die für die Kommunikation mit dem Sicherheitstokendienst verwendet werden kann. Weitere Informationen zum Erstellen einer Bindung finden Sie unter [wie: Angeben einer Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Geben Sie die im vorangegangenen Schritt erstellte Bindung an, indem Sie das `binding`-Attribut und das `bindingConfiguration`-Attribut des `<issuer>`-Elements festlegen.  
   

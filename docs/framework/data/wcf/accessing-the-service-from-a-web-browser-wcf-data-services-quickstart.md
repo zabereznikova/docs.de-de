@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5550e97d97adf28a84566c5d7936369656c65e43
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Zugreifen auf den Dienst mit einem Webbrowser (WCF Data Services-Schnellstart)
 In dieser Aufgabe starten Sie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aus Visual Studio und deaktivieren optional das Feedlesen im Webbrowser. Sie werden dann Dienstdokuments Definition abrufen sowie greifen auf datendienstressourcen von HTTP-GET-Anforderungen über einen Webbrowser auf die verfügbar gemachten Ressourcen senden.  
   
 > [!NOTE]
->  Standardmäßig weist Visual Studio dem `localhost`-URI auf dem Computer automatisch eine Portnummer zu. Für diese Aufgabe wird in den URI-Beispielen die Portnummer `12345` verwendet. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] wie in der Visual Studio-Projekt finden Sie eine bestimmte Portnummer festlegen [Erstellen des Datendiensts](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  Standardmäßig weist Visual Studio dem `localhost`-URI auf dem Computer automatisch eine Portnummer zu. Für diese Aufgabe wird in den URI-Beispielen die Portnummer `12345` verwendet. Weitere Informationen dazu, wie Sie in Visual Studio-Projekt eine bestimmte Portnummer festlegen finden Sie unter [Erstellen des Datendiensts](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>So fordern Sie das Standarddienstdokument mithilfe von Internet Explorer an  
   

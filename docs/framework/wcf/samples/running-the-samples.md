@@ -1,24 +1,26 @@
 ---
-title: "Durchführen der Windows Communication Foundation-Beispiele"
-ms.custom: 
+title: Durchführen der Windows Communication Foundation-Beispiele
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Durchführen der Windows Communication Foundation-Beispiele
 Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele können in einer Konfiguration mit einem einzigen Computer oder computerübergreifend ausgeführt werden. Wie angegeben, können die Beispiele auf einem einzelnen Computer ausgeführt werden. In einer computerübergreifenden Konfiguration ist es notwendig, die Konfigurationsdateieinstellungen des Beispiels zu ändern. Die folgenden Prozeduren erklären, wie ein Beispiel in einer Konfiguration mit einem einzelnen Computer und computerübergreifend ausgeführt wird. Beachten Sie, dass es Abweichungen in den Schritten für Dienste, die in Internetinformationsdiensten (IIS) gehostet werden, und den selbst gehosteten Diensten gibt. Die meisten Beispiele werden in IIS gehostet. Der Infodatei eines Beispiels können Sie entnehmen, wie das Beispiel gehostet wird.  
@@ -30,7 +32,7 @@ Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele können in
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
-1.  Wenn der Dienst von IIS gehostet wird, müssen Sie sicherstellen, dass Sie mit einem Browser auf den Dienst zugreifen können, indem Sie die folgende Adresse eingeben: http://localhost/servicemodelsamples/service.svc. Als Antwort sollte eine Bestätigungsseite angezeigt werden. Wenn die Seite "Bestätigung" nicht angezeigt wird, finden Sie unter [Tipps zur Problembehandlung](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Wenn der Dienst von IIS gehostet wird, stellen Sie sicher, dass Sie den Dienst mithilfe eines Browsers durch Eingabe der folgenden Adresse zugreifen können: http://localhost/servicemodelsamples/service.svc. Als Antwort sollte eine Bestätigungsseite angezeigt werden. Wenn die Seite "Bestätigung" nicht angezeigt wird, finden Sie unter [Tipps zur Problembehandlung](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 2.  Wenn der Dienst selbst gehostet ist, führen Sie "Service.exe" aus "\service\bin" im sprachspezifischen Ordner aus. Im Dienstkonsolenfenster wird die Dienstaktivität angezeigt.  
   
@@ -64,7 +66,7 @@ Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele können in
   
     1.  Wenn der Dienst nicht unter einem Domänenkonto ausgeführt wird, öffnen Sie die Konfigurationsdatei, und ändern Sie den Wert für die Adresse der Endpunktdefinition so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
   
-    2.  Wenn der Dienst unter einem Domänenkonto ausgeführt wird, generieren Sie die Clientkonfiguration neu, indem Sie "Svcutil.exe" für den Dienst ausführen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ausführen von Svcutil.exe, finden Sie unter [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md). Verwenden Sie die generierte Datei statt der Konfigurationsdatei im Beispiel. Die generierte Konfigurationsdatei verfügt über zusätzliche Identitätsinformationen und enthält alle Einstellungen, die notwendig sind, um eine Verbindung zum Dienstendpunkt aufzubauen, auch wenn diese die Standardeinstellungen sind. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Informationen zur Dienstidentität, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), und [ \<Identität >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2.  Wenn der Dienst unter einem Domänenkonto ausgeführt wird, generieren Sie die Clientkonfiguration neu, indem Sie "Svcutil.exe" für den Dienst ausführen. Weitere Informationen zum Ausführen von Svcutil.exe, finden Sie unter [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md). Verwenden Sie die generierte Datei statt der Konfigurationsdatei im Beispiel. Die generierte Konfigurationsdatei verfügt über zusätzliche Identitätsinformationen und enthält alle Einstellungen, die notwendig sind, um eine Verbindung zum Dienstendpunkt aufzubauen, auch wenn diese die Standardeinstellungen sind. Weitere Informationen zu Identitätsinformationen, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), und [ \<Identität >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
 4.  Starten Sie auf dem Clientcomputer in einer Eingabeaufforderung die Datei "Client.exe".  
   
@@ -74,7 +76,7 @@ Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele können in
   
 2.  Wenn der Dienst in IIS gehostet wird:  
   
-    1.  Aktivieren Sie den Dienst über einen Browser, indem Sie die Adresse http://localhost/servicemodelsamples/service.svc eingeben.  
+    1.  Aktivieren Sie den Dienst mithilfe eines Browsers durch Eingabe der Adresse http://localhost/servicemodelsamples/service.svc.  
   
     2.  Wählen Sie in der Projektmappe die **Debuggen** Menü und die **an den Prozess anhängen** Menüelement.  
   

@@ -1,27 +1,29 @@
 ---
 title: 'Gewusst wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4b2c8daa176ef1f9aef24cac3125d59fcc02fa9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Gewusst wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst
 In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erstellung eines durch einen Windows-Dienst gehosteten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts erforderlich sind. Das Szenario wird durch die Hostingoption des verwalteten Windows-Diensts ermöglicht. Die Option ist ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst mit langer Laufzeit, der außerhalb der Internetinformationsdienste (IIS) in einer sicheren, nicht nachrichtenaktivierten Umgebung gehostet wird. Die Lebensdauer des Diensts wird stattdessen vom Betriebssystem gesteuert. Diese Hostingoption ist in allen Windows-Versionen verfügbar.  
@@ -122,7 +124,7 @@ In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erst
   
      Klicken Sie mit der mit der rechten Maustaste auf die Datei "App.config" in der **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**. Klicken Sie unter **in Ausgabeverzeichnis kopieren** wählen **kopieren, wenn neuer**.  
   
-     In diesem Beispiel werden die Endpunkte in der Konfigurationsdatei explizit angegeben. Wenn Sie dem Dienst keine Endpunkte hinzufügen, werden von der Runtime automatisch Standardendpunkte hinzugefügt. Da in diesem Beispiel das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> des Diensts auf `true` festgelegt ist, ist für den Dienst auch die Veröffentlichung von Metadaten aktiviert. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Standardendpunkte, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     In diesem Beispiel werden die Endpunkte in der Konfigurationsdatei explizit angegeben. Wenn Sie dem Dienst keine Endpunkte hinzufügen, werden von der Runtime automatisch Standardendpunkte hinzugefügt. Da in diesem Beispiel das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> des Diensts auf `true` festgelegt ist, ist für den Dienst auch die Veröffentlichung von Metadaten aktiviert. Weitere Informationen zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ### <a name="install-and-run-the-service"></a>Installieren Sie den Dienst, und führen Sie ihn aus.  
   

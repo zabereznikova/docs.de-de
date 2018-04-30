@@ -1,24 +1,26 @@
 ---
 title: Dienstendpunkte und Adressieren von Warteschlangen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Dienstendpunkte und Adressieren von Warteschlangen
 In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus Warteschlangen auslesen, und wie Dienstendpunkte Warteschlangen zugeordnet werden. Zur Erinnerung stellt die folgende Abbildung die klassische Bereitstellung von Anwendungen in der Warteschlange von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dar.  
@@ -32,7 +34,7 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
   
  Pfadnamen werden "Formatnames zugeordnet des", um zusätzliche Aspekte der Adresse, einschließlich routing und Warteschlangen-Manager-Übertragungsprotokoll zu bestimmen, zugeordnet. Der Warteschlangen-Manager unterstützt zwei Übertragungsprotokolle: das systemeigene MSMQ-Protokoll und das SOAP Reliable Messaging Protocol (SRMP).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ-Pfad und den Format-Namen, finden Sie unter [zu Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94837).  
+ Weitere Informationen zu MSMQ-Pfad und den Format-Namen finden Sie unter [zu Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding und Dienstadressierung  
  Bei der Adressierung einer Nachricht an einen Dienst wird das Schema in dem URI anhand des für die Kommunikation verwendeten Transports ausgewählt. Jeder Transport in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügt über ein eindeutiges Schema. Das Schema muss die Art des für die Kommunikation verwendeten Transports wiedergeben, z. B. net.tcp, net.pipe, HTTP usw.  
@@ -84,7 +86,7 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
 |WCF URI-basierte Warteschlangenadresse|Verwenden Sie die Active Directory-Eigenschaft|Warteschlangen-Übertragungsprotokoll-Eigenschaft|Resultierende MSMQ-Formatnamen|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |NET.MSMQ://\<Machine-Name >/Private/Abc|False (Standardwert)|Systemeigen (Standardwert)|DIRECT=OS:Computername\privat$\abc|  
-|NET.MSMQ://\<Machine-Name >/Private/Abc|False|SRMP|DIRECT=http://Computer/msmq/privat$/abc|  
+|NET.MSMQ://\<Machine-Name >/Private/Abc|False|SRMP|DIRECT =http://machine/msmq/private$/ Abc|  
 |NET.MSMQ://\<Machine-Name >/Private/Abc|True|Systemeigen|PUBLIC=some-guid (die GUID der Warteschlange)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lesen von Nachrichten aus der Warteschlange für unzustellbare Nachrichten oder der Warteschlange für potenziell schädliche Nachrichten  
@@ -111,7 +113,7 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
   
  Beachten Sie, dass Sie nur direkte Formatnamen verwenden können und dass Sie öffentliche und private Formatnamen (dies erfordert die Integration von Active Directory) verwenden können, wenn Nachrichten von einer Warteschlange mithilfe von `MsmqIntegrationBinding` empfangen werden. Es wird jedoch empfohlen, direkte Formatnamen zu verwenden. Bei [!INCLUDE[wv](../../../../includes/wv-md.md)] kann die Verwendung eines anderen Formatnamens z. B. einen Fehler verursachen, da das System versucht, eine Unterwarteschlange zu öffnen, die nur bei Verwendung von direkten Formatnamen geöffnet werden kann.  
   
- Bei der Adressierung von SRMP mithilfe von `MsmqIntegrationBinding` ist es nicht erforderlich, /msmq/ zu dem direkten Formatnamen hinzuzufügen, um das Senden durch Internetinformationsdienste (Internet Information Services, IIS) zu unterstützen. Beispiel: Bei der Adressierung einer Warteschlange abc mithilfe des SRMP-Protokolls sollten Sie DIRECT=http://adatum.com/privat$/abc statt DIRECT=http://adatum.com/msmq/privat$/abc verwenden.  
+ Bei der Adressierung von SRMP mithilfe von `MsmqIntegrationBinding` ist es nicht erforderlich, /msmq/ zu dem direkten Formatnamen hinzuzufügen, um das Senden durch Internetinformationsdienste (Internet Information Services, IIS) zu unterstützen. Zum Beispiel: bei der Adressierung einer Warteschlange Abc mithilfe des SRMP-statt DIRECT Protokolls =http://adatum.com/msmq/private$/ Abc verwenden Sie DIRECT =http://adatum.com/private$/ Abc.  
   
  Beachten Sie, dass Sie net.msmq:// nicht für die Adressierung mit `MsmqIntegrationBinding` verwenden können. Da `MsmqIntegrationBinding` die formlose MSMQ-Formatnamenadressierung unterstützt, können Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst verwenden, der diese Bindung verwendet, um Multicast- und Verteilerlistenfunktionen in MSMQ zu verwenden. Eine Ausnahme ist das Angeben von `CustomDeadLetterQueue` bei der Verwendung von `MsmqIntegrationBinding`. Das Format muss net.msmq sein:// sein, ähnlich wie bei der Verwendung von `NetMsmqBinding` festgelegt.  
   

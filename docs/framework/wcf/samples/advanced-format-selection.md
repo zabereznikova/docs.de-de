@@ -1,24 +1,26 @@
 ---
 title: Erweiterte Formatauswahl
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124bf59f29ff04e643200edf686f79f573937a03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d7fe0742e16abd92682094ca20d51488516e6e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="advanced-format-selection"></a>Erweiterte Formatauswahl
 In diesem Beispiel wird veranschaulicht, wie das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-REST-Programmiermodell zur Unterstützung neuer Formate für ausgehende Antworten erweitert wird. In diesem Beispiel wird zusätzlich eine T4-Vorlage verwendet, damit die Antwort als XHTML-Seite zurückgegeben wird. Auf diese Weise wird veranschaulicht, wie ein Programmiermodell zur Ansicht implementiert werden kann.  
@@ -32,7 +34,7 @@ In diesem Beispiel wird veranschaulicht, wie das [!INCLUDE[indigo1](../../../../
   
  Beim Rückgabetyp des Vorgangs ist Folgendes zu beachten. Das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-REST-Programmiermodell unterstützt XML- und JSON-Antwortformate systemintern nur dann, wenn ein Vorgang einen anderen Typ als <xref:System.ServiceModel.Channels.Message> zurückgibt. Wenn als Rückgabetyp jedoch <xref:System.ServiceModel.Channels.Message> verwendet wird, kann der Entwickler vollständig selbst bestimmen, wie der Inhalt der Meldung formatiert werden soll.  
   
- In diesem Beispiel wird die Liste der Zeichenfolgen mithilfe der Methoden <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> und <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> in entsprechende XML-, JSON- und ATOM-Meldungen serialisiert. Für das JPEG-Antwortformat wird die <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A>-Methode verwendet, und das Bild wird im Stream gespeichert. Für die XHTML-Antwort wird die <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> mit einer zuvor verarbeiteten T4-Vorlage verwendet. Diese besteht aus einer TT-Datei und einer automatisch generierten CS-Datei. Die TT-Datei ermöglicht es Entwicklern, eine Antwort in ein Vorlagenformular zu schreiben, das Variablen und Steuerelementstrukturen enthält. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4 finden Sie unter [Generieren von Artefakten mithilfe von Textvorlagen](http://go.microsoft.com/fwlink/?LinkId=166023).  
+ In diesem Beispiel wird die Liste der Zeichenfolgen mithilfe der Methoden <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> und <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> in entsprechende XML-, JSON- und ATOM-Meldungen serialisiert. Für das JPEG-Antwortformat wird die <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A>-Methode verwendet, und das Bild wird im Stream gespeichert. Für die XHTML-Antwort wird die <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> mit einer zuvor verarbeiteten T4-Vorlage verwendet. Diese besteht aus einer TT-Datei und einer automatisch generierten CS-Datei. Die TT-Datei ermöglicht es Entwicklern, eine Antwort in ein Vorlagenformular zu schreiben, das Variablen und Steuerelementstrukturen enthält. Weitere Informationen zu T4 finden Sie unter [Generieren von Artefakten mithilfe von Textvorlagen](http://go.microsoft.com/fwlink/?LinkId=166023).  
   
  Das Beispiel umfasst einen selbst gehosteten Dienst und einen Client, der in einer Konsolenanwendung ausgeführt wird. Während die Konsolenanwendung ausgeführt wird, sendet der Client Anforderungen an den Dienst und schreibt die in den Antworten enthaltenen wichtigen Informationen in das Konsolenfenster.  
   

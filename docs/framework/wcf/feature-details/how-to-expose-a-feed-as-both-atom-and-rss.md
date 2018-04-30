@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5a2ca8d6ce6cf907538c534f97300e418f5e825f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Vorgehensweise: Einen Feed sowohl als Atom als auch als RSS verfügbar machen
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht Ihnen die Erstellung eines Diensts, der einen Syndication-Feed verfügbar macht. In diesem Thema wird erläutert, wie Sie einen Syndication-Dienst erstellen, der Syndication-Feeds sowohl mit Atom 1.0 als auch mit RSS 2.0 verfügbar macht. Dieser Dienst macht einen Endpunkt verfügbar, der beide Syndication-Formate zurückgeben kann. Der Einfachheit halber wird in diesem Beispiel ein selbst gehosteter Dienst verwendet. In einer Produktionsumgebung würde ein Dienst dieses Typs unter IIS oder WAS gehostet werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die verschiedenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hostingoptionen, finden Sie unter [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht Ihnen die Erstellung eines Diensts, der einen Syndication-Feed verfügbar macht. In diesem Thema wird erläutert, wie Sie einen Syndication-Dienst erstellen, der Syndication-Feeds sowohl mit Atom 1.0 als auch mit RSS 2.0 verfügbar macht. Dieser Dienst macht einen Endpunkt verfügbar, der beide Syndication-Formate zurückgeben kann. Der Einfachheit halber wird in diesem Beispiel ein selbst gehosteter Dienst verwendet. In einer Produktionsumgebung würde ein Dienst dieses Typs unter IIS oder WAS gehostet werden. Weitere Informationen zu den verschiedenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hostingoptionen, finden Sie unter [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>So erstellen Sie einen grundlegenden Syndication-Dienst  
   

@@ -1,12 +1,13 @@
 ---
 title: Definieren und Angeben von Fehlern
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6c200ad587d437875f510adc4f05b30bdb7ab089
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Definieren und Angeben von Fehlern
-SOAP-Fehler vermitteln Informationen zu Fehlerbedingungen auf interoperable Weise von einem Dienst an einen Client und bei Duplexkommunikation von einem Client an einen Dienst. In diesem Thema wird beschrieben, wann und wie Sie benutzerdefinierten Fehlerinhalt definieren und wie Sie angeben, welche Vorgänge diesen zurückgeben können. [!INCLUDE[crabout](../../../includes/crabout-md.md)]ein Dienst oder ein duplexclient, senden kann, diese Fehler und wie eine Client- oder dienstanwendung diese Fehler behandelt werden, finden Sie unter [senden und Empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md). Einen Überblick über die Fehlerbehandlung in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+SOAP-Fehler vermitteln Informationen zu Fehlerbedingungen auf interoperable Weise von einem Dienst an einen Client und bei Duplexkommunikation von einem Client an einen Dienst. In diesem Thema wird beschrieben, wann und wie Sie benutzerdefinierten Fehlerinhalt definieren und wie Sie angeben, welche Vorgänge diesen zurückgeben können. Weitere Informationen wie ein Dienst oder ein duplexclient, diese Fehler senden kann und wie eine Client- oder dienstanwendung diese Fehler behandelt, finden Sie unter [senden und Empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md). Einen Überblick über die Fehlerbehandlung in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Übersicht  
  Bei deklarierten SOAP-Fehlern verfügt ein Vorgang über ein <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>, das einen benutzerdefinierten SOAP-Fehlertyp angibt. Nicht deklarierte SOAP-Fehler sind Fehler, die nicht im Vertrag eines Vorgangs festgelegt sind. Dieses Thema enthält Informationen zur Identifizierung der Fehlerbedingungen und zur Erstellung eines Fehlervertrags für Ihren Dienst, den Clients verwenden können, um die Fehlerbedingungen richtig zu verarbeiten, wenn sie anhand von benutzerdefinierten SOAP-Fehlern darüber informiert werden. Die folgenden grundlegenden Aufgaben gelten in dieser Reihenfolge:  
@@ -77,7 +79,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Gewusst wie: sicherzustellen, dass Ihre Daten serialisierbar ist, finden Sie unter [angeben von Datenübertragung in Dienstverträgen](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Eine Liste der Serialisierung zu unterstützen, die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> bereitstellt, finden Sie unter [Typen unterstützt, durch den Datenvertragsserialisierer](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Weitere Informationen zur Vorgehensweise sicherzustellen, dass Ihre Daten serialisierbar ist, finden Sie unter [angeben von Datenübertragung in Dienstverträgen](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Eine Liste der Serialisierung zu unterstützen, die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> bereitstellt, finden Sie unter [Typen unterstützt, durch den Datenvertragsserialisierer](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>Markieren von Operationen, um den Fehlervertrag einzurichten  
  Nachdem Sie eine serialisierbare Datenstruktur definiert haben, die als Teil eines benutzerdefinierten SOAP-Fehlers zurückgegeben wird, besteht der letzte Schritt darin, Ihren Operationsvertrag so zu kennzeichnen, dass er einen SOAP-Fehler dieses Typs auslöst. Verwenden Sie dazu das <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>-Attribut, und übergeben Sie den Typ des benutzerdefinierten Datentyps, den Sie erstellt haben. Das folgende Codebeispiel zeigt, wie Sie das <xref:System.ServiceModel.FaultContractAttribute>-Attribut verwenden, um anzugeben, dass die `Divide`-Operation einen SOAP-Fehler vom Typ `MathFault` zurückgeben kann. Andere mathematische Operationen können jetzt auch angeben, dass sie einen `MathFault` zurückgeben können.  

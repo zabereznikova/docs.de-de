@@ -29,14 +29,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 023de9e20206411f7dd6774553ae39eefaa508a0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-partial-trust-security"></a>WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit
-<a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. Standardmäßig [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] und clientseitige Skriptsprachen sind nicht auf kritische Systemressourcen zugreifen. Da [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] im Browser gehostete Anwendungen über den Browser gestartet werden können, sollte eine ähnliche Reihe von Einschränkungen entsprechen. Um diese Einschränkungen zu erzwingen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] basiert auf beide [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] und [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (finden Sie unter [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Wird standardmäßig im Browser gehostete Anwendungen anfordern die Internetzone [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Satz von Berechtigungen, unabhängig davon, ob sie aus dem Internet, dem lokalen Intranet oder dem lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
+<a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. Standardmäßig [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] und clientseitige Skriptsprachen sind nicht auf kritische Systemressourcen zugreifen. Da Windows Presentation Foundation (WPF) im Browser gehostete Anwendungen über den Browser gestartet werden können, sollten sie eine ähnliche Reihe von Einschränkungen entsprechen. Um diese Einschränkungen zu erzwingen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] basiert auf beide [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] und [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (finden Sie unter [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Wird standardmäßig im Browser gehostete Anwendungen anfordern die Internetzone [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Satz von Berechtigungen, unabhängig davon, ob sie aus dem Internet, dem lokalen Intranet oder dem lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Stellt eine Vielzahl von Support, um sicherzustellen, dass viele Funktionen wie möglich sicher kann und zusammen mit teilweiser Vertrauenswürdigkeit verwendet werden [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], bietet zusätzliche Unterstützung für die Programmierung mit teilweiser Vertrauenswürdigkeit.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>WPF-Funktionen für die Unterstützung von teilweiser Vertrauenswürdigkeit  
- Die folgende Tabelle enthält die grundlegenden Funktionen von [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] , die sicher innerhalb der Grenzen des Berechtigungssatzes der Internetzone verwendet werden.  
+ Die folgende Tabelle enthält die allgemeinen Funktionen von Windows Presentation Foundation (WPF), die sicher innerhalb der Grenzen des Berechtigungssatzes der Internetzone verwendet werden.  
   
  Tabelle 1: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit sicher sind  
   

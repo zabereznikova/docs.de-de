@@ -1,28 +1,28 @@
 ---
 title: Lastenausgleich
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="load-balancing"></a>Lastenausgleich
 Eine Möglichkeit zur Steigerung der Kapazität von [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen besteht darin, sie dezentral zu skalieren und in einer Serverfarm mit Lastenausgleich bereitzustellen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen können mit Standardverfahren zum Lastenausgleich entsprechend ausgeglichen werden. Dazu gehören Softwarelastenausgleichsmodule wie Windows Network Load Balancing sowie hardwarebasierte Anwendungen zum Lastenausgleich.  
@@ -90,7 +90,7 @@ Eine Möglichkeit zur Steigerung der Kapazität von [!INCLUDE[indigo1](../../../
 </configuration>  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Weitere Informationen zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Lastenausgleich mit der WSHttp-Bindung und der WSDualHttp-Bindung  
  Sowohl die <xref:System.ServiceModel.WSHttpBinding> als auch die <xref:System.ServiceModel.WSDualHttpBinding> können mit HTTP-Lastenausgleichstechniken ausgeglichen werden, vorausgesetzt, an der Standardbindungskonfiguration werden einige Änderungen vorgenommen.  

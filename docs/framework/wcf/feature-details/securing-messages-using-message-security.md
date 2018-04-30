@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 In diesem Abschnitt wird die Nachrichtensicherheit von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bei der Verwendung von <xref:System.ServiceModel.NetMsmqBinding> erläutert.  
@@ -54,7 +54,7 @@ In diesem Abschnitt wird die Nachrichtensicherheit von [!INCLUDE[indigo2](../../
   
  Da im Fall von Warteschlangen nicht immer eine Verbindung hergestellt ist, sind der Client und der Dienst möglicherweise nicht zur selben Zeit online. Daher müssen der Client und der Dienst Zertifikate out-of-band austauschen. Insbesondere der Client, bei dem sich das Dienstzertifikat (das mit einer Zertifizierungsstelle verkettet sein kann) im vertrauenswürdigen Speicher befindet, muss verlässlich mit dem richtigen Dienst kommunizieren. Zur Authentifizierung des Clients gleicht der Dienst das X.509-Zertifikat, das an die Nachricht angehängt ist, mit dem Zertifikat in seinem Speicher ab, um die Echtzeit des Clients zu überprüfen. Auch hier muss das Zertifikat mit einer Zertifizierungsstelle verkettet sein.  
   
- Auf einem Computer unter Windows befinden sich die Zertifikate in verschiedenen Arten von Speichern. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die unterschiedliche Speicher finden Sie unter [Zertifikatspeichern](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Auf einem Computer unter Windows befinden sich die Zertifikate in verschiedenen Arten von Speichern. Weitere Informationen zu den verschiedenen speichern, finden Sie unter [Zertifikatspeichern](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Der Windows-Anmeldeinformationstyp für Nachrichten verwendet das Kerberos-Protokoll.  

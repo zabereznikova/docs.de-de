@@ -16,22 +16,22 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b9c5c53e04719f3ed48d0ff6386f21bf83e99
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 170583239ed357904e723aebdaef9809938b5123
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-your-application"></a>Konfigurieren der Anwendung
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet das .NET-Konfigurationssystem und ermöglicht es Ihnen, computer- und anwendungsspezifische Dienste zu konfigurieren.  
   
- Von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] definierte Konfigurationseinstellungen befinden sich in der `<system.serviceModel>`-Abschnittsgruppe. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Konfigurieren eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts finden Sie in den folgenden Themen:  
+ Von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] definierte Konfigurationseinstellungen befinden sich in der `<system.serviceModel>`-Abschnittsgruppe. Weitere Informationen zum Konfigurieren einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, finden Sie unter den folgenden Themen:  
   
 -   [Konfigurieren von Diensten](../../../../docs/framework/wcf/configuring-services.md)  
   
 -   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- Anwendungsdefinierte Konfigurationseinstellungen sind in der `<appSettings>`-Abschnittsgruppe definiert. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Anwendungseinstellungen in Konfigurationsdateien .NET finden Sie unter [ \<"appSettings" >](http://go.microsoft.com/fwlink/?LinkId=95159).  
+ Anwendungsdefinierte Konfigurationseinstellungen sind in der `<appSettings>`-Abschnittsgruppe definiert. Weitere Informationen zu Anwendungseinstellungen in Konfigurationsdateien .NET finden Sie unter [ \<"appSettings" >](http://go.microsoft.com/fwlink/?LinkId=95159).  
   
 ## <a name="using-the-configuration-editor"></a>Verwenden von Configuration Editor  
  Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] [Dienstkonfigurations-Editor-Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) ermöglicht Administratoren und Entwickler erstellen und Ändern von Konfigurationseinstellungen für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienste mit einer grafischen Benutzeroberfläche. Mit diesem Tool können Sie die Einstellungen für Bindungen, Verhaltensweisen, Dienste und Diagnosen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwalten, ohne XML-Dateien direkt bearbeiten zu müssen.  

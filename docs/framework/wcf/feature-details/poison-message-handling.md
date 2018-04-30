@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="poison-message-handling"></a>Behandlung nicht verarbeitbarer Nachrichten
 Ein *nicht verarbeitbare Nachricht* ist eine Nachricht, die die maximale Anzahl der Zustellversuche an die Anwendung überschritten hat. Diese Situation kann auftreten, wenn eine warteschlangenbasierte Anwendung aufgrund der Fehler keine Nachricht verarbeiten kann. Um Zuverlässigkeitsforderungen zu erfüllen, empfängt eine in der Warteschlange stehende Anwendung Nachrichten unter einer Transaktion. Beim Abbrechen der Transaktion, in der eine in der Warteschlange stehende Nachricht empfangen wurde, bleibt die Nachricht in der Warteschlange und wird dann unter einer neuen Transaktion wiederholt. Wenn das Problem, das zum Abbrechen der Transaktion geführt hat, nicht korrigiert wird, kann die empfangende Anwendung in einer Schleife hängen bleiben, in der sie dieselbe Nachricht immer wieder empfängt und abbricht, bis die maximale Anzahl der Zustellversuche überschritten ist. Auf diese Weise entsteht eine nicht verarbeitbare Nachricht.  
@@ -104,7 +104,7 @@ Ein *nicht verarbeitbare Nachricht* ist eine Nachricht, die die maximale Anzahl 
  Eine Sitzung durchläuft die gleichen Wiederholungsprozeduren und Prozeduren zur Behandlung nicht verarbeitbarer Nachrichten wie eine einzelne Nachricht. Die zuvor aufgeführten Eigenschaften für nicht verarbeitbare Nachrichten gelten auch für die ganze Sitzung, d. h., dass die gesamte Sitzung wiederholt wird und schließlich in einer Warteschlange für potenziell schädliche Nachrichten oder in der Absenderwarteschlange für unzustellbare Nachrichten platziert wird, wenn die Nachricht abgelehnt wird.  
   
 ## <a name="batching-and-poison-messages"></a>Batchverarbeitung und nicht verarbeitbare Nachrichten  
- Wenn eine Nachricht zu einer nicht verarbeitbaren Nachricht wird und Teil eines Batches ist, wird für den gesamten Batch ein Rollback durchgeführt, und der Kanal kehrt zum Lesen einzelner Nachrichten zurück. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Batchverarbeitung finden Sie unter [Batchverarbeitung von Nachrichten in einer Transaktion](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ Wenn eine Nachricht zu einer nicht verarbeitbaren Nachricht wird und Teil eines Batches ist, wird für den gesamten Batch ein Rollback durchgeführt, und der Kanal kehrt zum Lesen einzelner Nachrichten zurück. Weitere Informationen zur Batchverarbeitung finden Sie unter [Batchverarbeitung von Nachrichten in einer Transaktion](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Behandlung nicht verarbeitbarer Nachrichten für Nachrichten in einer Warteschlange für potenziell schädliche Nachrichten  
  Die Behandlung nicht verarbeitbarer Nachrichten ist nicht damit beendet, dass eine Nachricht in die Warteschlange für potenziell schädliche Nachrichten eingefügt wird. Die Nachrichten in der Warteschlange für potenziell schädliche Nachrichten müssen immer noch gelesen und behandelt werden. Beim Lesen von Nachrichten aus der endgültigen Warteschlange für potenziell schädliche Nachrichten können Sie eine Teilmenge der Einstellungen zur Behandlung nicht verarbeitbarer Nachrichten verwenden. Die anwendbaren Einstellungen sind `ReceiveRetryCount` und `ReceiveErrorHandling`. Sie können `ReceiveErrorHandling` auf "Drop", "Reject" oder "Fault" festlegen. `MaxRetryCycles` wird ignoriert, und es wird eine Ausnahme ausgelöst, wenn `ReceiveErrorHandling` auf "Move" festgelegt wird.  

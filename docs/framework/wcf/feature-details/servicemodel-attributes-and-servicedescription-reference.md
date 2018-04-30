@@ -1,29 +1,31 @@
 ---
 title: ServiceModel-Attribute und ServiceDescription-Referenz
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ba8888c2a1bd3c16ab6d216c365870c0df0e499a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel-Attribute und ServiceDescription-Referenz
 Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> Klasse), die zusammen jeden Aspekt eines Diensts beschreiben. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet eine Beschreibungsstruktur zum Erstellen einer gültigen Dienstlaufzeit, zum Veröffentlichen von WSDL (Web Services Description Language)- und XSD (XML Schema Definition)-Daten sowie Richtlinienassertionen (Metadaten) über den Dienst, anhand derer Clients eine Verbindung mit dem Dienst herstellen und den Dienst nutzen können, und zum Generieren verschiedener Code- und Konfigurationsdateidarstellungen der Beschreibungsstrukturwerte.  
   
- Dieses Thema beschreibt, wie vertragsbezogene Eigenschaften aus dem Dienstvertrag abgerufen, wie sie implementiert und der Beschreibungsstruktur hinzugefügt werden. In einigen Fällen werden Attributwerte in Verhaltenseigenschaften umgewandelt, und das Verhalten wird dann in die Beschreibungsstruktur eingefügt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]der beschreibungsstrukturwerte in Metadaten konvertiert werden, finden Sie unter [ServiceDescription und WSDL-Verweis](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ Dieses Thema beschreibt, wie vertragsbezogene Eigenschaften aus dem Dienstvertrag abgerufen, wie sie implementiert und der Beschreibungsstruktur hinzugefügt werden. In einigen Fällen werden Attributwerte in Verhaltenseigenschaften umgewandelt, und das Verhalten wird dann in die Beschreibungsstruktur eingefügt. Weitere Informationen dazu, wie der beschreibungsstrukturwerte in Metadaten umgewandelt werden, finden Sie unter [ServiceDescription und WSDL-Verweis](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Zuordnen von Vorgängen zur Beschreibungsstruktur  
  In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen werden Dienstverträge nach Schnittstellen (oder Klassen) erstellt, die Attribute verwenden, um die Schnittstelle oder Klasse und ihre Methoden als eine Vorgangsgruppierung zu markieren. Wenn eine <xref:System.ServiceModel.ServiceHost>-Klasse geöffnet ist, werden Dienstverträge und Implementierungen immer wieder reflektiert und mit den Konfigurationsinformationen in eine Beschreibungsstruktur zusammengeführt.  
@@ -44,7 +46,7 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
 |---------------------------------------|-------------------------------------|  
 |CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> hat allen Operationen <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> hinzugefügt.|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> und möglicherweise untergeordnete Schutzebenen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Die Schutzebene Hierarchie finden Sie unter [Verständnis Schutzebene](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> und möglicherweise untergeordnete Schutzebenen. Weitere Informationen über die Schutzebene Hierarchie finden Sie unter [Verständnis Schutzebene](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |ServiceKnownTypesAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
@@ -59,7 +61,7 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> und möglicherweise untergeordnete Schutzebenen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Die Schutzebene Hierarchie finden Sie unter [Verständnis Schutzebene](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> und möglicherweise untergeordnete Schutzebenen. Weitere Informationen über die Schutzebene Hierarchie finden Sie unter [Verständnis Schutzebene](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> für die Ausgabe- oder Eingabenachricht, abhängig vom Vertrag/Rückrufvertrag.|  
   
 |FaultContractAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
@@ -91,19 +93,19 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
   
 |MessageHeaderAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |----------------------------------|-------------------------------------|  
-|Akteur|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>für den entsprechenden Header in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Akteur|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> für den entsprechenden Header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> für den entsprechenden Header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> für den entsprechenden Header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> für den entsprechenden Header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> für den entsprechenden Header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> für den entsprechenden Header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |MessageBodyMemberAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |--------------------------------------|-------------------------------------|  
-|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Reihenfolge|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> für die entsprechende Stelle im <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> für die entsprechende Stelle im <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Reihenfolge|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> für die entsprechende Stelle im <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> für die entsprechende Stelle im <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |MessageHeaderArrayAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |---------------------------------------|-------------------------------------|  
@@ -120,9 +122,9 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
   
 |MessageParameterAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |-------------------------------------|-------------------------------------|  
-|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>für die entsprechende Stelle im<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> für die entsprechende Stelle im <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]der beschreibungsstrukturwerte in Metadaten konvertiert werden, finden Sie unter [ServiceDescription und WSDL-Verweis](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ Weitere Informationen dazu, wie der beschreibungsstrukturwerte in Metadaten umgewandelt werden, finden Sie unter [ServiceDescription und WSDL-Verweis](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [ServiceDescription und WSDL-Verweis](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

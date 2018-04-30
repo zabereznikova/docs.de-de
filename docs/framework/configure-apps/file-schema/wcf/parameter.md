@@ -1,26 +1,28 @@
 ---
-title: '&lt;Parameter&gt;'
-ms.custom: 
+title: '&lt;parameter&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cdbb47fcb65273d03d226e13730849170d4345c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aa4b2c870864a4359ebca0a1ae47fc1c8aaebca0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="ltparametergt"></a>&lt;Parameter&gt;
+# <a name="ltparametergt"></a>&lt;parameter&gt;
 Gibt den generischen Parameter an, wenn ein deklarierter Typ ein generischer Typ ist.  
   
  \<System.Runtime.Serialization >  
@@ -64,7 +66,7 @@ Gibt den generischen Parameter an, wenn ein deklarierter Typ ein generischer Typ
 |[\<KnownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Gibt einen bekannten Typ an, der von einem Feld oder einer Eigenschaft des deklarierten Typs zurückgegeben werden kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]bekannten Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) und <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Weitere Informationen über bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) und <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  Finden Sie unter der [ \<"DataContractSerializer" >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) für ein Beispiel für dieses Element.  
   

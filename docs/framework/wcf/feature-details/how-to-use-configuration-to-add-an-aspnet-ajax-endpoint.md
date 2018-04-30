@@ -1,31 +1,33 @@
 ---
-title: "Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts"
-ms.custom: 
+title: 'Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1b46239366c38b54a38e3ce62b59c81eeb3316c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 28051dbed626dc0073a38e72f2cdc21ea108a32e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts
 Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Dienst erstellen, der einen ASP.NET AJAX-aktivierten Endpunkt verfügbar macht, der auf einer Client-Website von JavaScript aufgerufen werden kann. Zum Erstellen eines solchen Endpunkts können Sie entweder (wie bei allen anderen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Endpunkten) eine Konfigurationsdatei verwenden, oder Sie können eine Methode einsetzen, die keine Konfigurationselemente benötigt. In diesem Thema wird die Konfigurationsmethode veranschaulicht.  
   
  Der Teil der Prozedur, die den Dienstendpunkt zu ASP.NET AJAX-aktivierten ermöglicht besteht in der Konfiguration des Endpunkts verwendet die <xref:System.ServiceModel.WebHttpBinding> und zum Hinzufügen der [ \<EnableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) Endpunktverhalten. Die Schritte zum Implementieren und Hosten des Diensts nach der Konfiguration des Endpunkts sind den Schritten ähnlich, die von jedem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst verwendet werden. Ein Arbeitsbeispiel finden Sie unter der [AJAX-Dienst mithilfe von HTTP-POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zum Konfigurieren von ASP.NET AJAX-Endpunkt ohne Konfiguration finden Sie unter [wie: Hinzufügen einer ASP.NET AJAX-Endpunkt ohne mithilfe der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+ Weitere Informationen über das ASP.NET AJAX-Endpunkt zu konfigurieren, ohne Konfiguration finden Sie unter [wie: Hinzufügen einer ASP.NET AJAX-Endpunkt ohne mithilfe der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
 ### <a name="to-create-a-basic-wcf-service"></a>So erstellen Sie einen WCF-Basisdienst  
   
@@ -109,7 +111,7 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Di
     %>  
     ```  
   
-2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Hosting in IIS finden Sie unter [wie: Hosten eines WCF-Diensts in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  Weitere Informationen zum hosting in IIS finden Sie unter [wie: Hosten eines WCF-Diensts in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>So rufen Sie den Dienst auf  
   

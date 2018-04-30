@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-schema-reference"></a>Datenvertrags-Schemareferenz
 In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD) beschrieben.  
@@ -245,7 +245,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 -   Einfache Typeinschränkungen von `xs:string` , die keine anderen Einschränkungsfacets als `xs:enumeration` haben, werden Enumerationsdatenverträgen zugeordnet.  
   
--   Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken. Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Zuordnung primitiver Typen finden Sie unter "Zuordnung von Typen zu primitiven Typen".  
+-   Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken. Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist. Weitere Informationen zur Zuordnung primitiver Typ finden Sie unter Zuordnung von Typen zu primitiven Typen.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: restriction >: Attribute  
   
@@ -549,7 +549,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- Das optionale, im Serialisierungsschema des Datenvertrags deklarierte Attribut `ser:FactoryType` verweist auf eine Factoryklasse, die den Typ deserialisieren kann. Die Factoryklasse muss Teil der Auflistung bekannter Typen der verwendeten `DataContractSerializer` -Instanz sein. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)exportiert werden.  
+ Das optionale, im Serialisierungsschema des Datenvertrags deklarierte Attribut `ser:FactoryType` verweist auf eine Factoryklasse, die den Typ deserialisieren kann. Die Factoryklasse muss Teil der Auflistung bekannter Typen der verwendeten `DataContractSerializer` -Instanz sein. Weitere Informationen über bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>DataContract-Serialisierungsschema  
  Eine Anzahl der vom `DataContractSerializer` exportierten Schemas verwendet Typen, Elemente und Attribute eines speziellen Datenvertrags-Serialisierungsnamespace:  

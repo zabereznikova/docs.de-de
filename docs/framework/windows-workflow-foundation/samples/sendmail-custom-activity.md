@@ -1,24 +1,24 @@
 ---
-title: "Benutzerdefinierte SendMail-Aktivität"
-ms.custom: 
+title: Benutzerdefinierte SendMail-Aktivität
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46038466233e7039229890b15b0ad6ca9d1a717f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sendmail-custom-activity"></a>Benutzerdefinierte SendMail-Aktivität
 In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veranschaulicht, die von der <xref:System.Activities.AsyncCodeActivity> abgeleitet wird, um E-Mail-Nachrichten zur Verwendung in einer Workflowanwendung via SMTP zu senden. Die benutzerdefinierte Aktivität verwendet, das die Funktionen des <xref:System.Net.Mail.SmtpClient> asynchron senden von e-Mails und zum Senden von e-Mails mit Authentifizierung. Außerdem werden Endbenutzerfunktionen wie Testmodus, Tokenersetzung, Dateivorlagen und Testablagepfad bereitgestellt.  
@@ -32,14 +32,14 @@ In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veran
 |EnableSsl|bool|Gibt an, ob der <xref:System.Net.Mail.SmtpClient> die Verbindung mit SSL (Secure Sockets Layer) verschlüsselt.|  
 |UserName|Zeichenfolge|Der Benutzername zum Einrichten der Anmeldeinformationen und Authentifizieren der <xref:System.Net.Mail.SmtpClient.Credentials%2A>-Absendereigenschaft.|  
 |Kennwort|Zeichenfolge|Das Kennwort zum Einrichten der Anmeldeinformationen und Authentifizieren der <xref:System.Net.Mail.SmtpClient.Credentials%2A>-Absendereigenschaft.|  
-|Betreff|<xref:System.Activities.InArgument%601>\<string>|Der Betreff der Nachricht.|  
-|Text|<xref:System.Activities.InArgument%601>\<string>|Der Nachrichtentext.|  
-|Anlagen|<xref:System.Activities.InArgument%601>\<string>|Anlagenauflistung, die zum Speichern von Daten an diese e-Mail-Nachricht angefügt werden.|  
+|Betreff|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Der Betreff der Nachricht.|  
+|Text|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Der Nachrichtentext.|  
+|Anlagen|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Anlagenauflistung, die zum Speichern von Daten an diese e-Mail-Nachricht angefügt werden.|  
 |Von|<xref:System.Net.Mail.MailAddress>|Absenderadresse für diese e-Mail-Nachricht.|  
 |Beschreibung|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Die adressenauflistung, die die Empfänger dieser e-Mail-Nachricht enthält.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Die adressenauflistung, die der Empfänger eine Kopie (CC) für diese e-Mail-Nachricht enthält.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Die adressenauflistung, die die Empfänger Blindkopie (BCC) für diese e-Mail-Nachricht enthält.|  
-|tokens|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|Diese Token können im Text ersetzt werden. Mithilfe dieser Funktion können Benutzer bestimmte Werte im Text verwenden, die später durch Tokens ersetzt werden können, die mit dieser Eigenschaft angegeben werden.|  
+|tokens|<xref:System.Activities.InArgument%601>< IDictionary\<Zeichenfolge "," String ">>|Diese Token können im Text ersetzt werden. Mithilfe dieser Funktion können Benutzer bestimmte Werte im Text verwenden, die später durch Tokens ersetzt werden können, die mit dieser Eigenschaft angegeben werden.|  
 |BodyTemplateFilePath|Zeichenfolge|Der Pfad einer Vorlage für den Text. Mit der `SendMail`-Aktivität wird der Inhalt dieser Datei in die body-Eigenschaft kopiert.<br /><br /> Die Vorlage kann Token enthalten, die durch den Inhalt der Tokeneigenschaft ersetzt werden.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Wenn diese Eigenschaft festgelegt ist, werden alle e-Mail-Nachrichten an die darin angegebene Adresse gesendet.<br /><br /> Diese Eigenschaft ist für das Testen von Workflows vorgesehen. Wenn Sie sicherstellen, dass möchten werden z. B. alle e-Mail-Nachrichten gesendet, ohne sie an der tatsächlichen Empfänger zu senden.|  
 |TestDropPath|Zeichenfolge|Wenn diese Eigenschaft festgelegt ist, werden alle e-Mail-Nachrichten auch in der angegebenen Datei gespeichert.<br /><br /> Diese Eigenschaft sollte verwendet werden, wenn Sie testen oder Debuggen von Workflows, sicherstellen, dass das Format und den Inhalt der ausgehenden e-Mail-Nachrichten ist geeignet.|  
@@ -116,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>Setupanweisungen  
  Um dieses Beispiel ausführen zu können, ist der Zugriff auf einen SMTP-Server erforderlich.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Einrichten eines SMTP-Servers, finden Sie unter den folgenden Links aus.  
+ Weitere Informationen zum Einrichten eines SMTP-Servers finden Sie unter den folgenden Links.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   

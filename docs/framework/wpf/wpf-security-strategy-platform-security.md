@@ -31,14 +31,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61197255c11745c2c3f6f60db084b96dc812cb00
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8d4606023c1a9f3252e9039da547f384d27b7ecd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF-Sicherheitsstrategie – Plattformsicherheit
-[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] stellt nicht nur eine Vielzahl von Sicherheitsdiensten bereit, sondern nutzt auch die Sicherheitsfeatures der zugrundeliegenden Plattform, die das Betriebssystem, die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] und [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] enthält. Im Zusammenspiel stellen diese Ebenen für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ein leistungsfähiges Modell für tiefgreifende, vorbeugende Sicherheitsmaßnahmen (Defense-in-Depth-Modell) bereit, das eine einzelne Fehlerquelle zu vermeiden sucht, wie aus der folgenden Abbildung hervorgeht:  
+Windows Presentation Foundation (WPF) bietet eine Vielzahl von Sicherheitsdienste nutzt er auch die Sicherheitsfunktionen der zugrunde liegenden Plattform, die das Betriebssystem enthält, die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], und [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Im Zusammenspiel stellen diese Ebenen für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ein leistungsfähiges Modell für tiefgreifende, vorbeugende Sicherheitsmaßnahmen (Defense-in-Depth-Modell) bereit, das eine einzelne Fehlerquelle zu vermeiden sucht, wie aus der folgenden Abbildung hervorgeht:  
   
  ![WPF-Sicherheitsdarstellung](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
   

@@ -21,11 +21,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 581fe3272808da84fcf31667f8191f3cc6322033
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Unterstützung in der Windows Presentation Foundation  
- [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] ist das neue Modell zum Erstellen von Benutzeroberflächen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente bieten keine systemeigene Unterstützung für [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Sie unterstützen jedoch die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], die die überbrückende Unterstützung für [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Clients umfasst. Nur speziell für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] geschriebene Clients können die Barrierefreiheitsfeatures von [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]optimal nutzen, z. B. die umfangreiche Unterstützung für Text.  
+ Windows Presentation Foundation (WPF) ist das neue Modell zum Erstellen von Benutzeroberflächen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente bieten keine systemeigene Unterstützung für [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Sie unterstützen jedoch die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], die die überbrückende Unterstützung für [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Clients umfasst. Nur speziell für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] geschriebene Clients können die Barrierefreiheitsfeatures von [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]optimal nutzen, z. B. die umfangreiche Unterstützung für Text.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Server und Clients  

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist eine auf XML basierende Kommunikationsinfrastruktur. Da XML-Daten häufig in im definierten standard-Text-Format codiert ist die [XML 1.0-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=94838), verbundene Systeme Entwicklern und Architekten sind in der Regel besorgt Wire Ressourcenbedarf (oder der Größe) der gesendeten Nachrichten über das Netzwerk und die textbasierte Codierung von XML-dürfen besondere Herausforderung dar, für die effiziente Übertragung binärer Daten.  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Deshalb reicht es in diesem Fall nicht aus, die maximale Größe eingehender Nachrichten einzuschränken. Die von `MaxBufferSize` gepufferte Menge des Arbeitsspeichers muss mit der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Eigenschaft eingeschränkt werden. Legen Sie beim Streaming dafür einen sicheren Wert fest (oder behalten Sie den Standardwert bei). Angenommen, der Dienst muss Dateien bis zu einer Größe von 4 GB empfangen und auf der lokalen Festplatte speichern. Der Arbeitsspeicher ist in diesem Szenario so eingeschränkt, dass immer nur 64 KB gepuffert werden können. Sie würden dann `MaxReceivedMessageSize` auf 4 GB und `MaxBufferSize` auf 64 KB festlegen. Außerdem müssen Sie in der Dienstimplementierung sicherstellen, dass nur aus dem eingehenden Stream in 64-KB-Segmenten gelesen wird und das nächste Segment erst gelesen wird, nachdem das vorherige auf die Festplatte geschrieben wurde und es dann aus dem Arbeitspeicher gelöscht wird.  
   
- Beachten Sie, dass dieses Kontingent nur die Pufferung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] einschränkt, jedoch keinen Schutz bietet, wenn Sie eine Pufferung in einem eigenen Dienst oder der Clientimplementierung ausführen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Weitere Überlegungen zur Sicherheit, finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Beachten Sie, dass dieses Kontingent nur die Pufferung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] einschränkt, jedoch keinen Schutz bietet, wenn Sie eine Pufferung in einem eigenen Dienst oder der Clientimplementierung ausführen. Weitere Informationen über weitere Überlegungen zur Sicherheit finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  Die Entscheidung über die Verwendung der gepufferten oder der Streamingübertragung wird lokal am Endpunkt getroffen. Bei HTTP-Übertragungen wird der Übertragungsmodus nicht über Verbindungen oder an Proxyserver oder andere Vermittler weitergegeben. Das Festlegen des Übertragungsmodus spiegelt sich nicht in der Beschreibung der Dienstschnittstelle wider. Nachdem Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client für einen Dienst erstellt haben, müssen Sie die Konfigurationsdatei für Dienste bearbeiten, die mit Streamingübertragungen verwendet werden sollen, um den Modus festzulegen. Bei TCP und Named Pipe-Transporten wird der Übertragungsmodus als Richtlinienassertion weitergegeben.  

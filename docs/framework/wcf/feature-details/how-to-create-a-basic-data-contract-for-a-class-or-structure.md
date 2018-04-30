@@ -23,14 +23,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f12302fd395197363fe058fe260f717da78145e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 43fa318d2910fcd8b1d9ce75fc02d75bb39d4079
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Vorgehensweise: Erstellen eines grundlegenden Datenvertrags für eine Klasse oder Struktur
-In diesem Thema werden die grundlegenden Schritte zum Erstellen eines Datenvertrags mithilfe einer Klasse oder Struktur beschrieben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Daten-Verträge und wie sie verwendet werden, finden Sie unter [mithilfe von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+In diesem Thema werden die grundlegenden Schritte zum Erstellen eines Datenvertrags mithilfe einer Klasse oder Struktur beschrieben. Weitere Informationen über Datenverträge und deren Verwendung finden Sie unter [mithilfe von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Ein Lernprogramm, das durch die Schritte zum Erstellen einer grundlegenden führt [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienst und Client finden Sie unter der [Lernprogramm für erste Schritte](../../../../docs/framework/wcf/getting-started-tutorial.md). Eine funktionierende beispielanwendung, aus denen ein grundlegender Dienst und Client besteht, finden Sie unter [grundlegenden Datenvertrag](../../../../docs/framework/wcf/samples/basic-data-contract.md).  
   

@@ -16,14 +16,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9506e791cf4da947eaadaff1669e5f2f975431c8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 068615510d7e1d73ae260441ccef6536ee6ff317
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="secure-sessions"></a>Sichere Sitzungen
-Eine Funktion von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sind zuverlässige Sitzungen, die garantieren, dass Meldungen in der Reihenfolge empfangen werden, in der sie gesendet wurden. Die Themen in diesem Abschnitt erläutern die Sicherheitsaspekte, die bei der Erstellung einer zuverlässigen Sitzung beachtet werden sollten. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zuverlässige Sitzungen finden Sie unter [mit Sitzungen](../../../../docs/framework/wcf/using-sessions.md).  
+Eine Funktion von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sind zuverlässige Sitzungen, die garantieren, dass Meldungen in der Reihenfolge empfangen werden, in der sie gesendet wurden. Die Themen in diesem Abschnitt erläutern die Sicherheitsaspekte, die bei der Erstellung einer zuverlässigen Sitzung beachtet werden sollten. Weitere Informationen über zuverlässige Sitzungen finden Sie unter [mit Sitzungen](../../../../docs/framework/wcf/using-sessions.md).  
   
 > [!NOTE]
 >  Wenn ein Identitätswechsel auf Windows XP erforderlich ist, verwenden Sie eine sichere Sitzung ohne zustandsbehaftete Token für den Sicherheitskontext (SCT). Wenn Token für den Sicherheitszustandskontext (SCTs) mit einem Identitätswechsel verwendet werden, wird ein <xref:System.InvalidOperationException> ausgelöst. Weitere Informationen finden Sie unter [nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  

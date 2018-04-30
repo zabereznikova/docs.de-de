@@ -1,27 +1,29 @@
 ---
-title: "Identitätswechsel und Transportsicherheit"
-ms.custom: 
+title: Identitätswechsel und Transportsicherheit
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>Identitätswechsel und Transportsicherheit
-*Identitätswechsel* ist die Fähigkeit einer Serveranwendung, die Identität des Clients anzunehmen. Dienste greifen bei der Validierung des Zugriffs auf Ressourcen häufig auf den Identitätswechsel zurück. Die Serveranwendung wird unter einem Dienstkonto ausgeführt. Wenn der Server eine Clientverbindung akzeptiert, nimmt er die Identität des Clients an, das heißt, Zugriffsvalidierungen werden mit den Anmeldeinformationen des Clients durchgeführt. Bei der Transportsicherheit handelt es sich um einen Mechanismus, mit dem Anmeldeinformationen übergeben und die Kommunikation mit diesen Anmeldeinformationen gesichert werden können. In diesem Thema wird die Verwendung der Transportsicherheit mit der Identitätswechsel-Funktion in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beschrieben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Identitätswechsel mit nachrichtensicherheit, finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*Identitätswechsel* ist die Fähigkeit einer Serveranwendung, die Identität des Clients anzunehmen. Dienste greifen bei der Validierung des Zugriffs auf Ressourcen häufig auf den Identitätswechsel zurück. Die Serveranwendung wird unter einem Dienstkonto ausgeführt. Wenn der Server eine Clientverbindung akzeptiert, nimmt er die Identität des Clients an, das heißt, Zugriffsvalidierungen werden mit den Anmeldeinformationen des Clients durchgeführt. Bei der Transportsicherheit handelt es sich um einen Mechanismus, mit dem Anmeldeinformationen übergeben und die Kommunikation mit diesen Anmeldeinformationen gesichert werden können. In diesem Thema wird die Verwendung der Transportsicherheit mit der Identitätswechsel-Funktion in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beschrieben. Weitere Informationen zum Identitätswechsel unter Verwendung der nachrichtensicherheit finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Die fünf Ebenen des Identitätswechsels  
  Die Transportsicherheit nutzt fünf Ebenen des Identitätswechsels, die in der folgenden Tabelle beschrieben werden.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Named Pipes können nicht mit den Identitätswechselebenen `Impersonate` und `Delegate` verwendet werden. Die Named Pipe kann bei diesen Identitätswechselebenen keine computerinterne Kommunikation garantieren.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]benannte Pipes, finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Weitere Informationen zu named Pipes finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>HTTP-Transport  
  Die Bindungen, die den HTTP-Transport verwenden (<xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.BasicHttpBinding>) mehrere Authentifizierungsschemen zu unterstützen, wie in beschrieben [Grundlegendes zu HTTP-Authentifizierung](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Die unterstützte Ebene des Identitätswechsels ist abhängig vom Authentifizierungsschema. Die folgenden Elemente werden mit dem HTTP-Transport verwendet:  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Das Kerberos-Authentifizierungsschema, das nur durch Aushandlung ausgewählt werden kann, kann mit allen unterstützten Ebenen des Identitätswechsels verwendet werden.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]der HTTP-Transport, finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Weitere Informationen zu den HTTP-Transport, finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  

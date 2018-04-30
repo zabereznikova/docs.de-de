@@ -1,24 +1,26 @@
 ---
-title: "Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele"
-ms.custom: 
+title: Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 Die meisten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele werden in Internetinformationsdienste (IIS) gehostet und von einem gemeinsamen virtuellen Verzeichnis ausgeführt. Diesem einmaligen Setupverfahren wird ein Ordner erstellt, auf dem Datenträger; Es fügt auch ein virtuelles Verzeichnis in IIS **ServiceModelSamples**.  
@@ -30,7 +32,7 @@ Die meisten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele we
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Einmaliges Setupverfahren für WCF-Beispiele  
   
-1.  Stellen Sie sicher, dass [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] eingerichtet ist. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Gewusst wie: Einrichten von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], finden Sie unter [Internet-Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1.  Stellen Sie sicher, dass [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] eingerichtet ist. Weitere Informationen über das Einrichten von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], finden Sie unter [Internet-Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2.  Stellen Sie sicher, dass [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] installiert ist. Durchsuchen Sie das folgende Verzeichnis nach v4. 0 (oder höher): **\Windows\Microsoft.NET\Framework**  
   
@@ -88,7 +90,7 @@ Die meisten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele we
     > [!NOTE]
     >  Entfernen Sie aus Sicherheitsgründen die Definition des virtuellen Verzeichnisses und die in den vorhergehenden Setupschritten gewährten Berechtigungen, indem Sie die Batchdatei Cleanupvroot.bat nach Abschluss der Beispiele ausführen.  
   
-13. Für selbst gehostete Beispiele (nicht in IIS gehostet) ist auf dem Computer die Berechtigung zum Registrieren von HTTP-Adressen für die Überwachung erforderlich. Die Berechtigung für eine HTTP-Namespacereservierung wird von dem Benutzerkonto übernommen, das zum Ausführen des Beispiels verwendet wird. Standardmäßig verfügen Administratorkonten über die Berechtigung zum Registrieren von HTTP-Adressen. Nicht-Administratorkonten muss die Berechtigung für die von den Beispielen verwendeten HTTP-Namespaces gewährt werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zum Konfigurieren von Namespacereservierungen finden Sie unter [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
+13. Für selbst gehostete Beispiele (nicht in IIS gehostet) ist auf dem Computer die Berechtigung zum Registrieren von HTTP-Adressen für die Überwachung erforderlich. Die Berechtigung für eine HTTP-Namespacereservierung wird von dem Benutzerkonto übernommen, das zum Ausführen des Beispiels verwendet wird. Standardmäßig verfügen Administratorkonten über die Berechtigung zum Registrieren von HTTP-Adressen. Nicht-Administratorkonten muss die Berechtigung für die von den Beispielen verwendeten HTTP-Namespaces gewährt werden. Weitere Informationen zum Konfigurieren von Namespacereservierungen finden Sie unter [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
   
 14. Für einige Beispiele ist Message Queuing erforderlich. Finden Sie unter [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) installationsanweisungen.  
   

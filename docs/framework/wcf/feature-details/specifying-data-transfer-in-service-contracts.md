@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Angeben von Datenübertragung in Dienstverträgen
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kann man sich als Messaginginfrastruktur vorstellen. Dienstvorgänge können Nachrichten empfangen, sie verarbeiten und ihnen Nachrichten schicken. Nachrichten werden mit Vorgangsverträgen beschrieben. Beispiel:  
@@ -453,7 +453,7 @@ End Class
  Es gibt eine Reihe von Möglichkeiten, die Art und Weise anzupassen, in der Daten serialisiert werden.  
   
 ### <a name="changing-server-serialization-settings"></a>Ändern der Serverserialisierungseinstellungen  
- Wenn das Standard-<xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird, können Sie einige Aspekte des Serialisierungsprozesses für den Dienst durch Anwenden des <xref:System.ServiceModel.ServiceBehaviorAttribute>-Attributs auf den Dienst steuern. Sie können insbesondere die `MaxItemsInObjectGraph`-Eigenschaft verwenden, um das Kontingent festzulegen, das die maximale Anzahl an Objekten einschränkt, die das <xref:System.Runtime.Serialization.DataContractSerializer> deserialisiert. Sie können die `IgnoreExtensionDataObject`-Eigenschaft verwenden, um die Roundtrip-Versionsverwaltungsfunktion zu deaktivieren. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Kontingente, finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Round-Tripping, finden Sie unter [aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Wenn das Standard-<xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird, können Sie einige Aspekte des Serialisierungsprozesses für den Dienst durch Anwenden des <xref:System.ServiceModel.ServiceBehaviorAttribute>-Attributs auf den Dienst steuern. Sie können insbesondere die `MaxItemsInObjectGraph`-Eigenschaft verwenden, um das Kontingent festzulegen, das die maximale Anzahl an Objekten einschränkt, die das <xref:System.Runtime.Serialization.DataContractSerializer> deserialisiert. Sie können die `IgnoreExtensionDataObject`-Eigenschaft verwenden, um die Roundtrip-Versionsverwaltungsfunktion zu deaktivieren. Weitere Informationen zu Kontingenten finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Weitere Informationen zu Round-Tripping, finden Sie unter [aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -585,7 +585,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  Vor dem Öffnen des Diensthosts oder dem Erstellen eines Clientkanals entfernen Sie das vorhandene <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>-Verhalten und binden die benutzerdefinierte abgeleitete Klasse ein, die Sie in den vorherigen Schritten erstellt haben.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Erweiterte Serialisierungskonzepte, finden Sie unter [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ Weitere Informationen zu erweiterten Serialisierung Konzepten finden Sie unter [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  

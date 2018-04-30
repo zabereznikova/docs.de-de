@@ -1,45 +1,47 @@
 ---
 title: Analytische Ablaufverfolgung von WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Analytische Ablaufverfolgung von WCF
 In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen Ablaufverfolgungen hinzufügen können, die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] in ETW schreibt. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. In diesem Beispiel wird gezeigt, wie die <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>-APIs verwendet werden, um Ereignisse zu schreiben, die in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste integriert werden.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>-APIs finden Sie unter <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
+ Weitere Informationen zu den <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> -APIs finden Sie unter <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Weitere Informationen zu der ereignisablaufverfolgung in Windows finden Sie unter [verbessertes Debugging und Leistungsoptimierung mit ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Freigeben von EventProvider  
- In diesem Beispiel wird die <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>-Klasse verwendet, die <xref:System.IDisposable?displayProperty=nameWithType> implementiert. Bei der Implementierung der Ablaufverfolgung für einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst verwenden Sie wahrscheinlich die <xref:System.Diagnostics.Eventing.EventProvider>-Ressourcen für die Lebensdauer des Diensts. Aus diesem Grund und zur besseren Lesbarkeit gibt das Beispiel nie die eingebundene <xref:System.Diagnostics.Eventing.EventProvider> frei. Wenn der Dienst aus irgendeinem Grund andere Anforderungen an die Ablaufverfolgung stellt und Sie diese Ressource freigeben müssen, sollten Sie dieses Beispiel in Übereinstimmung mit den empfohlenen Vorgehensweisen zum Freigeben von nicht verwalteten Ressourcen ändern. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]nicht verwaltete Ressourcen freigibt, finden Sie unter [Implementieren einer Dispose-Methode](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ In diesem Beispiel wird die <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>-Klasse verwendet, die <xref:System.IDisposable?displayProperty=nameWithType> implementiert. Bei der Implementierung der Ablaufverfolgung für einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst verwenden Sie wahrscheinlich die <xref:System.Diagnostics.Eventing.EventProvider>-Ressourcen für die Lebensdauer des Diensts. Aus diesem Grund und zur besseren Lesbarkeit gibt das Beispiel nie die eingebundene <xref:System.Diagnostics.Eventing.EventProvider> frei. Wenn der Dienst aus irgendeinem Grund andere Anforderungen an die Ablaufverfolgung stellt und Sie diese Ressource freigeben müssen, sollten Sie dieses Beispiel in Übereinstimmung mit den empfohlenen Vorgehensweisen zum Freigeben von nicht verwalteten Ressourcen ändern. Weitere Informationen zu nicht verwaltete Ressourcen freigibt, finden Sie unter [Implementieren einer Dispose-Methode](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Selbsthosting gegenüber Webhosting  
  Für im Web gehostete Dienste bieten analytischen ablaufverfolgungen von WCF ein Feld mit dem Namen "hostreference" bereit, die verwendet wird, um den Dienst zu identifizieren, der die ablaufverfolgungen ausgibt. Die erweiterbaren Benutzerablaufverfolgungen können in diesem Modell verwendet werden, und dieses Beispiel zeigt die entsprechenden empfohlenen Vorgehensweisen. Das Format von einem Webhost zu verweisen, wenn die Pipe "&#124;" Zeichen tatsächlich angezeigt wird, in die resultierende Zeichenfolge kann eine der folgenden sein:  
   
 -   Wenn sich die Anwendung nicht im Stammverzeichnis befindet.  
   
-     \<SiteName >\<ApplicationVirtualPath > &#124;\< ServiceVirtualPath > &#124; \<ServiceName >  
+     \<SiteName >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
 -   Wenn sich die Anwendung im Stammverzeichnis befindet.  
   
-     \<SiteName > &#124; \<ServiceVirtualPath > &#124; \<ServiceName >  
+     \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
  Für selbst gehostete Dienste [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]des analytische ablaufverfolgungen nicht das Feld "HostReference" auffüllen. Die `WCFUserEventProvider`-Klasse in diesem Beispiel verhält sich konsistent, wenn sie von einem selbst gehosteten Dienst verwendet wird.  
   

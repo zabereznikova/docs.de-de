@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 349a9627c20de24a17c533bb9b2fd5f6d1735c70
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 10d723f8a685d76cc739ac88770aad3e1de982ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfläche
-Wie der Name andeutet, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] eignet sich hervorragend für umfangreiche Erfahrungen Kunden zu stellen. In diesen exemplarischen Vorgehensweisen zeigen, wie das Aussehen und Verhalten einer Schaltfläche (einschließlich Animationen) anpassen. Diese Anpassung erfolgt über einen Stil und eine Vorlage, damit Sie diese benutzerdefinierte Schaltfläche leicht auf alle Schaltflächen in der Anwendung anwenden können. Die folgende Abbildung zeigt der benutzerdefinierten Schaltfläche, die Sie erstellen.  
+Wie der Name andeutet, ist Windows Presentation Foundation (WPF) sich hervorragend für umfangreiche Erfahrungen Kunden zu stellen. In diesen exemplarischen Vorgehensweisen zeigen, wie das Aussehen und Verhalten einer Schaltfläche (einschließlich Animationen) anpassen. Diese Anpassung erfolgt über einen Stil und eine Vorlage, damit Sie diese benutzerdefinierte Schaltfläche leicht auf alle Schaltflächen in der Anwendung anwenden können. Die folgende Abbildung zeigt der benutzerdefinierten Schaltfläche, die Sie erstellen.  
   
  ![Die benutzerdefinierte Schaltfläche, die Sie erstellen](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "Custom_button_blend_Intro")  
   

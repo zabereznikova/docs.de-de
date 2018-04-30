@@ -22,20 +22,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ffb33ea70f67e209648e470656a2719404dd7f2d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 063f4da3ca920f17f77b3cc53f7c5903fc89b8cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird ein Verbunddienst mit folgenden Hauptschritten erstellt:  
   
-1.  Konfigurieren einer <xref:System.ServiceModel.WSFederationHttpBinding> oder einer ähnlichen benutzerdefinierten Bindung. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Erstellen eine entsprechende Bindung finden Sie unter [Vorgehensweise: Erstellen einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
+1.  Konfigurieren einer <xref:System.ServiceModel.WSFederationHttpBinding> oder einer ähnlichen benutzerdefinierten Bindung. Weitere Informationen zum Erstellen einer geeigneten Bindung finden Sie unter [Vorgehensweise: Erstellen einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   
 2.  Konfigurieren von <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>, die kontrollieren, wie dem Dienst präsentierte ausgestellte Token authentifiziert werden.  
   
- Dieses Thema enthält Details über den zweiten Schritt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ein Verbunddienst funktioniert, finden Sie unter [Verbund](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Dieses Thema enthält Details über den zweiten Schritt. Weitere Informationen zur Funktionsweise von eines Verbunddiensts finden Sie unter [Verbund](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>So legen Sie die Eigenschaften von IssuedTokenServiceCredential in Code fest  
   
@@ -80,7 +80,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird ein Verbunddiens
   
 -   Wenn die Signatur des ausgestellten Tokens eine Seriennummer eines X.509-Ausstellers, einen Subjektschlüsselbezeichner des X.509-Zertifikats oder einen Fingerabdruck-Sicherheitsbezeichner des X.509-Zertifikats verwendet, muss das ausgestellte Token von einem Zertifikat in der Sammlung signiert sein, die von der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>-Eigenschaft der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse zurückgegeben wurde.  
   
--   Wenn das ausgestellte Token mit einem X.509-Zertifikat signiert ist, muss das Zertifikat anhand der semantischen Informationen validiert werden, die vom Wert der <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>-Eigenschaft angegeben werden, unabhängig davon, ob das Zertifikat als <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> an die vertrauende Seite gesendet wurde oder von der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>-Eigenschaft stammt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Informationen zur Überprüfung des x. 509-Zertifikats finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+-   Wenn das ausgestellte Token mit einem X.509-Zertifikat signiert ist, muss das Zertifikat anhand der semantischen Informationen validiert werden, die vom Wert der <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>-Eigenschaft angegeben werden, unabhängig davon, ob das Zertifikat als <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> an die vertrauende Seite gesendet wurde oder von der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>-Eigenschaft stammt. Weitere Informationen zur Überprüfung des x. 509-Zertifikats finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Durch Festlegen von <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> würde beispielsweise jedes ausgestellte Token, dessen Signaturzertifikat im `TrustedPeople`-Zertifikatspeicher abgelegt ist, authentifiziert werden. Legen Sie in diesem Fall die <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A>-Eigenschaft entweder auf <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> oder auf <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine> fest. Sie können andere Modi auswählen, einschließlich <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Bei Auswahl von `Custom` müssen Sie eine Instanz der <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse zur <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A>-Eigenschaft zuweisen. Das benutzerdefinierte Validierungssteuerelement kann Zertifikate mit allen beliebigen Kriterien überprüfen. Weitere Informationen finden Sie unter [Vorgehensweise: erstellen ein Diensts, der ein benutzerdefiniertes Zertifikats-Validierungssteuerelement verwendet](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   

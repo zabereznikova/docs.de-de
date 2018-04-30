@@ -1,27 +1,29 @@
 ---
-title: "Übersicht über die Integration von COM+-Anwendungen"
-ms.custom: 
+title: Übersicht über die Integration von COM+-Anwendungen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM+-Anwendungen
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen bereit. Wenn Sie bereits komponentenbasierte Anwendungslogik verwenden, die in COM+ gehostet wird, können Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zum Erweitern der vorhandenen Logik verwenden, anstatt sie neu zu schreiben. Ein häufiges Szenario ist das Verfügbarmachen vorhandener COM+- oder Enterprise Services-Geschäftslogik über Webdienste.  
@@ -51,9 +53,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  Wählen Sie einen entsprechenden Hostingmodus aus.  
   
-3.  Verwenden Sie das COM+ Service Model Configuration-Tool (ComSvcConfig.exe) zum Hinzufügen eines Webdiensts für die Schnittstelle. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zum Verwenden von ComSvcConfig.exe finden Sie unter [Vorgehensweise: Verwenden Sie das COM+ Service Model Configuration-Tool](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3.  Verwenden Sie das COM+ Service Model Configuration-Tool (ComSvcConfig.exe) zum Hinzufügen eines Webdiensts für die Schnittstelle. Weitere Informationen zur Verwendung von ComSvcConfig.exe finden Sie unter [Vorgehensweise: Verwenden Sie das COM+ Service Model Configuration-Tool](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
-4.  Konfigurieren Sie zusätzliche Diensteinstellungen in der Anwendungskonfigurationsdatei. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zum Konfigurieren einer Komponente finden Sie unter [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4.  Konfigurieren Sie zusätzliche Diensteinstellungen in der Anwendungskonfigurationsdatei. Weitere Informationen zum Konfigurieren einer Komponente, finden Sie unter [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Unterstützte Schnittstellen  
  Es gibt einige Beschränkungen beim Typ von Schnittstellen, die als Webdienst verfügbar gemacht werden können. Die folgenden Typen von Schnittstellen werden nicht unterstützt:  

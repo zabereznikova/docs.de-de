@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2e01418844db4197cea2f9292f72b9089e77a596
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] macht zur Laufzeit Inspektionsdaten eines Diensts über einen Windows-Verwaltungsinstrumentation (WMI)-Anbieter von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] verfügbar.  
   
 ## <a name="enabling-wmi"></a>Aktivieren von WMI  
- Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] der WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](https://msdn.microsoft.com/library/aa394582.aspx). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentierung für externe Verwaltungstools.  
+ Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. Weitere Informationen zum WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](https://msdn.microsoft.com/library/aa394582.aspx). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentierung für externe Verwaltungstools.  
   
  Ein WMI-Anbieter ist eine Komponente zum Verfügbarmachen der Instrumentation zur Laufzeit über eine WBEM-kompatible Schnittstelle. Sie besteht aus einer Gruppe von WMI-Objekten mit Attribut/Wert-Paaren. Bei den Paaren kann es sich um eine Reihe einfacher Typen handeln. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] macht Attribute von Diensten (wie Adressen, Bindungen, Verhaltensweisen und Listener) verfügbar.  
   

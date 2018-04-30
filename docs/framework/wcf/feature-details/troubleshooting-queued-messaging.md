@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Problembehandlung bei Nachrichtenwarteschlangen
 Dieser Abschnitt enthält allgemeine Fragen und Hinweise zur Problembehandlung bei der Verwendung von Warteschlangen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -125,7 +125,7 @@ Dieser Abschnitt enthält allgemeine Fragen und Hinweise zur Problembehandlung b
   
  **F:** Wo finde ich Antworten auf häufig gestellte Fragen zu MSMQ?  
   
- **A:** [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, finden Sie unter [Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810).  
+ **A:** finden Sie weitere Informationen zu MSMQ, [Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810).  
   
  **F:** Warum löst der Dienst eine `ProtocolException` beim Lesen aus einer Warteschlange, die sowohl sitzungsnachrichten und datagrammnachrichten in Warteschlangen?  
   

@@ -1,23 +1,24 @@
 ---
 title: Modellieren des Abbruchverhaltens in Workflows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a3cb69e2e897e992a05a19325630ca9bb1ae3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e455bf4d74f77c6cd87301dc9a21f56117777ecf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modellieren des Abbruchverhaltens in Workflows
 Aktivitäten können innerhalb eines Workflows abgebrochen werden, z. B. durch eine <xref:System.Activities.Statements.Parallel>-Aktivität, die unvollständige Verzweigungen abbricht, wenn ihre <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> `true` ergibt, oder von außerhalb des Workflows, wenn der Host <xref:System.Activities.WorkflowApplication.Cancel%2A> aufruft. Workflowautoren können die Abbruchbehandlung mithilfe der <xref:System.Activities.Statements.CancellationScope>-Aktivität oder der <xref:System.Activities.Statements.CompensableActivity>-Aktivität bereitstellen oder können benutzerdefinierte Aktivitäten erstellen, die eine Abbruchlogik bereitstellen. Dieses Thema bietet eine Übersicht über den Abbruch in Workflows.  
@@ -26,7 +27,7 @@ Aktivitäten können innerhalb eines Workflows abgebrochen werden, z. B. durch 
  Wenn Sie Transaktionen verwenden, kann Ihre Anwendung alle Änderungen zurücknehmen (Rollback), die innerhalb der Transaktion ausgeführt wurden, falls während des Transaktionsprozesses ein Fehler auftritt. Möglicherweise ist jedoch nicht die gesamte Arbeit, die abgebrochen oder rückgängig gemacht werden muss, für Transaktionen geeignet, beispielsweise Prozesse mit langer Laufzeit oder Aufgaben, die keine Transaktionsressourcen einschließen. Die Kompensation stellt ein Modell zum Rückgängigmachen von zuvor abgeschlossenen, nicht transaktionalen Aufgaben bereit, wenn im Workflow ein nachfolgender Fehler auftritt. Der Abbruch stellt ein Modell für Workflow- und Aktivitätsautoren zum Behandeln von nicht transaktionalen Aufgaben bereit, die noch nicht abgeschlossen waren. Wenn die Ausführung einer Aktivität nicht abgeschlossen war und abgebrochen wird, wird die Abbruchlogik aufgerufen, falls verfügbar.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Transaktionen und Kompensation verwenden, finden Sie unter [Transaktionen](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) und [Kompensierung](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+>  Weitere Informationen zu Transaktionen und Kompensation, finden Sie unter [Transaktionen](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) und [Kompensierung](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="using-cancellationscope"></a>Verwenden von CancellationScope  
  Die <xref:System.Activities.Statements.CancellationScope>-Aktivität verfügt über zwei Abschnitte, die untergeordnete Aktivitäten enthalten können: <xref:System.Activities.Statements.CancellationScope.Body%2A> und <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>. Im <xref:System.Activities.Statements.CancellationScope.Body%2A> befinden sich die Aktivitäten, aus denen die Logik der Aktivität besteht, und im <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> befinden sich die Aktivitäten, die die Abbruchlogik für die Aktivität bereitstellen. Eine Aktivität kann nur abgebrochen werden, wenn sie noch nicht abgeschlossen wurde. Im Fall der <xref:System.Activities.Statements.CancellationScope>-Aktivität verweist der Abschluss auf den Abschluss der Aktivitäten im <xref:System.Activities.Statements.CancellationScope.Body%2A>. Wenn eine Abbruchanforderung geplant ist und die Aktivitäten im <xref:System.Activities.Statements.CancellationScope.Body%2A> nicht abgeschlossen wurden, dann wird der <xref:System.Activities.Statements.CancellationScope> als <xref:System.Activities.ActivityInstanceState.Canceled> markiert, und die <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>-Aktivitäten werden ausgeführt.  

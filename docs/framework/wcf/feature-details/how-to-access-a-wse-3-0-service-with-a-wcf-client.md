@@ -1,32 +1,34 @@
 ---
-title: "Vorgehensweise: Zugriff auf einen WSE3.0-Dienst über einen WCF-Client"
-ms.custom: 
+title: 'Vorgehensweise: Zugriff auf einen WSE3.0-Dienst über einen WCF-Client'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49ff6378bcd35ab2d4e2adf3783a1c4e73025d3a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 382762917e790d54dca31158f2b7ffde560c1427
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Vorgehensweise: Zugriff auf einen WSE3.0-Dienst über einen WCF-Client
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clients sind auf niedriger Ebene mit Diensten von Web Services Enhancements (WSE) 3.0 für Microsoft .NET-Dienste kompatibel, wenn [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients für die Verwendung der Version der WS-Adressierungsspezifikation vom August 2004 konfiguriert sind. WSE 3.0-Dienste nicht unterstützen jedoch die Metadaten-Exchange (MEX)-Protokoll daher bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Clientklasse, die Sicherheitseinstellungen gelten nicht für die generierte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client. Daher müssen Sie die Sicherheitseinstellungen, die der WSE 3.0-Dienst erfordert, festlegen, nachdem der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client erzeugt wurde.  
   
- Sie können diese Sicherheitseinstellungen anwenden, indem Sie eine benutzerdefinierte Bindung verwenden, um die Anforderungen des WSE 3.0-Diensts und die Interoperabilitätsanforderungen zwischen einem WSE 3.0-Dienst und einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client zu berücksichtigen. Diese Interoperabilitätsanforderungen umfassen die zuvor genannte Verwendung der WS-Adressierungsspezifikation vom August 2004 und den WSE 3.0-Standardnachrichtenschutz von <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Der Standardnachrichtenschutz für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Diese Thema enthält Details zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Bindung, die mit einem WSE 3.0-Dienst zusammenarbeitet. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält ebenfalls ein Beispiel, das diese Bindung enthält. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Dieses Beispiel finden Sie unter [Zusammenwirken mit ASMX-Webdiensten](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
+ Sie können diese Sicherheitseinstellungen anwenden, indem Sie eine benutzerdefinierte Bindung verwenden, um die Anforderungen des WSE 3.0-Diensts und die Interoperabilitätsanforderungen zwischen einem WSE 3.0-Dienst und einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client zu berücksichtigen. Diese Interoperabilitätsanforderungen umfassen die zuvor genannte Verwendung der WS-Adressierungsspezifikation vom August 2004 und den WSE 3.0-Standardnachrichtenschutz von <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Der Standardnachrichtenschutz für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Diese Thema enthält Details zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Bindung, die mit einem WSE 3.0-Dienst zusammenarbeitet. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält ebenfalls ein Beispiel, das diese Bindung enthält. Weitere Informationen zu diesem Beispiel finden Sie unter [Zusammenwirken mit ASMX-Webdiensten](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>So greifen Sie mit einem WCF-Client auf einen WSE 3.0-Webdienst zu  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
      Für einen WSE 3.0-Webdienst wird ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client erstellt. Da WSE 3.0 das MEX-Protokoll nicht unterstützt, können Sie das Tool nicht nutzen, um die Sicherheitsanforderungen für den Webdienst aufzurufen. Der Anwendungsentwickler muss die Sicherheitseinstellungen für den Client hinzufügen.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client finden Sie unter der [Vorgehensweise: Erstellen eines Clients](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Weitere Informationen zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Client finden Sie unter der [wie: Erstellen Sie einen Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Erstellen Sie eine Klasse, die eine Bindung darstellt, die mit WSE 3.0-Webdiensten kommunizieren kann.  
   

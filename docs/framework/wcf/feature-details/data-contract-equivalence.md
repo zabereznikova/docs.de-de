@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-equivalence"></a>Datenvertragsäquivalenz
 Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet oder ein Dienst erfolgreich Daten an einen Client sendet, muss der gesendete Typ nicht unbedingt an der Empfängerseite vorhanden sein. Die einzige Anforderung ist, dass die Datenverträge beider Typen äquivalent sind. (Manchmal strenger Äquivalenz ist nicht erforderlich, wie in beschrieben [Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -37,7 +37,7 @@ Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet 
 > [!NOTE]
 >  Bei Datenvertragsnamen und Namespaces sowie Datenmembernamen ist Groß-/Kleinschreibung zu beachten.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Datenvertragsnamen und Namespaces sowie Datenmembernamen finden Sie unter [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Weitere Informationen zu den Datenvertragsnamen und Namespaces sowie Datenmembernamen, finden Sie unter [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Sind zwei Typen auf derselben Seite vorhanden (Absender oder Empfänger) und sind die Datenverträge nicht äquivalent (wenn sie beispielsweise unterschiedliche Datenmember besitzen), sollten sie nicht denselben Name und denselben Namespace erhalten. Falls Sie doch denselben Namen bzw. Namespace zuweisen, werden möglicherweise Ausnahmen ausgelöst.  
   

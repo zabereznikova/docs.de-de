@@ -1,12 +1,13 @@
 ---
-title: "Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt"
-ms.custom: 
+title: 'Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 361983c4e2b392cdf8410fdb1193a56f6d26d067
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e89cb9d0c8e5a26703ff5f56a3af10d7fe9923f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt
-In diesem Beispiel wird gezeigt, wie Sie ein Add-in erstellen, zurückgibt eine [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] zu einem Host [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendung.  
+In diesem Beispiel wird gezeigt, wie ein Add-in erstellen, die eine Windows Presentation Foundation (WPF) auf einem Host zurückgibt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendung.  
   
  Gibt das Add-in einen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] also ein [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Benutzersteuerelement. Der Inhalt des Benutzersteuerelements ist eine einzelne Schaltfläche, bei der ein Meldungsfeld angezeigt wird, wenn Benutzer darauf klicken. Die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendung hostet das Add-in und das Benutzersteuerelement (zurückgegeben durch das Add-in) zeigt, wie der Inhalt des Hauptfensters der Anwendung.  
   

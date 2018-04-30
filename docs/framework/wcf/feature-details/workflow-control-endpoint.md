@@ -1,24 +1,26 @@
 ---
 title: Workflowsteuerungsendpunkt
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3cd72919acd8e6392d809f22ddd87042d00008f6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-control-endpoint"></a>Workflowsteuerungsendpunkt
 Der Workflowsteuerungsendpunkt ermöglicht Entwicklern das Aufrufen von Steuerungsvorgängen, um mit <xref:System.ServiceModel.Activities.WorkflowServiceHost> gehostete Workflowinstanzen remote zu steuern. Diese Funktion kann verwendet werden, um Steuerungsvorgänge wie das Anhalten, Fortsetzen und Beenden programmgesteuert auszuführen.  
@@ -57,10 +59,10 @@ Der Workflowsteuerungsendpunkt ermöglicht Entwicklern das Aufrufen von Steuerun
 |TransactedTerminate|Führt den Vorgang „Beenden“ im Rahmen einer Transaktion (per Transaktionsfluss vom Client oder lokal erstellt) aus. Wenn das System den permanenten Zustand der Workflowinstanz beibehält, muss die Workflowinstanz während der Ausführung dieses Vorgangs beibehalten werden.|  
 |TransactedUnsuspend|Führt den Vorgang "Fortsetzen" im Rahmen einer Transaktion (per Transaktionsfluss vom Client oder lokal erstellt) aus. Wenn das System den permanenten Zustand der Workflowinstanz beibehält, muss die Workflowinstanz während der Ausführung dieses Vorgangs beibehalten werden.|  
   
- Mit dem <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>-Vertrag können Sie keine neue Workflowinstanz erstellen, sondern nur vorhandene Workflowinstanzen verwalten. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellen eine neue Workflowinstanz Remote finden Sie unter [Erweiterbarkeit des Workflowdiensthosts](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
+ Mit dem <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>-Vertrag können Sie keine neue Workflowinstanz erstellen, sondern nur vorhandene Workflowinstanzen verwalten. Weitere Informationen zu Remote Erstellen einer neuen Workflowinstanz, finden Sie unter [Erweiterbarkeit des Workflowdiensthosts](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> ist ein Standardendpunkt mit einem festen Vertrag (<xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>). Wenn dieser Endpunkt einer <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Instanz hinzugefügt wird, kann er zum Senden von Befehlsvorgängen an eine beliebige Workflowinstanz verwendet werden, die von der Hostinstanz gehostet wird. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Standardendpunkte, finden Sie unter [Standardendpunkte](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
+ <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> ist ein Standardendpunkt mit einem festen Vertrag (<xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>). Wenn dieser Endpunkt einer <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Instanz hinzugefügt wird, kann er zum Senden von Befehlsvorgängen an eine beliebige Workflowinstanz verwendet werden, die von der Hostinstanz gehostet wird. Weitere Informationen zu Standardendpunkten, finden Sie unter [Standardendpunkte](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
   
 ## <a name="workflowcontrolclient"></a>WorkflowControlClient  
  <xref:System.ServiceModel.Activities.WorkflowControlClient> ist eine Klasse, mit der Sie Steuerungsmeldungen an einen <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> auf einem <xref:System.ServiceModel.Activities.WorkflowServiceHost> senden können. Die Klasse enthält eine Methode für jeden einzelnen Vorgang, der vom <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>-Vertrag unterstützt wird, mit Ausnahme der transaktiven Vorgänge. <xref:System.ServiceModel.Activities.WorkflowControlClient> verwendet die Ambient-Transaktion, um zu ermitteln, ob ein transaktiver Vorgang verwendet werden soll.

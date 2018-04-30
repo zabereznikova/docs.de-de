@@ -1,33 +1,35 @@
 ---
-title: "Interoperabilität mit POX-Anwendungen"
-ms.custom: 
+title: Interoperabilität mit POX-Anwendungen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cb7e209397e593ae1fd81c2bc2552e54a32adf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 42f6bbb1a5605bd0a604f5cfe31ce5ea48d9bb10
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="interoperability-with-pox-applications"></a>Interoperabilität mit POX-Anwendungen
 "Plain Old XML" (POX)-Anwendungen kommunizieren, indem Sie den Austausch von unformatierte HTTP-Nachrichten, die nur XML-Anwendungsdaten enthalten, die nicht in einen SOAP-Umschlag eingeschlossen ist. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kann Dienste und Clients bereitstellen, die POX-Nachrichten verwenden. Beim Dienst kann [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] für die Implementierung von Diensten verwendet werden, die Endpunkte wie Webbrowser und Skriptsprachen, mit denen POX-Nachrichten gesendet und empfangen werden können, für Clients verfügbar machen. Auf dem Client kann das Programmiermodell von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zur Implementierung von Clients, die mit POX-basierten Diensten kommunizieren, herangezogen werden.  
   
 > [!NOTE]
->  Dieses Dokument wurde ursprünglich für [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&#160;3.0 geschrieben.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&amp;#160;3.5 verfügt über intergrierte Unterstützung für die Arbeit mit POX-Anwendungen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]finden Sie unter [WCF Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+>  Dieses Dokument wurde ursprünglich für [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&#160;3.0 geschrieben.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&amp;#160;3.5 verfügt über intergrierte Unterstützung für die Arbeit mit POX-Anwendungen. Weitere Informationen finden Sie unter [WCF Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
   
 ## <a name="pox-programming-with-wcf"></a>POX-Programmierung mit WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Dienste, die für die Kommunikation über HTTP unter Verwendung von POX-Nachrichten mithilfe einer [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienste, die für die Kommunikation über HTTP unter Verwendung von POX-Nachrichten mithilfe einer [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ```xml  
 <customBinding>  
@@ -67,7 +69,7 @@ private static Binding CreatePoxBinding()
   
 -   <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>, die Informationen zur HTTP-Antwort enthält wie den HTTP-Statuscode und die Statusbeschreibung sowie alle HTTP-Antwortheader.  
   
- Das folgende Codebeispiel zeigt, wie Sie eine HTTP GET-Anforderungsnachricht mit der Adresse http://localhost:8100/customers erstellen können:  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine HTTP GET-Anforderungsnachricht zu erstellen, die an adressiert wird http://localhost:8100/customers.  
   
 ```  
 Message request = Message.CreateMessage( MessageVersion.None, String.Empty );  

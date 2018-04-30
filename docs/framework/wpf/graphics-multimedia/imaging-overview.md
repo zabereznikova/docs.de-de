@@ -1,12 +1,13 @@
 ---
-title: "Übersicht über die Bildverarbeitung"
-ms.custom: 
+title: Übersicht über die Bildverarbeitung
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -28,16 +29,17 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c7d0a880dd30fe737a1bd4d1368dde16ed0df1e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8715f04f6cdec84e74d53213c0a5a5ff360c7d28
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="imaging-overview"></a>Übersicht über die Bildverarbeitung
 Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ermöglicht es Entwicklern, Bilder anzuzeigen, zu transformieren und zu formatieren.  
@@ -61,7 +63,7 @@ Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../..
   
 -   Unterstützung für in der Datei enthaltene proprietäre Metadaten.  
   
--   Die verwaltete Komponente nutzt die nicht verwaltete Infrastruktur, um die nahtlose Integration von Bildern mit anderen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Funktionen, z.B. [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], Animation und Grafiken, bereitzustellen. Die verwaltete Komponente profitiert ebenfalls vom Codec-Erweiterbarkeitsmodell der Bildverarbeitung in [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], was eine automatische Erkennung neuer Bildformate in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen ermöglicht.  
+-   Die verwaltete Komponente nutzt die nicht verwaltete Infrastruktur, um die nahtlose Integration von Bildern mit anderen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Funktionen, z.B. [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], Animation und Grafiken, bereitzustellen. Die verwaltete Komponente auch profitiert, von dem Windows Presentation Foundation (WPF) imaging Codec Erweiterungsmodell die automatische Erkennung des neuen Bildformate in ermöglicht [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen.  
   
  Der Großteil der verwalteten [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] befinden sich in der <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> Namespace, obwohl einige wichtige Typen, z. B. <xref:System.Windows.Media.ImageBrush> und <xref:System.Windows.Media.ImageDrawing> befinden sich in der <xref:System.Windows.Media?displayProperty=nameWithType> Namespace und <xref:System.Windows.Controls.Image> befindet sich in der <xref:System.Windows.Controls?displayProperty=nameWithType> Namespace.  
   
@@ -71,7 +73,7 @@ Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../..
 ## <a name="wpf-image-formats"></a>WPF-Bildformate  
  Ein Codec wird zum Decodieren und Codieren eines bestimmten Medienformats verwendet. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] enthält einen Codec für [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)], [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)], [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] und ICON-Bildformate. Anhand jedes einzelnen Codecs können Anwendungen das entsprechende Bildformat decodieren und, mit Ausnahme von ICON, Codieren.  
   
- <xref:System.Windows.Media.Imaging.BitmapSource>eine wichtige Klasse wird in die Decodierung und Codierung von Bildern verwendet werden. Sie ist der grundlegende Baustein der [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]-Pipeline und stellt einen einzelnen konstanten Satz von Pixeln mit einer bestimmten Größe und Auflösung dar. Ein <xref:System.Windows.Media.Imaging.BitmapSource> kann ein einzelner Rahmen eines Bilds mit mehreren Rahmen, oder es kann das Ergebnis einer Transformation, der nachzufolgen eine <xref:System.Windows.Media.Imaging.BitmapSource>. Es ist das übergeordnete Element vieler die primären Klassen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wie z. B. imaging <xref:System.Windows.Media.Imaging.BitmapFrame>.  
+ <xref:System.Windows.Media.Imaging.BitmapSource> eine wichtige Klasse wird in die Decodierung und Codierung von Bildern verwendet werden. Sie ist der grundlegende Baustein der [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]-Pipeline und stellt einen einzelnen konstanten Satz von Pixeln mit einer bestimmten Größe und Auflösung dar. Ein <xref:System.Windows.Media.Imaging.BitmapSource> kann ein einzelner Rahmen eines Bilds mit mehreren Rahmen, oder es kann das Ergebnis einer Transformation, der nachzufolgen eine <xref:System.Windows.Media.Imaging.BitmapSource>. Es ist das übergeordnete Element vieler die primären Klassen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wie z. B. imaging <xref:System.Windows.Media.Imaging.BitmapFrame>.  
   
  Ein <xref:System.Windows.Media.Imaging.BitmapFrame> wird verwendet, um die tatsächlichen Bitmap-Daten von einem Image-Format zu speichern. Viele Bildformate unterstützen nur einen einzelnen <xref:System.Windows.Media.Imaging.BitmapFrame>, obwohl Formate wie z. B. [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] und [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] unterstützen mehrere Frames pro Bild. Rahmen werden von Decodern als Eingabedaten verwendet und zur Erstellung der Bilddateien an Encoder übergeben.  
   
@@ -100,25 +102,25 @@ Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../..
   
 <a name="_displayingimages"></a>   
 ## <a name="displaying-images-in-wpf"></a>Anzeigen von Bildern in WPF  
- Es gibt verschiedene Methoden zum Anzeigen eines Bilds in einer [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Anwendung. Bilder können angezeigt werden, mithilfe einer <xref:System.Windows.Controls.Image> Steuerelement gezeichnet wird, auf einem mit visual ein <xref:System.Windows.Media.ImageBrush>, oder mit gezeichnet ein <xref:System.Windows.Media.ImageDrawing>.  
+ Es gibt mehrere Möglichkeiten, ein Bild in einer Windows Presentation Foundation (WPF)-Anwendung anzuzeigen. Bilder können angezeigt werden, mithilfe einer <xref:System.Windows.Controls.Image> Steuerelement gezeichnet wird, auf einem mit visual ein <xref:System.Windows.Media.ImageBrush>, oder mit gezeichnet ein <xref:System.Windows.Media.ImageDrawing>.  
   
 ### <a name="using-the-image-control"></a>Verwenden des Image-Steuerelements  
- <xref:System.Windows.Controls.Image>ist ein FrameworkElement und die primäre Methode zum Anzeigen von Bildern in Anwendungen. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> kann in zwei Arten; Attributsyntax oder Eigenschaftensyntax verwendet werden. Im folgenden Beispiel wird veranschaulicht, wie ein Bild auf eine Breite von 200 Pixeln mit Attributsyntax und Eigenschaftensyntax gerendert wird. Weitere Informationen über Attributsyntax und Eigenschaftensyntax finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ <xref:System.Windows.Controls.Image> ist ein FrameworkElement und die primäre Methode zum Anzeigen von Bildern in Anwendungen. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> kann in zwei Arten; Attributsyntax oder Eigenschaftensyntax verwendet werden. Im folgenden Beispiel wird veranschaulicht, wie ein Bild auf eine Breite von 200 Pixeln mit Attributsyntax und Eigenschaftensyntax gerendert wird. Weitere Informationen über Attributsyntax und Eigenschaftensyntax finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
- In vielen der Beispiele verwenden eine <xref:System.Windows.Media.Imaging.BitmapImage> Objekt, um eine Bilddatei verweisen. <xref:System.Windows.Media.Imaging.BitmapImage>ist ein spezieller <xref:System.Windows.Media.Imaging.BitmapSource> , der für optimiert [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] laden und ist eine einfache Möglichkeit zum Anzeigen von Bildern als die <xref:System.Windows.Controls.Image.Source%2A> von einer <xref:System.Windows.Controls.Image> Steuerelement.  
+ In vielen der Beispiele verwenden eine <xref:System.Windows.Media.Imaging.BitmapImage> Objekt, um eine Bilddatei verweisen. <xref:System.Windows.Media.Imaging.BitmapImage> ist ein spezieller <xref:System.Windows.Media.Imaging.BitmapSource> , der für optimiert [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] laden und ist eine einfache Möglichkeit zum Anzeigen von Bildern als die <xref:System.Windows.Controls.Image.Source%2A> von einer <xref:System.Windows.Controls.Image> Steuerelement.  
   
  Im folgenden Beispiel wird veranschaulicht, wie ein Bild mithilfe von Code auf eine Breite von 200 Pixel gerendert wird.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage>implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Eigenschaftenänderungen können nur während der Objektinitialisierung erfolgen. Rufen Sie <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> zu signalisieren, dass die Initialisierung wurde gestartet und <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> um zu signalisieren, dass die Initialisierung abgeschlossen hat. Nach der Initialisierung werden Eigenschaftenänderungen Eigenschaften ignoriert.  
+>  <xref:System.Windows.Media.Imaging.BitmapImage> implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Eigenschaftenänderungen können nur während der Objektinitialisierung erfolgen. Rufen Sie <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> zu signalisieren, dass die Initialisierung wurde gestartet und <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> um zu signalisieren, dass die Initialisierung abgeschlossen hat. Nach der Initialisierung werden Eigenschaftenänderungen Eigenschaften ignoriert.  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>Drehen, Konvertieren und Zuschneiden von Bildern  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ermöglicht es Benutzern, Bilder zu transformieren, indem Sie mit den Eigenschaften des <xref:System.Windows.Media.Imaging.BitmapImage> oder indem Sie zusätzliche <xref:System.Windows.Media.Imaging.BitmapSource> Objekte wie z. B. <xref:System.Windows.Media.Imaging.CroppedBitmap> oder <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Diese Bildtransformationen können Bilder skalieren oder drehen, das Pixelformat eines Bilds ändern oder ein Bild zuschneiden.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ermöglicht es Benutzern, Bilder zu transformieren, indem Sie mit den Eigenschaften des <xref:System.Windows.Media.Imaging.BitmapImage> oder indem Sie zusätzliche <xref:System.Windows.Media.Imaging.BitmapSource> Objekte wie z. B. <xref:System.Windows.Media.Imaging.CroppedBitmap> oder <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Diese Bildtransformationen können Bilder skalieren oder drehen, das Pixelformat eines Bilds ändern oder ein Bild zuschneiden.  
   
  Drehen von Bildern erfolgen über die <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> Eigenschaft <xref:System.Windows.Media.Imaging.BitmapImage>. Drehungen können nur in 90-Grad-Schritten erfolgen. Im folgenden Beispiel wird ein Bild um 90 Grad gedreht.  
   
@@ -177,7 +179,7 @@ Bildpinsel können Formen, Steuerelemente, Text usw. füllen.
 ## <a name="image-metadata"></a>Bildmetadaten  
  Einige Bilddateien enthalten Metadaten, die den Inhalt oder die Eigenschaften der Datei beschreiben. Die meisten Digitalkameras erstellen z.B. Bilder, die Metadaten zum Fabrikat und Modell der Kamera enthalten, mit der das Bild aufgenommen wurde. Jedes Bildformat behandelt Metadaten unterschiedlich, aber [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] bietet eine einheitliche Möglichkeit zum Speichern und Abrufen von Metadaten für jedes unterstützte Bildformat.  
   
- Zugriff auf Metadaten erfolgt über die <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Eigenschaft ein <xref:System.Windows.Media.Imaging.BitmapSource> Objekt. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Gibt eine <xref:System.Windows.Media.Imaging.BitmapMetadata> -Objekt, das alle im Bild enthaltene Metadaten enthält. Diese Daten können in einem Metadatenschema oder einer Kombination aus unterschiedlichen Schemas vorliegen. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] unterstützt die folgenden Schemas für Bildmetadaten: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tEXt (PNG-Textdaten), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] und [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Zugriff auf Metadaten erfolgt über die <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Eigenschaft ein <xref:System.Windows.Media.Imaging.BitmapSource> Objekt. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Gibt eine <xref:System.Windows.Media.Imaging.BitmapMetadata> -Objekt, das alle im Bild enthaltene Metadaten enthält. Diese Daten können in einem Metadatenschema oder einer Kombination aus unterschiedlichen Schemas vorliegen. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] unterstützt die folgenden Schemas für Bildmetadaten: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tEXt (PNG-Textdaten), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] und [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
   
  Um das Lesen von Metadaten zu vereinfachen <xref:System.Windows.Media.Imaging.BitmapMetadata> bietet mehrere benannte Eigenschaften, die einfach wie möglich ist <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, und <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Viele dieser benannten Eigenschaften können auch verwendet werden, um Metadaten zu schreiben. Zusätzliche Unterstützung für das Lesen von Metadaten wird vom Metadaten-Abfragereader bereitgestellt. Die <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Methode wird verwendet, um eine Metadatenabfrage-Readers abzurufen, indem eine Zeichenfolgenabfrage wie z. B. *"/ app1/Exif /"*. Im folgenden Beispiel <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> dient zum Abrufen des Texts gespeichert, der *"/ Text/Beschreibung"* Speicherort.  
   
@@ -185,7 +187,7 @@ Bildpinsel können Formen, Steuerelemente, Text usw. füllen.
  [!code-csharp[BitmapMetadata#GetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
  [!code-vb[BitmapMetadata#GetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
   
- Zum Schreiben von Metadaten wird ein Metadaten-Abfragewriter verwendet. <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>Ruft dem abfrageautor ab und legt den gewünschten Wert fest. Im folgenden Beispiel <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> wird verwendet, um den Text in gespeicherten Schreiben der *"/ Text/Beschreibung"* Speicherort.  
+ Zum Schreiben von Metadaten wird ein Metadaten-Abfragewriter verwendet. <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> Ruft dem abfrageautor ab und legt den gewünschten Wert fest. Im folgenden Beispiel <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> wird verwendet, um den Text in gespeicherten Schreiben der *"/ Text/Beschreibung"* Speicherort.  
   
  [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
  [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]

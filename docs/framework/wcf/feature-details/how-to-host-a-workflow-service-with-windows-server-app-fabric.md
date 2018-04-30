@@ -1,27 +1,29 @@
 ---
 title: 'Vorgehensweise: Hosten eines Workflowdiensts mit Windows Server AppFabric'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc7af813f7fff422a2513c58c9e3cba6376de060
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ef60a291af39a39d3427d74b8a6ea7d00382c8d6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Vorgehensweise: Hosten eines Workflowdiensts mit Windows Server AppFabric
-Das Hosten von Workflowdiensten in AppFabric ähnelt dem Hosten unter IIS/WAS. Der einzige Unterschied besteht in den Tools von AppFabric zum Bereitstellen, Überwachen und Verwalten von Workflowdiensten. In diesem Thema verwendet den Workflowdienst erstellt der [Erstellen eines Workflowdiensts langer](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Sie werden Schritt für Schritt durch das Erstellen eines Workflowdiensts geführt. In diesem Thema wird erläutert, wie der Workflowdienst mit AppFabric gehostet wird. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric finden Sie unter [Dokumentation zu Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Vergewissern Sie sich, dass Windows Server AppFabric installiert ist, bevor Sie die nachfolgenden Schritte ausführen.  Um diese öffnen Sie Internet Information Services (inetmgr.exe) zu erreichen, klicken Sie auf den Servernamen in der **Verbindungen** anzeigen, klicken Sie auf Standorte, und klicken Sie auf **Default Web Site**. In der rechten Seite des Bildschirms sehen Sie einen Abschnitt aufgerufen **AppFabric**. Wenn dieser Bereich nicht (oben rechts) angezeigt wird, ist AppFabric nicht installiert. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Installieren von Windows Server AppFabric finden Sie unter [Installieren von Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193136).  
+Das Hosten von Workflowdiensten in AppFabric ähnelt dem Hosten unter IIS/WAS. Der einzige Unterschied besteht in den Tools von AppFabric zum Bereitstellen, Überwachen und Verwalten von Workflowdiensten. In diesem Thema verwendet den Workflowdienst erstellt der [Erstellen eines Workflowdiensts langer](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Sie werden Schritt für Schritt durch das Erstellen eines Workflowdiensts geführt. In diesem Thema wird erläutert, wie der Workflowdienst mit AppFabric gehostet wird. Weitere Informationen zu Windows Server AppFabric finden Sie unter [Dokumentation zu Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Vergewissern Sie sich, dass Windows Server AppFabric installiert ist, bevor Sie die nachfolgenden Schritte ausführen.  Um diese öffnen Sie Internet Information Services (inetmgr.exe) zu erreichen, klicken Sie auf den Servernamen in der **Verbindungen** anzeigen, klicken Sie auf Standorte, und klicken Sie auf **Default Web Site**. In der rechten Seite des Bildschirms sehen Sie einen Abschnitt aufgerufen **AppFabric**. Wenn dieser Bereich nicht (oben rechts) angezeigt wird, ist AppFabric nicht installiert. Weitere Informationen zum Installieren von Windows Server AppFabric finden Sie unter [Installieren von Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193136).  
   
 ### <a name="creating-a-simple-workflow-service"></a>Erstellen eines einfachen Workflowdiensts  
   
@@ -51,37 +53,37 @@ Das Hosten von Workflowdiensten in AppFabric ähnelt dem Hosten unter IIS/WAS. D
   
      ![App Fabric Konfigurationsüberwachung Registerkarte](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration-Überwachung")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Konfigurieren von Workflow Service-Überwachung in AppFabric finden Sie unter [Konfigurieren der Überwachung mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=193153).  
+     Weitere Informationen zum Konfigurieren der Workflowdienst in AppFabric Überwachung finden Sie unter [Konfigurieren der Überwachung mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=193153).  
   
 6.  Wählen Sie die **Workflowpersistenz** Registerkarte. Dort können Sie Ihre Anwendung für die Verwendung des Standardpersistenzanbieters von AppFabric konfigurieren, wie in der folgenden Bildschirmabbildung veranschaulicht.  
   
      ![AppFabric-Konfiguration &#45; Persistenz](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration-Persistenz")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Konfigurieren von Workflowpersistenz in Windows Server AppFabric finden Sie unter [Workflowpersistenz in AppFabric konfigurieren](http://go.microsoft.com/fwlink/?LinkId=193148).  
+     Weitere Informationen zum Konfigurieren von Workflowpersistenz in Windows Server AppFabric finden Sie unter [Workflowpersistenz in AppFabric konfigurieren](http://go.microsoft.com/fwlink/?LinkId=193148).  
   
 7.  Wählen Sie die **Workflowhostverwaltung** Registerkarte. Dort können Sie angeben, wann Workflowdienstinstanzen im Leerlauf entladen und beibehalten werden sollen, wie in der folgenden Bildschirmabbildung veranschaulicht.  
   
      ![AppFabric-Konfiguration – Workflowhostverwaltung](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration-Verwaltung")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Workflow Host-Management-Konfiguration finden Sie unter [Konfiguration – Workflowhostverwaltung in AppFabric](http://go.microsoft.com/fwlink/?LinkId=193151).  
+     Weitere Informationen zu Workflow Host-Management-Konfiguration finden Sie unter [Konfiguration – Workflowhostverwaltung in AppFabric](http://go.microsoft.com/fwlink/?LinkId=193151).  
   
 8.  Wählen Sie die **Autostart-** Registerkarte. Dort können Sie Autostarteinstellungen für die Workflowdienste in der Anwendung angeben, wie in der folgenden Bildschirmabbildung veranschaulicht.  
   
-     ![App Fabric Auto &#45; Konfiguration Start](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![App-Fabric automatisch&#45;-Konfiguration gestartet](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Konfigurieren des automatischen Starts finden Sie unter [konfigurieren Autostart-mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=193150).  
+     Weitere Informationen zum Konfigurieren des automatischen Starts finden Sie unter [konfigurieren Autostart-mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=193150).  
   
 9. Wählen Sie die **Einschränkung** Registerkarte. Dort können Sie Einschränkungseinstellungen für den Workflowdienst konfigurieren, wie in der folgenden Bildschirmabbildung veranschaulicht.  
   
      ![AppFabric-Konfiguration – Drosselung](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]konfigurieren die Einschränkung finden Sie unter [Konfigurieren von Einschränkung mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=193149).  
+     Weitere Informationen zum Konfigurieren der Drosselung finden Sie unter [Konfigurieren von Einschränkung mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=193149).  
   
 10. Wählen Sie die **Sicherheit** Registerkarte. Dort können Sie Sicherheitseinstellungen für die Anwendung konfigurieren, wie in der folgenden Bildschirmabbildung veranschaulicht.  
   
      ![AppFabric-Sicherheitskonfiguration](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration-Sicherheit")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Konfigurieren der Sicherheit mit Windows Server AppFabric finden Sie unter [Konfigurieren der Sicherheit mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=193152).  
+     Weitere Informationen zum Konfigurieren der Sicherheit mit Windows Server AppFabric finden Sie unter [Konfigurieren der Sicherheit mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=193152).  
   
 ### <a name="using-windows-server-app-fabric"></a>Verwenden von Windows Server AppFabric  
   

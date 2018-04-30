@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 17528db182676ae69694c4e416ee10bff1ae6ef2
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 32fb7be6f8c465994b40814a94efd95d42a481da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="c-expressions"></a>C#-Ausdrücke
 Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C#-Ausdrücke werden in Windows Workflow Foundation (WF) unterstützt. Neue in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] erstellte C#-Workflowprojekte mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] als Zielframework verwenden C#-Ausdrücke, und Visual Basic-Workflowprojeke verwenden Visual Basic-Ausdrücke. Vorhandene [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Workflowprojekte, die Visual Basic-Ausdrücke verwenden, können unabhängig von der Projektsprache zu [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] migieren und werden unterstützt. Dieses Thema bietet eine Übersicht über C#-Ausdrücke in [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
@@ -45,7 +45,7 @@ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C#-Ausdrück
  ![Automatisch erstellte Sequenzaktivität](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
   
 > [!NOTE]
->  C#-Ausdrücke werden nur in Visual Studio unterstützt und werden im neu gehosteten Workflow-Designer nicht unterstützt. [!INCLUDE[crabout](../../../includes/crabout-md.md)] neue WF45-Funktionen im neu gehosteten Designer unterstützt, finden Sie [Unterstützung für neue Workflow Foundation 4.5-Funktionen im Workflow-Designer neu gehostet](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).  
+>  C#-Ausdrücke werden nur in Visual Studio unterstützt und werden im neu gehosteten Workflow-Designer nicht unterstützt. Weitere Informationen zu neuen WF45-Funktionen im neu gehosteten Designer unterstützt, finden Sie unter [Unterstützung für neue Workflow Foundation 4.5-Funktionen im Workflow-Designer neu gehostet](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).  
   
 ####  <a name="BackwardCompat"></a> Abwärtskompatibilität Kompatibilität  
  Visual Basic-Ausdrücke in vorhandenen [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] C#-Workflowprojekten, die zu [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] migriert wurden, werden unterstützt. Wenn das Visual Basic-Ausdrücke im Workflow-Designer angezeigt werden, wird der Text des vorhandenen Visual Basic-Ausdruck ersetzt, mit **Wert wurde in XAML festgelegt**, es sei denn, die Visual Basic-Ausdruck gültiger C#-Syntax ist. Wenn der Visual Basic-Ausdruck gültiger C#-Syntax entspricht, wird der Ausdruck angezeigt. Um die Visual Basic-Ausdrücke auf C# zu aktualisieren, können Sie sie im Workflow-Designer bearbeiten und den entsprechenden C#-Ausdruck angeben. Es ist nicht erforderlich, die Visual Basic-Ausdrücke auf Visual C# zu aktualisieren. Nachdem die Ausdrücke jedoch im Workflow-Designer aktualisiert wurden, werden sie in C# konvertiert und möglicherweise nicht in Visual Basic wiederhergestellt.  
@@ -195,7 +195,7 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
   
 -   `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` wird anstelle von `CompiledExpressionInvoker.SetCompiledExpressionRoot` aufgerufen.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Arbeiten mit Ausdrücken im Code finden Sie unter [Entwickeln von Workflows, Aktivitäten und Ausdrücken mithilfe von imperativem Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Weitere Informationen zum Arbeiten mit Ausdrücken im Code finden Sie unter [Entwickeln von Workflows, Aktivitäten und Ausdrücken mithilfe von imperativem Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
 ###  <a name="XamlWorkflows"></a> Verwenden von C#-Ausdrücken in XAML-workflows  
  C#-Ausdrücke werden in XAML-Workflows unterstützt. Kompilierte XAML-Workflows werden in einen Typ kompiliert und Loose XAML-Workflows werden von der Laufzeit geladen und beim Ausführen des Workflows in eine Aktivitätsstruktur kompiliert.  
@@ -219,7 +219,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Arbeiten mit XAML-Workflows finden Sie unter [Serialisieren von Workflows und Aktivitäten in und aus XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+ Weitere Informationen zum Arbeiten mit XAML-Workflows finden Sie unter [Serialisieren von Workflows und Aktivitäten in und aus XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
   
 ###  <a name="WFServices"></a> Verwenden von C#-Ausdrücken in XAMLX-Workflowdiensten  
  C#-Ausdrücke werden in XAMLX-Workflowdiensten unterstützt. Wenn ein Workflowdienst in IIS oder WAS gehostet ist, sind keine zusätzlichen Schritte erforderlich. Ist der XAML-Workflowdienst jedoch selbst gehostet, müssen die C#-Ausdrücke kompiliert werden. Um die C#-Ausdrücke in einem selbst gehosteten XAMLX-Workflowdienst zu kompilieren, laden Sie zuerst die XAMLX-Datei in eine `WorkflowService`, und übergeben Sie dann die `Body` von der `WorkflowService` auf die `CompileExpressions` in der vorherigen beschriebene Methode [Verwenden von C#- Ausdrücken in Codeworkflows](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows) Abschnitt. Im folgenden Beispiel wird ein XAMLX-Workflowdienst geladen, und die C#-Ausdrücke werden kompiliert. Anschließend wird der Workflowdienst geöffnet und wartet auf Anforderungen.  

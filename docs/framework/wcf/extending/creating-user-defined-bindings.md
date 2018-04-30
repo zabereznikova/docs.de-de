@@ -1,33 +1,33 @@
 ---
 title: Erstellen benutzerdefinierter Bindungen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Erstellen benutzerdefinierter Bindungen
 Es gibt mehrere Möglichkeiten, Bindungen zu erstellen, die nicht vom System bereitgestellt werden:  
   
--   Erstellen Sie eine benutzerdefinierte Bindung auf Grundlage der <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, die einen Container darstellt, den Sie mit Bindungselementen füllen. Die benutzerdefinierte Bindung wird dann einem Dienstendpunkt hinzugefügt. Sie können die benutzerdefinierte Bindung entweder programmgesteuert oder in der Konfigurationsdatei einer Anwendung erstellen. Um das Bindungselement aus einer Anwendungskonfigurationsdatei verwenden zu können, muss es <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> erweitern. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Benutzerdefinierte Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md) und <xref:System.ServiceModel.Channels.CustomBinding>.  
+-   Erstellen Sie eine benutzerdefinierte Bindung auf Grundlage der <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, die einen Container darstellt, den Sie mit Bindungselementen füllen. Die benutzerdefinierte Bindung wird dann einem Dienstendpunkt hinzugefügt. Sie können die benutzerdefinierte Bindung entweder programmgesteuert oder in der Konfigurationsdatei einer Anwendung erstellen. Um das Bindungselement aus einer Anwendungskonfigurationsdatei verwenden zu können, muss es <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> erweitern. Weitere Informationen über benutzerdefinierte Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md) und <xref:System.ServiceModel.Channels.CustomBinding>.  
   
 -   Sie können eine Klasse erstellen, die von einer Standardbindung abgeleitet ist. Sie können beispielsweise eine Klasse von <xref:System.ServiceModel.WSHttpBinding> ableiten und die <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A>-Methode überschreiben, um Bindungselemente abzurufen und ein benutzerdefiniertes Bindungselement einzufügen oder einen bestimmten Wert für die Sicherheit festzulegen.  
   

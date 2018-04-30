@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Sammlungstypen in Datenverträgen
 Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]können solche Listen mithilfe von Arrays oder einer Vielzahl anderer Typen (generische Liste, generische <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>oder <xref:System.Collections.ArrayList>) dargestellt werden. Eine Sammlung kann z. B. eine Liste von Adressen für einen bestimmten Kunden enthalten. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Listensammlungen*bezeichnet.  
@@ -42,7 +42,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
   
  Die in Sammlungen enthaltenen Typen müssen Datenvertragstypen oder anderweitig serialisierbar sein. Weitere Informationen finden Sie unter [Typen unterstützt, durch den Datenvertragsserialisierer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu gültigen und ungültigen Sammlungen sowie Informationen zum Serialisieren von Sammlungen finden Sie in den Informationen zum Serialisieren von Sammlungen im Abschnitt "Erweiterte Sammlungsregeln" dieses Themas.  
+ Weitere Informationen zu neuerungen und was kein gültige Sammlung betrachtet wird, sowie wie Sammlungen serialisiert werden finden Sie die Informationen zur Serialisierung Sammlungen im Abschnitt "Erweiterte Sammlungsregeln" dieses Themas.  
   
 ## <a name="interchangeable-collections"></a>Austauschbare Sammlungen  
  Bei allen Listensammlungen des gleichen Typs wird davon ausgegangen, dass sie den gleichen Datenvertrag haben (es sei denn, sie wurden mit dem <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut individuell angepasst, wie weiter unten in diesem Thema beschrieben). Daher stimmen beispielsweise die folgenden Datenverträge überein:  
@@ -91,7 +91,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
 ## <a name="customizing-collection-types"></a>Anpassen von Sammlungstypen  
  Sie können Sammlungstypen anpassen, indem Sie das <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut verwenden, das auf verschiedene Weise genutzt werden kann.  
   
- Beachten Sie, dass das Anpassen von Sammlungstypen die Austauschbarkeit von Sammlungen beeinträchtigt. Daher wird empfohlen, das Anwenden dieses Attributs wenn möglich zu vermeiden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu diesem Problem finden Sie weiter unten in diesem Thema im Abschnitt "Erweiterte Sammlungsregeln".  
+ Beachten Sie, dass das Anpassen von Sammlungstypen die Austauschbarkeit von Sammlungen beeinträchtigt. Daher wird empfohlen, das Anwenden dieses Attributs wenn möglich zu vermeiden. Weitere Informationen zu diesem Problem finden Sie im Abschnitt "Erweiterte Sammlungsregeln" weiter unten in diesem Thema.  
   
 ### <a name="collection-data-contract-naming"></a>Benennen von Sammlungsdatenverträgen  
  Die Regeln für das Benennen von Sammlungstypen ähneln den Regeln für das Benennen von Datenvertragstypen, wie unter [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)beschrieben. Es bestehen jedoch einige wichtige Unterschiede:  
@@ -203,7 +203,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu Wörterbuchsammlungen finden Sie weiter unten in diesem Thema im Abschnitt "Erweiterte Sammlungsregeln".  
+ Weitere Informationen zu wörterbuchsammlungen finden Sie im Abschnitt "Erweiterte Sammlungsregeln" weiter unten in diesem Thema.  
   
 ## <a name="collections-and-known-types"></a>Sammlungen und bekannte Typen  
  Sie müssen Sammlungstypen nicht bekannten Typen hinzufügen, wenn sie polymorph anstelle von anderen Sammlungen oder Sammlungsschnittstellen verwendet werden. Wenn Sie beispielsweise einen Datenmember des Typs <xref:System.Collections.IEnumerable> deklarieren und dazu verwenden, eine Instanz von <xref:System.Collections.ArrayList>zu senden, müssen Sie <xref:System.Collections.ArrayList> nicht bekannten Typen hinzufügen.  
@@ -318,7 +318,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Das Kombinieren von Sammlungstypen (das Erstellen von Sammlungen von Sammlungen) ist zulässig. Verzweigte Arrays werden als Sammlungen von Sammlungen behandelt. Arrays mit mehreren Dimensionen werden nicht unterstützt.  
   
--   Byte- und <xref:System.Xml.XmlNode> -Arrays sind besondere Arraytypen, die als Primitive und nicht als Sammlungen behandelt werden. Die Serialisierung eines Bytearrays führt zu einem einzelnen XML-Element, das statt eines separaten Elements für jedes Byte einen Abschnitt aus Base64-codierten Daten enthält. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Behandlung eines Arrays von <xref:System.Xml.XmlNode> finden Sie unter [XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Natürlich können diese besonderen Typen selbst Teil von Sammlungen sein: Ein Bytearray führt zu mehreren XML-Elementen, die jeweils einen Abschnitt aus Base64-codierten Daten enthalten.  
+-   Byte- und <xref:System.Xml.XmlNode> -Arrays sind besondere Arraytypen, die als Primitive und nicht als Sammlungen behandelt werden. Die Serialisierung eines Bytearrays führt zu einem einzelnen XML-Element, das statt eines separaten Elements für jedes Byte einen Abschnitt aus Base64-codierten Daten enthält. Weitere Informationen dazu, wie ein Array von <xref:System.Xml.XmlNode> wird behandelt, finden Sie unter [XML- und ADO.NET-Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Natürlich können diese besonderen Typen selbst Teil von Sammlungen sein: Ein Bytearray führt zu mehreren XML-Elementen, die jeweils einen Abschnitt aus Base64-codierten Daten enthalten.  
   
 -   Wenn das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf einen Sammlungstyp angewendet wird, wird der Typ als regulärer Datenvertragstyp und nicht als Sammlung behandelt.  
   
@@ -361,7 +361,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Der Standardname für Datenverträge für Sammlungstypen ist die Zeichenfolge "ArrayOf" in Kombination mit dem Datenvertragsnamen des in der Sammlung enthaltenen Typs, sofern er nicht von "Name" überschrieben wurde. Der Datenvertragsname einer generischen Liste von ganzen Zahlen lautet z. B. "ArrayOfint". Beachten Sie, dass der Datenvertragsname von `Object` "anyType" lautet, sodass der Datenvertragsname für nicht generische Listen wie <xref:System.Collections.ArrayList> "ArrayOfanyType" lautet.  
   
- Der Standardname für Datenverträge für Wörterbuchsammlungen ist die Zeichenfolge "ArrayOfKeyValueOf" in Kombination mit dem Datenvertragsnamen für den Schlüsseltyp, gefolgt vom Datenvertragsnamen des Werttyps, sofern er nicht von `Name` überschrieben wurde. Der Datenvertragsname für ein generisches Wörterbuch für Zeichenfolge und ganze Zahl lautet z. B. "ArrayOfKeyValueOfstringint". Wenn darüber hinaus der Schlüssel- oder der Werttyp kein primitiver Typ ist, wird an den Namen ein Namespacehash der Datenvertragsnamespaces für den Schlüssel- und Werttyp angefügt. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu Namespacehashes finden Sie unter [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Der Standardname für Datenverträge für Wörterbuchsammlungen ist die Zeichenfolge "ArrayOfKeyValueOf" in Kombination mit dem Datenvertragsnamen für den Schlüsseltyp, gefolgt vom Datenvertragsnamen des Werttyps, sofern er nicht von `Name` überschrieben wurde. Der Datenvertragsname für ein generisches Wörterbuch für Zeichenfolge und ganze Zahl lautet z. B. "ArrayOfKeyValueOfstringint". Wenn darüber hinaus der Schlüssel- oder der Werttyp kein primitiver Typ ist, wird an den Namen ein Namespacehash der Datenvertragsnamespaces für den Schlüssel- und Werttyp angefügt. Weitere Informationen zu namespacehashes finden Sie unter [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Jeder Wörterbuchsammlungsdatenvertrag weist einen Begleitdatenvertrag auf, der einen Eintrag im Wörterbuch darstellt. Der Name ist der gleiche wie der des Wörterbuchdatenvertrags, bis auf das Präfix "ArrayOf", und der Namespace ist ebenfalls der gleiche wie für den Wörterbuchdatenvertrag. Beispielsweise kann für den "ArrayOfKeyValueOfstringint"-Wörterbuchdatenvertrag der "KeyValueofstringint"-Datenvertrag einen Eintrag im Wörterbuch darstellen. Sie können den Namen dieses Datenvertrags individuell anpassen, indem Sie die `ItemName` -Eigenschaft verwenden, wie im nächsten Abschnitt beschrieben.  
   

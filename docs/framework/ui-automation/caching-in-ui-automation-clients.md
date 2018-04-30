@@ -19,11 +19,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2db81007b745a1c3ee8434b400ab92a01aeeb6e2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bedeutet Zwischenspeichern, dass Daten vorab abgerufen werden. Auf die Daten kann dann ohne weitere prozessübergreifende Kommunikation zugegriffen werden. Zwischenspeichern wird normalerweise von Benutzeroberflächenautomatisierungs-Client-Anwendungen verwendet, um Eigenschaften und Steuerelementmuster in großen Mengen abzurufen. Informationen werden dann nach Bedarf aus dem Cache abgerufen. Der Cache wird von der Anwendung regelmäßig aktualisiert, üblicherweise als Reaktion auf Ereignisse, die signalisieren, dass in der [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] irgendeine Änderung vorgenommen wurde.  
   
- Die Vorteile des Zwischenspeicherns werden am deutlichsten für [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] -Steuerelemente und benutzerdefinierte Steuerelemente, die serverseitige Benutzeroberflächenautomatisierungs-Anbieter haben. Die Vorteile sind geringer, wenn auf clientseitige Anbieter zugegriffen wird, beispielsweise die Standardanbieter für [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Steuerelemente.  
+ Die Vorteile des Zwischenspeicherns werden am deutlichsten für Windows Presentation Foundation (WPF)-Steuerelemente und benutzerdefinierte Steuerelemente, die serverseitige Benutzeroberflächenautomatisierungs-Anbieter verfügen. Die Vorteile sind geringer, wenn auf clientseitige Anbieter zugegriffen wird, beispielsweise die Standardanbieter für [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Steuerelemente.  
   
  Zwischenspeichern findet statt, wenn die Anwendung ein <xref:System.Windows.Automation.CacheRequest> aktiviert und anschließend eine beliebige Methode oder Eigenschaft verwendet, die ein <xref:System.Windows.Automation.AutomationElement>zurückgibt, zum Beispiel <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>oder <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Die Methoden der <xref:System.Windows.Automation.TreeWalker> Klasse stellen eine Ausnahme; Zwischenspeichern nur statt, wenn eine <xref:System.Windows.Automation.CacheRequest> als Parameter angegeben wird (z. B. <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   

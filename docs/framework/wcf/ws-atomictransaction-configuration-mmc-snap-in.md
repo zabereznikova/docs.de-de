@@ -1,24 +1,26 @@
 ---
 title: WS-AtomicTransaction-Konfiguration-MMC-Snap-In
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e8b127e0d3c241a1e37ac2161d9fadcea990425
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction-Konfiguration-MMC-Snap-In
 Das MMC-Snap-In für die WS-AtomicTransaction-Konfiguration wird zur Konfiguration eines Teils der WS-AtomicTransaction-Einstellungen auf lokalen und Remotecomputern eingesetzt.  
@@ -42,9 +44,9 @@ regasm.exe /codebase WsatUI.dll
   
  Sie können dieses Tool verwenden, um die grundlegenden WS-AtomicTransaction-Einstellungen zu ändern. Sie können beispielsweise die WS-AtomicTransaction-Protokollunterstützung aktivieren und deaktivieren, die HTTP-Anschlüsse für WS-AT konfigurieren, ein SSL-Zertifikat an den HTTP-Anschluss binden, Zertifikate durch Angabe von Zertifikatsbetreffnamen konfigurieren, den Ablaufverfolgungsmodus aktivieren und Standard- und Maximaltimeouts festlegen.  
   
- Wenn Sie die WS-AtomicTransaction-Unterstützung nur auf dem lokalen Computer konfigurieren müssen, können Sie die Befehlszeilenversion des Tools verwenden. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Das Tool über die Befehlszeile finden Sie unter der [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) Thema.  
+ Wenn Sie die WS-AtomicTransaction-Unterstützung nur auf dem lokalen Computer konfigurieren müssen, können Sie die Befehlszeilenversion des Tools verwenden. Weitere Informationen über das Befehlszeilentool finden Sie unter der [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) Thema.  
   
- Beachten Sie, dass das MMC-Snap-In und das Befehlszeilentool nicht die Konfiguration aller WS-AT-Einstellungen unterstützen. Diese Einstellungen können nur durch die Änderung der Registrierung bearbeitet werden. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Diese registrierungseinstellungen finden Sie unter [WS-AtomicTransaction-Unterstützung konfigurieren](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ Beachten Sie, dass das MMC-Snap-In und das Befehlszeilentool nicht die Konfiguration aller WS-AT-Einstellungen unterstützen. Diese Einstellungen können nur durch die Änderung der Registrierung bearbeitet werden. Weitere Informationen über diese registrierungseinstellungen finden Sie unter [WS-AtomicTransaction-Unterstützung konfigurieren](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### <a name="user-interface-description"></a>Benutzeroberflächenbeschreibung  
  **WS-AtomicTransaction-Netzwerkunterstützung aktivieren**:  
@@ -95,7 +97,7 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  Wenn ein anderer Benutzer der Ablaufverfolgung den WS-AT-Ablaufverfolgungsanbieter verwendet, können Sie keine neue Protokollsitzung für Ablaufverfolgungsereignisse erstellen. Jeder Versuch, die Protokollierung zu diesem Zeitpunkt zu konfigurieren, führt zur Fehlermeldung "Fehler beim Aktivieren des Anbieters. Fehlercode: 1".  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Ablaufverfolgung und Protokollierung, finden Sie unter [Verwaltung und Diagnose](../../../docs/framework/wcf/diagnostics/index.md).  
+ Weitere Informationen zur Ablaufverfolgung und Protokollierung finden Sie unter [Verwaltung und Diagnose](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Unterstützung von WS-Atomic-Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  

@@ -1,12 +1,13 @@
 ---
 title: Erstellen von Formaten und Vorlagen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aafd709bfc1da63d11a56ada59aedf0ada12f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="styling-and-templating"></a>Erstellen von Formaten und Vorlagen
 Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stehen eine Reihe von Funktionen (Stile, Vorlagen, Trigger und Storyboards) zur Verfügung, mit denen Entwickler und Designer visuell ansprechende Effekte erzeugen und ein einheitliches Erscheinungsbild ihres Produkts erstellen können. Obwohl Entwickler und/oder Designer die Darstellung in den einzelnen Anwendungen umfassend anpassen können, ist ein starkes Stil- und Vorlagenmodell erforderlich, um die Wartung und Freigabe der Darstellung innerhalb von Anwendungen und anwendungsübergreifend zu ermöglichen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt dieses Modell bereit.  
@@ -181,15 +183,15 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
  ![Screenshot des Stilbeispiels](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger, DataTrigger und MultiDataTrigger  
- Zusätzlich zu <xref:System.Windows.Trigger> und <xref:System.Windows.EventTrigger>, es gibt andere Arten von Triggern. <xref:System.Windows.MultiTrigger>können Sie Eigenschaftswerte anhand mehrerer Bedingungen festlegen. Verwenden Sie <xref:System.Windows.DataTrigger> und <xref:System.Windows.MultiDataTrigger> Wenn die Eigenschaft der Bedingung datengebunden ist.  
+ Zusätzlich zu <xref:System.Windows.Trigger> und <xref:System.Windows.EventTrigger>, es gibt andere Arten von Triggern. <xref:System.Windows.MultiTrigger> können Sie Eigenschaftswerte anhand mehrerer Bedingungen festlegen. Verwenden Sie <xref:System.Windows.DataTrigger> und <xref:System.Windows.MultiDataTrigger> Wenn die Eigenschaft der Bedingung datengebunden ist.  
   
 <a name="styling_themes"></a>   
 ## <a name="shared-resources-and-themes"></a>Gemeinsam genutzte Ressourcen und Designs  
- Eine typische [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Anwendung kann über mehrere Benutzeroberflächenressourcen (UI) verfügen, die in der gesamten Anwendung angewendet werden. Dieser Satz von Ressourcen wird im Ganzen als das Design der Anwendung bezeichnet. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]bietet Unterstützung für Verpackung Benutzer Ressourcen der Benutzeroberfläche (UI) als ein Design mit einem Ressourcenwörterbuch, die als gekapselt ist die <xref:System.Windows.ResourceDictionary> Klasse.  
+ Eine typische Windows Presentation Foundation (WPF)-Anwendung möglicherweise mehrere Ressourcen der Benutzeroberfläche (UI), die in der gesamten Anwendung angewendet werden. Dieser Satz von Ressourcen wird im Ganzen als das Design der Anwendung bezeichnet. Windows Presentation Foundation (WPF) bietet Unterstützung für Verpackung Benutzer Ressourcen der Benutzeroberfläche (UI) als ein Design mit einem Ressourcenwörterbuch, die als gekapselt ist die <xref:System.Windows.ResourceDictionary> Klasse.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Designs werden mithilfe des Mechanismus für Stile und Vorlagen definiert, der von [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] zum Anpassen der visuellen Objekte eines Elements verfügbar gemacht wird.  
+ Windows Presentation Foundation (WPF)-Designs sind mit dem Erstellen von Formaten und Vorlagen-Mechanismus, der Windows Presentation Foundation (WPF) verfügbar macht zum Anpassen von visuellen Elemente eines beliebigen Elements definiert.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Designressourcen werden in eingebetteten Ressourcenverzeichnissen gespeichert. Diese Ressourcenverzeichnisse müssen in einer signierten Assembly eingebettet werden und werden entweder in der gleichen Assembly wie der Code selbst oder in einer parallele Assembly eingebettet. Im Fall von „PresentationFramework.dll“ befinden sich die Assembly, die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Steuerelemente enthält, sowie die Designressourcen in einer Reihe von parallelen Assemblys.  
+ Windows Presentation Foundation (WPF) Designressourcen werden im eingebetteten Ressourcenverzeichnis gespeichert. Diese Ressourcenverzeichnisse müssen in einer signierten Assembly eingebettet werden und werden entweder in der gleichen Assembly wie der Code selbst oder in einer parallele Assembly eingebettet. Im Fall PresentationFramework.dll, Assembly, die Windows Presentation Foundation (WPF)-Steuerelemente enthält, sind Designressourcen in einer Reihe von Seite-an-Seite-Assemblys ein.  
   
  Das Design wird zu dem letzten Ort, an dem bei der Suche nach dem Stil eines Elements gesucht wird. In der Regel beginnt die Suche, indem sie die Elementstruktur aufwärts entlang geht und nach einer geeigneten Ressource sucht. Dann wird die Suche in der Ressourcensammlung der Anwendung fortgesetzt, und schließlich wird das System abgefragt. Auf diese Weise können Anwendungsentwickler der Stil für alle Objekte auf Struktur- oder Anwendungsebene neu definieren, bevor das Design erreicht wird.  
   

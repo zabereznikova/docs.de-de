@@ -1,32 +1,34 @@
 ---
 title: Sicherheit bei verteilten Anwendungen
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>Sicherheit bei verteilten Anwendungen
 Die Sicherheit wird in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in drei funktionelle Hauptbereiche unterteilt: Übertragungssicherheit, Zugriffssteuerung und Überwachung. Durch die Übertragungssicherheit werden Integrität, Vertraulichkeit und Authentifizierung bereitgestellt. Die Übertragungssicherheit wird durch eine der folgenden Funktionen bereitgestellt: Transportsicherheit, Nachrichtensicherheit oder `TransportWithMessageCredential`.  
   
- Eine Übersicht über [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nachrichtensicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die anderen beiden Teile einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) und [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Eine Übersicht über [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nachrichtensicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zu den anderen beiden Teilen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) und [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Szenarien für die Übertragungssicherheit  
  Zu den üblichen Szenarien, in denen die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Übertragungssicherheit eingesetzt wird, gehören folgende Situationen:  
@@ -68,7 +70,7 @@ Die Sicherheit wird in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i
   
  Beim Identitätsnachweis mittels Zertifikat können die beanspruchte Identität bzw. die beanspruchten Befähigungen durch den Antragstellernamen, den alternativen Antragstellernamen oder spezielle Felder im Zertifikat belegt werden. Der Nachweis des rechtmäßigen Besitzes der Daten erfolgt durch eine Signatur, die mit dem zugehörigen privaten Schlüssel erzeugt wird.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Programmieren von übertragungssicherheit und bestimmten Anmeldeinformationen finden Sie unter [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) und [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Weitere Informationen zur Programmierung übertragungssicherheit und bestimmten Anmeldeinformationen finden Sie unter [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) und [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Arten von Clientanmeldeinformationen bei der Transportsicherheit  
  In der folgenden Tabelle finden Sie die möglichen Werte, die Sie beim Erstellen einer Anwendung verwenden können, die die Übertragungssicherheit nutzt. Sie können diese Werte entweder im Code oder in Bindungseinstellungen festlegen.  

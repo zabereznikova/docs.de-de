@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3e5872be7e8b686a744832bf63a98e97a99cf9b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste
 In diesem Thema wird beschrieben, wie Sie die Funktion „SQL-Workflowinstanzspeicher“ konfigurieren, um die Persistenz für Workflows und Workflowdienste sowohl programmgesteuert als auch mithilfe einer Konfigurationsdatei zu aktivieren.  
@@ -41,7 +41,7 @@ In diesem Thema wird beschrieben, wie Sie die Funktion „SQL-Workflowinstanzspe
 >   
 >  System.Data.SqlClient.SqlException: Die gespeicherte Prozedur "System.Activities.DurableInstancing.CreateLockOwner" wurde nicht gefunden.  
   
- In den folgenden Abschnitten wird beschrieben, wie Sie die Persistenz für Workflows und Workflowdienste mithilfe des SQL-Workflowinstanzspeichers aktivieren. [!INCLUDE[crabout](../../../includes/crabout-md.md)] sehen Sie die Eigenschaften der SQL-Workflowinstanzspeicher [Eigenschaften des SQL-Workflowinstanzspeicher](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ In den folgenden Abschnitten wird beschrieben, wie Sie die Persistenz für Workflows und Workflowdienste mithilfe des SQL-Workflowinstanzspeichers aktivieren. Weitere Informationen zu den Eigenschaften des SQL-Workflowinstanzspeichers finden Sie unter [Eigenschaften des SQL-Workflowinstanzspeicher](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Aktivieren der Persistenz für selbst gehostete Workflows, die WorkflowApplication verwenden  
  Sie können die Persistenz für selbst gehostete Workflows aktivieren, die <xref:System.Activities.WorkflowApplication> programmgesteuert nutzen, indem Sie das <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Objektmodell verwenden. Die folgende Vorgehensweise enthält die dafür erforderlichen Schritte.  

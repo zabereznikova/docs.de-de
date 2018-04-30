@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
 Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Weitere grundlegende Informationen zu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], finden Sie unter [Einstieg](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) und [Übersicht](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -80,7 +80,7 @@ Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLU
   
 3.  **Microsoft Azure-Entwicklungsumgebung**  
   
-     Windows Azure Tools für Visual Studio enthält einen integrierten Satz von Tools zum Entwickeln von Windows Azure-Diensten in Visual Studio. Mit diesen Tools können Sie einen Datendienst entwickeln, der unter Windows Azure bereitgestellt werden kann, und den Datendienst vor der Bereitstellung auf dem lokalen Computer testen. Verwenden Sie diese Tools aus, wenn Visual Studio verwenden, um einen Datendienst entwickeln, der auf Windows Azure-Plattform ausgeführt wird. Sie können den Windows Azure Tools für Visual Studio aus der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Entwicklung eines Datendiensts, der auf Microsoft Azure ausgeführt wird finden Sie im Beitrag [Bereitstellen eines OData-Diensts in Windows Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Windows Azure Tools für Visual Studio enthält einen integrierten Satz von Tools zum Entwickeln von Windows Azure-Diensten in Visual Studio. Mit diesen Tools können Sie einen Datendienst entwickeln, der unter Windows Azure bereitgestellt werden kann, und den Datendienst vor der Bereitstellung auf dem lokalen Computer testen. Verwenden Sie diese Tools aus, wenn Visual Studio verwenden, um einen Datendienst entwickeln, der auf Windows Azure-Plattform ausgeführt wird. Sie können den Windows Azure Tools für Visual Studio aus der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). Weitere Informationen zur Entwicklung eines Datendiensts, die auf Windows Azure ausgeführt wird, finden Sie im Beitrag [ein OData Service in Windows Azure bereitstellen](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="development-tips"></a>Tipps für die Entwicklung  
  Beachten Sie beim Entwickeln eines Datendiensts die folgenden Hinweise:  
@@ -116,21 +116,21 @@ Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLU
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die Bereitstellungsoptionen für eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung finden Sie unter [Bereitstellungsübersicht für Visual Studio und ASP.NET Web](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     Weitere Informationen zu den Optionen für die Bereitstellung einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung finden Sie unter [Bereitstellungsübersicht für Visual Studio und ASP.NET Web](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Bevor Sie versuchen, den Datendienst unter IIS bereitzustellen, muss die Bereitstellung auf einem Webserver mit IIS getestet werden. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 -   **Windows Azure**  
   
-     Sie können einen Datendienst in Windows Azure mithilfe von Windows Azure Tools für Visual Studio bereitstellen. Sie können den Windows Azure Tools für Visual Studio aus der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] das Bereitstellen eines Datendiensts unter Windows Azure finden Sie im Beitrag [Bereitstellen eines OData-Diensts in Windows Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Sie können einen Datendienst in Windows Azure mithilfe von Windows Azure Tools für Visual Studio bereitstellen. Sie können den Windows Azure Tools für Visual Studio aus der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). Weitere Informationen zum Bereitstellen eines Datendiensts mit Windows Azure finden Sie im Beitrag [ein OData Service in Windows Azure bereitstellen](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="deployment-considerations"></a>Überlegungen zur Bereitstellung  
  Beachten Sie beim Bereitstellen eines Datendiensts die folgenden Hinweise:  
   
 -   Wenn Sie einen Datendienst bereitstellen, der den [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] -Anbieter verwendet, um auf eine SQL Server-Datenbank zuzugreifen, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienstbereitstellung weitergeben. Visual Studio automatisch Skripts (SQL-Dateien), klicken Sie hierzu in der Zieldatenbank erstellen und diese Skripts enthalten sein können, in das Webbereitstellungspaket einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Anwendung. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Bereitstellen einer Datenbank mit einem Webanwendungsprojekt](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Für eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Website, Sie können dies erfolgt mithilfe der **Datenbankveröffentlichungs-Assistent** in Visual Studio. Weitere Informationen finden Sie unter [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
--   Da [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] eine einfache [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen unter IIS bereitgestellten Datendienst unter Windows Server zu überwachen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] das Überwachen eines Datendiensts mit Windows Server AppFabric finden Sie im Beitrag [Nachverfolgung von WCF Data Services mit Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
+-   Da [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] eine einfache [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen unter IIS bereitgestellten Datendienst unter Windows Server zu überwachen. Weitere Informationen zur Verwendung von Windows Server AppFabric zum Überwachen eines Datendiensts finden Sie im Beitrag [nachverfolgung von WCF Data Services mit Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hosten des Datendiensts](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

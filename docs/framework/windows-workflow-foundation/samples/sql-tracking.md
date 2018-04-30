@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4153ed905fc9c5c67ce1743fa76497f76b7398cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-tracking"></a>SQL-Nachverfolgung
-In diesem Beispiel wird veranschaulicht, wie ein benutzerdefinierter SQL-Nachverfolgungsteilnehmer, der Nachverfolgungsdatensätze in eine SQL-Datenbank schreibt, geschrieben wird. Windows Workflow Foundation (WF) bietet workflownachverfolgung um Einblick in die Ausführung einer Workflowinstanz zu erhalten. Die Überwachungslaufzeit gibt während der Ausführung des Workflows Workflowüberwachungsdatensätze aus. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] workflownachverfolgung verwendet wird, finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+In diesem Beispiel wird veranschaulicht, wie ein benutzerdefinierter SQL-Nachverfolgungsteilnehmer, der Nachverfolgungsdatensätze in eine SQL-Datenbank schreibt, geschrieben wird. Windows Workflow Foundation (WF) bietet workflownachverfolgung um Einblick in die Ausführung einer Workflowinstanz zu erhalten. Die Überwachungslaufzeit gibt während der Ausführung des Workflows Workflowüberwachungsdatensätze aus. Weitere Informationen zur workflownachverfolgung finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
@@ -52,7 +52,7 @@ In diesem Beispiel wird veranschaulicht, wie ein benutzerdefinierter SQL-Nachver
   
 10. Klicken Sie im WCF-Testclient, doppelklicken auf **GetStockPrice**. Daraufhin wird die `GetStockPrice` Vorgang, der einen, geben Sie den Wert Parameter `Contoso` , und klicken Sie auf **Invoke**.  
   
-11. Die ausgegebenen Nachverfolgungsdatensätze werden in eine SQL-Datenbank geschrieben. Um die Nachverfolgungsdatensätze anzuzeigen, öffnen Sie die Datenbank "TrackingSample" in SQL Management Studio, und navigieren Sie zu den Tabellen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio finden Sie unter [Einführung in SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express kann heruntergeladen werden [hier](http://go.microsoft.com/fwlink/?LinkId=180520). Durch Ausführen einer Select-Abfrage in den Tabellen werden die Daten in den Nachverfolgungsdatensätzen angezeigt, die in den jeweiligen Tabellen gespeichert sind.  
+11. Die ausgegebenen Nachverfolgungsdatensätze werden in eine SQL-Datenbank geschrieben. Um die Nachverfolgungsdatensätze anzuzeigen, öffnen Sie die Datenbank "TrackingSample" in SQL Management Studio, und navigieren Sie zu den Tabellen. Weitere Informationen zu SQL Server Management Studio finden Sie unter [Einführung in SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express kann heruntergeladen werden [hier](http://go.microsoft.com/fwlink/?LinkId=180520). Durch Ausführen einer Select-Abfrage in den Tabellen werden die Daten in den Nachverfolgungsdatensätzen angezeigt, die in den jeweiligen Tabellen gespeichert sind.  
   
 #### <a name="to-uninstall-the-sample"></a>So installieren Sie das Beispiel aus  
   

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft eine *Sitzung* eine Gruppe von Nachrichten zu einer Konversation. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Sitzungen unterscheiden sich von dem in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Anwendungen verfügbaren Sitzungsobjekt, unterstützen andere Verhaltensweisen und werden auf andere Weise gesteuert. In diesem Thema werden die Funktionen, die Sitzungen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Anwendungen ermöglichen, beschrieben und deren Verwendung erläutert.  
@@ -144,7 +144,7 @@ In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft 
   
  Beispiele finden Sie unter [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) sowie unter [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) und [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Clients und Sitzungen finden Sie unter [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Weitere Informationen zu Clients und Sitzungen, finden Sie unter [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Interaktion von Sitzungen und InstanceContext-Einstellungen  
  Zwischen der <xref:System.ServiceModel.SessionMode>-Enumeration in einem Vertrag und der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>-Eigenschaft gibt es eine Interaktion, durch die die Zuordnung zwischen Kanälen und bestimmten Dienstobjekten gesteuert wird. Weitere Informationen finden Sie unter [Sitzungen, Instancing und Parallelität](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  

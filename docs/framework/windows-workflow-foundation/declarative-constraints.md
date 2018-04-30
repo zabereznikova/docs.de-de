@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4406bbbe7780fabc8872718ca21e8d755ea85c59
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="declarative-constraints"></a>Deklarative Einschränkungen
 Deklarative Einschränkungen stellen eine leistungsstarke Validierungsmethode für eine Aktivität und ihre Beziehungen zu anderen Aktivitäten bereit. Einschränkungen werden während des Erstellungsprozesses für eine Aktivität konfiguriert. Der Workflowhost kann jedoch zusätzliche Einschränkungen angeben. Dieses Thema bietet eine Übersicht darüber, wie mit deklarativen Einschränkungen Aktivitätsvalidierung bereitgestellt werden kann.  
@@ -188,4 +188,4 @@ else
 }  
 ```  
   
- Wenn die <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>-Eigenschaft des <xref:System.Activities.Validation.ValidationSettings>-Objekts `true` ist, werden nur die angegebenen zusätzlichen Einschränkungen ausgewertet, nachdem die Validierung über den Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> aufgerufen wird. Dies kann hilfreich sein, wenn überprüft wird, ob Workflows über bestimmte Validierungskonfigurationen verfügen. Beachten Sie jedoch, dass beim Aufrufen des Workflows die im Workflow konfigurierte Validierungslogik ausgewertet wird und weitergegeben werden muss, damit der Workflow erfolgreich gestartet werden kann. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Aufrufen der Validierung, finden Sie unter [Aufrufen der Aktivitätsvalidierung](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Wenn die <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>-Eigenschaft des <xref:System.Activities.Validation.ValidationSettings>-Objekts `true` ist, werden nur die angegebenen zusätzlichen Einschränkungen ausgewertet, nachdem die Validierung über den Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> aufgerufen wird. Dies kann hilfreich sein, wenn überprüft wird, ob Workflows über bestimmte Validierungskonfigurationen verfügen. Beachten Sie jedoch, dass beim Aufrufen des Workflows die im Workflow konfigurierte Validierungslogik ausgewertet wird und weitergegeben werden muss, damit der Workflow erfolgreich gestartet werden kann. Weitere Informationen zum Aufrufen der Validierung finden Sie unter [Aufrufen der Aktivitätsvalidierung](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

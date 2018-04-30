@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Gewusst wie: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung
 Wenn Sie mithilfe von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]einen sicheren Dienst oder Client entwickeln, müssen Sie häufig ein X.509-Zertifikat angeben, das für die Anmeldeinformationen verwendet wird. Das Zertifikat ist normalerweise Teil einer Zertifikatskette mit einer Stammstelle, die im Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen des Computers enthalten ist. Wenn Sie über eine Zertifikatskette verfügen, können Sie einen Bereich mit Zertifikatsätzen angeben, wobei die Stammzertifizierungsstelle normalerweise von Ihrer Organisation bzw. Ihrem Geschäftsbereich stammt. Um dies zur Entwicklungszeit zu emulieren, können Sie zwei Zertifikate erstellen, um die Sicherheitsanforderungen zu erfüllen. Beim ersten Zertifikat handelt es sich um ein selbstsigniertes Zertifikat, das in den Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen eingefügt wird. Das zweite Zertifikat wird aus dem ersten Zertifikat erstellt und entweder in den persönlichen Speicher unter "Lokaler Computer" oder in den persönlichen Speicher unter "Aktueller Benutzer" eingefügt. In diesem Thema sind die Schritte zur Erstellung dieser beiden Zertifikate beschrieben. Dabei wird das [Certificate Creation-Tool (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185)verwendet, das im [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -SDK enthalten ist.  
@@ -33,7 +33,7 @@ Wenn Sie mithilfe von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]ein
 >   
 >  Wird standardmäßig die [Makecert.exe (Certificate Creation-Tool)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) erstellt Zertifikate, deren Stammzertifizierungsstelle heißt "Root Agency **."** Da sich die Stammzertifizierungsstelle ("Root Agency") nicht im Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen befindet, sind diese Zertifikate nicht sicher. Indem Sie ein selbstsigniertes Zertifikat erstellen, das in den Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen eingefügt wird, können sie eine Entwicklungsumgebung anlegen, die eine bessere Simulation Ihrer Bereitstellungsumgebung darstellt.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Erstellen und Verwenden von Zertifikaten finden Sie unter [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Verwenden eines Zertifikats für die Anmeldeinformationen finden Sie unter [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Ein Lernprogramm zur Verwendung der Microsoft Authenticode-Technologie finden Sie unter [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919).  
+ Weitere Informationen zum Erstellen und Verwenden von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Weitere Informationen über ein Zertifikat als Anmeldeinformationen finden Sie unter [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Ein Lernprogramm zur Verwendung der Microsoft Authenticode-Technologie finden Sie unter [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>So erstellen Sie ein selbstsigniertes Stammzertifizierungsstellen-Zertifikat und exportieren den privaten Schlüssel  
   

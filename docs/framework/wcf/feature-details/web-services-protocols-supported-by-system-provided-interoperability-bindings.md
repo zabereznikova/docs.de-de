@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 754915d5ba596b5121c47be3533ee679b4f9594b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Durch vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist für die Interoperation mit Webdiensten konzipiert, die eine Reihe von Spezifikationen, die Webdienstspezifikationen, unterstützen. Um die Dienstkonfiguration für die empfohlene Vorgehensweise für Interoperabilität zu vereinfachen, führt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] drei interoperable, vom System bereitgestellte Bindungen ein: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> und <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Für Interoperabilität mit OASIS (Organization for the Advancement of Structured Information Standards)-Standards enthält [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eine interoperable, vom System bereitgestellte Bindung: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Für die Veröffentlichung von Metadaten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält zwei interoperable, vom System bereitgestellte Bindungen: [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) und [ \<MexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Dieses Thema listet Spezifikationen auf, die von interoperablen, vom System bereitgestellten Bindungen unterstützt werden.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/28/2018
  Die folgende Tabelle beschreibt die Protokolle, die von den interoperablen Metadatenbindungen bereitgestellt und von der <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>-Klasse verfügbar gemacht werden.  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- Die [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) Bindung unterstützt die folgenden Protokolle. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] mit dieser Bindung finden Sie unter [Veröffentlichungsmetadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ Die [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) Bindung unterstützt die folgenden Protokolle. Weitere Informationen zum Verwenden dieser Bindung finden Sie unter [Veröffentlichungsmetadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Kategorie|Protokoll|Spezifikation und Verwendung|  
 |--------------|--------------|-----------------------------|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 04/28/2018
 |Metadaten|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert WS-MetadataExchange zum Abrufen von XML-Schema, WSDL und der WS-Richtlinie.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<MexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) unterstützt die folgenden Protokolle. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] mit dieser Bindung finden Sie unter [Veröffentlichungsmetadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [\<MexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) unterstützt die folgenden Protokolle. Weitere Informationen zum Verwenden dieser Bindung finden Sie unter [Veröffentlichungsmetadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Kategorie|Protokoll|Spezifikation und Verwendung|  
 |--------------|--------------|-----------------------------|  

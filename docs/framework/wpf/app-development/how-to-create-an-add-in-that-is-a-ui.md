@@ -1,12 +1,13 @@
 ---
-title: "Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist"
-ms.custom: 
+title: 'Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fea1c718eedb12d49eced9964e4f9045badf07ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cadb992a68f4ee9f06ad37adf71856cdc4f46503
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist
-Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, ist ein [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gehostet wird eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendung.  
+In diesem Beispiel wird gezeigt, wie ein Add-in erstellen, die eine Windows Presentation Foundation (WPF) ist der von gehostet wird eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendung.  
   
  Das Add-in ist eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] also ein [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Benutzersteuerelement. Der Inhalt des Benutzersteuerelements ist eine einzelne Schaltfläche, bei der ein Meldungsfeld angezeigt wird, wenn Benutzer darauf klicken. Die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendung hostet, das Add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] als Inhalt des Hauptfensters der Anwendung.  
   
@@ -64,7 +66,7 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, ist ein [!INCLUDE[TLA#tla_w
   
  [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- In der Add-In-Modell, in dem ein Add-in gibt, eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (finden Sie unter [erstellen Sie ein Add-in, dass gibt eine Benutzeroberfläche](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), konvertiert der Add-in-Adapter die <xref:System.Windows.FrameworkElement> zu ein <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>muss auch in diesem Modell aufgerufen werden, obwohl Sie eine Methode aus der der Code zum Aufrufen schreiben implementieren müssen. Hierzu überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> und den aufrufende Code implementieren <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Wenn der Code, der den Aufruf <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> erwartet ein <xref:System.AddIn.Contract.INativeHandleContract>. In diesem Fall ist der Aufrufer der hostseitige Adapter, der in einem nachfolgenden Unterabschnitt behandelt wird.  
+ In der Add-In-Modell, in dem ein Add-in gibt, eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (finden Sie unter [erstellen Sie ein Add-in, dass gibt eine Benutzeroberfläche](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), konvertiert der Add-in-Adapter die <xref:System.Windows.FrameworkElement> zu ein <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> muss auch in diesem Modell aufgerufen werden, obwohl Sie eine Methode aus der der Code zum Aufrufen schreiben implementieren müssen. Hierzu überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> und den aufrufende Code implementieren <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Wenn der Code, der den Aufruf <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> erwartet ein <xref:System.AddIn.Contract.INativeHandleContract>. In diesem Fall ist der Aufrufer der hostseitige Adapter, der in einem nachfolgenden Unterabschnitt behandelt wird.  
   
 > [!NOTE]
 >  Sie müssen auch überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> in diesem Modell so aktivieren Sie die TAB-Taste zwischen hostanwendung [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] und add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Weitere Informationen finden Sie unter "WPF-Add-In-Einschränkungen" in [Übersicht über WPF-Add-Ins](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  

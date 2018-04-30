@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: faeb05045049e9a53babf754f1ec058c6aac2f05
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2c55d88eb6c3b41c703bddfd09e6224f3a6aefe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Grundlegende Konzepte für Windows-Workflows
 Bei der Workflowentwicklung in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] werden Konzepte verwendet, die für einige Entwickler möglicherweise neu sind. In diesem Thema werden einige dieser Konzepte und ihre Implementierung beschrieben.  
@@ -63,7 +63,7 @@ Bei der Workflowentwicklung in [!INCLUDE[netfx_current_long](../../../includes/n
  Aktivitäten erhalten Zugriff auf die Workflowlaufzeitumgebung, indem sie die entsprechende abgeleitete <xref:System.Activities.ActivityContext>-Klasse wie <xref:System.Activities.NativeActivityContext> oder <xref:System.Activities.CodeActivityContext> verwenden. Sie verwenden diese zum Auflösen von Argumenten und Variablen, zum Planen von untergeordneten Aktivitäten und zu vielen anderen Zwecken.  
   
 ## <a name="services"></a>Dienste  
- Workflows bieten eine natürliche Möglichkeit zum Implementieren von und zum Zugreifen auf lose verknüpfte Dienste mithilfe von Messagingaktivitäten. Messagingaktivitäten werden auf Grundlage von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erstellt und sind der primäre Mechanismus, der verwendet wird, um Daten in einen Workflow einzufügen bzw. daraus abzurufen. Sie können Messagingaktivitäten kombinieren, um beliebige Arten von Nachrichtenaustauschmustern zu modellieren. Weitere Informationen finden Sie unter finden Sie unter [Messagingaktivitäten](../../../docs/framework/wcf/feature-details/messaging-activities.md). Workflowdienste werden mit der <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse gehostet. Weitere Informationen finden Sie unter [Hosting Übersicht über Workflowdienste](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Workflow Services Siehe [Workflowdienste](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ Workflows bieten eine natürliche Möglichkeit zum Implementieren von und zum Zugreifen auf lose verknüpfte Dienste mithilfe von Messagingaktivitäten. Messagingaktivitäten werden auf Grundlage von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erstellt und sind der primäre Mechanismus, der verwendet wird, um Daten in einen Workflow einzufügen bzw. daraus abzurufen. Sie können Messagingaktivitäten kombinieren, um beliebige Arten von Nachrichtenaustauschmustern zu modellieren. Weitere Informationen finden Sie unter finden Sie unter [Messagingaktivitäten](../../../docs/framework/wcf/feature-details/messaging-activities.md). Workflowdienste werden mit der <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse gehostet. Weitere Informationen finden Sie unter [Hosting Übersicht über Workflowdienste](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). Weitere Informationen zu Workflowdiensten finden Sie unter [Workflowdienste](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistenz, Entladen und langfristige Workflows  
  Windows Workflow vereinfacht die Erstellung von langfristigen reaktiven Programmen durch die folgenden Punkte:  

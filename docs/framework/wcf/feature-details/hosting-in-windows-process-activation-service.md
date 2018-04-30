@@ -1,33 +1,33 @@
 ---
 title: Hosten in WAS (Windows Process Activation Service)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosten in WAS (Windows Process Activation Service)
 Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste hostende Anwendungen enthalten. Das WAS-Prozessmodell verallgemeinert das [!INCLUDE[iis601](../../../../includes/iis601-md.md)]-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dies ermöglicht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten die Verwendung von HTTP- und Nicht-HTTP-Protokollen, beispielsweise Net.TCP, in einer Hostumgebung, die nachrichtenbasierte Aktivierung unterstützt und die Möglichkeit zum Hosten vieler Anwendungen auf einem bestimmten Computer bietet.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in WAS ausgeführte Hostingumgebung Dienst finden Sie unter [wie: Hosten eines WCF-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Weitere Informationen zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in WAS ausgeführte Hostingumgebung Dienst finden Sie unter [wie: Hosten eines WCF-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  Das WAS-Prozessmodell bietet verschiedene Funktionen, die ermöglichen, Anwendungen auf robustere, besser verwaltbare und ressourcenschonendere Weise zu hosten:  
   
@@ -39,7 +39,7 @@ Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Leben
   
 -   Ermöglicht Anwendungen, die Vorteile des IIS-Prozessmodells zu nutzen, ohne dass der Bereitstellungsaufwand einer vollständigen IIS-Installation erforderlich wäre.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WAS-Features finden Sie unter [IIS 7.0 Beta: IIS 7.0-Webverwaltungs](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ Weitere Informationen zu WAS-Funktionen finden Sie unter [IIS 7.0 Beta: IIS 7.0-Webverwaltungs](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
  [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) arbeitet mit [!INCLUDE[iisver](../../../../includes/iisver-md.md)] und Windows Process Activation Service (WAS) eine vielseitige anwendungshostingumgebung für NET4 WCF- und WF-Dienste bereitstellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=196494) und [AppFabric-Hostingkonzepte](http://go.microsoft.com/fwlink/?LinkId=196495).  
   

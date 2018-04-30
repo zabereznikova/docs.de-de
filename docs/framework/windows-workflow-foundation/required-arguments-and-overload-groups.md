@@ -1,23 +1,24 @@
 ---
-title: "Erforderliche Argumente und Überladungsgruppen"
-ms.custom: 
+title: Erforderliche Argumente und Überladungsgruppen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6025fb65c5e2d4d0683d302638f8a1d2803662
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e94c65ff722d3b4f98b026d69ecd31bc02b934
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="required-arguments-and-overload-groups"></a>Erforderliche Argumente und Überladungsgruppen
 Aktivitäten können so konfiguriert werden, dass bestimmte Argumente gebunden werden müssen, wenn die Ausführung der Aktivität gültig sein soll. Das `RequiredArgument`-Attribut wird verwendet, um anzugeben, dass bestimmte Argumente für eine Aktivität erforderlich sind. Mit dem `OverloadGroup`-Attribut werden die Kategorien erforderlicher Argumente zusammen anzuordnen. Mit diesen Attributen können Aktivitätsautoren einfache oder komplexe Konfigurationen für die Aktivitätsvalidierung bereitstellen.  
@@ -73,7 +74,7 @@ public sealed class Add : CodeActivity<int>
   
  **Für eine erforderliche aktivitätsargument "Operand1" wurde kein Wert angegeben.**  
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]zum Suchen und Behandeln von Validierungsfehlern und Warnungen, finden Sie unter [Aufrufen der Aktivitätsvalidierung](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+>  Weitere Informationen zu suchen und Behandeln von Validierungsfehlern und Warnungen finden Sie unter [Aufrufen der Aktivitätsvalidierung](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Verwenden von Überladungsgruppen  
  Überladungsgruppen bieten eine Methode zum Angeben der Argumentkombinationen, die in einer Aktivität gültig sind. Argumente werden mit <xref:System.Activities.OverloadGroupAttribute> zusammen angeordnet. Jeder Gruppe erhält einen Namen, der vom <xref:System.Activities.OverloadGroupAttribute>-Objekt angegeben wird. Die Aktivität ist gültig, wenn nur ein Satz von Argumenten in einer Überladungsgruppe gebunden wird. Im folgenden Beispiel entnommen der [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) Beispiel wird eine `CreateLocation` Klasse definiert ist.  

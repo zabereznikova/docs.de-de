@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6eb5381438aa082eae8b4252bbd1cf343ba0ebf7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-services-overview"></a>Übersicht über Workflowdienste
-Bei Workflowdiensten handelt es sich um Dienste, die auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basieren und mithilfe von Workflows implementiert werden. Workflowdienste sind Workflows, die die Messagingaktivitäten zum Senden und Empfangen von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Nachrichten verwenden. Mit .NET Framework 4.5 werden eine Reihe von Messagingaktivitäten eingeführt, mit denen Sie Nachrichten aus einem Workflow senden oder darin empfangen können. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] messagingaktivitäten und wie sie verwendet werden können, zum Implementieren verschiedener Nachrichtenaustauschmuster finden Sie unter [Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
+Bei Workflowdiensten handelt es sich um Dienste, die auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basieren und mithilfe von Workflows implementiert werden. Workflowdienste sind Workflows, die die Messagingaktivitäten zum Senden und Empfangen von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Nachrichten verwenden. Mit .NET Framework 4.5 werden eine Reihe von Messagingaktivitäten eingeführt, mit denen Sie Nachrichten aus einem Workflow senden oder darin empfangen können. Weitere Informationen zu messagingaktivitäten und wie sie zum Implementieren verschiedener Nachrichtenaustauschmuster verwendet werden können, finden Sie unter [Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
   
 ## <a name="benefits-of-using-workflow-services"></a>Vorteile der Verwendung von Workflowdiensten  
  Da Anwendungen immer stärker dezentral verwendet werden, sind häufiger einzelne Dienste für das Aufrufen anderer Dienste zuständig, um einige Arbeitsaufgaben zu verteilen. Das Implementieren dieser Aufrufe als asynchrone Vorgänge führt zu einem höheren Maß an Komplexität im Code. Zuusätzliche Komplexität ergibt sich aus der Fehlerbehandlung aufgrund der Behandlung von Ausnahmen und der Bereitstellung ausführlicher Nachverfolgungsinformationen. Einige Dienste verfügen häufig über eine lange Ausführungszeit und können beim Warten auf Eingaben wertvolle Systemressourcen binden. Aufgrund dieser Probleme sind verteilte Anwendungen häufig sehr komplex und schwierig zu schreiben und zu verwalten. Workflows sind eine natürliche Möglichkeit, die Koordination asynchroner Arbeit auszudrücken, besonders Aufrufe externer Dienste. Workflows sind auch effektiv, wenn es um die Darstellung Geschäftsprozesse mit langer Laufzeit geht. Diese Qualitäten machen den Workflow zu einem nützlichen Instrument beim Erstellen von Diensten in einer verteilten Umgebung.  

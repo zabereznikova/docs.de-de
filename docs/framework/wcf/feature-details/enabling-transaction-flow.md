@@ -1,28 +1,28 @@
 ---
 title: Aktivieren des Transaktionsflusses
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffc7a1af9c9a021e93c0fca14c0d7d2826f8af6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="enabling-transaction-flow"></a>Aktivieren des Transaktionsflusses
 Der Transaktionsfluss kann in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mit sehr flexiblen Optionen gesteuert werden. Die Transaktionsflusseinstellungen eines Dienstes können durch eine Kombination aus Attributen und Konfigurationen ausgedrückt werden.  
@@ -78,7 +78,7 @@ Der Transaktionsfluss kann in [!INCLUDE[indigo1](../../../../includes/indigo1-md
   
  Wenn der Transaktionsfluss der Bindung deaktiviert ist, jedoch einer der Vorgänge eines Dienstvertrags eine eingehende Transaktion erfordert, wird beim Starten des Dienstes eine Validierungsausnahme ausgelöst.  
   
- Die meisten der von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereitgestellten Bindungen enthalten die Attribute `transactionFlow` und `transactionProtocol`, sodass Sie die spezielle Bindung für die Annahme eingehender Transaktionen konfigurieren können. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die Konfigurationselemente finden Sie unter [ \<Bindung >](../../../../docs/framework/misc/binding.md).  
+ Die meisten der von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereitgestellten Bindungen enthalten die Attribute `transactionFlow` und `transactionProtocol`, sodass Sie die spezielle Bindung für die Annahme eingehender Transaktionen konfigurieren können. Weitere Informationen zum Festlegen von Konfigurationselementen finden Sie unter [ \<Bindung >](../../../../docs/framework/misc/binding.md).  
   
  Ein Administrator oder Bereitsteller kann den Transaktionsfluss auf Endpunktebene verwenden, um mithilfe der Konfigurationsdatei Transaktionsflussanforderungen oder Einschränkungen zur Bereitstellungszeit zu konfigurieren.  
   

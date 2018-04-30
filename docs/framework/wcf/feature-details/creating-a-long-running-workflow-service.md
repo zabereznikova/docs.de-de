@@ -1,24 +1,26 @@
 ---
-title: "Erstellen eines Workflowdiensts mit langer Ausführungszeit"
-ms.custom: 
+title: Erstellen eines Workflowdiensts mit langer Ausführungszeit
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Erstellen eines Workflowdiensts mit langer Ausführungszeit
 In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit erstellt wird. Workflowdienste mit langer Laufzeit können über einen sehr großen Zeitraum hinweg ausgeführt werden. Währenddessen kann der Workflow in den Leerlauf wechseln und auf weitere Informationen warten. In diesem Fall wird der Workflow in einer SQL-Datenbank beibehalten und aus dem Arbeitsspeicher entfernt. Wenn weitere Informationen für die Workflowinstanz verfügbar sind, wird diese wieder in den Arbeitsspeicher geladen, und die Ausführung wird fortgesetzt.  In diesem Szenario implementieren Sie ein stark vereinfachtes Bestellsystem.  Zunächst wird eine Nachricht vom Client an den Workflow gesendet, um die Bestellung zu beginnen. Die Bestell-ID wird an den Client zurückgegeben. Der Workflowdienst wartet nun auf eine weitere Nachricht vom Client, wechselt in den Leerlauf und wird in der SQL-Datenbank beibehalten.  Wenn die nächste Nachricht vom Client mit der Bestellung eines Artikels empfangen wird, wird der Workflowdienst wieder in den Arbeitsspeicher geladen, und die Bestellung wird abschließend bearbeitet. In diesem Codebeispiel wird eine Zeichenfolge zurückgegeben, die angibt, dass der Artikel der Bestellung hinzugefügt wurde. Das Codebeispiel ist nicht als reale Anwendung der Technologie gedacht. Es soll vielmehr auf einfache Weise einen Workflowdienst mit langer Laufzeit veranschaulichen. In diesem Thema wird davon ausgegangen, dass Sie mit dem Erstellen von [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Projekten und -Projektmappen vertraut sind.  
@@ -82,7 +84,7 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
   
          ![Set Receive-Aktivitätseigenschaften](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
   
-         Mit der DisplayName-Eigenschaft wird der angezeigte Name für die Receive-Aktivität im Designer festgelegt. Mit der ServiceContractName-Eigenschaft und der OperationName-Eigenschaft wird der Name des Dienstvertrags und des Vorgangs angegeben, die von der Receive-Aktivität implementiert werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Weitere Informationen finden Sie Dienste wie Verträgen im Workflow verwendet werden [Verwenden von Verträgen im Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
+         Mit der DisplayName-Eigenschaft wird der angezeigte Name für die Receive-Aktivität im Designer festgelegt. Mit der ServiceContractName-Eigenschaft und der OperationName-Eigenschaft wird der Name des Dienstvertrags und des Vorgangs angegeben, die von der Receive-Aktivität implementiert werden. Weitere Informationen zur Verwendungsweise von Verträgen in Workflowdiensten finden Sie unter [Verwenden von Verträgen im Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
   
     2.  Klicken Sie auf die **definieren...**  wiederherstellungsverknüpfung in der **ReceiveStartOrder** Aktivität, und legen Sie die Eigenschaften, die in der folgenden Abbildung gezeigt.  Beachten Sie, dass die **Parameter** Optionsfeld ausgewählt ist, einen Parameter namens `p_customerName` gebunden ist, um die `customerName` Variable. Konfiguriert, um die **Receive** Aktivität einige Daten zu empfangen und diese Daten zu lokalen Variablen zu binden.  
   
@@ -120,13 +122,13 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
   
          ![Angeben von Parametern für die zweite empfangen](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
   
-    4.  Klicken Sie auf die **CorrelateOn** Auslassungszeichen und geben Sie `orderIdHandle`. Klicken Sie unter **XPath-Abfragen**, klicken Sie auf den Dropdownpfeil, und wählen Sie `p_orderId`. Dadurch wird die Korrelation für die zweite Receive-Aktivität konfiguriert. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Korrelation finden Sie unter [Korrelation](../../../../docs/framework/wcf/feature-details/correlation.md).  
+    4.  Klicken Sie auf die **CorrelateOn** Auslassungszeichen und geben Sie `orderIdHandle`. Klicken Sie unter **XPath-Abfragen**, klicken Sie auf den Dropdownpfeil, und wählen Sie `p_orderId`. Dadurch wird die Korrelation für die zweite Receive-Aktivität konfiguriert. Weitere Informationen zur Korrelation finden Sie unter [Korrelation](../../../../docs/framework/wcf/feature-details/correlation.md).  
   
          ![Festlegen der CorrelatesOn-Eigenschaft](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
   
     5.  Drag & drop ein **Wenn** Aktivität unmittelbar nach der **ReceiveAddItem** Aktivität. Diese Aktivität verhält sich analog zu einer Anweisung.  
   
-        1.  Legen Sie die **Bedingung** Eigenschaft`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
+        1.  Legen Sie die **Bedingung** Eigenschaft `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
   
         2.  Drag & drop ein **zuweisen** Aktivität in der **dann** Abschnitt und eine andere in der **Else** Abschnitt Festlegen der Eigenschaften eines der **zuweisen** Aktivitäten, wie in der folgenden Abbildung dargestellt.  
   

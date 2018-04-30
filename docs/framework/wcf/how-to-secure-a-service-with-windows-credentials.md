@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen
-In diesem Thema wird gezeigt, wie transportsicherheit auf aktiviert eine [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Dienst, befindet sich in einer Windows-Domäne und wird von Clients in der gleichen Domäne aufgerufen. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Dieses Szenario finden Sie unter [Transportsicherheit mit Windows-Authentifizierung](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Eine beispielanwendung finden Sie unter der [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.  
+In diesem Thema wird gezeigt, wie transportsicherheit auf aktiviert eine [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Dienst, befindet sich in einer Windows-Domäne und wird von Clients in der gleichen Domäne aufgerufen. Weitere Informationen zu diesem Szenario finden Sie unter [Transportsicherheit mit Windows-Authentifizierung](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Eine beispielanwendung finden Sie unter der [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.  
   
  In diesem Thema wird vorausgesetzt, dass Sie über eine vorhandene Vertragsschnittstelle verfügen und die Implementierung bereits definiert wurde, da hier auf diese beiden Punkte aufgebaut wird. Sie können auch einen vorhandenen Dienst und Client ändern.  
   
@@ -57,7 +57,7 @@ In diesem Thema wird gezeigt, wie transportsicherheit auf aktiviert eine [!INCLU
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>Verwenden der Bindung in einem Dienst  
- Dies ist die zweite Prozedur; in dieser Prozedur wird die Verwendung der Bindung in einem selbst gehosteten Dient veranschaulicht. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Hosting-Dienste finden Sie unter [Hostingdienste](../../../docs/framework/wcf/hosting-services.md).  
+ Dies ist die zweite Prozedur; in dieser Prozedur wird die Verwendung der Bindung in einem selbst gehosteten Dient veranschaulicht. Weitere Informationen zum Hosten von Diensten finden Sie unter [Hostingdienste](../../../docs/framework/wcf/hosting-services.md).  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>So verwenden Sie eine Bindung in einem Dienst  
   

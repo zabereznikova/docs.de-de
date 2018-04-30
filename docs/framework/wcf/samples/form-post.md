@@ -1,24 +1,26 @@
 ---
 title: Formularbereitstellung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>Formularbereitstellung
 In diesem Beispiel wird veranschaulicht, wie das WCF-REST-Programmiermodell zur Unterstützung neuer Formate für eingehende Antworten erweitert wird. Das Beispiel umfasst auch die Implementierung eines Formatierungsprogramms, mit dem eine Anforderung von einer HTML-Formularbereitstellung in einen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typ deserialisiert werden kann. Im Beispiel wird außerdem eine T4-Vorlage verwendet, um eine HTML-Seite zurückzugeben. Sie stellt das HTML-Formular bereit, das die Benutzer an den WCF REST-Dienst zurücksenden können.  
@@ -38,7 +40,7 @@ In diesem Beispiel wird veranschaulicht, wie das WCF-REST-Programmiermodell zur 
   
  Diese Konsolenanwendungsprojekt erweitert die [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel. Im Beispiel eines grundlegenden Ressourcendiensts wird veranschaulicht, wie eine Ressource in einer Weise verfügbar gemacht wird, die das WCF REST-Programmiermodell verwendet. Im Beispiel eines grundlegenden Ressourcendiensts wird eine Kundenauflistungsressource so verfügbar gemacht, dass Kunden in der Auflistung erstellt, abgerufen, aktualisiert und gelöscht werden können. Im Beispiel eines grundlegenden Ressourcendiensts werden nur die zwei systemintern unterstützten, eingehenden Anforderungsformate XML und JSON verwendet.  
   
- Die Konsolenanwendung in diesem Beispiel zur Formularbereitstellung verwendet das benutzerdefinierte Formatierungsprogramm in der HtmlFormProcessing-Bibliothek, mit dem Benutzer Kunden erstellen können, indem sie über einen Browser eine Anfrage von einer HTML-Formularbereitstellung senden. Damit wird auch ein Vorgang hinzugefügt, mit dem eine HTML-Seite zurückgegeben wird. Dazu gehört u. a., dass das Formular an den Dienst zurückgesendet wird. Diese HTML-Seite wird mit einer vorverarbeiteten T4-Vorlage generiert, die aus einer TT-Datei und einer automatisch generierten CS-Datei besteht. Die TT-Datei ermöglicht es Entwicklern, eine Antwort in ein Vorlagenformular zu schreiben, das Variablen und Steuerelementstrukturen enthält. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4 finden Sie unter [Generieren von Artefakten mithilfe von Textvorlagen](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ Die Konsolenanwendung in diesem Beispiel zur Formularbereitstellung verwendet das benutzerdefinierte Formatierungsprogramm in der HtmlFormProcessing-Bibliothek, mit dem Benutzer Kunden erstellen können, indem sie über einen Browser eine Anfrage von einer HTML-Formularbereitstellung senden. Damit wird auch ein Vorgang hinzugefügt, mit dem eine HTML-Seite zurückgegeben wird. Dazu gehört u. a., dass das Formular an den Dienst zurückgesendet wird. Diese HTML-Seite wird mit einer vorverarbeiteten T4-Vorlage generiert, die aus einer TT-Datei und einer automatisch generierten CS-Datei besteht. Die TT-Datei ermöglicht es Entwicklern, eine Antwort in ein Vorlagenformular zu schreiben, das Variablen und Steuerelementstrukturen enthält. Weitere Informationen zu T4 finden Sie unter [Generieren von Artefakten mithilfe von Textvorlagen](http://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
   

@@ -1,24 +1,26 @@
 ---
 title: HTTP-Transportsicherheit
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="http-transport-security"></a>HTTP-Transportsicherheit
 Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure Sockets Layer (SSL)-Implementierung bereitgestellt. SSL wird im Internet häufig verwendet, um einen Dienst gegenüber einem Client zu authentifizieren und anschließend Vertraulichkeit (Verschlüsselung) für den Kanal bereitzustellen. In diesem Thema wird die Funktionsweise von SSL und die Implementierung in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erläutert.  
@@ -61,7 +63,7 @@ Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure 
 ### <a name="using-httpcfg-for-ssl"></a>Verwenden von HttpCfg für SSL  
  Wenn Sie eine selbst gehostete erstellen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Anwendung, laden Sie das Tool HttpCfg.exe an die [Windows XP Service Pack 2-Supporttools Standort](http://go.microsoft.com/fwlink/?LinkId=29002).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Einrichten eines Ports mit einem x. 509-Zertifikat mit den Tools "HttpCfg.exe" finden Sie [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Weitere Informationen zur Verwendung des Tools "HttpCfg.exe" Einrichten eines Ports mit einem x. 509-Zertifikat finden Sie unter [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md)  

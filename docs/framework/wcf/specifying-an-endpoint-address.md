@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 99fdfad6c06e74a92d7fffb7c7a5e14284757e12
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Angeben einer Endpunktadresse
 Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienst erfolgt über dessen Endpunkte. Jeder <xref:System.ServiceModel.Description.ServiceEndpoint> enthält eine <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, eine <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> und einen <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Der Vertrag gibt an, welche Vorgänge verfügbar sind. Die Bindung gibt an, wie eine Kommunikation mit dem Dienst stattfindet, und die Adresse gibt an, wo sich der Dienst befindet. Jeder Endpunkt muss eine eindeutige Adresse haben. Die Endpunktadresse wird durch die <xref:System.ServiceModel.EndpointAddress>-Klasse dargestellt, die einen Uniform Resource Identifier (URI) enthält, der die Adresse des Diensts darstellt, eine <xref:System.ServiceModel.EndpointAddress.Identity%2A>, die die Sicherheitsidentität des Diensts darstellt, und eine Auflistung der optionalen <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Die optionalen Header stellen zusätzliche, ausführlichere Adressinformationen bereit, um den Endpunkt zu identifizieren oder mit ihm zu interagieren. Die Header können beispielsweise angeben, wie eine eingehende Nachricht zu bearbeiten ist, wohin der Endpunkt eine Antwortnachricht senden sollte, oder welche Instanz eines Diensts für die Bearbeitung einer eingehenden Nachricht verwendet werden soll, wenn mehrere Instanzen verfügbar sind.  
@@ -93,7 +93,7 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1
 ## <a name="using-default-endpoints"></a>Verwenden von Standardendpunkten  
  Wenn im Code oder in der Konfiguration keine Endpunkte angegeben sind, stellt die Runtime Standardendpunkte bereit, indem ein Standardendpunkt für alle Basisadressen in jedem Dienstvertrag, der vom Dienst implementiert wird, hinzugefügt wird. Die Basisadresse kann im Code oder in der Konfiguration angegeben werden, und die Standardendpunkte werden hinzugefügt, wenn <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> auf dem <xref:System.ServiceModel.ServiceHost> aufgerufen wird.  
   
- Wenn Endpunkte explizit bereitgestellt werden, können die Standardpunkte dennoch hinzugefügt werden, indem <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> auf dem <xref:System.ServiceModel.ServiceHost> aufgerufen wird, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. [!INCLUDE[crabout](../../../includes/crabout-md.md)] zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Wenn Endpunkte explizit bereitgestellt werden, können die Standardpunkte dennoch hinzugefügt werden, indem <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> auf dem <xref:System.ServiceModel.ServiceHost> aufgerufen wird, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. Weitere Informationen zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.EndpointAddress>  

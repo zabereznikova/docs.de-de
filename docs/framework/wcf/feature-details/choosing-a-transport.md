@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 989ae3d70bce2a4cb374904ee6b2f30f770ccf8a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-transport"></a>Wählen eines Transports
 In diesem Thema werden die Kriterien zum Wählen einer der drei Transportarten erläutert, die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] enthalten sind: HTTP, TCP und Named Pipes. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält außerdem einen Message Queuing-Transport (wird auch als MSMQ bezeichnet), jedoch wird Message Queuing nicht in diesem Dokument behandelt.  
@@ -39,7 +39,7 @@ In diesem Thema werden die Kriterien zum Wählen einer der drei Transportarten e
  In diesem Abschnitt sind die Hauptgründe für die Wahl einer der drei wichtigsten Transportarten beschrieben. Er enthält auch ein ausführliches Diagramm als Hilfe bei der Auswahl.  
   
 ### <a name="when-to-use-http-transport"></a>Verwenden des HTTP-Transports  
- HTTP ist ein Anforderung-/Antwortprotokoll für den Austausch zwischen Clients und Servern. Diese Transportart wird am häufigsten von Webbrowserclients verwendet, die mit einem Webserver kommunizieren. Der Client sendet eine Anforderung an einen Server, der nach Anforderungsnachrichten von Clients lauscht. Wenn der Server eine Anforderung empfängt, gibt er eine Antwort zurück, die den Status der Anforderung enthält. Wenn dieser Vorgang erfolgreich ist, werden optionale Daten, z. B. eine Webseite, eine Fehlermeldung oder andere Informationen, zurückgegeben. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die HTTP-Protokoll finden Sie unter [HTTP - Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP ist ein Anforderung-/Antwortprotokoll für den Austausch zwischen Clients und Servern. Diese Transportart wird am häufigsten von Webbrowserclients verwendet, die mit einem Webserver kommunizieren. Der Client sendet eine Anforderung an einen Server, der nach Anforderungsnachrichten von Clients lauscht. Wenn der Server eine Anforderung empfängt, gibt er eine Antwort zurück, die den Status der Anforderung enthält. Wenn dieser Vorgang erfolgreich ist, werden optionale Daten, z. B. eine Webseite, eine Fehlermeldung oder andere Informationen, zurückgegeben. Weitere Informationen über das HTTP-Protokoll finden Sie unter [HTTP - Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858).  
   
  Das HTTP-Protokoll basiert nicht auf einer Verbindung. Nachdem die Antwort gesendet wurde, wird kein entsprechender Zustand beibehalten. Die Anwendung muss jeden erforderlichen Zustand beibehalten, um Transaktionen mit mehreren Seiten verarbeiten zu können.  
   

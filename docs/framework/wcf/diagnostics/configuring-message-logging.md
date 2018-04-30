@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-message-logging"></a>Konfigurieren der Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für verschiedene Szenarien konfigurieren können.  
@@ -58,7 +58,7 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] die protokollierungseinstellungen angezeigt wird, finden Sie unter [empfohlenen Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Weitere Informationen zu nachrichtenprotokollierungseinstellungen, finden Sie unter [empfohlenen Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Mit `add` können Sie den Namen und den Typ des Listeners angeben, den Sie verwenden möchten. In der Beispielkonfiguration wird der Listener "messages" genannt, und der standardmäßige .NET Framework-Ablaufverfolgungslistener (`System.Diagnostics.XmlWriterTraceListener`) wird als zu verwendender Typ hinzugefügt. Wenn Sie `System.Diagnostics.XmlWriterTraceListener` verwenden, müssen Sie den Speicherort und den Namen der Ausgabedatei in der Konfigurationsdatei angeben. Legen Sie dafür `initializeData` auf den Namen der Protokolldatei fest. Andernfalls löst das System eine Ausnahme aus. Sie können auch einen benutzerdefinierten Listener implementieren, der Protokolle in einer Standarddatei ausgibt.  
   
@@ -73,7 +73,7 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Wenn Sie die Ablaufverfolgungsquelle deaktivieren möchten, verwenden Sie stattdessen das `logMessagesAtServiceLevel`, `logMalformedMessages`-Attribut und das `logMessagesAtTransportLevel`-Attribut des `messageLogging`-Elements. Sie sollten all diese Attribute auf `false` festlegen. Dieser Schritt kann anhand der Konfigurationsdatei im vorigen Beispielcode über die Benutzeroberfläche des Configuration Editor oder über WMI durchgeführt werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Das Tool Konfigurations-Editor finden Sie unter [Dienstkonfigurations-Editor-Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Wenn Sie die Ablaufverfolgungsquelle deaktivieren möchten, verwenden Sie stattdessen das `logMessagesAtServiceLevel`, `logMalformedMessages`-Attribut und das `logMessagesAtTransportLevel`-Attribut des `messageLogging`-Elements. Sie sollten all diese Attribute auf `false` festlegen. Dieser Schritt kann anhand der Konfigurationsdatei im vorigen Beispielcode über die Benutzeroberfläche des Configuration Editor oder über WMI durchgeführt werden. Weitere Informationen zum Konfigurations-Editor-Tool finden Sie unter [Dienstkonfigurations-Editor-Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Weitere Informationen zu WMI finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Protokollieren von Ebenen und Optionen  
  Für eingehende Nachrichten erfolgt die Protokollierung direkt nach dem Erstellen der Nachricht, unmittelbar bevor die Nachricht Benutzercode auf der Dienstebene erhält und wenn falsch formatierte Nachrichten erkannt werden.  
@@ -91,7 +91,7 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
  Auf dieser Ebene protokollierte Nachrichten können vor oder nach dem Transport codiert oder decodiert werden. Wenn Filter definiert wurden, werden nur Nachrichten, die zu den Filtern passen, protokolliert. Andernfalls werden alle Nachrichten auf der Transportschicht protokolliert. Auf dieser Ebene werden alle Infrastrukturnachrichten protokolliert, einschließlich zuverlässiger Messagingnachrichten. Bei per Streaming übertragenen Nachrichten werden nur die Header protokolliert. Außerdem werden sichere Nachrichten auf dieser Ebene verschlüsselt protokolliert, außer bei Verwendung eines sicheren Transports wie HTTPS.  
   
 ### <a name="malformed-level"></a>Falsch formatierte Ebene  
- Falsch formatierte Nachrichten sind Nachrichten, die vom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Stapel in irgendeiner Phase der Verarbeitung abgelehnt werden. Falsch formatierte Nachrichten werden unverändert protokolliert: verschlüsselt, wenn sie bereits verschlüsselt sind, mit nicht ordnungsgemäßem XML usw. `maxSizeOfMessageToLog` definierte die zu protokollierende Nachrichtengröße als CDATA. Standardmäßig beträgt `maxSizeOfMessageToLog` 256K. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu diesem Attribut finden Sie im Abschnitt Weitere Optionen.  
+ Falsch formatierte Nachrichten sind Nachrichten, die vom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Stapel in irgendeiner Phase der Verarbeitung abgelehnt werden. Falsch formatierte Nachrichten werden unverändert protokolliert: verschlüsselt, wenn sie bereits verschlüsselt sind, mit nicht ordnungsgemäßem XML usw. `maxSizeOfMessageToLog` definierte die zu protokollierende Nachrichtengröße als CDATA. Standardmäßig beträgt `maxSizeOfMessageToLog` 256K. Weitere Informationen zu diesem Attribut finden Sie in Abschnitt Weitere Optionen.  
   
 ### <a name="other-options"></a>Weitere Optionen  
  Zusätzlich zu den Protokollierungsebenen kann der Benutzer die folgenden Optionen angeben:  

@@ -1,26 +1,26 @@
 ---
 title: Dienstversionsverwaltung
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-versioning"></a>Dienstversionsverwaltung
 Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen die Dienste (und die Endpunkte, die sie verfügbar machen) eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z.&#160;B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Jede Änderung führt zu einer neuen Version des Diensts. In diesem Thema werden Überlegungen zur Versionsverwaltung in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] vorgestellt.  
@@ -138,7 +138,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
  Bei Änderungen an der Endpunktadresse und -bindung handelt es sich um unterbrechende Änderungen, solange die Clients die neue Endpunktadresse oder -bindung nicht dynamisch erkennen können. Ein Mechanismus zur Implementierung dieser Funktion ist die Verwendung einer UDDI-Registrierung sowie des UDDI-Aufrufmusters, bei der ein Client versucht, mit einem Endpunkt zu kommunizieren und im Falle eines Scheiterns eine bekannte UDDI-Registrierung für die aktuellen Endpunktdaten abfragt. Der Client verwendet dann die Adresse und die Bindung aus diesen Metadaten, um mit dem Endpunkt zu kommunizieren. Wenn diese Kommunikation erfolgreich ist, speichert der Client die Adress- und Bindungsinformationen für eine spätere Verwendung zwischen.  
   
 ## <a name="routing-service-and-versioning"></a>Routingdienst und Versionsverwaltung  
- Wenn es sich bei an einem Dienst vorgenommenen Änderungen um unterbrechende Änderungen handelt und Sie zwei oder mehr verschiedene Versionen eines Diensts gleichzeitig ausführen müssen, können Sie mit dem WCF-Routingdienst Meldungen an die entsprechende Dienstinstanz weiterleiten. Der WCF-Routingdienst führt inhaltsbasiertes Routing aus. Mit anderen Worten: Anhand von Informationen innerhalb der Nachricht wird bestimmt, an welches Ziel die Nachricht weitergeleitet wird. [!INCLUDE[crabout](../../../includes/crabout-md.md)] der WCF-Routingdienst finden Sie unter [Routingdienst](../../../docs/framework/wcf/feature-details/routing-service.md). Ein Beispiel zum Verwenden der WCF-Routingdienst für die dienstversionsverwaltung finden Sie unter [How To: Dienstversionsverwaltung](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Wenn es sich bei an einem Dienst vorgenommenen Änderungen um unterbrechende Änderungen handelt und Sie zwei oder mehr verschiedene Versionen eines Diensts gleichzeitig ausführen müssen, können Sie mit dem WCF-Routingdienst Meldungen an die entsprechende Dienstinstanz weiterleiten. Der WCF-Routingdienst führt inhaltsbasiertes Routing aus. Mit anderen Worten: Anhand von Informationen innerhalb der Nachricht wird bestimmt, an welches Ziel die Nachricht weitergeleitet wird. Weitere Informationen finden Sie in der WCF-Routingdienst [Routingdienst](../../../docs/framework/wcf/feature-details/routing-service.md). Ein Beispiel zum Verwenden der WCF-Routingdienst für die dienstversionsverwaltung finden Sie unter [How To: Dienstversionsverwaltung](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Anhang  
  Die allgemeine Richtlinie für die Datenvertrags-Versionsverwaltung im Falle der strengen Versionsverwaltung besagt, dass Datenverträge als unveränderlich behandelt werden und neue Verträge erstellt werden, wenn Änderungen erforderlich sind. Für jeden neuen Datenvertrag muss eine neue Klasse erstellt werden. Deshalb ist ein Mechanismus erforderlich, mit dem vermieden wird, dass bereits vorhandener Code, der für die alte Datenvertragsklasse geschrieben wurde, für die neue Datenvertragsklasse neu geschrieben werden muss.  

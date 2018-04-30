@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: df603da0f4feedeacc59198c156322c78fd2f388
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="metadata-architecture-overview"></a>Übersicht über die Metadatenarchitektur
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet eine umfangreiche Infrastruktur für den Export, die Veröffentlichung, den Abruf und den Import von Dienstmetadaten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste beschreiben mithilfe von Metadaten die Interaktion mit den Endpunkten des Diensts, sodass Tools, z. B. Svcutil.exe, automatisch Clientcode für den Zugriff auf den Dienst generieren können.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/28/2018
   
  Um Metadatenendpunkte hinzuzufügen, die das MEX-Protokoll verwenden, fügen Sie Dienstendpunkte zum Diensthost, der den Dienstvertrag, der mit dem Namen IMetadataExchange verwenden.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] definiert die <xref:System.ServiceModel.Description.IMetadataExchange> Schnittstelle, die diesen Vertrag-Dienstnamen aufweist. WS-MetadataExchange-Endpunkte oder MEX-Endpunkte können eine der vier Standardbindungen nutzen, die von den statischen Factorymethoden der <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Klasse verfügbar gemacht werden, sodass eine Anpassung an die von den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Tools, wie Svcutil.exe, verwendeten Standardbindungen erreicht wird. Sie können MEX-Metadatenendpunkte auch mithilfe einer benutzerdefinierten Bindung konfigurieren.  
   
- Das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> verwendet einen <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType>, um Metadaten für alle Dienstendpunkte in den Dienst zu exportieren. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Exportieren von Metadaten von einem Dienst finden Sie unter [exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ Das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> verwendet einen <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType>, um Metadaten für alle Dienstendpunkte in den Dienst zu exportieren. Weitere Informationen zum Exportieren von Metadaten von einem Dienst finden Sie unter [exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  Das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ergänzt den Diensthost, indem eine <xref:System.ServiceModel.Description.ServiceMetadataExtension>-Instanz als Erweiterung dem Diensthost hinzugefügt wird. Die <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> stellt die Implementierung für die Metadaten bereit, die Protokolle veröffentlichen. Sie können darüber hinaus <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> verwenden, um die Metadaten des Diensts bei Laufzeit abzurufen, indem Sie auf die <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A>-Eigenschaft zugreifen.  
   

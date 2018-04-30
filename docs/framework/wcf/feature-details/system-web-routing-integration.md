@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c3a5b9965f63a9fc501025493b3a323013ea2a4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 72403671fe6700ae26cae4471a1d0ac100005f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing-Integration
-Beim Hosten eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts in Internetinformationsdienste (IIS) fügen Sie eine SVC-Datei in das virtuelle Verzeichnis ein. Diese SVC-Datei gibt die zu verwendende Diensthostfactory sowie die Klasse an, die den Dienst implementiert. Beim Bereitstellen von Anforderungen an den Dienst geben Sie die SVC-Datei im URI an, z. B.: http://contoso.com/EmployeeServce.svc. Für Programmierer, die REST-Dienste schreiben, ist dieser Typ von URI nicht optimal. URIs für REST-Dienste geben eine bestimmte Ressource an und verfügen normalerweise nicht über Erweiterungen. Mithilfe der <xref:System.Web.Routing>-Integrationsfunktion können Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-REST-Dienst hosten, der auf URIs ohne Erweiterung reagiert. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Routing finden Sie unter [ASP.NET Routing](http://go.microsoft.com/fwlink/?LinkId=184660) und [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) Beispiel.  
+Beim Hosten eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts in Internetinformationsdienste (IIS) fügen Sie eine SVC-Datei in das virtuelle Verzeichnis ein. Diese SVC-Datei gibt die zu verwendende Diensthostfactory sowie die Klasse an, die den Dienst implementiert. Beim Bereitstellen von Anforderungen an den Dienst geben Sie die SVC-Datei im URI an, z. B.: http://contoso.com/EmployeeServce.svc. Für Programmierer, die REST-Dienste schreiben, ist dieser Typ von URI nicht optimal. URIs für REST-Dienste geben eine bestimmte Ressource an und verfügen normalerweise nicht über Erweiterungen. Mithilfe der <xref:System.Web.Routing>-Integrationsfunktion können Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-REST-Dienst hosten, der auf URIs ohne Erweiterung reagiert. Weitere Informationen zu routing finden Sie unter [ASP.NET Routing](http://go.microsoft.com/fwlink/?LinkId=184660) und [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) Beispiel.  
   
 ## <a name="using-systemwebrouting-integration"></a>Verwenden der System.Web.Routing-Integration  
  Für die <xref:System.Web.Routing>-Integrationsfunktion verwenden Sie die <xref:System.ServiceModel.Activation.ServiceRoute>-Klasse, um eine oder mehrere Routen zu erstellen und diese dem <xref:System.Web.Routing.RouteTable>-Objekt in einer Global.asax-Datei hinzuzufügen. Diese Routen geben die relativen URIs an, auf die der Dienst reagiert. Das folgende Beispiel zeigt die dazu erforderliche Vorgehensweise.  

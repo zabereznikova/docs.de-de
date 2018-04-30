@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a36b8a6bdf1a024f4ddee91bd937afac516e391f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Serialisieren von Workflows und Aktivitäten in und aus XAML
 Zusätzlich zur Kompilierung in Typen, die in Assemblys enthalten sind, können Workflowdefinitionen in XAML serialisiert werden. Diese serialisierten Definitionen können zur Bearbeitung oder Überprüfung erneut geladen werden, zur Kompilierung in ein Buildsystem übergeben werden oder geladen und aufgerufen werden. Dieses Thema bietet einen Überblick über das Serialisieren von Workflowdefinitionen und das Arbeiten mit XAML-Workflowdefinitionen.  
@@ -84,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] Aufrufen von Workflows mit Eingabe- und Argumenten finden Sie unter [Verwenden von WorkflowInvoker und WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) und <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
+>  Weitere Informationen zum asynchronen Aufrufen von Workflows mit Eingabe- und Argumenten finden Sie unter [Verwenden von WorkflowInvoker und WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) und <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
   
  Wenn der serialisierte Workflow C#-Ausdrücke enthält ein <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> -Instanz mit der <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> -Eigenschaftensatz auf `true` muss als Parameter übergeben werden <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>, andernfalls ein <xref:System.NotSupportedException> mit eine ähnliche Meldung ausgelöst wird die nach: `Expression Activity type 'CSharpValue`1" erfordert Kompilierung, um auszuführen.  Stellen Sie sicher, dass der Workflow kompiliert wurde. "  
   

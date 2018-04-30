@@ -24,16 +24,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55cd4b928c640f506e058f6a441189842bc9b8a3
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Vorgehensweise: Aktivieren der Nachrichtenreplay-Erkennung
 Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Strom als zulässige Meldungen, was zu einer Reihe negativer Konsequenzen führt, wie z. B. redundanten Bestellungen eines Artikels.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Replay-Erkennung angezeigt wird, finden Sie unter [Replay-Erkennung Nachrichten](http://go.microsoft.com/fwlink/?LinkId=88536).  
+ Weitere Informationen zu nachrichtenreplay-Erkennung, finden Sie unter [Replay-Erkennung Nachrichten](http://go.microsoft.com/fwlink/?LinkId=88536).  
   
  Die folgende Prozedur veranschaulicht verschiedene Eigenschaften, die Sie verwenden können, um die Replay-Erkennung mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zu steuern.  
   

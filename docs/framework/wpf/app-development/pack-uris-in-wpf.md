@@ -1,12 +1,13 @@
 ---
 title: Paket-URI in WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3143bcc05d88cde43e844ec21b95963e672bbc52
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d90345f6c6e44bfdd98d2a1313a36372cdfe8b06
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="pack-uris-in-wpf"></a>Paket-URI in WPF
-In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] dienen zum Identifizieren und Laden von Dateien in vielerlei Hinsicht, u. a. folgende:  
+In Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] dienen zum Identifizieren und Laden von Dateien in vielerlei Hinsicht, u. a. folgende:  
   
 -   Angeben der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] anzuzeigende beim ersten Starten einer Anwendung.  
   
@@ -92,7 +94,7 @@ In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUD
   
 <a name="Resource_File_Pack_URIs___Local_Assembly"></a>   
 ## <a name="resource-file-pack-uris"></a>Paket-URIs der Ressourcendatei  
- Ressourcendateien sind so konfiguriert, als [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` Elemente und werden in Assemblys kompiliert. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]unterstützt die Erstellung von Paket- [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , die verwendet werden kann, um Ressourcendateien zu identifizieren, die entweder in der lokalen Assembly kompiliert oder in einer Assembly, die von der lokalen Assembly verwiesen wird kompiliert.  
+ Ressourcendateien sind so konfiguriert, als [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` Elemente und werden in Assemblys kompiliert. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] unterstützt die Erstellung von Paket- [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , die verwendet werden kann, um Ressourcendateien zu identifizieren, die entweder in der lokalen Assembly kompiliert oder in einer Assembly, die von der lokalen Assembly verwiesen wird kompiliert.  
   
 <a name="Local_Assembly_Resource_File"></a>   
 ### <a name="local-assembly-resource-file"></a>Ressourcendatei der lokalen Assembly  
@@ -183,7 +185,7 @@ In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUD
   
 <a name="Page_Files"></a>   
 ## <a name="page-files"></a>Seitendateien  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Dateien, die als konfiguriert sind [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente werden auf die gleiche Weise wie die Ressourcendateien in Assemblys kompiliert. Folglich [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente können ermittelt werden, mithilfe von Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] für Ressourcendateien.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dateien, die als konfiguriert sind [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente werden auf die gleiche Weise wie die Ressourcendateien in Assemblys kompiliert. Folglich [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente können ermittelt werden, mithilfe von Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] für Ressourcendateien.  
   
  Die Typen von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dateien, die häufig als konfiguriert sind [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente einen der folgenden Werte als Stammelement aufweisen:  
   
@@ -256,7 +258,7 @@ In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUD
   
 5.  Wenn die Ressource nicht gefunden wird, der intern erstellte <xref:System.Uri> ist ungültig.  
   
- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]Auflösung gilt nicht für [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] mit Verweisen auf die folgenden:  
+ [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Auflösung gilt nicht für [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] mit Verweisen auf die folgenden:  
   
 -   Inhaltsdateien in Assemblys, auf die verwiesen wird: Diese Dateitypen werden nicht unterstützt, indem Sie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
@@ -294,7 +296,7 @@ In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUD
   
  Tabelle 1: Absolute Paket-URIs im Markup  
   
-|Datei|Absolute pack[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Datei|Absolute pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Ressourcendatei – lokale Assembly|`"pack://application:,,,/ResourceFile.xaml"`|  
 |Ressourcendatei im Unterordner – lokale Assembly|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|  
@@ -310,7 +312,7 @@ In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUD
   
  Tabelle 2: Relative Paket-URIs im Markup  
   
-|Datei|Relative pack[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Datei|Relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Ressourcendatei in lokaler Assembly|`"/ResourceFile.xaml"`|  
 |Ressourcendatei im Unterordner der lokalen Assembly|`"/Subfolder/ResourceFile.xaml"`|  
@@ -355,7 +357,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tabelle 3: Absolute Paket-URIs im Code  
   
-|Datei|Absolute pack[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Datei|Absolute pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Ressourcendatei – lokale Assembly|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|  
 |Ressourcendatei im Unterordner – lokale Assembly|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|  
@@ -371,7 +373,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tabelle 4: Relative Paket-URIs im Code  
   
-|Datei|Relative pack[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Datei|Relative pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Ressourcendatei – lokale Assembly|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|  
 |Ressourcendatei im Unterordner – lokale Assembly|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|  
@@ -386,7 +388,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>   
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Angeben der Benutzeroberfläche, die beim Starten einer Anwendung angezeigt werden soll  
- <xref:System.Windows.Application.StartupUri%2A>Gibt das erste [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] anzuzeigende wann eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendung gestartet wird. Für eigenständige Anwendungen die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kann ein Fenster aus, wie im folgenden Beispiel gezeigt.  
+ <xref:System.Windows.Application.StartupUri%2A> Gibt das erste [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] anzuzeigende wann eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendung gestartet wird. Für eigenständige Anwendungen die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kann ein Fenster aus, wie im folgenden Beispiel gezeigt.  
   
  [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]  
   
@@ -416,7 +418,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
 <a name="Loading_Image__Audio__and_Video_Files"></a>   
 #### <a name="loading-image-audio-and-video-files"></a>Laden von Bild-, Audio- und Videodateien  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ermöglicht es Anwendungen, die eine Vielzahl von Medientypen, verwenden alle identifiziert und Pack geladen werden können [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], wie in den folgenden Beispielen gezeigt.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ermöglicht es Anwendungen, die eine Vielzahl von Medientypen, verwenden alle identifiziert und Pack geladen werden können [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], wie in den folgenden Beispielen gezeigt.  
   
  [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]  
   

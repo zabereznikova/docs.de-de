@@ -27,20 +27,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 51b940d4a2463be7aaea9d0ff8e48e2b9f47363a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-wpf"></a>Sicherheit (WPF)
-<a name="introduction"></a> Bei der Entwicklung von [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] eigenständige und im Browser gehostete Anwendungen, müssen Sie berücksichtigen, dass das Sicherheitsmodell. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendungen mit uneingeschränkten Berechtigungen ausgeführt ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** Berechtigungssatz), ob mithilfe von Windows Installer (MSI-Datei) mithilfe von XCopy, bereitgestellt oder [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Die Bereitstellung teilweise vertrauenswürdiger eigenständiger WPF-Anwendungen mit ClickOnce wird nicht unterstützt. Eine voll vertrauenswürdige hostanwendung kann jedoch eine teilweise vertrauenswürdigen erstellen <xref:System.AppDomain> mit dem .NET Framework-Add-in-Modell. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-Ins](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a> Wenn Sie eigenständige Windows Presentation Foundation (WPF) und im Browser gehostete Anwendungen zu entwickeln, müssen Sie das Sicherheitsmodell berücksichtigen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendungen mit uneingeschränkten Berechtigungen ausgeführt ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** Berechtigungssatz), ob mithilfe von Windows Installer (MSI-Datei) mithilfe von XCopy, bereitgestellt oder [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Die Bereitstellung teilweise vertrauenswürdiger eigenständiger WPF-Anwendungen mit ClickOnce wird nicht unterstützt. Eine voll vertrauenswürdige hostanwendung kann jedoch eine teilweise vertrauenswürdigen erstellen <xref:System.AppDomain> mit dem .NET Framework-Add-in-Modell. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-Ins](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] im Browser gehostete Anwendungen werden von gehosteten [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] oder Firefox, und kann entweder [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] oder lose [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] Dokumente Weitere Informationen finden Sie unter [WPF-XAML Browser Applications Overview](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Führen Sie im Browser gehostete Anwendungen in einer teilweise vertrauenswürdigen Sicherheits-Sandbox wird standardmäßig die beschränkt der Standardwert ist [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** zone Berechtigungssatz. Dies effektiv isoliert [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] im Browser gehostete Anwendungen auf dem Clientcomputer auf die gleiche Weise, dass erwartet typische Webanwendungen isoliert werden müssen. Eine XBAP kann, abhängig von der Sicherheitszone der Bereitstellungs-URL und der Sicherheitskonfiguration des Clients, Berechtigungen bis zur vollen Vertrauenswürdigkeit erhöhen. Weitere Informationen finden Sie unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
- Dieses Thema beschreibt das Sicherheitsmodell für [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] eigenständige und im Browser gehostete Anwendungen.  
+ Dieses Thema erläutert das Sicherheitsmodell für eigenständige Windows Presentation Foundation (WPF) und im Browser gehostete Anwendungen.  
   
  Dieses Thema enthält folgende Abschnitte:  
   

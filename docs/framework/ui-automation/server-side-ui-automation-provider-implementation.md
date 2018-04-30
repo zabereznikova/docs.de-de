@@ -1,28 +1,30 @@
 ---
-title: "Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters"
-ms.custom: 
+title: Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - server-side UI Automation provider implementation
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d25f561444cd672e8842711025f4299c375d6bb4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0068efb6f45fca15232be61a8a997f6df94f99a5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
 > [!NOTE]
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/19/2018
   
  In diesem Abschnitt wird beschrieben, wie ein serverseitiger Benutzeroberflächenautomatisierungs-Anbieter für ein benutzerdefiniertes Steuerelement implementiert wird.  
   
- Die Implementierungen für [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] -Elemente und Nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente (z. B. für [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]entworfene Elemente) unterscheiden sich grundlegend. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] über eine von <xref:System.Windows.Automation.Peers.AutomationPeer>abgeleitete Klasse. Nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente stellen die Unterstützung durch Implementierungen von Anbieterschnittstellen bereit.  
+ Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Elemente (z. B. für entworfene [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) unterscheidet sich grundlegend. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] über eine von <xref:System.Windows.Automation.Peers.AutomationPeer>abgeleitete Klasse. Nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente stellen die Unterstützung durch Implementierungen von Anbieterschnittstellen bereit.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  

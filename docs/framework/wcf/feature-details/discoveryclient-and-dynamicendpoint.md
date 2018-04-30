@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c652e58b20a6fe836e647ed07c6a84328ee4631e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3e7c8c5700159b5568a5a455b21f738d1be43dfe
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient und DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> und <xref:System.ServiceModel.Discovery.DynamicEndpoint> sind zwei Klassen, die auf der Clientseite zum Suchen nach Diensten verwendet werden. <xref:System.ServiceModel.Discovery.DiscoveryClient> stellt eine Liste der Dienste bereit, die bestimmten Kriterien entsprechen, und ermöglicht Ihnen das Herstellen einer Verbindung mit den Diensten. <xref:System.ServiceModel.Discovery.DynamicEndpoint> führt den gleichen Vorgang aus und stellt zusätzlich eine Verbindung mit einem der gefundenen Dienste her. Jeder Endpunkt kann als <xref:System.ServiceModel.Discovery.DynamicEndpoint> festgelegt werden, und die Suchkriterien können auch in der Konfiguration hinzugefügt werden. <xref:System.ServiceModel.Discovery.DynamicEndpoint> ist hilfreich, wenn Sie die Suche in der Projektmappe benötigen, die Clientlogik jedoch nicht ändern möchten – Sie müssen nur die Endpunkte ändern. <xref:System.ServiceModel.Discovery.DiscoveryClient> bietet Ihnen jedoch eine präzisere Steuerung des Suchvorgangs. Die Verwendungsmöglichkeiten und Vorteile der Klassen werden unten näher beschrieben.  
@@ -92,7 +92,7 @@ static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs 
         }  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] asynchrone Aufrufe suchen, finden Sie unter [asynchrone suchen](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
+ Finden Sie weitere Informationen über asynchrone Aufrufe, finden Sie unter [asynchrone suchen](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
   
  Verwenden Sie die Methoden <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> und <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveAsync%28System.ServiceModel.Discovery.ResolveCriteria%29>, um anhand der Endpunktadresse nach einem Dienst zu suchen. Dies ist hilfreich, wenn die Endpunktadresse im Netzwerk nicht adressierbar ist. Die Resolve-Methoden verwenden eine Instanz von <xref:System.ServiceModel.Discovery.ResolveCriteria>. Damit können Sie die Endpunktadresse des Diensts, den Sie auflösen, die Höchstdauer des Auflösungsvorgangs und eine Gruppe von Erweiterungen angeben. Das folgende Beispiel zeigt, wie Sie die <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A>-Methode zum Auflösen eines Diensts verwenden.  
   

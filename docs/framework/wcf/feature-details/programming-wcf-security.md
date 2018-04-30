@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6c8769511f608834c7539779d83977880e1d4093
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="programming-wcf-security"></a>Programmieren der WCF-Sicherheit
 In diesem Thema werden die grundlegenden Programmierungsaufgaben beschrieben, mit denen eine sichere [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung erstellt werden kann. Dieses Thema behandelt nur Authentifizierung, Vertraulichkeit und Integrität, Oberbegriff *übertragungssicherheit*. Autorisierung (Kontrolle des Zugriffs auf Ressourcen oder Dienste); behandelt in diesem Thema nicht. Weitere Informationen zur Autorisierung finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -48,7 +48,7 @@ In diesem Thema werden die grundlegenden Programmierungsaufgaben beschrieben, mi
   
     1.  `Transport`  
   
-         Die Transportsicherheit ist vom Mechanismus abhängig, den die ausgewählte Bindung verwendet. Wenn Sie beispielsweise `WSHttpBinding` verwenden, wird als Sicherheitsmechanismus Secure Sockets Layer (SSL) verwendet, was auch der Mechanismus für das HTTPS-Protokoll ist. Der Hauptvorteil der Transportsicherheit besteht im Allgemeinen darin, dass sie unabhängig von der Transportmethode einen guten Durchsatz ermöglicht. Es gibt jedoch zwei Einschränkungen: Der Transportmechanismus bestimmt den Anmeldeinformationstyp, der zum Authentifizieren eines Benutzers verwendet wird. Dies ist jedoch nur dann von Nachteil, wenn ein Dienst mit anderen Diensten zusammenarbeiten muss, für die unterschiedliche Anmeldeinformationstypen notwendig sind. Darüber hinaus wird die Sicherheit nicht auf Nachrichtenebene angewendet, vielmehr wird die Sicherheit per Hop-by-Hop-Methode anstelle einer End-to-End-Methode implementiert. Diese zweite Einschränkung ist nur dann ein Problem, wenn der Nachrichtenpfad zwischen Client und Dienst Vermittler umfasst. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] welcher Transport zu verwenden, finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Mithilfe der transportsicherheit, finden Sie unter [Transport Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         Die Transportsicherheit ist vom Mechanismus abhängig, den die ausgewählte Bindung verwendet. Wenn Sie beispielsweise `WSHttpBinding` verwenden, wird als Sicherheitsmechanismus Secure Sockets Layer (SSL) verwendet, was auch der Mechanismus für das HTTPS-Protokoll ist. Der Hauptvorteil der Transportsicherheit besteht im Allgemeinen darin, dass sie unabhängig von der Transportmethode einen guten Durchsatz ermöglicht. Es gibt jedoch zwei Einschränkungen: Der Transportmechanismus bestimmt den Anmeldeinformationstyp, der zum Authentifizieren eines Benutzers verwendet wird. Dies ist jedoch nur dann von Nachteil, wenn ein Dienst mit anderen Diensten zusammenarbeiten muss, für die unterschiedliche Anmeldeinformationstypen notwendig sind. Darüber hinaus wird die Sicherheit nicht auf Nachrichtenebene angewendet, vielmehr wird die Sicherheit per Hop-by-Hop-Methode anstelle einer End-to-End-Methode implementiert. Diese zweite Einschränkung ist nur dann ein Problem, wenn der Nachrichtenpfad zwischen Client und Dienst Vermittler umfasst. Weitere Informationen zu der Transporttyp, finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Weitere Informationen zur Verwendung von transportsicherheit finden Sie unter [Transport Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   

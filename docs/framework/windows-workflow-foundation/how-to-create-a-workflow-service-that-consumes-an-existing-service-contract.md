@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09c3f7656284dd73dd5f50c4ef9f77cd5adcbfe7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c7c28d8c2edbda5a42a290786b0ff40e3ab6dd5b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Vorgehensweise: Erstellen eines Workflowdiensts zum Verarbeiten eines vorhandenen Dienstvertrags
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Funktionen verbessern die Integration zwischen Webdiensten und Workflows in Form der Vertrag zuerst-Workflowentwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox.  
   
 > [!NOTE]
->  Dieses Thema enthält eine schrittweise Anleitung zum Erstellen eines Vertrag zuerst-Workflowdiensts. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Vertrag zuerst-Entwicklung finden Sie unter [Vertrag zuerst-Workflowdienstentwicklung](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
+>  Dieses Thema enthält eine schrittweise Anleitung zum Erstellen eines Vertrag zuerst-Workflowdiensts. Weitere Informationen zur Entwicklung von Vertrag zuerst-Workflow Service finden Sie unter [Vertrag zuerst-Workflowdienstentwicklung](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
   
 ### <a name="creating-the-workflow-project"></a>Erstellen des Workflowprojekts  
   

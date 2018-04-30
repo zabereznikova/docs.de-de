@@ -1,23 +1,24 @@
 ---
 title: SQLStoreExtensibility
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 722c7cda49b2efc4c146970c69cc5e3c7bbad9b0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 In diesem Beispiel werden die Verwendung und die Konfiguration von höher gestuften Eigenschaften im SQL-Workflowinstanzspeicher veranschaulicht. Beim SQL-Workflowinstanzspeicher handelt es sich um die SQL-basierte Implementierung eines Instanzspeichers. Diese ermöglicht einer Instanz das Speichern und Laden von Zuständen in eine bzw. aus einer SQL Server- oder SQL Server Express-Datenbank. Die Speichererweiterbarkeitsfunktion ermöglicht es Benutzern, Eigenschaften zu definieren, die im Instanzspeicher gespeichert werden. Diese Eigenschaften werden in einer höher gestuften Eigenschaftenansicht angezeigt, die es Benutzern ermöglicht, sie abzufragen.  
@@ -62,7 +63,7 @@ In diesem Beispiel werden die Verwendung und die Konfiguration von höher gestuf
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>So überprüfen Sie die ordnungsgemäße Funktionsfähigkeit des Beispiels  
   
-1.  Verwenden Sie SQL Server Management Studio zum Anzeigen des Inhalts der instanztabelle dazu **Datenbanken**, **InstanceStore**, und klicken Sie dann  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** im Objekt-Explorer mit der Maustaste **System.ServiceModel.Activities.DurableInstancing.InstanceTable** und auswählen **Wählen Sie die oberste 1000 Zeilen**. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio finden Sie unter [Einführung in SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Verwenden Sie SQL Server Management Studio zum Anzeigen des Inhalts der instanztabelle dazu **Datenbanken**, **InstanceStore**, und klicken Sie dann  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** im Objekt-Explorer mit der Maustaste **System.ServiceModel.Activities.DurableInstancing.InstanceTable** und auswählen **Wählen Sie die oberste 1000 Zeilen**. Weitere Informationen zu SQL Server Management Studio finden Sie unter [Einführung in SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Achten Sie auf die aufgeführten Workflowinstanzen.  
   

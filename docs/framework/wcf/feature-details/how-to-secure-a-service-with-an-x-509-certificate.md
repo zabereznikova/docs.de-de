@@ -19,16 +19,16 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat
 Die Sicherung eines Diensts mithilfe eines X.509-Zertifikats ist eine grundlegende Technik, die von den meisten Bindungen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet wird. Dieses Thema führt durch die Schritte der Konfiguration eines selbst gehosteten Diensts mit einem X.509-Zertifikat.  
   
- Eine Voraussetzung ist ein gültiges Zertifikat, das zur Authentifizierung des Diensts verwendet werden kann. Das Zertifikat muss von einer vertrauenswürdigen Zertifizierungsstelle zum Server ausgegeben werden. Wenn das Zertifikat ungültig ist, vertrauen die Clients, die versuchen, den Dienst zu verwenden, dem Dienst nicht, und es wird keine Verbindung aufgebaut. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Eine Voraussetzung ist ein gültiges Zertifikat, das zur Authentifizierung des Diensts verwendet werden kann. Das Zertifikat muss von einer vertrauenswürdigen Zertifizierungsstelle zum Server ausgegeben werden. Wenn das Zertifikat ungültig ist, vertrauen die Clients, die versuchen, den Dienst zu verwenden, dem Dienst nicht, und es wird keine Verbindung aufgebaut. Weitere Informationen zur Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>So konfigurieren Sie einen Dienst mit einem Zertifikat mithilfe von Code  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="information-disclosure"></a>Veröffentlichung von Informationen
 Die Veröffentlichung von Informationen ermöglicht Angreifern, an wertvolle Informationen über ein System zu gelangen. Daher sollten Sie immer genau überlegen, welche Informationen offengelegt werden und ob sie von anderen Personen böswillig missbraucht werden könnten. Im Folgenden finden Sie eine Übersicht über mögliche Angriffe auf veröffentlichte Informationen mit den entsprechenden Entschärfungen.  
@@ -29,7 +29,7 @@ Die Veröffentlichung von Informationen ermöglicht Angreifern, an wertvolle Inf
  Falls Sie die Sicherheit auf Nachrichtenebene mit einer HTTP-Transportschicht verwenden, dürfen Sie nicht vergessen, dass bei dieser Sicherheitsstufe HTTP-Header nicht geschützt sind. HTTP-Header lassen sich nur durch einen HTTPS-Transport, nicht jedoch durch HTTP schützen. Beim HTTPS-Transport wird die gesamte Nachricht einschließlich der HTTP-Header mit dem SSL-Protokoll (Secure Sockets Layer) verschlüsselt.  
   
 ## <a name="policy-information"></a>Richtlinieninformationen  
- Der Schutz von Richtlinien ist sehr wichtig, vor allem in Verbundszenarien, bei denen die Richtlinien auch vertrauliche Informationen zu den Anforderungen für ausgegebene Token und zu den Tokenausstellern enthalten. In diesen Fällen sollte möglichst der Richtlinienendpunkt des Verbunddiensts gesichert werden, damit Angreifer keine Informationen zum Dienst, wie zum Beispiel Informationen zur Art der Ansprüche, die in das ausgegebene Token aufgenommen werden müssen, einholen oder keine Clients an bösartige Tokenaussteller umleiten können. So können Angreifer beispielsweise Benutzernamen-/Kennwortkombinationen ermitteln, indem sie die Vertrauenskette des Verbunds so umkonfigurieren, dass sie bei einem Aussteller endet, der einen Man-In-The-Middle-Angriff (MITM-Angriff, Janusangriff) durchgeführt hat. Auch sollte von Verbundclients, die ihre Bindungen über den Abruf einer Richtlinie erhalten, überprüft werden, ob die Aussteller in der bezogenen Vertrauenskette des Verbunds tatsächlich vertrauenswürdig sind. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Verbundszenarien, finden Sie unter [Verbund](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Der Schutz von Richtlinien ist sehr wichtig, vor allem in Verbundszenarien, bei denen die Richtlinien auch vertrauliche Informationen zu den Anforderungen für ausgegebene Token und zu den Tokenausstellern enthalten. In diesen Fällen sollte möglichst der Richtlinienendpunkt des Verbunddiensts gesichert werden, damit Angreifer keine Informationen zum Dienst, wie zum Beispiel Informationen zur Art der Ansprüche, die in das ausgegebene Token aufgenommen werden müssen, einholen oder keine Clients an bösartige Tokenaussteller umleiten können. So können Angreifer beispielsweise Benutzernamen-/Kennwortkombinationen ermitteln, indem sie die Vertrauenskette des Verbunds so umkonfigurieren, dass sie bei einem Aussteller endet, der einen Man-In-The-Middle-Angriff (MITM-Angriff, Janusangriff) durchgeführt hat. Auch sollte von Verbundclients, die ihre Bindungen über den Abruf einer Richtlinie erhalten, überprüft werden, ob die Aussteller in der bezogenen Vertrauenskette des Verbunds tatsächlich vertrauenswürdig sind. Weitere Informationen zu Verbundszenarien, finden Sie unter [Verbund](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Anspruchsinformationen in Speicherabbildern  
  Falls in einer Anwendung ein Fehler auftritt, können Protokolldateien (z. B. die von Dr. Watson erzeugten Protokolldateien) Anspruchsinformationen enthalten. Diese Informationen sollten nicht für andere Einheiten in der Organisation wie Supportteams exportiert werden, da sonst auch die Anspruchsinformationen mit persönlichen Daten exportiert werden. Sie können diese Gefahr umgehen, indem Sie keine Protokolldateien an Unbekannte senden. Weitere Informationen finden Sie unter [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
@@ -67,7 +67,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Da im Code kein Domänenname angegeben wird, wird NTLM verwendet.  
   
- Falls bei Verwendung der Funktion für die Endpunktidentität zwar eine Domäne, jedoch ein ungültiger Dienstprinzipalname angegeben wird, wird NTLM verwendet. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Identität des Endpunkts angegeben wird, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Falls bei Verwendung der Funktion für die Endpunktidentität zwar eine Domäne, jedoch ein ungültiger Dienstprinzipalname angegeben wird, wird NTLM verwendet. Weitere Informationen dazu, wie die Identität des Endpunkts angegeben wird, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="selecting-a-credential-type"></a>Wählen eines Typs von Anmeldeinformationen
 *Anmeldeinformationen* sind die Daten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] können Anmeldeinformationen viele Formate haben, zum Beispiel Benutzernamentoken und X.509-Zertifikate. In diesem Thema werden Anmeldeinformationen, ihre Verwendung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und die richtige Auswahl von Anmeldeinformationen für Ihre Anwendung beschrieben.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/28/2018
 > [!IMPORTANT]
 >  Wenn die Identität nicht gewechselt werden kann (also wenn das Einrichten eines Sicherheitskontexts aktiviert ist (Standardeinstellung)), kann ein bestimmtes Verhalten auftreten. Wenn Sie einen Dienst erstellen, der mit einem anderen Dienst kommuniziert, können Sie die Identität, die zum Öffnen des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients für den anderen Dienst verwendet wird, nicht ändern. Dies wird zu einem Problem, wenn mehrere Clients den ersten Dienst verwenden dürfen und der Dienst die Identität der Clients annimmt, wenn er auf den anderen Dienst zugreift. Wenn der Dienst denselben Client für alle Aufrufer wiederverwendet, erfolgen alle Aufrufe des anderen Dienstes unter der Identität des ersten Aufrufers, der zum Öffnen des Clients für den anderen Dienst verwendet wurde. Anders ausgedrückt: Der Dienst verwendet die Identität des ersten Clients für alle Clients, um mit dem anderen Dienst zu kommunizieren. Dies kann zur Erweiterung von Berechtigungen führen. Wenn dies nicht das für den Dienst erwünschte Verhalten darstellt, müssen Sie jeden Aufrufer verfolgen und für jeden Aufrufer einen neuen Client für den anderen Dienst erstellen. Außerdem müssen Sie sicherstellen, dass der Dienst nur den richtigen Client für den jeweiligen Aufrufer verwendet, um mit dem zweiten Dienst zu kommunizieren.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Anmeldeinformationen und sichere Sitzungen finden Sie unter [Sicherheitsüberlegungen für Sicherheitssitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ Weitere Informationen zu Anmeldeinformationen und sichere Sitzungen, finden Sie unter [Sicherheitsüberlegungen für Sicherheitssitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

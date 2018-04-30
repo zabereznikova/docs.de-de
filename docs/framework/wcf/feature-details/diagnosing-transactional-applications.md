@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Erkennen einer Transaktionsanwendung
 Dieses Thema beschreibt die Verwendung der Verwaltungs- und Diagnosefunktionen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zum Beheben von Fehlern in der Transaktionsanwendung.  
@@ -58,7 +58,7 @@ Dieses Thema beschreibt die Verwendung der Verwaltungs- und Diagnosefunktionen i
 |Übergegangene Transaktionen pro Sekunde|Die Anzahl der Transaktionen, die innerhalb von einer Sekunde an diesem Endpunkt in Vorgänge übergegangen sind. Dieser Indikator wird jedes Mal gesteigert, wenn eine Nachricht, die an den Endpunkt gesendet wird, eine Transaktion enthält.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows-Verwaltungsinstrumentation (Windows Management Instrumentation)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] macht zur Laufzeit Inspektionsdaten eines Diensts über einen Windows-Verwaltungsinstrumentation (WMI)-Anbieter von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügbar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zugreifen auf WMI-Daten finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] macht zur Laufzeit Inspektionsdaten eines Diensts über einen Windows-Verwaltungsinstrumentation (WMI)-Anbieter von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügbar. Weitere Informationen zum Zugreifen auf WMI-Daten finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Einige schreibgeschützte WMI-Eigenschaften geben die angewendeten Transaktionseinstellungen für einen Dienst an. In der folgenden Tabelle sind alle diese Einstellungen aufgeführt.  
   

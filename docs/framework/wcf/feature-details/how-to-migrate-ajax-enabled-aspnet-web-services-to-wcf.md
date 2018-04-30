@@ -1,24 +1,26 @@
 ---
 title: 'Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF
 In diesem Thema werden Verfahren beschrieben, um einen grundlegenden ASP.NET AJAX-Dienst zu einem entsprechenden AJAX-aktivierten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst zu migrieren. Es wird veranschaulicht, wie eine funktional äquivalente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Version eines ASP.NET AJAX-Diensts erstellt wird. Die beiden Dienste können parallel eingesetzt werden, oder der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst wird verwendet, um den ASP.NET AJAX-Dienst zu ersetzen.  
@@ -33,7 +35,7 @@ In diesem Thema werden Verfahren beschrieben, um einen grundlegenden ASP.NET AJA
   
  Der Code, der sich aus den hier besprochenen Verfahren ergibt, wird in dem Beispiel im Anschluss an das Verfahren bereitgestellt.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Verfügbarmachen von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Diensts über einen AJAX-aktivierten Endpunkt die [wie: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) Thema.  
+ Weitere Informationen zum Bereitstellen von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Diensts über einen AJAX-aktivierten Endpunkt die [wie: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) Thema.  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>So erstellen und testen Sie die ASP.NET-Webdienstanwendung  
   
@@ -206,7 +208,7 @@ d.Add("two", 2);
   
 -   [{"Key":"one","Value":1},{"Key":"two","Value":2}] vom <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
   
--   {"one": 1, "two": 2} vom ASP.NET AJAX<xref:System.Web.Script.Serialization.JavaScriptSerializer>  
+-   {"one": 1, "two": 2} vom ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>  
   
  Der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ist insofern leistungsfähiger, als dass er Wörterbücher handhaben kann, bei denen der Schlüsseltyp keine Zeichenfolge ist. Der <xref:System.Web.Script.Serialization.JavaScriptSerializer> kann dies nicht. Letzterer ist jedoch JSON-freundlicher.  
   
@@ -215,11 +217,11 @@ d.Add("two", 2);
 |Unterschiedskategorie|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|  
 |-----------------------------|--------------------------------|---------------------------------------|  
 |Deserialisieren des leeren Puffers (new byte[0]) in <xref:System.Object> (oder <xref:System.Uri> oder andere Klassen).|SerializationException|null|  
-|Serialisierung von <xref:System.DBNull.Value>|{} (oder {"__type":"#System"})|Null|  
+|Serialisierung von <xref:System.DBNull.Value>|{} (oder {"__type": "#System"})|Null|  
 |Serialisierung der privaten Member von [Serializable]-Typen.|serialisiert|nicht serialisiert|  
 |Serialisierung der öffentlichen Eigenschaften von <xref:System.Runtime.Serialization.ISerializable>-Typen|nicht serialisiert|serialisiert|  
 |"Erweiterungen" von JSON|Entspricht der JSON-Spezifikation, die erfordert, dass Objektmembernamen in Anführungszeichen gesetzt werden müssen ({"a":"hello"}).|Lässt Namen von Objektmembern ohne Anführungszeichen zu ({a:"hello"}).|  
-|<xref:System.DateTime> UTC (Coordinated Universal Time)|Unterstützt keine Format "\\/Date(123456789U)\\/" oder "\\/Date\\(\d+ (U &#124; (\\+\\-[\d\{4\]}))?\\) \\\\/)".|Unterstützt das Format "\\/Date(123456789U)\\/" und "\\/Date\\(\d+ (U &#124; (\\+\\-[\d\{4\]}))?\\) \\ \\/) "als DateTime-Werte.|  
+|<xref:System.DateTime> UTC (Coordinated Universal Time)|Unterstützt keine Format "\\/Date(123456789U)\\/" oder "\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Unterstützt das Format "\\/Date(123456789U)\\/" und "\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "als DateTime-Werte.|  
 |Darstellung von Wörterbüchern|Ein Array von KeyValuePair\<K, V >, behandelt Schlüsseltypen, die keine Zeichenfolgen sind.|Als tatsächliche JSON-Objekte, behandelt aber nur Schlüsseltypen, die Zeichenfolgen sind.|  
 |Escapezeichen|Immer mit einem Schrägstrich (/) als Escapezeichen; lässt nie ungültige JSON-Zeichen ohne Escapezeichen wie "\n" zu.|Mit einem Schrägstrich (/) als Escapezeichen für DateTime-Werte.|  
   
