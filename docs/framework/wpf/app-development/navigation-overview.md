@@ -38,14 +38,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7c84c5742fcbb0d1554bd6fc379fc44f3b9cb055
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: HT
+ms.openlocfilehash: bf7ec6cc18461a906e889a997968677d0c63df20
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="navigation-overview"></a>Übersicht über die Navigation
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Navigation im Webbrowserstil, die verwendet werden kann in zwei Arten von Anwendungen unterstützt: eigenständige Anwendungen und [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Der Paketinhalt für die Navigation [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet die <xref:System.Windows.Controls.Page> Klasse. Können Sie von einem navigieren <xref:System.Windows.Controls.Page> in eine andere deklarativ durch die Verwendung einer <xref:System.Windows.Documents.Hyperlink>, oder programmgesteuert durch die Verwendung der <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verwendet das Journal, um Seiten zu speichern, von denen weg navigiert wurde, und um wieder zu den Seiten zurück zu navigieren.  
+Windows Presentation Foundation (WPF) unterstützt die Navigation im Webbrowserstil, die verwendet werden kann in zwei Arten von Anwendungen: eigenständige Anwendungen und [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Der Paketinhalt für die Navigation [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet die <xref:System.Windows.Controls.Page> Klasse. Können Sie von einem navigieren <xref:System.Windows.Controls.Page> in eine andere deklarativ durch die Verwendung einer <xref:System.Windows.Documents.Hyperlink>, oder programmgesteuert durch die Verwendung der <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verwendet das Journal, um Seiten zu speichern, von denen weg navigiert wurde, und um wieder zu den Seiten zurück zu navigieren.  
   
  <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>, und die Erfassung bilden den Kern der angebotenen Unterstützung für die Navigation [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. In dieser Übersicht wird diese Funktionen ausführlich erklärt, bevor auf Erweiterte Navigation-Unterstützung, die Navigation zu loose enthält [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Dateien [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] Dateien und Objekte.  
   

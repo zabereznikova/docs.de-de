@@ -33,11 +33,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: ec0c7645d4d6a1affe78e23a9498ea5f5f8d5235
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xaml-overview-wpf"></a>Übersicht über XAML (WPF)
 Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML zum Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwenden können. Dieses Thema beschreibt speziell XAML entsprechend der Implementierung durch [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML selbst geht über das in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementierte Sprachkonzept hinaus.  
@@ -46,7 +46,7 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
   
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>Was ist XAML?  
- XAML ist eine deklarative Markupsprache. In seiner Anwendung auf das [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]-Programmiermodell vereinfacht XAML das Erstellen einer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] für eine [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]-Anwendung. Sie können sichtbare Elemente der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] im deklarativen XAML-Markup erstellen und anschließend die Definition der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] mithilfe von CodeBehind-Dateien, die über partielle Klassendefinitionen an das Markup geknüpft sind, von der Laufzeitlogik trennen. XAML repräsentiert direkt die Instanziierung von Objekten in einem spezifischen Satz von in Assemblys definierten Unterstützungstypen dar. Dies ist ein anderer Ansatz als der anderer Markupsprachen, die üblicherweise interpretierte Sprachen sind, die keine direkte Verbindung zu einem System von Unterstützungstypen besitzen. XAML ermöglicht einen Workflow, bei dem separate Parteien auf der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] und der Logik einer Anwendung unter der Verwendung möglicherweise unterschiedlicher Tools arbeiten können.  
+ XAML ist eine deklarative Markupsprache. Entsprechend der für die Anwendung auf das .NET Framework-Programmiermodell XAML vereinfacht das Erstellen einer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] für .NET Framework-Anwendung. Sie können sichtbare Elemente der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] im deklarativen XAML-Markup erstellen und anschließend die Definition der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] mithilfe von CodeBehind-Dateien, die über partielle Klassendefinitionen an das Markup geknüpft sind, von der Laufzeitlogik trennen. XAML repräsentiert direkt die Instanziierung von Objekten in einem spezifischen Satz von in Assemblys definierten Unterstützungstypen dar. Dies ist ein anderer Ansatz als der anderer Markupsprachen, die üblicherweise interpretierte Sprachen sind, die keine direkte Verbindung zu einem System von Unterstützungstypen besitzen. XAML ermöglicht einen Workflow, bei dem separate Parteien auf der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] und der Logik einer Anwendung unter der Verwendung möglicherweise unterschiedlicher Tools arbeiten können.  
   
  Bei der Darstellung als Text sind XAML-Dateien XML-Dateien, die in der Regel die `.xaml`-Erweiterung haben. Die Dateien können in jeder XML-Codierung codiert sein, üblich ist jedoch UTF-8-Codierung.  
   
