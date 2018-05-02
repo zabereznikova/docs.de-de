@@ -1,6 +1,6 @@
 ---
 title: Adressierbarkeit von Microservices und die Dienstregistrierung
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Adressierbarkeit von Microservices und die Dienstregistrierung"
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Adressierbarkeit von Microservices und die Dienstregistrierung
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cc26b22d18d460fe6870da7360d73368e20f71d2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5770be2a1a6284866dc768a14c7b6ec9525be487
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Adressierbarkeit von Microservices und die Dienstregistrierung
 
-Jeder Microservice hat einen eindeutigen Namen (URL), der verwendet wird, um den Speicherort aufzulösen. Ihr Microservice muss adressierbar sein, unabhängig davon, wo er ausgeführt wird. Wenn Sie darüber nachdenken müssen, welcher Computer einen bestimmten Microservice ausführt, können schnell Fehler auftreten. Ähnlich wie DNS eine URL zu einem bestimmten Computer auflöst, benötigt Ihr Microservice einen eindeutigen Namen, damit seine aktuelle Position ermittelt werden kann. Microservices benötigen adressierbare Namen, um von der Infrastruktur unabhängig zu sein, auf der sie ausgeführt werden. Da eine [Dienstregistrierung](http://microservices.io/patterns/service-registry.html) vorhanden sein muss, impliziert dies, dass eine Interaktion zwischen der Bereitstellung und der Erkennung besteht. In gleicher Weise muss der Registrierungsdienst angeben können, wo der Dienst momentan ausgeführt wird, wenn bei einem Computer ein Fehler auftritt.
+Jeder Microservice hat einen eindeutigen Namen (URL), der verwendet wird, um den Speicherort aufzulösen. Ihr Microservice muss adressierbar sein, unabhängig davon, wo er ausgeführt wird. Wenn Sie darüber nachdenken müssen, welcher Computer einen bestimmten Microservice ausführt, können schnell Fehler auftreten. Ähnlich wie DNS eine URL zu einem bestimmten Computer auflöst, benötigt Ihr Microservice einen eindeutigen Namen, damit seine aktuelle Position ermittelt werden kann. Microservices benötigen adressierbare Namen, um von der Infrastruktur unabhängig zu sein, auf der sie ausgeführt werden. Da eine [Dienstregistrierung](https://microservices.io/patterns/service-registry.html) vorhanden sein muss, impliziert dies, dass eine Interaktion zwischen der Bereitstellung und der Erkennung besteht. In gleicher Weise muss der Registrierungsdienst angeben können, wo der Dienst momentan ausgeführt wird, wenn bei einem Computer ein Fehler auftritt.
 
-Das [Muster der Dienstregistrierung](http://microservices.io/patterns/service-registry.html) ist ein Schlüsselteil der Diensterkennung. Die Registrierung ist eine Datenbank, die Netzwerkadressen und Dienstinstanzen enthält. Eine Dienstregistrierung muss hoch verfügbar und auf dem neuesten Stand sein. Clients könnten Netzwerkadressen zwischenspeichern, die sie von der Dienstregistrierung erhalten. Allerdings veralten diese Informationen, und Clients können die Dienstinstanzen nicht mehr ermitteln. Folglich besteht eine Dienstregistrierung aus einem Cluster von Servern, die ein Replikationsprotokoll verwenden, um die Konsistenz zu gewährleisten.
+Das [Muster der Dienstregistrierung](https://microservices.io/patterns/service-registry.html) ist ein Schlüsselteil der Diensterkennung. Die Registrierung ist eine Datenbank, die Netzwerkadressen und Dienstinstanzen enthält. Eine Dienstregistrierung muss hoch verfügbar und auf dem neuesten Stand sein. Clients könnten Netzwerkadressen zwischenspeichern, die sie von der Dienstregistrierung erhalten. Allerdings veralten diese Informationen, und Clients können die Dienstinstanzen nicht mehr ermitteln. Folglich besteht eine Dienstregistrierung aus einem Cluster von Servern, die ein Replikationsprotokoll verwenden, um die Konsistenz zu gewährleisten.
 
 In manchen Bereitstellungsumgebungen für Microservices (auch Clusters genannt, wie in einem späteren Abschnitt erklärt wird) ist die Diensterkennung integriert. Zum Beispiel können Kubernetes und DC/OS mit Marathon innerhalb einer Azure Container Service-Umgebung die Registrierung und die Registrierungsaufhebung von Dienstinstanzen verarbeiten. Diese führen ebenfalls einen Proxy auf jedem Clusterhost aus, der die Rolle eines serverseitigen Suchrouters übernimmt. Ein weiteres Beispiel ist Azure Service Fabric, was ebenfalls eine Dienstregistrierung über einen integrierten Namensdienst bereitstellt.
 
@@ -30,12 +30,12 @@ Beachten Sie, dass es eine gewisse Überschneidung zwischen der Dienstregistrier
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 -   **Chris Richardson. Pattern: Service registry (Muster: Dienstregistrierung)**
-    *http://microservices.io/patterns/service-registry.html*
+    *https://microservices.io/patterns/service-registry.html*
 
 -   **Auth0. The Service Registry (Die Dienstregistrierung)**
     [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
 
--   **Gabriel Schenker. Service discovery (Diensterkennung)**
+-   **Gabriel Schenker. Service discovery (Dienstermittlung)**
     [*https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/*](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
 
 

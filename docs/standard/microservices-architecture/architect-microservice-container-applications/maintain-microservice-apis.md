@@ -1,6 +1,6 @@
 ---
-title: "Erstellen, Weiterentwickeln und Verwalten von Versionen von Microservice-APIs und -verträgen"
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Erstellen, Weiterentwickeln und Verwalten von Versionen von Microservice-APIs und -verträgen"
+title: Erstellen, Weiterentwickeln und Verwalten von Versionen von Microservice-APIs und -verträgen
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Erstellen, Weiterentwickeln und Verwalten von Versionen von Microservice-APIs und -verträgen
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3aaa7eaa8bc535874369cf08414f2211cae1bed9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7a80405f0a206cfaa0462392eddfc95878353cd7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Erstellen, Weiterentwickeln und Verwalten von Versionen von Microservice-APIs und -verträgen
 
@@ -34,12 +34,12 @@ Letztendlich ist [Hypermedia](https://www.infoq.com/articles/mark-baker-hypermed
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 -   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Versionsverwaltung von RESTful-Web-APIs in ASP.NET Core leicht gemacht)**
-    <http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 -   **Versionsverwaltung einer RESTful-Web-API**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. Versionsverwaltung, Hypermedia und REST**
+-   **Roy Fielding. Versioning, Hypermedia, and REST (Versionsverwaltung, Hypermedia und REST)**
     <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 
