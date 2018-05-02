@@ -1,6 +1,6 @@
 ---
 title: Tupel (F#)
-description: "Informationen Sie zu F#-Tupel, eine Gruppierung von unbenannte jedoch geordnete Werte möglicherweise von anderen Typen."
+description: Informationen Sie zu F#-Tupel, eine Gruppierung von unbenannte jedoch geordnete Werte möglicherweise von anderen Typen.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
-ms.translationtype: MT
+ms.openlocfilehash: e0a5e5eb08e13bd5cbe9f88a47d4cf4bba19ea22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tuples"></a>Tupel
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interoperation mit c# Tupel
 
-C#-7 eingeführt Tupel in der Sprache an.  Tupel in C# geschrieben sind Strukturen und Struktur Tupel in f# entsprechen.  Wenn Sie mit c# zusammenarbeiten müssen, müssen Sie die Struktur Tupel verwenden.
+C#-7.0 eingeführt Tupel in der Sprache.  Tupel in C# geschrieben sind Strukturen und Struktur Tupel in f# entsprechen.  Wenn Sie mit c# zusammenarbeiten müssen, müssen Sie die Struktur Tupel verwenden.
 
 Dies ist einfach.  Angenommen Sie, Sie verfügen über ein Tupel an eine C#-Klasse übergeben und dann verwenden das Ergebnis, das auch ein Tupel ist:
 
@@ -130,7 +130,7 @@ Tupel werden in Objekte eines von mehreren generischen Typen, die alle benannten
 
 ### <a name="compiled-form-of-struct-tuples"></a>Kompilierte Form der Tupel-Struktur
 
-Struct-Tupel (z. B. `struct (x, y)`), unterscheiden sich grundlegend von Verweis Tupel.  Sie werden in kompiliert die <xref:System.ValueTuple> Typ, durch Stelligkeit oder die Anzahl von Typparametern überlastet.  Gleichwertig zu [C#-7-Tupel](../../csharp/tuples.md) und [Visual Basic 2017 Tupel](../../visual-basic/programming-guide/language-features/data-types/tuples.md), und bietet Interoperabilität bidirektional.
+Struct-Tupel (z. B. `struct (x, y)`), unterscheiden sich grundlegend von Verweis Tupel.  Sie werden in kompiliert die <xref:System.ValueTuple> Typ, durch Stelligkeit oder die Anzahl von Typparametern überlastet.  Gleichwertig zu [c# 7.0 Tupel](../../csharp/tuples.md) und [Visual Basic 2017 Tupel](../../visual-basic/programming-guide/language-features/data-types/tuples.md), und bietet Interoperabilität bidirektional.
 
 ## <a name="see-also"></a>Siehe auch
 [F#-Sprachreferenz](index.md)

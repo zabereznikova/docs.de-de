@@ -38,11 +38,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 07609671d061851e6ede2f2bd90e4bee38e43159
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7c84c5742fcbb0d1554bd6fc379fc44f3b9cb055
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="navigation-overview"></a>Übersicht über die Navigation
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Navigation im Webbrowserstil, die verwendet werden kann in zwei Arten von Anwendungen unterstützt: eigenständige Anwendungen und [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Der Paketinhalt für die Navigation [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet die <xref:System.Windows.Controls.Page> Klasse. Können Sie von einem navigieren <xref:System.Windows.Controls.Page> in eine andere deklarativ durch die Verwendung einer <xref:System.Windows.Documents.Hyperlink>, oder programmgesteuert durch die Verwendung der <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verwendet das Journal, um Seiten zu speichern, von denen weg navigiert wurde, und um wieder zu den Seiten zurück zu navigieren.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="CreatingAXAMLPage"></a>   
 ### <a name="implementing-a-page"></a>Implementieren einer Seite  
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], können Sie navigieren, um mehrere Inhaltstypen, die implizit enthalten [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] Objekte, benutzerdefinierte Objekte, Enumerationswerte, Benutzersteuerelemente, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -Dateien und [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] Dateien. Allerdings werden Sie feststellen, dass die allgemeinen und bequeme Methode zum Paketinhalt ist <xref:System.Windows.Controls.Page>. Darüber hinaus <xref:System.Windows.Controls.Page> Navigation-spezifische Funktionen, um ihre Darstellung zu verbessern und vereinfachen die Entwicklung implementiert.  
+ In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], Sie können auf verschiedene Inhaltstypen, die .NET Framework-Objekte, benutzerdefinierte Objekte, Enumerationswerte, Benutzersteuerelemente, enthalten navigieren [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -Dateien und [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] Dateien. Allerdings werden Sie feststellen, dass die allgemeinen und bequeme Methode zum Paketinhalt ist <xref:System.Windows.Controls.Page>. Darüber hinaus <xref:System.Windows.Controls.Page> Navigation-spezifische Funktionen, um ihre Darstellung zu verbessern und vereinfachen die Entwicklung implementiert.  
   
  Mit <xref:System.Windows.Controls.Page>, können Sie deklarativ implementieren eine navigierbare Seite von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Inhalt mithilfe von Markup wie folgt.  
   
