@@ -1,12 +1,8 @@
 ---
-title: Generika in .NET Framework
-ms.custom: ''
+title: Generika in .NET
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -39,16 +35,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ba9149da420b7b7bdad01e1376793c64adaf1c8d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="generics-in-the-net-framework"></a>Generika in .NET Framework
+# <a name="generics-in-net"></a>Generika in .NET
+
 <a name="top"></a> Mit Generika können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau an den Datentyp anpassen, der von ihnen verarbeitet wird. Anstatt beispielsweise die <xref:System.Collections.Hashtable> -Klasse zu verwenden, bei der Schlüssel und Werte einen beliebigen Typ haben dürfen, können Sie die generische Klasse <xref:System.Collections.Generic.Dictionary%602> verwenden und den für den Schlüssel und Wert zulässigen Typ angeben. Zu den Vorteilen von Generika zählen bessere Wiederverwendbarkeit des Codes und Typsicherheit.  
   
- Dieses Thema bietet eine Übersicht über Generika in .NET Framework und eine Zusammenfassung der generischen Typen oder Methoden. Es enthält die folgenden Abschnitte:  
+ Dieses Thema bietet eine Übersicht über Generika in .NET und eine Zusammenfassung der generischen Typen oder Methoden. Es enthält die folgenden Abschnitte:  
   
 -   [Definieren und Verwenden von Generika](#defining_and_using_generics)  
   
@@ -78,7 +75,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>Generika-Terminologie  
- Die folgenden Begriffe werden bei der Erörterung von Generika in .NET Framework verwendet:  
+ Die folgenden Begriffe werden bei der Erörterung von Generika in .NET verwendet:  
   
 -   Eine *generische Typdefinition* ist eine Klassen-, Struktur- oder Schnittstellendeklaration, die als Vorlage fungiert und Platzhalter für die Typen besitzt, die sie enthalten oder verwenden kann. Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>-Klasse kann beispielsweise zwei Typen enthalten: Schlüssel und Werte. Da eine generische Typdefinition lediglich eine Vorlage ist, können Sie keine Instanzen einer Klasse, Struktur oder Schnittstelle erstellen, die eine generische Typdefinition ist.  
   
@@ -145,11 +142,11 @@ ms.lasthandoff: 12/23/2017
   
 <a name="class_library_and_language_support"></a>   
 ## <a name="class-library-and-language-support"></a>Klassenbibliothek und Sprachunterstützung  
- .NET Framework bietet eine Reihe generischer Auflistungsklassen in den folgenden Namespaces:  
+ .NET bietet eine Reihe generischer Auflistungsklassen in den folgenden Namespaces:  
   
--   Der Namespace <xref:System.Collections.Generic> verzeichnet die meisten generischen Auflistungstypen, die von .NET Framework bereitgestellt werden, z. B. die generischen Klassen <xref:System.Collections.Generic.List%601> und <xref:System.Collections.Generic.Dictionary%602> .  
+-   Der Namespace <xref:System.Collections.Generic> enthält die meisten generischen Auflistungstypen, die von .NET bereitgestellt werden, z.B. die generischen Klassen <xref:System.Collections.Generic.List%601> und <xref:System.Collections.Generic.Dictionary%602>.  
   
--   Der Namespace <xref:System.Collections.ObjectModel> verzeichnet zusätzliche generische Auflistungstypen, z. B. die generische Klasse <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> , die zum Offenlegen von Objektmodellen für die Benutzer der Klasse nützlich sind.  
+-   Der Namespace <xref:System.Collections.ObjectModel> enthält zusätzliche generische Auflistungstypen, z. B. die generische Klasse <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, die zum Offenlegen von Objektmodellen für die Benutzer der Klasse nützlich sind.  
   
  Generische Schnittstellen für die Implementierung von Sortier- und Übereinstimmungsvergleichen finden Sie im <xref:System> -Namespace zusammen mit generischen Delegattypen für Ereignishandler, Konvertierungen und Suchprädikate.  
   
@@ -170,13 +167,13 @@ ms.lasthandoff: 12/23/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|description|  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Generische Auflistungen in .NET Framework](../../../docs/standard/generics/collections.md)|Beschreibt generische Auflistungsklassen und andere generische Auflistungstypen in .NET Framework.|  
+|[Generische Sammlungen in .NET](../../../docs/standard/generics/collections.md)|Beschreibt generische Auflistungsklassen und andere generische Auflistungstypen in .NET.|  
 |[Generische Delegaten zum Bearbeiten von Arrays und Listen](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Beschreibt generische Delegate für Konvertierungen, Suchprädikate und Aktionen, die für Elemente eines Arrays oder einer Auflistung ausgeführt werden.|  
 |[Generische Schnittstellen](../../../docs/standard/generics/interfaces.md)|Beschreibt generische Schnittstellen, die allgemeine Funktionalität für Familien generischer Typen bereitstellen.|  
 |[Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md)|Beschreibt Kovarianz und Kontravarianz in generischen Typparametern.|  
-|[Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)|Enthält zusammenfassende Informationen über die Merkmale und Verwendungsszenarios der Auflistungstypen in .NET Framework, einschließlich generischer Typen.|  
+|[Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)|Enthält zusammenfassende Informationen über die Merkmale und Verwendungsszenarios der Auflistungstypen in .NET, einschließlich generischer Typen.|  
 |[Verwenden von generischen Auflistungen](../../../docs/standard/collections/when-to-use-generic-collections.md)|Beschreibt die allgemeinen Regeln, um festzulegen, wann generische Auflistungstypen verwendet werden können.|  
 |[Gewusst wie: Definieren eines generischen Typs mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Erläutert das Generieren dynamischer Assemblys, die generische Typen und Methoden enthalten.|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Beschreibt die Generika-Funktion für Visual Basic-Benutzer, darunter Gewusst-wie-Themen zum Verwenden und Definieren generischer Typen.|  
@@ -184,7 +181,7 @@ ms.lasthandoff: 12/23/2017
 |[Übersicht über Generika in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Beschreibt die Generika-Funktion für C++-Benutzer, darunter die Unterschiede zwischen Generika und Vorlagen.|  
   
 <a name="reference"></a>   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

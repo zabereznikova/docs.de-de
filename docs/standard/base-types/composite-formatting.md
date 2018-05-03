@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="composite-formatting"></a>Kombinierte Formatierung
 Die Funktion für die kombinierte Formatierung in .NET verwendet als Eingabe eine Liste von Objekten und eine kombinierte Formatzeichenfolge. Eine kombinierte Formatzeichenfolge besteht aus festgelegtem Text mit indizierten Platzhaltern, so genannten Formatelementen, die den Objekten in der Liste entsprechen. Der Formatierungsvorgang liefert eine Ergebniszeichenfolge, die sich aus dem ursprünglichen festgelegten Text und der Zeichenfolgendarstellung der Objekte in der Liste zusammensetzt.  
@@ -66,7 +66,7 @@ Die Funktion für die kombinierte Formatierung in .NET verwendet als Eingabe ein
   
  `{` *Index*[`,`*Ausrichtung*][`:`*Formatzeichenfolge*]`}`  
   
- Die übereinstimmenden geschweiften Klammern ("{" and "}") sind erforderlich.  
+ Die übereinstimmenden geschweiften Klammern („{“ and „}“) sind erforderlich.  
   
 ### <a name="index-component"></a>Indexkomponente  
  Bei der obligatorischen Komponente *Index*, dem so genannten Parameterbezeichner, handelt es sich um eine bei 0 (null) beginnende Zahl, mit der ein entsprechendes Element in der Objektliste angegeben wird. Das bedeutet, dass das Formatelement mit dem Parameterbezeichner 0 (null) das erste Objekt in der Liste formatiert, und das Formatelement mit dem Parameterbezeichner 1 formatiert das zweite Objekt in der Liste usw. Das folgende Beispiel enthält vier von null bis drei nummerierte Parameterbezeichner zur Darstellung von Primzahlen, die kleiner als zehn sind:  
@@ -74,12 +74,12 @@ Die Funktion für die kombinierte Formatierung in .NET verwendet als Eingabe ein
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Mehrere Formatelemente können auf dasselbe Element in der Objektliste verweisen, indem derselbe Parameterbezeichner festgelegt wird. Sie können beispielsweise denselben numerischen Wert im hexadezimalen, im wissenschaftlichen und im Zahlenformat formatieren, indem Sie eine kombinierte Formatzeichenfolge wie z. B. "0x{0:X} {0:E} {0:N}" angeben, wie im folgenden Beispiel dargestellt.  
+ Mehrere Formatelemente können auf dasselbe Element in der Objektliste verweisen, indem derselbe Parameterbezeichner festgelegt wird. Sie können beispielsweise denselben numerischen Wert im hexadezimalen, wissenschaftlichen oder Zahlenformat formatieren, indem Sie eine kombinierte Formatierungszeichenfolge wie z.B. „0x{0:X} {0:E} {0:N}“ angeben (siehe nächstes Beispiel).  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Jedes Formatelement kann auf ein beliebiges Objekt in der Liste verweisen. Wenn beispielsweise drei Objekte vorliegen, können Sie das zweite, erste und dritte Objekt formatieren, indem Sie eine kombinierte Formatzeichenfolge wie die Folgende angeben: "{1} {0} {2}". Ein Objekt, auf das kein Formatelement verweist, wird ignoriert. Eine <xref:System.FormatException> wird zur Laufzeit ausgelöst, wenn ein Parameterbezeichner auf ein Element außerhalb der Grenzen der Objektliste verweist.  
+ Jedes Formatelement kann auf ein beliebiges Objekt in der Liste verweisen. Wenn beispielsweise drei Objekte vorliegen, können Sie das zweite, erste und dritte Objekt formatieren, indem Sie eine kombinierte Formatzeichenfolge wie die folgende angeben: „{1} {0} {2}“. Ein Objekt, auf das kein Formatelement verweist, wird ignoriert. Eine <xref:System.FormatException> wird zur Laufzeit ausgelöst, wenn ein Parameterbezeichner auf ein Element außerhalb der Grenzen der Objektliste verweist.  
   
 ### <a name="alignment-component"></a>Ausrichtungskomponente  
  Bei der optionalen Komponente *Ausrichtung* handelt es sich um eine ganze Zahl mit Vorzeichen, die die gewünschte formatierte Feldbreite angibt. Wenn der Wert für *Ausrichtung* kleiner als die Länge der formatierten Zeichenfolge ist, wird *Ausrichtung* ignoriert, und die Länge der formatierten Zeichenfolge wird als Feldbreite verwendet. Die formatierten Daten im Feld werden bei einem positiven Wert für *Ausrichtung* rechtsbündig und bei einem negativen Wert für *Ausrichtung* linksbündig ausgerichtet. Wenn Füllzeichen erforderlich sind, werden Leerräume verwendet. Das Komma ist erforderlich, wenn *Ausrichtung* angegeben wird.  
@@ -105,7 +105,7 @@ Die Funktion für die kombinierte Formatierung in .NET verwendet als Eingabe ein
 ### <a name="escaping-braces"></a>Versehen von geschweiften Klammern mit Escapezeichen  
  Öffnende und schließende geschweifte Klammern werden als Beginn und Ende eines Formatelements interpretiert. Deshalb müssen Sie eine Escapesequenz verwenden, um eine literale öffnende bzw. schließende geschweifte Klammer anzuzeigen. Geben Sie zwei öffnende geschweifte Klammern ("{{") im festgelegten Text an, um eine öffnende geschweifte Klammer ("{") anzuzeigen, und geben Sie entsprechend zwei schließende geschweifte Klammern ("}}") an, um eine schließende geschweifte Klammer ("}") anzuzeigen. Geschweifte Klammern in einem Formatelement werden sequenziell in der Reihenfolge interpretiert, in der sie angetroffen werden. Die Interpretation geschachtelter geschweifter Klammern wird nicht unterstützt.  
   
- Die Art und Weise, wie geschweifte Klammern mit Escapezeichen interpretiert werden, kann zu unerwarteten Ergebnissen führen. Im folgenden Beispiel gibt es das Formatelement "{{{0:D}}}", das eine öffnende geschweifte Klammer anzeigen soll, einen numerischen Wert, der als Dezimalzahl formatiert ist, und eine schließende geschweifte Klammer. Das Formatelement wird aber tatsächlich wie folgt interpretiert:  
+ Die Art und Weise, wie geschweifte Klammern mit Escapezeichen interpretiert werden, kann zu unerwarteten Ergebnissen führen. Betrachten Sie beispielsweise das Formatelement „{{{0:D}}}“, das eine öffnende geschweifte Klammer anzeigen soll, einen numerischen Wert, der als Dezimalzahl formatiert ist, und eine schließende geschweifte Klammer. Das Formatelement wird aber tatsächlich wie folgt interpretiert:  
   
 1.  Die ersten beiden öffnenden geschweiften Klammern ("{{") werden mit Escapezeichen versehen und ergeben eine öffnende geschweifte Klammer.  
   
@@ -137,7 +137,7 @@ Die Funktion für die kombinierte Formatierung in .NET verwendet als Eingabe ein
   
     -   Bei einem Datums- und Uhrzeitwert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem <xref:System.IFormatProvider>-Argument ungleich NULL aufgerufen wird, ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt von ihrer <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen <xref:System.IFormatProvider>-Parameter hat, wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt für die aktuelle Threadkultur verwendet.  
   
-    -   Bei Objekten anderer Typen wird im Fall, dass eine kombinierte Formatierung mit einem <xref:System.IFormatProvider>-Argument aufgerufen wird, der Wert (einschließlich `null`, wenn kein <xref:System.IFormatProvider>-Objekt bereitgestellt wird) direkt an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben.  Andernfalls wird ein <xref:System.Globalization.CultureInfo>-Objekt, das die aktuelle Threadkultur darstellt, an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben.  
+    -   Bei Objekten anderer Typen wird beim Aufruf einer kombinierten Formatierungsmethode mit einem <xref:System.IFormatProvider>-Argument der zugehörige Wert direkt an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben. Andernfalls wird `null` an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben.  
   
 4.  Die parameterlose `ToString`-Methode des Typs, die entweder <xref:System.Object.ToString?displayProperty=nameWithType> überschreibt oder das Verhalten ihrer Basisklasse erbt, wird aufgerufen. In diesem Fall wird die von der *Formatzeichenfolge*-Komponente im Formatelement angegebene Formatzeichenfolge (sofern vorhanden) ignoriert.  
   

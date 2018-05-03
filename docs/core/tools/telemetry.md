@@ -1,22 +1,20 @@
 ---
 title: .NET Core-CLI-Tools-Telemetrie
-description: "Entdecken Sie die Telemetriefunktionen der .NET Core-Tools, die Nutzungsinformationen für die Analyse darüber erfassen, welche Daten gesammelt werden und wie sie deaktiviert werden."
-keywords: .NET, .NET Core, telemetrie
+description: Entdecken Sie die Telemetriefunktionen der .NET Core-Tools, die Nutzungsinformationen für die Analyse darüber erfassen, welche Daten gesammelt werden und wie sie deaktiviert werden.
 author: richlander
 ms.author: mairaw
 ms.date: 08/04/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 9a78ec370fd53260f26a5d8c15707a5d611e458f
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: b3da69a7fc8de095b3845428af742870e7e737ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-cli-tools-telemetry"></a>.NET Core-CLI-Tools-Telemetrie
 

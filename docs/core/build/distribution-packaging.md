@@ -1,21 +1,19 @@
 ---
 title: Verpacken einer Verteilung von .NET Core
-description: "Erfahren Sie, wie Sie .NET Core für die Verteilung verpacken, benennen und mit einer Versionsnummer versehen."
-keywords: .NET, .NET Core, Quelle, Build
+description: Erfahren Sie, wie Sie .NET Core für die Verteilung verpacken, benennen und mit einer Versionsnummer versehen.
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 71b9d722-c5a8-4271-9ce1-d87e7ae2494d
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e511ea13c578ab44c65a5ba78f666cce1ab6a0c4
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 63ff542dbde30f8ff72a2d257a16a18b2a9e71b8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-distribution-packaging"></a>Verpacken einer Verteilung von .NET Core
 
@@ -81,7 +79,7 @@ Der Rest der Version ist im Versionsnamen nicht enthalten. Dies ermöglicht es d
 
 Die folgenden Tabellen zeigen die empfohlenen Pakete.
 
-| Name                                    | Beispiel                | Anwendungsfall: Installieren von ...           | Enthält           | Abhängigkeiten                                   | Version            |
+| name                                    | Beispiel                | Anwendungsfall: Installieren von ...           | Enthält           | Abhängigkeiten                                   | Version            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
 | dotnet-sdk-[major]                      | dotnet-sdk-2           | Das neueste SDK für die Hauptversion der Runtime    |                    | dotnet-sdk-[major].[latestminor]               | \<SDK-Version>     |
 | dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | Das neueste SDK für die spezifische Runtime |                    | dotnet-sdk-[major].[minor].[latest sdk feat]xx | \<SDK-Version>     |
@@ -126,4 +124,4 @@ Eine Alternative zur Verwendung von Patchpaketen ist das _Anheften_ der Pakete a
 
 ## <a name="building-packages"></a>Erstellen von Paketen
 
-Das Repository „https://github.com/dotnet/source-build“ stellt Anweisungen zum Erstellen eines Quell-Tarballs des .NET Core SDK und aller zugehörigen Komponenten bereit. Die Ausgabe des source-build-Repositorys entspricht der Anordnung, die im ersten Abschnitt dieses Artikels beschrieben wurde.
+Das https://github.com/dotnet/source-build-Repository stellt Anweisungen zum Erstellen eines Quell-Tarballs des .NET Core SDK und aller zugehörigen Komponenten bereit. Die Ausgabe des source-build-Repositorys entspricht der Anordnung, die im ersten Abschnitt dieses Artikels beschrieben wurde.
