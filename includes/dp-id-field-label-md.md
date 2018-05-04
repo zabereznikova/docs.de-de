@@ -1,1 +1,0 @@
-Bezeichnerfeld für die Abhängigkeitseigenschaft:

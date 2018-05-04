@@ -1,1 +1,0 @@
-Serialisiertes Freihandformat (Ink Serialized Format; ISF)
