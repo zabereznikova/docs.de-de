@@ -3,18 +3,12 @@ title: Leitfaden für die Installation von .NET Framework
 description: Informationen zum Installieren von .NET Framework unter Windows
 author: rlander
 ms.author: mairaw
-keywords: .Net Framework, installieren
 ms.date: 08/03/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload:
-- dotnet
-ms.openlocfilehash: 722d34e7084fc46a5b3b3a97c73e2e14b1cc9d24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6432c693562221969085206bc3d3a7ac77c8ba5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="installation-guide"></a>Installationshandbuch
 
@@ -36,5 +30,5 @@ Sie können .NET Framework unter verschiedenen Windows-Versionen installieren.
 
 [Herunterladen von .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)  
 [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)  
-[Installieren von.NET Framework für Entwickler](guide-for-developers.md)  
+[Installieren von .NET Framework für Entwickler](guide-for-developers.md)  
 [Handbuch für die Bereitstellung von .NET Framework für Entwickler](../deployment/deployment-guide-for-developers.md)  

@@ -1,20 +1,13 @@
 ---
 title: 'Interaktive C#-Tutorials: C#-Schnellstarts'
 description: Lernen Sie C# in Ihrem Browser kennen, und beginnen Sie mit Ihrer eigenen Entwicklungsumgebung
-keywords: C#, Erste Schritte, Lektionen, Interaktiv
-author: billwagner
-ms.author: wiwagn
 ms.date: 01/30/2018
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 091a9b5cfca1f7d7c303b3961704b8a3bbdf34e2
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 66674b93883211d66883795587e66380a0f43fd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-quickstarts"></a>C#-Schnellstarts #
 
@@ -32,7 +25,7 @@ Im Schnellstart [Hallo Welt](hello-world.yml) erstellen Sie das einfachste C#-Pr
 
 Im Schnellstart [Zahlen in C#](numbers-in-csharp.yml) erfahren Sie, wie Computer Zahlen speichern und wie Sie Berechnungen mit verschiedenen Zahlentypen ausführen. Sie lernen die Grundlagen der Rundung und das Ausführen mathematischer Berechnungen mithilfe von C#. Dieser Schnellstart ist auch für die [lokale Ausführung auf Ihrem Computer](numbers-in-csharp-local.md) verfügbar.
 
-In diesem Schnellstart wird vorausgesetzt, dass Sie die Lektion [Hallo Welt](hello-world.yml) abgeschlossen haben.
+In diesem Schnellstart wird vorausgesetzt, dass Sie die Lektion [Hello World](hello-world.yml) abgeschlossen haben.
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Verzweigungen und Schleifen](branches-and-loops.yml)
 
@@ -42,7 +35,7 @@ In diesem Schnellstart wird vorausgesetzt, dass Sie die Lektionen [Hello World](
 
 ## <a name="string-interpolationinterpolated-stringsyml"></a>[Zeichenfolgeninterpolation](interpolated-strings.yml)
 
-Der Schnellstart zur [Zeichenfolgeninterpolation](interpolated-strings.yml) veranschaulicht, wie Sie Werte in einer Zeichenfolge einfügen. Sie erfahren, wie Sie interpolierte Zeichenfolgen mit eingebetteten C#-Ausdrücken erstellen und wie Sie das Aussehen des Texts der Ausdrucksergebnisse in der Ergebniszeichenfolge bestimmen. Dieser Schnellstart ist auch für die [lokale Ausführung auf Ihrem Computer](interpolated-strings-local.md) verfügbar.
+Der Schnellstart zur [Zeichenfolgeninterpolation](interpolated-strings.yml) veranschaulicht, wie Sie Werte in einer Zeichenfolge einfügen. Sie erfahren, wie Sie interpolierte Zeichenfolgen mit eingebetteten C#-Ausdrücken erstellen, und wie Sie das Aussehen des Texts der Ausdrucksergebnisse in der Ergebniszeichenfolge bestimmen. Dieser Schnellstart ist auch für die [lokale Ausführung auf Ihrem Computer](interpolated-strings-local.md) verfügbar.
 
 In diesem Schnellstart wird vorausgesetzt, dass Sie die Lektionen [Hello World](hello-world.yml), [Zahlen in C#](numbers-in-csharp.yml) und [Branches und Schleifen](branches-and-loops.yml) abgeschlossen haben.
 

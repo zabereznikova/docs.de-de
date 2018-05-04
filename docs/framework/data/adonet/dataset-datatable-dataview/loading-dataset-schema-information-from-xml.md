@@ -1,27 +1,15 @@
 ---
 title: Laden von DataSet-Schemainformationen aus XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8b814715782710994f18163ccfcd3db342199145
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b212a7233e6eec93cdce3e521b58e08745e35e0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Laden von DataSet-Schemainformationen aus XML
 Das Schema der eine <xref:System.Data.DataSet> (seine Tabellen, Spalten, Beziehungen und Einschränkungen) können programmgesteuert definiert, erstellt, indem die **füllen** oder **FillSchema** Methoden eine <xref:System.Data.Common.DataAdapter>, oder aus geladen ein XML-Dokument. Beim Laden **DataSet** Schemainformationen aus einem XML-Dokument verwenden Sie entweder die **ReadXmlSchema** oder **InferXmlSchema** Methode der **DataSet**. **ReadXmlSchema** können Sie zum Laden oder herleiten **DataSet** Schemainformationen aus dem Dokument, das Schema für XML Schema Definition Language (XSD) oder ein XML-Dokument mit Inline-XML-Schema enthält. **InferXmlSchema** ermöglicht das Herleiten des Schemas aus der XML-Dokument während bestimmte von Ihnen angegebenen XML-Namespaces ignoriert.  
@@ -65,7 +53,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- Sie können auch festlegen, dass die **DataSet** Ableiten von dessen Schema aus einer XML-Dokuments mithilfe der **InferXmlSchema** Methode der **DataSet**. **InferXmlSchema** funktioniert genauso wie **ReadXml** mit einem **XmlReadMode** von **InferSchema** (lädt Daten sowie leitet das Schema ab), und  **ReadXmlSchema** , wenn das gelesene Dokument kein Inlineschema enthält. Allerdings **InferXmlSchema** zusätzlich die Möglichkeit Möglichkeit an bestimmte XML-Namespaces ignoriert werden, wenn das Schema abgeleitet wird. **InferXmlSchema** hat zwei erforderliche Argumente: den Speicherort der XML-Dokuments, angegeben durch einen Dateinamen, einen Stream oder eine **XmlReader**; und ein Zeichenfolgenarray mit XML-Namespaces, die vom Vorgang ignoriert werden.  
+ Sie können auch festlegen, dass die **DataSet** Ableiten von dessen Schema aus einer XML-Dokuments mithilfe der **InferXmlSchema** Methode der **DataSet**. **InferXmlSchema** funktioniert genauso wie **ReadXml** mit einem **XmlReadMode** von **InferSchema** (lädt Daten sowie leitet das Schema ab), und **ReadXmlSchema** , wenn das gelesene Dokument kein Inlineschema enthält. Allerdings **InferXmlSchema** zusätzlich die Möglichkeit Möglichkeit an bestimmte XML-Namespaces ignoriert werden, wenn das Schema abgeleitet wird. **InferXmlSchema** hat zwei erforderliche Argumente: den Speicherort der XML-Dokuments, angegeben durch einen Dateinamen, einen Stream oder eine **XmlReader**; und ein Zeichenfolgenarray mit XML-Namespaces, die vom Vorgang ignoriert werden.  
   
  Betrachten Sie beispielsweise den folgenden XML-Code:  
   

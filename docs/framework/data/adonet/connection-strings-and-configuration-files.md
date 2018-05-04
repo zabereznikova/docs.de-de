@@ -1,27 +1,15 @@
 ---
 title: Verbindungszeichenfolgen und Konfigurationsdateien
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a4876d3b794282852b364f58cc84b58546567d80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>Verbindungszeichenfolgen und Konfigurationsdateien
 Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu Sicherheitslücken und Wartungsproblemen führen. Unverschlüsselte Verbindungszeichenfolgen, die in einer Anwendung Quellcode kompiliert können angezeigt werden, mithilfe der [Ildasm.exe (IL-Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Tool. Hinzu kommt, dass die Anwendung neu kompiliert werden muss, wenn sich die Verbindungszeichenfolge irgendwann einmal ändert. Aus diesen Gründen empfehlen wir, Verbindungszeichenfolgen in einer Anwendungskonfigurationsdatei zu speichern.  
@@ -75,7 +63,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  Mit .NET Framework 2.0 wurden neue Klassen im <xref:System.Configuration>-Namespace eingeführt, um das Abrufen von Verbindungszeichenfolgen aus Konfigurationsdateien zur Laufzeit zu vereinfachen. Sie können programmgesteuert eine Verbindungszeichenfolge nach Namen oder Anbieternamen abrufen.  
   
 > [!NOTE]
->  Die **"Machine.config"** enthält darüber hinaus eine **ConnectionStrings** Abschnitt, der von Visual Studio verwendete Verbindungszeichenfolgen enthält. Beim Abrufen von Verbindungszeichenfolgen nach dem Anbieternamen aus der **"App.config"** Datei in einer Windows-Anwendung, die Verbindungszeichenfolgen im **"Machine.config"** erhalten Sie erste geladen und dann die Einträge aus **"App.config"**. Hinzufügen von **deaktivieren** unmittelbar nach der **ConnectionStrings** Element entfernt alle geerbten Verweise aus der Datenstruktur im Arbeitsspeicher, sodass nur die Verbindungszeichenfolgen in der lokalen definiert**"App.config"** Datei betrachtet werden.  
+>  Die **"Machine.config"** enthält darüber hinaus eine **ConnectionStrings** Abschnitt, der von Visual Studio verwendete Verbindungszeichenfolgen enthält. Beim Abrufen von Verbindungszeichenfolgen nach dem Anbieternamen aus der **"App.config"** Datei in einer Windows-Anwendung, die Verbindungszeichenfolgen im **"Machine.config"** erhalten Sie erste geladen und dann die Einträge aus **"App.config"**. Hinzufügen von **deaktivieren** unmittelbar nach der **ConnectionStrings** Element entfernt alle geerbten Verweise aus der Datenstruktur im Arbeitsspeicher, sodass nur die Verbindungszeichenfolgen in der lokalen definiert **"App.config"** Datei betrachtet werden.  
   
 ### <a name="working-with-the-configuration-classes"></a>Arbeiten mit den Konfigurationsklassen  
  Ab .NET Framework 2.0 wird bei der Arbeit mit Konfigurationsdateien auf dem lokalen Computer der <xref:System.Configuration.ConfigurationManager> verwendet, der die <xref:System.Configuration.ConfigurationSettings> ersetzt. Für die Arbeit mit ASP.NET-Konfigurationsdateien kommt der <xref:System.Web.Configuration.WebConfigurationManager> zum Einsatz. Es dient zum Arbeiten mit Konfigurationsdateien auf einem Webserver, und ermöglicht den programmgesteuerten Zugriff auf Konfigurationsdateiabschnitte wie z. B. **system.web**.  

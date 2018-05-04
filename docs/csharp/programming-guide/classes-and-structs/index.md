@@ -1,12 +1,7 @@
 ---
 title: Klassen und Strukturen (C#-Programmierhandbuch)
 description: Beschreibt die Verwendung von Klassen und Strukturen (Strukturen) in C#.
-keywords: Klassen (C#), Strukturen (C#), Verweistypen (C#), Werttypen (C#)
 ms.date: 01/17/2016
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - structs [C#], about structs
 - classes [C#], overview
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: 48
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 801f8e64bf64ee55651521ba53915000cc326303
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klassen und Strukturen (C#-Programmierhandbuch)
 Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Typsystems in .NET Framework. Bei beiden handelt es sich um eine Datenstruktur, die einen als logische Einheit zusammengehörenden Satz von Daten und Verhalten kapselt. Die Daten und die Verhalten sind die *Member* der Klasse oder Struktur. Diese enthalten deren Methoden, Eigenschaften, Ereignisse usw., die weiter unten in diesem Thema aufgeführt werden.  
@@ -47,7 +39,7 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
   
  Weitere Informationen zu Klassen und Klassenmembern finden Sie unter [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md) und [Objekte](../../../csharp/programming-guide/classes-and-structs/objects.md).  
   
-### <a name="members"></a>Mitglieder  
+### <a name="members"></a>Member  
  Alle Methoden, Felder, Konstanten, Eigenschaften und Ereignisse müssen innerhalb eines Typs deklariert werden. Diese Elemente werden als *Member* des Typs bezeichnet. In C# gibt es im Gegensatz zu einigen anderen Sprachen keine globalen Variablen oder Methoden. Selbst der Einstiegspunkt eines Programms, die `Main`-Methode, muss innerhalb einer Klasse oder einer Struktur deklariert werden. In der folgenden Liste werden sämtliche Arten von Membern aufgeführt, die in einer Klasse bzw. einer Struktur deklariert werden können.  
   
 -   [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)  
@@ -70,13 +62,13 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
   
 -   [Geschachtelte Typen](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
-### <a name="accessibility"></a>Barrierefreiheit  
+### <a name="accessibility"></a>Zugriff  
  Einige Methoden und Eigenschaften sind für den Aufruf oder Zugriff von als *Clientcode* bezeichnetem Code außerhalb der Klasse oder Struktur vorgesehen. Andere Methoden und Eigenschaften dienen nur der Verwendung in der Klasse oder Struktur selbst. Es ist wichtig, den Zugriff auf den Code einzuschränken, damit nur der Clientcode darauf zugreifen kann, der dafür vorgesehen ist. Inwieweit Clientcode auf die Typen und deren Member zugreifen kann, können Sie mit den Zugriffsmodifizierern [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) und [private protected](../../../csharp/language-reference/keywords/private-protected.md) festlegen. Die Standardeinstellung für den Zugriff lautet `private`. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ### <a name="inheritance"></a>Vererbung  
  Klassen (jedoch nicht Strukturen) unterstützen das Konzept der Vererbung. Eine Klasse, die von einer anderen Klasse (der *Basisklasse*) abgeleitet ist, enthält automatisch alle öffentlichen, geschützten und internen Member der Basisklasse mit Ausnahme der Konstruktoren und Finalizer. Weitere Informationen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md) und [Polymorphie](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
- Klassen können als [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklariert werden. Das bedeutet, dass mindestens eine ihrer Methoden nicht implementiert ist. Obwohl abstrakte Klassen nicht direkt instanziiert werden können, können Sie als Basisklassen für andere Klassen dienen, von denen die fehlende Implementierung bereitgestellt wird. Klassen können auch als [versiegelt](../../../csharp/language-reference/keywords/sealed.md) deklariert werden, um zu verhindern, dass andere Klassen von ihnen erben. Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Klassen können als [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklariert werden. Das bedeutet, dass mindestens eine ihrer Methoden nicht implementiert ist. Obwohl abstrakte Klassen nicht direkt instanziiert werden können, können Sie als Basisklassen für andere Klassen dienen, von denen die fehlende Implementierung bereitgestellt wird. Klassen können auch als [versiegelt](../../../csharp/language-reference/keywords/sealed.md) deklariert werden, um zu verhindern, dass andere Klassen von ihnen erben. Weitere Informationen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ### <a name="interfaces"></a>Schnittstellen  
  Klassen und Strukturen können von mehreren Schnittstellen erben. Von einer Schnittstelle erben bedeutet, dass der Typ alle in der Schnittstelle definierten Methoden implementiert. Weitere Informationen finden Sie unter [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md).  
@@ -103,7 +95,7 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
  Sie können Klassen "erweitern", ohne eine abgeleitete Klasse zu erstellen, indem Sie einen separaten Typ erstellen, dessen Methoden aufgerufen werden können, als würden sie zum ursprünglichen Typ gehören. Weitere Informationen finden Sie unter [Erweiterungsmethoden](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
   
 ### <a name="implicitly-typed-local-variables"></a>Implizit typisierte lokale Variablen  
- Innerhalb einer Klassen- oder Strukturmethode können Sie implizite Typisierung verwenden, um den Compiler anzuweisen, bei der Kompilierung den richtigen Typ zu bestimmen. Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ Innerhalb einer Klassen- oder Strukturmethode können Sie implizite Typisierung verwenden, um den Compiler anzuweisen, bei der Kompilierung den richtigen Typ zu bestimmen. Weitere Informationen zu finden Sie unter [Implizit typisierte lokale Variablen](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

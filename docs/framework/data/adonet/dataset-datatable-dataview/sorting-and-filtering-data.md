@@ -1,34 +1,22 @@
 ---
 title: Sortieren und Filtern von Daten
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 02a67a490eb8339663aac08c97c665ffee09f0df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sorting-and-filtering-data"></a>Sortieren und Filtern von Daten
 Die <xref:System.Data.DataView> stellt mehrere Methoden zum Sortieren und Filtern von Daten in einer <xref:System.Data.DataTable> bereit:  
   
 -   Mit der <xref:System.Data.DataView.Sort%2A>-Eigenschaft können Sie einzelne oder mehrere Sortierreihenfolgen für Spalten angeben und die Parameter ASC (ascending = aufsteigend) und DESC (descending = absteigend) einfügen.  
   
--   Sie können mithilfe der <xref:System.Data.DataView.ApplyDefaultSort%2A>-Eigenschaft automatisch eine Sortierreihenfolge in aufsteigender Reihenfolge auf Grundlage der Primärschlüsselspalte bzw. -spalten der Tabelle erstellen. <xref:System.Data.DataView.ApplyDefaultSort%2A>nur gültig, wenn die **sortieren** Eigenschaft ist ein null-Verweis oder eine leere Zeichenfolge ist, und wenn die Tabelle einen Primärschlüssel definiert.  
+-   Sie können mithilfe der <xref:System.Data.DataView.ApplyDefaultSort%2A>-Eigenschaft automatisch eine Sortierreihenfolge in aufsteigender Reihenfolge auf Grundlage der Primärschlüsselspalte bzw. -spalten der Tabelle erstellen. <xref:System.Data.DataView.ApplyDefaultSort%2A> nur gültig, wenn die **sortieren** Eigenschaft ist ein null-Verweis oder eine leere Zeichenfolge ist, und wenn die Tabelle einen Primärschlüssel definiert.  
   
 -   	Mit der <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft können Sie Teilmengen von Zeilen angeben, die auf den Spaltenwerten basieren. Weitere Informationen zu gültigen Ausdrücken für die **RowFilter** -Eigenschaft, finden Sie in den Referenzinformationen für die <xref:System.Data.DataColumn.Expression%2A> Eigenschaft von der <xref:System.Data.DataColumn> Klasse.  
   
@@ -42,7 +30,7 @@ Die <xref:System.Data.DataView> stellt mehrere Methoden zum Sortieren und Filter
     |------------------------------|-----------------|  
     |**CurrentRows**|Die **aktuelle** -Zeilenversion von allen **Unchanged**, **Added**, und **"geändert"** Zeilen. Dies ist die Standardeinstellung.|  
     |**Hinzugefügt**|Die **aktuelle** -Zeilenversion von allen **Added** Zeilen.|  
-    |**Gelöscht**|Die **ursprünglichen** -Zeilenversion von allen **gelöschte** Zeilen.|  
+    |**gelöscht**|Die **ursprünglichen** -Zeilenversion von allen **gelöschte** Zeilen.|  
     |**ModifiedCurrent**|Die **aktuelle** -Zeilenversion von allen **"geändert"** Zeilen.|  
     |**ModifiedOriginal**|Die **ursprünglichen** -Zeilenversion von allen **"geändert"** Zeilen.|  
     |**Keine**|Keine Zeilen.|  

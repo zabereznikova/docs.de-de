@@ -2,7 +2,8 @@
 title: throw (C#-Referenz)
 ms.date: 03/02/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - throw
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e56bd8f8b6bfcc7c8f1eb2df6ac157e28adac331
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 088a8e70c5aaaae6f833f12cad1052c30fbb6bfa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="throw-c-reference"></a>throw (C#-Referenz)
 Signalisiert das Auftreten einer Ausnahme während der Programmausführung.  
@@ -50,9 +51,9 @@ Methodenaufrufer verwenden anschließend einen `try-catch`- oder `try-catch-fina
  
 ## <a name="the-throw-expression"></a>Der `throw`-Ausdruck
 
-Ab C# 7 kann `throw` als Ausdruck sowie als Anweisung verwendet werden. Dadurch wird eine Ausnahme in Kontexten ausgelöst, die zuvor nicht unterstützt wurden. Dazu gehören:
+Ab C# 7.0 kann `throw` sowohl als Ausdruck als auch als Anweisung verwendet werden. Dadurch wird eine Ausnahme in Kontexten ausgelöst, die zuvor nicht unterstützt wurden. Dazu gehören:
 
-- [Der bedingte Operator](../operators/conditional-operator.md). Im folgenden Beispiel wird ein `throw`-Ausdruck verwendet, um eine <xref:System.ArgumentException> auszulösen, wenn eine Methode an ein leeres Zeichenfolgenarray übergeben wird. Diese Logik müsste vor C# 7 in einer `if`/`else`-Anweisung erscheinen.
+- [Der bedingte Operator](../operators/conditional-operator.md). Im folgenden Beispiel wird ein `throw`-Ausdruck verwendet, um eine <xref:System.ArgumentException> auszulösen, wenn eine Methode an ein leeres Zeichenfolgenarray übergeben wird. Diese Logik müsste vor C# 7.0 in einer `if`/`else`-Anweisung erscheinen.
 
    [!code-csharp[csrefKeyword#4](../../../../samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
@@ -72,7 +73,7 @@ Ab C# 7 kann `throw` als Ausdruck sowie als Anweisung verwendet werden. Dadurch 
  [C#-Referenz](../../../csharp/language-reference/index.md)  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [Die try-, catch- und throw-Anweisungen in C++](../../../csharp/language-reference/keywords/try-catch.md)  
+ [The try, catch, and throw Statements in C++ (Die Anweisungen „try“, „catch“ und „throw“ in C++)](../../../csharp/language-reference/keywords/try-catch.md)  
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
  [Ausnahmebehandlungsanweisungen](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
  [Vorgehensweise: Explizites Auslösen von Ausnahmen](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

@@ -1,22 +1,15 @@
 ---
 title: Namespaces (C#-Programmierhandbuch)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-caps.latest.revision: 27
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3eb645f5beb61d3cec97a70a54e660c65be52091
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 60e4c6e98ca9e71d1a095a0c7ee1df6be6d13f4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (C#-Programmierhandbuch)
 Namespaces werden beim Programmieren mit C# häufig und auf zwei verschiedene Arten verwendet. Erstens: Das .NET Framework verwendet Namespaces, um seine vielen Klassen folgendermaßen zu organisieren:  
@@ -63,4 +56,4 @@ Namespaces werden beim Programmieren mit C# häufig und auf zwei verschiedene Ar
  [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)  
  [using-Direktive](../../../csharp/language-reference/keywords/using-directive.md)  
  [::-Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [. Operator](../../../csharp/language-reference/operators/member-access-operator.md)
+ [ Operator](../../../csharp/language-reference/operators/member-access-operator.md)

@@ -1,26 +1,19 @@
 ---
 title: Programmierkonzepte (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-caps.latest.revision: 4
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9c82430ec58b81f37a33f4c246ea40f6da465af8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a557812ff99f09f20d3eb17ea7ff4dd80483a4a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-concepts-c"></a>Programmierkonzepte (C#)
 Dieser Abschnitt erläutert die Programmierkonzepte der Sprache C#.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Titel|Beschreibung|  
+|Titel|description|  
 |-----------|-----------------|  
 |[Assemblys und der globale Assemblycache (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/index.md)|Hier erfahren Sie, wie Sie Assemblys erstellen und verwenden.|  
 |[Asynchrone Programmierung mit „async“ und „await“ (C#)](../../../csharp/programming-guide/concepts/async/index.md)|Beschreibt, wie Sie asynchrone Projektmappen mithilfe der Schlüsselwörter [async](../../../csharp/language-reference/keywords/async.md) und [await](../../../csharp/language-reference/keywords/await.md) in C# schreiben. Enthält eine exemplarische Vorgehensweise.|  

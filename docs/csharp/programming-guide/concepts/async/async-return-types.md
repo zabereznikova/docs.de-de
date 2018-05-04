@@ -1,21 +1,22 @@
 ---
-title: "Asynchrone Rückgabetypen (C#)"
-ms.custom: 
+title: Asynchrone Rückgabetypen (C#)
+ms.custom: ''
 ms.date: 05/29/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4927d6324b6bda5a897ce81928fc13cae303a99a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-return-types-c"></a>Asynchrone Rückgabetypen (C#)
 Asynchrone Methoden können folgende Rückgabetypen haben:
@@ -26,7 +27,7 @@ Asynchrone Methoden können folgende Rückgabetypen haben:
 
 - `void` für einen Ereignishandler. 
 
-- Ab C# 7: Jeder Typ, der über eine zugängliche `GetAwaiter`-Methode verfügt. Das von der `GetAwaiter`-Methode zurückgegebene Objekt muss die <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>-Schnittstelle implementieren.
+- Ab C# 7.0: jeder Typ, der über eine zugängliche `GetAwaiter`-Methode verfügt. Das von der `GetAwaiter`-Methode zurückgegebene Objekt muss die <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>-Schnittstelle implementieren.
   
 Weitere Informationen über die Methode „Async“ finden Sie unter [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md).  
   
@@ -76,7 +77,7 @@ Das folgende Beispiel definiert einen asynchronen Ereignishandler.
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>Generalisierte asynchrone Rückgabetypen und ValueTask<T>
 
-Ab C# 7 kann eine asynchrone Methode jeden Typ zurückgeben, der über eine zugängliche `GetAwaiter`-Methode verfügt.
+Ab C# 7.0 kann eine asynchrone Methode jeden Typ zurückgeben, der über eine zugängliche `GetAwaiter`-Methode verfügt.
  
 Da es sich bei <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tasks.Task%601> um Verweistypen handelt, kann bei der Speicherbelegung in leistungskritischen Pfaden, besonders bei Zuordnungen in engen Schleifen, die Leistung beeinträchtigt werden. Die Unterstützung für generalisierte Rückgabetypen bedeutet, dass Sie einen einfachen Werttyp statt eines Verweistypen zurückgeben können, um zusätzliche Speicherbelegungen zu vermeiden. 
 

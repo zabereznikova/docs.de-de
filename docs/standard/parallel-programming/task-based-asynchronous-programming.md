@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0782498743f857afac4af073fb0a0cb8fc4d55a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>Aufgabenbasierte asynchrone Programmierung
 Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die einen asynchronen Vorgang darstellt. In einigen Dingen ist eine Aufgabe vergleichbar mit einer <xref:System.Threading.ThreadPool>, weist jedoch eine höhere Abstraktionsebene auf. Der Begriff *Aufgabenparallelität* bezeichnet eine oder mehrere eigenständige Aufgaben, die gleichzeitig ausgeführt werden. Aufgaben bieten zwei Hauptvorteile:  
@@ -191,7 +191,7 @@ Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die ein
  Beim Warten auf eine Aufgabe wird implizit auf alle untergeordneten Elemente dieser Aufgabe gewartet, die mit der <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>-Option erstellt wurden. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> wird sofort zurückgegeben, wenn die Aufgabe bereits abgeschlossen wurde. Alle von einer Aufgabe ausgelöste Ausnahmen werden von einer <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>-Methode ausgelöst, auch wenn die <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>-Methode nach Abschluss der Aufgabe aufgerufen wurde.  
   
 ## <a name="composing-tasks"></a>Verfassen von Aufgaben  
- Die <xref:System.Threading.Tasks.Task>-Klasse und <xref:System.Threading.Tasks.Task%601>-Klasse bieten mehrere Methoden zur einfacheren Erstellung mehrerer Aufgaben, um allgemeine Muster zu implementieren und die in C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] sowie F# bereitgestellten asynchronen Sprachfunktionen besser einzusetzen. In diesem Abschnitt werden die Methoden <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A> und <xref:System.Threading.Tasks.Task.FromResult%2A> beschrieben.  
+ Die Klassen <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tasks.Task%601> bieten mehrere Methoden zur einfacheren Erstellung mehrerer Aufgaben, um allgemeine Muster zu implementieren und die in C#, Visual Basic sowie F# bereitgestellten asynchronen Sprachfeatures besser einzusetzen. In diesem Abschnitt werden die Methoden <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A> und <xref:System.Threading.Tasks.Task.FromResult%2A> beschrieben.  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  Die <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>-Methode wartet asynchron auf den Abschluss mehrerer <xref:System.Threading.Tasks.Task>-Objekte oder <xref:System.Threading.Tasks.Task%601>-Objekte. Die Methode stellt überladene Versionen zum Warten auf nicht einheitliche Sätze von Aufgaben bereit. Beispielsweise kann in einem Methodenaufruf auf den Abschluss mehrerer <xref:System.Threading.Tasks.Task>-Objekte und <xref:System.Threading.Tasks.Task%601>-Objekte gewartet werden.  
