@@ -1,25 +1,18 @@
 ---
 title: Architekturcontainer und auf Microservice basierende Anwendungen
 description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Architekturcontainer und auf Microservice basierende Anwendungen
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9b3088d93ead589c0b295bc3d2807fc98ee8ea75
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 91f63343ba2d7458d0d3b03978ac79a3a7e8427a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>Architekturcontainer und auf Microservice basierende Anwendungen
 
- *Microservices bieten zahlreiche Vorteile, stellen aber auch große neue Herausforderungen dar. Microservice-Architekturmuster sind eine Grundvoraussetzung für das Erstellen einer auf Microservice basierenden Anwendung.*
+*Microservices bieten zahlreiche Vorteile, stellen aber auch große neue Herausforderungen dar. Microservice-Architekturmuster sind eine Grundvoraussetzung für das Erstellen einer auf Microservice basierenden Anwendung.*
 
 In diesem Leitfaden haben Sie bereits die grundlegenden Konzepte für Container und Docker gelernt. Dabei handelt es sich um die mindestens erforderlichen Informationen, die Sie für die ersten Schritte mit Containern benötigen. Aber obwohl Container hilfreich und besonders für Microservices geeignet sind, sind sie für eine Microservice-Architektur nicht erforderlich. Auch viele architektonische Konzepte in diesem Abschnitt zur Architektur können ohne Container angewendet werden. Der Schwerpunkt dieses Leitfadens liegt jedoch auf der Schnittmenge beider Methoden, da die Wichtigkeit der Container bereits eingeführt wurde.
 

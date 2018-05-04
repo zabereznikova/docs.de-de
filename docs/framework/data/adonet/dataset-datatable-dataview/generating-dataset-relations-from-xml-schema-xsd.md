@@ -1,24 +1,12 @@
 ---
 title: Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4634e54c620fdd206582af94b825210331d11c14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
 In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei oder mehreren Spalten erstellen, indem Sie eine Beziehung zwischen übergeordneten und untergeordneten Elementen erstellen. Es gibt drei Möglichkeiten zur Darstellung einer **DataSet** Beziehung in einem Schema für XML Schema Definition Language (XSD):  
@@ -44,7 +32,7 @@ In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei 
 </xs:element>  
 ```  
   
- Die XML-Schemazuordnungsprozess erstellt Tabellen in der **DataSet** , die den geschachtelten komplexen Typen im Schema entsprechen. Er erstellt ebenfalls zusätzliche Spalten, die als übergeordnete verwendet**-**untergeordnete Spalten für die generierten Tabellen. Beachten Sie, die diese übergeordneten**-**untergeordneten Spalten Beziehungen ist derselbe, als wenn primary Key/foreign Key-Einschränkungen angegeben.  
+ Die XML-Schemazuordnungsprozess erstellt Tabellen in der **DataSet** , die den geschachtelten komplexen Typen im Schema entsprechen. Er erstellt ebenfalls zusätzliche Spalten, die als übergeordnete verwendet**-** untergeordnete Spalten für die generierten Tabellen. Beachten Sie, die diese übergeordneten**-** untergeordneten Spalten Beziehungen ist derselbe, als wenn primary Key/foreign Key-Einschränkungen angegeben.  
   
 ## <a name="msdatarelationship-annotation"></a>Die "msdata:Relationship"-Anmerkung  
  Die **msdata: Relationship** -Anmerkung können Sie explizit die über-/ unterordnungsbeziehungen zwischen Elementen im Schema angeben, die nicht geschachtelt sind. Das folgende Beispiel zeigt die Struktur der **Beziehung** Element.  

@@ -1,30 +1,20 @@
 ---
 title: '&lt;identityConfiguration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 48f9eef329f5d2e0e751fd2a03b0d3af9ddc355c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5070d9e886b8f5a8a0abf27593d40df8b5281267
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltidentityconfigurationgt"></a>&lt;identityConfiguration&gt;
 Gibt an, Service Level identitätseinstellungen.  
   
- \<system.identityModel >  
-\<IdentityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,7 +48,7 @@ Gibt an, Service Level identitätseinstellungen.
 |[\<Komponente "ClaimsAuthenticationManager" >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Registriert einen Ansprüche Authentifizierungs-Manager für die eingehenden Ansprüche. Dies ist optional.|  
 |[\<ClaimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Registriert einen anspruchsautorisierungs-Manager für die eingehenden Ansprüche. Dies ist optional.|  
 |[\<ClaimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Gibt den Satz von erforderlichen Ansprüchen für eingehende Sicherheitstoken. Dies ist optional.|  
-|[\<SecurityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Gibt eine Auflistung von sicherheitstokenhandlern. 0 (null) oder mehrere Sammlungen von sicherheitstokenhandlern können angegeben werden. Dies ist optional.|  
+|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Gibt eine Auflistung von sicherheitstokenhandlern. 0 (null) oder mehrere Sammlungen von sicherheitstokenhandlern können angegeben werden. Dies ist optional.|  
 |[\<TokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Tokenwiedergabeerkennung aktiviert, und gibt die Ablaufzeit für Token. Kann auf der Dienstebene oder auf eine Auflistung der Sicherheit Tokenhandler angegeben werden. Dies ist optional.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  

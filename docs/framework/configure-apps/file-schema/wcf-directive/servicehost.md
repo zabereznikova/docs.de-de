@@ -1,24 +1,12 @@
 ---
 title: '@ServiceHost'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 027debb311a3f9547623b6dff778e82b7e475327
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 Ordnet die Factory zu, die zum Generieren des Diensthosts mit dem zu hostenden Dienst verwendet wird, sowie andere Programmieraspekte, die für den Zugriff und die Kompilierung des in der SVC-Datei enthaltenen Hostingcodes erforderlich sind.  
@@ -42,8 +30,8 @@ CodeBehind = "CodeBehind"%>
 #### <a name="factory"></a>Factory  
  Der CLR-Typname der Diensthostfactory, der zum Instanziieren des Diensthosts verwendet wird. Dieses Attribut ist optional. Falls nicht angegeben, wird die Standard-<xref:System.ServiceModel.Activation.ServiceHostFactory> verwendet, die eine Instanz von <xref:System.ServiceModel.ServiceHost> zurückgibt.  
   
-#### <a name="debug"></a>Debuggen  
- Gibt an, ob der [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Dienst mit Debugsymbolen kompiliert werden soll. Lautet `true`, wenn der [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienst mit Debugsymbolen kompiliert werden soll, andernfalls `false`.  
+#### <a name="debug"></a>Debug  
+ Gibt an, ob der Windows Communication Foundation (WCF)-Dienst mit Debugsymbolen kompiliert werden soll. Lautet `true`, wenn der [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienst mit Debugsymbolen kompiliert werden soll, andernfalls `false`.  
   
 #### <a name="language"></a>Sprache  
  Gibt die Sprache zum Kompilieren des gesamten Inlinecodes in der Datei (SVC) an. Die Werte können jede von .NET unterstützte Sprache darstellen, darunter C#, VB und JS, die sich jeweils auf C#, Visual Basic .NET und JScript .NET beziehen. Dieses Attribut ist optional.  
@@ -52,7 +40,7 @@ CodeBehind = "CodeBehind"%>
  Gibt die Quelldatei an, die den XML-Webdienst implementiert, wenn sich die Klasse, die den XML-Webdienst implementiert, nicht in derselben Datei befindet und nicht in eine Assembly kompiliert oder im Verzeichnis \Bin gespeichert wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Der <xref:System.ServiceModel.ServiceHost>, der verwendet wird, um den Dienst zu hosten, ist ein Aspekt der Erweiterbarkeit innerhalb des [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Programmiermodells. Ein Factorymuster wird zum Instanziieren von <xref:System.ServiceModel.ServiceHost> verwendet, da es sich möglicherweise um einen polymorphen Typ handelt, der von der Hostumgebung nicht direkt instanziiert werden sollte.  
+ Die <xref:System.ServiceModel.ServiceHost> verwendet zum Hosten des Diensts ist ein Aspekt der Erweiterbarkeit innerhalb der Windows Communication Foundation (WCF)-Programmiermodell. Ein Factorymuster wird zum Instanziieren von <xref:System.ServiceModel.ServiceHost> verwendet, da es sich möglicherweise um einen polymorphen Typ handelt, der von der Hostumgebung nicht direkt instanziiert werden sollte.  
   
  Die Standardimplementierung verwendet <xref:System.ServiceModel.Activation.ServiceHostFactory>, um eine Instanz von <xref:System.ServiceModel.ServiceHost> zu erstellen. Aber Sie können eine eigene Factory (eine, die den abgeleiteten Host zurückgibt) Geben Sie dazu die CLR-Typnamen Ihrer Factory-Implementierung in der [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) Richtlinie.  
   

@@ -1,32 +1,20 @@
 ---
 title: '&lt;discoveryClient&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c9cbdb61152a5315aaf919e3a3c58d9329449e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8c69104b9eb1097ef5dc94c9aae7352d4949668f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdiscoveryclientgt"></a>&lt;discoveryClient&gt;
 Ein Konfigurationselement zum Erstellen einer benutzerdefinierten Bindung, mit der eine Clientanwendung automatisch nach einem sichtbaren Workflowdienst suchen und zur Laufzeit dessen Adresse abrufen kann.  
   
-\<system.serviceModel >  
-\<Bindungen >  
-\<CustomBinding >  
-\<Binden von >  
+\<system.serviceModel>  
+\<bindings>  
+\<customBinding>  
+\<binding>  
 \<DiscoveryClient >  
   
 ## <a name="syntax"></a>Syntax  
@@ -64,7 +52,7 @@ Ein Konfigurationselement zum Erstellen einer benutzerdefinierten Bindung, mit d
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Binden von >](../../../../../docs/framework/misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  

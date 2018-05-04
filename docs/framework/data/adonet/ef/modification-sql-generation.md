@@ -1,24 +1,12 @@
 ---
-title: "Generierung von Änderungen in SQL"
-ms.custom: 
+title: Generierung von Änderungen in SQL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modification-sql-generation"></a>Generierung von Änderungen in SQL
 In diesem Abschnitt wird erläutert, wie ein SQL-Änderungsgenerierungsmodul für den Anbieter (von SQL:1999-kompatiblen Datenbanken) entwickelt wird. Mit diesem Modul wird eine Änderungsbefehlsstruktur in die entsprechenden INSERT-, UPDATE- oder DELETE-Anweisungen von SQL übersetzt.  
@@ -115,7 +103,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Generieren eines SQL-Insert-Befehls  
  Der generierte Einfügebefehl folgt für eine bestimmte DbInsertCommandTree im Beispielanbieter einer der beiden folgenden Einfügevorlagen.  
   
- Die erste Vorlage verfügt über einen Befehl, mit dem der Einfügevorgang mithilfe der Werte in der Liste mit SetClauses durchgeführt werden kann, sowie über eine SELECT-Anweisung, um die in der Returning-Eigenschaft für die eingefügte Zeile angegebenen Eigenschaften zurückzugeben, sofern die Returning-Eigenschaft nicht NULL ist. Das prädikatelement "@@ROWCOUNT > 0" ist "true", wenn eine Zeile eingefügt wurde. Das prädikatelement "KeyMemberI = KeyValueI &#124; SCOPE_IDENTITY() "nimmt die Form" KeyMemberI = SCOPE_IDENTITY()"" nur, wenn KeyMemeberI ein im Speicher generierte Schlüssel ist, da scope_identity() den letzten Identitätswert, der in eine (im Speicher generierte) Identitätsspalte eingefügten zurückgibt.  
+ Die erste Vorlage verfügt über einen Befehl, mit dem der Einfügevorgang mithilfe der Werte in der Liste mit SetClauses durchgeführt werden kann, sowie über eine SELECT-Anweisung, um die in der Returning-Eigenschaft für die eingefügte Zeile angegebenen Eigenschaften zurückzugeben, sofern die Returning-Eigenschaft nicht NULL ist. Das prädikatelement "@@ROWCOUNT > 0" ist "true", wenn eine Zeile eingefügt wurde. Das prädikatelement "KeyMemberI = KeyValueI &#124; scope_identity()" nimmt die Form "KeyMemberI = SCOPE_IDENTITY()" "nur, wenn KeyMemeberI ein Speicher generierter Schlüssel ist, da scope_identity() den letzten Identitätswert eingefügt () eine Identität zurückgibt Speicher generierte) Identitätsspalte.  
   
 ```  
 -- first insert Template  

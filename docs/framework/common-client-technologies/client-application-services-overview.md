@@ -1,27 +1,29 @@
 ---
-title: "Übersicht über Clientanwendungsdienste"
-ms.custom: 
+title: Übersicht über Clientanwendungsdienste
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9ddc1b505146e7ca31bca5acc5e9d19d258a860d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="client-application-services-overview"></a>Übersicht über Clientanwendungsdienste
 Clientanwendungsdienste ermöglichen vereinfachten Zugriff auf [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anmeldung, Rollen und Profildienste von Windows Forms- und Windows Presentation Foundation-Anwendungen (WPF). [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdienste sind in den Microsoft ASP.NET 2.0 AJAX-Erweiterungen enthalten, die wiederum in [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] und [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] enthalten sind. Diese Dienste ermöglichen mehreren web- und Windows-basierten Anwendungen die gemeinsame Nutzung von Benutzerinformationen und Benutzerverwaltungsfunktionen von einem einzelnen Server aus.  
@@ -59,7 +61,7 @@ Clientanwendungsdienste ermöglichen vereinfachten Zugriff auf [!INCLUDE[ajax_cu
  Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Rollendiensts finden Sie unter [Verwenden von Rolleninformationen mit Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Einstellungen  
- Sie können Clientanwendungsdienste verwenden, um Benutzeranwendungseinstellungen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildienst abzurufen. Die Webeinstellungenfunktion von Clientanwendungsdiensten integriert sich mit dem in [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] bereitgestellten Feature für Anwendungseinstellungen. Um Webeinstellungen abzurufen, generieren Sie zuerst eine `Settings`-Klasse (auf die in C# als `Properties.Settings.Default` und in `My.Settings` als [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] zugegriffen wird) für Ihr Projekt, indem Sie die Registerkarte **Einstellungen** des [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Projekt-Designers verwenden. Auf der Registerkarte **Einstellungen** können Sie die Schaltfläche **Webeinstellungen laden** verwenden, um Webeinstellungen abzurufen und sie der generierten `Settings`-Klasse hinzuzufügen. Sie können Webeinstellungen verwenden, die für die Verwendung durch alle authentifizierten Benutzer oder durch alle anonymen Benutzer konfiguriert sind.  
+ Sie können Clientanwendungsdienste verwenden, um Benutzeranwendungseinstellungen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildienst abzurufen. Die Webeinstellungenfunktion von Clientanwendungsdiensten integriert sich mit dem in [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] bereitgestellten Feature für Anwendungseinstellungen. Generieren Sie zum Abrufen der Webeinstellungen zunächst eine `Settings`-Klasse (auf die in C# als `Properties.Settings.Default` und in Visual Basic als `My.Settings` zugegriffen wird) für Ihr Projekt, indem Sie die Registerkarte **Einstellungen** des [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Projekt-Designers verwenden. Auf der Registerkarte **Einstellungen** können Sie die Schaltfläche **Webeinstellungen laden** verwenden, um Webeinstellungen abzurufen und sie der generierten `Settings`-Klasse hinzuzufügen. Sie können Webeinstellungen verwenden, die für die Verwendung durch alle authentifizierten Benutzer oder durch alle anonymen Benutzer konfiguriert sind.  
   
  Weitere Informationen zu Anwendungseinstellungen finden Sie unter [Übersicht über Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-overview.md). Informationen zum Implementieren Ihrer eigenen Einstellungsklasse, statt eine in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] zu generieren, finden Sie unter [Gewusst wie: Erstellen von Anwendungseinstellungen](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildiensts finden Sie unter [Verwenden von Profilinformationen mit Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   

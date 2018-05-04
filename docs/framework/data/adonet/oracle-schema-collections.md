@@ -1,24 +1,12 @@
 ---
 title: Oracle-Schemaauflistungen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f199a0fc0939bd5fae4fefb7440c46bd471e4b6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oracle-schema-collections"></a>Oracle-Schemaauflistungen
 Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den allgemeinen Schemaauflistungen die folgenden spezifischen Schemaauflistungen:  
@@ -112,10 +100,10 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |LAST_ANALYZED|DateTime|Datum, an dem dieser Index zuletzt analysiert wurde.|  
 |DEGREE|Zeichenfolge|Anzahl von Threads pro Instanz zum Durchsuchen des Indexes.|  
 |INSTANCES|Zeichenfolge|Anzahl von Instanzen, in den die Indizes durchsucht werden sollen.|  
-|PARTITIONED|Zeichenfolge|Gibt an, ob dieser Index partitioniert ist (Ja &#124; NEIN).|  
+|PARTITIONED|Zeichenfolge|Gibt an, ob dieser Index partitioniert ist (Ja &#124; NO).|  
 |TEMPORARY|Zeichenfolge|Gibt an, ob sich der Index in einer temporären Tabelle befindet.|  
-|GENERATED|Zeichenfolge|Ob der Name des Indexes System ist generiert (J &#124; N).|  
-|SECONDARY|Zeichenfolge|Gibt an, ob der Index ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
+|GENERATED|Zeichenfolge|Gibt an, ob der Name des Indexes vom System generiert wurde (Y&#124;N).|  
+|SECONDARY|Zeichenfolge|Gibt an, ob der Index ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y&#124;N).|  
 |BUFFER_POOL|Zeichenfolge|Name des Standardpufferpools, der für die Indexblöcke verwendet wird.|  
 |USER_STATS|Zeichenfolge|Gibt an, ob die Statistik direkt vom Benutzer eingegeben wurde.|  
 |DURATION|Zeichenfolge|Gibt die Dauer einer temporären Tabelle an: 1) SYS$SESSION: Die Zeilen werden für die Dauer der Sitzung beibehalten. 2) SYS$TRANSACTION: Die Zeilen werden nach dem COMMIT gelöscht. 3) NULL für eine dauerhafte Tabelle.|  

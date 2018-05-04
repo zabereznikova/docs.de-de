@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 5a119f935b1cc80fe5cf738f03057c68c7eb5ba5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Dekonstruieren von Tupeln und anderen Typen #
 
@@ -24,7 +24,7 @@ Ein Tupel stellt einen einfachen Weg bereit, um mehrere Werte aus einem Methoden
 
 Das Abrufen von mehreren Feld- und Eigenschaftswerten aus einem Objekt kann genauso mühselig sein: Sie müssen einen Feld- oder Eigenschaftswert einer Variable zuweisen, indem Sie jedes Element einzeln eingeben. 
 
-Ab C# 7 können Sie mit einem einzigen *deconstruct* (Dekonstruieren)-Vorgang mehrere Elemente aus einem Tupel oder mehrere berechnete, Feld- und Eigenschaftswerte aus einem Objekt abrufen. Wenn Sie ein Tupel dekonstruieren, weisen Sie seine Elemente einzelnen Variablen zu. Wenn Sie ein Objekt dekonstruieren, weisen Sie bestimmte Elemente einzelnen Variablen zu. 
+Ab C# 7.0 können Sie mit einem einzigen *Dekonstruieren*-Vorgang mehrere Elemente aus einem Tupel oder mehrere berechnete, Feld- und Eigenschaftswerte aus einem Objekt abrufen. Wenn Sie ein Tupel dekonstruieren, weisen Sie seine Elemente einzelnen Variablen zu. Wenn Sie ein Objekt dekonstruieren, weisen Sie bestimmte Elemente einzelnen Variablen zu. 
 
 ## <a name="deconstructing-a-tuple"></a>Dekonstruieren eines Tupel
 
@@ -34,7 +34,7 @@ Die Features von C# bieten eine integrierte Unterstützung für Dekonstruieren v
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-Es gibt drei Möglichkeiten, ein Tupel löschen:
+Es gibt drei Wege zum Dekonstruieren eines Tupels:
 
 - Sie können den Typ jedes Felds innerhalb der Klammern explizit deklarieren. Das folgende Beispiel verwendet diese Methode, um den 3-Tupel zu dekonstruieren, der von der Methode `QueryCityData` zurückgegeben wurde.
 
@@ -50,7 +50,7 @@ Es gibt drei Möglichkeiten, ein Tupel löschen:
 
     Dies ist jedoch sehr mühselig und wird nicht empfohlen.
 
-- Schließlich können Sie das Tupel in Variablen löschen, die bereits deklariert wurde.
+- Schließlich können Sie das Tupel in bereits deklarierte Variablen dekonstruieren.
 
     [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
 
@@ -58,11 +58,11 @@ Beachten Sie, dass Sie einen bestimmten Typ außerhalb der Klammern nicht spezif
 
 Beachten Sie, dass Sie ebenfalls jedes Element des Tupel einer Variable zuweisen müssen. Wenn Sie Elemente auslassen, generiert der Compiler den Fehler: CS8132, „Tupel mit x Elementen kann nicht in y Variablen dekonstruiert werden.“
 
-Beachten Sie, dass die Deklarationen und Zuweisungen durch, die vorhandenen Variablen auf der linken Seite von einem Deconstruction gemischt werden dürfen. Der Compiler generiert Fehler CS8184, "eine Deconstruction kann nicht Deklarationen und Ausdrücke auf der linken Seite mix." Wenn die Member neu deklarierte und vorhandene Variablen enthalten.
+Beachten Sie, dass Sie Deklarationen und Zuweisungen nicht mit den vorhandenen Variablen auf der linken Seite einer Dekonstruktion vermischen können. Der Compiler generiert die Fehlermeldung CS8184 "a deconstruction cannot mix declarations and expressions on the left-hand-side." (Eine Dekonstruktion kann Deklarationen und Ausdrücke auf der linken Seite nicht mischen.), wenn die Member neu deklarierte und vorhandene Variablen enthalten.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Dekonstruieren von Tupelelementen mit Ausschüssen
 
-Häufig sind Sie beim Dekonstruieren eines Tupel nur an den Werten mancher Elemente interessiert. Ab C# 7 können Sie die Unterstützung von C# für *discards* (Ausschüsse) nutzen, bei dem es sich um lesegeschützte Variablen handelt, die Sie ignorieren möchten. Ein Ausschuss wird in einer Zuweisung durch einen Unterstrich („\_“) angegeben. Sie können beliebig viele Werte verwerfen, diese werden alle in einem einzigen Ausschuss dargestellt, `_`.
+Häufig sind Sie beim Dekonstruieren eines Tupel nur an den Werten mancher Elemente interessiert. Ab C# 7.0 können Sie die Unterstützung von C# für *Ausschüsse* nutzen, bei denen es sich um lesegeschützte Variablen handelt, die Sie ignorieren möchten. Ein Ausschuss wird in einer Zuweisung durch einen Unterstrich („\_“) angegeben. Sie können beliebig viele Werte verwerfen, diese werden alle in einem einzigen Ausschuss dargestellt, `_`.
 
 Das folgende Beispiel veranschaulicht die Verwendung von Tupels mit Ausschüssen. Die Methode `QueryCityDataForYears` gibt einen 6-Tupel mit dem Namen einer Stadt, ihrer Fläche, einer Jahreszahl, der Bevölkerung der Stadt in diesem Jahr, einer zweiten Jahreszahl und der Bevölkerung der Stadt im zweiten Jahr zurück. Das Beispiel zeigt die Veränderung der Bevölkerung zwischen diesen beiden Jahren. Von den Daten, die im Tupel verfügbar sind, ist die Fläche der Stadt nicht relevant für uns und außerdem kennen wir den Namen der Stadt und die zwei Datumswerte zur Entwurfszeit. Darum sind wir nur an den zwei Bevölkerungsgwerten interessiert, die im Tupel gespeichert sind und behandeln die restlichen Werte als Ausschuss.  
 

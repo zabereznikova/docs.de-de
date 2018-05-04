@@ -15,15 +15,15 @@ ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44c15eb9d65adf10904f8777847b0653ff1dbc99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="is-c-reference"></a>is (C#-Referenz) #
 
-Überprüft, ob ein Objekt mit einem angegebenen Typ kompatibel ist; gleicht ab C# 7 einen Ausdruck mit einem Muster ab.
+Überprüft, ob ein Objekt mit einem angegebenen Typ kompatibel ist, oder gleicht ab C# 7.0 einen Ausdruck mit einem Muster ab.
 
 ## <a name="testing-for-type-compatibility"></a>Prüfen auf Typkompatibilität ##
 
@@ -60,11 +60,11 @@ Das Schlüsselwort `is` generiert eine Kompilierzeitwarnung, wenn der Ausdruck i
 `expr` kann jeder beliebige Ausdruck sein, der einen Wert zurückgibt – davon ausgenommen sind anonyme Methoden und Lambdaausdrücke. Im folgenden Beispiel wird `is` verwendet, um den Rückgabewert eines Methodenaufrufs auszuwerten.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-Ab C# 7 können Sie den Musterabgleich mit dem [Typmuster](#type) verwenden, um präziseren Code zu schreiben, der die Anweisung `is` verwendet.
+Ab C# 7.0 können Sie den Musterabgleich mit dem [Typmuster](#type) verwenden, um präziseren Code zu schreiben, der die Anweisung `is` verwendet.
 
 ## <a name="pattern-matching-with-is"></a>Musterabgleich mit `is` ##
 
-Ab C# 7 unterstützen die Auszüge `is` und [switch](../../../csharp/language-reference/keywords/switch.md) den Musterabgleich. Das Schlüsselwort `is` unterstützt folgende Muster:
+Ab C# 7.0 unterstützen die Anweisungen `is` und [switch](../../../csharp/language-reference/keywords/switch.md) den Musterabgleich. Das Schlüsselwort `is` unterstützt folgende Muster:
 
 - Das [Typmuster](#type), das prüft, ob ein Ausdruck in einen bestimmten Typ konvertiert werden kann; sofern dies möglich ist, wandelt es diesen in eine Variable dieses Typs um.
 
@@ -112,7 +112,7 @@ Der gleichwertige Code erfordert ohne einen Musterabgleich eine gesonderte Zuwei
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Konstantenmuster ###
 
-Beim Durchführen eines Musterabgleichs mit einem Konstantenmuster prüft `is`, ob ein Ausdruck einer angegebenen Konstanten entspricht. In C# 6 und früheren Versionen wird das Konstantenmuster von der Anweisung [switch](switch.md) unterstützt. Ab C# 7 wird es ebenfalls von der Anweisung `is` unterstützt. Die Syntax lautet:
+Beim Durchführen eines Musterabgleichs mit einem Konstantenmuster prüft `is`, ob ein Ausdruck einer angegebenen Konstanten entspricht. In C# 6 und früheren Versionen wird das Konstantenmuster von der Anweisung [switch](switch.md) unterstützt. Ab C# 7.0 wird es ebenfalls von der Anweisung `is` unterstützt. Die Syntax lautet:
 
 ```csharp
    expr is constant

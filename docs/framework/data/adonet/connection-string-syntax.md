@@ -1,26 +1,12 @@
 ---
 title: Verbindungszeichenfolgen-Syntax
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: 11
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-syntax"></a>Verbindungszeichenfolgen-Syntax
 Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xref:System.Data.Common.DbConnection> erbt, sowie eine anbieterspezifische <xref:System.Data.Common.DbConnection.ConnectionString%2A>-Eigenschaft. Die spezifische Verbindungszeichenfolgensyntax für den jeweiligen Anbieter wird in dessen `ConnectionString`-Eigenschaft dokumentiert. In der folgenden Tabelle sind die vier Datenanbieter aufgelistet, die in .NET Framework enthalten sind.  
@@ -138,9 +124,9 @@ Sie können beim Erstellen einer Verbindungszeichenfolge auch die <xref:System.D
  Mit der <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>-Eigenschaft von <xref:System.Data.OleDb.OleDbConnection> können Sie eine Verbindungszeichenfolge für eine OLE DB-Datenquelle wie Microsoft Access abrufen bzw. festlegen. Sie können auch zur Laufzeit mit der `OleDb`-Klasse eine <xref:System.Data.OleDb.OleDbConnectionStringBuilder>-Verbindungszeichenfolge erstellen.  
   
 ### <a name="oledb-connection-string-syntax"></a>Syntax für OLE DB-Verbindungszeichenfolgen  
- Sie müssen für eine <xref:System.Data.OleDb.OleDbConnection>-Verbindungszeichenfolge einen Anbieternamen angeben. Die folgende Verbindungszeichenfolge stellt mithilfe des Jet-Anbieters eine Verbindung mit einer Microsoft Access-Datenbank her. Beachten Sie, dass die Schlüsselwörter `UserID` und `Password` optional sind, wenn die Datenbank ungesichert (Standardeinstellung) ist.  
+ Sie müssen für eine <xref:System.Data.OleDb.OleDbConnection>-Verbindungszeichenfolge einen Anbieternamen angeben. Die folgende Verbindungszeichenfolge stellt mithilfe des Jet-Anbieters eine Verbindung mit einer Microsoft Access-Datenbank her. Beachten Sie, dass die Schlüsselwörter `User ID` und `Password` optional sind, wenn die Datenbank ungesichert (Standardeinstellung) ist.  
   
-```  
+```   
 Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;   
 ```  
   

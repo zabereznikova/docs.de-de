@@ -14,21 +14,19 @@ ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1078dd21101a41969754de1afc8919f8ac0bda8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3885dbe2d82768d01cb1b3981bcaae65331d91d7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-c-reference"></a>default (C#-Referenz)
-
-Das `default`-Schlüsselwort.
 
 Das `default`-Schlüsselwort kann in der `switch`-Anweisung oder in einem Standardwertausdruck verwendet werden:
 
 - [Die switch-Anweisung](switch.md): Gibt die Standardbezeichnung an.
 
-- [Standardwertausdrücke:](../../programming-guide/statements-expressions-operators/default-value-expressions.md) Erzeugen den Standardwert des Typs. Dieser ist NULL für Verweistypen und 0 (null) für Werttypen und das 0-Bitmuster für Strukturen.
+- [Standardwertausdrücke:](../../programming-guide/statements-expressions-operators/default-value-expressions.md) Erzeugen den Standardwert eines Typs.
 
 ## <a name="see-also"></a>Siehe auch
 

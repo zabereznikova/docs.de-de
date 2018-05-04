@@ -1,13 +1,6 @@
 ---
 title: '&lt;Einstellungen&gt; -Element (Netzwerkeinstellungen)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings
@@ -15,23 +8,21 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6fd4b608964bca2e05424f2f76136fa69111adc4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f717705a6cd4cc29fe333f5012c7fec466d350b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;Einstellungen&gt; -Element (Netzwerkeinstellungen)
 Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProperty=nameWithType>-Namespace.  
   
  \<configuration>  
-\<System.NET >  
-\<Einstellungen >  
+\<system.net>  
+\<settings>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +48,7 @@ Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProp
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Passt die vom verwendeten Parameter an die <xref:System.Net.HttpListener> Klasse.|  
+|[HttpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Passt die vom verwendeten Parameter an die <xref:System.Net.HttpListener> Klasse.|  
 |[HttpWebRequest-Anforderung](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Passt die Anforderungsparameter werden Web an.|  
 |[IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Ermöglicht Internetprotokoll Version 6 (IPv6) unterstützen.|  
 |[\<PerformanceCounter >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Ermöglicht das Netzwerk-Leistungsindikatoren.|  

@@ -1,8 +1,9 @@
 ---
-title: "Exemplarische Vorgehensweisen für Visual Basic"
+title: Exemplarische Vorgehensweisen für Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c57ee0b94e5aafb6b1287707b10977e86ee631f1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b34c513e54ba41bf845abaa59dd630b6877d9bbd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Exemplarische Vorgehensweisen für Visual Basic
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien, sodass sie der ideale Ausgangspunkt sind, um mehr über das Produkt oder einen bestimmten Funktionsbereich zu erfahren.  
@@ -26,13 +27,13 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht das Erstellen einer asynchronen Lösung mithilfe von [Async](../visual-basic/language-reference/modifiers/async.md) und [Await](../visual-basic/language-reference/operators/await-operator.md).  
   
  [Declaring and Raising Events (Deklarieren und Auslösen von Ereignissen)](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- Veranschaulicht, wie Ereignisse in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deklariert und ausgelöst werden.  
+ Veranschaulicht, wie Ereignisse in Visual Basic deklariert und ausgelöst werden  
   
  [Handling Events (Behandeln von Ereignissen)](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
  Veranschaulicht, wie man Ereignisse mithilfe des Standardschlüsselworts `WithEvents` oder den neuen Schlüsselwörtern `AddHandler`/`RemoveHandler` behandelt.  
   
  [Creating and Implementing Interfaces (Erstellen und Implementieren von Schnittstellen)](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- Veranschaulicht, wie Schnittstellen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deklariert und implementiert werden  
+ Veranschaulicht, wie Schnittstellen in Visual Basic deklariert und implementiert werden  
   
  [Defining Classes (Definieren von Klassen)](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  Beschreibt, wie eine Klasse und deren Felder, Eigenschaften, Methoden und Ereignisse deklariert werden  
@@ -47,10 +48,10 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Erläutert, wie `Declare`-Anweisungen verwendet und Windows-APIs aufgerufen werden Enthält Informationen zur Verwendung von Attributen zum Steuern von Marshalling für API-Aufrufe zum Verfügbar machen eines API-Aufrufs als Methode einer Klasse  
   
  [Erstellen von COM-Objekten in Visual Basic](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Veranschaulicht das Erstellen von COM-Objekten in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], mit und ohne COM-Klassenvorlage  
+ Veranschaulicht das Erstellen von COM-Objekten in Visual Basic, mit und ohne COM-Klassenvorlage  
   
  [Implementing Inheritance with COM Objects (Implementieren der Vererbung mit COM-Objekten)](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Veranschaulicht, wie man [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 zum Erstellen eines COM-Objekts mit einer Klasse verwendet, und es anschließend als Basisklasse in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet  
+ Veranschaulicht, wie man Visual Basic 6.0 zum Erstellen eines COM-Objekts mit einer Klasse und anschließend als Basisklasse in Visual Basic verwendet  
   
  [Multithreading](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  Veranschaulicht, wie man eine Multithreadanwendung erstellt, die in einer Textdatei nach dem Vorkommen eines Worts sucht  
@@ -77,7 +78,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Zeigt, wie Sie die Klasse <xref:System.Security.Cryptography.DESCryptoServiceProvider> verwenden, um Zeichenfolgen zu verschlüsseln bzw. zu entschlüsseln  
   
  [Manipulating Files and Folders in Visual Basic (Bearbeiten von Dateien und Ordnern in Visual Basic)](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Veranschaulicht die Verwendung von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Funktionen zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei  
+ Veranschaulicht die Verwendung von Visual Basic-Funktionen zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei  
   
  [Manipulating Files Using .NET Framework Methods (Bearbeiten von Dateien mit .NET Framework-Methoden)](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Veranschaulicht die Verwendung von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Methoden zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei.  

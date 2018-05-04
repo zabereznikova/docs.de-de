@@ -1,13 +1,13 @@
 ---
 title: 'Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clientanwendungsdienste zum Authentifizieren von Benutzern und zum Abrufen von Benutzerrollen und Einstellungen verwendet wird.  
@@ -50,7 +50,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]sein.  
+-   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
   
 ## <a name="creating-the-client-application"></a>Erstellen der Clientanwendung  
  Zunächst erstellen Sei ein Windows Forms-Projekt. In dieser exemplarischen Vorgehensweise wird Windows Forms verwendet, da damit mehr Benutzer vertraut sind. Der Vorgang ist jedoch bei Windows Presentation Foundation (WPF)-Projekten ähnlich.  
@@ -75,7 +75,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
 7.  Stellen Sie sicher, dass **Formularauthentifizierung verwenden** ausgewählt ist, und legen Sie dann **Speicherort des Authentifizierungsdiensts**, **Speicherort des Rollendiensts**und **Speicherort des Webeinstellungsdienstes** auf `http://localhost:55555/AppServices`fest.  
   
-8.  Legen Sie für [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]auf der Registerkarte **Anwendung** die Option **Authentifizierungsmodus** auf **Anwendungsdefiniert**fest.  
+8.  Legen Sie den **Authentifizierungsmodus** für Visual Basic in der Registerkarte **Anwendung** auf **Anwendungsdefiniert** fest.  
   
  Der Designer speichert die festgelegten Einstellungen in der app.config-Datei der Anwendung.  
   
@@ -315,7 +315,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
 ### <a name="creating-a-login-form"></a>Erstellen eines Anmeldeformulars  
  Ein Anmeldeinformationsanbieter ist eine Klasse oder eine Struktur, die die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> -Schnittstelle implementiert. Diese Schnittstelle verfügt über eine einzelne Methode namens <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> , die ein <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> Objekt ausgibt. In den folgenden Verfahren wird beschrieben, wie ein Anmeldedialogfeld zu erstellen ist, das <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> implementiert, um sich selbst darzustellen und um die vom Benutzer angegebenen Anmeldeinformationen auszugeben.  
   
- Separate Verfahren werden zu [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] und C# geboten, da [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] eine **Anmeldeformular** -Vorlage bereitgestellt wird. Dies spart Zeit- und Programmieraufwand.  
+ Für Visual Basic und C# werden separate Verfahren angeboten, da Visual Basic eine **Anmeldeformular**-Vorlage bereitstellt. Dies spart Zeit- und Programmieraufwand.  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>Erstellen Sie als Anmeldeinformationsanbieter ein Anmeldedialogfeld in Visual Basic  
   
@@ -407,7 +407,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
  Sie können die Anwendung jetzt ausführen und sich als Mitarbeiter anmelden, um festzustellen, dass die Schaltfläche nicht eingeblendet wird. Dann melden Sie sich als Manager an,  um festzustellen, dass die Schaltfläche nun angezeigt wird.  
   
 ## <a name="accessing-web-settings"></a>Zugriff auf Webeinstellungen  
- Im folgenden Verfahren fügen Sie dem Formular ein Textfeld hinzu und binden es an eine Webeinstellung. Wie beim vorherigen Code, bei dem Authentifizierung und Rollen verwendet werden, greift der Einstellungscode nicht direkt auf den Einstellungsanbieter zu. Stattdessen wird die stark typisierte `Settings` Klasse (als `Properties.Settings.Default` in c# und `My.Settings` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]aufgerufen) von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]für das Projekt generiert.  
+ Im folgenden Verfahren fügen Sie dem Formular ein Textfeld hinzu und binden es an eine Webeinstellung. Wie beim vorherigen Code, bei dem Authentifizierung und Rollen verwendet werden, greift der Einstellungscode nicht direkt auf den Einstellungsanbieter zu. Stattdessen wird die stark typisierte Klasse `Settings` (als `Properties.Settings.Default` in C# und `My.Settings` in Visual Basic) von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] für Ihr Projekt generiert.  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>So verwenden Sie die Webeinstellungen auf  der Benutzeroberfläche:  
   
@@ -527,7 +527,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
     > [!NOTE]
     >  Die <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> -Methode wird nur ergänzend bereitgestellt. Da sie nicht über einen Rückgabewert verfügt, kann sie nicht angeben, ob die erneute Überprüfung fehlgeschlagen ist. Die erneute Überprüfung kann z. B. fehlschlagen, wenn die Anmeldeinformationen des Benutzers auf dem Server geändert wurden. In diesem Fall ist es ratsam, Code einzuschließen, der die Benutzer nach dem Fehlschlagen eines Dienstaufrufs explizit validiert. Weitere Informationen finden Sie im Abschnitt Zugriff auf Webeinstellungen weiter oben in dieser exemplarischen Vorgehensweise.  
   
-     Nach der erneuten Validierung speichert dieser Code alle Änderungen an den lokalen Webeinstellungen durch Aufrufen der `SaveSettings` -Methode, die Sie zuvor hinzugefügt haben. Dann werden alle neuen Werte auf dem Server mithilfe der <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> -Methode der Projekt `Settings` -Klasse aufgerufen (als `Properties.Settings.Default` in c# und `My.Settings` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+     Nach der erneuten Validierung speichert dieser Code alle Änderungen an den lokalen Webeinstellungen durch Aufrufen der `SaveSettings` -Methode, die Sie zuvor hinzugefügt haben. Dann werden alle neuen Werte auf dem Server durch Aufrufen der Methode <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> der Klasse `Settings` (als `Properties.Settings.Default` in C# und `My.Settings` in Visual Basic) des Projekts abgerufen.  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
      [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  

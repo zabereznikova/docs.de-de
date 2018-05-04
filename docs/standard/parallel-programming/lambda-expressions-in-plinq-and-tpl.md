@@ -1,12 +1,12 @@
 ---
-title: "Lambdaausdrücke in PLINQ und TPL"
-ms.custom: 
+title: Lambdaausdrücke in PLINQ und TPL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,29 +16,29 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 364d23db41aac4733226189f7c8ae85d281b9887
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5b1739bf8d98bbee49cf3cb3d83cac27796ccf72
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Lambdaausdrücke in PLINQ und TPL
 Die Task Parallel Library (TPL) enthält viele Methoden, die eine der <xref:System.Func%601?displayProperty=nameWithType>- oder <xref:System.Action?displayProperty=nameWithType>-Delegatenfamilien als Eingabeparameter annehmen. Sie verwenden diese Delegaten zur Übergabe der benutzerdefinierten Programmlogik an die parallele Schleife, Aufgabe oder Abfrage. In den Codebeispielen für TPL und PLINQ werden Lambdaausdrücke verwendet, um Instanzen dieser Delegaten als Inlinecodeblöcke zu erstellen. Dieses Thema bietet eine kurze Einführung in Func und Action und zeigt, wie Sie Lambdaausdrücke in der Task Parallel Library und in PLINQ verwenden.  
   
- **Hinweis** Weitere Informationen zu Delegaten im Allgemeinen finden Sie unter [Delegaten (C#-Programmierhandbuch)](../../csharp/programming-guide/delegates/index.md) und [Delegaten (Visual Basic)](../../visual-basic/programming-guide/language-features/delegates/index.md). Weitere Informationen zu Lambdaausdrücken in C# und [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] finden Sie unter [Lambda-Ausdrücke (C#-Programmierhandbuch)](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) und [Lambda-Ausdrücke (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ **Hinweis** Weitere Informationen zu Delegaten im Allgemeinen finden Sie unter [Delegaten (C#-Programmierhandbuch)](../../csharp/programming-guide/delegates/index.md) und [Delegaten (Visual Basic)](../../visual-basic/programming-guide/language-features/delegates/index.md). Weitere Informationen zu Lambdaausdrücken in C# und Visual Basic finden Sie unter [Lambdaausdrücke (C#-Programmierhandbuch)](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) und [Lambdaausdrücke (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="func-delegate"></a>Func-Delegat  
  Ein `Func`-Delegat kapselt eine Methode, die einen Wert zurückgibt. In einer Func-Signatur gibt der letzte bzw. der am weitesten rechts stehende Typparameter immer den Rückgabetyp an. Eine häufige Ursache von Compilerfehlern ist der Versuch, zwei Eingabeparameter an eine <xref:System.Func%602?displayProperty=nameWithType> zu übergeben. Dieser Typ akzeptiert jedoch nur einen Eingabeparameter. Die Framework-Klassenbibliothek definiert 17 Versionen von `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> usw. bis <xref:System.Func%6017?displayProperty=nameWithType>.  
   
 ## <a name="action-delegate"></a>Action-Delegat  
- Ein <xref:System.Action?displayProperty=nameWithType>-Delegat kapselt eine Methode (Untermethode in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), die keinen Wert oder [void](~/docs/csharp/language-reference/keywords/void.md) zurückgibt. In einer Signatur vom Typ „Action“ stellen die Typparameter nur Eingabeparameter dar. Die .NET Framework-Klassenbibliothek definiert wie bei Func 17 Versionen von Action, von einer Version ohne Typparameter bis zu einer Version mit 16 Typparametern.  
+ Ein <xref:System.Action?displayProperty=nameWithType>-Delegat kapselt eine Methode (Untermethode in Visual Basic), die keinen Wert oder [void](~/docs/csharp/language-reference/keywords/void.md) zurückgibt. In einer Signatur vom Typ „Action“ stellen die Typparameter nur Eingabeparameter dar. Die .NET Framework-Klassenbibliothek definiert wie bei Func 17 Versionen von Action, von einer Version ohne Typparameter bis zu einer Version mit 16 Typparametern.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel für die <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType>-Methode veranschaulicht, wie Func- und Action-Delegaten mithilfe von Lambdaausdrücken ausgedrückt werden.  

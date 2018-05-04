@@ -1,24 +1,12 @@
 ---
 title: LIKE (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 021a999e79239e3da5c874cb459ac7f03fdb5661
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f2d06b364c577b581bb64af0436c133ca830bb2b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Ermittelt, ob ein bestimmter Zeichen-`String` mit einem angegebenen Muster übereinstimmt.  
@@ -46,16 +34,16 @@ match [NOT] LIKE pattern [ESCAPE escape]
  `true`, wenn `string` mit dem Muster übereinstimmt, andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Ausdrücke, die den LIKE-Operator zu verwenden sind im Wesentlichen die gleiche Weise wie Ausdrücke ausgewertet, die Gleichheit als Filterkriterium verwenden. Allerdings [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdrücke, die den LIKE-Operator können sowohl Literale als auch Platzhalterzeichen enthalten.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdrücke, die den LIKE-Operator zu verwenden sind im Wesentlichen die gleiche Weise wie Ausdrücke ausgewertet, die Gleichheit als Filterkriterium verwenden. Allerdings [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdrücke, die den LIKE-Operator können sowohl Literale als auch Platzhalterzeichen enthalten.  
   
  In der folgenden Tabelle wird die Syntax des als Muster verwendeten `string` beschrieben.  
   
 |Platzhalterzeichen|Beschreibung|Beispiel|  
 |------------------------|-----------------|-------------|  
-|%|Jeder `string` mit null oder mehr Zeichen.|`title like '%computer%'`Gibt alle Titel zurück, mit dem Wort `"computer"` an einer beliebigen Stelle im Titel.|  
-|_ (Unterstrich)|Ein beliebiges einzelnes Zeichen.|`firstname like '_ean'`Sucht nach allen vier Buchstaben bestehenden Vornamen, die mit enden `"ean`, "wie" Dean "oder" Sean ".|  
-|[ ]|Beliebiges einzelnes Zeichen im angegebenen Bereich ([a-f]) oder in der angegebenen Menge ([abcdef]).|`lastname like '[C-P]arsen'`Gibt Nachnamen mit "Arsen"enden und mit jedem beliebigen einzelnen Zeichen zwischen C und P beginnen wie "Carsen" oder "Larsen".|  
-|[^]|Beliebiges einzelnes Zeichen, das nicht im angegebenen Bereich ([^a-f]) oder der angegebenen Menge ([^abcdef]) liegt.|`lastname like 'de[^l]%'`Gibt alle Nachnamen zurück, die mit "de" beginnen, und schließen Sie nicht der Buchstabe "l".|  
+|%|Jeder `string` mit null oder mehr Zeichen.|`title like '%computer%'` Gibt alle Titel zurück, mit dem Wort `"computer"` an einer beliebigen Stelle im Titel.|  
+|_ (Unterstrich)|Ein beliebiges einzelnes Zeichen.|`firstname like '_ean'` Sucht nach allen vier Buchstaben bestehenden Vornamen, die mit enden `"ean`, "wie" Dean "oder" Sean ".|  
+|[ ]|Beliebiges einzelnes Zeichen im angegebenen Bereich ([a-f]) oder in der angegebenen Menge ([abcdef]).|`lastname like '[C-P]arsen'` Gibt Nachnamen mit "Arsen"enden und mit jedem beliebigen einzelnen Zeichen zwischen C und P beginnen wie "Carsen" oder "Larsen".|  
+|[^]|Beliebiges einzelnes Zeichen, das nicht im angegebenen Bereich ([^a-f]) oder der angegebenen Menge ([^abcdef]) liegt.|`lastname like 'de[^l]%'` Gibt alle Nachnamen zurück, die mit "de" beginnen, und schließen Sie nicht der Buchstabe "l".|  
   
 > [!NOTE]
 >  Der LIKE[!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Operator und die ESCAPE`System.DateTime`-Klausel von `System.Guid` können nicht auf -Werte und -Werte angewendet werden.  

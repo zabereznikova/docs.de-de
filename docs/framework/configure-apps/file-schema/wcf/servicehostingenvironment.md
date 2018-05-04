@@ -1,29 +1,17 @@
 ---
 title: '&lt;serviceHostingEnvironment&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a08df7c620065bb483d276e3ead2c179040f1c9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e6c69e06b691e40b6b2c39a54be83d7bdbe3a650
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen bestimmten Transport instanziiert wird. Falls dieses Element leer ist, wird der Standardtyp verwendet. Dieses Element kann nur über die Anwendungskonfigurationsdatei bzw. die Computerkonfigurationsdatei verwendet werden.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
   
 ## <a name="syntax"></a>Syntax  
@@ -51,9 +39,9 @@ Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen b
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Ein boolescher Wert, der angibt, ob der ASP.NET-Kompatibilitätsmodus für die aktuelle Anwendung aktiviert wurde. Die Standardeinstellung ist `false`.<br /><br /> Wenn dieses Attribut auf `true` festgelegt wird, fließen die Anforderungen an die [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Dienste durch die ASP.NET-HTTP-Pipeline, und die Kommunikation über Nicht-HTTP-Protokolle wird untersagt. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
+|aspNetCompatibilityEnabled|Ein boolescher Wert, der angibt, ob der ASP.NET-Kompatibilitätsmodus für die aktuelle Anwendung aktiviert wurde. Die Standardeinstellung ist `false`.<br /><br /> Wenn dieses Attribut festgelegt ist, um `true`, Anforderungen an Windows Communication Foundation (WCF)-Dienste über die ASP.NET HTTP-Pipeline übergeben und Kommunikation über nicht-HTTP-Protokolle ist nicht zulässig. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
 |minFreeMemoryPercentageToActivateService|Eine ganze Zahl, welche die Mindestmenge des freien Arbeitsspeichers angibt, der auf dem System zur Verfügung stehen sollte, bevor ein [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienst aktiviert werden kann. **Vorsicht:** Festlegen dieses Attributs zusammen mit teilweiser Vertrauenswürdigkeit in der Datei "Web.config" ein [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Dienst führt zu einer <xref:System.Security.SecurityException> Wenn der Dienst ausgeführt wird.|  
-|multipleSiteBindingsEnabled|Ein boolescher Wert, der angibt, ob mehrere IIS-Bindungen pro Website aktiviert sind.<br /><br /> IIS besteht aus Websites, die als Container für virtuelle Anwendungen fungieren, die virtuelle Verzeichnisse enthalten. Auf die Anwendung auf einer Website kann über eine oder mehrere IIS-Bindungen zugegriffen werden. IIS-Bindungen stellen zwei Angaben bereit: ein Bindungsprotokoll und Bindungsinformationen. Das Bindungsprotokoll definiert das Schema, das für die Kommunikation verwendet wird, und die Bindungsinformationen dienen dem Zugriff auf die Website. Ein Beispiel für ein Bindungsprotokoll kann HTTP sein, wohingegen Bindungsinformationen eine IP-Adresse, einen Port, einen Hostheader usw. enthalten können.<br /><br /> IIS unterstützt die Angabe mehrerer IIS-Bindungen pro Website, was zu mehreren Basisadressen pro Schema führt. Ein unter einer Website gehosteter [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Dienst ermöglicht die Bindung zu nur einem baseAddress-Element pro Schema.<br /><br /> Um mehrere IIS-Bindungen pro Website für einen [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Dienst zu aktivieren, legen Sie dieses Attribut auf `true` fest. Beachten Sie, dass mehrere Bindungen pro Website nur für das HTTP-Protokoll unterstützt werden. Die Adresse der Endpunkte in der Konfigurationsdatei muss ein vollständiger URI sein.|  
+|multipleSiteBindingsEnabled|Ein boolescher Wert, der angibt, ob mehrere IIS-Bindungen pro Website aktiviert sind.<br /><br /> IIS besteht aus Websites, die als Container für virtuelle Anwendungen fungieren, die virtuelle Verzeichnisse enthalten. Auf die Anwendung auf einer Website kann über eine oder mehrere IIS-Bindungen zugegriffen werden. IIS-Bindungen stellen zwei Angaben bereit: ein Bindungsprotokoll und Bindungsinformationen. Das Bindungsprotokoll definiert das Schema, das für die Kommunikation verwendet wird, und die Bindungsinformationen dienen dem Zugriff auf die Website. Ein Beispiel für ein Bindungsprotokoll kann HTTP sein, wohingegen Bindungsinformationen eine IP-Adresse, einen Port, einen Hostheader usw. enthalten können.<br /><br /> IIS unterstützt die Angabe mehrerer IIS-Bindungen pro Website, was zu mehreren Basisadressen pro Schema führt. Allerdings kann ein Windows Communication Foundation (WCF)-Dienst unter einer Website gehosteter Bindung zu nur einem BaseAddress-Element pro Schema.<br /><br /> Um mehrere IIS-Bindungen pro Website für einen Windows Communication Foundation (WCF)-Dienst zu aktivieren, legen Sie dieses Attribut auf `true`. Beachten Sie, dass mehrere Bindungen pro Website nur für das HTTP-Protokoll unterstützt werden. Die Adresse der Endpunkte in der Konfigurationsdatei muss ein vollständiger URI sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   

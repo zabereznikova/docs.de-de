@@ -1,5 +1,5 @@
 ---
-title: Neues in C# 7 – Leitfaden für C#
+title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in der bevorstehenden Version 7 der C#-Sprache.
 keywords: C#, .NET, .NET Core, neueste Funktionen, Neues
 author: BillWagner
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="whats-new-in-c-7"></a>Neues in C# 7
+# <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
-C# 7 bietet eine Reihe von neuen Funktionen für die C#-Sprache:
+C# 7.0 bietet eine Reihe von neuen Features für die C#-Programmiersprache:
 * [`out`Variablen](#out-variables)
     - Sie können `out`-Werte inline als Argumente für die Methode deklarieren, wenn sie verwendet werden.
 * [Tupel](#tuples)
@@ -88,8 +88,8 @@ C# bietet eine umfangreiche Syntax für Klassen und Strukturen, die verwendet wi
 Die Felder werden nicht überprüft, und Sie können keine eigenen Methoden definieren
 
 > [!NOTE]
-> Tupel waren schon vor C# 7 verfügbar, sie waren jedoch ineffizient und hatten keine Sprachunterstützung.
-> Das brachte mit sich, dass auf Tupelelemente nur als `Item1`, `Item2` usw. verwiesen werden konnte. Mit C# 7 wird Sprachunterstützung für Tupel eingeführt, wodurch semantische Namen für die Felder eines Tupels mit Einsatz neuer, effizienterer Tupeltypen möglich werden.
+> Tupel waren schon vor C# 7.0 verfügbar, sie waren jedoch ineffizient und hatten keine Sprachunterstützung.
+> Das brachte mit sich, dass auf Tupelelemente nur als `Item1`, `Item2` usw. verwiesen werden konnte. Mit C# 7.0 wird Sprachunterstützung für Tupel eingeführt, wodurch semantische Namen für die Felder eines Tupels mit Einsatz neuer, effizienterer Tupeltypen möglich werden.
 
 Sie können ein Tupel erstellen, indem Sie jeden Member einem Wert zuweisen:
 
@@ -131,9 +131,6 @@ Die Deklaration der Methode liefert die Namen für die Felder des Tupels, das zu
 Manchmal möchten Sie vielleicht die Member eines Tupels entpacken, die von einer Methode zurückgegeben wurden.  Sie können dazu für jeden Wert im Tupel separate Variablen deklarieren. Dies wird als *Dekonstruieren* des Tupels bezeichnet:
 
 [!code-csharp[CallingWithDeconstructor](../../../samples/snippets/csharp/new-in-7/program.cs#10_CallingWithDeconstructor "Deconstructing a tuple")]
-
-<!-- Add wildcards here, if they are in C# 7
--->
 
 Sie können auch eine ähnliche Dekonstruktion für alle Typen in .NET bereitstellen. Dies erfolgt durch das Schreiben einer `Deconstruct`-Methode als Member der Klasse. Diese `Deconstruct`-Methode bietet eine Reihe von `out`-Argumenten für jede der Eigenschaften, die Sie extrahieren möchten. Berücksichtigen Sie diese `Point`-Klasse, die eine Dekonstruktionsmethode bereitstellt, die die `X`- und `Y`-Koordinaten extrahiert:
 
@@ -327,7 +324,7 @@ Das gleiche Verfahren kann mit `async`-Methoden eingesetzt werden, um sicherzust
 
 ## <a name="more-expression-bodied-members"></a>Mehr Ausdruckskörpermember
 
-In C# 6 wurden [Ausdruckskörpermember](csharp-6.md#expression-bodied-function-members) für Memberfunktionen und schreibgeschützte Eigenschaften eingeführt. C# 7 erweitert die zulässigen Member, die als Ausdrücke implementiert werden können. In C# 7 können Sie *Konstruktoren*, *Finalizer* sowie `get`- und `set`-Zugriffsmethoden für *Eigenschaften* und *Indexer* implementieren. Der folgende Code zeigt entsprechende Beispiele:
+In C# 6 wurden [Ausdruckskörpermember](csharp-6.md#expression-bodied-function-members) für Memberfunktionen und schreibgeschützte Eigenschaften eingeführt. Mit C# 7.0 werden die zulässigen Member erweitert, die als Ausdrücke implementiert werden können. In C# 7.0 können Sie *Konstruktoren*, *Finalizer* sowie `get`- und `set`-Zugriffsmethoden für *Eigenschaften* und *Indexer* implementieren. Der folgende Code zeigt entsprechende Beispiele:
 
 [!code-csharp[ExpressionBodiedMembers](../../../samples/snippets/csharp/new-in-7/expressionmembers.cs#36_ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -338,7 +335,7 @@ Diese neuen Speicherorte für Ausdruckskörpermember sind ein wichtiger Meilenst
 
 ## <a name="throw-expressions"></a>Throw-Ausdrücke
 
-In C# ist `throw` schon immer eine Anweisung. Da `throw` eine Anweisung und kein Ausdruck ist, gab es C#-Konstrukte, in denen diese nicht verwendet werden konnte. Darunter waren bedingte Ausdrücke, NULL-Sammelausdrücke und einige Lambdaausdrücke. Das Hinzufügen von Ausdruckskörpermembern fügt mehr Speicherorte hinzu, bei denen `throw`-Ausdrücke nützlich wären. Damit Sie diese Konstrukte schreiben können, führt C# 7 *Throw-Ausdrücke* ein.
+In C# ist `throw` schon immer eine Anweisung. Da `throw` eine Anweisung und kein Ausdruck ist, gab es C#-Konstrukte, in denen diese nicht verwendet werden konnte. Darunter waren bedingte Ausdrücke, NULL-Sammelausdrücke und einige Lambdaausdrücke. Das Hinzufügen von Ausdruckskörpermembern fügt mehr Speicherorte hinzu, bei denen `throw`-Ausdrücke nützlich wären. Damit Sie diese Konstrukte schreiben können, führt C# 7.0 *Throw-Ausdrücke* ein.
 
 Die Syntax ist dieselbe, die Sie für `throw`-Anweisungen immer verwendet haben. Der einzige Unterschied ist, dass sie nun an neuen Speicherorten wie z.B. in einem bedingten Ausdruck platziert werden können:
 
@@ -376,7 +373,7 @@ Wie bei allen Leistungsempfehlungen sollte Sie für beide Versionen einen Vergle
 
 ## <a name="numeric-literal-syntax-improvements"></a>Verbesserung der numerischen literalen Syntax
 
-Falsches Lesen numerischer Konstanten kann Code beim ersten Lesen schwerer verständlich machen. Dies tritt häufig auf, wenn diese Zahlen als Bitmasken oder als andere symbolische und nicht numerische Werte verwendet werden. C# 7 enthält zwei neue Funktionen, um das Schreiben von Zahlen für den beabsichtigten Zweck übersichtlicher zu machen: *Binäre Literale* und *Trennzeichen für Ziffern*.
+Falsches Lesen numerischer Konstanten kann Code beim ersten Lesen schwerer verständlich machen. Dies tritt häufig auf, wenn diese Zahlen als Bitmasken oder als andere symbolische und nicht numerische Werte verwendet werden. C# 7.0 enthält zwei neue Features, um das Schreiben von Zahlen für den beabsichtigten Zweck übersichtlicher zu machen: *Binäre Literale* und *Zifferntrennzeichen*.
 
 Bei der Erstellung von Bitmasken oder wenn eine binäre Darstellung einer Zahl den Code besonders gut lesbar macht, sollten Sie diese Zahl im Binärformat schreiben:
 

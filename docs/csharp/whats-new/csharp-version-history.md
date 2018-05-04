@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C# #
 
@@ -48,7 +48,7 @@ Trotzdem hinkte C# weiter ein wenig hinter Java her. Von Java gab es bereits Ver
 
 ## <a name="c-version-30"></a>C# Version 3.0
 
-C# Version 3.0 kam Ende 2007 zusammen mit Visual Studio 2008 heraus. Der volle Umfang an Sprachfeatures kam tatsächlich jedoch erst mit C# Version 3.5. Diese Version markierte eine wesentliche Veränderung in der Entwicklung von C#. Sie etablierte C# als eine wirklich beachtliche Programmiersprache. Werfen wir einen Blick auf einige wichtige Features in dieser Version:
+C# Version 3.0 wurde Ende 2007 zusammen mit Visual Studio 2008 veröffentlicht. Der volle Umfang an Sprachfeatures kam tatsächlich jedoch erst mit .NET Framework Version 3.5. Diese Version markierte eine wesentliche Veränderung in der Entwicklung von C#. Sie etablierte C# als eine wirklich beachtliche Programmiersprache. Werfen wir einen Blick auf einige wichtige Features in dieser Version:
 
 - [Automatisch implementierte Eigenschaften](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)

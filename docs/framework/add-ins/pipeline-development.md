@@ -1,13 +1,6 @@
 ---
 title: Pipeline-Entwicklung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-in pipeline [.NET Framework], segments
 - activation path for add-ins [.NET Framework]
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - add-in pipeline [.NET Framework], about
 - add-ins [.NET Framework], pipeline development
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pipeline-development"></a>Pipeline-Entwicklung
 Die Add-in-Pipeline ist der Pfad der Pipelinesegmente, die die hostanwendung und seine-Add-in verwenden müssen, um miteinander kommunizieren.  
   
  Die folgende Abbildung zeigt die Kommunikationspipeline und seine Segmente.  
   
- ![Hinzufügen &#45; im Pipeline-Modell. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Hinzufügen&#45;im Pipeline-Modell. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Add-In-Pipeline  
   
  Die hostanwendung wird an einem Ende der Pipeline, und das Add-in ist am anderen Ende. Beginnend mit beiden Enden, und in die Mitte verschieben, haben die hostanwendung und das Add-in eine abstrakte Basisklasse, die einen Überblick über das Objektmodell definiert, die beide gemeinsam nutzen. Diese Typen (Klassen) bilden zusammen das Anzeigen von Add-in-Pipeline-Segment und der Hostansicht des Add-In-Pipelinesegments. Das Anzeigen von Add-in-Pipeline-Segment enthält oft mehr als eine abstrakte Klasse, aber die Klasse, der das Add-in von erbt als Add-in-Basis bekannt ist.  
@@ -45,7 +35,7 @@ Add-In-Pipeline
   
  Die folgende Abbildung zeigt die Typen, die die Pipelinesegmente bilden. Die Namen der Typen in der Abbildung dargestellten wurden willkürlich ausgewählt, jedoch alle Typen außer dem Host und dem Host Anzeigen der Attribute-Add-in erforderlich, damit diese von Methoden gefunden werden können, die einen Informationsspeicher zu erstellen.  
   
- ![Hinzufügen &#45; im Modell mit erforderlichen Attributen für Typen. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![Hinzufügen&#45;im Modell mit erforderlichen Attributen für Typen. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Add-in-Pipeline mit Typen  
   
  Die folgende Tabelle beschreibt die Pipelinesegmente für ein Add-in aktivieren. Weitere Informationen zu diesen Segmenten finden Sie unter [Verträge, Ansichten und Adapter](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
@@ -63,7 +53,7 @@ Add-in-Pipeline mit Typen
 ## <a name="pipeline-activation-path"></a>Pipeline-Aktivierungspfad  
  Die folgende Abbildung zeigt die Aktivierung von Typen aus, wenn ein Add-In aktiviert wird. Es zeigt auch die Übergabe von Objekten auf dem Host, z. B. die Ergebnisse einer Berechnung oder eine Auflistung von Objekten. Dies ist das häufigste Szenario.  
   
- ![Hinzufügen &#45; im Modell mit Aktivierungspfad. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![Hinzufügen&#45;im Modell mit Aktivierungspfad. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 Aktivierungspfad aus dem Add-in auf dem host  
   
  Der Aktivierungspfad der Pipeline erfolgt wie folgt aus:  

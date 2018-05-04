@@ -1,27 +1,15 @@
 ---
 title: Verschachteln von "DataRelations"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c057e836e8903fc2f5cb28f74858be97d2ffcc14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3f17d81ac41c90e7f1c48523a4ced91bc788a962
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nesting-datarelations"></a>Verschachteln von "DataRelations"
 Bei einer relationalen Darstellung von Daten enthalten einzelne Tabellen Zeilen, die über eine Spalte oder eine Gruppe von Spalten miteinander in Beziehung stehen. Im ADO.NET-<xref:System.Data.DataSet> wird die Beziehung zwischen Tabellen mit einer <xref:System.Data.DataRelation> implementiert. Beim Erstellen einer **DataRelation**, werden die Beziehungen zwischen über-und untergeordneten Spalten nur über die Beziehung verwaltet. 	Die Tabellen und Spalten sind separate Entitäten. Bei der hierarchischen Darstellung von durch XML bereitgestellten Daten werden die hierarchischen Beziehungen durch übergeordnete Elemente dargestellt, die geschachtelte untergeordnete Elemente enthalten.  
@@ -102,7 +90,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Beachten Sie, dass die **Kunden** Element und die **Aufträge** Elemente als nebengeordnete Elemente angezeigt werden. Mussten Sie die **Aufträge** Elemente als untergeordnete Elemente von den entsprechenden übergeordneten Elementen angezeigt der **geschachtelte** Eigenschaft von der **DataRelation** auf festgelegtwerdenmüssen**"true"** und fügen Sie Folgendes:  
+ Beachten Sie, dass die **Kunden** Element und die **Aufträge** Elemente als nebengeordnete Elemente angezeigt werden. Mussten Sie die **Aufträge** Elemente als untergeordnete Elemente von den entsprechenden übergeordneten Elementen angezeigt der **geschachtelte** Eigenschaft von der **DataRelation** auf festgelegtwerdenmüssen **"true"** und fügen Sie Folgendes:  
   
 ```vb  
 customerOrders.Nested = True  

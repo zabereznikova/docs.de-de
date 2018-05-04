@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Exemplarische Vorgehensweise: Datenfluss in einer Windows Forms-Anwendung verwenden
 Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstellt wird, die eine Bildverarbeitung in einer Windows Forms-Anwendung durchführen.  
@@ -48,9 +48,9 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
 #### <a name="to-create-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  
   
-1.  Erstellen Sie in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]- oder Visual Basic-Projekt **Windows Forms-Anwendung**. In diesem Dokument hat das Projekt den Namen `CompositeImages`.  
+1.  Erstellen Sie ein Visual C#- oder Visual Basic-**Windows Forms**-Anwendungsprojekt in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. In diesem Dokument hat das Projekt den Namen `CompositeImages`.  
   
-2.  Fügen Sie im Formulardesigner für das Hauptformular „Form1.cs“ („Form1.vb“ in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu.  
+2.  Fügen Sie im Formulardesigner für das Hauptformular „Form1.cs“ („Form1.vb“ in Visual Basic) ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu.  
   
 3.  Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> und die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Ordner auswählen** fest.  
   
@@ -66,7 +66,7 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
 1.  Fügen Sie Ihrem Projekt einen Verweis auf „System.Threading.Tasks.Dataflow.dll“ hinzu.  
   
-2.  Stellen Sie sicher, dass „Form1.cs“ („Form1.vb“ für [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) die folgenden `using`-Anweisungen (`Using` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) enthält:  
+2.  Stellen Sie sicher, dass „Form1.cs“ („Form1.vb“ für Visual Basic) die folgenden `using`-Anweisungen (`Using` in Visual Basic) enthält:  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
@@ -87,7 +87,7 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  Die C#-Version der `CreateCompositeBitmap`-Methode verwendet Zeiger, um eine effiziente Verarbeitung der <xref:System.Drawing.Bitmap?displayProperty=nameWithType>-Objekte zu ermöglichen. Aus diesem Grund müssen Sie die Option **Unsicheren Code zulassen** in Ihrem Projekt aktivieren, um das [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md)-Schlüsselwort zu verwenden. Weitere Informationen zum Aktivieren von unsicheren Codes in einem [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Projekt finden Sie unter [Seite „Erstellen“, Projekt-Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    >  Die C#-Version der `CreateCompositeBitmap`-Methode verwendet Zeiger, um eine effiziente Verarbeitung der <xref:System.Drawing.Bitmap?displayProperty=nameWithType>-Objekte zu ermöglichen. Aus diesem Grund müssen Sie die Option **Unsicheren Code zulassen** in Ihrem Projekt aktivieren, um das [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md)-Schlüsselwort zu verwenden. Weitere Informationen zum Aktivieren von unsicheren Codes in einem Visual C#-Projekt finden Sie unter [Seite „Erstellen“, Projekt-Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  In der folgenden Tabelle werden die Member des Netzwerks beschrieben.  
   
@@ -98,7 +98,7 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
 |`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Zeigt die zusammengesetzte Bitmap im Formular an.|  
 |`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Zeigt ein Bild an, um anzugeben, dass der Vorgang abgebrochen wird, und ermöglicht es dem Benutzer, einen anderen Ordner auszuwählen.|  
   
- Um die Datenflussblöcke zu einem Netzwerk zu verbinden, wird in diesem Beispiel die <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>-Methode verwendet. Die <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>-Methode enthält eine überladene Version, die ein <xref:System.Predicate%601>-Objekt akzeptiert, das definiert, ob der Zielblock eine Nachricht akzeptiert oder ablehnt. Dieser Filtermechanismus aktiviert Nachrichtenblöcke so, dass sie nur bestimmte Werte empfangen. In diesem Beispiel kann das Netzwerk auf zwei Arten verzweigen. Die Hauptverzweigung lädt die Bilder vom Datenträger, erstellt das zusammengesetzte Bild und zeigt das Bild auf dem Formular an. Die alternative Verzweigung bricht den aktuellen Vorgang ab. Die <xref:System.Predicate%601>-Objekte aktivieren die Datenflussblöcke entlang der Hauptverzweigung, um zur alternativen Verzweigung zu wechseln, indem bestimmte Nachrichten zurückgewiesen werden. Wenn der Benutzer beispielsweise den Vorgang abbricht, erzeugt der Datenflussblock `createCompositeBitmap` `null` (`Nothing` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) als Ausgabe. Der Datenflussblock `displayCompositeBitmap` lehnt `null`-Eingabewerte ab, und daher wird die Nachricht `operationCancelled` bereitgestellt. Der Datenflussblock `operationCancelled` akzeptiert alle Nachrichten und zeigt daher ein Bild an, um anzugeben, dass der Vorgang abgebrochen wird.  
+ Um die Datenflussblöcke zu einem Netzwerk zu verbinden, wird in diesem Beispiel die <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>-Methode verwendet. Die <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>-Methode enthält eine überladene Version, die ein <xref:System.Predicate%601>-Objekt akzeptiert, das definiert, ob der Zielblock eine Nachricht akzeptiert oder ablehnt. Dieser Filtermechanismus aktiviert Nachrichtenblöcke so, dass sie nur bestimmte Werte empfangen. In diesem Beispiel kann das Netzwerk auf zwei Arten verzweigen. Die Hauptverzweigung lädt die Bilder vom Datenträger, erstellt das zusammengesetzte Bild und zeigt das Bild auf dem Formular an. Die alternative Verzweigung bricht den aktuellen Vorgang ab. Die <xref:System.Predicate%601>-Objekte aktivieren die Datenflussblöcke entlang der Hauptverzweigung, um zur alternativen Verzweigung zu wechseln, indem bestimmte Nachrichten zurückgewiesen werden. Wenn der Benutzer beispielsweise den Vorgang abbricht, erzeugt der Datenflussblock `createCompositeBitmap` `null` (`Nothing` in Visual Basic) als Ausgabe. Der Datenflussblock `displayCompositeBitmap` lehnt `null`-Eingabewerte ab, und daher wird die Nachricht `operationCancelled` bereitgestellt. Der Datenflussblock `operationCancelled` akzeptiert alle Nachrichten und zeigt daher ein Bild an, um anzugeben, dass der Vorgang abgebrochen wird.  
   
  Die folgende Abbildung zeigt das Bildverarbeitungsnetzwerk.  
   

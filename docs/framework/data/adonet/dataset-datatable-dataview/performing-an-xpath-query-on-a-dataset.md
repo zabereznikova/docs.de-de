@@ -1,32 +1,20 @@
 ---
-title: "Ausführen einer XPath-Abfrage für ein DataSet"
-ms.custom: 
+title: Ausführen einer XPath-Abfrage für ein DataSet
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3a13d6ee9345731e097d0bdc9b6e59772d29b554
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c785cc69289440918f45974c711ae0b112130c5d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Ausführen einer XPath-Abfrage für ein DataSet
 Die Beziehung zwischen einem synchronisierten <xref:System.Data.DataSet> und <xref:System.Xml.XmlDataDocument> bietet die Möglichkeit zum Verwenden von XML-Diensten, z. B. die XML Path Language (XPath)-Abfrage, die auf die **XmlDataDocument** und bestimmte Funktionen ausführen können Komfortabler Zugriff auf die **DataSet** direkt. Z. B. statt der **wählen** Methode eine <xref:System.Data.DataTable> beim Navigieren von Beziehungen zu anderen Tabellen in eine **DataSet**, können Sie eine XPath-Abfrage ausführen, auf ein **XmlDataDocument**  synchronisiertes der **DataSet**, um eine Liste von XML-Elementen in Form von erhalten eine <xref:System.Xml.XmlNodeList>. Die Knoten in der **XmlNodeList**, umgewandelt als <xref:System.Xml.XmlElement> Knoten, klicken Sie dann auf übergeben werden kann die **GetRowFromElement** Methode der **XmlDataDocument**Übereinstimmung zurückgegeben <xref:System.Data.DataRow> Verweise auf die Zeilen der Tabelle in der synchronisierten **DataSet**.  
   
- Im folgenden Codebeispiel wird eine XPath-Abfrage für Elemente der zweiten Unterebene ausgeführt. Die **DataSet** wird mit drei Tabellen ausgefüllt: **Kunden**, **Aufträge**, und **OrderDetails**. Im Beispiel wird zunächst eine hierarchische Beziehung zwischen erstellt die **Kunden** und **Aufträge** Tabellen, und zwischen den **Aufträge** und **OrderDetails** Tabellen. Eine XPath-Abfrage ausgeführt, um zurückgeben ein **XmlNodeList** von **Kunden** Knoten bei einem zwei Ebenen untergeordneten **OrderDetails** Knoten verfügt über eine **"ProductID"**Knoten mit dem Wert 43 verfügt. Im Wesentlichen wird im Beispiel die XPath-Abfrage verwenden, um zu bestimmen, welche Kunden das Produkt bestellt haben, die verfügt die **"ProductID"** 43 verfügt.  
+ Im folgenden Codebeispiel wird eine XPath-Abfrage für Elemente der zweiten Unterebene ausgeführt. Die **DataSet** wird mit drei Tabellen ausgefüllt: **Kunden**, **Aufträge**, und **OrderDetails**. Im Beispiel wird zunächst eine hierarchische Beziehung zwischen erstellt die **Kunden** und **Aufträge** Tabellen, und zwischen den **Aufträge** und **OrderDetails** Tabellen. Eine XPath-Abfrage ausgeführt, um zurückgeben ein **XmlNodeList** von **Kunden** Knoten bei einem zwei Ebenen untergeordneten **OrderDetails** Knoten verfügt über eine **"ProductID"** Knoten mit dem Wert 43 verfügt. Im Wesentlichen wird im Beispiel die XPath-Abfrage verwenden, um zu bestimmen, welche Kunden das Produkt bestellt haben, die verfügt die **"ProductID"** 43 verfügt.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  

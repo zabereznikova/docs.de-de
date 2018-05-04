@@ -1,31 +1,19 @@
 ---
 title: '&lt;clientVia&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7a1870a8c331aae16ab14da62c64d6fb15ecd3bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6218bb3f205f2825eb3f10fabf834cfd0396ac87
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltclientviagt"></a>&lt;clientVia&gt;
 Gibt den URI an, für den der Transportkanal erstellt werden sollte. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Description.ClientViaBehavior>.  
   
- \<System. ServiceModel >  
-\<Verhalten >  
-\<EndpointBehaviors >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<endpointBehaviors>  
 \<Verhalten >  
 \<ClientVia >  
   
@@ -51,7 +39,7 @@ Gibt den URI an, für den der Transportkanal erstellt werden sollte. Weitere Inf
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Verhalten >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.ClientViaElement>  

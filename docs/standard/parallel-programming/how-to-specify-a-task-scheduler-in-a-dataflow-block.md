@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 15b1168c34a22394424f250e8ab1887ec8ee1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Gewusst wie: Einen Aufgabenplaner in einem Datenflussblock angeben
 Dieses Dokument veranschaulicht, wie Sie einen bestimmten Aufgabenplaner zuweisen, wenn Sie Datenfluss in Ihrer Anwendung verwenden. Das Beispiel verwendet die <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType>-Klasse in einer Windows Forms-Anwendung, um anzuzeigen, wann die Readeraufgaben aktiv sind und wann eine Writeraufgabe aktiv ist. Darüber hinaus verwendet das Beispiel die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode, um zu ermögliche, dass ein Datenflussblock im Benutzeroberflächenthread ausgeführt wird.
@@ -31,9 +31,9 @@ Dieses Dokument veranschaulicht, wie Sie einen bestimmten Aufgabenplaner zuweise
 
 ## <a name="to-create-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  
   
-1.  Erstellen Sie ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Projekt oder ein Visual Basic **Windows Forms-Anwendungsprojekt**. In den folgenden Schritten wird das Projekt `WriterReadersWinForms` benannt.  
+1.  Erstellen Sie ein Visual C#- oder Visual Basic-**Windows Forms**-Anwendungsprojekt. In den folgenden Schritten wird das Projekt `WriterReadersWinForms` benannt.  
   
-2.  Fügen Sie im Formular-Designer für das Hauptformular „Form1.cs“ („Form1.vb“ in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) vier <xref:System.Windows.Forms.CheckBox>-Steuerelemente hinzu. Legen Sie die <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft auf **Reader 1** für `checkBox1`, **Reader 2** für `checkBox2`, **Reader 3** für `checkBox3` und **Writer** für `checkBox4` fest. Legen Sie die <xref:System.Windows.Forms.Control.Enabled%2A>-Eigenschaft für jedes Steuerelement auf `False` fest.  
+2.  Fügen Sie im Formulardesigner für das Hauptformular „Form1.cs“ („Form1.vb“ in Visual Basic) vier <xref:System.Windows.Forms.CheckBox>-Steuerelemente hinzu. Legen Sie die <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft auf **Reader 1** für `checkBox1`, **Reader 2** für `checkBox2`, **Reader 3** für `checkBox3` und **Writer** für `checkBox4` fest. Legen Sie die <xref:System.Windows.Forms.Control.Enabled%2A>-Eigenschaft für jedes Steuerelement auf `False` fest.  
   
 3.  Fügen Sie dem Formular ein <xref:System.Windows.Forms.Timer>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft auf `2500` fest.  
   
@@ -44,7 +44,7 @@ Dieses Dokument veranschaulicht, wie Sie einen bestimmten Aufgabenplaner zuweise
   
 1.  Fügen Sie dem Projekt einen Verweis auf „System.Threading.Tasks.Dataflow.dll“ hinzu.  
   
-2.  Stellen Sie sicher, dass „Form1.cs“ („Form1.vb“ bei [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) die folgenden `using`-Anweisungen (`Imports` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) enthält.  
+2.  Stellen Sie sicher, dass „Form1.cs“ („Form1.vb“ für Visual Basic) die folgenden `using`-Anweisungen (`Imports` in Visual Basic) enthält.  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#1)]  
@@ -81,7 +81,7 @@ Dieses Dokument veranschaulicht, wie Sie einen bestimmten Aufgabenplaner zuweise
  Dieses Beispiel verwendet außerdem die <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>-Klasse, um die gleichzeitige Ausführung einiger Datenflussblöcke zu aktivieren. Außerdem ermöglicht sie, dass ein anderer Datenflussblock exklusiv für alle anderen Datenflussblöcke ausgeführt wird, die auf dem gleichen <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>-Objekt ausgeführt werden. Dieses Verfahren ist nützlich, wenn mehrere Datenflussblöcke eine Ressource gemeinsam nutzen und einige davon exklusiven Zugriff auf die Ressource benötigen, da es aufgrund dieses Verfahrens nicht mehr notwendig ist, den Zugriff auf diese Ressource manuell zu synchronisieren. Dadurch, dass die manuelle Synchronisierung entfällt, kann Code effizienter gestaltet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt den vollständigen Code für „Form1.cs“ („Form1.vb“ in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ Im folgenden Beispiel wird der vollständige Code für „Form1.cs“ („Form1.vb“ in Visual Basic) gezeigt.  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  

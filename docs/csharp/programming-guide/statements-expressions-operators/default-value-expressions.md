@@ -1,37 +1,52 @@
 ---
-title: "Standardwertausdrücke (C#-Programmierhandbuch)"
-description: "Standardwertausdrücke erzeugen den Standardwert für jeden Verweistyp oder Werttyp."
-ms.date: 08/23/2017
+title: Standardwertausdrücke (C#-Programmierhandbuch)
+description: Standardwertausdrücke erzeugen den Standardwert für jeden Verweistyp oder Werttyp.
+ms.date: 04/25/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.assetid: b9daf449-4e64-496e-8592-6ed2c8875a98
-caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2bb1c269e5347d615c47ab828506aef538c4761
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 174ac79c9e2c4a4e628816b1178d420ec7cfc809
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>Standardwertausdrücke (C#-Programmierhandbuch)
 
-Ein Standardwertausdruck erzeugt den Standardwert für einen Typ. Standardwertausdrücke sind besonders nützlich in generischen Klassen und Methoden. Das Zuweisen eines Standardwerts zu einem parametrisierten Typ `T` wird beim Verwenden von Generika erschwert, wenn folgende Punkte im Voraus noch unklar sind:
+Ein Standardwertausdruck `default(T)` erzeugt den Standardwert für einen Typ `T`. In der folgenden Tabelle wird dargestellt, welche Werte für verschiedene Typen erstellt werden:
+
+|Typ|Standardwert|
+|---------|---------|
+|Verweistyp|`null`|
+|Numerischer Werttyp|Zero|
+|[bool](../../language-reference/keywords/bool.md)|`false`|
+|[char](../../language-reference/keywords/char.md)|`'\0'`|
+|[enum](../../language-reference/keywords/enum.md)|Der Wert, der vom Ausdruck `(E)0` erzeugt wird, bei dem `E` der Enumerationsbezeichner ist.|
+|[struct](../../language-reference/keywords/struct.md)|Der Wert, der erzeugt wird, indem alle Werttypfelder auf ihre Standardwerte und alle Verweistypfelder auf `null` festgelegt werden.|
+|Nullable-Typ|Eine Instanz, für die die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft `false` und die <xref:System.Nullable%601.Value%2A>-Eigenschaft nicht definiert ist.|
+
+Standardwertausdrücke sind besonders nützlich in generischen Klassen und Methoden. Das Zuweisen eines Standardwerts zu einem parametrisierten Typ `T` wird beim Verwenden von Generika erschwert, wenn folgende Punkte im Voraus noch unklar sind:
 
 - Ob `T` ein Verweistyp oder ein Werttyp ist.
-- Wenn `T` ein Werttyp ist, ob es dabei um einen numerischen Wert oder eine benutzerdefinierte Struktur handelt.
+- Wenn `T` ein Werttyp ist, unabhängig davon, ob es ein numerischer Wert oder eine Struktur ist.
 
- Angenommen, dass eine Variable `t` vom parametrisierten Typ `T` vorliegt, ist die Anweisung `t = null` nur gültig, wenn `T` ein Verweistyp ist. Die Zuweisung `t = 0` funktioniert nur für numerische Werttypen, nicht aber für Strukturen. Die Lösung besteht im Verwenden eines Standardwertausdrucks, der `null` für Verweistypen (Klassentypen und Schnittstellentypen) und 0 für numerische Werttypen zurückgibt. Bei benutzerdefinierten Strukturen gibt er die Struktur zurück, die mit dem 0-Bitmuster initialisiert wurde. Dieses erzeugt 0 oder `null` für jeden Member, je nachdem, ob es sich beim entsprechenden Member um einen Werttyp oder um einen Verweistyp handelt. Bei auf NULL festlegbaren Werttypen gibt `default` <xref:System.Nullable%601?displayProperty=nameWithType> zurück, die Initialisierung erfolgt analog zu allen anderen Strukturen.
+ Angenommen, dass eine Variable `t` vom parametrisierten Typ `T` vorliegt, ist die Anweisung `t = null` nur gültig, wenn `T` ein Verweistyp ist. Die Zuweisung `t = 0` funktioniert nur für numerische Werttypen, nicht aber für Strukturen. Verwenden Sie einen Standardwertausdruck, um dieses Problem zu lösen:
+
+```csharp
+T t = default(T);
+```
 
 Der Ausdruck `default(T)` ist nicht auf generische Klassen und Methoden beschränkt. Standardwertausdrücke können mit jedem verwalteten Typ verwendet werden. Jeder der folgenden Ausdrücke ist gültig:
 
  [!code-csharp[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
 
- Im folgenden Beispiel aus der Klasse `GenericList<T>` wird die Verwendung des Operators `default(T)` in einer generischen Klasse veranschaulicht. Weitere Informationen finden Sie unter [Einführung in Generika](../generics/introduction-to-generics.md).
+ Im folgenden Beispiel aus der Klasse `GenericList<T>` wird die Verwendung des Operators `default(T)` in einer generischen Klasse veranschaulicht. Weitere Informationen finden Sie unter [Introduction to Generics (Einführung in Generika)](../generics/introduction-to-generics.md).
 
  [!code-csharp[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
 
@@ -51,7 +66,9 @@ Das folgende Beispiel demonstriert die Verwendung des `default`-Literals in eine
 
 ## <a name="see-also"></a>Siehe auch
 
- <xref:System.Collections.Generic>[C#-Programmierhandbuch](../index.md)  
- [Generika](../generics/index.md)  
+ <xref:System.Collections.Generic>  
+ [C#-Programmierhandbuch](../index.md)  
+ [Generika (C#-Programmierleitfaden)](../generics/index.md)  
  [Generische Methoden](../generics/generic-methods.md)  
- [Generika](~/docs/standard/generics/index.md)  
+ [Generika in .NET](~/docs/standard/generics/index.md)  
+ [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md)

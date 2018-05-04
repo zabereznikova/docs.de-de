@@ -1,6 +1,6 @@
 ---
-title: "Tupel - Leitfaden für C#"
-description: "Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#"
+title: Tupel - Leitfaden für C#
+description: Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#
 keywords: .NET, .NET Core, C#
 author: BillWagner
 ms-author: wiwagn
@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 58f76332a8f3717fe10788382552598d6693e7e3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 1d1fc450503dc905e6b260a2b984e3ce2315fd45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-tuple-types"></a>C#-Tupeltypen #
 
-C#-Tupel sind Typen, die Sie mithilfe einer einfachen Syntax definieren. Zu den Vorteilen gehören eine einfachere Syntax, Regeln für auf Zahlen basierte Umwandlungen (sogenannte „Kardinalitäten“) und Typen von Elementen sowie konsistente Regeln für Kopien und Aufgaben. Dafür unterstützen Tupel nicht einige der objektorientierten Idiome, die der Vererbung zugeordnet werden. Sie erhalten im Abschnitt über Tupel im Thema [Neues in C# 7](whats-new/csharp-7.md#tuples) einen Überblick.
+C#-Tupel sind Typen, die Sie mithilfe einer einfachen Syntax definieren. Zu den Vorteilen gehören eine einfachere Syntax, Regeln für auf Zahlen basierte Umwandlungen (sogenannte „Kardinalitäten“) und Typen von Elementen sowie konsistente Regeln für Kopien und Aufgaben. Dafür unterstützen Tupel nicht einige der objektorientierten Idiome, die der Vererbung zugeordnet werden. Sie erhalten im Abschnitt über Tupel im Artikel [Neuerungen in C# 7.0](whats-new/csharp-7.md#tuples) einen Überblick.
 
-In diesem Thema lernen Sie die Sprachregeln, die Tupel in C# 7 steuern, verschiedene Verwendungsarten und einen ersten Leitfaden über das Arbeiten mit Tupel.
+In diesem Artikel erhalten Sie Informationen zu Sprachregeln, die Tupel in C# 7.0 und höher steuern und zu verschiedenen Verwendungsarten. Außerdem wird ein erster Leitfaden über das Arbeiten mit Tupel zur Verfügung gestellt.
 
 > [!NOTE]
 > Die neuen Tupeleigenschaften benötigen die <xref:System.ValueTuple>-Typen.
@@ -77,7 +77,7 @@ Wenn ein expliziter Name vergeben wird, hat dieser vor jedem projizierten Namen 
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Für jedes Feld ohne expliziten Namen wird ein zutreffender, impliziter Name projiziert. Beachten Sie, dass es weder explizit noch implizit nötig ist, semantische Namen bereitzustellen. Die folgenden Initialisierer müssen Feldnamen `Item1`, dessen Wert `42` und `StringContent`, deren Wert "Die Antwort auf alle Elemente" ist:
+Für jedes Feld ohne expliziten Namen wird ein zutreffender, impliziter Name projiziert. Beachten Sie, dass es weder explizit noch implizit nötig ist, semantische Namen bereitzustellen. Die folgenden Initialisierer besitzen die Feldnamen `Item1`, dessen Wert `42` ist, und `StringContent`, dessen Wert „Die Antwort auf alles“ ist:
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -143,7 +143,7 @@ Wir aktualisieren diese Methoden, sodass die drei Werte, die während der Enumer
 
 [!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Refactoring-Unterstützung für Visual Studio erleichtert es, um die Funktionalität für die Core-Statistik in eine private Methode extrahieren. Das gibt Ihnen eine `private static`-Methode, die den Tupeltyp mit den drei Werten von `Sum`, `SumOfSquares` und `Count` zurückgibt:
+Die Unterstützung von Refactoring in Visual Studio vereinfacht es, die Funktionen für die Kernstatistik in eine private Methode zu extrahieren. Das gibt Ihnen eine `private static`-Methode, die den Tupeltyp mit den drei Werten von `Sum`, `SumOfSquares` und `Count` zurückgibt:
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
@@ -198,7 +198,7 @@ Das benannte Tupel kann Teil der Signatur sein. Es lässt den Compiler und IDE-T
 
 ## <a name="deconstruction"></a>Dekonstruktion
 
-Sie können alle Elemente in einem Tupel entpacken, indem das Tupel, das von einer Methode zurückgegeben wurde, *dekonstruiert* wird. Es gibt drei verschiedene Ansätze zum Zerlegen von Tupeln aus.  Zuerst können Sie ausdrücklich den Typ von jedem Feld in Klammern deklarieren, um diskrete Variablen für jedes der Elemente im Tupel zu erstellen:
+Sie können alle Elemente in einem Tupel entpacken, indem das Tupel, das von einer Methode zurückgegeben wurde, *dekonstruiert* wird. Es gibt drei verschiedene Ansätze zum Dekonstruieren von Tupeln.  Zuerst können Sie ausdrücklich den Typ von jedem Feld in Klammern deklarieren, um diskrete Variablen für jedes der Elemente im Tupel zu erstellen:
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
@@ -214,7 +214,7 @@ Das Verwenden des Schlüsselworts `var` mit beliebigen oder allen Variablendekla
 
 Beachten Sie, dass Sie einen bestimmten Typ außerhalb der Klammern verwenden können, auch wenn jedes Feld im Tupel den selben Typ hat.
 
-Sie können Tupeln mit vorhandenen Deklarationen sowie löschen:
+Sie können Tupel auch mit bereits vorhandenen Deklarationen dekonstruieren:
 
 ```csharp
 public class Point
@@ -227,7 +227,7 @@ public class Point
 ```
 
 > [!WARNING]
->  Sie können keine vorhandene Deklarationen mit Deklarationen innerhalb der Klammern kombinieren. Folgendes ist z. B. nicht zulässig: `(var x, y) = MyMethod();`. Dadurch wird der Fehler CS8184 generiert, da *x* wird innerhalb der Klammern deklariert und *y* ist bereits an anderer Stelle deklariert.
+>  Allerdings können bereits vorhandene Deklarationen nicht mit Deklarationen vermischt werden, die in Klammern stehen. Folgendes ist beispielsweise nicht erlaubt: `(var x, y) = MyMethod();`. Dadurch wird der Fehler CS8184 ausgelöst, da *x* in Klammern und *y* bereits zuvor an einer anderen Stelle deklariert wurden.
 
 ### <a name="deconstructing-user-defined-types"></a>Dekonstruieren von benutzerdefinierten Typen
 
@@ -255,6 +255,6 @@ Sie sollten sehr vorsichtig mit dem Definieren von mehreren `Deconstruct`-Method
 
 In diesem Beispiel besteht eine minimale Wahrscheinlichkeit für einen mehrdeutigen Aufruf, weil die `Deconstruct`-Methode für `Person` zwei Ausgabeparameter besitzt, und die `Deconstruct`-Methode für `Student` drei besitzt.
 
-## <a name="conclusion"></a>Schlussfolgerung 
+## <a name="conclusion"></a>Schlussbemerkung 
 
 Die neue Sprach- und Bibliotheksunterstützung für benannte Tupel vereinfacht es, mit Entwürfen zu arbeiten, die Datenstrukturen verwenden, die mehrere Elemente definieren, aber keine Verhalten definieren, wie es Klassen und Strukturen tun. Die Verwendung von Tupeln ist für diese Typen einfach und präzise. Sie erhalten alle Vorteile der Überprüfung von statischen Typen, ohne Typen mithilfe der ausführlicheren `class`- oder `struct`-Syntax schreiben zu müssen. Dennoch sind sie für Hilfsmethoden, die `private` oder `internal` sind, am nützlichsten. Erstellen Sie benutzerdefinierte Typen, entweder Typen `class` oder `struct`, wenn Ihre öffentlichen Methoden einen Wert mit mehreren Elementen zurückgeben.

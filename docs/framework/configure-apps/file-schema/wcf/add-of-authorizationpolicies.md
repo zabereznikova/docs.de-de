@@ -1,30 +1,18 @@
 ---
 title: '&lt;add&gt; von &lt;authorizationPolicies&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72af0529cea2e6810bdb7a518874a313e3ceab40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;add&gt; von &lt;authorizationPolicies&gt;
 Gibt eine Autorisierungsrichtlinie für Anspruchstransformation an.  
   
- \<System. ServiceModel >  
-\<Verhalten >  
+ \<system.ServiceModel>  
+\<behaviors>  
 \<Verhalten >  
 \<ServiceAuthorization >  
 \<AuthorizationPolicies >  
@@ -48,7 +36,7 @@ Gibt eine Autorisierungsrichtlinie für Anspruchstransformation an.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`policyType`|Ein erforderliches Zeichenfolgenattribut.<br /><br /> Das [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Zugriffssteuerungsmodell unterstützt die Bereitstellung einer Gruppe von Autorisierungsrichtlinien als Typen. Dieses Attribut gibt eine Autorisierungsrichtlinie an, die die Transformation einer Gruppe von Eingabeansprüchen in eine andere Gruppe von Eingabeansprüchen ermöglicht. Die Zugriffssteuerung kann basierend darauf gewährt oder verweigert werden.|  
+|`policyType`|Ein erforderliches Zeichenfolgenattribut.<br /><br /> Der Windows Communication Foundation (WCF)-Zugriffssteuerungsmodell unterstützt die Bereitstellung einer Gruppe von Autorisierungsrichtlinien als Typen. Dieses Attribut gibt eine Autorisierungsrichtlinie an, die die Transformation einer Gruppe von Eingabeansprüchen in eine andere Gruppe von Eingabeansprüchen ermöglicht. Die Zugriffssteuerung kann basierend darauf gewährt oder verweigert werden.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

@@ -1,24 +1,12 @@
 ---
 title: Verteilte Transaktionen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-transactions"></a>Verteilte Transaktionen
 Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgaben, die entweder in ihrer Gesamtheit erfolgreich abgeschlossen werden (Commit) oder nicht (Abort). Ein *verteilte Transaktion* ist eine Transaktion, die sich auf verschiedene Ressourcen auswirkt. Damit ein Commit einer verteilten Transaktion erfolgreich ausgeführt werden kann, müssen alle Beteiligten gewährleisten, dass jede vorgenommene Datenänderung dauerhaft ist. Änderungen müssen auch im Fall von Systemausfällen oder anderen unvorhergesehenen Ereignissen dauerhaft sein. Sobald auch nur ein Beteiligter dies nicht gewährleisten kann, kann die gesamte Transaktion nicht ausgeführt werden, und sämtliche im Zuge der Transaktion durchgeführten Datenänderungen werden in einem Rollback zurückgenommen.  
@@ -44,7 +32,7 @@ Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgabe
   
  Das Eintragen in verteilte Transaktionen eignet sich besonders beim Pooling von Geschäftsobjekten. Wenn sich ein Geschäftsobjekt mit einer hergestellten Verbindung in einem Pool befindet, erfolgt die automatische Transaktionseintragung nur, wenn diese Verbindung hergestellt wird. Wenn mehrere Transaktionen unter Verwendung des Geschäftsobjekts im Pool ausgeführt werden, wird die für das Objekt hergestellte Verbindung nicht automatisch in neu initialisierte Transaktionen eingetragen. In diesem Fall können Sie die automatische Transaktionseintragung für die Verbindung deaktivieren und die Verbindung mithilfe der `EnlistTransaction`-Methode in Transaktionen eintragen.  
   
- `EnlistTransaction`akzeptiert ein einzelnes Argument vom Typ <xref:System.Transactions.Transaction> , das einen Verweis auf die vorhandene Transaktion. Nach dem Aufrufen der `EnlistTransaction`-Methode der Verbindung werden alle Änderungen, die mit der Verbindung an der Datenquelle vorgenommen wurden, in die Transaktion eingetragen. Beim Übergeben eines NULL-Werts wird die Verbindung aus der aktuellen verteilten Transaktionseintragung ausgetragen. Beachten Sie, dass die Verbindung vor dem Aufrufen der `EnlistTransaction`-Methode hergestellt werden muss.  
+ `EnlistTransaction` akzeptiert ein einzelnes Argument vom Typ <xref:System.Transactions.Transaction> , das einen Verweis auf die vorhandene Transaktion. Nach dem Aufrufen der `EnlistTransaction`-Methode der Verbindung werden alle Änderungen, die mit der Verbindung an der Datenquelle vorgenommen wurden, in die Transaktion eingetragen. Beim Übergeben eines NULL-Werts wird die Verbindung aus der aktuellen verteilten Transaktionseintragung ausgetragen. Beachten Sie, dass die Verbindung vor dem Aufrufen der `EnlistTransaction`-Methode hergestellt werden muss.  
   
 > [!NOTE]
 >  Nachdem eine Verbindung ausdrücklich in eine Transaktion eingetragen wurde, kann sie solange nicht ausgetragen oder in eine andere Transaktion eingetragen werden, bis die erste Transaktion beendet wurde.  

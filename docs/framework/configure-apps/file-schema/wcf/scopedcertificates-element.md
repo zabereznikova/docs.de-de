@@ -1,33 +1,21 @@
 ---
 title: '&lt;scopedCertificates&gt;-Element'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 719a52fb1a0f558bda2b337e1402f8aecafc6b8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt;-Element
 Stellt eine Auflistung von X.509-Zertifikaten dar, die von bestimmten Diensten (mit Gültigkeitsbereich) zur Authentifizierung bereitgestellt werden. Diese Auflistung wird normalerweise verwendet, um die Dienstzertifikate für Sicherheitstokendienste in einem Verbundsszenario anzugeben.  
   
- \<System. ServiceModel >  
-\<Verhalten >  
+ \<system.ServiceModel>  
+\<behaviors>  
 EndpointBehaviors-Abschnitt  
 \<Verhalten >  
-\<ClientCredentials >  
+\<clientCredentials>  
 \<ServiceCertificate >  
 \<ScopedCertificates >-Element  
 \<Hinzufügen >-Element für \<ScopedCertificates >  
@@ -70,7 +58,7 @@ EndpointBehaviors-Abschnitt
  Weitere Informationen finden Sie im Abschnitt "Zertifikate im Bereich" [Vorgehensweise: Erstellen eines Clients Federated](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel gibt ein Dienstzertifikat für den Client an, das bei der Kommunikation über das HTTP-Protokoll mit Endpunkten, deren Domänenname http://www.contoso.com ist, verwendet wird.  
+ Im folgenden Beispiel wird ein Dienstzertifikat für den Client zu verwenden, wenn bei der Kommunikation mit Endpunkten, deren Domänenname http://www.contoso.com über das HTTP-Protokoll.  
   
 ```xml  
 <serviceCertificate>  

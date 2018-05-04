@@ -1,27 +1,15 @@
 ---
 title: Bezeichner (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 18bfb654a6f116f87ae7eeb6059fe994b9084c19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-entity-sql"></a>Bezeichner (Entity SQL)
-Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwendet, um Abfrageausdruckaliase, Verweise auf Variablen, Eigenschaften von Objekten und Funktionen usw. darzustellen. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bietet zwei Arten von Bezeichnern: einfache Bezeichner und Bezeichner in Anführungszeichen.  
+Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwendet, um Abfrageausdruckaliase, Verweise auf Variablen, Eigenschaften von Objekten und Funktionen usw. darzustellen. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet zwei Arten von Bezeichnern: einfache Bezeichner und Bezeichner in Anführungszeichen.  
   
 ## <a name="simple-identifiers"></a>Einfacher Bezeichner  
  Ein einfacher Bezeichner in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist eine Sequenz von alphanumerischen Zeichen und Unterstriche enthalten. Das erste Zeichen des Bezeichners muss ein alphabetisches Zeichen (a-z oder A-Z) sein.  
@@ -97,7 +85,7 @@ SELECT 1 AS X, 2 AS X …
 ```  
   
 ## <a name="scoping-rules"></a>Bereichsregeln  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]definiert die Bereichsregeln, die bestimmen, wann bestimmte Variablen in der Abfragesprache sichtbar sind. Mit einigen Ausdrücken oder Anweisungen werden neue Namen eingeführt. Die Bereichsregeln bestimmen, wo solche Namen verwendet werden können und wann oder wo eine neue Deklaration mit demselben Namen wie eine andere die vorherige übergehen kann.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] definiert die Bereichsregeln, die bestimmen, wann bestimmte Variablen in der Abfragesprache sichtbar sind. Mit einigen Ausdrücken oder Anweisungen werden neue Namen eingeführt. Die Bereichsregeln bestimmen, wo solche Namen verwendet werden können und wann oder wo eine neue Deklaration mit demselben Namen wie eine andere die vorherige übergehen kann.  
   
  Wenn Namen in definiert eine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfrage, gelten sie als in einem Gültigkeitsbereich definiert werden. Ein Gültigkeitsbereich deckt einen vollständigen Bereich der Abfrage ab. Für alle Ausdrücke oder Namensverweise innerhalb eines bestimmten Gültigkeitsbereichs sind Namen sichtbar, die innerhalb dieses Gültigkeitsbereichs definiert sind. Vor dem Beginn und nach dem Ende eines Gültigkeitsbereichs kann nicht auf Namen verwiesen werden, die innerhalb des Gültigkeitsbereichs definiert sind.  
   
@@ -125,7 +113,7 @@ SELECT 1 AS X, 2 AS X …
 -   Die Reihenfolge der Auswertung von Klauseln innerhalb des SELECT-Ausdrucks bestimmt die Reihenfolge, in der Namen im Gültigkeitsbereich eingeführt werden. Die FROM-Klausel wird zuerst ausgewertet, gefolgt von der WHERE-Klausel, GROUP BY-Klausel, HAVING-Klausel, SELECT-Klausel und schließlich der ORDER BY-Klausel.  
   
 ### <a name="aggregate-handling"></a>Aggregatbehandlung  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]unterstützt zwei Formen von Aggregaten: Auflistungsbasierte Aggregate und Gruppenbasierte Aggregate. Auflistungsbasierte Aggregate sind das bevorzugte Konstrukt in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], und gruppenbasierte Aggregate werden für die SQL-Kompatibilität unterstützt.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt zwei Formen von Aggregaten: Auflistungsbasierte Aggregate und Gruppenbasierte Aggregate. Auflistungsbasierte Aggregate sind das bevorzugte Konstrukt in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], und gruppenbasierte Aggregate werden für die SQL-Kompatibilität unterstützt.  
   
  Beim Auflösen eines Aggregats [!INCLUDE[esql](../../../../../../includes/esql-md.md)] versucht zuerst, dies als auflistungsbasiertes Aggregat zu behandeln. Wenn dies fehlschlägt, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] transformiert die Aggregateingabe in einen Verweis auf das Schachtelaggregat und versucht, diesen neuen Ausdruck aufzulösen, wie im folgenden Beispiel dargestellt.  
   

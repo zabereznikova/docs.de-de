@@ -1,6 +1,6 @@
 ---
-title: "Ausschüsse: Leitfaden für C#"
-description: "Beschreibt die Unterstützung von C# für Ausschüsse, bei denen es sich um nicht zugewiesene, verwerfbare Variablen handelt, und die Möglichkeiten, wie Ausschüsse verwendet werden können."
+title: 'Ausschüsse: Leitfaden für C#'
+description: Beschreibt die Unterstützung von C# für Ausschüsse, bei denen es sich um nicht zugewiesene, verwerfbare Variablen handelt, und die Möglichkeiten, wie Ausschüsse verwendet werden können.
 keywords: .NET,.NET Core
 author: rpetrusha
 ms.author: ronpet
@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 800a27d2d186c738dceb6838aa669377a0c07b01
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 94badd78485ee4d3928b170d81a80743bf84102f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="discards---c-guide"></a>Ausschüsse: Leitfaden für C#
 
-Ab C# 7 werden Ausschüsse von C# unterstützt. Dabei handelt es sich um temporäre Platzhaltervariablen, die bewusst ungenutzt im Anwendungscode verwendet werden. Ausschüsse entsprechen nicht zugewiesenen Variablen und besitzen keinen Wert. Da es nur eine einzige Ausschussvariable gibt und dieser Variable möglicherweise nicht einmal Speicher zugewiesen ist, kann durch Ausschüsse die Speicherbelegung reduziert werden. Da sie den Zweck Ihres Codes deutlich machen, verbessern Sie dessen Lesbarkeit und Verwaltbarkeit.
+Ab C# 7.0 werden Ausschüsse von C# unterstützt. Dabei handelt es sich um temporäre Platzhaltervariablen, die bewusst ungenutzt im Anwendungscode verwendet werden. Ausschüsse entsprechen nicht zugewiesenen Variablen und besitzen keinen Wert. Da es nur eine einzige Ausschussvariable gibt und dieser Variable möglicherweise nicht einmal Speicher zugewiesen ist, kann durch Ausschüsse die Speicherbelegung reduziert werden. Da sie den Zweck Ihres Codes deutlich machen, verbessern Sie dessen Lesbarkeit und Verwaltbarkeit.
 
-Sie geben an, dass es sich bei einer Variable um Ausschuss handelt, indem Sie ihr einen Unterstrich (`_`) als Namen zuweisen. Beispielsweise gibt der folgende Methodenaufruf ein 3-Tupel, das in der ersten und zweiten verwirft Werte und *Bereich* ist eine zuvor deklarierte Variable an die entsprechenden dritte Komponente zurückgegebenes festgelegt werden  *GetCityInformation*:
+Sie geben an, dass es sich bei einer Variable um Ausschuss handelt, indem Sie ihr einen Unterstrich (`_`) als Namen zuweisen. Der folgende Methodenaufruf gibt beispielsweise ein 3-Tupel zurück, in dem der erste und zweite Wert Ausschussvariablen sind und *area* eine zuvor deklarierte Variable ist, die auf die entsprechende dritte Komponente festgelegt wird, die von *GetCityInformation* zurückgegeben wird:
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-In C# 7 werden Ausschüsse in Zuweisungen in den folgenden Kontexten unterstützt:
+In C# 7.0 werden Ausschussvariablen in Zuweisungen in den folgenden Kontexten unterstützt:
 
 - [Dekonstruieren](deconstruct.md) von Tupeln und Objekten.
 - Musterabgleich mit [is](language-reference/keywords/is.md) und [switch](language-reference/keywords/switch.md).

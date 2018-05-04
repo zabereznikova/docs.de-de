@@ -1,24 +1,12 @@
 ---
 title: String-Funktionen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ba371840cf5c3b19ee232be0934557d87e7c343f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0faac7eb37a1405c38137ce9887cf7de4c36df3a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>String-Funktionen
 Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt `String`-Funktionen zur Verfügung, die einen eingegebenen `String` verarbeiten und als Ergebnis einen `String` oder einen numerischen Wert zurückgeben. Diese Funktionen befinden sich im SQLServer-Namespace, der bei der Verwendung von SqlClient verfügbar ist. Anhand der Namespaceigenschaft des Anbieters kann Entity Framework ermitteln, welches Präfix von diesem Anbieter für spezifische Konstrukte, wie Typen und Funktionen, verwendet wird.  
@@ -46,7 +34,7 @@ Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt `String`-Fun
 |`SOUNDEX(expression)`|Gibt einen vier Zeichen (langen SOUNDEX-) Code zum Auswerten der Ähnlichkeit von zwei Zeichenfolgen zurück. **Argumente**<br /><br /> `expression`: Ein Unicode- oder ASCII-Zeichenfolgentyp.<br /><br /> **Rückgabewert**<br /><br /> Ein ASCII-`String`. Ein aus vier Zeichen bestehender (SOUNDEX) Code ist eine Zeichenfolge, die zur Bewertung der Ähnlichkeit von zwei Zeichenfolgen verwendet wird.<br /><br /> **Beispiel**<br /><br /> `Select SqlServer.SOUNDEX('Smith'), SqlServer.SOUNDEX('Smythe') FROM {1}`<br /><br /> **Gibt zurück**<br /><br /> `----- -----  S530  S530`|  
 |`SPACE(int_expression)`|Gibt einen ASCII-`String` aus mehreren Leerzeichen zurück.<br /><br /> **Argumente**<br /><br /> `int_expression`: Ein `Int64`-Wert (wird in SQL Server 2000 nicht zurückgegeben) oder ein `Int32`-Wert, der die Anzahl der Leerzeichen angibt.<br /><br /> **Rückgabewert**<br /><br /> Ein ASCII-`String`.<br /><br /> **Beispiel**<br /><br /> `SqlServer.SPACE(2)`|  
 |`STR(float_expression [, length [, decimal]])`|Gibt einen ASCII-`String` zurück, der aus numerischen Daten konvertiert wurde.<br /><br /> **Argumente**<br /><br /> `float _expression`: Ein Ausdruck der ungefähren numerischen Datentypkategorie (`Double`) mit einem Dezimaltrennzeichen.<br /><br /> (`length`: optional) Ein `Int32`-Wert, der die Gesamtlänge darstellt. Dazu gehören Dezimaltrennzeichen, Vorzeichen, Ziffern und Leerzeichen. Der Standard ist 10.<br /><br /> `decimal`: (optional) eine `Int32` stellt die Anzahl der Stellen rechts vom Dezimaltrennzeichen an. Der Wert für "decimal" muss kleiner oder gleich 16 sein. Wenn der Wert für "decimal" höher als 16 ist, wird das Ergebnis bei sechzehn Stellen nach dem Dezimaltrennzeichen abgeschnitten.<br /><br /> **Rückgabewert**<br /><br /> Ein ASCII-`String`.<br /><br /> **Beispiel**<br /><br /> `SqlServer.STR(212.0)`|  
-|`STUFF(str_expression, start, length, str_expression_to_insert)`|Löscht eine angegebene Anzahl von Zeichen und fügt andere Zeichen am angegebenen Anfangspunkt in einen Zeichenfolgenausdruck ein.<br /><br /> **Argumente**<br /><br /> `str_expression`: Ein Unicode- oder ASCII-`String`.<br /><br /> `start:`Ein `Int64` (nicht zurückgegeben in SQL Server 2000) oder `Int32` Wert, der den Speicherort für die Löschung und Einfügung starten angibt.<br /><br /> `length`: Ein `Int64`-Wert (nicht zurückgegeben in SQL Server 2000) oder ein `Int32`-Wert, der die Anzahl von Zeichen angibt, die gelöscht werden sollen.<br /><br /> `str_expression_to_insert`: Ein Unicode- oder ASCII-`String`.<br /><br /> **Rückgabewert**<br /><br /> Ein Unicode- oder ASCII-`String`.<br /><br /> **Beispiel**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
+|`STUFF(str_expression, start, length, str_expression_to_insert)`|Löscht eine angegebene Anzahl von Zeichen und fügt andere Zeichen am angegebenen Anfangspunkt in einen Zeichenfolgenausdruck ein.<br /><br /> **Argumente**<br /><br /> `str_expression`: Ein Unicode- oder ASCII-`String`.<br /><br /> `start:` Ein `Int64` (nicht zurückgegeben in SQL Server 2000) oder `Int32` Wert, der den Speicherort für die Löschung und Einfügung starten angibt.<br /><br /> `length`: Ein `Int64`-Wert (nicht zurückgegeben in SQL Server 2000) oder ein `Int32`-Wert, der die Anzahl von Zeichen angibt, die gelöscht werden sollen.<br /><br /> `str_expression_to_insert`: Ein Unicode- oder ASCII-`String`.<br /><br /> **Rückgabewert**<br /><br /> Ein Unicode- oder ASCII-`String`.<br /><br /> **Beispiel**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
 |`SUBSTRING(str_expression, start, length)`|Gibt einen Teil eines `String`-Ausdrucks zurück.<br /><br /> **Argumente**<br /><br /> `str_expression`: Ein Ausdruck eines `String`-Typs (Unicode oder ASCII) oder eines `Binary`-Typs.<br /><br /> `start`: Ein `Int64` (nicht zurückgegeben in SQL Server 2000) oder ein `Int32`, das angibt, an welcher Position die untergeordnete Zeichenfolge beginnt. 1 bezieht sich auf das erste Zeichen in der Zeichenfolge.<br /><br /> `length`: Ein `Int64`-Wert (wird in SQL Server 2000 nicht zurückgegeben) oder ein `Int32`-Wert, der festlegt, wie viele Zeichen des Ausdrucks zurückgegeben werden.<br /><br /> **Rückgabewert**<br /><br /> Ein `String`-Typ (ASCII oder Unicode) oder ein `Binary`-Typ.<br /><br /> **Beispiel**<br /><br /> `SqlServer.SUBSTRING('abcd', 2, 2)`|  
 |`UNICODE(expression)`|Gibt für das erste Zeichen des Eingabeausdrucks den im Unicode-Standard entsprechenden ganzzahligen Wert zurück.<br /><br /> **Argumente**<br /><br /> `expression`: Ein Unicode-`String`.<br /><br /> **Rückgabewert**<br /><br /> Eine `Int32`.<br /><br /> **Beispiel**<br /><br /> `SqlServer.UNICODE('a')`|  
 |`UPPER(expression)`|Gibt einen `String`-Ausdruck zurück, nachdem klein geschriebene Zeichen in groß geschriebene konvertiert wurden.<br /><br /> **Argumente**<br /><br /> `expression`: Ein Ausdruck eines Unicode- oder ASCII-Zeichenfolgentyps.<br /><br /> **Rückgabewert**<br /><br /> Ein `String`-Typ (ASCII oder Unicode).<br /><br /> **Beispiel**<br /><br /> `SqlServer.UPPER('AbB')`|  

@@ -1,24 +1,12 @@
 ---
 title: 'Gewusst wie: Erstellen eines LINQ to DataSet-Projekts in Visual Studio'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c749cdd56f0c964b84788b05470406234ef3eb0a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 094d766146fe55a865713a4672a2bee6a838ff55
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Gewusst wie: Erstellen eines LINQ to DataSet-Projekts in Visual Studio
 Die unterschiedlichen Arten von [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Projekten benötigen bestimmte importierte Namespaces (Visual Basic) oder `using`-Direktiven (C#) und -Verweise. Die Mindestanforderung ist ein Verweis auf <legacyBold>System.Core.dll</legacyBold> und eine `using`-Direktive für <xref:System.Linq>. Standardmäßig werden diese angegeben, wenn Sie ein neues [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)]-Projekt erstellen. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] erfordert außerdem einen Verweis auf "System.Data.dll" und "System.Data.DataSetExtensions.dll" sowie eine `Imports`-Direktive (Visual Basic) oder eine `using`-Direktive (C#).  
@@ -26,7 +14,7 @@ Die unterschiedlichen Arten von [!INCLUDE[vbteclinq](../../../../includes/vbtecl
  Wenn Sie ein Projekt aus einer früheren Version von Visual Studio aktualisieren möchten, müssen Sie diese LINQ-Verweise möglicherweise manuell bereitstellen. Darüber hinaus muss u. U. auch das Projekt so eingerichtet werden, dass es sich auf .NET Framework 3.5 bezieht.  
   
 > [!NOTE]
->  Wenn Sie über eine Eingabeaufforderung erstellen, müssen Sie manuell die LINQ-bezogenen DLLs in verweisen `drive` **:**\Programme\Reference Assemblies\Microsoft\Framework\v3.5.  
+>  Wenn Sie über eine Eingabeaufforderung erstellen, müssen Sie manuell die LINQ-bezogenen DLLs in verweisen `drive` **:** \Programme\Reference Assemblies\Microsoft\Framework\v3.5.  
   
 ### <a name="to-target-the-net-framework-35"></a>So legen Sie .NET Framework 3.5 als Ziel fest  
   

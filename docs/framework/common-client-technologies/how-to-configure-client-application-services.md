@@ -1,28 +1,28 @@
 ---
 title: 'Gewusst wie: Konfigurieren von Clientanwendungsdiensten'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Gewusst wie: Konfigurieren von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Projekt-Designer** zum Aktivieren und Konfigurieren von Clientanwendungsdiensten verwenden. Sie können Clientanwendungsdienste verwenden, um Benutzer zu überprüfen sowie um Benutzerrollen und Einstellungen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdienst abzurufen. Nach der Konfiguration können Sie auf die aktivierten Dienste im Anwendungscode zugreifen, wie unter [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md) beschrieben. Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -111,7 +111,7 @@ In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../include
     Data Source = |SQL/CE|;password=<password>;encrypt database=true  
     ```  
   
-5.  Um Ihre eigene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank zu verwenden, geben Sie Ihre eigene Verbindungszeichenfolge an. Informationen über gültige Verbindungszeichenfolgenformate finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dokumentation. Diese Datenbank wird nicht automatisch generiert. Die Verbindungszeichenfolge muss auf eine vorhandene Datenbank verweisen, die Sie mit den folgenden SQL-Anweisungen erstellen können.  
+5.  Geben Sie Ihre eigene Verbindungszeichenfolge an, um Ihre eigene SQL Server-Datenbank zu verwenden. Informationen über gültige Verbindungszeichenfolgenformate finden Sie in der SQL Server-Dokumentation. Diese Datenbank wird nicht automatisch generiert. Die Verbindungszeichenfolge muss auf eine vorhandene Datenbank verweisen, die Sie mit den folgenden SQL-Anweisungen erstellen können.  
   
     ```  
     CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
@@ -127,7 +127,7 @@ In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../include
 ## <a name="using-custom-providers"></a>Verwenden von benutzerdefinierten Anbietern  
  Die Clientanwendungsdienste-Funktion verwendet standardmäßig die Anbieter im <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType>-Namespace. Wenn Sie die Anwendung mithilfe der Seite **Dienste** im **Projekt-Designer** konfigurieren, werden der Datei „App.config“ Verweise auf diese Anbieter hinzugefügt. Diese Standardanbieter greifen auf entsprechende Anbieter auf dem Server zu. Webdienste werden häufig so konfiguriert, dass sie über Anbieter, wie z. B. <xref:System.Web.Security.SqlMembershipProvider> und <xref:System.Web.Security.SqlRoleProvider>, auf Benutzerdaten zugreifen.  
   
- Wenn Sie benutzerdefinierte Dienstanbieter verwenden möchten, ändern Sie normalerweise die Anbieter auf Serverseite, sodass sie für alle Clientanwendungen gelten, die auf den Server zugreifen. Sie haben allerdings die Möglichkeit, nicht standardmäßige Anbieter auf Clientseite zu verwenden. Sie können benutzerdefinierte Authentifizierungs- oder Rollenanbieter in der Datei "App.config" des Projekts angeben, wie im folgenden Verfahren gezeigt. Informationen zum Erstellen von benutzerdefinierten Authentifizierungs- und Rollenanbietern finden Sie unter [Implementieren eines Mitgliedschaftsanbieters](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) und [Implementieren eines Rollenanbieters](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Sie können auch einen benutzerdefinierten Einstellungsanbieter verwenden, indem Sie die `Settings`-Klasse (Zugriff als `Properties.Settings.Default` in C# und als `My.Settings` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) in Ihrem Projekt ändern. Weitere Informationen finden Sie unter [Architektur der Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
+ Wenn Sie benutzerdefinierte Dienstanbieter verwenden möchten, ändern Sie normalerweise die Anbieter auf Serverseite, sodass sie für alle Clientanwendungen gelten, die auf den Server zugreifen. Sie haben allerdings die Möglichkeit, nicht standardmäßige Anbieter auf Clientseite zu verwenden. Sie können benutzerdefinierte Authentifizierungs- oder Rollenanbieter in der Datei "App.config" des Projekts angeben, wie im folgenden Verfahren gezeigt. Informationen zum Erstellen von benutzerdefinierten Authentifizierungs- und Rollenanbietern finden Sie unter [Implementieren eines Mitgliedschaftsanbieters](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) und [Implementieren eines Rollenanbieters](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Sie können auch einen benutzerdefinierten Einstellungsanbieter verwenden, indem Sie die `Settings`-Klasse (Zugriff als `Properties.Settings.Default` in C# und als `My.Settings` in Visual Basic) in Ihrem Projekt ändern. Weitere Informationen finden Sie unter [Architektur der Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>So konfigurieren Sie Clientanwendungsdienste, um nicht standardmäßige Anbieter zu verwenden  
   

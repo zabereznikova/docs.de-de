@@ -1,33 +1,21 @@
 ---
 title: '&lt;defaultCertificate&gt;-Element'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eeb4c1b010e2d446303e780966668fc8a6f5ddb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt;-Element
 Gibt ein X.509-Zertifikat an, das verwendet wird, wenn ein Dienst oder STS kein Zertifikat über ein Aushandlungsprotokoll bereitstellt.  
   
- \<System. ServiceModel >  
-\<Verhalten >  
+ \<system.ServiceModel>  
+\<behaviors>  
 EndpointBehaviors-Abschnitt  
 \<Verhalten >  
-\<ClientCredentials >  
+\<clientCredentials>  
 \<ServiceCertificate >  
 \<DefaultCertificate >  
   
@@ -89,7 +77,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  Bei Bindungen mit Zertifikat-basierter Nachrichtensicherheit wird das durch dieses Konfigurationselement angegebene Zertifikat zum Verschlüsseln von Nachrichten für den Dienst sowie für die Signierung von Antworten an den Client verwendet. Es speichert ein einzelnes Zertifikat, das verwendent werden soll, wenn kein Zertifikat von einem Dienst angegeben wird.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel gibt ein Zertifikat für Endpunkte an, deren URI mit http://www.contoso.com beginnt, sowie ein Zertifikat für alle anderen Endpunkte, die keine Zertifikatsaushandlung durchführen.  
+ Im folgenden Beispiel wird ein Zertifikat für Endpunkte zu verwenden, deren URI beginnt mit http://www.contoso.com und ein Zertifikat für alle anderen Endpunkte, die keine zertifikatsaushandlung durchführen.  
   
 ```xml  
 <serviceCertificate>  

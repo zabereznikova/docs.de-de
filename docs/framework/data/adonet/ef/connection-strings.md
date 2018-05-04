@@ -1,24 +1,12 @@
 ---
 title: Verbindungszeichenfolgen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac2c618272044ac9aaaba697f6583c9a814aa79f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings"></a>Verbindungszeichenfolgen
 Eine Verbindungszeichenfolge enthält Initialisierungsinformationen, die als Parameter von einem Datenanbieter an eine Datenquelle übergeben werden. Die Syntax ist abhängig vom Datenanbieter, und die Verbindungszeichenfolge wird beim Versuch analysiert, eine Verbindung herzustellen. Von Entity Framework verwendete Verbindungszeichenfolgen enthalten Informationen zum Herstellen einer Verbindung mit dem zugrunde liegenden ADO.NET-Datenanbieter, der Entity Framework unterstützt. Sie enthalten auch Informationen zu den erforderlichen Modell- und Zuordnungsdateien.  
@@ -102,12 +90,12 @@ Metadata=datadir\metadata\
 Metadata=.\  
 ```  
   
-## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Unterstützung für die &#124; "DataDirectory" &#124; -Ersatzzeichenfolge und Web Application Stammoperators (~)  
- `DataDirectory`und der ~-Operator in verwendet werden die <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> als Teil der `Metadata` und `Provider Connection String` Schlüsselwörter. Die <xref:System.Data.EntityClient.EntityConnection> leitet den `DataDirectory`- und den ~-Operator an <xref:System.Data.Metadata.Edm.MetadataWorkspace> bzw. den Speicheranbieter weiter.  
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Unterstützung für die &#124;"DataDirectory"&#124; Ersatzzeichenfolge und die Webanwendung Root-Operator (~)  
+ `DataDirectory` und der ~-Operator in verwendet werden die <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> als Teil der `Metadata` und `Provider Connection String` Schlüsselwörter. Die <xref:System.Data.EntityClient.EntityConnection> leitet den `DataDirectory`- und den ~-Operator an <xref:System.Data.Metadata.Edm.MetadataWorkspace> bzw. den Speicheranbieter weiter.  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|Löst den relativen Pfad in Zuordnungs- und Metadatendateien auf. Dies ist der Wert, der durch die `AppDomain.SetData("DataDirectory", objValue)`-Methode festgelegt wird. Die `DataDirectory`-Ersatzzeichenfolge muss von senkrechten Strichen eingeschlossen sein, zwischen dem Namen und den senkrechten Strichen dürfen sich keine Leerzeichen befinden. Der `DataDirectory`-Name unterscheidet nicht zwischen Groß- und Kleinschreibung.<br /><br /> Wenn ein physisches Verzeichnis mit dem Namen DataDirectory`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` als ein Member der Metadatenpfadliste übergeben werden muss, sollten am Anfang und/oder am Ende des Namens Leerzeichen hinzugefügt werden, z. B.: . Eine ASP.NET-Anwendung löst &#124; "DataDirectory" &#124; um die "\<Anwendungsstamm > / App_data" Ordner.|  
+|`&#124;DataDirectory&#124;`|Löst den relativen Pfad in Zuordnungs- und Metadatendateien auf. Dies ist der Wert, der durch die `AppDomain.SetData("DataDirectory", objValue)`-Methode festgelegt wird. Die `DataDirectory`-Ersatzzeichenfolge muss von senkrechten Strichen eingeschlossen sein, zwischen dem Namen und den senkrechten Strichen dürfen sich keine Leerzeichen befinden. Der `DataDirectory`-Name unterscheidet nicht zwischen Groß- und Kleinschreibung.<br /><br /> Wenn ein physisches Verzeichnis mit dem Namen DataDirectory`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` als ein Member der Metadatenpfadliste übergeben werden muss, sollten am Anfang und/oder am Ende des Namens Leerzeichen hinzugefügt werden, z. B.: . Eine ASP.NET-Anwendung löst &#124;"DataDirectory"&#124; , die "\<Anwendungsstamm > / App_data" Ordner.|  
 |~|Löst zum Webanwendungsstamm auf. Wenn sich das Zeichen "~" am Anfang einer Zeichenfolge befindet, wird es stets als Stamm-Operator der Webanwendung (~) interpretiert, auch wenn es möglicherweise ein gültiges lokales Unterverzeichnis darstellt. Wenn auf solch ein lokales Unterverzeichnis verwiesen werden soll, sollte der Benutzer `./~` explizit übergeben.|  
   
  `DataDirectory` und der ~-Operator sollten nur am Anfang eines Pfads festgelegt werden, da sie an anderen Positionen nicht aufgelöst werden. Entity Framework versucht, `~/data` aufzulösen, behandelt `/data/~` jedoch wie einen physischen Pfad.  

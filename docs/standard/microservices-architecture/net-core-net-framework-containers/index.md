@@ -1,21 +1,14 @@
 ---
 title: Wahl zwischen .NET Core und .NET Framework für Docker-Container
 description: .NET Microservices-Architektur für .NET-Containeranwendungen | Wahl zwischen .NET Core und .NET Framework für Docker-Container
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 60d21de06262a14f9be6a1a5ce80edf15ddf1b59
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b483214e7bd039a71ae642aa26e69d63222af8ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Wahl zwischen .NET Core und .NET Framework für Docker-Container
 

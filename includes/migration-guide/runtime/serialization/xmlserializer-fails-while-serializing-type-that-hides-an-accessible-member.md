@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Details|Bei der Serialisierung eines abgeleiteten Typs kann <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> fehlschlagen, wenn der Typ einen verfügbaren Member oder eine Eigenschaft enthält, die ein Feld oder eine Eigenschaft mit dem gleichen Namen ausblendet (durch das Schlüsselwort „new“), das bzw. die zuvor im Basistyp verfügbar (z.B. „public“) war.|
-|Vorschlag|Dieses Problem kann gelöst werden, indem der neue, ausgeblendete Member für <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> zur Verfügung gestellt wird, indem es z.B. als „public“ gekennzeichnet wird. Alternativ kann das Verhalten von <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> unter 4.0 mithilfe von folgenden Konfigurationseinstellungen wiederhergestellt und das Problem somit behoben werden:<pre><code class="language-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
+|Vorschlag|Dieses Problem kann gelöst werden, indem der neue, ausgeblendete Member für <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> zur Verfügung gestellt wird, indem es z.B. als „public“ gekennzeichnet wird. Alternativ kann das Verhalten von <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> unter 4.0 mithilfe von folgenden Konfigurationseinstellungen wiederhergestellt und das Problem somit behoben werden:<pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
 |Bereich|Gering|
 |Version|4.5|
 |Typ|Laufzeit|

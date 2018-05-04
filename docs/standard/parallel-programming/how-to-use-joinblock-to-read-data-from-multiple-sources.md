@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: ba353a34306b06e0f1df4696af5545799e7a5b37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Gewusst wie: JoinBlock zum Lesen aus mehreren Quellen verwenden
 In diesem Dokument erfahren Sie, wie Sie mithilfe der <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>-Klasse einen Vorgang ausführen, wenn Daten aus mehreren Quellen verfügbar sind. Zudem wird der nicht gierige Modus veranschaulicht, durch den mehrere Gruppierungsblöcke eine Datenquelle effizienter gemeinsam verwenden können.
@@ -38,13 +38,13 @@ In diesem Dokument erfahren Sie, wie Sie mithilfe der <xref:System.Threading.Tas
  Für eine effiziente Nutzung des freigegebenen Pools von `MemoryResource`-Objekten wird in diesem Beispiel ein <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions>-Objekt angegeben, für das die <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A>-Eigenschaft auf `False` festgelegt ist. Auf diese Weise werden <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>-Objekte erzeugt, die im nicht gierigen Modus agieren. Ein nicht gieriger Gruppierungsblock stellt alle eingehenden Nachrichten zurück, bis eine aus jeder Quelle verfügbar ist. Wenn eine der zurückgestellten Nachrichten durch einen anderen Block akzeptiert wurde, wird der Prozess durch den Gruppierungsblock neu gestartet. Der nicht gierige Modus bietet die Möglichkeit, dass Gruppierungsblöcke, die mindestens einen Quellblock gemeinsam nutzen, weiter abgearbeitet werden, während andere Blöcke auf Daten warten. Wenn in diesem Beispiel ein `MemoryResource`-Objekt zum `memoryResources`-Pool hinzugefügt wird, kann der erste Gruppierungsblock zum Empfangen der zweiten Datenquelle weiter ausgeführt werden. Wenn in diesem Beispiel der gierige Modus (also der Standardmodus) verwendet wird, könnte ein Gruppierungsblock das `MemoryResource`-Objekt akzeptieren und warten, bis die zweite Ressource verfügbar ist. Wenn der andere Gruppierungsblock jedoch seine zweite Datenquelle zur Verfügung hat, kann er keinen Fortschritt machen, da das `MemoryResource`-Objekt vom anderen Gruppierungsblock akzeptiert wurde.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein. Alternativ können Sie ihn auch in eine Datei mit dem Namen `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` für [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) einfügen und dann folgenden Befehl in einem Visual Studio-Eingabeaufforderungsfenster ausführen.  
+ Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei namens `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` für Visual Basic) ein, und führen Sie dann den folgenden Befehl in einem Eingabeaufforderungsfenster von Visual Studio aus:  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   

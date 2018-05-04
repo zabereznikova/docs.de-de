@@ -9,14 +9,14 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: 
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dad1be88e39b708d34f454875e2cfb3ec100c430
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="methods-c-programming-guide"></a>Methoden (C#-Programmierhandbuch)
 Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Programm bewirkt die Ausführung der Anweisungen, indem die Methode aufgerufen wird und alle erforderlichen Methodenargumente angegeben werden. In C# werden alle Anweisungen im Kontext einer Methode ausgeführt. Die Main-Methode ist der Einstiegspunkt jeder C#-Anwendung und wird von der Common Language Runtime (CLR) aufgerufen, wenn das Programm gestartet wird.  
@@ -64,7 +64,7 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
 ## <a name="return-values"></a>Rückgabewerte  
 Methoden können einen Wert an die aufrufende Funktion (den Aufrufer) zurückgeben. Wenn der Rückgabetyp – der vor dem Methodennamen aufgeführte Typ – nicht `void`ist, kann die Methode den Wert mithilfe des `return` -Schlüsselworts zurückgeben. Eine Anweisung mit der `return` -Schlüsselwort, gefolgt von einem Wert, der dem Rückgabetyp entspricht, gibt diesen Wert an den Methodenaufrufer zurück. 
 
-Der Wert kann an den Aufrufer nach Wert oder, ab C# 7, [nach Verweis](ref-returns.md) zurückgegeben werden. Werte werden an den Aufrufer nach Verweis zurückgegeben, wenn das Schlüsselwort `ref` in der Methodensignatur verwendet wird und auf jedes `return`-Schlüsselwort folgt. Die folgende Methodensignatur und Rückgabeanweisung geben an, dass die Methode eine Variable mit dem Namen `estDistance` nach Verweis an den Aufrufer zurückgibt.
+Der Wert kann an den Aufrufer nach Wert oder, ab C# 7.0, [nach Verweis](ref-returns.md) zurückgegeben werden. Werte werden an den Aufrufer nach Verweis zurückgegeben, wenn das Schlüsselwort `ref` in der Methodensignatur verwendet wird und auf jedes `return`-Schlüsselwort folgt. Die folgende Methodensignatur und Rückgabeanweisung geben an, dass die Methode eine Variable mit dem Namen `estDistance` nach Verweis an den Aufrufer zurückgibt.
 
 ```csharp
 public ref double GetEstimatedDistance()
