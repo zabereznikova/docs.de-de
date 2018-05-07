@@ -1,14 +1,6 @@
 ---
 title: IHostCrst::SetSpinCount-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostCrst.SetSpinCount
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 863fc8ce-9b8a-477e-8dd8-75c8544bb43a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 76a3091102a43d17f543010be0c505157d593d2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4d90bce1f693f571a5d5c5d5dca981d09bce59b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostcrstsetspincount-method"></a>IHostCrst::SetSpinCount-Methode
 Legt die Anzahl der Drehfeld für die aktuelle [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) Instanz.  
@@ -54,7 +42,7 @@ HRESULT SetSpinCount (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SetSpinCount`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetSpinCount` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -73,7 +61,7 @@ HRESULT SetSpinCount (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

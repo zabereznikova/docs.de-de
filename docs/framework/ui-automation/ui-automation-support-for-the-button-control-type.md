@@ -1,28 +1,19 @@
 ---
-title: "Benutzeroberflächenautomatisierungs-Unterstützung für den Schaltflächen-Steuerelementtyp"
-ms.custom: 
+title: Benutzeroberflächenautomatisierungs-Unterstützung für den Schaltflächen-Steuerelementtyp
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control types, Button
 - UI Automation, Button control type
 - Button control type
 ms.assetid: 057c983a-da83-4c50-86c7-26fe381076a6
-caps.latest.revision: "34"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 5f9f2cb6ad3eb86fe60566fa19ecd59903d2c1d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65d0aaf5c55d2e33e502ed89a85400dd6c314b4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-button-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Schaltflächen-Steuerelementtyp
 > [!NOTE]
@@ -79,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keiner|  

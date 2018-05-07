@@ -1,14 +1,6 @@
 ---
 title: IMetaDataImport::EnumMethodImpls-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumMethodImpls
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e3350fb4513604a0edc47cbf47e257648ff0d75a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75d1ce526d4cba025ea6e9db8281023969e7cb0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls-Methode
 Zählt MethodBody- und MethodDeclaration-Token auf, die Methoden des angegebenen Typs darstellen.  
@@ -74,7 +62,7 @@ HRESULT EnumMethodImpls (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumMethodImpls` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es gibt keine Methodentoken aufgelistet werden. In diesem Fall `pcTokens` 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -84,7 +72,7 @@ HRESULT EnumMethodImpls (
   
  **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

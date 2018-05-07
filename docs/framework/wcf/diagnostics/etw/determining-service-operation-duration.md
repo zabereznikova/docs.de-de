@@ -1,27 +1,15 @@
 ---
 title: Ermitteln der Dienstvorgangsdauer
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c96aa6752feca637f89ed309d1a5c87cea4a3a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7615a4574210ad6e9b5eee2e5d5855365768854
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-service-operation-duration"></a>Ermitteln der Dienstvorgangsdauer
-Wenn die analytische Ablaufverfolgung in einer [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Anwendung aktiviert wird, kann die Dauer der Ausführung eines Dienstvorgangs problemlos bestimmt werden, indem das Ereignisprotokoll untersucht wird.  Dieses Thema veranschaulicht, wie die Zeitdauer bestimmt wird, die ein Dienstvorgang bis zu seinem Abschluss benötigt.  
+Wenn die analytische Ablaufverfolgung in einer Windows Communication Foundation (WCF)-Anwendung aktiviert ist, kann die Dauer der Ausführung für einen Dienstvorgang problemlos ermittelt werden im Ereignisprotokoll.  Dieses Thema veranschaulicht, wie die Zeitdauer bestimmt wird, die ein Dienstvorgang bis zu seinem Abschluss benötigt.  
   
 ### <a name="determining-service-operation-execution-duration"></a>Bestimmen der Ausführungsdauer eines Dienstvorgangs  
   

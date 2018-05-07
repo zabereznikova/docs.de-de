@@ -1,14 +1,6 @@
 ---
 title: ICorDebugILFrame::EnumerateLocalVariables-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugILFrame.EnumerateLocalVariables
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3a1b53dbefefcea6003ec4a61c8169ed96bac701
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6fd7694901534ad6897bbf78239081af6314e4bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables-Methode
 Ruft einen Enumerator für die lokalen Variablen in diesem Frame ab.  
@@ -51,7 +39,7 @@ HRESULT EnumerateLocalVariables(
  [out] Ein Zeiger auf die Adresse eines ICorDebugValueEnum-Objekts, das den Enumerator für die lokalen Variablen in diesem Frame darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- `EnumerateLocalVariables`Gibt einen Enumerator zurück, der die lokalen Variablen in den Aufrufframe verfügbar auflisten kann, die von diesem ICorDebugILFrame-Objekt dargestellt wird. Die Liste kann alle lokalen Variablen in die ausgeführte Funktion nicht enthalten, da einige von ihnen möglicherweise nicht aktiv sind.  
+ `EnumerateLocalVariables` Gibt einen Enumerator zurück, der die lokalen Variablen in den Aufrufframe verfügbar auflisten kann, die von diesem ICorDebugILFrame-Objekt dargestellt wird. Die Liste kann alle lokalen Variablen in die ausgeführte Funktion nicht enthalten, da einige von ihnen möglicherweise nicht aktiv sind.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,4 +48,4 @@ HRESULT EnumerateLocalVariables(
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

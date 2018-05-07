@@ -1,14 +1,6 @@
 ---
 title: ICorDebugArrayValue::GetBaseIndicies-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugArrayValue.GetBaseIndicies
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 820d81b4538c3cf2bf6fa123df2012ea06e2d978
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e3fe9edf7a635e54aac881a242aca3bc32e21fe1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies-Methode
 Ruft den Basis Index jeder Dimension im Array ab.  
@@ -62,4 +50,4 @@ HRESULT GetBaseIndicies (
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

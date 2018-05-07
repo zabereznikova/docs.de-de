@@ -1,14 +1,6 @@
 ---
 title: METAHOST_POLICY_FLAGS-Enumeration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - METAHOST_POLICY_FLAGS
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3bb4b526-0118-42e2-ba59-c95648528ce9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80abed08cc7659d4218dce445be81481bb5a665b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f980fb1336adaf43091e41b9e42ea008b00c033f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metahostpolicyflags-enumeration"></a>METAHOST_POLICY_FLAGS-Enumeration
 Stellt Bindungsrichtlinien für die, die für die meisten Laufzeithosts gelten. Diese Enumeration wird verwendet, durch die [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) Methode.  
@@ -60,10 +48,10 @@ typedef enum {
 |`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Das Ergebnis der Version Bind Upgraderichtlinie betrifft, wenn eine genaue Übereinstimmung nicht gefunden wird, basierend auf den Inhalt der HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\Policy\Upgrades. Dies hat dieselbe Wirkung wie das [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
 |`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Bindungsergebnisse werden zurückgegeben, als ob das Abbild bereitgestellt, um den Aufruf in einen neuen Prozess gestartet wurden. Derzeit `GetRequestedRuntime` ignoriert den Satz von ladbaren Laufzeiten und mit der Menge der installierten Laufzeiten bindet. Dieses Flag ermöglicht es einen Host, um zu bestimmen, welcher Laufzeitversion eine EXE-Datei gebunden wird, wenn er gestartet wird.|  
 |`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Ein Fehlerdialogfeld wird angezeigt, wenn `GetRequestedRuntime` wurde eine Laufzeit gefunden, die mit den Eingabeparametern kompatibel ist. Beginnend mit der [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], diesem Fehlerdialogfeld dauert das Formular eines Dialogfelds Windows-Funktion mit der Frage, ob der Benutzer für das entsprechende Feature aktivieren möchten.|  
-|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime`verwendet die Prozess-Image (und alle entsprechenden Konfigurationsdatei) als zusätzliche Eingabe, um des Bindungsvorgangs. Standardmäßig `GetRequestedRuntime` liegt nicht zurück auf den Prozess-Image-Pfad (in der Regel die EXE-Datei, die zum Starten des Prozesses verwendet wurde) beim Bestimmen der Laufzeit zum Binden an.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime`muss überprüfen, ob die entsprechende SKU installiert wird, wenn keine Informationen in der Konfigurationsdatei verfügbar sind. Dadurch können Anwendungen, die keine Konfigurationsdateien ordnungsgemäß auf kleinere SKUs als die standardmäßige Installation von .NET Framework ein Fehler auf. Standardmäßig `GetRequestedRuntime` überprüft nicht, ob die entsprechende SKU installiert ist, es sei denn, das SKU-Attribut in der Konfigurationsdatei angegeben wird `<supportedRuntime />` Element.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime`muss überprüfen, ob die entsprechende SKU installiert wird, wenn keine Informationen in der Konfigurationsdatei verfügbar sind. Dadurch können Anwendungen, die keine Konfigurationsdateien ordnungsgemäß auf kleinere SKUs als die standardmäßige Installation von .NET Framework ein Fehler auf. Standardmäßig `GetRequestedRuntime` überprüft nicht, ob die entsprechende SKU installiert ist, es sei denn, das SKU-Attribut in der Konfigurationsdatei angegeben wird `<supportedRuntime />` Element.|  
-|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime`SEM_FAILCRITICALERRORS zu ignorieren (die festgelegt wird, durch Aufrufen der [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) Funktion), und zeigen Sie im Dialogfeld "Fehler". Standardmäßig wird die SEM_FAILCRITICALERRORS das Fehlerdialogfeld unterdrückt. Es wurde von einem anderen Prozess geerbt, und die automatische Fehler ist möglicherweise nicht erwünscht, in Ihrem Szenario.|  
+|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` verwendet die Prozess-Image (und alle entsprechenden Konfigurationsdatei) als zusätzliche Eingabe, um des Bindungsvorgangs. Standardmäßig `GetRequestedRuntime` liegt nicht zurück auf den Prozess-Image-Pfad (in der Regel die EXE-Datei, die zum Starten des Prozesses verwendet wurde) beim Bestimmen der Laufzeit zum Binden an.|  
+|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` muss überprüfen, ob die entsprechende SKU installiert wird, wenn keine Informationen in der Konfigurationsdatei verfügbar sind. Dadurch können Anwendungen, die keine Konfigurationsdateien ordnungsgemäß auf kleinere SKUs als die standardmäßige Installation von .NET Framework ein Fehler auf. Standardmäßig `GetRequestedRuntime` überprüft nicht, ob die entsprechende SKU installiert ist, es sei denn, das SKU-Attribut in der Konfigurationsdatei angegeben wird `<supportedRuntime />` Element.|  
+|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` muss überprüfen, ob die entsprechende SKU installiert wird, wenn keine Informationen in der Konfigurationsdatei verfügbar sind. Dadurch können Anwendungen, die keine Konfigurationsdateien ordnungsgemäß auf kleinere SKUs als die standardmäßige Installation von .NET Framework ein Fehler auf. Standardmäßig `GetRequestedRuntime` überprüft nicht, ob die entsprechende SKU installiert ist, es sei denn, das SKU-Attribut in der Konfigurationsdatei angegeben wird `<supportedRuntime />` Element.|  
+|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` SEM_FAILCRITICALERRORS zu ignorieren (die festgelegt wird, durch Aufrufen der [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) Funktion), und zeigen Sie im Dialogfeld "Fehler". Standardmäßig wird die SEM_FAILCRITICALERRORS das Fehlerdialogfeld unterdrückt. Es wurde von einem anderen Prozess geerbt, und die automatische Fehler ist möglicherweise nicht erwünscht, in Ihrem Szenario.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -74,7 +62,7 @@ typedef enum {
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  

@@ -1,28 +1,19 @@
 ---
-title: "Benutzeroberflächenautomatisierungs-Unterstützung für den ScrollBar-Steuerelementtyp"
-ms.custom: 
+title: Benutzeroberflächenautomatisierungs-Unterstützung für den ScrollBar-Steuerelementtyp
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Scroll Bar control type
 - control types, Scroll Bar
 - Scroll Bar control type
 ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
-caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3d173c946cc511473fb8ac8ef43cba40d0ca8777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96760b1e4d2ad73374eb3cc2a2df42df13023c3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den ScrollBar-Steuerelementtyp
 > [!NOTE]
@@ -80,7 +71,7 @@ ms.lasthandoff: 12/22/2017
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung/Wert|Hinweise|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> -Eigenschaft ausgelöstes Ereignis.|Nie|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> -Eigenschaft ausgelöstes Ereignis.|Nie|Keiner|  

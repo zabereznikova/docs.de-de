@@ -1,14 +1,6 @@
 ---
 title: StrongNameSignatureSize-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureSize
 api_location:
@@ -22,20 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 70aa82d5eef62856e8377c75515fb3b187d3ae6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c11de99359701bb6c3198a0b1dc18ba4318c8bc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize-Funktion
-Gibt die Größe der Signatur des starken Namens. `StrongNameSignatureSize`wird in der Regel vom Compiler verwendet, um zu bestimmen, wie viel Speicherplatz in der Datei reserviert, beim Erstellen einer Assembly verzögert signiert.  
+Gibt die Größe der Signatur des starken Namens. `StrongNameSignatureSize` wird in der Regel vom Compiler verwendet, um zu bestimmen, wie viel Speicherplatz in der Datei reserviert, beim Erstellen einer Assembly verzögert signiert.  
   
  Diese Funktion ist veraltet. Verwenden der [ICLRStrongName:: StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) Methode stattdessen.  
   
@@ -60,7 +48,7 @@ BOOLEAN StrongNameSignatureSize (
  [in] Die Anzahl der Bytes, die zum Speichern der Signatur mit starkem Namen erforderlich.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`Bei erfolgreichem Abschluss; andernfalls `false`.  
+ `true` Bei erfolgreichem Abschluss; andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn die `StrongNameSignatureSize` Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.  
@@ -72,7 +60,7 @@ BOOLEAN StrongNameSignatureSize (
   
  **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [StrongNameSignatureSize-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)  

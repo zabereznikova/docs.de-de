@@ -1,14 +1,6 @@
 ---
 title: GetHashFromFileW-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetHashFromFileW
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 97c2d7a6-5376-45a1-ba65-146a249147cc
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d7d62526a6ac9bb06a7de8287c9687933402bfb8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00ee1139b4b8340a73740117b74208a6a1f6b639
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW-Funktion
 Generiert einen Hash des Inhalts der Datei durch eine Unicode-Zeichenfolge angegeben.  
@@ -77,7 +65,7 @@ HRESULT GetHashFromFileW (
   
  **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [GetHashFromFileW-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  

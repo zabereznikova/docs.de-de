@@ -1,14 +1,6 @@
 ---
 title: IHostTask::Join-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTask.Join
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2cffcc52-19e0-4ced-a440-fc7375078ac9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 85ee44fe9185364a6870b996ca98cfe6cc297bf7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0320e365daf03703a46eb48aac74e301d47520ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskjoin-method"></a>IHostTask::Join-Methode
 Die aufrufende Aufgabe blockiert, bis die Aufgabe, die vom aktuellen [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) Instanz abgeschlossen hat, kann das angegebene Zeitintervall abläuft, oder [IHostTask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) aufgerufen wird.  
@@ -58,7 +46,7 @@ HRESULT Join (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`Join`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Join` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -72,7 +60,7 @@ HRESULT Join (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

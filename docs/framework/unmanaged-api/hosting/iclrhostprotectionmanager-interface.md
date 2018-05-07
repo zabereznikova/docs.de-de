@@ -1,14 +1,6 @@
 ---
 title: ICLRHostProtectionManager-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostProtectionManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ce2770ae-23d0-45d9-8bcf-46504ac5020e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37b1aaeef1d4c375f36ad043124287fc3b41e3fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c630fcd4667c8b19c4e21335549674d32508e439
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostprotectionmanager-interface"></a>ICLRHostProtectionManager-Schnittstelle
 Ermöglicht es dem Host zum Blockieren von bestimmten verwaltete Klassen, Methoden, Eigenschaften und Felder in teilweise vertrauenswürdigem Code ausgeführt wird.  
@@ -51,7 +39,7 @@ Ermöglicht es dem Host zum Blockieren von bestimmten verwaltete Klassen, Method
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [EApiCategories-Enumeration](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)  

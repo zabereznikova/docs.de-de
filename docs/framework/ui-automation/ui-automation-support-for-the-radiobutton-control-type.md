@@ -1,28 +1,19 @@
 ---
-title: "Benutzeroberflächenautomatisierungs-Unterstützung für den RadioButton-Steuerelementtyp"
-ms.custom: 
+title: Benutzeroberflächenautomatisierungs-Unterstützung für den RadioButton-Steuerelementtyp
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control types, Radio Button
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: e3a285e788ee000ff5e572f32119f16692391ab8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fb24b42518b6ffdeb30dc8daa926d598fb542ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den RadioButton-Steuerelementtyp
 > [!NOTE]
@@ -81,7 +72,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> -Eigenschaft ausgelöstes Ereignis.|Nie|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keiner|  

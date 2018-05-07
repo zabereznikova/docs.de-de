@@ -1,28 +1,19 @@
 ---
-title: "Benutzeroberflächenautomatisierungs-Unterstützung für den Menü-Steuerelementtyp"
-ms.custom: 
+title: Benutzeroberflächenautomatisierungs-Unterstützung für den Menü-Steuerelementtyp
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control types, Menu
 - UI Automation, Menu control type
 - Menu control type
 ms.assetid: 016323cb-f800-4938-b77b-2eb25d646090
-caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b360159bd171d4461a9ef22b390468f0c758df0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38610d4421345c31e76b8020e401ffa9927eef9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-menu-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Menü-Steuerelementtyp
 > [!NOTE]
@@ -71,7 +62,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.MenuOpenedEvent>|Erforderlich|Keiner|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.MenuClosedEvent>|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keiner|  

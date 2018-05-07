@@ -2,10 +2,6 @@
 title: CloneEnumWbemClassObject-Funktion (Referenz zur nicht verwalteten API)
 description: Die CloneEnumWbemClassObject-Funktion macht eine logische Kopie eines Enumerators.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CloneEnumWbemClassObject
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 22bcf2731ff682bf538858fc66a7a94be7f5d7df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject-Funktion
 Erstellt eine logische Kopie eines Enumerators, der seiner aktuellen Position in einer Enumeration beibehalten.  
@@ -56,7 +49,7 @@ HRESULT CloneEnumWbemClassObject (
 `authLevel`  
 [in] Die Autorisierungsebene.
 
-`impLevel`[in] Die Ebene des Identitätswechsels.
+`impLevel` [in] Die Ebene des Identitätswechsels.
 
 `pCurrentEnumWbemClassObject`  
 [out] Ein Zeiger auf die [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) Instanz, geklont zu werden.
@@ -99,7 +92,7 @@ Ein Beispiel finden Sie die [IEnumWbemClassObject::Clone](https://msdn.microsoft
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

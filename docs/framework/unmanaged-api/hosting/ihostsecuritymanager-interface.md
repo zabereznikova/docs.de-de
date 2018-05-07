@@ -1,14 +1,6 @@
 ---
 title: IHostSecurityManager-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 44f2272c0f4e1423c222a004559d7bbd58237d82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13f60730fedef4876f81f078f811104777050175
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager-Schnittstelle
 Enthält Methoden, die Zugriff auf und die Kontrolle über den Sicherheitskontext des gerade ausgeführten Thread zu ermöglichen.  
@@ -49,7 +37,7 @@ Enthält Methoden, die Zugriff auf und die Kontrolle über den Sicherheitskontex
 |[SetThreadToken-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|Legt einen Handle für den gerade ausgeführten Thread fest.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Host kann alle Codezugriff auf Threadtoken von der common Language Runtime (CLR) und den Benutzercode steuern. Sie können auch sicherstellen, dass vollständige Kontextinformationen über asynchrone Vorgänge oder Codepunkte mit eingeschränktem Codezugriff übergeben wird. `IHostSecurityContext`kapselt diese Sicherheitskontextinformationen, die für die CLR nicht transparent ist.  
+ Ein Host kann alle Codezugriff auf Threadtoken von der common Language Runtime (CLR) und den Benutzercode steuern. Sie können auch sicherstellen, dass vollständige Kontextinformationen über asynchrone Vorgänge oder Codepunkte mit eingeschränktem Codezugriff übergeben wird. `IHostSecurityContext` kapselt diese Sicherheitskontextinformationen, die für die CLR nicht transparent ist.  
   
  Die CLR behandelt verwalteten Threadkontext intern. Anschließend fragt es die prozessspezifische `IHostSecurityManager` in den folgenden Situationen:  
   
@@ -68,7 +56,7 @@ Enthält Methoden, die Zugriff auf und die Kontrolle über den Sicherheitskontex
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IHostSecurityContext-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  

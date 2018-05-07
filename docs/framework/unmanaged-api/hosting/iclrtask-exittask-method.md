@@ -1,14 +1,6 @@
 ---
 title: ICLRTask::ExitTask-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTask.ExitTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 746c85a6-4b33-4f72-a2e9-379fdf2e96af
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ff2adafa41ce68a824f6b01888c3565bf054c031
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3391ed2be03c965807a1c6cad89579cea4015693
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskexittask-method"></a>ICLRTask::ExitTask-Methode
 Benachrichtigt die common Language Runtime (CLR), die die Aufgabe von der aktuellen dargestellt [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz beendet wird und versucht, den Task ordnungsgemäß beendet.  
@@ -48,7 +36,7 @@ HRESULT ExitTask ();
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`ExitTask`wurde erfolgreich zurückgegeben.|  
+|S_OK|`ExitTask` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die CLR wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -56,7 +44,7 @@ HRESULT ExitTask ();
 |E_FAIL|Ein Unbekannter Schwerwiegender Fehler aufgetreten ist. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr verwendbar innerhalb des Prozesses. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ExitTask`versucht, eine Aufgabe, ähnlich wie beim Trennen eines Threads von einer nicht verwalteten Typbibliothek sauberen herunterzufahren.  
+ `ExitTask` versucht, eine Aufgabe, ähnlich wie beim Trennen eines Threads von einer nicht verwalteten Typbibliothek sauberen herunterzufahren.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -65,7 +53,7 @@ HRESULT ExitTask ();
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

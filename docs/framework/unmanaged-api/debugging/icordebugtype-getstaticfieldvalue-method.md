@@ -1,14 +1,6 @@
 ---
 title: ICorDebugType::GetStaticFieldValue-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugType.GetStaticFieldValue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 62eb5d55-53ee-4fb3-8d47-7b6c96808f9e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2a6a7305017c83b539a3d5ec11fa61ccd2af90a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b136f30b0c1ce9f83228f340ac5e147cc02002b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>ICorDebugType::GetStaticFieldValue-Methode
 Ruft einen Schnittstellenzeiger auf eine ICorDebugValue-Objekt, das den Wert des statischen Felds auf die verwiesen wird durch das angegebene Feld enthält token in den angegebenen Stapelrahmen.  
@@ -66,7 +54,7 @@ HRESULT GetStaticFieldValue (
  Bei generischen Typen wird der Wert eines statischen Felds relativ zu einer bestimmten Instanziierung sein. Wenn das statische Feld möglicherweise relativ zu einem Thread, einem Kontext oder eine Anwendungsdomäne werden konnte, können der Stapelrahmen außerdem den Debugger den richtigen Wert zu bestimmen.  
   
 ## <a name="remarks"></a>Hinweise  
- `GetStaticFieldValue`kann verwendet werden, nur bei einem Aufruf von `ICorDebugType::GetType` einen Wert des ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE zurückgibt.  
+ `GetStaticFieldValue` kann verwendet werden, nur bei einem Aufruf von `ICorDebugType::GetType` einen Wert des ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE zurückgibt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,4 +63,4 @@ HRESULT GetStaticFieldValue (
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

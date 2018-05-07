@@ -1,37 +1,23 @@
 ---
 title: Entwerfen von Dienstverträgen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14973d3612eb5739e0dfcd7b50409904ab5d6844
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6d1e9ba7f5546923b222f2d495aacdb2c1caaf96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-service-contracts"></a>Entwerfen von Dienstverträgen
 In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert werden, welche Vorgänge verfügbar sind (und die Implikationen des zugrunde liegenden Meldungsaustauschs), welche Datentypen verwendet werden sowie andere Aspekte, die Sie beim Entwerfen von Vorgängen unterstützen, die den Anforderungen Ihres Szenarios gerecht werden.  
   
 ## <a name="creating-a-service-contract"></a>Erstellen eines Dienstvertrags  
- Dienste machen eine Reihe von Vorgängen verfügbar. In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen definieren Sie Vorgänge, indem Sie eine Methode erstellen und diese mit dem <xref:System.ServiceModel.OperationContractAttribute>-Attribut markieren. Zum Erstellen eines Dienstvertrags gruppieren Sie dann die Vorgänge, indem Sie sie in einer Schnittstelle deklarieren, die mit dem <xref:System.ServiceModel.ServiceContractAttribute>-Attribut markiert wurde, oder indem Sie sie in einer Klasse definieren, die mit dem gleichen Attribut markiert wurde. (Ein einfaches Beispiel finden Sie unter [wie: Definieren eines Dienstvertrags](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
+ Dienste machen eine Reihe von Vorgängen verfügbar. Definieren Sie in Windows Communication Foundation (WCF)-Anwendungen, die Vorgänge, indem Sie eine Methode erstellen, und markieren es mit der <xref:System.ServiceModel.OperationContractAttribute> Attribut. Zum Erstellen eines Dienstvertrags gruppieren Sie dann die Vorgänge, indem Sie sie in einer Schnittstelle deklarieren, die mit dem <xref:System.ServiceModel.ServiceContractAttribute>-Attribut markiert wurde, oder indem Sie sie in einer Klasse definieren, die mit dem gleichen Attribut markiert wurde. (Ein einfaches Beispiel finden Sie unter [wie: Definieren eines Dienstvertrags](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
   
  Alle Methoden ohne <xref:System.ServiceModel.OperationContractAttribute>-Attribut sind keine Dienstvorgänge und werden von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensten nicht verfügbar gemacht.  
   
@@ -82,7 +68,7 @@ In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert wer
 >  Der Wert der Parameternamen in der Vorgangssignatur ist Teil des Vertrags, und die Groß- und Kleinschreibung wird beachtet. Wenn Sie denselben Parameternamen lokal verwenden, aber den Namen in den veröffentlichten Metadaten ändern möchten, finden Sie entsprechende Informationen unter <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
   
 #### <a name="data-contracts"></a>Datenverträge  
- Dienstorientierte Anwendungen wie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen wurden entwickelt, um mit einer möglichst großen Anzahl von Clientanwendungen auf Microsoft- und Nicht-Microsoft-Plattformen verwendet werden zu können. Für die höchstmögliche Interoperabilität sollten Sie Ihre Typen mit dem <xref:System.Runtime.Serialization.DataContractAttribute>- und dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut markieren, um einen Datenvertrag zu erstellen, der dem Teil des Dienstvertrags entspricht, der die Daten beschreibt, die durch die Dienstvorgänge ausgetauscht werden.  
+ Dienstorientierte Anwendungen wie Windows Communication Foundation (WCF)-Anwendungen dienen zur Zusammenarbeit mit einer möglichst großen Anzahl von Clientanwendungen auf Microsoft- und nicht-Microsoft-Plattformen. Für die höchstmögliche Interoperabilität sollten Sie Ihre Typen mit dem <xref:System.Runtime.Serialization.DataContractAttribute>- und dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut markieren, um einen Datenvertrag zu erstellen, der dem Teil des Dienstvertrags entspricht, der die Daten beschreibt, die durch die Dienstvorgänge ausgetauscht werden.  
   
  Datenverträge sind Abonnementverträge: Es werden keine Typen- oder Datenmitglieder serialisiert, es sei denn, Sie wenden das Datenvertragsattribut ausdrücklich an. Datenverträge stehen nicht mit dem Zugriffsumfang des verwalteten Codes in Verbindung: Private Datenmitglieder können serialisiert und für den öffentlichen Zugriff an einen beliebigen Ort gesendet werden. (Ein einfaches Beispiel einen Datenvertrag, finden Sie unter [Vorgehensweise: Erstellen eines grundlegenden Datenvertrags für eine Klasse oder Struktur](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] behandelt, die Definition der zugrunde liegenden SOAP-Nachrichten, die Funktionalität des Vorgangs zu ermöglichen als auch für die Serialisierung von Datentypen in und aus dem Text der Nachrichten. Solange Ihre Datentypen serialisierbar sind, müssen Sie sich beim Erstellen von Vorgängen keine Gedanken über die zugrunde liegende Meldungsaustauschinfrastruktur machen.  
   

@@ -2,10 +2,6 @@
 title: GetMethod-Funktion (Referenz zur nicht verwalteten API)
 description: GetMethod-Funktion ruft Informationen zu einer Methode ab.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f22a2dfa7aae411cac960cbad2017718df8057e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethod-function"></a>GetMethod-Funktion
 Ruft Informationen über die angegebene Methode ab.
@@ -83,14 +76,14 @@ Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::GetMet
 
 Verwaltung von Windows können festlegen, die [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Zeiger auf `null` Wenn die Methode keine in-Parameter hat.
 
-In `ppInSignature` und `ppOutSignature` beschreiben "" in und out-Parameter, jeweils als Eigenschaften in einem `IWbemClassObject` Instanz der Systemklasse [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx). Die Eigenschaften im `ppInsignature` heißen **Param***n*, wobei  *n*  ist die Position des Parameters in der Methodensignatur (z. B. als `Param1`, `Param2`usw..). Die Eigenschaften im `ppOutSignature` sind auch mit dem Namen **Param***n*, und der Rückgabewert lautet **ReturnValue**. Weitere Informationen und ein Beispiel finden Sie unter [IWbemClassObject::GetMethod Methode](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx).
+In `ppInSignature` und `ppOutSignature` beschreiben "" in und out-Parameter, jeweils als Eigenschaften in einem `IWbemClassObject` Instanz der Systemklasse [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx). Die Eigenschaften im `ppInsignature` heißen **Param *** n*, wobei *n* ist die Position des Parameters in der Methodensignatur (z. B. `Param1`, `Param2`usw..). Die Eigenschaften im `ppOutSignature` sind auch mit dem Namen **Param *** n*, und der Rückgabewert lautet **ReturnValue**. Weitere Informationen und ein Beispiel finden Sie unter [IWbemClassObject::GetMethod Methode](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx).
 
 ## <a name="requirements"></a>Anforderungen  
 **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

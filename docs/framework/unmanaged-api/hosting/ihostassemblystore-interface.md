@@ -1,14 +1,6 @@
 ---
 title: IHostAssemblyStore-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c795d4baa3030817299f23c3dadf4caf7a5edc5a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5620df2ab2b2530332df02cf3f11a00d6b6c8fb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore-Schnittstelle
 Enthält Methoden, die einen Host zum Laden von Assemblys und Modulen unabhängig von der common Language Runtime (CLR) zu ermöglichen.  
@@ -45,7 +33,7 @@ Enthält Methoden, die einen Host zum Laden von Assemblys und Modulen unabhängi
 |[ProvideModule-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|Löst ein Modul innerhalb einer Assembly oder einer verknüpften (nicht eingebetteten) Ressourcendatei.|  
   
 ## <a name="remarks"></a>Hinweise  
- `IHostAssemblyStore`bietet eine Möglichkeit für einen Host zum Laden von Assemblys, die effizient basierend auf Assemblyidentität. Der Host lädt Assemblys durch Rückgabe `IStream` Instanzen, die direkt auf die Bytes verweisen.  
+ `IHostAssemblyStore` bietet eine Möglichkeit für einen Host zum Laden von Assemblys, die effizient basierend auf Assemblyidentität. Der Host lädt Assemblys durch Rückgabe `IStream` Instanzen, die direkt auf die Bytes verweisen.  
   
  Die CLR bestimmt, ob ein Host implementiert hat `IHostAssemblyStore` durch Aufrufen von `IHostAssemblyManager::GetNonHostAssemblyStores` bei der Initialisierung. Dies ermöglicht dem Host, z. B. Benutzerassemblys Bindung steuern, sondern beruhen auf die Laufzeit in .NET Framework-Assemblys zu binden.  
   
@@ -62,7 +50,7 @@ Enthält Methoden, die einen Host zum Laden von Assemblys und Modulen unabhängi
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRAssemblyReferenceList-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  

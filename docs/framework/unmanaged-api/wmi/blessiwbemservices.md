@@ -2,10 +2,6 @@
 title: BlessIWbemServices-Funktion (Referenz zur nicht verwalteten API)
 description: Die BlessIWbemServices-Funktion gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf eine Klasse IWbemServices zuzulassen.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BlessIWbemServices
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f384e8d045dd7a6f2f864f0991f8caf4a674408b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59cb20f7ccfbd0b8f9d6026c9805468613818130
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices-Funktion
 Gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf den angegebenen zugelassen [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) Klasse.   
@@ -58,11 +51,11 @@ HRESULT BlessIWbemServices (
 `strPassword`  
 [in] Das zugeordnete Kennwort `strUser`.
 
-`strAuthority`[in] Der Domänenname des Benutzers. Finden Sie unter der [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
+`strAuthority` [in] Der Domänenname des Benutzers. Finden Sie unter der [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
 
-`impLevel`[in] Die Ebene des Identitätswechsels.
+`impLevel` [in] Die Ebene des Identitätswechsels.
 
-`authnLevel`[in] Die Autorisierungsebene.
+`authnLevel` [in] Die Autorisierungsebene.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -81,7 +74,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

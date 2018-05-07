@@ -1,27 +1,15 @@
 ---
 title: Aktivieren von Multiple Active Result Sets
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b2b1e3ccfe162b6d4903aaf162673ba476296d8b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Aktivieren von Multiple Active Result Sets
 MARS (Multiple Active Result Sets) ist eine Funktion, die mit SQL Server verwendet wird und das Ausführen mehrerer Batches über eine einzelne Verbindung ermöglicht. Wenn MARS für die Verwendung mit SQL Server aktiviert wird, fügen die einzelnen verwendeten Befehlsobjekte der Verbindung eine Sitzung hinzu.  
@@ -79,7 +67,7 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS-Vorgänge sind nicht threadsicher.  
   
 ### <a name="connection-pooling"></a>Verbindungspooling  
- MARS-aktivierte Verbindungen werden genau wie andere Verbindungen in einem Pool zusammengefasst. Wenn eine Anwendung zwei Verbindungen öffnet, wobei MARS bei einer aktiviert ist und bei der anderen deaktiviert ist, befinden sich die beiden Verbindungen in separaten Pools. Weitere Informationen finden Sie unter [SQL Server Connection Pooling (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ MARS-aktivierte Verbindungen werden genau wie andere Verbindungen in einem Pool zusammengefasst. Wenn eine Anwendung zwei Verbindungen öffnet, wobei MARS bei einer aktiviert ist und bei der anderen deaktiviert ist, befinden sich die beiden Verbindungen in separaten Pools. Weitere Informationen finden Sie unter [SQL Server-Verbindungspooling (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>SQL Server-Batchausführungsumgebung  
  Beim Öffnen einer Verbindung wird eine Standardumgebung definiert. Diese Umgebung wird anschließend in eine logische MARS-Sitzung kopiert.  

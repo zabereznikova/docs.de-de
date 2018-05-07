@@ -1,30 +1,16 @@
 ---
 title: Datendienst-Versionskontrolle (WCF Data Services)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - versioning, WCF Data Services
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6d800b35a69c08ab9f7bd90165691eab7d8743f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0d77f54b5ef20db81c3c20f486ac7314f73aece8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Datendienst-Versionskontrolle (WCF Data Services)
 Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ermöglicht es Ihnen, Datendienste zu erstellen, sodass Clients Daten als Ressourcen mit URIs zugreifen können, die auf einem Datenmodell basieren. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt auch die Definition von Dienstvorgängen. Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen diese Datendienste eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z. B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Wenn Sie Änderungen an einem vorhandenen Datendienst vornehmen, müssen Sie berücksichtigen, ob eine neue Version des Datendiensts definiert wird und wie die Auswirkungen auf vorhandene Clientanwendungen am besten minimiert werden. Dieses Thema enthält einen Leitfaden, wann und wie eine neue Version eines Datendiensts erstellt wird. Es wird auch beschrieben, wie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] einen Austausch zwischen Clients und Datendiensten behandelt, die andere Versionen des [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Protokolls unterstützen.  

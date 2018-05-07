@@ -1,14 +1,6 @@
 ---
 title: CorDebugCreateProcessFlags-Enumeration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorDebugCreateProcessFlags
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: e709acce-6a17-4346-b38a-467dba567358
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e35aa2656a1e950cead94480eb06cde96e4c811
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9fdc37676bfae8ac90fde0a7a5b11037b8357e25
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cordebugcreateprocessflags-enumeration"></a>CorDebugCreateProcessFlags-Enumeration
 Stellt zusätzliche Debuggingoptionen, die in einem Aufruf verwendet werden, können die [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) Methode.  
@@ -58,7 +46,7 @@ typedef enum CorDebugCreateProcessFlags {
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

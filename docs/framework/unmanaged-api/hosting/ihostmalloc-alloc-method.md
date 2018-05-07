@@ -1,14 +1,6 @@
 ---
 title: IHostMAlloc::Alloc-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMAlloc.Alloc
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a3007f5e-d75d-4b37-842b-704e9edced5e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d999425be2bc5963aaa9f15b82bd951f6f564af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d67704aae80113bd41df5ea38acf2a794aacbac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc-Methode
 Fordert an, dass der Host der angegebene Speichermenge aus dem Heap belegt.  
@@ -62,7 +50,7 @@ HRESULT Alloc (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`Alloc`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Alloc` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -80,7 +68,7 @@ HRESULT Alloc (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IHostMemoryManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  

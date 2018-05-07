@@ -2,10 +2,6 @@
 title: PutInstanceWmi-Funktion (Referenz zur nicht verwalteten API)
 description: Die Funktion PutInstanceWmi erstellt oder aktualisiert eine Instanz einer vorhandenen Klasse.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutInstanceWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1996103eea87562226537f9aa90dc337c56313c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0db08ef4938a88ee657e2d65dda70edac09df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi-Funktion
 Erstellt oder aktualisiert eine Instanz einer vorhandenen Klasse. Die Instanz wird in das WMI-Repository geschrieben. 
@@ -59,7 +52,7 @@ HRESULT PutInstanceWmi (
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Erstellen Sie die Instanz aus, wenn sie nicht vorhanden, oder sie zu überschreiben, wenn sie bereits vorhanden ist. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Aktualisieren Sie die Instanz. Die Instanz muss vorhanden sein, der Aufruf erfolgreich ist. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Erstellen Sie die Instanz. Der Aufruf fehlschlägt, wenn die Instanz bereits vorhanden ist. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0 x 10 | Das Flag wird halbsynchrone aufgerufen. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Das Flag wird halbsynchrone aufgerufen. |
 
 `pCtx`  
 [in] In der Regel wird dieser Wert ist `null`. Andernfalls ist ein Zeiger auf ein ["IWbemContext"](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) -Instanz, die vom Anbieter verwendet werden kann, das die angeforderte Klassen bereitstellt. 
@@ -80,7 +73,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 | `WBEM_E_INVALID_OBJECT` | 0x8004100f | Die angegebene Instanz ist ungültig. (Z. B. durch Aufruf von `PutInstanceWmi` mit einer Klasse gibt diesen Wert zurück.) |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | Die `WBEM_FLAG_CREATE_ONLY` -Flag angegeben wurde, aber die Instanz ist bereits vorhanden. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`wurde im angegebenen `lFlags`, aber die Instanz ist nicht vorhanden. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` wurde im angegebenen `lFlags`, aber die Instanz ist nicht vorhanden. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI wurde wahrscheinlich beendet und neu gestartet. Rufen Sie [ConnectServerWmi](connectserverwmi.md) erneut aus. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Der Remoteprozeduraufruf (RPC)-Link zwischen dem aktuellen Prozess und die WMI-ausgefallen ist. |
@@ -106,7 +99,7 @@ Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformatio
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

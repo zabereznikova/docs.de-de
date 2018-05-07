@@ -1,27 +1,18 @@
 ---
-title: "Benutzeroberflächenautomatisierungs-Ereignisse für Clients"
-ms.custom: 
+title: Benutzeroberflächenautomatisierungs-Ereignisse für Clients
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-caps.latest.revision: "32"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8486f8c8eaa586f6f81ea895fd22c96801b3594b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d471ee08f60d6fdd029b2057d629ad824ae9fdcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-events-for-clients"></a>Benutzeroberflächenautomatisierungs-Ereignisse für Clients
 > [!NOTE]
@@ -29,7 +20,7 @@ ms.lasthandoff: 01/19/2018
   
  In diesem Thema wird beschrieben, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Ereignisse von Benutzeroberflächenautomatisierungs-Clients verwendet werden.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ermöglicht es Clients, um relevante Ereignisse zu abonnieren. Diese Funktion verbessert die Leistung durch den Wegfall ständig Abfragen der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Elemente im System zu überprüfen, ob alle Informationen, die Struktur oder den Status geändert hat.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht es Clients, um relevante Ereignisse zu abonnieren. Diese Funktion verbessert die Leistung durch den Wegfall ständig Abfragen der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Elemente im System zu überprüfen, ob alle Informationen, die Struktur oder den Status geändert hat.  
   
  Die Effizienz wird auch durch die Möglichkeit verbessert, Ereignissen nur innerhalb eines definierten Umfangs zu lauschen. Beispielsweise kann ein Client für Fokusänderungsereignisse alle Lauschen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Elemente in der Struktur oder nur einem Element und seine Nachfolger.  
   
@@ -47,7 +38,7 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|Fokusänderung|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|Eigenschaftenänderung|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|Strukturänderung|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Alle anderen Ereignisse, identifiziert durch eine<xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> oder <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Alle anderen Ereignisse, identifiziert durch eine <xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> oder <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
   
  Vor dem Aufrufen der Methode müssen Sie eine Delegatmethode erstellen, mit der das Ereignis verarbeitet wird. Wenn Sie dies bevorzugen, können Sie verschiedene Arten von Ereignissen in einer einzelnen Methode verarbeiten und diese Methode in mehreren Aufrufen an eine der Methoden in der Tabelle übergeben. Beispielsweise ein einzelnes <xref:System.Windows.Automation.AutomationEventHandler> können zum Behandeln von verschiedenen Ereignissen unterschiedlich nach Einrichten der <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A>.  
   

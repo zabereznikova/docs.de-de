@@ -1,14 +1,6 @@
 ---
-title: '[ICorDebugClass Schnittstelle1'
-ms.custom: 
+title: ICorDebugClass Schnittstelle1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugClass
 api_location:
@@ -22,19 +14,15 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3998cf76430612759f69df07fb4f5afebd7a25ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bec35babec96da5ca5d527b19f853b4ce1c384e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugclass-interface1"></a>[ICorDebugClass Schnittstelle1
+# <a name="icordebugclass-interface1"></a>ICorDebugClass Schnittstelle1
 Stellt einen Typ dar, der entweder grundlegend oder komplex (das heißt benutzerdefiniert) sein kann. Wenn der Typ generisch ist, stellt `ICorDebugClass` den nicht instanziierten generischen Typ dar.  
   
 ## <a name="methods"></a>Methoden  
@@ -46,7 +34,7 @@ Stellt einen Typ dar, der entweder grundlegend oder komplex (das heißt benutzer
 |[GetToken-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|Ruft die `TypeDef` Metadatentoken für diese Klasse.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ICorDebugClass` Schnittstelle stellt einen nicht instanziierten generischen Typ dar. [ICorDebugType-Schnittstelle stellt einen instanziierten generischen Typ dar. Beispielsweise `Hashtable<K, V>` dargestellt werden würde `ICorDebugClass`, wohingegen `Hashtable<Int32, String>` dargestellt werden würde `ICorDebugType`.  
+ Die `ICorDebugClass` Schnittstelle stellt einen nicht instanziierten generischen Typ dar. ICorDebugType-Schnittstelle stellt einen instanziierten generischen Typ dar. Beispielsweise `Hashtable<K, V>` dargestellt werden würde `ICorDebugClass`, wohingegen `Hashtable<Int32, String>` dargestellt werden würde `ICorDebugType`.  
   
  Nicht generische Typen werden von beiden dargestellt `ICorDebugClass` und `ICorDebugType`. Die zweite Schnittstelle wurde in .NET Framework, Version 2.0 für den Umgang mit Typinstanziierung eingeführt.  
   
@@ -60,7 +48,7 @@ Stellt einen Typ dar, der entweder grundlegend oder komplex (das heißt benutzer
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

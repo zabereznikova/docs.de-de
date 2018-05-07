@@ -1,27 +1,15 @@
 ---
 title: Behandeln von NULL-Werten
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9c0b6d250dcedc9b5996c50ccdb2f183707e54e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relationalen Datenbank ein NULL-Wert verwendet. NULL ist weder eine leere Zeichenfolge (für Zeichen- oder Datetime-Datentypen) noch ein Wert 0 (null) (für numerische Datentypen). Die ANSI SQL-92-Spezifikation legt fest, dass NULL für alle Datentypen gleich sein muss, sodass alle NULL-Werte einheitlich behandelt werden können. Der <xref:System.Data.SqlTypes>-Namespace stellt durch Implementieren der <xref:System.Data.SqlTypes.INullable>-Schnittstelle eine NULL-Semantik bereit. Jeder Datentyp in <xref:System.Data.SqlTypes> besitzt eine eigene `IsNull`-Eigenschaft und einen `Null`-Wert. Diese können einer Instanz dieses Datentyps zugewiesen werden.  

@@ -1,14 +1,6 @@
 ---
 title: IAppDomainSetup-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAppDomainSetup
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9db1b787015231b3d9053d4ed316cb70c5db96ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbcbc446eabcfcbc28c830f8860bde726c8eb6e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup-Schnittstelle
 Enthält Eigenschaften, mit denen den Host so konfigurieren Sie eine <xref:System.AppDomain?displayProperty=nameWithType> Typ vor dem Aufruf der [ICorRuntimeHost:: CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) Methode, um ihn zu erstellen.  
@@ -55,7 +43,7 @@ Enthält Eigenschaften, mit denen den Host so konfigurieren Sie eine <xref:Syste
 ## <a name="remarks"></a>Hinweise  
  Die `IAppDomainSetup` Schnittstelle entspricht der verwalteten <xref:System.IAppDomainSetup> Schnittstelle, die die <xref:System.AppDomainSetup> Typ implementiert. Finden Sie unter <xref:System.IAppDomainSetup?displayProperty=nameWithType> eine ausführliche Beschreibung der Eigenschaften.  
   
- `IAppDomainSetup`Stellt Assembly-Bindungsinformationen, die hinzugefügt werden, kann, ein <xref:System.AppDomain> -Instanz vor ihrer Erstellung. Ein Host kann festlegen, z. B. die <xref:System.AppDomainSetup.ApplicationBase%2A> Eigenschaft, um ein Stammverzeichnis aufbauen, die die common Language Runtime (CLR)-für Prüfpunkte verwaltete Assemblys.  
+ `IAppDomainSetup` Stellt Assembly-Bindungsinformationen, die hinzugefügt werden, kann, ein <xref:System.AppDomain> -Instanz vor ihrer Erstellung. Ein Host kann festlegen, z. B. die <xref:System.AppDomainSetup.ApplicationBase%2A> Eigenschaft, um ein Stammverzeichnis aufbauen, die die common Language Runtime (CLR)-für Prüfpunkte verwaltete Assemblys.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -64,7 +52,7 @@ Enthält Eigenschaften, mit denen den Host so konfigurieren Sie eine <xref:Syste
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.AppDomain>  

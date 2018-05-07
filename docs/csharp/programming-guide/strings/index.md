@@ -1,22 +1,15 @@
 ---
 title: Zeichenfolgen (C#-Programmierhandbuch)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 41
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5a888440a76119eae7e4c525942878e0aa6ddafc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  

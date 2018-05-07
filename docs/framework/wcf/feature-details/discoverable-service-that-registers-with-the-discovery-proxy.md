@@ -1,27 +1,15 @@
 ---
 title: 'Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist
-Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Sie einen suchproxy implementieren. In diesem Thema erstellen Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, der Ankündigungsnachrichten (`Hello` und `Bye`) an den Suchproxy sendet. Dies bewirkt, dass der Dienst sich beim Suchproxy registriert bzw. dass die Registrierung aufgehoben wird.  
+Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Sie einen suchproxy implementieren. In diesem Thema erstellen Sie einen WCF-Dienst, der ankündigungsnachrichten sendet (`Hello` und `Bye`) an den ermittlungsproxy wegen der er zum Registrieren und Aufheben der Registrierung selbst mit den suchproxy.  
   
 ### <a name="to-define-the-service-contract"></a>So definieren Sie den Dienstvertrag  
   

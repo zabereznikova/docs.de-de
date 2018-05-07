@@ -1,30 +1,18 @@
 ---
-title: "Aktivität"
-ms.custom: 
+title: Aktivität
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity"></a>Aktivität
-In diesem Thema werden Aktivitätsablaufverfolgungen im Ablaufverfolgungsmodell von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] beschrieben. Aktivitäten sind Verarbeitungseinheiten, mit deren Hilfe der Benutzer einen Fehlerbereich eingrenzen kann. Fehler, die in der gleichen Aktivität auftreten, hängen direkt zusammen. Ein Vorgang schlägt z.&#160;B. fehl, weil eine Nachrichtenentschlüsselung fehlgeschlagen ist. Die Ablaufverfolgungen für den Vorgangs- und den Nachrichtenverschlüsselungsfehler treten in der gleichen Aktivität auf und zeigen eine direkte Verbindung zwischen dem Verschlüsselungsfehler und dem Anforderungsfehler.  
+Dieses Thema beschreibt die aktivitätsablaufverfolgungen in der Windows Communication Foundation (WCF)-aktivitätsablaufverfolgungs-Modell. Aktivitäten sind Verarbeitungseinheiten, mit deren Hilfe der Benutzer einen Fehlerbereich eingrenzen kann. Fehler, die in der gleichen Aktivität auftreten, hängen direkt zusammen. Ein Vorgang schlägt z.&#160;B. fehl, weil eine Nachrichtenentschlüsselung fehlgeschlagen ist. Die Ablaufverfolgungen für den Vorgangs- und den Nachrichtenverschlüsselungsfehler treten in der gleichen Aktivität auf und zeigen eine direkte Verbindung zwischen dem Verschlüsselungsfehler und dem Anforderungsfehler.  
   
 ## <a name="configuring-activity-tracing"></a>Konfigurieren der Aktivitätsablaufverfolgung  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]enthält vordefinierte Aktivitäten für die Verarbeitung von Anwendungen (siehe [Aktivitätsliste](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Sie können Aktivitäten auch programmgesteuert definieren, um Benutzerablaufverfolgungen zu gruppieren. Weitere Informationen finden Sie unter [Ausgeben von Benutzercode-Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] enthält vordefinierte Aktivitäten für die Verarbeitung von Anwendungen (siehe [Aktivitätsliste](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Sie können Aktivitäten auch programmgesteuert definieren, um Benutzerablaufverfolgungen zu gruppieren. Weitere Informationen finden Sie unter [Ausgeben von Benutzercode-Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
  Verwenden Sie die `ActivityTracing`-Einstellung für die `System.ServiceModel`-Ablaufverfolgungsquelle oder andere [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]- oder benutzerdefinierte Ablaufverfolgungsquellen wie der folgende Konfigurationscode zeigt, um Aktivitätsablaufverfolgungen zur Laufzeit auszugeben.  
   

@@ -1,14 +1,6 @@
 ---
 title: CreateInstallReferenceEnum-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateInstallReferenceEnum
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: 80dbbbf8-54fc-4894-b74a-0179d3201083
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a0c902cf5d9d8b6295cab95552aae6775c5bf889
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e35654b03f68a306329ef488289cfecd6f012484
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum-Funktion
 Ruft einen Zeiger auf eine [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) -Instanz, die eine Liste der Verweise einer Anwendung auf die angegebene Assembly darstellt.  
@@ -61,7 +49,7 @@ HRESULT CreateInstallReferenceEnum (
  [in] Flags, die das Verhalten des Enumerators zu beeinflussen.  
   
  `pvReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pvReserved`ein null-Verweis muss sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pvReserved` ein null-Verweis muss sein.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -70,7 +58,7 @@ HRESULT CreateInstallReferenceEnum (
   
  **Bibliothek:** Fusion.dll und "Mscorwks.dll". Verwenden Sie Fusion.dll anstelle von "Mscorwks.dll", um sicherzustellen, dass Sie die richtige Version von .NET Framework abzielen.  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IInstallReferenceEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)  

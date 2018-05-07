@@ -1,28 +1,19 @@
 ---
-title: "Implementieren des SelectionItem-Steuerelementmusters der Benutzeroberflächenautomatisierung"
-ms.custom: 
+title: Implementieren des SelectionItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Selection Item control pattern
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4ec9ee61973adacfc44c5fa7d8f1e6812e9950fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: abf1c1851e10036ecf46b04662d41a4d9f2667e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementieren des SelectionItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -57,7 +48,7 @@ ms.lasthandoff: 01/19/2018
   
 |Ausnahmetyp|Bedingung|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|Wenn einer der folgenden Schritte versucht wird:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A>für einen einfachauswahlcontainer aufgerufen wird, in denen <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` und bereits ein Element ausgewählt ist.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> wird für einen Mehrfachauswahlcontainer aufgerufen, für den <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` gilt und nur ein Element ausgewählt ist.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> wird für einen Einfachauswahlcontainer aufgerufen, für den <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` gilt und bereits ein weiteres Element ausgewählt ist.|  
+|<xref:System.InvalidOperationException>|Wenn einer der folgenden Schritte versucht wird:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> für einen einfachauswahlcontainer aufgerufen wird, in denen <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` und bereits ein Element ausgewählt ist.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> wird für einen Mehrfachauswahlcontainer aufgerufen, für den <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` gilt und nur ein Element ausgewählt ist.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> wird für einen Einfachauswahlcontainer aufgerufen, für den <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` gilt und bereits ein weiteres Element ausgewählt ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  

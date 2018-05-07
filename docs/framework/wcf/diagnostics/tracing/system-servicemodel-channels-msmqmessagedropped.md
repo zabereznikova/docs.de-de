@@ -1,30 +1,18 @@
 ---
 title: System.ServiceModel.Channels.MsmqMessageDropped
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b6e644d-fa68-4be7-abe9-3659671a37c1
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2f905c345db89e909920334a7dbb524095bc46b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad05a2b8552cc09d45e950e2c3336d86be918963
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemservicemodelchannelsmsmqmessagedropped"></a>System.ServiceModel.Channels.MsmqMessageDropped
 MSMQ hat die Nachricht verworfen.  
   
 ## <a name="description"></a>Beschreibung  
- Die Ablaufverfolgung gibt an, dass eine MSMQ-Nachricht gelöscht wurde. MSMQ-Nachrichten können gelöscht werden, wenn [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (unter Verwendung von NetMsmqBinding oder MsmqIntegrationBinding) sie nicht verarbeiten kann. Solche Nachrichten werden als beschädigte Nachrichten bezeichnet.  
+ Die Ablaufverfolgung gibt an, dass eine MSMQ-Nachricht gelöscht wurde. MSMQ-Nachrichten können gelöscht werden, wenn Windows Communication Foundation (WCF) (unter Verwendung von NetMsmqBinding oder MsmqIntegrationBinding) nicht verarbeiten kann. Solche Nachrichten werden als beschädigte Nachrichten bezeichnet.  
   
  Eine beschädigte Nachricht wird gelöscht, wenn die `ReceiveErrorHandling`-Eigenschaft von NetMsmqBinding oder MsmqIntegrationBinding auf `Drop` festgelegt ist. Eine gelöschte Nachricht wird aus der Warteschlange entfernt und ist nicht mehr wiederherstellbar.  
   

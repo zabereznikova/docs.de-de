@@ -1,14 +1,6 @@
 ---
 title: GetVersionFromProcess-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetVersionFromProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: db5054ab9b71eb93005fc0315acba82d807487ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess-Funktion
 Ruft die Versionsnummer der common Language Runtime (CLR), die dem angegebenen Prozesshandle zugeordnet ist.  
@@ -70,8 +58,8 @@ HRESULT GetVersionFromProcess (
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|`pVersion`ist null und `cchBuffer` ist ungleich null, oder umgekehrt.<br /><br /> - oder - <br /><br /> `hProcess`ist kein gültiges Handle an einen Prozess.<br /><br /> - oder - <br /><br /> Die CLR wird nicht geladen werden.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`ist null oder kleiner als die Länge der Versionszeichenfolge.|  
+|E_INVALIDARG|`pVersion` ist null und `cchBuffer` ist ungleich null, oder umgekehrt.<br /><br /> - oder - <br /><br /> `hProcess` ist kein gültiges Handle an einen Prozess.<br /><br /> - oder - <br /><br /> Die CLR wird nicht geladen werden.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` ist null oder kleiner als die Länge der Versionszeichenfolge.|  
 |E_NOTIMPL|Diese Methode ist nicht auf dem Betriebssystem Microsoft Windows 95, Microsoft Windows 98 oder Microsoft Windows Millennium Edition verfügbar.|  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -81,7 +69,7 @@ HRESULT GetVersionFromProcess (
   
  **Bibliothek:** "Mscoree.dll"  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [GetRequestedRuntimeInfo-Funktion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  

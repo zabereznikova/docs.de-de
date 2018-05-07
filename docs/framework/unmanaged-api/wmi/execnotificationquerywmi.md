@@ -1,11 +1,7 @@
 ---
 title: ExecNotificationQueryWmi-Funktion (Referenz zur nicht verwalteten API)
-description: "Die ExecNotificationQueryWmi-Funktion führt eine Abfrage aus, um Ereignisse zu empfangen."
+description: Die ExecNotificationQueryWmi-Funktion führt eine Abfrage aus, um Ereignisse zu empfangen.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecNotificationQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi-Funktion
 Führt eine Abfrage aus, um Ereignisse zu empfangen. Der Aufruf sofort zurückgegeben, und der Aufrufer den zurückgegebenen Enumerator für Ereignisse beim Eintreffen Abfragen kann. Den zurückgegebenen Enumerator freigeben, wird die Abfrage abgebrochen.  
@@ -65,8 +58,8 @@ HRESULT ExecNotificationQueryWmi (
 
 | Konstante | Wert  | Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0 x 10 | Das Flag wird halbsynchrone aufgerufen. Wenn dieses Flag nicht festgelegt ist, schlägt der Aufruf fehl. Grund hierfür ist Ereignisse kontinuierlich, stammen, was bedeutet, dass der Benutzer den zurückgegebenen Enumerator abrufen muss. Dieser Aufruf auf unbestimmte Zeit blockiert ist, die nicht möglich. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0 x 20 | Die Funktion gibt einen Enumerator Vorwärtscursor. In der Regel nur vorwärts Enumeratoren werden schneller ausgeführt und belegen weniger Speicher als konventionelle Enumeratoren, aber es nicht möglich, dass Aufrufe [Klon](clone.md). |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Das Flag wird halbsynchrone aufgerufen. Wenn dieses Flag nicht festgelegt ist, schlägt der Aufruf fehl. Grund hierfür ist Ereignisse kontinuierlich, stammen, was bedeutet, dass der Benutzer den zurückgegebenen Enumerator abrufen muss. Dieser Aufruf auf unbestimmte Zeit blockiert ist, die nicht möglich. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Die Funktion gibt einen Enumerator Vorwärtscursor. In der Regel nur vorwärts Enumeratoren werden schneller ausgeführt und belegen weniger Speicher als konventionelle Enumeratoren, aber es nicht möglich, dass Aufrufe [Klon](clone.md). |
 
 `pCtx`  
 [in] In der Regel wird dieser Wert ist `null`. Andernfalls ist ein Zeiger auf ein ["IWbemContext"](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) -Instanz, die vom Anbieter verwendet werden kann, das die angeforderte Ereignisse bereitstellt. 
@@ -77,7 +70,7 @@ HRESULT ExecNotificationQueryWmi (
 `authLevel`  
 [in] Die Autorisierungsebene.
 
-`impLevel`[in] Die Ebene des Identitätswechsels.
+`impLevel` [in] Die Ebene des Identitätswechsels.
 
 `pCurrentNamespace`   
 [in] Ein Zeiger auf ein [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) -Objekt, das den aktuellen Namespace darstellt.
@@ -127,7 +120,7 @@ Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformatio
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

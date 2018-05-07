@@ -1,14 +1,6 @@
 ---
 title: IHostTaskManager::CallNeedsHostHook-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.CallNeedsHostHook
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4774c9f37f73692bf8d9455c51e76aa4c590f925
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 983cad5ed87d0666ed71a805a3b3f7a3c7e7c091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook-Methode
 Ermöglicht es dem Host anzugeben, ob die common Language Runtime (CLR) kann den angegebenen Aufruf an eine nicht verwaltete Funktion Inline aus.  
@@ -58,7 +46,7 @@ HRESULT CallNeedsHostHook (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`CallNeedsHostHook`wurde erfolgreich zurückgegeben.|  
+|S_OK|`CallNeedsHostHook` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die CLR wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -66,7 +54,7 @@ HRESULT CallNeedsHostHook (
 |E_FAIL|Ein Unbekannter Schwerwiegender Fehler aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr verwendbar innerhalb des Prozesses. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Zum Optimieren der Ausführung von Code führt die CLR eine Analyse jeder Plattform Plattformaufrufs während der Kompilierung, um zu bestimmen, ob der Aufruf inline gesetzt werden kann. `CallNeedsHostHook`mit der Host dieser Entscheidung zu überschreiben, indem Sie festlegen, dass ein Aufruf an eine nicht verwaltete Funktion verknüpft werden kann. Wenn der Host einen Hook erforderlich ist, kann die Laufzeit den Aufruf nicht Inline.  
+ Zum Optimieren der Ausführung von Code führt die CLR eine Analyse jeder Plattform Plattformaufrufs während der Kompilierung, um zu bestimmen, ob der Aufruf inline gesetzt werden kann. `CallNeedsHostHook` mit der Host dieser Entscheidung zu überschreiben, indem Sie festlegen, dass ein Aufruf an eine nicht verwaltete Funktion verknüpft werden kann. Wenn der Host einen Hook erforderlich ist, kann die Laufzeit den Aufruf nicht Inline.  
   
  Der Host in der Regel einen Hook, müsste ein Gleitkommazustand angepasst werden muss oder nach dem Empfang der Benachrichtigung, dass ein Aufruf einen Zustand eintritt, in dem der Host die Common Language Runtime-Anforderungen für Arbeitsspeicher oder alle Sperren nachverfolgt werden können. Wenn der Host erfordert, dass der Aufruf verknüpft werden, benachrichtigt die Laufzeit den Host der Übergänge in und aus verwaltetem Code durch Aufrufe [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), und [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
@@ -77,7 +65,7 @@ HRESULT CallNeedsHostHook (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

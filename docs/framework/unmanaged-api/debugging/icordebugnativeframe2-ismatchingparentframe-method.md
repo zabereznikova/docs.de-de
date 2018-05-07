@@ -1,14 +1,6 @@
 ---
 title: ICorDebugNativeFrame2::IsMatchingParentFrame-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugNativeFrame2.IsMatchingParentFrame Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fc2d8eacb05e861290ad19a34c261943dc2959a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39c0ea69a0922f5e0d25c98c21ec17a872b2f421
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame-Methode
 Bestimmt, ob der angegebene Rahmen um das übergeordnete Element des aktuellen Frames ist.  
@@ -65,7 +53,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- `IsMatchingParentFrame`Gibt `true` , wenn der Frame-Objekt, das Sie an die Methode übergeben, das übergeordnete Element der Frame-Objekt ist auf dem die Methode wurde aufgerufen. Wenn Sie die Methode für einen Frame, die ein untergeordnetes Element des angegebenen Rahmens nicht ist aufrufen, wird ein Fehler zurückgegeben.  
+ `IsMatchingParentFrame` Gibt `true` , wenn der Frame-Objekt, das Sie an die Methode übergeben, das übergeordnete Element der Frame-Objekt ist auf dem die Methode wurde aufgerufen. Wenn Sie die Methode für einen Frame, die ein untergeordnetes Element des angegebenen Rahmens nicht ist aufrufen, wird ein Fehler zurückgegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -74,7 +62,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICorDebugNativeFrame2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  

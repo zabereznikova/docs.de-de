@@ -1,11 +1,7 @@
 ---
 title: CreateInstanceEnumWmi-Funktion (Referenz zur nicht verwalteten API)
-description: "Die CreateInstanceEnumWmi-Funktion gibt einen Enumerator mit Instanzen einer bestimmten Klasse, die Auswahlkriterien erfüllt."
+description: Die CreateInstanceEnumWmi-Funktion gibt einen Enumerator mit Instanzen einer bestimmten Klasse, die Auswahlkriterien erfüllt.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CreateInstanceEnumWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b796771b07dee28470d37ca3e4292c0a244e056b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f9297d34b01c03075db67bd904a81e589bfcc10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi-Funktion
 Gibt einen Enumerator, der die Instanzen einer bestimmten Klasse zurückgibt, die angegebenen Auswahlkriterien entsprechen. 
@@ -64,8 +57,8 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0 x 20000 | Wenn festgelegt ist, die Funktion ruft die Qualifizierern in den lokalisierten Namespace des Gebietsschemas für die aktuelle Verbindung gespeichert ab. <br/> Wenn dies nicht festgelegt ist, die Funktion ruft nur die Qualifizierer, die in den unmittelbaren Namespace gespeichert. |
 | `WBEM_FLAG_DEEP` | 0 | Die Enumeration enthält auch alle Unterklassen in der Hierarchie. |
 | `WBEM_FLAG_SHALLOW` | 1 | Die Enumeration schließt nur reine Instanzen dieser Klasse und schließt alle Instanzen von Unterklassen, die Eigenschaften, die nicht in dieser Klasse angeben. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0 x 10 | Das Flag wird halbsynchrone aufgerufen. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0 x 20 | Die Funktion gibt einen Enumerator Vorwärtscursor. In der Regel nur vorwärts Enumeratoren werden schneller ausgeführt und belegen weniger Speicher als konventionelle Enumeratoren, aber es nicht möglich, dass Aufrufe [Klon](clone.md). |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Das Flag wird halbsynchrone aufgerufen. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Die Funktion gibt einen Enumerator Vorwärtscursor. In der Regel nur vorwärts Enumeratoren werden schneller ausgeführt und belegen weniger Speicher als konventionelle Enumeratoren, aber es nicht möglich, dass Aufrufe [Klon](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI behält Zeiger auf Objekte in der Enumration, bis sie veröffentlicht werden. | 
 
 Die empfohlene Flags sind `WBEM_FLAG_RETURN_IMMEDIATELY` und `WBEM_FLAG_FORWARD_ONLY` für optimale Leistung zu erzielen.
@@ -79,7 +72,7 @@ Die empfohlene Flags sind `WBEM_FLAG_RETURN_IMMEDIATELY` und `WBEM_FLAG_FORWARD_
 `authLevel`  
 [in] Die Autorisierungsebene.
 
-`impLevel`[in] Die Ebene des Identitätswechsels.
+`impLevel` [in] Die Ebene des Identitätswechsels.
 
 `pCurrentNamespace`   
 [in] Ein Zeiger auf ein [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) -Objekt, das den aktuellen Namespace darstellt.
@@ -121,7 +114,7 @@ Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformatio
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

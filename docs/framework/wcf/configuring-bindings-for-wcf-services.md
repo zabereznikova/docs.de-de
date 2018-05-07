@@ -1,28 +1,14 @@
 ---
 title: Konfigurieren von Bindungen für Windows Communication Foundation-Dienste
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurieren von Bindungen für Windows Communication Foundation-Dienste
 Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellung der Anwendung möglicherweise Entscheidungen mitteilen. Beispielsweise wissen Sie häufig nicht im Voraus, welche Dienstadresse oder welcher URI (Uniform Resource Identifier) verwendet wird. Anstatt eine Adresse fest zu programmieren, sollte diese Aufgabe einem Administrator nach dem Erstellen eines Diensts übergeben werden. Diese Flexibilität wird durch Konfiguration ermöglicht.  
@@ -31,7 +17,7 @@ Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellun
 >  Verwenden der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) mit dem `/config` Switch Konfigurationsdateien schnell zu erstellen.  
   
 ## <a name="major-sections"></a>Hauptabschnitte  
- Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Konfigurationsschema schließt die folgenden drei Hauptabschnitte ein (`serviceModel`, `bindings` und `services`):  
+ Der Windows Communication Foundation (WCF)--Konfigurationsschema schließt die folgenden drei Hauptabschnitte (`serviceModel`, `bindings`, und `services`):  
   
 ```xml  
 <configuration>  

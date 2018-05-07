@@ -1,14 +1,6 @@
 ---
 title: ICLRPolicyManager::SetDefaultAction-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetDefaultAction
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 751853aaf4322c15b44bb9b912d293a081c24ba8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9a183c7491ad5d67bc2c68edba3ef2d54839da12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>ICLRPolicyManager::SetDefaultAction-Methode
 Gibt die Richtlinienaktion, die die common Language Runtime (CLR) ausführen sollten, wenn der angegebene Vorgang auftritt.  
@@ -58,7 +46,7 @@ HRESULT SetDefaultAction (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SetDefaultAction`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetDefaultAction` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die CLR wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -67,9 +55,9 @@ HRESULT SetDefaultAction (
 |E_INVALIDARG|Eine ungültige `action` wurde angegeben, für die `operation`, oder für wurde ein ungültiger Wert angegeben `operation`.|  
   
 ## <a name="remarks"></a>Hinweise  
- Nicht alle Werte für Aktivierungsrichtlinien Aktion können als das Standardverhalten für CLR-Vorgänge angegeben werden. `SetDefaultAction`kann nur für eskalieren Sie das Verhalten in der Regel verwendet werden. Ein Host kann z. B. angeben, die Threadabbrüche in grobe aktiviert werden thread-Abbrüche, jedoch nicht das Gegenteil. Die folgende Tabelle beschreibt die gültigen `action` Werte für jeden möglichen `operation` Wert.  
+ Nicht alle Werte für Aktivierungsrichtlinien Aktion können als das Standardverhalten für CLR-Vorgänge angegeben werden. `SetDefaultAction` kann nur für eskalieren Sie das Verhalten in der Regel verwendet werden. Ein Host kann z. B. angeben, die Threadabbrüche in grobe aktiviert werden thread-Abbrüche, jedoch nicht das Gegenteil. Die folgende Tabelle beschreibt die gültigen `action` Werte für jeden möglichen `operation` Wert.  
   
-|Wert für`operation`|Gültige Werte für`action`|  
+|Wert für `operation`|Gültige Werte für `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadAbort|-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
@@ -85,7 +73,7 @@ HRESULT SetDefaultAction (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [EClrOperation-Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

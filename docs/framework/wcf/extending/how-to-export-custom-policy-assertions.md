@@ -1,30 +1,18 @@
 ---
 title: 'Vorgehensweise: Exportieren von benutzerdefinierten Richtlinienassertionen'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8620dec4997947df2dc7078e337a5e421d66c55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4182007d32ea857aa333542b4df29da18b8062df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Vorgehensweise: Exportieren von benutzerdefinierten Richtlinienassertionen
-Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienstendpunkts. Dienstanwendungen können benutzerdefinierte Richtlinienassertionen in Dienstmetadaten verwenden, um Endpunkt-, Bindungs- oder Vertragsanpassungsinformationen an die Clientanwendung zu übermitteln. Sie können Assertionen je nach den zu übermittelnden Funktionen oder Anforderungen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in Richtlinienausdrücke exportieren, die in WSDL-Bindungen am Subjekt des Endpunkts, des Vorgangs oder der Nachricht angefügt werden.  
+Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienstendpunkts. Dienstanwendungen können benutzerdefinierte Richtlinienassertionen in Dienstmetadaten verwenden, um Endpunkt-, Bindungs- oder Vertragsanpassungsinformationen an die Clientanwendung zu übermitteln. Windows Communication Foundation (WCF) können um Assertionen in Richtlinienausdrücke in WSDL-Bindungen auf den Endpunkt, den Vorgang oder Nachrichtenbetreffs, abhängig von den Funktionen oder Anforderungen, kommunizieren, zu exportieren.  
   
  Exportieren Sie benutzerdefinierte Richtlinienassertionen, indem Sie die <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>-Schnittstelle für <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> implementieren und das Bindungselement entweder direkt in die Bindung des Dienstendpunkts einfügen oder das Bindungselement in der Anwendungskonfigurationsdatei registrieren. Bei der Implementierung des Richtlinienexports sollte die benutzerdefinierte Richtlinienassertion der entsprechenden <xref:System.Xml.XmlElement?displayProperty=nameWithType> zum <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType>, der in der <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType>-Methode übergeben wird, als <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>-Instanz hinzugefügt werden.  
   

@@ -1,14 +1,6 @@
 ---
 title: ICorProfilerInfo4-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80a5308e-c22f-4201-ba89-31cc8562515b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 83629d0fc8288d118ec31c38473cb63335bb1d48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f452a3324365fb23e1affc11dbdb2ede15346010
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4-Schnittstelle
 Enthält Methoden, mit denen Codeprofiler mit der common Language Runtime (CLR), um die ereignisüberwachung zu steuern und Informationen zu kommunizieren. sein. Die `ICorProfilerInfo4` Schnittstelle ist eine Erweiterung der anderen `ICorProfilerInfo` Schnittstellen. Es bietet neue Methoden zur Unterstützung von Just-in-Time (JIT)-Neukompilierung hinzugefügt, der [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -62,7 +50,7 @@ Enthält Methoden, mit denen Codeprofiler mit der common Language Runtime (CLR),
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  

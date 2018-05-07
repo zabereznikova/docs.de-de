@@ -1,14 +1,6 @@
 ---
 title: IMetaDataAssemblyEmit::DefineExportedType-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyEmit.DefineExportedType
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 59aae188e404ebc717a140fb7918e3fbf69f3f70
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2eb894a8bac702c30826d1e965c91cae9b259ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType-Methode
 Erstellt eine `ExportedType`-Struktur, die Metadaten für den angegebenen exportierten Typ enthält, und gibt das zugeordnete Metadatentoken zurück.  
@@ -57,13 +45,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in] Ein Token, die angeben, in denen der exportierte Typ implementiert wird. Die gültigen Werte und ihre zugeordneten Bedeutung sind:  
   
--   `mdFile`Der Typ wird in eine andere Datei in dieser Assembly implementiert.  
+-   `mdFile` Der Typ wird in eine andere Datei in dieser Assembly implementiert.  
   
--   `mdAssemblyRef`Der Typ wird in einer anderen Assembly implementiert.  
+-   `mdAssemblyRef` Der Typ wird in einer anderen Assembly implementiert.  
   
--   `mdExportedTYpe`Der Typ wird in einem anderen Typ geschachtelt.  
+-   `mdExportedTYpe` Der Typ wird in einem anderen Typ geschachtelt.  
   
--   `mdFileNil`Der Typ befindet sich in der gleichen Datei wie das Manifest und kein geschachtelter Typ ist.  
+-   `mdFileNil` Der Typ befindet sich in der gleichen Datei wie das Manifest und kein geschachtelter Typ ist.  
   
  `tkTypeDef`  
  [in] Ein Token für die Metadaten, die der den zu exportierenden angibt. Dieser Wert eingegeben wird, der `TypeDef` Tabelle in der Datei, die den Typ implementiert und ist nur relevant, wenn diese Datei in dieser Assembly ist.  
@@ -84,7 +72,7 @@ HRESULT DefineExportedType (
   
  **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

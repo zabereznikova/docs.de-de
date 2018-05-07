@@ -1,24 +1,12 @@
 ---
-title: "Beispiele für Abfrageausdrücke (LINQ to DataSet)"
-ms.custom: 
+title: Beispiele für Abfrageausdrücke (LINQ to DataSet)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 01b31debeb71180f4b1c86e6c9e0dfb1251bf807
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7e095d946f3284bae72290c65e7d35aedd4c386b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Beispiele für Abfrageausdrücke (LINQ to DataSet)
 Dieser Abschnitt enthält [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Programmierbeispiele in der Abfrageausdruckssyntax, bei denen die Standardabfrageoperatoren verwendet werden. Die <xref:System.Data.DataSet> in diesen Beispielen verwendet werden ausgefüllt, indem Sie mit der `FillDataSet` -Methode, die im angegebenen [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Weitere Informationen finden Sie unter [Übersicht über Standard Standardabfrageoperatoren](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

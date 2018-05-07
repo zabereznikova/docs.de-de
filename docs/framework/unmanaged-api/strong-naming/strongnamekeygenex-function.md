@@ -1,14 +1,6 @@
 ---
 title: StrongNameKeyGenEx-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyGenEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 36bd10b9-9857-45f3-8d3b-0da091d6169e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae564f7c4e8333e33b2f2f6229034c3a1396a687
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5e65e962d099e944fe243b3acc0a7c25a3bb960c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx-Funktion
 Generiert ein neues öffentliches/privates Schlüsselpaar mit der angegebenen Schlüsselgröße für die Verwendung der starken Namen an.  
@@ -53,7 +41,7 @@ BOOLEAN StrongNameKeyGenEx (
   
 #### <a name="parameters"></a>Parameter  
  `wszKeyContainer`  
- [in] Der angeforderte Schlüsselcontainer-Name. `wszKeyContainer`muss eine nicht leere Zeichenfolge sein, oder null, um einen temporären Namen zu generieren.  
+ [in] Der angeforderte Schlüsselcontainer-Name. `wszKeyContainer` muss eine nicht leere Zeichenfolge sein, oder null, um einen temporären Namen zu generieren.  
   
  `dwFlags`  
  [in] Gibt an, ob der Schlüssel registriert verlassen. Die folgenden Werte werden unterstützt:  
@@ -72,7 +60,7 @@ BOOLEAN StrongNameKeyGenEx (
  [out] Die Größe in Bytes, der `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`Bei erfolgreichem Abschluss; andernfalls `false`.  
+ `true` Bei erfolgreichem Abschluss; andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  Die .NET Framework-Versionen 1.0 und 1.1 erfordern eine `dwKeySize` von 1024 Bit zum Signieren einer Assembly mit einem starken Namen, Version 2.0 fügt 2048-Bit-Schlüssel unterstützt.  
@@ -88,7 +76,7 @@ BOOLEAN StrongNameKeyGenEx (
   
  **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [StrongNameKeyGenEx-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  

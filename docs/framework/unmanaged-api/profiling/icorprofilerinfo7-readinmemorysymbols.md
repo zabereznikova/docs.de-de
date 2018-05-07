@@ -1,14 +1,6 @@
 ---
 title: 'Icorprofilerinfo7:: Readinmemorysymbols'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - ICorProfilerInfo7.ReadInMemorySymbols
 api_location:
@@ -18,17 +10,13 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5851f73cc899ef21d8a5dcfd8f03617641a6625a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9874c8e567a89fd3977be360666c86406f2cd395
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>Icorprofilerinfo7:: Readinmemorysymbols
 [Unterstützt in [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] und höheren Versionen]  
@@ -69,7 +57,7 @@ HRESULT ReadInMemorySymbols(
  `CORPROF_E_MODULE_IS_DYNAMIC`, wenn es sich bei der Erstellung des Moduls mit <xref:System.Reflection.Emit>.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ReadInMemorySymbols` Methode versucht, lesen Sie `countSymbolBytes` Daten ab dem Offset `symbolsReadOffset` im in-Memory-Stream. Die Daten in kopiert `pSymbolBytes`, was erwartet haben `countSymbolBytes` des verfügbaren Speicherplatzes.     `pCountSymbolsBytesRead`enthält die tatsächliche Anzahl von Bytes zu lesen, was u. u. nicht kleiner als `countSymbolBytes` , wenn das Ende des Streams erreicht ist.  
+ Die `ReadInMemorySymbols` Methode versucht, lesen Sie `countSymbolBytes` Daten ab dem Offset `symbolsReadOffset` im in-Memory-Stream. Die Daten in kopiert `pSymbolBytes`, was erwartet haben `countSymbolBytes` des verfügbaren Speicherplatzes.     `pCountSymbolsBytesRead` enthält die tatsächliche Anzahl von Bytes zu lesen, was u. u. nicht kleiner als `countSymbolBytes` , wenn das Ende des Streams erreicht ist.  
   
 > [!NOTE]
 >  Die aktuelle Implementierung unterstützt keine "Reflection.Emit". Wenn das Modul mithilfe von "Reflection.Emit" erstellt wurde, gibt die Methode `CORPROF_E_MODULE_IS_DYNAMIC`.  

@@ -1,14 +1,6 @@
 ---
 title: IMetaDataEmit::SetEventProps-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.SetEventProps
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f8e2089c3f4b4e7677c2ddb9eabc8ee08cfd3695
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 42dc78ff3c58b67801cd99512781d8c8509dd272
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps-Methode
 Legt fest oder aktualisiert die angegebene Funktion eines Ereignisses definiert, die durch einen vorherigen Aufruf von [DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
@@ -81,7 +69,7 @@ HRESULT SetEventProps (
   
  **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

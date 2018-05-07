@@ -1,14 +1,6 @@
 ---
 title: ICorDebugModule::GetName-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule.GetName
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64be936277b0ebe04248ae2913a882b628ee363f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bebee019595143d25e950719ad62d9e10b76a3e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName-Methode
 Ruft den Dateinamen des Moduls ab.  
@@ -59,7 +47,7 @@ HRESULT GetName(
  [out] Ein Array, das den zurückgegebenen Namen speichert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetName` Methode gibt ein S_OK HRESULT aus, wenn der Dateiname für das Modul mit dem Namen auf dem Datenträger übereinstimmt. `GetName`Gibt HRESULT "S_FALSE" zurück, wenn der Name, erstellt wurde, z. B. für ein dynamisches oder in-Memory-Modul ist.  
+ Die `GetName` Methode gibt ein S_OK HRESULT aus, wenn der Dateiname für das Modul mit dem Namen auf dem Datenträger übereinstimmt. `GetName` Gibt HRESULT "S_FALSE" zurück, wenn der Name, erstellt wurde, z. B. für ein dynamisches oder in-Memory-Modul ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -68,7 +56,7 @@ HRESULT GetName(
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
     

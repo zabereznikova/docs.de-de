@@ -1,14 +1,6 @@
 ---
 title: ICLRPolicyManager::SetActionOnFailure-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetActionOnFailure
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4440b36485ed900b5e64adcead2525dbb7d5206e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc3616b2cec0fa951df745e3c5f0468f74ab82bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure-Methode
 Gibt die Richtlinienaktion, die die common Language Runtime (CLR) ausführen sollten, wenn der angegebene Fehler auftritt.  
@@ -58,7 +46,7 @@ HRESULT SetActionOnFailure (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnFailure`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetActionOnFailure` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die CLR wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -67,7 +55,7 @@ HRESULT SetActionOnFailure (
 |E_INVALIDARG|Eine Richtlinienaktion kann nicht festgelegt werden, für den angegebenen Vorgang, oder eine ungültige Richtlinie für den Vorgang angegeben wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig löst die CLR eine Ausnahme aus, wenn ein Fehler auftritt, eine Ressource, z. B. Arbeitsspeicher reservieren. `SetActionOnFailure`ermöglicht es dem Host auf dieses Verhalten überschreiben, indem Sie die auszuführende Richtlinienaktion bei einem Fehler angeben. Die folgende Tabelle zeigt die Kombinationen von [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) und [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) Werte, die unterstützt werden. (Das Präfix FAIL_ fehlt [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) Werte.)  
+ Standardmäßig löst die CLR eine Ausnahme aus, wenn ein Fehler auftritt, eine Ressource, z. B. Arbeitsspeicher reservieren. `SetActionOnFailure` ermöglicht es dem Host auf dieses Verhalten überschreiben, indem Sie die auszuführende Richtlinienaktion bei einem Fehler angeben. Die folgende Tabelle zeigt die Kombinationen von [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) und [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) Werte, die unterstützt werden. (Das Präfix FAIL_ fehlt [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) Werte.)  
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
@@ -89,7 +77,7 @@ HRESULT SetActionOnFailure (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [EClrFailure-Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  

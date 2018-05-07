@@ -1,14 +1,6 @@
 ---
 title: IMetaDataImport::EnumCustomAttributes-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumCustomAttributes
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e45c15f3d09972d1c83c9b330965c4e8afd21b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b549c6eacad63b165d26c203817f1a2adac57bca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes-Methode
 Zählt benutzerdefinierte Attributdefinition-Token, die den angegebenen Typ oder Member zugeordnet.  
@@ -74,7 +62,7 @@ HRESULT EnumCustomAttributes (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumCustomAttributes` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine benutzerdefinierten Attribute aufgelistet werden. In diesem Fall `pcCustomAttributes` 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -84,7 +72,7 @@ HRESULT EnumCustomAttributes (
   
  **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

@@ -1,14 +1,6 @@
 ---
 title: IMetaDataImport::EnumMembersWithName-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumMembersWithName
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3b0cef8fca7be315185ab521464b251f2a94f3b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5fca698adc4d08d805fec2ff80af377366674b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName-Methode
 Zählt MemberDef-Token auf, die Elemente des angegebenen Typs mit dem angegebenen Namen darstellen.  
@@ -77,7 +65,7 @@ HRESULT EnumMembersWithName (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumTypeDefs` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine MemberDef-Token, aufgelistet werden. In diesem Fall `pcTokens` 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -87,7 +75,7 @@ HRESULT EnumMembersWithName (
   
  **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

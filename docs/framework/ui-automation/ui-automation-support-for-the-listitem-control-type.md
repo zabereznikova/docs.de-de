@@ -1,28 +1,19 @@
 ---
-title: "Benutzeroberflächenautomatisierungs-Unterstützung für den ListItem-Steuerelementtyp"
-ms.custom: 
+title: Benutzeroberflächenautomatisierungs-Unterstützung für den ListItem-Steuerelementtyp
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control types, List
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d6705aea3958697c466deb5ca1f9dc45b9f27f31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2ad93923ecc41b7a8b564d2f53129a09a78b1085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den ListItem-Steuerelementtyp
 > [!NOTE]
@@ -89,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Erforderlich|Keiner|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|Keiner|  

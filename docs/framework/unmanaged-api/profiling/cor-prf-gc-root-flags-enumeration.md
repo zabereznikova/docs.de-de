@@ -1,14 +1,6 @@
 ---
 title: COR_PRF_GC_ROOT_FLAGS-Enumeration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_GC_ROOT_FLAGS
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4611ee6f-0f05-4d84-91e1-e83d5e7dd7e4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e00f695edb94acbd54d6bd009ccd629aeec1b14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d5dcb089074b52fc87a0bb83c7e062e7ef07b46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corprfgcrootflags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS-Enumeration
 Gibt eine Eigenschaft der Garbage Collection-Stamm.  
@@ -58,7 +46,7 @@ typedef enum {
 |`COR_PRF_GC_ROOT_REFCOUNTED`|Der Stamm verhindert die Garbagecollection auf, wenn der Verweiszähler des Objekts einen bestimmten Wert ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- `COR_PRF_GC_ROOT_FLAGS`ist eine Bitmaske, die Weitere Informationen zu besonderen Stämmen bereitstellt. Allerdings sind nicht alle Stämme besondere. Beispielsweise sind einige Stämme nicht schwache Verweise, inneren Zeigern, die angeheftet oder mit verweiszählung. Für solche Stämme sind keine Flags zu vermitteln. Aus diesem Grund Methoden, die diese Enumeration, z. B. verwenden die [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) -Methode senden 0 für die Flags-Bitmaske, die angibt, dass alle flags deaktiviert werden.  
+ `COR_PRF_GC_ROOT_FLAGS` ist eine Bitmaske, die Weitere Informationen zu besonderen Stämmen bereitstellt. Allerdings sind nicht alle Stämme besondere. Beispielsweise sind einige Stämme nicht schwache Verweise, inneren Zeigern, die angeheftet oder mit verweiszählung. Für solche Stämme sind keine Flags zu vermitteln. Aus diesem Grund Methoden, die diese Enumeration, z. B. verwenden die [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) -Methode senden 0 für die Flags-Bitmaske, die angibt, dass alle flags deaktiviert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -67,7 +55,7 @@ typedef enum {
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -1,14 +1,6 @@
 ---
 title: ICorRuntimeHost-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1280c49c2eea6a06eca10ebd8896b0722e321547
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: facc756061e7eb381abecc544ca4b15bfdde6343
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost-Schnittstelle
 Enthält Methoden, mit denen der Host zum Starten und beenden die common Language Runtime (CLR) explizit erstellen und Konfigurieren von Anwendungsdomänen, die auf die Standarddomäne zugreifen und zum Aufzählen aller Domänen im Prozess ausgeführt.  
@@ -46,7 +34,7 @@ Enthält Methoden, mit denen der Host zum Starten und beenden die common Languag
 |[CloseEnum-Methode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-closeenum-method.md)|Setzt einen Domänenenumerator wieder an den Anfang der Domänenliste aus.|  
 |[CreateDomain-Methode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)|Erstellt eine Anwendungsdomäne. Der Aufrufer empfängt einen Schnittstellenzeiger vom Typ <xref:System._AppDomain> mit einer Instanz des Typs <xref:System.AppDomain?displayProperty=nameWithType>.|  
 |[CreateDomainEx-Methode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)|Erstellt eine Anwendungsdomäne. Diese Methode ermöglicht den Aufrufer die Übergabe einer IAppDomainSetup-Instanz so konfigurieren zusätzliche Funktionen des zurückgegebenen <xref:System._AppDomain> Instanz.|  
-|[CreateDomainSetup-Methode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Ruft einen Schnittstellenzeiger vom Typ `IAppDomainSetup` auf eine <xref:System.AppDomainSetup> Instanz. `IAppDomainSetup`Stellt Methoden zum Konfigurieren der Aspekte einer Anwendungsdomäne vor Erstellung.|  
+|[CreateDomainSetup-Methode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Ruft einen Schnittstellenzeiger vom Typ `IAppDomainSetup` auf eine <xref:System.AppDomainSetup> Instanz. `IAppDomainSetup` Stellt Methoden zum Konfigurieren der Aspekte einer Anwendungsdomäne vor Erstellung.|  
 |[CreateEvidence-Methode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|Ruft einen Schnittstellenzeiger vom Typ <xref:System.Security.Principal.IIdentity>, dadurch wird den Host für die Übergabe an den Sicherheitsbeweis erstellen [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) oder [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md).|  
 |[CreateLogicalThreadState-Methode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createlogicalthreadstate-method.md)|Nicht verwenden.|  
 |[CurrentDomain-Methode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-currentdomain-method.md)|Ruft einen Schnittstellenzeiger vom Typ <xref:System._AppDomain> , die die Domäne geladen wird, für den aktuellen Thread darstellt.|  

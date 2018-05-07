@@ -1,31 +1,17 @@
 ---
 title: Benutzerdefinierte Encoder
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4f7b011b038714ee8349e74f6be270c85aed0a7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-encoders"></a>Benutzerdefinierte Encoder
 In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.  
   
- In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], Sie verwenden eine *Bindung* angeben, wie Daten in einem Netzwerk zwischen Endpunkten übertragen. Eine Bindung besteht aus einer Folge von *Bindungselementen*. Eine Bindung enthält optionale protokollbindungselemente, wie z. B. Sicherheit, ein erforderliches *Nachrichtenencoder* Bindungselement und ein erforderliches Transportbindungselement. Ein Nachrichtenencoder wird von einem Nachrichtencodierungs-Bindungselement dargestellt. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügt über drei Nachrichtenencoder: einen Binärencoder, einen Transmission Optimization Mechanism (MTOM)-Encoder und einen Textencoder.  
+ In Windows Communication Foundation (WCF), die Sie verwenden eine *Bindung* angeben, wie Daten in einem Netzwerk zwischen Endpunkten übertragen. Eine Bindung besteht aus einer Folge von *Bindungselementen*. Eine Bindung enthält optionale protokollbindungselemente, wie z. B. Sicherheit, ein erforderliches *Nachrichtenencoder* Bindungselement und ein erforderliches Transportbindungselement. Ein Nachrichtenencoder wird von einem Nachrichtencodierungs-Bindungselement dargestellt. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügt über drei Nachrichtenencoder: einen Binärencoder, einen Transmission Optimization Mechanism (MTOM)-Encoder und einen Textencoder.  
   
  Ein Bindungselement für die Nachrichtencodierung dient zum Serialisieren einer ausgehenden <xref:System.ServiceModel.Channels.Message>. Anschließend wird die Nachricht an den Transport übergeben, oder die serialisierte Form einer Nachricht wird vom Transport empfangen und an die Protokollebene übergeben. Ist die Protokollebene nicht vorhanden, erfolgt die Übergabe an die Anwendung.  
   

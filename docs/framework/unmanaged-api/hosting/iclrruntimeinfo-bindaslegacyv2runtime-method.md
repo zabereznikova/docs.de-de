@@ -1,14 +1,6 @@
 ---
 title: ICLRRuntimeInfo::BindAsLegacyV2Runtime-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeInfo.BindAsLegacyV2Runtime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 65fd55ac-4a24-4479-9384-a2e8013bfb2b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5552214f722cd7f9a56c2fce1e7c67de41d5bb1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 690287bf54f98c19298504ee3058a59ef88a87f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>ICLRRuntimeInfo::BindAsLegacyV2Runtime-Methode
 Bindet die aktuelle Laufzeit für alle älteren common Language Runtime (CLR) Version 2 Aktivierung richtlinienentscheidungen.  
@@ -62,10 +50,10 @@ HRESULT BindAsLegacyV2Runtime ();
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRRuntimeInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
  [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [\<Startup >-Element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+ [\<startup>-Element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)

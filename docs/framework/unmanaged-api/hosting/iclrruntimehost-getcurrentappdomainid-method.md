@@ -1,14 +1,6 @@
 ---
 title: ICLRRuntimeHost::GetCurrentAppDomainId-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.GetCurrentAppDomainId
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 33800475-7815-4976-8aca-a1038761a2ef
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e4e682ae71512e24d91ea7e4e12a8a2dd70f1de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe6ac3c9f03de2224f933a7e44325f578ded48b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehostgetcurrentappdomainid-method"></a>ICLRRuntimeHost::GetCurrentAppDomainId-Methode
 Ruft den numerischen Bezeichner von die <xref:System.AppDomain> , die gerade ausgeführt.  
@@ -54,7 +42,7 @@ HRESULT GetCurrentAppDomainId(
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentAppDomainId`wurde erfolgreich zurückgegeben.|  
+|S_OK|`GetCurrentAppDomainId` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -71,7 +59,7 @@ HRESULT GetCurrentAppDomainId(
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.AppDomain>  

@@ -1,27 +1,15 @@
 ---
 title: COM+ Service Model Configuration-Tool (ComSvcConfig.exe)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40e7644ade32f245772a8971cf0693683b980952
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4518a66c54574f498c4657e25a29676f0f720a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ Service Model Configuration-Tool (ComSvcConfig.exe)
 Das Befehlszeilentool COM+ Service Model Configuration (ComSvcConfig.exe) ermöglicht die Konfiguration von COM+-Schnittstellen, die als Webdienste verfügbar gemacht werden sollen.  
@@ -55,11 +43,11 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|`/application:`\< *ApplicationID* &#124; *Parameter "ApplicationName"*\>|Gibt die zu konfigurierende COM+-Anwendung an.<br /><br /> Kurzform: `/a`.|  
-|`/contract:`\< *ClassID* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *Schnittstellenname* &#124;\*\>|Gibt die COM+-Komponente und -Schnittstelle an, die als Vertrag für den Dienst konfiguriert werden sollen.<br /><br /> Kurzform: `/c`.<br /><br /> Während Sie das Platzhalterzeichen (\*) kann verwendet werden, wenn Sie angeben, dass die Namen Komponenten- und Schnittstellennamen es wird empfohlen, dass Sie ihn nicht verwenden, da Sie Schnittstellen verfügbar, die Sie nicht zum beabsichtigten machen können.|  
-|`/hosting:`\< *Complus* &#124; *wurde*\>|Gibt an, ob der COM+-Hostingmodus oder der Webhostingmodus verwendet werden soll.<br /><br /> Kurzform: `/h`.<br /><br /> Die Verwendung des COM+-Hostingmodus erfordert die explizite Aktivierung der COM+-Anwendung. Bei der Verwendung des Webhostingmodus wird die COM+-Anwendung automatisch aktiviert. Wenn die COM+-Anwendung eine Bibliotheksanwendung ist, wird sie im IIS-Prozess (Internetinformationsdienste) ausgeführt. Wenn die COM+-Anwendung eine Serveranwendung ist, wird sie im Dllhost.exe-Prozess ausgeführt.|  
-|`/webSite:`\< *Angegebenen "Websitename"*\>|Gibt bei Verwendung des Webhostingmodus die Website für das Hosting an (siehe das `/hosting`-Flag).<br /><br /> Kurzform: `/w`.<br /><br /> Wenn keine Website angegeben wird, wird die Standardwebsite verwendet.|  
-|`/webDirectory:`\< *WebDirectoryName*\>|Gibt bei Verwendung des Webhosting das virtuelle Hostingverzeichnis an (siehe das `/hosting`-Flag).<br /><br /> Kurzform: `/d`.|  
+|`/application:` \<*ApplicationID* &#124; *Parameter "ApplicationName"*\>|Gibt die zu konfigurierende COM+-Anwendung an.<br /><br /> Kurzform: `/a`.|  
+|`/contract:` \<*ClassID* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *Schnittstellenname*    &#124; \*\>|Gibt die COM+-Komponente und -Schnittstelle an, die als Vertrag für den Dienst konfiguriert werden sollen.<br /><br /> Kurzform: `/c`.<br /><br /> Während Sie das Platzhalterzeichen (\*) kann verwendet werden, wenn Sie angeben, dass die Namen Komponenten- und Schnittstellennamen es wird empfohlen, dass Sie ihn nicht verwenden, da Sie Schnittstellen verfügbar, die Sie nicht zum beabsichtigten machen können.|  
+|`/hosting:` \<*ComPlus* &#124; *wurde* \>|Gibt an, ob der COM+-Hostingmodus oder der Webhostingmodus verwendet werden soll.<br /><br /> Kurzform: `/h`.<br /><br /> Die Verwendung des COM+-Hostingmodus erfordert die explizite Aktivierung der COM+-Anwendung. Bei der Verwendung des Webhostingmodus wird die COM+-Anwendung automatisch aktiviert. Wenn die COM+-Anwendung eine Bibliotheksanwendung ist, wird sie im IIS-Prozess (Internetinformationsdienste) ausgeführt. Wenn die COM+-Anwendung eine Serveranwendung ist, wird sie im Dllhost.exe-Prozess ausgeführt.|  
+|`/webSite:` \<*WebsiteName*\>|Gibt bei Verwendung des Webhostingmodus die Website für das Hosting an (siehe das `/hosting`-Flag).<br /><br /> Kurzform: `/w`.<br /><br /> Wenn keine Website angegeben wird, wird die Standardwebsite verwendet.|  
+|`/webDirectory:` \<*WebDirectoryName*\>|Gibt bei Verwendung des Webhosting das virtuelle Hostingverzeichnis an (siehe das `/hosting`-Flag).<br /><br /> Kurzform: `/d`.|  
 |`/mex`|Fügt der Standarddienstkonfiguration einen MEX-Dienstendpunkt (Metadata Exchange, Metadatenaustausch) hinzu, um Clients zu unterstützen, die eine Vertragsdefinition vom Dienst abrufen.<br /><br /> Kurzform: `/x`.|  
 |`/id`|Zeigt die Anwendungs-, Komponenten- und Schnittstelleninformationen als IDs an.<br /><br /> Kurzform: `/k`.|  
 |`/nologo`|Verhindert, dass ComSvcConfig.exe sein Logo anzeigt.<br /><br /> Kurzform: `/n`.|  

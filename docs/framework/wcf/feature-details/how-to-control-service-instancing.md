@@ -1,29 +1,15 @@
 ---
 title: 'Gewusst wie: Steuern der Dienstinstanzierung'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fee03ba3c8f959e9a022cf1bdc561b79046121cc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2f9e4f298eb95498ec8d3603624763bfd95bfda1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-service-instancing"></a>Gewusst wie: Steuern der Dienstinstanzierung
 Durch das Festlegen des Instanzmodus eines Dienstes können Sie angeben, wann ein <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (und das zugeordnete benutzerdefinierte Dienstobjekt) erstellt wird. Mögliche Modi finden Sie in der <xref:System.ServiceModel.InstanceContextMode>-Enumeration. Weitere Informationen zu Verhalten, finden Sie unter [konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Funktionierende Beispiele finden Sie in [Verhalten](../../../../docs/framework/wcf/samples/behaviors.md).  

@@ -2,10 +2,6 @@
 title: GetMethodOrigin-Funktion (Referenz zur nicht verwalteten API)
 description: Die Funktion GetMethodOrigin bestimmt die Klasse, die in der eine Methode deklariert wird.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethodOrigin
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a97376b459a5d9cce9b18ff692ac4c7535a24a56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35e56494d0082db970afce21da8e63a597f0a535
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin-Funktion
 Bestimmt die Klasse, die in der eine Methode deklariert wird.
@@ -82,7 +75,7 @@ Die `pstrClassName` Parameter muss nicht auf eine gültige zeigen `BSTR` , bevor
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

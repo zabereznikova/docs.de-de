@@ -1,14 +1,6 @@
 ---
 title: ICLRRuntimeHost::ExecuteInDefaultAppDomain-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.ExecuteInDefaultAppDomain
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 30b5cf9a-a762-4bd4-be12-d6c1442b78b1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ec4cf37150cab7b52066a884b6fe117b0e611106
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9dcddb5766894a30f1ccb2552a09abe7153c6eea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain-Methode
 Ruft die angegebene Methode des angegebenen Typs in der angegebenen verwalteten Assembly.  
@@ -70,7 +58,7 @@ HRESULT ExecuteInDefaultAppDomain (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInDefaultAppDomain`wurde erfolgreich zurückgegeben.|  
+|S_OK|`ExecuteInDefaultAppDomain` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -93,7 +81,7 @@ static int pwzMethodName (String pwzArgument)
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

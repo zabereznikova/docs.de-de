@@ -1,28 +1,19 @@
 ---
-title: "Implementieren des GridItem-Steuerelementmusters der Benutzeroberflächenautomatisierung"
-ms.custom: 
+title: Implementieren des GridItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, GridItem
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d234ea6f15706a47f6a758528dbe4eda0f3b778a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfe7fb8ab64f148d8ca5af0e419ca60690a1acce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Implementieren des GridItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Zusammengeführte Zellen ihren <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> und <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> -Eigenschaft entsprechend ihrer zugrunde liegenden Ankerzelle gemäß der Definition von der Benutzeroberflächenautomatisierungs-Anbieter. In der Regel sind dies die oberste Zeile und die am weitesten links liegende Spalte.  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider>bietet keine aktive Bearbeitung des Rasters wie etwa zusammenführen oder Teilen von Zellen.  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider> bietet keine aktive Bearbeitung des Rasters wie etwa zusammenführen oder Teilen von Zellen.  
   
 -   Steuerelemente implementieren <xref:System.Windows.Automation.Provider.IGridItemProvider> in der Regel durchlaufen werden kann (d. h. ein Benutzeroberflächenautomatisierungs-Client kann zu benachbarten Steuerelementen wechseln) mithilfe der Tastatur.  
   

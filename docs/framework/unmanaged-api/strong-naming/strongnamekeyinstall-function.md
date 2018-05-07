@@ -1,14 +1,6 @@
 ---
 title: StrongNameKeyInstall-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyInstall
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: e32fd546-7757-4681-be3d-658e93281e50
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9a8dbc84f375b7bbbad47971936650d81c5c63df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b6760a6418533f5c8f6cec815d86b4cff68aab1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall-Funktion
 Importiert ein öffentliches/privates Schlüsselpaar in einen Container.  
@@ -51,7 +39,7 @@ BOOLEAN StrongNameKeyInstall (
   
 #### <a name="parameters"></a>Parameter  
  `wszKeyContainer`  
- [in] Der Name des Schlüsselcontainers. `wszKeyContainer`eine nicht leere Zeichenfolge muss sein.  
+ [in] Der Name des Schlüsselcontainers. `wszKeyContainer` eine nicht leere Zeichenfolge muss sein.  
   
  `pbKeyBlob`  
  [in] Das binäre Schlüsselpaar.  
@@ -60,7 +48,7 @@ BOOLEAN StrongNameKeyInstall (
  [in] Die Größe in Bytes, der `pbKeyBlob`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`Bei erfolgreichem Abschluss; andernfalls `false`.  
+ `true` Bei erfolgreichem Abschluss; andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der [StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md) Funktion, um den Schlüsselcontainer zu löschen.  
@@ -74,7 +62,7 @@ BOOLEAN StrongNameKeyInstall (
   
  **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [StrongNameKeyInstall-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)  

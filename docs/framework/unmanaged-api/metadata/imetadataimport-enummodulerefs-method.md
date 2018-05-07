@@ -1,14 +1,6 @@
 ---
 title: IMetaDataImport::EnumModuleRefs-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumModuleRefs
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 782b363ddf518d45ac5e5fc2b2e4b1c68aff8ea3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 294156983507476b7ddfda3bc3cad16bb32f422b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs-Methode
 Zählt ModuleRef-Token auf, die importierte Module darstellen.  
@@ -66,7 +54,7 @@ HRESULT EnumModuleRefs (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumModuleRefs` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine Token aufgelistet werden. In diesem Fall `pcModuleRefs` 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -76,7 +64,7 @@ HRESULT EnumModuleRefs (
   
  **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

@@ -1,14 +1,6 @@
 ---
 title: ICLRRuntimeInfo::GetInterface-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeInfo.GetInterface
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c5150a10a813da85fc035c7bfa43a7647fac308
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4924f373270a30b593e27c334d383963fc4a7cf0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface-Methode
 Lädt die CLR in den aktuellen Prozess und gibt Sie Common Language Runtime-Schnittstellenzeiger auf, wie z. B. [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), und [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
@@ -78,8 +66,8 @@ HRESULT GetInterface(
 |--------------|------------|  
 |CLSID_CorMetaDataDispenser|IID_IMetaDataDispenser auf, IID_IMetaDataDispenserEx|  
 |CLSID_CorMetaDataDispenserRuntime|IID_IMetaDataDispenser auf, IID_IMetaDataDispenserEx|  
-|"CLSID_CorRuntimeHost"|"IID_ICorRuntimeHost"|  
-|"CLSID_CLRRuntimeHost"|"IID_ICLRRuntimeHost"|  
+|CLSID_CorRuntimeHost|"IID_ICorRuntimeHost"|  
+|CLSID_CLRRuntimeHost|"IID_ICLRRuntimeHost"|  
 |CLSID_TypeNameFactory|IID_ITypeNameFactory|  
 |CLSID_CLRDebuggingLegacy|IID_ICorDebug|  
 |||  
@@ -92,7 +80,7 @@ HRESULT GetInterface(
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRRuntimeInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  

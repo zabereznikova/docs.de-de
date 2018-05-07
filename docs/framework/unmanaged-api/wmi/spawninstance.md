@@ -2,10 +2,6 @@
 title: SpawnInstance-Funktion (Referenz zur nicht verwalteten API)
 description: Die SpawnInstance-Funktion erstellt eine neue Instanz einer Klasse.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnInstance
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68508f3000e7f4ac481f940ef4c715366c37125c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawninstance-function"></a>SpawnInstance-Funktion
 Erstellt eine neue Instanz einer Klasse an.    
@@ -64,7 +57,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`ist keine gültige Klassendefinition, und neue Instanzen können nicht erzeugen. Entweder ist es unvollständig, oder er wurde nicht mit Windows Management registriert wurde, durch Aufrufen [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` ist keine gültige Klassendefinition, und neue Instanzen können nicht erzeugen. Entweder ist es unvollständig, oder er wurde nicht mit Windows Management registriert wurde, durch Aufrufen [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `ppNewClass` ist `null`. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
@@ -73,7 +66,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject:: SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) Methode.
 
-`ptr`eine Definition einer Klasse muss aus der Verwaltung von Windows abgerufen werden. (Beachten Sie, dass das Erstellen einer Instanz von einer Instanz unterstützt wird, aber die zurückgegebene Instanz ist leer.) Anschließend verwenden Sie diese Klassendefinition, um neue Instanzen zu erstellen. Ein Aufruf der [PutInstanceWmi](putinstancewmi.md) Funktion ist erforderlich, wenn Sie beabsichtigen, das Schreiben der Instanz zur Windows-Verwaltung.
+`ptr` eine Definition einer Klasse muss aus der Verwaltung von Windows abgerufen werden. (Beachten Sie, dass das Erstellen einer Instanz von einer Instanz unterstützt wird, aber die zurückgegebene Instanz ist leer.) Anschließend verwenden Sie diese Klassendefinition, um neue Instanzen zu erstellen. Ein Aufruf der [PutInstanceWmi](putinstancewmi.md) Funktion ist erforderlich, wenn Sie beabsichtigen, das Schreiben der Instanz zur Windows-Verwaltung.
 
 
 
@@ -85,7 +78,7 @@ Das neue Objekt im zurückgegebenen `ppNewClass` wird automatisch eine Unterklas
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

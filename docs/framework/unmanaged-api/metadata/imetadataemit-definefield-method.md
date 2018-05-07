@@ -1,14 +1,6 @@
 ---
 title: IMetaDataEmit::DefineField-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.DefineField
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2c4b5604c3daec78744eb8902a30750571b9f82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField-Methode
 Erstellt eine Definition für ein Feld mit der angegebenen Metadatensignatur und ruft ein Token, Field-Definition ab.  
@@ -71,7 +59,7 @@ HRESULT DefineField (
  [in] Die Anzahl der Bytes im `pvSigBlob`.  
   
  `dwCPlusTypeFlage`  
- [in] Die `ELEMENT_TYPE_`  *\**  für den konstanten Wert. Dies ist ein `CorElementType` Wert. Wenn einen konstanten Wert für das Feld nicht definieren, verwenden Sie `ELEMENT_TYPE_END`.  
+ [in] Die `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies ist ein `CorElementType` Wert. Wenn einen konstanten Wert für das Feld nicht definieren, verwenden Sie `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] Der Konstante Wert für das Feld.  
@@ -89,7 +77,7 @@ HRESULT DefineField (
   
  **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

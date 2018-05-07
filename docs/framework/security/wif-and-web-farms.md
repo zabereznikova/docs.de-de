@@ -1,24 +1,14 @@
 ---
 title: WIF und Webfarmen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 93c3e4251943afa383002043d9259184be82d929
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed6a7fbe550dad85cf505eaf20a446803b84c96f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-and-web-farms"></a>WIF und Webfarmen
 Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von einer Anwendung der vertrauenden Seite zu sichern, die in einer Webfarm bereitgestellt wird, müssen Sie bestimmte Schritte durchführen, um sicherzustellen, dass WIF Token von Instanzen der Anwendung der vertrauenden Seite verarbeiten kann. Diese Anwendung wird auf verschiedenen Computern in der Farm ausgeführt. Diese Verarbeitung beinhaltet die Überprüfung von Signaturen der Sitzungstokens, die Verschlüsselung, Entschlüsselung und Zwischenspeicherung der Sitzungstoken, und die Erkennung von wiedergegebenen Sicherheitstoken.  
@@ -65,7 +55,7 @@ Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von eine
 -   Wenn Ihre Anwendung wiedergegebene Token erkennt, müssen Sie einer ähnlichen Strategie für verteilte Zwischenspeicher für den Zwischenspeicher der wiedergegebene Token folgen. Leiten Sie von <xref:System.IdentityModel.Tokens.TokenReplayCache> ab, und verweisen Sie auf den Caching-Dienst für wiedergegebene Token im Konfigurationselement [\<TokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
->  Alle XML-Beispiele und -Codes in diesem Thema stammen aus dem Beispiel [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408).  
+>  Alle XML-Beispiel und Code in diesem Thema stammt aus dem [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) Beispiel.  
   
 > [!IMPORTANT]
 >  Die Beispiele in diesem Thema werden unverändert bereitgestellt, und sollen nicht ohne Änderungen im Produktionscode verwendet werden.  

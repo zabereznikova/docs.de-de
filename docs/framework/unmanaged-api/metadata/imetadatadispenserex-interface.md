@@ -1,14 +1,6 @@
 ---
 title: IMetaDataDispenserEx-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenserEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 78b3629e-77a2-4406-89c3-56b5cc2c4594
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4cf062029647d4834118a459db378c8535182daf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d930088d6e621885d14fc4bdab2475aa27594e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserex-interface"></a>IMetaDataDispenserEx-Schnittstelle
 Erweitert die [IMetaDataDispenser-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md) Schnittstelle bieten die Möglichkeit zum Steuern, wie die Metadaten-APIs im aktuellen Metadatenbereich ausgeführt werden.  
@@ -55,7 +43,7 @@ Erweitert die [IMetaDataDispenser-Schnittstelle](../../../../docs/framework/unma
   
  **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

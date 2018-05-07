@@ -1,11 +1,7 @@
 ---
 title: Clone-Funktion (Referenz zur nicht verwalteten API)
-description: "Die Klon-Funktion gibt ein neues Objekt, das eine vollständige Klon der aktuellen Instanz ist."
+description: Die Klon-Funktion gibt ein neues Objekt, das eine vollständige Klon der aktuellen Instanz ist.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Clone
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 270150bb674ee7f9a71cf28008c663e3b833600d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clone-function"></a>Clone-Funktion
 Gibt ein neues Objekt, das eine vollständige Klon des aktuellen Objekts ist.   
@@ -62,7 +55,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0 x 80041001 | Ein allgemeiner Fehler ist aufgetreten. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `null`als Parameter angegeben wurde, und es ist nicht zulässig, bei dieser Verwendung. |
+| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `null` als Parameter angegeben wurde, und es ist nicht zulässig, bei dieser Verwendung. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, wenn das Objekt geklont. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
@@ -77,7 +70,7 @@ Das geklonte Objekt ist ein COM-Objekt, das eine Verweisanzahl von 1 hat.
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

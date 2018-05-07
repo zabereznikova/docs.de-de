@@ -1,31 +1,19 @@
 ---
 title: 'Vorgehensweise: Bereitstellung einer COM+-Integrationsanwendung'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aca9df2be74dba308d3c4e4eb1c61b3e1afaa580
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 872d0f0c84c1ac0ea96a87ed24a386bb9bedcf85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Vorgehensweise: Bereitstellung einer COM+-Integrationsanwendung
 Sobald Sie eine COM+-Integrationsanwendung geschrieben haben, möchten Sie diese auf einem anderen Computer bereitstellen. In diesem Thema wird beschrieben, wie eine COM+-Integrationsanwendung von einem Computer auf einen anderen verschoben wird.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Verschieben einer COM+-gehosteten Integrationsanwendung  
   
-1.  Stellen Sie sicher, dass [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auf beiden Computern installiert ist.  
+1.  Stellen Sie sicher, dass WCF auf beiden Computern installiert ist.  
   
 2.  Exportieren Sie die Anwendung von Computer A.  
   
@@ -35,11 +23,11 @@ Sobald Sie eine COM+-Integrationsanwendung geschrieben haben, möchten Sie diese
   
 5.  Kopieren Sie die Dateien Application.config und Application.manifest aus dem Stammverzeichnis der Anwendung auf dem Computer A in das Stammverzeichnis der Anwendung auf dem Computer B.  
   
-6.  Bearbeiten Sie die Adressen der Dienstendpunkte in der Datei Application.config auf Computer B, um den entsprechenden Computer zu identifizieren. Beispiel: Ändern Sie http://machineA/MyService in http://machineB/MyService.  
+6.  Bearbeiten Sie die Adressen der Dienstendpunkte in der Datei Application.config auf Computer B, um den entsprechenden Computer zu identifizieren. Ändern Sie beispielsweise http://machineA/MyService zu http://machineB/MyService.  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>Verschieben einer im Internet gehosteten Integrationsanwendung  
   
-1.  Stellen Sie sicher, dass [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auf beiden Computern installiert ist.  
+1.  Stellen Sie sicher, dass WCF auf beiden Computern installiert ist.  
   
 2.  Exportieren Sie die Anwendung von Computer A.  
   
