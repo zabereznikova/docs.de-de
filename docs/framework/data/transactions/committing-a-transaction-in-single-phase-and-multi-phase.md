@@ -1,26 +1,15 @@
 ---
-title: "Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion"
-ms.custom: 
+title: Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2891313c15b4003db5d50f2e9f2d461de9397dfc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0647f5aa4dd5bac054ed424780aa9fbe1c4bfa69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion
 Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager (RM) verwaltet, dessen Aktionen von einem Transaktions-Manager (TM) koordiniert werden. Die [Ressourcen als Teilnehmer in einer Transaktion eintragen](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) Thema wird erläutert, wie eine Ressource (oder mehrere Ressourcen) in einer Transaktion eingetragen werden können. In diesem Thema wird erläutert, wie das Ausführen von Commits für Transaktionen unter eingetragenen Ressourcen koordiniert werden kann.  

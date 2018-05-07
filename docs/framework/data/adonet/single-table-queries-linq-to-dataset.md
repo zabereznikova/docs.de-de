@@ -1,30 +1,18 @@
 ---
-title: "Abfragen für einzelne Tabellen (LINQ to DataSet)"
-ms.custom: 
+title: Abfragen für einzelne Tabellen (LINQ to DataSet)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5ac58f5e98113150123b152dad8d2cc25c61cf97
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5a128349ea81cda7397b2dadbc2ce4096f692744
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Abfragen für einzelne Tabellen (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]-Abfragen arbeiten mit Datenquellen, implementieren die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder die <xref:System.Linq.IQueryable%601> Schnittstelle. Die <xref:System.Data.DataTable> Klasse nicht beiden Schnittstellen implementieren, damit Sie aufrufen müssen die <xref:System.Data.DataTableExtensions.AsEnumerable%2A> Methode, wenn Sie verwenden möchten die <xref:System.Data.DataTable> als Quelle für die `From` -Klausel eine [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Abfrage.  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] -Abfragen arbeiten mit Datenquellen, implementieren die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder die <xref:System.Linq.IQueryable%601> Schnittstelle. Die <xref:System.Data.DataTable> Klasse nicht beiden Schnittstellen implementieren, damit Sie aufrufen müssen die <xref:System.Data.DataTableExtensions.AsEnumerable%2A> Methode, wenn Sie verwenden möchten die <xref:System.Data.DataTable> als Quelle für die `From` -Klausel eine [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Abfrage.  
   
  Das folgende Beispiel ruft alle Onlinebestellungen aus der Tabelle <legacyBold>SalesOrderHeader</legacyBold> ab und zeigt in der Konsole die Auftrags-ID, das Auftragsdatum und die Auftragsnummer an.  
   
