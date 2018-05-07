@@ -1,27 +1,15 @@
 ---
-title: "Auffüllen eines \"DataSets\" durch einen \"DataAdapter\""
-ms.custom: 
+title: Auffüllen eines "DataSets" durch einen "DataAdapter"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c0991398a28e491d381d10dea8a14ed463c67c89
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ced280be0fa14077be893c59596ed65b424172c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Auffüllen eines "DataSets" durch einen "DataAdapter"
 Das [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] von <xref:System.Data.DataSet> ist eine speicherresidente Datendarstellung, die ein konsistentes relationales und von der Datenquelle unabhängiges Programmiermodell bereitstellt. Das `DataSet` stellt eine vollständige Datengruppe einschließlich Tabellen, Einschränkungen und Beziehungen zwischen Tabellen dar. Da das `DataSet` von der Datenquelle unabhängig ist, kann ein `DataSet` sowohl lokale Daten einer Anwendung als auch Daten aus mehreren Datenquellen enthalten. Die Interaktion mit vorhandenen Datenquellen wird über den `DataAdapter`gesteuert.  
@@ -33,7 +21,7 @@ Das [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] von <xref:System.D
 > [!NOTE]
 >  Die Verwendung des `DataAdapter` zum Abrufen einer gesamten Tabelle kann einige Zeit in Anspruch nehmen, insbesondere, wenn die Tabelle viele Zeilen enthält. Der Grund hierfür ist, dass das Zugreifen auf die Datenbank und das Auffinden, Verarbeiten und Übertragen der Daten an den Client zeitaufwändig ist. Durch das Abrufen der gesamten Tabelle seitens des Clients werden außerdem alle ihre Zeilen auf dem Server gesperrt. Zur Verbesserung der Leistung können Sie die `WHERE` -Klausel verwenden, um die Anzahl der an den Client zurückgegebenen Zeilen deutlich zu reduzieren. Die Anzahl der an den Client zurückgegebenen Daten kann auch verringert werden, indem Sie in der `SELECT` -Anweisung nur die erforderlichen Spalten explizit auflisten. Eine weitere gute Möglichkeit, dieses Problem zu umgehen, besteht darin, die Zeilen in Stapeln (z. B. immer einige hundert Zeilen auf einmal) abzurufen, wobei der nächste Stapel erst dann abgerufen wird, wenn der Client mit dem aktuellen Stapel fertig ist.  
   
- Die `Fill` -Methode verwendet das `DataReader` -Objekt implizit, um die Spaltennamen und Spaltentypen zurückzugeben, mit denen die Tabellen im `DataSet`erstellt werden, sowie die Daten zum Füllen der Tabellenzeilen im `DataSet`. Tabellen und Spalten werden nur erstellt, wenn sie noch nicht vorhanden sind. Andernfalls verwendet die `Fill` -Methode das vorhandene `DataSet` -Schema. Spaltentypen werden erstellt, als [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Typen entsprechend den Tabellen in [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md). Primärschlüssel werden nur erstellt, wenn diese in der Datenquelle vorhanden sind und `DataAdapter`**gesteuert.**`MissingSchemaAction` auf `MissingSchemaAction`**gesteuert.**`AddWithKey`gesteuert. Wenn die `Fill` -Methode ermittelt, dass ein Primärschlüssel für eine Tabelle vorhanden ist, werden Daten im `DataSet` mit den Daten aus der Datenquelle überschrieben. Dies gilt für Zeilen, deren Werte in der Primärschlüsselspalte mit denen der Zeile übereinstimmen, die von der Datenquelle zurückgegeben wurde. Wurde kein Primärschlüssel gefunden, so werden die Daten an die Tabellen im `DataSet`angehängt. `Fill`verwendet Zuordnungen, die möglicherweise vorhanden, wenn Sie füllen die `DataSet` (finden Sie unter [DataAdapter DataTable- und DataColumn-Zuordnungen](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
+ Die `Fill` -Methode verwendet das `DataReader` -Objekt implizit, um die Spaltennamen und Spaltentypen zurückzugeben, mit denen die Tabellen im `DataSet`erstellt werden, sowie die Daten zum Füllen der Tabellenzeilen im `DataSet`. Tabellen und Spalten werden nur erstellt, wenn sie noch nicht vorhanden sind. Andernfalls verwendet die `Fill` -Methode das vorhandene `DataSet` -Schema. Spaltentypen werden erstellt, als [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Typen entsprechend den Tabellen in [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md). Primärschlüssel werden nur erstellt, wenn diese in der Datenquelle vorhanden sind und `DataAdapter`**gesteuert.**`MissingSchemaAction` auf `MissingSchemaAction`**gesteuert.**`AddWithKey`gesteuert. Wenn die `Fill` -Methode ermittelt, dass ein Primärschlüssel für eine Tabelle vorhanden ist, werden Daten im `DataSet` mit den Daten aus der Datenquelle überschrieben. Dies gilt für Zeilen, deren Werte in der Primärschlüsselspalte mit denen der Zeile übereinstimmen, die von der Datenquelle zurückgegeben wurde. Wurde kein Primärschlüssel gefunden, so werden die Daten an die Tabellen im `DataSet`angehängt. `Fill` verwendet Zuordnungen, die möglicherweise vorhanden, wenn Sie füllen die `DataSet` (finden Sie unter [DataAdapter DataTable- und DataColumn-Zuordnungen](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
   
 > [!NOTE]
 >  Wenn vom `SelectCommand` die Ergebnisse eines OUTER JOIN zurückgegeben werden, wird vom `DataAdapter` kein `PrimaryKey` -Wert für die resultierende `DataTable`festgelegt. Sie müssen den `PrimaryKey` selbst definieren, um sicherzustellen, dass doppelte Zeilen ordnungsgemäß aufgelöst werden. Weitere Informationen finden Sie unter [Primärschlüssel definieren](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  

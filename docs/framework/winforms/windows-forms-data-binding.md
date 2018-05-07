@@ -1,29 +1,17 @@
 ---
-title: "Datenbindung in Web Forms"
-ms.custom: 
+title: Datenbindung in Web Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms]
 - Windows Forms, data binding
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 77f01bc462be67c3b613b8ab102a359a80d74140
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0267a774d284cac1672ff971d6af3ec3439c84d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-data-binding"></a>Datenbindung in Web Forms
 Mit der Datenbindung in Windows Forms erhalten Sie die Möglichkeit, Informationen aus einer Datenquelle in Steuerelementen im Formular anzuzeigen und zu ändern. Sie können sowohl herkömmliche Datenquellen als auch beinahe alle Strukturen binden, die Daten enthalten.  
@@ -64,7 +52,7 @@ Mit der Datenbindung in Windows Forms erhalten Sie die Möglichkeit, Information
   
  Siehe auch [im Zusammenhang mit Schnittstellen mit einer Datenbindung](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [wie: Navigieren Sie Daten in Windows Forms](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in einem Windows Form](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
  Beschreibt die Klasse, die für die Bindung zwischen einer bindbaren Komponente und einer Datenquelle steht.  
   

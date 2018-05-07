@@ -1,29 +1,15 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: c2b2a47a0c817e23a06c39d622bca9c649cbadb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-In diesem Beispiel wird veranschaulicht, wie ein [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST-Dienst mit ASP.NET-Routen gehostet wird. Die [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel zeigt eine selbst gehostete Version dieses Szenarios und die dienstimplementierung ausführlich erläutert. In diesem Thema steht die ASP.NET-Integrationsfunktion im Vordergrund. Weitere Informationen zu ASP.NET-Routing finden Sie unter <xref:System.Web.Routing>.  
+Dieses Beispiel veranschaulicht, wie ein Windows Communication Foundation (WCF)-REST-Dienst mit ASP.NET-Routen gehostet werden. Die [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel zeigt eine selbst gehostete Version dieses Szenarios und die dienstimplementierung ausführlich erläutert. In diesem Thema steht die ASP.NET-Integrationsfunktion im Vordergrund. Weitere Informationen zu ASP.NET-Routing finden Sie unter <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Beispieldetails  
  Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst macht eine Auflistung der Kunden auf ressourcenorientierte/REST-Weise verfügbar. Wie ein SOAP-basierter [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst kann der Dienst in ASP.NET mithilfe einer SVC-Datei gehostet werden. Diese Vorgehensweise empfiehlt sich in HTTP-Szenarien jedoch häufig nicht, da sie erfordert, dass die URL für den Dienst .svc enthält. Darüber hinaus muss dafür eine SVC-Datei mit der Dienstbibliothek bereitgestellt werden. Diese Einschränkungen lassen sich vermeiden, wenn der Dienst mit ASP.NET-Routen gehostet wird, wie in diesem Beispiel gezeigt.  
@@ -70,7 +56,7 @@ In diesem Beispiel wird veranschaulicht, wie ein [!INCLUDE[indigo1](../../../../
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetRouteIntegration`  
   

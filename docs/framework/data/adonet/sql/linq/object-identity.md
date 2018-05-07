@@ -1,27 +1,15 @@
 ---
-title: "Objektidentität"
-ms.custom: 
+title: Objektidentität
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21b8dbb934b778d792ff55d54f60fca92cac8e88
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 930295073f9f75cf4101bf6fa3834561a4db8f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-identity"></a>Objektidentität
 Objekte verfügen zur Laufzeit über eindeutige Identitäten. Zwei Variablen, die sich auf das gleiche Objekt beziehen, verweisen tatsächlich auf die gleiche Objektinstanz. Aufgrund dieser Tatsache sind Änderungen, die Sie über einen Pfad durch eine Variable vornehmen, sofort über die andere Variable sichtbar.  
@@ -34,7 +22,7 @@ Objekte verfügen zur Laufzeit über eindeutige Identitäten. Zwei Variablen, di
   
  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwaltet der <xref:System.Data.Linq.DataContext> die Objektidentität. Wenn Sie eine neue Zeile aus der Datenbank abrufen, wird diese mit ihrem Primärschlüssel in einer Identitätstabelle protokolliert, und es wird ein neues Objekt erstellt. Jedes Mal, wenn Sie die gleiche Zeile abrufen, wird die ursprüngliche Objektinstanz an die Anwendung zurückgegeben. Auf diese Weise übersetzt der <xref:System.Data.Linq.DataContext> das Identitätskonzept aus Sicht der Datenbank (Primärschlüssel) in das Identitätskonzept aus Sicht der Sprache (Instanzen). Die Anwendung sieht nur das Objekt in dem Zustand, in dem es zuerst abgerufen wurde. Die neuen Daten werden (sofern sie abweichen) verworfen. Weitere Informationen finden Sie unter [Abrufen von Objekten aus dem Identitäts-Cache](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]verwendet diesen Ansatz der Integrität lokaler Objekte zu verwalten, um vollständige Updates zu unterstützen. Da die einzigen Änderungen, die nach dem ersten Erstellen des Objekts auftreten, von der Anwendung vorgenommen werden, ist die Absicht der Anwendung klar. Sind zwischenzeitlich Änderungen durch eine externe Partei erfolgt, werden diese zum Zeitpunkt des Aufrufs von `SubmitChanges()` identifiziert.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwendet diesen Ansatz der Integrität lokaler Objekte zu verwalten, um vollständige Updates zu unterstützen. Da die einzigen Änderungen, die nach dem ersten Erstellen des Objekts auftreten, von der Anwendung vorgenommen werden, ist die Absicht der Anwendung klar. Sind zwischenzeitlich Änderungen durch eine externe Partei erfolgt, werden diese zum Zeitpunkt des Aufrufs von `SubmitChanges()` identifiziert.  
   
 > [!NOTE]
 >  Lässt sich das von der Abfrage angeforderte Objekt leicht als bereits abgerufen identifizieren, wird keine Abfrage ausgeführt. Die Identitätstabelle dient als Cache für alle zuvor abgerufenen Objekte.  

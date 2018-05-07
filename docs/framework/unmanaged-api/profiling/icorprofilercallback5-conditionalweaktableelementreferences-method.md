@@ -1,14 +1,6 @@
 ---
 title: ICorProfilerCallback5::ConditionalWeakTableElementReferences-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback5.ConditionalWeakTableReferences
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfe86ac7d0cd5b4a5c6adb9f12ffe9577b6e611
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ee3c3302d77bcc7b807c01ccb5bab172153ddda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences-Methode
 Identifiziert den transitiven Abschluss von Objekten, auf die durch diese Stammelemente verwiesen wird, sowohl über direkte Memberfeldverweise, als auch `ConditionalWeakTable`-Abhängigkeiten.  
@@ -84,14 +72,14 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Profiler für die [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] oder höhere Versionen implementiert die [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) -Schnittstelle und zeichnet die Abhängigkeiten, die gemäß der `ConditionalWeakTableElementReferences` Methode. `ICorProfilerCallback5`Stellt den vollständigen Satz von Abhängigkeiten zwischen als live-Objekte dargestellt werden, indem `ConditionalWeakTable` Einträge. Diese Abhängigkeiten und die memberfeldverweise gemäß der [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) Methode ermöglichen einen verwalteten Profiler, die das vollständige Objektdiagramm von aktiven Objekten zu generieren.  
+ Ein Profiler für die [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] oder höhere Versionen implementiert die [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) -Schnittstelle und zeichnet die Abhängigkeiten, die gemäß der `ConditionalWeakTableElementReferences` Methode. `ICorProfilerCallback5` Stellt den vollständigen Satz von Abhängigkeiten zwischen als live-Objekte dargestellt werden, indem `ConditionalWeakTable` Einträge. Diese Abhängigkeiten und die memberfeldverweise gemäß der [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) Methode ermöglichen einen verwalteten Profiler, die das vollständige Objektdiagramm von aktiven Objekten zu generieren.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICorProfilerCallback5-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)

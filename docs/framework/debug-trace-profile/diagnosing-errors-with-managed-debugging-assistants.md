@@ -1,14 +1,6 @@
 ---
-title: "Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen"
-ms.custom: 
+title: Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - EHMDA
 helpviewer_keywords:
@@ -37,17 +29,13 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 12a96068412f05d48b8b006385c66f3efbbf9870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16a039a5edb0e1023551f97deefbf7874a19638b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen
 MDAs (Managed Debugging Assistants, Assistenten für verwaltetes Debuggen) sind Hilfsmittel für das Debuggen, die mit der CLR (Common Language Runtime) zusammenarbeiten, um Informationen zum Laufzeitzustand bereitzustellen. Die Assistenten generieren Informationsmeldungen über Laufzeitereignisse, die Sie auf keine andere Art abfangen können. Sie können MDAs verwenden, um schwer aufzufindende Anwendungsfehler zu isolieren, die bei Übergängen zwischen verwaltetem und nicht verwaltetem Code auftreten. Alle MDAs können durch Hinzufügen eines Schlüssels zur Windows-Registrierung oder durch Festlegen einer Umgebungsvariable bereitgestellt bzw. deren Bereitstellung aufgehoben werden. Sie können bestimmte MDAs mithilfe von Anwendungskonfigurationseinstellungen aktivieren. In der Konfigurationsdatei der Anwendung können Sie zusätzliche Konfigurationseinstellungen für einige der MDAs festlegen. Da die Konfigurationsdateien beim Laden der Laufzeit analysiert werden, müssen Sie den MDA bereitstellen, bevor die verwaltete Anwendung gestartet wird. Sie können ihn nicht für Anwendungen bereitstellen, die bereits gestartet wurden.  

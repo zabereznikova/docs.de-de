@@ -1,28 +1,16 @@
 ---
-title: "RichTextBox-Steuerelement (Windows Forms)"
-ms.custom: 
+title: RichTextBox-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - text boxes
 - RichTextBox control [Windows Forms]
 - rich edit controls
 ms.assetid: 3225f2ef-c6d9-4bd4-9d3e-2219e58edbf2
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4325fd3eb2e3d7179ddb5270d073c7ba5f0f383f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00f28abeb616006e63a45dd7922f4d5b247e8dd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox-Steuerelement (Windows Forms)
 Windows Forms `RichTextBox` Steuerelement zum Anzeigen, eingeben und Bearbeiten von Text mit Formatierung verwendet wird. Die `RichTextBox` Steuerelement ist alles, was die <xref:System.Windows.Forms.TextBox> Steuerelement bewirkt, kann jedoch auch anzeigen, Schriftarten, Farben und Links; Laden Sie Text und eingebettete Bilder aus einer Datei; rückgängig und wiederholen Bearbeitungsvorgänge; und angegebene Zeichen gefunden. Die `RichTextBox` Steuerelement wird normalerweise verwendet, geben Sie die Bearbeitung von Text und Anzeigen von Funktionen, wie Textverarbeitungsprogramm erstellten Anwendungen wie Microsoft Word. Wie die <xref:System.Windows.Forms.TextBox> -Steuerelement, die `RichTextBox` Steuerelement Bildlaufleisten anzeigen kann, aber im Gegensatz zu der <xref:System.Windows.Forms.TextBox> -Steuerelement, es horizontale und vertikale Bildlaufleisten werden standardmäßig angezeigt und verfügt über zusätzliche Scrollbar-Einstellungen.  
@@ -55,7 +43,7 @@ Windows Forms `RichTextBox` Steuerelement zum Anzeigen, eingeben und Bearbeiten 
  [Gewusst wie: Festlegen von Einzügen, hängenden Einzügen und Absätzen mit Aufzählungszeichen mit dem RichTextBox-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)  
  Beschreibt das Formatieren von Absätzen in der `RichTextBox` Steuerelement.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.RichTextBox>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

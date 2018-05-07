@@ -1,10 +1,6 @@
 ---
 title: 'Gewusst wie: Drucken von Client- und Nicht-Client-Bereichen eines Formulars (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - title bar [Visual Basic], printing
 - printing
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - entire form
 - non-client area [Visual Basic], printing
 ms.assetid: 856bb0e4-dbc3-47e2-81cd-4b376cf07757
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b6dd9c42118491784d71f545c25fd3a376f66e79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 566cf295462945a6bc90bc96f8907de34646bd00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>Gewusst wie: Drucken von Client- und Nicht-Client-Bereichen eines Formulars (Visual Basic)
 Mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Komponente können Sie schnell ein Bild eines Formulars genau so drucken, wie es auf dem Bildschirm angezeigt wird, ohne eine <xref:System.Drawing.Printing.PrintDocument> -Komponente zu verwenden. Die folgende Vorgehensweise zeigt das Drucken eines Formulars, einschließlich des Clientbereichs und des Nicht-Clientbereichs. Der Nicht-Clientbereich beinhaltet die Titelleiste, Rahmen und Scrollleisten.  

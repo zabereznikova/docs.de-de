@@ -2,10 +2,6 @@
 title: GetMethodQualifierSet-Funktion (Referenz zur nicht verwalteten API)
 description: Die GetMethodQualifierSet-Funktion ruft eine Methode Qualifizierer Satz ab.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethodQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2999bef31576cf2bc025868260c2b1782a9b69f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet-Funktion
 Ruft den Qualifizierer für eine bestimmte Methode festgelegt.
@@ -54,7 +47,7 @@ HRESULT GetMethodQualifierSet (
 [in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
 
 `wszMethod`  
-[in] Der Methodenname. `wszMethod`muss eine gültige zeigen `LPCWSTR`. 
+[in] Der Methodenname. `wszMethod` muss eine gültige zeigen `LPCWSTR`. 
 
 `ppQualSet`  
 [out] Empfängt den Schnittstellenzeiger, der Zugriff auf die Qualifizierer, der die Methode ermöglicht. `ppQualSet` darf nicht `null` sein. Wenn ein Fehler auftritt, ein neues Objekt nicht zurückgegeben wird und der Zeiger festgelegt wird, auf `null`. 
@@ -82,7 +75,7 @@ Da jeder Methode seine eigenen Qualifizierer möglicherweise die [IWbemQualifier
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

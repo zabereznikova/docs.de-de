@@ -1,14 +1,6 @@
 ---
 title: 'Gewusst wie: Öffnen von Dateien mit der OpenFileDialog-Komponente'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7da2c660f09da74c84d29459cf283a021ed12c99
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d7e1ebb319576aa7a38d55d8cb9f3652626966b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-open-files-using-the-openfiledialog-component"></a>Gewusst wie: Öffnen von Dateien mit der OpenFileDialog-Komponente
 Die <xref:System.Windows.Forms.OpenFileDialog> Komponente ermöglicht Benutzern das Durchsuchen Sie die Ordner von ihrem Computer oder einem beliebigen Computer im Netzwerk, und wählen Sie eine oder mehrere Dateien zu öffnen. Das Dialogfeld gibt den Pfad und den Namen der ausgewählten Datei zurück.  

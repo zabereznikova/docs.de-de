@@ -1,27 +1,15 @@
 ---
-title: "Ändern von Daten mit umfangreichen Werten (max) in ADO.NET"
-ms.custom: 
+title: Ändern von Daten mit umfangreichen Werten (max) in ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e42ff73cda8fc63d9b8ae6061cfbdb9749a0a864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Ändern von Daten mit umfangreichen Werten (max) in ADO.NET
 Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengröße von 8 KB. SQL Server umfasst einen `max`-Spezifizierer für die Datentypen `varchar`, `nvarchar` und `varbinary`, der das Speichern Werten mit einer Größe bis zu 2^32 Bytes ermöglicht. Tabellenspalten und Transact-SQL-Variablen können die Datentypen `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` angeben. In ADO.NET können die `max`-Datentypen durch einen `DataReader` abgerufen werden. Außerdem können sie ohne spezielle Behandlung sowohl als Eingabe- als auch als Ausgabeparameterwerte angegeben werden. Bei großen `varchar`-Datentypen können Daten inkrementell abgerufen und aktualisiert werden.  
@@ -78,7 +66,7 @@ FROM OPENROWSET
   
 |If|Then|  
 |--------|----------|  
-|Der Ausdruck ist auf NULL festgelegt.|`@Length`wird ignoriert, und der Wert im *Column_name* wird abgeschnitten, an der angegebenen `@Offset`.|  
+|Der Ausdruck ist auf NULL festgelegt.|`@Length` wird ignoriert, und der Wert im *Column_name* wird abgeschnitten, an der angegebenen `@Offset`.|  
 |`@Offset` ist NULL|Der Updatevorgang Fügt einen Ausdruck am Ende der vorhandenen *Column_name* Wert und `@Length` wird ignoriert.|  
 |`@Offset` ist größer als die Länge des <legacyItalic>column_name</legacyItalic>-Werts|SQL Server gibt einen Fehler zurück.|  
 |`@Length` ist NULL|Beim Updatevorgang werden alle Daten ab `@Offset` bis zum Ende des `column_name`-Werts entfernt.|  

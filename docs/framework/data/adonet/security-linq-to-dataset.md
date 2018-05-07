@@ -1,24 +1,12 @@
 ---
 title: Sicherheit (LINQ to DataSet)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 305ff1232b21def3c8e7dcb1bec529f81c4e701a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 43d529b6f74b58783cc2aaa7a81b2f75790b4e40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-linq-to-dataset"></a>Sicherheit (LINQ to DataSet)
 In diesem Thema werden Fragen der Sicherheit in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] behandelt.  
@@ -31,7 +19,7 @@ In diesem Thema werden Fragen der Sicherheit in [!INCLUDE[linq_dataset](../../..
 ## <a name="external-input"></a>Externe Eingabe  
  Anwendungen verwenden häufig externe Eingaben (eines Benutzers oder eines anderen externen Agenten) und führen entsprechend dieser Eingabe Aktionen aus.  Im Fall von [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], eine Abfrage in einer bestimmten Art, basierend auf externe Eingabe oder die externe Eingabe in der Abfrage möglicherweise durch die Anwendung erstellt. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfragen akzeptieren Parameter an allen Stellen, an denen Literale akzeptiert werden. Anwendungsentwicklern wird empfohlen, parametrisierte Abfragen zu verwenden, anstatt Literale aus einem externen Agent direkt in die Abfrage einzuschleusen.  
   
- Jede direkt oder indirekt vom Benutzer oder einem externen Agenten abgeleitete Eingabe kann Inhalt besitzen, der die Syntax der Zielsprache nutzt, um nicht genehmigte Aktionen auszuführen. Dieses Verhalten wird als SQL Injection-Angriff bezeichnet. Diese Bezeichnung leitet sich aus einem Angriffsmuster ab, bei dem die Zielsprache Transact-SQL ist. Das Einschleusen von Benutzereingaben direkt in die Abfrage führt zum Löschen einer Datenbanktabelle oder zur Dienstverweigerung (Denial of Service) oder ändert auf andere Art und Weise die auszuführende Operation. Obwohl das Zusammensetzen von Abfragen in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] möglich ist, wird dieser Vorgang über die Objektmodell-API ausgeführt. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfragen werden nicht mit Zeichenfolgen manipuliert oder verkettet, wie sie in Transact-SQL sind und sind nicht anfällig für SQL Injection-Angriffe im herkömmlichen Sinne erstellt.  
+ Jede direkt oder indirekt vom Benutzer oder einem externen Agenten abgeleitete Eingabe kann Inhalt besitzen, der die Syntax der Zielsprache nutzt, um nicht genehmigte Aktionen auszuführen. Dieses Verhalten wird als SQL Injection-Angriff bezeichnet. Diese Bezeichnung leitet sich aus einem Angriffsmuster ab, bei dem die Zielsprache Transact-SQL ist. Das Einschleusen von Benutzereingaben direkt in die Abfrage führt zum Löschen einer Datenbanktabelle oder zur Dienstverweigerung (Denial of Service) oder ändert auf andere Art und Weise die auszuführende Operation. Obwohl das Zusammensetzen von Abfragen in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] möglich ist, wird dieser Vorgang über die Objektmodell-API ausgeführt. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] -Abfragen werden nicht mit Zeichenfolgen manipuliert oder verkettet, wie sie in Transact-SQL sind und sind nicht anfällig für SQL Injection-Angriffe im herkömmlichen Sinne erstellt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmierhandbuch](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

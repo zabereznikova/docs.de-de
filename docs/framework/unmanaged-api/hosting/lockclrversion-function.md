@@ -1,14 +1,6 @@
 ---
 title: LockClrVersion-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - LockClrVersion
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a58d7e99f545026f6f133901ef35a1f9b9fabc7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion-Funktion
 Ermöglicht den Host kann bestimmen, welche Version der common Language Runtime (CLR) innerhalb des Prozesses verwendet werden soll, bevor die CLR explizit initialisiert wird.  
@@ -69,7 +57,7 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|Eine oder mehrere der Argumente ist null.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Host ruft `LockClrVersion` vor dem Initialisieren der CLR. `LockClrVersion`akzeptiert drei Parameter, die Rückrufe vom Typ sind [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Dieser Typ ist wie folgt definiert.  
+ Der Host ruft `LockClrVersion` vor dem Initialisieren der CLR. `LockClrVersion` akzeptiert drei Parameter, die Rückrufe vom Typ sind [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Dieser Typ ist wie folgt definiert.  
   
 ```  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -85,7 +73,7 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
     -   Die angegebene Funktion die `pBeginHostSetup` Parameter.  
   
-    -   `CorBindToRuntimeEx`(oder eine andere Funktion der Common Language Runtime-Initialisierung).  
+    -   `CorBindToRuntimeEx` (oder eine andere Funktion der Common Language Runtime-Initialisierung).  
   
     -   [ICLRRuntimeHost:: SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
@@ -102,7 +90,7 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  **Bibliothek:** "Mscoree.dll"  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

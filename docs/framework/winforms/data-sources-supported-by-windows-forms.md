@@ -1,13 +1,6 @@
 ---
-title: "Von Windows Forms unterstützte Datenquellen"
-ms.custom: 
+title: Von Windows Forms unterstützte Datenquellen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - collections [Windows Forms], binding to
 - OLE DB providers [Windows Forms], Windows Forms
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Von Windows Forms unterstützte Datenquellen
 Bisher wurde die Datenbindung innerhalb von Anwendungen verwendet, um in Datenbanken gespeicherten Daten nutzen. Mit Windows Forms-Datenbindung, können Sie Daten aus Datenbanken sowie Daten in andere Datenstrukturen, z. B. Arrays und Sammlungen, zugreifen, solange Sie bestimmte Mindestanforderungen erfüllt sind.  
@@ -50,13 +38,13 @@ Bisher wurde die Datenbindung innerhalb von Anwendungen verwendet, um in Datenba
  Arrays oder einer Auflistung  
  Zur Verwendung als eine Datenquelle, eine Liste muss Folgendes implementieren die <xref:System.Collections.IList> Schnittstelle; eine Beispiel wäre ein Array, das eine Instanz ist die <xref:System.Array> Klasse. Weitere Informationen zu Arrays finden Sie unter [Vorgehensweise: Erstellen Sie ein Array von Objekten (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
- Sie sollten im Allgemeinen verwenden <xref:System.ComponentModel.BindingList%601> beim Erstellen von Listen mit Objekten, für die Datenbindung. <xref:System.ComponentModel.BindingList%601>ist eine generische Version der <xref:System.ComponentModel.IBindingList> Schnittstelle. Die <xref:System.ComponentModel.IBindingList> -Schnittstelle erweitert die <xref:System.Collections.IList> -Schnittstelle durch Hinzufügen von Eigenschaften, Methoden und Ereignisse, die für die bidirektionale Datenbindung erforderlich.  
+ Sie sollten im Allgemeinen verwenden <xref:System.ComponentModel.BindingList%601> beim Erstellen von Listen mit Objekten, für die Datenbindung. <xref:System.ComponentModel.BindingList%601> ist eine generische Version der <xref:System.ComponentModel.IBindingList> Schnittstelle. Die <xref:System.ComponentModel.IBindingList> -Schnittstelle erweitert die <xref:System.Collections.IList> -Schnittstelle durch Hinzufügen von Eigenschaften, Methoden und Ereignisse, die für die bidirektionale Datenbindung erforderlich.  
   
  <xref:System.Collections.IEnumerable>  
  Windows Forms-Steuerelemente an Datenquellen, die ausschließlich unterstützen gebunden werden können die <xref:System.Collections.IEnumerable> Schnittstelle, wenn sie über gebunden sind eine <xref:System.Windows.Forms.BindingSource> Komponente.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]Datenobjekte  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]bietet eine Reihe von Datenstrukturen geeignet, für die Bindung an. Jede variiert in ihren Wissensstand und Komplexität.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Datenobjekte  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] bietet eine Reihe von Datenstrukturen geeignet, für die Bindung an. Jede variiert in ihren Wissensstand und Komplexität.  
   
 -   <xref:System.Data.DataColumn> Ein <xref:System.Data.DataColumn> ist der wesentliche Baustein von einem <xref:System.Data.DataTable>, insofern, dass eine Anzahl von Spalten eine Tabelle bilden. Jede <xref:System.Data.DataColumn> verfügt über eine <xref:System.Data.DataColumn.DataType%2A> Eigenschaft, die die Art der Daten in der Spalte enthalten sind (z. B. die Marke der in einer Tabelle zur Beschreibung von Autos) bestimmt. Können Sie einfache-binden ein Steuerelements (z. B. eine <xref:System.Windows.Forms.TextBox> des Steuerelements <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft) auf eine Spalte in einer Datentabelle.  
   

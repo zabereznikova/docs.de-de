@@ -1,32 +1,18 @@
 ---
 title: Übersicht über die Integration von COM+-Anwendungen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM+-Anwendungen
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen bereit. Wenn Sie bereits komponentenbasierte Anwendungslogik verwenden, die in COM+ gehostet wird, können Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zum Erweitern der vorhandenen Logik verwenden, anstatt sie neu zu schreiben. Ein häufiges Szenario ist das Verfügbarmachen vorhandener COM+- oder Enterprise Services-Geschäftslogik über Webdienste.  
+Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen. Wenn Sie bereits komponentenbasierte Anwendungslogik, die in COM+ gehostet verwenden, können Sie WCF zum Erweitern der vorhandenen Logik, anstatt neu schreiben müssen, verwenden. Ein häufiges Szenario ist das Verfügbarmachen vorhandener COM+- oder Enterprise Services-Geschäftslogik über Webdienste.  
   
  Wenn eine Schnittstelle auf einer COM+-Komponente als Webdienst verfügbar gemacht wird, werden die Spezifikation und der Vertrag dieser Dienste von einer automatischen Zuordnung bestimmt, die zur Anwendungsinitialisierungszeit ausgeführt wird. In der folgenden Liste wird das Modell für diese Zuordnung gezeigt:  
   
@@ -84,7 +70,7 @@ ms.lasthandoff: 04/30/2018
  In einer Clientanwendung können die Methoden im <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper>-Objekt zum Übergeben eines Objekt an einen Dienst und entsprechend zum Abrufen eines Objekts verwendet werden.  
   
 > [!NOTE]
->  Auf Grund der benutzerdefinierten und plattformspezifischen Art des Serialisierungsansatzes ist er am besten für die Verwendung zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten geeignet.  
+>  Aufgrund der benutzerdefinierten und plattformspezifischen Art der Serialisierung Ansätze ist dies am besten geeignet für die Verwendung zwischen WCF-Clients und WCF-Dienste.  
   
 ## <a name="selecting-the-hosting-mode"></a>Auswählen des Hostingmodus  
  COM+ macht Webdienste in einem der folgenden Hostingmodi verfügbar:  
@@ -95,18 +81,18 @@ ms.lasthandoff: 04/30/2018
   
 -   Im Internet gehostet  
   
-     Der Webdienst wird in einem Webserver-Arbeitsprozess gehostet. In diesem Modus muss COM+ nicht aktiv sein, wenn die ursprüngliche Anforderung empfangen wird. Wenn die Anwendung beim Empfangen dieser Anforderung nicht aktiv ist, wird sie automatisch vor dem Verarbeiten der Anforderung aktiviert. Dieser Modus bietet ebenfalls Webdiensten und DCOM Zugriff auf die Serveranwendung, er bewirkt jedoch einen Prozesshop für Webdienstanforderungen. Dies erfordert in der Regel, dass der Client den Identitätswechsel aktiviert. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kann dazu die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>-Eigenschaft der <xref:System.ServiceModel.Security.WindowsClientCredential>-Klasse verwendet werden, auf die als Eigenschaft der generischen <xref:System.ServiceModel.ChannelFactory%601>-Klasse zugegriffen wird, sowie der <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>-Enumerationswert.  
+     Der Webdienst wird in einem Webserver-Arbeitsprozess gehostet. In diesem Modus muss COM+ nicht aktiv sein, wenn die ursprüngliche Anforderung empfangen wird. Wenn die Anwendung beim Empfangen dieser Anforderung nicht aktiv ist, wird sie automatisch vor dem Verarbeiten der Anforderung aktiviert. Dieser Modus bietet ebenfalls Webdiensten und DCOM Zugriff auf die Serveranwendung, er bewirkt jedoch einen Prozesshop für Webdienstanforderungen. Dies erfordert in der Regel, dass der Client den Identitätswechsel aktiviert. In WCF dies erreichen Sie mit der <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> Eigenschaft von der <xref:System.ServiceModel.Security.WindowsClientCredential> -Klasse, die als Eigenschaft der generischen zugegriffen wird <xref:System.ServiceModel.ChannelFactory%601> -Klasse, als auch die <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> Enumerationswert.  
   
 -   Prozessintern im Internet gehostet  
   
      Der Webdienst und die COM+-Anwendungslogik werden im Webserver-Arbeitsprozess gehostet. Dieser bietet die automatische Aktivierung des Modus "Im Internet gehostet", ohne einen Prozesshop für Webdienstanforderungen zu bewirken. Der Nachteil besteht darin, dass der Zugriff auf die Serveranwendung über DCOM nicht möglich ist.  
   
 ### <a name="security-considerations"></a>Sicherheitsüberlegungen  
- Wie bei anderen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten werden die Sicherheitseinstellungen für den verfügbar gemachten Dienst über die Konfigurationseinstellungen für den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanal verwaltet. Herkömmliche DCOM-Sicherheitseinstellungen wie die computerweiten DCOM-Berechtigungseinstellungen werden nicht erzwungen. Zum Erzwingen von COM+-Anwendungsrollen muss die Autorisierung "Zugriffsüberprüfungen auf der Komponentenebene" für die Komponente aktiviert werden.  
+ Wie andere WCF-Dienste sind die Sicherheitseinstellungen für den verfügbar gemachten Dienst über die Konfigurationseinstellungen für den WCF-Kanal verwaltet. Herkömmliche DCOM-Sicherheitseinstellungen wie die computerweiten DCOM-Berechtigungseinstellungen werden nicht erzwungen. Zum Erzwingen von COM+-Anwendungsrollen muss die Autorisierung "Zugriffsüberprüfungen auf der Komponentenebene" für die Komponente aktiviert werden.  
   
  Bei Verwendung einer nicht gesicherten Bindung kann für die Kommunikation die Gefahr von Manipulationen oder der Offenlegung von Informationen bestehen. Verwenden Sie eine gesicherte Bindung, um dies zu verhindern.  
   
- Für die Modi "COM+-gehostet" und "Im Internet gehostet" müssen die Clientanwendungen dem Serverprozess den Identitätswechsel für den Clientbenutzer gestatten. Dieser Schritt kann in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients durch Festlegen der Identitätswechselebene auf <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> erfolgen.  
+ Für die Modi "COM+-gehostet" und "Im Internet gehostet" müssen die Clientanwendungen dem Serverprozess den Identitätswechsel für den Clientbenutzer gestatten. Dies kann erfolgen in WCF-Clients durch Festlegen der Identitätswechselebene auf <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
   
  Wenn Internetinformationsdienste (IIS) oder Windows Process Activation Service (WAS) den HTTP-Transport verwenden, kann mit dem Tool Httpcfg.exe eine Transportendpunktadresse reserviert werden. In anderen Konfigurationen ist der Schutz vor nicht autorisierten Diensten wichtig, die als der gewünschte Dienst fungieren. Um den Start eines nicht autorisierten Dienstes am gewünschten Endpunkt zu verhindern, kann der legitime Dienst so konfiguriert werden, dass er als NT Dienst-ausgeführt wird. Dadurch hat der legitime Dienst vor jedem nicht autorisierten Dienst Anspruch auf die Endpunktadresse.  
   

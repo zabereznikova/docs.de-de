@@ -1,24 +1,14 @@
 ---
 title: WIF-Sitzungsverwaltung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7703d9fb612ead13140d010b1670abb209c5acb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f97406ccf826bfa5b7c3ed87bdb58478b272a216
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-session-management"></a>WIF-Sitzungsverwaltung
 Wenn ein Client erstmals versucht auf eine geschützte Ressource zuzugreifen, die von einer vertrauenden Seite gehostet wird, muss sich der Client zunächst gegenüber einem Sicherheitstokendienst (STS) authentifizieren, der von der vertrauenden Seite als vertrauenswürdig eingestuft wird. Der STS stellt dem Client dann ein Sicherheitstoken aus. Der Client präsentiert dieses Token der vertrauenden Seite, die dem Client dann Zugriff auf die geschützte Ressource gewährt. Sie möchten jedoch nicht, dass der Client sich für jede Anfrage erneut gegenüber dem STS authentifizieren muss, vor allem, da er sich möglicherweise nicht auf demselben Computer oder in derselben Domäne wie die vertrauende Seite befindet. Stattdessen fordert die Windows Identity Foundation (WIF) den Client und die vertrauende Seite zur Erstellung einer Sitzung auf, in der der Client ein Sitzungssicherheitstoken verwendet, um sich gegenüber der vertrauenden Seite für alle Anforderungen nach der ersten Anforderung zu authentifizieren. Die vertrauende Seite kann dieses Sitzungssicherheitstoken, das in einem Cookie gespeichert wird, zur Rekonstruktion des <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> des Clients verwenden.  
@@ -39,4 +29,4 @@ Wenn ein Client erstmals versucht auf eine geschützte Ressource zuzugreifen, di
 ## <a name="extensibility"></a>Erweiterungen  
  Sie können den Verwaltungsmechanismus der Sitzung erweitern. Ein Grund dafür wäre die Leistungsverbesserung. Beispielsweise könnten Sie einen benutzerdefinierten Cookiehandler erstellen, der das Sitzungssicherheitstoken zwischen dem cookie- und speicherinternen Zustand transformiert oder optimiert. Zu diesem Zweck können Sie die <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType>-Eigenschaft von <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> mit einem benutzerdefinierten Cookiehandler konfigurieren, der von <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType> abgeleitet wird. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> ist der Standardhandler für das Cookie, weil die Cookies die zulässige Größe für das Hypertext Transfer Protocol (HTTP) überschreiten. Wenn Sie stattdessen einen benutzerdefinierten Cookiehandler verwenden, müssen Sie die Segmentierung implementieren.  
   
- Weitere Informationen finden Sie im Beispiel [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408). Dieses Beispiel veranschaulicht ein Sitzungscache, das in einer Farm verwendet werden kann (im Gegensatz zu einem Tokenreplycache), sodass Sie Sitzungen als Verweis verwenden können und keine großen Cookies austauschen müssen. Das Beispiel zeigt ebenfalls eine einfachere Sicherung von Cookies in einer Farm. Der Sitzungscache basiert auf WCF. Im Hinblick auf die Sitzungssicherung zeigt das Beispiel eine neue Funktion in WIF 4.5 einer Cookie-Transformation, die auf MachineKey basiert, die aktiviert werden kann, indem Sie einfach den entsprechenden Ausschnitt in der Datei „Web.config“ einfügen. Das Beispiel selbst ist nicht „ausgelagert“, aber es zeigt, was Sie tun müssen, um die Anwendung darauf vorzubereiten.
+ Weitere Informationen finden Sie unter [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) Beispiel. Dieses Beispiel veranschaulicht ein Sitzungscache, das in einer Farm verwendet werden kann (im Gegensatz zu einem Tokenreplycache), sodass Sie Sitzungen als Verweis verwenden können und keine großen Cookies austauschen müssen. Das Beispiel zeigt ebenfalls eine einfachere Sicherung von Cookies in einer Farm. Der Sitzungscache basiert auf WCF. Im Hinblick auf die Sitzungssicherung zeigt das Beispiel eine neue Funktion in WIF 4.5 einer Cookie-Transformation, die auf MachineKey basiert, die aktiviert werden kann, indem Sie einfach den entsprechenden Ausschnitt in der Datei „Web.config“ einfügen. Das Beispiel selbst ist nicht „ausgelagert“, aber es zeigt, was Sie tun müssen, um die Anwendung darauf vorzubereiten.

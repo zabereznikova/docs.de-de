@@ -1,24 +1,14 @@
 ---
 title: Anspruchsbasierte Autorisierung mit WIF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bc6a9d828f1ab666ddda687931785f3853b74374
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d2972ccef6829a2b7a052ba30258086443bd833
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-based-authorization-using-wif"></a>Anspruchsbasierte Autorisierung mit WIF
 In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche Ressourcen eine authentifizierte Identität zugreifen und welche Vorgänge sie mit diesen Ressourcen ausführen darf. Eine falsche oder schwache Autorisierung führt zu Offenlegung von Informationen und Datenmanipulation. In diesem Thema werden die verfügbaren Methoden zum Implementieren der Autorisierung für Ansprüche unterstützende ASP.NET-Webanwendungen und -Dienste mit Windows Identity Foundation (WIF) und einem Sicherheitstokendienst (STS) wie Microsoft Azure-Zugriffssteuerungsdienst (ACS) beschrieben.  
@@ -52,7 +42,7 @@ In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche
   
 -   **Während der Tokenausstellung**. Wenn ein Benutzer authentifiziert wird, kann der Rollenanspruch vom Identitätsanbieter-STS oder von einem Verbundanbieter wie dem Microsoft Azure-Zugriffssteuerungsdienst (ACS) ausgegeben werden.  
   
--   **Transformieren beliebiger Ansprüche mit ClaimsAuthenticationManager in einen Anspruchsrollentyp**. ClaimsAuthenticationManager ist eine Komponente, die im Lieferumfang von WIF enthalten ist. Sie ermöglicht ein Abfangen von Anforderungen, wenn diese eine Anwendung starten. Dabei werden Token überprüft und transformiert, indem Ansprüche hinzugefügt, geändert oder entfernt werden. Weitere Informationen über die Verwendung von ClaimsAuthenticationManager zum Transformieren von Ansprüchen finden Sie unter [How To: Implement Role Based Access Control (RBAC) in a Claims Aware ASP.NET Application Using WIF and ACS (Vorgehensweise: Implementieren von RBAC in einer Ansprüche unterstützenden ASP.NET-Anwendung mithilfe von WIF und ACS)](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444).  
+-   **Transformieren beliebiger Ansprüche mit ClaimsAuthenticationManager in einen Anspruchsrollentyp**. ClaimsAuthenticationManager ist eine Komponente, die im Lieferumfang von WIF enthalten ist. Sie ermöglicht ein Abfangen von Anforderungen, wenn diese eine Anwendung starten. Dabei werden Token überprüft und transformiert, indem Ansprüche hinzugefügt, geändert oder entfernt werden. Weitere Informationen zum Verwenden von ClaimsAuthenticationManager zum Transformieren von Ansprüchen finden Sie unter [Vorgehensweise: Implementieren Rolle rollenbasierten Zugriffssteuerung (RBAC) in einem Ansprüche beachten ASP.NET Anwendung mithilfe von WIF und ACS](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444).  
   
 -   **Zuordnen von beliebigen Ansprüchen zu einem Rollentyp mithilfe des samlSecurityTokenRequirement-Konfigurationsabschnitts**. Dies ist ein deklarativer Ansatz, bei dem die Anspruchstransformation nur mithilfe der Konfiguration durchgeführt wird. Eine Codierung ist nicht erforderlich.  
   

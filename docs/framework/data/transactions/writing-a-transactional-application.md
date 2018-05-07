@@ -1,23 +1,12 @@
 ---
 title: Erstellen einer Transaktionsanwendung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d891f2-6fc8-4395-93c6-6819492406e0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9fab355da61ea7445e429cfc4e336a14b588e30c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 048df434ff0ada2ab5f8c7473913f6c34c05d1a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-a-transactional-application"></a>Erstellen einer Transaktionsanwendung
 Als Programmierer von Transaktionsanwendungen können Sie die beiden Programmiermodelle nutzen, die der <xref:System.Transactions>-Namespace zum Erstellen von Transaktionen zur Verfügung stellt. Sie können die explizite Programmiermodell nutzen, indem Sie mit der <xref:System.Transactions.Transaction> Klasse oder das implizites Programmiermodell, das in dem Transaktionen werden automatisch von der Infrastruktur verwaltet, mit der <xref:System.Transactions.TransactionScope> Klasse. Es wird empfohlen, dass Sie das Modell der implizite Transaktionsmodus für die Entwicklung verwenden. Weitere Informationen zum Verwenden eines Transaktionsbereichs in finden Sie die [implementieren eine implizite Transaktion mithilfe der Transaktionsbereich](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) Thema.  

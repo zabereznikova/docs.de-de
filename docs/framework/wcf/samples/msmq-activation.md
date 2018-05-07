@@ -1,26 +1,12 @@
 ---
 title: MSMQ-Aktivierung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: ab414cb5535ce2b9062520c9d82e139ebdfc04c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="msmq-activation"></a>MSMQ-Aktivierung
 Dieses Beispiel veranschaulicht das Hosten von Anwendungen in Windows Process Activation Service (WAS), die von einer Nachrichtenwarteschlange gelesen werden. Dieses Beispiel verwendet die `netMsmqBinding` und basiert auf der [bidirektionaler Kommunikation](../../../../docs/framework/wcf/samples/two-way-communication.md) Beispiel. In diesem Fall handelt es sich bei dem Dienst um eine im Internet gehostete Anwendung. Der Client ist selbst gehostet und gibt an die Konsole aus, um den Status eingereichter Bestellungen zu beobachten.  
@@ -33,11 +19,11 @@ Dieses Beispiel veranschaulicht das Hosten von Anwendungen in Windows Process Ac
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" "und" Windows Workflow Foundation (WF) Samples for [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] alle herunterladen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu Windows Communication Foundation (WCF) HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" "und" Windows Workflow Foundation (WF) Samples for [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] alle herunterladen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Windows Process Activation Service (WAS), der neue Prozessaktivierungsmechanismus für [!INCLUDE[lserver](../../../../includes/lserver-md.md)], stellt IIS-ähnliche Features bereit, die zuvor nur für HTTP-basierte Anwendungen zur Verfügung standen, die Nicht-HTTP-Protokolle verwenden. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet die Schnittstelle des Listeneradapters, um Aktivierungsanforderungen weiterzugeben, die über die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützten Nicht-HTTP-Protokolle, wie etwa TCP, Named Pipes und MSMQ, empfangen wurden. Die Funktionalität für den Empfang von Anforderungen über Nicht-HTTP-Protokolle wird von verwalteten Windows-Diensten gehostet, die in "SMSvcHost.exe" ausgeführt werden.  
+ Windows Process Activation Service (WAS), der neue Prozessaktivierungsmechanismus für [!INCLUDE[lserver](../../../../includes/lserver-md.md)], stellt IIS-ähnliche Features bereit, die zuvor nur für HTTP-basierte Anwendungen zur Verfügung standen, die Nicht-HTTP-Protokolle verwenden. Windows Communication Foundation (WCF) verwendet die Listeneradapter-Schnittstelle, um aktivierungsanforderungen weiterzugeben, die über die nicht-HTTP-Protokolle unterstützt werden, indem Sie empfangen werden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], z. B. TCP, Named Pipes und MSMQ. Die Funktionalität für den Empfang von Anforderungen über Nicht-HTTP-Protokolle wird von verwalteten Windows-Diensten gehostet, die in "SMSvcHost.exe" ausgeführt werden.  
   
  Der Net.Msmq-Listeneradapterdienst (NetMsmqActivator) aktiviert in der Warteschlange befindliche Anwendungen auf der Grundlage von Nachrichten in der Warteschlange.  
   

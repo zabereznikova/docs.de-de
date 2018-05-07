@@ -1,14 +1,6 @@
 ---
 title: Datenvertragsversionsverwaltung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ba51c51f30293e05dee17f9cf78cc049e1c751f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung
 Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine vollständige Übersicht und normative versionsverwaltungsanleitung finden Sie unter [Vorgehensweisen: versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -110,7 +96,7 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
 ## <a name="schema-considerations"></a>Schemaüberlegungen  
  Eine Erläuterung, welche Schemas für Datenvertragstypen erstellt wird, finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- Das Schema, das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] für Datenvertragstypen erstellt, macht keine Bereitstellungen für die Versionsverwaltung. Das bedeutet, dass das Schema, das von einer bestimmten Version eines Typs exportiert wurde, nur diejenigen Datenelemente enthält, die in dieser Version vorliegen. Die Implementierung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle ändert nicht das Schema eines Typs.  
+ Das Schema WCF erzeugt für Datenvertragstypen macht keine Bereitstellungen für die versionsverwaltung. Das bedeutet, dass das Schema, das von einer bestimmten Version eines Typs exportiert wurde, nur diejenigen Datenelemente enthält, die in dieser Version vorliegen. Die Implementierung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle ändert nicht das Schema eines Typs.  
   
  Datenelemente werden standardmäßig als optionale Elemente ins Schema exportiert. Dies bedeutet, dass der Wert von `minOccurs` (XML-Attribut) auf 0 (null) gesetzt wird. Erforderliche Datenmember werden exportiert, wenn `minOccurs` auf 1 festgelegt wurde.  
   

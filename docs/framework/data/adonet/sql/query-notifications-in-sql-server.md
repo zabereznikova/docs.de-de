@@ -1,24 +1,12 @@
 ---
 title: Abfragebenachrichtigungen in SQL Server
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 376f2cfefcaf53affe5a20a5812a02839dd5d4a9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 60ab686437f764a006fca5a2043d02288ea46d0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-notifications-in-sql-server"></a>Abfragebenachrichtigungen in SQL Server
 Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetzen, können Anwendungen benachrichtigt werden, wenn sich Daten geändert haben. Diese Funktion ist besonders nützlich bei Anwendungen, die Informationen aus einer Datenbank zwischenspeichern, z. B. aus einer Webanwendung, und bei Änderungen von Quelldaten benachrichtigt werden müssen.  
@@ -45,7 +33,7 @@ Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetze
   
 -   [Service Broker](http://msdn.microsoft.com/library/bb522889.aspx)  
   
--   [Service Broker Developer InfoCenter](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker-Entwickler (InfoCenter)](http://msdn.microsoft.com/library/ms166100.aspx)  
   
 -   [Entwicklung (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
   
@@ -62,7 +50,7 @@ Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetze
  [SqlCommand-Ausführung mit SqlNotificationRequest](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
  Zeigt, wie ein <xref:System.Data.SqlClient.SqlCommand>-Objekt so konfiguriert werden kann, dass es mit einer Abfragebenachrichtigung arbeitet.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Data.Sql.SqlNotificationRequest>  
  Beschreibt die <xref:System.Data.Sql.SqlNotificationRequest>-Klasse und alle Member dieser Klasse.  
   

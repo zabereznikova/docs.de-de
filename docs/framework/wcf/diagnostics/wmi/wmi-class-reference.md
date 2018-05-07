@@ -1,27 +1,15 @@
 ---
 title: WMI-Klassenreferenz
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wmi-class-reference"></a>WMI-Klassenreferenz
-In diesem Abschnitt sind alle WMI-Klassen aufgeführt, die vom WMI-Anbieter von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] offengelegt werden.  
+Dieser Abschnitt enthält alle WMI-Klassen, die von der Windows Communication Foundation (WCF)-WMI-Anbieter verfügbar gemacht werden.  
   
 ## <a name="accessing-wmi-instances"></a>Zugreifen auf WMI-Instanzen  
  Alle in der WMI-Objektreferenz aufgeführten Klassen können nicht direkt instanziiert werden, mit Ausnahme von Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation und Endpoint. Um auf die anderen Instanzen zuzugreifen, können Sie auf die Eigenschaften der vorher erwähnten Klassen der obersten Ebene zugreifen. Zum Beispiel können Sie auf die "TransportBindingElement"Instanz über "Endpoint-Instanz -> Binding -> BindingElements" zugreifen.  

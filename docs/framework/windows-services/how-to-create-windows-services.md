@@ -1,27 +1,17 @@
 ---
 title: 'Gewusst wie: Erstellen von Windows-Diensten'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-caps.latest.revision: "18"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-windows-services"></a>Gewusst wie: Erstellen von Windows-Diensten
 Wenn Sie einen Dienst erstellen, können Sie Visual Studio-Projektvorlage **Windowsdienst**. Von dieser Vorlage wird ein großer Teil der Arbeit übernommen, indem auf die entsprechenden Klassen und Namespaces verwiesen wird, die Vererbung von den Basisklassen für Dienste eingerichtet wird und eine Reihe von Methoden überschrieben werden, die voraussichtlich überschrieben werden sollen.  
@@ -58,7 +48,7 @@ Wenn Sie einen Dienst erstellen, können Sie Visual Studio-Projektvorlage **Wind
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|Mit `True` wird angezeigt, dass vom Dienst Anforderungen zum Beenden angenommen werden. Mit `false` wird verhindert, dass der Dienst beendet werden kann.|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|Mit `True` wird angegeben, dass der Dienst benachrichtigt werden soll, wenn der ausführende Computer heruntergefahren wird. Dadurch wird ermöglicht, dass die <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>-Prozedur aufgerufen werden kann.|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|Mit `True` wird angegeben, dass vom Dienst Anforderungen zum Anhalten und Fortsetzen angenommen werden. Mit `false` wird verhindert, dass der Dienst angehalten oder fortgesetzt werden kann.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True`um anzugeben, dass der Dienst Benachrichtigungen zu Änderungen an den Energiezustand des Computers behandeln kann. `false` um zu verhindern, dass den Dienst diese Änderungen informiert wird.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` um anzugeben, dass der Dienst Benachrichtigungen zu Änderungen an den Energiezustand des Computers behandeln kann. `false` um zu verhindern, dass den Dienst diese Änderungen informiert wird.|  
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|Mit `True` werden informative Einträge in das Anwendungsereignisprotokoll geschrieben, sobald vom Dienst eine Aktion durchgeführt wird. Mit `false` wird diese Funktion deaktiviert. Weitere Informationen finden Sie unter [Vorgehensweise: Protokoll Informationen zu Diensten](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Hinweis:** standardmäßig <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> festgelegt ist, um `true`.|  
   
     > [!NOTE]

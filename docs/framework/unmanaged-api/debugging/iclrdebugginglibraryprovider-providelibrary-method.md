@@ -1,14 +1,6 @@
 ---
 title: ICLRDebuggingLibraryProvider::ProvideLibrary-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebuggingLibraryProvider.ProvideLibrary Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf6860a616312504e3d23177734cb532405bd714
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0644258eb1622f388f55d0657c8922079fe4dc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary-Methode
 Ruft eine Bibliotheksanbieter-Rückrufschnittstelle, die common Language Runtime (CLR) versionsspezifische befindet, und Laden bei Bedarf es ermöglicht.  
@@ -71,7 +59,7 @@ HRESULT ProvideLibrary(
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- `ProvideLibrary`ermöglicht es dem Debugger, Module bereitzustellen, die für das Debuggen von bestimmter CLR-Dateien, z. B. "mscordbi.dll" und mscordacwks.dll erforderlich sind. Das Modul verarbeitet haben, gültig bleiben, bis ein Aufruf der [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) Methode gibt an, dass sie freigegeben werden können, an diesem Punkt wird der Verantwortung des Aufrufers, die Handles freizugeben.  
+ `ProvideLibrary` ermöglicht es dem Debugger, Module bereitzustellen, die für das Debuggen von bestimmter CLR-Dateien, z. B. "mscordbi.dll" und mscordacwks.dll erforderlich sind. Das Modul verarbeitet haben, gültig bleiben, bis ein Aufruf der [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) Methode gibt an, dass sie freigegeben werden können, an diesem Punkt wird der Verantwortung des Aufrufers, die Handles freizugeben.  
   
  Der Debugger kann alle verfügbaren Verfahren verwenden, suchen und beschaffen das debugging-Modul.  
   
@@ -87,7 +75,7 @@ HRESULT ProvideLibrary(
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

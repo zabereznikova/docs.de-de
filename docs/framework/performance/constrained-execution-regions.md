@@ -1,27 +1,17 @@
 ---
-title: "Eingeschränkte Ausführungsbereiche (CERs)"
-ms.custom: 
+title: Eingeschränkte Ausführungsbereiche (CERs)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f046f26391d581bc1663e9a7041225ede99bd31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7e653101faf9e0664f41e031c7bad05523825f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constrained-execution-regions"></a>Eingeschränkte Ausführungsbereiche (CERs)
 Ein eingeschränkter Ausführungsbereich (Constrained Execution Region, CER) ist Bestandteil eines Mechanismus zum Erstellen von zuverlässigem verwaltetem Code. Mit einem CER wird ein Bereich definiert, in dem die Common Language Runtime (CLR) keine Out-of-Band-Ausnahmen auslösen kann, die verhindern würden, dass der Code in dem Bereich vollständig ausgeführt werden würde. Benutzercode kann innerhalb dieses Bereichs keinen Code ausführen, der zum Auslösen von Out-of-Band-Ausnahmen führen könnte. Die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>-Methode muss einem `try`-Block unmittelbar vorangestellt sein. Sie markiert die Blöcke `catch`, `finally` und `fault` als eingeschränkte Anwendungsbereiche. Wenn Code als eingeschränkter Bereich markiert ist, muss er nur anderen Code mit starken Zuverlässigkeitsvereinbarungen aufrufen. Code sollte keine unvorbereiteten oder nicht zuverlässigen Methoden zuordnen oder virtuelle Aufrufe für diese vornehmen, es sei denn, der Code ist für die Behandlung von Fehlern ausgelegt. Die CLR verzögert Threadabbrüche für Code, der in einem eingeschränkten Ausführungsbereich ausgeführt wird.  

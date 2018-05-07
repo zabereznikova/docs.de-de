@@ -1,24 +1,12 @@
 ---
 title: '&lt;transport&gt; von &lt;ws2007HttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3a0aa0e4dacafc4c81fa324529dfa3551fcc9c8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3be9d4e64e63b32156cb64257f5bed8230cee3aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; von &lt;ws2007HttpBinding&gt;
 Definiert die Authentifizierungseinstellungen für den HTTP-Transport.  
@@ -27,8 +15,8 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
 \<bindings>  
 \<ws2007HttpBinding>  
 \<binding>  
-\<security>  
-\<transport>  
+\<Sicherheit >  
+\<Transport >  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -1,24 +1,12 @@
 ---
 title: SQL Server Express-Sicherheit
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6593e075d1a9d672f414cfa0cd8652f760b084e1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7bc0fdf218f8fca1f904505c552df6986c47e4de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express-Sicherheit
 Microsoft SQL Server Express Edition (SQL Server Express) basiert auf Microsoft SQL Server und unterstützt die meisten Funktionen des Datenbankmoduls. Entbehrliche Funktionen und die Netzwerkkonnektivität sind standardmäßig deaktiviert. Auf diese Weise wird böswilligen Angreifern weniger Angriffsfläche geboten.  
@@ -44,7 +32,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) basiert auf Microsoft 
 |-|-|  
 |[SQL Server Books Online (SQL Server-Onlinedokumentation)](http://msdn.microsoft.com/library/bb543165.aspx)|Enthält die Dokumentation für SQL Server Express.|  
 |[Herstellen einer Verbindung mit SQL Server Express](http://msdn.microsoft.com/library/ms165679.aspx) in SQL Server-Onlinedokumentation|Beschreibt die Verwendung von SQL Server Express Edition in einem Netzwerk.|  
-|[Microsoft SQL Server 2005 Express Edition Books Online](http://msdn.microsoft.com/library/ms165706.aspx)|Enthält die vollständige Dokumentation zu SQL Server 2005 Express Edition.|  
+|[Onlinedokumentation für Microsoft SQL Server 2005 Express Edition](http://msdn.microsoft.com/library/ms165706.aspx)|Enthält die vollständige Dokumentation zu SQL Server 2005 Express Edition.|  
 |[Benutzerinstanzen für Nichtadministratoren](http://msdn.microsoft.com/library/ms143684.aspx) in SQL Server-Onlinedokumentation|Beschreibt das Erstellen und Bereitstellen von Benutzerinstanzen.|  
 |[SQL Server Express-Benutzerinstanzen](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Beschreibt Benutzerinstanzfunktionen in einer ADO.NET-Anwendung. Enthält Informationen zum Aktivieren von Benutzerinstanzen, zum Herstellen einer Verbindung mit einer Benutzerinstanz über eine <xref:System.Data.SqlClient.SqlConnection>, zur Lebensdauer von Benutzerinstanzen und zu Benutzerinstanzszenarien.|  
   

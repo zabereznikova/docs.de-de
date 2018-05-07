@@ -1,27 +1,15 @@
 ---
-title: "ToolTip-Komponente (Windows Forms)"
-ms.custom: 
+title: ToolTip-Komponente (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tooltips [Windows Forms]
 - ToolTip component [Windows Forms]
 ms.assetid: 82e71dc3-0159-4f91-9f22-499224f004a0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2e051fa13eee9a9110654d8791d83b2ff51cbdb8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c8175e4a3d2ddf08bcfc603b5d0fe40917bc37e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip-Komponente (Windows Forms)
 Die <xref:System.Windows.Forms.ToolTip>-Komponente in Windows Forms zeigt Text an, wenn der Benutzer auf Steuerelemente zeigt. Jedem Steuerelement kann eine QuickInfo zugeordnet werden. Sie könnten dieses Steuerelement beispielsweise verwenden, um Platz auf einem Formular zu sparen, indem Sie ein kleines Symbol auf einer Schaltfläche anzeigen und die Funktion der Schaltfläche mit einer QuickInfo erklären.  
@@ -36,7 +24,7 @@ Die <xref:System.Windows.Forms.ToolTip>-Komponente in Windows Forms zeigt Text a
  [Gewusst wie: Ändern der Verzögerung der ToolTip-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
  Erläutert das Festlegen von Werten, mit denen die Einblendezeit einer QuickInfo sowie die Dauer ihrer Anzeige gesteuert wird.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.ToolTip>-Klasse  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   

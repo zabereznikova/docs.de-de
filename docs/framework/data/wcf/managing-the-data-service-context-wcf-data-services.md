@@ -1,24 +1,12 @@
 ---
 title: Verwalten des Datendienstkontextes (WCF Data Services)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c993a4f09a7187b45331f6beb71a9637da87d20f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b2b0bb709081ca7b0b2a1367f10e1f7a08c98c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Verwalten des Datendienstkontextes (WCF Data Services)
 Die <xref:System.Data.Services.Client.DataServiceContext>-Klasse kapselt Vorgänge, die für einen angegebenen Datendienst unterstützt werden. Im Gegensatz zu [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Diensten ist der Kontext nicht zustandslos. Aus diesem Grund können Sie die <xref:System.Data.Services.Client.DataServiceContext> Klasse zur Statusverwaltung auf dem Client zwischen Interaktionen mit dem Datendienst, um die Unterstützung von Funktionen wie das Änderungsmanagement. Von dieser Klasse werden auch Identitäten verwaltet und Änderungen nachverfolgt.  
@@ -29,7 +17,7 @@ Die <xref:System.Data.Services.Client.DataServiceContext>-Klasse kapselt Vorgän
  In der Standardeinstellung wird vom Client nur ein Eintrag im Antwortfeed in ein Objekt für Entitäten materialisiert, die noch nicht vom <xref:System.Data.Services.Client.DataServiceContext> verfolgt werden. Dies bedeutet, dass Änderungen an Objekten, die sich bereits im Cache befinden, nicht überschrieben werden. Dieses Verhalten wird gesteuert, indem für Abfragen und Ladevorgänge ein <xref:System.Data.Services.Client.MergeOption>-Wert angegeben wird. Diese Option wird festgelegt, indem die <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A>-Eigenschaft auf dem <xref:System.Data.Services.Client.DataServiceContext> festgelegt wird. Der Standardwert der Zusammenführungsoption lautet <xref:System.Data.Services.Client.MergeOption.AppendOnly>. Mit dieser Einstellung werden nur Objekte für Entitäten materialisiert, die noch nicht verfolgt werden, d. h. vorhandene Objekte werden nicht überschrieben. Um zu verhindern, dass Änderungen an Objekten auf dem Client durch Aktualisierungen des Datendiensts überschrieben werden, kann auch die Option <xref:System.Data.Services.Client.MergeOption.PreserveChanges> festgelegt werden. Wenn <xref:System.Data.Services.Client.MergeOption.OverwriteChanges> festgelegt wird, werden Werte von Objekten des Clients durch die aktuellen Werte aus Einträgen im Antwortfeed ersetzt. Dies gilt auch, wenn an diesen Objekten bereits Änderungen vorgenommen wurden. Wenn eine <xref:System.Data.Services.Client.MergeOption.NoTracking>-Zusammenführungsoption verwendet wird, kann der <xref:System.Data.Services.Client.DataServiceContext> keine Änderungen, die an Clientobjekten gemacht wurden, an den Datendienst senden. Mit dieser Option werden Änderungen immer durch Werte des Datendiensts überschrieben.  
   
 ## <a name="managing-concurrency"></a>Verwalten der Parallelität  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]unterstützt vollständige Parallelität, der der Datendienst Updatekonflikte erkennen zu können. Der Datendienstanbieter kann so konfiguriert werden, dass der Datendienst mithilfe eines Parallelitätstokens nach Änderungen an Entitäten sucht. Dieses Token beinhaltet mindestens eine Eigenschaft eines Entitätstyps, die vom Datendienst überprüft wird, um zu bestimmen, ob sich eine Ressource geändert hat. Parallelitätstoken, die in der eTag-Header, der Anforderungen und Antworten vom Datendienst enthalten sind, werden Sie durch verwaltet die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Client. Weitere Informationen finden Sie unter [Aktualisieren des Datendiensts](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt vollständige Parallelität, der der Datendienst Updatekonflikte erkennen zu können. Der Datendienstanbieter kann so konfiguriert werden, dass der Datendienst mithilfe eines Parallelitätstokens nach Änderungen an Entitäten sucht. Dieses Token beinhaltet mindestens eine Eigenschaft eines Entitätstyps, die vom Datendienst überprüft wird, um zu bestimmen, ob sich eine Ressource geändert hat. Parallelitätstoken, die in der eTag-Header, der Anforderungen und Antworten vom Datendienst enthalten sind, werden Sie durch verwaltet die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Client. Weitere Informationen finden Sie unter [Aktualisieren des Datendiensts](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
  Der <xref:System.Data.Services.Client.DataServiceContext> verfolgt Änderungen, die an Objekten vorgenommen wurden, die manuell mit <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> und <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> oder von einer <xref:System.Data.Services.Client.DataServiceCollection%601> gemeldet wurden. Wenn die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufgerufen wird, sendet der Client die Änderungen zurück an den Datendienst. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> kann fehlschlagen, wenn zwischen den Datenänderungen auf dem Client und den Änderungen im Datendienst ein Konflikt auftritt. In einem solchen Fall müssen Sie die Entitätsressource erneut abfragen, um die Updatedaten zu erhalten. Um Änderungen im Datendienst zu überschreiben, führen Sie die Abfrage mit der <xref:System.Data.Services.Client.MergeOption.PreserveChanges>-Zusammenführungsoption aus. Wenn Sie <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> erneut aufrufen, werden die auf dem Client beibehaltenen Änderungen im Datendienst beibehalten, sofern an der Ressource im Datendienst noch keine anderen Änderungen vorgenommen wurden.  
   

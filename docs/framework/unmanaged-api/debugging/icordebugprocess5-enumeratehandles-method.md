@@ -1,14 +1,6 @@
 ---
 title: ICorDebugProcess5::EnumerateHandles-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess5.EnumerateHandles
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9bf9f1a4d565e0af4f3ee34a2805116407027d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f2177702c6c5999033d0852a932e52c0725fb8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles-Methode
 Ruft einen Enumerator für die Objekt-Handles in einem Prozess ab.  
@@ -53,15 +41,15 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  [out] Ein Zeiger auf die Adresse des ein [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) also einen Enumerator für die Objekte, die Garbage Collection übergeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
- `EnumerateHandles`ist eine Hilfsfunktion, die Überprüfung der Handletabelle unterstützt. Ähnelt der [icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) -Methode, außer dass anstatt Auffüllen einer [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) Auflistung mit allen Objekten, die Garbage Collection übergeben, werden sie enthält nur Objekte, die Handles aus der Handletabelle verfügen.  
+ `EnumerateHandles` ist eine Hilfsfunktion, die Überprüfung der Handletabelle unterstützt. Ähnelt der [icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) -Methode, außer dass anstatt Auffüllen einer [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) Auflistung mit allen Objekten, die Garbage Collection übergeben, werden sie enthält nur Objekte, die Handles aus der Handletabelle verfügen.  
   
- Die `types` Parameter gibt die Handletypen in die Auflistung eingeschlossen werden sollen. `types`kann eine der folgenden drei Elemente von der [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) Enumeration:  
+ Die `types` Parameter gibt die Handletypen in die Auflistung eingeschlossen werden sollen. `types` kann eine der folgenden drei Elemente von der [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) Enumeration:  
   
--   `CorHandleStrongOnly`(Handles zum starken Verweise nur).  
+-   `CorHandleStrongOnly` (Handles zum starken Verweise nur).  
   
--   `CorHandleWeakOnly`(um nur schwache Verweise Handles).  
+-   `CorHandleWeakOnly` (um nur schwache Verweise Handles).  
   
--   `CorHandleAll`(alle Handles).  
+-   `CorHandleAll` (alle Handles).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -70,7 +58,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

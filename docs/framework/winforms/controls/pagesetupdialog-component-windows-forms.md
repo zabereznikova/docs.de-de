@@ -1,13 +1,6 @@
 ---
-title: "PageSetupDialog-Komponente (Windows Forms)"
-ms.custom: 
+title: PageSetupDialog-Komponente (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - printing [Windows Forms], page setup
 - margins [Windows Forms], page setup options
@@ -26,16 +19,11 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8b1f61d88b5c27c2bf07ca3ac1ef81d470a3518
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 467b93043851b512427ab93d2c8a8f8030e057ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog-Komponente (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PageSetupDialog> Komponente ist ein vorkonfiguriertes Dialogfeld zum Festlegen der Seite Details für das Drucken in Windows-basierten Anwendungen verwendet. Verwenden Sie es in Ihrer Windows basierenden Anwendung als einfache Lösung, die für Benutzer zum Festlegen der Einstellungen für anstatt ein eigenes Dialogfeld zu konfigurieren. Sie können Benutzer zum Festlegen von Rahmen und Rand Korrekturen, Kopf- und Fußzeilen sowie Hochformat im Vergleich zu Querformat aktivieren. Durch die Verwendung von Windows-Standarddialogfeldern erstellen Sie Anwendungen, deren Basisfunktionen Benutzern sofort vertraut sind.  
@@ -47,7 +35,7 @@ Windows Forms <xref:System.Windows.Forms.PageSetupDialog> Komponente ist ein vor
  [Gewusst wie: Bestimmen von Seiteneigenschaften mit der PageSetupDialog-Komponente](../../../../docs/framework/winforms/controls/how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
  Erläutert, wie Eigenschaften festgelegt werden, mithilfe einer Instanz von der <xref:System.Windows.Forms.PageSetupDialog> -Komponente zur Laufzeit.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.PageSetupDialog>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   

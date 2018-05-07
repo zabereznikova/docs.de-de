@@ -1,13 +1,6 @@
 ---
-title: "Das Threadmodell für Freihandeingaben"
-ms.custom: 
+title: Das Threadmodell für Freihandeingaben
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>Das Threadmodell für Freihandeingaben
 Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es mit einem regulären Stift und Papier viel wie beim Schreiben idealer.  Um dies zu erreichen, erfasst der Tablettstift Eingabedaten eine viel höhere Ausfallrate als eine Maus und die Freihandeingabe während des Schreibvorgangs rendert.  Thread (Benutzeroberflächenthread) der Anwendung reicht nicht für das Sammeln von Daten und zum Rendern von Freihandeingaben, da er blockiert werden kann.  Um dies zu lösen eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung zwei zusätzliche Threads verwendet, wenn Freihandeingabe.  
@@ -72,11 +60,11 @@ Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es mit ein
   
  In der vorherigen Abbildung erfolgt Folgendes:  
   
-1.  `StylusPlugin1`Ändert die Werte für x und y.  
+1.  `StylusPlugin1` Ändert die Werte für x und y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>empfängt die geänderte Tablettstiftpunkte, und im dynamischen Renderingthread gerendert.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> empfängt die geänderte Tablettstiftpunkte, und im dynamischen Renderingthread gerendert.  
   
-3.  `StylusPlugin2`empfängt die geänderte Tablettstiftpunkte und weiteren ändert die Werte für x und y.  
+3.  `StylusPlugin2` empfängt die geänderte Tablettstiftpunkte und weiteren ändert die Werte für x und y.  
   
 4.  Die Anwendung die Tablettstiftpunkte erfasst und Abschluss der Benutzer die Strichbreite nach der Strich statisch gerendert.  
   
@@ -87,7 +75,7 @@ Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es mit ein
   
  Das folgende Diagramm veranschaulicht die Beziehung zwischen den Stiftthread und UI-Thread in Bezug auf die Stylus-Ereignisse von einem <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
   
- ![Freihand-Threadingmodellen &#40; UI und Stift &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![Freihandeingaben Threadingmodelle &#40;UI und Stift&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
 ## <a name="rendering-ink"></a>Rendern von Freihandeingaben  
  Wenn der Benutzer einen Strich zeichnet <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> rendert in einem separaten Thread Kanton Freihandeingaben "von der Stift übertragen" selbst, wenn der UI-Thread ausgelastet ist.  Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> eine visuelle Struktur im dynamischen Rendering-Thread erstellt, wie sie Tablettstiftpunkte erfasst.  Wenn der Benutzer den Strich beendet die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> fordert benachrichtigt werden, wenn die Anwendung den nächsten Renderingdurchlauf ausgeführt wird.  Nach Abschluss des nächsten Renderingdurchlauf, die Anwendung die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> seiner visuellen Struktur bereinigt.  Das folgende Diagramm veranschaulicht diesen Prozess.  

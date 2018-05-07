@@ -1,13 +1,6 @@
 ---
-title: "Zuverlässige Sitzungen"
-ms.custom: 
+title: Zuverlässige Sitzungen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Windows Communication Foundation, sessions and instances
 - WCF, sessions and instances
@@ -16,24 +9,19 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 396c76cbdb8eada881a5c87edfc2500dcdab3ad4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions"></a>Zuverlässige Sitzungen
 
-In diesem Abschnitt wird beschrieben, was eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zuverlässige Sitzung ist, wie Verwendungsweise ist und wenn ein verwenden möchten, welche Bindungskonfiguration hierfür erforderlich, und Verweise auf Practices Best. In der folgenden Tabelle werden Details über die wesentlichen Punkte und verwandte Themen in diesem Abschnitt zusammengefasst.
+In diesem Abschnitt wird beschrieben, was ein Windows Communication Foundation (WCF) zuverlässige Sitzung ist, wie Verwendungsweise ist und wenn bedarfsabhängige, welche Bindungskonfiguration hierfür erforderlich, und Verweise auf Practices Best. In der folgenden Tabelle werden Details über die wesentlichen Punkte und verwandte Themen in diesem Abschnitt zusammengefasst.
 
-Die zuverlässige Sitzung [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet Featrues sicherstellen, dass zwischen Endpunkten gesendete Nachrichten über SOAP oder transportvermittler übertragen übertragen werden und werden nur einmal und optional in der gleichen Reihenfolge, in der sie gesendet wurden.
+Die zuverlässige Sitzung WCF bietet Featrues sicherstellen, dass zwischen Endpunkten gesendete Nachrichten über SOAP oder transportvermittler übertragen übertragen werden und werden nur einmal und optional in der gleichen Reihenfolge, in der sie gesendet wurden.
 
-Um eine zuverlässige Sitzung mit einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung zu verwenden, nutzen Sie entweder eine der vom System bereitgestellten Bindungen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], die eine zuverlässige Sitzung standardmäßig oder als Option unterstützen, oder erstellen Sie eine eigene benutzerdefinierte Bindung, die diese Sitzung unterstützt.
+Um eine zuverlässige Sitzung mit einer WCF-Anwendung verwenden möchten, verwenden Sie eine der vom System bereitgestellten Bindungen in WCF, die eine zuverlässige Sitzung standardmäßig oder als Option unterstützen, oder erstellen Sie eine eigene benutzerdefinierte Bindung, die die Sitzung unterstützt.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -52,7 +40,7 @@ Beschreibt, wie eine zuverlässige Sitzung über HTTPS erstellt wird.
 [Bewährte Vorgehensweisen für zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md)   
 Beschreibt einige der Best Practices in Verbindung mit der Verwendung einer zuverlässigen Sitzung.
 
-## <a name="reference"></a>Verweis
+## <a name="reference"></a>Referenz
 
 <xref:System.ServiceModel.ReliableSession>
 

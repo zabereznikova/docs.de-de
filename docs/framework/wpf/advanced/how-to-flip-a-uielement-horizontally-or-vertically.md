@@ -1,27 +1,15 @@
 ---
 title: 'Gewusst wie: Horizontales oder vertikales Kippen eines UIElement'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - flipping UIElements [WPF]
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d34aea4ea99bc03b328fb08582cac3e18a98df66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 89dcf668f1fe361480dabdab227a35ea40c344a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Gewusst wie: Horizontales oder vertikales Kippen eines UIElement
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.ScaleTransform> Blättern eine <xref:System.Windows.UIElement> horizontal oder vertikal. In diesem Beispiel eine <xref:System.Windows.Controls.Button> Steuerelement (eine Art von <xref:System.Windows.UIElement>) wird durch Anwenden von gekippt eine <xref:System.Windows.Media.ScaleTransform> auf seine <xref:System.Windows.UIElement.RenderTransform%2A> Eigenschaft.  
@@ -41,7 +29,7 @@ UIElement Blättern
   
  [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample1)]  
   
- ![Eine horizontal gekippte Schaltfläche &#40; 0,0 &#41; ] (../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-displaced.gif "Graphicsmm_buttonfliphorizontalflip_displaced")  
+ ![Eine gekippte Schaltfläche horizontal &#40;0,0&#41;](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-displaced.gif "Graphicsmm_buttonfliphorizontalflip_displaced")  
 Die Schaltfläche nach Anwendung von ScaleTransform  
   
 ## <a name="example"></a>Beispiel  

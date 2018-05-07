@@ -1,31 +1,17 @@
 ---
 title: 'Gewusst wie: Verbessern der Leistung von TreeView'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - TreeView control [WPF], improving the performance
 ms.assetid: b792c740-cf2b-4da8-8ba8-3d2e5a821874
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2c13a9c89bdcb149df61f26177ea8705e502402f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75f17c770af89f08fedfd3c8193a916901fe6f79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-improve-the-performance-of-a-treeview"></a>Gewusst wie: Verbessern der Leistung von TreeView
 Wenn eine <xref:System.Windows.Controls.TreeView> viele Elemente enthält, die Menge der zum Laden benötigte Zeit kann dazu führen, dass einen erheblichen Verzögerung in der Benutzeroberfläche. Sie können die Ladezeit verbessern, indem Sie die Einstellung der `VirtualizingStackPanel.IsVirtualizing` angefügten Eigenschaft, um `true`.  Die Benutzeroberfläche möglicherweise auch nur langsam reagiert, wenn ein Benutzer einen Bildlauf der <xref:System.Windows.Controls.TreeView> verwenden das Mausrad oder ziehen den Ziehpunkt einer Bildlaufleiste. Sie können die Leistung verbessern die <xref:System.Windows.Controls.TreeView> beim Bildlauf durch Festlegen der `VirtualizingStackPanel.VirtualizationMode` angefügten Eigenschaft, um <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.  

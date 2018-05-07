@@ -1,24 +1,12 @@
 ---
 title: 'Gewusst wie: Generieren des Objektmodells als externe Datei'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0db1d03960c45837c75d409782fc38d3c1ffa9ca
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 00e8563b361a36de6c31e9ff0c0fd8f3b6f46b4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Gewusst wie: Generieren des Objektmodells als externe Datei
 Alternativ zur attributbasierten Zuordnung können Sie Ihr Objektmodell als externe XML-Datei generieren, indem Sie das Befehlszeilentool SQLMetal verwenden. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Mit einer externen XML-Zuordnungsdatei verbessern Sie die Übersichtlichkeit des Codes. Sie können auch das Verhalten anpassen, indem Sie die externe Datei ändern, ohne die Binärdateien der Anwendung neu zu kompilieren. Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  

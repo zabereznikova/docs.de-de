@@ -1,13 +1,6 @@
 ---
-title: "CheckBox-Steuerelement (Windows Forms)"
-ms.custom: 
+title: CheckBox-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - checked list items [Windows Forms], Windows Forms controls
 - CheckBox control [Windows Forms]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - checked list items
 - check boxes
 ms.assetid: 0719d798-c307-40d3-9040-72a62679c227
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7477ef53db9c2740a747c6a021a602ea32dfe3ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a71fefd8d1c0edb23119cdd6b2604e274302935a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="checkbox-control-windows-forms"></a>CheckBox-Steuerelement (Windows Forms)
 Das Windows Forms-Steuerelement `CheckBox` zeigt an, ob eine bestimmte Bedingung aktiviert oder deaktiviert ist. Es wird häufig verwendet, um dem Benutzer eine Ja/Nein- oder Wahr/Falsch-Auswahl zu präsentieren. Sie können Kontrollkästchen-Steuerelemente in Gruppen verwenden, um mehrere Optionen anzuzeigen, unter denen der Benutzer eine oder mehrere auswählen kann. Es ähnelt dem <xref:System.Windows.Forms.RadioButton>-Steuerelement, jedoch kann eine beliebige Anzahl von gruppierten `CheckBox`-Steuerelementen ausgewählt werden.  
@@ -40,7 +28,7 @@ Das Windows Forms-Steuerelement `CheckBox` zeigt an, ob eine bestimmte Bedingung
  [Gewusst wie: Festlegen von Optionen mit CheckBox-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
  Beschreibt, wie Sie mithilfe eines Kontrollkästchens Optionen wie die Eigenschaften eines Objekts festlegen.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.CheckBox>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

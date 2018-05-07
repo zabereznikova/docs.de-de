@@ -1,13 +1,6 @@
 ---
 title: Verwenden geschachtelter Grafikcontainer
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba6bba84100a0ddcc87894710a6d3099ab0ccff5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nested-graphics-containers"></a>Verwenden geschachtelter Grafikcontainer
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]stellt Container, die Sie verwenden können, vorübergehend zu ersetzen oder erweitern Teil des Zustands in einem <xref:System.Drawing.Graphics> Objekt. Erstellen Sie einen Container durch Aufrufen der <xref:System.Drawing.Graphics.BeginContainer%2A> Methode von einem <xref:System.Drawing.Graphics> Objekt. Sie können Aufrufen <xref:System.Drawing.Graphics.BeginContainer%2A> wiederholt, um geschachtelte Container zu bilden. Jeder Aufruf von <xref:System.Drawing.Graphics.BeginContainer%2A> muss mit einem Aufruf von gekoppelt werden <xref:System.Drawing.Graphics.EndContainer%2A>.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] stellt Container, die Sie verwenden können, vorübergehend zu ersetzen oder erweitern Teil des Zustands in einem <xref:System.Drawing.Graphics> Objekt. Erstellen Sie einen Container durch Aufrufen der <xref:System.Drawing.Graphics.BeginContainer%2A> Methode von einem <xref:System.Drawing.Graphics> Objekt. Sie können Aufrufen <xref:System.Drawing.Graphics.BeginContainer%2A> wiederholt, um geschachtelte Container zu bilden. Jeder Aufruf von <xref:System.Drawing.Graphics.BeginContainer%2A> muss mit einem Aufruf von gekoppelt werden <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
 ## <a name="transformations-in-nested-containers"></a>Transformationen in geschachtelten Containern  
  Das folgende Beispiel erstellt eine <xref:System.Drawing.Graphics> Objekt und einen Container innerhalb der <xref:System.Drawing.Graphics> Objekt. Die globale Transformation für das <xref:System.Drawing.Graphics> -Objekt ist eine Verschiebung 100 Einheiten in der X-Richtung und 80 Einheiten in der y-Richtung. Die globale Transformation des Containers ist eine 30 Grad drehen. Der Code führt den Aufruf `DrawRectangle(pen, -60, -30, 120, 60)` zweimal. Der erste Aufruf von <xref:System.Drawing.Graphics.DrawRectangle%2A> wird innerhalb des Containers; d. h. der Aufruf ist zwischen den Aufrufen <xref:System.Drawing.Graphics.BeginContainer%2A> und <xref:System.Drawing.Graphics.EndContainer%2A>. Der zweite Aufruf von <xref:System.Drawing.Graphics.DrawRectangle%2A> wird nach dem Aufruf von <xref:System.Drawing.Graphics.EndContainer%2A>.  

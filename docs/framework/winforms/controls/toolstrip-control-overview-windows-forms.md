@@ -1,14 +1,6 @@
 ---
-title: "Übersicht über das ToolStrip-Steuerelement (Windows Forms)"
-ms.custom: 
+title: Übersicht über das ToolStrip-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Toolstrip
 helpviewer_keywords:
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3927f180e738541f2f2f8af6d03d281f6a601167
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Übersicht über das ToolStrip-Steuerelement (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.ToolStrip> -Steuerelement und die zugehörigen Klassen bieten ein allgemeines Framework zum Zusammenfassen von Benutzeroberflächenelementen in Symbolleisten, Statusleisten und Menüs. <xref:System.Windows.Forms.ToolStrip>Steuerelemente bieten eine komfortable während der Entwurfszeit, die direkte Aktivierung und bearbeiten, benutzerdefiniertes Layout und rafting, umfasst also die Möglichkeit von Symbolleisten, horizontalen oder vertikalen Abstand gemeinsam verwenden.  
+Windows Forms <xref:System.Windows.Forms.ToolStrip> -Steuerelement und die zugehörigen Klassen bieten ein allgemeines Framework zum Zusammenfassen von Benutzeroberflächenelementen in Symbolleisten, Statusleisten und Menüs. <xref:System.Windows.Forms.ToolStrip> Steuerelemente bieten eine komfortable während der Entwurfszeit, die direkte Aktivierung und bearbeiten, benutzerdefiniertes Layout und rafting, umfasst also die Möglichkeit von Symbolleisten, horizontalen oder vertikalen Abstand gemeinsam verwenden.  
   
  Obwohl <xref:System.Windows.Forms.ToolStrip> ersetzt und funktionell erweitert, um das Steuerelement in früheren Versionen <xref:System.Windows.Forms.ToolBar> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.  
   

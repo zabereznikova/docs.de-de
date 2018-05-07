@@ -1,30 +1,18 @@
 ---
 title: Permanenter Duplex
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-duplex"></a>Permanenter Duplex
 Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter duplexnachrichtenaustausch mithilfe der messagingaktivitäten in Windows Workflow Foundation (WF). Ein permanenter Duplexnachrichtenaustausch ist ein bidirektionaler Nachrichtenaustausch, der im Verlauf eines langen Zeitraums stattfindet. Die Lebensdauer des Nachrichtenaustauschs ist möglicherweise länger als die Lebensdauer des Kommunikationskanals und die Lebensdauer der Dienstinstanzen im Arbeitsspeicher.  
   
 ## <a name="sample-details"></a>Beispieldetails  
- In diesem Beispiel zwei [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Dienste mithilfe von Windows Workflow Foundation implementiert sind so konfiguriert, dass einen permanenter duplexnachrichtenaustausch haben. Der permanente duplexnachrichtenaustausch besteht aus zwei unidirektionalen Nachrichten über MSMQ gesendet und eine Korrelation zwischen verwenden [.NET Context Exchange](http://go.microsoft.com/fwlink/?LinkID=166059). Die Nachrichten werden mit den Messagingaktivitäten <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive> gesendet. Der .NET-Kontextaustausch wird verwendet, um die Rückrufadresse in den gesendeten Nachrichten anzugeben. Beide Dienste werden mit WAS (Windows Process Activation Services) gehostet und sind konfiguriert, um Persistenz der Dienstinstanzen zu ermöglichen.  
+ In diesem Beispiel sind zwei Windows Communication Foundation (WCF)-Dienste, die mithilfe von Windows Workflow Foundation implementiert haben einen permanenten duplexnachrichtenaustausch konfiguriert. Der permanente duplexnachrichtenaustausch besteht aus zwei unidirektionalen Nachrichten über MSMQ gesendet und eine Korrelation zwischen verwenden [.NET Context Exchange](http://go.microsoft.com/fwlink/?LinkID=166059). Die Nachrichten werden mit den Messagingaktivitäten <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive> gesendet. Der .NET-Kontextaustausch wird verwendet, um die Rückrufadresse in den gesendeten Nachrichten anzugeben. Beide Dienste werden mit WAS (Windows Process Activation Services) gehostet und sind konfiguriert, um Persistenz der Dienstinstanzen zu ermöglichen.  
   
  Der erste Dienst (Service1.xamlx) sendet eine Anforderung an den zweiten Dienst (Service2.xamlx), einige Arbeiten zu erledigen. Sobald die Arbeit abgeschlossen ist, sendet Service2.xamlx eine Benachrichtigung an Service1.xamlx zurück, um anzugeben, dass die Arbeit abgeschlossen ist. Eine Konsolenanwendung für Workflows richtet die Warteschlangen ein, die die Dienste überwachen, und sendet die ursprüngliche Startnachricht, um Service1.xamlx zu aktivieren. Sobald Service1.xamlx die Benachrichtigung von Service2.xamlx empfangen hat, dass die angeforderte Arbeit abgeschlossen ist, speichert Service1.xamlx das Ergebnis in einer XML-Datei. Während des Wartens auf die Rückrufmeldung behält Service1.xamlx den Instanzzustand mit dem standardmäßigen <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> bei. Service2.xamlx behält den Instanzzustand als Teil des Abschlusses der von Service1.xamlx angeforderten Arbeit bei.  
   
@@ -190,6 +178,6 @@ Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter dup
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

@@ -1,26 +1,15 @@
 ---
 title: Implementieren einer impliziten Transaktion mit Transaktionsbereich
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementieren einer impliziten Transaktion mit Transaktionsbereich
 Mit der <xref:System.Transactions.TransactionScope>-Klasse lassen sich Codeblöcke einfach als an einer Transaktion beteiligte Codeblöcke markieren, ohne die Transaktion selbst bearbeiten zu müssen. Ein Transaktionsbereich kann die Ambient-Transaktion automatisch auswählen und verwalten. Wegen ihrer einfachen Verwendung und Effizienz wird empfohlen, die <xref:System.Transactions.TransactionScope>-Klasse zur Entwicklung von Transaktionsanwendungen zu verwenden.  
@@ -51,7 +40,7 @@ Mit der <xref:System.Transactions.TransactionScope>-Klasse lassen sich Codeblöc
 ## <a name="rolling-back-a-transaction"></a>Rollback einer Transaktion  
  Wenn ein Rollback für eine Transaktion ausgeführt werden soll, dürfen Sie die <xref:System.Transactions.TransactionScope.Complete%2A>-Methode nicht im Transaktionsbereich aufrufen. Zum Beispiel können Sie eine Ausnahme im Bereich auslösen. Der Rollback wird für die Transaktion ausgeführt, die im Bereich liegt.  
   
-##  <a name="ManageTxFlow"></a>Verwalten von mithilfe von TransactionScopeOption Transaktionsfluss  
+##  <a name="ManageTxFlow"></a> Verwalten von mithilfe von TransactionScopeOption Transaktionsfluss  
  Transaktionsbereiche können geschachtelt werden, indem eine Methode aufgerufen wird, die ein <xref:System.Transactions.TransactionScope>-Objekt innerhalb einer Methode verwendet, die ihren eigenen Bereich verwendet. Die `RootMethod`-Methode im folgenden Beispiel veranschaulicht dies.  
   
 ```csharp  

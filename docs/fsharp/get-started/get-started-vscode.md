@@ -1,20 +1,17 @@
 ---
 title: Erste Schritte mit f# in Visual Studio-Code
 description: Informationen Sie zum Verwenden von f# mit Visual Studio-Code und der Ionide-Plug-in-Suite.
-keywords: Visual f#, f#, funktionalen Programmierung, .NET, Visual Studio-Code von Vscode, Ionide
 author: cartermp
 ms.author: phcart
 ms.date: 02/28/2018
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c452e791b27bc3f32e137a515011d953005344c6
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
-ms.translationtype: MT
+ms.openlocfilehash: 43fed76a57bd7749a7f22a2039ad625e3d26d132
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Erste Schritte mit f# in Visual Studio-Code
 
@@ -190,7 +187,7 @@ Im Text der Funktion sehen Sie zwei verschiedene Teilen:
 
    [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
 
-2. Ein [`if..then..else`](../language-reference/conditional-expressions-if-then-else.md) welche überprüft, ob das erste Zeichen ein Vokal, und einen Rückgabewert aus der Eingabezeichen erstellt nach dem ersten Zeichen je Ausdruck wurde ein Vokal oder nicht:
+2. Ein [`if.then.else`](../language-reference/conditional-expressions-if-then-else.md) welche überprüft, ob das erste Zeichen ein Vokal, und einen Rückgabewert aus der Eingabezeichen erstellt nach dem ersten Zeichen je Ausdruck wurde ein Vokal oder nicht:
 
    [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L8-L11)]
 
@@ -198,7 +195,7 @@ Der Fluss der `toPigLatin` daher:
 
 Überprüfen Sie, ob das erste Zeichen des eingegebenen Worts ein Vokal ist.  Wenn dies der Fall, fügen Sie am Ende des Worts "Yay".  Andernfalls verschieben Sie das erste Zeichen bis zum Ende des Worts, und fügen Sie "Weg" hinzu.
 
-Letzte Gemeinsamkeit zu diesem Beachten Sie: Es ist keine explizite Anweisung Rückgabe aus der Funktion im Gegensatz zu vielen weiteren Sprachen an es.  Dies liegt daran f# ausdrucksbasiert ist, und der letzte Ausdruck im Text einer Funktion der Rückgabewert ist.  Da `if..then..else` ist selbst ein Ausdruck, der Hauptteil der `then` Block oder im Textteil der `else` Block wird je nach den Eingabewert zurückgegeben werden.
+Letzte Gemeinsamkeit zu diesem Beachten Sie: Es ist keine explizite Anweisung Rückgabe aus der Funktion im Gegensatz zu vielen weiteren Sprachen an es.  Dies liegt daran f# ausdrucksbasiert ist, und der letzte Ausdruck im Text einer Funktion der Rückgabewert ist.  Da `if.then.else` ist selbst ein Ausdruck, der Hauptteil der `then` Block oder im Textteil der `else` Block wird je nach den Eingabewert zurückgegeben werden.
 
 ## <a name="moving-your-script-code-into-the-implementation-file"></a>Verschieben Sie den Skriptcode in der Implementierungsdatei
 

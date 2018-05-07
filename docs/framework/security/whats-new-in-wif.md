@@ -1,24 +1,14 @@
 ---
 title: Neuerungen in Windows Identity Foundation 4.5
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 81506cfb0c08bbbd99d76dc76010fdb933623e0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0a5bc7d53405966bcb86750780473c4060d7ced3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Neuerungen in Windows Identity Foundation 4.5
 Die erste Version von Windows Identity Foundation (WIF) ist als eigenständiger Download erhältlich und wird als WIF 3.5 bezeichnet, da sie im .NET 3.5 SP1-Zeitrahmen eingeführt wurde. Ab .NET 4.5 ist WIF Bestandteil von .NET Framework. Da die WIF-Klassen direkt im Framework selbst verfügbar sind, ist eine weitaus umfassendere Integration der anspruchsbasierten Identität in .NET möglich, sodass Ansprüche einfacher verwendet werden können. Anwendungen, die für WIF 3.5 geschrieben wurden, müssen geändert werden, um das neue Modell nutzen zu können. Weitere Informationen finden Sie unter [Richtlinien für die Migration einer mit WIF 3.5 bis WIF 4.5 erstellten Anwendung](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  

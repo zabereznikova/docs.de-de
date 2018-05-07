@@ -2,11 +2,11 @@
 title: '&lt;message&gt; von &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: d3449735222d02857ee11ef6d20914c1e9a018a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 39d5ce66537fd6c94895205ccc855d7fb631284e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; von &lt;ws2007HttpBinding&gt;
 Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) Element.  
@@ -78,7 +78,7 @@ Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<ws
 |`None`|Dies ermöglicht dem Dienst, mit anonymen Clients zu interagieren. Auf Dienstseite wird dadurch angegeben, dass der Dienst keine Clientanmeldeinformationen erfordert. Auf Clientseite wird dadurch angegeben, dass der Client keine Clientanmeldeinformationen bereitstellt.|  
 |`Certificate`|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss. Wenn der `message`-Sicherheitsmodus verwendet wird und das `negotiateServiceCredential`-Attribut auf `false` festgelegt ist, muss dem Client das Dienstzertifikat zur Verfügung gestellt werden.|  
 |`IssuedToken`|Gibt ein benutzerdefiniertes Token an, das in der Regel von einem Sicherheitstokendienst ausgegeben wird.|  
-|`UserName`|Ermöglicht es dem Dienst, zu fordern, dass der Client unter Verwendung von `UserName`-Anmeldeinformationen authentifiziert werden muss. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] unterstützt kein Kennwortdigest und keine ableitenden Schlüssel mit Kennwörtern sowie keine Verwendung solcher Schlüssel für die Nachrichtensicherheit. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] erzwingt, dass der Transport geschützt wird, wenn `UserName`-Anmeldeinformationen verwendet werden. Dieser Modus führt entweder zu einem interoperablen Austausch oder zu einer nicht interoperablen Aushandlung basierend auf dem `negotiateServiceCredential`-Attribut.|  
+|`UserName`|Ermöglicht es dem Dienst, zu fordern, dass der Client unter Verwendung von `UserName`-Anmeldeinformationen authentifiziert werden muss. WCF unterstützt keine Kennworthashwert ableitenden Schlüssel mit Kennwörtern sowie die Verwendung solcher Schlüssel für die nachrichtensicherheit. Als solche WCF führt dazu, dass der Transport geschützt wird, wenn `UserName` Anmeldeinformationen. Dieser Modus führt entweder zu einem interoperablen Austausch oder zu einer nicht interoperablen Aushandlung basierend auf dem `negotiateServiceCredential`-Attribut.|  
 |`Windows`|Dies ermöglicht den SOAP-Austausch im Rahmen des authentifizierten Kontexts von `Windows`-Anmeldeinformationen. Wenn das `negotiateServiceCredential`-Attribut auf `true` festgelegt ist, wird entweder eine SSPI-Verhandlung oder Kerberos (ein interoperabler Standard) ausgeführt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  

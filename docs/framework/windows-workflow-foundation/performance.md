@@ -1,24 +1,12 @@
 ---
 title: Windows Workflow Foundation 4 – Leistung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4db761d2e6ba0231cb83d4ef5d1ee663c99178c5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 793645c442e960c43f00c3ea3c9b636a4c539706
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 Dustin Metzgar  
@@ -29,12 +17,12 @@ Dustin Metzgar
   
  Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] umfasst eine Hauptrevision von Windows Workflow Foundation (WF) mit umfassenden Investitionen in die Leistung.  Diese neue Revision führt bedeutende Entwurfsänderungen im Gegensatz zu früheren [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Versionen ein, die Bestandteil von .NET Framework 3.0 und [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] waren. Die Architektur wurde auf Grundlage von Programmiermodell, Laufzeit und Tools neu gestaltet, um Leistung und Benutzerfreundlichkeit erheblich zu verbessern. In diesem Thema werden die wichtigen Leistungsmerkmale dieser Revisionen gezeigt und mit denen der vorherigen Version verglichen.  
   
- Die Leistung der einzelnen Workflowkomponenten wurde von WF3 zu WF4 um ein Vielfaches gesteigert.  Dadurch ist der Unterschied zwischen handcodierten [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Diensten und [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Workflowdiensten nur noch sehr klein.  Die Workflowlatenzzeit wurde in WF4 bedeutend verringert.  Die Persistenzleistung wurde um den Faktor 2,5 bis 3,0 gesteigert.  Der Mehraufwand für die Systemüberwachung mittels Workflownachverfolgung wurde bedeutend verringert.  Dies sind überzeugende Gründe für die Migration zu WF4 oder zur Verwendung dieser Technologie in Ihren Anwendungen.  
+ Die Leistung der einzelnen Workflowkomponenten wurde von WF3 zu WF4 um ein Vielfaches gesteigert.  Dies ist der Unterschied zwischen handcodierten Windows Communication Foundation (WCF)-Dienste und [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Workflowdiensten nur noch sehr klein.  Die Workflowlatenzzeit wurde in WF4 bedeutend verringert.  Die Persistenzleistung wurde um den Faktor 2,5 bis 3,0 gesteigert.  Der Mehraufwand für die Systemüberwachung mittels Workflownachverfolgung wurde bedeutend verringert.  Dies sind überzeugende Gründe für die Migration zu WF4 oder zur Verwendung dieser Technologie in Ihren Anwendungen.  
   
 ## <a name="terminology"></a>Terminologie  
  Die in [!INCLUDE[wf1](../../../includes/wf1-md.md)] eingeführte [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Version wird in den übrigen Abschnitten dieses Themas als WF4 bezeichnet.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] wurde in .NET 3.0 eingeführt und wies bis [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1 einige geringfügige Revisionen auf. Die [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Version von Workflow Foundation wird in den restlichen Abschnitten dieses Themas als WF3 bezeichnet. WF3 wird in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] parallel mit WF4 ausgeliefert. Weitere Informationen zum Migrieren von WF3-Artefakten zu WF4 finden Sie unter: [Windows Workflow Foundation 4-Migrationshandbuch](http://go.microsoft.com/fwlink/?LinkID=153313)  
   
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ist Microsofts einheitliches Programmiermodell zum Erstellen von dienstorientierten Anwendungen. Es wurde zuerst als Teil von .NET 3.0 zusammen mit WF3 eingeführt und ist jetzt eine der Hauptkomponenten von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Windows Communication Foundation (WCF) ist Microsofts einheitliches Programmiermodell zum Erstellen von dienstorientierten Anwendungen. Es wurde zuerst als Teil von .NET 3.0 zusammen mit WF3 eingeführt und ist jetzt eine der Hauptkomponenten von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Windows Server AppFabric ist eine Reihe integrierter Technologien, mit denen das Erstellen, Skalieren und Verwalten von Webanwendungen und zusammengesetzten Anwendungen, die unter IIS ausgeführt werden, vereinfacht wird. Es stellt Tools zum Überwachen und Verwalten von Diensten und Workflows bereit. Weitere Informationen finden Sie unter [Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
   

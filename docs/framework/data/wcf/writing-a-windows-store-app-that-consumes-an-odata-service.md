@@ -1,28 +1,14 @@
 ---
 title: Schreiben einer Windows Store-App, die einen OData-Dienst beansprucht
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 ms.assetid: 9917a0e9-ec93-49e5-a366-fd39b892eb8b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3a2eb79e8bf8a5c683c9d48a0a69e4d7f5d270eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 105e7c06c6ca5253b931c1a8e60c6eee28e92cf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-a-windows-store-app-that-consumes-an-odata-service"></a>Schreiben einer Windows Store-App, die einen OData-Dienst beansprucht
 Windows 8 wird eine neue Art von Anwendung eingeführt: die Windows Store-app. Windows Store-Apps haben ein neues Erscheinungsbild, können auf einer Vielzahl von Geräten ausgeführt werden und werden im Windows Store bereitgestellt. In diesem Thema wird beschrieben, wie Sie eine Windows Store-App schreiben, die einen OData-Dienst beansprucht, den NetFlix Catalog OData-Dienst. Weitere Informationen zu Windows Store-Apps, lesen Sie [erste Schritte mit Windows Store-apps](http://msdn.microsoft.com/library/windows/apps/br211386.aspx).  

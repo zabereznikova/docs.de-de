@@ -1,31 +1,19 @@
 ---
 title: WCF Data Services-Clientbibliothek
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e8f5626ab7439b34377ba0200fd232c41017652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 95ca3ab8768b59b52640cfd17d230a544a8b2052
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services-Clientbibliothek
-Mit einem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-basierten Datendienst kann jede Anwendung interagieren, die HTTP-Anforderungen senden und den von einem Datendienst zurückgegebenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed verarbeiten kann. Diese Interoperabilität ermöglicht es Ihnen, aus einer Vielzahl webbasierter Anwendungen auf [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierte Dienste zuzugreifen. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]enthält Clientbibliotheken, die umfangreichere Programmierfunktionen bieten, wenn Sie nutzen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds aus .NET Framework- oder Silverlight-basierten Anwendungen.  
+Mit einem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-basierten Datendienst kann jede Anwendung interagieren, die HTTP-Anforderungen senden und den von einem Datendienst zurückgegebenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed verarbeiten kann. Diese Interoperabilität ermöglicht es Ihnen, aus einer Vielzahl webbasierter Anwendungen auf [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierte Dienste zuzugreifen. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enthält Clientbibliotheken, die umfangreichere Programmierfunktionen bieten, wenn Sie nutzen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds aus .NET Framework- oder Silverlight-basierten Anwendungen.  
   
  Die beiden Hauptklassen der Clientbibliothek sind die <xref:System.Data.Services.Client.DataServiceContext>-Klasse und die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse. Die <xref:System.Data.Services.Client.DataServiceContext>-Klasse kapselt Vorgänge, die für einen angegebenen Datendienst unterstützt werden. Im Gegensatz zu [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Diensten ist der Kontext nicht zustandslos. Aus diesem Grund können Sie die <xref:System.Data.Services.Client.DataServiceContext> Klasse zur Statusverwaltung auf dem Client zwischen Interaktionen mit dem Datendienst, um die Unterstützung von Funktionen wie das Änderungsmanagement. Von dieser Klasse werden auch Identitäten verwaltet und Änderungen nachverfolgt. Die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse stellt eine Abfrage für eine bestimmte Entitätenmenge dar.  
   

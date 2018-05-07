@@ -1,24 +1,12 @@
 ---
 title: Transaktive Warteschlangen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b125158a113079d87eb6926393d5a2b5fe326824
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transacted-queues"></a>Transaktive Warteschlangen
 Dieses Beispiel zeigt die Vorgehensweise beim Integrieren von Warteschlangen und Transaktionen in Windows Workflow Foundation (WF), zuverlässige und skalierbare Dienste zu erstellen. Ein <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` wird im clientworkflow verwendet, zum Senden der Nachricht an eine Warteschlange unter einer Transaktion mithilfe der <xref:System.ServiceModel.NetMsmqBinding>. Ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> wird auf dem Server verwendet, um Meldungen von der Warteschlange zu empfangen und den Zustand des Workflows unter der gleichen Transaktion zu aktualisieren.  
@@ -46,6 +34,6 @@ Dieses Beispiel zeigt die Vorgehensweise beim Integrieren von Warteschlangen und
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedQueues`

@@ -2,11 +2,11 @@
 title: '&lt;message&gt; von &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: f58fadbc3ac3f193232ad075c4973f6ac2f2d1f6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 7f543a91f1d11575df239267a6a8a0b244d99cb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;message&gt; von &lt;basicHttpBinding&gt;
 Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -40,7 +40,7 @@ Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<Ba
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|UserName|-Erfordert der Client an den Server mit einem UserName authentifiziert werden. Diese Anmeldeinformationen müssen angegeben werden, mithilfe der [ \<ClientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ein Kennwort ableitenden Schlüssel mit Kennwörtern sowie die Verwendung solcher Schlüssel für die nachrichtensicherheit unterstützt nicht. Daher setzt [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] prinzipiell durch, dass der Transport geschützt wird, wenn der Identitätsnachweis über den UserName erfolgt. Bei `basicHttpBinding` erfordert dies die Einrichtung eines SSL-Kanals.|  
+|UserName|-Erfordert der Client an den Server mit einem UserName authentifiziert werden. Diese Anmeldeinformationen müssen angegeben werden, mithilfe der [ \<ClientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).<br />-WCF unterstützt Kennworthashwert ableitenden Schlüssel mit Kennwörtern sowie die Verwendung solcher Schlüssel für die nachrichtensicherheit nicht. Aus diesem Grund erzwingt WCF an, dass der Transport geschützt werden, wenn Benutzernamen-Anmeldeinformationen verwendet. Bei `basicHttpBinding` erfordert dies die Einrichtung eines SSL-Kanals.|  
 |Zertifikat|Erfordert, dass der Client über ein Zertifikat beim Server authentifiziert wird. In diesem Fall muss die Clientanmeldeinformationen angegeben werden mit [ \<ClientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) und [ \<ClientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md). Außerdem muss für den Fall, dass der Nachrichtensicherheitsmodus verwendet wird, dem Client das Dienstzertifikat bereitgestellt werden. Die Dienstanmeldeinformationen in diesem Fall muss angegeben werden mit <xref:System.ServiceModel.Description.ClientCredentials> Klasse oder `ClientCredentials` -verhaltenselement und durch Angabe des Diensts-Zertifikat mithilfe der [ \<ServiceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  

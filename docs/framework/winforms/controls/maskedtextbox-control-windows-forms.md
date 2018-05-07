@@ -1,14 +1,6 @@
 ---
 title: MaskedTextBox-Steuerelement (Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - MaskedTextBox
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4e1beb6311604de5d0c59a29de2d1b6c50c2993
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84e01e3c8b2275f910c7daf3de31d1ffbe891171
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox-Steuerelement (Windows Forms)
 Dieses Thema enthält links zu weiteren Informationen zu den `MaskedTextBox` Steuerelement.  
@@ -39,7 +25,7 @@ Dieses Thema enthält links zu weiteren Informationen zu den `MaskedTextBox` Ste
  [Gewusst wie: Binden von Daten an das MaskedTextBox-Steuerelement](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
  Veranschaulicht, wie die Daten neu zu formatieren, wenn Daten in der Datenbank nicht übereinstimmt, das durch Ihre Maskendefinition erwartete Format ist.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.MaskedTextBox>  
  Die primäre Klasse für die Implementierung des maskierten Textfeld-Steuerelement.  
   

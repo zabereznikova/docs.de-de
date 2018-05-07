@@ -1,29 +1,15 @@
 ---
 title: Datums- und Zeitdaten
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-and-time-data"></a>Datums- und Zeitdaten
 SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeitinformationen. Die neuen Datentypen beinhalten separate Typen für Datum und Uhrzeit sowie erweiterte Datentypen mit einem größerem Bereich, höherer Präzision und Zeitzonenermittlung. Ab .NET Framework Version 3.5 Service Pack (SP) 1 bietet der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) vollständige Unterstützung für alle neuen Funktionen des SQL Server 2008-Datenbankmoduls. Sie müssen .NET Framework 3.5 SP1 (oder höher) installieren, um diese neuen Funktionen mit SqlClient zu verwenden.  
@@ -44,7 +30,7 @@ SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeiti
 |`date`|Der Bereich der gültigen Werte für den `date`-Datentyp reicht vom 1. Januar 0001 bis zum 31. Dezember 9999 mit einer Genauigkeit von einem Tag. Der Standardwert ist der 1. Januar 1900. Die Speichergröße beträgt 3 Bytes.|  
 |`time`|Der `time`-Datentyp speichert reine Uhrzeitwerte im 24-Stunden-Format. Der Bereich der gültigen Werte des `time`-Datentyps reicht von 00:00:00.0000000 bis 23:59:59.9999999 mit einer Genauigkeit von 100 Nanosekunden. Der Standardwert ist 00:00:00.0000000 Uhr, also Mitternacht. Der `time`-Datentyp unterstützt eine benutzerdefinierte Genauigkeit der Sekundenbruchteile, und die Speichergröße variiert je nach angegebener Genauigkeit zwischen 3 und 6 Bytes.|  
 |`datetime2`|Der `datetime2`-Datentyp fasst den Gültigkeitsbereich und die Genauigkeit der Datentypen `date` und `time` in einem Datentyp zusammen.<br /><br /> Die Standardwerte und Formate der Zeichenfolgenliterale sind identisch mit denen der Datentypen `date` und `time`.|  
-|`datetimeoffset`|Der `datetimeoffset`-Datentyp verfügt über alle Funktionen von `datetime2` und über einen zusätzlichen Zeitzonenoffset. Der Zeitzonenoffset wird dargestellt als [+ &#124;-] hh: mm. "HH" sind zwei Ziffern im Bereich von 00 bis 14, die für die Anzahl der Stunden in der Zeitzonenangabe stehen. "MM" sind zwei Ziffern im Bereich von 00 bis 59, die zur Angabe der zusätzlichen Minuten in der Zeitzonenangabe dienen. Uhrzeitformate werden mit einer Genauigkeit von bis zu 100 Nanosekunden unterstützt. Das obligatorische Pluszeichen (+) oder Minuszeichen (-) in der Zeitzonenangabe gibt an, ob der jeweilige Wert zum UTC-Wert (Universal Time Coordinate, koordinierte Weltzeit, auch als "Greenwich Mean Time" bekannt) addiert oder von diesem subtrahiert werden muss, um die lokale Uhrzeit zu ermitteln.|  
+|`datetimeoffset`|Der `datetimeoffset`-Datentyp verfügt über alle Funktionen von `datetime2` und über einen zusätzlichen Zeitzonenoffset. Der Zeitzonenoffset wird dargestellt als [+&#124;-] hh: mm. "HH" sind zwei Ziffern im Bereich von 00 bis 14, die für die Anzahl der Stunden in der Zeitzonenangabe stehen. "MM" sind zwei Ziffern im Bereich von 00 bis 59, die zur Angabe der zusätzlichen Minuten in der Zeitzonenangabe dienen. Uhrzeitformate werden mit einer Genauigkeit von bis zu 100 Nanosekunden unterstützt. Das obligatorische Pluszeichen (+) oder Minuszeichen (-) in der Zeitzonenangabe gibt an, ob der jeweilige Wert zum UTC-Wert (Universal Time Coordinate, koordinierte Weltzeit, auch als "Greenwich Mean Time" bekannt) addiert oder von diesem subtrahiert werden muss, um die lokale Uhrzeit zu ermitteln.|  
   
 > [!NOTE]
 >  Weitere Informationen zur Verwendung des `Type System Version`-Schlüsselworts finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  

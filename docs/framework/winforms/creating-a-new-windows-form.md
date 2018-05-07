@@ -1,27 +1,15 @@
 ---
-title: "Erstellen neuer Windows Forms"
-ms.custom: 
+title: Erstellen neuer Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5f2769921241216d60c3ed1bb25edcf238830d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ddceec86938ef5f500c38eb90004dc1f9d11b122
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-new-windows-form"></a>Erstellen neuer Windows Forms
 Dieses Thema enthält Links zu Themen, in denen beschrieben wird, wie Sie Ihre erste Windows Forms-Anwendung erstellen. Darüber hinaus befassen sich die Themen in diesem Abschnitt mit der Einführung von einigen grundlegenden Begriffen und Richtlinien, die Sie kennen sollten, wenn Sie mit der Erstellung einer Windows Forms-Anwendung beginnen. Um den Lerneffekt zu Windows Forms-Anwendung finden Sie der zugehörigen Themenliste unter den Steuerelementen in diese, Ereignisse und Behandlung von Ereignissen und zum Behandeln der Eingaben des Benutzers verwendet werden können.  
@@ -33,7 +21,7 @@ Dieses Thema enthält Links zu Themen, in denen beschrieben wird, wie Sie Ihre e
  [Gewusst wie: Erstellen einer Windows Forms-Anwendung über die Befehlszeile](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md)  
  Beschreibt, wie eine einfache Windows Form erstellt und über die Befehlszeile kompiliert wird.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Form>  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   

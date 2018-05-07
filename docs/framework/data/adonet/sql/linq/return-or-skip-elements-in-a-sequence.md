@@ -1,27 +1,15 @@
 ---
-title: "Zurückgeben oder Überspringen von Elementen in einer Sequenz"
-ms.custom: 
+title: Zurückgeben oder Überspringen von Elementen in einer Sequenz
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b5d52fd3326448c428dac16c210321889f83ea23
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 228de9f3b92d45866c98976be08b84988a2db8d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zurückgeben oder Überspringen von Elementen in einer Sequenz
 Verwenden Sie den <xref:System.Linq.Queryable.Take%2A>-Operator, um eine bestimmte Anzahl von Elementen in einer Sequenz zurückzugeben und den Rest zu überspringen.  
@@ -31,7 +19,7 @@ Verwenden Sie den <xref:System.Linq.Queryable.Take%2A>-Operator, um eine bestimm
 > [!NOTE]
 >  <xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> weisen bestimmte Einschränkungen auf, wenn sie für Abfragen in SQL Server 2000 verwendet werden. Weitere Informationen finden Sie unter dem Eintrag "Überspringen und Behandeln von Ausnahmen in SQLServer 2000" in [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]übersetzt <xref:System.Linq.Queryable.Skip%2A> mithilfe einer Unterabfrage mit dem SQL- `NOT EXISTS` Klausel. Diese Übersetzung weist die folgenden Einschränkungen auf:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt <xref:System.Linq.Queryable.Skip%2A> mithilfe einer Unterabfrage mit dem SQL- `NOT EXISTS` Klausel. Diese Übersetzung weist die folgenden Einschränkungen auf:  
   
 -   Das Argument muss ein Satz sein. Multisets werden nicht unterstützt, auch dann nicht, wenn diese geordnet sind.  
   

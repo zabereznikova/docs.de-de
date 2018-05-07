@@ -1,24 +1,12 @@
 ---
 title: Synchrone Szenarien mit HTTP, TCP oder benannten Pipes
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Synchrone Szenarien mit HTTP, TCP oder benannten Pipes
 In diesem Thema werden die Aktivitäten und Übertragungen für verschiedene synchrone Anforderungs-/Antwortszenarien beschrieben. Dabei werden HTTP, TCP oder benannte Pipes mit einem Singlethreadclient verwendet. Finden Sie unter [asynchrone Szenarien mit HTTP, TCP oder Named Pipe-](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) für Weitere Informationen zu Multithread-Anforderungen.  
@@ -56,7 +44,7 @@ In diesem Thema werden die Aktivitäten und Übertragungen für verschiedene syn
 #### <a name="closing-a-service-host"></a>Schließen eines Diensthosts  
  Die Aktivität "Schließen" (Z) des ServiceHost wird aus der Umgebungsaktivität erstellt.  
   
- ![Synchrone Szenarien mit HTTP- &#47; TCP &#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "Sync")  
+ ![Synchrone Szenarien mit HTTP&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "Sync")  
   
  In \<A: Name >, `A` ein shortcutsymbol, das die Aktivität im vorangegangenen Text und in Tabelle 3 beschreibt. `Name` ist ein verkürzter Name der Aktivität.  
   

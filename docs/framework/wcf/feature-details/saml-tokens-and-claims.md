@@ -1,14 +1,6 @@
 ---
 title: SAML-Token und SAML-Ansprüche
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,20 +10,14 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 374fde23a1bf8df704f76500b4808c16d142ddd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saml-tokens-and-claims"></a>SAML-Token und SAML-Ansprüche
-Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von Ansprüchen. Standardmäßig werden von SAML-Token [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet in verbundsicherheitsszenarien werden *ausgestellte Token*.  
+Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von Ansprüchen. SAML-Token, die Windows Communication Foundation (WCF) verwendet wird, in verbundsicherheitsszenarien sind standardmäßig *ausgestellte Token*.  
   
  SAML-Token enthalten Anweisungen, die Sets mit Ansprüchen sind, die von einer Entität über eine andere Entität gemacht wurden. In Verbundsicherheitsszenarien werden Anweisungen beispielsweise von einem Sicherheitstokendienst über einen Benutzer im System getroffen. Der Sicherheitstokendienst signiert das SAML-Token, um die Richtigkeit der Anweisungen im Token zu bestätigen. Darüber hinaus ist das SAML-Token kryptografischen Schlüsselmaterialien zugewiesen, wobei der Benutzer des SAML-Tokens beweisen muss, dass er um diese Materialien weiß. Dieser Beleg reicht aus, um die vertrauende Seite zu überzeugen, dass das SAML-Token tatsächlich für diesen Benutzer ausgestellt wurde. Ein typisches Szenario sieht folgendermaßen aus:  
   
@@ -44,7 +30,7 @@ Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von An
 4.  Die Signatur über dem SAML-Token zeigt der vertrauenden Seite, dass der Sicherheitstokendienst das Token ausgestellt hat. Die mit dem Prüfschlüssel erstellte Nachrichtensignatur zeigt der vertrauenden Seite, dass das Token für den Client ausgestellt wurde.  
   
 ## <a name="from-claims-to-samlattributes"></a>Von Ansprüchen zu SamlAttributes  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden Anweisungen in SAML-Token als <xref:System.IdentityModel.Tokens.SamlAttribute>-Objekte modelliert, die direkt aus <xref:System.IdentityModel.Claims.Claim>-Objekten gefüllt werden können, vorausgesetzt das <xref:System.IdentityModel.Claims.Claim>-Objekt hat die<xref:System.IdentityModel.Claims.Claim.Right%2A>-Eigenschaft des Typs <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> und die <xref:System.IdentityModel.Claims.Claim.Resource%2A>-Eigenschaft des Typs <xref:System.String>. Zum Beispiel:  
+ In WCF-Anweisungen in SAML-Token erstellt werden, als <xref:System.IdentityModel.Tokens.SamlAttribute> Objekte, die direkt vom aufgefüllt werden, können <xref:System.IdentityModel.Claims.Claim> bereitgestellten Objekte die <xref:System.IdentityModel.Claims.Claim> Objekt verfügt über eine <xref:System.IdentityModel.Claims.Claim.Right%2A> Eigenschaft <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> und die <xref:System.IdentityModel.Claims.Claim.Resource%2A> Eigenschaft hat den Typ <xref:System.String>. Zum Beispiel:  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  

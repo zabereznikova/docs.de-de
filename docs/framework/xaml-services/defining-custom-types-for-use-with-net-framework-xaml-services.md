@@ -1,28 +1,14 @@
 ---
-title: "Definieren von benutzerdefinierten Typen für die Verwendung mit .NET Framework-XAML-Diensten"
-ms.custom: 
+title: Definieren von benutzerdefinierten Typen für die Verwendung mit .NET Framework-XAML-Diensten
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9edc7baa1a540a71997cf5b1ed010ad5c7960d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definieren von benutzerdefinierten Typen für die Verwendung mit .NET Framework-XAML-Diensten
 Wenn Sie definieren benutzerdefinierter Typen, die Geschäftsobjekte oder Typen, die keine Abhängigkeit auf bestimmten Frameworks sind, stehen bestimmte bewährten Methoden für XAML, die Sie befolgen können. Wenn Sie diese Methoden befolgen, können .NET Framework-XAML-Dienste und die XAML-Readern und XAML-Writern die Verwendung von XAML-Eigenschaften des Typs ermitteln und geben sie entsprechende Darstellung in einem XAML-Knotenstream mit XAML-Typsystem. Dieses Thema beschreibt bewährte Methoden für Typdefinitionen, Memberdefinitionen und CLR-Typen oder Member Attributierung.  
@@ -103,7 +89,7 @@ Wenn Sie definieren benutzerdefinierter Typen, die Geschäftsobjekte oder Typen,
  Denken Sie daran, dass der Wert für diese Methode die Eingabe aus der XAML-Verwendung in der Regel in Attributform stammen. In Attributform müssen Wert Konverter-Unterstützung für die eine Textsyntax vorhanden sein, und Sie Attribut auf die `Get` *PropertyName* Accessor.  
   
 ### <a name="attachable-member-stores"></a>Anfügbare Member speichert  
- Die Zugriffsmethoden sind in der Regel nicht ausreichend, um bieten eine Möglichkeit zum anfügbaren Members-Werte in einem Objektdiagramm zu platzieren oder zum Abrufen von Werten aus dem Objektdiagramm und korrekt zu serialisieren. Zum Bereitstellen dieser Funktionalität der `target` Objekte in den vorherigen Accessorsignaturen müssen zum Speichern von Werten in der Lage sein. Speichermechanismus sollte mit dem Prinzip des anfügbaren Members entsprechen, die die Member Zielen handelt, in denen anfügbaren Members nicht in der Liste der Member ist. .NET Framework XAML Services stellt eine Implementierung, die auch für anfügbaren Members über die APIs speichert <xref:System.Xaml.IAttachedPropertyStore> und <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore>wird durch die Verwendung von XAML-Writer verwendet, um die Implementierung zu ermitteln und implementiert werden sollte, für den Typ, der die `target` Accessor. Die statische <xref:System.Xaml.AttachablePropertyServices> APIs werden verwendet, im Text der Zugriffsmethoden und verweisen auf anfügbaren Members von seiner <xref:System.Xaml.AttachableMemberIdentifier>.  
+ Die Zugriffsmethoden sind in der Regel nicht ausreichend, um bieten eine Möglichkeit zum anfügbaren Members-Werte in einem Objektdiagramm zu platzieren oder zum Abrufen von Werten aus dem Objektdiagramm und korrekt zu serialisieren. Zum Bereitstellen dieser Funktionalität der `target` Objekte in den vorherigen Accessorsignaturen müssen zum Speichern von Werten in der Lage sein. Speichermechanismus sollte mit dem Prinzip des anfügbaren Members entsprechen, die die Member Zielen handelt, in denen anfügbaren Members nicht in der Liste der Member ist. .NET Framework XAML Services stellt eine Implementierung, die auch für anfügbaren Members über die APIs speichert <xref:System.Xaml.IAttachedPropertyStore> und <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore> wird durch die Verwendung von XAML-Writer verwendet, um die Implementierung zu ermitteln und implementiert werden sollte, für den Typ, der die `target` Accessor. Die statische <xref:System.Xaml.AttachablePropertyServices> APIs werden verwendet, im Text der Zugriffsmethoden und verweisen auf anfügbaren Members von seiner <xref:System.Xaml.AttachableMemberIdentifier>.  
   
 ## <a name="xaml-related-clr-attributes"></a>XAML-bezogene CLR-Attributen  
  Attributierung ordnungsgemäß Ihre Typen, Member und Assemblys ist wichtig, in der Reihenfolge nach der Verwendung von XAML-System Typinformationen für .NET Framework XAML Services-Bericht. Dies ist relevant, wenn Sie beabsichtigen, Ihre Typen für die Verwendung mit Verwendung von XAML-Systemen, die direkt auf .NET Framework XAML Services XAML-Readern und XAML-Writer basieren, oder wenn Sie definieren, oder verwenden ein XAML-Writern Framework, das auf die XAML-Readern und XAML-Writern basiert.  

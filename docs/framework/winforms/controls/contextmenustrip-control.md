@@ -1,28 +1,16 @@
 ---
 title: ContextMenuStrip-Steuerelement
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - context menus
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 318ad936a5977f8a2dcb0a9de7cf1c5c3f7b52b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45b37a3cc542295368a9304cb49078d88c347228
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip-Steuerelement
 Das <xref:System.Windows.Forms.ContextMenuStrip>-Steuerelement stellt ein Kontextmenü bereit, das Sie einem Steuerelement zuordnen.  
@@ -48,7 +36,7 @@ Das <xref:System.Windows.Forms.ContextMenuStrip>-Steuerelement stellt ein Kontex
   
  Siehe auch [ContextMenuStrip-Aufgaben-Dialogfeld](http://msdn.microsoft.com/library/ms233646\(v=vs.110\)) oder [ContextMenuStrip-Elementauflistungs-Editor](http://msdn.microsoft.com/library/ms233641\(v=vs.110\)).  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.MenuStrip>  
  Beschreibt die Funktionen der <xref:System.Windows.Forms.MenuStrip>-Klasse, die ein Menüsystem für ein Formular bereitstellt.  
   

@@ -1,27 +1,15 @@
 ---
-title: "PrintDocument-Komponente (Windows Forms)"
-ms.custom: 
+title: PrintDocument-Komponente (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PrintDocument component [Windows Forms]
 - printing [Windows Forms], documents
 ms.assetid: 5af6a51d-66f6-43cd-a8cd-d64eb18fe7e7
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c65d90b39dde9adaae3a6711c978383eb92c4480
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f3238d3afdd8485a3a04037a0fe252169acfc06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument-Komponente (Windows Forms)
 Die `PrintDocument`-Komponente von Windows Forms wird verwendet, um die Eigenschaften festzulegen, die beschreiben, was gedruckt werden soll, und das Dokument anschließend in Windows-basierten Anwendungen zu drucken. Sie kann zusammen mit der <xref:System.Windows.Forms.PrintDialog>-Komponente verwendet werden, um alle Aspekte des Druckens eines Dokuments zu steuern.  
@@ -30,7 +18,7 @@ Die `PrintDocument`-Komponente von Windows Forms wird verwendet, um die Eigensch
  [Übersicht über die PrintDocument-Komponente](../../../../docs/framework/winforms/controls/printdocument-component-overview-windows-forms.md)  
  Stellt die allgemeinen Konzepte der `PrintDocument`-Komponente vor, über die Sie die Eigenschaften festlegen können, mit denen beschrieben wird, was gedruckt werden soll, und die den jeweiligen Druckvorgang in einer Windows-basierten Anwendung startet.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Drawing.Printing.PrintDocument>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   

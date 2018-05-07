@@ -1,14 +1,6 @@
 ---
 title: ICorDebugNativeFrame2::GetStackParameterSize-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugNativeFrame2.GetStackParameterSize Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa7e67c252f2ece16c072e22d0333e085fbc4f65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 76ff2e502859bff27ee29a280e0d247ca1bbf1e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize-Methode
 Gibt die kumulierte Größe der Parameter auf dem Stapel von Betriebssystemen X86 zurück.  
@@ -54,9 +42,9 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Größe des Stapels wurde erfolgreich zurückgegeben.|  
-|S_FALSE|`GetStackParameterSize`auf einer Plattform nicht X86 aufgerufen wurde.|  
+|S_FALSE|`GetStackParameterSize` auf einer Plattform nicht X86 aufgerufen wurde.|  
 |E_FAIL|`The size of the parameters could not be returned`|  
-|E_INVALIDARG|`pSize`Ist `null`.|  
+|E_INVALIDARG|`pSize` ist `null`.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
@@ -70,7 +58,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICorDebugNativeFrame2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  

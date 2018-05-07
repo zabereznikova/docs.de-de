@@ -1,23 +1,12 @@
 ---
-title: "Verwenden der InvokePowerShell-Aktivität"
-ms.custom: 
+title: Verwenden der InvokePowerShell-Aktivität
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4cf7092d6eac4fc2d70c4606f4a76f3a83ed9dcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-invokepowershell-activity"></a>Verwenden der InvokePowerShell-Aktivität
 Im InvokePowerShell-Beispiel wird veranschaulicht, wie Windows PowerShell-Befehle mit der `InvokePowerShell`-Aktivität aufgerufen werden.  
@@ -35,7 +24,7 @@ Im InvokePowerShell-Beispiel wird veranschaulicht, wie Windows PowerShell-Befehl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -205,7 +194,7 @@ new ForEach<PSObject>
   
 1.  Wenn das Verweisen auf die `InvokePowerShell`-Aktivitätsassembly oder das Projekt von einem anderen Projekt zu einem Buildfehler führt, müssen Sie das `<SpecificVersion>True</SpecificVersion>`-Element möglicherweise manuell der CSPROJ-Datei des neuen Projekts unter der Zeile, die auf `InvokePowerShell` verweist, hinzufügen.  
   
-2.  Wenn Windows PowerShell nicht installiert ist, wird die folgende Fehlermeldung in Visual Studio angezeigt, als Sie hinzufügen, eine `InvokePowerShell` Aktivität in einem Workflow:`Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
+2.  Wenn Windows PowerShell nicht installiert ist, wird die folgende Fehlermeldung in Visual Studio angezeigt, als Sie hinzufügen, eine `InvokePowerShell` Aktivität in einem Workflow: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
   
 3.  In Windows PowerShell 2.0 schlägt das programmgesteuerte Aufrufen von `$input.MoveNext()` fehl, und Skripte, die `$input.MoveNext()` verwenden, führen zu unbeabsichtigten Fehlern und Ergebnissen. Um dieses Problem zu vermeiden, ziehen Sie die Verwendung des PowerShell-Verbs `foreach` in Betracht, anstatt bei der Wiederholung eines Arrays `MoveNext()` aufzurufen.  
   
@@ -214,6 +203,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`
