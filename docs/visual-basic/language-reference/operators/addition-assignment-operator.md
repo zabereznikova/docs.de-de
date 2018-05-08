@@ -1,12 +1,6 @@
 ---
 title: +=-Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ac8f5679aa90c50c15c33a957cfc75d9ccecde6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f12a0560d984f871110c02f1df2c2ec42b68809b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>+=-Operator (Visual Basic)
 Fügt den Wert eines numerischen Variablen oder einer Eigenschaft den Wert eines numerischen Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft. Kann auch zum Verketten verwendet eine `String` Ausdruck, der eine `String` Variablen oder einer Eigenschaft und das Ergebnis der Variablen oder Eigenschaft zuzuweisen.  
