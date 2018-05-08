@@ -1,12 +1,6 @@
 ---
 title: 'Gewusst wie: Vergleichen einer Zeichenfolge mit einem Muster (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
 - pattern matching
@@ -19,19 +13,16 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83433bdb41df0ce40d0979f3f44603f10ba1c7d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aef378bfc32d6deff431a2caac1261a6cd7520c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Gewusst wie: Vergleichen einer Zeichenfolge mit einem Muster (Visual Basic)
 Wenn Sie, ob einen Ausdruck eines ermitteln möchten der [String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md) einem Muster entspricht, dann können Sie mithilfe der [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
- `Like`verfügt über zwei Operanden. Der linke Operand ist ein Zeichenfolgenausdruck, und der Rechte Operand ist eine Zeichenfolge, enthält das Muster für den Abgleich verwendet werden. `Like`Gibt eine `Boolean` Wert, der angibt, ob der Zeichenfolgenausdruck dem Muster entspricht.  
+ `Like` verfügt über zwei Operanden. Der linke Operand ist ein Zeichenfolgenausdruck, und der Rechte Operand ist eine Zeichenfolge, enthält das Muster für den Abgleich verwendet werden. `Like` Gibt eine `Boolean` Wert, der angibt, ob der Zeichenfolgenausdruck dem Muster entspricht.  
   
  Sie können jedes Zeichen in der Zeichenfolgenausdruck für ein bestimmtes Zeichen, ein Platzhalterzeichen, eine Zeichenliste oder einem Bereich von Zeichen übereinstimmen. Die Positionen der Angaben in der Musterzeichenfolge entsprechen die Positionen der Zeichen im Zeichenfolgenausdruck verglichen werden.  
   
@@ -72,7 +63,7 @@ Wenn Sie, ob einen Ausdruck eines ermitteln möchten der [String-Datentyp](../..
      Beachten Sie, dass diese Übereinstimmung Groß-/Kleinschreibung beachtet wird.  
   
 ## <a name="matching-empty-strings"></a>Übereinstimmende leere Zeichenfolgen  
- `Like`behandelt die Sequenz `[]` als eine Zeichenfolge der Länge 0 (null) (`""`). Sie können `[]` zu prüfen, ob der gesamte Zeichenfolgenausdruck leer ist, jedoch können sie überprüfen, ob eine bestimmte Position im Zeichenfolgenausdruck leer ist. Wenn eine leere Position eine der Optionen ist müssen Sie für die Sie verwenden können, testen `Like` mehr als einmal.  
+ `Like` behandelt die Sequenz `[]` als eine Zeichenfolge der Länge 0 (null) (`""`). Sie können `[]` zu prüfen, ob der gesamte Zeichenfolgenausdruck leer ist, jedoch können sie überprüfen, ob eine bestimmte Position im Zeichenfolgenausdruck leer ist. Wenn eine leere Position eine der Optionen ist müssen Sie für die Sie verwenden können, testen `Like` mehr als einmal.  
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Um ein Zeichen im Zeichenfolgenausdruck mit einer Liste von Zeichen oder kein Zeichen  
   

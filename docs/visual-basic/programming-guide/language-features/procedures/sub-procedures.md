@@ -1,13 +1,6 @@
 ---
 title: Sub-Prozeduren (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
 - statement blocks
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3286df1a5babfcf7d6b759ff5c9a920bb44f51ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub-Prozeduren (Visual Basic)
 Ein `Sub` Verfahren besteht aus einer Reihe von Visual Basic-Anweisungen von der `Sub` und `End Sub` Anweisungen. Die `Sub` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die Steuerung an den aufrufenden Code zurückgegeben, aber es wird keinen Wert an den aufrufenden Code zurückgegeben.  
@@ -39,7 +29,7 @@ Ein `Sub` Verfahren besteht aus einer Reihe von Visual Basic-Anweisungen von der
 ## <a name="declaration-syntax"></a>Deklarationssyntax  
  Die Syntax zum Deklarieren einer `Sub` Prozedur lautet wie folgt:  
   
- `[` *Modifizierer* `] Sub` *Subname* `[(` *Parameterlist*  `)]`  
+ `[` *Modifizierer* `] Sub` *Subname* `[(` *Parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -52,11 +42,11 @@ Ein `Sub` Verfahren besteht aus einer Reihe von Visual Basic-Anweisungen von der
   
  Die Syntax für jeden Parameter in der Parameterliste lautet wie folgt:  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *Parametername*`As`*Datatype*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *Parametername*`As`*Datatype*  
   
  Wenn der Parameter optional ist, müssen Sie auch einen Standardwert als Teil der Deklaration angeben. Die Syntax zum Angeben der Standardwert lautet wie folgt:  
   
- `Optional [ByVal | ByRef]`  *Parametername*`As`*Datatype*`=`*"DefaultValue"*   
+ `Optional [ByVal | ByRef]`  *Parametername*`As`*Datatype*`=`*"DefaultValue"*  
   
 ### <a name="parameters-as-local-variables"></a>Parameter als lokale Variablen  
  Wenn die Steuerung an die Prozedur übergeben wird, wird jeder Parameter als lokale Variable behandelt. Dies bedeutet, dass seine Lebensdauer identisch mit der Prozedur ist und der Bereich die gesamte Prozedur ist.  

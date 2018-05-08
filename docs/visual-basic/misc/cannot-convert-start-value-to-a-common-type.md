@@ -1,23 +1,16 @@
 ---
-title: Startwert vom Typ &#39;kann nicht konvertiert werden; &lt;Typ1&gt;&#39; Grenzwert des &#39;&lt; Typ2&gt;&#39; und Step-Wert des &#39;&lt; Typ3&gt;&#39; in einen gemeinsamen Typ
+title: Startwert des Typs kann nicht konvertiert &#39; &lt;Typ1&gt;&#39;, limit-Wert von &#39; &lt;Typ2&gt; &#39; und step-Wert des &#39; &lt;Typ3&gt; &#39; auf eine Allgemeine Typ
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrForLoop_CommonType3
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 04bcc14bf1ce85423c5a5a99659955c62c74d8a5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d2369d58edc43306dc5de0e37ea328862b307ff3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-limit-value-of-39lttype2gt39-and-step-value-of-39lttype3gt39-to-a-common-type"></a>Startwert vom Typ &#39;kann nicht konvertiert werden; &lt;Typ1&gt;&#39; Grenzwert des &#39;&lt; Typ2&gt;&#39; und Step-Wert des &#39;&lt; Typ3&gt;&#39; in einen gemeinsamen Typ
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-limit-value-of-39lttype2gt39-and-step-value-of-39lttype3gt39-to-a-common-type"></a>Startwert des Typs kann nicht konvertiert &#39; &lt;Typ1&gt;&#39;, limit-Wert von &#39; &lt;Typ2&gt; &#39; und step-Wert des &#39; &lt;Typ3&gt; &#39; auf eine Allgemeine Typ
 Die angegebenen `For...Next` -Steuerelementwerte weisen unterschiedliche Typen auf und sind daher ungültig, da sie nicht in einen gemeinsamen Typ konvertiert werden können.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

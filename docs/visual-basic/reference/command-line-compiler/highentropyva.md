@@ -1,22 +1,17 @@
 ---
 title: -Highentropyva (Visual Basic)
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12d40e5acda73786ee88d16bacd9bc5f69400be8
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: fef3f922d3089eaca1762ffe35fa38cfe94baf22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-highentropyva-visual-basic"></a>-Highentropyva (Visual Basic)
 Gibt an, ob eine ausführbare 64-Bit- oder eine ausführbare Datei, die durch die markiert ist die [/Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) Compileroption unterstützt Adresse Space Layout Randomization (ASLR) mit hohen Entropie.  

@@ -1,22 +1,12 @@
 ---
-title: "Einführung in reine funktionale Transformationen (Visual Basic)"
-ms.custom: 
+title: Einführung in reine funktionale Transformationen (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 37dc4520d2ef4795ac906732b35444eeb917a814
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8c382363c757887802ed54b565b24422d0ac7db7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Einführung in reine funktionale Transformationen (Visual Basic)
 Dieser Abschnitt führt Sie in das Thema "funktionale Transformationen" ein und bietet eine Übersicht über die zugrunde liegenden Konzepte und die zugehörigen Sprachkonstrukte. Es werden die Unterschiede zwischen dem Programmieren mit dem objektorientierten Ansatz und dem Programmieren mit der funktionalen Transformation erläutert und Empfehlungen für die Umstellung auf die funktionale Transformation gegeben. In diesem Abschnitt wird die XML-Transformation zu Illustrationszwecken verwendet, funktionale Transformationen können aber auch in vielen anderen Programmierszenarios verwendet werden.  

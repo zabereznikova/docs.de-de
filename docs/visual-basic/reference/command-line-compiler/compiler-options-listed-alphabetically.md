@@ -1,22 +1,16 @@
 ---
 title: Visual Basic Compiler Options Listed Alphabetically
 ms.date: 04/12/2018
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6e95c52c708128267ab6dc79a1b37d21b30bac2
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dc25ff282772cc82b8ebe5d59e729a6a48afa8f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic-Compileroptionen alphabetisch sortiert
 Die Visual Basic-Befehlszeilencompiler wird als Alternative zum Kompilieren von Programmen über die integrierte Entwicklungsumgebung (IDE) von Visual Studio bereitgestellt. Im folgenden finden eine Liste von der Visual Basic Befehlszeilen-Compileroptionen alphabetisch sortiert.  
@@ -37,7 +31,7 @@ Die Visual Basic-Befehlszeilencompiler wird als Alternative zum Kompilieren von 
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Erzeugt Debuginformationen.|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Definiert Symbole für bedingte Kompilierung.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Gibt an, ob die Assembly vollständig oder teilweise signiert wird.|  
-|[-deterministisch](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Bewirkt, dass den Compiler eine Assembly, deren Inhalt im Binärformat über Kompilierungen identisch ist, wenn die Eingaben identisch sind.|
+|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Bewirkt, dass den Compiler eine Assembly, deren Inhalt im Binärformat über Kompilierungen identisch ist, wenn die Eingaben identisch sind.|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie interne Compilerfehler von der Visual Basic-Compiler gemeldet werden sollen.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Gibt die Ausrichtung der Abschnitte der Ausgabedatei an.|  

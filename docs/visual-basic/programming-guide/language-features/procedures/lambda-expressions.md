@@ -1,13 +1,6 @@
 ---
-title: "Lambdaausdrücke (Visual Basic)"
-ms.custom: 
+title: Lambdaausdrücke (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.LambdaFunction
 helpviewer_keywords:
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69ac88d295420277e99058d0f80a5ae1c2ce2e39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambdaausdrücke (Visual Basic)
 Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine ohne Namen, die verwendet werden kann, wo ein Delegat zulässig ist. Lambda-Ausdrücke können Funktionen oder Unterroutinen werden und einzeilige bzw. mehrzeilige werden können. Sie können Werte aus dem aktuellen Bereich an einen Lambda-Ausdruck übergeben.  
@@ -70,7 +60,7 @@ Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine ohne Namen, die verwen
   
 -   Sie können den Datentyp eines Parameters Lambda-Ausdruck angeben, mit dem `As` Schlüsselwort oder den Datentyp des Parameters abgeleitet werden kann. Entweder für alle Parameter müssen angegeben haben, oder alle Datentypen abgeleitet werden müssen.  
   
--   `Optional`und `Paramarray` Parameter sind nicht zulässig.  
+-   `Optional` und `Paramarray` Parameter sind nicht zulässig.  
   
 -   Generische Parameter sind nicht zulässig.  
   
@@ -118,7 +108,7 @@ End Class
   
  Weitere Informationen zum Erstellen und Verwenden von Async-Methoden finden Sie unter [asynchrone Programmierung mit Async und Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-##  <a name="context"></a>Kontext  
+##  <a name="context"></a> Kontext  
  Ein Lambda-Ausdruck verwendet seinen Kontext mit dem Bereich, in dem sie definiert ist. Er verfügt über die gleichen Zugriffsrechte wie der Code in der enthaltenden Bereich geschrieben. Dies schließt den Zugriff auf Member-Variablen, Funktionen und Unterroutinen `Me`, Parameter und lokale Variablen in der enthaltenden Bereich befindet.  
   
  Zugriff auf lokale Variablen und Parameter in der enthaltenden Bereich kann die Lebensdauer des Bereichs hinausgehen. Solange ein Delegat verweist auf einen Lambda-Ausdruck nicht in die Garbagecollection verfügbar ist, wird der Zugriff auf die Variablen in der ursprünglichen Umgebung beibehalten. Im folgenden Beispiel Variable `target` lediglich auf `makeTheGame`, die Methode, in der der Lambda-Ausdruck `playTheGame` definiert ist. Beachten Sie, die den zurückgegebenen Lambda-Ausdruck zugewiesen, `takeAGuess` in `Main`, hat weiterhin Zugriff auf die lokale Variable `target`.  
@@ -127,15 +117,15 @@ End Class
   
  Das folgende Beispiel zeigt die Vielzahl von Zugriffsrechten der geschachtelte Lambda-Ausdrucks. Wenn der zurückgegebene Lambda-Ausdruck ausgeführt wird, aus `Main` als `aDel`, greift er auf diese Elemente:  
   
--   Ein Feld der Klasse in der sie definiert ist:`aField`  
+-   Ein Feld der Klasse in der sie definiert ist: `aField`  
   
--   Eine Eigenschaft der Klasse in der sie definiert ist:`aProp`  
+-   Eine Eigenschaft der Klasse in der sie definiert ist: `aProp`  
   
--   Ein Parameter der Methode `functionWithNestedLambda`, in dem es definiert ist:`level1`  
+-   Ein Parameter der Methode `functionWithNestedLambda`, in dem es definiert ist: `level1`  
   
--   Eine lokale Variable vom `functionWithNestedLambda`:`localVar`  
+-   Eine lokale Variable vom `functionWithNestedLambda`: `localVar`  
   
--   Ein Parameter des Lambda-Ausdrucks, in dem sie geschachtelt ist:`level2`  
+-   Ein Parameter des Lambda-Ausdrucks, in dem sie geschachtelt ist: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   

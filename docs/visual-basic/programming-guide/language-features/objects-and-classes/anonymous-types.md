@@ -1,13 +1,6 @@
 ---
 title: Anonyme Typen (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousType
 helpviewer_keywords:
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 530e21e1595f9bbc3436280418287413e2a48111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonyme Typen (Visual Basic)
 Visual Basic unterstützt anonyme Typen, die Ihnen ermöglichen, Objekte zu erstellen, ohne eine Klassendefinition für den Datentyp zu schreiben. Stattdessen erzeugt der Compiler eine Klasse. Die Klasse hat keinen verwendbaren Namen, erbt direkt von <xref:System.Object>, und enthält die Eigenschaften, die Sie in der Deklaration des Objekts angeben. Da der Name des Datentyps nicht angegeben ist, wird bezeichnet als ein *anonymen Typ*.  
@@ -95,11 +85,11 @@ Visual Basic unterstützt anonyme Typen, die Ihnen ermöglichen, Objekte zu erst
 ## <a name="anonymous-types-from-query-expressions"></a>Anonyme Typen von Abfrageausdrücken  
  Abfrageausdrücke müssen nicht immer die Erstellung von anonymen Typen aufweisen. Wenn möglich, verwenden sie einen vorhandenen Typ zum Speichern der Spaltendaten an. Dies tritt auf, wenn die Abfrage entweder ganze Datensätze aus der Datenquelle oder nur ein Feld aus jedem Datensatz zurückgibt. In den folgenden Codebeispielen `customers` ist eine Auflistung von Objekten von einem `Customer` Klasse. Die Klasse verfügt über zahlreiche Eigenschaften, und Sie können eine oder mehrere dieser Servertypen im Abfrageergebnis in beliebiger Reihenfolge enthalten. In den ersten beiden Beispielen werden keine anonymen Typen erforderlich, da die Abfragen Elemente von benannten Typen auswählen:  
   
--   `custs1`enthält eine Auflistung von Zeichenfolgen, da `cust.Name` ist eine Zeichenfolge.  
+-   `custs1` enthält eine Auflistung von Zeichenfolgen, da `cust.Name` ist eine Zeichenfolge.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2`enthält eine Auflistung von `Customer` Objekten, da jedes Element der `customers` ist ein `Customer` Objekt und das ganze Element von der Abfrage ausgewählt ist.  
+-   `custs2` enthält eine Auflistung von `Customer` Objekten, da jedes Element der `customers` ist ein `Customer` Objekt und das ganze Element von der Abfrage ausgewählt ist.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   

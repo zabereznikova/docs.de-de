@@ -1,11 +1,6 @@
 ---
 title: -Ressource (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /resource compiler option [Visual Basic]
 - -resource compiler option [Visual Basic]
@@ -16,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0de09ec0c778ac55ac7d93aa6d344e2067c46116
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: ab5593455546e65bdd760d9e60532031dc1f12a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-resource-visual-basic"></a>-Ressource (Visual Basic)
 Bettet eine verwaltete Ressource in eine Assembly ein.  
@@ -59,6 +54,6 @@ vbc -res:rf.resource in.vb
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
  [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)  
- [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)  
+ [-Linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)  
  [-Ziel (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

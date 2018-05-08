@@ -1,17 +1,13 @@
 ---
 title: Interpolierte Zeichenfolgen (Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Interpolierte Zeichenfolgen (Visual Basic-Referenz)
 
@@ -61,7 +57,7 @@ Es gibt drei implizite Typkonvertierungen aus einer interpolierten Zeichenfolge:
 
    Das ist das endgültige Ergebnis einer Zeichenfolgeninterpretation. Alle Vorkommen von doppelten geschweiften Klammern („{{“ oder „}}“) werden in einzelne geschweifte Klammern konvertiert. 
 
-2. Die Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.IFormattable>-Variable, die es Ihnen ermöglicht, mehrere Ergebniszeichenfolgen mit kulturspezifischem Inhalt aus einer einzelnen <xref:System.IFormattable>-Instanz zu erstellen. Dies ist nützlich, wenn sie z.B. die richtigen numerischen und Datumsformate für eine einzelne Kultur einfügen möchten.  Alle Vorkommen von doppelten geschweiften Klammern („{{“ oder „}}“) bleiben bestehen, bis Sie die Zeichenfolge formatieren, indem sie die Methode <xref:System.Object.ToString> implizit oder explizit aufrufen.  Alle enthaltenen Interpolationsausdrücke werden in {0}, \{1\} usw. konvertiert.  
+2. Die Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.IFormattable>-Variable, die es Ihnen ermöglicht, mehrere Ergebniszeichenfolgen mit kulturspezifischem Inhalt aus einer einzelnen <xref:System.IFormattable>-Instanz zu erstellen. Dies ist nützlich, wenn sie z.B. die richtigen numerischen und Datumsformate für eine einzelne Kultur einfügen möchten.  Alle Vorkommen von doppelten geschweiften Klammern („{{“ oder „}}“) bleiben bestehen, bis Sie die Zeichenfolge formatieren, indem sie die Methode <xref:System.Object.ToString> implizit oder explizit aufrufen.  Alle enthaltenen interpolationsausdrücke werden in konvertiert {0}, {1}und so weiter.  
 
    Im folgendem Beispiel wird die Reflektion verwendet, um die Member sowie die Felder- und Eigenschaftwerte der <xref:System.IFormattable>-Variablen anzuzeigen, die aus einer interpolierten Zeichenfolge erstellt wird. Außerdem wird die <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>-Variable an die <xref:System.IFormattable>-Methode übergeben.
 
@@ -71,13 +67,13 @@ Es gibt drei implizite Typkonvertierungen aus einer interpolierten Zeichenfolge:
 
 3. Eine interpolierte Zeichenfolge, Konvertierung einer <xref:System.FormattableString> Variable, die eine kombinierte Formatierungszeichenfolge darstellt. Das Überprüfen der zusammengesetzten Zeichenfolge und wie diese als Ergebniszeichenfolge rendert, hilft Ihnen z.B möglicherweise dabei, sich gegen einen Einschleusungsangriff zu schützen, während Sie eine Abfrage erstellen. Ein <xref:System.FormattableString> enthält auch:
 
-      - Ein <xref:System.FormattableString.ToString> Überladung, die erzeugt eine Ergebniszeichenfolge, die für die <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - Eine Überladung von <xref:System.FormattableString.ToString>, die eine Ergebniszeichenfolge für das <xref:System.Globalization.CultureInfo.CurrentCulture>-Element erzeugt.
       
       - Ein <xref:System.FormattableString.Invariant%2A> -Methode, die erzeugt eine Zeichenfolge für die <xref:System.Globalization.CultureInfo.InvariantCulture>.
       
-      - Ein <xref:System.FormattableString.ToString(System.IFormatProvider)> -Methode, die erzeugt eine Ergebniszeichenfolge, die für eine bestimmte Kultur. 
+      - Eine <xref:System.FormattableString.ToString(System.IFormatProvider)>-Methode, die eine Ergebniszeichenfolge für eine bestimmte Kultur erzeugt. 
   
-    Alle Vorkommen von doppelten geschweiften Klammern ("{{" und "}}") bleiben bestehen, bis Sie formatieren.  Alle enthaltenen Interpolationsausdrücke werden in {0}, \{1\} usw. konvertiert.  
+    Alle Vorkommen von doppelten geschweiften Klammern ("{{" und "}}") bleiben bestehen, bis Sie formatieren.  Alle enthaltenen interpolationsausdrücke werden in konvertiert {0}, {1}und so weiter.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
