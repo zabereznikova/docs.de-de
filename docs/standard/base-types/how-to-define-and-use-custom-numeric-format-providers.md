@@ -1,12 +1,12 @@
 ---
 title: 'Gewusst wie: Definieren und Verwenden von benutzerdefinierten numerischen Formatanbietern'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f8f06335d96b3e71f14b3df6b40ef3691c0915f1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eb578b18b3d3ab7ae617873a33745f36e0e8cacb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Gewusst wie: Definieren und Verwenden von benutzerdefinierten numerischen Formatanbietern
 Das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ermöglicht eine umfangreiche Steuerung der Zeichenfolgendarstellung numerischer Werte. Die folgenden Funktionen für die Anpassung des Formats numerischer Werte werden unterstützt:  
@@ -99,7 +99,7 @@ Das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ermöglicht ein
  In diesem Beispiel dient die Methode, die <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> implementiert, als eine Rückrufmethode der <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode. Daher untersucht diese Methode den `formatProvider`-Parameter, um zu ermitteln, ob dieser einen Verweis auf das aktuelle `TelephoneFormatter`-Objekt enthält. Die Methode kann jedoch auch direkt aus dem Code aufgerufen werden. In diesem Fall können Sie den `formatProvider`-Parameter verwenden, um ein <xref:System.Globalization.CultureInfo>- oder <xref:System.Globalization.NumberFormatInfo>-Objekt bereitzustellen, das kulturspezifische Formatierungsinformationen bereitstellt.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kompilieren Sie den Code über csc.exe oder vb.exe in der Befehlszeile. Um den Code in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
+ Kompilieren Sie den Code über csc.exe oder vb.exe in der Befehlszeile. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)

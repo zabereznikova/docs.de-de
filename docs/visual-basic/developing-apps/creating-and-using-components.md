@@ -8,19 +8,19 @@ ms.topic: article
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 17c9b7440d60c38ba30d230f8412c3ca1a21830a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5b7b145d777ba7ec3250904ad4879dd21926e0e3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Erstellen und Verwenden von Komponenten in Visual Basic
 Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> implementiert oder die direkt oder indirekt von einer Klasse ableitet, die <xref:System.ComponentModel.IComponent> implementiert. Eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Komponente ist ein Objekt, das wiederverwendet werden, mit anderen Objekten interagieren, die Steuerung von externen Ressourcen ermöglichen und Unterstützung während der Entwurfszeit bieten kann.  
   
- Ein wichtiges Feature der Komponenten ist, dass sie entworfen werden können, was bedeutet, dass eine Klasse, die eine Komponente ist, in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung verwendet werden kann. Eine Komponente kann der Toolbox hinzugefügt, auf einem Formular abgelegt, und auf der Entwurfsoberfläche bearbeitet werden. Beachten Sie, dass die Basisunterstützung für die Entwurfszeit für Komponenten in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] integriert ist; ein Komponentenentwickler muss keine zusätzlichen Schritte leisten, um die Basisfunktionalität zur Entwurfszeit zu nutzen.  
+ Ein wichtiges Feature der Komponenten ist, dass sie entworfen werden können, was bedeutet, dass eine Klasse, die eine Komponente ist, in der integrierten Entwicklungsumgebung von Visual Studio verwendet werden kann. Eine Komponente kann der Toolbox hinzugefügt, auf einem Formular abgelegt, und auf der Entwurfsoberfläche bearbeitet werden. Beachten Sie, dass die Basisunterstützung für die Entwurfszeit für Komponenten in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] integriert ist; ein Komponentenentwickler muss keine zusätzlichen Schritte leisten, um die Basisfunktionalität zur Entwurfszeit zu nutzen.  
   
  Ein *Steuerelement* ist einer Komponente ähnlich, da beide entworfen werden können. Allerdings stellt ein Steuerelement eine Benutzeroberfläche bereit, eine Komponente jedoch nicht. Ein Steuerelement muss von einer der Basissteuerklassen abgeleitet werden: <xref:System.Windows.Forms.Control> oder <xref:System.Web.UI.Control>.  
   

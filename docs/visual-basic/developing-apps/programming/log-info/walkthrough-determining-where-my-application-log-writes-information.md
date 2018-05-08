@@ -1,11 +1,12 @@
 ---
-title: "Bestimmen, wohin „My.Application.Log“ Informationen schreibt (Visual Basic)"
-ms.custom: 
+title: Bestimmen, wohin „My.Application.Log“ Informationen schreibt (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Log object, output location
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f35a850a262e96762b4ada3fdff1f14634f77317
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: d15dc02f9b5c2728ea447b5a1969ea40753258f9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Exemplarische Vorgehensweise: Bestimmen, wohin "My.Application.Log" Informationen schreibt (Visual Basic)
 Das `My.Application.Log` -Objekt kann Informationen in mehrere Protokolllistener schreiben. Die Protokolllistener werden durch die Konfigurationsdatei des Computers konfiguriert und können durch die Konfigurationsdatei einer Anwendung außer Kraft gesetzt werden. Dieses Thema beschreibt die Standardeinstellungen und erläutert, wie Sie die Einstellungen für Ihre Anwendung ermitteln.  
@@ -31,7 +32,7 @@ Das `My.Application.Log` -Objekt kann Informationen in mehrere Protokolllistener
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Bestimmen der Listener für "My.Application.Log"  
   
-1.  Suchen Sie die Konfigurationsdatei der Assembly. Wenn Sie die Assembly entwickeln, können Sie in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] im **Projektmappen-Explorer**auf die "app.config" zugreifen. Andernfalls ist der Name der Konfigurationsdatei der Name der Assembly mit angefügtem ".config" und befindet sich im gleichen Verzeichnis wie die Assembly.  
+1.  Suchen Sie die Konfigurationsdatei der Assembly. Wenn Sie die Assembly entwickeln, können Sie in Visual Studio im **Projektmappen-Explorer** auf die „app.config“ zugreifen. Andernfalls ist der Name der Konfigurationsdatei der Name der Assembly mit angefügtem ".config" und befindet sich im gleichen Verzeichnis wie die Assembly.  
   
     > [!NOTE]
     >  Nicht jede Assembly verfügt über eine Konfigurationsdatei.  

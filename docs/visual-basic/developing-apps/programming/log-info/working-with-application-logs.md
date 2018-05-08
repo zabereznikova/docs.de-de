@@ -1,25 +1,26 @@
 ---
 title: Arbeiten mit Anwendungsprotokollen in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea5f3699ca5a1b6b0859ac266656deb933839d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40cad53cd9283a99a93cde79616151e77489e7bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Arbeiten mit Anwendungsprotokollen in Visual Basic
 Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protokollierungs- und Ablaufverfolgungsinformationen in Protokolle zu schreiben.  
@@ -38,7 +39,7 @@ Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protoko
 ## <a name="where-messages-are-logged"></a>Protokollspeicherorte von Meldungen  
  Wenn die Assembly keine Konfigurationsdatei aufweist, schreiben die Objekte `My.Application.Log` und `My.Log` in die Debugausgabe der Anwendung (mithilfe der <xref:System.Diagnostics.DefaultTraceListener> -Klasse). Darüber hinaus schreibt das `My.Application.Log` -Objekt in die Protokolldatei der Assembly (mithilfe der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> -Klasse), während das `My.Log` -Objekt in die Ausgabe der ASP.NET-Webseite schreibt (mithilfe der <xref:System.Web.WebPageTraceListener> -Klasse).  
   
- Die Debugausgabe kann beim Ausführen der Anwendung im Debugmodus im Fenster [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] **Ausgabe** angezeigt werden. Klicken Sie zum Öffnen des Fensters **Ausgabe** auf das Menüelement **Debug** , zeigen Sie auf **Fenster**, und klicken Sie dann auf **Ausgabe**. Wählen Sie im Fenster **Ausgabe** im Feld **Ausgabe anzeigen von** den Wert **Debug** aus.  
+ Die Debugausgabe kann beim Ausführen der Anwendung im Debugmodus im Visual Studio-Fenster **Ausgabe** angezeigt werden. Klicken Sie zum Öffnen des Fensters **Ausgabe** auf das Menüelement **Debug** , zeigen Sie auf **Fenster**, und klicken Sie dann auf **Ausgabe**. Wählen Sie im Fenster **Ausgabe** im Feld **Ausgabe anzeigen von** den Wert **Debug** aus.  
   
  Standardmäßig schreibt `My.Application.Log` die Protokolldatei in den Pfad für die Anwendungsdaten des Benutzers. Diesen Pfad können Sie aus der Eigenschaft <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> des <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> -Objekts abrufen. Das Format des Pfades ist wie folgt:  
   

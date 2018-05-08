@@ -2,7 +2,8 @@
 title: -link (C#-Compileroptionen)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - /l compiler option [C#]
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 12ba3762a1c514c52b844a30efc9f49648c51b46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e317c73fab28c76a05b8f7e4472c2439f8731159
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-link-c-compiler-options"></a>-link (C#-Compileroptionen)
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinformationen in den angegebenen Assemblys bereitstellt.  
@@ -48,7 +49,7 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinfo
 > [!NOTE]
 >  Wenn Sie eine Instanz eines eingebetteten COM-Typs in Ihrem Code erstellen, müssen Sie die Instanz mithilfe der entsprechenden Schnittstelle erstellen. Der Versuch, eine Instanz eines eingebetteten COM-Typs mit der Co-Klasse zu erstellen, verursacht einen Fehler.  
   
- Fügen Sie zum Festlegen der Option `-link` in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] einen Assemblyverweis hinzu, und legen Sie die `Embed Interop Types`-Eigenschaft auf **true** fest. Der Standardwert der `Embed Interop Types`-Eigenschaft ist **false**.  
+ Fügen Sie zum Festlegen der Option `-link` in Visual Studio einen Assemblyverweis hinzu, und legen Sie die `Embed Interop Types`-Eigenschaft auf **TRUE** fest. Der Standardwert der `Embed Interop Types`-Eigenschaft ist **false**.  
   
  Wenn Sie eine Verknüpfung mit einer COM-Assembly (Assembly A) erstellen, die selbst auf eine andere COM-Assembly (Assembly B) verweist, müssen Sie auch eine Verknüpfung mit Assembly B erstellen, wenn eine der folgenden Aussagen zutrifft:  
   

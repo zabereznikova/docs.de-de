@@ -1,11 +1,12 @@
 ---
 title: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ed363efeeef008927f2c34b393de66ca4ccbb0bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie man eine Datei mithilfe der Klasse <xref:System.IO.StreamReader> öffnet und liest, wie man überprüft, ob auf eine Datei zugegriffen wird, wie man innerhalb einer Datei, die mit einer Instanz der Klasse <xref:System.IO.StreamReader> gelesen wird, nach einer Zeichenfolge sucht und wie man mithilfe der Klasse <xref:System.IO.StreamWriter> in eine Datei schreibt.  
@@ -36,7 +37,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie man eine Datei mithilf
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>Erstellen der Anwendung  
- Starten Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] und beginnen Sie das Projekt durch Erstellen eines Formulars, mit dem ein Benutzer in die festgelegte Datei schreiben kann.  
+ Starten Sie Visual Studio, und beginnen Sie das Projekt durch Erstellen eines Formulars, mit dem ein Benutzer in die festgelegte Datei schreiben kann.  
   
 #### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
@@ -46,7 +47,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie man eine Datei mithilf
   
 3.  Geben Sie im Feld **Name** die Bezeichnung `MyDiary` ein, und klicken Sie auf **OK**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] fügt das Projekt in den **Projektmappen-Explorer** ein. Der **Windows Forms-Designer** wird geöffnet.  
+     Visual Studio fügt das Projekt in den **Projektmappen-Explorer** ein. Der **Windows Forms-Designer** wird geöffnet.  
   
 4.  Fügen Sie die Steuerelemente aus der folgenden Tabelle zum Formular hinzu, und legen Sie die entsprechenden Werte für die Eigenschaften fest.  
   

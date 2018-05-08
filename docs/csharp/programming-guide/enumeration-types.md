@@ -2,7 +2,8 @@
 title: Enumerationstypen (C#-Programmierhandbuch)
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cdaa609acfa34f3b0b3073d88f09fe735d48e9a2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Enumerationstypen (C#-Programmierhandbuch)
 
@@ -47,7 +48,7 @@ Im Folgenden werden die Vorteile der Verwendung eines enum anstelle eines numeri
 
 - Sie geben für Clientcode eindeutig die Werte an, die für die Variable gültig sind.
 
-- In [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] listet IntelliSense die definierten Werte auf.
+- In Visual Studio listet IntelliSense die definierten Werte auf.
 
 Wenn Sie keine Werte für die Elemente in der Enumeratorliste angeben, werden die Werte automatisch um 1 erhöht. Im vorherigen Beispiel hat `Day.Sunday` den Wert 0, `Day.Monday` hat den Wert 1 und so weiter. Beim Erstellen eines neuen `Day`-Objekt, wird es den Standardwert `Day.Sunday` (0) aufweisen, wenn Sie nicht explizit einen Wert zuweisen. Wenn Sie ein enum erstellen, wählen Sie den logischen Standardwert aus und weisen Sie ihm einen Wert von Null zu. Dadurch werden alle Enumerationen über diesen Standardwert verfügen, wenn sie nicht explizit einen Wert zugewiesen bekommen, wenn sie erstellt werden.
 

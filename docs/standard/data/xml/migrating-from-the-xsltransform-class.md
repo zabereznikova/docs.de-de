@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 09d982105d8cf1297a53bd755003e3ef2b089293
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 07b90baf64ad00509cf5cadea4b9a3008237759b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrieren von der XslTransform-Klasse
 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] wartet mit einer umgestalteten XSLT-Architektur auf. Die <xref:System.Xml.Xsl.XslTransform>-Klasse wurde durch die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse ersetzt.  
@@ -73,7 +73,7 @@ writer.Close();
 ```  
   
 ### <a name="debug-option"></a>Debugoption  
- Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse kann Debuginformationen generieren, mit denen Sie unter Verwendung des Microsoft [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]-Debuggers Fehler im Stylesheet beheben können. Weitere Informationen finden Sie unter <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
+ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse kann Debuginformationen generieren, mit denen Sie unter Verwendung des Microsoft Visual Studio-Debuggers Fehler im Stylesheet beheben können. Weitere Informationen finden Sie unter <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
   
 ## <a name="behavioral-differences"></a>Verhaltensunterschiede  
   

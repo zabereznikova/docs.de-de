@@ -1,12 +1,13 @@
 ---
-title: "Exemplarische Vorgehensweise: Ausgeben von Code in Szenarien mit teilweiser Vertrauenswürdigkeit"
-ms.custom: 
+title: 'Exemplarische Vorgehensweise: Ausgeben von Code in Szenarien mit teilweiser Vertrauenswürdigkeit'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cbdbf8a391235fc03140e032b35eb674a74dc88a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Exemplarische Vorgehensweise: Ausgeben von Code in Szenarien mit teilweiser Vertrauenswürdigkeit
 Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit den gleichen API-Satz, für teilweise vertrauenswürdigen Code erfordern einige Funktionen allerdings besondere Berechtigungen. Außerdem verfügt die Reflektionsausgabe über eine Funktion für anonym gehostete dynamische Methoden, die zur Verwendung mit teilweiser Vertrauenswürdigkeit und sicherheitstransparenten Assemblys vorgesehen ist.  
@@ -144,7 +146,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
      Die <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>-Methode erstellt das Objekt in der Zielanwendungsdomäne und gibt einen Proxy zurück, der zum Aufrufen der Eigenschaften und Methoden des Objekts verwendet werden kann.  
   
     > [!NOTE]
-    >  Wenn Sie diesen Code in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] verwenden, müssen Sie den Namen der Klasse ändern, sodass der Namespace enthalten ist. Standardmäßig ist der Namespace der Name des Projekts. Wenn das Projekt z. B. "PartialTrust" heißt, muss der Klassenname "PartialTrust.Worker" lauten.  
+    >  Wenn Sie diesen Code in Visual Studio verwenden, müssen Sie den Namen der Klasse ändern, sodass der Namespace enthalten ist. Standardmäßig ist der Namespace der Name des Projekts. Wenn das Projekt z. B. "PartialTrust" heißt, muss der Klassenname "PartialTrust.Worker" lauten.  
   
 6.  Fügen Sie Code zum Aufrufen der `SimpleEmitDemo`-Methode hinzu. Der Aufruf wird über die Grenze der Anwendungsdomäne hinweg gemarshallt, und der Code wird in der Sandbox-Anwendungsdomäne ausgeführt.  
   
@@ -218,7 +220,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Wenn Sie dieses Codebeispiel in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] verwenden, müssen Sie den Namespace in den Namen der Klasse einbeziehen, wenn Sie diese an die <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>-Methode übergeben. Standardmäßig ist der Namespace der Name des Projekts. Wenn das Projekt z. B. "PartialTrust" heißt, muss der Klassenname "PartialTrust.Worker" lauten.  
+-   Wenn Sie dieses Codebeispiel in Visual Studio verwenden, müssen Sie den Namespace in den Namen der Klasse einbeziehen, wenn Sie diese an die <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>-Methode übergeben. Standardmäßig ist der Namespace der Name des Projekts. Wenn das Projekt z. B. "PartialTrust" heißt, muss der Klassenname "PartialTrust.Worker" lauten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  

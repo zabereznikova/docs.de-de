@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 64a6fd2f5cbaee17ac35d7b4bd6f08326eafac64
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ff475259d1835a048d6260cabf4f1d46d2436954
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Verketten von Aufgaben mithilfe von Fortsetzungsaufgaben
 Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorgangs häufig ein zweiter Vorgang aufgerufen und Daten an diesen weitergegeben. In der Vergangenheit wurden hierfür vor allem Rückrufmethoden genutzt. In der Task Parallel Library wird die gleiche Funktionalität durch *Fortsetzungsaufgaben*bereitgestellt. Eine Fortsetzungsaufgabe (auch kurz als Fortsetzung bezeichnet) ist eine asynchrone Aufgabe, die von einer anderen Aufgabe, die wiederum als *Vorgänger*bezeichnet wird, nach deren Beendigung aufgerufen wird.  
@@ -130,7 +130,7 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
   
  Der Fortsetzungszustand ist bei der Verwendung der TPL nützlich, wenn Sie vorhandenen Code konvertieren, der das [Asynchrone Programmiermodell (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) verwendet. Im APM stellen Sie in der Regel den Objektzustand in der **Begin***Method*-Methode bereit und greifen später mithilfe der <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>-Eigenschaft auf diesen Zustand zu. Mithilfe der <xref:System.Threading.Tasks.Task.ContinueWith%2A> -Methode können Sie diesen Zustand beibehalten, wenn Sie Code konvertieren, der das APM zur Verwendung der TPL verwendet.  
   
- Der Fortsetzungszustand kann außerdem hilfreich sein, wenn Sie mit <xref:System.Threading.Tasks.Task> -Objekten im [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] -Debugger arbeiten. Beispielsweise wird im Fenster **Parallele Aufgaben** in der Spalte **Aufgabe** die Zeichenfolgendarstellung des Zustandsobjekts für jede Aufgabe angezeigt. Weitere Informationen zum Fenster **Parallele Aufgaben** finden Sie unter [Verwenden des Fensters „Aufgaben“](/visualstudio/debugger/using-the-tasks-window).  
+ Der Fortsetzungszustand kann außerdem hilfreich sein, wenn Sie mit <xref:System.Threading.Tasks.Task>-Objekten im Visual Studio-Debugger arbeiten. Beispielsweise wird im Fenster **Parallele Aufgaben** in der Spalte **Aufgabe** die Zeichenfolgendarstellung des Zustandsobjekts für jede Aufgabe angezeigt. Weitere Informationen zum Fenster **Parallele Aufgaben** finden Sie unter [Verwenden des Fensters „Aufgaben“](/visualstudio/debugger/using-the-tasks-window).  
   
  Im folgenden Beispiel wird die Verwendung eines Fortsetzungszustands gezeigt. Es erstellt eine Kette von Fortsetzungsaufgaben. Jede Aufgabe stellt die aktuelle Uhrzeit, ein <xref:System.DateTime> -Objekt, für den `state` -Parameter der <xref:System.Threading.Tasks.Task.ContinueWith%2A> -Methode bereit. Jedes <xref:System.DateTime> -Objekt stellt die Erstellungszeit der Fortsetzungsaufgabe dar. Jede Aufgabe erzeugt als Ergebnis ein zweites <xref:System.DateTime> -Objekt, das die Beendigungszeit der Aufgabe darstellt. Nach der Beendigung aller Aufgaben zeigt dieses Beispiel die Erstellungszeit und die Beendigungszeit jeder Fortsetzungsaufgabe an.  
   

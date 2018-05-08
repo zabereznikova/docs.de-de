@@ -1,12 +1,12 @@
 ---
 title: 'Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 552c28420e9a04483b164cfe7e13d942230ec5e0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 95bf12adc74ac91108a8383d9bbb5c9408e2fc81
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten
 Bei den Standardformatierungsmethoden für Datum und Uhrzeit, wie <xref:System.DateTime.ToString?displayProperty=nameWithType>, werden die Stunden, Minuten und Sekunden eines Uhrzeitwerts berücksichtigt, deren Millisekundenkomponente jedoch nicht. In diesem Thema wird erläutert, wie die Millisekundenkomponente für Datum und Uhrzeit in eine formatierte Datums- und Uhrzeitzeichenfolge eingefügt wird.  
@@ -62,7 +62,7 @@ Bei den Standardformatierungsmethoden für Datum und Uhrzeit, wie <xref:System.D
 >  Es besteht die Möglichkeit, sehr kleine Sekundenbruchteile wie Zehntausendstelsekunden oder Hunderttausendstelsekunden anzuzeigen. Diese Werte sind jedoch möglicherweise nicht sinnvoll. Die Genauigkeit der Datums- und Uhrzeitwerte hängt von der Auflösung der Systemuhr ab. Unter Windows NT 3.5 und höher und in [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]-Betriebssystemen beträgt die Auflösung der Uhr etwa 10-15 Millisekunden.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kompilieren Sie den Code über csc.exe oder vb.exe in der Befehlszeile. Um den Code in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
+ Kompilieren Sie den Code über csc.exe oder vb.exe in der Befehlszeile. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Globalization.DateTimeFormatInfo>  

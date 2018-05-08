@@ -1,12 +1,13 @@
 ---
 title: Clientanwendungsdienste
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - role-based security [.NET Framework], client application services
@@ -24,16 +25,17 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 597b2d4d37d76ca722ddcebf9fcfeae532f67a00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9532594f5f243faed28229388b9a6d597be57a7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-application-services"></a>Clientanwendungsdienste
 Clientanwendungsdienste erleichtern Ihnen Erstellung von Windows-basierten Anwendungen, die die [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anmelde-, -Rollen- und -Profilanwendungsdienste verwenden, die in den Microsoft ASP.NET 2.0 AJAX-Erweiterungen enthalten sind. Diese Dienste ermöglichen mehreren web- und Windows-basierten Anwendungen die gemeinsame Nutzung von Benutzerinformationen und Benutzerverwaltungsfunktionen von einem einzelnen Server aus. Beispielsweise können Sie mithilfe dieser Dienste folgende Aufgaben ausführen:  
@@ -53,7 +55,7 @@ Clientanwendungsdienste erleichtern Ihnen Erstellung von Windows-basierten Anwen
  Beschreibt die Funktionen, die durch die Clientanwendungs-Dienstanbieter verfügbar sind.  
   
  [Vorgehensweise: Konfigurieren von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- Beschreibt, wie Sie den [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Projekt-Designer zum Aktivieren und Konfigurieren von Anwendungsdiensten verwenden. Beschreibt außerdem die entsprechenden Änderungen an Ihrer Datei "App.config".  
+ Beschreibt, wie Sie den Visual Studio-Projekt-Designer zum Aktivieren und Konfigurieren von Anwendungsdiensten verwenden. Beschreibt außerdem die entsprechenden Änderungen an Ihrer Datei "App.config".  
   
  [Gewusst wie: Implementieren einer Benutzeranmeldung mit Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  Beschreibt, wie Sie einen Benutzer überprüfen, wenn Ihre Anwendung so konfiguriert ist, dass sie einen Clientauthentifizierungs-Dienstanbieter verwendet.  
@@ -61,7 +63,7 @@ Clientanwendungsdienste erleichtern Ihnen Erstellung von Windows-basierten Anwen
  [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  Beschreibt, wie alle Funktionen von Clientanwendungsdiensten in einer einzigen Anwendung kombiniert werden. Diese exemplarische Vorgehensweise bietet Anleitungen von Anfang bis Ende. Beispielsweise enthält sie Anweisungen zum Erstellen einer ASP.NET-Webdienstanwendung, mit der Sie Clientanwendungsdienste testen können.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Web.ClientServices.ClientFormsIdentity>  
  <xref:System.Web.ClientServices.ClientRolePrincipal>  
  <xref:System.Web.ClientServices.ConnectivityStatus>  

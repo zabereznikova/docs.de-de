@@ -2,26 +2,27 @@
 title: 'Gewusst wie: Asynchrones Aufrufen eines Webdiensts (Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6410ef93a706c047047aa24b3d47f8915e928015
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c7a9666141accdcc0b1346de7b0c2903c7cc86df
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Gewusst wie: Asynchrones Aufrufen eines Webdiensts (Visual Basic)
-Dieses Beispiel hängt einen Handler an das asynchrone Handlerereignis eines Webdiensts an, sodass dieses das Ergebnis eines asynchronen Methodenaufrufs abrufen kann. Dieses Beispiel verwendet den Webdienst DemoTemperatureService auf http://www.xmethods.net.  
+Dieses Beispiel hängt einen Handler an das asynchrone Handlerereignis eines Webdiensts an, sodass dieses das Ergebnis eines asynchronen Methodenaufrufs abrufen kann. Dieses Beispiel verwendet den Webdienst DemoTemperatureService unter http://www.xmethods.net.  
   
- Wenn Sie im Projekt in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] auf einen Webdienst verweisen, wird dieser dem `My.WebServices`-Objekt hinzugefügt und die IDE generiert eine Client-Proxyklasse für den Zugriff auf einen festgelegten Webdienst.  
+ Wenn Sie im Projekt in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio auf einen Webdienst verweisen, wird dieser dem `My.WebServices`-Objekt hinzugefügt und die IDE generiert eine Client-Proxyklasse für den Zugriff auf einen festgelegten Webdienst.  
   
  Mit der Proxyklasse ist es möglich, die Webdienstmethoden synchron aufzurufen, während die Anwendung darauf wartet, dass die Funktion abgeschlossen wird. Außerdem erstellt das Proxy weitere Member zur asynchronen Unterstütztung der Methode. Für jede Webdienstfunktion, *NameOfWebServiceFunction*, erstellt das Proxy eine *NameOfWebServiceFunction*`Async`-Unterroutine, ein *NameOfWebServiceFunction*`Completed`-Ereignis und eine *NameOfWebServiceFunction*`CompletedEventArgs`-Klasse. Dieses Beispiel demonstriert, wie Sie die asynchronen Member für den Zugriff auf die `getTemp`-Funktion des Webdiensts DemoTemperatureService verwenden.  
   
@@ -30,7 +31,7 @@ Dieses Beispiel hängt einen Handler an das asynchrone Handlerereignis eines Web
   
 ### <a name="to-call-a-web-service-asynchronously"></a>Asynchroner Aufruf eines Webdiensts  
   
-1.  Referenzieren Sie den Webdienst DemoTemperatureService auf http://www.xmethods.net. Die Adresse lautet  
+1.  Referenzieren Sie den Webdienst DemoTemperatureService unter http://www.xmethods.net. Die Adresse lautet  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  
