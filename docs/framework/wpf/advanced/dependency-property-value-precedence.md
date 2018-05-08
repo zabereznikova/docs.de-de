@@ -1,29 +1,17 @@
 ---
-title: "Priorität von Abhängigkeitseigenschaftswerten"
-ms.custom: 
+title: Priorität von Abhängigkeitseigenschaftswerten
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], classes as owners
 - dependency properties [WPF], metadata
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d95cd0545fa4800f159f4e5e0f661cf7bddc6548
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719c39c82b69421477cadf9ae5caf9f9f55b457
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
 <a name="introduction"></a> In diesem Thema wird erläutert, wie die Funktionsweise des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems den Wert einer Abhängigkeitseigenschaft beeinflussen kann. Außerdem wird die Rangfolge beschrieben, nach der Aspekte des Eigenschaftensystems auf den effektiven Wert einer Eigenschaft angewendet werden.  
@@ -117,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="setcurrentvalue"></a>   
 ## <a name="setcurrentvalue"></a>SetCurrentValue  
- Die <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Methode ist eine weitere Möglichkeit, eine Eigenschaft festzulegen, aber es ist nicht in der Reihenfolge ihrer Priorität. Stattdessen <xref:System.Windows.DependencyObject.SetCurrentValue%2A> ermöglicht es Ihnen, den Wert einer Eigenschaft zu ändern, ohne die Quelle der vorherige Wert überschrieben. Sie können <xref:System.Windows.DependencyObject.SetCurrentValue%2A> jederzeit, die einen Wert ohne diesen Wert die Rangfolge einen lokalen Wert festgelegt werden sollen. Angenommen, eine Eigenschaft wird festgelegt durch einen Trigger und klicken Sie dann einen anderen Wert über <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, das Eigenschaftensystem respektiert noch des Triggers und die Eigenschaft wird geändert, wenn der Trigger-Aktion tritt auf. <xref:System.Windows.DependencyObject.SetCurrentValue%2A>ermöglicht es Ihnen, den Wert der Eigenschaft zu ändern, ohne ihr eine Quelle mit einer höheren Priorität. Ebenso können Sie <xref:System.Windows.DependencyObject.SetCurrentValue%2A> den Wert einer Eigenschaft zu ändern, ohne eine Bindung zu überschreiben.  
+ Die <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Methode ist eine weitere Möglichkeit, eine Eigenschaft festzulegen, aber es ist nicht in der Reihenfolge ihrer Priorität. Stattdessen <xref:System.Windows.DependencyObject.SetCurrentValue%2A> ermöglicht es Ihnen, den Wert einer Eigenschaft zu ändern, ohne die Quelle der vorherige Wert überschrieben. Sie können <xref:System.Windows.DependencyObject.SetCurrentValue%2A> jederzeit, die einen Wert ohne diesen Wert die Rangfolge einen lokalen Wert festgelegt werden sollen. Angenommen, eine Eigenschaft wird festgelegt durch einen Trigger und klicken Sie dann einen anderen Wert über <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, das Eigenschaftensystem respektiert noch des Triggers und die Eigenschaft wird geändert, wenn der Trigger-Aktion tritt auf. <xref:System.Windows.DependencyObject.SetCurrentValue%2A> ermöglicht es Ihnen, den Wert der Eigenschaft zu ändern, ohne ihr eine Quelle mit einer höheren Priorität. Ebenso können Sie <xref:System.Windows.DependencyObject.SetCurrentValue%2A> den Wert einer Eigenschaft zu ändern, ohne eine Bindung zu überschreiben.  
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Koersion, Animationen und Basiswert  

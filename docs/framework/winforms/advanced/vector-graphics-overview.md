@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über Vektorgrafiken"
-ms.custom: 
+title: Übersicht über Vektorgrafiken
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31fec6d0d3769251d21783b4657d00b06431e942
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-graphics-overview"></a>Übersicht über Vektorgrafiken
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Zeichnet Linien, Rechtecke und andere Formen auf einem Koordinatensystem. Sie können aus einer Vielzahl von Koordinatensysteme auswählen, aber das Standard-Koordinatensystem verfügt über den Ursprung in der oberen linken Ecke mit der x-Achse nach rechts und die y-Achse nach unten zeigendes verweist. Die Maßeinheit in der Standard-Koordinatensystem wird das Pixel.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zeichnet Linien, Rechtecke und andere Formen auf einem Koordinatensystem. Sie können aus einer Vielzahl von Koordinatensysteme auswählen, aber das Standard-Koordinatensystem verfügt über den Ursprung in der oberen linken Ecke mit der x-Achse nach rechts und die y-Achse nach unten zeigendes verweist. Die Maßeinheit in der Standard-Koordinatensystem wird das Pixel.  
   
 ## <a name="the-building-blocks-of-gdi"></a>Die Bausteine von GDI +  
  ![Vektorgrafik](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Vektorgrafik](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- Bei Verwendung von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] um eine Linie, Rechteck oder in Kurve zu zeichnen, geben Sie bestimmte wichtige Informationen über das Element, gezeichnet werden soll. Beispielsweise können Sie eine Linie durch die Bereitstellung von zwei Punkten angeben, und können Sie durch die Bereitstellung von einem Punkt, eine Höhen- und eine Breite ein Rechtecks angeben. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]funktioniert in Verbindung mit dem Bildschirmtreiber um zu bestimmen, welche Pixel eingeschaltet bleiben müssen auf die Linie, Rechteck oder in Kurve anzeigen. Die folgende Abbildung zeigt die Pixel, die eingeschaltet sind, um eine Linie an dem Punkt (4, 2) auf den Punkt ("12", "8") anzuzeigen.  
+ Bei Verwendung von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] um eine Linie, Rechteck oder in Kurve zu zeichnen, geben Sie bestimmte wichtige Informationen über das Element, gezeichnet werden soll. Beispielsweise können Sie eine Linie durch die Bereitstellung von zwei Punkten angeben, und können Sie durch die Bereitstellung von einem Punkt, eine Höhen- und eine Breite ein Rechtecks angeben. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funktioniert in Verbindung mit dem Bildschirmtreiber um zu bestimmen, welche Pixel eingeschaltet bleiben müssen auf die Linie, Rechteck oder in Kurve anzeigen. Die folgende Abbildung zeigt die Pixel, die eingeschaltet sind, um eine Linie an dem Punkt (4, 2) auf den Punkt ("12", "8") anzuzeigen.  
   
  ![Vektorgrafik](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   

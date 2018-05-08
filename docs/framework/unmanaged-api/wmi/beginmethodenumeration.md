@@ -1,11 +1,7 @@
 ---
 title: BeginMethodEnumeration-Funktion (Referenz zur nicht verwalteten API)
-description: "Startet eine Enumeration der Methoden für das Objekt die BeginMethodEnumeration-Funktion"
+description: Startet eine Enumeration der Methoden für das Objekt die BeginMethodEnumeration-Funktion
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginMethodEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d843c40a8ab0dd1c48a08126b8c7472505a1732
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration-Funktion
 Startet eine Enumeration der Methoden für das Objekt verfügbar.  
@@ -57,8 +50,8 @@ HRESULT BeginMethodEnumeration (
 
 Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Die Enumeration, die in der Klasse selbst definierten Methoden zu beschränken. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Begrenzen Sie die Enumeration, die Eigenschaften, die Basis-Klassen geerbt werden. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Die Enumeration, die in der Klasse selbst definierten Methoden zu beschränken. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Begrenzen Sie die Enumeration, die Eigenschaften, die Basis-Klassen geerbt werden. |
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -66,7 +59,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `lEnnumFlags`ist ungleich NULL und ist nicht der angegebenen Flags. |
+|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `lEnnumFlags` ist ungleich NULL und ist nicht der angegebenen Flags. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
@@ -80,7 +73,7 @@ Dieser Methodenaufruf wird nur unterstützt, wenn das aktuelle Objekt einer Klas
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

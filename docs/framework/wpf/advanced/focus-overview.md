@@ -1,13 +1,6 @@
 ---
-title: "Fokus - Übersicht"
-ms.custom: 
+title: Fokus - Übersicht
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d35b65f88452085e601569b9dcfc62a541a1655f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 620839a0060469604d0affa6637c3cafac0f62c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="focus-overview"></a>Fokus - Übersicht
 In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibt es zwei Hauptkonzepte, die den Fokus betreffen: Tastaturfokus und logischer Fokus.  Tastaturfokus bezieht sich auf das Element, das Tastatureingaben empfängt, und der logische Fokus bezieht sich auf das Element in einem Fokusbereich, der Fokus besitzt.  Diese Konzepte werden in dieser Übersicht ausführlich erläutert.  Für das Erstellen von komplexen Anwendungen, die über mehrere Bereiche verfügen, in denen Fokus abgerufen werden kann, ist es wichtig den Unterschied der Konzepte zu verstehen.  
@@ -69,11 +57,11 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
  [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
  [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
   
- <xref:System.Windows.Input.FocusManager.GetFocusScope%2A>Gibt den Fokusbereich für das angegebene Element zurück.  
+ <xref:System.Windows.Input.FocusManager.GetFocusScope%2A> Gibt den Fokusbereich für das angegebene Element zurück.  
   
  Klassen im [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sind die Fokusbereiche in der Standardeinstellung sind <xref:System.Windows.Window>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.ToolBar>, und <xref:System.Windows.Controls.ContextMenu>.  
   
- <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>Ruft das Element für den angegebenen Fokusbereich ab.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>Legt Elements mit Fokus im angegebenen Fokusbereich fest.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>Legen Sie das erste Element wird in der Regel verwendet werden.  
+ <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A> Ruft das Element für den angegebenen Fokusbereich ab.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> Legt Elements mit Fokus im angegebenen Fokusbereich fest.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> Legen Sie das erste Element wird in der Regel verwendet werden.  
   
  Das folgende Beispiel legt das Fokuselement auf einen Fokusbereich fest und ruft das Fokuselement eines Fokusbereichs ab.  
   
@@ -97,20 +85,20 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
 ## <a name="navigating-focus-programmatically"></a>Programmgesteuertes Navigieren des Fokus  
  Zusätzliche [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] mit Fokus sind <xref:System.Windows.UIElement.MoveFocus%2A> und <xref:System.Windows.UIElement.PredictFocus%2A>.  
   
- <xref:System.Windows.FrameworkElement.MoveFocus%2A>Ändert den Fokus auf das nächste Element in der Anwendung.  Ein <xref:System.Windows.Input.TraversalRequest> wird verwendet, um die Richtung anzugeben.   Die <xref:System.Windows.Input.FocusNavigationDirection> übergeben <xref:System.Windows.UIElement.MoveFocus%2A> gibt an, die verschiedene Richtungen Fokus kann verschoben werden, z. B. <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> und <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
+ <xref:System.Windows.FrameworkElement.MoveFocus%2A> Ändert den Fokus auf das nächste Element in der Anwendung.  Ein <xref:System.Windows.Input.TraversalRequest> wird verwendet, um die Richtung anzugeben.   Die <xref:System.Windows.Input.FocusNavigationDirection> übergeben <xref:System.Windows.UIElement.MoveFocus%2A> gibt an, die verschiedene Richtungen Fokus kann verschoben werden, z. B. <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> und <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
   
  Im folgenden Beispiel wird <xref:System.Windows.FrameworkElement.MoveFocus%2A> Elements mit Fokus ändern.  
   
  [!code-csharp[focussample#FocusSampleMoveFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
  [!code-vb[focussample#FocusSampleMoveFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
   
- <xref:System.Windows.FrameworkElement.PredictFocus%2A>Gibt das Objekt den Fokus erhalten, wenn der Fokus geändert werden, wurden zurück.  Derzeit nur <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, und <xref:System.Windows.Input.FocusNavigationDirection.Right> werden von unterstützt <xref:System.Windows.FrameworkElement.PredictFocus%2A>.  
+ <xref:System.Windows.FrameworkElement.PredictFocus%2A> Gibt das Objekt den Fokus erhalten, wenn der Fokus geändert werden, wurden zurück.  Derzeit nur <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, und <xref:System.Windows.Input.FocusNavigationDirection.Right> werden von unterstützt <xref:System.Windows.FrameworkElement.PredictFocus%2A>.  
   
 <a name="Focus_Events"></a>   
 ## <a name="focus-events"></a>Fokusereignisse  
  Die Ereignisse im Zusammenhang mit den Tastaturfokus sind <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>, <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> und <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>, <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>.  Die Ereignisse werden als angefügte Ereignisse definiert, auf die <xref:System.Windows.Input.Keyboard> Klasse, aber schneller als die entsprechende Routingereignisse Basiselement Klassen zugegriffen werden.  Weitere Informationen zu Ereignissen finden Sie unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
- <xref:System.Windows.Input.Keyboard.GotKeyboardFocus>wird ausgelöst, wenn das Element den Tastaturfokus erhält.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>wird ausgelöst, wenn das Element den Tastaturfokus verliert.  Wenn die <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> Ereignis oder die <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> Ereignis behandelt wird und <xref:System.Windows.RoutedEventArgs.Handled%2A> festgelegt ist, um `true`, und klicken Sie dann den Fokus nicht ändert.  
+ <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> wird ausgelöst, wenn das Element den Tastaturfokus erhält.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus> wird ausgelöst, wenn das Element den Tastaturfokus verliert.  Wenn die <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> Ereignis oder die <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> Ereignis behandelt wird und <xref:System.Windows.RoutedEventArgs.Handled%2A> festgelegt ist, um `true`, und klicken Sie dann den Fokus nicht ändert.  
   
  Das folgende Beispiel fügt <xref:System.Windows.UIElement.GotKeyboardFocus> und <xref:System.Windows.UIElement.LostKeyboardFocus> Ereignishandler an einen <xref:System.Windows.Controls.TextBox>.  
   
@@ -126,7 +114,7 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
  [!code-csharp[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
  [!code-vb[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
   
- Die Ereignisse im Zusammenhang mit den logischen Fokus sind <xref:System.Windows.UIElement.GotFocus> und <xref:System.Windows.UIElement.LostFocus>.  Diese Ereignisse werden definiert, auf die <xref:System.Windows.Input.FocusManager> als angefügte Ereignisse jedoch <xref:System.Windows.Input.FocusManager> macht nicht Wrappern für CLR-Ereignis.  <xref:System.Windows.UIElement>und <xref:System.Windows.ContentElement> komfortablere, diese Ereignisse verfügbar zu machen.  
+ Die Ereignisse im Zusammenhang mit den logischen Fokus sind <xref:System.Windows.UIElement.GotFocus> und <xref:System.Windows.UIElement.LostFocus>.  Diese Ereignisse werden definiert, auf die <xref:System.Windows.Input.FocusManager> als angefügte Ereignisse jedoch <xref:System.Windows.Input.FocusManager> macht nicht Wrappern für CLR-Ereignis.  <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> komfortablere, diese Ereignisse verfügbar zu machen.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Input.FocusManager>  

@@ -1,29 +1,17 @@
 ---
 title: Bilder, Bitmaps und Metadateien
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metafiles [Windows Forms], about metafiles
 - bitmaps [Windows Forms], about bitmaps
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67f72847e5dca20acd623c566a882e0094e94f68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30887cd88bc8c08c78eb37c4fe8591ac528e6f01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Bilder, Bitmaps und Metadateien
 Die `Image`-Klasse ist eine abstrakte Basisklasse, die Methoden für das Arbeiten mit Rasterbildern (Bitmaps) und Vektorbildern (Metadateien) bereitstellt. Die `Bitmap`-Klasse und die <xref:System.Drawing.Imaging.Metafile>-Klasse erben beide von der `Image`-Klasse. Die `Bitmap`-Klasse erweitert die Funktionen der `Image`-Klasse durch zusätzliche Methoden für das Laden, Speichern und Bearbeiten von Rasterbildern. Die <xref:System.Drawing.Imaging.Metafile>-Klasse erweitert die Funktionen der `Image`-Klasse durch zusätzliche Methoden für das Aufzeichnen und Überprüfen von Rasterbildern.  
@@ -41,7 +29,7 @@ Die `Image`-Klasse ist eine abstrakte Basisklasse, die Methoden für das Arbeite
  [Zuschneiden und Skalieren von Bildern in GDI+](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
  Erläutert Methoden für das Zuschneiden und Skalieren von Vektor- und Rasterbildern mit verwaltetem Code.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Drawing.Image>  
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   

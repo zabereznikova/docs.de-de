@@ -1,27 +1,15 @@
 ---
-title: "Suchankündigungen und Ankündigungsclient"
-ms.custom: 
+title: Suchankündigungen und Ankündigungsclient
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Suchankündigungen und Ankündigungsclient
-Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Suchfunktion aktiviert Komponenten, um ihre Verfügbarkeit anzukündigen. Bei entsprechender Konfiguration sendet ein Dienst Hello- und Bye-Ankündigungen. Clients oder andere Komponenten können eine Überwachung auf diese Ankündigungsnachrichten durchführen und dann reagieren. Dies stellt für Clients eine alternative Methode zum Erkennen von Diensten dar. Die Ankündigungsfunktion hat mehrere Verwendungen. Falls die Dienste ein Netzwerk z. B. häufig "betreten" und wieder verlassen, sind Ankündigungen ggf. eine bessere Möglichkeit als das Suchen nach Diensten. Bei diesem Ansatz wird der Netzwerkverkehr reduziert, und der Client ist über das Vorhandensein bzw. das Verlassen des Diensts informiert, sobald er die Ankündigungen empfangen hat.  
+Die WCF-Suchfunktion kann Komponenten, um ihre Verfügbarkeit anzukündigen. Bei entsprechender Konfiguration sendet ein Dienst Hello- und Bye-Ankündigungen. Clients oder andere Komponenten können eine Überwachung auf diese Ankündigungsnachrichten durchführen und dann reagieren. Dies stellt für Clients eine alternative Methode zum Erkennen von Diensten dar. Die Ankündigungsfunktion hat mehrere Verwendungen. Falls die Dienste ein Netzwerk z. B. häufig "betreten" und wieder verlassen, sind Ankündigungen ggf. eine bessere Möglichkeit als das Suchen nach Diensten. Bei diesem Ansatz wird der Netzwerkverkehr reduziert, und der Client ist über das Vorhandensein bzw. das Verlassen des Diensts informiert, sobald er die Ankündigungen empfangen hat.  
   
 ## <a name="discovery-announcements"></a>Suchankündigungen  
  Wenn ein für Ankündigungen konfigurierter Dienst ein Netzwerk in ein Netzwerk eintritt und erkennbar wird, sendet er eine Hello-Nachricht und kündigt den abhörenden Clients auf diese Weise seine Verfügbarkeit an. Die Nachricht enthält die Suche betreffende Informationen zum Dienst, z. B. Vertrag, Endpunktadresse und zugeordnete Bereiche. Sie können angeben, wohin die Ankündigungsnachricht gesendet wird, indem Sie die <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>-Klasse verwenden. Wenn der Ankündigungsendpunkt ein <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ist, wird für Hello und Bye entsprechend ein Multicast durchgeführt. Wenn der Ankündigungsendpunkt das Unicast-Format aufweist, werden die Nachrichten direkt an den angegebenen Endpunkt gesendet.  

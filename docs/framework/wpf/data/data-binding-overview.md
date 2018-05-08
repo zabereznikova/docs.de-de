@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über die Datenbindung"
-ms.custom: 
+title: Übersicht über die Datenbindung
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-caps.latest.revision: "78"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b58cde738e2584662fa5f9ad90634931674f48b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-overview"></a>Übersicht über die Datenbindung
 Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Objekten und [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] gebunden werden. <xref:System.Windows.Controls.ContentControl>s wie z. B. <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.ItemsControl>s wie z. B. <xref:System.Windows.Controls.ListBox> und <xref:System.Windows.Controls.ListView> haben integrierte Funktionalität zum Aktivieren des flexiblen Formatieren der einzelnen Datenelemente oder Auflistungen von Datenelementen. Sortier-, Filter- und Gruppenansichten können übergreifend für die Daten generiert werden.  
@@ -94,11 +82,11 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
  ![Datenfluss bei der Datenbindung](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay>Bindung führt dazu, dass Änderungen an die Quelleigenschaft Zieleigenschaft automatisch aktualisiert, aber Änderungen der Zieleigenschaft nicht zurück an die Quelleigenschaft weitergegeben werden. Dieser Bindungstyp empfiehlt sich, wenn das gebundene Steuerelement implizit als schreibgeschützt festgelegt wurde. Sie können beispielsweise eine Bindung an eine Quelle wie einen Börsenticker erstellen, oder möglicherweise ist für die Zieleigenschaft keine Steuerungsoberfläche verfügbar, um Änderungen vorzunehmen, z. B. an der datengebundenen Hintergrundfarbe einer Tabelle. Ist nicht erforderlich, die Änderungen der Zieleigenschaft nicht überwacht, mithilfe der <xref:System.Windows.Data.BindingMode.OneWay> -Bindungsmodus den Mehraufwand für die <xref:System.Windows.Data.BindingMode.TwoWay> Bindungsmodus.  
+-   <xref:System.Windows.Data.BindingMode.OneWay> Bindung führt dazu, dass Änderungen an die Quelleigenschaft Zieleigenschaft automatisch aktualisiert, aber Änderungen der Zieleigenschaft nicht zurück an die Quelleigenschaft weitergegeben werden. Dieser Bindungstyp empfiehlt sich, wenn das gebundene Steuerelement implizit als schreibgeschützt festgelegt wurde. Sie können beispielsweise eine Bindung an eine Quelle wie einen Börsenticker erstellen, oder möglicherweise ist für die Zieleigenschaft keine Steuerungsoberfläche verfügbar, um Änderungen vorzunehmen, z. B. an der datengebundenen Hintergrundfarbe einer Tabelle. Ist nicht erforderlich, die Änderungen der Zieleigenschaft nicht überwacht, mithilfe der <xref:System.Windows.Data.BindingMode.OneWay> -Bindungsmodus den Mehraufwand für die <xref:System.Windows.Data.BindingMode.TwoWay> Bindungsmodus.  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay>Bindung führt dazu, dass Änderungen an die Quelleigenschaft oder der Zieleigenschaft die jeweils andere automatisch aktualisiert. Dieser Typ von Bindung ist für bearbeitbare Formulare und sonstige vollständig interaktive [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Szenarien geeignet. Die meisten Eigenschaften standardmäßig <xref:System.Windows.Data.BindingMode.OneWay> Bindung, aber einige Abhängigkeitseigenschaften (in der Regel Eigenschaften Benutzer bearbeitbare Steuerelemente wie z. B. die <xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft <xref:System.Windows.Controls.TextBox> und die <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> Eigenschaft <xref:System.Windows.Controls.CheckBox>) standardmäßig <xref:System.Windows.Data.BindingMode.TwoWay> Bindung. Eine programmgesteuerte Methode zum Bestimmen, ob eine Abhängigkeitseigenschaft standardmäßig uni- oder bidirektional bindet, besteht darin, die Metadaten der Eigenschaft mit <xref:System.Windows.DependencyProperty.GetMetadata%2A> abzurufen und dann den booleschen Wert der <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>-Eigenschaft zu überprüfen.  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> Bindung führt dazu, dass Änderungen an die Quelleigenschaft oder der Zieleigenschaft die jeweils andere automatisch aktualisiert. Dieser Typ von Bindung ist für bearbeitbare Formulare und sonstige vollständig interaktive [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Szenarien geeignet. Die meisten Eigenschaften standardmäßig <xref:System.Windows.Data.BindingMode.OneWay> Bindung, aber einige Abhängigkeitseigenschaften (in der Regel Eigenschaften Benutzer bearbeitbare Steuerelemente wie z. B. die <xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft <xref:System.Windows.Controls.TextBox> und die <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> Eigenschaft <xref:System.Windows.Controls.CheckBox>) standardmäßig <xref:System.Windows.Data.BindingMode.TwoWay> Bindung. Eine programmgesteuerte Methode zum Bestimmen, ob eine Abhängigkeitseigenschaft standardmäßig uni- oder bidirektional bindet, besteht darin, die Metadaten der Eigenschaft mit <xref:System.Windows.DependencyProperty.GetMetadata%2A> abzurufen und dann den booleschen Wert der <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>-Eigenschaft zu überprüfen.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource>ist die Umkehrung des <xref:System.Windows.Data.BindingMode.OneWay> Bindung; er aktualisiert die Quelleigenschaft, wenn die Zieleigenschaft geändert. Ein Beispielszenario besteht darin, einfach den Quellwert von der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] neu zu bewerten.  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> ist die Umkehrung des <xref:System.Windows.Data.BindingMode.OneWay> Bindung; er aktualisiert die Quelleigenschaft, wenn die Zieleigenschaft geändert. Ein Beispielszenario besteht darin, einfach den Quellwert von der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] neu zu bewerten.  
   
 -   In der Abbildung nicht dargestellt ist <xref:System.Windows.Data.BindingMode.OneTime> binden, die bewirkt, dass der Quelleigenschaft initialisiert werden, die Zieleigenschaft, aber nachfolgende Änderungen werden nicht weitergegeben. Wenn sich also der Datenkontext oder das Objekt im Datenkontext ändert, wird die Änderung in der Zieleigenschaft nicht angezeigt. Dieser Bindungstyp empfiehlt sich, wenn Sie Daten verwenden, bei denen eine Momentaufnahme des aktuellen Zustands verwendet werden kann oder die Daten tatsächlich statisch sind. Dieser Bindungstyp ist auch hilfreich, wenn die Zieleigenschaft mit einem bestimmten Wert der Quelleigenschaft initialisiert werden soll und der Datenkontext vorab nicht bekannt ist. Dies ist eine wesentlich einfachere Form der <xref:System.Windows.Data.BindingMode.OneWay> Bindung dar, bietet eine bessere Leistung in Fällen, in denen der Quellwert nicht ändert.  
   
@@ -125,8 +113,8 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 |UpdateSourceTrigger-Wert|Wenn der Quellwert aktualisiert wird|Beispielszenario für TextBox|  
 |-------------------------------|----------------------------------------|----------------------------------|  
 |LostFocus (Standard für <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>)|Wenn das TextBox-Steuerelement den Fokus verliert|Ein <xref:System.Windows.Controls.TextBox> Validierungslogik zugeordnet ist (siehe Abschnitt "Data Validation")|  
-|PropertyChanged|Während der Eingabe in die<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox>Steuerelemente in einem Chatraum-Fenster|  
-|Explicit|Wenn die Anwendung aufruft<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox>Steuerelemente in einem bearbeitbaren Formular (aktualisiert die Quellwerte nur klickt der Benutzer die Schaltfläche "Absenden")|  
+|PropertyChanged|Während der Eingabe in die <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> Steuerelemente in einem Chatraum-Fenster|  
+|Explicit|Wenn die Anwendung aufruft <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox> Steuerelemente in einem bearbeitbaren Formular (aktualisiert die Quellwerte nur klickt der Benutzer die Schaltfläche "Absenden")|  
   
  Ein Beispiel finden Sie unter [Gewusst wie: Steuern, wann der TextBox-Text die Quelle aktualisiert](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
   
@@ -236,7 +224,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 ### <a name="how-to-implement-collections"></a>Implementieren von Auflistungen  
  Sie können eine beliebige Sammlung, die implementiert Aufzählen der <xref:System.Collections.IEnumerable> Schnittstelle. Allerdings dynamische Bindungen einrichten, sodass oder-löschungen erfolgen in der Auflistung Aktualisieren der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] automatisch der Sammlung muss implementiert die <xref:System.Collections.Specialized.INotifyCollectionChanged> Schnittstelle. Diese Schnittstelle macht ein Ereignis verfügbar, das bei jeder Änderung der zugrunde liegenden Auflistung ausgelöst werden sollte.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Stellt die <xref:System.Collections.ObjectModel.ObservableCollection%601> -Klasse, die eine integrierte Implementierung einer Datensammlung, die verfügbar macht, ist die <xref:System.Collections.Specialized.INotifyCollectionChanged> Schnittstelle. Beachten Sie, um die Übertragung von Datenwerten von Quellobjekten Zielen vollständig unterstützen zu können, jedes Objekt in der Auflistung, die bindbare Eigenschaften unterstützt auch implementieren muss die <xref:System.ComponentModel.INotifyPropertyChanged> Schnittstelle. Weitere Informationen finden Sie unter [Übersicht über Bindungsquellen](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt die <xref:System.Collections.ObjectModel.ObservableCollection%601> -Klasse, die eine integrierte Implementierung einer Datensammlung, die verfügbar macht, ist die <xref:System.Collections.Specialized.INotifyCollectionChanged> Schnittstelle. Beachten Sie, um die Übertragung von Datenwerten von Quellobjekten Zielen vollständig unterstützen zu können, jedes Objekt in der Auflistung, die bindbare Eigenschaften unterstützt auch implementieren muss die <xref:System.ComponentModel.INotifyPropertyChanged> Schnittstelle. Weitere Informationen finden Sie unter [Übersicht über Bindungsquellen](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
  Bevor Sie eine eigene Auflistung implementieren, erwägen Sie <xref:System.Collections.ObjectModel.ObservableCollection%601> oder einer vorhandenen Sammlung Klassen, z. B. <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, und <xref:System.ComponentModel.BindingList%601>, a. Wenn Sie ein erweitertes Szenario und eine eigene Auflistung implementieren möchten, erwägen Sie <xref:System.Collections.IList>, stellt eine nicht generische Auflistung von Objekten, die einzeln nach Index und somit die beste Leistung zugegriffen werden kann.  
   
@@ -269,7 +257,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
 |Quellauflistungstyp|Auflistungsansichtstyp|Hinweise|  
 |----------------------------|--------------------------|-----------|  
-|<xref:System.Collections.IEnumerable>|Einen internen Typ, der basierend auf<xref:System.Windows.Data.CollectionView>|Kann Elemente nicht gruppieren.|  
+|<xref:System.Collections.IEnumerable>|Einen internen Typ, der basierend auf <xref:System.Windows.Data.CollectionView>|Kann Elemente nicht gruppieren.|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|Am schnellsten.|  
 |<xref:System.ComponentModel.IBindingList>|<xref:System.Windows.Data.BindingListCollectionView>||  
   
@@ -373,7 +361,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
  [!code-xaml[DataBindingLab#DefaultValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
   
- Ein <xref:System.Windows.Controls.ValidationRule> Objekt überprüft, ob der Wert einer Eigenschaft gültig ist. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]hat die folgenden zwei Arten von integrierten <xref:System.Windows.Controls.ValidationRule> Objekte:  
+ Ein <xref:System.Windows.Controls.ValidationRule> Objekt überprüft, ob der Wert einer Eigenschaft gültig ist. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hat die folgenden zwei Arten von integrierten <xref:System.Windows.Controls.ValidationRule> Objekte:  
   
 -   Ein <xref:System.Windows.Controls.ExceptionValidationRule> überprüft, ob Ausnahmen, die während der Aktualisierung der Bindungsquelleigenschaft ausgelöst. Im vorherigen Beispiel ist `StartPrice` eine ganze Zahl. Wenn der Benutzer einen Wert eingibt, der nicht in eine ganze Zahl konvertiert werden kann, wird eine Ausnahme ausgelöst, wodurch die Bindung als ungültig markiert wird. Eine alternative Syntax zum Festlegen der <xref:System.Windows.Controls.ExceptionValidationRule> explizit besteht darin, die <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> Eigenschaft, um `true` auf Ihre <xref:System.Windows.Data.Binding> oder <xref:System.Windows.Data.MultiBinding> Objekt.  
   

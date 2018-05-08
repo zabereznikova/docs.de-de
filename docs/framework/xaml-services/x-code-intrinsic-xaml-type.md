@@ -1,13 +1,6 @@
 ---
 title: Systeminterner x:Code-XAML-Typ
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Code
 - x:Code
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-caps.latest.revision: "19"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d39249a5d1c0e230d21e6d889b92d0b57c98e2ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92be0b3b0fd1212c4254a449f902b85e998aa148
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Systeminterner x:Code-XAML-Typ
 Ermöglicht die Platzierung von Code in einer XAML-Produktion. Solcher Code kann entweder durch die Implementierung einer XAML-Prozessor kompiliert werden, die XAML oder links in der die Verwendung von XAML-Produktion höher verwendet, z. B. Interpretation von einer Laufzeit kompiliert wird.  
@@ -42,7 +30,7 @@ Ermöglicht die Platzierung von Code in einer XAML-Produktion. Solcher Code kann
 ## <a name="remarks"></a>Hinweise  
  Der Code innerhalb der `x:Code` -XAML-Direktivenelement ist immer noch innerhalb der allgemeinen XML-Namespace interpretiert und die Verwendung von XAML-Namespaces bereitgestellt. Daher ist es normalerweise erforderlich, schließen Sie den Code zum `x:Code` innerhalb einer `CDATA` Segment.  
   
- `x:Code`ist für alle möglichen Bereitstellungsmechanismen einer XAML-Produktion nicht zulässig. In bestimmten Frameworks (z. B. WPF) muss der Code kompiliert werden. In anderen Frameworks `x:Code` Nutzung kann im Allgemeinen nicht zulässig.  
+ `x:Code` ist für alle möglichen Bereitstellungsmechanismen einer XAML-Produktion nicht zulässig. In bestimmten Frameworks (z. B. WPF) muss der Code kompiliert werden. In anderen Frameworks `x:Code` Nutzung kann im Allgemeinen nicht zulässig.  
   
  Für Frameworks, die verwaltete zulassen `x:Code` Inhalte, die richtige Sprachcompiler mit `x:Code` Inhalt richtet sich nach den Einstellungen und Ziele des enthaltenden Projekts, das verwendet wird, um die Anwendung zu kompilieren.  
   

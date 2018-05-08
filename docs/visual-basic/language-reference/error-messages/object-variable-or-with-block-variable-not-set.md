@@ -1,23 +1,14 @@
 ---
 title: Die Objektvariable oder die With-Blockvariable wurde nicht festgelegt.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e1f587e194acf744b6ec9b8f1bede3acef7b753
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b2bd1be83f57dbdc7a64b407dc1052074e19c74b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Die Objektvariable oder die With-Blockvariable wurde nicht festgelegt.
 Eine ungültiges Objekt-Variable ist verwiesen wird.   Dieser Fehler kann mehrere Ursachen haben:  
@@ -29,9 +20,9 @@ Eine ungültiges Objekt-Variable ist verwiesen wird.   Dieser Fehler kann mehrer
     > [!TIP]
     >  Die `Option Strict` Anweisung lässt keine implizite Typisierung, die in einem `Object` Typ. Wenn Sie den Typ weglassen, wird ein Fehler während der Kompilierung auftreten. Finden Sie unter [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
--   Sie versuchen, ein Objekt zu verweisen, die festgelegt wurde`Nothing`  
+-   Sie versuchen, ein Objekt zu verweisen, die festgelegt wurde `Nothing`  
   
-     .  
+     sein.  
   
 -   Sie versuchen, ein Element einer Arrayvariablen zuzugreifen, die ordnungsgemäß deklariert wurde nicht.  
   

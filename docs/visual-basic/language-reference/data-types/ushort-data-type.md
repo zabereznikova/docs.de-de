@@ -1,11 +1,6 @@
 ---
 title: UShort-Datentyp (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ushort
 helpviewer_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 958c7c74822d3b5cb311d22977b1b1f8bda04cd7
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 520c21d4df5c340b41a8b1e9055b3fadddfdf6e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort-Datentyp (Visual Basic)
 
@@ -76,7 +71,7 @@ Dim number = &H_5826us
   
 -   **Widening.** Die `UShort` -Datentyp zu `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, und `Double`. Dies bedeutet, Sie können konvertieren `UShort` keinem dieser Typen ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Typzeichen.** Anhängen des Literaltypzeichens `US` an ein Literal wird der `UShort` -Datentyp. `UShort`verfügt über keine Typkennzeichen aus.  
+-   **Typzeichen.** Anhängen des Literaltypzeichens `US` an ein Literal wird der `UShort` -Datentyp. `UShort` verfügt über keine Typkennzeichen aus.  
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt16?displayProperty=nameWithType>-Struktur.  
   

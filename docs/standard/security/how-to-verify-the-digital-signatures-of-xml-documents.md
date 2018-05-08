@@ -1,13 +1,7 @@
 ---
-title: "Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten"
-ms.custom: 
+title: 'Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,21 +14,16 @@ helpviewer_keywords:
 - XML digital signatures
 - digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c45ffbffd5eae812dbd9703ffde4423c94581234
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6b2cb61f2cc7129153a71398c6fb219c4e3990a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten
-Um XML-Daten zu überprüfen, die mit einer digitalen Signatur signiert sind, können Sie die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden.  Über digitale XML-Signaturen (XMLDSIG) können Sie sich vergewissern, dass Daten nicht mehr geändert wurden, nachdem sie signiert wurden.  Weitere Informationen über den XMLDSIG-Standard finden Sie in der W3C-Spezifikation (World Wide Web Consortium) unter "http://www.w3.org/TR/xmldsig-core/" (nur auf Englisch verfügbar).  
+Um XML-Daten zu überprüfen, die mit einer digitalen Signatur signiert sind, können Sie die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden.  Über digitale XML-Signaturen (XMLDSIG) können Sie sich vergewissern, dass Daten nicht mehr geändert wurden, nachdem sie signiert wurden.  Weitere Informationen zum XMLDSIG-Standard finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation unter http://www.w3.org/TR/xmldsig-core/.  
   
  Das Codebeispiel in dieser Vorgehensweise veranschaulicht, wie eine digitale XML-Signatur überprüft wird, die in einem <`Signature`>-Element enthalten ist.   Im Beispiel wird ein öffentlicher RSA-Schlüssel aus einem Schlüsselcontainer abgerufen und anschließend zum Überprüfen der Signatur verwendet.   
   

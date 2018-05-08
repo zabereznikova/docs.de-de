@@ -1,26 +1,12 @@
 ---
 title: Beispiel zur Net.TCP-Portfreigabe
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: cfd87868a5ecc557ccca1003f54f3a896b2f9fcc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Beispiel zur Net.TCP-Portfreigabe
 Im TCP/IP-Protokoll wird mithilfe einer 16-stelligen Zahl (als Port bezeichnet) zwischen Verbindungen mit mehreren Netzwerkanwendungen unterschieden, die auf demselben Computer ausgeführt werden. Wenn eine Anwendung einen Port überwacht, wird der gesamte TCP-Verkehr für diesen Port an die entsprechende Anwendung geleitet. Andere Anwendungen können nicht gleichzeitig an diesem Port lauschen.  
@@ -30,13 +16,13 @@ Im TCP/IP-Protokoll wird mithilfe einer 16-stelligen Zahl (als Port bezeichnet) 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  Viele Protokolle verwenden eine Standardportnummer. Das HTTP-Protokoll verwendet beispielsweise in der Regel TCP-Port 80. Internetinformationsdienste (IIS) verfügen über einen Listener, damit mehrere HTTP-Anwendungen gemeinsam einen Port verwenden können. IIS überwacht den Port direkt und leitet Nachrichten an die entsprechende Anwendung weiter. Dies erfolgt auf Grundlage von Informationen im Nachrichtenstream. So können mehrere HTTP-Anwendungen die gleiche Portnummer verwenden, ohne um das Reservieren des Ports für den Nachrichteneingang konkurrieren zu müssen.  
   
- NetTcp-Portfreigabe eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Funktion, die auf ähnliche Weise mehrere netzwerkanwendungen einen einzelnen Port freigeben kann. Der NetTcp-Portfreigabedienst nimmt Verbindungen mithilfe des net.tcp-Protokolls an und leitet Nachrichten auf Grundlage ihrer Zieladresse weiter.  
+ NetTcp-Portfreigabe ist eine Windows Communication Foundation (WCF)-Funktion, die auf ähnliche Weise mehrere netzwerkanwendungen einen einzelnen Port freigeben kann. Der NetTcp-Portfreigabedienst nimmt Verbindungen mithilfe des net.tcp-Protokolls an und leitet Nachrichten auf Grundlage ihrer Zieladresse weiter.  
   
  Der NetTcp-Portfreigabedienst ist standardmäßig nicht aktiviert. Vor dem Ausführen dieses Beispiels müssen Sie den Dienst manuell aktivieren. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren Sie den Net.TCP-Portfreigabedienst](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Wenn der Dienst deaktiviert ist, wird beim Starten der Serveranwendung eine Ausnahme ausgelöst.  
   

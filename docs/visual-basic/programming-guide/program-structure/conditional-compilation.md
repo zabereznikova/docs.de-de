@@ -1,24 +1,15 @@
 ---
 title: Bedingte Kompilierung in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 496df36242c6b43e7e3ec94ce675d11177e8b466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Bedingte Kompilierung in Visual Basic
 In *bedingte Kompilierung*, selektiv bestimmter Codeblöcke in einem Programm kompiliert werden, während andere ignoriert werden.  
@@ -48,8 +39,8 @@ In *bedingte Kompilierung*, selektiv bestimmter Codeblöcke in einem Programm ko
 |Wie Konstante festgelegt wird|Umfang der Konstante|  
 |---|---|  
 |**Projekt-Designer**|Öffentlich für alle Dateien im Projekt|  
-|Über die Befehlszeile|Öffentlich für alle Dateien, die für den Befehlszeilencompiler übergeben|  
-|`#Const`die Anweisung im code|Für die Datei, in der sie deklariert ist, privat|  
+|Befehlszeile|Öffentlich für alle Dateien, die für den Befehlszeilencompiler übergeben|  
+|`#Const` die Anweisung im code|Für die Datei, in der sie deklariert ist, privat|  
   
 |So legen Sie Konstanten in den Projekt-Designer fest|  
 |---|  
@@ -69,7 +60,7 @@ In *bedingte Kompilierung*, selektiv bestimmter Codeblöcke in einem Programm ko
 |---|---|  
 |[Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Enthält Vorschläge für erleichtert die Ihren Code lesen und zu verwalten.|  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  [#Const-Anweisung](../../../visual-basic/language-reference/directives/const-directive.md)  
   
  [#If...Then...#Else-Anweisungen](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  

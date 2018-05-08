@@ -1,28 +1,14 @@
 ---
 title: Konfigurieren der Ablaufverfolgung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 53
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung
 In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung, das Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen, das Festlegen von Ablaufverfolgungsebenen, das Festlegen der Aktivitätsablaufverfolgung und -weitergabe zur Unterstützung der End-to-End-Ablaufverfolgungskorrelation sowie das Festlegen von Ablaufverfolgungslistenern für den Zugriff auf Ablaufverfolgungen.  
@@ -33,7 +19,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
 >  Unter Windows 8 müssen Sie die Anwendung mit erhöhten Rechten (als Administrator) ausführen, damit die Anwendung Ablaufverfolgungsprotokolle generieren kann.  
   
 ## <a name="enabling-tracing"></a>Aktivieren der Ablaufverfolgung  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] gibt die folgenden Daten zur Diagnoseablaufverfolgung aus:  
+ Windows Communication Foundation (WCF) gibt die folgenden Daten zur diagnoseablaufverfolgung aus:  
   
 -   Ablaufverfolgungen für Verarbeitungsmeilensteine in allen Komponenten der Anwendungen, beispielsweise Operationsaufrufe, Codeausnahmen, Warnungen und andere wichtige Verarbeitungsereignisse.  
   

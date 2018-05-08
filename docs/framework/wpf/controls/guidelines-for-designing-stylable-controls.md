@@ -1,27 +1,15 @@
 ---
 title: Richtlinien zum Entwerfen formatierbarer Steuerelemente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Richtlinien zum Entwerfen formatierbarer Steuerelemente
 Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksichtigen sind, wenn Sie ein Steuerelement erstellen, das einfach zu formatieren ist und damit bequem Vorlagen damit erstellt werden können. Wir kamen durch Experimentieren zu dieser Reihe bewährter Methoden, während wir an Steuerelementstilen für Designs für die integrierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente gearbeitet haben. Wir haben gelernt, dass die erfolgreiche Formatierung genau so eine Funktion eines gut strukturierten Objektmodells ist wie für den Stil selbst. Die Zielgruppe für dieses Dokument sind die Autoren des Steuerelements und nicht der Autoren der Stile.  

@@ -1,34 +1,20 @@
 ---
 title: 'Gewusst wie: Implementieren eines Windows Communication Foundation-Dienstvertrags'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bf590b2f508cc6661b5acb045a7d66b38ed169c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8d1712e6fcc844a3606403efc3c2648ddcc9c65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>Gewusst wie: Implementieren eines Windows Communication Foundation-Dienstvertrags
-Dies ist die zweite von sechs Aufgaben, die zum Erstellen eines grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Diensts und eines Clients, der den Dienst aufrufen kann, erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
+Dies ist die zweite von sechs Schritte zur Erstellung einer grundlegenden Windows Communication Foundation (WCF)-Dienst und einem Client, der den Dienst aufrufen kann. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
   
  Im nächsten Schritt zum Erstellen einer WCF-Anwendung wird die Dienstschnittstelle implementiert. Dies schließt die Erstellung einer `CalculatorService`-Klasse ein, die die benutzerdefinierte `ICalculator`-Schnittstelle implementiert.  
   

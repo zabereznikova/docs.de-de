@@ -1,14 +1,6 @@
 ---
 title: Verwaltung und Diagnose
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, diagnostics
 - Windows Communication Foundation, administration
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa5256f543a99618e00dc88e085dfee4ac76ebab
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 552ddb842e0a922493feccee1e48e7d5e74291ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="administration-and-diagnostics"></a>Verwaltung und Diagnose
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet einen umfangreichen Satz an Funktionen, über die Sie die unterschiedlichen Phasen der Lebensdauer einer Anwendung überwachen können. Beispielsweise können Sie die Konfiguration verwenden, um Dienste und Clients bei der Bereitstellung einzurichten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] beinhaltet einen umfangreichen Satz von Leistungsindikatoren zur Messung der Anwendungsleistung. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] macht außerdem zur Laufzeit über einen WMI (Windows Management Instrumentation)-Anbieter von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Inspektionsdaten eines Diensts verfügbar. Trifft die Anwendung auf einen Fehler oder funktioniert die Anwendung nicht ordnungsgemäß, können Sie das Ereignisprotokoll nutzen, um festzustellen, ob etwas Schwerwiegendes eingetreten ist. Darüber hinaus können Sie die Nachrichtenprotokollierung und -ablaufverfolgung nutzen, um festzustellen, welche End-to-End-Ereignisse in Ihrer Anwendung stattfinden. Diese Funktionen unterstützen sowohl Entwickler als auch IT-Profis bei der Fehlerbehebung einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung im Falle von nicht ordnungsgemäßem Verhalten.  
+Windows Communication Foundation (WCF) bietet einen umfangreichen Satz von Funktionen, mit die Sie die verschiedenen Phasen der Lebensdauer einer Anwendung überwachen können. Beispielsweise können Sie die Konfiguration verwenden, um Dienste und Clients bei der Bereitstellung einzurichten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] beinhaltet einen umfangreichen Satz von Leistungsindikatoren zur Messung der Anwendungsleistung. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] macht außerdem zur Laufzeit über einen WMI (Windows Management Instrumentation)-Anbieter von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Inspektionsdaten eines Diensts verfügbar. Trifft die Anwendung auf einen Fehler oder funktioniert die Anwendung nicht ordnungsgemäß, können Sie das Ereignisprotokoll nutzen, um festzustellen, ob etwas Schwerwiegendes eingetreten ist. Darüber hinaus können Sie die Nachrichtenprotokollierung und -ablaufverfolgung nutzen, um festzustellen, welche End-to-End-Ereignisse in Ihrer Anwendung stattfinden. Diese Funktionen unterstützen sowohl Entwickler als auch IT-Profis bei der Fehlerbehebung einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung im Falle von nicht ordnungsgemäßem Verhalten.  
   
 > [!NOTE]
 >  Wenn Sie mit keine Detailinformationen für bestimmte Fehler empfangen, sollten Sie aktivieren die `includeExceptionDetailInFaults` Attribut von der [ \<ServiceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) Konfigurationselement. Damit wird [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] angewiesen, den Clients nähere Angaben zu Ausnahmen zu senden. Dies ermöglicht es Ihnen, viele gängige Probleme zu erkennen, ohne erweiterte Diagnosefunktionen einsetzen zu müssen. Weitere Informationen finden Sie unter [senden und Empfangen von Fehlern](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  

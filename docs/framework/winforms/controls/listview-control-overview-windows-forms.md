@@ -1,14 +1,6 @@
 ---
-title: "Übersicht über das ListView-Steuerelement (Windows Forms)"
-ms.custom: 
+title: Übersicht über das ListView-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ListView
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>Übersicht über das ListView-Steuerelement (Windows Forms)
 Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird eine Liste von Elementen mit Symbolen angezeigt. Mit einer Listenansicht können Sie eine Benutzeroberfläche erstellen, deren Darstellung dem rechten Fensterbereich von Windows Explorer ähnelt. Das Steuerelement verfügt über vier Ansichtsmodi: LargeIcon, SmallIcon, Liste und Details.  
@@ -50,13 +36,13 @@ Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird
 |<xref:System.Windows.Forms.ListView.FindItemWithText%2A>-Methode|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>oder <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A>-Methode|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A>-Methode|<xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A>-Eigenschaft|Alle Ansichten außer<xref:System.Windows.Forms.View.List>|  
+|<xref:System.Windows.Forms.ListView.Groups%2A>-Eigenschaft|Alle Ansichten außer <xref:System.Windows.Forms.View.List>|  
 |<xref:System.Windows.Forms.ListView.HeaderStyle%2A>-Eigenschaft|<xref:System.Windows.Forms.View.Details>|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A>-Eigenschaft|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>oder <xref:System.Windows.Forms.View.Tile>|  
   
  Die wichtigste Eigenschaft die <xref:System.Windows.Forms.ListView> Steuerelement <xref:System.Windows.Forms.ListView.Items%2A>, enthält die Elemente im Steuerelement angezeigt wird. Die <xref:System.Windows.Forms.ListView.SelectedItems%2A> Eigenschaft enthält eine Auflistung der derzeit im Steuerelement ausgewählten Elemente. Der Benutzer kann mehrere Elemente auswählen, z. B. Drag & drop mehrere Elemente gleichzeitig auf ein anderes Steuerelement, wenn die <xref:System.Windows.Forms.ListView.MultiSelect%2A> -Eigenschaftensatz auf `true`. Die <xref:System.Windows.Forms.ListView> -Steuerelement kann die Kontrollkästchen neben den Elementen anzeigen, wenn die <xref:System.Windows.Forms.ListView.CheckBoxes%2A> -Eigenschaftensatz auf `true`.  
   
- Die <xref:System.Windows.Forms.ListView.Activation%2A> Eigenschaft bestimmt, welche Aktion der Benutzer ausführen muss, zum Aktivieren eines Elements in der Liste: die Optionen sind <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, und <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick>zur Aktivierung muss einem Klick auf das Element zu aktivieren. <xref:System.Windows.Forms.ItemActivation.TwoClick>Aktivierung muss der Benutzer doppelklicken, um das Element zu aktivieren. einem einzigen Mausklick ändert sich die Farbe des Elementtexts. <xref:System.Windows.Forms.ItemActivation.Standard>Aktivierung muss der Benutzer doppelklicken, um ein Element zu aktivieren, aber das Element ändert sich nicht auf die Darstellung.  
+ Die <xref:System.Windows.Forms.ListView.Activation%2A> Eigenschaft bestimmt, welche Aktion der Benutzer ausführen muss, zum Aktivieren eines Elements in der Liste: die Optionen sind <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, und <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> zur Aktivierung muss einem Klick auf das Element zu aktivieren. <xref:System.Windows.Forms.ItemActivation.TwoClick> Aktivierung muss der Benutzer doppelklicken, um das Element zu aktivieren. einem einzigen Mausklick ändert sich die Farbe des Elementtexts. <xref:System.Windows.Forms.ItemActivation.Standard> Aktivierung muss der Benutzer doppelklicken, um ein Element zu aktivieren, aber das Element ändert sich nicht auf die Darstellung.  
   
  Die <xref:System.Windows.Forms.ListView> Steuerelement unterstützt auch die visuellen Stile und andere Funktionen, die verfügbar sind auf der Windows XP-Plattform, einschließlich u. a. Einfügemarken, Gruppierung und Ansicht "Nebeneinander". Weitere Informationen finden Sie unter [Windows XP-Features und Windows Forms-Steuerelemente](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   

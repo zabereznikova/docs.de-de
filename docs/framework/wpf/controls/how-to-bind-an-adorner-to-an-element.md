@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Binden eines Adorners an ein Element'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3c657cde9da19f8ebc6b6d4d05077ed027781b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb419ee5a57e81e7e3bc72ae04fd200703b80cd3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Gewusst wie: Binden eines Adorners an ein Element
 In diesem Beispiel wird gezeigt, wie einen Adorner programmgesteuert mit einem angegebenen gebunden <xref:System.Windows.UIElement>.  
@@ -32,7 +20,7 @@ In diesem Beispiel wird gezeigt, wie einen Adorner programmgesteuert mit einem a
 ## <a name="example"></a>Beispiel  
  So binden einen Adorner zu einem bestimmten <xref:System.Windows.UIElement>, gehen Sie folgendermaßen vor:  
   
-1.  Rufen Sie die `static` Methode <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> abzurufenden ein <xref:System.Windows.Documents.AdornerLayer> -Objekt für die <xref:System.Windows.UIElement> zu gestaltet werden. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>durchläuft die visuelle Struktur, beginnend am angegebenen **UIElement**, und gibt die erste Adornerebene gefunden. (Falls keine Adorner-Ebenen gefunden werden, gibt die Methode NULL zurück.)  
+1.  Rufen Sie die `static` Methode <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> abzurufenden ein <xref:System.Windows.Documents.AdornerLayer> -Objekt für die <xref:System.Windows.UIElement> zu gestaltet werden. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> durchläuft die visuelle Struktur, beginnend am angegebenen **UIElement**, und gibt die erste Adornerebene gefunden. (Falls keine Adorner-Ebenen gefunden werden, gibt die Methode NULL zurück.)  
   
 2.  Rufen Sie die <xref:System.Windows.Documents.AdornerLayer.Add%2A> Methode, um den Adorner an das Ziel binden **UIElement**.  
   

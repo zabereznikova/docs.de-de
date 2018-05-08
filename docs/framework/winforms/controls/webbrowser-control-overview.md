@@ -1,31 +1,17 @@
 ---
-title: "Übersicht über das WebBrowser-Steuerelement"
-ms.custom: 
+title: Übersicht über das WebBrowser-Steuerelement
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - WebBrowser
 helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e69b71b3e354101d950d6f7011b13fc7c0de030
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webbrowser-control-overview"></a>Übersicht über das WebBrowser-Steuerelement
 Die <xref:System.Windows.Forms.WebBrowser> Steuerelement stellt einen verwalteten Wrapper für das WebBrowser ActiveX-Steuerelement. Der verwaltete Wrapper können Sie die Anzeige von Webseiten in Windows Forms-Clientanwendungen. Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement in Internet Explorer Webbrowserfunktionalität in Ihre Anwendung oder an Sie duplizieren Standardfunktionalität von Internet Explorer deaktivieren und das Steuerelement als einfache HTML-Dokument-Viewer verwenden kann. Sie können auch das Steuerelement dem Formular DHTML-basierter Elemente der Benutzeroberfläche hinzu, und blenden die Tatsache, dass die in dem sie gehostet werden die <xref:System.Windows.Forms.WebBrowser> Steuerelement. Dieser Ansatz können Sie nahtlos Websteuerelemente mit Windows Forms-Steuerelemente in einer einzigen Anwendung kombiniert.  

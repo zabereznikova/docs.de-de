@@ -1,31 +1,19 @@
 ---
-title: "Übersicht über GridView"
-ms.custom: 
+title: Übersicht über GridView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridView view mode [WPF]
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 776897d490b2748e240cf7b9a4ea21364284c4c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gridview-overview"></a>Übersicht über GridView
-<xref:System.Windows.Controls.GridView>Ansichtsmodus ist einer der Ansichtsmodi für ein <xref:System.Windows.Controls.ListView> Steuerelement. Die <xref:System.Windows.Controls.GridView> -Klasse und unterstützenden Klassen aktivieren Sie und Ihre Benutzer Element Auflistungen in einer Tabelle anzuzeigen, die Schaltflächen in der Regel als interaktive Spaltenüberschriften verwendet. Dieses Thema enthält die <xref:System.Windows.Controls.GridView> Klasse und ihre Verwendung erläutert.  
+<xref:System.Windows.Controls.GridView> Ansichtsmodus ist einer der Ansichtsmodi für ein <xref:System.Windows.Controls.ListView> Steuerelement. Die <xref:System.Windows.Controls.GridView> -Klasse und unterstützenden Klassen aktivieren Sie und Ihre Benutzer Element Auflistungen in einer Tabelle anzuzeigen, die Schaltflächen in der Regel als interaktive Spaltenüberschriften verwendet. Dieses Thema enthält die <xref:System.Windows.Controls.GridView> Klasse und ihre Verwendung erläutert.  
   
   
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Mit einem Stil versehene ListView-Ansicht](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "Mit einem Stil versehene ListView-Ansicht")  
   
- <xref:System.Windows.Controls.GridView>Spalten werden durch dargestellt <xref:System.Windows.Controls.GridViewColumn> Objekte, die auf ihre Inhalte automatisch angepasst werden können. Optional können Sie explizit festlegen einer <xref:System.Windows.Controls.GridViewColumn> zu einer bestimmten Breite. Sie können die Spaltenbreite mithilfe der Ziehelemente zwischen den Spaltenheadern anpassen. Sie können auch dynamisch hinzufügen, entfernen Sie ersetzen und Neuanordnen von Spalten, da diese Funktionalität ist in integriert <xref:System.Windows.Controls.GridView>. Allerdings <xref:System.Windows.Controls.GridView> kann nicht direkt aktualisieren Sie die Daten, die es anzeigt.  
+ <xref:System.Windows.Controls.GridView> Spalten werden durch dargestellt <xref:System.Windows.Controls.GridViewColumn> Objekte, die auf ihre Inhalte automatisch angepasst werden können. Optional können Sie explizit festlegen einer <xref:System.Windows.Controls.GridViewColumn> zu einer bestimmten Breite. Sie können die Spaltenbreite mithilfe der Ziehelemente zwischen den Spaltenheadern anpassen. Sie können auch dynamisch hinzufügen, entfernen Sie ersetzen und Neuanordnen von Spalten, da diese Funktionalität ist in integriert <xref:System.Windows.Controls.GridView>. Allerdings <xref:System.Windows.Controls.GridView> kann nicht direkt aktualisieren Sie die Daten, die es anzeigt.  
   
  Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.GridView> , die Mitarbeiterdaten anzeigt. In diesem Beispiel <xref:System.Windows.Controls.ListView> definiert die `EmployeeInfoDataSource` als die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Die Eigenschaftsdefinitionen der <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> binden <xref:System.Windows.Controls.GridViewColumn> Inhalt `EmployeeInfoDataSource` Datenkategorien.  
   

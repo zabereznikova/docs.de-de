@@ -1,26 +1,17 @@
 ---
-title: "Die Anweisung ist innerhalb einer Methode mehrzeiligen Lambda ungültig"
+title: Die Anweisung ist innerhalb einer Methode mehrzeiligen Lambda ungültig
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30024
 - bc30024
 helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 80673fc7a1497b4148a6505d29581c6403115558
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cef5beea16c8589a884b7d3533e0543454783999
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>Die Anweisung ist innerhalb einer Methode oder eines mehrzeiligen Lambda-Ausdrucks nicht gültig.
 Die Anweisung gilt nicht innerhalb einer `Sub`, `Function`, Eigenschaft `Get`, oder die Eigenschaft `Set` Prozedur. Einige Anweisungen können auf das Modul oder Klassenebene platziert werden. Andere, z. B. `Option Strict`, werden auf Namespaceebene und vor allen anderen Deklarationen stehen müssen.  

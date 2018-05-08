@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Anwenden einer Transformation auf ein Element beim Auftreten eines Ereignisses'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - properties [WPF], RenderTransform
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2e58e49ecc852b87d03d4112208354e608248984
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd50b369666a1b65226b2b7eb6f3d866ec670bde
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Gewusst wie: Anwenden einer Transformation auf ein Element beim Auftreten eines Ereignisses
 In diesem Beispiel wird gezeigt, wie zum Anwenden einer <xref:System.Windows.Media.ScaleTransform> bei Auftreten eines Ereignisses. Mithilfe des hier dargestellten Konzepts können Sie auch andere Transformationstypen anwenden. Weitere Informationen zu den verfügbaren Typen von Transformationen finden Sie unter der <xref:System.Windows.Media.Transform> Klasse oder [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  

@@ -1,13 +1,6 @@
 ---
-title: "Problembehandlung für Hybridanwendungen"
-ms.custom: 
+title: Problembehandlung für Hybridanwendungen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overlapping controls [WPF]
 - Windows Forms [WPF], interoperability with
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a23f439b9b14d16a5440fa3b757b972304fdfa3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 878761c030d4950e53ee24b76f7e29101584143a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Problembehandlung für Hybridanwendungen
 <a name="introduction"></a>In diesem Thema werden einige der häufigsten Probleme aufgeführt, die beim Erstellen von Hybridanwendungen, die sowohl die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]- als auch die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Technologie verwenden, auftreten können,.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
   
  Ein in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gehostetes [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement wird immer über dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt angezeigt.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Inhalt gehostet wird, eine <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement angezeigt wird, auf der Z-Reihenfolge von der <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement. Es ist möglich, die sich überschneiden <xref:System.Windows.Forms.Integration.ElementHost> Steuerelemente, aber das gehostete [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt nicht kombinieren oder zu interagieren.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt gehostet wird, eine <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement angezeigt wird, auf der Z-Reihenfolge von der <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement. Es ist möglich, die sich überschneiden <xref:System.Windows.Forms.Integration.ElementHost> Steuerelemente, aber das gehostete [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt nicht kombinieren oder zu interagieren.  
   
 <a name="child_property"></a>   
 ## <a name="child-property"></a>Untergeordnete Eigenschaft  
@@ -95,7 +83,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="dispose"></a>   
 ## <a name="dispose"></a>Löschen  
- Wenn Klassen nicht korrekt gelöscht werden, kann es zu Ressourcenverlusten kommen. In den hybridanwendungen stellen sicher, dass die <xref:System.Windows.Forms.Integration.WindowsFormsHost> und <xref:System.Windows.Forms.Integration.ElementHost> Klassen entsprechen, verworfen oder konnte Ressourcenverluste. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]verwirft <xref:System.Windows.Forms.Integration.ElementHost> gesteuert werden die nicht modalen <xref:System.Windows.Forms.Form> übergeordnete geschlossen wird. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]verwirft <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elemente angezeigt, wenn die Anwendung beendet wird. Es ist möglich, Anzeigen einer <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element in eine <xref:System.Windows.Window> in eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Nachrichtenschleife. In diesem Fall erhält der Code möglicherweise keine Benachrichtigung, dass die Anwendung beendet wird.  
+ Wenn Klassen nicht korrekt gelöscht werden, kann es zu Ressourcenverlusten kommen. In den hybridanwendungen stellen sicher, dass die <xref:System.Windows.Forms.Integration.WindowsFormsHost> und <xref:System.Windows.Forms.Integration.ElementHost> Klassen entsprechen, verworfen oder konnte Ressourcenverluste. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] verwirft <xref:System.Windows.Forms.Integration.ElementHost> gesteuert werden die nicht modalen <xref:System.Windows.Forms.Form> übergeordnete geschlossen wird. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwirft <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elemente angezeigt, wenn die Anwendung beendet wird. Es ist möglich, Anzeigen einer <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element in eine <xref:System.Windows.Window> in eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Nachrichtenschleife. In diesem Fall erhält der Code möglicherweise keine Benachrichtigung, dass die Anwendung beendet wird.  
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Aktivieren von visuellen Stilen  

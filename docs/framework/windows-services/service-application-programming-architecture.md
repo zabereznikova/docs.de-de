@@ -1,13 +1,6 @@
 ---
-title: "Programmierarchitektur für Dienstanwendungen"
-ms.custom: 
+title: Programmierarchitektur für Dienstanwendungen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,25 +14,22 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-caps.latest.revision: "15"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0c760d0f9b65fc9b612a8bee8abb68fa5b4ecae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-application-programming-architecture"></a>Programmierarchitektur für Dienstanwendungen
 Windows-dienstanwendungen basieren auf einer Klasse, die von erben die <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> Klasse. Sie überschreiben die Methoden, die von dieser Klasse und Funktionen sind, um zu bestimmen, wie das Verhalten des Diensts definiert.  
   
  Die wichtigsten Klassen diensterstellung beteiligt sind:  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>– Sie überschreiben Sie Methoden aus der <xref:System.ServiceProcess.ServiceBase> Klasse beim Erstellen eines Diensts, und definieren Sie den Code, um zu bestimmen, wie Ihre Service-Funktionen in dieser Klasse geerbt.  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> – Sie überschreiben Sie Methoden aus der <xref:System.ServiceProcess.ServiceBase> Klasse beim Erstellen eines Diensts, und definieren Sie den Code, um zu bestimmen, wie Ihre Service-Funktionen in dieser Klasse geerbt.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType>und <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> – verwenden Sie diese Klassen zum Installieren und deinstallieren den Dienst.  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> und <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> – verwenden Sie diese Klassen zum Installieren und deinstallieren den Dienst.  
   
  Darüber hinaus eine Klasse mit dem Namen <xref:System.ServiceProcess.ServiceController> können verwendet werden, um den Dienst selbst bearbeiten. Diese Klasse ist nicht zur Erstellung eines Diensts jedoch dienen zum Starten und beenden Sie den Dienst, Befehle an ihn übergeben und eine Reihe von Enumerationen zurück.  
   

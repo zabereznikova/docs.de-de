@@ -1,24 +1,12 @@
 ---
 title: Objektbesitz und Trennung von Benutzer und Schema in SQL Server
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8f78cd816be7a4c68853a25f89859bbe2452bb9c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 Eines der Hauptkonzepte der SQL Server-Sicherheit besteht darin, dass die Besitzer von Objekten unwiderrufbare Berechtigungen für deren Verwaltung besitzen. Es ist nicht möglich, dem Besitzer eines Objekts dessen Privilegien zu entziehen, und Sie können auch keine Besitzer aus der Datenbank entfernen, wenn diese Objekte in der Datenbank besitzen.  

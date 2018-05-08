@@ -1,35 +1,21 @@
 ---
 title: Steuerelemente
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c9c2cdd9e485fb87f5d8ead7790ded0428f7dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls"></a>Steuerelemente
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]viele allgemeine UI-Komponenten, die in fast jeder Windows-Anwendung, z. B. verwendet werden im Lieferumfang <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, und <xref:System.Windows.Controls.ListBox>. In der Vergangenheit wurden diese Objekte als Steuerelemente bezeichnet. Während der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK weiterhin verwenden den Begriff "Control" für lose jede Klasse, die ein sichtbares Objekt in einer Anwendung darstellt. es ist wichtig zu beachten, dass eine Klasse nicht erben muss die <xref:System.Windows.Controls.Control> Klasse, um eine sichtbare Präsenz haben. Klassen, die von erben die <xref:System.Windows.Controls.Control> Klasse enthalten eine <xref:System.Windows.Controls.ControlTemplate>, sodass der Consumer eines Steuerelements, um die Darstellung des Steuerelements grundlegend zu ändern, ohne eine neue Unterklasse erstellen zu müssen.  In diesem Thema wird erläutert, wie Steuerelemente (sowohl die, die von erben die <xref:System.Windows.Controls.Control> Klasse und anderen nicht) werden häufig verwendet, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] viele allgemeine UI-Komponenten, die in fast jeder Windows-Anwendung, z. B. verwendet werden im Lieferumfang <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, und <xref:System.Windows.Controls.ListBox>. In der Vergangenheit wurden diese Objekte als Steuerelemente bezeichnet. Während der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK weiterhin verwenden den Begriff "Control" für lose jede Klasse, die ein sichtbares Objekt in einer Anwendung darstellt. es ist wichtig zu beachten, dass eine Klasse nicht erben muss die <xref:System.Windows.Controls.Control> Klasse, um eine sichtbare Präsenz haben. Klassen, die von erben die <xref:System.Windows.Controls.Control> Klasse enthalten eine <xref:System.Windows.Controls.ControlTemplate>, sodass der Consumer eines Steuerelements, um die Darstellung des Steuerelements grundlegend zu ändern, ohne eine neue Unterklasse erstellen zu müssen.  In diesem Thema wird erläutert, wie Steuerelemente (sowohl die, die von erben die <xref:System.Windows.Controls.Control> Klasse und anderen nicht) werden häufig verwendet, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>Erstellen einer Instanz eines Steuerelements  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- Im folgenden Beispiel wird die gleiche Anwendung in Code erstellt. Aus Gründen der Übersichtlichkeit, die Erstellung der <xref:System.Windows.Controls.Grid>, `grid1`, aus dem Beispiel ausgeschlossen wurde. `grid1`hat die gleichen Spalten- und Definitionen, wie im vorangehenden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Beispiel.  
+ Im folgenden Beispiel wird die gleiche Anwendung in Code erstellt. Aus Gründen der Übersichtlichkeit, die Erstellung der <xref:System.Windows.Controls.Grid>, `grid1`, aus dem Beispiel ausgeschlossen wurde. `grid1` hat die gleichen Spalten- und Definitionen, wie im vorangehenden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Beispiel.  
   
  [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
@@ -63,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
 ### <a name="creating-a-style-for-a-control"></a>Erstellen eines Stils für ein Steuerelement  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bietet Ihnen die Möglichkeit, die Darstellung von Steuerelementen Global angeben, anstatt das Festlegen von Eigenschaften für jede Instanz in der Anwendung durch das Erstellen einer <xref:System.Windows.Style>. Das folgende Beispiel erstellt eine <xref:System.Windows.Style> , die für jede angewendet <xref:System.Windows.Controls.Button> in der Anwendung. <xref:System.Windows.Style>Definitionen werden in der Regel definiert, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in einer <xref:System.Windows.ResourceDictionary>, wie z. B. die <xref:System.Windows.FrameworkElement.Resources%2A> Eigenschaft von der <xref:System.Windows.FrameworkElement>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Ihnen die Möglichkeit, die Darstellung von Steuerelementen Global angeben, anstatt das Festlegen von Eigenschaften für jede Instanz in der Anwendung durch das Erstellen einer <xref:System.Windows.Style>. Das folgende Beispiel erstellt eine <xref:System.Windows.Style> , die für jede angewendet <xref:System.Windows.Controls.Button> in der Anwendung. <xref:System.Windows.Style> Definitionen werden in der Regel definiert, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in einer <xref:System.Windows.ResourceDictionary>, wie z. B. die <xref:System.Windows.FrameworkElement.Resources%2A> Eigenschaft von der <xref:System.Windows.FrameworkElement>.  
   
  [!code-xaml[ControlsOverview#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   

@@ -1,26 +1,12 @@
 ---
 title: Erwartete Ausnahmen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 28af4a374d7ff474cf313aad711a3062f56263c9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expected-exceptions"></a>Erwartete Ausnahmen
 Dieses Beispiel zeigt, wie erwartete Ausnahmen beim Verwenden eines typisierten Clients abgefangen werden. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst. In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
@@ -30,7 +16,7 @@ Dieses Beispiel zeigt, wie erwartete Ausnahmen beim Verwenden eines typisierten 
   
  Dieses Beispiel zeigt das Abfangen und Behandeln von erwarteten Ausnahmen beider Typen, die korrekte Programme verarbeiten müssen: `TimeoutException` und `CommunicationException`.  
   
- Ausnahmen, die aus Kommunikationsmethoden in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client ausgelöst werden, sind entweder erwartet oder unerwartet. Unerwartete Ausnahmen umfassen katastrophale Fehler (wie `OutOfMemoryException`) und Programmierfehler (wie `ArgumentNullException` oder `InvalidOperationException`). Meist gibt es keinen praktikablen Weg im Umgang mit unerwarteten Fehlern, daher sollten sie beim Aufruf einer Kommunikationsmethode aus dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client meist auch gar nicht abgefangen werden.  
+ Ausnahmen, die aus Kommunikationsmethoden auf einem Windows Communication Foundation (WCF)-Client ausgelöst werden, sind entweder erwartet oder unerwartet. Unerwartete Ausnahmen umfassen katastrophale Fehler (wie `OutOfMemoryException`) und Programmierfehler (wie `ArgumentNullException` oder `InvalidOperationException`). Meist gibt es keinen praktikablen Weg im Umgang mit unerwarteten Fehlern, daher sollten sie beim Aufruf einer Kommunikationsmethode aus dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client meist auch gar nicht abgefangen werden.  
   
  Zu den erwarteten Ausnahmen aus Kommunikationsmethoden in einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client gehören `TimeoutException`, `CommunicationException` und jede von `CommunicationException` abgeleitete Klasse. Sie zeigen an, dass während der Kommunikation ein Problem aufgetreten ist, das sicher behandelt werden kann, indem der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client abgebrochen und ein Kommunikationsfehler gemeldet wird. Da diese Fehler durch externe Faktoren in jeder Anwendung verursacht werden können, müssen ordnungsgemäße Anwendungen diese Ausnahmen abfangen und wiederherstellen, wenn sie auftreten.  
   
@@ -89,7 +75,7 @@ Got System.TimeoutException
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   

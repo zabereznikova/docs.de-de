@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Verankern von Steuerelementen in Windows Forms"
-ms.custom: 
+title: 'Gewusst wie: Verankern von Steuerelementen in Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
 - Windows Forms controls, screen resolutions
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ceaacc250d48e7199d7224f95aa91ed976c097e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3d0885ac3acde6732a5c059063f992913a98b9c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Gewusst wie: Verankern von Steuerelementen in Windows Forms
 Wenn Sie ein Formular entwerfen, die der Benutzer zur Laufzeit ändern kann, sollten die Steuerelemente im Formular Größe und ordnungsgemäß neu zu positionieren. Zum Ändern der Größe von Steuerelementen dynamisch mit dem Formular können Sie die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft von Windows Forms-Steuerelementen. Die <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaft definiert ein Ankerposition für das Steuerelement. Wenn ein Steuerelement einem Formular verankert ist und der Größe des Formulars, behält das Steuerelement den Abstand zwischen dem Steuerelement und dem Anker Positionen an. Angenommen, Sie haben eine <xref:System.Windows.Forms.TextBox> Steuerelement, das den linken, rechten und unteren Rand des Formulars verbunden ist wie die Größe des Formulars die <xref:System.Windows.Forms.TextBox> ändert die Größe horizontal steuern, sodass er die gleiche Distanz vom die rechten und linken Rand des Formulars verwaltet. Darüber hinaus wird das Steuerelement vertikal positioniert, sodass am Speicherort stets die gleiche Distanz vom unteren Rand des Formulars. Wenn ein Steuerelement verankert ist, und der Größe des Formulars, wird die Position des Steuerelements relativ zu den Rändern des Formulars geändert.  

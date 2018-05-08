@@ -2,10 +2,6 @@
 title: Get-Funktion (Referenz zur nicht verwalteten API)
 description: Die Get-Funktion ruft den angegebenen Eigenschaftswert ab.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Get-Funktion
 Ruft den angegebenen Eigenschaftswert ab, falls vorhanden.
@@ -59,18 +52,18 @@ HRESULT Get (
 `wszName`  
 [in] Der Name der Eigenschaft.
 
-`lFlags`[in] Reserviert. Dieser Parameter muss 0 sein.
+`lFlags` [in] Reserviert. Dieser Parameter muss 0 sein.
 
-`pVal`[out] Wenn die Funktion erfolgreich zurückgibt, enthält den Wert von der `wszName` Eigenschaft. Die `pval` Argument zugewiesen ist, den richtigen Typ und Wert für den Qualifizierer.
+`pVal` [out] Wenn die Funktion erfolgreich zurückgibt, enthält den Wert von der `wszName` Eigenschaft. Die `pval` Argument zugewiesen ist, den richtigen Typ und Wert für den Qualifizierer.
 
-`pvtType`[out] Wenn die Funktion erfolgreich zurückgibt, enthält eine [CIM-Typ-Konstante](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) , der den Eigenschaftentyp angibt. Der Wert kann auch `null`. 
+`pvtType` [out] Wenn die Funktion erfolgreich zurückgibt, enthält eine [CIM-Typ-Konstante](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) , der den Eigenschaftentyp angibt. Der Wert kann auch `null`. 
 
-`plFlavor`[out] Wenn die Funktion erfolgreich zurückgegeben wird, empfängt Informationen über den Ursprung der Eigenschaft. Die Werte sind möglich `null`, oder eine der folgenden WBEM_FLAVOR_TYPE Konstanten definiert, der *WbemCli.h* Headerdatei: 
+`plFlavor` [out] Wenn die Funktion erfolgreich zurückgegeben wird, empfängt Informationen über den Ursprung der Eigenschaft. Die Werte sind möglich `null`, oder eine der folgenden WBEM_FLAVOR_TYPE Konstanten definiert, der *WbemCli.h* Headerdatei: 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0 x 40 | Die Eigenschaft ist ein standard-Systemeigenschaft. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0 x 20 | Für eine Klasse: die Eigenschaft wird von der übergeordneten Klasse geerbt. </br> Für eine Instanz: die Eigenschaft während der übergeordneten Klasse geerbt wurde nicht verändert von der Instanz.  |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Für eine Klasse: die Eigenschaft wird von der übergeordneten Klasse geerbt. </br> Für eine Instanz: die Eigenschaft während der übergeordneten Klasse geerbt wurde nicht verändert von der Instanz.  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Für eine Klasse: die Eigenschaft gehört der abgeleiteten Klasse. </br> Für eine Instanz: die Eigenschaft geändert wird, von der Instanz; d. h. ein Wert angegeben wurde, oder ein Qualifizierer hinzugefügt oder geändert wurde. |
 
 ## <a name="return-value"></a>Rückgabewert
@@ -98,7 +91,7 @@ Die `pVal` Argument zugewiesen ist, den richtigen Typ und Wert für den Qualifiz
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

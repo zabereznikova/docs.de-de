@@ -1,29 +1,17 @@
 ---
 title: Standardverhalten von Tastatur und Maus im DataGrid-Steuerelement
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid [WPF], keyboard behavior
 - DataGrid [WPF], mouse behavior
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 559b84d3e6b5ece6c71f17e6766cac4ec14824cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Standardverhalten von Tastatur und Maus im DataGrid-Steuerelement
 In diesem Thema wird beschrieben, wie Benutzer mit interagieren können die <xref:System.Windows.Controls.DataGrid> -Steuerelement mithilfe der Tastatur und Maus.  
@@ -96,7 +84,7 @@ In diesem Thema wird beschrieben, wie Benutzer mit interagieren können die <xre
 |STRG + Klicken Sie auf eine Zeile|Wenn <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> festgelegt ist, um <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, nicht zusammenhängende Auswahl mehrerer Zeile ändert.<br /><br /> Wenn die Zeile bereits ausgewählt ist, hebt die Auswahl der zeilenupdates.|  
 |UMSCHALT + Klicken Sie auf eine Zeile|Wenn <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> festgelegt ist, um <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, eine zusammenhängende Auswahl von mehreren Zeile bestehenden ändert.|  
 |Klicken Sie auf einer Zeilengruppen-Kopfzeile|Erweitert oder reduziert die Gruppe.|  
-|Klicken Sie auf die Schaltfläche "Alle auswählen" in der oberen linken Ecke des der<xref:System.Windows.Controls.DataGrid>|Wenn <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> festgelegt ist, um <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, wählt alle Zeilen in der <xref:System.Windows.Controls.DataGrid>.|  
+|Klicken Sie auf die Schaltfläche "Alle auswählen" in der oberen linken Ecke des der <xref:System.Windows.Controls.DataGrid>|Wenn <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> festgelegt ist, um <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, wählt alle Zeilen in der <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="mouse-selection"></a>Mausauswahl  
  Wenn die <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, auf eine Zeile beim Drücken der STRG-Taste oder UMSCHALTTASTE Auswahl mehrerer Zeile ändern.  

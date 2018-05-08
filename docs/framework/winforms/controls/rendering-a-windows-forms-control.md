@@ -1,13 +1,6 @@
 ---
-title: "Wiedergeben eines Windows Forms-Steuerelements"
-ms.custom: 
+title: Wiedergeben eines Windows Forms-Steuerelements
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 587c9c8fb0bf634a2491acb1ae0b2f60979fa899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2d7a02e725e3f8065b80a6b30ea21158be43ea8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-a-windows-forms-control"></a>Wiedergeben eines Windows Forms-Steuerelements
 Rendering bezieht sich auf den Prozess zum Erstellen einer visuellen Darstellung auf dem Bildschirm des Benutzers. Windows Forms verwendet [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (die neue Windows-Grafikbibliothek) für das Rendering. Die verwalteten Klassen, die Zugriff auf [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] befinden sich in der <xref:System.Drawing?displayProperty=nameWithType> Namespace und dessen untergeordneten Namespaces.  
@@ -72,9 +60,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics>ist eine verwaltete Klasse, die Zeichnen Funktionen kapselt, gemäß der bei der Erläuterung der [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] weiter unten in diesem Thema. Die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> ist eine Instanz der <xref:System.Drawing.Rectangle> strukturieren und definiert den verfügbaren Bereich, in dem ein Steuerelement zeichnen kann. Der Entwickler eines Steuerelements kann Berechnen der <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> mithilfe der <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Eigenschaft eines Steuerelements, wie bei der Erläuterung der Geometrie weiter unten in diesem Thema beschrieben.  
+ <xref:System.Drawing.Graphics> ist eine verwaltete Klasse, die Zeichnen Funktionen kapselt, gemäß der bei der Erläuterung der [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] weiter unten in diesem Thema. Die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> ist eine Instanz der <xref:System.Drawing.Rectangle> strukturieren und definiert den verfügbaren Bereich, in dem ein Steuerelement zeichnen kann. Der Entwickler eines Steuerelements kann Berechnen der <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> mithilfe der <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Eigenschaft eines Steuerelements, wie bei der Erläuterung der Geometrie weiter unten in diesem Thema beschrieben.  
   
- Ein Steuerelement muss Renderinglogik bereitstellen, durch Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode, die von der erbt <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A>Ruft den Zugriff auf ein Grafikobjekt und ein Rechteck über gezeichnet werden soll, der <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> und die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Eigenschaften der <xref:System.Windows.Forms.PaintEventArgs> -Instanz übergeben wird.  
+ Ein Steuerelement muss Renderinglogik bereitstellen, durch Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode, die von der erbt <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> Ruft den Zugriff auf ein Grafikobjekt und ein Rechteck über gezeichnet werden soll, der <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> und die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Eigenschaften der <xref:System.Windows.Forms.PaintEventArgs> -Instanz übergeben wird.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -99,7 +87,7 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A>Zeichnet den Hintergrund (und somit der Form ") des Fensters und ist garantiert schnelles <xref:System.Windows.Forms.Control.OnPaint%2A> zeichnet die Details und möglicherweise daran, dass einzelne zeichnungsanforderungen zusammengefasst werden langsamer <xref:System.Windows.Forms.Control.Paint> Ereignis, das alle Bereiche behandelt, die sein neu gezeichnet wird. Möglicherweise möchten Sie rufen die <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Wenn z. B. einen Farbverlauf-Hintergrund für das Steuerelement gezeichnet werden soll.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Zeichnet den Hintergrund (und somit der Form ") des Fensters und ist garantiert schnelles <xref:System.Windows.Forms.Control.OnPaint%2A> zeichnet die Details und möglicherweise daran, dass einzelne zeichnungsanforderungen zusammengefasst werden langsamer <xref:System.Windows.Forms.Control.Paint> Ereignis, das alle Bereiche behandelt, die sein neu gezeichnet wird. Möglicherweise möchten Sie rufen die <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Wenn z. B. einen Farbverlauf-Hintergrund für das Steuerelement gezeichnet werden soll.  
   
  Während <xref:System.Windows.Forms.Control.OnPaintBackground%2A> hat eine ereignisähnliches Nomenklatur und des gleichen Arguments wie die `OnPaint` Methode <xref:System.Windows.Forms.Control.OnPaintBackground%2A> ist keine Ereignismethode "true"-. Es ist keine `PaintBackground` Ereignis und <xref:System.Windows.Forms.Control.OnPaintBackground%2A> keine Ereignisdelegaten aufgerufen werden. Zum Überschreiben der <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Methode, eine abgeleitete Klasse ist nicht erforderlich, um das Aufrufen der <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Methode ihrer Basisklasse.  
   

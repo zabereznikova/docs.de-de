@@ -1,26 +1,17 @@
 ---
 title: Ausdruck ist vom Typ &#39; &lt;Typename&gt; &#39; die eines eingeschränkten Typs ist, und kann nicht verwendet werden, um die von der geerbten Member zugreifen &#39;Objekt&#39; oder &#39;ValueType&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc31393
 - vbc31393
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ab4e48c93a6a3c645bf9b5cc6c536d418022ae86
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2ba2298da77ac31abc0b1b4ad84328be7bc6dbb7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>Ausdruck ist vom Typ &#39; &lt;Typename&gt; &#39; die eines eingeschränkten Typs ist, und kann nicht verwendet werden, um die von der geerbten Member zugreifen &#39;Objekt&#39; oder &#39;ValueType&#39;
 Ein Ausdruck ergibt ein Typ, der von der common Language Runtime (CLR) geschachtelt werden kann, aber greift auf ein Element, das Boxing erfordert.  

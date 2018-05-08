@@ -1,28 +1,16 @@
 ---
-title: "WebBrowser-Steuerelement (Windows Forms)"
-ms.custom: 
+title: WebBrowser-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WebBrowser control [Windows Forms]
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65c92a64619ae993671f7669117e852994072047
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a39e1332625d1614ea9e0243f2ac610e1f9287c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser-Steuerelement (Windows Forms)
 Windows Forms `WebBrowser` Steuerelement hostet Webseiten und Webbrowser-Funktionen für Ihre Anwendung enthält.  
@@ -52,7 +40,7 @@ Windows Forms `WebBrowser` Steuerelement hostet Webseiten und Webbrowser-Funktio
  [Verwenden des verwalteten HTML-Dokumentobjektmodells](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
  Enthält Themen, die beschreiben, wie zum Bearbeiten oder Erstellen von HTML-Seiten, die von gehosteten der <xref:System.Windows.Forms.WebBrowser> Steuerelement.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.WebBrowser>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

@@ -1,13 +1,7 @@
 ---
 title: Konvertieren von Uhrzeiten zwischen Zeitzonen
-ms.custom: 
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eabe0c1511e6fd42798f1a879e9e8d526d543a29
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7547f0c2dd3651e478bb52106640a7b4525afc29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-times-between-time-zones"></a>Konvertieren von Uhrzeiten zwischen Zeitzonen
 
@@ -44,7 +33,7 @@ Die koordinierte Weltzeit (UTC, Coordinated Universal Time) ist ein auf der Atom
 
 Die einfachste Möglichkeit zum Konvertieren einer Uhrzeit in UTC-Zeit ist das Aufrufen der `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> Methode. Die tatsächlich von der Methode ausgeführte Konvertierung hängt vom Wert von der `dateTime` des Parameters <xref:System.DateTime.Kind%2A> Eigenschaft, wie in der folgenden Tabelle gezeigt.
 
-| `DateTime.Kind`            | Conversion                                                                     |
+| `DateTime.Kind`            | Umwandeln                                                                     |
 | -------------------------- | ------------------------------------------------------------------------------ |
 | `DateTimeKind.Local`       | Konvertiert die lokale Zeit in die UTC.                                                    |
 | `DateTimeKind.Unspecified` | Nimmt an, dass der `dateTime`-Parameter die lokale Zeit angibt, und konvertiert die lokale Zeit in die UTC. |
@@ -87,7 +76,7 @@ Der folgende Code konvertiert die UTC in die Central Standard Time.
 
 Rufen Sie zum Konvertieren von UTC in die Ortszeit der <xref:System.DateTime.ToLocalTime%2A> Methode der <xref:System.DateTime> Objekt, dessen Zeit, die Sie konvertieren möchten. Das genaue Verhalten der Methode hängt vom Wert des Objekts <xref:System.DateTime.Kind%2A> Eigenschaft, wie in der folgenden Tabelle gezeigt.
 
-| `DateTime.Kind`            | Conversion                                                                               |
+| `DateTime.Kind`            | Umwandeln                                                                               |
 | -------------------------- | ---------------------------------------------------------------------------------------- |
 | `DateTimeKind.Local`       | Gibt die <xref:System.DateTime> Wert unverändert.                                      |
 | `DateTimeKind.Unspecified` | Setzt voraus, dass die <xref:System.DateTime> Wert UTC ist, und die UTC-Zeit in die Ortszeit konvertiert. |
@@ -135,5 +124,6 @@ Die <xref:System.TimeZoneInfo> Klasse enthält auch eine Überladung der <xref:S
 
 ## <a name="see-also"></a>Siehe auch
 
-<xref:System.TimeZoneInfo>[Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
+<xref:System.TimeZoneInfo>
+[Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
 [suchen die in einem lokalen System definierten Zeitzonen](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)

@@ -1,51 +1,39 @@
 ---
 title: Sicherheitsprotokolle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: b7f5d064f49553ca64b72bec0e7c0dd4dc74d13b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6160f3be39bc7317b57f8f1d85bda8e61dbd80fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-protocols"></a>Sicherheitsprotokolle
-Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, die alle vorhandenen Nachrichtensicherheitsanforderungen eines Unternehmens abdecken. In diesem Abschnitt werden die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Details (implementiert im <xref:System.ServiceModel.Channels.SecurityBindingElement>) der folgenden Webdienste-Sicherheitsprotokolle beschrieben.  
+Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, die alle vorhandenen Nachrichtensicherheitsanforderungen eines Unternehmens abdecken. In diesem Abschnitt wird beschrieben, die Windows Communication Foundation (WCF)-Details (implementiert der <xref:System.ServiceModel.Channels.SecurityBindingElement>) der folgenden Webdienste-Sicherheitsprotokolle.  
   
 |Spezifikation/Dokument|Link|  
 |-|-|  
-|WSS: SOAP-Nachrichtensicherheit 1,0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf (möglicherweise in englischer Sprache)|  
-|WSS: Username Token Profile 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf (möglicherweise in englischer Sprache)|  
-|WSS: X509 Token Profile 1,0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf (möglicherweise in englischer Sprache)|  
-|WSS: SAML 1.1 Token Profile 1,0|http://docs.oasis-open.org/wss/oasis-wss-sam1-token-profile-1.0.pdf (möglicherweise in englischer Sprache)|  
-|WSS: SOAP-Nachrichtensicherheit 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf (möglicherweise in englischer Sprache)|  
-|WSS: Username Token Profile 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf (möglicherweise in englischer Sprache)|  
-|WSS: X.509 Token Profile 1,1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf (möglicherweise in englischer Sprache)|  
-|WSS: Kerberos Token Profile 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf (möglicherweise in englischer Sprache)|  
-|WSS: SAML 1.1 Token Profile 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf (möglicherweise in englischer Sprache)|  
+|WSS: SOAP-Nachrichtensicherheit 1,0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
+|WSS: Username Token Profile 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
+|WSS: X509 Token Profile 1,0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
+|WSS: SAML 1.1 Token Profile 1,0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
+|WSS: SOAP-Nachrichtensicherheit 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
+|WSS: Username Token Profile 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
+|WSS: X.509 Token Profile 1,1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
+|WSS: Kerberos Token Profile 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
+|WSS: SAML 1.1 Token Profile 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
 |WS-Secure Conversation 1.3|http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf|  
 |WS-Trust 1.3|http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf|  
 |Anwendungshinweis:<br /><br /> Verwenden von WS-Trust für TLS Handshake|Wird veröffentlicht|  
 |Anwendungshinweis:<br /><br /> Verwenden von WS-Trust für SPNEGO|Wird veröffentlicht|  
 |Anwendungshinweis:<br /><br /> Webdienste-Adressierungsendpunktverweise und -identität|Wird veröffentlicht|  
-|WS-SecurityPolicy 1.2 (2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf (möglicherweise in englischer Sprache)|  
+|WS-SecurityPolicy 1.2 (2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf|  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], Version 1, bietet 17 Authentifizierungsmodi, die als Basis für die Webdienste-Sicherheitskonfiguration verwendet werden können. Jeder Modus wird für einen allgemeinen Satz von Bereitstellungsanforderungen optimiert, z.&#160;B.:  
+ WCF, Version 1, bietet 17 Authentifizierungsmodi, die als Grundlage für Webdienste-Sicherheitskonfiguration verwendet werden können. Jeder Modus wird für einen allgemeinen Satz von Bereitstellungsanforderungen optimiert, z.&#160;B.:  
   
 -   Anmeldeinformationen, die zum Authentifizieren von Client und Dienst verwendet werden  
   
@@ -75,9 +63,9 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
   
  Endpunkte, die solche Authentifizierungsmodi verwenden, können ihre Sicherheitsanforderungen über WS-SecurityPolicy (WS-SP) ausdrücken. Dieses Dokument beschreibt die Struktur der Sicherheitsheader und der Infrastrukturnachrichten für jeden Authentifizierungsmodus und bietet Richtlinien- und Nachrichtenbeispiele.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] setzt WS-SecureConversation ein, um sicheren Sitzungssupport für den Schutz eines mehrteiligen Nachrichtenaustauschs zwischen Anwendungen zu bieten.  Weitere Informationen zur Implementierung finden Sie unten unter "Sichere Sitzungen".  
+ WCF nutzt WS-SecureConversation, um zu gewährleisten, dass die sicherheitssitzungen unterstützen, um mehrteiligen Nachrichtenaustauschs zwischen Anwendungen zu schützen.  Weitere Informationen zur Implementierung finden Sie unten unter "Sichere Sitzungen".  
   
- Zusätzlich zu den Authentifizierungsmodi bietet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Einstellungen zum Kontrollieren der benutzerdefinierten Schutzmechanismen, die für die meisten auf Nachrichtensicherheit basierenden Authentifizierungsmodi gelten, z. B.: Reihenfolge von Signatur gg. Verschlüsselungsvorgängen, Algorithmussuites, Schlüsselableitung und Signaturbestätigung.  
+ Zusätzlich zu den Authentifizierungsmodi, bietet WCF Einstellungen zum Kontrollieren der Schutzmechanismen, die für die meisten Nachricht nachrichtensicherheit basierenden Authentifizierungsmodi z. B. gelten: Reihenfolge von Signatur gegen Verschlüsselungsvorgängen, algorithmussuites, schlüsselableitung , und signaturbestätigung.  
   
  Die folgenden XML-Präfixe und -Namespaces werden in diesem Dokument verwendet.  
   
@@ -85,30 +73,30 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
 |------------|---------------|  
 |s|http://www.w3.org/2003/05/soap-envelope|  
 |sp|http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702|  
-|eine|http://www.w3.org/2005/08/addressing (möglicherweise in englischer Sprache)|  
+|eine|http://www.w3.org/2005/08/addressing|  
 |wsse|TBD – OASIS WSS 1,0 URI|  
 |wsse11|TBD – OASIS WSS 1.1 URI|  
 |wsu|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd|  
 |ds|TBD – W3C XMLDSig URI|  
 |wst|TBD – WS-Trust 2005/02 URI|  
 |wssc|TBD – WS-SecureConversation 2005/02 URI|  
-|wsaw|http://www.w3.org/2006/05/addressing/wsdl (möglicherweise in englischer Sprache)|  
+|wsaw|http://www.w3.org/2006/05/addressing/wsdl|  
 |wsp|http://schemas.xmlsoap.org/ws/2004/09/policy|  
 |mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
   
 ## <a name="1-token-profiles"></a>1. Tokenprofile  
- Webdienst-Sicherheitsspezifikationen stellen Anmeldeinformationen als Sicherheitstoken dar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt die folgenden Tokentypen:  
+ Webdienst-Sicherheitsspezifikationen stellen Anmeldeinformationen als Sicherheitstoken dar. WCF unterstützt die folgenden Tokentypen:  
   
 ### <a name="11-usernametoken"></a>1.1 UsernameToken  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] befolgt UsernameToken10- und UsernameToken11-Profile mit den folgenden Einschränkungen:  
+ WCF befolgt UsernameToken10- und UsernameToken11-Profile mit den folgenden Einschränkungen:  
   
  Das R1101 PasswordType-Attribut auf Element UsernameToken\Password MUSS entweder weggelassen werden oder über den Wert #PasswordText (Standard) verfügen.  
   
- Man kann #PasswordDigest über Erweiterbarkeit implementieren. Es wurde beobachtet, dass #PasswordDigest oft für einen Kennwortschutzmechanismus gehalten wurde, der sicher genug ist. Aber #PasswordDigest kann nicht als Ersatz für eine Verschlüsselung von UsernameToken dienen. Das primäre Ziel von #PasswordDigest ist ein Schutz vor Replay-Angriffen. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Authentifizierungsmodi werden Replay-Angriffsbedrohungen durch die Nutzung von Nachrichtensignaturen verringert.  
+ Man kann #PasswordDigest über Erweiterbarkeit implementieren. Es wurde beobachtet, dass #PasswordDigest oft für einen Kennwortschutzmechanismus gehalten wurde, der sicher genug ist. Aber #PasswordDigest kann nicht als Ersatz für eine Verschlüsselung von UsernameToken dienen. Das primäre Ziel von #PasswordDigest ist ein Schutz vor Replay-Angriffen. In WCF Authentifizierungsmodi sind Replay-Angriffe minimieren, indem Sie die Nutzung von Nachrichtensignaturen.  
   
- B1102 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gibt nie die Unterelemente "Nonce" und "Created" von "UsernameToken" aus.  
+ B1102 WCF gibt nie Nonce und erstellt untergeordnete Elemente von UsernameToken dienen.  
   
- Diese Unterelemente sollen die Replay-Erkennung unterstützen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet stattdessen Nachrichtensignaturen.  
+ Diese Unterelemente sollen die Replay-Erkennung unterstützen. WCF verwendet stattdessen Nachrichtensignaturen.  
   
  OASIS WSS SOAP Message Security UsernameToken Profile&#160;1.1 (UsernameToken11) hat eine Schlüsselableitung der Kennwortfunktion eingeführt.  
   
@@ -117,11 +105,11 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
  Begründung: Kennwörter werden im Allgemeinen als zu schwach für die Verwendung in kryptografischen Vorgängen angesehen.  
   
 ### <a name="12-x509-token"></a>1.2 X509 Token  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt X509v3-Zertifikate als Anmeldeinformationstyp und folgt X509TokenProfile1.0 und X509TokenProfile1.1 mit den folgenden Einschränkungen:  
+ WCF unterstützt X509v3-Zertifikate als Anmeldeinformationstyp und folgt x509tokenprofile1. 0 und x509tokenprofile1. 1 mit den folgenden Einschränkungen:  
   
  R1201 Das ValueType-Attribut auf dem BinarySecurityToken-Element muss den Wert #X509v3 besitzen, wenn es ein X509v3-Zertifikat enthält.  
   
- WSS X509 Token Profile 1.0 und 1.1 definieren auch #X509PKIPathv1 und #PKCS7 als Werttypen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt diese Typen nicht.  
+ WSS X509 Token Profile 1.0 und 1.1 definieren auch #X509PKIPathv1 und #PKCS7 als Werttypen. WCF bietet keine Unterstützung für diese Typen.  
   
  R1202 Wenn eine SubjectKeyIdentifier (SKI)-Erweiterung in einem X509-Zertifikat vorliegt, sollte wsse:KeyIdentifier als externe Referenz für das Token verwendet werden, wobei das ValueType-Attribut #X509SubjectKeyIdentifier und sein Inhalt der base64-codierte Wert der SKI-Erweiterung des Zertifikats ist.  
   
@@ -131,37 +119,37 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
   
  R1204 Wenn X509TokenProfile1.1 verwendet wird, SOLLTE eine externe Referenz auf das X509-Sicherheitstoken den Fingerabdruck, der von WS-Sicherheit&#160;1.1 eingeführt wird, verwenden.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt X509IssuerSerial. Es gibt jedoch Interoperabilitätsprobleme mit X509IssuerSerial: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet eine Zeichenfolge, um zwei Werte von X509IssuerSerial zu vergleichen. Beim Neuordnen von Komponenten des Betreffsnamens und dem Senden eines Verweises auf ein Zertifikat an einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst wird er möglicherweise nicht gefunden.  
+ WCF unterstützt X509IssuerSerial. Es gibt jedoch Interoperabilitätsprobleme mit X509IssuerSerial: WCF verwendet eine Zeichenfolge, um zwei Werte von X509IssuerSerial zu vergleichen. Aus diesem Grund Neuordnen von Komponenten des betreffsnamens und dem Senden an einen WCF-Dienst eines Verweis auf ein Zertifikat, kann es nicht gefunden werden.  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos-Token  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt mit den folgenden Einschränkungen KerberosTokenProfile1.1 für den Zweck der Windows-Authentifizierung:  
+ WCF unterstützt KerberosTokenProfile1.1 für die Windows-Authentifizierung mit den folgenden Einschränkungen:  
   
  R1301 Ein Kerberos-Token muss den Wert eines GSS-ummantelten Kerberos&#160;v4&#160;AP_REQ tragen, gemäß der Definition in GSS_API und der Kerberos-Spezifikation, und muss das ValueType-Attribut mit dem Wert #GSS_Kerberosv5_AP_REQ besitzen.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet einen GSS-ummantelten Kerberos AP-REQ und keinen reinen AP-REQ. Hierbei handelt es sich um eine empfohlene Vorgehensweise bezüglich der Sicherheit.  
+ WCF verwendet einen GSS umschlossen Kerberos AP-REQ und keine bare AP-ANF. Hierbei handelt es sich um eine empfohlene Vorgehensweise bezüglich der Sicherheit.  
   
 ### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 Token  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt WSS SAML Token-Profile&#160;1.0 und&#160;1.1 für SAML-v1.1-Token. Es ist möglich, andere Versionen von SAML-Tokenformaten zu implementieren.  
+ WCF unterstützt WSS SAML Token Profile 1.0 und 1.1 für SAML v1. 1-Token. Es ist möglich, andere Versionen von SAML-Tokenformaten zu implementieren.  
   
 ### <a name="15-security-context-token"></a>1.5 Sicherheitskontexttoken  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt das in WS-SecureCoversation eingeführte Sicherheitskontexttoken (SCT). SCT wird verwendet, um einen Sicherheitskontext darzustellen, der in SecureConversation genauso etabliert ist wie in den Binärverhandlungsprotokollen TLS und SSPI (siehe unten).  
+ WCF unterstützt die Sicherheit Sicherheitskontexttoken (SCT) in der WS-SecureCoversation eingeführte. SCT wird verwendet, um einen Sicherheitskontext darzustellen, der in SecureConversation genauso etabliert ist wie in den Binärverhandlungsprotokollen TLS und SSPI (siehe unten).  
   
 ## <a name="2-common-message-security-parameters"></a>2. Allgemeine Nachrichtensicherheitsparameter  
   
 ### <a name="21-timestamp"></a>2.1 TimeStamp  
- Die <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A>-Eigenschaft der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse steuert, ob ein Zeitstempel vorhanden ist. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serialisiert wsse:TimeStamp immer mit dem wsse:Created-Feld und dem wsse:Expires-Feld. Der wsse:TimeStamp wird immer signiert, wenn Signatur verwendet wird.  
+ Die <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A>-Eigenschaft der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse steuert, ob ein Zeitstempel vorhanden ist. WCF immer serialisiert wsse: Timestamp, mit dem Wsse: erstellt und dem Wsse: Expires-Feld. Der wsse:TimeStamp wird immer signiert, wenn Signatur verwendet wird.  
   
 ### <a name="22-protection-order"></a>2.2 Schutzreihenfolge  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt die Nachrichtenschutzreihenfolgen "Sign Before Encrypt" und "Encrypt Before Sign" (Sicherheitsrichtlinie&#160;1.2). "Sign Before Encrypt" wird u.&#160;a. aus den folgenden Gründen empfohlen: Mit "Encrypt Before Sign" geschützte Nachrichten sind Signaturersatzangriffen ausgesetzt, sofern der WS-Sicherheit&#160;1.1 SignatureConfirmation-Mechanismus nicht verwendet wird, und eine Signatur über verschlüsselten Inhalt erschwert die Überprüfung.  
+ WCF unterstützt die nachrichtenschutzreihenfolge "Anmeldung vor dem Encrypt" und "Encrypt Before Sign" (Security Policy 1.2). "Sign Before Encrypt" wird u.&#160;a. aus den folgenden Gründen empfohlen: Mit "Encrypt Before Sign" geschützte Nachrichten sind Signaturersatzangriffen ausgesetzt, sofern der WS-Sicherheit&#160;1.1 SignatureConfirmation-Mechanismus nicht verwendet wird, und eine Signatur über verschlüsselten Inhalt erschwert die Überprüfung.  
   
 ### <a name="23-signature-protection"></a>2.3 Signaturschutz  
  Wenn Encrypt Before Sign verwendet wird, ist es empfehlenswert, die Signatur zu schützen, um Brute-Force-Angriffe zu verhindern, die versuchen, den verschlüsselten Inhalt oder den Signaturschlüssel zu erraten (besonders dann, wenn ein benutzerdefiniertes Token zusammen mit schwachen Schlüsselmaterialien verwendet wird).  
   
-### <a name="24-algorithm-suite"></a>2.4 Algorithmussuites  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt alle in Security Policy 1.2 aufgeführten Algorithmussuites.  
+### <a name="24-algorithm-suite"></a>2.4 Algorithmussammlungen  
+ WCF unterstützt alle in Security Policy 1.2 aufgeführten algorithmussuites.  
   
 ### <a name="25-key-derivation"></a>2.5 Schlüsselableitung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die "Schlüsselableitung für symmetrische Schlüssel" gemäß ihrer Beschreibung in WS-SecureConversation.  
+ WCF verwendet "Schlüsselableitung für symmetrische Schlüssel" an, wie im WS-SecureConversation beschrieben.  
   
 ### <a name="26-signature-confirmation"></a>2.6 Signaturbestätigung  
  Die Signaturbestätigung kann als Schutz gegen Angriffe von Mittelsmännern eingesetzt werden, um den Signatursatz zu schützen.  
@@ -176,13 +164,13 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
 |LaxTimestampFirst|Ebenso wie Lax, nur dass das erste Element im Sicherheitsheader ein wsse:Timestamp sein muss|  
 |LaxTimestampLast|Ebenso wie Lax, nur dass das letzte Element im Sicherheitsheader ein wsse:Timestamp sein muss|  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt alle vier Modi für das Sicherheitsheader-Layout. Sicherheitsheader-Struktur und Nachrichtenbeispiele für die Authentifizierungsmodi unten folgen dem "Strict"-Modus.  
+ WCF unterstützt alle vier Modi für Sicherheitsheader-Layout. Sicherheitsheader-Struktur und Nachrichtenbeispiele für die Authentifizierungsmodi unten folgen dem "Strict"-Modus.  
   
 ## <a name="3-common-message-security-parameters"></a>3. Allgemeine Nachrichtensicherheitsparameter  
  Dieser Abschnitt bietet Beispielrichtlinien für jeden Authentifizierungsmodus, zusammen mit Beispielen, die die Sicherheitsheader-Struktur in Nachrichten, die zwischen Client und Dienst ausgetauscht werden, zeigen.  
   
 ### <a name="31-transport-protection"></a>3.1 Transportschutz  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt fünf Authentifizierungsmodi bereit, die sicheren Transport verwenden, um Nachrichten zu schützen: UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport und SspiNegotiatedOverTransport.  
+ WCF bietet fünf Authentifizierungsmodi, die sicheren Transport verwenden, um Nachrichten zu schützen. : UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport und SspiNegotiatedOverTransport.  
   
  Diese Authentifizierungsmodi werden mit der in der Sicherheitsrichtlinie beschriebenen Transportbindung erstellt. Für den UserNameOverTransport-Authentifizierungsmodus ist das UsernameToken ein signiertes unterstützendes Token. Für die anderen Authentifizierungsmodi wird das Token als signiertes unterzeichnendes Token angezeigt. Anhang&#160;C.1.2 und&#160;C.1.3 von SecurityPolicy beschreiben detailliert das Sicherheitsheader-Layout. Die folgenden Beispielsicherheitsheader zeigen das "Strict"-Layout für einen gegebenen Authentifizierungsmodus an.  
   
@@ -289,7 +277,7 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
 ```  
   
 #### <a name="315-sspinegotiatedovertransport"></a>3.1.5 SspiNegotiatedOverTransport  
- Bei diesem Modus wird ein Aushandlungsprotokoll verwendet, um Client- und Serverauthentifizierung auszuführen. Wenn möglich wird Kerberos verwendet, ansonsten NTLM. Das resultierende SCT wird auf der SOAP-Schicht als ausstellendes unterstützendes Token angezeigt, das immer vom Initiator an den Empfänger gesendet wird. Der Dienst wird zusätzlich auf der Transportschicht über ein X.509-Zertifikat authentifiziert. Die verwendete Bindung ist eine Transportbindung. "SPNEGO" (Aushandlung) beschreibt, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] das binäre SSPI-Aushandlungsprotokoll zusammen mit WS-Trust verwendet. Die Sicherheitsheaderbeispiele in diesem Abschnitt gelten, nachdem der SCT durch den SPNEGO-Handshake eingeführt wurde.  
+ Bei diesem Modus wird ein Aushandlungsprotokoll verwendet, um Client- und Serverauthentifizierung auszuführen. Wenn möglich wird Kerberos verwendet, ansonsten NTLM. Das resultierende SCT wird auf der SOAP-Schicht als ausstellendes unterstützendes Token angezeigt, das immer vom Initiator an den Empfänger gesendet wird. Der Dienst wird zusätzlich auf der Transportschicht über ein X.509-Zertifikat authentifiziert. Die verwendete Bindung ist eine Transportbindung. "SPNEGO" (Aushandlung) beschreibt, wie WCF binäre SSPI-Aushandlungsprotokoll mit WS-Trust verwendet. Die Sicherheitsheaderbeispiele in diesem Abschnitt gelten, nachdem der SCT durch den SPNEGO-Handshake eingeführt wurde.  
   
  Richtlinie  
   

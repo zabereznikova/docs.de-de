@@ -1,24 +1,12 @@
 ---
 title: Asynchrone Szenarien mit HTTP, TCP oder benannten Pipes
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c4c225b333af6d376fa409a05ea5727ede6e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>Asynchrone Szenarien mit HTTP, TCP oder benannten Pipes
 In diesem Abschnitt werden die Aktivitäten und Übertragungen für verschiedene asynchrone Anforderungs-/Antwortszenarien beschrieben. Dabei werden HTTP, TCP oder benannte Pipes in Multithreadanforderungen verwendet.  
@@ -44,7 +32,7 @@ In diesem Abschnitt werden die Aktivitäten und Übertragungen für verschiedene
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>Weitergabe wird mit HTTP auf einer der Seiten deaktiviert  
  Wenn `propagateActivity` = `false` auf beiden Seiten ProcessMessage nicht an die ProcessAction-Aktivität die Übertragung. Deshalb wird eine neue temporäre ProcessAction-Aktivität mit einer neuen ID aufgerufen. Wenn die asynchrone Antwort mit der Anforderung im ServiceModel-Code übereinstimmt, kann die Aktivitäts-ID aus dem lokalen Kontext abgerufen werden. Die eigentliche ProcessAction-Aktivität kann mit dieser ID übertragen werden.  
   
- ![Asynchrone Szenarien mit HTTP- &#47; TCP &#47; Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![Asynchrone Szenarien mit HTTP&#47;TCP&#47;Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
  Abbildung 2. Asynchroner Client, kein Rückruf, `propagateActivity` = `false` auf einer Seite, HTTP  
   
@@ -53,7 +41,7 @@ In diesem Abschnitt werden die Aktivitäten und Übertragungen für verschiedene
  Eine Processaction-Aktivität wird für einen asynchronen Client erstellt beim `propagateActivity` = `false` an den Aufrufer oder aufgerufene, und wenn die Antwortnachricht Action-Header nicht enthalten ist.  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>Weitergabe wird mit TCP oder benannten Pipes auf beiden Seiten aktiviert  
- ![Asynchrone Szenarien mit HTTP- &#47; TCP &#47; Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![Asynchrone Szenarien mit HTTP&#47;TCP&#47;Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  Abbildung 3. Asynchroner Client, kein Rückruf, `propagateActivity` = `true` auf beiden Seiten, benannte Pipes/TCP  
   
@@ -66,7 +54,7 @@ In diesem Abschnitt werden die Aktivitäten und Übertragungen für verschiedene
   
  Ähnlich wie in Abbildung 2, wenn `propagateActivity` = `false` auf beiden Seiten ProcessMessage nicht an die ProcessAction-Aktivität die Übertragung. Deshalb wird eine neue temporäre ProcessAction-Aktivität mit einer neuen ID aufgerufen. Wenn die asynchrone Antwort mit der Anforderung im ServiceModel-Code übereinstimmt, kann die Aktivitäts-ID aus dem lokalen Kontext abgerufen werden. Die eigentliche ProcessAction-Aktivität kann mit dieser ID übertragen werden.  
   
- ![Asynchrone Szenarien mit HTTP- &#47; TCP &#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ ![Asynchrone Szenarien mit HTTP&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
  Abbildung 4. Asynchroner Client, kein Rückruf, `propagateActivity` = `false` auf beiden Seiten, benannte Pipes/TCP  
   
@@ -86,7 +74,7 @@ In diesem Abschnitt werden die Aktivitäten und Übertragungen für verschiedene
  Abbildung 6. Asynchroner Client mit Rückruf, `endCall` außerhalb des Rückrufs  
   
 ### <a name="asynchronous-server-with-callback"></a>Asynchroner Server mit Rückruf  
- ![Asynchrone Szenarien mit HTTP- &#47; TCP &#47; Mit dem Namen &#45; Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+ ![Asynchrone Szenarien mit HTTP&#47;TCP&#47; benannte&#45;Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
   
  Abbildung 7. Asynchroner Server mit Rückruf  
   

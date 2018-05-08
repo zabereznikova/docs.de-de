@@ -1,29 +1,17 @@
 ---
-title: "Weitere Überlegungen zur Sicherheit in Windows Forms"
-ms.custom: 
+title: Weitere Überlegungen zur Sicherheit in Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, secure calls to Windows API
 - security [Windows Forms]
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c86374066cea2926b0ac4510afbc17749182fea
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a1d8606eb972a6e3bea52f6230cb893a4bbb5aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Weitere Überlegungen zur Sicherheit in Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]Sicherheitseinstellungen können möglicherweise dazu führen, dass Ihre Anwendung anders als in einer teilweise vertrauenswürdigen Umgebung als auf dem lokalen Computer ausgeführt wird. Der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] beschränkt den Zugriff auf wichtige lokale Ressourcen, beispielsweise unter anderem das Dateisystem, Netzwerk und nicht verwaltete APIs. Die Sicherheitseinstellungen haben Auswirkung auf die Möglichkeit zum Aufruf der Win32-API von Microsoft oder andere APIs, die nicht vom Sicherheitssystem überprüft werden können. Sicherheit wirkt sich auch auf andere Aspekte der Anwendung aus, einschließlich des Datei-und Datenzugriffs und des Druckens. Weitere Informationen zum Zugriff auf Dateien und Daten in einer teilweise vertrauenswürdigen Umgebung finden Sie unter [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Weitere Informationen zum Drucken in einer teilweise vertrauenswürdigen Umgebung finden Sie unter [Mehr Sicherheit beim Drucken in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
@@ -55,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
  Jeder identifizierte Berechtigungsstufe der <xref:System.Security.Permissions.UIPermissionWindow> Enumeration ermöglicht weniger Aktionen als die Ebene. Die folgende Tabelle gibt an, die Aktionen, die nur durch eingeschränkt die <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> und <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> Werte. Die genauen Berechtigungen, die für jedes Mitglied erforderlich sind, finden Sie im Verweis für das Mitglied in der Dokumentation zur .NET Framework-Klassenbibliothek.  
   
- <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>Berechtigung schränkt die in der folgenden Tabelle aufgeführten Aktionen an.  
+ <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> Berechtigung schränkt die in der folgenden Tabelle aufgeführten Aktionen an.  
   
 |Komponente|Eingeschränkte Aktionen|  
 |---------------|------------------------|  
@@ -87,11 +75,11 @@ ms.lasthandoff: 01/19/2018
   
 |Komponente|Member|  
 |---------------|------------|  
-|<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A> Methode<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A>Eigenschaft<br />-   `Exit` Methode<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A> Methode<br />-   <xref:System.Windows.Forms.Application.ThreadException>Ereignis|  
+|<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A> Methode<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A> Eigenschaft<br />-   `Exit` Methode<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A> Methode<br />-   <xref:System.Windows.Forms.Application.ThreadException> Ereignis|  
 |<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A> Methode<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ Methode<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A> Methode<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> Methode|  
 |<xref:System.Windows.Forms.Control>|-   <xref:System.Windows.Forms.Control.CreateParams%2A> Methode<br />-   <xref:System.Windows.Forms.Control.DefWndProc%2A> Methode<br />-   <xref:System.Windows.Forms.Control.DestroyHandle%2A> Methode<br />-   <xref:System.Windows.Forms.Control.WndProc%2A> Methode|  
-|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A>Methoden<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> Methode|  
-|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow>Klasse|  
+|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A> Methoden<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> Methode|  
+|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow> Klasse|  
 |<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A> Methode|  
 |<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A> Methode<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A> Methode|  
   

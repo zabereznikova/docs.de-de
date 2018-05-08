@@ -1,27 +1,15 @@
 ---
-title: "Übersicht über Popups"
-ms.custom: 
+title: Übersicht über Popups
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9261e2151f116b46a0c25d8dc775bf41bf932b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popup-overview"></a>Übersicht über Popups
 Die <xref:System.Windows.Controls.Primitives.Popup> Steuerelement bietet eine Möglichkeit, Inhalte in einem separaten Fenster angezeigt, die über die aktuelle Anwendungsfenster relativ zu einer angegebenen Koordinate der Element- oder Bildschirm gleitet. Dieses Thema enthält die <xref:System.Windows.Controls.Primitives.Popup> steuern und enthält Informationen zu Verwendungsmöglichkeiten.  
@@ -81,7 +69,7 @@ Die <xref:System.Windows.Controls.Primitives.Popup> Steuerelement bietet eine M�
 ### <a name="popup-size"></a>Popup-Größe  
  Wird standardmäßig ein <xref:System.Windows.Controls.Primitives.Popup> automatisch an dessen Inhalt angepasst wird. Bei der automatischen Anpassung werden einige Bitmapeffekte ausgeblendet werden können, da die Standardgröße des Bildschirmbereichs, die für definiert ist die <xref:System.Windows.Controls.Primitives.Popup> Inhalte bietet keinen ausreichenden Speicherplatz für die Bitmapeffekte angezeigt.  
   
- <xref:System.Windows.Controls.Primitives.Popup>Inhalt kann auch verdeckt werden, wenn Sie festlegen, eine <xref:System.Windows.UIElement.RenderTransform%2A> auf den Inhalt. In diesem Szenario einige Inhalte möglicherweise ausgeblendet werden, wenn der Inhalt des transformierten <xref:System.Windows.Controls.Primitives.Popup> reicht über den Bereich des ursprünglichen <xref:System.Windows.Controls.Primitives.Popup>. Wenn ein Bitmapeffekt oder eine Transformation mehr Speicherplatz erforderlich ist, können Sie einen Rand um definieren die <xref:System.Windows.Controls.Primitives.Popup> Inhalt, um mehr Platz für das Steuerelement zu gewährleisten.  
+ <xref:System.Windows.Controls.Primitives.Popup> Inhalt kann auch verdeckt werden, wenn Sie festlegen, eine <xref:System.Windows.UIElement.RenderTransform%2A> auf den Inhalt. In diesem Szenario einige Inhalte möglicherweise ausgeblendet werden, wenn der Inhalt des transformierten <xref:System.Windows.Controls.Primitives.Popup> reicht über den Bereich des ursprünglichen <xref:System.Windows.Controls.Primitives.Popup>. Wenn ein Bitmapeffekt oder eine Transformation mehr Speicherplatz erforderlich ist, können Sie einen Rand um definieren die <xref:System.Windows.Controls.Primitives.Popup> Inhalt, um mehr Platz für das Steuerelement zu gewährleisten.  
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Definieren der Popup-Position  

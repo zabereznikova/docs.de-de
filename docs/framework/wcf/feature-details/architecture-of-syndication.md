@@ -1,26 +1,12 @@
 ---
 title: Architektur von Syndication
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f0a6b288860c343157f31f74d5a461fad1784e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="architecture-of-syndication"></a>Architektur von Syndication
 Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell zu bieten, mit dem es möglich ist, Schlagzeilen in verschiedenen Formaten zu schreiben und direkt zu übertragen. Das abstrakte Datenmodell besteht aus den folgenden Klassen:  
@@ -37,16 +23,16 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
   
  Diese Klassen sind nahezu deckungsgleich mit den in der Atom&#160;1.0-Spezifikation definierten Konstrukten, obwohl manche der Namen anders lauten.  
   
- In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] werden Syndication-Feeds als anderer Typ von Dienstvorgängen erstellt, bei dem der Rückgabetyp einer der abgeleiteten Klassen von <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> entspricht. Der Abruf eines Feeds wird als Anforderung-Antwort-Nachrichtenaustausch erstellt. Ein Client sendet eine Anforderung an den Dienst, und der Dienst antwortet. Die Anforderungsnachricht wird über ein Infrastrukturprotokoll festgelegt (z.&#160;B. unformatiertes HTTP), und die Antwortnachricht enthält eine Nutzlast in Form eines üblichen Syndication-Formats (RSS&#160;2.0 oder Atom&#160;1.0). Dienste, die diesen Nachrichtenaustausch implementieren, werden als Syndication-Dienste bezeichnet.  
+ In Windows Communication Foundation (WCF)-Syndication-Feeds als anderer Typ von Dienstvorgängen, einer, in dem der Rückgabetyp einer der abgeleiteten Klassen von ist, erstellt <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Der Abruf eines Feeds wird als Anforderung-Antwort-Nachrichtenaustausch erstellt. Ein Client sendet eine Anforderung an den Dienst, und der Dienst antwortet. Die Anforderungsnachricht wird über ein Infrastrukturprotokoll festgelegt (z.&#160;B. unformatiertes HTTP), und die Antwortnachricht enthält eine Nutzlast in Form eines üblichen Syndication-Formats (RSS&#160;2.0 oder Atom&#160;1.0). Dienste, die diesen Nachrichtenaustausch implementieren, werden als Syndication-Dienste bezeichnet.  
   
  Der Vertrag für einen Syndication-Dienst besteht aus einer Gruppe von Vorgängen, die eine Instanz der <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Klasse zurückgibt. Im folgenden Beispiel wird eine Schnittstellendeklaration für einen Syndication-Dienst veranschaulicht.  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Syndication-Unterstützung baut auf dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST-Programmiermodell auf, das die <xref:System.ServiceModel.WebHttpBinding>-Bindung definiert. Diese wird zusammen mit <xref:System.ServiceModel.Description.WebHttpBehavior> dazu verwendet, Feeds als Dienste verfügbar zu machen. Weitere Informationen zu den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST-Programmiermodell finden Sie unter [Web-HTTP-Programmierung Überblick über WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Syndication-Unterstützung basiert auf der WCF REST-Programmiermodell, das definiert die <xref:System.ServiceModel.WebHttpBinding> Bindung, die zusammen mit <xref:System.ServiceModel.Description.WebHttpBehavior> , Feeds als Dienste verfügbar zu machen. Weitere Informationen zu den WCF REST-Programmiermodell, finden Sie unter [Web-HTTP-Programmierung Überblick über WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
->  Die Atom&#160;1.0-Spezifikation lässt zu, dass Sekundenbruchteile in beliebigen Datenkonstrukten angegeben werden. Beim Serialisieren und Deserialisieren ignoriert die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Implementierung die Sekundenbruchteile.  
+>  Die Atom&#160;1.0-Spezifikation lässt zu, dass Sekundenbruchteile in beliebigen Datenkonstrukten angegeben werden. Beim Serialisieren und Deserialisieren ignoriert die WCF-Implementierung die Sekundenbruchteile an.  
   
 ## <a name="object-model"></a>Objektmodell  
  Das Objektmodell für Syndication besteht aus den in den folgenden Tabellen dargestellten Klassengruppen.  
@@ -88,7 +74,7 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
   
 ## <a name="extensibility"></a>Erweiterbarkeit  
   
--   Ein Hauptfeature von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&#160;1.0 als auch RSS&#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Programmiermodell für Syndication bietet zwei Möglichkeiten, mit benutzerdefinierten Attributen und Erweiterungen zu arbeiten: das Ableiten einer neuen Klasse und typenlosen Zugriff. Weitere Informationen finden Sie unter [Syndication-Erweiterbarkeit](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   Ein Hauptfeature von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&#160;1.0 als auch RSS&#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Die WCF-Programmiermodell für Syndication bietet zwei Möglichkeiten, mit benutzerdefinierten Attributen und Erweiterungen zu arbeiten: Ableiten einer neuen Klasse und typenlosen Zugriff. Weitere Informationen finden Sie unter [Syndication-Erweiterbarkeit](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  

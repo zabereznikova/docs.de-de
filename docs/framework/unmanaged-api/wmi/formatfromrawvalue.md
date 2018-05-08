@@ -2,10 +2,6 @@
 title: FormatFromRawValue-Funktion (Referenz zur nicht verwalteten API)
 description: Die FormatFromRawValue-Funktion konvertiert rohleistungsdaten in einem angegebenen Format.
 ms.date: 11/21/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - FormatFromRawValue
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3daa89ec0b40bb9c08898ecd682f05f0f0ce09a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue-Funktion
 Wenn die formatkonvertierung zeitbasierte ist ein Leistungszählers Datenwert in das angegebene Format oder zwei Leistungszählers Datenwerte konvertiert werden soll.   
@@ -50,7 +43,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parameter
 
 `dwCounterType`  
-[in] Der Leistungsindikator-Typ. Eine Liste der Indikatortypen, finden Sie unter [WMI Performance Counter Types](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType`kann alle Leistungsindikator vom Typ mit Ausnahme von `PERF_LARGE_RAW_FRACTION` und `PERF_LARGE_RAW_BASE`. 
+[in] Der Leistungsindikator-Typ. Eine Liste der Indikatortypen, finden Sie unter [WMI Performance Counter Types](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType` kann alle Leistungsindikator vom Typ mit Ausnahme von `PERF_LARGE_RAW_FRACTION` und `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`  
 [in] Das Format, in dem die Daten für nicht formatierte Leistungsdaten zu konvertieren. Die folgenden Werte sind möglich:
@@ -71,11 +64,11 @@ Die vorherigen Werte können ORed mit einem der folgenden Flags Skalierung mögl
 `pTimeBase`  
 [in] Ein Zeiger auf die Zeitbasis, bei Bedarf für die formatkonvertierung. Wenn Basis Zeitinformationen nicht für die formatkonvertierung erforderlich ist, wird der Wert dieses Parameters ignoriert.
 
-`pRawValue1`[in] Ein Zeiger auf eine [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) -Struktur, die einen Wert für nicht formatierte Leistungsdaten darstellt.
+`pRawValue1` [in] Ein Zeiger auf eine [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) -Struktur, die einen Wert für nicht formatierte Leistungsdaten darstellt.
 
-`pRawValue2`[in] Ein Zeiger auf eine [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) -Struktur, die einen zweiten Leistungszählers angibt. Dieser Parameter sollte sein, wenn ein zweiter Leistungszählers Wert nicht erforderlich ist, `null`.
+`pRawValue2` [in] Ein Zeiger auf eine [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) -Struktur, die einen zweiten Leistungszählers angibt. Dieser Parameter sollte sein, wenn ein zweiter Leistungszählers Wert nicht erforderlich ist, `null`.
 
-`pFmtValue`[out] Ein Zeiger auf eine [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) -Struktur, die die formatierte Leistungswert empfängt.
+`pFmtValue` [out] Ein Zeiger auf eine [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) -Struktur, die die formatierte Leistungswert empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -96,7 +89,7 @@ Diese Funktion dient als Wrapper für einen Aufruf der [FormatFromRawValue](http
   
  **Bibliothek:** PerfCounter.dll  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

@@ -1,24 +1,14 @@
 ---
 title: Definition von anonymen Typen (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8b5b7eba55d719c1482b7224ecffc78b776feb00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 179fb9773fde2631666498d54894037b2bbfd087
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definition von anonymen Typen (Visual Basic)
 Als Antwort auf die Deklaration einer Instanz eines anonymen Typs erstellt der Compiler eine neue Klassendefinition, die die angegebenen Eigenschaften für den Typ enthält.  
@@ -63,7 +53,7 @@ End Class
   
  Wenn die Deklaration eines anonymen Typs mindestens eine Schlüsseleigenschaft enthält, überschreibt die Typdefinition drei von geerbte Membern <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, und <xref:System.Object.ToString%2A>. Wenn keine Schlüsseleigenschaften, nur deklariert werden <xref:System.Object.ToString%2A> überschrieben wird. Die Außerkraftsetzungen bieten die folgenden Funktionen:  
   
--   `Equals`Gibt `True` Wenn zwei Instanzen eines anonymen Typs dieselbe Instanz sind oder wenn sie die folgenden Bedingungen erfüllen:  
+-   `Equals` Gibt `True` Wenn zwei Instanzen eines anonymen Typs dieselbe Instanz sind oder wenn sie die folgenden Bedingungen erfüllen:  
   
     -   Sie haben die gleiche Anzahl von Eigenschaften.  
   
@@ -77,9 +67,9 @@ End Class
   
      [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
--   `GetHashcode`Stellt einen entsprechend eindeutigen GetHashCode-Algorithmus bereit. Der Algorithmus verwendet nur die wichtigsten Eigenschaften den Hashcode berechnet.  
+-   `GetHashcode` Stellt einen entsprechend eindeutigen GetHashCode-Algorithmus bereit. Der Algorithmus verwendet nur die wichtigsten Eigenschaften den Hashcode berechnet.  
   
--   `ToString`Gibt eine Zeichenfolge von verketteten Eigenschaftswerte zurück, wie im folgenden Beispiel gezeigt. Schlüssel und nicht schlüsselbezogene Eigenschaften sind enthalten.  
+-   `ToString` Gibt eine Zeichenfolge von verketteten Eigenschaftswerte zurück, wie im folgenden Beispiel gezeigt. Schlüssel und nicht schlüsselbezogene Eigenschaften sind enthalten.  
   
      [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   

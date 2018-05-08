@@ -1,13 +1,6 @@
 ---
-title: "Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF"
-ms.custom: 
+title: Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - input architecture [WPF interoperability]
 - messages [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a246a3297d212eabc31bf2ac9d000aeb56329d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 250f34e3e5420a613bc7b1035c62af90665e71ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF
 Interoperation zwischen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] erfordert, dass beide Technologien auf die entsprechende Tastenkombination Eingabeverarbeitung haben. In diesem Thema wird beschrieben, wie diese Technologien Tastatur und der Nachrichtenverarbeitung, die zum Aktivieren von smooth Interoperation in hybridanwendungen implementieren.  
@@ -105,7 +93,7 @@ Interoperation zwischen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
 -   Befehl Schlüssel und Tastatureingaben im Dialogfeld.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Accelerator-Verarbeitung.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Accelerator-Verarbeitung.  
   
  In den folgenden Abschnitten werden diese Teile ausführlicher beschrieben.  
   
@@ -131,7 +119,7 @@ Interoperation zwischen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
 -   Die <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> Methode wird überschrieben, um sicherzustellen, dass alle WM_CHAR-Nachrichten an den gehosteten Elemente weitergeleitet werden.  
   
--   Wenn Sie die ALT-Taste gedrückt wird, wird die Meldung WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Diese Meldung über nicht zuvor verarbeitet die <xref:System.Windows.Forms.Control.IsInputChar%2A> Methode. Aus diesem Grund die <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> Methode wird überschrieben, abzufragende der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> für eine registrierte Zugriffstaste. Wenn eine registrierte Zugriffstaste gefunden wird, <xref:System.Windows.Input.AccessKeyManager> verarbeitet.  
+-   Wenn Sie die ALT-Taste gedrückt wird, wird die Meldung WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Diese Meldung über nicht zuvor verarbeitet die <xref:System.Windows.Forms.Control.IsInputChar%2A> Methode. Aus diesem Grund die <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> Methode wird überschrieben, abzufragende der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> für eine registrierte Zugriffstaste. Wenn eine registrierte Zugriffstaste gefunden wird, <xref:System.Windows.Input.AccessKeyManager> verarbeitet.  
   
 -   Wenn Sie nicht die ALT-Taste gedrückt wird, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> Klasse verarbeitet, die nicht behandelte Eingabe. Wenn die Eingabe eine Zugriffstaste ist die <xref:System.Windows.Input.AccessKeyManager> verarbeitet. Die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis behandelt wird, WM_CHAR-Nachrichten, die nicht verarbeitet wurden.  
   

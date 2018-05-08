@@ -1,29 +1,15 @@
 ---
 title: Nachrichtenübertragung per Stream
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-message-transfer"></a>Nachrichtenübertragung per Stream
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Transporte unterstützen zwei Modi zum Übertragen von Nachrichten:  
+Windows Communication Foundation (WCF)--Transporte unterstützen zwei Modi zum Übertragen von Nachrichten:  
   
 -   Bei gepufferten Übertragungen wird die gesamte Nachricht in einem Puffer zwischengespeichert, bis die Übertragung abgeschlossen ist. Gepufferte Nachrichten müssen vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können.  
   
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
   
  Vorgänge, die unter Verwendung einer Streamübertragung ausgeführt werden, können einen Vertrag mit maximal einem Eingabe- oder Ausgabeparameter aufweisen. Der Parameter entspricht dem gesamten Nachrichtentext, und es muss sich um <xref:System.ServiceModel.Channels.Message>, um einen abgeleiteten Typ von <xref:System.IO.Stream> oder um eine <xref:System.Xml.Serialization.IXmlSerializable>-Implementierung handeln. Ein Rückgabewert für einen Vorgang entspricht einem Ausgabeparameter.  
   
- Einige Funktionen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], darunter zuverlässiges Messaging, Transaktionen und die SOAP-Nachrichtensicherheit, verwenden gepufferte Nachrichten für Übertragungen. Dadurch können mögliche Leistungsvorteile durch das Streaming reduziert oder zunichte gemacht werden. Mit der Sicherheit auf Transportebene oder mit der Sicherheit auf Transportebene sowie dem Authentifizierungsmodus für die Nachrichtensicherheit können Sie eine Streamübertragung absichern.  
+ Einige WCF-Funktionen, z. B. zuverlässigem messaging, Transaktionen und SOAP-nachrichtensicherheit, verwenden gepufferte Nachrichten für Übertragungen. Dadurch können mögliche Leistungsvorteile durch das Streaming reduziert oder zunichte gemacht werden. Mit der Sicherheit auf Transportebene oder mit der Sicherheit auf Transportebene sowie dem Authentifizierungsmodus für die Nachrichtensicherheit können Sie eine Streamübertragung absichern.  
   
  SOAP-Header werden immer gepuffert, auch wenn eine Streamübertragung verwendet wird. Die Nachrichtenheader dürfen nicht größer sein als das `MaxBufferSize`-Transportkontingent. Weitere Informationen zu dieser Einstellung finden Sie unter [Transportkontingente](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

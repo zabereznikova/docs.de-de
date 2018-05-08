@@ -1,28 +1,16 @@
 ---
 title: Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML node streams [XAML Services]
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-caps.latest.revision: "14"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten
 Die in .NET Framework-XAML-Diensten implementierten XAML-Reader und XAML-Writer basieren auf dem Entwurfskonzept eines XAML-Knotenstreams. Der XAML-Knotenstream ist eine Konzeptualisierung eines Satzes von XAML-Knoten. In dieser Konzeptualisierung arbeitet ein XAML-Prozessor die Struktur der Knotenbeziehungen in der XAML einzeln ab. Dabei ist immer nur ein aktueller Datensatz oder eine aktuelle Position in einem geöffneten XAML-Knotenstream vorhanden, und viele Aspekte der APIs melden nur die von dieser Position verfügbaren Informationen. Der aktuelle Knoten in einem XAML-Knotenstream kann als Objekt, Member oder Wert beschrieben werden. Indem Sie XAML als einen XAML-Knotenstream behandeln, können XAML-Reader mit XAML-Writern kommunizieren und ein Programm aktivieren, um die Inhalte eines XAML-Knotenstreams während eines Ladepfad- oder Speicherpfadvorgangs, an dem XAML beteiligt ist, anzuzeigen, mit diesen zu interagieren oder sie zu verändern. Der API-Entwurf von XAML-Readern und -Writern und das Konzept des XAML-Knotenstreams ähneln früheren verwandten Reader- und Writerentwürfen und -konzepten, z. B. dem [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] und den <xref:System.Xml.XmlReader> - und <xref:System.Xml.XmlWriter> -Klassen. In diesem Thema werden XAML-Knotenstreamkonzepte erläutert, und es wird beschrieben, wie Sie Routinen schreiben können, die mit XAML-Darstellungen auf XAML-Knotenebene interagieren.  
@@ -211,7 +199,7 @@ public class GameBoard {
   
 -   **Unbekannter Inhalt:** Der Name dieses Memberknotens ist `_UnknownContent`. Streng genommen handelt es sich um ein <xref:System.Xaml.XamlDirective>-Element und ist im XAML-Namespace der XAML-Sprache definiert. Diese Direktive wird als Sentinel für Fälle verwendet, in denen ein XAML-Objektelement im Quell-XAML Inhalt aufweist, aber keine Inhaltseigenschaft im aktuell verfügbaren XAML-Schemakontext ermittelt werden kann. Sie können diesen Fall in einem XAML-Knotenstream erkennen, indem Sie ihn auf Member mit dem Namen `_UnknownContent` prüfen. Falls keine andere Aktion in einem Ladepfad-XAML-Knotenstream ausgeführt wird, wird der standardmäßige <xref:System.Xaml.XamlObjectWriter> bei versuchtem `WriteEndObject` ausgelöst, wenn der `_UnknownContent` -Member für ein Objekt gefunden wird. Der standardmäßige <xref:System.Xaml.XamlXmlWriter> wird nicht ausgelöst, und der Member wird als implizit behandelt. Sie können eine statische Entität für `_UnknownContent` von <xref:System.Xaml.XamlLanguage.UnknownContent%2A>abrufen.  
   
--   **Auflistungseigenschaft einer Auflistung:**Obwohl der CLR-Unterstützungstyp einer für XAML verwendeten Auflistungsklasse normalerweise über eine dedizierte benannte Eigenschaft verfügt, die die Elemente der Auflistung enthält, ist diese Eigenschaft einem XAML-Typsystem vor der Unterstützungstypauflösung nicht bekannt. Stattdessen fügt der XAML-Knotenstream einen `Items` -Platzhalter als Member des XAML-Auflistungstyps ein. In der .NET Framework-XAML-Dienstimplementierung lautet der Name dieser Direktive/dieses Members im Knotenstream `_Items`. Eine Konstante für diese Direktive kann aus <xref:System.Xaml.XamlLanguage.Items%2A>abgerufen werden.  
+-   **Auflistungseigenschaft einer Auflistung:** Obwohl der CLR-Unterstützungstyp einer für XAML verwendeten Auflistungsklasse normalerweise über eine dedizierte benannte Eigenschaft verfügt, die die Elemente der Auflistung enthält, ist diese Eigenschaft einem XAML-Typsystem vor der Unterstützungstypauflösung nicht bekannt. Stattdessen fügt der XAML-Knotenstream einen `Items` -Platzhalter als Member des XAML-Auflistungstyps ein. In der .NET Framework-XAML-Dienstimplementierung lautet der Name dieser Direktive/dieses Members im Knotenstream `_Items`. Eine Konstante für diese Direktive kann aus <xref:System.Xaml.XamlLanguage.Items%2A>abgerufen werden.  
   
      Beachten Sie, dass ein XAML-Knotenstream eine Items-Eigenschaft mit Elementen enthalten kann, die auf Grundlage der Unterstützungstypauflösung und des XAML-Schemakontexts nicht analysiert werden können. Ein auf ein Objekt angewendeter  
   

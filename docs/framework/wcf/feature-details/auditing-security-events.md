@@ -1,42 +1,30 @@
 ---
 title: Überwachen von Sicherheitsereignissen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
-Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erstellte Anwendungen können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
+Mit der Windows Communication Foundation (WCF) erstellte Anwendungen können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler, oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
   
  Mithilfe der Überwachung können Administratoren bereits stattgefundene oder gerade laufende Angriffe erkennen. Darüber hinaus können Entwickler mittels Überwachung sicherheitsrelevante Probleme debuggen. Falls beispielsweise berechtigten Benutzern versehentlich aufgrund eines Fehlers in der Konfiguration der Autorisierung oder Überprüfungsrichtlinie der Zugriff verweigert wird, kann die Ursache für diesen Fehler schnell durch Überprüfung des Ereignisprotokolls erkannt und isoliert werden.  
   
- Weitere Informationen zu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zur Programmierung [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Weitere Informationen zu WCF-Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zur Programmierung WCF finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Überwachungsstufe und Überwachungsverhalten  
  Es gibt zwei Stufen für die Sicherheitsüberwachung:  
   
 -   Autorisierung auf Dienstebene: Es wird ein Aufrufer autorisiert.  
   
--   Auf Nachrichtenebene: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] überprüft die Gültigkeit der Nachricht und authentifiziert den Aufrufer.  
+-   Nachrichtenebene, in denen WCF Gültigkeit der Nachricht überprüft und authentifiziert den Aufrufer.  
   
  Sie können beide Überwachungsstufen auf Erfolg oder Fehler, die so genannte Überprüfen der *Überwachungsverhalten*.  
   

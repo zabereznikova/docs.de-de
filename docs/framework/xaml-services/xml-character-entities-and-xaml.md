@@ -1,13 +1,6 @@
 ---
-title: "XML-Zeichenentitäten und XAML"
-ms.custom: 
+title: XML-Zeichenentitäten und XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - '&'
 - '&amp'
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-caps.latest.revision: "23"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b325c931579606f6d1d90eb821766a4110acfd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML-Zeichenentitäten und XAML
 XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem Thema werden einige bestimmte Zeichenentitäten und allgemeine Überlegungen für andere XML-Konzepte in XAML beschrieben.  
@@ -47,7 +35,7 @@ XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem
   
  Die wichtigste Ausnahme besteht darin, dass Klammern ({ und }) in XAML eine Bedeutung haben. Sie dienen XAML-Prozessoren als Bezeichner, dass eine in Klammern eingeschlossene Zeichenfolge als Markuperweiterung interpretiert werden muss. Weitere Informationen zur Markuperweiterungen finden Sie unter [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
- Sie haben dennoch die Möglichkeit, die Klammern als Literalzeichen anzuzeigen, indem Sie eine Escapesequenz verwenden, die für XAML statt für XML spezifisch ist. Weitere Informationen finden Sie unter [{} Escape Sequence - Markuperweiterung](escape-sequence-markup-extension.md).  
+ Sie haben dennoch die Möglichkeit, die Klammern als Literalzeichen anzuzeigen, indem Sie eine Escapesequenz verwenden, die für XAML statt für XML spezifisch ist. Weitere Informationen finden Sie unter [ {} Escape-Sequence - Markuperweiterung](escape-sequence-markup-extension.md).  
   
  Beachten Sie, dass ein umgekehrter Schrägstrich (\\) eine Escapesequenz ist nicht erforderlich, wenn er als Zeichenfolge behandelt wird.  
   
@@ -62,7 +50,7 @@ XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem
 |< (Kleiner als-Zeichen)|\&lt;|Muss ein Wert des Attributs verwendet werden, aber \< ist in Elementinhalten zulässig, wenn der Inhalt eines Elements solange > stimmt nicht überein.|  
 |" (gerades Anführungszeichen)|\&quot;|Muss in Attributwerten verwendet werden. Jedoch ist ein gerades Anführungszeichen (") in Elementinhalten zulässig. Beachten Sie, dass Attributwerte durch ein einzelnes gerades Anführungszeichen (') oder ein gerades Anführungszeichen (") umschlossen werden können. Das Zeichen, das zuerst vorkommt, wird als Umschließungszeichen für Attributwerte festgelegt, und das andere Zeichen kann im Wert als Literalzeichen verwendet werden.|  
 |' (einfaches gerades Anführungszeichen)|\&apos;|Muss in Attributwerten verwendet werden. Jedoch ist ein einzelnes gerades Anführungszeichen (') in Elementinhalten zulässig. Beachten Sie, dass Attributwerte durch ein einzelnes gerades Anführungszeichen (') oder ein gerades Anführungszeichen (") umschlossen werden können. Das Zeichen, das zuerst vorkommt, wird als Umschließungszeichen für Attributwerte festgelegt, und das andere Zeichen kann im Wert als Literalzeichen verwendet werden.|  
-|(Zuordnungen numerischer Zeichen)|&#*[Ganzzahl]* ; oder & #x*[Hexadezimalzahl]*;|XAML unterstützt die Zuordnung numerischer Zeichen in der aktiven Codierung.|  
+|(Zuordnungen numerischer Zeichen)|&#*[Ganzzahl]* ; oder & #x *[Hexadezimalzahl]*;|XAML unterstützt die Zuordnung numerischer Zeichen in der aktiven Codierung.|  
 |(geschütztes Leerzeichen)|&\#160; (vorausgesetzt, UTF-8-Codierung)|Bei Flussdokumentelementen oder Elementen für die Aufnahme von Text wie <xref:System.Windows.Controls.TextBox> von WPF werden geschützte Leerzeichen nicht außerhalb des Markups normalisiert, auch nicht für  `xml:space="default"`. (Weitere Informationen finden Sie unter [Leerstellenverarbeitung in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   
 <a name="xml_comment_format"></a>   

@@ -1,13 +1,6 @@
 ---
-title: "Ellipsen und Bögen in GDI+"
-ms.custom: 
+title: Ellipsen und Bögen in GDI+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - ellipses
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71126942f4cde37cc5d26bfba029c5f50f1065a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6835127d03f984bda8a95cf5b9ca9798122de804
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>Ellipsen und Bögen in GDI+
 Sie können problemlos zeichnen Ellipsen und Bögen mit der <xref:System.Drawing.Graphics.DrawEllipse%2A> und <xref:System.Drawing.Graphics.DrawArc%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
@@ -43,7 +31,7 @@ Sie können problemlos zeichnen Ellipsen und Bögen mit der <xref:System.Drawing
  [!code-csharp[LinesCurvesAndShapes#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#51)]
  [!code-vb[LinesCurvesAndShapes#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#51)]  
   
- <xref:System.Drawing.Graphics.DrawEllipse%2A>eine überladene Methode wird die <xref:System.Drawing.Graphics> Klasse, damit es gibt mehrere Möglichkeiten, die Sie Argumente angeben können. Sie können z. B. Erstellen einer <xref:System.Drawing.Rectangle> und übergeben Sie der <xref:System.Drawing.Rectangle> zu der <xref:System.Drawing.Graphics.DrawEllipse%2A> Methode als Argument:  
+ <xref:System.Drawing.Graphics.DrawEllipse%2A> eine überladene Methode wird die <xref:System.Drawing.Graphics> Klasse, damit es gibt mehrere Möglichkeiten, die Sie Argumente angeben können. Sie können z. B. Erstellen einer <xref:System.Drawing.Rectangle> und übergeben Sie der <xref:System.Drawing.Rectangle> zu der <xref:System.Drawing.Graphics.DrawEllipse%2A> Methode als Argument:  
   
  [!code-csharp[LinesCurvesAndShapes#52](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#52)]
  [!code-vb[LinesCurvesAndShapes#52](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#52)]  

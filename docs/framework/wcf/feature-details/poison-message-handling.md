@@ -1,36 +1,22 @@
 ---
 title: Behandlung nicht verarbeitbarer Nachrichten
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b860e239d001a03da191d73de2f7b53e7073c7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling"></a>Behandlung nicht verarbeitbarer Nachrichten
 Ein *nicht verarbeitbare Nachricht* ist eine Nachricht, die die maximale Anzahl der Zustellversuche an die Anwendung überschritten hat. Diese Situation kann auftreten, wenn eine warteschlangenbasierte Anwendung aufgrund der Fehler keine Nachricht verarbeiten kann. Um Zuverlässigkeitsforderungen zu erfüllen, empfängt eine in der Warteschlange stehende Anwendung Nachrichten unter einer Transaktion. Beim Abbrechen der Transaktion, in der eine in der Warteschlange stehende Nachricht empfangen wurde, bleibt die Nachricht in der Warteschlange und wird dann unter einer neuen Transaktion wiederholt. Wenn das Problem, das zum Abbrechen der Transaktion geführt hat, nicht korrigiert wird, kann die empfangende Anwendung in einer Schleife hängen bleiben, in der sie dieselbe Nachricht immer wieder empfängt und abbricht, bis die maximale Anzahl der Zustellversuche überschritten ist. Auf diese Weise entsteht eine nicht verarbeitbare Nachricht.  
   
  Eine Nachricht kann aus vielen Gründen zu einer nicht verarbeitbaren Nachrichten werden. Die häufigsten Ursachen sind anwendungsspezifisch. Wenn beispielsweise eine Anwendung eine Nachricht aus einer Warteschlange liest und dann Datenbankprozesse durchführt, kann es vorkommen, dass von der Anwendung keine Sperre für die Datenbank bewirkt werden kann. Dies führt dann dazu, dass sie die Transaktion abbricht. Da die Datenbanktransaktion abgebrochen wurde, verbleibt die Nachricht in der Warteschlange, wodurch die Nachricht von der Anwendung ein zweites Mal gelesen und ein neuer Versuch gestartet wird, eine Sperrung der Datenbank zu bewirken. Nachrichten können auch nicht verarbeitbar werden, wenn sie ungültige Informationen enthalten. So enthält z. B. eine Bestellung möglicherweise eine ungültige Kundennummer. In diesen Fällen kann die Anwendung die Transaktion freiwillig abbrechen und die Nachricht zwingen, eine nicht verarbeitbare Nachricht zu werden.  
   
- Bei seltenen Gelegenheiten können Nachrichten nicht zur Anwendung weitergeleitet werden. Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Schicht kann ein Problem mit der Nachricht feststellen, beispielsweise wenn die Nachricht den falschen Frame, ungültige Nachrichtenanmeldeinformationen im Anhang oder einen ungültigen Aktionsheader aufweist. In diesen Fällen empfängt die Anwendung die Nachricht niemals; trotzdem kann die Nachricht noch zu einer nicht verarbeitbaren Nachricht werden, die manuell verarbeitet werden kann.  
+ Bei seltenen Gelegenheiten können Nachrichten nicht zur Anwendung weitergeleitet werden. Der Windows Communication Foundation (WCF)-Schicht kann ein Problem mit der Nachricht feststellen, wie z. B. verfügt die Nachricht den falschen Frame, ungültige nachrichtenanmeldeinformationen im Anhang oder einen ungültigen aktionsheader. In diesen Fällen empfängt die Anwendung die Nachricht niemals; trotzdem kann die Nachricht noch zu einer nicht verarbeitbaren Nachricht werden, die manuell verarbeitet werden kann.  
   
 ## <a name="handling-poison-messages"></a>Behandeln von nicht verarbeitbaren Nachrichten  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet die Behandlung nicht verarbeitbarer Nachrichten einen Mechanismus, mit dem eine empfangende Anwendung mit Nachrichten umgehen kann, die nicht zur Anwendung weitergeleitet werden können, oder mit Nachrichten, die zwar zur Anwendung weitergeleitet werden, deren Verarbeitung jedoch aus anwendungsspezifischen Gründen fehlschlägt. Die Konfiguration der Behandlung nicht verarbeitbarer Nachrichten erfolgt in jeder der verfügbaren, in der Warteschlange stehenden Bindungen durch die folgenden Eigenschaften:  
+ In WCF bietet die Handhabung beschädigter Nachrichten einen Mechanismus für eine empfangende Anwendung zurecht zur Anwendung weitergeleitet werden können, oder Nachrichten, die an die Anwendung zugestellt werden jedoch Überprüfungen schlagen fehl, die aufgrund von anwendungsspezifischen verarbeitet werden Gründe. Die Konfiguration der Behandlung nicht verarbeitbarer Nachrichten erfolgt in jeder der verfügbaren, in der Warteschlange stehenden Bindungen durch die folgenden Eigenschaften:  
   
 -   `ReceiveRetryCount`. Ein Ganzzahlwert, die die maximale Anzahl der Neuversuche für den Versand einer Nachricht von der Anwendungswarteschlange zu der Anwendung angibt. Der Standardwert ist 5. Dieser Wert ist in Fällen ausreichend, in denen eine sofortige Wiederholung das Problem behebt, beispielsweise wenn ein temporärer Deadlock für eine Datenbank vorliegt.  
   
@@ -46,7 +32,7 @@ Ein *nicht verarbeitbare Nachricht* ist eine Nachricht, die die maximale Anzahl 
   
 -   Ablehnen. Diese Option ist nur in [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar. Damit wird das Message Queuing (MSMQ) angewiesen, eine negative Bestätigung mit dem Hinweis, dass die Anwendung die Nachricht nicht empfangen kann, an den sendenden Warteschlangen-Manager zu senden. Die Nachricht wird in die Warteschlange für unzustellbare Nachrichten des sendenden Warteschlangen-Managers eingefügt.  
   
--   Verschieben. Diese Option ist nur in [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar. Damit wird die nicht verarbeitbare Nachricht in eine Warteschlange für potenziell schädliche Nachrichten verschoben, sodass sie später durch eine Anwendung zur Behandlung nicht verarbeitbarer Nachrichten verarbeitet werden kann. Die Warteschlange für potenziell schädliche Nachrichten ist eine untergeordnete Warteschlange der Anwendungswarteschlange. Eine Anwendung für nicht verarbeitbare Nachrichten kann ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst sein, der Nachrichten aus der Warteschlange für potenziell schädliche Nachrichten liest. Die Warteschlange für potenziell schädliche Nachrichten ist eine Unterwarteschlange der Anwendungswarteschlange und kann als net.msmq:// adressiert werden\<*Computername*>/*ApplicationQueue*; poison, wobei  *Computername* ist der Name des Computers, auf dem die Warteschlange befindet, und die *ApplicationQueue* ist der Name der anwendungsspezifischen Warteschlange.  
+-   Verschieben. Diese Option ist nur in [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar. Damit wird die nicht verarbeitbare Nachricht in eine Warteschlange für potenziell schädliche Nachrichten verschoben, sodass sie später durch eine Anwendung zur Behandlung nicht verarbeitbarer Nachrichten verarbeitet werden kann. Die Warteschlange für potenziell schädliche Nachrichten ist eine untergeordnete Warteschlange der Anwendungswarteschlange. Eine Anwendung für die Handhabung beschädigter Nachrichten kann es sich um einen WCF-Dienst sein, der Nachrichten aus der Warteschlange für potenziell schädliche Nachrichten liest. Die Warteschlange für potenziell schädliche Nachrichten ist eine Unterwarteschlange der Anwendungswarteschlange und kann als net.msmq:// adressiert werden\<*Computername*>/*ApplicationQueue*; poison, wobei  *Computername* ist der Name des Computers, auf dem die Warteschlange befindet, und die *ApplicationQueue* ist der Name der anwendungsspezifischen Warteschlange.  
   
  Im Folgenden ist die maximale Anzahl von für eine Nachricht durchgeführten Übermittlungsversuchen dargestellt:  
   
@@ -57,20 +43,20 @@ Ein *nicht verarbeitbare Nachricht* ist eine Nachricht, die die maximale Anzahl 
 > [!NOTE]
 >  Für eine Nachricht, die erfolgreich zugestellt wird, werden keine Wiederholungen durchgeführt.  
   
- Zur Nachverfolgung, wie oft das Lesen einer Nachricht versucht wurde, verfügt [!INCLUDE[wv](../../../../includes/wv-md.md)] über eine dauerhafte Nachrichteneigenschaft, die die Anzahl der Abbrüche zählt, und über eine Verschiebungszähleigenschaft, die zählt, wie oft die Nachricht zwischen der Anwendungswarteschlange und den untergeordneten Warteschlangen verschoben wurde. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanal verwendet diese Eigenschaften zur Berechnung der Empfangswiederholungsanzahl und der Wiederholungszyklusanzahl. In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] wird die Abbruchanzahl durch den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanal im Arbeitsspeicher geführt und zurückgesetzt, wenn die Anwendung fehlschlägt. Außerdem kann der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanal die Abbruchanzahl für bis zu 256 Nachrichten zu jedem beliebigen Zeitpunkt im Arbeitsspeicher führen. Wenn eine 257. Nachricht gelesen wird, dann wird die Abbruchanzahl der ältesten Nachricht zurückgesetzt.  
+ Zur Nachverfolgung, wie oft das Lesen einer Nachricht versucht wurde, verfügt [!INCLUDE[wv](../../../../includes/wv-md.md)] über eine dauerhafte Nachrichteneigenschaft, die die Anzahl der Abbrüche zählt, und über eine Verschiebungszähleigenschaft, die zählt, wie oft die Nachricht zwischen der Anwendungswarteschlange und den untergeordneten Warteschlangen verschoben wurde. Der WCF-Kanal verwendet diese zur Berechnung der empfangswiederholungsanzahl und der wiederholungszyklusanzahl. Auf [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)], die abbruchanzahl im Arbeitsspeicher von der WCF-Kanal geführt und zurückgesetzt, wenn die Anwendung fehlschlägt. Darüber hinaus kann der WCF-Kanal die abbruchanzahl für bis zu 256 Nachrichten im Arbeitsspeicher zu einem beliebigen Zeitpunkt Partitionen. Wenn eine 257. Nachricht gelesen wird, dann wird die Abbruchanzahl der ältesten Nachricht zurückgesetzt.  
   
  Die Abbruchanzahl- und Verschiebungsanzahleigenschaften stehen dem Dienstvorgang durch den Vorgangskontext zur Verfügung. Im folgenden Codebeispiel wird der Zugriff darauf veranschaulicht.  
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt zwei in der Warteschlange stehende Standardbindungen bereit:  
+ WCF stellt zwei in der Warteschlange stehende standardbindungen bereit:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. Eine [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Bindung, die zum Ausführen warteschlangenbasierter Kommunikation mit anderen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkten geeignet ist.  
+-   <xref:System.ServiceModel.NetMsmqBinding> Ein [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Bindung zum Ausführen warteschlangenbasierter Kommunikation mit anderen WCF-Endpunkten geeignet ist.  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Eine Bindung, die zur Kommunikation mit vorhandenen Message Queuing-Anwendungen geeignet ist.  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> Eine Bindung, die zur Kommunikation mit vorhandenen Message Queuing-Anwendungen geeignet ist.  
   
 > [!NOTE]
->  Sie können Eigenschaften in diesen Bindungen auf der Grundlage der Anforderungen Ihres [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts ändern. Der gesamte Mechanismus zur Behandlung nicht verarbeitbarer Nachrichten ist zur empfangenden Anwendung lokal. Der Prozess ist für die sendende Anwendung unsichtbar, es sei denn, die empfangende Anwendung beendet den Vorgang und sendet eine negative Bestätigung an den Absender zurück. In diesem Fall wird die Nachricht in die Warteschlange für unzustellbare Nachrichten des Absenders verschoben.  
+>  Sie können Eigenschaften in diesen Bindungen auf der Grundlage der Anforderungen der WCF-Dienst ändern. Der gesamte Mechanismus zur Behandlung nicht verarbeitbarer Nachrichten ist zur empfangenden Anwendung lokal. Der Prozess ist für die sendende Anwendung unsichtbar, es sei denn, die empfangende Anwendung beendet den Vorgang und sendet eine negative Bestätigung an den Absender zurück. In diesem Fall wird die Nachricht in die Warteschlange für unzustellbare Nachrichten des Absenders verschoben.  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Empfohlene Vorgehensweise: Behandlung MsmqPoisonMessageException  
  Wenn der Dienst feststellt, dass eine Nachricht nicht verarbeitbar ist, löst der Warteschlangentransport eine <xref:System.ServiceModel.MsmqPoisonMessageException> aus, die die `LookupId` der nicht verarbeitbaren Nachricht enthält.  
@@ -116,7 +102,7 @@ Ein *nicht verarbeitbare Nachricht* ist eine Nachricht, die die maximale Anzahl 
   
 -   Message Queuing in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt die negative Bestätigung, während [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] dies nicht tun. Eine negative Bestätigung vom empfangenden Warteschlangen-Manager bewirkt, dass der sendende Warteschlangen-Manager die abgelehnte Nachricht in die Warteschlange für unzustellbare Nachrichten einstellt. Damit ist `ReceiveErrorHandling.Reject` in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht zulässig.  
   
--   Message Queuing in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt eine Nachrichteneigenschaft, die zählt, wie oft die Nachrichtenzustellung versucht wird. Diese Abbruchanzahleigenschaft ist in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht verfügbar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwaltet die Abbruchanzahl im Arbeitsspeicher. Deshalb enthält diese Eigenschaft möglicherweise keinen exakten Wert, wenn dieselbe Nachricht von mehreren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten in einer Farm gelesen wird.  
+-   Message Queuing in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt eine Nachrichteneigenschaft, die zählt, wie oft die Nachrichtenzustellung versucht wird. Diese Abbruchanzahleigenschaft ist in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht verfügbar. WCF verwaltet die abbruchanzahl im Arbeitsspeicher, daher ist es möglich, dass diese Eigenschaft nicht auf einen genauen Wert enthalten kann, wenn dieselbe Nachricht von mehr als ein WCF-Dienst in einer Farm gelesen wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

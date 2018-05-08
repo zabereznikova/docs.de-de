@@ -1,29 +1,17 @@
 ---
 title: Layout in Windows Forms-Steuerelementen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [Windows Forms]
 - sizing [Windows Forms], automatic [Windows Forms]
 - Margin property [Windows Forms]
 - Padding property [Windws Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9112269da02bd7eff9838509673db7adbc3fb53
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11db7b49f37b4367f31b2c27c61225f8f71bde80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="layout-in-windows-forms-controls"></a>Layout in Windows Forms-Steuerelementen
 Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert. Die <xref:System.Windows.Forms?displayProperty=nameWithType> Namespace bietet Ihnen viele Layout-Tools, um dies zu erreichen.  
@@ -44,7 +32,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
  [Gewusst wie: Implementieren eines benutzerdefinierten Layoutmoduls](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-layout-engine.md)  
  Veranschaulicht das Implementieren einer <xref:System.Windows.Forms.Layout.LayoutEngine> zum Anordnen von Windows Forms-Steuerelementen.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement.  
   

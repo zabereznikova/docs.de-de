@@ -1,27 +1,15 @@
 ---
-title: "Übersicht über Zeitsteuerungsverhalten"
-ms.custom: 
+title: Übersicht über Zeitsteuerungsverhalten
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31a6b7d3b92e886d9c90fc39d69f31cf72b99666
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="timing-behaviors-overview"></a>Übersicht über Zeitsteuerungsverhalten
 In diesem Thema wird beschrieben, die Zeitsteuerungsverhalten von Animationen und andere <xref:System.Windows.Media.Animation.Timeline> Objekte.  
@@ -34,7 +22,7 @@ In diesem Thema wird beschrieben, die Zeitsteuerungsverhalten von Animationen un
 ## <a name="timeline-types"></a>Zeitachsentypen  
  Ein <xref:System.Windows.Media.Animation.Timeline> einen Zeitabschnitt darstellt. Sie bietet Eigenschaften, mit denen Sie z.B. die Länge dieses Abschnitts, seinen Start, die Anzahl der Wiederholungen und die Geschwindigkeit des Fortschreitens der Zeit im Abschnitt Segment angeben.  
   
- Klassen, die von der Timeline-Klasse erben, bieten zusätzliche Funktionen, wie z.B. Animation und Medienwiedergabe. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bietet die folgenden <xref:System.Windows.Media.Animation.Timeline> Typen.  
+ Klassen, die von der Timeline-Klasse erben, bieten zusätzliche Funktionen, wie z.B. Animation und Medienwiedergabe. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet die folgenden <xref:System.Windows.Media.Animation.Timeline> Typen.  
   
 |Zeitachsentypen|Beschreibung|  
 |-------------------|-----------------|  
@@ -127,11 +115,11 @@ In diesem Thema wird beschrieben, die Zeitsteuerungsverhalten von Animationen un
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Eigenschaften, die die Geschwindigkeit einer Zeitachse steuern  
  Die <xref:System.Windows.Media.Animation.Timeline> -Klasse enthält drei Eigenschaften zum Angeben der Geschwindigkeit:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>– Gibt die Geschwindigkeit relativ zum übergeordneten Element, an dem die Zeit, für abläuft eine <xref:System.Windows.Media.Animation.Timeline>. Werte größer als eins erhöhen die Geschwindigkeit von der <xref:System.Windows.Media.Animation.Timeline> und seiner untergeordneten <xref:System.Windows.Media.Animation.Timeline> Objekte; Werte zwischen 0 und 1 langsamer. Der Wert 1 gibt an, dass <xref:System.Windows.Media.Animation.Timeline> im Verlauf der Arbeit mit derselben Geschwindigkeit wie das übergeordnete Objekt. Die <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Einstellung einer Containerzeitachse wirkt sich auf alle untergeordneten <xref:System.Windows.Media.Animation.Timeline> Objekte.  
+-   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – Gibt die Geschwindigkeit relativ zum übergeordneten Element, an dem die Zeit, für abläuft eine <xref:System.Windows.Media.Animation.Timeline>. Werte größer als eins erhöhen die Geschwindigkeit von der <xref:System.Windows.Media.Animation.Timeline> und seiner untergeordneten <xref:System.Windows.Media.Animation.Timeline> Objekte; Werte zwischen 0 und 1 langsamer. Der Wert 1 gibt an, dass <xref:System.Windows.Media.Animation.Timeline> im Verlauf der Arbeit mit derselben Geschwindigkeit wie das übergeordnete Objekt. Die <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Einstellung einer Containerzeitachse wirkt sich auf alle untergeordneten <xref:System.Windows.Media.Animation.Timeline> Objekte.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>– Gibt den Prozentsatz der an die <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für das beschleunigen. Ein Beispiel finden Sie unter [wie: beschleunigen oder verlangsamen Sie eine Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Gibt den Prozentsatz der an die <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für das beschleunigen. Ein Beispiel finden Sie unter [wie: beschleunigen oder verlangsamen Sie eine Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>-Gibt den Prozentsatz von der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse verstrichenen. Ein Beispiel finden Sie unter [wie: beschleunigen oder verlangsamen Sie eine Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Gibt den Prozentsatz von der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse verstrichenen. Ein Beispiel finden Sie unter [wie: beschleunigen oder verlangsamen Sie eine Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

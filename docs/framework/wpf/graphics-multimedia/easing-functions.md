@@ -1,13 +1,6 @@
 ---
 title: Beschleunigungsfunktionen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 570a065d3f28befe8db4887ff908c3bd60a639a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce7c1824dc53c154ba1091ea62c1b8950b757c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="easing-functions"></a>Beschleunigungsfunktionen
 Mit Beschleunigungsfunktionen können Sie benutzerdefinierte mathematische Formeln auf Animationen anwenden. Beispielsweise sollte Ihr Objekt realistisch springen oder sich so verhalten, als ob es sich auf einer Feder befinden würde. Sie können Keyframe- oder sogar From/To/By-Animationen verwenden, um sich diesen Effekten anzunähern, aber es würde eine erhebliche Menge an Arbeit bedeuten, und die Animation wäre weniger genau als die Verwendung einer mathematischen Formel.  
@@ -50,7 +38,7 @@ Mit Beschleunigungsfunktionen können Sie benutzerdefinierte mathematische Forme
   
 -   <xref:System.Windows.Media.Animation.ExponentialEase>: Erstellt eine Animation, die beschleunigt und/oder verlangsamt wird mithilfe einer exponentiellen Formel.  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: Erstellt eine Animation, die beschleunigt und/oder verlangsamt wird anhand der Formel *f*(*t*) = *t*<sup>p</sup> p ist, in dem die gleich<xref:System.Windows.Media.Animation.PowerEase.Power%2A> Eigenschaft.  
+-   <xref:System.Windows.Media.Animation.PowerEase>: Erstellt eine Animation, die beschleunigt und/oder verlangsamt wird anhand der Formel *f*(*t*) = *t*<sup>p</sup> p ist, in dem die gleich<xref:System.Windows.Media.Animation.PowerEase.Power%2A>Eigenschaft.  
   
 -   <xref:System.Windows.Media.Animation.QuadraticEase>: Erstellt eine Animation, die beschleunigt und/oder verlangsamt wird anhand der Formel *f*(*t*) = *t*<sup>2</sup>.  
   

@@ -1,24 +1,12 @@
 ---
 title: 'Vorgehensweise: Hosten eines Nicht-Dienstworkflows in IIS'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70fd6aca94f2addd7ee568e897171ae1da86db67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Vorgehensweise: Hosten eines Nicht-Dienstworkflows in IIS
 Workflows, die keine Workflowdienste darstellen, können unter IIS/WAS gehostet werden. Dies ist hilfreich, wenn ein Workflow gehostet werden muss, der von einem anderen Benutzer geschrieben wurde. Beispiel: Der Workflow-Designer wird erneut gehostet, und Benutzer können eigene Workflows erstellen.  Durch das Hosten eines Workflows in IIS, bei dem es sich nicht um einen Dienstworkflow handelt, wird Unterstützung für Funktionen wie die Prozesswiederverwendung, das Herunterfahren der Anwendung und ihrer Dienste bei Leerlauf, die Prozessüberwachung und die meldungsbasierte Aktivierung bereitgestellt. Workflowdienste, die in IIS gehostet werden, enthalten <xref:System.ServiceModel.Activities.Receive>-Aktivitäten und werden beim Empfang einer Meldung durch IIS aktiviert. Workflows, die keine Dienstworkflows sind, enthalten keine Messagingaktivitäten und können standardmäßig nicht durch Senden einer Meldung aktiviert werden.  Um eine Instanz des Workflows zu erstellen, müssen Sie eine Klasse von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ableiten und einen Dienstvertrag mit Vorgängen erstellen. Dieses Thema führt Sie durch das Erstellen eines einfachen Workflows, definieren einen Dienstvertrag, ein Client verwenden kann, um den Workflow zu aktivieren, und Ableiten einer Klasse von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> verwendet den Dienstvertrag für Workflow Erstellen von Anforderungen zu lauschen.  
@@ -332,7 +320,7 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS/WAS gehostet 
   
 8.  Kopieren Sie die web.config-Datei in Ihr IIS-Anwendungsverzeichnis.  
   
-9. Überprüfen Sie die Funktion des Erstellungsendpunkts, indem Sie Internet Explorer starten und zu http://localhost/MyCreationEndpoint/Workflow1.xamlx navigieren. Internet Explorer sollte nun folgenden Bildschirm anzeigen:  
+9. Test, um festzustellen, ob es sich bei der erstellungsendpunkt funktionsfähig ist, indem Sie Internet Explorer starten und das Navigieren zu http://localhost/MyCreationEndpoint/Workflow1.xamlx. Internet Explorer sollte nun folgenden Bildschirm anzeigen:  
   
      ![Testen des Diensts](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   

@@ -1,27 +1,15 @@
 ---
 title: Erweiterungen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensibility"></a>Erweiterungen
-Dieser Abschnitt enthält Beispiele, die sich mit benutzerdefinierten Erweiterungen und anderen Funktionen von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beschäftigen.  
+Dieser Abschnitt enthält Beispiele, die mit benutzerdefinierten Erweiterungen und anderen Funktionen von Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erweiterbarkeit von Kanälen](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -58,7 +46,7 @@ Dieser Abschnitt enthält Beispiele, die sich mit benutzerdefinierten Erweiterun
  Zeigt, wie über Erweiterungspunkte benutzerdefinierte Meldungsdatenformate genutzt werden können.  
   
  [Benutzerdefinierter Nachrichtenfilter](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- Zeigt, wie die Nachrichtenfilter ersetzt werden, mit denen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Nachrichten auf Endpunkte verteilt.  
+ veranschaulicht, wie die Nachrichtenfilter ersetzt, die Windows Communication Foundation (WCF) verwendet wird, um Nachrichten auf Endpunkte verteilt.  
   
  [Benutzerdefinierter Diensthost](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Zeigt, wie mit einer benutzerdefinierten Ableitung der <xref:System.ServiceModel.ServiceHost>-Klasse das Laufzeitverhalten eines Diensts geändert wird.  

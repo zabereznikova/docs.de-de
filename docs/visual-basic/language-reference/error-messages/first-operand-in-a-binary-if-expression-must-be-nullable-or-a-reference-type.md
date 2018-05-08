@@ -1,28 +1,19 @@
 ---
-title: "Der erste Operand in eine Binärdatei &#39; Wenn &#39; Ausdruck muss NULL-Werte zulässt, oder geben Sie ein Verweis"
+title: Der erste Operand in eine Binärdatei &#39;Wenn&#39; Ausdruck muss NULL-Werte zulässt, oder geben Sie ein Verweis
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc33107
 - vbc33107
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f66b110c02076120c55a3bff28c3d7614bf8be26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 76078d315b2c32a2a29aa652a65b463622afec36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Der erste Operand in eine Binärdatei &#39; Wenn &#39; Ausdruck muss NULL-Werte zulässt, oder geben Sie ein Verweis
+# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Der erste Operand in eine Binärdatei &#39;Wenn&#39; Ausdruck muss NULL-Werte zulässt, oder geben Sie ein Verweis
 Ein `If` -Ausdruck kann entweder zwei oder drei Argumente übernehmen. Wenn Sie nur zwei Argumente senden, sind für das erste Argument muss ein Verweistyp oder ein NULL-Werte zulässt. Wenn das erste Argument zu beliebiegen Dokumentbestandteilen außer ergibt `Nothing`, dessen Wert zurückgegeben wird. Wenn das erste Argument ergibt `Nothing`, das zweite Argument ausgewertet und zurückgegeben.  
   
  Der folgende Code enthält z. B. zwei `If` Ausdrücke, eine mit drei Argumenten und einen mit zwei Argumenten. Die Ausdrücke berechnen und den gleichen Wert zurück.  

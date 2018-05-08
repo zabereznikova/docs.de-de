@@ -1,28 +1,16 @@
 ---
-title: "Szenarien für das DataGridView-Steuerelement (Windows Forms)"
-ms.custom: 
+title: Szenarien für das DataGridView-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a320b40664e4fe2254109183731db346a5d7d0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Szenarien für das DataGridView-Steuerelement (Windows Forms)
 Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, Sie können Tabellendaten aus einer Vielzahl von Datenquellen anzeigen. Für einfache verwendet wird, können Sie manuell Auffüllen einer <xref:System.Windows.Forms.DataGridView> und bearbeiten Sie die Daten nicht direkt über das Steuerelement. In der Regel jedoch Sie Speichern Ihrer Daten in einer externen Datenquelle und Binden des Steuerelements an ihn über eine <xref:System.Windows.Forms.BindingSource> Komponente.  
@@ -80,7 +68,7 @@ Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, Sie können Tab
   
 ### <a name="scenario-key-points"></a>Szenario wesentliche Punkte  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle>Objekte können Sie die Farbe, Schriftart, Formatierung und Positionierung von Informationen auf mehreren Ebenen und für einzelne Elemente des Steuerelements angeben.  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle> Objekte können Sie die Farbe, Schriftart, Formatierung und Positionierung von Informationen auf mehreren Ebenen und für einzelne Elemente des Steuerelements angeben.  
   
 -   Zellstile im Protokollstapel zugeordnet, und von mehreren Elementen, da Sie die Wiederverwendung von Code dar, sondern gemeinsam genutzt werden können.  
   

@@ -1,30 +1,16 @@
 ---
 title: XAML-Dienste
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], System.Xaml concepts
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f36f22e8bf68520f5f57280d33cf37990feb2df6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fbe67e81bdc461e290b5cdbb9e1050aec32ce8fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-services"></a>XAML-Dienste
 Dieses Thema beschreibt die Funktionen einer Technologie Menge als .NET Framework-XAML-Dienste bezeichnet. Die meisten Dienste und der beschriebenen APIs befinden sich in der Assembly "System.xaml", also eine Assembly eingeführt wird, mit der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Satz von .NET Core-Assemblys. Dienste umfassen, Reader und Writer, Schemaklassen und schemaunterstützung, Factorys, Attributierung von Klassen, systeminterne Unterstützung von XAML-Sprache und anderen Features der XAML-Sprache.  
@@ -49,7 +35,7 @@ Dieses Thema beschreibt die Funktionen einer Technologie Menge als .NET Framewor
  Wenn Sie einführende Informationen zu XAML als Sprache suchen, Sie könnten versuchen [XAML Overview (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Dieses Thema erläutert XAML für eine Zielgruppe die neuen sowohl auf [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] und auch für die Verwendung von XAML-Markup und XAML-Sprachfeatures. Eine andere nützliches Dokument ist die einleitenden Informationen in den [XAML-Sprachspezifikation](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET Framework-XAML-Dienste und "System.xaml" in der .NET-Architektur  
- In früheren Versionen von [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], Unterstützung für die Verwendung von XAML-Sprachfunktionen von Frameworks, die auf implementiert wurde [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation und Windows Communication Foundation (WCF)), und daher variiert seiner Verhalten und die API verwendet, die je nach den spezifischen Framework Sie verwendet haben. Diese enthalten die XAML-Parser und der Objektdiagramm Erstellungsmechanismus, systeminterne XAML-Sprachelemente, Serialisierungsunterstützung und So weiter.  
+ In früheren Versionen von Microsoft .NET Framework, die Unterstützung für XAML-Sprachfunktionen von Frameworks, die auf Microsoft .NET Framework aufbauen implementiert wurde ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation und Windows Communication Foundation (WCF)), und daher das Verhalten und der verwendeten API je nach den spezifischen, die Framework-wurden unterscheiden. Diese enthalten die XAML-Parser und der Objektdiagramm Erstellungsmechanismus, systeminterne XAML-Sprachelemente, Serialisierungsunterstützung und So weiter.  
   
  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework-XAML-Dienste und der System.Xaml-Assembly definieren Großteil zur Unterstützung von XAML-Sprachfeatures benötigt wird. Dies schließt die Basisklassen für XAML-Readern und XAML-Writern. Die wichtigste Funktion hinzugefügt, die nicht in keiner der Framework-spezifischen XAML-Implementierungen war .NET Framework XAML Services ist eine Darstellung für die Verwendung von XAML-System. Die Typ-Darstellung System stellt XAML auf objektorientierte Weise, die Funktionen der XAML-Rechenzentren ohne Abhängigkeiten auf bestimmte Funktionen des Frameworks.  
   

@@ -1,23 +1,12 @@
 ---
-title: "Erstellen von asynchronen Aktivitäten in WF"
-ms.custom: 
+title: Erstellen von asynchronen Aktivitäten in WF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Erstellen von asynchronen Aktivitäten in WF
 Das <xref:System.Activities.AsyncCodeActivity>-Objekt stellt eine Basisklasse für Aktivitätsautoren bereit, mit der abgeleitete Aktivitäten asynchrone Ausführungslogik implementieren können. Dies ist nützlich bei benutzerdefinierten Aktivitäten, die asynchrone Aufgaben ausführen müssen, ohne dass der Workflowplanerthread angehalten und Aktivitäten, die parallel ausgeführt werden, bockiert werden. Dieses Thema enthält eine Übersicht zum Erstellen von benutzerdefinierten asynchronen Aktivitäten mit <xref:System.Activities.AsyncCodeActivity>.  
@@ -26,7 +15,7 @@ Das <xref:System.Activities.AsyncCodeActivity>-Objekt stellt eine Basisklasse f�
  <xref:System.Activities?displayProperty=nameWithType> bietet benutzerdefinierten Aktivitätsautoren verschiedene Basisklassen, mit denen auf die unterschiedlichen Anforderungen der Aktivitätserstellung eingegangen wird. Jede einzelne davon weist eine bestimmte Semantik auf und stellt einem Workflowautor (und der Aktivitätslaufzeit) einen entsprechenden Vertrag bereit. Ein Aktivität auf Grundlage des <xref:System.Activities.AsyncCodeActivity>-Objekts ist eine Aktivität, die Aufgaben asynchron in Verbindung mit dem Planerthread ausführt und deren Ausführungslogik in verwaltetem Code ausgedrückt wird. Als Ergebnis der Asynchronität kann ein <xref:System.Activities.AsyncCodeActivity>-Objekt möglicherweise während der Ausführung einen Leerlaufpunkt herbeiführen. Aufgrund der flüchtigen Art asynchroner Arbeit erstellt ein <xref:System.Activities.AsyncCodeActivity>-Objekt immer einen nicht persistenten Block für die Dauer der Ausführung der Aktivität. Dadurch wird verhindert, dass die Workflowlaufzeit die Workflowinstanz während der asynchronen Arbeit speichert oder die Workflowinstanz während der Ausführung von asynchronem Code entladen wird.  
   
 ### <a name="asynccodeactivity-methods"></a>AsyncCodeActivity-Methoden  
- Aktivitäten, die vom <xref:System.Activities.AsyncCodeActivity>-Objekt ableiten, können asynchrone Ausführungslogik erstellen, indem sie die <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>-Methode und die <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>-Methode mit benutzerdefiniertem Code überschreiben. Wenn diese Methoden von der Laufzeit aufgerufen werden, wird <xref:System.Activities.AsyncCodeActivityContext> an sie übergeben. <xref:System.Activities.AsyncCodeActivityContext>ermöglicht dem Ersteller der Aktivität Freigabezustand über bereitstellen <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> in des Kontexts <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> Eigenschaft. Im folgenden Beispiel generiert eine `GenerateRandom`-Aktivität eine Zufallszahl auf asynchrone Weise.  
+ Aktivitäten, die vom <xref:System.Activities.AsyncCodeActivity>-Objekt ableiten, können asynchrone Ausführungslogik erstellen, indem sie die <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>-Methode und die <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>-Methode mit benutzerdefiniertem Code überschreiben. Wenn diese Methoden von der Laufzeit aufgerufen werden, wird <xref:System.Activities.AsyncCodeActivityContext> an sie übergeben. <xref:System.Activities.AsyncCodeActivityContext> ermöglicht dem Ersteller der Aktivität Freigabezustand über bereitstellen <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> in des Kontexts <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> Eigenschaft. Im folgenden Beispiel generiert eine `GenerateRandom`-Aktivität eine Zufallszahl auf asynchrone Weise.  
   
  [!code-csharp[CFX_ActivityExample#8](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#8)]  
   

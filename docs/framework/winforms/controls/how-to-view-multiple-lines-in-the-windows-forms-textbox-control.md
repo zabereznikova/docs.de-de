@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms"
-ms.custom: 
+title: 'Gewusst wie: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - newline
 - end of line
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5dca8d0f869702dee50bf851a2099317c45aa842
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c826a519d8be05430eb6e2434209424514347b5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Gewusst wie: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms
 Standardmäßig werden in Windows Forms <xref:System.Windows.Forms.TextBox> Steuerelement zeigt eine einzelne Textzeile an und zeigt keine Bildlaufleisten. Wenn der Text länger als der verfügbare Platz ist, ist nur ein Teil des Texts sichtbar. Sie können dieses Standardverhalten ändern, indem Sie die Einstellung der <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, und <xref:System.Windows.Forms.TextBox.ScrollBars%2A> Eigenschaften auf die entsprechenden Werte.  

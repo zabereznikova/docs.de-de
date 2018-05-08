@@ -1,13 +1,6 @@
 ---
-title: "Rückrufe und Validierung von Abhängigkeitseigenschaften"
-ms.custom: 
+title: Rückrufe und Validierung von Abhängigkeitseigenschaften
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15ba7f3315b2ce71357bd4735e2dfca1b3de616d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e181c2d9610619587642f982959f809b96b011dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Rückrufe und Validierung von Abhängigkeitseigenschaften
 Dieses Thema beschreibt die Erstellung von Abhängigkeitseigenschaften mithilfe alternativer benutzerdefinierter Implementierungen für eigenschaftenbezogene Funktionen wie die Überprüfungsbestimmung, Rückrufe, die immer dann aufgerufen werden, wenn der effektive Wert der Eigenschaft geändert wird, und das Überschreiben möglicher externer Einflüsse auf die Wertbestimmung. Dieses Thema enthält auch Szenarios, in denen das Erweitern des Standardverhaltens des Eigenschaftensystems mithilfe dieser Techniken geeignet ist.  

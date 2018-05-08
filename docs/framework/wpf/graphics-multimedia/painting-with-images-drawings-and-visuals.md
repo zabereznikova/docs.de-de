@@ -1,13 +1,6 @@
 ---
 title: Zeichnen mit Bildern, Zeichnungen und visuellen Elementen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Zeichnen mit Bildern, Zeichnungen und visuellen Elementen
 Dieses Thema beschreibt, wie <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, und <xref:System.Windows.Media.VisualBrush> Objekte zum Zeichnen eines Bereichs mit einem Bild ein <xref:System.Windows.Media.Drawing>, oder ein <xref:System.Windows.Media.Visual>.  
@@ -69,15 +57,15 @@ Von einem DrawingBrush gezeichnete Objekte
   
  Ein <xref:System.Windows.Media.DrawingBrush> zeichnet einen Bereich mit einem <xref:System.Windows.Media.Drawing> Objekt. Ein <xref:System.Windows.Media.Drawing> Objekt beschreibt sichtbaren Inhalt, z. B. eine Form, Bitmap, Video oder eine Textzeile. Verschiedene Arten von Zeichnungen beschreiben verschiedene Arten von Inhalten. Im Folgenden finden Sie eine Liste der unterschiedlichen Typen von Zeichnungsobjekten.  
   
--   <xref:System.Windows.Media.GeometryDrawing>– Zeichnet eine Form.  
+-   <xref:System.Windows.Media.GeometryDrawing> – Zeichnet eine Form.  
   
--   <xref:System.Windows.Media.ImageDrawing>– Zeichnet ein Bild.  
+-   <xref:System.Windows.Media.ImageDrawing> – Zeichnet ein Bild.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>– Zeichnet Text.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> – Zeichnet Text.  
   
--   <xref:System.Windows.Media.VideoDrawing>– Gibt eine audio oder video.  
+-   <xref:System.Windows.Media.VideoDrawing> – Gibt eine audio oder video.  
   
--   <xref:System.Windows.Media.DrawingGroup>– Zeichnet andere Zeichnungen. Verwenden Sie eine Zeichnungsgruppe, um andere Zeichnungen in einer zusammengesetzten Zeichnung zu kombinieren.  
+-   <xref:System.Windows.Media.DrawingGroup> – Zeichnet andere Zeichnungen. Verwenden Sie eine Zeichnungsgruppe, um andere Zeichnungen in einer zusammengesetzten Zeichnung zu kombinieren.  
   
  Weitere Informationen zu <xref:System.Windows.Media.Drawing> anzuzeigen, die [Drawing Objects Overview](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
@@ -133,7 +121,7 @@ Ein reflektiertes Visual-Objekt
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>TileBrush-Funktionen  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, und <xref:System.Windows.Media.VisualBrush> Typen von <xref:System.Windows.Media.TileBrush> Objekte. <xref:System.Windows.Media.TileBrush>Objekte bieten Ihnen eine sehr viel systemverarbeitungszeit in steuern, wie ein Bereich mit einem Bild, die Zeichnung oder die Visual gezeichnet wird. Sie können beispielsweise zum Zeichnen eines Bereichs anstelle eines einzelnen gestreckten Bilds eine Reihe von Bildkacheln verwenden, die ein Muster ergeben.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, und <xref:System.Windows.Media.VisualBrush> Typen von <xref:System.Windows.Media.TileBrush> Objekte. <xref:System.Windows.Media.TileBrush> Objekte bieten Ihnen eine sehr viel systemverarbeitungszeit in steuern, wie ein Bereich mit einem Bild, die Zeichnung oder die Visual gezeichnet wird. Sie können beispielsweise zum Zeichnen eines Bereichs anstelle eines einzelnen gestreckten Bilds eine Reihe von Bildkacheln verwenden, die ein Muster ergeben.  
   
  Ein <xref:System.Windows.Media.TileBrush> besteht aus drei primäre Komponenten: Inhalt, Kacheln und Ausgabebereich.  
   

@@ -1,35 +1,21 @@
 ---
 title: WCF Syndication
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1f7f5fd65fc298107a66e2049c059f3cc58b3d44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 627de6431c641e48367a97e3f80f3d05d185ab45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-syndication"></a>WCF Syndication
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] unterstützt das problemlose Arbeiten mit Syndication-Feeds in Atom, RSS oder in anderen benutzerdefinierten Formaten. Dies ermöglicht das Lesen und Erstellen dieser Feeds sowie das Verfügbarmachen für einen Dienstendpunkt. In den Themen dieses Abschnitts wird dieses Programmiermodell für Syndication genau beschrieben.  
+Windows Communication Foundation (WCF) unterstützt das problemlose arbeiten mit Syndication-Feeds in Atom, RSS oder anderen benutzerdefinierten Formaten, dies Ihnen ermöglicht, lesen und erstellen sowie das Verfügbarmachen für einen Dienstendpunkt. In den Themen dieses Abschnitts wird dieses Programmiermodell für Syndication genau beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- Bietet eine Übersicht über Syndication-Unterstützung, die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gewährt wird.  
+ Bietet eine Übersicht über Syndication-Unterstützung durch WCF bereitgestellte.  
   
  [Architektur von Syndication](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
  Beschreibt die Klassen im Objektmodell und die Erweiterbarkeit von Syndication.  
@@ -49,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  [Syndication-Erweiterbarkeit](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  
  Beschreibt die Methoden zum Hinzufügen benutzerdefinierter Elemente und Attribute zu einem Syndication-Feed.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   

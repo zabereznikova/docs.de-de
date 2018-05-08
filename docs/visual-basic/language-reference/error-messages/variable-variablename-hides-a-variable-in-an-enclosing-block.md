@@ -1,28 +1,19 @@
 ---
-title: "Variable &#39; &lt;Variablename&gt;&#39; verbirgt eine Variable in einem einschließenden Block"
+title: Variable &#39; &lt;Variablename&gt; &#39; verbirgt eine Variable in einem einschließenden Block
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30616
 - bc30616
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2af570cd002b4be4e15a7c03b0ffc2ff84ba3982
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58e09caeb477d6b1df7f3be17e0a8ee05be3551e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>Variable &#39; &lt;Variablename&gt;&#39; verbirgt eine Variable in einem einschließenden Block
+# <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>Variable &#39; &lt;Variablename&gt; &#39; verbirgt eine Variable in einem einschließenden Block
 Eine Variable in einem Block eingeschlossen hat den gleichen Namen wie eine andere lokale Variable.  
   
  **Fehler-ID:** BC30616  

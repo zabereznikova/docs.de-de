@@ -1,12 +1,6 @@
 ---
-title: "Gewusst wie: Überladen einer Prozedur mit optionalen Parametern (Visual Basic)"
-ms.custom: 
+title: 'Gewusst wie: Überladen einer Prozedur mit optionalen Parametern (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
 - procedure overloading [Visual Basic], optional parameters
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b4a863944d4f9ab265aab52578fbb704ca376de5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1da1d67726a9669477721aabc0aace0119aa7e56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Gewusst wie: Überladen einer Prozedur mit optionalen Parametern (Visual Basic)
 Falls eine Prozedur eine oder mehrere [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) Parameter keine überladene Version, die mit keiner der entsprechenden implizite Überladungen definieren. Weitere Informationen finden Sie unter "Implizite Überladungen für optionale Parameter" in [Überlegungen in Überladen von Prozeduren](./considerations-in-overloading-procedures.md).  

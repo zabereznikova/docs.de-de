@@ -1,10 +1,6 @@
 ---
 title: 'Datentyp: Zusammenfassung (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Boolean data type [Visual Basic], supported types in Visual Basic
 - storage [Visual Basic], order of storage
@@ -41,14 +37,11 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-type-summary-visual-basic"></a>Datentyp: Zusammenfassung (Visual Basic)
 Die folgende Tabelle zeigt die Visual Basic-Datentypen, ihre unterstützenden common Language Runtime-Typen, deren nominalen Speicherzuordnung und ihre Wertebereiche.  
@@ -63,11 +56,11 @@ Die folgende Tabelle zeigt die Visual Basic-Datentypen, ihre unterstützenden co
 |[Doppelte](../../../visual-basic/language-reference/data-types/double-data-type.md) (Gleitkommawert mit doppelter Genauigkeit)|<xref:System.Double>|8 Bytes|-1.79769313486231570E + 308 bis - 4.94065645841246544E-324 <sup>†</sup> für negative Werte;<br /><br /> 4.94065645841246544E-324 bis 1.79769313486231570E + 308 <sup>†</sup> für positive Werte|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 Bytes|2.147.483.648 bis 2.147.483.647 (mit Vorzeichen)|  
 |[Lange](../../../visual-basic/language-reference/data-types/long-data-type.md) (lange ganze Zahl)|<xref:System.Int64>|8 Bytes|-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 (9.2... E + 18 <sup>†</sup>) (mit Vorzeichen)|  
-|[Objekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>(Klasse)|4 Byte für 32-Bit-Plattform<br /><br /> 8 Bytes auf 64-Bit-Plattform|Jeder Typ kann in einer Variablen vom Typ gespeichert werden`Object`|  
+|[Objekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (Klasse)|4 Byte für 32-Bit-Plattform<br /><br /> 8 Bytes auf 64-Bit-Plattform|Jeder Typ kann in einer Variablen vom Typ gespeichert werden `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 Byte|-128 bis 127 (mit Vorzeichen)|  
 |[Kurze](../../../visual-basic/language-reference/data-types/short-data-type.md) (kurze ganze Zahl)|<xref:System.Int16>|2 Bytes|32.768 bis 32.767 (mit Vorzeichen)|  
 |[Einzelne](../../../visual-basic/language-reference/data-types/single-data-type.md) (Gleitkommazahlen mit einfacher Genauigkeit)|<xref:System.Single>|4 Bytes|-3,4028235E + 38 bis - 1.401298E-45 <sup>†</sup> für negative Werte;<br /><br /> 1.401298E-45 bis 3,4028235E + 38 <sup>†</sup> für positive Werte|  
-|[Zeichenfolge](../../../visual-basic/language-reference/data-types/string-data-type.md) (mit variabler Länge)|<xref:System.String>(Klasse)|Abhängig von der Plattform|0 bis ungefähr 2 Milliarden Unicode-Zeichen|  
+|[Zeichenfolge](../../../visual-basic/language-reference/data-types/string-data-type.md) (mit variabler Länge)|<xref:System.String> (Klasse)|Abhängig von der Plattform|0 bis ungefähr 2 Milliarden Unicode-Zeichen|  
 |[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 Bytes|0 bis 4.294.967.295 (ohne Vorzeichen)|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 Bytes|0 bis 18.446.744.073.709.551.615 (1.8... E + 19 <sup>†</sup>) (ohne Vorzeichen)|  
 |[Eine benutzerdefinierte](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (Struktur)|(erbt von <xref:System.ValueType>)|Abhängig von der Plattform|Jedes Element der Struktur hat einen Bereich, der durch Angabe des Datentyps und unabhängig von der Bereiche von den anderen Elementen bestimmt|  

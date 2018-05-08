@@ -1,12 +1,6 @@
 ---
 title: On Error-Anweisung (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.OnError
 helpviewer_keywords:
@@ -28,14 +22,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: b2e32dcca2e29a178af6dc985da536b47f0ebae6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error-Anweisung (Visual Basic)
 Aktiviert eine Fehlerbehandlungsroutine und gibt den Speicherort der Routine innerhalb einer Prozedur an. kann auch verwendet werden, um eine Fehlerbehandlungsroutine zu deaktivieren.  
@@ -89,16 +80,16 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Beachten Sie, dass die `On Error GoTo` Anweisung alle Fehler, unabhängig von der Ausnahmeklasse aufgefangen.  
   
 ## <a name="on-error-resume-next"></a>On Error Resume Next  
- `On Error Resume Next`bewirkt, dass die Ausführung zu fortfahren mit der Anweisung unmittelbar nach der Anweisung, die Laufzeitfehler verursacht hat, oder rufen Sie mit der Anweisung unmittelbar nach der letzten aus der Prozedur mit der `On Error Resume Next` Anweisung. Diese Anweisung ermöglicht die Ausführung fortsetzen trotz einen Laufzeitfehler. Sie können die Fehlerbehandlung-Routine, in dem der Fehler auftreten würden, anstatt die Steuerung an eine andere Position innerhalb der Prozedur übertragen platzieren. Ein `On Error Resume Next` Anweisung wird inaktiv, wenn eine andere Prozedur aufgerufen wird, damit Sie ausgeführt werden soll, ein `On Error Resume Next` in jeder Anweisung aufgerufen Routine ggf. Inline-Fehlerbehandlung innerhalb dieser Routine.  
+ `On Error Resume Next` bewirkt, dass die Ausführung zu fortfahren mit der Anweisung unmittelbar nach der Anweisung, die Laufzeitfehler verursacht hat, oder rufen Sie mit der Anweisung unmittelbar nach der letzten aus der Prozedur mit der `On Error Resume Next` Anweisung. Diese Anweisung ermöglicht die Ausführung fortsetzen trotz einen Laufzeitfehler. Sie können die Fehlerbehandlung-Routine, in dem der Fehler auftreten würden, anstatt die Steuerung an eine andere Position innerhalb der Prozedur übertragen platzieren. Ein `On Error Resume Next` Anweisung wird inaktiv, wenn eine andere Prozedur aufgerufen wird, damit Sie ausgeführt werden soll, ein `On Error Resume Next` in jeder Anweisung aufgerufen Routine ggf. Inline-Fehlerbehandlung innerhalb dieser Routine.  
   
 > [!NOTE]
 >  Die `On Error Resume Next` Konstrukt möglicherweise vorzuziehen `On Error GoTo` bei der Behandlung von Fehlern während des Zugriffs auf andere Objekte generiert. Überprüfung `Err` nach jeder Interaktion mit einem Objekt der Code zugegriffen. Sie können sicher sein, welches Objekt den Fehlercode in platziert `Err.Number`, sowie welches Objekt den Fehler ursprünglich generiert hat (das Objekt, das im angegebenen `Err.Source`).  
   
 ## <a name="on-error-goto-0"></a>On Error GoTo 0  
- `On Error GoTo 0`deaktiviert die Fehlerbehandlung in der aktuellen Prozedur. Er ist nicht als Anfang der Fehlerbehandlungscode Zeile 0 angeben, auch wenn die Prozedur eine Zeile 0 enthält. Ohne eine `On Error GoTo 0` einen Fehlerhandler-Anweisung wird automatisch deaktiviert, wenn eine Prozedur beendet wird.  
+ `On Error GoTo 0` deaktiviert die Fehlerbehandlung in der aktuellen Prozedur. Er ist nicht als Anfang der Fehlerbehandlungscode Zeile 0 angeben, auch wenn die Prozedur eine Zeile 0 enthält. Ohne eine `On Error GoTo 0` einen Fehlerhandler-Anweisung wird automatisch deaktiviert, wenn eine Prozedur beendet wird.  
   
 ## <a name="on-error-goto--1"></a>On Error GoTo-1  
- `On Error GoTo -1`deaktiviert die Ausnahme in der aktuellen Prozedur. Es gibt keine Zeile-1 als Anfang der Fehlerbehandlungscode an, selbst wenn die Prozedur eine Zeile mit der Nummer-1 enthält. Ohne eine `On Error GoTo -1` -Anweisung, eine Ausnahme wird automatisch deaktiviert, wenn eine Prozedur beendet wird.  
+ `On Error GoTo -1` deaktiviert die Ausnahme in der aktuellen Prozedur. Es gibt keine Zeile-1 als Anfang der Fehlerbehandlungscode an, selbst wenn die Prozedur eine Zeile mit der Nummer-1 enthält. Ohne eine `On Error GoTo -1` -Anweisung, eine Ausnahme wird automatisch deaktiviert, wenn eine Prozedur beendet wird.  
   
  Um zu verhindern, dass Fehlerbehandlungscode ausgeführt, wenn kein Fehler aufgetreten ist, platziert eine `Exit Sub`, `Exit Function`, oder `Exit Property` Anweisung unmittelbar vor der Fehlerbehandlungsroutine, wie das folgende Fragment:  
   

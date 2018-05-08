@@ -1,24 +1,12 @@
 ---
-title: "Benutzerdefinierte WSDL-Veröffentlichung"
-ms.custom: 
+title: Benutzerdefinierte WSDL-Veröffentlichung
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba62c44ecf72df7faaed77f54f07ecd88157c6d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-wsdl-publication"></a>Benutzerdefinierte WSDL-Veröffentlichung
 Dieses Beispiel demonstriert, wie Sie  
@@ -29,7 +17,7 @@ Dieses Beispiel demonstriert, wie Sie
   
 -   <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> in einem benutzerdefinierten Vertragsverhalten bzw. Vorgangsverhalten definieren, um importierte Anmerkungen als Anmerkungen in die CodeDom für den importieren Vertrag bzw. Vorgang zu schreiben.  
   
--   Mit dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> die WSDL herunterladen, mit einem <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> die WSDL mithilfe des benutzerdefinierten WSDL-Importer importieren, und mit dem <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clientcode mit den WSDL-Anmerkungen in Form von ///- und '''-Anmerkungen in C# und Visual Basic generieren.  
+-   Verwenden der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zum Herunterladen der WSDL ein <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> die WSDL mithilfe der benutzerdefinierten WSDL-Importer importieren und die <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> zum Generieren von Clientcode für Windows Communication Foundation (WCF) mit dem WSDL-Anmerkungen als / / / und ''' Kommentare in c# und Visual Grundlegende.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -311,7 +299,7 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   

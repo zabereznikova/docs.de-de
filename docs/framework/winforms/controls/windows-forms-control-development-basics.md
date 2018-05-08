@@ -1,28 +1,16 @@
 ---
-title: "Grundlagen für das Entwickeln von Windows Forms-Steuerelementen"
-ms.custom: 
+title: Grundlagen für das Entwickeln von Windows Forms-Steuerelementen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], derivation types
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf06f4dc0d8c70ae85d5add5a2fee078238d5e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455912468376d2f5de0ac1f30b4fcab5bb93309
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-control-development-basics"></a>Grundlagen für das Entwickeln von Windows Forms-Steuerelementen
 Ein Windows Forms-Steuerelement ist eine Klasse, die direkt oder indirekt abgeleitet <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Die folgende Liste beschreibt allgemeine Szenarien für die Entwicklung von Windows Forms-Steuerelemente:  
@@ -39,7 +27,7 @@ Ein Windows Forms-Steuerelement ist eine Klasse, die direkt oder indirekt abgele
   
      In diesem Szenario leiten Sie das Steuerelement von der Basisklasse <xref:System.Windows.Forms.Control>. Sie können hinzufügen sowie Eigenschaften, Methoden und Ereignisse der Basisklasse zu überschreiben. Um zu beginnen, finden Sie unter [Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuerelements](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
   
- Die Basisklasse für Windows Forms-Steuerelemente <xref:System.Windows.Forms.Control>, bietet die Grundlagen für die visuelle Darstellung in einer clientseitigen Windows-basierten Anwendungen erforderlich sind. <xref:System.Windows.Forms.Control>Stellt ein Fensterhandle, das Nachrichtenrouting verarbeitet und ermöglicht das Maus-und Tastaturereignissen sowie viele andere Benutzer Schnittstellenereignissen. Es bietet ein erweitertes Layout und verfügt über Eigenschaften, die für die visuelle Anzeige, z. B. <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, und viele andere. Darüber hinaus bietet sie Sicherheit threading-Unterstützung und Interoperabilität mit ActiveX-Steuerelemente. Da der Großteil der Infrastruktur von der Basisklasse bereitgestellt wird, ist es relativ einfach, Ihre eigenen Windows Forms-Steuerelemente zu entwickeln.  
+ Die Basisklasse für Windows Forms-Steuerelemente <xref:System.Windows.Forms.Control>, bietet die Grundlagen für die visuelle Darstellung in einer clientseitigen Windows-basierten Anwendungen erforderlich sind. <xref:System.Windows.Forms.Control> Stellt ein Fensterhandle, das Nachrichtenrouting verarbeitet und ermöglicht das Maus-und Tastaturereignissen sowie viele andere Benutzer Schnittstellenereignissen. Es bietet ein erweitertes Layout und verfügt über Eigenschaften, die für die visuelle Anzeige, z. B. <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, und viele andere. Darüber hinaus bietet sie Sicherheit threading-Unterstützung und Interoperabilität mit ActiveX-Steuerelemente. Da der Großteil der Infrastruktur von der Basisklasse bereitgestellt wird, ist es relativ einfach, Ihre eigenen Windows Forms-Steuerelemente zu entwickeln.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gewusst wie: Entwickeln eines einfachen Windows Forms-Steuerelements](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  

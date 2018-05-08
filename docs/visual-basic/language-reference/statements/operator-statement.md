@@ -1,12 +1,6 @@
 ---
 title: Operator Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.operator
 helpviewer_keywords:
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1b6be45fd0a606f43c14d57f3f8ae0955f256ba6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7fe7929e4b6e61ca3b39be5615e09182f2fe0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-statement"></a>Operator Statement
 Deklariert das Symbol "Operator", die Operanden und den Code, die eine Operatorprozedur für eine Klasse oder Struktur definieren.  
@@ -78,7 +69,7 @@ End Operator
  `operand2`  
  Für binäre Operatoren erforderlich. Der Name und Typ des rechten Operanden des binären Operators.  
   
- `operand1`und `operand2` haben die folgende Syntax und Bestandteile:  
+ `operand1` und `operand2` haben die folgende Syntax und Bestandteile:  
   
  `[ ByVal ] operandname [ As operandtype ]`  
   
@@ -174,7 +165,7 @@ End Operator
  Wenn eine Möglichkeit besteht, die eine Konvertierungsprozedur nicht erfolgreich ausgeführt werden kann, oder die It dazu führen, eine nicht behandelte Ausnahme dass kann, müssen Sie deklarieren, werden `Narrowing`.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird mit der `Operator` Anweisung, um das Gerüst für eine Struktur definieren, die Operatorprozeduren für enthält die `And`, `Or`, `IsFalse`, und `IsTrue` Operatoren. `And`und `Or` akzeptieren jeweils zwei Operanden vom Typ `abc` und dem Rückgabetyp `abc`. `IsFalse`und `IsTrue` akzeptieren jeweils einen einzelnen Operanden vom Typ `abc` und zurückgeben `Boolean`. Diese Definitionen ermöglicht werden, den aufrufenden Code mit `And`, `AndAlso`, `Or`, und `OrElse` mit Operanden vom Typ `abc`.  
+ Im folgenden Codebeispiel wird mit der `Operator` Anweisung, um das Gerüst für eine Struktur definieren, die Operatorprozeduren für enthält die `And`, `Or`, `IsFalse`, und `IsTrue` Operatoren. `And` und `Or` akzeptieren jeweils zwei Operanden vom Typ `abc` und dem Rückgabetyp `abc`. `IsFalse` und `IsTrue` akzeptieren jeweils einen einzelnen Operanden vom Typ `abc` und zurückgeben `Boolean`. Diese Definitionen ermöglicht werden, den aufrufenden Code mit `And`, `AndAlso`, `Or`, und `OrElse` mit Operanden vom Typ `abc`.  
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   

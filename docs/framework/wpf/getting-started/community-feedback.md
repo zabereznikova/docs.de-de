@@ -1,10 +1,6 @@
 ---
 title: WPF-Communityfeedback
 ms.date: 03/01/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-wpf
-ms.topic: article
 helpviewer_keywords:
 - community resources [WPF]
 - forums [WPF]
@@ -12,14 +8,11 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 243e40b1b16fd88a786398c15cd29a5baeacd6ac
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 6394bda1c2bcd4a42f76579d541173e65ecd2dc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-community-feedback"></a>WPF-Communityfeedback
 
@@ -57,7 +50,7 @@ Präzise, aussagekräftige Titel verbessern der Auffindbarkeit der Beiträge. Si
 
 Beschreiben Sie das Problem, und wie Sie versucht haben, damit arbeiten. Falls möglich, sollten Sie unterstützende Codeausschnitte oder ein möglichst einfaches Beispiel hinzufügen, das Ihr Problem veranschaulicht. Diese Einzelheiten erhöhen die Chance, dass Ihre Frage rasch beantwortet wird.
 
-## <a name="visual-studio-developer-community"></a>Visual Studio Developer Community
+## <a name="visual-studio-developer-community"></a>Visual Studio-Entwickler-Community
 
 Mitunter lassen sich Probleme nur schwierig oder gar nicht beheben. Ursache solcher Situationen können Probleme in der Technologie, Schwierigkeiten der Anwendung der Technologie auf bestimmte Szenarien oder eine mangelnde Unterstützung bestimmter Szenarien sein. Diese Informationen unbedingt an Microsoft, und kann bereitgestellt werden, über die [Visual Studio-Entwickler-Community](https://developercommunity.visualstudio.com/) Standort.
 

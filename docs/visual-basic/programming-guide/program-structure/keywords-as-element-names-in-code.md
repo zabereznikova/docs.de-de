@@ -1,26 +1,17 @@
 ---
-title: "Schlüsselwörter als Elementnamen in Code (Visual Basic)"
-ms.custom: 
+title: Schlüsselwörter als Elementnamen in Code (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, naming conventions
 - keywords [Visual Basic], in code
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f410a0eaac0dcc034d406a89ed1d01a8f228a583
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53c3172e8518115d001c23be2430fbc87ae1b60f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Schlüsselwörter als Elementnamen in Code (Visual Basic)
 Jedem Programmelement, z. B. eine Variable, eine Klasse oder ein Member – kann den gleichen Namen wie ein eingeschränktes Schlüsselwort haben. Sie können z. B. erstellen eine Variablen namens `Loop`. Allerdings zum Verweisen auf die Version zu – die hat des gleichen Namens wie die eingeschränkte `Loop` Schlüsselwort – müssen Sie ein vollständiger Qualifizierungspfad voran oder schließen Sie ihn in eckige Klammern (`[ ]`), wie das folgende Beispiel zeigt.  

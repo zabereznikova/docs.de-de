@@ -1,13 +1,6 @@
 ---
 title: Daten und Datenobjekte
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb2354b61a0433981675ba55978f31937212cabc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff596dc7428c9d105a27999f216d33e735e35a22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-and-data-objects"></a>Daten und Datenobjekte
 Daten, die als Teil eines Drag-and-Drop-Vorgangs übertragen werden, werden in einem Datenobjekt gespeichert.  Im Prinzip besteht aus einem Datenobjekt eine oder mehrere der folgenden Paare:  
@@ -47,7 +35,7 @@ Daten, die als Teil eines Drag-and-Drop-Vorgangs übertragen werden, werden in e
 |<xref:System.Windows.IDataObject.GetFormats%2A>|Gibt eine Liste der Formate, die die Daten in diesem Datenobjekt konvertiert werden können oder gespeichert ist.|  
 |<xref:System.Windows.IDataObject.SetData%2A>|Speichert die angegebenen Daten in diesem Datenobjekt.|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Stellt eine grundlegende Implementierung der <xref:System.Windows.IDataObject> in die <xref:System.Windows.DataObject> Klasse. Der Bestand <xref:System.Windows.DataObject> Klasse ist für viele häufige Szenarien für die Data-Übertragung ausreichend.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt eine grundlegende Implementierung der <xref:System.Windows.IDataObject> in die <xref:System.Windows.DataObject> Klasse. Der Bestand <xref:System.Windows.DataObject> Klasse ist für viele häufige Szenarien für die Data-Übertragung ausreichend.  
   
  Es gibt mehrere vordefinierte Formate, z. B. mithilfe einer Bitmap, CSV-Datei, HTML, RTF, Zeichenfolge, Text und Audio. Informationen zum Lieferumfang vordefinierter Datenformate [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], finden Sie unter der <xref:System.Windows.DataFormats> Referenzthema-Klasse.  
   
@@ -86,7 +74,7 @@ Daten, die als Teil eines Drag-and-Drop-Vorgangs übertragen werden, werden in e
  Weitere Beispiele für Code, der ein Datenobjekt nach verfügbaren Datenformaten abgefragt wird, finden Sie unter [Auflisten der Datenformate in einem Datenobjekt](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md).  Beispiele für Abfragen eines Datenobjekts für das Vorhandensein eines bestimmten Datenformats, finden Sie unter [zu bestimmen, ob ein Datenformat vorhanden ist in einem Datenobjekt](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md).  
   
 ### <a name="retrieving-data-from-a-data-object"></a>Abrufen von Daten aus einem Datenobjekt  
- Abrufen von Daten aus einem Datenobjekt in einem bestimmten Format einfach beinhaltet den Aufruf eines der <xref:System.Windows.DataObject.GetData%2A> Methoden und die gewünschten Daten-Format angibt.  Eines der <xref:System.Windows.DataObject.GetDataPresent%2A> Methoden können verwendet werden, um das Vorhandensein eines bestimmten Formats zu überprüfen.  <xref:System.Windows.DataObject.GetData%2A>Gibt die Daten in eine <xref:System.Object>; je nach das Datenformat dieses Objekts zu einem Container typspezifische umgewandelt werden kann.  
+ Abrufen von Daten aus einem Datenobjekt in einem bestimmten Format einfach beinhaltet den Aufruf eines der <xref:System.Windows.DataObject.GetData%2A> Methoden und die gewünschten Daten-Format angibt.  Eines der <xref:System.Windows.DataObject.GetDataPresent%2A> Methoden können verwendet werden, um das Vorhandensein eines bestimmten Formats zu überprüfen.  <xref:System.Windows.DataObject.GetData%2A> Gibt die Daten in eine <xref:System.Object>; je nach das Datenformat dieses Objekts zu einem Container typspezifische umgewandelt werden kann.  
   
  Der folgende Beispielcode verwendet die <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> Überladung zum Überprüfen, ob ein angegebenes Datenformat verfügbar ist (systemeigen oder durch automatische Konvertierung). Wenn das angegebene Format verfügbar ist, ruft das Beispiel die Daten mithilfe der <xref:System.Windows.DataObject.GetData%28System.String%29> Methode.  
   

@@ -1,27 +1,15 @@
 ---
-title: "Client-Interoperabilität"
-ms.custom: 
+title: Client-Interoperabilität
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e890e40a-b76a-48c4-9e5b-a4b385fac847
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fb8f8cba76099ea83c8384e422fbf8673e1ac58e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4a27c678ef5fe754f8f68ba12630dbf8852db826
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-interoperability"></a>Client-Interoperabilität
-Dieser Abschnitt enthält Beispiele, in denen Interoperabilität zwischen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] und anderen Technologien veranschaulicht wird.  
+Dieser Abschnitt enthält Beispiele, in denen Interoperabilität zwischen Windows Communication Foundation (WCF) und anderen Technologien erläutert wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Zusammenwirken mit ASMX-Webdiensten](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)  

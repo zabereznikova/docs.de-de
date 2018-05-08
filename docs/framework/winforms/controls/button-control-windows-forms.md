@@ -1,27 +1,15 @@
 ---
-title: "Button-Steuerelement (Windows Forms)"
-ms.custom: 
+title: Button-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - buttons
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4f9720f26458f3dd9cb2411d123fa830b20f3fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d7eef53967962804033334750b9f3230b95a949d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="button-control-windows-forms"></a>Button-Steuerelement (Windows Forms)
 Das Windows Forms `Button`-Steuerelement ermöglicht es dem Benutzer, durch Klicken eine Aktion auszuführen. Im `Button`-Steuerelement können sowohl Text als auch Bilder angezeigt werden. Wenn der Benutzer auf die Schaltfläche klickt, wird sie als gedrückt bzw. nicht gedrückt angezeigt.  
@@ -44,7 +32,7 @@ Das Windows Forms `Button`-Steuerelement ermöglicht es dem Benutzer, durch Klic
   
  Siehe auch [wie: Festlegen einer Windows Forms-Schaltfläche als die akzeptieren Schaltfläche mithilfe der Designer](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) und [wie: eine Windows Forms-Schaltfläche als die "Abbrechen"-Schaltfläche mithilfe der Designer festlegen](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Button>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

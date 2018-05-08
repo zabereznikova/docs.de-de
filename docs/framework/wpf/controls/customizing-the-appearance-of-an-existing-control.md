@@ -1,13 +1,6 @@
 ---
 title: Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,19 +12,14 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bbdc79fabf8dbe344baae66d718d79ac6375db7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
-<a name="introduction"></a>Ein <xref:System.Windows.Controls.ControlTemplate> gibt an, die visuelle Struktur und das visuelle Verhalten eines Steuerelements. Sie können die Darstellung eines Steuerelements anpassen, indem Sie ein neues zuweisen <xref:System.Windows.Controls.ControlTemplate>. Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, ersetzen Sie die Darstellung von einem vorhandenen Steuerelement, ohne seine Funktionalität zu ändern. Z. B. möglich die Schaltflächen in der Anwendung anstelle der quadratischen Standardform round, aber die Schaltfläche "" weiterhin löst die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
+<a name="introduction"></a> Ein <xref:System.Windows.Controls.ControlTemplate> gibt an, die visuelle Struktur und das visuelle Verhalten eines Steuerelements. Sie können die Darstellung eines Steuerelements anpassen, indem Sie ein neues zuweisen <xref:System.Windows.Controls.ControlTemplate>. Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, ersetzen Sie die Darstellung von einem vorhandenen Steuerelement, ohne seine Funktionalität zu ändern. Z. B. möglich die Schaltflächen in der Anwendung anstelle der quadratischen Standardform round, aber die Schaltfläche "" weiterhin löst die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
   
  In diesem Thema wird erläutert, die verschiedenen Bestandteile einer <xref:System.Windows.Controls.ControlTemplate>, veranschaulicht das Erstellen einer einfaches <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.Button>, und erläutert, wie das Steuerelementvertrag eines Steuerelements zu verstehen, sodass Sie dessen Darstellung anpassen können. Da Sie erstellen eine <xref:System.Windows.Controls.ControlTemplate> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], Sie können die Darstellung eines Steuerelements ändern, ohne Code schreiben zu müssen. Benutzerdefinierte Steuerelementvorlagen können Sie auch mit Designern erstellen, z.B. mit dem Microsoft Expression Blend. In diesem Thema wird gezeigt, in Beispielen der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , das Anpassen der Darstellung von einer <xref:System.Windows.Controls.Button> und das vollständige Beispiel am Ende dieses Themas aufgeführt. Weitere Informationen zum Verwenden von Expression Blend finden Sie unter [Formatieren eines Steuerelements, das Vorlagen unterstützt](http://go.microsoft.com/fwlink/?LinkId=161153).  
   
@@ -93,7 +81,7 @@ Ein Kontrollkästchen, das eine benutzerdefinierte Steuerelementvorlage verwende
   
  In diesem Beispiel wird die <xref:System.Windows.Controls.Grid> hat seine <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> eigenschaftsvorlage gebunden <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Da <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> ist Vorlage gebunden werden, können Sie mehrere Schaltflächen, die die gleiche erstellen <xref:System.Windows.Controls.ControlTemplate> und legen Sie die <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> auf jede Schaltfläche unterschiedliche Werte. Wenn <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> wurde nicht von einer Vorlage gebunden an eine Eigenschaft eines Elements in der <xref:System.Windows.Controls.ControlTemplate>wird durch das Festlegen der <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> einer Schaltfläche würde haben keine Auswirkung auf die Darstellung der Schaltfläche.  
   
- Beachten Sie, dass die Namen der beiden Eigenschaften nicht identisch sein müssen. Im vorherigen Beispiel der <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Windows.Controls.Button> Vorlage gebunden ist die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> Eigenschaft der <xref:System.Windows.Controls.ContentPresenter>. Dadurch kann der Inhalt der Schaltfläche horizontal positioniert werden. <xref:System.Windows.Controls.ContentPresenter>verfügt nicht über eine Eigenschaft mit dem Namen `HorizontalContentAlignment`, aber <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> gebunden werden kann, um <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Stellen Sie sicher, dass die Ziel und Quelleigenschaften dem selben Typ entsprechen, wenn Sie eine Eigenschaft an eine Vorlage binden.  
+ Beachten Sie, dass die Namen der beiden Eigenschaften nicht identisch sein müssen. Im vorherigen Beispiel der <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Windows.Controls.Button> Vorlage gebunden ist die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> Eigenschaft der <xref:System.Windows.Controls.ContentPresenter>. Dadurch kann der Inhalt der Schaltfläche horizontal positioniert werden. <xref:System.Windows.Controls.ContentPresenter> verfügt nicht über eine Eigenschaft mit dem Namen `HorizontalContentAlignment`, aber <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> gebunden werden kann, um <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Stellen Sie sicher, dass die Ziel und Quelleigenschaften dem selben Typ entsprechen, wenn Sie eine Eigenschaft an eine Vorlage binden.  
   
  Die <xref:System.Windows.Controls.Control> Klasse definiert verschiedene Eigenschaften, die von der Steuerelementvorlage verwendet werden müssen, damit sich auf das Steuerelement aus, wenn sie festgelegt wurden. Wie die <xref:System.Windows.Controls.ControlTemplate> verwendet die Eigenschaft hängt von der Eigenschaft. Die <xref:System.Windows.Controls.ControlTemplate> muss die Eigenschaft in einem der folgenden Methoden verwenden:  
   
@@ -200,9 +188,9 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
 |Art der Einschränkung|From-Wert|To-Wert|  
 |-------------------------|-------------------|-----------------|  
-|Aus einem angegebenen Zustand in einen anderen angegebenen Zustand|Der Name des ein<xref:System.Windows.VisualState>|Der Name des ein<xref:System.Windows.VisualState>|  
-|Aus einem beliebigen Zustand in einen angegebenen Zustand|Nicht festgelegt|Der Name des ein<xref:System.Windows.VisualState>|  
-|Aus einem angegebenen Zustand in einen beliebigen Zustand|Der Name des ein<xref:System.Windows.VisualState>|Nicht festgelegt|  
+|Aus einem angegebenen Zustand in einen anderen angegebenen Zustand|Der Name des ein <xref:System.Windows.VisualState>|Der Name des ein <xref:System.Windows.VisualState>|  
+|Aus einem beliebigen Zustand in einen angegebenen Zustand|Nicht festgelegt|Der Name des ein <xref:System.Windows.VisualState>|  
+|Aus einem angegebenen Zustand in einen beliebigen Zustand|Der Name des ein <xref:System.Windows.VisualState>|Nicht festgelegt|  
 |Aus einem beliebigen Zustand in einen beliebigen Zustand|Nicht festgelegt|Nicht festgelegt|  
   
  Haben Sie mehrere <xref:System.Windows.VisualTransition> Objekte in eine <xref:System.Windows.VisualStateGroup> mit Verweisen auf den gleichen Status, aber sie in der Reihenfolge, der angibt, die vorherige Tabelle verwendet werden. Im folgenden Beispiel werden zwei <xref:System.Windows.VisualTransition> Objekte. Beim Übergang des Steuerelements von der `Pressed` Zustands, in der `MouseOver` Zustand, der <xref:System.Windows.VisualTransition> , besitzt sowohl <xref:System.Windows.VisualTransition.From%2A> und <xref:System.Windows.VisualTransition.To%2A> Satz verwendet wird. Wenn das Steuerelement von einem anderen Zustand als `Pressed` in den Zustand `MouseOver` wechselt, wird der andere Zustand verwendet.  

@@ -1,28 +1,16 @@
 ---
 title: 'Optimieren der Leistung: Steuerelemente'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e4ceee26263a1d047aeda0881b955070de4326d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-controls"></a>Optimieren der Leistung: Steuerelemente
 In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stehen viele gängige Benutzeroberflächenkomponenten zur Verfügung, die in den meisten Windows Anwendungen verwendet werden. In diesem Thema werden Techniken dargestellt, mit denen Sie die Leistung Ihrer Benutzeroberfläche (UI) optimieren können.  
@@ -35,7 +23,7 @@ In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
   
  Die UI-Virtualisierung ist ein wichtiger Aspekt der Listensteuerelemente. Die UI-Virtualisierung ist nicht mit der Datenvirtualisierung zu verwechseln. Bei der UI-Virtualisierung werden nur sichtbare Elemente im Speicher gespeichert; in einem Datenbindungsszenario wird die gesamte Datenstruktur im Speicher gespeichert. Im Gegensatz dazu werden bei der Datenvisualisierung nur die Datenelemente gespeichert, die auf dem Bildschirm im Speicher sichtbar sind.  
   
- Standardmäßig ist die Virtualisierung der Benutzeroberfläche aktiviert, für die <xref:System.Windows.Controls.ListView> und <xref:System.Windows.Controls.ListBox> steuert, wann die Listenelemente an Daten gebunden sind. <xref:System.Windows.Controls.TreeView>Virtualisierung kann aktiviert werden, durch Festlegen der <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` angefügten Eigenschaft, um `true`. Die Virtualisierung der Benutzeroberfläche für benutzerdefinierte Steuerelemente zu ermöglichen, die abgeleitet werden sollen <xref:System.Windows.Controls.ItemsControl> oder bereits vorhandene Steuerelemente verwendet werden, die <xref:System.Windows.Controls.StackPanel> Klasse, z. B. <xref:System.Windows.Controls.ComboBox>, können Sie festlegen, der <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> zu <xref:System.Windows.Controls.VirtualizingStackPanel> und legen Sie <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> zu `true`. Allerdings kann es passieren, dass Sie die UI-Virtualisierung für diese Steuerelemente deaktivieren, ohne es zu merken. Durch folgende Bedingungen kann die UI-Virtualisierung deaktiviert werden:  
+ Standardmäßig ist die Virtualisierung der Benutzeroberfläche aktiviert, für die <xref:System.Windows.Controls.ListView> und <xref:System.Windows.Controls.ListBox> steuert, wann die Listenelemente an Daten gebunden sind. <xref:System.Windows.Controls.TreeView> Virtualisierung kann aktiviert werden, durch Festlegen der <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` angefügten Eigenschaft, um `true`. Die Virtualisierung der Benutzeroberfläche für benutzerdefinierte Steuerelemente zu ermöglichen, die abgeleitet werden sollen <xref:System.Windows.Controls.ItemsControl> oder bereits vorhandene Steuerelemente verwendet werden, die <xref:System.Windows.Controls.StackPanel> Klasse, z. B. <xref:System.Windows.Controls.ComboBox>, können Sie festlegen, der <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> zu <xref:System.Windows.Controls.VirtualizingStackPanel> und legen Sie <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> zu `true`. Allerdings kann es passieren, dass Sie die UI-Virtualisierung für diese Steuerelemente deaktivieren, ohne es zu merken. Durch folgende Bedingungen kann die UI-Virtualisierung deaktiviert werden:  
   
 -   Elementcontainer hinzukommen direkt an die <xref:System.Windows.Controls.ItemsControl>. Z. B. wenn eine Anwendung explizit hinzufügt, <xref:System.Windows.Controls.ListBoxItem> Datenbankobjekte in einer <xref:System.Windows.Controls.ListBox>, die <xref:System.Windows.Controls.ListBox> ist nicht virtualisiert werden. die <xref:System.Windows.Controls.ListBoxItem> Objekte.  
   
@@ -57,7 +45,7 @@ In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
   
 <a name="Supporting"></a>   
 ## <a name="supporting-bidirectional-virtualization"></a>Unterstützen der bidirektionalen Virtualisierung  
- <xref:System.Windows.Controls.VirtualizingStackPanel>bietet integrierten Unterstützung für die Virtualisierung der Benutzeroberfläche in eine Richtung, horizontal oder vertikal. Wenn Sie für Ihre Steuerelemente die bidirektionale Virtualisierung verwenden möchten, müssen Sie einen benutzerdefinierten Bereich, der erweitert implementieren die <xref:System.Windows.Controls.VirtualizingStackPanel> Klasse. Die <xref:System.Windows.Controls.VirtualizingStackPanel> Klasse macht virtuelle Methoden, wie z. B. <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, und <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Diese virtuellen Methoden ermöglichen es Ihnen, eine Änderung in den sichtbaren Teil einer Liste erkennen und entsprechend behandeln.  
+ <xref:System.Windows.Controls.VirtualizingStackPanel> bietet integrierten Unterstützung für die Virtualisierung der Benutzeroberfläche in eine Richtung, horizontal oder vertikal. Wenn Sie für Ihre Steuerelemente die bidirektionale Virtualisierung verwenden möchten, müssen Sie einen benutzerdefinierten Bereich, der erweitert implementieren die <xref:System.Windows.Controls.VirtualizingStackPanel> Klasse. Die <xref:System.Windows.Controls.VirtualizingStackPanel> Klasse macht virtuelle Methoden, wie z. B. <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, und <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Diese virtuellen Methoden ermöglichen es Ihnen, eine Änderung in den sichtbaren Teil einer Liste erkennen und entsprechend behandeln.  
   
 <a name="Optimizing"></a>   
 ## <a name="optimizing-templates"></a>Optimieren von Vorlagen  
@@ -67,7 +55,7 @@ In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
 ## <a name="deferred-scrolling"></a>Verzögertes Scrollen  
  Wenn ein Benutzer seinen Daumen über die Scrollleiste zieht, wird die Inhaltsansicht standardmäßig fortlaufend aktualisiert.  Wenn das Scrollen in Ihrem Steuerelement verlangsamt ist, ziehen Sie das verzögerte Scrollen in Betracht.  Beim verzögerten Scrollen wird der Inhalt nur aktualisiert, wenn der Benutzer seinen Daumen von der Scrollleiste nimmt.  
   
- Um verzögerte Bildlauf zu implementieren, legen Sie die <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> Eigenschaft `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>ist eine angefügte Eigenschaft, und legen Sie auf <xref:System.Windows.Controls.ScrollViewer> und beliebige Steuerelemente mit einer <xref:System.Windows.Controls.ScrollViewer> in der Steuerelementvorlage.  
+ Um verzögerte Bildlauf zu implementieren, legen Sie die <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> Eigenschaft `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> ist eine angefügte Eigenschaft, und legen Sie auf <xref:System.Windows.Controls.ScrollViewer> und beliebige Steuerelemente mit einer <xref:System.Windows.Controls.ScrollViewer> in der Steuerelementvorlage.  
   
 <a name="Controls"></a>   
 ## <a name="controls-that-implement-performance-features"></a>Steuerelemente, die Leistungsfunktionen implementieren  

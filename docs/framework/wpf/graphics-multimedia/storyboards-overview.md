@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über Storyboards"
-ms.custom: 
+title: Übersicht über Storyboards
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 614b5cc4843dbb886fa9cb02c56b28452e9fae8a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 36922dce795443a4c1136f6442eff1c297f3c641
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="storyboards-overview"></a>Übersicht über Storyboards
 In diesem Thema zeigt, wie <xref:System.Windows.Media.Animation.Storyboard> Objekte zu organisieren und Animationen anzuwenden. Es wird beschrieben, wie interaktiv bearbeiten <xref:System.Windows.Media.Animation.Storyboard> Objekte und die indirekte Verwendung der Syntax von Eigenschaften beschrieben.  
@@ -38,7 +26,7 @@ In diesem Thema zeigt, wie <xref:System.Windows.Media.Animation.Storyboard> Obje
 ## <a name="what-is-a-storyboard"></a>Was ist ein Storyboard?  
  Animationen sind nicht der einzige nützliche Zeitachsentyp. Andere Zeitachsenklassen werden bereitgestellt,um Ihnen beim Organisieren von Sätzen von Zeitachsen zu helfen und Zeitachsen auf Eigenschaften anzuwenden. Containerzeitachsen Ableiten der <xref:System.Windows.Media.Animation.TimelineGroup> -Klasse und beinhalten <xref:System.Windows.Media.Animation.ParallelTimeline> und <xref:System.Windows.Media.Animation.Storyboard>.  
   
- Ein <xref:System.Windows.Media.Animation.Storyboard> ist ein Containerzeitachse, die Zielinformationen für die Zeitachsen bereitstellt, er enthält. Ein Storyboard kann jeden Datentyp enthalten <xref:System.Windows.Media.Animation.Timeline>, einschließlich andere Containerzeitachsen und Animationen. <xref:System.Windows.Media.Animation.Storyboard>Objekte können Sie Zeitachsen kombinieren, die eine Vielzahl von Objekten und Eigenschaften in einer einzelnen Zeitskala Struktur vereinfacht das Verwalten und Steuern von komplexen Zeitsteuerungsverhalten beeinflussen. Nehmen wir beispielsweise an, Sie wünschen eine Schaltfläche, die die folgenden drei Aktionen ausführt.  
+ Ein <xref:System.Windows.Media.Animation.Storyboard> ist ein Containerzeitachse, die Zielinformationen für die Zeitachsen bereitstellt, er enthält. Ein Storyboard kann jeden Datentyp enthalten <xref:System.Windows.Media.Animation.Timeline>, einschließlich andere Containerzeitachsen und Animationen. <xref:System.Windows.Media.Animation.Storyboard> Objekte können Sie Zeitachsen kombinieren, die eine Vielzahl von Objekten und Eigenschaften in einer einzelnen Zeitskala Struktur vereinfacht das Verwalten und Steuern von komplexen Zeitsteuerungsverhalten beeinflussen. Nehmen wir beispielsweise an, Sie wünschen eine Schaltfläche, die die folgenden drei Aktionen ausführt.  
   
 -   Vergrößern und Ändern der Farbe, wenn der Benutzer die Schaltfläche auswählt.  
   
@@ -46,7 +34,7 @@ In diesem Thema zeigt, wie <xref:System.Windows.Media.Animation.Storyboard> Obje
   
 -   Verkleinern und zu 50 % Deckkraft ausgeblendet werden, wenn sie deaktiviert wird.  
   
- In diesem Fall sind mehrere Sätze von Animationen vorhanden, die auf das gleiche Objekt angewendet werden und die Sie abhängig vom Zustand der Schaltfläche zu unterschiedlichen Zeitpunkten wiedergeben möchten. <xref:System.Windows.Media.Animation.Storyboard>Objekte können Sie Animationen organisieren und sie in Gruppen auf ein oder mehrere Objekte anwenden.  
+ In diesem Fall sind mehrere Sätze von Animationen vorhanden, die auf das gleiche Objekt angewendet werden und die Sie abhängig vom Zustand der Schaltfläche zu unterschiedlichen Zeitpunkten wiedergeben möchten. <xref:System.Windows.Media.Animation.Storyboard> Objekte können Sie Animationen organisieren und sie in Gruppen auf ein oder mehrere Objekte anwenden.  
   
 <a name="wherecanyouuseastoryboard"></a>   
 ## <a name="where-can-you-use-a-storyboard"></a>Wo können Sie ein Storyboard verwenden?  
@@ -72,9 +60,9 @@ In diesem Thema zeigt, wie <xref:System.Windows.Media.Animation.Storyboard> Obje
   
 |Storyboard wird gestartet mit...|Pro Instanz|Stil|Steuerelementvorlage|Datenvorlage|Beispiel|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>und ein<xref:System.Windows.EventTrigger>|Ja|Ja|Ja|Ja|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>und einer Eigenschaft<xref:System.Windows.Trigger>|Nein|Ja|Ja|Ja|[Auslösen einer Animation, wenn sich eine Eigenschaft ändert](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>und ein<xref:System.Windows.DataTrigger>|Nein|Ja|Ja|Ja|[Vorgehensweise: Auslösen einer Animation bei Änderung eines Eigenschaftswerts](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.EventTrigger>|Ja|Ja|Ja|Ja|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> und einer Eigenschaft <xref:System.Windows.Trigger>|Nein|Ja|Ja|Ja|[Auslösen einer Animation, wenn sich eine Eigenschaft ändert](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.DataTrigger>|Nein|Ja|Ja|Ja|[Vorgehensweise: Auslösen einer Animation bei Änderung eines Eigenschaftswerts](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>-Methode|Ja|Nein|Nein|Nein|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.Storyboard> zu animierende der <xref:System.Windows.FrameworkElement.Width%2A> des eine <xref:System.Windows.Shapes.Rectangle> Element und die <xref:System.Windows.Media.SolidColorBrush.Color%2A> des eine <xref:System.Windows.Media.SolidColorBrush> verwendet, die gezeichnet <xref:System.Windows.Shapes.Rectangle>.  
@@ -107,7 +95,7 @@ In diesem Thema zeigt, wie <xref:System.Windows.Media.Animation.Storyboard> Obje
   
  [!code-csharp[storyboards_ovw_snip#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
   
- <xref:System.Windows.Freezable>Typen sind die Klassen, die von erben die <xref:System.Windows.Freezable> Klasse. Beispiele für <xref:System.Windows.Freezable> enthalten <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, und <xref:System.Windows.Media.GradientStop>.  
+ <xref:System.Windows.Freezable> Typen sind die Klassen, die von erben die <xref:System.Windows.Freezable> Klasse. Beispiele für <xref:System.Windows.Freezable> enthalten <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, und <xref:System.Windows.Media.GradientStop>.  
   
  So aktivieren Sie die Zielgruppenadressierung von einer <xref:System.Windows.Freezable> eine Animation in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], verwenden Sie die [X: Name-Direktive](../../../../docs/framework/xaml-services/x-name-directive.md) einen Namen zuweisen. Verwenden Sie im Code die <xref:System.Windows.NameScope.RegisterName%2A> Methode, um seinen Namen registrieren für die Sie erstellt haben, mit dem Element ein <xref:System.Windows.NameScope>.  
   
@@ -123,7 +111,7 @@ In diesem Thema zeigt, wie <xref:System.Windows.Media.Animation.Storyboard> Obje
   
  [!code-csharp[storyboards_ovw_snip#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
   
- <xref:System.Windows.Media.Animation.Storyboard>Objekte mithilfe von Namensbereichen zum Auflösen der <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Eigenschaft. Weitere Informationen über WPF-Namescopes finden Sie unter [WPF-XAML-Namescopes](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Wenn die <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> -Eigenschaft weggelassen wird, die die Animation ausgerichtet ist, das Element aus, die er definiert ist, oder, im Falle von Formatvorlagen, das formatierte Element.  
+ <xref:System.Windows.Media.Animation.Storyboard> Objekte mithilfe von Namensbereichen zum Auflösen der <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Eigenschaft. Weitere Informationen über WPF-Namescopes finden Sie unter [WPF-XAML-Namescopes](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Wenn die <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> -Eigenschaft weggelassen wird, die die Animation ausgerichtet ist, das Element aus, die er definiert ist, oder, im Falle von Formatvorlagen, das formatierte Element.  
   
  In einigen Fällen kann kein Name zugewiesen werden, auf eine <xref:System.Windows.Freezable> Objekt. Z. B. wenn ein <xref:System.Windows.Freezable> deklarierte als eine Ressource oder einen Eigenschaftswert in einem Format festgelegt kann kein Name gegeben. Da es keinen Namen hat, kann es zwar kein direktes, aber ein indirektes Ziel sein. In den folgenden Abschnitten wird beschrieben, wie indirekte Ziele verwendet werden.  
   
@@ -157,7 +145,7 @@ In diesem Thema zeigt, wie <xref:System.Windows.Media.Animation.Storyboard> Obje
   
  Der folgende Code zeigt, wie zum Animieren der <xref:System.Windows.Media.SolidColorBrush.Color%2A> von einer <xref:System.Windows.Media.SolidColorBrush> verwendet, um festzulegen der  
   
- <xref:System.Windows.Shapes.Shape.Fill%2A>ein Rechteck-Elements.  
+ <xref:System.Windows.Shapes.Shape.Fill%2A> ein Rechteck-Elements.  
   
  [!code-xaml[storyboards_ovw_snip_XAML#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
   
@@ -234,7 +222,7 @@ In diesem Thema zeigt, wie <xref:System.Windows.Media.Animation.Storyboard> Obje
   
 <a name="controllable_storyboards"></a>   
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>Interaktives Steuern eines Storyboards in XAML  
- So starten Sie ein Storyboard in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Sie verwenden eine <xref:System.Windows.Media.Animation.BeginStoryboard> Aktion auslösen. <xref:System.Windows.Media.Animation.BeginStoryboard>verteilt die Animationen an die Objekte und Eigenschaften, die sie dem animiert werden soll, die und das Storyboard gestartet wird. (Einzelheiten zu diesem Prozess finden Sie unter der [Animationen und zeitlichen Steuerung Systemübersicht](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Wenn verfügt die <xref:System.Windows.Media.Animation.BeginStoryboard> einen Namen durch Angabe seiner <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> -Eigenschaft, ist er ein Storyboard steuerbares. Sie können das Storyboard dann interaktiv steuern, nachdem es gestartet wurde. Die folgende Liste enthält Aktionen des steuerbaren Storyboards, die Sie mit Ereignistriggern zum Steuern eines Storyboards verwenden.  
+ So starten Sie ein Storyboard in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Sie verwenden eine <xref:System.Windows.Media.Animation.BeginStoryboard> Aktion auslösen. <xref:System.Windows.Media.Animation.BeginStoryboard> verteilt die Animationen an die Objekte und Eigenschaften, die sie dem animiert werden soll, die und das Storyboard gestartet wird. (Einzelheiten zu diesem Prozess finden Sie unter der [Animationen und zeitlichen Steuerung Systemübersicht](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Wenn verfügt die <xref:System.Windows.Media.Animation.BeginStoryboard> einen Namen durch Angabe seiner <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> -Eigenschaft, ist er ein Storyboard steuerbares. Sie können das Storyboard dann interaktiv steuern, nachdem es gestartet wurde. Die folgende Liste enthält Aktionen des steuerbaren Storyboards, die Sie mit Ereignistriggern zum Steuern eines Storyboards verwenden.  
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>: Hält das Storyboard.  
   

@@ -1,29 +1,15 @@
 ---
 title: Erweiterte Formatauswahl
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93d7fe0742e16abd92682094ca20d51488516e6e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-format-selection"></a>Erweiterte Formatauswahl
-In diesem Beispiel wird veranschaulicht, wie das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-REST-Programmiermodell zur Unterstützung neuer Formate für ausgehende Antworten erweitert wird. In diesem Beispiel wird zusätzlich eine T4-Vorlage verwendet, damit die Antwort als XHTML-Seite zurückgegeben wird. Auf diese Weise wird veranschaulicht, wie ein Programmiermodell zur Ansicht implementiert werden kann.  
+In diesem Beispiel wird veranschaulicht, wie der Windows Communication Foundation (WCF)-REST-Programmiermodell zur Unterstützung neuer Formate für ausgehende Antworten erweitert wird. In diesem Beispiel wird zusätzlich eine T4-Vorlage verwendet, damit die Antwort als XHTML-Seite zurückgegeben wird. Auf diese Weise wird veranschaulicht, wie ein Programmiermodell zur Ansicht implementiert werden kann.  
   
 ## <a name="sample-details"></a>Beispieldetails  
  Das Beispiel besteht aus einem einfachen Dienst und Clientcode, mit dem Anforderungen an den Dienst gesendet werden.  Der Dienst unterstützt einen einzelnen [WebGet-]Vorgang mit der folgenden Methodensignatur: `Message EchoListWithGet(string list);`  
@@ -55,7 +41,7 @@ In diesem Beispiel wird veranschaulicht, wie das [!INCLUDE[indigo1](../../../../
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AdvancedFormatSelection`  
   

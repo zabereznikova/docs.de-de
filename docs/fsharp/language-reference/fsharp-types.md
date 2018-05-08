@@ -1,17 +1,12 @@
 ---
 title: F#-Typen
 description: Erfahren Sie, bis die Typen, die verwendet werden, in F# erläutert werden und wie f#-Typen mit dem Namen beschrieben werden.
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 42521ed75a76753af81d3bbb9693ec5af29536ad
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bdbb89dc751970ac31fe102df009f0bff6388e52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="f-types"></a>F#-Typen
 

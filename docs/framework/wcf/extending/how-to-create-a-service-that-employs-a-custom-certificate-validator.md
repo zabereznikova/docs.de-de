@@ -1,36 +1,22 @@
 ---
 title: 'Vorgehensweise: Erstellen eines Dienstes, der ein benutzerdefiniertes Zertifikats-Validierungssteuerelement verwendet'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0a48801b1d4674b81a0e4b54a80b69d026ce2af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Vorgehensweise: Erstellen eines Dienstes, der ein benutzerdefiniertes Zertifikats-Validierungssteuerelement verwendet
 In diesem Thema wird gezeigt, wie Sie ein benutzerdefiniertes Zertifikats-Validierungssteuerelement implementieren und wie Sie Anmeldeinformationen für Clients oder Dienste konfigurieren, um die standardmäßige Zertifikatüberprüfungslogik durch das benutzerdefinierte Zertifikats-Validierungssteuerelement zu ersetzen.  
   
- Wenn das X.509-Zertifikat verwendet wird, um einen Client oder Dienst zu authentifizieren, nutzt [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] standardmäßig den Windows-Zertifikatspeicher und die Kryptografie-API, um das Zertifikat zu überprüfen und sicherzustellen, dass es vertrauenswürdig ist. Es kann vorkommen, dass die integrierten Funktionen zur Zertifikatsvalidierung nicht ausreichen und geändert werden müssen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet eine einfache Möglichkeit zum Ändern der Validierungslogik, indem es Benutzern erlaubt wird, ein benutzerdefiniertes Zertifikats-Validierungssteuerelement hinzuzufügen. Wenn Sie ein benutzerdefiniertes Zertifikats-Validierungssteuerelement angeben, verwendet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nicht die integrierte Validierungslogik für Zertifikate, sondern nutzt stattdessen das benutzerdefinierte Validierungssteuerelement.  
+ Wenn das x. 509-Zertifikat verwendet wird, um einen Client oder Dienst zu authentifizieren, verwendet Windows Communication Foundation (WCF) standardmäßig die Windows-Zertifikatspeicher und Crypto-API zum Überprüfen des Zertifikats und stellen Sie sicher, dass es als vertrauenswürdig eingestuft wird. Es kann vorkommen, dass die integrierten Funktionen zur Zertifikatsvalidierung nicht ausreichen und geändert werden müssen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet eine einfache Möglichkeit zum Ändern der Validierungslogik, indem es Benutzern erlaubt wird, ein benutzerdefiniertes Zertifikats-Validierungssteuerelement hinzuzufügen. Wenn Sie ein benutzerdefiniertes Zertifikats-Validierungssteuerelement angeben, verwendet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nicht die integrierte Validierungslogik für Zertifikate, sondern nutzt stattdessen das benutzerdefinierte Validierungssteuerelement.  
   
 ## <a name="procedures"></a>Verfahren  
   

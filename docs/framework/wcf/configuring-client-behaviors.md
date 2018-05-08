@@ -1,30 +1,18 @@
 ---
 title: Konfigurieren von Clientverhalten
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 062e726b6f1d6831303e1cc0ae82a434daab860c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-client-behaviors"></a>Konfigurieren von Clientverhalten
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] konfiguriert Verhaltensweisen auf zwei Arten: entweder durch Verweisen auf Verhaltenskonfigurationen &#8211; definiert im `<behavior>`-Abschnitt der Konfigurationsdatei einer Clientanwendung &#8211; oder programmgesteuert in der aufrufenden Anwendung. In diesem Abschnitt werden beide Ansätze beschrieben.  
+Windows Communication Foundation (WCF) konfiguriert Verhaltensweisen auf zwei Arten: entweder durch Verweisen auf verhaltenskonfigurationen – in definiert sind die `<behavior>` Abschnitt einer Konfigurationsdatei der Clientanwendung – oder programmgesteuert in der aufrufenden die Anwendung. In diesem Abschnitt werden beide Ansätze beschrieben.  
   
  Bei Verwendung einer Konfigurationsdatei ist die Verhaltenskonfiguration eine benannte Auflistung von Konfigurationseinstellungen. Der Name jeder Verhaltenskonfiguration muss eindeutig sein. Diese Zeichenfolge wird im `behaviorConfiguration`-Attribut einer Endpunktkonfiguration zum Verknüpfen des Endpunkts mit dem Verhalten verwendet.  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>Programmgesteuertes Verwenden von Verhaltensweisen  
- Verhaltensweisen können auch programmgesteuert konfiguriert oder eingefügt werden. Suchen Sie hierzu vor dem Öffnen des Clients im `Behaviors`-Clientobjekt oder im Clientkanalfactory-Objekt nach der entsprechenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Eigenschaft.  
+ Können Sie auch konfigurieren oder Verhalten programmgesteuert einfügen, suchen Sie die entsprechende `Behaviors` Eigenschaft auf der Windows Communication Foundation (WCF)-Clientobjekt oder die clientkanalfactory-Objekt vor dem Öffnen des Clients.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird das programmgesteuerte Einfügen eines Verhaltens durch Zugreifen auf die <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>-Eigenschaft auf dem <xref:System.ServiceModel.Description.ServiceEndpoint> veranschaulicht, der vor der Erstellung des Kanalobjekts von der <xref:System.ServiceModel.ChannelFactory.Endpoint%2A>-Eigenschaft zurückgegeben wurde:  
@@ -63,4 +51,4 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [\<Verhalten >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+ [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

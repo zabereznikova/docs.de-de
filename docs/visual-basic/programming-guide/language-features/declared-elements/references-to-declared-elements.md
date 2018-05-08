@@ -1,26 +1,16 @@
 ---
 title: Verweise auf deklarierte Elemente (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 86d25d42688cffbf4076c4fb42eccc3b917d1dc1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 18f9920891e35517efe7adcfd4c03e03ac771478
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Verweise auf deklarierte Elemente (Visual Basic)
 Wenn Ihr Code eine deklarierte Element verweist, wird der Name in den Verweis auf die entsprechende Deklaration mit diesem Namen von Visual Basic-Compiler abgeglichen. Wenn mehr als ein Element mit demselben Namen deklariert wird, können Sie steuern, welche dieser Elemente sind von verwiesen wird *qualifizierenden* seinen Namen.  

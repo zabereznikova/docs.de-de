@@ -1,42 +1,30 @@
 ---
 title: Programmieren der WCF-Sicherheit
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 25
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 3eb645dcc5b8cc1c52818e290699ebadcd0943c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-wcf-security"></a>Programmieren der WCF-Sicherheit
-In diesem Thema werden die grundlegenden Programmierungsaufgaben beschrieben, mit denen eine sichere [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung erstellt werden kann. Dieses Thema behandelt nur Authentifizierung, Vertraulichkeit und Integrität, Oberbegriff *übertragungssicherheit*. Autorisierung (Kontrolle des Zugriffs auf Ressourcen oder Dienste); behandelt in diesem Thema nicht. Weitere Informationen zur Autorisierung finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+Dieses Thema beschreibt die grundlegenden Programmierungsaufgaben zum Erstellen einer sicheren Windows Communication Foundation (WCF)-Anwendung verwendet. Dieses Thema behandelt nur Authentifizierung, Vertraulichkeit und Integrität, Oberbegriff *übertragungssicherheit*. Autorisierung (Kontrolle des Zugriffs auf Ressourcen oder Dienste); behandelt in diesem Thema nicht. Weitere Informationen zur Autorisierung finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 > [!NOTE]
->  Eine wertvolle Einführung in Schlüsselbegriffe der Sicherheit, insbesondere im Hinblick auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], finden Sie unter den Satz von Muster und Praktiken Lernprogramme auf MSDN unter [Szenarien, Muster und Implementation Guidance für Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
+>  Eine wertvolle Einführung in Schlüsselbegriffe der Sicherheit, insbesondere hinsichtlich WCF, finden Sie unter den Satz von Muster und Praktiken Lernprogramme auf MSDN unter [Szenarien, Muster und Implementation Guidance für Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
   
- Die Programmierung der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit besteht aus drei Schritten, mit denen Folgendes festgelegt wird: der Sicherheitsmodus, ein Clientanmeldeinformationstyp und Anmeldeinformationswerte. Sie können diese Schritte durch Code oder die Konfiguration durchführen.  
+ Programmieren der WCF-Sicherheit basiert auf drei Schritten, mit denen Folgendes: der Sicherheitsmodus, einen Clientanmeldeinformationstyp und anmeldeinformationswerte. Sie können diese Schritte durch Code oder die Konfiguration durchführen.  
   
 ## <a name="setting-the-security-mode"></a>Festlegen des Sicherheitsmodus  
- Das folgende Beispiel erläutert die allgemeinen Schritte zum Programmieren mit dem Sicherheitsmodus in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Im nachfolgenden Abschnitt werden die allgemeinen Schritte für die Programmierung mit dem Sicherheitsmodus in WCF:  
   
 1.  Wählen Sie eine der vordefinierten Bindungen, die den Anwendungsanforderungen entsprechen. Eine Übersicht über die bindungsauswahlmöglichkeiten finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md). Standardmäßig ist beinahe jede Bindung sicherheitsaktiviert. Die einzige Ausnahme ist die <xref:System.ServiceModel.BasicHttpBinding> Klasse (mit der Konfiguration kann die [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   

@@ -1,23 +1,12 @@
 ---
 title: Dynamisches Update
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee6b228d729958e9e5f14cadb1e378a2944c4f85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-update"></a>Dynamisches Update
 Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren, beispielsweise um eine Fehlerkorrektur oder neue Anforderungen zu implementieren oder um unerwartete Änderungen zu berücksichtigen. Dieses Thema enthält eine Übersicht über die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführte dynamische Updatefunktionalität.  
@@ -38,7 +27,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
   
  Dieses Thema bietet eine Übersicht über den dynamischen Updateprozess, in dem einer persistenten Instanz eines kompilierten XAML-Workflows eine neue Aktivität hinzugefügt wird.  
   
-###  <a name="Prepare"></a>Vorbereiten der Workflowdefinition für ein dynamisches update  
+###  <a name="Prepare"></a> Vorbereiten der Workflowdefinition für ein dynamisches update  
  Der erste Schritt im dynamischen Updateprozess besteht darin, die gewünschte Workflowdefinition für das Update vorzubereiten. Hierzu wird die <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>-Methode aufgerufen und die zu ändernde Workflowdefinition übergeben. Diese Methode überprüft und durchläuft die Workflowstruktur, um alle Objekte, wie öffentliche Aktivitäten und Variablen, zu identifizieren, die gekennzeichnet werden müssen, damit sie später mit der geänderten Workflowdefinition verglichen werden können. Danach wird die Workflowstruktur geklont und an die ursprüngliche Workflowdefinition angefügt. Wenn die Updatezuordnung erstellt wird, wird die aktualisierte Version der Workflowdefinition mit der ursprünglichen Workflowdefinition verglichen und die Updatezuordnung auf Grundlage der Unterschiede generiert.  
   
  Um einen XAML-Workflow für ein dynamisches Update vorzubereiten, kann er in <xref:System.Activities.ActivityBuilder> geladen werden, und anschließend wird <xref:System.Activities.ActivityBuilder> an <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> übergeben.  
@@ -69,7 +58,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 > [!NOTE]
 >  Zum Herunterladen des Beispielcodes, die dieses Thema erhalten, finden Sie unter [Beispielcode für dynamische Updates](http://go.microsoft.com/fwlink/?LinkId=227905).  
   
-###  <a name="Update"></a>Aktualisieren der Workflowdefinition, um die gewünschten Änderungen widerzuspiegeln  
+###  <a name="Update"></a> Aktualisieren der Workflowdefinition, um die gewünschten Änderungen widerzuspiegeln  
  Sobald die Workflowdefinition für das Update vorbereitet wurde, können die gewünschten Änderungen vorgenommen werden. Sie können Aktivitäten hinzufügen oder entfernen, öffentliche Variablen hinzufügen, verschieben oder löschen, Argumente hinzufügen oder entfernen und Änderungen an der Signatur von Aktivitätsdelegaten vornehmen. Es ist nicht möglich, eine ausgeführte Aktivität zu entfernen oder die Signatur eines ausgeführten Delegaten zu ändern. Diese Änderungen können mithilfe von Code oder in einem neu gehosteten Workflow-Designer vorgenommen werden. Im folgenden Beispiel wird eine benutzerdefinierte `VerifyAppraisal`-Aktivität der Sequence-Aktivität hinzugefügt, die den Text von `MortgageWorkflow` aus dem vorherigen Beispiel darstellt.  
   
 ```csharp  
@@ -87,7 +76,7 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);  
 ```  
   
-###  <a name="Create"></a>Erstellen der updatezuordnung  
+###  <a name="Create"></a> Erstellen der updatezuordnung  
  Sobald die Workflowdefinition, die für das Update vorbereitet wurde, geändert wurde, kann die Updatezuordnung erstellt werden. Um eine dynamische Updatezuordnung zu erstellen, wird die <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>-Methode aufgerufen. Dadurch wird <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> mit den Informationen zurückgegeben, die die Laufzeit benötigt, um eine persistente Workflowinstanz zu ändern, damit sie geladen und mit der neuen Workflowdefinition fortgesetzt werden kann. Im folgenden Beispiel wird eine dynamische Zuordnung für die geänderte `MortgageWorkflow` Definition aus dem vorherigen Beispiel erstellt.  
   
 ```csharp  
@@ -116,7 +105,7 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a>Anwenden der updatezuordnung auf die gewünschten persistenten Workflowinstanzen  
+###  <a name="Apply"></a> Anwenden der updatezuordnung auf die gewünschten persistenten Workflowinstanzen  
  Die Updatezuordnung kann jederzeit angewendet werden, nachdem sie erstellt wurde. Sie kann mithilfe der <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>-Instanz, die von <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> zurückgegeben wurde, direkt ausgeführt werden, oder später mithilfe einer gespeicherten Kopie der Updatezuordnung. Um eine Workflowinstanz zu aktualisieren, laden Sie sie unter Verwendung von <xref:System.Activities.WorkflowApplicationInstance> in <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>. Als Nächstes erstellen Sie <xref:System.Activities.WorkflowApplication> mithilfe der aktualisierten Workflowdefinition und unter Verwendung der gewünschten <xref:System.Activities.WorkflowIdentity>. <xref:System.Activities.WorkflowIdentity> kann sich von der Identität unterscheiden, die zum persistenten Speichern des ursprünglichen Workflows verwendet wurde. Sie wird in der Regel verwendet, um anzugeben, dass die persistente Instanz geändert wurde. Nachdem<xref:System.Activities.WorkflowApplication> erstellt wurde, wird sie mithilfe der Überladung von <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType>, das <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> verwendet, geladen und dann mit einem Aufruf von <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType> entladen. Dadurch wird das dynamische Update angewendet und die aktualisierte Workflowinstanz persistent gespeichert.  
   
 ```csharp  

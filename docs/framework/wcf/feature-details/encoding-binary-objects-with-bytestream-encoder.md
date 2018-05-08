@@ -1,30 +1,18 @@
 ---
-title: "Codieren von binären Objekten mit dem ByteStream-Encoder"
-ms.custom: 
+title: Codieren von binären Objekten mit dem ByteStream-Encoder
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 020ee981-c889-4b12-a3ea-91823ef46444
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2cf68356ffa5fe20de7bd417c77388cd214ca718
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9619fdf6979833c30159e1ea02b3f8d6b98a6629
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>Codieren von binären Objekten mit dem ByteStream-Encoder
-Das Senden und Empfangen von unformatierten Binärdaten mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird mithilfe von <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement> konfiguriert.  
+Senden und Empfangen von unformatierten Binärdaten mit Windows Communication Foundation (WCF) ist mit konfiguriert <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.  
   
 ## <a name="byte-stream-message-encoder-architecture"></a>Bytestream-Nachrichtenencoder-Architektur  
- Der von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendete binäre Nachrichtenencoder weist keine Funktionen zum Verarbeiten, Überprüfen oder Identifizieren der zugrunde liegenden Daten in der Nachricht auf. Das Datenpaket wird in XML codiert, gesendet, empfangen und decodiert. Der Encoder verarbeitet die Daten, nachdem diese an den Transport übergeben wurden und bevor die Nachricht an die Nachrichtenwarteschlange gesendet wird. Der Funktion nach schließt der binäre Encoder die Nachrichtendaten zum Senden in `<binary>`-Elemente ein und entfernt die Elemente, nachdem die Nachricht empfangen wurde.  
+ Der binäre Nachrichtenencoder, die von WCF verwendet weist keine Funktionen zum Verarbeiten, überprüfen oder identifizieren die zugrunde liegenden Binärdaten in der Nachricht. Das Datenpaket wird in XML codiert, gesendet, empfangen und decodiert. Der Encoder verarbeitet die Daten, nachdem diese an den Transport übergeben wurden und bevor die Nachricht an die Nachrichtenwarteschlange gesendet wird. Der Funktion nach schließt der binäre Encoder die Nachrichtendaten zum Senden in `<binary>`-Elemente ein und entfernt die Elemente, nachdem die Nachricht empfangen wurde.  
   
 ## <a name="using-the-byte-stream-message-encoder"></a>Verwenden des Bytestream-Nachrichtenencoders  
  Das folgende Beispiel zeigt einen Dienstvertrag, der den Bytestream-Nachrichtenencoder implementiert.  
@@ -50,8 +38,8 @@ void ProcessMessage(Message message) ;
 ## <a name="scenarios"></a>Szenarien  
  Der Bytestreamencoder ist in folgenden Szenarios nützlich.  
   
--   Übertragen eines JPEG-Bilds zwischen Computern mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. In diesem Szenario wird das Bild über den Transport von einer externen Quelle empfangen. Bei den gesendeten Daten handelt es sich um die unformatierten Bytes, aus denen das Bild besteht. Ein Dienst empfängt die Binärdaten und zeigt das Bild an.  
+-   Übertragen eines JPEG-Bilds zwischen Computern mithilfe von WCF. In diesem Szenario wird das Bild über den Transport von einer externen Quelle empfangen. Bei den gesendeten Daten handelt es sich um die unformatierten Bytes, aus denen das Bild besteht. Ein Dienst empfängt die Binärdaten und zeigt das Bild an.  
   
--   Lesen von Informationen aus einer Meldungswarteschlange und Verarbeiten der Informationen. Die Meldung wird von einem Meldungswarteschlangen-Manager gelesen und zur Verarbeitung an den Meldungswarteschlangenkanal übergeben. Der Meldungswarteschlangenkanal fungiert im [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanalstapel als Warteschlangen-Manager.  
+-   Lesen von Informationen aus einer Meldungswarteschlange und Verarbeiten der Informationen. Die Meldung wird von einem Meldungswarteschlangen-Manager gelesen und zur Verarbeitung an den Meldungswarteschlangenkanal übergeben. Die Warteschlange Nachrichtenkanal fungiert als ein Warteschlangen-Manager in der WCF-Kanalstapel.  
   
  Wenn eine Meldung über einen Meldungswarteschlangenkanal gesendet wird, hat der Absender keine Kontrolle über die vom Warteschlangen-Manger empfangenen Bytes. Wenn im Empfängerprozess keine unformatierten Bytes gelesen werden können, wird die Meldung als falsch formatierte Meldung empfangen und nicht verarbeitet. Es wird davon ausgegangen, dass der Empfängerprozess die empfangenen Bytes in ein akzeptables Format übersetzen kann.

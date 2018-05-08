@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Auslösen von Menüereignissen für Symbolleistenschaltflächen"
-ms.custom: 
+title: 'Gewusst wie: Auslösen von Menüereignissen für Symbolleisten-Schaltflächen'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +11,13 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7744b82e7a1e041b50b9ce1d55ac93f65b1489f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1aa0a31b5825006cc2d6111ab151f05bf240b920
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Gewusst wie: Auslösen von Menüereignissen für Symbolleistenschaltflächen
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Gewusst wie: Auslösen von Menüereignissen für Symbolleisten-Schaltflächen
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   

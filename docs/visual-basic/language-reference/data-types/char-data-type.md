@@ -1,11 +1,6 @@
 ---
 title: Char-Datentyp (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Char
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 16ff547fccbf4481d31ca79537962cc7090fc9b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e672402535215ca30d19cc480e39b42b0364f137
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="char-data-type-visual-basic"></a>Char-Datentyp (Visual Basic)
 Enthält, die vorzeichenlose 16-Bit (2-Byte) Codepunkten im Bereich von 0 bis 65535. Jede *Codepunkt*, oder Zeichencode stellt ein einzelnes Unicode-Zeichen dar.  
@@ -54,13 +46,13 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Negative Zahlen.** `Char`ein Typ ohne Vorzeichen und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Char` für numerische Werte.  
+-   **Negative Zahlen.** `Char` ein Typ ohne Vorzeichen und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Char` für numerische Werte.  
   
 -   **Interop-Überlegungen.** Wenn Sie eine mit Komponenten, die nicht für .NET Framework geschrieben wurden Schnittstelle z. B. Automatisierungs- oder COM-Objekte, denken Sie daran Zeichentypen eine andere Datenbreite (8 Bit) in anderen Umgebungen. Wenn Sie ein 8-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `Byte` anstelle von `Char` im neuen Visual Basic-Code.  
   
 -   **Widening.** Die `Char` -Datentyp zu `String`. Dies bedeutet, Sie können konvertieren `Char` auf `String` und tritt eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `C` in eine einzelne Zeichenfolge Literal wird der `Char` -Datentyp. `Char`verfügt über keine Typkennzeichen aus.  
+-   **Typzeichen.** Durch Anhängen des Literaltypzeichens `C` in eine einzelne Zeichenfolge Literal wird der `Char` -Datentyp. `Char` verfügt über keine Typkennzeichen aus.  
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Char?displayProperty=nameWithType>-Struktur.  
   

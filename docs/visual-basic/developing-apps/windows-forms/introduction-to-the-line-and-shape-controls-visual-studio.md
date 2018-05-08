@@ -1,24 +1,17 @@
 ---
-title: "Einführung in das Line-Steuerelement und das Shape-Steuerelement (Visual Studio)"
+title: Einführung in das Line-Steuerelement und das Shape-Steuerelement (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Line control [Visual Basic], overview
 - Shape control [Visual Basic], overview
 - lines, drawing
 - shapes, drawing
 ms.assetid: 5c4e8b1a-0733-4020-af6c-f582f4026728
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e691d57c6de640c83556937eeddedf89e79b6846
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3ad740f7dd15194830959a5493970b4ba54ce142
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>Einführung in das Line-Steuerelement und das Shape-Steuerelement (Visual Studio)
 Die Visual Basic Power Packs Line- und Shape-Steuerelemente sind eine Gruppe von drei grafische Steuerelemente, die Sie zum Zeichnen von Linien und Formen auf Formularen und Containern zu ermöglichen. Die <xref:Microsoft.VisualBasic.PowerPacks.LineShape> Steuerelement wird verwendet, um die horizontale, vertikale und diagonale Linien zu zeichnen. Die <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Steuerelement wird verwendet, um Kreise und Ovale, zeichnen und die <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> Steuerelement wird verwendet, um Rechtecke und Quadrate gezeichnet werden soll.  

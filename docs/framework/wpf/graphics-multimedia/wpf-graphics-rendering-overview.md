@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über das WPF-Grafikrendering"
-ms.custom: 
+title: Übersicht über das WPF-Grafikrendering
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb9a546ca33b848fbbcbd114951eddc5b000663
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305af1025abb98950d90f46e75a9f261704a8ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Übersicht über das WPF-Grafikrendering
 Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Schicht. Der Schwerpunkt liegt dabei auf die Rolle der <xref:System.Windows.Media.Visual> -Standardklasse zum Rendern von-Unterstützung in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Modell.  
@@ -58,7 +46,7 @@ Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclien
   
 -   Globalisierung  
   
- <xref:System.Windows.Media.Visual>wird als öffentliche abstrakte Klasse verfügbar gemacht werden aus der untergeordneten Klassen abgeleitet werden müssen. Die folgende Abbildung zeigt die Hierarchie der visuellen Objekte, die in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügbar gemacht werden.  
+ <xref:System.Windows.Media.Visual> wird als öffentliche abstrakte Klasse verfügbar gemacht werden aus der untergeordneten Klassen abgeleitet werden müssen. Die folgende Abbildung zeigt die Hierarchie der visuellen Objekte, die in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügbar gemacht werden.  
   
  ![Diagramm von Klassen abgeleitet wurde. das visuelle Objekt](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
 Klassenhierarchie von visuellen Objekten  
@@ -86,7 +74,7 @@ Klassenhierarchie von visuellen Objekten
   
  Beim Erstellen einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] steuern, wie z. B. ein <xref:System.Windows.Controls.Button>, das Steuerelement implizit generiert Renderingdaten für sich selbst zeichnen. Z. B. die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft von der <xref:System.Windows.Controls.Button> bewirkt, dass das Steuerelement eine Renderingdarstellung eines Symbols zu speichern.  
   
- Ein <xref:System.Windows.Media.Visual> beschreibt den Inhalt als eine oder mehrere <xref:System.Windows.Media.Drawing> Objekte innerhalb einer <xref:System.Windows.Media.DrawingGroup>. Ein <xref:System.Windows.Media.DrawingGroup> beschreibt auch die Deckkraftmasken, Transformationen, Bitmapeffekte und andere Vorgänge, die an seinen Inhalt angewendet werden. <xref:System.Windows.Media.DrawingGroup>Vorgänge werden in der folgenden Reihenfolge angewendet, wenn Inhalt gerendert wird: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, und klicken Sie dann <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ Ein <xref:System.Windows.Media.Visual> beschreibt den Inhalt als eine oder mehrere <xref:System.Windows.Media.Drawing> Objekte innerhalb einer <xref:System.Windows.Media.DrawingGroup>. Ein <xref:System.Windows.Media.DrawingGroup> beschreibt auch die Deckkraftmasken, Transformationen, Bitmapeffekte und andere Vorgänge, die an seinen Inhalt angewendet werden. <xref:System.Windows.Media.DrawingGroup> Vorgänge werden in der folgenden Reihenfolge angewendet, wenn Inhalt gerendert wird: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, und klicken Sie dann <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  Die folgende Abbildung zeigt die Reihenfolge, in dem <xref:System.Windows.Media.DrawingGroup> Vorgänge während der Renderingsequenz angewendet werden.  
   

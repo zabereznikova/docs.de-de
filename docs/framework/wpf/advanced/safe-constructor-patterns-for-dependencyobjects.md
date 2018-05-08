@@ -1,28 +1,16 @@
 ---
-title: "Sichere Konstruktormuster für DependencyObjects"
-ms.custom: 
+title: Sichere Konstruktormuster für DependencyObjects
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - constructor patterns for dependency objects [WPF]
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db1b7f47ef135b1a174eecef7e53b41e6996256d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Sichere Konstruktormuster für DependencyObjects
 Im Allgemeinen sollten Klassenkonstruktoren Rückrufe wie virtuelle Methoden oder Delegaten nicht aufrufen, da Konstruktoren als Basisinitialisierung von Konstruktoren für eine abgeleitete Klasse aufgerufen werden können. Eintritt in das Virtuelle kann möglicherweise bei einem unvollständigen Initialisierungszustand eines Objekts erfolgen. Allerdings ruft das Eigenschaftensystem Rückrufe intern als Teil des Abhängigkeitseigenschaftensystem selbst auf und macht diese verfügbar. So einfach einen Vorgang wie das Festlegen der Wert einer Abhängigkeitseigenschaft mit <xref:System.Windows.DependencyObject.SetValue%2A> Aufruf potenziell enthält einen Rückruf an einer beliebigen Stelle in der Ermittlung. Aus diesem Grund sollten Sie beim Einstellen der Eigenschaftswerte innerhalb des Texts eines Konstruktors vorsichtig sein, da dies problematisch werden kann, wenn Ihr Typ als Basisklasse verwendet wird. Es wird ein bestimmtes Muster für die Implementierung <xref:System.Windows.DependencyObject> Konstruktoren, die bestimmte Probleme mit der Abhängigkeit Eigenschaft Status und den inhärenten Rückrufen vermieden werden können, die hier dokumentiert ist.  

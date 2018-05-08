@@ -1,39 +1,27 @@
 ---
-title: "Übersicht überToolBar"
-ms.custom: 
+title: Übersicht überToolBar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f00597d48ff100325c1fb2884f64169164415a50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c66867ce4d86a11424d7a7a859817d603b4227e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-overview"></a>Übersicht überToolBar
-<xref:System.Windows.Controls.ToolBar>-Steuerelemente sind Container für eine Gruppe von Befehlen oder Steuerelemente, die in der Regel in ihrer Funktion miteinander verbunden sind. Ein <xref:System.Windows.Controls.ToolBar> enthält in der Regel Schaltflächen, die Befehle aufrufen.  
+<xref:System.Windows.Controls.ToolBar> -Steuerelemente sind Container für eine Gruppe von Befehlen oder Steuerelemente, die in der Regel in ihrer Funktion miteinander verbunden sind. Ein <xref:System.Windows.Controls.ToolBar> enthält in der Regel Schaltflächen, die Befehle aufrufen.  
   
   
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar-Steuerelement  
- Die <xref:System.Windows.Controls.ToolBar> Steuerelement akzeptiert den Namen der Leiste-ähnliche Anordnung von Schaltflächen oder anderen Steuerelementen in einer einzelnen Zeile oder Spalte. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.ToolBar> -Steuerelemente bieten einen Überlaufmechanismus der alle Elemente platziert, die nicht natürlich in einer größenbeschränkten passen <xref:System.Windows.Controls.ToolBar> in einem speziellen Überlaufbereich. Darüber hinaus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> -Steuerelementen wird in der Regel mit den zugehörigen <xref:System.Windows.Controls.ToolBarTray> Steuerelement, das spezielle Layoutverhalten sowie Unterstützung für das Ändern der Größe und Symbolleisten anordnen von Benutzern initiierte bereitstellt.  
+ Die <xref:System.Windows.Controls.ToolBar> Steuerelement akzeptiert den Namen der Leiste-ähnliche Anordnung von Schaltflächen oder anderen Steuerelementen in einer einzelnen Zeile oder Spalte. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> -Steuerelemente bieten einen Überlaufmechanismus der alle Elemente platziert, die nicht natürlich in einer größenbeschränkten passen <xref:System.Windows.Controls.ToolBar> in einem speziellen Überlaufbereich. Darüber hinaus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> -Steuerelementen wird in der Regel mit den zugehörigen <xref:System.Windows.Controls.ToolBarTray> Steuerelement, das spezielle Layoutverhalten sowie Unterstützung für das Ändern der Größe und Symbolleisten anordnen von Benutzern initiierte bereitstellt.  
   
 <a name="Creating_ToolBars"></a>   
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>Festlegen der Position von ToolBars in einem ToolBarTray  
- Verwenden der <xref:System.Windows.Controls.ToolBar.Band%2A> und <xref:System.Windows.Controls.ToolBar.BandIndex%2A> Eigenschaften zum Positionieren der <xref:System.Windows.Controls.ToolBar> in der <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A>Gibt die Position in dem die <xref:System.Windows.Controls.ToolBar> befindet sich in seinem übergeordneten Element <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A>Gibt an, in welcher Reihenfolge die <xref:System.Windows.Controls.ToolBar> innerhalb des zugehörigen Bands platziert wird. Das folgende Beispiel zeigt wie diese Eigenschaft verwenden, platzieren <xref:System.Windows.Controls.ToolBar> Steuerelemente innerhalb einer <xref:System.Windows.Controls.ToolBarTray>.  
+ Verwenden der <xref:System.Windows.Controls.ToolBar.Band%2A> und <xref:System.Windows.Controls.ToolBar.BandIndex%2A> Eigenschaften zum Positionieren der <xref:System.Windows.Controls.ToolBar> in der <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A> Gibt die Position in dem die <xref:System.Windows.Controls.ToolBar> befindet sich in seinem übergeordneten Element <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A> Gibt an, in welcher Reihenfolge die <xref:System.Windows.Controls.ToolBar> innerhalb des zugehörigen Bands platziert wird. Das folgende Beispiel zeigt wie diese Eigenschaft verwenden, platzieren <xref:System.Windows.Controls.ToolBar> Steuerelemente innerhalb einer <xref:System.Windows.Controls.ToolBarTray>.  
   
  [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   

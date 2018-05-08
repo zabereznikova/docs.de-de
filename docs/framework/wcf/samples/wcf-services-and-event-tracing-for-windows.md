@@ -1,27 +1,15 @@
 ---
-title: "WCF-Dienste und Ereignisablaufverfolgung für Windows"
-ms.custom: 
+title: WCF-Dienste und Ereignisablaufverfolgung für Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF-Dienste und Ereignisablaufverfolgung für Windows
-In diesem Beispiel wird gezeigt, wie die analytische Ablaufverfolgung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet wird, um Ereignisse in der Ereignisablaufverfolgung für Windows (ETW) auszugeben. Die analytische Ablaufverfolgung besteht aus Ereignissen, die an Schlüsselpunkten im [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Stapel ausgegeben werden und die Problembehandlung der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste in der Produktionsumgebung zulassen.  
+Dieses Beispiel veranschaulicht, wie die analytische Ablaufverfolgung in der Windows Communication Foundation (WCF) verwenden, um Ereignisse in Event Tracing for Windows (ETW) auszugeben. Die analytische Ablaufverfolgung besteht aus Ereignissen, die an Schlüsselpunkten im [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Stapel ausgegeben werden und die Problembehandlung der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste in der Produktionsumgebung zulassen.  
   
  Die analytische Ablaufverfolgung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist eine Methode der Ablaufverfolgung, die in einer Produktionsumgebung mit minimalen Auswirkungen auf die Leistung aktiviert werden kann. Diese Ablaufverfolgungen werden als Ereignisse zu einer ETW-Sitzung ausgegeben.  
   
@@ -37,7 +25,7 @@ In diesem Beispiel wird gezeigt, wie die analytische Ablaufverfolgung von [!INCL
   
      Klicken Sie in den Webbrowser auf **Calculator.svc**. Der URI des WSDL-Dokuments für den Dienst wird daraufhin im Browser angezeigt. Kopieren Sie diesen URI.  
   
-     Standardmäßig beginnt der Dienst damit, Anforderungen auf Port 1378 (http://localhost:1378/Calculator .svc) zu überwachen.  
+     Standardmäßig Dienststart lauscht Anforderungen auf Port 1378 (http://localhost:1378/Calculator.svc).  
   
 4.  Führen Sie den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Testclient (WcfTestClient.exe) aus.  
   
@@ -45,7 +33,7 @@ In diesem Beispiel wird gezeigt, wie die analytische Ablaufverfolgung von [!INCL
   
 5.  Innerhalb der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client testen, fügen Sie den Dienst, indem Sie auswählen **Datei**, und klicken Sie dann **Dienst hinzufügen**.  
   
-     Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Die Standardadresse ist http://localhost:1378/Calculator.svc.  
+     Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Die Standardeinstellung ist http://localhost:1378/Calculator.svc.  
   
 6.  Öffnen Sie die Ereignisanzeige.  
   
@@ -94,7 +82,7 @@ In diesem Beispiel wird gezeigt, wie die analytische Ablaufverfolgung von [!INCL
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   

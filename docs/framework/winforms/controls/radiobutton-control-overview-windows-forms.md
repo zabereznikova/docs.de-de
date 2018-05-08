@@ -1,14 +1,6 @@
 ---
-title: "Übersicht über das RadioButton-Steuerelement (Windows Forms)"
-ms.custom: 
+title: Übersicht über das RadioButton-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - RadioButton
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67befd973dec38628f97a0d3153c399d48c18305
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 397808c055fd5ba5e8a73d47dfc7fee6c0cf2975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Übersicht über das RadioButton-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RadioButton> Steuerelemente enthalten eine Reihe von mindestens zwei sich gegenseitig ausschließende Optionen für dem Benutzer. Während Optionsfelder und Kontrollkästchen scheinbar ordnungsgemäß funktionieren auf ähnliche Weise, gibt es einen wichtigen Unterschied: Wenn ein Benutzer ein Optionsfeld auswählt, die anderen Optionsfelder in der gleichen Gruppe kann nicht ausgewählt werden ebenfalls. Im Gegensatz dazu kann eine beliebige Anzahl von Kontrollkästchen ausgewählt werden. Definieren eine Gruppe von Optionsfeldern wird dem Benutzer mitgeteilt, "Dies ist eine Gruppe von Auswahlmöglichkeiten, die in denen Sie nur einen auswählen können."  

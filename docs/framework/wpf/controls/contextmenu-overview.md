@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über ContextMenu"
-ms.custom: 
+title: Übersicht über ContextMenu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0776e7960aa76a76422d01180af5fd6a089bc98b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e862f02e736cb8507dde5036700d751f8af0a226
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contextmenu-overview"></a>Übersicht über ContextMenu
 Die <xref:System.Windows.Controls.ContextMenu> -Klasse stellt das Element, die Funktionalität bereitstellt, mit einem kontextspezifisch <xref:System.Windows.Controls.Menu>. Ein Benutzer in der Regel stellt die <xref:System.Windows.Controls.ContextMenu> in der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] durch Rechtsklick auf die Maustaste los. Dieses Thema enthält die <xref:System.Windows.Controls.ContextMenu> Element sowie Beispiele für die Verwendung in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und Code.  

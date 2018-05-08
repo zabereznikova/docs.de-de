@@ -1,12 +1,6 @@
 ---
-title: "Gültigkeitsbereich in Visual Basic"
-ms.custom: 
+title: Gültigkeitsbereich in Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Gültigkeitsbereich in Visual Basic
 Die *Bereich* eines deklarierten Elements ist die Menge des gesamten Codes, die darauf verweisen kann, ohne seinen Namen qualifizieren oder durch Verfügbarmachen einer [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Ein Element kann in einem der folgenden Ebenen Bereich aufweisen:  
@@ -61,7 +52,7 @@ Die *Bereich* eines deklarierten Elements ist die Menge des gesamten Codes, die 
   
 -   `Do` und `Loop`  
   
--   `For`[`Each`] und`Next`  
+-   `For` [`Each`] und `Next`  
   
 -   `If` und `End If`  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  Namespace-Gültigkeitsbereich enthält geschachtelte Namespaces. Ein Element innerhalb eines Namespaces zur Verfügung steht auch auf in allen Namespaces, die in diesem Namespace geschachtelt.  
   
- Wenn Ihr Projekt keine enthält [Namespace-Anweisung](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, alles im Projekt befindet sich im gleichen Namespace. In diesem Fall kann der Namespace-Gültigkeitsbereich als Projektumfang betrachtet werden. `Public`Elemente in einem Modul, Klasse oder Struktur stehen auch zu einem Projekt, die ihr Projekt verweist.  
+ Wenn Ihr Projekt keine enthält [Namespace-Anweisung](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, alles im Projekt befindet sich im gleichen Namespace. In diesem Fall kann der Namespace-Gültigkeitsbereich als Projektumfang betrachtet werden. `Public` Elemente in einem Modul, Klasse oder Struktur stehen auch zu einem Projekt, die ihr Projekt verweist.  
   
 ## <a name="choice-of-scope"></a>Auswahl eines Bereichs  
  Wenn Sie eine Variable deklarieren, sollten Sie die folgenden Punkte bedenken bei der Auswahl des Bereichs.  

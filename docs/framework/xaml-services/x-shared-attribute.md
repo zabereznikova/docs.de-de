@@ -1,28 +1,16 @@
 ---
 title: x:Shared-Attribut
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], x:Shared attribute
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-caps.latest.revision: "16"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9cc5e2bff9cc2591c7a12630da5422dbf73713a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bee37735382249d2919ef870ca495e6096532352
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xshared-attribute"></a>x:Shared-Attribut
 Bei Festlegung auf `false`, WPF Abrufen von Ressourcen Verhalten ändert, so, dass Anforderungen für die attributierte Ressource einer neuen Instanz für jede Anforderung erstellen und für alle Anforderungen dieselbe Instanz gemeinsam.  
@@ -36,7 +24,7 @@ Bei Festlegung auf `false`, WPF Abrufen von Ressourcen Verhalten ändert, so, da
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- `x:Shared`XAML-Namespace der XAML-Sprache zugeordnet ist, und wird von .NET Framework-XAML-Dienste und die XAML-Readern als ein gültiger XAML-Sprachelement erkannt. Allerdings die genannten Funktionen des `x:Shared` sind nur relevant, für die WPF-Anwendungen und der WPF XAML-Parser. In WPF `x:Shared` ist nur als Attribut nützlich, wenn auf ein Objekt angewendet wird, die eine WPF residiert <xref:System.Windows.ResourceDictionary>. Andere Verwendungen lösen Sie Ausnahmen oder ein anderer Fehler nicht, aber sie haben keine Auswirkungen.  
+ `x:Shared` XAML-Namespace der XAML-Sprache zugeordnet ist, und wird von .NET Framework-XAML-Dienste und die XAML-Readern als ein gültiger XAML-Sprachelement erkannt. Allerdings die genannten Funktionen des `x:Shared` sind nur relevant, für die WPF-Anwendungen und der WPF XAML-Parser. In WPF `x:Shared` ist nur als Attribut nützlich, wenn auf ein Objekt angewendet wird, die eine WPF residiert <xref:System.Windows.ResourceDictionary>. Andere Verwendungen lösen Sie Ausnahmen oder ein anderer Fehler nicht, aber sie haben keine Auswirkungen.  
   
  Die Bedeutung der `x:Shared` in der XAML-Sprachspezifikation nicht angegeben ist. Andere XAML-Implementierungen, z. B. diejenigen, die auf .NET Framework XAML Services aufbauen bieten nicht notwendigerweise Ressourcenfreigabe Unterstützung. Solche Implementierungen von XAML-ähnliches Verhalten in unterstützende Framework, die auch verwendet bereitstellen konnte `x:Shared` Werte.  
   
@@ -48,7 +36,7 @@ Bei Festlegung auf `false`, WPF Abrufen von Ressourcen Verhalten ändert, so, da
   
  Explizites angeben `x:Shared="true"` selten geschieht, weil dies bereits die Standardeinstellung ist. Es ist kein direct Code für das Gegenstück zum `x:Shared` in WPF-Objektmodell; er kann nur in eine XAML-Verwendung angegeben werden und muss verarbeitet werden, mit der WPF-Standardverhalten oder in einen intermediate XAML-Knotenstreams im Ladepfad Wenn mit .NET Framework-XAML-Se verarbeitet Rvices und dessen Verwendung von XAML-Reader.  
   
- Ein Szenario für `x:Shared="false"` ist, wenn Sie definieren eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> abgeleiteten Klasse als eine Ressource, und klicken Sie dann Sie die Elementressource in einem Inhaltsmodell einführen. `x:Shared="false"`ermöglicht eine Elementressource mehrmals in der gleichen Auflistung eingeführt werden (z. B. eine <xref:System.Windows.Controls.UIElementCollection>). Ohne `x:Shared="false"` Dies ist ungültig, da die Auflistung erzwingt die Eindeutigkeit des Inhalts. Allerdings die `x:Shared="false"` Verhalten erstellt eine andere identische Instanz der Ressource anstatt der gleichen Instanz.  
+ Ein Szenario für `x:Shared="false"` ist, wenn Sie definieren eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> abgeleiteten Klasse als eine Ressource, und klicken Sie dann Sie die Elementressource in einem Inhaltsmodell einführen. `x:Shared="false"` ermöglicht eine Elementressource mehrmals in der gleichen Auflistung eingeführt werden (z. B. eine <xref:System.Windows.Controls.UIElementCollection>). Ohne `x:Shared="false"` Dies ist ungültig, da die Auflistung erzwingt die Eindeutigkeit des Inhalts. Allerdings die `x:Shared="false"` Verhalten erstellt eine andere identische Instanz der Ressource anstatt der gleichen Instanz.  
   
  Ein weiteres Szenario für `x:Shared="false"` ist bei Verwendung einer <xref:System.Windows.Freezable> Ressource für die Animationswerte jedoch für die Ressource auf der Basis eines je Animation ändern möchten.  
   

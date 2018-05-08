@@ -1,28 +1,14 @@
 ---
 title: 'Gewusst wie: Behandeln des ContextMenuOpening -Ereignisses'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5eec8646a48f94fb9ffdcad14849416732618a06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab4c4867981cd318738b7404d76f2f5932bb9059
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Gewusst wie: Behandeln des ContextMenuOpening -Ereignisses
 Die <xref:System.Windows.FrameworkElement.ContextMenuOpening> -Ereignis behandelt werden, in einer Anwendung anpassen entweder ein vorhandenes Kontextmenü vor um anzuzeigen, oder klicken Sie im Menü zu unterdrücken, die andernfalls durch die Einstellung angezeigt werden soll die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft `true` in den Ereignisdaten. Die häufiger Grund für die Einstellung <xref:System.Windows.RoutedEventArgs.Handled%2A> auf `true` im Ereignis Daten sind, klicken Sie im Menü vollständig durch ein neues ersetzt <xref:System.Windows.Controls.ContextMenu> -Objekt, der in einigen Fällen erfordert der Vorgang abgebrochen wird, und starten eine neue geöffnet. Wenn Sie Handler schreiben der <xref:System.Windows.FrameworkElement.ContextMenuOpening> Ereignis, Sie sollten Probleme mit den Zeitabläufen zwischen beachtet werden ein <xref:System.Windows.Controls.ContextMenu> -Steuerelement und dem Dienst, der für das Öffnen und die Position des Kontextmenüs für Steuerelemente im Allgemeinen zuständig ist. Dieses Thema veranschaulicht einige der Methoden Code für verschiedene Szenarien des Öffnens Kontextmenü und veranschaulicht einen Fall, in dem das Problem der zeitlichen Steuerung eine sprachbasierte stammen.  
