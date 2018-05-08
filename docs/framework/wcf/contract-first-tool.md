@@ -1,24 +1,12 @@
 ---
 title: Vertrag zuerst-Tool
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5079a4b45c7adf0cfd4d9ae1069379184422dc98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contract-first-tool"></a>Vertrag zuerst-Tool
 Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] können Datenvertragsklassen mithilfe des Vertrag zuerst-Tools automatisch aus vorhandenen Diensten erstellt werden. Zum Verwenden des Vertrag zuerst-Tools muss die XSD (XML Schema Definition)-Datei lokal heruntergeladen werden. Das Tool kann keine Remotedatenverträge per HTTP importieren.  
@@ -72,11 +60,11 @@ Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!I
 ## <a name="configuring-contract-first-options"></a>Konfigurieren von Vertrag zuerst-Optionen  
  Vertrag zuerst-Optionen können im Eigenschaftenmenü eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Projekts konfiguriert werden. Um die Vertrag zuerst-Entwicklung aktivieren möchten, wählen Sie die **XSD als Typdefinitionssprache aktivieren** Kontrollkästchen in der WCF-Seite des Fensters Eigenschaften Projekt.  
   
- ![WCF-Projektoptionen mit Vertrag &#45; erste](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
+ ![WCF-Projektoptionen mit Vertrag&#45;erste](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   
  Um erweiterte Eigenschaften zu konfigurieren, klicken Sie auf die Schaltfläche Erweitert.  
   
- ![Erweiterte Vertrag &#45; Erste Eigenschaften](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
+ ![Erweiterte Vertrag&#45;Eigenschaften ersten](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
   
  Die folgenden erweiterten Einstellungen können für die Codegenerierung aus Verträgen konfiguriert werden. Die Einstellungen können nur für alle Dateien im Projekt konfiguriert werden. Das Konfigurieren der Einstellungen für einzelne Dateien ist derzeit nicht möglich.  
   

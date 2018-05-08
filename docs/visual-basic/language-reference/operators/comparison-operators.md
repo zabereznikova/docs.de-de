@@ -1,11 +1,6 @@
 ---
 title: Vergleichsoperatoren (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,29 +30,26 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>Vergleichsoperatoren (Visual Basic)
 Es folgen die Vergleichsoperatoren in Visual Basic definiert.  
   
- `<`Operator  
+ `<` Operator  
   
- `<=`Operator  
+ `<=` Operator  
   
- `>`Operator  
+ `>` Operator  
   
- `>=`Operator  
+ `>=` Operator  
   
- `=`Operator  
+ `=` Operator  
   
- `<>`Operator  
+ `<>` Operator  
   
  [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)  
   
@@ -97,14 +89,14 @@ result = string Like pattern
 ## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle enthält eine Liste von Vergleichsoperatoren für den relationalen und die Bedingungen, die bestimmen, ob `result` ist `True` oder `False`.  
   
-|Operator|`True`if|`False`if|  
+|Operator|`True` if|`False` if|  
 |--------------|---------------|----------------|  
-|`<`(Kleiner als)|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`(Kleiner als oder gleich)|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`(Größer als)|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`(Größer als oder gleich)|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`(Gleich)|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`(Ungleich)|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` (Kleiner als)|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` (Kleiner als oder gleich)|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` (Größer als)|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` (Größer als oder gleich)|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` (Gleich)|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` (Ungleich)|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  Die [=-Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) wird auch als Zuweisungsoperator verwendet.  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>Vergleichen von Zeichenfolgen  
  Wenn Sie Zeichenfolgen vergleichen, die Zeichenfolgenausdrücke werden ausgewertet basierend auf deren Reihenfolge alphabetisch sortiert, abhängig von der `Option Compare` Einstellung.  
   
- `Option Compare Binary`Führt einen Zeichenfolgenvergleich auf einer Sortierreihenfolge, die von den internen binären Darstellungen der Zeichen abgeleitet. Die Sortierreihenfolge wird durch die Codepage bestimmt. Das folgende Beispiel zeigt eine typische binäre Sortierreihenfolge an.  
+ `Option Compare Binary` Führt einen Zeichenfolgenvergleich auf einer Sortierreihenfolge, die von den internen binären Darstellungen der Zeichen abgeleitet. Die Sortierreihenfolge wird durch die Codepage bestimmt. Das folgende Beispiel zeigt eine typische binäre Sortierreihenfolge an.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`Führt einen Zeichenfolgenvergleich durch Ihre Anwendung Gebietsschema bestimmt Groß-/Kleinschreibung, Text Sortierreihenfolge. Bei Festlegung `Option Compare Text` und die Zeichen im vorangehenden Beispiel sortieren, gilt die folgende Reihenfolge:  
+ `Option Compare Text` Führt einen Zeichenfolgenvergleich durch Ihre Anwendung Gebietsschema bestimmt Groß-/Kleinschreibung, Text Sortierreihenfolge. Bei Festlegung `Option Compare Text` und die Zeichen im vorangehenden Beispiel sortieren, gilt die folgende Reihenfolge:  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,10 +130,10 @@ result = string Like pattern
   
 |Wenn die Operanden sind|Vergleich|  
 |---------------------|-------------------|  
-|Beide`String`|Vergleich basierend auf Eigenschaften zum Sortieren von Zeichenfolgen zu sortieren.|  
+|Beide `String`|Vergleich basierend auf Eigenschaften zum Sortieren von Zeichenfolgen zu sortieren.|  
 |Beide numerisch|Objekte in konvertiert `Double`, numerischen Vergleich.|  
-|Eine numerische und eine`String`|Die `String` konvertiert eine `Double` und numerischen Vergleich wird ausgeführt. Wenn die `String` kann nicht konvertiert werden, um `Double`, wird eine <xref:System.InvalidCastException> ausgelöst wird.|  
-|Eine oder beide sind Referenztypen außer`String`|Es wird eine <xref:System.InvalidCastException> ausgelöst.|  
+|Eine numerische und eine `String`|Die `String` konvertiert eine `Double` und numerischen Vergleich wird ausgeführt. Wenn die `String` kann nicht konvertiert werden, um `Double`, wird eine <xref:System.InvalidCastException> ausgelöst wird.|  
+|Eine oder beide sind Referenztypen außer `String`|Es wird eine <xref:System.InvalidCastException> ausgelöst.|  
   
  Behandeln von numerische vergleichen `Nothing` als 0. Behandeln von Zeichenfolgenvergleichen `Nothing` als `""` (eine leere Zeichenfolge).  
   

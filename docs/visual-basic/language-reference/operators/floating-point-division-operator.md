@@ -1,12 +1,6 @@
 ---
 title: /-Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb./
 helpviewer_keywords:
@@ -22,14 +16,11 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f221e863725b9aeb0b3fa3219b3a881541e2be0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17eb3eddfae3cf7c818514a2fee20f646876a6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>/-Operator (Visual Basic)
 Dividiert zwei Zahlen und gibt ein Gleitkommaergebnis zurück.  
@@ -75,8 +66,8 @@ expression1 / expression2
 |Datentypen der Operanden|Verhalten Wenn `expression2` 0 (null)|  
 |------------------------|---------------------------------------|  
 |Gleitkomma (`Single` oder `Double`)|Gibt unendlich (<xref:System.Double.PositiveInfinity> oder <xref:System.Double.NegativeInfinity>), oder <xref:System.Double.NaN> (keine Zahl) Wenn `expression1` ist auch 0 (null)|  
-|`Decimal`|Löst aus<xref:System.DivideByZeroException>|  
-|Ganzzahltypen (mit oder ohne Vorzeichen)|Wechsel zurück in den ganzzahligen Typ löst versucht <xref:System.OverflowException> da Ganzzahltypen nicht akzeptieren können <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, oder<xref:System.Double.NaN>|  
+|`Decimal`|Löst aus <xref:System.DivideByZeroException>|  
+|Ganzzahltypen (mit oder ohne Vorzeichen)|Wechsel zurück in den ganzzahligen Typ löst versucht <xref:System.OverflowException> da Ganzzahltypen nicht akzeptieren können <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, oder <xref:System.Double.NaN>|  
   
 > [!NOTE]
 >  Die `/` Operator kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der betreffenden Klasse oder Struktur hat. Wenn im Code dieser Operator auf eine solche Klasse oder Struktur verwendet, achten Sie darauf, dass Sie dessen neu definierten Verhalten verstehen. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

@@ -2,10 +2,6 @@
 title: Put-Funktion (Referenz zur nicht verwalteten API)
 description: Die Put-Funktion weist einen neuen Wert an eine benannte Eigenschaft an.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09d3edc74b34688d5cc36e688f634850cfb60910
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="put-function"></a>Put-Funktion
 Legt eine benannte Eigenschaft auf einen neuen Wert fest.
@@ -93,7 +86,7 @@ Ein Benutzer kann keine Eigenschaften mit Namen erstellen, die mit einem Unterst
 
 Wenn die Eigenschaft festgelegt wird, indem Sie die `Put` Funktion, die in der übergeordneten Klasse vorhanden ist, wird der Standardwert der Eigenschaft wird geändert, es sei denn, der Eigenschaftstyp nicht den Typ der übergeordneten Klasse übereinstimmt. Wenn die Eigenschaft ist nicht vorhanden, und es kein Typenkonflikt ist, ist die Eigenschaft Ceated.
 
-Verwenden der `vtType` Parameters nur beim Erstellen von neuer Eigenschaften in einer CIM-Klassendefinition und `pVal` ist `null` oder verweist auf eine `VARIANT` vom Typ `VT_NULL`. In diesem Fall die `vType` Parameter gibt den CIM-Typ der Eigenschaft. In allen anderen Fällen `vtType` muss 0 sein. `vtType`muss auch 0 sein, wenn das zugrunde liegende Objekt eine Instanz ist (auch wenn `Val` ist `null`), da der Typ der Eigenschaft unveränderlich ist und kann nicht geändert werden.   
+Verwenden der `vtType` Parameters nur beim Erstellen von neuer Eigenschaften in einer CIM-Klassendefinition und `pVal` ist `null` oder verweist auf eine `VARIANT` vom Typ `VT_NULL`. In diesem Fall die `vType` Parameter gibt den CIM-Typ der Eigenschaft. In allen anderen Fällen `vtType` muss 0 sein. `vtType` muss auch 0 sein, wenn das zugrunde liegende Objekt eine Instanz ist (auch wenn `Val` ist `null`), da der Typ der Eigenschaft unveränderlich ist und kann nicht geändert werden.   
 
 ## <a name="example"></a>Beispiel
 
@@ -104,7 +97,7 @@ Ein Beispiel finden Sie die [IWbemClassObject::Put](https://msdn.microsoft.com/l
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

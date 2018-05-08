@@ -1,25 +1,16 @@
 ---
 title: Const-Anweisung (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const-Anweisung (Visual Basic)
 Deklariert und definiert eine oder mehrere Konstanten.  
@@ -85,7 +76,7 @@ Const constantlist
   
 -   **Andere Typen.** Sie können für unterschiedliche Konstanten unterschiedliche Datentypen angeben, indem Sie eine separate `As` -Klausel für jede Variable, die Sie deklarieren. Allerdings kann nicht mehrere Konstanten desselben Typs werden mit einer gemeinsamen deklariert `As` Klausel.  
   
--   **Die Initialisierung.** Sie müssen den Wert jeder Konstante in initialisieren `constantlist`. Verwenden Sie `initializer` , geben Sie einen Ausdruck, der Konstante zugewiesen werden soll. Der Ausdruck kann eine beliebige Kombination von Literalen, anderen, die bereits definierte, Konstanten und Enumerationsmembern, die bereits definiert sind. Sie können arithmetische und logische Operatoren verwenden, solche Elemente kombinieren.  
+-   **die Initialisierung.** Sie müssen den Wert jeder Konstante in initialisieren `constantlist`. Verwenden Sie `initializer` , geben Sie einen Ausdruck, der Konstante zugewiesen werden soll. Der Ausdruck kann eine beliebige Kombination von Literalen, anderen, die bereits definierte, Konstanten und Enumerationsmembern, die bereits definiert sind. Sie können arithmetische und logische Operatoren verwenden, solche Elemente kombinieren.  
   
      Sie können keine Variablen oder Funktionen in `initializer`. Sie können jedoch Konvertierungsschlüsselwörter wie z. B. `CByte` und `CShort`. Sie können auch `AscW` Aufruf mit einer Konstanten `String` oder `Char` Argument, da, die zur Kompilierzeit ausgewertet werden kann.  
   

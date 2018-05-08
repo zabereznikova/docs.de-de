@@ -1,13 +1,6 @@
 ---
-title: "Eigenschaftenänderungsereignisse"
-ms.custom: 
+title: Eigenschaftenänderungsereignisse
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], change events
 - property value changes [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac2a44eb92e384851bbe6ac860fd9b46d3377a06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-change-events"></a>Eigenschaftenänderungsereignisse
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definiert mehrere Ereignisse, die ausgelöst werden als Antwort auf eine Änderung des Werts einer Eigenschaft. Häufig ist die Eigenschaft eine Abhängigkeitseigenschaft. Das Ereignis selbst ist manchmal ein Routingereignis und manchmal ein [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Standardereignis. Die Definition des Ereignisses variiert je nach Szenario, da einige Eigenschaftenänderungen besser durch eine Elementstruktur weitergeleitet werden, während andere Eigenschaftenänderungen in der Regel nur für das Objekt von Bedeutung sind, bei dem sich die Eigenschaft geändert hat.  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  Wenn die Eigenschaft eine benutzerdefinierte Abhängigkeitseigenschaft ist oder wenn Sie mit einer abgeleiteten Klasse arbeiten, in dem Sie den Code definiert haben, ein viel bessere Mechanismus zum Nachverfolgen von eigenschaftenänderungen, die besteht in integrierten der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem: die System Rückrufen <xref:System.Windows.CoerceValueCallback> und <xref:System.Windows.PropertyChangedCallback>. Weitere Informationen über die Verwendung des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaftensystems für die Überprüfung und Koersion, finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) und [Benutzerdefinierten Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>Abhängigkeitseigenschaftsänderungs-Ereignisse  
- Eine andere Typen, die eine Eigenschaft geänderten Ereignisses Szenarios sind <xref:System.Windows.DependencyPropertyChangedEventArgs> und <xref:System.Windows.DependencyPropertyChangedEventHandler>. Ereignisse für diese Eigenschaftenänderungen werden nicht weitergeleitet; Sie sind [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Standardereignisse. <xref:System.Windows.DependencyPropertyChangedEventArgs>ist ein ungewöhnlicher für Ereignisdaten, da es nicht von abgeleitet ist <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> ist eine Struktur, die nicht in einer Klasse.  
+ Eine andere Typen, die eine Eigenschaft geänderten Ereignisses Szenarios sind <xref:System.Windows.DependencyPropertyChangedEventArgs> und <xref:System.Windows.DependencyPropertyChangedEventHandler>. Ereignisse für diese Eigenschaftenänderungen werden nicht weitergeleitet; Sie sind [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Standardereignisse. <xref:System.Windows.DependencyPropertyChangedEventArgs> ist ein ungewöhnlicher für Ereignisdaten, da es nicht von abgeleitet ist <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> ist eine Struktur, die nicht in einer Klasse.  
   
  Ereignisse, mit denen <xref:System.Windows.DependencyPropertyChangedEventArgs> und <xref:System.Windows.DependencyPropertyChangedEventHandler> sind etwas häufiger anzutreffen als `RoutedPropertyChanged` Ereignisse. Ist ein Beispiel für ein Ereignis, das diese Typen verwendet <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  
   

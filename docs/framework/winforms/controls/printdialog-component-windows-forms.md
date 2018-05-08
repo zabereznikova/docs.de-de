@@ -1,13 +1,6 @@
 ---
-title: "PrintDialog-Komponente (Windows Forms)"
-ms.custom: 
+title: PrintDialog-Komponente (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - print options [Windows Forms], PrintDialog component (using designer)
 - PrintDialog component [Windows Forms]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - printing [Windows Forms], PrintDialog component (using designer)
 - printing [Windows Forms], print options
 ms.assetid: 09b54db1-d7c7-42fa-b98a-840e6b80a9ad
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f62b4538b5f91c2f57cab52fa7563680016903a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70ad34c9b899fe2a24c82067610b018ca5282060
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printdialog-component-windows-forms"></a>PrintDialog-Komponente (Windows Forms)
 Die `PrintDialog`-Komponente in Windows Forms ist ein vorkonfiguriertes Dialogfeld zum Auswählen eines Druckers, zum Auswählen der zu druckenden Seiten sowie zum Bestimmen weiterer druckbezogener Einstellungen in Windows-basierten Anwendungen. Verwenden Sie sie als einfache Lösung für die Auswahl von Druckern und druckbezogenen Einstellungen, anstatt ein eigenes Dialogfeld zu konfigurieren. Sie können Benutzern ermöglichen, diverse Teile ihrer Dokumente zu drucken: Alles drucken, Drucken eines bestimmten Seitenbereichs oder Drucken einer Auswahl. Durch die Verwendung von Windows-Standarddialogfeldern erstellen Sie Anwendungen, deren Basisfunktionen Benutzern sofort vertraut sind.  
@@ -36,7 +24,7 @@ Die `PrintDialog`-Komponente in Windows Forms ist ein vorkonfiguriertes Dialogfe
  [Gewusst wie: Anzeigen der PrintDialog-Komponente](../../../../docs/framework/winforms/controls/how-to-display-the-printdialog-component.md)  
  Erläutert, wie das Dialogfeld angezeigt wird, und wo Eigenschaften gespeichert werden.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.PrintDialog>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   

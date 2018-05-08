@@ -1,29 +1,17 @@
 ---
-title: "Metadaten für Abhängigkeitseigenschaften"
-ms.custom: 
+title: Metadaten für Abhängigkeitseigenschaften
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - APIs [WPF], metadata
 - dependency properties [WPF], metadata
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b5c4ee554e8a0148c7d8d8044735f66778e7117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0aa1d2962b0bccea7a0901877b29550319aaa3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-metadata"></a>Metadaten für Abhängigkeitseigenschaften
 Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystem enthält ein Metadatenberichtssystem, das die Berichtsmöglichkeiten mithilfe von Reflektion oder allgemeinen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Merkmalen weit übertrifft. Metadaten für eine Abhängigkeitseigenschaft können auch eindeutig durch die Klasse zugewiesen werden, die eine Abhängigkeitseigenschaft definiert, sie können geändert werden, wenn die Abhängigkeitseigenschaft zu einer anderen Klasse hinzugefügt wird, und sie können gezielt von allen abgeleiteten Klassen überschrieben werden, die die Abhängigkeitseigenschaft von der definierenden Basisklasse erben.  
@@ -48,7 +36,7 @@ Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 ## <a name="metadata-apis"></a>Metadaten-APIs  
  Der Typ, der Großteil der Metadateninformationen, die von dem Eigenschaftensystem verwendeten Berichte ist die <xref:System.Windows.PropertyMetadata> Klasse. Metadateninstanzen werden optional angegeben, wenn Abhängigkeitseigenschaften im Eigenschaftensystem registriert werden, und können erneut für zusätzliche Typen angegeben werden, die sich selbst entweder als Besitzer hinzufügen oder Metadaten überschreiben, die sie von der Basisklasse der Definition der Abhängigkeitseigenschaften erben. (Für Fälle, die eine Registrierung, in denen keine Metadaten, die den Standardwert gibt <xref:System.Windows.PropertyMetadata> mit Standardwerten für diese Klasse erstellt wird.) Die registrierte Metadaten wird als zurückgegeben <xref:System.Windows.PropertyMetadata> beim Aufrufen der verschiedenen <xref:System.Windows.DependencyProperty.GetMetadata%2A> Überladungen, die Metadaten aus einer Abhängigkeitseigenschaft zu erhalten, auf eine <xref:System.Windows.DependencyObject> Instanz.  
   
- Die <xref:System.Windows.PropertyMetadata> wird dann von abgeleitete Klasse architektonische Abteilungen, z. B. die WPF-Frameworkebene Klassen genauere Metadaten bereit. <xref:System.Windows.UIPropertyMetadata>Fügt der Animation reporting, und <xref:System.Windows.FrameworkPropertyMetadata> stellt die WPF-Frameworkebene-Eigenschaften, die im vorherigen Abschnitt erwähnt. Wenn Abhängigkeitseigenschaften registriert sind, können sie mit diesen registriert werden <xref:System.Windows.PropertyMetadata> abgeleitete Klassen. Wenn die Metadaten untersucht werden, der Base <xref:System.Windows.PropertyMetadata> Typ potenziell umgewandelt werden kann, die abgeleiteten Klassen, damit Sie prüfen können, die spezifischen Eigenschaften.  
+ Die <xref:System.Windows.PropertyMetadata> wird dann von abgeleitete Klasse architektonische Abteilungen, z. B. die WPF-Frameworkebene Klassen genauere Metadaten bereit. <xref:System.Windows.UIPropertyMetadata> Fügt der Animation reporting, und <xref:System.Windows.FrameworkPropertyMetadata> stellt die WPF-Frameworkebene-Eigenschaften, die im vorherigen Abschnitt erwähnt. Wenn Abhängigkeitseigenschaften registriert sind, können sie mit diesen registriert werden <xref:System.Windows.PropertyMetadata> abgeleitete Klassen. Wenn die Metadaten untersucht werden, der Base <xref:System.Windows.PropertyMetadata> Typ potenziell umgewandelt werden kann, die abgeleiteten Klassen, damit Sie prüfen können, die spezifischen Eigenschaften.  
   
 > [!NOTE]
 >  Die Merkmale der Eigenschaft, die angegeben werden können <xref:System.Windows.FrameworkPropertyMetadata> werden manchmal in dieser Dokumentation als "Flags" bezeichnet. Beim Erstellen neuer Metadateninstanzen für die Verwendung in Abhängigkeit Registrierungen Eigenschaft oder Metadaten überschreibt, geben Sie diese Werte mit dem Flag Enumeration <xref:System.Windows.FrameworkPropertyMetadataOptions> und geben Sie dann möglicherweise verketteten Werte der Enumeration, der die <xref:System.Windows.FrameworkPropertyMetadata> Konstruktor. Sobald erstellt, diese Option Merkmale werden jedoch bereitgestellt innerhalb einer <xref:System.Windows.FrameworkPropertyMetadata> als eine Reihe von booleschen Eigenschaften anstelle der erstellen-Enumerationswert. Mit den booleschen Eigenschaften können Sie jede Bedingung überprüfen, anstatt eine Maske auf einen Flag-Enumerationswert anzuwenden, um die interessanten Informationen abzurufen. Der Konstruktor verwendet den verketteten <xref:System.Windows.FrameworkPropertyMetadataOptions> um die Länge der Signatur des Konstruktors angebracht ist, halten, während die tatsächliche konstruierte Metadaten der diskreten Eigenschaften zur Vereinfachung der Abfrage eine intuitivere Metadaten verfügbar macht.  
@@ -75,13 +63,13 @@ Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
  Wenn Sie Metadaten überschreiben, werden die verschiedenen Metadateneigenschaften entweder zusammengeführt oder ersetzt.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>zusammengeführt wird. Wenn Sie ein neues hinzufügen <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, dieser Rückruf in den Metadaten gespeichert ist. Wenn Sie keinen angeben einer <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> in Override "," den Wert des <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> wird höher gestuft, als Verweis aus den nächsten Vorgänger, der diesen in den Metadaten angegeben.  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> zusammengeführt wird. Wenn Sie ein neues hinzufügen <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, dieser Rückruf in den Metadaten gespeichert ist. Wenn Sie keinen angeben einer <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> in Override "," den Wert des <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> wird höher gestuft, als Verweis aus den nächsten Vorgänger, der diesen in den Metadaten angegeben.  
   
 -   Das Verhalten des tatsächlichen Eigenschaftstyp für <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> ist, dass die Implementierungen für alle Metadaten in der Hierarchie werden beibehalten und eine Tabelle hinzugefügt, mit der Reihenfolge der Ausführung vom Eigenschaftensystem, dass die am stärksten abgeleitete Klasse Rückrufe zuerst aufgerufen werden.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>wird ersetzt. Wenn Sie keinen angeben einer <xref:System.Windows.PropertyMetadata.DefaultValue%2A> in Override "," den Wert des <xref:System.Windows.PropertyMetadata.DefaultValue%2A> stammen aus den nächsten Vorgänger, der diesen in den Metadaten angegeben.  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> wird ersetzt. Wenn Sie keinen angeben einer <xref:System.Windows.PropertyMetadata.DefaultValue%2A> in Override "," den Wert des <xref:System.Windows.PropertyMetadata.DefaultValue%2A> stammen aus den nächsten Vorgänger, der diesen in den Metadaten angegeben.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>Implementierungen werden ersetzt. Wenn Sie ein neues hinzufügen <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, dieser Rückruf in den Metadaten gespeichert ist. Wenn Sie keinen angeben einer <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> in Override "," den Wert des <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> wird höher gestuft, als Verweis aus den nächsten Vorgänger, der diesen in den Metadaten angegeben.  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> Implementierungen werden ersetzt. Wenn Sie ein neues hinzufügen <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, dieser Rückruf in den Metadaten gespeichert ist. Wenn Sie keinen angeben einer <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> in Override "," den Wert des <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> wird höher gestuft, als Verweis aus den nächsten Vorgänger, der diesen in den Metadaten angegeben.  
   
 -   Das Systemverhalten für die Eigenschaft ist, dass nur die <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> in den unmittelbaren Metadaten aufgerufen wird. Keine Verweise auf andere <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> Implementierungen in der Hierarchie werden beibehalten.  
   

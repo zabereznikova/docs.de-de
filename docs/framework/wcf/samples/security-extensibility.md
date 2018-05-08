@@ -1,27 +1,17 @@
 ---
 title: Sicherheitserweiterbarkeit
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: eb9038ee6e28cdb5fbf213d56542419e7cdf36c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f68d842b305c37a9e23bf23429c0bfb66a8eae4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-extensibility"></a>Sicherheitserweiterbarkeit
-Dieser Abschnitt enthält Beispiele, in denen die benutzerdefinierte Sicherheit in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] demonstriert wird.  
+Dieser Abschnitt enthält Beispiele für die benutzerdefinierte Sicherheit in Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Dauerhaft ausgestellter Tokenanbieter](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
@@ -49,7 +39,7 @@ Dieser Abschnitt enthält Beispiele, in denen die benutzerdefinierte Sicherheit 
  Veranschaulicht, wie eine benutzerdefinierte Anspruchsautorisierungsrichtlinie und ein zugeordneter benutzerdefinierter Dienstautorisierungs-Manager implementiert werden.  
   
  [Benutzerdefiniertes Token](../../../../docs/framework/wcf/samples/custom-token.md)  
- Veranschaulicht die Aufnahme einer benutzerdefinierten Tokenimplementierung in eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung.  
+ Veranschaulicht, wie einer benutzerdefinierten tokenimplementierung in eine Windows Communication Foundation (WCF)-Anwendung.  
   
  [Clientvalidierung](../../../../docs/framework/wcf/samples/client-validation.md)  
  Veranschaulicht das Schreiben eines Clientendpunktverhaltens, das den Dienstendpunkt überprüft, um sicherzustellen, dass der Dienstendpunkt sicher verwendet werden kann.

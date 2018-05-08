@@ -1,34 +1,20 @@
 ---
 title: Clientkonfiguration
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-configuration"></a>Clientkonfiguration
-Mit der Clientkonfiguration von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie die Adressen, Bindungen, Verhaltensweisen sowie Verträge angeben, die von Clients zum Herstellen einer Verbindung mit Dienstendpunkten verwendet werden. Die [ \<Client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) Element verfügt über eine [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element, dessen Attribute verwendet werden, um den Endpunkt ABC konfigurieren. Diese Attribute werden im Abschnitt "Konfigurieren von Endpunkten" dieses Themas erläutert.  
+Sie können Windows Communication Foundation (WCF)-Client-Konfiguration verwenden, an die Adresse, Bindung, Verhalten und Vertrag, der "ABC" Eigenschaften des Clientendpunkts, die von Clients verwendet, um den Dienstendpunkten herstellen. Die [ \<Client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) Element verfügt über eine [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element, dessen Attribute verwendet werden, um den Endpunkt ABC konfigurieren. Diese Attribute werden im Abschnitt "Konfigurieren von Endpunkten" dieses Themas erläutert.  
   
  Die [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) -Element enthält auch eine [ \<Metadaten >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) Element, das verwendet wird, um Einstellungen anzugeben, für das Importieren und Exportieren von Metadaten, eine [ \<Header >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) Element, das eine Auflistung von benutzerdefinierten Adressheadern enthält und eine [ \<Identität >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) Element, das die Authentifizierung eines Endpunkts durch andere Endpunkte ermöglicht. mit denen er Meldungen austauscht. Die [ \<Header >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) und [ \<Identität >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) Elemente sind Teil der <xref:System.ServiceModel.EndpointAddress> und werden im erläutert die [Adressen](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) Thema. Der Unterabschnitt "Konfigurieren von Metadaten" in diesem Thema enthält auch Hyperlinks zu Themen, in denen die Verwendung von Metadatenerweiterungen erläutert wird.  
   
 ## <a name="configuring-endpoints"></a>Konfigurieren von Endpunkten  
- Die Clientkonfiguration soll dem Client gestatten, geben Sie eine oder mehrere Endpunkte mit dem vorhandenen Namen, Adresse, und Vertrag verfügt jeder Verweis auf die [ \<Bindungen >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) und [ \< Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Elemente in der Clientkonfiguration zum Konfigurieren des jeweiligen Endpunkts verwendet werden. Die Clientkonfigurationsdatei sollte "App.config" benannt werden, da dieser Name von der Laufzeit von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erwartet wird. Das folgende Beispiel zeigt eine Clientkonfigurationsdatei.  
+ Die Clientkonfiguration soll dem Client gestatten, geben Sie eine oder mehrere Endpunkte mit dem vorhandenen Namen, Adresse, und Vertrag verfügt jeder Verweis auf die [ \<Bindungen >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) und [ \< Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Elemente in der Clientkonfiguration zum Konfigurieren des jeweiligen Endpunkts verwendet werden. Die Clientkonfigurationsdatei sollte "App.config" benannt werden, da dies der Name ist, die die WCF-Laufzeit erwartet. Das folgende Beispiel zeigt eine Clientkonfigurationsdatei.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

@@ -1,26 +1,12 @@
 ---
 title: Veröffentlichung von Informationen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1f6c33787f920fbe7e795e27ff10d7a0c83db21e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="information-disclosure"></a>Veröffentlichung von Informationen
 Die Veröffentlichung von Informationen ermöglicht Angreifern, an wertvolle Informationen über ein System zu gelangen. Daher sollten Sie immer genau überlegen, welche Informationen offengelegt werden und ob sie von anderen Personen böswillig missbraucht werden könnten. Im Folgenden finden Sie eine Übersicht über mögliche Angriffe auf veröffentlichte Informationen mit den entsprechenden Entschärfungen.  
@@ -47,7 +33,7 @@ Die Veröffentlichung von Informationen ermöglicht Angreifern, an wertvolle Inf
   
 -   Dienstverweise werden als vertrauenswürdig angesehen. Falls Sie Dienstverweisinstanzen übertragen, sollten Sie daher sicherstellen, dass diese nicht manipuliert wurden.  
   
--   Bei einigen Anwendungen haben Benutzer die Möglichkeit, die Vertrauenswürdigkeit interaktiv basierend auf Daten im Dienstverweis und anhand von vertrauenswürdigen Daten, die durch den Remotehost belegt wurden, herzustellen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt Erweiterungspunkte für diese Funktion bereit, diese müssen jedoch vom Benutzer implementiert werden.  
+-   Bei einigen Anwendungen haben Benutzer die Möglichkeit, die Vertrauenswürdigkeit interaktiv basierend auf Daten im Dienstverweis und anhand von vertrauenswürdigen Daten, die durch den Remotehost belegt wurden, herzustellen. WCF bietet Erweiterungspunkte für diese Funktion, aber der Benutzer muss implementiert werden.  
   
 ## <a name="ntlm"></a>NTLM  
  In der Windows-Domänenumgebung wird zur Authentifizierung und Autorisierung von Benutzern über die Windows-Authentifizierung standardmäßig das Kerberos-Protokoll verwendet. Falls das Kerberos-Protokoll nicht verwendet werden kann, wird für diesen Zweck NT LAN Manager (NTLM) herangezogen. Sie können dieses Verhalten deaktivieren, indem Sie die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>-Eigenschaft auf `false` festlegen. Beachten Sie unter anderem folgende Punkte, wenn Sie NTLM zulassen:  

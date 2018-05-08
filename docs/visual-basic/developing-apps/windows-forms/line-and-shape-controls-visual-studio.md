@@ -1,24 +1,17 @@
 ---
 title: Das Line-Steuerelement und das Shape-Steuerelement (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - RectangleShape control [Visual Basic], topic list
 - OvalShape control [Visual Basic], topic list
 - Shape control [Visual Basic]
 - Line control [Visual Basic], topic list
 ms.assetid: 29ee3a5f-920f-4677-85bc-bd7425ab57e8
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 000040d31888d42ad9ebf88d882fc75e781a8593
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 6baffe826fa20e17a763b3a5e6fa8476dcb6c220
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Das Line-Steuerelement und das Shape-Steuerelement (Visual Studio)
 Die Linien- und Formsteuerelemente von Visual Basic Power Packs sind grafische Steuerelemente, mit deren Hilfe Sie horizontale, vertikale und diagonale Linien, Rechtecke, Quadrate, Ovale, und Kreise sowie Rechtecke und Quadrate mit abgerundeten Ecken auf einem Formular oder Container zeichnen können.  
@@ -38,5 +31,5 @@ Die Linien- und Formsteuerelemente von Visual Basic Power Packs sind grafische S
  [Gewusst wie: Aktivieren des Wechselns zwischen Formen mit der Tabulatortaste](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)  
  Zeigt, wie Benutzern die Möglichkeit zur Navigation zwischen Formen mithilfe der Tastatur gegeben werden kann.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:Microsoft.VisualBasic.PowerPacks>

@@ -1,31 +1,19 @@
 ---
 title: Koordinatensysteme und Transformationen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transformations
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d44805021f0070109ce67f28126d59d36e4175f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b91cbc21abe8cc92a9718a71712c52219ad0174
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coordinate-systems-and-transformations"></a>Koordinatensysteme und Transformationen
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bietet eine globale Transformation und eine Seitentransformation, damit Sie transformieren können (Drehen, zu skalieren, übersetzen usw.) die Elemente, die Sie zeichnen. Die beiden Transformationen können in einer Vielzahl von Koordinatensysteme arbeiten.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet eine globale Transformation und eine Seitentransformation, damit Sie transformieren können (Drehen, zu skalieren, übersetzen usw.) die Elemente, die Sie zeichnen. Die beiden Transformationen können in einer Vielzahl von Koordinatensysteme arbeiten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Typen von Koordinatensystemen](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
  [Globale und lokale Transformationen](../../../../docs/framework/winforms/advanced/global-and-local-transformations.md)  
  Erläutert, globale und lokale Transformationen.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Drawing.Drawing2D.Matrix>  
  Kapselt eine affine 3 x 3-Matrix ein, die eine geometrische Transformation darstellt.  
   

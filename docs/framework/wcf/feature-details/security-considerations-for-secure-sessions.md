@@ -1,32 +1,20 @@
 ---
 title: Sicherheitsüberlegungen für Sicherheitssitzungen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d1e5082ace452eabddd91a45a20c6d6363e118b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f4ee56204d6980f412b9781868714dedb3c2675c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Sicherheitsüberlegungen für Sicherheitssitzungen
 Berücksichtigen Sie die folgenden Punkte, die sich bei der Implementierung von Sicherheitssitzungen auf die Sicherheit auswirken. Weitere Informationen zu Sicherheitsaspekten finden Sie unter [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) und [Best Practices für Sicherheit](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
   
 ## <a name="secure-sessions-and-metadata"></a>Sicherheitssitzungen und Metadaten  
- Wenn eine sichere Sitzung eingerichtet und die <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A>-Eigenschaft auf `false` festgelegt ist, sendet [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] eine `mssp:MustNotSendCancel`-Assertion als Bestandteil der Metadaten im WSDL-Dokument (Web Services Description Language) für den Dienstendpunkt. Die `mssp:MustNotSendCancel`-Assertion informiert Clients, dass der Dienst nicht auf Anforderungen zum Abbrechen der sicheren Sitzung reagiert. Wenn die <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A>-Eigenschaft auf `true` gesetzt ist, gibt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] keine `mssp:MustNotSendCancel`-Assertion im WSDL-Dokument aus. Clients sollen eine Abbruchanforderung an den Dienst senden, wenn sie die sichere Sitzung nicht mehr benötigen. Wenn ein Client mit generiert wird die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), der Clientcode reagiert entsprechend, um das Vorhandensein oder fehlen der `mssp:MustNotSendCancel` Assertion.  
+ Eine sichere Sitzung eingerichtet ist und die <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> -Eigenschaftensatz auf `false`, sendet Windows Communication Foundation (WCF) ein `mssp:MustNotSendCancel` -Assertion als Teil der Metadaten in das Dokument Web Services Description Language (WSDL) für die Der Dienstendpunkt. Die `mssp:MustNotSendCancel`-Assertion informiert Clients, dass der Dienst nicht auf Anforderungen zum Abbrechen der sicheren Sitzung reagiert. Wenn die <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> -Eigenschaftensatz auf `true`, dann WCF nicht ausgeben werden ein `mssp:MustNotSendCancel` Assertion im WSDL-Dokument. Clients sollen eine Abbruchanforderung an den Dienst senden, wenn sie die sichere Sitzung nicht mehr benötigen. Wenn ein Client mit generiert wird die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), der Clientcode reagiert entsprechend, um das Vorhandensein oder fehlen der `mssp:MustNotSendCancel` Assertion.  
   
 ## <a name="secure-conversations-and-custom-tokens"></a>Sichere Unterhaltungen und benutzerdefinierte Token  
  Beim Mischen benutzerdefinierter Token und abgeleiteter Schlüssel ergeben sich aufgrund der Art der Definition in der WS-SecureConversation-Spezifikation einige Probleme. Laut Spezifikation `wsse:SecurityTokenReference` ist ein optionales Element, die das abgeleitete Token verweist: "`/wsc:DerivedKeyToken/wsse:SecurityTokenReference` dieses optionale Element wird verwendet, um Sicherheitskontexttoken, Sicherheitstoken oder freigegebenen Schlüssel/geheime Schlüssel für die Ableitung anzugeben. Wird das Element nicht angegeben, wird davon ausgegangen, dass der Empfänger den freigegebenen Schlüssel dem Nachrichtenkontext entnehmen kann. Wenn der Kontext nicht bestimmt werden kann, klicken Sie dann einen Fehler wie z. B. `wsc:UnknownDerivationSource` ausgelöst werden soll. "  

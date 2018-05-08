@@ -1,11 +1,6 @@
 ---
 title: While...End While-Anweisung (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.While
 - vb.While...EndWhile
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f46a6ec65faef4448bdd25e30a6cc0c605cd0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While-Anweisung (Visual Basic)
 Führt eine Reihe von Anweisungen, solange eine angegebene Bedingung ist `True`.  
@@ -42,7 +34,7 @@ End While
   
 |Begriff|Definition|  
 |---|---|  
-|`condition`|Erforderlich. `Boolean`Ausdruck. Wenn `condition` ist `Nothing`, Visual Basic behandelt sie als `False`.|  
+|`condition`|Erforderlich. `Boolean` Ausdruck. Wenn `condition` ist `Nothing`, Visual Basic behandelt sie als `False`.|  
 |`statements`|Dies ist optional. Eine oder mehrere Anweisungen nach `While`, die jedes Mal ausgeführt `condition` ist `True`.|  
 |`Continue While`|Dies ist optional. Überträgt die Steuerung an die nächste Iteration der der `While` Block.|  
 |`Exit While`|Dies ist optional. Überträgt die Steuerung von der `While` Block.|  
@@ -63,7 +55,7 @@ End While
  Sie können schachteln `While` Schleifen, indem Sie eine Schleife in einem anderen platzieren. Sie können auch verschiedene Arten von Steuerungsstrukturen in anderen schachteln. Weitere Informationen finden Sie unter [geschachtelten Steuerungsstrukturen](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 ## <a name="exit-while"></a>Beim Beenden  
- Die [zu beenden, während](../../../visual-basic/language-reference/statements/exit-statement.md) Anweisung bieten eine weitere Möglichkeit zum Beenden einer `While` Schleife. `Exit While`überträgt die Steuerung sofort an die Anweisung mit der `End While` Anweisung.  
+ Die [zu beenden, während](../../../visual-basic/language-reference/statements/exit-statement.md) Anweisung bieten eine weitere Möglichkeit zum Beenden einer `While` Schleife. `Exit While` überträgt die Steuerung sofort an die Anweisung mit der `End While` Anweisung.  
   
  In der Regel `Exit While` nach eine Bedingung ausgewertet wird (z. B. in einer `If...Then...Else` Struktur). Möglicherweise möchten eine Schleife zu beenden, wenn Sie eine Bedingung, in dem unnötige oder überhaupt nicht erkennen zu fortfahren, Iteration, z. B. einen fehlerhaften Wert oder eine Anforderung zum Beenden können. Können Sie `Exit While` beim Testen für eine Bedingung, die möglicherweise eine *Endlosschleife*, also in einer Schleife, auf denen eine extrem große oder sogar unendliche Anzahl von Zeiten ausgeführt werden konnte. Anschließend können Sie `Exit While` um die Schleife zu verlassen.  
   

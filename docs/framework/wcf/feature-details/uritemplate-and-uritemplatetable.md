@@ -1,29 +1,15 @@
 ---
 title: UriTemplate und UriTemplateTable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate und UriTemplateTable
-Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wurden zwei neue Klassen hinzugefügt, die Entwicklern das Steuern der URIs erleichtern. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage des URI-basierten Dispatchmoduls in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Diese Klassen können auch alleine verwendet werden und geben so den Entwicklern die Möglichkeit, Vorlagen und den URI-Abbildungsmechanismus zu nutzen, ohne einen  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst implementieren zu müssen.  
+Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. Windows Communication Foundation (WCF) hinzugefügt, zwei neue Klassen zum Steuern der URIs Entwicklern. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage für die URI-basierten dispatchmoduls in WCF. Diese Klassen können auch auf ihre eigenen, sodass Entwickler profitieren von Vorlagen und der URI-abbildungsmechanismus verwendet werden, ohne Sie zu implementieren eines WCF-Diensts.  
   
 ## <a name="templates"></a>Vorlagen  
  Eine Vorlage ist eine Möglichkeit, einen Satz relativer URIs zu beschreiben. Der Satz von URI-Vorlagen in der folgenden Tabelle zeigt, wie ein System, das verschiedene Arten von Wetterdaten abruft, definiert werden könnte.  
@@ -35,7 +21,7 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
 |Ortsvorhersage|Wetter/{Bundesland}/{Stadt}|  
 |Aktivitätsvorhersage|Wetter/{Bundesland}/{Stadt}/{Aktivität}|  
   
- In dieser Tabelle wird ein Satz strukturell ähnlicher URIs beschrieben. Jeder Eintrag ist eine URI-Vorlage. Die Segmente in geschweiften Klammern beschreiben Variablen. Die Segmente, die nicht in geschweifte Klammern eingefasst sind, beschreiben Literalzeichenfolgen. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Vorlagenklassen ermöglichen dem Entwickler, einen eingehenden URI (z. B. "/Wetter/BW/Mannheim/wechselhaft") anzunehmen und ihn mit einer Vorlage abzugleichen, die ihn beschreibt, "/Wetter/{Bundesland}/{Stadt}/{Aktivität}".  
+ In dieser Tabelle wird ein Satz strukturell ähnlicher URIs beschrieben. Jeder Eintrag ist eine URI-Vorlage. Die Segmente in geschweiften Klammern beschreiben Variablen. Die Segmente, die nicht in geschweifte Klammern eingefasst sind, beschreiben Literalzeichenfolgen. Die WCF-Vorlagenklassen ermöglichen dem Entwickler einen eingehenden URI, z. B. "/ Wetter/BW/Mannheim/wechselhaft", und es mit einer Vorlage, die ihn beschreibt abzugleichen "/ Wetter / {Bundesland} / {Stadt} / {Aktivität}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> ist eine Klasse, die eine URI-Vorlage kapselt. Der Konstruktor nimmt einen Zeichenfolgenparameter, der die Vorlage definiert. Diese Zeichenfolge enthält die Vorlage in dem im nächsten Abschnitt beschriebenen Format. Die <xref:System.UriTemplate>-Klasse bietet Methoden, die die Zuordnung eines eingehenden URI zu einer Vorlage, die Generierung eines URI aus einer Vorlage, das Abrufen einer Sammlung von Variablennamen, die in der Vorlage verwendet werden, die Bestimmung, ob zwei Vorlagen gleichwertig sind, und die Ausgabe der Zeichenfolge der Vorlage ermöglichen.  

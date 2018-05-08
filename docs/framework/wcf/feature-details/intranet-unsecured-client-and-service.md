@@ -1,30 +1,20 @@
 ---
 title: 'Intranet: Ungesicherter Client und Dienst'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-caps.latest.revision: "20"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0cfd98d401921c47bd85f8d4089e3efb437ca6b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Intranet: Ungesicherter Client und Dienst
-In der folgenden Darstellung sehen Sie einen einfachen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst, mit dem einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung Informationen in einem sicheren privaten Netzwerk zur Verfügung gestellt werden. Sicherheit ist nicht erforderlich, da die Daten eher unwichtig sind, das Netzwerk als grundsätzlich sicher eingestuft wird oder Sicherheit durch eine Ebene unterhalb der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur bereitgestellt wird.  
+Die folgende Abbildung zeigt einen einfachen Windows Communication Foundation (WCF)-Dienst entwickelt, um Informationen zu einem sicheren privaten Netzwerk zu einer WCF-Anwendung bereitzustellen. Sicherheit ist nicht erforderlich, da die Daten unwichtig, das Netzwerk als grundsätzlich sicher eingestuft wird, oder die Sicherheit wird durch eine Ebene unterhalb der WCF-Infrastruktur bereitgestellt.  
   
  ![Intranet: ungesicherter Client und Dienstszenario](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
@@ -33,7 +23,7 @@ In der folgenden Darstellung sehen Sie einen einfachen [!INCLUDE[indigo1](../../
 |Sicherheitsmodus|Keine|  
 |Transport|TCP|  
 |Bindung|<xref:System.ServiceModel.NetTcpBinding>|  
-|Interoperabilität|Nur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|Interoperabilität|Nur WCF|  
 |Authentifizierung|Keine|  
 |Integrität|Keine|  
 |Vertraulichkeit|Keine|  
@@ -92,7 +82,7 @@ In der folgenden Darstellung sehen Sie einen einfachen [!INCLUDE[indigo1](../../
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Code  
- Im folgenden Code wird ein Basis-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client gezeigt, der mit dem TCP-Protokoll auf einen ungesicherten Endpunkt zugreift.  
+ Der folgende Code zeigt einen grundlegenden WCF-Client, der auf einen ungesicherten Endpunkt mit dem TCP-Protokoll zugreift.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  

@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Rendern in Pro-Frame-Intervallen mit CompositionTarget'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c080c6deca63eacdf0e1123f4ca8bbb495ed9ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Gewusst wie: Rendern in Pro-Frame-Intervallen mit CompositionTarget
 Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animationsmodul stellt zahlreiche Funktionen zum Erstellen framebasierter Animationen bereit. In manchen Anwendungsszenarios müssen Sie das Rendering jedoch pro Frame detaillierter steuern können. Die <xref:System.Windows.Media.CompositionTarget> -Objekt stellt die Fähigkeit zum Erstellen von benutzerdefinierter Animationen basierend auf einer pro-Frame-Rückruf bereit.  
   
- <xref:System.Windows.Media.CompositionTarget>ist eine statische Klasse, die die Anzeigeoberfläche darstellt, auf der Ihre Anwendung gezeichnet wird. Die <xref:System.Windows.Media.CompositionTarget.Rendering> Ereignis wird jedes Mal die Anwendung Szene gezeichnet wird. Die Renderingbildfrequenz gibt an, wie häufig die Szene pro Sekunde gezeichnet wird.  
+ <xref:System.Windows.Media.CompositionTarget> ist eine statische Klasse, die die Anzeigeoberfläche darstellt, auf der Ihre Anwendung gezeichnet wird. Die <xref:System.Windows.Media.CompositionTarget.Rendering> Ereignis wird jedes Mal die Anwendung Szene gezeichnet wird. Die Renderingbildfrequenz gibt an, wie häufig die Szene pro Sekunde gezeichnet wird.  
   
 > [!NOTE]
 >  Für einen vollständigen Code Beispiel mit <xref:System.Windows.Media.CompositionTarget>, finden Sie unter [anhand des Beispiels CompositionTarget](http://go.microsoft.com/fwlink/?LinkID=160045).  

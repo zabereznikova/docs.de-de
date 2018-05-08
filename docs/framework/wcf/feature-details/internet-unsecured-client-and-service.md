@@ -1,30 +1,20 @@
 ---
 title: 'Internet: Ungesicherter Client und Dienst'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b202c4d67b48a9559afe035dc6b7bc95f6cc7779
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93bf7a038a46ff6c03f89e576f3e4150cd069dba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-unsecured-client-and-service"></a>Internet: Ungesicherter Client und Dienst
-Die folgende Illustration zeigt ein Beispiel eines öffentlichen, ungesicherten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clients und eines Diensts an.  
+Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherten Windows Communication Foundation (WCF)-Client und Dienst.  
   
  ![Unsichere Internet Internetclient und Dienstszenario](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "PublicUnsecured")  
   
@@ -32,7 +22,7 @@ Die folgende Illustration zeigt ein Beispiel eines öffentlichen, ungesicherten 
 |--------------------|-----------------|  
 |Sicherheitsmodus|Keine|  
 |Transport|HTTP|  
-|Bindung|<xref:System.ServiceModel.BasicHttpBinding>im Code oder die [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element in der Konfiguration.|  
+|Bindung|<xref:System.ServiceModel.BasicHttpBinding> im Code oder die [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element in der Konfiguration.|  
 |Interoperabilität|Mit vorhandenen Webdienstclients und Diensten|  
 |Authentifizierung|Keine|  
 |Integrität|Keine|  
@@ -89,7 +79,7 @@ Die folgende Illustration zeigt ein Beispiel eines öffentlichen, ungesicherten 
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Code  
- Im folgenden Code wird ein grundlegender [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client gezeigt, der auf einen ungesicherten Endpunkt zugreift.  
+ Der folgende Code zeigt einen grundlegenden WCF-Client, der auf einen ungesicherten Endpunkt zugreift.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  

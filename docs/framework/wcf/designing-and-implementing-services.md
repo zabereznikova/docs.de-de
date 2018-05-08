@@ -1,33 +1,19 @@
 ---
 title: Entwerfen und Implementieren von Diensten
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 02117b95cbf5a2ee16267a7b991ea9f854b813c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-and-implementing-services"></a>Entwerfen und Implementieren von Diensten
 In diesem Abschnitt wird veranschaulicht, wie definieren und implementieren [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Verträge. Ein Dienstvertrag gibt an, was ein Endpunkt an die Außenwelt kommuniziert. Konkreter gesagt ist er ein Anweisung zu mehreren bestimmten Nachrichten, die in grundlegende Nachrichtenaustauschmuster aufgeteilt sind, wie Anforderung/Antwort, unidirektional und Duplex. Wenn ein Dienstvertrag ein logisch zusammengehöriger Satz von Vorgängen des Nachrichtenaustauschs ist, dann ist ein Dienstvorgang ein einzelner Nachrichtenaustausch. Beispielsweise muss ein `Hello`-Vorgang natürlich eine Nachricht annehmen (damit der Aufrufer den Gruß ankündigen kann) und kann dann eine Nachricht zurückgeben (je nach Verfügung des Vorgangs).  
   
- Weitere Informationen zu Verträgen und andere grundlegende [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Konzepte, finden Sie unter [grundlegenden Windows Communication Foundation-Begriffe](../../../docs/framework/wcf/fundamental-concepts.md). In diesem Thema werden in erster Linie Kenntnisse über Dienstverträge vermittelt. Weitere Informationen zur Erstellung von Clients, die Dienstverträge, die für die Verbindung mit Diensten verwenden, finden Sie unter [Überblick über WCF-Client](../../../docs/framework/wcf/wcf-client-overview.md).  
+ Weitere Informationen zu Verträgen und andere Kernkonzepte für die Windows Communication Foundation (WCF), finden Sie unter [grundlegenden Windows Communication Foundation-Begriffe](../../../docs/framework/wcf/fundamental-concepts.md). In diesem Thema werden in erster Linie Kenntnisse über Dienstverträge vermittelt. Weitere Informationen zur Erstellung von Clients, die Dienstverträge, die für die Verbindung mit Diensten verwenden, finden Sie unter [Überblick über WCF-Client](../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Übersicht  
  Dieses Thema bietet eine allgemeine Orientierung über das Entwerfen und Implementieren von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensten. Untergeordnete Themen bieten ausführlichere Informationen zu den Besonderheiten des Entwerfens und Implementierens. Vor dem Entwerfen und Implementieren der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendung werden die folgenden Voraussetzungen empfohlen:  
@@ -77,7 +63,7 @@ In diesem Abschnitt wird veranschaulicht, wie definieren und implementieren [!IN
   
  Beachten Sie, dass der Vertrag bestimmte Anforderungen an die Dienstvertragsimplementierung und die Laufzeitkonfiguration stellt, um ein Verhalten hinzuzufügen. Die Anforderungen, um einen Dienst für die Verwendung verfügbar zu machen, bauen auf den vorherigen Anforderungen auf. Wenn ein Vertrag Anforderungen an die Implementierung stellt, kann eine Implementierung noch weitere Anforderungen an die Konfiguration und die Bindungen stellen, die die Ausführung des Dienstes ermöglichen. Außerdem muss die Hostanwendung auch alle Anforderungen unterstützen, die die Dienstkonfiguration und die Bindungen hinzufügen.  
   
- Beachten Sie unbedingt diesen zusätzlichen Anforderungsprozess beim Entwerfen, Implementieren, Konfigurieren und Hosten einer [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstanwendung. Beispielsweise kann der Vertrag angeben, dass er eine Sitzung unterstützen muss. In diesem Fall müssen Sie die Bindung so konfigurieren, dass sie diese Vertragsanforderung unterstützt, oder die Dienstimplementierung funktioniert nicht. Wenn der Dienst integrierte Windows-Authentifizierung erfordert und in Internetinformationsdiensten gehostet wird, muss für die Webanwendung, in der sich der Dienst befindet, die integrierte Windows-Authentifizierung aktiviert und der anonyme Support deaktiviert sein. Weitere Informationen zu den Funktionen und die Auswirkungen von den anderen Dienst Anwendung Hosttypen finden Sie unter [Hostingdienste](../../../docs/framework/wcf/hosting-services.md).  
+ Dieser Anforderungsvorgang ist wichtig zu bedenken, beim Entwerfen, implementieren, konfigurieren und eine Windows Communication Foundation (WCF) dienstanwendung hostet. Beispielsweise kann der Vertrag angeben, dass er eine Sitzung unterstützen muss. In diesem Fall müssen Sie die Bindung so konfigurieren, dass sie diese Vertragsanforderung unterstützt, oder die Dienstimplementierung funktioniert nicht. Wenn der Dienst integrierte Windows-Authentifizierung erfordert und in Internetinformationsdiensten gehostet wird, muss für die Webanwendung, in der sich der Dienst befindet, die integrierte Windows-Authentifizierung aktiviert und der anonyme Support deaktiviert sein. Weitere Informationen zu den Funktionen und die Auswirkungen von den anderen Dienst Anwendung Hosttypen finden Sie unter [Hostingdienste](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md)  

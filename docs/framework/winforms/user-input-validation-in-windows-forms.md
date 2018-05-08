@@ -1,31 +1,17 @@
 ---
 title: Validierung von Benutzereingaben in Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, validating user input
 - validation [Windows Forms], Windows Forms user input
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: adc138ad1e277f69f27f9f86fc5c3ea28a8d5cce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validierung von Benutzereingaben in Windows Forms
 Wenn Benutzer Daten in die Anwendung eingeben, empfiehlt es sich um sicherzustellen, dass die Daten gültig sind, bevor Sie Ihre Anwendung verwendet. Sie können erforderlich, dass bestimmte Textfelder werden nicht mit der Länge Null, dass ein Feld als eine Telefonnummer oder andere Arten von wohlgeformte Daten formatiert werden, dass eine Zeichenfolge keine unsicheren Zeichen enthält, die verwendet werden können, um die Sicherheit einer Datenbank zu gefährden. Windows Forms bietet mehrere Möglichkeiten zum Überprüfen der Eingabe in der Anwendung.  
@@ -56,7 +42,7 @@ Wenn Benutzer Daten in die Anwendung eingeben, empfiehlt es sich um sicherzustel
  Wenn Sie die Datenbindung verwenden, die Daten in das Steuerelement synchronisiert mit der Datenquelle während der Ausführung der <xref:System.Windows.Forms.Control.Validating> Ereignis. Wenn Sie "Abbrechen" die <xref:System.Windows.Forms.Control.Validating> Ereignis, die Daten nicht mit der Datenquelle synchronisiert werden.  
   
 > [!IMPORTANT]
->  Wenn Sie benutzerdefinierte Validierung, der stattfindet verfügen, nach der <xref:System.Windows.Forms.Control.Validating> Ereignis, wirkt sich nicht dem Datenbindung. Angenommen, Sie über Code verfügen, einem <xref:System.Windows.Forms.Control.Validated> Ereignis, das versucht, die Datenbindung abzubrechen, die Datenbindung wird nach wie vor erfolgen. In diesem Fall wird die Validierung in der <xref:System.Windows.Forms.Control.Validated> Ereignis, ändern Sie das Steuerelement **Datenquellen-Aktualisierungsmodus** Eigenschaft (**unter (Databindings)**\\**(Erweitert)** ) von **OnValidation** auf **nie**, und fügen *Steuerelement*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` zu Validierungscodes.  
+>  Wenn Sie benutzerdefinierte Validierung, der stattfindet verfügen, nach der <xref:System.Windows.Forms.Control.Validating> Ereignis, wirkt sich nicht dem Datenbindung. Angenommen, Sie über Code verfügen, einem <xref:System.Windows.Forms.Control.Validated> Ereignis, das versucht, die Datenbindung abzubrechen, die Datenbindung wird nach wie vor erfolgen. In diesem Fall wird die Validierung in der <xref:System.Windows.Forms.Control.Validated> Ereignis, ändern Sie das Steuerelement **Datenquellen-Aktualisierungsmodus** Eigenschaft (**unter (Databindings)**\\ **(Erweitert)** ) von **OnValidation** auf **nie**, und fügen *Steuerelement*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` zu Validierungscodes.  
   
 ### <a name="implicit-and-explicit-validation"></a>Implizite und explizite Validierung  
  Also wenn überprüft ein Steuerelement Daten? Dies ist bis zu Ihnen als Entwickler. Sie können die Überprüfung von entweder implizit oder explizit, je nach den Anforderungen Ihrer Anwendung verwenden.  

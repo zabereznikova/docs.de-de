@@ -1,12 +1,6 @@
 ---
-title: '&lt;&lt;Operator (Visual Basic)'
+title: '&lt;&lt; Operator (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<<
 helpviewer_keywords:
@@ -14,16 +8,13 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 56cfb227f7e5c68de802c1f2cfb842a770f65ae0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bdec015309526aeac2499bc7b459b6ccab6f1e4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="ltlt-operator-visual-basic"></a>&lt;&lt;Operator (Visual Basic)
+# <a name="ltlt-operator-visual-basic"></a>&lt;&lt; Operator (Visual Basic)
 Führt eine arithmetische linksverschiebung in einem Bitmuster aus.  
   
 ## <a name="syntax"></a>Syntax  
@@ -47,12 +38,12 @@ result = pattern << amount
   
  Um zu verhindern, dass eine Verschiebung um mehr Bits, als das Ergebnis aufnehmen kann, maskiert Visual Basic den Wert der `amount` mit einer Größenmaske, die den Datentyp der entspricht `pattern`. Das binäre AND dieser Werte wird für den Betrag der Verschiebung verwendet. Die Größenmasken lauten wie folgt:  
   
-|Datentyp`pattern`|Größenmaske (dezimal)|Größenmaske (hexadezimal)|  
+|Datentyp `pattern`|Größenmaske (dezimal)|Größenmaske (hexadezimal)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|& H00000007|  
-|`Short`, `UShort`|15|& H0000000F|  
-|`Integer`, `UInteger`|31|& H0000001F|  
-|`Long`, `ULong`|63|& H0000003F|  
+|`SByte`, `Byte`|7|&AMP; H00000007|  
+|`Short`, `UShort`|15|&AMP; H0000000F|  
+|`Integer`, `UInteger`|31|&AMP; H0000001F|  
+|`Long`, `ULong`|63|&AMP; H0000003F|  
   
  Wenn `amount` gleich NULL ist, werden den Wert der `result` ist identisch mit dem Wert des `pattern`. Wenn `amount` ist negativ ist, es als Wert ohne Vorzeichen und wird mit der entsprechenden Größe maskiert.  
   
@@ -68,15 +59,15 @@ result = pattern << amount
   
  Die Ergebnisse des vorherigen Beispiels sind wie folgt aus:  
   
--   `result1`ist 192 (0000 0000 1100 0000).  
+-   `result1` ist 192 (0000 0000 1100 0000).  
   
--   `result2`3072 (0000 1100 0000 0000) ist.  
+-   `result2` 3072 (0000 1100 0000 0000) ist.  
   
--   `result3`ist zwischen-32768 (1000 0000-0000-0000).  
+-   `result3` ist zwischen-32768 (1000 0000-0000-0000).  
   
--   `result4`ist 384 (0000 0001 1000 0000).  
+-   `result4` ist 384 (0000 0001 1000 0000).  
   
--   `result5`ist 0 (15 Stellen links verschoben).  
+-   `result5` ist 0 (15 Stellen links verschoben).  
   
  Der Betrag der Verschiebung für `result4` wird berechnet als 17 und 15, die gleich 1 ist.  
   

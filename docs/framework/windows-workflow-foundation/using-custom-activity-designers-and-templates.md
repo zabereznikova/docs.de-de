@@ -1,23 +1,12 @@
 ---
-title: "Verwenden benutzerdefinierter Aktivitätsdesigner und Vorlagen"
-ms.custom: 
+title: Verwenden benutzerdefinierter Aktivitätsdesigner und Vorlagen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1aab82e7-7f89-4255-be46-526b09ceeb8b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d83731fcf9bde8642dcdc0291142885068d532b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 674af9fa6f03e78045d7c195f94e7fa23b4d30d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>Verwenden benutzerdefinierter Aktivitätsdesigner und Vorlagen
 Dieser Abschnitt enthält Themen, die beschreiben, wie benutzerdefinierte Aktivitätsdesigner und benutzerdefinierte Aktivitätsvorlagen erstellt werden.  
@@ -35,7 +24,7 @@ Dieser Abschnitt enthält Themen, die beschreiben, wie benutzerdefinierte Aktivi
  [Binden einer benutzerdefinierten Aktivitätseigenschaft an ein Designersteuerelement](../../../docs/framework/windows-workflow-foundation/binding-a-custom-activity-property-to-a-designer-control.md)  
  Beschreibt, wie ein listview-Steuerelement an eine Aktivitätseigenschaft im Designer gebunden wird.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Activities.Presentation.ActivityDesigner>  
   
  <xref:System.Activities.Presentation.View.ExpressionTextBox>  

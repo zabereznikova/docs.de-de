@@ -1,28 +1,19 @@
 ---
-title: '&#39; ist &#39; erfordert Operanden, die Verweistypen sind, aber dieser Operand hat den Werttyp &#39; &lt;Typename&gt;&#39;'
+title: '&#39;Ist&#39; erfordert Operanden, die Verweistypen sind, aber dieser Operand hat den Werttyp &#39; &lt;Typname&gt;&#39;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30020
 - vbc30020
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 28d017a566fdc1e55cb53ce907641d6bccfb354c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07838e62bd6b180f7dece79355ea7aa1d6c4527a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39; ist &#39; erfordert Operanden, die Verweistypen sind, aber dieser Operand hat den Werttyp &#39; &lt;Typename&gt;&#39;
+# <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39;Ist&#39; erfordert Operanden, die Verweistypen sind, aber dieser Operand hat den Werttyp &#39; &lt;Typname&gt;&#39;
 Die `Is` Vergleichsoperator bestimmt, ob zwei Objektvariablen auf dieselbe Instanz verweisen. Dieser Vergleich ist für Werttypen nicht definiert.  
   
  **Fehler-ID:** BC30020  

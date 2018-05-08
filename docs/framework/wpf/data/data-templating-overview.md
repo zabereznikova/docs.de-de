@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über Datenvorlagen"
-ms.custom: 
+title: Übersicht über Datenvorlagen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-templating-overview"></a>Übersicht über Datenvorlagen
 Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten flexibel definieren. WPF-Steuerelemente verfügen über integrierte Funktionen, die die Anpassung der Datendarstellung unterstützen. In diesem Thema veranschaulicht, wie definieren Sie zunächst eine <xref:System.Windows.DataTemplate> und führt dann andere Textvorlagen-Funktionen, wie z. B. die Auswahl von Vorlagen basierend auf benutzerdefinierte Logik und die Unterstützung für die Anzeige hierarchischer Daten.  
@@ -35,7 +23,7 @@ Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten fl
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Der Schwerpunkt dieses Themas liegt auf Datenvorlagenfeatures. Es bietet keine Einführung in Datenbindungskonzepte. Informationen zu grundlegende Datenbindungskonzepten finden Sie in der [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- <xref:System.Windows.DataTemplate>geht es um die Darstellung von Daten und eine der vielen Funktionen von WPF-Modell erstellen von Formaten und Vorlagen bereitgestellt wird. Eine Einführung in die WPF-Erstellen von Formaten und Vorlagen-Modells, z. B. zum Verwenden einer <xref:System.Windows.Style> zum Festlegen von Eigenschaften für Steuerelemente finden Sie unter der [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md) Thema.  
+ <xref:System.Windows.DataTemplate> geht es um die Darstellung von Daten und eine der vielen Funktionen von WPF-Modell erstellen von Formaten und Vorlagen bereitgestellt wird. Eine Einführung in die WPF-Erstellen von Formaten und Vorlagen-Modells, z. B. zum Verwenden einer <xref:System.Windows.Style> zum Festlegen von Eigenschaften für Steuerelemente finden Sie unter der [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md) Thema.  
   
  Darüber hinaus ist es wichtig zu verstehen, `Resources`, die sind im Wesentlichen wie z. B. Objekte ermöglichen das <xref:System.Windows.Style> und <xref:System.Windows.DataTemplate> wiederverwendet werden soll. Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
@@ -144,7 +132,7 @@ Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten fl
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>Was gehört in eine DataTemplate?  
- Im vorherigen Beispiel haben wir den Trigger die <xref:System.Windows.DataTemplate> mithilfe der <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> Eigenschaft. Die <xref:System.Windows.Setter> des Triggers legt den Wert einer Eigenschaft eines Elements (die <xref:System.Windows.Controls.Border> Element), der sich im die <xref:System.Windows.DataTemplate>. Jedoch wenn die Eigenschaften, die Ihrer `Setters` befürchten mit sind keine Eigenschaften von Elementen, die in der aktuellen <xref:System.Windows.DataTemplate>, möglicherweise besser geeignet, zum Festlegen der Eigenschaften, die mit einer <xref:System.Windows.Style> , ist für die <xref:System.Windows.Controls.ListBoxItem> Klasse (wenn der Sie sind steuerelementbindung ist eine <xref:System.Windows.Controls.ListBox>). Angenommen, Sie möchten Ihre <xref:System.Windows.Trigger> zum Animieren der <xref:System.Windows.UIElement.Opacity%2A> Wert des Elements, wenn eine Maus auf ein Element verweist, definieren Sie die Trigger innerhalb einer <xref:System.Windows.Controls.ListBoxItem> Stil. Ein Beispiel finden Sie unter [Einführung zum Beispiel zu Stilen und Vorlagen](http://go.microsoft.com/fwlink/?LinkID=160010).  
+ Im vorherigen Beispiel haben wir den Trigger die <xref:System.Windows.DataTemplate> mithilfe der <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> -Eigenschaft veranschaulicht. Die <xref:System.Windows.Setter> des Triggers legt den Wert einer Eigenschaft eines Elements (die <xref:System.Windows.Controls.Border> Element), der sich im die <xref:System.Windows.DataTemplate>. Jedoch wenn die Eigenschaften, die Ihrer `Setters` befürchten mit sind keine Eigenschaften von Elementen, die in der aktuellen <xref:System.Windows.DataTemplate>, möglicherweise besser geeignet, zum Festlegen der Eigenschaften, die mit einer <xref:System.Windows.Style> , ist für die <xref:System.Windows.Controls.ListBoxItem> Klasse (wenn der Sie sind steuerelementbindung ist eine <xref:System.Windows.Controls.ListBox>). Angenommen, Sie möchten Ihre <xref:System.Windows.Trigger> zum Animieren der <xref:System.Windows.UIElement.Opacity%2A> Wert des Elements, wenn eine Maus auf ein Element verweist, definieren Sie die Trigger innerhalb einer <xref:System.Windows.Controls.ListBoxItem> Stil. Ein Beispiel finden Sie unter [Einführung zum Beispiel zu Stilen und Vorlagen](http://go.microsoft.com/fwlink/?LinkID=160010).  
   
  Im Allgemeinen, beachten Sie, dass die <xref:System.Windows.DataTemplate> an jeden der generierten angewendet wird <xref:System.Windows.Controls.ListBoxItem> (Weitere Informationen dazu, wie und wo tatsächlich angewandt wird, finden Sie unter der <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> Seite.). Ihre <xref:System.Windows.DataTemplate> befasst sich mit nur der Präsentations- und der Darstellung der Datenobjekte. In den meisten Fällen alle anderen Aspekte der Darstellung, z. B. welche ein Element sieht, wenn diese Option ausgewählt ist oder wie die <xref:System.Windows.Controls.ListBox> gehören Anordnung der Elemente nicht in der Definition einer <xref:System.Windows.DataTemplate>. Ein Beispiel finden Sie im Abschnitt [Formatieren und Erstellen von Vorlagen für ItemsControl](#DataTemplating_ItemsControl).  
   
@@ -156,7 +144,7 @@ Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten fl
   
  [!code-xaml[DataTemplatingIntro_snip#ImportantTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#importanttemplate)]  
   
- Beachten Sie in diesem Beispiel verwendet die <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> Eigenschaft. Ressourcen, die definiert, Abschnitt werden gemeinsam genutzt, durch die Elemente innerhalb der <xref:System.Windows.DataTemplate>.  
+ Beachten Sie in diesem Beispiel verwendet die <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> -Eigenschaft veranschaulicht. Ressourcen, die definiert, Abschnitt werden gemeinsam genutzt, durch die Elemente innerhalb der <xref:System.Windows.DataTemplate>.  
   
  Angeben der Logik zum Auswählen der <xref:System.Windows.DataTemplate> auf der Grundlage der `Priority` Wert des Datenobjekts, erstellen Sie eine Unterklasse von <xref:System.Windows.Controls.DataTemplateSelector> und überschreiben die <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode. Im folgenden Beispiel die <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode stellt die Logik zum Zurückgeben der entsprechenden Vorlage basierend auf dem Wert, der die `Priority` Eigenschaft. Die Vorlage zurückzugebenden befindet sich in den Ressourcen des umschließenden <xref:System.Windows.Window> Element.  
   

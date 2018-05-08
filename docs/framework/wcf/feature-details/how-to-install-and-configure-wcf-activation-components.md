@@ -1,37 +1,23 @@
 ---
 title: 'Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 78c63fe58872097058292a8b100b376959a2a0b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f362bd1e4a644488e85cdeca674d46ca340bde05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
-In diesem Thema werden die Schritte vorgestellt, mit denen der Windows-Prozessaktivierungsdienst (auch WAS für Windows Process Activation Service genannt) in [!INCLUDE[wv](../../../../includes/wv-md.md)] als Host für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste, die nicht über HTTP-Netzwerkprotokolle kommunizieren, konfiguriert wird. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
+Dieses Thema beschreibt die erforderlichen Schritte zum Einrichten von Windows Process Activation Service (auch WAS genannt) auf [!INCLUDE[wv](../../../../includes/wv-md.md)] zum Hosten von Windows Communication Foundation (WCF)-Dienste, die nicht über HTTP kommunizieren Netzwerkprotokolle. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
   
--   Installieren Sie die (oder bestätigen Sie die Installation der) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Aktivierungskomponenten.  
+-   Installieren (oder bestätigen Sie die Installation der) die WCF-aktivierungskomponenten.  
   
 -   Konfigurieren Sie WAS, sodass Nicht-HTTP-Protokolle unterstützt werden. Mit den folgenden Schritten wird [!INCLUDE[wv](../../../../includes/wv-md.md)] für die TCP-Aktivierung konfiguriert.  
   
- Nach dem Installieren und Konfigurieren von WAS, finden Sie unter [wie: Hosten eines WCF-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) für die Vorgehensweise zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst, der einen nicht-HTTP-Endpunkt verfügbar macht, von dem WAS verwendet.  
+ Nach dem Installieren und Konfigurieren von WAS, finden Sie unter [wie: Hosten eines WCF-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) für die Vorgehensweise zum Erstellen von WCF-Dienst, der einen nicht-HTTP-Endpunkt verfügbar macht, von dem WAS verwendet.  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>So installieren Sie die WCF-Aktivierungskomponenten für andere Protokolle als HTTP  
   
@@ -64,7 +50,7 @@ In diesem Thema werden die Schritte vorgestellt, mit denen der Windows-Prozessak
     ```  
   
     > [!NOTE]
-    >  Dieser Befehl ist eine einzelne Textzeile. Dieser Befehl aktiviert die /\<*WCF-Anwendung*> Anwendung darauf zugegriffen werden beide http://localhost*/\<WCF-Anwendung >* und net.tcp:// "localhost" /*\<WCF-Anwendung >*.  
+    >  Dieser Befehl ist eine einzelne Textzeile. Dieser Befehl aktiviert die /\<*WCF-Anwendung*> Anwendung darauf zugegriffen werden beide http://localhost  */ \<WCF-Anwendung >* und net.tcp:// "localhost" /*\<WCF-Anwendung >*.  
   
      Entfernen Sie die net.tcp-Sitebindung, die für dieses Beispiel hinzugefügt wurde.  
   

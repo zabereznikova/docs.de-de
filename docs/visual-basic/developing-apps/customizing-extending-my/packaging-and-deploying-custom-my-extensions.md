@@ -1,23 +1,16 @@
 ---
 title: Verpacken und Bereitstellen von benutzerdefinierten My-Erweiterungen (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Verpacken und Bereitstellen von benutzerdefinierten My-Erweiterungen (Visual Basic)
 Visual Basic bietet eine einfache Möglichkeit zum Bereitstellen benutzerdefinierter `My` Namespaceerweiterungen mithilfe von Visual Studio-Vorlagen. Wenn Sie eine Projektvorlage für das Erstellen Ihrer `My` Erweiterungen sind ein wesentlicher Bestandteil der neuen Projekttyp, Sie können nur einschließen, die benutzerdefinierte `My` Erweiterungscode mit dem Projekt aus, wenn Sie die Vorlage exportieren. Weitere Informationen zum Exportieren von Projektvorlagen finden Sie unter [Vorgehensweise: Erstellen von Projektvorlagen](/visualstudio/ide/how-to-create-project-templates).  
@@ -101,7 +94,7 @@ Visual Basic bietet eine einfache Möglichkeit zum Bereitstellen benutzerdefinie
  Um die Vorlage zu installieren, können Sie den komprimierten Ordner (ZIP-Datei) in den Visual Basic-Element-Vorlagen-Ordner (z. B. Eigene Dateien\Visual Studio 2008\Templates\Item Templates\Visual Basic) kopieren. Alternativ können Sie die Vorlage als Visual Studio-Installer (VSI)-Datei veröffentlichen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweitern der My Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [Extending the My Namespace in Visual Basic (Erweitern des Namespaces „My“ in Visual Basic)](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  [Erweitern des Visual Basic-Anwendungsmodells](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
  [Anpassen der verfügbaren Objekte in „My“](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
  [My-Erweiterungen-Seite, Projekt-Designer](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

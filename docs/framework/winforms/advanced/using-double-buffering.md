@@ -1,29 +1,17 @@
 ---
 title: Verwenden der doppelten Pufferung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [Windows Forms], double buffering
 - double buffering
 - flicker [Windows Forms], reducing in Windows Forms
 - buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d83846dcded620b74f7d276fd241a302cce1b60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b09210eba0ac3a141219a7cdbff15f22c6ed003
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-double-buffering"></a>Verwenden der doppelten Pufferung
 Sie können doppelt gepufferte Grafiken verwenden, um Flackern in Ihren Anwendungen zu reduzieren, die komplexe Zeichenoperationen enthalten. .NET Framework enthält integrierte Unterstützung für die doppelte Pufferung, oder Sie verwalten und Rendern von Grafiken manuell.  
@@ -41,7 +29,7 @@ Sie können doppelt gepufferte Grafiken verwenden, um Flackern in Ihren Anwendun
  [Gewusst wie: Manuelles Rendern von gepufferten Grafiken](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
  Doppelt gepufferte Grafiken rendern veranschaulicht.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Control.SetStyle%2A> ,  
  Steuerelementmethode, die doppelte Pufferung ermöglicht.  
   

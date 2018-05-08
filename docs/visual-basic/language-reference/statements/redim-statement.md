@@ -1,11 +1,6 @@
 ---
 title: ReDim-Anweisung (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ReDim
 - vb.Preserve
@@ -31,14 +26,11 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cec66ee33bfd82b3abd623a0130f5635aa3d1d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim-Anweisung (Visual Basic)
 Reserviert Speicherplatz für eine Arrayvariable neu.  
@@ -74,7 +66,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Datentypen.** Mit der `ReDim`-Anweisung kann der Datentyp einer Arrayvariablen oder ihrer Elemente nicht geändert werden.  
   
--   **Die Initialisierung.** Mit der `ReDim`-Anweisung können keine neuen Initialisierungswerte für die Arrayelemente bereitgestellt werden.  
+-   **die Initialisierung.** Mit der `ReDim`-Anweisung können keine neuen Initialisierungswerte für die Arrayelemente bereitgestellt werden.  
   
 -   **Rang.** Mit der `ReDim`-Anweisung kann der Rang (Anzahl von Dimensionen) des Arrays nicht geändert werden.  
   
@@ -86,7 +78,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Array-Austausch.** `ReDim`Gibt das vorhandene Array frei und erstellt ein neues Array mit demselben Rang. Das neue Array ersetzt das freigegebene Array in der Arrayvariablen.  
+-   **Array-Austausch.** `ReDim` Gibt das vorhandene Array frei und erstellt ein neues Array mit demselben Rang. Das neue Array ersetzt das freigegebene Array in der Arrayvariablen.  
   
 -   **Initialisierung ohne beibehalten.** Wenn Sie kein `Preserve`-Element angeben, werden die Elemente des neuen Arrays von `ReDim` mit dem Standardwert für ihren Datentyp initialisiert.  
   

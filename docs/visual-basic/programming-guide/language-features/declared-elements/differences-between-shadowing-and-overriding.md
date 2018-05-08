@@ -1,24 +1,15 @@
 ---
-title: "Unterschiede zwischen Shadowing und Überschreiben (Visual Basic)"
-ms.custom: 
+title: Unterschiede zwischen Shadowing und Überschreiben (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d67486d9c6af96d314abad7142ba86779d74f5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94ce3e7fe25b7942730e6e89a53654b03d91c42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Unterschiede zwischen Shadowing und Überschreiben (Visual Basic)
 Wenn Sie eine Klasse, die von einer Basisklasse erbt definieren, möchten manchmal eine oder mehrere der in der abgeleiteten Klasse die Basisklasse-Elemente neu definieren. Shadowing und überschreiben sind verfügbar für diesen Zweck.  
@@ -36,8 +27,8 @@ Wenn Sie eine Klasse, die von einer Basisklasse erbt definieren, möchten manchm
 |Redefine-element|Jeder deklarierte Elementtyp.|Nur eine Prozedur oder Eigenschaft mit einer identischen Aufrufabfolge<sup>1</sup>|  
 |Zugriffsebene des neu definierenden Elements|Eine andere Zugriffsebene|Zugriffsebene außer Kraft gesetztes Element kann nicht geändert werden.|  
 |Lese- und Schreibberechtigung für Neudefinieren-element|Eine beliebige Kombination|Lesbarkeit oder Schreibberechtigung für die überschriebenen Eigenschaft kann nicht geändert werden.|  
-|Kontrolle über die Neudefinition|Basisklasse-Element kann nicht zu erzwingen und verbieten shadowing|Basisklassenelement festlegbaren `MustOverride`, `NotOverridable`, oder`Overridable`|  
-|Verwendung von Schlüsselwörtern|`Shadows`in der abgeleiteten Klasse empfohlen; `Shadows` davon ausgegangen, dass weder `Shadows` noch `Overrides` angegebenen<sup>2</sup>|`Overridable`oder `MustOverride` erforderlich, in der Basisklasse; `Overrides` in einer abgeleiteten Klasse erforderlich|  
+|Kontrolle über die Neudefinition|Basisklasse-Element kann nicht zu erzwingen und verbieten shadowing|Basisklassenelement festlegbaren `MustOverride`, `NotOverridable`, oder `Overridable`|  
+|Verwendung von Schlüsselwörtern|`Shadows` in der abgeleiteten Klasse empfohlen; `Shadows` davon ausgegangen, dass weder `Shadows` noch `Overrides` angegebenen<sup>2</sup>|`Overridable` oder `MustOverride` erforderlich, in der Basisklasse; `Overrides` in einer abgeleiteten Klasse erforderlich|  
 |Vererbung des neu definierenden Elements von von der abgeleiteten Klasse abgeleitete Klassen|Shadowing-Element von geerbt weiter abgeleiteten Klassen; schattiertes Element weiterhin ausgeblendet<sup>3</sup>|Element Überschreiben von geerbten weiter abgeleiteten Klassen; außer Kraft gesetztes Element noch überschreiben.|  
   
  <sup>1</sup> der *Aufrufsequenz* besteht aus den Elementtyp (`Function`, `Sub`, `Operator`, oder `Property`), benennen Sie die Parameterliste, und dem Rückgabetyp. Sie können eine Prozedur mit einer Eigenschaft oder den umgekehrten nicht überschreiben. Eine Art von Prozedur kann nicht überschrieben werden (`Function`, `Sub`, oder `Operator`) mit einer anderen Art.  

@@ -1,30 +1,19 @@
 ---
-title: "Verwenden von Aktivitätserweiterungen"
-ms.custom: 
+title: Verwenden von Aktivitätserweiterungen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bc2e498a4073f6f0881e011b00de6ac89f4f2fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 32c465ae42a1f0238fab7bba5ea795486db3b562
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-activity-extensions"></a>Verwenden von Aktivitätserweiterungen
 Aktivitäten können mit Erweiterungen von Workflowanwendungen interagieren, die es dem Host ermöglichen, weitere Funktionen bereitzustellen, die nicht explizit im Workflow modelliert wurden.  In diesem Thema wird beschrieben, wie eine Erweiterung erstellt und verwendet wird, mit der die Häufigkeit der Ausführung einer Aktivität erfasst werden kann.  
   
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>So verwenden Sie die Aktivitätserweiterung zum Erfassen der Häufigkeit der Ausführung  
   
-1.  Öffnen Sie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]. Wählen Sie **neue**, **Projekt**. Klicken Sie unter der **Visual C#-** Knoten **Workflow**.  Wählen Sie **Workflowkonsolenanwendung** aus der Liste der Vorlagen. Benennen Sie das Projekt mit `Extensions`. Klicken Sie auf **OK** zum Erstellen des Projekts.  
+1.  Öffnen Sie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]. Wählen Sie **neue**, **Projekt**. Klicken Sie unter der **Visual C#-** Knoten **Workflow**.  Wählen Sie **Workflowkonsolenanwendung** aus der Liste der Vorlagen. Benennen Sie das Projekt mit `Extensions`. Klicken Sie auf **OK**, um das Projekt zu erstellen.  
   
 2.  Hinzufügen einer `using` -Anweisung in der Datei "Program.cs" für die **System.Collections.Generic** Namespace.  
   

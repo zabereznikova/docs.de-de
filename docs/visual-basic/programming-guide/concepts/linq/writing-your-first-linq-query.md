@@ -1,34 +1,24 @@
 ---
 title: Schreiben der ersten LINQ-Abfrage (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: "56"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426aac5358837563081d2bf9783f6d4fe04d853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Schreiben der ersten LINQ-Abfrage (Visual Basic)
 Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in einer dedizierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für verschiedene Arten von Datenquellen, beispielsweise SQL für relationale Datenbanken und XQuery für XML entwickelt. Dadurch erforderlich, damit Anwendungsentwickler für jeden Typ von Datenquelle oder Datenformat, das unterstützt wird, wird eine neue Abfragesprache lernen.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]vereinfacht diese Situation durch die Bereitstellung eines konsistenten Modells zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Objekten. Sie verwenden dieselben grundlegenden Codierungsmuster für Abfrage und Transformation von Daten in XML-Dokumenten, SQL-Datenbanken, ADO.NET-Datasets und Entitäten, .NET Framework-Auflistungen und alle anderen Quelle oder Format für die eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] -Anbieter verfügbar ist. Dieses Dokument beschreibt die drei Phasen der Erstellung und Verwendung von Basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragen.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] vereinfacht diese Situation durch die Bereitstellung eines konsistenten Modells zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Objekten. Sie verwenden dieselben grundlegenden Codierungsmuster für Abfrage und Transformation von Daten in XML-Dokumenten, SQL-Datenbanken, ADO.NET-Datasets und Entitäten, .NET Framework-Auflistungen und alle anderen Quelle oder Format für die eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] -Anbieter verfügbar ist. Dieses Dokument beschreibt die drei Phasen der Erstellung und Verwendung von Basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragen.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Drei Phasen einer Abfrageoperation  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageoperationen bestehen aus drei Aktionen:  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] -Abfrageoperationen bestehen aus drei Aktionen:  
   
 1.  Abrufen der Datenquelle(n).  
   

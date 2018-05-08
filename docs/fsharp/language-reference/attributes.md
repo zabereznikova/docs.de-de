@@ -1,17 +1,12 @@
 ---
 title: Attribute (F#)
 description: Erfahren Sie, wie f# Attribute ermöglichen, dass Metadaten auf ein Programmiermodell angewendet werden soll.
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: b8efc0cdc14e690bbc5c24456d0b1eaa3d55988e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 107f5d9cbcce28c97fc5b738759ef27649fc45a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes"></a>Attribute
 

@@ -1,11 +1,7 @@
 ---
-title: "Löschfunktion (Referenz zur nicht verwalteten API)"
-description: "Die Delete-Funktion löscht die angegebene Eigenschaft und alle seine Qualifizierer aus der Definition einer CIM-Klasse."
+title: Löschfunktion (Referenz zur nicht verwalteten API)
+description: Die Delete-Funktion löscht die angegebene Eigenschaft und alle seine Qualifizierer aus der Definition einer CIM-Klasse.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Delete
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30f5bf651990cafe06811019cf2b3d92f866f646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delete-function"></a>Löschen Sie-Funktion
 Löscht die angegebene Eigenschaft und aller seiner Qualifizierer aus der Definition einer CIM-Klasse.
@@ -53,7 +46,7 @@ HRESULT Delete (
 [in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
 
 `wszName`  
-[in] Der Name des zu löschenden Eigenschaft. `wszName`muss ein Zeiger auf eine gültige `LPCWSTR`.
+[in] Der Name des zu löschenden Eigenschaft. `wszName` muss ein Zeiger auf eine gültige `LPCWSTR`.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -80,7 +73,7 @@ Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::Delete
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

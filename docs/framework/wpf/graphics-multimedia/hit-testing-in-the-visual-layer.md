@@ -1,13 +1,6 @@
 ---
 title: Treffertests in der visuellen Ebene
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60da11af51722e86a61c5e3298fafba2221f000b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Treffertests in der visuellen Ebene
 Dieses Thema enthält eine Übersicht über die Treffertestfunktionen der visuellen Ebene. Unterstützung für Treffertests können Sie bestimmen, ob ein Geometrie oder Punkt-Wert in den gerenderten Inhalt fällt eine <xref:System.Windows.Media.Visual>, sodass Sie Benutzeroberflächenverhalten z. B. ein Auswahlrechteck zum Auswählen mehrerer Objekte zu implementieren.  
@@ -61,7 +49,7 @@ Diagramm eines gültigen Treffertestbereichs
   
  In der folgenden Abbildung befindet sich das Kreisobjekt sowohl auf dem Quadrat als auch auf dem Dreieck. Wenn nur Treffertest für das visuelle Objekt Domänenmodus, dessen Wert der Z-Reihenfolge oberste ist, legen Sie die visuellen Treffertest-Enumeration zurückgegeben <xref:System.Windows.Media.HitTestResultBehavior.Stop> aus der <xref:System.Windows.Media.HitTestResultCallback> Treffertest Durchlauf nach dem ersten Element zu beenden.  
   
- ![Diagramm der z &#45; die Reihenfolge einer visuellen Struktur](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![Diagramm der z&#45;Reihenfolge einer visuellen Struktur](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 Diagramm der Z-Reihenfolge einer visuellen Struktur  
   
  Wenn Sie alle visuellen Objekte unter einem bestimmten Zeitpunkt oder einer Geometrie auflisten möchten, zurück <xref:System.Windows.Media.HitTestResultBehavior.Continue> aus der <xref:System.Windows.Media.HitTestResultCallback>. Dies bedeutet, dass Sie den Treffertest sogar für vollständig von anderen Objekten überdeckte visuelle Objekte durchführen können. Weitere Informationen finden Sie im Beispielcode im Abschnitt „Verwenden eines Treffertest-Ergebnisrückrufs“.  

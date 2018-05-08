@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms"
-ms.custom: 
+title: 'Gewusst wie: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: faf0422db9915806442ab96759d63e15ff98b813
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Gewusst wie: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms
 Elemente können hinzugefügt werden, um ein Windows Forms-Kombinationsfeld, Listenfeld oder Listenfeld eine Vielzahl von Möglichkeiten, nicht überprüft, da diese Steuerelemente an eine Vielzahl von Datenquellen gebunden werden können. Allerdings wird in diesem Thema zeigt die einfachste Methode, und erfordert keine Datenbindung. Die angezeigten Elemente sind in der Regel Zeichenfolgen. Allerdings kann jedes Objekt verwendet werden. Der im Steuerelement angezeigte Text ist der Wert, der von dem Objekt zurückgegebenen `ToString` Methode.  
@@ -102,7 +90,7 @@ Elemente können hinzugefügt werden, um ein Windows Forms-Kombinationsfeld, Lis
   
 1.  Rufen Sie die `Remove` oder `RemoveAt` Methode, um Elemente zu löschen.  
   
-     `Remove`hat ein Argument, das das zu entfernende Element angibt.`RemoveAt` Entfernt das Element mit dem angegebenen Index zurück.  
+     `Remove` hat ein Argument, das das zu entfernende Element angibt.`RemoveAt` Entfernt das Element mit dem angegebenen Index zurück.  
   
     ```vb  
     ' To remove item with index 0:  

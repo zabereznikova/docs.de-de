@@ -1,14 +1,6 @@
 ---
 title: Verbund
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +8,19 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d69de8c01a23eff5314220a10a51f6487080df41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation"></a>Verbund
-Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit. Darüber hinaus wird die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Unterstützung für die Einbindung von Verbundsicherheitsarchitekturen beschrieben. Eine beispielanwendung, Verbund veranschaulicht, finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
+Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit. Darüber hinaus wird die Windows Communication Foundation (WCF)-Unterstützung für die Bereitstellung von verbundsicherheitsarchitekturen beschrieben. Eine beispielanwendung, Verbund veranschaulicht, finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="definition-of-federated-security"></a>Definition von Verbundsicherheit  
  Verbundsicherheit ermöglicht eine saubere Trennung zwischen dem Dienst, auf den ein Client zugreift, und den dazugehörigen Authentifizierungs- und Autorisierungsvorgängen. Darüber hinaus aktiviert Verbundsicherheit die Zusammenarbeit über mehrere Systeme, Netzwerke und Organisationen in anderen Vertrauensbereichen.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt die Erstellung und Bereitstellung von verteilten Systemen, die Verbundsicherheit verwenden.  
+ WCF bietet Unterstützung für die Erstellung und Bereitstellung von verteilten Systemen, die verbundsicherheit verwenden.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Elemente einer Verbundsicherheitsarchitektur  
  Die Verbundsicherheitsarchitektur verfügt über drei Hauptelemente (siehe Beschreibung in der folgenden Tabelle).  
@@ -80,7 +66,7 @@ Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit.
  Nachdem die Benutzer einen Sicherheitstoken vom STS A erhalten haben, legen Sie den Token dem STS B vor. Organisation B führt die Autorisierung der Benutzeranfragen durch und gibt an die Benutzer einen Sicherheitstoken aus ihrem eigenen Satz an Sicherheitstoken heraus. Die Benutzer können dann ihren Token bei der Ressource bei Organisation B vorlegen und auf den Dienst zugreifen.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Unterstützung für Verbundsicherheit in WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet sofort verwendbare Unterstützung für die Bereitstellung von verbundsicherheitsarchitekturen durch die [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ WCF bietet sofort verwendbare Unterstützung für die Bereitstellung von verbundsicherheitsarchitekturen durch die [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Die [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) -Element stellt für eine sichere, zuverlässige und interoperable Bindung, die die Verwendung von HTTP als den zugrunde liegenden Transportmechanismus für Anforderung-Antwort-Kommunikation-Format umfasst bereit. Einsatz von Text- und XML als Übertragungsformate für die Codierung.  
   
@@ -98,10 +84,10 @@ Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit.
 -   Präsentation des Token vor dem Dienst für den Zugriff auf den Dienst.  
   
 ### <a name="phase-2-run-time-phase"></a>Phase 2: Laufzeitphase  
- Während der Laufzeitphase instanziiert ein Objekt der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientklasse und nimmt mithilfe des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients einen Aufruf vor. Das zugrunde liegende Framework von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] behandelt die zuvor genannten Schritte im Verbundsicherheitskommunikationsmuster und ermöglicht es dem Client, den Dienst nahtlos zu nutzen.  
+ Während der Phase zur Laufzeit wird der Client instanziiert ein Objekt des WCF-Clientklasse, und führt einen Aufruf mithilfe des WCF-Clients. Das zugrunde liegende Framework von WCF behandelt die zuvor genannten Schritte in der verbundsicherheitskommunikationsmuster und ermöglicht dem Client den Dienst nahtlos zu nutzen.  
   
 ## <a name="sample-implementation-using-wcf"></a>Beispielimplementierung mithilfe von WCF  
- Die folgende Abbildung zeigt eine Beispielimplementierung für eine Verbundsicherheitsarchitektur mit systemeigener Unterstützung von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Die folgende Abbildung zeigt eine beispielimplementierung für eine verbundsicherheitsarchitektur mit systemeigener Unterstützung von WCF.  
   
  ![Verbundsicherheit in WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
@@ -300,7 +286,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  ![Verbund](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>Zusammenfassung  
- Verbundsicherheit liefert eine klare Trennung der Verantwortungsbereiche und unterstützt den Aufbau einer sicheren und skalierbaren Dienstarchitektur. Als Plattform für den Aufbau und die Bereitstellung von verteilten Anwendungen bietet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] systemeigene Unterstützung für die Implementierung von Verbundsicherheit.  
+ Verbundsicherheit liefert eine klare Trennung der Verantwortungsbereiche und unterstützt den Aufbau einer sicheren und skalierbaren Dienstarchitektur. WCF bietet als Plattform für die Erstellung und Bereitstellung von verteilten Anwendungen die systemeigene Unterstützung für die Implementierung von verbundsicherheit.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)

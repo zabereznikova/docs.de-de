@@ -1,22 +1,14 @@
 ---
 title: My.Computer.Info-Objekt
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 923a73398c6b858c0c037b4b2efd3178c3885de4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f536f7915d8f8befcb4f1b0ca2494dd99a203ea6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info-Objekt
 Stellt Eigenschaften zum Abrufen von Informationen über den Arbeitsspeicher des Computer, geladene Assemblys, Name und Betriebssystem bereit.  
@@ -25,9 +17,9 @@ Stellt Eigenschaften zum Abrufen von Informationen über den Arbeitsspeicher des
  Informationen zu den Eigenschaften der `My.Computer.Info` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Namespace:**<xref:Microsoft.VisualBasic.Devices>  
+ **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Klasse:**<xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
+ **Klasse:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
  **Assembly:** Visual Basic-Laufzeitbibliothek (in "Microsoft.VisualBasic.dll")  
   

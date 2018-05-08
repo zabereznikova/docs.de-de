@@ -1,27 +1,15 @@
 ---
-title: "Liste der Aktivitäten"
-ms.custom: 
+title: Liste der Aktivitäten
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc504c37b21a2d457f270331ab917747bafbb022
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-list"></a>Liste der Aktivitäten
-In diesem Thema werden alle von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] definierten Aktivitäten aufgeführt.  
+Dieses Thema enthält die Aktivitäten, die von der Windows Communication Foundation (WCF) definiert.  
   
 > [!NOTE]
 >  Sie können Aktivitäten auch programmgesteuert definieren, um Benutzerablaufverfolgungen zu gruppieren. Weitere Informationen finden Sie unter [Ausgeben von Benutzercode-Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
@@ -33,8 +21,8 @@ In diesem Thema werden alle von [!INCLUDE[indigo1](../../../../../includes/indig
 |-----------|-------------------|-------------------|-----------------|  
 |A, M|Ambient-Aktivität|-/- (wird nicht über ServiceModel gesteuert)|Die Aktivität, deren ID in TLS festgelegt wird, bevor Aufrufe an ServiceModel-Code (client- oder serverseitig) stattfinden.<br /><br /> Beispiel: Eine Aktivität, bei der "open" auf dem [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Client oder "serviceHost.open" aufgerufen wird.|  
 |B|Konstrukt<br /><br /> erstellen. Vertragstyp: "[Typ]".|Konstrukt||  
-|C|Öffnen<br /><br /> [ClientBase &#124; ChannelFactory]. Vertragstyp: "[Typ]".|Öffnen||  
-|I|Schließen Sie [ClientBase &#124; ChannelFactory]. Vertragstyp: "[Typ]".|Schließen||  
+|C|Öffnen<br /><br /> [ClientBase&#124;ChannelFactory]. Vertragstyp: "[Typ]".|Öffnen||  
+|I|Schließen [ClientBase&#124;ChannelFactory]. Vertragstyp: "[Typ]".|Schließen||  
 |M|ServiceHost erstellen. ServiceType: "[Typ]".|Konstrukt||  
 |N|ServiceHost öffnen. ServiceType: "[Typ]".|Öffnen||  
 |Z|ServiceHost schließen. ServiceType: "[Typ]".|Schließen||  

@@ -1,13 +1,6 @@
 ---
 title: Erstellen eines Steuerelements mit einer anpassbaren Darstellung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,20 +13,15 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4da96c3e33c6f7827619b408568fbbfe96c50a11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f539e7dbb105591375857122d738fddd87f6776
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Erstellen eines Steuerelements mit einer anpassbaren Darstellung
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]bietet Ihnen die Möglichkeit, ein Steuerelement erstellen, dessen Darstellung angepasst werden kann. Sie können z. B. Ändern der Darstellung von einer <xref:System.Windows.Controls.CheckBox> über welche Einstellung Eigenschaften möglich ist, durch Erstellen eines neuen <xref:System.Windows.Controls.ControlTemplate>. Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.CheckBox> , verwendet den Standardwert <xref:System.Windows.Controls.ControlTemplate> und ein <xref:System.Windows.Controls.CheckBox> , verwendet eine benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate>.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet Ihnen die Möglichkeit, ein Steuerelement erstellen, dessen Darstellung angepasst werden kann. Sie können z. B. Ändern der Darstellung von einer <xref:System.Windows.Controls.CheckBox> über welche Einstellung Eigenschaften möglich ist, durch Erstellen eines neuen <xref:System.Windows.Controls.ControlTemplate>. Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.CheckBox> , verwendet den Standardwert <xref:System.Windows.Controls.ControlTemplate> und ein <xref:System.Windows.Controls.CheckBox> , verwendet eine benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate>.  
   
  ![Kontrollkästchen mit der Standardsteuerelementvorlage. ] (../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Ein Kontrollkästchen, das die Standardsteuerelementvorlage verwendet  
@@ -89,7 +77,7 @@ Ein benutzerdefiniertes NumericUpDown-Steuerelement
   
  [!code-xaml[VSMCustomControl#VisualStructure](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- Ein visuelles Verhalten von der `NumericUpDown` Steuerelement ist, dass der Wert in roter Schrift ist, wenn sie negativ ist.  Wenn Sie ändern die <xref:System.Windows.Controls.TextBlock.Foreground%2A> von der <xref:System.Windows.Controls.TextBlock> im code, wenn die `Value` negativ ist, die `NumericUpDown` einen roten negativen Wert wird immer angezeigt. Geben Sie das visuelle Verhalten des Steuerelements in der <xref:System.Windows.Controls.ControlTemplate> durch Hinzufügen von <xref:System.Windows.VisualState> -Objekte und die <xref:System.Windows.Controls.ControlTemplate>.  Das folgende Beispiel zeigt die <xref:System.Windows.VisualState> von Objekten für die `Positive` und `Negative` Status.  `Positive`und `Negative` sind sich gegenseitig ausschließende (das Steuerelement ist stets in genau einem der beiden), damit das Beispiel setzt die <xref:System.Windows.VisualState> Objekte in einem einzelnen <xref:System.Windows.VisualStateGroup>.  Eintritt des Steuerelements in der `Negative` Zustand, der <xref:System.Windows.Controls.TextBlock.Foreground%2A> von der <xref:System.Windows.Controls.TextBlock> Rot.  Wenn das Steuerelement ist der `Positive` Zustand, der <xref:System.Windows.Controls.TextBlock.Foreground%2A> zurückgibt, ursprünglichen Wert.  Definieren von <xref:System.Windows.VisualState> Objekte in einer <xref:System.Windows.Controls.ControlTemplate> wird weiter erläutert [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+ Ein visuelles Verhalten von der `NumericUpDown` Steuerelement ist, dass der Wert in roter Schrift ist, wenn sie negativ ist.  Wenn Sie ändern die <xref:System.Windows.Controls.TextBlock.Foreground%2A> von der <xref:System.Windows.Controls.TextBlock> im code, wenn die `Value` negativ ist, die `NumericUpDown` einen roten negativen Wert wird immer angezeigt. Geben Sie das visuelle Verhalten des Steuerelements in der <xref:System.Windows.Controls.ControlTemplate> durch Hinzufügen von <xref:System.Windows.VisualState> -Objekte und die <xref:System.Windows.Controls.ControlTemplate>.  Das folgende Beispiel zeigt die <xref:System.Windows.VisualState> von Objekten für die `Positive` und `Negative` Status.  `Positive` und `Negative` sind sich gegenseitig ausschließende (das Steuerelement ist stets in genau einem der beiden), damit das Beispiel setzt die <xref:System.Windows.VisualState> Objekte in einem einzelnen <xref:System.Windows.VisualStateGroup>.  Eintritt des Steuerelements in der `Negative` Zustand, der <xref:System.Windows.Controls.TextBlock.Foreground%2A> von der <xref:System.Windows.Controls.TextBlock> Rot.  Wenn das Steuerelement ist der `Positive` Zustand, der <xref:System.Windows.Controls.TextBlock.Foreground%2A> zurückgibt, ursprünglichen Wert.  Definieren von <xref:System.Windows.VisualState> Objekte in einer <xref:System.Windows.Controls.ControlTemplate> wird weiter erläutert [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 > [!NOTE]
 >  Achten Sie darauf, dass Sie festlegen der <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> -Eigenschaft auf den Stamm <xref:System.Windows.FrameworkElement> von der <xref:System.Windows.Controls.ControlTemplate>.  
@@ -212,17 +200,17 @@ Ein benutzerdefiniertes NumericUpDown-Steuerelement
   
 -   Ein <xref:System.Windows.Controls.Primitives.RepeatButton> aufgerufen `UpButton`.  
   
--   Ein <xref:System.Windows.Controls.Primitives.RepeatButton> aufgerufen`DownButton.`  
+-   Ein <xref:System.Windows.Controls.Primitives.RepeatButton> aufgerufen `DownButton.`  
   
  Das Steuerelement kann die folgenden Zustände aufweisen:  
   
--   In der`ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   In der `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   In der`FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   In der `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   

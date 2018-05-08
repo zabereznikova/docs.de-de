@@ -1,35 +1,23 @@
 ---
 title: WCF-Sicherheitsterminologie
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>WCF-Sicherheitsterminologie
 Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung sind, sind möglicherweise nicht allgemein bekannt. In diesem Thema werden daher einige Sicherheitsbegriffe kurz erläutert, ohne alle Facetten des jeweiligen Begriffs zu beleuchten.  
   
- Weitere Informationen zu Begriffe, die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dokumentation finden Sie unter [grundlegenden Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Weitere Informationen zu in Windows Communication Foundation (WCF)-Dokumentation verwendeten Begriffen finden Sie unter [grundlegenden Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  Zugriffssteuerungsliste  
  Eine Liste mit den Arten von Sicherheitsschutz, der auf ein Objekt angewendet wird. (Ein Objekt kann eine Datei, ein Prozess, ein Ereignis oder ein sonstiges Element sein, die über einen Sicherheitsdeskriptor verfügen.) Ein Eintrag in einer Zugriffssteuerungsliste wird als Access Control Entry (ACE) bezeichnet. Es gibt zwei Typen von Zugriffssteuerungslisten: freigegebene Zugriffssteuerungslisten und Systemzugriffssteuerungslisten.  
@@ -189,7 +177,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Einen Benutzerkontonamen (auch bezeichnet als das *Benutzeranmeldename*) und ein Domänenname zur Identifizierung der Domäne, in dem sich das Benutzerkonto befindet. Dies ist das Standardverfahren für die Anmeldung an einer Windows-Domäne. Das Format lautet: someone@example.com (wie bei einer e-Mail-Adresse).  
   
 > [!NOTE]
->  Abgesehen von Standard-UPNs akzeptiert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auch abwärtskompatible UPNs wie cohowinery.com\someone.  
+>  Zusätzlich zu den standard-UPN-Format akzeptiert WCF UPNs früherer Format, z. B. cohowinery.com\someone.  
   
  X.509  
  Ein international anerkannter Zertifikatstandard zur Definition erforderlicher Bestandteile.  

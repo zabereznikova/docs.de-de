@@ -1,63 +1,49 @@
 ---
-title: "Interoperabilität und Integration"
-ms.custom: 
+title: Interoperabilität und Integration
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fcd6f8454f77cfd2fbd80ed0f77ce1549025a4d6
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 5a50a8ebece72a0f2f8dc95fd87e73bef5db3195
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperability-and-integration"></a>Interoperabilität und Integration
-Dieser Abschnitt behandelt die Interoperabilität und Integration mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+In diesem Abschnitt behandelt die Interoperabilität und Integration mit Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Leitfaden für die Interoperabilität von Webdienstprotokollen](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird erstellt, um die Interoperation mit Webdiensten konzipiert, die eine Reihe von Spezifikationen, bekannt als Web-Services-Spezifikationen unterstützen. Dieses Thema führt die unterstützten technischen Daten sowie die Bindungen auf, die sie unterstützen.  
+ WCF wird erstellt, um die Interoperation mit Webdiensten konzipiert, die eine Reihe von Spezifikationen, bekannt als Web-Services-Spezifikationen unterstützen. Dieses Thema führt die unterstützten technischen Daten sowie die Bindungen auf, die sie unterstützen.  
   
  [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- Erläutert, wie COM+-Anwendungen als [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste verfügbar gemacht werden können.  
+ Erläutert, wie COM+-Anwendungen als WCF-Dienste verfügbar gemacht werden können.  
   
  [Integrieren von COM-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)  
- Erläutert die verschiedenen Methoden, damit COM-Anwendungen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste aufrufen.  
+ Beschreibt verschiedene Methoden für COM-Anwendungen das Aufrufen von WCF-Dienste.  
   
  [Migrieren von .NET-Remoteanwendungen nach WCF](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
- Beschreibt, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Remoting verwendet werden kann.  
+ Beschreibt, wie WCF mit verwendet werden kann [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting.  
   
  [Interoperabilität mit Web Services Enhancements 3.0](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
- Beschreibt, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit Webdiensten, die mit Web Services Enhancements 3.0 (WSE) implementiert werden, verwendet werden kann.  
+ Beschreibt, wie WCF mit Webdiensten, die mit Web Services Enhancements (WSE) 3.0 implementiert verwendet werden kann.  
   
  [Migrieren von WSE 3.0-Webdiensten zu WCF](../../../../docs/framework/wcf/feature-details/migrating-wse-3-0-web-services-to-wcf.md)  
- Beschreibt, wie ein WSE 3.0-Webdienst zu einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst migriert wird.  
+ Beschreibt, wie eine WSE 3.0-Webdiensts an einen WCF-Dienst zu migrieren.  
   
  [Interoperabilität mit ASP.NET-Webdiensten](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
- Beschreibt, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdiensten zusammenarbeiten kann.  
+ Beschreibt, wie WCF mit zusammenwirken kann [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webdienste.  
   
  [Migrieren von ASP.NET-Webdiensten zu WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Beschreibt, wie ein [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdienst zu einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst migriert wird.  
+ Beschreibt das Migrieren einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web-Dienst an einen WCF-Dienst.  
   
  [Migrieren von ASP.NET-Webdiensten zu WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Beschreibt, wie ein [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdienst zu einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst migriert wird.  
+ Beschreibt das Migrieren einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web-Dienst an einen WCF-Dienst.  
   
  [Migrieren von ASP.NET-Webdiensten zu WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Beschreibt, wie ein [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdienst zu einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst migriert wird.  
+ Beschreibt das Migrieren einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web-Dienst an einen WCF-Dienst.  
   
  [Interoperabilität mit POX-Anwendungen](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
- Beschreibt, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sowohl Dienste als auch Clients bereitstellt, die "Plain Old XML"-Nachrichten (POX) verwenden.  
+ Beschreibt, wie WCF bietet, die Dienste und Clients, die "Plain Old XML" (POX) Nachrichten verwenden.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel>  

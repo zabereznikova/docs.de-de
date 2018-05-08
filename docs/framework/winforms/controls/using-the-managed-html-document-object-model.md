@@ -1,28 +1,14 @@
 ---
 title: Verwenden des verwalteten HTML-Dokumentobjektmodells
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 876cee67f917291214d6ea8b9abf7d2975c1fd25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 95b14ae455ef8fcd0a81decec21b8305f2573643
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-managed-html-document-object-model"></a>Verwenden des verwalteten HTML-Dokumentobjektmodells
 Das verwaltete HTML-Dokumentobjektmodell (DOM) stellt einen Wrapper, die auf der Grundlage der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] für die HTML-Klassen, die von Internet Explorer verfügbar gemacht werden. Verwenden Sie diese Klassen zum Bearbeiten von HTML-Seiten in gehosteten der <xref:System.Windows.Forms.WebBrowser> -Steuerelement, oder um neue Seiten vom Anfang zu erstellen.  
@@ -43,7 +29,7 @@ Das verwaltete HTML-Dokumentobjektmodell (DOM) stellt einen Wrapper, die auf der
  [Zugreifen auf nicht verfügbar gemachte Member des verwalteten HTML-Dokumentobjektmodells](../../../../docs/framework/winforms/controls/accessing-unexposed-members-on-the-managed-html-document-object-model.md)  
  Beschreibt, wie die Member des zugrunde liegenden DOM zuzugreifen, die nicht über eine verwaltete Entsprechung verfügen.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.HtmlDocument>  
   
  <xref:System.Windows.Forms.HtmlElement>  

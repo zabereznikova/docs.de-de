@@ -1,34 +1,20 @@
 ---
 title: Konfigurieren und Erweitern der Laufzeit mit Verhalten
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurieren und Erweitern der Laufzeit mit Verhalten
-Verhalten ermöglichen es, das Standardverhalten zu ändern und benutzerdefinierte Erweiterungen hinzuzufügen, die die Dienstkonfiguration überprüfen, oder das Laufzeitverhalten in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client- und Dienstanwendungen zu ändern. In diesem Thema werden die Verhaltensschnittstellen beschrieben und erläutert, wie sie implementiert und wie sie zur Dienstbeschreibung (in einer Dienstanwendung) oder zu einem Endpunkt (in einer Clientanwendung) programmgesteuert oder in einer Konfigurationsdatei hinzugefügt werden können. Weitere Informationen zum Verwenden von vom System bereitgestellte Verhalten, finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) und [Angabe zur Laufzeit Clientverhalten](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+Verhalten ermöglichen es Ihnen, Standardverhalten ändern und benutzerdefinierte Erweiterungen, die zu überprüfen und Dienstkonfiguration zu überprüfen oder das Laufzeitverhalten in Windows Communication Foundation (WCF)-Client und Dienst Anwendungen hinzufügen. In diesem Thema werden die Verhaltensschnittstellen beschrieben und erläutert, wie sie implementiert und wie sie zur Dienstbeschreibung (in einer Dienstanwendung) oder zu einem Endpunkt (in einer Clientanwendung) programmgesteuert oder in einer Konfigurationsdatei hinzugefügt werden können. Weitere Informationen zum Verwenden von vom System bereitgestellte Verhalten, finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) und [Angabe zur Laufzeit Clientverhalten](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Verhalten  
- Verhaltenstypen werden zu den Dienst- oder Dienstendpunkt-Beschreibungsobjekten (auf der Dienst- bzw. Clientseite) hinzugefügt, bevor diese Objekte von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zum Erstellen einer Laufzeit verwendet werden, die einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst oder einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client ausführt. Wenn diese Verhaltenstypen während des Lauftzeitkonstruktionsprozesses aufgerufen werden, können sie auf Laufzeiteigenschaften und -methoden zugreifen, die die vom Vertrag, von den Bindungen und von den Adressen erstellte Laufzeit ändern.  
+ Verhaltenstypen werden hinzugefügt, die Dienst- oder Dienstendpunkt-beschreibungsobjekten (auf den Dienst oder Client, bzw.), bevor diese Objekte von Windows Communication Foundation (WCF) verwendet werden, um eine Laufzeit zu erstellen, die ausgeführt wird eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst oder eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client. Wenn diese Verhaltenstypen während des Lauftzeitkonstruktionsprozesses aufgerufen werden, können sie auf Laufzeiteigenschaften und -methoden zugreifen, die die vom Vertrag, von den Bindungen und von den Adressen erstellte Laufzeit ändern.  
   
 ### <a name="behavior-methods"></a>Verhaltensmethoden  
  Alle Verhaltenstypen verfügen über eine `AddBindingParameters`-Methode, eine `ApplyDispatchBehavior`-Methode, eine `Validate`-Methode und eine `ApplyClientBehavior`-Methode mit einer Ausnahme: Da <xref:System.ServiceModel.Description.IServiceBehavior> nicht in einem Client ausgeführt werden kann, wird `ApplyClientBehavior` nicht implementiert.  

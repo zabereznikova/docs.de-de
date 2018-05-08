@@ -1,28 +1,16 @@
 ---
 title: Verwenden des Designers mit dem DataGridView-Steuerelement in Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tables [Windows Forms]
 - DataGridView control [Windows Forms], designer support
 - formatting [Windows Forms]
 ms.assetid: b66057a6-5983-4864-b4e7-8cbc88a7010c
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9df10ecabc8f61c3ef984adb6466f195395fd181
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 618e422c893d0f0c1870d5b9bf2360eb946dd3c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Verwenden des Designers mit dem DataGridView-Steuerelement in Windows Forms
 Visual Studio stellt Designer-Unterstützung für die `DataGridView` Steuerelement, das Ihnen ermöglicht, viele Aufgaben zur methodeneinrichtung auszuführen, ohne Code zu schreiben. Diesen Aufgaben zählt das Steuerelement mit einer Datenquelle, und Ändern von Spalten zum Anzeigen von Daten verwendete Bindung und das Anpassen der Darstellung und das grundlegende Verhalten des Steuerelements.  
@@ -61,7 +49,7 @@ Visual Studio stellt Designer-Unterstützung für die `DataGridView` Steuereleme
  [Gewusst wie: Festlegen von standardmäßigen Zellenstilen und Datenformaten für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/default-cell-styles-datagridview.md)  
  Beschreibt, wie die **CellStyle-Generator** Dialogfeld zum Einrichten die grundlegende Darstellung und die Darstellung der Daten für das Steuerelement formatiert.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   

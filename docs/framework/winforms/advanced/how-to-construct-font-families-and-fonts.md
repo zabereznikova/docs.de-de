@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e152c525550554082d7d6c38a972ccc150adabb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceace5950ec135ea4d52081da7d1de7a820583ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Schriftarten mit dem gleichen Schriftart, aber unterschiedliche Stile gruppiert in Schriftartfamilien. Die Schriftart Arial Familie enthält beispielsweise die folgenden Schriftarten:  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Schriftarten mit dem gleichen Schriftart, aber unterschiedliche Stile gruppiert in Schriftartfamilien. Die Schriftart Arial Familie enthält beispielsweise die folgenden Schriftarten:  
   
 -   Arial reguläre  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Arial Bold Italic  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]vier Stile Familien verwendet: Normal, fett, kursiv und fett kursiv. Adjektive wie z. B. *eingrenzen* und *gerundet* Stile; werden nicht berücksichtigt werden Teil des Namens der Familie. Arial Narrow ist beispielsweise eine Schriftfamilie mit den folgenden Elementen:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vier Stile Familien verwendet: Normal, fett, kursiv und fett kursiv. Adjektive wie z. B. *eingrenzen* und *gerundet* Stile; werden nicht berücksichtigt werden Teil des Namens der Familie. Arial Narrow ist beispielsweise eine Schriftfamilie mit den folgenden Elementen:  
   
 -   Arial Schmal reguläre  
   
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt einen Schriftschnitt Schriftart Arial mit einer Größe von 16 Pixel. Im folgenden Code wird das erste Argument übergeben, um die <xref:System.Drawing.Font.%23ctor%2A> Konstruktor ist die <xref:System.Drawing.FontFamily> Objekt. Das zweite Argument gibt die Größe der Schriftart an, gemessen in Einheiten, die durch das vierte Argument identifiziert. Das dritte Argument gibt den Stil.  
   
- <xref:System.Drawing.GraphicsUnit.Pixel>ist ein Mitglied der <xref:System.Drawing.GraphicsUnit> Enumeration und <xref:System.Drawing.FontStyle.Regular> ist ein Mitglied der <xref:System.Drawing.FontStyle> Enumeration.  
+ <xref:System.Drawing.GraphicsUnit.Pixel> ist ein Mitglied der <xref:System.Drawing.GraphicsUnit> Enumeration und <xref:System.Drawing.FontStyle.Regular> ist ein Mitglied der <xref:System.Drawing.FontStyle> Enumeration.  
   
  [!code-csharp[System.Drawing.FontsAndText#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.FontsAndText#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  

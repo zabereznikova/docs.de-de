@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Festlegen der Aktivierreihenfolge in Windows Forms"
-ms.custom: 
+title: 'Gewusst wie: Festlegen der Aktivierreihenfolge in Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - TabStop
 - TabIndex
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de52a4d7784eb4508d5cf5026b394b7b63ecc56e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ca5b9c29d9138d4e17fbf187e35951dbec614aab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Gewusst wie: Festlegen der Aktivierreihenfolge in Windows Forms
 Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer von einem Steuerelement zu einem anderen Fokus durch Drücken der TAB-Taste. Jedes Formular verfügt über eine eigene Aktivierreihenfolge. Standardmäßig ist die Reihenfolge der Registerkarten identisch mit der Reihenfolge, in der Sie die Steuerelemente erstellt. Reihenfolge der Registerkarten Nummerierung beginnt mit 0 (null).  

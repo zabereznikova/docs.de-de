@@ -1,28 +1,16 @@
 ---
-title: "Übersicht über Typkonverter für XAML"
-ms.custom: 
+title: Übersicht über Typkonverter für XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converters
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-caps.latest.revision: "14"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b59b88c38b6fa7f810bb3a12de09a962eb5679c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df6b7f212a60d8d51bb684891055de7e285ddf4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-converters-for-xaml-overview"></a>Übersicht über Typkonverter für XAML
 Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konvertierung von einer Zeichenfolge im XAML-Markup in bestimmte Objekte in einem Objektdiagramm vornimmt. In .NET Framework XAML Services muss der Typkonverter eine Klasse sein, die aus <xref:System.ComponentModel.TypeConverter>abgeleitet wird. Einige Konverter unterstützen zudem den XAML-Speicherpfad und können zum Serialisieren eines Objekts in ein Zeichenfolgenformular im Serialisierungsmarkup verwendet werden. In diesem Thema wird beschrieben, wie und wann Typkonverter in XAML aufgerufen werden. Zudem enthält es Implementierungsratschläge für die Methodenüberschreibungen von <xref:System.ComponentModel.TypeConverter>.  
@@ -81,7 +69,7 @@ Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konverti
  Jede <xref:System.ComponentModel.TypeConverter> -Implementierung kann eindeutig interpretieren, was eine gültige Zeichenfolge für eine Konvertierung ausmacht, und sie kann zudem die Typbeschreibung oder Kulturkontexte verwenden oder ignorieren, die als Parameter weitergegeben werden. Bei der WPF-XAML-Verarbeitung werden jedoch möglicherweise nicht in allen Fällen Werte an den Typbeschreibungskontext weitergegeben, und wird möglicherweise zudem nicht die Kultur auf Grundlage von `xml:lang`weitergegeben.  
   
 > [!NOTE]
->  Verwenden Sie keine geschweiften Klammern ({}), und zwar insbesondere nicht die öffnende schweifende Klammer ({) als ein Element Ihres Zeichenfolgenformats- Diese Zeichen sind als ein Eintrag reserviert und dienen dem Beenden einer Markuperweiterungssequenz.  
+>  Verwenden Sie nicht die geschweiften Klammern ({}), insbesondere der öffnenden geschweiften Klammer ({}), als ein Element Ihres Zeichenfolgenformats-. Diese Zeichen sind als ein Eintrag reserviert und dienen dem Beenden einer Markuperweiterungssequenz.  
   
  Es ist angemessen, eine Ausnahme auszulösen, wenn Ihr Typkonverter über Zugriff auf einen XAML-Dienst vom .NET Framework XAML Services-Objekt-Writer verfügen muss, der <xref:System.IServiceProvider.GetService%2A> -Aufruf, der für den Kontext ausgeführt wird, jedoch keinen Kontext für diesen Dienst zurückgibt.  
   
@@ -106,7 +94,7 @@ Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konverti
 ## <a name="applying-the-typeconverterattribute"></a>Anwenden von TypeConverterAttribute  
  Damit Ihr benutzerdefinierter Typkonverter als der agierende Typkonverter für eine benutzerdefinierte Klasse durch .NET Framework XAML Services verwendet wird, müssen Sie das [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> auf Ihre Klassendefinition anwenden. Beim <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> , den Sie über das Attribut angeben, muss es sich um den Typnamen Ihres benutzerdefinierten Typkonverters handeln. Beim Anwenden dieses Attributs, wenn ein XAML-Prozessor Werte verarbeitet, bei denen der Eigenschaftstyp Ihren benutzerdefinierten Klassentyp verwendet, kann es Zeichenfolgen eingeben und Objektinstanzen zurückgeben.  
   
- Sie können auch einen Typkonverter auf Grundlage einzelner Eigenschaften bereitstellen. Anstelle ein [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> auf die Klassendefinition anzuwenden, wenden Sie es auf eine Eigenschaftsdefinition (die Hauptdefinition, nicht die darin enthaltenen `get`/`set` -Implementierungen) an. Der Eigenschaftstyp muss mit dem Typ übereinstimmen, der durch Ihren benutzerdefinierten Typkonverter verarbeitet wird. Wenn dieses Attribut angewendet ist, wenn ein XAML-Prozessor Werte dieser Eigenschaft verarbeitet, kann es Eingabezeichenfolgen verarbeiten und Objektinstanzen zurückgeben. Die Typkonvertertechnik auf Grundlage einzelner Eigenschaften ist insbesondere nützlich, wenn Sie einen Eigenschaftstyp aus [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] oder eine andere Bibliothek verwenden möchten, wo Sie die Klassendefinition weder steuern noch dort ein <xref:System.ComponentModel.TypeConverterAttribute> anwenden können.  
+ Sie können auch einen Typkonverter auf Grundlage einzelner Eigenschaften bereitstellen. Anstelle ein [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> auf die Klassendefinition anzuwenden, wenden Sie es auf eine Eigenschaftsdefinition (die Hauptdefinition, nicht die darin enthaltenen `get`/`set` -Implementierungen) an. Der Eigenschaftstyp muss mit dem Typ übereinstimmen, der durch Ihren benutzerdefinierten Typkonverter verarbeitet wird. Wenn dieses Attribut angewendet ist, wenn ein XAML-Prozessor Werte dieser Eigenschaft verarbeitet, kann es Eingabezeichenfolgen verarbeiten und Objektinstanzen zurückgeben. Die pro Eigenschaft Typ-Konverter Technik ist besonders nützlich, wenn Sie auswählen, verwenden Sie einen Eigenschaftstyp aus Microsoft .NET Framework oder eine andere Bibliothek verwenden, in dem Sie die Klassendefinition weder steuern und können nicht angewendet werden, eine <xref:System.ComponentModel.TypeConverterAttribute> vorhanden.  
   
  Wenden Sie zum Bereitstellen eines Typkonvertierungsverhaltens für ein benutzerdefiniertes angefügtes Member <xref:System.ComponentModel.TypeConverterAttribute> auf die `Get` -Accessor-Methode des Implementierungsmusters für das angefügte Member an.  
   

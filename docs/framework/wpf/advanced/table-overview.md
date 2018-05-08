@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über Tabellen"
-ms.custom: 
+title: Übersicht über Tabellen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 922faa06456a1aa86ffd0c805ab33577280ccf4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 631a14ae8eb17713186f7db66700026cc476024e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="table-overview"></a>Übersicht über Tabellen
-<xref:System.Windows.Documents.Table>ist ein Block-Level-Element, das rasterbasierte Darstellung des Dokumentinhalts Fluss unterstützt. Die Flexibilität dieses Elements macht es nicht nur sehr hilfreich, sondern auch schwieriger zu verstehen und richtig zu verwenden.  
+<xref:System.Windows.Documents.Table> ist ein Block-Level-Element, das rasterbasierte Darstellung des Dokumentinhalts Fluss unterstützt. Die Flexibilität dieses Elements macht es nicht nur sehr hilfreich, sondern auch schwieriger zu verstehen und richtig zu verwenden.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -55,11 +43,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>Worin unterscheidet sich eine Tabelle von einem Raster?  
- <xref:System.Windows.Documents.Table>und <xref:System.Windows.Controls.Grid> haben einige allgemeine Funktionen gemeinsam, aber jede eignet sich optimal für verschiedene Szenarien. Ein <xref:System.Windows.Documents.Table> dient zur Verwendung innerhalb des fortlaufenden Inhalts (finden Sie unter [Nachrichtenfluss-Dokument (Übersicht)](../../../../docs/framework/wpf/advanced/flow-document-overview.md) für Weitere Informationen zu fortlaufendem Inhalt). Raster eignen sich am besten für den Einsatz in Formularen (also eigentlich überall dort, wo es keinen fortlaufenden Inhalt gibt). Innerhalb einer <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> unterstützt flow Content Verhalten wie die Paginierung Spalte Umfließen und Inhaltsauswahl beim eine <xref:System.Windows.Controls.Grid> hingegen nicht. Ein <xref:System.Windows.Controls.Grid> andererseits wird außerhalb der am besten verwendet eine <xref:System.Windows.Documents.FlowDocument> vielen Gründen <xref:System.Windows.Controls.Grid> fügt Elemente basierend auf einer Zeile und Spalte Index <xref:System.Windows.Documents.Table> hingegen nicht. Die <xref:System.Windows.Controls.Grid> -Element ermöglicht die Anordnung von untergeordnetem Inhalt, sodass mehr als ein Element in einer "Zelle" vorhanden sein <xref:System.Windows.Documents.Table>Ebenenstruktur unterstützt nicht. Untergeordnete Elemente von einem <xref:System.Windows.Controls.Grid> relativ zum Bereich des Umrisslinien "Zelle" absolut positioniert werden kann. <xref:System.Windows.Documents.Table>Dieses Feature wird nicht unterstützt werden. Schließlich eine <xref:System.Windows.Controls.Grid> weniger Ressourcen erfordert ein <xref:System.Windows.Documents.Table> daher sollten Sie mithilfe einer <xref:System.Windows.Controls.Grid> zur Verbesserung der Leistung.  
+ <xref:System.Windows.Documents.Table> und <xref:System.Windows.Controls.Grid> haben einige allgemeine Funktionen gemeinsam, aber jede eignet sich optimal für verschiedene Szenarien. Ein <xref:System.Windows.Documents.Table> dient zur Verwendung innerhalb des fortlaufenden Inhalts (finden Sie unter [Nachrichtenfluss-Dokument (Übersicht)](../../../../docs/framework/wpf/advanced/flow-document-overview.md) für Weitere Informationen zu fortlaufendem Inhalt). Raster eignen sich am besten für den Einsatz in Formularen (also eigentlich überall dort, wo es keinen fortlaufenden Inhalt gibt). Innerhalb einer <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> unterstützt flow Content Verhalten wie die Paginierung Spalte Umfließen und Inhaltsauswahl beim eine <xref:System.Windows.Controls.Grid> hingegen nicht. Ein <xref:System.Windows.Controls.Grid> andererseits wird außerhalb der am besten verwendet eine <xref:System.Windows.Documents.FlowDocument> vielen Gründen <xref:System.Windows.Controls.Grid> fügt Elemente basierend auf einer Zeile und Spalte Index <xref:System.Windows.Documents.Table> hingegen nicht. Die <xref:System.Windows.Controls.Grid> -Element ermöglicht die Anordnung von untergeordnetem Inhalt, sodass mehr als ein Element in einer "Zelle" vorhanden sein <xref:System.Windows.Documents.Table> Ebenenstruktur unterstützt nicht. Untergeordnete Elemente von einem <xref:System.Windows.Controls.Grid> relativ zum Bereich des Umrisslinien "Zelle" absolut positioniert werden kann. <xref:System.Windows.Documents.Table> Dieses Feature wird nicht unterstützt werden. Schließlich eine <xref:System.Windows.Controls.Grid> weniger Ressourcen erfordert ein <xref:System.Windows.Documents.Table> daher sollten Sie mithilfe einer <xref:System.Windows.Controls.Grid> zur Verbesserung der Leistung.  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>Grundlegende Tabellenstruktur  
- <xref:System.Windows.Documents.Table>Stellt eine rasterbasierte Darstellung aus Spalten besteht (dargestellt durch <xref:System.Windows.Documents.TableColumn> Elemente) und Zeilen (dargestellt durch <xref:System.Windows.Documents.TableRow> Elemente). <xref:System.Windows.Documents.TableColumn>Elemente hosten keinen Inhalt. einfach definieren die Spalten und die Eigenschaften der Spalten. <xref:System.Windows.Documents.TableRow>Elemente müssen gehostet werden, einem <xref:System.Windows.Documents.TableRowGroup> -Element, das eine Gruppe von Zeilen für die Tabelle definiert. <xref:System.Windows.Documents.TableCell>Elemente, die enthalten, den tatsächlichen Inhalt der Tabelle dargestellt werden soll, müssen gehostet werden, einem <xref:System.Windows.Documents.TableRow> Element. <xref:System.Windows.Documents.TableCell>kann nur Elemente enthalten, die Ableitung <xref:System.Windows.Documents.Block>.  Gültige untergeordnete Elemente für eine <xref:System.Windows.Documents.TableCell> enthalten.  
+ <xref:System.Windows.Documents.Table> Stellt eine rasterbasierte Darstellung aus Spalten besteht (dargestellt durch <xref:System.Windows.Documents.TableColumn> Elemente) und Zeilen (dargestellt durch <xref:System.Windows.Documents.TableRow> Elemente). <xref:System.Windows.Documents.TableColumn> Elemente hosten keinen Inhalt. einfach definieren die Spalten und die Eigenschaften der Spalten. <xref:System.Windows.Documents.TableRow> Elemente müssen gehostet werden, einem <xref:System.Windows.Documents.TableRowGroup> -Element, das eine Gruppe von Zeilen für die Tabelle definiert. <xref:System.Windows.Documents.TableCell> Elemente, die enthalten, den tatsächlichen Inhalt der Tabelle dargestellt werden soll, müssen gehostet werden, einem <xref:System.Windows.Documents.TableRow> Element. <xref:System.Windows.Documents.TableCell> kann nur Elemente enthalten, die Ableitung <xref:System.Windows.Documents.Block>.  Gültige untergeordnete Elemente für eine <xref:System.Windows.Documents.TableCell> enthalten.  
   
 -   <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -72,10 +60,10 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell>Elemente können nicht direkt-Text-Inhalt hosten. Weitere Informationen über die Kapselungsregeln für fortlaufenden Inhaltselemente wie <xref:System.Windows.Documents.TableCell>, finden Sie unter [Nachrichtenfluss-Dokument (Übersicht)](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+>  <xref:System.Windows.Documents.TableCell> Elemente können nicht direkt-Text-Inhalt hosten. Weitere Informationen über die Kapselungsregeln für fortlaufenden Inhaltselemente wie <xref:System.Windows.Documents.TableCell>, finden Sie unter [Nachrichtenfluss-Dokument (Übersicht)](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Table>ähnelt der <xref:System.Windows.Controls.Grid> Element aber verfügt über weitere Funktionen und daher benötigt größer Ressourcenaufwand.  
+>  <xref:System.Windows.Documents.Table> ähnelt der <xref:System.Windows.Controls.Grid> Element aber verfügt über weitere Funktionen und daher benötigt größer Ressourcenaufwand.  
   
  Das folgende Beispiel definiert eine einfache 2 x 3-Tabelle mit [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Tabellenkapselung  
- <xref:System.Windows.Documents.Table>leitet sich von der <xref:System.Windows.Documents.Block> Element, und befolgt die allgemeinen Regeln für <xref:System.Windows.Documents.Block> Elemente der Ebene.  Ein <xref:System.Windows.Documents.Table> Element kann eines der folgenden Elemente enthalten sein:  
+ <xref:System.Windows.Documents.Table> leitet sich von der <xref:System.Windows.Documents.Block> Element, und befolgt die allgemeinen Regeln für <xref:System.Windows.Documents.Block> Elemente der Ebene.  Ein <xref:System.Windows.Documents.Table> Element kann eines der folgenden Elemente enthalten sein:  
   
 -   <xref:System.Windows.Documents.FlowDocument>  
   

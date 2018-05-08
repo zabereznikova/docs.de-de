@@ -1,27 +1,15 @@
 ---
-title: "TextBox-Steuerelement (Windows Forms)"
-ms.custom: 
+title: TextBox-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - text boxes
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d606140a5be2b1770bc5a16159e96e20b0fccdd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe5bafa5c21a3946df33821d358185f3aba67222
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox-Steuerelement (Windows Forms)
 Windows Forms-Textfelder dienen, die vom Benutzer Eingabe abzurufen oder um Text anzuzeigen. Die `TextBox` Steuerelement wird im Allgemeinen für bearbeitbares Textfeld verwendet, obwohl sie auch schreibgeschützt festgelegt werden kann. Textfelder können mehrere Zeilen angezeigt, Zeilenumbruch, um die Größe des Steuerelements und einfache Formatierung hinzufügen. Die `TextBox` Steuerelement ein Format für Text angezeigt oder in das Steuerelement eingegeben werden können.  
@@ -48,7 +36,7 @@ Windows Forms-Textfelder dienen, die vom Benutzer Eingabe abzurufen oder um Text
  [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
  Beschreibt, wie ein Textfeld, das bildlauffähig machen.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.TextBox>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

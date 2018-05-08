@@ -1,12 +1,6 @@
 ---
 title: Unterschiede zwischen Eigenschaften und Variablen in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
 - variables [Visual Basic]
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cb30972e2b49a7005749f57c0223b9fa493cde52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 126e4baa2752ba7ccb5e8ff7b06a44839c1d0af2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Unterschiede zwischen Eigenschaften und Variablen in Visual Basic
 Variablen und Eigenschaften, die beide Werte darzustellen, die Sie zugreifen können. Es gibt jedoch Unterschiede in den Speicher und die Implementierung.  
@@ -46,7 +37,7 @@ Variablen und Eigenschaften, die beide Werte darzustellen, die Sie zugreifen kö
 |Deklaration|Einzelne deklarationsanweisung|Reihe von Anweisungen in einem Codeblock|  
 |Implementierung|Einziger Speicherort|Ausführbarer Code (Eigenschaftenprozeduren)|  
 |Speicher|Direkt zugeordnet und des Variablenwerts|In der Regel hat internen Speicher außerhalb der Eigenschaft enthaltende Klasse oder das Modul nicht verfügbar.<br /><br /> Den Wert der Eigenschaft möglicherweise existiert oder nicht als gespeicherte Element <sup>1</sup>|  
-|Ausführbarer code|Keine|Benötigen Sie mindestens eine Prozedur|  
+|Ausführbarer code|Keiner|Benötigen Sie mindestens eine Prozedur|  
 |Lese- und Schreibzugriff|Lese-/Schreibzugriff oder schreibgeschützt|Lese-/Schreibzugriff, schreibgeschützt oder lesegeschützt|  
 |Benutzerdefinierte Aktionen (zusätzlich zum Akzeptieren oder zurückgeben Wert)|Nicht möglich|Kann als Teil des festlegen oder Abrufen des Eigenschaftswerts ausgeführt werden|  
   

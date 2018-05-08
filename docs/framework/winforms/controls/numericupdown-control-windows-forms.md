@@ -1,13 +1,6 @@
 ---
-title: "NumericUpDown-Steuerelement (Windows Forms)"
-ms.custom: 
+title: NumericUpDown-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, NumericUpDown control
 - spin button control [Windows Forms], up-down controls
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - spin button control
 - NumericUpDown control [Windows Forms]
 ms.assetid: 32b0c20d-4f37-4aea-873d-faded741d2db
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d57bccb12bfa9b0b193967a5a2ce3830dd6ef7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 24e2464eaa94f104d167add1f5fe696b7622ee09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown-Steuerelement (Windows Forms)
 Das `NumericUpDown`-Steuerelement in Windows Forms sieht wie eine Kombination aus einem Textfeld und einem Paar Pfeilen aus, auf die der Benutzer klicken kann, um einen Wert anzupassen. Das Steuerelement zeigt einen einzelnen numerischen Wert aus einer Liste mit Auswahlmöglichkeiten an und legt ihn fest. Die Zahl kann durch Klicken auf die Schaltflächen Nach oben bzw. Nach unten oder durch Drücken der NACH-OBEN- bzw. der NACH-UNTEN-TASTE und Eingabe einer Zahl vergrößert oder verkleinert werden. Durch Drücken der NACH-OBEN-TASTE wird der Wert in Richtung Maximalwert geändert. Durch Drücken der NACH-UNTEN-TASTE wird der Wert in Richtung Minimum geändert. Diese Art des Steuerelements ist z. B. zur Lautstärkeregelung bei der Musikwiedergabe sinnvoll. Numerische Auf-Ab-Steuerelemente werden in einigen Anwendungen der Windows-Systemsteuerung verwendet.  
@@ -40,7 +28,7 @@ Das `NumericUpDown`-Steuerelement in Windows Forms sieht wie eine Kombination au
  [Gewusst wie: Festlegen des Formats für das NumericUpDown-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
  Beschreibt die Konfiguration der Anzeige von Werten in einem Steuerelement.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.NumericUpDown>  
  Enthält Referenzinformationen zur <xref:System.Windows.Forms.NumericUpDown>-Klasse und zu ihren Membern.  
   

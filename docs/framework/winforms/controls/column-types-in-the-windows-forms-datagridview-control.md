@@ -1,28 +1,16 @@
 ---
 title: Spaltentypen im DataGridView-Steuerelement in Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6630323b66265f478151ec80ab8b225c0b653917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Spaltentypen im DataGridView-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet mehrere Spaltentypen zu Ihr gehörigen Informationen angezeigt und Benutzern ermöglichen, ändern oder Hinzufügen von Informationen.  
@@ -53,7 +41,7 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet mehrere Spa
  Die Zelle Wert Datentyp einer Spalte wird angegeben, der <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> -Eigenschaft der Spalte.  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- Die <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> wird verwendet, mit <xref:System.Boolean> und <xref:System.Windows.Forms.CheckState> Werte. <xref:System.Boolean>-Werte werden als zwei oder drei-Status-Kontrollkästchen, abhängig vom Wert der <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> Eigenschaft. Wenn die Spalte gebunden ist, um <xref:System.Windows.Forms.CheckState> Werte, die <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> Eigenschaftswert ist `true` standardmäßig.  
+ Die <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> wird verwendet, mit <xref:System.Boolean> und <xref:System.Windows.Forms.CheckState> Werte. <xref:System.Boolean> -Werte werden als zwei oder drei-Status-Kontrollkästchen, abhängig vom Wert der <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> Eigenschaft. Wenn die Spalte gebunden ist, um <xref:System.Windows.Forms.CheckState> Werte, die <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> Eigenschaftswert ist `true` standardmäßig.  
   
  In der Regel sind Zellwerte das Kontrollkästchen für die Speicherung, wie alle anderen Daten oder zum Ausführen von Massenvorgängen vorgesehen. Wenn Sie reagieren sofort, wenn Benutzer auf eine Zelle Kontrollkästchen klicken, können Sie behandeln möchten die <xref:System.Windows.Forms.DataGridView.CellClick> Ereignis, aber dieses Ereignis tritt auf, bevor der Wert der Zelle aktualisiert wird. Wenn Sie den neuen Wert zum Zeitpunkt der klicken möchten, ist eine Option zu berechnen, was dem erwarteten Wert basierend auf den aktuellen Wert. Ein anderer Ansatz besteht darin, die Änderung sofort übernehmen und behandeln die <xref:System.Windows.Forms.DataGridView.CellValueChanged> Ereignis, um darauf zu reagieren. Um die Änderung zu übernehmen, wenn die Zelle geklickt wird, müssen Sie behandeln die <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> Ereignis. Wenn die aktuelle Zelle ein Kontrollkästchen-Zelle ist, rufen Sie in den Handler auf, die <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> Methode und übergeben der <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> Wert.  
   

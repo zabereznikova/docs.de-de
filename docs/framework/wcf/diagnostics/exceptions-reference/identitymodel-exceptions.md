@@ -1,24 +1,12 @@
 ---
 title: IdentityModel-Ausnahmen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel-Ausnahmen
 In diesem Thema werden alle Ausnahmen aufgelistet, die vom IdentityModel generiert werden.  
@@ -91,8 +79,8 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die vom IdentityModel generie
 |SAMLSignatureAlreadyRead|Die Signatur wird bereits in der SAML-Assertion gelesen.|  
 |AlgorithmAndPrivateKeyMisMatch|Der angegebene Algorithmus und der private Schlüssel passen nicht zusammen.|  
 |EmptyTransformChainNotSupported|Die leere Transformationskette wird nicht unterstützt.|  
-|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper &#124; " Offset "liegt außerhalb des gültigen Bereichs.|  
-|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper &#124; " Größe ' liegt außerhalb des gültigen Bereichs. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=Der Sicherheitstoken-Manager kann keinen Tokenauthentifizierer für diese bestimmte Anforderung erstellen.|  
+|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;"Offset" liegt außerhalb des gültigen Bereichs.|  
+|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;"Size" liegt außerhalb des gültigen Bereichs. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=Der Sicherheitstoken-Manager kann keinen Tokenauthentifizierer für diese bestimmte Anforderung erstellen.|  
 |UnableToCreateKeyedHashAlgorithm|Unfähig, einen KeyedHashAlgorithm aus dem bestimmten Wert für den bestimmten Signaturalgorithmus zu erstellen.|  
 |SAMLUnableToLoadAssertion|Die \<Saml:assertion > Element konnte nicht geladen.|  
 |X509FindValueMismatchMulti|Dieser bestimmte X509FindType erfordert, dass der Typ des Arguments findValue einen von 2 Werten annimmt. Das Argument „findValue“ ist ein anderer Typ.|  

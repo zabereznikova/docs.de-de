@@ -1,38 +1,24 @@
 ---
 title: Serialisierung und Deserialisierung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 754b09b3b90399c242ddbaf968242f969cb27b8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-and-deserialization"></a>Serialisierung und Deserialisierung
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] umfasst ein neues Serialisierungsmodul, <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Objekte in XML (und umgekehrt). In diesem Thema wird die Funktionsweise des Serialisierungsprogramms erklärt.  
+Windows Communication Foundation (WCF) enthält ein neues Serialisierungsmodul, das <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Objekte in XML (und umgekehrt). In diesem Thema wird die Funktionsweise des Serialisierungsprogramms erklärt.  
   
  Beim Serialisieren von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Objekten erkennt das Serialisierungsprogramm verschiedene Serialisierungsprogrammiermodelle, einschließlich des neuen *Datenvertrag* smodells. Eine vollständige Liste der unterstützten Typen finden Sie unter [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Eine Einführung in Datenverträge finden Sie unter [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- Beim Deserialisieren von XML verwendet das Serialisierungsprogramm die <xref:System.Xml.XmlReader> -Klasse und die <xref:System.Xml.XmlWriter> -Klasse. Zudem werden die <xref:System.Xml.XmlDictionaryReader> -Klasse und die <xref:System.Xml.XmlDictionaryWriter> -Klasse unterstützt, damit in bestimmten Fällen optimiertes XML erzeugt werden kann, beispielsweise beim Einsatz des binären XML-Formats von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+ Beim Deserialisieren von XML verwendet das Serialisierungsprogramm die <xref:System.Xml.XmlReader> -Klasse und die <xref:System.Xml.XmlWriter> -Klasse. Sie unterstützt auch die <xref:System.Xml.XmlDictionaryReader> und <xref:System.Xml.XmlDictionaryWriter> Klassen ermöglichen es zum Erzeugen optimiertes XML in einigen Fällen, z. B. wenn mit dem WCF-binary XML format.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] beinhaltet auch ein zugehöriges Serialisierungsprogramm namens <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> ähnelt den Serialisierungsprogrammen <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> , da auch hier [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typnamen zusammen mit den serialisierten Daten ausgegeben werden. Es wird verwendet, wenn die Endpunkte, die die Serialisierung und die Deserialisierung durchführen, die gleichen Datentypen verwenden. Sowohl <xref:System.Runtime.Serialization.DataContractSerializer> als auch <xref:System.Runtime.Serialization.NetDataContractSerializer> sind von der gemeinsamen Basisklasse <xref:System.Runtime.Serialization.XmlObjectSerializer>abgeleitet.  
+ WCF umfasst auch ein zugehöriges Serialisierungsprogramm Namens der <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> ähnelt den Serialisierungsprogrammen <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> , da auch hier [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typnamen zusammen mit den serialisierten Daten ausgegeben werden. Es wird verwendet, wenn die Endpunkte, die die Serialisierung und die Deserialisierung durchführen, die gleichen Datentypen verwenden. Sowohl <xref:System.Runtime.Serialization.DataContractSerializer> als auch <xref:System.Runtime.Serialization.NetDataContractSerializer> sind von der gemeinsamen Basisklasse <xref:System.Runtime.Serialization.XmlObjectSerializer>abgeleitet.  
   
 > [!WARNING]
 >  Der <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert Zeichenfolgen mit Steuerzeichen mit einem Hexadezimalwert kleiner als 20 als XML-Entitäten. Dies kann ein Problem mit einem nicht-WCF-Client führen, wenn solche Daten an einen WCF-Dienst zu senden.  
@@ -128,7 +114,7 @@ ms.lasthandoff: 04/30/2018
   
 -   Semantik. Gelegentlich ist es wichtig, die Tatsache zu vermerken, dass zwei Verweise auf das gleiche Objekt und nicht auf zwei identische Objekte zeigen.  
   
- Aus diesem Grund verfügen einige `DataContractSerializer` -Konstruktorüberladungen über den `preserveObjectReferences` -Parameter (dessen Standardwert lautet `false`). Wenn dieser Parameter auf `true`festgelegt wird, wird eine spezielle Methode zur Codierung von Objektreferenzen verwendet, die lediglich [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] versteht. Wenn der Parameter auf `true`festgelegt wird, sieht das XML-Codebeispiel etwa wie folgt aus.  
+ Aus diesem Grund verfügen einige `DataContractSerializer` -Konstruktorüberladungen über den `preserveObjectReferences` -Parameter (dessen Standardwert lautet `false`). Wenn dieser Parameter festgelegt ist, um `true`, eine spezielle Methode zur Codierung von Objektverweisen, die nur WCF versteht, verwendet wird. Wenn der Parameter auf `true`festgelegt wird, sieht das XML-Codebeispiel etwa wie folgt aus.  
   
 ```xml  
 <PurchaseOrder ser:id="1">  

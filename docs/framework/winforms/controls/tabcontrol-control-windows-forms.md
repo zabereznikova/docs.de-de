@@ -1,13 +1,6 @@
 ---
-title: "TabControl-Steuerelement (Windows Forms)"
-ms.custom: 
+title: TabControl-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TabControl control [Windows Forms]
 - tab controls
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 705f9dbb8ea7f4d462a2b19cc0c6b845ae8f578b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl-Steuerelement (Windows Forms)
 Mit `TabControl` in Windows Forms werden mehrere Registerkarten wie Karteireiter in einem Notizbuch oder Reiter in einem Satz von Ordnern in einem Aktenschrank angezeigt. Die Registerkarten können Bilder und weitere Steuerelemente enthalten. Verwenden Sie `TabControl`, um Eigenschaftenseiten zu erstellen.  
@@ -49,7 +37,7 @@ Mit `TabControl` in Windows Forms werden mehrere Registerkarten wie Karteireiter
   
  Siehe auch [wie: Hinzufügen und Entfernen von Registerkarten mit Windows Forms TabControl mithilfe des Designers](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte mithilfe des Designers](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.TabControl>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

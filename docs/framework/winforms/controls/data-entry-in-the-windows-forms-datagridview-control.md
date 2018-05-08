@@ -1,28 +1,16 @@
 ---
 title: Dateneingabe im DataGridView-Steuerelement in Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 - data entry [Windows Forms], dataGridView control
 - data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 399520738c53e149e7a5539a62a5d4599e26a8da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5870b3cedd18d605426c7e27981303adc9beb5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Dateneingabe im DataGridView-Steuerelement in Windows Forms
 Die `DataGridView` Steuerelement stellt mehrere Funktionen bereit, mit denen Sie ändern, wie Benutzer hinzufügen oder Ändern von Daten im Steuerelement. Beispielsweise können Sie Dateneingabe effizienter gestalten, indem Sie Standardwerte für neue Zeilen bereitstellen und warnen der Benutzer bei Auftreten eines Fehlers.  
@@ -43,7 +31,7 @@ Die `DataGridView` Steuerelement stellt mehrere Funktionen bereit, mit denen Sie
  [Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
  Beschreibt die Dateneingabe Fehler zu behandeln, die aus der Datenquelle stammen, wenn der Benutzer versucht, einen neuen Wert zu übernehmen.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   

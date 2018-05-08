@@ -1,13 +1,6 @@
 ---
 title: x:Class-Anweisung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:Class
 - xClass
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-caps.latest.revision: "27"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e6a2379640d2556b553d14d20398a0a14931393
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xclass-directive"></a>x:Class-Anweisung
 Konfiguriert die Verwendung von XAML-Markupkompilierung partielle Klassen zwischen Markup und CodeBehind verknüpft. Die partielle Klasse im Code wird in einer separaten Codedatei im definiert eine [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] Sprache, während die partielle Klasse im Markup in der Regel durch die Generierung von Code während der Verwendung von XAML-Kompilierung erstellt wird.  
@@ -47,12 +35,12 @@ Konfiguriert die Verwendung von XAML-Markupkompilierung partielle Klassen zwisch
 |`classname`|Erforderlich. Gibt die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] Name der partiellen Klasse, die die geladene XAML und der Code-Behind für XAML verbindet.|  
   
 ## <a name="dependencies"></a>Abhängigkeiten  
- `x:Class`kann nur für das Stammelement einer XAML-Produktion angegeben werden. `x:Class`für jedes Objekt, das ein übergeordnetes Element, in der XAML-Produktion verfügt ist ungültig. Weitere Informationen finden Sie unter [ \[MS-XAML-\] Abschnitt 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
+ `x:Class` kann nur für das Stammelement einer XAML-Produktion angegeben werden. `x:Class` für jedes Objekt, das ein übergeordnetes Element, in der XAML-Produktion verfügt ist ungültig. Weitere Informationen finden Sie unter [ \[MS-XAML-\] Abschnitt 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="remarks"></a>Hinweise  
  Die `namespace` Wert enthält möglicherweise zusätzliche Punkte zum Organisieren von verwandten Namespaces in Namenshierarchien, dies ist ein gängiges Verfahren in .NET Framework-Programmierung. Nur der letzte Punkt in einer Zeichenfolge `x:Class` Werte interpretiert separaten `namespace` und `classname.` die Klasse, die verwendet wird, als `x:Class` nicht mit eine geschachtelte Klasse. Geschachtelte Klassen sind nicht zulässig, da die Bedeutung der Punkte für die Bestimmung `x:Class` Zeichenfolgen ist mehrdeutig, wenn geschachtelte Klassen zulässig sind.  
   
- Programmieren Sie Modelle, die in vorhandenen `x:Class`, `x:Class` ist optional, in dem Sinne, dass er eine XAML-Seite vorhanden sein, das keine Code-Behind wurde vollständig gültig ist. Diese Funktion interagiert jedoch die Buildvorgänge wie von Frameworks implementiert, die XAML verwenden. `x:Class`Funktion wird auch durch die Rollen beeinflusst, verschiedenen Klassifizierungen des angegebenen XAML-Inhalt in einem Anwendungsmodell haben, und erstellen in den entsprechenden Aktionen. Wenn XAML-Code deklariert Ereignisbehandlung Attribut Werte oder benutzerdefinierte Elemente, in denen die definierenden Klassen in der Code-Behind-Klasse sind, instanziiert, müssen Sie angeben der `x:Class` Richtlinie Verweis (oder [X: Subclass-](../../../docs/framework/xaml-services/x-subclass-directive.md)) auf der geeignet für Code-Behind-Klasse.  
+ Programmieren Sie Modelle, die in vorhandenen `x:Class`, `x:Class` ist optional, in dem Sinne, dass er eine XAML-Seite vorhanden sein, das keine Code-Behind wurde vollständig gültig ist. Diese Funktion interagiert jedoch die Buildvorgänge wie von Frameworks implementiert, die XAML verwenden. `x:Class` Funktion wird auch durch die Rollen beeinflusst, verschiedenen Klassifizierungen des angegebenen XAML-Inhalt in einem Anwendungsmodell haben, und erstellen in den entsprechenden Aktionen. Wenn XAML-Code deklariert Ereignisbehandlung Attribut Werte oder benutzerdefinierte Elemente, in denen die definierenden Klassen in der Code-Behind-Klasse sind, instanziiert, müssen Sie angeben der `x:Class` Richtlinie Verweis (oder [X: Subclass-](../../../docs/framework/xaml-services/x-subclass-directive.md)) auf der geeignet für Code-Behind-Klasse.  
   
  Der Wert von der `x:Class` Richtlinie muss eine Zeichenfolge, die den vollqualifizierten Namen einer Klasse, aber ohne Assemblyinformationen gibt an (entspricht der <xref:System.Type.FullName%2A?displayProperty=nameWithType>). Einfache Anwendungen können Sie CLR-Namespaceinformationen weglassen, wenn der Code-Behind auch auf diese Weise (Code Definition beginnt auf Klassenebene) strukturiert ist.  
   

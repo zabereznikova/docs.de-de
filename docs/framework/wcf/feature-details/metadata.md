@@ -1,31 +1,17 @@
 ---
 title: Metadaten
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e4b0a724653f5366d6da96f511fac9e62f64816
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ec0ba750a692d6f2c397fd565d855ac97b59073
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata"></a>Metadaten
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet eine Infrastruktur für den Export, die Veröffentlichung, den Abruf und den Import von Dienstmetadaten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste beschreiben mithilfe von Metadaten die Interaktion mit den Endpunkten des Diensts, sodass Tools, z. B. Svcutil.exe, automatisch Clientcode für den Zugriff auf den Dienst generieren können.  
+Windows Communication Foundation (WCF) bietet eine Infrastruktur für exportieren, veröffentlichen, abrufen und Importieren von Dienstmetadaten. WCF-Dienste mithilfe von Metadaten beschrieben, wie für die Interaktion mit den Endpunkten des Diensts, sodass Tools, z. B. Svcutil.exe, automatisch Clientcode für den Zugriff auf den Dienst generieren können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
  Beschreibt, wie Metadaten exportiert und importiert werden.  
   
  [Veröffentlichen von Metadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- Beschreibt, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Metadaten veröffentlicht.  
+ Beschreibt, wie WCF Metadaten veröffentlicht.  
   
  [Abrufen von Metadaten](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  Beschreibt die verschiedenen Möglichkeiten, Metadaten abzurufen.  
