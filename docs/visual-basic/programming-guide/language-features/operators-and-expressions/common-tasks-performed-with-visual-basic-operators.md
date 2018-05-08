@@ -1,12 +1,6 @@
 ---
-title: "Allgemeine Aufgaben, die mit Visual Basic-Operatoren ausgeführt werden"
-ms.custom: 
+title: Allgemeine Aufgaben, die mit Visual Basic-Operatoren ausgeführt werden
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - operators [Visual Basic], logical
 - operators [Visual Basic], string concatenation
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0886bc0365f37f964c4c4872a7b1624ec7388067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab0b7e7c35992908aeaac14053665ff84719f1fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Allgemeine Aufgaben, die mit Visual Basic-Operatoren ausgeführt werden
 Operatoren führen viele allgemeine Aufgaben, die im Zusammenhang mit einem oder mehreren Ausdrücken aufgerufen *Operanden*.  
@@ -44,7 +35,7 @@ Operatoren führen viele allgemeine Aufgaben, die im Zusammenhang mit einem oder
 |Ermitteln des Quotienten eines numerischen Werts durch eine andere (ohne Rest) unterteilt|[\-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
 |Ermittelt den Rest eines numerischen Werts durch eine andere (ohne Quotient) unterteilt|[Mod-Operator](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
 |Lösen Sie einen numerischen Wert zur Potenz einer anderen|[^-Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|Verschieben des Bitmusters eines numerischen Werts nach links|[<\<Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|Verschieben des Bitmusters eines numerischen Werts nach links|[<\< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
 |Verschieben Sie das Bitmuster eines numerischen Werts nach rechts|[>>-Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
 ## <a name="comparison-tasks"></a>Vergleich von Aufgaben  
@@ -52,12 +43,12 @@ Operatoren führen viele allgemeine Aufgaben, die im Zusammenhang mit einem oder
   
 |Beschreibung|Siehe|  
 |---|---|  
-|Bestimmen Sie, ob zwei Werte gleich sind.|`=`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Bestimmen Sie, ob zwei Werte ungleich sind.|`<>`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Bestimmen Sie, ob ein Wert kleiner als ein anderes ist.|`<`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Bestimmen Sie, ob ein Wert größer als ein anderes ist.|`>`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Bestimmen Sie, ob ein Wert kleiner oder gleich einem anderen ist.|`<=`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Bestimmen Sie, ob ein Wert größer als oder gleich einem anderen ist.|`>=`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob zwei Werte gleich sind.|`=` Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob zwei Werte ungleich sind.|`<>` Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob ein Wert kleiner als ein anderes ist.|`<` Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob ein Wert größer als ein anderes ist.|`>` Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob ein Wert kleiner oder gleich einem anderen ist.|`<=` Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob ein Wert größer als oder gleich einem anderen ist.|`>=` Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
 |Bestimmen Sie, ob zwei Objektvariablen auf die gleiche Objektinstanz verweisen|[Is-Operator](../../../../visual-basic/language-reference/operators/is-operator.md)|  
 |Ermitteln Sie, ob zwei Objektvariablen auf unterschiedliche Objektinstanzen verweisen|[IsNot-Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
 |Bestimmen Sie, ob ein Objekt eines bestimmten Typs|[TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
@@ -67,8 +58,8 @@ Operatoren führen viele allgemeine Aufgaben, die im Zusammenhang mit einem oder
   
 |Beschreibung|Siehe|  
 |---|---|  
-|Verbinden Sie mehrere Zeichenfolgen zu einer einzelnen Zeichenfolge|`&`Operator ([Verkettungsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
-|Verknüpfen Sie numerische Werte mit Zeichenfolgenwerten|`+`Operator ([Verkettungsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|Verbinden Sie mehrere Zeichenfolgen zu einer einzelnen Zeichenfolge|`&` Operator ([Verkettungsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|Verknüpfen Sie numerische Werte mit Zeichenfolgenwerten|`+` Operator ([Verkettungsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
   
 ## <a name="logical-and-bitwise-tasks"></a>Logische und bitweise Aufgaben  
  In der folgenden Tabelle werden die verfügbaren logische und bitweise Vorgänge zusammengefasst.  

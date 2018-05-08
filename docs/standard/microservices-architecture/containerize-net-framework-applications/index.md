@@ -1,21 +1,14 @@
 ---
 title: Migrieren von monolithischen .NET Framework-Anwendungen der Vorversion zu Windows-Containern
 description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Migrieren von monolithischen .NET Framework-Anwendungen der Vorversion zu Windows-Containern
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c88027156b55829f77357c1fdb1aef01a802b88a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Migrieren von monolithischen .NET Framework-Anwendungen der Vorversion zu Windows-Containern
 
@@ -35,7 +28,7 @@ Dabei handelt es sich um eine Web Forms-Anwendung, die zum Durchsuchen und Ände
 
 ## <a name="benefits-of-containerizing-a-monolithic-application"></a>Vorteile des Containerisierens einer monolithischen Anwendung
 
-Die Catalog.WebForms-Anwendung ist im GitHub-Repository von eShopOnContainers verfügbar (<https://github.com/dotnet/eShopOnContainers>). Bei dieser Anwendung handelt es sich um eine eigenständige Webanwendung, die auf einen hoch verfügbaren Datenspeicher zugreift. Trotzdem gibt es Vorteile bei der Ausführung der Anwendung in einem Container. Sie erstellen ein Image für die Anwendung. Ab diesem Punkt wird jede Bereitstellung in derselben Umgebung ausgeführt. Auf jedem Container wird die gleiche Version des Betriebssystems verwendet, sind die gleichen Abhängigkeiten installiert und wird das gleiche Framework verwendet. Außerdem wird jeder Container mithilfe des gleichen Prozesses erstellt. In Abbildung 7-2 wird Ihnen die in Visual Studio 2017 geladene Anwendung angezeigt.
+Die Anwendung Catalog.WebForms ist im GitHub-Repository von eShopOnContainers verfügbar (<https://github.com/dotnet/eShopOnContainers>). Bei dieser Anwendung handelt es sich um eine eigenständige Webanwendung, die auf einen hoch verfügbaren Datenspeicher zugreift. Trotzdem gibt es Vorteile bei der Ausführung der Anwendung in einem Container. Sie erstellen ein Image für die Anwendung. Ab diesem Punkt wird jede Bereitstellung in derselben Umgebung ausgeführt. Auf jedem Container wird die gleiche Version des Betriebssystems verwendet, sind die gleichen Abhängigkeiten installiert und wird das gleiche Framework verwendet. Außerdem wird jeder Container mithilfe des gleichen Prozesses erstellt. In Abbildung 7-2 wird Ihnen die in Visual Studio 2017 geladene Anwendung angezeigt.
 
 ![](./media/image2.png)
 
