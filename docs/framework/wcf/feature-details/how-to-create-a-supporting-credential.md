@@ -1,29 +1,15 @@
 ---
 title: 'Vorgehensweise: Erstellen unterstützender Anmeldeinformationen'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6ec7412d1de2bca349c7cfbf4a37c98ca60cc78d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Vorgehensweise: Erstellen unterstützender Anmeldeinformationen
-Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das mehrere Anmeldeinformationen erforderlich sind. Beispielsweise kann ein Dienst vom Client nicht nur den Benutzernamen und das Kennwort fordern, sondern auch Anmeldeinformationen, die belegen, dass der Client älter als 18 Jahre ist. Anmeldeinformationen sind ein *unterstützende Anmeldeinformationen*. In diesem Thema wird beschrieben, wie Sie solche Anmeldeinformationen in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client implementieren.  
+Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das mehrere Anmeldeinformationen erforderlich sind. Beispielsweise kann ein Dienst vom Client nicht nur den Benutzernamen und das Kennwort fordern, sondern auch Anmeldeinformationen, die belegen, dass der Client älter als 18 Jahre ist. Anmeldeinformationen sind ein *unterstützende Anmeldeinformationen*. In diesem Thema wird erläutert, wie solche Anmeldeinformationen in einem Windows Communication Foundation (WCF)-Client implementiert wird.  
   
 > [!NOTE]
 >  Die Spezifikation für unterstützende Anmeldeinformationen ist Teil der WS-SecurityPolicy-Spezifikation. Weitere Informationen finden Sie unter [Sicherheitsspezifikationen für Webdienste](http://go.microsoft.com/fwlink/?LinkId=88537).  

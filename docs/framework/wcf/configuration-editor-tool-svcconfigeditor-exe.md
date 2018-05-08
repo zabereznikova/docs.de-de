@@ -1,34 +1,20 @@
 ---
 title: Configuration Editor-Tool (SvcConfigEditor.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration files, creating
 - configuration files
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-caps.latest.revision: 45
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1531c68bdbb3b28436d0701536ef274f34513b19
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: ab6e3a99f951d2977a079f49e4aa3eff250ee8d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Configuration Editor-Tool (SvcConfigEditor.exe)
-Der [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Service Configuration Editor (SvcConfigEditor.exe) ermöglicht Administratoren und Entwicklern, Konfigurationseinstellungen für [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste mithilfe einer grafischen Benutzeroberfläche zu erstellen und zu bearbeiten. Mit diesem Tool können Sie die Einstellungen für Bindungen, Verhalten, Dienste und Diagnosen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verwalten, ohne XML-Dateien direkt bearbeiten zu müssen.  
+Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfigEditor.exe) ermöglicht Administratoren und Entwickler erstellen und Ändern von Konfigurationseinstellungen für [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienste mit einer grafischen Benutzeroberfläche. Mit diesem Tool können Sie die Einstellungen für Bindungen, Verhalten, Dienste und Diagnosen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verwalten, ohne XML-Dateien direkt bearbeiten zu müssen.  
   
  Der Service Configuration Editor befindet sich im Ordner "C:\Programme\Microsoft SDKs\Windows\v6.0\Bin".  
   

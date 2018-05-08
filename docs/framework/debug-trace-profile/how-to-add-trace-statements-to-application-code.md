@@ -1,14 +1,6 @@
 ---
 title: 'Gewusst wie: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,17 +13,13 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 134e03a1438e4c9399962a245eb44eec9dd02924
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ed85c73182da5d911c6cc84fba26c658412ac158
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Gewusst wie: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode
 Die am häufigsten für die Ablaufverfolgung verwendeten Methoden zum Schreiben von Ausgaben in Listener: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** und **Fail**. Diese Methoden können in zwei Kategorien unterteilt werden: **Write**, **WriteLine** und **Fail** geben alle Ausgaben ohne Bedingungen aus, während **WriteIf**, **WriteLineIf** und **Assert** eine boolesche Bedingung testen und die Ausgabe auf Basis des Werts dieser Bedingung erstellen oder nicht erstellen. **WriteIf** und **WriteLineIf** führen zu einer Ausgabe, wenn die Bedingung `true` entspricht. **Assert** führt zu einer Ausgabe, wenn die Bedingung `false` entspricht.  

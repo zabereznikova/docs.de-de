@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Erstellen eines linearen Farbverlaufs'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33979decf37e9adb29d94a6602a43f992d93aaa1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Gewusst wie: Erstellen eines linearen Farbverlaufs
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bietet horizontale, vertikale und diagonale lineare Farbverläufe. Standardmäßig ändert sich die Farbe in einem linearen Farbverlauf einheitlich. Allerdings können Sie einen linearen Farbverlauf anpassen, sodass sich die Farbe auf nicht einheitliche Weise ändert.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet horizontale, vertikale und diagonale lineare Farbverläufe. Standardmäßig ändert sich die Farbe in einem linearen Farbverlauf einheitlich. Allerdings können Sie einen linearen Farbverlauf anpassen, sodass sich die Farbe auf nicht einheitliche Weise ändert.  
   
  Im folgenden Beispiel wird eine Zeile und einer Ellipse, die ein Rechteck mit einem horizontalen linearen Farbverlaufspinsel.  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  Im vorherigen Beispiel Ändern der Farbkomponenten linear beim Wechseln von einer horizontale Koordinate von 0 bis zu einer horizontalen Koordinate 200. Beispielsweise wird ein Punkt, dessen erste Koordinate in der Mitte zwischen 0 und 200 ist, eine blaue Komponente aufweisen, in der Mitte zwischen 0 und 255 ist.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]können Sie, wie eine Farbe aus einer Kante eines Farbverlaufs zum anderen anzupassen. Angenommen Sie, Sie möchten einen Pinsel mit Farbverlauf erstellen, der sich in Rot entsprechend der folgenden Tabelle aus Schwarz ändert.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können Sie, wie eine Farbe aus einer Kante eines Farbverlaufs zum anderen anzupassen. Angenommen Sie, Sie möchten einen Pinsel mit Farbverlauf erstellen, der sich in Rot entsprechend der folgenden Tabelle aus Schwarz ändert.  
   
 |Horizontale Koordinate|RGB-Komponenten|  
 |---------------------------|--------------------|  

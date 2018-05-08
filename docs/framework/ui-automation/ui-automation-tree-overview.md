@@ -1,27 +1,18 @@
 ---
-title: "Übersicht über die Benutzeroberflächenautomatisierungs-Struktur"
-ms.custom: 
+title: Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 25a1ddb113916563c234eefb8cdc0746b04f3e66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0823a569b19d46f32c1cb780470a935f20429c11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-tree-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
 > [!NOTE]
@@ -43,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  Benutzeroberflächenautomatisierungs-Anbieter unterstützen Filtern durch Definieren von Eigenschaften für Elemente, einschließlich der <xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty> und <xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty> Eigenschaften.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bietet drei Standardansichten. Diese Ansichten werden durch den Typ des ausgeführten Filterns definiert. Der Bereich jeder Ansicht wird durch die Anwendung definiert. Außerdem kann eine Anwendung andere Filter auf Eigenschaften anwenden, z. B. um nur aktivierte Steuerelemente in eine Steuerelementansicht aufzunehmen.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bietet drei Standardansichten. Diese Ansichten werden durch den Typ des ausgeführten Filterns definiert. Der Bereich jeder Ansicht wird durch die Anwendung definiert. Außerdem kann eine Anwendung andere Filter auf Eigenschaften anwenden, z. B. um nur aktivierte Steuerelemente in eine Steuerelementansicht aufzunehmen.  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Rohdatenansicht  

@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Abfangen von Datendienstnachrichten (WCF Data Services)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28f69bb7f584c8d9e7031d969dce0052b1541aad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d79a9ca27470512105b3a04d681906aa365d7e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Gewusst wie: Abfangen von Datendienstnachrichten (WCF Data Services)
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Anforderungsnachrichten abfangen, damit Sie einem Vorgang benutzerdefinierte Logik hinzufügen können. Zum Abfangen einer Nachricht verwenden Sie besonders attributierte Methoden im Datendienst. Weitere Informationen finden Sie unter [Interceptors](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  

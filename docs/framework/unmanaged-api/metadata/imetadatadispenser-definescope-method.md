@@ -1,14 +1,6 @@
 ---
 title: IMetaDataDispenser::DefineScope-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenser.DefineScope
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: df7a700a5747f88f14cbfa4d10f1f4d0c2a14ab7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11382f00839917185ba3c85b8fbae5c32d0b0d4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope-Methode
 Erstellt einen neuen Bereich im Arbeitsspeicher, in dem Sie neue Metadaten erstellen können.  
@@ -65,7 +53,7 @@ HRESULT DefineScope (
  [out] Der Zeiger auf die zurückgegebene Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
- `DefineScope`erstellt einen Satz von in-Memory-Metadatentabellen, generiert eine eindeutige GUID (Modul Version ID oder MVID) für die Metadaten und erstellt einen Eintrag in der Modultabelle für die der Kompilierungseinheit ausgegeben wird.  
+ `DefineScope` erstellt einen Satz von in-Memory-Metadatentabellen, generiert eine eindeutige GUID (Modul Version ID oder MVID) für die Metadaten und erstellt einen Eintrag in der Modultabelle für die der Kompilierungseinheit ausgegeben wird.  
   
  Sie können Attribute als Ganzes an den Metadatenbereich anfügen, indem Sie mit der [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) oder [DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) Methode nach Bedarf.  
   
@@ -76,7 +64,7 @@ HRESULT DefineScope (
   
  **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IMetaDataDispenser-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  

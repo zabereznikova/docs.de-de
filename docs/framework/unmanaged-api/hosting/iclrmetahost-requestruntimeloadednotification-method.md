@@ -1,14 +1,6 @@
 ---
 title: ICLRMetaHost::RequestRuntimeLoadedNotification-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHost.RequestRuntimeLoadedNotification
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b7866270d8c9234a375401dfd05b504a06ddbf4b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification-Methode
 Stellt eine Rückruffunktion, die garantiert aufgerufen werden, wenn eine Version der common Language Runtime (CLR) zum ersten Mal geladen, aber noch nicht begonnen. Diese Methode hat Vorrang vor den [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) Funktion.  
@@ -91,11 +79,11 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  Wenn der Host beabsichtigt geladen oder dazu führen, dass eine andere zur Laufzeit in eine eintrittsinvariante Weise geladen werden die `pfnCallbackThreadSet` und `pfnCallbackThreadUnset` Parameter bereitgestellten Funktion im Rückruf auf folgende Weise verwendet werden muss:  
   
--   `pfnCallbackThreadSet`muss vom Thread aufgerufen werden, die ein Laden der Laufzeit verursachen können, bevor, eine solche Last versucht wird.  
+-   `pfnCallbackThreadSet` muss vom Thread aufgerufen werden, die ein Laden der Laufzeit verursachen können, bevor, eine solche Last versucht wird.  
   
--   `pfnCallbackThreadUnset`muss aufgerufen werden, wenn der Thread nicht mehr Laden der Laufzeit verursacht (und vor der Rückgabe aus der ersten Rückruf).  
+-   `pfnCallbackThreadUnset` muss aufgerufen werden, wenn der Thread nicht mehr Laden der Laufzeit verursacht (und vor der Rückgabe aus der ersten Rückruf).  
   
--   `pfnCallbackThreadSet`und `pfnCallbackThreadUnset` sind beide nicht wieder eintretender.  
+-   `pfnCallbackThreadSet` und `pfnCallbackThreadUnset` sind beide nicht wieder eintretender.  
   
 > [!NOTE]
 >  Hosten von Anwendungen müssen nicht aufrufen `pfnCallbackThreadSet` und `pfnCallbackThreadUnset` außerhalb des Bereichs der `pCallbackFunction` Parameter.  
@@ -107,7 +95,7 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRMetaHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  

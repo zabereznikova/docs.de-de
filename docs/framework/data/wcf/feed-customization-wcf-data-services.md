@@ -1,14 +1,6 @@
 ---
 title: Anpassung von Feeds (WCF Data Services)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c59bfdd22125f10b8a35afc8c264b6b2869a3998
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c398162b033fcdcb5a885fb961ca7be98a88d2f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>Anpassung von Feeds (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verwendet die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Daten als Feed verfügbar zu machen. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt sowohl Atom-als auch JavaScript Objekt Notation (JSON) Formate für Datenfeeds. Bei Verwendung ein Atom-Feeds [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bietet eine Standardmethode zum Serialisieren von Daten, z. B. Entitäten und Beziehungen in einem XML-Format, das im Text der HTTP-Nachricht aufgenommen werden kann. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] definiert eine standardmäßige entitätseigenschaftszuordnung zwischen den Daten, die in Entitäten enthalten sind und Atom-Elemente. Weitere Informationen finden Sie unter [OData: Atom-Format](http://go.microsoft.com/fwlink/?LinkID=185794).  

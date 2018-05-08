@@ -1,32 +1,18 @@
 ---
 title: Erkennen einer Transaktionsanwendung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Erkennen einer Transaktionsanwendung
-Dieses Thema beschreibt die Verwendung der Verwaltungs- und Diagnosefunktionen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zum Beheben von Fehlern in der Transaktionsanwendung.  
+In diesem Thema wird beschrieben, wie die Windows Communication Foundation (WCF)-Verwaltungs- und Diagnosefunktion transaktionsanwendung mit.  
   
 ## <a name="performance-counters"></a>Leistungsindikatoren  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt einen Standardsatz von Leistungsindikatoren bereit, damit Sie die Leistung der Transaktionsanwendung messen können. Weitere Informationen finden Sie unter [Leistungsindikatoren](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ WCF bietet einen Standardsatz von Leistungsindikatoren für die Leistung der transaktionsanwendung messen. Weitere Informationen finden Sie unter [Leistungsindikatoren](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  Leistungsindikatoren werden in drei verschiedene Stufen unterteilt: Dienst, Endpunkt und Vorgang, gemäß folgender Tabellen.  
   
@@ -57,8 +43,8 @@ Dieses Thema beschreibt die Verwendung der Verwaltungs- und Diagnosefunktionen i
 |Übergegangene Transaktionen|Die Anzahl der Transaktionen, die an diesem Endpunkt in Vorgänge übergegangen sind. Dieser Indikator wird jedes Mal gesteigert, wenn eine Nachricht, die an den Endpunkt gesendet wird, eine Transaktion enthält.|  
 |Übergegangene Transaktionen pro Sekunde|Die Anzahl der Transaktionen, die innerhalb von einer Sekunde an diesem Endpunkt in Vorgänge übergegangen sind. Dieser Indikator wird jedes Mal gesteigert, wenn eine Nachricht, die an den Endpunkt gesendet wird, eine Transaktion enthält.|  
   
-## <a name="windows-management-instrumentation"></a>Windows-Verwaltungsinstrumentation (Windows Management Instrumentation)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] macht zur Laufzeit Inspektionsdaten eines Diensts über einen Windows-Verwaltungsinstrumentation (WMI)-Anbieter von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügbar. Weitere Informationen zum Zugreifen auf WMI-Daten finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+## <a name="windows-management-instrumentation"></a>Windows-Verwaltungsinstrumentierung (Windows Management Instrumentation)  
+ WCF macht inspektionsdaten eines Diensts zur Laufzeit über einen WCF (Windows Management Instrumentation, WMI)-Anbieter verfügbar. Weitere Informationen zum Zugreifen auf WMI-Daten finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Einige schreibgeschützte WMI-Eigenschaften geben die angewendeten Transaktionseinstellungen für einen Dienst an. In der folgenden Tabelle sind alle diese Einstellungen aufgeführt.  
   
@@ -100,13 +86,13 @@ Dieses Thema beschreibt die Verwendung der Verwaltungs- und Diagnosefunktionen i
 ## <a name="tracing"></a>Ablaufverfolgung  
  Ablaufverfolgungen ermöglichen es, Fehler in den Transaktionsanwendungen zu überwachen und zu analysieren. Die Ablaufverfolgung kann auf verschiedene Weise aktiviert werden:  
   
--   Standard-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Ablaufverfolgung  
+-   Standard-WCF-Ablaufverfolgung  
   
-     Dieser Typ der Ablaufverfolgung entspricht der Ablaufverfolgung in jeder beliebigen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung. Weitere Informationen finden Sie unter [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Dieser Typ der Ablaufverfolgung ist identisch mit der Ablaufverfolgung für alle WCF-Anwendung. Weitere Informationen finden Sie unter [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   WS-AtomicTransaction-Ablaufverfolgung  
   
-     WS-AtomicTransaction-Ablaufverfolgung kann aktiviert werden, mithilfe der [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Eine derartige Ablaufverfolgung bietet einen Einblick in den Zustand der Transaktionen und Teilnehmer innerhalb eines Systems. Zum Aktivieren der Service Model-Ablaufverfolgung muss der `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing`-Registrierungsschlüssel auf einen gültigen Wert der Enumeration <xref:System.Diagnostics.SourceLevels> festgelegt sein. Die Nachrichtenprotokollierung kann auf die gleiche Weise wie andere [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen aktiviert werden.  
+     WS-AtomicTransaction-Ablaufverfolgung kann aktiviert werden, mithilfe der [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Eine derartige Ablaufverfolgung bietet einen Einblick in den Zustand der Transaktionen und Teilnehmer innerhalb eines Systems. Zum Aktivieren der Service Model-Ablaufverfolgung muss der `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing`-Registrierungsschlüssel auf einen gültigen Wert der Enumeration <xref:System.Diagnostics.SourceLevels> festgelegt sein. Sie können die nachrichtenprotokollierung auf die gleiche Weise wie andere WCF-Anwendungen aktivieren.  
   
 -   `System.Transactions`-Ablaufverfolgung  
   
@@ -131,7 +117,7 @@ Dieses Thema beschreibt die Verwendung der Verwaltungs- und Diagnosefunktionen i
     </configuration>  
     ```  
   
-     Dies aktiviert außerdem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Ablaufverfolgung, da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auch die <xref:System.Transactions>-Infrastruktur nutzt.  
+     Dies aktiviert außerdem die WCF-Ablaufverfolgung als auch WCF nutzt die <xref:System.Transactions> Infrastruktur.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwaltung und Diagnose](../../../../docs/framework/wcf/diagnostics/index.md)  

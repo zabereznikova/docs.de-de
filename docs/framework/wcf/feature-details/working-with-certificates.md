@@ -1,36 +1,22 @@
 ---
 title: Verwenden von Zertifikaten
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c023b27ace10919c51aa13e2635040d9d5b812b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
-Bei der Programmierung der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Sicherheit werden digitale X.509-Zertifikate häufig zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieses Thema bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und Zertifikaten erläutert werden.  
+Um die Sicherheit von Windows Communication Foundation (WCF) zu programmieren, werden digitale x. 509-Zertifikate häufig zum Authentifizieren von Clients und Servern, verschlüsseln und digitalen Signieren von Nachrichten verwendet. In diesem Thema wird erläutert, x. 509-Zertifikat-Features und Ihre Verwendung in WCF kurz und enthält Links zu Themen, die diese Konzepte näher erläutern oder die Ausführung allgemeiner Aufgaben mithilfe von WCF und Zertifikate.  
   
- Kurz gesagt, ein digitales Zertifikat ist ein Teil einer *public Key-Infrastruktur* (PKI), dabei handelt es sich um ein System aus digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen, die Überprüfung und Authentifizierung die Gültigkeit beteiligten Parteien in einer elektronischen Transaktion unter Verwendung der Kryptografie mit öffentlichem Schlüssel. Eine Zertifizierungsstelle Zertifikate ausstellt, und jedes Zertifikat enthält einen Satz von Feldern, die Daten, z. B. enthalten *Betreff* (die Entität für die das Zertifikat ausgestellt wird), Gültigkeitsdatum (wenn das Zertifikat gültig ist), Aussteller (die Entität, die das Zertifikat ausgestellt wurde), und einem öffentlichen Schlüssel. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden diese Eigenschaften als <xref:System.IdentityModel.Claims.Claim> verarbeitet, und jeder Anspruch wird weiter in zwei Typen unterteilt: Identität und Recht. Weitere Informationen zum x. 509-Zertifikate, finden Sie unter [x. 509-Zertifikate für öffentliche Schlüssel](http://go.microsoft.com/fwlink/?LinkId=209952)für Weitere Informationen zu Ansprüchen und Autorisierung in WCF finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Weitere Informationen zur Implementierung einer PKI finden Sie unter [Windows Server 2008 R2 - Zertifikatdienste](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ Kurz gesagt, ein digitales Zertifikat ist ein Teil einer *public Key-Infrastruktur* (PKI), dabei handelt es sich um ein System aus digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen, die Überprüfung und Authentifizierung die Gültigkeit beteiligten Parteien in einer elektronischen Transaktion unter Verwendung der Kryptografie mit öffentlichem Schlüssel. Eine Zertifizierungsstelle Zertifikate ausstellt, und jedes Zertifikat enthält einen Satz von Feldern, die Daten, z. B. enthalten *Betreff* (die Entität für die das Zertifikat ausgestellt wird), Gültigkeitsdatum (wenn das Zertifikat gültig ist), Aussteller (die Entität, die das Zertifikat ausgestellt wurde), und einem öffentlichen Schlüssel. In WCF ist jede dieser Eigenschaften als verarbeitet eine <xref:System.IdentityModel.Claims.Claim>, und jeder Anspruch wird weiter in zwei Typen unterteilt: Identität und Recht. Weitere Informationen zum x. 509-Zertifikate, finden Sie unter [x. 509-Zertifikate für öffentliche Schlüssel](http://go.microsoft.com/fwlink/?LinkId=209952)für Weitere Informationen zu Ansprüchen und Autorisierung in WCF finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Weitere Informationen zur Implementierung einer PKI finden Sie unter [Windows Server 2008 R2 - Zertifikatdienste](http://go.microsoft.com/fwlink/?LinkId=209949).  
   
  Eine zentrale Funktion des Zertifikats ist die Authentifizierung der Identität des Besitzers des Zertifikats gegenüber anderen. Ein Zertifikat enthält die *öffentlichen Schlüssel* des Besitzers, während der Besitzer den privaten Schlüssel behält. Der öffentliche Schlüssel kann zum Verschlüsseln von Nachrichten verwendet werden, die an den Besitzer des Zertifikats gesendet werden. Nur der Besitzer hat Zugriff auf den privaten Schlüssel, sodass niemand anders diese Nachrichten entschlüsseln kann.  
   
@@ -46,7 +32,7 @@ Bei der Programmierung der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
 -   **Speicher des aktuellen Benutzers**. Interaktive Anwendungen legen Zertifikate für den aktuellen Benutzer des Computers normalerweise im aktuellen Benutzerspeicher ab. Beim Erstellen einer Clientanwendung werden die Zertifikate zur Authentifizierung eines Benutzers gegenüber einem Dienst normalerweise hier abgelegt.  
   
- Diese beiden Speicher teilen sich in weitere Unterspeicher auf. Die wichtigsten Unterspeicher für die Programmierung mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sind folgende:  
+ Diese beiden Speicher teilen sich in weitere Unterspeicher auf. Der wichtigste bei der Programmierung mit WCF enthalten:  
   
 -   **Vertrauenswürdige Stammzertifizierungsstellen**. Mit den Zertifikaten in diesem Speicher können Sie eine Zertifikatkette erstellen, die zum Zertifikat einer Zertifizierungsstelle in diesem Speicher zurückverfolgt werden kann.  
   
@@ -99,7 +85,7 @@ Bei der Programmierung der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
  Wenn Sie eine benutzerdefinierte Authentifizierung erstellen, müssen Sie auf jeden Fall die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>-Methode überschreiben. Ein Beispiel der benutzerdefinierten Authentifizierung finden Sie unter der [x. 509-Zertifikats-Validierungssteuerelement](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) Beispiel. Weitere Informationen finden Sie unter [benutzerdefinierte Anmeldeinformationen und Validierung der Anmeldeinformationen](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Verwenden von Makecert.exe zum Erstellen einer Zertifikatkette  
- Mit dem Certificate Creation-Tool (Makecert.exe) werden X.509-Zertifikate sowie Paare aus privaten und öffentlichen Schlüsseln erstellt. Sie können den privaten Schlüssel speichern und zum Ausstellen und Signieren neuer Zertifikate verwenden, um eine Hierarchie von Zertifikaten in einer Kette zu simulieren. Dieses Tool ist lediglich als Unterstützung bei der Entwicklung von Diensten gedacht und sollte niemals zur Erstellung von Zertifikaten für tatsächliche Bereitstellungen verwendet werden. Wenn Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst entwickeln, können Sie mit Makecert.exe anhand der folgenden Schritte eine Kette von Vertrauensstellungen erstellen.  
+ Mit dem Certificate Creation-Tool (Makecert.exe) werden X.509-Zertifikate sowie Paare aus privaten und öffentlichen Schlüsseln erstellt. Sie können den privaten Schlüssel speichern und zum Ausstellen und Signieren neuer Zertifikate verwenden, um eine Hierarchie von Zertifikaten in einer Kette zu simulieren. Dieses Tool ist lediglich als Unterstützung bei der Entwicklung von Diensten gedacht und sollte niemals zur Erstellung von Zertifikaten für tatsächliche Bereitstellungen verwendet werden. Wenn Sie einen WCF-Dienst zu entwickeln, gehen Sie folgendermaßen vor, um eine Kette von Vertrauensstellungen mit Makecert.exe erstellen.  
   
 #### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>So erstellen Sie eine Kette von Vertrauensstellungen mit Makecert.exe  
   
@@ -137,7 +123,7 @@ Bei der Programmierung der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
  Sie können den Modus auch festlegen, in der Konfiguration mit der `revocationMode` Attribut beider der [ \<Authentifizierung >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (von der [ \<ServiceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) und die [ \<Authentifizierung >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (von der [ \<EndpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)).  
   
 ## <a name="the-setcertificate-method"></a>SetCertificate-Methode  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] müssen häufig Zertifikate oder Gruppen von Zertifikaten angegeben werden, die von einem Dienst oder von einem Client zum Authentifizieren, Verschlüsseln oder digitalen Signieren von Nachrichten verwendet werden. Dies kann programmgesteuert mit der `SetCertificate`-Methode verschiedener Klassen geschehen, die X.509-Zertifikate darstellen. Folgende Klassen geben mit der `SetCertificate`-Methode ein Zertifikat an.  
+ In WCF müssen häufig geben Sie ein Zertifikat oder der Zertifikate einen Dienst oder Client zu authentifizieren, verschlüsseln oder digitalen Signieren von Nachrichten verwendet wird. Dies kann programmgesteuert mit der `SetCertificate`-Methode verschiedener Klassen geschehen, die X.509-Zertifikate darstellen. Folgende Klassen geben mit der `SetCertificate`-Methode ein Zertifikat an.  
   
 |Klasse|Methode|  
 |-----------|------------|  
@@ -179,9 +165,9 @@ Bei der Programmierung der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
  Die Zuordnung eines X.509-Zertifikats zu einem Token, das ein Windows-Benutzerkonto darstellt, wird als Erweiterung der Berechtigungen angesehen, da das Windows-Token nach der Zuordnung Zugriff auf geschützte Ressourcen ermöglicht. Das X.509-Zertifikat muss daher vor der Zuordnung die entsprechenden Anforderungen der Domänenrichtlinie erfüllen. Die *SChannel* Sicherheitspaket erzwingt diese Anforderung.  
   
- [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] stellt bei Verwendung von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oder höher sicher, dass das Zertifikat der Domänenrichtlinie entspricht, bevor es dem Windows-Konto zugeordnet wird.  
+ Bei Verwendung [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] oder später WCF gewährleistet das Zertifikat Domänenrichtlinie entspricht, bevor sie ein Windows-Konto zugeordnet ist.  
   
- In der ersten Version von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erfolgt die Zuordnung ohne auf die Domänenrichtlinie zurückzugreifen. Möglicherweise tritt daher bei älteren Anwendungen, die mit dem ersten Release ausgeführt werden konnten, ein Fehler auf, wenn die Zuordnung aktiviert ist und die Anforderungen der Domänenrichtlinie vom X.509-Zertifikat nicht erfüllt werden.  
+ In der ersten Version von WCF erfolgt die Zuordnung ohne auf die Domänenrichtlinie zurückzugreifen. Möglicherweise tritt daher bei älteren Anwendungen, die mit dem ersten Release ausgeführt werden konnten, ein Fehler auf, wenn die Zuordnung aktiviert ist und die Anforderungen der Domänenrichtlinie vom X.509-Zertifikat nicht erfüllt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels>  

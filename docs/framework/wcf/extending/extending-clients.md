@@ -1,33 +1,19 @@
 ---
 title: Erweitern von Clients
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-clients"></a>Erweitern von Clients
 Die Dienstmodellebene ist dafür verantwortlich, Methodenaufrufe per Anwendungscode in ausgehende Nachrichten zu übersetzen, sie in den zugrunde liegenden Kanälen abzulegen, die Ergebnisse zurück in Rückgabewerte und out-Parameter in Anwendungscode zu übersetzen sowie die Ergebnisse an den Aufrufer zurückzugeben. Dienstmodellerweiterungen ändern bzw. implementieren Ausführungs- oder Kommunikationsverhalten und Funktionen wie Verteileroptionen, benutzerdefiniertes Verhalten, Nachrichten- oder Parameterinterceptoren und andere Erweiterbarkeitsfunktionen.  
   
- In diesem Thema wird beschrieben, wie die <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Klasse und die <xref:System.ServiceModel.Dispatcher.ClientOperation>-Klasse in einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clientanwendung verwendet werden, um das Standardausführungsverhalten eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients zu ändern oder um Nachrichten, Parameter oder Rückgabewerte abzufangen oder zu ändern, bevor oder nachdem sie aus der Kanalschicht gesendet oder abgerufen werden. Weitere Informationen zum Erweitern der Service Runtime finden Sie unter [Erweitern von Verteilern](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Weitere Informationen zu den Verhaltensweisen, die ändern und Anpassung von Objekten in die Clientlaufzeit einfügen, finden Sie unter [konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ In diesem Thema wird beschrieben, wie die <xref:System.ServiceModel.Dispatcher.ClientRuntime> und <xref:System.ServiceModel.Dispatcher.ClientOperation> Klassen in Windows Communication Foundation (WCF)-Client-Anwendung so ändern Sie das Standardverhalten für die Ausführung von einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client oder zum Abfangen oder Ändern von Nachrichten, Parameter oder zurückgegeben Sie Werte vor oder nach dem Senden oder Abrufen aus der Kanalschicht. Weitere Informationen zum Erweitern der Service Runtime finden Sie unter [Erweitern von Verteilern](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Weitere Informationen zu den Verhaltensweisen, die ändern und Anpassung von Objekten in die Clientlaufzeit einfügen, finden Sie unter [konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="clients"></a>Clients  
  Auf einem Client konvertiert ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientobjekt oder -Clientkanal Methodenaufrufe in ausgehende Nachrichten und eingehende Nachrichten in Vorgangsergebnisse, die an die aufrufende Anwendung zurückgegeben werden. (Weitere Informationen zu Clienttypen finden Sie unter [WCF-Clientarchitektur](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  

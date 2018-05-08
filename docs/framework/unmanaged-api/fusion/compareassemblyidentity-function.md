@@ -1,14 +1,6 @@
 ---
 title: CompareAssemblyIdentity-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CompareAssemblyIdentity
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8b364ae1-8efa-4744-a7da-81fd093d84d6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 266868a65a0db75b57d46d92a469b4b6ceaa88e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b48adcb8e9de49a312af77c8a9b80a07455ebfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity-Funktion
 Vergleicht zwei Assemblyidentitäten, um zu bestimmen, ob sie gleich sind.  
@@ -71,10 +59,10 @@ STDAPI CompareAssemblyIdentity (
  [out] Ein [AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md) -Enumeration, die ausführliche Informationen zum Vergleich bereitstellt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `pfEquivalent`Gibt einen booleschen Wert, der angibt, ob die beiden Assemblys identisch sind. `pResult`Gibt einen von der `AssemblyComparisonResult` -Werten, um eine detailliertere Begründung für den Wert des `pfEquivalent`.  
+ `pfEquivalent` Gibt einen booleschen Wert, der angibt, ob die beiden Assemblys identisch sind. `pResult` Gibt einen von der `AssemblyComparisonResult` -Werten, um eine detailliertere Begründung für den Wert des `pfEquivalent`.  
   
 ## <a name="remarks"></a>Hinweise  
- `CompareAssemblyIdentity`überprüft, ob `pwzAssemblyIdentity1` und `pwzAssemblyIdentity2` sind gleichwertig. `pfEquivalent`-Wert von `true` unter einer oder mehreren der folgenden Bedingungen:  
+ `CompareAssemblyIdentity` überprüft, ob `pwzAssemblyIdentity1` und `pwzAssemblyIdentity2` sind gleichwertig. `pfEquivalent` -Wert von `true` unter einer oder mehreren der folgenden Bedingungen:  
   
 -   Die zwei Assemblyidentitäten entsprechen. Für Assemblys mit starkem Namen erfordert Äquivalenz Assemblyname, Version, öffentliches Schlüsseltoken und Kultur identisch sein. Für Assemblys mit einfachen Namen erfordert Äquivalenz eine Übereinstimmung bei der Assemblyname und Kultur entspricht.  
   
@@ -93,7 +81,7 @@ STDAPI CompareAssemblyIdentity (
   
  **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  

@@ -1,14 +1,6 @@
 ---
 title: ICorProfilerInfo4::GetILToNativeMapping2-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4.GetILToNativeMapping2
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 756c1c25-08a7-4060-9798-dbeaa2f3bee5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2d5ce076ad66214f786f7e221a0443edf7986c5d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fba81500749a16a59405edaaa2ee1d12d86229f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2-Methode
 Ruft eine Zuordnung zwischen MSIL-Offsets (Microsoft Intermediate Language) und systemeigenen Offsets für den Code ab, der in der erneut JIT-kompilierten Version der angegebenen Funktion enthalten ist.  
@@ -67,7 +55,7 @@ HRESULT GetILToNativeMapping(
  [out] Ein Array von `COR_DEBUG_IL_TO_NATIVE_MAP`-Strukturen, die jeweils die Offsets angeben. Nach Rückgabe der `GetILToNativeMapping2`-Methode enthält `map` einige oder alle `COR_DEBUG_IL_TO_NATIVE_MAP`-Strukturen.  
   
 ## <a name="remarks"></a>Hinweise  
- `GetILToNativeMapping2`ähnelt der [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) -Methode, außer dass Sie es den Profiler, geben Sie die ID der erneut kompilierten Funktion in zukünftigen Versionen.  
+ `GetILToNativeMapping2` ähnelt der [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) -Methode, außer dass Sie es den Profiler, geben Sie die ID der erneut kompilierten Funktion in zukünftigen Versionen.  
   
 > [!NOTE]
 >  Die [icorprofilerfunctioncontrol:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) Methode ist nicht implementiert, der [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], sodass die Funktionen, die JIT-kompilierten wurden eine IL-Code und systemeigenem Zuordnung haben können, die nicht der ursprünglich kompilierten Funktion. Daher kann `GetILToNativeMapping2` nicht mit einer erneut JIT-kompilierten ID ungleich null in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] aufgerufen werden.  
@@ -85,7 +73,7 @@ HRESULT GetILToNativeMapping(
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [GetILToNativeMapping-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)  

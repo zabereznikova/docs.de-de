@@ -1,11 +1,7 @@
 ---
 title: ExecQueryWmi-Funktion (Referenz zur nicht verwalteten API)
-description: "Die ExecQueryWmi-Funktion führt eine Abfrage zum Abrufen von Objekten."
+description: Die ExecQueryWmi-Funktion führt eine Abfrage zum Abrufen von Objekten.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 872109cb0472a8404c492c2867429fe783f898eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b482f2ca2e2d5c06e69945adb71aa6c0f5d26465
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execquerywmi-function"></a>ExecQueryWmi-Funktion
 Führt eine Abfrage zum Abrufen von Objekten.  
@@ -66,8 +59,8 @@ HRESULT ExecQueryWmi (
 | Konstante | Wert  | Beschreibung  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0 x 20000 | Wenn festgelegt ist, die Funktion ruft die Qualifizierern in den lokalisierten Namespace des Gebietsschemas für die aktuelle Verbindung gespeichert ab. <br/> Wenn dies nicht festgelegt ist, die Funktion ruft nur die Qualifizierer, die in den unmittelbaren Namespace gespeichert. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0 x 10 | Das Flag wird halbsynchrone aufgerufen. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0 x 20 | Die Funktion gibt einen Enumerator Vorwärtscursor. In der Regel nur vorwärts Enumeratoren werden schneller ausgeführt und belegen weniger Speicher als konventionelle Enumeratoren, aber es nicht möglich, dass Aufrufe [Klon](clone.md). |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Das Flag wird halbsynchrone aufgerufen. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Die Funktion gibt einen Enumerator Vorwärtscursor. In der Regel nur vorwärts Enumeratoren werden schneller ausgeführt und belegen weniger Speicher als konventionelle Enumeratoren, aber es nicht möglich, dass Aufrufe [Klon](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI behält Zeiger auf Objekte in der Enumration, bis sie veröffentlicht werden. | 
 | `WBEM_FLAG_ENSURE_LOCATABLE` | 0 x 100 | Stellt sicher, dass alle zurückgegebenen Objekte haben genügend Informationen enthalten, Systemeigenschaften wie z. B. **__PATH**, **__RELPATH**, und **__SERVER**, sind nicht `null`. |
 | `WBEM_FLAG_PROTOTYPE` | 2 | Dieses Flag wird für die Erstellung von Prototypen verwendet. Die Abfrage wird nicht ausgeführt, und es wird stattdessen ein Objekt, das aussieht wie ein typisches Ergebnis zurückgibt. |
@@ -84,7 +77,7 @@ Die empfohlene Flags sind `WBEM_FLAG_RETURN_IMMEDIATELY` und `WBEM_FLAG_FORWARD_
 `authLevel`  
 [in] Die Autorisierungsebene.
 
-`impLevel`[in] Die Ebene des Identitätswechsels.
+`impLevel` [in] Die Ebene des Identitätswechsels.
 
 `pCurrentNamespace`   
 [in] Ein Zeiger auf ein [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) -Objekt, das den aktuellen Namespace darstellt.
@@ -131,7 +124,7 @@ Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformatio
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

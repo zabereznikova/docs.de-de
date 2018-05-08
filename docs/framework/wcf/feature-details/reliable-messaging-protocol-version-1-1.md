@@ -1,29 +1,17 @@
 ---
-title: "Zuverlässiges Messaging-Protokoll, Version 1,1"
-ms.custom: 
+title: Zuverlässiges Messaging-Protokoll, Version 1,1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67df8b539109d7e4dafcbc42ad7679643767021a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ff02bc6953ec1e5030dd0b592a352b7e23ab0d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Zuverlässiges Messaging-Protokoll, Version 1,1
-In diesem Thema werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Implementierungsdetails für das WS-ReliableMessaging-Protokoll in der Version 1.1 vom Februar 2007 beschrieben, die für die Interoperation mithilfe des HTTP-Transports erforderlich sind. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] orientiert sich an der WS-ReliableMessaging-Spezifikation mit den in diesem Thema erläuterten Einschränkungen und Klarstellungen. Beachten Sie, dass das zuverlässige WS-Messaging-Protokoll in der Version&#160;1.1 ab [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] implementiert ist.  
+Dieses Thema enthält Details zur Implementierung der Windows Communication Foundation (WCF) für die WS-ReliableMessaging-Version von Februar 2007 (Version 1.1)-Protokoll für die Interoperation mithilfe des HTTP-Transports erforderlich. WCF folgt die WS-ReliableMessaging-Spezifikation mit den Einschränkungen und klarstellungen erläutert, die in diesem Thema. Beachten Sie, dass das zuverlässige WS-Messaging-Protokoll in der Version&#160;1.1 ab [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] implementiert ist.  
   
- Das zuverlässige WS-Messaging-Protokoll vom Februar&#160;2007 ist in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] durch das <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> implementiert.  
+ Die WS-ReliableMessaging-Version von Februar 2007 Protokoll wird in WCF von implementiert die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
   
  Der Einfachheit halber verwendet dieses Thema die folgenden Rollen:  
   
@@ -47,41 +35,41 @@ In diesem Thema werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-I
 ## <a name="messaging"></a>Messaging  
   
 ### <a name="sequence-creation"></a>Sequenzerstellung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert `CreateSequence`- und `CreateSequenceResponse`-Nachrichten, um eine zuverlässige Messaging-Sequenz einzurichten. Es gelten die folgenden Einschränkungen:  
+ WCF implementiert `CreateSequence` und `CreateSequenceResponse` Sequenz von Nachrichten an ein zuverlässiges messaging herstellen. Es gelten die folgenden Einschränkungen:  
   
--   B1101: Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator verwendet den gleichen Endpunktverweis wie `CreateSequence`, `ReplyTo` und `AcksTo` der `Offer/Endpoint`-Nachricht.  
+-   B1101: Der Initiator WCF verwendet den gleichen Endpunktverweis als die `CreateSequence` Nachricht `ReplyTo`, `AcksTo` und `Offer/Endpoint`.  
   
 -   R1102: Die `AcksTo`-, `ReplyTo`- und `Offer/Endpoint`-Endpunktverweise in der `CreateSequence`-Nachricht müssen über Adresswerte mit identischen Zeichenfolgendarstellungen verfügen, die sich oktettweise entsprechen.  
   
-    -   Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter überprüft, ob der URI-Teil der `AcksTo`-, `ReplyTo`- und `Endpoint`-Endpunktreferenzen identisch ist, bevor die Sequenz erstellt wird.  
+    -   Der WCF-Beantworter stellt sicher, dass der URI-Teil der `AcksTo`, `ReplyTo` und `Endpoint` Endpunktverweise identisch sind, vor dem Erstellen einer Sequenz.  
   
 -   R1103: Die `AcksTo`- und `ReplyTo` und `Offer/Endpoint`-Endpunktverweise in der `CreateSequence`-Nachricht müssen den gleichen Satz an Verweisparametern aufweisen.  
   
-    -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geht davon aus, dass die Verweisparameter der `AcksTo`-, `ReplyTo`- und `Offer/Endpoint`-Endpunktverweise für `CreateSequence` identisch sind, erzwingt dies jedoch nicht, und verwendet Verweisparameter vom `ReplyTo`-Endpunktverweis für Bestätigungen und Nachrichten umgekehrter Sequenz.  
+    -   WCF wird nicht erzwungen, sondern setzt voraus, die auf Parameter von der `AcksTo`, `ReplyTo` und `Offer/Endpoint` -Endpunktverweise für `CreateSequence` identisch sind und verwendet Verweisparameter vom die `ReplyTo` -Endpunktverweis für Bestätigungen und Nachrichten umgekehrter Sequenz.  
   
--   B1104: Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator generiert das optionale `Expires`-Element oder `Offer/Expires`-Element in der `CreateSequence`-Nachricht nicht.  
+-   B1104: Der WCF-Initiator generiert nicht das optionale `Expires` oder `Offer/Expires` Element in der `CreateSequence` Nachricht.  
   
--   B1105: Beim Zugriff auf die `CreateSequence`-Nachricht verwendet der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter den `Expires`-Wert im `CreateSequence`-Element als `Expires`-Wert im `CreateSequenceResponse`-Element. Andernfalls liest und ignoriert der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter die Werte für `Expires` und `Offer/Expires`.  
+-   B1105: Beim Zugriff auf die `CreateSequence` Nachricht, die WCF-Antwortdienst verwendet die `Expires` Wert in der `CreateSequence` Element als der `Expires` Wert in der `CreateSequenceResponse` Element. Andernfalls der WCF-Beantworter liest und ignoriert die `Expires` und `Offer/Expires` Werte.  
   
--   B1106: Bei Zugreifen auf die `CreateSequenceResponse`-Nachricht liest der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator den optionalen `Expires`-Wert, verwendet ihn aber nicht.  
+-   B1106: Beim Zugriff auf die `CreateSequenceResponse` Nachricht, die WCF-Initiator liest das optionale `Expires` Wert aber nicht verwendet.  
   
--   B1107: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator und -Beantworter generieren immer das optionale `IncompleteSequenceBehavior`-Element im `CreateSequence/Offer`-Element und `CreateSequenceResponse`-Element.  
+-   B1107: Der WCF-Initiator und Beantworter generieren immer das optionale `IncompleteSequenceBehavior` Element in der `CreateSequence/Offer` und `CreateSequenceResponse` Elemente.  
   
--   B1108: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet nur den `DiscardFollowingFirstGap`-Wert und den `NoDiscard`-Wert im `IncompleteSequenceBehavior`-Element.  
+-   B1108: WCF verwendet nur den `DiscardFollowingFirstGap` und `NoDiscard` Werte in der `IncompleteSequenceBehavior` Element.  
   
     -   Zuverlässiges WS-Messaging verwendet den `Offer`-Mechanismus, um die beiden umgekehrt korrelierten Sequenzen einzurichten, die eine Sitzung bilden.  
   
--   B1109: Wenn `CreateSequence` ein `Offer`-Element enthält, weist der unidirektionale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter die angebotene Sequenz ab, indem er mit einer `CreateSequenceResponse`-Nachricht ohne `Accept`-Element antwortet.  
+-   B1109: Wenn `CreateSequence` enthält ein `Offer` Element, lehnt die unidirektionalen WCF-Beantworter die angebotene Sequenz indem er mit einem `CreateSequenceResponse` ohne eine `Accept` Element.  
   
--   B1110: Wenn ein zuverlässiger Messaging-Beantworter die angebotene Sequenz zurückweist, gibt der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator einen Fehler für die neu erstellte Sequenz zurück.  
+-   B1110: Wenn eine zuverlässige Messaging-Beantworter die angebotene Sequenz zurückweist, einem Fehler in der WCF-Initiator die neu eingerichtete Sequenz.  
   
--   B1111: Wenn `CreateSequence` kein `Offer`-Element enthält, weist der bidirektionale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter die angebotene Sequenz ab, indem er mit einem `CreateSequenceRefused`-Fehler antwortet.  
+-   B1111: Wenn `CreateSequence` enthält kein `Offer` Element, lehnt der bidirektionalen WCF-Beantworter die angebotene Sequenz indem er mit einem `CreateSequenceRefused` Fehler.  
   
 -   R1112: Wenn mithilfe des `Offer`-Mechanismus zwei umgekehrte Sequenzen erstellt werden, muss die `[address]`-Eigenschaft des `CreateSequenceResponse/Accept/AcksTo`-Endpunktverweises mit dem Ziel-URI der `CreateSequence`-Nachricht Byte für Byte übereinstimmen.  
   
 -   R1113: Wenn mithilfe des `Offer`-Mechanismus zwei umgekehrte Sequenzen erstellt werden, müssen alle Nachrichten in beiden Sequenzen, die vom Initiator an den Beantworter übermittelt werden, an den gleichen Endpunktverweis gesendet werden.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet zuverlässiges WS-Messaging, um zuverlässige Sitzungen zwischen dem Initiator und dem Beantworter einzurichten. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-ReliableMessaging-Implementierung bietet eine zuverlässige Sitzung für unidirektionale, Anforderung-Antwort- und Vollduplex-Nachrichtenmuster. Der `Offer`-Mechanismus von zuverlässigem WS-Messaging für `CreateSequence` und `CreateSequenceResponse` ermöglicht es Ihnen, zwei umgekehrt korrelierte Sequenzen zu erstellen, und bietet ein für alle Nachrichtenendpunkte geeignetes Sitzungsprotokoll. Da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Sicherheit solcher Sitzungen sowie End-to-End-Schutz der Sitzungsintegrität garantiert, kann sichergestellt werden, dass alle an den gleichen Teilnehmer gerichteten Nachrichten am selben Ziel ankommen. Dadurch wird es zudem ermöglicht, Sequenzbestätigungen im Piggyback-Verfahren mit Anwendungsnachrichten zu übermitteln. Daher gelten die Einschränkungen R1102 R1112 und R1113 für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ WS-ReliableMessaging wird von WCF verwendet, um zuverlässige Sitzungen zwischen dem Initiator und Beantworter einzurichten. Die WCF-WS-ReliableMessaging-Implementierung bietet eine zuverlässige Sitzung für unidirektionale, Anforderung-Antwort- und Vollduplex-Nachrichtenmuster. Der `Offer`-Mechanismus von zuverlässigem WS-Messaging für `CreateSequence` und `CreateSequenceResponse` ermöglicht es Ihnen, zwei umgekehrt korrelierte Sequenzen zu erstellen, und bietet ein für alle Nachrichtenendpunkte geeignetes Sitzungsprotokoll. Da WCF eine Sicherheitsgarantie für solcher Sitzungen sowie End-to-End-Schutz bietet, ist es ratsam, um sicherzustellen, dass Nachrichten für den gleichen Teilnehmer am selben Ziel ankommen. Dadurch wird es zudem ermöglicht, Sequenzbestätigungen im Piggyback-Verfahren mit Anwendungsnachrichten zu übermitteln. Daher gelten Einschränkungen R1102 R1112 und R1113 für WCF.  
   
  Ein Beispiel für eine `CreateSequence`-Nachricht.  
   
@@ -136,9 +124,9 @@ In diesem Thema werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-I
 ```  
   
 ### <a name="closing-a-sequence"></a>Schließen einer Sequenz  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die `CloseSequence`-Nachricht und die `CloseSequenceResponse`-Nachricht, um das von einer zuverlässigen Messaging-Quelle initiierte Schließen durchzuführen. Das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Reliable Messaging-Ziel initiiert das Schließen nicht, und die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Reliable Messaging-Quelle unterstützt keinen Schließen-Vorgang, der von einem zuverlässigen Messaging-Ziel initiiert wird. Es gelten die folgenden Einschränkungen:  
+ WCF verwendet die `CloseSequence` und `CloseSequenceResponse` Nachrichten für eine zuverlässige Messaging-Quelle initiierte schließen durchzuführen. Das WCF zuverlässige Messaging-Ziel initiiert das Schließen nicht, und der WCF Reliable Messaging-Quelle unterstützt keine zuverlässige Messaging-Ziel Herunterfahren durch einen. Es gelten die folgenden Einschränkungen:  
   
--   B1201: Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Reliable&#160;Messaging-Quelle sendet immer eine `CloseSequence`-Nachricht, um die Sequenz zu schließen.  
+-   B1201: Die WCF Reliable Messaging-Quelle sendet immer eine `CloseSequence` Nachricht, um die Sequenz zu schließen.  
   
 -   B1202: Die zuverlässige Messaging-Quelle wartet auf die Bestätigung aller Sequenznachrichten, bevor sie die `CloseSequence`-Nachricht sendet.  
   
@@ -146,7 +134,7 @@ In diesem Thema werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-I
   
 -   R1204: Das zuverlässige Messaging-Ziel darf das Schließen nicht durch Senden einer `CloseSequence`-Nachricht initiieren.  
   
--   B1205: Bei Empfang einer `CloseSequence`-Nachricht betrachtet die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Reliable&#160;Messaging-Quelle die Sequenz als unvollständig und sendet einen Fehler.  
+-   B1205: bei Empfang einer `CloseSequence` Nachricht, die WCF Reliable Messaging-Quelle die Sequenz als unvollständig und sendet einen Fehler.  
   
  Ein Beispiel für eine `CloseSequence`-Nachricht.  
   
@@ -189,15 +177,15 @@ Example CloseSequenceResponse message:
 ```  
   
 ### <a name="sequence-termination"></a>Sequenzbeendigung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet hauptsächlich den `TerminateSequence/TerminateSequenceResponse`-Handshake, nachdem der `CloseSequence/CloseSequenceResponse`-Handshake abgeschlossen ist. Das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Reliable&#160;Messaging-Ziel initiiert die Beendigung nicht, und die zuverlässige Messaging-Quelle unterstützt keine Beendigung, die von einem zuverlässigen Messaging-Ziel initiiert wird. Es gelten die folgenden Einschränkungen:  
+ WCF verwendet hauptsächlich die `TerminateSequence/TerminateSequenceResponse` Handshake nach Abschluss der `CloseSequence/CloseSequenceResponse` Handshake. Das WCF zuverlässige Messaging-Ziel initiiert die Beendigung nicht, und die zuverlässige Messaging-Quelle unterstützt keine zuverlässige Messaging-Ziel initiiert beenden. Es gelten die folgenden Einschränkungen:  
   
--   B1301: Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator schickt die `TerminateSequence`-Nachricht erst nach dem erfolgreichen Abschluss des `CloseSequence/CloseSequenceResponse`-Handshake.  
+-   B1301: Der WCF--Initiator schickt die `TerminateSequence` Nachricht nach dem erfolgreichen Abschluss der `CloseSequence/CloseSequenceResponse` Handshake.  
   
--   R1302: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] überprüft, ob das `LastMsgNumber`-Element in allen `CloseSequence`-Nachrichten und `TerminateSequence`-Nachrichten für eine bestimmte Sequenz konsistent ist. Das bedeutet, dass `LastMsgNumber` entweder in keiner `CloseSequence`-Nachricht und keiner `TerminateSequence`-Nachricht vorhanden ist oder in allen `CloseSequence`-Nachrichten und `TerminateSequence`-Nachrichten vorhanden und identisch ist.  
+-   R1302: WCF überprüft, ob die `LastMsgNumber` -Element ist konsistent in allen `CloseSequence` und `TerminateSequence` Nachrichten für eine bestimmte Sequenz. Das bedeutet, dass `LastMsgNumber` entweder in keiner `CloseSequence`-Nachricht und keiner `TerminateSequence`-Nachricht vorhanden ist oder in allen `CloseSequence`-Nachrichten und `TerminateSequence`-Nachrichten vorhanden und identisch ist.  
   
 -   B1303: Bei Empfang einer `TerminateSequence`-Nachricht nach dem `CloseSequence/CloseSequenceResponse`-Handshake antwortet das zuverlässige Messaging-Ziel mit einer `TerminateSequenceResponse`-Nachricht. Da die zuverlässige Messaging-Quelle die `TerminateSequence`-Nachricht erst nach Erhalt der letzten Bestätigung sendet, weiß das zuverlässige Messaging-Ziel mit Sicherheit, dass die Sequenz beendet ist, und fordert die Ressourcen unverzüglich zurück.  
   
--   B1304: Bei Empfang einer `TerminateSequence`-Nachricht vor dem `CloseSequence/CloseSequenceResponse`-Handshake antwortet das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Reliable&#160;Messaging-Ziel mit einer `TerminateSequenceResponse`-Nachricht. Wenn das zuverlässige Messaging-Ziel ermittelt, dass die Sequenz keine Inkonsistenzen aufweist, wartet das zuverlässige Messaging-Ziel so lange, wie vom Anwendungsziel angegeben, bevor es die Ressourcen zurückverlangt, um es dem Client zu ermöglichen, die letzte Bestätigung zu empfangen. Anderenfalls fordert das zuverlässige Messaging-Ziel die Ressourcen unverzüglich zurück und teilt dem Anwendungsziel mit, dass die Sequenz nicht ordnungsgemäß beendet wurde, indem es das `Faulted`-Ereignis auslöst.  
+-   B1304: Beim Empfang von einer `TerminateSequence` -Nachricht vor der `CloseSequence/CloseSequenceResponse` -Handshakes stellt das WCF zuverlässige Messaging-Ziel antwortet mit einer `TerminateSequenceResponse` Nachricht. Wenn das zuverlässige Messaging-Ziel ermittelt, dass die Sequenz keine Inkonsistenzen aufweist, wartet das zuverlässige Messaging-Ziel so lange, wie vom Anwendungsziel angegeben, bevor es die Ressourcen zurückverlangt, um es dem Client zu ermöglichen, die letzte Bestätigung zu empfangen. Anderenfalls fordert das zuverlässige Messaging-Ziel die Ressourcen unverzüglich zurück und teilt dem Anwendungsziel mit, dass die Sequenz nicht ordnungsgemäß beendet wurde, indem es das `Faulted`-Ereignis auslöst.  
   
  Ein Beispiel für eine `TerminateSequence`-Nachricht.  
   
@@ -242,7 +230,7 @@ Example TerminateSequenceResponse message:
 ### <a name="sequences"></a>Sequenzen  
  Die folgende Liste enthält die Einschränkungen, die für Sequenzen gelten:  
   
--   B1401:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert und greift auf die Sequenznummern, die nicht höher als `xs:long`des inklusive Maximalwert 9223372036854775807.  
+-   B1401:WCF generiert und greift auf-Sequenznummern nicht höher als `xs:long`des inklusive Maximalwert 9223372036854775807.  
   
  Ein Beispiel für einen `Sequence`-Header.  
   
@@ -254,7 +242,7 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="request-acknowledgement"></a>Anfordern einer Bestätigung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet den `AckRequested`-Header als Keep-alive-Mechanismus.  
+ WCF verwendet die `AckRequested` -Header als Keep-alive-Mechanismus.  
   
  Ein Beispiel für einen `AckRequested`-Header.  
   
@@ -265,11 +253,11 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet den Piggyback-Mechanismus für die im zuverlässigen WS-Messaging bereitgestellten Sequenzbestätigungen. Es gelten die folgenden Einschränkungen:  
+ WCF verwendet einen "Zusatz"-Mechanismus für die WS-Reliable Messaging bereitgestellten sequenzbestätigungen. Es gelten die folgenden Einschränkungen:  
   
 -   R1601: Wenn zwei umgekehrte Sequenzen eingerichtet sind mit den `Offer` Mechanismus, der `SequenceAcknowledgement` Header kann in jeder an den beabsichtigten Empfänger Anwendungsnachricht aufgenommen werden. Der Remoteendpunkt muss in der Lage sein, auf einen per Piggyback-Verfahren gesendeten `SequenceAcknowledgement`-Header zuzugreifen.  
   
--   B1602: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert keine `SequenceAcknowledgement`-Header, die `Nack`-Elemente enthalten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] überprüft, ob jedes `Nack`-Element eine Sequenznummer enthält. Wenn dies nicht der Fall ist, werden das `Nack`-Element und sein Wert ignoriert.  
+-   B1602: WCF löst keine `SequenceAcknowledgement` Header, die enthalten `Nack` Elemente. WCF überprüft, ob jedes `Nack` Element enthält eine Sequenznummer, jedoch andernfalls ignoriert die `Nack` Element und Wert.  
   
  Ein Beispiel für einen `SequenceAcknowledgement`-Header.  
   
@@ -281,11 +269,11 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="ws-reliablemessaging-faults"></a>WS-ReliableMessaging-Fehler  
- Die folgende Liste enthält die Einschränkungen, die für die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Implementierung der WS-ReliableMessaging-Fehler gelten. Es gelten die folgenden Einschränkungen:  
+ Im folgenden wird eine Liste der Einschränkungen, die für die WCF-Implementierung des WS-ReliableMessaging-Fehler gelten. Es gelten die folgenden Einschränkungen:  
   
--   B1701: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert keine `MessageNumberRollover` Fehler.  
+-   B1701: WCF löst keine `MessageNumberRollover` Fehler.  
   
--   B1702: Wenn der Dienstendpunkt über SOAP&#160;1.2 seine Verbindungsgrenze erreicht und keine weiteren Verbindungen verarbeiten kann, generiert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] den geschachtelten `CreateSequenceRefused`-Fehlersubcode `netrm:ConnectionLimitReached` (siehe folgendes Beispiel).  
+-   B1702: Über SOAP 1.2, wenn der Dienstendpunkt seine Verbindungsgrenze erreicht und keine weiteren Verbindungen verarbeiten WCF generiert eine geschachtelte `CreateSequenceRefused` -Fehlersubcode `netrm:ConnectionLimitReached`, wie im folgenden Beispiel gezeigt.  
   
 ```xml  
 <s:Envelope>  
@@ -312,9 +300,9 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="ws-addressing-faults"></a>WS-Adressierungsfehler  
- Da zuverlässiges WS-Messaging die WS-Adressierung verwendet, generiert und überträgt die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Implementierung möglicherweise WS-Adressierungsfehler. In diesem Abschnitt werden die WS-Adressierungsfehler erläutert, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] explizit auf der WS-ReliableMessaging-Schicht generiert und überträgt.  
+ Da WS-ReliableMessaging WS-Adressierung verwendet wird, kann die WCF-WS-ReliableMessaging-Implementierung generieren und Übertragen von WS-Adressierungsfehler. Dieser Abschnitt behandelt die WS-Adressierungsfehler, die WCF explizit generiert und überträgt an der WS-ReliableMessaging-Schicht an:  
   
--   B1801:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert und überträgt die `Message Addressing Header Required` fehl, wenn eine der folgenden Aussagen zutrifft:  
+-   B1801:WCF generiert und überträgt die `Message Addressing Header Required` fehl, wenn eine der folgenden Aussagen zutrifft:  
   
     -   Bei einer Nachricht vom Typ `CreateSequence`, `CloseSequence` oder `TerminateSequence` fehlt ein `MessageId`-Header.  
   
@@ -322,26 +310,26 @@ Example TerminateSequenceResponse message:
   
     -   Bei einer Nachricht vom Typ `CreateSequenceResponse`, `CloseSequenceResponse` oder `TerminateSequenceResponse` fehlt ein `RelatesTo`-Header.  
   
--   B1802:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert und überträgt die `Endpoint Unavailable` Fehler, um anzugeben, dass es kein Endpunkt gelauscht, die die Sequenz basierend auf der Prüfung der Adressierungsheader in verarbeiten kann die `CreateSequence` Nachricht.  
+-   B1802:WCF generiert und überträgt die `Endpoint Unavailable` Fehler, um anzugeben, dass es kein Endpunkt gelauscht, die die Sequenz basierend auf der Prüfung der Adressierungsheader in verarbeiten kann die `CreateSequence` Nachricht.  
   
 ## <a name="protocol-composition"></a>Protokollkomposition  
   
 ### <a name="composition-with-ws-addressing"></a>Komposition mit WS-Adressierung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt zwei Versionen der WS-Adressierung: WS-Adressierung&#160;2004/08 [WS-ADDR] und die Empfehlungen für W3C die WS-Addressierung&#160;1.0 [WS-WS-ADDR-CORE] und [WS-ADDR-SOAP].  
+ WCF unterstützt zwei Versionen der WS-Adressierung: WS-Adressierung 2004/08 [WS-ADDR] und W3C WS-Adressierung 1.0 Empfehlungen [WS-ADDR-CORE] und [WS-ADDR-SOAP].  
   
- Zwar erwähnt die WS-ReliableMessaging-Spezifikation nur die WS-Adressierung&#160;2004/08, schränkt jedoch die Verwendung der WS-Adressierung nicht auf diese Version ein. Die folgende Liste enthält die Einschränkungen, die für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gelten:  
+ Zwar erwähnt die WS-ReliableMessaging-Spezifikation nur die WS-Adressierung&#160;2004/08, schränkt jedoch die Verwendung der WS-Adressierung nicht auf diese Version ein. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:  
   
 -   R2101: Sowohl WS-Adressierung&#160;2004/08 als auch WS-Adressierung&#160;1.0 können mit zuverlässigem WS-Messaging verwendet werden.  
   
 -   R2102: Für eine gegebene WS-ReliableMessaging-Sequenz oder ein Paar umgekehrter Sequenzen, die mithilfe des `Offer`-Mechanismus korreliert wurden, darf nur eine Version der WS-Adressierung verwendet werden.  
   
 ### <a name="composition-with-soap"></a>Komposition mit SOAP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt die Verwendung sowohl von SOAP&#160;1.1 als auch von SOAP&#160;1.2 mit zuverlässigem WS-Messaging.  
+ WCF unterstützt die Verwendung von SOAP 1.1 und SOAP 1.2 mit zuverlässigem WS-Messaging.  
   
 ### <a name="composition-with-ws-security-and-ws-secureconversation"></a>Komposition mit WS-Sicherheit und WS-SecureConversation  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet Schutz für die WS-ReliableMessaging-Sequenzen durch die Verwendung einer sicheren Transportmethode (HTTPS), die Erstellung mit WS-Sicherheit und die Erstellung mit WS-Secure Conversation. Das WS-ReliableMessaging&#160;1.1-Protokoll, das WS-Security&#160;1.1- und das WS-Secure Conversation&#160;1.3-Protokoll sollten zusammen verwendet werden. Die folgende Liste enthält die Einschränkungen, die für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gelten:  
+ WCF bietet Schutz für WS-ReliableMessaging-Sequenzen durch Verwenden von sicheren Transportmethode (HTTPS), Komposition mit WS-Security und Komposition mit WS-Secure Conversation. Das WS-ReliableMessaging&#160;1.1-Protokoll, das WS-Security&#160;1.1- und das WS-Secure Conversation&#160;1.3-Protokoll sollten zusammen verwendet werden. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:  
   
--   R2301: Damit die Integrität einer WS-ReliableMessaging-Sequenz sowie die Integrität und Vertraulichkeit einzelner Nachrichten sichergestellt ist, muss WS-Secure Conversation für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet werden.  
+-   R2301: Um die Integrität einer WS-ReliableMessaging-Sequenz neben der Integrität und Vertraulichkeit einzelner Nachrichten zu schützen, muss WCF WS-Secure Conversation verwendet werden muss.  
   
 -   R2302:AWS-Secure Conversation-Sitzung muss vor dem Einrichten von WS-ReliableMessaging Sequence(s) eingerichtet werden.  
   
@@ -349,7 +337,7 @@ Example TerminateSequenceResponse message:
   
 -   B2304:WS-ReliableMessaging-Sequenz oder ein paar umgekehrt korrelierte Sequenzen immer an eine einzelne WS-SecureConversation-Sitzung gebunden sind.  
   
--   R2305: Wenn WS-Secure Conversation zur Erstellung verwendet wird, erfordert es der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter, dass die `CreateSequence`-Nachricht das `wsse:SecurityTokenReference`-Element und den `wsrm:UsesSequenceSTR`-Header enthält.  
+-   R2305: Wenn mit WS-Secure Conversation ItemsControl-Element, das WCF-Beantworter erfordert, dass die `CreateSequence` Nachricht enthält die `wsse:SecurityTokenReference` Element und der `wsrm:UsesSequenceSTR` Header.  
   
  Ein Beispiel für einen `UsesSequenceSTR`-Header.  
   
@@ -358,31 +346,31 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="composition-with-ssltls-sessions"></a>Komposition mit SSL/TLS-Sitzungen  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt keine Komposition mit SSL/TLS-Sitzungen:  
+ WCF unterstützt keine Komposition mit SSL/TLS-Sitzungen:  
   
--   B2401: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert den `wsrm:UsesSequenceSSL`-Header nicht.  
+-   B2401: WCF generiert nicht das `wsrm:UsesSequenceSSL` Header.  
   
--   R2402: Ein zuverlässiger Messaging-Initiator darf keine `CreateSequence`-Nachricht mit einem `wsrm:UsesSequenceSSL`-Header an einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter senden.  
+-   R2402: Ein zuverlässiger Messaging-Initiator muss nicht senden eine `CreateSequence` -Nachricht mit einem `wsrm:UsesSequenceSSL` Header an einen WCF-Antwortdienst.  
   
 ### <a name="composition-with-ws-policy"></a>Komposition mit WS-Policy  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt zwei Versionen von WS-Policy: WS-Policy&#160;1.2 und WS-Policy&#160;1.5.  
+ WCF unterstützt zwei Versionen der WS-Policy: WS-Policy 1.2 und WS-Policy 1.5.  
   
 ## <a name="ws-reliablemessaging-ws-policy-assertion"></a>WS-ReliableMessaging WS-Richtlinienassertion  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die WS-Richtlinienassertion von zuverlässigem WS-Messaging, `wsrm:RMAssertion`, um die Fähigkeiten von Endpunkten zu beschreiben. Die folgende Liste enthält die Einschränkungen, die für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gelten:  
+ WCF verwendet die WS-ReliableMessaging WS-Richtlinienassertion `wsrm:RMAssertion` Fähigkeiten von Endpunkten zu beschreiben. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:  
   
--   B3001: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fügt die `wsrmn:RMAssertion`-WS-Richtlinienassertion an `wsdl:binding`-Elemente an. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt sowohl das Anfügen an `wsdl:binding`-Elemente als auch an `wsdl:port`-Elemente.  
+-   B3001: WCF fügt `wsrmn:RMAssertion` WS-Richtlinienassertion an `wsdl:binding` Elemente. WCF unterstützt beide Anlagen `wsdl:binding` und `wsdl:port` Elemente.  
   
--   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert nie das `wsp:Optional`-Tag.  
+-   B3002: WCF generiert, die nie die `wsp:Optional` Tag.  
   
--   B3003: Beim Zugreifen auf die `wsrmp:RMAssertion`-WS-Richtlinienassertion ignoriert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] das `wsp:Optional`-Tag und behandelt die WS-RM-Richtlinie als obligatorisch.  
+-   B3003: Beim Zugriff auf die `wsrmp:RMAssertion` WS-Policy-Assertion WCF ignoriert den `wsp:Optional` -Tag und behandelt die WS-RM-Richtlinie als obligatorisch.  
   
--   R3004: Da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] keine Erstellung mit SSL/TLS-Sitzungen durchführt, akzeptiert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] keine Richtlinie mit `wsrmp:SequenceTransportSecurity`.  
+-   R3004: Da WCF nicht mit SSL/TLS-Sitzungen zu verfassen, WCF akzeptiert keine Richtlinie mit `wsrmp:SequenceTransportSecurity`.  
   
--   B3005: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert immer das `wsrmp:DeliveryAssurance`-Element.  
+-   B3005: Immer WCF generiert das `wsrmp:DeliveryAssurance` Element.  
   
--   B3006: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gibt immer die `wsrmp:ExactlyOnce`-Zustellungszusicherung an.  
+-   B3006: WCF immer gibt die `wsrmp:ExactlyOnce` übermittlungssicherung.  
   
--   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert und liest die folgenden Eigenschaften der WS-ReliableMessaging-Assertion und ermöglicht die Steuerung sie auf die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableSessionBindingElement`:  
+-   B3007: WCF generiert und liest die folgenden Eigenschaften der WS-ReliableMessaging-Assertion und die Steuerung über die WCF`ReliableSessionBindingElement`:  
   
     -   `netrmp:InactivityTimeout`  
   
@@ -407,11 +395,11 @@ Example TerminateSequenceResponse message:
     ```  
   
 ## <a name="flow-control-ws-reliablemessaging-extension"></a>WS-ReliableMessaging-Erweiterung zur Ablaufsteuerung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die WS-ReliableMessaging-Erweiterbarkeit, um die optionale stärkere Kontrolle über den Sequenznachrichtenfluss zu ermöglichen.  
+ WCF verwendet WS-ReliableMessaging-Erweiterbarkeit, um optionale Steuerung des sequenznachrichtenflusses Sequenz-Nachrichtenfluss zu ermöglichen.  
   
- Flusssteuerung aktiviert ist, durch Festlegen der `ReliableSessionBindingElement`des `FlowControlEnabled``boolean` Eigenschaft `true`. Die folgende Liste enthält die Einschränkungen, die für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gelten:  
+ Flusssteuerung aktiviert ist, durch Festlegen der `ReliableSessionBindingElement`des `FlowControlEnabled``boolean` Eigenschaft `true`. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:  
   
--   B4001: Wenn die zuverlässige Messaging-Ablaufsteuerung aktiviert ist, generiert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ein `netrm:BufferRemaining`-Element in der Elementerweiterbarkeit des `SequenceAcknowledgement`-Headers, wie im folgenden Beispiel zu sehen ist:  
+-   B4001: Wenn zuverlässiges Messaging flusssteuerung aktiviert ist, WCF generiert eine `netrm:BufferRemaining` Element in der elementerweiterbarkeit des der `SequenceAcknowledgement` -Header, wie im folgenden Beispiel gezeigt.  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -421,16 +409,16 @@ Example TerminateSequenceResponse message:
     </wsrm:SequenceAcknowledgement>  
     ```  
   
--   B4002: Selbst wenn die zuverlässige Messaging-Ablaufsteuerung aktiviert ist, erfordert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kein `netrm:BufferRemaining`-Element im `SequenceAcknowledgement`-Header.  
+-   B4002: Selbst wenn zuverlässiges Messaging flusssteuerung aktiviert ist, WCF erfordert nicht, dass eine `netrm:BufferRemaining` Element in der `SequenceAcknowledgement` Header.  
   
--   B4003: Das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ReliableMessaging-Ziel verwendet `netrm:BufferRemaining`, um anzugeben, wie viele neue Nachrichten es puffern kann.  
+-   B4003: WCF zuverlässige Messaging-Ziel verwendet `netrm:BufferRemaining` , um anzugeben, wie viele neue Nachrichten es Puffern können.  
   
--   B4004:when Reliable Messaging flusssteuerung aktiviert ist, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zuverlässige Messaging-Quelle verwendet den Wert der `netrm:BufferRemaining` zu drosseln nachrichtenübertragung.  
+-   B4004:when Reliable Messaging flusssteuerung aktiviert ist, die WCF zuverlässige Messaging-Quelle verwendet den Wert der `netrm:BufferRemaining` zu drosseln nachrichtenübertragung.  
   
--   B4005: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert `netrm:BufferRemaining`-Ganzzahlwerte zwischen&#160;0 und 4096 einschließlich und liest Ganzzahlwerte zwischen&#160;0 und dem `xs:int`-Wert von `maxInclusive` (214748364) einschließlich.  
+-   B4005: WCF generiert `netrm:BufferRemaining` -Ganzzahlwerte zwischen 0 und 4096 einschließlich und liest Ganzzahlwerte zwischen 0 und `xs:int`des `maxInclusive` Wert (214748364) einschließlich.  
   
 ## <a name="message-exchange-patterns"></a>Nachrichtenaustauschmuster  
- In diesem Abschnitt wird das Verhalten von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bei Verwendung von WS-ReliableMessaging für verschiedene Nachrichtenaustauschmuster beschrieben. Für jedes Nachrichtenaustauschmuster werden die folgenden zwei Bereitstellungsszenarios erläutert:  
+ Dieser Abschnitt beschreibt WCFs-Verhalten, wenn WS-ReliableMessaging für verschiedene Nachrichtenaustauschmuster verwendet wird. Für jedes Nachrichtenaustauschmuster werden die folgenden zwei Bereitstellungsszenarios erläutert:  
   
 -   Nicht adressierbarer Initiator: Der Initiator befindet sich hinter einer Firewall; der Beantworter kann Nachrichten an den Initiator nur über HTTP-Antworten zustellen.  
   
@@ -439,97 +427,97 @@ Example TerminateSequenceResponse message:
 ### <a name="one-way-non-addressable-initiator"></a>Unidirektionaler, nicht adressierbarer Initiator  
   
 #### <a name="binding"></a>Bindung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt ein unidirektionales Nachrichtenaustauschmuster unter Verwendung einer Sequenz über einen HTTP-Kanal bereit. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet HTTP-Anforderungen, um Nachrichten vom Initiator an den Beantworter zu übertragen, und HTTP-Antworten, um Nachrichten vom Beantworter an den Initiator zu übertragen.  
+ WCF bietet ein unidirektionales Nachrichtenaustauschmuster unter Verwendung einer Sequenz über einen HTTP-Kanal. WCF verwendet HTTP-Anforderungen zur Übertragung aller Nachrichten vom Initiator an den Antwortdienst bzw. HTTP-Antworten zur Übertragung aller Nachrichten vom Beantworter an den Initiator.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch  
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator überträgt eine `CreateSequence`-Nachricht ohne `Offer`-Element in einer HTTP-Anforderung und erwartet die `CreateSequenceResponse`-Nachricht in der HTTP-Antwort. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter erstellt eine Sequenz und überträgt die `CreateSequenceResponse`-Nachricht ohne `Accept`-Element in der HTTP-Antwort.  
+ Der WCF--Initiator überträgt eine `CreateSequence` -Nachricht ohne `Offer` Element in einer HTTP-Anforderung und erwartet die `CreateSequenceResponse` -Nachricht in der HTTP-Antwort. Der WCF-Beantworter erstellt eine Sequenz und überträgt die `CreateSequenceResponse` -Nachricht ohne `Accept` Element in der HTTP-Antwort.  
   
 #### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator erstellt Bestätigungen als Antwort auf alle Nachrichten mit Ausnahme von `CreateSequence`-Nachrichten und Fehlernachrichten. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter überträgt stets eine eigenständige Bestätigung als HTTP-Antwort auf alle Sequenzen und `AckRequested`-Nachrichten.  
+ Der WCF--Initiator erstellt Bestätigungen als Antwort alle Nachrichten mit Ausnahme der `CreateSequence` -Nachrichten und Fehlernachrichten. Der WCF-Beantworter überträgt stets eine eigenständige Bestätigung in der HTTP-Antwort auf alle Sequenzen und `AckRequested` Nachrichten.  
   
 #### <a name="closesequence-exchange"></a>CloseSequence-Austausch  
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator überträgt eine `CloseSequence`-Nachricht in einer HTTP-Anforderung und erwartet die `CreateSequenceResponse`-Nachricht in der HTTP-Antwort. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter überträgt die `CloseSequenceResponse`-Nachricht in der HTTP-Antwort.  
+ Der WCF--Initiator überträgt eine `CloseSequence` -Nachricht in einer HTTP-Anforderung und erwartet die `CreateSequenceResponse` -Nachricht in der HTTP-Antwort. Der WCF-Beantworter überträgt die `CloseSequenceResponse` -Nachricht in der HTTP-Antwort.  
   
 #### <a name="terminatesequence-exchange"></a>TerminateSequence-Austausch  
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator überträgt eine `TerminateSequence`-Nachricht in einer HTTP-Anforderung und erwartet die `TerminateSequenceResponse`-Nachricht in der HTTP-Antwort. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter überträgt die `TerminateSequenceResponse`-Nachricht in der HTTP-Antwort.  
+ Der WCF--Initiator überträgt eine `TerminateSequence` -Nachricht in einer HTTP-Anforderung und erwartet die `TerminateSequenceResponse` -Nachricht in der HTTP-Antwort. Der WCF-Beantworter überträgt die `TerminateSequenceResponse` -Nachricht in der HTTP-Antwort.  
   
 ### <a name="one-way-addressable-initiator"></a>Unidirektionaler, adressierbarer Initiator  
   
 #### <a name="binding"></a>Bindung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet ein unidirektionales Nachrichtenaustauschmuster unter Verwendung einer Sequenz über einen eingehenden und einen ausgehenden HTTP-Kanal. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.  
+ WCF bietet ein unidirektionales Nachrichtenaustauschmuster unter Verwendung einer Sequenz über einen eingehenden und einen ausgehenden HTTP-Kanal. WCF verwendet HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch  
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator überträgt eine `CreateSequence`-Nachricht ohne `Offer`-Element in einer HTTP-Anforderung. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter erstellt eine Sequenz und überträgt die `CreateSequenceResponse`-Nachricht ohne `Accept`-Element in einer HTTP-Anforderung.  
+ Der WCF--Initiator überträgt eine `CreateSequence` -Nachricht ohne `Offer` -Element in einer HTTP-Anforderung. Der WCF-Beantworter erstellt eine Sequenz und überträgt die `CreateSequenceResponse` -Nachricht ohne `Accept` -Element in einer HTTP-Anforderung.  
   
 ### <a name="duplex-addressable-initiator"></a>Adressierbarer Duplex-Initiator  
   
 #### <a name="binding"></a>Bindung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet ein vollständig asynchrones bidirektionales Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. Dieses Nachrichtenaustauschmuster lässt sich bis zu einem gewissen Grad mit dem Nachrichtenaustauschmuster für einen `Request/Reply`, `Addressable`-Initiator kombinieren. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.  
+ WCF bietet ein vollständig asynchrones bidirektionales Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. Dieses Nachrichtenaustauschmuster lässt sich bis zu einem gewissen Grad mit dem Nachrichtenaustauschmuster für einen `Request/Reply`, `Addressable`-Initiator kombinieren. WCF verwendet HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch  
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator überträgt eine `CreateSequence`-Nachricht mit einem `Offer`-Element in einer HTTP-Anforderung. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter stellt sicher, dass `CreateSequence` ein `Offer`-Element enthält, erstellt dann eine Sequenz und überträgt die `CreateSequenceResponse`-Nachricht mit einem `Accept`-Element.  
+ Der WCF--Initiator überträgt eine `CreateSequence` -Nachricht mit einer `Offer` -Element in einer HTTP-Anforderung. Der WCF-Beantworter stellt sicher, dass die `CreateSequence` hat eine `Offer` Element, dann erstellt eine Sequenz und überträgt die `CreateSequenceResponse` -Nachricht mit einer `Accept` Element.  
   
 #### <a name="sequence-lifetime"></a>Sequenzlebensdauer  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] behandelt die zwei Sequenzen als eine Vollduplexsitzung.  
+ WCF behandelt die beiden Sequenzen als eine vollduplexsitzung.  
   
- Nach dem Generieren eines Fehlers für eine Sequenz erwartet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], dass der Remoteendpunkt einen Fehler für beide Sequenzen auslöst. Nach dem Lesen eines Fehlers, der zum Fehlschlagen einer Sequenz führt, löst [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] einen Fehler für beide Sequenzen aus.  
+ Nach dem Generieren eines Fehlers, der einem Fehler in einer Sequenz, erwartet WCF Remoteendpunkt für beide Sequenzen auslöst. Nach dem Lesen eines Fehlers, der einem Fehler in einer Sequenz, Fehler WCF für beide Sequenzen.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kann seine ausgehende Sequenz schließen und damit fortfahren, Nachrichten in seiner eingehenden Sequenz zu verarbeiten. Umgekehrt kann [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auch das Schließen der eingehenden Sequenz durchführen und weiter Nachrichten in seiner ausgehenden Sequenz senden.  
+ WCF kann seine ausgehende Sequenz schließen und zum Verarbeiten von Nachrichten in seiner eingehenden Sequenz fortfahren. Im Gegensatz dazu kann WCF das Schließen der eingehenden Sequenz durchführen und weiter Nachrichten in seiner ausgehenden Sequenz senden.  
   
 ### <a name="request-reply-and-one-way-non-addressable-initiator"></a>Anforderung-Antwort- und unidirektionaler, nicht adressierbarer Initiator  
   
 #### <a name="binding"></a>Bindung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet ein unidirektionales Anforderung-Antwort-Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen HTTP-Kanal. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet HTTP-Anforderungen, um Nachrichten vom Initiator an den Beantworter zu übertragen, und HTTP-Antworten, um Nachrichten vom Beantworter an den Initiator zu übertragen.  
+ WCF bietet einen unidirektionalen und Anforderung-Antwort-Nachrichtenaustauschmuster, die unter Verwendung zweier Sequenzen über einen HTTP-Kanal. WCF verwendet HTTP-Anforderungen zur Übertragung aller Nachrichten vom Initiator an den Antwortdienst bzw. HTTP-Antworten zur Übertragung aller Nachrichten vom Beantworter an den Initiator.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch  
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator überträgt eine `CreateSequence`-Nachricht mit einem `Offer`-Element in einer HTTP-Anforderung und erwartet die `CreateSequenceResponse`-Nachricht in der HTTP-Antwort. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter erstellt eine Sequenz und überträgt die `CreateSequenceResponse`-Nachricht mit einem `Accept`-Element in der HTTP-Antwort.  
+ Der WCF--Initiator überträgt eine `CreateSequence` -Nachricht mit einer `Offer` Element in einer HTTP-Anforderung und erwartet die `CreateSequenceResponse` -Nachricht in der HTTP-Antwort. Der WCF-Beantworter erstellt eine Sequenz und überträgt die `CreateSequenceResponse` -Nachricht mit einem `Accept` Element in der HTTP-Antwort.  
   
 #### <a name="one-way-message"></a>Unidirektionale Nachricht  
- Um einen unidirektionalen Nachrichtenaustausch erfolgreich durchzuführen, überträgt der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator eine Anforderungssequenznachricht in der HTTP-Anforderung und empfängt eine eigenständige `SequenceAcknowledgement`-Nachricht in der HTTP-Antwort. Die `SequenceAcknowledgement`-Nachricht muss die Nachrichtenübertragung bestätigen.  
+ Um einen unidirektionalen Nachrichtenaustausch erfolgreich abgeschlossen haben, den WCF-Initiator eine anforderungssequenznachricht in der HTTP-Anforderung sendet und empfängt eine eigenständige `SequenceAcknowledgement` -Nachricht in der HTTP-Antwort. Die `SequenceAcknowledgement`-Nachricht muss die Nachrichtenübertragung bestätigen.  
   
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter kann mit einer Bestätigung, einem Fehler oder einer Antwort mit leerem Textbereich und dem HTTP-Statuscode 202 auf die Anforderung reagieren.  
+ Der WCF-Beantworter kann mit einer Bestätigung, einen Fehler oder eine Antwort mit leerem Textbereich und dem HTTP-Statuscode 202 auf die Anforderung antworten.  
   
 #### <a name="two-way-messages"></a>Bidirektionale Nachrichten  
- Um ein bidirektionales Nachrichtenaustauschprotokoll erfolgreich durchzuführen, überträgt der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator eine Anforderungssequenznachricht in der HTTP-Anforderung und empfängt eine Antwortsequenznachricht in der HTTP-Antwort. Die Antwort muss eine `SequenceAcknowledgement` enthalten, die die Übertragung der Anforderungssequenznachricht bestätigt.  
+ Um eine zwei-Wege-Nachrichtenaustauschprotokoll erfolgreich abgeschlossen haben, den WCF-Initiator überträgt eine anforderungssequenznachricht in der HTTP-Anforderung und empfängt eine antwortsequenznachricht in der HTTP-Antwort. Die Antwort muss eine `SequenceAcknowledgement` enthalten, die die Übertragung der Anforderungssequenznachricht bestätigt.  
   
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter kann mit einer Anwendungsantwort, einem Fehler oder einer Antwort mit leerem Textbereich und dem HTTP-Statuscode&#160;202 auf die Anforderung reagieren.  
+ Der WCF-Beantworter antwortet möglicherweise auf die Anforderung mit einer Anwendungsantwort, einem Fehler oder eine Antwort mit leerem Textbereich und dem HTTP-Statuscode 202.  
   
  Aufgrund des Vorhandenseins unidirektionaler Nachrichten und des zeitlichen Ablaufs von Anwendungsantworten verfügen die Sequenznummern der Anforderungssequenznachricht und der Antwortsequenznachricht über keine Korrelation.  
   
 #### <a name="retrying-replies"></a>Wiederholen von Antworten  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nutzt die HTTP-Anforderung-Antwort-Korrelation für das bidirektionale Nachrichtenaustauschprotokoll. Daher wiederholt der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator eine Anforderungssequenznachricht auch dann weiter, wenn die Anforderungssequenznachricht bestätigt wird. Er hört erst dann auf, wenn die HTTP-Antwort eine `SequenceAcknowledgement`, eine Anwendungsantwort oder einen Fehler enthält. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter wiederholt die Antworten in der HTTP-Antwort auf die Anforderung, mit der die Antwort korreliert ist.  
+ WCF basiert auf HTTP-Anforderung / Antwort-Korrelation für das bidirektionale Nachrichtenaustauschprotokoll. Aus diesem Grund der WCF-Initiator wird nicht beendet, und wiederholen Sie dann eine anforderungssequenznachricht, wenn die anforderungssequenznachricht bestätigt wird, sondern stattdessen bei die HTTP-Antwort enthält einen `SequenceAcknowledgement`, Anwendungsantwort oder einen Fehler. Der WCF-Beantworter wiederholt die Antworten auf die HTTP-Antwort der Anforderung mit der die Antwort korreliert ist.  
   
 #### <a name="closesequence-exchange"></a>CloseSequence-Austausch  
- Nach dem Empfang aller Antwortsequenznachrichten und Bestätigungen für alle unidirektionalen Anforderungssequenznachrichten überträgt der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator eine `CloseSequence`-Nachricht für die Anforderungssequenz in einer HTTP-Anforderung und erwartet die `CloseSequenceResponse` in der HTTP-Antwort.  
+ Nach dem Empfang aller Antwortsequenznachrichten und Bestätigungen für alle unidirektionalen anforderungssequenznachrichten, die WCF--Initiator überträgt eine `CloseSequence` -Nachricht für die anforderungssequenz in einer HTTP-Anforderung und erwartet die `CloseSequenceResponse` der HTTP-Antwort.  
   
- Durch Schließen der Anforderungssequenz wird die Antwortsequenz implizit geschlossen. Das bedeutet, der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator fügt die abschließende `SequenceAcknowledgement` der Antwortsequenz in die `CloseSequence`-Nachricht ein, und die Antwortsequenz verfügt über keinen `CloseSequence`-Austausch.  
+ Durch Schließen der Anforderungssequenz wird die Antwortsequenz implizit geschlossen. Dies bedeutet, dass der Initiator WCF umfasst der Antwortsequenz endgültigen `SequenceAcknowledgement` auf die `CloseSequence` Nachricht und die Antwortsequenz verfügt nicht über eine `CloseSequence` Exchange.  
   
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter stellt sicher, dass alle Antworten bestätigt werden, und überträgt die `CloseSequenceResponse`-Nachricht in der HTTP-Antwort.  
+ Der WCF-Beantworter wird sichergestellt, dass alle Antworten bestätigt werden, und überträgt die `CloseSequenceResponse` -Nachricht in der HTTP-Antwort.  
   
 #### <a name="terminatesequence-exchange"></a>TerminateSequence-Austausch  
- Nach Empfang der `CloseSequenceResponse`-Nachricht überträgt der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator eine `TerminateSequence`-Nachricht für die Anforderungssequenz in einer HTTP-Anforderung und erwartet die `TerminateSequenceResponse` in der HTTP-Antwort.  
+ Nach dem Empfang der `CloseSequenceResponse` Nachricht, die WCF--Initiator überträgt eine `TerminateSequence` -Nachricht für die anforderungssequenz in einer HTTP-Anforderung und erwartet die `TerminateSequenceResponse` der HTTP-Antwort.  
   
- Wie beim `CloseSequence`-Austausch wird durch Beendigung der Anforderungssequenz die Antwortsequenz implizit beendet. Das bedeutet, der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator fügt die abschließende `SequenceAcknowledgement` der Antwortsequenz in die `TerminateSequence`-Nachricht ein, und die Antwortsequenz verfügt über keinen `TerminateSequence`-Austausch.  
+ Wie beim `CloseSequence`-Austausch wird durch Beendigung der Anforderungssequenz die Antwortsequenz implizit beendet. Dies bedeutet, dass der Initiator WCF umfasst der Antwortsequenz endgültigen `SequenceAcknowledgement` auf die `TerminateSequence` Nachricht und die Antwortsequenz verfügt nicht über eine `TerminateSequence` Exchange.  
   
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter überträgt die `TerminateSequenceResponse`-Nachricht in der HTTP-Antwort.  
+ Der WCF-Beantworter überträgt die `TerminateSequenceResponse` -Nachricht in der HTTP-Antwort.  
   
 ### <a name="requestreply-addressable-initiator"></a>Adressierbarer Anforderung/Antwort-Initiator  
   
 #### <a name="binding"></a>Bindung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet ein Anforderung-Antwort-Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. Dieses Nachrichtenaustauschmuster lässt sich bis zu einem gewissen Grad mit dem Nachrichtenaustauschmuster für einen `Duplex, Addressable`-Initiator kombinieren. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.  
+ WCF bietet ein Anforderung-Antwort-Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. Dieses Nachrichtenaustauschmuster lässt sich bis zu einem gewissen Grad mit dem Nachrichtenaustauschmuster für einen `Duplex, Addressable`-Initiator kombinieren. WCF verwendet HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch  
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Initiator überträgt eine `CreateSequence`-Nachricht mit einem `Offer`-Element in einer HTTP-Anforderung. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beantworter stellt sicher, dass `CreateSequence` ein `Offer`-Element enthält, erstellt dann eine Sequenz und überträgt die `CreateSequenceResponse`-Nachricht mit einem `Accept`-Element.  
+ Der WCF--Initiator überträgt eine `CreateSequence` -Nachricht mit einer `Offer` -Element in einer HTTP-Anforderung. Der WCF-Beantworter stellt sicher, dass die `CreateSequence` verfügt über eine `Offer` Element erstellt dann eine Sequenz und überträgt die `CreateSequenceResponse` -Nachricht mit einer `Accept` Element.  
   
 #### <a name="requestreply-correlation"></a>Anforderung/Antwort-Korrelation  
  Folgendes gilt für alle korrelierenden Anforderungen und Antworten:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt sicher, dass alle Anwendungsanforderungsnachrichten einen `ReplyTo`-Endpunktverweis und eine `MessageId` enthalten.  
+-   WCF wird sichergestellt, dass alle anwendungsanforderungsnachrichten eine `ReplyTo` -Endpunktverweis und eine `MessageId`.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wendet den lokalen Endpunktverweis als `ReplyTo` jeder einzelnen Anwendungsanforderungsnachricht an. Der lokale Endpunktverweis ist der `CreateSequence`-Verweis der `ReplyTo`-Nachricht für den Initiator und der `CreateSequence`-Verweis der `To`-Nachricht für den Beantworter.  
+-   WCF wendet den lokalen Endpunktverweis als einzelnen anwendungsanforderungsnachricht `ReplyTo`. Der lokale Endpunktverweis ist der `CreateSequence`-Verweis der `ReplyTo`-Nachricht für den Initiator und der `CreateSequence`-Verweis der `To`-Nachricht für den Beantworter.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt sicher, dass eingehende Anforderungsnachrichten eine `MessageId` und einen `ReplyTo`-Verweis besitzen.  
+-   WCF wird sichergestellt, dass eingehende Anforderungsnachrichten-Verweis besitzen eine `MessageId` und ein `ReplyTo`.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt zudem sicher, dass der URI des `ReplyTo`-Endpunktverweises aller Anwendungsanforderungsnachrichten wie weiter oben definiert mit dem lokalen Endpunktverweis übereinstimmt.  
+-   WCF wird sichergestellt, dass die `ReplyTo` URI-Endpunktverweises aller anwendungsanforderungsnachrichten entsprechen den lokalen Endpunktverweis wie weiter oben definiert.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt sicher, dass alle Antworten den richtigen `RelatesTo`-Header und `To`-Header gemäß den `wsa`-Anforderung-Antwort-Korrelationsregeln tragen.
+-   WCF wird sichergestellt, dass alle Antworten den richtigen tragen `RelatesTo` und `To` -Header gemäß `wsa` Anforderung/Antwort-Korrelationsregeln.

@@ -1,31 +1,17 @@
 ---
 title: Konfigurieren von Diensten mit Konfigurationsdateien
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 62a8774ab2843d0b1f0a19ad04fc0a76abb7cac5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: abfe502c6b50234037cad786a658edc3d479cc9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurieren von Diensten mit Konfigurationsdateien
-Das Konfigurieren eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Diensts mit einer Konfigurationsdatei bietet Ihnen eine flexible Möglichkeit, die Endpunkt- und Dienstverhaltensdaten zum Zeitpunkt der Bereitstellung statt zur Entwurfszeit anzugeben. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
+Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Konfigurationsdatei bietet Ihnen die Flexibilität der Bereitstellung von Endpunkt und Dienst dienstverhaltensdaten Bereitstellung statt zur Entwurfszeit. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
   
  Sie können einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst mithilfe der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] -Konfigurationstechnologie konfigurieren. Am häufigsten werden XML-Elemente der Web.config-Datei für eine Internetinformationsdienste (IIS)-Website hinzugefügt, die einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen für die Kommunikation mit dem Dienst verwendeten Adressen) für einzelne Computer. Zusätzlich umfasst [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mehrere vom System bereitgestellte Elemente, mit deren Hilfe Sie die grundlegendsten Funktionen eines Diensts auswählen können. Ab [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]stellt [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ein neues Standardkonfigurationsmodell bereit, das die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Konfigurationsanforderungen vereinfacht. Wenn Sie keine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime den Dienst automatisch mit Standardendpunkten, -bindungen und -verhalten. In der Praxis ist das Schreiben einer Konfiguration ein wesentlicher Bestandteil beim Programmieren von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Anwendungen.  
   

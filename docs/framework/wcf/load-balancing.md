@@ -1,31 +1,17 @@
 ---
 title: Lastenausgleich
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="load-balancing"></a>Lastenausgleich
-Eine Möglichkeit zur Steigerung der Kapazität von [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen besteht darin, sie dezentral zu skalieren und in einer Serverfarm mit Lastenausgleich bereitzustellen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen können mit Standardverfahren zum Lastenausgleich entsprechend ausgeglichen werden. Dazu gehören Softwarelastenausgleichsmodule wie Windows Network Load Balancing sowie hardwarebasierte Anwendungen zum Lastenausgleich.  
+Eine Möglichkeit zum Erhöhen der Kapazität der Windows Communication Foundation (WCF)-Anwendungen werden sie skalieren, indem sie in einer Serverfarm mit Lastenausgleich bereitzustellen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen können mit Standardverfahren zum Lastenausgleich entsprechend ausgeglichen werden. Dazu gehören Softwarelastenausgleichsmodule wie Windows Network Load Balancing sowie hardwarebasierte Anwendungen zum Lastenausgleich.  
   
  In den folgenden Abschnitten werden Überlegungen für den Lastenausgleich von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen erläutert, der mit verschiedenen vom System bereitgestellten Bindungen erzielt wird.  
   

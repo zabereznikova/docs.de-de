@@ -1,13 +1,6 @@
 ---
-title: "Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms"
-ms.custom: 
+title: Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement wurde entwickelt, um maximale Skalierbarkeit bereitzustellen. Wenn Sie große Mengen von Daten anzeigen möchten, sollten Sie die in diesem Thema, um große Mengen an Arbeitsspeicher fest, und beeinträchtigt die Reaktionsfähigkeit der Benutzeroberfläche (UI) beschriebenen Richtlinien folgen. In diesem Thema wird Folgendes erläutert:  
@@ -124,7 +112,7 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement wurde entwickelt, um 
   
  Um zu verhindern, dass Zeilen aufgehoben, verwenden Sie die folgenden Richtlinien:  
   
--   Vermeiden Sie die Indizierung der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung oder durchlaufen, bis sie mit einer `foreach` Schleife. Normalerweise müssen Sie nicht direkt auf Zeilen zugreifen. <xref:System.Windows.Forms.DataGridView>Methoden, die für Zeilen ausgeführt werden, nehmen Zeileninstanz, anstatt Argumente für den Zeilenindex. Darüber hinaus Empfangshandler für Ereignisse in Zusammenhang mit Zeile Argument Ereignisobjekten mit Eigenschaften für die Zeile, die Sie verwenden können, um Zeilen zu bearbeiten, ohne dass aufgehoben wird.  
+-   Vermeiden Sie die Indizierung der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung oder durchlaufen, bis sie mit einer `foreach` Schleife. Normalerweise müssen Sie nicht direkt auf Zeilen zugreifen. <xref:System.Windows.Forms.DataGridView> Methoden, die für Zeilen ausgeführt werden, nehmen Zeileninstanz, anstatt Argumente für den Zeilenindex. Darüber hinaus Empfangshandler für Ereignisse in Zusammenhang mit Zeile Argument Ereignisobjekten mit Eigenschaften für die Zeile, die Sie verwenden können, um Zeilen zu bearbeiten, ohne dass aufgehoben wird.  
   
 -   Wenn Sie ein Zeilenobjekt zugreifen müssen, verwenden die <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> -Methode und übergeben Sie den tatsächlichen Zeilenindex. Beachten Sie jedoch, dass das Ändern von freigegebenen Zeilenobjekts abgerufen, die durch diese Methode alle Zeilen geändert werden, die dieses Objekt aufweisen. Die Zeile für neue Datensätze ist nicht mit anderen Zeilen hat jedoch freigegeben, sodass es nicht betroffen sind, wenn Sie eine anderen Zeile ändern. Beachten Sie außerdem, dass unterschiedliche Zeilen, die durch eine freigegebene Zeile dargestellten verschiedene Kontextmenüs aufweisen können. Um das richtige Kontextmenü aus einer Instanz freigegebenen Zeile abzurufen, verwenden die <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> -Methode und übergeben Sie den tatsächlichen Zeilenindex. Wenn der Zugriff auf die freigegebenen Zeile <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> Eigenschaft stattdessen die freigegebene Zeilenindex "-1" wird verwendet und wird nicht das richtige Kontextmenü abrufen.  
   

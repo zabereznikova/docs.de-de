@@ -1,14 +1,6 @@
 ---
 title: ICorDebugFunction Schnittstelle1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugFunction
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bd0dbe1304d85c856880c989312afb11d3b554c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 344acf109d58d0ed2fbc8a91da0761b4dd148a27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugfunction-interface1"></a>ICorDebugFunction Schnittstelle1
 Stellt eine verwaltete Funktion oder Methode dar.  
@@ -69,7 +57,7 @@ Stellt eine verwaltete Funktion oder Methode dar.
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

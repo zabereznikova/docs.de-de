@@ -1,33 +1,19 @@
 ---
 title: Endpunktadressen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - addresses [WCF]
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-addresses"></a>Endpunktadressen
-Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können. Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt. Die Endpunktadresse wird im [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Programmierungsmodell durch die <xref:System.ServiceModel.EndpointAddress>-Klasse dargestellt, die eine optionale <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft für die Authentifizierung des Endpunkts durch andere Endpunkte, die Nachrichten mit ihm austauschen, sowie einen Satz optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A>-Eigenschaften enthält, die eventuelle weitere SOAP-Header definieren, die für das Erreichen des Diensts erforderlich sind. Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren. Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.  
+Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können. Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt. Die Endpunktadresse wird dargestellt, in der Windows Communication Foundation (WCF)--Programmierungsmodell durch die <xref:System.ServiceModel.EndpointAddress> -Klasse, die ein optionales enthält <xref:System.ServiceModel.EndpointAddress.Identity%2A> -Eigenschaft, die die Authentifizierung des Endpunkts durch andere Endpunkte ermöglicht, austauschen, mit denen er Meldungen und einen Satz Optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A> Eigenschaften, die eventuelle weitere SOAP-Header erforderlich, um das Erreichen des Diensts zu definieren. Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren. Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.  
   
 ## <a name="uri-structure-of-an-address"></a>URI-Struktur einer Adresse  
  Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Angenommen, die vier Teile des URIS http://www.fabrikam.com:322/mathservice.svc/secureEndpoint kann wie folgt aufgeschlüsselt werden:  
@@ -63,7 +49,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
 -   Bindungsinformationen: IP-Adresse, Anschluss, Hostheader  
   
- IIS kann mehrere Bindungen für jede Site angeben, was zu mehreren Basisadressen für jedes Schema führt. Vor [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] wurde die Verwendung mehrerer Adressen für ein Schema von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nicht unterstützt. Wurden dennoch mehrere Adressen angegeben, wurde bei der Aktivierung eine <xref:System.ArgumentException>.  
+ IIS kann mehrere Bindungen für jede Site angeben, was zu mehreren Basisadressen für jedes Schema führt. Vor [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF mehrere Adressen für ein Schema wurde nicht unterstützt und wenn sie angegeben wurden, hat eine <xref:System.ArgumentException> während der Aktivierung.  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] ermöglicht es Internetdienstanbietern, mehrere Anwendungen mit unterschiedlichen Basisadressen für dasselbe Schema auf derselben Website zu hosten.  
   
@@ -111,7 +97,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
  Weitere Informationen und Beispiele finden Sie unter [unterstützen mehrerer IIS-Sitebindungen](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) und <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>Erweitern der Adressierung in WCF-Diensten  
- Das Standardadressierungsmodell von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten verwendet den Endpunktadress-URI für die folgenden Zwecke:  
+ Die Standardeinstellung adressierungsmodells von WCF-Diensten verwendet den endpunktadress-URI für folgende Zwecke:  
   
 -   Um die Abhöradresse des Diensts anzugeben, d.&#160;h. den Speicherort, den der Endpunkt auf Nachrichten abhört  
   

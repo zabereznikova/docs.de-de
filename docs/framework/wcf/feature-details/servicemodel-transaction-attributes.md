@@ -1,31 +1,17 @@
 ---
 title: ServiceModel-Transaktionsattribute
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79d97eee328d816281348b5b15cf779e1ee65893
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel-Transaktionsattribute
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet Eigenschaften für drei Standard-<xref:System.ServiceModel>-Attribute, die es Ihnen ermöglichen, das Verhalten von Transaktionen für einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst zu konfigurieren:  
+Windows Communication Foundation (WCF) bietet Eigenschaften für drei Standard- <xref:System.ServiceModel> Attribute, die Ihnen ermöglichen, die das Verhalten von Transaktionen für einen WCF-Dienst zu konfigurieren:  
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>  
   
@@ -50,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> legt den Zeitraum fest, innerhalb dessen eine neue, am Dienst erstellte Transaktion abgeschlossen sein muss. Ist dieser Zeitpunkt erreicht und wurde die Transaktion nicht abgeschlossen, wird sie abgebrochen. Die <xref:System.TimeSpan> wird als <xref:System.Transactions.TransactionScope>-Timeout für alle Vorgänge verwendet, bei denen <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> auf `true` gesetzt ist und für die eine neue Transaktion erstellt worden war. Der Timeout ist die maximal zulässige Dauer von der Erstellung einer Transaktion bis zum Abschluss der Phase 1 im Zweiphasen-Commitprotokoll. Der verwendete Timeout ist immer der niedrigere Wert der <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>-Eigenschaft und der `transactionTimeout`-Konfigurationseinstellung.  
   
 ## <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute  
- Das <xref:System.ServiceModel.OperationBehaviorAttribute>-Attribut legt die Verhaltensweisen der Methoden in der Dienstimplementierung fest. Sie können es verwenden, um das spezifische Ausführungsverhalten des Vorgangs anzugeben. Die Eigenschaften dieses Attributs haben keine Auswirkungen auf die WSDL-Beschreibung (Web Service Description Language) des Dienstvertrags. Es handelt sich lediglich um Elemente des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Programmiermodells, die übliche Funktionen, die Entwickler andernfalls selbst implementieren müssen, ermöglichen.  
+ Das <xref:System.ServiceModel.OperationBehaviorAttribute>-Attribut legt die Verhaltensweisen der Methoden in der Dienstimplementierung fest. Sie können es verwenden, um das spezifische Ausführungsverhalten des Vorgangs anzugeben. Eigenschaften dieses Attributs wirken sich nicht auf die Web Service Description Language (WSDL) Beschreibung des Dienstvertrags und sind lediglich um Elemente des WCF-Programmiermodells, die allgemeine Funktionen zu ermöglichen, dass die Entwickler andernfalls selbst implementieren müssen.  
   
  Dieses Attribut verfügt über die folgenden transaktionsspezifischen Eigenschaften:  
   

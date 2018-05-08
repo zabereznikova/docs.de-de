@@ -1,14 +1,6 @@
 ---
 title: IHostMemoryManager-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b39a43874bc1808928f21e0a35638aae9a99ca8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3edae4cb112f46643734c5f1612d9df36ad47e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager-Schnittstelle
 Stellt Methoden, mit die die common Language Runtime (CLR) virtueller Arbeitsspeicher Anforderungen über den Host vornehmen können statt der standardmäßigen Win32 virtueller Arbeitsspeicher Funktionen bereit.  
@@ -53,7 +41,7 @@ Stellt Methoden, mit die die common Language Runtime (CLR) virtueller Arbeitsspe
 |[VirtualQuery-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualquery-method.md)|Dient als logischer Wrapper für die entsprechenden Win32-Funktion, die Informationen über einen Bereich von Seiten im virtuellen Adressraum des aufrufenden Prozesses abruft.|  
   
 ## <a name="remarks"></a>Hinweise  
- `IHostMemoryManager`Außerdem bietet Methoden für die CLR, um einen Zeiger über den Arbeitsspeicher auf dem Heap anzufordern und die abzurufenden die Ebene der arbeitsspeicherauslastung im Prozess, durch den Host gemeldet.  
+ `IHostMemoryManager` Außerdem bietet Methoden für die CLR, um einen Zeiger über den Arbeitsspeicher auf dem Heap anzufordern und die abzurufenden die Ebene der arbeitsspeicherauslastung im Prozess, durch den Host gemeldet.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -62,7 +50,7 @@ Stellt Methoden, mit die die common Language Runtime (CLR) virtueller Arbeitsspe
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IHostMalloc-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)  

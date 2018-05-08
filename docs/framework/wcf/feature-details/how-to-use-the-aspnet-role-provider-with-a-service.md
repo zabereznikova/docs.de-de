@@ -1,33 +1,19 @@
 ---
 title: 'Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET bei einem Dienst'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9180ebe687d61315a66160a6fc95569a0e6b8e72
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 846caf59816ee23166fb382a0c36ac0fed9df151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET bei einem Dienst
 Der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter (zusammen mit dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieter) ist eine Funktion für [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Entwickler zum Erstellen von Websites, mit denen die Benutzer ein Konto auf einer Site erstellen können. Außerdem können ihnen Rollen für die Autorisierung zugewiesen werden. Jeder Benutzer kann mit dieser Funktion ein Konto auf dieser Site erstellen und sich für den exklusiven Zugriff auf diese Site und ihre Dienste anmelden. Dies steht im Gegensatz zur Windows-Sicherheit, bei der die Benutzer über Konten in einer Windows-Domäne verfügen müssen. Stattdessen kann jeder Benutzer, der seine Anmeldeinformationen (eine Kombination aus Benutzername/Kennwort) angibt, die Site und ihre Dienste nutzen.  
   
  Eine beispielanwendung finden Sie unter [Mitgliedschafts- und Rollenanbieter](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Weitere Informationen zu den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Anbieter Mitgliedschaftsfunktion, finden Sie unter [wie: Verwenden Sie den ASP.NET-Mitgliedschaftsanbieter](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
- Die Rollenanbieterfunktion verwendet eine SQL Server-Datenbank zum Speichern von Benutzerinformationen. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Entwickler können diese Funktionen für Sicherheitszwecke nutzen. Wenn sie in eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung integriert sind, müssen die Benutzer der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientanwendung eine Kombination aus Benutzername/Kennwort bereitstellen. Damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Datenbank verwenden kann, müssen Sie eine Instanz der <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>-Klasse erstellen, ihre <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A>-Eigenschaft auf <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> festlegen und die Instanz zu der Verhaltensauflistung zum <xref:System.ServiceModel.ServiceHost> hinzufügen, der den Dienst hostet.  
+ Die Rollenanbieterfunktion verwendet eine SQL Server-Datenbank zum Speichern von Benutzerinformationen. Windows Communication Foundation (WCF)-Entwickler können diese Funktionen für Sicherheitszwecke nutzen. Wenn in einer WCF-Anwendung integriert wird, müssen Benutzer eine Kombination aus Benutzername/Kennwort an die WCF-Clientanwendung angeben. Um WCF für die Verwendung der Datenbank zu aktivieren, erstellen Sie eine Instanz von der <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Klasse, legen die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> Eigenschaft, um <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>, und fügen Sie die Instanz auf die Auflistung von Verhalten der <xref:System.ServiceModel.ServiceHost> , die den Dienst hostet.  
   
 ### <a name="to-configure-the-role-provider"></a>So konfigurieren Sie den Rollenanbieter  
   

@@ -1,27 +1,15 @@
 ---
-title: "Standardfunktionalität des DataGridView-Steuerelements von Windows Forms"
-ms.custom: 
+title: Standardfunktionalität des DataGridView-Steuerelements von Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8cdaa4e8eb0498259c597e0de3f80c3106549
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a475d8bce388860c88571fbf638d206bfe01223d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Standardfunktionalität des DataGridView-Steuerelements von Windows Forms
 Windows Forms <xref:System.Windows.Forms.DataGridView> Steuerelement bietet Benutzern eine beträchtliche Menge an Standardeinstellung Funktionalität.  
@@ -51,7 +39,7 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> Steuerelement bietet Benu
   
 -   Verwendet automatisch die Namen der Spalten der Datenquelle, wie der Text der Spaltenüberschrift.  
   
--   Wird mit dem Inhalt der Datenquelle aufgefüllt. <xref:System.Windows.Forms.DataGridView>Spalten werden für jede Spalte in der Datenquelle automatisch erstellt.  
+-   Wird mit dem Inhalt der Datenquelle aufgefüllt. <xref:System.Windows.Forms.DataGridView> Spalten werden für jede Spalte in der Datenquelle automatisch erstellt.  
   
 -   Erstellt eine Zeile für jede sichtbare Zeile in der Tabelle an.  
   

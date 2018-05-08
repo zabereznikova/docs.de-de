@@ -1,14 +1,6 @@
 ---
 title: ICorDebugEval2::CallParameterizedFunction-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval2.CallParameterizedFunction
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 055ded7f3309ff1011d1ca390daf353cba870376
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 77d9ec0cf1cbca63382e7f29de85c2f9566dc2bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction-Methode
 Richtet einen Aufruf der angegebenen ICorDebugFunction, die innerhalb einer Klasse geschachtelt werden können, deren Konstruktor akzeptiert <xref:System.Type> akzeptieren Parameter oder kann selbst <xref:System.Type> Parameter.  
@@ -67,7 +55,7 @@ HRESULT CallParameterizedFunction (
  [in] Ein Array von Zeigern, von denen jedes auf ein ICorDebugValue-Objekt verweist, die einen Wert darstellt, die an ein Funktion übergeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
- `CallParameterizedFunction`entspricht dem [ICorDebugEval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) mit dem Unterschied, dass die Funktion innerhalb einer Klasse mit Typparametern sein kann, kann selbst dauern Typparameter oder beides. Die Typargumente müssen zuerst für die Klasse, und klicken Sie dann für die Funktion erteilt werden.  
+ `CallParameterizedFunction` entspricht dem [ICorDebugEval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) mit dem Unterschied, dass die Funktion innerhalb einer Klasse mit Typparametern sein kann, kann selbst dauern Typparameter oder beides. Die Typargumente müssen zuerst für die Klasse, und klicken Sie dann für die Funktion erteilt werden.  
   
  Wenn die Funktion in einer anderen Anwendungsdomäne ein Übergang erfolgen wird wird. Allerdings müssen alle Argumente von Typ und Wert in der Zielanwendungsdomäne sein.  
   
@@ -80,4 +68,4 @@ HRESULT CallParameterizedFunction (
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

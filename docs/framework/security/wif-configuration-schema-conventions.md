@@ -1,24 +1,14 @@
 ---
 title: WIF-Konfigurationsschemakonventionen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e327b45ddd260d1a52066b5bf53e7114100ff45c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3109b75ccf9cefcad4e112cca02e932ea5489d24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF-Konfigurationsschemakonventionen
 In diesem Thema werden Konventionen erläutert, die in den Themen zur Konfiguration von Windows Identity Foundation (WIF) verwendet werden, sowie einige allgemeine Funktionen und Attribute beschrieben, die in den Abschnitten [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) und [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) verwendet werden.  

@@ -1,32 +1,18 @@
 ---
 title: 'Vorgehensweise: Einen Feed sowohl als Atom als auch als RSS verfügbar machen'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4780e43679d461509911a4abda689a0c16112e4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Vorgehensweise: Einen Feed sowohl als Atom als auch als RSS verfügbar machen
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht Ihnen die Erstellung eines Diensts, der einen Syndication-Feed verfügbar macht. In diesem Thema wird erläutert, wie Sie einen Syndication-Dienst erstellen, der Syndication-Feeds sowohl mit Atom 1.0 als auch mit RSS 2.0 verfügbar macht. Dieser Dienst macht einen Endpunkt verfügbar, der beide Syndication-Formate zurückgeben kann. Der Einfachheit halber wird in diesem Beispiel ein selbst gehosteter Dienst verwendet. In einer Produktionsumgebung würde ein Dienst dieses Typs unter IIS oder WAS gehostet werden. Weitere Informationen zu den verschiedenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hostingoptionen, finden Sie unter [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
+Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Diensts, das einen Syndication-feed verfügbar macht. In diesem Thema wird erläutert, wie Sie einen Syndication-Dienst erstellen, der Syndication-Feeds sowohl mit Atom 1.0 als auch mit RSS 2.0 verfügbar macht. Dieser Dienst macht einen Endpunkt verfügbar, der beide Syndication-Formate zurückgeben kann. Der Einfachheit halber wird in diesem Beispiel ein selbst gehosteter Dienst verwendet. In einer Produktionsumgebung würde ein Dienst dieses Typs unter IIS oder WAS gehostet werden. Weitere Informationen zu den verschiedenen WCF Hostingoptionen, finden Sie unter [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>So erstellen Sie einen grundlegenden Syndication-Dienst  
   

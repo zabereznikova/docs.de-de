@@ -1,24 +1,12 @@
 ---
 title: Fehlerbehandlung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 29ae7505f3fcd460abe9e65974f564a296723aa1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffcc817eb463a1787972bc9c4ae1434ff74f7bb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
 ## <a name="error-handling-in-windows-communication-foundation"></a>Fehlerbehandlung in Windows Communication Foundation  
@@ -57,8 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  Sie können einen benutzerdefinierten Fehlerhandler installieren, indem Sie ihn der ErrorHandlers-Eigenschaft der Kanalverteiler für den Dienst hinzufügen.  Es ist zulässig, mehrere Fehlerhandler zu verwenden. Sie werden in der Reihenfolge aufgerufen, in der sie der Auflistung hinzugefügt wurden.  
   
- 
-          IErrorHandler.ProvideFault steuert die Fehlermeldung, die an den Client gesendet wird. Diese Methode wird unabhängig vom Typ der Ausnahme aufgerufen, die durch einen Vorgang im Dienst ausgelöst wird. Wenn hier kein Vorgang ausgeführt wird, wird WCF mit dem Standardverhalten fortgesetzt und auf die gleiche Weise wie ohne benutzerdefinierte Fehlerhandler ausgeführt.  
+ IErrorHandler.ProvideFault steuert die Fehlermeldung, die an den Client gesendet wird. Diese Methode wird unabhängig vom Typ der Ausnahme aufgerufen, die durch einen Vorgang im Dienst ausgelöst wird. Wenn hier kein Vorgang ausgeführt wird, wird WCF mit dem Standardverhalten fortgesetzt und auf die gleiche Weise wie ohne benutzerdefinierte Fehlerhandler ausgeführt.  
   
  Sie können diese Herangehensweise beispielsweise verwenden, wenn Ausnahmen an einer zentralen Stelle in Fehler umgewandelt werden sollen, bevor sie an den Client gesendet werden (um sicherzustellen, dass die Instanz nicht verworfen wird und der Kanal nicht in den Faulted-Zustand wechselt).  
   

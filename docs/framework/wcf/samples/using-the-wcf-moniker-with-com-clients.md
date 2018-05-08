@@ -1,29 +1,15 @@
 ---
 title: Verwenden des WCF-Monikers mit COM-Clients
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 322467510d499040c07d6e5e84842542aa325737
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 79040cd267d354d32b3e957dc70fcc65b09b0fc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Verwenden des WCF-Monikers mit COM-Clients
-In diesem Beispiel wird veranschaulicht, wie Webdienste mithilfe des [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmonikers in COM-Entwicklungsumgebungen wie Microsoft Office Visual Basic for Applications (Office VBA) oder Visual Basic 6.0 integriert werden. Das Beispiel umfasst einen Windows Script Host-Client (.vbs), eine unterstützende Clientbibliothek (.dll) und eine Dienstbibliothek (.dll), die von Internetinformationsdienste (IIS) gehostet werden. Der Dienst ist ein Rechnerdienst und der COM-Client ruft mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) auf dem Dienst auf. Die Clientaktivität ist in den Meldungsfeldfenstern sichtbar.  
+Dieses Beispiel veranschaulicht, wie mithilfe den Windows Communication Foundation (WCF)-Dienstmoniker Webdienste in COM-basierten entwicklungsumgebungen wie Microsoft Office Visual Basic for Applications (Office VBA) oder Visual Basic 6.0 integriert werden. Das Beispiel umfasst einen Windows Script Host-Client (.vbs), eine unterstützende Clientbibliothek (.dll) und eine Dienstbibliothek (.dll), die von Internetinformationsdienste (IIS) gehostet werden. Der Dienst ist ein Rechnerdienst und der COM-Client ruft mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) auf dem Dienst auf. Die Clientaktivität ist in den Meldungsfeldfenstern sichtbar.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -33,7 +19,7 @@ In diesem Beispiel wird veranschaulicht, wie Webdienste mithilfe des [!INCLUDE[i
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   

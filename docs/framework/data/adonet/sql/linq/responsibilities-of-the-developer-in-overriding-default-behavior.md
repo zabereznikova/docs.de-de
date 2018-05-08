@@ -1,33 +1,21 @@
 ---
-title: "Aufgaben der Entwickler beim Überschreiben von Standardverhalten"
-ms.custom: 
+title: Aufgaben der Entwickler beim Überschreiben von Standardverhalten
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7de5dbcad14ebfd253ba99f03a8d77e768f29941
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 90b8eedcc80c330a39efe97b6427beebeca913f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Aufgaben der Entwickler beim Überschreiben von Standardverhalten
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Erzwingt die folgenden Anforderungen, nicht aber das Verhalten nicht definiert ist, diese Anforderungen nicht erfüllt sind.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Erzwingt die folgenden Anforderungen, nicht aber das Verhalten nicht definiert ist, diese Anforderungen nicht erfüllt sind.  
   
--   Die überschreibende Methode darf <xref:System.Data.Linq.DataContext.SubmitChanges%2A> oder <xref:System.Data.Linq.Table%601.Attach%2A> nicht aufrufen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]löst eine Ausnahme aus, wenn diese Methoden in einer Überschreibungsmethode aufgerufen werden.  
+-   Die überschreibende Methode darf <xref:System.Data.Linq.DataContext.SubmitChanges%2A> oder <xref:System.Data.Linq.Table%601.Attach%2A> nicht aufrufen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] löst eine Ausnahme aus, wenn diese Methoden in einer Überschreibungsmethode aufgerufen werden.  
   
 -   Überschreibungsmethoden können nicht verwendet werden, um eine Transaktion zu beginnen, zu bestätigen oder zu stoppen. Die <xref:System.Data.Linq.DataContext.SubmitChanges%2A>-Operation wird im Rahmen einer Transaktion durchgeführt. Eine innere verschachtelte Transaktion kann die äußere Transaktion behindern. Methoden zum Überschreiben eines Ladevorgangs können eine Transaktion nur starten, wenn ermittelt wurde, dass die Operation nicht in einer <xref:System.Transactions.Transaction> erfolgt.  
   
--   Von Methoden zum Überschreiben wird erwartet, dass sie die jeweilige Zuordnung vollständiger Parallelität einhalten. Es wird erwartet, dass die Überschreibungsmethode eine <xref:System.Data.Linq.ChangeConflictException> auslöst, wenn ein Konflikt mit der vollständigen Parallelität auftritt. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]fängt diese Ausnahme ausgelöst, damit Sie ordnungsgemäß verarbeiten können die <xref:System.Data.Linq.DataContext.SubmitChanges%2A> -Option <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
+-   Von Methoden zum Überschreiben wird erwartet, dass sie die jeweilige Zuordnung vollständiger Parallelität einhalten. Es wird erwartet, dass die Überschreibungsmethode eine <xref:System.Data.Linq.ChangeConflictException> auslöst, wenn ein Konflikt mit der vollständigen Parallelität auftritt. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fängt diese Ausnahme ausgelöst, damit Sie ordnungsgemäß verarbeiten können die <xref:System.Data.Linq.DataContext.SubmitChanges%2A> -Option <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
   
 -   Die Erstellungsmethode (`Insert`) und die `Update`-Überschreibungsmethode müssen die Werte für in der Datenbank erzeugte Spalten wieder an die entsprechenden Objektmember zurückgeben, wenn die Operation erfolgreich abgeschlossen wird.  
   

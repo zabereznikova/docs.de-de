@@ -1,32 +1,18 @@
 ---
 title: 'Gewusst wie: Veröffentlichen von Metadaten für einen Dienst über den Code'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c3d2fd1222539ec8017846069e7eda9a2c503f22
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bef5421d377bcae6e8c56b0117ebbe22a861de86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Gewusst wie: Veröffentlichen von Metadaten für einen Dienst über den Code
-Dies ist eines der beiden "Gewusst wie"-Themen, in denen erläutert wird, wie Sie Metadaten für einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst veröffentlichen. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe von Code dargestellt.  
+Dies ist eine von zwei Themen zur Vorgehensweise, die die Veröffentlichung von Metadaten für einen Windows Communication Foundation (WCF)-Dienst zu beschreiben. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe von Code dargestellt.  
   
 > [!CAUTION]
 >  In diesem Thema wird das Veröffentlichen von Metadaten auf unsichere Weise dargestellt. Jeder Client kann Metadaten vom Dienst abrufen. Informationen zum sicheren Veröffentlichen von Metadaten für einen Dienst finden Sie unter [benutzerdefinierter sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
@@ -94,7 +80,7 @@ Dies ist eines der beiden "Gewusst wie"-Themen, in denen erläutert wird, wie Si
 11. Verwenden Sie Internet Explorer, um die Basisadresse des Diensts zu suchen (http://localhost:8001/MetadataSample in diesem Beispiel) und stellen Sie sicher, dass die Metadatenveröffentlichung aktiviert ist. Es sollte eine Webseite angezeigt werden, die am oberen Rand den Text "Einfacher Dienst" und unmittelbar darunter den Text "Sie haben einen Dienst erstellt" enthält. Wenn nicht, wird oben auf der Ergebnisseite folgende Meldung angezeigt: "Das Veröffentlichen von Metadaten für diesen Dienst ist derzeit deaktiviert."  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird die Implementierung eines einfachen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts veranschaulicht, der Metadaten für diesen Dienst im Code veröffentlicht.  
+ Das folgende Codebeispiel zeigt die Implementierung eines einfachen WCF-Diensts, der Metadaten für den Dienst im Code veröffentlicht.  
   
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  

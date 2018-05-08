@@ -1,24 +1,12 @@
 ---
 title: Angeben eines benutzerdefinierten Kryptografiealgorithmus
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Angeben eines benutzerdefinierten Kryptografiealgorithmus
 WCF ermöglicht es Ihnen, beim Verschlüsseln von Daten oder Berechnen digitaler Signaturen einen benutzerdefinierten Kryptografiealgorithmus anzugeben. Dazu führen Sie die folgenden Schritte aus:  
@@ -116,7 +104,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- Im Abschnitt unter dem <`cryptoClasses`>-Element wird die Zuordnung zwischen der SHA256CryptoServiceProvider und den Alias "SHA256CSP" erstellt. Die <`nameEntry`>-Element erstellt die Zuordnung zwischen dem Alias "SHA256CSP" und der angegebenen URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm).  
+ Im Abschnitt unter dem <`cryptoClasses`>-Element wird die Zuordnung zwischen der SHA256CryptoServiceProvider und den Alias "SHA256CSP" erstellt. Die <`nameEntry`>-Element erstellt die Zuordnung zwischen dem Alias "SHA256CSP" und der angegebenen URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
  Verwenden Sie zum Registrieren des benutzerdefinierten Algorithmus im Code die <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>-Methode. Diese Methode erstellt beide Zuordnungen. Das folgende Beispiel zeigt, wie diese Methode aufgerufen wird:  
   

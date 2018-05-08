@@ -1,24 +1,12 @@
 ---
-title: "Asynchrone Vorgänge"
-ms.custom: 
+title: Asynchrone Vorgänge
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 293f1ff1fad193c019a42372a30ae6466c074515
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 97564600f6f4fb9d4990398527dd2e45fcb9f015
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-operations"></a>Asynchrone Vorgänge
 Einige Datenbankoperationen wie das Ausführen von Befehlen können einige Zeit bis zur Beendigung in Anspruch nehmen. In diesem Fall müssen Singlethread-Anwendungen andere Operationen blockieren und auf die Beendigung des Befehls warten, bevor sie mit eigenen Operationen fortfahren können. Es ist jedoch auch möglich, dass der Vordergrundthread während der Operation aktiv bleibt, wenn der länger dauernde Vorgang einem Hintergrundthread zugewiesen werden kann. In einer Windows-Anwendung bleibt beispielsweise der Benutzeroberflächenthread beim Ausführen des Vorgangs reaktionsfähig, wenn die länger dauernde Operation an einen Hintergrundthread delegiert wird.  

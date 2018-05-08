@@ -1,34 +1,20 @@
 ---
 title: 'Gewusst wie: Austauschen von Nachrichten in einer Warteschlange mit WCD-Endpunkten'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Gewusst wie: Austauschen von Nachrichten in einer Warteschlange mit WCD-Endpunkten
-Warteschlangen stellen sicher, dass ein zuverlässiger Nachrichtenaustausch zwischen einem Client und einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst stattfinden kann, selbst wenn der Dienst zum Zeitpunkt der Kommunikation nicht verfügbar ist. Die folgenden Vorgänge zeigen, wie Sie eine stabile Kommunikation zwischen einem Client und einem Dienst sicherstellen können, indem Sie die Standardbindung in der Warteschlange beim Implementieren des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts verwenden.  
+Warteschlangen sicherstellen, dass zuverlässiges messaging zwischen einem Client und einem Windows Communication Foundation (WCF)-Dienst auftreten kann, selbst wenn der Dienst zum Zeitpunkt der Kommunikation nicht verfügbar ist. Die folgenden Verfahren zeigen, wie stabile Kommunikation zwischen einem Client und einem Dienst mit den standardmäßigen der Warteschlange enthaltenen Bindung beim Implementieren des WCF-Diensts sicherzustellen.  
   
- Dieser Abschnitt erläutert die Verwendung der <xref:System.ServiceModel.NetMsmqBinding> für die Kommunikation in einer Warteschlange zwischen einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client und einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst.  
+ In diesem Abschnitt wird erläutert, wie <xref:System.ServiceModel.NetMsmqBinding> für eine warteschlangenkommunikation zwischen einem WCF-Client und einem WCF-Dienst.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>So verwenden Sie Warteschlangen in einem WCD-Dienst  
   
@@ -54,7 +40,7 @@ Warteschlangen stellen sicher, dass ein zuverlässiger Nachrichtenaustausch zwis
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Definieren Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> in einer Konfiguration, der die Dienstadresse festlegt und die Standard-<xref:System.ServiceModel.NetMsmqBinding>-Bindung verwendet. Weitere Informationen zur Verwendung von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Konfiguration finden Sie unter [Konfigurieren von Windows Communication Foundation-Anwendungen](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Definieren Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> in einer Konfiguration, der die Dienstadresse festlegt und die Standard-<xref:System.ServiceModel.NetMsmqBinding>-Bindung verwendet. Weitere Informationen zur Verwendung von WCF-Konfiguration finden Sie unter [Konfigurieren von Windows Communication Foundation-Anwendungen](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   
@@ -65,7 +51,7 @@ Warteschlangen stellen sicher, dass ein zuverlässiger Nachrichtenaustausch zwis
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>So erstellen Sie einen Client für einen Dienst in der Warteschlange  
   
-1.  Das folgende Beispiel veranschaulicht, wie die Hostinganwendung ausgeführt und das Tool "Svcutil.exe" verwendet wird, um den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client zu erstellen.  
+1.  Im folgende Beispiel wird gezeigt, wie die Hostinganwendung ausgeführt und verwenden Sie das Svcutil.exe-Tool zum Erstellen des WCF-Clients.  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -75,7 +61,7 @@ Warteschlangen stellen sicher, dass ein zuverlässiger Nachrichtenaustausch zwis
   
   
   
-3.  Erstellen Sie einen Transaktionsbereich zum Schreiben in die Transaktionswarteschlange, rufen Sie den `SubmitPurchaseOrder`-Vorgang auf, und schließen Sie den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client, wie im folgenden Beispiel gezeigt.  
+3.  Erstellen Sie einen Transaktionsbereich zum Schreiben in die Transaktionswarteschlange, rufen die `SubmitPurchaseOrder` Vorgang, und schließen Sie den WCF-Client, wie im folgenden Beispiel gezeigt.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  

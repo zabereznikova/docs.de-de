@@ -1,32 +1,18 @@
 ---
 title: 'Gewusst wie: Erstellen eines Windows Communication Foundation-Clients'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2591cad6354ec40f1fb6ead265c84a67adf3eec8
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Gewusst wie: Erstellen eines Windows Communication Foundation-Clients
-Dies ist die vierte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendung erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
+Dies ist die vierte von sechs Aufgaben, die erforderlich sind, um einen Windows Communication Foundation (WCF)-Anwendung zu erstellen. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
   
  In diesem Thema wird beschrieben, wie Metadaten von einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst abgerufen und dafür verwendet werden können, einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientproxy zu erstellen, der auf den Dienst zugreifen kann. Für diese Aufgabe wird die Funktion Dienstverweis hinzufügen verwendet, die von Visual Studio bereitgestellt wird. Dieses Tool ruft die Metadaten vom MEX-Endpunkt des Diensts ab und generiert eine verwaltete Quellcodedatei für einen Clientproxy in der von Ihnen ausgewählten Sprache (standardmäßig C#). Zusätzlich zu dem Clientproxy erstellt oder aktualisiert das Tool die Clientkonfigurationsdatei, die es der Clientanwendung ermöglicht, über einen ihrer Endpunkte eine Verbindung mit dem Dienst herzustellen.  
   
@@ -48,7 +34,7 @@ Dies ist die vierte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!
   
 3.  Fügen Sie einen Verweis auf System.ServiceModel auf das Projekt "gettingstartedclient", indem Sie mit der rechten Maustaste die **Verweis** Ordner unter dem Projekt "gettingstartedclient" im Projektmappen-Explorer und wählen **hinzufügen** Verweis. In der **Verweis hinzufügen** Dialogfeld wählen **Framework** auf der linken Seite des Dialogfelds. Geben Sie im Textfeld Assemblys suchen`System.ServiceModel` ein. Wählen Sie im mittleren Abschnitt des Dialogfelds **System.ServiceModel**, klicken Sie auf die **hinzufügen** aus, und klicken Sie auf die **schließen** Schaltfläche. Speichern Sie die Projektmappe, indem Sie auf die **alle speichern** Schaltfläche unterhalb des Hauptmenüs.  
   
-4.  Als Nächstes fügen Sie einen Dienstverweis auf den Rechnerdienst hinzu. Zuvor müssen Sie die GettingStartedHost-Konsolenanwendung starten. Nachdem der Host ausgeführt wird können den Ordner "Verweise" unter dem Projekt "gettingstartedclient" im Projektmappen-Explorer mit der rechten Maustaste und wählen Sie Dienstverweis hinzufügen, und geben in der folgenden URL in das Adressfeld ein, der das Dialogfeld "Dienstverweis hinzufügen": HYPERLINK "http://Localhost:8000/ServiceModelSamples/Service“ http://localhost:8000/ServiceModelSamples/Service und klicken Sie auf die **Go** Schaltfläche. Anschließend wird im Listenfeld Dienste der CalculatorService angezeigt. Doppelklicken Sie auf CalculatorService, um den Dienst zu erweitern und die vom Dienst implementierten Dienstverträge anzuzeigen. Lassen Sie den Standardnamespace unverändert ist, und klicken Sie auf die **OK** Schaltfläche.  
+4.  Als Nächstes fügen Sie einen Dienstverweis auf den Rechnerdienst hinzu. Zuvor müssen Sie die GettingStartedHost-Konsolenanwendung starten. Nachdem der Host ausgeführt wird können den Ordner "Verweise" unter dem Projekt "gettingstartedclient" im Projektmappen-Explorer mit der rechten Maustaste und wählen Sie Dienstverweis hinzufügen, und geben in der folgenden URL in das Adressfeld ein, der das Dialogfeld "Dienstverweis hinzufügen": HYPERLINK "http://localhost:8000/ServiceModelSamples/Service" http://localhost:8000/ServiceModelSamples/Service , und klicken Sie auf die **Go** Schaltfläche. Anschließend wird im Listenfeld Dienste der CalculatorService angezeigt. Doppelklicken Sie auf CalculatorService, um den Dienst zu erweitern und die vom Dienst implementierten Dienstverträge anzuzeigen. Lassen Sie den Standardnamespace unverändert ist, und klicken Sie auf die **OK** Schaltfläche.  
   
      Wenn Sie mit Visual Studio einen Verweis auf einen Dienst hinzufügen, wird im Projektmappen-Explorer unter dem GettingStartedClient-Projekt unter dem Ordner Dienstverweise ein neuer Eintrag angezeigt.  Bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool eine Quellcodedatei und die Datei "App.config" generiert werden.  
   

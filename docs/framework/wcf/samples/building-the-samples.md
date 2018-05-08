@@ -1,29 +1,15 @@
 ---
 title: Erstellen der Windows Communication Foundation-Beispiele
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5493972306092fc3309b0993d595f22c74c8603a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Erstellen der Windows Communication Foundation-Beispiele
-Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Beispiele erstellt werden können, mithilfe von Visual Studio 2010 oder mit der **Msbuild** Befehl über die Befehlszeile. In diesem Thema werden beide Vorgehensweisen beschrieben.  
+Der Windows Communication Foundation (WCF)-Beispiele erstellt werden können, mithilfe von Visual Studio 2010 oder mit der **Msbuild** Befehl über die Befehlszeile. In diesem Thema werden beide Vorgehensweisen beschrieben.  
   
 > [!NOTE]
 >  Vor dem Erstellen oder Ausführen eines der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beispiele, stellen Sie sicher, die von Ihnen ausgeführte der [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
@@ -52,7 +38,7 @@ Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Beispiele erstellt w
  Die Batchdateien und Skripts Setup.exe und Cleanup.exe müssen an einer Visual Studio-Eingabeaufforderung ausgeführt werden. Einige Setup- und Cleanup-Dateien führen Aufgaben aus, für die Administratorrechte erforderlich sind. Sie müssen daher mit entsprechenden Rechten gestartet werden.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Wichtige Sicherheitsinformationen über Metadatenendpunkte  
- Um ein unbeabsichtigtes Veröffentlichen von möglicherweise vertraulichen Dienstmetadaten zu vermeiden, wird mit der Standardkonfiguration für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste die Metadatenveröffentlichung deaktiviert. Dieses Verhalten ist in der Standardeinstellung sicher, bedeutet aber auch, dass man den zum Aufrufen des Diensts erforderlichen Clientcode nicht mithilfe eines Tools zum Importieren von Metadaten (wie Svcutil.exe) generieren kann. Dies ist nur dann möglich, wenn das Verhalten des Diensts zum Veröffentlichen von Metadaten in der Konfiguration explizit aktiviert ist. Um Ihnen das Experimentieren mit den Beispielen zu vereinfachen, wird in fast allen Beispielen ein ungesicherter Endpunkt zum Veröffentlichen von Metadaten verfügbar gemacht. Solche Endpunkte können für anonyme, nicht authentifizierte Benutzer möglicherweise verfügbar sein. Daher muss beim Bereitstellen solcher Endpunkte sorgfältig darauf geachtet werden, dass das Öffentlichmachen von Metadaten eines Diensts sachgerecht erfolgt. Weitere Informationen zum Veröffentlichen von Dienstmetadaten finden Sie unter der [Metadatenveröffentlichungsverhalten](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) Beispiel. Finden Sie unter der [benutzerdefinierter sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) Sample ist ein Beispiel ein metadatenendpunkts zu sichern.  
+ Um unbeabsichtigtes Offenlegen möglicherweise vertraulichen Dienstmetadaten zu verhindern, deaktiviert die Standardkonfiguration für Windows Communication Foundation (WCF)-Dienste die Metadatenveröffentlichung. Dieses Verhalten ist in der Standardeinstellung sicher, bedeutet aber auch, dass man den zum Aufrufen des Diensts erforderlichen Clientcode nicht mithilfe eines Tools zum Importieren von Metadaten (wie Svcutil.exe) generieren kann. Dies ist nur dann möglich, wenn das Verhalten des Diensts zum Veröffentlichen von Metadaten in der Konfiguration explizit aktiviert ist. Um Ihnen das Experimentieren mit den Beispielen zu vereinfachen, wird in fast allen Beispielen ein ungesicherter Endpunkt zum Veröffentlichen von Metadaten verfügbar gemacht. Solche Endpunkte können für anonyme, nicht authentifizierte Benutzer möglicherweise verfügbar sein. Daher muss beim Bereitstellen solcher Endpunkte sorgfältig darauf geachtet werden, dass das Öffentlichmachen von Metadaten eines Diensts sachgerecht erfolgt. Weitere Informationen zum Veröffentlichen von Dienstmetadaten finden Sie unter der [Metadatenveröffentlichungsverhalten](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) Beispiel. Finden Sie unter der [benutzerdefinierter sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) Sample ist ein Beispiel ein metadatenendpunkts zu sichern.  
   
 ## <a name="exception-handling"></a>Ausnahmebehandlung  
  Im Allgemeinen enthalten diese Beispiele keine Ausnahmebehandlung, damit der Code auf das Thema des jeweiligen Beispiels beschränkt werden kann. Weitere Informationen zur Behandlung von Ausnahmen finden Sie unter der [Ausnahmen erwartet](../../../../docs/framework/wcf/samples/expected-exceptions.md) Beispiel.  

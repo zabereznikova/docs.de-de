@@ -1,14 +1,6 @@
 ---
 title: 'Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,26 +9,20 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 77ee21074b6f1bb5a2f5bd4ee653100d3534075d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cd13eae0a72ceaf5abfb93dfe84a53cfc3c8dec4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF
-Damit ein X.509-Zertifikat für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zugänglich ist, muss der Name und der Speicherort des Zertifikats im Anwendungscode angegeben werden. In bestimmten Fällen benötigt die Prozessidentität Zugriff auf die Datei, die den zugeordneten privaten Schlüssel für das X.509-Zertifikat enthält. Um den privaten Schlüssel zu erhalten, der einem X.509-Zertifikat in einem Zertifikatspeicher zugeordnet ist, benötigt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die entsprechenden Berechtigungen. Standardmäßig können nur der Besitzer und das Systemkonto auf den privaten Schlüssel eines Zertifikats zugreifen.  
+Um ein x. 509-Zertifikat auf der Windows Communication Foundation (WCF) zugreifen können, muss Anwendungscode Certificate Store Name und Speicherort angeben. In bestimmten Fällen benötigt die Prozessidentität Zugriff auf die Datei, die den zugeordneten privaten Schlüssel für das X.509-Zertifikat enthält. Um den zugeordneten privaten Schlüssel für ein x. 509-Zertifikat in keinem Zertifikatspeicher zu erhalten, muss WCF dazu berechtigt. Standardmäßig können nur der Besitzer und das Systemkonto auf den privaten Schlüssel eines Zertifikats zugreifen.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>So machen Sie X.509-Zertifikate für WCF zugänglich  
   
-1.  Erteilen Sie dem Konto, unter dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ausgeführt wird, Schreibzugriff auf die Datei, die den zugeordneten privaten Schlüssel für das X.509-Zertifikat enthält.  
+1.  Gewähren Sie dem Konto, das unter den WCF Lesezugriff auf die Datei ausgeführt wird, die den mit dem x. 509-Zertifikat zugeordneten privaten Schlüssel enthält.  
   
-    1.  Ermitteln Sie, ob [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Lesezugriff auf den privaten Schlüssel für das X.509-Zertifikat benötigt.  
+    1.  Bestimmen Sie, ob WCF Lesezugriff auf den privaten Schlüssel für das x. 509-Zertifikat erfordert.  
   
          Die folgende Tabelle beschreibt, ob ein privater Schlüssel bei der Verwendung eines X.509-Zertifikats verfügbar sein muss.  
   
@@ -64,9 +50,9 @@ Damit ein X.509-Zertifikat für [!INCLUDE[indigo1](../../../../includes/indigo1-
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4.  Ermitteln Sie das Konto, unter dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ausgeführt wird.  
+    4.  Bestimmen Sie das Konto, unter dem WCF ausgeführt wird.  
   
-         In der folgenden Tabelle werden die Konten beschrieben, unter denen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in einem bestimmten Szenario ausgeführt wird.  
+         In der folgenden Tabelle werden die Konten beschrieben unter der WCF für ein bestimmtes Szenario ausgeführt wird.  
   
         |Szenario|Prozessidentität|  
         |--------------|----------------------|  
@@ -75,7 +61,7 @@ Damit ein X.509-Zertifikat für [!INCLUDE[indigo1](../../../../includes/indigo1-
         |Dienst, der in IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) oder IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]) gehostet wird.|NETZWERKDIENST|  
         |Dienst, der in IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) gehostet wird.|Wird durch das `<processModel>`-Element in der Datei Machine.config gesteuert. ASPNET ist das Standardkonto.|  
   
-    5.  Erteilen Sie der Datei, die den privaten Schlüssel für das Konto enthält, unter dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ausgeführt wird, mithilfe eines Tools wie cacls.exe Lesezugriff.  
+    5.  Gewähren Sie Lesezugriff auf die Datei, die den privaten Schlüssel für das Konto, die mithilfe eines Tools wie cacls.exe WCF enthält unter läuft.  
   
          Im folgenden Codebeispiel wird die Zugriffssteuerungsliste (/E) für die angegebene Datei bearbeitet, um (/G), dem NETZWERKDIENST-Konto, Lesezugriff (:R) auf die Datei zu erteilen.  
   

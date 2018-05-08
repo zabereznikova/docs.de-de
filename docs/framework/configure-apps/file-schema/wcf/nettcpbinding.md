@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: f6cbdbb7c5569851055102cfe5d413e0b94376f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 0be428ef3b37222e1e8472591d2b54d950bef59f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Gibt eine sichere, zuverlässige und optimierte Bindung an, die computerübergreifende Kommunikation unterstützt. Diese Bindung generiert standardmäßig einen Laufzeitkommunikationsstapel mit Windows-Sicherheit für die Nachrichtensicherheit und die Authentifizierung, TCP für die Nachrichtenübermittlung sowie binäre Nachrichtencodierung.  
@@ -92,7 +92,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ## <a name="remarks"></a>Hinweise  
  Diese Bindung generiert standardmäßig eine Laufzeitkommunikation, die Transportsicherheit, TCP zur Nachrichtenübermittlung und eine binäre Nachrichtencodierung verwendet. Diese Bindung ist eine entsprechende Windows Communication Foundation (WCF)-System bereitgestellte Wahl für die Kommunikation über ein Intranet.  
   
- Die Standardkonfiguration für die `netTcpBinding` ist schneller als die von `wsHttpBinding` bereitgestellte Kommunikation, ist aber ausschließlich für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-zu-[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Kommunikation vorgesehen. Das Sicherheitsverhalten ist mit dem optionalen `securityMode`-Attribut konfigurierbar. Die Verwendung von WS-ReliableMessaging ist mit dem optionalen `reliableSessionEnabled`-Attribut konfigurierbar. Zuverlässiges Messaging ist jedoch standardmäßig deaktiviert. Die vom System bereitgestellten HTTP-Bindungen, wie z.&#160;B. `wsHttpBinding` und `basicHttpBinding` sind im Allgemeinen so konfiguriert, dass Funktionen standardmäßig aktiviert werden ,während die `netTcpBinding`-Bindung Funktionen standardmäßig deaktiviert, sodass Sie die Unterstützung für eine der WS-*-Spezifikationen explizit übernehmen müssen. Das bedeutet, dass die Standardkonfiguration für TCP Meldungen zwischen Endpunkten schneller austauscht als die standardmäßig für die HTTP-Bindungen festgelegten Konfigurationen.  
+ Die Standardkonfiguration für die `netTcpBinding` ist schneller als die von bereitgestellte der `wsHttpBinding`, sondern soll nur für die WCF-Kommunikation. Das Sicherheitsverhalten ist mit dem optionalen `securityMode`-Attribut konfigurierbar. Die Verwendung von WS-ReliableMessaging ist mit dem optionalen `reliableSessionEnabled`-Attribut konfigurierbar. Zuverlässiges Messaging ist jedoch standardmäßig deaktiviert. Die vom System bereitgestellten HTTP-Bindungen, wie z.&#160;B. `wsHttpBinding` und `basicHttpBinding` sind im Allgemeinen so konfiguriert, dass Funktionen standardmäßig aktiviert werden ,während die `netTcpBinding`-Bindung Funktionen standardmäßig deaktiviert, sodass Sie die Unterstützung für eine der WS-*-Spezifikationen explizit übernehmen müssen. Das bedeutet, dass die Standardkonfiguration für TCP Meldungen zwischen Endpunkten schneller austauscht als die standardmäßig für die HTTP-Bindungen festgelegten Konfigurationen.  
   
 ## <a name="example"></a>Beispiel  
  Die Bindung wird in den Konfigurationsdateien für den Client und Dienst angegeben. Der Bindungstyp wird im `binding`-Attribut des `<endpoint>`-Elements angegeben. Wenn Sie die netTcpBinding-Bindung konfigurieren und einige der Einstellungen ändern möchten, müssen Sie eine Bindungskonfiguration definieren. Der Endpunkt muss auf die Bindungskonfiguration mithilfe des `bindingConfiguration`-Attributs verweisen. Im folgenden Beispiel wird eine Bindungskonfiguration definiert.  

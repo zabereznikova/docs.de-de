@@ -2,10 +2,6 @@
 title: "\"GetNames\"-Funktion (Referenz zur nicht verwalteten API)"
 description: Die Funktion "GetNames" Ruft die Namen der Eigenschaften eines Objekts ab.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80284900c318a3776168b781ce2e0e5e4a68f96d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getnames-function"></a>"GetNames"-Funktion
 Ruft eine Teilmenge oder aller der Namen der Eigenschaften eines Objekts ab. 
@@ -91,7 +84,7 @@ Die Flags, die als übergeben werden können die `lEnumFlags` Argument sind Bitf
 
 | Gruppe 1-flags |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Geben Sie alle Eigenschaftsnamen zurück. `strQualifierName`und `pQualifierVal` nicht verwendet werden. |
+| `WBEM_FLAG_ALWAYS` | 0 | Geben Sie alle Eigenschaftsnamen zurück. `strQualifierName` und `pQualifierVal` nicht verwendet werden. |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Nur Eigenschaften, die einen Qualifizierer mit dem Namen angegeben haben Zurückgeben der `strQualifierName` Parameter. Wenn dieses Flag verwendet wird, müssen Sie angeben `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Nur Eigenschaften, die keine Qualifizierer mit dem Namen angegeben haben Zurückgeben der `strQualifierName` Parameter. Wenn dieses Flag verwendet wird, müssen Sie angeben `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Nur Eigenschaften, die einen Qualifizierer mit dem Namen angegeben haben Zurückgeben der `wszQualifierName` Parameter und auch einen Wert identisch mit dem angegeben wird, indem Sie die `pQualifierVal` Struktur. Wenn dieses Flag verwendet wird, müssen Sie beide angeben einer `wszQualifierName` und ein `pQualifierValue`. |
@@ -99,12 +92,12 @@ Die Flags, die als übergeben werden können die `lEnumFlags` Argument sind Bitf
 | Gruppe 2-flags |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Geben Sie nur die Namen von Eigenschaften, die definieren die Schlüssel, zurück. |
-|`WBEM_FLAG_REFS_ONLY` | 0 x 8 | Return nur Eigenschaftennamen, die Objektverweise sind. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Return nur Eigenschaftennamen, die Objektverweise sind. |
 
 | Gruppe 3-flags |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Geben Sie nur für den Eigenschaftennamen, die auf die am stärksten abgeleitete Klasse gehören zurück. Schließen Sie Eigenschaften aus der übergeordneten Klassen. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Geben Sie nur für den Eigenschaftennamen, die auf die übergeordneten Klassen gehören zurück. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Geben Sie nur für den Eigenschaftennamen, die auf die am stärksten abgeleitete Klasse gehören zurück. Schließen Sie Eigenschaften aus der übergeordneten Klassen. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Geben Sie nur für den Eigenschaftennamen, die auf die übergeordneten Klassen gehören zurück. |
 |`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Geben Sie nur die Namen der Systemeigenschaften zurück. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Geben Sie nur die Namen von Eigenschaften nicht zum System zurück. |
 
@@ -115,7 +108,7 @@ Die Funktion weist immer einen neuen `SAFEARRAY` zurückgibt `WBEM_S_NO_ERROR`, 
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

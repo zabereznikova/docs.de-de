@@ -1,42 +1,28 @@
 ---
 title: 'Vorgehensweise: Zugriff auf einen WSE3.0-Dienst über einen WCF-Client'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 382762917e790d54dca31158f2b7ffde560c1427
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 54d795858b85bd72a01f619b3603c9927df655d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Vorgehensweise: Zugriff auf einen WSE3.0-Dienst über einen WCF-Client
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clients sind auf niedriger Ebene mit Diensten von Web Services Enhancements (WSE) 3.0 für Microsoft .NET-Dienste kompatibel, wenn [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients für die Verwendung der Version der WS-Adressierungsspezifikation vom August 2004 konfiguriert sind. WSE 3.0-Dienste nicht unterstützen jedoch die Metadaten-Exchange (MEX)-Protokoll daher bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Clientklasse, die Sicherheitseinstellungen gelten nicht für die generierte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client. Daher müssen Sie die Sicherheitseinstellungen, die der WSE 3.0-Dienst erfordert, festlegen, nachdem der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client erzeugt wurde.  
+Windows Communication Foundation (WCF)-Clients sind auf Übertragungsebene kompatibel mit Web Services Enhancements (WSE) 3.0 für Microsoft .NET Services, wenn WCF-Clients konfiguriert werden, um die Version vom August 2004 des WS-Addressing-Spezifikation. WSE 3.0-Dienste nicht unterstützen jedoch die Metadaten-Exchange (MEX)-Protokoll daher bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) um einen WCF-Clientklasse erstellen, die Sicherheitseinstellungen werden nicht angewendet, auf die generierten WCF-Client. Deshalb müssen Sie die Sicherheitseinstellungen angeben, dass die WSE 3.0-Dienst erforderlich ist, nach der WCF-Client generiert wird.  
   
- Sie können diese Sicherheitseinstellungen anwenden, indem Sie eine benutzerdefinierte Bindung verwenden, um die Anforderungen des WSE 3.0-Diensts und die Interoperabilitätsanforderungen zwischen einem WSE 3.0-Dienst und einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client zu berücksichtigen. Diese Interoperabilitätsanforderungen umfassen die zuvor genannte Verwendung der WS-Adressierungsspezifikation vom August 2004 und den WSE 3.0-Standardnachrichtenschutz von <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Der Standardnachrichtenschutz für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Diese Thema enthält Details zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Bindung, die mit einem WSE 3.0-Dienst zusammenarbeitet. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält ebenfalls ein Beispiel, das diese Bindung enthält. Weitere Informationen zu diesem Beispiel finden Sie unter [Zusammenwirken mit ASMX-Webdiensten](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
+ Sie können diese Sicherheitseinstellungen anwenden, indem Sie mit einer benutzerdefinierten Bindung zu Anforderungen des WSE 3.0-Diensts und die interoperabilitätsanforderungen zwischen einem WSE 3.0-Dienst und einem WCF-Client berücksichtigen. Diese Interoperabilitätsanforderungen umfassen die zuvor genannte Verwendung der WS-Adressierungsspezifikation vom August 2004 und den WSE 3.0-Standardnachrichtenschutz von <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Der standardnachrichtenschutz für WCF ist <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Dieses Thema erläutert, wie eine WCF-Bindung, die Interoperabilität mit einem WSE 3.0-Dienst erstellt wird. WCF bietet außerdem ein Beispiel, das diese Bindung enthält. Weitere Informationen zu diesem Beispiel finden Sie unter [Zusammenwirken mit ASMX-Webdiensten](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>So greifen Sie mit einem WCF-Client auf einen WSE 3.0-Webdienst zu  
   
-1.  Führen Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client für den WSE 3.0-Webdienst.  
+1.  Führen Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) beim Erstellen eines WCF-Clients für den WSE 3.0-Webdienst.  
   
-     Für einen WSE 3.0-Webdienst wird ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client erstellt. Da WSE 3.0 das MEX-Protokoll nicht unterstützt, können Sie das Tool nicht nutzen, um die Sicherheitsanforderungen für den Webdienst aufzurufen. Der Anwendungsentwickler muss die Sicherheitseinstellungen für den Client hinzufügen.  
+     Für einen WSE 3.0-Webdienst ist ein WCF-Client erstellt. Da WSE 3.0 das MEX-Protokoll nicht unterstützt, können Sie das Tool nicht nutzen, um die Sicherheitsanforderungen für den Webdienst aufzurufen. Der Anwendungsentwickler muss die Sicherheitseinstellungen für den Client hinzufügen.  
   
-     Weitere Informationen zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Client finden Sie unter der [wie: Erstellen Sie einen Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Weitere Informationen zum Erstellen eines WCF-Clients finden Sie unter der [Vorgehensweise: Erstellen eines Clients](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Erstellen Sie eine Klasse, die eine Bindung darstellt, die mit WSE 3.0-Webdiensten kommunizieren kann.  
   
@@ -49,7 +35,7 @@ ms.lasthandoff: 04/30/2018
          [!code-csharp[c_WCFClientToWSEService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#1)]
          [!code-vb[c_WCFClientToWSEService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#1)]  
   
-    2.  Fügen Sie Eigenschaften zur Klasse hinzu, die die sofort verwendbare WSE-Assertion festlegen, die vom WSE-Dienst verwendet wird. Hierzu gehört, ob abgeleitete Schlüssel erforderlich sind, ob Sicherheitssitzungen zum Einsatz kommen, ob Signaturbestätigungen erforderlich sind sowie die Einstellungen für den Nachrichtenschutz. In WSE 3.0 legt eine sofort verwendbare Assertion die Sicherheitsanforderungen für einen Client oder einen Webdienst fest – ähnlich dem Authentifizierungsmodus einer Bindung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+    2.  Fügen Sie Eigenschaften zur Klasse hinzu, die die sofort verwendbare WSE-Assertion festlegen, die vom WSE-Dienst verwendet wird. Hierzu gehört, ob abgeleitete Schlüssel erforderlich sind, ob Sicherheitssitzungen zum Einsatz kommen, ob Signaturbestätigungen erforderlich sind sowie die Einstellungen für den Nachrichtenschutz. In WSE 3.0 eine sofort verwendbare Assertion die sicherheitsanforderungen für einen Client oder den Webdienst – ähnlich dem Authentifizierungsmodus einer Bindung in WCF.  
   
          Das folgende Codebeispiel definiert die `SecurityAssertion`, `RequireDerivedKeys``EstablishSecurityContext` und die `MessageProtectionOrder`-Eigenschaften, die die sofort verwendbare WSE-Assertion festlegen. Hierzu gehört, ob abgeleitete Schlüssel erforderlich sind, ob Sicherheitssitzungen zum Einsatz kommen, ob Signaturbestätigungen erforderlich sind sowie die Einstellungen für den Nachrichtenschutz.  
   
@@ -65,13 +51,13 @@ ms.lasthandoff: 04/30/2018
   
 3.  Fügen Sie im Clientanwendungscode Code hinzu, um die Bindungseigenschaften festzulegen.  
   
-     Das folgende Codebeispiel legt fest, dass der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client Nachrichtenschutz und -authentifizierung, wie von der sofort verwendbaren WSE 3.0-`AnonymousForCertificate`-Sicherheitsassertion definiert, verwenden muss. Darüber hinaus sind Sicherheitssitzungen und abgeleitete Schlüssel erforderlich.  
+     Das folgende Codebeispiel gibt an, dass der WCF-Client Nachrichtenschutz und -Authentifizierung verwenden muss, gemäß der Definition von der WSE 3.0 `AnonymousForCertificate` sicherheitsassertion. Darüber hinaus sind Sicherheitssitzungen und abgeleitete Schlüssel erforderlich.  
   
      [!code-csharp[c_WCFClientToWSEService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#4)]
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine benutzerdefinierte Bindung, die Eigenschaften offenlegt, die mit den Eigenschaften der sofort verwendbaren WSE 3.0-Sicherheitsassertion übereinstimmen. Die benutzerdefinierte Bindung mit dem Namen `WseHttpBinding` wird dann für die Festlegung der Bindungseigenschaften für einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client verwendet, der mit dem WSSecurityAnonymous WSE 3.0 QuickStart kommuniziert.  
+ Das folgende Codebeispiel definiert eine benutzerdefinierte Bindung, die Eigenschaften offenlegt, die mit den Eigenschaften der sofort verwendbaren WSE 3.0-Sicherheitsassertion übereinstimmen. Die benutzerdefinierte Bindung mit dem Namen `WseHttpBinding`, wird dann verwendet, um die Bindungseigenschaften für einen WCF-Client anzugeben, die mit dem WSSecurityAnonymous WSE 3.0 QuickStart kommuniziert.  
   
   
   

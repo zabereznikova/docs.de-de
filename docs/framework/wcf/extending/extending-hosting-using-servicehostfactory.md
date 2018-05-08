@@ -1,27 +1,15 @@
 ---
 title: Erweitern des Hosting mit ServiceHostFactory
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bcc5ae1b-21ce-4e0e-a184-17fad74a441e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a7bcd2e0ba68499cad63ec47918fd2bd6bd80d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3773ca50111f609489b95145f1005cd005922b9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>Erweitern des Hosting mit ServiceHostFactory
-Die standardmäßige <xref:System.ServiceModel.ServiceHost>-API für das Hosting von Diensten in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist ein erweiterbarer Teil in der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Architektur. Benutzer können ihre eigenen Hostklassen von <xref:System.ServiceModel.ServiceHost> ableiten, üblicherweise um <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> für die Verwendung von <xref:System.ServiceModel.Description.ServiceDescription> zu überschreiben, um Endpunkte imperativ hinzuzufügen oder das Verhalten vor dem Öffnen des Diensts zu ändern.  
+Der Standard <xref:System.ServiceModel.ServiceHost> API zum Hosten von Diensten in Windows Communication Foundation (WCF) ist ein Erweiterungspunkt. er in der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Architektur. Benutzer können ihre eigenen Hostklassen von <xref:System.ServiceModel.ServiceHost> ableiten, üblicherweise um <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> für die Verwendung von <xref:System.ServiceModel.Description.ServiceDescription> zu überschreiben, um Endpunkte imperativ hinzuzufügen oder das Verhalten vor dem Öffnen des Diensts zu ändern.  
   
  In der selbst gehosteten Umgebung müssen Sie keine benutzerdefinierte <xref:System.ServiceModel.ServiceHost>-Klasse erstellen, weil Sie den Code schreiben, der den Host instantiiert, und rufen anschließend <xref:System.ServiceModel.ICommunicationObject.Open> für den Host auf. Zwischen diesen beiden Schritten können Sie beliebige Vorgänge ausführen. Sie könnten z.&#160;B. ein neues <xref:System.ServiceModel.Description.IServiceBehavior> hinzufügen:  
   

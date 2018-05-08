@@ -1,24 +1,12 @@
 ---
 title: 'Vorgehensweise: Dienstdatenpartitionierung'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-caps.latest.revision: "3"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c6a3f95f2ecea342072de010a6cee51069f755fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47e84555e38d2a71b7741c18de5f67349a622798
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-service-data-partitioning"></a>Vorgehensweise: Dienstdatenpartitionierung
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um Meldungen über mehrere Instanzen des gleichen Zieldiensts zu partitionieren. Die Partitionierung von Dienstdaten wird in der Regel verwendet, wenn Sie einen Dienst skalieren müssen, um eine bessere Dienstqualität bereitzustellen, oder wenn Sie Anforderungen verschiedener Kunden jeweils auf bestimmte Art und Weise behandeln müssen. Beispielsweise können Nachrichten von wichtigen Kunden oder "Gold"-Kunden mit einer höheren Priorität als Nachrichten von einem Standardkunden verarbeitet werden müssen.  

@@ -1,31 +1,17 @@
 ---
 title: WS-Transport mit Nachrichtenanmeldeinformationen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b954e2d19f601476876beef6482ca10eb3f113b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: acb2960fe3d563a05b0bdeee70af0d4093aae6f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>WS-Transport mit Nachrichtenanmeldeinformationen
 In diesem Beispiel wird die Verwendung der SSL-Transportsicherheit in Verbindung mit Clientanmeldeinformationen veranschaulicht, die in der Nachricht übertragen werden. In diesem Beispiel wird die `wsHttpBinding`-Bindung verwendet.  
   
- Standardmäßig bietet die `wsHttpBinding`-Bindung HTTP-Kommunikation. Wenn die Bindung für Transportsicherheit konfiguriert ist, unterstützt sie HTTPS-Kommunikation. HTTPS stellt Vertraulichkeit und Integritätsschutz für die über die Verbindung übertragenen Nachrichten bereit. Die Authentifizierungsmechanismen, die zum Authentifizieren des Clients beim Dienst verwendet werden können, sind jedoch auf die Mechanismen beschränkt, die der HTTPS-Transport unterstützt. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet einen `TransportWithMessageCredential`-Sicherheitsmodus, durch den diese Einschränkung umgangen werden kann. Wenn dieser Sicherheitsmodus konfiguriert ist, werden mithilfe der Transportsicherheit Vertraulichkeit und Integrität für die übertragenen Nachrichten bereitgestellt und die Dienstauthentifizierung durchgeführt. Allerdings erfolgt die Clientauthentifizierung durch die Clientanmeldeinformationen direkt in die Nachricht einfügen. Dadurch können Sie einen beliebigen Anmeldeinformationstyp verwenden, die von den nachrichtensicherheitsmodus für die Clientauthentifizierung Beibehaltung des Leistungsvorteil Sicherheitsmodus "Transport" unterstützt wird.  
+ Standardmäßig bietet die `wsHttpBinding`-Bindung HTTP-Kommunikation. Wenn die Bindung für Transportsicherheit konfiguriert ist, unterstützt sie HTTPS-Kommunikation. HTTPS stellt Vertraulichkeit und Integritätsschutz für die über die Verbindung übertragenen Nachrichten bereit. Die Authentifizierungsmechanismen, die zum Authentifizieren des Clients beim Dienst verwendet werden können, sind jedoch auf die Mechanismen beschränkt, die der HTTPS-Transport unterstützt. Windows Communication Foundation (WCF) bietet eine `TransportWithMessageCredential` Sicherheitsmodus, die entwickelt wurde, um diese Einschränkung zu umgehen. Wenn dieser Sicherheitsmodus konfiguriert ist, werden mithilfe der Transportsicherheit Vertraulichkeit und Integrität für die übertragenen Nachrichten bereitgestellt und die Dienstauthentifizierung durchgeführt. Allerdings erfolgt die Clientauthentifizierung durch die Clientanmeldeinformationen direkt in die Nachricht einfügen. Dadurch können Sie einen beliebigen Anmeldeinformationstyp verwenden, die von den nachrichtensicherheitsmodus für die Clientauthentifizierung Beibehaltung des Leistungsvorteil Sicherheitsmodus "Transport" unterstützt wird.  
   
  In diesem Beispiel wird der `UserName`-Anmeldeinformationstyp verwendet, um den Client beim Dienst zu authentifizieren.  
   

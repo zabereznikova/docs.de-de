@@ -1,14 +1,6 @@
 ---
 title: Verwenden von Datenverträgen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,23 +9,17 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-caps.latest.revision: 38
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 839227e9a67d904ea4613f841deac5a9a3f6f9ea
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 992f35a9f7406ac161ddb5e31fdaf85756bfe31f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-data-contracts"></a>Verwenden von Datenverträgen
 Ein neuer *Datenvertrag* ist eine formale Vereinbarung zwischen einem Dienst und einem Client, in dem die auszutauschenden Daten abstrakt beschrieben werden. Das heißt, der Client und der Dienst müssen, um kommunizieren zu können, nicht denselben Typ verwenden, sondern nur dieselben Datenverträge. Ein Datenvertrag definiert für jeden Parameter oder Rückgabetyp genau, welche Daten für einen Austausch serialisiert (in XML umgewandelt) werden.  
   
 ## <a name="data-contract-basics"></a>Grundlagen des Datenvertrags  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet zum Serialisieren und Deserialisieren von Daten (Umwandeln in und aus XML) standardmäßig ein Serialisierungsprogramm für Datenverträge (Data Contract Serializer). Alle primitiven Typen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , wie Ganzzahlen und Zeichenfolgen, sowie bestimmte als Primitive behandelte Typen, wie <xref:System.DateTime> und <xref:System.Xml.XmlElement>, können ohne weitere Vorbereitung serialisiert werden und sind gewissermaßen mit Standarddatenverträgen ausgestattet. Viele Typen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] besitzen auch vorhandene Datenverträge. Eine vollständige Liste der serialisierbaren Typen finden Sie unter [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Windows Communication Foundation (WCF) verwendet ein Serialisierungsmodul, die den Datenvertragsserialisierer standardmäßig aufgerufen, um Daten (Umwandeln in und aus XML) serialisiert und deserialisiert. Alle primitiven Typen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , wie Ganzzahlen und Zeichenfolgen, sowie bestimmte als Primitive behandelte Typen, wie <xref:System.DateTime> und <xref:System.Xml.XmlElement>, können ohne weitere Vorbereitung serialisiert werden und sind gewissermaßen mit Standarddatenverträgen ausgestattet. Viele Typen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] besitzen auch vorhandene Datenverträge. Eine vollständige Liste der serialisierbaren Typen finden Sie unter [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  Für neue komplexe Typen, die Sie erstellen, muss ein Datenvertrag definiert sein, damit sie serialisierbar sind. Standardmäßig leitet der <xref:System.Runtime.Serialization.DataContractSerializer> den Datenvertrag ab und serialisiert alle öffentlich sichtbaren Typen. Alle öffentlichen Lese-/Schreibeigenschaften und Felder des Typs werden serialisiert. Mithilfe des <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>können Member von der Serialisierung ausgeschlossen werden. Mit dem <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut und dem <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut können Sie auch explizit einen Datenvertrag erstellen. Wenden Sie dazu das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf den Typ an. Dieses Attribut kann auf Klassen, Strukturen und Enumerationen angewendet werden. Das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut muss dann auf jeden Member des Datenvertragstyps angewendet werden, um anzugeben, dass es sich um einen *Datenmember*handelt, d.&amp;#160;h., dass er serialisiert werden soll. Weitere Informationen finden Sie unter [serialisierbaren Typen](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   

@@ -1,30 +1,18 @@
 ---
 title: Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
 In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung beschrieben. Dabei wird auch auf die Verwendung von Service Trace Viewer zur Problembehandlung in einer Anwendung eingegangen.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Verwenden des Service Trace Viewer-Tools  
- Das [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Service Trace Viewer-Tool hilft Ihnen dabei, von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Listenern erstellte Diagnoseablaufverfolgungen zu korrelieren, um die Ursache eines Fehlers zu ermitteln. Anhand dieses Tools können Sie mühelos Ablaufverfolgungen anzeigen, gruppieren und filtern, um Probleme mit [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Diensten zu diagnostizieren, zu reparieren und zu überprüfen. Weitere Informationen zur Verwendung dieses Tools finden Sie unter [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ Der Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die von erstellte diagnoseablaufverfolgungen zu korrelieren [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Listener zur Suche nach dem Stamm Ursache eines Fehlers. Anhand dieses Tools können Sie mühelos Ablaufverfolgungen anzeigen, gruppieren und filtern, um Probleme mit [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Diensten zu diagnostizieren, zu reparieren und zu überprüfen. Weitere Informationen zur Verwendung dieses Tools finden Sie unter [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  Dieses Thema enthält Screenshots von ablaufverfolgungen, die durch die Ausführung generiert der [Ablaufverfolgung und Nachrichtenprotokollierung](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) Beispiel, bei der Anzeige mithilfe der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). In diesem Thema werden der Ablaufverfolgungsinhalt, Aktivitäten und ihre Korrelation erläutert. Zudem wird beschrieben, wie eine große Zahl von Ablaufverfolgungen im Rahmen der Problembehandlung analysiert werden können.  
   

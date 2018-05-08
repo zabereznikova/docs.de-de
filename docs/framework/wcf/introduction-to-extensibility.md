@@ -1,33 +1,19 @@
 ---
 title: Einführung in die Erweiterbarkeit
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], extensibility
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-extensibility"></a>Einführung in die Erweiterbarkeit
-Mit dem [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungsmodell wird den meisten Kommunikationsanforderungen aller beliebigen verteilten Anwendungen entsprochen. Es treten jedoch häufig Szenarien auf, die das Standardanwendungsmodell und vom System bereitgestellte Implementierungen nicht unterstützen. Mit dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Erweiterbarkeitsmodell werden benutzerdefinierte Szenarien unterstützt, indem das Systemverhalten auf jeder Ebene geändert werden kann. Dies ist sogar bis zum Ersatz des gesamten Anwendungsmodells möglich. Dieses Thema gliedert die verschiedenen Bereiche der Erweiterung und verweist auf weitere Informationen zu jeder Erweiterung.  
+Das Anwendungsmodell für Windows Communication Foundation (WCF) Dient zur-Anwendungsmodell die kommunikationsanforderungen aller beliebigen verteilten Anwendungen zu beheben. Es treten jedoch häufig Szenarien auf, die das Standardanwendungsmodell und vom System bereitgestellte Implementierungen nicht unterstützen. Mit dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Erweiterbarkeitsmodell werden benutzerdefinierte Szenarien unterstützt, indem das Systemverhalten auf jeder Ebene geändert werden kann. Dies ist sogar bis zum Ersatz des gesamten Anwendungsmodells möglich. Dieses Thema gliedert die verschiedenen Bereiche der Erweiterung und verweist auf weitere Informationen zu jeder Erweiterung.  
   
 ## <a name="areas-to-extend"></a>Zu erweiternde Bereiche  
  Folgende Werte können erweitert werden:  

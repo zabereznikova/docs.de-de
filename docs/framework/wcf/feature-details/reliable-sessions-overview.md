@@ -1,36 +1,24 @@
 ---
-title: "Übersicht über zuverlässige Sitzungen"
-ms.custom: 
+title: Übersicht über zuverlässige Sitzungen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d2749188214f3f68ee3ed5df87fc0aa7cac604d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c5344c2804cf4c17fdc46a7fea5a4a360122b6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions-overview"></a>Übersicht über zuverlässige Sitzungen
 
-Zuverlässiges [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] SOAP-Messaging stellt eine zuverlässige End-to-End-Übertragung zwischen SOAP-Endpunkten bereit. Dies erfolgt in nicht zuverlässigen Netzwerken, indem Transportfehler und SOAP-Fehler auf Nachrichtenebene behoben werden. Insbesondere wird sitzungsbasierte, einzelne und (optional) geordnete Zustellung für Nachrichten bereitgestellt, die über SOAP- oder Transportvermittler übertragen werden. Sitzungsbasierte Zustellung bietet zum Gruppieren von Nachrichten in einer Sitzung und ordnet die Nachrichten optional.
+Windows Communication Foundation (WCF) SOAP reliable messaging stellt End-to-End-Übertragung zwischen SOAP-Endpunkte bereit. Dies erfolgt in nicht zuverlässigen Netzwerken, indem Transportfehler und SOAP-Fehler auf Nachrichtenebene behoben werden. Insbesondere wird sitzungsbasierte, einzelne und (optional) geordnete Zustellung für Nachrichten bereitgestellt, die über SOAP- oder Transportvermittler übertragen werden. Sitzungsbasierte Zustellung bietet zum Gruppieren von Nachrichten in einer Sitzung und ordnet die Nachrichten optional.
 
 Dieses Thema beschreibt zuverlässige Sitzungen, wie und wann Sie zu verwenden und diese sichern.
 
 ## <a name="wcf-reliable-sessions"></a>Zuverlässige WCF-Sitzungen
 
-In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sind zuverlässige Sitzungen eine Implementierung von zuverlässigem SOAP-Messaging, wie im WS-ReliableMessaging-Protokoll definiert.
+Zuverlässige WCF-Sitzungen wird eine Implementierung von zuverlässigem SOAP-messaging gemäß der WS-ReliableMessaging-Protokolls.
 
-Zuverlässiges [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP-Messaging bietet eine zuverlässige End-to-End-Übertragung zwischen zwei Endpunkten, unabhängig von der Anzahl oder dem Typ der Vermittler, durch die die Messagingendpunkte getrennt werden. Dies umfasst alle transportvermittler, die SOAP (z. B. HTTP-Proxys) verwenden, oder Vermittler, die SOAP (z. B. SOAP-basierte Router oder Brücken) verwenden, die Nachrichten zwischen den Endpunkten erforderlich sind. Ein zuverlässiger Sitzungskanal unterstützt *interaktive* Kommunikation, damit die über einen solchen Kanal verbundenen Dienste gleichzeitig ausgeführt werden und austauschen und Verarbeiten von Nachrichten in Situationen mit geringer Latenz, also in relativ geringen Zeitintervalle. Diese Kopplung bedeutet, dass diese Komponenten zusammen weiterarbeiten oder zusammen fehlschlagen; es gibt also keine voneinander isoliert.
+WCF-SOAP reliable messaging bietet eine zuverlässige End-to-End-Sitzung zwischen zwei Endpunkten, unabhängig von der Anzahl und Typ der Vermittler verwendet, die die messagingendpunkte getrennt. Dies umfasst alle transportvermittler, die SOAP (z. B. HTTP-Proxys) verwenden, oder Vermittler, die SOAP (z. B. SOAP-basierte Router oder Brücken) verwenden, die Nachrichten zwischen den Endpunkten erforderlich sind. Ein zuverlässiger Sitzungskanal unterstützt *interaktive* Kommunikation, damit die über einen solchen Kanal verbundenen Dienste gleichzeitig ausgeführt werden und austauschen und Verarbeiten von Nachrichten in Situationen mit geringer Latenz, also in relativ geringen Zeitintervalle. Diese Kopplung bedeutet, dass diese Komponenten zusammen weiterarbeiten oder zusammen fehlschlagen; es gibt also keine voneinander isoliert.
 
 Eine zuverlässige Sitzung maskiert zwei Arten von Fehlern:
 
@@ -52,7 +40,7 @@ Eine zuverlässige Sitzung stellt für SOAP-Nachrichten das bereit, was TCP für
 
 ## <a name="reliable-sessions-and-bindings"></a>Zuverlässige Sitzungen und Bindungen
 
-Wie bereits erwähnt, ist eine zuverlässige Sitzung transportneutral. Darüber hinaus können Sie eine zuverlässige Sitzung über viele Nachrichtenaustauschmuster, z. B. Anforderung-Antwort oder Duplex herstellen. Ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zuverlässige Sitzung wird als eine Eigenschaft eines Satzes von Bindungen verfügbar gemacht.
+Wie bereits erwähnt, ist eine zuverlässige Sitzung transportneutral. Darüber hinaus können Sie eine zuverlässige Sitzung über viele Nachrichtenaustauschmuster, z. B. Anforderung-Antwort oder Duplex herstellen. Eine zuverlässige WCF-Sitzung wird als eine Eigenschaft eines Satzes von Bindungen verfügbar gemacht.
 
 Verwenden Sie eine zuverlässige Sitzung auf Endpunkten, verwenden:
 
@@ -74,23 +62,23 @@ Eine zuverlässige Sitzung für jede andere Bindung verwenden, erstellen Sie ein
 
 Sie können eine zuverlässige Sitzung auf verschiedene zugrunde liegende Kanaltypen gestapelt, und die resultierende kanalform für zuverlässige Sitzung variiert. Auf dem Client und dem Server hängt den Typ des zugrunde liegenden Kanäle zur Datenübergabe der Typ des zuverlässigen Sitzungskanal unterstützt. In der folgenden Tabelle werden die Typen von Sitzungskanälen aufgeführt, die vom Client auf der Basis des zugrunde liegenden Kanaltyps unterstützt werden.
 
-| Unterstützte zuverlässige sitzungskanaltypen &#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Unterstützte zuverlässige sitzungskanaltypen&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
 | `IOutputSessionChannel`                         | Ja               | Ja                      | Ja              | Ja                     |
 | `IRequestSessionChannel`                        | Ja               | Ja                      | Nein               | Nein                      |
 | `IDuplexSessionChannel`                         | Nein                | Nein                       | Ja              | Ja                     |
 
-&#8224; Die unterstützen Kanaltypen sind die Werte für die generische `TChannel` Parameterwert, der übergeben wird die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> Methode.
+&#8224;Die unterstützen Kanaltypen sind die Werte für die generische `TChannel` Parameterwert, der übergeben wird die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> Methode.
 
 In der folgenden Tabelle werden die Typen von Sitzungskanälen aufgeführt, die vom Server auf der Basis des zugrunde liegenden Kanaltyps unterstützt werden.
 
-| Unterstützte zuverlässige sitzungskanaltypen &#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Unterstützte zuverlässige sitzungskanaltypen&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
 | `IInputSessionChannel`                          | Ja             | Ja                    | Ja              | Ja                     |
 | `IReplySessionChannel`                          | Ja             | Ja                    | Nein               | Nein                      |
 | `IDuplexSessionChannel`                         | Nein              | Nein                     | Ja              | Ja                     |
 
-&#8225; Die unterstützen Kanaltypen sind die Werte für die generische `TChannel` Parameterwert, der übergeben wird die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> Methode.
+&#8225;Die unterstützen Kanaltypen sind die Werte für die generische `TChannel` Parameterwert, der übergeben wird die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> Methode.
 
 ## <a name="reliable-sessions-and-security"></a>Zuverlässige Sitzungen und Sicherheit
 
@@ -102,7 +90,7 @@ Die einzige Ausnahme besteht bei der Verwendung von HTTPS. Die Secure Sockets La
 
 ## <a name="using-reliable-sessions"></a>Verwenden von zuverlässigen Sitzungen
 
-Um zuverlässige [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sitzungen zu verwenden, erstellen Sie einen Endpunkt mit einer Bindung, die eine zuverlässige Sitzung unterstützt. Verwenden Sie eine der vom System bereitgestellten Bindungen, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit aktivierter zuverlässiger Sitzung bietet, oder erstellen Sie eine eigene benutzerdefinierte Bindung, die dies tut.
+Um zuverlässige WCF-Sitzungen zu verwenden, erstellen Sie einen Endpunkt mit einer Bindung, die eine zuverlässige Sitzung unterstützt. Verwenden Sie eine vom System bereitgestellten Bindungen, die WCF mit der zuverlässigen Sitzung bietet aktiviert, oder erstellen Sie eine eigene benutzerdefinierte Bindung, die dies tut.
 
 Die systemdefinierten Bindungen, die standardmäßig eine zuverlässige Sitzung unterstützen und aktivieren, sind:
 
@@ -118,11 +106,11 @@ Die vom System bereitgestellte Bindungen, die eine zuverlässige Sitzung als Opt
 
 Ein Beispiel zum Erstellen einer benutzerdefinierten Bindung finden Sie unter [Vorgehensweise: Erstellen einer benutzerdefinierten zuverlässigen Sitzungsbindung mit HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
 
-Eine Erläuterung der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bindungen, die zuverlässige Sitzungen unterstützen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).
+Eine Erläuterung der WCF-Bindungen, die zuverlässige Sitzungen unterstützen, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).
 
 ## <a name="when-to-use-reliable-sessions"></a>Wann zuverlässige Sitzungen verwendet
 
-Es ist wichtig zu verstehen, wann zuverlässige Sitzungen in Ihrer Anwendung verwenden. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt zuverlässige Sitzungen zwischen Endpunkten, die gleichzeitig aktiv und gültig sind. Wenn Ihre Anwendung einen der Endpunkte erfordert für einen bestimmten Zeitraum nicht verfügbar sein, und klicken Sie dann mithilfe von Warteschlangen an um Zuverlässigkeit zu erreichen.
+Es ist wichtig zu verstehen, wann zuverlässige Sitzungen in Ihrer Anwendung verwenden. WCF unterstützt zuverlässige Sitzungen zwischen Endpunkten, die gleichzeitig aktiv und gültig sind. Wenn Ihre Anwendung einen der Endpunkte erfordert für einen bestimmten Zeitraum nicht verfügbar sein, und klicken Sie dann mithilfe von Warteschlangen an um Zuverlässigkeit zu erreichen.
 
 Wenn das Szenario mit zwei Endpunkte über TCP verbunden erforderlich ist, kann TCP ausreichen, um den zuverlässigen Nachrichtenaustausch gewähren sein. Zwar ist es nicht erforderlich, um eine zuverlässige Sitzung zu verwenden, da TCP wird, dass sichergestellt Eintreffen der Pakete in der Reihenfolge und nur einmal.
 

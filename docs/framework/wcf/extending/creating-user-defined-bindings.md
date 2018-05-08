@@ -1,28 +1,14 @@
 ---
 title: Erstellen benutzerdefinierter Bindungen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Erstellen benutzerdefinierter Bindungen
 Es gibt mehrere Möglichkeiten, Bindungen zu erstellen, die nicht vom System bereitgestellt werden:  
@@ -38,7 +24,7 @@ Es gibt mehrere Möglichkeiten, Bindungen zu erstellen, die nicht vom System ber
   
  Es gibt drei Haupttypen von Bindungselementen: Protokollbindungselemente, Codierungsbindungselemente und Transportbindungselemente.  
   
- Protokollbindungselemente &#8211; Diese Elemente stellen für Nachrichten ausgeführte Verarbeitungsschritte auf höherer Ebene dar. Die von diesen Bindungselementen erstellten Kanäle und Listener können den Nachrichteninhalt hinzufügen, entfernen oder ändern. Eine gegebene Bindung verfügt möglicherweise über eine beliebige Anzahl von Protokollbindungselementen, die alle von <xref:System.ServiceModel.Channels.BindingElement> erben. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet mehrere Protokollbindungselemente, einschließlich dem <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> und dem <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Protokollbindungselemente &#8211; Diese Elemente stellen für Nachrichten ausgeführte Verarbeitungsschritte auf höherer Ebene dar. Die von diesen Bindungselementen erstellten Kanäle und Listener können den Nachrichteninhalt hinzufügen, entfernen oder ändern. Eine gegebene Bindung verfügt möglicherweise über eine beliebige Anzahl von Protokollbindungselementen, die alle von <xref:System.ServiceModel.Channels.BindingElement> erben. Windows Communication Foundation (WCF) enthält mehrere protokollbindungselemente, einschließlich der <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> und <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
  Codierungsbindungselemente &#8211; Diese Elemente stellen eine Transformation zwischen einer Nachricht und einer Codierung dar, die für die Weiterleitung im Netz bereit ist. Typische [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Bindungen umfassen genau ein Codierungsbindungselement. Beispiele für Codierungsbindungselemente sind <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Wird für eine Bindung kein Codierungsbindungselement angegeben, wird eine Standardcodierung verwendet. Wenn als Transport HTTP verwendet wird, ist dieser Standard Text, andernfalls binär.  
   

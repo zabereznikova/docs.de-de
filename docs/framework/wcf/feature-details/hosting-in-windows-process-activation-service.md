@@ -1,33 +1,19 @@
 ---
 title: Hosten in WAS (Windows Process Activation Service)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5cd2244c4b44592e436dfd983985dca3c1a50144
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosten in WAS (Windows Process Activation Service)
-Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste hostende Anwendungen enthalten. Das WAS-Prozessmodell verallgemeinert das [!INCLUDE[iis601](../../../../includes/iis601-md.md)]-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dies ermöglicht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten die Verwendung von HTTP- und Nicht-HTTP-Protokollen, beispielsweise Net.TCP, in einer Hostumgebung, die nachrichtenbasierte Aktivierung unterstützt und die Möglichkeit zum Hosten vieler Anwendungen auf einem bestimmten Computer bietet.  
+Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die Anwendungen, die Hostdienste Windows Communication Foundation (WCF) enthalten. Das WAS-Prozessmodell verallgemeinert das [!INCLUDE[iis601](../../../../includes/iis601-md.md)]-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dadurch wird ein WCF-Diensten für die Verwendung von HTTP- und nicht-HTTP-Protokolle, wie z. B. Net.TCP, in einer Hostingumgebung, die Nachrichtenbasierte Aktivierung unterstützt und bietet die Möglichkeit, eine große Anzahl von Anwendungen auf einem bestimmten Computer zu hosten.  
   
- Weitere Informationen zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in WAS ausgeführte Hostingumgebung Dienst finden Sie unter [wie: Hosten eines WCF-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Weitere Informationen zum Erstellen eines WCF-Diensts, die in der WAS-Hostingumgebung ausgeführt wird, finden Sie unter [wie: Hosten eines WCF-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  Das WAS-Prozessmodell bietet verschiedene Funktionen, die ermöglichen, Anwendungen auf robustere, besser verwaltbare und ressourcenschonendere Weise zu hosten:  
   

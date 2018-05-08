@@ -1,32 +1,18 @@
 ---
 title: Zugreifen auf Dienste mithilfe eines Clients
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1369403b493683f58640047fe042708afc5d5b46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-services-using-a-client"></a>Zugreifen auf Dienste mithilfe eines Clients
-Clientanwendungen müssen für die Kommunikation mit Diensten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client- oder Kanalobjekte erstellen, konfigurieren und verwenden. Die [Überblick über WCF-Client](../../../../docs/framework/wcf/wcf-client-overview.md) Thema bietet einen Überblick über die Objekte und die Schritte zum Erstellen von Objekten für grundlegende Client- und kanalobjekten und deren Verwendung.  
+Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF Client- oder kanalobjekt Objekte für die Kommunikation mit Diensten. Die [Überblick über WCF-Client](../../../../docs/framework/wcf/wcf-client-overview.md) Thema bietet einen Überblick über die Objekte und die Schritte zum Erstellen von Objekten für grundlegende Client- und kanalobjekten und deren Verwendung.  
   
  Dieses Thema bietet ausführlichere Informationen zu Problemen mit Clientanwendungen sowie Client- und Kanalobjekten, die abhängig von Ihrem Szenario hilfreich sein können.  
   
@@ -42,7 +28,7 @@ Clientanwendungen müssen für die Kommunikation mit Diensten [!INCLUDE[indigo2]
 -   Interaktives Initialisieren von Kanälen.  
   
 ### <a name="channel-and-session-lifetimes"></a>Kanal- und Sitzungslebensdauer  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungen umfassen zwei Kategorien von Kanälen, Datagramm und sitzungsbasiert.  
+ Anwendungen für Windows Communication Foundation (WCF) enthält zwei Kategorien von Kanälen, Datagramm und sitzungsbasiert.  
   
  Ein *Datagramm* ist ein Kanal, in dem alle Nachrichten nicht korreliert sind. Auf einem Datagrammkanal ist normalerweise beim Fehlschlagen eines Eingabe- oder Ausgabevorgangs der nächste Vorgang nicht betroffen, und der gleiche Kanal kann wiederverwendet werden. Daher schlagen Datagrammkanäle in der Regel nicht fehl.  
   
@@ -79,11 +65,11 @@ Clientanwendungen müssen für die Kommunikation mit Diensten [!INCLUDE[indigo2]
  Weitere Informationen zum Arbeiten mit Fehlerinformationen auf Anwendungsebene, finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Erwartete Ausnahmen](../../../../docs/framework/wcf/samples/expected-exceptions.md) erwartete Ausnahmen beschreibt und zeigt, wie sie behandelt. Weitere Informationen zum Umgang mit Fehlern beim Entwickeln von Kanälen finden Sie unter [Behandlung von Ausnahmen und Fehlern](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>Clientblockierung und Leistung  
- Wenn eine Anwendung synchron einen Anforderungs-/Antwortvorgang aufruft, wird der Client blockiert, bis ein Rückgabewert empfangen oder eine Ausnahme (wie <xref:System.TimeoutException?displayProperty=nameWithType>) ausgelöst wird. Dieses Verhalten ähnelt lokalem Verhalten. Ruft eine Anwendung synchron einen Vorgang auf einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientobjekt oder -kanal auf, wird der Client erst dann zurückgegeben, wenn die Kanalebene die Daten an das Netzwerk schreiben kann oder bis eine Ausnahme ausgelöst wird. Und während das unidirektionale Nachrichtenaustauschmuster (angegeben durch die Markierung eines Vorgangs, wobei <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> auf `true` festgelegt ist) die Reaktionsgeschwindigkeit einiger Clients verbessern kann, können unidirektionale Vorgänge abhängig von der Bindung und den bisher gesendeten Nachrichten auch blockiert werden. Bei unidirektionalen Vorgängen geht es nur um den Nachrichtenaustausch. Weitere Informationen finden Sie unter [unidirektionaler Services](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
+ Wenn eine Anwendung synchron einen Anforderungs-/Antwortvorgang aufruft, wird der Client blockiert, bis ein Rückgabewert empfangen oder eine Ausnahme (wie <xref:System.TimeoutException?displayProperty=nameWithType>) ausgelöst wird. Dieses Verhalten ähnelt lokalem Verhalten. Wenn eine Anwendung synchron einen Vorgang für eine WCF-Clientobjekt oder-Kanal aufruft, gibt der Client keinen zurück, bis die Kanalebene die Daten schreiben kann, mit dem Netzwerk oder bis eine Ausnahme ausgelöst wird. Und während das unidirektionale Nachrichtenaustauschmuster (angegeben durch die Markierung eines Vorgangs, wobei <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> auf `true` festgelegt ist) die Reaktionsgeschwindigkeit einiger Clients verbessern kann, können unidirektionale Vorgänge abhängig von der Bindung und den bisher gesendeten Nachrichten auch blockiert werden. Bei unidirektionalen Vorgängen geht es nur um den Nachrichtenaustausch. Weitere Informationen finden Sie unter [unidirektionaler Services](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
  Große Datensegmente können die Clientverarbeitung verlangsamen, egal, welches Nachrichtenaustauschmuster verwendet wird. Um zu verstehen, wie diese Probleme behandelt, finden Sie unter [umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Wenn die Anwendung beim Abschluss eines Vorgangs mehr arbeiten muss, sollten Sie ein asynchrones Methodenpaar an der Dienstvertragschnittstelle erstellen, das der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client implementiert. Die einfachste Möglichkeit hierzu ist die Verwendung der `/async` wechseln Sie auf die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Ein Beispiel finden Sie unter [Vorgehensweise: Aufrufen Service Vorgänge asynchron](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Wenn Ihre Anwendung beim Abschluss eines Vorgangs mehr arbeiten ausführen muss, sollten Sie ein asynchrones Methodenpaar auf der dienstvertragschnittstelle erstellen, die WCF-Client implementiert. Die einfachste Möglichkeit hierzu ist die Verwendung der `/async` wechseln Sie auf die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Ein Beispiel finden Sie unter [Vorgehensweise: Aufrufen Service Vorgänge asynchron](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
  Weitere Informationen zu erhöht die Leistung des Clients finden Sie unter [Clientanwendungen mittlerer Ebene](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   

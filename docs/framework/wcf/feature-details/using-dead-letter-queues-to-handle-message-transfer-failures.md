@@ -1,29 +1,15 @@
 ---
 title: Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b70b7a7849ba0927c8ee4a4903aefc27bfa9d0c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern
 Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen. Diese fehlgeschlagenen Nachrichten werden in einer Warteschlange für unzustellbare Nachrichten aufgezeichnet. Das Fehlschlagen der Zustellung kann beispielsweise durch Netzwerkfehler, eine gelöschte Warteschlange, eine volle Warteschlange, einen Authentifizierungsfehler oder eine zu späte Zustellung verursacht werden.  
@@ -32,11 +18,11 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
   
  Im Allgemeinen schreiben Anwendungen Entschädigungslogik, um Nachrichten aus der Warteschlange für unzustellbare Nachrichten sowie Fehlerursachen zu lesen. Die Entschädigungslogik hängt von der Ursache des Fehlers ab. Im Falle eines Authentifizierungsfehlers können Sie beispielsweise das an die Nachricht angehängte Zertifikat korrigieren und die Nachricht anschließend erneut senden. Wenn eine Zustellung fehlgeschlagen ist, weil das Zielwarteschlangenkontingent nicht erreicht wurde, können Sie erneut einen Zustellungsversuch vornehmen, in der Hoffnung, dass das Kontingentproblem behoben wurde.  
   
- Die meisten Warteschlangensysteme haben eine systemweite Warteschlange für unzustellbare Nachrichten, in der alle fehlgeschlagenen Nachrichten dieses Systems gespeichert werden. Message Queuing (MSMQ) bietet zwei systemweite Warteschlangen für unzustellbare Nachrichten: eine transaktionale systemweite Warteschlange für unzustellbare Nachrichten, die Nachrichten speichert, die nicht an die transaktionale Warteschlange gesendet werden konnten, und eine nicht transaktionale Warteschlange für unzustellbare Nachrichten, die Nachrichten speichert, die nicht an die nicht transaktionale Warteschlange gesendet werden konnten. Wenn zwei Clients Nachrichten an verschiedene Dienste senden und deshalb verschiedene Warteschlangen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] denselben MSMQ-Dienst zum Senden verwenden, können möglicherweise verschiedene Nachrichten in der Systemwarteschlange für unzustellbare Nachrichten enthalten sein. Dies ist nicht immer optimal. In vielen Fällen (z. B. im Hinblick auf die Sicherheit) ist es nicht ratsam, dass ein Client die Nachrichten eines anderen Clients aus der Warteschlange für unzustellbare Nachrichten liest. Bei einer gemeinsam genutzten Warteschlange für unzustellbare Nachrichten müssen die Clients darüber hinaus die Warteschlange nach von ihnen gesendeten Nachrichten durchsuchen, was je nach Anzahl der Nachrichten in der Warteschlange für unzustellbare Nachrichten viel zu aufwendig sein kann. Aus diesem Grund in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `NetMsmqBinding`, `MsmqIntegrationBinding,` und MSMQ auf [!INCLUDE[wv](../../../../includes/wv-md.md)] Geben Sie eine benutzerdefinierte Warteschlange für unzustellbare (auch als eine anwendungsspezifische Dead Letter-Warteschlange bezeichnet).  
+ Die meisten Warteschlangensysteme haben eine systemweite Warteschlange für unzustellbare Nachrichten, in der alle fehlgeschlagenen Nachrichten dieses Systems gespeichert werden. Message Queuing (MSMQ) bietet zwei systemweite Warteschlangen für unzustellbare Nachrichten: eine transaktionale systemweite Warteschlange für unzustellbare Nachrichten, die Nachrichten speichert, die nicht an die transaktionale Warteschlange gesendet werden konnten, und eine nicht transaktionale Warteschlange für unzustellbare Nachrichten, die Nachrichten speichert, die nicht an die nicht transaktionale Warteschlange gesendet werden konnten. Wenn zwei Clients Nachrichten an zwei verschiedene Dienste senden und deshalb verschiedene Warteschlangen in WCF den gleichen MSMQ-Dienst zum Senden Treiberressourcen, ist es möglich, eine Mischung aus Nachrichten in der Systemwarteschlange für unzustellbare haben. Dies ist nicht immer optimal. In vielen Fällen (z. B. im Hinblick auf die Sicherheit) ist es nicht ratsam, dass ein Client die Nachrichten eines anderen Clients aus der Warteschlange für unzustellbare Nachrichten liest. Bei einer gemeinsam genutzten Warteschlange für unzustellbare Nachrichten müssen die Clients darüber hinaus die Warteschlange nach von ihnen gesendeten Nachrichten durchsuchen, was je nach Anzahl der Nachrichten in der Warteschlange für unzustellbare Nachrichten viel zu aufwendig sein kann. Aus diesem Grund in WCF`NetMsmqBinding`, `MsmqIntegrationBinding,` und MSMQ auf [!INCLUDE[wv](../../../../includes/wv-md.md)] Geben Sie eine benutzerdefinierte Warteschlange für unzustellbare (auch als eine anwendungsspezifische Dead Letter-Warteschlange bezeichnet).  
   
  Die benutzerdefinierte Warteschlange für unzustellbare Nachrichten ermöglicht eine Isolation zwischen Clients, die den gleichen MSMQ-Dienst verwenden, um Nachrichten zu senden.  
   
- Auf [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] stellt [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] eine systemweite Warteschlange für unzustellbare Nachrichten für alle in der Warteschlange stehenden Clientanwendungen bereit. Auf [!INCLUDE[wv](../../../../includes/wv-md.md)] stellt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eine Warteschlange für unzustellbare Nachrichten für jede in der Warteschlange stehende Clientanwendung bereit.  
+ Auf [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) bietet eine systemweite Warteschlange für alle in der Warteschlange-Clientanwendungen. Auf [!INCLUDE[wv](../../../../includes/wv-md.md)], WCF bietet eine Dead Letter-Warteschlange für jede in der Warteschlange stehende Clientanwendung.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>Angeben der Verwendung der Warteschlange für unzustellbare Nachrichten  
  Eine Warteschlange für unzustellbare Nachrichten befindet sich im Warteschlangen-Manager der sendenden Anwendung. Sie speichert Nachrichten, die abgelaufen sind oder nicht zugestellt werden konnten.  
@@ -48,7 +34,7 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
 -   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Lesen von Nachrichten aus der Warteschlange für unzustellbare Nachrichten  
- Eine Anwendung, die Nachrichten aus einer Warteschlange für unzustellbare Nachrichten liest, ähnelt einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, der aus einer Anwendungswarteschlange liest, wobei folgende geringfügige Unterschiede zu beachten sind:  
+ Eine Anwendung, die aus einer Warteschlange für unzustellbare Nachrichten liest ist vergleichbar mit einem WCF-Dienst, der aus einer Anwendungswarteschlange, mit Ausnahme der folgenden geringfügige Unterschiede liest:  
   
 -   Zum Lesen von Nachrichten aus einer transaktionalen Systemwarteschlange für unzustellbare Nachrichten muss der URI (Uniform Resource Identifier) folgendes Format aufweisen: net.msmq://localhost/system$;DeadXact.  
   
@@ -58,7 +44,7 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
   
  Weitere Informationen zu Adresse Warteschlangen finden Sie unter [Dienstendpunkte und Adressieren von Warteschlangen](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Stapel des Empfängers gleicht Adressen, die der Dienst überwacht, mit der Adresse auf der Nachricht ab. Wenn die Adressen übereinstimmen, wird die Nachricht weitergeleitet; stimmen sie nicht überein, wird die Nachricht nicht weitergeleitet. Dies kann Probleme beim Lesen aus der Warteschlange für unzustellbare Nachrichten verursachen, da die Nachrichten in der Warteschlange in der Regel an den Dienst und nicht an den Dienst der Warteschlange für unzustellbare Nachrichten adressiert sind. Daher muss der Dienst, der aus der Warteschlange für unzustellbare Nachrichten liest, einen Adressfilter `ServiceBehavior` installieren, der den Stapel auffordert, alle Nachrichten in der Warteschlange unabhängig vom Adressaten abzugleichen. Genau genommen müssen Sie dem Dienst, der die Nachrichten aus der Warteschlange für unzustellbare Nachrichten liest, ein `ServiceBehavior` mit dem Parameter <xref:System.ServiceModel.AddressFilterMode.Any> hinzufügen.  
+ Der WCF-Stapel beim Empfänger entspricht Adressen, die der Dienst überwacht wird mit der Adresse für die Nachricht. Wenn die Adressen übereinstimmen, wird die Nachricht weitergeleitet; stimmen sie nicht überein, wird die Nachricht nicht weitergeleitet. Dies kann Probleme beim Lesen aus der Warteschlange für unzustellbare Nachrichten verursachen, da die Nachrichten in der Warteschlange in der Regel an den Dienst und nicht an den Dienst der Warteschlange für unzustellbare Nachrichten adressiert sind. Daher muss der Dienst, der aus der Warteschlange für unzustellbare Nachrichten liest, einen Adressfilter `ServiceBehavior` installieren, der den Stapel auffordert, alle Nachrichten in der Warteschlange unabhängig vom Adressaten abzugleichen. Genau genommen müssen Sie dem Dienst, der die Nachrichten aus der Warteschlange für unzustellbare Nachrichten liest, ein `ServiceBehavior` mit dem Parameter <xref:System.ServiceModel.AddressFilterMode.Any> hinzufügen.  
   
 ## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Die Handhabung von beschädigten Nachrichten aus der Warteschlange für unzustellbare Nachrichten  
  Die Handhabung beschädigter Nachrichten ist für Warteschlangen für unzustellbare Nachrichten verfügbar. Dabei gelten bestimmte Voraussetzungen. Da beim Lesen aus der Systemwarteschlange für unzustellbare Nachrichten keine untergeordneten Warteschlangen erstellt werden können, kann `ReceiveErrorHandling` nicht auf `Move` festgelegt werden. Beachten Sie, dass Sie beim Lesen aus einer benutzerdefinierten Warteschlange für unzustellbare Nachrichten untergeordnete Warteschlangen nutzen können und dass `Move` daher eine gültige Disposition für die beschädigte Nachricht ist.  

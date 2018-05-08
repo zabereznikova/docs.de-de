@@ -1,24 +1,12 @@
 ---
 title: Erstellen von Anwendungsrollen in SQL Server
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-caps.latest.revision: "9"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a6c8027e3cbf7bcef3bbe36ba381a08b650516bc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cb3bcb08877d8a17ea40ea48440c1d71560d0e5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Erstellen von Anwendungsrollen in SQL Server
 Anwendungsrollen bieten die Möglichkeit, einer Anwendung anstelle von Datenbankrollen oder Benutzern Berechtigungen zuzuweisen. Benutzer können eine Verbindung mit der Datenbank herstellen, die Anwendungsrolle aktivieren und die der Anwendung erteilten Berechtigungen annehmen. Die der Anwendungsrolle gewährten Berechtigungen sind so lange in Kraft, wie die Verbindung besteht.  

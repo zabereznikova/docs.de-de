@@ -1,45 +1,33 @@
 ---
 title: Bindungen und Sicherheit
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
 - WCF security
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-security"></a>Bindungen und Sicherheit
-Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] integrierten Bindungen bieten eine schnelle Möglichkeit, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen zu programmieren. Mit einer Ausnahme haben alle Bindungen ein standardmäßig aktiviertes Sicherheitsschema. Dieses Thema hilft Ihnen, die richtige Bindung für die benötigte Sicherheit auszuwählen.  
+Die vom System bereitgestellte Bindungen mit Windows Communication Foundation (WCF) bieten eine schnelle Möglichkeit zum Programmieren von WCF-Anwendungen. Mit einer Ausnahme haben alle Bindungen ein standardmäßig aktiviertes Sicherheitsschema. Dieses Thema hilft Ihnen, die richtige Bindung für die benötigte Sicherheit auszuwählen.  
   
- Eine Übersicht über [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zur Programmierung [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bindungen, finden Sie unter [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Einen Überblick über WCF-Sicherheit finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zum Verwenden von Bindungen, WCF-Programmierung finden Sie unter [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Wenn Sie bereits eine Bindung ausgewählt haben, finden Sie weitere Informationen über das Laufzeitverhalten, die unter Berücksichtigung von Sicherheitsaspekten einhergehen [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Einige Sicherheitsfunktionen sind mit den vom System bereitgestellten Bindungen nicht programmierbar. Mehr Kontrolle über eine benutzerdefinierte Bindung, finden Sie unter [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Sicherheitsfunktionen von Bindungen  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet einige vom System bereitgestellte Bindungen, die die meisten Bedürfnisse erfüllen. Wenn eine bestimmte Bindung nicht ausreicht, können Sie auch eine benutzerdefinierte Bindung erstellen. Eine Liste der vom System bereitgestellte Bindungen, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md). Weitere Informationen über benutzerdefinierte Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ WCF umfasst eine Reihe von vom System bereitgestellte Bindungen, die meisten Bedürfnisse erfüllen. Wenn eine bestimmte Bindung nicht ausreicht, können Sie auch eine benutzerdefinierte Bindung erstellen. Eine Liste der vom System bereitgestellte Bindungen, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md). Weitere Informationen über benutzerdefinierte Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- Jede Bindung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erscheint in zwei Formen: als API- und als XML-Element, die in einer Konfigurationsdatei verwendet werden. Z. B. die `WSHttpBinding` (API) hat eine Entsprechung den [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Jede Bindung in WCF verfügt über zwei Formen: als API- und als XML-Element in einer Konfigurationsdatei verwendet. Z. B. die `WSHttpBinding` (API) hat eine Entsprechung den [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  Der folgende Abschnitt führt beide Formen einer Bindung auf und fasst die Sicherheitsfunktionen zusammen.  
   
@@ -149,7 +137,7 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Verwenden Sie im Code die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<MsmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
   
- Diese Bindung ist für das Erstellen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients und -Diensten optimiert, die mit Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing (MSMQ)-Endpunkten zusammenarbeiten.  
+ Diese Bindung ist für das Erstellen von WCF-Clients und Dienste, die Zusammenwirken mit nicht - WCF MSMQ Microsoft Message Queuing-Endpunkten optimiert.  
   
  Standardmäßig verwendet diese Bindung Transportsicherheit und stellt die folgenden Sicherheitseigenschaften bereit:  
   
@@ -162,7 +150,7 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Verwenden Sie im Code die <xref:System.ServiceModel.NetMsmqBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
   
- Diese Bindung ist für den Einsatz beim Erstellen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten gedacht, die MSMQ Queued Message-Support benötigen.  
+ Diese Bindung ist für die Verwendung vorgesehen, wenn WCF-Dienste,, MSMQ erfordern, Message-Support in die Warteschlange eingereiht.  
   
  Standardmäßig verwendet diese Bindung Transportsicherheit und stellt die folgenden Sicherheitseigenschaften bereit:  
   
@@ -232,7 +220,7 @@ Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indi
 |----------|-----------------|  
 |Keiner|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|  
 |Windows|Ermöglicht SOAP-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen.|  
-|UserName|Ermöglicht dem Dienst die Forderung an den Client, sich über eine Benutzernamen-Anmeldeinformation zu authentifizieren. Bitte beachten Sie, dass bei einer Festlegung des Sicherheitsmodus auf `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] das Senden eines Kennwortdigest oder die Ableitung von Schlüsseln über das Kennwort und die Verwendung solcher Schlüssel für die Nachrichtenmodussicherheit nicht unterstützt werden. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] setzt prinzipiell durch, dass der Transport geschützt wird, wenn der Identitätsnachweis über den Benutzernamen erfolgt.|  
+|UserName|Ermöglicht dem Dienst die Forderung an den Client, sich über eine Benutzernamen-Anmeldeinformation zu authentifizieren. Beachten Sie, dass, wenn der Sicherheitsmodus, um festgelegt ist `TransportWithMessageCredential`, Senden eines kennworthashwerts oder die Ableitung von Schlüsseln mit Kennwörtern sowie die Verwendung solcher Schlüssel für den nachrichtensicherheitsmodus von WCF nicht unterstützt. Daher erzwingt WCF an, dass der Transport geschützt wird, wenn Benutzernamen-Anmeldeinformationen verwenden.|  
 |Zertifikat|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|  
 |IssuedToken|Ermöglicht es dem Dienst, einen Sicherheitstokendienst zu verwenden, um ein benutzerdefiniertes Token zu liefern.|  
   

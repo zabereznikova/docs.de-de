@@ -1,24 +1,14 @@
 ---
 title: .NET Native und Kompilierung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86d8a740aa0597a21c6665ee722f4a601dec9bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-native-and-compilation"></a>.NET Native und Kompilierung
 Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Desktop-Anwendungen sind in einer bestimmten Programmiersprache geschrieben und in eine Zwischensprache (Intermediate Language, IL) kompiliert. Zur Laufzeit ist ein JIT-Compiler (Just-In-Time) dafür zuständig, die Zwischensprache für den lokalen Computer in nativen Code zu kompilieren, unmittelbar bevor eine Methode zum ersten Mal ausgeführt wird. Im Gegensatz dazu konvertiert die .NET Native-Toolkette den Quellcode zur Kompilierzeit in systemeigenen Code. In diesem Abschnitt wird .NET Native mit anderen Kompilierungsverfahren verglichen, die für .NET Framework-Apps verfügbar sind. Zudem enthält dieser Abschnitt einen konkreten Überblick über die Erzeugung von systemeigenen Code mit .NET Native, der Ihnen dabei helfen kann zu verstehen, warum Ausnahmen nicht im JIT-kompilierten Code auftreten, die hingegen in Code auftreten, der mit .NET Native kompiliert wurde.  

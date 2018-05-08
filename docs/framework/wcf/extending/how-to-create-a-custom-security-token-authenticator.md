@@ -1,36 +1,24 @@
 ---
 title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4415edbe9f04cb56cefadcb3ae521994fac28ffb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers
 In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitstokenauthentifizierer erstellen und in einen benutzerdefinierten Sicherheitstoken-Manager integrieren. Ein Sicherheitstokenauthentifizierer überprüft den Inhalt eines Sicherheitstokens, das mit einer eingehenden Nachricht bereitgestellt wird. Bei erfolgreicher Validierung gibt der Authentifizierer eine Sammlung von <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Instanzen zurück, die nach der Auswertung einen Satz von Ansprüchen zurückgeben.  
   
- Zur Verwendung eines benutzerdefinierten Sicherheitstokenauthentifizierers in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] müssen Sie zunächst benutzerdefinierte Anmeldeinformationen und Sicherheitstoken-Manager-Implementierungen erstellen. Weitere Informationen zum Erstellen von benutzerdefinierten Anmeldeinformationen und eine Sicherheits-Sicherheitstoken-Manager finden Sie unter [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Weitere Informationen zu Anmeldeinformationen und Sicherheitstoken-Manager-Anbieter und -Authentifizierer Klassen finden Sie unter [Sicherheitsarchitektur](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Um einen benutzerdefinierten Sicherheitstokenauthentifizierer in der Windows Communication Foundation (WCF) verwenden, müssen Sie zunächst benutzerdefinierte Anmeldeinformationen und Sicherheitstoken-managerimplementierungen erstellen. Weitere Informationen zum Erstellen von benutzerdefinierten Anmeldeinformationen und eine Sicherheits-Sicherheitstoken-Manager finden Sie unter [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Weitere Informationen zu Anmeldeinformationen und Sicherheitstoken-Manager-Anbieter und -Authentifizierer Klassen finden Sie unter [Sicherheitsarchitektur](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Verfahren  
   

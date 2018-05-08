@@ -1,24 +1,12 @@
 ---
-title: "Installationsanleitung für IIS-Serverzertifikate (Internetinformationsdienste)"
-ms.custom: 
+title: Installationsanleitung für IIS-Serverzertifikate (Internetinformationsdienste)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb168ae60765a57017aaec6bdedaf796491f602
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Installationsanleitung für IIS-Serverzertifikate (Internetinformationsdienste)
 Zum Ausführen der Beispiele, die über eine sichere Kommunikation mit Internetinformationsdiensten (IIS) verbunden sind, müssen Sie ein Serverzertifikat erstellen und installieren.  
@@ -47,7 +35,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
      ![IIS-Zertifikat-Assistent](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  Testen Sie den Zugriff auf den Dienst in einem Browser mit der HTTPS-Adresse https://localhost/servicemodelsamples/service.svc.  
+6.  Testen Sie Zugriff auf den Dienst unter Verwendung der HTTPS-Adresse in einem Browser https://localhost/servicemodelsamples/service.svc.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Wenn zuvor SSL mit Httpcfg.exe konfiguriert wurde  
   
@@ -76,7 +64,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 5.  Wählen Sie die **ServiceModelSamples-HTTPS-Server** aus der **SSL-Zertifikat** Dropdown-Liste und klicken Sie auf **OK**.  
   
-6.  Testen Sie den Zugriff auf den Dienst in einem Browser mit der HTTPS-Adresse https://localhost/servicemodelsamples/service.svc.  
+6.  Testen Sie Zugriff auf den Dienst unter Verwendung der HTTPS-Adresse in einem Browser https://localhost/servicemodelsamples/service.svc.  
   
 > [!NOTE]
 >  Da es sich bei dem gerade installierten Testzertifikat nicht um ein vertrauenswürdiges Zertifikat handelt, werden im Internet Explorer möglicherweise zusätzliche Sicherheitswarnungen angezeigt, wenn Sie zu lokalen Webseiten navigieren, die dieses Zertifikat verwenden.  

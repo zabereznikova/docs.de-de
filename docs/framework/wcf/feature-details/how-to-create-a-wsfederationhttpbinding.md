@@ -1,14 +1,6 @@
 ---
 title: 'Vorgehensweise: Erstellen einer WSFederationHttpBinding'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 41fa1e7c0430f4723123b03f04d4fc74f9bfc589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Vorgehensweise: Erstellen einer WSFederationHttpBinding
-In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> Klasse ([\<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) im Configuration) bietet einen Mechanismus zum Bereitstellen eines verbundenen Diensts. Hierbei handelt es sich um einen Dienst, der eine Clientauthentifizierung mithilfe eines von einem Sicherheitstokendienst ausgestellten Sicherheitstokens erfordert. In diesem Thema wird erläutert, wie <xref:System.ServiceModel.WSFederationHttpBinding> sowohl im Code als auch in der Konfiguration eingerichtet werden kann. Nach dem Erstellen der Bindung können Sie einen Endpunkt einrichten, von dem diese Bindung verwendet wird.  
+In Windows Communication Foundation (WCF) die <xref:System.ServiceModel.WSFederationHttpBinding> Klasse ([\<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) im Configuration) bietet einen Mechanismus zum Bereitstellen eines verbundenen Diensts. Hierbei handelt es sich um einen Dienst, der eine Clientauthentifizierung mithilfe eines von einem Sicherheitstokendienst ausgestellten Sicherheitstokens erfordert. In diesem Thema wird erläutert, wie <xref:System.ServiceModel.WSFederationHttpBinding> sowohl im Code als auch in der Konfiguration eingerichtet werden kann. Nach dem Erstellen der Bindung können Sie einen Endpunkt einrichten, von dem diese Bindung verwendet wird.  
   
  Die folgenden grundlegenden Schritte sind erforderlich:  
   
@@ -38,7 +24,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.Service
     > [!NOTE]
     >  Von <xref:System.ServiceModel.WSFederationHttpBinding> wird als Sicherheitsmodus auch `None` unterstützt. Dieser Modus ist nicht sicher und wird nur zu Debuggingzwecken bereitgestellt. Wenn ein Dienstendpunkt mit bereitgestellt wird eine <xref:System.ServiceModel.WSFederationHttpBinding> mit der Sicherheitsmodus auf `None`, die sich ergebende Clientbindung (generiert, indem Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) ist ein <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> mit einem Sicherheitsmodus von `None`.  
   
-     Im Gegensatz zu anderen vom System bereitgestellten Bindungen muss bei Verwendung von `WSFederationHttpBinding` kein Typ für die Clientanmeldeinformationen ausgewählt werden, da für die Anmeldeinformationen immer ein ausgestelltes Token verwendet wird. Der Grund: Für die Clientanmeldeinformationen wird immer ein ausgestelltes Token verwendet. Von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird ein Token von einem angegebenen Aussteller abgerufen und dem Dienst zur Authentifizierung des Clients vorgelegt.  
+     Im Gegensatz zu anderen vom System bereitgestellten Bindungen muss bei Verwendung von `WSFederationHttpBinding` kein Typ für die Clientanmeldeinformationen ausgewählt werden, da für die Anmeldeinformationen immer ein ausgestelltes Token verwendet wird. Der Grund: Für die Clientanmeldeinformationen wird immer ein ausgestelltes Token verwendet. WCF erhält ein Token von einem angegebenen Aussteller und stellt dieses Token an den Dienst zum Authentifizieren des Clients.  
   
 2.  Legen Sie auf Verbundclients die <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A>-Eigenschaft auf die URL des Sicherheitstokendiensts fest. Legen Sie <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> auf die Bindung fest, die für die Kommunikation mit dem Sicherheitstokendienst verwendet werden soll.  
   
@@ -65,7 +51,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.Service
   
 4.  Legen Sie die <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> Eigenschaft <xref:System.IdentityModel.Tokens.SecurityKeyType> `SymmetricKey` oder.`AsymmetricKey` nach Bedarf.  
   
-5.  Legen Sie die <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A>-Eigenschaft auf einen geeigneten Wert fest. Wenn kein Wert festgelegt ist, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird standardmäßig auf "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", womit der SAML 1.1-Token.  
+5.  Legen Sie die <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A>-Eigenschaft auf einen geeigneten Wert fest. Wenn kein Wert festgelegt ist, wird standardmäßig WCF auf "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", womit der SAML 1.1-Token.  
   
 6.  Ist erforderlich für den Client, wenn kein lokaler Aussteller angegeben ist. Optional für den Dienst. Erstellen Sie eine <xref:System.ServiceModel.EndpointAddress> mit der Adresse und den Identitätsinformationen des Sicherheitstokendiensts, und weisen Sie die <xref:System.ServiceModel.EndpointAddress>-Instanz der <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A>-Eigenschaft zu.  
   

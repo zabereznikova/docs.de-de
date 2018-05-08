@@ -1,28 +1,14 @@
 ---
 title: Konfigurieren von HTTP und HTTPS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-http-and-https"></a>Konfigurieren von HTTP und HTTPS
 WCF-Dienste und -Clients können über HTTP und HTTPS kommunizieren. Die HTTP/HTTPS-Einstellungen werden mit Internetinformationsdienste (IIS) oder mit einem Befehlszeilentool konfiguriert. Wenn ein WCF-Dienst unter IIS gehostet wird, können die HTTP- oder HTTPS-Einstellungen in IIS konfiguriert werden (mit dem Tool "inetmgr.exe"). Bei einem selbst gehosteten WCF-Dienst werden die HTTP- oder HTTPS-Einstellungen mit einem Befehlszeilentool konfiguriert.  
@@ -79,7 +65,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
  Schrittweise Anweisungen finden Sie unter [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="configuring-the-ip-listen-list"></a>Konfigurieren der IP-Lauschliste  
- Die HTTP-Server-API stellt erst dann eine Bindung mit einer IP-Adresse und einem Port her, wenn ein Benutzer eine URL registriert. Standardmäßig verbindet die HTTP-Server-API mit dem Anschluss in der URL für alle IP-Adressen des Computers. Ein Konflikt tritt auf, wenn eine Anwendung, die die HTTP-Server-API nicht verwendet, sich vorher mit dieser Kombination von IP-Adresse und -Anschluss verbunden hat. Die IP-Lauschliste ermöglicht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten, mit Anwendungen zu koexistieren, die einen Anschluss für einige der IP-Adressen des Computers verwenden. Enthält die IP-Lauschliste irgendwelche Einträge, verbindet die HTTP-Server-API nur mit den IP-Adressen, die in der Liste angegeben sind. Die Änderung der IP-Lauschliste erfordert Administratorrechte.  
+ Die HTTP-Server-API stellt erst dann eine Bindung mit einer IP-Adresse und einem Port her, wenn ein Benutzer eine URL registriert. Standardmäßig verbindet die HTTP-Server-API mit dem Anschluss in der URL für alle IP-Adressen des Computers. Ein Konflikt tritt auf, wenn eine Anwendung, die die HTTP-Server-API nicht verwendet, sich vorher mit dieser Kombination von IP-Adresse und -Anschluss verbunden hat. Die IP-Lauschliste ermöglicht WCF-Dienste mit Anwendungen zu koexistieren, die einen Port für die IP-Adressen des Computers zu verwenden. Enthält die IP-Lauschliste irgendwelche Einträge, verbindet die HTTP-Server-API nur mit den IP-Adressen, die in der Liste angegeben sind. Die Änderung der IP-Lauschliste erfordert Administratorrechte.  
   
 ### <a name="running-windows-xp-or-server-2003"></a>Unter Windows&#160;XP oder Windows Server&#160;2003  
  Verwenden Sie das httpcfg-Tool, um die IP-Lauschliste zu ändern, wie im folgenden Beispiel gezeigt. Die [Dokumentation der Windows-Supporttools](http://go.microsoft.com/fwlink/?LinkId=94840) erklärt die Syntax der Tools "httpcfg.exe".  
@@ -101,7 +87,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  Die HTTP-Server-API bietet einige erweiterte Konfigurationseinstellungen, die über HttpCfg nicht verfügbar sind. Diese Einstellungen sind in der Registrierung gespeichert und gelten für alle Anwendungen, die auf Systemen laufen, die HTTP-Server-APIs verwenden. Informationen zu diesen Einstellungen finden Sie unter [Http.sys-registrierungseinstellungen für IIS](http://go.microsoft.com/fwlink/?LinkId=94843). Die meisten Benutzer sollten diese Einstellungen nicht ändern müssen.  
   
 ## <a name="issues-specific-to-windows-xp"></a>Probleme bezüglich Windows XP  
- IIS unterstützt keine Anschlussfreigabe unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Wird IIS ausgeführt, und ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst versucht, einen Namespace mit dem gleichen Anschluss zu verwenden, schlägt der Start des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts fehl. Sowohl IIS als auch [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwenden standardmäßig Anschluss 80. Ändern Sie entweder die Anschlusszuweisung für einen der Dienste, oder verwenden Sie die IP-Abhörliste, um den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst einer Netzwerkkarte zuzuweisen, die nicht von IIS verwendet wird. IIS&#160;6.0 und höher wurde für die Verwendung der HTTP-Server-APIs neu konzipiert.  
+ IIS unterstützt keine Anschlussfreigabe unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. IIS ausgeführt wird, wenn ein WCF-Dienst versucht, einen Namespace mit dem gleichen Port verwenden kann der WCF-Dienst nicht gestartet. IIS und WCF, die standardmäßig auf Port 80 verwenden. Ändern Sie die anschlusszuweisung für einen der Dienste, oder verwenden Sie die IP-Lauschliste einen Netzwerkadapter, die nicht von IIS verwendet den WCF-Dienst zuweisen. IIS&#160;6.0 und höher wurde für die Verwendung der HTTP-Server-APIs neu konzipiert.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.WSDualHttpBinding>  

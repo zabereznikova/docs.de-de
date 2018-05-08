@@ -1,25 +1,15 @@
 ---
 title: Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7ef1702718d24580694a3d0d4c72e41dc314b4
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
-ms.translationtype: MT
+ms.openlocfilehash: f3b8abb2a8e0079dc18624c5ac0408a2738f06b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Entwickeln von dienstorientierten Anwendungen mit WCF
 Dieser Abschnitt der Dokumentation enthält Informationen zu Windows Communication Foundation (WCF), einem einheitlichen Programmiermodell zum Erstellen von serviceorientierten Anwendungen. Es ermöglicht Entwicklern das Erstellen sicherer, zuverlässiger und transaktiver Lösungen für die plattformübergreifende Integration und bietet unfassende Interoperabilität mit vorhandenen Investitionen.
@@ -77,7 +67,7 @@ Dieser Abschnitt der Dokumentation enthält Informationen zu Windows Communicati
  Beispiele mit Anleitungen zu verschiedenen Aspekten von Windows Communication Foundation  
   
  [Windows Communication Foundation-Glossar](../../../docs/framework/wcf/glossary.md)  
- Zeigt eine Liste von Begriffen der spezifisch für [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
+ Zeigt eine Liste der spezifischen Ausdrücke von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] an.  
   
  [Allgemeine Referenz](../../../docs/framework/wcf/general-reference.md)  
  Der Abschnitt beschreibt die Elemente, die zum Konfigurieren der Windows Communication Foundation-Clients und -Dienste verwendet werden.  

@@ -1,29 +1,17 @@
 ---
 title: HTTP-Transportsicherheit
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc284f82f974d9b34ff1cf6732d2ee7b95528c44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-transport-security"></a>HTTP-Transportsicherheit
-Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure Sockets Layer (SSL)-Implementierung bereitgestellt. SSL wird im Internet häufig verwendet, um einen Dienst gegenüber einem Client zu authentifizieren und anschließend Vertraulichkeit (Verschlüsselung) für den Kanal bereitzustellen. In diesem Thema wird die Funktionsweise von SSL und die Implementierung in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erläutert.  
+Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure Sockets Layer (SSL)-Implementierung bereitgestellt. SSL wird im Internet häufig verwendet, um einen Dienst gegenüber einem Client zu authentifizieren und anschließend Vertraulichkeit (Verschlüsselung) für den Kanal bereitzustellen. In diesem Thema wird erläutert, wie SSL funktioniert und wie er in der Windows Communication Foundation (WCF) implementiert ist.  
   
 ## <a name="basic-ssl"></a>Standard-SSL  
  Die Funktionsweise von SSL lässt sich am besten durch ein typisches Szenario erläutern, in diesem Fall die Website einer Bank. Die Website ermöglicht einem Kunden die Anmeldung mit Benutzernamen und Kennwort. Nach der Authentifizierung kann der Benutzer Transaktionen ausführen, z. B. den Kontostand anzeigen, Rechnungen begleichen und Geld auf ein anderes Konto überweisen.  
@@ -42,11 +30,11 @@ Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure 
  Jedes Zertifikat verfügt über zwei Schlüssel, einen privaten Schlüssel und ein öffentlicher Schlüssel ist und die beiden als bekannt sind ein *Austauschschlüsselpaar*. Kurz gesagt ist der private Schlüssel nur dem Besitzer des Zertifikats bekannt, während der öffentliche Schlüssel aus dem Zertifikat gelesen werden kann. Jeder der beiden Schlüssel kann zum Verschlüsseln oder Entschlüsseln eines Digests, Hashs oder anderen Schlüssels verwendet werden, jedoch nur als umgekehrte Vorgänge. Wenn z. B. der Client mit dem öffentlichen Schlüssel verschlüsselt, kann nur die Site die Nachricht mit dem privaten Schlüssel entschlüsseln. Analog kann der Client mit dem öffentlichen Schlüssel entschlüsseln, wenn die Site mit dem privaten Schlüssel verschlüsselt. Dies gibt dem Client die Gewissheit, dass die Nachrichten nur mit dem Besitzer des privaten Schlüssels ausgetauscht werden, da nur mit dem privaten Schlüssel verschlüsselte Nachrichten mit dem öffentlichen Schlüssel entschlüsselt werden können. Für die Site wird sichergestellt, dass sie Nachrichten mit einem Client austauscht, der mit dem öffentlichen Schlüssel verschlüsselt hat. Dieser Austausch ist jedoch nur für einen ersten Handshake sicher, daher wird mehr für das Erstellen des tatsächlichen symmetrischen Schlüssels getan. Alle Kommunikationen hängen trotzdem davon ab, dass der Dienst über ein gültiges SSL-Zertifikat verfügt.  
   
 ## <a name="implementing-ssl-with-wcf"></a>Implementieren von SSL mit WCF  
- HTTP-Transportsicherheit (oder SSL) wird [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extern bereitgestellt. Sie können SSL auf zwei Wegen implementieren; der entscheidende Faktor ist, wie die Anwendung gehostet wird:  
+ HTTP-transportsicherheit (oder SSL) wird in WCF extern bereitgestellt. Sie können SSL auf zwei Wegen implementieren; der entscheidende Faktor ist, wie die Anwendung gehostet wird:  
   
--   Verwenden Sie die IIS-Infrastruktur zum Einrichten eines SSL-Dienstes, wenn Sie Internetinformationsdienste (IIS) als [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Host nutzen.  
+-   Bei Verwendung von Internet Information Services (IIS) als Ihre WCF-Diensthost verwenden Sie die IIS-Infrastruktur, um eine SSL-Dienst einzurichten.  
   
--   Wenn Sie eine selbst gehostete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung erstellen, können Sie mit dem Tool HttpCfg.exe ein SSL-Zertifikat an die Adresse binden.  
+-   Wenn Sie eine selbst gehostete WCF-Anwendung erstellen, können Sie auf die Adresse, die mit dem Tool HttpCfg.exe ein SSL-Zertifikat binden.  
   
 ### <a name="using-iis-for-transport-security"></a>Verwenden von IIS für Transportsicherheit  
   
@@ -61,7 +49,7 @@ Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure 
  So konfigurieren Sie Zertifikate für die Verwendung mit [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [Certificates_IIS_SP1_Ops](http://go.microsoft.com/fwlink/?LinkId=88602).  
   
 ### <a name="using-httpcfg-for-ssl"></a>Verwenden von HttpCfg für SSL  
- Wenn Sie eine selbst gehostete erstellen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Anwendung, laden Sie das Tool HttpCfg.exe an die [Windows XP Service Pack 2-Supporttools Standort](http://go.microsoft.com/fwlink/?LinkId=29002).  
+ Wenn Sie eine selbst gehostete WCF-Anwendung erstellen, laden Sie das Tool HttpCfg.exe an die [Windows XP Service Pack 2-Supporttools Standort](http://go.microsoft.com/fwlink/?LinkId=29002).  
   
  Weitere Informationen zur Verwendung des Tools "HttpCfg.exe" Einrichten eines Ports mit einem x. 509-Zertifikat finden Sie unter [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   

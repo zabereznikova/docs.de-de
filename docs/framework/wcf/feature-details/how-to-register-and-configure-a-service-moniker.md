@@ -1,36 +1,22 @@
 ---
 title: 'Gewusst wie: Registrieren und Konfigurieren eines Dienstmonikers'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Gewusst wie: Registrieren und Konfigurieren eines Dienstmonikers
-Vor der Verwendung eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmonikers in einer COM-Anwendung mit einem typisierten Vertrag müssen die erforderlichen attributierten Typen bei COM registriert werden. Des Weiteren müssen die COM-Anwendung sowie der Moniker mit der erforderlichen Bindungskonfiguration konfiguriert werden.  
+Vor der Verwendung des Windows Communication Foundation (WCF)-dienstmonikers innerhalb COM-Anwendung mit einem typisierten Vertrag, müssen Sie die erforderlichen attributierten Typen bei COM registriert, und konfigurieren die COM-Anwendung und der Moniker mit der erforderlichen Bindung die Konfiguration.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>So registrieren Sie die erforderlichen attributierten Typen bei COM  
   
-1.  Verwenden der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool zum Abrufen des Metadaten-Vertrags aus der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst. Dadurch werden der Quellcode für eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientassembly sowie eine Konfigurationsdatei für die Clientanwendung generiert.  
+1.  Verwenden der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool, um den Vertrag für die Metadaten aus den WCF-Dienst abzurufen. Dadurch wird der Quellcode für eine WCF-Clientassembly und eine clientanwendungs-Konfigurationsdatei generiert.  
   
 2.  Stellen Sie sicher, dass die Typen in der Assembly als `ComVisible` markiert sind. Fügen Sie hierzu der Datei AssemblyInfo.cs in Ihrem Visual Studio-Projekt das folgende Attribut hinzu:  
   
@@ -38,7 +24,7 @@ Vor der Verwendung eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Kompilieren Sie den verwalteten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client als Assembly mit starkem Namen. Dies erfordert die Signierung mit einem kryptografischen Schlüsselpaar. Weitere Informationen finden Sie unter [Signieren einer Assembly mit einem starken Namen](http://go.microsoft.com/fwlink/?LinkId=94874) in .NET Developer's Guide.  
+3.  Kompilieren Sie den verwalteten WCF-Client als eine Assembly mit starkem Namen. Dies erfordert die Signierung mit einem kryptografischen Schlüsselpaar. Weitere Informationen finden Sie unter [Signieren einer Assembly mit einem starken Namen](http://go.microsoft.com/fwlink/?LinkId=94874) in .NET Developer's Guide.  
   
 4.  Verwenden Sie das Assemblyregistrierungstool (Regasm.exe) mit der `/tlb`-Option, um die Typen in der Assembly bei COM zu registrieren.  
   
@@ -49,7 +35,7 @@ Vor der Verwendung eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>So konfigurieren Sie die COM-Anwendung und den Moniker mit der erforderlichen Bindungskonfiguration  
   
--   Platzieren Sie die Bindungsdefinitionen (generiert durch die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) in der Konfigurationsdatei der generierte Client-Anwendung) in der Konfigurationsdatei der Clientanwendung. Beispiel: Für eine ausführbare Visual Basic 6.0-Datei mit dem Namen CallCenterClient.exe muss die Konfiguration in eine Datei mit dem Namen CallCenterConfig.exe.config platziert werden, und diese Datei muss sich im gleichen Verzeichnis befinden wie die ausführbare Datei. Der Moniker kann nun von der Clientanwendung verwendet werden. Hinweis: Die Bindungskonfiguration ist nicht erforderlich, wenn einer der von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereitgestellten Standardbindungstypen verwendet wird.  
+-   Platzieren Sie die Bindungsdefinitionen (generiert durch die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) in der Konfigurationsdatei der generierte Client-Anwendung) in der Konfigurationsdatei der Clientanwendung. Beispiel: Für eine ausführbare Visual Basic 6.0-Datei mit dem Namen CallCenterClient.exe muss die Konfiguration in eine Datei mit dem Namen CallCenterConfig.exe.config platziert werden, und diese Datei muss sich im gleichen Verzeichnis befinden wie die ausführbare Datei. Der Moniker kann nun von der Clientanwendung verwendet werden. Beachten Sie, die die Bindungskonfiguration nicht erforderlich, ist Wenn einer der Typen, die durch WCF bereitgestellte Bindung verwenden.  
   
      Der folgende Typ wird registriert:  
   

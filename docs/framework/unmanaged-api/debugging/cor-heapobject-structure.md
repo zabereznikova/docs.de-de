@@ -1,14 +1,6 @@
 ---
 title: COR_HEAPOBJECT-Struktur
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_HEAPOBJECT
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 476d9dcb1c6700833b0a113028bdaaf0c5a375c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91e64bb2e1c8a7b11fe70024eb4a4fa1717c06e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corheapobject-structure"></a>COR_HEAPOBJECT-Struktur
 Stellt Informationen zu einem Objekt auf dem verwalteten Heap bereit.  
@@ -56,7 +44,7 @@ typedef struct _COR_HEAPOBJECT {
 |`type`|Ein [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) Token, das den Typ des Objekts darstellt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `COR_HEAPOBJECT`Instanzen können durch aufzählen abgerufen werden ein [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) Schnittstellenobjekt, das durch den Aufruf enthält die [icordebugprocess5:: Enumerateheap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) Methode.  
+ `COR_HEAPOBJECT` Instanzen können durch aufzählen abgerufen werden ein [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) Schnittstellenobjekt, das durch den Aufruf enthält die [icordebugprocess5:: Enumerateheap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) Methode.  
   
  Ein `COR_HEAPOBJECT` Instanz enthält Informationen über ein aktives Objekt auf dem verwalteten Heap oder über ein Objekt, das ist keines Objekt als Stamm, aber noch nicht vom Garbage Collector erfasst.  
   
@@ -73,7 +61,7 @@ typedef struct _COR_HEAPOBJECT {
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

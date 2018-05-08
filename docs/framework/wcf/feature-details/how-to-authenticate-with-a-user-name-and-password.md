@@ -1,27 +1,18 @@
 ---
 title: 'Vorgehensweise: Authentifizierung mit Benutzernamen und Kennwort'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 194a84ef7c2af3bfce6af3625eabf07d4d0b06fb
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: b37d296312be4c7694a2db55d85dd618e3252f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Vorgehensweise: Authentifizierung mit Benutzernamen und Kennwort
 
-In diesem Thema wird veranschaulicht, wie Sie einem Dienst von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] die Authentifizierung eines Clients mit einem Benutzernamen und einem Kennwort einer Windows-Domäne ermöglichen. Es wird davon ausgegangen, dass Sie über einen funktionsfähigen selbst gehosteten WCF-Dienst verfügen. Ein Beispiel zum Erstellen einer grundlegenden selbst gehosteten WCF-Dienst finden Sie unter [Lernprogramm für erste Schritte](../../../../docs/framework/wcf/getting-started-tutorial.md). In diesem Thema wird davon ausgegangen, dass der Dienst im Code konfiguriert ist. Wenn Sie möchten, finden ein Beispiel zum Konfigurieren eines ähnlichen Diensts mithilfe einer Konfigurationsdatei finden Sie unter [Nachrichtensicherheit – Benutzername](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+In diesem Thema veranschaulicht, wie einen Windows Communication Foundation (WCF)-Dienst zum Authentifizieren eines Clients mit einem Windows-Domänenbenutzernamen und Kennwort. Es wird davon ausgegangen, dass Sie über einen funktionsfähigen selbst gehosteten WCF-Dienst verfügen. Ein Beispiel zum Erstellen einer grundlegenden selbst gehosteten WCF-Dienst finden Sie unter [Lernprogramm für erste Schritte](../../../../docs/framework/wcf/getting-started-tutorial.md). In diesem Thema wird davon ausgegangen, dass der Dienst im Code konfiguriert ist. Wenn Sie möchten, finden ein Beispiel zum Konfigurieren eines ähnlichen Diensts mithilfe einer Konfigurationsdatei finden Sie unter [Nachrichtensicherheit – Benutzername](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
  Um einen Dienst zu konfigurieren, der seine Clients mit dem Benutzernamen und Kennwort einer Windows-Domäne authentifiziert, verwenden Sie die <xref:System.ServiceModel.WSHttpBinding> und legen die `Security.Mode`-Eigenschaft auf `Message` fest. Darüber hinaus müssen Sie ein X.509-Zertifikat angeben, das zum Verschlüsseln des Benutzernamens und Kennworts verwendet wird, während diese vom Client an den Dienst gesendet werden.  
   

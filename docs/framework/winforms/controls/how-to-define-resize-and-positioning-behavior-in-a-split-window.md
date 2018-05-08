@@ -1,14 +1,6 @@
 ---
 title: 'Gewusst wie: Definieren des Verhaltens bei Größen- und Positionsänderungen in einem geteilten Fenster'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,24 +9,18 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e62091addfb64c287154b190f02caf1600533b3b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 015e93fb551b8d48b8a57662b8def61c3cb46c2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Gewusst wie: Definieren des Verhaltens bei Größen- und Positionsänderungen in einem geteilten Fenster
 Die Bereiche von den <xref:System.Windows.Forms.SplitContainer> Steuerelement eignen sich gut für wird ein, angepasst und von Benutzern bearbeitet. Es werden jedoch Situationen wird den Splitter programmgesteuert –, wo es positioniert ist, und in welchem Maß sie verschoben werden kann.  
   
  Die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> -Eigenschaft und die anderen Eigenschaften auf die <xref:System.Windows.Forms.SplitContainer> steuern das Verhalten der Benutzeroberfläche an Ihre Bedürfnisse genaue zu steuern. Diese Eigenschaften sind in der folgenden Tabelle aufgeführt.  
   
-|name|Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>-Eigenschaft|Bestimmt, ob der Splitter mithilfe der Tastatur oder Maus verschiebbar ist.|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>-Eigenschaft|Legt den Abstand in Pixel vom linken oder oberen Rand auf die Splitterleiste verschiebbar.|  

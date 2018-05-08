@@ -1,14 +1,6 @@
 ---
 title: IHostSyncManager::CreateManualEvent-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateManualEvent
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 68661fbd-09cf-46dc-890b-e694f8a3880a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 347eaa64b8a5e5b5c9494a779e3d583b10d80052
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ecf53606dd12b517d9ec31ab25f98452d35bdf98
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>IHostSyncManager::CreateManualEvent-Methode
 Erstellt ein Ereignis für manuelles Zurücksetzen-Objekt.  
@@ -58,7 +46,7 @@ HRESULT CreateManualEvent (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`CreateManualEvent`wurde erfolgreich zurückgegeben.|  
+|S_OK|`CreateManualEvent` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -67,7 +55,7 @@ HRESULT CreateManualEvent (
 |E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher zum Erstellen des angeforderten Ereignisses-Objekts verfügbar.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CreateManualEvent`erstellt ein `IHostManualEvent`, ein Ereignis für manuelles Zurücksetzen-Objekt, das einen Aufruf erfordert die [IHostManualEvent:: Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) Methode, um es auf einen nicht signalisierten Zustand festgelegt. `CreateManualEvent`spiegelt die Win32- `CreateEvent` Funktion mit einem Wert von `true` angegeben für die `bManualReset` Parameter.  
+ `CreateManualEvent` erstellt ein `IHostManualEvent`, ein Ereignis für manuelles Zurücksetzen-Objekt, das einen Aufruf erfordert die [IHostManualEvent:: Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) Methode, um es auf einen nicht signalisierten Zustand festgelegt. `CreateManualEvent` spiegelt die Win32- `CreateEvent` Funktion mit einem Wert von `true` angegeben für die `bManualReset` Parameter.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -76,7 +64,7 @@ HRESULT CreateManualEvent (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

@@ -1,31 +1,17 @@
 ---
 title: Routingdienst
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-service"></a>Routingdienst
 Der Routingdienst ist ein generischer SOAP-Vermittler, der als Nachrichtenrouter fungiert. Die Kernfunktion des Routingdiensts ist die Fähigkeit, Nachrichten basierend auf Nachrichteninhalt weiterzuleiten. So können Nachrichten anhand eines Werts innerhalb der Nachricht selbst (im Header oder im Text) an einen Clientendpunkt weitergeleitet werden.  
   
- Der <xref:System.ServiceModel.Routing.RoutingService> wird als [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst im <xref:System.ServiceModel.Routing>-Namespace implementiert. Der Routingdienst macht einen oder mehrere Dienstendpunkte verfügbar, die Nachrichten empfangen und die einzelnen Nachrichten dann anhand ihres Inhalts an einen oder mehrere Clientendpunkte weiterleiten. Der Dienst stellt die folgenden Funktionen bereit:  
+ Die <xref:System.ServiceModel.Routing.RoutingService> wird als Dienst in Windows Communication Foundation (WCF) implementiert die <xref:System.ServiceModel.Routing> Namespace. Der Routingdienst macht einen oder mehrere Dienstendpunkte verfügbar, die Nachrichten empfangen und die einzelnen Nachrichten dann anhand ihres Inhalts an einen oder mehrere Clientendpunkte weiterleiten. Der Dienst stellt die folgenden Funktionen bereit:  
   
 -   Inhaltsbasiertes Routing  
   
@@ -47,10 +33,10 @@ Der Routingdienst ist ein generischer SOAP-Vermittler, der als Nachrichtenrouter
   
  Es ist möglich, einen Vermittlerdienst zu erstellen, der eine oder mehrere dieser Zielsetzungen erfüllt. Häufig ist eine Implementierung dieser Art jedoch an ein bestimmtes Szenario oder eine Projektmappe gebunden und kann nicht ohne Weiteres auf neue Anwendungen angewendet werden.  
   
- Der Routingdienst stellt einen generischen, dynamisch konfigurierbaren und austauschbaren SOAP-Vermittler bereit, der mit den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst- und -Kanalmodellen kompatibel ist und es Ihnen ermöglicht, das inhaltsbasierte Routing von SOAP-basierten Nachrichten auszuführen.  
+ Der Routingdienst stellt einen generischen, dynamisch konfigurierbaren und austauschbaren SOAP-Vermittler, die kompatibel mit den WCF-Dienst und den Channelcache-Modellen und ermöglicht Ihnen, inhaltsbasiertes routing von SOAP-basierten Nachrichten auszuführen.  
   
 > [!NOTE]
->  Der Routingdienst unterstützt das Weiterleiten von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-REST-Diensten derzeit nicht.  Um die REST-Aufrufe weiterleiten möchten, erwägen Sie <xref:System.Web.Routing> oder [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  Der Routingdienst unterstützt das Weiterleiten von WCF-REST-Diensten momentan nicht.  Um die REST-Aufrufe weiterleiten möchten, erwägen Sie <xref:System.Web.Routing> oder [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>Inhaltsbasiertes Routing  
  Das inhaltsbasierte Routing ist die Fähigkeit, eine Nachricht basierend auf einem oder mehreren Werten weiterzuleiten, die in der Nachricht enthalten sind. Der Routingdienst überprüft jede Nachricht und leitet diese basierend auf den Nachrichteninhalten und der von Ihnen erstellten Routinglogik an den Zielendpunkt weiter. Das inhaltsbasierte Routing stellt die Basis für die Dienstaggregation, die Dienstversionsverwaltung und das Prioritätsrouting dar.  

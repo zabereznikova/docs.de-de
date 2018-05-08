@@ -1,14 +1,6 @@
 ---
 title: CLR-Profiler und den Windows Store-Apps
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 applies_to:
@@ -20,17 +12,13 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR-Profiler und den Windows Store-Apps
 Dieses Thema bietet eine Übersicht zu bedenken, wenn das Schreiben von Diagnosetools, die Analyse von verwaltetem Code, die innerhalb einer Windows Store-Apps ausgeführt wird.  Darüber hinaus Richtlinien, um Ihre vorhandenen Entwicklungstools zu ändern, sodass bei der Ausführung für Windows Store-apps funktionieren weiterhin.  Um diese Informationen zu verstehen, ist es am besten, wenn Sie mit der Common Language Runtime Profiling-API vertraut sind, Sie bereits diese API in ein Diagnosetool verwendet haben, dass ausgeführt wird, ordnungsgemäß für Windows-desktopanwendungen, und Sie jetzt interessiert sind, ändern Sie das tool für Windows Store-apps ordnungsgemäß ausgeführt wird.  
@@ -154,7 +142,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
  **Auswählen einer Windows Store-App-Profil**  
  Zunächst sollten Sie die Profiler-Benutzer auffordern, die Windows Store-app zu starten.  Bei desktop-apps vielleicht würden Sie den Dialog "Durchsuchen" eine Datei anzeigen, und der Benutzer suchen und wählen Sie eine .exe-Datei würde.  Windows Store-apps werden jedoch andere, und mit einem Dialog "Durchsuchen" keinen Sinn.  Stattdessen ist es besser, die dem Benutzer eine Liste der installierten für diesen Benutzer aus Windows Store-apps anzuzeigen.  
   
- Sie können die [PackageManager-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) zum Generieren dieser Liste.  `PackageManager`ist eine Windows-Runtime-Klasse, die in desktop-apps verfügbar ist, und in der Tat *nur* in desktop-apps verfügbar.  
+ Sie können die [PackageManager-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) zum Generieren dieser Liste.  `PackageManager` ist eine Windows-Runtime-Klasse, die in desktop-apps verfügbar ist, und in der Tat *nur* in desktop-apps verfügbar.  
   
  Im folgenden Beispiel der Ode aus einer hypothetischen Profiler-Benutzeroberfläche als eine desktop-app in c# Yses geschrieben der `PackageManager` zum Generieren einer Liste von Windows-apps:  
   
@@ -178,9 +166,9 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
   
  Es gibt eine Reihe von Elementen, die Sie richtig machen müssen:  
   
--   `packageFullName`kann bestimmt werden, während Sie die Pakete durchlaufen und grabbing `package.Id.FullName`.  
+-   `packageFullName` kann bestimmt werden, während Sie die Pakete durchlaufen und grabbing `package.Id.FullName`.  
   
--   `debuggerCommandLine`ist etwas interessanter.  Um die benutzerdefinierte Umgebungsblock an Windows Store-app übergeben, müssen Sie Ihre eigenen, vereinfachte dummy-Debugger schreiben.  Windows-erzeugt Windows Store-app angehalten, und klicken Sie dann durch starten den Debugger mit einer Befehlszeile wie in diesem Beispiel fügt den Debugger:  
+-   `debuggerCommandLine` ist etwas interessanter.  Um die benutzerdefinierte Umgebungsblock an Windows Store-app übergeben, müssen Sie Ihre eigenen, vereinfachte dummy-Debugger schreiben.  Windows-erzeugt Windows Store-app angehalten, und klicken Sie dann durch starten den Debugger mit einer Befehlszeile wie in diesem Beispiel fügt den Debugger:  
   
     ```Output  
     MyDummyDebugger.exe -p 1336 -tid 1424  
@@ -341,7 +329,7 @@ CreateEventEx(
   
  `AppContainerNamedObjects\<acSid>\MyNamedEvent`  
   
- `<acSid>`ist die Windows Store-app-AppContainer-SID.  Ein früherer Abschnitt dieses Themas wurde gezeigt, wie die Pakete installiert, die für den aktuellen Benutzer durchlaufen wird.  Aus diesem Beispielcode können Sie die Paket-ID abrufen.  Und aus der Paket-ID, erhalten Sie die `<acSid>` mit Code, der dem folgenden ähnelt:  
+ `<acSid>` ist die Windows Store-app-AppContainer-SID.  Ein früherer Abschnitt dieses Themas wurde gezeigt, wie die Pakete installiert, die für den aktuellen Benutzer durchlaufen wird.  Aus diesem Beispielcode können Sie die Paket-ID abrufen.  Und aus der Paket-ID, erhalten Sie die `<acSid>` mit Code, der dem folgenden ähnelt:  
   
 ```csharp  
 IntPtr acPSID;  

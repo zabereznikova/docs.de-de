@@ -1,13 +1,6 @@
 ---
 title: Ablaufverfolgungsschalter
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4df092afd4d60811683b4187df78f27ad971cf89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b8ee0d04644cf504354767c296f504a937055d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trace-switches"></a>Ablaufverfolgungsschalter
 Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivieren, deaktivieren und filtern. Diese Schalter sind Objekte, die im Code vorhanden sind und extern über die Konfigurationsdatei (CONFIG) konfiguriert werden können. .NET Framework bietet drei Typen von Ablaufverfolgungsschaltern: die <xref:System.Diagnostics.BooleanSwitch> -Klasse, die <xref:System.Diagnostics.TraceSwitch> -Klasse und die <xref:System.Diagnostics.SourceSwitch> -Klasse. Die <xref:System.Diagnostics.BooleanSwitch> -Klasse fungiert als Umschalter, d. h., sie aktiviert oder deaktiviert eine Vielzahl von Ablaufverfolgungsanweisungen. Mit der <xref:System.Diagnostics.TraceSwitch> -Klasse und der <xref:System.Diagnostics.SourceSwitch> -Klasse können Sie einen Ablaufverfolgungsschalter für eine bestimmte Ablaufverfolgungsebene aktivieren, sodass die für diese und alle darunter liegenden Ebenen angegebenen <xref:System.Diagnostics.Trace> - oder <xref:System.Diagnostics.TraceSource> -Meldungen angezeigt werden. Wenn Sie den Schalter deaktivieren, werden die Ablaufverfolgungsmeldungen nicht angezeigt. All diese Klassen werden von der abstrakten (**MustInherit**) **Switch**-Klasse abgeleitet. Dies gilt für alle von Benutzern entwickelten Schalter.  

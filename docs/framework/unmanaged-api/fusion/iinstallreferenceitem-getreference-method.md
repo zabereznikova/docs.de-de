@@ -1,14 +1,6 @@
 ---
 title: IInstallReferenceItem::GetReference-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IInstallReferenceItem.GetReference
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8960332f-c98a-405a-ba92-7003de0c1187
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de21e9b0d224ec417eeb50f8de5c33411d0dadb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6c64b98f3b5ab0445b076b0d3bacfaa398e26f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference-Methode
 Ruft einen Zeiger auf die [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) Struktur dargestellt, die von diesem [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) Objekt.  
@@ -53,17 +41,17 @@ HRESULT GetReference (
  [out] Das zurückgegebene `FUSION_INSTALL_REFERENCE` Zeiger.  
   
  `dwFlags`  
- [in] Für zukünftige Erweiterungen reserviert. `dwFlags`0 (null) muss sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `dwFlags` 0 (null) muss sein.  
   
  `pvReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pvReserved`ein null-Verweis muss sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pvReserved` ein null-Verweis muss sein.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [IInstallReferenceItem-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  

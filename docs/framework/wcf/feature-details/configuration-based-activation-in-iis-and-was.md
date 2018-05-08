@@ -1,27 +1,15 @@
 ---
 title: Konfigurationsbasierte Aktivierung unter IIS und WAS
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc0e954ae5cadbe7e70cd8a83d3d5841f4e0d142
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa4a3c682ab1d5d7ca0869fee588934b9ed2bf75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Konfigurationsbasierte Aktivierung unter IIS und WAS
-Wenn Sie einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst unter Internetinformationsdienste (IIS) oder Windows-Prozessaktivierungsdienst (WAS) hosten, müssen Sie normalerweise eine SVC-Datei bereitstellen. Die SVC-Datei enthält den Namen des Diensts und eine optionale benutzerdefinierte Diensthostfactory. Diese Zusatzdatei verursacht einen höheren Verwaltungsmehraufwand. Die konfigurationsbasierte Aktivierungsfunktion entfernt die Anforderung einer SVC-Datei, sodass auch der damit verbundene Mehraufwand entfällt.  
+Wenn Sie einen Windows Communication Foundation (WCF)-Dienst unter Internetinformationsdienste (Internet Information Services, IIS) oder Windows Process Activation Service (WAS) hosten, müssen Sie normalerweise eine SVC-Datei angeben. Die SVC-Datei enthält den Namen des Diensts und eine optionale benutzerdefinierte Diensthostfactory. Diese Zusatzdatei verursacht einen höheren Verwaltungsmehraufwand. Die konfigurationsbasierte Aktivierungsfunktion entfernt die Anforderung einer SVC-Datei, sodass auch der damit verbundene Mehraufwand entfällt.  
   
 ## <a name="configuration-based-activation"></a>Konfigurationsbasierte Aktivierung  
  Die konfigurationsbasierte Aktivierung fügt die Metadaten, die zuvor in die SVC-Datei eingefügt wurden, in die Datei "Web.config" ein. In der <`serviceHostingEnvironment`> Element besteht eine <`serviceActivations`> Element. In der <`serviceActivations`>-Element sind eine oder mehrere <`add`> Elemente, jeweils eines für jeden gehosteten Dienst. Die <`add`>-Element enthält Attribute, mit denen Sie die relative Adresse für den Dienst und den Typ oder einer Diensthostfactory festlegen können. Der folgende Konfigurationsbeispielcode zeigt, wie dieser Abschnitt verwendet wird.  

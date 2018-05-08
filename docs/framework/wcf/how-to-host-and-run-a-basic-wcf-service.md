@@ -1,10 +1,6 @@
 ---
 title: 'Gewusst wie: Hosten und Ausführen eines grundlegenden Windows Communication Foundation-Diensts'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,21 +8,16 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8c9fdefd286e32b169b96065e6164a236941133
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 68e19d1decd4205f047c51456fe3f345e092a8ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Gewusst wie: Hosten und Ausführen eines grundlegenden Windows Communication Foundation-Diensts
-Dies ist die dritte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendung erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
+Dies ist die dritte von sechs Aufgaben, die erforderlich sind, um einen Windows Communication Foundation (WCF)-Anwendung zu erstellen. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
   
- In diesem Thema wird beschrieben, wie ein [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienst in einer Konsolenanwendung gehostet wird. Dieses Verfahren umfasst die folgenden Schritte:  
+ In diesem Thema wird beschrieben, wie zum Hosten eines Windows Communication Foundation (WCF)-Diensts in einer Konsolenanwendung wird. Dieses Verfahren umfasst die folgenden Schritte:  
   
 -   Erstellen eines Konsolenanwendungsprojekts zum Hosten des Diensts  
   

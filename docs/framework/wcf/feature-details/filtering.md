@@ -1,36 +1,24 @@
 ---
 title: Filtern
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f599ac74aa63951f59c5e5c79d3fe37b2ab5100
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filtering"></a>Filtern
-Das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Filtersystem kann mithilfe von deklarativen Filtern Nachrichten vergleichen und funktionsbezogene Entscheidungen treffen. Sie können anhand von Filtern einen Teil der Nachricht untersuchen und so bestimmen, was mit der Nachricht geschehen soll. Ein Warteschlangenprozess kann beispielsweise eine XPath 1.0-Abfrage verwenden, um das Prioritätselement eines bekannten Headers im Hinblick darauf zu prüfen, ob eine Nachricht in der Warteschlange an den Anfang verschoben werden soll.  
+Der Windows Communication Foundation (WCF)-Filtersystem können deklarative Filtern Nachrichten vergleichen und funktionsbezogene Entscheidungen treffen zu können. Sie können anhand von Filtern einen Teil der Nachricht untersuchen und so bestimmen, was mit der Nachricht geschehen soll. Ein Warteschlangenprozess kann beispielsweise eine XPath 1.0-Abfrage verwenden, um das Prioritätselement eines bekannten Headers im Hinblick darauf zu prüfen, ob eine Nachricht in der Warteschlange an den Anfang verschoben werden soll.  
   
- Das Filtersystem besteht aus einer Reihe von Klassen, mit denen effizient bestimmt werden kann, welche Filter in einer Gruppe von Filtern für eine bestimmte `true`-Nachricht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sind.  
+ Das Filtersystem besteht aus einer Reihe von Klassen, die effizient können bestimmen, die von einer Reihe von Filtern werden `true` für eine bestimmte WCF-Nachricht.  
   
- Das Filtersystem ist eine Kernkomponente des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichtensystems und arbeitet extrem schnell. Jede Filterimplementierung wurde für einen bestimmten Vergleich von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichten optimiert.  
+ Das Filtersystem ist eine Kernkomponente des WCF-messaging; Es ist äußerst schnell ausgeführt werden sollen. Jede filterimplementierung wurde für eine bestimmte Art von Vergleich WCF-Nachrichten optimiert.  
   
  Das Filtersystem ist nicht threadsicher. Sperrsemantik muss von der Anwendung verarbeitet werden. Es unterstützt jedoch mehrere Reader und einen Writer.  
   
 ## <a name="where-filtering-fits"></a>Anwendung des Filtersystems  
- Die Filterung wird nach Eingang einer Nachricht durchgeführt und ist Teil des Prozesses, durch den eine Nachricht an die richtige Anwendungskomponente verteilt wird. Das Filtersystem erfüllt die Anforderungen verschiedener [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Subsysteme, einschließlich Messaging, Routing, Sicherheit, Ereignisbehandlung und Systemverwaltung.  
+ Die Filterung wird nach Eingang einer Nachricht durchgeführt und ist Teil des Prozesses, durch den eine Nachricht an die richtige Anwendungskomponente verteilt wird. Das Filtersystem ist Filtersystem als die Anforderungen des mehrere WCF-Subsysteme, einschließlich messaging, routing, Sicherheit, Ereignisbehandlung und systemverwaltung.  
   
 ## <a name="filters"></a>Filter  
  Das Filtermodul besteht aus zwei primären Komponenten: Filtern und Filtertabellen. Ein Filter trifft anhand von benutzerdefinierten logischen Bedingungen boolesche Entscheidungen bezüglich der Nachricht. Filter implementieren die <xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse.  
@@ -53,7 +41,7 @@ Das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Filtersystem kann mi
   
 ### <a name="prefix-endpoint-address-filters"></a>Präfixfilter für Endpunktadressen  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> funktioniert wie <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, mit der Ausnahme, dass sich die Übereinstimmung in einem Präfix des Nachrichten-URIs befinden kann. So passt zum Beispiel der Filter für die Adresse http://www.adatum.com zu Nachrichten, die an http://www.adatum.com/userA adressiert sind.  
+1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> funktioniert wie <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, mit der Ausnahme, dass sich die Übereinstimmung in einem Präfix des Nachrichten-URIs befinden kann. Z. B. einen Filter, die Angabe der Adresse http://www.adatum.com entspricht an adressierten http://www.adatum.com/userA.  
   
 ### <a name="xpath-message-filters"></a>XPath-Nachrichtenfilter  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> überprüft anhand eines XPath-Ausdrucks, ob ein XML-Dokument bestimmte Elemente, Attribute, Text oder andere syntaktische XML-Konstrukte enthält. Der Filter ist so optimiert, dass er sehr effizient bei einer eng gefassten Teilmenge von XPath funktioniert. Die XML Path Language wird beschrieben, der [W3C XML Path Language 1.0-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=94779).  
@@ -79,7 +67,7 @@ Das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Filtersystem kann mi
   
  Die <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601>-Klasse optimiert den Vergleich für eine XPath-Teilmenge, durch die die meisten Messaging-Szenarien abgedeckt werden und die zudem die vollständige XPath 1.0-Grammatik unterstützt. Sie verfügt über optimierte Algorithmen für einen effizienten Parallelvergleich.  
   
- Diese Tabelle verfügt über mehrere spezielle `Match`-Methoden, die mit <xref:System.Xml.XPath.XPathNavigator> und <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> arbeiten. <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> erweitert die <xref:System.Xml.XPath.XPathNavigator>-Klasse durch Hinzufügen einer <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>-Eigenschaft. Diese Eigenschaft ermöglicht es, Positionen innerhalb des XML-Dokuments zu speichern und rasch zu laden, ohne den Navigator klonen zu müssen (eine ressourcenintensive Speicherbelegung, die <xref:System.Xml.XPath.XPathNavigator> für einen solchen Vorgang benötigt). Das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-XPath-Modul muss im Verlauf von Abfragen für XML-Dokumente häufig die Position des Cursors aufzeichnen, sodass <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> eine wichtige Optimierung der Nachrichtenverarbeitung darstellt.  
+ Diese Tabelle verfügt über mehrere spezielle `Match`-Methoden, die mit <xref:System.Xml.XPath.XPathNavigator> und <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> arbeiten. <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> erweitert die <xref:System.Xml.XPath.XPathNavigator>-Klasse durch Hinzufügen einer <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>-Eigenschaft. Diese Eigenschaft ermöglicht es, Positionen innerhalb des XML-Dokuments zu speichern und rasch zu laden, ohne den Navigator klonen zu müssen (eine ressourcenintensive Speicherbelegung, die <xref:System.Xml.XPath.XPathNavigator> für einen solchen Vorgang benötigt). Das WCF XPath-Modul muss häufig die Position des Cursors im Verlauf der Ausführung von Abfragen von XML-Dokumenten aufzeichnen also die <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> bietet eine wichtige Optimierung der Nachrichtenverarbeitung.  
   
 ## <a name="customer-scenarios"></a>Kundenszenarien  
  Sie können die Filterung verwenden, wenn Sie eine Nachricht basierend auf den darin enthaltenen Daten an verschiedene Verarbeitungsmodule senden möchten. Zwei typische Szenarien sind die Weiterleitung einer Nachricht auf Grundlage ihres Aktionscodes und das Demultiplexing eines Nachrichtenstroms basierend auf der Endpunktadresse der Nachricht.  

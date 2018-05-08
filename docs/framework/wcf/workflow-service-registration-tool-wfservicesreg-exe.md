@@ -1,24 +1,12 @@
 ---
-title: "Registrierungstool für Workflow Services (WFServicesReg.exe)"
-ms.custom: 
+title: Registrierungstool für Workflow Services (WFServicesReg.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adf5939013e7411dde2b313a030e788b365c40ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ea0f737cc050ec3f918044e0e105a41011a3e25
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Registrierungstool für Workflow Services (WFServicesReg.exe)
 Beim Registrierungstool für Workflow Services (WFServicesReg.exe) handelt es sich um ein eigenständiges Tool zum Hinzufügen, Entfernen oder Reparieren der Konfigurationselemente für Windows Workflow Foundation (WF)-Dienste.  

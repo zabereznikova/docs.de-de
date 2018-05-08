@@ -1,34 +1,20 @@
 ---
 title: Datendienstanbieter (WCF Data Services)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f25f1f9137206c1adb3ab3f89b7c6a783aeccf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7be6578f0b237f986bcb68a3ace10ba04cf06474
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Datendienstanbieter (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]unterstützt mehrere anbietermodelle zum Verfügbarmachen von Daten als ein [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Dieses Thema enthält Informationen, um Ihnen die Auswahl des besten [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Anbieters für eine Datenquelle zu erleichtern.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt mehrere anbietermodelle zum Verfügbarmachen von Daten als ein [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Dieses Thema enthält Informationen, um Ihnen die Auswahl des besten [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Anbieters für eine Datenquelle zu erleichtern.  
   
 ## <a name="data-source-providers"></a>Datenquellenanbieter  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]unterstützt die folgenden Anbieter für die Definition des Datenmodells eines Datendiensts.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt die folgenden Anbieter für die Definition des Datenmodells eines Datendiensts.  
   
 |Anbieter|Beschreibung|  
 |--------------|-----------------|  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |Benutzerdefinierte Datendienstanbieter|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umfasst eine Reihe von Anbietern, die es Ihnen ermöglichen, ein Datenmodell auf der Grundlage spät gebundener Datentypen dynamisch zu definieren. Sie sollten diese Schnittstellen implementieren, wenn die verfügbar gemachten Daten beim Entwurf der Anwendung nicht bekannt sind oder wenn die Entity Framework- oder Reflektionsanbieter nicht hinreichend sind. Weitere Informationen finden Sie unter [Benutzerdefinierte Datendienstanbieter](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).|  
   
 ## <a name="other-data-service-providers"></a>Andere Datendienstanbieter  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]hat die folgenden zusätzlichen Datendienstanbieter, der die Leistung einer mit einem anderen Anbieter definierten Datenquelle verbessert.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] hat die folgenden zusätzlichen Datendienstanbieter, der die Leistung einer mit einem anderen Anbieter definierten Datenquelle verbessert.  
   
 |Anbieter|Beschreibung|  
 |--------------|-----------------|  

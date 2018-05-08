@@ -1,29 +1,15 @@
 ---
 title: Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e01418844db4197cea2f9292f72b9089e77a596
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a53fee8bfed9f5a0f5773c9dfcfbaab5f173ddad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] macht zur Laufzeit Inspektionsdaten eines Diensts über einen Windows-Verwaltungsinstrumentation (WMI)-Anbieter von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] verfügbar.  
+Windows Communication Foundation (WCF) verfügbar macht, inspektionsdaten eines Diensts zur Laufzeit über eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Anbieter (Windows Management Instrumentation, WMI).  
   
 ## <a name="enabling-wmi"></a>Aktivieren von WMI  
  Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. Weitere Informationen zum WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](https://msdn.microsoft.com/library/aa394582.aspx). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentierung für externe Verwaltungstools.  
@@ -179,7 +165,7 @@ Whoami /user
   
 1.  Klicken Sie auf die **verbinden** auf der oberen rechten Ecke des Fensters auf die Schaltfläche.  
   
-2.  Geben Sie im neuen Fenster **Root\ServiceModel** für die **Namespace** , und wählen Sie **paketsicherheit** für **Authentifizierungsebene**. Klicken Sie auf **verbinden**.  
+2.  Geben Sie im neuen Fenster **Root\ServiceModel** für die **Namespace** , und wählen Sie **paketsicherheit** für **Authentifizierungsebene**. Klicken Sie auf **Verbinden**.  
   
 ### <a name="using-managed-code"></a>Verwenden von verwaltetem Code  
  Der Zugriff auf Remote-WMI-Instanzen kann auch programmgesteuert erfolgen. Verwenden Sie hierzu die vom <xref:System.Management>-Namespace bereitgestellten Klassen. Die erforderliche Vorgehensweise wird im folgenden Codebeispiel veranschaulicht:  

@@ -1,29 +1,15 @@
 ---
 title: Benutzerdefinierte Bindungen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5fc38becb4a737ada5102c187ddeaac73aaceb1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6880b04a3f8a82c1e109c32674804c5241913a8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-bindings"></a>Benutzerdefinierte Bindungen
 Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Alle Bindungen werden anhand einer geordneten Menge von Bindungselementen erstellt. Benutzerdefinierte Bindungen können alleine aus nativen Bindungselementen erstellt werden oder auch benutzerspezifische Bindungselemente umfassen. So können Sie mithilfe von benutzerdefinierten Bindungselementen beispielsweise die Verwendung neuer Transporte oder Encoder an einem Dienstendpunkt aktivieren. Funktionierende Beispiele finden Sie in [Beispiele für die benutzerdefinierte Bindung](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Weitere Informationen finden Sie unter [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -55,7 +41,7 @@ Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
- Am Ende befindet sich ein erforderliches Transportelement. Sie können Ihren eigenen Transport oder eines der folgenden, von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bereitgestellten Transportbindungselemente verwenden:  
+ Am Ende befindet sich ein erforderliches Transportelement. Sie können Ihren eigenen Transport oder eines der folgenden transportbindungselemente, die Windows Communication Foundation (WCF) enthält:  
   
 -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

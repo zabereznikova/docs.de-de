@@ -1,28 +1,18 @@
 ---
 title: Kompositionsanalysetool (Mefx)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Composition Analysis Tool [MEF]
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6e5ab22ff2fe382fa2a266e3180cb34f970cc48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composition-analysis-tool-mefx"></a>Kompositionsanalysetool (Mefx)
 Das Kompositionsanalysetool MEFX ist eine Befehlszeilenanwendung, die Bibliotheks- (.dll) und Anwendungsdateien (.exe) mit Teilen des Managed Extensibility Framework (MEF) analysiert. MEFX dient in erster Linie dazu, Entwicklern eine Möglichkeit zur Diagnose von Kompositionsfehlern in MEF-Anwendungen zu bieten, ohne dass der Anwendung selbst unübersichtlicher Ablaufverfolgungscode hinzugefügt werden muss. Darüber hinaus kann das Tool nützlich sein, um Teile einer Bibliothek zu verstehen, die von einem Drittanbieter bereitgestellt wird. In diesem Thema wird beschrieben, wie MEFX verwendet wird, und ein Verweis auf die Syntax wird bereitgestellt.  

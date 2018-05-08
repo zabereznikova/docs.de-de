@@ -1,30 +1,16 @@
 ---
 title: Übersicht über Windows Communication Foundation-Transaktionen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 76edd7cf30d9da06db6e0c2f4624bf9a6d677eca
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63f3826215f24a4bab6d84709c2f9da6a9c8f4f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Übersicht über Windows-Kommunikationfoundation-Transaktionen
 Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in eine einzelne unteilbare Ausführungseinheit zu gruppieren. Eine Transaktion ist eine Auflistung von Vorgängen mit den folgenden Eigenschaften:  
@@ -37,9 +23,9 @@ Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in 
   
 -   Dauerhaftigkeit. Dies bedeutet, dass Updates verwalteter Ressourcen (z. B. eines Datensatzes in einer Datenbank) nach der Ausführung bei Fehlern dauerhaft sind.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet einen umfangreichen Satz an Funktionen, mit denen Sie verteilte Transaktionen in Ihrer Webdienstanwendung erstellen können.  
+ Windows Communication Foundation (WCF) bietet einen umfangreichen Satz von Funktionen, mit die Sie verteilte Transaktionen in Ihrer Webdienstanwendung erstellen können.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert die Unterstützung für das WS-AtomicTransaction (WS-AT)-Protokoll, mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen Transaktionen zu interoperablen Anwendungen ausführen können, z. B. zu mithilfe von Drittanbietertechnologie erstellten interoperablen Webdiensten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert außerdem die Unterstützung für das OLE Transactions-Protokoll, das in Szenarien verwendet werden kann, in denen keine Interop-Funktionalität zum Aktivieren des Transaktionsflusses erforderlich ist.  
+ WCF implementiert die Unterstützung für das WS-AtomicTransaction (WS-AT)-Protokoll, das WCF-Anwendungen, Transaktionen zu interoperablen Anwendungen ausführen können, z. B. mithilfe von drittanbietertechnologie erstellten interoperablen Webdiensten ermöglicht. WCF implementiert auch Unterstützung für das OLE Transactions-Protokoll, die in Szenarien verwendet werden können, benötigen Sie keine Interop-Funktionalität zum Aktivieren des Transaktionsflusses.  
   
  Sie können eine Anwendungskonfigurationsdatei verwenden, um Bindungen für das Aktivieren bzw. Deaktivieren des Transaktionsflusses zu konfigurieren sowie das gewünschte Transaktionsprotokoll auf einer Bindung festzulegen. Außerdem können Sie mit der Konfigurationsdatei Transaktionstimeouts auf Dienstebene festlegen. Weitere Informationen finden Sie unter [Transaktionsfluss aktivieren](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   

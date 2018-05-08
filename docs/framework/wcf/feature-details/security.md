@@ -1,45 +1,33 @@
 ---
 title: Windows Communication Foundation-Sicherheit
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, programming
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-caps.latest.revision: 21
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b93bfff2cd97e10d9c0dba4373839337f36aacb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: fb48ae39d269f21a7120ecf143dc4c4680efe39d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation-Sicherheit
-In den Themen dieses Abschnitts werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Sicherheitsfunktionen und ihre Verwendung zur Sicherung von Nachrichten beschrieben.  
+Die Themen in diesem Abschnitt beschreiben die Windows Communication Foundation (WCF)--Sicherheitsfunktionen und ihre Verwendung zur Sicherung von Nachrichten.  
   
  Weitere Informationen zu Windows Server AppFabric und Sicherheit, finden Sie unter [Sicherheit Modell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- Beschreibt die Sicherheitsfunktionen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Beschreibt die Sicherheitsfunktionen in WCF.  
   
  [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- Beschreibt die grundlegende Terminologie und die grundlegenden Konzepte, die für die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit verwendet werden.  
+ Beschreibt die grundlegende Terminologie und Konzepte, die in WCF-Sicherheit verwendet.  
   
  [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- Beschreibt Szenarien und Topologien, die Sie mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] konfigurieren können.  
+ Beschreibt Szenarien und Topologien, die Sie mit WCF konfigurieren können.  
   
  [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  Bietet eine Übersicht über WCF-Verhaltensweisen, die sich auf Sicherheit auswirken, z. B. das Festlegen von Anmeldeinformationen.  
@@ -48,7 +36,7 @@ In den Themen dieses Abschnitts werden [!INCLUDE[indigo1](../../../../includes/i
  Eine sicherheitsorientierte Ansicht der Bindungen, einschließlich Themen, die veranschaulichen, wie benutzerdefinierte Sicherheitsbindungen erstellt werden.  
   
  [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- Beschreibt, wie Nachrichten mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsfunktionen gesichert werden.  
+ Beschreibt, wie Nachrichten mithilfe von WCF-Sicherheitsfunktionen zu sichern.  
   
  [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Veranschaulicht allgemeine Authentifizierungsaufgaben.  
@@ -60,13 +48,13 @@ In den Themen dieses Abschnitts werden [!INCLUDE[indigo1](../../../../includes/i
  Beschreibt die Grundlagen des Verbunds und wie Clients, die mit Verbundservern kommunizieren, erstellt werden.  
   
  [Teilweise Vertrauenswürdigkeit](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- Beschreibt, wie teilweise vertrauenswürdige Szenarien und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Einschränkungen ausgeführt werden, wenn sie als teilweise vertrauenswürdig ausgeführt werden.  
+ Beschreibt, wie teilweise vertrauenswürdige Szenarien und WCF-Einschränkungen ausgeführt werden, wenn teilweise vertrauenswürdig ausgeführt.  
   
  [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Beschreibt, wie Sicherheitsereignisse überwacht werden.  
   
  [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- Richtlinien zum Erstellen von sicheren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen.  
+ Richtlinien zum Erstellen sicherer WCF-Anwendungen.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel>  

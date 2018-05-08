@@ -1,44 +1,32 @@
 ---
 title: Clientanwendungen mittlerer Ebene
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13399243994943ddf853447e2e29f3695702aa35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cca832266b2eb2ab7b1b4eb1a5fe937525db97d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="middle-tier-client-applications"></a>Clientanwendungen mittlerer Ebene
-In diesem Thema werden verschiedene Probleme bezüglich Clientanwendungen mittlerer Ebene diskutiert, von denen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet wird.  
+In diesem Artikel werden verschiedene Probleme bezüglich Clientanwendungen mittlerer Ebene, die Windows Communication Foundation (WCF) verwenden.  
   
 ## <a name="increasing-middle-tier-client-performance"></a>Verbessern der Leistung von Clients mittlerer Ebene  
- Im Vergleich zu früheren Kommunikationstechnologien wie Webdiensten unter Verwendung von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kann das Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientinstanz aufgrund der umfangreichen Funktionen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] etwas komplexer ausfallen. Beispiel: Beim Öffnen eines <xref:System.ServiceModel.ChannelFactory%601>-Objekts kann von diesem Objekt eine sichere Sitzung mit dem Dienst hergestellt werden, was zu einer Verlängerung der Startzeit der Clientinstanz führt. Üblicherweise haben diese zusätzlichen Funktionen keine sonderlich großen Auswirkungen auf Clientanwendungen, da vom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client lediglich einige Aufrufe ausgeführt werden und er anschließend geschlossen wird.  
+ Im Vergleich zu früheren Kommunikationstechnologien wie Webdiensten unter Verwendung [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], die Erstellung einer Instanz der WCF-Client kann eine komplexere aufgrund der umfangreichen Funktionen von WCF. Beispiel: Beim Öffnen eines <xref:System.ServiceModel.ChannelFactory%601>-Objekts kann von diesem Objekt eine sichere Sitzung mit dem Dienst hergestellt werden, was zu einer Verlängerung der Startzeit der Clientinstanz führt. In der Regel wird wirken diese zusätzlichen Funktionen Clientanwendungen erheblich sich nicht, da die WCF-Client einige Aufrufe lediglich und dann schließt.  
   
- Von Clientanwendungen mittlerer Ebene kann jedoch in kurzer Zeit eine Vielzahl von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientobjekten erstellt werden. Daher besitzt dieser Typ höhere Initialisierungsanforderungen. Für die Leistungsoptimierung von Anwendungen mittlerer Ebene beim Aufrufen von Diensten haben Sie die Wahl zwischen zwei grundsätzlichen Vorgehensweisen:  
+ Clientanwendungen mittlerer Ebene, jedoch können viele WCF-Clientobjekten schnell und erstellen daher treten höhere initialisierungsanforderungen. Für die Leistungsoptimierung von Anwendungen mittlerer Ebene beim Aufrufen von Diensten haben Sie die Wahl zwischen zwei grundsätzlichen Vorgehensweisen:  
   
--   Zwischenspeichern des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientobjekts und anschließendes Wiederverwenden des Objekts für alle nachfolgenden Aufrufe (sofern möglich).  
+-   Zwischenspeichern Sie des WCF-Clientobjekts und für nachfolgende Aufrufe wiederverwenden Sie, sofern möglich.  
   
--   Erstellen eines <xref:System.ServiceModel.ChannelFactory%601>-Objekts und anschließendes Verwenden des Objekts zum Erstellen eines neuen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientkanalobjekts für jeden Aufruf.  
+-   Erstellen einer <xref:System.ServiceModel.ChannelFactory%601> Objekt, und verwenden Sie dieses Objekt zum Erstellen von neuen WCF-Clients kanalobjekten, bei jedem Aufruf.  
   
  Bei diesen Vorgehensweisen sollten Sie Folgendes beachten:  
   
--   Wird vom Dienst ein clientspezifischer Zustand mithilfe einer Sitzung verwaltet, kann der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client mittlerer Ebene nicht mit mehrfachen Clientebenenanforderungen wiederverwendet werden, da der Zustand des Diensts direkt an den des Clients mittlerer Ebene gebunden ist.  
+-   Wenn der Dienst einen clientspezifischer Zustand mithilfe einer Sitzungs verwaltet, können nicht Sie die WCF-Clients mittlerer Ebene mit mehreren-Clientebene Anforderungen wiederverwenden, da der Zustand des Diensts an, die von den Clients mittlerer Ebene gebunden ist.  
   
--   Muss der Dienst einzeln pro Client authentifiziert werden, ist das Erstellen eines neuen Clients für jede eingehende Anforderung mittlerer Ebene erforderlich. Das Wiederverwenden des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients mittlerer Ebene (oder des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientkanalobjekts) ist nicht möglicht, da die Anmeldeinformationen des Clients mittlerer Ebene nicht nach dem Erstellen des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients (oder nach dem Erstellen von <xref:System.ServiceModel.ChannelFactory%601>) geändert werden können.  
+-   Wenn der Dienst auf einer pro-Client-Basis die Authentifizierung durchführen muss, müssen Sie einen neuen Client für jede eingehende Anforderung erstellen, auf der mittleren Ebene anstelle der WCF-Clients mittlerer Ebene (oder WCF-clientkanalobjekts) wiederverwenden, da die Anmeldeinformationen des Clients mittlerer Ebene kann nicht geändert werden, nachdem der WCF-Client (oder <xref:System.ServiceModel.ChannelFactory%601>) erstellt wurde.  
   
--   Channels und von den Channels erstellte Clients sind zwar threadsicher, unterstützen jedoch möglicherweise keine gleichzeitigen Schreibvorgänge mehrerer Nachrichten zur Übertragung. Beim Senden umfangreicher Nachrichten (und besonders beim Streaming) wird der Sendevorgang möglicherweise blockiert, da auf den Abschluss eines anderen Sendevorgangs gewartet wird. Daraus ergeben sich zwei Probleme: fehlende Parallelität und die Gefahr eines Deadlocks, wenn die Ablaufsteuerung wieder zu dem Dienst zurückkehrt, von dem der Channel wiederverwendet wird (oder mit anderen Worten: Wenn vom freigegebenen Client ein Dienst aufgerufen wird, dessen Codepfad einen Rückruf an den freigegebenen Client auslöst). Dies gilt unabhängig vom Typ des wiederverwendeten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients.  
+-   Channels und von den Channels erstellte Clients sind zwar threadsicher, unterstützen jedoch möglicherweise keine gleichzeitigen Schreibvorgänge mehrerer Nachrichten zur Übertragung. Beim Senden umfangreicher Nachrichten (und besonders beim Streaming) wird der Sendevorgang möglicherweise blockiert, da auf den Abschluss eines anderen Sendevorgangs gewartet wird. Daraus ergeben sich zwei Probleme: fehlende Parallelität und die Gefahr eines Deadlocks, wenn die Ablaufsteuerung wieder zu dem Dienst zurückkehrt, von dem der Channel wiederverwendet wird (oder mit anderen Worten: Wenn vom freigegebenen Client ein Dienst aufgerufen wird, dessen Codepfad einen Rückruf an den freigegebenen Client auslöst). Dies gilt unabhängig vom Typ des WCF-Clients, die Sie wiederverwenden.  
   
 -   Fehler in Channels müssen unabhängig davon behoben werden, ob der Channel freigegeben ist. Beim Wiederverwenden von Channels kann ein fehlerhafter Channel dazu führen, dass gleich mehrere ausstehende Anforderungen oder Sendevorgänge nicht ausgeführt werden.  
   

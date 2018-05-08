@@ -1,27 +1,15 @@
 ---
 title: Ausgeben von Benutzercode-Ablaufverfolgungen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitting-user-code-traces"></a>Ausgeben von Benutzercode-Ablaufverfolgungen
-Zusätzlich zum Aktivieren der Ablaufverfolgung in der Konfiguration zum Sammeln von Instrumentationsdaten, die von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] generiert wurden, lassen sich Ablaufverfolgungen auch programmgesteuert in Benutzercode ausgeben. Auf diese Weise können proaktiv Instrumentationsdaten zur späteren Analyse erstellt werden. Die entsprechende Vorgehensweise wird in diesem Thema erläutert.  
+Zusätzlich zum Aktivieren der Ablaufverfolgung in der Konfiguration zum Sammeln von Instrumentationsdaten, die von der Windows Communication Foundation (WCF) generiert, können Sie auch programmgesteuert in Benutzercode Ausgeben von ablaufverfolgungen. Auf diese Weise können proaktiv Instrumentierungsdaten zur späteren Analyse erstellt werden. Die entsprechende Vorgehensweise wird in diesem Thema erläutert.  
   
  Darüber hinaus die [erweitern Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md) Beispiel enthält den Code, die in den folgenden Abschnitten veranschaulicht.  
   
@@ -134,17 +122,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  Im folgenden Diagramm sind auch Übertragungsablaufverfolgungen von der und zur Berechnungsaktivität sowie zwei Paare von Start- und Stop-Ablaufverfolgungen pro Anforderungsaktivität enthalten (eins für den Client, eins für den Dienst, also jeweils eins für jede Ablaufverfolgungsquelle).  
   
- ![Trace Viewer: Ausgeben von User &#45; code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![Trace Viewer: Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Liste der Aktivitäten nach Erstellungszeit (linker Bereich) und deren geschachtelter Aktivitäten (Bereich rechts oben)  
   
  Wird vom Dienstcode eine Ausnahme ausgelöst, durch die auch vom Client eine Ausnahme ausgelöst wird (beispielsweise bei Ausbleiben einer Antwort auf eine Anforderung), erscheinen sowohl die Warn- oder Fehlermeldung des Diensts als auch die des Clients in der gleichen Aktivität, um das Herstellen eines direkten Zusammenhangs zu ermöglichen. Im folgenden Diagramm ist eine Ausnahme, die besagt, "der Dienst zum Verarbeiten dieser Anforderung im Benutzercode verweigert." löst der Dienst aus. Der Client löst eine Ausnahme, die besagt, "der Server die Anforderung aufgrund eines internen Fehlers nicht verarbeiten konnte." auch aus.  
   
- ![Verwenden von Trace Viewer zum Ausgeben von User &#45; Code verfolgt](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
+ ![Verwenden von Trace Viewer zum Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 Endpunktübergreifende Fehler für eine bestimmte Anforderung erscheinen in der gleichen Aktivität, wenn die Anforderungsaktivitäts-ID weitergegeben wurde.  
   
  Durch Doppelklicken auf die Multiply-Aktivität im linken Bereich wird das folgende Diagramm angezeigt. Dieses enthält die Ablaufverfolgungen für die Multiply-Aktivität für jeden beteiligten Prozess. Es ist zu sehen, dass zunächst eine Warnung für den Service aufgetreten ist (Ausnahme ausgelöst). Daraufhin kommt es auch auf dem Client zu Warnungen und Fehlern, da die Anforderung nicht verarbeitet werden konnte. Somit lassen sich die kausale Fehlerbeziehung zwischen Endpunkten sowie die Grundursache des Fehlers ableiten.  
   
- ![Verwenden von Trace Viewer zum Ausgeben von User &#45; Code verfolgt](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
+ ![Verwenden von Trace Viewer zum Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Diagrammansicht der Fehlerkorrelation  
   
  Zum Abrufen der vorherigen Ablaufverfolgungen wird `ActivityTracing` für die Benutzerablaufverfolgungsquellen und `propagateActivity=true` für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt. `ActivityTracing` wurde nicht für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt, um die Aktivitätsweitergabe von Benutzercode an Benutzercode zu ermöglichen. (Bei aktivierter ServiceModel-Ablaufverfolgung wird die im Client definierte Aktivitäts-ID nicht bis zum Dienstbenutzercode weitergegeben. Von Übertragungen werden dagegen die Benutzercodeaktivitäten von Client und Dienst mit den Zwischenaktivitäten von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] korreliert.)  

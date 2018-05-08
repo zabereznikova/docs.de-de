@@ -1,27 +1,17 @@
 ---
-title: "Kryptografische Flexibilität in WCF-Sicherheit"
-ms.custom: 
+title: Kryptografische Flexibilität in WCF-Sicherheit
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7d99ada67255d0ced8bbabc2ab6fc645e6ba9e35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5fa4c3cf45eb17822effaa9284864274923b2504
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>Kryptografische Flexibilität in WCF-Sicherheit
-In diesem Beispiel wird gezeigt, wie ein Standard-/benutzerdefinierter Algorithmus angegeben wird, um eine agile Kryptografieimplementierung in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client und -Dienst bereitzustellen. Das Beispiel besteht aus den folgenden Projekten:  
+Dieses Beispiel zeigt, wie ein Standard-/benutzerdefinierter Algorithmus ermöglichen eine agile kryptografieimplementierung in Windows Communication Foundation (WCF)-Client und Dienst angegeben wird. Das Beispiel besteht aus den folgenden Projekten:  
   
  Dienst  
  Dies ist eine selbst gehostete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst, implementiert die `ICalculator` -Schnittstelle und sichert den Endpunkt mithilfe der <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> mit sicheren Sitzung und zuverlässige Sitzung deaktiviert. Der Dienst definiert eine benutzerdefinierte `SecurityAlgorithmSuite`-Klasse, um die Kryptografiealgorithmen zur Nachrichtensicherheit anzugeben.  
@@ -44,7 +34,7 @@ In diesem Beispiel wird gezeigt, wie ein Standard-/benutzerdefinierter Algorithm
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Security\CryptoAgility`  
   

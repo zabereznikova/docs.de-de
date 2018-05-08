@@ -1,14 +1,6 @@
 ---
 title: IHostSyncManager::CreateCrst-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateCrst
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ac278cc8-2540-4a6c-b5c6-b90c3970b4f4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f932c91892292c787feecf1768c33fb429334bae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 101a652aa77e587003fb7e773e00ba9b77461a06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>IHostSyncManager::CreateCrst-Methode
 Erstellt ein kritisches Abschnittsobjekt für die Synchronisierung.  
@@ -54,7 +42,7 @@ HRESULT CreateCrst (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`CreateCrst`wurde erfolgreich zurückgegeben.|  
+|S_OK|`CreateCrst` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -63,7 +51,7 @@ HRESULT CreateCrst (
 |E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um den angeforderten kritischen Abschnitt zu erstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Kritischen Abschnittsobjekte ermöglichen eine Synchronisierung ähnelt derjenigen ein Mutex-Objekt, mit dem Unterschied, dass kritische Abschnitte nur von den Threads eines einzelnen Prozesses verwendet werden können. `CreateCrst`spiegelt die Win32- `InitializeCriticalSection` Funktion.  
+ Kritischen Abschnittsobjekte ermöglichen eine Synchronisierung ähnelt derjenigen ein Mutex-Objekt, mit dem Unterschied, dass kritische Abschnitte nur von den Threads eines einzelnen Prozesses verwendet werden können. `CreateCrst` spiegelt die Win32- `InitializeCriticalSection` Funktion.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -72,7 +60,7 @@ HRESULT CreateCrst (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

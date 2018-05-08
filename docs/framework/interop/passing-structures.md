@@ -1,31 +1,19 @@
 ---
-title: "Übergeben von Strukturen"
-ms.custom: 
+title: Übergeben von Strukturen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a30905fdcf7063f6ecdae0346c9c5ee39b450be9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3764916263f6f88615d61badaf2c32807bcc09b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-structures"></a>Übergeben von Strukturen
 Bei vielen nicht verwalteten Funktionen wird erwartet, dass Member von Strukturen (benutzerdefinierte Typen in Visual Basic) oder Member von Klassen, die in verwaltetem Code definiert werden, als Parameter an die Funktion übergeben werden. Wenn Sie Strukturen oder Klassen an nicht verwalteten Code mithilfe von Plattformaufruf übergeben, müssen Sie zusätzliche Informationen angeben, um das ursprüngliche Layout und die ursprüngliche Ausrichtung beizubehalten. Dieses Thema enthält eine Einführung in das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut, das Sie zum Definieren formatierter Typen verwenden. Sie können für verwaltete Strukturen und Klassen verschiedene vorhersagbare Layoutverhalten auswählen, die von der **LayoutKind**-Enumeration bereitgestellt werden.  

@@ -1,13 +1,6 @@
 ---
 title: Antialiasing bei Linien und Kurven
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8552f185a93b688555dbcfab3da9d28d9bfde6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc75a535d8ef21cc780ae8e20d590631306bdc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Antialiasing bei Linien und Kurven
-Bei Verwendung von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] um eine Linie zeichnen, Sie geben Sie den Startpunkt und den Endpunkt der Linie, aber Sie müssen keine keine Informationen zu den einzelnen Pixel in der Zeile bereit. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]funktioniert in Verbindung mit dem Bildschirmtreiber um zu bestimmen, welche Pixel aktiviert werden, werden um die Zeile auf die jeweiligen Ausgabegeräts angezeigt.  
+Bei Verwendung von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] um eine Linie zeichnen, Sie geben Sie den Startpunkt und den Endpunkt der Linie, aber Sie müssen keine keine Informationen zu den einzelnen Pixel in der Zeile bereit. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funktioniert in Verbindung mit dem Bildschirmtreiber um zu bestimmen, welche Pixel aktiviert werden, werden um die Zeile auf die jeweiligen Ausgabegeräts angezeigt.  
   
 ## <a name="aliasing"></a>Aliasing  
  Betrachten Sie die gerade rote Linie, die an dem Punkt (4, 2) auf den Punkt (16, 10) geht. Angenommen Sie, das Koordinatensystem seinen Ursprung in der oberen linken Ecke hat und dass die Maßeinheit Pixel ist. Darüber hinaus vorausgesetzt, dass die x-Achse nach rechts und die y-Achse Punkte nach unten. Die folgende Abbildung zeigt eine vergrößerte Ansicht der die rote Linie, die auf einem mehrfarbigen Hintergrund gezeichnet wird.  

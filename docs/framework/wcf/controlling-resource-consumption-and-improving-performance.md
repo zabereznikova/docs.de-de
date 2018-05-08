@@ -1,32 +1,18 @@
 ---
 title: Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 031261f50a0615efa7227d3655c90c3423e77796
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung
-In diesem Thema werden verschiedene Eigenschaften in unterschiedlichen Bereichen der [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Architektur beschrieben, die den Ressourcenverbrauch kontrollieren und Einfluss auf die Leistungsmetriken haben.  
+Dieses Thema beschreibt verschiedene Eigenschaften in verschiedenen Bereichen der Windows Communication Foundation (WCF)-Architektur, die Einfluss auf die Leistungsmetriken und auf den Ressourcenverbrauch Steuerelement arbeiten.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Eigenschaften, die den Ressourcenverbrauch in WCF einschränken  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] wendet Einschränkungen auf bestimmte Typen von Prozessen an, entweder zum Zwecke der Sicherheit oder der Leistung. Diese Einschränkungen treten in zwei Hauptformen auf, jeweils als Kontingente und Drosselungen. *Kontingente* sind Beschränkungen, die sobald Sie erreicht oder überschritten eine sofortige Ausnahme irgendwann im System verursachen. *Schränkt* sind Beschränkungen, die nicht sofort durch eine Ausnahme ausgelöst werden können. Stattdessen wird beim Erreichen einer Drosselungsbeschränkung der Prozess fortgesetzt, jedoch innerhalb der durch den Drosselungswert festgelegten Grenzen. Diese eingeschränkte Verarbeitung löst möglicherweise an anderer Stelle eine Ausnahme aus, dies hängt jedoch von der jeweiligen Anwendung ab.  
+ Windows Communication Foundation (WCF) gelten Einschränkungen für bestimmte Typen von Prozessen für Sicherheit oder leistungverlusten Zwecke. Diese Einschränkungen treten in zwei Hauptformen auf, jeweils als Kontingente und Drosselungen. *Kontingente* sind Beschränkungen, die sobald Sie erreicht oder überschritten eine sofortige Ausnahme irgendwann im System verursachen. *Schränkt* sind Beschränkungen, die nicht sofort durch eine Ausnahme ausgelöst werden können. Stattdessen wird beim Erreichen einer Drosselungsbeschränkung der Prozess fortgesetzt, jedoch innerhalb der durch den Drosselungswert festgelegten Grenzen. Diese eingeschränkte Verarbeitung löst möglicherweise an anderer Stelle eine Ausnahme aus, dies hängt jedoch von der jeweiligen Anwendung ab.  
   
  Zusätzlich zu der Unterscheidung zwischen Kontingenten und Drosselungen befinden sich einige einschränkende Eigenschaften auf der Serialisierungsebene, auf der Transportebene und auf der Anwendungsebene. Beispielsweise wird das Kontingent <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, das von allen vom System bereitgestellten Transportbindungselementen implementiert wird, standardmäßig auf 65.536 Byte festgelegt, um böswillige Clients daran zu hindern, Denial-of-Service-Angriffe gegen einen bestimmten Dienst zu starten und dadurch einen überhöhten Speicherbedarf zu verursachen. (I. d. R. können Sie die Leistung erhöhen, indem Sie diesen Wert herabsetzen.)  
   

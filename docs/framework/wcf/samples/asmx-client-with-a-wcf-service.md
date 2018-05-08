@@ -1,29 +1,15 @@
 ---
 title: ASMX-Client mit einem WCF-Dienst
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 26fc56ae465c2792f895f08a8e55577d3b74b97d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5a0262361eac35ac45c3861deee13133011754ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>ASMX-Client mit einem WCF-Dienst
-Dieses Beispiel zeigt, wie ein Dienst erstellt wird, der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet, und wie dann aus einem Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client (wie einem ASMX-Client) auf den Dienst zugegriffen wird.  
+In diesem Beispiel wird veranschaulicht, wie zum Erstellen eines Diensts mit Windows Communication Foundation (WCF), und klicken Sie dann auf den Dienst zugreifen, nicht von einem[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client, wie einem ASMX-Client.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -158,7 +144,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   

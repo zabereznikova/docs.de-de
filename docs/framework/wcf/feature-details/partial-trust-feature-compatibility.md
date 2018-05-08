@@ -1,38 +1,24 @@
 ---
 title: Funktionskompatibilität für teilweise Vertrauenswürdigkeit
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: 75
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f8c63079161e6be16e2d36f721aeb98937f72097
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Funktionskompatibilität für teilweise Vertrauenswürdigkeit
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] unterstützt in einer teilweise vertrauenswürdigen Umgebung eine eingeschränkte Teilmenge seiner Funktionalität. Die in einer teilweise vertrauenswürdigen Umgebung unterstützten Funktionen sind, wie im Thema [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) beschrieben, für einen speziellen Satz von Szenarios konzipiert.  
+Windows Communication Foundation (WCF) unterstützt eine eingeschränkte Teilmenge seiner Funktionalität, wenn in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird. Die in einer teilweise vertrauenswürdigen Umgebung unterstützten Funktionen sind, wie im Thema [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) beschrieben, für einen speziellen Satz von Szenarios konzipiert.  
   
 ## <a name="minimum-permission-requirements"></a>Minimal erforderliche Berechtigungen  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt eine Teilmenge von Funktionen in Anwendungen, die unter einem der beiden folgenden benannten Standardberechtigungssätze ausgeführt werden:  
+ WCF unterstützt eine Teilmenge der Funktionen in Anwendungen, die unter einem der folgenden benannten Standardberechtigungssätze ausgeführt:  
   
 -   Berechtigungen für mittlere Vertrauenswürdigkeit  
   
 -   Internetzonenberechtigungen  
   
- Der Versuch, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in teilweise vertrauenswürdigen Anwendungen mit strikteren Berechtigungen zu verwenden, kann zur Laufzeit zu Sicherheitsausnahmen führen.  
+ Versuch WCF in teilweise vertrauenswürdigen Anwendungen mit strikteren Berechtigungen zu verwenden, kann zur Laufzeit zu Sicherheitsausnahmen führen.  
   
 ## <a name="contracts"></a>Verträge  
  Beim Ausführen in teilweise vertrauenswürdigen Umgebungen unterliegen Verträge den folgenden Einschränkungen:  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/27/2018
  MTOM (Message Transmission Optimization Mechanism)-Encoder werden nicht unterstützt.  
   
 ### <a name="security"></a>Sicherheit  
- Teilweise vertrauenswürdige Anwendungen können zum Schutz ihrer Kommunikation die Funktionen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]für die Sicherheit auf Transportebene verwenden. Sicherheit auf Nachrichtenebene wird nicht unterstützt. Wird eine Bindung für die Verwendung von Sicherheit auf Nachrichtenebene konfiguriert, löst dies zur Laufzeit eine Ausnahme aus.  
+ Teilweise vertrauenswürdige Anwendungen können WCF Sicherheit auf Transportebene Funktionen zum Schutz ihrer Kommunikation verwenden. Sicherheit auf Nachrichtenebene wird nicht unterstützt. Wird eine Bindung für die Verwendung von Sicherheit auf Nachrichtenebene konfiguriert, löst dies zur Laufzeit eine Ausnahme aus.  
   
 ### <a name="unsupported-bindings"></a>Nicht unterstützte Bindungen  
  Bindungen, die zuverlässiges Messaging, Transaktionen oder Sicherheit auf Nachrichtenebene verwenden, werden nicht unterstützt.  
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/27/2018
   
 -   Alle serialisierbaren `[DataContract]` -Typen müssen als `public`deklariert sein.  
   
--   Alle serialisierbaren `[DataMember]` -Felder oder -Eigenschaften in einem `[DataContract]` -Typ müssen öffentlich sein und Schreib-/Lesezugriff besitzen. Die Serialisierung und die Deserialisierung von [readonly](http://go.microsoft.com/fwlink/?LinkID=98854) -Feldern wird nicht unterstützt, wenn [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in einer teilweise vertrauenswürdigen Anwendung ausgeführt wird.  
+-   Alle serialisierbaren `[DataMember]` -Felder oder -Eigenschaften in einem `[DataContract]` -Typ müssen öffentlich sein und Schreib-/Lesezugriff besitzen. Die Serialisierung und Deserialisierung von [Readonly](http://go.microsoft.com/fwlink/?LinkID=98854) -Feldern wird nicht unterstützt, wenn WCF in einer teilweise vertrauenswürdigen Anwendung ausgeführt wird.  
   
 -   Das `[Serializable]`/ISerializable- Programmiermodell wird in einer teilweise vertrauenswürdigen Umgebung nicht unterstützt.  
   
@@ -89,7 +75,7 @@ ms.lasthandoff: 04/27/2018
 ### <a name="collection-types"></a>Auflistungstypen  
  Einige Auflistungstypen implementieren sowohl <xref:System.Collections.Generic.IEnumerable%601> als auch <xref:System.Collections.IEnumerable>. Beispiele dafür sind Typen, die <xref:System.Collections.Generic.ICollection%601>implementieren. Solche Typen können eine `public` -Implementierung von `GetEnumerator()`und eine explizite Implementierung von `GetEnumerator()`enthalten. In diesem Fall ruft <xref:System.Runtime.Serialization.DataContractSerializer> die `public` -Implementierung von `GetEnumerator()`auf, und nicht die explizite Implementierung von `GetEnumerator()`. Wenn keine der `GetEnumerator()` -Implementierungen `public` ist, sondern es sich bei allen um explizite Implementierungen handelt, ruft <xref:System.Runtime.Serialization.DataContractSerializer> `IEnumerable.GetEnumerator()`auf.  
   
- Wird [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in einer teilweise vertrauenswürdigen Umgebung ausgeführt, und ist keine der `GetEnumerator()` -Implementierungen `public`oder ist keine von ihnen eine explizite Schnittstellenimplementierung, wird eine Sicherheitsausnahme ausgelöst.  
+ Für Auflistungstypen, wenn WCF in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird, wenn keines der `GetEnumerator()` Implementierungen sind `public`, oder keine der beiden Optionen werden explizite schnittstellenimplementierungen, und klicken Sie dann eine Sicherheitsausnahme ausgelöst.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  Viele .NET Framework-Auflistungstypen (wie <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.Hashtable> ) werden vom <xref:System.Runtime.Serialization.NetDataContractSerializer> in teilweise vertrauenswürdigen Umgebungen nicht unterstützt. Für diese Typen ist das `[Serializable]` -Attribut festgelegt. Wie bereits im Abschnitt zur Serialisierung erwähnt, wird dieses Attribut in teilweise vertrauenswürdigen Umgebungen nicht unterstützt. Der <xref:System.Runtime.Serialization.DataContractSerializer> behandelt Auflistungen auf besondere Weise, weshalb diese Einschränkung von ihm umgangen werden kann, <xref:System.Runtime.Serialization.NetDataContractSerializer> verfügt jedoch über keine Möglichkeit zum Umgehen dieser Einschränkung.  
@@ -108,7 +94,7 @@ ms.lasthandoff: 04/27/2018
  Ein Beispiel für ein gemeinsames Verhalten, finden Sie unter [Vorgehensweise: Sperren Sie die Endpunkte im Unternehmen](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Konfiguration  
- Bis auf eine Ausnahme kann teilweise vertrauenswürdiger Code nur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Konfigurationsabschnitte in der lokalen `app.config` -Datei laden. Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Konfigurationsabschnitte laden zu können, die auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Abschnitte in der Datei machine.config oder in einer Stammdatei web.config verweisen, ist die Berechtigung ConfigurationPermission(Unrestricted) erforderlich. Ohne diese Berechtigung führen Verweise auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Konfigurationsabschnitte (Verhalten, Bindungen) außerhalb der lokalen Konfigurationsdatei zu einer Ausnahme, wenn die Konfiguration geladen wird.  
+ Mit einer Ausnahme kann teilweise vertrauenswürdiger Code nur WCF Konfigurationsabschnitte in der lokalen laden `app.config` Datei. Um WCF-Konfigurationsabschnitte zu laden, die WCF-Abschnitte in "Machine.config" oder in einen Stamm verweisen erfordert die Datei "Web.config" Berechtigung ConfigurationPermission(Unrestricted) erforderlich. Ohne diese Berechtigung verweist auf WCF-Konfigurationsabschnitte (Verhalten, Bindungen) außerhalb der lokalen Konfigurationsdatei zu einer Ausnahme auf, wenn die Konfiguration geladen wird.  
   
  Die Ausnahme ist die Konfiguration für die Serialisierung mit bekannten Typen, wie im Serialisierungsabschnitt dieses Themas beschrieben.  
   
@@ -121,7 +107,7 @@ ms.lasthandoff: 04/27/2018
  In teilweise vertrauenswürdigen Umgebungen wird eine eingeschränkte Ereignisprotokollierung unterstützt. Nur Dienstaktivierungsfehler und Fehler bei der Ablaufverfolgung/Nachrichtenprotokollierung werden im Ereignisprotokoll protokolliert. Pro Prozess können maximal fünf Ereignisse protokolliert werden. Dadurch soll vermieden werden, dass zu viele Meldungen in das Ereignisprotokoll geschrieben werden.  
   
 ### <a name="message-logging"></a>Nachrichtenprotokollierung  
- Die Nachrichtenprotokollierung funktioniert nicht, wenn [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird. Wird sie in einer teilweise vertrauenswürdigen Umgebung aktiviert, schlägt zwar die Dienstaktivierung nicht fehl, jedoch wird keine Nachricht protokolliert.  
+ Die nachrichtenprotokollierung funktioniert nicht, wenn WCF in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird. Wird sie in einer teilweise vertrauenswürdigen Umgebung aktiviert, schlägt zwar die Dienstaktivierung nicht fehl, jedoch wird keine Nachricht protokolliert.  
   
 ### <a name="tracing"></a>Ablaufverfolgung  
  In einer teilweise vertrauenswürdigen Umgebung ist nur eine eingeschränkte Funktionalität der Ablaufverfolgung verfügbar. Dem <`listeners`>-Element der Konfigurationsdatei können Sie nur den <xref:System.Diagnostics.TextWriterTraceListener>-Typ und den neuen <xref:System.Diagnostics.EventSchemaTraceListener>-Typ hinzufügen. Die Verwendung des Standardtyps <xref:System.Diagnostics.XmlWriterTraceListener> führt möglicherweise zu unvollständigen oder falschen Protokollen.  
@@ -151,13 +137,13 @@ ms.lasthandoff: 04/27/2018
  Wenn Sie die Ablaufverfolgung in einer teilweise vertrauenswürdigen Umgebung verwenden, dann stellen Sie sicher, dass die Anwendung über ausreichende Berechtigungen verfügt, um die Ausgabe des Ablaufverfolgungslisteners speichern zu können. Wenn Sie z.&amp;#160;B. den <xref:System.Diagnostics.TextWriterTraceListener> verwenden, um die Ablaufverfolgungsausgabe in eine Textdatei zu schreiben, müssen Sie sicherstellen, dass die Anwendung über die notwendigen FileIOPermission-Berechtigungen verfügt, die für das Schreiben in die Ablaufverfolgungsdatei erforderlich sind.  
   
 > [!NOTE]
->  Damit die Ablaufverfolgungsdatei nicht mit doppelten Fehlermeldungen überflutet wird, deaktiviert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Ablaufverfolgung der Ressource oder der Aktion nach dem ersten Sicherheitsfehler. Es gibt eine Ausnahmeablaufverfolgung für jeden fehlgeschlagenen Ressourcenzugriff, und zwar für den ersten Versuch, auf eine Ressource zuzugreifen oder eine Aktion auszuführen.  
+>  Um die Ablaufverfolgungsdatei überflutet mit doppelten Fehlermeldungen, deaktiviert WCF Ablaufverfolgung der Ressource oder der Aktion nach dem ersten Sicherheitsfehler. Es gibt eine Ausnahmeablaufverfolgung für jeden fehlgeschlagenen Ressourcenzugriff, und zwar für den ersten Versuch, auf eine Ressource zuzugreifen oder eine Aktion auszuführen.  
   
 ## <a name="wcf-service-host"></a>WCF-Diensthost  
- Der[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Diensthost unterstützt keine teilweise vertrauenswürdigen Umgebungen. Wenn Sie verwenden möchten eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service unter teilweiser Vertrauenswürdigkeit, verwenden Sie nicht die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -dienstbibliotheksprojektvorlage in Visual Studio zur Erstellung des Diensts. Erstellen Sie stattdessen eine neue Website in Visual Studio durch Auswählen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Website Dienstvorlage, die den Dienst auf einem Webserver, auf dem hosten kann [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] teilweise Vertrauenswürdigkeit unterstützt.  
+ WCF-Diensthost unterstützt teilweiser Vertrauenswürdigkeit nicht. Wenn Sie einen WCF-Dienst unter teilweiser Vertrauenswürdigkeit verwenden möchten, verwenden Sie nicht die WCF-Dienstbibliotheksprojekt-Vorlage in Visual Studio zur Erstellung des Diensts. Erstellen Sie stattdessen eine neue Website in Visual Studio durch Auswählen der WCF-Dienst-Websitevorlage, die der Dienst auf einem Webserver hosten kann auf denen WCF teilweiser Vertrauenswürdigkeit unterstützt wird.  
   
 ## <a name="other-limitations"></a>Weitere Einschränkungen  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird allgemein von den Sicherheitsüberlegungen eingeschränkt, die von der Hostanwendung auferlegt werden. Wird [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z.B. in einer XAML-Browseranwendung (XBAP) gehostet, gelten die XBAP-Einschränkungen, die unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](http://go.microsoft.com/fwlink/?LinkId=89138)beschrieben sind.  
+ WCF ist im Allgemeinen auf die Sicherheitsaspekte, die von der Hostinganwendung auferlegt beschränkt. Z. B. wenn WCF in einer XAML-Browseranwendung (XBAP) gehostet wird, wird XBAP-Einschränkungen, wie in beschrieben [Windows Presentation Foundation-Sicherheit für die teilweise Vertrauenswürdigkeit](http://go.microsoft.com/fwlink/?LinkId=89138).  
   
  Die folgenden Zusatzfunktionen stehen nicht zur Verfügung, wenn indigo2 in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird:  
   
@@ -167,10 +153,10 @@ ms.lasthandoff: 04/27/2018
   
 -   Leistungsindikatoren  
   
- Die Verwendung von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Funktionen in einer teilweise vertrauenswürdigen Umgebung kann dazu führen, dass zur Laufzeit Ausnahmen ausgelöst werden.  
+ Verwenden von WCF-Funktionen, die in einer teilweise vertrauenswürdigen Umgebung nicht unterstützt werden möglicherweise zur Laufzeit Ausnahmen ausgelöst.  
   
 ## <a name="unlisted-features"></a>Nicht aufgeführte Funktionen  
- Die beste Möglichkeit festzustellen, ob in einer teilweise vertrauenswürdigen Umgebung auf eine bestimmte Ressource zugegriffen oder eine Aktion ausgeführt werden kann, besteht darin, innerhalb eines `try` -Blocks auf die Ressource zuzugreifen oder die Aktion auszuführen, und dann einen möglichen Fehlschlag mit `catch` abzufangen. Damit die Ablaufverfolgungsdatei nicht mit doppelten Fehlermeldungen überflutet wird, deaktiviert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Ablaufverfolgung der Ressource oder der Aktion nach dem ersten Sicherheitsfehler. Es gibt eine Ausnahmeablaufverfolgung für jeden fehlgeschlagenen Ressourcenzugriff, und zwar für den ersten Versuch, auf eine Ressource zuzugreifen oder eine Aktion auszuführen.  
+ Die beste Möglichkeit festzustellen, ob in einer teilweise vertrauenswürdigen Umgebung auf eine bestimmte Ressource zugegriffen oder eine Aktion ausgeführt werden kann, besteht darin, innerhalb eines `try` -Blocks auf die Ressource zuzugreifen oder die Aktion auszuführen, und dann einen möglichen Fehlschlag mit `catch` abzufangen. Um die Ablaufverfolgungsdatei überflutet mit doppelten Fehlermeldungen, deaktiviert WCF Ablaufverfolgung der Ressource oder der Aktion nach dem ersten Sicherheitsfehler. Es gibt eine Ausnahmeablaufverfolgung für jeden fehlgeschlagenen Ressourcenzugriff, und zwar für den ersten Versuch, auf eine Ressource zuzugreifen oder eine Aktion auszuführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

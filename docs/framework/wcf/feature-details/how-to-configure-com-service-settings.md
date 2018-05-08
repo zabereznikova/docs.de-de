@@ -1,34 +1,20 @@
 ---
 title: 'Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-com-service-settings"></a>Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen
 Wird eine Anwendungsschnittstelle durch Verwendung des COM+-Dienskonfigurationstools hinzugefügt oder entfernt, wird die Webdienstkonfiguration innerhalb der Konfigurationsdatei der Anwendung aktualisiert. In der COM+-gehosteten Modus, befindet sich die Datei Application.config im Stammverzeichnis Anwendung (%PROGRAMFILES%\ComPlus Anwendungen\\{Appid} ist die Standardeinstellung). In beiden im Internet gehosteten Modi wird die Datei Web.config im angegebenen vroot-Verzeichnis abgelegt.  
   
 > [!NOTE]
->  Nachrichtensignaturen sollten zum Schutz vor Manipulation von Nachrichten zwischen einem Client und einem Server verwendet werden. Außerdem sollte Verschlüsselung auf Nachrichten- oder Transportebene verwendet werden, um Schutz vor der Offenlegung von Informationen in Nachrichten zu bieten, die zwischen einem Client und einem Server übertragen werden. Ebenso wie bei den [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensten wird die Verwendung der Drosselung empfohlen, um die Anzahl der gleichzeitigen Anrufe, Verbindungen, Instanzen und ausstehenden Vorgänge zu begrenzen. Dies trägt zur Vermeidung einer übermäßigen Ressourcenbeanspruchung bei. Das Drosselungsverhalten wird durch Dienstkonfigurations-Dateieinstellungen angegeben.  
+>  Nachrichtensignaturen sollten zum Schutz vor Manipulation von Nachrichten zwischen einem Client und einem Server verwendet werden. Außerdem sollte Verschlüsselung auf Nachrichten- oder Transportebene verwendet werden, um Schutz vor der Offenlegung von Informationen in Nachrichten zu bieten, die zwischen einem Client und einem Server übertragen werden. Wie bei Windows Communication Foundation (WCF)-Dienste, sollten Sie die Einschränkung verwenden, um die Anzahl der gleichzeitigen Anrufe, Verbindungen, Instanzen und ausstehenden Vorgänge zu begrenzen. Dies trägt zur Vermeidung einer übermäßigen Ressourcenbeanspruchung bei. Das Drosselungsverhalten wird durch Dienstkonfigurations-Dateieinstellungen angegeben.  
   
 ## <a name="example"></a>Beispiel  
  Beispiel: Eine Komponente, mit der die folgende Schnittstelle implementiert wird:  
@@ -62,13 +48,13 @@ public interface IFinancesContract : IDisposable
   
  Clientanwendungen, die diesen Dienst verwenden, müssen den Vorgaben dieses Vertrags entsprechen und eine Bindung verwenden, die mit der in der Anwendungskonfiguration angegebenen Bindung kompatibel ist.  
   
- Das folgende Codebeispiel zeigt eine standardmäßige Konfigurationsdatei. Als [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Webdienst entspricht diese Datei dem standardmäßigen Konfigurationsschema für Dienstmodelle und kann genauso wie andere [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstkonfigurationsdateien bearbeitet werden.  
+ Das folgende Codebeispiel zeigt eine standardmäßige Konfigurationsdatei. Wird ein Windows Communication Foundation (WCF)-Webdienst, dies entspricht dem standard-Service Model Configuration-Schema und kann bearbeitet werden, auf die gleiche Weise wie andere WCF-Services-Konfigurationsdateien.  
   
  Folgende Änderungen sind üblich:  
   
 -   Das Ändern der Endpunktadresse vom standardmäßigen Format Anwendungsname/Komponentenname/Schnittstellenname in eine benutzerfreundlichere Form.  
   
--   Das Ändern des Dienst-Namespace von der standardmäßigen Form "http://tempuri.org/InterfaceID" in eine aussagekräftigere Form.  
+-   Ändern den Namespace des Diensts von der Standardeinstellung "http://tempuri.org/InterfaceID" Formular, um eine aussagekräftigere Form.  
   
 -   Das Ändern des Endpunkts, um eine andere Transportbindung zu verwenden.  
   

@@ -1,24 +1,12 @@
 ---
-title: "Absolute Verzögerung"
-ms.custom: 
+title: Absolute Verzögerung
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 60e3b65851dba68b4d01d6e4195b5faf99b583de
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 3a104f6b879e9cdc899bad2201ad1ed320a38a2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="absolute-delay"></a>Absolute Verzögerung
 Das Hauptszenario für dieses Beispiel ist die Verzögerung eines Vorgangs in einer Workflowanwendung mithilfe von permanenten Zeitgebern bis zu einem angegebenen Zeitpunkt (<xref:System.DateTime>). Dies unterscheidet sich von der Verwendung der integrierten <xref:System.Activities.Statements.Delay>-Aktivität, da ein Vorgang hierdurch nur für eine bestimmte Zeitspanne (<xref:System.TimeSpan>) bzw. eine Anzahl von Minuten/Sekunden verzögert werden kann.  
@@ -78,6 +66,6 @@ Das Hauptszenario für dieses Beispiel ist die Verzögerung eines Vorgangs in ei
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

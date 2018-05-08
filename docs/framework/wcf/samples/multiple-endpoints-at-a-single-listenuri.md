@@ -1,24 +1,12 @@
 ---
 title: Mehrere Endpunkte unter einem ListenUri
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 909fb35f9b8e4628df06918f207c3c86770a2d4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3eb2036ffbb7c5e8cae77ebc1a86e07d31626c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Mehrere Endpunkte unter einem ListenUri
 In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem einzelnen `ListenUri` hostet. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst.  
@@ -50,7 +38,7 @@ In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem ei
   
  Alle drei Endpunkte werden unter demselben `ListenUri` gehostet und verwenden dieselbe `binding`. Endpunkte unter demselben `ListenUri` müssen dieselbe Bindung besitzen, da sie gemeinsam einen einzigen Kanalstapel nutzen, der Nachrichten an dieser physischen Adresse des Computers überwacht. Die `address` jedes Endpunkts ist ein URN. Obwohl Adressen in der Regel physische Speicherplätze darstellen, kann die Adresse eigentlich ein beliebiger URI sein, da die Adresse für den Abgleich und die Filterung verwendet wird, wie in diesem Beispiel gezeigt.  
   
- Da alle drei Endpunkte denselben `ListenUri` nutzen, muss [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] beim Eintreffen einer Nachricht an diesem URI entscheiden, für welchen Endpunkt die Nachricht bestimmt ist. Jeder Endpunkt besitzt einen Nachrichtenfilter, der aus zwei Teilen besteht: dem Adressfilter und dem Vertragsfilter. Der Adressfilter gleicht `To` der SOAP-Nachricht mit der Adresse des Dienstendpunkts ab. So sind beispielsweise nur an `To "Urn:OtherEcho"` adressierte Nachrichten für den dritten Endpunkt dieses Diensts vorgesehen. Der Vertragsfilter gleicht die den Vorgängen eines besonderen Vertrags zugeordneten Aktionen ab. Nachrichten mit der Aktion von `IEcho` `Echo` stimmen beispielsweise mit den Vertragsfiltern des zweiten und dritten Endpunkts dieses Diensts überein, da beide Endpunkte den `IEcho`-Vertrag hosten.  
+ Da alle drei Endpunkte denselben `ListenUri`, wenn eine Nachricht eintrifft, Windows Communication Foundation (WCF) müssen entscheiden, welcher Endpunkt die Nachricht bestimmt ist. Jeder Endpunkt besitzt einen Nachrichtenfilter, der aus zwei Teilen besteht: dem Adressfilter und dem Vertragsfilter. Der Adressfilter gleicht `To` der SOAP-Nachricht mit der Adresse des Dienstendpunkts ab. So sind beispielsweise nur an `To "Urn:OtherEcho"` adressierte Nachrichten für den dritten Endpunkt dieses Diensts vorgesehen. Der Vertragsfilter gleicht die den Vorgängen eines besonderen Vertrags zugeordneten Aktionen ab. Nachrichten mit der Aktion von `IEcho` `Echo` stimmen beispielsweise mit den Vertragsfiltern des zweiten und dritten Endpunkts dieses Diensts überein, da beide Endpunkte den `IEcho`-Vertrag hosten.  
   
  Deshalb ermöglicht es die Kombination aus Adressfilter und Vertragsfilter, jede am `ListenUri` dieses Diensts eingehende Nachricht zum richtigen Endpunkt weiterzuleiten. Der dritte Endpunkt wird von den anderen beiden unterschieden, da er Nachrichten akzeptiert, die von den anderen Endpunkten an eine andere Adresse gesendet wurden. Der erste und der zweite Endpunkt werden anhand ihrer Verträge (die Aktion der eingehenden Nachricht) voneinander unterschieden.  
   
@@ -86,7 +74,7 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
   

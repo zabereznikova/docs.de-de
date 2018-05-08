@@ -1,14 +1,6 @@
 ---
 title: ICLRStrongName::StrongNameSignatureGenerationEx-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameSignatureGenerationEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 247bcfa3c9f7a02dea331ff14948a00812fb06e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bf9a94c55258193e3172459da129ba16f9c3265
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx-Methode
 Generiert eine starke Namenssignatur für die angegebene Assembly gemäß den angegebenen Flags.  
@@ -80,12 +68,12 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Eine oder mehrere der folgenden Werte:  
   
--   `SN_SIGN_ALL_FILES`(0 x 00000001) – alle Hashes für verknüpfte Module neu.  
+-   `SN_SIGN_ALL_FILES` (0 x 00000001) – alle Hashes für verknüpfte Module neu.  
   
--   `SN_TEST_SIGN`(0 x 00000002) - Test Signierung der Assembly.  
+-   `SN_TEST_SIGN` (0 x 00000002) - Test Signierung der Assembly.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK`Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
  Geben Sie null für `wszFilePath` auf die Größe der Signatur zu berechnen, ohne die Signatur zu erstellen.  
@@ -103,7 +91,7 @@ HRESULT StrongNameSignatureGenerationEx (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [StrongNameSignatureGeneration-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)  

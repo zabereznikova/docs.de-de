@@ -1,24 +1,12 @@
 ---
 title: Benutzerdefinierte Autorisierung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f90311a-2593-462e-9174-2f7ac78217b9
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 35994b76498d9287f5f0c22c024afc176d1f9260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f89fb3c14735417f2688890eb335e9700fb99d6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-authorization"></a>Benutzerdefinierte Autorisierung
 Autorisierung ist der Prozess, Zugriff auf Ressourcen und Aufgaben zu kontrollieren. Die Themen in diesem Abschnitt ermöglichen es Ihnen, verschiedene Anspruchstypen oder Richtlinien zu erstellen und zu implementieren.  
@@ -39,7 +27,7 @@ Autorisierung ist der Prozess, Zugriff auf Ressourcen und Aufgaben zu kontrollie
  [Vorgehensweise: Erstellen einer benutzerdefinierten Prinzipalidentität](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
  Veranschaulicht das Szenario, wenn <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> zusammen mit einer benutzerdefinierten Autorisierungsrichtlinie und einem benutzerdefinierten Prinzipal verwendet wird.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.IdentityModel.Claims>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

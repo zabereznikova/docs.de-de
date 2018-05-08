@@ -1,28 +1,17 @@
 ---
 title: Persistenzteilnehmer
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b85acf2e3c4d885988e92948481182b7cf8c32c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f2875ead24e4c072d267a8bb6cddddc7f9b96d86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-participants"></a>Persistenzteilnehmer
 Ein Persistenzteilnehmer kann an einem von einem Anwendungshost ausgelösten Persistenzvorgang (Speichern oder Laden) teilnehmen. Die [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] im Lieferumfang von zwei abstrakter Klassen **PersistenceParticipant** und **PersistenceIOParticipant**, dem Sie einen persistenzteilnehmer erstellen können. Ein Persistenzteilnehmer leitet sich von einer dieser Klassen ab, implementiert die passenden Methoden und fügt dann der <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A>-Auflistung im <xref:System.ServiceModel.Activities.WorkflowServiceHost> eine Instanz der Klasse hinzu. Beim Beibehalten einer Workflowinstanz sucht der Anwendungshost möglicherweise nach Workflowerweiterungen dieser Art und ruft auf den Persistenzteilnehmern zur richtigen Zeit jeweils die entsprechenden Methoden auf.  
   
- In der folgenden Liste werden die Aufgaben beschrieben, die das Persistenzsubsystem in den einzelnen Phasen des Persistenzvorgangs (Speichern) ausführt. Die Persistenzteilnehmer werden in der dritten und vierten Phase verwendet. Falls der Teilnehmer ein E/A-Teilnehmer ist (ein Persistenzteilnehmer, der auch an E/A-Vorgängen beteiligt ist), wird der Teilnehmer auch in der sechsten Phase verwendet.  
+ In der folgenden Liste werden die Aufgaben beschrieben, die das Persistenzsubsystem in den einzelnen Phasen des Persistenzvorgangs (Speichern) ausführt. Die Persistenzteilnehmer werden in der dritten und vierten Phase verwendet. Wenn der Teilnehmer ist ein e/a-Teilnehmer (ein persistenzteilnehmer, die auch in e/a-Vorgängen beteiligt ist), wird der Teilnehmer auch in der sechsten Phase verwendet.  
   
 1.  Erfasst integrierte Werte, einschließlich Workflowstatus, Lesezeichen, zugeordnete Variablen und Timestamps.  
   
@@ -34,7 +23,7 @@ Ein Persistenzteilnehmer kann an einem von einem Anwendungshost ausgelösten Per
   
 5.  Beibehalten oder Speichern des Workflows im persistenten Speicher.  
   
-6.  Ruft die <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A>-Methode auf allen E/A-Persistenzteilnehmern auf. Wenn der Teilnehmer kein E/A-Teilnehmer ist, wird diese Aufgabe übersprungen. Falls der Persistenzabschnitt transaktionsgebunden ist, wird die Transaktion in der Transaction.Current-Eigenschaft bereitgestellt.  
+6.  Ruft die <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> -Methode auf allen e/a-persistenzteilnehmer. Wenn der Teilnehmer kein e/a-Teilnehmer ist, wird diese Aufgabe übersprungen. Falls der Persistenzabschnitt transaktionsgebunden ist, wird die Transaktion in der Transaction.Current-Eigenschaft bereitgestellt.  
   
 7.  Wartet, bis die Vorgänge aller Persistenzteilnehmer abgeschlossen sind. Falls alle Teilnehmer das Beibehalten der Instanzdaten erfolgreich abschließen, wird für die Transaktion ein Commit ausgeführt.  
   
@@ -42,13 +31,13 @@ Ein Persistenzteilnehmer kann an einem von einem Anwendungshost ausgelösten Per
   
  Jede Phase wird abgeschlossen, bevor die nächste Phase beginnt. Beispielsweise werden die Werte in gesammelt **alle** persistenzteilnehmer in der ersten Phase. Alle in der ersten Phase erfassten Werte werden in der zweiten Phase dann für alle Persistenzteilnehmer bereitgestellt, um die Zuordnung sicherzustellen. Alle in der ersten und zweiten Phase erfassten Werte werden dann für alle Persistenzteilnehmer in der dritten Phase bereitgestellt usw.  
   
- In der folgenden Liste werden die Aufgaben beschrieben, die das Persistenzsubsystem in den einzelnen Phasen des Ladevorgangs ausführt. Die Persistenzteilnehmer werden in der vierten Phase verwendet. Die E/A-Persistenzteilnehmer (Persistenzteilnehmer, die auch an E/A-Vorgängen beteiligt sind) werden auch in der dritten Phase verwendet.  
+ In der folgenden Liste werden die Aufgaben beschrieben, die das Persistenzsubsystem in den einzelnen Phasen des Ladevorgangs ausführt. Die Persistenzteilnehmer werden in der vierten Phase verwendet. E/a-persistenzteilnehmer (persistenzteilnehmer, die auch in e/a-Vorgängen beteiligt sind) werden auch in der dritten Phase verwendet.  
   
 1.  Erfasst alle Persistenzteilnehmer, die der Erweiterungsauflistung mit Zuordnung zur Workflowinstanz hinzugefügt wurden.  
   
 2.  Lädt den Workflow aus dem Persistenzspeicher.  
   
-3.  Ruft <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> auf allen E/A-Persistenzteilnehmern auf und wartet, bis die Vorgänge aller Persistenzteilnehmer abgeschlossen sind. Falls der Persistenzabschnitt transaktionsgebunden ist, wird die Transaktion in der Transaction.Current-Eigenschaft bereitgestellt.  
+3.  Ruft die <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> auf allen e/a-persistenzteilnehmern auf und wartet, bis alle persistenzteilnehmer abgeschlossen. Falls der Persistenzabschnitt transaktionsgebunden ist, wird die Transaktion in der Transaction.Current-Eigenschaft bereitgestellt.  
   
 4.  Lädt die Workflowinstanz basierend auf den aus dem Persistenzspeicher abgerufenen Daten in den Arbeitsspeicher.  
   

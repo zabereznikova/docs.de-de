@@ -1,31 +1,19 @@
 ---
-title: "Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE3.0-Clients"
-ms.custom: 
+title: 'Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE3.0-Clients'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c93b91123c7622bea125bfa702c53a697b1ac84c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 174ecd279f9380136532ce0d5105b7a71b6d88da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE3.0-Clients
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste sind auf niedriger Ebene mit Diensten von Web Services Enhancements (3.0) WSE für Microsoft .NET-Clients kompatibel, wenn [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste für die Verwendung der Version der WS-Adressierungsspezifikation vom August 2004 konfiguriert sind.  
+Windows Communication Foundation (WCF)-Dienste sind auf Transportebene mit Web Services Enhancements 3.0 für Microsoft .NET (WSE)-Clients kompatibel, wenn WCF-Dienste konfiguriert sind, verwenden Sie die Version vom August 2004 des WS-Addressing-Spezifikation.  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>So konfigurieren Sie einen WCF-Dienst für die Zusammenarbeit mit WSE3.0-Clients  
   
-1.  Definieren Sie eine benutzerdefinierte Bindung für den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst.  
+1.  Definieren Sie eine benutzerdefinierte Bindung für den WCF-Dienst.  
   
      Es muss eine benutzerdefinierte Bindung erstellt werden, um anzugeben, dass die Version der WS-Adressierungsspezifikation vom August 2004 für die Nachrichtencodierung verwendet wird.  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
     3.  Geben Sie einen Authentifizierungsmodus und die Version der WS-Security-Spezifikationen, die verwendet werden, um Nachrichten zu sichern, die mit WSE 3.0 kompatibel sind, indem Sie ein untergeordnetes Element hinzufügen [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) auf die [ \<binden >](../../../../docs/framework/misc/binding.md).  
   
-         Legen den Authentifizierungsmodus, zum Festlegen der `authenicationMode` Attribut von der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Ein Authentifizierungsmodus ist mit einer sofort verwendbaren WSE 3.0-Sicherheitsassertion vergleichbar. In der folgenden Tabelle werden die Authentifizierungsmodi von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]  sofort verwendbaren WSE 3.0-Sicherheitsassertionen zugeordnet.  
+         Legen den Authentifizierungsmodus, zum Festlegen der `authenicationMode` Attribut von der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Ein Authentifizierungsmodus ist mit einer sofort verwendbaren WSE 3.0-Sicherheitsassertion vergleichbar. Die folgende Tabelle ordnet Authentifizierungsmodi in WCF Sicherheitsassertionen in WSE 3.0.  
   
         |WCF-Authentifizierungsmodus|Sofort verwendbare WSE 3.0-Sicherheitsassertion|  
         |-----------------------------|----------------------------------------|  
@@ -46,11 +34,11 @@ ms.lasthandoff: 12/22/2017
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameOverTransport>|`usernameOverTransportSecurity`|  
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameForCertificate>|`usernameForCertificateSecurity`|  
   
-         \*Einer der Hauptunterschiede zwischen den `mutualCertificate10Security` und `mutualCertificate11Security` Sicherheitsassertionen ist die Version der WS-Security-Spezifikation, die WSE zum Sichern der SOAP-Nachrichten verwendet. Für `mutualCertificate10Security` wird WS-Security 1.0 verwendet, wohingegen WS-Security 1.1 für `mutualCertificate11Security` verwendet wird. Für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], Version der WS-Security-Spezifikation wird angegeben, der `messageSecurityVersion` Attribut von der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
+         \* Einer der Hauptunterschiede zwischen den `mutualCertificate10Security` und `mutualCertificate11Security` Sicherheitsassertionen ist die Version der WS-Security-Spezifikation, die WSE zum Sichern der SOAP-Nachrichten verwendet. Für `mutualCertificate10Security` wird WS-Security 1.0 verwendet, wohingegen WS-Security 1.1 für `mutualCertificate11Security` verwendet wird. Für WCF-Version der WS-Security-Spezifikation wird angegeben, der `messageSecurityVersion` Attribut von der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
   
          Um die Version der WS-Security-Spezifikation festgelegt, die zum Sichern von SOAP-Nachrichten verwendet wird, legen Sie die `messageSecurityVersion` Attribut von der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Für die Zusammenarbeit mit WSE 3.0 legen Sie den Wert des `messageSecurityVersion`-Attributs auf <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A> fest.  
   
-    4.  Gibt an, dass die Version vom August 2004 des WS-Addressing-Spezifikation von verwendet wird [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] durch Hinzufügen einer [ \<TextMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) und legen Sie die `messageVersion` auf seinen Wert auf <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.  
+    4.  Gibt an, dass die Version vom August 2004 des WS-Addressing-Spezifikation durch Hinzufügen von WCF verwendet wird eine [ \<TextMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) und legen Sie die `messageVersion` auf seinen Wert auf <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.  
   
         > [!NOTE]
         >  Wenn Sie SOAP 1.2 verwenden, legen Sie das `messageVersion`-Attribut auf <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A> fest.  

@@ -1,36 +1,22 @@
 ---
 title: ServiceDescription und WSDL-Verweis
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7eadfaaae920071092f569fe2b8882875ed9497f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: e70d653519c13d2f40fa2a579b674893e1b7ab02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription und WSDL-Verweis
-In diesem Thema wird beschrieben, wie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web Services Description Language (WSDL)-Dokumente <xref:System.ServiceModel.Description.ServiceDescription>-Instanzen zuordnet bzw. die Dokumente von diesen Instanzen zuordnet.  
+In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) Web Services Description Language (WSDL)-Dokumente in und aus zugeordnet <xref:System.ServiceModel.Description.ServiceDescription> Instanzen.  
   
 ## <a name="how-servicedescription-maps-to-wsdl-11"></a>Zuordnen von ServiceDescription zu WSDL 1.1  
- Sie können [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwenden, um WSDL-Dokumente von einer <xref:System.ServiceModel.Description.ServiceDescription>-Instanz für den Dienst zu exportieren. WSDL-Dokumente werden automatisch für den Dienst generiert, wenn Metadatenendpunkte veröffentlicht werden.  
+ Verwenden Sie WCF zum Exportieren von WSDL-Dokumente aus einem <xref:System.ServiceModel.Description.ServiceDescription> Instanz für Ihren Dienst. WSDL-Dokumente werden automatisch für den Dienst generiert, wenn Metadatenendpunkte veröffentlicht werden.  
   
  Mithilfe des <xref:System.ServiceModel.Description.ServiceEndpoint>-Typs können auch <xref:System.ServiceModel.Description.ContractDescription>-Instanzen <xref:System.ServiceModel.Channels.Binding>-Instanzen und `WsdlImporter`-Instanzen aus WSDL-Dokumenten importiert werden.  
   
- Die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exportierten WSDL-Dokumente importieren alle verwendeten XML-Schemadefinitionen aus externen XML-Schemadokumenten. Ein separates XML-Schemadokument wird für jeden Zielnamespace exportiert, der von den Datentypen im Dienst verwendet wird. Ebenso wird ein separates WSDL-Dokument für jeden Zielnamespace exportiert, der von den Dienstverträgen verwendet wird.  
+ WCF, exportierten WSDL-Dokumente importieren alle XML-Schemadefinitionen aus externen XML-Schema-Dokumenten verwendet. Ein separates XML-Schemadokument wird für jeden Zielnamespace exportiert, der von den Datentypen im Dienst verwendet wird. Ebenso wird ein separates WSDL-Dokument für jeden Zielnamespace exportiert, der von den Dienstverträgen verwendet wird.  
   
 ### <a name="servicedescription"></a>ServiceDescription  
  Einem <xref:System.ServiceModel.Description.ServiceDescription>-Element wird eine `wsdl:service`-Instanz zugeordnet. Eine <xref:System.ServiceModel.Description.ServiceDescription>-Instanz enthält eine Auflistung von <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanzen, die jeweils einzelnen `wsdl:port`-Elementen zugeordnet werden.  
@@ -49,13 +35,13 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[indigo1](../../../../includes/in
 |Eigenschaften|WSDL-Zuordnung|  
 |----------------|------------------|  
 |`Name`|Die `wsdl:port` /@name Wert für den Endpunkt und die `wsdl:binding` /@name Wert für die endpunktbindung.|  
-|`Address`|Die Adresse für die `wsdl:port`-Definition des Endpunkts.<br /><br /> Der Transport für den Endpunkt bestimmt das Format der Adresse. Für von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützte Transporte kann es sich dabei zum Beispiel um eine SOAP-Adresse oder einen Endpunktverweis handeln.|  
-|`Binding`|Die `wsdl:binding`-Definition für den Endpunkt.<br /><br /> Im Gegensatz zu `wsdl:binding`-Definitionen werden Bindungen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] an keinen Vertrag gebunden.|  
+|`Address`|Die Adresse für die `wsdl:port`-Definition des Endpunkts.<br /><br /> Der Transport für den Endpunkt bestimmt das Format der Adresse. Z. B. für Transporte WCF unterstützt möglich es eine SOAP-Adresse oder einen Endpunktverweis.|  
+|`Binding`|Die `wsdl:binding`-Definition für den Endpunkt.<br /><br /> Im Gegensatz zu `wsdl:binding` Definitionen, die Bindungen in WCF an keinen Vertrag gebunden.|  
 |`Contract`|Die `wsdl:portType`-Definition für den Endpunkt.|  
 |`Behaviors`|Endpunktverhalten, die die <xref:System.ServiceModel.Description.IWsdlExportExtension>-Schnittstelle implementieren, können `wsdl:port` für den Endpunkt ändern.|  
   
 ### <a name="bindings"></a>Bindungen  
- Die Bindungsinstanz für eine `ServiceEndpoint`-Instanz wird einer `wsdl:binding`-Definition zugeordnet. Im Gegensatz zu `wsdl:binding`-Definitionen, die einer bestimmten `wsdl:portType`-Definition zugewiesen werden müssen, sind [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Bindungen vertragsunabhängig.  
+ Die Bindungsinstanz für eine `ServiceEndpoint`-Instanz wird einer `wsdl:binding`-Definition zugeordnet. Im Gegensatz zu `wsdl:binding` Definitionen, die einen bestimmten zugeordnet werden müssen `wsdl:portType` Definition der WCF-Bindungen werden vertragsunabhängig.  
   
  Eine Bindung besteht aus einer Auflistung von Bindungselementen. Jedes Element beschreibt einige Aspekte der Kommunikation zwischen dem Endpunkt und den Clients. Darüber hinaus besitzt eine Bindung eine <xref:System.ServiceModel.Channels.MessageVersion>, die die <xref:System.ServiceModel.EnvelopeVersion> und die <xref:System.ServiceModel.Channels.AddressingVersion> für den Endpunkt angibt.  
   
@@ -72,10 +58,10 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[indigo1](../../../../includes/in
  Das <xref:System.ServiceModel.Channels.TransportBindingElement> für die Bindung bestimmt den für Transporte verwendeten Uniform Resource Identifier (URI) für eine SOAP-Bindung.  
   
 #### <a name="addressingversion"></a>AddressingVersion  
- Die `AddressingVersion` einer Bindung wird der Version der in `wsd:port` verwendeten Adressierung zugeordnet. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt SOAP 1.1- und SOAP 1.2-Adressen sowie Endpunktverweise für WS-Adressierung 08/2004 und WS-Adressierung 1.0.  
+ Die `AddressingVersion` einer Bindung wird der Version der in `wsd:port` verwendeten Adressierung zugeordnet. WCF unterstützt SOAP 1.1- und SOAP 1.2-Adressen und WS-Adressierung 08/2004 und WS-Adressierung 1.0 Endpunktverweise.  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- Die `EnvelopeVersion` einer Bindung wird der der in `wsdl:binding` verwendeten SOAP-Version zugeordnet. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt SOAP 1.1- und SOAP 1.2-Bindungen.  
+ Die `EnvelopeVersion` einer Bindung wird der der in `wsdl:binding` verwendeten SOAP-Version zugeordnet. WCF unterstützt SOAP 1.1- und SOAP 1.2-Bindungen.  
   
 ### <a name="contracts"></a>Verträge  
  Die <xref:System.ServiceModel.Description.ContractDescription>-Instanz für eine `ServiceEndpoint`-Instanz wird `wsdl:portType` zugeordnet. Eine `ContractDescription`-Instanz beschreibt alle Vorgänge für einen angegebenen Vertrag.  
@@ -84,7 +70,7 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[indigo1](../../../../includes/in
 |----------------|------------------|  
 |`Name`|Die `wsdl:portType` /@name Wert für den Vertrag.|  
 |`Namespace`|Der targetNamespace für die `wsdl:portType`-Definition.|  
-|`SessionMode`|Die `wsdl:portType` /@msc:usingSession Wert für den Vertrag. Dieses Attribut ist eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Erweiterung für WSDL 1.1.|  
+|`SessionMode`|Die `wsdl:portType` /@msc:usingSession Wert für den Vertrag. Dieses Attribut ist ein WCF-Erweiterung für WSDL 1.1.|  
 |`Operations`|Die `wsdl:operation`-Definitionen für den Vertrag.|  
   
 ### <a name="operations"></a>Vorgänge  
@@ -96,8 +82,8 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[indigo1](../../../../includes/in
 |----------------|------------------|  
 |`Name`|Die `wsdl:portType` / `wsdl:operation` /@name Wert für den Vorgang.|  
 |`ProtectionLevel`|Schutzassertionen in der Sicherheitsrichtlinie, die an die `wsdl:binding/wsdl:operation`-Nachrichten für diesen Vorgang angehängt ist.|  
-|`IsInitiating`|Die `wsdl:portType` / `wsdl:operation` /@msc:isInitiating Wert für den Vorgang. Dieses Attribut ist eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Erweiterung für WSDL 1.1.|  
-|`IsTerminating`|Die `wsdl:portType` / `wsdl:operation` /@msc:isTerminating Wert für den Vorgang. Dieses Attribut ist eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Erweiterung für WSDL 1.1.|  
+|`IsInitiating`|Die `wsdl:portType` / `wsdl:operation` /@msc:isInitiating Wert für den Vorgang. Dieses Attribut ist ein WCF-Erweiterung für WSDL 1.1.|  
+|`IsTerminating`|Die `wsdl:portType` / `wsdl:operation` /@msc:isTerminating Wert für den Vorgang. Dieses Attribut ist ein WCF-Erweiterung für WSDL 1.1.|  
 |`Messages`|Die `wsdl:portType` / `wsdl:operation` / `wsdl:input` und `wsdl:portType` / `wsdl:operation` / `wsdl:output` Nachrichten für den Vorgang.|  
 |`Faults`|Die `wsdl:portType` / `wsdl:operation` / `wsdl:fault` Definitionen für den Vorgang.|  
 |`Behaviors`|`DataContractSerializerOperationBehavior` und `XmlSerializerOperationBehavior` dienen dem Umgang mit der Vorgangsbindung und den Vorgangsnachrichten.|  

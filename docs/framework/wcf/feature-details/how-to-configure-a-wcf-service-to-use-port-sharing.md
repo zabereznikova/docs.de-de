@@ -1,30 +1,18 @@
 ---
-title: "Vorgehensweise: Konfigurieren eines Windows Communication Foundation-Dienstes zum Durchführen der Anschlussfreigabe"
-ms.custom: 
+title: 'Vorgehensweise: Konfigurieren eines Windows Communication Foundation-Dienstes zum Durchführen der Anschlussfreigabe'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c0086e145ca2aab325764467742a4ff2e6e3c0b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a3aca2bac546c9142137afc025133bc1154ff90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Vorgehensweise: Konfigurieren eines Windows Communication Foundation-Dienstes zum Durchführen der Anschlussfreigabe
-Der einfachste Weg, um die net.tcp://-Anschlussfreigabe in Ihrer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung zu verwenden, besteht darin, einen Dienst mit der <xref:System.ServiceModel.NetTcpBinding> verfügbar zu machen.  
+Die einfachste Möglichkeit zum net.tcp://-Anschlussfreigabe in der Windows Communication Foundation (WCF)-Anwendung zu verwenden ist, um einen Dienst mit verfügbar zu machen die <xref:System.ServiceModel.NetTcpBinding>.  
   
  Diese Bindung verfügt über eine <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>-Eigenschaft, die festlegt, ob die net.tcp://-Anschlussfreigabe für den mit dieser Bindung zu konfigurierenden Dienst aktiviert ist.  
   

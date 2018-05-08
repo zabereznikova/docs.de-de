@@ -1,31 +1,17 @@
 ---
 title: Übersicht über Windows Communication Foundation-Bindungen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38661c2ca0e3329f508e2740dfcdf69c0d5e4105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Übersicht über Windows Communication Foundation-Bindungen
-Bindungen sind Objekte, die die zum Herstellen einer Verbindung zum Endpunkt eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstes erforderlichen Kommunikationsdetails angeben. Jeder Endpunkt in einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst erfordert eine korrekt angegebene Bindung. In diesem Thema werden die Typen von Kommunikationsdetails, die die Bindungen definieren, die Elemente einer Bindung, die in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthaltenen Bindungen und Methoden zum Angeben einer Bindung für einen Endpunkt aufgeführt.  
+Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Verbindung mit dem Endpunkt eines Windows Communication Foundation (WCF)-Diensts erforderlich sind. Jeder Endpunkt in einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst erfordert eine korrekt angegebene Bindung. In diesem Thema werden die Typen von Kommunikationsdetails, die die Bindungen definieren, die Elemente einer Bindung, die in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthaltenen Bindungen und Methoden zum Angeben einer Bindung für einen Endpunkt aufgeführt.  
   
 ## <a name="what-a-binding-defines"></a>Was eine Bindung definiert  
  Die Informationen in einer Bindung können sehr einfach oder sehr komplex sein. Die einfachste Bindung gibt nur das Transportprotokoll (wie HTTP) an, das für die Verbindung zum Endpunkt verwendet werden muss. Allgemeiner gesagt fallen die Informationen in einer Bindung zur Verbindung mit einem Endpunkt in eine der folgenden Kategorien.  

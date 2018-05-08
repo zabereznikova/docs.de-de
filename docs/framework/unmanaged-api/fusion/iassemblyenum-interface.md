@@ -1,14 +1,6 @@
 ---
 title: IAssemblyEnum-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAssemblyEnum
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 634ef9f9-e94b-4776-a9e1-866df9a76c8f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ca74970ea7c2b98ad65e279fc1cc128b2e55aeb5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4af4d0a6049c789db371d84b564d261453968b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum-Schnittstelle
 Stellt einen Enumerator für ein Array von `IAssemblyName` Objekte.  
@@ -50,7 +38,7 @@ Stellt einen Enumerator für ein Array von `IAssemblyName` Objekte.
   
  **Header:** Fusion.h  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  

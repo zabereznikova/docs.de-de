@@ -1,31 +1,17 @@
 ---
 title: Entwickeln und Bereitstellen von WCF Data Services
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, developing
 - WCF Data Services, deploying
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e02b7317eef8e7124bd5ba9ceef201cddc9bbea1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
 Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Weitere grundlegende Informationen zu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], finden Sie unter [Einstieg](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) und [Übersicht](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -52,7 +38,7 @@ Dieses Thema enthält Informationen zum Entwickeln und Bereitstellen von [!INCLU
   
 1.  **Lokaler IIS-Server**  
   
-     Wenn Sie einen Datendienst erstellen, bei dem es sich um eine unter Internetinformationsdienste (IIS) ausgeführte [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung oder [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Website handelt, sollten Sie den Datendienst mit IIS auf dem lokalen Computer entwickeln und testen. Die Ausführung des Datendiensts unter IIS erleichtert die Ablaufverfolgung von HTTP-Anforderungen während des Debuggens. Zudem können Sie so vorab die Rechte bestimmen, die IIS für den Zugriff auf Dateien, Datenbanken und andere für den Datendienst erforderliche Ressourcen erfordert. Für die Ausführung des Datendiensts unter IIS müssen IIS und [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] installiert und korrekt konfiguriert sein, und es muss Zugriff auf IIS-Konten im Dateisystem und Datenbanken gewährt werden. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+     Wenn Sie einen Datendienst erstellen, bei dem es sich um eine unter Internetinformationsdienste (IIS) ausgeführte [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung oder [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Website handelt, sollten Sie den Datendienst mit IIS auf dem lokalen Computer entwickeln und testen. Die Ausführung des Datendiensts unter IIS erleichtert die Ablaufverfolgung von HTTP-Anforderungen während des Debuggens. Zudem können Sie so vorab die Rechte bestimmen, die IIS für den Zugriff auf Dateien, Datenbanken und andere für den Datendienst erforderliche Ressourcen erfordert. Um die Ausführung des Datendiensts unter IIS müssen Sie stellt sicher, dass IIS und Windows Communication Foundation (WCF) installiert und ordnungsgemäß konfiguriert sind, und gewähren Sie Zugriff auf IIS-Konten im Dateisystem und Datenbanken. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
     > [!NOTE]
     >  Sie müssen Visual Studio mit Administratorrechten zum Aktivieren der Entwicklungsumgebung so konfigurieren Sie den lokalen IIS-Server ausführen.  

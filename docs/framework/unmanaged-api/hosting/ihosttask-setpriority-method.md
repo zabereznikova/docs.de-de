@@ -1,14 +1,6 @@
 ---
 title: IHostTask::SetPriority-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTask.SetPriority
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: cd8c379b-c7a0-434f-8e23-899bd26be75d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f9a57442b1671ef0286536215d10768636e3aa8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6888e11038af09e797ebaff5a97107ceb8d662e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority-Methode
 Fordert an, dass der Host die Threadpriorität anzupassen, die für die Aufgabe dargestellt, die von der aktuellen Ebene [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) Instanz.  
@@ -54,7 +42,7 @@ HRESULT SetPriority (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SetPriority`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetPriority` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -62,7 +50,7 @@ HRESULT SetPriority (
 |E_FAIL|Ein Unbekannter Schwerwiegender Fehler aufgetreten ist. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr verwendbar innerhalb des Prozesses. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Threads werden erteilt Verarbeitungszeit beim Verwenden eines Round-Robin-Systems, das teilweise auf einen Thread Prioritätsstufe basiert. `SetPriority`ermöglicht die CLR die Prioritätsebene der Thread für den aktuellen Task festgelegt. Die folgenden `newPriority` Werte werden unterstützt.  
+ Threads werden erteilt Verarbeitungszeit beim Verwenden eines Round-Robin-Systems, das teilweise auf einen Thread Prioritätsstufe basiert. `SetPriority` ermöglicht die CLR die Prioritätsebene der Thread für den aktuellen Task festgelegt. Die folgenden `newPriority` Werte werden unterstützt.  
   
 -   THREAD_PRIORITY_ABOVE_NORMAL  
   
@@ -81,7 +69,7 @@ HRESULT SetPriority (
  Die CLR ruft `SetPriority` Wenn der Wert des der <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> durch Benutzercode geändert wird. Ein Host kann einen eigenen Algorithmen für die Priorität Threadzuweisung definieren, und ist kostenlos, um diese Anforderung zu ignorieren.  
   
 > [!NOTE]
->  `SetPriority`gibt keine Auskunft, ob die Prioritätsebene geändert wurde. Rufen Sie [IHostTask:: GetPriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) zum Bestimmen des Werts der Prioritätsebene für den Task.  
+>  `SetPriority` gibt keine Auskunft, ob die Prioritätsebene geändert wurde. Rufen Sie [IHostTask:: GetPriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) zum Bestimmen des Werts der Prioritätsebene für den Task.  
   
  Ebene Thread Priority-Werte werden definiert, durch die Win32- `SetThreadPriority` Funktion. Weitere Informationen zu Threadpriorität finden Sie in der Dokumentation zur Windows-Plattform.  
   
@@ -92,7 +80,7 @@ HRESULT SetPriority (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Threading.Thread>  

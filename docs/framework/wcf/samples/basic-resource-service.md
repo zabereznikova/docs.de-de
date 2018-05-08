@@ -1,27 +1,15 @@
 ---
 title: Einfacher Ressourcendienst
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3ec743bbbb6d18d972701c3149179d6f615d1884
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-resource-service"></a>Einfacher Ressourcendienst
-In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter Dienst mithilfe des [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST-Programmiermodells implementiert wird, das eine Auflistung von Kunden verfügbar macht, die die Vorgänge zum Abrufen, Hinzufügen, Löschen und Ersetzen unterstützt. Dieses Beispiel besteht aus zwei Komponenten – einem selbst gehosteten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-HTTP-Dienst (Service.cs) und einer Konsolenanwendung (program.cs), die den Dienst erstellt und Aufrufe an den Dienst durchführt.  
+In diesem Beispiel veranschaulicht das Implementieren eines HTTP-basierter Diensts mithilfe der Windows Communication Foundation (WCF) REST-Programmiermodells, die eine Auflistung von Kunden verfügbar macht, die unterstützt das Abrufen, hinzufügen, löschen und Ersetzen-Vorgänge. Dieses Beispiel besteht aus zwei Komponenten – einem selbst gehosteten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-HTTP-Dienst (Service.cs) und einer Konsolenanwendung (program.cs), die den Dienst erstellt und Aufrufe an den Dienst durchführt.  
   
 ## <a name="sample-details"></a>Beispieldetails  
  Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst macht eine Auflistung der Kunden auf ressourcenorientierte/REST-Weise verfügbar. Kurz gesagt gehören dazu eindeutige URIs für die Auflistung der Kunden und für jeden Kunden in der Auflistung. Der Dienst unterstützt das Senden von HTTP `GET` am Auflistungs-URI, um die gesamte Auflistung abzurufen, und das Senden von HTTP `POST` am Auflistungs-URI, um der Auflistung einen neuen Kunden hinzuzufügen. Der Dienst unterstützt am URI für einen einzelnen Kunden außerdem HTTP `GET`, um die Kundendetails abzurufen, HTTP `PUT`, um die Kundendetails zu ersetzen, und HTTP `DELETE`, um den Kunden aus der Auflistung zu entfernen. Wenn der Auflistung ein neuer Kunde hinzugefügt wird, weist der Dienst ihm einen eindeutigen URI zu und speichert den URI zusammen mit den anderen Kundendetails. Der Dienst verwendet außerdem den HTTP-Speicherortheader der Antwort, um den URI dem Client mitzuteilen.  
@@ -45,7 +33,7 @@ In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter Dienst mithilfe 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   

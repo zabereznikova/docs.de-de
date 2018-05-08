@@ -1,28 +1,14 @@
 ---
 title: Ablaufverfolgung und Nachrichtenprotokollierung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cae7d806ce68f6804f97195c9bf2571328af6dff
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: MT
+ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-message-logging"></a>Ablaufverfolgung und Nachrichtenprotokollierung
 In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenprotokollierung veranschaulicht. Die resultierende ablaufverfolgungen und Nachrichtenprotokollen mit angezeigt werden die [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -31,7 +17,7 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="tracing"></a>Ablaufverfolgung  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet den im <xref:System.Diagnostics>-Namespace definierten Ablaufverfolgungsmechanismus. In diesem Ablaufverfolgungsmodell werden Ablaufverfolgungsdaten von Ablaufverfolgungsquellen erzeugt, die von Anwendungen implementiert werden. Jede Quelle wird durch einen Namen identifiziert. Ablaufverfolgungsconsumer erstellen Ablaufverfolgungslistener für die Ablaufverfolgungsquellen, für die sie Informationen abrufen möchten. Sie müssen einen Listener für die Ablaufverfolgungsquelle erstellen, um Ablaufverfolgungsdaten zum empfangen. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kann hierzu der folgende Code in der Konfigurationsdatei des Diensts oder Clients hinzugefügt werden, indem die Dienstmodell-Ablaufverfolgungsquelle `switchValue` festgelegt wird:  
+ Windows Communication Foundation (WCF) verwendet, die definierten Ablaufverfolgungsmechanismus der <xref:System.Diagnostics> Namespace. In diesem Ablaufverfolgungsmodell werden Ablaufverfolgungsdaten von Ablaufverfolgungsquellen erzeugt, die von Anwendungen implementiert werden. Jede Quelle wird durch einen Namen identifiziert. Ablaufverfolgungsconsumer erstellen Ablaufverfolgungslistener für die Ablaufverfolgungsquellen, für die sie Informationen abrufen möchten. Sie müssen einen Listener für die Ablaufverfolgungsquelle erstellen, um Ablaufverfolgungsdaten zum empfangen. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kann hierzu der folgende Code in der Konfigurationsdatei des Diensts oder Clients hinzugefügt werden, indem die Dienstmodell-Ablaufverfolgungsquelle `switchValue` festgelegt wird:  
   
 ```xml  
 <system.diagnostics>  
@@ -141,7 +127,7 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   

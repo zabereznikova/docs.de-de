@@ -1,32 +1,18 @@
 ---
 title: Umbenennen eines WCF-Diensts
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 14235a65-b1c5-409d-b6cc-a979acd54bbd
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2ab3d780f85131fc7adf24c5f420bd5fe643d9e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a215523b92757e3bde1dae2e50de22169020e870
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="renaming-a-wcf-service"></a>Umbenennen eines WCF-Diensts
-In diesem Thema wird beschrieben, wie Sie einen [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienst umbenennen.  
+In diesem Thema wird beschrieben, wie Sie einen Windows Communication Foundation (WCF)-Dienst umbenennen können.  
   
 ## <a name="renaming-a-wcf-service"></a>Umbenennen eines WCF-Diensts  
- Führen Sie die folgenden Schritte aus, um einen Dienst in einer [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Vorlage umzubenennen:  
+ Führen Sie die folgenden Schritte aus, um einen Dienst in einer Vorlage für Windows Communication Foundation (WCF) umzubenennen,  
   
 -   Ändern Sie den Namen der Klasse, die den Dienst implementiert.  
   

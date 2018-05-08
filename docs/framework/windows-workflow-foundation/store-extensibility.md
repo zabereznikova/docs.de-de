@@ -1,23 +1,12 @@
 ---
 title: Erweiterbarkeit des Speichers
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e269f485da16bcf3669bb8cb32396fad2875ca89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="store-extensibility"></a>Erweiterbarkeit des Speichers
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> ermöglicht es Benutzern, benutzerdefinierte, anwendungsspezifische Eigenschaften höher zu stufen, die verwendet werden können, um Instanzen in der Persistenzdatenbank abzufragen. Durch das Höherstufen einer Eigenschaft ist der Wert in einer besonderen Ansicht in der Datenbank verfügbar. Diese höhergestuften Eigenschaften sind Eigenschaften, die in Benutzerabfragen verwendet werden können. Dabei kann es sich um einfache Typen wie Int64, Guid, String und DateTime oder um einen serialisierten Binärtyp (byte[]) handeln.  
@@ -118,7 +107,7 @@ ms.lasthandoff: 12/22/2017
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a>[System.Activities.DurableInstancing.InstancePromotedProperties]-Ansicht  
+##  <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties]-Ansicht  
   
 |Spaltenname|Spaltentyp|Beschreibung|  
 |-----------------|-----------------|-----------------|  

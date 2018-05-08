@@ -1,27 +1,15 @@
 ---
 title: 'Vorgehensweise: Erstellen eines AJAX-aktivierten WCF-Diensts und eines ASP.NET-Clients, der auf den Dienst zugreift'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aafa15129e4a131c5f50eb3296a87fc141e1bda6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58971d11ab76112627dd81d53381236932268e25
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Vorgehensweise: Erstellen eines AJAX-aktivierten WCF-Diensts und eines ASP.NET-Clients, der auf den Dienst zugreift
-In diesem Thema wird gezeigt, wie Sie mit Visual&#160;Studio&#160;2008 einen AJAX-aktivierten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst und einen ASP.NET-Client, der auf den Dienst zugreift, erstellen. Der Code für den Dienst und für den Client wird im Abschnitt mit dem Beispiel nach den Schritten bereitgestellt, in denen die Erstellung des Diensts und des Clients beschrieben ist.  
+In diesem Thema wird gezeigt, wie mit Visual Studio 2008 erstellt ein AJAX-aktivierten Windows Communication Foundation (WCF)-Dienst und einem ASP.NET-Client, die auf den Dienst zugreift. Der Code für den Dienst und für den Client wird im Abschnitt mit dem Beispiel nach den Schritten bereitgestellt, in denen die Erstellung des Diensts und des Clients beschrieben ist.  
   
 ### <a name="to-create-the-aspnet-client-application"></a>So erstellen Sie die ASP.NET-Clientanwendung  
   

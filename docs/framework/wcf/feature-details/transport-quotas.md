@@ -1,36 +1,22 @@
 ---
 title: Transportkontingente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-quotas"></a>Transportkontingente
 Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann eine Verbindung übermäßige Ressourcen belegt. Ein Kontingent ist eine harte Grenze, die eine Nutzung zusätzlicher Ressourcen nach Überschreiten des Kontingentwerts verhindert. Transportkontingente verhindern entweder böswillige oder unbeabsichtigte Denial-of-Service-Angriffe.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Transporte verfügen über Standardkontingentwerte, die auf einer konservativen Speicherbelegung von Ressourcen basieren. Diese Standardwerte sind für eine Entwicklungsumgebung und für kleine Installationsszenarien geeignet. Dienstadministratoren sollten Transportkontingente prüfen und individuelle Kontingentwerte anpassen, wenn einer Installation die Ressourcen ausgehen oder wenn Verbindungen eingeschränkt werden, obwohl zusätzliche Ressourcen zur Verfügung stehen.  
+ Windows Communication Foundation (WCF)-Transporte haben Standardkontingentwerte, die auf einer konservativen Zuweisung von Ressourcen basieren. Diese Standardwerte sind für eine Entwicklungsumgebung und für kleine Installationsszenarien geeignet. Dienstadministratoren sollten Transportkontingente prüfen und individuelle Kontingentwerte anpassen, wenn einer Installation die Ressourcen ausgehen oder wenn Verbindungen eingeschränkt werden, obwohl zusätzliche Ressourcen zur Verfügung stehen.  
   
 ## <a name="types-of-transport-quotas"></a>Typen von Transportkontingenten  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transporte verfügen über drei Typen von Kontingenten:  
+ WCF-Transporte haben drei Typen von Kontingenten:  
   
 -   *Timeouts* DOS-Angriffe, die Schwächung von Ressourcen für längere Zeit zu verringern.  
   
@@ -39,7 +25,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 -   *Grenzwerte für sammlungsgröße* begrenzen den Verbrauch von Ressourcen, die indirekt Arbeitsspeicher belegen oder beschränkt zur Verfügung.  
   
 ## <a name="transport-quota-descriptions"></a>Transportkontingentbeschreibungen  
- In diesem Abschnitt werden die Transportkontingente beschrieben, die für Standard-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transporte zur Verfügung stehen: HTTP(S), TCP/IP und Named Pipes. Benutzerdefinierte Transporte können eigene konfigurierbare Kontingente aufweisen, die nicht in dieser Liste enthalten sind. Weitere Informationen über diese Kontingente finden Sie in der Dokumentation zum benutzerdefinierten Transport.  
+ In diesem Abschnitt werden die transportkontingente beschrieben für die standard-WCF-Transporte zur Verfügung: http(s), TCP/IP und named Pipes. Benutzerdefinierte Transporte können eigene konfigurierbare Kontingente aufweisen, die nicht in dieser Liste enthalten sind. Weitere Informationen über diese Kontingente finden Sie in der Dokumentation zum benutzerdefinierten Transport.  
   
  Jede Kontingenteinstellung verfügt über einen Typ, einen minimalen Wert und einen Standardwert. Der Maximalwert eines Kontingents wird von seinem Typ beschränkt. Aufgrund von Computereinschränkungen ist es nicht immer möglich, ein Kontingent auf seinen Maximalwert festzulegen.  
   

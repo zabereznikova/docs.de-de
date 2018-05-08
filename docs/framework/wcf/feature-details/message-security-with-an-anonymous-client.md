@@ -1,32 +1,20 @@
 ---
 title: Nachrichtensicherheit mit einem anonymen Client
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25c184d32c6cedf893c79f15d77ba93ec5e9461e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b8cab1762a8c8c672d557c7bcccc2f339cbaefe9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Nachrichtensicherheit mit einem anonymen Client
-Das folgende Szenario zeigt, wie ein Client und ein Dienst mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Nachrichtensicherheit gesichert werden. Ein Entwurfsziel ist die Verwendung von Nachrichtensicherheit statt Transportsicherheit, sodass zu einem späteren Zeitpunkt ein komplexeres anspruchsbasierter Modell unterstützt werden kann. Weitere Informationen zur Verwendung von rich-Ansprüche für die Autorisierung finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+Das folgende Szenario zeigt einen Client und Dienst von Windows Communication Foundation (WCF)-nachrichtensicherheit gesichert werden. Ein Entwurfsziel ist die Verwendung von Nachrichtensicherheit statt Transportsicherheit, sodass zu einem späteren Zeitpunkt ein komplexeres anspruchsbasierter Modell unterstützt werden kann. Weitere Informationen zur Verwendung von rich-Ansprüche für die Autorisierung finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  Eine beispielanwendung finden Sie unter [Nachrichtensicherheit – anonym](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
   
@@ -35,7 +23,7 @@ Das folgende Szenario zeigt, wie ein Client und ein Dienst mit [!INCLUDE[indigo1
 |Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Sicherheitsmodus|Meldung|  
-|Interoperabilität|Nur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|Interoperabilität|Nur WCF|  
 |Authentifizierung (Server)|Die erste Aushandlung erfordert die Serverauthentifizierung, jedoch keine Clientauthentifizierung|  
 |Authentifizierung (Client)|Keine|  
 |Integrität|Ja, mit freigegebenem Sicherheitskontext|  

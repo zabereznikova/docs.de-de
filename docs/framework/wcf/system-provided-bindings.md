@@ -1,28 +1,14 @@
 ---
 title: Vom System bereitgestellte Bindungen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 60
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen
 Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem Endpunkt und die zum Herstellen einer Verbindung mit einem Endpunkt erforderlichen Kommunikationsdetails an. Eine Bindung enthält die folgenden Elemente:  
@@ -33,7 +19,7 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
   
 -   Die Codierung bestimmt die Nachrichtencodierung, z.&#160;B. Text/XML, binär oder MTOM (Message Transmission Optimization Mechanism), die für Nachrichten, die an den Endpunkt gesendet werden, verwendet werden soll.  
   
- In diesem Thema werden alle vom System bereitgestellten [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Bindungen vorgestellt. Wenn keine dieser Bindungen die Kriterien der Anwendung erfüllt, können Sie eine benutzerdefinierte Bindung erstellen. Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ In diesem Thema werden alle von der Windows Communication Foundation (WCF) vom System bereitgestellten Bindungen dargestellt. Wenn keine dieser Bindungen die Kriterien der Anwendung erfüllt, können Sie eine benutzerdefinierte Bindung erstellen. Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Eine sichere und vollständig kompatible Bindung, die das WS-Federationprotokoll unterstützt, ermöglicht es einem Verbund angehörenden Organisationen, Benutzer effizient zu authentifizieren und zu autorisieren.  
   

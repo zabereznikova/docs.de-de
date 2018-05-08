@@ -1,35 +1,23 @@
 ---
 title: Zuordnung zwischen JSON und XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db34161ad3e2f7d2c9737e6a456b27bd70c5ebfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-between-json-and-xml"></a>Zuordnung zwischen JSON und XML
-Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erzeugten Reader und Writer stellen eine XML API über JSON (JavaScript Object Notation)-Inhalte bereit. JSON codiert Daten mit einer Teilmenge der Objektliterale von JavaScript. Die von dieser Factory erzeugten Reader und Writer werden auch verwendet, wenn JSON-Inhalte von einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung über ein <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> oder eine <xref:System.ServiceModel.WebHttpBinding> gesendet oder empfangen werden.  
+Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erzeugten Reader und Writer stellen eine XML API über JSON (JavaScript Object Notation)-Inhalte bereit. JSON codiert Daten mit einer Teilmenge der Objektliterale von JavaScript. Reader und Writer, die von dieser Factory erzeugten werden auch verwendet, wenn JSON-Inhalte gesendet oder Empfangen von Windows Communication Foundation (WCF)-Anwendungen, die mit der <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> oder <xref:System.ServiceModel.WebHttpBinding>.  
   
  Wenn der JSON-Reader mit JSON-Inhalten initialisiert wird, verhält er sich so wie ein XML-Reader bei XML-Inhalten. Wenn dem JSON-Writer eine Aufruffolge übergeben wird, die bei einem textbasierten XML-Reader eine bestimmte XML-Instanz erzeugt, wird JSON-Inhalt ausgegeben. Die Zuordnung zwischen dieser XML-Instanz und dem JSON-Inhalt wird in diesem Thema für die Verwendung in fortgeschrittenen Szenarios beschrieben.  
   
- Bei der Verarbeitung durch [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird JSON intern als XML-Infoset dargestellt. Normalerweise müssen Sie sich nicht mit dieser internen Darstellung befassen, da es sich lediglich um eine logische Zuordnung handelt: JSON wird normalerweise nicht im physischen Speicher in XML konvertiert bzw. XML wird nicht physisch in JSON umgewandelt. Diese Zuordnung bedeutet, dass über XML-APIs auf JSON-Inhalte zugegriffen wird.  
+ JSON wird intern als XML-Infoset beim Verarbeiten von WCF dargestellt. Normalerweise müssen Sie sich nicht mit dieser internen Darstellung befassen, da es sich lediglich um eine logische Zuordnung handelt: JSON wird normalerweise nicht im physischen Speicher in XML konvertiert bzw. XML wird nicht physisch in JSON umgewandelt. Diese Zuordnung bedeutet, dass über XML-APIs auf JSON-Inhalte zugegriffen wird.  
   
- Wenn JSON in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet wird, wird im üblichen Szenario gegebenenfalls <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> automatisch vom <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>-Verhalten bzw. vom <xref:System.ServiceModel.Description.WebHttpBehavior>-Verhalten eingebunden. Der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> kennt die Zuordnung zwischen JSON und dem XML-Infoset und gibt vor, den JSON-Inhalt direkt zu verarbeiten. (Der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> kann mit jedem beliebigen XML-Reader oder -Writer verwendet werden, sofern der XML-Inhalt der folgenden Zuordnung entspricht.)  
+ Wenn WCF JSON verwendet, im übliche Szenario ist, die die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> automatisch durch angeschlossen ist die <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> Verhalten, oder durch die <xref:System.ServiceModel.Description.WebHttpBehavior> -Verhalten eingebunden. Der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> kennt die Zuordnung zwischen JSON und dem XML-Infoset und gibt vor, den JSON-Inhalt direkt zu verarbeiten. (Der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> kann mit jedem beliebigen XML-Reader oder -Writer verwendet werden, sofern der XML-Inhalt der folgenden Zuordnung entspricht.)  
   
- In fortgeschrittenen Szenarios wird es möglicherweise notwendig, direkt auf die folgende Zuordnung zuzugreifen. Diese Szenarios sind gegeben, wenn Sie JSON mit einem benutzerdefinierten Verfahren serialisieren und deserialisieren möchten, ohne auf den <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zurückzugreifen, oder wenn der <xref:System.ServiceModel.Channels.Message>-Typ bei Nachrichten, die JSON enthalten, direkt verarbeitet wird. Die JSON-XML-Zuordnung wird auch zur Nachrichtenprotokollierung verwendet. Bei Verwendung der Nachrichtenprotokollierungsfunktion von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden JSON-Nachrichten entsprechend der im nächsten Abschnitt beschriebenen Zuordnung als XML protokolliert.  
+ In fortgeschrittenen Szenarios wird es möglicherweise notwendig, direkt auf die folgende Zuordnung zuzugreifen. Diese Szenarios sind gegeben, wenn Sie JSON mit einem benutzerdefinierten Verfahren serialisieren und deserialisieren möchten, ohne auf den <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zurückzugreifen, oder wenn der <xref:System.ServiceModel.Channels.Message>-Typ bei Nachrichten, die JSON enthalten, direkt verarbeitet wird. Die JSON-XML-Zuordnung wird auch zur Nachrichtenprotokollierung verwendet. Bei Verwendung die Nachricht Protokollierungsfunktion in WCF JSON-Nachrichten als XML protokolliert entsprechend der im nächsten Abschnitt beschriebenen Zuordnung.  
   
  Das folgende Beispiel eines JSON-Dokuments soll zur Klärung dessZuordnungskonzepts dienen:  
   
@@ -46,7 +34,7 @@ Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erz
 </root>  
 ```  
   
- Wenn die JSON-Nachricht aus dem Beispiel von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] empfangen und protokolliert wird, würde das vorstehende Protokoll folgendes XML-Fragment enthalten.  
+ Wenn der JSON-Nachricht im Beispiel von WCF empfangen und protokolliert wird, würde Sie darüber hinaus das XML-Fragment in das vorstehende Protokoll angezeigt.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Zuordnung zwischen JSON und dem XML-Infoset  
  Formal, die Zuordnung zwischen JSON wie im ist [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (außer mit bestimmten Einschränkungen gelockerte und bestimmte andere Einschränkungen hinzugefügt) und die XML-Infoset (und nicht Text-XML) als in der beschriebenen [XML-Informationen Legen Sie](http://go.microsoft.com/fwlink/?LinkId=98809) . Finden Sie in diesem Thema für die Definitionen der *Informationselementen* und Feldern in [eckigen Klammern].  
@@ -105,7 +93,7 @@ Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erz
   
 -   Das Datenvertrags-Namensattribut ("__type"), das an späterer Stelle näher beschrieben wird. Dieses Attribut kann nur angegeben werden, wenn auch das JSON-Typattribut angegeben wurde und dessen [normalized value] gleich "object" ist. Dieses Attribut wird vom `DataContractJsonSerializer` verwendet, um die Typinformationen des Datenvertrags beizubehalten, beispielsweise in polymorphen Fällen, in denen ein abgeleiteter Typ serialisiert und ein Basistyp erwartet wird. Wenn Sie nicht mit dem `DataContractJsonSerializer` arbeiten, wird dieses Attribut wird meist ignoriert.  
   
--   [in-scope namespaces] enthält die Bindung zwischen XML und „http://www.w3.org/XML/1998/namespace“ entsprechend der Infosetspezifikation.  
+-   [in-Scope Namespaces] enthält die Bindung von "Xml" und "http://www.w3.org/XML/1998/namespace" als der infosetspezifikation.  
   
 -   [children], [attributes] und [in-scope namespaces] dürfen keine anderen Elemente als die oben genannten enthalten, und [namespace attributes] darf keine Member enthalten. Sie dürfen sich beim Lesen von XML, das aus einer Zuordnung von JSON erzeugt wurde, aber nicht darauf verlassen, dass dies zutrifft.  
   
@@ -209,7 +197,7 @@ Strahl "|0 oder mehr EIIs|Ein begin-Array (linke eckige Klammer) entsprechend Ab
  `{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`  
   
 > [!NOTE]
->  Die vorangehende Zuordnung umfasst keinen XML-Codierungsschritt. Daher unterstützt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nur JSON-Dokumente, in denen Schlüsselnamen nur Zeichen enthalten, die auch in XML-Elementnamen zulässig sind. Beispielsweise wird das JSON-Dokument {"<":"a"} nicht unterstützt, weil < kein gültiger Name für ein XML-Element ist.  
+>  Die vorangehende Zuordnung umfasst keinen XML-Codierungsschritt. WCF unterstützt deshalb nur JSON-Dokumenten, in denen alle Zeichen im Namen der Schlüssel für gültige Zeichen in XML-Elementnamen sind. Beispielsweise wird das JSON-Dokument {"<":"a"} nicht unterstützt, weil < kein gültiger Name für ein XML-Element ist.  
   
  Der umgekehrte Fall (Zeichen, die in XML, aber nicht in JSON zulässig sind) stellt kein Problem dar, weil die vorangehende Zuordnung Schritte für das Voranstellen bzw. Entfernen von Escapezeichen in JSON beinhaltet.  
   

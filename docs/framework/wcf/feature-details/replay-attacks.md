@@ -1,34 +1,20 @@
 ---
 title: Wiederholungsangriffe
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3139e0ea094f1f7483261ffd10026815e5d12f31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="replay-attacks"></a>Wiederholungsangriffe
 Ein *Wiederholungsangriff* tritt auf, wenn ein Angreifer einen Nachrichtenstream zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Stream wie zulässige Nachrichten, was eine Reihe negativer Konsequenzen wie redundante Bestellungen eines Artikels zur Folge hat.  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Bindungen sind möglicherweise Reflektionsangriffen ausgesetzt  
- *Reflektionsangriffe* Replays von Nachrichten an einen Sender sind, als ob sie vom Empfänger der Antwort geliefert wurde. Der Standard *replay-Erkennung* in die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Mechanismus wird nicht automatisch behandelt.  
+ *Reflektionsangriffe* Replays von Nachrichten an einen Sender sind, als ob sie vom Empfänger der Antwort geliefert wurde. Der Standard *replay-Erkennung* in Windows Communication Foundation (WCF) Mechanismus wird nicht automatisch behandelt.  
   
- Reflektionsangriffe werden standardmäßig abgeschwächt, da das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstmodell Anforderungsnachrichten eine signierte Nachrichtenkennung hinzufügt und in Antwortnachrichten einen signierten `relates-to`-Header erwartet. Infolgedessen kann die Anforderungsnachricht nicht als Antwort wiederholt werden. In sicheren Szenarien mit zuverlässigem Messaging werden Reflektionsangriffe aus folgenden Gründen abgemildert:  
+ Reflektionsangriffe werden standardmäßig abgeschwächt, da die WCF-Dienstmodells Anforderungsnachrichten eine signierte Nachrichtenkennung hinzugefügt und eine signierte erwartet `relates-to` -Header für Antwortnachrichten verwendet werden. Infolgedessen kann die Anforderungsnachricht nicht als Antwort wiederholt werden. In sicheren Szenarien mit zuverlässigem Messaging werden Reflektionsangriffe aus folgenden Gründen abgemildert:  
   
 -   Die Sequenzerstellung und die Sequenzerstellungsantwort verwenden unterschiedliche Nachrichtenschemas.  
   

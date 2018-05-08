@@ -1,33 +1,19 @@
 ---
 title: 'Gewusst wie: Konfigurieren eines grundlegenden Windows Communication Foundation-Clients'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-caps.latest.revision: 47
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bde13abeac782da1c553afa290943eeff925fa4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c03bf37c737a19b0a90f12e7ad5db78b75323f5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Gewusst wie: Konfigurieren eines grundlegenden Windows Communication Foundation-Clients
-Dies ist die fünfte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendung erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
+Dies ist die fünfte von sechs Aufgaben, die zum Erstellen einer grundlegenden Windows Communication Foundation (WCF)-Anwendung erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
   
- Dieses Thema Disuccess die Clientkonfigurationsdatei, die generiert wurde, mit der Funktion "Dienstverweis hinzufügen" des [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] oder [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Für die Konfiguration des Clients muss der Endpunkt angegeben werden, den der Client verwendet, um auf den Dienst zuzugreifen. Ein Endpunkt hat eine Adresse, eine Bindung und einen Vertrag. Bei der Konfiguration eines Clients muss jedes dieser Elemente angegeben werden.  
+ In diesem Thema wird erläutert, die Clientkonfigurationsdatei, die generiert wurde, mit der Funktion "Dienstverweis hinzufügen" des [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] oder [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Für die Konfiguration des Clients muss der Endpunkt angegeben werden, den der Client verwendet, um auf den Dienst zuzugreifen. Ein Endpunkt hat eine Adresse, eine Bindung und einen Vertrag. Bei der Konfiguration eines Clients muss jedes dieser Elemente angegeben werden.  
   
 ### <a name="to-configure-a-windows-communication-foundation-client"></a>So konfigurieren Sie einen Windows Communication Foundation-Client  
   

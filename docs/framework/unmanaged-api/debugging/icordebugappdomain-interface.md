@@ -1,14 +1,6 @@
 ---
-title: '[ICorDebugAppDomain Schnittstelle1'
-ms.custom: 
+title: ICorDebugAppDomain Schnittstelle1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugAppDomain
 api_location:
@@ -22,19 +14,15 @@ helpviewer_keywords:
 ms.assetid: be7ae711-1217-4a44-be40-166e29641b77
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aab18cb1d29931a58e64561f23d91ee4eb3a4278
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84a11b6264ac0e241c1975eea5626edbdddce206
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugappdomain-interface1"></a>[ICorDebugAppDomain Schnittstelle1
+# <a name="icordebugappdomain-interface1"></a>ICorDebugAppDomain Schnittstelle1
 Stellt Methoden zum Debuggen von Anwendungsdomänen bereit. Diese Schnittstelle ist eine Unterklasse von ICorDebugController.  
   
 ## <a name="methods"></a>Methoden  
@@ -64,7 +52,7 @@ Stellt Methoden zum Debuggen von Anwendungsdomänen bereit. Diese Schnittstelle 
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

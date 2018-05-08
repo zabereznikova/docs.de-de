@@ -1,32 +1,18 @@
 ---
 title: Bewährte Methoden für die Kommunikation unter Verwendung von Warteschlangen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Bewährte Methoden für die Kommunikation unter Verwendung von Warteschlangen
-Dieses Thema stellt Informationen zu bewährten Vorgehensweisen bei der Kommunikation unter Verwendung von Warteschlangen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bereit. In den folgenden Abschnitten werden bewährte Methoden aus der Perspektive eines Szenarios vorgestellt.  
+Dieses Thema enthält empfohlene Vorgehensweisen für die warteschlangenkommunikation in Windows Communication Foundation (WCF). In den folgenden Abschnitten werden bewährte Methoden aus der Perspektive eines Szenarios vorgestellt.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>Schnelles Warteschlangen-Messaging nach dem Best-Effort-Prinzip  
  Falls Sie die Vorzüge der Nachrichtentrennung beim Warteschlangen-Messaging nutzen möchten und auf einen schnellen, leistungsfähigen Nachrichtenaustausch mit einer Best-Effort-Zusicherung angewiesen sind, verwenden Sie eine Warteschlange, bei der es sich nicht um eine Transaktionswarteschlange handelt, und legen Sie die <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>-Eigenschaft auf `false` fest.  
@@ -69,7 +55,7 @@ Dieses Thema stellt Informationen zu bewährten Vorgehensweisen bei der Kommunik
   
  Beachten Sie bei der Batchverarbeitung, dass Parallelität und Einschränkung zu simultanen Batches führen.  
   
- Um einen höheren Durchsatz und eine bessere Verfügbarkeit zu erreichen, können Sie auch eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstefarm verwenden, die aus der Warteschlange liest. Hierfür müssen diese Dienste denselben Vertrag auf demselben Endpunkt verfügbar machen. Eine Dienstefarm ist am besten bei Anwendungen geeignet, die sehr viele Nachrichten produzieren, da dann mehrere Dienste aus derselben Warteschlange lesen können.  
+ Um höheren Durchsatz und Verfügbarkeit zu erreichen, verwenden Sie eine Farm von WCF-Diensten, die aus der Warteschlange gelesen. Hierfür müssen diese Dienste denselben Vertrag auf demselben Endpunkt verfügbar machen. Eine Dienstefarm ist am besten bei Anwendungen geeignet, die sehr viele Nachrichten produzieren, da dann mehrere Dienste aus derselben Warteschlange lesen können.  
   
  Beachten Sie bei der Verwendung von Farmen, dass MSMQ&#160;3.0 keine remote durchgeführten Lesevorgänge unterstützt. MSMQ&#160;4.0 dagegen unterstützt remote durchgeführte Lesevorgänge.  
   
@@ -84,11 +70,11 @@ Dieses Thema stellt Informationen zu bewährten Vorgehensweisen bei der Kommunik
  Warteschlangen sind zwar im Allgemeinen unidirektional, es kann jedoch vorkommen, dass Sie eine empfangene Antwort zu einer zuvor gesendeten Anforderung in Bezug setzen möchten. Falls eine solche Zuordnung erforderlich ist, sollten Sie, wenn möglich, mit der Nachricht Ihren eigenen SOAP-Nachrichtenheader mit Zuordnungsinformationen verwenden. In der Regel wird dieser Header vom Sender an die Nachricht angehängt. Beim Empfänger wird der Nachrichtenheader mit den Zuordnungsinformationen dann während der Verarbeitung der Nachricht an die Antwortnachricht, die als neue Nachricht an eine Antwortwarteschlange gesendet wird, angehängt, sodass die Antwortnachricht beim Sender der Anforderungsnachricht zugeordnet werden kann.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Integrieren von Nicht-WCF-Anwendungen  
- Verwenden Sie `MsmqIntegrationBinding`, um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste oder -Clients mit Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten oder -Clients zu integrieren. Nicht -[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Anwendung kann es sich um eine mit System.Messaging, COM+-, Visual Basic oder C++ geschriebene MSMQ-Anwendung.  
+ Verwendung `MsmqIntegrationBinding` beim WCF-Dienste oder Clients mit nicht-WCF-Dienste oder Clients zu integrieren. Die nicht-WCF-Anwendung kann eine mit System.Messaging, COM+-, Visual Basic oder C++ geschriebene MSMQ-Anwendung sein.  
   
  Beachten Sie bei der Verwendung von `MsmqIntegrationBinding` folgende Punkte:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichtentexte sind nicht dasselbe wie MSMQ-Nachrichtentexte. Wenn Sie eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachricht mithilfe einer Bindung in der Warteschlange senden, wird der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichtentext in eine MSMQ-Nachricht eingefügt. In der MSMQ-Infrastruktur wird diese Zusatzinformation jedoch nicht wahrgenommen, MSMQ sieht lediglich die MSMQ-Nachricht.  
+-   Ein WCF-Nachrichtentext ist nicht identisch mit einem MSMQ-Nachrichtentext. Wenn eine WCF-Nachricht mit einer Bindung in der Warteschlange zu senden, wird der WCF-Nachrichtentext in eine MSMQ-Nachricht platziert. In der MSMQ-Infrastruktur wird diese Zusatzinformation jedoch nicht wahrgenommen, MSMQ sieht lediglich die MSMQ-Nachricht.  
   
 -   `MsmqIntegrationBinding` unterstützt die gängigen Serialisierungstypen. Je nach Serialisierungstyp nimmt der Texttyp der generischen Nachricht - <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> - unterschiedliche Typparameter an. So ist bei <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> zum Beispiel `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> und bei `MsmqMessage<Stream>` der Parameter erforderlich.  
   

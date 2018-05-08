@@ -1,14 +1,6 @@
 ---
 title: Streaminganbieter (WCF Data Services)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 119877802bc6d685cd5b440cedb6ab71b20abf45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu dem er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.  
@@ -93,7 +79,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
  Allgemeine Informationen dazu, wie Sie einen Datendienst erstellen, finden Sie unter [Konfigurieren des Datendiensts](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Aktivieren von großen binären Datenströmen in der Hostumgebung  
- Beim Erstellen eines Datendiensts in einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Webanwendung [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird verwendet, um die HTTP-Protokoll-Implementierung bereitstellen. Standardmäßig [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] schränkt die Größe von HTTP-Nachrichten nur auf 65 KB. Damit umfangreiche Binärdaten als Datenstrom zum und vom Datendienst gesendet werden können, müssen Sie auch die Webanwendung für die Verwendung großer Binärdateien und den Einsatz von Datenströmen für die Übertragung konfigurieren. Fügen Sie dazu Folgendes im `<configuration />`-Element der Datei Web.config der Anwendung hinzu:  
+ Wenn Sie einen Datendienst in einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webanwendung erstellen, wird Windows Communication Foundation (WCF) verwendet, um die HTTP-Protokollimplementierung bereitzustellen. Standardmäßig [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] schränkt die Größe von HTTP-Nachrichten nur auf 65 KB. Damit umfangreiche Binärdaten als Datenstrom zum und vom Datendienst gesendet werden können, müssen Sie auch die Webanwendung für die Verwendung großer Binärdateien und den Einsatz von Datenströmen für die Übertragung konfigurieren. Fügen Sie dazu Folgendes im `<configuration />`-Element der Datei Web.config der Anwendung hinzu:  
   
   
   

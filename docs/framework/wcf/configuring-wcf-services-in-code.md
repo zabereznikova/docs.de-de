@@ -1,27 +1,15 @@
 ---
 title: Konfigurieren von WCF-Diensten in Code
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 202214a6c9279eb61db560321a8f36943ce5d635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2046ee00bef0f3e84a61151474c777d64005a30c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurieren von WCF-Diensten in Code
-Mit [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] können Entwickler Dienste mithilfe von Konfigurationsdateien oder Code konfigurieren.  Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ermöglicht auch das Konfigurieren von Diensten im Code. In früheren Versionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 und früher) war das Konfigurieren von Diensten im Code in selbstgehosteten Szenarien einfach, weil die <xref:System.ServiceModel.ServiceHost>-Klasse die Möglichkeit bot, Endpunkte und Verhaltensweisen vor dem Aufrufen von ServiceHost.Open zu konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen direkten Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4.5 bietet [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] eine einfachere Möglichkeit, selbstgehostete und webgehostete Dienste im Code zu konfigurieren.  
+Windows Communication Foundation (WCF) können Entwickler Dienste mithilfe von Konfigurationsdateien oder Code konfigurieren.  Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ermöglicht auch das Konfigurieren von Diensten im Code. In früheren Versionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 und früher) war das Konfigurieren von Diensten im Code in selbstgehosteten Szenarien einfach, weil die <xref:System.ServiceModel.ServiceHost>-Klasse die Möglichkeit bot, Endpunkte und Verhaltensweisen vor dem Aufrufen von ServiceHost.Open zu konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen direkten Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4.5 bietet [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] eine einfachere Möglichkeit, selbstgehostete und webgehostete Dienste im Code zu konfigurieren.  
   
 ## <a name="the-configure-method"></a>Die Configure-Methode  
  Definieren Sie einfach in der Dienstimplementierungsklasse die öffentliche statische Methode `Configure` mit der folgenden Signatur:  

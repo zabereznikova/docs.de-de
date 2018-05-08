@@ -1,14 +1,6 @@
 ---
 title: ICLRHostBindingPolicyManager::EvaluatePolicy-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostBindingPolicyManager.EvaluatePolicy
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14f4db56529fbbb08f8f3d9adde0d4dc7a8ce045
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e37d56a321e6529812045e37c4f1929818b38a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy-Methode
 Wertet Richtlinien für die Bindung für den Host.  
@@ -76,7 +64,7 @@ HRESULT EvaluatePolicy (
 |-------------|-----------------|  
 |S_OK|Die Auswertung wurde erfolgreich abgeschlossen.|  
 |E_INVALIDARG|Entweder `pwzReferenceIdentity` oder `pbApplicationPolicy` ist ein null-Verweis.|  
-|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize`ist zu klein.|  
+|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` ist zu klein.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -93,7 +81,7 @@ HRESULT EvaluatePolicy (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRHostBindingPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

@@ -1,30 +1,18 @@
 ---
-title: "Vorgehensweise: Überprüfen oder Ändern von Parametern"
-ms.custom: 
+title: 'Vorgehensweise: Überprüfen oder Ändern von Parametern'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f1a0ef31ba074082e4c3aa8a26e6a59502a7566
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ddf6ad667eb131ec6fa4f12ed112c57368c43d9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Vorgehensweise: Überprüfen oder Ändern von Parametern
-Sie können die eingehenden oder ausgehenden Nachrichten für einen einzelnen Vorgang zu einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clientobjekt oder einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst überprüfen oder ändern, indem Sie die <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>-Schnittstelle implementieren und in die Client- oder Dienstlaufzeit einfügen. In der Regel wird ein Vorgangsverhalten verwendet, um Parameterinspektoren für einen einzelnen Vorgang hinzufügen; weitere Verhalten können für einen einfachen Zugriff auf die Laufzeit in größerem Umfang verwendet werden. Weitere Informationen finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md) und [Erweitern von Verteilern](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+Sie prüfen oder Ändern der eingehenden oder ausgehenden Nachrichten für einen einzelnen Vorgang für ein Clientobjekt der Windows Communication Foundation (WCF)-können oder ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Service durch Implementieren der <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> Schnittstelle und in Client oder Dienst einfügen Common Language Runtime. In der Regel wird ein Vorgangsverhalten verwendet, um Parameterinspektoren für einen einzelnen Vorgang hinzufügen; weitere Verhalten können für einen einfachen Zugriff auf die Laufzeit in größerem Umfang verwendet werden. Weitere Informationen finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md) und [Erweitern von Verteilern](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
   
 ### <a name="inspecting-or-modifying-parameters"></a>Überprüfen oder Ändern von Parametern  
   

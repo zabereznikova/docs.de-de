@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Automatisches Generieren von Spalten in einem datengebundenen DataGridView-Steuerelement in Windows Forms'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - columns [Windows Forms], autogenerating
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18d54da2c24d592b6fb6b53be10824c85682f9db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 97fbc2c21f618b9fa0451c17ebf87579f51a3f0d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Gewusst wie: Automatisches Generieren von Spalten in einem datengebundenen DataGridView-Steuerelement in Windows Forms
 Im folgenden Codebeispiel wird veranschaulicht, wie anzuzeigenden Spalten aus einer gebundenen Datenquelle in einem <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn die <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> Eigenschaftswert ist `true` (Standard), eine <xref:System.Windows.Forms.DataGridViewColumn> wird für jede Spalte in der Tabelle für die Datenquellensicht erstellt.  

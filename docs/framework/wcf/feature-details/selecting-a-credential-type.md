@@ -1,33 +1,19 @@
 ---
 title: Wählen eines Typs von Anmeldeinformationen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 756017462ccaf8a555b0634e8a43cfdd3bc63d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selecting-a-credential-type"></a>Wählen eines Typs von Anmeldeinformationen
-*Anmeldeinformationen* sind die Daten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] können Anmeldeinformationen viele Formate haben, zum Beispiel Benutzernamentoken und X.509-Zertifikate. In diesem Thema werden Anmeldeinformationen, ihre Verwendung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und die richtige Auswahl von Anmeldeinformationen für Ihre Anwendung beschrieben.  
+*Anmeldeinformationen* sind die Daten, die Windows Communication Foundation (WCF) verwendet wird, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In WCF dauert die Anmeldeinformationen viele Formen annehmen, z. B. Benutzernamentoken und x. 509-Zertifikate. In diesem Thema wird erläutert, Anmeldeinformationen, wie sie in WCF verwendet werden und wie Sie die richtige Anmeldeinformationen für Ihre Anwendung auswählen.  
   
  In vielen Ländern und Regionen ist ein Führerschein ein Beispiel für einen Identitätsnachweis. Ein Führerschein enthält Daten, die die Identität und erworbene Berechtigungen einer Person nachweisen. Der rechtmäßige Besitz wird mithilfe eines Bilds des Inhabers nachgewiesen. Ein Führerschein oder Ausweis wird von einer vertrauenswürdigen Stelle ausgegeben, in der Regel von einer dafür zuständigen Behörde. Der Führerschein wird eingeschweißt und enthält ggf. ein Hologramm, wodurch sichergestellt wird, dass er nicht manipuliert oder gefälscht wurde.  
   
- Das Vorlegen eines Identitätsnachweises umfasst das Angeben der Daten und den Nachweis, dass sich die Daten rechtmäßig im Besitz des Inhabers befinden. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt verschiedene Arten von Anmeldeinformationen auf der Transport- und Nachrichtensicherheitsebene. Sehen wir uns zum Beispiel zwei Typen von Anmeldeinformationen an, die in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt werden: Benutzername und Zertifikatsanmeldeinformationen (X.509).  
+ Das Vorlegen eines Identitätsnachweises umfasst das Angeben der Daten und den Nachweis, dass sich die Daten rechtmäßig im Besitz des Inhabers befinden. WCF unterstützt verschiedene Typen von Anmeldeinformationen auf der Transport- und nachrichtensicherheitsebene. Betrachten Sie beispielsweise zwei Typen von Anmeldeinformationen, die in WCF unterstützt: Benutzername und (x. 509) zertifikatsanmeldeinformationen.  
   
  Beim Benutzernamenteil der Anmeldeinformationen stellt der Benutzername die beanspruchte Identität und das Kennwort den Nachweis des rechtmäßigen Besitzes dar. Die vertrauenswürdige Stelle ist in diesem Fall das System, das den Benutzernamen und das Kennwort überprüft.  
   
@@ -41,7 +27,7 @@ ms.lasthandoff: 04/30/2018
 |Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
 |Standard|Gibt die Standardauthentifizierung für den Client an. Weitere Informationen finden Sie unter RFC 2617 –[HTTP Authentication: Basic and Digest Authentication](http://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Digest|Gibt die Hashwertauthentifizierung für den Client an. Weitere Informationen finden Sie unter RFC 2617 –[HTTP Authentication: Basic and Digest Authentication](http://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Ntlm|Gibt die NT-LAN-Managerauthentifizierung (NTLM) an. Wird verwendet, wenn Sie aus bestimmten Gründen keine Kerberos-Authentifizierung verwenden können. Sie können die Verwendung als Ausweichlösung auch deaktivieren, indem Sie die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>-Eigenschaft auf `false` festlegen, wodurch [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nach dem Best-Effort-Prinzip eine Ausnahme auslöst, wenn NTLM verwendet wird. Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.|  
+|Ntlm|Gibt die NT-LAN-Managerauthentifizierung (NTLM) an. Wird verwendet, wenn Sie aus bestimmten Gründen keine Kerberos-Authentifizierung verwenden können. Sie können die Verwendung als ausweichlösung auch deaktivieren, indem die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Eigenschaft `false`, die bewirkt, dass WCF nach einer Best-Effort eine Ausnahme auslöst, wenn NTLM verwendet wird. Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.|  
 |Windows|Gibt die Windows-Authentifizierung an. Um für eine Windows-Domäne nur das Kerberos-Protokoll anzugeben, legen Sie die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>-Eigenschaft auf `false` fest (die Standardeinstellung ist `true`).|  
 |Zertifikat|Führt die Clientauthentifizierung mit einem X.509-Zertifikat aus.|  
 |Kennwort|Benutzer müssen einen Benutzernamen und ein Kennwort angeben. Überprüfen Sie das Benutzername/Kennwort-Paar mithilfe der Windows-Authentifizierung oder einer anderen benutzerdefinierten Lösung.|  
@@ -53,17 +39,17 @@ ms.lasthandoff: 04/30/2018
 |-------------|-----------------|  
 |Keine|Gibt an, dass der Client keine Anmeldeinformationen bereitstellen muss. Dies führt zur Verwendung eines anonymen Clients.|  
 |Windows|Ermöglicht unter dem mit Windows-Anmeldeinformationen eingerichteten Sicherheitskontext den Austausch von SOAP-Nachrichten.|  
-|Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] keine kryptografischen Vorgänge mit den Benutzernamen wie das Erzeugen einer Signatur oder das Verschlüsseln von Daten zulässig sind. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt sicher, dass der Transport geschützt wird, wenn der Identitätsnachweis über den Benutzernamen erfolgt.|  
+|Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass alle kryptografischen Vorgänge mit Benutzernamen wie das Erzeugen einer Signatur oder Verschlüsseln von Daten von WCF nicht zulässig ist. WCF wird sichergestellt, dass der Transport geschützt wird, wenn Benutzernamen-Anmeldeinformationen verwenden.|  
 |Zertifikat|Ermöglicht es dem Dienst zu fordern, dass der Client mithilfe eines X.509-Zertifikats authentifiziert wird.|  
 |Ausgestelltes Token (Issued Token)|Ein benutzerdefinierter nach einer Sicherheitsrichtlinie konfigurierter Tokentyp. Der Standardtokentyp ist SAML (Security Assertions Markup Language). Das Token wird von einem sicheren Tokendienst ausgegeben. Weitere Informationen finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Aushandlungsmodell von Dienstanmeldeinformationen  
  *Aushandlung* versteht man das Einrichten von Vertrauensstellungen zwischen einem Client und einem Dienst durch den Austausch von Anmeldeinformationen. Der Prozess wird iterativ zwischen dem Client und dem Dienst durchgeführt, damit jeweils nur die Informationen offengelegt werden, die für den nächsten Schritt des Aushandlungsprozesses erforderlich sind. In der Praxis ist das Endergebnis die Zustellung der Anmeldeinformationen eines Dienstes an den Client, damit diese bei nachfolgenden Vorgängen verwendet werden können.  
   
- Dabei gilt eine Ausnahme: Die vom System bereitgestellten Bindungen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] handeln die Dienstanmeldeinformationen automatisch beim Verwenden der Nachrichtenebenensicherheit aus. (Die Ausnahme ist die <xref:System.ServiceModel.BasicHttpBinding>, die die Sicherheit standardmäßig nicht aktiviert.) Um dieses Verhalten zu deaktivieren, können Sie die Eigenschaften <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> und <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> verwenden.  
+ Mit einer Ausnahme standardmäßig vom System bereitgestellten Bindungen in WCF die Anmeldeinformationen für Dienst aushandeln automatisch bei der Sicherheit auf Nachrichtenebene zu verwenden. (Die Ausnahme ist die <xref:System.ServiceModel.BasicHttpBinding>, die die Sicherheit standardmäßig nicht aktiviert.) Um dieses Verhalten zu deaktivieren, können Sie die Eigenschaften <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> und <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> verwenden.  
   
 > [!NOTE]
->  Wenn SSL-Sicherheit in Verbindung mit .NET Framework&#160;3.5 und höher verwendet wird, verwenden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients zur Validierung des Dienstzertifikats mittels einer Zertifikatskette sowohl die Zwischenzertifikate aus dem lokalen Zertifikatspeicher als auch die Zwischenzertifikate, die sie im Rahmen der SSL-Verhandlung empfangen haben. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
+>  Wenn SSL-Sicherheit mit .NET Framework 3.5 und höher verwendet wird, verwendet ein WCF-Client sowohl die Zwischenzertifikate im Zertifikatspeicher als auch die Zwischenzertifikate, die während der SSL-Verhandlung empfangen, führen Sie die Überprüfung der Zertifikatkette auf des Diensts Zertifikat. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
   
 #### <a name="out-of-band-negotiation"></a>Out-of-Band-Aushandlung  
  Wenn die automatische Aushandlung deaktiviert ist, müssen die Dienstanmeldeinformationen auf dem Client bereitgestellt werden, bevor Nachrichten an den Dienst gesendet werden. Dies ist auch bekannt als ein *Out-of-Band-* bereitstellen. Wenn es sich beim angegebenen Typ der Anmeldeinformationen um ein Zertifikat handelt und die automatische Aushandlung deaktiviert ist, muss sich der Client an den Besitzer des Dienstes wenden, um das Zertifikat zu erhalten und auf dem Computer zu installieren, auf dem die Clientanwendung ausgeführt wird. Sie können dies zum Beispiel nutzen, wenn Sie genau steuern möchten, welche Clients in einem Business-to-Business-Szenario auf einen Dienst zugreifen können. Diese Out-des-Band-Aushandlung kann per e-Mail erfolgen, und das x. 509-Zertifikat wird mithilfe eines Tools wie z. B. die Microsoft Management Console (MMC)-Zertifikat-Snap-in in Windows-Zertifikatspeicher gespeichert.  
@@ -90,7 +76,7 @@ ms.lasthandoff: 04/30/2018
  Wenn der Client einen gültigen Benutzernamen und ein Kennwort angibt, werden diese Anmeldeinformationen zum Authentifizieren des Clients verwendet. Andernfalls werden die Anmeldeinformationen des momentan angemeldeten Benutzers verwendet.  
   
 ### <a name="setting-client-credentials"></a>Festlegen von Clientanmeldeinformationen  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwenden Clientanwendungen einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client, um eine Verbindung mit Diensten herzustellen. Jeder Client ist von der <xref:System.ServiceModel.ClientBase%601>-Klasse abgeleitet, und die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft auf dem Client ermöglicht die Angabe verschiedener Werte für Clientanmeldeinformationen.  
+ In WCF verwenden Clientanwendungen einen WCF-Client mit den Diensten herstellen. Jeder Client ist von der <xref:System.ServiceModel.ClientBase%601>-Klasse abgeleitet, und die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft auf dem Client ermöglicht die Angabe verschiedener Werte für Clientanmeldeinformationen.  
   
 #### <a name="setting-a-certificate"></a>Festlegen eines Zertifikats  
  Um einen Dienst mit einem X.509-Zertifikat auszustatten, das zum Authentifizieren des Clients für einen Dienst genutzt wird, verwenden Sie die <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>-Methode der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>-Klasse.  
@@ -98,7 +84,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Verwenden von Clientanmeldeinformationen zum Authentifizieren eines Clients für einen Dienst  
  Sie stellen Clientanmeldeinformationen, die für die Kommunikation mit einem Dienst erforderlich sind, bereit, indem Sie entweder die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft oder die <xref:System.ServiceModel.ChannelFactory.Credentials%2A>-Eigenschaft verwenden. Der Sicherheitskanal verwendet diese Informationen, um den Client für den Dienst zu authentifizieren. Die Authentifizierung erfolgt in einem von zwei Modi:  
   
--   Die Clientanmeldeinformationen werden einmal verwendet, bevor die erste Nachricht gesendet wird, indem mithilfe der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientinstanz ein Sicherheitskontext eingerichtet wird. Alle Anwendungsnachrichten werden dann über den Sicherheitskontext geschützt.  
+-   Die Clientanmeldeinformationen werden einmal verwendet werden, bevor die erste Nachricht gesendet wird, mithilfe der WCF-Client-Instanz auf einen Sicherheitskontext herzustellen. Alle Anwendungsnachrichten werden dann über den Sicherheitskontext geschützt.  
   
 -   Die Clientanmeldeinformationen werden verwendet, um alle Anwendungsnachrichten zu authentifizieren, die an den Dienst gesendet werden. In diesem Fall wird zwischen dem Client und dem Dienst kein Kontext eingerichtet.  
   
@@ -106,7 +92,7 @@ ms.lasthandoff: 04/30/2018
  Wenn die erste Methode verwendet wird, wird der eingerichtete Kontext dauerhaft der Clientidentität zugeordnet. Dies bedeutet, dass die dem Client zugeordnete Identität nicht geändert werden kann, nachdem der Sicherheitskontext eingerichtet wurde.  
   
 > [!IMPORTANT]
->  Wenn die Identität nicht gewechselt werden kann (also wenn das Einrichten eines Sicherheitskontexts aktiviert ist (Standardeinstellung)), kann ein bestimmtes Verhalten auftreten. Wenn Sie einen Dienst erstellen, der mit einem anderen Dienst kommuniziert, können Sie die Identität, die zum Öffnen des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients für den anderen Dienst verwendet wird, nicht ändern. Dies wird zu einem Problem, wenn mehrere Clients den ersten Dienst verwenden dürfen und der Dienst die Identität der Clients annimmt, wenn er auf den anderen Dienst zugreift. Wenn der Dienst denselben Client für alle Aufrufer wiederverwendet, erfolgen alle Aufrufe des anderen Dienstes unter der Identität des ersten Aufrufers, der zum Öffnen des Clients für den anderen Dienst verwendet wurde. Anders ausgedrückt: Der Dienst verwendet die Identität des ersten Clients für alle Clients, um mit dem anderen Dienst zu kommunizieren. Dies kann zur Erweiterung von Berechtigungen führen. Wenn dies nicht das für den Dienst erwünschte Verhalten darstellt, müssen Sie jeden Aufrufer verfolgen und für jeden Aufrufer einen neuen Client für den anderen Dienst erstellen. Außerdem müssen Sie sicherstellen, dass der Dienst nur den richtigen Client für den jeweiligen Aufrufer verwendet, um mit dem zweiten Dienst zu kommunizieren.  
+>  Wenn die Identität nicht gewechselt werden kann (also wenn das Einrichten eines Sicherheitskontexts aktiviert ist (Standardeinstellung)), kann ein bestimmtes Verhalten auftreten. Wenn Sie einen Dienst, mit der kommuniziert mit einem anderen Dienst erstellen, kann die Identität, mit den WCF-Client mit dem zweiten Dienst Öffnen geändert werden. Dies wird zu einem Problem, wenn mehrere Clients den ersten Dienst verwenden dürfen und der Dienst die Identität der Clients annimmt, wenn er auf den anderen Dienst zugreift. Wenn der Dienst denselben Client für alle Aufrufer wiederverwendet, erfolgen alle Aufrufe des anderen Dienstes unter der Identität des ersten Aufrufers, der zum Öffnen des Clients für den anderen Dienst verwendet wurde. Anders ausgedrückt: Der Dienst verwendet die Identität des ersten Clients für alle Clients, um mit dem anderen Dienst zu kommunizieren. Dies kann zur Erweiterung von Berechtigungen führen. Wenn dies nicht das für den Dienst erwünschte Verhalten darstellt, müssen Sie jeden Aufrufer verfolgen und für jeden Aufrufer einen neuen Client für den anderen Dienst erstellen. Außerdem müssen Sie sicherstellen, dass der Dienst nur den richtigen Client für den jeweiligen Aufrufer verwendet, um mit dem zweiten Dienst zu kommunizieren.  
   
  Weitere Informationen zu Anmeldeinformationen und sichere Sitzungen, finden Sie unter [Sicherheitsüberlegungen für Sicherheitssitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   

@@ -1,36 +1,24 @@
 ---
 title: End-to-End-Ablaufverfolgung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 733ea0724fdbaea9c7d28ed2a94aba25f67ef87c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-to-end-tracing"></a>End-to-End-Ablaufverfolgung
-Die End-to-End (e2e)-Ablaufverfolgung ermöglicht Entwicklern das Nachverfolgen der Ausführung von Code in der [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Infrastruktur, um zu ermitteln, warum bei einem Codepfad ein Fehler aufgetreten ist, oder um eine ausführliche Ablaufverfolgung zur Kapazitätsplanung und Leistungsanalyse bereitzustellen. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] verfügt über drei Korrelationsmechanismen zum Ermitteln von Fehlerursachen: Aktivitäten, Übertragungen und Weitergabe.  
+End-to-End kann (e2e) Tracing Entwickler führen die Ausführung von Code in der Windows Communication Foundation (WCF)-Infrastruktur zu untersuchen, warum ein Codepfad ein Fehler aufgetreten ist, oder um ausführliche Ablaufverfolgung zur kapazitätsplanung und leistungsverwaltung Leistungsanalyse bereitzustellen. Windows Communication Foundation (WCF) enthält drei korrelationsmechanismen zum Diagnostizieren der Ursache eines Fehlers: Aktivitäten, Übertragungen und Weitergabe.  
   
  Finden Sie unter [End-To-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) eine Liste der End-to-End-ablaufverfolgungsszenarien und ihre entsprechenden Aktivität und Entwurf tracing.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Aktivität](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): aktivitätsablaufverfolgungen im beschreibt die [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] aktivitätsablaufverfolgungs-Modell.  
+ [Aktivität](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): aktivitätsablaufverfolgungen in der Windows Communication Foundation (WCF)-aktivitätsablaufverfolgungs-Modell beschreibt.  
   
- [Übertragung](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): Beschreibt die Übertragung in die [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tracing Modell und Übertragung zum Korrelieren von Aktivitäten innerhalb von Endpunkten verwenden.  
+ [Übertragung](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): Verwendung zum Korrelieren von Aktivitäten innerhalb von Endpunkten übertragen und Übertragung in die Windows Communication Foundation (WCF)-aktivitätsablaufverfolgungs-Modell beschreibt.  
   
- [Weitergabe](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): Aktivitätsweitergabe im beschreibt die [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tracing Modell, und Verwenden der Weitergabe zur Korrelation von Aktivitäten über Endpunkte hinweg.  
+ [Weitergabe](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): Aktivitätsweitergabe in Windows Communication Foundation (WCF) tracing Modell, und Verwenden der Weitergabe zur Korrelation von Aktivitäten über Endpunkte hinweg beschrieben.  
   
  [Ablaufverfolgungstyp – Zusammenfassung](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
   

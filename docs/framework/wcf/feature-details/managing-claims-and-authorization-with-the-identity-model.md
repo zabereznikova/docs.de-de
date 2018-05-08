@@ -1,13 +1,6 @@
 ---
-title: "Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell"
-ms.custom: 
+title: Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - WCF security
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
-Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche Entitäten berechtigt sind, eine Computerressource zu ändern, anzuzeigen oder anderweitig darauf zuzugreifen. In einem Unternehmen sind beispielsweise nur Manager berechtigt, auf die Dateien ihrer Mitarbeiter zuzugreifen. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] unterstützt zwei Mechanismen für den Autorisierungsprozess. Der erste Mechanismus ermöglicht Ihnen, die Autorisierung mit vorhandenen CLR-Konstrukten (Common Language Runtime) zu kontrollieren. Das zweite ist ein anspruchsbasiertes Modell als bezeichnet den *Identitätsmodell*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet das Identitätsmodell zum Erstellen von Ansprüchen aus eingehenden Nachrichten. Identitätsmodellklassen können zur Unterstützung neuer Anspruchstypen für benutzerdefinierte Autorisierungsschemas erweitert werden. Dieses Thema bietet eine Übersicht über die wichtigsten Programmierkonzepte der Identitätsmodellfunktion sowie eine Auflistung der wichtigsten von dieser Funktion verwendeten Klassen.  
+Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche Entitäten berechtigt sind, eine Computerressource zu ändern, anzuzeigen oder anderweitig darauf zuzugreifen. In einem Unternehmen sind beispielsweise nur Manager berechtigt, auf die Dateien ihrer Mitarbeiter zuzugreifen. Windows Communication Foundation (WCF) unterstützt zwei Mechanismen für den Autorisierungsprozess. Der erste Mechanismus ermöglicht Ihnen, die Autorisierung mit vorhandenen CLR-Konstrukten (Common Language Runtime) zu kontrollieren. Das zweite ist ein anspruchsbasiertes Modell als bezeichnet den *Identitätsmodell*. WCF verwendet das Identitätsmodell zum Erstellen von Ansprüchen aus eingehenden Nachrichten. Modellklassen Identität können zur Unterstützung neuer Anspruchstypen für benutzerdefinierte Autorisierungsschemas erweitert werden. Dieses Thema bietet eine Übersicht über die wichtigsten Programmierkonzepte der Identitätsmodellfunktion sowie eine Auflistung der wichtigsten von dieser Funktion verwendeten Klassen.  
   
 ## <a name="identity-model-scenarios"></a>Identitätsmodellszenarien  
  Die folgenden Szenarien stellen die Verwendung des Identitätsmodells dar.  
@@ -136,7 +124,7 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
  ![Verwalten von Ansprüchen und Autorisierung](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "Xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF und Identitätsmodell  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die Identitätsmodellinfrastruktur als Basis für die Durchführung der Autorisierung. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> -Klasse ermöglicht Ihnen die Angabe *Autorisierung* Richtlinien als Teil eines Diensts. Solche Autorisierungsrichtlinien werden als bezeichnet *externe Autorisierungsrichtlinien*, und sie können die anspruchsverarbeitung basiert auf lokale Richtlinie oder die Interaktion mit einem Remotedienst durchführen. Der Autorisierungs-Manager, dargestellt durch die <xref:System.ServiceModel.ServiceAuthorizationManager> -Klasse wertet externe Autorisierungsrichtlinien zusammen mit Autorisierungsrichtlinien, die erkennen, die verschiedene Anmeldeinformationstypen (Token) und füllt den so genannten ein  *Autorisierungskontext* mit der auf eine eingehende Nachricht geeigneten Ansprüchen auf. Der Autorisierungskontext wird durch die <xref:System.IdentityModel.Policy.AuthorizationContext>-Klasse dargestellt.  
+ WCF verwendet die identitätsmodellinfrastruktur als Basis für die Durchführung der Autorisierung. In WCF die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> -Klasse ermöglicht Ihnen die Angabe *Autorisierung* Richtlinien als Teil eines Diensts. Solche Autorisierungsrichtlinien werden als bezeichnet *externe Autorisierungsrichtlinien*, und sie können die anspruchsverarbeitung basiert auf lokale Richtlinie oder die Interaktion mit einem Remotedienst durchführen. Der Autorisierungs-Manager, dargestellt durch die <xref:System.ServiceModel.ServiceAuthorizationManager> -Klasse wertet externe Autorisierungsrichtlinien zusammen mit Autorisierungsrichtlinien, die erkennen, die verschiedene Anmeldeinformationstypen (Token) und füllt den so genannten ein  *Autorisierungskontext* mit der auf eine eingehende Nachricht geeigneten Ansprüchen auf. Der Autorisierungskontext wird durch die <xref:System.IdentityModel.Policy.AuthorizationContext>-Klasse dargestellt.  
   
 ## <a name="identity-model-programming"></a>Programmierung des Identitätsmodells  
  In der folgenden Tabelle wird das Objektmodell beschrieben, mit dem Identitätsmodellerweiterungen programmiert werden. Diese Klassen sind alle entweder im <xref:System.IdentityModel.Policy>-Namespace oder im <xref:System.IdentityModel.Claims>-Namespace enthalten.  

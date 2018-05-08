@@ -1,29 +1,15 @@
 ---
 title: 'Vorgehensweise: Endpunkte im Unternehmen sperren'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Vorgehensweise: Endpunkte im Unternehmen sperren
-Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der Sicherheitsrichtlinien der Unternehmen entwickelt werden. In diesem Thema wird behandelt, wie eine Clientendpunktbestätigung entwickelt und installiert wird, die zur Validierung aller auf Computern installierten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clientanwendungen verwendet werden kann.  
+Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der Sicherheitsrichtlinien der Unternehmen entwickelt werden. Im folgende Thema wird erläutert, wie zum Entwickeln und installieren eine clientendpunktbestätigung, die verwendet werden kann, überprüfen Sie alle Windows Communication Foundation (WCF)-Clientanwendungen, die auf Computern installiert wird.  
   
  In diesem Fall wird das Validierungssteuerelement eine Clientbestätigung, da dieses Endpunktverhalten, an den Client hinzugefügt wird [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt in der Datei "Machine.config". [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lädt gemeinsames Endpunktverhalten nur für Clientanwendungen und gemeinsames Dienstverhalten nur für Dienstanwendungen. Um diese Bestätigung für Dienstanwendungen installieren zu können, muss es sich bei der Bestätigung um ein Dienstverhalten handeln. Weitere Informationen finden Sie unter der [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt.  
   

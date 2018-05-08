@@ -1,24 +1,12 @@
 ---
 title: Programmierhandbuch (LINQ to DataSet)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bf5734aca0d6ec6d54b690a5fb0f63ac2de306e8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 70fb2d38a055a6b376a711aae28ba69e6c2dd771
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Programmierhandbuch (LINQ to DataSet)
 Dieser Abschnitt enthält grundlegende Informationen und Beispiele zum Programmieren mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -54,7 +42,7 @@ Dieser Abschnitt enthält grundlegende Informationen und Beispiele zum Programmi
  [Beispiele für LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
  Enthält Abfragebeispiele, in denen die [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Operatoren verwendet werden.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  
@@ -66,4 +54,4 @@ Dieser Abschnitt enthält grundlegende Informationen und Beispiele zum Programmi
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
  [NICHT im BUILD: LINQ Allgemein Programmierhandbuch](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
- [LINQ Framework](http://msdn.microsoft.com/library/897ea0fc-40db-4694-bbe5-7dd339d5bf94)
+ [LINQ-Framework](http://msdn.microsoft.com/library/897ea0fc-40db-4694-bbe5-7dd339d5bf94)

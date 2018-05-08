@@ -1,27 +1,15 @@
 ---
 title: Kontextaustauschprotokoll
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a682b94b1ab659515e618e79230d94f57f140717
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="context-exchange-protocol"></a>Kontextaustauschprotokoll
-In diesem Abschnitt wird beschrieben, das eingeführte kontextaustauschprotokoll [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] freizugeben. Mithilfe dieses Protokolls kann vom Clientkanal ein vom Dienst bereitgestellter Kontext akzeptiert und für alle nachfolgenden Anforderungen übernommen werden, die über dieselbe Clientkanalinstanz an den Dienst gesendet werden. Zur Implementierung des Kontextaustauschprotokolls kann einer der beiden folgenden Mechanismen verwendet werden, um den Kontext zwischen dem Server und dem Client zu propagieren: HTTP-Cookies oder ein SOAP-Header.  
+In diesem Abschnitt wird beschrieben, die in Windows Communication Foundation (WCF) Version .NET Framework Version 3.5 eingeführte kontextaustauschprotokoll. Mithilfe dieses Protokolls kann vom Clientkanal ein vom Dienst bereitgestellter Kontext akzeptiert und für alle nachfolgenden Anforderungen übernommen werden, die über dieselbe Clientkanalinstanz an den Dienst gesendet werden. Zur Implementierung des Kontextaustauschprotokolls kann einer der beiden folgenden Mechanismen verwendet werden, um den Kontext zwischen dem Server und dem Client zu propagieren: HTTP-Cookies oder ein SOAP-Header.  
   
  Das Kontextaustauschprotokoll wird in einer benutzerdefinierten Kanalebene implementiert. Der Kontext wird mithilfe der <xref:System.ServiceModel.Channels.ContextMessageProperty>-Eigenschaft von der Kanalebene an die Anwendungsebene (und umgekehrt) übermittelt. Zur Übertragung zwischen Endpunkten wird der Wert des Kontexts entweder auf der Kanalebene in einen SOAP-Header serialisiert oder in die bzw. aus den Nachrichteneigenschaften konvertiert, die eine HTTP-Anforderung bzw. eine HTTP-Antwort darstellen. Im zweiten Fall wird erwartet, das eine der zugrunde liegenden Kanalebenen die Eigenschaften der HTTP-Anforderungs- bzw. HTTP-Antwortnachrichten in bzw. aus HTTP-Cookies umwandelt. Der für den Kontextaustausch zu verwendende Mechanismus wird mithilfe der <xref:System.ServiceModel.Channels.ContextExchangeMechanism>-Eigenschaft für das <xref:System.ServiceModel.Channels.ContextBindingElement> ausgewählt Gültige Werte sind `HttpCookie` und `SoapHeader`.  
   

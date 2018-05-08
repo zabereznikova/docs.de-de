@@ -1,13 +1,6 @@
 ---
 title: Interceptors (WCF Data Services)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c72d4ba56859e0afec4b26d7ce81668b443a4ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3ff08dd4cd20e7ce226750a386cfddb27731923
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interceptors-wcf-data-services"></a>Interceptors (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]ermöglicht einer Anwendung zum Abfangen von Anforderungsnachrichten, damit Sie einen Vorgang benutzerdefinierten Logik hinzufügen können. Sie können diese benutzerdefinierten Logik zum Überprüfen der Daten in eingehenden Nachrichten verwenden. Sie können damit außerdem den Bereich einer Abfrageanforderung weiter einschränken, z. B. um eine benutzerdefinierte Autorisierungsrichtlinie für jede Anforderung einzufügen.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht einer Anwendung zum Abfangen von Anforderungsnachrichten, damit Sie einen Vorgang benutzerdefinierten Logik hinzufügen können. Sie können diese benutzerdefinierten Logik zum Überprüfen der Daten in eingehenden Nachrichten verwenden. Sie können damit außerdem den Bereich einer Abfrageanforderung weiter einschränken, z. B. um eine benutzerdefinierte Autorisierungsrichtlinie für jede Anforderung einzufügen.  
   
  Das Abfangen wird von speziell attributierten Methoden im Datendienst ausgeführt. Diese Methoden werden von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zum entsprechenden Zeitpunkt während der Nachrichtenverarbeitung aufgerufen. Interceptors werden regelmäßig Satz pro Entität definiert, und interceptormethoden können keine Parameter in der Anforderung nicht annehmen, wie Dienstvorgänge können. Abfrage-Interceptor-Methoden, die beim Verarbeiten einer HTTP GET-Anforderung aufgerufen werden, müssen zurückgeben, ein Lambda-Ausdruck, der bestimmt, ob eine Instanz des Interceptors Entität festgelegt, die von den Abfrageergebnissen zurückgegeben werden soll. Dieser Ausdruck wird vom Datendienst verwendet, um den angeforderten Vorgang weiter zu optimieren. Nachfolgend wird eine Beispieldefinition eines Abfrage-Interceptors dargestellt.  
   

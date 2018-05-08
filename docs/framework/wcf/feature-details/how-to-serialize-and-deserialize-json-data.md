@@ -1,33 +1,19 @@
 ---
 title: 'Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9152e0047102661664f9b158aa26f83fb1d3c25c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f51ffb180adfc8310c91ff3c1ec7b7725f6b8b15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten
 JSON (JavaScript Object Notation) ist ein effizientes Datencodierungsformat, das einen schnellen Austausch kleiner Datenmengen zwischen Clientbrowsern und AJAX-aktivierten Webdiensten ermöglicht.  
   
  In diesem Thema wird gezeigt, wie .NET-Typobjekte mit <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> in JSON-codierte Daten serialisiert und Daten im JSON-Format anschließend wieder in Instanzen von .NET-Typen deserialisiert werden. Dieses Beispiel verwendet einen Datenvertrag, um die Serialisierung und die Deserialisierung eines benutzerdefinierten `Person`-Typs zu veranschaulichen.  
   
- In der Regel wird die JSON-Serialisierung und -Deserialisierung automatisch von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] vorgenommen, wenn Sie Datenvertragstypen in Dienstvorgängen verwenden, die über AJAX-aktivierte Endpunkte verfügbar gemacht werden. In manchen Fällen müssen Sie möglicherweise direkt mit JSON-Daten arbeiten. Dieses Szenario wird in diesem Thema veranschaulicht.  
+ In der Regel wird JSON-Serialisierung und Deserialisierung behandelt, automatisch von Windows Communication Foundation (WCF) Wenn Sie Datenvertragstypen in Dienstvorgängen verwenden, die über AJAX-aktivierte Endpunkte verfügbar gemacht werden. In manchen Fällen müssen Sie möglicherweise direkt mit JSON-Daten arbeiten. Dieses Szenario wird in diesem Thema veranschaulicht.  
   
 > [!NOTE]
 >  Wenn bei der Serialisierung einer ausgehenden Antwort auf dem Server ein Fehler auftritt oder wenn der Antwortvorgang aus einem anderen Grund eine Ausnahme auslöst, wird möglicherweise kein Fehler an den Client zurückgegeben.  

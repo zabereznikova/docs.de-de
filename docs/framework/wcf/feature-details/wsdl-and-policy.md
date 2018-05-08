@@ -1,31 +1,17 @@
 ---
 title: WSDL und Richtlinie
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsdl-and-policy"></a>WSDL und Richtlinie
-In diesem Thema werden Implementierungsdetails für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, WS-Policy und WS-PolicyAttachment sowie zusätzliche durch [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eingeführte WS-Policy-Assertionen und WSDL 1.1-Erweiterungen beschrieben.  
+Dieses Thema enthält Windows Communication Foundation (WCF)-WSDL 1.1, WS-Policy und WS-PolicyAttachment Implementierungsdetails sowie zusätzliche WS-Policy-Assertionen und WSDL 1.1-Erweiterungen, die von WCF eingeführt.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert WS-Policy- und WS-PolicyAttachment-Spezifikationen, die mit in diesem Dokument beschriebenen Einschränkungen und Klarstellungen an W3C gesendet werden.  
+ WCF implementiert die WS-Policy und WS-PolicyAttachment-Spezifikationen, die mit den in diesem Dokument beschriebenen Einschränkungen und klarstellungen an W3C gesendet.  
   
  Dieses Dokument verwendet die in der folgenden Tabelle angeführten Präfixe und Namespaces.  
   
@@ -41,19 +27,19 @@ In diesem Thema werden Implementierungsdetails für [!INCLUDE[indigo1](../../../
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>WCF WSDL 1.1-Erweiterungen  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die folgenden WSDL 1.1-Erweiterungen, um Vertragssitzungsanforderungen zu beschreiben.  
+ WCF verwendet die folgenden WSDL 1.1-Erweiterungen um zu beschreiben.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs:boolean, gibt an, dass dieser Vorgang eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sitzung initiiert; der Standardwert ist `false`.  
+ xs: Boolean, gibt an, dass dieser Vorgang eine WCF-Sitzung initiiert. Der Standardwert ist `false`.  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs:boolean, gibt an, dass dieser Vorgang eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sitzung beendet; der Standardwert ist `false`.  
+ xs: Boolean, gibt an, dass dieser Vorgang eine WCF-Sitzung beendet wird. Der Standardwert ist `false`.  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean, gibt an, dass dieser Vertrag zum Erstellen eine Sitzung erfordert.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTP-Bindungstransport-URIs  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die folgenden URIs zum Angeben von Transporten für WSDL 1.1-, SOAP 1.1- und SOAP 1.2-Bindungserweiterungselemente.  
+ WCF verwendet die folgenden URIs zum Angeben von Transporten für WSDL 1.1-, SOAP 1.1- und SOAP 1.2-bindungserweiterungselemente.  
   
 |Transport|URI|  
 |---------------|---------|  
@@ -63,7 +49,7 @@ In diesem Thema werden Implementierungsdetails für [!INCLUDE[indigo1](../../../
 |Benannte Pipes|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Von WCF implementierte Richtlinienassertionen  
- Zusätzlich zu in den Webdienstspezifikationen (WS-*) eingeführten und in anderen Abschnitten dieses Dokuments erwähnten Richtlinienassertionen implementiert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die folgenden Richtlinienassertionen.  
+ Zusätzlich zu Richtlinienassertionen eingeführt, die in den Webdienstspezifikationen (ws-*) und in anderen Abschnitten dieses Dokuments erwähnten, WCF implementiert die folgenden Richtlinienassertionen.  
   
 |Richtlinienassertion|Richtliniensubjekt|Beschreibung|  
 |----------------------|--------------------|-----------------|  

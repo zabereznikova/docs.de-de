@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Binden von Daten an Windows Presentation Foundation-Elemente (WCF Data Services)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5d8fbd1b6502bc011f78e17a3e9d1c112be73d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da89eebb366cebca9933a30b4753e1fbbe2707c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>Gewusst wie: Binden von Daten an Windows Presentation Foundation-Elemente (WCF Data Services)
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], können Sie Windows Presentation Foundation (WPF)-Elemente wie z. B. Binden einer <xref:System.Windows.Controls.ListBox>'' oder <xref:System.Windows.Controls.ComboBox> mit einer Instanz von <xref:System.Data.Services.Client.DataServiceCollection%601>, die von den Steuerelementen zu ausgelösten Ereignisse behandelt die <xref:System.Data.Services.Client.DataServiceContext> mit Änderungen synchronisiert versucht, Daten in den Steuerelementen. Weitere Informationen finden Sie unter [Binden von Daten an Steuerelemente](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

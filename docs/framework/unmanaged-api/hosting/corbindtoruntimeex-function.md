@@ -1,14 +1,6 @@
 ---
 title: CorBindToRuntimeEx-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorBindToRuntimeEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7c0080e5a01c8e856c2862182ba06096fdc9385c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75df07148ddb69ad6a062c80ec9b279e2f36e03e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx-Funktion
 Ermöglicht es nicht verwalteten Hosts, die Common Language Runtime (CLR) in einen Prozess zu laden. Die [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) und `CorBindToRuntimeEx` Funktionen führen Sie den gleichen Vorgang, aber die `CorBindToRuntimeEx` -Funktion können Sie Flags festlegen, um das Verhalten der CLR anzugeben.  
@@ -148,7 +136,7 @@ HRESULT CorBindToRuntimeEx (
   
  **Bibliothek:** "Mscoree.dll"  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [CorBindToCurrentRuntime-Funktion](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  

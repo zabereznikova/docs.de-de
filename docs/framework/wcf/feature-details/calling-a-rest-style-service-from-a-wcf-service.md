@@ -1,24 +1,12 @@
 ---
 title: Aufrufen eines REST-Diensts aus einem WCF-Dienst
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b056e2c4dad46429462b377994919b46109cb9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f520b1f77b9ca41b9fd2b8d51c1b935ab1e0a87
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Aufrufen eines REST-Diensts aus einem WCF-Dienst
 Beim Aufrufen eines REST-Diensts in einem regulären (SOAP-basierten) WCF-Dienst überschreibt der Vorgangskontext in der Dienstmethode (die Informationen über die eingehende Anforderung enthält) den Kontext, der von der ausgehenden Anforderung verwendet werden soll. Dies bewirkt, dass HTTP GET-Anforderungen in HTTP POST-Anforderungen geändert werden. Um zu erzwingen, dass der WCF-Dienst den richtigen Kontext zum Aufrufen des REST-Diensts verwendet, erstellen Sie einen neuen <xref:System.ServiceModel.OperationContextScope>, und rufen Sie den REST-Dienst aus dem Vorgangskontextbereich auf. In diesem Thema wird das Erstellen eines einfachen Beispiels beschrieben, das dieses Verfahren veranschaulicht.  

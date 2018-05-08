@@ -1,14 +1,6 @@
 ---
 title: 'Vorgehensweise: Erstellen eines Verbundclients'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9a52aa5c2c3af6c7288b2a375e44024195dfe1cc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5c33c26043d90d99c295b2e066c897e2cdad32d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>Vorgehensweise: Erstellen eines Verbundclients
-In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], erstellen einen Client für eine *Verbunddienst* besteht aus drei Hauptschritte:  
+In Windows Communication Foundation (WCF) erstellt einen Client für eine *Verbunddienst* besteht aus drei Hauptschritte:  
   
 1.  Konfigurieren einer [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oder einer ähnlichen benutzerdefinierten Bindung. Weitere Informationen zum Erstellen einer geeigneten Bindung finden Sie unter [Vorgehensweise: Erstellen einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Führen Sie alternativ die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) anhand der Metadaten-Endpunkt der Verbunddienst, eine Konfigurationsdatei für die Kommunikation mit dem Verbunddienst und eine oder mehrere generieren die Sicherheitstokendienste.  
   

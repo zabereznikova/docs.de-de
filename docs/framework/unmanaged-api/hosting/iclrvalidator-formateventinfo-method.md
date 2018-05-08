@@ -1,14 +1,6 @@
 ---
 title: ICLRValidator::FormatEventInfo-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRValidator.FormatEventInfo
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 808e1f1d-52f4-47c4-83cc-dcf47d075219
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4178d92bea44be269df8a69a628b6cb1a53dae4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30fca37887c17f5f0da7fd2faaba32f0e5edf235
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrvalidatorformateventinfo-method"></a>ICLRValidator::FormatEventInfo-Methode
 Ruft eine ausführliche Meldung über den angegebenen Validierungsfehler ab.  
@@ -70,7 +58,7 @@ HRESULT FormatEventInfo (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`FormatEventInfo`wurde erfolgreich zurückgegeben.|  
+|S_OK|`FormatEventInfo` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -84,7 +72,7 @@ HRESULT FormatEventInfo (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRErrorReportingManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  

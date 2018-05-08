@@ -1,24 +1,12 @@
 ---
-title: "HTTP-Bestätigungskanal"
-ms.custom: 
+title: HTTP-Bestätigungskanal
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d07a17c5ed4302657671e0247e44ac0ef6e75518
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c56b2fbe9d0bac3143ee7d234fd36a75f7b8071c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP-Bestätigungskanal
 Der HTTP-Bestätigungskanal ist ein Beispiel für einen geschichteten Kanal, der das unidirektionale Nachrichtenmuster ändert, sodass nicht automatisch beim Eingang eine Bestätigung gesendet wird, sondern ein Dienst eingehende Nachrichten bestätigen oder ablehnen kann. Der HTTP-Bestätigungskanal ermöglicht es auch, dass der Dienst die Bestätigung verzögern kann, bis auf Geschäftsebene garantiert werden kann, dass die Nachricht verarbeitet wird.  
@@ -54,6 +42,6 @@ Der HTTP-Bestätigungskanal ist ein Beispiel für einen geschichteten Kanal, der
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpAckChannel`

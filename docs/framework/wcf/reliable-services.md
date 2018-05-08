@@ -1,14 +1,6 @@
 ---
 title: Zuverlässige Dienste
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], reliable messaging
 - Windows Communication Foundation [WCF], reliable messaging
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d9cbaef77f4dce609d36ba4b679d8c569b648fa5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 02e0b8822c29490462fe74803a34222188afc910
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-services"></a>Zuverlässige Dienste
-Warteschlangen und zuverlässige Sitzungen sind die [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Funktionen, die zuverlässiges Messaging implementieren. In diesem Thema werden die zuverlässigen Messagingfunktionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erläutert.  
+Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Foundation (WCF)-Funktionen, die zuverlässiges messaging implementieren. In diesem Thema werden die zuverlässigen Messagingfunktionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erläutert.  
   
  *Zuverlässiges messaging* wird gezeigt, wie einer zuverlässigen messagingquelle (bezeichnet den *Quelle*) überträgt Nachrichten zuverlässig an ein zuverlässiges messagingziel (aufgerufen der *Ziel*).  
   

@@ -1,14 +1,6 @@
 ---
 title: IHostTaskManager::SwitchToTask-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.SwitchToTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 35d0c27e-4b14-49ce-810d-7ab2120177e8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03578a6a9579a807323d54308347f16f24ae90dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c4b6780b9784c5d02499224e6787f2cda6cc8e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask-Methode
 Benachrichtigt den Host an, dass er die aktuelle Aufgabe wechseln soll.  
@@ -54,7 +42,7 @@ HRESULT SwitchToTask (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SwitchToTask`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SwitchToTask` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -65,7 +53,7 @@ HRESULT SwitchToTask (
  Der Host kann in einer anderen Aufgabe Wunsch oder bei Bedarf wechseln.  
   
 > [!NOTE]
->  `SwitchToTask`Welche Aufgabe gibt nicht an der Host zu wechseln soll; Es gibt nur die Aufgabe, der sie aus wechseln soll.  
+>  `SwitchToTask` Welche Aufgabe gibt nicht an der Host zu wechseln soll; Es gibt nur die Aufgabe, der sie aus wechseln soll.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -74,7 +62,7 @@ HRESULT SwitchToTask (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

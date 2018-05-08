@@ -1,30 +1,18 @@
 ---
-title: "Vorgehensweise: Deklarieren von Fehlern in Dienstverträgen"
-ms.custom: 
+title: 'Vorgehensweise: Deklarieren von Fehlern in Dienstverträgen'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf707e58586673097c89e0e0f4d72ea68ef7247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Vorgehensweise: Deklarieren von Fehlern in Dienstverträgen
-In verwaltetem Code werden Ausnahmen bei Auftreten von Fehlerbedingungen ausgelöst. Im Gegensatz dazu werden in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen mittels Dienstverträgen die an Clients zurückzugebenden Fehlerinformationen angegeben. Zu diesem Zweck werden SOAP-Fehler in den Dienstverträgen deklariert. Eine Übersicht über die Beziehung zwischen den Ausnahmen und Fehlern, finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+In verwaltetem Code werden Ausnahmen bei Auftreten von Fehlerbedingungen ausgelöst. In Windows Communication Foundation (WCF)-Anwendungen geben jedoch Dienstverträge Fehlerinformationen an Clients zurückgegeben wird, indem SOAP-Fehler im Dienstvertrag deklariert. Eine Übersicht über die Beziehung zwischen den Ausnahmen und Fehlern, finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Erstellen eines Dienstvertrags zum Angeben eines SOAP-Fehlers  
   

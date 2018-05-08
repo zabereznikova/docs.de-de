@@ -1,27 +1,15 @@
 ---
 title: Erstellen eines BindingElement
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-bindingelement"></a>Erstellen eines BindingElement
-Bindungen und Bindungselemente (Objekte, die <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> bzw. <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> erweitern) sind die Orte, an denen das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungsmodell mit Kanalfactorys und Kanallistenern verknüpft wird. Ohne Bindungen mithilfe von benutzerdefinierten Kanälen erfordert Programmierung auf Kanalebene wie beschrieben in [Programmierung auf Kanalebene Dienst](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) und [Programmierung auf Kanalebene Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). In diesem Thema wird erläutert, die Mindestanforderung zu aktivieren, verwenden den Kanal in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], die Entwicklung einer <xref:System.ServiceModel.Channels.BindingElement> für Ihr Kanal, und aktivieren, verwenden Sie aus der Anwendung, wie in Schritt 4 des beschrieben [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Bindungen und Bindungselemente (Objekte, die erweitern <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> und <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>bzw.) sind die Orte, wo das Anwendungsmodell für Windows Communication Foundation (WCF) mit kanalfactorys und Kanallistenern verknüpft ist. Ohne Bindungen mithilfe von benutzerdefinierten Kanälen erfordert Programmierung auf Kanalebene wie beschrieben in [Programmierung auf Kanalebene Dienst](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) und [Programmierung auf Kanalebene Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). In diesem Thema wird erläutert, die Mindestanforderung zu aktivieren, verwenden den Kanal in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], die Entwicklung einer <xref:System.ServiceModel.Channels.BindingElement> für Ihr Kanal, und aktivieren, verwenden Sie aus der Anwendung, wie in Schritt 4 des beschrieben [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="overview"></a>Übersicht  
  Durch Erstellen von <xref:System.ServiceModel.Channels.BindingElement> für Ihren Kanal können Entwickler ihn in einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung nutzen. <xref:System.ServiceModel.Channels.BindingElement>-Objekte können aus der <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>-Klasse verwendet werden, um eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung mit Ihrem Kanal zu verbinden, ohne dem genauen Informationstyp Ihres Kanals entsprechen zu müssen.  

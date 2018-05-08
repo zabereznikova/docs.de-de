@@ -1,32 +1,20 @@
 ---
 title: Nachrichtensicherheit mit einem Windows-Client ohne Anmeldeinformationen-Aushandlung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: 18
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 05ffe731a578f8b8d2cdbdf5e3c9229e2b03821c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Nachrichtensicherheit mit einem Windows-Client ohne Anmeldeinformationen-Aushandlung
-Das folgende Szenario zeigt einen durch das Kerberos-Protokoll gesicherten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client und -Dienst.  
+Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und Dienst, die durch das Kerberos-Protokoll gesichert.  
   
  Sowohl der Dienst als auch der Client befinden sich in der gleichen Domäne bzw. in den gleichen vertrauenswürdigen Domänen.  
   
@@ -59,9 +47,9 @@ Das folgende Szenario zeigt einen durch das Kerberos-Protokoll gesicherten [!INC
 > [!NOTE]
 >  Zur Verwendung des Windows-Anmeldeinformationstyps ohne Aushandlung muss das Benutzerkonto des Diensts Zugriff auf den bei der Active Directory-Domäne registrierten Dienstprinzipalnamen (Service Principal Name, SPN) haben. Dazu gibt es zwei Möglichkeiten:  
   
-1.  Verwenden Sie das `NetworkService`-Konto oder das `LocalSystem`-Konto, um den Dienst auszuführen. Da diese Konten über Zugriff auf den beim Hinzufügen des Computers zur Active Directory-Domäne erstellten Computer-SPN verfügen, wird von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatisch das entsprechende SPN-Element im Endpunkt des Diensts in den Dienstmetadaten (Web Services Description Language, WSDL) generiert.  
+1.  Verwenden Sie das `NetworkService`-Konto oder das `LocalSystem`-Konto, um den Dienst auszuführen. Da diese Konten Zugriff auf die Computer-SPN, die hergestellt wird haben, wenn der Computer die Active Directory-Domäne beitritt, generiert WCF automatisch den richtige SPN-Element im Endpunkt des Diensts in den Dienstmetadaten (Web Services Description Language oder WSDL).  
   
-2.  Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. In diesem Fall muss für das Domänenkonto ein SPN eingerichtet werden. Eine mögliche Vorgehensweise hierzu besteht in der Verwendung des Tools Setspn.exe. Konfigurieren Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nach dem Erstellen des SPNs für das Konto so, dass dieser SPN für die Clients des Diensts über seine Metadaten (WSDL) veröffentlicht wird. Legen Sie hierzu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest. Im folgenden Beispiel wird die Identität programmgesteuert veröffentlicht:  
+2.  Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. In diesem Fall muss für das Domänenkonto ein SPN eingerichtet werden. Eine mögliche Vorgehensweise hierzu besteht in der Verwendung des Tools Setspn.exe. Sobald der SPN für das Konto des Diensts erstellt wird, konfigurieren Sie WCF um, dass dieser SPN für den Dienst Clients über seine Metadaten (WSDL) veröffentlicht. Legen Sie hierzu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest. Im folgenden Beispiel wird die Identität programmgesteuert veröffentlicht:  
   
  Weitere Informationen zu SPNs, die Kerberos-Protokoll und Active Directory finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Weitere Informationen über Identitäten Endpunkt finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   

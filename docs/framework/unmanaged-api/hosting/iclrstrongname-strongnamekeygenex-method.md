@@ -1,14 +1,6 @@
 ---
 title: ICLRStrongName::StrongNameKeyGenEx-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameKeyGenEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 581f486a2def90f44c0fb3f1bcf9d3bbcc1fc317
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b213285b3c533488cfa48198951275925c0e37ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx-Methode
 Generiert ein neues öffentliches/privates Schlüsselpaar mit der angegebenen Schlüsselgröße für die Verwendung der starken Namen an.  
@@ -52,7 +40,7 @@ HRESULT StrongNameKeyGenEx (
   
 #### <a name="parameters"></a>Parameter  
  `wszKeyContainer`  
- [in] Der angeforderte Schlüsselcontainer-Name. `wszKeyContainer`muss entweder eine leere Zeichenfolge oder Null, um einen temporären Namen zu generieren.  
+ [in] Der angeforderte Schlüsselcontainer-Name. `wszKeyContainer` muss entweder eine leere Zeichenfolge oder Null, um einen temporären Namen zu generieren.  
   
  `dwFlags`  
  [in] Ein Wert, der angibt, ob der Schlüssel verlassen registriert. Die folgenden Werte werden unterstützt:  
@@ -71,7 +59,7 @@ HRESULT StrongNameKeyGenEx (
  [out] Die Größe in Bytes, der `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK`Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
  Die .NET Framework-Versionen 1.0 und 1.1 erfordern eine `dwKeySize` von 1024 Bit zum Signieren einer Assembly mit einem starken Namen, Version 2.0 fügt 2048-Bit-Schlüssel unterstützt.  
@@ -85,7 +73,7 @@ HRESULT StrongNameKeyGenEx (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [StrongNameKeyGen-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  

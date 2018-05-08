@@ -1,14 +1,6 @@
 ---
 title: StrongNameCompareAssemblies-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameCompareAssemblies
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1ed98b1713427a71c73c30ddd64188f61d51045c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies-Funktion
 Bestimmt, ob zwei Assemblys nur durch die Signaturen ihrer starken Namen unterscheiden.  
@@ -59,14 +47,14 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Einer der folgenden Werte:  
   
--   `SN_CMP_DIFFERENT`(0) – gibt an, dass die Assemblys verschiedene Daten enthalten.  
+-   `SN_CMP_DIFFERENT` (0) – gibt an, dass die Assemblys verschiedene Daten enthalten.  
   
--   `SN_CMP_IDENTICAL`(1) – gibt an, dass die Assemblys identisch, einschließlich ihrer Signaturen und die Prüfsumme sind.  
+-   `SN_CMP_IDENTICAL` (1) – gibt an, dass die Assemblys identisch, einschließlich ihrer Signaturen und die Prüfsumme sind.  
   
--   `SN_CMP_SIGONLY`(2) – gibt an, dass die Assemblys nur durch Signatur und Prüfsumme unterscheiden.  
+-   `SN_CMP_SIGONLY` (2) – gibt an, dass die Assemblys nur durch Signatur und Prüfsumme unterscheiden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`Bei erfolgreichem Abschluss; andernfalls `false`.  
+ `true` Bei erfolgreichem Abschluss; andernfalls `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,7 +63,7 @@ BOOLEAN StrongNameCompareAssemblies (
   
  **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Hinweise  
  Die starke Namenssignatur einer Assembly besteht aus der Assembly aneinander gehängt Textnamen, Version, Kultur und öffentliches Schlüsseltoken.  

@@ -1,29 +1,19 @@
 ---
-title: "Richtlinien für das Schreiben von sicherem, nicht verwaltetem Code"
-ms.custom: 
+title: Richtlinien für das Schreiben von sicherem, nicht verwaltetem Code
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - code security, unmanaged code
 - unmanaged code, securing
 - security [.NET Framework], unmanaged code
 - secure coding, unmanaged code
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adbdd005bba9e7276a77f2e78c53be43fdceffae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60e293ac8c9100876aa5a524bb5dda04e9f4183f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Richtlinien für das Schreiben von sicherem, nicht verwaltetem Code
 Bestimmter Bibliothekscode muss nicht verwalteten Code aufrufen (z. B. APIs in systemeigenem Code, etwa Win32). Hierbei ist größte Vorsicht geboten, denn dies bedeutet, dass der Sicherheitsbereich für verwalteten Code verlassen wird. Wenn Ihr Code sicherheitsneutral ist, müssen sowohl Ihr Code als auch jeder Code, der Ihren Code aufruft, eine Berechtigung für nicht verwalteten Code haben (<xref:System.Security.Permissions.SecurityPermission> mit angegebenem <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> -Flag).  

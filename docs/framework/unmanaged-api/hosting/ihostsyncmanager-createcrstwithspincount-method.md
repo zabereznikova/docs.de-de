@@ -1,14 +1,6 @@
 ---
 title: IHostSyncManager::CreateCrstWithSpinCount-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateCrstWithSpinCount
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 31830f97cff1c302ee573b8248eb1d83e696ac48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 50f292ab39bcf77d49d8a363b43b9233f350974c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount-Methode
 Erstellt ein kritisches Abschnittsobjekt mit Spin-Anzahl für die Synchronisierung.  
@@ -58,7 +46,7 @@ HRESULT CreateCrstWithSpinCount (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`CreateCrstWithSpinCount`wurde erfolgreich zurückgegeben.|  
+|S_OK|`CreateCrstWithSpinCount` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -67,7 +55,7 @@ HRESULT CreateCrstWithSpinCount (
 |E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um den angeforderten kritischen Abschnitt zu erstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Drehfeld Anzahl wird nur auf Systemen mit mehreren Prozessoren verwendet. Die Spinninganzahl gibt die Anzahl der Häufigkeit, mit die ein aufrufenden Thread starten muss, bevor sie eine "Wait"-Vorgang für einen Semaphore ausführt, die einen nicht verfügbaren kritischen Abschnitt zugeordnet ist. Wenn der kritische Abschnitt während des Vorgangs Drehfeld frei wird, wird der aufrufende Thread den Wartevorgang vermieden. `CreateCrstWithSpinCount`spiegelt die Win32- `InitializeCriticalSectionAndSpinCount` Funktion.  
+ Eine Drehfeld Anzahl wird nur auf Systemen mit mehreren Prozessoren verwendet. Die Spinninganzahl gibt die Anzahl der Häufigkeit, mit die ein aufrufenden Thread starten muss, bevor sie eine "Wait"-Vorgang für einen Semaphore ausführt, die einen nicht verfügbaren kritischen Abschnitt zugeordnet ist. Wenn der kritische Abschnitt während des Vorgangs Drehfeld frei wird, wird der aufrufende Thread den Wartevorgang vermieden. `CreateCrstWithSpinCount` spiegelt die Win32- `InitializeCriticalSectionAndSpinCount` Funktion.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -76,7 +64,7 @@ HRESULT CreateCrstWithSpinCount (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

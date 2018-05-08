@@ -1,14 +1,6 @@
 ---
 title: ICorDebugGenericValue Schnittstelle1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugGenericValue
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6c6fb4893edf0bcda9d6f7ddbeea7054f5b4fd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0081f020da673023e2c35f9599e9682215e2c9d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebuggenericvalue-interface1"></a>ICorDebugGenericValue Schnittstelle1
 Eine Unterklasse von "ICorDebugValue", die für alle Werte gilt. Diese Schnittstelle stellt die Get-Methode und die Set-Methode für den Wert bereit.  
@@ -45,7 +33,7 @@ Eine Unterklasse von "ICorDebugValue", die für alle Werte gilt. Diese Schnittst
 |[SetValue-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Kopiert einen neuen Wert aus dem angegebenen Puffer.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ICorDebugGenericValue`ist eine untergeordnete Schnittstelle an, da es nicht möglich ist.  
+ `ICorDebugGenericValue` ist eine untergeordnete Schnittstelle an, da es nicht möglich ist.  
   
  Für Verweistypen ist der Wert der Verweis anstelle des Inhalts des Verweises.  
   
@@ -61,7 +49,7 @@ Eine Unterklasse von "ICorDebugValue", die für alle Werte gilt. Diese Schnittst
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
     

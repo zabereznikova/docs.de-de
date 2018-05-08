@@ -1,29 +1,15 @@
 ---
 title: Webhosting einer Anwendung mit Queuing
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f396ffadeca81d86d867842b63cad3c63d67ff3a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Webhosting einer Anwendung mit Queuing
-Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste hostende Anwendungen enthalten. Das WAS-Prozessmodell verallgemeinert das [!INCLUDE[iis601](../../../../includes/iis601-md.md)]-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dies ermöglicht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten die Verwendung von HTTP- und andere Protokollen wie net.msmq und msmq.formatname in einer Hostumgebung, die nachrichtenbasierte Aktivierung unterstützt und die Möglichkeit zum Hosten vieler Anwendungen auf einem bestimmten Computer bietet.  
+Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die Anwendungen, die Hostdienste Windows Communication Foundation (WCF) enthalten. Das WAS-Prozessmodell verallgemeinert das [!INCLUDE[iis601](../../../../includes/iis601-md.md)]-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dadurch wird die Verwendung von HTTP- und nicht-HTTP-Protokollen wie net.msmq und msmq.formatname in einer Hostingumgebung, die Nachrichtenbasierte Aktivierung unterstützt und bietet die Möglichkeit, eine große Anzahl von Anwendungen auf einem Computer Hosten von WCF-Dienste.  
   
  WAS enthält einen Message Queuing (MSMQ)-Aktivierungsdienst, der eine Anwendung mit Queuing aktiviert, wenn mindestens eine Nachricht in einer der von der Anwendung verwendeten Warteschlangen platziert wird. Der MSMQ-Aktivierungsdienst ist ein NT-Dienst, der standardmäßig automatisch gestartet wird.  
   
@@ -49,7 +35,7 @@ Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Leben
  Der MSMQ-Aktivierungsdienst wird als NETZWERKDIENST ausgeführt. Dieser Dienst überwacht Warteschlangen zum Aktivieren von Anwendungen. Zum Aktivieren von Anwendungen aus der Warteschlange muss die Warteschlange NETZWERKDIENST-Zugriff bieten, um Nachrichten in der Zugriffssteuerungsliste einzusehen.  
   
 ### <a name="poison-messaging"></a>Nicht verarbeitbare Nachrichten  
- Die Handhabung nicht verarbeitbarer Nachrichten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erfolgt durch den Kanal, der nicht nur feststellt, dass eine Nachricht nicht verarbeitbar ist, sondern basierend auf der Benutzerkonfiguration auch ein Disposition auswählt. Als Ergebnis gibt es eine einzelne Nachricht in der Warteschlange. Die im Internet gehostete Anwendung bricht mehrmals hintereinander ab, und die Nachricht wird in eine Wiederholungswarteschlange verschoben. Zu einem von der Zeitverzögerung zwischen den Wiederholungszyklen festgelegten Zeitpunkt wird die Nachricht aus der Wiederholungswarteschlange für einen erneuten Versuch in die Hauptwarteschlange verschoben. Dazu muss jedoch der in der Warteschlange stehende Kanal aktiv sein. Wenn die Anwendung vom WAS wiederverwendet wird, verbleibt die Nachricht in der Wiederholungswarteschlange, bis eine weitere Nachricht zum Aktivieren der Anwendung mit Queuing in der Hauptwarteschlange eingeht. In diesem Fall kann das Problem behoben werden, indem die Nachricht manuell aus der Wiederholungswarteschlange zurück in die Hauptwarteschlange verschoben wird, um die Anwendung erneut zu aktivieren.  
+ In WCF Handhabung beschädigter Nachrichten erfolgt durch den Kanal, der nicht nur feststellt, dass eine Nachricht beschädigt wurde, aber ein basierend auf der Benutzerkonfiguration Disposition auswählt. Als Ergebnis gibt es eine einzelne Nachricht in der Warteschlange. Die im Internet gehostete Anwendung bricht mehrmals hintereinander ab, und die Nachricht wird in eine Wiederholungswarteschlange verschoben. Zu einem von der Zeitverzögerung zwischen den Wiederholungszyklen festgelegten Zeitpunkt wird die Nachricht aus der Wiederholungswarteschlange für einen erneuten Versuch in die Hauptwarteschlange verschoben. Dazu muss jedoch der in der Warteschlange stehende Kanal aktiv sein. Wenn die Anwendung vom WAS wiederverwendet wird, verbleibt die Nachricht in der Wiederholungswarteschlange, bis eine weitere Nachricht zum Aktivieren der Anwendung mit Queuing in der Hauptwarteschlange eingeht. In diesem Fall kann das Problem behoben werden, indem die Nachricht manuell aus der Wiederholungswarteschlange zurück in die Hauptwarteschlange verschoben wird, um die Anwendung erneut zu aktivieren.  
   
 ### <a name="subqueue-and-system-queue-caveat"></a>Einschränkung für Unterwarteschlangen und Systemwarteschlangen  
  Eine in WAS gehostete Anwendungen kann in einer Systemwarteschlange wie der systemweiten Warteschlange für unzustellbare Nachrichten oder in Unterwarteschlangen wie der Unterwarteschlange für potenziell schädliche Nachrichten nicht basierend auf Nachrichten aktiviert werden. Dies ist eine Einschränkung für diese Produktversion.  

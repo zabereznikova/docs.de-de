@@ -2,10 +2,6 @@
 title: CompareTo-Funktion (Referenz zur nicht verwalteten API)
 description: Die CompareTo-Funktion vergleicht ein Objekt in ein anderes WMI-Objekt.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CompareTo
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 038074b5bb3adc816caa226d3167395758d2ae57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4431da90842f4f96a0f09a2f28dc473d956ee3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compareto-function"></a>CompareTo-Funktion
 Vergleicht ein Objekt in ein anderes Windows-Management-Objekt.  
@@ -58,7 +51,7 @@ HRESULT CompareTo (
 
 `pCompareTo`  
 
-[in] Das zu vergleichende Objekt. `pcompareTo`muss ein gültiger [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) -Instanz; er darf nicht `null`.
+[in] Das zu vergleichende Objekt. `pcompareTo` muss ein gültiger [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) -Instanz; er darf nicht `null`.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -84,9 +77,9 @@ Die Flags, die als übergeben werden können die `lEnumFlags` Argument definiert
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Ignorieren Sie die Quelle (die Server und der Namespace, dem sie stammt). |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Ignorieren Sie alle Qualifizierer (einschließlich **Schlüssel** und **dynamische**) |
 | `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Ignorieren Sie die Standardwerte der Eigenschaften. Dieses Flag gilt nur für Vergleich von Klassen. |
-| `WBEM_FLAG_IGNORE_FLAVOR` | 0 x 20 | Ignorieren Sie Qualifizierern. Dieses Flag immer noch Qualifizierer Abhängigkeitslinks berücksichtigen, aber ignoriert Flavor Unterschiede wie Weitergabe Regeln und Überschreiben von Einschränkungen. |
-| `WBEM_FLAG_IGNORE_CASE` | 0 x 10 | Ignorieren Sie Groß-/Kleinschreibung, in das Vergleichen von Zeichenfolgenwerten. Dies gilt sowohl für Zeichenfolgen und Qualifiziererwerte. Beim Vergleich von Eigenschaften-und Qualifizierer wird immer Groß-/Kleinschreibung beachtet, unabhängig davon, ob dieses Flag festgelegt ist. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0 x 8 | Angenommen Sie, die zu vergleichenden Objekte Instanes derselben Klasse sind. Daher wird dieses Flag nur Zielinstanzen zu verglichen. Verwenden Sie diese Flags, um die Leistung zu optimieren. Wenn die Objekte nicht von derselben Klasse sind, sind die Ergebnisse nicht definiert. |
+| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Ignorieren Sie Qualifizierern. Dieses Flag immer noch Qualifizierer Abhängigkeitslinks berücksichtigen, aber ignoriert Flavor Unterschiede wie Weitergabe Regeln und Überschreiben von Einschränkungen. |
+| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignorieren Sie Groß-/Kleinschreibung, in das Vergleichen von Zeichenfolgenwerten. Dies gilt sowohl für Zeichenfolgen und Qualifiziererwerte. Beim Vergleich von Eigenschaften-und Qualifizierer wird immer Groß-/Kleinschreibung beachtet, unabhängig davon, ob dieses Flag festgelegt ist. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Angenommen Sie, die zu vergleichenden Objekte Instanes derselben Klasse sind. Daher wird dieses Flag nur Zielinstanzen zu verglichen. Verwenden Sie diese Flags, um die Leistung zu optimieren. Wenn die Objekte nicht von derselben Klasse sind, sind die Ergebnisse nicht definiert. |
 
 Oder Sie können einem einzelnen zusammengesetzten Flag wie folgt angeben:
 
@@ -99,7 +92,7 @@ Oder Sie können einem einzelnen zusammengesetzten Flag wie folgt angeben:
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

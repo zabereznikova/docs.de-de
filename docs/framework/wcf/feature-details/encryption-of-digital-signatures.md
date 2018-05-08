@@ -1,30 +1,16 @@
 ---
 title: Verschlüsselung von digitalen Signaturen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - encryption of digital signatures [WCF]
 - digital signatures [WCF], encryption
 - digital signatures [WCF]
 ms.assetid: 0868866d-40b4-4341-8e42-eee3b7f15b69
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 630465367eb4cee164a222bb5449070ac0726d5e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1a44e3e6110a2c03e4aa71947227485938c12180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="encryption-of-digital-signatures"></a>Verschlüsselung von digitalen Signaturen
 Standardmäßig wird eine Nachricht signiert und verschlüsselt, und die Signatur wird digital verschlüsselt. Dies können Sie steuern, indem Sie eine benutzerdefinierte Bindung mit einer Instanz von <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> erstellen und dann die `MessageProtectionOrder`-Eigenschaft der Klasse auf einen <xref:System.ServiceModel.Security.MessageProtectionOrder>-Enumerationswert festlegen. Die Standardeinstellung ist <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Im Vergleich zum einfachen Signieren und Verschlüsseln dauert dieser Prozess 10 bis 40&#160;Prozent länger. Wenn Sie die Verschlüsselung der Signatur jedoch deaktivieren, kann ein Angreifer eventuell den Inhalt der Nachricht erraten. Dies ist möglich, da das Signaturelement den Hashcode des reinen Texts des signierten Teils der Nachricht enthält. Obwohl der Nachrichtentext zwar standardmäßig verschlüsselt ist, enthält die unverschlüsselte Signatur z.&#160;B. den Hashcode des Nachrichtentexts. Wenn die Nachricht klein ist, könnte ein Angreifer den Inhalt herleiten. Diese Möglichkeit wird durch das Verschlüsseln der Signatur reduziert oder ausgeschlossen.  

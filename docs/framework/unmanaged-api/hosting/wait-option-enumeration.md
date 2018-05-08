@@ -1,14 +1,6 @@
 ---
 title: WAIT_OPTION-Enumeration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - WAIT_OPTION
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 962fc293-8ded-4b3b-90ce-2c21a4f1b244
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 143c191592efe8cfea8049f0dd5dc05a5bd4192f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb37394799db39baa406ef332066d5ebb2dbf19d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION-Enumeration
 Enthält Werte, die darauf, dass die Aktion eines Hosts durchführen soll, wenn ein Vorgang hinweisen, durch die common Language Runtime (CLR) Textblöcke angefordert.  
@@ -65,7 +53,7 @@ typedef enum {
   
  **Bibliothek:** "Mscoree.dll"  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

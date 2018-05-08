@@ -1,14 +1,6 @@
 ---
 title: StrongNameTokenFromAssemblyEx-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameTokenFromAssemblyEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 67a8a9f2-dee3-44b2-a1c0-f307a3bdf90f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5c118455932fd6c0bf44a486effa90632745d0e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20bafd0dfc455538292e47ca33508c251ad68614
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>StrongNameTokenFromAssemblyEx-Funktion
 Erstellt ein Token mit starkem Namen aus der angegebenen Assemblydatei und gibt den öffentlichen Schlüssel, den das Token darstellt.  
@@ -68,7 +56,7 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
  [out] Die Größe in Bytes, des öffentlichen Schlüssels.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`Bei erfolgreichem Abschluss; andernfalls `false`.  
+ `true` Bei erfolgreichem Abschluss; andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  Ein starker Name-Token ist die Kurzform eines öffentlichen Schlüssels. Das Token ist ein 64-Bit-Hash, der aus dem öffentlichen Schlüssel zum Signieren der Assembly erstellt wird. Das Token ist ein Teil des starken Namens für die Assembly und kann aus den Metadaten der Assembly gelesen werden.  
@@ -84,7 +72,7 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
   
  **Bibliothek:** als Ressource in mscoree.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [StrongNameTokenFromAssemblyEx-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)  

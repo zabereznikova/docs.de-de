@@ -1,24 +1,12 @@
 ---
 title: SQL Server-Schemaauflistungen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server-Schemaauflistungen
 Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben den allgemeinen Schemaauflistungen auch weitere Schemaauflistungen. Die Schemaauflistungen sind je nach verwendeter SQL Server-Version verschieden. Um die Liste der unterstützten schemaauflistungen zu ermitteln, rufen Sie die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben.  
@@ -28,7 +16,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
 |database_name|Zeichenfolge|Name der Datenbank.|  
-|dbid|Int16|Datenbank-ID.|  
+|DBID|Int16|Datenbank-ID.|  
 |create_date|DateTime|Erstellungsdatum der Datenbank.|  
   
 ## <a name="foreign-keys"></a>ForeignKeys  
@@ -87,7 +75,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |SPECIFIC_SCHEMA|Zeichenfolge|Spezifischer Name des Schemas.|  
 |SPECIFIC_NAME|Zeichenfolge|Spezifischer Name des Katalogs.|  
 |ROUTINE_CATALOG|Zeichenfolge|Katalog, zu dem die gespeicherte Prozedur gehört.|  
-|ROUTINE_SCHEMA|Zeichenfolge|Schema, das die gespeicherte Prozedur enthält.|  
+|FÜR ROUTINE_SCHEMA|Zeichenfolge|Schema, das die gespeicherte Prozedur enthält.|  
 |ROUTINE_NAME|Zeichenfolge|Name der gespeicherten Prozedur.|  
 |ROUTINE_TYPE|Zeichenfolge|Gibt PROCEDURE für gespeicherte Prozeduren und FUNCTION für Funktionen zurück.|  
 |CREATED|DateTime|Zeitpunkt der Erstellung der Prozedur.|  

@@ -3,18 +3,12 @@ title: WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)
 description: Fasst die .NET Framework nicht verwaltete API Leistungsindikator Informationen zu WMI und Leistung.
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
 ms.date: 11/06/2017
-ms.topic: reference
-ms.prod: .net-framework
-ms.devlang: cpp
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7959d6b6b7bafd728db5a579ff1376e686c5b74
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 2007c8aa74e1ccf3c4753343ac633b67a36daeb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows-Verwaltungsinstrumentation (WMI) und Leistungsindikatoren (Referenz zur nicht verwalteten API)
 
@@ -35,7 +29,7 @@ Die API umfasst die folgenden Funktionen:
 | [CompareTo-Funktion](compareto.md) | Vergleicht ein Objekt in ein anderes Windows-Management-Objekt. |
 | [ConnectServerWmi-Funktion](connectserverwmi.md) | Erstellt eine Verbindung über DCOM mit einem WMI-Namespace auf einem angegebenen Computer an. |
 | [CreateClassEnumWmi-Funktion](createclassenumwmi.md) | Gibt einen Enumerator für alle Klassen, die die angegebenen Auswahlkriterien entsprechen. |
-| [CreateInstanceEnumWmi function](createinstanceenumwmi.md) | Gibt einen Enumerator, der das bestehen einer bestimmten Klasse, die angegebenen Auswahlkriterien erfüllen zurückgibt. |
+| [CreateInstanceEnumWmi-Funktion](createinstanceenumwmi.md) | Gibt einen Enumerator, der das bestehen einer bestimmten Klasse, die angegebenen Auswahlkriterien erfüllen zurückgibt. |
 | [Delete-Funktion](delete.md) | Löscht eine angegebene Eigenschaft aus einer Klassendefinition und aller seiner Qualifizierer an. |
 | [DeleteMethod-Funktion](deletemethod.md) | Löscht eine angegebene Methode aus der Definition einer CIM-Klasse. |
 | [EndEnumeration-Funktion](endenumeration.md) | Beendet eine Enumerationsfolge an. | 

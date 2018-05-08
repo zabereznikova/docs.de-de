@@ -1,28 +1,18 @@
 ---
 title: Fusion-Schnittstellen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - interfaces [.NET Framework fusion]
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9226eba1b9f03138180430b2abb960f43f4b4260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fusion-interfaces"></a>Fusion-Schnittstellen
 In diesem Abschnitt wird beschrieben, die nicht verwalteten Schnittstellen, die die Fusion-API verwendet, um die Eigenschaften der Ressourcen einer Anwendung zugreifen und die richtigen Versionen dieser Ressourcen für die Anwendung zu suchen.  
@@ -73,7 +63,7 @@ In diesem Abschnitt wird beschrieben, die nicht verwalteten Schnittstellen, die 
  [IReferenceIdentity-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
  Stellt einen Verweis auf die eindeutige Signatur des ein Codeobjekt dar.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  

@@ -1,13 +1,6 @@
 ---
 title: Kardinale Splines in GDI+
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9b7653e05fff241f05836624ff02273fb8c24ef6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93ae09c72415fa489e62f753e51e5a3ffcfb2425
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cardinal-splines-in-gdi"></a>Kardinale Splines in GDI+
 Eine cardinal-Splinekurve ist eine Sequenz von einzelne Kurven verknüpft, um eine größere Kurve zu bilden. Die Splinekurve durch ein Array von Punkten und Spannungsparameter angegeben. Eine cardinal-Splinekurve durchläuft problemlos auf jedem Punkt im Array; Es gibt keine abgerundete Ecken und keine abrupten Änderungen in die Dichtigkeit der Kurve. Die folgende Abbildung zeigt eine Reihe von Punkten und eine cardinal-Splinekurve, die jeden Punkt in der Gruppe durchläuft.  

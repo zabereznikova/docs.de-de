@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Ausfüllen offener Körper"
-ms.custom: 
+title: 'Gewusst wie: Ausfüllen offener Körper'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c020e5f7306e73ee97dff0b492b04b5a153059cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7422ae2a4dc4d59fd337ab2294caa0d65057bae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-fill-open-figures"></a>Gewusst wie: Ausfüllen offener Körper
-Sie können einen Pfad ausfüllen, durch das Übergeben einer <xref:System.Drawing.Drawing2D.GraphicsPath> -Objekt an die <xref:System.Drawing.Graphics.FillPath%2A> Methode. Die <xref:System.Drawing.Graphics.FillPath%2A> -Methode füllt den Pfad entsprechend der Füllmodus (alternate oder winding), die derzeit für den Pfad festlegen. Wenn der Pfad offener Körper verfügt, wird der Pfad gefüllt, als ob diese Zahlen geschlossen wurden. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Schließt eine Abbildung durch Zeichnen einer geraden Linie vom Endpunkt an seinem Ausgangspunkt.  
+Sie können einen Pfad ausfüllen, durch das Übergeben einer <xref:System.Drawing.Drawing2D.GraphicsPath> -Objekt an die <xref:System.Drawing.Graphics.FillPath%2A> Methode. Die <xref:System.Drawing.Graphics.FillPath%2A> -Methode füllt den Pfad entsprechend der Füllmodus (alternate oder winding), die derzeit für den Pfad festlegen. Wenn der Pfad offener Körper verfügt, wird der Pfad gefüllt, als ob diese Zahlen geschlossen wurden. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Schließt eine Abbildung durch Zeichnen einer geraden Linie vom Endpunkt an seinem Ausgangspunkt.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt einen Pfad mit einer offenen Figur (einen Bogen) und eine geschlossene Form (Ellipse). Die <xref:System.Drawing.Graphics.FillPath%2A> -Methode füllt den Pfad entsprechend der Standardmodus für die Füllung, also <xref:System.Drawing.Drawing2D.FillMode.Alternate>.  

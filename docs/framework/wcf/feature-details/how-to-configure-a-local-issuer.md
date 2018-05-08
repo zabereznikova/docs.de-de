@@ -1,13 +1,6 @@
 ---
 title: 'Vorgehensweise: Konfigurieren eines lokalen Ausstellers'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Vorgehensweise: Konfigurieren eines lokalen Ausstellers
 In diesem Thema wird beschrieben, wie Sie einen Client für die Verwendung eines lokalen Ausstellers für ausgestellte Token konfigurieren.  
   
  Wenn ein Client mit einem Verbunddienst kommuniziert, wird vom Dienst die Adresse des Sicherheitstokendiensts angegeben, der das Token ausgeben soll, das vom Client für die Authentifizierung am Verbunddienst verwendet werden soll. In bestimmten Situationen kann der Client konfiguriert werden zum Verwenden einer *lokalen Ausstellers*.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet einen lokalen Aussteller in den Fällen, in denen die Ausstelleradresse einer Verbundbindung http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous oder `null` lautet. In diesem Fall müssen Sie <xref:System.ServiceModel.Description.ClientCredentials> mit der Adresse des lokalen Ausstellers und der für die Kommunikation mit diesem Aussteller zu verwendenden Bindung konfigurieren.  
+ Windows Communication Foundation (WCF) verwendet einen lokalen Aussteller in den Fällen, in denen die Ausstelleradresse einer verbundbindung http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous oder `null`. In diesem Fall müssen Sie <xref:System.ServiceModel.Description.ClientCredentials> mit der Adresse des lokalen Ausstellers und der für die Kommunikation mit diesem Aussteller zu verwendenden Bindung konfigurieren.  
   
 > [!NOTE]
 >  Wenn die <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> Eigenschaft von der `ClientCredentials` -Klasse festgelegt, dass `true`, eine Adresse des lokalen Ausstellers nicht angegeben ist, und die Ausstelleradresse gemäß der [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oder andere verbundbindung ist http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, oder `null`, klicken Sie dann den Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Aussteller verwendet wird.  

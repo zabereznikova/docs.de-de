@@ -1,13 +1,6 @@
 ---
 title: Typen von Koordinatensystemen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff53942cb90721d5411f99b261f90366d039e151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-coordinate-systems"></a>Typen von Koordinatensystemen
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]verwendet drei Koordinatensysteme: Global, Seite und Gerät. Globalen Koordinaten sind die Koordinaten verwendet, um eine bestimmte Grafik World modellieren und die Koordinaten, die Sie an Methoden in .NET Framework zu übergeben. Seitenkoordinaten beziehen sich auf das Koordinatensystem, die von einer Zeichenoberfläche, z. B. eines Formulars oder Steuerelements verwendet. Gerätekoordinaten sind die Koordinaten, die durch das physische Gerät, z. B. einem Bildschirm oder Blatt Papier gezeichnet werden verwendet. Stellen Sie, wenn den Aufruf `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, die Punkte, die Sie zum Übergeben der <xref:System.Drawing.Graphics.DrawLine%2A> Methode –`(0, 0)` und `(160, 80)`– befinden sich in der ganzen Welt Koordinatenbereich. Vor dem [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können die Linie auf dem Bildschirm, durchlaufen die Koordinaten auf eine Sequenz von Transformationen. Eine Transformation, die die globale Transformation aufgerufen globalen Koordinaten Seitenkoordinaten konvertiert und eine andere Transformation, die Seitentransformation aufgerufen konvertiert Seitenkoordinaten in logische Koordinaten.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] verwendet drei Koordinatensysteme: Global, Seite und Gerät. Globalen Koordinaten sind die Koordinaten verwendet, um eine bestimmte Grafik World modellieren und die Koordinaten, die Sie an Methoden in .NET Framework zu übergeben. Seitenkoordinaten beziehen sich auf das Koordinatensystem, die von einer Zeichenoberfläche, z. B. eines Formulars oder Steuerelements verwendet. Gerätekoordinaten sind die Koordinaten, die durch das physische Gerät, z. B. einem Bildschirm oder Blatt Papier gezeichnet werden verwendet. Stellen Sie, wenn den Aufruf `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, die Punkte, die Sie zum Übergeben der <xref:System.Drawing.Graphics.DrawLine%2A> Methode –`(0, 0)` und `(160, 80)`– befinden sich in der ganzen Welt Koordinatenbereich. Vor dem [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können die Linie auf dem Bildschirm, durchlaufen die Koordinaten auf eine Sequenz von Transformationen. Eine Transformation, die die globale Transformation aufgerufen globalen Koordinaten Seitenkoordinaten konvertiert und eine andere Transformation, die Seitentransformation aufgerufen konvertiert Seitenkoordinaten in logische Koordinaten.  
   
 ## <a name="transforms-and-coordinate-systems"></a>Transformationen und Koordinatensysteme  
  Angenommen Sie, Sie arbeiten mit einem Koordinatensystem, die seinen Ursprung im Text des Clientbereichs statt in der oberen linken Ecke hat möchten. Nehmen Sie z. B., den Ursprung 100 Pixel vom linken Rand des Clientbereichs und 50 Pixel vom oberen Rand des Clientbereichs sein soll. Die folgende Abbildung zeigt eine solche einem Koordinatensystem.  

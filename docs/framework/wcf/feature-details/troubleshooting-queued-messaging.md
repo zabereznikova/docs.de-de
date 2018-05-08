@@ -1,38 +1,24 @@
 ---
 title: Problembehandlung bei Nachrichtenwarteschlangen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 45a3bf82662fcc01b732428d1ca351e4ae8ddca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Problembehandlung bei Nachrichtenwarteschlangen
-Dieser Abschnitt enthält allgemeine Fragen und Hinweise zur Problembehandlung bei der Verwendung von Warteschlangen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Dieser Abschnitt enthält allgemeine Fragen und Problembehandlung bei der Verwendung von Warteschlangen in Windows Communication Foundation (WCF).  
   
 ## <a name="common-questions"></a>Allgemeine Fragen  
- **F:** verwendet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beta 1, und ich den MSMQ-Hotfix installiert. Muss ich den Hotfix entfernen?  
+ **F:** verwendet WCF Beta 1, und ich den MSMQ-Hotfix installiert. Muss ich den Hotfix entfernen?  
   
- **A:** Ja. Dieser Hotfix wird nicht mehr unterstützt. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funktioniert nun ohne Hotfix mit MSMQ.  
+ **A:** Ja. Dieser Hotfix wird nicht mehr unterstützt. WCF unterstützt jetzt auch ohne Hotfix auf MSMQ.  
   
  **F:** stehen zwei Bindungen für MSMQ: <xref:System.ServiceModel.NetMsmqBinding> und <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Welche sollte ich wann verwenden?  
   
- **A:** verwenden die <xref:System.ServiceModel.NetMsmqBinding> Wenn Sie MSMQ als Transport für eine warteschlangenkommunikation zwischen zwei verwenden möchten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Anwendungen. Verwenden Sie <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>, wenn Sie vorhandene MSMQ-Anwendungen für die Kommunikation mit neuen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen verwenden möchten.  
+ **A:** verwenden die <xref:System.ServiceModel.NetMsmqBinding> Wenn Sie MSMQ als Transport für eine warteschlangenkommunikation zwischen zwei WCF-Anwendungen verwenden möchten. Verwenden Sie die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> Wenn Sie vorhandene MSMQ-Anwendungen, die zur Kommunikation mit neuen WCF-Anwendungen verwenden möchten.  
   
  **F:** habe ich MSMQ zu verwenden, Aktualisieren der <xref:System.ServiceModel.NetMsmqBinding> und `MsmqIntegration` Bindungen?  
   
@@ -54,7 +40,7 @@ Dieser Abschnitt enthält allgemeine Fragen und Hinweise zur Problembehandlung b
   
  **A:** Ja.  
   
- **F:** ich möchte vorhandene MSMQ-Anwendungen mit den neuen integrieren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Clients oder Server. Muss ich beide Seiten der MSMQ-Infrastruktur aktualisieren?  
+ **F:** neuen WCF-Clients oder Server vorhandene MSMQ-Anwendungen integriert werden soll. Muss ich beide Seiten der MSMQ-Infrastruktur aktualisieren?  
   
  **A:** "Nein". Sie müssen keine Seite auf MSMQ 4.0 aktualisieren.  
   
@@ -145,9 +131,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **F:** Wenn ich einen öffentlichen oder privaten Formatnamen verwenden, und Öffnen des Diensthosts auf [!INCLUDE[wv](../../../../includes/wv-md.md)], eine Fehlermeldung. Warum?  
   
- **A:** der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Integrationskanal unter [!INCLUDE[wv](../../../../includes/wv-md.md)] prüft, ob eine Unterwarteschlange kann, für die Hauptassembly der Anwendungswarteschlange geöffnet werden für unzustellbare Nachrichten zu verarbeiten. Der Name der untergeordneten Warteschlange wird von einem an den Listener übergebenen msmq.formatname-URI abgeleitet. Der Name der untergeordneten Warteschlange kann in MSMQ nur ein direkter Formatname sein. Deshalb tritt der Fehler auf. Ändern Sie den Warteschlangen-URI in einen direkten Formatnamen.  
+ **A:** auf den WCF-Integrationskanal [!INCLUDE[wv](../../../../includes/wv-md.md)] prüft, ob eine Unterwarteschlange kann, für die Hauptassembly der Anwendungswarteschlange geöffnet werden für unzustellbare Nachrichten zu verarbeiten. Der Name der untergeordneten Warteschlange wird von einem an den Listener übergebenen msmq.formatname-URI abgeleitet. Der Name der untergeordneten Warteschlange kann in MSMQ nur ein direkter Formatname sein. Deshalb tritt der Fehler auf. Ändern Sie den Warteschlangen-URI in einen direkten Formatnamen.  
   
- **F:** beim Empfang einer Nachricht aus einer MSMQ-Anwendung die Nachricht befindet sich in der Warteschlange und wird nicht gelesen werden, von der empfangenden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Anwendung. Warum?  
+ **F:** beim Empfang einer Nachricht aus einer MSMQ-Anwendung wird die Nachricht in der Warteschlange befindet und nicht von der empfangenden WCF-Anwendung gelesen wird. Warum?  
   
  **A:** Kontrollkästchen, um festzustellen, ob die Nachricht einen Text enthält. Ohne Nachrichtentext ignoriert der MSMQ-Integrationskanal die Nachricht. Implementieren Sie `IErrorHandler`, um bei Ausnahmen benachrichtigt zu werden, und überprüfen Sie die Ablaufverfolgungen.  
   
@@ -193,7 +179,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **A:** überprüfen Sie die Bindungskonfiguration. Für die Standardbindung ist die MSMQ-Transportsicherheit zum Signieren der Nachricht aktiviert. Deaktivieren Sie sie.  
   
 ### <a name="remote-transacted-receives"></a>Remote durchgeführte Empfangsvorgänge  
- **F:** Wenn ich eine Warteschlange auf Computer A haben und ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst, liest Nachrichten aus einer Warteschlange auf Computer B (Szenario "die Remote durchgeführter Empfangsvorgänge"), Nachrichten aus der Warteschlange nicht gelesen werden. Ablaufverfolgungsinformationen gibt an, bei der der Empfang der Nachricht "Transaktion kann nicht importiert werden." Was kann ich tun, um dieses Problem zu beheben?  
+ **F:** Wenn ich eine Warteschlange auf dem Computer A und ein WCF-Dienst, der liest Nachrichten aus einer Warteschlange auf Computer B (Szenario "die Remote durchgeführter Empfangsvorgänge"), Nachrichten aus der Warteschlange nicht gelesen werden. Ablaufverfolgungsinformationen gibt an, bei der der Empfang der Nachricht "Transaktion kann nicht importiert werden." Was kann ich tun, um dieses Problem zu beheben?  
   
  **A:** gibt es drei mögliche Ursachen dafür sind:  
   

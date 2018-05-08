@@ -1,14 +1,6 @@
 ---
 title: 'Vorgehensweise: Aktivieren der Nachrichtenreplay-Erkennung'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,24 +10,18 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5c761a23d2560f40a0121d684dcb411a716de5a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Vorgehensweise: Aktivieren der Nachrichtenreplay-Erkennung
 Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Strom als zulässige Meldungen, was zu einer Reihe negativer Konsequenzen führt, wie z. B. redundanten Bestellungen eines Artikels.  
   
  Weitere Informationen zu nachrichtenreplay-Erkennung, finden Sie unter [Replay-Erkennung Nachrichten](http://go.microsoft.com/fwlink/?LinkId=88536).  
   
- Die folgende Prozedur veranschaulicht verschiedene Eigenschaften, die Sie verwenden können, um die Replay-Erkennung mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zu steuern.  
+ Das folgende Verfahren veranschaulicht verschiedene Eigenschaften, die Sie verwenden können, um Replay-Erkennung, die mithilfe von Windows Communication Foundation (WCF) zu steuern.  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>So steuern Sie die Replay-Erkennung für den Client mithilfe von Code  
   

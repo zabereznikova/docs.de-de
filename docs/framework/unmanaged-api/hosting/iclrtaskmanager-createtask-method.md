@@ -1,14 +1,6 @@
 ---
 title: ICLRTaskManager::CreateTask-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTaskManager.CreateTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e9e78db6e43397709f913f8f79a617221f98db87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f731e121324793a027c5977a02e1973b0d6fff20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask-Methode
 Fordert explizit an, dass die common Language Runtime (CLR) eine neue Aufgabe zu erstellen.  
@@ -65,7 +53,7 @@ HRESULT CreateTask (
 ## <a name="remarks"></a>Hinweise  
  Die CLR erstellt eine neue Aufgabe automatisch bei der Initialisierung, wenn Benutzercode einen Thread erstellt, mit der Typen in der <xref:System.Threading> -Namespace, oder wenn die Größe des Threadpools erhöht wird. Außerdem erstellt Sie Aufgaben, wenn nicht verwalteter Code eine verwaltete Funktion aufruft.  
   
- `CreateTask`ermöglicht es den Host, explizite Anforderung, dass die CLR einen neuen Task erstellen. Der Host kann z. B. diese Methode, um die Datenstrukturen im Voraus zu initialisieren aufrufen.  
+ `CreateTask` ermöglicht es den Host, explizite Anforderung, dass die CLR einen neuen Task erstellen. Der Host kann z. B. diese Methode, um die Datenstrukturen im Voraus zu initialisieren aufrufen.  
   
 > [!IMPORTANT]
 >  Die neue Aufgabe wird in einem angehaltenen Zustand zurückgegeben und bleibt angehalten, bis der Host explizit aufruft [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
@@ -77,7 +65,7 @@ HRESULT CreateTask (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

@@ -1,31 +1,17 @@
 ---
-title: "Enumerationstypen in Datenverträgen"
-ms.custom: 
+title: Enumerationstypen in Datenverträgen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7989996f7ed64ba4b85ddc1ca01538ec05e99e1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Enumerationstypen in Datenverträgen
 Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Thema werden mehrere Beispiele behandelt, in denen das Programmiermodell erklärt wird.  
@@ -43,7 +29,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
  Sie können die <xref:System.Runtime.Serialization.DataContractAttribute>-Eigenschaften (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> und <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) wie gewohnt für Enumerationsdatenverträge verwenden.  
   
 ### <a name="enumeration-member-values"></a>Enumerationsmemberwerte  
- Im Allgemeinen enthält der Datenvertrag Enumerationsmembernamen, keine numerischen Werte. Wenn Sie jedoch das Datenvertragsmodell verwenden, werden die numerischen Werte im exportierten Schema beibehalten, wenn es sich bei der empfangenden Stelle um einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client handelt. Beachten Sie, dass dies nicht der Fall ist, bei Verwendung der [verwenden der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+ Im Allgemeinen enthält der Datenvertrag Enumerationsmembernamen, keine numerischen Werte. Allerdings behält das exportierte Schema, wenn das datenvertragsmodell verwenden, wenn der Empfängerseite wird genauso eine WCF-Client ist, die numerischen Werte. Beachten Sie, dass dies nicht der Fall ist, bei Verwendung der [verwenden der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
  Wenn im obigen Beispiel `condition` auf `Used` festgelegt ist und die Daten in XML serialisiert werden, lautet das XML-Ergebnis `<condition>Used</condition>``<condition>1</condition>`, und nicht . Deshalb entspricht der folgende Datenvertrag dem Datenvertrag von `CarConditionEnum`.  
   

@@ -1,49 +1,35 @@
 ---
 title: Warteschlangen in WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuing-in-wcf"></a>Warteschlangen in WCF
-In diesem Abschnitt wird beschrieben, wie der Warteschlange hinzugefügte Kommunikation in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet wird.  
+In diesem Abschnitt wird beschrieben, wie warteschlangenkommunikation in Windows Communication Foundation (WCF) verwendet wird.  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>Warteschlangen als WCF-Transportbindung  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geben die Verträge an, welche Objekte ausgetauscht werden. Verträge sind geschäftsabhängige oder anwendungsspezifische Nachrichtenaustausche. Der Mechanismus (oder die "Art und Weise") zum Austausch von Nachrichten wird in den Bindungen angegeben. Bindungen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kapseln Details des Nachrichtenaustauschs. Die Bindungen stellen dem Benutzer Konfigurationssteuerelemente zur Verfügung, mit denen verschiedene Aspekte des Transports oder des Protokolls gesteuert werden, der bzw. das von den Bindungen dargestellt wird. Warteschlangen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden wie jede andere Transportbindung behandelt, was ein großer Vorteil für zahlreiche Warteschlangenanwendungen ist. Heute werden zahlreiche Warteschlangenanwendungen anders geschrieben als andere verteilte RPC (Remote Procedure Call)-Anwendungen, wodurch die Verfolgung und Verwaltung erschwert wird. Mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird ein sehr ähnlicher Stil für das Schreiben einer verteilten Anwendung verwendet, wodurch die Verfolgung und Verwaltung erleichtert wird. Durch separates Trennen des Austauschmechanismus von der Geschäftslogik wird zudem die Konfiguration des Transports oder das Vornehmen von Änderungen erleichtert, ohne dass der anwendungsspezifische Code davon betroffen ist. Die folgende Abbildung zeigt die Struktur eines WCF-Diensts und eines Clients mit MSMQ als Transport.  
+ In WCF angeben die Verträge an, welche Objekte ausgetauscht werden. Verträge sind geschäftsabhängige oder anwendungsspezifische Nachrichtenaustausche. Der Mechanismus (oder die „Art und Weise“) zum Austausch von Nachrichten wird in den Bindungen angegeben. Bindungen in WCF kapseln Details des Nachrichtenaustauschs. Die Bindungen stellen dem Benutzer Konfigurationssteuerelemente zur Verfügung, mit denen verschiedene Aspekte des Transports oder des Protokolls gesteuert werden, der bzw. das von den Bindungen dargestellt wird. Warteschlangen in WCF wird wie jede andere transportbindung behandelt, der ein großer Vorteil für zahlreiche warteschlangenanwendungen ist. Heute werden zahlreiche Warteschlangenanwendungen anders geschrieben als andere verteilte RPC (Remote Procedure Call)-Anwendungen, wodurch die Verfolgung und Verwaltung erschwert wird. Mit WCF ist das Format des Schreibens einer verteilten Anwendung nahezu identisch, Verfolgung und Verwaltung zu erleichtern. Durch separates Trennen des Austauschmechanismus von der Geschäftslogik wird zudem die Konfiguration des Transports oder das Vornehmen von Änderungen erleichtert, ohne dass der anwendungsspezifische Code davon betroffen ist. Die folgende Abbildung zeigt die Struktur eines WCF-Diensts und eines Clients mit MSMQ als Transport.  
   
  ![In der Warteschlange Anwendungsdiagramm](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Warteschlange-Abbildung")  
   
- Aus der vorherigen Abbildung geht hervor, dass mit dem Client und dem Dienst nur die Anwendungssemantik definiert werden muss, d.&#160;h. der Vertrag und die Implementierung. Eine der Warteschlange hinzugefügte Bindung wird vom Dienst mit den bevorzugten Einstellungen konfiguriert. Der Client verwendet die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Generieren einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client an den Dienst und eine Konfigurationsdatei zu generieren, die die Bindungen verwendet, die zum Senden von Nachrichten an den Dienst beschreibt. Zum Senden einer in der Warteschlange enthaltenen Nachricht wird vom Client ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client instanziiert und ein Vorgang darauf ausgelöst. Daraufhin wird die Nachricht an die Übertragungswarteschlange gesendet und an die Zielwarteschlange übertragen. Alle Komplexitäten der in der Warteschlange enthaltenen Kommunikation werden der Anwendung, die Nachrichten sendet und empfängt, nicht angezeigt.  
+ Aus der vorherigen Abbildung geht hervor, dass mit dem Client und dem Dienst nur die Anwendungssemantik definiert werden muss, d.&#160;h. der Vertrag und die Implementierung. Eine der Warteschlange hinzugefügte Bindung wird vom Dienst mit den bevorzugten Einstellungen konfiguriert. Der Client verwendet die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) um einen WCF-Client an den Dienst zu generieren und eine Konfigurationsdatei zu generieren, die die Bindungen verwendet, die zum Senden von Nachrichten an den Dienst beschreibt. Daher zum Senden einer Nachricht in der Warteschlange der Client einen WCF-Client instanziiert und einen Vorgang darauf. Daraufhin wird die Nachricht an die Übertragungswarteschlange gesendet und an die Zielwarteschlange übertragen. Alle Komplexitäten der in der Warteschlange enthaltenen Kommunikation werden der Anwendung, die Nachrichten sendet und empfängt, nicht angezeigt.  
   
- Beachten Sie folgende Warnhinweise zu der Warteschlange hinzugefügten Bindungen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Beachten Sie folgende Warnhinweise zu der Warteschlange hinzugefügte Bindung in WCF gehören:  
   
--   Alle Dienstvorgänge müssen unidirektional sein, da von der standardmäßigen in der Warteschlange enthaltenen Bindung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] keine Duplexkommunikation mithilfe von Warteschlangen unterstützt wird. Ein Beispiel für die bidirektionale Kommunikation ([bidirektionaler Kommunikation](../../../../docs/framework/wcf/samples/two-way-communication.md)) zeigt, wie zwei unidirektionale Verträgen Duplexkommunikation mithilfe von Warteschlangen zu implementieren.  
+-   Alle Vorgänge unidirektional sein müssen, da der Standardwert der Warteschlange enthaltenen Bindung in WCF Dienst unterstützt keine Duplexkommunikation mithilfe von Warteschlangen. Ein Beispiel für die bidirektionale Kommunikation ([bidirektionaler Kommunikation](../../../../docs/framework/wcf/samples/two-way-communication.md)) zeigt, wie zwei unidirektionale Verträgen Duplexkommunikation mithilfe von Warteschlangen zu implementieren.  
   
--   Soll ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client mithilfe von Metadaten generiert werden, ist für den Austausch ein zusätzlicher HTTP-Endpunkt im Dienst erforderlich, damit durch eine direkte Abfrage der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client generiert wird und Bindungsinformationen zur ordnungsgemäßen Konfiguration der in der Warteschlange enthaltenen Kommunikation abgerufen werden.  
+-   Zum Generieren eines WCFS erfordert der Client mithilfe von Metadatenaustausch einen zusätzlichen HTTP-Endpunkt für den Dienst, damit sie direkt abgefragt werden kann, um den WCF-Client zu generieren und Bindungsinformationen zur ordnungsgemäßen Konfiguration der warteschlangenkommunikation.  
   
--   Auf Basis der der Warteschlange hinzugefügten Bindung ist eine zusätzliche Konfiguration außerhalb von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erforderlich. Beispielsweise erfordert die mit <xref:System.ServiceModel.NetMsmqBinding> zur Verfügung gestellte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Klasse die Konfiguration der Bindungen sowie eine Mindestkonfiguration von Message Queuing (MSMQ).  
+-   Basierend auf der Bindung, ist zusätzliche Konfiguration außerhalb von WCF erforderlich. Z. B. die <xref:System.ServiceModel.NetMsmqBinding> -Klasse, die mit WCF ausgeliefert wird erfordert, dass Sie die Bindungen konfigurieren sowie die Mindestkonfiguration von Message Queuing (MSMQ).  
   
- In den folgenden Abschnitten werden die bestimmten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthaltenen und der Warteschlange hinzugefügten Bindungen beschrieben, die auf MSMQ basieren.  
+ In den folgenden Abschnitten wird beschrieben, die bestimmten in der Warteschlange enthaltenen Bindungen mit WCF, die auf MSMQ basieren.  
   
 ### <a name="msmq"></a>MSMQ  
- Für den der Warteschlange hinzugefügten Transport in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird MSMQ für die der Warteschlange hinzugefügten Kommunikation verwendet.  
+ Der Warteschlangentransport in WCF verwendet MSMQ für die warteschlangenkommunikation.  
   
  MSMQ steht als optionale Windows-Komponente zur Verfügung und wird als NT-Dienst ausgeführt. MSMQ erfasst Nachrichten, die in einer Übertragungswarteschlange übertragen und an eine Zielwarteschlange gesendet werden. Die MSMQ-Warteschlangen-Manager implementieren ein zuverlässiges Nachrichtenübertragungsprotokoll, damit Nachrichten bei der Übertragung nicht verloren gehen. Das Protokoll kann entweder systemeigen oder SOAP-basiert sein, zum Beispiel das SOAP Reliable Message Protocol (SRMP).  
   
@@ -54,7 +40,7 @@ In diesem Abschnitt wird beschrieben, wie der Warteschlange hinzugefügte Kommun
  Weitere Informationen zu MSMQ, finden Sie unter [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- Die [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) wird von die Bindung [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden für zwei [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Endpunkte für die Kommunikation über MSMQ. Die Bindung macht deshalb MSMQ-spezifische Eigenschaften verfügbar. Allerdings sind nicht alle MSMQ-Features und -Eigenschaften in `NetMsmqBinding` verfügbar. Die kompakte `NetMsmqBinding` verfügt über ein optimales Spektrum an Features, die für die meisten Kunden ausreichend sind.  
+ Die [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) wird von die Bindung WCF zwei WCF-Endpunkte bietet für die Kommunikation über MSMQ. Die Bindung macht deshalb MSMQ-spezifische Eigenschaften verfügbar. Allerdings sind nicht alle MSMQ-Features und -Eigenschaften in `NetMsmqBinding` verfügbar. Die kompakte `NetMsmqBinding` verfügt über ein optimales Spektrum an Features, die für die meisten Kunden ausreichend sind.  
   
  `NetMsmqBinding` beschreibt die grundlegenden Warteschlangenkonzepte, die bisher in Form von Bindungseigenschaften erörtert wurden. Mit diesen Eigenschaften wird wiederum MSMQ mitgeteilt, wie Nachrichten übertragen und zugestellt werden sollen. Eine Erläuterung der Eigenschaftenkategorien befindet sich in den folgenden Abschnitten. Weitere Informationen finden Sie unter den grundlegenden Themen, die genaueren bestimmte Eigenschaften Beschreibung.  
   
@@ -75,7 +61,7 @@ In diesem Abschnitt wird beschrieben, wie der Warteschlange hinzugefügte Kommun
   
  Viele Warteschlangensysteme verfügen über eine systemweite Warteschlange für unzustellbare Nachrichten. MSMQ verfügt über eine systemweite Warteschlange für unzustellbare nicht transaktionale Nachrichten. Diese Warteschlange wird für Nachrichten verwendet, deren Zustellung an nicht transaktionale Warteschlangen nicht möglich ist. Darüber hinaus besitzt MSMQ eine systemweite transaktionale Warteschlange für unzustellbare Nachrichten, die für Nachrichten verwendet wird, die nicht an Transaktionswarteschlange gesendet werden können.  
   
- Wird der MSMQ-Dienst von mehreren Clients, die Nachrichten an verschiedene Zielwarteschlangen senden, gemeinsam verwendet, werden alle von den Clients gesendeten Nachrichten in dieselbe Warteschlange für unzustellbare Nachrichten verschoben. Dies ist nicht immer empfehlenswert. Zum Zweck einer besseren Isolierung verfügen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] über eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten (oder eine anwendungsspezifische Warteschlange für unzustellbare Nachrichten), die der Benutzer zum Speichern der unzustellbaren Nachrichten angeben kann. Daher verwenden unterschiedliche Clients nicht gemeinsam dieselbe Warteschlange für unzustellbare Nachrichten.  
+ Wird der MSMQ-Dienst von mehreren Clients, die Nachrichten an verschiedene Zielwarteschlangen senden, gemeinsam verwendet, werden alle von den Clients gesendeten Nachrichten in dieselbe Warteschlange für unzustellbare Nachrichten verschoben. Dies ist nicht immer empfehlenswert. Für eine bessere Isolierung, WCF und MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] ein benutzerdefinierte Warteschlange für unzustellbare (oder eine anwendungsspezifische Dead Letter-Warteschlange) angeben, dass der Benutzer angeben kann, um Nachrichten zu speichern, die nicht zugestellt werden können. Daher verwenden unterschiedliche Clients nicht gemeinsam dieselbe Warteschlange für unzustellbare Nachrichten.  
   
  Die Bindung verfügt über zwei wichtige Eigenschaften:  
   
@@ -105,7 +91,7 @@ In diesem Abschnitt wird beschrieben, wie der Warteschlange hinzugefügte Kommun
 -   `UseActiveDirectory`: Ein boolescher Wert, mit dem angegeben wird, ob Active Directory für die Auflösung von Warteschlangenadressen verwendet werden muss. Standardmäßig ist dieser Wert deaktiviert. Weitere Informationen finden Sie unter [Dienstendpunkte und Adressieren von Warteschlangen](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- `MsmqIntegrationBinding` wird verwendet, wenn ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkt mit einer vorhandenen MSMQ-Anwendung kommunizieren soll, die mit C, C++, COM oder System.Messaging-APIs geschrieben wurde.  
+ Die `MsmqIntegrationBinding` wird verwendet, wenn Sie einen WCF-Endpunkt für die Kommunikation mit einer vorhandenen MSMQ-Anwendung in C#, C++, COM oder System.Messaging-APIs geschrieben werden soll.  
   
  Die Bindungseigenschaften sind für `NetMsmqBinding` identisch. Folgende Unterschiede sind jedoch zu berücksichtigen:  
   

@@ -1,26 +1,12 @@
 ---
 title: Dienstframework
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-framework"></a>Dienstframework
 In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgeführt.  
@@ -49,8 +35,8 @@ In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgefüh
 |channelDoesNotHaveADuplexSession0|Der aktuelle Kanal unterstützt das Schließen der Ausgabesitzung nicht. Dieser Kanal implementiert keine ISessionChannel\<IDuplexSession >.|  
 |ClientRuntimeRequiresFormatter0|Die angegebene ClientOperation erfordert ein Formatierungsprogramm, da SerializeRequest und DeserializeReply nicht beide False sind.|  
 |CommunicationObjectAborted1|Das angegebene Kommunikationsobjekt kann nicht für die Kommunikation verwendet werden, da es beendet wurde.|  
-|CommunicationObjectAbortedStack2|Das angegebene Kommunikationsobjekt kann nicht für die Kommunikation verwendet werden, da es beendet wurde: {1}.|  
-|CommunicationObjectBaseClassMethodNotCalled|Die virtuelle Funktion {1} wurde vom angegebenen Kommunikationsobjekt überschrieben, ohne die in der Basisklasse definierte Version aufzurufen.|  
+|CommunicationObjectAbortedStack2|Das angegebene Kommunikationsobjekt kann nicht für die Kommunikation verwendet werden, da es beendet wurde: {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|Das angegebene Kommunikationsobjekt wurde überschrieben, die virtuelle Funktion {1} jedoch die in der Basisklasse definierte Version wird nicht aufgerufen.|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|Der angegebene Vertrag weist einen oder mehrere IsTerminating- oder Nicht-IsInitiating-Vorgänge auf. Die SessionMode-Eigenschaft wurde nicht auf SessionMode.Required festgelegt. Das IsInitiating-Attribut und das IsTerminating-Attribut können nur im Kontext einer Sitzung verwendet werden.|  
 |CouldnTCreateChannelForChannelType2|Der angegebene Kanaltyp wurde angefordert, die angegebene Bindung bietet hierfür jedoch keine Unterstützung oder wurde nicht ordnungsgemäß für eine Unterstützung konfiguriert.|  
 |DispatchRuntimeRequiresFormatter0|Die angegebene DispatchOperation erfordert ein Formatierungsprogramm, da DeserializeRequest und SerializeReply nicht beide False sind.|  

@@ -1,24 +1,12 @@
 ---
-title: "Grundlegendes zu Zustandsänderungen"
-ms.custom: 
+title: Grundlegendes zu Zustandsänderungen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0d3be43b8e50367d1cdd9b4e486a4154001624
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-state-changes"></a>Grundlegendes zu Zustandsänderungen
 In diesem Thema werden die Zustände und Übergänge in Kanälen, die Typen zum Strukturieren von Kanalzuständen und deren Implementierung erläutert.  
@@ -42,7 +30,7 @@ In diesem Thema werden die Zustände und Übergänge in Kanälen, die Typen zum 
  ![Channel Zustand Transitition](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Abbildung 1. Der ICommunicationObject-Zustandsautomat.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stellt eine abstrakte Basisklasse mit dem Namen <xref:System.ServiceModel.Channels.CommunicationObject> bereit, die <xref:System.ServiceModel.ICommunicationObject> und den Kanalzustandsautomaten implementiert. In der folgenden Grafik wird ein Diagramm mit Zustandsänderungen dargestellt, das sich auf <xref:System.ServiceModel.Channels.CommunicationObject> bezieht. Neben dem <xref:System.ServiceModel.ICommunicationObject>-Zustandsautomaten zeigt es die zeitliche Steuerung, nach der weitere <xref:System.ServiceModel.Channels.CommunicationObject>-Methoden aufgerufen werden.  
+ Windows Communication Foundation (WCF) bietet eine abstrakte Basisklasse, die mit dem Namen <xref:System.ServiceModel.Channels.CommunicationObject> implementiert <xref:System.ServiceModel.ICommunicationObject> und den kanalzustandsautomaten. In der folgenden Grafik wird ein Diagramm mit Zustandsänderungen dargestellt, das sich auf <xref:System.ServiceModel.Channels.CommunicationObject> bezieht. Neben dem <xref:System.ServiceModel.ICommunicationObject>-Zustandsautomaten zeigt es die zeitliche Steuerung, nach der weitere <xref:System.ServiceModel.Channels.CommunicationObject>-Methoden aufgerufen werden.  
   
  ![Statusänderungen](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Abbildung 2. Die CommunicationObject-Implementierung des ICommunicationObject-Zustandsautomats, einschließlich Aufrufe von Ereignissen und geschützte Methoden.  

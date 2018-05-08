@@ -1,14 +1,6 @@
 ---
 title: Importieren von Schemas zum Generieren von Klassen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importieren von Schemas zum Generieren von Klassen
-Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] genutzt werden können, verwenden Sie die <xref:System.Runtime.Serialization.XsdDataContractImporter>-Klasse. In diesem Thema werden der Prozess und die Variationen beschrieben.  
+Verwenden Sie zum Generieren von Klassen aus Schemas, die mit der Windows Communication Foundation (WCF) verwendet werden, die <xref:System.Runtime.Serialization.XsdDataContractImporter> Klasse. In diesem Thema werden der Prozess und die Variationen beschrieben.  
   
 ## <a name="the-import-process"></a>Der Importprozess  
  Der Schemaimportprozess beginnt mit <xref:System.Xml.Schema.XmlSchemaSet> und erzeugt ein <xref:System.CodeDom.CodeCompileUnit>-Element.  
@@ -114,7 +100,7 @@ Um aus Schemas Klassen zu generieren, die mit [!INCLUDE[indigo1](../../../../inc
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Jede Zuordnung kann auch als Liste angesehen werden. Sie können die oben angegebene Zuordnung zum Beispiel als Liste mit komplexen `city`-Objekten ansehen, die zwei Felder aufweisen (ein Zeichenfolgenfeld und ein Ganzzahlfeld). Beide Muster verfügen im XSD-Schema über eine Darstellung. Es ist nicht möglich, zwischen einer Liste und einer Zuordnung zu unterscheiden. Aus diesem Grund werden Muster dieser Art immer wie Listen behandelt, es sei denn, das Schema enthält eine bestimmte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-spezifische Anmerkung. Die Anmerkung gibt an, dass ein bestimmtes Muster eine Zuordnung darstellt. Weitere Informationen finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Jede Zuordnung kann auch als Liste angesehen werden. Sie können die oben angegebene Zuordnung zum Beispiel als Liste mit komplexen `city`-Objekten ansehen, die zwei Felder aufweisen (ein Zeichenfolgenfeld und ein Ganzzahlfeld). Beide Muster verfügen im XSD-Schema über eine Darstellung. Es gibt keine Möglichkeit, zwischen einer Liste und eine Zuordnung zu unterscheiden, sodass Muster dieser Art immer wie Listen behandelt werden, es sei denn, eine bestimmte WCF Anmerkung im Schema vorhanden ist. Die Anmerkung gibt an, dass ein bestimmtes Muster eine Zuordnung darstellt. Weitere Informationen finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  In der Regel wird eine Liste als Auflistungsdatenvertrag importiert, der von einer generischen Liste oder einem [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Array abgeleitet ist. Dies hängt davon ab, ob das Schema das standardmäßige Namensmuster für Auflistungen verwendet. Dies wird ausführlicher beschrieben [Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Zuordnungen werden normalerweise entweder als <xref:System.Collections.Generic.Dictionary%602> oder als Auflistungsdatenvertrag importiert, der vom Wörterbuchobjekt abgeleitet ist. Betrachten Sie zum Beispiel das folgende Schema:  
   

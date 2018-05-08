@@ -1,14 +1,6 @@
 ---
 title: Überlegungen zu LINQ (WCF Data Services)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 365bab484be17fd7bd1466a39d5af53f116ad06f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 030c8e12b45cfc11d1440a410c69d8bc911c56c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Überlegungen zu LINQ (WCF Data Services)
 Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfragen bei der Verwendung des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients und zu den Einschränkungen, die gelten, wenn Sie einen Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, mithilfe von LINQ abfragen. Weitere Informationen zu verfassen und Ausführen von Abfragen für eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Datendienst, finden Sie unter [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

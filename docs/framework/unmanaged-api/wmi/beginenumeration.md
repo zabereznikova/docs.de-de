@@ -1,11 +1,7 @@
 ---
 title: BeginEnumeration-Funktion (Referenz zur nicht verwalteten API)
-description: "Die BeginEnumeration-Funktion setzt einen Enumerator zurück, auf den Anfang der enumeration"
+description: Die BeginEnumeration-Funktion setzt einen Enumerator zurück, auf den Anfang der enumeration
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90c3e8448a61145290ea4a75b1d38f7ae010cb9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9699f0cfc4e9fdb989337681b164cc1e703c1e60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration-Funktion
 Setzt einen Enumerator zurück an den Anfang der Enumeration zurück.  
@@ -49,7 +42,7 @@ HRESULT BeginEnumeration (
 `vFunc`  
 [in] Dieser Parameter wird nicht verwendet.
 
-`ptr`[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+`ptr` [in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
 
 `lEnumFlags`  
 [in] Eine bitweise Kombination der Flags oder Werte, die in beschriebenen der ["Hinweise"](#remarks) Abschnitt, der steuert, in der Enumeration enthaltenen Eigenschaften.
@@ -76,7 +69,7 @@ Die Flags, die als übergeben werden können die `lEnumFlags` Argument definiert
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Schließen Sie die Eigenschaften, die nur den Schlüssel bilden. |
-|`WBEM_FLAG_REFS_ONLY` | 0 x 8 | Schließen Sie die Eigenschaften, die nur Objektverweise sind. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Schließen Sie die Eigenschaften, die nur Objektverweise sind. |
 
 **Gruppe 2**
 
@@ -92,15 +85,15 @@ Konstante  |Wert  |Beschreibung  |
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0 x 100 | Begrenzen Sie die Enumeration, die Eigenschaften, die in der Klassendefinition überschrieben. |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0 x 100 | Begrenzen Sie die Enumeration, um Eigenschaften, die in der aktuellen Klassendefinition überschrieben und neue Eigenschaften, die in der Klasse definiert. |
 | `WBEM_MASK_CLASS_CONDITION` | 0x300 | Ein zu maskieren (statt ein Flag) anzuwendende gegen eine `lEnumFlags` Wert, wenn entweder überprüfen `WBEM_FLAG_CLASS_OVERRIDES_ONLY` oder `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` festgelegt ist. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Begrenzen Sie die Enumeration, die Eigenschaften, die definiert, oder in die Klasse selbst nicht geändert werden. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Begrenzen Sie die Enumeration, die Eigenschaften, die Basis-Klassen geerbt werden. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Begrenzen Sie die Enumeration, die Eigenschaften, die definiert, oder in die Klasse selbst nicht geändert werden. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Begrenzen Sie die Enumeration, die Eigenschaften, die Basis-Klassen geerbt werden. |
 
 Für Instanzen:
 
 Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Begrenzen Sie die Enumeration, die Eigenschaften, die definiert, oder in die Klasse selbst nicht geändert werden. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Begrenzen Sie die Enumeration, die Eigenschaften, die Basis-Klassen geerbt werden. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Begrenzen Sie die Enumeration, die Eigenschaften, die definiert, oder in die Klasse selbst nicht geändert werden. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Begrenzen Sie die Enumeration, die Eigenschaften, die Basis-Klassen geerbt werden. |
 
 
 ## <a name="requirements"></a>Anforderungen  
@@ -108,7 +101,7 @@ Konstante  |Wert  |Beschreibung  |
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

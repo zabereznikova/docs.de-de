@@ -1,28 +1,14 @@
 ---
 title: Bindungen und Bindungselemente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-binding-elements"></a>Bindungen und Bindungselemente
 Bindungen sind Sammlungen spezieller Konfigurationselemente, die aufgerufen *Bindungselementen*, werden ausgewertet, von der Service-Laufzeit, wenn ein Client oder ein Dienstendpunkt erstellt wird. Der Typ und die Reihenfolge der Bindungselemente in einer Bindung bestimmen die Auswahl und Stapelreihenfolge des Protokolls und der Transportkanäle in einem Endpunkt-Kanalstapel.  
@@ -32,7 +18,7 @@ Bindungen sind Sammlungen spezieller Konfigurationselemente, die aufgerufen *Bin
  Eine Bindung muss genau ein Transportbindungselement enthalten. Jedes Transportbindungselement weist auf ein Standardnachrichten-Codierungsbindungselement hin, das durch das Hinzufügen von maximal einem Nachrichten codierenden Bindungselement zur Bindung überschrieben werden kann. Neben den Transportbindungselementen und Encoderbindungselementen kann die Bindung auch eine beliebige Anzahl an Protokollbindungselementen enthalten, die zusammen die für den Dienst benötigten Funktionen implementieren, und eine SOAP-Nachricht von einem Endpunkt zum nächsten senden. Weitere Informationen finden Sie unter [Bindungen verwenden, und Konfigurieren von Diensten und Clients](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
 ## <a name="extending-bindings-and-binding-elements"></a>Erweitern von Bindungen und Bindungselementen  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] umfasst vom System bereitgestellte Bindungen, die für eine Vielzahl unterschiedlicher Szenarien gelten. (Weitere Informationen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).) Unter Umständen müssen Sie jedoch manchmal eine Bindung erstellen und verwenden, die nicht in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zur Verfügung steht. Bei den folgenden Szenarien muss eine neue Bindung erstellt werden:  
+ Windows Communication Foundation (WCF) enthält die vom System bereitgestellte Bindungen, die eine Vielzahl von Szenarien abdecken. (Weitere Informationen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).) Unter Umständen müssen Sie jedoch manchmal eine Bindung erstellen und verwenden, die nicht in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zur Verfügung steht. Bei den folgenden Szenarien muss eine neue Bindung erstellt werden:  
   
 -   Um ein neues Bindungselement zu verwenden (z. B. ein neues Transport-, Codierungs- oder Protokollbindungselement), müssen Sie eine neue Bindung erstellen, die dieses Bindungselemente enthält. Wenn Sie beispielsweise ein benutzerdefiniertes `UdpTransportBindingElement` für den UDP-Transport hinzufügen, müssen Sie eine neue Bindung erstellen, damit Sie das Element verwenden können. Weitere Informationen zum Ausführen dieses Verhalten mithilfe der <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

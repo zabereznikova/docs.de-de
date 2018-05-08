@@ -1,34 +1,20 @@
 ---
 title: Verwenden von Sitzungen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e826e0952f95608fd8d85a5b1fad6b17d3fdacb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
-In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Anwendungen verknüpft eine *Sitzung* eine Gruppe von Nachrichten zu einer Konversation. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Sitzungen unterscheiden sich von dem in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Anwendungen verfügbaren Sitzungsobjekt, unterstützen andere Verhaltensweisen und werden auf andere Weise gesteuert. In diesem Thema werden die Funktionen, die Sitzungen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Anwendungen ermöglichen, beschrieben und deren Verwendung erläutert.  
+In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert eine Gruppe von Nachrichten zu einer Konversation. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Sitzungen unterscheiden sich von dem in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Anwendungen verfügbaren Sitzungsobjekt, unterstützen andere Verhaltensweisen und werden auf andere Weise gesteuert. In diesem Thema werden die Funktionen, die Sitzungen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Anwendungen ermöglichen, beschrieben und deren Verwendung erläutert.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Sitzungen in Windows Communication Foundation-Anwendungen  
  Wenn ein Dienstvertrag angibt, dass er eine Sitzung benötigt, bedeutet dies, dass alle Aufrufe (das heißt der zugrunde liegende Nachrichtenaustausch, durch den die Aufrufe unterstützt werden) Teil derselben Konversation sein müssen. Falls in einem Vertrag angegeben wird, dass Sitzungen zwar erlaubt, aber nicht erforderlich sind, können Clients eine Verbindung herstellen und eine Sitzung aufbauen oder auch nicht. Wird eine Sitzung beendet und eine Nachricht über denselben Kanal gesendet, wird eine Ausnahme ausgelöst.  

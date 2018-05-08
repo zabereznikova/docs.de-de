@@ -1,35 +1,21 @@
 ---
 title: Tools
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tools"></a>Tools
-In diesem Thema werden alle Ausnahmen aufgelistet, die von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Tools generiert werden.  
+In diesem Thema sind alle von Windows Communication Foundation (WCF)-Tools generierten Ausnahmen aufgeführt.  
   
 ## <a name="exception-list"></a>Ausnahmeliste  
   
 |Ressourcencode|Ressourcenzeichenfolge|  
 |-------------------|---------------------|  
-|ParametersTarget|\<enum>|  
+|ParametersTarget|\<Enum >|  
 |ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Der angegebene Pfad ist ungültig. Überprüfen Sie das angegebene Argument.|  
 |ParametersReference|\<Dateipfad >|  
@@ -81,14 +67,14 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die von [!INCLUDE[indigo1](..
 |HelpCodeGenerationCategory|-= CODE-GENERIERUNG =-|  
 |RetreivingMetadataWithMexAndDisco|Es wird versucht, Metadaten vom angegebenen Speicherort mithilfe von WS-Metadata Exchange oder DISCO herunterzuladen.|  
 |ErrGeneralSchemaValidation|Bei der Überprüfung von XML-Schemas, die während des Exports generiert wurden, ist ein Fehler aufgetreten.|  
-|ParametersDirectory|\<directory>|  
+|ParametersDirectory|\<Verzeichnis >|  
 |ErrCannotLoadSpecifiedType|Es kann kein Typ für den angegebenen Wert geladen werden, der an die angegebene Option übergeben wurde. Stellen Sie sicher, dass die Assembly, zu der dieser Typ gehört, mit der angegebenen Option angegeben wird.|  
 |ErrOptionModeConflict|Die angegebene Option kann nicht mit der angegebenen Option verwendet werden, da sie unterschiedliche Ausgabetypen voraussetzen.|  
 |ErrIsNotAnAssembly|Die angegebene Datei kann nicht als Assembly geladen werden. Überprüfen Sie, ob diese Datei eine .NET-Assembly ist.|  
 |ErrInputConflictsWithMode|Die aus der angegebenen Datei gelesene Eingabe ist mit anderen Optionen nicht konsistent.|  
 |ErrDuplicateValuePassedToTypeArg|Der angegebene Wert wurde mehrmals an die angegebene Option übergeben. Jeder Typ kann nur einmal festgelegt werden.|  
 |ErrInputEPRFileParseError|Der Endpunktverweis kann nicht aus der angegebenen Datei gelesen werden. Prüfen Sie, ob die XML wohlgeformt und gültig ist.|  
-|ErrCouldNotCreateCodeProvider|Es kann kein Codeanbieter für den angegebenen Wert erstellt werden, der an das /{1}-Argument übergeben wurde. Überprüfen Sie, dass der Codeanbieter ordnungsgemäß installiert und konfiguriert ist.|  
+|ErrCouldNotCreateCodeProvider|Kein Codeanbieter kann nicht erstellt werden, für den angegebenen Wert, der zum übergeben wurde die /{1} Argument. Überprüfen Sie, dass der Codeanbieter ordnungsgemäß installiert und konfiguriert ist.|  
 |ErrPathTooLongDirOnly|Der resultierende angegebene Pfad ist zu lang. Überprüfen Sie das angegebene Argument.|  
 |HelpDataContractSerializer|Generieren Sie Datentypen, die das DataContract-Serialisierungsprogramm für die Serialisierung und die Deserialisierung verwenden.|  
 |ErrUnableToExportEndpoint|Beim Export des angegebenen Endpunktnamens im angegebenen Namespace im angegebenen Diensttyp, der in der für die Assembly geladenen Konfigurationsdatei gefunden wurde, ist ein Fehler aufgetreten.|  
@@ -127,7 +113,7 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die von [!INCLUDE[indigo1](..
 |HelpCommonOptionsCategory|-= ALLGEMEINE OPTIONEN =-|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Es wurden keine gültigen Eingabedateien angegeben. Geben Sie entweder Metadatendokumente oder Assemblydateien an.|  
-|ParametersLanguage|\<language>|  
+|ParametersLanguage|\<Language >|  
 |ErrUnableToLoadMetadataDocument|Beim Lesen der Metadaten aus einem der geladenen Dokumente ist ein Fehler aufgetreten. Der Dokumentbezeichner wird angegeben.|  
 |ErrConflictingInputs|Das angegebene Eingabeargument verursacht Konflikte mit der angegebenen Eingabe, da sie unterschiedliche Verwendungsarten des Tools voraussetzen.|  
 |WrnUnableToLoadContractForValidation|Beim Laden eines Vertragstyps ist ein Fehler aufgetreten. Der Typ und die Details werden angegeben.|  

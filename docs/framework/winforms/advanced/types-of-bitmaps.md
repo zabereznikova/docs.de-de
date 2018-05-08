@@ -1,13 +1,6 @@
 ---
 title: Bitmaptypen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - jpeg files
 - TIFF files
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a79f34daac4238093693947f5fb5e73bb56213d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-bitmaps"></a>Bitmaptypen
 Eine Bitmap ist ein Array von Bits, die die Farbe jedes Pixels in einem rechteckigen Array von Pixeln anzugeben. Die Anzahl der Bits in einem einzelnen Pixels bestimmt die Anzahl der Farben, die das dieses Pixel zugewiesen werden kann. Beispielsweise um 4 Bits pro Pixel dargestellt, klicken Sie dann ein bestimmten Pixels kann zugewiesen werden eine der 16 verschiedenen Farben (2 ^ 4 = 16). Die folgende Tabelle zeigt einige Beispiele für die Anzahl der Farben, die ein Pixel, dargestellt durch eine angegebene Anzahl von Bits zugewiesen werden kann.  
@@ -64,7 +52,7 @@ Eine Bitmap ist ein Array von Bits, die die Farbe jedes Pixels in einem rechteck
  ![Bitmap-Beispiel](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Grafik-Dateiformate  
- Es gibt viele Standardformaten für das Speichern von Bitmaps in Datenträgerdateien. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]unterstützt die Dateiformate Grafiken in den folgenden Abschnitten beschrieben.  
+ Es gibt viele Standardformaten für das Speichern von Bitmaps in Datenträgerdateien. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] unterstützt die Dateiformate Grafiken in den folgenden Abschnitten beschrieben.  
   
 ### <a name="bmp"></a>BMP  
  BMP ist ein Standardformat von Windows verwendet, um geräteunabhängige und anwendungsunabhängig Images zu speichern. Die Anzahl der Bits pro Pixel (1, 4, 8, 15, 24, 32 oder 64) für eine bestimmte BMP‑Datei wird in einem Dateiheader angegeben. BMP-Dateien mit 24 Bits pro Pixel gelten. BMP-Dateien werden in der Regel nicht komprimiert und deshalb sind nicht gut geeignet für die Übertragung über das Internet.  

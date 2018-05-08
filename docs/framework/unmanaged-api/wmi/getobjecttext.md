@@ -2,10 +2,6 @@
 title: GetObjectText-Funktion (Referenz zur nicht verwalteten API)
 description: Die GetObjectText-Funktion gibt ein Text-Rendering eines Objekts in MOF-Syntax.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetObjectText
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b47dc73bb9da71b0c8593aa5758179327d7572d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getobjecttext-function"></a>GetObjectText-Funktion
 Gibt eine Textrendering des Objekts in der Managed Object Format (MOF)-Syntax zurück.
@@ -81,14 +74,14 @@ Der folgende Algorithmus wird verwendet, um den Text der Parameter einer Methode
 1. Parameter werden in der Reihenfolge ihrer Bezeichnerwerte resequenced.
 1. Parameter, die als angegeben sind `[in]` und `[out]` einen einzelnen Parameter zusammengefasst werden.
  
-`pstrObjectText`muss ein Zeiger auf eine `null` beim Aufruf der Funktion ist; es muss nicht zeigen Sie auf eine Zeichenfolge, die vor dem Methodenaufruf gültig ist, da der Zeiger wird nicht aufgehoben werden.
+`pstrObjectText` muss ein Zeiger auf eine `null` beim Aufruf der Funktion ist; es muss nicht zeigen Sie auf eine Zeichenfolge, die vor dem Methodenaufruf gültig ist, da der Zeiger wird nicht aufgehoben werden.
 
 ## <a name="requirements"></a>Anforderungen  
 **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

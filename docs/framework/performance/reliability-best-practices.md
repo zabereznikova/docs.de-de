@@ -1,13 +1,6 @@
 ---
-title: "Empfohlene Vorgehensweisen für die Zuverlässigkeit"
-ms.custom: 
+title: Empfohlene Vorgehensweisen für die Zuverlässigkeit
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - marking locks
 - rebooting databases
@@ -45,16 +38,13 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliability-best-practices"></a>Empfohlene Vorgehensweisen für die Zuverlässigkeit
 Die folgenden Zuverlässigkeitsregeln sind auf SQL Server ausgerichtet, jedoch gelten sie auch für jede hostbasierte Serveranwendung. Es ist äußerst wichtig, dass es bei Servern wie SQL Server zu keinem Ressourcenverlust kommt und dass diese nicht zum Absturz gebracht werden.  Dies kann jedoch nicht erreicht werden, indem Zurücksetzungscode für jede Methode geschrieben wird, die den Zustand eines Objekts ändert.  Das Ziel ist nicht, 100 Prozent zuverlässigen verwalteten Code zu schreiben, der mit Zurücksetzungscode nach Fehlern an einer beliebigen Stelle wiederhergestellt wird.  Das wäre eine schwierige Aufgabe mit wenig Aussicht auf Erfolg.  Die Common Language Runtime (CLR) kann keine ausreichend starken Garantien für verwalteten Code bereitstellen, um das Schreiben von perfektem Code möglich zu machen.  Beachten Sie, dass SQL Server im Gegensatz zu ASP.NET nur einen Prozess verwendet, der nicht wiederverwendet werden kann, ohne dass eine Datenbank für eine unzumutbar lange Zeit außer Betrieb genommen wird.  
@@ -258,7 +248,7 @@ public static MyClass SingletonProperty
  Sie sollten alle Stellen, an denen Ausnahmen jeden Typs abgefangen werden, so ändern, dass ein erwarteter Ausnahmetyp abgefangen wird. Ein Beispiel ist eine <xref:System.FormatException>, die bei einer Methode zur Formatierung von Zeichenfolgen auftritt.  Auf diese Weise wird verhindert, dass der catch-Block bei unerwarteten Ausnahmen ausgeführt wird. Außerdem wird sichergestellt, dass Fehler nicht durch das Abfangen unerwarteter Ausnahmen maskiert werden.  Allgemein gilt, dass Sie nie eine Ausnahme in Bibliothekscode behandeln dürfen. Code, in dem Sie eine Ausnahme abfangen müssen, kann auf einen Entwurfsfehler im abgerufenen Code hindeuten.  In einigen Fällen empfiehlt es sich, eine Ausnahme abzufangen und einen anderen Ausnahmetyp auszulösen, um mehr Daten bereitzustellen.  Verwenden Sie in diesem Fall geschachtelte Ausnahmen, da so die tatsächliche Ursache des Fehlers in der <xref:System.Exception.InnerException%2A>-Eigenschaft der neuen Ausnahme gespeichert wird.  
   
 #### <a name="code-analysis-rule"></a>Regel für die Codeanalyse  
- Prüfen Sie in verwaltetem Code alle catch-Blöcke, die alle Objekte oder Ausnahmen abfangen.  In C# müssen sowohl `catch`- als auch `catch(Exception)`-Blöcke gekennzeichnet werden.  Sie sollten entweder einen ganz bestimmten Ausnahmetyp verwenden oder den Code prüfen, um sicherzustellen, dass es beim Abfangen unerwarteter Ausnahmetypen nicht zu Fehlern kommt.  
+ Prüfen Sie in verwaltetem Code alle catch-Blöcke, die alle Objekte oder Ausnahmen abfangen.  In c# bedeutet dies kennzeichnen beide `catch` {} und `catch(Exception)` {}.  Sie sollten entweder einen ganz bestimmten Ausnahmetyp verwenden oder den Code prüfen, um sicherzustellen, dass es beim Abfangen unerwarteter Ausnahmetypen nicht zu Fehlern kommt.  
   
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Gehen Sie nicht davon aus, dass ein verwalteter Thread ein Win32-Thread ist: Ein verwalteter Thread ist eine Fiber  
  Die Verwendung von verwaltetem threadlokalen Speicher ist möglich. Sie können jedoch keinen nicht verwalteten threadlokalen Speicher verwenden oder davon ausgehen, dass der Code erneut im aktuellen Betriebssystemthread ausgeführt wird.  Ändern Sie keine Einstellungen wie das Threadgebietsschema.  Verwenden Sie zum Abruf der Methoden `InitializeCriticalSection` oder `CreateMutex` keinen Plattformaufruf, da diese darauf angewiesen sind, dass der gesperrte Betriebssystemthread wieder entsperrt wird.  Da dies bei der Verwendung von Fibern nicht der Fall ist, können kritische Abschnitte in Win32 und Mutex-Verfahren nicht direkt in SQL verwendet werden.  Beachten Sie, dass die verwaltete <xref:System.Threading.Mutex>-Klasse keine Probleme hinsichtlich der Threadaffinität behandelt.  

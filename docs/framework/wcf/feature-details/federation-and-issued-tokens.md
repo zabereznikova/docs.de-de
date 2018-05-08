@@ -1,31 +1,19 @@
 ---
 title: Verbund und ausgestellte Token
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF, federation
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 017d3e51022ad9980dc8f058415697c80a2a6b35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6a5411b74b53cb5e3b18cced7fd8fc09e9a9676
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation-and-issued-tokens"></a>Verbund und ausgestellte Token
-Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie Clients erstellen, die sicher mit Diensten kommunizieren, die den WS-Verbund und die WS-Trust-Spezifikationen implementieren. Die Spezifikationen verwenden XML, SOAP und Web Services Description Language (WSDL), um Mechanismen zu bieten, die Authentifizierung und Autorisierung über verschiedene Vertrauensbereiche hinweg zu ermöglichen.  
+Mit der Windows Communication Foundation (WCF) können Sie Clients erstellen, die sicher mit Diensten kommunizieren, die die WS-Verbund und WS-Trust-Spezifikationen implementieren. Die Spezifikationen verwenden XML, SOAP und Web Services Description Language (WSDL), um Mechanismen zu bieten, die Authentifizierung und Autorisierung über verschiedene Vertrauensbereiche hinweg zu ermöglichen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Verbund](../../../../docs/framework/wcf/feature-details/federation.md)  
@@ -35,7 +23,7 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie Clients 
  Führt die Entwurfsprobleme auf, die beim Erstellen von Verbunddiensten oder -clients berücksichtigt werden müssen.  
   
  [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- Beschreibt die Grundlagen der Erstellung eines Verbundclients mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Beschreibt die Grundlagen der Erstellung eines verbundclients mit WCF.  
   
  [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  Beschreibt die Schritte beim Erstellen eines Verbunddiensts.  
@@ -55,7 +43,7 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie Clients 
  [Vorgehensweise: Deaktivieren sicherer Sitzungen auf einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Beschreibt, wie Sicherheitssitzungen auf `WSFederationHttpBinding` deaktiviert werden. Sichere Sitzungen müssen deaktiviert werden, wenn eine Webfarm erstellt wird, die eine Sitzung für jeden Client erfordert.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.IdentityModel.Claims>  
   
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

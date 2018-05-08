@@ -1,34 +1,20 @@
 ---
 title: Datenvertrags-Schemareferenz
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-schema-reference"></a>Datenvertrags-Schemareferenz
 In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD) beschrieben.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer-Zuordnungen  
- Der `DataContractSerializer` ordnet CLR-Typen XSD zu, wenn Metadaten von einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienst mithilfe eines Metadatenendpunkts oder dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)exportiert werden. Weitere Informationen finden Sie unter [Datenvertragsserialisierer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ Die `DataContractSerializer` ordnet CLR-Typen in XSD, wenn Metadaten aus einem Windows Communication Foundation (WCF)-Dienst mithilfe eines metadatenendpunkts exportiert wird oder die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Weitere Informationen finden Sie unter [Datenvertragsserialisierer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  Der `DataContractSerializer` ordnet XSD auch dann CLR-Typen zu, wenn Svcutil.exe für den Zugriff auf WSDL- (Web Services Description Language) oder XSD-Dokumente und für die Generierung von Vertragsdateien für Dienste oder Clients verwendet wird.  
   
@@ -105,7 +91,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`choice`|Unzulässig|  
 |`sequence`|Unterstützt, wird Datenmembern eines Datenvertrags zugeordnet.|  
 |`attribute`|Unzulässig, auch wenn use="prohibited" (mit einer Ausnahme). Nur optionale Attribute aus dem Standardserialisierungsschema-Namespace werden unterstützt. Sie werden Datenmembern im Datenvertragsprogrammiermodell nicht zugeordnet. Aktuell hat nur ein solches Attribut Bedeutung, es wird im Abschnitt ISerializable erläutert. Alle anderen werden ignoriert.|  
-|`attributeGroup`|Unzulässig. In Version&amp;#160;1 von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoriert `DataContractSerializer` das Vorhandensein von `attributeGroup` in `xs:complexType`.|  
+|`attributeGroup`|Unzulässig. In der WCF-v1-Version `DataContractSerializer` ignoriert das Vorhandensein von `attributeGroup` in `xs:complexType`.|  
 |`anyAttribute`|Unzulässig.|  
 |(leer)|Wird einem Datenvertrag ohne Datenmember zugeordnet.|  
   
@@ -215,7 +201,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
  \* Bei Verwendung der `simpleType` und `complexType,` Zuordnung von anonymen Typen entspricht derjenigen nicht anonyme Typen, außer dass es keine anonymen Datenverträge gibt, weshalb ein benannter Datenvertrag erstellt wird, dessen generierter Name von dem Elementnamen abgeleitet. Die folgende Liste enthält die Regeln für anonyme Typen:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Implementierungsdetail: Wenn der `xs:element` -Name keine Punkte enthält, wird der anonyme Typ einem inneren Typ des äußeren Datenvertragstyps zugeordnet. Wenn der Name Punkte enthält, ist der resultierende Datenvertragstyp unabhängig (kein innerer Typ).  
+-   WCF-Implementierungsdetail: Wenn die `xs:element` -Name keine Punkte, die der anonyme Typ einem inneren Typ des äußeren datenvertragstyps zugeordnet. Wenn der Name Punkte enthält, ist der resultierende Datenvertragstyp unabhängig (kein innerer Typ).  
   
 -   Der generierte Datenvertragsname des inneren Typs setzt sich zusammen aus dem Namen des äußeren Typs, gefolgt von einem Punkt, dem Namen des Elements und der Zeichenfolge "Type".  
   

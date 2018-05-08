@@ -1,14 +1,6 @@
 ---
 title: 'Vorgehensweise: Verwenden von separaten X.509-Zertifikaten für Signieren und Verschlüsselung'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6103dd8f680752581a51cba7ba61c83522decc2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Vorgehensweise: Verwenden von separaten X.509-Zertifikaten für Signieren und Verschlüsselung
-In diesem Thema wird veranschaulicht, wie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zur Verwendung verschiedener Zertifikate zum Signieren und Verschlüsseln von Nachrichten sowohl für die Client- als auch die Serviceseite konfiguriert wird.  
+In diesem Thema wird gezeigt, wie zum Konfigurieren der Windows Communication Foundation (WCF), um verschiedene Zertifikate für die nachrichtensignierung und-Verschlüsselung auf dem Client und der Dienst verwendet wird.  
   
  Damit verschiedene Zertifikate für das Signieren und Verschlüsseln verwendet werden können, müssen benutzerdefinierte Anmeldeinformationen für Client oder Dienst (oder beides) erstellt werden, da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] keine API zum Einstellen mehrerer Client- oder Dienstzertifikate bietet. Außerdem muss ein Sicherheitstokenmanager zur Verfügung gestellt werden, um die Informationen der Zertifikate zu nutzen und einen entsprechenden Sicherheitstokenanbieter für die angegebene Schlüsselverwendung und Nachrichtenrichtung zu erstellen.  
   

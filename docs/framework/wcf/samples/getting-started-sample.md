@@ -1,34 +1,20 @@
 ---
 title: Beispiel 'Erste Schritte'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-sample"></a>Beispiel 'Erste Schritte'
-Im Beispiel "Erste Schritte" wird gezeigt, wie mithilfe von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ein typischer Dienst und ein typischer Client implementiert werden. Es dient als Grundlage für alle anderen grundlegenden Technologiebeispiele.  
+Das erste Schritte-Beispiel veranschaulicht ein typischer Dienst und ein typischer Client mithilfe der Windows Communication Foundation (WCF) zu implementieren. Es dient als Grundlage für alle anderen grundlegenden Technologiebeispiele.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -38,7 +24,7 @@ Im Beispiel "Erste Schritte" wird gezeigt, wie mithilfe von [!INCLUDE[indigo1](.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
@@ -154,9 +140,9 @@ public class CalculatorService : ICalculator
   
  Der Dienst macht den Endpunkt bei der vom IIS-Host oder WAS-Host bereitgestellten Basisadresse verfügbar. Die Bindung ist mit einer standardmäßigen <xref:System.ServiceModel.WSHttpBinding> konfiguriert, die HTTP-Kommunikation und standardmäßige Webdienstprotokolle für die Adressierung und Sicherheit bietet. Bei dem Vertrag handelt es sich um den vom Dienst implementierten `ICalculator`.  
   
- Wie in der Konfiguration angegeben, kann auf den Dienst unter http://localhost/servicemodelsamples/service.svc von einem Client auf demselben Computer zugegriffen werden. Bei Clients auf Remotecomputern muss für den Dienstzugriff anstelle von localhost ein vollqualifizierter Domänenname angegeben werden.  
+ Wie konfiguriert ist, kann den Dienst zugegriffen werden, am http://localhost/servicemodelsamples/service.svc von einem Client auf demselben Computer. Bei Clients auf Remotecomputern muss für den Dienstzugriff anstelle von localhost ein vollqualifizierter Domänenname angegeben werden.  
   
- Standardmäßig macht das Framework keine Metadaten verfügbar. Daher aktiviert der Dienst das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> und macht unter http://localhost/servicemodelsamples/service.svc/mex. einen Metadatenaustausch-Endpunkt (MEX-Endpunkt) verfügbar Dies wird in der folgenden Konfiguration veranschaulicht.  
+ Standardmäßig macht das Framework keine Metadaten verfügbar. Daher aktiviert der Dienst die <xref:System.ServiceModel.Description.ServiceMetadataBehavior> und macht einen Metadatenaustausch (MEX)-Endpunkt am http://localhost/servicemodelsamples/service.svc/mex. Dies wird in der folgenden Konfiguration veranschaulicht.  
   
 ```xaml  
 <system.serviceModel>  

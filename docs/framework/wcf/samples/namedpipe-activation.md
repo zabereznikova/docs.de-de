@@ -1,24 +1,12 @@
 ---
 title: NamedPipe-Aktivierung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2d7c722078947e86e677f57c67d87ba69a0f524
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a4d6612f8d598be6f02def2526920251e36047f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namedpipe-activation"></a>NamedPipe-Aktivierung
 In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Process Activation Services (WAS) zum Aktivieren eines Diensts verwendet, der über benannte Pipes kommuniziert. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und erfordert [!INCLUDE[wv](../../../../includes/wv-md.md)] ausgeführt.  
@@ -31,7 +19,7 @@ In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Pr
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
   
@@ -207,7 +195,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Dieser Befehl ist eine einzelne Textzeile.  
   
-         Mit diesem Befehl wird die Anwendung "/servicemodelsamples" so konfiguriert, dass sowohl über http://localhost//servicemodelsamples als auch über net.tcp://localhost//servicemodelsamples darauf zugegriffen werden kann.  
+         Dieser Befehl aktiviert die Anwendung/servicemodelsamples darauf zugegriffen werden beide http://localhost/servicemodelsamples und TCP://localhost//servicemodelsamples.  
   
 4.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   

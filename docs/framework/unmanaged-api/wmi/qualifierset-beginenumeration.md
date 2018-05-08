@@ -1,11 +1,7 @@
 ---
 title: QualifierSet_BeginEnumeration-Funktion (Referenz zur nicht verwalteten API)
-description: "Die QualifierSet_BeginEnumeration-Funktion setzt einen Enumerator der Qualifizierer eines Objekts zurück."
+description: Die QualifierSet_BeginEnumeration-Funktion setzt einen Enumerator der Qualifizierer eines Objekts zurück.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_BeginEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440dde03f4ed138a33eb6f817723d7c5c74f6d46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fac897f743ca452c38282143cdf822b682df1df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration-Funktion
 Setzt einen Enumerator der Qualifizierer eines Objekts an den Anfang der Enumeration zurück.  
@@ -77,15 +70,15 @@ Die Flags, die als übergeben werden können die `lEnumFlags` Argument definiert
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |  | 0 | Geben Sie die Namen aller Qualifizierer zurück. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Nur die Namen der Qualifizierer, die current-Eigenschaft oder das Objekt bestimmte zurück. <br/> Für eine Eigenschaft: nur die Qualifizierer in dieser Eigenschaft (einschließlich Außerkraftsetzungen) bestimmte zurück, und nicht diese Qualifizierer aus der Klassendefinition weitergegeben. <br/> Für eine Instanz: nur instanzspezifischen Qualifizierer Namen zurückgeben. <br/> Für eine Klasse: nur Qualifizierer, die abgeleitete Klasse Beiong bestimmte zurückgeben.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0 x 20 | Rückgabe, nur die Namen der Qualifizierer weitergegeben aus einem anderen Objekt. <br/> Für eine Eigenschaft: Rückgabe nur der Qualifizierer weitergegeben auf diese Eigenschaft aus der Klassendefinition, und nicht die von der Eigenschaft selbst. <br/> Für eine Instanz: zurück, die nur diese Qualifizierer weitergegeben werden, aus der Klassendefinition. <br/> Für eine Klasse: zurück, die nur diese Qualifizierer Namen, die von der übergeordneten Klassen geerbt. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Nur die Namen der Qualifizierer, die current-Eigenschaft oder das Objekt bestimmte zurück. <br/> Für eine Eigenschaft: nur die Qualifizierer in dieser Eigenschaft (einschließlich Außerkraftsetzungen) bestimmte zurück, und nicht diese Qualifizierer aus der Klassendefinition weitergegeben. <br/> Für eine Instanz: nur instanzspezifischen Qualifizierer Namen zurückgeben. <br/> Für eine Klasse: nur Qualifizierer, die abgeleitete Klasse Beiong bestimmte zurückgeben.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Rückgabe, nur die Namen der Qualifizierer weitergegeben aus einem anderen Objekt. <br/> Für eine Eigenschaft: Rückgabe nur der Qualifizierer weitergegeben auf diese Eigenschaft aus der Klassendefinition, und nicht die von der Eigenschaft selbst. <br/> Für eine Instanz: zurück, die nur diese Qualifizierer weitergegeben werden, aus der Klassendefinition. <br/> Für eine Klasse: zurück, die nur diese Qualifizierer Namen, die von der übergeordneten Klassen geerbt. |
 
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

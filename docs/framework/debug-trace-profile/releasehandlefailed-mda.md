@@ -1,13 +1,6 @@
 ---
 title: ReleaseHandleFailed-MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
 - release handle failed
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2deefc4626bf8382c7de806eb3d687d468580bf4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3e2c39416a3d09eb1b1197dbec81f40ce318a43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="releasehandlefailed-mda"></a>ReleaseHandleFailed-MDA
 Der `releaseHandleFailed`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, um einen Entwickler zu benachrichtigen, wenn die <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Methode einer Klasse, die aus <xref:System.Runtime.InteropServices.SafeHandle> oder <xref:System.Runtime.InteropServices.CriticalHandle> abgeleitet wurde, `false` zurückgibt.  

@@ -1,35 +1,23 @@
 ---
 title: Übersicht über die Transportsicherheit
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: b697dc6a227c3b2a5646f4fcb11a39fd9d6339ff
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 12b491971a9f3faa57edb1ccf9fb59351ed45f3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-overview"></a>Übersicht über die Transportsicherheit
-Transportsicherheitsmechanismen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hängen von der Bindung und dem verwendeten Transport ab. Wenn Sie z. B. die <xref:System.ServiceModel.WSHttpBinding>-Klasse verwenden, lautet der Transportmechanismus HTTP, und der primäre Mechanismus zum Sichern des Transports ist Secure Sockets Layer (SSL) über HTTP, allgemein als HTTPS bezeichnet. In diesem Thema werden die wichtigsten Sicherheitsmechanismen beschrieben, die für die vom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-System bereitgestellten Bindungen verwendet werden.  
+Sicherheitsmechanismen in Windows Communication Foundation (WCF) hängt von der Bindung und dem verwendeten Transport ab. Wenn Sie z. B. die <xref:System.ServiceModel.WSHttpBinding>-Klasse verwenden, lautet der Transportmechanismus HTTP, und der primäre Mechanismus zum Sichern des Transports ist Secure Sockets Layer (SSL) über HTTP, allgemein als HTTPS bezeichnet. Dieses Thema erläutert die wichtigsten Sicherheitsmechanismen, die in den WCF-System bereitgestellten Bindungen verwendet werden.  
   
 > [!NOTE]
->  Wenn SSL-Sicherheit in Verbindung mit .NET Framework 3.5 und höher verwendet wird, verwenden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients später zur Validierung des Dienstzertifikats mittels einer Zertifikatskette sowohl die Zwischenzertifikate aus dem lokalen Zertifikatspeicher als auch die Zwischenzertifikate, die sie im Rahmen der SSL-Verhandlung empfangen haben. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
+>  Wenn SSL-Sicherheit mit .NET Framework 3.5 und höher verwendet wird, ein WCF-Client verwendet sowohl die Zwischenzertifikate im Zertifikatspeicher, und die Zwischenzertifikate empfangen, während der SSL-Verhandlung zum Ausführen der Überprüfung der Zertifikatkette auf des Diensts Zertifikat. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
   
 > [!WARNING]
 >  Wenn transportsicherheit verwendet wird, die <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal` Eigenschaft möglicherweise überschrieben. Dies verhindern, legen die <!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> --> `PrincipalPermission` auf None. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ist ein Dienstverhalten, das für die Dienstbeschreibung festgelegt werden kann.  
@@ -75,7 +63,7 @@ Transportsicherheitsmechanismen in [!INCLUDE[indigo1](../../../../includes/indig
  Dadurch kann der Server NTLM für die Authentifizierung verwenden, falls das Kerberos-Protokoll fehlschlägt. Weitere Informationen zum Konfigurieren von IIS in [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [NTLM-Authentifizierung durch das Erzwingen des](http://go.microsoft.com/fwlink/?LinkId=88598). Im Falle von [!INCLUDE[iisver](../../../../includes/iisver-md.md)] schließt die Windows-Authentifizierung die NTLM-Authentifizierung ein. Weitere Informationen finden Sie unter [IIS 7.0 Beta: Konfigurieren von Serverzertifikaten in IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- Die <xref:System.ServiceModel.WSHttpBinding>-Klasse ist für die Zusammenarbeit mit Diensten vorgesehen, die WS-*-Spezifikationen implementieren. Die Transportsicherheit für diese Bindung ist SSL (Secure Sockets Layer) über HTTP oder HTTPS. Um eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung zu erstellen, die SSL verwendet, verwenden Sie IIS, um die Anwendung zu hosten. Wenn Sie eine selbst gehostete Anwendung erstellen, können Sie mit dem Tool HttpCfg.exe ein X.509-Zertifikat an einen bestimmten Anschluss eines Computers binden. Die Anschlussnummer wird als Teil der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung als Endpunktadresse angegeben. Bei Verwendung des Transportmodus muss die Endpunktadresse das HTTPS-Protokoll enthalten. Andernfalls wird zur Laufzeit eine Ausnahme ausgelöst. Weitere Informationen finden Sie unter [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Die <xref:System.ServiceModel.WSHttpBinding>-Klasse ist für die Zusammenarbeit mit Diensten vorgesehen, die WS-*-Spezifikationen implementieren. Die Transportsicherheit für diese Bindung ist SSL (Secure Sockets Layer) über HTTP oder HTTPS. Zum Erstellen einer WCF-Anwendung, die SSL verwendet, verwenden Sie IIS zum Hosten der Anwendung. Wenn Sie eine selbst gehostete Anwendung erstellen, können Sie mit dem Tool HttpCfg.exe ein X.509-Zertifikat an einen bestimmten Anschluss eines Computers binden. Die Portnummer wird als Teil der WCF-Anwendung als Endpunktadresse angegeben. Bei Verwendung des Transportmodus muss die Endpunktadresse das HTTPS-Protokoll enthalten. Andernfalls wird zur Laufzeit eine Ausnahme ausgelöst. Weitere Informationen finden Sie unter [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Legen Sie zur Clientauthentifizierung die <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>-Eigenschaft der <xref:System.ServiceModel.HttpTransportSecurity>-Klasse auf einen der <xref:System.ServiceModel.HttpClientCredentialType>-Enumerationswerte fest. Die Enumerationswerte sind identisch mit den Client-Anmeldeinformationstypen für <xref:System.ServiceModel.BasicHttpBinding> und sind darauf ausgerichtet, mit IIS-Diensten gehostet zu werden.  
   

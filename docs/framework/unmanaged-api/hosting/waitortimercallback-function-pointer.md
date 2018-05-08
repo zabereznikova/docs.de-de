@@ -1,14 +1,6 @@
 ---
 title: WAITORTIMERCALLBACK-Funktionszeiger
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - WAITORTIMERCALLBACK
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f39c023c6911ca0bcc6b62a562785c069d846d15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1455ce7c3b07809d1dead8e98019c991475eb02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK-Funktionszeiger
 Zeigt auf eine Funktion, die benachrichtigt den Host, die ein Wait-handle (<xref:System.Threading.WaitHandle>) hat signalisiert wurde oder das Timeout.  
@@ -65,7 +53,7 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
  **Bibliothek:** "Mscorwks.dll"  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

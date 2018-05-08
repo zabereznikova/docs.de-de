@@ -1,31 +1,17 @@
 ---
 title: 'Vorgehensweise: Abrufen von Metadaten und Implementieren eines kompatiblen Diensts'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 9ae888f5a9569ef51be52b91ea019fea897597b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Vorgehensweise: Abrufen von Metadaten und Implementieren eines kompatiblen Diensts
-Oftmals werden Dienste nicht von derselben Person entworfen und anschließend implementiert. In Umgebungen, in denen zusammenwirkende Anwendungen wichtig sind, können Verträge in Web Services Description Language (WSDL) entworfen oder beschrieben werden, und ein Entwickler muss einen Dienst implementieren, der mit dem bereitgestellten Vertrag kompatibel ist. Möglicherweise möchten Sie auch einen vorhandenen Dienst an [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] migrieren, das Übertragungsformat jedoch beibehalten. Außerdem werden Aufrufende von Duplexverträgen dazu aufgefordert, auch einen Rückrufvertrag zu implementieren.  
+Oftmals werden Dienste nicht von derselben Person entworfen und anschließend implementiert. In Umgebungen, in denen zusammenwirkende Anwendungen wichtig sind, können Verträge in Web Services Description Language (WSDL) entworfen oder beschrieben werden, und ein Entwickler muss einen Dienst implementieren, der mit dem bereitgestellten Vertrag kompatibel ist. Sie sollten auch zum Migrieren eines vorhandenen Diensts zu Windows Communication Foundation (WCF), aber das Wire-Format beibehalten. Außerdem werden Aufrufende von Duplexverträgen dazu aufgefordert, auch einen Rückrufvertrag zu implementieren.  
   
- In diesen Fällen verwenden Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (oder ein entsprechendes Tool) eine dienstvertragschnittstelle in einer verwalteten Sprache zu generieren, die Sie implementieren können, um die Anforderungen erfüllt die Vertrag. In der Regel die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) wird verwendet, um einen Dienstvertrag zu erwerben, die mit einer Kanalfactory verwendet wird oder ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Clienttyp sowie mit einer Client-Konfigurationsdatei, die richtet die korrekte Bindung und Adresse. Um die generierte Konfigurationsdatei zu verwenden, müssen Sie diese in eine Dienstkonfigurationsdatei ändern. Sie müssen möglicherweise auch den Dienstvertrag ändern.  
+ In diesen Fällen verwenden Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (oder ein entsprechendes Tool) eine dienstvertragschnittstelle in einer verwalteten Sprache zu generieren, die Sie implementieren können, um die Anforderungen erfüllt die Vertrag. In der Regel die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) wird verwendet, um einen Dienstvertrag zu erwerben, die verwendet wird, mit einer Kanalfactory oder ein WCF-Clienttyp sowie eine Clientkonfigurationsdatei, die die richtige Bindung einrichtet und Adresse. Um die generierte Konfigurationsdatei zu verwenden, müssen Sie diese in eine Dienstkonfigurationsdatei ändern. Sie müssen möglicherweise auch den Dienstvertrag ändern.  
   
 ### <a name="to-retrieve-data-and-implement-a-compliant-service"></a>So rufen Sie Daten ab und implementieren einen kompatiblen Dienst:  
   

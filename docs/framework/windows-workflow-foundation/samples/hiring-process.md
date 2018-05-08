@@ -1,29 +1,17 @@
 ---
 title: Einstellungsprozess
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hiring-process"></a>Einstellungsprozess
 In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten sowie zwei als Workflowdienste gehostete Workflows implementiert werden. Diese Workflows sind Teil der IT-Infrastruktur des fiktionalen Unternehmens Contoso, Inc.  
   
- Der `HiringRequest`-Workflowprozess (implementiert als <xref:System.Activities.Statements.Flowchart>) erfordert eine Autorisierung durch mehrere Manager in der Organisation. Zu diesem Zweck werden vom Workflow bestehende Dienste in der Organisation genutzt (im vorliegenden Fall ein Posteingangsdienst sowie ein Datenorganisationsdienst, die als einfache [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste implementiert sind).  
+ Der `HiringRequest`-Workflowprozess (implementiert als <xref:System.Activities.Statements.Flowchart>) erfordert eine Autorisierung durch mehrere Manager in der Organisation. Um dieses Ziel zu erreichen, verwendet der Workflow bestehende Dienste in der Organisation (in unserem Fall, posteingangsdienst sowie ein datenorganisationsdienst als einfaches Windows Communication Foundation (WCF)-Dienste implementiert).  
   
  Mit dem `ResumeRequest`-Workflow (implementiert als <xref:System.Activities.Statements.Sequence>) wird eine Stellenausschreibung auf der externen Website der Personalabteilung von Contoso veröffentlicht, und die eingehenden Lebensläufe werden verwaltet. Die Stellenausschreibung ist auf der externen Website des Unternehmens abrufbar, bis ein diesbezüglich festgelegter Zeitraum abgelaufen ist oder sie von einem Mitarbeiter von Contoso entfernt wird.  
   
@@ -64,7 +52,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -111,7 +99,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
 |ContosoHR|Enthält Datenverträge, Geschäftsobjekte und Repositoryklassen.|  
 |HiringRequestService|Enthält die Definition des Workflows zum Stellenausschreibungsverfahren.<br /><br /> Dieses Projekt ist als Konsolenanwendung implementiert, die den Workflow (XAML-Datei) selbst als Dienst hostet.|  
 |ResumeRequestService|Ein Workflowdienst, mit dem die Lebensläufe der Bewerber erfasst werden, bis die Stellenanzeige abläuft oder der Bewerbungsprozess beendet werden muss.<br /><br /> Dieses Projekt wird als deklarativer Workflowdienst (XAMLX) implementiert.|  
-|OrgService|Ein Dienst, mit dem organisatorische Informationen (Employees, Positions, PositionTypes und Departments) verfügbar gemacht werden. Sie können sich diesen Dienst als Organisationsmodul im Rahmen der Unternehmensressourcenplanung (ERP) vorstellen.<br /><br /> Dieses Projekt ist als Konsolenanwendung implementiert, die einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst verfügbar macht.|  
+|OrgService|Ein Dienst, mit dem organisatorische Informationen (Employees, Positions, PositionTypes und Departments) verfügbar gemacht werden. Sie können sich diesen Dienst als Organisationsmodul im Rahmen der Unternehmensressourcenplanung (ERP) vorstellen.<br /><br /> Dieses Projekt ist als Konsolenanwendung implementiert, die einen Windows Communication Foundation (WCF)-Dienst verfügbar macht.|  
 |InboxService|Ein Posteingang mit aktionsfähigen Aufgaben für Mitarbeiter.<br /><br /> Dieses Projekt ist als Konsolenanwendung implementiert, die einen WCF-Dienst verfügbar macht.|  
 |InternalClient|Eine Webanwendung zur Interaktion mit dem Prozess. Benutzer können HiringProcess-Workflows anzeigen, starten sowie daran teilnehmen. Mit dieser Anwendung können außerdem ResumeRequest-Prozesse gestartet und überwacht werden.<br /><br /> Diese Site ist als interne Site für das Intranet von Contoso implementiert. Dieses Projekt ist als ASP.NET-Website implementiert.|  
 |CareersWebSite|Eine externe Website, mit der offene Stellen von Contoso bekannt gemacht werden. Bewerber können zu dieser Seite navigieren und ihren Lebenslauf einreichen.|  

@@ -1,13 +1,6 @@
 ---
 title: COM-Interop ohne Registrierung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], interop
 - COM interop, registration-free COM interop
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1eee55b2036028dd491dc82f9bce7c51aca878fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registration-free-com-interop"></a>COM-Interop ohne Registrierung
 COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Registrierung zum Speichern von Assemblyinformationen zu verwenden. Statt eine Komponente auf einem Computer während der Bereitstellung zu registrieren, erstellen Sie zur Entwurfszeit Win32-Manifestdateien, die Informationen zur Bindung und Aktivierung enthalten. Diese Manifestdateien steuern anstelle der Registrierungsschlüssel die Aktivierung eines Objekts.  
