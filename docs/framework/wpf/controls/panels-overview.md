@@ -1,14 +1,6 @@
 ---
 title: Übersicht über Panel-Elemente
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-caps.latest.revision: 48
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd04413636c7d6182ff01712eecedbbd4ed02761
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 65f5fa9eeffdeb6e7bc869d159b4b33d75fd7570
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panels-overview"></a>Übersicht über Panel-Elemente
 <xref:System.Windows.Controls.Panel> Elemente sind die Komponenten, die das Rendern von Elementen zu steuern, ihre Größe und Dimensionen, deren Position und die Anordnung des untergeordneten Inhalts. Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine Reihe von vordefinierten <xref:System.Windows.Controls.Panel> Elemente als auch die Möglichkeit zum Erstellen von benutzerdefinierten <xref:System.Windows.Controls.Panel> Elemente.  
@@ -107,7 +93,7 @@ ms.lasthandoff: 04/09/2018
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Canvas  
- Die <xref:System.Windows.Controls.Canvas> Element ermöglicht Inhalt gemäß Ihrer Absolute Positionierung *X -* und *y-*Koordinaten. Elemente können in einer eindeutigen Position gezeichnet werden; alternativ bestimmt die Reihenfolge, in der Sie im Markup erscheinen, die Reihenfolge, in der die Elemente gezeichnet werden, wenn Elemente die gleichen Koordinaten verwenden.  
+ Die <xref:System.Windows.Controls.Canvas> Element ermöglicht Inhalt gemäß Ihrer Absolute Positionierung *X -* und *y-* Koordinaten. Elemente können in einer eindeutigen Position gezeichnet werden; alternativ bestimmt die Reihenfolge, in der Sie im Markup erscheinen, die Reihenfolge, in der die Elemente gezeichnet werden, wenn Elemente die gleichen Koordinaten verwenden.  
   
  <xref:System.Windows.Controls.Canvas> bietet die flexibelste Layout Unterstützung aller <xref:System.Windows.Controls.Panel>. Höhen-und Breiteneigenschaften werden verwendet, um den Bereich des Zeichenbereichs definieren, und Elemente innerhalb sind absolute Koordinaten relativ zum Bereich des übergeordneten Elements zugewiesen <xref:System.Windows.Controls.Canvas>. Vier angefügten Eigenschaften <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> und <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, ermöglichen Sie genaue Steuerung der Platzierung des Objekts innerhalb einer <xref:System.Windows.Controls.Canvas>, ermöglichen den Entwickler zu positionieren und Anordnen von Elementen, die genau auf dem Bildschirm.  
   
@@ -245,7 +231,7 @@ ms.lasthandoff: 04/09/2018
   
  Auf ähnliche Weise Verhalten von benutzerdefinierten Layouts basierend auf abgeleitete Klassen (z. B. <xref:System.Windows.Controls.Canvas> oder <xref:System.Windows.Controls.Grid>) definiert werden können, durch Überschreiben ihre <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> und <xref:System.Windows.FrameworkElement.MeasureOverride%2A> Methoden.  
   
- Das folgende Markup veranschaulicht das Erstellen eine benutzerdefinierten <xref:System.Windows.Controls.Panel> Element. Diese neue <xref:System.Windows.Controls.Panel>, definiert als `PlotPanel`, unterstützt die Positionierung von untergeordneten Elementen mithilfe von hartcodierten *X -* und *y-*Koordinaten. In diesem Beispiel wird eine <xref:System.Windows.Shapes.Rectangle> Zeichnungsfläche Punkt 50 (nicht dargestellt) Element positioniert ist (*x*), und 50 (*y*).  
+ Das folgende Markup veranschaulicht das Erstellen eine benutzerdefinierten <xref:System.Windows.Controls.Panel> Element. Diese neue <xref:System.Windows.Controls.Panel>, definiert als `PlotPanel`, unterstützt die Positionierung von untergeordneten Elementen mithilfe von hartcodierten *X -* und *y-* Koordinaten. In diesem Beispiel wird eine <xref:System.Windows.Shapes.Rectangle> Zeichnungsfläche Punkt 50 (nicht dargestellt) Element positioniert ist (*x*), und 50 (*y*).  
   
  [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]

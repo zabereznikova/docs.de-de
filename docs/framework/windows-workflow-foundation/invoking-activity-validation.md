@@ -1,24 +1,12 @@
 ---
 title: Aufrufen der Aktivitätsvalidierung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c334c13457b3e89e451f75e1ca9ea9e00aae1e21
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7e8be762e6c5c67687864727dcd4ca1cde9a8e42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="invoking-activity-validation"></a>Aufrufen der Aktivitätsvalidierung
 Die Aktivitätsvalidierung stellt eine Methode bereit, um Fehler in der Konfiguration einer Aktivität vor der Ausführung zu identifizieren und zu melden. Eine Validierung wird ausgeführt, wenn ein Workflow im Workflow-Designer geändert und Validierungsfehler oder -warnungen im Workflow-Designer angezeigt werden. Die Validierung findet auch zur Laufzeit statt, wenn ein Workflow aufgerufen wird. Wenn Validierungsfehler auftreten, löst die Standardvalidierungslogik eine <xref:System.Activities.InvalidWorkflowException> aus. Windows Workflow Foundation (WF) bietet die <xref:System.Activities.Validation.ActivityValidationServices> -Klasse, die von workflowanwendungen und Tools sind Entwickler verwendet werden kann, um eine Aktivität explizit validieren. In diesem Thema wird beschrieben, wie Aktivitäten mit dem <xref:System.Activities.Validation.ActivityValidationServices>-Objekt validiert werden.  

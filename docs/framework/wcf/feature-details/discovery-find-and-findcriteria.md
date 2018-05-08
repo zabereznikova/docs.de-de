@@ -1,26 +1,12 @@
 ---
 title: Suche und FindCriteria
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Suche und FindCriteria
 Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste zu ermitteln, und ist eine der Hauptaktionen bei der Suche. Beim Durchführen einer Suche wird eine WS-Discovery-Probe-Nachricht über das Netzwerk gesendet. Dienste, die die angegebenen Kriterien erfüllen, antworten mit WS-Discovery-ProbeMatch-Nachrichten. Weitere Informationen zu Discovery-Nachrichten finden Sie unter der [WS-Discovery-Spezifikation](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -33,7 +19,7 @@ Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste z
   
  Zu den Suchkriterien gehört Folgendes:  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> – Optional. Der Vertragsname des Diensts, nach dem gesucht wird, und die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die mit ALLEN Verträgen übereinstimmen. Beachten Sie, dass ein Endpunkt unter [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nur einen Vertrag unterstützen kann.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> – Optional. Der Vertragsname des Diensts, nach dem gesucht wird, und die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die mit ALLEN Verträgen übereinstimmen. Beachten Sie, dass in WCF ein Endpunkt nur einen Vertrag unterstützen kann.  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> – Optional. Bereiche sind absolute URIs, die verwendet werden, um einzelne Dienstendpunkte zu kategorisieren. Dies ist in Szenarien nützlich, in denen mehrere Endpunkte den gleichen Vertrag verfügbar machen und in denen Sie nach einer Möglichkeit suchen, nach einer Teilmenge der Endpunkte zu suchen. Wenn mehr als ein Bereich angegeben wird, antworten nur Dienstendpunkte, die mit ALLEN Bereichen übereinstimmen.  
   

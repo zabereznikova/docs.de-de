@@ -1,31 +1,19 @@
 ---
 title: Clientvalidierung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9c698962bbca04ac05473265d95fc00517b039
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-validation"></a>Clientvalidierung
 Dienste veröffentlichen häufig Metadaten, um die automatische Generierung und Konfiguration von Clientproxytypen zu aktivieren. Wenn der Dienst nicht vertrauenswürdig ist, sollten Clientanwendungen überprüfen, dass die Metadaten den Richtlinien der Clientanwendung in Bezug auf Sicherheit, Transaktionen, Typ des Servicevertrags usw. entsprechen. Das folgende Beispiel veranschaulicht das Schreiben eines Clientendpunktverhaltens, das den Dienstendpunkt überprüft, um zu gewährleisten, dass der Dienstendpunkt sicher verwendet werden kann.  
   
  Der Dienst macht vier Dienstendpunkte verfügbar. Der erste Endpunkt verwendet die WSDualHttpBinding, der zweite Endpunkt verwendet die NTLM-Authentifizierung, der dritte Endpunkt aktiviert den Transaktionsfluss, und der vierte Endpunkt verwendet die zertifikatbasierte Authentifizierung.  
   
- Der Client verwendet die <xref:System.ServiceModel.Description.MetadataResolver>-Klasse, um die Metadaten für den Dienst abzurufen. Der Client erzwingt eine Richtlinie zur Verhinderung von Duplexbindungen, NTLM-Authentifizierungen und des Transaktionsflusses unter Verwendung von Validierungsverhalten. Für jede <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanz, die aus den Metadaten des Diensts importiert wurde, fügt die Clientanwendung eine Instanz des `InternetClientValidatorBehavior`-Endpunktverhaltens zu dem <xref:System.ServiceModel.Description.ServiceEndpoint> hinzu, bevor versucht wird, einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client für die Verbindung mit dem Endpunkt zu verwenden. Die `Validate`-Methode des Verhaltens wird ausgeführt, bevor andere Operationen für den Dienst aufgerufen werden, und sie erzwingt die Clientrichtlinie durch Auslösen der `InvalidOperationExceptions`.  
+ Der Client verwendet die <xref:System.ServiceModel.Description.MetadataResolver>-Klasse, um die Metadaten für den Dienst abzurufen. Der Client erzwingt eine Richtlinie zur Verhinderung von Duplexbindungen, NTLM-Authentifizierungen und des Transaktionsflusses unter Verwendung von Validierungsverhalten. Für jede <xref:System.ServiceModel.Description.ServiceEndpoint> Instanz, die aus den Metadaten des Diensts, der Client-Anwendung importiert Fügt eine Instanz von der `InternetClientValidatorBehavior` -Endpunktverhalten hinzu der <xref:System.ServiceModel.Description.ServiceEndpoint> vor dem Versuch, einen Windows Communication Foundation (WCF)-Client für die Verbindung verwenden der Endpunkt. Die `Validate`-Methode des Verhaltens wird ausgeführt, bevor andere Operationen für den Dienst aufgerufen werden, und sie erzwingt die Clientrichtlinie durch Auslösen der `InvalidOperationExceptions`.  
   
 ### <a name="to-build-the-sample"></a>So erstellen Sie das Beispiel  
   

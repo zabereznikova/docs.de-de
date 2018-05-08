@@ -1,26 +1,12 @@
 ---
 title: Bidirektionale Kommunikation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dfc332533b714083d149b2c1c4892626d2990fb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-way-communication"></a>Bidirektionale Kommunikation
 Dieses Beispiel veranschaulicht das Ausführen der transaktiven bidirektionalen Warteschlangenkommunikation über MSMQ. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -86,7 +72,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben. Der Endpunkt für den Dienst wird im Abschnitt System.ServiceModel der Konfigurationsdatei definiert.  
   
 > [!NOTE]
->  Der Name der MSMQ-Warteschlange und die Endpunktadresse verwenden geringfügig abweichende Adressierungskonventionen. Im MSMQ-Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Endpunktadresse gibt ein net.msmq:-Schema an und verwendet "localhost" als lokalen Computer sowie Schrägstriche im Pfad. Um in einer Warteschlange zu lesen, die auf einem Remotecomputer gehostet wird, ersetzen Sie "." und "localhost" durch den Namen des Remotecomputers.  
+>  Der Name der MSMQ-Warteschlange und die Endpunktadresse verwenden geringfügig abweichende Adressierungskonventionen. Im MSMQ-Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die Windows Communication Foundation (WCF)-Endpunktadresse gibt ein net.msmq:-Schema an und verwendet "Localhost" für den lokalen Computer sowie Schrägstriche im Pfad. Um in einer Warteschlange zu lesen, die auf einem Remotecomputer gehostet wird, ersetzen Sie "." und "localhost" durch den Namen des Remotecomputers.  
   
  Der Dienst ist selbst gehostet. Bei Verwendung des MSMQ-Transports muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel prüft der Dienst, ob die Warteschlange vorhanden ist, und erstellt sie gegebenenfalls. Der Warteschlangenname wird aus der Konfigurationsdatei gelesen. Die Basisadresse wird verwendet, durch die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) auf den Proxy an den Dienst zu generieren.  
 
@@ -340,7 +326,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   

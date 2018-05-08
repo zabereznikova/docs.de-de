@@ -1,14 +1,6 @@
 ---
 title: Synchrone und asynchrone Vorgänge
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +8,16 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Synchrone und asynchrone Vorgänge
 In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvorgänge erörtert.  
   
- Viele Anwendungen rufen Methoden asynchron auf, weil dadurch die Anwendung beim Methodenaufruf weiter nützliche Arbeiten ausführen kann. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienste und -Clients können an Aufrufen asynchroner Vorgänge auf zwei unterschiedlichen Anwendungsebenen teilnehmen, was [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen noch mehr Flexibilität bietet, um den Durchsatz unter Abwägung der Interaktivität zu maximieren.  
+ Viele Anwendungen rufen Methoden asynchron auf, weil dadurch die Anwendung beim Methodenaufruf weiter nützliche Arbeiten ausführen kann. Windows Communication Foundation (WCF)-Dienste und -Clients können aufrufen asynchroner Vorgänge auf zwei unterschiedlichen Ebenen der Anwendung, die bereitstellen teilnehmen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] noch mehr Flexibilität, um den Durchsatz maximieren mit für Lastenausgleich Anwendungen Interaktivität.  
   
 ## <a name="types-of-asynchronous-operations"></a>Typen asynchroner Vorgänge  
  Alle Dienstverträge in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verwenden unabhängig von den Parametertypen und Rückgabewerten [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Attribute zum Angeben eines bestimmten Musters für den Nachrichtenaustausch zwischen Client und Dienst. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] leitet automatisch eingehende und ausgehende Nachrichten an den entsprechenden Dienstvorgang oder ausgeführten Clientcode weiter.  

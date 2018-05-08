@@ -1,24 +1,12 @@
 ---
 title: Warten auf Eingabeaktivität
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b9e7942ced071a795f1bf408ca4778a216cd85e4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 750a217699abe8b2eb2eaaa364002137d335a41a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wait-for-input-activity"></a>Warten auf Eingabeaktivität
 Dieses Beispiel veranschaulicht, wie benannte Lesezeichen in einem Workflow erstellt werden. Windows Workflow Foundation (WF) bietet keine Aktivität zum deklarativen Erstellung von Lesezeichen. Wenn Sie daher in Ihrem Workflow ein Lesezeichen erstellen möchten, müssen Sie eine benutzerdefinierte Aktivität schreiben, die eines erstellt. Die in diesem Beispiel definierte `WaitForInput`-Aktivität stellt diese Funktionalität bereit, damit Benutzer Lesezeichen deklarativ innerhalb eines Workflows erstellen können.  
@@ -68,6 +56,6 @@ Dieses Beispiel veranschaulicht, wie benannte Lesezeichen in einem Workflow erst
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

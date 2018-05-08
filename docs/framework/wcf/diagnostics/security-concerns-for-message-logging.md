@@ -1,24 +1,14 @@
 ---
-title: "Sicherheitsaspekte für Nachrichtenprotokollierung"
-ms.custom: 
+title: Sicherheitsaspekte für Nachrichtenprotokollierung
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>Sicherheitsaspekte für Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von der Nachrichtenprotokollierung generiert werden.  
@@ -26,7 +16,7 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
 ## <a name="security-concerns"></a>Sicherheitsaspekte  
   
 ### <a name="logging-sensitive-information"></a>Protokollieren vertraulicher Informationen  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ändert keine Daten in anwendungsspezifischen Headern und dem Text. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfolgt darüber hinaus keine persönlichen Informationen in anwendungsspezifischen Headern oder Textdaten nach.  
+ Windows Communication Foundation (WCF) werden alle Daten in anwendungsspezifischen Headern und Text nicht geändert. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfolgt darüber hinaus keine persönlichen Informationen in anwendungsspezifischen Headern oder Textdaten nach.  
   
  Bei aktivierter Nachrichtenprotokollierung sind persönliche Informationen in anwendungsspezifischen Headern, wie z. B. eine Abfragezeichenfolge, und Textdaten, wie z. B. eine Kreditkartennummer, u. U. in den Protokollen sichtbar. Der Anwendungsbereitsteller ist für das Erzwingen einer Zugriffssteuerung für die Konfigurations- und Protokolldateien verantwortlich. Wenn Informationen dieser Art nicht sichtbar sein sollen, sollten Sie die Protokollierung deaktivieren, oder filtern Sie einen Teil der Daten heraus, wenn Sie die Protokolle freigeben möchten.  
   

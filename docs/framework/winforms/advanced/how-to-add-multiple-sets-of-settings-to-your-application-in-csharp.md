@@ -1,27 +1,15 @@
 ---
-title: "Gewusst wie: Hinzufügen mehrerer Gruppen von Einstellungen zur Anwendung in C#"
-ms.custom: 
+title: 'Gewusst wie: Hinzufügen mehrerer Gruppen von Einstellungen zur Anwendung in C#'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d9bd7d0721aae8691fdbca4d7b934f820666536
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 029dffc878c62613e291620a2bd86971f369d15a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Gewusst wie: Hinzufügen mehrerer Gruppen von Einstellungen zur Anwendung in C# #
 In einigen Fällen möchten möglicherweise haben mehrere Sätze von Einstellungen in einer Anwendung. Z. B. Wenn Sie eine Anwendung entwickeln, in denen eine bestimmte Gruppe von Einstellungen muss häufig geändert werden, möglicherweise ratsam, die alle auf einer einzelnen Datei aufteilen, damit die Datei Großhändler, ersetzt werden kann. verlassen andere Einstellungen nicht betroffen. Visual Studio können Sie mehrere Sätze von Einstellungen zum Projekt hinzufügen. Zusätzliche Gruppen von Einstellungen können über das Properties.Settings-Objekt zugegriffen werden.  

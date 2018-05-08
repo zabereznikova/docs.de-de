@@ -1,28 +1,16 @@
 ---
-title: "Gewusst wie: Hinzufügen oder Entfernen von ImageList-Bildern mithilfe des Designers"
-ms.custom: 
+title: 'Gewusst wie: Hinzufügen oder Entfernen von ImageList-Bildern mithilfe des Designers'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ImageList component [Windows Forms], adding images
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce14d6f060482eb521e9812a127c6b27431121c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c85e55b6aef45eea65e6f82269375f80acf71017
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Gewusst wie: Hinzufügen oder Entfernen von ImageList-Bildern mithilfe des Designers
 Sie können Bilder, Hinzufügen einer <xref:System.Windows.Forms.ImageList> Komponente auf verschiedene Weise. Sie können Bilder sehr schnell hinzufügen, indem mithilfe des Smarttags zugeordnet der <xref:System.Windows.Forms.ImageList>, oder wenn Sie mehrere andere Eigenschaften festlegen der <xref:System.Windows.Forms.ImageList>, Sie könnten praktischerweise mehr Hinzufügen von Bildern mit dem Eigenschaftenfenster. Sie können auch Bilder hinzufügen, mithilfe von Code. Weitere Informationen zum Hinzufügen von Bildern mit Code finden Sie unter [wie: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Füllen Sie in der Regel die <xref:System.Windows.Forms.ImageList> -Komponente mit Bildern, bevor Sie mit einem Steuerelement verknüpft ist, aber dies ist nicht erforderlich.  

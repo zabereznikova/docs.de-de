@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Festlegen von Standardzellenformaten für das DataGridView-Steuerelement in Windows Forms"
-ms.custom: 
+title: 'Gewusst wie: Festlegen von Standardzellenformaten für das DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: 1aaaca43-5340-447e-99c0-9177d9776aa1
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c817f62ede780ad0164ef78156b1a028e0c7a0a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed7ff720d8ef4aa2caa858ea61c4d38866cf50a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Gewusst wie: Festlegen von Standardzellenformaten für das DataGridView-Steuerelement in Windows Forms
 Mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement können Sie Standardzellenstile für das gesamte Steuerelement und für bestimmte Spalten und Zeilen angeben. Diese Standardeinstellungen werden von der Steuerelementebene bis herunter auf die Spaltenebene, dann auf die Zeilenebene und anschließend auf die Zellenebene gefiltert. Wenn eine bestimmte Eigenschaft <xref:System.Windows.Forms.DataGridViewCellStyle> nicht auf Zellenebene festgelegt ist, wird die standardmäßige Eigenschafteneinstellung auf Zeilenebene verwendet. Wenn die Eigenschaft auf Zeilenebene ebenfalls nicht festgelegt ist, wird die Standardspalteneinstellung verwendet. Wenn die Eigenschaft schließlich auf Spaltenebene ebenfalls nicht festgelegt ist, wird die <xref:System.Windows.Forms.DataGridView>-Standardeinstellung verwendet. Mit dieser Einstellung können Sie vermeiden, die Eigenschafteneinstellungen auf mehreren Ebenen duplizieren zu müssen. Geben Sie einfach auf jeder Ebene die Stile an, die sich von den darüber liegenden Ebenen unterscheiden. Weitere Informationen finden Sie unter [Zellstile im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  

@@ -1,34 +1,22 @@
 ---
-title: "Gewusst wie: Steuern des Ausfüllens einer zusammengesetzten Form"
-ms.custom: 
+title: 'Gewusst wie: Steuern des Ausfüllens einer zusammengesetzten Form'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - shapes [WPF], composite [WPF], controlling fill
 - composite shapes [WPF], controlling fill
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb7956ab70dc30c7d090b9616cc603df2dc0b4e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9a17434f11f432f6446e09bd853ed0d2f23fbe8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Gewusst wie: Steuern des Ausfüllens einer zusammengesetzten Form
 Die <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Eigenschaft von einem <xref:System.Windows.Media.GeometryGroup> oder eine <xref:System.Windows.Media.PathGeometry>, gibt eine "Regel" die zusammengesetzte Form verwendet wird, um zu bestimmen, ob ein angegebener Punkt Teil der Geometrie ist. Es gibt zwei mögliche Werte für <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> und <xref:System.Windows.Media.FillRule.Nonzero>. In den folgenden Abschnitten wird beschrieben, wie diese beiden Regeln verwendet werden.  
   
- **EvenOdd:**Diese Regel ermittelt, ob sich ein Punkt im Ausfüllbereich befindet, indem von diesem Punkt aus ein Strahl in beliebiger Richtung gegen Unendlich gezeichnet wird und die Anzahl der vom Strahl geschnittenen Pfadsegmente in der Form gezählt wird. Bei einer ungeraden Zahl liegt der Punkt innen, und bei einer geraden Zahl liegt er außen.  
+ **EvenOdd:** Diese Regel ermittelt, ob sich ein Punkt im Ausfüllbereich befindet, indem von diesem Punkt aus ein Strahl in beliebiger Richtung gegen Unendlich gezeichnet wird und die Anzahl der vom Strahl geschnittenen Pfadsegmente in der Form gezählt wird. Bei einer ungeraden Zahl liegt der Punkt innen, und bei einer geraden Zahl liegt er außen.  
   
  Der folgende XAML-Code erstellt z. B. eine zusammengesetzte Form, bestehend aus einer Reihe von konzentrische Ringe (Ziel) mit einem <xref:System.Windows.Media.GeometryGroup.FillRule%2A> festgelegt <xref:System.Windows.Media.FillRule.EvenOdd>.  
   
@@ -42,7 +30,7 @@ Die <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Eigenschaft von einem 
   
  ![Diagramm: FillRule-Eigenschaftswert von EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
   
- **NonZero:**Diese Regel bestimmt, ob sich ein Punkt im Ausfüllbereich im Pfad befindet, indem ein unendlicher Strahl von diesem Punkt in eine beliebige Richtung gezeichnet wird und anschließend die Stellen überprüft werden, an denen ein Segment der Form den Strahl schneidet. Beginnen Sie mit dem Wert 0 (null), und addieren Sie für jede Stelle, an der ein Segment den Strahl von links nach rechts schneidet, den Wert 1. Wenn das Ergebnis nach dem Zählen der Überschneidungen 0 (null) ist, liegt der Punkt außerhalb des Pfads. Andernfalls liegt er innerhalb des Pfads.  
+ **NonZero:** Diese Regel bestimmt, ob sich ein Punkt im Ausfüllbereich im Pfad befindet, indem ein unendlicher Strahl von diesem Punkt in eine beliebige Richtung gezeichnet wird und anschließend die Stellen überprüft werden, an denen ein Segment der Form den Strahl schneidet. Beginnen Sie mit dem Wert 0 (null), und addieren Sie für jede Stelle, an der ein Segment den Strahl von links nach rechts schneidet, den Wert 1. Wenn das Ergebnis nach dem Zählen der Überschneidungen 0 (null) ist, liegt der Punkt außerhalb des Pfads. Andernfalls liegt er innerhalb des Pfads.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   

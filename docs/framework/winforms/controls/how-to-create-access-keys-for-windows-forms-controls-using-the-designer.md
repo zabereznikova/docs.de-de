@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente mithilfe des Designers"
-ms.custom: 
+title: 'Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente mithilfe des Designers'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], access keys
 - Button control [Windows Forms], access keys
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed3bf2aa1e6081ca018f1b4dec98e6304a1aa95c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 023973e7fa4ab1e8b802d8c7cd8abef8201ed720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente mithilfe des Designers
 Ein *Zugriffsschlüssel* ist ein unterstrichenes Zeichen im Text eines Menüs, Menüelements oder die Bezeichnung eines Steuerelements, z. B. eine Schaltfläche. Er ermöglicht es dem Benutzer eine Schaltfläche "auf", durch Drücken der ALT-Taste in Kombination mit den vordefinierten Zugriffsschlüssel. Angenommen, eine Schaltfläche eine Prozedur zum Drucken eines Formulars ausgeführt wird und daher seine `Text` Eigenschaft "Print", Hinzufügen von ein kaufmännisches und-Zeichen (&) vor dem Buchstaben "P" bewirkt, der Buchstabe "P dass" unterstrichen werden in den Text der Schaltfläche zur Laufzeit festgelegt ist. Der Benutzer kann die Schaltfläche mit den durch Drücken von ALT + P zugeordneten Befehl ausführen. Sie keine Zugriffstaste für ein Steuerelement, die Fokus erhalten kann.  

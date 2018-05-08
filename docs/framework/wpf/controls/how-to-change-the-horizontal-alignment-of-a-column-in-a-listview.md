@@ -1,28 +1,14 @@
 ---
-title: "Gewusst wie: Ändern der horizontalen Ausrichtung einer Spalte in einem ListView-Element"
-ms.custom: 
+title: 'Gewusst wie: Ändern der horizontalen Ausrichtung einer Spalte in einem ListView-Element'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7a465ae44d3b8a4c43e5e34eaeedcd739d328bff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31ee131e1cbd6e56ce5b0c29085c2d29e65dc40b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Gewusst wie: Ändern der horizontalen Ausrichtung einer Spalte in einem ListView-Element
 Standardmäßig wird der Inhalt jeder Spalte in einer <xref:System.Windows.Controls.ListViewItem> linksbündig ausgerichtet ist. Sie können die Ausrichtung der einzelnen Spalten ändern, durch die Bereitstellung einer <xref:System.Windows.DataTemplate> verwendet wird und die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> -Eigenschaft des Elements innerhalb der <xref:System.Windows.DataTemplate>. In diesem Thema wird gezeigt, wie eine <xref:System.Windows.Controls.ListView> richtet dessen Inhalt standardmäßig und so ändern Sie die Ausrichtung einer Spalte in einer <xref:System.Windows.Controls.ListView>.  

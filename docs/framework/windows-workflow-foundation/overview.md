@@ -1,24 +1,12 @@
 ---
 title: Übersicht über Windows-Workflow
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 568797259087129ab4fc87a1f3523b0cce88eb4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-overview"></a>Übersicht über Windows-Workflow
 Ein Workflow ist ein Satz von elementaren Einheiten, den sogenannten *Aktivitäten* als, die einen reelle Prozess beschreibendes Modell gespeichert sind. Mit Workflows können die Reihenfolge der Ausführung sowie abhängige Beziehungen zwischen kurz- und langfristiger Arbeit beschrieben werden. Diese Arbeit durchläuft das Modell vom Anfang bis zum Ende, und Aktivitäten werden unter Umständen von Personen oder Systemfunktionen ausgeführt.  
@@ -34,7 +22,7 @@ Ein Workflow ist ein Satz von elementaren Einheiten, den sogenannten *Aktivität
   
  Jede dieser Klassen umschließt die Kernaktivitätslaufzeit, die als <xref:System.Activities.ActivityInstance> dargestellt wird und für die Aktivitätsausführung zuständig ist. Es kann mehrere <xref:System.Activities.ActivityInstance>-Objekte innerhalb einer Anwendungsdomäne geben, die gleichzeitig ausgeführt werden.  
   
- Jede der vorausgehenden drei Hostinteraktionsobjekte wird aus einer Aktivitätsstruktur erstellt, die als Workflowprogramm bezeichnet wird. Unter Verwendung dieser Typen oder eines benutzerdefinierten Hosts, der <xref:System.Activities.ActivityInstance> umschließt, können Workflows in einem beliebigen Windows-Prozess einschließlich Konsolenanwendungen, formularbasierten Anwendungen, Windows-Diensten, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Websites und [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Diensten ausgeführt werden.  
+ Jede der vorausgehenden drei Hostinteraktionsobjekte wird aus einer Aktivitätsstruktur erstellt, die als Workflowprogramm bezeichnet wird. Mithilfe dieser Typen oder einen benutzerdefinierten Host, der umschließt <xref:System.Activities.ActivityInstance>, Workflows ausgeführt werden können, in jedem Windows-Prozess einschließlich konsolenanwendungen, formularbasierten Anwendungen, Windows-Diensten, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Websites und Windows Communication Foundation ( WCF)-Dienste.  
   
  ![Workflowkomponenten im Hostprozess](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Workflowkomponenten im Hostprozess  

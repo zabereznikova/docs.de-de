@@ -2,11 +2,11 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: abc08f81ac05aa42ff7247edf662f8dd4482fd4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 3a5a0844da401607b2049069e7195fa996c62fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Definiert ein Bindungselement, das verwendet wird, zum Konfigurieren von Endpunkten für Windows Communication Foundation (WCF)-Webdienste, die auf HTTP-Anforderungen und nicht durch SOAP-Nachrichten reagieren.  
@@ -86,9 +86,9 @@ Definiert ein Bindungselement, das verwendet wird, zum Konfigurieren von Endpunk
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Webprogrammiermodell ermöglicht es Entwicklern, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Webdienste über HTTP-Anforderungen verfügbar zu machen, die POX-Messaging anstatt von SOAP-basiertem Messaging verwenden. Für Clients mit einem Dienst über HTTP-Anforderungen kommunizieren können, muss ein Endpunkt des Diensts mit konfiguriert werden die [ \<WebHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) , besitzt die \<WebHttpBehavior > angefügt ist.  
+ Der WCF-Webprogrammiermodell ermöglicht Entwicklern von WCF-Webdiensten über HTTP-Anforderungen verfügbar zu machen, die "plain old XML" verwenden (POX) Stil messaging anstatt von SOAP-basiertem messaging. Für Clients mit einem Dienst über HTTP-Anforderungen kommunizieren können, muss ein Endpunkt des Diensts mit konfiguriert werden die [ \<WebHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) , besitzt die \<WebHttpBehavior > angefügt ist.  
   
- Die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Unterstützung für Syndication und ASP.AJAX-Integration ist über dem Webprogrammiermodell implementiert. Weitere Informationen über das Modell finden Sie unter [WCF Web-HTTP-Programmiermodell](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
+ In WCF für Syndication und ASP zu unterstützen. AJAX-Integration werden beide baut auf den Webprogrammiermodells. Weitere Informationen über das Modell finden Sie unter [WCF Web-HTTP-Programmiermodell](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.WebHttpBinding>  

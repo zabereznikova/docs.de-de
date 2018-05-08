@@ -1,29 +1,17 @@
 ---
 title: 'Gewusst wie: Wiedergeben von Medien mit Animationen'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - multimedia [WPF], playback with animations
 - playback of media [WPF], with animations
 - animation [WPF], media playback with
 - media [WPF], playback with animations
 ms.assetid: 8982b7b7-1c6c-4b24-8801-b328862975f5
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 44ebb89c25fc37292f82533c929aae44854db5c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 21c9b35828dca03c05def11cff22f1f1e33d45cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-play-media-with-animations"></a>Gewusst wie: Wiedergeben von Medien mit Animationen
 In diesem Beispiel wird gezeigt, wie für die Wiedergabe von Medien und Animationen gleichzeitig mithilfe der <xref:System.Windows.Media.MediaTimeline> und <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> Klassen in der gleichen <xref:System.Windows.Media.Animation.Storyboard>.  

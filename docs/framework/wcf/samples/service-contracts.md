@@ -1,27 +1,15 @@
 ---
-title: "Dienstverträge"
-ms.custom: 
+title: Dienstverträge
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9e34b694-aa56-45b3-8dd1-2616705b4fc5
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3ed2fa4439edd157fa7f009b63f20b21e2bb6fc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3d6172b4f7976a93898a29058ba0445616dbd8f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-contracts"></a>Dienstverträge
-Dieser Abschnitt enthält Beispiele, in denen Dienstverträge in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dargestellt werden.  
+Dieser Abschnitt enthält Beispiele, in denen Dienstverträge in der Windows Communication Foundation (WCF) veranschaulicht.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Duplex](../../../../docs/framework/wcf/samples/duplex.md)  
@@ -39,7 +27,7 @@ Dieser Abschnitt enthält Beispiele, in denen Dienstverträge in [!INCLUDE[indig
  [Stream](../../../../docs/framework/wcf/samples/stream.md)  
  Veranschaulicht die Verwendung des Kommunikationsstreams im Übertragungsmodus.  
   
- [Asynchronous](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)  
+ [Asynchrone](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)  
  Veranschaulicht, wie ein Client auf einen Dienstvorgang asynchron zugreifen und wie ein Dienst seine Vorgänge asynchron implementieren kann.  
   
  [XmlSerializer-Fehler](../../../../docs/framework/wcf/samples/xmlserializer-faults.md)  

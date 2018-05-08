@@ -1,32 +1,18 @@
 ---
 title: 'Gewusst wie: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8310e7c465d0e3494482b6a38a7b2a67b67ae842
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Gewusst wie: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung
-Wenn Sie mithilfe von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]einen sicheren Dienst oder Client entwickeln, müssen Sie häufig ein X.509-Zertifikat angeben, das für die Anmeldeinformationen verwendet wird. Das Zertifikat ist normalerweise Teil einer Zertifikatskette mit einer Stammstelle, die im Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen des Computers enthalten ist. Wenn Sie über eine Zertifikatskette verfügen, können Sie einen Bereich mit Zertifikatsätzen angeben, wobei die Stammzertifizierungsstelle normalerweise von Ihrer Organisation bzw. Ihrem Geschäftsbereich stammt. Um dies zur Entwicklungszeit zu emulieren, können Sie zwei Zertifikate erstellen, um die Sicherheitsanforderungen zu erfüllen. Beim ersten Zertifikat handelt es sich um ein selbstsigniertes Zertifikat, das in den Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen eingefügt wird. Das zweite Zertifikat wird aus dem ersten Zertifikat erstellt und entweder in den persönlichen Speicher unter "Lokaler Computer" oder in den persönlichen Speicher unter "Aktueller Benutzer" eingefügt. In diesem Thema sind die Schritte zur Erstellung dieser beiden Zertifikate beschrieben. Dabei wird das [Certificate Creation-Tool (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185)verwendet, das im [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -SDK enthalten ist.  
+Wenn Sie einen sicheren Dienst oder Client mithilfe von Windows Communication Foundation (WCF) zu entwickeln, ist es oft erforderlich, geben Sie ein x. 509-Zertifikat als Anmeldeinformationen verwendet werden soll. Das Zertifikat ist normalerweise Teil einer Zertifikatskette mit einer Stammstelle, die im Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen des Computers enthalten ist. Wenn Sie über eine Zertifikatskette verfügen, können Sie einen Bereich mit Zertifikatsätzen angeben, wobei die Stammzertifizierungsstelle normalerweise von Ihrer Organisation bzw. Ihrem Geschäftsbereich stammt. Um dies zur Entwicklungszeit zu emulieren, können Sie zwei Zertifikate erstellen, um die Sicherheitsanforderungen zu erfüllen. Beim ersten Zertifikat handelt es sich um ein selbstsigniertes Zertifikat, das in den Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen eingefügt wird. Das zweite Zertifikat wird aus dem ersten Zertifikat erstellt und entweder in den persönlichen Speicher unter "Lokaler Computer" oder in den persönlichen Speicher unter "Aktueller Benutzer" eingefügt. In diesem Thema sind die Schritte zur Erstellung dieser beiden Zertifikate beschrieben. Dabei wird das [Certificate Creation-Tool (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185)verwendet, das im [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -SDK enthalten ist.  
   
 > [!IMPORTANT]
 >  Die Zertifikate, die das Certificate Creation-Tool generiert, werden nur zu Testzwecken bereitgestellt. Beim Bereitstellen eines Diensts oder Clients sollten Sie ein geeignetes Zertifikat einer Zertifizierungsstelle verwenden. Dies kann entweder von einem [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] -Zertifikatsserver Ihrer Organisation oder von einem Drittanbieter stammen.  

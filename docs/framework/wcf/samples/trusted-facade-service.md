@@ -1,27 +1,15 @@
 ---
-title: "Vertrauenswürdiger Fassadendienst"
-ms.custom: 
+title: Vertrauenswürdiger Fassadendienst
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0d1d0473a821510ee70e386058a2b3249221dd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-facade-service"></a>Vertrauenswürdiger Fassadendienst
-Dieses Szenariobeispiel veranschaulicht, wie die Identitätsinformationen von Aufrufern mithilfe der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Sicherheitsinfrastruktur von einem Dienst zu einem anderen weitergeleitet werden.  
+Dieses Szenariobeispiel veranschaulicht, wie Informationen Identität des Aufrufers von einem Dienst an einen anderen mithilfe von Windows Communication Foundation (WCF) ausgetauscht Sicherheitstokendienst-Infrastruktur.  
   
  Ein allgemeines Entwurfsmuster besteht darin, dem öffentlichen Netzwerk die Funktionalität, die von einem Dienst bereitgestellt wird, mithilfe eines Fassadendiensts verfügbar zu machen. Der Fassadendienst befindet sich üblicherweise im Perimeternetzwerk (auch bekannt als DMZ (Demilitarized Zone; deutsch: entmilitarisierte Zone) und geschirmtes Unternetz) und kommuniziert mit einem Back-End-Dienst, der die Geschäftslogik implementiert und Zugriff auf interne Daten hat. Der Kommunikationskanal zwischen dem Fassadendienst und dem Back-End-Dienst führt durch eine Firewall und wird üblicherweise auf einen Zweck begrenzt.  
   
@@ -298,7 +286,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
   

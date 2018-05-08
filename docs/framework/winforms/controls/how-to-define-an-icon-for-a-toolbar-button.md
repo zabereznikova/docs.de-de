@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Definieren eines Symbols für eine Symbolleisten-Schaltfläche"
-ms.custom: 
+title: 'Gewusst wie: Definieren eines Symbols für eine Symbolleisten-Schaltfläche'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,22 +13,17 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f7550fdc76cb3a025d8233ec538d38f23f9226a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c396f861307d1c8e722beaf38c6cb914d0630c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Gewusst wie: Definieren eines Symbols für eine Symbolleisten-Schaltfläche
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
- <xref:System.Windows.Forms.ToolBar>Schaltflächen können Symbole darin enthaltene zur leichteren Identifizierung von Benutzern anzuzeigen. Dies erfolgt durch Hinzufügen von Bildern, die [ImageList-Komponente](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) -Komponente die <xref:System.Windows.Forms.ImageList> Komponente mit der <xref:System.Windows.Forms.ToolBar> Steuerelement.  
+ <xref:System.Windows.Forms.ToolBar> Schaltflächen können Symbole darin enthaltene zur leichteren Identifizierung von Benutzern anzuzeigen. Dies erfolgt durch Hinzufügen von Bildern, die [ImageList-Komponente](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) -Komponente die <xref:System.Windows.Forms.ImageList> Komponente mit der <xref:System.Windows.Forms.ToolBar> Steuerelement.  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>So legen Sie ein Symbol für eine Symbolleisten-Schaltfläche programmgesteuert fest  
   

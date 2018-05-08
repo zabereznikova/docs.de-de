@@ -1,14 +1,6 @@
 ---
 title: Sammlungstypen in Datenverträgen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Sammlungstypen in Datenverträgen
 Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]können solche Listen mithilfe von Arrays oder einer Vielzahl anderer Typen (generische Liste, generische <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>oder <xref:System.Collections.ArrayList>) dargestellt werden. Eine Sammlung kann z. B. eine Liste von Adressen für einen bestimmten Kunden enthalten. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Listensammlungen*bezeichnet.  
@@ -86,7 +72,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
   
  Wenn der deklarierte Typ eine Schnittstelle ist, kann der derzeit verwendete Instanzentyp während der Serialisierung ein beliebiger Typ sein, der diese Schnittstelle implementiert. Die oben erläuterten Einschränkungen (das Verfügen über einen Standardkonstruktor und eine `Add`-Methode) gelten nicht. Beispielsweise können Sie Adressen in Customer2 auf eine Instanz einer generischen <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> von "Adress" einstellen, auch wenn es Ihnen nicht möglich ist, einen Datenmember des Typs "Generische <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>" direkt zu deklarieren.  
   
- Wenn der deklarierte Typ eine Schnittstelle ist, wählt das Serialisierungsmodul während der Deserialisierung einen Typ, der die deklarierte Schnittstelle implementiert, und der Typ wird instanziiert. Der Mechanismus der bekannten Typen (wie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)beschrieben) ist hier nicht wirksam; die Typwahl ist in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Wenn der deklarierte Typ eine Schnittstelle ist, wählt das Serialisierungsmodul während der Deserialisierung einen Typ, der die deklarierte Schnittstelle implementiert, und der Typ wird instanziiert. Mechanismus der bekannten Typen (beschrieben [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) hat keine Auswirkungen hier; die Auswahl des Typs in WCF integriert ist.  
   
 ## <a name="customizing-collection-types"></a>Anpassen von Sammlungstypen  
  Sie können Sammlungstypen anpassen, indem Sie das <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut verwenden, das auf verschiedene Weise genutzt werden kann.  
@@ -235,7 +221,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
 ## <a name="collections-and-schema"></a>Sammlungen und Schema  
  Alle äquivalenten Sammlungen verfügen über die gleiche Darstellung im XSD-Schema (XML Schema Definition Language). Daher erhalten Sie im generierten Clientcode normalerweise nicht den gleichen Sammlungstyp wie auf dem Server. Beispielsweise kann der Server einen Datenvertrag mit einer generischen <xref:System.Collections.Generic.List%601> für den Datenmember "Integer" verwenden, im generierten Clientcode kann der gleiche Datenmember jedoch ein Array von ganzen Zahlen werden.  
   
- Wörterbuchsammlungen sind mit einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-spezifischen Schemaanmerkung gekennzeichnet, die die Sammlungen als Wörterbücher ausweist; andernfalls könnte man sie von Listen, die Einträge mit einem Schlüssel und einem Wert enthalten, nicht unterscheiden. Eine genaue Beschreibung, wie Sammlungen in einem Datenvertragsschema dargestellt werden, finden Sie unter [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Wörterbuchsammlungen sind mit einem WCF-spezifische schemaanmerkung, die darauf hinweisen, dass sie Wörterbücher sind markiert. Andernfalls sind sie nicht von einfachen Listen, die Einträge mit einem Schlüssel und einen Wert enthalten. Eine genaue Beschreibung, wie Sammlungen in einem Datenvertragsschema dargestellt werden, finden Sie unter [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Standardmäßig werden Typen nicht für nicht benutzerdefinierte Sammlungen in importiertem Code generiert. Datenmember von Listensammlungstypen werden als Arrays importiert, und Datenmember von Wörterbuchsammlungstypen werden als generisches Wörterbuch importiert.  
   

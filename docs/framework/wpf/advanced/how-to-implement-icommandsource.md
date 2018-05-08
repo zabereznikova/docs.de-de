@@ -1,39 +1,25 @@
 ---
 title: 'Gewusst wie: Implementieren von "ICommandSource"'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9308bfbbb7fff86ca5e93c1155cc29e4ee0d05f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-icommandsource"></a>Gewusst wie: Implementieren von "ICommandSource"
-In diesem Beispiel wird gezeigt, wie durch die Implementierung eine Befehlsquelle erstellen <xref:System.Windows.Input.ICommandSource>.  Eine Befehlsquelle ist ein Objekt, das zum Aufrufen eines Befehls bekannt ist.  Die <xref:System.Windows.Input.ICommandSource> Schnittstelle macht drei Member: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, und <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A>ist der Befehl, der aufgerufen wird. Die <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> ein benutzerdefinierten Datentyp auf, der von der Befehlsquelle an die Methode übergeben wird, die den Befehl behandelt wird. Die <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ist das Objekt, das der Befehl ausgeführt wird.  
+In diesem Beispiel wird gezeigt, wie durch die Implementierung eine Befehlsquelle erstellen <xref:System.Windows.Input.ICommandSource>.  Eine Befehlsquelle ist ein Objekt, das zum Aufrufen eines Befehls bekannt ist.  Die <xref:System.Windows.Input.ICommandSource> Schnittstelle macht drei Member: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, und <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> ist der Befehl, der aufgerufen wird. Die <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> ein benutzerdefinierten Datentyp auf, der von der Befehlsquelle an die Methode übergeben wird, die den Befehl behandelt wird. Die <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ist das Objekt, das der Befehl ausgeführt wird.  
   
  In diesem Beispiel wird eine Klasse erstellt, die die <xref:System.Windows.Controls.Slider> Steuerelement und implementiert <xref:System.Windows.Input.ICommandSource>.  
   
 ## <a name="example"></a>Beispiel  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bietet eine Reihe von Klassen, die implementieren <xref:System.Windows.Input.ICommandSource>, wie z. B. <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, und <xref:System.Windows.Controls.ListBoxItem>.  Eine Befehlsquelle definiert, wie sie einen Befehl aufgerufen wird.   <xref:System.Windows.Controls.Button>und <xref:System.Windows.Controls.MenuItem> rufen Sie einen Befehl aus, wenn darauf geklickt wird.  Ein <xref:System.Windows.Controls.ListBoxItem> Ruft einen Befehl aus, wenn es doppelt geklickt wird. Diese Klassen werden nur einen Befehl Datenquelle, wenn ihre <xref:System.Windows.Input.ICommandSource.Command%2A> festgelegt wird.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine Reihe von Klassen, die implementieren <xref:System.Windows.Input.ICommandSource>, wie z. B. <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, und <xref:System.Windows.Controls.ListBoxItem>.  Eine Befehlsquelle definiert, wie sie einen Befehl aufgerufen wird.   <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.MenuItem> rufen Sie einen Befehl aus, wenn darauf geklickt wird.  Ein <xref:System.Windows.Controls.ListBoxItem> Ruft einen Befehl aus, wenn es doppelt geklickt wird. Diese Klassen werden nur einen Befehl Datenquelle, wenn ihre <xref:System.Windows.Input.ICommandSource.Command%2A> festgelegt wird.  
   
  In diesem Beispiel, wenn der Schieberegler verschoben wird, wird der Befehl aufgerufen oder genauer gesagt, wenn die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> -Eigenschaft geändert wird.  
   

@@ -1,14 +1,6 @@
 ---
 title: ICLRPolicyManager::SetActionOnTimeout-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetActionOnTimeout
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 38439fa1-2b99-4fa8-a6ec-08afc0f83b9c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: db0918272a315e78191624cbe6420863285620c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc1d16a2d57fea27c1c26fc55fbbfa9b74c25495
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>ICLRPolicyManager::SetActionOnTimeout-Methode
 Gibt die Richtlinienaktion, die die common Language Runtime (CLR) ausführen sollten, wenn der angegebene Vorgang ein Timeout auftritt.  
@@ -66,7 +54,7 @@ HRESULT SetActionOnTimeout (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnTimeout`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetActionOnTimeout` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die CLR wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -77,9 +65,9 @@ HRESULT SetActionOnTimeout (
 ## <a name="remarks"></a>Hinweise  
  Der Timeoutwert kann sein, das von der CLR festgelegte Standardtimeout oder eines Werts durch den Host in einem Aufruf angegeben die [ICLRPolicyManager:: SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) Methode.  
   
- Nicht alle Werte für Aktivierungsrichtlinien Aktion können als das Timeoutverhalten für CLR-Vorgänge angegeben werden. `SetActionOnTimeout`wird normalerweise verwendet, nur für das Verhalten zu eskalieren. Ein Host kann z. B. angeben, die Threadabbrüche in grobe aktiviert werden thread-Abbrüche, jedoch nicht das Gegenteil. Die folgende Tabelle beschreibt die gültigen `action` Werte für gültige `operation` Werte.  
+ Nicht alle Werte für Aktivierungsrichtlinien Aktion können als das Timeoutverhalten für CLR-Vorgänge angegeben werden. `SetActionOnTimeout` wird normalerweise verwendet, nur für das Verhalten zu eskalieren. Ein Host kann z. B. angeben, die Threadabbrüche in grobe aktiviert werden thread-Abbrüche, jedoch nicht das Gegenteil. Die folgende Tabelle beschreibt die gültigen `action` Werte für gültige `operation` Werte.  
   
-|Wert für`operation`|Gültige Werte für`action`|  
+|Wert für `operation`|Gültige Werte für `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_AppDomainUnload|-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
@@ -92,7 +80,7 @@ HRESULT SetActionOnTimeout (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [EClrOperation-Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

@@ -1,31 +1,17 @@
 ---
 title: Dienstidentität und Authentifizierung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5bd550b7408e9db00daf7793cd0a7f1261e21ccf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 21184098f90be3b64cfccd5ab98a1824cee50e48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-identity-and-authentication"></a>Dienstidentität und Authentifizierung
 Eines Diensts *Endpunktidentität*ist ein Wert, der vom Dienst Web Services Description Language (WSDL) generiert. Dieser an jeden Client weitergegebene Wert wird zum Authentifizieren des Diensts verwendet. Nachdem der Client eine Kommunikation mit einem Endpunkt initiiert und der Dienst sich gegenüber dem Client authentifiziert hat, vergleicht der Client den Wert der Endpunktidentität mit dem tatsächlichen Wert, den der Vorgang der Authentifizierung des Endpunkts zurückgegeben hat. Stimmen sie überein, kann der Client sicher sein, dass er Kontakt zu dem erwarteten Dienstendpunkt hergestellt hat. Diese Funktion als Schutz gegen *Phishing* indem verhindert, dass einen Client an einen von einem böswilligen Dienst gehosteten Endpunkt umgeleitet wird.  
@@ -35,7 +21,7 @@ Eines Diensts *Endpunktidentität*ist ein Wert, der vom Dienst Web Services Desc
 > [!NOTE]
 >  Wenn Sie NT&#160;LanMan (NTLM) für die Authentifizierung verwenden, wird die Dienstidentität nicht überprüft, weil unter NTLM der Client den Server nicht authentifizieren kann. NTLM wird verwendet, wenn Computer Teil einer Windows-Arbeitsgruppe sind, oder sie eine ältere Version von Windows ausführen, die die Kerberos-Authentifizierung nicht unterstützt.  
   
- Wenn der Client einen sicheren Kanal initiiert, um darüber eine Nachricht an einen Dienst zu senden, authentifiziert die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Infrastruktur den Dienst und sendet die Nachricht nur dann, wenn die Dienstidentität der Identität entspricht, die in der vom Client verwendeten Endpunktadresse angegeben ist.  
+ Wenn der Client einen sicheren Kanal zum Senden einer Nachricht an einen Dienst über diese initiiert, die Windows Communication Foundation (WCF)-Infrastruktur authentifiziert den Dienst und sendet die Nachricht nur, wenn die Dienstidentität der Identität, die im Endpunkt angegebenen übereinstimmt Adresse des Clients verwendet.  
   
  Der Vorgang der Identitätsverarbeitung umfasst die folgenden Phasen:  
   
@@ -45,7 +31,7 @@ Eines Diensts *Endpunktidentität*ist ein Wert, der vom Dienst Web Services Desc
   
  Die Identitätsverarbeitung auf dem Client entspricht der Clientauthentifizierung des Diensts. Ein sicherer Dienst führt so lange keinen Code aus, bis die Anmeldeinformationen des Clients authentifiziert wurden. Entsprechend sendet der Client so lange keine Nachrichten an den Dienst, bis die Anmeldeinformationen des Diensts auf der Grundlage dessen, was aus den Metadaten des Diensts im Voraus bekannt ist, authentifiziert wurden.  
   
- Die <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft der <xref:System.ServiceModel.EndpointAddress>-Klasse stellt die Identität des Diensts dar, der vom Client aufgerufen wird. Der Dienst veröffentlicht die <xref:System.ServiceModel.EndpointAddress.Identity%2A> in seinen Metadaten. Die Ausführung der Cliententwickler die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) für den Dienstendpunkt enthält die generierte Konfiguration den Wert des Diensts <xref:System.ServiceModel.EndpointAddress.Identity%2A> Eigenschaft. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur (sofern für Sicherheit konfiguriert) überprüft, ob der Dienst die angegebene Identität besitzt.  
+ Die <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft der <xref:System.ServiceModel.EndpointAddress>-Klasse stellt die Identität des Diensts dar, der vom Client aufgerufen wird. Der Dienst veröffentlicht die <xref:System.ServiceModel.EndpointAddress.Identity%2A> in seinen Metadaten. Die Ausführung der Cliententwickler die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) für den Dienstendpunkt enthält die generierte Konfiguration den Wert des Diensts <xref:System.ServiceModel.EndpointAddress.Identity%2A> Eigenschaft. Die WCF-Infrastruktur (sofern für Sicherheit konfiguriert) stellt sicher, dass der Dienst die angegebene Identität besitzt.  
   
 > [!IMPORTANT]
 >  Die Metadaten enthalten die erwartete Identität des Diensts. Daher wird empfohlen, die Metadaten des Diensts auf sichere Weise verfügbar zu machen, indem Sie beispielsweise einen HTTPS-Endpunkt für den Dienst erstellen. Weitere Informationen finden Sie unter [wie: sichere Metadatenendpunkte](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
@@ -75,7 +61,7 @@ Eines Diensts *Endpunktidentität*ist ein Wert, der vom Dienst Web Services Desc
   
   
 ## <a name="setting-identity-programmatically"></a>Programmgesteuertes Festlegen der Identität  
- Der Dienst muss nicht explizit eine Identität angeben, da sie von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatisch bestimmt wird. Allerdings können Sie mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nach Bedarf eine Identität für einen Endpunkt angeben. Mit dem folgenden Code wird ein neuer Dienstendpunkt mit einer bestimmten DNS-Identität hinzugefügt.  
+ Der Dienst verfügt nicht explizit eine Identität angeben, da WCF automatisch bestimmt. WCF ermöglicht Ihnen die Angabe eine Identität für einen Endpunkt jedoch bei Bedarf. Mit dem folgenden Code wird ein neuer Dienstendpunkt mit einer bestimmten DNS-Identität hinzugefügt.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
@@ -99,13 +85,13 @@ Eines Diensts *Endpunktidentität*ist ein Wert, der vom Dienst Web Services Desc
   
  Ist der Kanal für die Authentifizierung mithilfe von Secure Sockets Layer (SSL) auf Nachrichten- oder auf Transportebene mit X.509-Zertifikaten für die Authentifizierung konfiguriert, sind die folgenden Identitätswerte gültig:  
   
--   DNS [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt sicher, dass das während des SSL-Handshakes bereitgestellte Zertifikat ein DNS- oder `CommonName` (CN)-Attribut enthält, dessen Wert gleich dem Wert ist, der in der DNS-Identität des Clients angegeben ist. Beachten Sie, dass diese Prüfungen zusätzlich zur Bestimmung der Gültigkeit des Serverzertifikats ausgeführt werden. Standardmäßig überprüft [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ob das Serverzertifikat von einer vertrauenswürdigen Stammzertifizierungsstelle ausgegeben wird.  
+-   DNS WCF wird sichergestellt, dass ein DNS-Server, das während des SSL-Handshakes bereitgestellte Zertifikat enthält oder `CommonName` (CN)-Attribut gleich dem Wert in der DNS-Identität auf dem Client angegeben. Beachten Sie, dass diese Prüfungen zusätzlich zur Bestimmung der Gültigkeit des Serverzertifikats ausgeführt werden. Standardmäßig überprüft WCF an, dass das Serverzertifikat von einer vertrauenswürdigen Stammzertifizierungsstelle ausgestellt ist.  
   
--   Zertifikat. Während des SSL-Handshakes stellt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicher, dass der Remoteendpunkt exakt den in der Identität angegebenen Wert bereitstellt.  
+-   Zertifikat. Während des SSL-Handshakes wird sichergestellt, dass WCF, dass der Remoteendpunkt den genauen Zertifikatwert in der Identität angegebenen bereitstellt.  
   
 -   Zertifikatsverweis. Ebenso wie Zertifikat.  
   
--   RSA. Während des SSL-Handshakes stellt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicher, dass der Remoteendpunkt exakt den in der Identität angegebenen RSA-Schlüssel bereitstellt.  
+-   RSA. Während des SSL-Handshakes wird sichergestellt, dass WCF, dass der Remoteendpunkt die genaue in der Identität angegebenen RSA-Schlüssel bereitstellt.  
   
  Authentifiziert der Dienst mithilfe von SSL auf Nachrichten- oder auf Transportebene mit Windows-Anmeldeinformationen und handelt er die Anmeldeinformationen aus, sind die folgenden Identitätswerte gültig:  
   

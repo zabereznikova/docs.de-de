@@ -1,28 +1,16 @@
 ---
-title: "Übersicht über Keyframe-Animationen"
-ms.custom: 
+title: Übersicht über Keyframe-Animationen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-frame-animations-overview"></a>Übersicht über Keyframe-Animationen
 Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Animationen können Sie bei Animationen mehr als zwei Zielwerte animieren und die Interpolationsmethode einer Animation steuern.  
@@ -290,7 +278,7 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
   
 6.  Beheben Sie die <xref:System.Windows.Media.Animation.KeyTime> Werte von Keyframes mit nicht Key Zeiten angegeben, mit der Keyframes am nächsten liegt, sie deklariert, die behoben wurden <xref:System.Windows.Media.Animation.KeyTime> Werte.  
   
-7.  Beheben Sie die verbleibenden <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Werte. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime> verwenden die <xref:System.Windows.Media.Animation.KeyTime> Werte der benachbarten Keyframes, um ihre aufgelöste Zeit zu bestimmen.  Das Ziel ist es, sicherzustellen, dass die Geschwindigkeit der Animation um die aufgelöste Zeit dieses Keyframes herum konstant ist.  
+7.  Beheben Sie die verbleibenden <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Werte. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Verwenden Sie die <xref:System.Windows.Media.Animation.KeyTime> Werte der benachbarten Keyframes, um ihre aufgelöste Zeit zu bestimmen.  Das Ziel ist es, sicherzustellen, dass die Geschwindigkeit der Animation um die aufgelöste Zeit dieses Keyframes herum konstant ist.  
   
 8.  Sortieren Sie Keyframes in der Reihenfolge der aufgelösten Zeit (Primärschlüssel), und die Reihenfolge der Deklaration (Sekundärschlüssel), d. h., verwenden Sie eine stabile Sortierung basierend auf den aufgelösten Keyframe <xref:System.Windows.Media.Animation.KeyTime> Werte.  
   

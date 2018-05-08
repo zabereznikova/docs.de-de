@@ -1,28 +1,18 @@
 ---
 title: CLR-Hostingschnittstellen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - interfaces [.NET Framework hosting], version 2.0
 - hosting interfaces [.NET Framework], version 2.0
 - .NET Framework 2.0, hosting interfaces
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fd954419f46313a239ddf5a309a646e3d2f1b9bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-hosting-interfaces"></a>CLR-Hostingschnittstellen
 Dieser Abschnitt beschreibt die Schnittstellen, die nicht verwaltete Hosts können Sie die common Language Runtime (CLR) in ihre Anwendungen integrieren. Die Informationen bezieht sich auf die Version von .NET Framework 2.0 und höheren Versionen. Diese Schnittstellen aktivieren Sie den Host zu steuern, zahlreiche weitere Aspekte der Laufzeit, als dies in den Versionen 1.0 und 1.1 möglich war, und geben eine engere Integration zwischen der CLR und Ausführungsmodell des Hosts.  

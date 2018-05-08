@@ -1,28 +1,14 @@
 ---
 title: Konfigurieren von Diensten
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 857ec77e54d6a55bde1a94fd9fd5758ef7a24309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3aeadafd54bbd8b57a3e8c781e0cced9e7e632
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-services"></a>Konfigurieren von Diensten
 Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie den Dienst konfigurieren. An diesem Punkt nehmen Sie die Definition und Anpassung vor, wie der Dienst für Clients offengelegt werden soll. Dazu gehört das Angeben der Adresse, unter der der Dienst zugänglich ist, die Transportart und Nachrichtenverschlüsselung, die der Dienst zum Senden und Empfangen von Nachrichten verwendet, sowie der erforderliche Sicherheitstyp.  
@@ -34,7 +20,7 @@ Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie d
  Ab [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]stellt [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ein neues Standardkonfigurationsmodell bereit, das die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Konfigurationsanforderungen vereinfacht. Wenn Sie keine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime den Dienst automatisch mit Standardendpunkten, -bindungen und -verhalten.  
   
  [Konfigurieren von Diensten mit Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Sie können einen [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienst mithilfe der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Konfigurationstechnologie konfigurieren. Am häufigsten werden XML-Elemente der Web.config-Datei für eine Internetinformationsdienste (IIS)-Website hinzugefügt, die einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen Adressen, die für die Kommunikation mit dem Dienst verwendet werden) für einzelne Computer.  
+ Ein Windows Communication Foundation (WCF)-Dienst ist konfigurierbar mithilfe der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Konfiguration Technologie. Am häufigsten werden XML-Elemente der Web.config-Datei für eine Internetinformationsdienste (IIS)-Website hinzugefügt, die einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen Adressen, die für die Kommunikation mit dem Dienst verwendet werden) für einzelne Computer.  
   
  [Bindungen](../../../docs/framework/wcf/bindings.md)  
  Zusätzlich enthält [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mehrere vom System bereitgestellte allgemeine Konfigurationen in der Form von Bindungen, mit deren Hilfe Sie schnell die grundlegenden Features für die Kommunikation zwischen Client und Dienst auswählen können, beispielsweise verwendete Transporte, Sicherheit und Nachrichtenverschlüsselungen.  
@@ -48,7 +34,7 @@ Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie d
  [Erstellen von interoperablen WS-I Basic Profile 1.1-Diensten](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Die Anforderungen zum Verwenden eines Dienstes, der über die Interoperabilität mit Diensten und Clients auf beliebigen anderen Plattformen oder Betriebssystemen verfügt, sind in der WS-I Basic Profile 1.1-Spezifikation beschrieben.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  

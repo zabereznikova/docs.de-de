@@ -1,14 +1,6 @@
 ---
 title: ISymUnmanagedWriter::OpenScope-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.OpenScope
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: dbea0644-3873-4329-90b8-624163e87467
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 99919a1d932bca1bb8677fd71c447c7098c7d44c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6aad2df19ec5563d8d48b0c286ab888a727c21ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope-Methode
 Öffnet einen neuen lexikalischen Gültigkeitsbereich in der aktuellen Methode. Der Bereich wird der neue aktuelle Bereich und wird auf einen Stapel von Bereichen abgelegt. Bereiche müssen eine Hierarchie zu bilden. Gleichgeordnete Elemente dürfen sich nicht überlappen.  
@@ -57,7 +45,7 @@ HRESULT OpenScope(
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
   
 ## <a name="remarks"></a>Hinweise  
- `ISymUnmanagedWriter::OpenScope`Gibt einen nicht transparenter Bezeichner, die mit verwendet werden kann [ISymUnmanagedWriter:: SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) zum Definieren eines Bereichs den Anfangs- und Endoffset zu einem späteren Zeitpunkt. In diesem Fall das an die Offsets `ISymUnmanagedWriter::OpenScope` und [ISymUnmanagedWriter:: CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) werden ignoriert. Bereichsbezeichnern sind nur in der aktuellen Methode gültig.  
+ `ISymUnmanagedWriter::OpenScope` Gibt einen nicht transparenter Bezeichner, die mit verwendet werden kann [ISymUnmanagedWriter:: SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) zum Definieren eines Bereichs den Anfangs- und Endoffset zu einem späteren Zeitpunkt. In diesem Fall das an die Offsets `ISymUnmanagedWriter::OpenScope` und [ISymUnmanagedWriter:: CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) werden ignoriert. Bereichsbezeichnern sind nur in der aktuellen Methode gültig.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

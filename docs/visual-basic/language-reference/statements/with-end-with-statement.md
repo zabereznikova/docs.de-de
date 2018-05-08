@@ -1,12 +1,6 @@
 ---
 title: With...End With-Anweisung (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.With
 helpviewer_keywords:
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa1f416e1bfdf6cdb51b098c0e2bd5e9912cb309
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c50d03454860979e3475cb381fefc2acc07cece
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With-Anweisung (Visual Basic)
 Führt eine Reihe von Anweisungen aus, die wiederholt auf ein einzelnes Objekt oder eine einzelne Struktur verweisen, sodass die Anweisungen mittels vereinfachter Syntax auf Member des Objekts oder der Struktur zugreifen können.  Wenn Sie eine Struktur verwenden, können Sie nur die Werte von Membern lesen oder Methoden aufrufen; Sie erhalten eine Fehlermeldung, wenn Sie versuchen, Werte zu Membern einer Struktur zuzuweisen, die in einer `With...End With`-Anweisung verwendet wird.  

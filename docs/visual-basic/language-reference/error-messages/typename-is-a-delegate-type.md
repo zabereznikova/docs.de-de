@@ -1,28 +1,19 @@
 ---
-title: '&#39; &lt;Typename&gt;&#39; ein Delegattyp'
+title: '&#39;&lt;TypeName&gt; &#39; ein Delegattyp'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc32008
 - vbc32008
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9428f0ac321b90e36d4d987381ed69b6c968894c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c6d4244ce72dedee50b65ba19978149ce86b9e87
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39lttypenamegt39-is-a-delegate-type"></a>&#39; &lt;Typename&gt;&#39; ein Delegattyp
+# <a name="39lttypenamegt39-is-a-delegate-type"></a>&#39;&lt;TypeName&gt; &#39; ein Delegattyp
 "\<Typname >' ein Delegattyp ist. Erstellen eines Delegaten kann nur einen einzelnen AddressOf-Ausdruck als Argument übergeben. AddressOf-Ausdruck kann häufig statt eine Delegatkonstruktion verwendet werden.  
   
  Ein `New` -Klausel erstellt eine Instanz einer Delegatklasse liefert eine ungültige Argumentliste an den Delegatkonstruktor.  

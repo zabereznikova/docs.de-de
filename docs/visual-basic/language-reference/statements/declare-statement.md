@@ -1,11 +1,6 @@
 ---
 title: Declare Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Declare Statement
 Deklariert einen Verweis auf eine Prozedur in einer externen Datei implementiert.  
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **Zeichensätze.** Sie können angeben, `charsetmodifier` wie Visual Basic Zeichenfolgen marshallen soll, wenn sie die externe Prozedur aufruft. Die `Ansi` Modifizierer marshallt Visual Basic alle Zeichenfolgen in ANSI-Werte und die `Unicode` Modifizierer leitet er alle Zeichenfolgen in Unicode-Werte. Die `Auto` Modifizierer leitet Visual Basic zum Marshallen von Zeichenfolgen gemäß der .NET Framework-Regeln basierend auf der externen Verweis `name`, oder `aliasname` angegeben. Der Standardwert ist `Ansi`.  
   
-     `charsetmodifier`gibt auch an, wie Visual Basic die externe Prozedur innerhalb einer externen Datei aussehen soll. `Ansi`und `Unicode` weisen Visual Basic, die ohne den Namen ändern, während der Suche gesucht. `Auto`weist Visual Basic Basiszeichensatz der Plattform zur Laufzeit bestimmen und ändern Sie den Namen der externen Prozedur, möglicherweise wie folgt:  
+     `charsetmodifier` gibt auch an, wie Visual Basic die externe Prozedur innerhalb einer externen Datei aussehen soll. `Ansi` und `Unicode` weisen Visual Basic, die ohne den Namen ändern, während der Suche gesucht. `Auto` weist Visual Basic Basiszeichensatz der Plattform zur Laufzeit bestimmen und ändern Sie den Namen der externen Prozedur, möglicherweise wie folgt:  
   
     -   Auf einer ANSI-Plattform, z. B. Windows 95, Windows 98 oder Windows Millennium Edition müssen Sie zunächst die externe Prozedur ohne Namensänderung gesucht. Schlägt dies fehl, fügen Sie an "A" bis zum Ende der externen Prozedurnamen und suchen Sie erneut.  
   

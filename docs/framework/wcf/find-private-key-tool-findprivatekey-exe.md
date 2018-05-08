@@ -1,20 +1,12 @@
 ---
 title: Find Private Key-Tool (FindPrivateKey.exe)
 ms.date: 09/11/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4bdfa1a9e45332e8c2acbbc8cd8a09bd2f927fbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f156cbb2f4fad8d51e356bd4dee2d72d9397ffb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>Find Private Key-Tool (FindPrivateKey.exe)
 
@@ -40,8 +32,8 @@ In den folgenden Tabellen werden die Argumente und Optionen beschrieben, die mit
 
 |Option|Beschreibung|
 |------------|-----------------|
-|`/n <`*SubjectName*`>`|Gibt den Betreffnamen des Zertifikats an.|
-|`/t <`*Fingerabdruck*`>`|Gibt den Fingerabdruck des Zertifikats an. Verwenden Sie Certmgr.exe, um den Fingerabdruck des Zertifikats abzurufen.|
+|`/n <` *subjectName* `>`|Gibt den Betreffnamen des Zertifikats an.|
+|`/t <` *Fingerabdruck* `>`|Gibt den Fingerabdruck des Zertifikats an. Verwenden Sie Certmgr.exe, um den Fingerabdruck des Zertifikats abzurufen.|
 |`/f`|Gibt nur den Dateinamen aus.|
 |`/d`|Gibt nur das Verzeichnis aus.|
 |`/a`|Gibt nur den absoluten Dateinamen aus.|

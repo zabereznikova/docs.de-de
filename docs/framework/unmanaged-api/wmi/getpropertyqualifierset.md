@@ -1,11 +1,7 @@
 ---
 title: GetPropertyQualifierSet-Funktion (Referenz zur nicht verwalteten API)
-description: "Die GetPropertyQualifierSet-Funktion ruft den Qualifizierer für eine Eigenschaft festgelegt."
+description: Die GetPropertyQualifierSet-Funktion ruft den Qualifizierer für eine Eigenschaft festgelegt.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetPropertyQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7ca2981c8833abaafd5d206b66d6e91f34e2c91d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet-Funktion
 Ruft den Qualifizierer, legen Sie für eine bestimmte Eigenschaft ab.
@@ -54,7 +47,7 @@ HRESULT GetPropertyQualifierSet (
 [in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
 
 `wszMethod`  
-[in] Der Eigenschaftenname. `wszProperty`muss eine gültige zeigen `LPCWSTR`. 
+[in] Der Eigenschaftenname. `wszProperty` muss eine gültige zeigen `LPCWSTR`. 
 
 `ppQualSet`  
 [out] Empfängt den Schnittstellenzeiger, der Zugriff auf die Qualifizierer der Eigenschaft an. `ppQualSet` darf nicht `null` sein. Wenn ein Fehler auftritt, ein neues Objekt nicht zurückgegeben wird und der Zeiger festgelegt wird, auf `null`. 
@@ -87,7 +80,7 @@ Da Systemeigenschaften keine Qualifizierer haben, gibt die Funktion `WBEM_E_SYST
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

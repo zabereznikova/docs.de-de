@@ -1,24 +1,12 @@
 ---
 title: WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adb44bfee98d01594c9babcf19e19fbf11ba3878
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef2f34a6700d72c01977ea449041669a88c35e6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)
 Das WS-AtomicTransaction-Konfigurationsdienstprogramm wird zur Konfiguration von grundlegenden WS-AtomicTransaction-Unterstützungseinstellungen verwendet.  
@@ -46,16 +34,16 @@ wsatConfig [Options]
 |Optionen|Beschreibung|  
 |-------------|-----------------|  
 |-Konten:\<Konto >|Gibt eine durch Trennzeichen getrennte Liste von Konten an, die von WS-AtomicTransaction verwendet werden können. Die Gültigkeit dieser Konten wird nicht überprüft.|  
-|-AccountsCerts:\<Thumb > &#124; " Issuer\SubjectName", >|Gibt eine durch Trennzeichen getrennte Liste von Zertifikaten an, die von WS-AtomicTransaction verwendet werden können. Die Zertifikate werden vom Fingerabdruck oder vom Issuer\SubjectName-Paar angegeben. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
-|-EndpointCert: < MAs &#124; \<Thumb > &#124; " Issuer\SubjectName">|Verwendet das Computerzertifikat oder ein anderes lokales Endpunktzertifikat, das vom Fingerabdruck oder Issuer\SubjectName-Paar angegeben wird. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
+|-AccountsCerts:\<Thumb >&#124;"Issuer\SubjectName," >|Gibt eine durch Trennzeichen getrennte Liste von Zertifikaten an, die von WS-AtomicTransaction verwendet werden können. Die Zertifikate werden vom Fingerabdruck oder vom Issuer\SubjectName-Paar angegeben. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
+|-EndpointCert: < Machine&#124;\<Thumb >&#124;"Issuer\SubjectName" >|Verwendet das Computerzertifikat oder ein anderes lokales Endpunktzertifikat, das vom Fingerabdruck oder Issuer\SubjectName-Paar angegeben wird. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
 |MaxTimeout-:\<s >|Gibt das maximale Timeout in Sekunden an. Gültige Werte liegen zwischen 0 und 3600.|  
-|-Netzwerk:\<Enable &#124; Disable >|Aktiviert oder deaktiviert die WS-AtomicTransaction-Netzwerkunterstützung.|  
+|-Netzwerk:\<aktivieren&#124;deaktivieren >|Aktiviert oder deaktiviert die WS-AtomicTransaction-Netzwerkunterstützung.|  
 |-Port:\<PortNum >|Legt den HTTPS-Anschluss für WS-AtomicTransaction fest.<br /><br /> Wenn Sie die Firewall schon vor dem Ausführen dieses Tools aktiviert haben, wird der Anschluss automatisch in der Ausnahmeliste registriert. Wenn die Firewall vor dem Ausführen dieses Tools deaktiviert wird, werden keine zusätzlichen Konfigurationen in Bezug auf die Firewall vorgenommen.<br /><br /> Wenn Sie die Firewall nach der Konfiguration von WS-AT aktivieren, müssen Sie dieses Tool erneut ausführen und die Anschlussnummer mit diesem Parameter angeben. Wenn Sie die Firewall nach der Konfiguration deaktivieren, wird WS-AT ohne zusätzliche Eingabe ausgeführt.|  
 |-Timeout:\<s >|Gibt das Standardtimeout in Sekunden an. Gültige Werte reichen von 1 bis 3600.|  
-|-TraceActivity:\<Enable &#124; Disable >|Aktiviert oder deaktiviert die Ablaufverfolgung von Aktivitätsereignissen.|  
-|-TraceLevel:\<aus &#124; Fehler &#124; Kritische &#124; Warnung &#124; Informationen &#124; Ausführliche &#124; Alle >}|Gibt die Ablaufverfolgungsebene an.|  
-|-TracePII:\<Enable &#124; Disable >|Aktiviert oder deaktiviert die Ablaufverfolgung von persönlich identifizierbaren Informationen.|  
-|-TraceProp:\<Enable &#124; Disable >|Aktiviert oder deaktiviert die Ablaufverfolgung von Propagierungsereignissen.|  
+|-TraceActivity:\<aktivieren&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von Aktivitätsereignissen.|  
+|-TraceLevel:\<deaktiviert&#124;Fehler&#124;kritische&#124;Warnung&#124;Informationen&#124; ausführliche&#124;alle >}|Gibt die Ablaufverfolgungsebene an.|  
+|-TracePII:\<aktivieren&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von persönlich identifizierbaren Informationen.|  
+|-TraceProp:\<aktivieren&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von Propagierungsereignissen.|  
 |-restart|Startet MSDTC neu, um Änderungen sofort zu aktivieren. Wenn dies nicht angegeben wird, werden die Änderungen erst wirksam, wenn MSDTC neu gestartet wird.|  
 |-show|Zeigt die aktuellen WS-AtomicTransaction-Protokolleinstellungen an.|  
 |-VirtualServer:\<des virtuellen Servers >|Gibt den DTC-Ressourcenclusternamen an.|  

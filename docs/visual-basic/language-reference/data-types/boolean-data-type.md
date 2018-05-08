@@ -1,10 +1,6 @@
 ---
 title: Boolean-Datentyp (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.FALSE
 - vb.TRUE
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bdc106f1ec874c1a2165df069d5f3485fe5b2e43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 00f77fe5e98099868e02d74fe1adc7690cb95cca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean-Datentyp (Visual Basic)
 Enthält Werte, die nur können `True` oder `False`. Die Schlüsselwörter `True` und `False` entsprechen die beiden Status `Boolean` Variablen.  
@@ -33,7 +26,7 @@ Enthält Werte, die nur können `True` oder `False`. Die Schlüsselwörter `True
   
  Der Standardwert von `Boolean` ist `False`.  
   
- `Boolean`Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte dürfen nicht mit Zahlen gleichwertig sein. Schreiben Sie Code, der auf den entsprechenden numerischen Werten für nutzt `True` und `False`. Wann immer möglich, beschränken Sie die Verwendung von `Boolean` Variablen, die für sie vorgesehenen logischen Werte.  
+ `Boolean` Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte dürfen nicht mit Zahlen gleichwertig sein. Schreiben Sie Code, der auf den entsprechenden numerischen Werten für nutzt `True` und `False`. Wann immer möglich, beschränken Sie die Verwendung von `Boolean` Variablen, die für sie vorgesehenen logischen Werte.  
   
 ## <a name="type-conversions"></a>Typkonvertierungen  
  Wenn Visual Basic numerische Datentypwerte konvertiert `Boolean`, wird 0 `False` und alle anderen Werte werden `True`. Wenn Visual Basic konvertiert `Boolean` Werte in numerische Typen `False` wird 0 und `True` wird – 1.  
@@ -42,9 +35,9 @@ Enthält Werte, die nur können `True` oder `False`. Die Schlüsselwörter `True
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Negative Zahlen.** `Boolean`ist kein numerischen Typ und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Boolean` für numerische Werte.  
+-   **Negative Zahlen.** `Boolean` ist kein numerischen Typ und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Boolean` für numerische Werte.  
   
--   **Typzeichen.** `Boolean`hat kein literal-Typzeichen oder Bezeichner-Typzeichen.  
+-   **Typzeichen.** `Boolean` hat kein literal-Typzeichen oder Bezeichner-Typzeichen.  
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Boolean?displayProperty=nameWithType>-Struktur.  
   

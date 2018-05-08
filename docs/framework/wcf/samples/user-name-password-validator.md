@@ -1,24 +1,12 @@
 ---
 title: Benutzernamen- und Kennwort-Validierungssteuerelement
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 627670c989510bd82e4d9b6aa7550476be1ce750
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8fefa1556f853ab1f3a6f7664bdf7ffc5fc79850
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-name-password-validator"></a>Benutzernamen- und Kennwort-Validierungssteuerelement
 Dieses Beispiel veranschaulicht, wie ein benutzerdefiniertes UserNamePassword-Validierungssteuerelement implementiert wird. Dies ist nützlich, wenn keines der integrierten UserNamePassword-Validierungsmodi den Anforderungen der Anwendung entspricht (z. B. wenn Benutzername/Kennwort-Paare in externen Speichern wie einer Datenbank gespeichert werden). In diesem Beispiel wird ein Dienst gezeigt, der ein benutzerdefiniertes Validierungssteuerelement enthält, das auf zwei bestimmte Benutzername/Kennwort-Paare überprüft. Der Client verwendet solch ein Benutzername/Kennwort-Paar, um sich beim Dienst zu authentifizieren.  
@@ -28,7 +16,7 @@ Dieses Beispiel veranschaulicht, wie ein benutzerdefiniertes UserNamePassword-Va
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   

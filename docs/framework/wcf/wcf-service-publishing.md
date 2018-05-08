@@ -1,29 +1,15 @@
 ---
 title: WCF-Dienstpublishing
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 9f76ab11e9697fc5af5c507d4dc9d944c433c918
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF-Dienstpublishing
-Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstpublishing unterstützt Sie auf Ihrem Weg von der frühen Entwicklungsumgebung, die vom [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensthost und dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Testclient gebildet wird, zur eigentlichen Bereitstellung der Anwendung in einer Produktionsumgebung zu Testzwecken. Bevor Sie sich auf einen finalen Bereitstellungsplan festlegen, können Sie mithilfe des [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstpublishings sicherstellen, dass der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst ordnungsgemäß funktioniert und für die Veröffentlichung bereit ist. Auch können Sie Ihre [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstbibliotheken zu Testzwecken an einer Reihe von Orten bereitstellen.  
+Windows Communication Foundation (WCF)-Dienst veröffentlichen hilft Ihnen beim Fortschreiten von der frühen Entwicklungsumgebung von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Diensthost und [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Testclient zur eigentlichen Bereitstellung der Anwendung auf einem Produktionsserver die Umgebung für Testzwecke verwenden. Bevor Sie auf einen finalen Bereitstellungsplan festlegen, können Sie Windows Communication Foundation (WCF)-Dienst veröffentlichen zu überprüfen, ob Ihre [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ordnungsgemäß funktioniert und für die Veröffentlichung bereit ist. Auch können Sie Ihre [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstbibliotheken zu Testzwecken an einer Reihe von Orten bereitstellen.  
   
 ## <a name="supported-services-and-target-locations"></a>Unterstützte Dienste und Zielorte  
  Das [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstpublishing ermöglicht das Veröffentlichen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensten, die auf der Grundlage der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstbibliotheksvorlagen erstellt wurden, sowie der entsprechenden Elementvorlagen. Hierzu zählen unter anderem Folgende:  
@@ -51,13 +37,13 @@ Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstpublishing unters
   
 3.  Die **veröffentlichen** Fenster wird angezeigt. Klicken Sie auf der **...** . um den Zielort anzugeben, an dem der Dienst bereitgestellt werden soll. Sie können auswählen, um die Anwendung auf lokale IIS, Dateisystem oder FTP-Site bereitzustellen. Wenn die Anwendung für IIS lokal bereitstellen, können Sie Ihre Website auswählen und erstellen Sie Ihre Webanwendung, indem Sie auf die **neue Webanwendung erstellen** Symbol auf der oberen rechten Ecke.  
   
-4.  Nachdem Sie auf **veröffentlichen** im Hauptfenster von Visual Studio stellt die Anwendung am angegebenen Zielort bereit, und die Dateien "Web.config", SVC-Datei und Assembly in das Zielverzeichnis kopiert. sein. Der Name der SVC werden die "Datei lautet ProjectName.ServiceName.svc". Nachdem der Dienst erfolgreich veröffentlicht wurde, finden Sie in der Visual Studio-Ausgabefenster einen Hotlink, die "Verbinden mit http://localhost/WebApplicationFolderName zu HYPERLINK"http://localhost/WebApplicationFolderName"" ähnelt. Sie können STRG gedrückt halten und auf den Link klicken, um in Visual Studio eine Browserseite zu öffnen, in der die Dienstverzeichnisstruktur angezeigt wird.  
+4.  Nachdem Sie auf **veröffentlichen** im Hauptfenster von Visual Studio stellt die Anwendung am angegebenen Zielort bereit, und die Dateien "Web.config", SVC-Datei und Assembly in das Zielverzeichnis kopiert. sein. Der Name der SVC werden die "Datei lautet ProjectName.ServiceName.svc". Nachdem der Dienst erfolgreich veröffentlicht wurde, können Sie einen Hotlink suchen, im Ausgabefenster von Visual Studio-Fenster, das "Herstellen einer Verbindung zu HYPERLINK" ähnelthttp://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ...". Sie können STRG gedrückt halten und auf den Link klicken, um in Visual Studio eine Browserseite zu öffnen, in der die Dienstverzeichnisstruktur angezeigt wird.  
   
-     Wenn die Website nicht geöffnet werden kann, liegt dies möglicherweise daran, dass der Verzeichnisbrowser in IIS nicht aktiviert ist. Befolgen Sie die Tipps im Abschnitt "Mögliche Vorgehensweise", um ihn zu aktivieren. Sie können auch direkt eingeben"HYPERLINK"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" um die Dienstseite anzuzeigen.  
+     Wenn die Website nicht geöffnet werden kann, liegt dies möglicherweise daran, dass der Verzeichnisbrowser in IIS nicht aktiviert ist. Befolgen Sie die Tipps im Abschnitt "Mögliche Vorgehensweise", um ihn zu aktivieren. Sie können auch direkt eingeben"HYPERLINK"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc", um die Dienstseite anzuzeigen.  
   
  Sie können **veröffentlichen** angeben, wenn die Assembly, die Konfiguration und die SVC-Datei für alle Dienste, die definiert, die im Projekt an den Zielspeicherort kopiert werden soll, und überschreiben vorhandene Dateien am Ziel.  
   
- Wenn Sie die Anwendung lokal für IIS bereitgestellt haben, treten möglicherweise Fehler in Bezug auf das IIS-Setup auf. Stellen Sie sicher, dass IIS ordnungsgemäß installiert ist. Sie können Geben Sie "HYPERLINK"http://localhost"http://localhost" in Ihrem Browser und überprüfen Sie, ob die IIS-Standardseite angezeigt wird.  In einigen Fällen können die Probleme auch durch eine fehlerhafte Registrierung von ASP.NET oder [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in IIS verursacht werden. Öffnen die Visual Studio-Eingabeaufforderung können und führen den Befehl "aspnet_regiis.exe - Ir", um ASP.NET-Registrierungsprobleme zu beheben oder Befehl "ServiceModelReg.exe – ia" zum Beheben von WCF-Registrierungsprobleme ausführen.  
+ Wenn Sie die Anwendung lokal für IIS bereitgestellt haben, treten möglicherweise Fehler in Bezug auf das IIS-Setup auf. Stellen Sie sicher, dass IIS ordnungsgemäß installiert ist. Sie können "HYPERLINK" eingebenhttp://localhost" http://localhost" in Ihrem Browser und überprüfen, ob die IIS-Standardseite wird angezeigt.  In einigen Fällen können die Probleme auch durch eine fehlerhafte Registrierung von ASP.NET oder [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in IIS verursacht werden. Öffnen die Visual Studio-Eingabeaufforderung können und führen den Befehl "aspnet_regiis.exe - Ir", um ASP.NET-Registrierungsprobleme zu beheben oder Befehl "ServiceModelReg.exe – ia" zum Beheben von WCF-Registrierungsprobleme ausführen.  
   
 ## <a name="files-generated-for-publishing"></a>Generierte Dateien für die Veröffentlichung  
  Damit eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstbibliothek im Internet gehostet werden kann, müssen die folgenden Dateien durch das Tool erstellt werden: Assemblydateien, Web.config-Datei und SVC-Datei. Alle Dateien werden an den Zielort kopiert. Anschließend wird der Dienst veröffentlicht.  

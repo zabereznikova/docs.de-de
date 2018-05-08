@@ -1,30 +1,16 @@
 ---
 title: Unidirektionale Dienste
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way-services"></a>Unidirektionale Dienste
 Das Standardverhalten eines Dienstvorgangs ist das Anforderung-Antwort-Muster. Bei einem Anforderung-Antwort-Muster wartet der Client auch dann auf die Antwortnachricht, wenn der Dienstvorgang im Code als `void`-Methode dargestellt wird. Mit einem unidirektionalen Vorgang wird nur eine Nachricht gesendet. Der Empfänger sendet keine Antwortnachricht, und vom Absender wird keine erwartet.  
@@ -57,7 +43,7 @@ public interface IOneWayCalculator
  Ein vollständiges Beispiel finden Sie unter der [unidirektionale](../../../../docs/framework/wcf/samples/one-way.md) Beispiel.  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>Clients, die mit unidirektionalen Vorgängen blockieren  
- Sie sollten unbedingt berücksichtigen, dass zwar einige unidirektionale Anwendungen gleich nach dem Schreiben der ausgehenden Daten an die Netzwerkverbindung zurückgegeben werden, in anderen Fällen die Implementierung einer Bindung oder eines Diensts jedoch dazu führen kann, dass ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client mit unidirektionalen Vorgängen blockiert. Im Falle von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientanwendungen wird das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientobjekt so lange nicht zurückgegeben, bis die ausgehenden Daten an die Netzwerkverbindung geschrieben wurden. Dies gilt für alle Nachrichtenaustauschmuster, einschließlich unidirektionaler Vorgänge. Dies bedeutet, dass jedes Problem, das beim Schreiben der Daten an den Transport auftritt, verhindert, dass der Client zurückgegeben wird. Je nach dem aufgetretenen Problem könnte das Ergebnis eine Ausnahme sein oder eine Verzögerung beim Senden der Nachrichten an den Dienst.  
+ Es ist wichtig zu beachten, dass zwar einige unidirektionalen Anwendungen zurückgegeben, sobald die ausgehenden Daten an die Netzwerkverbindung in anderen Fällen die Implementierung einer Bindung oder eines Diensts geschrieben ist ein WCF-Client mit unidirektionalen Vorgängen blockiert verursachen kann. In WCF-Clientanwendungen gibt der WCF-Clientobjekts keinen zurück, bis die ausgehenden Daten an die Netzwerkverbindung geschrieben wurde. Dies gilt für alle Nachrichtenaustauschmuster, einschließlich unidirektionaler Vorgänge. Dies bedeutet, dass jedes Problem, das beim Schreiben der Daten an den Transport auftritt, verhindert, dass der Client zurückgegeben wird. Je nach dem aufgetretenen Problem könnte das Ergebnis eine Ausnahme sein oder eine Verzögerung beim Senden der Nachrichten an den Dienst.  
   
  Wenn der Transport z.&#160;B. den Endpunkt nicht finden kann, wird eine <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType>-Ausnahme ohne große Verzögerung ausgelöst. Es kann jedoch auch vorkommen, dass der Dienst die Daten aus irgendeinem Grund nicht aus der Verbindung lesen kann. Dadurch wird verhindert, dass der Clienttransport-Sendevorgang zurückgegeben wird. In diesen Fällen wird beim Überschreiten des <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType>-Zeitraums der Clienttransportbindung eine <xref:System.TimeoutException?displayProperty=nameWithType> ausgelöst, jedoch nicht, bis der Timeoutzeitraum überschritten wurde. Es ist auch möglich, an einen Dienst so viele Nachrichten zu senden, dass diese nach einem bestimmten Punkt nicht vom Dienst verarbeitet werden können. In diesem Fall blockiert der unidirektionale Client so lange, bis der Dienst die Nachrichten verarbeiten kann oder bis eine Ausnahme ausgelöst wird.  
   

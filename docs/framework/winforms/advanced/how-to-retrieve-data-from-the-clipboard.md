@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Abrufen von Daten aus der Zwischenablage'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c009efe743865896341da268bd14bf24158df46d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e06fb509bed32df0c18f2a03ae89765b3334b2c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Gewusst wie: Abrufen von Daten aus der Zwischenablage
 Die <xref:System.Windows.Forms.Clipboard> Klasse enthält Methoden, die Sie für die Interaktion mit der Zwischenablage-Feature des Windows-Betriebssystems verwenden können. Viele Anwendungen verwenden die Zwischenablage als temporäre Repository für Daten. Beispielsweise verwenden Textverarbeitungsprogramme Zwischenablage während Ausschneide- und Einfügevorgänge. Die Zwischenablage ist auch nützlich für Daten aus einer Anwendung in eine andere übertragen.  

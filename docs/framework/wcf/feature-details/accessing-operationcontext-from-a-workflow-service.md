@@ -1,24 +1,12 @@
 ---
 title: Zugreifen auf OperationContext aus einem Workflowdienst
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f63c2e2305eab5a97cf547bf607fbe97bb573376
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c10e83c02ec0e2e74462e84c68fd2fcd3ff761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Zugreifen auf OperationContext aus einem Workflowdienst
 Für den Zugriff auf den <xref:System.ServiceModel.OperationContext> in einem Workflowdienst müssen Sie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback>-Schnittstelle in einer benutzerdefinierten Ausführungseigenschaft implementieren. Überschreiben Sie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>-Methode, die als Verweis an den <xref:System.ServiceModel.OperationContext> übergeben wird. In diesem Thema erhalten Sie schrittweise Anweisungen zum Implementieren dieser Ausführungseigenschaft, um einen benutzerdefinierten Header sowie eine benutzerdefinierte Aktivität abzurufen, die diese Eigenschaft zur Laufzeit für <xref:System.ServiceModel.Activities.Receive> sichtbar macht.  Die benutzerdefinierte Aktivität implementiert dasselbe Verhalten wie eine <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` Aktivität, wenn jedoch eine <xref:System.ServiceModel.Activities.Receive> darin platziert wird, die <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aufgerufen wird, und die <xref:System.ServiceModel.OperationContext> Informationen abgerufen werden soll.  In diesem Thema wird zudem veranschaulicht, wie auf den clientseitigen <xref:System.ServiceModel.OperationContext> zugegriffen wird, um über die <xref:System.ServiceModel.Activities.ISendMessageCallback>-Schnittstelle ausgehende Header hinzuzufügen.  

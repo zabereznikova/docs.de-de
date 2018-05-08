@@ -1,35 +1,21 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf9f6c1ad5be3a2d63140f03f74713809624e277
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 8c5608276de935f07dca88e343143112b8fdcc20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen
 In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldeinformationen implementiert und benutzerdefinierte Anmeldeinformationen aus Anwendungscode genutzt werden.  
   
 ## <a name="credentials-extensibility-classes"></a>Erweiterbarkeitsklassen für Anmeldeinformationen  
- Die Klassen <xref:System.ServiceModel.Description.ClientCredentials> und <xref:System.ServiceModel.Description.ServiceCredentials> sind Haupteinstiegspunkte für die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Sicherheitserweiterbarkeit. Diese Anmeldeinformationsklassen stellen die APIs bereit, die es dem Anmeldecode ermöglichen, Anmeldeinformationen einzurichten und Anmeldeinformationstypen in Sicherheitstoken zu konvertieren. (*Sicherheitstoken* verwendet, um die Anmeldeinformationen in SOAP-Nachrichten übertragen werden.) Die Verantwortungsbereiche dieser Klassen von Anmeldeinformationen können in zwei Bereiche geteilt werden:  
+ Die <xref:System.ServiceModel.Description.ClientCredentials> und <xref:System.ServiceModel.Description.ServiceCredentials> Klassen sind die haupteinstiegspunkte für die Windows Communication Foundation (WCF)-sicherheitserweiterbarkeit. Diese Anmeldeinformationsklassen stellen die APIs bereit, die es dem Anmeldecode ermöglichen, Anmeldeinformationen einzurichten und Anmeldeinformationstypen in Sicherheitstoken zu konvertieren. (*Sicherheitstoken* verwendet, um die Anmeldeinformationen in SOAP-Nachrichten übertragen werden.) Die Verantwortungsbereiche dieser Klassen von Anmeldeinformationen können in zwei Bereiche geteilt werden:  
   
 -   Bereitstellung der APIs für Anwendungen zur Einrichtung von Anmeldeinformationen.  
   

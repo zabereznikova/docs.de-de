@@ -1,26 +1,12 @@
 ---
-title: "Einführung in das Routing"
-ms.custom: 
+title: Einführung in das Routing
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-introduction"></a>Einführung in das Routing
 Der Routingdienst stellt einen generischen austauschbaren SOAP-Vermittler bereit, der Nachrichten basierend auf dem Nachrichteninhalts weiterleiten kann. Mit dem Routingdienst können Sie eine komplexe Routinglogik erstellen, mit der Sie Szenarios wie Dienstaggregation, Dienstversionsverwaltung, Prioritätsrouting und Multicastrouting implementieren können. Außerdem stellt der Routingdienst eine Fehlerbehandlung bereit. Damit können Sie Listen von Sicherungsendpunkten einrichten, an die Nachrichten gesendet werden, falls beim Senden an den primären Zielendpunkt ein Fehler auftritt.  
@@ -111,7 +97,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- In diesem Beispiel wird der Routingdienst zum Verfügbarmachen von eines einzigen Endpunkts mit der Adresse "http://localhost: 8000/Routingservice/Router", die zum Empfangen von Nachrichten weitergeleitet werden konfiguriert. Da die Nachrichten an die Anforderung-Antwort-Endpunkte weitergeleitet werden, verwendet der Dienstendpunkt den <xref:System.ServiceModel.Routing.IRequestReplyRouter>-Vertrag. Diese Konfiguration definiert auch einen einzelnen Clientendpunkt "http://localhost: 8000/Servicemodelsample/Service", die Nachrichten weitergeleitet werden. Der Filtertabelle vorhanden (nicht dargestellt) mit dem Namen "routingTable1" enthält die Routinglogik zum Weiterleiten von Nachrichten und bezieht sich auf den Dienstendpunkt mithilfe der **RoutingBehavior** (nach einer Konfigurationsdatei) oder  **RoutingConfiguration** (für programmgesteuerte Konfiguration).  
+ In diesem Beispiel wird der Routingdienst, um einen einzigen Endpunkt mit der Adresse verfügbar zu machen "http://localhost:8000/routingservice/router", die zum Empfangen von Nachrichten weitergeleitet werden. Da die Nachrichten an die Anforderung-Antwort-Endpunkte weitergeleitet werden, verwendet der Dienstendpunkt den <xref:System.ServiceModel.Routing.IRequestReplyRouter>-Vertrag. Diese Konfiguration definiert auch einen einzelnen Clientendpunkt "http://localhost:8000/servicemodelsample/service", dass die Nachrichten weitergeleitet werden. Der Filtertabelle vorhanden (nicht dargestellt) mit dem Namen "routingTable1" enthält die Routinglogik zum Weiterleiten von Nachrichten und bezieht sich auf den Dienstendpunkt mithilfe der **RoutingBehavior** (nach einer Konfigurationsdatei) oder  **RoutingConfiguration** (für programmgesteuerte Konfiguration).  
   
 ### <a name="routing-logic"></a>Routinglogik  
  Um die Routinglogik zum Weiterleiten von Nachrichten zu definieren, müssen Sie ermitteln, welche in den eingehenden Nachrichten enthaltenen Daten eindeutig verarbeitet werden können. Wenn beispielsweise alle Zielendpunkte der Weiterleitung die gleichen SOAP-Aktionen verwenden, ist der Wert von "Action" innerhalb der Nachricht kein guter Indikator dafür, an welchen Endpunkt die Nachricht jeweils genau weitergeleitet werden soll. Falls Sie Nachrichten nur an einen bestimmten Endpunkt weiterleiten müssen, sollten Sie nach Daten filtern, die den Zielendpunkt eindeutig identifizieren, an den die Nachricht weitergeleitet wird.  
@@ -173,7 +159,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   Mehrere Filter müssen beim Auswerten der Nachricht `true` zurückgeben.  
   
- Falls diese Bedingungen erfüllt sind, wird die Nachricht an alle Endpunkte aller Filter weitergeleitet, für die die Auswertung `true` ergibt. Im folgenden Beispiel wird eine Routingkonfiguration definiert, die dazu führt, dass Nachrichten an beide Endpunkte weitergeleitet werden, falls die Endpunktadresse in der Nachricht "http://localhost:8000/routingservice/router/rounding" lautet.  
+ Falls diese Bedingungen erfüllt sind, wird die Nachricht an alle Endpunkte aller Filter weitergeleitet, für die die Auswertung `true` ergibt. Das folgende Beispiel definiert eine Routingkonfiguration beschrieben, das Nachrichten an beide Endpunkte weitergeleitet werden, wenn die Endpunktadresse in der Nachricht ist dazu http://localhost:8000/routingservice/router/rounding.  
   
 ```xml  
 <!--ROUTING SECTION -->  

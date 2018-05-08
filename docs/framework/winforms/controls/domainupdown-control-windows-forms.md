@@ -1,13 +1,6 @@
 ---
-title: "DomainUpDown-Steuerelement (Windows Forms)"
-ms.custom: 
+title: DomainUpDown-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DomainUpDown control [Windows Forms]
 - spin button control [Windows Forms], up-down controls
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - spin button control
 - up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 485640dc320809e9be5550d380b4fc9a2326e027
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c23f374f1ec9cab6e43b12d32b97c40533ac36cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DomainUpDown> Steuerelement sieht wie eine Kombination aus einem Textfeld und ein Paar von Schaltflächen in einer Liste oben oder unten verschieben. Das Steuerelement zeigt an, und legt eine Zeichenfolge aus einer Liste von Optionen. Der Benutzer kann die Zeichenfolge auswählen, indem Sie auf nach oben oder unten Schaltflächen, um eine Liste durchlaufen, durch Drücken der nach-oben und nach unten-Taste oder durch Eingabe eine Zeichenfolge, die ein Element in der Liste entspricht. Eine Verwendungsmöglichkeit für dieses Steuerelement ist für das Auswählen von Elementen aus einer alphabetisch sortierte Liste der Namen. (Um die Liste zu sortieren, legen die <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> -Eigenschaft `true`.) Die Funktion dieses Steuerelements wird im Listenfeld oder Kombinationsfeld sehr ähnlich, aber es nur sehr wenig Speicherplatz beanspruchen.  
@@ -43,7 +31,7 @@ Windows Forms <xref:System.Windows.Forms.DomainUpDown> Steuerelement sieht wie e
  [Gewusst wie: Entfernen von Elementen aus DomainUpDown-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
  Beschreibt das Löschen von Elementen aus der <xref:System.Windows.Forms.DomainUpDown> Steuerelement im Code.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DomainUpDown>  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

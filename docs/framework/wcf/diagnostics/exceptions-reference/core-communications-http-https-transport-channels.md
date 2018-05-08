@@ -1,27 +1,15 @@
 ---
-title: "Kernkommunikation: HTTP-HTTPS-Transportkanäle"
-ms.custom: 
+title: 'Kernkommunikation: HTTP-HTTPS-Transportkanäle'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d67bb810ced381749dca0dc698ca405bb59cfb0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbdb5b350425aad7108402dec939f036e971d053
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Kernkommunikation: HTTP/HTTPS-Transportkanäle
-Dieses Thema enthält alle Ausnahmen, die von HTTP/HTTPS-Transportkanälen von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] generiert werden.  
+In diesem Thema sind alle von Windows Communication Foundation (WCF)-HTTP/HTTPS-Transportkanälen generierte Ausnahmen aufgeführt.  
   
 ## <a name="exception-list"></a>Ausnahmeliste  
   
@@ -32,7 +20,7 @@ Dieses Thema enthält alle Ausnahmen, die von HTTP/HTTPS-Transportkanälen von [
 |Hosting_SslSettingsMisconfigured|Die Secure Sockets Layer-Einstellungen für den angegebenen Dienst stimmen nicht mit den Einstellungen der Internet Information Services überein.|  
 |HttpAuthSchemeAndClientCert|Die Konfiguration der HTTPS-Listenerfactory erfordert ein Clientzertifikat und das angegebene Authentifizierungsschema. Es kann jedoch immer nur jeweils eine Form der Clientauthentifizierung erforderlich sein.|  
 |HttpReceiveFailure|Fehler beim Empfangen der HTTP-Antwort für das angegebene Element. Möglicherweise verwendet die Dienstendpunktbindung kein HTTP-Protokoll. Eine andere mögliche Ursache ist, dass der HTTP-Anforderungskontext vom Server abgebrochen wird (vermutlich auf das Herunterfahren eines Diensts zurückzuführen). Weitere Informationen finden Sie in den Serverprotokollen.|  
-|HttpRegistrationAccessDenied|HTTP kann die angegebene URL nicht registrieren. Der Prozess hat keine Zugriffsrechte für diesen Namespace (weitere Informationen finden Sie unter http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp).|  
+|HttpRegistrationAccessDenied|HTTP kann die angegebene URL nicht registrieren. Der Prozess verfügt nicht über die Zugriffsrechte für diesen Namespace (siehe http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp Einzelheiten).|  
 |HttpRegistrationAlreadyExists|HTTP kann die angegebene URL nicht registrieren. Diese URL wurde bereits von einer anderen Anwendung mit HTTP.SYS registriert.|  
 |HttpRegistrationPortInUse|HTTP kann die angegebene URL nicht registrieren, da der angegebene TCP-Anschluss von einer anderen Anwendung verwendet wird.|  
 |HttpSendFailure|Fehler beim Erstellen der HTTP-Anforderung für das angegebene Element. Vergewissern Sie sich, dass es sich nicht um eine fehlende Übereinstimmung bei der Sicherheitsbindung handelt. Überprüfen Sie ferner, dass der Dienst nicht für Secure Sockets Layer konfiguriert ist.|  

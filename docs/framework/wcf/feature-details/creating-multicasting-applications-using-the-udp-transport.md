@@ -1,24 +1,12 @@
 ---
 title: Erstellen von Multicastanwendungen mithilfe des UDP-Transports
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 57c30c8b6b381be931789f3f64cbd26943bb2b34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84b36029416a66ef03768aed7d0c789a41eed8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Erstellen von Multicastanwendungen mithilfe des UDP-Transports
 Multicastanwendungen senden kleine Nachrichten gleichzeitig an eine große Anzahl von Empfängern, ohne dass eine Punkt-zu-Punkt-Verbindung eingerichtet werden muss. Bei diesen Anwendungen hat Geschwindigkeit Vorrang vor Zuverlässigkeit. Das heißt, es ist wichtiger, Daten zeitgerecht zu senden, als sicherzustellen, dass eine Nachricht auch tatsächlich empfangen wird. WCF unterstützt jetzt mit der <xref:System.ServiceModel.UdpBinding> das Schreiben von Multicastanwendungen. Dieser Transport ist in Szenarien nützlich, in denen ein Dienst kleine Nachrichten an eine große Anzahl von Clients gleichzeitig senden muss. Eine Börsenticker-Anwendung ist ein Beispiel für einen solchen Dienst.  
@@ -102,7 +90,7 @@ while (true)
  Dieser Code generiert Börseninformationen und verwendet dann den Dienstvertrag IStockTicker, um Multicastnachrichten an Aufrufdienste zu senden, die an der richtigen UDP-Adresse lauschen.  
   
 ### <a name="udp-and-reliable-messaging"></a>UDP und zuverlässiges Messaging  
- Da es sich bei UDP um ein einfaches Protokoll handelt, unterstützt die UDP-Bindung kein zuverlässiges Messaging. Wenn Sie sicherstellen müssen, dass Nachrichten von einem Remoteendpunkt empfangen werden, verwenden Sie einen Transport, der zuverlässiges Messaging unterstützt, z. B. HTTP oder TCP. Weitere Informationen zu zuverlässigem Messaging finden Sie unter http://go.microsoft.com/fwlink/?LinkId=231830.  
+ Da es sich bei UDP um ein einfaches Protokoll handelt, unterstützt die UDP-Bindung kein zuverlässiges Messaging. Wenn Sie sicherstellen müssen, dass Nachrichten von einem Remoteendpunkt empfangen werden, verwenden Sie einen Transport, der zuverlässiges Messaging unterstützt, z. B. HTTP oder TCP. Weitere Informationen zur zuverlässigen messaging finden Sie unter http://go.microsoft.com/fwlink/?LinkId=231830  
   
 ### <a name="two-way-multicast-messaging"></a>Bidirektionales Multicastmessaging  
  Während Multicastnachrichten im Allgemeinen unidirektional sind, unterstützt UdpBinding den Austausch von Anforderungs-/Antwortnachrichten. Die mithilfe des UDP-Transports gesendeten Nachrichten enthalten eine Absender- und eine Empfängeradresse. Besondere Sorgfalt erfordert die Absenderadresse, da sie während der Übertragung möglicherweise böswillig geändert wurde.  Die Adresse kann mithilfe des folgenden Codes überprüft werden:  

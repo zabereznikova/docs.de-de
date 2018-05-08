@@ -1,27 +1,15 @@
 ---
-title: "XAMLServices-Klasse und grundlegende XAML-Lese- und -Schreibvorgänge"
-ms.custom: 
+title: XAMLServices-Klasse und grundlegende XAML-Lese- und -Schreibvorgänge
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-caps.latest.revision: "11"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30d94534f0da0e3946d036fd8e0db59971615c0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27c7a45a45e8bbe3594813b29344d1548eecda5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices-Klasse und grundlegende XAML-Lese- und -Schreibvorgänge
 <xref:System.Xaml.XamlServices> ist eine von .NET Framework-XAML-Diensten bereitgestellt Klasse, die verwendet werden kann, um XAML-Szenarien zu adressieren, die keinen bestimmten Zugriff auf die Informationen zum XAML-Knotenstream/XAML-Typsystem erfordern, oder die aus diesen Knoten abgerufen werden. Die<xref:System.Xaml.XamlServices> -API kann wie folgt zusammengefasst werden: `Load` oder `Parse` to suppodert a XAML load path, `Save` to suppodert a XAML save path, and `Transform` um eine Technik bereitzustellen, die einen Ladepfad und einen Speicherpfad verbindet. `Transform` kann verwendet werden, um von einem XAML-Schema zu einem anderen zu wechseln. In diesem Thema sind diese API-Klassifizierungen zusammengefasst, und die Unterschiede zwischen bestimmten Methodenüberladungen werden beschrieben.  

@@ -1,24 +1,12 @@
 ---
 title: Entwickeln von Vertrag zuerst-Workflowdiensten
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-caps.latest.revision: 2
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bc0c8fafd80651114d85d2d6b06c57dec6199b5
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 10129fcb40d86d1ca7e42bce68b072e9118bcc88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contract-first-workflow-service-development"></a>Entwickeln von Vertrag zuerst-Workflowdiensten
 Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF)-Funktionen verbessern die Integration zwischen Webdiensten und Workflows in Form der Vertrag zuerst-Workflowentwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox. Dieses Thema enthält eine Übersicht darüber, wie die Aktivitäten und Eigenschaften in einer Workflowdienstzuordnung den Attributen eines Dienstvertrags zugeordnet werden. Ein ausführliches Beispiel zum Erstellen eines Vertrag zuerst-Workflowdiensts finden Sie unter [Vorgehensweise: Erstellen eines Workflowdiensts, der einem vorhandenen Dienstvertrag nutzt](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  

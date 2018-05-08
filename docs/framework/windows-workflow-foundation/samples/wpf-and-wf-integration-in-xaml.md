@@ -1,24 +1,12 @@
 ---
 title: WPF- und WF-Integration in XAML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6bc761b93ff8d5c0dc79a86d0159d50d65fb727c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2fb145a8511383c37be536a78522a256514c08c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>WPF- und WF-Integration in XAML
 Dieses Beispiel veranschaulicht, wie eine Anwendung erstellen, die Funktionen von Windows Presentation Foundation (WPF) und Windows Workflow Foundation (WF) in einem einzigen XAML-Dokument verwendet. Um dies zu erreichen, verwendet das Beispiel für Windows Workflow Foundation (WF) und die Verwendung von XAML-Erweiterbarkeit.  
@@ -52,6 +40,6 @@ Dieses Beispiel veranschaulicht, wie eine Anwendung erstellen, die Funktionen vo
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`

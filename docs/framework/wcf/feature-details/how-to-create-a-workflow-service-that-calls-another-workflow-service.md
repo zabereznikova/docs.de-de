@@ -1,24 +1,12 @@
 ---
 title: 'Vorgehensweise: Erstellen eines Workflowdiensts zum Aufrufen eines anderen Workflowdiensts'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fda5a7286c3d20c7cdc2093e58bfe3fbdcf1d1c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Vorgehensweise: Erstellen eines Workflowdiensts zum Aufrufen eines anderen Workflowdiensts
 Unter bestimmten Umständen ist es erforderlich, dass Informationen von Workflowdiensten von anderen Workflowdiensten abgerufen werden.  In diesem Thema wird veranschaulicht, wie Sie einen Workflowdienst in einem anderen Workflowdienst aufrufen können. In diesem Thema werden zwei Workflowdienste erstellt: ein Workflowdienst mit einer Methode zur Umkehrung der Eingabezeichenfolge und ein Workflowdienst zur Konvertierung der umgekehrten Eingabezeichenfolge in Großbuchstaben.  
@@ -113,7 +101,7 @@ Unter bestimmten Umständen ist es erforderlich, dass Informationen von Workflow
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
-8.  Nun wird der erste Dienst für die geänderte Zeichenfolge aufgerufen. Mit der rechten Maustaste des Projekts, und wählen Sie **Hinzufügen eines Dienstverweises**. Fügen Sie dem Dienst unter http://localhost/NestedServices/StringReverserService.xamlx einen Dienstverweis hinzu, und erstellen Sie das Projekt, um eine benutzerdefinierte Aktivität für den Zugriff auf den ersten Webdienst zu erstellen.  
+8.  Nun wird der erste Dienst für die geänderte Zeichenfolge aufgerufen. Mit der rechten Maustaste des Projekts, und wählen Sie **Hinzufügen eines Dienstverweises**. Hinzufügen eines Dienstverweises an den Dienst unter http://localhost/NestedServices/StringReverserService.xamlx und erstellen Sie das Projekt, um eine benutzerdefinierte Aktivität für den Zugriff auf den ersten Webdienst zu erstellen.  
   
 9. Ziehen Sie eine Instanz der neuen Aktivität den Workflow zwischen den **InvokeMethod** Aktivität und die **SendReplyToReceive** Aktivitäten. Weisen Sie der InputString-Eigenschaft der neuen Aktivität die StringToReverse-Variable zu, und weisen Sie der StringToReturn-Eigenschaft die StringToReturn-Variable zu.  
   

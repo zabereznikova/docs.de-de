@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über das HScrollBar-Steuerelement und das VScrollBar-Steuerelement (Windows Forms)"
-ms.custom: 
+title: Übersicht über das HScrollBar-Steuerelement und das VScrollBar-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - HScrollBar
 - VScrollBar
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fbdb3778959d1691200cde49e485d8a63c6e645
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 572ba9f16d1c78e1825d0c9db7530c6c78175d27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Übersicht über das HScrollBar-Steuerelement und das VScrollBar-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> Steuerelemente werden verwendet, um die einfache Navigation in einer langen Liste von Elementen oder eine große Menge an Informationen entweder horizontal oder vertikal innerhalb einer Anwendung bzw. eines Steuerelements bereitzustellen. Bildlaufleisten sind ein häufiges Element der Windows-Schnittstelle, damit die <xref:System.Windows.Forms.ScrollBar> Steuerelement wird häufig mit Steuerelementen, die nicht von abgeleitet sind, verwendet der <xref:System.Windows.Forms.ScrollableControl> Klasse. Ebenso viele Entwickler wählen, integriert der <xref:System.Windows.Forms.ScrollBar> gesteuert werden, wenn ihre eigenen Benutzersteuerelemente zu erstellen.  
   
- Die <xref:System.Windows.Forms.HScrollBar> (horizontal) und <xref:System.Windows.Forms.VScrollBar> (vertikal) funktionieren unabhängig von anderen Steuerelementen und verfügen über ihre eigenen Satz von Ereignissen, Eigenschaften und Methoden. <xref:System.Windows.Forms.ScrollBar>Steuerelemente sind nicht identisch mit den integrierten Bildlaufleisten, die Textfelder, Kombinationsfelder oder MDI-Formulare zugeordnet sind (die <xref:System.Windows.Forms.TextBox> Steuerelement verfügt über eine <xref:System.Windows.Forms.TextBox.ScrollBars%2A> Eigenschaft anzeigen oder Ausblenden von Bildlaufleisten, die dem Steuerelement zugeordnet sind).  
+ Die <xref:System.Windows.Forms.HScrollBar> (horizontal) und <xref:System.Windows.Forms.VScrollBar> (vertikal) funktionieren unabhängig von anderen Steuerelementen und verfügen über ihre eigenen Satz von Ereignissen, Eigenschaften und Methoden. <xref:System.Windows.Forms.ScrollBar> Steuerelemente sind nicht identisch mit den integrierten Bildlaufleisten, die Textfelder, Kombinationsfelder oder MDI-Formulare zugeordnet sind (die <xref:System.Windows.Forms.TextBox> Steuerelement verfügt über eine <xref:System.Windows.Forms.TextBox.ScrollBars%2A> Eigenschaft anzeigen oder Ausblenden von Bildlaufleisten, die dem Steuerelement zugeordnet sind).  
   
  Die <xref:System.Windows.Forms.ScrollBar> steuert die Verwendung der <xref:System.Windows.Forms.ScrollBar.Scroll> Ereignis zum Überwachen von der Verschiebung des Bildlauffelds (auch als Ziehpunkt bezeichnet) entlang der Bildlaufleiste angezeigt. Mithilfe der <xref:System.Windows.Forms.ScrollBar.Scroll> Ereignis ermöglicht den Zugriff auf den Wert der Scroll Bar gezogen wird.  
   

@@ -1,29 +1,15 @@
 ---
 title: Datenbindung in einem Windows Presentation Foundation-Client
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d10591866e11bd9e5ae707a0c17c3e293d7f4f71
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 225bdedb67e218092ff3369d4fe742c4fc897fc6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Datenbindung in einem Windows Presentation Foundation-Client
-In diesem Beispiel wird die Verwendung der Datenbindung in einem Windows Presentation Foundation (WPF)-Client veranschaulicht. Im Beispiel wird ein [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst verwendet, der zufällig ein Array von Alben generiert, die an den Client zurückgegeben werden. Jedes Album hat einen Namen, einen Preis und eine Liste von Albumtiteln. Die Albumtitel haben einen Namen und eine Dauer. Die Informationen, die vom Dienst zurückgegeben wird, wird automatisch für die Benutzeroberfläche (UI) von der Windows Presentation Foundation (WPF)-Client bereitgestellt gebunden.  
+In diesem Beispiel wird die Verwendung der Datenbindung in einem Windows Presentation Foundation (WPF)-Client veranschaulicht. Das Beispiel verwendet einen Windows Communication Foundation (WCF)-Dienst, der ein Array von Alben zurückzugebenden an den Client nach dem Zufallsprinzip generiert. Jedes Album hat einen Namen, einen Preis und eine Liste von Albumtiteln. Die Albumtitel haben einen Namen und eine Dauer. Die Informationen, die vom Dienst zurückgegeben wird, wird automatisch für die Benutzeroberfläche (UI) von der Windows Presentation Foundation (WPF)-Client bereitgestellt gebunden.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -91,7 +77,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   

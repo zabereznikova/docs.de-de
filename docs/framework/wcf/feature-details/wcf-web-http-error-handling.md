@@ -1,29 +1,15 @@
 ---
 title: WCF-Web-HTTP-Fehlerbehandlung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 228f8cdbe5ddde63f2b6afd82a27055f2241e058
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF-Web-HTTP-Fehlerbehandlung
-Die Web-HTTP-Fehlerbehandlung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht es Ihnen, Fehler von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Diensten zurückzugeben, die einen HTTP-Statuscode angeben, sowie Fehlerdetails im gleichen Format wie der Vorgang (z. B. XML oder JSON) zurückzugeben.  
+Windows Communication Foundation (WCF)-Web-HTTP-Fehlerbehandlung können Sie zur Rückgabe von Fehlern von WCF-Web-HTTP-Diensten, die einen HTTP-Statuscode und Zurückgeben von Fehlerdetails, die mit dem gleichen Format wie des Vorgangs (z. B. XML oder JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>WCF-Web-HTTP-Fehlerbehandlung  
  Die <xref:System.ServiceModel.Web.WebFaultException>-Klasse definiert einen Konstruktor, der Ihnen das Angeben eines HTTP-Statuscodes ermöglicht. Dieser Statuscode wird dann an den Client zurückgegeben. Dies ist eine generische Version der <xref:System.ServiceModel.Web.WebFaultException>-Klasse. Mit <xref:System.ServiceModel.Web.WebFaultException%601> können Sie einen benutzerdefinierten Typ zurückgeben, der Informationen zum aufgetretenen Fehler enthält. Dieses benutzerdefinierte Objekt wird in dem Format serialisiert, das vom Vorgang angegeben und an den Client zurückgegeben wird. Im folgenden Beispiel wird gezeigt, wie Sie einen HTTP-Statuscode zurückgeben.  

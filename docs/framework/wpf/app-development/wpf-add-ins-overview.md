@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über WPF-Add-Ins"
-ms.custom: 
+title: Übersicht über WPF-Add-Ins
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
 - add-ins overview [WPF]
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 942f5706a83a9f9e9cd969701ed5625c57b76f83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] beinhaltet ein Add-In-Modell, mit dem Entwickler Anwendungen erstellen können, die Add-In-Erweiterbarkeit unterstützen. Dieses Add-In-Modell ermöglicht die Erstellung von Add-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern. In einigen Szenarien müssen Anwendungen auch [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s anzeigen, die von Add-Ins bereitgestellt werden. In diesem Thema wird gezeigt, wie durch [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] erweitert wird, um diese Szenarien sowie die zugrunde liegende Architektur, die Vorteile und die Einschränkungen zu ermöglichen.  
@@ -115,7 +103,7 @@ ms.lasthandoff: 01/19/2018
   
  Die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Typen von [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sind nicht remotefähig. Um das Problem zu beheben, erweitert [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], damit die durch Add-Ins erstellte [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] von Hostanwendungen angezeigt werden kann. Diese Unterstützung wird durch bereitgestellt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] durch zwei Arten: die <xref:System.AddIn.Contract.INativeHandleContract> Schnittstelle und zwei statische Methoden implementiert, indem Sie die <xref:System.AddIn.Pipeline.FrameworkElementAdapters> Klasse: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Im Allgemeinen werden diese Typen und Methoden wie folgt verwendet:  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]erfordert, dass [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] gebotenen-add-ins sind Klassen, die direkt oder indirekt abgeleitet <xref:System.Windows.FrameworkElement>, z. B. Formen, Steuerelemente, Benutzersteuerelemente, Layoutbereiche und Seiten.  
+1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] erfordert, dass [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] gebotenen-add-ins sind Klassen, die direkt oder indirekt abgeleitet <xref:System.Windows.FrameworkElement>, z. B. Formen, Steuerelemente, Benutzersteuerelemente, Layoutbereiche und Seiten.  
   
 2.  Wo der Vertrag deklariert, dass eine Benutzeroberfläche zwischen Add-Ins und der hostanwendung übergeben wird, muss es als deklariert eine <xref:System.AddIn.Contract.INativeHandleContract> (keine <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> ist eine remotefähige Darstellung des Add-Ins [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Isolation hinweg übergeben werden können.  
   
@@ -230,7 +218,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Auf der Hostseite Anwendung [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] packt neu der <xref:System.Windows.Interop.HwndSource> als eine interne [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] von abgeleitete Klasse <xref:System.Windows.Interop.HwndHost> und nutzt <xref:System.AddIn.Contract.INativeHandleContract>. Eine Instanz dieser Klasse zurückgegebene <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> zur hostanwendung.  
   
- <xref:System.Windows.Interop.HwndHost>zum Anzeigen vorhanden [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], erkennbar Fensterhandles, aus [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Weitere Informationen finden Sie unter [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> zum Anzeigen vorhanden [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], erkennbar Fensterhandles, aus [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Weitere Informationen finden Sie unter [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
  Zusammengefasst <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> vorhanden sein, um das Fensterhandle für ermöglichen eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eine hostanwendung von einem Add-in übergeben werden, in denen gekapselt durch eine <xref:System.Windows.Interop.HwndHost> und den Host angezeigt Anwendung [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   

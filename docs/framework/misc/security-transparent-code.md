@@ -1,27 +1,17 @@
 ---
 title: Sicherheitstransparenter Code
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97db1cef60af267087e86f86ecd0a77021604642
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a491a87c896c76fa62f1702d1ef0e99fc404607
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-transparent-code"></a>Sicherheitstransparenter Code
 <a name="top"></a>
@@ -52,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  Transparenz wurde in .NET Framework, Version 2.0, eingeführt, um das Sicherheitsmodell zu vereinfachen und das Schreiben und Bereitstellen von sicheren Bibliotheken und Anwendungen zu erleichtern. Transparenter Code wird auch in Microsoft Silverlight verwendet, um die Entwicklung von teilweise vertrauenswürdigen Anwendungen zu vereinfachen.  
   
 > [!NOTE]
->  Wenn Sie eine teilweise vertrauenswürdige Anwendung entwickeln, beachten Sie die Berechtigungsanforderungen für die Zielhosts. Sie können eine Anwendung entwickeln, die Ressourcen verwendet, die von einigen Hosts nicht zugelassen werden. Diese Anwendung wird ohne Fehler kompiliert, schlägt jedoch fehl, wenn sie in die gehostete Umgebung geladen wird. Wenn Sie die Anwendung mit Visual Studio entwickelt haben, können Sie in der Entwicklungsumgebung das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aktivieren. Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Die für ClickOnce-Anwendungen bereitgestellte Funktion zur Berechnung von Berechtigungen ist auch für jede beliebige teilweise vertrauenswürdige Anwendung verfügbar.  
+>  Wenn Sie eine teilweise vertrauenswürdige Anwendung entwickeln, beachten Sie die Berechtigungsanforderungen für die Zielhosts. Sie können eine Anwendung entwickeln, die Ressourcen verwendet, die von einigen Hosts nicht zugelassen werden. Diese Anwendung wird ohne Fehler kompiliert, schlägt jedoch fehl, wenn sie in die gehostete Umgebung geladen wird. Wenn Sie die Anwendung mit Visual Studio entwickelt haben, können Sie in der Entwicklungsumgebung das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aktivieren. Weitere Informationen finden Sie unter [Gewusst wie: Debuggen eine ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Die für ClickOnce-Anwendungen bereitgestellte Funktion zur Berechnung von Berechtigungen ist auch für jede beliebige teilweise vertrauenswürdige Anwendung verfügbar.  
   
  [Zurück zum Anfang](#top)  
   

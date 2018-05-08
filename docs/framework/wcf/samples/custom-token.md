@@ -1,27 +1,15 @@
 ---
 title: Benutzerdefiniertes Token
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 53242a7411d261a6f2860fcf319725e40cfb6dcf
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-token"></a>Benutzerdefiniertes Token
-In diesem Beispiel wird die Aufnahme einer benutzerdefinierten Tokenimplementierung in eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung veranschaulicht. Im Beispiel wird ein `CreditCardToken` verwendet, um Informationen über Clientkreditkarten sicher an den Dienst zu übergeben. Das Token wird an den WS-Sicherheits-Nachrichtenkopf übergeben und zusammen mit Nachrichtentext und anderen Nachrichtenköpfen mithilfe des symmetrischen Sicherheitsbindungselements signiert und verschlüsselt. Dies ist in Fällen nützlich, in denen die integrierten Token nicht ausreichen. In diesem Beispiel wird veranschaulicht, wie anstelle eines der integrierten Token ein benutzerdefiniertes Sicherheitstoken für einen Dienst bereitgestellt werden kann. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  
+Dieses Beispiel veranschaulicht, wie einer benutzerdefinierten tokenimplementierung in eine Windows Communication Foundation (WCF)-Anwendung. Im Beispiel wird ein `CreditCardToken` verwendet, um Informationen über Clientkreditkarten sicher an den Dienst zu übergeben. Das Token wird an den WS-Sicherheits-Nachrichtenkopf übergeben und zusammen mit Nachrichtentext und anderen Nachrichtenköpfen mithilfe des symmetrischen Sicherheitsbindungselements signiert und verschlüsselt. Dies ist in Fällen nützlich, in denen die integrierten Token nicht ausreichen. In diesem Beispiel wird veranschaulicht, wie anstelle eines der integrierten Token ein benutzerdefiniertes Sicherheitstoken für einen Dienst bereitgestellt werden kann. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  

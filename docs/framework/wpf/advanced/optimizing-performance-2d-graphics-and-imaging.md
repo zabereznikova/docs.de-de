@@ -1,13 +1,6 @@
 ---
 title: 'Optimieren der Leistung: 2D-Grafiken und Bildverarbeitung'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99fc5e179fe7652868d47d93fbdcabd47bc8cab9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e6b72dae863e89d70ec70c2cb99a5874581e9ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optimieren der Leistung: 2D-Grafiken und Bildverarbeitung
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt zahlreiche Funktionen für 2D-Grafiken und Bildverarbeitung zur Verfügung, die den Anforderungen Ihrer Anwendung entsprechend optimiert werden können. Dieses Thema enthält Informationen über die Leistungsoptimierung in diesen Bereichen.  
@@ -36,23 +24,23 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>Zeichnen und Formen  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bietet sowohl <xref:System.Windows.Media.Drawing> und <xref:System.Windows.Shapes.Shape> -Objekten zur Darstellung der grafischen Zeichnungsinhalt. Allerdings <xref:System.Windows.Media.Drawing> Objekte sind einfacher Konstrukte als <xref:System.Windows.Shapes.Shape> Objekte und bieten eine bessere Leistungsmerkmale.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet sowohl <xref:System.Windows.Media.Drawing> und <xref:System.Windows.Shapes.Shape> -Objekten zur Darstellung der grafischen Zeichnungsinhalt. Allerdings <xref:System.Windows.Media.Drawing> Objekte sind einfacher Konstrukte als <xref:System.Windows.Shapes.Shape> Objekte und bieten eine bessere Leistungsmerkmale.  
   
  Ein <xref:System.Windows.Shapes.Shape> können Sie eine grafische Form auf dem Bildschirm gezeichnet werden soll. Da aus abgeleitet werden die <xref:System.Windows.FrameworkElement> Klasse <xref:System.Windows.Shapes.Shape> Objekte können in Bereichen und den meisten Steuerelementen verwendet werden.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet mehrere Ebenen für den Zugriff auf Grafiken und Renderingdienste. Auf der obersten Ebene <xref:System.Windows.Shapes.Shape> Objekte sind einfach zu verwenden und viele nützliche Features, z. B. Layout und Ereignisbehandlung bereitzustellen. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Reihe von vorgefertigten Shape-Objekten zur Verfügung. Alle Formobjekte, die von erben die <xref:System.Windows.Shapes.Shape> Klasse. Form "verfügbar" Objekten zählen <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, und <xref:System.Windows.Shapes.Rectangle>.  
   
- <xref:System.Windows.Media.Drawing>Objekte, andererseits, leiten Sie nicht von der <xref:System.Windows.FrameworkElement> Klasse, und geben Sie eine einfache Implementierung für das Rendering von Formen, Bilder und Text.  
+ <xref:System.Windows.Media.Drawing> Objekte, andererseits, leiten Sie nicht von der <xref:System.Windows.FrameworkElement> Klasse, und geben Sie eine einfache Implementierung für das Rendering von Formen, Bilder und Text.  
   
  Es gibt vier Arten von <xref:System.Windows.Media.Drawing> Objekte:  
   
--   <xref:System.Windows.Media.GeometryDrawing>Zeichnet eine Form.  
+-   <xref:System.Windows.Media.GeometryDrawing> Zeichnet eine Form.  
   
--   <xref:System.Windows.Media.ImageDrawing>Zeichnet ein Bild an.  
+-   <xref:System.Windows.Media.ImageDrawing> Zeichnet ein Bild an.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>Zeichnet Text.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> Zeichnet Text.  
   
--   <xref:System.Windows.Media.DrawingGroup>Zeichnet andere Zeichnungen. Verwenden Sie eine Zeichnungsgruppe, um andere Zeichnungen in einer zusammengesetzten Zeichnung zu kombinieren.  
+-   <xref:System.Windows.Media.DrawingGroup> Zeichnet andere Zeichnungen. Verwenden Sie eine Zeichnungsgruppe, um andere Zeichnungen in einer zusammengesetzten Zeichnung zu kombinieren.  
   
  Die <xref:System.Windows.Media.GeometryDrawing> Objekt wird verwendet, um den Geometrieinhalt gerendert. Die <xref:System.Windows.Media.Geometry> Klasse und der konkreten Klassen, z. B. ableiten <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, und <xref:System.Windows.Media.PathGeometry>, bieten eine Möglichkeit für 2D Rendern der Grafiken sowie Treffertests und Clipping-Unterstützung bereit. Mit Geometry-Objekten können beispielsweise der Bereich eines Steuerelements oder der auf ein Bild anzuwendende Clip-Bereich definiert werden. Bei Geometry-Objekten kann es sich um einfache Bereiche wie Rechtecke und Kreise oder um aus einem oder mehreren geometrischen Objekten zusammengesetzte Regionen handeln. Komplexere geometrische Regionen können erstellt werden, durch Kombinieren von <xref:System.Windows.Media.PathSegment>-abgeleitete Objekte, z. B. <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, und <xref:System.Windows.Media.QuadraticBezierSegment>.  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry-Objekte  
- Die <xref:System.Windows.Media.StreamGeometry> Objekt ist ein Lightweight-Alternative zu <xref:System.Windows.Media.PathGeometry> für das geometrische Formen erstellen. Verwenden einer <xref:System.Windows.Media.StreamGeometry> müssen Sie eine komplexe Geometrie beschreiben. <xref:System.Windows.Media.StreamGeometry>ist optimiert für die Behandlung viele <xref:System.Windows.Media.PathGeometry> Objekte und bietet eine bessere Leistung im Vergleich zur Verwendung von viele einzelne <xref:System.Windows.Media.PathGeometry> Objekte.  
+ Die <xref:System.Windows.Media.StreamGeometry> Objekt ist ein Lightweight-Alternative zu <xref:System.Windows.Media.PathGeometry> für das geometrische Formen erstellen. Verwenden einer <xref:System.Windows.Media.StreamGeometry> müssen Sie eine komplexe Geometrie beschreiben. <xref:System.Windows.Media.StreamGeometry> ist optimiert für die Behandlung viele <xref:System.Windows.Media.PathGeometry> Objekte und bietet eine bessere Leistung im Vergleich zur Verwendung von viele einzelne <xref:System.Windows.Media.PathGeometry> Objekte.  
   
  Im folgenden Beispiel wird die Attributsyntax eine dreieckige erstellen <xref:System.Windows.Media.StreamGeometry> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 -   Weitere Informationen finden Sie unter [Übersicht über die Bildverarbeitung](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- Beim Animieren der Skalierung von Bitmaps kann der Standardalgorithmus für das Resampling von Bildern hoher Qualität zuweilen einen solchen Umfang an Systemressourcen beanspruchen, dass eine Verringerung der Einzelbildrate auftritt und Animationen ruckartig wiedergegeben werden. Durch Festlegen der <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> Eigenschaft von der <xref:System.Windows.Media.RenderOptions> -Objekt <xref:System.Windows.Media.BitmapScalingMode.LowQuality> Animationen erstellen, wenn eine Bitmap zu skalieren. <xref:System.Windows.Media.BitmapScalingMode.LowQuality>Modus weist die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Renderingmodul beim Verarbeiten von Bildern von einem Algorithmus Qualität optimiert für einen Algorithmus Geschwindigkeit optimiert wechseln.  
+ Beim Animieren der Skalierung von Bitmaps kann der Standardalgorithmus für das Resampling von Bildern hoher Qualität zuweilen einen solchen Umfang an Systemressourcen beanspruchen, dass eine Verringerung der Einzelbildrate auftritt und Animationen ruckartig wiedergegeben werden. Durch Festlegen der <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> Eigenschaft von der <xref:System.Windows.Media.RenderOptions> -Objekt <xref:System.Windows.Media.BitmapScalingMode.LowQuality> Animationen erstellen, wenn eine Bitmap zu skalieren. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> Modus weist die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Renderingmodul beim Verarbeiten von Bildern von einem Algorithmus Qualität optimiert für einen Algorithmus Geschwindigkeit optimiert wechseln.  
   
  Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Media.BitmapScalingMode> für ein Image-Objekt.  
   

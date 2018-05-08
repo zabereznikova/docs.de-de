@@ -1,11 +1,6 @@
 ---
 title: Short-Datentyp (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
 f1_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: 10c9869d4fb84cd013b22bc791bd31fad745f3d3
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ef99743828d8d80844486b651178622ff45fd554
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="short-data-type-visual-basic"></a>Short-Datentyp (Visual Basic)
 Speichert signierte 16-Bit (2-Byte) ganze Zahlen, die im Wert von-32.768 bis 32.767 reichen.  
@@ -70,7 +65,7 @@ Dim number = &H_3264S
 
 -   **Widening.** Die `Short` -Datentyp zu `Integer`, `Long`, `Decimal`, `Single`, oder `Double`. Dies bedeutet, dass Sie `Short` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `S` an ein Literal wird der `Short`-Datentyp erzwungen. `Short`verfügt über keine Typkennzeichen aus.  
+-   **Typzeichen.** Durch Anhängen des Literaltypzeichens `S` an ein Literal wird der `Short`-Datentyp erzwungen. `Short` verfügt über keine Typkennzeichen aus.  
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Int16?displayProperty=nameWithType>-Struktur.  
   

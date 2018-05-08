@@ -1,29 +1,15 @@
 ---
 title: 'Vorgehensweise: Implementieren eines Suchproxys'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e984a55137aec0042f8de0d69aa1310ed43a0df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c3088da4dbd042d0022a56c28c90e2fcfbf24ba4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Vorgehensweise: Implementieren eines Suchproxys
-In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere Informationen zum ermittlungsfeature in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], finden Sie unter [Überblick über WCF-Ermittlung](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Sie können einen Suchproxy implementieren, indem Sie eine Klasse erstellen, die die abstrakte <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Klasse erweitert. Es gibt eine Reihe von anderen Unterstützungsklassen, die in diesem Beispiel definiert und verwendet werden. `OnResolveAsyncResult`, `OnFindAsyncResult` und `AsyncResult`. Diese Klassen implementieren die <xref:System.IAsyncResult>-Schnittstelle. Weitere Informationen zu <xref:System.IAsyncResult> finden Sie unter [System.IAsyncResult-Schnittstelle](xref:System.IAsyncResult).
+In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere Informationen zu den Discovery-Feature in Windows Communication Foundation (WCF), finden Sie unter [Überblick über WCF-Ermittlung](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Sie können einen Suchproxy implementieren, indem Sie eine Klasse erstellen, die die abstrakte <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Klasse erweitert. Es gibt eine Reihe von anderen Unterstützungsklassen, die in diesem Beispiel definiert und verwendet werden. `OnResolveAsyncResult`, `OnFindAsyncResult` und `AsyncResult`. Diese Klassen implementieren die <xref:System.IAsyncResult>-Schnittstelle. Weitere Informationen zu <xref:System.IAsyncResult> finden Sie unter [System.IAsyncResult-Schnittstelle](xref:System.IAsyncResult).
   
  Das Implementieren eines Suchproxys ist in diesem Thema in drei Hauptteile aufgegliedert:  
   

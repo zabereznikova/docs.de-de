@@ -1,28 +1,16 @@
 ---
 title: 'Gewusst wie: Erstellen eines gebundenen Steuerelements und Formatieren der angezeigten Daten'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6088048ed27b2021e297494275f4e80f7c0cb681
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9055ec9c4b646e0c86819e4e72db8ce20086bace
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Gewusst wie: Erstellen eines gebundenen Steuerelements und Formatieren der angezeigten Daten
 Mit Windows Forms-Datenbindung können Sie Daten formatieren, die in einem datengebundenen Steuerelement angezeigt wird, indem die **Formatierung und erweiterte Bindung** (Dialogfeld).  
@@ -61,7 +49,7 @@ Mit Windows Forms-Datenbindung können Sie Daten formatieren, die in einem daten
     |Währung|Geben Sie die Anzahl der Dezimalstellen mithilfe **Dezimalstellen** auf-ab-Steuerelement.|  
     |Datum/Zeit|Wählen Sie, wie das Datum und die Uhrzeit angezeigt werden soll, durch Auswahl eines der Elemente in der **Typ** Auswahlfeld.|  
     |Wissenschaftlich|Geben Sie die Anzahl der Dezimalstellen mithilfe **Dezimalstellen** auf-ab-Steuerelement.|  
-    |Benutzerdefiniert|Geben Sie eine benutzerdefinierte Formatzeichenfolge ein.<br /><br /> Weitere Informationen finden Sie unter [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md). **Hinweis:** benutzerdefinierte Formatzeichenfolgen erfolgreicher Roundtrip zwischen der Datenquelle und gebundenem Steuerelement nicht garantiert. Behandeln Sie stattdessen das <xref:System.Windows.Forms.Binding.Parse>- oder <xref:System.Windows.Forms.Binding.Format>-Ereignis für die Bindung, und wenden Sie im Ereignisbehandlungscode eine benutzerdefinierte Formatierung an.|  
+    |Benutzerdefiniert|Geben Sie eine benutzerdefinierte Formatzeichenfolge ein.<br /><br /> Weitere Informationen finden Sie unter [Formatieren von Typen in .NET](../../../docs/standard/base-types/formatting-types.md). **Hinweis:** benutzerdefinierte Formatzeichenfolgen erfolgreicher Roundtrip zwischen der Datenquelle und gebundenem Steuerelement nicht garantiert. Behandeln Sie stattdessen das <xref:System.Windows.Forms.Binding.Parse>- oder <xref:System.Windows.Forms.Binding.Format>-Ereignis für die Bindung, und wenden Sie im Ereignisbehandlungscode eine benutzerdefinierte Formatierung an.|  
   
 8.  Klicken Sie auf **OK** schließen die **Formatierung und erweiterte Bindung** Dialogfeld und zum Eigenschaftenfenster zurückzukehren.  
   

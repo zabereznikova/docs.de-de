@@ -1,13 +1,6 @@
 ---
 title: Abfangen von Tablettstifteingaben
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 813c5f6060b3a59358b286c93a9077debd41a746
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Abfangen von Tablettstifteingaben
 Die <xref:System.Windows.Input.StylusPlugIns> -Architektur bietet einen Mechanismus zum Implementieren von systemnahe Steuerung über <xref:System.Windows.Input.Stylus> Eingabe und die Erstellung von Freihandeingaben <xref:System.Windows.Ink.Stroke> Objekte. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasse bietet einen Mechanismus für benutzerdefinierte Verhalten implementieren, und wenden Sie es in den Stream der Daten aus der Tablettstiftgerät, um eine optimale Leistung zu erzielen.  
@@ -45,7 +33,7 @@ Die <xref:System.Windows.Input.StylusPlugIns> -Architektur bietet einen Mechanis
 ## <a name="architecture"></a>Architektur  
  Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> ist die Weiterentwicklung der der [StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) in beschriebenen APIs [zugreifen auf und Bearbeiten von Stifteingabe](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)in die [Microsoft Windows XP Tablet PC Edition-Software Development Kit 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409).  
   
- Jede <xref:System.Windows.UIElement> verfügt über eine <xref:System.Windows.UIElement.StylusPlugIns%2A> -Eigenschaft, ist eine <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. Können Sie Hinzufügen einer <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> auf ein Element <xref:System.Windows.UIElement.StylusPlugIns%2A> Eigenschaft bearbeiten <xref:System.Windows.Input.StylusPoint> Daten, wie er generiert werden. <xref:System.Windows.Input.StylusPoint>Daten bestehen aus den Eigenschaften, die für die vom System Digitizer, einschließlich unterstützt die <xref:System.Windows.Input.StylusPoint.X%2A> und <xref:System.Windows.Input.StylusPoint.Y%2A> zeigen Daten als auch <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> Daten.  
+ Jede <xref:System.Windows.UIElement> verfügt über eine <xref:System.Windows.UIElement.StylusPlugIns%2A> -Eigenschaft, ist eine <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. Können Sie Hinzufügen einer <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> auf ein Element <xref:System.Windows.UIElement.StylusPlugIns%2A> Eigenschaft bearbeiten <xref:System.Windows.Input.StylusPoint> Daten, wie er generiert werden. <xref:System.Windows.Input.StylusPoint> Daten bestehen aus den Eigenschaften, die für die vom System Digitizer, einschließlich unterstützt die <xref:System.Windows.Input.StylusPoint.X%2A> und <xref:System.Windows.Input.StylusPoint.Y%2A> zeigen Daten als auch <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> Daten.  
   
  Ihre <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Objekte eingefügt werden, direkt in den Stream der Daten aus der <xref:System.Windows.Input.Stylus> Gerät beim Hinzufügen der <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> auf die <xref:System.Windows.UIElement.StylusPlugIns%2A> Eigenschaft. Die Reihenfolge, in der-Plug-ins hinzugefügt werden, auf, die <xref:System.Windows.UIElement.StylusPlugIns%2A> Auflistung bestimmt die Reihenfolge, in dem erhalten sie <xref:System.Windows.Input.StylusPoint> Daten. Z. B. Wenn Sie fügen Sie einen Filter-Plug-Ins, die Eingabe für eine bestimmte Region beschränkt, und fügen Sie dann ein plug-in, das Gesten erkennt, wie sie geschrieben werden, das plug-in, das erkennt Gesten erhalten gefilterte <xref:System.Windows.Input.StylusPoint> Daten.  
   

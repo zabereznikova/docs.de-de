@@ -1,23 +1,16 @@
 ---
-title: "Einführung in das DataRepeater-Steuerelement (Visual Studio)"
+title: Einführung in das DataRepeater-Steuerelement (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - repeating data
 - DataRepeater, overview
 - DataRepeater
 ms.assetid: 78a52a1d-65f0-4ecb-97ff-53bc114300c5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 699876cc568b22114e5ed8741c2fd0c053a137af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc0cf9c358faf3e738eb3b24ec61577b88dbce4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-datarepeater-control-visual-studio"></a>Einführung in das DataRepeater-Steuerelement (Visual Studio)
 Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> -Steuerelement aus dem Visual Basic Power Packs ist ein scrollfähiger Container für Steuerelemente, die sich wiederholende Daten anzeigen, z. B. Zeilen in einer Datenbanktabelle. Es kann als Alternative zum <xref:System.Windows.Forms.DataGridView> -Steuerelement verwendet werden, wenn Sie mehr Kontrolle über das Layout der Daten benötigen. Die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> "wiederholt" eine Gruppe von verwandten Steuerelementen durch mehrere Instanzen in einer fortlaufenden Ansicht erstellen. Dies ermöglicht Benutzern, mehrere Datensätze gleichzeitig anzuzeigen.  

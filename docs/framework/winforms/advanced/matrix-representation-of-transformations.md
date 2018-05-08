@@ -1,13 +1,6 @@
 ---
 title: Matrixdarstellung von Transformationen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,16 +16,11 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c68a79f2a40117a980cb6206b74d42f885874aa8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c840d8a5abc89493bc684526ce76d34307f4ba1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="matrix-representation-of-transformations"></a>Matrixdarstellung von Transformationen
 Eine m x n Matrix ist ein Satz von Zahlen, die in Zeilen m und n Spalten angeordnet sind. Die folgende Abbildung zeigt mehrere Matrizen.  
@@ -90,11 +78,11 @@ Eine m x n Matrix ist ein Satz von Zahlen, die in Zeilen m und n Spalten angeord
   
  Wenn wir mit dem Punkt (2, 1 beginnen) – dargestellt durch die Matrix [2 1 1] – und Multiplizieren Sie mit ein, klicken Sie dann B dann C, die der Punkt (2, 1) die folgenden drei Transformationen in der aufgeführten Reihenfolge unterzogen wird.  
   
- [2 1 1] ABC = [-2 5 1]  
+ [2 1 1]ABC = [-2 5 1]  
   
  Stattdessen als die drei Teile der zusammengesetzten Transformation in drei separate Matrizen gespeichert werden, Sie können Multiplizieren A, B und C gemeinsam eine einzelne 3 x 3-Matrix abrufen, die die gesamte zusammengesetzte Transformation speichert. Nehmen wir an ABC = D. Erteilt anschließend ein Punkt D multipliziert zum gleiche Ergebnis wie einen Punkt, multipliziert mit ein, klicken Sie dann B dann C.  
   
- [2 1 1] D = [-2 5 1]  
+ [2 1 1]D = [-2 5 1]  
   
  Die folgende Abbildung zeigt die Matrizen, A, B, C und D.  
   

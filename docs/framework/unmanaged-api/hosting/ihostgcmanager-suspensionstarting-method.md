@@ -1,14 +1,6 @@
 ---
 title: IHostGCManager::SuspensionStarting-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostGCManager.SuspensionStarting
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c381f524-94cf-4fa2-9298-50f847a03431
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30f6c611dc719fa6f1162498082cc9a60fb5059b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a84da2a337554873e94b47eb51916088edbb5a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostgcmanagersuspensionstarting-method"></a>IHostGCManager::SuspensionStarting-Methode
 Benachrichtigt den Host, dass die common Language Runtime (CLR) unterbricht die Ausführung von Aufgaben auf, um eine Garbagecollection auszuführen.  
@@ -48,7 +36,7 @@ HRESULT SuspensionStarting ();
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SuspensionStarting`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SuspensionStarting` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die CLR wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -68,7 +56,7 @@ HRESULT SuspensionStarting ();
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

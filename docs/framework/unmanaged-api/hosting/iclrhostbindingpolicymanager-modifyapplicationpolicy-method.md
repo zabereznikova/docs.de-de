@@ -1,14 +1,6 @@
 ---
 title: ICLRHostBindingPolicyManager::ModifyApplicationPolicy-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostBindingPolicyManager.ModifyApplicationPolicy
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 018dc40895a79788a9eef20082d764db0b2265c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy-Methode
 Ändert eine Bindungsrichtlinie für die für die angegebene Assembly und erstellt eine neue Version der Richtlinie.  
@@ -79,8 +67,8 @@ HRESULT  ModifyApplicationPolicy (
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Richtlinie wurde erfolgreich geändert.|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity`oder `pwzTargetAssemblyIdentity` wurde ein null-Verweis.|  
-|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy`ist zu klein.|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` oder `pwzTargetAssemblyIdentity` wurde ein null-Verweis.|  
+|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` ist zu klein.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -97,7 +85,7 @@ HRESULT  ModifyApplicationPolicy (
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRHostBindingPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

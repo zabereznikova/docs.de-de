@@ -2,10 +2,6 @@
 title: QualifierSet_Put-Funktion (Referenz zur nicht verwalteten API)
 description: Die Funktion QualifierSet_Put schreibt benannte Qualifizierer und seinen Wert.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bf5c6dbf0f707942d58f4d7cf155636f0532724
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put-Funktion
 Schreibt die benannte Qualifizierer und Wert. Der neue Qualifizierer wird den vorherigen Wert mit dem gleichen Namen überschrieben. Wenn Sie der Qualifizierer nicht vorhanden ist, wird es erstellt. 
@@ -57,17 +50,17 @@ HRESULT QualifierSet_Put (
 `wszName`   
 [in] Der Name des Qualifizierers der geschrieben werden soll.
 
-`pVal`[in] Ein Zeiger auf eine gültige `VARIANT` , enthält den Qualifizierer, der zu schreiben. Dieser Parameter darf nicht sein `null`.
+`pVal` [in] Ein Zeiger auf eine gültige `VARIANT` , enthält den Qualifizierer, der zu schreiben. Dieser Parameter darf nicht sein `null`.
 
-`lFlavor`[in] Einer der folgenden Konstanten, die die gewünschten Qualifizierern für diese Qualifizierer definiert. Der Standardwert ist `WBEM_FLAVOR_OVERRIDABLE` (0).
+`lFlavor` [in] Einer der folgenden Konstanten, die die gewünschten Qualifizierern für diese Qualifizierer definiert. Der Standardwert ist `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz überschrieben werden. **Dies ist der Standardwert.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Der Qualifizierer wird an Instanzen weitergegeben. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Der Qualifizierer wird auf die abgeleitete Klassen weitergegeben. |
-| "WBEM_FLAVOR_NOT_OVERRIDABLE | 0 x 10 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz nicht überschrieben werden. |
-| "WBEM_FLAVOR_AMENDED | 0 x 80 | Der Qualifizierer ist lokalisiert. |
+| "WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz nicht überschrieben werden. |
+| "WBEM_FLAVOR_AMENDED | 0x80 | Der Qualifizierer ist lokalisiert. |
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -90,7 +83,7 @@ Diese Funktion dient als Wrapper für einen Aufruf der [IWbemQualifierSet::Put](
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

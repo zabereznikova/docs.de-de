@@ -1,29 +1,17 @@
 ---
 title: Architektur der BindingSource-Komponente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BindingSource component [Windows Forms], architecture
 - Windows Forms, data binding
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0334bd7a0bc5ff46c43fd7ee549422d98c35efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-architecture"></a>Architektur der BindingSource-Komponente
 Mit der <xref:System.Windows.Forms.BindingSource> Komponente, können Sie alle Windows Forms-Steuerelemente universell an Datenquellen binden.  
@@ -57,13 +45,13 @@ Mit der <xref:System.Windows.Forms.BindingSource> Komponente, können Sie alle W
   
 -   Die Datenquelle als Liste.  
   
--   <xref:System.Windows.Forms.BindingSource>als ein <xref:System.ComponentModel.IBindingList>.  
+-   <xref:System.Windows.Forms.BindingSource> als ein <xref:System.ComponentModel.IBindingList>.  
   
 -   Benutzerdefinierte Elementvorlagen erstellen.  
   
 -   Transaktionale Element erstellen.  
   
--   <xref:System.Collections.IEnumerable>unterstützt.  
+-   <xref:System.Collections.IEnumerable> unterstützt.  
   
 -   Zur Entwurfszeit Unterstützung.  
   
@@ -120,7 +108,7 @@ Mit der <xref:System.Windows.Forms.BindingSource> Komponente, können Sie alle W
 |Ein null-Verweis (`Nothing` in Visual Basic) mit <xref:System.Windows.Forms.BindingSource.DataMember%2A> festlegen|Nicht unterstützt. löst <xref:System.ArgumentException>.|  
 |Nicht-Listentyp oder Objekt vom Typ "T"|Ein leeres <xref:System.ComponentModel.IBindingList> vom Typ "T".|  
 |Array-Instanz|Ein <xref:System.ComponentModel.IBindingList> , enthält die Elemente des Arrays.|  
-|<xref:System.Collections.IEnumerable>Instanz|Ein <xref:System.ComponentModel.IBindingList> , enthält die <xref:System.Collections.IEnumerable> Elemente|  
+|<xref:System.Collections.IEnumerable> Instanz|Ein <xref:System.ComponentModel.IBindingList> , enthält die <xref:System.Collections.IEnumerable> Elemente|  
 |Liste der Instanz, die mit Typ "T"|Ein <xref:System.ComponentModel.IBindingList> Instanz, die Typ "T" enthält.|  
   
  Darüber hinaus <xref:System.Windows.Forms.BindingSource.DataSource%2A> kann auf andere Listentypen festgelegt werden, z. B. <xref:System.ComponentModel.IListSource> und <xref:System.ComponentModel.ITypedList>, und die <xref:System.Windows.Forms.BindingSource> entsprechend behandelt wird. In diesem Fall sollte der Typ, der in der Liste enthalten ist einen Standardkonstruktor verfügen.  

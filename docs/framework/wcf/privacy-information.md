@@ -1,31 +1,19 @@
 ---
 title: Windows Communication Foundation-Datenschutzinformationen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, privacy information
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation-Datenschutzinformationen
-Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Wenn Sie mit [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Version 3.0 eine Anwendung erstellen, wirkt sich die Anwendung möglicherweise auf den Datenschutz der Endbenutzer aus. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sendet aus Ihrer Anwendung keine Daten an Microsoft, sofern nicht von Ihnen oder dem Endbenutzer anders festgelegt.  
+Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Beim Erstellen einer Anwendung mithilfe von Windows Communication Foundation (WCF), Version 3.0, kann Ihre Anwendung Datenschutz der Endbenutzer auswirken. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sendet aus Ihrer Anwendung keine Daten an Microsoft, sofern nicht von Ihnen oder dem Endbenutzer anders festgelegt.  
   
 ## <a name="wcf-in-brief"></a>WCF in Kürze  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ist ein verteiltes Messagingframework, das Microsoft .NET Framework verwendet, um Entwicklern das Erstellen verteilter Anwendungen zu ermöglichen. Zwischen zwei Anwendungen übermittelte Nachrichten enthalten Header- und Textinformationen.  
@@ -138,13 +126,13 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Schlüssel, die entfernt werden:  
   
- \-Bei xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" und xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Bei xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" und xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \-Für Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und Xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Für Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und Xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,13 +140,13 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Mögliche persönliche Informationen, die entfernt werden:  
   
- \-Für Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und Xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Für Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und Xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \-Für xmlns = "Urn: Oasis: Namen: Tc: SAML:1.0:assertion" die fett formatierten Elemente (siehe unten) entfernt werden:  
+ \- Für xmlns = "Urn: Oasis: Namen: Tc: SAML:1.0:assertion" die fett formatierten Elemente (siehe unten) entfernt werden:  
   
  \<Assertion  
   
@@ -174,7 +162,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<Bedingungen NotBefore = "[" DateTime "]" NotOnOrAfter "DateTime" = >  
   
  \<AudienceRestrictionCondition>  
   
@@ -182,7 +170,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition />*  
+ \<DoNotCacheCondition / > *  
   
  <\!--abstrakten Basistyp  
   
@@ -206,7 +194,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \<Anweisung / > *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
  \<Betreff >  
   
@@ -222,7 +210,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation>  
+ \<"Subjectconfirmation" >  
   
  \<ConfirmationMethod > [AnyUri]\</ConfirmationMethod > +  
   
@@ -232,9 +220,9 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \</ "Subjectconfirmation" >?  
   
- \</Subject>  
+ \</ Betreff >  
   
- \</SubjectStatement>*  
+ \</ SubjectStatement > *  
   
  -->  
   
@@ -266,7 +254,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</ AuthenticationStatement > *  
   
  \<AttributeStatement>  
   
@@ -282,7 +270,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</Attribute>+  
+ \</-Attribut > +  
   
  \</AttributeStatement>*  
   
@@ -290,13 +278,13 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Resource="[uri]"  
   
- Decision="[Permit&#124;Deny&#124;Indeterminate]"  
+ Entscheidung = "[zulassen&#124;Verweigern&#124;unbestimmt]"  
   
  >  
   
  [Subject]  
   
- \<Action Namespace="[uri]">[string]\</Action>+  
+ \<Aktion-Namespace = "[Uri]" > [Zeichenfolge] \< /Action > +  
   
  \<Beweise >  
   
@@ -315,7 +303,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Für die folgenden Namespaces:  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" und xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (wenn z. B. keine Aktion verfügbar ist)  
+ xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" und xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (z. B., wenn keine Aktion verfügbar ist)  
   
  Informationen werden für diese Textelemente entfernt, die Schlüsselaustausch einschließen:  
   

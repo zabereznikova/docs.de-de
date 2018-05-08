@@ -1,11 +1,7 @@
 ---
 title: GetQualifierSet-Funktion (Referenz zur nicht verwalteten API)
-description: "Die GetQualifierSet-Funktion ruft den Qualifizierer für eine Klasse oder Instanz festlegen."
+description: Die GetQualifierSet-Funktion ruft den Qualifizierer für eine Klasse oder Instanz festlegen.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 127e7862d0cb0d204e91cd5ee36f2d32f1453a8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b50befa4346e17048598afd3d018dbde2fe8572
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet-Funktion
 Ruft den Qualifizierer für die Instanz einer Klasse oder einer Klassendefinition festgelegt.
@@ -78,7 +71,7 @@ Die [IWbemQualifierSet Zeiger](https://msdn.microsoft.com/library/aa391860(v=vs.
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

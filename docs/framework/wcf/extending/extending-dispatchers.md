@@ -1,33 +1,19 @@
 ---
 title: Erweitern von Verteilern
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-dispatchers"></a>Erweitern von Verteilern
 Verteiler sind dafür verantwortlich, eingehende Nachrichten aus den zugrunde liegenden Kanälen abzufangen, sie in Methodenaufrufe im Anwendungscode zu übersetzen und die Ergebnisse zurück an den Aufrufer zu senden. Verteilererweiterungen versetzen Sie in die Lage, diese Verarbeitung zu ändern.  Sie können Nachrichten- oder Parameterinspektoren implementieren, die den Inhalt von Nachrichten oder Parametern überprüfen bzw. ändern.  Sie können die Weiterleitung von Nachrichten an Vorgänge ändern oder andere Funktionalität bereitstellen.  
   
- In diesem Thema wird beschrieben, wie die <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse und die <xref:System.ServiceModel.Dispatcher.DispatchOperation>-Klasse in einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstanwendung verwendet werden, um das Standardausführungsverhalten eines Verteilers zu ändern oder um Nachrichten, Parameter oder Rückgabewerte abzufangen oder zu ändern, bevor oder nachdem sie aus der Kanalschicht gesendet oder abgerufen werden. Weitere Informationen über die entsprechenden Client-Runtime-Nachrichtenverarbeitung finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md). Um die Rolle zu verstehen, <xref:System.ServiceModel.IExtensibleObject%601> Typen finden Sie in den Zugriff auf gemeinsam verwendete Zustände zwischen verschiedenen Laufzeitobjekte Anpassung wiedergeben [erweiterbare Objekte](../../../../docs/framework/wcf/extending/extensible-objects.md).  
+ Dieses Thema beschreibt, wie die <xref:System.ServiceModel.Dispatcher.DispatchRuntime> und <xref:System.ServiceModel.Dispatcher.DispatchOperation> Klassen in Windows Communication Foundation (WCF)-dienstanwendung, um das standardausführungsverhalten eines Verteilers zu ändern oder um abfangen oder Ändern von Nachrichten, Parameter oder zurückgeben Werte vor oder nach dem Senden oder sie aus der Kanalschicht abruft. Weitere Informationen über die entsprechenden Client-Runtime-Nachrichtenverarbeitung finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md). Um die Rolle zu verstehen, <xref:System.ServiceModel.IExtensibleObject%601> Typen finden Sie in den Zugriff auf gemeinsam verwendete Zustände zwischen verschiedenen Laufzeitobjekte Anpassung wiedergeben [erweiterbare Objekte](../../../../docs/framework/wcf/extending/extensible-objects.md).  
   
 ## <a name="dispatchers"></a>Verteiler  
  Die Dienstmodellebene führt die Konvertierung zwischen dem Programmiermodell des Entwicklers und dem zugrunde liegenden Nachrichtenaustausch, gewöhnlich als Kanalschicht bezeichnet, durch. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sind die Kanal- und die Endpunktverteiler (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> bzw. <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>) die Dienstkomponenten, die dafür verantwortlich sind, neue Kanäle zu akzeptieren, Nachrichten zu empfangen, Vorgänge zu verteilen und aufzurufen sowie Antworten zu verarbeiten. Verteilerobjekte sind empfangende Objekte, aber auch Rückrufvertragsimplementierungen in Duplexdiensten machen ihre Verteilerobjekte für Überprüfung, Änderung oder Erweiterung verfügbar.  

@@ -1,13 +1,6 @@
 ---
 title: 'Vorgehensweise: Zeichnen von Text im Hintergrund eines Steuerelements'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], drawing text to backgrounds
 - text [WPF], drawing to control backgrounds
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - backgrounds [WPF], drawing text to
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 091be80e055279685c9dba33dd6b6635e64eaff0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f79ec4f2c394fdc9462f4fd00942673b4536d713
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-text-to-a-control39s-background"></a>Vorgehensweise: Zeichnen von Text im Hintergrund eines Steuerelements
 Sie können Text direkt im Hintergrund Zeichnen eines Steuerelements durch eine Zeichenfolge zu konvertieren einer <xref:System.Windows.Media.FormattedText> Objekt, und klicken Sie dann auf des Steuerelements Zeichnen des Objekts <xref:System.Windows.Media.DrawingContext>. Sie können dieses Verfahren auch verwenden, für die Zeichnung im Hintergrund von Objekten abgeleitet <xref:System.Windows.Controls.Panel>, wie z. B. <xref:System.Windows.Controls.Canvas> und <xref:System.Windows.Controls.StackPanel>.  

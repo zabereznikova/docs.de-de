@@ -1,14 +1,6 @@
 ---
 title: ICLRRuntimeHost::ExecuteInAppDomain-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.ExecuteInAppDomain
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8c540c9618655e6df30ad253e0c4cccdf6624e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96352ec5eaba67489dbef999925c56475611746c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain-Methode
 Gibt an, die <xref:System.AppDomain> in dem den angegebenen verwalteten Code ausgeführt.  
@@ -62,7 +50,7 @@ HRESULT ExecuteInAppDomain(
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInAppDomain`wurde erfolgreich zurückgegeben.|  
+|S_OK|`ExecuteInAppDomain` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE ZURÜCK|Die CLR wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -70,7 +58,7 @@ HRESULT ExecuteInAppDomain(
 |E_FAIL|Ein Unbekannter Schwerwiegender Fehler aufgetreten ist. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr verwendbar innerhalb des Prozesses. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ExecuteInAppDomain`ermöglicht es dem Host, um die Steuerung zu in welchem <xref:System.AppDomain> die angegebene verwaltete Methode ausgeführt werden soll. Sie erhalten eine Anwendungsdomäne-Bezeichner, der auf den Wert der entspricht der <xref:System.AppDomain.Id%2A> Eigenschaft durch den Aufruf [[GetCurrentAppDomainId-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
+ `ExecuteInAppDomain` ermöglicht es dem Host, um die Steuerung zu in welchem <xref:System.AppDomain> die angegebene verwaltete Methode ausgeführt werden soll. Sie erhalten eine Anwendungsdomäne-Bezeichner, der auf den Wert der entspricht der <xref:System.AppDomain.Id%2A> Eigenschaft durch den Aufruf [GetCurrentAppDomainId-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -79,7 +67,7 @@ HRESULT ExecuteInAppDomain(
   
  **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [ICLRRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

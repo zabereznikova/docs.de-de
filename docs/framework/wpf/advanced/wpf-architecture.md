@@ -1,14 +1,6 @@
 ---
 title: WPF-Architektur
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
 - attached properties [WPF]
@@ -24,17 +16,11 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70afa7e193832837650d72837b25e26e3b64c180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-architecture"></a>WPF-Architektur
 Dieses Thema enthält eine geführte Tour durch Windows Presentation Foundation (WPF)-Klassenhierarchie. Es behandelt die meisten der wichtigsten Subsysteme von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] und beschreibt, wie sie interagieren. Es werden auch einige der durch die Architekten von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] getroffenen Entscheidungen erläutert.  
@@ -64,7 +50,7 @@ Dieses Thema enthält eine geführte Tour durch Windows Presentation Foundation 
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  Eine der primären Architekturstrategien bei der Konzeption von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] war die Bevorzugung von Eigenschaften über Methoden oder Ereignissen. Eigenschaften sind deklarativ und machen es einfacher, eine Absicht statt einer Aktion anzugeben. Dies bot auch Unterstützung für ein modell- oder datengesteuertes System zur Anzeige von Inhalten der Benutzeroberfläche. Diese Strategie hatte den beabsichtigten Effekt, mehr Eigenschaften zu schaffen, an die Sie anbinden können, um das Verhalten einer Anwendung besser zu steuern.  
   
- Damit größere Teile des Systems durch Eigenschaften gesteuert werden konnten, war ein vielfältigeres Eigenschaftensystem vonnöten, als das, was die [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] bot. Ein einfaches Beispiel für diese Vielfalt sind die Änderungsbenachrichtigungen. Um eine zwei-Wege-Bindung zu ermöglichen, müssen beide Seiten der Bindung Änderungsbenachrichtigungen unterstützen. Um an Eigenschaftswerte ein bestimmtes Verhalten zu binden, müssen Sie benachrichtigt werden, wenn sich der Eigenschaftswert ändert. Das [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] verfügt zwar über eine Schnittstelle namens **INotifyPropertyChange**, die es Objekten erlaubt, Benachrichtigungen zu veröffentlichen; dies ist jedoch nur optional.  
+ Damit größere Teile des Systems durch Eigenschaften gesteuert werden konnten, war ein vielfältigeres Eigenschaftensystem vonnöten, als das, was die [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] bot. Ein einfaches Beispiel für diese Vielfalt sind die Änderungsbenachrichtigungen. Um eine zwei-Wege-Bindung zu ermöglichen, müssen beide Seiten der Bindung Änderungsbenachrichtigungen unterstützen. Um an Eigenschaftswerte ein bestimmtes Verhalten zu binden, müssen Sie benachrichtigt werden, wenn sich der Eigenschaftswert ändert. Microsoft .NET Framework verfügt über eine Schnittstelle **INotifyPropertyChange**, die einem Objekt Gelegenheit zu veröffentlichen änderungsbenachrichtigungen aus, aber dies optional ist.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet ein umfangreicheres Eigenschaftensystem, abgeleitet aus dem <xref:System.Windows.DependencyObject> Typ. Dieses Eigenschaftensystem ist in der Tat ein Eigenschaftensystem der „Abhängigkeiten” in dem Sinne, dass es Abhängigkeiten zwischen Eigenschaftsausdrücken nachverfolgt und Eigenschaftswerte automatisch neu überprüft, wenn sich die Abhängigkeiten ändern. Angenommen, Sie haben eine Eigenschaft, die erbt (z. B. <xref:System.Windows.Controls.Control.FontSize%2A>), das System wird automatisch aktualisiert, wenn die Eigenschaft für ein übergeordnetes Element eines Elements geändert wird, die den Wert erbt.  
   

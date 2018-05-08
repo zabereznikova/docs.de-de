@@ -1,13 +1,6 @@
 ---
 title: ComponentResourceKey-Markuperweiterung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ComponentResourceKey
 - ComponentResourceKeyExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4bfaee35ba9f8cf60deb01c52a142433d08021c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d11c26add084165eaa9fd0b319a375c4b98c7fb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey-Markuperweiterung
 Definiert und verweist auf die Schlüssel für Ressourcen, die von externen Assemblys geladen werden. Dies ermöglicht eine Ressourcensuche einen Zieltyp in einer Assembly, anstatt explizit ein Ressourcenwörterbuch in einer Assembly oder einer Klasse angeben.  
@@ -67,7 +55,7 @@ Definiert und verweist auf die Schlüssel für Ressourcen, die von externen Asse
   
 -   Zugreifen auf eine Ressource Design aus der Assembly, wenn Sie Designressource das Steuerelement aber Eigenschaftswerte, die von Ressourcen, die das Steuerelement Designs gebotenen stammen, verwendet werden soll.  
   
- Zum Verweisen auf Ressourcen, die von Designs stammen, wird im Allgemeinen empfohlen, Sie verwenden `{DynamicResource}` statt `{StaticResource}`. Dies wird in den Verwendungen gezeigt. `{DynamicResource}`wird empfohlen, da das Design selbst vom Benutzer geändert werden kann. Wenn die Komponentenressource soll, die Absicht der Autor des Steuerelements für die Unterstützung eines Designs am ehesten entspricht, sollten Sie Ihre Komponentenressourcenverweis auch dynamisch zu sein aktivieren.  
+ Zum Verweisen auf Ressourcen, die von Designs stammen, wird im Allgemeinen empfohlen, Sie verwenden `{DynamicResource}` statt `{StaticResource}`. Dies wird in den Verwendungen gezeigt. `{DynamicResource}` wird empfohlen, da das Design selbst vom Benutzer geändert werden kann. Wenn die Komponentenressource soll, die Absicht der Autor des Steuerelements für die Unterstützung eines Designs am ehesten entspricht, sollten Sie Ihre Komponentenressourcenverweis auch dynamisch zu sein aktivieren.  
   
  Die <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifiziert einen Typ, der in der Zielassembly vorhanden ist, in dem die Ressource tatsächlich definiert. Ein `ComponentResourceKey` definiert und unabhängig von genau zu wissen, verwendet werden können, in denen die <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> definiert ist, muss jedoch letztlich auflösen den Typ von Assemblys, auf die verwiesen wird.  
   
@@ -79,7 +67,7 @@ Definiert und verweist auf die Schlüssel für Ressourcen, die von externen Asse
   
  Technisch gesehen ist der Wert für `targetID` kann jedes Objekt sein, er muss nicht in eine Zeichenfolge sein. Die häufigste Verwendung in WPF ist jedoch zum Ausrichten der `targetID` Wert mit Formularen, die Zeichenfolgen sind, und, in denen diese Zeichenfolgen sind gültig, in, der [XamlName-Grammatik](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
   
- `ComponentResourceKey`kann in der Syntax der Object-Element verwendet werden. In diesem Fall geben Sie den Wert sowohl die <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> und <xref:System.Windows.ComponentResourceKey.ResourceId%2A> Eigenschaften ist erforderlich, um die Erweiterung zu initialisieren.  
+ `ComponentResourceKey` kann in der Syntax der Object-Element verwendet werden. In diesem Fall geben Sie den Wert sowohl die <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> und <xref:System.Windows.ComponentResourceKey.ResourceId%2A> Eigenschaften ist erforderlich, um die Erweiterung zu initialisieren.  
   
  In der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] leserimplementierung, die Handhabung für diese Markuperweiterung wird definiert, indem die <xref:System.Windows.ComponentResourceKey> Klasse.  
   

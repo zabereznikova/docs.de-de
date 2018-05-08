@@ -1,44 +1,32 @@
 ---
 title: Sichern von Nachrichten mithilfe der Nachrichtensicherheit
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Sichern von Nachrichten mithilfe der Nachrichtensicherheit
-In diesem Abschnitt wird die Nachrichtensicherheit von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bei der Verwendung von <xref:System.ServiceModel.NetMsmqBinding> erläutert.  
+Dieser Abschnitt beschreibt die WCF-nachrichtensicherheit Verwendung <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
 >  In diesem Thema lesen, wird empfohlen, vor dem Lesen Sie [Schlüsselbegriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- Die folgende Abbildung zeigt ein Modell einer Kommunikation unter Verwendung von Warteschlangen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Anhand dieser Abbildung und der Terminologie werden  
+ Die folgende Abbildung zeigt ein konzeptionelles Modell einer warteschlangenkommunikation mithilfe von WCF. Anhand dieser Abbildung und der Terminologie werden  
   
  die Konzepte der Transportsicherheit erläutert.  
   
  ![In der Warteschlange Anwendungsdiagramm](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Warteschlange-Abbildung")  
   
- Wenn Sie Nachrichten in einer Warteschlange in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] senden, wird die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachricht als Textkörper der MSMQ-Nachricht (Message Queuing) angefügt. Mit der Transportsicherheit wird die gesamte MSMQ-Nachricht gesichert, mit der Nachrichtensicherheit (oder SOAP-Sicherheit) hingegen wird nur der Textkörper der MSMQ-Nachricht gesichert.  
+ Beim Senden von Nachrichten über WCF in die Warteschlange eingereiht, wird die WCF-Nachricht als Text der Nachricht Message Queuing (MSMQ) angefügt. Mit der Transportsicherheit wird die gesamte MSMQ-Nachricht gesichert, mit der Nachrichtensicherheit (oder SOAP-Sicherheit) hingegen wird nur der Textkörper der MSMQ-Nachricht gesichert.  
   
- Das Kernkonzept der Nachrichtensicherheit besteht darin, dass der Client die Nachricht für die empfangende Anwendung (Dienst) sichert. Im Gegensatz dazu sichert der Client bei der Transportsicherheit die Nachricht für die Zielwarteschlange. Folglich spielt MSMQ keine aktive Rolle, wenn die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachricht mit der Nachrichtensicherheit gesichert wird.  
+ Das Kernkonzept der Nachrichtensicherheit besteht darin, dass der Client die Nachricht für die empfangende Anwendung (Dienst) sichert. Im Gegensatz dazu sichert der Client bei der Transportsicherheit die Nachricht für die Zielwarteschlange. Folglich spielt MSMQ keine beim Sichern der WCF-Nachricht mit nachrichtensicherheit.  
   
- Mit der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichtensicherheit werden der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachricht Sicherheitsheader hinzugefügt, die sich in vorhandene Sicherheitsinfrastrukuren integrieren lassen, wie z. B. ein Zertifikat oder das Kerberos-Protokoll.  
+ WCF-nachrichtensicherheit hinzugefügt die WCF-Nachricht, die Integration in vorhandene Sicherheitsinfrastrukturen, z. B. ein Zertifikat oder das Kerberos-Protokoll Security-Header.  
   
 ## <a name="message-credential-type"></a>Anmeldeinformationstypen für Nachrichten  
  Bei der Verwendung der Nachrichtensicherheit können der Dienst und der Client Anmeldeinformationen bereitstellen, um sich gegenseitig zu authentifizieren. Sie können die Nachrichtensicherheit auswählen, indem Sie den <xref:System.ServiceModel.NetMsmqBinding.Security%2A>-Modus auf `Message` oder `Both` (d. h. Transport- und Nachrichtensicherheit werden verwendet) festlegen.  

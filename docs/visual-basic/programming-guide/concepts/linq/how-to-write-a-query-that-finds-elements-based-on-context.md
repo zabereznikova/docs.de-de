@@ -1,22 +1,12 @@
 ---
 title: 'Vorgehensweise: Schreiben eine Abfrage, die Elemente, die anhand des Kontexts (Visual Basic) findet.'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 635a8c06d5ad928e192b8cd15862aa02192f94d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a16f591fc08e8822059bae2ee07d96af575059bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Vorgehensweise: Schreiben eine Abfrage, die Elemente, die anhand des Kontexts (Visual Basic) findet.
 Es kann vorkommen, dass Sie eine Abfrage schreiben möchten, die Elemente auf der Grundlage ihres Kontexts sucht. Dabei soll die Filterung auf den vorausgehenden oder folgenden nebengeordneten Elementen erfolgen. Außerdem möchten Sie vielleicht auch nach untergeordneten oder indirekt übergeordneten Elementen filtern.  

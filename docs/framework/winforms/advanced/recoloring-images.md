@@ -1,28 +1,16 @@
 ---
-title: "Neueinfärben von Bildern"
-ms.custom: 
+title: Neueinfärben von Bildern
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - images [Windows Forms], recoloring
 - recoloring images
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c55c27c09a60e5ac5dd8f2fc6ef9372d4390621d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a85a0637e86657d68b5ea34d8c6eea74cb31af8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recoloring-images"></a>Neueinfärben von Bildern
 Neufärben von versteht man Bildfarben anpassen. Einige Beispiele für Neufärben von sind eine Farbe in eine andere, Farbintensität relativ zu einer anderen Farbe Anpassung, Anpassen der Helligkeit oder Kontrast aller Farben und Konvertieren von Farben in Graustufen ändern.  
@@ -46,7 +34,7 @@ Neufärben von versteht man Bildfarben anpassen. Einige Beispiele für Neufärbe
  [Gewusst wie: Verwenden einer Farbumwandlungstabelle](../../../../docs/framework/winforms/advanced/how-to-use-a-color-remap-table.md)  
  Definiert das Neuzuordnen und zeigt, wie eine Farbumwandlungstabelle.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Drawing.Imaging.ColorMatrix>  
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   

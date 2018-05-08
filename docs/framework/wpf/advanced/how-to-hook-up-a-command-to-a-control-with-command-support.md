@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Einbinden eines Befehls in ein Steuerelement mit Befehlsunterstützung"
-ms.custom: 
+title: 'Gewusst wie: Einbinden eines Befehls in ein Steuerelement mit Befehlsunterstützung'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b190868b8718442966a22d7be14d976ec47f53b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47abd36558864116e5f5ed921419c374c064e2cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Gewusst wie: Einbinden eines Befehls in ein Steuerelement mit Befehlsunterstützung
 Im folgende Beispiel wird gezeigt, wie zum Einbinden einer <xref:System.Windows.Input.RoutedCommand> auf eine <xref:System.Windows.Controls.Control> die verfügt über integrierte Unterstützung für den Befehl.  Ein vollständiges Beispiel, das Befehle mit mehrere Quellen verknüpft, finden Sie im Beispiel unter [Create a Custom RoutedCommand Sample (Erstellen eines benutzerdefinierten „RoutedCommand“-Beispiels)](http://go.microsoft.com/fwlink/?LinkID=159980).  

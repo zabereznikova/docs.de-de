@@ -1,13 +1,6 @@
 ---
-title: "Renderingebenen für Grafiken"
-ms.custom: 
+title: Renderingebenen für Grafiken
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - rendering graphics [WPF]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-caps.latest.revision: "44"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 457b7e76b16e42c71d1e2d1986d58b2708396e22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f9de7736851027c9f6b851984953e37b96d456a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken
 Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf dem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung ausgeführt wird.  
@@ -67,7 +55,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
  Die folgende Tabelle zeigt die Unterschiede in den Anforderungen der Grafikhardware für die Renderingebene 1 und 2:  
   
-|Funktion|Ebene 1|Ebene 2|  
+|Feature|Ebene 1|Ebene 2|  
 |-------------|------------|------------|  
 |[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Version|Muss größer als oder gleich 9.0 sein.|Muss größer als oder gleich 9.0 sein.|  
 |Video-RAM|Muss größer als oder gleich 60 MB sein.|Muss größer als oder gleich 120 MB sein.|  
@@ -77,7 +65,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
  Die folgenden Features und Funktionen sind für die Renderingebene 1 und 2 hardwarebeschleunigt:  
   
-|Funktion|Hinweise|  
+|Feature|Hinweise|  
 |-------------|-----------|  
 |2D-Rendering|Das meiste 2D-Rendering wird unterstützt.|  
 |3D-Rasterung|Die meisten 3D-Rasterungen werden unterstützt.|  
@@ -89,17 +77,17 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
  Die folgenden Features und Funktionen sind nur für die Renderingebene 2 hardwarebeschleunigt:  
   
-|Funktion|Hinweise|  
+|Feature|Hinweise|  
 |-------------|-----------|  
 |3D-Antialiasing|3D Antialiasing wird nur auf Betriebssystemen unterstützt, die Windows Display Driver Model (WDDM) unterstützen, wie z.B. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] und [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
   
  Die folgenden Features und Funktionen sind **nicht** hardwarebeschleunigt:  
   
-|Funktion|Hinweise|  
+|Feature|Hinweise|  
 |-------------|-----------|  
 |Gedruckter Inhalt|Jeder gedruckte Inhalt wird mithilfe der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Softwarepipeline gerendert.|  
-|Gerasterte Inhalte, die verwendet<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Alle Inhalte gerendert werden, mithilfe der <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> Methode <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
-|Gekachelte Inhalte, die verwendet<xref:System.Windows.Media.TileBrush>|Gekachelte Inhalte, in dem die <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaft von der <xref:System.Windows.Media.TileBrush> auf festgelegt ist <xref:System.Windows.Media.TileMode.Tile>.|  
+|Gerasterte Inhalte, die verwendet <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Alle Inhalte gerendert werden, mithilfe der <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> Methode <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Gekachelte Inhalte, die verwendet <xref:System.Windows.Media.TileBrush>|Gekachelte Inhalte, in dem die <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaft von der <xref:System.Windows.Media.TileBrush> auf festgelegt ist <xref:System.Windows.Media.TileMode.Tile>.|  
 |Flächen, die die maximale Texturgröße der Grafikhardware überschreiten|Bei der meisten Grafikhardware sind große Flächen 2048 x 2048 oder 4096 x 4096 Pixel groß.|  
 |Jeder Vorgang, dessen Video-RAM-Anforderung den Arbeitsspeicher der Grafikhardware überschreitet|Sie können den Video-RAM-Verbrauch der Anwendung mithilfe des Perforatortools überwachen, das Bestandteil der [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) im Windows SDK ist.|  
 |Überlappende Fenster|Überlappende Fenster ermöglichen den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen das Rendering von Inhalt auf dem Bildschirm in einem nicht rechteckigen Fenster. Auf Betriebssystemen, die Windows Display Driver Model (WDDM) unterstützen, wie z.B. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] und [!INCLUDE[win7](../../../../includes/win7-md.md)], sind überlappende Fenster hardwarebeschleunigt. Auf anderen Systemen, wie z.B. [!INCLUDE[winxp](../../../../includes/winxp-md.md)], werden überlappende Fenster von Software ohne Hardwarebeschleunigung gerendert.<br /><br /> Sie können überlappende Fenster in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] durch Festlegen der folgenden <xref:System.Windows.Window> Eigenschaften:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  

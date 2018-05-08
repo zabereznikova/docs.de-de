@@ -1,28 +1,18 @@
 ---
 title: Garbage Collection-ETW-Ereignisse
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GC events
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 133d48baa9613ea698b6d6a21f0dfe88a798859c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen, die die Garbage Collection betreffen. Sie helfen beim Analysieren und Debuggen, einschließlich der Ermittlung, wie oft die Garbage Collection durchgeführt wurde, wie viel Arbeitsspeicher während der Garbage Collection freigegeben wurde usw.  
@@ -75,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 |Feldname|Datentyp|Beschreibung|  
 |----------------|---------------|-----------------|  
-|Anzahl|win:UInt32|Die *n*-te Garbage Collection.|  
+|Anzahl|win:UInt32|Die *N*-te Garbage Collection.|  
 |Tiefe|win:UInt32|Die erfasste Generation.|  
 |Grund|win:UInt32|Grund für die Auslösung der Garbage Collection:<br /><br /> 0x0 – Zuordnung für kleinen Objektheap.<br /><br /> 0x1 – Induziert.<br /><br /> 0x2 – Wenig Arbeitsspeicher<br /><br /> 0x3 – Leer.<br /><br /> 0x4 – Zuordnung für großen Objektheap.<br /><br /> 0x5 – Nicht genug Speicherplatz (für kleinen Objektheap).<br /><br /> 0x6 – Nicht genügend Speicherplatz (für großen Objektheap)<br /><br /> 0x7 – Induziert, aber nicht als blockierend erzwungen.|  
 |Typ|win:UInt32|0x0 – Blockieren der Garbage Collection außerhalb der Garbage Collection im Hintergrund aufgetreten.<br /><br /> 0x1 – Garbage Collection im Hintergrund.<br /><br /> 0x2 – Blockieren der Garbage Collection während der Garbage Collection im Hintergrund aufgetreten.|  
@@ -101,7 +91,7 @@ ms.lasthandoff: 12/22/2017
   
 |Feldname|Datentyp|Beschreibung|  
 |----------------|---------------|-----------------|  
-|Anzahl|win:UInt32|Die *n*-te Garbage Collection.|  
+|Anzahl|win:UInt32|Die *N*-te Garbage Collection.|  
 |Tiefe|win:UInt32|Die Generation, die erfasst wurde.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   

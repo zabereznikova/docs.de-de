@@ -1,14 +1,6 @@
 ---
 title: 'Gewusst wie: Bereitstellen einer Toolboxbitmap für ein Steuerelement'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5d34cbb88805d9c034df61aba89ebd7bb224b1da
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3698d2fdbd0375d0a154d6ecea3a248b31da2aeb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Gewusst wie: Bereitstellen einer Toolboxbitmap für ein Steuerelement
 Wenn Sie möchten ein besonderes Symbol für das Steuerelement angezeigt werden, der **Toolbox**, können, geben Sie ein bestimmtes Abbild mithilfe der <xref:System.Drawing.ToolboxBitmapAttribute>. Diese Klasse ist ein *Attribut*, eine besondere Klassenform, die Sie an andere Klassen anfügen können. Weitere Informationen zu Attributen finden Sie unter [nicht im BUILD: Übersicht über Attribute in Visual Basic](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) für Visual Basic und [Attribute](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) für Visual c#.  

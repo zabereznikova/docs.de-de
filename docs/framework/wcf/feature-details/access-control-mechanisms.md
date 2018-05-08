@@ -1,34 +1,20 @@
 ---
 title: Zugriffssteuerungsmechanismen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89606d1e02b58f5f627d28b7354def848cd5a350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57ead53dd9e6bc1b2e3624791c7cc0c7d437cd7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-control-mechanisms"></a>Zugriffssteuerungsmechanismen
-Sie können den Zugriff auf mehrere Arten mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kontrollieren. In diesem Thema werden kurz die verschiedenen Mechanismen besprochen und Vorschläge dazu unterbreitet, wann die einzelnen Mechanismen eingesetzt werden sollten. Dies soll Ihnen die Wahl des richtigen Mechanismus erleichtern. Die Zugriffstechnologien sind in der Reihenfolge der Komplexität aufgelistet. Die einfachste Technologie ist das <xref:System.Security.Permissions.PrincipalPermissionAttribute>; die komplexeste ist das Identitätsmodell.  
+Sie können den Zugriff auf verschiedene Weise mit der Windows Communication Foundation (WCF) steuern. In diesem Thema werden kurz die verschiedenen Mechanismen besprochen und Vorschläge dazu unterbreitet, wann die einzelnen Mechanismen eingesetzt werden sollten. Dies soll Ihnen die Wahl des richtigen Mechanismus erleichtern. Die Zugriffstechnologien sind in der Reihenfolge der Komplexität aufgelistet. Die einfachste Technologie ist das <xref:System.Security.Permissions.PrincipalPermissionAttribute>; die komplexeste ist das Identitätsmodell.  
   
- Zusätzlich zu diesen Mechanismen, die Identitätswechsel und Delegierung mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] finden [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Zusätzlich zu diesen Mechanismen Identitätswechsel- und Delegierungsfunktionen in WCF in erläutert wird [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="principalpermissionattribute"></a>PrincipalPermissionAttribute  
  Das <xref:System.Security.Permissions.PrincipalPermissionAttribute> wird verwendet, um den Zugriff auf eine Dienstmethode einzuschränken. Wenn das Attribut auf eine Methode angewendet wird, kann es verwendet werden, um die Identität eines bestimmten Aufrufers oder dessen Mitgliedschaft in einer Windows-Gruppe oder [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rolle anzufordern. Wenn der Client mit einem X.509-Zertifikat authentifiziert ist, erhält er eine primäre Identität, die aus dem Betreffnamen und dem Fingerabdruck des Zertifikats besteht.  
@@ -41,16 +27,16 @@ Sie können den Zugriff auf mehrere Arten mit [!INCLUDE[indigo1](../../../../inc
  Eine Funktion von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ist der Mitgliedschaftsanbieter. Obwohl der Mitgliedschaftsanbieter technisch gesehen kein Mechanismus zur Zugriffskontrolle ist, ermöglicht er eine Kontrolle des Zugriffs auf den Dienst, indem er die Anzahl der möglichen Identitäten begrenzt, die auf die Endpunkte des Diensts zugreifen können. Die Mitgliedschaftsfunktion umfasst eine Datenbank, in die der Benutzername und das Kennwort eingegeben werden können, mit denen Benutzer einer Website Konten auf der Site einrichten können. Um auf einen Dienst zuzugreifen, der den Mitgliedschaftsanbieter verwendet, muss sich der Benutzer mit seinem Benutzernamen und Kennwort anmelden.  
   
 > [!NOTE]
->  Sie müssen die Datenbank zunächst über die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Funktion mit Daten füllen, bevor ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst sie für die Autorisierung verwenden kann.  
+>  Sie müssen zuerst auffüllen, die mithilfe der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Funktion, bevor sie ein WCF-Dienst für die Autorisierung verwenden kann.  
   
  Sie können die Mitgliedschaftsfunktion auch verwenden, wenn Sie bereits eine Mitgliedschaftsdatenbank von einer bestehenden [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Website haben und möchten, dass dieselben Benutzer mit denselben Benutzernamen und Kennwörtern Ihren Dienst nutzen können.  
   
- Weitere Informationen zur Verwendung der Mitgliedschaftsfunktion in einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Diensts [Vorgehensweise: Verwenden Sie den ASP.NET-Mitgliedschaftsanbieter](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+ Weitere Informationen über das Mitgliedschaftsfeature in einem WCF-Dienst finden Sie unter [Vorgehensweise: Verwenden Sie den ASP.NET-Mitgliedschaftsanbieter](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
 ## <a name="aspnet-role-provider"></a>ASP.NET-Rollenanbieter  
- Eine weitere Funktion von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ist die Fähigkeit, Autorisierung mit Rollen zu verwalten. Der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter ermöglicht den Entwicklern, Rollen für Benutzer zu erstellen und jedem Benutzer eine oder mehrere Rollen zuzuweisen. Wie beim Mitgliedschaftsanbieter werden die Rollen und Zuweisungen in einer Datenbank gespeichert und können mithilfe der Tools, die durch eine bestimmte Implementierung des [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieters bereitgestellt wurden, mit Daten gefüllt werden. Wie bei der Mitgliedschaftsfunktion können [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Entwickler die Informationen in der Datenbank verwenden, um Dienstbenutzer nach Rollen zu autorisieren. Beispielsweise können Sie den Rollenanbieter gemeinsam mit dem oben beschriebenen `PrincipalPermissionAttribute`-Mechanismus zur Zugriffskontrolle verwenden.  
+ Eine weitere Funktion von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ist die Fähigkeit, Autorisierung mit Rollen zu verwalten. Der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter ermöglicht den Entwicklern, Rollen für Benutzer zu erstellen und jedem Benutzer eine oder mehrere Rollen zuzuweisen. Wie beim Mitgliedschaftsanbieter werden die Rollen und Zuweisungen in einer Datenbank gespeichert und können mithilfe der Tools, die durch eine bestimmte Implementierung des [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieters bereitgestellt wurden, mit Daten gefüllt werden. Wie bei der Mitgliedschaftsfunktion erfahrenen Entwicklern von WCF der Informationen können in der Datenbank um Dienstbenutzer nach Rollen zu autorisieren. Beispielsweise können Sie den Rollenanbieter gemeinsam mit dem oben beschriebenen `PrincipalPermissionAttribute`-Mechanismus zur Zugriffskontrolle verwenden.  
   
- Sie können den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter auch verwenden, wenn Sie eine bestehende [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieterdatenbank haben und dieselben Regeln und Benutzerzuweisungen in Ihrem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst nutzen möchten.  
+ Sie können auch die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Rollenanbieter, wenn Sie eine vorhandene [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -rollenanbieterdatenbank und den gleichen Satz von Regeln und benutzerzuweisungen in der WCF-Dienst verwenden möchten.  
   
  Weitere Informationen zur Verwendung der rollenanbieterfunktion finden Sie unter [wie: Verwenden des ASP.NET-Rollenanbieters bei einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
@@ -59,7 +45,7 @@ Sie können den Zugriff auf mehrere Arten mit [!INCLUDE[indigo1](../../../../inc
   
  Sie können AzMan und den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter auch verwenden, wenn Sie bereits über Zugriff auf eine bestehende AzMan-Installation verfügen und Ihre Dienstbenutzer über die Funktionen der AzMan/Rollenanbieter-Kombination autorisieren möchten.  
   
- Weitere Informationen zu AzMan und den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Rollenanbieters finden Sie unter [How To: Verwendung Autorisierungs-Manager (AzMan) mit ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951). Weitere Informationen zur Verwendung von AzMan und den Rollenanbieter für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Services, finden Sie unter [wie: Verwenden des Rollenanbieters für den ASP.NET-Autorisierungs-Manager bei einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ Weitere Informationen zu AzMan und den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Rollenanbieters finden Sie unter [How To: Verwendung Autorisierungs-Manager (AzMan) mit ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951). Weitere Informationen zur Verwendung von AzMan und den Rollenanbieter für WCF-Dienste finden Sie unter [wie: Verwenden des Rollenanbieters für den ASP.NET-Autorisierungs-Manager bei einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Identitätsmodell  
  Das Identitätsmodell besteht aus einem Satz APIs, die Ihnen ermöglichen, Ansprüche und Richtlinien zu verwalten, um Clients zu autorisieren. Mit dem Identitätsmodell können Sie jeden Anspruch prüfen, der in den vom Benutzer zur Authentifizierung beim Dienst verwendeten Anmeldeinformationen enthalten ist. Anschließend können Sie die Ansprüche mit den Richtlinien für diesen Dienst vergleichen und den Zugriff entsprechend gewähren oder verweigern.  

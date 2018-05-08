@@ -1,42 +1,30 @@
 ---
 title: Sicherheit Overview1
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-caps.latest.revision: 37
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1475891cf83c05552da247ffb04a866d80a396ea
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 6aff25547f02458d894de7235ecfb2f704d8664a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist eine auf SOAP-Nachrichten basierende verteilte Programmierplattform. Das Sichern von Nachrichten zwischen Clients und Diensten ist für den Datenschutz außerordentlich wichtig. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet eine vielseitige und interoperable Plattform für den Austausch sicherer Nachrichten auf Grundlage der vorhandenen Sicherheitsinfrastruktur und der anerkannten Sicherheitsstandards für SOAP-Nachrichten.  
+Windows Communication Foundation (WCF) ist eine SOAP-Nachrichten basierende verteilte Programmierplattform, und Sichern von Nachrichten zwischen Clients und Diensten ist wichtig, den Schutz von Daten. WCF bietet eine vielseitige und interoperable Plattform für den Austausch sicherer Nachrichten auf Grundlage der vorhandenen Sicherheitsinfrastruktur und der anerkannten Sicherheitsstandards für SOAP-Nachrichten.  
   
 > [!NOTE]
 >  Ein umfassendes Handbuch zu WCF-Sicherheit, finden Sie unter [WCF Security Guidance](http://go.microsoft.com/fwlink/?LinkID=158912).  
   
- Die in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendeten Konzepte sind bekannt, sofern Sie sichere, verteilte Anwendungen mit vorhandenen Technologien wie HTTPS, integrierte Windows-Sicherheit oder mit Benutzernamen und Kennwörtern zum Authentifizieren von Benutzern erstellt haben. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird nicht nur in vorhandene Sicherheitsinfrastrukturen integriert, sondern erweitert mithilfe von sicheren SOAP-Nachrichten auch verteilte Sicherheit über nur in Windows verfügbare Domänen hinaus. Betrachten Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] als Implementierung vorhandener Sicherheitsmechanismen mit dem großen Vorteil der Verwendung von SOAP als zusätzliches Protokoll. Beispielsweise verfügen Anmeldeinformationen zur Identifizierung eines Clients oder Diensts, wie Benutzername, Kennwort oder X.509-Zertifikate, über interoperable XML-basierte SOAP-Profile. Mithilfe dieser Profile werden Nachrichten durch Nutzen offener Spezifikationen wie digitalen XML-Signaturen und XML-Verschlüsselung sicher ausgetauscht. Eine Liste der Spezifikationen, finden Sie unter [unterstützte Webdienstprotokolle vom sicherheitsbindungsarten Interoperabilitätsbindungen](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
+ WCF verwendet Konzepte sind bekannt, wenn Sie sichere, verteilte Anwendungen mit vorhandenen Technologien wie HTTPS, Windows erstellt haben integrierte Sicherheit oder Benutzernamen und Kennwörter zur Authentifizierung von Benutzern. WCF nicht nur in vorhandene Sicherheitsinfrastrukturen integriert, sondern auch verteilte Sicherheit über nur-Windows-Domänen erweitert, mithilfe von sicheren SOAP-Nachrichten. Betrachten Sie WCF eine Implementierung vorhandener Sicherheitsmechanismen mit dem großen Vorteil der Verwendung von SOAP als zusätzliches Protokoll. Beispielsweise verfügen Anmeldeinformationen zur Identifizierung eines Clients oder Diensts, wie Benutzername, Kennwort oder X.509-Zertifikate, über interoperable XML-basierte SOAP-Profile. Mithilfe dieser Profile werden Nachrichten durch Nutzen offener Spezifikationen wie digitalen XML-Signaturen und XML-Verschlüsselung sicher ausgetauscht. Eine Liste der Spezifikationen, finden Sie unter [unterstützte Webdienstprotokolle vom sicherheitsbindungsarten Interoperabilitätsbindungen](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   
- Eine andere Parallele ist das Component Object Model (COM) auf der Windows-Plattform, mit dem sichere verteilte Anwendungen aktiviert werden. COM besitzt einen komplexen Sicherheitsmechanismus, in dem der Sicherheitskontext zwischen Komponenten übergehen kann; dieser Mechanismus gewährleistet Integrität, Vertraulichkeit und Authentifizierung. COM ermöglicht jedoch kein plattformübergreifendes, sicheres Messaging wie dies bei [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] der Fall ist. Mithilfe von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] können Sie Dienste und Clients erstellen, die sich von Windows-Domänen über das Internet erstrecken. Die interoperablen Nachrichten von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sind sehr wichtig für die Erstellung dynamischer, unternehmensorientierter Dienste, mit denen eine hohe Informationssicherheit gewährleistet wird.  
+ Eine andere Parallele ist das Component Object Model (COM) auf der Windows-Plattform, mit dem sichere verteilte Anwendungen aktiviert werden. COM besitzt einen komplexen Sicherheitsmechanismus, in dem der Sicherheitskontext zwischen Komponenten übergehen kann; dieser Mechanismus gewährleistet Integrität, Vertraulichkeit und Authentifizierung. COM aktiviert jedoch nicht über Plattformen hinweg, sichere wie WCF-messaging. Verwenden von WCF, können Sie die Dienste und Clients, die von Windows-Domänen über das Internet erstrecken erstellen. Die interoperablen Nachrichten von WCF sind unverzichtbar für die Erstellung dynamischer, unternehmensorientierter Dienste, die Ihnen helfen gerne die Sicherheit Ihrer persönlichen Informationen sicher.  
   
 ## <a name="windows-communication-foundation-security-benefits"></a>Vorzüge der Windows Communication Foundation-Sicherheit  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist eine verteilte Programmierplattform auf Grundlage von SOAP-Nachrichten. Mithilfe von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] können Sie Anwendungen erstellen, die sowohl als Dienste als auch als Dienstclients funktionieren und Nachrichten von einer unbegrenzten Zahl anderer Dienste und Clients erstellen und verarbeiten. In einer derartigen verteilten Anwendung können Nachrichten zwischen Knoten, durch Firewalls, im Internet und durch zahlreiche SOAP-Vermittler fließen. Dies führt zu einer Vielzahl von Nachrichtensicherheitsrisiken. In den folgenden Beispielen werden einige häufige Bedrohungen beim Austausch von Nachrichten zwischen Entitäten gezeigt, die durch [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit gemindert werden können:  
+ WCF ist eine verteilte Programmierplattform basierend auf SOAP-Nachrichten. Verwenden von WCF, können Sie Anwendungen diese Funktion sowohl Dienste als auch Service, erstellen und Verarbeiten von Nachrichten von einer unbegrenzten Zahl anderer Dienste und Clients erstellen. In einer derartigen verteilten Anwendung können Nachrichten zwischen Knoten, durch Firewalls, im Internet und durch zahlreiche SOAP-Vermittler fließen. Dies führt zu einer Vielzahl von Nachrichtensicherheitsrisiken. Die folgenden Beispiele veranschaulichen einige häufigen Bedrohungen, die WCF-Sicherheit verringern kann, wenn Sie Nachrichten zwischen Entitäten austauschen:  
   
 -   Beobachtung des Netzwerkverkehrs zum Erhalt vertraulicher Informationen. In einem Onlinebanking-Szenario fordert ein Client die Übertragung von Geldmitteln von einem Konto zu einem anderen an. Ein böswilliger Benutzer fängt die Nachricht ab und gelangt dadurch in den Besitz der Kontonummer und des Kennworts. Später überträgt er vom kompromittierten Konto Geldmittel.  
   
@@ -63,12 +51,12 @@ ms.lasthandoff: 04/30/2018
 ### <a name="integration-with-existing-security-infrastructures"></a>Integration in vorhandene Sicherheitsinfrastrukturen  
  Oftmals verfügen Webdienstbereitstellungen bereits über Sicherheitslösungen, beispielsweise Secure Sockets Layer (SSL) oder das Kerberos-Protokoll. Einige nutzen eine bereits zur Verfügung stehende Sicherheitsinfrastruktur; so verwenden Windows-Domänen beispielsweise Active Directory. Häufig ist eine Integration in diese vorhandenen Technologien erforderlich, während neuere Technologien bewertet und übernommen werden müssen.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit wird in vorhandene Transportsicherheitsmodelle integriert und kann vorhandene Infrastrukturen für neuere Übertragungssicherheitsmodelle auf Basis der SOAP-Nachrichtensicherheit nutzen.  
+ WCF-Sicherheit mit vorhandenen Transport Sicherheitsmodelle integriert und kann vorhandene Infrastrukturen für neuere übertragungssicherheitsmodelle basierend auf SOAP-nachrichtensicherheit nutzen.  
   
 ### <a name="integration-with-existing-authentication-models"></a>Integration in vorhandene Authentifizierungsmodelle  
  Ein wichtiger Bestandteil jedes Kommunikationssicherheitsmodells ist die Fähigkeit zur Identifizierung und Authentifizierung von Entitäten in der Kommunikation. Diese Entitäten in der Kommunikation verwenden "digitale Identitäten" oder Anmeldeinformationen, um sich bei den kommunizierenden Peers zu authentifizieren. Im Zuge der Entwicklung verteilter Kommunikationsplattformen wurden verschiedene Modelle für Anmeldeinformations-Authentifizierung und verwandte Sicherheitsmodelle implementiert. Beispielsweise ist das Angeben eines Benutzernamens und Kennworts eine weit verbreitete Methode zur Identifizierung von Benutzern im Internet. In Intranets setzt sich die Verwendung eines Kerberos-Domänencontrollers zur Sicherung von Benutzer- und Dienstauthentifizierung durch. In bestimmten Szenarien, wie beim Kontakt zweier Geschäftspartner, können Zertifikate zur gegenseitigen Authentifizierung verwendet werden.  
   
- Im Bereich der Webdienste, in denen derselbe Dienst unter Umständen sowohl internen Unternehmenskunden als auch externen Partnern oder Internetkunden zur Verfügung steht, ist es wichtig, dass die Infrastruktur eine Integration in diese vorhandenen Sicherheitsauthentifizierungsmodelle ermöglicht. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit unterstützt zahlreiche verschiedene Anmeldeinformationstypen (Authentifizierungsmodelle). Dazu zählen unter anderem folgende:  
+ Im Bereich der Webdienste, in denen derselbe Dienst unter Umständen sowohl internen Unternehmenskunden als auch externen Partnern oder Internetkunden zur Verfügung steht, ist es wichtig, dass die Infrastruktur eine Integration in diese vorhandenen Sicherheitsauthentifizierungsmodelle ermöglicht. WCF-Sicherheit unterstützt eine Vielzahl von Anmeldeinformationstypen (Authentifizierungsmodelle), einschließlich:  
   
 -   Anonymer Aufrufer  
   
@@ -83,16 +71,16 @@ ms.lasthandoff: 04/30/2018
   
  Um interoperable Sicherheitssysteme verwenden zu können, haben Unternehmen aus der Webdienstbranche verschiedene Standards entwickelt. Insbesondere im Hinblick auf Sicherheitsfragen wurden einige wichtige Standards eingeführt: WS-Sicherheit: SOAP-Nachrichtensicherheit (akzeptiert vom OASIS-Standardausschuss, früher als WS-Sicherheit bezeichnet), WS-Trust, WS-SecureConversation und WS-SecurityPolicy.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt eine Vielzahl von Interoperabilitätsszenarien. Die <xref:System.ServiceModel.BasicHttpBinding>-Klasse bezieht sich auf das Basic Security Profile (BSP), und die <xref:System.ServiceModel.WSHttpBinding>-Klasse bezieht sich auf die aktuellen Sicherheitsstandards (zum Beispiel WS-Security 1.1 und WS-SecureConversation). Durch Einhalten dieser Standards kann die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit mit Webdiensten, die auf anderen Betriebssystemen und Plattformen als Microsoft Windows gehostet werden, interagieren und darin integriert werden.  
+ WCF unterstützt eine Vielzahl von Interoperabilitätsszenarien. Die <xref:System.ServiceModel.BasicHttpBinding>-Klasse bezieht sich auf das Basic Security Profile (BSP), und die <xref:System.ServiceModel.WSHttpBinding>-Klasse bezieht sich auf die aktuellen Sicherheitsstandards (zum Beispiel WS-Security 1.1 und WS-SecureConversation). Durch Einhalten dieser Standards, WCF-Sicherheit interagieren und darin integriert mit Webdiensten, die auf Betriebssystemen und Plattformen als Microsoft Windows gehostet werden.  
   
 ## <a name="wcf-security-functional-areas"></a>WCF-Sicherheit &#8211; Funktionsbereiche  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit wird in drei Funktionsbereiche unterteilt: Übertragungssicherheit, Zugriffssteuerung und Überwachung. In den folgenden Abschnitten finden Sie eine kurze Erläuterung dieser Bereiche und Links auf weitere Informationen.  
+ WCF-Sicherheit ist in drei Funktionsbereiche unterteilt: übertragungssicherheit, Zugriffssteuerung und Überwachung. In den folgenden Abschnitten finden Sie eine kurze Erläuterung dieser Bereiche und Links auf weitere Informationen.  
   
 ### <a name="transfer-security"></a>Übertragungssicherheit  
  Übertragungssicherheit umfasst drei Hauptsicherheitsfunktionen: Integrität, Vertraulichkeit und Authentifizierung. *Integrität* ist die Fähigkeit, erkennen, ob eine Nachricht manipuliert wurde. *Vertraulichkeit* ist die Fähigkeit, eine Nachricht nur für den beabsichtigten Empfänger; lesbar Dies wird durch Kryptografie erreicht. *Authentifizierung* ist die Fähigkeit, eine beanspruchte Identität zu überprüfen. Durch die Kombination dieser drei Funktionen wird sichergestellt, dass Nachrichten sicher zwischen verschiedenen Punkten übertragen werden.  
   
 #### <a name="transport-and-message-security-modes"></a>Transport- und Nachrichtensicherheitsmodi  
- Hauptsächlich zwei Mechanismen werden verwendet, um die Implementierung von übertragungssicherheit in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: *Transport* Sicherheitsmodus und *Nachricht* Sicherheitsmodus.  
+ Hauptsächlich zwei Mechanismen zum Implementieren von übertragungssicherheit in WCF verwendet werden: *Transport* Sicherheitsmodus und *Nachricht* Sicherheitsmodus.  
   
 -   *Sicherheitsmodus "Transport"* verwendet ein Protokoll auf Transportebene wie HTTPS, um übertragungssicherheit zu erreichen. Der Transportmodus besitzt den Vorteil seiner großen Verbreitung, der Verfügbarkeit auf zahlreichen Plattformen und seiner geringeren rechnerischen Komplexität. Der Modus besitzt jedoch den Nachteil, dass Nachrichten nur von Punkt zu Punkt (Point-to-Point) gesichert werden.  
   
@@ -105,7 +93,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="access-control"></a>Zugriffssteuerung  
  *Steuerung des Zugriffs* ist auch bekannt als Autorisierung. *Autorisierung* können verschiedenen Benutzern unterschiedliche Rechte zum Anzeigen der Daten haben. Da die Dateien der Personalabteilung eines Unternehmens vertrauliche Mitarbeiterdaten enthalten, sind nur Abteilungsleiter zum Einsehen der Mitarbeiterdaten berechtigt. Zudem können Ableitungsleiter nur Daten für ihre direkten Berichte anzeigen. In diesem Fall basiert die Zugriffssteuerung sowohl auf der Rolle ("Abteilungsleiter") als auch auf der speziellen Identität des Abteilungsleiters (dadurch wird ein anderer Abteilungsleiter an der Einsicht in die Unterlagen eines Mitarbeiters gehindert).  
   
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], Zugriffssteuerungsfunktionen durch Integration in die common Language Runtime (CLR) bereitgestellt werden <xref:System.Security.Permissions.PrincipalPermissionAttribute> und durch einen Satz von APIs, die als bezeichnet den *Identitätsmodell*. Weitere Informationen zu Access Control und anspruchsbasierte Autorisierung, finden Sie unter [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md).  
+ In WCF Zugriffssteuerungsfunktionen durch Integration in die common Language Runtime (CLR) bereitgestellt werden <xref:System.Security.Permissions.PrincipalPermissionAttribute> und durch einen Satz von APIs, die als bezeichnet den *Identitätsmodell*. Weitere Informationen zu Access Control und anspruchsbasierte Autorisierung, finden Sie unter [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Überwachung  
  *Überwachung* ist die Protokollierung von Sicherheitsereignissen in das Windows-Ereignisprotokoll. Sie können sicherheitsbezogene Ereignisse protokollieren, z. B. Authentifizierungsfehler (oder erfolgreiche Authentifizierungen). Weitere Informationen finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programmierdetails, finden Sie unter [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
