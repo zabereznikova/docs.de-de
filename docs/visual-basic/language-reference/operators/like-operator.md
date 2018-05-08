@@ -1,11 +1,6 @@
 ---
 title: Like-Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Like-Operator (Visual Basic)
 Vergleicht eine Zeichenfolge mit einem Muster.  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>Musteroptionen  
  Integrierte Mustervergleich bietet ein vielseitiges Tool für Zeichenfolgenvergleiche. Die Mustervergleich Funktionen ermöglichen es Ihnen, um jedes Zeichen in `string` für ein bestimmtes Zeichen, ein Platzhalterzeichen, eine Zeichenliste oder einem Bereich von Zeichen. Die folgende Tabelle zeigt die zulässigen Zeichen in `pattern` und was sie übereinstimmen.  
   
-|Zeichen in`pattern`|Zeilen enthält`string`|  
+|Zeichen in `pattern`|Zeilen enthält `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Ein beliebiges einzelnes Zeichen|  
 |`*`|NULL oder mehr Zeichen|  
 |`#`|Eine einzelne Ziffer (0-9)|  
-|`[charlist]`|Beliebiges einzelnes Zeichen in`charlist`|  
-|`[!charlist]`|Beliebiges einzelnes Zeichen, die nicht in`charlist`|  
+|`[charlist]`|Beliebiges einzelnes Zeichen in `charlist`|  
+|`[!charlist]`|Beliebiges einzelnes Zeichen, die nicht in `charlist`|  
   
 ## <a name="character-lists"></a>Zeichenlisten  
  Eine Gruppe von einem oder mehreren Zeichen (`charlist`) in Klammern eingeschlossen (`[ ]`) kann verwendet werden, um einem beliebigen einzelnen Zeichen entsprechen `string` kann nahezu jede Zeichencode, einschließlich Ziffern enthalten.  

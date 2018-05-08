@@ -1,13 +1,6 @@
 ---
-title: "Empfohlene Vorgehensweisen für das TableLayoutPanel-Steuerelement"
-ms.custom: 
+title: Empfohlene Vorgehensweisen für das TableLayoutPanel-Steuerelement
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [Windows Forms]
 - TableLayoutPanel control [Windows Forms], best practices
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f2c5a16ea1f07f7688c9df14bdb6b29350f3acf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 40322dc6c5facd4167a4c9ac5c12fdf2a8831b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>Empfohlene Vorgehensweisen für das TableLayoutPanel-Steuerelement
 Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement umfasst leistungsstarke Layout-Funktionen, die Sie sorgfältig berücksichtigen sollten, bevor Sie in Windows Forms verwenden.  
@@ -58,7 +46,7 @@ Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement umfasst leistungs
  Im Allgemeinen gilt: beim Entwerfen des Layouts mit den <xref:System.Windows.Forms.TableLayoutPanel> steuern, den Entwurf so einfach wie möglich halten.  
   
 ### <a name="use-the-document-outline-window"></a>Verwenden Sie die Dokumentgliederung (Fenster)  
- Das Fenster "Dokumentgliederung" bietet Ihnen eine Strukturansicht der das Layout, die Sie verwenden können, um die Z-Reihenfolge und über-und untergeordneten Beziehungen zwischen Ihrer Steuerelemente zu bearbeiten. Aus der **Menü "Ansicht"**Option **Weitere Fenster**, und wählen Sie dann **Dokumentgliederung**.  
+ Das Fenster "Dokumentgliederung" bietet Ihnen eine Strukturansicht der das Layout, die Sie verwenden können, um die Z-Reihenfolge und über-und untergeordneten Beziehungen zwischen Ihrer Steuerelemente zu bearbeiten. Aus der **Menü "Ansicht"** Option **Weitere Fenster**, und wählen Sie dann **Dokumentgliederung**.  
   
 ### <a name="avoid-nesting"></a>Vermeiden Sie die Schachtelung  
  Vermeiden Sie die Schachtelung andere <xref:System.Windows.Forms.TableLayoutPanel> steuert innerhalb einer <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Debuggen von verschachtelten Layouts kann schwierig sein.  

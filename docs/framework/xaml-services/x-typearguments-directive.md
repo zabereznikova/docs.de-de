@@ -1,13 +1,6 @@
 ---
 title: x:TypeArguments-Anweisung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:TypeArguments
 - xTypeArguments
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: "18"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f09bdd3b6ee0b180e30bab0993f0b4e41730ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments-Anweisung
 Einschränken übergibt die Typargumente einer generischen an den Konstruktor des generischen Typs.  
@@ -62,13 +50,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ```  
   
 ### <a name="liststring"></a>Liste\<Zeichenfolge >  
- `<scg:List x:TypeArguments="sys:String" ...>`instanziiert eine neue <xref:System.Collections.Generic.List%601> mit einem <xref:System.String> Typargument.  
+ `<scg:List x:TypeArguments="sys:String" ...>` instanziiert eine neue <xref:System.Collections.Generic.List%601> mit einem <xref:System.String> Typargument.  
   
 ### <a name="dictionarystringstring"></a>Wörterbuch\<Zeichenfolge, Zeichenfolge >  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`instanziiert eine neue <xref:System.Collections.Generic.Dictionary%602> mit zwei <xref:System.String> Typargumente.  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` instanziiert eine neue <xref:System.Collections.Generic.Dictionary%602> mit zwei <xref:System.String> Typargumente.  
   
 ### <a name="queuekeyvaluepairstringstring"></a>Warteschlange < KeyValuePair\<Zeichenfolge "," String ">>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`instanziiert eine neue <xref:System.Collections.Generic.Queue%601> enthält, die die Einschränkung der <xref:System.Collections.Generic.KeyValuePair%602> mit die Typargumente für die interne Einschränkung <xref:System.String> und <xref:System.String>.  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` instanziiert eine neue <xref:System.Collections.Generic.Queue%601> enthält, die die Einschränkung der <xref:System.Collections.Generic.KeyValuePair%602> mit die Typargumente für die interne Einschränkung <xref:System.String> und <xref:System.String>.  
   
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 und WPF generische XAML-Verwendungen  
  Für die Verwendung von XAML 2006 und XAML, das für die WPF-Anwendungen verwendet wird, der die folgenden Einschränkungen gelten für `x:TypeArguments` und generischen Typs Verwendungen von XAML im Allgemeinen:  
@@ -79,7 +67,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   Außerdem muss der Stamm-XAML-Objektelement für den generischen deklariert eine partielle Klasse mit `x:Class`. Dies gilt auch, wenn Definieren eines WPF-Buildvorgang.  
   
--   `x:TypeArguments`Geschachtelte generische Einschränkungen kann nicht verwiesen werden.  
+-   `x:TypeArguments` Geschachtelte generische Einschränkungen kann nicht verwiesen werden.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 oder XAML 2006 ohne WPF 3.0 oder WPF 3.5 Abhängigkeit  
  In .NET Framework-XAML-Dienste für XAML 2006 oder XAML 2009 werden die WPF-bezogene Einschränkungen für generische XAML-Verwendung gelockert. Sie können ein generisches Objektelement an einer beliebigen Position im XAML-Markup instanziieren, die die dahinter liegende Typ und dem Objektmodell unterstützen kann.  

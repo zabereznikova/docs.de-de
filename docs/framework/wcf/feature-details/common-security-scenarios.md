@@ -1,28 +1,16 @@
 ---
-title: "Häufige Sicherheitsszenarien"
-ms.custom: 
+title: Häufige Sicherheitsszenarien
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8881768d66e95ce1391ce1be1663bdc3107a347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-security-scenarios"></a>Häufige Sicherheitsszenarien
 Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und Dienstsicherheitskonfigurationen. Die Konfigurationen ändern sich aufgrund verschiedenster Faktoren. Zum Beispiel ob sich ein Dienst oder Client im Intranet befindet oder ob die Sicherheit von Windows oder vom Transport (wie HTTPS) gewährleistet wird.  
@@ -32,7 +20,7 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
  Ein Beispiel eines öffentlichen, ungesicherten Clients und Diensts.  
   
  [Intranet: Ungesicherter Client und Dienst](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- Ein einfacher [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst, mit dem einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung Informationen in einem sicheren privaten Netzwerk zur Verfügung gestellt werden.  
+ Ein grundlegenden Windows Communication Foundation (WCF)-Dienst entwickelt, um Informationen in einem sicheren privaten Netzwerk zu einer WCF-Anwendung bereitzustellen.  
   
  [Transportsicherheit mit Standardauthentifizierung](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  Mit dieser Anwendung können sich Clients anhand einer benutzerdefinierten Authentifizierung anmelden.  
@@ -47,7 +35,7 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
  Zeigt einen mit einem Zertifikat gesicherten Client und Dienst.  
   
  [Nachrichtensicherheit mit einem anonymen Client](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- Zeigt einen von der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichtensicherheit gesicherten Client und Dienst.  
+ Zeigt einen Client und Dienst, die von WCF-nachrichtensicherheit gesichert werden.  
   
  [Nachrichtensicherheit mit einem Benutzernamenclient](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  Der Client ist eine Windows Forms-Anwendung, mit der sich die Clients mithilfe eines Domänenbenutzernamens und -Kennworts anmelden können.  
@@ -70,7 +58,7 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
  [Vertrauenswürdiges Subsystem](../../../../docs/framework/wcf/feature-details/trusted-subsystem.md)  
  Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk verteilt werden. Die Webdienste greifen auf zusätzliche Ressourcen (z. B. Datenbanken oder andere Webdienste) zu, die gesichert werden müssen.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

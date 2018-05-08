@@ -1,28 +1,19 @@
 ---
-title: "Namespace oder Typ angegeben, die in diesem Projekt auf Dokumentebene importiert &#39; &lt;qualifizierterelementname&gt;&#39; ist nicht &#39; t jeden öffentlichen Member enthalten oder kann nicht gefunden werden"
+title: Namespace oder Typ angegeben, in das Projekt auf Dokumentebene Importe &#39; &lt;qualifizierterelementname&gt; &#39; ist nicht&#39;t jeden öffentlichen Member enthalten oder kann nicht gefunden werden
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40057
 - bc40057
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0d0a164562524af239b3b130f681dbc6eff23814
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6d0c931262d892ec3e65888a76f25218b23d868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace oder Typ angegeben, die in diesem Projekt auf Dokumentebene importiert &#39; &lt;qualifizierterelementname&gt;&#39; ist nicht &#39; t jeden öffentlichen Member enthalten oder kann nicht gefunden werden
+# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace oder Typ angegeben, in das Projekt auf Dokumentebene Importe &#39; &lt;qualifizierterelementname&gt; &#39; ist nicht&#39;t jeden öffentlichen Member enthalten oder kann nicht gefunden werden
 Namespace oder Typ angegeben, in das Projekt auf Dokumentebene Imports'\<qualifizierter_elementname >' enthält keine öffentlichen Member oder kann nicht gefunden werden. Stellen Sie sicher, dass der Namespace oder der Typ definiert ist und mindestens einen öffentlichen Member enthält. Stellen Sie sicher, dass der Aliasname keine andere Aliase enthält.  
   
  Eine Import-Eigenschaft eines Projekts gibt ein enthaltendes Element, das entweder nicht gefunden werden oder keine definiert `Public` Elemente.  

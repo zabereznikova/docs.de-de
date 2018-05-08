@@ -1,9 +1,6 @@
 ---
 title: Nothing (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Nothing
 - vb.Nothing
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6932fee01ec6f39f67fb1a26a9a5b5cbd47d9767
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fb1af7d748faac78b26177af453a0e858f9e97c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Stellt den Standardwert eines beliebigen Datentyps dar. Für Verweistypen, der Standardwert ist die `null` Verweis. Der Standardwert hängt für Werttypen gibt an, ob der Werttyp NULL ist.  
@@ -27,7 +21,7 @@ Stellt den Standardwert eines beliebigen Datentyps dar. Für Verweistypen, der S
 >  Für Typen mit NULL-Werten `Nothing` in Visual Basic unterscheidet sich vom `null` in C# geschrieben. In Visual Basic, wenn Sie eine Variable eines Typs NULL-Wert für `Nothing`, die Variable wird auf den Standardwert für den deklarierten Typ festgelegt. In C# geschrieben, wenn Sie eine Variable eines Werttyps auf NULL-zuweisen `null`, tritt ein Kompilierzeitfehler auf.  
   
 ## <a name="remarks"></a>Hinweise  
- `Nothing`Stellt den Standardwert eines Datentyps dar. Der Standardwert hängt davon ab, ob die Variable ein Werttyp oder ein Verweistyp ist.  
+ `Nothing` Stellt den Standardwert eines Datentyps dar. Der Standardwert hängt davon ab, ob die Variable ein Werttyp oder ein Verweistyp ist.  
   
  Eine Variable vom eine *Werttyp* direkt den Wert enthält. Werttypen gehören alle numerischen Datentypen `Boolean`, `Char`, `Date`, werden alle vorhandenen Strukturen und alle Enumerationen. Eine Variable vom eine *Verweistyp* speichert einen Verweis auf eine Instanz des Objekts im Arbeitsspeicher. Verweistypen enthalten Klassen, Arrays, Delegaten und Zeichenfolgen. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
@@ -53,7 +47,7 @@ Stellt den Standardwert eines beliebigen Datentyps dar. Für Verweistypen, der S
   
  Wenn Sie zuweisen `Nothing` einer Objektvariablen es nicht mehr bezieht sich auf eine Objektinstanz. Wenn die Variable mit einer Instanz bereits verwiesen hat, eine Festlegung auf `Nothing` wird die Instanz selbst nicht beendet. Die Instanz beendet ist, und der Arbeitsspeicher und Ressourcen zugeordnet werden freigegeben, erst nach der Garbage Collector (GC) erkennt, dass keine aktiven Verweise mehr vorhanden sind.  
   
- `Nothing`unterscheidet sich von der <xref:System.DBNull> Objekt, das eine nicht initialisierte Variante oder eine Spalte nicht vorhandene Datenbank darstellt.  
+ `Nothing` unterscheidet sich von der <xref:System.DBNull> Objekt, das eine nicht initialisierte Variante oder eine Spalte nicht vorhandene Datenbank darstellt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dim-Anweisung](../../visual-basic/language-reference/statements/dim-statement.md)  

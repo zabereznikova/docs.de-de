@@ -1,13 +1,7 @@
 ---
 title: Konvertieren zwischen DateTime und DateTimeOffset
-ms.custom: 
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,25 +16,20 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2055df26618664ee130be417599f4ec46e439444
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dec0e5138ecf08783f11d21cd28d7291d27ea68d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Konvertieren zwischen DateTime und DateTimeOffset
 
 Obwohl die <xref:System.DateTimeOffset> Struktur bietet eine genauere speichersteuerung Zeitzonen als die <xref:System.DateTime> Struktur <xref:System.DateTime> Parameter werden häufig in Methodenaufrufen verwendet. Daher die Möglichkeit zum Konvertieren <xref:System.DateTimeOffset> Werte <xref:System.DateTime> Werte und umgekehrt ist besonders wichtig. In diesem Thema wird gezeigt, wie für diese auf eine Weise Konvertierungen, die so viele Informationen zur Zeitzone wie möglich beibehalten wird.
 
 > [!NOTE]
-> Sowohl die <xref:System.DateTime> und <xref:System.DateTimeOffset> Typen weisen einige Einschränkungen beim Zeiten in Zeitzonen darstellen. Mit der <xref:System.DateTime.Kind%2A> Eigenschaft <xref:System.DateTime> kann nur Coordinated Universal Time (UTC) und das System lokalen Zeitzone entsprechen. <xref:System.DateTimeOffset>Gibt den offset von UTC einer Zeit, aber nicht reflektiert, dass die eigentliche Zeitzone, zu der dieser Offset, gehört. Ausführliche Informationen zu Time-Werten und Unterstützung von Zeitzonen finden Sie unter [Choosing Between DateTime, DateTimeOffset TimeSpan und "TimeZoneInfo"](../../../docs/standard/datetime/choosing-between-datetime.md).
+> Sowohl die <xref:System.DateTime> und <xref:System.DateTimeOffset> Typen weisen einige Einschränkungen beim Zeiten in Zeitzonen darstellen. Mit der <xref:System.DateTime.Kind%2A> Eigenschaft <xref:System.DateTime> kann nur Coordinated Universal Time (UTC) und das System lokalen Zeitzone entsprechen. <xref:System.DateTimeOffset> Gibt den offset von UTC einer Zeit, aber nicht reflektiert, dass die eigentliche Zeitzone, zu der dieser Offset, gehört. Ausführliche Informationen zu Time-Werten und Unterstützung von Zeitzonen finden Sie unter [Choosing Between DateTime, DateTimeOffset TimeSpan und "TimeZoneInfo"](../../../docs/standard/datetime/choosing-between-datetime.md).
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>Konvertierungen von DateTime in DateTimeOffset
 

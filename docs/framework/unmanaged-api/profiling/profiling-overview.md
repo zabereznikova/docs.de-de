@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über die Profilerstellung"
-ms.custom: 
+title: Übersicht über die Profilerstellung
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - managed code, profiling API support
 - unmanaged code, combining with managed code in profiling
@@ -34,19 +27,16 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-overview"></a>Übersicht über die Profilerstellung
-<a name="top"></a>Ein Profiler ist ein Tool, das die Ausführung einer anderen Anwendung überwacht. Ein Common Language Runtime (CLR)-Profiler ist eine Dynamic Link Library (DLL), die aus Funktionen besteht, die mithilfe der Profilerstellungs-API Meldungen von der CLR empfangen und an diese senden. Die Profiler-DLL wird zur Laufzeit von der CLR geladen.  
+<a name="top"></a> Ein Profiler ist ein Tool, das die Ausführung einer anderen Anwendung überwacht. Ein Common Language Runtime (CLR)-Profiler ist eine Dynamic Link Library (DLL), die aus Funktionen besteht, die mithilfe der Profilerstellungs-API Meldungen von der CLR empfangen und an diese senden. Die Profiler-DLL wird zur Laufzeit von der CLR geladen.  
   
  Herkömmliche Profilerstellungstools dienen vorwiegend dazu, die Ausführung der Anwendung zu messen. Das bedeutet, dass sie die für jede Funktion aufgebrachte Zeit und die Speicherauslastung der Anwendung über einen bestimmten Zeitraum messen. Die Profilerstellungs-API zielt auf eine breitere Klasse von Diagnosetools ab, z. B. Dienstprogramme zur Codeabdeckung und sogar erweiterte Debughilfen. Diese Verwendungsmöglichkeiten sind ausnahmslos von diagnostischer Natur. Die Profilerstellungs-API misst nicht nur die Ausführung einer Anwendung, sondern überwacht sie auch. Aus diesem Grund sollte die Profilerstellungs-API nie von der Anwendung selbst verwendet werden, und die Ausführung der Anwendung sollte nicht vom Profiler abhängen (oder davon beeinflusst werden).  
   

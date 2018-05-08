@@ -1,28 +1,16 @@
 ---
 title: x:FactoryMethod-Anweisung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML. x:FactoryMethod directive [XAML Services]
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-caps.latest.revision: "8"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58349c5440d0062c64346933e48b64de6c4c7b60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75225e624abdd3dc0862a04fae409da48b3f0d1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod-Anweisung
 Gibt eine Methode als einen Konstruktor, den ein XAML-Prozessor verwenden soll, um ein Objekt nach seiner Unterstützungstyp auflösen zu initialisieren.  
@@ -61,11 +49,11 @@ Gibt eine Methode als einen Konstruktor, den ein XAML-Prozessor verwenden soll, 
   
  Die Factory-Methode muss es sich um eine Instanz zurückgeben, die auf das entsprechende Objekt zugeordnet ist. Factorymethoden sollten nie null zurückgeben.  
   
- `x:Arguments`Ein Prinzip der beste Übereinstimmung für Signaturen von Factorymethoden verarbeitet. Die Parameteranzahl Abgleich zuerst ausgewertet. Gibt es ist mehr als eine mögliche Entsprechung für ein Parameteranzahl, Parametertyp ausgewertet und die beste Übereinstimmung ermittelt wird. Wenn Mehrdeutigkeiten nach dieser Phase der Auswertung immer noch vorhanden ist, ist die XAML-Prozessorverhalten nicht definiert.  
+ `x:Arguments` Ein Prinzip der beste Übereinstimmung für Signaturen von Factorymethoden verarbeitet. Die Parameteranzahl Abgleich zuerst ausgewertet. Gibt es ist mehr als eine mögliche Entsprechung für ein Parameteranzahl, Parametertyp ausgewertet und die beste Übereinstimmung ermittelt wird. Wenn Mehrdeutigkeiten nach dieser Phase der Auswertung immer noch vorhanden ist, ist die XAML-Prozessorverhalten nicht definiert.  
   
- Die `x:FactoryMethod` Elementverwendung ist nicht Eigenschaftenelementen insofern typisch, da die Richtlinie Markup nicht des enthaltenden Objektelements Typ verweist. Es wird davon ausgegangen, dass Elementverwendung ist weniger gebräuchlich als Attributen. `x:Arguments`(Attribut- oder Elementwert Verwendung) verwendet werden kann, zusammen mit `x:FactoryMethod` Elementverwendung, aber dies wird nicht ausdrücklich angezeigt in den Abschnitten.  
+ Die `x:FactoryMethod` Elementverwendung ist nicht Eigenschaftenelementen insofern typisch, da die Richtlinie Markup nicht des enthaltenden Objektelements Typ verweist. Es wird davon ausgegangen, dass Elementverwendung ist weniger gebräuchlich als Attributen. `x:Arguments` (Attribut- oder Elementwert Verwendung) verwendet werden kann, zusammen mit `x:FactoryMethod` Elementverwendung, aber dies wird nicht ausdrücklich angezeigt in den Abschnitten.  
   
- `x:FactoryMethod`wie ein Element alle anderen Eigenschaftenelemente vorangestellt werden muss, müssen alle vorausgehen `x:Arguments` auch als Elemente angegeben und muss alle Inhalte bzw. innere Text/Initialisierungstext vorangehen.  
+ `x:FactoryMethod` wie ein Element alle anderen Eigenschaftenelemente vorangestellt werden muss, müssen alle vorausgehen `x:Arguments` auch als Elemente angegeben und muss alle Inhalte bzw. innere Text/Initialisierungstext vorangehen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [x:Arguments-Direktive](../../../docs/framework/xaml-services/x-arguments-directive.md)

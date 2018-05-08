@@ -1,24 +1,12 @@
 ---
 title: Syndication-Erweiterbarkeit
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication-extensibility"></a>Syndication-Erweiterbarkeit
 Die Syndication-API ist darauf ausgelegt, ein formatunabhängiges Programmiermodell bereitzustellen, mit dem Fremdinhalte in verschiedenen Formaten ausgegeben und direkt übertragen werden können. Das abstrakte Datenmodell besteht aus den folgenden Klassen:  
@@ -35,7 +23,7 @@ Die Syndication-API ist darauf ausgelegt, ein formatunabhängiges Programmiermod
   
  Diese Klassen sind nahezu deckungsgleich mit den in der Atom&#160;1.0-Spezifikation definierten Konstrukten, obwohl manche der Namen anders lauten.  
   
- Eine Hauptfunktion von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&#160;1.0 als auch RSS&#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Das [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Programmiermodell für Syndication bietet die folgenden Möglichkeiten, mit benutzerdefinierten Attributen und Erweiterungen zu arbeiten: den Zugriff mit flexibler Typbindung und das Ableiten einer neuen Klasse.  
+ Eine Hauptfunktion von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&#160;1.0 als auch RSS&#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Der Windows Communication Foundation (WCF)-Programmiermodell für Syndication bietet es sich um die folgenden Möglichkeiten arbeiten mit benutzerdefinierten Attributen und Erweiterungen lose typisierten Zugriff und das Ableiten einer neuen Klasse.  
   
 ## <a name="loosely-typed-access"></a>Zugriff mit flexibler Typbindung  
  Wenn Erweiterungen durch das Ableiten einer neuen Klasse hinzugefügt werden sollen, muss zusätzlicher Code geschrieben werden. Eine andere Möglichkeit besteht darin, mit flexibler Typbindung auf Erweiterungen zuzugreifen. Alle im abstrakten Datenmodell für Syndication definierten Typen enthalten Eigenschaften namens `AttributeExtensions` und `ElementExtensions` (mit einer Ausnahme, <xref:System.ServiceModel.Syndication.SyndicationContent> verfügt über die `AttributeExtensions`-Eigenschaft, nicht aber über die `ElementExtensions`-Eigenschaft). Diese Eigenschaften sind Auflistungen von Erweiterungen, die nicht von der `TryParseAttribute`-Methode bzw. der `TryParseElement`-Methode verarbeitet werden. Sie können auf diese unverarbeiteten Erweiterungen zugreifen, indem Sie <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> für die `ElementExtensions`-Eigenschaft von <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson> und <xref:System.ServiceModel.Syndication.SyndicationCategory> aufrufen. Dieser Satz von Methoden findet alle Erweiterungen mit dem angegebenen Namen und Namespace, deserialisiert sie einzeln in Instanzen von `TExtension` und gibt sie als Auflistung von `TExtension`-Objekten zurück.  

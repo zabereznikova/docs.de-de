@@ -1,11 +1,6 @@
 ---
 title: Select...Case-Anweisung (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Select
 - vb.Case
@@ -26,14 +21,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d24b455d92cbd00b268df26283aab082b7703a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case-Anweisung (Visual Basic)
 Führt eine von mehreren Gruppen von Anweisungen, je nach dem Wert eines Ausdrucks.  
@@ -82,7 +74,7 @@ End Select
   
  Wenn der Code innerhalb einer `Case` oder `Case Else` -Anweisungsblock muss nicht mehr der Anweisungen im Block ausgeführt, beendet den Block kann mithilfe der `Exit Select` Anweisung. Dies überträgt die Steuerung sofort an die Anweisung nach `End Select`.  
   
- `Select Case`Konstruktionen können geschachtelt werden. Jede geschachtelte `Select Case` Konstruktion benötigen einen übereinstimmenden `End Select` Anweisung und muss vollständig in einer einzelnen enthalten `Case` oder `Case Else` Anweisungsblock des äußeren `Select Case` Konstruktion, in dem sie geschachtelt ist.  
+ `Select Case` Konstruktionen können geschachtelt werden. Jede geschachtelte `Select Case` Konstruktion benötigen einen übereinstimmenden `End Select` Anweisung und muss vollständig in einer einzelnen enthalten `Case` oder `Case Else` Anweisungsblock des äußeren `Select Case` Konstruktion, in dem sie geschachtelt ist.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine `Select Case` Konstruktion, um eine Zeile entsprechend dem Wert der Variablen schreiben `number`. Die zweite `Case` -Anweisung enthält den Wert, der den aktuellen Wert der entspricht `number`, sodass die Anweisung, die "zwischen 6 und 8, inclusive" schreibt ausgeführt wird.  

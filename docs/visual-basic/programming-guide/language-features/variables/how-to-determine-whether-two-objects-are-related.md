@@ -1,26 +1,16 @@
 ---
 title: 'Gewusst wie: Bestimmen des Bezugs zwischen zwei Objekten (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], Visual Basic objects
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7824742459fca355c0043ad8ed20a26330402c05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2041f89ffd954e479046eb85c6dd82de1f8793ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Gewusst wie: Bestimmen des Bezugs zwischen zwei Objekten (Visual Basic)
 Sie können vergleichen zwei Objekte, um die Beziehung zwischen den Klassen ggf. zu bestimmen, von denen sie erstellt werden. Die <xref:System.Type.IsInstanceOfType%2A> Methode der <xref:System.Type?displayProperty=nameWithType> zurück `True` , wenn die angegebene Klasse von der aktuellen Klasse erbt oder der aktuelle Typ eine Schnittstelle, die von der angegebenen Klasse unterstützt wird.  
@@ -33,7 +23,7 @@ Sie können vergleichen zwei Objekte, um die Beziehung zwischen den Klassen ggf.
   
 3.  In der Argumentliste für <xref:System.Type.IsInstanceOfType%2A>, geben Sie das Objekt, das Sie denken möglicherweise des abgeleiteten Typs.  
   
-     <xref:System.Type.IsInstanceOfType%2A>Gibt `True` wenn dessen Argumenttyp erbt die <xref:System.Type?displayProperty=nameWithType> Objekttyp.  
+     <xref:System.Type.IsInstanceOfType%2A> Gibt `True` wenn dessen Argumenttyp erbt die <xref:System.Type?displayProperty=nameWithType> Objekttyp.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird bestimmt, ob ein Objekt von einem anderen Objekt Klasse abgeleitete Klasse darstellt.  

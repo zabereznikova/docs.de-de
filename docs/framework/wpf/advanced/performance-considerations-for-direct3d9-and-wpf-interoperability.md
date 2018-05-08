@@ -1,27 +1,15 @@
 ---
-title: "Überlegungen zur Leistung für die Interoperabilität zwischen Direct3D9 und WPF"
-ms.custom: 
+title: Überlegungen zur Leistung für die Interoperabilität zwischen Direct3D9 und WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8142125eae26b15f12652d28fdf0c34f19d49c4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 52085579c2a432e7db1ebec096a931e0d51718f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Überlegungen zur Leistung für die Interoperabilität zwischen Direct3D9 und WPF
 Direct3D9 Inhalte können gehostet werden, mithilfe der <xref:System.Windows.Interop.D3DImage> Klasse. Direct3D9-Inhalt hosten, kann die Leistung der Anwendung beeinträchtigen. Dieses Thema beschreibt bewährte Methoden zum Optimieren der Leistung beim Hosten von Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwendung. Diese bewährten Methoden enthalten, wie <xref:System.Windows.Interop.D3DImage> und bewährte Methoden aus, wenn Sie Windows Vista, Windows XP, und es mit mehreren Monitoren wird angezeigt.  

@@ -1,9 +1,6 @@
 ---
 title: Typografische und Codekonventionen (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - best practices [Visual Basic], coding conventions
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb7a33ef21bf6beda730dffa8eb7ff9cabe599fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Typografische und Codekonventionen (Visual Basic)
 Dokumentation zu Visual Basic verwendet die folgenden typografische und Codekonventionen.  
@@ -32,7 +26,7 @@ Dokumentation zu Visual Basic verwendet die folgenden typografische und Codekonv
 |`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Language-spezifische Schlüsselwörter und Member-stehender Großbuchstaben haben, und werden wie im folgenden Beispiel gezeigt formatiert.|  
 |**SmallProject**, **ButtonCollection**|Wörter und Ausdrücke, die Sie zur Eingabe aufgefordert werden, werden wie im folgenden Beispiel gezeigt formatiert.|  
 |[Module-Anweisung](../../visual-basic/language-reference/statements/module-statement.md)|Verknüpfungen aus, die Sie klicken können, gehen Sie zu einer anderen Hilfeseite werden wie im folgenden Beispiel gezeigt formatiert.|  
-|*Objekt*, *VariableName*,`argumentList`|Platzhalter für Informationen, die Sie angeben, werden wie im folgenden Beispiel gezeigt formatiert.|  
+|*Objekt*, *VariableName*, `argumentList`|Platzhalter für Informationen, die Sie angeben, werden wie im folgenden Beispiel gezeigt formatiert.|  
 |[Schatten], [ *ExpressionList* ]|In der Syntax werden optionale Elemente in Klammern eingeschlossen.|  
 |{ `Public` &#124; `Friend` &#124; `Private` }|In der Syntax Wenn Sie eine Auswahl zwischen zwei oder mehr Elementen vornehmen, müssen die Elemente sind in geschweifte Klammern eingeschlossen und durch senkrechte Striche getrennte.<br /><br /> Sie müssen eine und nur eines der Elemente auswählen.|  
 |[ `Protected` &#124; `Friend` ]|In der Syntax Wenn stehen Ihnen die Möglichkeit, die Auswahl zwischen zwei oder mehr Elemente, die Elemente sind in eckige Klammern eingeschlossen und durch senkrechte Striche getrennte.<br /><br /> Sie können eine beliebige Kombination der Elemente oder kein Element auswählen.|  

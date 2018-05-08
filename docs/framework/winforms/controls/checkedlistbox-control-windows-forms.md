@@ -1,13 +1,6 @@
 ---
-title: "CheckedListBox-Steuerelement (Windows Forms)"
-ms.custom: 
+title: CheckedListBox-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CheckedListBox control [Windows Forms], reference
 - checked list items [Windows Forms], Windows Forms controls
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e672c0bf6eddaef7bd0b2103fdde75ae2554dedd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f87d76d4215d7d944b465b47113cf7cb24473df3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox-Steuerelement (Windows Forms)
 Windows Forms `CheckedListBox` -Steuerelement zeigt eine Liste von Elementen, z. B. die <xref:System.Windows.Forms.ListBox> gesteuert und können auch ein Häkchen neben Elementen angezeigt.  
@@ -41,7 +29,7 @@ Windows Forms `CheckedListBox` -Steuerelement zeigt eine Liste von Elementen, z.
  [Gewusst wie: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
  Beschreibt das Durchlaufen einer Liste, um zu bestimmen, welche Elemente aktiviert sind.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.CheckedListBox>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

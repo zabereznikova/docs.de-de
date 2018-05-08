@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Erstellen einer privaten Schriftartenauflistung'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0107b1ef1d5259835c6fb1666519d3fc06f4e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 824d42c40b07e8662395e7a1286b9a5a6112c415
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Gewusst wie: Erstellen einer privaten Schriftartenauflistung
 Die <xref:System.Drawing.Text.PrivateFontCollection> Klasse erbt von der <xref:System.Drawing.Text.FontCollection> abstrakte Basisklasse. Sie können eine <xref:System.Drawing.Text.PrivateFontCollection> Objekt, das einen Satz von Schriftarten, die speziell für Ihre Anwendung zu verwalten. Installierten Systemschriftarten sowie Schriftarten, die nicht auf dem Computer installiert wurden, kann einer privaten schriftartenauflistung einschließen. Um eine Schriftartdatei zu einer privaten schriftartenauflistung hinzuzufügen, rufen Sie die <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> Methode von einer <xref:System.Drawing.Text.PrivateFontCollection> Objekt.  
@@ -52,7 +40,7 @@ Die <xref:System.Drawing.Text.PrivateFontCollection> Klasse erbt von der <xref:S
   
  ![Schriftartentext](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
   
- Arial.tff (die im folgenden Codebeispiel wird die privaten schriftartenauflistung hinzugefügt wurde) wird die Schriftartdatei für Arial Schriftschnitt. Beachten Sie jedoch, dass die Programmausgabe mehrere verfügbaren Formate als reguläre für die Schriftart Arial Familie anzeigt. Grund hierfür ist, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fett, kursiv und Fett Kursiv Stile vom Schriftschnitt simulieren können. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]kann außerdem unterstrichen und durchgestrichen vom Schriftschnitt Normal erstellen.  
+ Arial.tff (die im folgenden Codebeispiel wird die privaten schriftartenauflistung hinzugefügt wurde) wird die Schriftartdatei für Arial Schriftschnitt. Beachten Sie jedoch, dass die Programmausgabe mehrere verfügbaren Formate als reguläre für die Schriftart Arial Familie anzeigt. Grund hierfür ist, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fett, kursiv und Fett Kursiv Stile vom Schriftschnitt simulieren können. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kann außerdem unterstrichen und durchgestrichen vom Schriftschnitt Normal erstellen.  
   
  Auf ähnliche Weise [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fett kursive Formatierung von Schriftschnitt Fett oder kursiv Stil simulieren können. Die Ausgabe zeigt an, dass fett kursive Formatierung für die Familie Zeiten verfügbar ist, obwohl TimesBd.tff (Times New Roman fett) die einzige ist Times-Datei in der Auflistung.  
   

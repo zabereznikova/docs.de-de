@@ -1,31 +1,17 @@
 ---
 title: Bedeutung der Transformationsreihenfolge
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>Bedeutung der Transformationsreihenfolge
 Ein einzelnes <xref:System.Drawing.Drawing2D.Matrix> Objekt kann eine einzelne Transformation oder eine Sequenz von Transformationen zu speichern. Der zweite Wert ist eine zusammengesetzte Transformation aufgerufen. Die Matrix eine zusammengesetzte Transformation wird durch Multiplikation der Matrizen der einzelnen Transformationen abgerufen.  
@@ -35,7 +21,7 @@ Ein einzelnes <xref:System.Drawing.Drawing2D.Matrix> Objekt kann eine einzelne T
   
  Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
   
- Das folgende Beispiel kombiniert die Skalierung, Drehung und Verschiebung (in dieser Reihenfolge), um eine zusammengesetzte Transformation. Das Argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> übergeben, um die <xref:System.Drawing.Graphics.RotateTransform%2A> Methode gibt an, dass die Drehung der Skalierung folgen. Entsprechend dem Argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> übergeben, um die <xref:System.Drawing.Graphics.TranslateTransform%2A> Methode gibt an, dass die Übersetzung die Rotation folgen. <xref:System.Drawing.Drawing2D.MatrixOrder.Append>und <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> sind Mitglied der <xref:System.Drawing.Drawing2D.MatrixOrder> Enumeration.  
+ Das folgende Beispiel kombiniert die Skalierung, Drehung und Verschiebung (in dieser Reihenfolge), um eine zusammengesetzte Transformation. Das Argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> übergeben, um die <xref:System.Drawing.Graphics.RotateTransform%2A> Methode gibt an, dass die Drehung der Skalierung folgen. Entsprechend dem Argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> übergeben, um die <xref:System.Drawing.Graphics.TranslateTransform%2A> Methode gibt an, dass die Übersetzung die Rotation folgen. <xref:System.Drawing.Drawing2D.MatrixOrder.Append> und <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> sind Mitglied der <xref:System.Drawing.Drawing2D.MatrixOrder> Enumeration.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  

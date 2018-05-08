@@ -1,17 +1,12 @@
 ---
 title: Do...Loop-Anweisung (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Do
 - vb.Loop
 - vb.Until
 helpviewer_keywords:
-- "conditional statements [Visual Basic], Do�Loop"
+- conditional statements [Visual Basic], Do�Loop
 - while statement [Visual Basic], Do...Loop
 - execution [Visual Basic], conditional
 - Do loops
@@ -20,19 +15,16 @@ helpviewer_keywords:
 - instructions, repeating
 - Do statement [Visual Basic]
 - Exit statement [Visual Basic], in Do...Loop statements
-- "loop structures [Visual Basic], Do�Loop statements"
+- loop structures [Visual Basic], Do�Loop statements
 - do-while statements [Visual Basic]
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 79d25dce963f383a84b56ce2c9b600fc2d5a7937
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e12cdc1ae405b877d4d27d1947c98dcb51938ba7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop-Anweisung (Visual Basic)
 Wiederholt einen Block von Anweisungen, die während einer `Boolean` Bedingung `True` oder bis die Bedingung wird `True`.  
@@ -64,7 +56,7 @@ Loop { While | Until } condition
 |`Do`|Erforderlich. Startet die Definition der `Do` Schleife.|  
 |`While`|Erforderlich, außer wenn `Until` verwendet wird. Wiederholen Sie die Schleife bis `condition` ist `False`.|  
 |`Until`|Erforderlich, außer wenn `While` verwendet wird. Wiederholen Sie die Schleife bis `condition` ist `True`.|  
-|`condition`|Dies ist optional. `Boolean`Ausdruck. Wenn `condition` ist `Nothing`, Visual Basic behandelt sie als `False`.|  
+|`condition`|Dies ist optional. `Boolean` Ausdruck. Wenn `condition` ist `Nothing`, Visual Basic behandelt sie als `False`.|  
 |`statements`|Dies ist optional. Eine oder mehrere Anweisungen, die wiederholt werden, während oder bis `condition` ist `True`.|  
 |`Continue Do`|Dies ist optional. Überträgt die Steuerung an die nächste Iteration der der `Do` Schleife.|  
 |`Exit Do`|Dies ist optional. Überträgt die Steuerung von der `Do` Schleife.|  
@@ -85,9 +77,9 @@ Loop { While | Until } condition
 >  Die `Do...Loop` Struktur bietet mehr Flexibilität als die [während... End While-Anweisung](../../../visual-basic/language-reference/statements/while-end-while-statement.md) da Sie entscheiden, ob die Schleife endet können, wenn `condition` beendet, `True` oder wenn es das erste Mal `True`. Außerdem können Sie testen `condition` am Anfang oder Ende der Schleife.  
   
 ## <a name="exit-do"></a>Exit Do  
- Die [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) Anweisung kann bieten eine alternative Möglichkeit zum Beenden einer `Do…Loop`. `Exit Do`überträgt die Steuerung sofort an die Anweisung mit der `Loop` Anweisung.  
+ Die [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) Anweisung kann bieten eine alternative Möglichkeit zum Beenden einer `Do…Loop`. `Exit Do` überträgt die Steuerung sofort an die Anweisung mit der `Loop` Anweisung.  
   
- `Exit Do`wird häufig verwendet werden, nachdem eine Bedingung, z. B. in ausgewertet wird einer `If...Then...Else` Struktur. Möglicherweise möchten eine Schleife zu beenden, wenn Sie eine Bedingung, in dem unnötige oder überhaupt nicht erkennen zu fortfahren, Iteration, z. B. einen fehlerhaften Wert oder eine Anforderung zum Beenden können. Eine Verwendungsmöglichkeit von `Exit Do` besteht darin, eine Bedingung zu testen, verursachen einen *Endlosschleife*, also in einer Schleife, die eine große oder sogar unendliche Anzahl von Malen ausgeführt werden konnte. Sie können `Exit Do` für die Schleife Escapezeichen verwendet wurden.  
+ `Exit Do` wird häufig verwendet werden, nachdem eine Bedingung, z. B. in ausgewertet wird einer `If...Then...Else` Struktur. Möglicherweise möchten eine Schleife zu beenden, wenn Sie eine Bedingung, in dem unnötige oder überhaupt nicht erkennen zu fortfahren, Iteration, z. B. einen fehlerhaften Wert oder eine Anforderung zum Beenden können. Eine Verwendungsmöglichkeit von `Exit Do` besteht darin, eine Bedingung zu testen, verursachen einen *Endlosschleife*, also in einer Schleife, die eine große oder sogar unendliche Anzahl von Malen ausgeführt werden konnte. Sie können `Exit Do` für die Schleife Escapezeichen verwendet wurden.  
   
  Sie können eine beliebige Anzahl von einschließen `Exit Do` Anweisungen, die an einer beliebigen Stelle in einem `Do…Loop`.  
   

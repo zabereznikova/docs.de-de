@@ -1,33 +1,21 @@
 ---
 title: Sichern von Diensten
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: 28
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: ffc985d528bfdcdd9b62772a8a8ba61823c95e76
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6bdac5a65c51ff08cfa170c1a6e556c3532ee7c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-services"></a>Sichern von Diensten
-Die Sicherheit eines [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Diensts besteht aus zwei primären Anforderungen: Übertragungssicherheit und Autorisierung. (Eine dritte Anforderung, die Überwachung von Sicherheitsereignissen, wird im beschrieben [Überwachung](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) In Kürze: Übertragungssicherheit umfasst Authentifizierung (Überprüfen der Identität sowohl des Diensts als auch des Clients), Vertraulichkeit (Nachrichtenverschlüsselung) und Integrität (digitales Signieren zur Manipulationserkennung). Autorisierung ist die Steuerung des Ressourcenzugriffs, beispielsweise wird nur Benutzern mit entsprechenden Berechtigungen das Lesen einer Datei ermöglicht. Mithilfe der Funktionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]lassen sich die beiden primären Anforderungen problemlos implementieren.  
+Sicherheit von Windows Communication Foundation (WCF)-Dienst besteht aus zwei primären Anforderungen: übertragungssicherheit und Autorisierung. (Eine dritte Anforderung, die Überwachung von Sicherheitsereignissen, wird im beschrieben [Überwachung](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) In Kürze: Übertragungssicherheit umfasst Authentifizierung (Überprüfen der Identität sowohl des Diensts als auch des Clients), Vertraulichkeit (Nachrichtenverschlüsselung) und Integrität (digitales Signieren zur Manipulationserkennung). Autorisierung ist die Steuerung des Ressourcenzugriffs, beispielsweise wird nur Benutzern mit entsprechenden Berechtigungen das Lesen einer Datei ermöglicht. Mithilfe der Funktionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]lassen sich die beiden primären Anforderungen problemlos implementieren.  
   
  Mit Ausnahme von der <xref:System.ServiceModel.BasicHttpBinding> Klasse (oder die [ \<BasicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element in der Konfiguration), wird übertragungssicherheit standardmäßig für alle vordefinierten Bindungen aktiviert. Die Themen in diesem Abschnitt behandeln zwei grundlegende Szenarien: das Implementieren von Übertragungssicherheit und die Autorisierung in einem Intranetdienst, der von Internetinformationsdienste (IIS) gehostet wird, sowie das Implementieren von Übertragungssicherheit und Autorisierung in einem von IIS gehosteten Dienst.  
   

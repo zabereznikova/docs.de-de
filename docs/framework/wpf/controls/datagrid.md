@@ -1,13 +1,6 @@
 ---
 title: DataGrid
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid column types [WPF]
 - DataGrid scenarios [WPF]
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: daea7d382d64e768c9ec681e1c2041c4c80c255e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8f267706c1ace02b091329360779711981d01e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagrid"></a>DataGrid
 Die <xref:System.Windows.Controls.DataGrid> Steuerelement können Sie anzeigen und Bearbeiten von Daten aus vielen verschiedenen Quellen, wie z. B. von einer SQL-Datenbank, die LINQ-Abfrage oder eine beliebige andere bindbare Datenquelle. Weitere Informationen finden Sie unter [Übersicht über Bindungsquellen](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
@@ -40,7 +28,7 @@ Die <xref:System.Windows.Controls.DataGrid> Steuerelement können Sie anzeigen u
 |<xref:System.Windows.Controls.DataGridComboBoxColumn>|<xref:System.Enum>|  
 |<xref:System.Windows.Controls.DataGridHyperlinkColumn>|<xref:System.Uri>|  
   
- <xref:System.Windows.Controls.DataGrid>kann in der Darstellung, z. B. Zellenschriftart, Farbe und Größe angepasst werden. <xref:System.Windows.Controls.DataGrid>unterstützt alle Erstellen von Formaten und Vorlagen von anderen WPF-Steuerelementen. <xref:System.Windows.Controls.DataGrid>enthält auch, Standard und anpassbare Verhalten für die Bearbeitung, Sortierung und Validierung.  
+ <xref:System.Windows.Controls.DataGrid> kann in der Darstellung, z. B. Zellenschriftart, Farbe und Größe angepasst werden. <xref:System.Windows.Controls.DataGrid> unterstützt alle Erstellen von Formaten und Vorlagen von anderen WPF-Steuerelementen. <xref:System.Windows.Controls.DataGrid> enthält auch, Standard und anpassbare Verhalten für die Bearbeitung, Sortierung und Validierung.  
   
  Die folgende Tabelle enthält einige der allgemeinen Aufgaben für <xref:System.Windows.Controls.DataGrid> und erläutert, wie sie ausgeführt. Durch Anzeigen der zugehörigen API, finden Sie weitere Informationen und Beispielcode.  
   

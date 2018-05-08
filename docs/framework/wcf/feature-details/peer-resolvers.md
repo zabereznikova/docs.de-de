@@ -1,24 +1,12 @@
 ---
 title: Peerresolver
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 760011dda4a3059a217dcfbfc3fddaa67edc9995
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-resolvers"></a>Peerresolver
 Um eine Verbindung mit einem Mesh herzustellen, erfordert ein Peerknoten die IP-Adressen anderer Knoten. IP-Adressen werden bezogen, indem eine Verbindung zu einem Auflösungsdienst hergestellt wird, der die Netz-ID annimmt und eine Liste von Adressen zurückgibt, die mit dieser bestimmten Netz-ID registrierten Knoten entsprechen. Der Resolver behält eine Liste registrierter Adressen bei, die durch Registrierung jedes Knotens im Mesh mit dem Dienst erstellt wird.  
@@ -28,7 +16,7 @@ Um eine Verbindung mit einem Mesh herzustellen, erfordert ein Peerknoten die IP-
 ## <a name="supported-peer-resolvers"></a>Unterstützte Peerresolver  
  Peerkanal unterstützt zwei Arten von Resolvern: Peer Name Resolution-Protokoll (PNRP)-Resolverdienste und benutzerdefinierte Resolverdienste.  
   
- Standardmäßig verwendet Peerkanal den PNRP-Peerresolverdienst, um Peers und Nachbarn im Netz zu ermitteln. Für Situationen/Plattformen, bei denen PNRP nicht verfügbar ist oder nicht verwendet werden kann, stellt [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] einen alternativen, serverbasierten Ermittlungsdienst zur Verfügung &#8211; den <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Sie können auch explizit einen benutzerdefinierten Resolverdienst definieren. Schreiben Sie hierzu eine Klasse, die die <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>-Schnittstelle implementiert.  
+ Standardmäßig verwendet Peerkanal den PNRP-Peerresolverdienst, um Peers und Nachbarn im Netz zu ermitteln. Für Situationen/Plattformen, in denen PNRP nicht verfügbar oder möglich ist, Windows Communication Foundation (WCF) stellt einen alternativen, serverbasierten Ermittlungsdienst - die <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Sie können auch explizit einen benutzerdefinierten Resolverdienst definieren. Schreiben Sie hierzu eine Klasse, die die <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>-Schnittstelle implementiert.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>Peer Name Resolution-Protokoll (PNRP)  
  PNRP, der Standardresolver für [!INCLUDE[wv](../../../../includes/wv-md.md)], ist ein verteilter, serverloser Namensauflösungsdienst. PNRP kann auch auf [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] verwendet werden, indem das Advanced Networking Pack installiert wird. Zwei Clients., auf denen die gleiche Version von PNRP ausgeführt wird, können sich mithilfe dieses Protokolls suchen, falls sie bestimmte Voraussetzungen erfüllen (wie das Fehlen einer dazwischen stehenden Unternehmens-Firewall). Die mit [!INCLUDE[wv](../../../../includes/wv-md.md)] gelieferte Version von PNRP ist neuer als die im Advanced Networking Pack enthaltene Version. Suchen Sie im Microsoft Download Center nach Updates auf PNRP für [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  

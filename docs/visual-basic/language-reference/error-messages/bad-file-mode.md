@@ -1,23 +1,14 @@
 ---
 title: Fehlerhafter Dateimodus.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a540135727eb97f4df5027e2ded7271e21bb4648
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bccbbbeb79f38790a4664b0152ca3378fb55448d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bad-file-mode"></a>Fehlerhafter Dateimodus.
 -Anweisungen in Bearbeiten des Dateiinhalts müssen in den Modus geeignet sein, in denen die Datei geöffnet wurde. Mögliche Ursachen sind:  
@@ -26,7 +17,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Ein `Print` -Anweisung gibt eine andere als für einen Zugriffsmodus geöffnete Datei `Output` oder `Append`.  
   
--   Ein `Input` -Anweisung gibt eine Datei für einen Zugriffsmodus außer geöffnet`Input`  
+-   Ein `Input` -Anweisung gibt eine Datei für einen Zugriffsmodus außer geöffnet `Input`  
   
 -   Fehler beim Schreiben in eine schreibgeschützte Datei.  
   

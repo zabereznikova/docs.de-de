@@ -1,22 +1,12 @@
 ---
 title: Form von WordprocessingML-Dokumenten (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5809e8148e7ac426b876ad11948878ee0bfcd016
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 40d1013d5b5c131cc0b83c1b62bff2555ab179a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Form von WordprocessingML-Dokumenten (Visual Basic)
 Dieses Thema enthält eine Einführung in die XML-Form von WordprocessingML-Dokumenten.  
@@ -24,7 +14,7 @@ Dieses Thema enthält eine Einführung in die XML-Form von WordprocessingML-Doku
 ## <a name="microsoft-office-formats"></a>Microsoft Office-Formate  
  Das systemeigene Dateiformat für das 2007 Microsoft Office-System ist Office Open XML (häufig als Open XML bezeichnet). Open XML ist ein XML-basiertes Format, das von der Ecma als Standard übernommen wurde und für das die ISO-IEC-Standardisierung beantragt wurde. Die Markupsprache für Textverarbeitungsdateien innerhalb von Open XML heißt WordprocessingML. Dieses Lernprogramm verwendet als Eingabe für die Beispiele WordprocessingML-Quelldateien.  
   
- Wenn Sie Microsoft Office 2003 verwenden, können Sie Dokumente in das Office Open XML-Format speichern, wenn Sie das Microsoft Office Compatibility Pack für Word, Excel und PowerPoint 2007-Dateiformate installiert haben.  
+ Benutzer von Microsoft Office 2003 müssen Microsoft Office Compatibility Pack für Word, Excel und PowerPoint 2007-Dateiformate installiert haben, um Dokumente im Office Open XML-Format speichern zu können.  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>Form der WordprocessingML-Dokumente  
  Als Erstes sollten Sie die Form von WordprocessingML-Dokumenten verstehen. WordprocessingML-Dokumente enthalten ein Textkörperelement (mit der Bezeichnung `w:body`) mit den Absätzen des Dokuments. Jeder Absatz enthält mindestens einen Textrun (mit der Bezeichnung `w:r`). Jeder Textrun enthält mindestens ein Textstück (mit der Bezeichnung `w:t`).  

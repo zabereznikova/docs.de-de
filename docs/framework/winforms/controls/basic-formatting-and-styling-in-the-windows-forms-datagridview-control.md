@@ -1,27 +1,15 @@
 ---
 title: Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], formatting and styling
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fa5c240adaaf6512cfbd6b7bd0796bd0983a530
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d38620c321fb12b9f489fd086e222b7780337ab3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms
 Die `DataGridView` Steuerelement ganz einfach die grundlegende Darstellung von Zellen sowie das Anzeigeformat von Zellwerten definieren. Sie können die Darstellung definieren und Formatierung für einzelne Zellen, für Zellen in bestimmte Spalten und Zeilen oder für alle Zellen im Steuerelement durch Festlegen der Eigenschaften von der `DataGridViewCellStyle` erfolgt über verschiedene Objekte `DataGridView` Eigenschaften zu steuern. Darüber hinaus können Sie diese Faktoren wie z. B. der Wert der Zelle durch Behandeln dynamisch anhand Stile modifizieren die `CellFormatting` Ereignis.  
@@ -48,7 +36,7 @@ Die `DataGridView` Steuerelement ganz einfach die grundlegende Darstellung von Z
  [Gewusst wie: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
  Beschreibt, wie die `RowTemplate` Eigenschaft Zeileneigenschaften festlegen, die für alle Zeilen im Steuerelement verwendet wird.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   

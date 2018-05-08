@@ -1,13 +1,6 @@
 ---
 title: 'Optimieren der Leistung: Objektverhalten'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 12c4dc202ac4db2c21b0a45b61608f5c03c24ac9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e1f56dec87de7a22aa8a0bfefe84222d74ba085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-object-behavior"></a>Optimieren der Leistung: Objektverhalten
 Wenn Sie das Verhalten von systeminternen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Objekten verstehen, können Sie Funktionalität und Leistung optimal miteinander vereinen.  
@@ -80,8 +68,8 @@ Wenn Sie das Verhalten von systeminternen [!INCLUDE[TLA2#tla_winclient](../../..
   
 |**Zustand**|**Size**|  
 |---------------|--------------|  
-|Fixiert<xref:System.Windows.Media.SolidColorBrush>|212 Bytes|  
-|Ist nicht fixiert<xref:System.Windows.Media.SolidColorBrush>|972 Bytes|  
+|Fixiert <xref:System.Windows.Media.SolidColorBrush>|212 Bytes|  
+|Ist nicht fixiert <xref:System.Windows.Media.SolidColorBrush>|972 Bytes|  
   
  Im folgenden Codebeispiel wird dieses Konzept veranschaulicht:  
   
@@ -91,7 +79,7 @@ Wenn Sie das Verhalten von systeminternen [!INCLUDE[TLA2#tla_winclient](../../..
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>Durch geänderte Handler auf nicht fixierten Freezable-Objekte bleiben Objekte möglicherweise aktiv  
  Der Delegat, der an ein Objekt übergibt eine <xref:System.Windows.Freezable> des Objekts <xref:System.Windows.Freezable.Changed> Ereignis ist tatsächlich ein Verweis auf dieses Objekt. Aus diesem Grund <xref:System.Windows.Freezable.Changed> Ereignishandler können erhalten Objekte länger als erwartet. Wenn ein Objekt bereinigen, das zum Abhören registriert hat eine <xref:System.Windows.Freezable> des Objekts <xref:System.Windows.Freezable.Changed> Ereignis, es ist wichtig, diese Delegaten zu entfernen, bevor Sie die Freigabe eines Objekts.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Außerdem bindet <xref:System.Windows.Freezable.Changed> Ereignisse intern. Z. B. alle Abhängigkeitseigenschaften die akzeptieren <xref:System.Windows.Freezable> als ein Wert überwachen, <xref:System.Windows.Freezable.Changed> Ereignisse automatisch. Die <xref:System.Windows.Shapes.Shape.Fill%2A> -Eigenschaft, die nimmt eine <xref:System.Windows.Media.Brush>, veranschaulicht dieses Konzept.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Außerdem bindet <xref:System.Windows.Freezable.Changed> Ereignisse intern. Z. B. alle Abhängigkeitseigenschaften die akzeptieren <xref:System.Windows.Freezable> als ein Wert überwachen, <xref:System.Windows.Freezable.Changed> Ereignisse automatisch. Die <xref:System.Windows.Shapes.Shape.Fill%2A> -Eigenschaft, die nimmt eine <xref:System.Windows.Media.Brush>, veranschaulicht dieses Konzept.  
   
  [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
  [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
@@ -110,7 +98,7 @@ Wenn Sie das Verhalten von systeminternen [!INCLUDE[TLA2#tla_winclient](../../..
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>Virtualisierung der Benutzeroberfläche  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bietet auch eine Variante der <xref:System.Windows.Controls.StackPanel> -Element, das von datengebundenen untergeordneten Inhalt automatisch "virtualisiert". In diesem Zusammenhang bezieht sich das Wort „virtualisieren“ auf eine Technik, mit der eine Teilmenge von Objekten aus einer größeren Menge von Datenelementen generiert wird, je nachdem, welche Elemente auf dem Bildschirm sichtbar sind. Es ist sowohl für den Arbeitsspeicher als auch für den Prozessor sehr aufwändig, eine große Menge an UI-Elementen zu generieren, wenn sich möglicherweise nur sehr wenige Elemente zu einer angegebenen Zeit auf einem Bildschirm befinden. <xref:System.Windows.Controls.VirtualizingStackPanel>(über eine Funktionalität von bereitgestellten <xref:System.Windows.Controls.VirtualizingPanel>) sichtbaren Elemente berechnet und kann mit der <xref:System.Windows.Controls.ItemContainerGenerator> aus einer <xref:System.Windows.Controls.ItemsControl> (z. B. <xref:System.Windows.Controls.ListBox> oder <xref:System.Windows.Controls.ListView>) nur Elemente für die sichtbaren Elemente erstellen.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet auch eine Variante der <xref:System.Windows.Controls.StackPanel> -Element, das von datengebundenen untergeordneten Inhalt automatisch "virtualisiert". In diesem Zusammenhang bezieht sich das Wort „virtualisieren“ auf eine Technik, mit der eine Teilmenge von Objekten aus einer größeren Menge von Datenelementen generiert wird, je nachdem, welche Elemente auf dem Bildschirm sichtbar sind. Es ist sowohl für den Arbeitsspeicher als auch für den Prozessor sehr aufwändig, eine große Menge an UI-Elementen zu generieren, wenn sich möglicherweise nur sehr wenige Elemente zu einer angegebenen Zeit auf einem Bildschirm befinden. <xref:System.Windows.Controls.VirtualizingStackPanel> (über eine Funktionalität von bereitgestellten <xref:System.Windows.Controls.VirtualizingPanel>) sichtbaren Elemente berechnet und kann mit der <xref:System.Windows.Controls.ItemContainerGenerator> aus einer <xref:System.Windows.Controls.ItemsControl> (z. B. <xref:System.Windows.Controls.ListBox> oder <xref:System.Windows.Controls.ListView>) nur Elemente für die sichtbaren Elemente erstellen.  
   
  Zur Leistungsoptimierung werden visuelle Objekte für diese Elemente nur generiert oder aktiv gehalten, wenn sie auf dem Bildschirm sichtbar sind. Wenn sie sich nicht mehr im sichtbaren Bereich des Steuerelements befinden, können die visuellen Objekte entfernt werden. Dies ist nicht zu verwechseln mit Datenvirtualisierung, bei der Datenobjekte nicht alle in der lokalen Auflistung vorhanden sind, sondern bei Bedarf einfließen.  
   

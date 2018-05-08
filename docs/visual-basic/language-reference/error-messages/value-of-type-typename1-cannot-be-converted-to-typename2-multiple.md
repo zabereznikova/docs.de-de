@@ -1,28 +1,19 @@
 ---
-title: Ein Wert vom Typ &#39; &lt;Typname1&gt;&#39; kann nicht konvertiert werden, um &#39;&lt; Typname2&gt;&#39; (Mehrere Dateiverweise)
+title: Wert des Typs &#39; &lt;Typname1&gt; &#39; kann nicht konvertiert werden, um &#39; &lt;Typname2&gt; &#39; (mehrere Dateiverweise)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30961
 - bc30961
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f22516a5ca9626f43cb89745e67c66619cf9461f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 41c18160be9b546f8b525376fa06bc0eca6c117a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Ein Wert vom Typ &#39; &lt;Typname1&gt;&#39; kann nicht konvertiert werden, um &#39;&lt; Typname2&gt;&#39; (Mehrere Dateiverweise)
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Wert des Typs &#39; &lt;Typname1&gt; &#39; kann nicht konvertiert werden, um &#39; &lt;Typname2&gt; &#39; (mehrere Dateiverweise)
 Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 > ". Typenkonflikt möglicherweise aufgrund eines Dateiverweises auf "\<dateipfad1 >' in-Projekt"\<projektname1 > "mit einem Dateiverweis auf"\<dateipfad2 >' in-Projekt "\<projektname2 >". Wenn die beiden Assemblys identisch sind, ersetzen Sie die beiden Verweise durch Verweise vom gleichen Speicherort.  
   
  In einer Situation, in denen ein Projekt mehr als einen Dateiverweis auf eine Assembly erstellt, wird, kann der Compiler nicht garantieren, einem Typ in einen anderen konvertiert werden kann.  

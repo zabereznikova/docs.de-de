@@ -1,27 +1,15 @@
 ---
 title: Benutzerdefinierte Nachrichtenformatierung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea32656db90907ae523502fc1796466442ef4a4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 301c508a0c639985e226dc55f62431ad8bb9c12b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-formatters"></a>Benutzerdefinierte Nachrichtenformatierung
-Der Inhalt einer Nachricht weist häufig das XML-Format auf, also kein gängiges Format für eine Anwendung. Anwendungen bearbeiten Objekte, indem sie ihre Eigenschaften abrufen und festlegen. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]verwendet die *Datenvertrag* Konvertieren einer <xref:System.ServiceModel.Channels.Message> Objekt in ein Objekt, das von einer Anwendung problemlos bewältigt. Diese Prozesse werden als Serialisierung und Deserialisierung bezeichnet. Beachten Sie, dass diese Begriffe auch verwendet werden, um die Serialisierung und Deserialisierung einer Transportebene in das bzw. aus dem Nachrichtensendeformat zu beschreiben. Dabei handelt es sich um einen nicht verwandten Prozess.  
+Der Inhalt einer Nachricht weist häufig das XML-Format auf, also kein gängiges Format für eine Anwendung. Anwendungen bearbeiten Objekte, indem sie ihre Eigenschaften abrufen und festlegen. Windows Communication Foundation (WCF) verwendet die *Datenvertrag* Konvertieren einer <xref:System.ServiceModel.Channels.Message> Objekt in ein Objekt, das von einer Anwendung problemlos bewältigt. Diese Prozesse werden als Serialisierung und Deserialisierung bezeichnet. Beachten Sie, dass diese Begriffe auch verwendet werden, um die Serialisierung und Deserialisierung einer Transportebene in das bzw. aus dem Nachrichtensendeformat zu beschreiben. Dabei handelt es sich um einen nicht verwandten Prozess.  
   
  Sie können eine benutzerdefinierte Nachrichtenformatierung verwenden, wenn Sie eine spezielle Konvertierung zwischen Nachrichten und Objekten implementieren müssen, die Sie mithilfe eines Datenvertrags nicht durchführen können. Ändern bzw. erweitern Sie dazu das Ausführungsverhalten eines bestimmten Vertragsvorgangs auf einem Client oder für einen Dienst.  
   

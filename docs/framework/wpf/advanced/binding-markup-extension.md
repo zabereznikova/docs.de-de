@@ -1,31 +1,17 @@
 ---
 title: Bindung als Markuperweiterung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Binding
 helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fc860f52f8fde2aed3cae224c05bbcf08b864d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-markup-extension"></a>Bindung als Markuperweiterung
 Orientiert sich einen Eigenschaftswert, um einem datengebundenen Wert und einen intermediate Expression-Objekt erstellen und zum Interpretieren der Datenkontext, der auf das Element und seine Bindung zur Laufzeit angewendet wird.  
@@ -125,7 +111,7 @@ Orientiert sich einen Eigenschaftswert, um einem datengebundenen Wert und einen 
  Beschreibt die Datenbindung auf einer grundlegenden Ebene wird in diesem Thema nicht behandelt. Finden Sie unter [-Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Data.MultiBinding>und <xref:System.Windows.Data.PriorityBinding> unterstützen keine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Erweiterungssyntax. Sie würden stattdessen Eigenschaftenelemente verwenden. Finden Sie unter Referenzthemen für <xref:System.Windows.Data.MultiBinding> und <xref:System.Windows.Data.PriorityBinding>.  
+>  <xref:System.Windows.Data.MultiBinding> und <xref:System.Windows.Data.PriorityBinding> unterstützen keine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Erweiterungssyntax. Sie würden stattdessen Eigenschaftenelemente verwenden. Finden Sie unter Referenzthemen für <xref:System.Windows.Data.MultiBinding> und <xref:System.Windows.Data.PriorityBinding>.  
   
  Boolesche Werte, die für Markuperweiterungen für XAML werden Groß-/Kleinschreibung. Sie können z. B. angeben entweder `{Binding NotifyOnValidationError=true}` oder `{Binding NotifyOnValidationError=True}`.  
   
@@ -133,7 +119,7 @@ Orientiert sich einen Eigenschaftswert, um einem datengebundenen Wert und einen 
   
  `Binding` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn erfüllt werden als Escapesequenz für Attributwerte, um die nicht als literale Werte oder Namen sein, und diese Anforderung eher global und nicht den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften attributiert. Alle Markuperweiterungen in XAML verwenden die `{` und `}` Zeichen in der Attributsyntax normalerweise wird mit dem ein XAML-Prozessor erkennt, dass eine Markuperweiterung den Zeichenfolgeninhalt verarbeiten muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- `Binding`ist eine untypische Markuperweiterung, die die <xref:System.Windows.Data.Binding> Klasse, die die Funktionalität der Erweiterung für WPF XAML-Implementierung implementiert implementiert auch einige andere Methoden und Eigenschaften, die nicht in XAML beziehen. Die anderen Member dienen zur stellen <xref:System.Windows.Data.Binding> einer vielseitiger und eigenständige Klasse, die viele Datenbindungsszenarien neben fungiert als eine XAML-Markuperweiterung behandeln können.  
+ `Binding` ist eine untypische Markuperweiterung, die die <xref:System.Windows.Data.Binding> Klasse, die die Funktionalität der Erweiterung für WPF XAML-Implementierung implementiert implementiert auch einige andere Methoden und Eigenschaften, die nicht in XAML beziehen. Die anderen Member dienen zur stellen <xref:System.Windows.Data.Binding> einer vielseitiger und eigenständige Klasse, die viele Datenbindungsszenarien neben fungiert als eine XAML-Markuperweiterung behandeln können.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Data.Binding>  

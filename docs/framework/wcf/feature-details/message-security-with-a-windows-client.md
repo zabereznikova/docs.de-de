@@ -1,37 +1,27 @@
 ---
-title: "Nachrichtensicherheit über einen Windows-Client"
-ms.custom: 
+title: Nachrichtensicherheit über einen Windows-Client
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c480706fee27e7023eae5b493b0ca007b4757e97
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 185edce5bd8a4772545ec966a6b3f74b204aa2b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client"></a>Nachrichtensicherheit über einen Windows-Client
-Das folgende Szenario zeigt einen im Nachrichtensicherheitsmodus gesicherten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client und Server. Client und Dienst werden mit Windows-Anmeldeinformationen authentifiziert.  
+Dieses Szenario zeigt, ein Windows Communication Foundation (WCF)-Client und Server, die von der nachrichtensicherheitsmodus gesichert werden. Client und Dienst werden mit Windows-Anmeldeinformationen authentifiziert.  
   
  ![Nachrichtensicherheit mit einem Windows-Client](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Sicherheitsmodus|Meldung|  
-|Interoperabilität|Nur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|Interoperabilität|Nur WCF|  
 |Authentifizierung (Server)|Gegenseitige Authentifizierung des Servers und des Clients|  
 |Authentifizierung (Client)|Gegenseitige Authentifizierung des Servers und des Clients|  
 |Integrität|Ja, mit freigegebenem Sicherheitskontext|  

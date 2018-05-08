@@ -1,11 +1,6 @@
 ---
 title: End Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.End
 - End
@@ -19,14 +14,11 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b692409f2895f5e9b713c57fc35ff2def40bce75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 864ac5ef1713f8ffa93c18accede8ecd5b3b7a8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-statement"></a>End Statement
 Beendet die Ausführung sofort.  
@@ -38,7 +30,7 @@ End
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können Platzieren der `End` Anweisung an einer beliebigen Stelle in einer Prozedur, um die gesamte Anwendung zur Beendigung der Ausführung zu erzwingen. `End`Schließt alle geöffneten mit einer `Open` Anweisung und löscht alle für die Anwendung Variablen. Die Anwendung wird geschlossen, sobald keine andere Programme enthalten Verweise auf die Objekte vorhanden sind und kein Code ausgeführt wird.  
+ Sie können Platzieren der `End` Anweisung an einer beliebigen Stelle in einer Prozedur, um die gesamte Anwendung zur Beendigung der Ausführung zu erzwingen. `End` Schließt alle geöffneten mit einer `Open` Anweisung und löscht alle für die Anwendung Variablen. Die Anwendung wird geschlossen, sobald keine andere Programme enthalten Verweise auf die Objekte vorhanden sind und kein Code ausgeführt wird.  
   
 > [!NOTE]
 >  Die `End` Anweisung abrupt beendet die Ausführung von Code und keine aufgerufen werden der `Dispose` oder `Finalize` -Methode oder andere Visual Basic-Code. Objektverweise, die von anderen Programmen werden ungültig. Wenn ein `End` -Anweisung innerhalb einer `Try` oder `Catch` Block Steuerelement übergibt keine entsprechenden `Finally` Block.  
@@ -50,7 +42,7 @@ End
  Verwenden Sie `End` sparsam und nur, wenn Sie die Anwendung sofort beenden müssen. Die normalen Verfahren zum Beenden einer Prozedur ([Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) und [Exit-Anweisung](../../../visual-basic/language-reference/statements/exit-statement.md)) nicht nur die Prozedur ordnungsgemäß beendet, sondern auch dem aufrufenden Code die Gelegenheit ordnungsgemäß zu beenden. Eine Konsolenanwendung kann z. B. einfach `Return` aus der `Main` Prozedur.  
   
 > [!IMPORTANT]
->  Die `End` Anweisung ruft die <xref:System.Environment.Exit%2A> Methode der <xref:System.Environment> -Klasse in der <xref:System> Namespace. <xref:System.Environment.Exit%2A>benötigen Sie `UnmanagedCode` Berechtigung. Wenn Sie kein <xref:System.Security.SecurityException> Fehler auftritt.  
+>  Die `End` Anweisung ruft die <xref:System.Environment.Exit%2A> Methode der <xref:System.Environment> -Klasse in der <xref:System> Namespace. <xref:System.Environment.Exit%2A> benötigen Sie `UnmanagedCode` Berechtigung. Wenn Sie kein <xref:System.Security.SecurityException> Fehler auftritt.  
   
  Wenn ein zusätzlicher Schlüsselwort, gefolgt [End \<Schlüsselwort >-Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md) kennzeichnet das Ende der Definition der entsprechenden Prozedur oder des Blocks. Beispielsweise `End Function` beendet die Definition einer `Function` Prozedur.  
   

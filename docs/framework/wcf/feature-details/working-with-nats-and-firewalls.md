@@ -1,34 +1,20 @@
 ---
 title: Arbeiten mit NATs und Firewalls
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 72582af358d363038d09b313632c023f3c054dbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>Arbeiten mit NATs und Firewalls
 Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig nicht über eine direkte und offene Verbindung. Die Datenpakete werden gefiltert, weitergeleitet, analysiert und verändert – sowohl vom Absender und vom Empfänger als auch von den Zwischenstationen im Netzwerk. Netzwerkadressübersetzungen (NAT) und Firewalls sind gängige Beispiele für zwischengeschaltete Anwendungen, die an der Kommunikation im Netzwerk beteiligt sein können.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Transporte und Nachrichtenaustauschmuster (MEP) reagieren unterschiedlich auf das Vorhandensein von NATs und Firewalls. In diesem Thema wird beschrieben, wie die Netzwerkadressübersetzung und Firewalls in gängigen Netzwerktopologien funktionieren. Außerdem werden Empfehlungen für spezielle Kombinationen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transporten und Nachrichtenaustauschmustern gegeben, um die Stabilität der Anwendungen gegenüber Netzwerkadressübersetzungen und Firewalls im Netzwerk zu erhöhen.  
+ Windows Communication Foundation (WCF)-Transporte und Nachrichtenaustauschmuster (mep) reagieren unterschiedlich auf das Vorhandensein von NATs und Firewalls. In diesem Thema wird beschrieben, wie die Netzwerkadressübersetzung und Firewalls in gängigen Netzwerktopologien funktionieren. Empfehlungen für bestimmte Kombinationen von WCF-Transporte und Nachrichtenaustauschmuster erhalten, die dabei helfen, Ihre Anwendungen unter Umständen stabiler NATs und Firewalls im Netzwerk.  
   
 ## <a name="how-nats-affect-communication"></a>Einfluss von Netzwerkadressübersetzungen auf die Kommunikation  
  Netzwerkadressübersetzungen wurden konzipiert, um eine externe IP-Adresse mit mehreren Computern nutzen zu können. Bei der Netzwerkadressübersetzung mit Anschlussneuzuordnung werden eine interne IP-Adresse und ein interner Anschluss für die Verbindung mit einer externen IP-Adresse einer neuen Anschlussnummer zugeordnet. Die neue Anschlussnummer ermöglicht es der Netzwerkadressübersetzung, den eingehenden Datenverkehr mit der ursprünglichen Kommunikation in Beziehung zu setzen. Viele Privatanwender verfügen über eine IP-Adresse, die nur privat geroutet werden kann, und verwenden die Netzwerkadressübersetzung für das globale Routing von Datenpaketen.  
@@ -45,7 +31,7 @@ Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig n
  Private Firewalls sind häufig so konfiguriert, dass eingehende Verbindungen unterbunden werden, es sei denn, es wurde zuvor eine ausgehende Verbindung zum entsprechenden Computer hergestellt. Geschäftliche Firewalls sind häufig so konfiguriert, dass zunächst einmal eingehende Verbindungen auf allen Anschlüssen unterbunden und anschließend Ausnahmen festgelegt werden. Beispielsweise kann eine Firewall alle Verbindungen mit Ausnahme von Verbindungen über den Anschluss 80 und den Anschluss 443 blockieren, um HTTP- und HTTPS-Dienste zu ermöglichen. Sowohl für private als auch für geschäftliche Benutzer gibt es verwaltete Firewalls, die es einem vertrauenswürdigen Benutzer oder einem vertrauenswürdigen Prozess ermöglichen, die Konfiguration der Firewall anzupassen. Verwaltete Firewalls sind häufiger in privaten Umgebungen zu finden, da die Netzwerkverwendung dort i. d. R. keinen spezifischen Richtlinien unterliegt.  
   
 ## <a name="using-teredo"></a>Verwenden von Teredo  
- Teredo ist eine IPv6-Technologie zur direkten Adressierung von Computern hinter einem Netzwerkadressübersetzungsmechanismus. Das Teredo-Protokoll verwendet einen Server, der öffentlich und global geroutet werden kann, um potenzielle Verbindungen anzukündigen. Der Teredo-Server übernimmt die Rolle eine Vermittlers zwischen dem Client und dem Server der Anwendung und ermöglicht so den Austausch von Verbindungsinformationen. Die Computer fordern dann eine temporäre Teredo-Adresse an, und die Pakete werden durch das vorhandene Netzwerk getunnelt. Damit Teredo von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt wird, müssen im Betriebssystem die entsprechenden Einstellungen für IPv6 und Teredo vorgenommen werden. Teredo wird von [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und nachfolgenden Betriebssystemen unterstützt. [!INCLUDE[wv](../../../../includes/wv-md.md)] und nachfolgende Betriebssysteme unterstützen IPv6 standardmäßig und erfordern lediglich eine entsprechende Aktivierung durch den Benutzer. Unter [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] müssen IPv6 und Teredo vom Benutzer aktiviert werden. Weitere Informationen finden Sie unter der [Teredo – Übersicht](http://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo ist eine IPv6-Technologie zur direkten Adressierung von Computern hinter einem Netzwerkadressübersetzungsmechanismus. Das Teredo-Protokoll verwendet einen Server, der öffentlich und global geroutet werden kann, um potenzielle Verbindungen anzukündigen. Der Teredo-Server übernimmt die Rolle eine Vermittlers zwischen dem Client und dem Server der Anwendung und ermöglicht so den Austausch von Verbindungsinformationen. Die Computer fordern dann eine temporäre Teredo-Adresse an, und die Pakete werden durch das vorhandene Netzwerk getunnelt. Teredo-Unterstützung in WCF ist das Aktivieren der Unterstützung für IPv6 und Teredo im Betriebssystem erforderlich. Teredo wird von [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und nachfolgenden Betriebssystemen unterstützt. [!INCLUDE[wv](../../../../includes/wv-md.md)] und nachfolgende Betriebssysteme unterstützen IPv6 standardmäßig und erfordern lediglich eine entsprechende Aktivierung durch den Benutzer. Unter [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] müssen IPv6 und Teredo vom Benutzer aktiviert werden. Weitere Informationen finden Sie unter der [Teredo – Übersicht](http://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Auswählen eines Transports und eines Nachrichtenaustauschmusters  
  Das Verfahren zum Auswählen eines Transports und eines Nachrichtenaustauschmusters besteht aus drei Schritten:  
@@ -64,7 +50,7 @@ Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig n
   
 -   Verwenden Sie einen erreichbaren Dienst zum Registrieren von Endpunkten oder zum Weiterleiten von Datenverkehr. Durch einen global erreichbaren Verbindungsdienst wie einem Teredo-Server wird die Wahrscheinlichkeit deutlich erhöht, eine Verbindung herzustellen, wenn die Netzwerktopologie eingeschränkt oder unbekannt ist.  
   
- In den folgenden Tabellen werden unidirektionale Nachrichtenaustauschmuster, Anforderung-Antwort-Nachrichtenaustauschmuster sowie Duplex-Nachrichtenaustauschmuster und TCP-Standardtransporte, TCP-Transporte mit Teredo sowie Standard- und Dual-HTTP-Transporte in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] betrachtet.  
+ In den folgenden Tabellen untersuchen, die unidirektionale, Anforderung-Antwort und duplex-Nachrichtenaustauschmuster und die TCP-Standardtransporte, TCP mit Teredo-Protokoll, und Standard- und dual-HTTP-Transporte in WCF.  
   
 |Adressierbarkeit|Server direkt|Server direkt mit NAT-Durchlauf|Server-NAT|Server-NAT mit NAT-Durchlauf|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  

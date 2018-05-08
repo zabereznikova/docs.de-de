@@ -1,33 +1,19 @@
 ---
 title: Erstellen von WCF-Diensten für ASP.NET AJAX
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64ab5c6bf4b555504562dbf68a60d032743df865
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c2d56380b626cd0eafc178b4db3584883b00a6bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Erstellen von WCF-Diensten für ASP.NET AJAX
 Microsoft ASP.NET AJAX ermöglicht es Ihnen, zügig Webseiten zu erstellen, die mit reaktionsschnellen und vertrauten Benutzeroberflächenelementen eine hohe Benutzerfreundlichkeit bieten. ASP.NET AJAX bietet Bibliotheken mit Clientskripts, in denen browserübergreifende ECMAScript (JavaScript)- und Dynamic&#160;HTML (DHTML)-Technologien integriert sind. Außerdem sind diese Funktionen in die serverbasierte ASP.NET&#160;2.0-Entwicklungsplattform integriert. Durch die Verwendung von ASP.NET AJAX können Sie die Benutzerfreundlichkeit und die Effizienz Ihrer Webanwendungen verbessern.  
   
  ASP.NET AJAX besteht aus Clientskriptbibliotheken und Serverkomponenten, die zu einem robusten Entwicklungsframework integriert sind. So greifen Sie über eine ASP.NET-Seite auf einen Dienst zu: Sobald die Dienst-URL des ASP.NET Script Manager-Steuerelements auf der Seite hinzugefügt wurde, können Dienstvorgänge anhand von JavaScript-Code aufgerufen werden. Dieser Code gleicht einem normalen JavaScript-Funktionsaufruf. Finden Sie unter [erfahren Sie ASP.NET AJAX](http://go.microsoft.com/fwlink/?LinkId=186475) zur Verwendung der Webdienste in AJAX-Framework.  
   
- Die meisten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste können als Dienst verfügbar gemacht werden, der mit ASP.NET AJAX kompatibel ist, indem ein entsprechender ASP.NET AJAX-Endpunkt hinzugefügt wird.  
+ Die meisten Windows Communication Foundation (WCF)-Dienste können als kompatibel mit ASP.NET AJAX-Dienst verfügbar gemacht werden, indem ein entsprechender ASP.NET AJAX-Endpunkt hinzufügen.  
   
  Wenn Sie Visual Studio verwenden, können eine vordefinierte Vorlage für AJAX-aktivierten WCF-Dienste zur Verfügung, in der **neues Element hinzufügen** Dialogfeld beim Arbeiten mit ASP.NET-Websites oder Webanwendungen.  
   
@@ -35,7 +21,7 @@ Microsoft ASP.NET AJAX ermöglicht es Ihnen, zügig Webseiten zu erstellen, die 
   
 -   Erstellen Sie den Endpunkt mithilfe dynamischer Hostaktivierung, ohne eine Konfiguration zu verwenden. Dies ist der einfachste Ansatz, wenn Sie mit dem WCF-Konfigurationssystem nicht vertraut sind. Weitere Informationen finden Sie unter [wie: Hinzufügen einer ASP.NET AJAX-Endpunkt ohne mithilfe der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
--   Fügen Sie einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst mithilfe einer Konfiguration einen AJAX-fähigen Endpunkt hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
+-   Ein WCF-Dienst mithilfe der Konfiguration einen AJAX-aktivierten Endpunkt hinzugefügt. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
   
  Die Web-Programmiermodell beschrieben, die der [Web-HTTP-Programmierung Überblick über WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md) mit ASP.NET AJAX-Diensten verwendet werden kann. Dies gilt insbesondere in folgenden Fällen:  
   
@@ -62,13 +48,13 @@ Microsoft ASP.NET AJAX ermöglicht es Ihnen, zügig Webseiten zu erstellen, die 
   
 -   Es können keine weiteren Eigenschaften für das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut und das <xref:System.ServiceModel.Web.WebInvokeAttribute>-Attribut geändert werden, wenn die Kompatibilität mit ASP.NET AJAX erforderlich ist. Weitere Aspekte des Webprogrammiermodells können verwendet werden, sofern die ASP.NET AJAX-Aufrufkonventionen nicht verletzt werden.  
   
- Erweitertere Szenarien erfordern zusätzliche Informationen über die AJAX-Unterstützung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], um verständlich zu sein:  
+ Erweitertere Szenarien erfordern zusätzlichen Informationen über AJAX-Unterstützung in WCF interpretiert werden:  
   
--   Um zu verstehen, wie Daten zwischen einem AJAX-Seite-Client übertragen werden und ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service mit JavaScript und Details dazu, wie .NET Framework-Typen in JavaScript-Typen zugeordnet, finden Sie unter [Unterstützung für JSON und andere von Datenformaten übertragen](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md) .  
+-   Um zu verstehen, wie Daten übertragen werden zwischen einem AJAX-Seite-Client und einem WCF-Dienst, der mit JavaScript und Details für JavaScript-Typen wie .NET Framework-Typen zugeordnet werden, finden Sie unter [Unterstützung für JSON und andere von Datenformaten übertragen](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md).  
   
 -   Um ASP.NET-Funktionen nutzen zu können, beispielsweise die URL-basierte Authentifizierung und den Zugriff auf ASP.NET-Sitzungsinformationen, empfiehlt es sich, den ASP.NET-Kompatibilitätsmodus durch Konfiguration zu aktivieren.  
   
- AJAX-Endpunkte in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] können sogar ohne das ASP.NET&#160;AJAX-Framework verwendet werden. Dazu ist die Kenntnis der Unterstützungsarchitektur der AJAX-Unterstützung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erforderlich. Eine Erläuterung dieser Architektur, finden Sie unter [WCF-HTTP-Objekt Webprogrammiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Ein Codebeispiel, das diesen Ansatz veranschaulicht, finden Sie unter der [AJAX-Dienst mit JSON und XML-](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
+ AJAX-Endpunkte in WCF können auch ohne das ASP.NET AJAX-Framework genutzt werden. Hierzu müssen einen Überblick über die Unterstützungsarchitektur der AJAX-Unterstützung in WCF. Eine Erläuterung dieser Architektur, finden Sie unter [WCF-HTTP-Objekt Webprogrammiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Ein Codebeispiel, das diesen Ansatz veranschaulicht, finden Sie unter der [AJAX-Dienst mit JSON und XML-](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  

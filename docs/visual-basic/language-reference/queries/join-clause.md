@@ -1,11 +1,6 @@
 ---
 title: Join-Klausel (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryJoinIn
 - vb.QueryJoin
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-visual-basic"></a>Join-Klausel (Visual Basic)
 Fasst zwei Auflistungen zu einer einzelnen Auflistung zusammen. Die Join-Operation wird basierend auf übereinstimmenden Schlüsseln und verwendet die `Equals` Operator.  
@@ -50,7 +42,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  Dies ist optional. Eine oder mehrere zusätzliche `Group Join` Klauseln weiter optimieren der Abfrage.  
   
  `key1` `Equals` `key2`  
- Erforderlich. Identifiziert die Schlüssel für die zu verknüpfenden Auflistungen. Verwenden Sie die `Equals` Operator zum Vergleichen von Schlüsseln aus der zu verknüpfenden Auflistungen. Sie können die Join-Bedingungen kombinieren, mit der `And` Operator, um mehrere Schlüssel zu identifizieren. `key1`muss aus der Auflistung auf der linken Seite von der `Join` Operator. `key2`aus der Auflistung auf der rechten Seite des muss die `Join` Operator.  
+ Erforderlich. Identifiziert die Schlüssel für die zu verknüpfenden Auflistungen. Verwenden Sie die `Equals` Operator zum Vergleichen von Schlüsseln aus der zu verknüpfenden Auflistungen. Sie können die Join-Bedingungen kombinieren, mit der `And` Operator, um mehrere Schlüssel zu identifizieren. `key1` muss aus der Auflistung auf der linken Seite von der `Join` Operator. `key2` aus der Auflistung auf der rechten Seite des muss die `Join` Operator.  
   
  Die in der Joinbedingung verwendeten Schlüssel können Ausdrücke sein, die mehr als ein Element aus der Auflistung enthalten. Jeder Schlüsselausdruck kann jedoch nur die Elemente aus der entsprechenden Auflistung enthalten.  
   

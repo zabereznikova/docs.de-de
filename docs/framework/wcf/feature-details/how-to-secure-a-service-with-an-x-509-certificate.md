@@ -1,32 +1,20 @@
 ---
 title: 'Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: 8
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 73fd9919d1403ef592e5b81c11b6eb659baea669
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat
-Die Sicherung eines Diensts mithilfe eines X.509-Zertifikats ist eine grundlegende Technik, die von den meisten Bindungen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet wird. Dieses Thema führt durch die Schritte der Konfiguration eines selbst gehosteten Diensts mit einem X.509-Zertifikat.  
+Sicherung eines Diensts mit einem x. 509-Zertifikat ist eine grundlegende Technik, die meisten Bindungen in der Windows Communication Foundation (WCF) verwenden. Dieses Thema führt durch die Schritte der Konfiguration eines selbst gehosteten Diensts mit einem X.509-Zertifikat.  
   
  Eine Voraussetzung ist ein gültiges Zertifikat, das zur Authentifizierung des Diensts verwendet werden kann. Das Zertifikat muss von einer vertrauenswürdigen Zertifizierungsstelle zum Server ausgegeben werden. Wenn das Zertifikat ungültig ist, vertrauen die Clients, die versuchen, den Dienst zu verwenden, dem Dienst nicht, und es wird keine Verbindung aufgebaut. Weitere Informationen zur Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
@@ -44,7 +32,7 @@ Die Sicherung eines Diensts mithilfe eines X.509-Zertifikats ist eine grundlegen
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4.  Erstellen Sie eine Instanz der <xref:System.Uri>-Klasse für die Basisadresse des Diensts. Da `WSHttpBinding` den HTTP-Transport nutzt, muss der Uniform Resource Identifier (URI) mit einem Schema beginnen. Andernfalls löst [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] eine Ausnahme aus, wenn der Dienst geöffnet wird.  
+4.  Erstellen Sie eine Instanz der <xref:System.Uri>-Klasse für die Basisadresse des Diensts. Da die `WSHttpBinding` verwendet der HTTP-Transport, den Uniform Resource Identifier (URI) muss mit einem Schema beginnen, oder Windows Communication Foundation (WCF) wird eine Ausnahme ausgelöst, wenn der Dienst geöffnet wird.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  

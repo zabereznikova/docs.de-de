@@ -1,13 +1,6 @@
 ---
 title: 'Optimieren der Leistung: Vorteile der Hardware nutzen'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - hardware rendering pipeline [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55c9482ecb540baab3ddd57ca9350fd7265ac251
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb790da63b4636e3dd6c25ea118075304702acc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimieren der Leistung: Vorteile der Hardware nutzen
 Der internen Architektur von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über zwei Renderingpipelines, Hardware und Software. Dieses Thema enthält Informationen zu dieser Renderingpipelines, um Entscheidungen zur leistungsoptimierung von Anwendungen treffen zu können.  
@@ -34,14 +22,14 @@ Der internen Architektur von [!INCLUDE[TLA2#tla_winclient](../../../../includes/
  Eines der wichtigsten Faktoren bei der Ermittlung [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Leistung ist die renderbegrenzung – Sie gerendert werden, desto größere sind die Kosten für die Leistung müssen mehr Pixel. Allerdings mehr rendering auf ausgelagert werden können die [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], die weitere Leistungsvorteile, die Sie gewinnen können. Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hardwarerenderingpipeline Anwendung nutzt [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] Features auf Hardware, die mindestens unterstützt [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] Version 7.0. Weitere Optimierungen gewonnen werden können, von der Hardware, die unterstützt [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] , Version 7.0 und PixelShader 2.0 +-Funktionen.  
   
 ## <a name="software-rendering-pipeline"></a>Softwarerenderingpipeline  
- Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Softwarerenderingpipeline basiert vollständig auf CPU-gebunden. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]nutzt die SSE- und SSE2-Anweisung wird in der CPU auf eine optimierte und gleichberechtigt Rasterisierungsfunktion zu implementieren. Fallback auf Software ist eine nahtlose jedes Mal, wenn in der Anwendungsfunktion die Hardwarerenderingpipeline gerendert werden kann.  
+ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Softwarerenderingpipeline basiert vollständig auf CPU-gebunden. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nutzt die SSE- und SSE2-Anweisung wird in der CPU auf eine optimierte und gleichberechtigt Rasterisierungsfunktion zu implementieren. Fallback auf Software ist eine nahtlose jedes Mal, wenn in der Anwendungsfunktion die Hardwarerenderingpipeline gerendert werden kann.  
   
  Das größte Leistungsproblem treten beim Rendern in Software-Modus verknüpft ist, Füllrate, definiert als die Anzahl der Pixel, die gerendert werden. Wenn Sie über die Leistung in Software-Renderingmodus Bedenken haben, versuchen Sie, wie oft zu minimieren, die eine Pixel neu gezeichnet wird. Z. B. Wenn Sie eine Anwendung mit einem blauen Hintergrund, dann über diese ein leicht transparentes Bild gerendert wird verfügen, werden Sie alle Pixel in der Anwendung zweimal gerendert. Folglich dauert zweimal es zulässig, die die Anwendung mit dem Bild, als wenn Sie nur die blauen Hintergrund gerendert.  
   
 ### <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken  
  Es ist möglicherweise sehr schwierig, die Hardwarekonfiguration vorherzusagen, die die Anwendung ausgeführt wird. Möglicherweise möchten Sie jedoch, einen Entwurf zu berücksichtigen, der Ihre Anwendung nahtlos Funktionen wechseln, wenn auf andere Hardware ausgeführt, damit sie vollständige jede Konfiguration auf anderer Hardware nutzen kann.  
   
- Um dies zu erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt Funktionen bereit, die Grafikfunktionen eines Systems zur Laufzeit zu bestimmen. Grafikfunktionen wird durch die Kategorisierung der Videokarte als eine der drei Ebenen der Funktion bestimmt. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]macht eine [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , mit dessen Hilfe einer Anwendung für die Ebene der Funktion Abfragen. Die Anwendung kann dann unterschiedlichen Codepfaden zur Laufzeit je nach der Renderingebene, die von der Hardware unterstützt vornehmen.  
+ Um dies zu erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt Funktionen bereit, die Grafikfunktionen eines Systems zur Laufzeit zu bestimmen. Grafikfunktionen wird durch die Kategorisierung der Videokarte als eine der drei Ebenen der Funktion bestimmt. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] macht eine [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , mit dessen Hilfe einer Anwendung für die Ebene der Funktion Abfragen. Die Anwendung kann dann unterschiedlichen Codepfaden zur Laufzeit je nach der Renderingebene, die von der Hardware unterstützt vornehmen.  
   
  Die Funktionen der Grafikhardware, die sich am stärksten auf die Renderingebenen auswirken, sind:  
   

@@ -1,14 +1,6 @@
 ---
 title: Import und Export von Schemas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe4ef5b17013bf1a9abf5fd1ca0807fe4d335df4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c9bb0d6df362380a37ae3079694ab91e9577741d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema-import-and-export"></a>Import und Export von Schemas
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] umfasst ein neues Serialisierungsmodul, <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` übersetzt zwischen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekten und XML (in beide Richtungen). Zusätzlich zum Serialisierungsprogramm umfasst [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zugeordnete Mechanismen zum Schemaimport und -export. *Schema* ist eine formale, genaue und maschinenlesbare Beschreibung der Form des XML-Codes, die die Serialisierung erstellt oder auf die das Deserialisierungsprogramm zugreifen kann. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die vom World Wide Web Consortium (W3C) definierte Sprache XML Schema Definition (XSD) zur Schemadarstellung. Diese Sprache ist mit zahlreichen Plattformen von Drittanbietern weitgehend interoperabel.  
+Windows Communication Foundation (WCF) enthält ein neues Serialisierungsmodul, das <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` übersetzt zwischen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekten und XML (in beide Richtungen). Zusätzlich zum Serialisierungsprogramm selbst umfasst WCF zugeordneten Schema-Import / Export-Mechanismen Schema. *Schema* ist eine formale, genaue und maschinenlesbare Beschreibung der Form des XML-Codes, die die Serialisierung erstellt oder auf die das Deserialisierungsprogramm zugreifen kann. WCF verwendet das World Wide Web Consortium (W3C) XML-Schemadefinitionssprache (XSD) als die schemendarstellung, die mit zahlreichen Plattformen von Drittanbietern weitgehend interoperabel ist.  
   
  Die Schemaimportkomponente <xref:System.Runtime.Serialization.XsdDataContractImporter> generiert anhand eines XSD-Schemadokuments [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Klassen (normalerweise Datenvertragsklassen), sodass die serialisierten Formen dem angegebenen Schema entsprechen.  
   

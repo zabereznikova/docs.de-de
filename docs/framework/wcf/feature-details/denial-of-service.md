@@ -1,28 +1,14 @@
 ---
 title: Dienstverweigerung (Denial of Service)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 52a22d96e981ff10d444569465d8e74ddf890836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="denial-of-service"></a>Dienstverweigerung (Denial of Service)
 Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass Nachrichten nicht verarbeitet werden können oder extrem langsam verarbeitet werden.  
@@ -62,15 +48,15 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Ungültige Implementierungen von IAuthorizationPolicy können zu Dienstfehlern führen  
  Das Aufrufen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode für eine fehlerhafte Implementierung der <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Schnittstelle kann Dienstfehler verursachen.  
   
- Gegenmaßnahme: Verwenden Sie ausschließlich vertrauenswürdigen Code. Verwenden Sie also nur selbst geschriebenen und getesteten Code oder Code von einem vertrauenswürdigen Anbieter. Lassen Sie nicht ohne gründliche Prüfung zu, dass nicht vertrauenswürdige Erweiterungen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> in Ihren Code geladen werden. Dies gilt für alle in einer Dienstimplementierung verwendeten Erweiterungen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterscheidet nicht zwischen Anwendungscode und Fremdcode, der über Erweiterungspunkte geladen wird.  
+ Gegenmaßnahme: Verwenden Sie ausschließlich vertrauenswürdigen Code. Verwenden Sie also nur selbst geschriebenen und getesteten Code oder Code von einem vertrauenswürdigen Anbieter. Lassen Sie nicht ohne gründliche Prüfung zu, dass nicht vertrauenswürdige Erweiterungen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> in Ihren Code geladen werden. Dies gilt für alle in einer Dienstimplementierung verwendeten Erweiterungen. WCF wird nicht zwischen Anwendungscode und fremden Code, der eingesteckt ist über Erweiterungspunkte stellen.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Maximale Größe des Kerberos-Tokens muss möglicherweise geändert werden  
- Gehört ein Client zu vielen Gruppen (ungefähr 900, obwohl die tatsächliche Anzahl je nach den Gruppen variiert), kann ein Problem auftreten, wenn ein Nachrichtenheaderblock größer als 64 Kilobyte ist. In diesem Fall können Sie die maximale Kerberos-Tokengröße erhöhen, wie in den Microsoft Support-Artikel beschrieben "[Internet Explorer Kerberos-Authentifizierung funktioniert nicht wegen nicht ausreichenden Puffers Herstellen einer Verbindung mit IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." Sie müssen unter Umständen auch die maximale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichtengröße erhöhen, um sie an den größeren Kerberos-Token anzupassen.  
+ Gehört ein Client zu vielen Gruppen (ungefähr 900, obwohl die tatsächliche Anzahl je nach den Gruppen variiert), kann ein Problem auftreten, wenn ein Nachrichtenheaderblock größer als 64 Kilobyte ist. In diesem Fall können Sie die maximale Kerberos-Tokengröße erhöhen, wie in den Microsoft Support-Artikel beschrieben "[Internet Explorer Kerberos-Authentifizierung funktioniert nicht wegen nicht ausreichenden Puffers Herstellen einer Verbindung mit IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." Sie müssen möglicherweise auch die maximale Größe der WCF-Nachrichten angepasst größere Kerberos-Token zu erhöhen.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Automatische Registrierung führt zu mehreren Zertifikaten mit gleichem Antragstellernamen für den Computer  
  *Automatische Registrierung* ist die Fähigkeit von [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] -Benutzer und-Computer für Zertifikate automatisch registrieren. Befindet sich ein Computer in einer Domäne mit aktivierter Funktion, wird ein X.509-Zertifikat mit dem beabsichtigten Zweck der Clientauthentifizierung automatisch erstellt und in den persönlichen Zertifikatspeicher des lokalen Computers eingefügt, wenn ein neuer Computer mit dem Netzwerk verbunden wird. Die automatische Registrierung verwendet jedoch den gleichen Antragstellernamen für alle Zertifikate, die sie im Cache erstellt.  
   
- Dies kann zu Fehlern beim Öffnen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten in Domänen mit automatischer Registrierung führen. Die Ursache ist, dass die standardmäßigen Suchkriterien des Dienstes für X.509-Anmeldeinformationen mehrdeutig sein können, da mehrere Zertifikate mit dem vollqualifizierten DNS (Domain Name System) des Computers vorhanden sind. Ein Zertifikat stammt aus der automatischen Registrierung, das andere kann ein selbst ausgestelltes Zertifikat sein.  
+ Die Auswirkung ist, dass WCF-Dienste fehlschlagen, um in Domänen mit automatischer Registrierung zu öffnen. Die Ursache ist, dass die standardmäßigen Suchkriterien des Dienstes für X.509-Anmeldeinformationen mehrdeutig sein können, da mehrere Zertifikate mit dem vollqualifizierten DNS (Domain Name System) des Computers vorhanden sind. Ein Zertifikat stammt aus der automatischen Registrierung, das andere kann ein selbst ausgestelltes Zertifikat sein.  
   
  Um dies abzuschwächen, verweisen Sie Zertifikat zu verwenden, indem Sie eine feiner abgestimmte Suchkriterium auf die [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Verwenden Sie z. B. die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>-Option, und geben Sie das Zertifikat anhand seines eindeutigen Fingerabdrucks an (Hash).  
   
@@ -82,7 +68,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="protect-configuration-files-with-acls"></a>Schutz von Konfigurationsdateien mit Zugriffssteuerungslisten  
  Sie können erforderliche und optionale Ansprüche im Code und in Konfigurationsdateien für von [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ausgestellten Token angeben. Dies führt dazu, dass entsprechende Elemente in `RequestSecurityToken`-Nachrichten ausgegeben werden, die an den Sicherheitstokendienst gesendet werden. Ein Angreifer kann den Code oder die Konfiguration ändern, um erforderliche oder optionale Ansprüche zu entfernen, sodass der Sicherheitstokendienst möglicherweise einen Token ausstellt, der keinen Zugriff auf den Zieldienst gewährt.  
   
- Erfordern Sie zum Ändern der Konfigurationsdatei den Zugriff auf den Computer, um diese Gefahr zu umgehen. Verwenden Sie Zugriffssteuerungslisten zum Sichern von Konfigurationsdateien. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erfordert, dass sich Code im Anwendungsverzeichnis oder im globalen Assemblycache befindet, bevor er aus der Konfiguration geladen werden kann. Verwenden Sie Verzeichnis-Zugriffssteuerungslisten zum Sichern von Verzeichnissen.  
+ Erfordern Sie zum Ändern der Konfigurationsdatei den Zugriff auf den Computer, um diese Gefahr zu umgehen. Verwenden Sie Zugriffssteuerungslisten zum Sichern von Konfigurationsdateien. WCF erfordert, dass der Code im Anwendungsverzeichnis oder dem globalen Assemblycache werden, bevor sie diesen Code aus der Konfiguration geladen werden kann. Verwenden Sie Verzeichnis-Zugriffssteuerungslisten zum Sichern von Verzeichnissen.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Maximale Anzahl von sicheren Sitzungen für einen Dienst wurde erreicht  
  Wenn ein Client erfolgreich durch einen Dienst authentifiziert wird und eine sichere Verbindung mit dem Dienst eingerichtet wird, verfolgt der Dienst die Sitzung, bis sie vom Client abgebrochen wird oder abläuft. Jede eingerichtete Sitzung wird auf den Grenzwert für die maximale Anzahl gleichzeitiger aktiver Sitzungen mit dem Dienst angerechnet. Wenn dieser Grenzwert erreicht wird, werden Clients abgelehnt, die versuchen, eine neue Sitzung mit diesem Dienst zu erstellen, bis eine oder mehrere aktive Sitzungen ablaufen oder vom Client abgebrochen werden. Ein Client kann über mehrere Sitzungen mit einem Dienst verfügen, und jede dieser Sitzungen wird auf den Grenzwert angerechnet.  

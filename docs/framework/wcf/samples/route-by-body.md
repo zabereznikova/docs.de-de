@@ -1,24 +1,12 @@
 ---
 title: Routen nach Text
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: defd3a3e9df273739aaf3440fd34fad2cad44cd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9a0c947a1dd7ac2a6c7af74baaa072aae67358c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="route-by-body"></a>Routen nach Text
 In diesem Beispiel wird das Implementieren eines Diensts veranschaulicht, der Nachrichtenobjekte mit einer beliebigen SOAP-Aktion annimmt. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst. Der Dienst implementiert einen einzelnen `Calculate`-Vorgang, der einen <xref:System.ServiceModel.Channels.Message>-Anforderungsparameter annimmt und eine <xref:System.ServiceModel.Channels.Message>-Antwort zurückgibt.  
@@ -28,7 +16,7 @@ In diesem Beispiel wird das Implementieren eines Diensts veranschaulicht, der Na
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- Im Beispiel wird das Senden von Nachrichten auf Grundlage des Textinhalts veranschaulicht. Der integrierte Nachrichtensendemechanismus des [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmodells basiert auf Nachrichtenaktionen. Es gibt jedoch viele vorhandene Webdienste, die alle Vorgänge mit Action="" definieren. Es ist nicht möglich, einen Dienst auf Grundlage von WSDL zu erstellen, der weiter Anforderungsnachrichten auf Grundlage von Action-Informationen sendet. In diesem Beispiel wird ein Dienstvertrag veranschaulicht, der auf WSDL basiert (WSDL in der im Beispiel eingeschlossenen Datei Service.wsdl). Der Dienstvertrag ist Rechner, mit dem Umwandlungsoperator in verwendet [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). `[OperationContract]` gibt jedoch `Action=""` für alle Vorgänge an.  
+ Im Beispiel wird das Senden von Nachrichten auf Grundlage des Textinhalts veranschaulicht. Die integrierte Windows Communication Foundation (WCF)-Dienst Modell nachrichtensendemechanismus basiert auf Nachrichtenaktionen. Es gibt jedoch viele vorhandene Webdienste, die alle Vorgänge mit Action="" definieren. Es ist nicht möglich, einen Dienst auf Grundlage von WSDL zu erstellen, der weiter Anforderungsnachrichten auf Grundlage von Action-Informationen sendet. In diesem Beispiel wird ein Dienstvertrag veranschaulicht, der auf WSDL basiert (WSDL in der im Beispiel eingeschlossenen Datei Service.wsdl). Der Dienstvertrag ist Rechner, mit dem Umwandlungsoperator in verwendet [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). `[OperationContract]` gibt jedoch `Action=""` für alle Vorgänge an.  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),    
@@ -80,7 +68,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
   

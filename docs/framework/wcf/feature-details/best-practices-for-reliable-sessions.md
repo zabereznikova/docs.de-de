@@ -1,24 +1,12 @@
 ---
-title: "Empfohlene Vorgehensweisen für zuverlässige Sitzungen"
-ms.custom: 
+title: Empfohlene Vorgehensweisen für zuverlässige Sitzungen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>Empfohlene Vorgehensweisen für zuverlässige Sitzungen
 
@@ -26,7 +14,7 @@ In diesem Thema werden bewährte Vorgehensweisen für zuverlässige Sitzungen.
 
 ## <a name="setting-maxtransferwindowsize"></a>Festlegen von MaxTransferWindowSize
 
-In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwenden zuverlässige Sitzungen ein Übertragungsfenster, um Nachrichten für Client und Dienst zu speichern. Der konfigurierbare Eigenschaft <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> gibt an, wie viele Nachrichten das Übertragungsfenster speichern kann.
+Zuverlässige Sitzungen in Windows Communication Foundation (WCF) verwenden ein Übertragungsfenster, um Nachrichten auf dem Client und Dienst aufzunehmen. Der konfigurierbare Eigenschaft <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> gibt an, wie viele Nachrichten das Übertragungsfenster speichern kann.
 
 Auf den Absender gibt dies an, wie viele Nachrichten das Übertragungsfenster während des Wartens auf Bestätigungen speichern kann; beim Empfänger gibt an, wie viele Nachrichten für den Dienst gepuffert werden sollen.
 
@@ -56,7 +44,7 @@ Es wird empfohlen, Sie die gleiche verwenden `MaxTransferWindowSize` auf dem Abs
 
 *Flusssteuerung* ist ein Mechanismus, der sicherstellt, dass Sender und Empfänger Schritt halten, miteinander, d. h. der Nachrichten genutzt werden und Reaktionen bewirkten so schnell, wie sie erstellt haben. Eine vernünftige Größe des Übertragungsfensters von Client und Dienst stellt sicher, dass Sender und Empfänger ausreichend synchron arbeiten.
 
-Es wird dringend empfohlen, dass Sie die Eigenschaft festlegen <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> auf `true` bei Verwendung eine zuverlässige Sitzung zwischen ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client und ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Service.
+Es wird dringend empfohlen, dass Sie die Eigenschaft festlegen <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> auf `true` bei Verwendung eine zuverlässige Sitzung zwischen einem WCF-Client und einem WCF-Dienst.
 
 ## <a name="setting-maxpendingchannels"></a>Festlegen von MaxPendingChannels
 

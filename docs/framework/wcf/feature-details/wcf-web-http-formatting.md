@@ -1,20 +1,12 @@
 ---
 title: WCF Web-HTTP-Formatierung
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab18e739b061ac6d28877eaac23c258a79f07a2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abbfc74f33ddb676c8ac85eb712757615a2972ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web-HTTP-Formatierung
 Mit dem WCF-Web-HTTP-Programmiermodell können Sie dynamisch das beste Format für einen Dienstvorgang bestimmen, in dem dieser seine Antwort zurückgibt. Es werden zwei Methoden zum Bestimmen eines entsprechenden Formats unterstützt: automatisch und explizit.  
@@ -30,7 +22,7 @@ Mit dem WCF-Web-HTTP-Programmiermodell können Sie dynamisch das beste Format f�
   
 4.  Standardformateinstellung unter WebHttpBehavior  
   
- Falls die Anforderungsnachricht einen Accept-Header enthält, sucht die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Infrastruktur nach einem Typ, der unterstützt wird. Wenn der `Accept`-Header Prioritäten für seine Medientypen angibt, werden diese beachtet. Wird im `Accept`-Header kein geeignetes Format gefunden, wird der Inhaltstyp der Anforderungsnachricht verwendet. Wird kein geeigneter Inhaltstyp angegeben, wird die Standardformateinstellung für den Vorgang verwendet. Das Standardformat wird mit dem `ResponseFormat`-Parameter der Attribute <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> festgelegt. Falls für den Vorgang kein Standardformat angegeben ist, wird der Wert der <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>-Eigenschaft verwendet. Die automatische Formatierung verwendet die <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>-Eigenschaft. Wenn diese Eigenschaft auf `true` festgelegt wird, bestimmte die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur das beste Format. Die automatische Formatauswahl ist standardmäßig deaktiviert, um die Abwärtskompatibilität sicherzustellen. Sie können die automatische Formatauswahl programmgesteuert oder per Konfiguration aktivieren. Im folgenden Beispiel wird gezeigt, wie Sie die automatische Formatauswahl im Code aktivieren.  
+ Wenn die Anforderungsnachricht einen Accept-Header enthält sucht einen Typ, den unterstützt die Windows Communication Foundation (WCF)-Infrastruktur. Wenn der `Accept`-Header Prioritäten für seine Medientypen angibt, werden diese beachtet. Wird im `Accept`-Header kein geeignetes Format gefunden, wird der Inhaltstyp der Anforderungsnachricht verwendet. Wird kein geeigneter Inhaltstyp angegeben, wird die Standardformateinstellung für den Vorgang verwendet. Das Standardformat wird mit dem `ResponseFormat`-Parameter der Attribute <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> festgelegt. Falls für den Vorgang kein Standardformat angegeben ist, wird der Wert der <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>-Eigenschaft verwendet. Die automatische Formatierung verwendet die <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>-Eigenschaft. Wenn diese Eigenschaft auf `true` festgelegt wird, bestimmte die WCF-Infrastruktur das beste Format. Die automatische Formatauswahl ist standardmäßig deaktiviert, um die Abwärtskompatibilität sicherzustellen. Sie können die automatische Formatauswahl programmgesteuert oder per Konfiguration aktivieren. Im folgenden Beispiel wird gezeigt, wie Sie die automatische Formatauswahl im Code aktivieren.  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     

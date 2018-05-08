@@ -1,12 +1,6 @@
 ---
 title: + Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb0d66db2d777c046ccec69acc1f2069d21baf6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ccf79c700cf852c0febb9c3f3464cbacdd39296e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>+-Operator (Visual Basic)
 Addiert zwei Zahlen oder gibt den positiven Wert eines numerischen Ausdrucks zurück. Kann auch zum Verketten zweier Zeichenfolgenausdrücke verwendet werden.  
@@ -63,26 +54,26 @@ Addiert zwei Zahlen oder gibt den positiven Wert eines numerischen Ausdrucks zur
 |Datentypen von Ausdrücken|Aktion des Compilers|  
 |---|---|  
 |Beide Ausdrücke sind numerische Datentypen (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, oder `Double`)|Fügen Sie hinzu. Datentyp des Ergebnisses ist ein numerischer Typ für die Datentypen der entsprechenden `expression1` und `expression2`. Finden Sie in den Tabellen "Ganzzahlarithmetik" in [Datentypen von Operatorergebnissen Daten](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Beide Ausdrücke sind vom Typ`String`|Verketten.|  
+|Beide Ausdrücke sind vom Typ `String`|Verketten.|  
 |Ein Ausdruck hat einen numerischen Datentyp aufweisen und das andere ist eine Zeichenfolge|Wenn `Option Strict` ist `On`, klicken Sie dann ein Compilerfehler generiert.<br /><br /> Wenn `Option Strict` ist `Off`, dann implizit konvertieren die `String` auf `Double` und hinzufügen.<br /><br /> Wenn die `String` kann nicht konvertiert werden, um `Double`, lösen Sie eine <xref:System.InvalidCastException> Ausnahme.|  
 |Ein Ausdruck hat einen numerischen Datentyp aufweisen, und der andere [nichts](../../../visual-basic/language-reference/nothing.md)|Hinzufügen, mit `Nothing` als 0 (null).|  
-|Ein Ausdruck ist eine Zeichenfolge, und das andere ist`Nothing`|Verketten, mit `Nothing` Wert als "".|  
+|Ein Ausdruck ist eine Zeichenfolge, und das andere ist `Nothing`|Verketten, mit `Nothing` Wert als "".|  
   
  Wenn ein Ausdruck ist ein `Object` Ausdruck, Visual Basic werden folgende Aktionen ausgeführt.  
   
 |Datentypen von Ausdrücken|Aktion des Compilers|  
 |---|---|  
-|`Object`Ausdruck enthält einen numerischen Wert und der andere einen numerischen Datentyp|Wenn `Option Strict` ist `On`, klicken Sie dann ein Compilerfehler generiert.<br /><br /> Wenn `Option Strict` ist `Off`, klicken Sie dann auf Hinzufügen.|  
-|`Object`Ausdruck enthält einen numerischen Wert und der andere vom Typ`String`|Wenn `Option Strict` ist `On`, klicken Sie dann ein Compilerfehler generiert.<br /><br /> Wenn `Option Strict` ist `Off`, dann implizit konvertieren die `String` auf `Double` und hinzufügen.<br /><br /> Wenn die `String` kann nicht konvertiert werden, um `Double`, lösen Sie eine <xref:System.InvalidCastException> Ausnahme.|  
-|`Object`Ausdruck enthält eine Zeichenfolge und der andere einen numerischen Datentyp|Wenn `Option Strict` ist `On`, klicken Sie dann ein Compilerfehler generiert.<br /><br /> Wenn `Option Strict` ist `Off`, konvertieren Sie die Zeichenfolge implizit `Object` auf `Double` und hinzufügen.<br /><br /> Wenn die Zeichenfolge `Object` kann nicht konvertiert werden, um `Double`, lösen Sie eine <xref:System.InvalidCastException> Ausnahme.|  
-|`Object`Ausdruck enthält eine Zeichenfolge und der andere vom Typ`String`|Wenn `Option Strict` ist `On`, klicken Sie dann ein Compilerfehler generiert.<br /><br /> Wenn `Option Strict` ist `Off`, dann implizit konvertieren `Object` auf `String` und verkettet.|  
+|`Object` Ausdruck enthält einen numerischen Wert und der andere einen numerischen Datentyp|Wenn `Option Strict` ist `On`, klicken Sie dann ein Compilerfehler generiert.<br /><br /> Wenn `Option Strict` ist `Off`, klicken Sie dann auf Hinzufügen.|  
+|`Object` Ausdruck enthält einen numerischen Wert und der andere vom Typ `String`|Wenn `Option Strict` ist `On`, klicken Sie dann ein Compilerfehler generiert.<br /><br /> Wenn `Option Strict` ist `Off`, dann implizit konvertieren die `String` auf `Double` und hinzufügen.<br /><br /> Wenn die `String` kann nicht konvertiert werden, um `Double`, lösen Sie eine <xref:System.InvalidCastException> Ausnahme.|  
+|`Object` Ausdruck enthält eine Zeichenfolge und der andere einen numerischen Datentyp|Wenn `Option Strict` ist `On`, klicken Sie dann ein Compilerfehler generiert.<br /><br /> Wenn `Option Strict` ist `Off`, konvertieren Sie die Zeichenfolge implizit `Object` auf `Double` und hinzufügen.<br /><br /> Wenn die Zeichenfolge `Object` kann nicht konvertiert werden, um `Double`, lösen Sie eine <xref:System.InvalidCastException> Ausnahme.|  
+|`Object` Ausdruck enthält eine Zeichenfolge und der andere vom Typ `String`|Wenn `Option Strict` ist `On`, klicken Sie dann ein Compilerfehler generiert.<br /><br /> Wenn `Option Strict` ist `Off`, dann implizit konvertieren `Object` auf `String` und verkettet.|  
   
  Wenn beide Ausdrücke `Object` Ausdrücke, Visual Basic werden folgende Aktionen ausgeführt (`Option Strict Off` nur).  
   
 |Datentypen von Ausdrücken|Aktion des Compilers|  
 |---|---|  
 |Beide `Object` -Ausdrücke enthalten numerische Werte|Fügen Sie hinzu.|  
-|Beide `Object` Ausdrücke sind vom Typ`String`|Verketten.|  
+|Beide `Object` Ausdrücke sind vom Typ `String`|Verketten.|  
 |Ein `Object` Ausdruck enthält einen numerischen Wert und die andere enthält eine Zeichenfolge|Konvertieren Sie die Zeichenfolge implizit `Object` auf `Double` und hinzufügen.<br /><br /> Wenn die Zeichenfolge `Object` kann nicht in einen numerischen Wert konvertiert werden, und löst eine <xref:System.InvalidCastException> Ausnahme.|  
   
  Wenn entweder `Object` Ausdruck wird zu [nichts](../../../visual-basic/language-reference/nothing.md) oder <xref:System.DBNull>, `+` Operator behandelt sie als eine `String` mit einem Wert von "".  

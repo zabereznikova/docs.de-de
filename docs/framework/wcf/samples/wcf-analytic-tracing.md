@@ -1,29 +1,15 @@
 ---
 title: Analytische Ablaufverfolgung von WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Analytische Ablaufverfolgung von WCF
-In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen Ablaufverfolgungen hinzufügen können, die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] in ETW schreibt. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. In diesem Beispiel wird gezeigt, wie die <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>-APIs verwendet werden, um Ereignisse zu schreiben, die in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste integriert werden.  
+In diesem Beispiel wird veranschaulicht, wie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die Windows Communication Foundation (WCF) in in ETW schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. In diesem Beispiel wird gezeigt, wie die <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>-APIs verwendet werden, um Ereignisse zu schreiben, die in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste integriert werden.  
   
  Weitere Informationen zu den <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> -APIs finden Sie unter <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
@@ -126,7 +112,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungse
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   

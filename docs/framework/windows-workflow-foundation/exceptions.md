@@ -1,24 +1,12 @@
 ---
 title: Ausnahmen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeefcd29dc05ed5e325950194d9f0775b1fa9fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions"></a>Ausnahmen
 Die <xref:System.Activities.Statements.TryCatch>-Aktivität kann zur Behandlung von Ausnahmen verwendet werden, die während der Ausführung eines Workflows ausgelöst werden. Diese Ausnahmen können behandelt oder mit der <xref:System.Activities.Statements.Rethrow>-Aktivität erneut ausgelöst werden. Aktivitäten im Abschnitt <xref:System.Activities.Statements.TryCatch.Finally%2A> werden nach Abschluss des Abschnitts <xref:System.Activities.Statements.TryCatch.Try%2A> oder des Abschnitts <xref:System.Activities.Statements.TryCatch.Catches%2A> ausgeführt. Gehostete Workflows durch eine <xref:System.Activities.WorkflowApplication> Instanz können Sie auch die <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Ereignishandler behandeln von Ausnahmen, die nicht vom behandelt werden eine <xref:System.Activities.Statements.TryCatch> Aktivität.  

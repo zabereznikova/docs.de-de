@@ -1,34 +1,22 @@
 ---
 title: 'Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit
-Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermöglicht COM-Anwendungen das Aufrufen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten. Die meisten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste fordern vom Client die Angabe von Anmeldeinformationen für Authentifizierung und Autorisierung. Beim Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client können diese Anmeldeinformationen in verwaltetem Code oder in einer Anwendungskonfigurationsdatei angegeben werden. Beim Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts von einer COM-Anwendung kann die <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle zum Angeben von Anmeldeinformationen verwendet werden. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
+Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendungen das Aufrufen von WCF-Dienste. Die meisten WCF-Dienste erfordern der Client das Angeben von Anmeldeinformationen zur Authentifizierung und Autorisierung. Beim Aufrufen eines WCF-Diensts von einem WCF-Client können Sie diese Anmeldeinformationen in verwaltetem Code oder in einer Anwendungskonfigurationsdatei angeben. Wenn einen WCF-Dienst aus einer COM-Anwendung aufrufen, können Sie die <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Schnittstelle, um die Anmeldeinformationen angeben. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> ist eine IDispatch-basierte Schnittstelle, und Sie erhalten keine IntelliSense-Funktionen in der Visual Studio-Umgebung.  
   
- In diesem Artikel verwendet die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst definiert, der [Nachrichtensicherheitsbeispiel](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ In diesem Artikel verwendet den WCF-Dienst definiert, der [Nachrichtensicherheitsbeispiel](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>So geben Sie ein Clientzertifikat an:  
   
@@ -40,7 +28,7 @@ Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermög
   
 4.  Hinzufügen `bindingNamespace=``http://Microsoft.ServiceModel.Samples` dem endpunkttag in der Datei App.config für den Dienst.  
   
-5.  Erstellen Sie das Nachrichtensicherheitsbeispiel, und führen Sie Service.exe aus. Verwenden Sie Internet Explorer, und navigieren Sie zum URI des Diensts (http://localhost:8000/ServiceModelSamples/Service) um die Funktion des Diensts zu überprüfen.  
+5.  Erstellen Sie das Nachrichtensicherheitsbeispiel, und führen Sie Service.exe aus. Verwenden Sie Internet Explorer, und navigieren Sie zum URI des Diensts (http://localhost:8000/ServiceModelSamples/Service) um sicherzustellen, dass der Dienst funktioniert.  
   
 6.  Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   

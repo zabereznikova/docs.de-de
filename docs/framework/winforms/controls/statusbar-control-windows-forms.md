@@ -1,33 +1,21 @@
 ---
-title: "StatusBar-Steuerelement (Windows Forms)"
-ms.custom: 
+title: StatusBar-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - StatusBar control [Windows Forms]
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 945d9a658dd3d75dd0edb9f4eaca78334ee4d652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 66ec834778bd0eeacea642250c5430be8929b732
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statusbar-control-windows-forms"></a>StatusBar-Steuerelement (Windows Forms)
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.ToolStripStatusLabel>-Steuerelement das <xref:System.Windows.Forms.StatusBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.StatusBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
- Das Windows Forms-Steuerelement <xref:System.Windows.Forms.StatusBar> wird auf Formularen als Bereich verwendet, der in der Regel am unteren Rand eines Fensters angezeigt wird, in dem eine Anwendung verschiedene Arten von Statusinformationen anzeigen kann. <xref:System.Windows.Forms.StatusBar>Steuerelemente können Statusleistenbereichs darauf enthalten, Symbole, um anzugeben, Status oder eine Reihe von Symbolen in einer Animation, die darauf hinweisen, dass ein Prozess ausgeführt wird. Beispielsweise wird Microsoft Word zeigt an, dass das Dokument gespeichert.  
+ Das Windows Forms-Steuerelement <xref:System.Windows.Forms.StatusBar> wird auf Formularen als Bereich verwendet, der in der Regel am unteren Rand eines Fensters angezeigt wird, in dem eine Anwendung verschiedene Arten von Statusinformationen anzeigen kann. <xref:System.Windows.Forms.StatusBar> Steuerelemente können Statusleistenbereichs darauf enthalten, Symbole, um anzugeben, Status oder eine Reihe von Symbolen in einer Animation, die darauf hinweisen, dass ein Prozess ausgeführt wird. Beispielsweise wird Microsoft Word zeigt an, dass das Dokument gespeichert.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das StatusBar-Steuerelement](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  [Exemplarische Vorgehensweise: Aktualisieren von Statusleisteninformationen zur Laufzeit](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
  Erläutert, wie die Daten im Statusleistenbereichs programmgesteuert zu kontrollieren.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.StatusBar>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   

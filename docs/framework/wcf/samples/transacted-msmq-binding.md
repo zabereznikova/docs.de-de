@@ -1,26 +1,12 @@
 ---
 title: Abgewickelte MSMQ-Bindung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: 50
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7c7be275dca35e30f5176518cfb4c1842af0210a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transacted-msmq-binding"></a>Abgewickelte MSMQ-Bindung
 In diesem Beispiel wird veranschaulicht, wie eine abgewickelte Warteschlangenkommunikation mithilfe von Message Queuing (MSMQ) durchgeführt wird.  
@@ -102,7 +88,7 @@ public static void Main()
 ```  
   
 > [!NOTE]
->  Im Warteschlangennamen werden ein Punkt (.) für den lokalen Computer und umgekehrte Schrägstriche als Trennzeichen in der Pfadangabe verwendet, wenn die Warteschlange mithilfe von <xref:System.Messaging> erstellt wird. Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Endpunkt verwendet die Warteschlangenadresse mit dem net.msmq-Schema, localhost zur Angabe des lokalen Computers und Schrägstriche in der Pfadangabe.  
+>  Im Warteschlangennamen werden ein Punkt (.) für den lokalen Computer und umgekehrte Schrägstriche als Trennzeichen in der Pfadangabe verwendet, wenn die Warteschlange mithilfe von <xref:System.Messaging> erstellt wird. Der Windows Communication Foundation (WCF)-Endpunkt verwendet die Warteschlangenadresse mit dem net.msmq-Schema, verwendet "Localhost" auf den lokalen Computer zu kennzeichnen und Schrägstriche in der Pfadangabe.  
   
  Der Client erstellt einen Geltungsbereich für die Transaktion. Die Kommunikation mit der Warteschlange findet innerhalb des Geltungsbereichs der Transaktion statt, sodass diese in der Folge als unteilbare Einheit behandelt wird, in der entweder alle oder keine Nachrichten an die Warteschlange gesendet werden. Für die Transaktion wird ein Commit ausgeführt, indem <xref:System.Transactions.TransactionScope.Complete%2A> im Geltungsbereich der Transaktion aufgerufen wird.  
 
@@ -247,7 +233,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
   

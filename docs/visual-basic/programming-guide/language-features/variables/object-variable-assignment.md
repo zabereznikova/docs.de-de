@@ -1,13 +1,6 @@
 ---
 title: Zuweisen von Objektvariablen (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], object variable assignment
 - object variables [Visual Basic], initializing
@@ -20,14 +13,11 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f20a03c4d9a0e33203629ae066686f4c9f25c105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Zuweisen von Objektvariablen (Visual Basic)
 Sie verwenden eine normale zuweisungsanweisung Objektvariable ein Objekt zuweisen. Sie können ein Objektausdrücke zuweisen oder die [nichts](../../../../visual-basic/language-reference/nothing.md) -Schlüsselwort, wie im folgenden Beispiel veranschaulicht.  
@@ -40,7 +30,7 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing`bedeutet, es wurde kein Objekt, das der Variablen zugewiesen.  
+ `Nothing` bedeutet, es wurde kein Objekt, das der Variablen zugewiesen.  
   
 ## <a name="initialization"></a>Initialisierung  
  Wenn Ihr Code beginnt die Ausführung, Ihr Objekts Variablen werden initialisiert, um `Nothing`. Diejenigen, deren Deklarationen Initialisierung enthalten, sind, die Werte erneut initialisiert, die Sie angeben, wenn die deklarationsanweisungen ausgeführt werden.  

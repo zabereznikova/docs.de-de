@@ -1,28 +1,19 @@
 ---
-title: '&#39; &lt;Classname&gt;&#39; ist nicht CLS-kompatibel, da die Schnittstelle &#39;&lt; Schnittstellenname&gt;&#39; er implementiert ist nicht CLS-kompatibel.'
+title: '&#39;&lt;Klassenname&gt; &#39; ist nicht CLS-kompatibel, da die Schnittstelle &#39; &lt;Schnittstellenname&gt; &#39; er implementiert ist nicht CLS-kompatibel.'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc40029
 - vbc40029
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f1f0d1e1f54b6b667431ceae2e346a4118c5b1a8
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4dda0e16a94f43cdb3deeff16fabdd1b10b62526
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltclassnamegt39-is-not-cls-compliant-because-the-interface-39ltinterfacenamegt39-it-implements-is-not-cls-compliant"></a>&#39; &lt;Classname&gt;&#39; ist nicht CLS-kompatibel, da die Schnittstelle &#39;&lt; Schnittstellenname&gt;&#39; er implementiert ist nicht CLS-kompatibel.
+# <a name="39ltclassnamegt39-is-not-cls-compliant-because-the-interface-39ltinterfacenamegt39-it-implements-is-not-cls-compliant"></a>&#39;&lt;Klassenname&gt; &#39; ist nicht CLS-kompatibel, da die Schnittstelle &#39; &lt;Schnittstellenname&gt; &#39; er implementiert ist nicht CLS-kompatibel.
 Eine Klasse oder Schnittstelle wird als `<CLSCompliant(True)>` gekennzeichnet, wenn sie von einem Typ abgeleitet ist oder einen Typ implementiert, der als `<CLSCompliant(False)>` oder gar nicht gekennzeichnet ist.  
   
  Für eine Klasse oder Schnittstelle einhalten der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS), ihre gesamte Vererbungshierarchie kompatibel sein muss. Das bedeutet, dass jeder Typ, von dem sie direkt oder indirekt erbt, kompatibel sein muss. Analog dazu muss eine Klasse, wenn sie eine oder mehrere Schnittstellen implementiert, deren Kompatibilität durch alle Vererbungshierarchien sicherstellen.  

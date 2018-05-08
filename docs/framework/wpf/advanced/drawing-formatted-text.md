@@ -1,13 +1,6 @@
 ---
 title: Zeichnen von formatiertem Text
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 978c97b8cae24bff4ebdea8f4e56a940e5907fa6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-formatted-text"></a>Zeichnen von formatiertem Text
 Dieses Thema bietet eine Übersicht über die Funktionen von der <xref:System.Windows.Media.FormattedText> Objekt. Dieses Objekt bietet die Steuerung auf niedriger Ebene für das Zeichnen von Text in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen.  
@@ -42,11 +30,11 @@ Angezeigter Text mit der FormattedText-Methode
 >  Für Entwickler, die von der [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-API migrieren, listet die Tabelle im [Win32-Migration](#win32_migration)-Abschnitt die [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-DrawText-Flags und deren ungefähre Entsprechung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] auf.  
   
 ### <a name="reasons-for-using-formatted-text"></a>Gründe für das Verwenden von formatiertem Text  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente für das Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen die <xref:System.Windows.Controls.TextBlock> -Element sollte verwendet werden, wenn begrenzte-Text-Unterstützung erforderlich sind, z. B. eine kurze Satzes im wird eine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label>kann verwendet werden, wenn wenig Text-Unterstützung erforderlich ist. Weitere Informationen finden Sie unter [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente für das Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen die <xref:System.Windows.Controls.TextBlock> -Element sollte verwendet werden, wenn begrenzte-Text-Unterstützung erforderlich sind, z. B. eine kurze Satzes im wird eine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> kann verwendet werden, wenn wenig Text-Unterstützung erforderlich ist. Weitere Informationen finden Sie unter [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
   
  Die <xref:System.Windows.Media.FormattedText> Objekt bietet umfassendere Funktionen als [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Textsteuerelemente, und kann hilfreich in Fällen, in denen Text als dekorativen Element verwendet werden soll. Weitere Informationen finden Sie im folgenden Abschnitt [Konvertieren von formatiertem Text in eine Geometrie](#converting_formatted_text).  
   
- Darüber hinaus die <xref:System.Windows.Media.FormattedText> Objekt ist nützlich zum Erstellen von textorientierte <xref:System.Windows.Media.DrawingVisual>--abgeleitete Objekte. <xref:System.Windows.Media.DrawingVisual>ist eine einfache zeichnen-Klasse, die zum Rendern von Formen, Bildern oder Text verwendet wird. Weitere Informationen finden Sie unter [Beispiel für Treffertests mit DrawingVisuals](http://go.microsoft.com/fwlink/?LinkID=159994).  
+ Darüber hinaus die <xref:System.Windows.Media.FormattedText> Objekt ist nützlich zum Erstellen von textorientierte <xref:System.Windows.Media.DrawingVisual>--abgeleitete Objekte. <xref:System.Windows.Media.DrawingVisual> ist eine einfache zeichnen-Klasse, die zum Rendern von Formen, Bildern oder Text verwendet wird. Weitere Informationen finden Sie unter [Beispiel für Treffertests mit DrawingVisuals](http://go.microsoft.com/fwlink/?LinkID=159994).  
   
 ## <a name="using-the-formattedtext-object"></a>Verwenden des FormattedText-Objekts  
  Um formatierten Text zu erstellen, rufen Sie die <xref:System.Windows.Media.FormattedText.%23ctor%2A> Konstruktor zur Erstellung einer <xref:System.Windows.Media.FormattedText> Objekt. Nachdem Sie die Anfangszeichenfolge für formatierten Text erstellt haben, können Sie eine Reihe von Formatvorlagen anwenden.  
@@ -127,7 +115,7 @@ Video, das in der Pfadgeometrie von Text angezeigt wird
 |DT_PREFIXONLY|Keiner|Wird nicht unterstützt.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Verwenden der <xref:System.Windows.Media.FormattedText.TextAlignment%2A> Eigenschaft mit dem Wert <xref:System.Windows.TextAlignment.Right>. (nur für WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Legen Sie die <xref:System.Windows.Media.FormattedText.FlowDirection%2A>-Eigenschaft auf <xref:System.Windows.FlowDirection.RightToLeft> fest.|  
-|DT_SINGLELINE|Keiner|Nicht erforderlich <xref:System.Windows.Media.FormattedText>Objekte verhalten sich wie ein einzeiliges Steuerelement, es sei denn, entweder die <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> Eigenschaft festgelegt ist, oder den Text enthält, einen Wagenrücklauf/Zeilenvorschub (CR/LF).|  
+|DT_SINGLELINE|Keiner|Nicht erforderlich <xref:System.Windows.Media.FormattedText> Objekte verhalten sich wie ein einzeiliges Steuerelement, es sei denn, entweder die <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> Eigenschaft festgelegt ist, oder den Text enthält, einen Wagenrücklauf/Zeilenvorschub (CR/LF).|  
 |DT_TABSTOP|Keiner|Keine Unterstützung für benutzerdefinierte Tabstopppositionen.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Nicht erforderlich Obere Ausrichtung ist die Standardeinstellung. Andere Werte für vertikale Positionierung können definiert werden, indem die <xref:System.Windows.Media.FormattedText.Height%2A> Eigenschaft zur Berechnung einer entsprechenden [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 'y'-Position.|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Verwenden der <xref:System.Windows.Media.FormattedText.Height%2A> Eigenschaft zur Berechnung einer entsprechenden [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 'y'-Position.|  

@@ -1,27 +1,15 @@
 ---
-title: "Vertrauenswürdiges Subsystem"
-ms.custom: 
+title: Vertrauenswürdiges Subsystem
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca07db06d4bff9660760c5abf8c9bc2f1f9f2944
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59c44609017ab18a176624b7ef6d409005151c3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-subsystem"></a>Vertrauenswürdiges Subsystem
 Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk verteilt werden. Die Webdienste sind so ausgelegt, dass der Zugriff auf zusätzliche Ressourcen (beispielsweise Datenbanken oder andere Webdienste) in der Geschäftslogik des Webdiensts gekapselt sind. Diese Ressourcen müssen vor nicht autorisiertem Zugriff geschützt werden. Die folgende Abbildung stellt einen vertrauenswürdigen Subsystemprozess dar.  
@@ -43,13 +31,13 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 |Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Sicherheitsmodus|Meldung|  
-|Interoperabilität|Nur [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].|  
+|Interoperabilität|Windows Communication Foundation (WCF) nur.|  
 |Authentifizierung (Dienst)|Sicherheitstokendienst authentifiziert und autorisiert Clients.|  
 |Authentifizierung (Client)|Das vertrauenswürdige Subsystem authentifiziert den Client, und die Ressource authentifiziert den vertrauenswürdigen Subsystemdienst.|  
 |Integrität|Ja|  
 |Vertraulichkeit|Ja|  
 |Transport|HTTP zwischen Client und dem vertrauenswürdigen Subsystemdienst.<br /><br /> NET.TCP zwischen dem vertrauenswürdigen Subsystemdienst und der Ressource (Back-End-Dienst).|  
-|Bindung|<xref:System.ServiceModel.WSHttpBinding>und <xref:System.ServiceModel.NetTcpBinding> [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Bindung|<xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.NetTcpBinding> [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Ressource (Back-End-Dienst)  
   

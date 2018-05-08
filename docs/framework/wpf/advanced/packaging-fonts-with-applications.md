@@ -1,13 +1,6 @@
 ---
 title: Verpacken von Schriftarten mit Anwendungen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3860aff69b0e4e7a3dc624898cc6b1daa0dd092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 068a85a5fffd9b7463875695a4b494340ef66cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-fonts-with-applications"></a>Verpacken von Schriftarten mit Anwendungen
 Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit Ihrem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung.  
@@ -40,7 +28,7 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit I
 ## <a name="introduction-to-packaging-fonts"></a>Einführung in das Verpacken von Schriftarten  
  Sie können problemlos Schriftarten Verpacken, als Ressourcen innerhalb Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] basierende Anwendungen anzuzeigenden Text der Benutzeroberfläche und anderen Typen von Text-Inhalt. Die Schriftarten können getrennt von den Assemblydateien oder eingebettet in die Assemblydateien der Anwendung vorkommen. Sie können auch eine Schriftartenbibliothek nur für Ressourcen erstellen, auf die die Anwendung verweisen kann.  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]und [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Schriftarten enthalten ein Typflag FsType, der Schriftart einbetten, Lizenzierung für Rechte für die Schriftart angibt. Dieses Typflag bezieht sich jedoch nur auf eingebettete Schriftarten, die in einem Dokument gespeichert sind, und nicht auf Schriftarten, die in eine Anwendung eingebettet sind. Sie können die Schriftart einbetten Rechte für eine Schriftart durch das Erstellen von Abrufen einer <xref:System.Windows.Media.GlyphTypeface> Objekt und verweisen auf die <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> Eigenschaft. Finden Sie im Abschnitt "OS/2 und Windows-Metriken" von der [OpenType-Spezifikation](http://www.microsoft.com/typography/otspec/os2.htm) für Weitere Informationen zum FsType-Flag.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] und [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Schriftarten enthalten ein Typflag FsType, der Schriftart einbetten, Lizenzierung für Rechte für die Schriftart angibt. Dieses Typflag bezieht sich jedoch nur auf eingebettete Schriftarten, die in einem Dokument gespeichert sind, und nicht auf Schriftarten, die in eine Anwendung eingebettet sind. Sie können die Schriftart einbetten Rechte für eine Schriftart durch das Erstellen von Abrufen einer <xref:System.Windows.Media.GlyphTypeface> Objekt und verweisen auf die <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> Eigenschaft. Finden Sie im Abschnitt "OS/2 und Windows-Metriken" von der [OpenType-Spezifikation](http://www.microsoft.com/typography/otspec/os2.htm) für Weitere Informationen zum FsType-Flag.  
   
  Die [Microsoft Typography](http://www.microsoft.com/typography/links/) Website enthält Kontaktinformationen, mit denen Sie suchen einen bestimmten Hersteller oder suchen einen Hersteller für benutzerdefinierte.  
   

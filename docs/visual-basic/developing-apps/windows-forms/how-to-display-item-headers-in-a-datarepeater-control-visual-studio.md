@@ -1,22 +1,15 @@
 ---
 title: 'Gewusst wie: Anzeigen von Elementheadern in einem DataRepeater-Steuerelement (Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - DataRepeater, item headers
 - DataRepeater, selection indicators
 ms.assetid: 37321447-0ffa-43e1-bdc9-0480e392b90f
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: da02f9374471a581a58131e26d618f91d7cbb7af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07f6a7e06c5b1e91597ab6b6d816407a2c172278
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>Gewusst wie: Anzeigen von Elementheadern in einem DataRepeater-Steuerelement (Visual Studio)
 Elementheaders in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement verfügt über einen visuellen Indikator bei einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> ausgewählt ist. Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> -Eigenschaftensatz auf <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (Standard), der Header wird auf der linken Seite jedes Elements angezeigt. Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> -Eigenschaftensatz auf <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, wird der Header am oberen Rand jedes Element angezeigt.  

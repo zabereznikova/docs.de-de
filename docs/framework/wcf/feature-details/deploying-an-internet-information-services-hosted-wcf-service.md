@@ -1,48 +1,34 @@
 ---
 title: Bereitstellen eines IIS-gehosteten WCF-Diensts
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 49ee6091b18dfcf2a5b46c173490b317fe770554
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 59f18d8487deb52f5ecb5b5c814ec9bdbc74e2cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Bereitstellen eines IIS-gehosteten WCF-Diensts
-Das Entwickeln und Bereitstellen eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Diensts, der in Internetinformationsdienste (IIS) gehostet wird, umfasst die folgenden Aufgaben:  
+Entwickeln und Bereitstellen eines Windows Communication Foundation (WCF)-Diensts, das in Internet Information Services (IIS) gehostet wird umfasst die folgenden Aufgaben:  
   
--   Sicherstellen, dass IIS, ASP.NET, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]und die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Aktivierungskomponente ordnungsgemäß installiert und registriert sind  
+-   Stellen Sie sicher, dass IIS, ASP.NET, WCF und WCF-Aktivierung-Komponente ordnungsgemäß installiert und registriert sind.  
   
 -   Erstellen einer neuen IIS-Anwendung oder Wiederverwenden einer vorhandenen [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung.  
   
--   Erstellen einer SVC-Datei für den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienst.  
+-   Erstellen Sie eine SVC-Datei für den WCF-Dienst.  
   
 -   Bereitstellen der Dienstimplementierung für die IIS-Anwendung.  
   
--   Konfigurieren des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Diensts.  
+-   Konfigurieren Sie den WCF-Dienst.  
   
- Eine ausführliche exemplarische Vorgehensweise zur Erstellung eines IIS-gehosteten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Diensts finden Sie unter [How to: Host a WCF Service in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+ Eine ausführliche exemplarische Vorgehensweise zum Erstellen eines IIS-gehosteten WCF-Diensts finden Sie unter [wie: Hosten eines WCF-Diensts in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Sicherstellen, dass IIS, ASP.NET und WCF ordnungsgemäß installiert und registriert sind  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], IIS und ASP.NET müssen installiert sein, damit IIS-gehostete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste einwandfrei funktionieren. Die Vorgehensweise zur Installation von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (als Teil von [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]), ASP.NET und IIS variiert je nach verwendeter Betriebssystemversion. Weitere Informationen zum Installieren von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], finden Sie unter [Microsoft .NET Framework 4-Webinstaller](http://go.microsoft.com/fwlink/?LinkId=201185). Anweisungen zum Installieren von IIS finden Sie unter [Installieren von IIS](http://go.microsoft.com/fwlink/?LinkId=201188).  
+ WCF, IIS und ASP.NET müssen für IIS-gehosteten WCF-Dienste ordnungsgemäß installiert werden. Das Verfahren zum Installieren von WCF (als Teil der [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]), ASP.NET und IIS variiert je nach der Version des Betriebssystems verwendet wird. Weitere Informationen zum Installieren von WCF und die [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], finden Sie unter [Microsoft .NET Framework 4-Webinstaller](http://go.microsoft.com/fwlink/?LinkId=201185). Anweisungen zum Installieren von IIS finden Sie unter [Installieren von IIS](http://go.microsoft.com/fwlink/?LinkId=201188).  
   
- Beim Installationsprozess für [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] wird [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatisch für IIS registriert, wenn IIS bereits auf dem Computer installiert ist. Wenn IIS nach [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]installiert wird, ist ein zusätzlicher Schritt erforderlich, um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] für IIS und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]zu registrieren. Gehen Sie hierzu je nach Betriebssystem wie folgt vor:  
+ Der Installationsvorgang für den [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] WCF automatisch bei IIS registriert, wenn IIS bereits auf dem Computer vorhanden ist. Wenn IIS installiert ist, nach der [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], ein zusätzlicher Schritt ist erforderlich, um WCF bei IIS registrieren und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Gehen Sie hierzu je nach Betriebssystem wie folgt vor:  
   
--   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], Windows 7 und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]: Verwenden der [ServiceModel Registration-Tool (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) Tool registrieren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit IIS: um dieses Tool verwenden zu können, geben **ServiceModelReg.exe/i/x** in der Visual Studio-Eingabeaufforderung. Sie können diese Eingabeaufforderung öffnen, indem Sie auf die Schaltfläche „Start“ klicken und dann **Alle Programme**, **Microsoft Visual Studio 2012**, **Visual Studio Tools**und **Visual Studio-Eingabeaufforderung**auswählen.  
+-   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], Windows 7 und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]: Verwenden der [ServiceModel Registration-Tool (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) Tool WCF mit IIS zu registrieren: um dieses Tool verwenden zu können, geben **ServiceModelReg.exe/i/x** in Visual Studio eine Eingabeaufforderung. Sie können diese Eingabeaufforderung öffnen, indem Sie auf die Schaltfläche „Start“ klicken und dann **Alle Programme**, **Microsoft Visual Studio 2012**, **Visual Studio Tools**und **Visual Studio-Eingabeaufforderung**auswählen.  
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)]: Installieren Sie die Unterkomponente „Windows Communication Foundation-Aktivierungskomponenten“ von [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]. Klicken Sie hierzu in der Systemsteuerung auf **Software** und dann **hinzufügen\/Windows-Komponenten entfernen**. Dadurch wird der **Assistent für Windows-Komponenten**aktiviert.  
   
@@ -51,12 +37,12 @@ Das Entwickeln und Bereitstellen eines [!INCLUDE[indigo1](../../../../includes/i
  Abschließend müssen Sie sich sicherstellen, dass ASP.NET für die Verwendung von .NET Framework Version 4 konfiguriert ist. Führen Sie hierzu das Tool ASPNET_Regiis mit der Option –i aus. Weitere Informationen finden Sie unter [ASP.NET IIS-Registrierungstool](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Erstellen einer neuen IIS-Anwendung oder Wiederverwenden einer vorhandenen ASP.NET-Anwendung  
- IIS-gehostete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste müssen sich innerhalb einer IIS-Anwendung befinden. Sie können eine neue IIS-Anwendung erstellen, um ausschließlich [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste zu hosten. Alternativ können Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienst in einer vorhandenen Anwendung bereitstellen, die bereits [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] -Inhalt hostet (z. B. ASPX-Seiten und ASP.NET-Webdienste [ASMX]). Weitere Informationen zu diesen Optionen finden Sie unter die "Hosting WCF Seite-an-Seite mit ASP.NET" und "Hosting WCF-Dienste im ASP.NET-Kompatibilitätsmodus" im Berichtsbereiche [WCF-Dienste und ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ IIS-gehostete WCF-Dienste müssen innerhalb einer iisanwendung befinden. Sie können eine neue IIS‑Anwendung zum Hosten von WCF-Diensten ausschließlich erstellen. Alternativ können Sie einen WCF-Dienst bereitstellen, in eine vorhandene Anwendung, die bereits hostet [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Inhalt (z. B. aspx-Seiten und ASP.NET-Webdienste [ASMX]). Weitere Informationen zu diesen Optionen finden Sie unter die "Hosting WCF Seite-an-Seite mit ASP.NET" und "Hosting WCF-Dienste im ASP.NET-Kompatibilitätsmodus" im Berichtsbereiche [WCF-Dienste und ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
  Beachten Sie, dass [!INCLUDE[iis601](../../../../includes/iis601-md.md)] und höhere Versionen in regelmäßigen Abständen eine isolierte objektorientierte Programmierungsanwendung neu starten. Der Standardwert ist 1740 Minuten. Der höchstmögliche Wert sind 71.582 Minuten. Dieser Neustart kann deaktiviert werden. Weitere Informationen zu dieser Eigenschaft finden Sie unter der [PeriodicRestartTime](http://go.microsoft.com/fwlink/?LinkId=109968).  
   
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Erstellen einer SVC-Datei für den WCF-Dienst  
- In IIS gehostete[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste werden in der IIS-Anwendung als spezielle Inhaltsdateien (SVC-Dateien) dargestellt. Dieses Modell ähnelt der Art und Weise, wie ASMX-Seiten in einer IIS-Anwendung als ASMX-Dateien dargestellt werden. Eine SVC-Datei enthält eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-spezifische Verarbeitungsdirektive ([@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)), die es der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Hostinfrastruktur ermöglicht, gehostete Dienste als Reaktion auf eingehende Nachrichten zu aktivieren. Die gebräuchlichste Syntax für eine SVC-Datei befindet sich in der folgenden Anweisung:  
+ In IIS gehostete WCF-Dienste werden als spezielle Inhaltsdateien (SVC-Dateien) in der IIS-Anwendung dargestellt. Dieses Modell ähnelt der Art und Weise, wie ASMX-Seiten in einer IIS-Anwendung als ASMX-Dateien dargestellt werden. Eine SVC-Datei enthält einen WCF-spezifische verarbeitungsanweisung ([@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)), mit der die WCF-Hostinfrastruktur gehostete Dienste als Reaktion auf eingehende Nachrichten zu aktivieren. Die gebräuchlichste Syntax für eine SVC-Datei befindet sich in der folgenden Anweisung:  
   
 ```  
 <% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>  
@@ -68,12 +54,12 @@ Das Entwickeln und Bereitstellen eines [!INCLUDE[indigo1](../../../../includes/i
 new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );  
 ```  
   
- Zudem kann eine zusätzliche Hostkonfiguration vorgenommen werden, indem z.&#160;B. eine Liste mit Basisadressen für den Dienst erstellt wird. Sie können auch eine benutzerdefinierte <xref:System.ServiceModel.Activation.ServiceHostFactory> verwenden, um die Direktive zur Verwendung mit benutzerdefinierten Hostlösungen zu erweitern. Die IIS-Anwendungen, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste hosten, sind nicht für die Verwaltung der Erstellung und der Lebensdauer von <xref:System.ServiceModel.ServiceHost> -Instanzen verantwortlich. Die verwaltete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Hostinfrastruktur erstellt die notwendige <xref:System.ServiceModel.ServiceHost> -Instanz dynamisch, sobald die erste Anforderung für die SVC-Datei empfangen wird. Die Instanz wird erst freigegeben, wenn sie entweder explizit durch Code geschlossen oder die Anwendung wiederverwendet wird.  
+ Zudem kann eine zusätzliche Hostkonfiguration vorgenommen werden, indem z.&#160;B. eine Liste mit Basisadressen für den Dienst erstellt wird. Sie können auch eine benutzerdefinierte <xref:System.ServiceModel.Activation.ServiceHostFactory> verwenden, um die Direktive zur Verwendung mit benutzerdefinierten Hostlösungen zu erweitern. Die IIS-Anwendungen, die WCF-Dienste hosten sind nicht verantwortlich für die Verwaltung der Erstellung und Gültigkeitsdauer von <xref:System.ServiceModel.ServiceHost> Instanzen. Die verwaltete WCF-Hostinfrastruktur erstellt die notwendige <xref:System.ServiceModel.ServiceHost> -Instanz dynamisch, sobald die erste Anforderung für die SVC-Datei empfangen wird. Die Instanz wird erst freigegeben, wenn sie entweder explizit durch Code geschlossen oder die Anwendung wiederverwendet wird.  
   
  Weitere Informationen zur Syntax für SVC-Dateien finden Sie unter [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).  
   
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Bereitstellen der Dienstimplementierung für die IIS-Anwendung  
- In IIS gehostete[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste verwenden das gleiche dynamische Kompilierungsmodell wie [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. Wie bei [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]können Sie den Implementierungscode für IIS-gehostete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste auf unterschiedliche Weise an verschiedenen Speicherorten folgendermaßen bereitstellen:  
+ In IIS gehostete WCF-Dienste verwenden das gleiche dynamische Kompilierungsmodell wie [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. Wie bei [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], können Sie den Implementierungscode für IIS-gehosteten WCF-Dienste auf unterschiedliche Weise an verschiedenen Speicherorten folgendermaßen bereitstellen:  
   
 -   Als vorkompilierte DLL im globalen Assemblycache (GAC) oder im \bin-Verzeichnis der Anwendung. Vorkompilierte Binärdateien werden erst aktualisiert, wenn eine neue Version der Klassenbibliothek bereitgestellt wird.  
   
@@ -84,14 +70,14 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
  Weitere Informationen zu den [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] -Kompilierungsmodell finden Sie unter [Übersicht über die ASP.NET-Kompilierung](http://go.microsoft.com/fwlink/?LinkId=94773).  
   
 ## <a name="configure-the-wcf-service"></a>Konfigurieren des WCF-Diensts  
- IIS-gehostete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste speichern ihre Konfiguration in der Web.config-Datei der Anwendung. IIS-gehostete Dienste verwenden die gleichen Konfigurationselemente und die gleiche Syntax wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste, die außerhalb von IIS gehostet werden. Jedoch gelten die folgenden Einschränkungen nur für die IIS-Hostumgebung:  
+ IIS-gehostete WCF-Dienste speichern ihre Konfiguration in der Datei "Web.config" der Anwendung. IIS-gehostete Dienste verwenden die gleichen Konfigurationselemente und die Syntax als WCF-Dienste, die außerhalb von IIS gehostet. Jedoch gelten die folgenden Einschränkungen nur für die IIS-Hostumgebung:  
   
 -   Basisadressen für IIS-gehostete Dienste  
   
--   Hosten von Anwendungen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienste außerhalb von IIS können die Basisadresse der Dienste, die sie hosten, indem Sie übergeben ein Satz Basisadressen-URIs zum Steuern der <xref:System.ServiceModel.ServiceHost> Konstruktor oder durch Bereitstellen einer [ \<Host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) Element in der Konfiguration des Diensts. Dienste, die in IIS gehostet werden, können ihre Basisadressen nicht steuern. Die Basisadresse eines IIS-gehosteten Diensts ist die Adresse seiner SVC-Datei.  
+-   Hosting außerhalb von IIS WCF-Dienste können die Basisadresse der Dienste, die sie hosten, indem Sie einen Satz Basisadressen übergeben steuern Anwendungen behandeln URIs der <xref:System.ServiceModel.ServiceHost> Konstruktor oder durch Eingabe einer [ \<Host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) Element in der Konfiguration des Diensts. Dienste, die in IIS gehostet werden, können ihre Basisadressen nicht steuern. Die Basisadresse eines IIS-gehosteten Diensts ist die Adresse seiner SVC-Datei.  
   
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>Endpunktadressen für IIS-gehostete Dienste  
- Wenn ein Dienst in IIS gehostet wird, werden Endpunktadressen als relativ zur Adresse der SVC-Datei betrachtet, die den Dienst darstellt. Z. B. wenn die Basisadresse des eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst http://localhost/Application1/MyService.svc mit Endpunktkonfiguration.  
+ Wenn ein Dienst in IIS gehostet wird, werden Endpunktadressen als relativ zur Adresse der SVC-Datei betrachtet, die den Dienst darstellt. Wenn die Basisadresse eines WCF-Diensts ist z. B. http://localhost/Application1/MyService.svc mit Endpunktkonfiguration.  
   
 ```xml  
 <endpoint address="anotherEndpoint" .../>  
@@ -108,12 +94,12 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
  Sie müssen immer relative Endpunktadressen für IIS-gehostete Dienstendpunkte verwenden. Eine vollständig qualifizierten Endpunktadresse angeben (z. B. http://localhost/MyService.svc) kann zu Fehlern bei der Bereitstellung des Diensts führen, wenn die Endpunktadresse nicht auf die IIS-Anwendung verweist, der den Endpunkt verfügbar macht Dienst hostet. Durch die Verwendung relativer Endpunktadressen für gehostete Dienste werden diese potenziellen Konflikte vermieden.  
   
 ### <a name="available-transports"></a>Verfügbare Transporte  
- In IIS&#160;5.1 und[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gehostete [!INCLUDE[iis601](../../../../includes/iis601-md.md)] -Dienste sind auf die Verwendung der HTTP-basierten Kommunikation beschränkt. Auf diesen IIS-Plattformen führt das Konfigurieren eines gehosteten Diensts für die Verwendung einer Nicht-HTTP-Bindung zu einem Fehler während der Dienstaktivierung. Die von [!INCLUDE[iisver](../../../../includes/iisver-md.md)]unterstützten Transporte umfassen HTTP, Net.TCP, Net.Pipe, Net.MSMQ und msmq.formatname für die Abwärtskompatibilität mit bestehenden MSMQ-Anwendungen.  
+ In IIS 5.1 gehosteten WCF-Diensten und [!INCLUDE[iis601](../../../../includes/iis601-md.md)] auf die Verwendung von HTTP-basierten Kommunikation beschränkt sind. Auf diesen IIS-Plattformen führt das Konfigurieren eines gehosteten Diensts für die Verwendung einer Nicht-HTTP-Bindung zu einem Fehler während der Dienstaktivierung. Die von [!INCLUDE[iisver](../../../../includes/iisver-md.md)]unterstützten Transporte umfassen HTTP, Net.TCP, Net.Pipe, Net.MSMQ und msmq.formatname für die Abwärtskompatibilität mit bestehenden MSMQ-Anwendungen.  
   
 ### <a name="http-transport-security"></a>HTTP-Transportsicherheit  
- IIS-gehostete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienste können die http-Transportsicherheit nutzen (beispielsweise HTTPS- und HTTP-Authentifizierungsschemata wie Basic, Digest und die integrierte Windows-Authentifizierung), sofern das virtuelle IIS-Verzeichnis, das den Dienst enthält, diese Einstellungen unterstützt. Die HTTP-Transportsicherheitseinstellungen der Bindung eines gehosteten Endpunkts müssen mit den Transportsicherheitseinstellungen im virtuellen IIS-Verzeichnis identisch sein, in dem sie enthalten ist.  
+ IIS-gehostete WCF-Dienste können Nutzen des HTTP-transportsicherheit (beispielsweise https- und HTTP-Authentifizierungsschemata wie Basic, Digest und integrierte Windows-Authentifizierung) als das virtuelle IIS-Verzeichnis mit dem Dienst die unterstützt Einstellungen. Die HTTP-Transportsicherheitseinstellungen der Bindung eines gehosteten Endpunkts müssen mit den Transportsicherheitseinstellungen im virtuellen IIS-Verzeichnis identisch sein, in dem sie enthalten ist.  
   
- Ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Endpunkt, der zur Verwendung von HTTP-Digestauthentifizierung konfiguriert wurde, muss beispielsweise in einem virtuellen IIS-Verzeichnis enthalten sein, dessen Konfiguration ebenfalls die HTTP-Digestauthentifizierung zulässt. Kombinationen von IIS-Einstellungen und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Endpunkteinstellungen ohne Entsprechung führen während der Dienstaktivierung zu einem Fehler.  
+ Beispielsweise muss ein WCF-Endpunkt für die Verwendung von HTTP-Digestauthentifizierung konfiguriert in einem virtuellen IIS-Verzeichnis befinden, die auch so konfiguriert ist, dass die HTTP-Digestauthentifizierung zulässt. Nicht übereinstimmende Kombinationen von IIS-Einstellungen und WCF-Endpunkt führen zu einem Fehler während der dienstaktivierung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hosten in IIS (Internetinformationsdienste)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  

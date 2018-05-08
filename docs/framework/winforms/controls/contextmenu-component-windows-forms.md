@@ -1,13 +1,6 @@
 ---
-title: "ContextMenu-Komponente (Windows Forms)"
-ms.custom: 
+title: ContextMenu-Komponente (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - menus [Windows Forms], shortcut menus
 - Windows Forms, menus
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 56e87d6d873ba69e3ee9fe788025d66f4a55a4ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35806d14701169206b1ce29ea8b0b6e5993ba3c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu-Komponente (Windows Forms)
 > [!NOTE]
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  [Gewusst wie: Hinzufügen und Entfernen von Menüelementen mit der ContextMenu-Komponente von Windows Forms](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Erläutert das Hinzufügen und Entfernen von Tastenkombinations-Menüelemente in Windows Forms.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.ContextMenu>  
  Enthält Referenzinformationen zur <xref:System.Windows.Forms.ContextMenu>-Klasse und zu ihren Membern.  
   

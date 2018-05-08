@@ -1,34 +1,20 @@
 ---
 title: 'Gewusst wie: Implementieren von PriorityBinding'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e6ab8826f2298a8660a85d739fbe3456374b476
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cf0ed5c2b55358d3a583ac89e307b23b3ab08a9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-prioritybinding"></a>Gewusst wie: Implementieren von PriorityBinding
-<xref:System.Windows.Data.PriorityBinding>in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funktioniert, indem Sie eine Liste der Bindungen angeben. Die Liste der Bindungen ist von der höchsten Priorität bis zur niedrigsten Priorität geordnet. Wenn die höchste Priorität Bindung einen Wert zurückgibt besteht erfolgreich bei ihrer Verarbeitung niemals müssen die anderen Bindungen in der Liste zu verarbeiten. Es könnte sein, die Groß-/Kleinschreibung, die die höchste Priorität Bindung auszuwertende lange dauert, die höchsten Priorität, die einen Wert, erfolgreich zurückgibt verwendet werden, bis eine Bindung eine höhere Priorität erfolgreich einen Wert zurückgibt.  
+<xref:System.Windows.Data.PriorityBinding> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funktioniert, indem Sie eine Liste der Bindungen angeben. Die Liste der Bindungen ist von der höchsten Priorität bis zur niedrigsten Priorität geordnet. Wenn die höchste Priorität Bindung einen Wert zurückgibt besteht erfolgreich bei ihrer Verarbeitung niemals müssen die anderen Bindungen in der Liste zu verarbeiten. Es könnte sein, die Groß-/Kleinschreibung, die die höchste Priorität Bindung auszuwertende lange dauert, die höchsten Priorität, die einen Wert, erfolgreich zurückgibt verwendet werden, bis eine Bindung eine höhere Priorität erfolgreich einen Wert zurückgibt.  
   
 ## <a name="example"></a>Beispiel  
  Zur Veranschaulichung der Funktion wie <xref:System.Windows.Data.PriorityBinding> verwendet werden kann, die `AsyncDataSource` Objekt mit den folgenden drei Eigenschaften erstellt wurde: `FastDP`, `SlowerDP`, und `SlowestDP`.  
@@ -40,7 +26,7 @@ ms.lasthandoff: 01/19/2018
  Get-Accessor der `SlowestDP` vor der Rückgabe des Wert von 5 Sekunden wartet, bis die `_slowestDP` -Datenmember.  
   
 > [!NOTE]
->  In diesem Beispiel wird nur zu Demonstrationszwecken. Die [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Richtlinien wird davon abgeraten, Definieren von Eigenschaften, die erheblich langsamer als ein Standardfeld festgelegt sind. Weitere Informationen finden Sie unter [NIB: Auswahl zwischen Eigenschaften und Methoden](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+>  Das Beispiel dient nur der Veranschaulichung. Die [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Richtlinien wird davon abgeraten, Definieren von Eigenschaften, die erheblich langsamer als ein Standardfeld festgelegt sind. Weitere Informationen finden Sie unter [NIB: Auswahl zwischen Eigenschaften und Methoden](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

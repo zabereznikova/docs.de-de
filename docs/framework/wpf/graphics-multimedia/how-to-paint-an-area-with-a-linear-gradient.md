@@ -1,28 +1,16 @@
 ---
 title: 'Gewusst wie: Zeichnen eines Bereichs mit einem linearen Farbverlauf'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - linear gradients [WPF], painting with
 - brushes [WPF], painting with linear gradients
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eec4ec2fc7ba99081eaafa6803d20c99bebc6c2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec07a0c33468681f67d086ec3d1d58b378412ff9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Gewusst wie: Zeichnen eines Bereichs mit einem linearen Farbverlauf
 Dieses Beispiel zeigt, wie die <xref:System.Windows.Media.LinearGradientBrush> Klasse, um einen Bereich mit einem linearen Farbverlauf zu zeichnen. Im folgenden Beispiel die <xref:System.Windows.Shapes.Shape.Fill%2A> von einem <xref:System.Windows.Shapes.Rectangle> mit einer diagonalen linearen Farbverlauf, der von Gelb zu Rot Blau Gelbgrün übergeht gezeichnet wird.  

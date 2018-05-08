@@ -1,31 +1,17 @@
 ---
 title: Unterschiede zwischen den Warteschlangenfunktionen in Windows Vista, Windows Server 2003 und Windows XP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Unterschiede zwischen den Warteschlangenfunktionen in Windows Vista, Windows Server 2003 und Windows XP
-Dieses Thema enthält eine Übersicht über die Unterschiede der Warteschlangenfunktionen von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zwischen [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+In diesem Thema werden die Unterschiede in der Windows Communication Foundation (WCF)-Warteschlangenfunktion zwischen zusammengefasst [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], und [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ## <a name="application-specific-dead-letter-queue"></a>Anwendungsspezifische Warteschlange für unzustellbare Nachrichten  
  In der Warteschlange stehende Nachrichten können eine unbegrenzte Zeit hinweg in der Warteschlange verbleiben, wenn die empfangende Anwendung sie nicht umgehend aus der Warteschlange liest. Dieses Verhalten ist bei zeitempfindlichen Nachrichten möglicherweise nicht empfehlenswert. Für zeitempfindliche Nachrichten ist in der Bindung, die sich in der Warteschlange befindet, eine `TimeToLive`-Eigenschaft festgelegt. Diese Eigenschaft gibt an, wie lang die Nachrichten in der Warteschlange sein können, bevor sie ablaufen. Abgelaufene Nachrichten werden an eine spezielle Warteschlange gesendet und zwar an die Warteschlange für unzustellbare Nachrichten. Nachrichten können auch aus anderen Gründen in eine Warteschlange für unzustellbare Meldungen verschoben werden, z.&#160;B. aufgrund des Überschreitens eines Warteschlangenkontingents oder wegen eines Authentifizierungsfehlers.  
@@ -43,7 +29,7 @@ Dieses Thema enthält eine Übersicht über die Unterschiede der Warteschlangenf
   
 -   MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt die negative Bestätigung, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] hingegen nicht. Eine negative Bestätigung vom empfangenden Warteschlangen-Manager bewirkt, dass der sendende Warteschlangen-Manager die abgelehnte Nachricht in die Warteschlange für unzustellbare Nachrichten einstellt. Damit ist `ReceiveErrorHandling.Reject` in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht zulässig.  
   
--   MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt eine Nachrichteneigenschaft, die zählt, wie oft die Nachrichtenzustellung versucht wird. Diese Abbruchanzahleigenschaft ist in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht verfügbar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwaltet die Abbruchanzahl im Arbeitsspeicher. Deshalb enthält diese Eigenschaft möglicherweise keinen exakten Wert, wenn dieselbe Nachricht von mehreren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten in einer Webfarm gelesen wird.  
+-   MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt eine Nachrichteneigenschaft, die zählt, wie oft die Nachrichtenzustellung versucht wird. Diese Abbruchanzahleigenschaft ist in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht verfügbar. WCF verwaltet die abbruchanzahl im Arbeitsspeicher, daher ist es möglich, dass diese Eigenschaft nicht auf einen genauen Wert enthalten kann, wenn dieselbe Nachricht von mehr als ein WCF-Dienst in einer Webfarm gelesen wird.  
   
 ## <a name="remote-transactional-read"></a>Remote transaktional durchgeführte Lesevorgänge  
  MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt remote durchgeführte Lesevorgänge. Dabei kann eine Anwendung, die aus einer Warteschlange liest, auf einem anderen Computer ausgeführt werden als dem Computer, auf dem die Warteschlange gehostet wird. Dies ermöglicht, dass eine Dienstefarm aus einer zentralen Warteschlange lesen kann, was den Gesamtdurchsatz im System erhöht. Darüber hinaus wird sichergestellt, dass im Fall eines Fehlers während des Lesens oder Verarbeitens einer Nachricht ein Rollback der Transaktion erfolgt und die Nachricht zur späteren Verarbeitung in der Warteschlange verbleibt.  

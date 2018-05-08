@@ -1,33 +1,21 @@
 ---
 title: Transporte in Windows Communication Foundation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transports [WCF]
 - WCF, transports
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 62eb27919e762004667b3d5179c35cb04d9a9422
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transporte in Windows Communication Foundation
-Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels. Die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendeten Haupttransporte sind HTTP, HTTPS, TCP und Named Pipes. Die Themen in diesem Abschnitt behandeln die Auswahl dieser Transporte, das Konfigurieren des Transports und das Festlegen von Optimierungseigenschaften.  
+Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels. Hauptsächlich in Windows Communication Foundation (WCF) verwendeten Transportprotokolle sind HTTP, HTTPS, TCP und named Pipes. Die Themen in diesem Abschnitt behandeln die Auswahl dieser Transporte, das Konfigurieren des Transports und das Festlegen von Optimierungseigenschaften.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] schließt zusätzliche Transporte ein. Weitere Informationen zu Message Queuing (auch bekannt als MSMQ)-Transport, finden Sie unter [Warteschlangen und zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Informationen zu Peer-zu-Peer-Transport, finden Sie unter [Peer-zu-Peer-Netzwerken](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ WCF schließt zusätzliche Transporte ein. Weitere Informationen zu Message Queuing (auch bekannt als MSMQ)-Transport, finden Sie unter [Warteschlangen und zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Informationen zu Peer-zu-Peer-Transport, finden Sie unter [Peer-zu-Peer-Netzwerken](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Auswählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
@@ -43,7 +31,7 @@ Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels. D
  Beschreibt, wie HTTP- und HTTPS-Transportbindungselemente konfiguriert werden.  
   
  [Vorgehensweise: Ersetzen der WCF URL-Reservierung durch eine eingeschränkte Reservierung](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
- Beschreibt, wie Reservierungen mit eingeschränkter URL in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]verwendet werden.  
+ Beschreibt, wie Reservierungen WCFURL eingeschränkt.  
   
  [Transportkontingente](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
  Beschreibt Überlegungen für das Festlegen von Kontingenten, die in der Transportschicht verfügbar sind.  
@@ -52,9 +40,9 @@ Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels. D
  Beschreibt, wie die Transportschicht konfiguriert wird, wenn Nachrichten hinter einer Firewall gesendet oder empfangen werden oder wenn NAT (Network Address Translation) vorhanden ist.  
   
  [Net.TCP-Portfreigabe](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- Beschreibt, wie die Net.TCP Port Sharing-Komponente von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet wird.  
+ Beschreibt, wie die Net.TCP Port Sharing-Komponente von WCF verwenden.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  

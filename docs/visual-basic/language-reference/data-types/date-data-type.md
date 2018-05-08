@@ -1,11 +1,6 @@
 ---
 title: Date-Datentyp (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Date
 helpviewer_keywords:
@@ -20,14 +15,11 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 190b40888dc4a42075b7b6b27bdb1bd403a7efb5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b7827206d6e145b559d9716df5ec4a98ac4ea0b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-data-type-visual-basic"></a>Date-Datentyp (Visual Basic)
 Enthält IEEE-64-Bit(8-Byte)-Werte, die Datumsangaben im Bereich vom 1. Januar des Jahres 0001 bis zum 31. Dezember des Jahres 9999 und Uhrzeiten von 00:00:00 Uhr (Mitternacht) bis 23:59:59.9999999 Uhr darstellen. Jedes Inkrement stellt 100 Nanosekunden verstrichener Zeit seit Beginn des 1. Januar des Jahres 1 im gregorianischen Kalender dar. Der maximale Wert stellt 100 Nanosekunden vor Beginn des 1. Januar des Jahres 10000 dar.  
@@ -70,7 +62,7 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 -   **Interop-Überlegungen.** Wenn Sie Komponenten anbinden, die nicht für .NET Framework geschrieben wurden (z. B. Automatisierungs- oder COM-Objekte), müssen Sie beachten, dass Datums-/Uhrzeittypen in anderen Umgebungen nicht zum `Date`-Typ von Visual Basic kompatibel sind. Wenn Sie ein Datums-/Uhrzeitargument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic-Code als `Double` und nicht als `Date`, und verwenden Sie die Konvertierungsmethoden <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> und <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
   
--   **Typzeichen.** `Date`hat kein literal-Typzeichen oder Bezeichner-Typzeichen. Der Compiler behandelt jedoch Literale, die in Nummernzeichen (`# #`) eingeschlossen sind, als `Date`.  
+-   **Typzeichen.** `Date` hat kein literal-Typzeichen oder Bezeichner-Typzeichen. Der Compiler behandelt jedoch Literale, die in Nummernzeichen (`# #`) eingeschlossen sind, als `Date`.  
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.DateTime?displayProperty=nameWithType>-Struktur.  
   

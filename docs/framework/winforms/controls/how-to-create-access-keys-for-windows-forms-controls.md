@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente"
-ms.custom: 
+title: 'Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81aa68a65d09b073b117f4d96dfc06e614d68aea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53ffd3632ff3e1179a72f1e2bfe4ea366e28b0f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente
 Ein *Zugriffsschlüssel* ist ein unterstrichenes Zeichen im Text eines Menüs, Menüelements oder die Bezeichnung eines Steuerelements, z. B. eine Schaltfläche. Mit einer Zugriffstaste kann der Benutzer "eine Schaltfläche klicken" durch Drücken der ALT-Taste in Kombination mit den vordefinierten Zugriffsschlüssel. Angenommen, eine Schaltfläche eine Prozedur zum Drucken eines Formulars ausgeführt wird und daher seine `Text` auf "Drucken"-Eigenschaft festgelegt ist, ein kaufmännisches und-Zeichen hinzufügen, bevor der Buchstabe "P" den Buchstaben "P" in den Text der Schaltfläche unterstrichen werden, zur Laufzeit ausgelöst wird. Der Benutzer kann die Schaltfläche mit den durch Drücken von ALT + P zugeordneten Befehl ausführen. Sie keine Zugriffstaste für ein Steuerelement, die Fokus erhalten kann.  

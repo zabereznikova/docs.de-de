@@ -1,36 +1,22 @@
 ---
 title: 'Gewusst wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c6c3e057fd07569d462f1bf25d1c283e42024a8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Gewusst wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst
-In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erstellung eines durch einen Windows-Dienst gehosteten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts erforderlich sind. Das Szenario wird durch die Hostingoption des verwalteten Windows-Diensts ermöglicht. Die Option ist ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst mit langer Laufzeit, der außerhalb der Internetinformationsdienste (IIS) in einer sicheren, nicht nachrichtenaktivierten Umgebung gehostet wird. Die Lebensdauer des Diensts wird stattdessen vom Betriebssystem gesteuert. Diese Hostingoption ist in allen Windows-Versionen verfügbar.  
+Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen eines Windows Communication Foundation (WCF)-Diensts, das von einem Windows-Dienst gehostet wird. Das Szenario wird durch die Hostingoption ist ein langer WCF-Dienst außerhalb von IIS (Internetinformationsdienste) gehostet, in einer sicheren Umgebung, die nicht Nachricht aktiviert ist, die den verwalteten Windows-Dienst aktiviert. Die Lebensdauer des Diensts wird stattdessen vom Betriebssystem gesteuert. Diese Hostingoption ist in allen Windows-Versionen verfügbar.  
   
- Windows-Dienste können mit Microsoft.ManagementConsole.SnapIn in Microsoft Management Console (MMC) verwaltet und so konfiguriert werden, dass sie beim Systemstart automatisch gestartet werden. Diese Hostingoption registriert die Anwendungsdomäne (AppDomain), die einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst als verwalteten Windows-Dienst hostet, sodass die Prozesslebensdauer des Diensts von den Diensten des Dienststeuerungs-Managers für Windows gesteuert wird.  
+ Windows-Dienste können mit Microsoft.ManagementConsole.SnapIn in Microsoft Management Console (MMC) verwaltet und so konfiguriert werden, dass sie beim Systemstart automatisch gestartet werden. Diese Hostingoption besteht in der Registrierung der Anwendungsdomäne (AppDomain), die einen WCF-Dienst als verwalteten Windows-Dienst hostet, sodass die Prozesslebensdauer des Diensts durch den Dienststeuerungs-Manager (SCM) für Windows-Dienste gesteuert wird.  
   
- Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Windows-Dienstklasse und eine Installerklasse. Die Dienstimplementierungsklasse, `CalculatorService`, ist ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst. `CalculatorWindowsService` ist ein Windows-Dienst. Damit sich die Klasse als Windows-Dienst eignet, erbt sie von `ServiceBase` und implementiert die `OnStart`-Methode und die `OnStop`-Methode. In `OnStart` wird <xref:System.ServiceModel.ServiceHost> für den `CalculatorService`-Typ erstellt und geöffnet. In `OnStop` wird der Dienst beendet und verworfen. Der Host ist außerdem für die Bereitstellung einer Basisadresse für den Diensthost verantwortlich, die in den Anwendungseinstellungen konfiguriert wurde. Durch die Installerklasse, die von <xref:System.Configuration.Install.Installer> erbt, kann das Programm mit dem Tool "Installutil.exe" als Windows-Dienst installiert werden.  
+ Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Windows-Dienstklasse und eine Installerklasse. Die Dienstimplementierungsklasse, `CalculatorService`, ist ein WCF-Dienst. `CalculatorWindowsService` ist ein Windows-Dienst. Damit sich die Klasse als Windows-Dienst eignet, erbt sie von `ServiceBase` und implementiert die `OnStart`-Methode und die `OnStop`-Methode. In `OnStart` wird <xref:System.ServiceModel.ServiceHost> für den `CalculatorService`-Typ erstellt und geöffnet. In `OnStop` wird der Dienst beendet und verworfen. Der Host ist außerdem für die Bereitstellung einer Basisadresse für den Diensthost verantwortlich, die in den Anwendungseinstellungen konfiguriert wurde. Durch die Installerklasse, die von <xref:System.Configuration.Install.Installer> erbt, kann das Programm mit dem Tool "Installutil.exe" als Windows-Dienst installiert werden.  
   
 ### <a name="construct-the-service-and-provide-the-hosting-code"></a>Erstellen des Diensts und Bereitstellen des Hostcodes  
   
@@ -135,7 +121,7 @@ In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erst
     > [!NOTE]
     >  Wenn Sie nicht verwenden die [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Befehlszeile verwenden, stellen Sie sicher, dass die `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` Verzeichnis befindet sich im Systempfad.  
   
-     Geben Sie an der Eingabeaufforderung `services.msc` ein, um auf den Dienststeuerungs-Manager (SCM) zuzugreifen. Der Windows-Dienst müsste unter "Dienste" als "WCFWindowsServiceSample" angezeigt werden. Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst kann Clients nur dann antworten, wenn der Windows-Dienst ausgeführt wird. Um den Dienst zu starten, klicken Sie darauf in der SCM, und wählen Sie "Start", oder geben **Net start WCFWindowsServiceSample** an der Eingabeaufforderung.  
+     Geben Sie an der Eingabeaufforderung `services.msc` ein, um auf den Dienststeuerungs-Manager (SCM) zuzugreifen. Der Windows-Dienst müsste unter "Dienste" als "WCFWindowsServiceSample" angezeigt werden. Der WCF-Dienst kann nur auf Clients Antworten, wenn der Windows-Dienst ausgeführt wird. Um den Dienst zu starten, klicken Sie darauf in der SCM, und wählen Sie "Start", oder geben **Net start WCFWindowsServiceSample** an der Eingabeaufforderung.  
   
 3.  Wenn Sie Änderungen am Dienst vornehmen, müssen Sie ihn zuerst stoppen und dann deinstallieren. Beenden Sie den Dienst, mit der rechten Maustaste in des Diensts im dienststeuerungs-Manager aus, und wählen Sie "Beenden", oder **Geben Sie net Stop WCFWindowsServiceSample** an der Eingabeaufforderung. Wenn Sie den Windows-Dienst beenden und anschließend einen Client ausführen, tritt eine Ausnahme vom Typ <xref:System.ServiceModel.EndpointNotFoundException> auf, wenn ein Client versucht, auf den Dienst zuzugreifen. So deinstallieren Sie Windows-Dienst des Typs **Installutil/u bin\service.exe** an der Eingabeaufforderung.  
   

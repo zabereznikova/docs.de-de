@@ -1,23 +1,14 @@
 ---
 title: Erweiterbare Objekte
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
-ms.translationtype: MT
+ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensible-objects"></a>Erweiterbare Objekte
 Das erweiterbare Objektmuster wird verwendet, um entweder vorhandene Laufzeitklassen um neue Funktionen zu erweitern oder um einem Objekt neue Zustandsfunktionen hinzuzufügen. Erweiterungen, die einem der erweiterbaren Objekte zugeordnet sind, ermöglichen es Verhalten in verschiedenen Phasen der Verarbeitung, auf gemeinsam verwendete Zustände und Funktionen zuzugreifen, die an ein zugängliches und allgemeines erweiterbares Objekt angefügt sind.  
@@ -57,7 +48,7 @@ where T : IExtensibleObject<T>
  Die <xref:System.ServiceModel.IExtensionCollection%601>-Schnittstelle ist eine Auflistung von <xref:System.ServiceModel.IExtension%601>-Objekten, für die der Abruf von <xref:System.ServiceModel.IExtension%601> anhand des Typs zulässig ist. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> gibt das zuletzt hinzugefügte Objekt zurück, das eine <xref:System.ServiceModel.IExtension%601> dieses Typs ist.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Erweiterbare Objekte in Windows Communication Foundation  
- Es gibt vier erweiterbare Objekte in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]:  
+ Es gibt vier erweiterbare Objekte in der Windows Communication Foundation (WCF):  
   
 -   <xref:System.ServiceModel.ServiceHostBase> – Dies ist die Basisklasse für den Host des Dienstes.  Sie können die Erweiterungen dieser Klasse verwenden, um das Verhalten von <xref:System.ServiceModel.ServiceHostBase> selbst zu erweitern oder um den Zustand für die Dienste einzeln zu speichern.  
   

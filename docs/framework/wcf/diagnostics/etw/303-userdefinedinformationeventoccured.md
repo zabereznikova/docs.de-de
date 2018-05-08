@@ -1,24 +1,12 @@
 ---
 title: 303 - UserDefinedInformationEventOccured
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5ed5acaf-3755-4417-92c4-4ebc8e854ca1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3bd4d94d457793eb036f037cc6dc22bff6d26ee2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b782b5ac0527b5acb3ebf0bf11c117563042495
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="303---userdefinedinformationeventoccured"></a>303 - UserDefinedInformationEventOccured
 ## <a name="properties"></a>Eigenschaften  
@@ -41,5 +29,5 @@ ms.lasthandoff: 12/22/2017
 |Datenelementname|Datenelementtyp|Beschreibung|  
 |--------------------|--------------------|-----------------|  
 |name|`xs:string`|Der benutzerdefinierte Name des Ereignisses.|  
-|HostReference|`xs:string`|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig. Das Format ist definiert als "Website Namen virtueller Anwendungspfad &#124; Virtueller Dienstpfad &#124; ServiceName ". Beispiel: "Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.|  
+|HostReference|`xs:string`|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig. Das Format ist definiert als "Website Namen virtueller Anwendungspfad&#124;virtueller Dienstpfad&#124;ServiceName". Beispiel: "Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
 |Payload|`xs:string`|Die benutzerdefinierte Nutzlast des Ereignisses.|

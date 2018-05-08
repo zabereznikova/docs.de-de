@@ -1,10 +1,7 @@
 ---
-title: "Übersicht über Abhängigkeitseigenschaften"
-description: "Eine Eigenschaft, die durch die WPF-Eigenschaftensystem gesichert wird, wird als eine Abhängigkeitseigenschaft bezeichnet. In dieser Übersicht werden die WPF-Eigenschaftensystem und die Funktionen einer Abhängigkeitseigenschaft."
+title: Übersicht über Abhängigkeitseigenschaften
+description: Eine Eigenschaft, die durch die WPF-Eigenschaftensystem gesichert wird, wird als eine Abhängigkeitseigenschaft bezeichnet. In dieser Übersicht werden die WPF-Eigenschaftensystem und die Funktionen einer Abhängigkeitseigenschaft.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +14,11 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
@@ -43,7 +35,7 @@ Abhängigkeitseigenschaften dienen der Berechnung des Werts einer Eigenschaft an
 Anhand der SDK-Referenz können Sie ermitteln, welche Eigenschaft eine Abhängigkeitseigenschaft ist, wenn diese im Abschnitt „Informationen zur Abhängigkeitseigenschaft“ auf der verwalteten Referenzseite für diese Eigenschaft vorhanden ist. Der Abschnitt Informationen zur Abhängigkeitseigenschaft enthält einen Link zu der <xref:System.Windows.DependencyProperty> Bezeichner für die Abhängigkeitseigenschaft Felds, und schließt auch eine Liste der Metadatenoptionen, die für diese Eigenschaft, außerkraftsetzungsinformationen pro-Klasse und andere Details festgelegt werden.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Abhängigkeitseigenschaften sichern CLR-Eigenschaften
-Abhängigkeitseigenschaften und das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaftensystem erweitern die Funktionalität von Eigenschaften durch die Bereitstellung eines Typs, der eine Eigenschaft als eine alternative Implementierung zum standardmäßigen Muster unterstützt, bei dem die Eigenschaft mit einem privaten Feld unterstützt wird. Der Name dieses Typs ist <xref:System.Windows.DependencyProperty>. Der andere wichtige Typ, definiert die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem ist <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject>definiert die Basisklasse, die registrieren und eine Abhängigkeitseigenschaft besitzen kann.
+Abhängigkeitseigenschaften und das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaftensystem erweitern die Funktionalität von Eigenschaften durch die Bereitstellung eines Typs, der eine Eigenschaft als eine alternative Implementierung zum standardmäßigen Muster unterstützt, bei dem die Eigenschaft mit einem privaten Feld unterstützt wird. Der Name dieses Typs ist <xref:System.Windows.DependencyProperty>. Der andere wichtige Typ, definiert die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem ist <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definiert die Basisklasse, die registrieren und eine Abhängigkeitseigenschaft besitzen kann.
 
 Es folgt eine Zusammenfassung der Terminologie, die in dieser [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]-Dokumentation bei der Beschreibung von Abhängigkeitseigenschaften verwendet wird:
 

@@ -1,24 +1,17 @@
 ---
 title: In (generischer Modifizierer) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.VarianceIn
 helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e9aab4fc361754cfd750ae68f04b36dce13d0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (generischer Modifizierer) (Visual Basic)
 Das Schlüsselwort `In` gibt für generische Typparameter an, dass der Typparameter kontravariant ist.  
@@ -31,7 +24,7 @@ Das Schlüsselwort `In` gibt für generische Typparameter an, dass der Typparame
 ## <a name="rules"></a>Regeln  
  Sie können das `In`-Schlüsselwort in generischen Schnittstellen und Delegaten verwenden.  
   
- Ein Typparameter kann kontravariant in eine generische Schnittstelle oder ein Delegattyp deklariert werden, wenn er nicht als einen Methodenrückgabetyp verwendet und nur als eine Art von Methodenargumenten verwendet wird. `ByRef`nicht mit Parametern kovariant oder kontravariant.  
+ Ein Typparameter kann kontravariant in eine generische Schnittstelle oder ein Delegattyp deklariert werden, wenn er nicht als einen Methodenrückgabetyp verwendet und nur als eine Art von Methodenargumenten verwendet wird. `ByRef` nicht mit Parametern kovariant oder kontravariant.  
   
  Kovarianz und Kontravarianz werden für Verweistypen unterstützt und für Werttypen nicht unterstützt.  
   

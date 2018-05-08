@@ -1,13 +1,6 @@
 ---
 title: x:Statische Markuperweiterung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticExtension
 - xStatic
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-caps.latest.revision: "25"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 980bf6a1bdb19afd5c8d3c798d31037ab8cd7086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xstatic-markup-extension"></a>x:Statische Markuperweiterung
 Verweist auf eine statische per-Wert-Code-Entität, die in definiert ist eine [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– kompatible Weise. Die statische Eigenschaft, auf die verwiesen wird, kann, geben Sie den Wert einer Eigenschaft in XAML verwendet werden.  
@@ -41,7 +29,7 @@ Verweist auf eine statische per-Wert-Code-Entität, die in definiert ist eine [!
   
 |||  
 |-|-|  
-|`prefix`|Dies ist optional. Ein Präfix, das auf einem zugeordneten, nicht standardmäßigen XAML-Namespace verweist. `prefix`wird explizit in der Verwendung angezeigt werden, da Sie selten statische Eigenschaften verweisen, die von einer standardmäßigen XAML-Namespace stammen. Siehe Hinweise.|  
+|`prefix`|Dies ist optional. Ein Präfix, das auf einem zugeordneten, nicht standardmäßigen XAML-Namespace verweist. `prefix` wird explizit in der Verwendung angezeigt werden, da Sie selten statische Eigenschaften verweisen, die von einer standardmäßigen XAML-Namespace stammen. Siehe Hinweise.|  
 |`typeName`|Erforderlich. Der Name des Typs, der den gewünschten statischen Member definiert.|  
 |`staticMemberName`|Erforderlich. Der Name des Members gewünschten statischen Wert (eine Konstante, eine statische Eigenschaft, ein Feld oder ein Enumerationswert).|  
   
@@ -68,9 +56,9 @@ Verweist auf eine statische per-Wert-Code-Entität, die in definiert ist eine [!
   
  Es gibt zwei XAML-Verwendungen, die technisch möglich sind. Allerdings sind diese Verwendungen ungewöhnlich, da sie unnötig detailliert sind:  
   
- **Objekt Elementsyntax:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName``" .../>`  
+ **Syntax der Object-Element:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName` `" .../>`  
   
- **-Attribut Syntax mit expliziter Elementeigenschaft für Initialisierungszeichenfolge:** `<` `object`  ``  `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName``}" .../>`  
+ **Die Attributsyntax mit expliziten Elementeigenschaft für Initialisierungszeichenfolge:** `<` `object` `` `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName` `}" .../>`  
   
  In der .NET Framework-XAML-Dienste-Implementierung wird durch die Verarbeitung für diese Markuperweiterung definiert die <xref:System.Windows.Markup.StaticExtension> Klasse.  
   

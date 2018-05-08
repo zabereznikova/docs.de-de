@@ -1,26 +1,12 @@
 ---
 title: Verteilen nach Textelement
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ab8ddccafa8dbf1ecde8afbb07f0a61faa62be5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a59f639fc0f1adad48bfda5fd8105340ac004cef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-by-body-element"></a>Verteilen nach Textelement
 Dieses Beispiel veranschaulicht, wie ein alternativer Algorithmus zum Zuweisen eingehender Nachrichten zu Vorgängen implementiert wird.  
@@ -82,7 +68,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Hinzufügen einer Vorgangsauswahl zu einem Dienst  
- Dienstverteilungs-Vorgangsauswahlen sind Erweiterungen für den [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Verteiler. Für die Auswahl von Methoden auf dem Rückrufkanal von Duplexverträgen stehen auch Clientvorgangsauswahlen zur Verfügung, die ähnlich funktionieren wie die hier erläuterten Verteilungsvorgangsauswahlen, die jedoch nicht explizit in diesem Beispiel behandelt werden.  
+ Dienstverteilungs-vorgangsauswahlen sind Erweiterungen der Windows Communication Foundation (WCF)-Verteiler. Für die Auswahl von Methoden auf dem Rückrufkanal von Duplexverträgen stehen auch Clientvorgangsauswahlen zur Verfügung, die ähnlich funktionieren wie die hier erläuterten Verteilungsvorgangsauswahlen, die jedoch nicht explizit in diesem Beispiel behandelt werden.  
   
  Wie die meisten Dienstmodellerweiterungen werden auch Verteilungsvorgangsauwahlen dem Verteiler mithilfe von Verhaltensweisen hinzugefügt. Ein *Verhalten* ist ein Konfigurationsobjekt, das eine oder mehrere Erweiterungen hinzufügt, an der verteilungslaufzeit (oder der Clientlaufzeit) oder andere Weise ändert die Einstellungen.  
   
@@ -187,7 +173,7 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   

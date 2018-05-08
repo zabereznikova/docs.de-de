@@ -1,13 +1,6 @@
 ---
-title: "Pinsel und gefüllte Formen in GDI+"
-ms.custom: 
+title: Pinsel und gefüllte Formen in GDI+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,19 +13,14 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 89f0a7c86a83222030d9b50e20228f32e85ce730
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9475518a5f0422e0eac1ec521088071bb4d1c885
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pinsel und gefüllte Formen in GDI+
-Eine geschlossene Form, z. B. ein Rechteck oder eine Ellipse besteht aus einer Gliederung und dem inneren. Die Kontur mit einem Stift gezeichnet, und das innere mit einem Pinsel gefüllt ist. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bietet mehrere für die Innenflächen geschlossene Formen füllen: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, und <xref:System.Drawing.Drawing2D.PathGradientBrush>. Alle diese Klassen erben von der <xref:System.Drawing.Brush> Klasse. Die folgende Abbildung zeigt ein Rechteck mit eines Pinsels in Volltonfarbe gefüllt und eine Ellipse, die mit einem Schraffurpinsel gefüllt.  
+Eine geschlossene Form, z. B. ein Rechteck oder eine Ellipse besteht aus einer Gliederung und dem inneren. Die Kontur mit einem Stift gezeichnet, und das innere mit einem Pinsel gefüllt ist. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet mehrere für die Innenflächen geschlossene Formen füllen: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, und <xref:System.Drawing.Drawing2D.PathGradientBrush>. Alle diese Klassen erben von der <xref:System.Drawing.Brush> Klasse. Die folgende Abbildung zeigt ein Rechteck mit eines Pinsels in Volltonfarbe gefüllt und eine Ellipse, die mit einem Schraffurpinsel gefüllt.  
   
  ![Gefüllte Formen](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
@@ -51,7 +39,7 @@ Eine geschlossene Form, z. B. ein Rechteck oder eine Ellipse besteht aus einer G
  [!code-csharp[LinesCurvesAndShapes#122](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]enthält mehr als 50 Schraffur Stile; sind die drei Stile in der folgenden Abbildung dargestellten <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, und <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] enthält mehr als 50 Schraffur Stile; sind die drei Stile in der folgenden Abbildung dargestellten <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, und <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
   
  ![Gefüllte Formen](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -70,7 +58,7 @@ Eine geschlossene Form, z. B. ein Rechteck oder eine Ellipse besteht aus einer G
  ![Gefüllt Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>Farbverlaufspinsel  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bietet zwei Arten von Farbverlaufspinsel: linear und Pfad. Sie können einen linearen Farbverlaufspinsel verwenden, eine Form Farbe gefüllt, die Änderungen schrittweise, während Sie über die Form verschieben, horizontal, vertikal oder diagonal angezeigt. Im folgenden Codebeispiel wird veranschaulicht, wie eine Ellipse, die mit einem horizontalen Farbverlaufspinsel zu füllen, die von Blau in Grün ändern, wie Sie vom linken Rand der Ellipse, die an den rechten Rand verschieben.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet zwei Arten von Farbverlaufspinsel: linear und Pfad. Sie können einen linearen Farbverlaufspinsel verwenden, eine Form Farbe gefüllt, die Änderungen schrittweise, während Sie über die Form verschieben, horizontal, vertikal oder diagonal angezeigt. Im folgenden Codebeispiel wird veranschaulicht, wie eine Ellipse, die mit einem horizontalen Farbverlaufspinsel zu füllen, die von Blau in Grün ändern, wie Sie vom linken Rand der Ellipse, die an den rechten Rand verschieben.  
   
  [!code-csharp[LinesCurvesAndShapes#124](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  

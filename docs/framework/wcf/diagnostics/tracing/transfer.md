@@ -1,27 +1,15 @@
 ---
-title: "Übertragung"
-ms.custom: 
+title: Übertragung
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83bb76cc46d72f3d368de20669391c3e7f24a0f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transfer"></a>Übertragung
-In diesem Thema wird die Übertragung im [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Aktivitätsablaufverfolgungs-Modell beschrieben.  
+Dieses Thema beschreibt die Übertragung in die Windows Communication Foundation (WCF) aktivitätsablaufverfolgungs-Modell.  
   
 ## <a name="transfer-definition"></a>Übertragungsdefinition  
  Übertragungen zwischen Aktivitäten stellen einen kausalen Zusammenhang zwischen Ereignissen in den zugehörigen Aktivitäten innerhalb von Endpunkten dar. Zwei Aktivitäten stehen mit Übertragungen in Beziehung, wenn eine Ablaufsteuerung zwischen den Aktivitäten besteht, z. B. ein Methodenaufruf, der Aktivitätsgrenzen überschreitet. Wenn Bytes für den Dienst eingehen, wird in [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] die Abhöraktivität zu der Bytes empfangen-Aktivität übertragen, in der das Nachrichtenobjekt erstellt wird. Eine Liste der End-to-End-ablaufverfolgungsszenarien und ihre entsprechenden Aktivität und tracing Entwurf, finden Sie unter [End-To-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  

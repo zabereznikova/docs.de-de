@@ -1,24 +1,12 @@
 ---
-title: "Auflistungen und Auflistungstypen für XAML"
-ms.custom: 
+title: Auflistungen und Auflistungstypen für XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-caps.latest.revision: "2"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b67fec476c95d82b769494d53e50550cad0c719b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5605c97b13503e18e2f698f2a19f715663052b08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>Auflistungen und Auflistungstypen für XAML
 Dieses Thema beschreibt die Eigenschaften der Typen zu definieren, die zur Unterstützung einer auflistungs, um die Verwendung von XAML-Syntax zu unterstützen, zum Instanziieren der Auflistungselemente als untergeordnete Elemente eines übergeordneten Object-Element oder die Property-Element bestimmt werden.  
@@ -34,7 +22,7 @@ Dieses Thema beschreibt die Eigenschaften der Typen zu definieren, die zur Unter
   
 2.  Die <xref:System.Collections.IDictionary> -Schnittstelle gibt eine dicionary Auflistung an.  
   
-3.  <xref:System.Array>Stellt ein Array, und ein Array unterstützt <xref:System.Collections.IList> Methoden.  
+3.  <xref:System.Array> Stellt ein Array, und ein Array unterstützt <xref:System.Collections.IList> Methoden.  
   
  In jedem dieser Auflistung Konzepte können ein .NET Framework XAML Services-XAML-Prozessor erwartet, dass zum Aufrufen der `Add` Methode in einer bestimmten Instanz des Typs für die Auflistungseigenschaft. Oder in einem Szenario Serialisierung erzeugt ein XAML-Prozessor diskrete-Diagramm nach der Verwendung von XAML-Instanzen für jedes Element in der Liste, Wörterbuch oder Array basierend auf jede Sammlung spezifische Konzept der "Elemente" gefunden. Dies sind: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; die explizite <xref:System.Array.System%23Collections%23IList%23Item%2A> für <xref:System.Array>.  
   
@@ -49,8 +37,8 @@ Dieses Thema beschreibt die Eigenschaften der Typen zu definieren, die zur Unter
 ## <a name="xaml-type-system-support-and-collections"></a>Unterstützung von XAML-Typ und Sammlungen  
  Über die grundlegende Funktionsweise der XAML-Analyse und Auffüllen oder Sammlungseigenschaften Serialisieren enthält der XAML-Typsystem in .NET Framework XAML Services implementierte mehrere Entwurfsfunktionen, die für Sammlungen in XAML beziehen.  
   
-1.  <xref:System.Xaml.XamlType.IsCollection%2A>Gibt true zurück, wenn die XAML-Typ von einem Typ gesichert wird, der XAML-Auflistung unterstützt.  
+1.  <xref:System.Xaml.XamlType.IsCollection%2A> Gibt true zurück, wenn die XAML-Typ von einem Typ gesichert wird, der XAML-Auflistung unterstützt.  
   
-2.  <xref:System.Xaml.XamlType.IsDictionary%2A>und <xref:System.Xaml.XamlType.IsArray%2A> können weiter identifizieren, welcher auflistmodus die Verwendung von XAML-Typ unterstützt. Für benutzerdefinierte XAML Prozessoren, die auf .NET Framework-XAML-Dienste und der XAML-Typsystem, aber nicht basierend auf vorhandenen <xref:System.Xaml.XamlWriter> -Implementierungen zu wissen, welcher auflistmodus verwendet wird möglicherweise notwendig, damit bekannt ist, welche Methode für aufrufen die Verarbeitung einer Auflistung.  
+2.  <xref:System.Xaml.XamlType.IsDictionary%2A> und <xref:System.Xaml.XamlType.IsArray%2A> können weiter identifizieren, welcher auflistmodus die Verwendung von XAML-Typ unterstützt. Für benutzerdefinierte XAML Prozessoren, die auf .NET Framework-XAML-Dienste und der XAML-Typsystem, aber nicht basierend auf vorhandenen <xref:System.Xaml.XamlWriter> -Implementierungen zu wissen, welcher auflistmodus verwendet wird möglicherweise notwendig, damit bekannt ist, welche Methode für aufrufen die Verarbeitung einer Auflistung.  
   
 3.  Jeder der vorherigen Eigenschaftswerte sind potenziell beeinflusst durch Außerkraftsetzungen von <xref:System.Xaml.XamlType.LookupCollectionKind%2A> auf einen XAML-Typ.

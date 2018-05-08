@@ -1,28 +1,16 @@
 ---
-title: "Splitter-Steuerelement (Windows Forms)"
-ms.custom: 
+title: Splitter-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - multiple views
 - Splitter control [Windows Forms]
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2069d419d185cde366b463c5682f9d1395e551a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4340c4647ffda79bcd919e9bd778dcabab0fc511
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter-Steuerelement (Windows Forms)
 Windows Forms `Splitter` Steuerelemente werden verwendet, um die Größe der angedockten Steuerelemente zur Laufzeit. Die `Splitter` Steuerelement wird in Formularen mit Steuerelementen, die Daten an, wie Windows-Explorer, deren Daten Bereiche Informationen zu unterschiedlichen breiten zu unterschiedlichen Zeiten enthalten variabler Länge haben häufig verwendet.  
@@ -34,7 +22,7 @@ Windows Forms `Splitter` Steuerelemente werden verwendet, um die Größe der ang
  [Übersicht über das Splitter-Steuerelement](../../../../docs/framework/winforms/controls/splitter-control-overview-windows-forms.md)  
  Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Splitter>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

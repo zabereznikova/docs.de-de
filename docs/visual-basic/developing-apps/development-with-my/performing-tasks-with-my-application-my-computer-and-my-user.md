@@ -1,10 +1,6 @@
 ---
-title: "Ausführen von Aufgaben mit My.Application, My.Computer und My.User (Visual Basic)"
+title: Ausführen von Aufgaben mit My.Application, My.Computer und My.User (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application object [Visual Basic], developing applications
 - rapid application development (RAD), My.Application
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], developing applications
 - My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d55e0b3a126f2216d005c7bddbcaefb7d8f0a580
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc2b0521598c00cdb398d936d61d65874a9cf274
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>Ausführen von Aufgaben mit My.Application, My.Computer und My.User (Visual Basic)
 Die drei wichtigsten `My` sind Objekte, die Zugriff auf Informationen und häufig verwendete Funktionen bereitstellen `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>), und `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). Sie können diese Objekte verwenden, auf Informationen, die mit der aktuellen Anwendung, die Computer, dem auf die Anwendung installiert ist oder der aktuelle Benutzer der Anwendung verknüpft ist.  
@@ -38,7 +31,7 @@ Die drei wichtigsten `My` sind Objekte, die Zugriff auf Informationen und häufi
   
  [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_3.vb)]  
   
- `My.Application`können Sie die Kultur für die Anwendung zu ändern. Im folgende Beispiel wird veranschaulicht, wie diese Methode aufgerufen werden kann.  
+ `My.Application` können Sie die Kultur für die Anwendung zu ändern. Im folgende Beispiel wird veranschaulicht, wie diese Methode aufgerufen werden kann.  
   
  [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_4.vb)]  
   

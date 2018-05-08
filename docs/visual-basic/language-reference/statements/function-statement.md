@@ -1,12 +1,6 @@
 ---
 title: Function-Anweisung (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -34,14 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-statement-visual-basic"></a>Function-Anweisung (Visual Basic)
 Deklariert den Namen, Parameter und Code, definieren eine `Function` Prozedur.  
@@ -183,7 +174,7 @@ End Function
 ## <a name="defining-a-function"></a>Definieren einer Funktion  
  Sie können definieren, eine `Function` Prozedur nur auf Modulebene. Aus diesem Grund wird der Deklarationskontext für eine Funktion muss eine Klasse, eine Struktur, ein Modul oder eine Schnittstelle und nicht mit einer Quelldatei, einen Namespace, eine Prozedur oder eines Blocks. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](declaration-contexts-and-default-access-levels.md).  
   
- `Function`Prozeduren standardmäßig öffentlichen Zugriff auf. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen.  
+ `Function` Prozeduren standardmäßig öffentlichen Zugriff auf. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen.  
   
  Ein `Function` Prozedur deklariert den Datentyp des Werts, der die Prozedur zurückgibt. Sie können einen beliebigen Datentyp aufweisen oder den Namen des eine Enumeration, eine Struktur, eine Klasse oder einer Schnittstelle angeben. Wenn Sie nicht angeben, die `returntype` -Parameter der Prozedur zurückgibt `Object`.  
   

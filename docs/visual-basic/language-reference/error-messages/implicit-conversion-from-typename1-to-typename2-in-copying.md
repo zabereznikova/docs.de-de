@@ -1,26 +1,17 @@
 ---
 title: Implizite Konvertierung von &#39; &lt;Typname1&gt; &#39; auf &#39; &lt;Typname2&gt; &#39; kopieren Sie den Wert der &#39;ByRef&#39; Parameter &#39; &lt; Parametername&gt; &#39; zurück in das entsprechende Argument.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc41999
 - bc41999
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 86a618206bcfd932e41410e80c12bc166a3f67f3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b1f772598b18f8edfe0198f62d78854d30f993ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>Implizite Konvertierung von &#39; &lt;Typname1&gt; &#39; auf &#39; &lt;Typname2&gt; &#39; kopieren Sie den Wert der &#39;ByRef&#39; Parameter &#39; &lt; Parametername&gt; &#39; zurück in das entsprechende Argument.
 Eine Prozedur wird aufgerufen, mit einem [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) Argument eines anderen Typs als die des entsprechenden Parameters.  

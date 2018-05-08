@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Hinzufügen von Zeilendetails zu einem DataGrid-Steuerelement"
-ms.custom: 
+title: 'Gewusst wie: Hinzufügen von Zeilendetails zu einem DataGrid-Steuerelement'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - row details [WPF], DataGrid
 - DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f65eb9e916fad83deb1476c1d8f0def4981d08d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6b0cc99c9833e514d2d52ecf139ab8e110f73e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>Gewusst wie: Hinzufügen von Zeilendetails zu einem DataGrid-Steuerelement
 Bei Verwendung der <xref:System.Windows.Controls.DataGrid> -Steuerelement, können Sie die Präsentation der Daten anpassen, indem Sie Abschnitt einer Zeile hinzufügen. Hinzufügen eines Zeilendetailabschnitts ermöglicht Ihnen, einige Daten in einer Vorlage zu gruppieren, die optional sichtbar oder reduziert ist. Sie können z. B. Zeilendetails zum Hinzufügen einer <xref:System.Windows.Controls.DataGrid> stellt nur eine Zusammenfassung der Daten für jede Zeile in der <xref:System.Windows.Controls.DataGrid>, aber weitere Datenfelder präsentiert, wenn der Benutzer eine Zeile auswählt. Sie definieren die Vorlage für die Zeile im Abschnitt die <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> Eigenschaft. Die folgende Abbildung zeigt ein Beispiel für eine Zeilendetailabschnitt.  

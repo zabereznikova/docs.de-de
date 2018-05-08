@@ -2,10 +2,6 @@
 title: SpawnDerivedClass-Funktion (Referenz zur nicht verwalteten API)
 description: Die SpawnDerivedClass-Funktion erstellt ein neues Objekt, das von einem Objekt abgeleitet wird.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnDerivedClass
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 51a0dd0013b1bb3898bcc81ee2d64be20a5b6ecc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass-Funktion
 Erstellt ein Klassenobjekt für die neu abgeleitete aus einem angegebenen Objekt.    
@@ -75,7 +68,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::SpawnDerivedClass](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) Methode.
 
-`ptr`muss eine Definition einer Klasse, die die übergeordnete Klasse des Objekts erzeugten wird. Das zurückgegebene Objekt ist eine Unterklasse des aktuellen Objekts.
+`ptr` muss eine Definition einer Klasse, die die übergeordnete Klasse des Objekts erzeugten wird. Das zurückgegebene Objekt ist eine Unterklasse des aktuellen Objekts.
 
 Das neue Objekt im zurückgegebenen `ppNewClass` wird automatisch eine Unterklasse des aktuellen Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode aus, die durch den Unterklassen (abgeleitete Klassen) erstellt werden können.
 
@@ -84,7 +77,7 @@ Das neue Objekt im zurückgegebenen `ppNewClass` wird automatisch eine Unterklas
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework-Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
 [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

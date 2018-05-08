@@ -1,31 +1,17 @@
 ---
-title: "Übersicht über das Kanalmodell"
-ms.custom: 
+title: Übersicht über das Kanalmodell
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: df2993d9ba25c043aa66029aa00fae945d5cec9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="channel-model-overview"></a>Übersicht über das Kanalmodell
-Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Kanalstapel ist ein überlagerter Kommunikationsstapel mit einem oder mehreren Kanälen, die Nachrichten verarbeiten. Am unteren Ende des Stapels befindet sich ein Transportkanal, der für die Anpassung des Kanalstapels an den zugrunde liegenden Transport (z. B. TCP, HTTP, SMTP und andere Transportarten) zuständig ist. Kanäle stellen ein Programmiermodell auf niedriger Ebene zum Senden und Empfangen von Nachrichten bereit. Dieses Programmiermodell nutzt mehrere Schnittstellen und andere Typen, die zusammen als [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanalmodell bezeichnet werden. In diesem Thema werden Kanalformen, die Konstruktion eines grundlegenden Kanallisteners (dienstseitig) und einer Kanalfactory (clientseitig) behandelt.  
+Der Kanalstapel für Windows Communication Foundation (WCF) ist ein Überlagerter Kommunikationsstapel mit einem oder mehreren Kanälen, die Nachrichten verarbeiten. Am unteren Ende des Stapels befindet sich ein Transportkanal, der für die Anpassung des Kanalstapels an den zugrunde liegenden Transport (z. B. TCP, HTTP, SMTP und andere Transportarten) zuständig ist. Kanäle stellen ein Programmiermodell auf niedriger Ebene zum Senden und Empfangen von Nachrichten bereit. Dieses Programmiermodell nutzt mehrere Schnittstellen und andere Typen, die zusammen als [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanalmodell bezeichnet werden. In diesem Thema werden Kanalformen, die Konstruktion eines grundlegenden Kanallisteners (dienstseitig) und einer Kanalfactory (clientseitig) behandelt.  
   
 ## <a name="channel-stack"></a>Kanalstapel  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkte kommunizieren über einen Kommunikationsstapel, den so genannten Kanalstapel, mit der Welt. Das folgende Diagramm vergleicht den Kanalstapel mit anderen Kommunikationsstapeln, z. B. TCP/IP.  

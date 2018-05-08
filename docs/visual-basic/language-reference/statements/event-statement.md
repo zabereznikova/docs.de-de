@@ -1,11 +1,6 @@
 ---
 title: Event-Anweisung
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-statement"></a>Event-Anweisung
 Deklariert ein benutzerdefiniertes Ereignis.  
@@ -72,7 +64,7 @@ End Event
 |`eventname`|Erforderlich. Der Name des Ereignisses; folgt standardmäßigen Variablennamenskonventionen.|  
 |`parameterlist`|Dies ist optional. Liste der lokalen Variablen, die die Parameter dieses Ereignisses darstellen. Setzen Sie die [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md) in Klammern.|  
 |`Implements`|Dies ist optional. Gibt an, dass dieses Ereignis ein Ereignis einer Schnittstelle implementiert.|  
-|`implementslist`|Erforderlich, wenn `Implements` angegeben wird. Liste der zu implementierenden `Sub`-Prozeduren. Mehrere Prozeduren werden durch Kommas getrennt:<br /><br /> *Implementedprocedure* [, *Implementedprocedure* ...]<br /><br /> Jede `implementedprocedure` weist folgende Syntax und Bestandteile auf:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`– Erforderlich. Name einer Schnittstelle, die von der in dieser Prozedur enthaltenen Klasse oder Struktur implementiert wird.<br />-   `Definedname`– Erforderlich. Name, wodurch die Prozedur in `interface` definiert ist. Hierbei muss es sich nicht um demselben Namen wie `name` (den Namen, den dieser Prozedur verwendet, um die definierte Prozedur zu implementieren) handeln.|  
+|`implementslist`|Erforderlich, wenn `Implements` angegeben wird. Liste der zu implementierenden `Sub`-Prozeduren. Mehrere Prozeduren werden durch Kommas getrennt:<br /><br /> *Implementedprocedure* [, *Implementedprocedure* ...]<br /><br /> Jede `implementedprocedure` weist folgende Syntax und Bestandteile auf:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` – Erforderlich. Name einer Schnittstelle, die von der in dieser Prozedur enthaltenen Klasse oder Struktur implementiert wird.<br />-   `Definedname` – Erforderlich. Name, wodurch die Prozedur in `interface` definiert ist. Hierbei muss es sich nicht um demselben Namen wie `name` (den Namen, den dieser Prozedur verwendet, um die definierte Prozedur zu implementieren) handeln.|  
 |`Custom`|Erforderlich. Als `Custom` deklarierte Ereignisse müssen benutzerdefinierte `AddHandler`-, `RemoveHandler`- und `RaiseEvent`-Accessoren definieren.|  
 |`delegatename`|Dies ist optional. Der Name eines Delegaten, der die Signatur des Ereignishandlers angibt.|  
 |`AddHandler`|Erforderlich. Deklariert einen `AddHandler`-Accessor, der die auszuführenden Anweisungen angibt, wenn ein Ereignishandler hinzugefügt wird, und zwar entweder explizit mithilfe der `AddHandler`-Anweisung oder implizit mithilfe der `Handles`-Klausel.|  

@@ -1,29 +1,15 @@
 ---
 title: Transaktionsprotokolle, Version 1.0
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 60867daa7b8519f745c37371604807c51aa1cbb9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d510a74560369a132822e980e7812ca4deff55a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-protocols-version-10"></a>Transaktionsprotokolle, Version 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Version 1 implementiert Version 1.0 der Protokolle WS-Atomic Transaction und WS-Coordination. Weitere Informationen zu Version 1.1, finden Sie unter [Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+Windows Communication Foundation (WCF) Version 1 implementiert Version 1.0 der Protokolle WS-Atomic Transaction und WS-Coordination. Weitere Informationen zu Version 1.1, finden Sie unter [Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
 |Spezifikation/Dokument|Link|  
 |-----------------------------|----------|  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/30/2018
   
 -   Anwendungsnachrichten.  
   
- Die ersten drei Nachrichten werden als Transaktions-Manager-Nachrichten betrachtet, deren Bindungskonfiguration weiter unten in diesem Thema unter "Anwendungsnachrichtenaustausch" behandelt wird. Bei der vierten Klasse von Nachrichten handelt es sich um Nachrichten von Anwendung zu Anwendung, die weiter unten in diesem Thema im Abschnitt "Nachrichtenbeispiele" beschrieben werden. In diesem Abschnitt werden die für jede dieser Klassen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendeten Protokollbindungen beschrieben.  
+ Die ersten drei Nachrichten werden als Transaktions-Manager-Nachrichten betrachtet, deren Bindungskonfiguration weiter unten in diesem Thema unter "Anwendungsnachrichtenaustausch" behandelt wird. Bei der vierten Klasse von Nachrichten handelt es sich um Nachrichten von Anwendung zu Anwendung, die weiter unten in diesem Thema im Abschnitt "Nachrichtenbeispiele" beschrieben werden. Dieser Abschnitt beschreibt die protokollbindungen für jede dieser Klassen von WCF verwendet.  
   
  Die folgenden XML-Namespaces und zugeordneten Präfixe werden in diesem Thema verwendet.  
   
@@ -96,12 +82,12 @@ ms.lasthandoff: 04/30/2018
 -   B1112: DNS muss zwischen den einzelnen Absender-Empfänger-Paaren im System funktionieren, damit eine Prüfung der X.509-Antragstellernamen erfolgreich ist.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Bindungskonfiguration von Aktivierung und Registrierung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erfordert Anforderungs-/Antwort-Duplexbindung mit Korrelation über HTTPS. (Weitere Informationen über Korrelation und Beschreibungen der Anforderungs-/Antwortnachrichten-Austauschmuster finden Sie unter WS-Atomic-Transaktion, Abschnitt 8.)  
+ WCF erfordert Anforderung/Antwort-duplexbindung mit Korrelation über HTTPS. (Weitere Informationen über Korrelation und Beschreibungen der Anforderungs-/Antwortnachrichten-Austauschmuster finden Sie unter WS-Atomic-Transaktion, Abschnitt 8.)  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Bindungskonfiguration des 2PC-Protokolls  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt unidirektionale (Datagramm-) Nachrichten über HTTPS. Korrelation unter den Nachrichten wird als Implementierungsdetail beibehalten.  
+ WCF unterstützt unidirektionale (Datagramm-) Nachrichten über HTTPS. Korrelation unter den Nachrichten wird als Implementierungsdetail beibehalten.  
   
- B2131: Implementierungen müssen unterstützen `wsa:ReferenceParameters` wie beschrieben in WS-Adressierung Korrelation von erzielen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]des 2PC-Nachrichten.  
+ B2131: Implementierungen müssen unterstützen `wsa:ReferenceParameters` wie beschrieben in WS-Adressierung, die Korrelation von WCF 2PC-Nachrichten zu erreichen.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>Gemischte Sicherheitsbindung des Transaktions-Managers  
  Dies ist eine alternative Bindung, verwendet transportsicherheit kombiniert mit dem WS-Coordination Issued Token-Modell zu identitätserstellungszwecken (Gemischter Modus).  Aktivierung und Registrierung sind die einzigen Elemente, die sich zwischen den beiden Bindungen unterscheiden.  
@@ -112,7 +98,7 @@ ms.lasthandoff: 04/30/2018
 #### <a name="activation-message-binding-configuration"></a>Bindungskonfiguration von Aktivierungsnachrichten  
  Aktivierungsnachrichten nehmen in der Regel nicht an der Interoperabilität teil, da sie normalerweise zwischen einer Anwendung und dem lokalen Transaktions-Manager auftreten.  
   
- B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] duplexbindung HTTPS verwendet (beschrieben [Messaging-Protokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) für Aktivierungsnachrichten. Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
+ B1221: WCF verwendet duplex HTTPS-Bindung (beschrieben [Messaging-Protokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) für Aktivierungsnachrichten. Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
   
  In der WS-Atomic Transaktion-Spezifikation, Abschnitt 8, werden die Korrelation und die Nachrichtenaustauschmuster ausführlich beschrieben.  
   
@@ -123,7 +109,7 @@ ms.lasthandoff: 04/30/2018
  Ein neues `t:IssuedTokens` Header generiert werden soll, zum Anfügen an den ausgehenden `wscoor:CreateCoordinationContextResponse` Nachricht.  
   
 #### <a name="registration-message-binding-configuration"></a>Bindungskonfiguration von Registrierungsnachrichten  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] duplexbindung HTTPS verwendet (beschrieben [Messaging-Protokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
+ B1231: WCF verwendet duplex HTTPS-Bindung (beschrieben [Messaging-Protokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
   
  In der WS-AtomicTransaction-Spezifikation, Abschnitt 8, werden weitere Details zur Korrelation und die Nachrichtenaustauschmuster ausführlich beschrieben.  
   
@@ -132,9 +118,9 @@ ms.lasthandoff: 04/30/2018
  Die `wsse:Timestamp` Element muss signiert sein, mit der `SecurityContextToken``STx` ausgegeben. Diese Signatur ist Beweis für den Besitz des einer bestimmten Transaktion zugewiesenen Tokens und wird für die Authentifizierung einer Teilnehmerliste während der Transaktion verwendet. Die RegistrationResponse-Nachricht wird über HTTPS zurückgesendet.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Bindungskonfiguration des 2PC-Protokolls  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt unidirektionale (Datagramm-) Nachrichten über HTTPS. Korrelation unter den Nachrichten wird als Implementierungsdetail beibehalten.  
+ WCF unterstützt unidirektionale (Datagramm-) Nachrichten über HTTPS. Korrelation unter den Nachrichten wird als Implementierungsdetail beibehalten.  
   
- B2131: Implementierungen müssen unterstützen `wsa:ReferenceParameters` wie beschrieben in WS-Adressierung Korrelation von erzielen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]des 2PC-Nachrichten.  
+ B2131: Implementierungen müssen unterstützen `wsa:ReferenceParameters` wie beschrieben in WS-Adressierung, die Korrelation von WCF 2PC-Nachrichten zu erreichen.  
   
 ## <a name="application-message-exchange"></a>Austausch von Anwendungsnachrichten  
  In Anwendungen können beliebige Bindungen für Nachrichten verwendet werden, die von Anwendung zu Anwendung gesendet werden, solange die Bindung die folgenden Sicherheitsanforderungen erfüllt:  
@@ -143,9 +129,9 @@ ms.lasthandoff: 04/30/2018
   
 -   R2002: Integrität und Vertraulichkeit von `t:IssuedToken` müssen bereitgestellt werden.  
   
- Der `CoordinationContext`-Header enthält `wscoor:Identifier`. Während die Definition von `xsd:AnyURI` die Verwendung der absoluten und relativen URIs zulässt, unterstützt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lediglich `wscoor:Identifiers`, wobei es sich um absolute URIs handelt.  
+ Der `CoordinationContext`-Header enthält `wscoor:Identifier`. Während die Definition von `xsd:AnyURI` ermöglicht die Verwendung der absoluten und relativen URIs WCF unterstützt nur `wscoor:Identifiers`, wobei es sich um absolute URIs handelt.  
   
- Falls es sich bei `wscoor:Identifier` von `wscoor:CoordinationContext` um einen relativen URI handelt, werden von den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transaktionsdiensten Fehler gemeldet.  
+ Wenn die `wscoor:Identifier` von der `wscoor:CoordinationContext` ist ein relativer URI-Transaktionsdiensten aus transaktionalen WCF-Dienste.  
   
 ## <a name="message-examples"></a>Nachrichtenbeispiele  
   

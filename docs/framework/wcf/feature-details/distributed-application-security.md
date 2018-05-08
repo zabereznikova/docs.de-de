@@ -1,43 +1,31 @@
 ---
 title: Sicherheit bei verteilten Anwendungen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: 32
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d8f34d0c6b0269cc4837313d6613e3cee0eb26c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="distributed-application-security"></a>Sicherheit bei verteilten Anwendungen
-Die Sicherheit wird in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in drei funktionelle Hauptbereiche unterteilt: Übertragungssicherheit, Zugriffssteuerung und Überwachung. Durch die Übertragungssicherheit werden Integrität, Vertraulichkeit und Authentifizierung bereitgestellt. Die Übertragungssicherheit wird durch eine der folgenden Funktionen bereitgestellt: Transportsicherheit, Nachrichtensicherheit oder `TransportWithMessageCredential`.  
+Windows Communication Foundation (WCF)-Sicherheit wird in drei funktionelle Hauptbereiche unterteilt: übertragungssicherheit, Zugriffssteuerung und Überwachung. Durch die Übertragungssicherheit werden Integrität, Vertraulichkeit und Authentifizierung bereitgestellt. Die Übertragungssicherheit wird durch eine der folgenden Funktionen bereitgestellt: Transportsicherheit, Nachrichtensicherheit oder `TransportWithMessageCredential`.  
   
- Eine Übersicht über [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nachrichtensicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zu den anderen beiden Teilen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) und [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Einen Überblick über die Sicherheit für WCF-Nachrichten finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zu den anderen beiden Teilen der WCF-Sicherheit, finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) und [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Szenarien für die Übertragungssicherheit  
- Zu den üblichen Szenarien, in denen die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Übertragungssicherheit eingesetzt wird, gehören folgende Situationen:  
+ Allgemeine Szenarien, Nutzen von WCF-übertragungssicherheit, umfassen Folgendes:  
   
--   Sichere Übertragung mittels Windows: Ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client und ein WCF-Dienst werden in einer Windows-Domäne (oder einer Windows-Gesamtstruktur) bereitgestellt. Da die Nachrichten persönliche Daten enthalten, sind unter anderem eine gegenseitige Authentifizierung von Client und Dienst sowie die Integrität und Vertraulichkeit der Nachrichten erforderlich. Darüber hinaus muss belegt werden, dass eine bestimmte Transaktion stattgefunden hat. So sollten beim Empfänger der Nachricht zum Beispiel Signaturinformationen aufgezeichnet werden.  
+-   Sichere Übertragung mittels Windows: WCF-Client und Dienst werden in einer Windows-Domäne (oder einer Windows-Gesamtstruktur) bereitgestellt. Da die Nachrichten persönliche Daten enthalten, sind unter anderem eine gegenseitige Authentifizierung von Client und Dienst sowie die Integrität und Vertraulichkeit der Nachrichten erforderlich. Darüber hinaus muss belegt werden, dass eine bestimmte Transaktion stattgefunden hat. So sollten beim Empfänger der Nachricht zum Beispiel Signaturinformationen aufgezeichnet werden.  
   
--   Sichere Übertragung mittels `UserName` und HTTPS: Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client und der WCF-Dienst müssen so entwickelt werden, dass sie über das Internet kommunizieren können. Die Clientanmeldeinformationen werden anhand einer Datenbank mit Benutzername-/Kennwort-Paaren authentifiziert. Der Dienst wird unter einer HTTPS-Adresse mithilfe eines vertrauenswürdigen SSL-Zertifikats (SSL = Secure Sockets Layer) bereitgestellt. Da die Nachrichten über das Internet gesendet werden, müssen sich Client und Dienst gegenseitig authentifizieren und die Integrität und Vertraulichkeit der Nachrichten muss während der Übertragung gewahrt werden.  
+-   Sichere Übertragung mittels `UserName` und HTTPS: WCF-Client und Dienst müssen entwickelt werden, um über das Internet zu arbeiten. Die Clientanmeldeinformationen werden anhand einer Datenbank mit Benutzername-/Kennwort-Paaren authentifiziert. Der Dienst wird unter einer HTTPS-Adresse mithilfe eines vertrauenswürdigen SSL-Zertifikats (SSL = Secure Sockets Layer) bereitgestellt. Da die Nachrichten über das Internet gesendet werden, müssen sich Client und Dienst gegenseitig authentifizieren und die Integrität und Vertraulichkeit der Nachrichten muss während der Übertragung gewahrt werden.  
   
--   Sichere Übertragung mittels Zertifikaten: Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client und der WCF-Dienst müssen so entwickelt werden, dass sie über das öffentliche Internet kommunizieren können. Client und Dienst verfügen beide über Zertifikate, mit denen die Nachrichten geschützt werden können. Client und Dienst verwenden das Internet, um miteinander zu kommunizieren und Transaktionen von hohem Wert auszuführen, für die Nachrichtenintegrität, Vertraulichkeit und eine gegenseitige Authentifizierung erforderlich sind.  
+-   Sichere Übertragung mittels Zertifikaten: WCF-Client und Dienst für die Zusammenarbeit über das öffentliche Internet entwickelt werden müssen. Client und Dienst verfügen beide über Zertifikate, mit denen die Nachrichten geschützt werden können. Client und Dienst verwenden das Internet, um miteinander zu kommunizieren und Transaktionen von hohem Wert auszuführen, für die Nachrichtenintegrität, Vertraulichkeit und eine gegenseitige Authentifizierung erforderlich sind.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>Integrität, Vertraulichkeit und Authentifizierung  
  Die drei Funktionen Integrität, Vertraulichkeit und Authentifizierung ergeben zusammen die Übertragungssicherheit. Durch die Übertragungssicherheit werden die Funktionen bereitgestellt, die Ihnen dabei helfen, die Bedrohungen für eine verteilte Anwendung zu mindern. In der folgenden Tabelle werden kurz die drei Funktionen beschrieben, aus denen sich die Übertragungssicherheit zusammensetzt.  
@@ -49,7 +37,7 @@ Die Sicherheit wird in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i
 |Authentifizierung|*Authentifizierung* ist die Überprüfung einer beanspruchten Identität. So muss beispielsweise bei Bankkonten gewährleistet sein, dass nur die tatsächlichen Kontoinhaber Geld abheben können. Es gibt viele Möglichkeiten, eine Authentifizierung bereitzustellen. Eine häufig verwendete Methode ist das Benutzer-/Kennwortsystem. Eine andere ist die Verwendung eines von einem Drittanbieter bereitgestellten X.509-Zertifikats.|  
   
 ## <a name="security-modes"></a>Sicherheitsmodi  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gibt es mehrere Modi für die Übertragungssicherheit, die in der folgenden Tabelle beschrieben werden.  
+ WCF bietet mehrere Modi für die übertragungssicherheit, die in der folgenden Tabelle beschrieben werden.  
   
 |Modus|Beschreibung|  
 |----------|-----------------|  
@@ -60,11 +48,11 @@ Die Sicherheit wird in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i
 |Beides|Schutz und Authentifizierung finden auf beiden Ebenen statt. Dieser Modus steht nur in der [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) Element.|  
   
 ## <a name="credentials-and-transfer-security"></a>Identitätsnachweis (Anmeldeinformationen) und Übertragungssicherheit  
- Ein *Anmeldeinformationen* Daten, die angezeigt werden, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt wird. Das Vorlegen eines Identitätsnachweises umfasst das Angeben der Daten und den Nachweis, dass sich die Daten rechtmäßig im Besitz des Inhabers befinden. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt verschiedene Arten von Anmeldeinformationen auf der Transport- und Nachrichtensicherheitsebene. Sie können für eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Bindung die Art der Anmeldeinformationen (das heißt des Identitätsnachweises) angeben.  
+ Ein *Anmeldeinformationen* Daten, die angezeigt werden, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt wird. Das Vorlegen eines Identitätsnachweises umfasst das Angeben der Daten und den Nachweis, dass sich die Daten rechtmäßig im Besitz des Inhabers befinden. WCF unterstützt verschiedene Typen von Anmeldeinformationen auf der Transport- und nachrichtensicherheitsebene. Sie können einen Typ von Anmeldeinformationen für eine WCF-Bindung angeben.  
   
  In vielen Ländern bzw. Regionen ist der Führerschein ein Beispiel für einen Identitätsnachweis. Ein Führerschein enthält Daten, die die Identität und Befähigungen einer Person belegen. Der rechtmäßige Besitz wird mithilfe eines Bilds des Inhabers nachgewiesen. Der Führerschein wird von einer vertrauenswürdigen Stelle ausgegeben, in der Regel von einer dafür zuständigen Regierungsbehörde. Der Führerschein wird eingeschweißt und enthält ggf. ein Hologramm, wodurch sichergestellt wird, dass er nicht manipuliert oder gefälscht wurde.  
   
- Nehmen Sie als Beispiel zwei Arten von Identitätsnachweis (Anmeldeinformationen), die in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt werden: der Identitätsnachweis mittels Benutzername und Zertifikat (X.509).  
+ Betrachten Sie beispielsweise zwei Typen von Anmeldeinformationen, die in WCF unterstützt: Benutzername und (x. 509) zertifikatsanmeldeinformationen.  
   
  Beim Identitätsnachweis mittels Benutzername stellt der Benutzername die beanspruchte Identität dar, und das Kennwort ist der Nachweis des rechtmäßigen Besitzes. Die vertrauenswürdige Stelle ist in diesem Fall das System, das den Benutzernamen und das Kennwort überprüft.  
   
@@ -91,16 +79,16 @@ Die Sicherheit wird in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i
 |-------------|-----------------|  
 |Keiner|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|  
 |Windows|Ermöglicht den SOAP-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen. Es wird mittels SSPI-Aushandlung entweder das Kerberos-Protokoll oder NTLM als Authentifizierungsdienst ausgewählt.|  
-|Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] keine kryptografischen Vorgänge mit dem Benutzernamen wie das Erzeugen einer Signatur oder das Verschlüsseln von Daten zulässig sind. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] setzt prinzipiell durch, dass der Transport geschützt wird, wenn der Identitätsnachweis über den Benutzernamen erfolgt.|  
+|Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass alle kryptografischen Vorgänge mit dem Benutzernamen, z. B. Erzeugen einer Signatur oder Verschlüsseln von Daten von WCF nicht zulässig ist. Daher erzwingt WCF an, dass der Transport geschützt wird, wenn Benutzernamen-Anmeldeinformationen verwenden.|  
 |Zertifikat|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|  
 |[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|Ermöglicht dem Dienst die Forderung, dass der Client über eine [!INCLUDE[infocard](../../../../includes/infocard-md.md)] authentifiziert werden muss.|  
   
 ### <a name="programming-credentials"></a>Programmieren von Anmeldeinformationen  
- Bei allen Arten von Clientanmeldeinformationen haben Sie im [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Programmiermodell die Möglichkeit, die Werte und Validierungen für die Anmeldeinformationen mithilfe von Dienstverhalten und von Kanalverhalten festzulegen.  
+ Für jeden der Typen von Clientanmeldeinformationen kann die WCF-Programmiermodell Geben Sie die Werte für die Anmeldeinformationen und Validierungssteuerelemente mithilfe von Dienstverhalten und Kanalverhalten-Anmeldeinformationen.  
   
- Die Sicherheit in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet zwei Arten von Anmeldeinformationen: Verhalten für Dienstanmeldeinformationen und Verhalten für Kanalanmeldeinformationen. Durch die Anmeldeinformationsverhalten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden die eigentlichen Daten angegeben, das heißt die Anmeldeinformationen, mit denen die durch Bindungen ausgedrückten Sicherheitsvoraussetzungen erfüllt werden. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist eine Clientklasse die Laufzeitkomponente, über die die Umsetzung zwischen Vorgangsaufruf und Nachrichten erfolgt. Alle Clients erben von der <xref:System.ServiceModel.ClientBase%601>-Klasse. Über die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft der Basisklasse können Sie verschiedene Werte für die Clientanmeldeinformationen angeben.  
+ WCF-Sicherheit verfügt über zwei Arten von Anmeldeinformationen: Verhalten für Dienstanmeldeinformationen und kanalanmeldeinformationen service. Anmeldeinformationen-Verhalten in WCF werden die eigentlichen Daten, d. h., Anmeldeinformationen verwendet, um die durch Bindungen ausgedrückten sicherheitsvoraussetzungen erfüllt angegeben. In WCF ist eine Clientklasse die Laufzeitkomponente, die zwischen Vorgangsaufruf und Nachrichten konvertiert. Alle Clients erben von der <xref:System.ServiceModel.ClientBase%601>-Klasse. Über die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft der Basisklasse können Sie verschiedene Werte für die Clientanmeldeinformationen angeben.  
   
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sind Dienstverhalten Attribute, die auf die Klasse, die einen Dienstvertrag (Schnittstelle) implementiert, angewendet werden, um den Dienst programmatisch zu steuern. Über die <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse können Sie Zertifikate für Dienstanmeldeinformationen und Einstellungen für die Clientvalidierung für verschiedene Arten von Clientanmeldeinformationen festlegen.  
+ In WCF sind Dienstverhalten Attribute, die auf die Klasse, die Implementierung eines Dienstvertrags (Schnittstelle), um den Dienst programmgesteuert angewendet. Über die <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse können Sie Zertifikate für Dienstanmeldeinformationen und Einstellungen für die Clientvalidierung für verschiedene Arten von Clientanmeldeinformationen festlegen.  
   
 ### <a name="negotiation-model-for-message-security"></a>Aushandlungsmodell für die Nachrichtensicherheit  
  Im Modus für die Nachrichtensicherheit können Sie die Übertragungssicherheit so ausüben, dass die Dienstanmeldeinformationen nach dem Out-of-Band-System auf dem Client konfiguriert werden. Wenn Sie beispielsweise ein im Windows-Zertifikatspeicher gespeichertes Zertifikat verwenden, müssen Sie ein Tool wie das MMC-Snap-In (Microsoft Management Console) verwenden.  

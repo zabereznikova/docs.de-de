@@ -1,10 +1,6 @@
 ---
-title: "Funktionen für die Typkonvertierung (Visual Basic)"
+title: Funktionen für die Typkonvertierung (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CUShort
 - vb.csng
@@ -85,14 +81,11 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9222bdb31f4fd7c792d5a50c100067e29e9d537
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funktionen für die Typkonvertierung (Visual Basic)
 Diese Funktionen sind Inline kompiliert, was bedeutet, dass der Konvertierungscode Bestandteil des Codes ist die Auswertung des Ausdrucks. Manchmal ist kein Aufruf einer Prozedur zum Durchführen der Konvertierung zur Verbesserung, die Leistung beiträgt. Jede Funktion wandelt einen Ausdruck in einen bestimmten Datentyp.  
@@ -159,9 +152,9 @@ CUShort(expression)
   
      Wenn der Bruchteil exakt 0,5 die Konvertierungsfunktionen ganze Zahl gerundet wird, damit die nächste gerade ganze Zahl. Rundet z. B. 0,5 auf 0 (null) und 1,5 und 2.5 auf 2 gerundet. Dies wird manchmal als bezeichnet *Banker rounding*, und der Zweck eines Bias zu kompensieren, die sich ansammeln könnten, wenn Sie viele diese Zahlen zusammenführen ist.  
   
-     `CInt`und `CLng` unterscheiden sich von der <xref:Microsoft.VisualBasic.Conversion.Int%2A> und <xref:Microsoft.VisualBasic.Conversion.Fix%2A> -Funktionen, die den Bruchteil einer Zahl zu runden, sondern abgeschnitten. Darüber hinaus `Fix` und `Int` wie Sie übergeben immer den Wert des gleichen Datentyps zurück.  
+     `CInt` und `CLng` unterscheiden sich von der <xref:Microsoft.VisualBasic.Conversion.Int%2A> und <xref:Microsoft.VisualBasic.Conversion.Fix%2A> -Funktionen, die den Bruchteil einer Zahl zu runden, sondern abgeschnitten. Darüber hinaus `Fix` und `Int` wie Sie übergeben immer den Wert des gleichen Datentyps zurück.  
   
--   **Datum/Uhrzeit-Konvertierungen.** Verwenden der <xref:Microsoft.VisualBasic.Information.IsDate%2A> Funktion, um zu bestimmen, ob ein Wert in ein Datum und eine Uhrzeit konvertiert werden kann. `CDate`erkennt Datumsliterale und Zeitliterale, aber keine numerischen Werte. Konvertieren Sie eine Visual Basic 6.0 `Date` -Wert in einen `Date` Wert in Visual Basic 2005 oder höher können Sie die <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> Methode.  
+-   **Datum/Uhrzeit-Konvertierungen.** Verwenden der <xref:Microsoft.VisualBasic.Information.IsDate%2A> Funktion, um zu bestimmen, ob ein Wert in ein Datum und eine Uhrzeit konvertiert werden kann. `CDate` erkennt Datumsliterale und Zeitliterale, aber keine numerischen Werte. Konvertieren Sie eine Visual Basic 6.0 `Date` -Wert in einen `Date` Wert in Visual Basic 2005 oder höher können Sie die <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> Methode.  
   
 -   **Neutrale Datum/Uhrzeit-Werte.** Die [Datumsdatentyp](../../../visual-basic/language-reference/data-types/date-data-type.md) enthält immer die Datums-und Uhrzeitinformationen. Zwecken Typumwandlung berücksichtigt Visual Basic 1/1/0001 (1. Januar des Jahres 1), werden eine *neutrale Wert* für das Datum und 00:00:00 (Mitternacht) für die Zeit ein neutrale Wert sein. Konvertieren einer `Date` Wert in eine Zeichenfolge `CStr` neutralen Werte nicht in der Ergebniszeichenfolge enthalten ist. Angenommen, Sie konvertieren `#January 1, 0001 9:30:00#` in eine Zeichenfolge das Ergebnis "9:30:00 AM"; die Datumsinformationen unterdrückt wird. Die Datumsinformationen ist jedoch weiterhin vorhanden, in der ursprünglichen `Date` Wert und können mit Funktionen wie z. B. wiederhergestellt werden <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> Funktion.  
   
@@ -194,7 +187,7 @@ CUShort(expression)
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## <a name="cdate-example"></a>CDate-Beispiel  
- Im folgenden Beispiel wird die `CDate` Funktion zum Konvertieren von Zeichenfolgen in `Date` Werte. Im Allgemeinen wird ein Hardcodieren Datumsangaben und Uhrzeiten als Zeichenfolgen (wie im folgenden Beispiel gezeigt) nicht empfohlen. Verwenden von Datums- und Zeitliterale, z. B. #Feb 12, &#1969; und # 4:45:23 Uhr # stattdessen.  
+ Im folgenden Beispiel wird die `CDate` Funktion zum Konvertieren von Zeichenfolgen in `Date` Werte. Im Allgemeinen wird ein Hardcodieren Datumsangaben und Uhrzeiten als Zeichenfolgen (wie im folgenden Beispiel gezeigt) nicht empfohlen. Verwenden von Datums- und Zeitliterale, z. B. #Feb 12, 1969 # und # 4:45:23 Uhr # stattdessen.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
@@ -245,7 +238,7 @@ CUShort(expression)
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr`Rendert immer eine `Date` Wert in der standardmäßigen Kurzformat für das aktuelle Gebietsschema, z. B. "6/15/2003 4:35:47 PM". Allerdings `CStr` unterdrückt die *neutralen Werte* von 1/1/0001 für das Datum und die 00:00:00 für die Zeit.  
+ `CStr` Rendert immer eine `Date` Wert in der standardmäßigen Kurzformat für das aktuelle Gebietsschema, z. B. "6/15/2003 4:35:47 PM". Allerdings `CStr` unterdrückt die *neutralen Werte* von 1/1/0001 für das Datum und die 00:00:00 für die Zeit.  
   
  Weitere Informationen über die Rückgabewerte `CStr`, finden Sie unter [Rückgabewerte für die CStr-Funktion](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
   

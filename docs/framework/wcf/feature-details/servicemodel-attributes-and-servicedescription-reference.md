@@ -1,36 +1,22 @@
 ---
 title: ServiceModel-Attribute und ServiceDescription-Referenz
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ba8888c2a1bd3c16ab6d216c365870c0df0e499a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel-Attribute und ServiceDescription-Referenz
-Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> Klasse), die zusammen jeden Aspekt eines Diensts beschreiben. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet eine Beschreibungsstruktur zum Erstellen einer gültigen Dienstlaufzeit, zum Veröffentlichen von WSDL (Web Services Description Language)- und XSD (XML Schema Definition)-Daten sowie Richtlinienassertionen (Metadaten) über den Dienst, anhand derer Clients eine Verbindung mit dem Dienst herstellen und den Dienst nutzen können, und zum Generieren verschiedener Code- und Konfigurationsdateidarstellungen der Beschreibungsstrukturwerte.  
+Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> Klasse), die zusammen jeden Aspekt eines Diensts beschreiben. Windows Communication Foundation (WCF) verwendet eine beschreibungsstruktur zum Erstellen einer gültigen Dienstlaufzeit, zum Veröffentlichen von Web Services Description Language (WSDL), XML-Schemadefinitionssprache (XSD) sowie Richtlinienassertionen (Metadaten) über den Dienst, mit denen Clients können Verbinden mit und verwenden Sie den Dienst und zum Generieren verschiedener Code- und konfigurationsdateidarstellungen der beschreibungsstrukturwerte.  
   
  Dieses Thema beschreibt, wie vertragsbezogene Eigenschaften aus dem Dienstvertrag abgerufen, wie sie implementiert und der Beschreibungsstruktur hinzugefügt werden. In einigen Fällen werden Attributwerte in Verhaltenseigenschaften umgewandelt, und das Verhalten wird dann in die Beschreibungsstruktur eingefügt. Weitere Informationen dazu, wie der beschreibungsstrukturwerte in Metadaten umgewandelt werden, finden Sie unter [ServiceDescription und WSDL-Verweis](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Zuordnen von Vorgängen zur Beschreibungsstruktur  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen werden Dienstverträge nach Schnittstellen (oder Klassen) erstellt, die Attribute verwenden, um die Schnittstelle oder Klasse und ihre Methoden als eine Vorgangsgruppierung zu markieren. Wenn eine <xref:System.ServiceModel.ServiceHost>-Klasse geöffnet ist, werden Dienstverträge und Implementierungen immer wieder reflektiert und mit den Konfigurationsinformationen in eine Beschreibungsstruktur zusammengeführt.  
+ In WCF-Anwendungen werden Dienstverträge nach Schnittstellen (oder Klassen) modelliert, die Attribute verwenden, um die Schnittstelle oder Klasse und ihre Methoden als eine vorgangsgruppierung zu markieren. Wenn eine <xref:System.ServiceModel.ServiceHost>-Klasse geöffnet ist, werden Dienstverträge und Implementierungen immer wieder reflektiert und mit den Konfigurationsinformationen in eine Beschreibungsstruktur zusammengeführt.  
   
- Es gibt zwei Typen von vorgangsmodellen: das *Parameter* Modell und die *Nachrichtenvertrag* Modell. Das Parametermodell verwendet verwaltete Methoden, die keinen Parameter oder Rückgabewerttyp besitzen, der von der Klasse <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> markiert wird. In diesem Modell kontrollieren die Entwickler die Serialisierung der Parameter und Rückgabewerte, aber [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generiert die Werte, die verwendet werden, um die Beschreibungsstruktur für den Dienst und seinen Vertrag zu füllen.  
+ Es gibt zwei Typen von vorgangsmodellen: das *Parameter* Modell und die *Nachrichtenvertrag* Modell. Das Parametermodell verwendet verwaltete Methoden, die keinen Parameter oder Rückgabewerttyp besitzen, der von der Klasse <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> markiert wird. In diesem Modell Entwickler Steuern der Serialisierung der Parameter und Rückgabewerte, aber WCF generiert die Werte, die verwendet werden, um die beschreibungsstruktur für den Dienst und seinen Vertrag zu füllen.  
   
  In Konfigurationsdateien angegebene Bindungen werden direkt in die Eigenschaft <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType> geladen.  
   

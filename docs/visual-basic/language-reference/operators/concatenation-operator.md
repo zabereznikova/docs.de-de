@@ -1,12 +1,6 @@
 ---
-title: '&amp;Operator (Visual Basic)'
+title: '&amp; Operator (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&
 helpviewer_keywords:
@@ -16,16 +10,13 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 76c8fc52a518dfe7850a5680b7d4f06f3d09bf73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 28d8cdb22974d77edf055ab9b2c6c767872e6783
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;Operator (Visual Basic)
+# <a name="amp-operator-visual-basic"></a>&amp; Operator (Visual Basic)
 Generiert eine zeichenfolgenverkettung aus zwei Ausdrücken.  
   
 ## <a name="syntax"></a>Syntax  

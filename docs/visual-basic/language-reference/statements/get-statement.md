@@ -1,12 +1,6 @@
 ---
 title: Get-Anweisung
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Get
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6a6fdfd191de76871619dea3bd1794b487698aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-statement"></a>Get-Anweisung
 Deklariert eine `Get` -Eigenschaftenprozedur verwendet, um den Wert einer Eigenschaft abzurufen.  
@@ -69,7 +60,7 @@ End Get
   
 -   **Rückgabe aus einer Prozedur.** Wenn die `Get` Prozedur werden an den aufrufenden Code zurückgibt, die Ausführung wird fortgeführt, in der Anweisung, die den Wert der Eigenschaft angefordert.  
   
-     `Get`Eigenschaftenprozeduren können mit entweder einen Wert zurückgeben der [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) oder indem Sie den Namen der Eigenschaft den zurückgegeben Wert zuweisen. Weitere Informationen finden Sie unter "Rückgabewert" in [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` Eigenschaftenprozeduren können mit entweder einen Wert zurückgeben der [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) oder indem Sie den Namen der Eigenschaft den zurückgegeben Wert zuweisen. Weitere Informationen finden Sie unter "Rückgabewert" in [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      Die `Exit Property` und `Return` Anweisungen bewirken, dass eine sofortige Beendigung einer Eigenschaftenprozedur. Eine beliebige Anzahl von `Exit Property` und `Return` Anweisungen können an beliebiger Stelle in der Prozedur, und Sie können kombinieren `Exit Property` und `Return` Anweisungen.  
   

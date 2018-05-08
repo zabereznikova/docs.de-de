@@ -1,28 +1,16 @@
 ---
 title: Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], rendering
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 355a5842348aa4395d1841d0343080ddef634456
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18a05a739f42d41a650e66723f44aae69c1707c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-control-painting-and-rendering"></a>Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen
 Benutzerdefiniertes Zeichnen von Steuerelementen ist einer der zahlreichen komplizierten Aufgaben, die leicht, von .NET Framework. Wenn Sie ein benutzerdefiniertes Steuerelement zu erstellen, stehen Ihnen viele Optionen zur grafischen Darstellung des Steuerelements. Wenn Sie ein Steuerelement erstellen, die von erben die `Control`, müssen Sie Code, der das Steuerelement zum Rendern der grafischen Darstellung ermöglicht bereitstellen. Wenn Sie ein Benutzersteuerelement erstellen durch Erben von der `UserControl`, oder erben werden aus einer Windows Forms-Steuerelemente, können Sie außer Kraft setzen die standardmäßige grafische Darstellung und fügen Sie eigenen Code Grafiken. Wenn Sie benutzerdefiniertes Rendering für die konstituierenden Steuerelemente bereitstellen möchten eine `UserControl` Sie erstellen, die Optionen eingeschränkt werden, aber weiterhin eine Breite Palette von grafischen Möglichkeiten für Steuerelemente und Anwendungen zu ermöglichen.  
@@ -46,7 +34,7 @@ Benutzerdefiniertes Zeichnen von Steuerelementen ist einer der zahlreichen kompl
  [Rendering von Steuerelementen mit visuellen Stilen](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
  Zeigt, wie zum Rendern von Steuerelementen mit visuellen Stilen in Betriebssystemen, die sie unterstützen.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Control>  
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   

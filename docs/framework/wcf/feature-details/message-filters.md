@@ -1,28 +1,14 @@
 ---
 title: Nachrichtenfilter
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 8
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e129924de53fb0dba61798cc492729c8af69ed94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-filters"></a>Nachrichtenfilter
 Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <xref:System.ServiceModel.Dispatcher.MessageFilter>-Implementierungen, die bestimmte Abschnitte einer Nachricht überprüfen, z. B. Adresse, Endpunktname oder eine bestimmte XPath-Anweisung. Wenn keiner der von [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] bereitgestellten Nachrichtenfilter Ihren Anforderungen entspricht, können Sie einen benutzerdefinierten Filter erstellen, indem Sie eine neue Implementierung der <xref:System.ServiceModel.Dispatcher.MessageFilter>-Basisklasse erstellen.  
@@ -38,11 +24,11 @@ Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <x
   
 |Filtertyp|Beschreibung|Bedeutung der Filterdaten|Beispielfilter|  
 |------------------|-----------------|-------------------------|--------------------|  
-|Aktion|Verwendet die <xref:System.ServiceModel.Dispatcher.ActionMessageFilter>-Klasse, um eine Übereinstimmung für Nachrichten zu erzielen, die eine bestimmte Aktion enthalten.|Die Aktion, nach der gefiltert werden soll.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|Aktion|Verwendet die <xref:System.ServiceModel.Dispatcher.ActionMessageFilter>-Klasse, um eine Übereinstimmung für Nachrichten zu erzielen, die eine bestimmte Aktion enthalten.|Die Aktion, nach der gefiltert werden soll.|\<Filtername = "action1" FilterType = "Action" unter "filterdata" = "http://namespace/contract/operation" / >|  
 |EndpointAddress|Verwendet die <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> -Klasse, mit <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` mit Nachrichten, die mit einer bestimmten Adresse übereinstimmen.|Die Adresse, nach der gefiltert werden soll (im To-Header).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
 |EndpointAddressPrefix|Verwendet die <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> -Klasse, mit <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` Nachrichten mit einem bestimmten Adresspräfix übereinstimmen.|Die Adresse, nach der unter Verwendung der längsten Präfixübereinstimmung gefiltert werden soll.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
 |And|Verwendet die <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>-Klasse, die vor der Rückgabe immer beide Bedingungen auswertet.|"filterdata" wird nicht verwendet. Stattdessen filter1 und "filter2" haben die Namen der entsprechenden Nachrichtenfilter (ebenfalls in der Tabelle), die ausgeführt werden **AND**Ed zusammen.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
-|Benutzerdefiniert|Ein benutzerdefinierter Typ, der die <xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse erweitert und über einen Konstruktor verfügt, der eine Zeichenfolge verwendet.|Das customType-Attribut ist der vollqualifizierte Typname der zu erstellenden Klasse. "filterData" ist die Zeichenfolge, die beim Erstellen des Filters an den Konstruktor übergeben werden soll.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
+|Benutzerdefiniert|Ein benutzerdefinierter Typ, der die <xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse erweitert und über einen Konstruktor verfügt, der eine Zeichenfolge verwendet.|Das customType-Attribut ist der vollqualifizierte Typname der zu erstellenden Klasse. "filterData" ist die Zeichenfolge, die beim Erstellen des Filters an den Konstruktor übergeben werden soll.|\<Filtername = "custom1" FilterType = "Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" unter "filterdata" = "Benutzerdefinierte Daten" / >|  
 |EndpointName|Verwendet die <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>-Klasse, um für Nachrichten basierend auf dem Namen des Dienstendpunkts, an dem diese empfangen wurden, eine Übereinstimmung zu erzielen.|Der Name des Dienstendpunkts, z. B.: "serviceEndpoint1".  Hierbei sollte es sich um einen der Endpunkte handeln, die vom Routingdienst verfügbar gemacht werden.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|Verwendet die <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>-Klasse. Dieser Filter führt für alle eingehenden Nachrichten zu Übereinstimmungen.|"filterData" wird nicht verwendet. Dieser Filter führt immer zu Übereinstimmungen mit allen Nachrichten.|\<filter name="matchAll1" filterType="MatchAll" />|  
 |XPath|Verwendet die <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>-Klasse, um für bestimmte XPath-Abfragen in der Nachricht Übereinstimmungen zu ermitteln.|Die XPath-Abfrage, die beim Ermitteln von Übereinstimmungen für Nachrichten verwendet wird.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  

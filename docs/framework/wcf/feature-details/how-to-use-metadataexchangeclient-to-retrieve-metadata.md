@@ -1,31 +1,19 @@
 ---
 title: 'Vorgehensweise: Die Verwendung von MetadataExchangeClient zum Abrufen von Metadaten'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 119e23c5834fdc646a793a4e84f191a37bca2f63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1df4bc156485108dc0c11d597b268864c9656b1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Vorgehensweise: Die Verwendung von MetadataExchangeClient zum Abrufen von Metadaten
 Verwenden Sie die <xref:System.ServiceModel.Description.MetadataExchangeClient>-Klasse, um Metadaten mit dem WS-MetadataExchange (MEX)-Protokoll herunterzuladen. Die abgerufenen Metadatendateien werden als <xref:System.ServiceModel.Description.MetadataSet>-Objekt zurückgegeben. Das zurückgegebene <xref:System.ServiceModel.Description.MetadataSet>-Objekt enthält eine Auflistung der <xref:System.ServiceModel.Description.MetadataSection>-Objekte, von denen jedes einen bestimmten Metadatendialekt sowie eine ID enthält. Sie können die zurückgegebenen Metadaten in Dateien schreiben. Wenn die zurückgegebenen Metadaten WSDL (Web Services Description Language)-Dokumente enthalten, können Sie die Metadaten mit <xref:System.ServiceModel.Description.WsdlImporter> importieren.  
   
  Die <xref:System.ServiceModel.Description.MetadataExchangeClient>-Konstruktoren, die eine Adresse enthalten, verwenden die Bindung der statischen <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Klasse, die dem URL-(Uniform Resource Identifier-)Schema der Adresse entspricht. Sie können als Alternative auch den <xref:System.ServiceModel.Description.MetadataExchangeClient>-Konstruktor verwenden, mit dem Sie die zu verwendende Bindung ausdrücklich angeben können. Die angegebene Bindung wird zum Auflösen aller Metadatenverweise verwendet.  
   
- Wie bei jedem anderen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client stellt der <xref:System.ServiceModel.Description.MetadataExchangeClient>-Typ einen Konstruktor zum Laden der Clientendpunkt-Konfigurationen mithilfe des Endpunktkonfigurationsnamens bereit. Die angegebene Endpunktkonfiguration muss den <xref:System.ServiceModel.Description.IMetadataExchange>-Vertrag angeben. Die Adresse der Endpunktkonfiguration ist nicht geladen. Deshalb müssen Sie eine der <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>-Überladungen verwenden, die eine Adresse verwenden. Wenn Sie die Metadatenadresse mit einer <xref:System.ServiceModel.EndpointAddress>-Instanz angeben, geht <xref:System.ServiceModel.Description.MetadataExchangeClient> davon aus, dass die Adresse auf einen MEX-Endpunkt verweist. Wenn Sie die Metadatenadresse als URL angeben, müssen Sie auch angeben, welcher <xref:System.ServiceModel.Description.MetadataExchangeClientMode> verwendet werden soll, MEX oder HTTP GET.  
+ Ebenso wie jeden anderen Windows Communication Foundation (WCF)-Client die <xref:System.ServiceModel.Description.MetadataExchangeClient> Typ einen Konstruktor zum Laden der Clientendpunkt-Konfigurationen mithilfe des endpunktkonfigurationsnamens bereit. Die angegebene Endpunktkonfiguration muss den <xref:System.ServiceModel.Description.IMetadataExchange>-Vertrag angeben. Die Adresse der Endpunktkonfiguration ist nicht geladen. Deshalb müssen Sie eine der <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>-Überladungen verwenden, die eine Adresse verwenden. Wenn Sie die Metadatenadresse mit einer <xref:System.ServiceModel.EndpointAddress>-Instanz angeben, geht <xref:System.ServiceModel.Description.MetadataExchangeClient> davon aus, dass die Adresse auf einen MEX-Endpunkt verweist. Wenn Sie die Metadatenadresse als URL angeben, müssen Sie auch angeben, welcher <xref:System.ServiceModel.Description.MetadataExchangeClientMode> verwendet werden soll, MEX oder HTTP GET.  
   
 > [!IMPORTANT]
 >  Standardmäßig löst <xref:System.ServiceModel.Description.MetadataExchangeClient> alle Verweise auf, einschließlich WSDL- und XML-Schemaimporte und -Includes. Sie können diese Funktion deaktivieren, indem Sie die Eigenschaft <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> auf `false` festlegen. Sie können die maximale Anzahl von aufzulösenden Verweisen mithilfe der <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A>-Eigenschaft steuern. Sie können diese Eigenschaft zusammen mit der `MaxReceivedMessageSize`-Eigenschaft für die Bindung verwenden, um zu steuern, wie viele Metadaten abgerufen werden.  

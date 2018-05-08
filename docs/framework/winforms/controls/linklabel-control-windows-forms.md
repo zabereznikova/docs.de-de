@@ -1,13 +1,6 @@
 ---
-title: "LinkLabel-Steuerelement (Windows Forms)"
-ms.custom: 
+title: LinkLabel-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Label control [Windows Forms]
 - links [Windows Forms], adding to Windows Forms
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Web page link control
 - LinkLabel control [Windows Forms]
 ms.assetid: af1fd04e-e126-4fd7-9a4e-13b49010c5ca
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5231813096413b66272b87aabd9adf0643c6e26d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea472636402b650b6e8d0352bd151d3bcf9e3bfd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linklabel-control-windows-forms"></a>LinkLabel-Steuerelement (Windows Forms)
 Windows Forms `LinkLabel` Steuerelement können Sie Weblinks zu Windows Forms-Anwendungen hinzufügen. Können Sie die `LinkLabel` Control für alle Elemente, die Sie verwenden können, die <xref:System.Windows.Forms.Label> für steuern; Sie können auch Teile des Texts als Link auf ein Objekt oder Webseite festlegen.  
@@ -42,7 +30,7 @@ Windows Forms `LinkLabel` Steuerelement können Sie Weblinks zu Windows Forms-An
  [Gewusst wie: Anzeigen einer Webseite über ein LinkLabel-Steuerelement in Windows Forms (Visual Basic)](../../../../docs/framework/winforms/controls/display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
  Gewusst wie: Anzeigen einer Webseite im Standardbrowser klickt ein Benutzer einer Windows Forms zeigt `LinkLabel` Steuerelement.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.LinkLabel>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

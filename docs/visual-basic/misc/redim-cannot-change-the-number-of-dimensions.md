@@ -1,23 +1,16 @@
 ---
-title: "&#39; ReDim &#39; die Anzahl von Dimensionen kann nicht geändert werden."
+title: '&#39;ReDim&#39; die Anzahl von Dimensionen kann nicht geändert werden.'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArray_RankMismatch
 ms.assetid: 52505298-9985-4682-8f6e-ff7d56077f34
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cf3713c72bd07803935065780e894c130911a6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bfd4096141833b85a2126340ef549e1e1d1f8e3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39redim39-cannot-change-the-number-of-dimensions"></a>&#39; ReDim &#39; die Anzahl von Dimensionen kann nicht geändert werden.
+# <a name="39redim39-cannot-change-the-number-of-dimensions"></a>&#39;ReDim&#39; die Anzahl von Dimensionen kann nicht geändert werden.
 Ein Vorgang versucht über die `ReDim` -Anweisung, den Rang (Anzahl von Dimensionen) eines Arrays zu ändern. `ReDim` kann die Größe einer oder mehrerer Dimensionen eines Arrays ändern, das bereits formal deklariert wurde, kann aber nicht den Rang eines Arrays ändern.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

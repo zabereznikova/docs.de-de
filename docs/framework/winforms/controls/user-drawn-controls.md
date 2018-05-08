@@ -1,13 +1,6 @@
 ---
 title: Benutzerdefinierte Steuerelemente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +9,20 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26b4f062c120bf543a5e597fc8c734e8cc336bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-drawn-controls"></a>Benutzerdefinierte Steuerelemente
 .NET Framework bietet die Möglichkeit, eigene Steuerelemente entwickeln. Können Sie ein Benutzersteuerelement, das einen Satz von Standardsteuerelementen zusammen in Code vorgesehen ist, erstellen, oder Sie können ein eigenes Steuerelement von Grund auf neu entwerfen, einrichten. Sie können sogar Vererbung verwenden, erstellen ein Steuerelement, das von einem vorhandenen Steuerelement erbt und dessen implementierte Funktionalität hinzufügen. Welchen Ansatz Sie verwenden, stellt .NET Framework die Funktionalität, um eine benutzerdefinierte grafische Benutzeroberfläche für jedes Steuerelement gezeichnet werden soll, die Sie erstellen.  
   
  Zeichnen eines Steuerelements wird erreicht, indem die Ausführung von Code in des Steuerelements <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Das Argument der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode ist ein <xref:System.Windows.Forms.PaintEventArgs> Objekt, das alle Informationen und zum Rendern des Steuerelements erforderliche Funktionalität bereitstellt. Die <xref:System.Windows.Forms.PaintEventArgs> zwei principal-Objekte, die beim Rendern des Steuerelements verwendet werden, als Eigenschaften bereitgestellt:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>Objekt – das Rechteck, das den Teil des Steuerelements darstellt, die gezeichnet wird. Dies kann das gesamte Steuerelement oder einen Teil des Steuerelements abhängig davon, wie das Steuerelement gezeichnet wird.  
+-   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Objekt – das Rechteck, das den Teil des Steuerelements darstellt, die gezeichnet wird. Dies kann das gesamte Steuerelement oder einen Teil des Steuerelements abhängig davon, wie das Steuerelement gezeichnet wird.  
   
--   <xref:System.Drawing.Graphics>Objekt - kapselt mehrere Graphics-orientierten Objekte und Methoden, die zum Zeichnen des Steuerelements erforderliche Funktionen bereitstellen.  
+-   <xref:System.Drawing.Graphics> Objekt - kapselt mehrere Graphics-orientierten Objekte und Methoden, die zum Zeichnen des Steuerelements erforderliche Funktionen bereitstellen.  
   
  Weitere Informationen zu den <xref:System.Drawing.Graphics> -Objekt und zum verwenden, finden Sie unter [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
   

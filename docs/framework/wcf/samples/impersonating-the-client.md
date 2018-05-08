@@ -1,28 +1,16 @@
 ---
-title: "Durchführen eines Identitätswechsels für den Client"
-ms.custom: 
+title: Durchführen eines Identitätswechsels für den Client
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service behaviors, impersonation sample
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a17a3631b781e6a96eb8aec17b20e8ddca52890d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c5d911bfbfcd33248e15b9fc822abdc9cf4046c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="impersonating-the-client"></a>Durchführen eines Identitätswechsels für den Client
 Das Beispiel für einen Identitätswechsel veranschaulicht, wie die Identität der Aufruferanwendung vom Dienst angenommen wird, sodass der Dienst im Namen des Aufrufers auf Systemressourcen zugreifen kann.  
@@ -113,7 +101,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Dienst- und Clientkonsolenfenster angezeigt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.  
   
 > [!NOTE]
->  Der Dienst muss entweder auf einem Administratorkonto ausgeführt werden, oder das Konto, auf dem der Dienst ausgeführt wird, muss über Berechtigungen zum Registrieren des URI http://localhost:8000/ServiceModelSamples mit der HTTP-Ebene verfügen. Solche Rechte gewährt werden können, durch das Einrichten einer [Namespace Reservierung](http://go.microsoft.com/fwlink/?LinkId=95012) mithilfe der [Tools "Httpcfg.exe"](http://go.microsoft.com/fwlink/?LinkId=95010).  
+>  Der Dienst muss entweder ausführen unter einem Administratorkonto an, oder das Konto wird, unter wird muss Berechtigungen zum Registrieren der http://localhost:8000/ServiceModelSamples URI mit der HTTP-Ebene. Solche Rechte gewährt werden können, durch das Einrichten einer [Namespace Reservierung](http://go.microsoft.com/fwlink/?LinkId=95012) mithilfe der [Tools "Httpcfg.exe"](http://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  Auf Computern mit [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] wird der Identitätswechsel nur unterstützt, wenn die Host.exe-Anwendung über eine Berechtigung zum Identitätswechsel verfügt. (Standardmäßig verfügen nur Administratoren über diese Berechtigung.) Um ein Konto mit dieser Berechtigung hinzugefügt haben wie der Dienst ausgeführt wird, wechseln Sie zu **Verwaltung**öffnen **lokale Sicherheitsrichtlinie**öffnen **lokale Richtlinien**, klicken Sie auf **Zuweisen von Benutzerrechten**, und wählen Sie **annehmen der Clientidentität nach Authentifizierung** und doppelklicken Sie auf **Eigenschaften** an einen Benutzer oder Gruppe hinzufügen.  

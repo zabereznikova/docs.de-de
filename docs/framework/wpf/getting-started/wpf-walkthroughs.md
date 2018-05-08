@@ -1,29 +1,15 @@
 ---
 title: Exemplarische Vorgehensweisen für WPF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b177517b809adfbfa4afdc292f98f949a68101bb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 33d3c46a75435a9789d62825c79ed68fb043660a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien. Dadurch sind sie ein guter Einstieg in das Produkt oder einen bestimmten Funktionsbereich.  

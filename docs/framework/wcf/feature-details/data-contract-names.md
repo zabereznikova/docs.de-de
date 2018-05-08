@@ -1,34 +1,20 @@
 ---
 title: Datenvertragsnamen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-names"></a>Datenvertragsnamen
-Zuweilen verfügen Client und Dienst nicht über dieselben Typen. Sie können jedoch Daten austauschen, wenn die Datenverträge auf beiden Seiten gleich sind. [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) basiert auf Datenvertrag und Datenmembernamen und aus diesem Grund wird ein Mechanismus bereitgestellt, um die Typen und Member dieser Namen zuordnen. In diesem Thema werden die Regeln für die Namensgebung von Datenverträgen sowie das Standardverhalten der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Infrastruktur bei der Namenserstellung erläutert.  
+Zuweilen verfügen Client und Dienst nicht über dieselben Typen. Sie können jedoch Daten austauschen, wenn die Datenverträge auf beiden Seiten gleich sind. [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) basiert auf Datenvertrag und Datenmembernamen und aus diesem Grund wird ein Mechanismus bereitgestellt, um die Typen und Member dieser Namen zuordnen. In diesem Thema erläutert die Regeln für die Benennung von Datenverträgen sowie das Standardverhalten der Windows Communication Foundation (WCF)-Infrastruktur, beim Erstellen von Namen.  
   
 ## <a name="basic-rules"></a>Grundregeln  
  Zu den Grundregeln bei der Namensvergabe von Datenverträgen gehören:  
@@ -37,15 +23,15 @@ Zuweilen verfügen Client und Dienst nicht über dieselben Typen. Sie können je
   
 -   Datenelemente verfügen nur über Namen, aber nicht über Namespaces.  
   
--   Bei der Verarbeitung von Datenverträgen unterscheidet die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur bei den Namespaces, den Namen der Datenverträge und den Datenelementen zwischen Groß- und Kleinschreibung.  
+-   Bei der Verarbeitung von Datenverträgen ist die WCF-Infrastruktur Groß-/Kleinschreibung beachtet, die Namespaces und die Namen der Datenverträge und Datenmember.  
   
 ## <a name="data-contract-namespaces"></a>Datenvertragsnamespaces  
  Ein Datenvertragsnamespace nimmt die Form eines URI (Uniform Resource Identifiers) an. Der URI kann entweder absolut oder relativ sein. Standardmäßig wird Datenverträgen eines bestimmten Typs ein Namespace zugeordnet, der aus dem Namespace der CLR (Common Language Runtime) desselben Typs resultiert.  
   
- Standardmäßig wird jeder beliebige CLR-Namespace (im Format *Clr.Namespace*) den Namespace "http://schemas.datacontract.org/2004/07/Clr.Namespace" zugeordnet ist. Um diesen Standard zu überschreiben, übernehmen Sie das <xref:System.Runtime.Serialization.ContractNamespaceAttribute>-Attribut für das ganze Modul oder die Assembly. Alternativ können Sie den Datenvertragsnamespace für jeden Typ kontrollieren, indem Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataContractAttribute> festlegen.  
+ Standardmäßig wird jeder beliebige CLR-Namespace (im Format *Clr.Namespace*) zugeordnet ist, auf den Namespace "http://schemas.datacontract.org/2004/07/Clr.Namespace". Um diesen Standard zu überschreiben, übernehmen Sie das <xref:System.Runtime.Serialization.ContractNamespaceAttribute>-Attribut für das ganze Modul oder die Assembly. Alternativ können Sie den Datenvertragsnamespace für jeden Typ kontrollieren, indem Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataContractAttribute> festlegen.  
   
 > [!NOTE]
->  Der "http://schemas.microsoft.com/2003/10/Serialization-"Namespace wird reserviert und kann nicht als Datenvertragsnamespace verwendet werden.  
+>  Die "http://schemas.microsoft.com/2003/10/Serialization"Namespace ist reserviert und kann nicht als datenvertragsnamespace verwendet werden.  
   
 > [!NOTE]
 >  Sie können den Standardnamespace nicht in Datenvertragstypen überschreiben, die `delegate`-Deklarationen enthalten.  

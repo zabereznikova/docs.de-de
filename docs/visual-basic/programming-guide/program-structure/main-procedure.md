@@ -1,13 +1,6 @@
 ---
 title: Main-Prozedur in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Main
 helpviewer_keywords:
@@ -15,19 +8,16 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="main-procedure-in-visual-basic"></a>Main-Prozedur in Visual Basic
 Alle Visual Basic-Anwendung muss eine Prozedur namens enthalten `Main`. Diese Prozedur dient, wie die Start- und gesamtsteuerung für Ihre Anwendung. Die .NET Framework Aufrufe der `Main` -Prozedur, wenn die Anwendung geladen hat und bereit für die Steuerung an sie übergeben wird. Wenn Sie eine Windows Forms-Anwendung erstellen, müssen Sie schreiben die `Main` Verfahren für Anwendungen, die auf ihre eigenen ausgeführt.  
   
- `Main`enthält den Code, der zuerst ausgeführt wird. In `Main`, Sie bestimmen, welche Form zuerst geladen werden, wenn das Programm gestartet wird, festzustellen, ob eine Kopie der Anwendung bereits auf dem System ausgeführt wird, richten Sie einen Satz von Variablen für die Anwendung oder öffnen Sie eine Datenbank, die die Anwendung erfordert.  
+ `Main` enthält den Code, der zuerst ausgeführt wird. In `Main`, Sie bestimmen, welche Form zuerst geladen werden, wenn das Programm gestartet wird, festzustellen, ob eine Kopie der Anwendung bereits auf dem System ausgeführt wird, richten Sie einen Satz von Variablen für die Anwendung oder öffnen Sie eine Datenbank, die die Anwendung erfordert.  
   
 ## <a name="requirements-for-the-main-procedure"></a>Anforderungen für die Main-Prozedur  
  Eine Datei, die einen eigenen (normalerweise mit der Erweiterung .exe) wird ausgeführt auf darf eine `Main` Prozedur. Eine Bibliothek (z. B. mit der Erweiterung .dll) wird nicht eigenständig ausgeführt und erfordert keine `Main` Prozedur. Die Anforderungen für die verschiedenen Typen von Projekten, die Sie erstellen können, lauten folgendermaßen:  
@@ -56,7 +46,7 @@ Alle Visual Basic-Anwendung muss eine Prozedur namens enthalten `Main`. Diese Pr
     End Module  
     ```  
   
--   `Main`kann auch Zurückgeben einer `Integer` -Wert, der das Betriebssystem als Exitcode für das Programm verwendet. Andere Programme können diesen Code mithilfe den Windows-ERRORLEVEL-Wert zu testen. Um einen Exitcode zurückzugeben, müssen Sie deklarieren `Main` als eine `Function` Prozedur anstelle von einer `Sub` Prozedur.  
+-   `Main` kann auch Zurückgeben einer `Integer` -Wert, der das Betriebssystem als Exitcode für das Programm verwendet. Andere Programme können diesen Code mithilfe den Windows-ERRORLEVEL-Wert zu testen. Um einen Exitcode zurückzugeben, müssen Sie deklarieren `Main` als eine `Function` Prozedur anstelle von einer `Sub` Prozedur.  
   
     ```  
     Module mainModule  
@@ -73,7 +63,7 @@ Alle Visual Basic-Anwendung muss eine Prozedur namens enthalten `Main`. Diese Pr
     End Module  
     ```  
   
--   `Main`akzeptieren können auch eine `String` Array als Argument. Jede Zeichenfolge im Array enthält einen der Befehlszeilenargumente verwendet, um das Programm aufzurufen. Sie können unterschiedliche Aktionen abhängig von deren Werten ausführen.  
+-   `Main` akzeptieren können auch eine `String` Array als Argument. Jede Zeichenfolge im Array enthält einen der Befehlszeilenargumente verwendet, um das Programm aufzurufen. Sie können unterschiedliche Aktionen abhängig von deren Werten ausführen.  
   
     ```  
     Module mainModule  

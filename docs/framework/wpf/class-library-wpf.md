@@ -1,50 +1,38 @@
 ---
 title: Klassenbibliothek (WPF)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 259aeca19f1b5865cee2749e76398e3e7f30aa51
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d6f23c253a081bf454606a222ee4deed6c52e81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-library-wpf"></a>Klassenbibliothek (WPF)
 Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
   
 -   <xref:Microsoft.Build.Tasks.Windows>  
   
--   <xref:Microsoft.Win32>(freigegebene)  
+-   <xref:Microsoft.Win32> (freigegebene)  
   
 -   <xref:Microsoft.Windows.Themes>  
   
--   <xref:System.Collections.ObjectModel>(freigegebene)  
+-   <xref:System.Collections.ObjectModel> (freigegebene)  
   
--   <xref:System.Collections.Specialized>(freigegebene)  
+-   <xref:System.Collections.Specialized> (freigegebene)  
   
--   <xref:System.ComponentModel>(freigegebene)  
+-   <xref:System.ComponentModel> (freigegebene)  
   
--   <xref:System.Diagnostics>(freigegebene)  
+-   <xref:System.Diagnostics> (freigegebene)  
   
--   <xref:System.IO>(freigegebene)  
+-   <xref:System.IO> (freigegebene)  
   
 -   <xref:System.IO.Packaging>  
   
@@ -54,7 +42,7 @@ Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_wi
   
 -   <xref:System.Printing.Interop>  
   
--   <xref:System.Security.Permissions>(freigegebene)  
+-   <xref:System.Security.Permissions> (freigegebene)  
   
 -   <xref:System.Security.RightsManagement>  
   
@@ -96,7 +84,7 @@ Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_wi
   
 -   <xref:System.Windows.Interop>  
   
--   <xref:System.Windows.Markup>(freigegebene)  
+-   <xref:System.Windows.Markup> (freigegebene)  
   
 -   <xref:System.Windows.Markup.Localizer>  
   
@@ -137,7 +125,7 @@ Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_wi
 ## <a name="xaml-support-in-net-4"></a>Verwendung von XAML-Unterstützung in .NET 4  
  Die folgenden Namespaces enthalten Typen aus der System.Xaml-Assembly. "System.xaml" bietet allgemeine XAML-sprachunterstützung für Frameworks, z. B. WPF, die erstellt werden, auf [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].  
   
--   <xref:System.Windows.Markup>(freigegebene)  
+-   <xref:System.Windows.Markup> (freigegebene)  
   
 -   <xref:System.Xaml>  
   

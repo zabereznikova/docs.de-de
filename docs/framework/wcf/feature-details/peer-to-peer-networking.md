@@ -1,29 +1,17 @@
 ---
 title: Peer-to-Peer-Netzwerke
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a26f10a323b44e7954245ab90a02f62745e84e87
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fe3fe122e758d8460d98793cb8028ad696cb5302
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-networking"></a>Peer-to-Peer-Netzwerke
-Peerkanal ist eine Mehrparteien-, P2P-Kommunikationstechnologie (Peer-to-Peer) in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Er stellt einen sicheren und skalierbaren nachrichtenbasierten P2P-Kommunikationschannel für Anwendungsentwickler bereit. Ein allgemeines Beispiel einer Mehrparteienanwendung, die vom Peerkanal profitieren kann, sind gemeinschaftliche Anwendungen, wie beispielsweise Chat, in denen eine Gruppe von Benutzern direkt miteinander kommunizieren kann, ohne dass Server erforderlich sind. Peerkanal ermöglicht P2P-Zusammenarbeit, Inhaltsverteilung, Lastenausgleich und verteilte Verarbeitung sowohl bei Consumer- als auch Unternehmensszenarios.  
+Peerkanal ist mehrparteienanwendungen, Peer-zu-Peer (P2P) kommunikationstechnologie in Windows Communication Foundation (WCF). Er stellt einen sicheren und skalierbaren nachrichtenbasierten P2P-Kommunikationschannel für Anwendungsentwickler bereit. Ein allgemeines Beispiel einer Mehrparteienanwendung, die vom Peerkanal profitieren kann, sind gemeinschaftliche Anwendungen, wie beispielsweise Chat, in denen eine Gruppe von Benutzern direkt miteinander kommunizieren kann, ohne dass Server erforderlich sind. Peerkanal ermöglicht P2P-Zusammenarbeit, Inhaltsverteilung, Lastenausgleich und verteilte Verarbeitung sowohl bei Consumer- als auch Unternehmensszenarios.  
   
- Peerkanal ist unter [!INCLUDE[wv](../../../../includes/wv-md.md)] standardmäßig aktiviert (wie auch der Rest von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]). Fügen Sie Ihrem Projekt Verweise auf "System.ServiceModel.dll" hinzu, um auf Peerkanalklassen zuzugreifen.  
+ Peerkanal ist standardmäßig aktiviert, auf [!INCLUDE[wv](../../../../includes/wv-md.md)]WCF entspricht. Fügen Sie Ihrem Projekt Verweise auf "System.ServiceModel.dll" hinzu, um auf Peerkanalklassen zuzugreifen.  
   
  Die folgenden Abschnitte enthalten Informationen zu Peer-to-Peer-Netzwerken und zur Verwendung von Peerkanalklassen zum Erstellen von Peer-to-Peer-fähigen Netzwerkanwendungen.  
   
@@ -38,4 +26,4 @@ Peerkanal ist eine Mehrparteien-, P2P-Kommunikationstechnologie (Peer-to-Peer) i
  [Benutzerdefinierter Peerkanal-PeerResolver](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
   
 ## <a name="peer-channel-team-blog"></a>Blog des Peerkanalteams  
- [Peerkanalteams](http://go.microsoft.com/fwlink/?LinkID=114530) (http://go.microsoft.com/fwlink/?LinkID=114530)
+ [Peerkanalteams](http://go.microsoft.com/fwlink/?LinkID=114530) ()http://go.microsoft.com/fwlink/?LinkID=114530)

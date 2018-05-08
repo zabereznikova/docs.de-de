@@ -1,30 +1,18 @@
 ---
-title: "Gewusst wie: Verfügbarmachen eines Vertrags für SOAP- und Webclients"
-ms.custom: 
+title: 'Gewusst wie: Verfügbarmachen eines Vertrags für SOAP- und Webclients'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9a730fe94d1df8c887a2eaf20c1e338bd056ed5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Gewusst wie: Verfügbarmachen eines Vertrags für SOAP- und Webclients
-Standardmäßig macht [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Endpunkte nur für SOAP-Clients verfügbar. In [Vorgehensweise: Erstellen einer grundlegenden WCF-Web-HTTP-Diensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), ein Endpunkt für nicht-SOAP-Clients verfügbar gemacht wird. Manchmal möchten Sie jedoch einen Vertrag für beide Wege verfügbar machen, als Webendpunkt und als SOAP-Endpunkt. In diesem Thema wird ein Beispiel für diesen Vorgang gezeigt.  
+Standardmäßig stellt Windows Communication Foundation (WCF) Endpunkte nur für die SOAP-Clients zur Verfügung. In [Vorgehensweise: Erstellen einer grundlegenden WCF-Web-HTTP-Diensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), ein Endpunkt für nicht-SOAP-Clients verfügbar gemacht wird. Manchmal möchten Sie jedoch einen Vertrag für beide Wege verfügbar machen, als Webendpunkt und als SOAP-Endpunkt. In diesem Thema wird ein Beispiel für diesen Vorgang gezeigt.  
   
 ### <a name="to-define-the-service-contract"></a>So definieren Sie den Dienstvertrag  
   
@@ -65,7 +53,7 @@ Standardmäßig macht [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] En
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>So rufen Sie Dienstvorgänge auf, die GET in Internet Explorer zugeordnet werden  
   
-1.  Öffnen Sie Internet Explorer, und geben "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`", und drücken Sie die EINGABETASTE. Die URL enthält die Basisadresse des Diensts ("http://localhost:8000/"), die relative Adresse des Endpunkts (""), den aufzurufenden Dienstvorgang ("EchoWithGet") und ein Fragezeichen, gefolgt von einer Liste der benannten Parameter, die durch ein kaufmännisches Und (&) getrennt sind.  
+1.  Öffnen Sie Internet Explorer, und geben "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`", und drücken Sie die EINGABETASTE. Die URL enthält die Basisadresse des Diensts ("http://localhost:8000/"), die relative Adresse des Endpunkts (""), der Dienstvorgang aufrufen ("EchoWithGet") und ein Fragezeichen gefolgt von einer Liste benannter Parameter getrennt durch ein kaufmännisches und-Zeichen (&).  
   
 ### <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>So rufen Sie Dienstvorgänge auf dem Webendpunkt im Code auf  
   

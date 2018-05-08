@@ -1,28 +1,19 @@
 ---
-title: "Eigenschaft der &#39; &lt;Propertyname&gt;&#39; ist nicht &#39; t für alle Codepfade einen Wert zurück"
+title: Eigenschaft &#39; &lt;Propertyname&gt; &#39; ist nicht&#39;t für alle Codepfade einen Wert zurück
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc42107
 - vbc42107
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c9ef5b2ac62412f5684cbc78ab6bebf6bc7b6752
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 72bc7e45cadd2528f29c88bf6e80ee5f381052dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Eigenschaft der &#39; &lt;Propertyname&gt;&#39; ist nicht &#39; t für alle Codepfade einen Wert zurück
+# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Eigenschaft &#39; &lt;Propertyname&gt; &#39; ist nicht&#39;t für alle Codepfade einen Wert zurück
 Eigenschaft '\<Propertyname >' ist nicht für alle Codepfade einen Wert zurück. Wenn das Ergebnis verwendet wird, kann während der Laufzeit eine NULL-Verweisausnahme auftreten.  
   
  Eine Eigenschaft `Get` Prozedur hat mindestens einen möglichen Pfad durch ihren Code, die keinen Wert zurückgibt.  
