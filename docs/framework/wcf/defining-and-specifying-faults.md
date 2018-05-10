@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: b71aaf22c98c7f8e62b5c02449a45ec75567d064
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99e0c22a66eb1d839f1594cf53373a74fc3dd02d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Definieren und Angeben von Fehlern
 SOAP-Fehler vermitteln Informationen zu Fehlerbedingungen auf interoperable Weise von einem Dienst an einen Client und bei Duplexkommunikation von einem Client an einen Dienst. In diesem Thema wird beschrieben, wann und wie Sie benutzerdefinierten Fehlerinhalt definieren und wie Sie angeben, welche Vorgänge diesen zurückgeben können. Weitere Informationen wie ein Dienst oder ein duplexclient, diese Fehler senden kann und wie eine Client- oder dienstanwendung diese Fehler behandelt, finden Sie unter [senden und Empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md). Einen Überblick über die Fehlerbehandlung in Windows Communication Foundation (WCF)-Anwendungen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -27,7 +27,7 @@ SOAP-Fehler vermitteln Informationen zu Fehlerbedingungen auf interoperable Weis
 3.  Kennzeichnen Sie Ihre Vorgänge, damit die spezifischen SOAP-Fehler, die diese Vorgänge auslösen, für Clients in WSDL offengelegt werden.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>Definieren von Fehlerbedingungen, über die Clients informiert werden sollen  
- SOAP-Fehler sind öffentlich beschriebene Meldungen, die Fehlerinformationen für einen besonderen Vorgang enthalten. Da sie zusammen mit anderen Vorgangsmeldungen in WSDL beschrieben sind, sind Clients darüber informiert und erwarten beim Aufrufen eines Vorgangs, dass sie diese ggf. verarbeiten müssen. Da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste jedoch in verwaltetem Code geschrieben sind, ermöglicht es Ihnen die Entscheidung, welche Fehlerbedingungen in verwaltetem Code in Fehler konvertiert und an den Client zurückgegeben werden, Fehlerbedingungen und Fehler in Ihrem Dienst von der formalen Fehlerkonversation mit einem Client zu trennen.  
+ SOAP-Fehler sind öffentlich beschriebene Meldungen, die Fehlerinformationen für einen besonderen Vorgang enthalten. Da sie zusammen mit anderen Vorgangsmeldungen in WSDL beschrieben sind, sind Clients darüber informiert und erwarten beim Aufrufen eines Vorgangs, dass sie diese ggf. verarbeiten müssen. Aber da WCF-Dienste in verwaltetem Code, welche Fehler, fehlerbedingungen in verwaltetem Code in Fehler konvertiert werden sollen und an den Client zurückgegeben, fehlerbedingungen und Fehler in Ihrem Dienst von der formalen Fehler trennen ermöglicht die Entscheidung geschrieben werden unterhalten Sie mit einem Client.  
   
  Das folgende Codebeispiel zeigt zum Beispiel einen Vorgang, bei dem zwei ganze Zahlen verwendet und eine weitere ganze Zahl zurückgegeben wird. Hierbei können mehrere Ausnahmen ausgelöst werden. Beim Entwerfen des Fehlervertrags müssen Sie deshalb bestimmen, welche Fehlerbedingungen für Ihren Client wichtig sind. In diesem Fall muss der Dienst die <xref:System.DivideByZeroException?displayProperty=nameWithType>-Ausnahme erkennen.  
   
@@ -84,7 +84,7 @@ End Class
   
  Gemäß SOAP-Standard kann ein Fehler die Elemente `Action`, `Code` und `Reason` aufweisen. Die `Action` wird von der <xref:System.ServiceModel.FaultContractAttribute.Action%2A>-Eigenschaft gesteuert. Die <xref:System.ServiceModel.FaultException.Code%2A>-Eigenschaft und die <xref:System.ServiceModel.FaultException.Reason%2A>-Eigenschaften sind Eigenschaften der <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Klasse, bei der es sich um die übergeordnete Klasse der generischen <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> handelt. Die `Code`-Eigenschaft enthält einen <xref:System.ServiceModel.FaultCode.SubCode%2A>-Member.  
   
- Beim Zugreifen auf andere Elemente als Dienste, die Fehler generieren, gelten bestimmte Einschränkungen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] unterstützt nur Fehler mit Detailtypen, die das Schema beschreibt und die mit Datenverträgen kompatibel sind. Wie oben erwähnt, unterstützt [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zum Beispiel keine Fehler, die in ihren Detailtypen XML-Attribute verwenden, und keine Fehler mit mehr als einem Element der obersten Ebene im Detailabschnitt.  
+ Beim Zugreifen auf andere Elemente als Dienste, die Fehler generieren, gelten bestimmte Einschränkungen. WCF unterstützt nur Fehler mit detailtypen, die das Schema beschreibt und, die mit Datenverträgen kompatibel sind. Beispielsweise unterstützt wie oben erwähnt, WCF nicht Fehler an, die in ihren detailtypen XML-Attribute verwenden, und keine Fehler mit mehr als ein Element der obersten Ebene im Detailabschnitt.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.FaultContractAttribute>  

@@ -2,11 +2,11 @@
 title: Auswählen eines Nachrichtenaustauschmusters
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Auswählen eines Nachrichtenaustauschmusters
 Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht, zu entscheiden, welche *Nachrichtenaustauschmuster* (oder Nachrichtenaustauschmuster) für die von Ihnen entwickelten Kanal erforderlich sind. In diesem Thema werden die verfügbaren Optionen beschrieben und die verschiedenen Anforderungen erläutert. Dies ist die erste Aufgabe in der Aufgabenliste kanalentwicklung in beschriebenen [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -47,7 +47,7 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
 >  Für den UDP-Transport wird nur das Nachrichtenaustauschmuster Datagramm unterstützt, da UDP grundsätzlich ein "fire and forget"-Protokoll ist.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sitzungen und sitzungsbasierte Kanäle  
- Im Bereich der Netzwerke gibt es verbindungsorientierte Protokolle (z. B. TCP) und verbindungslose Protokolle (z. B. UDP). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bezeichnet mit dem Begriff Sitzung eine verbindungsähnliche logische Abstraktion. Sitzungsbasierte WCF-Protokolle sind mit verbindungsorientierten Netzwerkprotokollen vergleichbar, und nicht sitzungsbasierte Protokolle entsprechen verbindungslosen Netzwerkprotokollen.  
+ Im Bereich der Netzwerke gibt es verbindungsorientierte Protokolle (z. B. TCP) und verbindungslose Protokolle (z. B. UDP). WCF verwendet den Begriff Sitzung, um eine Verbindung-verbindungsähnliche logische Abstraktion. Sitzungsbasierte WCF-Protokolle sind mit verbindungsorientierten Netzwerkprotokollen vergleichbar, und nicht sitzungsbasierte Protokolle entsprechen verbindungslosen Netzwerkprotokollen.  
   
  Im Kanalobjektmodell manifestiert sich jede logische Sitzung als Instanz eines sitzungsbasierten Kanals. Daher entspricht jede neue vom Client erstellte und vom Dienst akzeptierte Sitzung einem neuen sitzungsbasierten Kanal auf jeder Seite. Das folgende Diagramm zeigt oben die Struktur nicht sitzungsbasierter Kanäle und unten die Struktur sitzungsbasierter Kanäle.  
   

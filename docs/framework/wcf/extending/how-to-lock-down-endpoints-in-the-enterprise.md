@@ -2,16 +2,16 @@
 title: 'Vorgehensweise: Endpunkte im Unternehmen sperren'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ec14193bdcc24722ad8e2259781c4c185f3ca3f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Vorgehensweise: Endpunkte im Unternehmen sperren
 Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der Sicherheitsrichtlinien der Unternehmen entwickelt werden. Im folgende Thema wird erläutert, wie zum Entwickeln und installieren eine clientendpunktbestätigung, die verwendet werden kann, überprüfen Sie alle Windows Communication Foundation (WCF)-Clientanwendungen, die auf Computern installiert wird.  
   
- In diesem Fall wird das Validierungssteuerelement eine Clientbestätigung, da dieses Endpunktverhalten, an den Client hinzugefügt wird [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt in der Datei "Machine.config". [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lädt gemeinsames Endpunktverhalten nur für Clientanwendungen und gemeinsames Dienstverhalten nur für Dienstanwendungen. Um diese Bestätigung für Dienstanwendungen installieren zu können, muss es sich bei der Bestätigung um ein Dienstverhalten handeln. Weitere Informationen finden Sie unter der [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt.  
+ In diesem Fall wird das Validierungssteuerelement eine Clientbestätigung, da dieses Endpunktverhalten, an den Client hinzugefügt wird [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt in der Datei "Machine.config". WCF lädt gemeinsames Endpunktverhalten nur für Clientanwendungen und gemeinsames Dienstverhalten nur für dienstanwendungen. Um diese Bestätigung für Dienstanwendungen installieren zu können, muss es sich bei der Bestätigung um ein Dienstverhalten handeln. Weitere Informationen finden Sie unter der [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt.  
   
 > [!IMPORTANT]
 >  Dienst- oder Endpunktverhaltensweisen nicht gekennzeichnet werden, mit der <xref:System.Security.AllowPartiallyTrustedCallersAttribute> -Attribut (APTCA), die hinzugefügt werden, die [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt einer Konfigurationsdatei werden nicht ausgeführt, wenn in einer teilweise vertrauenswürdigen Anwendung ausgeführt wird Umgebung und keine Ausnahme wird ausgelöst, wenn in diesem Fall. Um die Ausführung gemeinsamer Verhalten, wie z.&#160;B. Bestätigungen, zu erzwingen, müssen Sie einen der beiden folgenden Schritte ausführen:  

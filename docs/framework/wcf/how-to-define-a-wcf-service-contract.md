@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], defining
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 98e0b07f608db4396a5b8f5e25cde243e03390a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e8abbf8c5f9b0696d90ccbee94c5d8f4dd8b1ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Gewusst wie: Definieren eines Windows Communication Foundation-Dienstvertrags
 Dies ist die erste von sechs Aufgaben, die zum Erstellen einer grundlegenden Windows Communication Foundation (WCF)-Anwendung erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
   
- Beim Erstellen eines grundlegenden [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensts besteht die erste Aufgabe im Definieren eines Dienstvertrags. Der Dienstvertrag gibt an, welche Vorgänge der Dienst unterstützt. Ein Vorgang ähnelt einer Webdienstmethode. Verträge werden durch Definieren einer C++-, einer C#- oder einer Visual Basic (VB)-Schnittstelle erstellt. Jede Methode in der Schnittstelle entspricht einem bestimmten Dienstvorgang. Auf jede Schnittstelle muss das <xref:System.ServiceModel.ServiceContractAttribute> angewendet werden, und auf jeden Vorgang muss das <xref:System.ServiceModel.OperationContractAttribute> angewendet werden. Wenn eine Methode in einer Schnittstelle, die über das <xref:System.ServiceModel.ServiceContractAttribute>-Attribut verfügt, nicht das <xref:System.ServiceModel.OperationContractAttribute>-Attribut aufweist, wird diese Methode vom Dienst nicht verfügbar gemacht.  
+ Wenn Sie einen WCF-Dienst zu erstellen, ist die erste Aufgabe zum Definieren eines Dienstvertrags. Der Dienstvertrag gibt an, welche Vorgänge der Dienst unterstützt. Ein Vorgang ähnelt einer Webdienstmethode. Verträge werden durch Definieren einer C++-, einer C#- oder einer Visual Basic (VB)-Schnittstelle erstellt. Jede Methode in der Schnittstelle entspricht einem bestimmten Dienstvorgang. Auf jede Schnittstelle muss das <xref:System.ServiceModel.ServiceContractAttribute> angewendet werden, und auf jeden Vorgang muss das <xref:System.ServiceModel.OperationContractAttribute> angewendet werden. Wenn eine Methode in einer Schnittstelle, die über das <xref:System.ServiceModel.ServiceContractAttribute>-Attribut verfügt, nicht das <xref:System.ServiceModel.OperationContractAttribute>-Attribut aufweist, wird diese Methode vom Dienst nicht verfügbar gemacht.  
   
  Der für diese Aufgabe verwendete Code wird in dem Beispiel im Anschluss an das Verfahren bereitgestellt.  
   

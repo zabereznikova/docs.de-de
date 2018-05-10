@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: ddf6ad667eb131ec6fa4f12ed112c57368c43d9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b825ff795f4db9d570420b187b8fedd041ddd3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Vorgehensweise: Überprüfen oder Ändern von Parametern
-Sie prüfen oder Ändern der eingehenden oder ausgehenden Nachrichten für einen einzelnen Vorgang für ein Clientobjekt der Windows Communication Foundation (WCF)-können oder ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Service durch Implementieren der <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> Schnittstelle und in Client oder Dienst einfügen Common Language Runtime. In der Regel wird ein Vorgangsverhalten verwendet, um Parameterinspektoren für einen einzelnen Vorgang hinzufügen; weitere Verhalten können für einen einfachen Zugriff auf die Laufzeit in größerem Umfang verwendet werden. Weitere Informationen finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md) und [Erweitern von Verteilern](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+Sie können zu überprüfen oder ändern Sie die eingehenden oder ausgehenden Nachrichten für einen einzelnen Vorgang auf einem Windows Communication Foundation (WCF)-Clientobjekt oder einen WCF-Dienst durch die Implementierung der <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> Schnittstelle und in den Client- oder Dienstlaufzeit einfügen. In der Regel wird ein Vorgangsverhalten verwendet, um Parameterinspektoren für einen einzelnen Vorgang hinzufügen; weitere Verhalten können für einen einfachen Zugriff auf die Laufzeit in größerem Umfang verwendet werden. Weitere Informationen finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md) und [Erweitern von Verteilern](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
   
 ### <a name="inspecting-or-modifying-parameters"></a>Überprüfen oder Ändern von Parametern  
   

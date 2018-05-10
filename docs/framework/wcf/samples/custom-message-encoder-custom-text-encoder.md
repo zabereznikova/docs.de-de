@@ -2,11 +2,11 @@
 title: 'Benutzerdefinierter Nachrichtenencoder: Benutzerdefinierter Textencoder'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 975cfd44834ed31a5d723fdca0fe467cba63e68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Benutzerdefinierter Nachrichtenencoder: Benutzerdefinierter Textencoder
 In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierter textnachrichtenencoder mit Windows Communication Foundation (WCF) implementiert.  
@@ -20,7 +20,7 @@ In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierter textnachr
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
- Das <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt nur UTF-8-, UTF-16- und Big Endean Unicode-Codierungen. Der benutzerdefinierte Textnachrichtenencoder in diesem Beispiel unterstützt alle plattformunterstützten Zeichencodierungen, die zur Interoperabilität erforderlich sind. Das Beispiel besteht aus einem Clientkonsolenprogramm (.exe), einer von Internetinformationsdiensten (IIS) gehosteten Dienstbibliothek (.dll) und einer Bibliothek für Textnachrichtenencoder (.dll). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird von der `ICalculator`-Schnittstelle definiert, die mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) verfügbar macht. Der Client stellt synchrone Anforderungen an eine gegebene mathematische Operation, und der Dienst antwortet mit dem Ergebnis. Sowohl Client als auch Dienst verwenden den `CustomTextMessageEncoder` anstelle des Standard-<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
+ Die <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> von WCF unterstützt nur die UTF-8, UTF-16 und Big Endean Unicode-Codierungen. Der benutzerdefinierte Textnachrichtenencoder in diesem Beispiel unterstützt alle plattformunterstützten Zeichencodierungen, die zur Interoperabilität erforderlich sind. Das Beispiel besteht aus einem Clientkonsolenprogramm (.exe), einer von Internetinformationsdiensten (IIS) gehosteten Dienstbibliothek (.dll) und einer Bibliothek für Textnachrichtenencoder (.dll). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird von der `ICalculator`-Schnittstelle definiert, die mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) verfügbar macht. Der Client stellt synchrone Anforderungen an eine gegebene mathematische Operation, und der Dienst antwortet mit dem Ergebnis. Sowohl Client als auch Dienst verwenden den `CustomTextMessageEncoder` anstelle des Standard-<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
   
  Die Implementierung für den benutzerdefinierten Encoder besteht aus einer Nachrichtenencoder-Factory, einem Nachrichtenencoder, einem Nachrichtencodierungs-Bindungselement und einem Konfigurationshandler. Es wird Folgendes veranschaulicht:  
   
@@ -47,7 +47,7 @@ In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierter textnachr
 4.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>Nachrichtenencoder-Factory und der Nachrichtenencoder  
- Wenn der <xref:System.ServiceModel.ServiceHost> oder der Clientkanal geöffnet wird, erstellt die Entwurfszeit-Komponente `CustomTextMessageBindingElement` die `CustomTextMessageEncoderFactory`. Die Factory erstellt den `CustomTextMessageEncoder`. Der Nachrichtenencoder operiert sowohl im Streamingmodus als auch im Puffermodus. Er verwendet den <xref:System.Xml.XmlReader> und <xref:System.Xml.XmlWriter> zum Schreiben bzw. Lesen der Nachrichten. Im Gegensatz zu den optimierten XML-Readern und- Writern von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], die nur UTF-8, UTF-16 und Big-Endean Unicode unterstützen, unterstützen diese Reader und Writer alle plattformunterstützten Codierungen.  
+ Wenn der <xref:System.ServiceModel.ServiceHost> oder der Clientkanal geöffnet wird, erstellt die Entwurfszeit-Komponente `CustomTextMessageBindingElement` die `CustomTextMessageEncoderFactory`. Die Factory erstellt den `CustomTextMessageEncoder`. Der Nachrichtenencoder operiert sowohl im Streamingmodus als auch im Puffermodus. Er verwendet den <xref:System.Xml.XmlReader> und <xref:System.Xml.XmlWriter> zum Schreiben bzw. Lesen der Nachrichten. Im Gegensatz zu den optimierten XML-Readern und-Writern von WCF, die nur UTF-8, UTF-16 und Big-Endean Unicode unterstützen unterstützen diese Reader und Writer alle plattformunterstützten Codierungen.  
   
  Das folgende Codebeispiel zeigt den benutzerdefinierten Textnachrichtenencoder (CustomTextMessageEncoder).  
   
@@ -190,11 +190,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>Nachrichtencodierungs-Bindungselement  
- Die Bindungselemente ermöglichen die Konfiguration des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeitstapels. Um den benutzerdefinierten Nachrichtenencoder in einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung zu verwenden, wird ein Bindungselement benötigt, das die Nachrichtenencoder-Factory mit den erforderlichen Einstellungen in der erforderlichen Ebene im Laufzeitstapel erstellt.  
+ Die Bindungselemente ermöglichen die Konfiguration des WCF-Laufzeitstapels. Um den benutzerdefinierten Nachrichtenencoder in einer WCF-Anwendung verwenden, ein Binding-Element ist erforderlich, die Nachrichtenencoder-Factory mit den entsprechenden Einstellungen auf der entsprechenden Ebene im Stapel zur Laufzeit erstellt.  
   
- `CustomTextMessageBindingElement` wird von der Basisklasse <xref:System.ServiceModel.Channels.BindingElement> abgeleitet und erbt von der <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>-Klasse. Dadurch wird anderen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Komponenten ermöglicht, dieses Bindungselement als Bindungselement zur Nachrichtencodierung zu erkennen. Die Implementierung von <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> gibt eine Instanz der entsprechenden Nachrichtenencoder-Factory mit entsprechenden Einstellungen zurück.  
+ `CustomTextMessageBindingElement` wird von der Basisklasse <xref:System.ServiceModel.Channels.BindingElement> abgeleitet und erbt von der <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>-Klasse. Dadurch wird anderen WCF-Komponenten auf diesem Bindungselement als ein nachrichtencodierungs-Bindungselement erkannt. Die Implementierung von <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> gibt eine Instanz der entsprechenden Nachrichtenencoder-Factory mit entsprechenden Einstellungen zurück.  
   
- `CustomTextMessageBindingElement` macht Einstellungen für `MessageVersion`, `ContentType` und `Encoding` durch Eigenschaften verfügbar. Der Encoder unterstützt sowohl die Soap11Addressing- als auch die Soap12Addressing1-Version. Als Standard ist Soap11Addressing1 eingestellt. Der Standardwert von `ContentType` lautet "text/xml". Die `Encoding`-Eigenschaft ermöglicht es Ihnen, den Wert der gewünschten Zeichencodierung festzulegen. Der Beispielclient und -dienst verwenden die ISO-8859-1 (Latein1)-Zeichencodierung, die vom <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nicht unterstützt wird.  
+ `CustomTextMessageBindingElement` macht Einstellungen für `MessageVersion`, `ContentType` und `Encoding` durch Eigenschaften verfügbar. Der Encoder unterstützt sowohl die Soap11Addressing- als auch die Soap12Addressing1-Version. Als Standard ist Soap11Addressing1 eingestellt. Der Standardwert von `ContentType` lautet "text/xml". Die `Encoding`-Eigenschaft ermöglicht es Ihnen, den Wert der gewünschten Zeichencodierung festzulegen. Der Beispielclient und-Dienst verwendet die ISO-8859-1 (latein1)-zeichencodierung, die von nicht unterstützt die <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> von WCF.  
   
  Im folgenden Code wird gezeigt, wie die Bindung programmgesteuert mithilfe des benutzerdefinierten Textnachrichtenencoders erstellt wird.  
   

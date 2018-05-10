@@ -2,11 +2,11 @@
 title: Erweitern der Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 685ba85dc240bc2fdefdf02d9ece2279e3507abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59291b6a57ba602e5fea84dcd571a8d767b7cc04
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-tracing"></a>Erweitern der Ablaufverfolgung
 Dieses Beispiel veranschaulicht, wie die Ablaufverfolgungsfunktion von Windows Communication Foundation (WCF) zu erweitern, indem Sie das Schreiben von benutzerdefinierten aktivitätsablaufverfolgungen im Client- und Dienstcode. Dies ermöglicht es dem Benutzer, Ablaufverfolgungsaktivitäten zu erstellen und Ablaufverfolgungen in logischen Arbeitseinheiten zu gruppieren. Es ist auch möglich, Aktivitäten über Übertragungen (innerhalb desselben Endpunkts) und Weitergabe (über verschiedene Endpunkte) zu korrelieren. In diesem Beispiel wird Ablaufverfolgung sowohl für den Client als auch den Dienst aktiviert. Weitere Informationen zum Aktivieren der Ablaufverfolgung in Konfigurationsdateien von Client und Dienst finden Sie unter [Ablaufverfolgung und Nachrichtenprotokollierung](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -26,7 +26,7 @@ Dieses Beispiel veranschaulicht, wie die Ablaufverfolgungsfunktion von Windows C
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>Ablaufverfolgung und Aktivitätsweitergabe  
- Mithilfe von benutzerdefinierter Aktivitätsweitergabe kann der Benutzer eigene Ablaufverfolgungsaktivitäten erstellen, um Ablaufverfolgungen in logische Arbeitseinheiten zu gruppieren, Aktivitäten über Übertragungen und Weitergabe zu korrelieren und die Leistungskosten von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Ablaufverfolgung (z. B. die Kosten des von einer Protokolldatei belegten Festplattenspeicherplatzes) zu verringern.  
+ Benutzerdefinierte aktivitätsablaufverfolgung kann der Benutzer eigene ablaufverfolgungsaktivitäten auf Gruppe ablaufverfolgungen in logische Arbeitseinheiten zu erstellen, Aktivitäten über Übertragungen und Weitergabe zu korrelieren und die Leistungskosten der WCF-Ablaufverfolgung (z. B. die Kosten Speicherplatz eine Protokolldatei).  
   
 ### <a name="adding-custom-sources"></a>Hinzufügen benutzerdefinierter Quellen  
  Benutzerdefinierte Ablaufverfolgungen können sowohl zu Client- als auch Dienstcode hinzugefügt werden. Hinzufügen von Ablaufverfolgungsquellen an den Client oder Dienst-Konfigurationsdateien für diese benutzerdefinierte ablaufverfolgungen erfasst und in angezeigt werden können die [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Der folgende Code zeigt, wie der Konfigurationsdatei eine benutzerdefinierte Ablaufverfolgungsquelle namens `ServerCalculatorTraceSource` hinzugefügt wird.  
@@ -67,7 +67,7 @@ Dieses Beispiel veranschaulicht, wie die Ablaufverfolgungsfunktion von Windows C
 ```  
   
 ### <a name="correlating-activities"></a>Korrelieren von Aktivitäten  
- Zum Korrelieren von Aktivitäten direkt zwischen Endpunkten muss für das `propagateActivity`-Attribut in der `true`-Ablaufverfolgungsquelle der Wert `System.ServiceModel` festgelegt werden. Außerdem muss, um Ablaufverfolgungen weiterzugeben, ohne über [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Aktivitäten zu gehen, ServiceModel-Aktivitätsablaufverfolgung deaktiviert werden. Dies ist im folgenden Codebeispiel zu erkennen.  
+ Zum Korrelieren von Aktivitäten direkt zwischen Endpunkten muss für das `propagateActivity`-Attribut in der `true`-Ablaufverfolgungsquelle der Wert `System.ServiceModel` festgelegt werden. Darüber hinaus muss um ablaufverfolgungen weiterzugeben, ohne den Umweg über WCF-Aktivitäten, ServiceModel-Aktivitätsablaufverfolgung deaktiviert werden. Dies ist im folgenden Codebeispiel zu erkennen.  
   
 > [!NOTE]
 >  Das Deaktivieren von ServiceModel-Aktivitätsablaufverfolgung ist nicht dasselbe, wie die von der `switchValue`-Eigenschaft angegebene Ablaufverfolgungsebene zu deaktivieren.  
@@ -85,7 +85,7 @@ Dieses Beispiel veranschaulicht, wie die Ablaufverfolgungsfunktion von Windows C
 ```  
   
 ### <a name="lessening-performance-cost"></a>Verringern von Leistungskosten  
- Wenn `ActivityTracing` in der `System.ServiceModel`-Ablaufverfolgungsquelle ausgeschaltet wird, wird eine Ablaufverfolgungsdatei erstellt, die nur benutzerdefinierte Aktivitätsablaufverfolgungen, jedoch keine der ServiceModel-Aktivitätsablaufverfolgungen enthält. Dadurch wird die Protokolldatei deutlich kleiner. Allerdings verliert man damit die Möglichkeit, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Verarbeitungsablaufverfolgungen zu korrelieren.  
+ Wenn `ActivityTracing` in der `System.ServiceModel`-Ablaufverfolgungsquelle ausgeschaltet wird, wird eine Ablaufverfolgungsdatei erstellt, die nur benutzerdefinierte Aktivitätsablaufverfolgungen, jedoch keine der ServiceModel-Aktivitätsablaufverfolgungen enthält. Dadurch wird die Protokolldatei deutlich kleiner. Allerdings ist die Gelegenheit zum Korrelieren von WCF-Ablaufverfolgung verloren.  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   

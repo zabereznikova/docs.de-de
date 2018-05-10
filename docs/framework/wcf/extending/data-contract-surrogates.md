@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-contract-surrogates"></a>Datenvertrag-Ersatzzeichen
 Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem datenvertragsmodell basiert. Diese Funktion wurde zur Verwendung für die Typanpassung und -ersetzung entwickelt, wenn Benutzer Änderungen daran vornehmen möchten, wie ein Typ serialisiert, deserialisiert oder in Metadaten projiziert wird. Einige Szenarien, in denen ein Ersatzzeichen verwendet werden kann, sind die fehlende Spezifizierung eines Datenvertrags für den Typ, die fehlende Markierung von Feldern und Eigenschaften mit dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut oder wenn Benutzer die dynamische Erstellung von Schemavarianten wünschen.  
@@ -133,7 +133,7 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem daten
  Die Methode wird zu Beginn des Schemaexports und -imports aufgerufen. Die Methode gibt die benutzerdefinierten Datentypen zurück, die im exportierten oder importierten Schema verwendet werden. An die Methode wird ein <xref:System.Collections.ObjectModel.Collection%601> übergeben (der `customDataTypes`), wobei es sich um eine Sammlung von Typen handelt. Die Methode sollte dieser Sammlung zusätzliche bekannte Typen hinzufügen. Die bekannten benutzerdefinierten Datentypen werden benötigt, um die Serialisierung und Deserialisierung von benutzerdefinierten Daten mit dem <xref:System.Runtime.Serialization.DataContractSerializer> zu ermöglichen. Weitere Informationen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementieren eines Ersatzzeichens  
- Um das Datenvertrag-Ersatzzeichen innerhalb von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zu verwenden, müssen Sie einigen besonderen Prozeduren folgen.  
+ Um dem Datenvertrag-Ersatzzeichen innerhalb von WCF verwenden zu können, müssen Sie einige besondere Prozeduren befolgen.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>So verwenden Sie ein Ersatzzeichen für die Serialisierung und Deserialisierung  
  Verwenden Sie das <xref:System.Runtime.Serialization.DataContractSerializer>, um die Serialisierung und die Deserialisierung von Daten mit dem Ersatzzeichen durchzuführen. Das <xref:System.Runtime.Serialization.DataContractSerializer> wird durch das <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> erstellt. Das Ersatzzeichen muss ebenfalls angegeben werden.  
@@ -174,7 +174,7 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem daten
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>So verwenden Sie ein Ersatzzeichen für den Metadatenexport  
- Standardmäßig muss beim Exportieren von Metadaten aus [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] für einen Dienst sowohl das WSDL- als auch das XSD-Schema generiert werden. Das Ersatzzeichen muss der Komponente <xref:System.Runtime.Serialization.XsdDataContractExporter> hinzugefügt werden, die für das Generieren des XSD-Schemas für Datenvertragstypen verantwortlich ist. Dazu verwenden Sie entweder ein Verhalten, das <xref:System.ServiceModel.Description.IWsdlExportExtension> implementiert, um das <xref:System.ServiceModel.Description.WsdlExporter> zu ändern, oder ändern Sie das zum Exportieren von Metadaten verwendete <xref:System.ServiceModel.Description.WsdlExporter> direkt.  
+ Wird standardmäßig beim Exportieren von Metadaten von WCF für einen Dienst muss WSDL- und XSD-Schema generiert werden soll. Das Ersatzzeichen muss der Komponente <xref:System.Runtime.Serialization.XsdDataContractExporter> hinzugefügt werden, die für das Generieren des XSD-Schemas für Datenvertragstypen verantwortlich ist. Dazu verwenden Sie entweder ein Verhalten, das <xref:System.ServiceModel.Description.IWsdlExportExtension> implementiert, um das <xref:System.ServiceModel.Description.WsdlExporter> zu ändern, oder ändern Sie das zum Exportieren von Metadaten verwendete <xref:System.ServiceModel.Description.WsdlExporter> direkt.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>So verwenden Sie ein Ersatzzeichen für den Metadatenexport  
   

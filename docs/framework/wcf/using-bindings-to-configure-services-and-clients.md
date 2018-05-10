@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8271f51885c0d7800d26018b94942a7d832bf4a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Verwenden von Bindungen, um Dienste und Clients zu konfigurieren
 Bindungen sind Objekte, die die zum Herstellen einer Verbindung zu einem Endpunkt erforderlichen Kommunikationsdetails angeben. Genauer gesagt enthalten Bindungen Konfigurationsinformationen, die zum Erstellen der Client- oder Dienstlaufzeit durch Festlegen der Merkmale von Transporten, Übertragungsformaten (Nachrichtencodierung) und Protokollen für den entsprechenden Endpunkt oder Clientkanal verwendet werden. Um eine funktionierende Windows Communication Foundation (WCF)-Dienst zu erstellen, erfordert jeder Endpunkt im Dienst eine Bindung an. In diesem Thema wird erläutert, was Bindungen sind, wie sie definiert werden und wie eine bestimmte Bindung für einen Endpunkt angegeben wird.  
@@ -26,15 +26,15 @@ Bindungen sind Objekte, die die zum Herstellen einer Verbindung zu einem Endpunk
  Bestimmt die Nachrichtencodierung, z. B. Text/XML, binär oder MTOM (Message Transmission Optimization Mechanism), die festlegt, wie Nachrichten bei Übertragungen als Bytestreams dargestellt werden.  
   
 ## <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] schließt mehrere vom System bereitgestellte Bindungen ein, die die meisten Anwendungsanforderungen und Szenarien abdecken sollen. Die folgenden Klassen stellen einige Beispiele für vom System bereitgestellte Bindungen dar:  
+ WCF bietet einen Satz vom System bereitgestellten Bindungen, die meisten anwendungsanforderungen und Szenarien abdecken sollen. Die folgenden Klassen stellen einige Beispiele für vom System bereitgestellte Bindungen dar:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: Eine für Verbindungen zu Webdiensten geeignete HTTP-Protokollbindung, die der WS-I Basic Profile 1.1-Spezifikation entspricht (z. B. ASP.NET-Webdienste [ASMX]-basierte Dienste).  
   
 -   <xref:System.ServiceModel.WSHttpBinding>: Eine für Verbindungen zu Endpunkten geeignete HTTP-Protokollbindung, die den Webdienstespezifikations-Protokollen entspricht.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Verwendet die binäre .NET-Codierung und Rahmentechnologien zusammen mit dem Transport mittels benannter Pipes von Windows zur Verbindung mit anderen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Endpunkten auf dem gleichen Computer.  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>: Verwendet die binäre Codierung in .NET und rahmentechnologien zusammen mit dem Transport mittels benannter Pipes Windows zur Verbindung mit anderen WCF-Endpunkten auf demselben Computer aus.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Verwendet die binäre .NET-Codierung und Rahmentechnologien zusammen mit Message Queuing (MSMQ) zum Erstellen von Verbindung für Nachrichten in der Warteschlange mit anderen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Endpunkten.  
+-   <xref:System.ServiceModel.NetMsmqBinding>: Verwendet die binäre .NET-Codierung und rahmentechnologien zusammen mit Message Queuing (auch bekannt als MSMQ) zum Erstellen von Nachrichten in der Warteschlange Verbindungen mit anderen WCF-Endpunkten.  
   
  Eine vollständige Liste der vom System bereitgestellte Bindungen mit Beschreibungen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../docs/framework/wcf/system-provided-bindings.md).  
   
@@ -49,7 +49,7 @@ Bindungen sind Objekte, die die zum Herstellen einer Verbindung zu einem Endpunk
 2.  Erstellen eines Endpunkts, der diese Bindung verwendet.  
   
 ## <a name="code-and-configuration"></a>Code und Konfiguration  
- Sie können Bindungen durch Code bzw. Konfiguration definieren oder konfigurieren. Diese beiden Ansätze sind unabhängig vom verwendeten Bindungstyp, z. B. ob Sie eine vom System bereitgestellte Bindung oder eine <xref:System.ServiceModel.Channels.CustomBinding>-Bindung verwenden. Im Allgemeinen gibt Ihnen die Verwendung von Code die vollständige Kontrolle über die Definition einer Bindung beim Kompilieren. Bei der Konfiguration kann ein Systemadministrator oder der Benutzer eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstes oder -Clients wiederum die Parameter von Bindungen ändern. Diese Flexibilität ist häufig wünschenswert, da die spezifischen Computeranforderungen und Netzwerkbedingungen, in die eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendung bereitgestellt werden soll, nicht vorhersehbar sind. Durch die Trennung der Bindungsinformationen (und Addressierungsinformationen) vom Code können Administratoren die Bindungsdetails ändern, ohne dass die Anwendung neu kompiliert oder bereitgestellt werden muss. Falls die Bindung im Code definiert ist, überschreibt sie alle in der Konfigurationsdatei vorgenommenen konfigurationsbasierten Definitionen. Beispiele für diese Ansätze finden Sie in den folgenden Themen:  
+ Sie können Bindungen durch Code bzw. Konfiguration definieren oder konfigurieren. Diese beiden Ansätze sind unabhängig vom verwendeten Bindungstyp, z. B. ob Sie eine vom System bereitgestellte Bindung oder eine <xref:System.ServiceModel.Channels.CustomBinding>-Bindung verwenden. Im Allgemeinen gibt Ihnen die Verwendung von Code die vollständige Kontrolle über die Definition einer Bindung beim Kompilieren. Konfiguration kann andererseits, ein Systemadministrator oder der Benutzer eines WCF-Diensts oder Clients die Parameter von Bindungen ändern. Diese Flexibilität ist häufig wünschenswert, da es gibt keine Möglichkeit, vorherzusagen, die spezifischen computeranforderungen und netzwerkbedingungen, in die ist eine WCF-Anwendung bereitgestellt werden. Durch die Trennung der Bindungsinformationen (und Addressierungsinformationen) vom Code können Administratoren die Bindungsdetails ändern, ohne dass die Anwendung neu kompiliert oder bereitgestellt werden muss. Falls die Bindung im Code definiert ist, überschreibt sie alle in der Konfigurationsdatei vorgenommenen konfigurationsbasierten Definitionen. Beispiele für diese Ansätze finden Sie in den folgenden Themen:  
   
 -   [Vorgehensweise: Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) bietet ein Beispiel zum Erstellen einer Bindung im Code.  
   

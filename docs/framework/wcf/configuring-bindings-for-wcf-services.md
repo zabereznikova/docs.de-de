@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b91c8ff5a78ef2b2b2db5ea26ae7a1733a97ffd0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurieren von Bindungen für Windows Communication Foundation-Dienste
 Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellung der Anwendung möglicherweise Entscheidungen mitteilen. Beispielsweise wissen Sie häufig nicht im Voraus, welche Dienstadresse oder welcher URI (Uniform Resource Identifier) verwendet wird. Anstatt eine Adresse fest zu programmieren, sollte diese Aufgabe einem Administrator nach dem Erstellen eines Diensts übergeben werden. Diese Flexibilität wird durch Konfiguration ermöglicht.  
@@ -39,9 +39,9 @@ Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellun
   
  Z. B. die [ \<BasicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element gibt an, dass um HTTP als Transport für einen Endpunkt zu nutzen. Auf diese Weise wird der Endpunkt zur Laufzeit aktiviert, wenn der Dienst, der diesen Endpunkt verwendet, geöffnet wird.  
   
- Es gibt zwei Arten von Bindungen: vordefinierte und benutzerdefinierte. Vordefinierte Bindungen enthalten nützliche Kombinationen von Elementen, die in allgemeinen Szenarien verwendet werden. Eine Liste der vordefinierten Bindungen Datentypen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bereitstellt, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../docs/framework/wcf/system-provided-bindings.md). Wenn keine vordefinierte Bindungsauflistung über die korrekte Kombination von Funktionen verfügt, die eine Dienstanwendung benötigt, können Sie benutzerdefinierte Bindungen erstellen, um den Anforderungen der Anwendung zu entsprechen. Weitere Informationen über benutzerdefinierte Bindungen finden Sie unter [ \<CustomBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Es gibt zwei Arten von Bindungen: vordefinierte und benutzerdefinierte. Vordefinierte Bindungen enthalten nützliche Kombinationen von Elementen, die in allgemeinen Szenarien verwendet werden. Eine Liste der vordefinierten Bindungstypen, die WCF bietet, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../docs/framework/wcf/system-provided-bindings.md). Wenn keine vordefinierte Bindungsauflistung über die korrekte Kombination von Funktionen verfügt, die eine Dienstanwendung benötigt, können Sie benutzerdefinierte Bindungen erstellen, um den Anforderungen der Anwendung zu entsprechen. Weitere Informationen über benutzerdefinierte Bindungen finden Sie unter [ \<CustomBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
- In den folgenden vier Beispielen werden die am häufigsten verwendeten Bindungskonfigurationen dargestellt, die zum Einrichten eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensts verwendet werden.  
+ Die folgenden vier Beispielen werden die am häufigsten verwendeten Bindungskonfigurationen dargestellt für das Einrichten eines WCF-Diensts verwendet.  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Angeben eines Endpunkts, um einen Bindungstyp zu verwenden  
  Das erste Beispiel zeigt, wie ein Endpunkt angegeben wird, der mit einer Adresse, einem Vertrag oder einer Bindung konfiguriert wurde.  

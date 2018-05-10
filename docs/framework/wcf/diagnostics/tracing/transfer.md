@@ -2,17 +2,17 @@
 title: Übertragung
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transfer"></a>Übertragung
 Dieses Thema beschreibt die Übertragung in die Windows Communication Foundation (WCF) aktivitätsablaufverfolgungs-Modell.  
   
 ## <a name="transfer-definition"></a>Übertragungsdefinition  
- Übertragungen zwischen Aktivitäten stellen einen kausalen Zusammenhang zwischen Ereignissen in den zugehörigen Aktivitäten innerhalb von Endpunkten dar. Zwei Aktivitäten stehen mit Übertragungen in Beziehung, wenn eine Ablaufsteuerung zwischen den Aktivitäten besteht, z. B. ein Methodenaufruf, der Aktivitätsgrenzen überschreitet. Wenn Bytes für den Dienst eingehen, wird in [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] die Abhöraktivität zu der Bytes empfangen-Aktivität übertragen, in der das Nachrichtenobjekt erstellt wird. Eine Liste der End-to-End-ablaufverfolgungsszenarien und ihre entsprechenden Aktivität und tracing Entwurf, finden Sie unter [End-To-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ Übertragungen zwischen Aktivitäten stellen einen kausalen Zusammenhang zwischen Ereignissen in den zugehörigen Aktivitäten innerhalb von Endpunkten dar. Zwei Aktivitäten stehen mit Übertragungen in Beziehung, wenn eine Ablaufsteuerung zwischen den Aktivitäten besteht, z. B. ein Methodenaufruf, der Aktivitätsgrenzen überschreitet. In WCF nach Bytes für den Dienst eingehen sind ist die Abhöraktivität Aktivität auf die Bytes empfangen-Aktivität übertragen, in dem das Nachrichtenobjekt erstellt wird. Eine Liste der End-to-End-ablaufverfolgungsszenarien und ihre entsprechenden Aktivität und tracing Entwurf, finden Sie unter [End-To-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
  Um Übertragungsablaufverfolgungen auszugeben, verwenden Sie die `ActivityTracing`-Einstellung auf der Ablaufverfolgungsquelle, wie im folgenden Konfigurationscode gezeigt.  
   

@@ -2,19 +2,19 @@
 title: Aktivität
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3100d5bb60dc1b11d23b0705f4d6f23a3675ac51
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="activity"></a>Aktivität
 Dieses Thema beschreibt die aktivitätsablaufverfolgungen in der Windows Communication Foundation (WCF)-aktivitätsablaufverfolgungs-Modell. Aktivitäten sind Verarbeitungseinheiten, mit deren Hilfe der Benutzer einen Fehlerbereich eingrenzen kann. Fehler, die in der gleichen Aktivität auftreten, hängen direkt zusammen. Ein Vorgang schlägt z.&#160;B. fehl, weil eine Nachrichtenentschlüsselung fehlgeschlagen ist. Die Ablaufverfolgungen für den Vorgangs- und den Nachrichtenverschlüsselungsfehler treten in der gleichen Aktivität auf und zeigen eine direkte Verbindung zwischen dem Verschlüsselungsfehler und dem Anforderungsfehler.  
   
 ## <a name="configuring-activity-tracing"></a>Konfigurieren der Aktivitätsablaufverfolgung  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] enthält vordefinierte Aktivitäten für die Verarbeitung von Anwendungen (siehe [Aktivitätsliste](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Sie können Aktivitäten auch programmgesteuert definieren, um Benutzerablaufverfolgungen zu gruppieren. Weitere Informationen finden Sie unter [Ausgeben von Benutzercode-Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ WCF bietet vordefinierte Aktivitäten für die Verarbeitung von Anwendungen (siehe [Aktivitätsliste](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Sie können Aktivitäten auch programmgesteuert definieren, um Benutzerablaufverfolgungen zu gruppieren. Weitere Informationen finden Sie unter [Ausgeben von Benutzercode-Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
- Verwenden Sie die `ActivityTracing`-Einstellung für die `System.ServiceModel`-Ablaufverfolgungsquelle oder andere [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]- oder benutzerdefinierte Ablaufverfolgungsquellen wie der folgende Konfigurationscode zeigt, um Aktivitätsablaufverfolgungen zur Laufzeit auszugeben.  
+ Verwenden, um aktivitätsablaufverfolgungen zur Laufzeit auszugeben, die `ActivityTracing` Einstellung für die `System.ServiceModel` trace Quelle oder andere WCF oder benutzerdefinierte Ablaufverfolgungsquellen wie der folgende Konfigurationscode veranschaulicht.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
@@ -88,7 +88,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Eine Aktivität kennzeichnet eine Verarbeitungsgrenze, die für den Administrator des Systems oder die Unterstützungsmöglichkeiten von Bedeutung sein kann.  
   
--   Jede [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Methode, sowohl auf dem Client als auch auf dem Server, wird vom Beginn einer neuen Aktivität und anschließend (nach Abschluss der Arbeit) durch das Ende der neuen Aktivität und die Rückkehr zur Umgebungsaktivität begrenzt.  
+-   Jeder WCF-Methode, sowohl auf dem Client und Server, wird vom Beginn einer neuen Aktivität und anschließend (nach Abschluss der Arbeit) begrenzt, die die neue Aktivität zu beenden und die Rückgabe an die ambient-Aktivität.  
   
 -   Lange andauernde (fortlaufende) Aktivitäten, wie z.&#160;B. das Überwachen von Verbindungen oder Warten auf Nachrichten, werden durch übereinstimmende Start/Stop-Kennzeichnungen dargestellt.  
   

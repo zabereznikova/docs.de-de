@@ -2,14 +2,14 @@
 title: Erweiterte Filter
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-ms.openlocfilehash: 75106bb203391d18c46fdf03d3bb2624ceec834e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: de8577be2d56ec3c942fd8736e350234daf6a35a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-filters"></a>Erweiterte Filter
-Dieses Beispiel zeigt einen Windows Communication Foundation (WCF)-routing-Dienst. Der Routingdienst ist eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Komponente, die das Integrieren eines inhaltsbasierten Routers in die Anwendung vereinfacht. In diesem Beispiel wird das standardmäßige [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel wird gezeigt, wie die inhaltsbasierte Routinglogik durch die Verwendung von Nachrichtenfiltern und Nachrichtenfiltertabellen definiert wird.  
+Dieses Beispiel zeigt einen Windows Communication Foundation (WCF)-routing-Dienst. Der Routingdienst ist eine WCF-Komponente, die integrieren ein inhaltsbasierten Routers in die Anwendung aufnehmen vereinfacht. In diesem Beispiel wird der standardmäßigen WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel wird gezeigt, wie die inhaltsbasierte Routinglogik durch die Verwendung von Nachrichtenfiltern und Nachrichtenfiltertabellen definiert wird.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9603f79992c31ad1af3b6c672b448ab031ba78d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung
 In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung, das Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen, das Festlegen von Ablaufverfolgungsebenen, das Festlegen der Aktivitätsablaufverfolgung und -weitergabe zur Unterstützung der End-to-End-Ablaufverfolgungskorrelation sowie das Festlegen von Ablaufverfolgungslistenern für den Zugriff auf Ablaufverfolgungen.  
@@ -25,11 +25,11 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
 -   Windows-Fehlerereignisse bei Fehlern der Ablaufverfolgungsfunktion. Finden Sie unter [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
- Die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Ablaufverfolgung basiert auf <xref:System.Diagnostics>. Definieren Sie in der Konfigurationsdatei oder im Code Ablaufverfolgungsquellen, wenn Sie die Ablaufverfolgung verwenden möchten. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] definiert eine Ablaufverfolgungsquelle für jede [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Assembly. Die `System.ServiceModel`-Ablaufverfolgungsquelle ist die allgemeinste [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Ablaufverfolgungsquelle. Sie zeichnet Verarbeitungsmeilensteine im [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Kommunikationsstapel vom Eintreten/Verlassen des Transports zum Eintreten/Verlassen des Benutzercodes auf. Die `System.ServiceModel.MessageLogging`-Ablaufverfolgungsquelle zeichnet alle Nachrichten auf, die das System durchlaufen.  
+ WCF-Ablaufverfolgung basiert auf der Basis von <xref:System.Diagnostics>. Definieren Sie in der Konfigurationsdatei oder im Code Ablaufverfolgungsquellen, wenn Sie die Ablaufverfolgung verwenden möchten. WCF definiert eine Ablaufverfolgungsquelle für jede WCF-Assembly. Die `System.ServiceModel` Ablaufverfolgungsquelle ist die allgemeinste WCF-Ablaufverfolgungsquelle und zeichnet Verarbeitung Meilensteine über die WCF-Kommunikationsstapel vom eintreten/Verlassen des Transports zum Eintreten/verlassen von Benutzercode. Die `System.ServiceModel.MessageLogging`-Ablaufverfolgungsquelle zeichnet alle Nachrichten auf, die das System durchlaufen.  
   
- Die Ablaufverfolgung ist standardmäßig nicht aktiviert. Um die Ablaufverfolgung zu aktivieren, müssen Sie einen Ablaufverfolgungslistener erstellen und eine andere Ablaufverfolgungsebene als "Off" für die ausgewählte Ablaufverfolgungsquelle in der Konfiguration festlegen. Andernfalls generiert [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] keine Ablaufverfolgungen. Wenn Sie keinen Listener angeben, ist die Ablaufverfolgung automatisch deaktiviert. Wenn Sie einen Listener definieren, jedoch keine Ebene angeben, wird die Ebene standardmäßig auf "Off" festgelegt. Das bedeutet, dass keine Ablaufverfolgung ausgegeben wird.  
+ Die Ablaufverfolgung ist standardmäßig nicht aktiviert. Um die Ablaufverfolgung zu aktivieren, müssen Sie einen Ablaufverfolgungslistener erstellen und eine andere Ablaufverfolgungsebene als "Off" für die ausgewählte Ablaufverfolgungsquelle in der Konfiguration festlegen; WCF wird hingegen keine ablaufverfolgungen generiert. Wenn Sie keinen Listener angeben, ist die Ablaufverfolgung automatisch deaktiviert. Wenn Sie einen Listener definieren, jedoch keine Ebene angeben, wird die Ebene standardmäßig auf "Off" festgelegt. Das bedeutet, dass keine Ablaufverfolgung ausgegeben wird.  
   
- Wenn Sie [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Erweiterungspunkte (z. B. aufrufende Instanzen für benutzerdefinierte Vorgänge) verwenden, müssen Sie eigene Ablaufverfolgungen ausgeben. Dies liegt daran, dass [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] bei Implementierung eines Erweiterungspunkts die Standardablaufverfolgungen nicht mehr im Standardpfad ausgeben kann. Wenn Sie keine Unterstützung für eine manuelle Ablaufverfolgung durch Ausgabe von Ablaufverfolgungen implementieren, werden die erwarteten Ablaufverfolgungen möglicherweise nicht angezeigt.  
+ Bei Verwendung von WCF-Erweiterbarkeitspunkte wie benutzerdefinierte Vorgänge Aufrufern vorgesehen, sollten Sie eigene ablaufverfolgungen ausgeben. Dies liegt daran, wenn Sie einen Erweiterungspunkt implementieren, WCF nicht mehr die standardablaufverfolgungen im Standardpfad ausgeben kann. Wenn Sie keine Unterstützung für eine manuelle Ablaufverfolgung durch Ausgabe von Ablaufverfolgungen implementieren, werden die erwarteten Ablaufverfolgungen möglicherweise nicht angezeigt.  
   
  Sie können die Ablaufverfolgung konfigurieren, indem Sie die Konfigurationsdatei der Anwendung bearbeiten, entweder Web.config für im Web gehostete Anwendungen oder Appname.exe.config für selbst gehostete Anwendungen. Das folgende Beispiel zeigt eine solche Bearbeitung. Weitere Informationen zu diesen Einstellungen finden Sie im Abschnitt "Konfigurieren von Trace-Listener zur Verwendung von Ablaufverfolgungen".  
   
@@ -52,12 +52,12 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
 ```  
   
 > [!NOTE]
->  So bearbeiten Sie die Konfigurationsdatei von einem [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] -Dienstprojekt in Visual Studio, klicken Sie mit der mit der rechten Maustaste auf die Konfigurationsdatei der Anwendung – entweder Web.config für im Web gehostete Anwendungen oder Appname.exe.config für selbst gehostete Anwendung in  **Projektmappen-Explorer**. Wählen Sie dann die **WCF-Konfiguration bearbeiten** Kontextmenüelement. Dadurch wird die [Dienstkonfigurations-Editor-Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), können Sie zum Ändern der Konfigurationseinstellungen für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Dienste mit einer grafischen Benutzeroberfläche.  
+>  Zum Bearbeiten der Konfigurationsdatei von einem WCF-Dienstprojekt in Visual Studio mit der rechten Maustaste klicken Sie auf die Anwendungskonfigurationsdatei – entweder Web.config für im Web gehostete Anwendungen oder Appname.exe.config für selbst gehostete Anwendung in **Projektmappen-Explorer** . Wählen Sie dann die **WCF-Konfiguration bearbeiten** Kontextmenüelement. Dadurch wird die [Dienstkonfigurations-Editor-Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), können Sie Konfigurationseinstellungen für WCF-Dienste, die mithilfe einer grafischen Benutzeroberfläche zu ändern.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] definiert eine Ablaufverfolgungsquelle für jede Assembly. Innerhalb einer Assembly generierte Ablaufverfolgungen werden von den Listenern verwendet, die für diese Quelle definiert sind. Folgende Ablaufverfolgungsquellen sind definiert:  
+ WCF definiert eine Ablaufverfolgungsquelle für jede Assembly. Innerhalb einer Assembly generierte Ablaufverfolgungen werden von den Listenern verwendet, die für diese Quelle definiert sind. Folgende Ablaufverfolgungsquellen sind definiert:  
   
--   System.ServiceModel: Protokolliert alle Stufen der [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Verarbeitung, jedes Lesen der Konfiguration, Verarbeiten einer Nachricht beim Transport, jede Sicherheitsverarbeitung, das Senden einer Nachricht im Benutzercode usw.  
+-   System.ServiceModel: Protokolliert alle Stufen der WCF-Verarbeitung, bei jedem Lesen der Konfiguration ist, wird eine Nachricht im Transport verarbeitet, Sicherheit verarbeiten, eine Nachricht im Benutzercode usw. weitergeleitet wird.  
   
 -   System.ServiceModel.MessageLogging: Protokolliert alle Nachrichten, die das System durchlaufen.  
   
@@ -135,7 +135,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
  Weitere Informationen zum Erstellen von benutzerdefinierten Ablaufverfolgungsquellen, finden Sie unter [erweitern Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Konfigurieren von Ablaufverfolgungslistenern zur Verwendung von Ablaufverfolgungen  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] übergibt während der Laufzeit Ablaufverfolgungsdaten an die Listener, die die Daten verarbeiten. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stellt verschiedene vordefinierte Listener für <xref:System.Diagnostics> bereit. Diese Listener unterscheiden sich im Format, das für die Ausgabe verwendet wird. Sie können auch benutzerdefinierte Listenertypen hinzufügen.  
+ Zur Laufzeit feeds WCF Ablaufverfolgungsdaten an die Listener, die die Daten verarbeiten. WCF bietet verschiedene vordefinierte Listener für <xref:System.Diagnostics>, die in das Format, das sie, für die Ausgabe verwenden unterscheiden. Sie können auch benutzerdefinierte Listenertypen hinzufügen.  
   
  Mit `add` können Sie den Namen und den Typ des Ablaufverfolgungslisteners angeben, den Sie verwenden möchten. In unserer Beispielkonfiguration haben wir den Listener `traceListener` genannt und den standardmäßigen .NET Framework-Ablaufverfolgungslistener (`System.Diagnostics.XmlWriterTraceListener`) als zu verwendenden Typ angegeben. Sie können jeder Quelle beliebig viele Ablaufverfolgungslistener hinzufügen. Wenn der Ablaufverfolgungslistener die Ablaufverfolgung an eine Datei ausgibt, müssen Sie den Speicherort der Ausgabedatei angeben und sie in der Konfigurationsdatei benennen. Legen Sie dazu `initializeData` auf den Namen der Datei für diesen Listener fest. Wenn Sie keinen Dateinamen angeben, wird basierend auf dem verwendeten Listenertyp ein beliebiger Dateiname generiert. Wenn <xref:System.Diagnostics.XmlWriterTraceListener> verwendet wird, wird ein Dateiname ohne Erweiterung generiert. Beim Implementieren eines benutzerdefinierten Listeners können Sie dieses Attribut auch verwenden, um andere Initialisierungsdaten als den Dateinamen zu erhalten. Sie können für dieses Attribut z. B. einen Datenbankbezeichner angeben.  
   
@@ -169,13 +169,13 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
  Mit dem für das `activityTracing`-Attribut angegebenen `switchValue`-Wert wird die Aktivitätsablaufverfolgung aktiviert, die Ablaufverfolgungen für Aktivitätsgrenzen und Übertragungen innerhalb von Endpunkten ausgibt.  
   
 > [!NOTE]
->  Wenn Sie bestimmte Erweiterungsfunktionen in [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] verwenden, wird möglicherweise eine Ausnahme des Typs <xref:System.NullReferenceException> ausgelöst, wenn die Aktivitätsablaufverfolgung aktiviert ist. Um dieses Problem zu beheben, überprüfen Sie die Konfigurationsdatei der Anwendung und stellen sicher, dass das `switchValue`-Attribut für die Ablaufverfolgungsquelle nicht auf `activityTracing` festgelegt wurde.  
+>  Wenn Sie bestimmte Erweiterungsfunktionen in WCF verwenden, erhalten Sie möglicherweise eine <xref:System.NullReferenceException> Wenn die aktivitätsablaufverfolgung aktiviert ist. Um dieses Problem zu beheben, überprüfen Sie die Konfigurationsdatei der Anwendung und stellen sicher, dass das `switchValue`-Attribut für die Ablaufverfolgungsquelle nicht auf `activityTracing` festgelegt wurde.  
   
  Das `propagateActivity`-Attribut gibt an, ob die Aktivität an andere Endpunkte weitergegeben werden soll, die an dem Nachrichtenaustausch teilnehmen. Wenn Sie diesen Wert auf `true` festlegen, können Sie anhand von Ablaufverfolgungsdateien, die durch zwei Endpunkte generiert wurden, feststellen, wie eine Reihe von Ablaufverfolgungen an einem Endpunkt zu einer Reihe von Ablaufverfolgungen an einem anderen Endpunkt übergegangen sind.  
   
  Weitere Informationen zu aktivitätsablaufverfolgung und Weitergabe, finden Sie unter [Weitergabe](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
- Beide `propagateActivity` und `ActivityTracing` boolesche Werte gelten für die System.ServiceModel TraceSource. Die `ActivityTracing` Wert gilt auch für jede Ablaufverfolgungsquelle einschließlich [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] oder eine benutzerdefinierte Pakete.  
+ Beide `propagateActivity` und `ActivityTracing` boolesche Werte gelten für die System.ServiceModel TraceSource. Die `ActivityTracing` Wert gilt auch für jede Ablaufverfolgungsquelle, einschließlich WCF oder eine benutzerdefinierte Pakete.  
   
  Das `propagateActivity`-Attribut kann nicht bei benutzerdefinierten Ablaufverfolgungsquellen verwendet werden. Stellen Sie bei der Aktivitäts-ID-Weitergabe in Benutzercode sicher, dass Sie `ActivityTracing` von ServiceModel nicht festlegen, während das `propagateActivity`-Attribute von ServiceModel noch auf `true` festgelegt ist.  
   

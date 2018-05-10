@@ -2,20 +2,20 @@
 title: Benutzerdefinierte Lebensdauer
 ms.date: 03/30/2017
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1d9baa2d6eab476d5c8428208576f341e71fef2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e41c970739b8036730fa601433ce7157e01d7e19
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-lifetime"></a>Benutzerdefinierte Lebensdauer
-In diesem Beispiel wird veranschaulicht, wie so schreiben Sie eine Windows Communication Foundation (WCF)-Erweiterung zum Bereitstellen von benutzerdefinierte Lebensdauerdienste für freigegebene [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienstinstanzen.  
+Dieses Beispiel veranschaulicht, wie so schreiben Sie eine Windows Communication Foundation (WCF)-Erweiterung, um benutzerdefinierte Lebensdauerdienste für freigegebene Instanzen von WCF-Dienst bereitzustellen.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="shared-instancing"></a>Freigegebene Instanziierung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt mehrere Instanziierungsmodi für die Dienstinstanzen bereit. Der freigegebene Instanziierungsmodus, der in diesem Thema behandelt wird, bietet eine Möglichkeit, eine Dienstinstanz zwischen mehreren Kanälen freizugeben. Clients können entweder die Endpunktadresse der Instanz lokal auflösen oder eine Factorymethode im Dienst kontaktieren, um die Endpunktadresse einer ausgeführten Instanz abzurufen. Sobald die Endpunktadresse vorliegt, kann ein neuer Kanal erstellt und die Kommunikation gestartet werden. Im folgenden Codeausschnitt wird gezeigt, wie eine Clientanwendung einen neuen Kanal zu einer vorhandenen Dienstinstanz erstellt.  
+ WCF bietet mehrere instanziierungsmodi für Ihre Dienstinstanzen. Der freigegebene Instanziierungsmodus, der in diesem Thema behandelt wird, bietet eine Möglichkeit, eine Dienstinstanz zwischen mehreren Kanälen freizugeben. Clients können entweder die Endpunktadresse der Instanz lokal auflösen oder eine Factorymethode im Dienst kontaktieren, um die Endpunktadresse einer ausgeführten Instanz abzurufen. Sobald die Endpunktadresse vorliegt, kann ein neuer Kanal erstellt und die Kommunikation gestartet werden. Im folgenden Codeausschnitt wird gezeigt, wie eine Clientanwendung einen neuen Kanal zu einer vorhandenen Dienstinstanz erstellt.  
   
 ```  
 // Create the first channel.  
@@ -34,12 +34,12 @@ ChannelFactory<IEchoService> channelFactory2 =
 IEchoService proxy2 = channelFactory2.CreateChannel();  
 ```  
   
- Der freigegebene Instanziierungsmodus unterscheidet sich von anderen Instanziierungsmodi in seiner einzigartigen Methode zum Freigeben von Dienstinstanzen. Wenn alle Kanäle für eine Instanz geschlossen sind, startet die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit des Diensts einen Zeitgeber. Wenn vor Ablauf des Timeouts keine Verbindung hergestellt wird, gibt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Instanz frei und erhebt Anspruch auf die Ressourcen. Im Rahmen der Beendigungsprozedur ruft [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>-Methode aller <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>-Implementierungen auf, bevor die Instanz freigegeben wird. Wenn alle Implementierungen `true` zurückgeben, wird die Instanz freigegeben. Andernfalls ist die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>-Implementierung dafür zuständig, den `Dispatcher` unter Verwendung einer Rückrufmethode von dem Leerlaufzustand zu benachrichtigen.  
+ Der freigegebene Instanziierungsmodus unterscheidet sich von anderen Instanziierungsmodi in seiner einzigartigen Methode zum Freigeben von Dienstinstanzen. Wenn alle Kanäle für eine Instanz geschlossen sind, wird die WCF-Dienstlaufzeit ein Timer gestartet. Wenn niemand eine Verbindung herstellt, bevor das Timeout abläuft, wird WCF die Instanz frei und die Ressourcen. Im Rahmen der beendigungsprozedur ruft WCF die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> -Methode für alle <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> Implementierungen, bevor die Instanz freigegeben. Wenn alle Implementierungen `true` zurückgeben, wird die Instanz freigegeben. Andernfalls ist die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>-Implementierung dafür zuständig, den `Dispatcher` unter Verwendung einer Rückrufmethode von dem Leerlaufzustand zu benachrichtigen.  
   
  Standardmäßig beträgt der Leerlauftimeoutwert von <xref:System.ServiceModel.InstanceContext> eine Minute. In diesem Beispiel wird jedoch gezeigt, wie Sie diesen Wert erweitern können, indem Sie die benutzerdefinierte Erweiterung verwenden.  
   
 ## <a name="extending-the-instancecontext"></a>Erweitern von InstanceContext  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist <xref:System.ServiceModel.InstanceContext> die Verknüpfung zwischen der Dienstinstanz und `Dispatcher`. Sie können diese Laufzeitkomponente in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erweitern, indem Sie mithilfe des erweiterbaren Objektmusters einen neuen Zustand oder ein neues Verhalten hinzufügen. Das erweiterbare Objektmuster wird in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet, um vorhandene Laufzeitklassen um neue Funktionen zu erweitern oder um neue Zustandsfunktionen zu einem Objekt hinzuzufügen. Es gibt drei Schnittstellen im erweiterbaren Objektmuster: `IExtensibleObject<T>`, `IExtension<T>` und `IExtensionCollection<T>`.  
+ In WCF <xref:System.ServiceModel.InstanceContext> ist der Link zwischen der Dienstinstanz und die `Dispatcher`. WCF können Sie diese Laufzeitkomponente zu erweitern, indem mithilfe des erweiterbaren Objektmusters Zustand "Neu" oder Verhalten hinzufügen. Das erweiterbare Objektmuster wird in WCF verwendet, um vorhandene Laufzeitklassen neue Funktionen zu erweitern oder um neue Zustandsfunktionen zu einem Objekt hinzuzufügen. Es gibt drei Schnittstellen im erweiterbaren Objektmuster: `IExtensibleObject<T>`, `IExtension<T>` und `IExtensionCollection<T>`.  
   
  Die `IExtensibleObject<T>`-Schnittstelle wird von Objekten implementiert, um Erweiterungen zuzulassen, die ihre Funktionalität anpassen.  
   
@@ -80,7 +80,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>, ICustomLease
 }  
 ```  
   
- Wenn in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>-Methode in der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>-Implementierung aufgerufen wird, wird dieser Aufruf an die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>-Methode der `CustomLeaseExtension` weitergeleitet. Dann überprüft die `CustomLeaseExtension` den privaten Zustand, um festzustellen, ob sich der <xref:System.ServiceModel.InstanceContext> im Leerlauf befindet. Wenn er sich in Leerlauf befindet, wird `true` zurückgegeben. Andernfalls wird ein Zeitgeber für eine bestimmte erweiterte Lebensdauerperiode gestartet.  
+ Wenn WCF aufruft der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> Methode in der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> Implementierung dieser Aufruf an die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> Methode der `CustomLeaseExtension`. Dann überprüft die `CustomLeaseExtension` den privaten Zustand, um festzustellen, ob sich der <xref:System.ServiceModel.InstanceContext> im Leerlauf befindet. Wenn er sich in Leerlauf befindet, wird `true` zurückgegeben. Andernfalls wird ein Zeitgeber für eine bestimmte erweiterte Lebensdauerperiode gestartet.  
   
 ```  
 public bool IsIdle  
@@ -116,7 +116,7 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
   
  Der ausgeführte Zeitgeber kann nicht erneuert werden, wenn eine neue Nachricht für die Instanz eingeht, die in den Leerlaufzustand verschoben wird.  
   
- Im Beispiel wird <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementiert, um die Aufrufe der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>-Methode abzufangen und diese zur `CustomLeaseExtension` weiterzuleiten. Die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>-Implementierung ist in der `CustomLifetimeLease`-Klasse enthalten. Die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>-Methode wird aufgerufen, wenn [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] im Begriff ist, die Dienstinstanz freizugeben. Es gibt jedoch nur eine Instanz einer bestimmten `ISharedSessionInstance`-Implementierung in der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>-Auflistung von ServiceBehavior. Das bedeutet, dass nicht vorhergesagt werden kann, ob <xref:System.ServiceModel.InstanceContext> geschlossen ist, wenn [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>-Methode überprüft. Aus diesem Grund werden Anforderungen der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>-Methode in diesem Beispiel mit der Threadsperre serialisiert.  
+ Im Beispiel wird <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementiert, um die Aufrufe der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>-Methode abzufangen und diese zur `CustomLeaseExtension` weiterzuleiten. Die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>-Implementierung ist in der `CustomLifetimeLease`-Klasse enthalten. Die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> Methode wird aufgerufen, wenn WCF Begriff ist, die Dienstinstanz freizugeben. Es gibt jedoch nur eine Instanz einer bestimmten `ISharedSessionInstance`-Implementierung in der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>-Auflistung von ServiceBehavior. Das bedeutet, dass es keine Möglichkeit, zu wissen, die <xref:System.ServiceModel.InstanceContext> geschlossen wird, die zum Zeitpunkt der WCF überprüft die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> Methode. Aus diesem Grund werden Anforderungen der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>-Methode in diesem Beispiel mit der Threadsperre serialisiert.  
   
 > [!IMPORTANT]
 >  Die Verwendung der Threadsperre wird nicht empfohlen, da die Leistung der Anwendung durch die Serialisierung deutlich beeinträchtigt werden kann.  
@@ -160,7 +160,7 @@ public void NotifyIdle(InstanceContextIdleCallback callback,
   
  Bevor die `ICustomLease.IsIdle`-Eigenschaft überprüft wird, muss die Rückrufeigenschaft festgelegt werden, damit die `CustomLeaseExtension` den Verteiler benachrichtigen kann, sobald sie in den Leerlauf wechselt. Wenn `ICustomLease.IsIdle` `true` zurückgibt, wird der private `isIdle`-Member einfach in `CustomLifetimeLease` auf `true` festgelegt, und die Rückrufmethode wird vom Member aufgerufen. Da im Code eine Sperre enthalten ist, können andere Threads den Wert dieses privaten Members nicht ändern. Wenn der Verteiler das nächste Mal die `ISharedSessionLifetime.IsIdle`-Eigenschaft überprüft, gibt sie `true` zurück, und der Verteiler kann die Instanz freigeben.  
   
- Jetzt da die Vorarbeit für die benutzerdefinierte Erweiterung abgeschlossen ist, muss sie in das Dienstmodell eingebunden werden. Um die `CustomLeaseExtension`-Implementierung in den <xref:System.ServiceModel.InstanceContext> einzubinden, stellt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer>-Schnittstelle bereit, um das Bootstrapping von <xref:System.ServiceModel.InstanceContext> auszuführen. In diesem Beispiel implementiert die `CustomLeaseInitializer`-Klasse diese Schnittstelle und fügt eine `CustomLeaseExtension`-Instanz zur <xref:System.ServiceModel.InstanceContext.Extensions%2A>-Auflistung aus der einzigen Methodeninitialisierung hinzu. Diese Methode wird vom Verteiler aufgerufen, während <xref:System.ServiceModel.InstanceContext> initialisiert wird.  
+ Jetzt da die Vorarbeit für die benutzerdefinierte Erweiterung abgeschlossen ist, muss sie in das Dienstmodell eingebunden werden. Zum Einbinden der `CustomLeaseExtension` -Implementierung, die die <xref:System.ServiceModel.InstanceContext>, WCF bietet die <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> Schnittstelle, um das bootstrapping von ausführen <xref:System.ServiceModel.InstanceContext>. In diesem Beispiel implementiert die `CustomLeaseInitializer`-Klasse diese Schnittstelle und fügt eine `CustomLeaseExtension`-Instanz zur <xref:System.ServiceModel.InstanceContext.Extensions%2A>-Auflistung aus der einzigen Methodeninitialisierung hinzu. Diese Methode wird vom Verteiler aufgerufen, während <xref:System.ServiceModel.InstanceContext> initialisiert wird.  
   
 ```  
 public void Initialize(InstanceContext instanceContext, Message message)  

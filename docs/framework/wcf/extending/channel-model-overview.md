@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: df2993d9ba25c043aa66029aa00fae945d5cec9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13fe07d1521832ed12ba5770e0bd069ff9b917d2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="channel-model-overview"></a>Übersicht über das Kanalmodell
-Der Kanalstapel für Windows Communication Foundation (WCF) ist ein Überlagerter Kommunikationsstapel mit einem oder mehreren Kanälen, die Nachrichten verarbeiten. Am unteren Ende des Stapels befindet sich ein Transportkanal, der für die Anpassung des Kanalstapels an den zugrunde liegenden Transport (z. B. TCP, HTTP, SMTP und andere Transportarten) zuständig ist. Kanäle stellen ein Programmiermodell auf niedriger Ebene zum Senden und Empfangen von Nachrichten bereit. Dieses Programmiermodell nutzt mehrere Schnittstellen und andere Typen, die zusammen als [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kanalmodell bezeichnet werden. In diesem Thema werden Kanalformen, die Konstruktion eines grundlegenden Kanallisteners (dienstseitig) und einer Kanalfactory (clientseitig) behandelt.  
+Der Kanalstapel für Windows Communication Foundation (WCF) ist ein Überlagerter Kommunikationsstapel mit einem oder mehreren Kanälen, die Nachrichten verarbeiten. Am unteren Ende des Stapels befindet sich ein Transportkanal, der für die Anpassung des Kanalstapels an den zugrunde liegenden Transport (z. B. TCP, HTTP, SMTP und andere Transportarten) zuständig ist. Kanäle stellen ein Programmiermodell auf niedriger Ebene zum Senden und Empfangen von Nachrichten bereit. Dieses Programmiermodell nutzt mehrere Schnittstellen und andere Typen, die zusammen als WCF-Kanal-Modells bezeichnet. In diesem Thema werden Kanalformen, die Konstruktion eines grundlegenden Kanallisteners (dienstseitig) und einer Kanalfactory (clientseitig) behandelt.  
   
 ## <a name="channel-stack"></a>Kanalstapel  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkte kommunizieren über einen Kommunikationsstapel, den so genannten Kanalstapel, mit der Welt. Das folgende Diagramm vergleicht den Kanalstapel mit anderen Kommunikationsstapeln, z. B. TCP/IP.  
+ WCF-Endpunkten kommunizieren mit der Welt über einen Kommunikationsstapel genannten Kanalstapel. Das folgende Diagramm vergleicht den Kanalstapel mit anderen Kommunikationsstapeln, z. B. TCP/IP.  
   
  ![Channel Modell](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "Wcfc_ChannelStackHighLevelc")  
   

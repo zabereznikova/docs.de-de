@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Details|Ab .NET 4.5 handelt es sich bei „iPad“ um einen Bezeichner in der ASP.NET-Standarddatei für Browserfunktionen und sollte deshalb nicht in einer Datei für benutzerdefinierte Funktionen verwendet werden.|
+|Details|Ab .NET Framework 4.5 handelt es sich bei „iPad“ um einen Bezeichner in der ASP.NET-Standarddatei für Browserfunktionen, der deshalb nicht in einer Datei für benutzerdefinierte Funktionen verwendet werden sollte.|
 |Vorschlag|Wenn bestimmte Funktionen von „iPad“ erforderlich sind, muss das Verhalten von „iPad“ geändert werden, indem die Funktionen auf dem vorab definierten Gateway auf „refID &quot;iPad&quot;“ festgelegt werden, statt eine neue ID für &quot;iPad&quot; durch Abgleich mit dem Benutzer-Agent zu generieren.|
 |Bereich|Microsoft Edge|
 |Version|4.5|

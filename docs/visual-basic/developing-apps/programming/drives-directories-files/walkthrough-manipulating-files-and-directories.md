@@ -25,11 +25,11 @@ ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 12461cc99ec03ed87924c894e23740f9d76385ed
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic
 Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen der Datei-E/A in Visual Basic. Es wird beschrieben, wie Sie eine kleine Anwendung erstellen können, in der Textdateien in einem Verzeichnis aufgelistet und überprüft werden. Die Anwendung stellt Dateiattribute und die erste Zeile des Inhalts jeder ausgewählten Textdatei zur Verfügung. Es besteht die Möglichkeit, Informationen in eine Protokolldatei zu schreiben.  
@@ -48,7 +48,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 3.  Geben Sie im Feld **Name** `FileExplorer` ein, um den Projektnamen festzulegen, und klicken Sie anschließend auf **OK**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] fügt das Projekt zum **Projektmappen-Explorer** hinzu. Der Windows Forms-Designer wird geöffnet.  
+     Visual Studio fügt das Projekt in den **Projektmappen-Explorer** ein. Der Windows Forms-Designer wird geöffnet.  
   
 4.  Fügen Sie die Steuerelemente aus der folgenden Tabelle zum Formular hinzu, und legen Sie die entsprechenden Werte für die Eigenschaften fest.  
   

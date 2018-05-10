@@ -2,11 +2,11 @@
 title: Ausgeben von Benutzercode-Ablaufverfolgungen
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="emitting-user-code-traces"></a>Ausgeben von Benutzercode-Ablaufverfolgungen
 Zusätzlich zum Aktivieren der Ablaufverfolgung in der Konfiguration zum Sammeln von Instrumentationsdaten, die von der Windows Communication Foundation (WCF) generiert, können Sie auch programmgesteuert in Benutzercode Ausgeben von ablaufverfolgungen. Auf diese Weise können proaktiv Instrumentierungsdaten zur späteren Analyse erstellt werden. Die entsprechende Vorgehensweise wird in diesem Thema erläutert.  
@@ -65,9 +65,9 @@ Trace.CorrelationManager.ActivityId = oldID;
  Wird das `propagateActivity`-Attribut für die `true`-Ablaufverfolgungsquelle sowohl in der Konfigurationsdatei des Clients als auch in der Konfigurationsdatei des Diensts auf `System.ServiceModel` festgelegt, erfolgt die Dienstverarbeitung für die Add-Anforderung in der Aktivität, die auch für den Client definiert ist. Werden vom Dienst eigene Aktivitäten und Übertragungen definiert, erscheinen die Dienstablaufverfolgungen nicht in der vom Client weitergegebenen Aktivität. Stattdessen erscheinen sie in einer Aktivität, die anhand von Übertragungsablaufverfolgungen mit der Aktivität korreliert wird, deren ID vom Client weitergegeben wird.  
   
 > [!NOTE]
->  Ist das `propagateActivity`-Attribut sowohl für den Client als auch für den Dienst auf `true` festgelegt, wird die Umgebungsaktivität im Vorgangsbereich des Diensts von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] festgelegt.  
+>  Wenn die `propagateActivity` -Attributsatz zur `true` auf dem Client und Dienst die umgebungsaktivität im Vorgangsbereich des Diensts von WCF festgelegt ist.  
   
- Mithilfe des folgenden Codes können Sie überprüfen, ob eine Aktivität von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] im Bereich festgelegt wurde:  
+ Sie können den folgenden Code verwenden, um zu überprüfen, ob eine Aktivität im Bereich von WCF festgelegt wurde.  
   
 ```  
 // Check if an activity was set in scope by WCF, if it was   
@@ -135,7 +135,7 @@ Endpunktübergreifende Fehler für eine bestimmte Anforderung erscheinen in der 
  ![Verwenden von Trace Viewer zum Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Diagrammansicht der Fehlerkorrelation  
   
- Zum Abrufen der vorherigen Ablaufverfolgungen wird `ActivityTracing` für die Benutzerablaufverfolgungsquellen und `propagateActivity=true` für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt. `ActivityTracing` wurde nicht für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt, um die Aktivitätsweitergabe von Benutzercode an Benutzercode zu ermöglichen. (Bei aktivierter ServiceModel-Ablaufverfolgung wird die im Client definierte Aktivitäts-ID nicht bis zum Dienstbenutzercode weitergegeben. Von Übertragungen werden dagegen die Benutzercodeaktivitäten von Client und Dienst mit den Zwischenaktivitäten von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] korreliert.)  
+ Zum Abrufen der vorherigen Ablaufverfolgungen wird `ActivityTracing` für die Benutzerablaufverfolgungsquellen und `propagateActivity=true` für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt. `ActivityTracing` wurde nicht für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt, um die Aktivitätsweitergabe von Benutzercode an Benutzercode zu ermöglichen. (Wenn ServiceModel-aktivitätsablaufverfolgung aktiviert ist, wird die auf dem Client definierte Aktivitäts-ID nicht ganz nach den Dienstcode Benutzer weitergegeben; Übertragungen korrelieren jedoch der Client und Dienst benutzercodeaktivitäten an die intermediate WCF-Aktivitäten.)  
   
  Das Definieren von Aktivitäten und das Weitergeben der Aktivitäts-ID ermöglicht das endpunktübergreifende Herstellen eines direkten Fehlerzusammenhangs. Dadurch lässt sich die Grundursache eines Fehlers schneller ermitteln.  
   

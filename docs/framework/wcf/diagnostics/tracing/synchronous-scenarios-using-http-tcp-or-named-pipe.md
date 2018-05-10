@@ -2,11 +2,11 @@
 title: Synchrone Szenarien mit HTTP, TCP oder benannten Pipes
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Synchrone Szenarien mit HTTP, TCP oder benannten Pipes
 In diesem Thema werden die Aktivitäten und Übertragungen für verschiedene synchrone Anforderungs-/Antwortszenarien beschrieben. Dabei werden HTTP, TCP oder benannte Pipes mit einem Singlethreadclient verwendet. Finden Sie unter [asynchrone Szenarien mit HTTP, TCP oder Named Pipe-](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) für Weitere Informationen zu Multithread-Anforderungen.  
@@ -54,7 +54,7 @@ In diesem Thema werden die Aktivitäten und Übertragungen für verschiedene syn
  Der einzige Unterschied zu dem vorherigen Szenario besteht darin, dass eine SOAP-Fehlernachricht als Antwortnachricht zurückgegeben wird. Wenn `propagateActivity` = `true`, wird die Aktivitäts-ID der Anforderungsnachricht an die SOAP-Fehlernachricht hinzugefügt.  
   
 ## <a name="synchronous-one-way-without-errors"></a>Synchrone unidirektionale Kommunikation ohne Fehler  
- Der einzige Unterschied zu dem ersten Szenario ist, dass keine Nachricht an den Server zurückgegeben wird. Für HTTP-basierte Protokolle wird immer noch ein Status (gültig oder Fehler) an den Client zurückgegeben. Der Grund dafür ist, dass HTTP das einzige Protokoll mit Anforderungs-Anwort-Semantik ist, das Teil des [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Protokollstapels ist. Da TCP-Verarbeitung für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ausgeblendet wird, wird keine Bestätigung an den Client gesendet.  
+ Der einzige Unterschied zu dem ersten Szenario ist, dass keine Nachricht an den Server zurückgegeben wird. Für HTTP-basierte Protokolle wird immer noch ein Status (gültig oder Fehler) an den Client zurückgegeben. Dies ist, da "HTTP" ist das einzige Protokoll mit einem Anforderung-Antwort-Semantik, die Teil der WCF-Protokollstapel ist. Da WCF TCP-Verarbeitung sichtbar ist, wird keine Bestätigung an den Client gesendet.  
   
 ## <a name="synchronous-one-way-with-errors"></a>Synchrone unidirektionale Kommunikation mit Fehlern  
  Wenn während der Verarbeitung der Nachricht ein Fehler auftritt (Q oder darüber hinaus), wird keine Benachrichtigung an den Client zurückgegeben. Dies ist identisch mit dem Szenario "Synchrone unidirektionale Kommunikation ohne Fehler". Sie sollten kein unidirektionales Szenario verwenden, wenn Sie eine Fehlermeldung empfangen möchten.  

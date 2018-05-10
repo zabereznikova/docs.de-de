@@ -2,11 +2,11 @@
 title: Benutzerdefinierter Diensthost
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: c081858d57d9575a616c7c057047b0593a177f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c02ceb114a5346ea2a851f711f1ab9b50373cb75
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-service-host"></a>Benutzerdefinierter Diensthost
 In diesem Beispiel wird veranschaulicht, wie mit einer benutzerdefinierten Ableitung der <xref:System.ServiceModel.ServiceHost>-Klasse das Laufzeitverhalten eines Diensts geändert wird. Dieser Ansatz stellt eine wiederverwendbare Alternative zum Konfigurieren einer großen Anzahl von Diensten auf die übliche Weise war. Außerdem zeigt das Beispiel, wie mithilfe der <xref:System.ServiceModel.Activation.ServiceHostFactory>-Klasse ein benutzerdefinierter ServiceHost in der IIS-(Internet Information Services, Internetinformationsdienste-) oder WAS-(Windows Process Activation Service-)Hostumgebung verwendet wird.  
@@ -121,7 +121,7 @@ host.Open();
  Der benutzerdefinierte Host liest die Endpunktkonfiguration des Diensts nach wie vor aus der Konfigurationsdatei der Anwendung, so als wäre die <xref:System.ServiceModel.ServiceHost>-Standardklasse zum Hosten des Diensts verwendet worden. Da jedoch in dem benutzerdefinierten Host die Logik für die Aktivierung der Metadatenveröffentlichung hinzugefügt wurde, muss das Metadatenveröffentlichungsverhalten nicht mehr explizit in der Konfiguration aktiviert werden. Dieser Ansatz bietet vor allem dann Vorteile, wenn Sie eine Anwendung erstellen, die mehrere Dienste enthält, und Sie die Metadatenveröffentlichung auf allen diesen Diensten aktivieren möchten, ohne jedes Mal die gleichen Konfigurationselemente schreiben zu müssen.  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>Verwenden eines benutzerdefinierten Diensthosts in IIS oder WAS  
- Die Verwendung eines benutzerdefinierten Diensthosts in einem Selbsthostszenario ist einfach, da ausschließlich Ihr eigener Anwendungscode für die Erstellung und Öffnung der Diensthostinstanz verantwortlich ist. In der IIS- oder WAS-Hostingumgebung instanziiert jedoch die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur dynamisch den Host Ihres Diensts als Antwort auf eingehende Nachrichten. Es können in dieser Hostingumgebung auch benutzerdefinierte Diensthosts verwendet werden, für diese ist jedoch zusätzlicher Code in Form einer ServiceHostFactory erforderlich. Im folgenden Code wird eine Ableitung von <xref:System.ServiceModel.Activation.ServiceHostFactory> dargestellt, die Instanzen des benutzerdefinierten `SelfDescribingServiceHost` zurückgibt.  
+ Die Verwendung eines benutzerdefinierten Diensthosts in einem Selbsthostszenario ist einfach, da ausschließlich Ihr eigener Anwendungscode für die Erstellung und Öffnung der Diensthostinstanz verantwortlich ist. In der IIS- oder WAS-Hostingumgebung ist jedoch die WCF-Infrastruktur dynamisch den Host Ihres Diensts als Antwort auf eingehende Nachrichten instanziieren. Es können in dieser Hostingumgebung auch benutzerdefinierte Diensthosts verwendet werden, für diese ist jedoch zusätzlicher Code in Form einer ServiceHostFactory erforderlich. Im folgenden Code wird eine Ableitung von <xref:System.ServiceModel.Activation.ServiceHostFactory> dargestellt, die Instanzen des benutzerdefinierten `SelfDescribingServiceHost` zurückgibt.  
   
 ```  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
@@ -150,7 +150,7 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>  
 ```  
   
- Hier wurde der `Factory`-Direktive ein zusätzliches `@ServiceHost`-Attribut hinzugefügt, und der CLR-Typname der benutzerdefinierten Factory wurde als Attributwert übergeben. Wenn IIS oder WAS eine Nachricht für diesen Dienst empfängt, erstellt die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Hostinginfrastruktur zuerst eine Instanz der ServiceHostFactory und instanziiert anschließend den Diensthost durch den Aufruf von `ServiceHostFactory.CreateServiceHost()` selbst.  
+ Hier wurde der `Factory`-Direktive ein zusätzliches `@ServiceHost`-Attribut hinzugefügt, und der CLR-Typname der benutzerdefinierten Factory wurde als Attributwert übergeben. Wenn IIS oder WAS eine Nachricht für diesen Dienst empfängt, wird der WCF--Hostinfrastruktur erstellt zunächst eine Instanz der ServiceHostFactory und instanziiert anschließend durch Aufrufen den Diensthost selbst `ServiceHostFactory.CreateServiceHost()`.  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
  Auch wenn dieses Beispiel einen voll funktionsfähigen Client und Dienstimplementierung bereitstellt, ist das Ziel des Beispiels, die Änderung des Laufzeitverhaltens des Diensts mithilfe eines benutzerdefinierten Hosts zu veranschaulichen. Führen Sie die folgenden Schritte aus:  

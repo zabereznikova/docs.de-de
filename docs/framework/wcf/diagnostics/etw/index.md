@@ -6,18 +6,18 @@ helpviewer_keywords:
 - administration [WCF], analytic tracing
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
-ms.openlocfilehash: a0e3e3d27283e588b161e2209c5a682558d18f79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 210418b8a8765a1fc59658e9df57c92ce087c95f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="analytic-tracing-with-etw"></a>Analytische Ablaufverfolgung per ETW
-Analytische Ablaufverfolgung von Windows Communication Foundation (WCF) bietet eine Möglichkeit zum Erfassen von Diagnoseinformationen während der Ausführung einer [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Dienst. Die Ereignisse der analytischen Ablaufverfolgung von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] werden im [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Stapel an wichtigen Punkten ausgegeben, um in einer Produktionsumgebung die Problembehandlung von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Diensten zu ermöglichen. Analytische Ablaufverfolgung für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] -Dienste hat minimale Auswirkungen auf die Leistung eines produktservers, der als Host [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] -Diensten wie diese Ereignisse sehr effizient in eine Sitzung für Event Tracing for Windows (ETW) ausgegeben werden.  
+Analytische Ablaufverfolgung von Windows Communication Foundation (WCF) bietet eine Möglichkeit zum Erfassen von Diagnoseinformationen während der Ausführung eines WCF-Diensts. WCF-analytischen Ablaufverfolgungsereignisse werden zu wichtigen Zeitpunkten zu ermöglichen, zur Problembehandlung von WCF-Diensten in einer produktiven Umgebung Stapelrahmen WCF ausgegeben. Analytische Ablaufverfolgung für WCF-Dienste hat minimale Auswirkungen auf die Leistung eines produktservers, der als Host [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] WCF-Dienste wie diese Ereignisse sehr effizient in eine Sitzung für Event Tracing for Windows (ETW) ausgegeben werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die analytische Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  
- Erläutert, wie die analytische Ablaufverfolgung von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] funktioniert.  
+ Erläutert, wie funktioniert die analytische Ablaufverfolgung von WCF in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)].  
   
  [Dynamisches Aktivieren der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)  
  Erläutert, wie Sie die Ablaufverfolgung per ETW dynamisch aktivieren und deaktivieren.  

@@ -2,11 +2,11 @@
 title: Vertrag zuerst-Tool
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f061f4dd37861c1cf3dd0cc8318de9f0f65b90e4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract-first-tool"></a>Vertrag zuerst-Tool
 Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] können Datenvertragsklassen mithilfe des Vertrag zuerst-Tools automatisch aus vorhandenen Diensten erstellt werden. Zum Verwenden des Vertrag zuerst-Tools muss die XSD (XML Schema Definition)-Datei lokal heruntergeladen werden. Das Tool kann keine Remotedatenverträge per HTTP importieren.  
@@ -58,7 +58,7 @@ Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!I
  Um dem Projekt den obigen Dienstvertrag hinzufügen, mit der rechten Maustaste des Projekts, und wählen Sie **neue hinzufügen...** . Wählen Sie im WCF-Bereich des Dialogfelds Vorlagen die Schemadefinition aus, und benennen Sie die neue Datei mit SampleContract.xsd. Kopieren Sie den obigen Code, und fügen Sie ihn in die Codeansicht der neuen Datei ein.  
   
 ## <a name="configuring-contract-first-options"></a>Konfigurieren von Vertrag zuerst-Optionen  
- Vertrag zuerst-Optionen können im Eigenschaftenmenü eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Projekts konfiguriert werden. Um die Vertrag zuerst-Entwicklung aktivieren möchten, wählen Sie die **XSD als Typdefinitionssprache aktivieren** Kontrollkästchen in der WCF-Seite des Fensters Eigenschaften Projekt.  
+ Vertrag zuerst-Optionen können im Eigenschaftenmenü eines WCF-Projekts konfiguriert werden. Um die Vertrag zuerst-Entwicklung aktivieren möchten, wählen Sie die **XSD als Typdefinitionssprache aktivieren** Kontrollkästchen in der WCF-Seite des Fensters Eigenschaften Projekt.  
   
  ![WCF-Projektoptionen mit Vertrag&#45;erste](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   

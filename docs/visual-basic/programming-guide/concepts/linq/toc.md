@@ -87,7 +87,6 @@
 ## [Gewusst wie: Steuern von Namespacepräfixen (LINQ to XML)](how-to-control-namespace-prefixes-linq-to-xml.md)
 ## [Bereich von Standardnamespaces](scope-of-default-namespaces.md)
 ## [Arbeiten mit globalen Namespaces (LINQ to XML)](working-with-global-namespaces-linq-to-xml.md)
-## [Namespaces (LINQ to XML)](namespaces-linq-to-xml.md)
 ## [Gewusst wie: Schreiben von Abfragen für XML in Namespaces](how-to-write-queries-on-xml-in-namespaces.md)
 
 # [Serialisieren von XML-Bäumen](serializing-xml-trees.md)

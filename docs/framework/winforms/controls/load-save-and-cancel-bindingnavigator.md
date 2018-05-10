@@ -1,13 +1,6 @@
 ---
-title: "Gewusst wie: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms"
-ms.custom: 
+title: 'Gewusst wie: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2dd45b33fb1f99c280e126b9e601692a85da5dba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f331c67dd22a6a9e2382ecc11d23c67cd2a5cbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Gewusst wie: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgebundene <xref:System.Windows.Forms.ToolStrip> Steuerelement, das zum Navigieren und Bearbeiten von Steuerelementen auf dem Formular, das an Daten gebunden werden soll.  
@@ -55,7 +43,7 @@ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgeb
   
     2.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Name%2A> Eigenschaft der Schaltflächen auf**LoadButton**,**SaveButton**, und**CancelButton**bzw.  
   
-    3.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaft der Schaltflächen auf**laden** `,` **speichern**, und**"Abbrechen"**.  
+    3.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaft der Schaltflächen auf**laden** `,` **speichern**, und **"Abbrechen"**.  
   
     4.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> Eigenschaft für die einzelnen Schaltflächen, um**Text**. Alternativ können Sie diese Eigenschaft festlegen, um**Image**oder**ImageAndText**festlegen und das Bild angezeigt werden die <xref:System.Windows.Forms.ToolStripItem.Image%2A> Eigenschaft.  
   
@@ -102,7 +90,7 @@ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgeb
     > [!NOTE]
     >  In einigen Fällen die <xref:System.Windows.Forms.BindingNavigator> Komponente müssen bereits ein**speichern** Schaltfläche aber keinen Code von Windows Forms-Designer generiert wurde. In diesem Fall können Sie im vorangehenden Code Platzieren der <xref:System.Windows.Forms.ToolStripItem.Click> -Ereignishandler für diese Schaltfläche, statt eine völlig neue Schaltfläche zu erstellen, auf die <xref:System.Windows.Forms.ToolStrip>. Allerdings die Schaltfläche "" ist standardmäßig deaktiviert, daher Sie festlegen müssen, die <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> Eigenschaft der Schaltfläche auf `true` haben Sie die Schaltfläche Funktion ordnungsgemäß.  
   
-12. Erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.ToolStripItem.Click> -Ereignis für die**"Abbrechen"** <xref:System.Windows.Forms.ToolStripButton> Sie zuvor erstellt haben, und Code schreiben, um alle Änderungen an den Datensatz "Abbrechen", der angezeigt wird.  
+12. Erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.ToolStripItem.Click> -Ereignis für die **"Abbrechen"** <xref:System.Windows.Forms.ToolStripButton> Sie zuvor erstellt haben, und Code schreiben, um alle Änderungen an den Datensatz "Abbrechen", der angezeigt wird.  
   
     ```vb  
     Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelButton.Click  

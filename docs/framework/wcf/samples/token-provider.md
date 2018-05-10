@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 97602a261f1e86cb70b38f21080c2a2e792605e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d513ddd41d87da7274f961969d261724b49aab65
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-provider"></a>Tokenanbieter
-Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um Sicherheitsinfrastruktur der Sicherheitsinfrastruktur Anmeldeinformationen bereitzustellen. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird auch mit einem [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter ausgeliefert. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
+Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um Sicherheitsinfrastruktur der Sicherheitsinfrastruktur Anmeldeinformationen bereitzustellen. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. Auch Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
   
 -   Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem diese Tokenanbieter nicht umgehen können.  
   
--   Wenn Sie eigene benutzerdefinierte Mechanismen zur Transformation der Anmeldeinformationen von dem Punkt, an dem der Benutzer die Details angibt, bis zu dem Punkt, in dem das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientframework die Anmeldeinformationen verwendet, angeben möchten.  
+-   Wenn geben Sie eine eigene benutzerdefinierte Mechanismen zur Transformation angibt, bis die Anmeldeinformationen ab dem Punkt, der Benutzer die Details, wenn der WCF-Clientframework die Anmeldeinformationen verwendet werden sollen.  
   
 -   Wenn Sie ein benutzerdefiniertes Token erstellen.  
   
@@ -108,7 +108,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tok
 </system.serviceModel>  
 ```  
   
- In den folgenden Schritten wird die Entwicklung eines benutzerdefinierten Tokenanbieters und seine Integration in das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsframework gezeigt:  
+ Die folgenden Schritte wird die Entwicklung eines benutzerdefinierten tokenanbieters und seine Integration mit dem WCF-Sicherheitsframework gezeigt:  
   
 1.  Schreiben Sie einen benutzerdefinierten Tokenanbieter.  
   

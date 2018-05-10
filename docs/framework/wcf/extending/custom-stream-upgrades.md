@@ -2,11 +2,11 @@
 title: Benutzerdefinierte Stream-Upgrades
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-stream-upgrades"></a>Benutzerdefinierte Stream-Upgrades
 Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlaufenden Bytestream zwischen Client und Server ausgeführt. Dieser Stream wird durch ein <xref:System.IO.Stream>-Objekt realisiert. Bei einem Stream-Upgrade will der Client dem Kanalstapel eine optionale Protokollebene hinzufügen und fordert das andere Ende des Kommunikationskanals dazu auf. Das Stream-Upgrade besteht aus dem Ersetzen des ursprünglichen <xref:System.IO.Stream>-Objekts durch ein aktualisiertes Objekt.  
@@ -66,7 +66,7 @@ Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlau
 ## <a name="security-upgrades"></a>Sicherheitsupgrades  
  Das Hinzufügen eines Sicherheitsupgrades ist eine spezielle Version des allgemeinen Stream-Upgrade-Prozesses.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt bereits zwei Bindungselemente für das Upgrade von Stream Security. Die Konfiguration der Sicherheit auf Transportebene wird durch das <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> und das <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> gekapselt, die konfiguriert und einer benutzerdefinierten Bindung hinzugefügt werden können. Diese Bindungselemente erweitern die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>-Klasse, die den Client- und Server-Stream-Upgrade-Anbieter erstellt. Diese Bindungselements enthalten Methoden zum Erstellen der speziellen Upgradeanbieterklassen für Sicherheitsstream, die nicht `public` sind, in diesen beiden Fällen müssen Sie lediglich das Bindungselement der Bindung hinzufügen.  
+ WCF stellt bereits zwei Bindungselemente für das Upgrade von Stream Security. Die Konfiguration der Sicherheit auf Transportebene wird durch das <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> und das <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> gekapselt, die konfiguriert und einer benutzerdefinierten Bindung hinzugefügt werden können. Diese Bindungselemente erweitern die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>-Klasse, die den Client- und Server-Stream-Upgrade-Anbieter erstellt. Diese Bindungselements enthalten Methoden zum Erstellen der speziellen Upgradeanbieterklassen für Sicherheitsstream, die nicht `public` sind, in diesen beiden Fällen müssen Sie lediglich das Bindungselement der Bindung hinzufügen.  
   
  Bei Sicherheitsszenarien, die die beiden oben angeführten Bindungselemente nicht erfüllen, werden drei sicherheitsrelevante `abstract`-Klassen von den oben genannten Basisklassen für Initiator, Annehmender und Anbieter abgeleitet:  
   

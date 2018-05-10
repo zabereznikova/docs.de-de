@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing-and-message-logging"></a>Ablaufverfolgung und Nachrichtenprotokollierung
 In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenprotokollierung veranschaulicht. Die resultierende ablaufverfolgungen und Nachrichtenprotokollen mit angezeigt werden die [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -17,7 +17,7 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="tracing"></a>Ablaufverfolgung  
- Windows Communication Foundation (WCF) verwendet, die definierten Ablaufverfolgungsmechanismus der <xref:System.Diagnostics> Namespace. In diesem Ablaufverfolgungsmodell werden Ablaufverfolgungsdaten von Ablaufverfolgungsquellen erzeugt, die von Anwendungen implementiert werden. Jede Quelle wird durch einen Namen identifiziert. Ablaufverfolgungsconsumer erstellen Ablaufverfolgungslistener für die Ablaufverfolgungsquellen, für die sie Informationen abrufen möchten. Sie müssen einen Listener für die Ablaufverfolgungsquelle erstellen, um Ablaufverfolgungsdaten zum empfangen. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kann hierzu der folgende Code in der Konfigurationsdatei des Diensts oder Clients hinzugefügt werden, indem die Dienstmodell-Ablaufverfolgungsquelle `switchValue` festgelegt wird:  
+ Windows Communication Foundation (WCF) verwendet, die definierten Ablaufverfolgungsmechanismus der <xref:System.Diagnostics> Namespace. In diesem Ablaufverfolgungsmodell werden Ablaufverfolgungsdaten von Ablaufverfolgungsquellen erzeugt, die von Anwendungen implementiert werden. Jede Quelle wird durch einen Namen identifiziert. Ablaufverfolgungsconsumer erstellen Ablaufverfolgungslistener für die Ablaufverfolgungsquellen, für die sie Informationen abrufen möchten. Sie müssen einen Listener für die Ablaufverfolgungsquelle erstellen, um Ablaufverfolgungsdaten zum empfangen. In WCF, dies kann geschehen, indem Hinzufügen des folgenden Codes in der der Dienst- oder Client Konfigurationsdatei indem die Dienstmodell-Ablaufverfolgungsquelle festlegen `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,12 +55,12 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
   
 -   Korrelieren von Aktivitäten durch Übertragungen und Weitergabe.  
   
--   Verringern der Leistungskosten für die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Ablaufverfolgung (beispielsweise der benötigte Speicherplatz für eine Protokolldatei).  
+-   Die Leistungskosten der WCF-Ablaufverfolgung (z. B. der benötigte Speicherplatz für eine Protokolldatei).  
   
  Weitere Informationen über eine benutzerdefinierte Aktivität Ablaufverfolgung finden Sie unter der [erweitern Tracing](../../../../docs/framework/wcf/samples/extending-tracing.md) Beispiel.  
   
 ## <a name="message-logging"></a>Nachrichtenprotokollierung  
- Die Nachrichtenprotokollierung kann auf dem Client und dem Dienst aller [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen aktiviert werden. Zum Aktivieren der Nachrichtenprotokollierung müssen Sie dem Client oder dem Dienst den folgenden Code hinzufügen:  
+ Die nachrichtenprotokollierung kann sowohl auf dem Client und Dienst des WCF-Anwendung aktiviert werden. Zum Aktivieren der Nachrichtenprotokollierung müssen Sie dem Client oder dem Dienst den folgenden Code hinzufügen:  
   
 ```xml  
 <configuration>  

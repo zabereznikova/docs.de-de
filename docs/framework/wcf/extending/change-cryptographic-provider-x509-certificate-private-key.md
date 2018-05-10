@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Vorgehensweise: Ändern des Kryptografieanbieters für ein x. 509-Zertifikat&#39;s privaten Schlüssel
 In diesem Thema wird gezeigt, wie so ändern Sie den Kryptografieanbieter verwendet, um private Schlüssel eines x. 509-Zertifikats bereitzustellen und den Anbieter in der Windows Communication Foundation (WCF)--Sicherheitsframework integrieren. Weitere Informationen zur Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
- Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Security-Framework bietet eine Möglichkeit, neue Typen von Sicherheitstoken einzuführen, wie in beschrieben [Vorgehensweise: Erstellen eines benutzerdefinierten Tokens](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Es ist auch möglich, ein benutzerdefiniertes Token zu verwenden, um vorhandene vom System bereitgestellte Tokentypen zu ersetzen.  
+ Der WCF-Sicherheit-Framework bietet eine Möglichkeit, neue Typen von Sicherheitstoken einführen, wie in beschrieben [Vorgehensweise: Erstellen eines benutzerdefinierten Tokens](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Es ist auch möglich, ein benutzerdefiniertes Token zu verwenden, um vorhandene vom System bereitgestellte Tokentypen zu ersetzen.  
   
  In diesem Thema wird das vom System bereitgestellte X.509-Sicherheitstoken durch ein benutzerdefiniertes X.509-Token ersetzt, das für den privaten Schlüssel des Zertifikats eine andere Implementierung bereitstellt. Dies ist bei Szenarios nützlich, bei denen der eigentliche private Schlüssel von einem anderen Kryptografieanbieter als dem standardmäßigen Kryptografieanbieter von Windows bereitgestellt wird. Ein Beispiel für einen alternativen Kryptografieanbieter ist ein Hardwaresicherheitsmodul, das alle Kryptografievorgänge durchführt, die private Schlüssel betreffen, und das die privaten Schlüssel nicht im Arbeitsspeicher speichert. Auf diese Weise wird die Sicherheit des Systems erhöht.  
   
@@ -32,9 +32,9 @@ In diesem Thema wird gezeigt, wie so ändern Sie den Kryptografieanbieter verwen
   
 2.  Überschreiben Sie die schreibgeschützte <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A>-Eigenschaft. Diese Eigenschaft gibt die tatsächliche Schlüsselgröße für das Paar aus öffentlichem und privatem Schlüssel des Zertifikats zurück.  
   
-3.  Überschreiben Sie die <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>-Methode. Diese Methode wird vom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsframework aufgerufen, um einen symmetrischen Schlüssel mit dem privaten Schlüssel des Zertifikats zu entschlüsseln. (Der Schlüssel wurde vorher mit dem öffentlichen Schlüssel des Zertifikats verschlüsselt.)  
+3.  Überschreiben Sie die <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>-Methode. Diese Methode wird von der WCF-Sicherheitsframework zum Entschlüsseln eines symmetrischen Schlüssels mit dem privaten Zertifikatschlüssel aufgerufen. (Der Schlüssel wurde vorher mit dem öffentlichen Schlüssel des Zertifikats verschlüsselt.)  
   
-4.  Überschreiben Sie die <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>-Methode. Diese Methode wird vom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsframework aufgerufen, um eine Instanz der <xref:System.Security.Cryptography.AsymmetricAlgorithm>-Klasse zu erhalten, die den Kryptografieanbieter entweder für den privaten oder den öffentlichen Schlüssel des Zertifikats darstellt. Dies hängt von den Parametern ab, die an die Methode übergeben werden.  
+4.  Überschreiben Sie die <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>-Methode. Diese Methode wird aufgerufen, durch die WCF-Sicherheitsframework zum Abrufen einer Instanz der <xref:System.Security.Cryptography.AsymmetricAlgorithm> Klasse, die den Kryptografieanbieter für das Zertifikat privaten oder öffentlichen Schlüssel, abhängig von den Parametern darstellt, die an die Methode übergeben.  
   
 5.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>-Methode. Überschreiben Sie diese Methode, wenn eine andere Implementierung der <xref:System.Security.Cryptography.HashAlgorithm>-Klasse erforderlich ist.  
   
@@ -45,7 +45,7 @@ In diesem Thema wird gezeigt, wie so ändern Sie den Kryptografieanbieter verwen
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- Die folgende Prozedur zeigt, wie Sie die Implementierung des benutzerdefinierten asymmetrischen X.509-Sicherheitsschlüssels, die in der vorherigen Prozedur erstellt wurde, auf das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsframework abstimmen, um das vom System bereitgestellte X.509-Sicherheitstoken zu ersetzen.  
+ Das folgende Verfahren zeigt die Vorgehensweise beim Integrieren von benutzerdefinierten x. 509-asymmetrischen Schlüssel Implementierung des in der vorherigen Prozedur mit dem WCF-Sicherheit-Framework erstellt werden, um die vom System bereitgestellte x. 509-Sicherheit zu ersetzen token.  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>So ersetzen Sie das vom System bereitgestellte X.509-Sicherheitstoken durch ein benutzerdefiniertes asymmetrisches X.509-Sicherheitsschlüsseltoken  
   

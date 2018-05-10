@@ -2,11 +2,11 @@
 title: Benutzerdefiniertes Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-token"></a>Benutzerdefiniertes Token
 Dieses Beispiel veranschaulicht, wie einer benutzerdefinierten tokenimplementierung in eine Windows Communication Foundation (WCF)-Anwendung. Im Beispiel wird ein `CreditCardToken` verwendet, um Informationen über Clientkreditkarten sicher an den Dienst zu übergeben. Das Token wird an den WS-Sicherheits-Nachrichtenkopf übergeben und zusammen mit Nachrichtentext und anderen Nachrichtenköpfen mithilfe des symmetrischen Sicherheitsbindungselements signiert und verschlüsselt. Dies ist in Fällen nützlich, in denen die integrierten Token nicht ausreichen. In diesem Beispiel wird veranschaulicht, wie anstelle eines der integrierten Token ein benutzerdefiniertes Sicherheitstoken für einen Dienst bereitgestellt werden kann. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  
@@ -20,7 +20,7 @@ Dieses Beispiel veranschaulicht, wie einer benutzerdefinierten tokenimplementier
   
 -   Wie der Dienst ein benutzerdefiniertes Sicherheitstoken verwenden und überprüfen kann.  
   
--   Wie der  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstcode die Informationen zu empfangenen Sicherheitstoken (einschließlich des benutzerdefinierten Sicherheitstokens) abrufen kann.  
+-   Wie der WCF-Dienstcode die Informationen zu empfangenen Sicherheitstoken, die das benutzerdefinierte Sicherheitstoken einschließlich abrufen kann.  
   
 -   Wie das X.509-Zertifikat des Servers dazu verwendet wird, den zur Nachrichtenverschlüsselung und für die Signatur verwendeten symmetrischen Schlüssel zu schützen.  
   
@@ -114,9 +114,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>Implementierung des benutzerdefinierten Sicherheitstokens  
- Um in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ein benutzerdefiniertes Sicherheitstoken zu aktivieren, erstellen Sie eine Objektdarstellung des benutzerdefinierten Sicherheitstokens. Das Beispiel enthält diese Darstellung in der `CreditCardToken`-Klasse. Die Objektdarstellung dient zur Aufnahme aller relevanten Informationen zu Sicherheitstoken und zur Bereitstellung einer Liste der im Sicherheitstoken enthaltenen Sicherheitsschlüssel. In diesem Fall enthält das Sicherheitstoken der Kreditkarte keinen Sicherheitsschlüssel.  
+ Um ein benutzerdefiniertes Sicherheitstoken in WCF zu aktivieren, erstellen Sie eine objektdarstellung des benutzerdefinierten Sicherheitstokens. Das Beispiel enthält diese Darstellung in der `CreditCardToken`-Klasse. Die Objektdarstellung dient zur Aufnahme aller relevanten Informationen zu Sicherheitstoken und zur Bereitstellung einer Liste der im Sicherheitstoken enthaltenen Sicherheitsschlüssel. In diesem Fall enthält das Sicherheitstoken der Kreditkarte keinen Sicherheitsschlüssel.  
   
- Im nächsten Abschnitt wird beschrieben, was geschehen muss, damit ein benutzerdefiniertes Token über die Verbindung übertragen und von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkt verwendet werden kann.  
+ Im nächsten Abschnitt wird beschrieben, was erfolgt, damit ein benutzerdefiniertes Token über die Verbindung übertragen werden können und von einem WCF-Endpunkt genutzt werden muss.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -154,7 +154,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Abrufen des benutzerdefinierte Kreditkartentokens aus der Nachricht und Einbinden des Tokens in die Nachricht  
- Sicherheitstoken-Serialisierungsprogramme in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dienen zum Erstellen einer Objektdarstellung von Sicherheitstoken aus der XML in der Nachricht und zum Erstellen einer XML-Form dieser Sicherheitstokens. Außerdem sind sie für andere Funktionen zuständig, wie beispielsweise das Lesen und Schreiben von Schlüsselbezeichnern, die auf Sicherheitstoken verweisen. In diesem Beispiel werden jedoch nur die Funktionen behandelt, die sich auf Sicherheitstoken beziehen. Um ein benutzerdefiniertes Token zu aktivieren, müssen Sie ein eigenes Sicherheitstoken-Serialisierungsprogramm implementieren. In diesem Beispiel wird zu diesem Zweck die `CreditCardSecurityTokenSerializer`-Klasse verwendet.  
+ Sicherheitstoken-Serialisierungsprogramme in WCF sind dafür erstellen eine objektdarstellung von Sicherheitstoken aus der XML-Code in der Nachricht und zum Erstellen einer XML-Formulars dieser Sicherheitstokens verantwortlich. Außerdem sind sie für andere Funktionen zuständig, wie beispielsweise das Lesen und Schreiben von Schlüsselbezeichnern, die auf Sicherheitstoken verweisen. In diesem Beispiel werden jedoch nur die Funktionen behandelt, die sich auf Sicherheitstoken beziehen. Um ein benutzerdefiniertes Token zu aktivieren, müssen Sie ein eigenes Sicherheitstoken-Serialisierungsprogramm implementieren. In diesem Beispiel wird zu diesem Zweck die `CreditCardSecurityTokenSerializer`-Klasse verwendet.  
   
  Im Dienst liest das benutzerdefinierte Serialisierungsprogramm die XML-Form des benutzerdefinierten Tokens und erstellt daraus die Objektdarstellung des benutzerdefinierten Tokens.  
   

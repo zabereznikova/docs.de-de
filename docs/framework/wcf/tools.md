@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: 7d42ab9711a8d0b46ec3d35eec979e276a8c74a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation-Tools
-Microsoft Windows Communication Foundation (WCF)-Tools sind darauf ausgelegt, es für Sie einfacher zu erstellen, bereitstellen und verwalten [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Anwendungen. In diesem Abschnitt werden die Tools detailliert beschrieben. Beachten Sie, dass die Tools nicht unterstützt werden.  
+Tools für Microsoft Windows Communication Foundation (WCF) dienen zum Erstellen, bereitstellen und Verwalten von WCF-Anwendungen erleichtern. In diesem Abschnitt werden die Tools detailliert beschrieben. Beachten Sie, dass die Tools nicht unterstützt werden.  
   
  Sie können alle Tools von der Befehlszeile aus ausführen.  
   
@@ -29,7 +29,7 @@ Microsoft Windows Communication Foundation (WCF)-Tools sind darauf ausgelegt, es
 |[WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|Konfiguriert grundlegende WS-AtomicTransaction-Unterstützungseinstellungen mit einem Befehlszeilentool.|  
 |[WS-AtomicTransaction-Konfiguration-MMC-Snap-In](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|Konfiguriert grundlegende WS-AtomicTransaction-Unterstützungseinstellungen mit einem MMC-Snap-In.|  
 |[Registrierungstool für Workflow Services (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|Registriert einen Windows Workflow-Dienst.|  
-|[WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Hostet in Bibliotheken (DLL-Dateien) enthaltene [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste|  
+|[WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|WCF-Dienste hostet enthalten in Bibliotheken Dateien (*.dll)|  
 |[WCF-Testclient (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|Ein GUI-Tool, mit dem Sie Parameter beliebiger Typen eingeben, die Eingabe an den Dienst senden und die zurückgesendete Antwort des Diensts anzeigen können.|  
 |[Vertrag zuerst-Tool](../../../docs/framework/wcf/contract-first-tool.md)|Eine Visual Studio-Buildaufgabe, die Codeklassen aus XSD-Datenverträgen erstellt.|  
   

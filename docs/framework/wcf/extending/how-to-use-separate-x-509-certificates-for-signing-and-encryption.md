@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Vorgehensweise: Verwenden von separaten X.509-Zertifikaten für Signieren und Verschlüsselung
 In diesem Thema wird gezeigt, wie zum Konfigurieren der Windows Communication Foundation (WCF), um verschiedene Zertifikate für die nachrichtensignierung und-Verschlüsselung auf dem Client und der Dienst verwendet wird.  
   
- Damit verschiedene Zertifikate für das Signieren und Verschlüsseln verwendet werden können, müssen benutzerdefinierte Anmeldeinformationen für Client oder Dienst (oder beides) erstellt werden, da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] keine API zum Einstellen mehrerer Client- oder Dienstzertifikate bietet. Außerdem muss ein Sicherheitstokenmanager zur Verfügung gestellt werden, um die Informationen der Zertifikate zu nutzen und einen entsprechenden Sicherheitstokenanbieter für die angegebene Schlüsselverwendung und Nachrichtenrichtung zu erstellen.  
+ Damit können verschiedene Zertifikate für Signierung und Verschlüsselung verwendet werden, müssen eine benutzerdefinierte Client oder Dienst Anmeldeinformationen (oder beides) erstellt werden, da WCF keine API zum Festlegen mehrerer Client- oder Dienstzertifikate bietet. Außerdem muss ein Sicherheitstokenmanager zur Verfügung gestellt werden, um die Informationen der Zertifikate zu nutzen und einen entsprechenden Sicherheitstokenanbieter für die angegebene Schlüsselverwendung und Nachrichtenrichtung zu erstellen.  
   
  Das folgende Diagramm enthält die wichtigsten verwendeten Klassen, die Klassen, von denen geerbt wird (gekennzeichnet durch einen Aufwärtspfeil), sowie die Rückgabetypen bestimmter Methoden und Eigenschaften.  
   

@@ -593,3 +593,13 @@
             - name: Referenz
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
+        - name: Leitfaden für ML.NET
+          tocHref: /dotnet/machine-learning/
+          topicHref: /dotnet/machine-learning/index
+          items:
+            - name: Ressourcen
+              tocHref: /dotnet/machine-learning/resources/
+              topicHref: /dotnet/machine-learning/resources/index
+            - name: Tutorials
+              tocHref: /dotnet/machine-learning/tutorials/
+              topicHref: /dotnet/machine-learning/tutorials/index

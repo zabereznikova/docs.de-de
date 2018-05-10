@@ -2,14 +2,14 @@
 title: Erweiterte Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
-ms.openlocfilehash: 035f15cb817e6a6a9ed54c56f4b848932a193ecf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 723b1ca9c2fa771d8bc3f337d9c4fde8c9632c68
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-error-handling"></a>Erweiterte Fehlerbehandlung
-Diesem Beispiel wird den Windows Communication Foundation (WCF)-Routingdienst veranschaulicht. Der Routingdienst ist eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Komponente, die das Integrieren eines inhaltsbasierten Routers in die Anwendung vereinfacht. In diesem Beispiel wird gezeigt, wie der Routingdienst eine intelligente Fehlerwiederherstellung mit Transaktionen und anderen komplexen Messagingkonzepten (z. B. Multicasting) ausführt.  
+Diesem Beispiel wird den Windows Communication Foundation (WCF)-Routingdienst veranschaulicht. Der Routingdienst ist eine WCF-Komponente, die integrieren ein inhaltsbasierten Routers in die Anwendung aufnehmen vereinfacht. In diesem Beispiel wird gezeigt, wie der Routingdienst eine intelligente Fehlerwiederherstellung mit Transaktionen und anderen komplexen Messagingkonzepten (z. B. Multicasting) ausführt.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

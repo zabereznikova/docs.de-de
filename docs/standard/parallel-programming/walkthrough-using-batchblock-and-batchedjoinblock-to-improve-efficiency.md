@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9ea53fb186551a24f678d905d35caaaa0c26494
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e9305fd2a0e61a71f6875d6061f835e9cdae5dd1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Exemplarische Vorgehensweise: Effizienzverbesserung durch Verwendung von BatchBlock und BatchedJoinBlock
 Die TPL-Datenflussbibliothek stellt die <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType>- und die <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>-Klasse bereit, sodass Sie Daten aus einer oder mehreren Quellen empfangen und puffern und diese Daten dann als Auflistung weitergeben können. Dieser Batchverarbeitungsmechanismus ist hilfreich, wenn Sie Daten aus einer oder mehreren Quellen sammeln und dann mehrere Datenelemente als Batch verarbeiten. Stellen Sie sich beispielsweise eine Anwendung vor, die Datensätze mithilfe von Datenfluss in eine Datenbank einfügt. Dieser Vorgang kann effizienter werden, wenn mehrere Elemente gleichzeitig statt hintereinander eingefügt werden. In diesem Dokument wird beschrieben, wie mit der <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Klasse die Effizienz solcher Datenbankeinfügevorgänge verbessert wird. Außerdem wird beschrieben, wie mit der <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>-Klasse sowohl die Ergebnisse als auch Ausnahmen erfasst werden, die auftreten, während das Programm aus einer Datenbank liest.
@@ -35,7 +35,7 @@ Die TPL-Datenflussbibliothek stellt die <xref:System.Threading.Tasks.Dataflow.Ba
 2.  Stellen Sie sicher, dass Sie über eine Kopie der Northwind-Datenbank (Northwind.sdf) auf Ihrem Computer verfügen. Diese Datei befindet sich normalerweise im Ordner %Programme%\Microsoft SQL Server Compact Edition\v3.5\Samples\\\.  
   
     > [!IMPORTANT]
-    >  In einigen Versionen von Windows können Sie keine Verbindung zu Northwind.sdf herstellen, wenn [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] nicht im Administratormodus ausgeführt wird. Starten Sie zum Herstellen einer Verbindung mit Northwind.sdf [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder eine [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Eingabeaufforderung im Modus **Als Administrator ausführen**.  
+    >  In einigen Versionen von Windows können Sie keine Verbindung zu „Northwind.sdf“ herstellen, wenn Visual Studio nicht im Administratormodus ausgeführt wird. Starten Sie zum Herstellen einer Verbindung mit „Northwind.sdf“ Visual Studio oder eine Visual Studio-Eingabeaufforderung im Modus **Als Administrator ausführen**.  
   
  Diese exemplarische Vorgehensweise enthält folgende Abschnitte:  
   
@@ -57,7 +57,7 @@ Die TPL-Datenflussbibliothek stellt die <xref:System.Threading.Tasks.Dataflow.Ba
 ## <a name="creating-the-console-application"></a>Erstellen der Konsolenanwendung  
   
 <a name="consoleApp"></a>   
-1.  Erstellen Sie in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ein **Konsolenanwendungsprojekt** für Visual C# oder Visual Basic. In diesem Dokument hat das Projekt den Namen `DataflowBatchDatabase`.  
+1.  Erstellen Sie in Visual Studio ein Visual C#- oder Visual Basic-Projekt des Typs **Konsolenanwendung**. In diesem Dokument hat das Projekt den Namen `DataflowBatchDatabase`.  
   
 2.  Fügen Sie im Projekt einen Verweis auf „System.Data.SqlServerCe.dll“ und einen Verweis auf „System.Threading.Tasks.Dataflow.dll“ hinzu.  
   

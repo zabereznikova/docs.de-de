@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7e2253c527cbb2b6f21b222b1e9691c2ecff01f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Angeben einer Endpunktadresse
 Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über dessen Endpunkte. Jeder <xref:System.ServiceModel.Description.ServiceEndpoint> enthält eine <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, eine <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> und einen <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Der Vertrag gibt an, welche Vorgänge verfügbar sind. Die Bindung gibt an, wie eine Kommunikation mit dem Dienst stattfindet, und die Adresse gibt an, wo sich der Dienst befindet. Jeder Endpunkt muss eine eindeutige Adresse haben. Die Endpunktadresse wird durch die <xref:System.ServiceModel.EndpointAddress>-Klasse dargestellt, die einen Uniform Resource Identifier (URI) enthält, der die Adresse des Diensts darstellt, eine <xref:System.ServiceModel.EndpointAddress.Identity%2A>, die die Sicherheitsidentität des Diensts darstellt, und eine Auflistung der optionalen <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Die optionalen Header stellen zusätzliche, ausführlichere Adressinformationen bereit, um den Endpunkt zu identifizieren oder mit ihm zu interagieren. Die Header können beispielsweise angeben, wie eine eingehende Nachricht zu bearbeiten ist, wohin der Endpunkt eine Antwortnachricht senden sollte, oder welche Instanz eines Diensts für die Bearbeitung einer eingehenden Nachricht verwendet werden soll, wenn mehrere Instanzen verfügbar sind.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Definition einer Endpunktadresse  
- In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] gestaltet eine <xref:System.ServiceModel.EndpointAddress> einen Endpunktverweis (Endpoint Reference, EPR), wie im WS-Adressierungsstandard definiert.  
+ In WCF ein <xref:System.ServiceModel.EndpointAddress> Modelliert eine endpunktreferenz (EPR), wie in der WS-Adressierungsstandard definiert.  
   
  Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Beispielsweise diese URI "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" besteht aus den folgenden vier Teilen:  
   
@@ -29,11 +29,11 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
   
 -   Pfad: /mathservice.svc/secureEndpoint  
   
- Bestandteil des EPR-Modells ist, dass jeder Endpunktverweis einige Verweisparameter enthalten kann, die weitere identifizierende Informationen liefern. In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] werden diese Endpunktverweise als Instanzen der <xref:System.ServiceModel.Channels.AddressHeader>-Klasse erstellt.  
+ Bestandteil des EPR-Modells ist, dass jeder Endpunktverweis einige Verweisparameter enthalten kann, die weitere identifizierende Informationen liefern. In WCF diese Endpunktverweise als Instanzen der <xref:System.ServiceModel.Channels.AddressHeader> Klasse.  
   
  Die Endpunktadresse für einen Dienst kann entweder verbindlich mithilfe von Code oder deklarativ durch die Konfiguration angegeben werden. Die Definition von Endpunkten im Code ist normalerweise nicht geeignet, da die Bindungen und Adressen für einen bereitgestellten Dienst sich in der Regel von denen unterscheiden, die während der Entwicklung des Diensts verwendet werden. Im Allgemeinen ist es praktischer, Dienstendpunkte nicht mit Code, sondern mit Konfiguration zu definieren. Werden die Bindung und die Adressinformationen nicht in den Code integriert, ist eine Änderung ohne Neukompilierung und erneute Bereitstellung der Anwendung möglich. Wenn im Code oder in der Konfiguration keine Endpunkte angegeben sind, fügt die Runtime einen Standardendpunkt für alle Basisadressen in jedem Vertrag hinzu, der vom Dienst implementiert wird.  
   
- Es gibt in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zwei Möglichkeiten, Endpunktadressen für einen Dienst anzugeben. Sie können eine absolute Adresse für jeden dem Dienst zugeordneten Endpunkt angeben, oder Sie können eine Basisadresse für den <xref:System.ServiceModel.ServiceHost> eines Diensts bereitstellen und dann eine relativ zu dieser Basisadresse definierte Adresse für jeden dem Dienst zugeordneten Endpunkt angeben. Sie können mit jedem dieser Verfahren entweder im Code oder in der Konfiguration die Endpunktadressen für einen Dienst angeben. Wenn Sie keine relative Adresse angeben, verwendet der Dienst die Basisadresse. Sie können für einen Dienst auch mehrere Adressen angeben, jedoch ist für jeden Dienst nur eine Basisadresse für jeden Transport zulässig. Wenn Sie mehrere Endpunkte haben, von denen jeder mit einer anderen Bindung konfiguriert ist, müssen deren Adressen eindeutig sein. Endpunkte, die die gleiche Bindung, aber verschiedene Verträge verwenden, können die gleiche Adresse verwenden.  
+ Es gibt zwei Möglichkeiten, Endpunktadressen für einen Dienst in WCF anzugeben. Sie können eine absolute Adresse für jeden dem Dienst zugeordneten Endpunkt angeben, oder Sie können eine Basisadresse für den <xref:System.ServiceModel.ServiceHost> eines Diensts bereitstellen und dann eine relativ zu dieser Basisadresse definierte Adresse für jeden dem Dienst zugeordneten Endpunkt angeben. Sie können mit jedem dieser Verfahren entweder im Code oder in der Konfiguration die Endpunktadressen für einen Dienst angeben. Wenn Sie keine relative Adresse angeben, verwendet der Dienst die Basisadresse. Sie können für einen Dienst auch mehrere Adressen angeben, jedoch ist für jeden Dienst nur eine Basisadresse für jeden Transport zulässig. Wenn Sie mehrere Endpunkte haben, von denen jeder mit einer anderen Bindung konfiguriert ist, müssen deren Adressen eindeutig sein. Endpunkte, die die gleiche Bindung, aber verschiedene Verträge verwenden, können die gleiche Adresse verwenden.  
   
  Wenn Sie in IIS hosten, verwalten Sie die <xref:System.ServiceModel.ServiceHost>-Instanz nicht selbst. Für einen in IIS gehosteten Dienst ist die Basisadresse immer die in der SVC-Datei angegebene Adresse. Daher müssen Sie relative Endpunktadressen für IIS-gehostete Dienstendpunkte verwenden. Die Angabe einer voll qualifizierten Endpunktadresse kann zu Fehlern bei der Bereitstellung des Diensts führen. Weitere Informationen finden Sie unter [Bereitstellen eines WCF-Diensts (englischsprachig)](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   

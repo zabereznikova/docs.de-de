@@ -5,22 +5,22 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d2932293536f875d8986d8d49842cddc196ced0f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Gewusst wie: Erstellen eines Windows Communication Foundation-Clients
 Dies ist die vierte von sechs Aufgaben, die erforderlich sind, um einen Windows Communication Foundation (WCF)-Anwendung zu erstellen. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
   
- In diesem Thema wird beschrieben, wie Metadaten von einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst abgerufen und dafür verwendet werden können, einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientproxy zu erstellen, der auf den Dienst zugreifen kann. Für diese Aufgabe wird die Funktion Dienstverweis hinzufügen verwendet, die von Visual Studio bereitgestellt wird. Dieses Tool ruft die Metadaten vom MEX-Endpunkt des Diensts ab und generiert eine verwaltete Quellcodedatei für einen Clientproxy in der von Ihnen ausgewählten Sprache (standardmäßig C#). Zusätzlich zu dem Clientproxy erstellt oder aktualisiert das Tool die Clientkonfigurationsdatei, die es der Clientanwendung ermöglicht, über einen ihrer Endpunkte eine Verbindung mit dem Dienst herzustellen.  
+ In diesem Thema wird beschrieben, wie Metadaten von einem WCF-Dienst abrufen und verwenden, um einen WCF-Clientproxy zu erstellen, der den Dienst zugreifen können. Für diese Aufgabe wird die Funktion Dienstverweis hinzufügen verwendet, die von Visual Studio bereitgestellt wird. Dieses Tool ruft die Metadaten vom MEX-Endpunkt des Diensts ab und generiert eine verwaltete Quellcodedatei für einen Clientproxy in der von Ihnen ausgewählten Sprache (standardmäßig C#). Zusätzlich zu dem Clientproxy erstellt oder aktualisiert das Tool die Clientkonfigurationsdatei, die es der Clientanwendung ermöglicht, über einen ihrer Endpunkte eine Verbindung mit dem Dienst herzustellen.  
   
 > [!NOTE]
 >  Sie können auch die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool, um die Proxyklasse und die Konfiguration anstelle von Hinzufügen eines Dienstverweises in Visual Studio generieren.  
   
 > [!WARNING]
->  Wenn Sie einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst aus einem Klassenbibliotheksprojekt in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] aufrufen, können Sie die Funktion zum Hinzufügen eines Dienstverweises verwenden, um automatisch einen Proxy und eine zugeordnete Konfigurationsdatei zu generieren.  Die Konfigurationsdatei wird nicht vom Klassenbibliotheksprojekt verwendet. Sie müssen der Datei app.config für die ausführbare Datei, die die Klassenbibliothek aufruft, die Einstellungen in der generierten Konfigurationsdatei hinzufügen.  
+>  Beim Aufrufen eines WCF-Diensts aus einem Klassenbibliotheksprojekt in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] können Sie das Hinzufügen eines Dienstverweises-Feature um automatisch einen Proxy und eine zugeordnete Konfigurationsdatei zu generieren.  Die Konfigurationsdatei wird nicht vom Klassenbibliotheksprojekt verwendet. Sie müssen der Datei app.config für die ausführbare Datei, die die Klassenbibliothek aufruft, die Einstellungen in der generierten Konfigurationsdatei hinzufügen.  
   
  Die Clientanwendung verwendet die generierte Proxyklasse, um mit dem Dienst zu kommunizieren. Hierin wird beschrieben, [Vorgehensweise: Verwenden Sie einen Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
   

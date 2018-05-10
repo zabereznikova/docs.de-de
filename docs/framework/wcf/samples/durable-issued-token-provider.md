@@ -2,21 +2,21 @@
 title: Dauerhaft ausgestellter Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-issued-token-provider"></a>Dauerhaft ausgestellter Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von einem benutzerdefinierten Client ausgestellt wird.  
   
 ## <a name="discussion"></a>Diskussion  
- Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um der Sicherheitsinfrastruktur Anmeldeinformationen bereitzustellen. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird mit einem [!INCLUDE[infocard](../../../../includes/infocard-md.md)]-Tokenanbieter ausgeliefert. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
+ Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um der Sicherheitsinfrastruktur Anmeldeinformationen bereitzustellen. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
   
 -   Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem der integrierte Tokenanbieter nicht umgehen kann.  
   
--   Wenn Sie eigene benutzerdefinierte Mechanismen zur Transformation der Anmeldeinformationen von dem Punkt, an dem der Benutzer die Details angibt, bis zu dem Punkt, in dem der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client die Anmeldeinformationen verwendet, angeben möchten.  
+-   Wenn geben Sie eine eigene benutzerdefinierte Mechanismen zur Transformation angibt, bis die Anmeldeinformationen ab dem Punkt, der Benutzer die Details, wenn der WCF-Client die Anmeldeinformationen verwendet werden sollen.  
   
 -   Wenn Sie ein benutzerdefiniertes Token erstellen.  
   
@@ -26,7 +26,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
 -   Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.  
   
--   Wie ausgestellte Token zwischengespeichert werden können und dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client bereitgestellt werden.  
+-   Wie ausgestellte Token zwischengespeichert und für den WCF-Client bereitgestellt werden können.  
   
 -   Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.  
   
@@ -109,7 +109,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
  Der Sicherheitstokendienst (STS, Security Token Service) macht mit Standard-wsHttpBinding einen einzelnen Endpunkt verfügbar. Der STS reagiert auf eine Tokenanforderung von Clients. Wenn der Client mit einem Windows-Konto authentifiziert wird, gibt der STS ein Token mit dem Benutzernamen des Clients als Anspruch im herausgegebenen Token heraus. Beim Erstellen des Tokens signiert der STS das Token mit dem privaten Schlüssel, der dem CN=STS-Zertifikat zugeordnet ist. Außerdem wird ein symmetrischer Schlüssel erstellt und mit dem öffentlichen Schlüssel verschlüsselt, der dem CN=localhost-Zertifikat zugeordnet ist. Beim Zurückgeben des Tokens an den Client gibt der STS auch den symmetrischen Schlüssel zurück. Der Client stellt das herausgegebene Token für den Rechnerdienst bereit und beweist, dass der symmetrische Schlüssel bekannt ist, indem die Nachricht mit diesem Schlüssel signiert wird.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Benutzerdefinierte Clientanmeldeinformationen und Tokenanbieter  
- In den folgenden Schritten wird die Entwicklung eines benutzerdefinierten Tokenanbieters, der ausgestellte Token zwischenspeichert, und seine Integration in die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit gezeigt.  
+ Die folgenden Schritte zeigen das Entwickeln eines benutzerdefinierten tokenanbieters, dass das ausgestellte Token zwischenspeichert und WCF integriert: Sicherheit.  
   
 #### <a name="to-develop-a-custom-token-provider"></a>So entwickeln Sie einen benutzerdefinierten Tokenanbieter  
   

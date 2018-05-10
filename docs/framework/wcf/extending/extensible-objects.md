@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensible-objects"></a>Erweiterbare Objekte
 Das erweiterbare Objektmuster wird verwendet, um entweder vorhandene Laufzeitklassen um neue Funktionen zu erweitern oder um einem Objekt neue Zustandsfunktionen hinzuzufügen. Erweiterungen, die einem der erweiterbaren Objekte zugeordnet sind, ermöglichen es Verhalten in verschiedenen Phasen der Verarbeitung, auf gemeinsam verwendete Zustände und Funktionen zuzugreifen, die an ein zugängliches und allgemeines erweiterbares Objekt angefügt sind.  
@@ -56,7 +56,7 @@ where T : IExtensibleObject<T>
   
 -   <xref:System.ServiceModel.OperationContext> – Diese Klasse stellt die Vorgangsinformationen dar, die die Laufzeit für jeden Vorgang aufzeichnet.  Dazu gehören auch Informationen wie Header von eingehenden Nachrichten, Eigenschaften von eingehenden Nachrichten, die eingehende Sicherheitsidentität und andere Informationen.  Erweiterungen dieser Klasse können entweder das Verhalten des <xref:System.ServiceModel.OperationContext> erweitern oder den Zustand für jeden Vorgang einzeln speichern.  
   
--   <xref:System.ServiceModel.IContextChannel> – Diese Schnittstelle ermöglicht die Untersuchung der einzelnen Zustände für die Kanäle und Proxys, die von der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit erstellt werden.  Erweiterungen dieser Klasse können entweder das Verhalten des <xref:System.ServiceModel.IClientChannel> erweitern oder das Verhalten verwenden, um den Zustand für jeden Kanal einzeln zu speichern.  
+-   <xref:System.ServiceModel.IContextChannel> – Diese Schnittstelle ermöglicht die Untersuchung der einzelnen Zustände für die Kanäle und Proxys, die von der WCF-Laufzeit erstellt.  Erweiterungen dieser Klasse können entweder das Verhalten des <xref:System.ServiceModel.IClientChannel> erweitern oder das Verhalten verwenden, um den Zustand für jeden Kanal einzeln zu speichern.  
   
 -  
   

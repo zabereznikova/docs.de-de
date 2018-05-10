@@ -2,14 +2,14 @@
 title: Überbrückung und Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: f13a55704422e8a958e55c489f6db11108b03c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bridging-and-error-handling"></a>Überbrückung und Fehlerbehandlung
-Dieses Beispiel veranschaulicht die Verwendung des Windows Communication Foundation (WCF)-Routingdienst zum Überbrücken von Kommunikation zwischen einem Client und einem Dienst mit unterschiedliche Bindungen verwendet. In diesem Beispiel wird auch gezeigt, wie ein Sicherungsdienst für Failoverszenarien verwendet wird. Der Routingdienst ist eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Komponente, die das Integrieren eines inhaltsbasierten Routers in die Anwendung vereinfacht. In diesem Beispiel wird das standardmäßige [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst.  
+Dieses Beispiel veranschaulicht die Verwendung des Windows Communication Foundation (WCF)-Routingdienst zum Überbrücken von Kommunikation zwischen einem Client und einem Dienst mit unterschiedliche Bindungen verwendet. In diesem Beispiel wird auch gezeigt, wie ein Sicherungsdienst für Failoverszenarien verwendet wird. Der Routingdienst ist eine WCF-Komponente, die integrieren ein inhaltsbasierten Routers in die Anwendung aufnehmen vereinfacht. In diesem Beispiel wird die standard-WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

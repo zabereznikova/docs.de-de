@@ -2,11 +2,11 @@
 title: Automatische Formatauswahl
 ms.date: 03/30/2017
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c26253bee069bf9bbc009ea219e6c12cab034ef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="automatic-format-selection"></a>Automatische Formatauswahl
 Dieses Beispiel veranschaulicht, wie So aktivieren Sie die automatische Formatauswahl (XML oder JSON) mit dem Windows Communication Foundation (WCF)-REST-Programmierung, Modell und wie das Format im Vorgangscode explizit festgelegt.  
@@ -14,9 +14,9 @@ Dieses Beispiel veranschaulicht, wie So aktivieren Sie die automatische Formatau
 ## <a name="sample-details"></a>Beispieldetails  
  Das Beispiel besteht aus einem Dienst und Clientcode, mit dem Anforderungen an den Dienst gesendet werden. Der Dienst unterstützt einen einzelnen HTTP-`GET`-Vorgang (`EchoWithGet`) und einen einzelnen HTTP-`POST`-Vorgang (`EchoWithPost`). Bei beiden Vorgängen wird eine Zeichenfolge erwartet, die als Antwort wieder zurückgegeben wird. Der Zeichenfolge wird mithilfe des `GET`-Vorgangs in einem URI-Abfragezeichenfolgenparameter bereitgestellt. Der Zeichenfolge wird mit dem `POST`-Vorgang im Text der Anforderung bereitgestellt und in XML serialisiert. Der Dienst kann Antworten in XML oder JSON zurückgeben. Dazu werden die neue automatische Formatauswahl und die imperativen Formatauswahlfunktionen in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] verwendet.  
   
- In diesem Beispiel wird die automatische Formatauswahl mit der Datei App.config aktiviert. Im standardmäßigen HTTP-Webendpunkt wurde dem `automaticFormatSelectionEnabled`-Attribut der Wert `true` zugewiesen. Da die automatische Formatauswahl aktiviert ist, wählt die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur das Antwortformat (XML oder JSON) aus, das aufgrund der HTTP Accept- oder Content-Type-Header der Anforderung am geeignetsten scheint. Der Entwickler muss keinen zusätzlichen Code und keine zusätzliche Konfiguration bereitstellen, sondern nur das `automaticFormatSelectionEnabled`-Attribut auf `true` festlegen, um diese neue Funktion zu verwenden. Im Clientcode in "Program.cs", Anforderungen gesendet werden sowohl die `GET` und `POST` Vorgänge des Diensts mit dem HTTP-Accept-Header, die als "Application/Xml" oder "Application/Json" angegeben und der Dienst gibt eine Antwort zurück, in diesem jeweiligen Format.  
+ In diesem Beispiel wird die automatische Formatauswahl mit der Datei App.config aktiviert. Im standardmäßigen HTTP-Webendpunkt wurde dem `automaticFormatSelectionEnabled`-Attribut der Wert `true` zugewiesen. Automatische Formatauswahl aktiviert wählt die WCF-Infrastruktur das geeignetste Antwortformat (XML oder JSON) der HTTP Accept- oder Content-Type-Header der Anforderung angegeben. Der Entwickler muss keinen zusätzlichen Code und keine zusätzliche Konfiguration bereitstellen, sondern nur das `automaticFormatSelectionEnabled`-Attribut auf `true` festlegen, um diese neue Funktion zu verwenden. Im Clientcode in "Program.cs", Anforderungen gesendet werden sowohl die `GET` und `POST` Vorgänge des Diensts mit dem HTTP-Accept-Header, die als "Application/Xml" oder "Application/Json" angegeben und der Dienst gibt eine Antwort zurück, in diesem jeweiligen Format.  
   
- Beim `GET`-Vorgang wird außerdem die imperative Formatauswahl verwendet. Der `GET`-Vorgang überprüft, ob es einen optionalen `format`-Abfragezeichenfolgenparameter gibt und legt das Antwortformat für die <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A>-Eigenschaft fest, falls ein entsprechender Parameter vorhanden ist. Durch das imperative Festlegen des Antwortformats in der beschriebenen Weise wird die von der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur vorgenommene automatische Formatauswahl überschrieben.  
+ Beim `GET`-Vorgang wird außerdem die imperative Formatauswahl verwendet. Der `GET`-Vorgang überprüft, ob es einen optionalen `format`-Abfragezeichenfolgenparameter gibt und legt das Antwortformat für die <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A>-Eigenschaft fest, falls ein entsprechender Parameter vorhanden ist. Imperativ das Format der Antwort auf diese Weise festlegen, überschreibt die automatische Formatauswahl geschieht, indem die WCF-Infrastruktur.  
   
  Das Beispiel umfasst einen selbst gehosteten Dienst und einen Client, der in einer Konsolenanwendung ausgeführt wird. Während die Konsolenanwendung ausgeführt wird, sendet der Client Anforderungen an den Dienst und schreibt die in den Antworten enthaltenen wichtigen Informationen in das Konsolenfenster.  
   

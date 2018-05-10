@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46ca6294d68537e86a319b55d8c11e3ae0084738
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="endpoint-creation-overview"></a>Übersicht über die Endpunkterstellung
-Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die ein [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst bereitstellt. In diesem Abschnitt wird die Struktur eines Endpunkts beschrieben und dargestellt, wie ein Endpunkt in einer Konfiguration oder im Code definiert wird.  
+Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionen, die ein WCF-Dienst bietet. In diesem Abschnitt wird die Struktur eines Endpunkts beschrieben und dargestellt, wie ein Endpunkt in einer Konfiguration oder im Code definiert wird.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Die Struktur eines Endpunkts  
  Jeder Endpunkt beinhaltet eine Adresse, die angibt, wo sich der Endpunkt befindet, eine Bindung, die angibt, wie ein Client mit dem Endpunkt kommunizieren kann und einen Vertrag angibt, der die verfügbaren Methoden identifiziert.  
   
--   **Adresse**. Die Adresse gewährleistet eine eindeutige Identifizierung des Endpunkts und teilt potenziellen Consumern den Standort des Diensts mit. Die Adresse wird im [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Objektmodell durch die <xref:System.ServiceModel.EndpointAddress>-Adresse dargestellt, die einen Uniform Resource Identifier (URI) und Adresseigenschaften beinhaltet, die wiederum eine Identität, einige Web Services Description Language (WSDL)-Elemente und eine Auflistung der optionalen Header enthalten. Die optionalen Header stellen zusätzliche ausführliche Adressinformationen bereit, um den Endpunkt zu identifizieren oder damit zu interagieren. Weitere Informationen finden Sie unter [angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+-   **Adresse**. Die Adresse gewährleistet eine eindeutige Identifizierung des Endpunkts und teilt potenziellen Consumern den Standort des Diensts mit. Es wird dargestellt, in dem WCF-Objektmodell durch die <xref:System.ServiceModel.EndpointAddress> -Adresse, mit einem Uniform Resource Identifier (URI) und Adresseigenschaften, die eine Identität, einige Web Services Description Language (WSDL)-Elemente und eine Auflistung der optionalen enthalten Header. Die optionalen Header stellen zusätzliche ausführliche Adressinformationen bereit, um den Endpunkt zu identifizieren oder damit zu interagieren. Weitere Informationen finden Sie unter [angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 -   **Binden von**. Die Bindung gibt an, wie eine Kommunikation mit dem Endpunkt stattfindet. Die Bindung gibt an, wie der Endpunkt mit der Außenwelt kommuniziert (einschließlich des zu verwendenden Transportprotokolls, beispielsweise TCP oder HTTP), welche Codierung für die Nachrichten zu verwenden ist (beispielsweise Text- oder Binärcodierung) und welche Sicherheitsanforderungen erforderlich sind (beispielsweise Secure Sockets Layer [SSL] oder SOAP-Nachrichtensicherheit). Weitere Informationen finden Sie unter [Bindungen verwenden, und Konfigurieren von Diensten und Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   

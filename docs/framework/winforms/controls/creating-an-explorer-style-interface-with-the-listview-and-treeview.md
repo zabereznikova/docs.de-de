@@ -1,13 +1,6 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen einer Explorer-ähnlichen Schnittstelle mit dem ListView-Steuerelement und dem TreeView-Steuerelement im Designer"
-ms.custom: 
+title: 'Exemplarische Vorgehensweise: Erstellen einer Explorer-ähnlichen Schnittstelle mit dem ListView-Steuerelement und dem TreeView-Steuerelement im Designer'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d8d7991f706f8098e4ac475ae057771de200197
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a0208194bd6cf24f61c58ece88e41b674e924fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Exemplarische Vorgehensweise: Erstellen einer Explorer-ähnlichen Schnittstelle mit dem ListView-Steuerelement und dem TreeView-Steuerelement im Designer
 Einer der Vorteile von Visual Studio ist die Fähigkeit zum Erstellen von professionell gestalteten Windows Forms-Anwendungen in kurzer Zeit. Ein häufiges Szenario ist eine Benutzeroberfläche (UI) erstellen, mit <xref:System.Windows.Forms.ListView> und <xref:System.Windows.Forms.TreeView> Steuerelemente, die Windows Explorer-Features von Windows-Betriebssystemen ähnelt. Windows-Explorer zeigt eine hierarchische Struktur der Dateien und Ordner auf dem Computer eines Benutzers an.  
@@ -65,7 +53,7 @@ Einer der Vorteile von Visual Studio ist die Fähigkeit zum Erstellen von profes
   
     2.  Legen Sie die <xref:System.Windows.Forms.ListView.View%2A>-Eigenschaft auf <xref:System.Windows.Forms.View.Details> fest.  
   
-    3.  Öffnen Sie den ColumnHeader-Auflistungs-Editor, indem Sie auf die Auslassungspunkte (![von VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) in der <xref:System.Windows.Forms.ListView.Columns%2A> Eigenschaft**.** Fügen Sie drei Spalten hinzu, und legen Sie deren <xref:System.Windows.Forms.ColumnHeader.Text%2A> Eigenschaft `Name`, `Type`, und `Last Modified`bzw. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
+    3.  Öffnen Sie den ColumnHeader-Auflistungs-Editor, indem Sie auf die Auslassungspunkte (![von VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) in der <xref:System.Windows.Forms.ListView.Columns%2A> Eigenschaft **.** Fügen Sie drei Spalten hinzu, und legen Sie deren <xref:System.Windows.Forms.ColumnHeader.Text%2A> Eigenschaft `Name`, `Type`, und `Last Modified`bzw. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
     4.  Legen Sie die <xref:System.Windows.Forms.ListView.SmallImageList%2A>-Eigenschaft auf `imageList1.` fest.  
   

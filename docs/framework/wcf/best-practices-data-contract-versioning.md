@@ -7,11 +7,11 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Empfohlene Vorgehensweisen: Versionsverwaltung von Datenverträgen
 In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenverträgen aufgeführt, die sich im Laufe der Zeit auf einfache Weise entwickeln können. Weitere Informationen zu Datenverträgen finden Sie unter den Themen in [mithilfe von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -21,7 +21,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
  Dies bedeutet, dass sogar ein sehr häufig verwendetes Versionsverwaltungsszenario, beispielsweise das Hinzufügen eines neuen Datenmembers, nicht nahtlos für ein bestimmtes Schema implementiert werden kann. Die neueren Versionen eines Datenvertrags (beispielsweise mit einem neuen Datenmember) können bei Verwendung des alten Schemas nicht überprüft werden.  
   
- Es gibt jedoch viele Szenarios, bei denen die strenge Schemakompatibilität nicht erforderlich ist. Viele Webdienstplattformen, zum Beispiel auch [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] und die mithilfe von ASP.NET erstellten XML-Webdienste, führen die Schemavalidierung standardmäßig nicht durch. Aus diesem Grund tolerieren sie zusätzliche Elemente, die vom Schema nicht beschrieben werden. Wenn Sie mit Plattformen dieser Art arbeiten, sind viele Versionsverwaltungsszenarios einfacher zu implementieren.  
+ Es gibt jedoch viele Szenarios, bei denen die strenge Schemakompatibilität nicht erforderlich ist. Viele Web Services Plattformen, einschließlich WCF und XML-Webdiensten, die mit ASP.NET erstellten Schema-Validierung standardmäßig keine und aus diesem Grund tolerieren zusätzliche Elemente, die vom Schema nicht beschrieben sind. Wenn Sie mit Plattformen dieser Art arbeiten, sind viele Versionsverwaltungsszenarios einfacher zu implementieren.  
   
  Es gibt also zwei Sätze von Richtlinien für die Versionsverwaltung von Datenverträgen: Einen Satz für Szenarios, bei denen die genaue Schemagültigkeit wichtig ist, und einen Satz für Szenarios, bei denen dies nicht wichtig ist.  
   
@@ -36,7 +36,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
  Weitere Informationen finden Sie bewährte Methoden: [Dienstversionsverwaltung](../../../docs/framework/wcf/service-versioning.md).  
   
- In einigen Fällen müssen Sie die genaue Einhaltung für Nachrichten sicherstellen, die von Ihrer Anwendung gesendet werden, können sich jedoch nicht darauf verlassen, dass die eingehenden Nachrichten die Vorgaben des Schemas genau einhalten. In diesem Fall besteht die Gefahr, dass eine eingehende Nachricht fremde Daten enthält. Die fremden Werte werden gespeichert und von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zurückgegeben, wodurch sich Fehlermeldungen mit dem Hinweis auf ungültige Schemas ergeben. Um dieses Problem zu vermeiden, sollten Sie die Roundtripfunktion deaktivieren. Hierfür gibt es zwei Möglichkeiten.  
+ In einigen Fällen müssen Sie die genaue Einhaltung für Nachrichten sicherstellen, die von Ihrer Anwendung gesendet werden, können sich jedoch nicht darauf verlassen, dass die eingehenden Nachrichten die Vorgaben des Schemas genau einhalten. In diesem Fall besteht die Gefahr, dass eine eingehende Nachricht fremde Daten enthält. Die relevanten Werte gespeichert und von WCF zurückgegeben und führt daher zu Schema nach ungültige Nachrichten gesendet werden. Um dieses Problem zu vermeiden, sollten Sie die Roundtripfunktion deaktivieren. Hierfür gibt es zwei Möglichkeiten.  
   
 -   Implementieren Sie die <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle für keinen der Typen.  
   

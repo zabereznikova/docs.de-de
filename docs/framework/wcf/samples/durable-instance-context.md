@@ -2,11 +2,11 @@
 title: Permanenter Instanzkontext
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 75516bfa0cf5ac7bfb27eb5ee2c51d04c30bc9a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-instance-context"></a>Permanenter Instanzkontext
 Dieses Beispiel veranschaulicht das Anpassen der Windows Communication Foundation (WCF)-Laufzeit, um permanente instanzkontexte zu aktivieren. Dabei wird als Sicherungsspeicher SQL Server 2005 (in diesem Fall SQL Server 2005 Express) verwendet. Aber es bietet auch eine Möglichkeit, auf benutzerdefinierte Speichermechanismen zuzugreifen.  
@@ -14,7 +14,7 @@ Dieses Beispiel veranschaulicht das Anpassen der Windows Communication Foundatio
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- In diesem Beispiel wird die Erweiterung der Kanalschicht und der Dienstmodellebene von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eingeschlossen. Deshalb ist es notwendig, das zugrunde liegenden Konzept zu verstehen, bevor Sie sich mit den Implementierungsdetails beschäftigen.  
+ Dieses Beispiel umfasst die Erweiterung der Kanalschicht und der dienstmodellebene WCF. Deshalb ist es notwendig, das zugrunde liegenden Konzept zu verstehen, bevor Sie sich mit den Implementierungsdetails beschäftigen.  
   
  Permanente Instanzkontexte sind sehr häufig in realen Szenarios anzutreffen. Eine Warenkorb-Anwendung kann beispielsweise unterbrochen und am nächsten Tag fortgesetzt werden. Wenn der Warenkorb am nächsten Tag geöffnet wird, wird der ursprüngliche Kontext wiederhergestellt. Es ist jedoch unbedingt zu beachten, dass die Warenkorb-Anwendung (auf dem Server) nicht die Warenkorb-Instanz beibehält, während die Verbindung zum Server getrennt ist. Sie behält vielmehr ihren Zustand in einem permanenten Speichermedium bei und verwendet diesen Zustand, wenn eine neue Instanz für den wiederhergestellten Kontext erstellt wird. Aus diesem Grund handelt es sich bei der Dienstinstanz, die möglicherweise für denselben Kontext dient, nicht um dieselbe Instanz wie die vorherige Instanz (d. h. sie hat nicht dieselbe Speicheradresse).  
   
@@ -119,7 +119,7 @@ if (isFirstMessage)
 }  
 ```  
   
- Diese Kanalimplementierungen werden dann von der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Klasse und der `DurableInstanceContextBindingElement`-Klasse entsprechend zur `DurableInstanceContextBindingElementSection`-Kanallaufzeit hinzugefügt. Finden Sie unter der [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) channel Beispieldokumentation für ausführliche Informationen zu Bindungselementen und Elementabschnitte binden.  
+ Diese kanalimplementierungen werden dann hinzugefügt, für die WCF-Kanal-Laufzeit von der `DurableInstanceContextBindingElement` Klasse und `DurableInstanceContextBindingElementSection` -kanallaufzeit. Finden Sie unter der [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) channel Beispieldokumentation für ausführliche Informationen zu Bindungselementen und Elementabschnitte binden.  
   
 ## <a name="service-model-layer-extensions"></a>Erweiterungen der Dienstmodellebene  
  Nachdem nun die Kontext-ID die Kanalschicht durchlaufen hat, kann das Dienstverhalten implementiert werden, um die Instanziierung benutzerspezifisch anzupassen. In diesem Beispiel wird ein Speicher-Manager verwendet, um den Zustand aus dem permanenten Speicher zu laden und in ihm zu speichern. Wie bereits erläutert arbeitet dieses Beispiel mit einem Speicher-Manager, der SQL Server 2005 als Sicherungsspeicher verwendet. Es ist aber auch möglich, benutzerdefinierte Speichermechanismen zu dieser Erweiterung hinzuzufügen. Dazu wird eine öffentliche Schnittstelle deklariert, die von allen Speicher-Managern implementiert werden muss.  
@@ -228,9 +228,9 @@ else
   
  Die notwendige Infrastruktur zum Lesen und Schreiben von Instanzen aus dem permanenten Speicher wurde implementiert. Jetzt müssen die notwendigen Schritte zum Ändern des Dienstverhaltens durchgeführt werden.  
   
- Zuerst muss die Kontext-ID gespeichert werden, die über die Kanalschicht zur aktuellen InstanceContext übertragen wurde. Bei InstanceContext handelt es sich um eine Laufzeitkomponente, die als Verknüpfung zwischen dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Verteiler und der Dienstinstanz fungiert. Sie kann verwendet werden, um der Dienstinstanz einen zusätzlichen Zustand und zusätzliches Verhalten bereitzustellen. Dies ist notwendig, da die Kontext-ID in einer sitzungsbasierten Kommunikation nur mit der ersten Nachricht gesendet wird.  
+ Zuerst muss die Kontext-ID gespeichert werden, die über die Kanalschicht zur aktuellen InstanceContext übertragen wurde. InstanceContext ist eine Laufzeitkomponente, die als Bindeglied zwischen der WCF-Verteiler und der Dienstinstanz fungiert. Sie kann verwendet werden, um der Dienstinstanz einen zusätzlichen Zustand und zusätzliches Verhalten bereitzustellen. Dies ist notwendig, da die Kontext-ID in einer sitzungsbasierten Kommunikation nur mit der ersten Nachricht gesendet wird.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ermöglicht es, seine InstanceContext-Laufzeitkomponente zu erweitern, indem mithilfe des erweiterbaren Objektmusters ein neuer Zustand und ein neues Verhalten hinzugefügt werden. Das erweiterbare Objektmuster wird in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet, um vorhandene Laufzeitklassen um neue Funktionen zu erweitern oder um neue Zustandsfunktionen zu einem Objekt hinzuzufügen. Es gibt drei Schnittstellen im erweiterbaren Objektmuster – IExtensibleObject\<T >, IExtension\<T >, und IExtensionCollection\<T >:  
+ WCF ermöglicht, seine InstanceContext-Laufzeitkomponente zu erweitern, indem ein Zustand "Neu" und das Verhalten mithilfe des erweiterbaren Objektmusters hinzugefügt. Das erweiterbare Objektmuster wird in WCF verwendet, um vorhandene Laufzeitklassen neue Funktionen zu erweitern oder um neue Zustandsfunktionen zu einem Objekt hinzuzufügen. Es gibt drei Schnittstellen im erweiterbaren Objektmuster – IExtensibleObject\<T >, IExtension\<T >, und IExtensionCollection\<T >:  
   
 -   Die IExtensibleObject\<T >-Schnittstelle wird von Objekten implementiert, die Erweiterungen zulassen, die ihre Funktionalität anpassen.  
   
@@ -278,7 +278,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  Wie bereits beschrieben wird die Kontext-ID von der `Properties`-Auflistung der `Message`-Klasse gelesen und an den Konstruktor der Erweiterungsklasse weitergegeben. Dadurch wird veranschaulicht, wie Informationen zwischen den Schichten konsistent ausgetauscht werden können.  
   
- Im nächsten wichtigen Schritt wird der Vorgang zum Erstellen der Dienstinstanz überschrieben. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ermöglicht die Implementierung von benutzerdefinierten Instanziierungsverhaltensweisen und das Einbinden dieser Verhaltensweisen in die Laufzeit mithilfe der IInstanceProvider-Schnittstelle. Die neue `InstanceProvider`-Klasse wird implementiert, um diese Aufgabe auszuführen. Im Konstruktor wird der vom Instanzenanbieter erwartete Diensttyp akzeptiert. Später wird dies verwendet, um neue Instanzen zu erstellen. In der `GetInstance`-Implementierung wird eine Instanz eines Speicher-Managers erstellt, die nach einer beibehaltenen Instanz sucht. Wenn sie `null` zurückgibt, wird eine neue Instanz des Diensttyps instanziiert und zum Aufrufer zurückgegeben.  
+ Im nächsten wichtigen Schritt wird der Vorgang zum Erstellen der Dienstinstanz überschrieben. WCF ermöglicht das Implementieren von benutzerdefinierten Verhaltensweisen und Einbinden dieser bis zu der Laufzeit unter Verwendung der IInstanceProvider-Schnittstelle. Die neue `InstanceProvider`-Klasse wird implementiert, um diese Aufgabe auszuführen. Im Konstruktor wird der vom Instanzenanbieter erwartete Diensttyp akzeptiert. Später wird dies verwendet, um neue Instanzen zu erstellen. In der `GetInstance`-Implementierung wird eine Instanz eines Speicher-Managers erstellt, die nach einer beibehaltenen Instanz sucht. Wenn sie `null` zurückgibt, wird eine neue Instanz des Diensttyps instanziiert und zum Aufrufer zurückgegeben.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -349,9 +349,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  Bisher resultiert aus diesem Beispiel ein Kanal, der das benutzerdefinierte Versandprotokoll für den Austausch der benutzerdefinierten Kontext-ID aktiviert hat. Außerdem überschreibt es das Standardinstanziierungsverhalten, die Instanzen aus dem permanenten Speicher zu laden.  
   
- Nun muss nur noch die Dienstinstanz im permanenten Speicher gespeichert werden. Wie zuvor erläutert gibt es bereits die erforderliche Funktionalität, den Zustand in einer `IStorageManager`-Implementierung zu speichern. Diese Funktionalität muss jetzt mit der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit integriert werden. Es ist ein weiteres Attribut erforderlich, dass auf die Methoden in der Dienstimplementierungsklasse angewendet werden kann. Dieses Attribut soll auf die Methoden angewendet werden, die den Zustand der Dienstinstanz ändern.  
+ Nun muss nur noch die Dienstinstanz im permanenten Speicher gespeichert werden. Wie zuvor erläutert gibt es bereits die erforderliche Funktionalität, den Zustand in einer `IStorageManager`-Implementierung zu speichern. Wir müssen dies nun in der WCF-Laufzeit integrieren. Es ist ein weiteres Attribut erforderlich, dass auf die Methoden in der Dienstimplementierungsklasse angewendet werden kann. Dieses Attribut soll auf die Methoden angewendet werden, die den Zustand der Dienstinstanz ändern.  
   
- Die `SaveStateAttribute`-Klasse implementiert diese Funktionalität. Sie implementiert auch die `IOperationBehavior`-Klasse, um die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit für jeden Vorgang zu ändern. Wenn eine Methode mit diesem Attribut gekennzeichnet ist, ruft die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit die `ApplyBehavior`-Methoden auf, während der entsprechende `DispatchOperation` erstellt wird. In dieser Methodenimplementierung ist eine Codezeile vorhanden:  
+ Die `SaveStateAttribute`-Klasse implementiert diese Funktionalität. Es implementiert auch `IOperationBehavior` Klasse, um die WCF-Laufzeit für jeden Vorgang zu ändern. Wenn eine Methode mit diesem Attribut gekennzeichnet ist, die WCF-Laufzeit ruft der `ApplyBehavior` Methode während der entsprechende `DispatchOperation` erstellt wird. In dieser Methodenimplementierung ist eine Codezeile vorhanden:  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -373,7 +373,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>Verwenden der Erweiterung  
- Sowohl die Erweiterung der Kanalschicht als auch der Dienstmodellschicht ist nun abgeschlossen, und sie können jetzt in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen verwendet werden. Dienste müssen den Kanal mithilfe einer benutzerdefinierten Bindung zum Kanalstapel hinzufügen und die Dienstimplementierungsklassen dann mit den entsprechenden Attributen kennzeichnen.  
+ Sowohl die Kanalschicht und Erweiterungen der dienstmodellebene fertig sind, und sie können jetzt in WCF-Anwendungen verwendet werden. Dienste müssen den Kanal mithilfe einer benutzerdefinierten Bindung zum Kanalstapel hinzufügen und die Dienstimplementierungsklassen dann mit den entsprechenden Attributen kennzeichnen.  
   
 ```  
 [DurableInstanceContext]  

@@ -7,11 +7,11 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: dbee1fecda66dc377513bdf8cae4645f009b6384
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>Angeben des Clientlaufzeitverhaltens
 Windows Communication Foundation (WCF)-Clients wie Windows Communication Foundation (WCF)-Dienste können konfiguriert werden, um das Laufzeitverhalten die Clientanwendung entsprechend ändern. Drei Attribute sind zum Angeben des Clientlaufzeitverhaltens verfügbar. Duplexclient-Rückrufobjekte können das <xref:System.ServiceModel.CallbackBehaviorAttribute>-Attribut und das <xref:System.ServiceModel.Description.CallbackDebugBehavior>-Attribut verwenden, um ihr Laufzeitverhalten zu ändern. Das andere Attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, kann verwendet werden, um das logische Ziel vom unmittelbaren Netzwerkziel zu trennen. Außerdem können Duplexclient-Rückruftypen Teile des Dienstseitenverhaltens verwenden. Weitere Informationen finden Sie unter [Run-Time-Dienstverhalten angeben](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -35,7 +35,7 @@ Windows Communication Foundation (WCF)-Clients wie Windows Communication Foundat
   
 -   Führen Sie diesen Vorgang nur in gesteuerten Debugszenarien aus.  
   
- Das folgende Codebeispiel zeigt eine Clientkonfigurationsdatei, die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] anweist, verwaltete Ausnahmeinformationen aus einem Client-Rückrufobjekt in SOAP-Nachrichten zurückzugeben.  
+ Das folgende Codebeispiel zeigt einen Client-Konfigurationsdatei, der anweist, WCF, verwaltete Ausnahmeinformationen aus einem Client-Rückrufobjekt in SOAP-Nachrichten zurückzugeben.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  

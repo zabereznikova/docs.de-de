@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b302a7d0643ed61d12cfedf26348590d40d18f3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-extensibility"></a>Einführung in die Erweiterbarkeit
-Das Anwendungsmodell für Windows Communication Foundation (WCF) Dient zur-Anwendungsmodell die kommunikationsanforderungen aller beliebigen verteilten Anwendungen zu beheben. Es treten jedoch häufig Szenarien auf, die das Standardanwendungsmodell und vom System bereitgestellte Implementierungen nicht unterstützen. Mit dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Erweiterbarkeitsmodell werden benutzerdefinierte Szenarien unterstützt, indem das Systemverhalten auf jeder Ebene geändert werden kann. Dies ist sogar bis zum Ersatz des gesamten Anwendungsmodells möglich. Dieses Thema gliedert die verschiedenen Bereiche der Erweiterung und verweist auf weitere Informationen zu jeder Erweiterung.  
+Das Anwendungsmodell für Windows Communication Foundation (WCF) Dient zur-Anwendungsmodell die kommunikationsanforderungen aller beliebigen verteilten Anwendungen zu beheben. Es treten jedoch häufig Szenarien auf, die das Standardanwendungsmodell und vom System bereitgestellte Implementierungen nicht unterstützen. Die WCF-Erweiterbarkeitsmodell werden benutzerdefinierte Szenarien unterstützt, da Sie auf das Systemverhalten auf jeder Ebene bis zur Ersatz des gesamten Anwendungsmodells selbst zu ändern. Dieses Thema gliedert die verschiedenen Bereiche der Erweiterung und verweist auf weitere Informationen zu jeder Erweiterung.  
   
 ## <a name="areas-to-extend"></a>Zu erweiternde Bereiche  
  Folgende Werte können erweitert werden:  
@@ -25,7 +25,7 @@ Das Anwendungsmodell für Windows Communication Foundation (WCF) Dient zur-Anwen
 -   Die Hostlaufzeit. Dadurch wird die Beziehung der Hostinganwendungsdomäne zum Kanal und der Anwendungslaufzeit erweitert.  
   
 ### <a name="extending-the-application-runtime"></a>Erweitern der Anwendungslaufzeit  
- In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen unterscheidet man zwischen Nachrichten, die für einen entsprechenden Kanal und Nachrichten, die für die Anwendung selbst vorgesehen sind. Kanalnachrichten unterstützen einige kanalbezogene Funktionen, zum Beispiel das Einrichten einer sicheren Konversation oder einer zuverlässigen Sitzung. Diese Nachrichten sind nicht für die Anwendungslaufzeit verfügbar; sie werden vor Einbeziehung der Anwendungsebene verarbeitet.  
+ In WCF-Anwendungen wird unterschieden zwischen Nachrichten, die für einen entsprechenden Kanal bestimmt sind und Nachrichten, die für die Anwendung selbst gespeichert werden. Kanalnachrichten unterstützen einige kanalbezogene Funktionen, zum Beispiel das Einrichten einer sicheren Konversation oder einer zuverlässigen Sitzung. Diese Nachrichten sind nicht für die Anwendungslaufzeit verfügbar; sie werden vor Einbeziehung der Anwendungsebene verarbeitet.  
   
  Anwendungsnachrichten beinhalten Daten für einen Client- oder einen Dienstvorgang, der von Ihnen oder einem Kunden erstellt wurde. Diese Nachrichten sind je nach Anforderung für das Erweiterungssystem auf Anwendungsebene in Nachrichten- oder Objektform verfügbar.  
   

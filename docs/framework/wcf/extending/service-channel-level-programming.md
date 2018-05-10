@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-level-programming"></a>Dienst-Kanalebenenprogrammierung
 In diesem Thema wird beschrieben, wie eine Windows Communication Foundation (WCF)-Dienst-Anwendung ohne Schreiben der <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> und der zugehörigen Objektmodelle.  
@@ -28,7 +28,7 @@ In diesem Thema wird beschrieben, wie eine Windows Communication Foundation (WCF
 5.  Schließen Sie alle Kanalobjekte.  
   
 #### <a name="creating-a-binding"></a>Erstellen einer Bindung  
- Der erste Schritt beim Lauschen und Empfangen von Meldungen ist das Erstellen einer Bindung. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird mit verschiedenen integrierten und vom System bereitgestellten Bindungen ausgeliefert, die direkt durch Instanziierung verwendet werden können. Außerdem können Sie eigene benutzderdefinierte Bindungen durch Instanziieren einer CustomBinding-Klasse erstellen. Diese Aufgabe übernimmt beispielsweise der Code im Programmbeispiel 1.  
+ Der erste Schritt beim Lauschen und Empfangen von Meldungen ist das Erstellen einer Bindung. Im Lieferumfang von WCF sind verschiedenen integrierter und vom System bereitgestellte Bindungen, die direkt durch Instanziierung verwendet werden können. Außerdem können Sie eigene benutzderdefinierte Bindungen durch Instanziieren einer CustomBinding-Klasse erstellen. Diese Aufgabe übernimmt beispielsweise der Code im Programmbeispiel 1.  
   
  Das Codebeispiel unten erstellt eine Instanz von <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> und fügt ein <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> zur Elementesammlung hinzu, die einer Sammlung von Bindungselementen entspricht, die zum Erstellen des Kanalstapels verwendet werden. Da die Elementesammlung in diesem Beispiel nur das <xref:System.ServiceModel.Channels.HttpTransportBindingElement> aufweist, hat der resultierende Kanalstapel nur einen HTTP-Transportkanal.  
   

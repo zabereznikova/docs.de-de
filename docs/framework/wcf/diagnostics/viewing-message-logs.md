@@ -2,17 +2,17 @@
 title: Anzeigen von Nachrichtenprotokollen
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 56e4fb1ea8c67c35df440a2088034327788f6f15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4fa205b52e3d19d2421d93297b5689422775f719
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="viewing-message-logs"></a>Anzeigen von Nachrichtenprotokollen
 In diesem Thema wird beschrieben, wie Sie Nachrichtenprotokolle anzeigen können.  
   
 ## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>Anzeigen von Nachrichtenprotokollen im Service Trace Viewer  
- Eine Nachricht wird während ihrer Verarbeitung von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] umgewandelt. Deshalb spiegelt eine Nachricht, die protokolliert wird, lediglich den Nachrichteninhalt am Protokollierungspunkt wider, nicht den Inhalt der Verbindung.  
+ Eine Nachricht wird transformiert werden, während ihrer von WCF Verarbeitung. Deshalb spiegelt eine Nachricht, die protokolliert wird, lediglich den Nachrichteninhalt am Protokollierungspunkt wider, nicht den Inhalt der Verbindung.  
   
  Da die Ausgabe der Nachrichtenprotokollierung völlig unabhängig vom Übertragungsformat der Nachricht ist, gibt die Nachrichtenprotokollierung stets die decodierte Nachricht aus. Wenn Sie die Nachrichtenprotokollierung ordnungsgemäß konfiguriert haben, sollte jede protokollierte Nachricht als Klartext vorliegen. Beispielsweise wird das Format (Klartext) der protokollierten Nachrichten nicht durch die Verwendung eines binären Nachrichtenencoders beeinflusst.  
   

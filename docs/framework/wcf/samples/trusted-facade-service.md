@@ -2,11 +2,11 @@
 title: Vertrauenswürdiger Fassadendienst
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5a4cfe63f2fc6facbe4ce78d1c0047349e303fd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="trusted-facade-service"></a>Vertrauenswürdiger Fassadendienst
 Dieses Szenariobeispiel veranschaulicht, wie Informationen Identität des Aufrufers von einem Dienst an einen anderen mithilfe von Windows Communication Foundation (WCF) ausgetauscht Sicherheitstokendienst-Infrastruktur.  
@@ -21,7 +21,7 @@ Dieses Szenariobeispiel veranschaulicht, wie Informationen Identität des Aufruf
   
 -   Rechner-Back-End-Dienst  
   
- Der Fassadendienst ist für die Überprüfung der Anforderung und die Authentifizierung des Aufrufers verantwortlich. Nach erfolgreicher Authentifizierung und Validierung leitet er die Anforderung an den Back-End-Dienst mithilfe des gesteuerten Kommunikationskanals vom Perimeternetzwerk zum internen Netzwerk weiter. Als Teil der weitergeleiteten Anforderung beinhaltet der Fassadendienst Informationen über die Identität des Aufrufers. So kann der Back-End-Dienst diese Informationen in der Verarbeitung verwenden. Die Identität des Aufrufers wird mit einem `Username` -Sicherheitstoken im Nachrichten- `Security` -Header gesendet. Im Beispiel wird die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Sicherheitsinfrastruktur verwendet, um diese Informationen zu übertragen und aus dem `Security` -Header zu extrahieren.  
+ Der Fassadendienst ist für die Überprüfung der Anforderung und die Authentifizierung des Aufrufers verantwortlich. Nach erfolgreicher Authentifizierung und Validierung leitet er die Anforderung an den Back-End-Dienst mithilfe des gesteuerten Kommunikationskanals vom Perimeternetzwerk zum internen Netzwerk weiter. Als Teil der weitergeleiteten Anforderung beinhaltet der Fassadendienst Informationen über die Identität des Aufrufers. So kann der Back-End-Dienst diese Informationen in der Verarbeitung verwenden. Die Identität des Aufrufers wird mit einem `Username` -Sicherheitstoken im Nachrichten- `Security` -Header gesendet. Das Beispiel verwendet der WCF-Sicherheitstokendienst-Infrastruktur zu übertragen, und extrahieren diese Informationen aus der `Security` Header.  
   
 > [!IMPORTANT]
 >  Der Back-End-Dienst vertraut darauf, dass der Fassadendienst den Aufrufer authentifiziert. Daher authentifiziert der Back-End-Dienst den Aufrufer nicht erneut, sondern nutzt die Identitätsinformationen, die vom Fassadendienst in der weitergeleiteten Anforderung bereitgestellt werden. Aufgrund dieser Vertrauensbeziehung muss der Back-End-Dienst den Fassadendienst authentifizieren, um sicherzustellen, dass die weitergeleitete Nachricht von einer vertrauenswürdigen Quelle stammt, in diesem Fall vom Fassadendienst.  
@@ -110,7 +110,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  Die [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) -Bindungselement übernimmt der Username-Übertragung und Extraktion des ursprünglichen Aufrufers. Die [ \<WindowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) und [ \<TcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) Authentifizierung von Fassaden- und Back-End-Dienste sowie den Nachrichtenschutz.  
   
- Um die Anforderung weiterzuleiten, muss die Fassadendienstimplementierung den Benutzernamen des ursprünglichen Aufrufers bereitstellen, sodass die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Sicherheitsinfrastruktur diesen in der weitergeleiteten Nachricht unterbringen kann. Der Benutzername des ursprünglichen Aufrufers wird in der Fassadendienstimplementierung bereitgestellt, indem er in der `ClientCredentials` -Eigenschaft auf der Clientproxyinstanz festgelegt wird, die der Fassadendienst für die Kommunikation mit dem Back-End-Dienst nutzt.  
+ Um die Anforderung weiterzuleiten, muss die fassadendienstimplementierung Benutzername des ursprünglichen Aufrufers bereitstellen, damit diese WCF-Sicherheitsinfrastruktur dies in der weitergeleiteten Nachricht platziert werden kann. Der Benutzername des ursprünglichen Aufrufers wird in der Fassadendienstimplementierung bereitgestellt, indem er in der `ClientCredentials` -Eigenschaft auf der Clientproxyinstanz festgelegt wird, die der Fassadendienst für die Kommunikation mit dem Back-End-Dienst nutzt.  
   
  Der folgende Code zeigt, wie die `GetCallerIdentity` -Methode auf dem Fassadendienst implementiert wird. Andere Methoden verwenden das gleiche Muster.  
   
@@ -125,9 +125,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Wie bereits im vorherigen Code gezeigt, ist das Kennwort nicht für die `ClientCredentials` -Eigenschaft festgelegt, sondern nur der Benutzername. Die[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Sicherheitsinfrastruktur erstellt in diesem Fall ein Benutzernamen-Sicherheitstoken ohne Kennwort. Dies ist genau das, was in diesem Szenario erforderlich ist.  
+ Wie bereits im vorherigen Code gezeigt, ist das Kennwort nicht für die `ClientCredentials` -Eigenschaft festgelegt, sondern nur der Benutzername. WCF-Sicherheitstokendienst-Infrastruktur erstellt ein Benutzernamen-Sicherheitstoken ohne Kennwort in diesem Fall das ist genau das, was in diesem Szenario erforderlich ist.  
   
- Auf dem Back-End-Dienst müssen die Informationen authentifiziert werden, die im Benutzernamen-Sicherheitstoken enthalten sind. Standardmäßig versucht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Sicherheit, den Benutzer mit dem bereitgestellten Kennwort einem Windows-Konto zuzuordnen. In diesem Fall ist kein Kennwort angegeben, und der Back-End-Dienst muss den Benutzernamen nicht authentifizieren, da die Authentifizierung bereits vom Fassadendienst durchgeführt wurde. Um diese Funktionalität in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zu implementieren, wird ein benutzerdefiniertes `UserNamePasswordValidator` bereitgestellt, das nur durchsetzt, dass ein Benutzername im Token angegeben ist, und keine zusätzliche Authentifizierung durchführt.  
+ Auf dem Back-End-Dienst müssen die Informationen authentifiziert werden, die im Benutzernamen-Sicherheitstoken enthalten sind. Standardmäßig versucht WCF-Sicherheit, die Benutzer mit dem bereitgestellten Kennwort einem Windows-Konto zuzuordnen. In diesem Fall ist kein Kennwort angegeben, und der Back-End-Dienst muss den Benutzernamen nicht authentifizieren, da die Authentifizierung bereits vom Fassadendienst durchgeführt wurde. Implementieren Sie diese Funktionalität in WCF, ein benutzerdefiniertes `UserNamePasswordValidator` wird bereitgestellt, das nur durchsetzt, dass ein Benutzername im Token angegeben ist, und keine zusätzlichen Authentifizierung führt.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -148,7 +148,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 }  
 ```  
   
- Das benutzerdefinierte Validierungssteuerelement ist so konfiguriert, dass es innerhalb des `serviceCredentials`-Verhaltens in der Konfigurationsdatei des Fassadendiensts verwendet wird.  
+ Das benutzerdefinierte Validierungssteuerelement ist so konfiguriert, dass es innerhalb des `serviceCredentials` -Verhaltens in der Konfigurationsdatei des Fassadendiensts verwendet wird.  
   
 ```xml  
 <behaviors>  
@@ -208,7 +208,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Die Informationen über das Fassadendienstkonto werden mithilfe der `ServiceSecurityContext.Current.WindowsIdentity` -Eigenschaft extrahiert. Um auf die Informationen über den ursprünglichen Aufrufer zuzugreifen, verwendet der Back-End-Dienst die `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` -Eigenschaft. Hier wird nach einem `Identity` -Anspruch mit dem Typ `Name`gesucht. Dieser Anspruch wird automatisch von der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Sicherheitsinfrastruktur aus den Informationen generiert, die im `Username` -Sicherheitstoken enthalten sind.  
+ Die Informationen über das Fassadendienstkonto werden mithilfe der `ServiceSecurityContext.Current.WindowsIdentity` -Eigenschaft extrahiert. Um auf die Informationen über den ursprünglichen Aufrufer zuzugreifen, verwendet der Back-End-Dienst die `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` -Eigenschaft. Hier wird nach einem `Identity` -Anspruch mit dem Typ `Name`gesucht. Dieser Anspruch wird automatisch generiert, von WCF-Sicherheitstokendienst-Infrastruktur aus der Informationen in den `Username` Sicherheitstoken.  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen. Sie können die EINGABETASTE in den Konsolenfenstern des Fassaden- und Back-End-Diensts drücken, um die Dienste zu schließen.  

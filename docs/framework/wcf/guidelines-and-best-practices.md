@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="guidelines-and-best-practices"></a>Richtlinien und empfohlene Vorgehensweisen
 Dieser Abschnitt enthält Themen, die Richtlinien zum Erstellen von Windows Communication Foundation (WCF)-Anwendungen bereitstellen.  
@@ -22,7 +22,7 @@ Dieser Abschnitt enthält Themen, die Richtlinien zum Erstellen von Windows Comm
  Erläutert, wie und wann Datenverträge zu erstellen sind, die auch mit zukünftigen Versionen verwendet werden können.  
   
  [Dienstversionsverwaltung](../../../docs/framework/wcf/service-versioning.md)  
- Stellt Überlegungen zur Versionsverwaltung in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vor. Nach der Bereitstellung müssen Dienste (und die durch sie verfügbar gemachten Endpunkte) eventuell angepasst werden, um neuen Geschäfts- oder IT-Anforderungen zu begegnen oder Probleme zu beheben. Jede Änderung führt zu einer neuen Version des Diensts.  
+ Erläutert die Überlegungen zur versionsverwaltung in WCF. Nach der Bereitstellung müssen Dienste (und die durch sie verfügbar gemachten Endpunkte) eventuell angepasst werden, um neuen Geschäfts- oder IT-Anforderungen zu begegnen oder Probleme zu beheben. Jede Änderung führt zu einer neuen Version des Diensts.  
   
  [Lastenausgleich](../../../docs/framework/wcf/load-balancing.md)  
  Führt Richtlinien für den Lastenausgleich bei einer Webfarm auf.  

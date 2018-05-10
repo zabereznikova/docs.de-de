@@ -8,23 +8,23 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c464dc79e0f38b72f724fafcef59916d766e2d0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Synchrone und asynchrone Vorgänge
 In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvorgänge erörtert.  
   
- Viele Anwendungen rufen Methoden asynchron auf, weil dadurch die Anwendung beim Methodenaufruf weiter nützliche Arbeiten ausführen kann. Windows Communication Foundation (WCF)-Dienste und -Clients können aufrufen asynchroner Vorgänge auf zwei unterschiedlichen Ebenen der Anwendung, die bereitstellen teilnehmen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] noch mehr Flexibilität, um den Durchsatz maximieren mit für Lastenausgleich Anwendungen Interaktivität.  
+ Viele Anwendungen rufen Methoden asynchron auf, weil dadurch die Anwendung beim Methodenaufruf weiter nützliche Arbeiten ausführen kann. Windows Communication Foundation (WCF)-Dienste und Clients können an Aufrufen asynchroner Vorgänge auf zwei unterschiedliche Ebenen von der Anwendung teilnehmen die WCF-Anwendungen noch mehr Flexibilität Durchsatz unter Abwägung der Interaktivität zu maximieren ermöglichen .  
   
 ## <a name="types-of-asynchronous-operations"></a>Typen asynchroner Vorgänge  
- Alle Dienstverträge in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verwenden unabhängig von den Parametertypen und Rückgabewerten [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Attribute zum Angeben eines bestimmten Musters für den Nachrichtenaustausch zwischen Client und Dienst. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] leitet automatisch eingehende und ausgehende Nachrichten an den entsprechenden Dienstvorgang oder ausgeführten Clientcode weiter.  
+ Alle in WCF-Verträge, unabhängig davon, welche Parameter und Rückgabewerte, WCF-Attribute verwenden, um das Muster für einen bestimmten Nachrichtenaustausch zwischen Client und Dienst angeben. WCF leitet automatisch eingehende und ausgehende Nachrichten an den entsprechenden Dienstvorgang oder ausgeführten Clientcode weiter.  
   
  Der Client verfügt nur über den Dienstvertrag, der das Nachrichtenaustauschmuster für einen bestimmten Vorgang angibt. Clients können dem Entwickler ein beliebiges Programmiermodell anbieten, solange das zugrunde liegende Nachrichtenaustauschmuster eingehalten wird. Ebenso können Dienste Vorgänge auf beliebige Weise implementieren, solange das angegebene Nachrichtenmuster eingehalten wird.  
   
- Die Unabhängigkeit des Dienstvertrags von der Dienst- oder Clientimplementierung ermöglicht die folgenden Formen asynchroner Ausführung in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen:  
+ Die Unabhängigkeit des Dienstvertrags von der Dienst- oder Client-Implementierung kann die folgenden Formen asynchroner Ausführung in WCF-Anwendungen:  
   
 -   Clients können Anforderungs-/Antwortvorgänge mit einem synchronen Nachrichtenaustausch asynchron aufrufen.  
   
@@ -147,9 +147,9 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
 >  Das <xref:System.ServiceModel.OperationContractAttribute>-Attribut wird nur auf die `BeginDoWork`-Methode angewendet. Der resultierende Vertrag verfügt über einen WSDL-Vorgang mit der Bezeichnung `DoWork`.  
   
 ### <a name="client-side-asynchronous-invocations"></a>Clientseitige asynchrone Aufrufe  
- Eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientanwendung kann eine der drei asynchronen, oben beschriebenen Aufrufmodelle verwenden.  
+ Eine WCF-Clientanwendung kann eine der drei asynchronen Aufrufen von Modellen, die zuvor beschriebenen verwenden.  
   
- Wenn Sie das taskbasierte Modell verwenden, rufen Sie einfach den Vorgang mithilfe des await-Schlüsselworts wie im folgenden Codeausschnitt dargestellt auf.  
+ Wenn Sie das aufgabenbasierte Modell verwenden, rufen Sie einfach den Vorgang mithilfe des await-Schlüsselworts wie im folgenden Codeausschnitt dargestellt auf.  
   
 ```  
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
@@ -161,9 +161,9 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- Dadurch generiert Svcutil.exe eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientklasse mit der Ereignisinfrastruktur, die es der aufrufenden Anwendung ermöglicht, einen Ereignishandler zu implementieren und zuzuweisen, der die Antwort empfängt und die entsprechende Aktion einleitet. Ein vollständiges Beispiel finden Sie unter [Vorgehensweise: Aufrufen Service Vorgänge asynchron](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Nachdem dies geschehen ist, generiert Svcutil.exe eine WCF-Clientklasse mit der Ereignisinfrastruktur, mit denen die aufrufende Anwendung implementieren, und weisen einen Ereignishandler zum Empfangen der Antwort und die entsprechende Aktion aus. Ein vollständiges Beispiel finden Sie unter [Vorgehensweise: Aufrufen Service Vorgänge asynchron](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- Das ereignisbasierte asynchrone Modell ist jedoch nur in [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] verfügbar. Es wird darüber hinaus nicht einmal in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] unterstützt, wenn ein [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientkanal mithilfe einer <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> erstellt wird. Bei [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientkanalobjekten müssen Sie <xref:System.IAsyncResult?displayProperty=nameWithType>-Objekte verwenden, um die Vorgänge asynchron aufzurufen. Um diesen Ansatz verwenden, geben Sie die **/async** Befehlsoption mit der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), wie im folgenden Beispiel.  
+ Das ereignisbasierte asynchrone Modell ist jedoch nur in [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] verfügbar. Darüber hinaus wird nicht unterstützt auch im [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Erstellung ein WCF-Clientkanal mithilfe einer <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Mit WCF-Kanal-Clientobjekte, verwenden Sie <xref:System.IAsyncResult?displayProperty=nameWithType> -Objekten, die Vorgänge asynchron aufzurufen. Um diesen Ansatz verwenden, geben Sie die **/async** Befehlsoption mit der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), wie im folgenden Beispiel.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   

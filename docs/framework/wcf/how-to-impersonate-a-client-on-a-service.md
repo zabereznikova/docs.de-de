@@ -9,11 +9,11 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 991792b22dbef42e6f244f33f3a82550c02ddeba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c15d201a002ec93ff3a83ce1bba9f94ccb6a7b95
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Vorgehensweise: Annahme der Clientidentität durch einen Dienst
 Identität eines Clients auf einen Windows Communication Foundation (WCF)-Dienst kann der Dienst Aktionen im Auftrag des Clients durchführen. Bei Aktionen, die einer ACL-Überprüfung (ACL = Access Control List, Zugriffssteuerungsliste) unterliegen, wie der Zugriff auf Verzeichnisse und Dateien auf einem Computer oder der Zugriff auf eine SQL&#160;Server-Datenbank, wird die ACL-Überprüfung für das Clientbenutzerkonto durchgeführt. In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Aktivierung eines Clients in einer Windows-Domäne erforderlich sind, damit eine Ebene für den Clientidentitätswechsel festgelegt werden kann. Ein funktionsfähiges Beispiel hierfür finden Sie unter [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Weitere Informationen zum Clientidentitätswechsel finden Sie unter [Delegierung und Identitätswechsel](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -36,7 +36,7 @@ Identität eines Clients auf einen Windows Communication Foundation (WCF)-Dienst
   
 1.  Erstellen Sie Dienstclientcode mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Weitere Informationen finden Sie unter [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
   
-2.  Nachdem Sie den [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Client erstellt haben, legen Sie für die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> -Eigenschaft der <xref:System.ServiceModel.Security.WindowsClientCredential> -Klasse einen der <xref:System.Security.Principal.TokenImpersonationLevel> -Enumerationswerte fest.  
+2.  Legen Sie nach dem Erstellen des WCF-Clients können die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> Eigenschaft von der <xref:System.ServiceModel.Security.WindowsClientCredential> -Klasse auf einen der der <xref:System.Security.Principal.TokenImpersonationLevel> Enumerationswerte.  
   
     > [!NOTE]
     >  Damit <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>verwendet werden kann, muss die ausgehandelte Kerberos-Authentifizierung (auch *bilateraler* oder *mehrstufiger* Kerberos-Prozess genannt) verwendet werden. Eine Beschreibung des Implementierungsvorgangs finden Sie in [Best Practices für Sicherheit](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  

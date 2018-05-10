@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: ab6e3a99f951d2977a079f49e4aa3eff250ee8d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75657786135fd13222c6c7edd5acfa122cc72e52
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Configuration Editor-Tool (SvcConfigEditor.exe)
-Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfigEditor.exe) ermöglicht Administratoren und Entwickler erstellen und Ändern von Konfigurationseinstellungen für [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienste mit einer grafischen Benutzeroberfläche. Mit diesem Tool können Sie die Einstellungen für Bindungen, Verhalten, Dienste und Diagnosen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verwalten, ohne XML-Dateien direkt bearbeiten zu müssen.  
+Der Service Configuration Editor (SvcConfigEditor.exe) der Windows Communication Foundation (WCF) ermöglicht Administratoren und Entwicklern, Konfigurationseinstellungen für WCF-Dienste anhand einer grafischen Benutzeroberfläche zu erstellen und zu bearbeiten. Mit diesem Tool können Sie die Einstellungen für Bindungen, Verhalten, Dienste und Diagnosen von WCF verwalten, ohne XML-Dateien direkt bearbeiten zu müssen.  
   
  Der Service Configuration Editor befindet sich im Ordner "C:\Programme\Microsoft SDKs\Windows\v6.0\Bin".  
   
 ## <a name="the-wcf-configuration-editor"></a>Der WCF-Configuration Editor  
- Der Service Configuration Editor umfasst einen Assistenten, der Sie durch den Prozess der Konfiguration eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensts oder -Clients führt. Es wird dringend geraten, den Assistenten und nicht den Editor zu verwenden.  
+ Der Service Configuration Editor umfasst einen Assistenten, der Sie durch den Prozess der Konfiguration eines WCF-Diensts oder -Clients führt. Es wird dringend geraten, den Assistenten und nicht den Editor zu verwenden.  
   
- Wenn Sie bereits über Konfigurationsdateien verfügen, die mit dem standardmäßigen System.Configuration-Schema konform sind, können Sie spezielle Einstellungen für Bindungen, Verhaltensweisen, Dienste und Diagnosen anhand der Benutzeroberfläche verwalten. Mit dem Service Configuration Editor (SvcConfigEditor) können Sie die Einstellungen von vorhandenen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Konfigurationsdateien sowie von ausführbaren Dateien, COM+-Diensten und im Web gehosteten Diensten verwalten. Beim Öffnen eines im Internet gehosteten Diensts mit dem Service Configuration Editor werden sowohl die eigene Konfiguration des Diensts sowie die von Knoten der oberen Ebene übernommenen Konfigurationsabschnitte angezeigt.  
+ Wenn Sie bereits über Konfigurationsdateien verfügen, die mit dem standardmäßigen System.Configuration-Schema konform sind, können Sie spezielle Einstellungen für Bindungen, Verhaltensweisen, Dienste und Diagnosen anhand der Benutzeroberfläche verwalten. Mit dem Service Configuration Editor können Sie die Einstellungen von vorhandenen WCF-Konfigurationsdateien sowie von ausführbaren Dateien, COM+-Diensten und im Internet gehosteten Diensten verwalten. Beim Öffnen eines im Internet gehosteten Diensts mit dem Service Configuration Editor werden sowohl die eigene Konfiguration des Diensts sowie die von Knoten der oberen Ebene übernommenen Konfigurationsabschnitte angezeigt.  
   
- Da sich die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Konfigurationseinstellungen im `<system.serviceModel>`-Abschnitt der Konfigurationsdatei befinden, arbeitet der Editor nur mit dem Inhalt dieses Elements und greift auf keine anderen Elemente in dieser Datei zu. Sie können direkt zu vorhandenen Konfigurationsdateien wechseln, oder Sie können eine Assembly auswählen, die einen Dienst, ein virtuelles Verzeichnis oder einen COM+-Dienst enthält. Der Editor lädt die Konfigurationsdatei für diesen Dienst und ermöglicht dem Benutzer, neue Elemente hinzuzufügen oder vorhandene Elemente des `<system.serviceModel>`-Abschnitts der Konfigurationsdatei zu bearbeiten.  
+ Da sich die WCF-Konfigurationseinstellungen im `<system.serviceModel>`-Abschnitt der Konfigurationsdatei befinden, arbeitet der Editor nur mit dem Inhalt dieses Elements und greift auf keine anderen Elemente in dieser Datei zu. Sie können direkt zu vorhandenen Konfigurationsdateien wechseln, oder Sie können eine Assembly auswählen, die einen Dienst, ein virtuelles Verzeichnis oder einen COM+-Dienst enthält. Der Editor lädt die Konfigurationsdatei für diesen Dienst und ermöglicht dem Benutzer, neue Elemente hinzuzufügen oder vorhandene Elemente des `<system.serviceModel>`-Abschnitts der Konfigurationsdatei zu bearbeiten.  
   
  Der Editor unterstützt IntelliSense und erzwingt Schemakompatibilität. Die Ausgabe entspricht garantiert dem Schema der Konfigurationsdatei und weist syntaktisch korrekte Datenwerte auf. Der Editor garantiert jedoch nicht, dass die Konfigurationsdatei semantisch gültig ist. Mit anderen Worten: Der Editor garantiert nicht, dass die Konfigurationsdatei mit dem Dienst zusammenarbeiten kann, den sie konfiguriert.  
   
@@ -45,7 +45,7 @@ Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfi
   
  C:\Programme\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe  
   
- Nachdem Sie den Dienstkonfigurations-Editor starten, können Sie mithilfe der **Datei/öffnen** Menü zu durchsuchen, die für den Dienst oder die Assembly, die Sie verwalten möchten. Sie können Konfigurationsdateien direkt öffnen, nach [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-/COM+-Diensten suchen und Konfigurationsdateien für über das Web gehostete Dienste öffnen.  
+ Nachdem Sie den Dienstkonfigurations-Editor starten, können Sie mithilfe der **Datei/öffnen** Menü zu durchsuchen, die für den Dienst oder die Assembly, die Sie verwalten möchten. Sie können Konfigurationsdateien direkt öffnen, nach WCF-/COM+-Diensten suchen und Konfigurationsdateien für über das Web gehostete Dienste öffnen.  
   
  Die Service Configuration Editor-Benutzeroberfläche ist in die folgenden Bereiche aufgeteilt:  
   
@@ -57,7 +57,7 @@ Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfi
   
 ### <a name="opening-a-configuration-file"></a>Öffnen einer Konfigurationsdatei  
   
-1.  Starten Sie Dienstkonfigurations-Editor mit der ein Befehlsfenster, zu dem navigiert Ihrer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Installationsspeicherort aus, und geben Sie dann `SvcConfigEditor.exe`.  
+1.  Starten Sie ein Befehlsfenster, das auf den WCF-Installationspfad navigieren, und geben Sie dann mit Dienstkonfigurations-Editor `SvcConfigEditor.exe`.  
   
 2.  Aus der **Datei** klicken Sie im Menü **öffnen** , und klicken Sie auf den Typ der Datei, die Sie verwalten möchten.  
   
@@ -208,7 +208,7 @@ Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfi
 3.  Wählen Sie die Bindungselementerweiterung aus, die Sie bearbeiten möchten. Die Einstellungen des Elements werden im rechten Bereich angezeigt, in dem sie bearbeitet werden können.  
   
 ### <a name="diagnostics"></a>Diagnose  
- Die **Diagnose** -Knoten zeigt alle diagnoseeinstellungen in der Konfigurationsdatei. Hiermit können Sie Leistungsindikatoren ein- oder ausschalten, die Windows-Verwaltungsinstrumentation (WMI) aktivieren oder deaktivieren sowie die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Ablaufverfolgung und die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Meldungsprotokollierung konfigurieren. Die Einstellungen in der **Diagnose** Knoten entsprechen den <`system.diagnostics`> Abschnitt und `<diagnostics>` im Abschnitt `<system.serviceModel>` in der Konfigurationsdatei.  
+ Die **Diagnose** -Knoten zeigt alle diagnoseeinstellungen in der Konfigurationsdatei. Sie können Sie aktivieren oder deaktivieren Sie die Leistungsindikatoren, aktivieren oder Deaktivieren von Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI), Konfigurieren von WCF-Ablaufverfolgung und WCF-nachrichtenprotokollierung konfigurieren. Die Einstellungen in der **Diagnose** Knoten entsprechen den <`system.diagnostics`> Abschnitt und `<diagnostics>` im Abschnitt `<system.serviceModel>` in der Konfigurationsdatei.  
   
  Beim Klicken auf die **Diagnose** Knoten können Sie anzeigen oder Ausführen von Aufgaben auf die Diagnose **Seite "Zusammenfassung"** in der **Detailbereich**.  
   
@@ -225,18 +225,18 @@ Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfi
 2.  Um WMI-Anbieter zu aktivieren, klicken Sie auf die **WMI-Anbieter aktivieren** Link.  
   
 #### <a name="enabling-wcf-tracing"></a>Aktivieren von WCF-Ablaufverfolgung  
- Sie können eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Ablaufverfolgungsdatei mit Standardeigenschaften erstellen oder eine benutzerdefinierte Ablaufverfolgungsdatei einrichten.  
+ Sie können eine WCF-Ablaufverfolgungsdatei mit Standardeigenschaften erstellen oder eine benutzerdefinierte Ablaufverfolgungsdatei einrichten.  
   
 1.  Klicken Sie auf die **Diagnose** Knoten.  
   
 2.  Klicken Sie auf **Aktivieren der Ablaufverfolgung**.  
   
-3.  Klicken Sie auf die **Ablaufverfolgungsebene** Link, um die Ablaufverfolgungsebene einzustellen. Es gibt sechs Ablaufverfolgungsebenen: Off, Critical, Error, Warning, Information und Verbose. Die **Aktivitätsablaufverfolgung** und **Aktivität propagieren** Option ermöglichen es Ihnen, verwenden Sie die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aktivitätsablaufverfolgungs-Feature.  
+3.  Klicken Sie auf die **Ablaufverfolgungsebene** Link, um die Ablaufverfolgungsebene einzustellen. Es gibt sechs Ablaufverfolgungsebenen: Off, Critical, Error, Warning, Information und Verbose. Die **Aktivitätsablaufverfolgung** und **Aktivität propagieren** Option ermöglichen es Ihnen, die WCF aktivitätsablaufverfolgungs-Feature zu verwenden.  
   
 4.  Klicken Sie auf den Namen des Ablaufverfolgungslisteners, um die Ablaufverfolgungsdatei und die Optionen festzulegen.  
   
 #### <a name="enabling-wcf-logging"></a>Aktivieren der WCF-Protokollierung  
- Sie können eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Ablaufverfolgungsdatei mit Standardeigenschaften erstellen oder eine benutzerdefinierte Ablaufverfolgungsdatei einrichten.  
+ Sie können eine WCF-Ablaufverfolgungsdatei mit Standardeigenschaften erstellen oder eine benutzerdefinierte Ablaufverfolgungsdatei einrichten.  
   
 1.  Klicken Sie auf die **Diagnose** Knoten.  
   
@@ -316,7 +316,7 @@ Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfi
  Mit diesem Abschnitt können Sie Standardbindungstypen für andere Protokolle, wie z. B. http, tcp, MSMQ oder net.pipe, über die definierte Zuordnung zwischen Protokolladressschemas und den möglichen Bindungen festlegen. Sie können darüber hinaus anderen Protokollen neue Zuordnungen hinzufügen.  
   
 #### <a name="extensions"></a>Erweiterungen  
- Neue Bindungserweiterungen, Bindungselementerweiterungen, Standardendpunkterweiterungen und Verhaltenserweiterungen können für die Verwendung in der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Konfiguration registriert werden. Erweiterungen sind Name-/Typpaare. Der Name definiert den Namen der Erweiterung in der Konfiguration, wohingegen der Typ die Erweiterung implementiert. Es gibt vier Erweiterungstypen:  
+ Neue bindungserweiterungen, bindungselementerweiterungen, standardendpunkterweiterungen und verhaltenserweiterungen können für die Verwendung in WCF-Konfiguration registriert werden. Erweiterungen sind Name-/Typpaare. Der Name definiert den Namen der Erweiterung in der Konfiguration, wohingegen der Typ die Erweiterung implementiert. Es gibt vier Erweiterungstypen:  
   
 -   Bindungserweiterungen definieren einen gesamten Bindungstyp. Beispiel: `basicHttpBinding`  
   
@@ -326,7 +326,7 @@ Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfi
   
 -   Verhaltenselementerweiterungen definieren ein Element eines Verhaltens. Beispiel: `clientVia`  
   
- Erweiterungen, die in einer Konfiguration registriert wurden, können wie jede andere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Komponente des gleichen Typs verwendet werden.  
+ Erweiterungen, die in einer Konfiguration registriert wurden, können wie jede andere WCF-Komponente des gleichen Typs verwendet werden.  
   
 ##### <a name="adding-a-new-extension"></a>Hinzufügen einer neuen Erweiterung  
  Wählen Sie einen der Erweiterungsknoten in den erweiterten Knoten aus:  
@@ -343,11 +343,11 @@ Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfi
  Dieser Abschnitt ermöglicht Ihnen, Instanziierungseinstellungen für die Diensthostingumgebung zu definieren.  
   
 ### <a name="creating-a-configuration-file-using-the-wizard"></a>Erstellen einer Konfigurationsdatei mit dem Assistenten  
- Eine Möglichkeit zum Erstellen einer neuen Konfigurationsdatei ist die Verwendung des Assistenten für neue Dienstelemente. Der Assistent ermittelt die auf dem Computer installierten Diensttypen und andere Elemente, die mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kompatibel sind, einschließlich COM+- und im Internet gehostete virtuelle Verzeichnisse, und lädt diese, um die Erstellung der Konfiguration zu straffen.  
+ Eine Möglichkeit zum Erstellen einer neuen Konfigurationsdatei ist die Verwendung des Assistenten für neue Dienstelemente. Der Assistent sucht nach den installierten Diensttypen und andere Elemente mit WCF auf dem Computer, einschließlich COM+- und im Internet gehostete virtuelle Verzeichnisse kompatibel und lädt diese, um die Erstellung der Konfigurations zu straffen.  
   
 #### <a name="creating-a-configuration-file"></a>Erstellen einer Konfigurationsdatei  
   
-1.  Starten Sie Dienstkonfigurations-Editor mit der ein Befehlsfenster, zu dem navigiert Ihrer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Installationsspeicherort aus, und geben Sie dann `SvcConfigEditor.exe`.  
+1.  Starten Sie ein Befehlsfenster, das auf den WCF-Installationspfad navigieren, und geben Sie dann mit Dienstkonfigurations-Editor `SvcConfigEditor.exe`.  
   
 2.  Aus der **Datei** klicken Sie im Menü **öffnen** , und klicken Sie auf **ausführbare Datei**, **COM+ Service**, oder **WebHosted Service**, je nach dem Typ der Konfigurationsdatei, die Sie erstellen möchten.  
   
@@ -370,7 +370,7 @@ Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfi
   
 2.  Wählen Sie auf der ersten Seite die COM+-Anwendung in der Struktur. Wenn die COM+-Anwendung nicht in der Struktur angezeigt wird, überprüfen Sie, ob sie in den Komponentendiensten installiert und im globalen Assemblycache (GAC) registriert ist.  
   
-3.  Wählen Sie auf der nächsten Seite, welche Methode(n) Sie als [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienste verfügbar machen möchten. Alle unterstützten Methoden in der COM+-Anwendung werden angezeigt und sind standardmäßig ausgewählt.  
+3.  Wählen Sie auf der nächsten Seite, welche Methode(n) Sie als WCF-Dienste verfügbar machen möchten. Alle unterstützten Methoden in der COM+-Anwendung werden angezeigt und sind standardmäßig ausgewählt.  
   
 4.  Wählen Sie eine Hostingmethode aus.  
   
@@ -390,6 +390,6 @@ Der Windows Communication Foundation (WCF) Dienstkonfigurations-Editor (SvcConfi
     >  Sie können eine Konfigurationsdatei mit COM+-Verträgen auch direkt öffnen und bearbeiten.  
   
 ## <a name="security"></a>Sicherheit  
- Eine durch den Configuration Editor generierte Dienstkonfigurationsdatei ist nicht garantiert sicher. Finden Sie in der [Sicherheit](../../../docs/framework/wcf/feature-details/security.md) Dokumentation, um herauszufinden, wie zum Sichern Ihrer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienste.  
+ Eine durch den Configuration Editor generierte Dienstkonfigurationsdatei ist nicht garantiert sicher. Finden Sie in der [Sicherheit](../../../docs/framework/wcf/feature-details/security.md) Dokumentation, um herauszufinden, wie Ihre WCF-Dienste zu schützen.  
   
- Außerdem kann der Configuration Editor verwendet werden, um gültige [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Konfigurationselemente nur zu lesen und zu schreiben. Das Tool ignoriert schemakompatible, benutzerdefinierte Elemente. Es versucht außerdem nicht, diese Elemente aus der Konfigurationsdatei zu entfernen oder die Auswirkungen auf die bekannten [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Elemente zu ermitteln. Es ist die Aufgabe des Benutzers, zu ermitteln, ob diese Elemente eine Bedrohung für die Anwendung oder das System darstellen.
+ Außerdem kann der Configuration Editor nur verwendet werden, um gültige WCF-Konfigurationselemente zu lesen und zu schreiben. Das Tool ignoriert schemakompatible, benutzerdefinierte Elemente. Es versucht außerdem nicht, diese Elemente aus der Konfigurationsdatei zu entfernen oder die Auswirkungen auf die bekannten WCF-Elemente zu ermitteln. Es ist die Aufgabe des Benutzers, zu ermitteln, ob diese Elemente eine Bedrohung für die Anwendung oder das System darstellen.

@@ -2,11 +2,11 @@
 title: Durchführen der Windows Communication Foundation-Beispiele
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: ee02b6e737e4728a378533ebb5ba89cec9807b33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68b05b590e80a65ba8816c0dcfd8d140b71eb8c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Durchführen der Windows Communication Foundation-Beispiele
 Der Windows Communication Foundation (WCF)-Beispiele können in einer Konfiguration mit einem einzelnen Computer oder computerübergreifend ausgeführt werden. Wie angegeben, können die Beispiele auf einem einzelnen Computer ausgeführt werden. In einer computerübergreifenden Konfiguration ist es notwendig, die Konfigurationsdateieinstellungen des Beispiels zu ändern. Die folgenden Prozeduren erklären, wie ein Beispiel in einer Konfiguration mit einem einzelnen Computer und computerübergreifend ausgeführt wird. Beachten Sie, dass es Abweichungen in den Schritten für Dienste, die in Internetinformationsdiensten (IIS) gehostet werden, und den selbst gehosteten Diensten gibt. Die meisten Beispiele werden in IIS gehostet. Der Infodatei eines Beispiels können Sie entnehmen, wie das Beispiel gehostet wird.  
@@ -14,7 +14,7 @@ Der Windows Communication Foundation (WCF)-Beispiele können in einer Konfigurat
  Bei [!INCLUDE[wv](../../../../includes/wv-md.md)] erfordern Beispiele, die nicht in IIS gehostet werden, erweiterte Berechtigungen, um einen Listener mit "Http.sys" zu registrieren. Verwenden Sie Httpcfg.exe, um die Überwachungsadressen des Diensts mit dem Konto, unter dem der Dienst ausgeführt wird, zu registrieren, oder starten Sie den Dienst an einer Eingabeaufforderung, die mit Administratorrechten ausgeführt wird.  
   
 > [!NOTE]
->  Vor dem Erstellen oder Ausführen eines der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beispiele, achten Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+>  Vor dem Erstellen oder einen WCF-Beispiele ausführen, werden Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>So führen Sie das Beispiel auf demselben Computer aus  
   

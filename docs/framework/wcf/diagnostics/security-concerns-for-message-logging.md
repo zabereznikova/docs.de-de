@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>Sicherheitsaspekte für Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von der Nachrichtenprotokollierung generiert werden.  
@@ -16,7 +16,7 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
 ## <a name="security-concerns"></a>Sicherheitsaspekte  
   
 ### <a name="logging-sensitive-information"></a>Protokollieren vertraulicher Informationen  
- Windows Communication Foundation (WCF) werden alle Daten in anwendungsspezifischen Headern und Text nicht geändert. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfolgt darüber hinaus keine persönlichen Informationen in anwendungsspezifischen Headern oder Textdaten nach.  
+ Windows Communication Foundation (WCF) werden alle Daten in anwendungsspezifischen Headern und Text nicht geändert. WCF verfolgt auch keine persönlichen Informationen in anwendungsspezifischen Headern oder Textdaten.  
   
  Bei aktivierter Nachrichtenprotokollierung sind persönliche Informationen in anwendungsspezifischen Headern, wie z. B. eine Abfragezeichenfolge, und Textdaten, wie z. B. eine Kreditkartennummer, u. U. in den Protokollen sichtbar. Der Anwendungsbereitsteller ist für das Erzwingen einer Zugriffssteuerung für die Konfigurations- und Protokolldateien verantwortlich. Wenn Informationen dieser Art nicht sichtbar sein sollen, sollten Sie die Protokollierung deaktivieren, oder filtern Sie einen Teil der Daten heraus, wenn Sie die Protokolle freigeben möchten.  
   

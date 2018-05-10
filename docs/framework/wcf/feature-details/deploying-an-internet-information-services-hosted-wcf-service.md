@@ -21,7 +21,7 @@ Entwickeln und Bereitstellen eines Windows Communication Foundation (WCF)-Dienst
   
 -   Konfigurieren Sie den WCF-Dienst.  
   
- Eine ausführliche exemplarische Vorgehensweise zum Erstellen eines IIS-gehosteten WCF-Diensts finden Sie unter [wie: Hosten eines WCF-Diensts in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+ Eine ausführliche exemplarische Vorgehensweise zum Erstellen eines IIS-gehosteten WCF-Diensts finden Sie unter [Gewusst wie: Hosten eines WCF-Diensts in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Sicherstellen, dass IIS, ASP.NET und WCF ordnungsgemäß installiert und registriert sind  
  WCF, IIS und ASP.NET müssen für IIS-gehosteten WCF-Dienste ordnungsgemäß installiert werden. Das Verfahren zum Installieren von WCF (als Teil der [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]), ASP.NET und IIS variiert je nach der Version des Betriebssystems verwendet wird. Weitere Informationen zum Installieren von WCF und die [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], finden Sie unter [Microsoft .NET Framework 4-Webinstaller](http://go.microsoft.com/fwlink/?LinkId=201185). Anweisungen zum Installieren von IIS finden Sie unter [Installieren von IIS](http://go.microsoft.com/fwlink/?LinkId=201188).  

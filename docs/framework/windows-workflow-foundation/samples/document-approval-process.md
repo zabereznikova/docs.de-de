@@ -2,11 +2,11 @@
 title: Dokumentgenehmigungsprozess
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="document-approval-process"></a>Dokumentgenehmigungsprozess
 Dieses Beispiel veranschaulicht die Verwendung vieler Funktionen von Windows Workflow Foundation (WF) und Windows Communication Foundation (WCF) zusammen. Zusammen implementieren sie ein Szenario für einen Dokumentgenehmigungsprozess. Eine Clientanwendung kann Dokumente zur Genehmigung senden und Dokumente genehmigen. Es ist eine Genehmigungs-Manager-Anwendung vorhanden, um die Kommunikation zwischen Clients zu unterstützen und die Regeln für den Genehmigungsprozess umzusetzen. Der Genehmigungsprozess ist ein Workflow, der mehrere Genehmigungsarten ausführen kann. Es sind Aktivitäten vorhanden, mit denen ein Einzelgenehmigungsprozess, ein Quorumgenehmigungsprozess (Prozentsatz aller Genehmiger) und ein komplexer Genehmigungsprozess, der aus einer Abfolge einer Quorumgenehmigung und einer Einzelgenehmigung besteht, abgerufen werden.  
@@ -29,7 +29,7 @@ Dieses Beispiel veranschaulicht die Verwendung vieler Funktionen von Windows Wor
   
 1.  Ein Client wird ein Benutzer im Genehmigungsprozesssystem.  
   
-2.  Ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client sendet an einen von der Genehmigungs-Manager-Anwendung gehosteten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst.  
+2.  Ein WCF-Client sendet an einen WCF-Datendienst, der von der Genehmigungs-Manager-Anwendung gehostet wird.  
   
 3.  Dem Client wird eine eindeutige Benutzer-ID zurückgegeben. Der Client kann jetzt an Genehmigungsprozessen teilnehmen.  
   
@@ -47,19 +47,19 @@ Dieses Beispiel veranschaulicht die Verwendung vieler Funktionen von Windows Wor
   
 10. Ein Client kann eine Genehmigungsanforderung empfangen und zu jedem Zeitpunkt auf die Anforderung antworten.  
   
-11. Ein auf dem Client gehosteter [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst kann eine Genehmigungsanforderung von der Genehmigungs-Manager-Anwendung empfangen.  
+11. Ein WCF-Dienst gehostet wird, auf dem Client kann eine genehmigungsanforderung von der Genehmigungs-Manager-Anwendung empfangen.  
   
-12. Die Dokumentinformationen werden zur Überprüfung auf dem Client dargestellt.  
+12. Die Dokumentinformationen werden zum Review auf dem Client dargestellt.  
   
 13. Der Benutzer kann das Dokument genehmigen oder ablehnen.  
   
-14. Ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client wird verwendet, um eine Genehmigungsantwort an die Genehmigungs-Manager-Anwendung zurückzusenden.  
+14. Ein WCF-Client wird verwendet, um eine genehmigungsantwort an die Genehmigungs-Manager-Anwendung zu senden.  
   
  Aus Sicht der Genehmigungs-Manager-Anwendung funktioniert der Genehmigungsprozess wie folgt:  
   
 1.  Ein Client fordert an, am Genehmigungsprozesssystem teilzunehmen.  
   
-2.  Ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst des Genehmigungs-Managers empfängt eine Anforderung, Teil des Genehmigungsprozesssystems zu werden.  
+2.  Ein WCF-Dienst auf der Genehmigungs-Manager empfängt eine Anforderung zum Teil des genehmigungsprozesssystems zu werden.  
   
 3.  Für den Client wird eine eindeutige ID generiert. Die Benutzerinformationen werden in einer Datenbank gespeichert.  
   

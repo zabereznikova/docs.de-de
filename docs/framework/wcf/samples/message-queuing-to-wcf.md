@@ -2,11 +2,11 @@
 title: Message Queuing zu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: c0208de93ad0c903b8a75383b509de57365ac4bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3c16a95b21dcdea941e605f3e25e560b7193b03
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Message Queuing zu Windows Communication Foundation
 In diesem Beispiel wird veranschaulicht, wie eine Message Queuing (MSMQ)-Anwendung eine MSMQ-Nachricht an einen Windows Communication Foundation (WCF)-Dienst senden kann. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -59,7 +59,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  Der Name der MSMQ-Warteschlange wird im appSettings-Abschnitt der Konfigurationsdatei angegeben, wie in der folgenden Beispielkonfiguration gezeigt.  
   
 > [!NOTE]
->  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunktadresse gibt ein msmq.formatname-Schema an, und für den lokalen Computer wird localhost verwendet. Die Adresse der Warteschlange für jeden MSMQ-Formatnamen, der sich auf Richtlinien bezieht, folgt dem msmq.formatname-Schema.  
+>  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die WCF-Endpunktadresse gibt ein msmq.formatname-Schema und verwendet "localhost" für den lokalen Computer. Die Adresse der Warteschlange für jeden MSMQ-Formatnamen, der sich auf Richtlinien bezieht, folgt dem msmq.formatname-Schema.  
   
 ```xml  
 <appSettings>  

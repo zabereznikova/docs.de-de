@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: d29483995a1fbf7a8c9918db0c3b65f7deac1e44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0bde07dbeb70eaafbde4d90627d245554ad7ca6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Zugreifen auf Dienste mithilfe eines WCF-Clients
-Nach dem Erstellen eines Diensts ist der nächste Schritt das Erstellen eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientproxys. Eine Clientanwendung verwendet den [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientproxy, um mit dem Dienst zu kommunizieren. Clientanwendungen importieren normalerweise Metadaten eines Dienstes zum Generieren von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientcode, mit dem der Dienst aufgerufen werden kann.  
+Nachdem Sie einen Dienst erstellt haben, besteht der nächste Schritt erstellen Sie einen WCF-Clientproxy. Eine Clientanwendung verwendet den WCF-Clientproxy, um mit dem Dienst kommunizieren. Clientanwendungen importieren normalerweise Metadaten eines Diensts, um WCF-Clientcode generieren, die zum Aufrufen des Diensts verwendet werden kann.  
   
- Nachfolgend werden die grundlegenden Schritte zum Erstellen eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clients aufgeführt:  
+ Die grundlegenden Schritte zum Erstellen eines WCF-Clients umfassen Folgendes:  
   
 1.  Kompilieren Sie den Dienstcode.  
   
-2.  Generieren Sie den [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientproxy.  
+2.  Generieren Sie den WCF-Clientproxy.  
   
 3.  Instanziieren Sie den WCF-Clientproxy.  
   
@@ -39,7 +39,7 @@ Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
 Svcutil.exe <list of WSDL and XSD files on file system>  
 ```  
   
- Das Ergebnis ist ein Code, der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientcode enthält, mit dem die Clientanwendung den Dienst aufrufen kann.  
+ Das Ergebnis ist eine Codedatei, die WCF-Clientcode, die die Clientanwendung verwenden können enthält, um den Dienst aufzurufen.  
   
  Sie können das Tool auch zum Generieren von Konfigurationsdateien verwenden.  
   
@@ -79,7 +79,7 @@ Public Interface ICalculator
 End Interface
 ```
   
- Das ServiceModel Metadata Utility-Tool und Dienstverweis hinzufügen[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in Visual Studio generieren die folgende -Clientklasse. Die Klasse erbt von der generischen <xref:System.ServiceModel.ClientBase%601>-Klasse und implementiert die `ICalculator`-Schnittstelle. Das Tool generiert auch die `ICalculator`-Schnittstelle (wird hier nicht gezeigt).  
+ Das ServiceModel Metadata Utility-Tool und Hinzufügen eines Dienstverweises in Visual Studio generiert die folgenden WCF-Clientklasse. Die Klasse erbt von der generischen <xref:System.ServiceModel.ClientBase%601>-Klasse und implementiert die `ICalculator`-Schnittstelle. Das Tool generiert auch die `ICalculator`-Schnittstelle (wird hier nicht gezeigt).  
   
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -147,7 +147,7 @@ End Class
 ```
   
 ## <a name="using-the-wcf-client"></a>Verwenden des WCF-Clients  
- Erstellen Sie zum Verwenden des [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clients eine Instanz des [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clients, und rufen Sie dann seine Methoden auf, wie im folgenden Code gezeigt.  
+ Um den WCF-Client verwenden, erstellen Sie eine Instanz der WCF-Client, und rufen Sie klicken Sie dann seine Methoden auf, wie im folgenden Code gezeigt.  
   
 ```csharp
 // Create a client object with the given client endpoint configuration.
@@ -172,7 +172,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
   
 ## <a name="debugging-exceptions-thrown-by-a-client"></a>Debuggen der von einem Client ausgelösten Ausnahmen  
- Viele von einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Client ausgelöste Ausnahmen werden von einer Ausnahme des Diensts verursacht. Im Folgenden finden Sie einige Beispiele:  
+ Viele von einem WCF-Client ausgelöste Ausnahmen werden durch eine Ausnahme für den Dienst verursacht. Im Folgenden finden Sie einige Beispiele:  
   
 -   <xref:System.Net.Sockets.SocketException>: Vom Remotehost wurde die Schließung einer bestehenden Verbindung erzwungen.  
   

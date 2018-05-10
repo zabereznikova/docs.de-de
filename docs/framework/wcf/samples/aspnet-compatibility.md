@@ -2,11 +2,11 @@
 title: ASP.NET-Kompatibilität
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f621a3f13fafee67a015d463898a10aaf9104008
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET-Kompatibilität
 Dieses Beispiel veranschaulicht das Aktivieren von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Kompatibilitätsmodus in Windows Communication Foundation (WCF). Dienste, die im [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Kompatibilitätsmodus ausgeführt werden, nehmen vollständig an der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendungspipeline teil und können [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Funktionen, wie Datei-/URL-Autorisierung, Sitzungsstatus und die <xref:System.Web.HttpContext>-Klasse, nutzen. Die <xref:System.Web.HttpContext>-Klasse lässt Zugriff auf Cookies, Sitzungen und andere [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Funktionen zu. Dieser Modus erfordert, dass die Bindungen den HTTP-Transport verwenden und der Dienst selbst in IIS gehostet ist.  
@@ -59,7 +59,7 @@ public interface ICalculatorSession
  Der Dienst verwendet die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Sitzung, um die Ergebnisse für jede Clientsitzung zu speichern. Dadurch wird dem Dienst ermöglicht, das aktuelle Ergebnis für jeden Client über mehrere Aufrufe des Diensts hinweg beizubehalten.  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Sitzungsstatus und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sitzungen sind unterschiedliche Dinge.  Finden Sie unter der [Sitzung](../../../../docs/framework/wcf/samples/session.md) ausführliche [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sitzungen.  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Sitzungsstatus und WCF-Sitzungen sind sehr unterschiedliche Dinge.  Finden Sie unter der [Sitzung](../../../../docs/framework/wcf/samples/session.md) Weitere Informationen zu WCF-Sitzungen.  
   
  Der Dienst verfügt über eine enge Abhängigkeit vom [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Sitzungsstatus und erfordert den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Kompatibilitätsmodus, um korrekt zu arbeiten. Diese Anforderungen werden deklarativ durch die Übernahme des `AspNetCompatibilityRequirements`-Attributs ausgedrückt.  
   

@@ -2,11 +2,11 @@
 title: Verwenden von Leistungsindikatoren
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2e25551494a433c53832127fdb0a32cb4eccac47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8784b4a481b8313d370aad1d8f265dcb44ab3ed6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-performance-counters"></a>Verwenden von Leistungsindikatoren
 In diesem Beispiel wird veranschaulicht, wie Zugriff auf Leistungsindikatoren für Windows Communication Foundation (WCF) und benutzerdefinierte Leistungsindikatoren erstellen. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -28,7 +28,7 @@ In diesem Beispiel wird veranschaulicht, wie Zugriff auf Leistungsindikatoren f�
   
  Diese Aufgabe kann auch erfolgen mithilfe der [Dienstkonfigurations-Editor-Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Wenn Leistungsindikatoren aktiviert sind, wird die ganze Suite von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Leistungsindikatoren für den Dienst aktiviert. .NET Framework behält Leistungsdaten automatisch auf drei Ebenen bei: `ServiceModelService`, `ServiceModelEndpoint` und `ServiceModelOperation`. Jede dieser Ebenen verfügt über Leistungsindikatoren wie "Calls", "Calls per Second" und "Security Calls Not Authorized".  
+ Wenn Leistungsindikatoren aktiviert sind, wird die ganze Suite von WCF-Leistungsindikatoren für den Dienst aktiviert. .NET Framework behält Leistungsdaten automatisch auf drei Ebenen bei: `ServiceModelService`, `ServiceModelEndpoint` und `ServiceModelOperation`. Jede dieser Ebenen verfügt über Leistungsindikatoren wie "Calls", "Calls per Second" und "Security Calls Not Authorized".  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
@@ -47,10 +47,10 @@ In diesem Beispiel wird veranschaulicht, wie Zugriff auf Leistungsindikatoren f�
   
 2.  Entfernen Sie die aufgeführten Leistungsindikatoren, indem Sie sie auswählen und dann die ENTF-TASTE drücken.  
   
-3.  Add [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Leistungsindikatoren, indem Sie mit der rechten Maustaste in des Diagrammbereich klicken und auswählen **Leistungsindikatoren hinzufügen**. In der **Leistungsindikatoren hinzufügen** wählen Sie im Dialogfeld **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 oder ServiceModelService 3.0.0.0** in das Leistungsobjekt "" im Dropdown-Liste. Wählen Sie die anzuzeigenden Indikatoren in der Liste aus.  
+3.  WCF-Leistungsindikatoren hinzufügen, indem Sie mit der rechten Maustaste in des Diagrammbereich klicken und auswählen **Leistungsindikatoren hinzufügen**. In der **Leistungsindikatoren hinzufügen** wählen Sie im Dialogfeld **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 oder ServiceModelService 3.0.0.0** in das Leistungsobjekt "" im Dropdown-Liste. Wählen Sie die anzuzeigenden Indikatoren in der Liste aus.  
   
     > [!NOTE]
-    >  Es werden keine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Leistungsindikatoren für einen Dienst angezeigt, wenn keine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste auf dem Computer ausgeführt werden.  
+    >  Es sind keine WCF-Leistungsindikatoren für einen Dienst auf, wenn keine WCF-Dienste auf dem Computer vorhanden sind.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>So aktivieren Sie Indikatoren mit dem Konfigurations-Editor  
   

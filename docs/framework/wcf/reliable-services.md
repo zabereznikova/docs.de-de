@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: 02e0b8822c29490462fe74803a34222188afc910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f98da5db34686e3bf09cc14c42a2ff6b693201f6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-services"></a>Zuverlässige Dienste
-Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Foundation (WCF)-Funktionen, die zuverlässiges messaging implementieren. In diesem Thema werden die zuverlässigen Messagingfunktionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erläutert.  
+Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Foundation (WCF)-Funktionen, die zuverlässiges messaging implementieren. In diesem Thema wird erläutert, die Funktionen für zuverlässigen messaging von WCF.  
   
  *Zuverlässiges messaging* wird gezeigt, wie einer zuverlässigen messagingquelle (bezeichnet den *Quelle*) überträgt Nachrichten zuverlässig an ein zuverlässiges messagingziel (aufgerufen der *Ziel*).  
   
@@ -25,7 +25,7 @@ Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Founda
   
 -   Trennt die Quelle und das Ziel voneinander. So ist eine unabhängige Wiederherstellung nach einem Fehler von Quelle und Ziel sowie eine zuverlässige Übertragung und Zustellung von Nachrichten möglich, auch wenn die Quelle oder das Ziel nicht verfügbar ist.  
   
- Der Preis eines zuverlässigen Messagings besteht häufig in einer hohen Latenz. *Latenz* ist die Zeit, die für die Nachricht bis zum Ziel aus der Quelldatenbank. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] stellt deshalb die folgenden zuverlässigen Messagingarten bereit:  
+ Der Preis eines zuverlässigen Messagings besteht häufig in einer hohen Latenz. *Latenz* ist die Zeit, die für die Nachricht bis zum Ziel aus der Quelldatenbank. WCF bietet daher die folgenden Typen von zuverlässigen messaging:  
   
 -   [Zuverlässige Sitzungen](../../../docs/framework/wcf/feature-details/reliable-sessions.md), welcher bietet eine zuverlässige Übertragung ohne die Kosten einer hohen Latenz.  
   
@@ -37,7 +37,7 @@ Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Founda
  Zuverlässige Sitzungen bieten zuverlässige Nachrichtenübertragungen mit niedriger Latenz. Sie stellen SOAP-Nachrichten über Proxys oder Vermittler bereit, vergleichbar mit der TCP-Bereitstellung für Pakete über IP-Brücken. Weitere Informationen über zuverlässige Sitzungen finden Sie unter [zuverlässige Sitzungen](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Warteschlangen  
- Warteschlangen in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bieten zuverlässige Übertragungen von Nachrichten und eine Trennung zwischen Quellen und Zielen mit dem Nachteil hoher Latenz. Warteschlangenkommunikation in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] baut auf Message Queuing (MSMQ) auf.  
+ Warteschlangen in WCF bieten zuverlässige Übertragungen von Nachrichten und eine Trennung zwischen Quellen und Zielen mit dem Nachteil hoher Latenz. WCF in der Warteschlange Kommunikation basiert auf Message Queuing (MSMQ).  
   
  MSMQ steht als optionale Windows-Komponente zur Verfügung. Der MSMQ-Dienst wird als Windows-Dienst ausgeführt. Er erfasst Nachrichten, die in einer Übertragungswarteschlange der Quelle übertragen und einer Zielwarteschlange zugestellt werden. Die Zielwarteschlange akzeptiert Nachrichten im Auftrag des Ziels für eine spätere Zustellung, wenn das Ziel Nachrichten anfordert. Die MSMQ-Manager implementieren ein zuverlässiges Nachrichtenübertragungsprotokoll, damit Nachrichten bei der Übertragung nicht verloren gehen. Das Protokoll kann entweder systemeigen oder SOAP-basiert sein, zum Beispiel das SOAP Reliable Messaging Protocol (SRMP).  
   

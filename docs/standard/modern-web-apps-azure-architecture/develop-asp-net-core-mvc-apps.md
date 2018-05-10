@@ -10,11 +10,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c5e2d603062095c02af500ae74a9ea708cf9aefa
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 1a97bd393a4df080d9e2f9fc049165e4efbff852
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -135,7 +135,7 @@ Das Objektmodell und die Schnittstellen der Anwendung sollten im ApplicationCore
 
 Im Infrastrukturprojekt sind Informationen zur Implementierung enthalten. Diese umfassen Hinweise zur Vorgehensweise im Hinblick auf die Persistenz und beim möglichen Senden von Benachrichtigungen an den Benutzer. Dieses Projekt verweist dann zwar auf implementierungsspezifische Pakete wie Entity Framework Core, sollte aber keine Informationen zu diesen Implementierungen außerhalb des Projekts verfügbar machen. Infrastrukturdienste und Repositorys sollten Schnittstellen implementieren, die im ApplicationCore-Projekt definiert sind. Über die Persistenzimplementierungen dieses Projekts werden darin implementierte Entitäten abgerufen und gespeichert.
 
-Das ASP.NET Core-Projekt an sich ist zwar verantwortlich für jegliche Aspekte im Hinblick auf die Benutzeroberflächenebene, es sollte jedoch keine Geschäftslogik oder Informationen zur Infrastruktur enthalten. Bestenfalls sollte es sogar unabhängig vom Infrastrukturprojekt sein. Dadurch wird sichergestellt, dass nicht versehentlich eine Abhängigkeit zwischen zwei Projekten hergestellt wird. Dies erreichen Sie, indem Sie einen Dependency Injection-Container eines Drittanbieters wie StructureMap verwenden. Damit können Sie Regeln für die einzelnen Projekte zu Dependency Injection in Registrierungsklassen festlegen.
+Das ASP.NET Core-Benutzeroberflächenprojekt ist zwar verantwortlich für jegliche Aspekte im Hinblick auf die Benutzeroberflächenebene, es sollte jedoch keine Geschäftslogik oder Informationen zur Infrastruktur enthalten. Bestenfalls sollte es sogar unabhängig vom Infrastrukturprojekt sein. Dadurch wird sichergestellt, dass nicht versehentlich eine Abhängigkeit zwischen zwei Projekten hergestellt wird. Dies erreichen Sie, indem Sie einen Dependency Injection-Container eines Drittanbieters wie StructureMap verwenden. Damit können Sie Regeln für die einzelnen Projekte zu Dependency Injection in Registrierungsklassen festlegen.
 
 Alternativ können Sie auch festlegen, dass die Anwendung Microservices aufruft, die möglicherweise in individuellen Docker-Containern bereitgestellt werden, um die Anwendung von Informationen zur Implementierung zu entkoppeln. Dadurch wird das Prinzip „Separation of Concerns“ noch deutlicher eingehalten, und es wird eine bessere Entkopplung vorgenommen als bei der Verwendung von Dependency Injection zwischen zwei Projekten. Allerdings ist diese Methode auch komplexer.
 

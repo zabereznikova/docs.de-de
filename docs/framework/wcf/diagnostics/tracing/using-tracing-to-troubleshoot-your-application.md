@@ -2,11 +2,11 @@
 title: Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 7613ff24161fd7dc159838fb232e2fc6742ab1a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 684fd79e2aa8062ddeb183576cb449bf838aa6c3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern
 Dieser Abschnitt enthält verschiedene Themen, in denen beschrieben wird, wie Sie Anwendungsfehler mit der Ablaufverfolgung beheben.  
@@ -19,13 +19,13 @@ Dieser Abschnitt enthält verschiedene Themen, in denen beschrieben wird, wie Si
  Beschreibt, wie Sie mit dem Service Trace Viewer-Tool Ablaufverfolgungsdaten anzeigen, korrelieren und analysieren können.  
   
  [Bedeutende Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
- Eine Liste der wichtigsten Ablaufverfolgungen, die von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ausgegeben wurden.  
+ Eine Liste der wichtigsten ablaufverfolgungen von WCF ausgegeben.  
   
  [Debuggen auf dem Client](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
  Ermöglicht Clients, die Anwendung zu debuggen.  
   
  [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- Beschreibt für E2E [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Szenarien verwendete Ablaufverfolgungen, z.&#160;B. synchrone wsHttp-Anforderungsantworten und asynchrone unidirektionale TCP-Anforderungen.  
+ Beschreibt ablaufverfolgungen verwendet E2E-WCF-Szenarien, z. B. synchrone WsHttp-Anforderungsantworten und asynchrone unidirektionale TCP-Anforderungen.  
   
  [Ausgeben von Benutzercode-Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
  Beschreibt die programmgesteuerte Ausgabe von Ablaufverfolgungen in Benutzercode, sodass Sie proaktiv Instrumentierungsdaten erstellen können, die später zur Diagnose und in Korrelation mit WCF-Ablaufverfolgungen verwendet werden.  

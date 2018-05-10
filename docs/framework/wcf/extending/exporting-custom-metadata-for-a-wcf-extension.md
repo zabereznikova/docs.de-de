@@ -2,11 +2,11 @@
 title: Exportieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2ae547f10e96a1fdc16fc428e98145fc81c59d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung
 In Windows Communication Foundation (WCF) ist metadatenexport der Prozess der Beschreibung von Dienstendpunkten und Ihrer Projektion in eine parallele, standardisierte Darstellung, die Clients verwenden können, wie Sie den Dienst verwenden können. Benutzerdefinierte Metadaten bestehen aus XML-Elementen, die die vom System bereitgestellten Metadaten-Exporteure nicht exportieren können. Normalerweise gehören hierzu benutzerdefinierte Elemente für benutzerdefinierte Verhalten und Bindungselemente und Richtlinienassertionen über die Fähigkeiten und Anforderungen von Bindungen und Verträgen.  
@@ -14,7 +14,7 @@ In Windows Communication Foundation (WCF) ist metadatenexport der Prozess der Be
  Dieser Abschnitt beschreibt den Export von benutzerdefinierten WSDL- oder Richtlinienassertionen und konzentriert sich nicht auf den Exportprozess selbst. Weitere Informationen zur Verwendung von Typen, die exportieren und Importieren von Metadaten, unabhängig davon, ob die Metadaten benutzerdefinierte oder vom System erstellt wird, finden Sie unter [exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Übersicht  
- Wenn Metadaten über das <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> veröffentlicht werden, wird <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> untersucht und XSD und WSDL – einschließlich der Richtlinienassertionen – werden für alle Verträge und Bindungen generiert, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unter Einsatz von vom System gelieferten Attributen und Bindungen unterstützen kann. Benutzerdefinierte Verhaltensattribute oder Bindungselemente erfordern jedoch Unterstützung, bevor sie ordnungsgemäß exportiert werden können.  
+ Wenn Metadaten veröffentlicht werden mithilfe der <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, die <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> untersucht und XSD und WSDL – einschließlich der Richtlinienassertionen – werden für alle Verträge und Bindungen, WCF unterstützen kann mithilfe von System gelieferten Attributen und Bindungen, generiert. Benutzerdefinierte Verhaltensattribute oder Bindungselemente erfordern jedoch Unterstützung, bevor sie ordnungsgemäß exportiert werden können.  
   
  Dieser Abschnitt beschreibt:  
   

@@ -2,11 +2,11 @@
 title: Erweiterungen
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensibility"></a>Erweiterungen
 Dieser Abschnitt enthält Beispiele, die mit benutzerdefinierten Erweiterungen und anderen Funktionen von Windows Communication Foundation (WCF).  
@@ -55,10 +55,10 @@ Dieser Abschnitt enthält Beispiele, die mit benutzerdefinierten Erweiterungen u
  Zeigt, wie Prozesse wie Serialisierung, Deserialisierung, Schemaexport und Schemaimport mithilfe einer Datenvertrag-Ersatzzeichenklasse angepasst werden können.  
   
  [Erweitern der Kontrolle über Fehlerbehandlung und -meldung](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- Zeigt, wie die Kontrolle über die Verarbeitung und Meldung von Fehlern in einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle erweitert werden kann.  
+ Veranschaulicht das Erweitern der Kontrolle über Fehlerbehandlung und die Fehlerberichterstattung in einem WCF-Dienst mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler> Schnittstelle.  
   
  [Nachrichteninspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  Zeigt, wie Client- und Dienstnachrichteninspektoren implementiert und konfiguriert werden.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- Zeigt, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichtentextformaten neue Inhaltstypen zugeordnet werden.
+ Veranschaulicht, wie WCF-Nachrichtentext Nachrichtenformate neue Inhaltstypen zugeordnet.

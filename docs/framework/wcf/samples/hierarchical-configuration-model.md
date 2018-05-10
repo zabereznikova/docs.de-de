@@ -2,17 +2,17 @@
 title: Hierarchisches Konfigurationsmodell
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 4debeaf0bfd2558552a7943f3767a4f9b53ce550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hierarchical-configuration-model"></a>Hierarchisches Konfigurationsmodell
 In diesem Beispiel wird veranschaulicht, wie eine Hierarchie von Konfigurationsdateien für Dienste implementiert wird. Es wird auch gezeigt, wie Bindungen, Dienstverhalten und Endpunktverhalten von höheren Ebenen in der Hierarchie geerbt werden.  
   
 ## <a name="sample-details"></a>Beispieldetails  
- Eine der Funktionen, die für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] entwickelt wurden, besteht in der Verbesserung des hierarchischen Konfigurationsmodells. Ein hierarchisches Konfigurationsmodell ist z. B. das Modell, das von Machine.config -> Rootweb.config -> Web.config definiert wurde. In [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] werden die Bindungen und Verhaltensweisen, die in den oberen Ebenen der Konfigurationshierarchie definiert werden, zum Dienst ohne explizite Konfiguration hinzugefügt. In diesem Beispiel wird gezeigt, wie die Dienstkonfiguration basierend auf Konfigurationselementen vereinfacht werden kann, die auf Computer- oder Anwendungsebene definiert sind.  
+ Eine der Funktionen für WCF in entwickelten [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] ist die Verbesserung des hierarchischen Konfigurationsmodells. Ein hierarchisches Konfigurationsmodell ist z. B. das Modell, das von Machine.config -> Rootweb.config -> Web.config definiert wurde. In [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] werden die Bindungen und Verhaltensweisen, die in den oberen Ebenen der Konfigurationshierarchie definiert werden, zum Dienst ohne explizite Konfiguration hinzugefügt. In diesem Beispiel wird gezeigt, wie die Dienstkonfiguration basierend auf Konfigurationselementen vereinfacht werden kann, die auf Computer- oder Anwendungsebene definiert sind.  
   
  Dieses Beispiel umfasst neun Dienste, die in drei Hierarchieebenen definiert sind. `Service1` befindet sich auf der Stammebene. `Service2` und `Service3` erben die Standardelemente von `Service1`. `Service4`, `Service5`, `Service6` und `Service7` werden auf einer dritten Ebene der Hierarchie definiert und erben die Standardelemente von `Service3`. `Service10` und `Service11` befinden sich schließlich auf einer vierten Ebene der Hierarchie.  
   

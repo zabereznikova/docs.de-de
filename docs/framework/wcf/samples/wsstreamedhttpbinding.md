@@ -2,11 +2,11 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0a4c316957a002f7541d230f96299e3f43ef778
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 Das Beispiel veranschaulicht, wie eine Bindung erstellt wird, die Streamingszenarios unterstützt, wenn HTTP-Transport verwendet wird.  
@@ -51,7 +51,7 @@ Das Beispiel veranschaulicht, wie eine Bindung erstellt wird, die Streamingszena
   
 2.  Hinzufügen von Konfigurationsunterstützung  
   
-     Im Beispiel werden zwei weitere Klassen – `WSStreamedHttpBindingConfigurationElement` und `WSStreamedHttpBindingSection` – implementiert, um den Transport durch Konfiguration verfügbar zu machen. Die Klasse `WSStreamedHttpBindingSection` ist ein <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>, das die `WSStreamedHttpBinding` für das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Konfigurationssystem verfügbar macht. Der Großteil der Implementierung wird dem `WSStreamedHttpBindingConfigurationElement` übertragen, das von <xref:System.ServiceModel.Configuration.StandardBindingElement> abgeleitet wird. Die Klasse `WSStreamedHttpBindingConfigurationElement` verfügt über Eigenschaften, die mit den Eigenschaften von `WSStreamedHttpBinding` übereinstimmen, sowie über Funktionen, um jedes Konfigurationselement einer Bindung zuzuordnen.  
+     Im Beispiel werden zwei weitere Klassen – `WSStreamedHttpBindingConfigurationElement` und `WSStreamedHttpBindingSection` – implementiert, um den Transport durch Konfiguration verfügbar zu machen. Die Klasse `WSStreamedHttpBindingSection` ist ein <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> , verfügbar macht `WSStreamedHttpBinding` für den WCF-Konfigurationssystem. Der Großteil der Implementierung wird dem `WSStreamedHttpBindingConfigurationElement` übertragen, das von <xref:System.ServiceModel.Configuration.StandardBindingElement> abgeleitet wird. Die Klasse `WSStreamedHttpBindingConfigurationElement` verfügt über Eigenschaften, die mit den Eigenschaften von `WSStreamedHttpBinding` übereinstimmen, sowie über Funktionen, um jedes Konfigurationselement einer Bindung zuzuordnen.  
   
      Registrieren Sie den Handler mit dem Konfigurationssystem, indem Sie den folgenden Abschnitt zur Konfigurationsdatei des Diensts hinzufügen.  
   
@@ -133,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>Der WSStreamedHttpBinding-Beispielclient  
- Der Client, der für die Interaktion mit dem Dienst über `WSStreamedHttpBinding` verwendet wird, befindet sich im Clientunterverzeichnis. Da die in diesem Beispiel verwendete Zertifikat ein mit Makecert.exe erstelltes Testzertifikat ist, eine sicherheitswarnung zeigt beim Versuch, eine HTTPS-Adresse in Ihrem Browser auf, wie z. B. https://localhost/servicemodelsamples/service.svc. Damit der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client mit einem vorhandenen Testzertifikat arbeiten kann, muss auf dem Client zusätzlicher Code hinzugefügt werden, um die Sicherheitswarnung zu unterdrücken. Der Code und die begleitende Klasse sind bei der Verwendung von Produktionszertifikaten nicht erforderlich.  
+ Der Client, der für die Interaktion mit dem Dienst über `WSStreamedHttpBinding` verwendet wird, befindet sich im Clientunterverzeichnis. Da die in diesem Beispiel verwendete Zertifikat ein mit Makecert.exe erstelltes Testzertifikat ist, eine sicherheitswarnung zeigt beim Versuch, eine HTTPS-Adresse in Ihrem Browser auf, wie z. B. https://localhost/servicemodelsamples/service.svc. Um den WCF-Client mit einem vorhandenen Testzertifikat arbeiten zu ermöglichen, wurde an den Client, um die sicherheitswarnung zu unterdrücken zusätzlicher Code hinzugefügt. Der Code und die begleitende Klasse sind bei der Verwendung von Produktionszertifikaten nicht erforderlich.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

@@ -1,11 +1,6 @@
 ---
 title: String-Datentyp (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.String
 helpviewer_keywords:
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90f126a5cca36969617446e81a8d13434e39df75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 894638bbe50dad2cae1f74a2f7b7fe006f029d1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-data-type-visual-basic"></a>String-Datentyp (Visual Basic)
 Enthält Sequenzen vorzeichenlose 16-Bit (2-Byte)-Codepunkte dieses Bereichs liegt im Bereich zwischen 0 und 65535 an. Jede *Codepunkt*, oder Zeichencode stellt ein einzelnes Unicode-Zeichen dar. Eine Zeichenfolge darf zwischen 0 und etwa zwei Milliarden (2 ^ 31) Unicode-Zeichen.  
@@ -81,7 +73,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Interop-Überlegungen.** Wenn Sie Komponenten, die nicht für .NET Framework geschrieben wurden Datenbreite z. B. Automatisierungs- oder COM-Objekte, denken Sie daran Zeichen der Zeichenfolge eine andere Datenbreite (8 Bit) in anderen Umgebungen. Wenn Sie ein Argument für eine 8-Bit-Zeichen an eine solche Komponente übergeben, deklarieren Sie es als `Byte()`, ein Array von `Byte` Elemente, anstelle von `String` im neuen Visual Basic-Code.  
   
--   **Typzeichen.** Die Typkennzeichen Anfügen `$` an einen beliebigen Bezeichner wird die `String` -Datentyp. `String`hat kein literal-Typzeichen. Der Compiler behandelt jedoch Literale, die in Anführungszeichen eingeschlossen (`" "`) als `String`.  
+-   **Typzeichen.** Die Typkennzeichen Anfügen `$` an einen beliebigen Bezeichner wird die `String` -Datentyp. `String` hat kein literal-Typzeichen. Der Compiler behandelt jedoch Literale, die in Anführungszeichen eingeschlossen (`" "`) als `String`.  
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.String?displayProperty=nameWithType> Klasse.  
   

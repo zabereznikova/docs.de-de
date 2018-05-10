@@ -2,14 +2,14 @@
 title: XMLSerializer-Beispiel
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 3d1df93ef0efb7da24a1478f87e10dd18aa10bf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 155719f546491f53ad2587e12d030dd7821b1fd3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer-Beispiel
-Dieses Beispiel veranschaulicht die Serialisierung und Deserialisierung von Typen, die mit dem <xref:System.Xml.Serialization.XmlSerializer> kompatibel sind. Der Standardformatierer für Windows Communication Foundation (WCF) ist die <xref:System.Runtime.Serialization.DataContractSerializer> Klasse. Die <xref:System.Xml.Serialization.XmlSerializer>-Klasse kann auch zum Serialisieren und Deserialisieren von Typen verwendet werden, wenn die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse nicht verwendet werden kann. Dies ist oft der Fall, wenn die präzise Steuerung von XML wichtig ist &#8211; beispielsweise, wenn es sich bei einem Datenelement um ein XML-Attribut und nicht um ein XML-Element handeln muss. Auch wird der <xref:System.Xml.Serialization.XmlSerializer> oft automatisch ausgewählt, wenn Clients für Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste erstellt werden.  
+Dieses Beispiel veranschaulicht die Serialisierung und Deserialisierung von Typen, die mit dem <xref:System.Xml.Serialization.XmlSerializer> kompatibel sind. Der Standardformatierer für Windows Communication Foundation (WCF) ist die <xref:System.Runtime.Serialization.DataContractSerializer> Klasse. Die <xref:System.Xml.Serialization.XmlSerializer>-Klasse kann auch zum Serialisieren und Deserialisieren von Typen verwendet werden, wenn die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse nicht verwendet werden kann. Dies ist oft der Fall, wenn die präzise Steuerung von XML wichtig ist &#8211; beispielsweise, wenn es sich bei einem Datenelement um ein XML-Attribut und nicht um ein XML-Element handeln muss. Darüber hinaus die <xref:System.Xml.Serialization.XmlSerializer> oft automatisch ausgewählt, wenn Clients für nicht-WCF-Dienste zu erstellen.  
   
  In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
   

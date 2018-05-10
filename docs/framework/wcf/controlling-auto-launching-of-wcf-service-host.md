@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
-ms.openlocfilehash: fe936ee3ff42b586c733de597de808b86f3e2575
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 63c3ca00c0cdc0b28de0fe245b616acd04ca50fe
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>Steuern des automatischen Starts des WCF-Diensthosts
-Sie steuern der Autostartfunktion des Windows Communication Foundation (WCF)-Diensthost (WcfSvcHost.exe) für eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienst-Bibliotheksprojekt beim Debuggen von einem anderen Projekt in der gleichen Visual Studio-Projektmappe mit mehreren Projekten .  
+Beim Debuggen von einem anderen Projekt in der gleichen Visual Studio-Projektmappe, die mehrere Projekte enthält, können Sie die Autostartfunktion des Windows Communication Foundation (WCF)-Diensthost (WcfSvcHost.exe) für einen WCF-Dienstbibliotheksprojekt steuern.  
   
- Dazu, mit der Maustaste die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienstprojekt in **Projektmappen-Explorer**, wählen Sie **Eigenschaften**, und klicken Sie auf **WCF Optionen** Registerkarte. Die **starten WCF-Diensthost beim Debuggen eines anderen Projekts in derselben Projektmappe** Kontrollkästchen ist standardmäßig aktiviert. Deaktivieren Sie dieses Kontrollkästchen, wenn der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensthost für dieses bestimmte Projekt beim Debuggen eines anderen Projekts in der gleichen Projektmappe nicht gestartet werden soll.  
+ Zu diesem Zweck Maustaste das WCF-Dienstprojekt in **Projektmappen-Explorer**, wählen Sie **Eigenschaften**, und klicken Sie auf **WCF Optionen** Registerkarte. Die **starten WCF-Diensthost beim Debuggen eines anderen Projekts in derselben Projektmappe** Kontrollkästchen ist standardmäßig aktiviert. Sie können das Kontrollkästchen deaktivieren, damit, dass WCF-Diensthost für dieses bestimmte Projekt nicht gestartet wird, wenn ein anderes Projekt in derselben Projektmappe gedebuggt wird.  
   
  Dieses Verhalten wirkt sich weder auf das F5-Debugging noch auf die Funktionen zum Hinzufügen von Dienstverweisen für dieses Projekt aus.  
   
  Diese Option steht für die folgenden Projekte zur Verfügung:  
   
--   Bibliotheksprojekt für [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst  
+-   Bibliotheksprojekt für WCF-Dienst.  
   
 -   Bibliotheksprojekt für sequenziellen Workflowdienst  
   

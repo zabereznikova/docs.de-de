@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 79431588e27b02a40d5898929f1bdf644c8a79cd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Gewusst wie: Verwenden eines Windows Communication Foundation-Clients
 Dies ist die letzte von sechs Aufgaben, die zum Erstellen einer grundlegenden Windows Communication Foundation (WCF)-Anwendung erforderlich. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
   
- Sobald ein Windows Communication Foundation (WCF)-Proxy erstellt und konfiguriert wurde, eine Clientinstanz erstellt werden kann und die Clientanwendung kompiliert und zur Kommunikation mit verwendet werden kann, die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dienst. In diesem Thema werden Verfahren zur Instanziierung und Verwendung eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clients beschrieben. Von dieser Prozedur werden drei Aktionen ausgeführt:  
+ Sobald ein Windows Communication Foundation (WCF)-Proxy erstellt und konfiguriert wurde, kann eine Clientinstanz erstellt werden, und die Clientanwendung kompiliert und zur Kommunikation mit den WCF-Dienst verwendet werden kann. Dieses Thema beschreibt Verfahren zur Instanziierung und Verwendung eines WCF-Clients. Von dieser Prozedur werden drei Aktionen ausgeführt:  
   
-1.  Instanziiert einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Client.  
+1.  Instanziiert einen WCF-Client.  
   
 2.  Die Dienstoperationen werden vom erstellten Proxy aufgerufen.  
   

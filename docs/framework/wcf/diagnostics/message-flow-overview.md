@@ -2,11 +2,11 @@
 title: Übersicht über den Nachrichtenfluss
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 056737b9d057101568274ab8d24c0c0e2780f93a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aea0ca4c5a8574f6039cd055561ce7da0099841b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-flow-overview"></a>Übersicht über den Nachrichtenfluss
 In einem verteilten System mit untereinander verbundenen Diensten müssen kausale Beziehungen zwischen den Diensten bestimmt werden. Es ist unerlässlich, die verschiedenen Komponenten eines Anforderungsflusses zu verstehen, wenn kritische Szenarien wie Systemüberwachung, Fehlerbehebung und Fehlerursachenanalyse unterstützt werden sollen. Um eine Korrelation der Ablaufverfolgungen verschiedener Dienste zu ermöglichen, wurde in .NET Framework 4 eine entsprechende Unterstützung über folgende Funktionen hinzugefügt:  
@@ -25,7 +25,7 @@ In einem verteilten System mit untereinander verbundenen Diensten müssen kausal
   
 2.  Wenn Sie analytische Ablaufverfolgung nicht aktiviert haben, erweitern Sie **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendungsserver-Anwendungen** . Wählen Sie **Ansicht**, **analytische und Debugprotokolle einblenden**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren**. Lassen Sie die Ereignisanzeige geöffnet, damit die Ablaufverfolgungen eingesehen werden können.  
   
-3.  Öffnen Sie das Beispiel erstellt, der [Lernprogramm für erste Schritte](../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Beachten Sie, dass Sie [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] als Administrator ausführen müssen, um den Dienst erstellen zu können. Haben die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beispiele, die installiert werden, öffnen Sie die [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), enthält das abgeschlossene Projekt, das im Lernprogramm erstellt.  
+3.  Öffnen Sie das Beispiel erstellt, der [Lernprogramm für erste Schritte](../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Beachten Sie, dass Sie [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] als Administrator ausführen müssen, um den Dienst erstellen zu können. Wenn Sie die WCF-Beispiele installiert haben, können Sie öffnen die [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), enthält das abgeschlossene Projekt, das im Lernprogramm erstellt.  
   
 4.  Mit der rechten Maustaste die **Service** Projekt, und wählen Sie **hinzufügen**, **neues Element**. Wählen Sie **Anwendungskonfigurationsdatei** , und klicken Sie auf **OK**.  
   

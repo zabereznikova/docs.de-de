@@ -1,22 +1,15 @@
 ---
 title: My.Computer.Clipboard-Objekt
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7da023c342498375daf1723a22b4e4969656cf52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 484f676070a1447067304dba1795d799c046dec6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard-Objekt
 Stellt Methoden zur Bearbeitung der Zwischenablage bereit.  
@@ -30,7 +23,7 @@ Stellt Methoden zur Bearbeitung der Zwischenablage bereit.
 >  Sie können auch die Methoden der <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> Klasse, um die Zwischenablage zu bearbeiten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Namespace:**<xref:Microsoft.VisualBasic.MyServices>  
+ **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
  **Klasse:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (ermöglicht den Zugriff auf <xref:System.Windows.Forms.Clipboard>)  
   

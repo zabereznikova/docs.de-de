@@ -2,19 +2,19 @@
 title: Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a53fee8bfed9f5a0f5773c9dfcfbaab5f173ddad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b06cc61714b3fdc63086d2b79b087540bece698
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
-Windows Communication Foundation (WCF) verfügbar macht, inspektionsdaten eines Diensts zur Laufzeit über eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Anbieter (Windows Management Instrumentation, WMI).  
+Windows Communication Foundation (WCF) macht inspektionsdaten eines Diensts zur Laufzeit über einen WCF (Windows Management Instrumentation, WMI)-Anbieter verfügbar.  
   
 ## <a name="enabling-wmi"></a>Aktivieren von WMI  
  Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. Weitere Informationen zum WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](https://msdn.microsoft.com/library/aa394582.aspx). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentierung für externe Verwaltungstools.  
   
- Ein WMI-Anbieter ist eine Komponente zum Verfügbarmachen der Instrumentation zur Laufzeit über eine WBEM-kompatible Schnittstelle. Sie besteht aus einer Gruppe von WMI-Objekten mit Attribut/Wert-Paaren. Bei den Paaren kann es sich um eine Reihe einfacher Typen handeln. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] macht Attribute von Diensten (wie Adressen, Bindungen, Verhaltensweisen und Listener) verfügbar.  
+ Ein WMI-Anbieter ist eine Komponente zum Verfügbarmachen der Instrumentation zur Laufzeit über eine WBEM-kompatible Schnittstelle. Sie besteht aus einer Gruppe von WMI-Objekten mit Attribut/Wert-Paaren. Bei den Paaren kann es sich um eine Reihe einfacher Typen handeln. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. WCF macht Attribute von Diensten wie Adressen, Bindungen, Verhaltensweisen und Listener.  
   
  Der integrierte WMI-Anbieter kann in der Konfigurationsdatei der Anwendung aktiviert werden. Dies erfolgt über die `wmiProviderEnabled` Attribut des der [ \<Diagnose >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) in der [ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Abschnitt, wie im folgenden Beispiel gezeigt. die Konfiguration.  
   
@@ -38,18 +38,18 @@ Windows Communication Foundation (WCF) verfügbar macht, inspektionsdaten eines 
   
  Sind in der Konfigurationsdatei keine Ablaufverfolgungslistener für die Nachrichtenprotokollierung oder keine `System.ServiceModel`-Ablaufverfolgungslistener angegeben, haben die vorgenommenen Änderungen keinerlei Auswirkungen, obgleich sie von WMI akzeptiert werden. Weitere Informationen zum ordnungsgemäßen Einrichten der jeweiligen Listener finden Sie unter [Konfigurieren der Nachrichtenprotokollierung](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) und [Konfigurieren der Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Die Ablaufverfolgungsebene aller anderen in der Konfiguration angegebenen Ablaufverfolgungsquellen wird beim Start der Anwendung wirksam und kann nicht geändert werden.  
   
- Von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] wird eine `GetOperationCounterInstanceName`-Methode für das Skripting verfügbar gemacht. Wird die Methode mit einem Vorgangsnamen angegeben, wird der Name einer Leistungsindikatorinstanz zurückgegeben. Die Eingabe wird jedoch nicht überprüft. Aus diesem Grund wird bei Angabe eines falschen Vorgangsnamens auch ein falscher Indikatorname zurückgegeben.  
+ WCF macht einen `GetOperationCounterInstanceName` Methode für die Skripterstellung. Wird die Methode mit einem Vorgangsnamen angegeben, wird der Name einer Leistungsindikatorinstanz zurückgegeben. Die Eingabe wird jedoch nicht überprüft. Aus diesem Grund wird bei Angabe eines falschen Vorgangsnamens auch ein falscher Indikatorname zurückgegeben.  
   
- Von der `OutgoingChannel`-Eigenschaft der `Service`-Instanz werden keine Channels gezählt, die von einem Dienst zum Herstellen einer Verbindung mit einem anderen Dienst geöffnet wurden, wenn der [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Client für den Zieldienst nicht innerhalb der `Service`-Methode erstellt wird.  
+ Die `OutgoingChannel` Eigenschaft von der `Service` Instanz werden keine Channels, die von einem Dienst zum Verbinden mit einem anderen Dienst geöffnet wird, wenn der WCF-Client an den Zieldienst nicht im erstellt gezählt die `Service` Methode.  
   
  **Vorsicht** WMI unterstützt nur eine <xref:System.TimeSpan> Wert bis zu 3 Dezimalstellen. Beispiel: Wird eine der Eigenschaften des Diensts auf <xref:System.TimeSpan.MaxValue> festgelegt, wird der Wert beim Anzeigen in WMI nach 3Dezimalstellen abgeschnitten.  
   
 ## <a name="security"></a>Sicherheit  
- Da der [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-WMI-Anbieter das Erkennen von Diensten in einer Umgebung ermöglicht, sollten Sie beim Gewähren von Zugriff auf den Anbieter äußerste Vorsicht walten lassen. Durch Lockern des standardmäßig auf Administratoren beschränkten Zugriffs erhalten möglicherweise weniger vertrauenswürdige Parteien Zugriff auf sensible Daten der Umgebung. Genauer gesagt: Durch eine Lockerung der Berechtigungen für den Remote-WMI-Zugriff erhöht sich das Risiko für Überlastungsangriffe. Wird ein Prozess von einer Vielzahl von WMI-Anforderungen regelrecht überschwemmt, hat dies eine Beeinträchtigung der Leistung zur Folge.  
+ Da WCF WMI-Anbieter die Ermittlung von Diensten in einer Umgebung ermöglicht wird, sollten Sie äußerst vorsichtig vor, für den Zugriff darauf gewähren untersucht werden. Durch Lockern des standardmäßig auf Administratoren beschränkten Zugriffs erhalten möglicherweise weniger vertrauenswürdige Parteien Zugriff auf sensible Daten der Umgebung. Genauer gesagt: Durch eine Lockerung der Berechtigungen für den Remote-WMI-Zugriff erhöht sich das Risiko für Überlastungsangriffe. Wird ein Prozess von einer Vielzahl von WMI-Anforderungen regelrecht überschwemmt, hat dies eine Beeinträchtigung der Leistung zur Folge.  
   
  Werden die Zugriffsberechtigungen für die MOF-Datei gelockert, haben weniger vertrauenswürdige Parteien die Möglichkeit zum Manipulieren des WMI-Verhaltens sowie zum Ändern der im WMI-Schema geladenen Objekte. So können beispielsweise Felder entfernt werden, was dazu führen kann, dass dem Administrator wichtige Daten nicht mehr zur Verfügung stehen oder der Datei Felder hinzugefügt werden, die nicht ausgefüllt werden oder Ausnahmen auslösen.  
   
- Standardmäßig werden Administratoren vom [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-WMI-Anbieter Berechtigungen vom Typ "execute method", "provider write" und "enable account" gewährt. Für ASP.NET, den lokalen Dienst und den Netzwerkdienst wird die Berechtigung "enable account" gewährt. Auf Nicht-[!INCLUDE[wv](../../../../../includes/wv-md.md)]-Plattformen besitzt das ASP.NET-Konto Lesezugriff auf den WMI-ServiceModel-Namespace. Sollen diese Rechte einer bestimmten Benutzergruppe vorenthalten werden, deaktivieren Sie entweder den WMI-Anbieter (ist standardmäßig deaktiviert), oder deaktivieren Sie den Zugriff für die gewünschte Benutzergruppe.  
+ Standardmäßig der WCF WMI-Anbieter erteilt "execute Method", "Provider Write" und "Konto aktivieren"-Berechtigung für den Administrator, und die Berechtigung für ASP.NET, Local Service und Network Service "Konto aktivieren". Auf Nicht-[!INCLUDE[wv](../../../../../includes/wv-md.md)]-Plattformen besitzt das ASP.NET-Konto Lesezugriff auf den WMI-ServiceModel-Namespace. Sollen diese Rechte einer bestimmten Benutzergruppe vorenthalten werden, deaktivieren Sie entweder den WMI-Anbieter (ist standardmäßig deaktiviert), oder deaktivieren Sie den Zugriff für die gewünschte Benutzergruppe.  
   
  Darüber hinaus kann WMI beim Versuch, WMI mithilfe der Konfiguration zu aktivieren, möglicherweise aufgrund unzureichender Benutzerberechtigungen nicht aktiviert werden. Es wird jedoch kein Ereignis in das Ereignisprotokoll aufgenommen, um diesen Fehler zu protokollieren.  
   
@@ -149,7 +149,7 @@ Whoami /user
  Dieser Befehl stellt die SID des aktuellen Benutzers bereit, aber diese Methode kann nicht verwendet werden, um die SID für einen beliebigen Benutzer abzurufen. Eine andere Methode zum Abrufen der SID ist die Verwendung der [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) -tool aus dem [Windows 2000 Resource Kit-Tools für administrative Aufgaben](http://go.microsoft.com/fwlink/?LinkId=178660). Dieses Tool vergleicht die SID von zwei Benutzern (lokal oder Domäne) und gibt als Nebeneffekt die beiden SIDs in der Befehlszeile aus. Weitere Informationen finden Sie unter [Well-Known SIDs](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Zugreifen auf Remote-WMI-Objektinstanzen  
- Zum Zugreifen auf die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-WMI-Instanzen eines Remotecomputers muss für die zum Zugreifen verwendeten Tools die Paketsicherheit aktiviert werden. Im folgenden Abschnitt wird die hierzu erforderliche Vorgehensweise für WMI CIM Studio, das Testprogramm für Windows-Verwaltungsinstrumentation und .NET SDK 2.0 beschrieben.  
+ Wenn Sie WCF WMI-Instanzen auf einem Remotecomputer zugreifen möchten, müssen Sie die paketsicherheit auf die Tools aktivieren, die für den Zugriff verwendet. Im folgenden Abschnitt wird die hierzu erforderliche Vorgehensweise für WMI CIM Studio, das Testprogramm für Windows-Verwaltungsinstrumentierung und .NET SDK 2.0 beschrieben.  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  Wenn Sie installiert haben [WMI-Verwaltung](http://go.microsoft.com/fwlink/?LinkId=95185), können Sie die WMI CIM Studio Zugriff auf WMI-Instanzen. Die Tools befinden sich im folgenden Ordner:  

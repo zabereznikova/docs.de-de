@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 5ed09947350a284dd7701b37bad93912f79f7e3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2fa8d753d5fb168c14ee71cbbf6de62e0e4aff9e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen
 In diesem Thema wird gezeigt, wie transportsicherheit für einen Windows Communication Foundation (WCF)-Dienst aktiviert, die befindet sich in einer Windows-Domäne und wird von Clients in der gleichen Domäne aufgerufen wird. Weitere Informationen zu diesem Szenario finden Sie unter [Transportsicherheit mit Windows-Authentifizierung](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Eine beispielanwendung finden Sie unter der [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.  
@@ -75,7 +75,7 @@ In diesem Thema wird gezeigt, wie transportsicherheit für einen Windows Communi
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>So verwenden Sie eine Bindung in einem Client mit Code  
   
-1.  Verwenden Sie das SvcUtil.exe-Tool, um den Proxycode aus den Metadaten des Diensts zu generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Der generierte Proxycode erbt von der <xref:System.ServiceModel.ClientBase%601>-Klasse, wodurch sichergestellt wird, dass jeder Client über die erforderlichen Konstruktoren, Methoden und Eigenschaften für die Kommunikation mit einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst verfügt. In diesem Beispiel enthält der generierte Code die `CalculatorClient`-Klasse, die die `ICalculator`-Schnittstelle für die Kompatibilität mit dem Dienstcode implementiert.  
+1.  Verwenden Sie das SvcUtil.exe-Tool, um den Proxycode aus den Metadaten des Diensts zu generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Der generierte Proxycode erbt von der <xref:System.ServiceModel.ClientBase%601> -Klasse, die sicherstellt, dass jeder Client die erforderlichen Konstruktoren, Methoden und Eigenschaften für die Kommunikation mit einem WCF-Dienst verfügt. In diesem Beispiel enthält der generierte Code die `CalculatorClient`-Klasse, die die `ICalculator`-Schnittstelle für die Kompatibilität mit dem Dienstcode implementiert.  
   
 2.  Der Code dieser Prozedur wird am Anfang der `Main`-Methode des Clientprogramms eingefügt.  
   

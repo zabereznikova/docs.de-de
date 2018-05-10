@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1d4ac2fe884a3c6696dc70ea2de9967a23fc6605
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 910da1073f0dc787be26d2c87b5bf49b4115aaef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>Was&#39;s neu in Windows Communication Foundation 4.5
 In diesem Thema erläutert die neuen auf Windows Communication Foundation (WCF) Funktionen.  
@@ -73,7 +73,7 @@ In diesem Thema erläutert die neuen auf Windows Communication Foundation (WCF) 
  Um neuen und bereits erfahrenen Entwicklern von WCF-Diensten die Konfiguration zu erleichtern, zeigt der XML-Editor in Visual Studio nun QuickInfos für jedes Konfigurationselement, das Teil der Dienstkonfigurationsdatei ist, und dessen Eigenschaften an.  
   
 ## <a name="configuring-wcf-services-in-code"></a>Konfigurieren von WCF-Diensten in Code  
- Windows Communication Foundation (WCF) können Entwickler Dienste mithilfe von Konfigurationsdateien oder Code konfigurieren.  Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ermöglicht auch das Konfigurieren von Diensten im Code. In früheren Versionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 und früher) war das Konfigurieren von Diensten im Code in selbstgehosteten Szenarien einfach, weil die <xref:System.ServiceModel.ServiceHost>-Klasse die Möglichkeit bot, Endpunkte und Verhaltensweisen vor dem Aufrufen von ServiceHost.Open zu konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4.5 bietet [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] eine einfachere Möglichkeit, selbstgehostete und webgehostete Dienste im Code zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren von WCF-Dienste im Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
+ Windows Communication Foundation (WCF) können Entwickler Dienste mithilfe von Konfigurationsdateien oder Code konfigurieren.  Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. WCF ermöglicht außerdem so konfigurieren die Dienste im Code. In früheren Versionen von WCF (4.0 und früher) Konfigurieren von Diensten im Code wurde in den selbst gehosteten Szenarien einfach die <xref:System.ServiceModel.ServiceHost> Klasse erlaubt Ihnen, Endpunkte und das Verhalten vor dem Aufruf von "ServiceHost.Open" konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4.5, bietet WCF ein einfacheres Verfahren zum Konfigurieren sowohl selbst gehostet und im Web gehostete Dienste im Code. Weitere Informationen finden Sie unter [Konfigurieren von WCF-Dienste im Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
   
 ## <a name="channelfactory-caching"></a>ChannelFactory-Caching  
  WCF-Clientanwendungen verwenden die <xref:System.ServiceModel.ChannelFactory%601>-Klasse, um einen Kommunikationskanal mit einem WCF-Dienst zu erstellen.  Die Erstellung von <xref:System.ServiceModel.ChannelFactory%601>-Instanzen verursacht einigen Mehraufwand, da sie die folgenden Vorgänge umfasst:  
@@ -107,7 +107,7 @@ In diesem Thema erläutert die neuen auf Windows Communication Foundation (WCF) 
  Attributwerte in den Konfigurationsdateien für benutzerdefinierte Attribute, die im Projekt definiert sind, unterstützen jetzt IntelliSense, um das schnelle und präzise Arbeiten mit Konfigurationen zu erleichtern.  
   
 ## <a name="configuration-tooltips"></a>QuickInfos zur Konfiguration  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Elemente und -Attribute verfügen jetzt über QuickInfos im XML-Editor, um den Verwendungszweck des Elements oder Attributs einfacher und genauer zu identifizieren.  
+ WCF-Elemente und Attribute jetzt leichter QuickInfos im XML-Editor müssen und genauer identifizieren den Zweck des Elements oder Attributs.  
   
 ## <a name="paste-data-as-classes"></a>Einfügen von Daten als Klassen  
  In einem WCF-Projekt können die in XML definierten Datentypen (die in einem Dienst verfügbar gemacht sind) direkt in eine Codepage eingefügt werden. Der XML-Typ wird als CLR-Typ eingefügt. Finden Sie unter [Generieren von Datentypklassen aus XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) Weitere Details.  

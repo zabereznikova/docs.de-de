@@ -2,11 +2,11 @@
 title: Datenbindung in einem ASP.NET-Client
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: c0f3cbb08f0078bf364ef720635f7afda3257611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8fdebec272fbedf23233e03ba7c6fe2d64cb18cc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Datenbindung in einem ASP.NET-Client
 Dieses Beispiel veranschaulicht das Binden von Daten von einem normalen Windows Communication Foundation (WCF)-Dienst in einer Web Forms-Anwendung zurückgegeben.  
@@ -14,11 +14,11 @@ Dieses Beispiel veranschaulicht das Binden von Daten von einem normalen Windows 
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- In diesem Beispiel wird ein Dienst veranschaulicht, der einen Vertrag implementiert, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Das Beispiel besteht aus einer Web&#160;Forms-Clientanwendung, auf die über einen Browser zugegriffen werden kann, und einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, der von Internetinformationsdiensten (IIS) gehostet wird.  
+ In diesem Beispiel wird ein Dienst veranschaulicht, der einen Vertrag implementiert, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Das Beispiel besteht aus einer Web Forms-Anwendung, die von einem Browser und einen von IIS (Internetinformationsdienste) gehosteten WCF-Dienst zugegriffen werden kann.  
   
  Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird von der `IWeatherService`-Schnittstelle definiert, die einen Vorgang mit der Bezeichnung `GetWeatherData` verfügbar macht. Dieser Vorgang nimmt ein Array aus Städten an und gibt ein Array aus `WeatherData`-Objekten zurück, die die vorhergesagte Höchst- und Tiefsttemperatur für eine Stadt wiedergeben.  
   
- Auf der ASPX-Seite des [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clients wird ein DataGrid-Websteuerelement definiert, das die grafische Darstellung der vom Dienst zurückgegebenen Daten enthält. Der Code auf der ASPX-Seite ruft den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst auf, um Wetterdaten abzurufen, und gibt diese Daten in ein Array von `WeatherData`-Objekten aus. Im DataGrid wird angegeben, von wo die Daten abgerufen werden sollen, indem die `DataSource`-Eigenschaft auf dieses Array festgelegt wird. Die Datenbindung erfolgt durch einen Aufruf der `DataBind`-Methode des DataGrid. Sämtliche dieser Code befinden sich innerhalb der.`aspx` Seite `Page_Load` Methode, sodass jedes Mal der Benutzer die Browserseite, die Daten aktualisiert wird im DataGrid ebenfalls aktualisiert.  
+ Auf der ASPX-Seite des [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clients wird ein DataGrid-Websteuerelement definiert, das die grafische Darstellung der vom Dienst zurückgegebenen Daten enthält. Code in der ASPX-Seite ruft den WCF-Dienst, um Wetterdaten und gibt diese Daten in ein Array von `WeatherData` Objekte. Im DataGrid wird angegeben, von wo die Daten abgerufen werden sollen, indem die `DataSource`-Eigenschaft auf dieses Array festgelegt wird. Die Datenbindung erfolgt durch einen Aufruf der `DataBind`-Methode des DataGrid. Sämtliche dieser Code befinden sich innerhalb der.`aspx` Seite `Page_Load` Methode, sodass jedes Mal der Benutzer die Browserseite, die Daten aktualisiert wird im DataGrid ebenfalls aktualisiert.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   

@@ -2,18 +2,18 @@
 title: WCF-Dienste und Ereignisablaufverfolgung für Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea917ee87b598fc3ad01df70d9aedfadfd1396a4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF-Dienste und Ereignisablaufverfolgung für Windows
-Dieses Beispiel veranschaulicht, wie die analytische Ablaufverfolgung in der Windows Communication Foundation (WCF) verwenden, um Ereignisse in Event Tracing for Windows (ETW) auszugeben. Die analytische Ablaufverfolgung besteht aus Ereignissen, die an Schlüsselpunkten im [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Stapel ausgegeben werden und die Problembehandlung der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste in der Produktionsumgebung zulassen.  
+Dieses Beispiel veranschaulicht, wie die analytische Ablaufverfolgung in der Windows Communication Foundation (WCF) verwenden, um Ereignisse in Event Tracing for Windows (ETW) auszugeben. Die analytische Ablaufverfolgung werden Ereignisse, die an Schlüsselpunkten im WCF-Stapel, die es ermöglichen, zur Problembehandlung von WCF-Diensten in produktionsumgebung ausgegeben.  
   
- Die analytische Ablaufverfolgung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist eine Methode der Ablaufverfolgung, die in einer Produktionsumgebung mit minimalen Auswirkungen auf die Leistung aktiviert werden kann. Diese Ablaufverfolgungen werden als Ereignisse zu einer ETW-Sitzung ausgegeben.  
+ Analytische Ablaufverfolgung in WCF-Diensten ist, die die Ablaufverfolgung aktiviert werden kann in einer produktiven Umgebung mit minimaler Auswirkung auf die Leistung. Diese Ablaufverfolgungen werden als Ereignisse zu einer ETW-Sitzung ausgegeben.  
   
- Dieses Beispiel enthält einen grundlegenden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, in dem Ereignisse vom Dienst an das Ereignisprotokoll ausgegeben werden. Dieses kann mit der Ereignisanzeige angezeigt werden. Es ist auch möglich, eine dedizierte ETW-Sitzung zu starten, die Ereignisse des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts überwacht. Das Beispiel enthält ein Skript zum Erstellen einer dedizierten ETW-Sitzung, in der Ereignisse in einer Binärdatei gespeichert werden, die mithilfe der Ereignisanzeige gelesen werden kann.  
+ Dieses Beispiel enthält einen grundlegenden WCF-Dienst in dem Ereignisse aus dem Dienst in das Ereignisprotokoll ausgegeben werden mithilfe der Ereignisanzeige angezeigt werden können. Es ist auch möglich, eine dedizierte ETW-Sitzung zu starten, die für Ereignisse aus den WCF-Dienst überwacht. Das Beispiel enthält ein Skript zum Erstellen einer dedizierten ETW-Sitzung, in der Ereignisse in einer Binärdatei gespeichert werden, die mithilfe der Ereignisanzeige gelesen werden kann.  
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
@@ -27,17 +27,17 @@ Dieses Beispiel veranschaulicht, wie die analytische Ablaufverfolgung in der Win
   
      Standardmäßig Dienststart lauscht Anforderungen auf Port 1378 (http://localhost:1378/Calculator.svc).  
   
-4.  Führen Sie den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Testclient (WcfTestClient.exe) aus.  
+4.  Führen Sie den WCF-Testclient (WcfTestClient.exe).  
   
-     Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Testclient (WcfTestClient.exe) befindet sich der \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] -Installationsverzeichnis > \Common7\IDE\ WcfTestClient.exe (Standardeinstellung [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Installationsverzeichnis ist C:\Program Files\Microsoft Visual Studio 10.0).  
+     WCF-Testclient (WcfTestClient.exe) befindet sich der \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] -Installationsverzeichnis > \Common7\IDE\ WcfTestClient.exe (Standardeinstellung [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Installationsverzeichnis ist C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  Innerhalb der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client testen, fügen Sie den Dienst, indem Sie auswählen **Datei**, und klicken Sie dann **Dienst hinzufügen**.  
+5.  Fügen Sie innerhalb der WCF-Testclient den Dienst, indem Sie auswählen **Datei**, und klicken Sie dann **Dienst hinzufügen**.  
   
      Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Die Standardeinstellung ist http://localhost:1378/Calculator.svc.  
   
 6.  Öffnen Sie die Ereignisanzeige.  
   
-     Starten Sie vor dem Aufrufen des Diensts die Ereignisanzeige, und stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ausgegebene Überwachungsereignisse ausführt.  
+     Vor dem Aufrufen des Diensts die Ereignisanzeige starten, und stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom WCF-Dienst ausgegebene Überwachungsereignisse ausführt.  
   
 7.  Aus der **starten** klicken Sie im Menü **Verwaltung**, und klicken Sie dann **Ereignisanzeige**.  Aktivieren der **analytisch** und **Debuggen** Protokolle.  
   
@@ -51,7 +51,7 @@ Dieses Beispiel veranschaulicht, wie die analytische Ablaufverfolgung in der Win
   
 #### <a name="to-test-the-service"></a>So testen Sie den Dienst  
   
-1.  Wechseln Sie zurück zum [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Testclient, doppelklicken Sie auf `Divide`, und behalten Sie die Standardwerte bei, die als Nenner 0 angeben.  
+1.  Wechseln Sie zurück zum WCF-Testclient, und doppelklicken Sie auf `Divide` und behalten Sie die Standardwerte, die als Nenner 0 angeben.  
   
      Wenn der Nenner 0 ist, löst der Dienst einen Fehler aus.  
   

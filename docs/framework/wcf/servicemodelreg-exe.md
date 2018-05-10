@@ -2,11 +2,11 @@
 title: ServiceModel Registration-Tool (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 660bad0b80a80a21936c9c8a5d485fe05b8c8acf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fab1a356cd035ed006bfe90d713e179907e0137
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel Registration-Tool (ServiceModelReg.exe)
 Dieses Befehlszeilentool bietet die Möglichkeit, die Registrierung von WCF- und WF-Komponenten auf einem einzelnen Computer zu verwalten. Unter normalen Umständen müssen Sie dieses Tool nicht verwenden, da WCF- und WF-Komponenten bei der Installation konfiguriert werden. Wenn jedoch bei der Dienstaktivierung Probleme auftreten, können Sie versuchen, die Komponenten mithilfe dieses Tools zu registrieren.  
@@ -41,7 +41,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-?`|Zeigt Hilfetext an.|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>Beheben des FileLoadException-Fehlers  
- Wenn Sie frühere Versionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] auf Ihrem Computer installiert haben, erhalten Sie unter Umständen einen `FileLoadFoundException`-Fehler, wenn Sie das ServiceModelReg-Tools ausführen, um eine neue Installation zu registrieren. Dies kann auch auftreten, wenn Sie Dateien von der vorherigen Installation manuell entfernt haben, aber die machine.config-Einstellungen unverändert gelassen haben.  
+ Wenn Sie frühere Versionen von WCF auf dem Computer installiert haben, erhalten Sie eventuell eine `FileLoadFoundException` Fehler, wenn Sie das ServiceModelReg-Tool zum Registrieren einer neuen Installations ausführen. Dies kann auch auftreten, wenn Sie Dateien von der vorherigen Installation manuell entfernt haben, aber die machine.config-Einstellungen unverändert gelassen haben.  
   
  Die Fehlermeldung lautet ungefähr folgendermaßen:  
   
@@ -50,7 +50,7 @@ Error: System.IO.FileLoadException: Could not load file or assembly 'System.Serv
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
   
- Die Meldung sollte angeben, dass die System.ServiceModel Version&#160;2.0.0.0-Assembly mit einer frühen CTP (Customer Technology Preview)-Version installiert wurde. Die aktuelle Version der System.ServiceModel-Assembly lautet jedoch 3.0.0.0. Dieser Fehler tritt auf, wenn Sie die offizielle Version von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] auf einem Computer installieren möchten, auf dem bereits eine frühe CTP-Version von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] installiert war, die jedoch nicht vollständig deinstalliert wurde.  
+ Die Meldung sollte angeben, dass die System.ServiceModel Version&#160;2.0.0.0-Assembly mit einer frühen CTP (Customer Technology Preview)-Version installiert wurde. Die aktuelle Version der System.ServiceModel-Assembly lautet jedoch 3.0.0.0. Daher wird dieses Problem gefunden, wenn Sie möchten, die offizielle WCF-Version auf einem Computer installieren, denen eine frühe CTP-Version von WCF installiert, jedoch nicht vollständig deinstalliert wurde.  
   
  ServiceModelReg.exe kann keine vorherigen Versionseinträge bereinigen und die Einträge der neuen Version nicht registrieren. Die einzige Problemumgehung ist die manuelle Bearbeitung von machine.config. Sie finden diese Datei am folgenden Speicherort.  
   
@@ -58,7 +58,7 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config   
 ```  
   
- Wenn Sie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] auf einem 64-Bit-Computer ausführen, sollten Sie die gleiche Datei ebenfalls an diesem Speicherort bearbeiten.  
+ Wenn Sie WCF auf einem 64-Bit-Computer ausführen, sollten Sie auch die gleiche Datei an diesem Speicherort bearbeiten.  
   
 ```  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config   

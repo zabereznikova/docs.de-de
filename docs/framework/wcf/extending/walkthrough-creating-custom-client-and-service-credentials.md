@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 8c5608276de935f07dca88e343143112b8fdcc20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ba6d2016a36809910561543a531dd4d44aac9b9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen
 In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldeinformationen implementiert und benutzerdefinierte Anmeldeinformationen aus Anwendungscode genutzt werden.  
@@ -23,12 +23,12 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
   
  Sowohl die <xref:System.ServiceModel.Description.ClientCredentials>- als auch die <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse erben von der abstrakten <xref:System.ServiceModel.Security.SecurityCredentialsManager>-Klasse, die den Vertrag für die Rückgabe des <xref:System.IdentityModel.Selectors.SecurityTokenManager> definieren.  
   
- Weitere Informationen zu den Clientanmeldeinformationen-Klassen und wie sie passt den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheitsarchitektur, finden Sie unter [Sicherheitsarchitektur](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Weitere Informationen zu den Clientanmeldeinformationen-Klassen und wie sie in der WCF-Sicherheitsarchitektur passen, finden Sie unter [Sicherheitsarchitektur](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
- Die in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereitgestellten Standardimplementierungen unterstützen die vom System bereitgestellten Anmeldeinformationstypen und erstellen einen Sicherheitstoken-Manager, der in der Lage ist, diese Anmeldeinformationstypen zu handhaben.  
+ In WCF bereitgestellten standardimplementierungen unterstützen die vom System bereitgestellten Anmeldeinformationstypen und erstellen einen Sicherheitstoken-Sicherheitstoken-Manager, die diese Anmeldeinformationstypen verarbeiten kann.  
   
 ## <a name="reasons-to-customize"></a>Gründe für eine Anpassung  
- Es gibt mehrere Gründe für die Anpassung von Client- oder Dienstanmeldeinformationsklassen. Im Vordergrund steht die Notwendigkeit der Änderung des standardmäßigen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsverhaltens in Bezug auf die Handhabung der vom System bereitgestellten Anmeldeinformationstypen, insbesondere aus folgenden Gründen:  
+ Es gibt mehrere Gründe für die Anpassung von Client- oder Dienstanmeldeinformationsklassen. Allem ist die Anforderung zum Ändern des Standardverhaltens für die Sicherheit von WCF im Hinblick auf die Handhabung von vom System bereitgestellten Anmeldeinformationstypen, insbesondere aus folgenden Gründen:  
   
 -   Änderungen, die mit anderen Erweiterbarkeitspunkten nicht möglich sind.  
   
@@ -39,7 +39,7 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
  Dieses Thema beschreibt, wie benutzerdefinierte Client- und Dienstanmeldeinformationen implementiert und aus Anwendungscode genutzt werden.  
   
 ## <a name="first-in-a-series"></a>Zuerst  
- Die Erstellung einer benutzerdefinierten Anmeldeinformationsklasse ist nur der erste Schritt, da der Grund für die Anpassung von Anmeldeinformationen in der Änderung des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Verhaltens in Bezug auf die Bereitstellung von Anmeldeinformationen, die Serialisierung von Sicherheitstoken oder die Authentifizierung liegt. Andere Themen in diesem Abschnitt beschreiben, wie benutzerdefinierte Serialisierungsprogramme und Authentifizierer erstellt werden. In diesem Zusammenhang ist die Erstellung benutzerdefinierter Anmeldeinformationsklassen das erste Thema in der Reihe. Nachfolgende Aktionen (Erstellung von benutzerdefinierten Serialisierungsprogrammen und Authentifizierern) können nur durchgeführt werden, nachdem benutzerdefinierte Anmeldeinformationen erstellt wurden. Weitere Themen, die auf diesem Thema aufbauen:  
+ Erstellen einer benutzerdefinierten anmeldeinformationsklasse ist nur der erste Schritt, da der Grund für die Anpassung von Anmeldeinformationen WCF-Verhalten bezüglich der Bereitstellung von Anmeldeinformationen, die Serialisierung von Sicherheitstoken oder Authentifizierung zu ändern. Andere Themen in diesem Abschnitt beschreiben, wie benutzerdefinierte Serialisierungsprogramme und Authentifizierer erstellt werden. In diesem Zusammenhang ist die Erstellung benutzerdefinierter Anmeldeinformationsklassen das erste Thema in der Reihe. Nachfolgende Aktionen (Erstellung von benutzerdefinierten Serialisierungsprogrammen und Authentifizierern) können nur durchgeführt werden, nachdem benutzerdefinierte Anmeldeinformationen erstellt wurden. Weitere Themen, die auf diesem Thema aufbauen:  
   
 -   [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
@@ -55,7 +55,7 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
   
 2.  Dies ist optional. Fügen Sie Methoden oder Eigenschaften für neue Anmeldeinformationstypen hinzu. Wenn Sie keine neuen Anmeldeinformationstypen hinzufügen, können Sie diesen Schritt überspringen. Im folgenden Beispiel wird eine `CreditCardNumber`-Eigenschaft hinzugefügt.  
   
-3.  Überschreiben Sie die <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>-Methode. Diese Methode wird automatisch von der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsinfrastruktur aufgerufen, wenn die benutzerdefinierten Clientanmeldeinformationen verwendet werden. Diese Methode ist für die Erstellung und die Rückgabe einer Implementierungsinstanz der <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse verantwortlich.  
+3.  Überschreiben Sie die <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>-Methode. Diese Methode wird automatisch von WCF-Sicherheitstokendienst-Infrastruktur aufgerufen, wenn die benutzerdefinierten Clientanmeldeinformationen verwendet wird. Diese Methode ist für die Erstellung und die Rückgabe einer Implementierungsinstanz der <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse verantwortlich.  
   
     > [!IMPORTANT]
     >  Wichtig: Beachten Sie, dass die <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>-Methode überschrieben wird, um einen benutzerdefinierten Sicherheitstokenmanager zu erstellen. Der vom <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> abgeleitete Sicherheitstokenmanager muss einen benutzerdefinierten Sicherheitstokenanbieter zurückgeben, der vom <xref:System.IdentityModel.Selectors.SecurityTokenProvider> abgeleitet wurde, um das eigentliche Sicherheitstoken zu erstellen. Befolgen Sie nicht diese Vorgehensweise zur Erstellung von Sicherheitstokens, funktioniert die Anwendung möglicherweise nicht korrekt, wenn <xref:System.ServiceModel.ChannelFactory>-Objekte zwischengespeichert werden, was das standardmäßige Verhalten von WCF-Clientproxys ist. Dies kann ggf. einen Angriff durch Rechteerweiterung zur Folge haben. Das benutzerdefinierte Anmeldedatenobjekt wird als Teil des <xref:System.ServiceModel.ChannelFactory>-Objekts zwischengespeichert. Der benutzerdefinierte <xref:System.IdentityModel.Selectors.SecurityTokenManager> wird jedoch bei jedem Aufruf erstellt. So lange die Tokenerstellungslogik also im <xref:System.IdentityModel.Selectors.SecurityTokenManager> platziert wird, wird die Sicherheitsbedrohung abgewehrt.  
@@ -89,7 +89,7 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
   
- Die oben beschriebene Prozedur zeigt, wie Clientanmeldeinformationen aus dem Anwendungscode genutzt werden können. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anmeldeinformationen können auch mithilfe der Anwendungskonfigurationsdatei konfiguriert werden. Die Nutzung der Anwendungskonfiguration ist in vielen Fällen einer harten Codierung vorzuziehen, da hier eine Änderung der Anwendungsparameter ermöglicht wird, ohne dass ein Ändern der Quelle oder eine Neukompilierung und Neubereitstellung erforderlich sind.  
+ Die oben beschriebene Prozedur zeigt, wie Clientanmeldeinformationen aus dem Anwendungscode genutzt werden können. WCF-Anmeldeinformationen können auch in der Anwendungskonfigurationsdatei konfiguriert werden. Die Nutzung der Anwendungskonfiguration ist in vielen Fällen einer harten Codierung vorzuziehen, da hier eine Änderung der Anwendungsparameter ermöglicht wird, ohne dass ein Ändern der Quelle oder eine Neukompilierung und Neubereitstellung erforderlich sind.  
   
  Die nächste Prozedur beschreibt, wie eine Unterstützung für die Konfiguration von benutzerdefinierten Anmeldeinformationen erstellt wird.  
   
@@ -108,7 +108,7 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
   
- Sobald Sie die Konfigurationshandlerklasse besitzen, kann diese in das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Konfigurationsframework integriert werden. Dies ermöglicht die Verwendung benutzerdefinierter Clientanmeldeinformationen in den Clientendpunktverhaltenselementen, wie in der nächsten Prozedur gezeigt wird.  
+ Nachdem Sie die konfigurationshandlerklasse besitzen, können sie in der WCF-Konfiguration-Framework integriert werden. Dies ermöglicht die Verwendung benutzerdefinierter Clientanmeldeinformationen in den Clientendpunktverhaltenselementen, wie in der nächsten Prozedur gezeigt wird.  
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>Registrieren und Verwenden eines benutzerdefinierten Clientanmeldeinformationen-Konfigurationshandlers in der Anwendungskonfiguration  
   
@@ -146,7 +146,7 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
   
 2.  Dies ist optional. Fügen Sie neue Eigenschaften hinzu, um APIs für neue Werte für die Anmeldeinformationen bereitzustellen, die hinzugefügt werden. Wenn Sie keine neuen Anmeldeinformationswerte hinzufügen, können Sie diesen Schritt überspringen. Im folgenden Beispiel wird die `AdditionalCertificate`-Eigenschaft hinzugefügt.  
   
-3.  Überschreiben Sie die <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>-Methode. Diese Methode wird automatisch von der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur aufgerufen, wenn die benutzerdefinierten Clientanmeldeinformationen verwendet werden. Die Methode ist für die Erstellung und die Rückgabe einer Implementierungsinstanz der <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse verantwortlich (wie in der nächsten Prozedur beschrieben).  
+3.  Überschreiben Sie die <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>-Methode. Diese Methode wird automatisch von der WCF-Infrastruktur aufgerufen, wenn die benutzerdefinierten Clientanmeldeinformationen verwendet wird. Die Methode ist für die Erstellung und die Rückgabe einer Implementierungsinstanz der <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse verantwortlich (wie in der nächsten Prozedur beschrieben).  
   
 4.  Dies ist optional. Überschreiben Sie die <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A>-Methode. Dies ist nur erforderlich, wenn neue Eigenschaften oder interne Felder zur benutzerdefinierten Clientanmeldeinformationsimplementierung hinzugefügt werden.  
   

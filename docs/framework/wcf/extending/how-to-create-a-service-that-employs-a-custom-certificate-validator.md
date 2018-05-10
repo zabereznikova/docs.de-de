@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Vorgehensweise: Erstellen eines Dienstes, der ein benutzerdefiniertes Zertifikats-Validierungssteuerelement verwendet
 In diesem Thema wird gezeigt, wie Sie ein benutzerdefiniertes Zertifikats-Validierungssteuerelement implementieren und wie Sie Anmeldeinformationen für Clients oder Dienste konfigurieren, um die standardmäßige Zertifikatüberprüfungslogik durch das benutzerdefinierte Zertifikats-Validierungssteuerelement zu ersetzen.  
   
- Wenn das x. 509-Zertifikat verwendet wird, um einen Client oder Dienst zu authentifizieren, verwendet Windows Communication Foundation (WCF) standardmäßig die Windows-Zertifikatspeicher und Crypto-API zum Überprüfen des Zertifikats und stellen Sie sicher, dass es als vertrauenswürdig eingestuft wird. Es kann vorkommen, dass die integrierten Funktionen zur Zertifikatsvalidierung nicht ausreichen und geändert werden müssen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet eine einfache Möglichkeit zum Ändern der Validierungslogik, indem es Benutzern erlaubt wird, ein benutzerdefiniertes Zertifikats-Validierungssteuerelement hinzuzufügen. Wenn Sie ein benutzerdefiniertes Zertifikats-Validierungssteuerelement angeben, verwendet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nicht die integrierte Validierungslogik für Zertifikate, sondern nutzt stattdessen das benutzerdefinierte Validierungssteuerelement.  
+ Wenn das x. 509-Zertifikat verwendet wird, um einen Client oder Dienst zu authentifizieren, verwendet Windows Communication Foundation (WCF) standardmäßig die Windows-Zertifikatspeicher und Crypto-API zum Überprüfen des Zertifikats und stellen Sie sicher, dass es als vertrauenswürdig eingestuft wird. Es kann vorkommen, dass die integrierten Funktionen zur Zertifikatsvalidierung nicht ausreichen und geändert werden müssen. WCF bietet eine einfache Möglichkeit zum Ändern der Validierungslogik zulassen, dass Benutzer, um ein benutzerdefiniertes Zertifikats-Validierungssteuerelement hinzuzufügen. Wenn ein benutzerdefiniertes Zertifikats-Validierungssteuerelement angegeben wird, wird WCF verwendet nicht die integrierte zertifikatüberprüfungslogik, sondern nutzt stattdessen das benutzerdefinierte Validierungssteuerelement.  
   
 ## <a name="procedures"></a>Verfahren  
   

@@ -2,11 +2,11 @@
 title: WS-Bindung
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-ms.openlocfilehash: 67102c7c2925c2ac032d9defccdd5e187e76d608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-binding"></a>WS-Bindung
 Dieser Abschnitt enthält Beispiele für die Windows-dienstbindung in Windows Communication Foundation (WCF).  
@@ -25,7 +25,7 @@ Dieser Abschnitt enthält Beispiele für die Windows-dienstbindung in Windows Co
  Veranschaulicht die Verwendung der MTOM-Nachrichtencodierung (Message Transmission Optimization Mechanism) mit einer WSHttpBinding.  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
- Zeigt, wie mithilfe von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ein typischer Dienst und ein typischer Client implementiert werden.  
+ Veranschaulicht, wie ein typischer Dienst und ein typischer Client mithilfe von WCF implementiert.  
   
  [Zuverlässige WS-Sitzung](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  Veranschaulicht die Verwendung von zuverlässigen Sitzungen.  
@@ -34,7 +34,7 @@ Dieser Abschnitt enthält Beispiele für die Windows-dienstbindung in Windows Co
  Veranschaulicht die Verwendung der SSL-Transportsicherheit mit der <xref:System.ServiceModel.WSHttpBinding>-Bindung.  
   
  [Nachrichtensicherheitsbindung](../../../../docs/framework/wcf/samples/message-security-binding.md)  
- Veranschaulicht die Verwendung von Nachrichtensicherheit in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Veranschaulicht die Verwendung von nachrichtensicherheit in WCF.  
   
  [WS-Transport mit Nachrichtenanmeldeinformationen](../../../../docs/framework/wcf/samples/ws-transport-with-message-credential.md)  
  In diesem Beispiel wird die Verwendung der SSL-Transportsicherheit in Verbindung mit den Clientanmeldeinformationen veranschaulicht, die in der Nachricht übertragen werden.

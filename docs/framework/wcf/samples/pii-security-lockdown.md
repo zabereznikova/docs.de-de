@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec8af8c7df9335774b1f3953f88c2aad438963b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pii-security-lockdown"></a>Sperre der PII-Sicherheit
 In diesem Beispiel wird veranschaulicht, wie mehrere sicherheitsbezogene Funktionen eines Windows Communication Foundation (WCF)-Diensts durch steuern:  
@@ -29,11 +29,11 @@ In diesem Beispiel wird veranschaulicht, wie mehrere sicherheitsbezogene Funktio
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Diskussion  
- Jede dieser Funktionen kann getrennt oder gemeinsam verwendet werden, um Aspekte einer Dienstsicherheit zu steuern. Dies ist kein endgültiger Leitfaden zur Sicherung eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts.  
+ Jede dieser Funktionen kann getrennt oder gemeinsam verwendet werden, um Aspekte einer Dienstsicherheit zu steuern. Dies ist kein endgültiger Leitfaden zur Sicherung eines WCF-Diensts.  
   
  Die .NET Framework-Konfigurationsdateien können vertrauliche Informationen, wie beispielsweise Verbindungszeichenfolgen enthalten, um eine Verbindung mit Datenbanken herzustellen. In freigegebenen, im Internet gehosteten Szenarien kann es wünschenswert sein, diese Informationen in der Konfigurationsdatei für einen Dienst zu verschlüsseln, sodass die in der Konfigurationsdatei enthaltenen Daten gegen zufälliges Einsehen geschützt sind. .NET Framework 2.0 und höher kann Teile der Konfigurationsdatei mithilfe von Windows-DPAPI (Data Protection Application Programming Interface) oder dem RSA Cryptographic Provider verschlüsseln. Die Datei "aspnet_regiis.exe" kann mit DPAPI oder RSA ausgewählte Teile einer Konfigurationsdatei verschlüsseln.  
   
- In im Internet gehosteten Szenarien ist es möglich, Dienste in Unterverzeichnissen anderer Dienste zu haben. Die Standardsemantik für die Bestimmung von Konfigurationswerten ermöglicht es Konfigurationsdateien in den geschachtelten Verzeichnissen, die Konfigurationswerte im übergeordneten Verzeichnis zu überschreiben. In bestimmten Situationen kann dies aus verschiedenen Gründen unerwünscht sein. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstkonfiguration unterstützt das Sperren von Konfigurationswerten, sodass eine geschachtelte Konfiguration Ausnahmen erzeugt, wenn ein geschachtelter Dienst mit überschriebenen Konfigurationswerten ausgeführt wird.  
+ In im Internet gehosteten Szenarien ist es möglich, Dienste in Unterverzeichnissen anderer Dienste zu haben. Die Standardsemantik für die Bestimmung von Konfigurationswerten ermöglicht es Konfigurationsdateien in den geschachtelten Verzeichnissen, die Konfigurationswerte im übergeordneten Verzeichnis zu überschreiben. In bestimmten Situationen kann dies aus verschiedenen Gründen unerwünscht sein. WCF-Konfiguration unterstützt das Sperren von Konfigurationswerten, sodass geschachtelte Konfiguration Ausnahmen erzeugt werden, wenn ein geschachtelter Dienst ausgeführt wird, mit überschriebenen Konfigurationswerten.  
   
  Dieses Beispiel veranschaulicht das Steuern der Protokollierung von bekannten personenbezogenen Informationen (PII, Personally Identifiable Information) in Ablaufverfolgungs- und Nachrichtenprotokollen, beispielsweise Benutzername und Kennwort. Standardmäßig ist die Protokollierung von bekannten PII deaktiviert. Allerdings kann in bestimmten Situationen die Protokollierung von PII beim Debuggen einer Anwendung wichtig sein. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). In diesem Beispiel werden außerdem Ablaufverfolgungs- und Nachrichtenprotokollierung verwendet. Weitere Informationen finden Sie unter der [Ablaufverfolgung und Nachrichtenprotokollierung](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) Beispiel.  
   

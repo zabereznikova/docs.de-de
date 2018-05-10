@@ -2,11 +2,11 @@
 title: Überwachen mit einer Textdatei
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: 3ff786836dbf5b10d64702733c92579185ef2f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Überwachen mit einer Textdatei
 Dieses Beispiel veranschaulicht, wie die Überwachung in Windows Workflow Foundation (WF) zu erweitern, indem ein benutzerdefinierter Nachverfolgungsteilnehmer erstellt. Nachverfolgungsteilnehmer sind .NET Framework-Klassen, die Nachverfolgungsdatensätze von der Laufzeit empfangen, wenn sie ausgegeben werden. Sie können einen Nachverfolgungsteilnehmer erstellen, um die Nachverfolgungsereignisse zu dem Ziel zu transportieren, das für das Szenario erforderlich ist. Ein ETW-Nachverfolgungsteilnehmer (Event Tracing for Windows, Ereignisablaufverfolgung für Windows) wird z. B. als Bestandteil von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bereitgestellt. Der Nachverfolgungsteilnehmer in diesem Beispiel schreibt die Datensätze in eine Textdatei im XML-Format.  
@@ -17,7 +17,7 @@ Dieses Beispiel veranschaulicht, wie die Überwachung in Windows Workflow Founda
 |Klasse|Beschreibung|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|Ein <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> wird verwendet, um den Konfigurationsabschnitt zu definieren, der verwendet wird, um den Textdatei-Nachverfolgungsteilnehmer zu konfigurieren. Dies ermöglicht es Benutzern, das Ziel der Protokolldatei mit standardmäßigen .NET Framework-Konfigurationsdateien anzugeben.|  
-|`TextFileTrackingBehavior`|Das Verhalten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ermöglicht es Benutzern, Erweiterungen in die Laufzeit einzufügen. Dieses Verhalten fügt dem Dienst den Nachverfolgungsteilnehmer hinzu, wenn der Dienst gestartet wird.|  
+|`TextFileTrackingBehavior`|Verhalten in WCF erlauben Benutzern, Erweiterungen in die Laufzeit einzufügen. Dieses Verhalten fügt dem Dienst den Nachverfolgungsteilnehmer hinzu, wenn der Dienst gestartet wird.|  
 |`TextFileTrackingParticipant`|Der Nachverfolgungsteilnehmer, der zur Laufzeit Nachverfolgungsteilnehmer empfängt und sie in einer Protokolldatei als XML speichert.|  
   
 ## <a name="behavior-extension-elements-configuration"></a>Konfiguration von Verhaltenserweiterungselementen  

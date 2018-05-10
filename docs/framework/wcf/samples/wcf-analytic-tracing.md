@@ -2,21 +2,21 @@
 title: Analytische Ablaufverfolgung von WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e13aa0f7d0dbc48bedad0a9c639695ed038b9303
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Analytische Ablaufverfolgung von WCF
-In diesem Beispiel wird veranschaulicht, wie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die Windows Communication Foundation (WCF) in in ETW schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. In diesem Beispiel wird gezeigt, wie die <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>-APIs verwendet werden, um Ereignisse zu schreiben, die in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste integriert werden.  
+In diesem Beispiel wird veranschaulicht, wie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die Windows Communication Foundation (WCF) in in ETW schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. Dieses Beispiel zeigt, wie die <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, um Ereignisse zu schreiben, die mit WCF-Diensten integrieren.  
   
  Weitere Informationen zu den <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> -APIs finden Sie unter <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Weitere Informationen zu der ereignisablaufverfolgung in Windows finden Sie unter [verbessertes Debugging und Leistungsoptimierung mit ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Freigeben von EventProvider  
- In diesem Beispiel wird die <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>-Klasse verwendet, die <xref:System.IDisposable?displayProperty=nameWithType> implementiert. Bei der Implementierung der Ablaufverfolgung für einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst verwenden Sie wahrscheinlich die <xref:System.Diagnostics.Eventing.EventProvider>-Ressourcen für die Lebensdauer des Diensts. Aus diesem Grund und zur besseren Lesbarkeit gibt das Beispiel nie die eingebundene <xref:System.Diagnostics.Eventing.EventProvider> frei. Wenn der Dienst aus irgendeinem Grund andere Anforderungen an die Ablaufverfolgung stellt und Sie diese Ressource freigeben müssen, sollten Sie dieses Beispiel in Übereinstimmung mit den empfohlenen Vorgehensweisen zum Freigeben von nicht verwalteten Ressourcen ändern. Weitere Informationen zu nicht verwaltete Ressourcen freigibt, finden Sie unter [Implementieren einer Dispose-Methode](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ In diesem Beispiel wird die <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>-Klasse verwendet, die <xref:System.IDisposable?displayProperty=nameWithType> implementiert. Bei der Ablaufverfolgung für einen WCF-Dienst zu implementieren, ist es wahrscheinlicher, dass Sie möglicherweise die <xref:System.Diagnostics.Eventing.EventProvider>der Ressourcen für die Lebensdauer des Diensts. Aus diesem Grund und zur besseren Lesbarkeit gibt das Beispiel nie die eingebundene <xref:System.Diagnostics.Eventing.EventProvider> frei. Wenn der Dienst aus irgendeinem Grund andere Anforderungen an die Ablaufverfolgung stellt und Sie diese Ressource freigeben müssen, sollten Sie dieses Beispiel in Übereinstimmung mit den empfohlenen Vorgehensweisen zum Freigeben von nicht verwalteten Ressourcen ändern. Weitere Informationen zu nicht verwaltete Ressourcen freigibt, finden Sie unter [Implementieren einer Dispose-Methode](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Selbsthosting gegenüber Webhosting  
  Für im Web gehostete Dienste bieten analytischen ablaufverfolgungen von WCF ein Feld mit dem Namen "hostreference" bereit, die verwendet wird, um den Dienst zu identifizieren, der die ablaufverfolgungen ausgibt. Die erweiterbaren Benutzerablaufverfolgungen können in diesem Modell verwendet werden, und dieses Beispiel zeigt die entsprechenden empfohlenen Vorgehensweisen. Das Format von einem Webhost zu verweisen, wenn die Pipe "&#124;" Zeichen tatsächlich angezeigt wird, in die resultierende Zeichenfolge kann eine der folgenden sein:  
@@ -29,10 +29,10 @@ In diesem Beispiel wird veranschaulicht, wie Ihre eigenen Ablaufverfolgungsereig
   
      \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
- Für selbst gehostete Dienste [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]des analytische ablaufverfolgungen nicht das Feld "HostReference" auffüllen. Die `WCFUserEventProvider`-Klasse in diesem Beispiel verhält sich konsistent, wenn sie von einem selbst gehosteten Dienst verwendet wird.  
+ Für selbst gehostete Dienste Auffüllen nicht das Feld "HostReference" analytischen ablaufverfolgungen von WCF. Die `WCFUserEventProvider`-Klasse in diesem Beispiel verhält sich konsistent, wenn sie von einem selbst gehosteten Dienst verwendet wird.  
   
 ## <a name="custom-event-details"></a>Details der benutzerdefinierten Ereignisse  
- Der ETW-Ereignisanbieter von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] definiert drei Ereignisse, die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstautoren aus dem Dienstcode ausgegeben werden sollen. In der folgenden Tabelle werden die drei Ereignisse aufgelistet.  
+ WCF definiert ETW-Ereignisanbieter drei Ereignisse, die von WCF-Dienst-Autoren von innerhalb der Dienstcode ausgegeben werden sollen. In der folgenden Tabelle werden die drei Ereignisse aufgelistet.  
   
 |event|Beschreibung|Ereignis-ID|  
 |-----------|-----------------|--------------|  
@@ -50,11 +50,11 @@ In diesem Beispiel wird veranschaulicht, wie Ihre eigenen Ablaufverfolgungsereig
   
      Klicken Sie in den Webbrowser auf **Calculator.svc**. Der URI des WSDL-Dokuments für den Dienst wird daraufhin im Browser angezeigt. Kopieren Sie diesen URI.  
   
-4.  Führen Sie den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Testclient (WcfTestClient.exe) aus.  
+4.  Führen Sie den WCF-Testclient (WcfTestClient.exe).  
   
-     Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Testclient (WcfTestClient.exe) befindet sich der \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] -Installationsverzeichnis > \Common7\IDE\ WcfTestClient.exe (Standardeinstellung [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Installationsverzeichnis ist C:\Program Files\Microsoft Visual Studio 10.0).  
+     WCF-Testclient (WcfTestClient.exe) befindet sich der \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] -Installationsverzeichnis > \Common7\IDE\ WcfTestClient.exe (Standardeinstellung [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Installationsverzeichnis ist C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  Innerhalb der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client testen, fügen Sie den Dienst, indem Sie auswählen **Datei**, und klicken Sie dann **Dienst hinzufügen**.  
+5.  Fügen Sie innerhalb der WCF-Testclient den Dienst, indem Sie auswählen **Datei**, und klicken Sie dann **Dienst hinzufügen**.  
   
      Fügen Sie die Endpunktadresse im Eingabefeld hinzu.  
   
@@ -64,7 +64,7 @@ In diesem Beispiel wird veranschaulicht, wie Ihre eigenen Ablaufverfolgungsereig
   
 7.  Öffnen Sie die Ereignisanzeige.  
   
-     Starten Sie vor dem Aufrufen des Diensts die Ereignisanzeige, und stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ausgegebene Überwachungsereignisse ausführt.  
+     Vor dem Aufrufen des Diensts die Ereignisanzeige starten, und stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom WCF-Dienst ausgegebene Überwachungsereignisse ausführt.  
   
 8.  Aus der **starten** klicken Sie im Menü **Verwaltung**, und klicken Sie dann **Ereignisanzeige**. Aktivieren der **analytisch** und **Debuggen** Protokolle.  
   

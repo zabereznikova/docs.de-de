@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d9e6b83a78967193c4cb0343f6c77560354a837
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-performance-counters"></a>WCF-Leistungsindikatoren
 Windows Communication Foundation (WCF) enthält eine Reihe von Leistungsindikatoren zur Messung der Leistung Ihrer Anwendung.  
   
 ## <a name="enabling-performance-counters"></a>Aktivieren von Leistungsindikatoren  
- Leistungsindikatoren für einen [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienst können folgendermaßen über die Konfigurationsdatei app.config des [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Diensts aktiviert werden:  
+ Sie können die Leistungsindikatoren für einen WCF-Dienst über die Konfigurationsdatei "App.config" des WCF-Diensts wie folgt aktivieren:  
   
 ```xml  
 <configuration>  
@@ -32,9 +32,9 @@ Windows Communication Foundation (WCF) enthält eine Reihe von Leistungsindikato
   
 -   Off: ServiceModel*-Leistungsindikatoren werden deaktiviert.  
   
- Sollen Leistungsindikatoren für alle [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Anwendungen aktiviert werden, können die Konfigurationseinstellungen in die Datei Machine.config eingefügt werden.  Finden Sie unter der **Erhöhen der Arbeitsspeichergröße für Leistungsindikatoren** weiter unten für Weitere Informationen zum Konfigurieren ausreichenden Arbeitsspeichers für Leistungsindikatoren auf dem Computer.  
+ Wenn Sie die Leistungsindikatoren für alle WCF-Anwendungen aktivieren möchten, können Sie die Konfigurationseinstellungen in der Datei "Machine.config" platzieren.  Finden Sie unter der **Erhöhen der Arbeitsspeichergröße für Leistungsindikatoren** weiter unten für Weitere Informationen zum Konfigurieren ausreichenden Arbeitsspeichers für Leistungsindikatoren auf dem Computer.  
   
- Wenn Sie [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Erweiterungspunkte (z. B. aufrufende Instanzen für benutzerdefinierte Vorgänge) verwenden, müssen Sie auch eigene Leistungsindikatoren ausgeben. Dies liegt daran, dass [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] bei Implementierung eines Erweiterungspunkts die Standardleistungsindikatoren nicht mehr im Standardpfad ausgeben kann. Wenn Sie keine Unterstützung für manuelle Leistungsindikatoren implementieren, werden die erwarteten Leistungsindikatordaten möglicherweise nicht angezeigt.  
+ Bei Verwendung von WCF-Erweiterbarkeitspunkte wie benutzerdefinierte Vorgänge Aufrufern vorgesehen, sollten Sie auch eigene Leistungsindikatoren ausgeben. Dies liegt daran, wenn Sie einen Erweiterungspunkt implementieren, WCF nicht mehr die Standardleistungsindikatoren im Standardpfad ausgeben kann. Wenn Sie keine Unterstützung für manuelle Leistungsindikatoren implementieren, werden die erwarteten Leistungsindikatordaten möglicherweise nicht angezeigt.  
   
  Leistungsindikatoren können auch folgendermaßen im Code aktiviert werden:  
   
@@ -56,11 +56,11 @@ config.Save();
 >  Leistungsindikatorinstanzen werden möglicherweise freigegeben, bevor die letzten Nachrichten vom Endpunktverteiler verarbeitet wurden. Dies kann dazu führen, dass Leistungsdaten für einige Nachrichten nicht erfasst werden.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Erhöhen der Arbeitsspeichergröße für Leistungsindikatoren  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] verwendet für die Leistungsindikatorkategorien einen separaten freigegebenen Arbeitsspeicher.  
+ WCF wird separaten freigegebenen Arbeitsspeicher für die Leistungsindikatorkategorien verwendet.  
   
- Standardmäßig wird separater freigegebener Arbeitsspeicher auf ein Viertel der Größe des globalen Leistungsindikator-Arbeitsspeichers festgelegt. Der standardmäßige globale Leistungsindikator-Arbeitsspeicher besitzt eine Größe von 524.288 Byte. Daher besitzen die drei [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Leistungsindikatorkategorien eine Standardgröße von jeweils ungefähr 128KB. Abhängig von den Laufzeitmerkmalen der [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Anwendungen auf einem Computer ist der Leistungsindikator-Arbeitsspeicher möglicherweise erschöpft. In diesem Fall schreibt [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] einen Fehler in das Anwendungsereignisprotokoll. Der Inhaltsfehler gibt an, dass ein Leistungsindikator nicht geladen wurde, und der Eintrag beinhaltet die Ausnahme "System.InvalidOperationException: Nicht genügend Arbeitsspeicher zum Anzeigen der benutzerdefinierten Indikatordatei." Wird die Ablaufverfolgung auf Fehlerebene aktiviert, wird dieser Fehler ebenfalls nachverfolgt. Ist der Arbeitsspeicher des Leistungsindikators erschöpft, kann das Fortsetzen der Ausführung der [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Anwendungen mit aktivierten Leistungsindikatoren zu einem Nachlassen der Leistung führen. Der zuständige Administrator sollte den Computer für das Zuordnen von ausreichendem Arbeitsspeicher konfigurieren, damit die maximale Anzahl der Leistungsindikatoren, die jederzeit vorhanden sein können, unterstützt wird.  
+ Standardmäßig wird separater freigegebener Arbeitsspeicher auf ein Viertel der Größe des globalen Leistungsindikator-Arbeitsspeichers festgelegt. Der standardmäßige globale Leistungsindikator-Arbeitsspeicher besitzt eine Größe von 524.288 Byte. Daher müssen die drei WCF-Leistungsindikatorkategorien eine Standardgröße von ungefähr 128KB. Abhängig von den laufzeitmerkmalen der WCF-Anwendungen auf einem Computer, kann Arbeitsspeicher des Leistungsindikators erschöpft. In diesem Fall schreibt WCF einen Fehler in das Anwendungsereignisprotokoll auf. Der Inhaltsfehler gibt an, dass ein Leistungsindikator nicht geladen wurde, und der Eintrag beinhaltet die Ausnahme "System.InvalidOperationException: Nicht genügend Arbeitsspeicher zum Anzeigen der benutzerdefinierten Indikatordatei." Wird die Ablaufverfolgung auf Fehlerebene aktiviert, wird dieser Fehler ebenfalls nachverfolgt. Wenn der Arbeitsspeicher des Leistungsindikators erschöpft ist, kann zur Ausführung der WCF-Anwendung mit aktivierten Leistungsindikatoren zu fortfahren zu Leistungseinbußen führen. Der zuständige Administrator sollte den Computer für das Zuordnen von ausreichendem Arbeitsspeicher konfigurieren, damit die maximale Anzahl der Leistungsindikatoren, die jederzeit vorhanden sein können, unterstützt wird.  
   
- Sie können die Menge des Leistungsindikator-Arbeitsspeichers für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Kategorien in der Registrierung ändern. Dazu muss den drei folgenden Speicherorten ein neuer DWORD-Wert mit der Bezeichnung `FileMappingSize` hinzugefügt und auf den gewünschten Wert in Byte festgelegt werden. Starten Sie den Computer neu, damit diese Änderungen wirksam werden.  
+ Sie können die Menge des Leistungsindikator-Arbeitsspeichers für WCF-Kategorien in der Registrierung ändern. Dazu muss den drei folgenden Speicherorten ein neuer DWORD-Wert mit der Bezeichnung `FileMappingSize` hinzugefügt und auf den gewünschten Wert in Byte festgelegt werden. Starten Sie den Computer neu, damit diese Änderungen wirksam werden.  
   
 -   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
@@ -123,7 +123,7 @@ ServiceName@ServiceBaseAddress
 >  Sind in einem Vertrag Vorgangsnamen doppelt vorhanden, wird nur eine Indikatorinstanz für beide Vorgänge ausgegeben.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>Programmieren der WCF-Leistungsindikatoren  
- Im SDK-Installationsordner werden mehrere Dateien installiert, sodass ein programmgesteuerter Zugriff auf die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Leistungsindikatoren möglich ist. Diese Dateien werden wie folgt aufgelistet.  
+ Mehrere Dateien im SDK-Installationsordner installiert, sodass Sie die WCF-Leistungsindikatoren programmgesteuert zugreifen können. Diese Dateien werden wie folgt aufgelistet.  
   
 -   _ServiceModelEndpointPerfCounters.vrg  
   

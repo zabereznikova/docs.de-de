@@ -15,11 +15,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 51a92f89415fd3750d8d2e1880be0d9c2867600d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
 Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwischen von C#-verwaltetem und nicht verwaltetem Code.  
@@ -42,7 +42,7 @@ Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwis
   
 2.  Fügen Sie dem Projekt einen Verweis auf eine COM-Komponente oder eine Typbibliothek hinzu.  
   
-     Beim Hinzufügen des Verweises verwendet [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] das [Tlbimp.exe (Type Library Importer-Tool)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), das eine Typbibliothek als Eingabe akzeptiert, um eine .NET Framework-Interopassembly auszugeben. Die Assembly – auch als Runtime Callable Wrapper (RCW) bezeichnet – enthält verwaltete Klassen und Schnittstellen, die die COM-Klassen und -Schnittstellen umschließen, die sich in der Typbibliothek befinden. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] fügt dem Projekt einen Verweis auf die generierte Assembly hinzu.  
+     Beim Hinzufügen des Verweises verwendet Visual Studio [Tlbimp.exe (das Type Library Importer-Tool)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), das eine Typbibliothek als Eingabe akzeptiert, um eine .NET Framework-Interopassembly auszugeben. Die Assembly – auch als Runtime Callable Wrapper (RCW) bezeichnet – enthält verwaltete Klassen und Schnittstellen, die die COM-Klassen und -Schnittstellen umschließen, die sich in der Typbibliothek befinden. Visual Studio fügt dem Projekt einen Verweis auf die generierte Assembly hinzu.  
   
 3.  Erstellen Sie eine Instanz einer im RCW definierten Klasse. Dadurch wird wiederum eine Instanz des COM-Objekts erstellt.  
   
@@ -59,7 +59,7 @@ Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwis
   
 2.  Generieren Sie eine COM-Typbibliothek, und registrieren Sie diese für den Gebrauch mit COM.  
   
-     Sie können die Visual C#-Projekteigenschaften so modifizieren, dass die C#-Assembly automatisch für COM-Interop registriert wird. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verwendet das [Regasm.exe (Assembly Registration-Tool)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) mithilfe des Befehlszeilenschalters `/tlb`, das die verwaltete Assembly als Eingabe akzeptiert, um eine Typbibliothek zu generieren. Diese Typbibliothek beschreibt den Typ `public` in der Assembly und fügt Verzeichniseinträge hinzu, um COM-Clients das Erstellen verwalteter Klassen zu ermöglichen.  
+     Sie können die Visual C#-Projekteigenschaften so modifizieren, dass die C#-Assembly automatisch für COM-Interop registriert wird. Visual Studio verwendet [Regasm.exe (das Assembly Registration-Tool)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) mithilfe des Befehlszeilenschalters `/tlb`, das die verwaltete Assembly als Eingabe akzeptiert, um eine Typbibliothek zu generieren. Diese Typbibliothek beschreibt den Typ `public` in der Assembly und fügt Verzeichniseinträge hinzu, um COM-Clients das Erstellen verwalteter Klassen zu ermöglichen.  
   
  Weitere Informationen finden Sie unter [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) und [COM-Beispielklasse](../../../csharp/programming-guide/interop/example-com-class.md).  
   

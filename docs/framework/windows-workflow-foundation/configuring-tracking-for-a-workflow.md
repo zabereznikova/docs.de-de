@@ -2,11 +2,11 @@
 title: Konfigurieren der Nachverfolgung für einen Workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23a20b014962b74b6408c8b3c9ac6764d4a42d56
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurieren der Nachverfolgung für einen Workflow
 Es gibt drei Möglichkeiten zum Ausführen eines Workflows:  
@@ -46,7 +46,7 @@ instance.Extensions.Add(trackingParticipant);
 ```  
   
 ### <a name="configuring-workflow-service-tracking"></a>Konfigurieren der Überwachung von Workflowdiensten  
- Ein Workflow kann als [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst verfügbar gemacht werden, wenn er im <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Diensthost gehostet wird. <xref:System.ServiceModel.Activities.WorkflowServiceHost> ist eine spezialisierte .NET ServiceHost-Implementierung für einen workflowbasierten Dienst. In diesem Abschnitt wird erläutert, wie Sie die Nachverfolgung für einen im [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ausgeführten <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Workflowdienst konfigurieren. Er wird durch eine Web.config-Datei (für einen im Web gehosteten Dienst) oder eine App.config-Datei (für einen Dienst, der in einer eigenständigen Anwendung, z. B. einer Konsolenanwendung, gehostet wird) konfiguriert, indem ein Dienstverhalten angegeben wird, oder durch Code, indem der <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>-Auflistung für den Diensthost ein nachverfolgungsspezifisches Verhalten hinzugefügt wird.  
+ Ein Workflow kann als beim Hosten in WCF-Dienst verfügbar gemacht werden die <xref:System.ServiceModel.Activities.WorkflowServiceHost> Diensthost. <xref:System.ServiceModel.Activities.WorkflowServiceHost> ist eine spezialisierte .NET ServiceHost-Implementierung für einen workflowbasierten Dienst. In diesem Abschnitt wird erläutert, wie Sie die Nachverfolgung für einen im [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ausgeführten <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Workflowdienst konfigurieren. Er wird durch eine Web.config-Datei (für einen im Web gehosteten Dienst) oder eine App.config-Datei (für einen Dienst, der in einer eigenständigen Anwendung, z. B. einer Konsolenanwendung, gehostet wird) konfiguriert, indem ein Dienstverhalten angegeben wird, oder durch Code, indem der <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>-Auflistung für den Diensthost ein nachverfolgungsspezifisches Verhalten hinzugefügt wird.  
   
  Bei einem Workflowhost, der im <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, können Sie den <xref:System.Activities.Tracking.EtwTrackingParticipant> mithilfe des <`behavior`>-Elements in einer Konfigurationsdatei hinzufügen. Dies wird im folgenden Beispiel demonstriert.  
   

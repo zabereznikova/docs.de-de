@@ -1,13 +1,6 @@
 ---
-title: "Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements"
-ms.custom: 
+title: Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d17408d6fa03b267c2a22890d2e17c0441389
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbd19591c260b0ad160339b45fd762e7a87bbc74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] stellt eine einzelne allgemeine Schnittstelle bereit, die Automatisierungsclients zum Untersuchen oder Ausführen der Benutzerschnittstellen in unterschiedlichen Plattformen und Frameworks verwenden können. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht es jeweils Qualitätssicherungcode (Testcode) und Barrierefreiheitsanwendungen, z.B. die Sprachausgabe, Benutzerschnittstellenelemente zu untersuchen und Benutzerzugriff mit ihnen aus anderem Code zu simulieren. Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] für alle Plattformen finden Sie unter „Barrierefreiheit“.  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  Überschreiben Sie die <xref:System.Windows.UIElement.OnCreateAutomationPeer%2A> Methode für das benutzerdefinierte Steuerelement so, dass die It die Anbieterobjekt zurückgibt, die direkt oder indirekt von abgeleitet werden müssen <xref:System.Windows.Automation.Peers.AutomationPeer>.  
   
 ### <a name="override-getpattern"></a>GetPattern außer Kraft setzen  
- Automatisierungspeers vereinfachen zwar manche technischen Aspekte der Implementierung von serverseitigen [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]-Anbietern, aber Automatisierungspeers von benutzerdefinierten Steuerelementen müssen dennoch Musterschnittstellen behandeln. Wie nicht-WPF-Anbietern Peers Unterstützung von Steuerelementmustern durch die Bereitstellung von Implementierungen der Schnittstellen in den <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> Namespace, z. B. <xref:System.Windows.Automation.Provider.IInvokeProvider>. Die Schnittstellen der Steuerelementmuster können entweder vom Peer selbst, oder von einem anderen Objekt implementiert werden. Die Peer-Implementierung von <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> gibt das Objekt, das das angegebene Muster unterstützt. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]Code wird die <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> Methode und gibt eine <xref:System.Windows.Automation.Peers.PatternInterface> -Enumerationswert. Überschreiben der <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> sollte das Objekt, das das angegebene Muster implementiert zurückgeben. Wenn das Steuerelement nicht über eine benutzerdefinierte Implementierung eines Musters verfügt, können Sie Implementierung der Basistyp Aufrufen <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> dessen Implementierung oder die Null abgerufen, wenn das Muster für diesen Steuerelementtyp nicht unterstützt wird. Beispielsweise ein benutzerdefiniertes NumericUpDown-Steuerelement kann auf einen Wert innerhalb eines Bereichs festgelegt werden damit die [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] Peer würden implementieren die <xref:System.Windows.Automation.Provider.IRangeValueProvider> Schnittstelle. Das folgende Beispiel zeigt wie des Peers <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> -Methode überschrieben wird, zum Antworten auf eine <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> Wert.  
+ Automatisierungspeers vereinfachen zwar manche technischen Aspekte der Implementierung von serverseitigen [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]-Anbietern, aber Automatisierungspeers von benutzerdefinierten Steuerelementen müssen dennoch Musterschnittstellen behandeln. Wie nicht-WPF-Anbietern Peers Unterstützung von Steuerelementmustern durch die Bereitstellung von Implementierungen der Schnittstellen in den <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> Namespace, z. B. <xref:System.Windows.Automation.Provider.IInvokeProvider>. Die Schnittstellen der Steuerelementmuster können entweder vom Peer selbst, oder von einem anderen Objekt implementiert werden. Die Peer-Implementierung von <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> gibt das Objekt, das das angegebene Muster unterstützt. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] Code wird die <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> Methode und gibt eine <xref:System.Windows.Automation.Peers.PatternInterface> -Enumerationswert. Überschreiben der <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> sollte das Objekt, das das angegebene Muster implementiert zurückgeben. Wenn das Steuerelement nicht über eine benutzerdefinierte Implementierung eines Musters verfügt, können Sie Implementierung der Basistyp Aufrufen <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> dessen Implementierung oder die Null abgerufen, wenn das Muster für diesen Steuerelementtyp nicht unterstützt wird. Beispielsweise ein benutzerdefiniertes NumericUpDown-Steuerelement kann auf einen Wert innerhalb eines Bereichs festgelegt werden damit die [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] Peer würden implementieren die <xref:System.Windows.Automation.Provider.IRangeValueProvider> Schnittstelle. Das folgende Beispiel zeigt wie des Peers <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> -Methode überschrieben wird, zum Antworten auf eine <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> Wert.  
   
  [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
  [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  

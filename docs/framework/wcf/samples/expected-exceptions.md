@@ -2,11 +2,11 @@
 title: Erwartete Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c4af62e0870cdd670c46ead169033ff72902fc0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="expected-exceptions"></a>Erwartete Ausnahmen
 Dieses Beispiel zeigt, wie erwartete Ausnahmen beim Verwenden eines typisierten Clients abgefangen werden. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst. In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
@@ -16,9 +16,9 @@ Dieses Beispiel zeigt, wie erwartete Ausnahmen beim Verwenden eines typisierten 
   
  Dieses Beispiel zeigt das Abfangen und Behandeln von erwarteten Ausnahmen beider Typen, die korrekte Programme verarbeiten müssen: `TimeoutException` und `CommunicationException`.  
   
- Ausnahmen, die aus Kommunikationsmethoden auf einem Windows Communication Foundation (WCF)-Client ausgelöst werden, sind entweder erwartet oder unerwartet. Unerwartete Ausnahmen umfassen katastrophale Fehler (wie `OutOfMemoryException`) und Programmierfehler (wie `ArgumentNullException` oder `InvalidOperationException`). Meist gibt es keinen praktikablen Weg im Umgang mit unerwarteten Fehlern, daher sollten sie beim Aufruf einer Kommunikationsmethode aus dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client meist auch gar nicht abgefangen werden.  
+ Ausnahmen, die aus Kommunikationsmethoden auf einem Windows Communication Foundation (WCF)-Client ausgelöst werden, sind entweder erwartet oder unerwartet. Unerwartete Ausnahmen umfassen katastrophale Fehler (wie `OutOfMemoryException`) und Programmierfehler (wie `ArgumentNullException` oder `InvalidOperationException`). Es ist in der Regel keine gute Möglichkeit, unerwartete Fehler zu behandeln, normalerweise Sie nicht diese abgefangen werden sollten beim Aufrufen einer WCF-Client-Kommunikation-Methode.  
   
- Zu den erwarteten Ausnahmen aus Kommunikationsmethoden in einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client gehören `TimeoutException`, `CommunicationException` und jede von `CommunicationException` abgeleitete Klasse. Sie zeigen an, dass während der Kommunikation ein Problem aufgetreten ist, das sicher behandelt werden kann, indem der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client abgebrochen und ein Kommunikationsfehler gemeldet wird. Da diese Fehler durch externe Faktoren in jeder Anwendung verursacht werden können, müssen ordnungsgemäße Anwendungen diese Ausnahmen abfangen und wiederherstellen, wenn sie auftreten.  
+ Erwartete Ausnahmen aus Kommunikationsmethoden in einem WCF-Client gehören `TimeoutException`, `CommunicationException`, und eine abgeleitete Klasse der `CommunicationException`. Dieser Hinweis auf ein Problem während der Kommunikation, die durch den WCF-Client abgebrochen und ein Kommunikationsfehler gemeldet problemlos bewältigt werden könnten. Da diese Fehler durch externe Faktoren in jeder Anwendung verursacht werden können, müssen ordnungsgemäße Anwendungen diese Ausnahmen abfangen und wiederherstellen, wenn sie auftreten.  
   
  Es gibt verschiedene von `CommunicationException` abgeleitete Klassen, die ein Client auslösen kann. In manchen Fällen fangen Anwendungen auch einige von ihnen ab, um eine bestimmte Verarbeitung auszuführen, während sie andere Ausnahmen als `CommunicationException` behandeln lassen. Dies kann durchgeführt werden, indem zuerst Ausnahmen bestimmter Typen und dann `CommunicationException` in einer späteren Abfangklausel abgefangen werden.  
   

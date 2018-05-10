@@ -2,11 +2,11 @@
 title: Adressheader
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: c0e3807aadc18c7737f3a5e354135721cbfccf3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="address-headers"></a>Adressheader
 Beispiel zu Adressheadern wird veranschaulicht, wie Clients Verweisparameter an einen Dienst mithilfe von Windows Communication Foundation (WCF) übergeben können.  
@@ -14,9 +14,9 @@ Beispiel zu Adressheadern wird veranschaulicht, wie Clients Verweisparameter an 
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- In der WS-Adressierungsspezifikation wird ein Endpunktverweis als Möglichkeit definiert, einen bestimmten Webdienstendpunkt zu adressieren. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden Endpunktverweise mit der `EndpointAddress`-Klasse modelliert. `EndpointAddress` ist der Typ des Address-Felds in der `ServiceEndpoint`-Klasse.  
+ In der WS-Adressierungsspezifikation wird ein Endpunktverweis als Möglichkeit definiert, einen bestimmten Webdienstendpunkt zu adressieren. In WCF werden Endpunktverweise mit der `EndpointAddress` Class - `EndpointAddress` ist der Typ des Address-Felds, der die `ServiceEndpoint` Klasse.  
   
- Bestandteil des Endpunktverweismodells ist, dass jeder Verweis einige Verweisparameter enthalten kann, die weitere identifizierende Informationen liefern. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden diese Endpunktverweise als Instanzen der `AddressHeader`-Klasse modelliert.  
+ Bestandteil des Endpunktverweismodells ist, dass jeder Verweis einige Verweisparameter enthalten kann, die weitere identifizierende Informationen liefern. In WCF diese Endpunktverweise als Instanzen der `AddressHeader` Klasse.  
   
  In diesem Beispiel fügt der Client der `EndpointAddress` des Clientendpunkts einen Verweisparameter hinzu. Der Dienst sucht diesen Verweisparameter und verwendet seinen Wert in der Logik des "Hello"-Dienstvorgangs.  
   

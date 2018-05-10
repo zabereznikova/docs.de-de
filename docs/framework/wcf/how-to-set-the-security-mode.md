@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ddcf6983a7308bc1a615b11e86f17da1302d5085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e8c08fba0e4a74eafab00e75977a9f756c1b1cfa
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>Vorgehensweise: Festlegen des Sicherheitsmodus
 Windows Communication Foundation (WCF)-Sicherheit verfügt über drei allgemeine Sicherheitsmodi, die in den meisten vordefinierten Bindungen vorhanden sind: Transport, Nachricht und "Transport mit nachrichtenanmeldeinformationen". Zwei weitere Modi sind bindungsspezifisch: "TransportCredentialOnly" ist nur in der <xref:System.ServiceModel.BasicHttpBinding> und "Both" nur in der <xref:System.ServiceModel.NetMsmqBinding> verfügbar. In diesem Thema werden jedoch die drei allgemeinen Sicherheitsmodi behandelt: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> und <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Diese Modi werden nicht von allen vordefinierten Bindungen unterstützt. In diesem Thema wird der Modus mit der <xref:System.ServiceModel.WSHttpBinding>-Klasse und mit der <xref:System.ServiceModel.NetTcpBinding>-Klasse festgelegt, und es wird veranschaulicht, wie der Modus programmgesteuert und in der Konfiguration festgelegt werden kann.  
   
- Weitere Informationen finden Sie unter [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../docs/framework/wcf/feature-details/security-overview.md), [Sichern von Services](../../../docs/framework/wcf/securing-services.md), und [Sichern von Diensten und Clients](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Weitere Informationen zu den Transportmodus und Nachricht, finden Sie unter [Transportsicherheit](../../../docs/framework/wcf/feature-details/transport-security.md) und [Nachrichtensicherheit](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Weitere Informationen finden Sie unter WCF-Sicherheit finden Sie unter [Sicherheitsübersicht](../../../docs/framework/wcf/feature-details/security-overview.md), [Sichern von Services](../../../docs/framework/wcf/securing-services.md), und [Sichern von Diensten und Clients](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Weitere Informationen zu den Transportmodus und Nachricht, finden Sie unter [Transportsicherheit](../../../docs/framework/wcf/feature-details/transport-security.md) und [Nachrichtensicherheit](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ### <a name="to-set-the-security-mode-in-code"></a>So legen Sie den Sicherheitsmodus im Code fest  
   

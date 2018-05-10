@@ -58,7 +58,7 @@ Wenn Sie einen Dienst erstellen, können Sie Visual Studio-Projektvorlage **Wind
   
 5.  Überschreiben Sie alle anderen Methoden, für die Sie Funktionen definieren möchten.  
   
-6.  Fügen Sie die für die Dienstanwendung erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+6.  Fügen Sie die für die Dienstanwendung erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 7.  Erstellen Sie das Projekt, indem Sie auswählen **Projektmappe** aus der **erstellen** Menü.  
   

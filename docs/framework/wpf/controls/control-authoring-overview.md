@@ -1,13 +1,6 @@
 ---
-title: "Übersicht über das Erstellen von Steuerelementen"
-ms.custom: 
+title: Übersicht über das Erstellen von Steuerelementen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f9290c249ed85ffc1fe98878daf2c2f0777786f5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a6c2c796819924cdbd15d6eefffe10a607bad9bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-authoring-overview"></a>Übersicht über das Erstellen von Steuerelementen
 Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Steuerelementmodells ist das Erstellen neuer Steuerelemente nur selten erforderlich. In bestimmten Fällen lässt sich das Erstellen benutzerdefinierter Steuerelemente dennoch nicht vermeiden. In diesem Thema werden die Funktionen, dank deren Sie auf das Erstellen neuer Steuerelementen in den meisten Fällen verzichten können, sowie verschiedene Modelle zum Erstellen von Steuerelementen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] behandelt. Außerdem wird in diesem Thema auch das Erstellen eines neuen Steuerelements veranschaulicht.  
@@ -83,7 +71,7 @@ Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 ### <a name="deriving-from-frameworkelement"></a>Ableitung von FrameworkElement  
  Steuerelemente, die Ableitung <xref:System.Windows.Controls.UserControl> oder <xref:System.Windows.Controls.Control> auf das Verfassen von vorhandenen Elementen basieren. In vielen Szenarien eine akzeptable Lösung sieht, da jedes Objekt, das von erbt <xref:System.Windows.FrameworkElement> kann eine <xref:System.Windows.Controls.ControlTemplate>. Es gibt jedoch Situationen, in denen die Darstellung eines Steuerelements mehr als die Funktionalität einer einfachen Elementzusammensetzung erfordert. Eine Komponente für die folgenden Szenarien auf basiert <xref:System.Windows.FrameworkElement> ist die richtige Wahl.  
   
- Es gibt zwei standard-Methoden zum Erstellen von <xref:System.Windows.FrameworkElement>-basierte Komponenten: direkte Rendering und benutzerdefinierte Element Zusammensetzung. Direkte Rendering beinhaltet das Überschreiben der <xref:System.Windows.UIElement.OnRender%2A> Methode <xref:System.Windows.FrameworkElement> und <xref:System.Windows.Media.DrawingContext> Vorgänge, die visuelle Struktur der Komponente explizit definieren. Dies ist die Methode verwendeten <xref:System.Windows.Controls.Image> und <xref:System.Windows.Controls.Border>. Benutzerdefiniertes Element Komposition umfasst die Verwendung von Objekte vom Typ <xref:System.Windows.Media.Visual> um die Darstellung der Komponente zu erstellen. Beispiele finden Sie unter [Verwenden von DrawingVisual-Objekten](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track>ist ein Beispiel für ein Steuerelement in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , das benutzerdefinierte Element Zusammensetzung verwendet. Sie können auch direktes Rendering und benutzerdefinierte Elementzusammensetzung innerhalb eines Steuerelements kombinieren.  
+ Es gibt zwei standard-Methoden zum Erstellen von <xref:System.Windows.FrameworkElement>-basierte Komponenten: direkte Rendering und benutzerdefinierte Element Zusammensetzung. Direkte Rendering beinhaltet das Überschreiben der <xref:System.Windows.UIElement.OnRender%2A> Methode <xref:System.Windows.FrameworkElement> und <xref:System.Windows.Media.DrawingContext> Vorgänge, die visuelle Struktur der Komponente explizit definieren. Dies ist die Methode verwendeten <xref:System.Windows.Controls.Image> und <xref:System.Windows.Controls.Border>. Benutzerdefiniertes Element Komposition umfasst die Verwendung von Objekte vom Typ <xref:System.Windows.Media.Visual> um die Darstellung der Komponente zu erstellen. Beispiele finden Sie unter [Verwenden von DrawingVisual-Objekten](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track> ist ein Beispiel für ein Steuerelement in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , das benutzerdefinierte Element Zusammensetzung verwendet. Sie können auch direktes Rendering und benutzerdefinierte Elementzusammensetzung innerhalb eines Steuerelements kombinieren.  
   
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>Vorteile der Ableitung von FrameworkElement  
  Betrachten Sie ableiten von <xref:System.Windows.FrameworkElement> Wenn eine der folgenden Bedingungen zutrifft:  
@@ -127,7 +115,7 @@ Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 -   Definieren Sie eine Methode für die <xref:System.Windows.CoerceValueCallback> mit dem Namen `CoerceValue`. `CoerceValue` stellt sicher, dass `Value` größer oder gleich `MinValue` und kleiner oder gleich `MaxValue` ist.  
   
--   Definieren Sie eine Methode für die <xref:System.Windows.PropertyChangedCallback>mit dem Namen `OnValueChanged`. `OnValueChanged`erstellt eine <xref:System.Windows.RoutedPropertyChangedEventArgs%601> -Objekts und zum Auslösen von bereitet die `ValueChanged` Routingereignis. Routingereignisse werden im nächsten Abschnitt erläutert.  
+-   Definieren Sie eine Methode für die <xref:System.Windows.PropertyChangedCallback>mit dem Namen `OnValueChanged`. `OnValueChanged` erstellt eine <xref:System.Windows.RoutedPropertyChangedEventArgs%601> -Objekts und zum Auslösen von bereitet die `ValueChanged` Routingereignis. Routingereignisse werden im nächsten Abschnitt erläutert.  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -195,7 +183,7 @@ Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 -   Implementieren Sie die `public` `static` CLR-Methoden mit den Namen `Set` *PropertyName* und `Get` *PropertyName*. Beide Methoden eine Klasse abgeleitet akzeptieren sollten <xref:System.Windows.DependencyProperty> als erstes Argument. Die `Set`*PropertyName*-Methode akzeptiert auch ein Argument, dessen Typ mit dem registrierten Datentyp der Eigenschaft übereinstimmt. Die `Get`*PropertyName*-Methode sollte einen Wert zurückgeben, der den gleichen Typ aufweist. Falls die `Set`*PropertyName*-Methode fehlt, wird die Eigenschaft als schreibgeschützt gekennzeichnet.  
   
--   `Set`*PropertyName* und `Get` *PropertyName* müssen direkt zu Weiterleiten der <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> Methoden von der Ziel-Abhängigkeit Objekt bzw. Designer können auf die angefügte Eigenschaft entweder über einen Aufruf des Wrappers für die Methode zugreifen, oder indem sie das Zielabhängigkeitsobjekt direkt aufrufen.  
+-   `Set` *PropertyName* und `Get` *PropertyName* müssen direkt zu Weiterleiten der <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> Methoden von der Ziel-Abhängigkeit Objekt bzw. Designer können auf die angefügte Eigenschaft entweder über einen Aufruf des Wrappers für die Methode zugreifen, oder indem sie das Zielabhängigkeitsobjekt direkt aufrufen.  
   
  Weitere Informationen zu angefügten Eigenschaften finden Sie in der [Übersicht über angefügte Eigenschaften](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
   

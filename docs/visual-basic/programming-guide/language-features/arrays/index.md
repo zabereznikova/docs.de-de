@@ -1,11 +1,6 @@
 ---
 title: Arrays in Visual Basic
-ms.custom: ''
 ms.date: 12/06/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Array
 helpviewer_keywords:
@@ -14,12 +9,11 @@ helpviewer_keywords:
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.openlocfilehash: 3b6c1db0131f2a150dc1b00dd5e6dafc3a418f05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-in-visual-basic"></a>Arrays in Visual Basic
 Ein Array ist ein Satz von Werten, die nennt man auch sind *Elemente*, die logisch miteinander verknüpft sind. Ein Array kann z. B. die Anzahl der Schüler in jeder Jahrgangsstufe einer Grundschule bestehen; jedes Element des Arrays ist die Anzahl der Schüler in einem einzelnen Jahrgangsstufe. Auf ähnliche Weise kann ein Array eine Student Bewertungen für eine Klasse umfassen; jedes Element des Arrays ist einer einzelnen Jahrgangsstufe.    
@@ -126,7 +120,7 @@ Sie können die Größe eines Arrays auf verschiedene Arten definieren:
   
 ##  <a name="storing-values-in-an-array"></a>Speichern von Werten in einem Array
  
- Sie können mit einem Index vom Typ `Integer`auf die einzelnen Positionen in einem Array zugreifen. Die Werte in einem Array können gespeichert und abgerufen werden, indem mit dem entsprechenden in Klammern eingeschlossenen Index auf die einzelnen Arraypositionen verwiesen wird. Indizes für mehrdimensionale Arrays werden durch Kommas (,) getrennt. Sie benötigen einen Index für jede Arraydimension. 
+ Sie können mit einem Index vom Typ `Integer` auf die einzelnen Positionen in einem Array zugreifen. Die Werte in einem Array können gespeichert und abgerufen werden, indem mit dem entsprechenden in Klammern eingeschlossenen Index auf die einzelnen Arraypositionen verwiesen wird. Indizes für mehrdimensionale Arrays werden durch Kommas (,) getrennt. Sie benötigen einen Index für jede Arraydimension. 
 
 Das folgende Beispiel zeigt einige Anweisungen, die Werte in Arrays gespeichert und abgerufen.
   
@@ -165,7 +159,7 @@ Genauso Sie für eindimensionale Arrays können, können Sie beim Erstellen eine
   
  [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- Das folgende Beispiel durchläuft ein mehrdimensionales Array unter Verwendung einer [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) Anweisung. Die <xref:System.Array.GetUpperBound%2A> -Methode enthält einen Parameter, der die Dimension angibt. `GetUpperBound(0)`Gibt den höchsten Index der ersten Dimension zurück und `GetUpperBound(1)` gibt den höchsten Index der zweiten Dimension zurück.
+ Das folgende Beispiel durchläuft ein mehrdimensionales Array unter Verwendung einer [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) Anweisung. Die <xref:System.Array.GetUpperBound%2A> -Methode enthält einen Parameter, der die Dimension angibt. `GetUpperBound(0)` Gibt den höchsten Index der ersten Dimension zurück und `GetUpperBound(1)` gibt den höchsten Index der zweiten Dimension zurück.
   
  [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   

@@ -2,17 +2,17 @@
 title: Windows Workflow Foundation-Funktionsdetails
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f9bc81609379414ce022499e20791073d259cdc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Windows Workflow Foundation eine Reihe von Funktionen hinzugefügt. In diesem Dokument wird eine Reihe neuer Funktionen beschrieben. Darüber hinaus enthält das Dokument detaillierte Informationen zu den Szenarien, in denen sie möglicherweise nützlich sind.  
   
 ## <a name="messaging-activities"></a>Messagingaktivitäten  
- Die messagingaktivitäten (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) dienen zum Senden und Empfangen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Nachrichten aus dem Workflow.  <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> Aktivitäten werden verwendet, um einen Dienstvorgang Windows Communication Foundation (WCF) zu bilden, die über WSDL, genau wie Standard offengelegt werden [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Webdienste.  <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.ReceiveReply> werden verwendet, um eine ähnlich wie ein WCF-Webdienst nutzen <xref:System.ServiceModel.ChannelFactory>; ein **Hinzufügen eines Dienstverweises** Erfahrung für Workflow Foundation, die vorkonfigurierte Aktivitäten generiert auch vorhanden ist.  
+ Die messagingaktivitäten (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) zum Senden und Empfangen von WCF-Nachrichten vom Workflow verwendet werden.  <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> Aktivitäten werden verwendet, um einen Dienstvorgang Windows Communication Foundation (WCF) zu bilden, der über WSDL wie standard-WCF-Webdienste verfügbar gemacht wird.  <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.ReceiveReply> werden verwendet, um eine ähnlich wie ein WCF-Webdienst nutzen <xref:System.ServiceModel.ChannelFactory>; ein **Hinzufügen eines Dienstverweises** Erfahrung für Workflow Foundation, die vorkonfigurierte Aktivitäten generiert auch vorhanden ist.  
   
 ### <a name="getting-started-with-messaging-activities"></a>Erste Schritte mit Messagingaktivitäten  
   
@@ -34,11 +34,11 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
  Ein `BestPriceFinder` Dienst aufruft mit verschiedenen Airline-Diensten den besten Ticket Preis für eine bestimmte Route gefunden.  Implementieren dieses Szenarios müssten Sie die Message-Aktivitäten verwenden, um den Preis-Anforderung empfangen, rufen die Preise aus der Back-End-Diensten und Antworten auf die Preis-Anforderung mit den besten Preis.  Es würde ebenfalls müssen Sie andere Out-of-Box-Aktivitäten verwenden, um die Geschäftslogik für die Berechnung des besten Preis zu erstellen.  
   
 ## <a name="workflowservicehost"></a>WorkflowServiceHost  
- Die <xref:System.ServiceModel.WorkflowServiceHost> ist die Out-of-Box-Workflowhost, der mehrere Instanzen unterstützt Konfiguration und [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] messaging (obwohl es sich um eine für messaging zum Hosten der Workflows erforderlich sind nicht).  Außerdem wird durch einen Satz von Dienstverhalten die Integration von Persistenz, Nachverfolgung und Instanzsteuerung bereitgestellt.  Ebenso wie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]des <xref:System.ServiceModel.ServiceHost>, die <xref:System.ServiceModel.WorkflowServiceHost> können in einer Konsole/WinForms/WPF-Anwendung oder Windows-Dienst selbst gehostet sein (als xamlx-Datei) im Internet gehosteten in IIS oder WAS.  
+ Die <xref:System.ServiceModel.WorkflowServiceHost> ist die Out-of-Box-Workflowhost, der mehrere Instanzen, Konfiguration und WCF-messaging unterstützt (obwohl die Workflows nicht erforderlich, um die Verwendung von messaging zum hostenden sind).  Außerdem wird durch einen Satz von Dienstverhalten die Integration von Persistenz, Nachverfolgung und Instanzsteuerung bereitgestellt.  Ebenso wie WCF <xref:System.ServiceModel.ServiceHost>, die <xref:System.ServiceModel.WorkflowServiceHost> können in einer Konsole/WinForms/WPF-Anwendung oder Windows-Dienst selbst gehostet sein (als xamlx-Datei) im Internet gehosteten in IIS oder WAS.  
   
 ### <a name="getting-started-with-workflow-service-host"></a>Erste Schritte mit dem Workflowdiensthost  
   
--   Erstellen Sie in Visual Studio 2010 ein Projekt für eine Dienstanwendung für [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Workflows: Dieses Projekt wird für die Verwendung von <xref:System.ServiceModel.WorkflowServiceHost> in einer Webhostumgebung eingerichtet.  
+-   Erstellen Sie eine Dienstanwendung für WCF-Workflow-Projekt in Visual Studio 2010: dieses Projekt wird eingerichtet sein, dass mit <xref:System.ServiceModel.WorkflowServiceHost> in einer Web-Host-Umgebung.  
   
 -   Zum Hosten eines Nicht-Messaging-Workflows fügen Sie einen benutzerdefinierten <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> hinzu, der die Instanz auf Grundlage einer Nachricht erstellt.  
   
@@ -92,7 +92,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
  Ein Workflow für die auftragsverarbeitung dient zur Behandlung von neuen Auftrag erstellen und aktualisieren vorhandene Aufträge, die gerade verarbeitet werden.  Dieses Szenario implementieren, müssten Sie zum Hosten des Workflows in <xref:System.ServiceModel.WorkflowServiceHost> und messagingaktivitäten verwenden.  Es müsste auch Korrelation auf Basis der `orderId` um sicherzustellen, dass Updates an der richtigen Workflow vorgenommen werden.  
   
 ## <a name="simplified-configuration"></a>Vereinfachte Konfiguration  
- Das [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Konfigurationsschema ist komplex und stellt Benutzern viele schwer zu findende Funktionen bereit. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] wurde insbesondere darauf geachtet, die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Benutzer beim Konfigurieren der Dienste mithilfe der folgenden Funktionen zu unterstützen:  
+ Der WCF-Konfigurationsschema ist komplex und bietet Benutzern viele schwer zu findende Funktionen. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], wir haben konzentrierten uns auf Unterstützung von WCF-Benutzern, die ihre Dienste mit den folgenden Funktionen konfigurieren:  
   
 -   Es ist keine explizite Einzeldienstkonfiguration mehr notwendig. Wenn Sie keine konfigurieren \<Service > Elemente für den Dienst und den Dienst nicht programmgesteuert auf einen beliebigen Endpunkt definiert, und klicken Sie dann eine Sammlung von Endpunkten wird automatisch hinzugefügt werden, mit dem Dienst, eine pro dienstbasisadresse und Vertrag vom Dienst implementiert wird.  
   
@@ -100,7 +100,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 -   Standardendpunkte definieren wiederverwendbare vorkonfigurierte Endpunkte, die feste Werte für mindestens eine Endpunkteigenschaft besitzen (Adresse, Bindung und Vertrag) und die die Definition benutzerdefinierter Eigenschaften erlauben.  
   
--   Mit <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> können Sie schließlich die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientkonfiguration zentral verwalten. Dies kann auch in Szenarien nützlich sein, in denen die Konfiguration nach der Ladezeit der Anwendungsdomäne ausgewählt oder geändert wird.  
+-   Schließlich die <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> können Sie zentrale Verwaltung der WCF-Client-Konfiguration, in Szenarien nützlich, in der Konfiguration ausgewählt ist, oder nach der Ladezeit der Anwendung geändert.  
   
 ### <a name="getting-started"></a>Erste Schritte  
   
@@ -116,7 +116,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 ### <a name="simplified-configuration-scenarios"></a>Vereinfachte Konfigurationsszenarien  
   
--   Ein erfahrener ASMX-Entwickler möchte mit der Verwendung von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] beginnen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erscheint ihm jedoch zu kompliziert. Er fragt sich, was das alles für Informationen sind, die in eine Konfigurationsdatei eingefügt werden müssen. In .NET 4 können Sie sich sogar entscheiden, überhaupt keine Konfigurationsdatei zu verwenden.  
+-   Starten der Verwendung von WCF ist ein erfahrener ASMX-Entwickler möchte. WCF scheint jedoch zu kompliziert! Er fragt sich, was das alles für Informationen sind, die in eine Konfigurationsdatei eingefügt werden müssen. In .NET 4 können Sie sich sogar entscheiden, überhaupt keine Konfigurationsdatei zu verwenden.  
   
 -   Es ist sehr schwierig, einen vorhandenen Satz von WCF-Diensten zu konfigurieren und zu verwalten. Die Konfigurationsdatei enthält Tausende von XML-Codezeilen, und es kann sehr gefährlich sein, diese zu ändern. Es müsste eine Möglichkeit geben, diese vielen Codezeilen auf eine Menge zu reduzieren, die besser zu handhaben ist.  
   
@@ -272,7 +272,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
  Ein Benutzer muss zur Eingabe aufgefordert werden. Unter normalen Umständen würde der Entwickler einen Methodenaufruf wie <xref:System.Console.ReadLine%2A> verwenden, um einen Benutzer zur Eingabe aufzufordern. Das Problem bei diesem Setup ist, dass das Programm wartet, bis der Benutzer etwas eingibt. In diesem Szenario wird ein Timeout benötigt, um die Blockierung einer blockierenden Aktivität aufzuheben. Ein häufiges Szenario ist, dass eine Aufgabe innerhalb einer bestimmte Zeitspanne abgeschlossen werden muss. Das Umsetzen eines Timeouts für eine blockierende Aktivität ist ein Szenario, bei dem eine Auswahl sehr nützlich ist.  
   
 ## <a name="wcf-routing-service"></a>WCF-Routingdienst  
- Der Routingdienst wurde entwickelt, um eine generische Software Router zu sein, die Sie steuern, wie können [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Nachrichten zwischen den Clients und Diensten.  Der Routingdienst können Sie entkoppeln die Clients von den Diensten, wodurch Sie viel mehr Flexibilität im Hinblick auf die Konfigurationen erhalten, Sie unterstützen können und die Flexibilität beim wie Ihre Dienste gehostet in Betracht ziehen.  Clients und Dienste wurden in .NET 3.5 eng verbunden; ein Client musste es benötigt, um die Kommunikation zwischen und wurden, in dem sich alle Dienste kennen. Außerdem bestanden für WCF in .NET Framework 3.5 die folgenden Einschränkungen:  
+ Der Routingdienst soll ein generischer Software Router zu sein, die können Sie steuern, wie WCFmessages zwischen den Clients und Diensten übertragen.  Der Routingdienst können Sie entkoppeln die Clients von den Diensten, wodurch Sie viel mehr Flexibilität im Hinblick auf die Konfigurationen erhalten, Sie unterstützen können und die Flexibilität beim wie Ihre Dienste gehostet in Betracht ziehen.  Clients und Dienste wurden in .NET 3.5 eng verbunden; ein Client musste es benötigt, um die Kommunikation zwischen und wurden, in dem sich alle Dienste kennen. Außerdem bestanden für WCF in .NET Framework 3.5 die folgenden Einschränkungen:  
   
 -   Die Fehlerbehandlung war komplex, da diese Logik fest in den Client codiert werden musste.  
   
@@ -312,7 +312,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
 -   Clients können so konfiguriert werden, dass sie stabiler gegenüber Fehlern oder der Nichtverfügbarkeit von Diensten sind.  
   
 ## <a name="wcf-discovery"></a>WCF-Suche  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Suche ist eine Frameworktechnologie, mit der Sie einen Suchmechanismus in die Anwendungsinfrastruktur integrieren können. Mit WCF-Suche können Sie sicherstellen, dass Ihr Dienst ermittelt werden kann, und Ihre Clients für die Suche nach Diensten konfigurieren. Clients müssen nicht mehr mit einem Endpunkt hartcodiert werden, sodass die Anwendung stabiler und fehlertolerant wird. WCF-Suche ist die perfekte Plattform, um Funktionen für die automatische Konfiguration in die Anwendung zu integrieren.  
+ WCF-Suche ist eine frameworktechnologie, mit der Sie einen Suchmechanismus in die Anwendungsinfrastruktur integrieren kann. Mit WCF-Suche können Sie sicherstellen, dass Ihr Dienst ermittelt werden kann, und Ihre Clients für die Suche nach Diensten konfigurieren. Clients müssen nicht mehr mit einem Endpunkt hartcodiert werden, sodass die Anwendung stabiler und fehlertolerant wird. WCF-Suche ist die perfekte Plattform, um Funktionen für die automatische Konfiguration in die Anwendung zu integrieren.  
   
  Das Produkt basiert auf dem WS-Discovery-Standard. Das Produkt zeichnet sich dadurch aus, dass es interoperabel, erweiterbar und generisch ist. Es unterstützt zwei Betriebsmodi:  
   

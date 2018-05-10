@@ -2,11 +2,11 @@
 title: Nachrichtenkorrelation
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 1573cdafafb5861099b275caa888c79d23cafeb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7105c66153625b4a7a2b9a2d61a2ab2821cab2af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-correlation"></a>Nachrichtenkorrelation
 In diesem Beispiel wird veranschaulicht, wie eine Message Queuing (MSMQ)-Anwendung eine MSMQ-Nachricht an einen Windows Communication Foundation (WCF)-Dienst senden kann und wie Nachrichten zwischen Absender und Empfänger in einer Anforderung/Antwort-Szenario korreliert werden können. In diesem Beispiel wird die msmqIntegrationBinding-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten in Warteschlangen empfängt. c  
@@ -64,9 +64,9 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- Der Dienst verwendet einen benutzerdefinierten `OrderResponseClient`-Client zum Senden der MSMQ-Nachricht an die Warteschlange. Da die Anwendung, die die Nachricht empfängt und verarbeitet, keine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]- sondern eine MSMQ-Anwendung ist, besteht zwischen den beiden Anwendungen kein implizierter Dienstvertrag. Deshalb kann in diesem Szenario kein Proxy mit dem Tool Svcutil.exe erstellt werden.  
+ Der Dienst verwendet einen benutzerdefinierten `OrderResponseClient`-Client zum Senden der MSMQ-Nachricht an die Warteschlange. Da die Anwendung, die die Nachricht empfängt und verarbeitet eine MSMQ-Anwendung und einer WCF-Anwendung ist, ist es kein implizierter Dienstvertrag zwischen den beiden Anwendungen an. Deshalb kann in diesem Szenario kein Proxy mit dem Tool Svcutil.exe erstellt werden.  
   
- Der benutzerdefinierte Proxy ist im Wesentlichen bei allen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen gleich, die die `msmqIntegrationBinding`-Bindung zum Senden von Nachrichten verwenden. Im Gegensatz zu anderen Proxys enthält dieser keinen Bereich von Dienstvorgängen. Es ist nur ein Sende-Nachricht-Vorgang.  
+ Der benutzerdefinierte Proxy ist im Wesentlichen für alle WCF-Anwendungen, mit denen die `msmqIntegrationBinding` -Bindung zum Senden von Nachrichten. Im Gegensatz zu anderen Proxys enthält dieser keinen Bereich von Dienstvorgängen. Es ist nur ein Sende-Nachricht-Vorgang.  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -212,7 +212,7 @@ static void PlaceOrder()
  Die MSMQ-Warteschlange, aus der die Bestellantworten empfangen werden, wird in einem appSettings-Abschnitt der Konfigurationsdatei angegeben, wie in der folgenden Beispielkonfiguration gezeigt.  
   
 > [!NOTE]
->  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunktadresse gibt ein msmq.formatname-Schema an, und für den lokalen Computer wird localhost verwendet. Im URI steht hinter msmq.formatname ein korrekt aufgebauter Formatname gemäß MSMQ-Richtlinien.  
+>  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die WCF-Endpunktadresse gibt ein msmq.formatname-Schema und verwendet "Localhost" für den lokalen Computer. Im URI steht hinter msmq.formatname ein korrekt aufgebauter Formatname gemäß MSMQ-Richtlinien.  
   
 ```xml  
 <appSettings>  

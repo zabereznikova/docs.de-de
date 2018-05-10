@@ -2,17 +2,17 @@
 title: Erstellen eines BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96924e97ad3fcc121ef7b28125301060d8448514
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-bindingelement"></a>Erstellen eines BindingElement
-Bindungen und Bindungselemente (Objekte, die erweitern <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> und <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>bzw.) sind die Orte, wo das Anwendungsmodell für Windows Communication Foundation (WCF) mit kanalfactorys und Kanallistenern verknüpft ist. Ohne Bindungen mithilfe von benutzerdefinierten Kanälen erfordert Programmierung auf Kanalebene wie beschrieben in [Programmierung auf Kanalebene Dienst](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) und [Programmierung auf Kanalebene Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). In diesem Thema wird erläutert, die Mindestanforderung zu aktivieren, verwenden den Kanal in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], die Entwicklung einer <xref:System.ServiceModel.Channels.BindingElement> für Ihr Kanal, und aktivieren, verwenden Sie aus der Anwendung, wie in Schritt 4 des beschrieben [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Bindungen und Bindungselemente (Objekte, die erweitern <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> und <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>bzw.) sind die Orte, wo das Anwendungsmodell für Windows Communication Foundation (WCF) mit kanalfactorys und Kanallistenern verknüpft ist. Ohne Bindungen mithilfe von benutzerdefinierten Kanälen erfordert Programmierung auf Kanalebene wie beschrieben in [Programmierung auf Kanalebene Dienst](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) und [Programmierung auf Kanalebene Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). In diesem Thema wird erläutert, die Mindestanforderung zu aktivieren, verwenden den Kanal in WCF, die Entwicklung von einem <xref:System.ServiceModel.Channels.BindingElement> für Ihr Kanal, und aktivieren, verwenden Sie aus der Anwendung, wie in Schritt 4 des beschrieben [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="overview"></a>Übersicht  
- Durch Erstellen von <xref:System.ServiceModel.Channels.BindingElement> für Ihren Kanal können Entwickler ihn in einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung nutzen. <xref:System.ServiceModel.Channels.BindingElement>-Objekte können aus der <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>-Klasse verwendet werden, um eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung mit Ihrem Kanal zu verbinden, ohne dem genauen Informationstyp Ihres Kanals entsprechen zu müssen.  
+ Erstellen einer <xref:System.ServiceModel.Channels.BindingElement> für Ihren Kanal Entwicklern für die Verwendung in einer WCF-Anwendung ermöglicht. <xref:System.ServiceModel.Channels.BindingElement> Objekte können verwendet werden, aus der <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> Klasse, um einen WCF-Anwendung mit Ihrem Kanal zu verbinden, ohne dass die genauen Informationstyp Ihres Kanals erforderlich.  
   
  Einmal eine <xref:System.ServiceModel.Channels.BindingElement> wurde erstellt, Sie können weitere Funktionen, die abhängig von Ihren Anforderungen durch die verbleibenden Kanal Entwicklungsschritte beschrieben, die folgende [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

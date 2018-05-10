@@ -2,14 +2,14 @@
 title: ASMX-Client mit einem WCF-Dienst
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 5a0262361eac35ac45c3861deee13133011754ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93a881e486d82183fc42c524f3d83527c649516d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>ASMX-Client mit einem WCF-Dienst
-In diesem Beispiel wird veranschaulicht, wie zum Erstellen eines Diensts mit Windows Communication Foundation (WCF), und klicken Sie dann auf den Dienst zugreifen, nicht von einem[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client, wie einem ASMX-Client.  
+Dieses Beispiel veranschaulicht, wie zum Erstellen eines Diensts mit Windows Communication Foundation (WCF), und klicken Sie dann auf den Dienst von einem nicht-WCF-Client, wie einem ASMX-Client zugegriffen wird.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> und <xref:System.Xml.Serialization.XmlSerializer> ordnen CLR-Typen einer XML-Darstellung zu. Der <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt einige XML-Darstellungen anders als XmlSerializer. Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Proxygeneratoren (wie Wsdl.exe) generieren bei Verwendung des XmlSerializer eine Schnittstelle, die sich bequemer verwenden lässt. Die <xref:System.ServiceModel.XmlSerializerFormatAttribute> wird angewendet, um die `ICalculator` -Schnittstelle, um sicherzustellen, dass das XmlSerializer-Element für die Zuordnung von CLR-Typen in XML verwendet wird. Die Dienstimplementierung berechnet das entsprechende Ergebnis und gibt es zurück.  
+ <xref:System.Runtime.Serialization.DataContractSerializer> und <xref:System.Xml.Serialization.XmlSerializer> ordnen CLR-Typen einer XML-Darstellung zu. Der <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt einige XML-Darstellungen anders als XmlSerializer. Nicht-WCF-Proxy-Generatoren wie Wsdl.exe, generieren eine Schnittstelle auf, wenn das XmlSerializer-Element verwendet wird. Die <xref:System.ServiceModel.XmlSerializerFormatAttribute> wird angewendet, um die `ICalculator` -Schnittstelle, um sicherzustellen, dass das XmlSerializer-Element für die Zuordnung von CLR-Typen in XML verwendet wird. Die Dienstimplementierung berechnet das entsprechende Ergebnis und gibt es zurück.  
   
  Der Dienst macht einen einzigen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit einer Konfigurationsdatei (Web.conf) definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Der Dienst macht den Endpunkt bei der vom IIS-Host bereitgestellten Basisadresse verfügbar. Das `binding`-Attribut wird auf basicHttpBinding festgelegt, was die HTTP-Kommunikation über SOAP 1.1 ermöglicht, das mit WS-I BasicProfile 1.1 kompatibel ist, wie in der folgenden Beispielkonfiguration dargestellt.  
   
@@ -49,7 +49,7 @@ public interface ICalculator
 </services>  
 ```  
   
- Der ASMX-Client kommuniziert mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst mittels eines typisierten Proxys, der von dem WSDL-Dienstprogramm (Web Services Description Language) Wsdl.exe generiert wird. Der typisierte Proxy ist in der Datei generatedClient.cs enthalten. Das WSDL-Dienstprogramm ruft Metadaten für den angegebenen Dienst ab und generiert einen typisierten Proxy, den ein Client zur Kommunikation verwenden kann. Standardmäßig macht das Framework keine Metadaten verfügbar. Um die Metadaten erforderlich, um den Proxy zu generieren verfügbar zu machen, müssen Sie Hinzufügen einer [ \<ServiceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) und legen Sie seine `httpGetEnabled` -Attribut auf `True` wie in folgender Konfiguration gezeigt.  
+ Der ASMX-Client kommuniziert mit dem WCF-Dienst mittels eines typisierten Proxys, das mit dem Web Services Description Language (WSDL)-Hilfsprogramm (Wsdl.exe) generiert wird. Der typisierte Proxy ist in der Datei generatedClient.cs enthalten. Das WSDL-Dienstprogramm ruft Metadaten für den angegebenen Dienst ab und generiert einen typisierten Proxy, den ein Client zur Kommunikation verwenden kann. Standardmäßig macht das Framework keine Metadaten verfügbar. Um die Metadaten erforderlich, um den Proxy zu generieren verfügbar zu machen, müssen Sie Hinzufügen einer [ \<ServiceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) und legen Sie seine `httpGetEnabled` -Attribut auf `True` wie in folgender Konfiguration gezeigt.  
   
 ```xml  
 <behaviors>  

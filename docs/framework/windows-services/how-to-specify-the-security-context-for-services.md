@@ -35,7 +35,7 @@ Standardmäßig werden Dienste in einem anderen Sicherheitskontext als dem des a
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>Um den Sicherheitskontext für einen Dienst anzugeben.  
   
-1.  Nachdem Sie den Dienst erstellt haben, fügen Sie die erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Nachdem Sie den Dienst erstellt haben, fügen Sie die erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 2.  Im Designer Zugriff auf die `ProjectInstaller` Klasse, und klicken Sie auf das Dienstinstallationsprogramm-Prozess für den Dienst mit dem Sie arbeiten.  
   

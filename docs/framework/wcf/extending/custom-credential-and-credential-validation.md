@@ -8,18 +8,18 @@ helpviewer_keywords:
 - credential validation [WCF]
 - credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-ms.openlocfilehash: 00a49f9746c7073e3abdb353b38a76f6eea099f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9b340c01a9eb4ce4007e93f2b38e292cd6543ba1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-credential-and-credential-validation"></a>Benutzerdefinierte Anmeldeinformationen und Validierung der Anmeldeinformationen
 Sicherheit in Windows Communication Foundation (WCF) basiert auf den Austausch von Anmeldeinformationen zwischen Diensten und Clients. Die meisten Sicherheitsszenarien können durch die Verwendung allgemeiner Anmeldeinformationstypen wie Windows (Kerberos), Benutzerrname und Kennwörter sowie Zertifikate erfüllt werden. Falls jedoch ein neuer Typ von Anmeldeinformationen erforderlich ist, wird in den Themen in diesem Abschnitt die Behandlung und Überprüfung neuer Typen erläutert.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Vorgehensweise: Erstellen eines Diensts, der ein benutzerdefiniertes Zertifikatvalidierungssteuerelement verwendet](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- Erläutert das Anpassen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Validierung durch Erben von der <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse.  
+ Erläutert, wie WCF-Validierung anpassen, indem Sie erben von der <xref:System.IdentityModel.Selectors.X509CertificateValidator> Klasse.  
   
  [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  Veranschaulicht das Erweitern der <xref:System.ServiceModel.Description.ClientCredentials> und <xref:System.ServiceModel.Description.ServiceCredentials> Klassen für die Aufnahme neuer Anmeldeinformationstypen. Dies ist das erste Thema in einer Reihe von Themen, die das Erstellen benutzerdefinierter Anmeldeinformationstypen ermöglichen.  

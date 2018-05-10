@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 38661c2ca0e3329f508e2740dfcdf69c0d5e4105
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4912f1eeaa0c7d461250f783767ac44b2038f594
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Übersicht über Windows Communication Foundation-Bindungen
-Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Verbindung mit dem Endpunkt eines Windows Communication Foundation (WCF)-Diensts erforderlich sind. Jeder Endpunkt in einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst erfordert eine korrekt angegebene Bindung. In diesem Thema werden die Typen von Kommunikationsdetails, die die Bindungen definieren, die Elemente einer Bindung, die in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthaltenen Bindungen und Methoden zum Angeben einer Bindung für einen Endpunkt aufgeführt.  
+Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Verbindung mit dem Endpunkt eines Windows Communication Foundation (WCF)-Diensts erforderlich sind. Jeder Endpunkt in einem WCF-Dienst erfordert eine korrekt angegebene Bindung. Dieses Thema beschreibt die Typen von Kommunikationsdetails, die die Bindungen definieren, die Elemente einer Bindung, welche Bindungen in WCF enthalten sind und wie eine Bindung für einen Endpunkt angegeben werden kann.  
   
 ## <a name="what-a-binding-defines"></a>Was eine Bindung definiert  
  Die Informationen in einer Bindung können sehr einfach oder sehr komplex sein. Die einfachste Bindung gibt nur das Transportprotokoll (wie HTTP) an, das für die Verbindung zum Endpunkt verwendet werden muss. Allgemeiner gesagt fallen die Informationen in einer Bindung zur Verbindung mit einem Endpunkt in eine der folgenden Kategorien.  
@@ -29,17 +29,17 @@ Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Ve
  Eine Bindung besteht im Allgemeinen aus einem geordneten Stapel von Bindungselementen, die jeweils einen Teil der für die Verbindung zu einem Dienstendpunkt erforderlichen Kommunikationsinformationen angeben. Die beiden niedrigsten Ebenen im Stapel sind jeweils erforderlich. An der Basis des Stapels befindet sich das Transportbindungselement und unmittelbar darüber das Element, das die Spezifikationen für die Nachrichtencodierung enthält. Die optionalen Bindungselemente, die die anderen Kommunikationsprotokolle angeben, befinden sich in den Ebenen oberhalb dieser beiden erforderlichen Elemente. Weitere Informationen zu diesen Bindungselementen und die richtige Reihenfolge, finden Sie unter [benutzerdefinierte Bindungen](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen  
- Die Informationen in einer Bindung können komplex sein, und einige Einstellungen sind möglicherweise mit anderen nicht kompatibel. Aus diesem Grund schließt [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] einen Satz vom System bereitgestellter Bindungen ein. Diese Bindungen sind für die meisten Anwendungsanforderungen vorgesehen. Die folgenden Klassen stellen einige Beispiele für vom System bereitgestellte Bindungen dar:  
+ Die Informationen in einer Bindung können komplex sein, und einige Einstellungen sind möglicherweise mit anderen nicht kompatibel. Aus diesem Grund enthält WCF eine Reihe von vom System bereitgestellte Bindungen. Diese Bindungen sind für die meisten Anwendungsanforderungen vorgesehen. Die folgenden Klassen stellen einige Beispiele für vom System bereitgestellte Bindungen dar:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: Eine für Verbindungen zu Webdiensten geeignete HTTP-Protokollbindung, die der WS-I Basic Profile-Spezifikation entspricht (z. B. auf ASP.NET-Webdiensten basierte Dienste).  
   
 -   <xref:System.ServiceModel.WSHttpBinding>: Eine für Verbindungen zu Endpunkten geeignete interoperable Bindung, die den WS-*-Protokollen entspricht.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Verwendet [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zum Herstellen von Verbindungen mit anderen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Endpunkten auf dem gleichen Computer.  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>: Verwendet die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zur Verbindung mit anderen WCF-Endpunkten auf demselben Computer.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Verwendet [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zum Herstellen von Verbindungen für Nachrichten in der Warteschlange mit anderen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Endpunkten.  
+-   <xref:System.ServiceModel.NetMsmqBinding>: Verwendet die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Nachrichten in der Warteschlange Verbindungen mit anderen WCF-Endpunkten zu erstellen.  
   
- Eine vollständige Liste mit Beschreibungen aller der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-bereitgestellten Bindungen, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../docs/framework/wcf/system-provided-bindings.md).  
+ Eine vollständige Liste mit Beschreibungen, der alle bereitgestellten WCF Bindungen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="using-your-own-bindings"></a>Verwenden der eigenen Bindungen  
  Wenn keine der vom System bereitgestellten Bindungen über die richtige Kombination von Funktionen verfügt, die für eine Dienstanwendung erforderlich sind, können Sie eine eigene Bindung erstellen. Hierfür gibt es zwei Möglichkeiten. Sie können eine neue Bindung entweder mithilfe eines <xref:System.ServiceModel.Channels.CustomBinding>-Objekts aus bereits vorhandenen Bindungselementen erstellen oder durch Ableiten von der <xref:System.ServiceModel.Channels.Binding>-Bindung eine vollständig benutzerdefinierte Bindung erstellen. Weitere Informationen zum Erstellen einer eigene Bindung, die mithilfe der folgenden zwei Ansätze, finden Sie unter [benutzerdefinierte Bindungen](../../../docs/framework/wcf/extending/custom-bindings.md) und [Erstellen benutzerdefinierter Bindungen](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
@@ -47,12 +47,12 @@ Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Ve
 ## <a name="using-bindings"></a>Verwenden von Bindungen  
  Das Verwenden von Bindungen umfasst zwei grundlegende Schritte:  
   
-1.  Auswählen oder Definieren einer Bindung. Die einfachste Methode ist, eine in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthaltene, vom System bereitgestellte Bindung auszuwählen und sie mit ihren Standardeinstellungen zu verwenden. Sie können auch eine vom System bereitgestellte Bindung auswählen und ihre Eigenschaftswerte zurücksetzen, um sie Ihren Anforderungen anzupassen. Alternativ können Sie eine benutzerdefinierte Bindung erstellen, um ein höheres Maß an Steuerung und Anpassung zu erreichen.  
+1.  Auswählen oder Definieren einer Bindung. Die einfachste Methode ist, wählen eine der vom System bereitgestellte Bindungen, die in WCF und mit ihren Standardeinstellungen verwenden. Sie können auch eine vom System bereitgestellte Bindung auswählen und ihre Eigenschaftswerte zurücksetzen, um sie Ihren Anforderungen anzupassen. Alternativ können Sie eine benutzerdefinierte Bindung erstellen, um ein höheres Maß an Steuerung und Anpassung zu erreichen.  
   
 2.  Erstellen Sie einen Endpunkt, der die ausgewählte oder definierte Bindung verwendet.  
   
 ## <a name="code-and-configuration"></a>Code und Konfiguration  
- Sie können Bindungen mit zwei Methoden definieren: durch Code oder durch Konfiguration. Diese beiden Ansätze hängen nicht davon ab, ob Sie eine vom System bereitgestellte Bindung oder eine benutzerdefinierte Bindung verwenden. Im Allgemeinen gibt Ihnen die Verwendung von Code die vollständige Kontrolle über die Definition einer Bindung zur Entwurfszeit. Mit der Konfiguration kann andererseits ein Systemadministrator oder der Benutzer eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstes oder -Clients die Parameter einer Bindung ändern, ohne die Dienstanwendung neu kompilieren zu müssen. Diese Flexibilität ist häufig wünschenswert, da die spezifischen Computeranforderungen, für die eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendung bereitgestellt werden soll, nicht vorhersehbar sind. Das Ausschließen der Bindungsinformationen (und der Adressierungsinformationen) aus dem Code ermöglicht deren Änderung, ohne die Anwendung neu kompilieren oder erneut bereitstellen zu müssen. Beachten Sie, dass im Code definierte Bindungen nach in der Konfiguration angegebenen Bindungen erstellt werden, sodass die durch den Code definierten Bindungen alle durch die Konfiguration definierten Bindungen überschreiben können.  
+ Sie können Bindungen mit zwei Methoden definieren: durch Code oder durch Konfiguration. Diese beiden Ansätze hängen nicht davon ab, ob Sie eine vom System bereitgestellte Bindung oder eine benutzerdefinierte Bindung verwenden. Im Allgemeinen gibt Ihnen die Verwendung von Code die vollständige Kontrolle über die Definition einer Bindung zur Entwurfszeit. Konfiguration kann andererseits, ein Systemadministrator oder der Benutzer eines WCF-Diensts oder Clients die Parameter einer Bindung ändern, ohne die dienstanwendung neu kompilieren. Diese Flexibilität ist häufig wünschenswert, da es gibt keine Möglichkeit, die spezifischen computeranforderungen Vorhersagen für die ist eine WCF-Anwendung bereitgestellt werden. Das Ausschließen der Bindungsinformationen (und der Adressierungsinformationen) aus dem Code ermöglicht deren Änderung, ohne die Anwendung neu kompilieren oder erneut bereitstellen zu müssen. Beachten Sie, dass im Code definierte Bindungen nach in der Konfiguration angegebenen Bindungen erstellt werden, sodass die durch den Code definierten Bindungen alle durch die Konfiguration definierten Bindungen überschreiben können.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

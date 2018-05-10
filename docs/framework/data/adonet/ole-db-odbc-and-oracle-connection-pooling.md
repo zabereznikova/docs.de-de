@@ -2,11 +2,11 @@
 title: OLE DB-, ODBC- und Oracle-Verbindungspooling
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB-, ODBC- und Oracle-Verbindungspooling
 Durch Verbindungspooling kann die Leistung und Skalierbarkeit einer Anwendung wesentlich erhöht werden. In diesem Abschnitt wird das Verbindungspooling für die .NET Framework-Datenanbieter für OLE DB, ODBC und Oracle erläutert.  
@@ -26,8 +26,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  Das Verbindungspooling für .NET Framework-Datenanbieter für ODBC wird von dem für die Verbindung verwendeten ODBC-Treiber-Manager verwaltet und wird nicht vom .NET Framework-Datenanbieter für ODBC beeinflusst.  
   
  Öffnen Sie zum Aktivieren oder deaktivieren Verbindungspooling, **ODBC-Datenquellenadministrator** in den Ordner "Verwaltung" der Systemsteuerung. Die **Verbindungspooling** Registerkarte können Sie die Verbindungspoolingparameter für jeden installierten ODBC-Treiber angeben. Beachten Sie, dass im Fall von Verbindungspoolingänderungen für einen bestimmten ODBC-Treiber alle Anwendungen betroffen sind, die diesen ODBC-Treiber verwenden.  
-  
- Weitere Informationen zum ODBC-Verbindungspooling finden Sie unter [INFO: häufig gestellte Fragen zum ODBC-Verbindungspooling](http://support.microsoft.com/kb/169470).  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Verbindungspooling für OracleClient  
  Der .NET Framework-Datenanbieter für Oracle stellt das Verbindungspooling für die ADO.NET-Clientanwendung automatisch bereit. Sie können auch mehrere Modifizierer für Verbindungszeichenfolgen angeben, um das Verbindungspoolingverhalten zu steuern (siehe "Steuern von Verbindungspooling mit Verbindungszeichenfolgen-Schlüsselwörtern" weiter unten in diesem Thema).  

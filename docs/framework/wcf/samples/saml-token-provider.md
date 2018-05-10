@@ -2,22 +2,22 @@
 title: SAML-Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 56c432b0874f59fed87c0d892732422161d668ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="saml-token-provider"></a>SAML-Tokenanbieter
-Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Client-SAML-Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um Sicherheitsinfrastruktur der Sicherheitsinfrastruktur Anmeldeinformationen bereitzustellen. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird auch mit einem [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter ausgeliefert. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
+Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Client-SAML-Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um Sicherheitsinfrastruktur der Sicherheitsinfrastruktur Anmeldeinformationen bereitzustellen. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. Auch Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
   
 -   Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem diese Tokenanbieter nicht umgehen können.  
   
--   Wenn Sie eigene benutzerdefinierte Mechanismen zur Transformation der Anmeldeinformationen von dem Punkt, an dem der Benutzer die Details angibt, bis zu dem Punkt, in dem das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientframework die Anmeldeinformationen verwendet, angeben möchten.  
+-   Wenn geben Sie eine eigene benutzerdefinierte Mechanismen zur Transformation angibt, bis die Anmeldeinformationen ab dem Punkt, der Benutzer die Details, wenn der WCF-Clientframework die Anmeldeinformationen verwendet werden sollen.  
   
 -   Wenn Sie ein benutzerdefiniertes Token erstellen.  
   
- In diesem Beispiel wird gezeigt, wie Sie einen benutzerdefinierten Tokenanbieter erstellen können, mit dem ein SAML-Token verwendet werden kann, das außerhalb des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientframework bezogen wurde.  
+ Dieses Beispiel zeigt, wie Sie einen benutzerdefinierten Tokenanbieter erstellen, der einem SAML-Token von außerhalb des WCF-Client-Frameworks verwendet werden können.  
   
  Kurz gesagt, veranschaulicht dieses Beispiel folgende Punkte:  
   
@@ -25,7 +25,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
   
 -   Wie ein SAML-Token an die benutzerdefinierten Clientanmeldeinformationen übergeben werden kann.  
   
--   Wie das SAML-Token für das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientframework bereitgestellt wird.  
+-   Wie das SAML-Token für den WCF-Clientframework bereitgestellt wird.  
   
 -   Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.  
   
@@ -110,7 +110,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 </system.serviceModel>  
 ```  
   
- In den folgenden Schritten wird die Entwicklung eines benutzerdefinierten SAML-Tokenanbieters und seine Integration in das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsframework gezeigt:  
+ Die folgenden Schritte zeigen, wie Entwickeln eines benutzerdefinierten SAML-tokenanbieters und seine Integration in WCF:-Sicherheitsframework:  
   
 1.  Schreiben Sie einen benutzerdefinierten SAML-Tokenanbieter.  
   

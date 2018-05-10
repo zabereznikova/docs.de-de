@@ -2,17 +2,17 @@
 title: Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cfa1ec0e486943d196ec016be87544f17a0114e6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
 In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung beschrieben. Dabei wird auch auf die Verwendung von Service Trace Viewer zur Problembehandlung in einer Anwendung eingegangen.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Verwenden des Service Trace Viewer-Tools  
- Der Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die von erstellte diagnoseablaufverfolgungen zu korrelieren [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Listener zur Suche nach dem Stamm Ursache eines Fehlers. Anhand dieses Tools können Sie mühelos Ablaufverfolgungen anzeigen, gruppieren und filtern, um Probleme mit [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Diensten zu diagnostizieren, zu reparieren und zu überprüfen. Weitere Informationen zur Verwendung dieses Tools finden Sie unter [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ Der Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die von den WCF-Listenern, suchen Sie die Ursache eines Fehlers erstellte diagnoseablaufverfolgungen zu korrelieren. Das Tool bietet Ihnen eine Möglichkeit, leicht anzeigen, Gruppe, und Filtern von ablaufverfolgungen zu diagnostizieren, reparieren und vergewissern Sie sich Probleme mit WCF-Diensten. Weitere Informationen zur Verwendung dieses Tools finden Sie unter [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  Dieses Thema enthält Screenshots von ablaufverfolgungen, die durch die Ausführung generiert der [Ablaufverfolgung und Nachrichtenprotokollierung](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) Beispiel, bei der Anzeige mithilfe der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). In diesem Thema werden der Ablaufverfolgungsinhalt, Aktivitäten und ihre Korrelation erläutert. Zudem wird beschrieben, wie eine große Zahl von Ablaufverfolgungen im Rahmen der Problembehandlung analysiert werden können.  
   
@@ -104,11 +104,11 @@ In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung b
 ```  
   
 ## <a name="servicemodel-e2e-tracing"></a>ServiceModel E2E-Ablaufverfolgung  
- Wenn die `System.ServiceModel`-Ablaufverfolgungsquelle mit einem anderen `switchValue` als OFF und `ActivityTracing` festgelegt wird, erstellt [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Aktivitäten und Übertragungen für die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Verarbeitung.  
+ Wenn die `System.ServiceModel` Ablaufverfolgungsquelle mit festgelegt ist ein `switchValue` anders als Off und `ActivityTracing`, WCF erstellt, Aktivitäten und Übertragungen für WCF-Verarbeitung.  
   
- Eine Aktivität ist eine logische Verarbeitungseinheit, die alle verknüpften Ablaufverfolgungen zusammenfasst. So können Sie beispielsweise eine Aktivität für jede Anforderung definieren. Übertragungen stellen eine kausale Beziehung zwischen Aktivitäten innerhalb von Endpunkten her. Durch die Weitergabe der Aktivitäts-ID können Sie Aktivitäten über Endpunkte hinweg verknüpfen. Dies kann geschehen, indem Sie die Einstellung `propagateActivity` = `true` in der Konfiguration an jedem Endpunkt. Aktivitäten, Übertragungen und Weitergabe ermöglichen es Ihnen, die Fehlerkorrelation durchzuführen. Auf diese Weise können Sie die Ursache eines Fehlers schneller ermitteln.  
+ Eine Aktivität ist eine logische Verarbeitungseinheit, die alle verknüpften Ablaufverfolgungen zusammenfasst. So können Sie beispielsweise eine Aktivität für jede Anforderung definieren. Übertragungen stellen eine kausale Beziehung zwischen Aktivitäten innerhalb von Endpunkten her. Durch die Weitergabe der Aktivitäts-ID können Sie Aktivitäten über Endpunkte hinweg verknüpfen. Dies kann geschehen, indem Sie die Einstellung `propagateActivity` = `true` in der Konfiguration an jedem Endpunkt. Aktivitäten, Übertragungen und Weitergabe ermöglichen es Ihnen, die Fehlerkorrelation durchzuführen. Auf diese Weise können Sie die Grundursache eines Fehlers schneller ermitteln.  
   
- Auf dem Client wird für jeden Objektmodellaufruf (beispielsweise Open ChannelFactory, Add, Divide usw.) eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Aktivität erstellt. Jeder der vorgangsaufrufe wird in einer Aktivität "Aktion verarbeiten" verarbeitet.  
+ Auf dem Client wird eine WCF-Aktivität für jeden Objektmodellaufruf (beispielsweise Open ChannelFactory, Add, Divide usw..) erstellt. Jeder der vorgangsaufrufe wird in einer Aktivität "Aktion verarbeiten" verarbeitet.  
   
  Im folgenden Screenshot extrahiert aus der [Ablaufverfolgung und Nachrichtenprotokollierung](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) Beispiel im linken Bereich zeigt die Liste der Aktivitäten, die im Clientprozess, sortiert nach Erstellungszeit erstellt. Es folgt eine chronologische Liste von Aktivitäten:  
   
@@ -127,14 +127,14 @@ In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung b
  Die Sicherheitsinfrastrukturnachrichten sind aufgrund der Bindung wsHttpBinding sichtbar.  
   
 > [!NOTE]
->  In [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] werden Antwortnachrichten, die verarbeitet werden, zunächst in einer separaten Aktivität (Nachricht verarbeiten) dargestellt, bevor sie durch eine Übertragung mit der entsprechenden ProcessAction-Aktivität korreliert werden, die die Anforderungsnachricht enthält. Das geschieht sowohl für Infrastrukturnachrichten als auch für asynchrone Anforderungen, da die Nachricht geprüft, der activityId-Header gelesen und die vorhandene ProcessAction-Aktivität mit der ID ermittelt werden muss, um die Korrelation vorzunehmen. Bei synchronen Anforderungen wird die Antwort blockiert, weshalb bekannt ist, mit welcher Verarbeitungsaktion die Antwort verknüpft ist.  
+>  In WCF werden Antwortnachrichten, die gerade verarbeitet werden, zunächst in einer separaten Aktivität (Nachricht verarbeiten), bevor wir sie mit der entsprechenden Processaction-Aktivität korrelieren, die die Anforderungsnachricht über eine Übertragung enthält. Das geschieht sowohl für Infrastrukturnachrichten als auch für asynchrone Anforderungen, da die Nachricht geprüft, der activityId-Header gelesen und die vorhandene ProcessAction-Aktivität mit der ID ermittelt werden muss, um die Korrelation vorzunehmen. Bei synchronen Anforderungen wird die Antwort blockiert, weshalb bekannt ist, mit welcher Verarbeitungsaktion die Antwort verknüpft ist.  
   
  ![Verwenden von Trace Viewer](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
 Liste der WCF-Clientaktivitäten nach Erstellungsdauer (linker Fensterbereich) und ihre geschachtelten Aktivitäten und Ablaufverfolgungen (oberer rechter Fensterbereich)  
   
  Wenn Sie im linken Bereich eine Aktivität auswählen, werden die verschachtelten Aktivitäten und Ablaufverfolgungen im rechten oberen Bereich angezeigt. Dabei handelt es sich somit um eine auf der Basis der ausgewählten übergeordneten Aktivität verkürzte hierarchische Ansicht der Aktivitätenliste auf der linken Seite. Da die ausgewählte Verarbeitungsaktion Add die erste Anforderung ist, enthält diese Aktivität die Aktivität Set Up Secure Session (Übertragung nach, Rückübertragung von) sowie Ablaufverfolgungen für die eigentliche Verarbeitung der Add-Aktion.  
   
- Wenn Sie auf die Process Action Add-Aktivität im linken Fensterbereich doppelklicken, wird eine grafische Darstellung der [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Clientaktivitäten für die Add-Aktion angezeigt. Die erste Aktivität auf der linken Seite ist die Stammaktivität (0000), bei der es sich um die Standardaktivität handelt. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] überträgt aus der Umgebungsaktivität heraus. Ist dies nicht definiert, überträgt [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aus 0000. Im vorliegenden Fall überträgt die zweite Aktivität, die Verarbeitungsaktion Add, aus 0 heraus. Dann wird Set Up Secure Session (Sichere Sitzung einrichten) angezeigt.  
+ Wenn die processaction Add-Aktivität im linken Bereich doppelklicken klicken, sehen wir eine grafische Darstellung der der Client-WCF-Aktivitäten im Zusammenhang mit hinzufügen. Die erste Aktivität auf der linken Seite ist die Stammaktivität (0000), bei der es sich um die Standardaktivität handelt. WCF-Übertragungen aus der umgebungsaktivität heraus. Wenn dies nicht definiert ist, überträgt WCF aus 0000. Im vorliegenden Fall überträgt die zweite Aktivität, die Verarbeitungsaktion Add, aus 0 heraus. Dann wird Set Up Secure Session (Sichere Sitzung einrichten) angezeigt.  
   
  ![Verwenden von Trace Viewer](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
 Diagrammansicht von WCF-Clientaktivitäten: Umgebungsaktivität (hier 0), Verarbeitungsaktion und Set Up Secure Session.  
@@ -146,7 +146,7 @@ Liste der Ablaufverfolgungen für die Process Action-Aktivität: Die Antwort wir
   
  Hier wir clientablaufverfolgungen zur besseren Verdeutlichung geladen, aber dienstablaufverfolgungen (empfangene Anforderungsnachrichten und gesendete Antwortnachrichten) in der gleichen Aktivität angezeigt werden, wenn sie auch im Tool geladen werden und `propagateActivity` wurde `true.` wird dies in einer späteren Abbildung gezeigt.  
   
- Im Dienst wird das Aktivitätsmodell den [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Begriffen wie folgt zugeordnet:  
+ Für den Dienst das Aktivitätsmodell in die WCF-Konzepte folgendermaßen zugeordnet:  
   
 1.  Ein ServiceHost wird erstellt und geöffnet (dadurch werden möglicherweise mehrere hostbezogene Aktivitäten erzeugt, z.&#160;B. im Falle der Sicherheit).  
   
@@ -154,11 +154,11 @@ Liste der Ablaufverfolgungen für die Process Action-Aktivität: Die Antwort wir
   
 3.  Wenn der Listener eine kommunikationsanforderung vom Client initiierten erkannt wird, werden in einer "Receive Bytes"-Aktivität, die in der alle vom Client gesendeten Bytes verarbeitet werden übertragen. In dieser Aktivität sind alle Verbindungsfehler erkennbar, die während der Client-Dienst-Interaktion aufgetreten sind.  
   
-4.  Für jede Gruppe von Bytes, die empfangen werden, die einer Nachricht entspricht, wir verarbeiten diese Bytes in einer Aktivität "Prozess Meldung" erstellen, in denen wir die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Message-Objekt. In dieser Aktivität sind Fehler aufgrund eines ungültigen Umschlags oder einer falsch formatierten Nachricht erkennbar.  
+4.  Für jede Gruppe von Bytes, die empfangen werden, die einer Nachricht entspricht, verarbeiten wir diese Bytes in einer Aktivität "Prozess Meldung", in denen wir die WCF-Nachrichtenobjekt erstellen. In dieser Aktivität sind Fehler aufgrund eines ungültigen Umschlags oder einer falsch formatierten Nachricht erkennbar.  
   
-5.  Sobald die Nachricht erstellt wird, erfolgt die Übertragung zu einer Process Action-Aktivität. Wenn `propagateActivity` sowohl für den Client als auch für den Dienst auf `true` festgelegt ist, verfügt diese Aktivität über dieselbe ID wie die auf dem Client definierte und zuvor beschriebene. Von dieser Phase an profitieren Sie von der direkten Korrelation über Endpunkte hinweg, da alle in [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ausgegebenen Ablaufverfolgungen, die mit der Anforderung verknüpft sind, in derselben Aktivität enthalten sind, einschließlich der Verarbeitung der Antwortnachricht.  
+5.  Sobald die Nachricht erstellt wird, erfolgt die Übertragung zu einer Process Action-Aktivität. Wenn `propagateActivity` sowohl für den Client als auch für den Dienst auf `true` festgelegt ist, verfügt diese Aktivität über dieselbe ID wie die auf dem Client definierte und zuvor beschriebene. Von dieser Phase starten wir von der direkten Korrelation über Endpunkte hinweg, profitieren, da alle ablaufverfolgungen in WCF ausgegeben, die mit der Anforderung verknüpft sind, in derselben Aktivität werden, einschließlich der Verarbeitung der Antwortnachricht.  
   
-6.  Für die Out-of-Process-Aktion, die wir Erstellen einer Aktivität "Benutzercode ausführen", um ablaufverfolgungen in Benutzercode von ausgegeben, denen ausgegebenen zu isolieren [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Im vorherigen Beispiel wird die Ablaufverfolgung "Dienst sendet Add-Antwort" ggf. in der "Execute User Code"-Aktivität nicht in der vom Client weitergegebenen Aktivität ausgegeben.  
+6.  Für die Out-of-Process-Aktion erstellen Sie eine Aktivität "Execute User Code", um ablaufverfolgungen in Benutzercode aus der ausgegebenen in WCF ausgegebenen zu isolieren. Im vorherigen Beispiel wird die Ablaufverfolgung "Dienst sendet Add-Antwort" ggf. in der "Execute User Code"-Aktivität nicht in der vom Client weitergegebenen Aktivität ausgegeben.  
   
  In der nachfolgenden Abbildung ist die erste Aktivität auf der linken Seite die Stammaktivität (0000), bei der es sich um die Standardaktivität handelt. Die nächsten drei Aktivitäten dienen dazu, den ServiceHost zu öffnen. Die Aktivität in Spalte&#160;5 ist der Listener, und die übrigen Aktivitäten (6 bis 8) beschreiben die WCF-Verarbeitung einer Nachricht, von der Byteverarbeitung bis zur Benutzercodeaktivierung.  
   

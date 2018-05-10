@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 0f17d6e787a48edd562559f52ac015edf7bc702c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 157e660a8b4d3866b9ab1994c409f82f16ac8359
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="understanding-protection-level"></a>Grundlagen der Schutzebene
 Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B. die <xref:System.ServiceModel.ServiceContractAttribute>-Klasse und die <xref:System.ServiceModel.OperationContractAttribute>-Klasse. Die Eigenschaft steuert, wie eine Nachricht zum Teil (oder ganz) geschützt wird. In diesem Thema wird erläutert, die Windows Communication Foundation (WCF)-Funktion und wie diese funktioniert.  
@@ -39,7 +39,7 @@ Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B
   
 -   Die `ProtectionLevel` ist eine Möglichkeit für Entwickler zum Festlegen der *Mindestebene* , die eine Bindung aufweisen muss. Beim Bereitstellen eines Diensts kann die tatsächliche in der Konfiguration angegebene Bindung die Mindestebene unterstützen oder nicht. Standardmäßig stellt die <xref:System.ServiceModel.BasicHttpBinding>-Klasse keine Sicherheit bereit (diese kann allerdings aktiviert werden). Die Verwendung dieser Klasse in Verbindung mit einem Vertrag, der eine andere Einstellung als `None` hat, löst eine Ausnahme aus.  
   
--   Wenn es der Dienst erfordert, dass die kleinste `ProtectionLevel` für alle Nachrichten `Sign` ist, kann ein Client (der möglicherweise von einer Nicht-[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Technologie erstellt wurde) alle Nachrichten verschlüsseln und signieren (was über die erforderliche Mindestebene hinausgeht). In diesem Fall löst [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] keine Ausnahme aus, da der Client über die Mindestebene hinausgeht. Beachten Sie jedoch, dass [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen (Dienste oder Clients) einen Nachrichtenteil nicht übermäßig schützen, sofern möglich, sondern die Mindestebene einhalten. Außerdem ist zu beachten, dass der Transport den Nachrichtenstrom bei Verwendung von `Transport` als Sicherheitsmodus übermäßig schützt, da in diesem Fall ein Schutz auf niedrigerer Ebene nicht möglich ist.  
+-   Wenn der Dienst erfordert, dass die minimale `ProtectionLevel` wird für alle Nachrichten `Sign`, ein Client (z. B. durch eine nicht-WCF-Technologie erstellt) kann verschlüsseln und signieren Sie alle Nachrichten (Dies ist mehr als das Minimum erforderlich). In diesem Fall wird WCF keine Ausnahme auslöst, weil der Client mehr als das Minimum durchgeführt hat. Beachten Sie jedoch, dass WCF-Anwendungen (Dienste oder Clients) nicht übermäßig einen Nachrichtenteil Wenn möglich schützen, aber die Mindestebene einhalten. Außerdem ist zu beachten, dass der Transport den Nachrichtenstrom bei Verwendung von `Transport` als Sicherheitsmodus übermäßig schützt, da in diesem Fall ein Schutz auf niedrigerer Ebene nicht möglich ist.  
   
 -   Wenn Sie `ProtectionLevel` ausdrücklich entweder auf `Sign` oder `EncryptAndSign` festlegen, müssen Sie eine Bindung mit aktivierter Sicherheit verwenden. Andernfalls wird eine Ausnahme ausgelöst.  
   

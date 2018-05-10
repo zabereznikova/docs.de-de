@@ -2,11 +2,11 @@
 title: Unterstützende Token
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 4f8cf62220955bef3f341c43b3c615f873387b2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d8ff3cf4d5a060d135cbcf40c043681ce72b6e0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="supporting-tokens"></a>Unterstützende Token
 Im Beispiel für unterstützende Token wird veranschaulicht, wie einer Nachricht, die WS-Sicherheit verwendet, zusätzliche Token hinzugefügt werden. Das Beispiel fügt zusätzlich zu einem Sicherheitstoken für den Benutzernamen ein binäres X.509-Sicherheitstoken hinzu. Das Token wird in einem WS-Sicherheit-Nachrichtenkopf vom Client zum Dienst übergeben, und ein Teil der Nachricht wird mit dem privaten Schlüssel signiert, der dem X.509-Sicherheitstoken zugeordnet ist, um dem Empfänger den Besitz des X.509-Zertifikats nachzuweisen. Dies ist nützlich, wenn die Anforderung besteht, dass einer Nachricht mehrere Ansprüche zugeordnet sein müssen, um den Absender zu authentifizieren oder zu autorisieren. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  
@@ -345,7 +345,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
- Wenn Sie das Beispiel ausführen, fordert der Client Sie zuerst auf, den Benutzernamen und das Kennwort für das Benutzernamentoken anzugeben. Vergewissern Sie sich, dass Sie die korrekten Werte zu Ihrem Systemkonto angeben, da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auf dem Dienst die im Benutzernamentoken bereitgestellten Werte der vom System bereitgestellten Identität zuordnet. Danach zeigt der Client die Antwort vom Dienst an. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ Wenn Sie das Beispiel ausführen, fordert der Client Sie zuerst auf, den Benutzernamen und das Kennwort für das Benutzernamentoken anzugeben. Achten Sie darauf, um richtige Werte für Ihr Systemkonto bereitzustellen, da WCF auf dem Dienst, die vom System bereitgestellten Identität im Benutzernamentoken bereitgestellten Werte zugeordnet. Danach zeigt der Client die Antwort vom Dienst an. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
 ## <a name="setup-batch-file"></a>Setupbatchdatei  
  Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer von Internetinformationsdiensten (IIS) gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Diese Batchdatei muss so geändert werden, dass sie computerübergreifend oder in einem nicht gehosteten Fall funktioniert.  
@@ -464,6 +464,6 @@ iisreset
 -   Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
 > [!NOTE]
->  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiele ausgeführt haben, die Zertifikate computerübergreifend verwenden, müssen Sie die Dienstzertifikate entfernen, die im Speicher CurrentUser - TrustedPeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie einen WCF-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser - trustedpeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Siehe auch

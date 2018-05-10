@@ -2,11 +2,11 @@
 title: Benutzerdefinierter Kanalverteiler
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f7bb67f45c3aa9eb0cb58fa2f30744d5500fab0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-channel-dispatcher"></a>Benutzerdefinierter Kanalverteiler
 In diesem Beispiel wird gezeigt, wie der Kanalstapel auf benutzerdefinierte Weise erstellt wird, indem <xref:System.ServiceModel.ServiceHostBase> direkt implementiert wird, und wie ein benutzerdefinierter Kanalverteiler in einer Webhostumgebung erstellt wird. Der Kanalverteiler interagiert mit <xref:System.ServiceModel.Channels.IChannelListener>, um Kanäle zu akzeptieren und ruft Nachrichten aus dem Kanalstapel ab. Dieses Beispiel enthält auch ein einfaches Beispiel zur Veranschaulichung, wie ein Kanalstapel in einer Webhostumgebung mithilfe der <xref:System.ServiceModel.Activation.VirtualPathExtension> erstellt wird.  
@@ -22,13 +22,13 @@ In diesem Beispiel wird gezeigt, wie der Kanalstapel auf benutzerdefinierte Weis
  Der Verteiler öffnet zuerst den Kanallistener und akzeptiert dann den Singletonantwortkanal. Er beginnt mit dem Kanal mit dem Senden von Nachrichten (Anforderungen) in einer Endlosschleife. Für jede Anforderung erstellt er eine Antwortnachricht und sendet sie an den Client zurück.  
   
 ## <a name="creating-a-response-message"></a>Erstellen einer Antwortnachricht  
- Die Nachrichtenverarbeitung wird im Typ `MyServiceManager` implementiert. In der `HandleRequest`-Methode wird der `Action`-Header der Nachricht zuerst daraufhin überprüft, ob die Anforderung unterstützt wird. Eine vordefinierte SOAP-Aktion "http://tempuri.org/HelloWorld/Hello" definiert ist, um die nachrichtenfilterung bereitzustellen. Dies ähnelt dem Dienstvertragskonzept in der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Implementierung von <xref:System.ServiceModel.ServiceHost>.  
+ Die Nachrichtenverarbeitung wird im Typ `MyServiceManager` implementiert. In der `HandleRequest`-Methode wird der `Action`-Header der Nachricht zuerst daraufhin überprüft, ob die Anforderung unterstützt wird. Eine vordefinierte SOAP-Aktion "http://tempuri.org/HelloWorld/Hello" definiert ist, um die nachrichtenfilterung bereitzustellen. Dieser Vorgang ähnelt dem dienstvertragskonzept in der WCF-Implementierung der <xref:System.ServiceModel.ServiceHost>.  
   
  Im Beispiel werden für den richtigen SOAP-Aktionsfall die angeforderten Nachrichtendaten abgerufen, und es wird eine entsprechende Antwort auf die Anforderung generiert, ähnlich dem <xref:System.ServiceModel.ServiceHost>-Fall.  
   
  Sie haben das HTTP-GET-Verb in diesem Fall besonders behandelt und eine benutzerdefinierte HTML-Nachricht zurückgegeben, damit Sie den Dienst in einem Browser durchsuchen können, um sicherzustellen, dass er ordnungsgemäß kompiliert wurde. Wenn die SOAP-Aktion nicht richtig ist, senden Sie eine Fehlermeldung zurück, die angibt, dass die Anforderung nicht unterstützt wird.  
   
- Der Client dieses Beispiels ist ein normaler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client, der nichts vom Dienst übernimmt. Der Dienst wurde also speziell entworfen, um den Ergebnissen einer normalen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.ServiceHost>-Implementierung zu entsprechen. Infolgedessen ist auf dem Client nur ein Dienstvertrag erforderlich.  
+ Der Client dieses Beispiels ist ein normaler WCF-Client, der nicht nichts vom Dienst übernimmt. Also der Dienst ist speziell auf übereinstimmen, erhalten Sie von einem normalen WCF<xref:System.ServiceModel.ServiceHost> Implementierung. Infolgedessen ist auf dem Client nur ein Dienstvertrag erforderlich.  
   
 ## <a name="using-the-sample"></a>Verwenden des Beispiels  
  Wenn Sie die Clientanwendung ausführen, wird die folgende Ausgabe direkt erzeugt.  

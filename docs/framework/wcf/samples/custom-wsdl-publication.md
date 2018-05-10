@@ -2,11 +2,11 @@
 title: Benutzerdefinierte WSDL-Veröffentlichung
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b75aa2269d9c21a6f6d7f579d3c0b6f547a92332
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-wsdl-publication"></a>Benutzerdefinierte WSDL-Veröffentlichung
 Dieses Beispiel demonstriert, wie Sie  
@@ -230,7 +230,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- Sobald der benutzerdefinierte Importer angegeben ist, lädt das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Metadatensystem den benutzerdefinierten Importer in einen zu diesem Zweck erstellten <xref:System.ServiceModel.Description.WsdlImporter>. In diesem Beispiel werden die Metadaten mithilfe des <xref:System.ServiceModel.Description.MetadataExchangeClient> heruntergeladen, der <xref:System.ServiceModel.Description.WsdlImporter> wird entsprechend konfiguriert, um die Metadaten mit dem in dem Beispiel erstellten benutzerdefinierten Importer zu importieren, und die geänderten Vertragsinformationen werden mithilfe des <xref:System.ServiceModel.Description.ServiceContractGenerator> in Visual Basic- und C#-Clientcode kompiliert, der in Visual Studio verwendet werden kann, um IntelliSense zu unterstützen, oder der in XML-Dokumentation kompiliert werden kann.  
+ Sobald der benutzerdefinierte Importer angegeben wurde, lädt der WCF-Metadatensystem den benutzerdefinierten Importer in alle <xref:System.ServiceModel.Description.WsdlImporter> für diesen Zweck erstellt wurde. In diesem Beispiel werden die Metadaten mithilfe des <xref:System.ServiceModel.Description.MetadataExchangeClient> heruntergeladen, der <xref:System.ServiceModel.Description.WsdlImporter> wird entsprechend konfiguriert, um die Metadaten mit dem in dem Beispiel erstellten benutzerdefinierten Importer zu importieren, und die geänderten Vertragsinformationen werden mithilfe des <xref:System.ServiceModel.Description.ServiceContractGenerator> in Visual Basic- und C#-Clientcode kompiliert, der in Visual Studio verwendet werden kann, um IntelliSense zu unterstützen, oder der in XML-Dokumentation kompiliert werden kann.  
   
 ```  
 /// From WSDL Documentation:  

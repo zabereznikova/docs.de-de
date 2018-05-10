@@ -8,15 +8,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 98c58d083cb806a92e28c1c9d27effa1124fd153
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
-Ab C# 7 unterstützt C# Verweisrückgabewerte (ref-Rückgaben). Mit einem Verweisrückgabewert kann eine Methode einen Verweis auf eine Variable statt eines Werts an eine aufrufende Funktion zurückgeben. Die aufrufende Funktion kann dann wählen, ob sie die zurückgegebene Variable behandelt, als wäre sie als Wert oder als Verweis zurückgegeben worden. Die aufrufende Funktion kann eine neue Variable erstellen, die selbst einen Verweis auf den zurückgegebenen Wert (als lokaler Verweis bezeichnet) darstellt.
+Ab C# 7.0 unterstützt C# Verweisrückgabewerte (ref-Rückgaben). Mit einem Verweisrückgabewert kann eine Methode einen Verweis auf eine Variable statt eines Werts an eine aufrufende Funktion zurückgeben. Die aufrufende Funktion kann dann wählen, ob sie die zurückgegebene Variable behandelt, als wäre sie als Wert oder als Verweis zurückgegeben worden. Die aufrufende Funktion kann eine neue Variable erstellen, die selbst einen Verweis auf den zurückgegebenen Wert (als lokaler Verweis bezeichnet) darstellt.
 
 ## <a name="what-is-a-reference-return-value"></a>Was ist ein Verweisrückgabewert?
 

@@ -13,11 +13,11 @@ ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9b196bbbce110acb596602fa4de2507515cdbb68
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 37e06d97b082ba6de75d8efa81723442403e39be
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (C#-Referenz)
 Erstellt für Quelldateien Prüfsummen, um beim Debuggen von [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]-Seiten zu helfen.  
@@ -33,7 +33,7 @@ Erstellt für Quelldateien Prüfsummen, um beim Debuggen von [!INCLUDE[vstecasp]
  Der Name der Datei, die die Überwachung von Änderungen oder Updates erfordert  
   
  `"{guid}"`  
- Der GUID (Globally Unique Identifier, globaler eindeutiger Bezeichner) für die Datei  
+ GUID (Globally Unique Identifier, globaler eindeutiger Bezeichner) für den Hashalgorithmus.  
   
  `"checksum_bytes"`  
  Die Zeichenfolge von hexadezimalen Ziffern, die die Bytes der Prüfsumme darstellt. Dabei muss es sich um eine gerade Anzahl hexadezimaler Ziffern handeln. Eine ungerade Anzahl von Ziffern führt zu einer Warnung zur Kompilierzeit, und die Anweisung wird ignoriert.  
@@ -54,7 +54,7 @@ class TestClass
 {  
     static int Main()  
     {  
-        #pragma checksum "file.cs" "{3673e4ca-6098-4ec1-890f-8fceb2a794a2}" "{012345678AB}" // New checksum  
+        #pragma checksum "file.cs" "{406EA660-64CF-4C82-B6F0-42D48172A799}" "ab007f1d23d9" // New checksum  
     }  
 }  
 ```  

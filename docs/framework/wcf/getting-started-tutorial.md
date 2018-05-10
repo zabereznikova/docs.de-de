@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64d9fc09d56c417c2226d030ef6f5ee7204c4eb6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="getting-started-tutorial"></a>Lernprogramm 'Erste Schritte'
-In diesem Abschnitt enthaltenen Themen sollen Sie schnelle Offenlegung an der Windows Communication Foundation (WCF) Programmierung geben. Die Liste am Ende dieses Themas gibt Aufschluss über die Reihenfolge, in der die Aufgaben ausgeführt werden müssen. Wenn Sie dieses Lernprogramm absolviert haben, verfügen Sie über ein grundlegendes Verständnis der zur Erstellung von Dienst- und Clientanwendungen mit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] notwendigen Schritte. Ein Dienst macht einen oder mehrere Endpunkte verfügbar, von denen jeder wiederum einen oder mehrere Dienstvorgänge zur Verfügung stellt. Die *Endpunkt* eines Diensts gibt die Adresse, auf dem der Dienst gefunden werden kann, eine Bindung, die Informationen, die beschreibt enthält, wie ein Client kommunizieren muss, mit dem Dienst und einen Vertrag, der die Funktionen definiert sind, vom Dienst für seine Clients bereitgestellt werden.  
+In diesem Abschnitt enthaltenen Themen sollen Sie schnelle Offenlegung an der Windows Communication Foundation (WCF) Programmierung geben. Die Liste am Ende dieses Themas gibt Aufschluss über die Reihenfolge, in der die Aufgaben ausgeführt werden müssen. Dieses Lernprogramm bietet Ihnen Grundkenntnisse zu der die erforderlichen Schritte zum Erstellen von WCF-Dienst und Client Anwendungen. Ein Dienst macht einen oder mehrere Endpunkte verfügbar, von denen jeder wiederum einen oder mehrere Dienstvorgänge zur Verfügung stellt. Die *Endpunkt* eines Diensts gibt die Adresse, auf dem der Dienst gefunden werden kann, eine Bindung, die Informationen, die beschreibt enthält, wie ein Client kommunizieren muss, mit dem Dienst und einen Vertrag, der die Funktionen definiert sind, vom Dienst für seine Clients bereitgestellt werden.  
   
  Nachdem Sie die Themenfolge dieses Lernprogramms durchgearbeitet haben, verfügen Sie über einen funktionierenden Dienst und über einen Client, der den Dienst aufrufen kann. Die ersten drei Themen beschreiben, wie ein Dienstvertrag definiert und implementiert und wie der Dienst gehostet wird. Der erstellte Dienst ist innerhalb einer Konsolenanwendung selbst gehostet. Dienste können auch unter IIS (Internetinformationsdienste) gehostet werden. Weitere Informationen hierzu finden Sie unter [wie: Hosten eines WCF-Diensts in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Der Dienst wird im Code konfiguriert. Dienste können jedoch auch in einer Konfigurationsdatei konfiguriert werden. Weitere Informationen zum Verwenden einer Konfigurationsdatei finden Sie unter [Konfigurieren von Diensten mithilfe von Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
@@ -30,7 +30,7 @@ In diesem Abschnitt enthaltenen Themen sollen Sie schnelle Offenlegung an der Wi
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Vorgehensweise: Definieren eines Dienstvertrags](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- Beschreibt die Erstellung eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Vertrags mithilfe einer benutzerdefinierten Schnittstelle. Der Vertrag definiert die Funktionalität, die vom Dienst verfügbar gemacht wird.  
+ Beschreibt das Erstellen eines WCF-Dienstvertrags mithilfe einer benutzerdefinierten Schnittstelle. Der Vertrag definiert die Funktionalität, die vom Dienst verfügbar gemacht wird.  
   
  [Vorgehensweise: Implementieren eines WCF-Dienstvertrags](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  Beschreibt das Implementieren eines Dienstvertrags. Sobald ein Vertrag definiert ist, müssen Sie ihn mit einer Dienstklasse implementieren.  
@@ -39,13 +39,13 @@ In diesem Abschnitt enthaltenen Themen sollen Sie schnelle Offenlegung an der Wi
  Beschreibt, wie im Code ein Endpunkt für den Dienst konfiguriert wird und wie der Dienst innerhalb einer Konsolenanwendung gehostet wird. Zur Aktivierung muss der Dienst in einer Laufzeitumgebung konfiguriert und gehostet werden. Diese Umgebung erstellt den Dienst, und steuert seinen Kontext sowie seine Lebensdauer.  
   
  [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- Beschreibt, wie Sie Metadaten abrufen, die zur Erstellung eines [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientproxys aus einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst verwendet werden. Dieser Prozess verwendet die Funktion "Dienstverweis hinzufügen" in Visual Studio 2011.  
+ Beschreibt, wie zum Abrufen von Metadaten verwendet, um einen WCF-Clientproxy mit einem WCF-Dienst zu erstellen. Dieser Prozess verwendet die Funktion "Dienstverweis hinzufügen" in Visual Studio 2011.  
   
  [Vorgehensweise: Konfigurieren eines Clients](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
  Beschreibt, wie ein WCF-Client konfiguriert wird. Für die Konfiguration des Clients muss der Endpunkt angegeben werden, den der Client verwendet, um auf den Dienst zuzugreifen.  
   
  [Vorgehensweise: Verwenden eines Clients](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- Beschreibt, wie der [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Clientproxy verwendet wird, um Dienstvorgänge aufzurufen.  
+ Beschreibt, wie die WCF-Clientproxy verwenden, um Dienstvorgänge aufzurufen.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel.ServiceContractAttribute>  

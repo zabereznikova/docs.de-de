@@ -2,11 +2,11 @@
 title: Problembehandlung für das Lernprogramm "Erste Schritte"
 ms.date: 03/30/2017
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 863e9dd1253624c025e830f589068068cb996413
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12812bd1ef88eab14a8defed0b71657b0d33c618
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Problembehandlung für das Lernprogramm "Erste Schritte"
 Dieses Thema enthält die beim Durcharbeiten des Lernprogramms "Erste Schritte" am häufigsten auftretenden Probleme sowie Möglichkeiten zur Problembehebung.  
@@ -31,7 +31,7 @@ Dieses Thema enthält die beim Durcharbeiten des Lernprogramms "Erste Schritte" 
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Beim Ausführen der dienstanwendung: HTTP URL nicht registrieren http://+:8000/ServiceModelSamples/Service/. Der Prozess verfügt nicht über die Zugriffsrechte für diesen Namespace.  
- Der Prozess, der einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst hostet, muss mit Administratorrechten ausgeführt werden. Wenn Sie den Dienst innerhalb von [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] ausführen, müssen Sie [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] als Administrator ausführen. Klicken Sie hierzu **starten**, mit der rechten Maustaste [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] , und wählen Sie **als Administrator ausführen**. Wenn Sie den Dienst von einer Eingabeaufforderung aus ausführen, müssen Sie die Eingabeaufforderung ebenfalls als Administrator ausführen. Klicken Sie auf **starten**, mit der rechten Maustaste **Eingabeaufforderung** , und wählen Sie **als Administrator ausführen**.  
+ Der Prozess, der einen WCF-Dienst hostet, muss mit Administratorrechten ausgeführt werden. Wenn Sie den Dienst innerhalb von [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] ausführen, müssen Sie [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] als Administrator ausführen. Klicken Sie hierzu **starten**, mit der rechten Maustaste [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] , und wählen Sie **als Administrator ausführen**. Wenn Sie den Dienst von einer Eingabeaufforderung aus ausführen, müssen Sie die Eingabeaufforderung ebenfalls als Administrator ausführen. Klicken Sie auf **starten**, mit der rechten Maustaste **Eingabeaufforderung** , und wählen Sie **als Administrator ausführen**.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="attempting-to-use-the-svcutilexe-tool-svcutil-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Beim Versuch, das Tool "Svcutil.exe" zu verwenden, wird Folgendes ausgegeben: "Der Befehl 'svcutil' ist entweder falsch geschrieben oder konnte nicht gefunden werden."  

@@ -2,21 +2,21 @@
 title: Verwaltung
 ms.date: 03/30/2017
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
-ms.openlocfilehash: 6c5f4bf2c371e88dc29d19ef36889493d3aff56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b5bb0b72f5290548bb844ac4f00b6fbbd9891cb7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="management"></a>Verwaltung
 Dieser Abschnitt enthält Beispiele für die Verwaltung von Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [WCF-Dienste und Ereignisablaufverfolgung für Windows](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
- Zeigt, wie die analytische Ablaufverfolgung von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet wird, um Ereignisse in der Ereignisablaufverfolgung für Windows (ETW) auszugeben.  
+ Veranschaulicht, wie die analytische Ablaufverfolgung in WCF verwenden, um Ereignisse in Event Tracing for Windows (ETW) auszugeben.  
   
  [Analytische Ablaufverfolgung von WCF](../../../../docs/framework/wcf/samples/wcf-analytic-tracing.md)  
- Veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen Ablaufverfolgungen hinzufügen können, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] in ETW schreibt.  
+ Veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die WCF in in ETW schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
  [Zirkuläre Ablaufverfolgung](../../../../docs/framework/wcf/samples/circular-tracing.md)  
  Veranschaulicht die Implementierung eines zirkulären Puffer-Ablaufverfolgungslisteners.  
@@ -25,13 +25,13 @@ Dieser Abschnitt enthält Beispiele für die Verwaltung von Windows Communicatio
  Veranschaulicht das Implementieren der End-to-End (E2E)-Ablaufverfolgung mit der Ereignisablaufverfolgung für Windows (ETW).  
   
  [Erweitern der Ablaufverfolgung](../../../../docs/framework/wcf/samples/extending-tracing.md)  
- Veranschaulicht das Erweitern der Ablaufverfolgungsfunktion von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] durch das Schreiben von benutzerdefinierten Aktivitätsablaufverfolgungen im Client- und Dienstcode.  
+ Veranschaulicht, wie die Ablaufverfolgungsfunktion von WCF erweitern, indem Sie das Schreiben von benutzerdefinierten aktivitätsablaufverfolgungen im Client- und Dienstcode.  
   
  [Sperre der PII-Sicherheit](../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
- Zeigt, wie mehrere sicherheitsbezogene Funktionen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts gesteuert werden.  
+ Veranschaulicht, wie mehrere sicherheitsbezogene Funktionen eines WCF-Diensts steuern.  
   
  [Verwenden von Leistungsindikatoren](../../../../docs/framework/wcf/samples/using-performance-counters.md)  
- Veranschaulicht, wie auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Leistungsindikatoren zugegriffen wird und wie benutzerdefinierte Leistungsindikatoren erstellt werden.  
+ Veranschaulicht, wie Zugriff auf WCF-Leistungsindikatoren und benutzerdefinierte Leistungsindikatoren erstellen.  
   
  [Ablaufverfolgung und Nachrichtenprotokollierung](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)  
  Veranschaulicht das Aktivieren der Ablaufverfolgung und Nachrichtenprotokollierung.  
@@ -40,4 +40,4 @@ Dieser Abschnitt enthält Beispiele für die Verwaltung von Windows Communicatio
  Veranschaulicht die Verwendung eines benutzerdefinierten Verhaltens zum Überprüfen von Diensten auf einem Computer, um sicherzustellen, dass bestimmte Kriterien erfüllt werden.  
   
  [WMI-Anbieter](../../../../docs/framework/wcf/samples/wmi-provider.md)  
- Veranschaulicht das Erfassen von Daten aus [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten zur Laufzeit mithilfe des in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] integrierten Windows-Verwaltungsinstrumentation (WMI)-Anbieters.
+ Veranschaulicht das Sammeln von Daten von WCF-Dienste zur Laufzeit mithilfe des Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI)-Anbieters, der in WCF integriert ist.

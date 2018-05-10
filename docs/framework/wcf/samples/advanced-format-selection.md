@@ -2,11 +2,11 @@
 title: Erweiterte Formatauswahl
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4913d8dbf69f574aa4f329279bed0d92710512f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-format-selection"></a>Erweiterte Formatauswahl
 In diesem Beispiel wird veranschaulicht, wie der Windows Communication Foundation (WCF)-REST-Programmiermodell zur Unterstützung neuer Formate für ausgehende Antworten erweitert wird. In diesem Beispiel wird zusätzlich eine T4-Vorlage verwendet, damit die Antwort als XHTML-Seite zurückgegeben wird. Auf diese Weise wird veranschaulicht, wie ein Programmiermodell zur Ansicht implementiert werden kann.  
@@ -18,7 +18,7 @@ In diesem Beispiel wird veranschaulicht, wie der Windows Communication Foundatio
   
  Das vom Dienst zurückgegebene Antwortformat wird von einem `format`-Abfragezeichenfolgenparameter und zusätzlich von einem mit der Anforderung angegebenen HTTP Accept-Header bestimmt. Wenn der Wert des `format`-Abfragezeichenfolgenparameters einem der vorangehenden Formate entspricht, wird die Antwort im entsprechenden Format zurückgegeben. Wenn die `format`-Abfragezeichenfolge nicht vorhanden ist, durchläuft der Dienst die Accept-Headerelemente der Anforderung und gibt das Format des ersten Inhaltstyp zurück, den der Dienst unterstützt.  
   
- Beim Rückgabetyp des Vorgangs ist Folgendes zu beachten. Das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-REST-Programmiermodell unterstützt XML- und JSON-Antwortformate systemintern nur dann, wenn ein Vorgang einen anderen Typ als <xref:System.ServiceModel.Channels.Message> zurückgibt. Wenn als Rückgabetyp jedoch <xref:System.ServiceModel.Channels.Message> verwendet wird, kann der Entwickler vollständig selbst bestimmen, wie der Inhalt der Meldung formatiert werden soll.  
+ Beim Rückgabetyp des Vorgangs ist Folgendes zu beachten. Der WCF REST-Programmiermodell nur nativ unterstützt XML und JSON-Antwortformate aus, wenn ein Vorgang einen Typ, außer zurückgibt <xref:System.ServiceModel.Channels.Message>. Wenn als Rückgabetyp jedoch <xref:System.ServiceModel.Channels.Message> verwendet wird, kann der Entwickler vollständig selbst bestimmen, wie der Inhalt der Meldung formatiert werden soll.  
   
  In diesem Beispiel wird die Liste der Zeichenfolgen mithilfe der Methoden <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> und <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> in entsprechende XML-, JSON- und ATOM-Meldungen serialisiert. Für das JPEG-Antwortformat wird die <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A>-Methode verwendet, und das Bild wird im Stream gespeichert. Für die XHTML-Antwort wird die <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> mit einer zuvor verarbeiteten T4-Vorlage verwendet. Diese besteht aus einer TT-Datei und einer automatisch generierten CS-Datei. Die TT-Datei ermöglicht es Entwicklern, eine Antwort in ein Vorlagenformular zu schreiben, das Variablen und Steuerelementstrukturen enthält. Weitere Informationen zu T4 finden Sie unter [Generieren von Artefakten mithilfe von Textvorlagen](http://go.microsoft.com/fwlink/?LinkId=166023).  
   

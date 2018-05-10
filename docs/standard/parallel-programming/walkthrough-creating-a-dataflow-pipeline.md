@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e6471de1a6231f114f6967bb6f777a8dc4d39b82
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ce5af6f31a10f23703b761e041b21f08b71952b9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Exemplarische Vorgehensweise: Erstellen einer Datenflusspipeline
 Obwohl Sie die Methoden <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> verwenden können, um Nachrichten von Quellblöcken zu empfangen, können Sie auch Nachrichtenblöcke verbinden, um eine *Datenflusspipeline* zu bilden. Eine Datenpipeline besteht aus einer Reihe von Komponenten, oder *Datenflussblöcken*, von denen jede eine bestimmte Aufgabe ausführt, die zu einem größeren Ziel beiträgt. Jeder Datenflussblock in einer Datenflusspipeline erledigt eine Aufgabe, wenn er eine Meldung von einem anderen Datenflussblock empfangen hat. Eine Analogie hierzu ist eine Fertigungsstraße eines Fahrzeugherstellers. Jedes Fahrzeug durchläuft die Fertigungsstraße: In einer Station wird das Fahrgestell montiert, in der nächsten wird der Motor eingebaut usw. Da eine Fertigungsstraße ermöglicht, dass mehrere Fahrzeuge gleichzeitig montiert werden, bietet sie einen besseren Durchsatz als eine Einzelmontage eines vollständigen Fahrzeugs.
@@ -45,7 +45,7 @@ Obwohl Sie die Methoden <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rece
  Lesen Sie das Thema [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md), bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.  
   
 ## <a name="creating-a-console-application"></a>Erstellen einer Konsolenanwendung  
- Erstellen Sie in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ein Visual C#- oder Visual Basic-Konsolenanwendungsprojekt. Installieren Sie das NuGet-Paket „System.Threading.Tasks.Dataflow“.
+ Erstellen Sie in Visual Studio ein Visual C#- oder Visual Basic-Projekt des Typs „Konsolenanwendung“. Installieren Sie das NuGet-Paket „System.Threading.Tasks.Dataflow“.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 

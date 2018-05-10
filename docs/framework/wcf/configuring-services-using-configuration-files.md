@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: abfe502c6b50234037cad786a658edc3d479cc9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 19ba0e585dfdd2ee47781b04a3d1a5bbdba60371
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurieren von Diensten mit Konfigurationsdateien
 Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Konfigurationsdatei bietet Ihnen die Flexibilität der Bereitstellung von Endpunkt und Dienst dienstverhaltensdaten Bereitstellung statt zur Entwurfszeit. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
   
- Sie können einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst mithilfe der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] -Konfigurationstechnologie konfigurieren. Am häufigsten werden XML-Elemente der Web.config-Datei für eine Internetinformationsdienste (IIS)-Website hinzugefügt, die einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen für die Kommunikation mit dem Dienst verwendeten Adressen) für einzelne Computer. Zusätzlich umfasst [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mehrere vom System bereitgestellte Elemente, mit deren Hilfe Sie die grundlegendsten Funktionen eines Diensts auswählen können. Ab [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]stellt [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ein neues Standardkonfigurationsmodell bereit, das die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Konfigurationsanforderungen vereinfacht. Wenn Sie keine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime den Dienst automatisch mit Standardendpunkten, -bindungen und -verhalten. In der Praxis ist das Schreiben einer Konfiguration ein wesentlicher Bestandteil beim Programmieren von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Anwendungen.  
+ Ein WCF-Dienst ist konfigurierbar mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Konfiguration Technologie. Am häufigsten werden XML-Elemente in die Datei "Web.config" für eine Internetinformationsdienste (Internet Information Services, IIS)-Website hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen für die Kommunikation mit dem Dienst verwendeten Adressen) für einzelne Computer. WCF umfasst darüber hinaus mehrere vom System bereitgestellte Elemente, mit die Sie die grundlegendsten Funktionen eines Diensts auswählen können. Beginnend mit [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF bietet eine neue Konfiguration Standardmodell, die die WCF--konfigurationsanforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Common Language Runtime den Dienst automatisch mit Standardendpunkten und standardmäßige Bindung/benutzerdefiniertem Verhalten. In der Praxis ist das Schreiben einer Konfiguration einen großen Teil der Programmierung von WCF-Anwendungen.  
   
  Weitere Informationen finden Sie unter [Konfigurieren von Bindungen für Dienste](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Eine Liste von der äußersten häufig Elemente verwendet, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../docs/framework/wcf/system-provided-bindings.md). Weitere Informationen zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
@@ -21,7 +21,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
 >  Beim Bereitstellen paralleler Szenarien, in denen zwei verschiedene Versionen eines Diensts bereitgestellt werden, müssen bei Verweisen in Konfigurationsdateien partielle Assemblynamen angegeben werden. Dies liegt daran, dass die Konfigurationsdatei gemeinsam von allen Versionen eines Diensts verwendet wird und dass diese Dienste ggf. unter unterschiedlichen Versionen von .NET Framework ausgeführt werden.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config und App.config  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verwendet das Konfigurationssystem System.Configuration des [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Namespaces.  
+ WCF verwendet das Konfigurationssystem System.Configuration der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Konfiguration eines Diensts in Visual Studio, verwenden Sie eine Datei "Web.config" oder eine Datei "App.config", um die Einstellungen anzugeben. Die Wahl der Konfigurationsdatei wird durch die Hostumgebung des Diensts bestimmt. Wenn Sie den Dienst in IIS hosten, verwenden Sie eine Web.config-Datei. Bei einer anderen Hostumgebung verwenden Sie eine App.config-Datei.  
   
@@ -115,7 +115,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
  [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Gewusst wie: Verwenden von Bindungs- und Verhaltenskonfigurationen  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] macht es mithilfe eines Verweissystems in der Konfiguration leicht, dass Endpunkte die gleiche Konfiguration verwenden können. Statt einem Endpunkt direkt Konfigurationswerte zuzuweisen, werden bindungsrelevante Konfigurationswerte in `bindingConfiguration` -Elementen des `<binding>` -Abschnitts gruppiert. Eine Bindungskonfiguration ist eine benannte Gruppe von Einstellungen einer Bindung. Endpunkte können dann mithilfe des Namens auf eine `bindingConfiguration` verweisen.  
+ WCF erleichtert das gleiche zwischen Endpunkten, die mithilfe eines Verweissystems in der Konfiguration. Statt einem Endpunkt direkt Konfigurationswerte zuzuweisen, werden bindungsrelevante Konfigurationswerte in `bindingConfiguration` -Elementen des `<binding>` -Abschnitts gruppiert. Eine Bindungskonfiguration ist eine benannte Gruppe von Einstellungen einer Bindung. Endpunkte können dann mithilfe des Namens auf eine `bindingConfiguration` verweisen.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

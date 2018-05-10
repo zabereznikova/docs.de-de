@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97a8e9fd8f0e2c906f14556fcdccd7ef0d3c8033
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen
 Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem Endpunkt und die zum Herstellen einer Verbindung mit einem Endpunkt erforderlichen Kommunikationsdetails an. Eine Bindung enthält die folgenden Elemente:  
@@ -30,7 +30,7 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 >  Verwenden Sie nur dann Duplexverträge mit Bindungen, die keine Sicherheitsfunktionen unterstützen oder bei denen die Sicherheitsfunktionen deaktiviert sind, wenn Sie die Daten auf andere Weise schützen.  
   
 ## <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen  
- Die folgenden Bindungen sind im Lieferumfang von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enthalten.  
+ Die folgenden Bindungen sind im Lieferumfang WCF.  
   
 |Bindung|Konfigurationselement|Beschreibung|  
 |-------------|---------------------------|-----------------|  
@@ -40,14 +40,14 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Eine sichere und vollständig kompatible Bindung, die das WS-Federationprotokoll unterstützt, die es einem Verbund angehörenden Organisationen ermöglicht, Benutzer effizient zu authentifizieren und zu autorisieren.|  
 |<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding>|Eine für die Nutzung von HTTP- oder WebSocket-Diensten entwickelte Bindung, die standardmäßig die binäre Codierung verwendet.|  
 |<xref:System.ServiceModel.NetHttpsBinding>|\<NetHttpsBinding >|Eine für die Nutzung von HTTP- oder WebSocket-Diensten entwickelte sichere Bindung, die standardmäßig die binäre Codierung verwendet.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Eine sichere und optimierte Bindung, die sich für die computerübergreifende Kommunikation zwischen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen eignet.|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<NetNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Eine sichere, zuverlässige und optimierte Bindung, die sich für die Kommunikation zwischen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen auf einem Computer eignet.|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<NetMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Eine der Warteschlange hinzugefügte Bindung, die für eine computerübergreifende Kommunikation zwischen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen geeignet ist.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Eine sichere und optimierte Bindung für die computerübergreifende Kommunikation zwischen WCF-Anwendungen geeignet ist.|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<NetNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Eine sichere, zuverlässige und optimierte Bindung, die für die computerinterne Kommunikation zwischen WCF-Anwendungen geeignet ist.|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<NetMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Eine Bindung in der Warteschlange, die für die computerübergreifende Kommunikation zwischen WCF-Anwendungen geeignet ist.|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<NetPeerTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Eine Bindung, die eine sichere Kommunikation zwischen mehreren Computern ermöglicht.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Eine Bindung, die für eine computerübergreifende Kommunikation zwischen einer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendung und vorhandenen Message Queuing-Anwendungen geeignet ist.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Eine Bindung, die für die computerübergreifende Kommunikation zwischen einem WCF-Anwendung und vorhandenen Message Queuing-Anwendungen geeignet ist.|  
 |<xref:System.ServiceModel.BasicHttpContextBinding>|[\<BasicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|Eine Bindung, die sich für die Kommunikation mit Webdiensten eignet, die dem WS-Basic Profile entsprechen, und so die Verwendung von HTTP-Cookies zum Austauschen von Kontext ermöglicht.|  
-|<xref:System.ServiceModel.NetTcpContextBinding>|[\<NetTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Eine sichere und optimierte Bindung, die sich für die computerübergreifende Kommunikation zwischen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen eignet und so die Verwendung von SOAP-Headern zum Austauschen von Kontext ermöglicht.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Eine Bindung, die zum Konfigurieren von Endpunkten für [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Webdienste verwendet wird, die durch HTTP-Anforderungen und nicht durch SOAP-Nachrichten bereitgestellt werden.|  
+|<xref:System.ServiceModel.NetTcpContextBinding>|[\<NetTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Eine sichere und optimierte Bindung für die computerübergreifende Kommunikation zwischen WCF-Anwendungen geeignet ist, mit der SOAP-Header zum Austauschen von Kontext verwendet werden.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Eine Bindung, die zum Konfigurieren von Endpunkten für WCF-Webdiensten, die durch HTTP-Anforderungen und nicht durch SOAP-Nachrichten bereitgestellt werden.|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<WsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Eine sichere und |<xref:System.ServiceModel.UdpBinding>|\<udpBinding>|Eine Bindung, die verwendet werden soll, wenn eine große Menge einfacher Nachrichten an eine große Anzahl von Clients gleichzeitig gesendet werden soll.|  
   
  In der folgenden Tabelle sind die Funktionen der einzelnen vom System bereitgestellten Bindungen dargestellt. Die Bindungen sind in den Tabellenspalten angegeben. Die Funktionen werden in den Zeilen aufgelistet und in der zweiten Tabelle beschrieben. In der folgenden Tabelle werden die im Zusammenhang mit Bindungen verwendeten Abkürzungen erklärt. Zur Auswahl einer Bindung ermitteln Sie, welche Spalte in den Zeilen alle Funktionen enthält, die Sie benötigen.  

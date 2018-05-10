@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: df86b0750a0fb8760d77fa36ec0806a1c5a9c0a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b20167ad776f3524e4516b71e43ab8cdb5c2aea4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-programming-lifecycle"></a>Grundlegender Programmierlebenszyklus
-Windows Communication Foundation (WCF) ermöglicht es Anwendungen zu kommunizieren, ob sie über das Internet oder auf verschiedenen Anwendungsplattformen auf demselben Computer befinden. In diesem Thema werden die Aufgaben beschrieben, die zum Erstellen einer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendung erforderlich sind. Eine funktionierende beispielanwendung finden Sie unter [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md).  
+Windows Communication Foundation (WCF) ermöglicht es Anwendungen zu kommunizieren, ob sie über das Internet oder auf verschiedenen Anwendungsplattformen auf demselben Computer befinden. Dieses Thema beschreibt die Aufgaben, die zum Erstellen einer WCF-Anwendung erforderlich sind. Eine funktionierende beispielanwendung finden Sie unter [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md).  
   
 ## <a name="the-basic-tasks"></a>Grundlegende Aufgaben  
  Die folgenden grundlegenden Aufgaben müssen in der angegebenen Reihenfolge ausgeführt werden:  

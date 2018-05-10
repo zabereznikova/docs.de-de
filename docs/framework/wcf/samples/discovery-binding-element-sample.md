@@ -2,20 +2,20 @@
 title: Beispiel für Ermittlungsbindungselement
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 7dc38acbe91e03f579414294da07bff5cc53cc4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Beispiel für Ermittlungsbindungselement
 In diesem Beispiel wird gezeigt, wie das Ermittlungsclient-Bindungselement verwendet wird, um einen Dienst zu ermitteln. Diese Funktion ermöglicht es Entwicklern, ihrem vorhandenen Clientkanalstapel einen Ermittlungsclientkanal hinzuzufügen. Dadurch wird das Programmiermodell sehr intuitiv. Wenn der zugeordnete Kanal geöffnet wird, wird die Adresse des Diensts mit der Ermittlung aufgelöst. Dieses Beispiel besteht aus den folgenden Projekten:  
   
--   **CalculatorService**: ein ermittelbarer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst.  
+-   **CalculatorService**: einen sichtbaren WCF-Dienst.  
   
--   **CalculatorClient**: ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Clientanwendung, den Discovery Clientchannel zu suchen, und rufen Sie den CalculatorService verwendet.  
+-   **CalculatorClient**: ein WCF-Clientanwendung, die den Discovery Clientchannel zu suchen, und rufen Sie den CalculatorService verwendet.  
   
--   **DynamicCalculatorClient**: ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Clientanwendung, die mit einem dynamischen Endpunkt gesucht und den CalculatorService aufrufen.  
+-   **DynamicCalculatorClient**: eine WCF-Clientanwendung, die mit einem dynamischen Endpunkt gesucht und den CalculatorService aufrufen.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

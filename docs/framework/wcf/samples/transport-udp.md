@@ -1,27 +1,15 @@
 ---
 title: 'Transport: UDP'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-caps.latest.revision: "48"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4f69730831ec57efc782a95d7412496aa69a4afb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-udp"></a>Transport: UDP
-Das Beispiel zum UDB-Transport veranschaulicht, wie UDP-Unicast und -Multicast als benutzerdefinierter [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Transport implementiert werden können. In dem Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] anhand des Kanalframeworks und der empfohlenen Vorgehensweisen für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] beschrieben. Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:  
+Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und Multicast als benutzerdefinierte Windows Communication Foundation (WCF)-Transport implementiert wird. Im Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in WCF anhand des kanalframeworks und WCF-best Practices beschrieben. Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:  
   
 1.  Entscheiden, welche des Kanals [Nachrichtenaustauschmuster](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel oder IReplyChannel) die ChannelFactory und Kanallistener unterstützen. Dann entscheiden Sie sich, ob Sie die sitzungsbasierten Variationen dieser Schnittstellen unterstützen.  
   
@@ -61,7 +49,7 @@ Das Beispiel zum UDB-Transport veranschaulicht, wie UDP-Unicast und -Multicast a
 >  Für den UDP-Transport wird nur das Nachrichtenaustauschmuster Datagramm unterstützt, da UDP grundsätzlich ein "fire and forget"-Protokoll ist.  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Der ICommunicationObject- und der WCF-Objektlebenszyklus  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hat einen allgemeinen Zustandsautomaten, der zum Verwalten des Legenszyklus von Objekten wie <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory> und <xref:System.ServiceModel.Channels.IChannelListener> verwendet wird, die für die Kommunikation verwendet werden. Es gibt fünf Zustände, in denen diese Kommunikationsobjekte vorhanden sein können. Die Zustände werden durch die <xref:System.ServiceModel.CommunicationState>-Enumeration dargestellt und lauten wie folgt:  
+ WCF bietet einen allgemeinen Zustandsautomaten, der verwendet wird, für die Verwaltung des Lebenszyklus von Objekten wie <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, und <xref:System.ServiceModel.Channels.IChannelListener> , die für die Kommunikation verwendet werden. Es gibt fünf Zustände, in denen diese Kommunikationsobjekte vorhanden sein können. Die Zustände werden durch die <xref:System.ServiceModel.CommunicationState>-Enumeration dargestellt und lauten wie folgt:  
   
 -   Created: Dies ist der Zustand eines <xref:System.ServiceModel.ICommunicationObject>, wenn es zuerst instanziiert wird. In diesem Zustand tritt keine Eingabe/Ausgabe (E/A) auf.  
   
@@ -79,7 +67,7 @@ Das Beispiel zum UDB-Transport veranschaulicht, wie UDP-Unicast und -Multicast a
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>Kanalfactory und Kanallistener  
- Der nächste Schritt beim Schreiben eines benutzerdefinierten Transports besteht im Erstellen einer Implementierung von <xref:System.ServiceModel.Channels.IChannelFactory> für Clientkanäle und von <xref:System.ServiceModel.Channels.IChannelListener> für Dienstkanäle. Die Kanalebene verwendet ein Factorymuster zum Erstellen von Kanälen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt Basisklassenhilfen für diesen Prozess bereit.  
+ Der nächste Schritt beim Schreiben eines benutzerdefinierten Transports besteht im Erstellen einer Implementierung von <xref:System.ServiceModel.Channels.IChannelFactory> für Clientkanäle und von <xref:System.ServiceModel.Channels.IChannelListener> für Dienstkanäle. Die Kanalebene verwendet ein Factorymuster zum Erstellen von Kanälen. WCF stellt basisklassenhilfen für diesen Prozess bereit.  
   
 -   Die <xref:System.ServiceModel.Channels.CommunicationObject>-Klasse implementiert <xref:System.ServiceModel.ICommunicationObject> und setzt den zuvor in Schritt 2 beschriebenen Zustandsautomaten durch. 
 
@@ -268,7 +256,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   Über eine benutzerdefinierte Bindung: Benutzerdefinierte Bindungen erlauben Benutzern, basierend auf einer beliebigen Gruppe von Bindungselementen, eigene Bindungen zu definieren.  
   
--   Über eine vom System bereitgestellte Bindung, die das Bindungselement enthält. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enthält verschiedene vom System definierte Bindungen, z. B. `BasicHttpBinding`, `NetTcpBinding` und `WsHttpBinding`. Jede dieser Bindungen wird einem genau definierten Profil zugeordnet.  
+-   Über eine vom System bereitgestellte Bindung, die das Bindungselement enthält. WCF bietet mehrere vom System definierte Bindungen, wie z. B. `BasicHttpBinding`, `NetTcpBinding`, und `WsHttpBinding`. Jede dieser Bindungen wird einem genau definierten Profil zugeordnet.  
   
  Das Beispiel implementiert eine Profilbindung in `SampleProfileUdpBinding`, die von <xref:System.ServiceModel.Channels.Binding> abgeleitet wurde. `SampleProfileUdpBinding` enthält bis zu vier Bindungselemente: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` und `ReliableSessionBindingElement`.  
   
@@ -488,6 +476,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

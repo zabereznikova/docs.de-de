@@ -2,11 +2,11 @@
 title: Permanenter Duplex
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-duplex"></a>Permanenter Duplex
 Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter duplexnachrichtenaustausch mithilfe der messagingaktivitäten in Windows Workflow Foundation (WF). Ein permanenter Duplexnachrichtenaustausch ist ein bidirektionaler Nachrichtenaustausch, der im Verlauf eines langen Zeitraums stattfindet. Die Lebensdauer des Nachrichtenaustauschs ist möglicherweise länger als die Lebensdauer des Kommunikationskanals und die Lebensdauer der Dienstinstanzen im Arbeitsspeicher.  
@@ -41,7 +41,7 @@ Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter dup
 >  Die von diesem Beispiel verwendete Bindung ist nicht sicher. Wenn Sie die Anwendung bereitstellen, sollten Sie die Bindung auf Grundlage der Sicherheitsanforderungen der Anwendung konfigurieren.  
   
 > [!NOTE]
->  Die in diesem Beispiel verwendeten Warteschlangen sind nicht transaktionsgebunden. Ein Beispiel, das zeigt, wie einrichten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Austausch mithilfe von Transaktion Warteschlangen angezeigt wird, finden Sie unter der [MSMQ-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md) Beispiel.  
+>  Die in diesem Beispiel verwendeten Warteschlangen sind nicht transaktionsgebunden. Ein Beispiel, das zeigt, wie WCF-Nachrichtenaustausch, die mithilfe von Warteschlangen Transaktion eingerichtet werden, finden Sie unter der [MSMQ-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md) Beispiel.  
   
  Die von Service1.xamlx an Service2.xamlx gesendete Nachricht wird mit einem Clientendpunkt gesendet, der mit der Adresse von Service2.xamlx und der benutzerdefinierten Bindung, die zuvor definiert wurden, konfiguriert ist. Der Rückruf von Service2.xamlx an Service1.xamlx wird mit einem Clientendpunkt ohne explizit konfigurierte Adresse gesendet, da die Adresse dem Rückrufkontext entnommen wird, der von Service1.xamlx gesendet wurde. Im folgenden Codebeispiel werden die Clientendpunkte definiert.  
   

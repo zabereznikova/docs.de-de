@@ -2,27 +2,27 @@
 title: Erweiterbarkeit von Kanälen
 ms.date: 03/30/2017
 ms.assetid: 4cc3b20b-778a-4ae8-b58c-a3822fb13065
-ms.openlocfilehash: 90a35700b85f73a0a0ff668d7c33274ae62dd718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13cce100875a4bab8d2c4e9f62933057d9c681a0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="channels-extensibility"></a>Erweiterbarkeit von Kanälen
 Die Beispiele in diesem Abschnitt veranschaulichen benutzerdefinierte Kanäle.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Lokaler Kanal](../../../../docs/framework/wcf/samples/local-channel.md)  
- Veranschaulicht den lokalen Kanal, einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transportkanal, der für die Kommunikation innerhalb derselben Anwendungsdomäne verwendet wird.  
+ Zeigt den lokalen Kanal, einen WCF-Transportkanal, der für die Kommunikation innerhalb derselben Anwendungsdomäne verwendet wird.  
   
  [Reliable Secure Profile](../../../../docs/framework/wcf/samples/reliable-secure-profile.md)  
- Veranschaulicht, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und Reliable Secure Profile (RSP) verfasst werden.  
+ Veranschaulicht, wie WCF und Reliable Secure Profile (RSP) verfasst.  
   
  [Benutzerdefinierter Kanalverteiler](../../../../docs/framework/wcf/samples/custom-channel-dispatcher.md)  
  Zeigt, wie der Kanalstapel auf benutzerdefinierte Weise erstellt wird, indem <xref:System.ServiceModel.ServiceHostBase> direkt implementiert wird, und wie ein benutzerdefinierter Kanalverteiler in einer Webhostumgebung erstellt wird.  
   
  [Segmentierungskanal](../../../../docs/framework/wcf/samples/chunking-channel.md)  
- Veranschaulicht, wie die Menge des Arbeitsspeichers begrenzt wird, der zur Pufferung von großen, mithilfe von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gesendeten Nachrichten verwendet wird.  
+ Veranschaulicht, wie die Speichermenge verwendet, um große Nachrichten über WCF Puffern zu beschränken.  
   
  [HTTP-Bestätigungskanal](../../../../docs/framework/wcf/samples/http-acknowledgement-channel.md)  
  Veranschaulicht einen geschichteten Kanal, der das unidirektionale Nachrichtenmuster ändert.  

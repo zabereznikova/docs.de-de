@@ -1,13 +1,6 @@
 ---
-title: "Benutzerdefinierte Abhängigkeitseigenschaften"
-ms.custom: 
+title: Benutzerdefinierte Abhängigkeitseigenschaften
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2623f34418aad7a0b29c52d1310fdc79afced790
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-dependency-properties"></a>Benutzerdefinierte Abhängigkeitseigenschaften
 Dieses Thema beschreibt die Gründe, warum Anwendungsentwickler und Komponentenautoren in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] benutzerdefinierte Abhängigkeitseigenschaften erstellen möchten, und beschreibt die Implementierungsmaßnahmen und -optionen, die die Leistung, Verwendbarkeit oder Vielseitigkeit der Eigenschaft verbessern können.  
@@ -134,11 +122,11 @@ Dieses Thema beschreibt die Gründe, warum Anwendungsentwickler und Komponentena
   
 -   Wenn Ihre Eigenschaft (oder Änderungen in seinem Wert) wirkt sich auf die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], und insbesondere wirkt sich auf das Layoutsystem sollte der Größe oder das Element auf einer Seite rendern festlegen eine oder mehrere der folgenden Flags: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>Gibt an, dass eine Änderung an dieser Eigenschaft eine Änderung erfordert [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Rendering, in denen des enthaltenden Objekts möglicherweise mehr oder weniger Speicherplatz innerhalb des übergeordneten Elements. Für die Eigenschaft „Breite“ sollte beispielsweise dieses Flag festgelegt sein.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Gibt an, dass eine Änderung an dieser Eigenschaft eine Änderung erfordert [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Rendering, in denen des enthaltenden Objekts möglicherweise mehr oder weniger Speicherplatz innerhalb des übergeordneten Elements. Für die Eigenschaft „Breite“ sollte beispielsweise dieses Flag festgelegt sein.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>Gibt an, dass eine Änderung an dieser Eigenschaft eine Änderung erfordert [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rendern, die in der Regel erfordert eine Änderung in der dedizierten Speicherplatz, aber gibt an, dass die Position innerhalb des Bereichs geändert hat. Für die Eigenschaft „Ausrichtung“ sollte beispielsweise dieses Flag festgelegt sein.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Gibt an, dass eine Änderung an dieser Eigenschaft eine Änderung erfordert [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rendern, die in der Regel erfordert eine Änderung in der dedizierten Speicherplatz, aber gibt an, dass die Position innerhalb des Bereichs geändert hat. Für die Eigenschaft „Ausrichtung“ sollte beispielsweise dieses Flag festgelegt sein.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>Gibt an, dass eine andere Änderung, die aufgetreten ist keine Auswirkung auf Layout und die Measures, benötigt jedoch ein weiteres Rendering. Ein Beispiel wäre eine Eigenschaft, die eine Farbe eines vorhandenen Elements ändert, z.B. „Hintergrund“.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> Gibt an, dass eine andere Änderung, die aufgetreten ist keine Auswirkung auf Layout und die Measures, benötigt jedoch ein weiteres Rendering. Ein Beispiel wäre eine Eigenschaft, die eine Farbe eines vorhandenen Elements ändert, z.B. „Hintergrund“.  
   
     -   Diese Flags werden in Metadaten häufig als ein Protokoll für Ihre eigenen Überschreibungsimplementierungen von Eigenschaftensystem oder Layoutrückrufen verwendet. Möglicherweise z. B. ein <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> Rückruf, der angerufen <xref:System.Windows.UIElement.InvalidateArrange%2A> Wenn eine Eigenschaft der Instanz Änderung eines Werts meldet und <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> als `true` in seinen Metadaten.  
   
@@ -148,7 +136,7 @@ Dieses Thema beschreibt die Gründe, warum Anwendungsentwickler und Komponentena
   
 -   Standardmäßig wird die Datenbindung <xref:System.Windows.Data.Binding.Mode%2A> für Abhängigkeit Eigenschaften standardmäßig <xref:System.Windows.Data.BindingMode.OneWay>. Sie können immer die Bindung zu ändern <xref:System.Windows.Data.BindingMode.TwoWay> pro Bindungsinstanz; Weitere Informationen finden Sie unter [Geben Sie die Richtung der Bindung](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md). Aber der Autor des Abhängigkeit, Sie können auswählen, dass die Eigenschaft <xref:System.Windows.Data.BindingMode.TwoWay> Bindungsmodus standardmäßig. Ist ein Beispiel für eine vorhandene Abhängigkeitseigenschaft <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; das Szenario für diese Eigenschaft ist, die die <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> festlegen Logik und die Zusammensetzung des <xref:System.Windows.Controls.MenuItem> interagieren Sie mit der Standardformatvorlage für das Design. Die <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> Eigenschaft Logik verwendet die Datenbindung systemintern, um den Status der Eigenschaft in Übereinstimmung mit anderen Eigenschaften des und Methodenaufrufen beibehalten. Ein anderes Beispieleigenschaft, die bindet <xref:System.Windows.Data.BindingMode.TwoWay> standardmäßig <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>.  
   
--   Sie können auch die Vererbung von Eigenschaften in einer benutzerdefinierten Abhängigkeitseigenschaft aktivieren, durch Festlegen der <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> Flag. Eigenschaftenvererbung eignet sich für ein Szenario, in dem übergeordnete und untergeordnete Elemente über eine gemeinsame Eigenschaft verfügen und es sinnvoll ist, dass das untergeordnete Element diesen bestimmten Eigenschaftswert auf den gleichen Wert wie das übergeordnete Element festlegt. Eine Beispiel-Eigenschaft vererbbar ist <xref:System.Windows.FrameworkElement.DataContext%2A>, die zum Binden von Operationen So aktivieren Sie das wichtige Master / Detail-Szenario für die Darstellung von Daten verwendet wird. Indem Sie die Verfügbarkeit <xref:System.Windows.FrameworkElement.DataContext%2A> vererbbar ist, alle untergeordneten Elemente erben diese auch Datenkontext. Aufgrund der Vererbung von Eigenschaftswerten können Sie einen Datenkontext am Seiten- oder Anwendungsstamm angeben, und müssen ihn nicht für Bindungen in allen möglichen untergeordneten Elementen neu angeben. <xref:System.Windows.FrameworkElement.DataContext%2A>ist auch ein gutes Beispiel verdeutlichen, dass die Vererbung überschreibt den Standardwert, aber es kann immer festgelegt werden lokal auf einem bestimmten untergeordneten Element. Weitere Informationen finden Sie unter [verwenden Sie das Master / Detail-Muster mit hierarchischen Daten](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). Die Vererbung von Eigenschaftswerten kann zu Leistungseinbußen führen und sollte deswegen nur sparsam eingesetzt werden. Weitere Informationen hierzu finden Sie unter [Vererbung von Eigenschaftswerten](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+-   Sie können auch die Vererbung von Eigenschaften in einer benutzerdefinierten Abhängigkeitseigenschaft aktivieren, durch Festlegen der <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> Flag. Eigenschaftenvererbung eignet sich für ein Szenario, in dem übergeordnete und untergeordnete Elemente über eine gemeinsame Eigenschaft verfügen und es sinnvoll ist, dass das untergeordnete Element diesen bestimmten Eigenschaftswert auf den gleichen Wert wie das übergeordnete Element festlegt. Eine Beispiel-Eigenschaft vererbbar ist <xref:System.Windows.FrameworkElement.DataContext%2A>, die zum Binden von Operationen So aktivieren Sie das wichtige Master / Detail-Szenario für die Darstellung von Daten verwendet wird. Indem Sie die Verfügbarkeit <xref:System.Windows.FrameworkElement.DataContext%2A> vererbbar ist, alle untergeordneten Elemente erben diese auch Datenkontext. Aufgrund der Vererbung von Eigenschaftswerten können Sie einen Datenkontext am Seiten- oder Anwendungsstamm angeben, und müssen ihn nicht für Bindungen in allen möglichen untergeordneten Elementen neu angeben. <xref:System.Windows.FrameworkElement.DataContext%2A> ist auch ein gutes Beispiel verdeutlichen, dass die Vererbung überschreibt den Standardwert, aber es kann immer festgelegt werden lokal auf einem bestimmten untergeordneten Element. Weitere Informationen finden Sie unter [verwenden Sie das Master / Detail-Muster mit hierarchischen Daten](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). Die Vererbung von Eigenschaftswerten kann zu Leistungseinbußen führen und sollte deswegen nur sparsam eingesetzt werden. Weitere Informationen hierzu finden Sie unter [Vererbung von Eigenschaftswerten](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
   
 -   Legen Sie die <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> Kennzeichen, das angibt, ob die Abhängigkeitseigenschaft erkannt oder von Navigation Journaling Diensten verwendet werden soll. Ein Beispiel ist die <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> Eigenschaft; beliebiges Element in einer Markierung ausgewählt Steuerelement beibehalten werden soll, wenn das Journaling Verlauf navigiert wird.  
   

@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Gewusst wie: Konfigurieren von Clientanwendungsdiensten
-In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Projekt-Designer** zum Aktivieren und Konfigurieren von Clientanwendungsdiensten verwenden. Sie können Clientanwendungsdienste verwenden, um Benutzer zu überprüfen sowie um Benutzerrollen und Einstellungen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdienst abzurufen. Nach der Konfiguration können Sie auf die aktivierten Dienste im Anwendungscode zugreifen, wie unter [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md) beschrieben. Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+In diesem Thema wird beschrieben, wie Sie den Visual Studio-**Projekt-Designer** zum Aktivieren und Konfigurieren von Clientanwendungsdiensten verwenden. Sie können Clientanwendungsdienste verwenden, um Benutzer zu überprüfen sowie um Benutzerrollen und Einstellungen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdienst abzurufen. Nach der Konfiguration können Sie auf die aktivierten Dienste im Anwendungscode zugreifen, wie unter [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md) beschrieben. Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
  Sie können die Clientanwendungsdienste auf der Seite **Dienste** im **Projekt-Designer** aktivieren und konfigurieren. Die Seite **Dienste** aktualisiert die Werte in der Datei „App.config“ des Projekts. Verwenden Sie den Befehl **Eigenschaften** im Menü **Projekt**, um den **Projekt-Designer** zu öffnen. Weitere Informationen zur Seite **Dienste** finden Sie unter [Services-Seite, Projekt-Designer](https://msdn.microsoft.com/library/bb398109).  
   
@@ -100,7 +100,7 @@ In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../include
   
      Der Standardwert von `Data Source = |SQL/CE|` wird im Textfeld angezeigt.  
   
-3.  Behalten Sie den Standardwert für die Verbindungszeichenfolge bei, um eine SQL Server Compact-Datenbank zu generieren und zu verwenden. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] generiert eine Datenbankdatei und speichert sie im Verzeichnis, das von der <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>-Eigenschaft angegeben wird.  
+3.  Behalten Sie den Standardwert für die Verbindungszeichenfolge bei, um eine SQL Server Compact-Datenbank zu generieren und zu verwenden. Visual Studio generiert eine Datenbankdatei und speichert sie im Verzeichnis, das von der <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>-Eigenschaft angegeben wird.  
   
 4.  Fügen Sie zum Generieren und Verwenden einer verschlüsselten [!INCLUDE[ssEW](../../../includes/ssew-md.md)]-Datenbank der Verbindungszeichenfolge die Werte `password` und `encrypt database` hinzu, wie im folgenden Beispiel gezeigt.  
   

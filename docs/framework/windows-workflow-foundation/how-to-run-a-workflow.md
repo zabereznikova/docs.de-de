@@ -147,7 +147,7 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]  
   
-     Eine Anleitung dazu, wie Sie einer Workflowanwendung Persistenz hinzufügen, finden Sie im nächsten Thema: [How to: Create and Run a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md).  
+     Eine Anleitung dazu, wie Sie einer Workflowanwendung Persistenz hinzufügen, finden Sie im nächsten Thema: [Vorgehensweise: Erstellen und Ausführen eines Workflows mit langer Laufzeit](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel ist die vollständige Codeauflistung für die `Main` -Methode.  

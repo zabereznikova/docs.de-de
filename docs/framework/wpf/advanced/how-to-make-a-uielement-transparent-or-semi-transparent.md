@@ -1,29 +1,17 @@
 ---
 title: 'Gewusst wie: Formatieren von "UIElement" als transparent oder halbtransparent'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UIElements [WPF], transparency
 - opacity [WPF], of UIElements
 - transparency of UIElements [WPF]
 - UIElements [WPF], opacity
 ms.assetid: a49fc8d6-7b32-4f28-9122-39b632a19b4b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25245319c02ae376410d71afb7a1e56eda259e99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bf79848edb84a5bd93d1196fbe0b3196d159ff3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Gewusst wie: Formatieren von "UIElement" als transparent oder halbtransparent
 Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.UIElement> transparenten oder halb transparent. Um ein Element transparenten oder halb transparent zu gestalten, legen Sie dessen <xref:System.Windows.UIElement.Opacity%2A> Eigenschaft. Der Wert `0.0` Blendet das Element vollständig transparent, während ein Wert von `1.0` vollständig deckend das Element. Der Wert `0.5` Blendet das Element 50 % undurchsichtig usw. Ein Element <xref:System.Windows.UIElement.Opacity%2A> festgelegt ist, um `1.0` standardmäßig.  

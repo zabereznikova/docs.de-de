@@ -1,34 +1,22 @@
 ---
 title: Sichern von Clients
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dfbe1fcce8a3b860e88dae4f5af43adfedbe9890
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-clients"></a>Sichern von Clients
-In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] schreibt der Dienst die Sicherheitsanforderungen für Clients vor, d. h. der Dienst legt fest, welcher Sicherheitsmodus verwendet wird und ob der Client Anmeldeinformationen angeben muss oder nicht. Der Sicherungsvorgang an einem Client ist also unkompliziert: Man verwendet einfach die vom Dienst erhaltenen Metadaten (sofern diese veröffentlicht wurden) und erstellt einen Client. Die Metadaten geben an, wie der Client konfiguriert wird. Wenn der Dienst erfordert, dass der Client Anmeldeinformationen angibt, müssen Sie Anmeldeinformationen erhalten, die die Anforderung erfüllen. Dieses Thema beschreibt den Vorgang ausführlicher. Weitere Informationen zur Erstellung eines sicheren Diensts finden Sie unter [Sichern von Services](../../../docs/framework/wcf/securing-services.md).  
+In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsanforderungen für Clients vor. d. h. der Dienst legt fest, welcher Sicherheitsmodus verwendet wird und ob der Client Anmeldeinformationen angeben muss oder nicht. Der Sicherungsvorgang an einem Client ist also unkompliziert: Man verwendet einfach die vom Dienst erhaltenen Metadaten (sofern diese veröffentlicht wurden) und erstellt einen Client. Die Metadaten geben an, wie der Client konfiguriert wird. Wenn der Dienst erfordert, dass der Client Anmeldeinformationen angibt, müssen Sie Anmeldeinformationen erhalten, die die Anforderung erfüllen. Dieses Thema beschreibt den Vorgang ausführlicher. Weitere Informationen zur Erstellung eines sicheren Diensts finden Sie unter [Sichern von Services](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Der Dienst legt die Sicherheit fest  
- Standardmäßig weisen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Bindungen aktivierte Sicherheitsfunktionen auf. (Die Ausnahme ist <xref:System.ServiceModel.BasicHttpBinding>.) Wenn der Dienst also über [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erstellt wird, ist die Wahrscheinlichkeit größer, dass er Sicherheitsmaßnahmen umsetzt, um Authentifizierung, Vertraulichkeit und Integrität zu gewährleisten. In diesem Fall geben die vom Dienst bereitgestellten Metadaten an, was für den Aufbau eines sicheren Kommunikationskanals erforderlich ist. Wenn die Dienstmetadaten keine Sicherheitsanforderungen enthalten, gibt es keine Möglichkeit, einem Dienst ein Sicherheitsschema wie Secure Sockets Layer (SSL) über HTTP aufzuerlegen. Wenn jedoch der Dienst erfordert, dass der Client Anmeldeinformationen liefert, muss der Entwickler, Bereitsteller oder Administrator des Clients genau diejenigen Anmeldeinformationen liefern, die der Client zur Authentifizierung gegenüber dem Dienst nutzen wird.  
+ Standardmäßig haben WCF-Bindungen aktivierte Sicherheitsfunktionen auf. (Die Ausnahme ist <xref:System.ServiceModel.BasicHttpBinding>.) Wenn der Dienst mithilfe von WCF erstellt wurde, besteht daher möglicherweise, dass sie Sicherheit zur Authentifizierung, Vertraulichkeit und Integrität sicherzustellen implementiert. In diesem Fall geben die vom Dienst bereitgestellten Metadaten an, was für den Aufbau eines sicheren Kommunikationskanals erforderlich ist. Wenn die Dienstmetadaten keine Sicherheitsanforderungen enthalten, gibt es keine Möglichkeit, einem Dienst ein Sicherheitsschema wie Secure Sockets Layer (SSL) über HTTP aufzuerlegen. Wenn jedoch der Dienst erfordert, dass der Client Anmeldeinformationen liefert, muss der Entwickler, Bereitsteller oder Administrator des Clients genau diejenigen Anmeldeinformationen liefern, die der Client zur Authentifizierung gegenüber dem Dienst nutzen wird.  
   
 ## <a name="obtaining-metadata"></a>Erlangen von Metadaten  
  Beim Erstellen eines Clients besteht der erste Schritt darin, die Metadaten für den Dienst zu erlangen, die der Client für die Kommunikation nutzen wird. Dazu gibt es zwei Möglichkeiten. Zuerst, wenn der Dienst einen Metadatenaustausch (MEX)-Endpunkt veröffentlicht oder seine Metadaten über HTTP oder HTTPS verfügbar macht, Sie können die Metadaten mit den [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), wodurch generiert sowohl die Codedateien für einen Client als auch eine Konfigurationsdatei. (Weitere Informationen zur Verwendung des Tools finden Sie unter [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Wenn der Dienst keinen MEX-Endpunkt veröffentlicht und keine Metadaten über HTTP oder HTTPS zur Verfügung stellt, müssen Sie den Dienstersteller um Dokumentation bitten, die die Sicherheitsanforderungen und die Metadaten beschreibt.  

@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Überschreiben der Identität eines Dienstes zur Authentifizierung
 In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. Der folgende Konfigurationscode verwendet beispielsweise die [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element und legt die `clientCredentialType` -Attribut auf Windows.  
@@ -30,9 +30,9 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
 > [!NOTE]
 >  Zur Verwendung des Windows-Anmeldeinformationstyps ohne Aushandlung muss das Benutzerkonto des Dienstes Zugriff auf den bei der Active Directory-Domäne registrierten SPN haben. Dazu stehen Ihnen folgende Möglichkeiten zur Verfügung:  
   
--   Verwenden Sie das NetworkService- oder das LocalSystem-Konto, um den Dienst auszuführen. Da diese Konten Zugriff auf den beim Hinzufügen des Computers zur Active Directory-Domäne erstellten Computer-SPN haben, generiert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatisch das zutreffende SPN-Element im Endpunkt des Dienstes in den Dienstmetadaten (WSDL).  
+-   Verwenden Sie das NetworkService- oder das LocalSystem-Konto, um den Dienst auszuführen. Da diese Konten Zugriff auf die Computer-SPN, die hergestellt wird haben, wenn der Computer die Active Directory-Domäne beitritt, generiert WCF automatisch den richtige SPN-Element im Endpunkt des Diensts in den Dienstmetadaten (WSDL).  
   
--   Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. Erstellen Sie in diesem Fall mit dem Tool Setspn.exe einen SPN für dieses Domänenkonto. Konfigurieren Sie nach dem Erstellen des SPN für das Konto des Dienstes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] so, dass dieser SPN für die Clients des Dienstes über seine Metadaten (WSDL) veröffentlicht wird. Legen Sie dazu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest.  
+-   Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. Erstellen Sie in diesem Fall mit dem Tool Setspn.exe einen SPN für dieses Domänenkonto. Konfigurieren Sie nach dem Erstellen des SPN für das Konto des Diensts WCF um, dass dieser SPN für den Dienst Clients über seine Metadaten (WSDL) veröffentlicht. Legen Sie dazu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest.  
   
  Weitere Informationen zu SPNs, die Kerberos-Protokoll und Active Directory finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
   
@@ -59,7 +59,7 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
   
   
 ### <a name="setting-identity-programmatically"></a>Programmgesteuertes Festlegen der Identität  
- Der Dienst muss nicht explizit eine Identität angeben, da sie von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatisch bestimmt wird. Allerdings können Sie mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nach Bedarf eine Identität für einen Endpunkt angeben. Mit dem folgenden Code wird ein neuer Dienstendpunkt mit einer bestimmten DNS-Identität hinzugefügt.  
+ Der Dienst verfügt nicht explizit eine Identität angeben, da WCF automatisch bestimmt. WCF ermöglicht Ihnen die Angabe eine Identität für einen Endpunkt jedoch bei Bedarf. Mit dem folgenden Code wird ein neuer Dienstendpunkt mit einer bestimmten DNS-Identität hinzugefügt.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

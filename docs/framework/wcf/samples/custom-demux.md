@@ -2,11 +2,11 @@
 title: Benutzerdefinierter Demux
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: 76f8d60fdcc1fcba9942a78138e83104dfcd972b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-demux"></a>Benutzerdefinierter Demux
 In diesem Beispiel wird veranschaulicht, wie MSMQ-Nachrichtenheader unterschiedlichen Dienstvorgängen zugeordnet werden können, damit Windows Communication Foundation (WCF), bei denen services <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> besteht keine Einschränkung auf die Verwendung eines einzigen Dienstvorgangs aus, wie in der [ Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) und [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) Beispiele.  
@@ -108,7 +108,7 @@ public static void Main()
  Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben.  
   
 > [!NOTE]
->  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunktadresse gibt ein msmq.formatname-Schema an, und für den lokalen Computer wird localhost verwendet. Dem Schema folgt eine ordnungsgemäß entsprechend den Namens- und Adressierungsrichtlinien des MSMQ-Formats formatierte Warteschlangenadresse.  
+>  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die WCF-Endpunktadresse gibt ein msmq.formatname-Schema und verwendet "localhost" für den lokalen Computer. Dem Schema folgt eine ordnungsgemäß entsprechend den Namens- und Adressierungsrichtlinien des MSMQ-Formats formatierte Warteschlangenadresse.  
   
 ```xml  
 <appSettings>  

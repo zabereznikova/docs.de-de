@@ -2,30 +2,30 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: ef5de3fc51e43a88adb021b66732492f03d9d912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="services"></a>Dienste
 Dieser Abschnitt enthält Beispiele, in denen Windows Communication Foundation (WCF)-Dienste veranschaulicht.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)  
- Veranschaulicht das Hosten von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten.  
+ Veranschaulicht, hostende von WCF-Diensten.  
   
  [Dienstinteroperabilität](../../../../docs/framework/wcf/samples/service-interoperability.md)  
- Veranschaulicht die Interaktion zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]- und anderen Diensttechnologien.  
+ Veranschaulicht die Interaktion zwischen WCF und anderen diensttechnologien.  
   
  [Verhalten](../../../../docs/framework/wcf/samples/behaviors.md)  
- Veranschaulicht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstverhalten.  
+ Zeigt die WCF-Dienstverhalten.  
   
  [Dienstsicherheit](../../../../docs/framework/wcf/samples/service-security.md)  
- Veranschaulicht die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstsicherheit.  
+ Veranschaulicht die Sicherheit für WCF-Diensts.  
   
  [Vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- Zeigt, wie mithilfe von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ein typischer Dienst und ein typischer Client implementiert und konfiguriert werden.  
+ Veranschaulicht, wie ein typischer Dienst und mithilfe von WCF-Client implementiert und konfiguriert.  
   
  [Verwendung von Standardendpunkten](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  Veranschaulicht, wie Standardendpunkte in Dienstkonfigurationsdateien verwendet werden.  
@@ -55,7 +55,7 @@ Dieser Abschnitt enthält Beispiele, in denen Windows Communication Foundation (
  Zeigt einen Dienst, der mehrere Endpunkte unter einem einzelnen `ListenUri` hostet.  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- Veranschaulicht das Senden von zusätzlichen Informationen über einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Aufruf mit Headern.  
+ Veranschaulicht, wie zusätzliche Informationen für einen WCF-Aufruf mithilfe von Headern zu senden.  
   
  [Dienstbeschreibung](../../../../docs/framework/wcf/samples/service-description.md)  
  Veranschaulicht, wie ein Dienst seine Dienstbeschreibungsinformationen zur Laufzeit abrufen kann.  

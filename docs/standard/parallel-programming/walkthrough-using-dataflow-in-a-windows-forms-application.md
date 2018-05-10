@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8100f986a98c9e4712603c45a88d48cbb93be649
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Exemplarische Vorgehensweise: Datenfluss in einer Windows Forms-Anwendung verwenden
 Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstellt wird, die eine Bildverarbeitung in einer Windows Forms-Anwendung durchführen.  
@@ -48,7 +48,7 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
 #### <a name="to-create-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  
   
-1.  Erstellen Sie ein Visual C#- oder Visual Basic-**Windows Forms**-Anwendungsprojekt in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. In diesem Dokument hat das Projekt den Namen `CompositeImages`.  
+1.  Erstellen Sie in Visual Studio ein Visual C#- oder Visual Basic-Projekt des Typs **Windows Forms-Anwendung**. In diesem Dokument hat das Projekt den Namen `CompositeImages`.  
   
 2.  Fügen Sie im Formulardesigner für das Hauptformular „Form1.cs“ („Form1.vb“ in Visual Basic) ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu.  
   

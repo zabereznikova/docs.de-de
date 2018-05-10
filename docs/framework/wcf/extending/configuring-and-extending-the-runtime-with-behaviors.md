@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af95fa01fc9caffb8a4f0e85d3457c7f3fa60320
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurieren und Erweitern der Laufzeit mit Verhalten
 Verhalten ermöglichen es Ihnen, Standardverhalten ändern und benutzerdefinierte Erweiterungen, die zu überprüfen und Dienstkonfiguration zu überprüfen oder das Laufzeitverhalten in Windows Communication Foundation (WCF)-Client und Dienst Anwendungen hinzufügen. In diesem Thema werden die Verhaltensschnittstellen beschrieben und erläutert, wie sie implementiert und wie sie zur Dienstbeschreibung (in einer Dienstanwendung) oder zu einem Endpunkt (in einer Clientanwendung) programmgesteuert oder in einer Konfigurationsdatei hinzugefügt werden können. Weitere Informationen zum Verwenden von vom System bereitgestellte Verhalten, finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) und [Angabe zur Laufzeit Clientverhalten](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Verhalten  
- Verhaltenstypen werden hinzugefügt, die Dienst- oder Dienstendpunkt-beschreibungsobjekten (auf den Dienst oder Client, bzw.), bevor diese Objekte von Windows Communication Foundation (WCF) verwendet werden, um eine Laufzeit zu erstellen, die ausgeführt wird eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst oder eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client. Wenn diese Verhaltenstypen während des Lauftzeitkonstruktionsprozesses aufgerufen werden, können sie auf Laufzeiteigenschaften und -methoden zugreifen, die die vom Vertrag, von den Bindungen und von den Adressen erstellte Laufzeit ändern.  
+ Verhaltenstypen werden hinzugefügt, die Dienst- oder Dienstendpunkt-beschreibungsobjekten (auf der Dienst- bzw. Clientseite bzw.), bevor diese Objekte von Windows Communication Foundation (WCF) verwendet werden, um eine Laufzeit zu erstellen, die einen WCF-Dienst oder einen WCF-Client ausgeführt wird. Wenn diese Verhaltenstypen während des Lauftzeitkonstruktionsprozesses aufgerufen werden, können sie auf Laufzeiteigenschaften und -methoden zugreifen, die die vom Vertrag, von den Bindungen und von den Adressen erstellte Laufzeit ändern.  
   
 ### <a name="behavior-methods"></a>Verhaltensmethoden  
  Alle Verhaltenstypen verfügen über eine `AddBindingParameters`-Methode, eine `ApplyDispatchBehavior`-Methode, eine `Validate`-Methode und eine `ApplyClientBehavior`-Methode mit einer Ausnahme: Da <xref:System.ServiceModel.Description.IServiceBehavior> nicht in einem Client ausgeführt werden kann, wird `ApplyClientBehavior` nicht implementiert.  
@@ -33,9 +33,9 @@ Verhalten ermöglichen es Ihnen, Standardverhalten ändern und benutzerdefiniert
 > [!NOTE]
 >  Eine Erläuterung der Laufzeiteigenschaften und Erweiterungstypen enthalten, die Sie verwenden können, um das Ausführungsverhalten eines Clients zu ändern, finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md). Eine Erläuterung der Laufzeiteigenschaften und Erweiterungstypen enthalten, die Sie verwenden können, um das Ausführungsverhalten eines Verteilers Dienst zu ändern, finden Sie unter [Erweitern von Verteilern](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
   
- Die meisten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Benutzer interagieren nicht direkt mit der Laufzeit. Stattdessen verwenden sie Kernprogrammierungskonstrukte wie Endpunkte, Verträge, Bindungen, Adressen und Verhaltensattribute für Klassen oder Verhalten in Konfigurationsdateien. Diese Konstrukte bilden die *beschreibungsstruktur*, dies ist die vollständige Spezifikation für die Erstellung einer Laufzeit zur Unterstützung von eines Diensts oder Client von der beschreibungsstruktur beschriebenen.  
+ Die meisten WCF-Benutzer nicht direkt mit der Laufzeit interagieren; Stattdessen verwenden sie kernprogrammierungskonstrukte wie Endpunkte, Verträge, Bindungen, Adressen und Verhaltensattribute für Klassen oder Verhalten in Konfigurationsdateien. Diese Konstrukte bilden die *beschreibungsstruktur*, dies ist die vollständige Spezifikation für die Erstellung einer Laufzeit zur Unterstützung von eines Diensts oder Client von der beschreibungsstruktur beschriebenen.  
   
- Es gibt vier Arten von Verhalten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Es gibt vier Arten von Verhalten in WCF:  
   
 -   Dienstverhalten (<xref:System.ServiceModel.Description.IServiceBehavior>-Typen) ermöglicht die Anpassung der ganzen Dienstlaufzeit, einschließlich <xref:System.ServiceModel.ServiceHostBase>.  
   
@@ -64,24 +64,24 @@ Verhalten ermöglichen es Ihnen, Standardverhalten ändern und benutzerdefiniert
   
 3.  Implementieren eines benutzerdefinierten <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, das die Konfiguration erweitert. Dies ermöglicht die Verwendung des Dienstverhaltens von Anwendungskonfigurationsdateien aus.  
   
- Beispiele für das Dienstverhalten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] umfassen das <xref:System.ServiceModel.ServiceBehaviorAttribute>-Attribut, das <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>-Verhalten und das <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Verhalten.  
+ Beispiele für Dienstverhalten in WCF die <xref:System.ServiceModel.ServiceBehaviorAttribute> -Attribut, das <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>, und die <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Verhalten.  
   
 #### <a name="contract-behaviors"></a>Vertragsverhalten  
  Vertragsverhalten, das die <xref:System.ServiceModel.Description.IContractBehavior>-Schnittstelle implementiert, dient zur Erweiterung der Client- sowie Dienstlaufzeit in einem Vertrag.  
   
- Für das Hinzufügen von Vertragsverhalten zu einem Vertrag stehen zwei Mechanismen zur Verfügung.  Der erste Mechanismus besteht im Erstellen eines benutzerdefinierten Attributs zur Verwendung in der Vertragsschnittstelle. Wenn eine Vertragsschnittstelle entweder an einen <xref:System.ServiceModel.ServiceHost> oder eine <xref:System.ServiceModel.ChannelFactory%601> weitergegeben wird, untersucht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Attribute an der Schnittstelle. Falls eines der Attribute Implementierungen von <xref:System.ServiceModel.Description.IContractBehavior> darstellt, wird es der Verhaltenssammlung in der für diese Schnittstelle erstellten <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> hinzugefügt.  
+ Für das Hinzufügen von Vertragsverhalten zu einem Vertrag stehen zwei Mechanismen zur Verfügung.  Der erste Mechanismus besteht im Erstellen eines benutzerdefinierten Attributs zur Verwendung in der Vertragsschnittstelle. Wenn eine Vertragsschnittstelle übergeben entweder eine <xref:System.ServiceModel.ServiceHost> oder ein <xref:System.ServiceModel.ChannelFactory%601>, WCF untersucht die Attribute in der Schnittstelle. Falls eines der Attribute Implementierungen von <xref:System.ServiceModel.Description.IContractBehavior> darstellt, wird es der Verhaltenssammlung in der für diese Schnittstelle erstellten <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> hinzugefügt.  
   
  Sie können das <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> auch im benutzerdefinierten Vertragsverhaltensattribut implementieren. In diesem Fall sieht das Verhalten wie folgt aus bei der Anwendung auf:  
   
- • Eine Vertragsschnittstelle. In diesem Fall wird das Verhalten an jedem beliebigen Endpunkt auf alle Verträge dieses Typs angewendet, und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoriert den Wert der <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType>-Eigenschaft.  
+ • Eine Vertragsschnittstelle. In diesem Fall wird das Verhalten für alle Verträge dieses Typs in einen beliebigen Endpunkt angewendet und WCF ignoriert den Wert, der die <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> Eigenschaft.  
   
  • Eine Dienstklasse. In diesem Fall wird das Verhalten nur auf Endpunkte angewendet, deren Vertrag der Wert der  <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>-Eigenschaft ist.  
   
- • Eine Rückrufklasse. In diesem Fall wird das Verhalten auf den Endpunkt des Duplexclients angewendet, und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoriert den Wert der <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>-Eigenschaft.  
+ • Eine Rückrufklasse. In diesem Fall wird das Verhalten an Endpunkt des duplexclients angewendet und WCF ignoriert den Wert der die <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> Eigenschaft.  
   
  Der zweite Mechanismus besteht im Hinzufügen des Verhaltens zur Verhaltenssammlung einer <xref:System.ServiceModel.Description.ContractDescription>.  
   
- Beispiele für das Vertragsverhalten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] umfassen das <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType>-Attribut. Weitere Informationen und ein Beispiel hierzu finden Sie im Verweisthema.  
+ Vertragsverhalten in WCF gehören die <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> Attribut. Weitere Informationen und ein Beispiel hierzu finden Sie im Verweisthema.  
   
 #### <a name="endpoint-behaviors"></a>Endpunktverhalten  
  Endpunktverhalten, das <xref:System.ServiceModel.Description.IEndpointBehavior> implementiert, ist der Hauptmechanismus, mit dem die gesamte Dienst- oder Clientlaufzeit für einen bestimmten Endpunkt geändert wird.  
@@ -97,11 +97,11 @@ Verhalten ermöglichen es Ihnen, Standardverhalten ändern und benutzerdefiniert
 #### <a name="operation-behaviors"></a>Vorgangsverhalten  
  Vorgangsverhalten, das die <xref:System.ServiceModel.Description.IOperationBehavior>-Schnittstelle implementiert, dient zur Erweiterung der Client- sowie Dienstlaufzeit für jeden Vorgang.  
   
- Für das Hinzufügen von Vorgangsverhalten zu einem Vorgang stehen zwei Mechanismen zur Verfügung. Der erste Mechanismus besteht im Erstellen eines benutzerdefinierten Attributs zur Verwendung in der Methode, die den Vorgang formt. Wenn ein Vorgang entweder einem <xref:System.ServiceModel.ServiceHost> oder einer <xref:System.ServiceModel.ChannelFactory> hinzugefügt wird, fügt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jedes <xref:System.ServiceModel.Description.IOperationBehavior>-Attribut zur Verhaltenssammlung in der für diesen Vorgang erstellten <xref:System.ServiceModel.Description.OperationDescription> hinzu.  
+ Für das Hinzufügen von Vorgangsverhalten zu einem Vorgang stehen zwei Mechanismen zur Verfügung. Der erste Mechanismus besteht im Erstellen eines benutzerdefinierten Attributs zur Verwendung in der Methode, die den Vorgang formt. Wenn ein Vorgang hinzugefügt wird entweder ein <xref:System.ServiceModel.ServiceHost> oder ein <xref:System.ServiceModel.ChannelFactory>, fügt WCF <xref:System.ServiceModel.Description.IOperationBehavior> Attribute zur Verhaltenssammlung die <xref:System.ServiceModel.Description.OperationDescription> für diesen Vorgang erstellten.  
   
  Der zweite Mechanismus besteht im direkten Hinzufügen des Verhaltens zur Verhaltenssammlung einer konstruierten <xref:System.ServiceModel.Description.OperationDescription>.  
   
- Beispiele für Vorgangsverhalten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] umfassen <xref:System.ServiceModel.OperationBehaviorAttribute> und <xref:System.ServiceModel.TransactionFlowAttribute>.  
+ Beispiele für Vorgangsverhalten in WCF die <xref:System.ServiceModel.OperationBehaviorAttribute> und <xref:System.ServiceModel.TransactionFlowAttribute>.  
   
  Weitere Informationen und ein Beispiel hierzu finden Sie im Verweisthema.  
   

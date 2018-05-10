@@ -1,27 +1,15 @@
 ---
 title: Service Trace Viewer-Tool (SvcTraceViewer.exe)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-caps.latest.revision: "55"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer-Tool (SvcTraceViewer.exe)
-Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Service Trace Viewer-Tool hilft Ihnen beim Analysieren von Diagnoseablaufverfolgungen, die von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] generiert werden. Service Trace Viewer ermöglicht das einfache Zusammenführen, Anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, sodass Sie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstprobleme diagnostizieren, beheben und überprüfen können.  
+Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie diagnoseablaufverfolgungen zu analysieren, die vom generierten [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Service Trace Viewer ermöglicht das einfache Zusammenführen, Anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, sodass Sie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstprobleme diagnostizieren, beheben und überprüfen können.  
   
 ## <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung  
  Diagnoseablaufverfolgungen stellen Informationen bereit, die Aufschluss darüber geben, was beim Ausführen der Vorgänge in der Anwendung geschieht. Wie der Name bereits andeutet, können Sie Vorgänge von der Quelle zum Ziel und durch Zwischenpunkte hindurch verfolgen.  
@@ -272,7 +260,7 @@ Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Service Trace Viewer-To
   
 4.  In der Strukturansicht links wird die Struktur des Ablaufverfolgungsdatensatzes angezeigt, den Sie in Schritt 1 ausgewählt haben. Wechseln Sie zu dem Element, für das Sie eine Bedingung erstellen möchten. In diesem Beispiel durchsuchen, zu der ThreadID, die XPath-Ausdrucks gesucht werden soll: /E2ETraceEvent/System/Execution/@ThreadID Knoten. Doppelklicken Sie auf das ThreadID-Attribut in der Strukturansicht. Hierdurch wird rechts im Dialogfeld ein Ausdruck für das Attribut erstellt.  
   
-5.  Ändern Sie das Parameterfeld für die ThreadID-Bedingung von Keine in '{0}'. Dieser Schritt aktiviert den ThreadID-Wert, der beim Anwenden des Filters konfiguriert werden soll. (Siehe den Abschnitt zum Anwenden eines Filters.) Sie können bis zu vier Parameter definieren. Bedingungen werden mit dem OR-Operator kombiniert.  
+5.  Ändern Sie das Parameterfeld für die ThreadID-Bedingung von keine in "{0}". Dieser Schritt aktiviert den ThreadID-Wert, der beim Anwenden des Filters konfiguriert werden soll. (Siehe den Abschnitt zum Anwenden eines Filters.) Sie können bis zu vier Parameter definieren. Bedingungen werden mit dem OR-Operator kombiniert.  
   
 6.  Klicken Sie auf **Ok** zum Erstellen des Filters.  
   
@@ -297,7 +285,7 @@ Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Service Trace Viewer-To
   
 2.  Klicken Sie auf **Filter jetzt**, und beobachten Sie das Ergebnis des Vorgangs.  
   
- Wenn der Filter mehrere Parameter verwendet werden, geben Sie sie mithilfe von ";" als Trennzeichen in der **Suchen nach** Feld. Die folgende Zeichenfolge gibt zum Beispiel drei Parameter an: '1;findValue;text'. Der Viewer wendet '1' auf den {0}-Parameter des Filters an. 'findValue' und 'text' werden auf {1} bzw. {2} angewendet.  
+ Wenn der Filter mehrere Parameter verwendet werden, geben Sie sie mithilfe von ";" als Trennzeichen in der **Suchen nach** Feld. Die folgende Zeichenfolge gibt zum Beispiel drei Parameter an: '1;findValue;text'. Der Viewer wendet '1' auf der {0} Parameter des Filters. 'FindValue' und 'Text' gelten für {1} und {2} bzw.  
   
 ###### <a name="sharing-custom-filters"></a>Freigeben von benutzerdefinierten Filtern  
  Benutzerdefinierte Filter können für andere Sitzungen und andere Benutzer freigegeben werden. Sie können die Filter in eine Definitionsdatei exportieren, die Sie an einem anderen Speicherort importieren können.  
@@ -421,7 +409,7 @@ Das [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Service Trace Viewer-To
 |![Aktivitätsstopp-Ablaufverfolgung](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Aktivitätsstopp-Ablaufverfolgung: Eine Ablaufverfolgung, die das Ende einer Aktivität markiert. sein. Enthält den Namen der Aktivität. Als Anwendungsentwickler sollten Sie eine Aktivitätsstopp-Ablaufverfolgung pro Aktivitäts-ID und Ablaufverfolgungsquelle definieren. Es werden keine Ablaufverfolgungen von einer bestimmten Ablaufverfolgungsquelle angezeigt, nachdem die Ablaufverfolgungsquelle einen Aktivitätsstopp ausgegeben hat, es sei denn, die Ablaufverfolgungszeit weist eine grobe Granularität auf. Ist das der Fall, überlappen sich zwei Ablaufverfolgungen mit der gleichen Zeit, einschließlich eines Stopps, möglicherweise bei der Anzeige. Wenn die Aktivitäts-ID über die Ablaufverfolgungsquellen der Ablaufverfolgungskorrelation hinweg propagiert wird, können Sie mehrere Stopps für dieselbe Aktivitäts-ID sehen (einen pro Ablaufverfolgungsquelle). Die Stoppablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|  
 |![Aktivität anhalten-Ablaufverfolgung](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Aktivität anhalten-Ablaufverfolgung: Eine Ablaufverfolgung, die markiert, wann eine Aktivität angehalten wurde. Es werden erst Ablaufverfolgungen in einer angehaltenen Aktivität ausgegeben, wenn die Aktivität fortgesetzt wird. Eine angehaltene Aktivität gibt an, dass keine Verarbeitungen in dieser Aktivität im Bereich der Ablaufverfolgungsquelle stattfinden. Anhalten/Fortsetzen-Ablaufverfolgungen sind hilfreich für die Profilerstellung. Die Anhalten-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|  
 |![Aktivität fortsetzen-Ablaufverfolgung](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Aktivität fortsetzen-Ablaufverfolgung: Eine Ablaufverfolgung, die die Zeit markiert, zu der eine Aktivität nach dem Anhalten wieder fortgesetzt wird. Ablaufverfolgungen können in dieser Aktivität möglicherweise erneut ausgegeben werden. Anhalten/Fortsetzen-Ablaufverfolgungen sind hilfreich für die Profilerstellung. Die Fortsetzen-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|  
-|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Übertragung: Eine Ablaufverfolgung, die ausgegeben wird, wenn eine logische Ablaufsteuerung von einer Aktivität auf eine andere übertragen wird. Die Aktivität, aus der die Übertragung stammt, kann unter Umständen parallel zur der Aktivität ausgeführt werden, an die die Übertragung stattfindet. Die Übertragen-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|  
+|![Übertragen Sie](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Übertragung: Eine Ablaufverfolgung, die ausgegeben wird, wenn eine logische Ablaufsteuerung von einer Aktivität auf eine andere übertragen wird. Die Aktivität, aus der die Übertragung stammt, kann unter Umständen parallel zur der Aktivität ausgeführt werden, an die die Übertragung stattfindet. Die Übertragen-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|  
 |![Übertragen von](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Übertragung von: Eine Ablaufverfolgung, die eine Übertragung von einer anderen Aktivität zur aktuellen Aktivität definiert.|  
 |![Übertragen auf](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Übertragung an: Eine Ablaufverfolgung, die eine Übertragung der logischen Ablaufsteuerung von der aktuellen Aktivität auf eine andere definiert.|  
   

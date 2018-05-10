@@ -2,18 +2,18 @@
 title: WMI-Anbieter
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d135466c402fa21b6a1b11f208ca900f58748bdb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wmi-provider"></a>WMI-Anbieter
-In diesem Beispiel wird veranschaulicht, wie zum Sammeln von Daten von Windows Communication Foundation (WCF)-Diensten zur Laufzeit mithilfe des Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI)-Anbieters, die in integrierten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Außerdem wird in diesem Beispiel gezeigt, wie einem Dienst ein benutzerdefiniertes WMI-Objekt hinzugefügt wird. Das Beispiel aktiviert den WMI-Anbieter für die [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und veranschaulicht, wie zum Sammeln von Daten aus der `ICalculator` -Dienst zur Laufzeit.  
+Dieses Beispiel veranschaulicht das Sammeln von Daten von Windows Communication Foundation (WCF)-Diensten zur Laufzeit mithilfe des Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI)-Anbieters, der in WCF integriert ist. Außerdem wird in diesem Beispiel gezeigt, wie einem Dienst ein benutzerdefiniertes WMI-Objekt hinzugefügt wird. Das Beispiel aktiviert den WMI-Anbieter für die [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und veranschaulicht, wie zum Sammeln von Daten aus der `ICalculator` -Dienst zur Laufzeit.  
   
  Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. Weitere Informationen zum WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](https://msdn.microsoft.com/library/aa394582.aspx). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentierung für externe Verwaltungstools.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert einen WMI-Anbieter, eine Komponente, die die Instrumentation zur Laufzeit über eine WBEM-kompatible Schnittstelle verfügbar macht. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] macht Attribute von Diensten (wie Adressen, Bindungen, Verhaltensweisen und Listener) verfügbar.  
+ WCF implementiert einen WMI-Anbieter, eine Komponente, die Instrumentierung zur Laufzeit über eine WBEM-kompatible Schnittstelle verfügbar macht. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. WCF macht Attribute von Diensten wie Adressen, Bindungen, Verhaltensweisen und Listener.  
   
  Der integrierte WMI-Anbieter wird in der Konfigurationsdatei der Anwendung aktiviert. Dies erfolgt über die `wmiProviderEnabled` Attribut des der [ \<Diagnose >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) in der [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Abschnitt, wie im folgenden Beispiel gezeigt. Konfiguration:  
   
@@ -35,7 +35,7 @@ In diesem Beispiel wird veranschaulicht, wie zum Sammeln von Daten von Windows C
   
  In diesem Beispiel werden zwei Javaskripts verwendet: das eine zum Auflisten der auf dem Computer ausgeführten Dienste mit einigen ihrer Eigenschaften und das andere zum Anzeigen benutzerdefinierter WMI-Daten. Das Skript öffnet eine Verbindung zum WMI-Anbieter, analysiert Daten und zeigt die erfassten Daten an.  
   
- Starten Sie das Beispiel, um eine laufende Instanz eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts zu erstellen. Führen Sie mit dem folgenden Befehl jedes Javaskript in der Eingabeaufforderung aus, während der Dienst ausgeführt wird:  
+ Starten Sie das Beispiel zum Erstellen einer ausgeführten Instanz eines WCF-Diensts. Führen Sie mit dem folgenden Befehl jedes Javaskript in der Eingabeaufforderung aus, während der Dienst ausgeführt wird:  
   
 ```  
 cscript EnumerateServices.js  
@@ -116,7 +116,7 @@ cscript EnumerateCustomObjects.js
   
  Die Ausgabe zeigt an, dass auf dem Computer ein einziger Dienst ausgeführt wird. Der Dienst macht einen Endpunkt verfügbar, der den `ICalculator`-Vertrag implementiert. Die Einstellungen des vom Endpunkt implementierten Verhaltens und der implementierten Bindung werden als Summe einzelner Elemente des Messagingstapels aufgeführt.  
   
- WMI beschränkt sich nicht darauf, die Verwaltungsinstrumentation der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur verfügbar zu machen. Die Anwendung kann mithilfe desselben Mechanismus ihre eigenen domänenspezifischen Datenelemente verfügbar machen. WMI ist ein einheitlicher Mechanismus zur Kontrolle und Steuerung eines Webdiensts.  
+ WMI ist nicht beschränkt auf die Verwaltungsinstrumentation der WCF-Infrastruktur bereitstellen. Die Anwendung kann mithilfe desselben Mechanismus ihre eigenen domänenspezifischen Datenelemente verfügbar machen. WMI ist ein einheitlicher Mechanismus zur Kontrolle und Steuerung eines Webdiensts.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
@@ -129,7 +129,7 @@ cscript EnumerateCustomObjects.js
 4.  Um das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Wenn Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nach der Installation von ASP.NET installiert haben, müssen Sie u. U. "%WINDIR%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe -r –x" ausführen, um dem ASPNET-Konto die Berechtigung zum Veröffentlichen von WMI-Objekten zu erteilen.  
+    >  Wenn Sie WCF nach der Installation von ASP.NET installiert haben, müssen Sie möglicherweise "%WINDIR%\ ausführen Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe "- R - X, um die Berechtigung zum Veröffentlichen von WMI-Objekten ASPNET-Konto zu gewähren.  
   
 5.  Die über WMI verfügbar gemachten Daten aus dem Beispiel zeigen Sie mit den folgenden Befehlen an: `cscript EnumerateServices.js` oder `cscript EnumerateCustomObjects.js`.  
   

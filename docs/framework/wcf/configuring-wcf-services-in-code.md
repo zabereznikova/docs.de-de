@@ -2,14 +2,14 @@
 title: Konfigurieren von WCF-Diensten in Code
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 2046ee00bef0f3e84a61151474c777d64005a30c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 714236bcdb562840323698622cdf3d0c6c89b6ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurieren von WCF-Diensten in Code
-Windows Communication Foundation (WCF) können Entwickler Dienste mithilfe von Konfigurationsdateien oder Code konfigurieren.  Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ermöglicht auch das Konfigurieren von Diensten im Code. In früheren Versionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 und früher) war das Konfigurieren von Diensten im Code in selbstgehosteten Szenarien einfach, weil die <xref:System.ServiceModel.ServiceHost>-Klasse die Möglichkeit bot, Endpunkte und Verhaltensweisen vor dem Aufrufen von ServiceHost.Open zu konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen direkten Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4.5 bietet [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] eine einfachere Möglichkeit, selbstgehostete und webgehostete Dienste im Code zu konfigurieren.  
+Windows Communication Foundation (WCF) können Entwickler Dienste mithilfe von Konfigurationsdateien oder Code konfigurieren.  Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. WCF ermöglicht außerdem so konfigurieren die Dienste im Code. In früheren Versionen von WCF (4.0 und früher) Konfigurieren von Diensten im Code wurde in den selbst gehosteten Szenarien einfach die <xref:System.ServiceModel.ServiceHost> Klasse erlaubt Ihnen, Endpunkte und das Verhalten vor dem Aufruf von "ServiceHost.Open" konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen direkten Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4.5, bietet WCF ein einfacheres Verfahren zum Konfigurieren sowohl selbst gehostet und im Web gehostete Dienste im Code.  
   
 ## <a name="the-configure-method"></a>Die Configure-Methode  
  Definieren Sie einfach in der Dienstimplementierungsklasse die öffentliche statische Methode `Configure` mit der folgenden Signatur:  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) können Entwickler Dienste mithilfe von K
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Die Configure-Methode akzeptiert eine <xref:System.ServiceModel.ServiceConfiguration>-Instanz, die es den Entwicklern ermöglicht, Endpunkte und Verhalten hinzuzufügen. Diese Methode wird von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aufgerufen, bevor der Diensthost geöffnet wird. Sofern definiert, werden alle Dienstkonfigurationseinstellungen in der Datei app.config oder web.config ignoriert.  
+ Die Configure-Methode akzeptiert eine <xref:System.ServiceModel.ServiceConfiguration>-Instanz, die es den Entwicklern ermöglicht, Endpunkte und Verhalten hinzuzufügen. Diese Methode wird von WCF aufgerufen, bevor der Diensthost geöffnet wird. Sofern definiert, werden alle Dienstkonfigurationseinstellungen in der Datei app.config oder web.config ignoriert.  
   
  Der folgende Codeausschnitt zeigt, wie die `Configure`-Methode definiert wird und ein Dienstendpunkt, ein Endpunktverhalten und Dienstverhalten hinzugefügt werden:  
   

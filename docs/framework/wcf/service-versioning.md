@@ -2,11 +2,11 @@
 title: Dienstversionsverwaltung
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: efff9778f1cbe2ee5d97912ada0193c4e8ba137c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75a19c62f52c1d9468976f7ebea72245d1d341eb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-versioning"></a>Dienstversionsverwaltung
 Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen die Dienste (und die Endpunkte, die sie verfügbar machen) eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z.&#160;B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Jede Änderung führt zu einer neuen Version des Diensts. In diesem Thema wird erläutert, Überlegungen zur versionsverwaltung in Windows Communication Foundation (WCF).  
@@ -34,7 +34,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
   
  Für Dienstverträge bedeutet Kompatibilität, dass neue, vom Dienst verfügbar gemachte Vorgänge hinzugefügt, vorhandene Vorgänge jedoch nicht entfernt oder semantisch geändert werden können.  
   
- Für Datenverträge bedeutet Kompatibilität, dass neue Schematypdefinitionen hinzugefügt, vorhandene Schematypdefinitionen jedoch nicht auf die unterbrechende Art geändert werden können. Zu den unterbrechenden Änderungen können das Entfernen von Datenmembern oder das Ändern ihrer Datentypinkompatibilität gehören. Diese Funktion bietet dem Dienst einigen Spielraum zum Ändern der Version seiner Verträge, ohne Clients zu unterbrechen. In den nächsten beiden Abschnitten werden nicht unterbrechende und unterbrechende Änderungen erläutert, die an [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Daten und -Dienstverträgen vorgenommen werden können.  
+ Für Datenverträge bedeutet Kompatibilität, dass neue Schematypdefinitionen hinzugefügt, vorhandene Schematypdefinitionen jedoch nicht auf die unterbrechende Art geändert werden können. Zu den unterbrechenden Änderungen können das Entfernen von Datenmembern oder das Ändern ihrer Datentypinkompatibilität gehören. Diese Funktion bietet dem Dienst einigen Spielraum zum Ändern seiner Vertragsversionen, ohne Clients zu unterbrechen. In den nächsten beiden Abschnitten wird erläutert, geschützte und wichtige Änderungen, die mit WCF-Daten hergestellt werden können und-Dienstverträgen.  
   
 ## <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung  
  In diesem Abschnitt wird die Datenversionsverwaltung für die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse und die <xref:System.Runtime.Serialization.DataContractAttribute>-Klasse beschrieben.  
@@ -53,7 +53,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
 ### <a name="lax-versioning"></a>Weniger strenge Versionsverwaltung  
  In vielen anderen Szenarien kann der Dienstentwickler davon ausgehen, dass das Hinzufügen eines neuen, optionalen Members zum Datenvertrag keine vorhandenen Clients unterbricht. Dazu muss der Dienstentwickler überprüfen, ob die vorhandenen Clients keine Schemavalidierung durchführen und dass sie unbekannte Datenmember ignorieren. In diesen Szenarien ist es möglich, die Datenvertragsfunktionen zum Hinzufügen neuer Member auf eine nicht unterbrechende Weise zu nutzen. Der Dienstentwickler kann diese Annahme machen, wenn die Datenvertragsfunktionen für die Versionsverwaltung bereits für die erste Version des Diensts verwendet wurden.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ASP.NET-Webdienste und viele andere Webdienststapel unterstützen *weniger strenge versionsverwaltung*: d. h., sie nicht lösen Sie Ausnahmen für neue unbekannte Datenmember in den empfangenen Daten.  
+ WCF, ASP.NET-Webdienste und viele andere Web-service-Webdienststapel unterstützen *weniger strenge versionsverwaltung*: d. h., sie nicht lösen Sie Ausnahmen für neue unbekannte Datenmember in den empfangenen Daten.  
   
  Häufig wird fälschlicherweise angenommen, dass die vorhandenen Clients durch das Hinzufügen eines neuen Members nicht unterbrochen werden können. Falls Sie sich nicht sicher sind, ob alle Clients für die weniger strenge Versionsverwaltung ausgerichtet sind, wird empfohlen, die strengen Richtlinien zur Versionsverwaltung zu verwenden und die Datenverträge als unveränderlich zu behandeln.  
   
@@ -92,7 +92,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
 ## <a name="message-contract-versioning"></a>Versionsverwaltung für Nachrichtenverträge  
  Die Richtlinien für die Versionsverwaltung von Nachrichtenverträgen sind ähnlich wie diejenigen für die Versionsverwaltung von Datenverträgen. Falls eine strenge Versionsverwaltung erforderlich ist, sollten Sie den Nachrichtentext nicht ändern, sondern stattdessen einen neuen Nachrichtenvertrag mit einem eindeutig qualifizierten Namen erstellen. Wenn Sie sicher sind, dass Sie die weniger strenge Versionsverwaltung verwenden können, können Sie neue Teile des Nachrichtentexts hinzufügen, die bereits vorhandenen jedoch nicht ändern oder entfernen. Diese Richtlinie gilt sowohl für reine als auch für eingeschlossene Nachrichtenverträge.  
   
- Nachrichtenheader können immer hinzugefügt werden, auch wenn die strenge Versionsverwaltung verwendet wird. Das MustUnderstand-Flag kann sich auf die Versionsverwaltung auswirken. Im Allgemeinen entspricht das Versionsverwaltungsmodell für Header in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dem in der SOAP-Spezifikation beschriebenen.  
+ Nachrichtenheader können immer hinzugefügt werden, auch wenn die strenge Versionsverwaltung verwendet wird. Das MustUnderstand-Flag kann sich auf die Versionsverwaltung auswirken. Im Allgemeinen ist das Modell der versionsverwaltung für Header in WCF, wie in der SOAP-Spezifikation beschrieben.  
   
 ## <a name="service-contract-versioning"></a>Versionsverwaltung für Dienstverträge  
  Ähnlich wie bei der Versionsverwaltung für Datenverträge umfasst die Versionsverwaltung für Dienstverträge auch das Hinzufügen, Ändern und Entfernen von Vorgängen.  
@@ -118,7 +118,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
  Die Liste der in einem Dienstvertrag beschriebenen Fehler wird nicht als vollständig betrachtet. Ein Vorgang kann jederzeit Fehler zurückgeben, die in seinem Vertrag nicht beschrieben sind. Deshalb werden Änderungen der im Vertrag beschriebenen Fehler nicht als unterbrechend betrachtet. Beispielsweise das Hinzufügen eines neuen Fehlers zum Vertrag mithilfe von <xref:System.ServiceModel.FaultContractAttribute> oder das Entfernen eines vorhandenen Fehlers aus dem Vertrag.  
   
 ### <a name="service-contract-libraries"></a>Dienstvertragsbibliotheken  
- In Organisationen können Bibliotheken mit Verträgen vorhanden sein. Dabei wird ein Vertrag in einem zentralen Repository veröffentlicht, und die Dienstimplementierer implementieren Datenverträge aus diesem Repository. In diesem Fall können Sie beim Veröffentlichen eines Dienstvertrags im Repository nicht steuern, wer Dienste erstellt, die ihn implementieren. Sie können daher den Dienstvertrag nicht ändern, nachdem er veröffentlicht wurde, da er dadurch unveränderlich wird. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] unterstützt die Vertragsvererbung, die zum Erstellen eines neuen Vertrags verwendet werden kann, der eine Erweiterung bereits vorhandener Verträge darstellt. Wenn Sie diese Funktion verwenden möchten, müssen Sie eine neue Dienstvertragsschnittstelle definieren, die von der alten Dienstvertragsschnittstelle erbt, und dann der neuen Schnittstelle Methoden hinzufügen. Anschließend ändern Sie den Dienst, der den alten Vertrag implementiert, um den neuen Vertrag zu implementieren, und ändern die "versionOld"-Endpunktdefinition für die Verwendung des neuen Vertrags. Für "versionOld"-Clients erscheint der Endpunkt weiterhin als "versionOld"-Vertrag; für "versionNew"-Clients erscheint der Endpunkt als "versionNew"-Vertrag.  
+ In Organisationen können Bibliotheken mit Verträgen vorhanden sein. Dabei wird ein Vertrag in einem zentralen Repository veröffentlicht, und die Dienstimplementierer implementieren Datenverträge aus diesem Repository. In diesem Fall können Sie beim Veröffentlichen eines Dienstvertrags im Repository nicht steuern, wer Dienste erstellt, die ihn implementieren. Sie können daher den Dienstvertrag nicht ändern, nachdem er veröffentlicht wurde, da er dadurch unveränderlich wird. WCF unterstützt die vertragsvererbung, die verwendet werden kann, um einen neuen Vertrag zu erstellen, der bereits vorhandener Verträge erweitert. Wenn Sie diese Funktion verwenden möchten, müssen Sie eine neue Dienstvertragsschnittstelle definieren, die von der alten Dienstvertragsschnittstelle erbt, und dann der neuen Schnittstelle Methoden hinzufügen. Anschließend ändern Sie den Dienst, der den alten Vertrag implementiert, um den neuen Vertrag zu implementieren, und ändern die "versionOld"-Endpunktdefinition für die Verwendung des neuen Vertrags. Für "versionOld"-Clients erscheint der Endpunkt weiterhin als "versionOld"-Vertrag; für "versionNew"-Clients erscheint der Endpunkt als "versionNew"-Vertrag.  
   
 ## <a name="address-and-binding-versioning"></a>Versionsverwaltung von Adressen und Bindungen  
  Bei Änderungen an der Endpunktadresse und -bindung handelt es sich um unterbrechende Änderungen, solange die Clients die neue Endpunktadresse oder -bindung nicht dynamisch erkennen können. Ein Mechanismus zur Implementierung dieser Funktion ist die Verwendung einer UDDI-Registrierung sowie des UDDI-Aufrufmusters, bei der ein Client versucht, mit einem Endpunkt zu kommunizieren und im Falle eines Scheiterns eine bekannte UDDI-Registrierung für die aktuellen Endpunktdaten abfragt. Der Client verwendet dann die Adresse und die Bindung aus diesen Metadaten, um mit dem Endpunkt zu kommunizieren. Wenn diese Kommunikation erfolgreich ist, speichert der Client die Adress- und Bindungsinformationen für eine spätere Verwendung zwischen.  

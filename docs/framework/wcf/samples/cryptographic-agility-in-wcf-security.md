@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 5fa4c3cf45eb17822effaa9284864274923b2504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40f4f8523d5286911216180846e94ec18e40da1c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>Kryptografische Flexibilität in WCF-Sicherheit
 Dieses Beispiel zeigt, wie ein Standard-/benutzerdefinierter Algorithmus ermöglichen eine agile kryptografieimplementierung in Windows Communication Foundation (WCF)-Client und Dienst angegeben wird. Das Beispiel besteht aus den folgenden Projekten:  
   
  Dienst  
- Dies ist eine selbst gehostete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst, implementiert die `ICalculator` -Schnittstelle und sichert den Endpunkt mithilfe der <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> mit sicheren Sitzung und zuverlässige Sitzung deaktiviert. Der Dienst definiert eine benutzerdefinierte `SecurityAlgorithmSuite`-Klasse, um die Kryptografiealgorithmen zur Nachrichtensicherheit anzugeben.  
+ Dies ist eine selbst gehostete WCF-Dienst, der implementiert die `ICalculator` -Schnittstelle und sichert den Endpunkt mithilfe der <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> mit sicheren Sitzung und zuverlässige Sitzung deaktiviert. Der Dienst definiert eine benutzerdefinierte `SecurityAlgorithmSuite`-Klasse, um die Kryptografiealgorithmen zur Nachrichtensicherheit anzugeben.  
   
  Client  
- Hierbei handelt es sich um einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client, der nach erfolgreicher Authentifizierung auf den Dienst zugreift. Er ruft die Vorgänge auf, die von der `ICalculator`-Schnittstelle verfügbar gemacht und vom Dienst implementiert werden. Vom Client wird zusätzlich die gleiche benutzerdefinierte `SecurityAlgorithmSuite`-Klasse definiert, um die Kryptografiealgorithmen für die Nachrichtensicherheit anzugeben.  
+ Hierbei handelt es sich um eine WCFclient, die auf den Dienst nach der erfolgreichen Authentifizierung zugreift. Er ruft die Vorgänge auf, die von der `ICalculator`-Schnittstelle verfügbar gemacht und vom Dienst implementiert werden. Vom Client wird zusätzlich die gleiche benutzerdefinierte `SecurityAlgorithmSuite`-Klasse definiert, um die Kryptografiealgorithmen für die Nachrichtensicherheit anzugeben.  
   
 ### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   

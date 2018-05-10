@@ -2,11 +2,11 @@
 title: 'Client: Kanalfactorys und Kanäle'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: c7890f5fafb4e53053c4c393a7c8af584bd7a520
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 91e19c692718ae02e2f125a791904f62fe8401f7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>Client: Kanalfactorys und Kanäle
 In diesem Thema wird die Erstellung von Kanalfactorys und Kanälen erläutert.  
@@ -19,7 +19,7 @@ Eine Kanalfactory dient zum Erstellen von Kanälen.
   
  Bei der Schließung von Kanalfactorys sind diese für das Schließen aller von ihnen erstellten Kanäle zuständig, die noch nicht geschlossen wurden. Das Modell wird hier asymmetrisch dargestellt, da ein Kanallistener bei seiner Schließung zwar keine neuen Kanäle mehr akzeptiert, vorhandene Kanäle jedoch geöffnet bleiben, damit von diesen weiterhin Nachrichten empfangen werden können.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt Basisklassenhilfen für diesen Prozess bereit. (Ein Diagramm der Kanal Hilfsklassen, die in diesem Thema erläutert, finden Sie unter [Übersicht über das Kanalmodell](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
+ WCF stellt basisklassenhilfen für diesen Prozess bereit. (Ein Diagramm der Kanal Hilfsklassen, die in diesem Thema erläutert, finden Sie unter [Übersicht über das Kanalmodell](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
 -   Die <xref:System.ServiceModel.Channels.CommunicationObject> -Klasse implementiert <xref:System.ServiceModel.ICommunicationObject> und erzwingt die in Schritt 2 beschriebenen Zustandsautomaten [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Erstellen benutzerdefinierter Bindungen
 Es gibt mehrere Möglichkeiten, Bindungen zu erstellen, die nicht vom System bereitgestellt werden:  
@@ -26,9 +26,9 @@ Es gibt mehrere Möglichkeiten, Bindungen zu erstellen, die nicht vom System ber
   
  Protokollbindungselemente &#8211; Diese Elemente stellen für Nachrichten ausgeführte Verarbeitungsschritte auf höherer Ebene dar. Die von diesen Bindungselementen erstellten Kanäle und Listener können den Nachrichteninhalt hinzufügen, entfernen oder ändern. Eine gegebene Bindung verfügt möglicherweise über eine beliebige Anzahl von Protokollbindungselementen, die alle von <xref:System.ServiceModel.Channels.BindingElement> erben. Windows Communication Foundation (WCF) enthält mehrere protokollbindungselemente, einschließlich der <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> und <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
- Codierungsbindungselemente &#8211; Diese Elemente stellen eine Transformation zwischen einer Nachricht und einer Codierung dar, die für die Weiterleitung im Netz bereit ist. Typische [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Bindungen umfassen genau ein Codierungsbindungselement. Beispiele für Codierungsbindungselemente sind <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Wird für eine Bindung kein Codierungsbindungselement angegeben, wird eine Standardcodierung verwendet. Wenn als Transport HTTP verwendet wird, ist dieser Standard Text, andernfalls binär.  
+ Codierungsbindungselemente &#8211; Diese Elemente stellen eine Transformation zwischen einer Nachricht und einer Codierung dar, die für die Weiterleitung im Netz bereit ist. Normale WCF-Bindungen umfassen genau ein Codierungsbindungselement. Beispiele für Codierungsbindungselemente sind <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Wird für eine Bindung kein Codierungsbindungselement angegeben, wird eine Standardcodierung verwendet. Wenn als Transport HTTP verwendet wird, ist dieser Standard Text, andernfalls binär.  
   
- Transportbindungselemente &#8211; Diese Elemente stellen die Übertragung einer codierten Nachricht über ein Transportprotokoll dar. Typische [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Bindungen schließen genau ein Transportbindungselement ein, das von <xref:System.ServiceModel.Channels.TransportBindingElement> erbt. Beispiele für Transportbindungselemente sind <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> und <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
+ Transportbindungselemente &#8211; Diese Elemente stellen die Übertragung einer codierten Nachricht über ein Transportprotokoll dar. Normale WCF-Bindungen umfassen genau ein Transportbindungselement, das erbt <xref:System.ServiceModel.Channels.TransportBindingElement>. Beispiele für Transportbindungselemente sind <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> und <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
   
  Bei der Erstellung neuer Bindungen ist die Reihenfolge der hinzugefügten Bindungselemente wichtig. Fügen Sie Bindungselemente immer in der folgenden Reihenfolge hinzu:  
   
@@ -41,10 +41,10 @@ Es gibt mehrere Möglichkeiten, Bindungen zu erstellen, die nicht vom System ber
 |Codierung|Text, Binärdatei, MTOM, benutzerdefiniert|Ja*|  
 |Transport|TCP, Named Pipes, HTTP, HTTPS, MSMQ, benutzerdefiniert|Ja|  
   
- *Da für jede Bindung eine Codierung notwendig ist, fügt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eine Standardcodierung für Sie hinzu, wenn keine Codierung festgelegt ist. Der Standard ist Text/XML für die HTTP- und HTTPS-Transporte, andernfalls binär.  
+ * Da eine Codierung für jede Bindung erforderlich ist, wenn keine Codierung festgelegt ist, fügt WCF eine standardcodierung für Sie. Der Standard ist Text/XML für die HTTP- und HTTPS-Transporte, andernfalls binär.  
   
 ## <a name="creating-a-new-binding-element"></a>Erstellen eines neuen Bindungselements  
- Zusätzlich zu den von <xref:System.ServiceModel.Channels.BindingElement> abgeleiteten Typen, die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geboten werden, können Sie Ihre eigenen Bindungselemente erstellen. Dadurch können Sie bestimmen, wie der Bindungsstapel und die Komponenten erstellt werden, die in die Erstellung Ihres eigenen <xref:System.ServiceModel.Channels.BindingElement> eingehen, das sich mit den anderen vom System bereitgestellten Typen auf dem Stapel kombinieren lässt.  
+ Zusätzlich zu den von abgeleiteten Typen <xref:System.ServiceModel.Channels.BindingElement> , sind bereitgestellten von WCF, Sie Ihre eigenen Bindungselemente erstellen können. Dadurch können Sie bestimmen, wie der Bindungsstapel und die Komponenten erstellt werden, die in die Erstellung Ihres eigenen <xref:System.ServiceModel.Channels.BindingElement> eingehen, das sich mit den anderen vom System bereitgestellten Typen auf dem Stapel kombinieren lässt.  
   
  Wenn Sie beispielsweise ein `LoggingBindingElement` implementieren, das Nachrichten in einer Datenbank protokollieren kann, müssen Sie es im Kanalstapel oberhalb eines Transportkanals platzieren. In diesem Fall erstellt die Anwendung eine benutzerdefinierte Bindung, die, wie im folgenden Beispiel, das `LoggingBindingElement` mit dem `TcpTransportBindingElement` kombiniert.  
   
@@ -64,7 +64,7 @@ Binding customBinding = new CustomBinding(
   
  Eine benutzerdefinierte Bindung muss zumindest die <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>-Methode und die <xref:System.ServiceModel.Channels.Binding.Scheme%2A>-Eigenschaft implementieren.  
   
- Die <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>-Methode gibt eine neue <xref:System.ServiceModel.Channels.BindingElementCollection> zurück, die die Bindungselemente für die Bindung enthält. Die Auflistung ist sortiert, wobei die Protokollbindungselemente an erster Stelle stehen sollten, gefolgt von dem Codierungsbindungselement und dem Transportbindungselement. Bei Verwendung der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Elemente vom System bereitgestellte Bindung, führen Sie das Bindungselement, das Sortierregeln, die im angegebenen [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md). Diese Auflistung sollte niemals auf Objekte verweisen, auf die innerhalb der benutzerdefinierten Bindungsklasse verwiesen wird. Daraus folgt, dass Autoren von Bindungen einen `Clone()` der <xref:System.ServiceModel.Channels.BindingElementCollection> bei jedem Aufruf von <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> zurückgeben müssen.  
+ Die <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>-Methode gibt eine neue <xref:System.ServiceModel.Channels.BindingElementCollection> zurück, die die Bindungselemente für die Bindung enthält. Die Auflistung ist sortiert, wobei die Protokollbindungselemente an erster Stelle stehen sollten, gefolgt von dem Codierungsbindungselement und dem Transportbindungselement. Wenn Sie die WCF-Bindung für vom System bereitgestellte Elemente verwenden zu können, muss das Bindungselement, das Regeln, die im angegebenen Sortierung folgen [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md). Diese Auflistung sollte niemals auf Objekte verweisen, auf die innerhalb der benutzerdefinierten Bindungsklasse verwiesen wird. Daraus folgt, dass Autoren von Bindungen einen `Clone()` der <xref:System.ServiceModel.Channels.BindingElementCollection> bei jedem Aufruf von <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> zurückgeben müssen.  
   
  Die <xref:System.ServiceModel.Channels.Binding.Scheme%2A>-Eigenschaft stellt das URI-Schema für das in der Bindung verwendete Transportprotokoll dar. Z. B. die *WSHttpBinding* und *NetTcpBinding* Zurückgeben von "http" und "net.tcp" von ihren jeweiligen <xref:System.ServiceModel.Channels.Binding.Scheme%2A> Eigenschaften.  
   

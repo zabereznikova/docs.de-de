@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea0e6f3dc66bf40d631077c0dce20ea46f3a6688
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-logging-in-wcf"></a>Die Ereignisprotokollierung in WCF
 Windows Communication Foundation (WCF) verfolgt interne Ereignisse im Windows-Ereignisprotokoll.  
   
 ## <a name="viewing-event-logs"></a>Anzeigen von Ereignisprotokollen  
- Die Ereignisprotokollierung wird standardmäßig automatisch aktiviert. Es gibt keinen Mechanismus, um sie zu deaktivieren. In [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] protokollierte Ereignisse können in der Ereignisanzeige angezeigt werden. Klicken Sie zum Starten dieses Tools auf **starten**, klicken Sie auf **Systemsteuerung**, doppelklicken Sie auf **Verwaltung**, und doppelklicken Sie dann auf **Ereignisanzeige**.  
+ Die Ereignisprotokollierung wird standardmäßig automatisch aktiviert. Es gibt keinen Mechanismus, um sie zu deaktivieren. Ereignisse, die von WCF protokolliert werden, können mithilfe der Ereignisanzeige angezeigt werden. Klicken Sie zum Starten dieses Tools auf **starten**, klicken Sie auf **Systemsteuerung**, doppelklicken Sie auf **Verwaltung**, und doppelklicken Sie dann auf **Ereignisanzeige**.  
   
 ### <a name="application-event-log"></a>Anwendungsereignisprotokoll  
- Die **Anwendungsereignisprotokoll** enthält die meisten von der generierte Ereignisse [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Die meiste Einträge geben an, dass eine bestimmte Funktion für eine Anwendung nicht gestartet werden konnte. Beispiele:  
+ Die **Anwendungsereignisprotokoll** enthält die meisten der vom WCF generierte Ereignisse. Die meiste Einträge geben an, dass eine bestimmte Funktion für eine Anwendung nicht gestartet werden konnte. Beispiele:  
   
--   Nachrichtenprotokollierung/Ablaufverfolgung: [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] schreibt ein Ereignis in das Ereignisprotokoll, wenn die Ablaufverfolgung und Nachrichtenprotokollierung fehlschlägt. Nicht jeder Fehler der Ablaufverfolgung löst jedoch ein Ereignis aus. Damit das Ereignisprotokoll nicht vollständig mit Ablaufverfolgungsfehlern gefüllt wird, implementiert [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] eine 10-minütige Auszeit für solche Ereignisse. Das heißt, dass nachdem in [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ein Ablaufverfolgungsfehler in das Ereignisprotokoll geschrieben wurde, der nächste Fehler erst nach mindesten 10 Minuten aufgenommen wird.  
+-   Nachrichtenprotokollierung/Ablaufverfolgung: Bei WCF schreibt ein Ereignis in das Ereignisprotokoll geschrieben, wenn die Ablaufverfolgung und nachrichtenprotokollierung fehlschlägt. Nicht jeder Fehler der Ablaufverfolgung löst jedoch ein Ereignis aus. Um zu verhindern, dass das Ereignisprotokoll vollständig mit ablaufverfolgungsfehlern gefüllt wird, implementiert WCF ein 10-minütigen Auszeit für solche Ereignisse. Dies bedeutet, dass wenn WCF einen Fehler in das Ereignisprotokoll schreibt, es daher erneut auf mindestens 10 Minuten nicht vorgesehen ist.  
   
 -   Freigegebene Listener: Der WCF TCP-Portfreigabedienst protokolliert ein Ereignis, wenn er nicht gestartet werden kann.  
   

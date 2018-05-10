@@ -2,11 +2,11 @@
 title: UDP-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 6dd1ee02b51dc969af0ba1bc418b7fb20f6f0ed6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9f7600bff17c015f28c3fb94ed5360561d45c65b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="udp-activation"></a>UDP-Aktivierung
 Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel. Es erweitert die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Stichprobe, die prozessaktivierung mit dem Windows Process Activation Service (WAS) unterstützen.  
@@ -20,7 +20,7 @@ Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/
 -   Einem Dienst, der in einem von WAS aktivierten Workerprozess gehostet wird und Nachrichten über den benutzerdefinierten UDP-Transport empfängt.  
   
 ## <a name="udp-protocol-activator"></a>UDP-Protokoll-Aktivierer  
- Der UDP-Protokoll-Aktivierer ist eine Brücke zwischen dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client und dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst. Er bietet Datenkommunikation über das UDP-Protokoll auf der Transportebene. Seine zwei Hauptfunktionen sind:  
+ Der UDP-Protokoll-Aktivierer ist eine Brücke zwischen dem WCF-Client und der WCF-Dienst. Er bietet Datenkommunikation über das UDP-Protokoll auf der Transportebene. Seine zwei Hauptfunktionen sind:  
   
 -   WAS-Listeneradapter (LA), der mit WAS zusammenarbeitet, um als Antwort auf eingehende Nachrichten Prozesse zu aktivieren.  
   
@@ -55,7 +55,7 @@ Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/
  Der UDP-Protokolllistener ist ein Modul innerhalb des Protokollaktivierers, der für die virtuelle Anwendung einen UDP-Endpunkt überwacht. Er ist in der `UdpSocketListener`-Klasse implementiert. Der Endpunkt liegt als `IPEndpoint` vor, bei dem die Portnummer aus der Bindung des Protokolls für die Site extrahiert wird.  
   
 ### <a name="control-service"></a>Steuerungsdienst  
- Im vorliegenden Beispiel wird [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] für die Kommunikation zwischen dem Aktivierer und dem WAS-Workerprozess verwendet. Der Dienst, der sich im Aktivierer befindet, wird als "Steuerungsdienst" bezeichnet.  
+ In diesem Beispiel verwenden wir WCF für die Kommunikation zwischen dem Aktivierer und WAS-Workerprozess an. Der Dienst, der sich im Aktivierer befindet, wird als "Steuerungsdienst" bezeichnet.  
   
 ## <a name="protocol-handlers"></a>Protokollhandler  
  Nachdem der Listeneradapter `WebhostOpenListenerChannelInstance` aufgerufen hat, startet der WAS-Prozess-Manager den Workerprozess (falls dieser noch nicht gestartet ist). Anschließend lädt der im Workerprozess befindliche Anwendungs-Manager den UDP-Prozessprotokollhandler (PPH) mit der Anforderung nach dieser `ListenerChannelId`. Der PPH wiederum ruft `IAdphManager`.`StartAppDomainProtocolListenerChannel` der UDP-AppDomain-Protokollhandler (ADPH) zu starten.  

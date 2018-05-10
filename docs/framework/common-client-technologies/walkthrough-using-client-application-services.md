@@ -22,18 +22,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e67d4297ca0fe7028380b6d862f9f86c93bcaa61
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clientanwendungsdienste zum Authentifizieren von Benutzern und zum Abrufen von Benutzerrollen und Einstellungen verwendet wird.  
   
  Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:  
   
--   In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Projekt-Designer zum Aktivieren und Konfigurieren von Clientanwendungsdiensten verwenden.  
+-   In diesem Thema wird beschrieben, wie Sie den Visual Studio-Projekt-Designer zum Aktivieren und Konfigurieren von Clientanwendungsdiensten verwenden.  
   
 -   Erstellen Sie eine einfache ASP.NET Web Service-Anwendung, um die Anwendungsdienste zu hosten und Ihre Clientkonfiguration zu testen.  
   
@@ -57,7 +57,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>So erstellen Sie eine Clientanwendung und aktivieren Sie Clientanwendungsdienste:  
   
-1.  Wählen Sie unter [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] die Menüoption **Datei &#124; Neu &#124; Projekt** aus.  
+1.  Wählen Sie in Visual Studio die Menüoption **Datei &#124; Neu &#124; Projekt** aus.  
   
 2.  Erweitern Sie im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** den **Visual Basic**- oder **Visual C#**-Knoten, und wählen Sie den **Windows**-Projekttyp aus.  
   
@@ -65,7 +65,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
 4.  Ändern Sie den **Namen** des Projekts in `ClientAppServicesDemo`, und klicken Sie dann auf **OK**.  
   
-     Ein neues Windows Forms-Projekt wird in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]geöffnet.  
+     Ein neues Windows Forms-Projekt wird in Visual Studio geöffnet.  
   
 5.  Wählen Sie aus dem Menü **Projekt** die Option **ClientAppServicesDemo-Eigenschaften**.  
   
@@ -250,7 +250,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
 1.  Fügen Sie im **Projektmappen-Explorer** im Projekt ClientAppServicesDemo einen Verweis auf die Assembly „System.Web“ ein.  
   
-2.  Wählen Sie die Datei Form1 aus. Wählen Sie dann **Ansicht &#124; Code** aus dem [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Hauptmenü aus.  
+2.  Wählen Sie die Datei „Form1“ und dann im Visual Studio-Hauptmenü **Ansicht &#124; Code** aus.  
   
 3.  Fügen Sie oben in der Datei Form1 im Code-Editor die folgenden Statements hinzu.  
   
@@ -331,7 +331,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
 5.  Geben Sie in das Fenster **Eigenschaften** einen **(Name)**-Wert von `rememberMeCheckBox` und einen **Text**-Wert von `&Remember me` ein.  
   
-6.  Wählen Sie **Ansicht &#124; Code** aus [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] im Hauptmenü aus.  
+6.  Wählen Sie im Visual Studio-Hauptmenü **Ansicht &#124; Code** aus.  
   
 7.  Fügen Sie im Code-Editor am oberen Rand der Datei den folgenden Code hinzu:  
   
@@ -371,7 +371,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>So ändern Sie die Benutzerrollen-basierte Benutzeroberfläche:  
   
-1.  Wählen Sie im **Projektmappen-Explorer** im Projekt ClientAppServicesDemo die Option Form1 aus. Wählen Sie dann **Ansicht &#124; Designer** aus [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] im Hauptmenü aus.  
+1.  Wählen Sie im **Projektmappen-Explorer** im Projekt „ClientAppServicesDemo“ die Option „Form1“ aus. Wählen Sie dann im Visual Studio-Hauptmenü **Ansicht &#124; Designer** aus.  
   
 2.  Fügen Sie im Designer dem Formular ein <xref:System.Windows.Forms.Button>-Steuerelement aus der **Toolbox** hinzu.  
   
@@ -407,7 +407,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
  Sie können die Anwendung jetzt ausführen und sich als Mitarbeiter anmelden, um festzustellen, dass die Schaltfläche nicht eingeblendet wird. Dann melden Sie sich als Manager an,  um festzustellen, dass die Schaltfläche nun angezeigt wird.  
   
 ## <a name="accessing-web-settings"></a>Zugriff auf Webeinstellungen  
- Im folgenden Verfahren fügen Sie dem Formular ein Textfeld hinzu und binden es an eine Webeinstellung. Wie beim vorherigen Code, bei dem Authentifizierung und Rollen verwendet werden, greift der Einstellungscode nicht direkt auf den Einstellungsanbieter zu. Stattdessen wird die stark typisierte Klasse `Settings` (als `Properties.Settings.Default` in C# und `My.Settings` in Visual Basic) von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] für Ihr Projekt generiert.  
+ Im folgenden Verfahren fügen Sie dem Formular ein Textfeld hinzu und binden es an eine Webeinstellung. Wie beim vorherigen Code, bei dem Authentifizierung und Rollen verwendet werden, greift der Einstellungscode nicht direkt auf den Einstellungsanbieter zu. Stattdessen wird die stark typisierte Klasse `Settings` (als `Properties.Settings.Default` in C# und `My.Settings` in Visual Basic) von Visual Studio für Ihr Projekt generiert.  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>So verwenden Sie die Webeinstellungen auf  der Benutzeroberfläche:  
   
@@ -425,7 +425,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
      Die `WebSettingsTestText` Einstellung wird im Designer mit dem Standardwert `DefaultText`angezeigt. Darüber hinaus wird eine `Settings` Klasse mit einer Eigenschaft `WebSettingsTestText` für das Projekt generiert.  
   
-5.  Wählen Sie im **Projektmappen-Explorer** im Projekt ClientAppServicesDemo die Option Form1 aus. Wählen Sie dann **Ansicht &#124; Designer** aus [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] im Hauptmenü aus.  
+5.  Wählen Sie im **Projektmappen-Explorer** im Projekt „ClientAppServicesDemo“ die Option „Form1“ aus. Wählen Sie dann im Visual Studio-Hauptmenü **Ansicht &#124; Designer** aus.  
   
 6.  Fügen Sie im Designer dem Formular ein <xref:System.Windows.Forms.TextBox>-Steuerelement hinzu.  
   
@@ -508,9 +508,9 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
  Im Offline-Modus werden bei allen Kundenanwendungsdienst-Anforderungen Daten aus dem lokalen Cache abgerufen, statt zu versuchen, ob die Dienste zuzugreifen In der Standardkonfiguration enthalten die lokalen Daten das Benutzerkennwort in verschlüsselter Form. Dadurch kann sich der Benutzer anmelden, während sich die Anwendung im Offline-Modus befindet. Weitere Informationen finden Sie unter [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
-#### <a name="to-enable-offline-mode-in-your-application"></a>So wird der Offline-Modus in der Anwendung aktiviert:  
+#### <a name="to-enable-offline-mode-in-your-application"></a>So wird der Offline-Modus in der Anwendung aktiviert  
   
-1.  Wählen Sie im **Projektmappen-Explorer** im Projekt ClientAppServicesDemo die Option Form1 aus. Wählen Sie dann **Ansicht &#124; Designer** aus [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] im Hauptmenü aus.  
+1.  Wählen Sie im **Projektmappen-Explorer** im Projekt „ClientAppServicesDemo“ die Option „Form1“ aus. Wählen Sie dann im Visual Studio-Hauptmenü **Ansicht &#124; Designer** aus.  
   
 2.  Fügen Sie im Designer dem Formular ein <xref:System.Windows.Forms.CheckBox>-Steuerelement hinzu.  
   

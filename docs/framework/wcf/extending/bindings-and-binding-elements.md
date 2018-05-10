@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2a0e797a921ff20b2432e824c92c09fff833bf7d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bindings-and-binding-elements"></a>Bindungen und Bindungselemente
 Bindungen sind Sammlungen spezieller Konfigurationselemente, die aufgerufen *Bindungselementen*, werden ausgewertet, von der Service-Laufzeit, wenn ein Client oder ein Dienstendpunkt erstellt wird. Der Typ und die Reihenfolge der Bindungselemente in einer Bindung bestimmen die Auswahl und Stapelreihenfolge des Protokolls und der Transportkanäle in einem Endpunkt-Kanalstapel.  
@@ -18,7 +18,7 @@ Bindungen sind Sammlungen spezieller Konfigurationselemente, die aufgerufen *Bin
  Eine Bindung muss genau ein Transportbindungselement enthalten. Jedes Transportbindungselement weist auf ein Standardnachrichten-Codierungsbindungselement hin, das durch das Hinzufügen von maximal einem Nachrichten codierenden Bindungselement zur Bindung überschrieben werden kann. Neben den Transportbindungselementen und Encoderbindungselementen kann die Bindung auch eine beliebige Anzahl an Protokollbindungselementen enthalten, die zusammen die für den Dienst benötigten Funktionen implementieren, und eine SOAP-Nachricht von einem Endpunkt zum nächsten senden. Weitere Informationen finden Sie unter [Bindungen verwenden, und Konfigurieren von Diensten und Clients](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
 ## <a name="extending-bindings-and-binding-elements"></a>Erweitern von Bindungen und Bindungselementen  
- Windows Communication Foundation (WCF) enthält die vom System bereitgestellte Bindungen, die eine Vielzahl von Szenarien abdecken. (Weitere Informationen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).) Unter Umständen müssen Sie jedoch manchmal eine Bindung erstellen und verwenden, die nicht in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zur Verfügung steht. Bei den folgenden Szenarien muss eine neue Bindung erstellt werden:  
+ Windows Communication Foundation (WCF) enthält die vom System bereitgestellte Bindungen, die eine Vielzahl von Szenarien abdecken. (Weitere Informationen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).) Möglicherweise gibt es Zeiten, aber wenn Sie benötigen zum Erstellen und verwenden eine Bindung, die nicht in WCF enthalten ist. Bei den folgenden Szenarien muss eine neue Bindung erstellt werden:  
   
 -   Um ein neues Bindungselement zu verwenden (z. B. ein neues Transport-, Codierungs- oder Protokollbindungselement), müssen Sie eine neue Bindung erstellen, die dieses Bindungselemente enthält. Wenn Sie beispielsweise ein benutzerdefiniertes `UdpTransportBindingElement` für den UDP-Transport hinzufügen, müssen Sie eine neue Bindung erstellen, damit Sie das Element verwenden können. Weitere Informationen zum Ausführen dieses Verhalten mithilfe der <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
@@ -37,7 +37,7 @@ Bindungen sind Sammlungen spezieller Konfigurationselemente, die aufgerufen *Bin
   
  Es gibt zwei allgemeine Arten von Kanälen: Protokollkanäle und Transportkanäle. Transportkanäle sind verantwortlich für die eigentliche Übertragung einer Nachricht von einem Netzwerkendpunkt zum nächsten. Transportkanäle benötigen einen Standardnachrichtenencoder und sollten auch den durch das Nachrichtenencoder-Bindungselement bereitgestellten alternativen Nachrichtenencoder verwenden können. Mit einen Nachrichtenencoder verwandeln Sie eine <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> in eine Übertragungsdarstellung und umgekehrt. Mit Protokollkanälen werden Protokolle auf SOAP-Ebene (z. B. WS-Sicherheit oder WS-ReliableMessaging) implementiert.  
   
- Die grundlegende Anforderung an Transportkanäle und Protokollkanäle besteht darin, die erforderlichen Kanalschnittstellen zu implementieren. Um eine funktionsfähige Kanalschicht zu erstellen, müssen ihnen Factorys und Listeners usw. zugewiesen sein. Um die Kanalimplementierungen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zu verwenden, muss ein zugewiesenes Bindungselement für jeden Kanal vom <xref:System.ServiceModel.Channels.BindingElement> abgeleitet werden. Darüber hinaus sollte auch ein entsprechendes Bindungserweiterungselement vorliegen, das in die Konfigurationsdateien, die vom <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> abgeleitet werden, eingeschlossen wird.  
+ Die grundlegende Anforderung an Transportkanäle und Protokollkanäle besteht darin, die erforderlichen Kanalschnittstellen zu implementieren. Um eine funktionsfähige Kanalschicht zu erstellen, müssen ihnen Factorys und Listeners usw. zugewiesen sein. Um die kanalimplementierungen von WCF verwenden, es ein zugewiesenes Bindungselement sein muss, abgeleitet <xref:System.ServiceModel.Channels.BindingElement> für jeden Kanal und sollte ein verwandte bindungserweiterungselement für die Einbeziehung in die Konfigurationsdateien, die von abgeleitet<xref:System.ServiceModel.Configuration.BindingElementExtensionElement>.  
   
  Wie zuvor erwähnt können Bindungselemente für Nachrichtenencoder, Protokollkanalimplementierungen und Transportkanalimplementierungen zu einem Kanalstapel zusammengefasst werden. Zum Aufreihen in einem geordneten Satz wird die Bindung verwendet. Bindungen und Bindungselemente verbinden das Anwendungsprogrammiermodell mit dem Kanalmodell. Sie können die Kanalimplementierungen direkt aus dem Code verwenden, aber erst nachdem Encoder, Transporte und Protokolle als Bindungselemente implementiert wurden, können sie aus dem Dienstschichtprogrammiermodell heraus verwendet werden.  
   

@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Details|In .NET 4.5 beträgt der Standardgrenzwert für ein WPF-Textfeld 100 (im Gegensatz zu .NET 4.0, wo der Wert unbegrenzt ist).|
+|Details|In .NET Framework 4.5 beträgt der Standardgrenzwert für ein WPF-Textfeld 100 (im Gegensatz zu .NET Framework 4.0, bei dem der Wert unbegrenzt ist).|
 |Vorschlag|Wenn der Grenzwert von 100 für die Aktion „Rückgängig machen“ zu niedrig ist, kann er explizit mit <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit> festgelegt werden.|
 |Bereich|Microsoft Edge|
 |Version|4.5|

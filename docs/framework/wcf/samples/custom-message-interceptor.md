@@ -2,11 +2,11 @@
 title: Benutzerdefinierter Nachrichteninterceptor
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a59b2075473e2ca4c8cb8751fd6cb733f282238b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-interceptor"></a>Benutzerdefinierter Nachrichteninterceptor
 In diesem Beispiel wird die Verwendung des Kanalerweiterbarkeitsmodells veranschaulicht. Es zeigt insbesondere, wie ein benutzerdefiniertes Bindungselement implementiert wird, das Kanalfactorys und Kanallistener erstellt, um sämtliche ein- und ausgehenden Nachrichten an einer bestimmten Stelle im Laufzeitstapel abzufangen. Im Beispiel sind auch ein Client und ein Server, die die Verwendung dieser benutzerdefinierten Factorys veranschaulichen, enthalten.  
@@ -25,7 +25,7 @@ In diesem Beispiel wird die Verwendung des Kanalerweiterbarkeitsmodells veransch
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- Das Beispiel beschreibt die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten geschichteten Kanals in Windows Communication Foundation (WCF) anhand des kanalframeworks und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bewährte Methoden. Mit folgenden Schritten wird ein benutzerdefinierter geschichteter Kanal erstellt:  
+ Im Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten geschichteten Kanals in Windows Communication Foundation (WCF) anhand des kanalframeworks und WCF-best Practices beschrieben. Mit folgenden Schritten wird ein benutzerdefinierter geschichteter Kanal erstellt:  
   
 1.  Legen Sie fest, welche Kanalform die Kanalfactory und der Kanallistener unterstützen sollen.  
   

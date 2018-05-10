@@ -2,11 +2,11 @@
 title: Tokenauthentifizierer
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-authenticator"></a>Tokenauthentifizierer
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenauthentifizierers. Ein Tokenauthentifizierer in Windows Communication Foundation (WCF) Dient zum Überprüfen des Tokens, die mit der Nachricht verwendete prüft, ob es in sich selbst konsistent und Authentifizieren der Identität mit dem Token zugeordnet.  
@@ -23,11 +23,11 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tok
   
 -   Wie der Server die Clientanmeldeinformationen mit einem benutzerdefinierten Tokenauthentifizierer überprüfen kann.  
   
--   Wie der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstcode mit dem benutzerdefinierten Tokenauthentifizierer übereinstimmt.  
+-   Der WCF-Dienstcode wie sich mit dem benutzerdefinierten Tokenauthentifizierer verknüpft.  
   
 -   Wie der Server mit dem X.509-Zertifikat des Servers authentifiziert werden kann.  
   
- In diesem Beispiel wird auch gezeigt, wie in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auf die Identität des Aufrufers nach dem benutzerdefinierten Tokenauthentifizierungsprozess zugegriffen werden kann.  
+ Dieses Beispiel zeigt auch, wie die Identität des Aufrufers nach dem benutzerdefinierten tokenauthentifizierungsprozess WCF zugänglich ist.  
   
  Der Dienst macht einen einzelnen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit der App.conf-Konfigurationsdatei definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einem Standard-`wsHttpBinding` konfiguriert, wobei der Sicherheitsmodus auf "Nachricht" festgelegt ist. Dies ist der Standardmodus von `wsHttpBinding`. In diesem Beispiel wird das Standard-`wsHttpBinding` auf die Verwendung der Clientbenutzernamenauthentifizierung festgelegt. Außerdem konfiguriert der Dienst das Dienstzertifikat mit `serviceCredentials`-Verhalten. Mit dem `securityCredentials`-Verhalten können Sie ein Dienstzertifikat angeben. Ein Dienstzertifikat wird von einem Client verwendet, um den Dienst zu authentifizieren und Nachrichtenschutz bereitzustellen. Die folgende Konfiguration verweist auf das Zertifikat localhost, das während des Beispielsetups installiert wird, wie im folgenden Setup beschrieben.  
   

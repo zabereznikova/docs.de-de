@@ -2,11 +2,11 @@
 title: Anleitung zum Einrichten eines virtuellen Verzeichnisses
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ff578b69590071ef2135e777b3105e7c226563e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>Anleitung zum Einrichten eines virtuellen Verzeichnisses
 Der Windows Communication Foundation (WCF)-Beispiele dienen zur eines gemeinsamen virtuellen Verzeichnisses mit dem Namen Servicemodelsamples, die das das dem Ordner %SystemDrive%\inetpub\wwwroot\servicemodelsamples zugeordnet ist.  
@@ -35,12 +35,12 @@ Der Windows Communication Foundation (WCF)-Beispiele dienen zur eines gemeinsame
 7.  Klicken Sie auf **OK**. Die Webanwendung wird für die WCF-Beispiele erstellt.  
   
     > [!NOTE]
-    >  Sie müssen diesen Vorgang nur einmal ausführen, da für alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiele dieselbe Webanwendung mit dem Namen servicemodelsamples verwendet wird.  
+    >  Diese Aufgabe muss nur einmal ausgeführt werden, da alle WCF-Beispiele auf dem gleichen Namen Servicemodelsamples Webanwendung verwenden.  
   
     > [!NOTE]
     >  In dieser Dokumentation werden die Begriffe `virtual directory` und `Web application` als Synonyme behandelt.  
   
-     Nachdem Sie das virtuelle Verzeichnis erstellt haben, müssen Sie die entsprechenden Eigenschaften einstellen, um das Ausführen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten zu ermöglichen. Details finden Sie weiter unten.  
+     Zusätzlich zur Erstellung des virtuellen Verzeichnisses, müssen Sie auch die Eigenschaften zum Aktivieren der WCF-Dienste ausgeführt festlegen. Details finden Sie weiter unten.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>So erstellen Sie ein virtuelles Verzeichnis in IIS 5.1 oder 6.0  
   
@@ -52,7 +52,7 @@ Der Windows Communication Foundation (WCF)-Beispiele dienen zur eines gemeinsame
   
 4.  Geben Sie im Assistenten `servicemodelsamples` als Alias für das virtuelle Verzeichnis, das Sie erstellen.  
   
-5.  Legen Sie den Pfad auf %SystemDrive%\inetpub\wwwroot\servicemodelsamples fest. Die meisten der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
+5.  Legen Sie den Pfad auf %SystemDrive%\inetpub\wwwroot\servicemodelsamples fest. Die meisten der WCF-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
   
 6.  Klicken Sie auf **Weiter**.  
   
@@ -65,7 +65,7 @@ Der Windows Communication Foundation (WCF)-Beispiele dienen zur eines gemeinsame
 8.  Klicken Sie auf **Weiter**, und klicken Sie dann auf **Fertig stellen** um den Assistenten abzuschließen.  
   
     > [!NOTE]
-    >  Sie müssen diesen Vorgang nur einmal ausführen, da für alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiele dasselbe virtuelle Verzeichnis mit dem Namen servicemodelsamples verwendet wird.  
+    >  Diese Aufgabe muss nur einmal ausgeführt werden, da alle WCF-Beispiele verwenden Sie das virtuelle Verzeichnis des gleichen Servicemodelsamples.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Zum Festlegen von Eigenschaften der zusätzlich ein virtuelles Verzeichnis in IIS 7.0 oder 7.5  
   

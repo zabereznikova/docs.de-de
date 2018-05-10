@@ -2,14 +2,14 @@
 title: 'Transport: WSE 3.0-TCP-Interoperabilität'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: fb877e6d55214e9a268a88b33a4613ca8df0eb8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0-TCP-Interoperabilität
-Die WSE 3.0-TCP-Interoperabilitätstransports-Beispiel zeigt, wie eine TCP-duplexsitzung als ein benutzerdefinierter Windows Communication Foundation (WCF)-Transport implementiert wird. Außerdem zeigt es, wie Sie die Erweiterbarkeit der Kanalschicht verwenden können, um über das Netzwerk auf vorhandene bereitgestellte Systeme zuzugreifen. Die folgenden Schritte veranschaulichen, wie dieser benutzerdefinierte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transport erstellt wird:  
+Die WSE 3.0-TCP-Interoperabilitätstransports-Beispiel zeigt, wie eine TCP-duplexsitzung als ein benutzerdefinierter Windows Communication Foundation (WCF)-Transport implementiert wird. Außerdem zeigt es, wie Sie die Erweiterbarkeit der Kanalschicht verwenden können, um über das Netzwerk auf vorhandene bereitgestellte Systeme zuzugreifen. Die folgenden Schritte zeigen, wie dieser benutzerdefinierte WCF-Transport zu erstellen:  
   
 1.  Beginnen Sie mit einem TCP-Socket. Erstellen Sie Client- und Serverimplementierungen von <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, die Nachrichtenbegrenzungen mittels DIME Framing voneinander abgrenzen.  
   
@@ -128,7 +128,7 @@ Die WSE 3.0-TCP-Interoperabilitätstransports-Beispiel zeigt, wie eine TCP-duple
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- Er besteht aus zwei Tests: Der erste Test richtet einen typisierten Client mithilfe von aus WSE 3.0 WSDL generiertem Code ein. Der zweite Test verwendet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sowohl als Client als auch als Server, indem er Nachrichten direkt über die Kanal-APIs sendet.  
+ Er besteht aus zwei Tests: Der erste Test richtet einen typisierten Client mithilfe von aus WSE 3.0 WSDL generiertem Code ein. Der zweite Test verwendet WCF als Client und Server durch Senden von Nachrichten direkt über die Kanal-APIs.  
   
  Beim Ausführen des Beispiels sollte die Ausgabe wie folgt aussehen.  
   
@@ -182,7 +182,7 @@ Symbols:
   
     2.  Legen Sie das StockService-Projekt als Startprojekt fest.  
   
-    3.  Öffnen Sie StockService.cs im StockService-Projekt, und kommentieren Sie das [Policy]-Attribut in der `StockService`-Klasse aus. Dadurch werden die Sicherheitsfunktionen im Beispiel deaktiviert. Obwohl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit WSE 3.0-Sicherheitsendpunkten interagieren kann, ist die Sicherheit deaktiviert, um dieses Beispiel auf den benutzerdefinierten TCP-Transport zu konzentrieren.  
+    3.  Öffnen Sie StockService.cs im StockService-Projekt, und kommentieren Sie das [Policy]-Attribut in der `StockService`-Klasse aus. Dadurch werden die Sicherheitsfunktionen im Beispiel deaktiviert. Während WCF mit WSE 3.0 sichere Endpunkte zusammenarbeiten kann, ist die Sicherheitsfunktionen deaktiviert, um dieses Beispiel konzentriert sich auf den benutzerdefinierten TCP-Transport zu halten.  
   
     4.  Drücken Sie F5, um `TcpSyncStockService` zu starten. Der Dienst wird in einem neuen Konsolenfenster gestartet.  
   

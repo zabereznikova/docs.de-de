@@ -2,11 +2,11 @@
 title: System.ServiceModel.Channels.MessageSent
 ms.date: 03/30/2017
 ms.assetid: 454cd09c-992f-4faf-9751-2de56e6401da
-ms.openlocfilehash: 0223368dbdca1f77157dfc7ca601134508560771
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e69a534d9657415923e5a7e12b65fd30f6664788
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="systemservicemodelchannelsmessagesent"></a>System.ServiceModel.Channels.MessageSent
 System.ServiceModel.Channels.MessageSent  
@@ -14,7 +14,7 @@ System.ServiceModel.Channels.MessageSent
 ## <a name="description"></a>Beschreibung  
  Es wurde eine Nachricht über einen Kanal gesendet.  
   
- Diese Ablaufverfolgung wird ausgegeben, wenn eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Nachricht gesendet wird, sofern die `System.ServiceModel`-Ablaufverfolgungsquelle auf der Stufe Information oder Ausführlich aktiviert wurde. Diese Ablaufverfolgung ist notwendig, um den Nachrichtenkorrelationspfeil in der Aktivitätsdiagrammansicht zu sehen.  
+ Diese Ablaufverfolgung wird ausgegeben, wenn eine WCF-Nachricht gesendet wird, wenn die `System.ServiceModel` Ablaufverfolgungsquelle auf der Stufe Information oder ausführlich aktiviert ist. Diese Ablaufverfolgung ist notwendig, um den Nachrichtenkorrelationspfeil in der Aktivitätsdiagrammansicht zu sehen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  

@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-ms.openlocfilehash: 2588cc0bd70932aa91d300d8ecbe35cd2bcd7d00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation-Endpunkte
-Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die ein [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst anbietet.  
+Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die einen WCF-Dienst anbietet.  
   
  Eine Übersicht darüber, wie Sie einen Endpunkt zu erstellen, finden Sie unter [Endpunkterstellung](../../../docs/framework/wcf/endpoint-creation-overview.md). Jeder Endpunkt enthält Folgendes:  
   
@@ -34,7 +34,7 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
  Beschreibt die Struktur eines Endpunkts und erläutert, wie Sie einen Endpunkt in einer Konfiguration oder im Code definieren und wie die Standardendpunkte, Bindungen und Verhalten von der Runtime bereitgestellt werden.  
   
  [Angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- Beschreibt, wie die Kommunikation mit einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst über Endpunkte erfolgt.  
+ Beschreibt, wie die Kommunikation mit einem WCF-Dienst über Endpunkte erfolgt.  
   
  [Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Veranschaulicht, wie Sie einen Dienstendpunkt in einer Konfiguration erstellen.  

@@ -2,14 +2,14 @@
 title: Vorgangsformatierer und Vorgangsauswahl
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db548e99c99ba6f29cc1c6e998d0e7485cd41046
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Vorgangsformatierer und Vorgangsauswahl
-In diesem Beispiel wird veranschaulicht, wie Erweiterungspunkte für Windows Communication Foundation (WCF) verwendet werden können, um Nachrichtendaten in einem anderen Format zuzulassen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erwartet. Standardmäßig erwarten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Formatierer, dass Methodenparameter unter dem `soap:body`-Element enthalten sind. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  
+In diesem Beispiel wird veranschaulicht, wie Erweiterungspunkte für Windows Communication Foundation (WCF) verwendet werden können, um Nachrichtendaten in einem anderen Format von Was WCF erwartet zuzulassen. Standardmäßig erwarten WCF Formatierungsprogramme Methodenparameter unter einzuschließenden der `soap:body` Element. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  
   
  Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), implementiert die `ICalculator` Dienstvertrag. Es zeigt, wie Add-, Subtract-, Multiply- und Divide-Nachrichten so geändert werden können, dass für Client-an-Server-Anforderungen HTTP GET und für Server-zu-Client-Antworten HTTP POST mit POX-Nachrichten verwendet werden.  
   
@@ -29,7 +29,7 @@ In diesem Beispiel wird veranschaulicht, wie Erweiterungspunkte für Windows Com
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="key-concepts"></a>Grundbegriffe  
- `QueryStringFormatter` - Der Vorgangsformatierer ist die Komponente in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], die für das Umwandeln einer Nachricht in ein Array von Parameterobjekten und eines Arrays von Parameterobjekten in eine Nachricht verantwortlich ist. Auf dem Client erfolgt dies mithilfe der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Schnittstelle, und auf dem Server mit der <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Schnittstelle. Mit diesen Schnittstellen können Benutzer die Anforderungs- und Antwortnachrichten aus der `Serialize`-Methode und der `Deserialize`-Methode abrufen.  
+ `QueryStringFormatter` -Der vorgangsformatierer ist die Komponente in WCF, die für das Umwandeln einer Nachricht in ein Array von Parameterobjekten und ein Array von Parameterobjekten in eine Nachricht verantwortlich ist. Auf dem Client erfolgt dies mithilfe der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Schnittstelle, und auf dem Server mit der <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Schnittstelle. Mit diesen Schnittstellen können Benutzer die Anforderungs- und Antwortnachrichten aus der `Serialize`-Methode und der `Deserialize`-Methode abrufen.  
   
  In diesem Beispiel implementiert `QueryStringFormatter` beide Schnittstellen und wird sowohl auf dem Client als auch auf dem Server implementiert.  
   
@@ -59,10 +59,10 @@ In diesem Beispiel wird veranschaulicht, wie Erweiterungspunkte für Windows Com
   
  Der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> wird auf die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Implementierung festgelegt.  
   
- Standardmäßig verwendet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] einen Adressfilter mit exakter Übereinstimmung. Der URI in der eingehenden Nachricht enthält ein Vorgangsnamenssuffix, gefolgt von einer Abfragezeichenfolge, die Parameterdaten enthält. Daher ändert das Endpunktverhalten auch den Adressfilter in einen Präfixübereinstimmungsfilter. Er verwendet die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> für diesen Zweck.  
+ WCF verwendet standardmäßig einen Adressfilter mit exakter Übereinstimmung. Der URI in der eingehenden Nachricht enthält ein Vorgangsnamenssuffix, gefolgt von einer Abfragezeichenfolge, die Parameterdaten enthält. Daher ändert das Endpunktverhalten auch den Adressfilter in einen Präfixübereinstimmungsfilter. Er verwendet den WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> für diesen Zweck.  
   
 ### <a name="installing-operation-formatters"></a>Installieren von Vorgangsformatierern  
- Vorgangsverhaltensweisen, die Formatierer angeben, sind eindeutig. Standardmäßig wird ein solches Verhalten für jeden Vorgang stets zum Erstellen des erforderlichen Vorgangsformatierers implementiert. Auch wenn diese Verhaltensweisen wie noch ein weiteres Vorgangsverhalten aussehen mögen, sind sie nicht durch andere Attribute zu identifizieren. Zum Installieren eines Ersatzverhaltens muss die Implementierung zuerst nach speziellen, vom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Typladeprogramm standardmäßig installierten Formatiererverhalten suchen, und das dann entweder ersetzen oder ein kompatibles Verhalten so hinzufügen, dass es nach dem Standardverhalten ausgeführt wird.  
+ Vorgangsverhaltensweisen, die Formatierer angeben, sind eindeutig. Standardmäßig wird ein solches Verhalten für jeden Vorgang stets zum Erstellen des erforderlichen Vorgangsformatierers implementiert. Auch wenn diese Verhaltensweisen wie noch ein weiteres Vorgangsverhalten aussehen mögen, sind sie nicht durch andere Attribute zu identifizieren. Zum Installieren eines ersatzverhaltens muss die Implementierung suchen Sie nach bestimmten Formatierers Verhaltensweisen, die von den WCF-typladeprogramm standardmäßig und entweder installiert werden, die sie ersetzen, oder fügen ein kompatibles Verhalten nach dem Standardverhalten ausgeführt.  
   
  Diese Vorgangsformatiererverhalten können programmgesteuert vor dem Aufruf von <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> eingerichtet werden, oder indem man ein Vorgangsverhalten angibt, das nach dem Standardverhalten ausgeführt wird. Es kann jedoch nicht einfach wie ein Endpunktverhalten (und damit per Konfiguration) eingerichtet werden, da das Verhaltensmodell das Ersetzen eines Verhaltens durch ein anderes oder sonstiges Ändern der Beschreibungsstruktur nicht zulässt.  
   

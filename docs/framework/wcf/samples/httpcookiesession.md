@@ -2,14 +2,14 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 54e2459f5b480d8f53df42a08d4ebc8ac07b128c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64a7cba7b1bbc55a4504e3af4784fcb2a84f0fa1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals für die Verwendung von HTTP-Cookies für die Sitzungsverwaltung veranschaulicht. Dieser Kanal ermöglicht die Kommunikation zwischen Windows Communication Foundation (WCF)-Dienste und ASMX-Clients oder zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Clients und ASMX-Diensten.  
+In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals für die Verwendung von HTTP-Cookies für die Sitzungsverwaltung veranschaulicht. Dieser Kanal ermöglicht die Kommunikation zwischen Windows Communication Foundation (WCF)-Dienste und ASMX-Clients oder WCF-Clients und ASMX-Diensten.  
   
  Wenn ein Client eine Webmethode in einem sitzungsbasierten ASMX-Webdienst aufruft, führt das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Modul Folgendes aus:  
   
@@ -74,7 +74,7 @@ In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals 
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- Wenn die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>-Methode aufgerufen wird und sich keine Meldungen in der Meldungswarteschlange befinden, wartet der Kanal für einen angegebenen Zeitraum und beendet sich dann selbst. So werden die für Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients erstellten Sitzungskanäle bereinigt.  
+ Wenn die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>-Methode aufgerufen wird und sich keine Meldungen in der Meldungswarteschlange befinden, wartet der Kanal für einen angegebenen Zeitraum und beendet sich dann selbst. Dies wird für nicht-WCF-Clients erstellten Sitzungskanäle bereinigt.  
   
  Mit `channelMapping` wird `ReplySessionChannels` nachverfolgt. Außerdem wird der zugrunde liegende `innerChannel` erst geschlossen, wenn alle akzeptierten Kanäle geschlossen wurden. So kann `HttpCookieReplySessionChannel` über die Lebensdauer von `HttpCookieReplySessionChannelListener` hinaus vorhanden sein. Außerdem besteht nicht die Gefahr, dass der Listener durch die Garbage Collection entfernt wird, da die akzeptierten Kanäle über den `OnClosed`-Rückruf einen Verweis auf den Listener beibehalten.  
   
@@ -82,7 +82,7 @@ InputQueue<RequestContext> requestQueue;
  Der entsprechende Clientkanal befindet sich in der `HttpCookieSessionChannelFactory`-Klasse. Bei der Kanalerstellung schließt die Kanalfactory den inneren Anforderungskanal mit einem `HttpCookieRequestSessionChannel` ein. Die `HttpCookieRequestSessionChannel`-Klasse leitet die Aufrufe des zugrunde liegenden Anforderungskanals weiter. Wenn der Client den Proxy schließt, sendet `HttpCookieRequestSessionChannel` eine Meldung an den Dienst, mit der angegeben wird, dass der Kanal geschlossen wird. So kann der Dienstkanalstapel den verwendeten Sitzungskanal ordnungsgemäß beenden.  
   
 ## <a name="binding-and-binding-element"></a>Bindung und Bindungselement  
- Nach dem Erstellen der Dienst- und Clientkanäle ist der nächste Schritt das Integrieren der Kanäle in der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit. Kanäle werden durch Bindungen und Bindungselemente für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügbar gemacht. Eine Bindung besteht aus einem oder mehreren Bindungselementen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt mehrere systemdefinierte Bindungen bereit, beispielsweise BasicHttpBinding und WSHttpBinding. Die `HttpCookieSessionBindingElement`-Klasse enthält die Implementierung des Bindungselements. Sie überschreibt die Methoden zur Kanallistener- und Kanalfactoryerstellung, um die erforderlichen Instanziierungen des Kanallisteners und der Kanalfactory auszuführen.  
+ Als Nächstes werden nach dem Erstellen der Dienst- und Kanäle können sie in der WCF-Laufzeit zu integrieren. Kanäle werden durch Bindungen und Bindungselemente WCF verfügbar gemacht. Eine Bindung besteht aus einem oder mehreren Bindungselementen. WCF bietet mehrere systemdefinierte Bindungen; z. B. "BasicHttpBinding" oder "WSHttpBinding". Die `HttpCookieSessionBindingElement`-Klasse enthält die Implementierung des Bindungselements. Sie überschreibt die Methoden zur Kanallistener- und Kanalfactoryerstellung, um die erforderlichen Instanziierungen des Kanallisteners und der Kanalfactory auszuführen.  
   
  Im Beispiel werden Richtlinienassertionen für die Dienstbeschreibung verwendet. So können im Beispiel die Kanalanforderungen für andere Clients veröffentlicht werden, die den Dienst verwenden können. Dieses Bindungselement veröffentlicht beispielsweise Richtlinienassertionen, damit potenzielle Clients wissen, dass Sitzungen unterstützt werden. Da im Beispiel die `ExchangeTerminateMessage`-Eigenschaft in der Bindungselementkonfiguration aktiviert wird, werden die erforderlichen Assertionen hinzugefügt, um zu zeigen, dass der Dienst eine zusätzliche Meldungsaustauschaktion zum Beenden der Sitzungskommunikation unterstützt. Clients können diese Aktion dann verwenden. Im folgenden WSDL-Code werden die aus `HttpCookieSessionBindingElement` erstellten Richtlinienassertionen veranschaulicht.  
   

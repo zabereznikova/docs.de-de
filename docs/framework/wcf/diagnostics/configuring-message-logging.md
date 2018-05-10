@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-message-logging"></a>Konfigurieren der Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für verschiedene Szenarien konfigurieren können.  
@@ -66,7 +66,7 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
   
  Für ausgehende Nachrichten erfolgt die Protokollierung unmittelbar nachdem die Nachricht den Benutzercode verlassen hat und unmittelbar bevor die Nachricht abgesendet wird.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] protokolliert Nachrichten auf zwei verschiedenen Ebenen, Dienst und Transport. Falsch formatierte Nachrichten werden auch protokolliert. Die drei Kategorien sind unabhängig voneinander und können in der Konfiguration getrennt aktiviert werden.  
+ WCF protokolliert Nachrichten auf zwei unterschiedlichen Ebenen, Dienst und Transport. Falsch formatierte Nachrichten werden auch protokolliert. Die drei Kategorien sind unabhängig voneinander und können in der Konfiguration getrennt aktiviert werden.  
   
  Sie können die Protokollierungsebene steuern, indem Sie das `logMessagesAtServiceLevel`, `logMalformedMessages`-Attribut und das `logMessagesAtTransportLevel`-Attribut des `messageLogging`-Elements festlegen.  
   
@@ -77,7 +77,7 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
  Auf dieser Ebene protokollierte Nachrichten können vor oder nach dem Transport codiert oder decodiert werden. Wenn Filter definiert wurden, werden nur Nachrichten, die zu den Filtern passen, protokolliert. Andernfalls werden alle Nachrichten auf der Transportschicht protokolliert. Auf dieser Ebene werden alle Infrastrukturnachrichten protokolliert, einschließlich zuverlässiger Messagingnachrichten. Bei per Streaming übertragenen Nachrichten werden nur die Header protokolliert. Außerdem werden sichere Nachrichten auf dieser Ebene verschlüsselt protokolliert, außer bei Verwendung eines sicheren Transports wie HTTPS.  
   
 ### <a name="malformed-level"></a>Falsch formatierte Ebene  
- Falsch formatierte Nachrichten sind Nachrichten, die vom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Stapel in irgendeiner Phase der Verarbeitung abgelehnt werden. Falsch formatierte Nachrichten werden unverändert protokolliert: verschlüsselt, wenn sie bereits verschlüsselt sind, mit nicht ordnungsgemäßem XML usw. `maxSizeOfMessageToLog` definierte die zu protokollierende Nachrichtengröße als CDATA. Standardmäßig beträgt `maxSizeOfMessageToLog` 256K. Weitere Informationen zu diesem Attribut finden Sie in Abschnitt Weitere Optionen.  
+ Falsch formatierte Nachrichten sind Nachrichten, die vom WCF-Stapel in keiner Phase der Verarbeitung abgelehnt werden. Falsch formatierte Nachrichten werden unverändert protokolliert: verschlüsselt, wenn sie bereits verschlüsselt sind, mit nicht ordnungsgemäßem XML usw. `maxSizeOfMessageToLog` definierte die zu protokollierende Nachrichtengröße als CDATA. Standardmäßig beträgt `maxSizeOfMessageToLog` 256K. Weitere Informationen zu diesem Attribut finden Sie in Abschnitt Weitere Optionen.  
   
 ### <a name="other-options"></a>Weitere Optionen  
  Zusätzlich zu den Protokollierungsebenen kann der Benutzer die folgenden Optionen angeben:  

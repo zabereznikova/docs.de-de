@@ -2,24 +2,24 @@
 title: Routingdienste
 ms.date: 03/30/2017
 ms.assetid: 9a430b4c-46eb-4d15-afbc-8834f0e985ab
-ms.openlocfilehash: 1060a64d5b56e4b06b9004f85502a83869af4434
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d1ffb9cc79905c7064e99f7d4c13e714cdd1bde
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="routing-services"></a>Routingdienste
 Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie mithilfe den Windows Communication Foundation (WCF)-Router.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Hello World mit dem Routingdienst](../../../../docs/framework/wcf/samples/hello-world-with-the-routing-service.md)  
- Zeigt die Verwendung des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Routers.  
+ Veranschaulicht, wie der WCF-Router.  
   
  [Überbrückung und Fehlerbehandlung](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md)  
- Veranschaulicht, wie der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Routingdienst zum Überbrücken von Kommunikation zwischen einem Client und einem Dienst mit unterschiedlichen Bindungen verwendet wird.  
+ Veranschaulicht, wie der WCF-Routingdienst zum Überbrücken von Kommunikation zwischen einem Client und einem Dienst mit unterschiedliche Bindungen verwendet.  
   
  [Erweiterte Filter](../../../../docs/framework/wcf/samples/advanced-filters.md)  
- Veranschaulicht, wie das Standard-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Rechnerbeispiel angepasst wird, um mit dem Routingdienst zu kommunizieren.  
+ Veranschaulicht, wie die standardmäßigen WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst werden kann.  
   
  [Dynamische Neukonfiguration](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md)  
  Veranschaulicht, wie der Routingdienst während der Laufzeit dynamisch neu konfiguriert werden kann.  

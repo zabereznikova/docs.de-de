@@ -2,11 +2,11 @@
 title: Fehler beim Überwachen von Dienstvorgängen
 ms.date: 03/30/2017
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-ms.openlocfilehash: 16ed779f77836fb68cf1edf1e01dbb3c0df01d45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d708b537789c8d0decf75df780300c1e185c4c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="monitoring-service-operation-failures"></a>Fehler beim Überwachen von Dienstvorgängen
 Wenn die analytische Ablaufverfolgung für eine Anwendung aktiviert ist, können Dienstfehler in der Ereignisanzeige auf einfache Weise überwacht werden.  In diesem Thema wird erläutert, wie festgestellt wird, wenn ein Dienstvorgang fehlschlägt, und wie die Fehlerursache bestimmt wird.  
@@ -17,7 +17,7 @@ Wenn die analytische Ablaufverfolgung für eine Anwendung aktiviert ist, können
   
 2.  Wenn Sie analytische Ablaufverfolgung nicht aktiviert haben, erweitern Sie **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendungsserver-Anwendungen** . Wählen Sie **Ansicht**, **analytische und Debugprotokolle einblenden**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren**. Lassen Sie die Ereignisanzeige geöffnet, damit Ablaufverfolgungen angezeigt werden können, nachdem der Dienstvorgang fehlgeschlagen ist.  
   
-3.  Als Nächstes öffnen Sie das Beispiel erstellt, der [Lernprogramm für erste Schritte](../../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Hinweis an, die Sie ausführen müssen [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] als Administrator, damit der Dienst erstellt werden kann. Haben die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Beispiele, die installiert werden, öffnen Sie die [Einstieg](../../../../../docs/framework/wcf/samples/getting-started-sample.md), enthält das abgeschlossene Projekt, das im Lernprogramm erstellt.  
+3.  Als Nächstes öffnen Sie das Beispiel erstellt, der [Lernprogramm für erste Schritte](../../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Hinweis an, die Sie ausführen müssen [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] als Administrator, damit der Dienst erstellt werden kann. Wenn Sie die WCF-Beispiele installiert haben, können Sie öffnen die [Einstieg](../../../../../docs/framework/wcf/samples/getting-started-sample.md), enthält das abgeschlossene Projekt, das im Lernprogramm erstellt.  
   
 4.  Fügen Sie im Serverprojekt in der Datei Program.cs die folgende Codezeile am Anfang der `Divide`-Methode in der `CalculatorService`-Klasse hinzu:  
   

@@ -2,24 +2,24 @@
 title: SOAP- und HTTP-Endpunkte
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP- und HTTP-Endpunkte
-In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementiert und im SOAP-Format verfügbar gemacht und die "Plain Old XML" (POX) formatieren Sie mit der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Webprogrammiermodell. Finden Sie unter der [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) Sample detaillierte Informationen über die HTTP-Bindung für den Dienst. Dieses Beispiel befasst sich mit den Details der Bereitstellung des gleichen Diensts über SOAP und HTTP, allerdings mit unterschiedlichen Bindungen.  
+In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementiert und im SOAP-Format und das "Plain Old XML" (POX)-Format, die mit dem WCF-Web-Programmiermodell verfügbar gemacht. Finden Sie unter der [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) Sample detaillierte Informationen über die HTTP-Bindung für den Dienst. Dieses Beispiel befasst sich mit den Details der Bereitstellung des gleichen Diensts über SOAP und HTTP, allerdings mit unterschiedlichen Bindungen.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
- Die Bereitstellung eines RPC-Diensts über SOAP und HTTP mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]  
+ Verfügbarmachen eines RPC-Diensts über SOAP und HTTP, die mithilfe von WCF.  
   
 ## <a name="discussion"></a>Diskussion  
- Dieses Beispiel besteht aus zwei Komponenten: einem Webanwendungsprojekt (Dienst), das einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst enthält, und einer Konsolenanwendung (Client), mit dem Dienstvorgänge mit SOAP- und HTTP-Bindungen aufgerufen werden.  
+ Dieses Beispiel besteht aus zwei Komponenten: einem Webanwendungsprojekt (Dienst), die einen WCF-Dienst und einer Konsolenanwendung (Client), mit dem Dienstvorgänge mit SOAP- und HTTP-Bindungen aufgerufen enthält.  
   
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst macht 2 Vorgänge verfügbar – `GetData` und `PutData` –, die die als Eingabe übergebene Zeichenfolge wiederholen. Die Dienstvorgänge werden mit <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> kommentiert. Diese Attribute steuern die HTTP-Projektion dieser Vorgänge. Außerdem werden sie mit <xref:System.ServiceModel.OperationContractAttribute> kommentiert, sodass sie über SOAP-Bindungen verfügbar gemacht werden können. Die `PutData`-Methode des Diensts löst eine <xref:System.ServiceModel.Web.WebFaultException> aus, die mithilfe des HTTP-Statuscodes über HTTP zurückgesendet und als SOAP-Fehler über SOAP zurückgesendet wird.  
+ Der WCF-Dienst macht 2 Vorgänge –`GetData` und `PutData` –, die die Zeichenfolge, die als Eingabe übergebene echo. Die Dienstvorgänge werden mit <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> kommentiert. Diese Attribute steuern die HTTP-Projektion dieser Vorgänge. Außerdem werden sie mit <xref:System.ServiceModel.OperationContractAttribute> kommentiert, sodass sie über SOAP-Bindungen verfügbar gemacht werden können. Die `PutData`-Methode des Diensts löst eine <xref:System.ServiceModel.Web.WebFaultException> aus, die mithilfe des HTTP-Statuscodes über HTTP zurückgesendet und als SOAP-Fehler über SOAP zurückgesendet wird.  
   
- Mit der Datei Web.config wird der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst mit 3 Endpunkten konfiguriert:  
+ Die Datei "Web.config" konfiguriert den WCF-Dienst mit 3 Endpunkten:  
   
 -   Der ~/service.svc/mex-Endpunkt, der die Dienstmetadaten für den Zugriff durch SOAP-basierte Clients verfügbar macht.  
   

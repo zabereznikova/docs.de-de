@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba554ed23ae039796f51f4a699d368c4a6c0587e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers
 In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitstokenauthentifizierer erstellen und in einen benutzerdefinierten Sicherheitstoken-Manager integrieren. Ein Sicherheitstokenauthentifizierer überprüft den Inhalt eines Sicherheitstokens, das mit einer eingehenden Nachricht bereitgestellt wird. Bei erfolgreicher Validierung gibt der Authentifizierer eine Sammlung von <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Instanzen zurück, die nach der Auswertung einen Satz von Ansprüchen zurückgeben.  
@@ -33,7 +33,7 @@ In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitst
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- Der vorherige Code gibt eine Auflistung von Autorisierungsrichtlinien in der <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29>-Methode zurück. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt keine öffentliche Implementierung dieser Schnittstelle zur Verfügung. Die folgende Prozedur zeigt, wie Sie diese Schritte Ihren eigenen Anforderungen entsprechend ausführen.  
+ Der vorherige Code gibt eine Auflistung von Autorisierungsrichtlinien in der <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29>-Methode zurück. WCF bietet keine öffentliche Implementierung dieser Schnittstelle. Die folgende Prozedur zeigt, wie Sie diese Schritte Ihren eigenen Anforderungen entsprechend ausführen.  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>So erstellen Sie eine benutzerdefinierte Autorisierungsrichtlinie  
   
@@ -43,7 +43,7 @@ In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitst
   
 3.  Implementieren Sie die schreibgeschützte <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A>-Eigenschaft. Diese Eigenschaft muss einen Aussteller der Sätze von Ansprüchen zurückgeben, die aus dem Token abgerufen werden. Dieser Aussteller sollte dem Aussteller des Tokens oder einer Autorität entsprechen, die für die Überprüfung der Tokeninhalte zuständig ist. Im folgenden Beispiel wird der Ausstelleranspruch, der von dem in der vorherigen Prozedur erstellten benutzerdefinierten Sicherheitstokenauthentifizierer an diese Klasse übergeben wird, verwendet. Der benutzerdefinierte Sicherheitstokenauthentifizierer nutzt den vom System bereitgestellten Satz von Ansprüchen (der von der <xref:System.IdentityModel.Claims.ClaimSet.System%2A>-Eigenschaft zurückgegeben wird), um den Aussteller des Benutzernamentokens darzustellen.  
   
-4.  Implementieren Sie die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode. Diese Methode füllt eine Instanz der <xref:System.IdentityModel.Policy.EvaluationContext>-Klasse (die als Argument weitergegeben wurde) mit Ansprüchen auf, die auf dem eingehenden Sicherheitstokeninhalt basieren. Die Methode gibt `true` zurück, wenn der Vorgang mit der Evaluierung vorgenommen wird. In Fällen, in denen die Implementierung vom Vorhandensein anderer Autorisierungsrichtlinien abhängt, die zusätzliche Informationen zum Evaluierungskontext bieten, kann diese Methode `false` zurückgeben, wenn die erforderlichen Informationen noch nicht im Evaluierungskontext vorhanden sind. In diesem Fall ruft [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Methode erneut auf, nachdem alle anderen Autorisierungsrichtlinien, die für die eingehende Nachricht generiert wurden, überprüft wurden und festgestellt wurde, ob mindestens eine der Autorisierungsrichtlinien den Evaluierungskontext modifiziert hat.  
+4.  Implementieren Sie die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode. Diese Methode füllt eine Instanz der <xref:System.IdentityModel.Policy.EvaluationContext>-Klasse (die als Argument weitergegeben wurde) mit Ansprüchen auf, die auf dem eingehenden Sicherheitstokeninhalt basieren. Die Methode gibt `true` zurück, wenn der Vorgang mit der Evaluierung vorgenommen wird. In Fällen, in denen die Implementierung vom Vorhandensein anderer Autorisierungsrichtlinien abhängt, die zusätzliche Informationen zum Evaluierungskontext bieten, kann diese Methode `false` zurückgeben, wenn die erforderlichen Informationen noch nicht im Evaluierungskontext vorhanden sind. In diesem Fall wird WCF Aufrufen der Methode erneut nach der Auswertung aller Autorisierungsrichtlinien, die für die eingehende Nachricht generiert, wenn mindestens eine der Autorisierungsrichtlinien den Evaluierungskontext modifiziert hat.  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  

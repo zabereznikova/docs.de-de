@@ -1,33 +1,21 @@
 ---
-title: "Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client"
-ms.custom: 
+title: 'Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 06f4feaa5b0b44a26e3d31b65dc465b67544482f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6cd0f39494006bf51b7c4bb55afcc112ec08aadb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client
-Sie können die eingehenden oder ausgehenden Nachrichten für einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client überprüfen oder ändern, indem Sie einen <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> implementieren und in die Clientlaufzeit einfügen. Weitere Informationen finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md). Die entsprechende Funktion für den Dienst ist der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Ein vollständiges Codebeispiel finden Sie unter der [Nachrichteninspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md) Beispiel.  
+Sie können zu überprüfen oder ändern Sie die eingehenden oder ausgehenden Nachrichten über einen WCF-Client, durch die Implementierung einer <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> und in die Clientlaufzeit einfügen. Weitere Informationen finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md). Die entsprechende Funktion für den Dienst ist der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Ein vollständiges Codebeispiel finden Sie unter der [Nachrichteninspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md) Beispiel.  
   
 ### <a name="to-inspect-or-modify-messages"></a>So überprüfen oder ändern Sie Nachrichten  
   
 1.  Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>-Schnittstelle.  
   
-2.  Implementieren Sie ein <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>, je nach dem Bereich, in dem Sie den Clientnachrichteninspektor einfügen möchten. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>können Sie das Verhalten auf Endpunktebene ändern. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>können Sie das Verhalten auf Vertragsebene ändern.  
+2.  Implementieren Sie ein <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>, je nach dem Bereich, in dem Sie den Clientnachrichteninspektor einfügen möchten. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> können Sie das Verhalten auf Endpunktebene ändern. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> können Sie das Verhalten auf Vertragsebene ändern.  
   
 3.  Fügen Sie das Verhalten ein, bevor Sie die <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>-Methode oder die <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>-Methode für die <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> aufrufen. Weitere Informationen finden Sie unter [konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   

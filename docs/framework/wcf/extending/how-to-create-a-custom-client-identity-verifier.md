@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Clientidentitätsüberprüfung
 Die *Identität* Feature von Windows Communication Foundation (WCF) kann ein Client im Voraus angeben der erwarteten Identität des Diensts. Bei jeder Authentifizierung eines Servers beim Client wird die Identität mit der erwarteten Identität verglichen. (Eine Erläuterung der Identitäts- und deren Funktionsweise, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
@@ -43,7 +43,7 @@ Die *Identität* Feature von Windows Communication Foundation (WCF) kann ein Cli
   
 ### <a name="to-implement-the-trygetidentity-method"></a>So implementieren Sie die TryGetIdentity-Methode:  
   
-1.  Implementieren Sie die <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>-Methode, mit der bestimmt wird, ob vom Client eine Instanz der <xref:System.ServiceModel.EndpointIdentity>-Klasse zurückgegeben werden kann. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur ruft die Implementierung der `TryGetIdentity`-Methode auf, um zunächst die Identität des Diensts aus der Nachricht abzurufen. Anschließend ruft die Infrastruktur die `CheckAccess`-Implementierung mit der zurückgegebenen `EndpointIdentity` und dem zurückgegebenen <xref:System.IdentityModel.Policy.AuthorizationContext> auf.  
+1.  Implementieren Sie die <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>-Methode, mit der bestimmt wird, ob vom Client eine Instanz der <xref:System.ServiceModel.EndpointIdentity>-Klasse zurückgegeben werden kann. Ruft die WCF-Infrastruktur die Implementierung der `TryGetIdentity` Methode zuerst an, um die Identität des Diensts aus der Nachricht abzurufen. Anschließend ruft die Infrastruktur die `CheckAccess`-Implementierung mit der zurückgegebenen `EndpointIdentity` und dem zurückgegebenen <xref:System.IdentityModel.Policy.AuthorizationContext> auf.  
   
 2.  Fügen Sie in die `TryGetIdentity`-Methode folgenden Code ein:  
   

@@ -2,11 +2,11 @@
 title: WS-Transport mit Nachrichtenanmeldeinformationen
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: acb2960fe3d563a05b0bdeee70af0d4093aae6f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 708869f2350f01e75b949f4817fcf8aac35ea018
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>WS-Transport mit Nachrichtenanmeldeinformationen
 In diesem Beispiel wird die Verwendung der SSL-Transportsicherheit in Verbindung mit Clientanmeldeinformationen veranschaulicht, die in der Nachricht übertragen werden. In diesem Beispiel wird die `wsHttpBinding`-Bindung verwendet.  
@@ -60,7 +60,7 @@ public string GetCallerIdentity()
   
  Für die angegebene Adresse wird das https:// Schema verwendet. Die Bindungskonfiguration legt den Sicherheitsmodus auf `TransportWithMessageCredential` fest. Der gleiche Sicherheitsmodus muss in der Datei "Web.config" für den Dienst angegeben werden.  
   
- Da die in diesem Beispiel verwendete Zertifikat ein mit Makecert.exe erstelltes Testzertifikat ist, wird eine sicherheitswarnung angezeigt, wenn Sie versuchen, eine Https-Zugriff: Adresse, z. B. https://localhost/servicemodelsamples/service.svc, in Ihrem Browser. Damit der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client mit einem vorhandenen Testzertifikat arbeiten kann, muss auf dem Client zusätzlicher Code hinzugefügt werden, um die Sicherheitswarnung zu unterdrücken. Dieser Code und die begleitende Klasse sind bei der Verwendung von Produktionszertifikaten nicht erforderlich.  
+ Da die in diesem Beispiel verwendete Zertifikat ein mit Makecert.exe erstelltes Testzertifikat ist, wird eine sicherheitswarnung angezeigt, wenn Sie versuchen, eine Https-Zugriff: Adresse, z. B. https://localhost/servicemodelsamples/service.svc, in Ihrem Browser. Um den WCF-Client mit einem vorhandenen Testzertifikat arbeiten zu ermöglichen, wurde an den Client, um die sicherheitswarnung zu unterdrücken zusätzlicher Code hinzugefügt. Dieser Code und die begleitende Klasse sind bei der Verwendung von Produktionszertifikaten nicht erforderlich.  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   

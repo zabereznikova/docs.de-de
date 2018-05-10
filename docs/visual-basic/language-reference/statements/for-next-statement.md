@@ -1,11 +1,6 @@
 ---
 title: For...Next-Anweisung (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Step
 - vb.Next
@@ -28,14 +23,11 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: "64"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8c54189499b7d5b52cf93b4a0ae6cc47356bf57e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next-Anweisung (Visual Basic)
 Einer Gruppe von Anweisungen für eine angegebene Anzahl von Malen wiederholt wird.  
@@ -103,7 +95,7 @@ Next [ counter ]
   
  Sie können eine beliebige Anzahl von einfügen `Exit For` Anweisungen in einem `For`...`Next` Schleife. Bei Verwendung in geschachtelten `For`...`Next` Schleifen, `Exit For` verlässt die innerste Schleife und überträgt die Steuerung an der nächsthöheren Ebene der Schachtelung.  
   
- `Exit For`wird häufig verwendet werden, nachdem Sie eine Bedingung ausgewertet (z. B. in einer `If`... `Then`... `Else` Struktur). Möglicherweise möchten Sie verwenden `Exit For` für die folgenden Bedingungen:  
+ `Exit For` wird häufig verwendet werden, nachdem Sie eine Bedingung ausgewertet (z. B. in einer `If`... `Then`... `Else` Struktur). Möglicherweise möchten Sie verwenden `Exit For` für die folgenden Bedingungen:  
   
 -   Durchlaufen Sie den Vorgang fortsetzen, ist nicht erforderlich oder unmöglich. Diese Bedingung möglicherweise erstellen Sie einen falschen Wert oder eine Anforderung zum Beenden.  
   
@@ -132,7 +124,7 @@ Next [ counter ]
   
  Der Standardwert von `step` ist 1.  
   
-###  <a name="BKMK_Counter"></a>Leistungsindikator-Argument  
+###  <a name="BKMK_Counter"></a> Leistungsindikator-Argument  
  Die folgende Tabelle gibt an, ob `counter` definiert eine neue lokale Variable, die als Bereich ist für das gesamte `For…Next` Schleife. Diese Entscheidung hängt davon ab, ob `datatype` vorhanden ist und ob `counter` ist bereits definiert.  
   
 |Ist `datatype` vorhanden?|Ist `counter` bereits definiert?|Ergebnis (ob `counter` definiert eine neue lokale Variable, die als Bereich ist für das gesamte `For...Next` Schleife)|  
