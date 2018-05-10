@@ -2,14 +2,14 @@
 title: Service Trace Viewer-Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 215e34a3e7b075463ceeaa15386d3a347ffff064
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer-Tool (SvcTraceViewer.exe)
-Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie diagnoseablaufverfolgungen zu analysieren, die vom generierten [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Service Trace Viewer ermöglicht das einfache Zusammenführen, Anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, sodass Sie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstprobleme diagnostizieren, beheben und überprüfen können.  
+Windows Communication Foundation (WCF) Service Trace Viewer-Tool hilft Ihnen beim Analysieren von diagnoseablaufverfolgungen, die von WCF generiert werden. Service Trace Viewer bietet eine Möglichkeit, leicht zusammenführen, anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, damit Sie diagnostizieren, reparieren und WCF-Dienstprobleme überprüfen können.  
   
 ## <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung  
  Diagnoseablaufverfolgungen stellen Informationen bereit, die Aufschluss darüber geben, was beim Ausführen der Vorgänge in der Anwendung geschieht. Wie der Name bereits andeutet, können Sie Vorgänge von der Quelle zum Ziel und durch Zwischenpunkte hindurch verfolgen.  
@@ -55,7 +55,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie dia
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Öffnen und Anzeigen von WCF-Ablaufverfolgungsdateien  
  Service Trace Viewer unterstützt drei Dateitypen:  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Ablaufverfolgungsdatei (.svcLog)  
+-   WCF-Ablaufverfolgungsdatei (.svcLog)  
   
 -   Ereignisablaufverfolgungs-Datei (.etl)  
   
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie dia
   
 ##### <a name="to-open-a-trace-file"></a>So öffnen Sie eine Ablaufverfolgungsdatei  
   
-1.  Starten Sie Service Trace Viewer mit ein Befehlsfenster, navigieren Sie zu Ihrer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Installationsspeicherort (c:\Programme\Microsoft SDKs\Windows\v6.0\Bin) aus, und geben Sie dann `SvcTraceViewer.exe`.  
+1.  Starten Sie ein Befehlsfenster, das auf den WCF-Installationspfad (c:\Programme\Microsoft SDKs\Windows\v6.0\Bin) wechseln, und geben Sie dann mit Service Trace Viewer `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  Das Service Trace Viewer-Tool kann zwei Dateitypen zuweisen: .svclog und .stvproj. Sie können zwei Parameter in der Befehlszeile verwenden, um die Dateierweiterungen zu registrieren und deren Registrierung aufzuheben.  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie dia
 >  Es ist nicht empfehlenswert, eine Ablaufverfolgungsprotokolldatei zu laden, die größer als 200 MB ist. Wenn Sie eine Datei laden, die diesen Wert überschreitet, nimmt der Ladeprozess je nach Computerressourcen unter Umständen viel Zeit in Anspruch. Das Service Trace Viewer-Tool reagiert unter Umständen über einen längeren Zeitraum nicht oder belegt den gesamten Speicher des Computers. Es wird empfohlen, dass Sie das teilweise Laden konfigurieren, um dies zu vermeiden. Weitere Informationen dazu finden Sie im Abschnitt "Laden von großen Ablaufverfolgungsdateien".  
   
 #### <a name="event-tracing-and-crimson-tracing"></a>Ereignisablaufverfolgung und Crimson-Ablaufverfolgung  
- Das systemeigene Format des Viewers ist das Aktivitätsablaufverfolgungs-Format, das von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ausgegeben wird. In einem anderen Format ausgegebene Ablaufverfolgungen müssen konvertiert werden, bevor der Viewer sie anzeigen kann. Zurzeit unterstützt der Viewer zusätzlich zum Aktivitätsablaufverfolgungs-Format die Ereignisablaufverfolgung und Crimson-Ablaufverfolgung.  
+ Systemeigene Format des Viewers ist das aktivitätsablaufverfolgungs-Format, das WCF ausgibt. In einem anderen Format ausgegebene Ablaufverfolgungen müssen konvertiert werden, bevor der Viewer sie anzeigen kann. Zurzeit unterstützt der Viewer zusätzlich zum Aktivitätsablaufverfolgungs-Format die Ereignisablaufverfolgung und Crimson-Ablaufverfolgung.  
   
  Wenn Sie eine Datei öffnen, die keine Aktivitätsablaufverfolgungen enthält, versucht der Viewer, die Datei zu konvertieren. Sie müssen den Namen und den Speicherort der Datei angeben, die die zu konvertierenden Ablaufverfolgungsdaten enthält. Nachdem die Daten konvertiert wurden, zeigt der Viewer den Inhalt der neuen Datei an.  
   
@@ -104,7 +104,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie dia
 -   In der **Projekt** Registerkarte können Sie ein Projekt Dateien hinzufügen.  
   
 ### <a name="viewing-wcf-traces"></a>Anzeigen von WCF-Ablaufverfolgungen  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] gibt Ablaufverfolgungen im Aktivitätsablaufverfolgungs-Format aus. Im Aktivitätsablaufverfolgungs-Modell werden einzelne Ablaufverfolgungen nach ihrem jeweiligen Zweck in Aktivitäten gruppiert. Zwischen den Aktivitäten wird eine logische Ablaufsteuerung übertragen. Zum Beispiel werden während der Lebensdaueraktivität einer Anwendung zahlreiche Nachrichtensendeaktivitäten angezeigt und wieder entfernt. Weitere Informationen zum Anzeigen von ablaufverfolgungen und Aktivitäten und die Benutzeroberfläche des Service Trace Viewer zu finden Sie unter [mithilfe von Service Trace Viewer für korrelierte Ablaufverfolgungen anzeigen und Problembehandlung](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ WCF gibt ablaufverfolgungen im aktivitätsablaufverfolgungs-Format. Im Aktivitätsablaufverfolgungs-Modell werden einzelne Ablaufverfolgungen nach ihrem jeweiligen Zweck in Aktivitäten gruppiert. Zwischen den Aktivitäten wird eine logische Ablaufsteuerung übertragen. Zum Beispiel werden während der Lebensdaueraktivität einer Anwendung zahlreiche Nachrichtensendeaktivitäten angezeigt und wieder entfernt. Weitere Informationen zum Anzeigen von ablaufverfolgungen und Aktivitäten und die Benutzeroberfläche des Service Trace Viewer zu finden Sie unter [mithilfe von Service Trace Viewer für korrelierte Ablaufverfolgungen anzeigen und Problembehandlung](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 #### <a name="switching-to-different-views"></a>Umschalten zu anderen Ansichten  
  Der Service Trace Viewer umfasst die folgenden Ansichten. Sie werden als Registerkarten im linken Bereich des Viewers angezeigt und auch möglich, die von der **Ansicht** Menü.  
@@ -217,7 +217,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie dia
   
 -   Die Filtersymbolleiste ermöglicht den Zugriff auf vordefinierte und benutzerdefinierte Filter. Dies kann aktiviert werden, über die **Ansicht** Menü.  
   
--   Der vordefinierte Filter des Viewers kann verwendet werden, um Teile von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Ablaufverfolgungen selektiv zu filtern. Standardmäßig ist der Filter so eingestellt, dass alle Infrastrukturablaufverfolgungen zugelassen werden. Die Einstellungen dieses Filters werden definiert, der **Filteroptionen** Untermenü unter **Ansicht** Menü.  
+-   Der vordefinierte Filter des Viewers kann verwendet werden, um Teile des WCF-ablaufverfolgungen selektiv zu filtern. Standardmäßig ist der Filter so eingestellt, dass alle Infrastrukturablaufverfolgungen zugelassen werden. Die Einstellungen dieses Filters werden definiert, der **Filteroptionen** Untermenü unter **Ansicht** Menü.  
   
 -   Benutzerdefinierte XPath-Filter ermöglichen Benutzern den Vollzugriff auf die Filterung. Sie können definiert werden, der **benutzerdefinierter Filter** unter **Ansicht** Menü.  
   
@@ -237,7 +237,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie dia
  Die **deaktivieren** Schaltfläche setzt vordefinierte und benutzerdefinierte filtern, um alle ablaufverfolgungen zu ermöglichen.  
   
 #### <a name="filter-options"></a>Filteroptionen  
- Der Viewer kann [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Ablaufverfolgungen automatisch aus der Ansicht entfernen. Ablaufverfolgungen, die von bestimmten Bereichen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ausgegeben wurden, können selektiv aus der Ansicht entfernt werden, zum Beispiel transaktionsbezogene Ablaufverfolgungen.  
+ Der Viewer kann WCF-Ablaufverfolgungen automatisch aus der Ansicht entfernen. Ablaufverfolgungen, die von bestimmten Bereichen von WCF ausgegeben wurden, können selektiv aus der Ansicht entfernt werden, zum Beispiel transaktionsbezogene Ablaufverfolgungen.  
   
  Die Einstellungen dieses Filters werden definiert, der **Filteroptionen** Untermenü unter **Ansicht** Menü.  
   
@@ -347,7 +347,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie dia
 -   Schritt zurück: Verwenden der **Aktivität** Menü, oder drücken Sie "F9". Sie können auch Pfeiltaste im ablaufverfolgungsbereich "oben" verwenden.  
   
 > [!NOTE]
->  Dies kann Sie zu einer Aktivität führen, die in einem anderen Prozess oder sogar auf einem anderen Computer abläuft, da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Nachrichten computerübergreifende Aktivitäts-IDs enthalten.  
+>  Dies können Sie zu einer Aktivität in einem anderen Prozess oder sogar auf einem anderen Computer ausführen, da die WCF-Meldungen Aktivitäts-IDs enthalten können, die Computer umfassen.  
   
 #### <a name="follow-transfer"></a>Verfolgen von Übertragungen  
  Übertragungsablaufverfolgungen sind spezielle Ablaufverfolgungen in der Ablaufverfolgungsdatei. Eine Aktivität wird möglicherweise über eine Übertragungsablaufverfolgung an eine andere Aktivität übertragen. Beispielsweise kann "Aktivität A" an "Aktivität B" übertragen. In diesem Fall müssen Sie eine übertragungsablaufverfolgung gibt es in das Symbol "Aktivität A" mit dem Namen "An: Aktivität" und die Übertragung ist. Diese Übertragungsablaufverfolgung ist ein Link zwischen den beiden Ablaufverfolgungen. In "Aktivität B" gibt es möglicherweise auch eine übertragungsablaufverfolgung am Ende der Aktivität, um zurück zur "Aktivität A" zu übertragen. Dies ähnelt Funktionsaufrufen in Programmen: A ruft B, dann gibt B Werte an A zurück.  
@@ -417,9 +417,9 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie dia
   
 |Symbol|Beschreibung|  
 |----------|-----------------|  
-|![Nachrichtenprotokollierung-Ablaufverfolgung](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Nachrichtenprotokollierung-Ablaufverfolgung: Es wird eine Ablaufverfolgung ausgegeben, wenn eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Nachricht vom Nachrichtenprotokollierungsfeature protokolliert wird, sofern die `System.ServiceModel.MessageLogging`-Ablaufverfolgungsquelle aktiviert ist. Durch Klicken auf diese Ablaufverfolgung wird die Nachricht angezeigt. Es gibt vier konfigurierbare Protokollierungspunkte für eine Nachricht: ServiceLevelSendRequest, TransportSend, TransportReceive und ServiceLevelReceiveRequest, die auch durch das `messageSource`-Attribut in der Nachrichtenablaufverfolgung angegeben werden können.|  
-|![Ablaufverfolgung für empfangene Meldung](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Nachricht empfangen-Ablaufverfolgung: Es wird eine Ablaufverfolgung ausgegeben, wenn eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Nachricht empfangen wird, sofern die `System.ServiceModel`-Ablaufverfolgungsquelle auf Information- oder Verbose-Ebene aktiviert ist. Diese Ablaufverfolgung ist wesentlich zum Anzeigen des nachrichtenkorrelationspfeils in der Aktivität **Graph** anzeigen.|  
-|![Nachricht gesendet-Ablaufverfolgung](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Nachricht gesendet-Ablaufverfolgung: Es wird eine Ablaufverfolgung ausgegeben, wenn eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Nachricht gesendet wird, sofern die `System.ServiceModel`-Ablaufverfolgungsquelle auf Information- oder Verbose-Ebene aktiviert ist. Diese Ablaufverfolgung ist wesentlich zum Anzeigen des nachrichtenkorrelationspfeils in der Aktivität **Graph** anzeigen.|  
+|![Nachrichtenprotokollierung-Ablaufverfolgung](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Nachrichtenprotokollierung-Ablaufverfolgung: eine Ablaufverfolgung, die ausgegeben wird, wenn eine WCF-Nachricht von der nachrichtenprotokollierungsfunktion protokolliert wird bei der `System.ServiceModel.MessageLogging` -Ablaufverfolgungsquelle aktiviert ist. Durch Klicken auf diese Ablaufverfolgung wird die Nachricht angezeigt. Es gibt vier konfigurierbare Protokollierungspunkte für eine Nachricht: ServiceLevelSendRequest, TransportSend, TransportReceive und ServiceLevelReceiveRequest, die auch durch das `messageSource`-Attribut in der Nachrichtenablaufverfolgung angegeben werden können.|  
+|![Ablaufverfolgung für empfangene Meldung](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Ablaufverfolgung für empfangene Meldung: eine Ablaufverfolgung, die ausgegeben wird, wenn eine WCF-Nachricht empfangen wird, wenn die `System.ServiceModel` -Ablaufverfolgungsquelle auf Information- oder Verbose-Ebene aktiviert ist. Diese Ablaufverfolgung ist wesentlich zum Anzeigen des nachrichtenkorrelationspfeils in der Aktivität **Graph** anzeigen.|  
+|![Nachricht gesendet-Ablaufverfolgung](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Nachricht gesendet-Ablaufverfolgung: eine Ablaufverfolgung, die ausgegeben wird, wenn eine WCF-Nachricht gesendet wird, wenn die `System.ServiceModel` -Ablaufverfolgungsquelle auf Information- oder Verbose-Ebene aktiviert ist. Diese Ablaufverfolgung ist wesentlich zum Anzeigen des nachrichtenkorrelationspfeils in der Aktivität **Graph** anzeigen.|  
   
 ### <a name="activities"></a>Aktivitäten  
   
@@ -432,11 +432,11 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie dia
   
 |Symbol|Beschreibung|  
 |----------|-----------------|  
-|![Umgebungsaktivität](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Umgebungsaktivität: Eine Aktivität, die einen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Host oder -Client erstellt, öffnet oder schließt. Fehler, die während dieser Phasen aufgetreten sind, werden in dieser Aktivität angezeigt.|  
+|![Umgebungsaktivität](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Umgebungsaktivität: eine Aktivität, die erstellt, öffnet oder schließt eine WCF-Host oder -Client. Fehler, die während dieser Phasen aufgetreten sind, werden in dieser Aktivität angezeigt.|  
 |![Lauschaktivität](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Abhöraktivität: Eine Aktivität, die mit einem Listener zusammenhängende Ablaufverfolgungen protokolliert. In dieser Aktivität werden Listenerinformationen und Verbindungsanforderungen angezeigt.|  
 |![Bytes empfangen-Aktivität](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Bytes empfangen-Aktivität: Eine Aktivität, die alle Ablaufverfolgungen gruppiert, die sich auf empfangene Bytes in einer Verbindung zwischen zwei Endpunkten beziehen. Diese Aktivität ist wesentlich beim Korrelieren von Transportaktivitäten, die ihre Aktivitäts-ID propagieren, wie z.&#160;B. http.sys. Verbindungsfehler, wie z.&#160;B. Abbrüche, treten in dieser Aktivität auf.|  
-|![Meldungsverarbeitungsaktivität](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "Wcfc_ExecutionActivityIconc")|Nachricht verarbeiten-Aktivität: Eine Aktivität, die Ablaufverfolgungen gruppiert, die sich auf das Erstellen einer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Nachricht beziehen. Fehler aufgrund eines ungültigen Umschlags oder einer falsch formatierten Nachricht werden in dieser Aktivität angezeigt. In dieser Aktivität können Nachrichtenheader geprüft werden, um zu ermitteln, ob eine Aktivitäts-ID vom Aufrufer propagiert wurde. Wenn dies zutrifft, kann beim Übertragen an die Aktion verarbeiten-Aktivität (das nächste Symbol) dieser Aktivität auch die propagierte Aktivitäts-ID für die Korrelation zwischen dem Aufrufer und den Ablaufverfolgungen des Aufrufenden zugewiesen werden.|  
-|![Nachrichtenprotokollierung-Ablaufverfolgung](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Aktion verarbeiten-Aktivität: Eine Aktivität, die alle Ablaufverfolgungen gruppiert, die mit einer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anforderung über zwei Endpunkte hinweg zusammenhängen. Wenn `propagateActivity` auf beiden Endpunkten in der Konfiguration auf `true` festgelegt ist, werden alle Ablaufverfolgungen für die direkte Korrelation in eine Aktivität zusammengeführt. Einige Aktivitäten enthalten Fehler, die bei der Transport- oder Sicherheitsverarbeitung auftreten und sich bis hin zu Benutzercodegrenzen und zurück erstrecken (sofern eine Antwort vorhanden ist).|  
+|![Meldungsverarbeitungsaktivität](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "Wcfc_ExecutionActivityIconc")|Meldungsverarbeitungsaktivität: eine Aktivität, die ablaufverfolgungen gruppiert, die mit dem Erstellen einer WCF-Nachricht verbunden. Fehler aufgrund eines ungültigen Umschlags oder einer falsch formatierten Nachricht werden in dieser Aktivität angezeigt. In dieser Aktivität können Nachrichtenheader geprüft werden, um zu ermitteln, ob eine Aktivitäts-ID vom Aufrufer propagiert wurde. Wenn dies zutrifft, kann beim Übertragen an die Aktion verarbeiten-Aktivität (das nächste Symbol) dieser Aktivität auch die propagierte Aktivitäts-ID für die Korrelation zwischen dem Aufrufer und den Ablaufverfolgungen des Aufrufenden zugewiesen werden.|  
+|![Nachrichtenprotokollierung-Ablaufverfolgung](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Aktion verarbeiten-Aktivität: eine Aktivität, die alle ablaufverfolgungen gruppiert im Zusammenhang mit einem WCF-Anforderung über zwei Endpunkte hinweg. Wenn `propagateActivity` auf beiden Endpunkten in der Konfiguration auf `true` festgelegt ist, werden alle Ablaufverfolgungen für die direkte Korrelation in eine Aktivität zusammengeführt. Einige Aktivitäten enthalten Fehler, die bei der Transport- oder Sicherheitsverarbeitung auftreten und sich bis hin zu Benutzercodegrenzen und zurück erstrecken (sofern eine Antwort vorhanden ist).|  
 |![Meldungsverarbeitungsaktivität](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "Wcfc_ExecutionActivityIconc")|Benutzercodeaktivität ausführen-Aktivität: Eine Aktivität, die Benutzercode-Ablaufverfolgungen zur Verarbeitung einer Anforderung gruppiert.|  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
