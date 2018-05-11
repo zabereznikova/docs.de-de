@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed9c7a444018e7c5e9ac00de82133cce633fac93
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuring-http-and-https"></a>Konfigurieren von HTTP und HTTPS
 WCF-Dienste und -Clients können über HTTP und HTTPS kommunizieren. Die HTTP/HTTPS-Einstellungen werden mit Internetinformationsdienste (IIS) oder mit einem Befehlszeilentool konfiguriert. Wenn ein WCF-Dienst unter IIS gehostet wird, können die HTTP- oder HTTPS-Einstellungen in IIS konfiguriert werden (mit dem Tool "inetmgr.exe"). Bei einem selbst gehosteten WCF-Dienst werden die HTTP- oder HTTPS-Einstellungen mit einem Befehlszeilentool konfiguriert.  
@@ -19,7 +19,7 @@ WCF-Dienste und -Clients können über HTTP und HTTPS kommunizieren. Die HTTP/HT
   
  Bei Ausführung [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)], verwenden Sie die Tools "HttpCfg.exe". Dieses Tool wird von [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] automatisch installiert. Bei Ausführung [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Sie können das Tool herunterladen [Windows XP Service Pack 2-Supporttools](http://go.microsoft.com/fwlink/?LinkId=88606). Weitere Informationen finden Sie unter [Httpcfg-Übersicht](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
- Unter [!INCLUDE[wv](../../../../includes/wv-md.md)] oder Windows 7 werden diese Einstellungen mithilfe des Tools "Netsh.exe" konfiguriert.  
+ Bei Ausführung [!INCLUDE[wv](../../../../includes/wv-md.md)] oder Windows 7, konfigurieren Sie diese Einstellungen, mit dem Tool Netsh.exe.  
   
 ## <a name="configuring-namespace-reservations"></a>Konfigurieren von Namespacereservierungen  
  Eine Namespacereservierung weist die Rechte für einen Teil des HTTP-URL-Namespace einer bestimmten Gruppe von Benutzern zu. Eine Reservierung gibt diesen Benutzern das Recht, Dienste zu erstellen, die bei diesem Teil des Namespaces lauschen. Reservierungen sind URL-Präfixe, was bedeutet, dass die Reservierung dem Reservierungspfad untergeordnete Pfade abdeckt. Namespacereservierungen eröffnen zwei Möglichkeiten, Platzhalter zu verwenden. Die HTTP-Server-API-Dokumentation wird beschrieben, die [Auflösungsreihenfolge von Namespace-Ansprüche, die Platzhalter verwenden](http://go.microsoft.com/fwlink/?LinkId=94841).  

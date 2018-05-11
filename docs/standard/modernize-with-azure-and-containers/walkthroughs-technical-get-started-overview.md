@@ -3,12 +3,12 @@ title: Exemplarische Vorgehensweisen und technische abrufen gestarteten (Übersi
 description: Aktualisieren von vorhandenen .NET Anwendungen mit Azure-Cloud und Windows-Containern | Exemplarische Vorgehensweisen und technische abrufen gestarteten (Übersicht)
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: b41fe9e8b492b1348cc5615f6254d5fd3ddebf25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: 27de9d1c5475855a22f2d8a3518982605277f6d9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Exemplarische Vorgehensweisen und technische abrufen gestarteten (Übersicht)
 
@@ -22,9 +22,11 @@ Die folgenden abrufen gestarteten exemplarischen Vorgehensweisen bieten konsiste
 
 Jede der folgenden exemplarischen Vorgehensweisen verwendet die neue eShopLegacy und eShopModernizing beispielapps, die auf GitHub unter zur Verfügung stehen [ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing).
 
-- **Tour durch Shopping legacy-apps**
+- **Tour durch Shopping legacy-apps (modernisieren Baseline-apps)**
 
-- **Containerize Ihre vorhandenen .NET Anwendungen mit Windows-Containern**
+- **Ihre vorhandenen ASP.NET Web-apps (Web Forms und MVC) mit Windows-Containern containerize**
+
+- **Containerize vorhandenen WCF-Dienste (N-Tier-apps) mit Windows-Containern**
 
 - **Bereitstellen der Windows Container-basierten app in Azure-VMs**
 
@@ -32,59 +34,61 @@ Jede der folgenden exemplarischen Vorgehensweisen verwendet die neue eShopLegacy
 
 - **Bereitstellen von Windows-Container-basierten apps Azure Service Fabric**
 
+
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Exemplarische Vorgehensweise 1: Überblick Shopping legacy-apps
 
 ### <a name="technical-walkthrough-availability"></a>Technische Anleitung-Verfügbarkeit
 
 Die vollständige technische Exemplarische Vorgehensweise ist in der eShopModernizing GitHub-Repository-Wiki verfügbar:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code)
+[eShopModernizing Wiki Exemplarische Vorgehensweisen](https://github.com/dotnet-architecture/eShopModernizing/wiki)
+
 
 ### <a name="overview"></a>Übersicht
 
-In dieser exemplarischen Vorgehensweise können Sie die ursprüngliche Implementierung von zwei Beispiel Legacyanwendungen untersuchen. Beide Beispiel-apps haben eine monolithische Architektur und mithilfe des klassischen ASP.NET erstellt wurden. Eine Anwendung basiert auf ASP.NET 4.x MVC; die zweite Anwendung basiert auf ASP.NET 4.x Web Forms. Beide Anwendungen sind der [eShopModernizing GitHub-Repository](https://github.com/dotnet-architecture/eShopModernizing).
+In dieser exemplarischen Vorgehensweise können Sie die ursprüngliche Implementierung von drei Beispiel Legacyanwendungen untersuchen. Die ersten beiden Beispiel Web-apps haben eine monolithische Architektur und mithilfe des klassischen ASP.NET erstellt wurden. Eine Anwendung basiert auf ASP.NET 4.x MVC; die zweite Anwendung basiert auf ASP.NET 4.x Web Forms. Die dritte app ist eine 3-Ebenen-app aus, das eine WinForms-Client-app und einer serverseitigen [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) Dienst.
 
-Sie können beide beispielapps containerize, ähnlich wie die können die Klassisches containerize [Windows Communication Foundation](../../framework/wcf/whats-wcf.md) (WCF)-Anwendung als eine desktop-Anwendung verwendet wird. Ein Beispiel finden Sie unter [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
+Alle diese Anwendungen finden Sie unter der [eShopModernizing GitHub-Repository](https://github.com/dotnet-architecture/eShopModernizing).
 
 ### <a name="goals"></a>Ziele
 
 Das wichtigste Ziel dieser exemplarischen Vorgehensweise besteht darin, mit diesen apps und mit ihren Code und Konfiguration vertraut. Sie können die apps konfigurieren, sodass sie generieren und Verwenden von simulierten Daten ohne Verwendung der SQL-Datenbank für Testzwecke verwenden. Diese optionale Konfiguration basiert auf Abhängigkeitsinjektion, in einer entkoppelten Weise.
 
-### <a name="scenario"></a>Szenario
+### <a name="scenario-1-aspnet-web-apps"></a>Szenario 1: ASP.NET Web-apps
 
-Abbildung 5 – 1 zeigt die einfachen Szenarios, die ursprüngliche Legacyanwendungen.
+Die folgende Abbildung zeigt die einfachen Szenarios, die ursprüngliche legacy ASP.NET-Webanwendungen.
 
-> ![Einfache Architektur-Szenario für die ursprüngliche Legacyanwendungen](./media/image5-1.png)
+> ![Einfache Architektur-Szenario für die ursprüngliche legacy ASP.NET-Webanwendungen](./media/image5-1.png)
 >
-> **Abbildung 5-1.** Einfache Architektur-Szenario für die ursprüngliche Legacyanwendungen
 
-Aus Sicht der Business-Domäne bieten beide apps den gleichen Katalog Verwaltungsfunktionen. Mitglieder des Teams Enterprise Shopping würde die app anzeigen und Bearbeiten des Produktkatalogs verwenden. Abbildung 5 – 2 zeigt die anfänglichen app Screenshots.
+Aus Sicht der Business-Domäne bieten beide apps den gleichen Katalog Verwaltungsfunktionen. Mitglieder des Teams Enterprise Shopping würde die app anzeigen und Bearbeiten des Produktkatalogs verwenden. 
+
+Die nächste Abbildung zeigt die anfänglichen app Screenshots.
 
 ![ASP.NET MVC und ASP.NET Web Forms-Anwendungen (vorhandene/Legacy-Technologien)](./media/image5-2.png)
 
-> **Abbildung 5-2.** ASP.NET MVC und ASP.NET Web Forms-Anwendungen (vorhandene/Legacy-Technologien)
+Abhängigkeiten ASP.NET 4.x oder früheren Versionen (entweder für MVC oder Web Forms) bedeutet, dass diese Anwendungen keine auf .NET Core ausgeführt werden, wenn der Code vollständig neu geschrieben wird, mithilfe von ASP.NET Core MVC. 
 
-Hierbei handelt es sich um Webanwendungen, die zum Suchen und Ändern von Katalogeinträge verwendet werden. Die Tatsache, dass beide apps die gleichen Business/funktionale Funktionen bieten ist einfach für Vergleichszwecke. Sie können einem ähnlichen Modernisierung-Prozess für apps, die mithilfe von ASP.NET MVC und ASP.NET Web Forms-Frameworks erstellt wurden, finden Sie unter.
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Szenario 2: WCF-Diensts und WinForms-Client-app (3-Ebenen-app)
 
-Abhängigkeiten ASP.NET 4.x oder früheren Versionen (entweder für MVC oder Web Forms) bedeutet, dass diese Anwendungen keine auf .NET Core ausgeführt werden, wenn der Code vollständig neu geschrieben wird, mithilfe von ASP.NET Core MVC. Dies beweist dann, wenn Sie nicht möchten Umgestalten oder Schreiben Sie Code, können Sie vorhandene Anwendungen containerize und weiterhin die gleichen Technologien für .NET und denselben Code verwenden. Sie können sehen, wie Sie Anwendungen, wie diese in Containern, ohne Änderungen für legacy-Code ausführen können.
+Die folgende Abbildung zeigt die einfachen Szenarios, die ursprüngliche ältere 3-Ebenen-Anwendung.
+
+> ![Einfache Architektur-Szenario für die ursprüngliche legacy 3-Ebenen-app mit einem WCF-Dienst und einer WinForms-Client-app](./media/image5-1.5.png)
+>
 
 ### <a name="benefits"></a>Vorteile
 
-Die Vorteile der in dieser exemplarischen Vorgehensweise sind einfach: nur den Code und Anwendungskonfiguration in, basierend auf Abhängigkeitsinjektion vertraut machen. Anschließend können Sie bei diesem Ansatz experimentieren, beim containerize und in Zukunft in mehreren Umgebungen bereitstellen.
+Die Vorteile der in dieser exemplarischen Vorgehensweise sind einfach: nur mit dem Code und die anfängliche apps vertraut machen.
 
 ### <a name="next-steps"></a>Nächste Schritte
 
 Untersuchen Sie diese Inhalte ausführlicheren im GitHub-Wiki:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code)
+  - [Tour auf der Basislinie ASP.NET MVC und "legacy" Web Forms-apps](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
+  - [Tour auf die Baseline-WCF-Dienst und WinForms (3-Ebenen) "legacy" app](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Exemplarische Vorgehensweise 2: Containerize, Ihre vorhandenen .NET Anwendungen mit Windows-Containern
-
-### <a name="technical-walkthrough-availability"></a>Technische Anleitung-Verfügbarkeit
-
-Die vollständige technische Exemplarische Vorgehensweise ist in der eShopModernizing GitHub-Repository-Wiki verfügbar:
-
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
 
 ### <a name="overview"></a>Übersicht
 
@@ -102,13 +106,20 @@ Das Ziel dieser exemplarischen Vorgehensweise werden Ihnen mehrere Optionen für
 
 In dieser exemplarischen Vorgehensweise konzentriert sich auf Visual Studio 2017-Tools für Docker Ansatz die anderen beiden Methoden sind allerdings hinsichtlich dockerfile-Dateien mit ähnlich.
 
-### <a name="scenario"></a>Szenario
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>Szenario 1: Datenvolumes ASP.NET Web-apps
 
-Abbildung 5-3 wird das Szenario für Legacyanwendungen Datenvolumes Shopping.
+Die folgende Abbildung zeigt das Szenario für Datenvolumes Shopping legacy-apps Webanwendungen.
 
-> ![Vereinfachte Sammelartikeleinheit in einer Entwicklungsumgebung-Architekturdiagramm](./media/image5-3.png)
+> ![Vereinfachte Architekturdiagramm von ASP.NET-Anwendungen in einer Entwicklungsumgebung in Containern](./media/image5-3.png)
 >
-> **Abbildung 5-3.** Vereinfachte Sammelartikeleinheit in einer Entwicklungsumgebung-Architekturdiagramm
+
+
+### <a name="scenario-2-containerized-wcf-service"></a>Szenario 2: Datenvolumes WCF-Dienst
+
+Die folgende Abbildung zeigt das Szenario für eine 3-Ebenen-app mit einem Datenvolumes WCF-Dienst. 
+
+> ![Architekturdiagramm von Datenvolumes WCF-Dienst in einer Entwicklungsumgebung vereinfacht](./media/image5-3.5.png)
+>
 
 ### <a name="benefits"></a>Vorteile
 
@@ -122,15 +133,18 @@ Containerization, im Idealfall, erfordert keine Änderungen am Anwendungscode (C
 
 ### <a name="next-steps"></a>Nächste Schritte
 
-Untersuchen Sie diese Inhalte ausführlicheren im GitHub-Wiki: [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+Untersuchen Sie diese Inhalte ausführlicheren im GitHub-Wiki:
+
+  - [Wie die .NET Framework-Web-apps mit Windows-Container und Docker containerize](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+  - [Hinzufügen von Docker-Support, um einen WCF-Dienst](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
+
+
 
 ## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Exemplarische Vorgehensweise 3: Bereitstellen der Windows-Container-basierten Anwendung auf Azure VMs
 
 ### <a name="technical-walkthrough-availability"></a>Technische Anleitung-Verfügbarkeit
 
-Die vollständige technische Exemplarische Vorgehensweise ist in der eShopModernizing GitHub-Repository-Wiki verfügbar:
-
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+Die vollständige technische Exemplarische Vorgehensweise ist in der eShopModernizing GitHub-Repository-Wiki verfügbar: [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
 ### <a name="overview"></a>Übersicht
 
@@ -178,7 +192,46 @@ Untersuchen Sie diese Inhalte ausführlicheren im GitHub-Wiki:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
-## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Exemplarische Vorgehensweise 4: Bereitstellen der Windows-Container-basierte apps für Kubernetes im Azure-Container-Dienst
+## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Exemplarische Vorgehensweise 4: Bereitstellen von Windows-Container-basierte apps auf Azure-Container-Instanzen (ACI)
+
+### <a name="technical-walkthrough-availability"></a>Technische Anleitung-Verfügbarkeit
+
+Die vollständige technische Exemplarische Vorgehensweise ist in der eShopModernizing GitHub-Repository-Wiki verfügbar:
+
+[Bereitstellen von Apps für ACI (Azure-Container-Instanzen)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
+
+### <a name="overview"></a>Übersicht
+
+[Azure-Container-Instanzen (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/) ist die schnellste Möglichkeit, den eine Container-Dev/Test/Staging-Umgebung verfügen, in dem Sie einzelne Instanzen von Containern bereitstellen können.
+
+### <a name="goals"></a>Ziele
+
+In dieser exemplarischen Vorgehensweise zeigt Sie die wichtigsten Szenarien bei der Bereitstellung von Windows-Container auf Azure-Container-Instanzen (ACI) und wie Sie in ACI eShopModernizing Apps bereitstellen können.
+
+### <a name="scenarios"></a>Szenarien
+
+Variationen zum Bereitstellen von apps eShopModernizing in ACI z. B. nur eine oder alle apps (MVC-Anwendung, WebForms-app oder WCF-Dienst) bereitstellen kann. Im folgenden Szenario unten sehen Sie die ASP.NET MVC-app sowie den SQL Server-Container beider bereitgestellt als Container in ACI (Azure-Container-Instanzen).
+
+![Bereitstellen einer Entwicklungsumgebung für ACI](./media/image5-3.5.6.png)
+
+### <a name="benefits"></a>Vorteile
+
+Azure Containerinstanzen erleichtert das Erstellen und verwalten Docker-Containern in Azure, ohne für die Bereitstellung von virtuellen Maschinen oder ein Diensts auf höherer Ebene zu verwenden. Mit dem ACI Sie direkt einen Windows-Container in Azure bereitstellen und verfügbar machen es mit dem Internet über einen vollqualifizierten Domänennamen (FQDN) in wenigen Sekunden (vorausgesetzt, dass Sie die Windows-Container-Image kann jetzt in einem Docker-Registrierung wie Docker Hub oder Azure-Container verfügen Registrierung).
+
+### <a name="considerations"></a>Weitere Überlegungen
+
+Bereitstellen von Windows-Containern mit einer Vollversion von .NET Framework / ASP.NET oder SQL Server in Azure Container Instanzen (ACI) ist nicht ganz so schnell wie das zu einem regulären Docker-Host (z. B. Windows Server 2016 mit Windows-Containern) bereitstellen, da die Docker-Images werden muss (aus der Registrierung Docker Pull) jedes Mal heruntergeladen und die Größe der SQL-Container-Abbild (15.1 GB) und ASP.NET Container-Abbild (13.9 GB) sind ausgesprochen umfassende, jedoch wesentlich kostengünstiger als die Beibehaltung eines eigenen Docker-Hosts (dauerhaft Online ist WindowsServer 2016 mit Windows-Container-VM in Azure) ganz zu schweigen eine gesamte Orchestrator wie Kubernetes, die in Azure (so/ACS) oder Azure Service Fabric andererseits, großartige Auswahlmöglichkeiten für produktionsbereitstellungen sind.
+
+Als main Folgerung ist mithilfe von Azure-Container-Instanzen einen sehr bestechenden Option für Entwicklungs-und Testszenarien und Pipelines CI-CD aus.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Untersuchen Sie diese Inhalte ausführlicheren im GitHub-Wiki: 
+
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
+
+
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Exemplarische Vorgehensweise 5: Bereitstellen der Windows-Container-basierte apps für Kubernetes im Azure-Container-Dienst
 
 ### <a name="technical-walkthrough-availability"></a>Technische Anleitung-Verfügbarkeit
 
@@ -238,7 +291,7 @@ Mit Kubernetes können Entwickler Gedanken über physische und virtuelle Compute
 
 Untersuchen Sie diese Inhalte ausführlicheren im GitHub-Wiki: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Exemplarische Vorgehensweise 5: Bereitstellen von Windows-Container-basierte apps Azure Service Fabric
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Exemplarische Vorgehensweise 6: Bereitstellen von Windows-Container-basierte apps Azure Service Fabric
 
 ### <a name="technical-walkthrough-availability"></a>Technische Anleitung-Verfügbarkeit
 

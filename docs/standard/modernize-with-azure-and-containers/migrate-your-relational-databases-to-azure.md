@@ -3,12 +3,12 @@ title: Migrieren von relationalen Datenbanken in azure
 description: Aktualisieren von vorhandenen .NET Anwendungen mit Azure-Cloud und Windows-Containern | Migrieren von relationalen Datenbanken in azure
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: efc558115d184ed53a963eab2acdd847a12dbb3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: fe1bf5820c2306beb380749b34d5a56964e016e4
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrieren von relationalen Datenbanken in azure
 
@@ -22,11 +22,11 @@ In Azure können Sie Ihrer Datenbankserver aufzurüsten direkt zu IaaS-VMs (pure
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Wenn zum Migrieren zu Azure SQL-Datenbank verwaltete Instanz
 
-In den meisten Fällen werden die verwaltete Instanz in Azure SQL-Datenbank die beste Möglichkeit, beachten, wenn Sie Ihre Daten zu Azure migrieren. Wenn Sie SQL Server-Datenbanken migrieren und nahezu 100 % Sicherheitsgrad, den Sie keine neu strukturieren Ihrer Anwendung oder Änderungen an den Daten oder der Datenzugriffscode vornehmen müssen, wählen Sie die verwaltete Instanz-Funktion von Azure SQL-Datenbank.
+In den meisten Fällen werden die verwaltete Instanz in Azure SQL-Datenbank die beste Möglichkeit, beachten, wenn Sie Ihre Daten zu Azure migrieren. Wenn Sie SQL Server-Datenbanken migrieren und nahezu 100 % Sicherheitsgrad, den Sie keine neu entwerfe Ihrer Anwendung oder Änderungen an den Daten oder der Datenzugriffscode vornehmen müssen, wählen Sie die verwaltete Instanz-Funktion von Azure SQL-Datenbank.
 
 Azure SQL-Datenbank verwaltete Instanz ist die beste Option, wenn Sie zusätzliche Anforderungen für die Funktionalität von SQL Server auf Instanzebene oder isolationsanforderungen über die Funktionen, die in einer standardmäßigen Azure SQL-Datenbank (Modell) bereitgestellt haben. Das letzte Element ist die am häufigsten PaaS-orientierten Wahl, aber es nicht die gleichen Funktionen wie die von einem herkömmlichen SQLServer bietet. Migration möglicherweise Frictions Oberfläche.
 
-Beispielsweise würde eine Organisation, die umfassende Investitionen in die Funktionen von SQL Server auf Instanzebene erzielt hat profitieren, verwalteten SQL-Instanz migrieren. Beispiele für SQL Server-Funktionen auf Instanzebene umfassen SQL common Language Runtime (CLR)-Integration, SQL Server-Agent und datenbankübergreifende Abfragen. Unterstützung für diese Funktionen sind nicht verfügbar in standard Azure SQL-Datenbank (eine einzelne Datenbankmodell).
+Beispielsweise würde eine Organisation, die umfassende Investitionen in die Funktionen von SQL Server auf Instanzebene erzielt hat profitieren, verwalteten SQL-Instanz migrieren. Beispiele für SQL Server-Funktionen auf Instanzebene umfassen SQL common Language Runtime (CLR)-Integration, SQL Server-Agent und datenbankübergreifende Abfragen. Unterstützung für diese Funktionen ist nicht verfügbar in standard Azure SQL-Datenbank (eine einzelne Datenbankmodell).
 
 Eine Organisation, die in einer hochgradig regulierte Branche arbeitet und die Isolation aus Sicherheitsgründen verwalten muss, kann die verwaltete Instanz von SQL-Modell auswählen auch Vorteil erzielt werden.
 
@@ -56,9 +56,9 @@ Verwaltete Instanz ist wahrscheinlich die beste Anpassung für Unternehmen, die 
 
 Wie bereits erwähnt, ist die standardmäßige Azure SQL-Datenbank ein vollständig verwalteter, relationale DBaaS. SQL-Datenbank verwaltet derzeit Millionen von Produktionsdatenbanken, 38 Rechenzentren auf der ganzen Welt. Unterstützt eine Breite Palette von Anwendungen und arbeitsauslastungen, von der Verwaltung einfacher Transaktionsdaten, in der datenintensivste, unternehmenswichtige Anwendungen, die erweiterte Datenverarbeitung auf globaler Ebene erfordern driving.
 
-Aufgrund seiner vollständigen PaaS-Funktionen und eine bessere Preise- und letztlich Kosten senken-sollten Sie auf verschieben die standardmäßige Azure SQL-Datenbank als "standardmäßig Wahl" Wenn Sie eine Anwendung die SQL-Datenbanken für diese verwendet Basic-, Standard- und keine zusätzliche Instanzfunktionen verfügen. SQL Server-Funktionen, z. B. SQL CLR-Integration, SQL Server-Agent und datenbankübergreifende Abfragen werden in der standard-Azure SQL-Datenbank nicht unterstützt. Diese Funktionen sind nur in der Azure SQL-Datenbank verwaltete Instanz Modell verfügbar sind.
+Eine bessere Leistung aufgrund seiner vollständigen PaaS-Funktionen, Preisgestaltung- und letztlich Kosten senken-sollten Sie auf verschieben die standardmäßige Azure SQL-Datenbank als "standardmäßig Wahl" Wenn Sie eine Anwendung die SQL-Datenbanken für diese verwendet Basic-, Standard- und keine zusätzliche Instanzfunktionen verfügen. SQL Server-Funktionen, z. B. SQL CLR-Integration, SQL Server-Agent und datenbankübergreifende Abfragen werden in der standard-Azure SQL-Datenbank nicht unterstützt. Diese Funktionen sind nur in der Azure SQL-Datenbank verwaltete Instanz Modell verfügbar sind.
 
-Azure SQL-Datenbank ist nur intelligent Cloud-Datenbankdienst, der für app-Entwickler erstellt wird. Es ist auch der einzige Cloud-Datenbank-Dienst, die auf dynamische, ohne Ausfallzeiten, können Sie das mehrinstanzenfähige apps effizient zu übermitteln skaliert. Letztendlich sind Azure SQL-Datenbank bewirkt, dass Sie mehr Zeit für die Innovationsbereitschaft, und er die Zeit auf dem Markt beschleunigt. Sie können sichere apps erstellen und mithilfe von den Sprachen und Plattformen, die Sie lieber eine Verbindung zur SQL-Datenbank herstellen.
+Azure SQL-Datenbank ist nur intelligent Cloud-Datenbankdienst, der für app-Entwickler erstellt wird. Es ist auch der einzige Cloud-Datenbank-Dienst, die auf dynamische, ohne Ausfallzeiten, können Sie das mehrinstanzenfähige apps effizient zu übermitteln skaliert. Letztendlich sind Azure SQL-Datenbank bewirkt, dass Sie mehr Zeit für die Innovationsbereitschaft, und er die Zeit auf dem Markt beschleunigt. Sie können Absichern von apps zu erstellen und mithilfe von den Sprachen und Plattformen, die Sie lieber eine Verbindung zur SQL-Datenbank herstellen.
 
 Azure SQL-Datenbank bietet folgende Vorteile:
 
@@ -76,13 +76,13 @@ Azure SQL-Datenbank bietet folgende Vorteile:
 
 - Kompatibilität mit SQL Server 2016, einschließlich Hybrid und migration
 
-Die standardmäßige Azure SQL-Datenbank ist näher an die PaaS als verwaltete Instanz in Azure SQL-Datenbank. Sie sollten, verwenden Sie wenn möglich, da Sie weitere Vorteile aus einer verwalteten Cloud erhalten. Allerdings Azure SQL-Datenbank verfügt über einige wesentliche Unterschiede von regulären und einer lokalen SQL Server-Instanzen. Je nach Anforderungen für die vorhandene Anwendung-Datenbankserver und Enterprise-Anforderungen und Richtlinien kann es nicht die beste Wahl sein, bei der Planung Ihrer Migrations in die Cloud.
+Die standardmäßige Azure SQL-Datenbank ist näher an die PaaS als verwaltete Instanz in Azure SQL-Datenbank. Bevorzugen Sie die standardmäßige Azure SQL-Datenbank, da Sie weitere Vorteile aus einer verwalteten Cloud erhalten. Allerdings Azure SQL-Datenbank verfügt über einige wesentliche Unterschiede von regulären und einer lokalen SQL Server-Instanzen. Je nach Anforderungen für die vorhandene Anwendung-Datenbankserver und Enterprise-Anforderungen und Richtlinien kann es nicht die beste Wahl sein, bei der Planung Ihrer Migrations in die Cloud.
 
 ## <a name="when-to-move-your-original-rdbms-to-a-vm-iaas"></a>Wenn Ihre ursprüngliche RDBMS an einen virtuellen Computer (IaaS) verschieben
 
 Einer der unsere Migrationsoptionen ist so verschieben Sie Ihre ursprüngliche Relationales Datenbankmanagementsystem (RDBMS), einschließlich Oracle, IBM DB2, MySQL, PostgreSQL oder SQL Server, mit einem ähnlichen Server, der auf einer Azure-VM ausgeführt wird. Wenn Sie vorhandene Anwendungen, die die schnellste Migration zur Cloud mit minimalen Änderungen oder gar keinen Änderungen erforderlich verfügen, kann eine direkte Migration zu IaaS in der Cloud eine ziemlich Option sein. Möglicherweise nicht die beste Möglichkeit, alle Cloud-Vorteile nutzen, aber es ist wahrscheinlich die schnellste Anfangspfad.
 
-Microsoft Azure unterstützt derzeit bis zu [331 unterschiedlicher Datenbankserver](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) als IaaS-VMs bereitgestellt. Dazu gehören häufig RDBMSes wie SQL Server, Oracle, MySQL, PostgreSQL, und IBM DB2 und viele andere NoSQL-Datenbanken wie MongoDB, Cassandra DataStax, MariaDB und Cloudera.
+Microsoft Azure unterstützt derzeit bis zu [331 unterschiedlicher Datenbankserver](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) als IaaS-VMs bereitgestellt. Dazu gehören häufig RDBMS wie SQL Server, Oracle, MySQL, PostgreSQL, und IBM DB2 und viele andere NoSQL-Datenbanken wie MongoDB, Cassandra DataStax, MariaDB und Cloudera.
 
 > [!NOTE]
 > Obwohl Sie RDBMS in einer Azure-VM ist möglicherweise die schnellste Möglichkeit, Ihre Daten in die Cloud migrieren (weil es IaaS ist), die dieser Ansatz erfordert eine erhebliche Investition in Ihre IT-Teams (Datenbankadministratoren und IT-Spezialisten). Enterprise-Teams müssen in der Lage, einrichten und verwalten hohe Verfügbarkeit, Wiederherstellung im Notfall und Patchen für SQL Server. Dieser Kontext benötigt außerdem eine angepasste-Umgebung mit vollen Administratorrechten.
@@ -127,4 +127,4 @@ Weitere Informationen zum Migrieren von Datenbanken mithilfe von Azure-Datenbank
 
 >[!div class="step-by-step"]
 [Zurück](lift-and-shift-existing-apps-azure-iaas.md)
-[Weiter](lift-and-shift-existing-apps-devops/index.md)
+[Weiter](modernize-existing-apps-to-cloud-optimized/index.md)
