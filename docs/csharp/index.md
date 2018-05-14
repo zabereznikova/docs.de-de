@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 598ddfbe16a1a09326d811b4eafcf87f3ca6e971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d349f8aff5e3d48a2bc738e848d2a251805e260
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="c-guide"></a>Leitfaden für C#
 
@@ -43,8 +43,8 @@ Der Leitfaden für C# ist in mehrere Abschnitte unterteilt. Sie können diese na
 * [Einführung in C#](tour-of-csharp/index.md)
   * Dieser Abschnitt enthält einen Überblick über die Sprache. Er umfasst die Elemente, die die C#-Programme und die Funktionen der Sprache bilden. Er veranschaulicht kleine Beispiele sämtlicher Syntaxelemente von C# und Erläuterungen zu den wichtigsten C#-Sprachthemen.
 
-* [Neueste Features](whats-new/index.md)
-  * Informationen zu neuen Funktionen in der Sprache Informationen zu neuen Tools wie C# Interactive (die REPL von C#) und .NET Compiler Platform SDK. In diesem Abschnitt wird gezeigt, wie die Sprache sich weiterentwickelt und wie die neuen Tools Ihre Produktivität fördern.
+* [Neues in C#](whats-new/index.md)
+  * Bietet Übersichten über in den neuesten Sprachversionen hinzugefügte neue Features und den Verlauf der C#-Sprache.
 
 <!--
 * [.NET Compiler Platform SDK](roslyn-sdk/index.md)

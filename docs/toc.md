@@ -1113,7 +1113,7 @@
 # [Leitfaden für ML.NET](machine-learning/index.md)
 ## [Tutorials](machine-learning/tutorials/index.md)
 ### [Standpunktanalyse (Klassifikation)](machine-learning/tutorials/sentiment-analysis.md)
-### [Vorhersage der Rollzeit (Regression)](machine-learning/tutorials/taxi-fare.md)
+### [Vorhersage des Rolltarifs (Regression)](machine-learning/tutorials/taxi-fare.md)
 ## [Ressourcen](machine-learning/resources/index.md)
 ### [Machine Learning-Katalog](machine-learning/resources/glossary.md)
 ### [Machine Learning (Grundlagen)](machine-learning/resources/basics.md)

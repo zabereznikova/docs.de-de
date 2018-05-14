@@ -4,11 +4,11 @@ description: .NET Core ist eine modulare, hochleistungsfähige Implementierung v
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 7a2548a177f6e62e9c76c336c6e270a139d9fce0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f413e4efa8b33877917330855f4881c3fbf0854
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-guide"></a>Leitfaden für .NET Core
 
@@ -31,14 +31,14 @@ Die folgenden Merkmale definieren .NET Core am besten:
 
 - Eine [.NET-Laufzeit](https://github.com/dotnet/coreclr), die ein Typsystem, eine Funktion zum Laden von Assemblys, einen Garbage Collector, natives Interop und andere grundlegende Dienste bereitstellt. 
 - Verschiedene [Frameworkbibliotheken](https://github.com/dotnet/corefx), die primitive Datentypen, Typen zur Anwendungsgestaltung und grundlegende Hilfsprogramme bereitstellen. 
-- Eine Anzahl [SDK-Tools](https://github.com/dotnet/cli) und [Sprachcompiler](https://github.com/dotnet/roslyn), zur Implementierung der grundlegenden Entwicklungsfunktionen über das [.NET Core SDK](sdk.md).
+- Eine Gruppe von [SDK-Tools](https://github.com/dotnet/cli) und Sprachcompilern ([Roslyn](https://github.com/dotnet/roslyn) und [F#](https://github.com/microsoft/visualfsharp)) zur Implementierung der grundlegenden Entwicklungsfunktionen über das [.NET Core SDK](sdk.md).
 - Der „Dotnet“-App-Host, der zum Starten von .NET Core-Anwendungen verwendet wird. Er wählt und hostet die Laufzeit, stellt eine Richtlinie zum Laden der Assembly bereit und startet die Anwendung. Der gleiche Host startet auch SDK-Tools auf die gleiche Weise.
 
 ### <a name="languages"></a>Sprachen
 
 C#-, Visual Basic- und F#-Sprachen können verwendet werden, um Anwendungen und Bibliotheken für .NET Core zu schreiben. Die Compiler werden auf .NET Core ausgeführt, und ermöglichen es Ihnen, .NET Core dort zu entwickeln, wo es ausgeführt wird. In der Regel verwenden Sie die Compiler nicht direkt, sondern indirekt durch die SDK-Tools.
 
-Die C#-, Visual Basic- und F#-Compiler und die .NET Core-Tools sind integriert bzw. können in mehrere Text-Editoren und IDEs, einschließlich Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text und Vim integriert werden. .NET Core ist somit eine Option in Ihrer bevorzugten Programmierumgebung und im Betriebssystem. Diese Integration wird teilweise von den Leuten vom [OmniSharp-Projekt](http://www.omnisharp.net/) bereitgestellt.
+Die C#-, Visual Basic- und F#-Compiler und die .NET Core-Tools sind integriert bzw. können in mehrere Text-Editoren und IDEs, einschließlich Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text und Vim integriert werden. .NET Core ist somit eine Option in Ihrer bevorzugten Programmierumgebung und im Betriebssystem. Diese Integration wird teilweise von den Leuten vom [OmniSharp-Projekt](http://www.omnisharp.net/) und [Ionide](http://ionide.io) bereitgestellt.
 
 ### <a name="net-apis-and-compatibility"></a>.NET-APIs und Kompatibilität
 
