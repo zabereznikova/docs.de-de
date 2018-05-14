@@ -1,20 +1,13 @@
 ---
-title: "Verknüpfen mithilfe eines zusammengesetzten Schlüssels"
-description: "Vorgehensweise: Verknüpfen mithilfe eines zusammengesetzten Schlüssels."
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Verknüpfen mithilfe eines zusammengesetzten Schlüssels
+description: 'Vorgehensweise: Verknüpfen mithilfe eines zusammengesetzten Schlüssels.'
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
-ms.openlocfilehash: c285e768d64d1da7e428e29fc67838e87575500c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e40f4d147886c07913c761bb5df83ee34d23eaba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-by-using-composite-keys"></a>Verknüpfen mithilfe eines zusammengesetzten Schlüssels
 

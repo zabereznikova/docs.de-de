@@ -4,25 +4,19 @@ description: Erfahren Sie mehr zu benutzerdefinierten Vorlagen für alle Arten v
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 1915c2609391d0aa1ff32ea9ebb011cf0f925aa8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fe888d0bfeeb51d77b73ec481b93fec9b40aa6ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Benutzerdefinierte Vorlagen für dotnet new
 
 Das [.NET Core SDK](https://www.microsoft.com/net/download/core) enthält viele vorinstallierte Vorlagen, die Sie mit dem [`dotnet new`-Befehl](dotnet-new.md) verwenden können. Ab .NET Core 2.0 können Sie Ihre eigenen benutzerdefinierten Vorlagen für jeden Projekttyp (App, Dienst, Tool, Klassenbibliothek usw.) erstellen. Sie könne sogar eine Vorlage erstellen, die mindestens eine unabhängige Datei ausgibt, wie z.B. eine Konfigurationsdatei.
 
-Sie können benutzerdefinierte Vorlagen aus NuGet-Paketen in jedem NuGet-Feed installieren, indem Sie direkt auf eine *NUPKG*-NuGet-Datei verweisen, oder indem Sie ein Dateisystemverzeichnis angeben, das die Vorlage enthält. Das Vorlagenmodul bietet Features, mit denen Sie Werte ersetzen, Dateien und Bereiche von Dateien ein- oder ausschließen und benutzerdefinierte Verarbeitungsvorgänge ausführen können, wenn Ihre Vorlage verwendet wird.
+Sie können benutzerdefinierte Vorlagen aus NuGet-Paketen in jedem NuGet-Feed installieren, indem Sie direkt auf eine *NUPKG*-NuGet-Datei verweisen, oder indem Sie ein Dateisystemverzeichnis angeben, das die Vorlage enthält. Die Vorlagen-Engine bietet Features, mit denen Sie Werte ersetzen, Dateien und Bereiche von Dateien ein- oder ausschließen und benutzerdefinierte Verarbeitungsvorgänge ausführen können, wenn Ihre Vorlage verwendet wird.
 
-Das Vorlagenmodul ist Open Source, und das Onlinecoderepository befindet sich unter [dotnet/templating](https://github.com/dotnet/templating/) auf GitHub. Navigieren Sie zum Repository [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples), wo sie Beispielvorlagen finden. Weitere Vorlagen, einschließlich Drittanbietervorlagen, finden Sie auf GitHub unter [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new). Weitere Informationen zum Erstellen und Verwenden von benutzerdefinierten Vorlagen finden Sie unter [How to create your own templates for dotnet new (Erstellen Ihrer eigenen Vorlage für dotnet new)](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) und im [GitHub-Repositorywiki dotnet/templating](https://github.com/dotnet/templating/wiki).
+Die Vorlagen-Engine ist Open Source, und das Onlinecoderepository befindet sich unter [dotnet/templating](https://github.com/dotnet/templating/) auf GitHub. Navigieren Sie zum Repository [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples), wo sie Beispielvorlagen finden. Weitere Vorlagen, einschließlich Drittanbietervorlagen, finden Sie auf GitHub unter [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new). Weitere Informationen zum Erstellen und Verwenden von benutzerdefinierten Vorlagen finden Sie unter [How to create your own templates for dotnet new (Erstellen Ihrer eigenen Vorlage für dotnet new)](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) und im [GitHub-Repositorywiki dotnet/templating](https://github.com/dotnet/templating/wiki).
 
 Eine exemplarische Vorgehensweise zum Erstellen einer Vorlage finden Sie im Tutorial [Create a custom template for dotnet new (in englischer Sprache)](~/docs/core/tutorials/create-custom-template.md).
 
@@ -35,18 +29,18 @@ Eine Vorlage besteht aus den folgenden Komponenten:
 
 ### <a name="source-files-and-folders"></a>Quelldateien und -ordner
 
-Die Quelldateien und -ordner enthalten die Dateien und Ordner, von denen Sie möchten, dass sie vom Vorlagenmodul verwendet werden, wenn der `dotnet new <TEMPLATE>`-Befehl ausgeführt wird. Das Vorlagenmodul wurde so entwickelt, dass es *ausführbare Projekte* als Quellcode verwendet, um Projekte zu erzeugen. Dies hat mehrere Vorteile:
+Die Quelldateien und -ordner enthalten die Dateien und Ordner, von denen Sie möchten, dass sie von der Vorlagen-Engine verwendet werden, wenn der `dotnet new <TEMPLATE>`-Befehl ausgeführt wird. Die Vorlagen-Engine wurde so entwickelt, dass sie *ausführbare Projekte* als Quellcode verwendet, um Projekte zu erzeugen. Dies hat mehrere Vorteile:
 
-- Sie müssen für das Vorlagenmodul keine besonderen Token in den Quellcode Ihres Projekts einfügen.
-- Die Codedateien sind keine besonderen Dateien. Sie werden auch nicht modifiziert, um mit der Vorlage zu funktionieren. Die Tools, die Sie normalerweise mit Projekten verwenden, funktionieren auch mit Vorlageninhalt.
+- Sie müssen für die Vorlagen-Engine keine besonderen Token in den Quellcode Ihres Projekts einfügen.
+- Die Codedateien sind keine besonderen Dateien. Sie werden auch nicht modifiziert, um mit der Vorlagen-Engine zu funktionieren. Die Tools, die Sie normalerweise mit Projekten verwenden, funktionieren auch mit Vorlageninhalt.
 - Das Erstellen, Ausführen und Debuggen Ihrer Projekte erfolgt wie bei Ihren anderen Projekten.
 - Sie können eine Vorlage schnell aus einem vorhandenen Projekt erstellen, indem Sie einfach eine *template.json*-Konfigurationsdatei in dem Projekt einfügen.
 
-In der Vorlage gespeicherte Dateien und Ordner sind auf formelle .NET-Projekttypen beschränkt, wie z.B. .NET Core- oder .NET Framework-Projektmappen. Quelldateien und -ordner können aus jedem beliebigen Inhalt bestehen, den Sie erstellen, wenn die Vorlage verwendet wird, auch wenn das Vorlagenmodul nur eine Datei ausgibt, wie etwa eine Konfigurationsdatei oder eine Projektmappendatei. Sie können z.B. eine Vorlage erstellen, die eine *web.config*-Quelldatei enthält und eine modifizierte *web.config*-Datei für Projekte modifiziert, in denen die Vorlage verwendet wird. Die Modifizierungen von Quelldateien basieren auf Logik und Einstellungen, die Sie in der *template.json*-Konfigurationsdatei zusammen mit den vom Benutzer bereitgestellten Werten bereitgestellt haben. Diese Werte werden als Optionen an den `dotnet new <TEMPLATE>`-Befehl übergeben.
+In der Vorlage gespeicherte Dateien und Ordner sind auf formelle .NET-Projekttypen beschränkt, wie z.B. .NET Core- oder .NET Framework-Projektmappen. Quelldateien und -ordner können aus jedem beliebigen Inhalt bestehen, den Sie erstellen, wenn die Vorlage verwendet wird, auch wenn die Vorlagen-Engine nur eine Datei ausgibt, wie etwa eine Konfigurationsdatei oder eine Projektmappendatei. Sie können z.B. eine Vorlage erstellen, die eine *web.config*-Quelldatei enthält und eine modifizierte *web.config*-Datei für Projekte modifiziert, in denen die Vorlage verwendet wird. Die Modifizierungen von Quelldateien basieren auf Logik und Einstellungen, die Sie in der *template.json*-Konfigurationsdatei zusammen mit den vom Benutzer bereitgestellten Werten bereitgestellt haben. Diese Werte werden als Optionen an den `dotnet new <TEMPLATE>`-Befehl übergeben.
 
 ### <a name="templatejson"></a>template.json
 
-Die Datei *template.json* wird in den Ordner *template.config* im Stammverzeichnis der Vorlage platziert. Die Datei bietet dem Vorlagenmodul Konfigurationsinformationen. Die Mindestkonfiguration erfordert die in der folgenden Tabelle aufgelisteten Member, was zum Erstellen einer funktionsfähigen Vorlage ausreicht.
+Die Datei *template.json* wird in den Ordner *template.config* im Stammverzeichnis der Vorlage platziert. Die Datei bietet der Vorlagen-Engine Konfigurationsinformationen. Die Mindestkonfiguration erfordert die in der folgenden Tabelle aufgelisteten Member, was zum Erstellen einer funktionsfähigen Vorlage ausreicht.
 
 | Member            | Typ          | description |
 | ----------------- | ------------- | ----------- |

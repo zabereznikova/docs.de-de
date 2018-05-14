@@ -1,28 +1,22 @@
 ---
-title: "Abfrageschlüsselwörter (C#-Referenz)"
+title: Abfrageschlüsselwörter (C#-Referenz)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-caps.latest.revision: "15"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 30526e7bc4f99110d421855866381d9b7934d31c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3889e07813c5626372f27bdc33e37d803684b441
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-keywords-c-reference"></a>Abfrageschlüsselwörter (C#-Referenz)
 Dieser Abschnitt enthält die kontextabhängigen Schlüsselwörter, die in Abfrageausdrücken verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Klausel|Beschreibung|  
+|Klausel|description|  
 |------------|-----------------|  
 |[from](../../../csharp/language-reference/keywords/from-clause.md)|Gibt eine Datenquelle und eine Bereichsvariable (ähnlich einer Iterationsvariable) an|  
 |[where](../../../csharp/language-reference/keywords/where-clause.md)|Filtert Quellelemente basierend auf einem oder mehreren boolschen Ausdrücken, die durch logische AND- und OR-Operatoren (`&&` oder <code>&#124;&#124;</code>) getrennt sind|  

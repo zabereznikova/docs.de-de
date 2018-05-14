@@ -1,21 +1,14 @@
 ---
 title: Ausnahmebehandlungsanweisungen (C#-Referenz)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
-caps.latest.revision: 12
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c148165ae02aef5cd8851297834d104b692da721
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b429ce3c5838a824f9b6799332bc810bd3a5a82
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-statements-c-reference"></a>Ausnahmebehandlungsanweisungen (C#-Referenz)
 C# bietet integrierte Unterstützung für die Behandlung außergewöhnlicher Situationen, bekannt als Ausnahmen, die während der Ausführung des Programms auftreten können. Diese Ausnahmen werden durch Code verarbeitet, der außerhalb der normalen Ablaufsteuerung liegt.  

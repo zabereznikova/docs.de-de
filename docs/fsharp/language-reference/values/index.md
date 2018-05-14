@@ -2,11 +2,11 @@
 title: Werte (F#)
 description: Erfahren Sie, wie Werte in f# Mengen sind, die einen bestimmten Typ haben.
 ms.date: 05/16/2016
-ms.openlocfilehash: 610ff6cfc6d33cd22a175ca928bfb6e9f8974a36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d2874a694d9c39048a28827be858cba499dca87
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="values"></a>Werte
 
@@ -20,6 +20,7 @@ Der Begriff *Bindung* bezeichnet das Zuordnen eines Namens zu einer Definition. 
 
 Der Typ eines Werts wird aus der Definition abgeleitet. Für einen primitiven Datentyp, z.B. eine Ganzzahl oder Gleitkommazahl, wird der Typ vom Typ des Literals bestimmt. Aus diesem Grund leitet der Compiler im vorherigen Beispiel den Typ `b` ab, um `unsigned int` zu sein, hingegen leitet der Compiler den Typ `a` ab, damit er `int` wird. Der Typ eines Funktionswerts wird anhand des Rückgabewerts im Funktionsrumpf bestimmt. Weitere Informationen über Funktionswerttypen finden Sie unter [Funktionen](../functions/index.md). Weitere Informationen über Literaltypen finden Sie unter [Literale](../literals.md).
 
+Der Compiler gibt keine Diagnose über nicht verwendeten Bindungen standardmäßig aus. Um diese Nachrichten zu empfangen, aktivieren Warnung 1182 in der Projektdatei oder beim Aufrufen des Compilers (finden Sie unter `--warnon` unter [Compileroptionen](../compiler-options.md)).
 
 ## <a name="why-immutable"></a>Warum unveränderlich?
 Unveränderliche Werte sind Werte, die im Verlauf der Ausführung des Programms nicht geändert werden können. Wenn Sie an Sprachen wie C++, Visual Basic oder C# gewöhnt sind, finden Sie es möglicherweise überraschend, dass F# unveränderlichen Werte Vorrang gewährt, anstelle von Variablen, denen während der Ausführung eines Programms neue Werte zugeordnet werden können. Unveränderliche Daten sind ein wichtiges Element der funktionalen Programmierung. In einer Multithreadumgebung sind freigegebene änderbare Variablen, die von vielen unterschiedlichen Threads geändert werden können, schwierig zu verwalten. Darüber hinaus kann man mit änderbaren Variablen manchmal nur schwer feststellen, ob eine Variable geändert werden kann, wenn sie an eine andere Funktion übergeben wird.
@@ -35,6 +36,8 @@ Sie können mithilfe des Schlüsselworts `mutable` eine Variable angeben, die ge
 Sie können einen Anfangswert für eine änderbare Variable zuweisen, indem Sie das `let`-Schlüsselwort auf die gleiche Weise verwenden, wie Sie einen Wert definieren würden. Der Unterschied ist jedoch, dass Sie anschließend den änderbaren Variablen neue Werte zuweisen können, indem Sie den `<-`-Operator verwenden, wie im folgenden Beispiel.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+
+Werte, die markiert `mutable` automatisch auf heraufgestuft werden `'a ref` durch einen Abschluss nicht erfasst, darunter Formulare, die Abschlüsse, z. B. erstellen `seq` Generatoren. Wenn Sie in diesem Fall benachrichtigt werden möchten, aktivieren Sie die Warnung 3180 in der Projektdatei oder beim Aufrufen des Compilers.
     
 ## <a name="related-topics"></a>Verwandte Themen
 

@@ -1,20 +1,13 @@
 ---
-title: "Grundlagen zu Abfrageausdrücken"
-description: "Führt Konzepte im Zusammenhang mit Abfrageausdrücken ein"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Grundlagen zu Abfrageausdrücken
+description: Führt Konzepte im Zusammenhang mit Abfrageausdrücken ein
 ms.date: 11/30/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 7a1cf9eea4c5d75c6bcb6d2f0d5f68a07e3158d0
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: d211b0770bdc69f513e4129c818f96650de63e77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-basics"></a>Grundlagen zu Abfrageausdrücken
 
@@ -157,7 +150,7 @@ ms.lasthandoff: 11/30/2017
   
  [!code-csharp[csrefQueryExpBasics#61](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]  
   
- Sie können auch eine Gruppenverknüpfung durchführen, indem Sie die Ergebnisse des `join`-Vorgangs mithilfe des Schlüsselworts [into](../language-reference/keywords/into.md) in eine temporäre Variable speichern. Weitere Informationen finden Sie unter [join-Klausel](../language-reference/keywords/join-clause.md).  
+ Sie können auch eine Gruppenverknüpfung durchführen, indem Sie die Ergebnisse des `join`-Vorgangs mithilfe des Schlüsselworts [into](../language-reference/keywords/into.md) in eine temporäre Variable speichern. Weitere Informationen finden Sie unter [Join-Klausel](../language-reference/keywords/join-clause.md).  
   
 #### <a name="let-clause"></a>let-Klausel 
 
@@ -173,10 +166,10 @@ ms.lasthandoff: 11/30/2017
   
  [!code-csharp[csrefQueryExpBasics#63](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Ausführen einer Unterabfrage für eine Gruppierungsoperation (C#-Programmierhandbuch)](perform-a-subquery-on-a-grouping-operation.md).  
+ Weitere Informationen finden Sie unter [How to: perform a subquery on a grouping operation (Vorgehensweise: Ausführen einer Unterabfrage für einen Gruppierungsvorgang)](perform-a-subquery-on-a-grouping-operation.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../programming-guide/index.md)  
  [LINQ-Abfrageausdrücke](index.md)  
  [Abfrageschlüsselwörter (LINQ)](../language-reference/keywords/query-keywords.md)  
- [Übersicht über die Standardabfrageoperatoren](../programming-guide/concepts/linq/standard-query-operators-overview.md)
+ [Standard query operators overview (Übersicht über Standardabfrageoperatoren)](../programming-guide/concepts/linq/standard-query-operators-overview.md)

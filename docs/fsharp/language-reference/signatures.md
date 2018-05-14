@@ -2,11 +2,11 @@
 title: Signaturen (F#)
 description: Erfahren Sie, wie eine Signaturdatei f# zu verwenden, um Informationen zu den öffentlichen Signaturen einer Reihe von F#-Programmelementen, z. B. Typen, Namespaces und Modulen aufzunehmen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 04539a871dda9eedd1495e0e5b1f3f5026bae037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e182a1a0ac7f3f9fab27026e582d83ee737822e
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="signatures"></a>Signaturen
 
@@ -64,6 +64,9 @@ Für Wertsignaturen gelten folgende Regeln:
 
 
 - Das Muster der Parameter (auch *Stelligkeit*) von Signaturen und Implementierungen muss konsistent sein.
+
+
+- Wenn Parameternamen in einer Signaturdatei aus der entsprechenden Implementierungsdatei unterscheiden, wird der Name in der Signaturdatei stattdessen Dies verursacht möglicherweise Probleme beim Debuggen oder profilerstellung verwendet werden. Wenn Sie solche Nichtübereinstimmungen, Enable 3218 in der Projektdatei Warnung benachrichtigt werden möchten, oder beim Aufrufen des Compilers (finden Sie unter `--warnon` unter [Compileroptionen](compiler-options.md)).
 
 
 Das folgende Codebeispiel veranschaulicht eine Signaturdatei, die Namespace-, Modul-, Funktionswert- und Typsignaturen sowie die entsprechenden Attribute enthält. Im Beispiel wird außerdem die entsprechende Implementierungsdatei gezeigt.

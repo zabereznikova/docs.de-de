@@ -1,24 +1,17 @@
 ---
-title: "Gängige Muster für Delegate"
-description: "Erfahren Sie etwas über allgemeine Muster für die Verwendung von Delegaten in Ihrem Code, um starke Kopplung zwischen Komponenten zu vermeiden."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: Gängige Muster für Delegate
+description: Erfahren Sie etwas über allgemeine Muster für die Verwendung von Delegaten in Ihrem Code, um starke Kopplung zwischen Komponenten zu vermeiden.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 83214800fb997e9274cacfd1bae85ab07c4515a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-patterns-for-delegates"></a>Gängige Muster für Delegate
 
-[Vorheriges](delegates-strongly-typed.md)
+[Vorherige](delegates-strongly-typed.md)
 
 Delegaten bieten einen Mechanismus, der Software-Entwürfe ermöglicht, die minimale Kopplung zwischen Komponenten umfassen.
 
@@ -150,9 +143,9 @@ Sie haben der Protokollierungsinfrastruktur neue Funktionen hinzugefügt. Da die
 
 Solange Sie dies erstellen, sehen Sie weitere Beispiele, wie diese lose Verbindung mehr Flexibilität bei der Aktualisierung von Teilen der Site ohne Änderungen an anderen Speicherorten ermöglicht. In der Tat könnten die Klassen der Protokollierungsausgabe in einer umfangreicheren Anwendung in einer anderen Assembly sein. Sie müssen auch nicht neu erstellt werden.
 
-## <a name="building-a-second-output-engine"></a>Erstellen eines zweiten Ausgabemoduls
+## <a name="building-a-second-output-engine"></a>Erstellen einer zweiten Ausgabe-Engine
 
-Die Protokollierungskomponente kommt gut voran. Fügen wir ein weiteres Ausgabemodul hinzu, das Meldungen in einer Datei protokolliert. Dies wird ein etwas komplexeres Ausgabemodul werden. Es wird eine Klasse sein, die die Dateivorgänge kapselt, und sicherstellt, dass die Datei nach jedem Schreibvorgang immer geschlossen wird. Dadurch wird sichergestellt, dass alle Daten auf den Datenträger geschrieben werden, nachdem jede Meldung generiert wurde.
+Die Protokollierungskomponente kommt gut voran. Fügen wir eine weitere Ausgabe-Engine hinzu, die Meldungen in einer Datei protokolliert. Dies wird eine etwas komplexere Ausgabe-Engine werden. Es wird eine Klasse sein, die die Dateivorgänge kapselt, und sicherstellt, dass die Datei nach jedem Schreibvorgang immer geschlossen wird. Dadurch wird sichergestellt, dass alle Daten auf den Datenträger geschrieben werden, nachdem jede Meldung generiert wurde.
 
 Hier ist diese dateibasierte-Protokollierung:
 
@@ -240,6 +233,6 @@ Sie werden die `Invoke()`-Methode nicht in der Dokumentation für `System.Delega
 
 Sie haben die Anfänge einer Protokollkomponente gesehen, die mit anderen Writern und anderen Funktionen erweitert werden konnte. Mithilfe von Delegaten im Entwurf sind diese verschiedenen Komponenten sehr lose gekoppelt. Dies bietet mehrere Vorteile. Es ist sehr einfach neue Ausgabemechanismen zu erstellen und diese an das System anzufügen. Diese Mechanismen benötigen nur eine Methode: Die Methode, die die Protokollmeldungen schreibt. Es ist ein Entwurf, der sehr stabil ist, wenn neue Funktionen hinzugefügt werden. Der für alle Writer erforderliche Vertrag dient dazu, eine Methode zu implementieren. Diese Methode kann eine statische oder Instanzmethode sein. Es kann sich um einen öffentlichen, privaten oder jeden anderen rechtlichen Zugriff handeln.
 
-Die Protokollierungsklasse kann eine beliebige Anzahl von Verbesserungen oder Änderungen vornehmen, ohne wichtige Änderungen einzuführen. Wie jede Klasse können Sie die öffentliche API nicht ohne das Risiko von wichtigen Änderungen ändern. Aber da die Kopplung zwischen der Protokollierung und den Ausgabemodulen nur über den Delegaten stattfindet, sind keine anderen Typen (z.B. Schnittstellen oder Basisklassen) beteiligt. Die Kopplung ist so klein wie möglich.
+Die Protokollierungsklasse kann eine beliebige Anzahl von Verbesserungen oder Änderungen vornehmen, ohne wichtige Änderungen einzuführen. Wie jede Klasse können Sie die öffentliche API nicht ohne das Risiko von wichtigen Änderungen ändern. Aber da die Kopplung zwischen der Protokollierung und den Ausgabe-Engines nur über den Delegaten stattfindet, sind keine anderen Typen (z.B. Schnittstellen oder Basisklassen) beteiligt. Die Kopplung ist so klein wie möglich.
 
-[Weiter](events-overview.md)
+[Nächste](events-overview.md)

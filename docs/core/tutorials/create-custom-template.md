@@ -4,16 +4,11 @@ description: In diesem interessanten Tutorial erfahren Sie, wie Sie eine benutze
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 9ff58634daa6d51c10df9a3c9a1af0fd6420c69c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fee2709f54395b9926dae904a448cb92aafb5172
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Erstellen eines benutzerdefinierten Vorlagen-Assistenten
 
@@ -144,7 +139,7 @@ Wenn Sie die Vorlagen mit `dotnet new -l` auflisten, sehen Sie *NUnit 3-Testproj
 
 ### <a name="create-a-project-from-the-template"></a>Erstellen eines neuen Projekts aus der Vorlage
 
-Nachdem die Vorlage aus NuGet installiert wurde, verwenden Sie sie, indem Sie den `dotnet new <TEMPLATE>`-Befehl aus dem Verzeichnis ausführen, in das die Ausgabe des Vorlagenmoduls eingefügt werden soll (es sei denn, Sie verwenden die `-o|--output`-Option, um ein spezifisches Verzeichnis anzugeben). Weitere Informationen finden Sie unter [`dotnet new`-Optionen](~/docs/core/tools/dotnet-new.md#options): Geben Sie die Kurzform des Namens der Vorlage für den `dotnet new`-Befehl an. Um ein Projekt aus der NUnit-Vorlage zu erstellen, führen Sie den folgenden Befehl aus:
+Nachdem die Vorlage aus NuGet installiert wurde, verwenden Sie sie, indem Sie den `dotnet new <TEMPLATE>`-Befehl aus dem Verzeichnis ausführen, in das die Ausgabe der Vorlagen-Engine eingefügt werden soll (es sei denn, Sie verwenden die `-o|--output`-Option, um ein spezifisches Verzeichnis anzugeben). Weitere Informationen finden Sie unter [`dotnet new`-Optionen](~/docs/core/tools/dotnet-new.md#options): Geben Sie die Kurzform des Namens der Vorlage für den `dotnet new`-Befehl an. Um ein Projekt aus der NUnit-Vorlage zu erstellen, führen Sie den folgenden Befehl aus:
 
 ```console
 dotnet new nunit
@@ -191,7 +186,7 @@ dotnet new -i C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 
 ### <a name="create-a-project-from-the-template"></a>Erstellen eines neuen Projekts aus der Vorlage
 
-Nachdem die Vorlage aus dem Dateisystem installiert wurde, verwenden Sie sie, indem Sie den `dotnet new <TEMPLATE>`-Befehl aus dem Verzeichnis ausführen, in das die Ausgabe des Vorlagenmoduls eingefügt werden soll (es sei denn, Sie verwenden die `-o|--output`-Option, um ein spezifisches Verzeichnis anzugeben). Weitere Informationen finden Sie unter [`dotnet new`-Optionen](~/docs/core/tools/dotnet-new.md#options): Geben Sie die Kurzform des Namens der Vorlage für den `dotnet new`-Befehl an.
+Nachdem die Vorlage aus dem Dateisystem installiert wurde, verwenden Sie sie, indem Sie den `dotnet new <TEMPLATE>`-Befehl aus dem Verzeichnis ausführen, in das die Ausgabe der Vorlagen-Engine eingefügt werden soll (es sei denn, Sie verwenden die `-o|--output`-Option, um ein spezifisches Verzeichnis anzugeben). Weitere Informationen finden Sie unter [`dotnet new`-Optionen](~/docs/core/tools/dotnet-new.md#options): Geben Sie die Kurzform des Namens der Vorlage für den `dotnet new`-Befehl an.
 
 Erstellen Sie aus einem neuen Projektordner, der unter *C:\Benutzer\\\<BENUTZER>\Dokumente\Projekte\MeineKonsolenanwendung* erstellt wurde, ein Projekt aus der `garciaconsole`-Vorlage:
 

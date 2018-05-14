@@ -2,11 +2,11 @@
 title: Referenzzellen (F#)
 description: Erfahren Sie, wie f# Referenzzellen Speicherorte sind, die Ihnen ermöglichen, änderbare Werte mit Verweissemantik zu erstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="reference-cells"></a>Referenzzellen
 
@@ -81,6 +81,9 @@ Weitere Informationen dazu, wie Sie als Verweis übergeben, finden Sie unter [Pa
 >[!NOTE]
 C#-Programmierer sollten wissen, dass die Ref unterschiedlich in f# funktioniert als in C# geschrieben. Beispielsweise die Verwendung von Ref beim Übergeben eines Arguments denselben Effekt in f# keine wie in c#.
 
+>[!NOTE]
+`mutable` Variablen können automatisch auf heraufgestuft werden `'a ref` Closure; erfasst konsultieren [Werte](values/index.md).
+
 ## <a name="consuming-c-ref-returns"></a>Verarbeiten von c# `ref` zurückgibt
 
 Ab f# 4.1, können Sie nutzen `ref` gibt, die in c# generiert.  Das Ergebnis der solch ein Aufruf ist eine `byref<_>` Zeiger.
@@ -132,3 +135,5 @@ Es gibt derzeit keine Möglichkeit zum Generieren einer `ref` return in F# erlä
 [Parameter und Argumente](parameters-and-arguments.md)
 
 [Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)
+
+[Werte](values/index.md)

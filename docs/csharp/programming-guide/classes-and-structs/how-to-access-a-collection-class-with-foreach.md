@@ -1,21 +1,14 @@
 ---
 title: 'Gewusst wie: Zugreifen auf Auflistungsklassen mit foreach (C#-Programmierhandbuch)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - collection classes [C#], foreach statement
 ms.assetid: a6b9cf5c-6c8d-4223-b12c-288949434493
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0cf827e958d4dc3b951d17b53effd155356c0ca5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b02b9f4508984e3248cfd8e0cde0c994e1b871ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-collection-class-with-foreach-c-programming-guide"></a>Gewusst wie: Zugreifen auf Auflistungsklassen mit foreach (C#-Programmierhandbuch)
 Das folgende Codebeispiel zeigt, wie Sie eine nicht generische Auflistungsklasse schreiben, die mit [foreach](../../../csharp/language-reference/keywords/foreach-in.md) verwendet werden kann. Das Beispiel definiert eine Zeichenfolgen-Tokenisierungsklasse.  

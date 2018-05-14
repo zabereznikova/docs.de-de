@@ -2,17 +2,14 @@
 title: Microsoft WCF Web Service Reference Provider-Tool
 description: Übersicht zum Microsoft WCF Web Service Reference Provider-Tool, über das Funktionen für .NET Core- und ASP.NET Core-Projekte hinzugefügt werden, z.B. das Hinzufügen von Dienstverweisen für .NET Framework-Projekte.
 author: mlacouture
-manager: wpickett
 ms.author: johalex
 ms.date: 04/19/2018
-ms.topic: article
-ms.prod: .net-core
 ms.custom: mvc
-ms.openlocfilehash: acf9e97c05dabc46da26ed2ea580e7d341b0f2dc
-ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
+ms.openlocfilehash: 416ca4dbedcf6e610aa5307c87934c0cb18be749
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web Service Reference Provider-Tool
 
