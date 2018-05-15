@@ -1,34 +1,20 @@
 ---
 title: '&lt;comContracts&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69fbce3f312833c374a4c2615a15359d9c2db3a7
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: b44c09e7e32129ba21834f7fbb8dc4699904e46b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltcomcontractsgt"></a><span data-ttu-id="f16b2-102">&lt;comContracts&gt;</span><span class="sxs-lookup"><span data-stu-id="f16b2-102">&lt;comContracts&gt;</span></span>
-<span data-ttu-id="f16b2-103">Der `comContracts`-Konfigurationsabschnitt enthält Elemente, mit denen Sie verschiedene Eigenschaften eines COM+-Integrationsdienstvertrags angeben können.</span><span class="sxs-lookup"><span data-stu-id="f16b2-103">The `comContracts` configuration section contains elements that allow you to specify various properties of a COM+ integration service contract.</span></span>  
+# <a name="ltcomcontractsgt"></a><span data-ttu-id="1803c-102">&lt;comContracts&gt;</span><span class="sxs-lookup"><span data-stu-id="1803c-102">&lt;comContracts&gt;</span></span>
+<span data-ttu-id="1803c-103">Der `comContracts`-Konfigurationsabschnitt enthält Elemente, mit denen Sie verschiedene Eigenschaften eines COM+-Integrationsdienstvertrags angeben können.</span><span class="sxs-lookup"><span data-stu-id="1803c-103">The `comContracts` configuration section contains elements that allow you to specify various properties of a COM+ integration service contract.</span></span>  
   
-## <a name="specifying-namespace-and-contract"></a><span data-ttu-id="f16b2-104">Angeben von Namespace und Vertrag</span><span class="sxs-lookup"><span data-stu-id="f16b2-104">Specifying Namespace and Contract</span></span>  
- <span data-ttu-id="f16b2-105">COM+-integrationsdienstverträge sind aktuell auf beschränkt die "http://tempuri.org"-Namespace und Vertragsnamen aus der unterstützenden COM-Schnittstelle abgeleitet wird.</span><span class="sxs-lookup"><span data-stu-id="f16b2-105">COM+ integration service contracts are currently restricted to the "http://tempuri.org" namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="f16b2-106">Sie können Alternativen aber angeben, indem Sie den Abschnitt `comContracts` in der Konfigurationsdatei verwenden.</span><span class="sxs-lookup"><span data-stu-id="f16b2-106">You can, however, specify alternatives by using the `comContracts` section in the configuration file.</span></span>  
+## <a name="specifying-namespace-and-contract"></a><span data-ttu-id="1803c-104">Angeben von Namespace und Vertrag</span><span class="sxs-lookup"><span data-stu-id="1803c-104">Specifying Namespace and Contract</span></span>  
+ <span data-ttu-id="1803c-105">COM+-integrationsdienstverträge sind aktuell auf beschränkt die "http://tempuri.org"-Namespace und Vertragsnamen aus der unterstützenden COM-Schnittstelle abgeleitet wird.</span><span class="sxs-lookup"><span data-stu-id="1803c-105">COM+ integration service contracts are currently restricted to the "http://tempuri.org" namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="1803c-106">Sie können Alternativen aber angeben, indem Sie den Abschnitt `comContracts` in der Konfigurationsdatei verwenden.</span><span class="sxs-lookup"><span data-stu-id="1803c-106">You can, however, specify alternatives by using the `comContracts` section in the configuration file.</span></span>  
   
- <span data-ttu-id="f16b2-107">Sie können z.&#160;B. folgende Konfiguration zum Angeben des Namespaces und Namens des Dienstvertrags sowie als Option zum Erzwingen sitzungsbasierter Bindungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="f16b2-107">For example, you can use the following configuration to specify the namespace and contract name of the service contract, as well as an option to enforce usage on sessionful bindings.</span></span>  
+ <span data-ttu-id="1803c-107">Sie können z.&#160;B. folgende Konfiguration zum Angeben des Namespaces und Namens des Dienstvertrags sowie als Option zum Erzwingen sitzungsbasierter Bindungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="1803c-107">For example, you can use the following configuration to specify the namespace and contract name of the service contract, as well as an option to enforce usage on sessionful bindings.</span></span>  
   
 ```xml  
 <comContracts>  
@@ -41,18 +27,18 @@ ms.lasthandoff: 03/19/2018
 </comContracts>  
 ```  
   
- <span data-ttu-id="f16b2-108">Wenn der Dienst initialisiert wird, werden die angegebenen Namespaces und Vertragsnamen auf die generierten Dienstbeschreibungen angewendet.</span><span class="sxs-lookup"><span data-stu-id="f16b2-108">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
+ <span data-ttu-id="1803c-108">Wenn der Dienst initialisiert wird, werden die angegebenen Namespaces und Vertragsnamen auf die generierten Dienstbeschreibungen angewendet.</span><span class="sxs-lookup"><span data-stu-id="1803c-108">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
   
- <span data-ttu-id="f16b2-109">Wenn dieser Abschnitt leer ist, wendet die Dienstinitialisierung einen standardmäßigen Namespace und Vertragsnamen aus der unterstützenden COM-Schnittstellen-ID an.</span><span class="sxs-lookup"><span data-stu-id="f16b2-109">When this section is empty, the service initialization applies a default namespace and contract name taken from the supporting COM interface ID.</span></span>  
+ <span data-ttu-id="1803c-109">Wenn dieser Abschnitt leer ist, wendet die Dienstinitialisierung einen standardmäßigen Namespace und Vertragsnamen aus der unterstützenden COM-Schnittstellen-ID an.</span><span class="sxs-lookup"><span data-stu-id="1803c-109">When this section is empty, the service initialization applies a default namespace and contract name taken from the supporting COM interface ID.</span></span>  
   
- <span data-ttu-id="f16b2-110">Darüber hinaus können Sie die [ \<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) Element COM+-Methoden angeben, die verfügbar gemacht werden, wenn die Schnittstelle für eine COM+-Komponente als Webdienst verfügbar gemacht wird.</span><span class="sxs-lookup"><span data-stu-id="f16b2-110">In addition, you can use the [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) element to specify COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span> <span data-ttu-id="f16b2-111">Sie können auch die [ \<PersistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) an dauerhaften Typen, die bei der Integration verwendet.</span><span class="sxs-lookup"><span data-stu-id="f16b2-111">You can also use the [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) to specify persistable types used in integration.</span></span> <span data-ttu-id="f16b2-112">Schließlich können Sie die [ \<UserDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) Element zum Einschließen von benutzerdefinierten Typen (UDT), die im Dienstvertrag enthalten sein sollen.</span><span class="sxs-lookup"><span data-stu-id="f16b2-112">Finally, you can use the [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) element to include User Defined Types (UDT) that are to be included in the service contract.</span></span>  
+ <span data-ttu-id="1803c-110">Darüber hinaus können Sie die [ \<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) Element COM+-Methoden angeben, die verfügbar gemacht werden, wenn die Schnittstelle für eine COM+-Komponente als Webdienst verfügbar gemacht wird.</span><span class="sxs-lookup"><span data-stu-id="1803c-110">In addition, you can use the [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) element to specify COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span> <span data-ttu-id="1803c-111">Sie können auch die [ \<PersistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) an dauerhaften Typen, die bei der Integration verwendet.</span><span class="sxs-lookup"><span data-stu-id="1803c-111">You can also use the [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) to specify persistable types used in integration.</span></span> <span data-ttu-id="1803c-112">Schließlich können Sie die [ \<UserDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) Element zum Einschließen von benutzerdefinierten Typen (UDT), die im Dienstvertrag enthalten sein sollen.</span><span class="sxs-lookup"><span data-stu-id="1803c-112">Finally, you can use the [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) element to include User Defined Types (UDT) that are to be included in the service contract.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f16b2-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f16b2-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="1803c-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1803c-113">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
  <xref:System.ServiceModel.Configuration.ComContractElement>  
- [<span data-ttu-id="f16b2-114">\<exposedMethod></span><span class="sxs-lookup"><span data-stu-id="f16b2-114">\<exposedMethod></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)  
- [<span data-ttu-id="f16b2-115">\<persistableTypes></span><span class="sxs-lookup"><span data-stu-id="f16b2-115">\<persistableTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)  
- [<span data-ttu-id="f16b2-116">\<userDefinedType></span><span class="sxs-lookup"><span data-stu-id="f16b2-116">\<userDefinedType></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)  
- [<span data-ttu-id="f16b2-117">\<comContract></span><span class="sxs-lookup"><span data-stu-id="f16b2-117">\<comContract></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)  
- [<span data-ttu-id="f16b2-118">Integrieren von COM+-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="f16b2-118">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [<span data-ttu-id="f16b2-119">Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen</span><span class="sxs-lookup"><span data-stu-id="f16b2-119">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [<span data-ttu-id="1803c-114">\<exposedMethod></span><span class="sxs-lookup"><span data-stu-id="1803c-114">\<exposedMethod></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)  
+ [<span data-ttu-id="1803c-115">\<persistableTypes></span><span class="sxs-lookup"><span data-stu-id="1803c-115">\<persistableTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)  
+ [<span data-ttu-id="1803c-116">\<userDefinedType></span><span class="sxs-lookup"><span data-stu-id="1803c-116">\<userDefinedType></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)  
+ [<span data-ttu-id="1803c-117">\<comContract></span><span class="sxs-lookup"><span data-stu-id="1803c-117">\<comContract></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)  
+ [<span data-ttu-id="1803c-118">Integrieren von COM+-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="1803c-118">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [<span data-ttu-id="1803c-119">Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen</span><span class="sxs-lookup"><span data-stu-id="1803c-119">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

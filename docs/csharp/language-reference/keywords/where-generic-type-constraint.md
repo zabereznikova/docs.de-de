@@ -1,71 +1,70 @@
 ---
 title: where (Einschränkung des generischen Typs) (C#-Referenz)
-ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
+ms.date: 04/12/2018
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.assetid: d7aa871b-0714-416a-bab2-96f87ada4310
-caps.latest.revision: 10
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f2b7b159689aa771d3f9d59e3b1dd340c85b1d79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94db10c81af55030dfcf6e210a86658c84868e42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="where-generic-type-constraint-c-reference"></a><span data-ttu-id="b1c37-102">where (Einschränkung des generischen Typs) (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="b1c37-102">where (generic type constraint) (C# Reference)</span></span>
-<span data-ttu-id="b1c37-103">In einer generischen Typdefinition wird die `where`-Klausel verwendet, um Einschränkungen für Typen anzugeben, die als Argumente für einen Typenparameter verwendet werden können, der in einer generischen Deklaration definiert ist.</span><span class="sxs-lookup"><span data-stu-id="b1c37-103">In a generic type definition, the `where` clause is used to specify constraints on the types that can be used as arguments for a type parameter defined in a generic declaration.</span></span> <span data-ttu-id="b1c37-104">So können Sie beispielsweise eine generische Klasse erstellen, `MyGenericClass`, deren Typparameter `T` die Schnittstelle <xref:System.IComparable%601> implementiert:</span><span class="sxs-lookup"><span data-stu-id="b1c37-104">For example, you can declare a generic class, `MyGenericClass`, such that the type parameter `T` implements the <xref:System.IComparable%601> interface:</span></span>  
-  
-```csharp  
-public class MyGenericClass<T> where T:IComparable { }  
-```  
-  
+# <a name="where-generic-type-constraint-c-reference"></a><span data-ttu-id="a6964-102">where (Einschränkung des generischen Typs) (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="a6964-102">where (generic type constraint) (C# Reference)</span></span>
+
+<span data-ttu-id="a6964-103">In einer generischen Typdefinition wird die `where`-Klausel verwendet, um Einschränkungen für Typen anzugeben, die als Argumente für einen Typenparameter in generischen Typen, Methoden, Delegaten oder lokalen Funktionen verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="a6964-103">The `where` clause in a generic definition specifies constraints on the types that are used as arguments for type parameters in a generic type, method, delegate, or local function.</span></span> <span data-ttu-id="a6964-104">Einschränkungen können Schnittstellen und Basisklassen angeben oder erfordern einen generischen Typ als Verweis, Wert oder nicht verwalteten Typ.</span><span class="sxs-lookup"><span data-stu-id="a6964-104">Constraints can specify interfaces, base classes, or require a generic type to be a reference, value or unmanaged type.</span></span> <span data-ttu-id="a6964-105">Sie deklarieren die Funktionen, die das Typargument besitzen muss.</span><span class="sxs-lookup"><span data-stu-id="a6964-105">They declare capabilities that the type argument must possess.</span></span>
+
+<span data-ttu-id="a6964-106">So können Sie beispielsweise eine generische Klasse erstellen, `MyGenericClass`, deren Typparameter `T` die Schnittstelle <xref:System.IComparable%601> implementiert:</span><span class="sxs-lookup"><span data-stu-id="a6964-106">For example, you can declare a generic class, `MyGenericClass`, such that the type parameter `T` implements the <xref:System.IComparable%601> interface:</span></span>
+
+[!code-csharp[using an interface constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#1)]
+
 > [!NOTE]
->  <span data-ttu-id="b1c37-105">Weitere Informationen über die where-Klausel in einem Abfrageausdruck finden Sie unter [where-Klausel](../../../csharp/language-reference/keywords/where-clause.md).</span><span class="sxs-lookup"><span data-stu-id="b1c37-105">For more information on the where clause in a query expression, see [where clause](../../../csharp/language-reference/keywords/where-clause.md).</span></span>  
-  
- <span data-ttu-id="b1c37-106">Zusätzlich zu Schnittstelleneinschränkungen kann eine `where`-Klausel eine Basisklasseneinschränkung enthalten, die angibt, dass ein Typ über die angegebene Klasse als Basisklasse verfügen muss (oder diese Klasse selbst sein muss), um als Typargument für diesen generischen Typ verwendet werden zu können.</span><span class="sxs-lookup"><span data-stu-id="b1c37-106">In addition to interface constraints, a `where` clause can include a base class constraint, which states that a type must have the specified class as a base class (or be that class itself) in order to be used as a type argument for that generic type.</span></span> <span data-ttu-id="b1c37-107">Wenn eine solche Einschränkung verwendet wird, muss sie vor jeder anderen Einschränkung für den Typparameter angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="b1c37-107">If such a constraint is used, it must appear before any other constraints on that type parameter.</span></span>  
-  
- [!code-csharp[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
-  
- <span data-ttu-id="b1c37-108">Die `where`-Klausel kann auch eine Konstruktoreinschränkung einschließen.</span><span class="sxs-lookup"><span data-stu-id="b1c37-108">The `where` clause may also include a constructor constraint.</span></span> <span data-ttu-id="b1c37-109">Es ist möglich, eine Instanz eines Typparameters mithilfe des neuen Operators zu erstellen. Allerdings muss zu diesem Zweck der Typparameter durch die Konstruktoreinschränkung `new()` eingeschränkt werden.</span><span class="sxs-lookup"><span data-stu-id="b1c37-109">It is possible to create an instance of a type parameter using the new operator; however, in order to do so the type parameter must be constrained by the constructor constraint, `new()`.</span></span> <span data-ttu-id="b1c37-110">Die [new()-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md) informiert den Compiler, dass jedes angegebene Typargument über einen zugänglichen parameterlosen oder Standardkonstruktor verfügen muss.</span><span class="sxs-lookup"><span data-stu-id="b1c37-110">The [new() Constraint](../../../csharp/language-reference/keywords/new-constraint.md) lets the compiler know that any type argument supplied must have an accessible parameterless--or default-- constructor.</span></span> <span data-ttu-id="b1c37-111">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="b1c37-111">For example:</span></span>  
-  
- [!code-csharp[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
-  
- <span data-ttu-id="b1c37-112">Die `new()`-Einschränkung wird in der `where`-Klausel als Letztes angezeigt.</span><span class="sxs-lookup"><span data-stu-id="b1c37-112">The `new()` constraint appears last in the `where` clause.</span></span>  
-  
- <span data-ttu-id="b1c37-113">Bei mehreren Typparametern müssen Sie für jeden davon eine eigene `where`-Klausel verwenden, z.B.:</span><span class="sxs-lookup"><span data-stu-id="b1c37-113">With multiple type parameters, use one `where` clause for each type parameter, for example:</span></span>  
-  
- [!code-csharp[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_3.cs)]  
-  
- <span data-ttu-id="b1c37-114">Sie können auch Einschränkungen wie folgt an Typparameter generischer Methoden anfügen:</span><span class="sxs-lookup"><span data-stu-id="b1c37-114">You can also attach constraints to type parameters of generic methods, like this:</span></span>  
-  
-```csharp  
-public bool MyMethod<T>(T t) where T : IMyInterface { }  
-```  
-  
- <span data-ttu-id="b1c37-115">Beachten Sie, dass die Syntax zum Beschreiben der Parametereinschränkungen für Delegaten mit der Syntax von Methoden identisch ist:</span><span class="sxs-lookup"><span data-stu-id="b1c37-115">Notice that the syntax to describe type parameter constraints on delegates is the same as that of methods:</span></span>  
-  
-```csharp  
-delegate T MyDelegate<T>() where T : new()  
-```  
-  
- <span data-ttu-id="b1c37-116">Informationen zu generischen Delegaten finden Sie unter [Generic Delegates (Generische Delegaten)](../../../csharp/programming-guide/generics/generic-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="b1c37-116">For information on generic delegates, see [Generic Delegates](../../../csharp/programming-guide/generics/generic-delegates.md).</span></span>  
-  
- <span data-ttu-id="b1c37-117">Weitere Informationen zur Syntax und der Verwendung von Einschränkungen finden Sie unter [Einschränkungen für Typparameter](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="b1c37-117">For details on the syntax and use of constraints, see [Constraints on Type Parameters](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="b1c37-118">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="b1c37-118">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="b1c37-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b1c37-119">See Also</span></span>  
- [<span data-ttu-id="b1c37-120">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="b1c37-120">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="b1c37-121">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="b1c37-121">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="b1c37-122">Einführung in Generika</span><span class="sxs-lookup"><span data-stu-id="b1c37-122">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [<span data-ttu-id="b1c37-123">new-Einschränkung</span><span class="sxs-lookup"><span data-stu-id="b1c37-123">new Constraint</span></span>](../../../csharp/language-reference/keywords/new-constraint.md)  
- [<span data-ttu-id="b1c37-124">Einschränkungen für Typparameter</span><span class="sxs-lookup"><span data-stu-id="b1c37-124">Constraints on Type Parameters</span></span>](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+> <span data-ttu-id="a6964-107">Weitere Informationen über die where-Klausel in einem Abfrageausdruck finden Sie unter [where-Klausel](where-clause.md).</span><span class="sxs-lookup"><span data-stu-id="a6964-107">For more information on the where clause in a query expression, see [where clause](where-clause.md).</span></span>
+
+<span data-ttu-id="a6964-108">Die `where`-Klausel kann auch eine Basisklasseneinschränkung enthalten.</span><span class="sxs-lookup"><span data-stu-id="a6964-108">The `where` clause can also include a base class constraint.</span></span> <span data-ttu-id="a6964-109">Die Basisklasseneinschränkung gibt an, dass ein Typ, der als Typargument für den generischen Typ verwendet wird, über die angegebene Klasse als Basisklasse verfügen muss (oder diese Basisklasse sein muss), um als Typargument für diesen generischen Typ verwendet werden zu können.</span><span class="sxs-lookup"><span data-stu-id="a6964-109">The base class constraint states that a type to be used as a type argument for that generic type has the specified class as a base class (or is that base class) to be used as a type argument for that generic type.</span></span> <span data-ttu-id="a6964-110">Wenn eine Basisklasseneinschränkung verwendet wird, muss sie vor jeder anderen Einschränkung für den Typparameter angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="a6964-110">If the base class constraint is used, it must appear before any other constraints on that type parameter.</span></span> <span data-ttu-id="a6964-111">Einige Typen sind nicht als Basisklasseneinschränkungen zulässig: <xref:System.Object>, <xref:System.Array> und <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="a6964-111">Some types are disallowed as a base class constraint: <xref:System.Object>, <xref:System.Array>, and <xref:System.ValueType>.</span></span> <span data-ttu-id="a6964-112">Vor C# 7.3 waren <xref:System.Enum>, <xref:System.Delegate> und <xref:System.MulticastDelegate> ebenfalls nicht als Basisklasseneinschränkungen zulässig.</span><span class="sxs-lookup"><span data-stu-id="a6964-112">Prior to C# 7.3, <xref:System.Enum>, <xref:System.Delegate>, and <xref:System.MulticastDelegate> were also disallowed as base class constraints.</span></span> <span data-ttu-id="a6964-113">Das folgende Beispiel zeigt die Typen, die jetzt als Basisklasse angegeben werden können:</span><span class="sxs-lookup"><span data-stu-id="a6964-113">The following example shows the types that can now be specified as a base class:</span></span>
+
+[!code-csharp[using an interface constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
+
+<span data-ttu-id="a6964-114">Die `where`-Klausel kann angeben, ob der Typ `class` oder `struct` ist.</span><span class="sxs-lookup"><span data-stu-id="a6964-114">The `where` clause can specify that the type is a `class` or a `struct`.</span></span> <span data-ttu-id="a6964-115">Aufgrund der `struct`-Einschränkung ist die Angabe einer Basisklasseneinschränkung von `System.ValueType` nicht notwendig.</span><span class="sxs-lookup"><span data-stu-id="a6964-115">The `struct` constraint removes the need to specify a base class constraint of `System.ValueType`.</span></span> <span data-ttu-id="a6964-116">Der `System.ValueType`-Typ darf nicht als Basisklasseneinschränkung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a6964-116">The `System.ValueType` type may not be used as a base class constraint.</span></span> <span data-ttu-id="a6964-117">Im folgenden Beispiel werden die `class`- und `struct`-Einschränkungen dargestellt:</span><span class="sxs-lookup"><span data-stu-id="a6964-117">The following example shows both the `class` and `struct` constraints:</span></span>
+
+[!code-csharp[using the class and struct constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
+
+<span data-ttu-id="a6964-118">Die `where`-Klausel kann auch eine `unmanaged`-Einschränkung einschließen.</span><span class="sxs-lookup"><span data-stu-id="a6964-118">The `where` clause may also include an `unmanaged` constraint.</span></span> <span data-ttu-id="a6964-119">Die `unmanaged`-Einschränkung schränkt den Typparameter auf Typen ein, die als **nicht verwaltete Typen** bekannt sind.</span><span class="sxs-lookup"><span data-stu-id="a6964-119">The `unmanaged` constraint limits the type parameter to types known as **unmanaged types**.</span></span> <span data-ttu-id="a6964-120">Ein **nicht verwalteter Typ** ist ein Typ, der kein Verweistyp ist, und keine Verweistypfelder auf Schachtelungsebenen aufweist.</span><span class="sxs-lookup"><span data-stu-id="a6964-120">An **unmanaged type** is a type that isn't a reference type and doesn't contain reference type fields at any level of nesting.</span></span> <span data-ttu-id="a6964-121">Die `unmanaged`-Einschränkung erleichtert das Schreiben von Interop-Code in C# auf niedriger Ebene.</span><span class="sxs-lookup"><span data-stu-id="a6964-121">The `unmanaged` constraint makes it easier to write low-level interop code in C#.</span></span> <span data-ttu-id="a6964-122">Diese Einschränkung ermöglicht wiederverwendbare Routinen für alle nicht verwalteten Typen.</span><span class="sxs-lookup"><span data-stu-id="a6964-122">This constraint enables reusable routines across all unmanaged types.</span></span> <span data-ttu-id="a6964-123">Die `unmanaged`-Einschränkung kann nicht mit der `class`- oder `struct`-Einschränkung kombiniert werden.</span><span class="sxs-lookup"><span data-stu-id="a6964-123">The `unmanaged` constraint can't be combined with the `class` or `struct` constraint.</span></span> <span data-ttu-id="a6964-124">Die `unmanaged`-Einschränkung erzwingt, dass der Typ `struct` sein muss:</span><span class="sxs-lookup"><span data-stu-id="a6964-124">The `unmanaged` constraint enforces that the type must be a `struct`:</span></span>
+
+[!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
+
+<span data-ttu-id="a6964-125">Die `where`-Klausel kann auch eine `new()`-Konstruktoreinschränkung einschließen.</span><span class="sxs-lookup"><span data-stu-id="a6964-125">The `where` clause may also include a constructor constraint, `new()`.</span></span> <span data-ttu-id="a6964-126">Diese Einschränkung ermöglicht das Erstellen einer Instanz eines Typparameters unter Verwendung des `new`-Operators.</span><span class="sxs-lookup"><span data-stu-id="a6964-126">That constraint makes it possible to create an instance of a type parameter using the `new` operator.</span></span> <span data-ttu-id="a6964-127">Die [new()-Einschränkung](new-constraint.md) informiert den Compiler, dass jedes angegebene Typargument über einen zugänglichen parameterlosen oder Standardkonstruktor verfügen muss.</span><span class="sxs-lookup"><span data-stu-id="a6964-127">The [new() Constraint](new-constraint.md) lets the compiler know that any type argument supplied must have an accessible parameterless--or default-- constructor.</span></span> <span data-ttu-id="a6964-128">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="a6964-128">For example:</span></span>
+
+[!code-csharp[using the new constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
+
+<span data-ttu-id="a6964-129">Die `new()`-Einschränkung wird in der `where`-Klausel als Letztes angezeigt.</span><span class="sxs-lookup"><span data-stu-id="a6964-129">The `new()` constraint appears last in the `where` clause.</span></span> <span data-ttu-id="a6964-130">Die `new()`-Einschränkung kann nicht mit der `struct`- oder `unmanaged`-Einschränkung kombiniert werden.</span><span class="sxs-lookup"><span data-stu-id="a6964-130">The `new()` constraint can't be combined with the `struct` or `unmanaged` constraints.</span></span> <span data-ttu-id="a6964-131">Alle Typen, die diese Einschränkungen erfüllen, müssen einen zugänglichen parameterlosen Konstruktor aufweisen, wodurch die `new()`-Einschränkung redundant wird.</span><span class="sxs-lookup"><span data-stu-id="a6964-131">All types satisfying those constraints must have an accessible parameterless constructor, making the `new()` constraint redundant.</span></span>
+
+<span data-ttu-id="a6964-132">Bei mehreren Typparametern müssen Sie für jeden davon eine eigene `where`-Klausel verwenden, z.B.:</span><span class="sxs-lookup"><span data-stu-id="a6964-132">With multiple type parameters, use one `where` clause for each type parameter, for example:</span></span>
+
+[!code-csharp[using multiple where constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#6)]
+
+<span data-ttu-id="a6964-133">Sie können auch Einschränkungen wie folgt an Typparameter generischer Methoden anfügen:</span><span class="sxs-lookup"><span data-stu-id="a6964-133">You can also attach constraints to type parameters of generic methods, as shown in the following example:</span></span>
+
+[!code-csharp[where constraints with generic methods](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#7)]
+
+<span data-ttu-id="a6964-134">Beachten Sie, dass die Syntax zum Beschreiben der Parametereinschränkungen für Delegaten mit der Syntax von Methoden identisch ist:</span><span class="sxs-lookup"><span data-stu-id="a6964-134">Notice that the syntax to describe type parameter constraints on delegates is the same as that of methods:</span></span>
+
+[!code-csharp[where constraints with generic methods](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
+
+<span data-ttu-id="a6964-135">Informationen zu generischen Delegaten finden Sie unter [Generic Delegates (Generische Delegaten)](../../../csharp/programming-guide/generics/generic-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="a6964-135">For information on generic delegates, see [Generic Delegates](../../../csharp/programming-guide/generics/generic-delegates.md).</span></span>
+
+<span data-ttu-id="a6964-136">Weitere Informationen zur Syntax und der Verwendung von Einschränkungen finden Sie unter [Einschränkungen für Typparameter](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="a6964-136">For details on the syntax and use of constraints, see [Constraints on Type Parameters](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="a6964-137">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="a6964-137">C# language specification</span></span>
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="a6964-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a6964-138">See also</span></span>
+
+ [<span data-ttu-id="a6964-139">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="a6964-139">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="a6964-140">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="a6964-140">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="a6964-141">Einführung in Generika</span><span class="sxs-lookup"><span data-stu-id="a6964-141">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+ [<span data-ttu-id="a6964-142">new-Einschränkung</span><span class="sxs-lookup"><span data-stu-id="a6964-142">new Constraint</span></span>](../../../csharp/language-reference/keywords/new-constraint.md)  
+ [<span data-ttu-id="a6964-143">Einschränkungen für Typparameter</span><span class="sxs-lookup"><span data-stu-id="a6964-143">Constraints on Type Parameters</span></span>](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  

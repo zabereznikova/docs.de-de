@@ -1,27 +1,15 @@
 ---
 title: '&lt;behaviorExtensions&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c5d359e05e04a98e0c5855ba4d78e8e63c1e6a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb59ceeb478d0324fddc98a206a00dbd170b5ac9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltbehaviorextensionsgt"></a><span data-ttu-id="9c380-102">&lt;behaviorExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="9c380-102">&lt;behaviorExtensions&gt;</span></span>
-<span data-ttu-id="9c380-103">Verhaltenserweiterungen ermöglichen es dem Benutzer, benutzerdefinierte Verhaltenselemente zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="9c380-103">Behavior extensions enable the user to create user-defined behavior elements.</span></span> <span data-ttu-id="9c380-104">Diese Elemente können neben den standardmäßigen Windows Communication Foundation (WCF)-Verhaltenselementen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="9c380-104">These elements can be used alongside the standard Windows Communication Foundation (WCF) behavior elements.</span></span> <span data-ttu-id="9c380-105">Im `behaviorExtensions`-Abschnitt wird das Element so definiert, dass es in der Konfiguration verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="9c380-105">The `behaviorExtensions` section defines the element such that it can be used in configuration.</span></span> <span data-ttu-id="9c380-106">Im Folgenden finden Sie ein Beispiel für eine typische Verhaltenserweiterung.</span><span class="sxs-lookup"><span data-stu-id="9c380-106">Here is an example of a typical behavior extension.</span></span>  
+# <a name="ltbehaviorextensionsgt"></a><span data-ttu-id="793cd-102">&lt;behaviorExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="793cd-102">&lt;behaviorExtensions&gt;</span></span>
+<span data-ttu-id="793cd-103">Verhaltenserweiterungen ermöglichen es dem Benutzer, benutzerdefinierte Verhaltenselemente zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="793cd-103">Behavior extensions enable the user to create user-defined behavior elements.</span></span> <span data-ttu-id="793cd-104">Diese Elemente können neben den standardmäßigen Windows Communication Foundation (WCF)-Verhaltenselementen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="793cd-104">These elements can be used alongside the standard Windows Communication Foundation (WCF) behavior elements.</span></span> <span data-ttu-id="793cd-105">Im `behaviorExtensions`-Abschnitt wird das Element so definiert, dass es in der Konfiguration verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="793cd-105">The `behaviorExtensions` section defines the element such that it can be used in configuration.</span></span> <span data-ttu-id="793cd-106">Im Folgenden finden Sie ein Beispiel für eine typische Verhaltenserweiterung.</span><span class="sxs-lookup"><span data-stu-id="793cd-106">Here is an example of a typical behavior extension.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -34,9 +22,9 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="9c380-107">Um dem Element Konfigurationsfunktionen hinzuzufügen, müssen Sie ein Konfigurationselement schreiben und registrieren.</span><span class="sxs-lookup"><span data-stu-id="9c380-107">To add configuration abilities to the element, you need to write and register a configuration element.</span></span> <span data-ttu-id="9c380-108">Weitere Informationen dazu finden Sie in der <xref:System.Configuration>-Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="9c380-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
+ <span data-ttu-id="793cd-107">Um dem Element Konfigurationsfunktionen hinzuzufügen, müssen Sie ein Konfigurationselement schreiben und registrieren.</span><span class="sxs-lookup"><span data-stu-id="793cd-107">To add configuration abilities to the element, you need to write and register a configuration element.</span></span> <span data-ttu-id="793cd-108">Weitere Informationen dazu finden Sie in der <xref:System.Configuration>-Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="793cd-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
   
- <span data-ttu-id="9c380-109">Nachdem das Element und sein Konfigurationstyp definiert wurden, kann die Erweiterung wie im folgenden Beispiel verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="9c380-109">After the element and its configuration type are defined, the extension can be used, as shown in the following example.</span></span>  
+ <span data-ttu-id="793cd-109">Nachdem das Element und sein Konfigurationstyp definiert wurden, kann die Erweiterung wie im folgenden Beispiel verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="793cd-109">After the element and its configuration type are defined, the extension can be used, as shown in the following example.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -48,15 +36,15 @@ ms.lasthandoff: 12/22/2017
 </behaviors>  
 ```  
   
-## <a name="security"></a><span data-ttu-id="9c380-110">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="9c380-110">Security</span></span>  
- <span data-ttu-id="9c380-111">Es wird dringend empfohlen, voll qualifizierte Assemblynamen beim Registrieren von Typen in der `machine.config`-Datei und der `app.config`-Datei anzugeben.</span><span class="sxs-lookup"><span data-stu-id="9c380-111">It is strongly recommended that you use fully qualified assembly names when registering types in the `machine.config` and `app.config` files.</span></span> <span data-ttu-id="9c380-112">Wenn der Typ nicht eindeutig definiert wurde, sucht der Lader vom Typ CLR an folgenden Speicherorten und in folgender Reihenfolge danach:</span><span class="sxs-lookup"><span data-stu-id="9c380-112">If the type is not uniquely defined, the CLR type loader searches for it in the following locations in the specified order:</span></span>  
+## <a name="security"></a><span data-ttu-id="793cd-110">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="793cd-110">Security</span></span>  
+ <span data-ttu-id="793cd-111">Es wird dringend empfohlen, voll qualifizierte Assemblynamen beim Registrieren von Typen in der `machine.config`-Datei und der `app.config`-Datei anzugeben.</span><span class="sxs-lookup"><span data-stu-id="793cd-111">It is strongly recommended that you use fully qualified assembly names when registering types in the `machine.config` and `app.config` files.</span></span> <span data-ttu-id="793cd-112">Wenn der Typ nicht eindeutig definiert wurde, sucht der Lader vom Typ CLR an folgenden Speicherorten und in folgender Reihenfolge danach:</span><span class="sxs-lookup"><span data-stu-id="793cd-112">If the type is not uniquely defined, the CLR type loader searches for it in the following locations in the specified order:</span></span>  
   
- <span data-ttu-id="9c380-113">Wenn die Assembly des Typs bekannt ist, durchsucht der Lader den Umleitungsspeicherort der Konfigurationsdatei, den GAC, die aktuelle Assembly mit den Konfigurationsinformationen und das Anwendungsbasisverzeichnis.</span><span class="sxs-lookup"><span data-stu-id="9c380-113">If the assembly of the type is known, the loader searches the configuration file's redirect locations, GAC, the current assembly using configuration information, and the application base directory.</span></span> <span data-ttu-id="9c380-114">Wenn die Assembly nicht bekannt ist, durchsucht der Lader die aktuelle Assembly, mscorlib und den vom `TypeResolve`-Ereignishandler zurückgegebenen Speicherort.</span><span class="sxs-lookup"><span data-stu-id="9c380-114">If the assembly is unknown, the loader searches the current assembly, mscorlib, and the location returned by the `TypeResolve` event handler.</span></span> <span data-ttu-id="9c380-115">Diese CLR-Suchreihenfolge kann mit Hooks, wie dem Typweiterleitungsmechanismus und dem AppDomain.TypeResolve-Ereignis, geändert werden.</span><span class="sxs-lookup"><span data-stu-id="9c380-115">This CLR search order can be modified with hooks such as the Type Forwarding mechanism and the AppDomain.TypeResolve event.</span></span>  
+ <span data-ttu-id="793cd-113">Wenn die Assembly des Typs bekannt ist, durchsucht der Lader den Umleitungsspeicherort der Konfigurationsdatei, den GAC, die aktuelle Assembly mit den Konfigurationsinformationen und das Anwendungsbasisverzeichnis.</span><span class="sxs-lookup"><span data-stu-id="793cd-113">If the assembly of the type is known, the loader searches the configuration file's redirect locations, GAC, the current assembly using configuration information, and the application base directory.</span></span> <span data-ttu-id="793cd-114">Wenn die Assembly nicht bekannt ist, durchsucht der Lader die aktuelle Assembly, mscorlib und den vom `TypeResolve`-Ereignishandler zurückgegebenen Speicherort.</span><span class="sxs-lookup"><span data-stu-id="793cd-114">If the assembly is unknown, the loader searches the current assembly, mscorlib, and the location returned by the `TypeResolve` event handler.</span></span> <span data-ttu-id="793cd-115">Diese CLR-Suchreihenfolge kann mit Hooks, wie dem Typweiterleitungsmechanismus und dem AppDomain.TypeResolve-Ereignis, geändert werden.</span><span class="sxs-lookup"><span data-stu-id="793cd-115">This CLR search order can be modified with hooks such as the Type Forwarding mechanism and the AppDomain.TypeResolve event.</span></span>  
   
- <span data-ttu-id="9c380-116">Ein Angreifer kann die CLR-Suchreihenfolge ausnutzen und nicht autorisierten Code ausführen.</span><span class="sxs-lookup"><span data-stu-id="9c380-116">An attacker can exploit the CLR search order and execute unauthorized code.</span></span> <span data-ttu-id="9c380-117">Durch die Verwendung vollqualifizierter (starker) Namen wird ein Typ eindeutig identifiziert und die Sicherheit Ihres Systems verbessert.</span><span class="sxs-lookup"><span data-stu-id="9c380-117">Using fully qualified (strong) names uniquely identifies a type and further increases security of your system.</span></span>  
+ <span data-ttu-id="793cd-116">Ein Angreifer kann die CLR-Suchreihenfolge ausnutzen und nicht autorisierten Code ausführen.</span><span class="sxs-lookup"><span data-stu-id="793cd-116">An attacker can exploit the CLR search order and execute unauthorized code.</span></span> <span data-ttu-id="793cd-117">Durch die Verwendung vollqualifizierter (starker) Namen wird ein Typ eindeutig identifiziert und die Sicherheit Ihres Systems verbessert.</span><span class="sxs-lookup"><span data-stu-id="793cd-117">Using fully qualified (strong) names uniquely identifies a type and further increases security of your system.</span></span>  
   
- <span data-ttu-id="9c380-118">Weitere Informationen finden Sie unter [so sucht Common Language Runtime nach Assemblys](http://go.microsoft.com/fwlink/?LinkId=95336) und <xref:System.AppDomain.TypeResolve>.</span><span class="sxs-lookup"><span data-stu-id="9c380-118">For more information, see [How the Runtime Locates Assemblies](http://go.microsoft.com/fwlink/?LinkId=95336) and <xref:System.AppDomain.TypeResolve>.</span></span>  
+ <span data-ttu-id="793cd-118">Weitere Informationen finden Sie unter [so sucht Common Language Runtime nach Assemblys](http://go.microsoft.com/fwlink/?LinkId=95336) und <xref:System.AppDomain.TypeResolve>.</span><span class="sxs-lookup"><span data-stu-id="793cd-118">For more information, see [How the Runtime Locates Assemblies](http://go.microsoft.com/fwlink/?LinkId=95336) and <xref:System.AppDomain.TypeResolve>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c380-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9c380-119">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="793cd-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="793cd-119">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  
- [<span data-ttu-id="9c380-120">Konfigurieren und Erweitern der Laufzeit mit Verhalten</span><span class="sxs-lookup"><span data-stu-id="9c380-120">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [<span data-ttu-id="793cd-120">Konfigurieren und Erweitern der Laufzeit mit Verhalten</span><span class="sxs-lookup"><span data-stu-id="793cd-120">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

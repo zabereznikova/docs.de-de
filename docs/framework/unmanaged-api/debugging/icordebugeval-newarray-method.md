@@ -1,14 +1,6 @@
 ---
 title: ICorDebugEval::NewArray-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval.NewArray
 api_location:
@@ -23,24 +15,20 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9116c2ee7edbc39d203728909ce37e963c896fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugevalnewarray-method"></a><span data-ttu-id="6e9d2-102">ICorDebugEval::NewArray-Methode</span><span class="sxs-lookup"><span data-stu-id="6e9d2-102">ICorDebugEval::NewArray Method</span></span>
-<span data-ttu-id="6e9d2-103">Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-103">Allocates a new array of the specified element type and dimensions.</span></span>  
+# <a name="icordebugevalnewarray-method"></a><span data-ttu-id="b03fc-102">ICorDebugEval::NewArray-Methode</span><span class="sxs-lookup"><span data-stu-id="b03fc-102">ICorDebugEval::NewArray Method</span></span>
+<span data-ttu-id="b03fc-103">Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.</span><span class="sxs-lookup"><span data-stu-id="b03fc-103">Allocates a new array of the specified element type and dimensions.</span></span>  
   
- <span data-ttu-id="6e9d2-104">Diese Methode ist veraltet in .NET Framework, Version 2.0.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="6e9d2-105">Verwendung [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) stattdessen.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-105">Use [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) instead.</span></span>  
+ <span data-ttu-id="b03fc-104">Diese Methode ist veraltet in .NET Framework, Version 2.0.</span><span class="sxs-lookup"><span data-stu-id="b03fc-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="b03fc-105">Verwendung [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) stattdessen.</span><span class="sxs-lookup"><span data-stu-id="b03fc-105">Use [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e9d2-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="6e9d2-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b03fc-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="b03fc-106">Syntax</span></span>  
   
 ```  
 HRESULT NewArray (  
@@ -52,30 +40,30 @@ HRESULT NewArray (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6e9d2-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="6e9d2-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b03fc-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="b03fc-107">Parameters</span></span>  
  `elementType`  
- <span data-ttu-id="6e9d2-108">[in] Der Wert der CorElementType-Enumeration, die den Elementtyp des Arrays angibt.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-108">[in] A value of the CorElementType enumeration that specifies the element type of the array.</span></span>  
+ <span data-ttu-id="b03fc-108">[in] Der Wert der CorElementType-Enumeration, die den Elementtyp des Arrays angibt.</span><span class="sxs-lookup"><span data-stu-id="b03fc-108">[in] A value of the CorElementType enumeration that specifies the element type of the array.</span></span>  
   
  `pElementClass`  
- <span data-ttu-id="6e9d2-109">[in] Ein Zeiger auf eine ICorDebugClass-Objekt, das die Klasse des Elements angibt.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-109">[in] A pointer to a ICorDebugClass object that specifies the class of the element.</span></span> <span data-ttu-id="6e9d2-110">Dieser Wert kann null sein, wenn der Elementtyp ein primitiver Typ ist.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-110">This value may be null if the element type is a primitive type.</span></span>  
+ <span data-ttu-id="b03fc-109">[in] Ein Zeiger auf eine ICorDebugClass-Objekt, das die Klasse des Elements angibt.</span><span class="sxs-lookup"><span data-stu-id="b03fc-109">[in] A pointer to a ICorDebugClass object that specifies the class of the element.</span></span> <span data-ttu-id="b03fc-110">Dieser Wert kann null sein, wenn der Elementtyp ein primitiver Typ ist.</span><span class="sxs-lookup"><span data-stu-id="b03fc-110">This value may be null if the element type is a primitive type.</span></span>  
   
  `rank`  
- <span data-ttu-id="6e9d2-111">[in] Die Anzahl der Dimensionen des Arrays.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-111">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="6e9d2-112">In .NET Framework 2.0 muss dieser Wert 1 sein.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-112">In the .NET Framework 2.0, this value must be 1.</span></span>  
+ <span data-ttu-id="b03fc-111">[in] Die Anzahl der Dimensionen des Arrays.</span><span class="sxs-lookup"><span data-stu-id="b03fc-111">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="b03fc-112">In .NET Framework 2.0 muss dieser Wert 1 sein.</span><span class="sxs-lookup"><span data-stu-id="b03fc-112">In the .NET Framework 2.0, this value must be 1.</span></span>  
   
  `dims`  
- <span data-ttu-id="6e9d2-113">[in] Die Größe der einzelnen Dimensionen des Arrays in Bytes.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-113">[in] The size, in bytes, of each dimension of the array.</span></span>  
+ <span data-ttu-id="b03fc-113">[in] Die Größe der einzelnen Dimensionen des Arrays in Bytes.</span><span class="sxs-lookup"><span data-stu-id="b03fc-113">[in] The size, in bytes, of each dimension of the array.</span></span>  
   
  `lowBounds`  
- <span data-ttu-id="6e9d2-114">[in] Optional.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-114">[in] Optional.</span></span> <span data-ttu-id="6e9d2-115">Die untere Grenze der einzelnen Dimensionen des Arrays.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-115">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="6e9d2-116">Wenn dieser Wert ausgelassen wird, wird eine Untergrenze von 0 (null) für jede Dimension angenommen.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-116">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
+ <span data-ttu-id="b03fc-114">[in] Optional.</span><span class="sxs-lookup"><span data-stu-id="b03fc-114">[in] Optional.</span></span> <span data-ttu-id="b03fc-115">Die untere Grenze der einzelnen Dimensionen des Arrays.</span><span class="sxs-lookup"><span data-stu-id="b03fc-115">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="b03fc-116">Wenn dieser Wert ausgelassen wird, wird eine Untergrenze von 0 (null) für jede Dimension angenommen.</span><span class="sxs-lookup"><span data-stu-id="b03fc-116">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6e9d2-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6e9d2-117">Remarks</span></span>  
- <span data-ttu-id="6e9d2-118">Das Array wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="6e9d2-118">The array is always created in the application domain in which the thread is currently executing.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b03fc-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b03fc-117">Remarks</span></span>  
+ <span data-ttu-id="b03fc-118">Das Array wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b03fc-118">The array is always created in the application domain in which the thread is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6e9d2-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6e9d2-119">Requirements</span></span>  
- <span data-ttu-id="6e9d2-120">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6e9d2-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b03fc-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b03fc-119">Requirements</span></span>  
+ <span data-ttu-id="b03fc-120">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b03fc-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6e9d2-121">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6e9d2-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b03fc-121">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b03fc-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6e9d2-122">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6e9d2-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b03fc-122">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b03fc-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6e9d2-123">**.NET Framework-Versionen:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="6e9d2-123">**.NET Framework Versions:** 1.1, 1.0</span></span>
+ <span data-ttu-id="b03fc-123">**.NET Framework-Versionen:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="b03fc-123">**.NET Framework Versions:** 1.1, 1.0</span></span>

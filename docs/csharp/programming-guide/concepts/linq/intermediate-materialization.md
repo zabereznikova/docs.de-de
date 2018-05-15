@@ -1,27 +1,18 @@
 ---
 title: Zwischenmaterialisierung (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 46d347921e24bc5504c69534d7b5c087818a6c7f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b98f9765f5c54a49f26a9d1a3ac351f3eebcf9c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="intermediate-materialization-c"></a><span data-ttu-id="9479d-102">Zwischenmaterialisierung (C#)</span><span class="sxs-lookup"><span data-stu-id="9479d-102">Intermediate Materialization (C#)</span></span>
-<span data-ttu-id="9479d-103">Bei fehlender Sorgfalt kann es in bestimmten Situationen dazu kommen, dass die Auflistungen in Ihren Abfragen vorzeitig materialisiert werden, wodurch sich das Speicher- und Leistungsprofil Ihrer Anwendung radikal ändert.</span><span class="sxs-lookup"><span data-stu-id="9479d-103">If you are not careful, in some situations you can drastically alter the memory and performance profile of your application by causing premature materialization of collections in your queries.</span></span> <span data-ttu-id="9479d-104">Einige Standardabfrageoperatoren verursachen die Materialisierung ihrer Quellauflistung, bevor auch nur ein einziges Element zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="9479d-104">Some standard query operators cause materialization of their source collection before yielding a single element.</span></span> <span data-ttu-id="9479d-105">So durchläuft beispielsweise <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> zuerst die gesamte Quellauflistung, sortiert dann alle Elemente und gibt zum Schluss das erste Element zurück.</span><span class="sxs-lookup"><span data-stu-id="9479d-105">For example, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> first iterates through its entire source collection, then sorts all items, and then finally yields the first item.</span></span> <span data-ttu-id="9479d-106">Das bedeutet, dass es zwar aufwendig ist, das erste Element einer sortierten Auflistung abzurufen, das Abrufen aller folgenden Elemente hingegen ist nicht aufwendig.</span><span class="sxs-lookup"><span data-stu-id="9479d-106">This means that it is expensive to get the first item of an ordered collection; each item thereafter is not expensive.</span></span> <span data-ttu-id="9479d-107">Dies ist sinnvoll, denn anders würde dieser Abfrageoperator nicht funktionieren.</span><span class="sxs-lookup"><span data-stu-id="9479d-107">This makes sense: It would be impossible for that query operator to do otherwise.</span></span>  
+# <a name="intermediate-materialization-c"></a><span data-ttu-id="960c7-102">Zwischenmaterialisierung (C#)</span><span class="sxs-lookup"><span data-stu-id="960c7-102">Intermediate Materialization (C#)</span></span>
+<span data-ttu-id="960c7-103">Bei fehlender Sorgfalt kann es in bestimmten Situationen dazu kommen, dass die Auflistungen in Ihren Abfragen vorzeitig materialisiert werden, wodurch sich das Speicher- und Leistungsprofil Ihrer Anwendung radikal ändert.</span><span class="sxs-lookup"><span data-stu-id="960c7-103">If you are not careful, in some situations you can drastically alter the memory and performance profile of your application by causing premature materialization of collections in your queries.</span></span> <span data-ttu-id="960c7-104">Einige Standardabfrageoperatoren verursachen die Materialisierung ihrer Quellauflistung, bevor auch nur ein einziges Element zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="960c7-104">Some standard query operators cause materialization of their source collection before yielding a single element.</span></span> <span data-ttu-id="960c7-105">So durchläuft beispielsweise <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> zuerst die gesamte Quellauflistung, sortiert dann alle Elemente und gibt zum Schluss das erste Element zurück.</span><span class="sxs-lookup"><span data-stu-id="960c7-105">For example, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> first iterates through its entire source collection, then sorts all items, and then finally yields the first item.</span></span> <span data-ttu-id="960c7-106">Das bedeutet, dass es zwar aufwendig ist, das erste Element einer sortierten Auflistung abzurufen, das Abrufen aller folgenden Elemente hingegen ist nicht aufwendig.</span><span class="sxs-lookup"><span data-stu-id="960c7-106">This means that it is expensive to get the first item of an ordered collection; each item thereafter is not expensive.</span></span> <span data-ttu-id="960c7-107">Dies ist sinnvoll, denn anders würde dieser Abfrageoperator nicht funktionieren.</span><span class="sxs-lookup"><span data-stu-id="960c7-107">This makes sense: It would be impossible for that query operator to do otherwise.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9479d-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9479d-108">Example</span></span>  
- <span data-ttu-id="9479d-109">Dieses Beispiel ändert das vorherige Beispiel.</span><span class="sxs-lookup"><span data-stu-id="9479d-109">This example alters the previous example.</span></span> <span data-ttu-id="9479d-110">Die `AppendString`-Methode ruft vor dem Durchlaufen der Quelle <xref:System.Linq.Enumerable.ToList%2A> auf.</span><span class="sxs-lookup"><span data-stu-id="9479d-110">The `AppendString` method calls <xref:System.Linq.Enumerable.ToList%2A> before iterating through the source.</span></span> <span data-ttu-id="9479d-111">Dies verursacht eine Materialisierung.</span><span class="sxs-lookup"><span data-stu-id="9479d-111">This causes materialization.</span></span>  
+## <a name="example"></a><span data-ttu-id="960c7-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="960c7-108">Example</span></span>  
+ <span data-ttu-id="960c7-109">Dieses Beispiel ändert das vorherige Beispiel.</span><span class="sxs-lookup"><span data-stu-id="960c7-109">This example alters the previous example.</span></span> <span data-ttu-id="960c7-110">Die `AppendString`-Methode ruft vor dem Durchlaufen der Quelle <xref:System.Linq.Enumerable.ToList%2A> auf.</span><span class="sxs-lookup"><span data-stu-id="960c7-110">The `AppendString` method calls <xref:System.Linq.Enumerable.ToList%2A> before iterating through the source.</span></span> <span data-ttu-id="960c7-111">Dies verursacht eine Materialisierung.</span><span class="sxs-lookup"><span data-stu-id="960c7-111">This causes materialization.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -72,7 +63,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="9479d-112">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="9479d-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="960c7-112">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="960c7-112">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -88,11 +79,11 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- <span data-ttu-id="9479d-113">Diesem Beispiel können Sie entnehmen, dass der Aufruf von <xref:System.Linq.Enumerable.ToList%2A> `AppendString` dazu veranlasst, vor der Rückgabe des ersten Elements seine gesamte Quelle aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="9479d-113">In this example, you can see that the call to <xref:System.Linq.Enumerable.ToList%2A> causes `AppendString` to enumerate its entire source before yielding the first item.</span></span> <span data-ttu-id="9479d-114">Wenn die Quelle ein großes Array wäre, würde dies das Arbeitsspeicherprofil der Anwendung deutlich verändern.</span><span class="sxs-lookup"><span data-stu-id="9479d-114">If the source were a large array, this would significantly alter the memory profile of the application.</span></span>  
+ <span data-ttu-id="960c7-113">Diesem Beispiel können Sie entnehmen, dass der Aufruf von <xref:System.Linq.Enumerable.ToList%2A> `AppendString` dazu veranlasst, vor der Rückgabe des ersten Elements seine gesamte Quelle aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="960c7-113">In this example, you can see that the call to <xref:System.Linq.Enumerable.ToList%2A> causes `AppendString` to enumerate its entire source before yielding the first item.</span></span> <span data-ttu-id="960c7-114">Wenn die Quelle ein großes Array wäre, würde dies das Arbeitsspeicherprofil der Anwendung deutlich verändern.</span><span class="sxs-lookup"><span data-stu-id="960c7-114">If the source were a large array, this would significantly alter the memory profile of the application.</span></span>  
   
- <span data-ttu-id="9479d-115">Standardabfrageoperatoren können auch miteinander verkettet werden.</span><span class="sxs-lookup"><span data-stu-id="9479d-115">Standard query operators can also be chained together.</span></span> <span data-ttu-id="9479d-116">Informationen dazu finden Sie im letzten Thema dieses Lernprogramms:</span><span class="sxs-lookup"><span data-stu-id="9479d-116">The final topic in this tutorial illustrates this.</span></span>  
+ <span data-ttu-id="960c7-115">Standardabfrageoperatoren können auch miteinander verkettet werden.</span><span class="sxs-lookup"><span data-stu-id="960c7-115">Standard query operators can also be chained together.</span></span> <span data-ttu-id="960c7-116">Informationen dazu finden Sie im letzten Thema dieses Lernprogramms:</span><span class="sxs-lookup"><span data-stu-id="960c7-116">The final topic in this tutorial illustrates this.</span></span>  
   
--   [<span data-ttu-id="9479d-117">Verketten von Standardabfrageoperatoren (C#)</span><span class="sxs-lookup"><span data-stu-id="9479d-117">Chaining Standard Query Operators Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+-   [<span data-ttu-id="960c7-117">Verketten von Standardabfrageoperatoren (C#)</span><span class="sxs-lookup"><span data-stu-id="960c7-117">Chaining Standard Query Operators Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9479d-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9479d-118">See Also</span></span>  
- [<span data-ttu-id="9479d-119">Tutorial: Verketten von Abfragen (C#)</span><span class="sxs-lookup"><span data-stu-id="9479d-119">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a><span data-ttu-id="960c7-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="960c7-118">See Also</span></span>  
+ [<span data-ttu-id="960c7-119">Tutorial: Verketten von Abfragen (C#)</span><span class="sxs-lookup"><span data-stu-id="960c7-119">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

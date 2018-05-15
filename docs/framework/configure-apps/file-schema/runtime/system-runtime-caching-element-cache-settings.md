@@ -1,36 +1,26 @@
 ---
 title: '&lt;System.Runtime.Caching&gt; Element (Cacheeinstellungen)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - <system.runtime.caching> element
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83964d3a6e07267eaa946fa306301bc6d0d16e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 659a168f6c0bcb459bcfbdb247a9959c61c9c996
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltsystemruntimecachinggt-element-cache-settings"></a><span data-ttu-id="3766d-102">&lt;System.Runtime.Caching&gt; Element (Cacheeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="3766d-102">&lt;system.runtime.caching&gt; Element (Cache Settings)</span></span>
-<span data-ttu-id="3766d-103">Stellt die Konfiguration für die standardmäßige speicherinterne Implementierung <xref:System.Runtime.Caching.ObjectCache> über den `memoryCache` -Eintrag in der Konfigurationsdatei bereit.</span><span class="sxs-lookup"><span data-stu-id="3766d-103">Provides configuration for the default in-memory <xref:System.Runtime.Caching.ObjectCache> implementation through the `memoryCache` entry in the configuration file.</span></span>  
+# <a name="ltsystemruntimecachinggt-element-cache-settings"></a><span data-ttu-id="1284b-102">&lt;System.Runtime.Caching&gt; Element (Cacheeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="1284b-102">&lt;system.runtime.caching&gt; Element (Cache Settings)</span></span>
+<span data-ttu-id="1284b-103">Stellt die Konfiguration für die standardmäßige speicherinterne Implementierung <xref:System.Runtime.Caching.ObjectCache> über den `memoryCache` -Eintrag in der Konfigurationsdatei bereit.</span><span class="sxs-lookup"><span data-stu-id="1284b-103">Provides configuration for the default in-memory <xref:System.Runtime.Caching.ObjectCache> implementation through the `memoryCache` entry in the configuration file.</span></span>  
   
- <span data-ttu-id="3766d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3766d-104">\<configuration></span></span>  
-<span data-ttu-id="3766d-105">\<System.Runtime.Caching ></span><span class="sxs-lookup"><span data-stu-id="3766d-105">\<system.runtime.caching></span></span>  
+ <span data-ttu-id="1284b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="1284b-104">\<configuration></span></span>  
+<span data-ttu-id="1284b-105">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="1284b-105">\<system.runtime.caching></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3766d-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="3766d-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1284b-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="1284b-106">Syntax</span></span>  
   
 ```xml  
 <system.runtime.caching >  
@@ -38,34 +28,34 @@ ms.lasthandoff: 12/22/2017
 </system.runtime.caching >  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="3766d-107">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="3766d-107">Attributes and Elements</span></span>  
- <span data-ttu-id="3766d-108">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="3766d-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1284b-107">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="1284b-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="1284b-108">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="1284b-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="3766d-109">Attribute</span><span class="sxs-lookup"><span data-stu-id="3766d-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1284b-109">Attribute</span><span class="sxs-lookup"><span data-stu-id="1284b-109">Attributes</span></span>  
  `None`  
   
-### <a name="child-elements"></a><span data-ttu-id="3766d-110">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="3766d-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1284b-110">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="1284b-110">Child Elements</span></span>  
   
-|<span data-ttu-id="3766d-111">Element</span><span class="sxs-lookup"><span data-stu-id="3766d-111">Element</span></span>|<span data-ttu-id="3766d-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3766d-112">Description</span></span>|  
+|<span data-ttu-id="1284b-111">Element</span><span class="sxs-lookup"><span data-stu-id="1284b-111">Element</span></span>|<span data-ttu-id="1284b-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1284b-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="3766d-113">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="3766d-113">\<memoryCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|<span data-ttu-id="3766d-114">Definiert ein Element, das für die Konfiguration des Cache verwendet wird, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert.</span><span class="sxs-lookup"><span data-stu-id="3766d-114">Defines an element that is used to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span>|  
+|[<span data-ttu-id="1284b-113">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="1284b-113">\<memoryCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|<span data-ttu-id="1284b-114">Definiert ein Element, das für die Konfiguration des Cache verwendet wird, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert.</span><span class="sxs-lookup"><span data-stu-id="1284b-114">Defines an element that is used to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="3766d-115">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="3766d-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1284b-115">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="1284b-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="3766d-116">Element</span><span class="sxs-lookup"><span data-stu-id="3766d-116">Element</span></span>|<span data-ttu-id="3766d-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3766d-117">Description</span></span>|  
+|<span data-ttu-id="1284b-116">Element</span><span class="sxs-lookup"><span data-stu-id="1284b-116">Element</span></span>|<span data-ttu-id="1284b-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1284b-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="3766d-118">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3766d-118">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="3766d-119">Gibt das Stammelement in jeder Konfigurationsdatei an, die von der Common Language Runtime und den [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] -Anwendungen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="3766d-119">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
+|[<span data-ttu-id="1284b-118">\<configuration></span><span class="sxs-lookup"><span data-stu-id="1284b-118">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="1284b-119">Gibt das Stammelement in jeder Konfigurationsdatei an, die von der Common Language Runtime und den [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] -Anwendungen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="1284b-119">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3766d-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3766d-120">Remarks</span></span>  
- <span data-ttu-id="3766d-121">Die Klassen in diesem Namespace bieten eine Möglichkeit, Zwischenspeicherfunktionen wie jene in ASP.NET zu verwenden, jedoch ohne eine Abhängigkeit von der `System.Web` -Assembly.</span><span class="sxs-lookup"><span data-stu-id="3766d-121">The classes in this namespace provide a way to use caching facilities like those in ASP.NET, but without a dependency on the `System.Web` assembly.</span></span> <span data-ttu-id="3766d-122">Weitere Informationen finden Sie unter [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span><span class="sxs-lookup"><span data-stu-id="3766d-122">For more information, see [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1284b-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1284b-120">Remarks</span></span>  
+ <span data-ttu-id="1284b-121">Die Klassen in diesem Namespace bieten eine Möglichkeit, Zwischenspeicherfunktionen wie jene in ASP.NET zu verwenden, jedoch ohne eine Abhängigkeit von der `System.Web` -Assembly.</span><span class="sxs-lookup"><span data-stu-id="1284b-121">The classes in this namespace provide a way to use caching facilities like those in ASP.NET, but without a dependency on the `System.Web` assembly.</span></span> <span data-ttu-id="1284b-122">Weitere Informationen finden Sie unter [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span><span class="sxs-lookup"><span data-stu-id="1284b-122">For more information, see [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3766d-123">Die Ausgabezwischenspeicherung und Ihre Typen in Namespace <xref:System.Runtime.Caching> sind neu in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3766d-123">The output caching functionality and types in the <xref:System.Runtime.Caching> namespace are new in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>  
+>  <span data-ttu-id="1284b-123">Die Ausgabezwischenspeicherung und Ihre Typen in Namespace <xref:System.Runtime.Caching> sind neu in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1284b-123">The output caching functionality and types in the <xref:System.Runtime.Caching> namespace are new in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3766d-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3766d-124">Example</span></span>  
- <span data-ttu-id="3766d-125">Das folgende Beispiel zeigt die Konfiguration eines Cache, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert.</span><span class="sxs-lookup"><span data-stu-id="3766d-125">The following example shows how to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span> <span data-ttu-id="3766d-126">Das Beispiel veranschaulicht, wie eine Instanz des `namedCaches` -Eintrags für den Arbeitsspeichercache konfiguriert wird.</span><span class="sxs-lookup"><span data-stu-id="3766d-126">The example shows how to configure an instance of the `namedCaches` entry for memory cache.</span></span> <span data-ttu-id="3766d-127">Der Name des Caches wird auf den Standardnamen des Cacheeintrags festgelegt, indem das `name` -Attribut auf „Standard“ festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="3766d-127">The name of the cache is set to the default cache entry name by setting the `name` attribute to "default".</span></span>  
+## <a name="example"></a><span data-ttu-id="1284b-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1284b-124">Example</span></span>  
+ <span data-ttu-id="1284b-125">Das folgende Beispiel zeigt die Konfiguration eines Cache, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert.</span><span class="sxs-lookup"><span data-stu-id="1284b-125">The following example shows how to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span> <span data-ttu-id="1284b-126">Das Beispiel veranschaulicht, wie eine Instanz des `namedCaches` -Eintrags für den Arbeitsspeichercache konfiguriert wird.</span><span class="sxs-lookup"><span data-stu-id="1284b-126">The example shows how to configure an instance of the `namedCaches` entry for memory cache.</span></span> <span data-ttu-id="1284b-127">Der Name des Caches wird auf den Standardnamen des Cacheeintrags festgelegt, indem das `name` -Attribut auf „Standard“ festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="1284b-127">The name of the cache is set to the default cache entry name by setting the `name` attribute to "default".</span></span>  
   
- <span data-ttu-id="3766d-128">Das `cacheMemoryLimitMegabytes` - und das `physicalMemoryPercentage` -Attribut werden auf 0 (Null) festgelegt.</span><span class="sxs-lookup"><span data-stu-id="3766d-128">The `cacheMemoryLimitMegabytes` attribute and the `physicalMemoryPercentage` attribute are set to zero.</span></span> <span data-ttu-id="3766d-129">Werden diese Attribute auf 0 (Null) festgelegt, wird die <xref:System.Runtime.Caching.MemoryCache> -Heuristik zum automatischen Anpassen als Standard verwendet.</span><span class="sxs-lookup"><span data-stu-id="3766d-129">Setting these attributes to zero means that the <xref:System.Runtime.Caching.MemoryCache> autosizing heuristics are used by default.</span></span> <span data-ttu-id="3766d-130">Die Cacheimplementierung sollte die aktuelle Auslastung des Arbeitsspeichers alle zwei Minuten mit den absoluten und prozentualen Speichergrenzen vergleichen.</span><span class="sxs-lookup"><span data-stu-id="3766d-130">The cache implementation should compare the current memory load against the absolute and percentage-based memory limits every two minutes.</span></span>  
+ <span data-ttu-id="1284b-128">Das `cacheMemoryLimitMegabytes` - und das `physicalMemoryPercentage` -Attribut werden auf 0 (Null) festgelegt.</span><span class="sxs-lookup"><span data-stu-id="1284b-128">The `cacheMemoryLimitMegabytes` attribute and the `physicalMemoryPercentage` attribute are set to zero.</span></span> <span data-ttu-id="1284b-129">Werden diese Attribute auf 0 (Null) festgelegt, wird die <xref:System.Runtime.Caching.MemoryCache> -Heuristik zum automatischen Anpassen als Standard verwendet.</span><span class="sxs-lookup"><span data-stu-id="1284b-129">Setting these attributes to zero means that the <xref:System.Runtime.Caching.MemoryCache> autosizing heuristics are used by default.</span></span> <span data-ttu-id="1284b-130">Die Cacheimplementierung sollte die aktuelle Auslastung des Arbeitsspeichers alle zwei Minuten mit den absoluten und prozentualen Speichergrenzen vergleichen.</span><span class="sxs-lookup"><span data-stu-id="1284b-130">The cache implementation should compare the current memory load against the absolute and percentage-based memory limits every two minutes.</span></span>  
   
 ```xml  
 <configuration>  
@@ -82,5 +72,5 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3766d-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3766d-131">See Also</span></span>  
- [<span data-ttu-id="3766d-132">\<MemoryCache >-Element (Cacheeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="3766d-132">\<memoryCache> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+## <a name="see-also"></a><span data-ttu-id="1284b-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1284b-131">See Also</span></span>  
+ [<span data-ttu-id="1284b-132">\<MemoryCache >-Element (Cacheeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="1284b-132">\<memoryCache> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

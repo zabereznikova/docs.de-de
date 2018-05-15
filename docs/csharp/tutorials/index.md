@@ -1,34 +1,28 @@
 ---
 title: C#-Tutorials
 description: Probieren Sie diese C#-Tutorials aus, um die Erstellung eines C#-Programms und die C#-Sprachfeatures zu erlernen.
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
 ms.date: 09/07/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
-ms.openlocfilehash: 52f6b8a1000a8b8623c36cc1f76671f0a7a764b7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1809e9237429bccdc5c2b384cd247c4dd64e47ab
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="c-tutorials"></a><span data-ttu-id="e2eac-104">C#-Tutorials</span><span class="sxs-lookup"><span data-stu-id="e2eac-104">C# Tutorials</span></span>
+# <a name="c-tutorials"></a><span data-ttu-id="32e96-103">C#-Tutorials</span><span class="sxs-lookup"><span data-stu-id="32e96-103">C# Tutorials</span></span>
 
-<span data-ttu-id="e2eac-105">Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/index.md) erstellen:</span><span class="sxs-lookup"><span data-stu-id="e2eac-105">The following tutorials enable you to build C# programs using [.NET Core](../../core/index.md):</span></span>
+<span data-ttu-id="32e96-104">Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/index.md) erstellen:</span><span class="sxs-lookup"><span data-stu-id="32e96-104">The following tutorials enable you to build C# programs using [.NET Core](../../core/index.md):</span></span>
 
-* <span data-ttu-id="e2eac-106">[Konsolenanwendung](console-teleprompter.md): veranschaulicht die Konsolen-E/A, die Struktur einer Konsolenanwendung und die Grundlagen des taskbasierten asynchronen Programmiermodells.</span><span class="sxs-lookup"><span data-stu-id="e2eac-106">[Console Application](console-teleprompter.md): demonstrates Console I/O, the structure of a Console application, and the basics of the Task based asynchronous programming model.</span></span>
-* <span data-ttu-id="e2eac-107">[REST-Client](console-webapiclient.md): veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#.</span><span class="sxs-lookup"><span data-stu-id="e2eac-107">[REST Client](console-webapiclient.md): demonstrates web communications, JSON serialization, and Object Oriented features in the C# language.</span></span>
+* <span data-ttu-id="32e96-105">[Konsolenanwendung](console-teleprompter.md): veranschaulicht die Konsolen-E/A, die Struktur einer Konsolenanwendung und die Grundlagen des taskbasierten asynchronen Programmiermodells.</span><span class="sxs-lookup"><span data-stu-id="32e96-105">[Console Application](console-teleprompter.md): demonstrates Console I/O, the structure of a Console application, and the basics of the task-based asynchronous programming model.</span></span>
 
-* <span data-ttu-id="e2eac-108">[Vererbung in C# und .NET](inheritance.md): veranschaulicht die Vererbung in C#, einschließlich der Verwendung der Vererbung zur Definition von Basisklassen, abstrakten Basisklassen und abgeleiteten Klassen.</span><span class="sxs-lookup"><span data-stu-id="e2eac-108">[Inheritance in C# and .NET](inheritance.md): demonstrates inheritance in C#, including the use of inheritance to define base classes, abstract base classes, and derived classes.</span></span>
+* <span data-ttu-id="32e96-106">[REST-Client](console-webapiclient.md): veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#.</span><span class="sxs-lookup"><span data-stu-id="32e96-106">[REST Client](console-webapiclient.md): demonstrates web communications, JSON serialization, and object-oriented features in the C# language.</span></span>
 
-* <span data-ttu-id="e2eac-109">[Arbeiten mit LINQ](working-with-linq.md): veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen.</span><span class="sxs-lookup"><span data-stu-id="e2eac-109">[Working with LINQ](working-with-linq.md): demonstrates many of the features of LINQ and the language elements that support it.</span></span>
+* <span data-ttu-id="32e96-107">[Vererbung in C# und .NET](inheritance.md): veranschaulicht die Vererbung in C#, einschließlich der Verwendung der Vererbung zur Definition von Basisklassen, abstrakten Basisklassen und abgeleiteten Klassen.</span><span class="sxs-lookup"><span data-stu-id="32e96-107">[Inheritance in C# and .NET](inheritance.md): demonstrates inheritance in C#, including the use of inheritance to define base classes, abstract base classes, and derived classes.</span></span>
 
-* <span data-ttu-id="e2eac-110">[In Docker gehostete Microservices](microservices.md): veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker.</span><span class="sxs-lookup"><span data-stu-id="e2eac-110">[Microservices hosted in Docker](microservices.md): demonstrates building an ASP.NET Core microservice and hosting it in Docker.</span></span>
+* <span data-ttu-id="32e96-108">[Arbeiten mit LINQ](working-with-linq.md): veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen.</span><span class="sxs-lookup"><span data-stu-id="32e96-108">[Working with LINQ](working-with-linq.md): demonstrates many of the features of LINQ and the language elements that support it.</span></span>
 
-* <span data-ttu-id="e2eac-111">[Zeichenfolgeninterpolation](string-interpolation.md): veranschaulicht zahlreiche Verwendungsmöglichkeiten für die `$`-Zeichenfolgeninterpolation in C#.</span><span class="sxs-lookup"><span data-stu-id="e2eac-111">[String Interpolation](string-interpolation.md): demonstrates many of the uses for the `$` string interpolation in C#.</span></span>
+* <span data-ttu-id="32e96-109">[In Docker gehostete Microservices](microservices.md): veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker.</span><span class="sxs-lookup"><span data-stu-id="32e96-109">[Microservices hosted in Docker](microservices.md): demonstrates building an ASP.NET Core microservice and hosting it in Docker.</span></span>
 
-* <span data-ttu-id="e2eac-112">[Verwenden von Attributen](attributes.md): Erstellen und Verwenden von Attributen in C#.</span><span class="sxs-lookup"><span data-stu-id="e2eac-112">[Using Attributes](attributes.md): how to create and use attributes in C#.</span></span>
+* <span data-ttu-id="32e96-110">[Zeichenfolgeninterpolation](string-interpolation.md): veranschaulicht die Verwendung von Zeichenfolgeninterpolation zum Erstellen formatierter Zeichenfolgen in C#.</span><span class="sxs-lookup"><span data-stu-id="32e96-110">[String Interpolation](string-interpolation.md): demonstrates how to use string interpolation to create formatted strings in C#.</span></span>
+
+* <span data-ttu-id="32e96-111">[Verwenden von Attributen](attributes.md): veranschaulicht das Erstellen und Verwenden von Attributen in C#.</span><span class="sxs-lookup"><span data-stu-id="32e96-111">[Using Attributes](attributes.md): demonstrates how to create and use attributes in C#.</span></span>

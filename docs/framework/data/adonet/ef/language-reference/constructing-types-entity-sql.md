@@ -1,80 +1,68 @@
 ---
 title: Konstruktionstypen (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8a6ae2334c879733e964014716c2b67e77f271d5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="constructing-types-entity-sql"></a><span data-ttu-id="92c93-102">Konstruktionstypen (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="92c93-102">Constructing Types (Entity SQL)</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="92c93-103">stellt drei Arten von Konstruktoren bereit: Zeilenkonstruktoren, Konstruktoren benannter Typen und Auflistungskonstruktoren.</span><span class="sxs-lookup"><span data-stu-id="92c93-103"> provides three kinds of constructors: row constructors, named type constructors, and collection constructors.</span></span>  
+# <a name="constructing-types-entity-sql"></a><span data-ttu-id="8fada-102">Konstruktionstypen (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="8fada-102">Constructing Types (Entity SQL)</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="8fada-103"> stellt drei Arten von Konstruktoren bereit: Zeilenkonstruktoren, Konstruktoren benannter Typen und Auflistungskonstruktoren.</span><span class="sxs-lookup"><span data-stu-id="8fada-103"> provides three kinds of constructors: row constructors, named type constructors, and collection constructors.</span></span>  
   
-## <a name="row-constructors"></a><span data-ttu-id="92c93-104">Zeilenkonstruktoren</span><span class="sxs-lookup"><span data-stu-id="92c93-104">Row Constructors</span></span>  
- <span data-ttu-id="92c93-105">Zeilenkonstruktoren werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zur Erstellung anonymer, strukturell typisierter Datensätze aus einem oder mehreren Werten verwendet.</span><span class="sxs-lookup"><span data-stu-id="92c93-105">You use row constructors in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to construct anonymous, structurally typed records from one or more values.</span></span> <span data-ttu-id="92c93-106">Beim Ergebnistyp eines Zeilenkonstruktors handelt es sich um einen Zeilentyp, dessen Feldtypen den Typen der zur Erstellung der Zeile verwendeten Werten entsprechen.</span><span class="sxs-lookup"><span data-stu-id="92c93-106">The result type of a row constructor is a row type whose field types correspond to the types of the values used to construct the row.</span></span> <span data-ttu-id="92c93-107">Der folgende Ausdruck erstellt z. B. einen Wert vom Typ `Record(a int, b string, c int)`:</span><span class="sxs-lookup"><span data-stu-id="92c93-107">For example, the following expression constructs a value of type `Record(a int, b string, c int)`:</span></span>  
+## <a name="row-constructors"></a><span data-ttu-id="8fada-104">Zeilenkonstruktoren</span><span class="sxs-lookup"><span data-stu-id="8fada-104">Row Constructors</span></span>  
+ <span data-ttu-id="8fada-105">Zeilenkonstruktoren werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zur Erstellung anonymer, strukturell typisierter Datensätze aus einem oder mehreren Werten verwendet.</span><span class="sxs-lookup"><span data-stu-id="8fada-105">You use row constructors in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to construct anonymous, structurally typed records from one or more values.</span></span> <span data-ttu-id="8fada-106">Beim Ergebnistyp eines Zeilenkonstruktors handelt es sich um einen Zeilentyp, dessen Feldtypen den Typen der zur Erstellung der Zeile verwendeten Werten entsprechen.</span><span class="sxs-lookup"><span data-stu-id="8fada-106">The result type of a row constructor is a row type whose field types correspond to the types of the values used to construct the row.</span></span> <span data-ttu-id="8fada-107">Der folgende Ausdruck erstellt z. B. einen Wert vom Typ `Record(a int, b string, c int)`:</span><span class="sxs-lookup"><span data-stu-id="8fada-107">For example, the following expression constructs a value of type `Record(a int, b string, c int)`:</span></span>  
   
  `ROW(1 AS a, "abc" AS b, a + 34 AS c)`  
   
- <span data-ttu-id="92c93-108">Wenn für einen Ausdruck in einem Zeilenkonstruktor kein Alias angegeben ist, wird vom Entity Framework ein Alias generiert.</span><span class="sxs-lookup"><span data-stu-id="92c93-108">If you do not provide an alias for an expression in a row constructor, the Entity Framework will try to generate one.</span></span> <span data-ttu-id="92c93-109">Weitere Informationen finden Sie im Abschnitt "Regeln für das Aliasing" im [Bezeichner](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="92c93-109">For more information, see the "Aliasing Rules" section in [Identifiers](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).</span></span>  
+ <span data-ttu-id="8fada-108">Wenn für einen Ausdruck in einem Zeilenkonstruktor kein Alias angegeben ist, wird vom Entity Framework ein Alias generiert.</span><span class="sxs-lookup"><span data-stu-id="8fada-108">If you do not provide an alias for an expression in a row constructor, the Entity Framework will try to generate one.</span></span> <span data-ttu-id="8fada-109">Weitere Informationen finden Sie im Abschnitt "Regeln für das Aliasing" im [Bezeichner](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="8fada-109">For more information, see the "Aliasing Rules" section in [Identifiers](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).</span></span>  
   
- <span data-ttu-id="92c93-110">Die folgenden Regeln gelten für Ausdrucksaliasing in einem Zeilenkonstruktor:</span><span class="sxs-lookup"><span data-stu-id="92c93-110">The following rules apply to expression aliasing in a row constructor:</span></span>  
+ <span data-ttu-id="8fada-110">Die folgenden Regeln gelten für Ausdrucksaliasing in einem Zeilenkonstruktor:</span><span class="sxs-lookup"><span data-stu-id="8fada-110">The following rules apply to expression aliasing in a row constructor:</span></span>  
   
--   <span data-ttu-id="92c93-111">Ausdrücke in einem Zeilenkonstruktor können nicht auf andere Aliase im gleichen Konstruktor verweisen.</span><span class="sxs-lookup"><span data-stu-id="92c93-111">Expressions in a row constructor cannot refer to other aliases in the same constructor.</span></span>  
+-   <span data-ttu-id="8fada-111">Ausdrücke in einem Zeilenkonstruktor können nicht auf andere Aliase im gleichen Konstruktor verweisen.</span><span class="sxs-lookup"><span data-stu-id="8fada-111">Expressions in a row constructor cannot refer to other aliases in the same constructor.</span></span>  
   
--   <span data-ttu-id="92c93-112">Zwei Ausdrücke im gleichen Zeilenkonstruktor können nicht über den gleichen Alias verfügen.</span><span class="sxs-lookup"><span data-stu-id="92c93-112">Two expressions in the same row constructor cannot have the same alias.</span></span>  
+-   <span data-ttu-id="8fada-112">Zwei Ausdrücke im gleichen Zeilenkonstruktor können nicht über den gleichen Alias verfügen.</span><span class="sxs-lookup"><span data-stu-id="8fada-112">Two expressions in the same row constructor cannot have the same alias.</span></span>  
   
- <span data-ttu-id="92c93-113">Weitere Informationen zu Zeilenkonstruktoren, finden Sie unter [Zeile](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="92c93-113">For more information about row constructors, see [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).</span></span>  
+ <span data-ttu-id="8fada-113">Weitere Informationen zu Zeilenkonstruktoren, finden Sie unter [Zeile](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="8fada-113">For more information about row constructors, see [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).</span></span>  
   
-## <a name="collection-constructors"></a><span data-ttu-id="92c93-114">Auflistungskonstruktoren</span><span class="sxs-lookup"><span data-stu-id="92c93-114">Collection Constructors</span></span>  
- <span data-ttu-id="92c93-115">Mithilfe von Auflistungskonstruktoren wird in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aus einer Liste mit Werten eine Instanz eines Multisets erstellt.</span><span class="sxs-lookup"><span data-stu-id="92c93-115">You use collection constructors in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to create an instance of a multiset from a list of values.</span></span> <span data-ttu-id="92c93-116">Alle Werte im Konstruktor müssen vom beiderseitig kompatiblen Typ `T` sein, und der Konstruktor erstellt eine Auflistung des Typs `Multiset<T>`.</span><span class="sxs-lookup"><span data-stu-id="92c93-116">All the values in the constructor must be of mutually compatible type `T`, and the constructor produces a collection of type `Multiset<T>`.</span></span> <span data-ttu-id="92c93-117">Zum Beispiel erstellt der folgende Ausdruck eine Auflistung von ganzen Zahlen:</span><span class="sxs-lookup"><span data-stu-id="92c93-117">For example, the following expression creates a collection of integers:</span></span>  
+## <a name="collection-constructors"></a><span data-ttu-id="8fada-114">Auflistungskonstruktoren</span><span class="sxs-lookup"><span data-stu-id="8fada-114">Collection Constructors</span></span>  
+ <span data-ttu-id="8fada-115">Mithilfe von Auflistungskonstruktoren wird in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aus einer Liste mit Werten eine Instanz eines Multisets erstellt.</span><span class="sxs-lookup"><span data-stu-id="8fada-115">You use collection constructors in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to create an instance of a multiset from a list of values.</span></span> <span data-ttu-id="8fada-116">Alle Werte im Konstruktor müssen vom beiderseitig kompatiblen Typ `T` sein, und der Konstruktor erstellt eine Auflistung des Typs `Multiset<T>`.</span><span class="sxs-lookup"><span data-stu-id="8fada-116">All the values in the constructor must be of mutually compatible type `T`, and the constructor produces a collection of type `Multiset<T>`.</span></span> <span data-ttu-id="8fada-117">Zum Beispiel erstellt der folgende Ausdruck eine Auflistung von ganzen Zahlen:</span><span class="sxs-lookup"><span data-stu-id="8fada-117">For example, the following expression creates a collection of integers:</span></span>  
   
  `Multiset(1, 2, 3)`  
   
  `{1, 2, 3}`  
   
- <span data-ttu-id="92c93-118">Leere Multiset-Konstruktoren sind nicht zugelassen, da der Typ der Elemente nicht bestimmt werden kann.</span><span class="sxs-lookup"><span data-stu-id="92c93-118">Empty multiset constructors are not allowed because the type of the elements cannot be determined.</span></span> <span data-ttu-id="92c93-119">Der folgende Ausdruck ist ungültig:</span><span class="sxs-lookup"><span data-stu-id="92c93-119">The following is not valid:</span></span>  
+ <span data-ttu-id="8fada-118">Leere Multiset-Konstruktoren sind nicht zugelassen, da der Typ der Elemente nicht bestimmt werden kann.</span><span class="sxs-lookup"><span data-stu-id="8fada-118">Empty multiset constructors are not allowed because the type of the elements cannot be determined.</span></span> <span data-ttu-id="8fada-119">Der folgende Ausdruck ist ungültig:</span><span class="sxs-lookup"><span data-stu-id="8fada-119">The following is not valid:</span></span>  
   
  `multiset() {}`  
   
- <span data-ttu-id="92c93-120">Weitere Informationen finden Sie unter [MULTIMENGE](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="92c93-120">For more information, see [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).</span></span>  
+ <span data-ttu-id="8fada-120">Weitere Informationen finden Sie unter [MULTIMENGE](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="8fada-120">For more information, see [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).</span></span>  
   
-## <a name="named-type-constructors-namedtype-initializers"></a><span data-ttu-id="92c93-121">Konstruktoren benannter Typen (NamedType-Initialisierer)</span><span class="sxs-lookup"><span data-stu-id="92c93-121">Named Type Constructors (NamedType Initializers)</span></span>  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="92c93-122"> ermöglicht Typenkonstruktoren (Initialisierern) das Erstellen von Instanzen benannter komplexer Typen und Entitätstypen.</span><span class="sxs-lookup"><span data-stu-id="92c93-122"> allows type constructors (initializers) to create instances of named complex types and entity types.</span></span> <span data-ttu-id="92c93-123">Der folgende Ausdruck erstellt z. B. eine Instanz eines `Person`-Typs.</span><span class="sxs-lookup"><span data-stu-id="92c93-123">For example, the following expression creates an instance of a `Person` type.</span></span>  
+## <a name="named-type-constructors-namedtype-initializers"></a><span data-ttu-id="8fada-121">Konstruktoren benannter Typen (NamedType-Initialisierer)</span><span class="sxs-lookup"><span data-stu-id="8fada-121">Named Type Constructors (NamedType Initializers)</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="8fada-122"> ermöglicht Typenkonstruktoren (Initialisierern) das Erstellen von Instanzen benannter komplexer Typen und Entitätstypen.</span><span class="sxs-lookup"><span data-stu-id="8fada-122"> allows type constructors (initializers) to create instances of named complex types and entity types.</span></span> <span data-ttu-id="8fada-123">Der folgende Ausdruck erstellt z. B. eine Instanz eines `Person`-Typs.</span><span class="sxs-lookup"><span data-stu-id="8fada-123">For example, the following expression creates an instance of a `Person` type.</span></span>  
   
  `Person("abc", 12)`  
   
- <span data-ttu-id="92c93-124">Mit dem folgenden Ausdruck wird eine Instanz eines komplexen Typs erstellt.</span><span class="sxs-lookup"><span data-stu-id="92c93-124">The following expression creates an instance of a complex type.</span></span>  
+ <span data-ttu-id="8fada-124">Mit dem folgenden Ausdruck wird eine Instanz eines komplexen Typs erstellt.</span><span class="sxs-lookup"><span data-stu-id="8fada-124">The following expression creates an instance of a complex type.</span></span>  
   
  `MyModel.ZipCode(‘98118’, ‘4567’)`  
   
- <span data-ttu-id="92c93-125">Mit dem folgenden Ausdruck wird eine Instanz eines geschachtelten komplexen Typs erstellt.</span><span class="sxs-lookup"><span data-stu-id="92c93-125">The following expression creates an instance of a nested complex type.</span></span>  
+ <span data-ttu-id="8fada-125">Mit dem folgenden Ausdruck wird eine Instanz eines geschachtelten komplexen Typs erstellt.</span><span class="sxs-lookup"><span data-stu-id="8fada-125">The following expression creates an instance of a nested complex type.</span></span>  
   
  `MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567'))`  
   
- <span data-ttu-id="92c93-126">Mit dem folgenden Ausdruck wird eine Instanz einer Entität mit einem geschachtelten komplexen Typ erstellt.</span><span class="sxs-lookup"><span data-stu-id="92c93-126">The following expression creates an instance of an entity with a nested complex type.</span></span>  
+ <span data-ttu-id="8fada-126">Mit dem folgenden Ausdruck wird eine Instanz einer Entität mit einem geschachtelten komplexen Typ erstellt.</span><span class="sxs-lookup"><span data-stu-id="8fada-126">The following expression creates an instance of an entity with a nested complex type.</span></span>  
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- <span data-ttu-id="92c93-127">Im folgenden Beispiel wird gezeigt, wie eine Eigenschaft eines komplexen Typs mit NULL initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="92c93-127">The following example shows how to initialize a property of a complex type to null.</span></span> `MyModel.ZipCode(‘98118’, null)`  
+ <span data-ttu-id="8fada-127">Im folgenden Beispiel wird gezeigt, wie eine Eigenschaft eines komplexen Typs mit NULL initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="8fada-127">The following example shows how to initialize a property of a complex type to null.</span></span> `MyModel.ZipCode(‘98118’, null)`  
   
- <span data-ttu-id="92c93-128">Die Reihenfolge der Argumente des Konstruktors sollten mit der Reihenfolge der Deklaration der Attribute des Typs übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="92c93-128">The arguments to the constructor are assumed to be in the same order as the declaration of the attributes of the type.</span></span>  
+ <span data-ttu-id="8fada-128">Die Reihenfolge der Argumente des Konstruktors sollten mit der Reihenfolge der Deklaration der Attribute des Typs übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="8fada-128">The arguments to the constructor are assumed to be in the same order as the declaration of the attributes of the type.</span></span>  
   
- <span data-ttu-id="92c93-129">Weitere Informationen finden Sie unter [Typkonstruktor mit dem Namen](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="92c93-129">For more information, see [Named Type Constructor](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).</span></span>  
+ <span data-ttu-id="8fada-129">Weitere Informationen finden Sie unter [Typkonstruktor mit dem Namen](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="8fada-129">For more information, see [Named Type Constructor](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92c93-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="92c93-130">See Also</span></span>  
- [<span data-ttu-id="92c93-131">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="92c93-131">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [<span data-ttu-id="92c93-132">Übersicht über Entity SQL</span><span class="sxs-lookup"><span data-stu-id="92c93-132">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [<span data-ttu-id="92c93-133">Typsystem</span><span class="sxs-lookup"><span data-stu-id="92c93-133">Type System</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="8fada-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8fada-130">See Also</span></span>  
+ [<span data-ttu-id="8fada-131">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="8fada-131">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="8fada-132">Übersicht über Entity SQL</span><span class="sxs-lookup"><span data-stu-id="8fada-132">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [<span data-ttu-id="8fada-133">Typsystem</span><span class="sxs-lookup"><span data-stu-id="8fada-133">Type System</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

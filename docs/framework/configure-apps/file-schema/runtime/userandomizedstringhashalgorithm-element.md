@@ -1,13 +1,6 @@
 ---
 title: '&lt;UseRandomizedStringHashAlgorithm&gt; Element'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,78 +8,75 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6231f362a30f4766ccf5a43d33fa0dc7257ad57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a515c3011905c4f5c18ed9d3e8edf489428c04d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltuserandomizedstringhashalgorithmgt-element"></a><span data-ttu-id="ab83f-102">&lt;UseRandomizedStringHashAlgorithm&gt; Element</span><span class="sxs-lookup"><span data-stu-id="ab83f-102">&lt;UseRandomizedStringHashAlgorithm&gt; Element</span></span>
-<span data-ttu-id="ab83f-103">Bestimmt, ob die Common Language Runtime Hashcodes für Zeichenfolgen pro Anwendungsdomäne berechnet.</span><span class="sxs-lookup"><span data-stu-id="ab83f-103">Determines whether the common language runtime calculates hash codes for strings on a per application domain basis.</span></span>  
+# <a name="ltuserandomizedstringhashalgorithmgt-element"></a><span data-ttu-id="a1553-102">&lt;UseRandomizedStringHashAlgorithm&gt; Element</span><span class="sxs-lookup"><span data-stu-id="a1553-102">&lt;UseRandomizedStringHashAlgorithm&gt; Element</span></span>
+<span data-ttu-id="a1553-103">Bestimmt, ob die Common Language Runtime Hashcodes für Zeichenfolgen pro Anwendungsdomäne berechnet.</span><span class="sxs-lookup"><span data-stu-id="a1553-103">Determines whether the common language runtime calculates hash codes for strings on a per application domain basis.</span></span>  
   
- <span data-ttu-id="ab83f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ab83f-104">\<configuration></span></span>  
-<span data-ttu-id="ab83f-105">\<Common Language Runtime ></span><span class="sxs-lookup"><span data-stu-id="ab83f-105">\<runtime></span></span>  
-<span data-ttu-id="ab83f-106">\<UseRandomizedStringHashAlgorithm ></span><span class="sxs-lookup"><span data-stu-id="ab83f-106">\<UseRandomizedStringHashAlgorithm></span></span>  
+ <span data-ttu-id="a1553-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a1553-104">\<configuration></span></span>  
+<span data-ttu-id="a1553-105">\<Common Language Runtime ></span><span class="sxs-lookup"><span data-stu-id="a1553-105">\<runtime></span></span>  
+<span data-ttu-id="a1553-106">\<UseRandomizedStringHashAlgorithm ></span><span class="sxs-lookup"><span data-stu-id="a1553-106">\<UseRandomizedStringHashAlgorithm></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab83f-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="ab83f-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a1553-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="a1553-107">Syntax</span></span>  
   
 ```xml  
 <UseRandomizedStringHashAlgorithm   
    enabled=0|1 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ab83f-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="ab83f-108">Attributes and Elements</span></span>  
- <span data-ttu-id="ab83f-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="ab83f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a1553-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="a1553-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="a1553-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="a1553-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ab83f-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="ab83f-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a1553-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="a1553-110">Attributes</span></span>  
   
-|<span data-ttu-id="ab83f-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="ab83f-111">Attribute</span></span>|<span data-ttu-id="ab83f-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ab83f-112">Description</span></span>|  
+|<span data-ttu-id="a1553-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="a1553-111">Attribute</span></span>|<span data-ttu-id="a1553-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a1553-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="ab83f-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="ab83f-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="ab83f-114">Gibt an, ob Hashcodes für Zeichenfolgen pro Anwendungsdomäne berechnet werden.</span><span class="sxs-lookup"><span data-stu-id="ab83f-114">Specifies whether hash codes for strings are calculated on a per application domain basis.</span></span>|  
+|`enabled`|<span data-ttu-id="a1553-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="a1553-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="a1553-114">Gibt an, ob Hashcodes für Zeichenfolgen pro Anwendungsdomäne berechnet werden.</span><span class="sxs-lookup"><span data-stu-id="a1553-114">Specifies whether hash codes for strings are calculated on a per application domain basis.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="ab83f-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="ab83f-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="a1553-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="a1553-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="ab83f-116">Wert</span><span class="sxs-lookup"><span data-stu-id="ab83f-116">Value</span></span>|<span data-ttu-id="ab83f-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ab83f-117">Description</span></span>|  
+|<span data-ttu-id="a1553-116">Wert</span><span class="sxs-lookup"><span data-stu-id="a1553-116">Value</span></span>|<span data-ttu-id="a1553-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a1553-117">Description</span></span>|  
 |-----------|-----------------|  
-|`0`|<span data-ttu-id="ab83f-118">Die Common Language Runtime berechnet Hashcodes für Zeichenfolgen nicht pro Anwendungsdomäne; es wird ein einzelner Algorithmus verwendet, um Hashcodes für Zeichenfolgen zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="ab83f-118">The common language runtime does not compute hash codes for strings on a per application domain basis; a single algorithm is used to calculate string hash codes.</span></span> <span data-ttu-id="ab83f-119">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="ab83f-119">This is the default.</span></span>|  
-|`1`|<span data-ttu-id="ab83f-120">Die Common Language Runtime berechnet Hashcodes für Zeichenfolgen pro Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="ab83f-120">The common language runtime computes hash codes for strings on a per application domain basis.</span></span> <span data-ttu-id="ab83f-121">Identische Zeichenfolgen in unterschiedlichen Anwendungsdomänen und in verschiedenen Prozessen weisen unterschiedliche Hashcodes auf.</span><span class="sxs-lookup"><span data-stu-id="ab83f-121">Identical strings in different application domains and in different processes will have different hash codes.</span></span>|  
+|`0`|<span data-ttu-id="a1553-118">Die Common Language Runtime berechnet Hashcodes für Zeichenfolgen nicht pro Anwendungsdomäne; es wird ein einzelner Algorithmus verwendet, um Hashcodes für Zeichenfolgen zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="a1553-118">The common language runtime does not compute hash codes for strings on a per application domain basis; a single algorithm is used to calculate string hash codes.</span></span> <span data-ttu-id="a1553-119">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="a1553-119">This is the default.</span></span>|  
+|`1`|<span data-ttu-id="a1553-120">Die Common Language Runtime berechnet Hashcodes für Zeichenfolgen pro Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="a1553-120">The common language runtime computes hash codes for strings on a per application domain basis.</span></span> <span data-ttu-id="a1553-121">Identische Zeichenfolgen in unterschiedlichen Anwendungsdomänen und in verschiedenen Prozessen weisen unterschiedliche Hashcodes auf.</span><span class="sxs-lookup"><span data-stu-id="a1553-121">Identical strings in different application domains and in different processes will have different hash codes.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="ab83f-122">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ab83f-122">Child Elements</span></span>  
- <span data-ttu-id="ab83f-123">Keine</span><span class="sxs-lookup"><span data-stu-id="ab83f-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a1553-122">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="a1553-122">Child Elements</span></span>  
+ <span data-ttu-id="a1553-123">Keine</span><span class="sxs-lookup"><span data-stu-id="a1553-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="ab83f-124">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ab83f-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a1553-124">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="a1553-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="ab83f-125">Element</span><span class="sxs-lookup"><span data-stu-id="ab83f-125">Element</span></span>|<span data-ttu-id="ab83f-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ab83f-126">Description</span></span>|  
+|<span data-ttu-id="a1553-125">Element</span><span class="sxs-lookup"><span data-stu-id="a1553-125">Element</span></span>|<span data-ttu-id="a1553-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a1553-126">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="ab83f-127">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="ab83f-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="ab83f-128">Enthält Informationen über Laufzeitinitialisierungsoptionen.</span><span class="sxs-lookup"><span data-stu-id="ab83f-128">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="a1553-127">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="a1553-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="a1553-128">Enthält Informationen über Laufzeitinitialisierungsoptionen.</span><span class="sxs-lookup"><span data-stu-id="a1553-128">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ab83f-129">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ab83f-129">Remarks</span></span>  
- <span data-ttu-id="ab83f-130">Standardmäßig verwenden die <xref:System.StringComparer>-Klasse und die <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>-Methode einen einzelnen Hashalgorithmus, der einen über verschiedene Anwendungsdomänen hinweg konsistenten Hashcode erzeugt.</span><span class="sxs-lookup"><span data-stu-id="ab83f-130">By default, the <xref:System.StringComparer> class and the <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> method use a single hashing algorithm that produces a consistent hash code across application domains.</span></span> <span data-ttu-id="ab83f-131">Dies entspricht dem Festlegen des `enabled`-Attributs des `<UseRandomizedStringHashAlgorithm>`-Elements auf `0`.</span><span class="sxs-lookup"><span data-stu-id="ab83f-131">This is equivalent to setting the `enabled` attribute of the `<UseRandomizedStringHashAlgorithm>` element to `0`.</span></span> <span data-ttu-id="ab83f-132">Dies ist der Hashalgorithmus, der in [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ab83f-132">This is the hashing algorithm used in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a1553-129">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a1553-129">Remarks</span></span>  
+ <span data-ttu-id="a1553-130">Standardmäßig verwenden die <xref:System.StringComparer>-Klasse und die <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>-Methode einen einzelnen Hashalgorithmus, der einen über verschiedene Anwendungsdomänen hinweg konsistenten Hashcode erzeugt.</span><span class="sxs-lookup"><span data-stu-id="a1553-130">By default, the <xref:System.StringComparer> class and the <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> method use a single hashing algorithm that produces a consistent hash code across application domains.</span></span> <span data-ttu-id="a1553-131">Dies entspricht dem Festlegen des `enabled`-Attributs des `<UseRandomizedStringHashAlgorithm>`-Elements auf `0`.</span><span class="sxs-lookup"><span data-stu-id="a1553-131">This is equivalent to setting the `enabled` attribute of the `<UseRandomizedStringHashAlgorithm>` element to `0`.</span></span> <span data-ttu-id="a1553-132">Dies ist der Hashalgorithmus, der in [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="a1553-132">This is the hashing algorithm used in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span></span>  
   
- <span data-ttu-id="ab83f-133">Die <xref:System.StringComparer>-Klasse und die <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>-Methode können auch einen anderen Hashalgorithmus verwenden, der Hashcodes pro Anwendungsdomäne berechnet.</span><span class="sxs-lookup"><span data-stu-id="ab83f-133">The <xref:System.StringComparer> class and the <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> method can also use a different hashing algorithm that computes hash codes on a per application domain basis.</span></span> <span data-ttu-id="ab83f-134">Dadurch variieren Hashcodes für identische Zeichenfolgen von Anwendungsdomäne zu Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="ab83f-134">As a result, hash codes for equivalent strings will differ across application domains.</span></span> <span data-ttu-id="ab83f-135">Dies ist eine Opt-In-Funktion; um sie zu nutzen, müssen Sie das `enabled`-Attribut des `<UseRandomizedStringHashAlgorithm>`-Elements auf `1` festlegen.</span><span class="sxs-lookup"><span data-stu-id="ab83f-135">This is an opt-in feature; to take advantage of it, you must set the `enabled` attribute of the `<UseRandomizedStringHashAlgorithm>` element to `1`.</span></span>  
+ <span data-ttu-id="a1553-133">Die <xref:System.StringComparer>-Klasse und die <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>-Methode können auch einen anderen Hashalgorithmus verwenden, der Hashcodes pro Anwendungsdomäne berechnet.</span><span class="sxs-lookup"><span data-stu-id="a1553-133">The <xref:System.StringComparer> class and the <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> method can also use a different hashing algorithm that computes hash codes on a per application domain basis.</span></span> <span data-ttu-id="a1553-134">Dadurch variieren Hashcodes für identische Zeichenfolgen von Anwendungsdomäne zu Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="a1553-134">As a result, hash codes for equivalent strings will differ across application domains.</span></span> <span data-ttu-id="a1553-135">Dies ist eine Opt-In-Funktion; um sie zu nutzen, müssen Sie das `enabled`-Attribut des `<UseRandomizedStringHashAlgorithm>`-Elements auf `1` festlegen.</span><span class="sxs-lookup"><span data-stu-id="a1553-135">This is an opt-in feature; to take advantage of it, you must set the `enabled` attribute of the `<UseRandomizedStringHashAlgorithm>` element to `1`.</span></span>  
   
- <span data-ttu-id="ab83f-136">Die Zeichenfolgensuche in einer Hashtabelle ist in der Regel eine O(1)-Operation.</span><span class="sxs-lookup"><span data-stu-id="ab83f-136">The string lookup in a hash table is typically an O(1) operation.</span></span> <span data-ttu-id="ab83f-137">Jedoch, wenn eine große Anzahl von Konflikten auftreten, die Suche kann auch eine o (n<sup>2</sup>) Vorgang.</span><span class="sxs-lookup"><span data-stu-id="ab83f-137">However, when a large number of collisions occur, the lookup can become an O(n<sup>2</sup>) operation.</span></span> <span data-ttu-id="ab83f-138">Sie können das `<UseRandomizedStringHashAlgorithm>`-Konfigurationselement verwenden, um einen zufälligen Hashalgorithmus pro Anwendungsdomäne zu generieren. Dadurch wird die Anzahl der potenziellen Konflikte beschränkt, insbesondere wenn die Schlüssel, aus denen die Hashcodes berechnet werden, auf Dateneingaben durch Benutzer basieren.</span><span class="sxs-lookup"><span data-stu-id="ab83f-138">You can use the `<UseRandomizedStringHashAlgorithm>` configuration element to generate a random hashing algorithm per application domain, which in turn limits the number of potential collisions, particularly when the keys from which the hash codes are calculated are based on data input by users.</span></span>  
+ <span data-ttu-id="a1553-136">Die Zeichenfolgensuche in einer Hashtabelle ist in der Regel eine O(1)-Operation.</span><span class="sxs-lookup"><span data-stu-id="a1553-136">The string lookup in a hash table is typically an O(1) operation.</span></span> <span data-ttu-id="a1553-137">Jedoch, wenn eine große Anzahl von Konflikten auftreten, die Suche kann auch eine o (n<sup>2</sup>) Vorgang.</span><span class="sxs-lookup"><span data-stu-id="a1553-137">However, when a large number of collisions occur, the lookup can become an O(n<sup>2</sup>) operation.</span></span> <span data-ttu-id="a1553-138">Sie können das `<UseRandomizedStringHashAlgorithm>`-Konfigurationselement verwenden, um einen zufälligen Hashalgorithmus pro Anwendungsdomäne zu generieren. Dadurch wird die Anzahl der potenziellen Konflikte beschränkt, insbesondere wenn die Schlüssel, aus denen die Hashcodes berechnet werden, auf Dateneingaben durch Benutzer basieren.</span><span class="sxs-lookup"><span data-stu-id="a1553-138">You can use the `<UseRandomizedStringHashAlgorithm>` configuration element to generate a random hashing algorithm per application domain, which in turn limits the number of potential collisions, particularly when the keys from which the hash codes are calculated are based on data input by users.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ab83f-139">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ab83f-139">Example</span></span>  
- <span data-ttu-id="ab83f-140">Im folgenden Beispiel wird eine `DisplayString`-Klasse definiert, die die private Zeichenfolgenkonstante `s` enthält, deren Wert "Dies ist eine Zeichenfolge" lautet.</span><span class="sxs-lookup"><span data-stu-id="ab83f-140">The following example defines a `DisplayString` class that includes a private string constant, `s`, whose value is "This is a string."</span></span> <span data-ttu-id="ab83f-141">Außerdem enthält sie eine `ShowStringHashCode`-Methode, die den Zeichenfolgenwert und dessen Hashcode zusammen mit dem Namen der Anwendungsdomäne anzeigt, in der die Methode ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ab83f-141">It also includes a `ShowStringHashCode` method that displays the string value and its hash code along with the name of the application domain in which the method is executing.</span></span>  
+## <a name="example"></a><span data-ttu-id="a1553-139">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a1553-139">Example</span></span>  
+ <span data-ttu-id="a1553-140">Im folgenden Beispiel wird eine `DisplayString`-Klasse definiert, die die private Zeichenfolgenkonstante `s` enthält, deren Wert "Dies ist eine Zeichenfolge" lautet.</span><span class="sxs-lookup"><span data-stu-id="a1553-140">The following example defines a `DisplayString` class that includes a private string constant, `s`, whose value is "This is a string."</span></span> <span data-ttu-id="a1553-141">Außerdem enthält sie eine `ShowStringHashCode`-Methode, die den Zeichenfolgenwert und dessen Hashcode zusammen mit dem Namen der Anwendungsdomäne anzeigt, in der die Methode ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="a1553-141">It also includes a `ShowStringHashCode` method that displays the string value and its hash code along with the name of the application domain in which the method is executing.</span></span>  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  
   
- <span data-ttu-id="ab83f-142">Wenn Sie das Beispiel ausführen, ohne eine Konfigurationsdatei anzugeben, wird die folgende Ausgabe angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab83f-142">When you run the example without supplying a configuration file, it displays output similar to the following.</span></span> <span data-ttu-id="ab83f-143">Beachten Sie, dass die Hashcodes für die Zeichenfolge in den zwei Anwendungsdomänen identisch sind.</span><span class="sxs-lookup"><span data-stu-id="ab83f-143">Note that the hash codes for the string are identical in the two application domains.</span></span>  
+ <span data-ttu-id="a1553-142">Wenn Sie das Beispiel ausführen, ohne eine Konfigurationsdatei anzugeben, wird die folgende Ausgabe angezeigt.</span><span class="sxs-lookup"><span data-stu-id="a1553-142">When you run the example without supplying a configuration file, it displays output similar to the following.</span></span> <span data-ttu-id="a1553-143">Beachten Sie, dass die Hashcodes für die Zeichenfolge in den zwei Anwendungsdomänen identisch sind.</span><span class="sxs-lookup"><span data-stu-id="a1553-143">Note that the hash codes for the string are identical in the two application domains.</span></span>  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
   
- <span data-ttu-id="ab83f-144">Wenn Sie jedoch die folgende Konfigurationsdatei im Verzeichnis des Beispiels hinzufügen und dann das Beispiel ausführen, unterscheiden sich die Hashcodes je nach Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="ab83f-144">However, if you add the following configuration file to the example's directory and then run the example, the hash codes for the same string will differ by application domain.</span></span>  
+ <span data-ttu-id="a1553-144">Wenn Sie jedoch die folgende Konfigurationsdatei im Verzeichnis des Beispiels hinzufügen und dann das Beispiel ausführen, unterscheiden sich die Hashcodes je nach Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="a1553-144">However, if you add the following configuration file to the example's directory and then run the example, the hash codes for the same string will differ by application domain.</span></span>  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -97,14 +87,14 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
 </configuration>  
 ```  
   
- <span data-ttu-id="ab83f-145">Wenn die Konfigurationsdatei vorhanden ist, zeigt das Beispiel die folgende Ausgabe an:</span><span class="sxs-lookup"><span data-stu-id="ab83f-145">When the configuration file is present, the example displays the following output:</span></span>  
+ <span data-ttu-id="a1553-145">Wenn die Konfigurationsdatei vorhanden ist, zeigt das Beispiel die folgende Ausgabe an:</span><span class="sxs-lookup"><span data-stu-id="a1553-145">When the configuration file is present, the example displays the following output:</span></span>  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ab83f-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ab83f-146">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a1553-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a1553-146">See Also</span></span>  
  <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
  <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
  <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

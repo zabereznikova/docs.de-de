@@ -1,63 +1,56 @@
 ---
 title: Arrays (C#-Programmierhandbuch)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-caps.latest.revision: 33
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8d395bcb179650fe29ab0918e7f91f3c8b6197b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e01b9463eca88858633b847be256ae5b063459b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="arrays-c-programming-guide"></a><span data-ttu-id="f1435-102">Arrays (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="f1435-102">Arrays (C# Programming Guide)</span></span>
-<span data-ttu-id="f1435-103">Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur speichern.</span><span class="sxs-lookup"><span data-stu-id="f1435-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="f1435-104">Ein Array wird deklariert, indem der Typ seiner Elemente angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="f1435-104">You declare an array by specifying the type of its elements.</span></span>  
+# <a name="arrays-c-programming-guide"></a><span data-ttu-id="3757c-102">Arrays (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="3757c-102">Arrays (C# Programming Guide)</span></span>
+<span data-ttu-id="3757c-103">Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur speichern.</span><span class="sxs-lookup"><span data-stu-id="3757c-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="3757c-104">Ein Array wird deklariert, indem der Typ seiner Elemente angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="3757c-104">You declare an array by specifying the type of its elements.</span></span>  
   
  `type[] arrayName;`  
   
- <span data-ttu-id="f1435-105">In den folgenden Beispielen werden ein eindimensionales, ein mehrdimensionales und ein verzweigtes Array erstellt:</span><span class="sxs-lookup"><span data-stu-id="f1435-105">The following examples create single-dimensional, multidimensional, and jagged arrays:</span></span>  
+ <span data-ttu-id="3757c-105">In den folgenden Beispielen werden ein eindimensionales, ein mehrdimensionales und ein verzweigtes Array erstellt:</span><span class="sxs-lookup"><span data-stu-id="3757c-105">The following examples create single-dimensional, multidimensional, and jagged arrays:</span></span>  
   
  [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="array-overview"></a><span data-ttu-id="f1435-106">Übersicht über Arrays</span><span class="sxs-lookup"><span data-stu-id="f1435-106">Array Overview</span></span>  
- <span data-ttu-id="f1435-107">Ein Array verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="f1435-107">An array has the following properties:</span></span>  
+## <a name="array-overview"></a><span data-ttu-id="3757c-106">Übersicht über Arrays</span><span class="sxs-lookup"><span data-stu-id="3757c-106">Array Overview</span></span>  
+ <span data-ttu-id="3757c-107">Ein Array verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="3757c-107">An array has the following properties:</span></span>  
   
--   <span data-ttu-id="f1435-108">Ein Array kann [eindimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [mehrdimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) oder [verzweigt](../../../csharp/programming-guide/arrays/jagged-arrays.md) sein.</span><span class="sxs-lookup"><span data-stu-id="f1435-108">An array can be [Single-Dimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [Multidimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) or [Jagged](../../../csharp/programming-guide/arrays/jagged-arrays.md).</span></span>  
+-   <span data-ttu-id="3757c-108">Ein Array kann [eindimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [mehrdimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) oder [verzweigt](../../../csharp/programming-guide/arrays/jagged-arrays.md) sein.</span><span class="sxs-lookup"><span data-stu-id="3757c-108">An array can be [Single-Dimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [Multidimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) or [Jagged](../../../csharp/programming-guide/arrays/jagged-arrays.md).</span></span>  
   
--   <span data-ttu-id="f1435-109">Die Anzahl der Dimensionen und die Länge der einzelnen Dimensionen werden festgelegt, wenn die Arrayinstanz erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="f1435-109">The number of dimensions and the length of each dimension are established when the array instance is created.</span></span> <span data-ttu-id="f1435-110">Diese Werte können während der Lebensdauer der Instanz nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="f1435-110">These values can't be changed during the lifetime of the instance.</span></span>  
+-   <span data-ttu-id="3757c-109">Die Anzahl der Dimensionen und die Länge der einzelnen Dimensionen werden festgelegt, wenn die Arrayinstanz erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="3757c-109">The number of dimensions and the length of each dimension are established when the array instance is created.</span></span> <span data-ttu-id="3757c-110">Diese Werte können während der Lebensdauer der Instanz nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="3757c-110">These values can't be changed during the lifetime of the instance.</span></span>  
   
--   <span data-ttu-id="f1435-111">Numerische Arrayelemente sind standardmäßig auf 0 (null) festgelegt, Verweiselemente auf NULL.</span><span class="sxs-lookup"><span data-stu-id="f1435-111">The default values of numeric array elements are set to zero, and reference elements are set to null.</span></span>  
+-   <span data-ttu-id="3757c-111">Numerische Arrayelemente sind standardmäßig auf 0 (null) festgelegt, Verweiselemente auf NULL.</span><span class="sxs-lookup"><span data-stu-id="3757c-111">The default values of numeric array elements are set to zero, and reference elements are set to null.</span></span>  
   
--   <span data-ttu-id="f1435-112">Ein verzweigtes Array ist ein Array von Arrays, und deshalb sind seine Elemente Referenztypen und werden mit `null` initialisiert.</span><span class="sxs-lookup"><span data-stu-id="f1435-112">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
+-   <span data-ttu-id="3757c-112">Ein verzweigtes Array ist ein Array von Arrays, und deshalb sind seine Elemente Referenztypen und werden mit `null` initialisiert.</span><span class="sxs-lookup"><span data-stu-id="3757c-112">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
   
--   <span data-ttu-id="f1435-113">Arrays sind nullbasiert: Der Index eines Arrays mit `n` Elementen beginnt bei `0` und endet bei `n-1`.</span><span class="sxs-lookup"><span data-stu-id="f1435-113">Arrays are zero indexed: an array with `n` elements is indexed from `0` to `n-1`.</span></span>  
+-   <span data-ttu-id="3757c-113">Arrays sind nullbasiert: Der Index eines Arrays mit `n` Elementen beginnt bei `0` und endet bei `n-1`.</span><span class="sxs-lookup"><span data-stu-id="3757c-113">Arrays are zero indexed: an array with `n` elements is indexed from `0` to `n-1`.</span></span>  
   
--   <span data-ttu-id="f1435-114">Arrayelemente können einen beliebigen Typ aufweisen, z. B. auch einen Arraytyp.</span><span class="sxs-lookup"><span data-stu-id="f1435-114">Array elements can be of any type, including an array type.</span></span>  
+-   <span data-ttu-id="3757c-114">Arrayelemente können einen beliebigen Typ aufweisen, z. B. auch einen Arraytyp.</span><span class="sxs-lookup"><span data-stu-id="3757c-114">Array elements can be of any type, including an array type.</span></span>  
   
--   <span data-ttu-id="f1435-115">Arraytypen sind [Referenztypen](../../../csharp/language-reference/keywords/reference-types.md), die vom abstrakten Basistyp <xref:System.Array> abgeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="f1435-115">Array types are [reference types](../../../csharp/language-reference/keywords/reference-types.md) derived from the abstract base type <xref:System.Array>.</span></span> <span data-ttu-id="f1435-116">Da dieser Typ <xref:System.Collections.IEnumerable> und <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Iteration für alle Arrays in C# verwenden.</span><span class="sxs-lookup"><span data-stu-id="f1435-116">Since this type implements <xref:System.Collections.IEnumerable> and <xref:System.Collections.Generic.IEnumerable%601>, you can use [foreach](../../../csharp/language-reference/keywords/foreach-in.md) iteration on all arrays in C#.</span></span>  
+-   <span data-ttu-id="3757c-115">Arraytypen sind [Referenztypen](../../../csharp/language-reference/keywords/reference-types.md), die vom abstrakten Basistyp <xref:System.Array> abgeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="3757c-115">Array types are [reference types](../../../csharp/language-reference/keywords/reference-types.md) derived from the abstract base type <xref:System.Array>.</span></span> <span data-ttu-id="3757c-116">Da dieser Typ <xref:System.Collections.IEnumerable> und <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Iteration für alle Arrays in C# verwenden.</span><span class="sxs-lookup"><span data-stu-id="3757c-116">Since this type implements <xref:System.Collections.IEnumerable> and <xref:System.Collections.Generic.IEnumerable%601>, you can use [foreach](../../../csharp/language-reference/keywords/foreach-in.md) iteration on all arrays in C#.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="f1435-117">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="f1435-117">Related Sections</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="3757c-117">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="3757c-117">Related Sections</span></span>  
   
--   [<span data-ttu-id="f1435-118">Arrays als Objekte</span><span class="sxs-lookup"><span data-stu-id="f1435-118">Arrays as Objects</span></span>](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
+-   [<span data-ttu-id="3757c-118">Arrays als Objekte</span><span class="sxs-lookup"><span data-stu-id="3757c-118">Arrays as Objects</span></span>](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
   
--   [<span data-ttu-id="f1435-119">Verwenden von foreach mit Arrays</span><span class="sxs-lookup"><span data-stu-id="f1435-119">Using foreach with Arrays</span></span>](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
+-   [<span data-ttu-id="3757c-119">Verwenden von foreach mit Arrays</span><span class="sxs-lookup"><span data-stu-id="3757c-119">Using foreach with Arrays</span></span>](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
   
--   [<span data-ttu-id="f1435-120">Übergeben von Arrays als Argumente</span><span class="sxs-lookup"><span data-stu-id="f1435-120">Passing Arrays as Arguments</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
+-   [<span data-ttu-id="3757c-120">Übergeben von Arrays als Argumente</span><span class="sxs-lookup"><span data-stu-id="3757c-120">Passing Arrays as Arguments</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
--   [<span data-ttu-id="f1435-121">Übergeben von Arrays mithilfe von "ref" und "out"</span><span class="sxs-lookup"><span data-stu-id="f1435-121">Passing Arrays Using ref and out</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
+-   [<span data-ttu-id="3757c-121">Übergeben von Arrays mithilfe von "ref" und "out"</span><span class="sxs-lookup"><span data-stu-id="3757c-121">Passing Arrays Using ref and out</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
   
-## <a name="c-language-specification"></a><span data-ttu-id="f1435-122">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="f1435-122">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="3757c-122">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="3757c-122">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f1435-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f1435-123">See Also</span></span>  
- [<span data-ttu-id="f1435-124">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="f1435-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="f1435-125">Sammlungen</span><span class="sxs-lookup"><span data-stu-id="f1435-125">Collections</span></span>](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [<span data-ttu-id="f1435-126">Array-Auflistungstyp</span><span class="sxs-lookup"><span data-stu-id="f1435-126">Array Collection Type</span></span>](http://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+## <a name="see-also"></a><span data-ttu-id="3757c-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3757c-123">See Also</span></span>  
+ [<span data-ttu-id="3757c-124">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="3757c-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="3757c-125">Sammlungen</span><span class="sxs-lookup"><span data-stu-id="3757c-125">Collections</span></span>](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [<span data-ttu-id="3757c-126">Array-Auflistungstyp</span><span class="sxs-lookup"><span data-stu-id="3757c-126">Array Collection Type</span></span>](http://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

@@ -1,41 +1,34 @@
 ---
 title: var (C#-Referenz)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - var
 - var_CSharpKeyword
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-caps.latest.revision: 13
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e0df25eb46bb769214412646d0ac3a7a576b3b73
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 58c7e29840cfb536e2d1afd48b0ff2ca65b1c0c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="var-c-reference"></a><span data-ttu-id="92d9b-102">var (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="92d9b-102">var (C# Reference)</span></span>
-<span data-ttu-id="92d9b-103">Ab Visual Studio C# 3.0 können Variablen, die im Methodenbereich deklariert wurden, den impliziten „Typ“ `var` haben.</span><span class="sxs-lookup"><span data-stu-id="92d9b-103">Beginning in Visual C# 3.0, variables that are declared at method scope can have an implicit "type" `var`.</span></span> <span data-ttu-id="92d9b-104">Eine implizit typisierte lokale Variable ist stark typisiert, als hätten Sie den Typ selbst deklariert. Tatsächlich legt der Compiler den Typ fest.</span><span class="sxs-lookup"><span data-stu-id="92d9b-104">An implicitly typed local variable is strongly typed just as if you had declared the type yourself, but the compiler determines the type.</span></span> <span data-ttu-id="92d9b-105">Die folgenden beiden `i`-Aktivitäten sind funktional äquivalent:</span><span class="sxs-lookup"><span data-stu-id="92d9b-105">The following two declarations of `i` are functionally equivalent:</span></span>  
+# <a name="var-c-reference"></a><span data-ttu-id="cb9f3-102">var (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="cb9f3-102">var (C# Reference)</span></span>
+<span data-ttu-id="cb9f3-103">Ab Visual Studio C# 3.0 können Variablen, die im Methodenbereich deklariert wurden, den impliziten „Typ“ `var` haben.</span><span class="sxs-lookup"><span data-stu-id="cb9f3-103">Beginning in Visual C# 3.0, variables that are declared at method scope can have an implicit "type" `var`.</span></span> <span data-ttu-id="cb9f3-104">Eine implizit typisierte lokale Variable ist stark typisiert, als hätten Sie den Typ selbst deklariert. Tatsächlich legt der Compiler den Typ fest.</span><span class="sxs-lookup"><span data-stu-id="cb9f3-104">An implicitly typed local variable is strongly typed just as if you had declared the type yourself, but the compiler determines the type.</span></span> <span data-ttu-id="cb9f3-105">Die folgenden beiden `i`-Aktivitäten sind funktional äquivalent:</span><span class="sxs-lookup"><span data-stu-id="cb9f3-105">The following two declarations of `i` are functionally equivalent:</span></span>  
   
 ```  
 var i = 10; // implicitly typed  
 int i = 10; //explicitly typed  
 ```  
   
- <span data-ttu-id="92d9b-106">Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) und [Type relationships in LINQ query operations (Typbeziehungen in LINQ-Abfragevorgängen)](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).</span><span class="sxs-lookup"><span data-stu-id="92d9b-106">For more information, see [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) and [Type Relationships in LINQ Query Operations](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).</span></span>  
+ <span data-ttu-id="cb9f3-106">Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) und [Type relationships in LINQ query operations (Typbeziehungen in LINQ-Abfragevorgängen)](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).</span><span class="sxs-lookup"><span data-stu-id="cb9f3-106">For more information, see [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) and [Type Relationships in LINQ Query Operations](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="92d9b-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="92d9b-107">Example</span></span>  
- <span data-ttu-id="92d9b-108">Im folgenden Beispiel werden zwei Abfrageausdrücke gezeigt.</span><span class="sxs-lookup"><span data-stu-id="92d9b-108">The following example shows two query expressions.</span></span> <span data-ttu-id="92d9b-109">Im ersten Ausdruck in das Verwenden von `var` erlaubt aber nicht erforderlich, da der Typ des Abfrageergebnisses explizit als `IEnumerable<string>` angegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="92d9b-109">In the first expression, the use of `var` is permitted but is not required, because the type of the query result can be stated explicitly as an `IEnumerable<string>`.</span></span> <span data-ttu-id="92d9b-110">Im zweiten Ausdruck ermöglicht `var`, dass das Ergebnis eine Auflistung von anonymen Typen ist und dass auf die Namen dieser Typen nicht zugegriffen werden kann. Nur der Compiler kann darauf zugreifen.</span><span class="sxs-lookup"><span data-stu-id="92d9b-110">However, in the second expression, `var` allows the result to be a collection of anonymous types, and the name of that type is not accessible except to the compiler itself.</span></span> <span data-ttu-id="92d9b-111">Durch die Verwendung von `var` wird die Voraussetzung beseitigt, eine neue Klasse für das Ergebnis erstellen zu müssen.</span><span class="sxs-lookup"><span data-stu-id="92d9b-111">Use of `var` eliminates the requirement to create a new class for the result.</span></span> <span data-ttu-id="92d9b-112">Beachten Sie, dass die `foreach`-Iterationsvariable `item` im zweiten Beispiel auch implizit typisiert sein muss.</span><span class="sxs-lookup"><span data-stu-id="92d9b-112">Note that in Example #2, the `foreach` iteration variable `item` must also be implicitly typed.</span></span>  
+## <a name="example"></a><span data-ttu-id="cb9f3-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="cb9f3-107">Example</span></span>  
+ <span data-ttu-id="cb9f3-108">Im folgenden Beispiel werden zwei Abfrageausdrücke gezeigt.</span><span class="sxs-lookup"><span data-stu-id="cb9f3-108">The following example shows two query expressions.</span></span> <span data-ttu-id="cb9f3-109">Im ersten Ausdruck in das Verwenden von `var` erlaubt aber nicht erforderlich, da der Typ des Abfrageergebnisses explizit als `IEnumerable<string>` angegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="cb9f3-109">In the first expression, the use of `var` is permitted but is not required, because the type of the query result can be stated explicitly as an `IEnumerable<string>`.</span></span> <span data-ttu-id="cb9f3-110">Im zweiten Ausdruck ermöglicht `var`, dass das Ergebnis eine Auflistung von anonymen Typen ist und dass auf die Namen dieser Typen nicht zugegriffen werden kann. Nur der Compiler kann darauf zugreifen.</span><span class="sxs-lookup"><span data-stu-id="cb9f3-110">However, in the second expression, `var` allows the result to be a collection of anonymous types, and the name of that type is not accessible except to the compiler itself.</span></span> <span data-ttu-id="cb9f3-111">Durch die Verwendung von `var` wird die Voraussetzung beseitigt, eine neue Klasse für das Ergebnis erstellen zu müssen.</span><span class="sxs-lookup"><span data-stu-id="cb9f3-111">Use of `var` eliminates the requirement to create a new class for the result.</span></span> <span data-ttu-id="cb9f3-112">Beachten Sie, dass die `foreach`-Iterationsvariable `item` im zweiten Beispiel auch implizit typisiert sein muss.</span><span class="sxs-lookup"><span data-stu-id="cb9f3-112">Note that in Example #2, the `foreach` iteration variable `item` must also be implicitly typed.</span></span>  
   
  [!code-csharp[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/var_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="92d9b-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="92d9b-113">See Also</span></span>  
- [<span data-ttu-id="92d9b-114">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="92d9b-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="92d9b-115">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="92d9b-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="92d9b-116">Implizit typisierte lokale Variablen</span><span class="sxs-lookup"><span data-stu-id="92d9b-116">Implicitly Typed Local Variables</span></span>](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
+## <a name="see-also"></a><span data-ttu-id="cb9f3-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cb9f3-113">See Also</span></span>  
+ [<span data-ttu-id="cb9f3-114">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="cb9f3-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="cb9f3-115">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="cb9f3-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="cb9f3-116">Implizit typisierte lokale Variablen</span><span class="sxs-lookup"><span data-stu-id="cb9f3-116">Implicitly Typed Local Variables</span></span>](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)

@@ -1,35 +1,23 @@
 ---
 title: System.ServiceModel.Channels.PeerNeighborNotAccepted
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 77309bf5-37ba-4b90-b31f-c00ef044db0d
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d957b04ff660ef633401334b7ed500479835f93d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85df97f8386619d9b1799d5bc031000d1d743792
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="systemservicemodelchannelspeerneighbornotaccepted"></a><span data-ttu-id="060ad-102">System.ServiceModel.Channels.PeerNeighborNotAccepted</span><span class="sxs-lookup"><span data-stu-id="060ad-102">System.ServiceModel.Channels.PeerNeighborNotAccepted</span></span>
-<span data-ttu-id="060ad-103">Ein Peernachbar wurde nicht akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="060ad-103">A peer neighbor was not accepted.</span></span>  
+# <a name="systemservicemodelchannelspeerneighbornotaccepted"></a><span data-ttu-id="50f5d-102">System.ServiceModel.Channels.PeerNeighborNotAccepted</span><span class="sxs-lookup"><span data-stu-id="50f5d-102">System.ServiceModel.Channels.PeerNeighborNotAccepted</span></span>
+<span data-ttu-id="50f5d-103">Ein Peernachbar wurde nicht akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="50f5d-103">A peer neighbor was not accepted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="060ad-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="060ad-104">Description</span></span>  
- <span data-ttu-id="060ad-105">Diese Ablaufverfolgung tritt beim Verarbeiten einer Verbindung mit einem Nachbarn auf.</span><span class="sxs-lookup"><span data-stu-id="060ad-105">This trace occurs when processing a connection to a neighbor.</span></span> <span data-ttu-id="060ad-106">Mögliche Ursachen: nicht übereinstimmende Sicherheitseinstellungen, überschrittene Timeouts, vorübergehende Netzwerkprobleme oder ein Nachbar, der nicht in der Lage ist, eine Verbindung zu akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="060ad-106">The possible reasons include mismatched security settings, timeout exceeded, a neighbor that cannot accept a connection, or transient network issues.</span></span>  
+## <a name="description"></a><span data-ttu-id="50f5d-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="50f5d-104">Description</span></span>  
+ <span data-ttu-id="50f5d-105">Diese Ablaufverfolgung tritt beim Verarbeiten einer Verbindung mit einem Nachbarn auf.</span><span class="sxs-lookup"><span data-stu-id="50f5d-105">This trace occurs when processing a connection to a neighbor.</span></span> <span data-ttu-id="50f5d-106">Mögliche Ursachen: nicht übereinstimmende Sicherheitseinstellungen, überschrittene Timeouts, vorübergehende Netzwerkprobleme oder ein Nachbar, der nicht in der Lage ist, eine Verbindung zu akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="50f5d-106">The possible reasons include mismatched security settings, timeout exceeded, a neighbor that cannot accept a connection, or transient network issues.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="060ad-107">Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="060ad-107">Troubleshooting</span></span>  
- <span data-ttu-id="060ad-108">Überprüfen Sie, ob nicht übereinstimmende Sicherheitseinstellungen, überschrittene Timeouts oder vorübergehende Netzwerkprobleme vorhanden sind und ob ein Nachbar nicht in der Lage ist, eine Verbindung zu akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="060ad-108">Check for mismatched security settings, timeout exceeded, a neighbor's inability to accept a connection, or transient network issues.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="50f5d-107">Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="50f5d-107">Troubleshooting</span></span>  
+ <span data-ttu-id="50f5d-108">Überprüfen Sie, ob nicht übereinstimmende Sicherheitseinstellungen, überschrittene Timeouts oder vorübergehende Netzwerkprobleme vorhanden sind und ob ein Nachbar nicht in der Lage ist, eine Verbindung zu akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="50f5d-108">Check for mismatched security settings, timeout exceeded, a neighbor's inability to accept a connection, or transient network issues.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="060ad-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="060ad-109">See Also</span></span>  
- [<span data-ttu-id="060ad-110">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="060ad-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="060ad-111">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="060ad-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="060ad-112">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="060ad-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="50f5d-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="50f5d-109">See Also</span></span>  
+ [<span data-ttu-id="50f5d-110">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="50f5d-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="50f5d-111">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="50f5d-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="50f5d-112">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="50f5d-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

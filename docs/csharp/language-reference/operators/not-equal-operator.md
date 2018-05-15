@@ -1,10 +1,6 @@
 ---
 title: Operator != (C#-Referenz)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '!=_CSharpKeyword'
 helpviewer_keywords:
@@ -12,27 +8,24 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b69d0b12734e690f0ba0209ccbbc7627ff92fe8a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e409e2a80886fd5f7f4cdbeaa9b4e3325f8a967b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="68acf-102">Operator != (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="68acf-102">!= Operator (C# Reference)</span></span>
-<span data-ttu-id="68acf-103">Der Ungleichheitsoperator (`!=`) gibt FALSE zurück, wenn die Operanden gleich sind; andernfalls TRUE.</span><span class="sxs-lookup"><span data-stu-id="68acf-103">The inequality operator (`!=`) returns false if its operands are equal, true otherwise.</span></span> <span data-ttu-id="68acf-104">Vergleichsoperatoren sind für alle Typen, einschließlich Zeichenfolgen und Objekte vordefiniert.</span><span class="sxs-lookup"><span data-stu-id="68acf-104">Inequality operators are predefined for all types, including string and object.</span></span> <span data-ttu-id="68acf-105">Benutzerdefinierte Typen können den Operator `!=` überladen.</span><span class="sxs-lookup"><span data-stu-id="68acf-105">User-defined types can overload the `!=` operator.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="bc4b7-102">Operator != (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="bc4b7-102">!= Operator (C# Reference)</span></span>
+<span data-ttu-id="bc4b7-103">Der Ungleichheitsoperator (`!=`) gibt FALSE zurück, wenn die Operanden gleich sind; andernfalls TRUE.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-103">The inequality operator (`!=`) returns false if its operands are equal, true otherwise.</span></span> <span data-ttu-id="bc4b7-104">Vergleichsoperatoren sind für alle Typen, einschließlich Zeichenfolgen und Objekte vordefiniert.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-104">Inequality operators are predefined for all types, including string and object.</span></span> <span data-ttu-id="bc4b7-105">Benutzerdefinierte Typen können den Operator `!=` überladen.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-105">User-defined types can overload the `!=` operator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="68acf-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="68acf-106">Remarks</span></span>  
- <span data-ttu-id="68acf-107">Für vordefinierte Werttypen gibt der Ungleichheitsoperator (`!=`) TRUE zurück, wenn die Werte der Operanden verschieden sind; andernfalls FALSE.</span><span class="sxs-lookup"><span data-stu-id="68acf-107">For predefined value types, the inequality operator (`!=`) returns true if the values of its operands are different, false otherwise.</span></span> <span data-ttu-id="68acf-108">Für andere Verweistypen als `string`, `!=` wird TRUE zurückgegeben, wenn beide Operanden auf unterschiedliche Objekte verweisen.</span><span class="sxs-lookup"><span data-stu-id="68acf-108">For reference types other than `string`, `!=` returns true if its two operands refer to different objects.</span></span> <span data-ttu-id="68acf-109">Für den `string`-Typ vergleicht `!=` die Werte der Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="68acf-109">For the `string` type, `!=` compares the values of the strings.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bc4b7-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="bc4b7-106">Remarks</span></span>  
+ <span data-ttu-id="bc4b7-107">Für vordefinierte Werttypen gibt der Ungleichheitsoperator (`!=`) TRUE zurück, wenn die Werte der Operanden verschieden sind; andernfalls FALSE.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-107">For predefined value types, the inequality operator (`!=`) returns true if the values of its operands are different, false otherwise.</span></span> <span data-ttu-id="bc4b7-108">Für andere Verweistypen als `string`, `!=` wird TRUE zurückgegeben, wenn beide Operanden auf unterschiedliche Objekte verweisen.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-108">For reference types other than `string`, `!=` returns true if its two operands refer to different objects.</span></span> <span data-ttu-id="bc4b7-109">Für den `string`-Typ vergleicht `!=` die Werte der Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-109">For the `string` type, `!=` compares the values of the strings.</span></span>  
   
- <span data-ttu-id="68acf-110">Benutzerdefinierte Werttypen können den Operator `!=` überladen (weitere Informationen finden Sie unter [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="68acf-110">User-defined value types can overload the `!=` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="68acf-111">Dies können auch benutzerdefinierte Verweistypen, obwohl `!=` sich standardmäßig für vordefinierte und benutzerdefinierte Verweistypen wie oben beschrieben verhält.</span><span class="sxs-lookup"><span data-stu-id="68acf-111">So can user-defined reference types, although by default `!=` behaves as described above for both predefined and user-defined reference types.</span></span> <span data-ttu-id="68acf-112">Wenn `!=` überladen ist, muss [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) auch überladen werden.</span><span class="sxs-lookup"><span data-stu-id="68acf-112">If `!=` is overloaded, [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) must also be overloaded.</span></span> <span data-ttu-id="68acf-113">Operationen mit Ganzzahltypen sind grundsätzlich auch für Aufzählungen (enum) zulässig.</span><span class="sxs-lookup"><span data-stu-id="68acf-113">Operations on integral types are generally allowed on enumeration.</span></span>  
+ <span data-ttu-id="bc4b7-110">Benutzerdefinierte Werttypen können den Operator `!=` überladen (weitere Informationen finden Sie unter [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="bc4b7-110">User-defined value types can overload the `!=` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="bc4b7-111">Dies können auch benutzerdefinierte Verweistypen, obwohl `!=` sich standardmäßig für vordefinierte und benutzerdefinierte Verweistypen wie oben beschrieben verhält.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-111">So can user-defined reference types, although by default `!=` behaves as described above for both predefined and user-defined reference types.</span></span> <span data-ttu-id="bc4b7-112">Wenn `!=` überladen ist, muss [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) auch überladen werden.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-112">If `!=` is overloaded, [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) must also be overloaded.</span></span> <span data-ttu-id="bc4b7-113">Operationen mit Ganzzahltypen sind grundsätzlich auch für Aufzählungen (enum) zulässig.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-113">Operations on integral types are generally allowed on enumeration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="68acf-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="68acf-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="bc4b7-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="bc4b7-114">Example</span></span>  
  [!code-csharp[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="68acf-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="68acf-115">See Also</span></span>  
- [<span data-ttu-id="68acf-116">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="68acf-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="68acf-117">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="68acf-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="68acf-118">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="68acf-118">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="bc4b7-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bc4b7-115">See Also</span></span>  
+ [<span data-ttu-id="bc4b7-116">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="bc4b7-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="bc4b7-117">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="bc4b7-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="bc4b7-118">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="bc4b7-118">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

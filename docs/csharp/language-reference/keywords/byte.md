@@ -1,76 +1,69 @@
 ---
 title: byte (C#-Referenz)
 ms.date: 03/14/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - byte
 - byte_CSharpKeyword
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 231a491914071b1d43b5a8938e677be531726e75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 71af48f1cbfa82bafdd4888f0985cd88d44976b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="byte-c-reference"></a><span data-ttu-id="f9fd9-102">byte (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="f9fd9-102">byte (C# Reference)</span></span>
+# <a name="byte-c-reference"></a><span data-ttu-id="f2264-102">byte (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="f2264-102">byte (C# Reference)</span></span>
 
-<span data-ttu-id="f9fd9-103">`byte` kennzeichnet einen ganzzahligen Typ, der Werte anhand der folgenden Tabelle speichert.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-103">`byte` denotes an integral type that stores values as indicated in the following table.</span></span>  
+<span data-ttu-id="f2264-103">`byte` kennzeichnet einen ganzzahligen Typ, der Werte anhand der folgenden Tabelle speichert.</span><span class="sxs-lookup"><span data-stu-id="f2264-103">`byte` denotes an integral type that stores values as indicated in the following table.</span></span>  
   
-|<span data-ttu-id="f9fd9-104">Typ</span><span class="sxs-lookup"><span data-stu-id="f9fd9-104">Type</span></span>|<span data-ttu-id="f9fd9-105">Bereich</span><span class="sxs-lookup"><span data-stu-id="f9fd9-105">Range</span></span>|<span data-ttu-id="f9fd9-106">Größe</span><span class="sxs-lookup"><span data-stu-id="f9fd9-106">Size</span></span>|<span data-ttu-id="f9fd9-107">.NET Framework-Typ</span><span class="sxs-lookup"><span data-stu-id="f9fd9-107">.NET Framework type</span></span>|  
+|<span data-ttu-id="f2264-104">Typ</span><span class="sxs-lookup"><span data-stu-id="f2264-104">Type</span></span>|<span data-ttu-id="f2264-105">Bereich</span><span class="sxs-lookup"><span data-stu-id="f2264-105">Range</span></span>|<span data-ttu-id="f2264-106">Größe</span><span class="sxs-lookup"><span data-stu-id="f2264-106">Size</span></span>|<span data-ttu-id="f2264-107">.NET Framework-Typ</span><span class="sxs-lookup"><span data-stu-id="f2264-107">.NET Framework type</span></span>|  
 |----------|-----------|----------|-------------------------|  
-|`byte`|<span data-ttu-id="f9fd9-108">0 bis 255</span><span class="sxs-lookup"><span data-stu-id="f9fd9-108">0 to 255</span></span>|<span data-ttu-id="f9fd9-109">8-Bit-Ganzzahl ohne Vorzeichen</span><span class="sxs-lookup"><span data-stu-id="f9fd9-109">Unsigned 8-bit integer</span></span>|<xref:System.Byte?displayProperty=nameWithType>|  
+|`byte`|<span data-ttu-id="f2264-108">0 bis 255</span><span class="sxs-lookup"><span data-stu-id="f2264-108">0 to 255</span></span>|<span data-ttu-id="f2264-109">8-Bit-Ganzzahl ohne Vorzeichen</span><span class="sxs-lookup"><span data-stu-id="f2264-109">Unsigned 8-bit integer</span></span>|<xref:System.Byte?displayProperty=nameWithType>|  
   
-## <a name="literals"></a><span data-ttu-id="f9fd9-110">Literale</span><span class="sxs-lookup"><span data-stu-id="f9fd9-110">Literals</span></span>  
+## <a name="literals"></a><span data-ttu-id="f2264-110">Literale</span><span class="sxs-lookup"><span data-stu-id="f2264-110">Literals</span></span>  
 
- <span data-ttu-id="f9fd9-111">Sie können eine `byte`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-111">You can declare and initialize a `byte` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7) a binary literal to it.</span></span> <span data-ttu-id="f9fd9-112">Wenn sich das Ganzzahlliteral außerhalb des Bereichs von `byte` befindet (sprich, wenn es kleiner als <xref:System.Byte.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Byte.MaxValue?displayProperty=nameWithType> ist) tritt ein Kompilierfehler auf.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-112">If the integer literal is outside the range of `byte` (that is, if it is less than <xref:System.Byte.MinValue?displayProperty=nameWithType> or greater than <xref:System.Byte.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span>
+ <span data-ttu-id="f2264-111">Sie können eine `byte`-Variable deklarieren und initialisieren, indem Sie ihr ein Dezimalliteral, ein hexadezimales Literal oder (ab C# 7.0) ein binäres Literal zuweisen.</span><span class="sxs-lookup"><span data-stu-id="f2264-111">You can declare and initialize a `byte` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span> <span data-ttu-id="f2264-112">Wenn sich das Ganzzahlliteral außerhalb des Bereichs von `byte` befindet (sprich, wenn es kleiner als <xref:System.Byte.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Byte.MaxValue?displayProperty=nameWithType> ist) tritt ein Kompilierfehler auf.</span><span class="sxs-lookup"><span data-stu-id="f2264-112">If the integer literal is outside the range of `byte` (that is, if it is less than <xref:System.Byte.MinValue?displayProperty=nameWithType> or greater than <xref:System.Byte.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span>
 
-<span data-ttu-id="f9fd9-113">Im folgenden Beispiel werden ganze Zahlen, die gleich 201 sind und von dezimalen, hexadezimalen und binären Literalen dargestellt werden, implizit von [int](../../../csharp/language-reference/keywords/int.md)- in `byte`-Werte konvertiert.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-113">In the following example, integers equal to 201 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [int](../../../csharp/language-reference/keywords/int.md) to `byte` values.</span></span>    
+<span data-ttu-id="f2264-113">Im folgenden Beispiel werden ganze Zahlen, die gleich 201 sind und von dezimalen, hexadezimalen und binären Literalen dargestellt werden, implizit von [int](../../../csharp/language-reference/keywords/int.md)- in `byte`-Werte konvertiert.</span><span class="sxs-lookup"><span data-stu-id="f2264-113">In the following example, integers equal to 201 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [int](../../../csharp/language-reference/keywords/int.md) to `byte` values.</span></span>    
   
 [!code-csharp[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Byte)]  
 
 > [!NOTE] 
-> <span data-ttu-id="f9fd9-114">Verwenden Sie das Präfix `0x` oder `0X` zum Kennzeichnen eines hexadezimalen Literals und das Präfix `0b` oder `0B` zum Kennzeichnen eines binären Literals.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-114">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="f9fd9-115">Dezimale Literale haben kein Präfix.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-115">Decimal literals have no prefix.</span></span>
+> <span data-ttu-id="f2264-114">Verwenden Sie das Präfix `0x` oder `0X` zum Kennzeichnen eines hexadezimalen Literals und das Präfix `0b` oder `0B` zum Kennzeichnen eines binären Literals.</span><span class="sxs-lookup"><span data-stu-id="f2264-114">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="f2264-115">Dezimale Literale haben kein Präfix.</span><span class="sxs-lookup"><span data-stu-id="f2264-115">Decimal literals have no prefix.</span></span>
 
-<span data-ttu-id="f9fd9-116">Beginnend mit C#-7, eine Reihe von Features hinzugefügt wurden zur Verbesserung der Lesbarkeit.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-116">Starting with C# 7, a couple of features have been added to enhance readability.</span></span> 
- - <span data-ttu-id="f9fd9-117">C#-7.0 ermöglicht die Verwendung des Zeichens Unterstrich `_`, als Trennzeichen für Ziffern.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-117">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
- - <span data-ttu-id="f9fd9-118">7.2 c# ermöglicht `_` als Trennzeichen für ein Literal binäre oder hexadezimale Ziffer nach dem Präfix verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-118">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="f9fd9-119">Ein decimal-Literal ist nicht berechtigt, auf einem führenden Unterstrich.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-119">A decimal literal isn't permitted to have a leading underscore.</span></span>
+<span data-ttu-id="f2264-116">Mit C# 7.0 wurde eine Reihe von Features zur Verbesserung der Lesbarkeit hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f2264-116">Starting with C# 7.0, a couple of features have been added to enhance readability.</span></span> 
+ - <span data-ttu-id="f2264-117">C# 7.0 lässt die Verwendung des Unterstrichs (`_`) als Zifferntrennzeichen zu.</span><span class="sxs-lookup"><span data-stu-id="f2264-117">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
+ - <span data-ttu-id="f2264-118">C# 7.2 lässt die Verwendung von `_` als Zifferntrennzeichen nach dem Präfix für ein binäres oder hexadezimales Literal zu.</span><span class="sxs-lookup"><span data-stu-id="f2264-118">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="f2264-119">Dezimalliterale dürfen keinen vorangestellten Unterstrich aufweisen.</span><span class="sxs-lookup"><span data-stu-id="f2264-119">A decimal literal isn't permitted to have a leading underscore.</span></span>
 
-<span data-ttu-id="f9fd9-120">Einige Beispiele werden unten gezeigt.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-120">Some examples are shown below.</span></span>
+<span data-ttu-id="f2264-120">Im Folgenden werden einige Beispiele veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="f2264-120">Some examples are shown below.</span></span>
 
 [!code-csharp[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ByteS)]  
  
-## <a name="conversions"></a><span data-ttu-id="f9fd9-121">Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="f9fd9-121">Conversions</span></span>  
- <span data-ttu-id="f9fd9-122">Es gibt eine vordefinierte implizite Konvertierung von `byte` in [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) oder [decimal](../../../csharp/language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="f9fd9-122">There is a predefined implicit conversion from `byte` to [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span>  
+## <a name="conversions"></a><span data-ttu-id="f2264-121">Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="f2264-121">Conversions</span></span>  
+ <span data-ttu-id="f2264-122">Es gibt eine vordefinierte implizite Konvertierung von `byte` in [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) oder [decimal](../../../csharp/language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="f2264-122">There is a predefined implicit conversion from `byte` to [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span>  
   
- <span data-ttu-id="f9fd9-123">Sie können nicht literale numerische Typen mit einer größeren Speichergröße nicht implizit zu `byte` konvertieren.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-123">You cannot implicitly convert non-literal numeric types of larger storage size to `byte`.</span></span> <span data-ttu-id="f9fd9-124">Weitere Informationen zu Speichergrößen ganzzahliger Typen finden Sie unter [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="f9fd9-124">For more information on the storage sizes of integral types, see [Integral Types Table](../../../csharp/language-reference/keywords/integral-types-table.md).</span></span> <span data-ttu-id="f9fd9-125">Betrachten Sie z.B. die folgenden beiden `byte`-Variablen `x` und `y`:</span><span class="sxs-lookup"><span data-stu-id="f9fd9-125">Consider, for example, the following two `byte` variables `x` and `y`:</span></span>  
+ <span data-ttu-id="f2264-123">Sie können nicht literale numerische Typen mit einer größeren Speichergröße nicht implizit zu `byte` konvertieren.</span><span class="sxs-lookup"><span data-stu-id="f2264-123">You cannot implicitly convert non-literal numeric types of larger storage size to `byte`.</span></span> <span data-ttu-id="f2264-124">Weitere Informationen zu Speichergrößen ganzzahliger Typen finden Sie unter [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="f2264-124">For more information on the storage sizes of integral types, see [Integral Types Table](../../../csharp/language-reference/keywords/integral-types-table.md).</span></span> <span data-ttu-id="f2264-125">Betrachten Sie z.B. die folgenden beiden `byte`-Variablen `x` und `y`:</span><span class="sxs-lookup"><span data-stu-id="f2264-125">Consider, for example, the following two `byte` variables `x` and `y`:</span></span>  
   
 ```  
 byte x = 10, y = 20;  
 ```  
   
- <span data-ttu-id="f9fd9-126">Die folgende Zuweisungsanweisung erzeugt einen Compilerfehler, da der arithmetische Ausdruck auf der rechten Seite des Zuweisungsoperators standardmäßig `int` ergibt.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-126">The following assignment statement will produce a compilation error, because the arithmetic expression on the right-hand side of the assignment operator evaluates to `int` by default.</span></span>  
+ <span data-ttu-id="f2264-126">Die folgende Zuweisungsanweisung erzeugt einen Compilerfehler, da der arithmetische Ausdruck auf der rechten Seite des Zuweisungsoperators standardmäßig `int` ergibt.</span><span class="sxs-lookup"><span data-stu-id="f2264-126">The following assignment statement will produce a compilation error, because the arithmetic expression on the right-hand side of the assignment operator evaluates to `int` by default.</span></span>  
   
 ```  
 // Error: conversion from int to byte:  
 byte z = x + y;  
 ```  
   
- <span data-ttu-id="f9fd9-127">Verwenden Sie eine Umwandlung, um dieses Problem zu lösen:</span><span class="sxs-lookup"><span data-stu-id="f9fd9-127">To fix this problem, use a cast:</span></span>  
+ <span data-ttu-id="f2264-127">Verwenden Sie eine Umwandlung, um dieses Problem zu lösen:</span><span class="sxs-lookup"><span data-stu-id="f2264-127">To fix this problem, use a cast:</span></span>  
   
 ```  
 // OK: explicit conversion:  
 byte z = (byte)(x + y);  
 ```  
   
- <span data-ttu-id="f9fd9-128">Es ist jedoch möglich, die folgenden Anweisungen zu verwenden, bei denen die Zielvariable über dieselbe oder eine größere Speichergröße verfügt:</span><span class="sxs-lookup"><span data-stu-id="f9fd9-128">It is possible though, to use the following statements where the destination variable has the same storage size or a larger storage size:</span></span>  
+ <span data-ttu-id="f2264-128">Es ist jedoch möglich, die folgenden Anweisungen zu verwenden, bei denen die Zielvariable über dieselbe oder eine größere Speichergröße verfügt:</span><span class="sxs-lookup"><span data-stu-id="f2264-128">It is possible though, to use the following statements where the destination variable has the same storage size or a larger storage size:</span></span>  
   
 ```  
 int x = 10, y = 20;  
@@ -78,7 +71,7 @@ int m = x + y;
 long n = x + y;  
 ```  
   
- <span data-ttu-id="f9fd9-129">Beachten Sie auch, dass es keine implizite Konvertierung von Gleitkommadatentypen in `byte` gibt.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-129">Also, there is no implicit conversion from floating-point types to `byte`.</span></span> <span data-ttu-id="f9fd9-130">Die folgende Anweisung erzeugt z.B. einen Compilerfehler, außer es wird eine explizite Umwandlung verwendet:</span><span class="sxs-lookup"><span data-stu-id="f9fd9-130">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
+ <span data-ttu-id="f2264-129">Beachten Sie auch, dass es keine implizite Konvertierung von Gleitkommadatentypen in `byte` gibt.</span><span class="sxs-lookup"><span data-stu-id="f2264-129">Also, there is no implicit conversion from floating-point types to `byte`.</span></span> <span data-ttu-id="f2264-130">Die folgende Anweisung erzeugt z.B. einen Compilerfehler, außer es wird eine explizite Umwandlung verwendet:</span><span class="sxs-lookup"><span data-stu-id="f2264-130">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
   
 ```  
 // Error: no implicit conversion from double:  
@@ -87,14 +80,14 @@ byte x = 3.0;
 byte y = (byte)3.0;  
 ```  
   
- <span data-ttu-id="f9fd9-131">Beim Aufrufen überladener Methoden muss eine Typumwandlung durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="f9fd9-131">When calling overloaded methods, a cast must be used.</span></span> <span data-ttu-id="f9fd9-132">Betrachten Sie z.B. die folgenden überladenen Methoden, die die Parameter `byte` und [int](../../../csharp/language-reference/keywords/int.md) verwenden:</span><span class="sxs-lookup"><span data-stu-id="f9fd9-132">Consider, for example, the following overloaded methods that use `byte` and [int](../../../csharp/language-reference/keywords/int.md) parameters:</span></span>  
+ <span data-ttu-id="f2264-131">Beim Aufrufen überladener Methoden muss eine Typumwandlung durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="f2264-131">When calling overloaded methods, a cast must be used.</span></span> <span data-ttu-id="f2264-132">Betrachten Sie z.B. die folgenden überladenen Methoden, die die Parameter `byte` und [int](../../../csharp/language-reference/keywords/int.md) verwenden:</span><span class="sxs-lookup"><span data-stu-id="f2264-132">Consider, for example, the following overloaded methods that use `byte` and [int](../../../csharp/language-reference/keywords/int.md) parameters:</span></span>  
   
 ```  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(byte b) {}  
 ```  
   
- <span data-ttu-id="f9fd9-133">Die Verwendung der `byte`-Umwandlung gewährleistet, dass der richtige Typ aufgerufen wird, wie z.B.:</span><span class="sxs-lookup"><span data-stu-id="f9fd9-133">Using the `byte` cast guarantees that the correct type is called, for example:</span></span>  
+ <span data-ttu-id="f2264-133">Die Verwendung der `byte`-Umwandlung gewährleistet, dass der richtige Typ aufgerufen wird, wie z.B.:</span><span class="sxs-lookup"><span data-stu-id="f2264-133">Using the `byte` cast guarantees that the correct type is called, for example:</span></span>  
   
 ```  
 // Calling the method with the int parameter:  
@@ -103,19 +96,19 @@ SampleMethod(5);
 SampleMethod((byte)5);  
 ```  
   
- <span data-ttu-id="f9fd9-134">Weitere Informationen zu arithmetischen Ausdrücken mit gemischten Gleitkomma- und ganzzahligen Typen finden Sie unter [float](../../../csharp/language-reference/keywords/float.md) und [double](../../../csharp/language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="f9fd9-134">For information on arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
+ <span data-ttu-id="f2264-134">Weitere Informationen zu arithmetischen Ausdrücken mit gemischten Gleitkomma- und ganzzahligen Typen finden Sie unter [float](../../../csharp/language-reference/keywords/float.md) und [double](../../../csharp/language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="f2264-134">For information on arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
   
- <span data-ttu-id="f9fd9-135">Weitere Informationen zu impliziten numerischen Konvertierungsregeln finden Sie in der [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="f9fd9-135">For more information on implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
+ <span data-ttu-id="f2264-135">Weitere Informationen zu impliziten numerischen Konvertierungsregeln finden Sie in der [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="f2264-135">For more information on implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="f9fd9-136">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="f9fd9-136">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="f2264-136">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="f2264-136">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f9fd9-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f9fd9-137">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f2264-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f2264-137">See Also</span></span>  
  <xref:System.Byte>  
- [<span data-ttu-id="f9fd9-138">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="f9fd9-138">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="f9fd9-139">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="f9fd9-139">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="f9fd9-140">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="f9fd9-140">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="f9fd9-141">Tabelle ganzzahliger Typen</span><span class="sxs-lookup"><span data-stu-id="f9fd9-141">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [<span data-ttu-id="f9fd9-142">Tabelle integrierter Typen</span><span class="sxs-lookup"><span data-stu-id="f9fd9-142">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [<span data-ttu-id="f9fd9-143">Tabelle für implizite numerische Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="f9fd9-143">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [<span data-ttu-id="f9fd9-144">Tabelle für explizite numerische Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="f9fd9-144">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [<span data-ttu-id="f2264-138">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="f2264-138">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="f2264-139">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="f2264-139">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="f2264-140">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="f2264-140">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="f2264-141">Tabelle ganzzahliger Typen</span><span class="sxs-lookup"><span data-stu-id="f2264-141">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [<span data-ttu-id="f2264-142">Tabelle integrierter Typen</span><span class="sxs-lookup"><span data-stu-id="f2264-142">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [<span data-ttu-id="f2264-143">Tabelle für implizite numerische Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="f2264-143">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [<span data-ttu-id="f2264-144">Tabelle für explizite numerische Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="f2264-144">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
