@@ -1,68 +1,61 @@
 ---
 title: Mathematische Funktionen (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - math functions, Visual Basic
 - arithmetic operations, math functions
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4d67df44e5f4ea89475ea34e87fd5041ee6cb44f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c55b48cbc285ab5ed8742a23af43d3a017a35e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="math-functions-visual-basic"></a><span data-ttu-id="84416-102">Mathematische Funktionen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84416-102">Math Functions (Visual Basic)</span></span>
-<span data-ttu-id="84416-103">Die Methoden der <xref:System.Math?displayProperty=nameWithType> Klasse bereitstellen trigonometrische, logarithmische und andere gebräuchliche mathematische Funktionen.</span><span class="sxs-lookup"><span data-stu-id="84416-103">The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.</span></span>  
+# <a name="math-functions-visual-basic"></a><span data-ttu-id="d00ac-102">Mathematische Funktionen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d00ac-102">Math Functions (Visual Basic)</span></span>
+<span data-ttu-id="d00ac-103">Die Methoden der <xref:System.Math?displayProperty=nameWithType> Klasse bereitstellen trigonometrische, logarithmische und andere gebräuchliche mathematische Funktionen.</span><span class="sxs-lookup"><span data-stu-id="d00ac-103">The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="84416-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="84416-104">Remarks</span></span>  
- <span data-ttu-id="84416-105">Die folgende Tabelle listet die Methoden der <xref:System.Math?displayProperty=nameWithType> Klasse.</span><span class="sxs-lookup"><span data-stu-id="84416-105">The following table lists methods of the <xref:System.Math?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="84416-106">Sie können diese in einem Visual Basic-Programm verwenden.</span><span class="sxs-lookup"><span data-stu-id="84416-106">You can use these in a Visual Basic program.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d00ac-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d00ac-104">Remarks</span></span>  
+ <span data-ttu-id="d00ac-105">Die folgende Tabelle listet die Methoden der <xref:System.Math?displayProperty=nameWithType> Klasse.</span><span class="sxs-lookup"><span data-stu-id="d00ac-105">The following table lists methods of the <xref:System.Math?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="d00ac-106">Sie können diese in einem Visual Basic-Programm verwenden.</span><span class="sxs-lookup"><span data-stu-id="d00ac-106">You can use these in a Visual Basic program.</span></span>  
   
-|<span data-ttu-id="84416-107">.NET Framework-Methode</span><span class="sxs-lookup"><span data-stu-id="84416-107">.NET Framework method</span></span>|<span data-ttu-id="84416-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="84416-108">Description</span></span>|  
+|<span data-ttu-id="d00ac-107">.NET Framework-Methode</span><span class="sxs-lookup"><span data-stu-id="d00ac-107">.NET Framework method</span></span>|<span data-ttu-id="d00ac-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d00ac-108">Description</span></span>|  
 |---------------------------|-----------------|  
-|<xref:System.Math.Abs%2A>|<span data-ttu-id="84416-109">Gibt den absoluten Wert einer Zahl zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-109">Returns the absolute value of a number.</span></span>|  
-|<xref:System.Math.Acos%2A>|<span data-ttu-id="84416-110">Gibt einen Winkel zurück, dessen Kosinus die angegebene Zahl ist.</span><span class="sxs-lookup"><span data-stu-id="84416-110">Returns the angle whose cosine is the specified number.</span></span>|  
-|<xref:System.Math.Asin%2A>|<span data-ttu-id="84416-111">Gibt einen Winkel zurück, dessen Sinus die angegebene Zahl ist.</span><span class="sxs-lookup"><span data-stu-id="84416-111">Returns the angle whose sine is the specified number.</span></span>|  
-|<xref:System.Math.Atan%2A>|<span data-ttu-id="84416-112">Gibt einen Winkel zurück, dessen Tangens die angegebene Zahl ist.</span><span class="sxs-lookup"><span data-stu-id="84416-112">Returns the angle whose tangent is the specified number.</span></span>|  
-|<xref:System.Math.Atan2%2A>|<span data-ttu-id="84416-113">Gibt einen Winkel zurück, dessen Tangens der Quotient zweier angegebener Zahlen ist.</span><span class="sxs-lookup"><span data-stu-id="84416-113">Returns the angle whose tangent is the quotient of two specified numbers.</span></span>|  
-|<xref:System.Math.BigMul%2A>|<span data-ttu-id="84416-114">Gibt das volle Produkt zweier 32-Bit-Zahlen zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-114">Returns the full product of two 32-bit numbers.</span></span>|  
-|<xref:System.Math.Ceiling%2A>|<span data-ttu-id="84416-115">Gibt den kleinsten ganzzahligen Wert, der größer als oder gleich einem angegebenen `Decimal` oder `Double`.</span><span class="sxs-lookup"><span data-stu-id="84416-115">Returns the smallest integral value that's greater than or equal to the specified `Decimal` or `Double`.</span></span>|  
-|<xref:System.Math.Cos%2A>|<span data-ttu-id="84416-116">Gibt den Kosinus des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-116">Returns the cosine of the specified angle.</span></span>|  
-|<xref:System.Math.Cosh%2A>|<span data-ttu-id="84416-117">Gibt den Hyperbelkosinus des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-117">Returns the hyperbolic cosine of the specified angle.</span></span>|  
-|<xref:System.Math.DivRem%2A>|<span data-ttu-id="84416-118">Gibt den Quotienten zweier 32-Bit oder 64-Bit-Ganzzahlen mit Vorzeichen und gibt auch den Rest als Ausgabeparameter zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-118">Returns the quotient of two 32-bit or 64-bit signed integers, and also returns the remainder in an output parameter.</span></span>|  
-|<xref:System.Math.Exp%2A>|<span data-ttu-id="84416-119">Gibt e (die Basis des natürlichen Logarithmus) in der angegebenen Potenz zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-119">Returns e (the base of natural logarithms) raised to the specified power.</span></span>|  
-|<xref:System.Math.Floor%2A>|<span data-ttu-id="84416-120">Gibt die größte ganze Zahl, die kleiner oder gleich dem angegebenen `Decimal` oder `Double` Anzahl.</span><span class="sxs-lookup"><span data-stu-id="84416-120">Returns the largest integer that's less than or equal to the specified `Decimal` or `Double` number.</span></span>|  
-|<xref:System.Math.IEEERemainder%2A>|<span data-ttu-id="84416-121">Gibt zurück, dass der Rest aus der Division einer Zahl durch eine andere Nummer angegeben.</span><span class="sxs-lookup"><span data-stu-id="84416-121">Returns the remainder that results from the division of a specified number by another specified number.</span></span>|  
-|<xref:System.Math.Log%2A>|<span data-ttu-id="84416-122">Gibt den natürlichen (Logarithmus zur Basis e) einer angegebenen Zahl oder den Logarithmus einer angegebenen Zahl in einer angegebenen Basis zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-122">Returns the natural (base e) logarithm of a specified number or the logarithm of a specified number in a specified base.</span></span>|  
-|<xref:System.Math.Log10%2A>|<span data-ttu-id="84416-123">Gibt den Logarithmus einer angegebenen Zahl zur Basis 10 zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-123">Returns the base 10 logarithm of a specified number.</span></span>|  
-|<xref:System.Math.Max%2A>|<span data-ttu-id="84416-124">Gibt die größere von zwei Zahlen zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-124">Returns the larger of two numbers.</span></span>|  
-|<xref:System.Math.Min%2A>|<span data-ttu-id="84416-125">Gibt die kleinere von zwei Zahlen zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-125">Returns the smaller of two numbers.</span></span>|  
-|<xref:System.Math.Pow%2A>|<span data-ttu-id="84416-126">Potenziert eine angegebene Zahl mit dem angegebenen Exponenten.</span><span class="sxs-lookup"><span data-stu-id="84416-126">Returns a specified number raised to the specified power.</span></span>|  
-|<xref:System.Math.Round%2A>|<span data-ttu-id="84416-127">Gibt eine `Decimal` oder `Double` auf den nächsten ganzzahligen Wert oder eine angegebene Anzahl von Dezimalstellen gerundet.</span><span class="sxs-lookup"><span data-stu-id="84416-127">Returns a `Decimal` or `Double` value rounded to the nearest integral value or to a specified number of fractional digits.</span></span>|  
-|<xref:System.Math.Sign%2A>|<span data-ttu-id="84416-128">Gibt ein `Integer` Wert, der angibt, der der Vorzeichen einer Zahl.</span><span class="sxs-lookup"><span data-stu-id="84416-128">Returns an `Integer` value indicating the sign of a number.</span></span>|  
-|<xref:System.Math.Sin%2A>|<span data-ttu-id="84416-129">Gibt den Sinus des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-129">Returns the sine of the specified angle.</span></span>|  
-|<xref:System.Math.Sinh%2A>|<span data-ttu-id="84416-130">Gibt den Hyperbelsinus des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-130">Returns the hyperbolic sine of the specified angle.</span></span>|  
-|<xref:System.Math.Sqrt%2A>|<span data-ttu-id="84416-131">Gibt die Quadratwurzel einer angegebenen Zahl zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-131">Returns the square root of a specified number.</span></span>|  
-|<xref:System.Math.Tan%2A>|<span data-ttu-id="84416-132">Gibt den Tangens des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-132">Returns the tangent of the specified angle.</span></span>|  
-|<xref:System.Math.Tanh%2A>|<span data-ttu-id="84416-133">Gibt den Hyperbeltangens des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="84416-133">Returns the hyperbolic tangent of the specified angle.</span></span>|  
-|<xref:System.Math.Truncate%2A>|<span data-ttu-id="84416-134">Berechnet den ganzzahligen Teil einer angegebenen `Decimal` oder `Double` Anzahl.</span><span class="sxs-lookup"><span data-stu-id="84416-134">Calculates the integral part of a specified `Decimal` or `Double` number.</span></span>|  
+|<xref:System.Math.Abs%2A>|<span data-ttu-id="d00ac-109">Gibt den absoluten Wert einer Zahl zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-109">Returns the absolute value of a number.</span></span>|  
+|<xref:System.Math.Acos%2A>|<span data-ttu-id="d00ac-110">Gibt einen Winkel zurück, dessen Kosinus die angegebene Zahl ist.</span><span class="sxs-lookup"><span data-stu-id="d00ac-110">Returns the angle whose cosine is the specified number.</span></span>|  
+|<xref:System.Math.Asin%2A>|<span data-ttu-id="d00ac-111">Gibt einen Winkel zurück, dessen Sinus die angegebene Zahl ist.</span><span class="sxs-lookup"><span data-stu-id="d00ac-111">Returns the angle whose sine is the specified number.</span></span>|  
+|<xref:System.Math.Atan%2A>|<span data-ttu-id="d00ac-112">Gibt einen Winkel zurück, dessen Tangens die angegebene Zahl ist.</span><span class="sxs-lookup"><span data-stu-id="d00ac-112">Returns the angle whose tangent is the specified number.</span></span>|  
+|<xref:System.Math.Atan2%2A>|<span data-ttu-id="d00ac-113">Gibt einen Winkel zurück, dessen Tangens der Quotient zweier angegebener Zahlen ist.</span><span class="sxs-lookup"><span data-stu-id="d00ac-113">Returns the angle whose tangent is the quotient of two specified numbers.</span></span>|  
+|<xref:System.Math.BigMul%2A>|<span data-ttu-id="d00ac-114">Gibt das volle Produkt zweier 32-Bit-Zahlen zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-114">Returns the full product of two 32-bit numbers.</span></span>|  
+|<xref:System.Math.Ceiling%2A>|<span data-ttu-id="d00ac-115">Gibt den kleinsten ganzzahligen Wert, der größer als oder gleich einem angegebenen `Decimal` oder `Double`.</span><span class="sxs-lookup"><span data-stu-id="d00ac-115">Returns the smallest integral value that's greater than or equal to the specified `Decimal` or `Double`.</span></span>|  
+|<xref:System.Math.Cos%2A>|<span data-ttu-id="d00ac-116">Gibt den Kosinus des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-116">Returns the cosine of the specified angle.</span></span>|  
+|<xref:System.Math.Cosh%2A>|<span data-ttu-id="d00ac-117">Gibt den Hyperbelkosinus des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-117">Returns the hyperbolic cosine of the specified angle.</span></span>|  
+|<xref:System.Math.DivRem%2A>|<span data-ttu-id="d00ac-118">Gibt den Quotienten zweier 32-Bit oder 64-Bit-Ganzzahlen mit Vorzeichen und gibt auch den Rest als Ausgabeparameter zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-118">Returns the quotient of two 32-bit or 64-bit signed integers, and also returns the remainder in an output parameter.</span></span>|  
+|<xref:System.Math.Exp%2A>|<span data-ttu-id="d00ac-119">Gibt e (die Basis des natürlichen Logarithmus) in der angegebenen Potenz zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-119">Returns e (the base of natural logarithms) raised to the specified power.</span></span>|  
+|<xref:System.Math.Floor%2A>|<span data-ttu-id="d00ac-120">Gibt die größte ganze Zahl, die kleiner oder gleich dem angegebenen `Decimal` oder `Double` Anzahl.</span><span class="sxs-lookup"><span data-stu-id="d00ac-120">Returns the largest integer that's less than or equal to the specified `Decimal` or `Double` number.</span></span>|  
+|<xref:System.Math.IEEERemainder%2A>|<span data-ttu-id="d00ac-121">Gibt zurück, dass der Rest aus der Division einer Zahl durch eine andere Nummer angegeben.</span><span class="sxs-lookup"><span data-stu-id="d00ac-121">Returns the remainder that results from the division of a specified number by another specified number.</span></span>|  
+|<xref:System.Math.Log%2A>|<span data-ttu-id="d00ac-122">Gibt den natürlichen (Logarithmus zur Basis e) einer angegebenen Zahl oder den Logarithmus einer angegebenen Zahl in einer angegebenen Basis zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-122">Returns the natural (base e) logarithm of a specified number or the logarithm of a specified number in a specified base.</span></span>|  
+|<xref:System.Math.Log10%2A>|<span data-ttu-id="d00ac-123">Gibt den Logarithmus einer angegebenen Zahl zur Basis 10 zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-123">Returns the base 10 logarithm of a specified number.</span></span>|  
+|<xref:System.Math.Max%2A>|<span data-ttu-id="d00ac-124">Gibt die größere von zwei Zahlen zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-124">Returns the larger of two numbers.</span></span>|  
+|<xref:System.Math.Min%2A>|<span data-ttu-id="d00ac-125">Gibt die kleinere von zwei Zahlen zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-125">Returns the smaller of two numbers.</span></span>|  
+|<xref:System.Math.Pow%2A>|<span data-ttu-id="d00ac-126">Potenziert eine angegebene Zahl mit dem angegebenen Exponenten.</span><span class="sxs-lookup"><span data-stu-id="d00ac-126">Returns a specified number raised to the specified power.</span></span>|  
+|<xref:System.Math.Round%2A>|<span data-ttu-id="d00ac-127">Gibt eine `Decimal` oder `Double` auf den nächsten ganzzahligen Wert oder eine angegebene Anzahl von Dezimalstellen gerundet.</span><span class="sxs-lookup"><span data-stu-id="d00ac-127">Returns a `Decimal` or `Double` value rounded to the nearest integral value or to a specified number of fractional digits.</span></span>|  
+|<xref:System.Math.Sign%2A>|<span data-ttu-id="d00ac-128">Gibt ein `Integer` Wert, der angibt, der der Vorzeichen einer Zahl.</span><span class="sxs-lookup"><span data-stu-id="d00ac-128">Returns an `Integer` value indicating the sign of a number.</span></span>|  
+|<xref:System.Math.Sin%2A>|<span data-ttu-id="d00ac-129">Gibt den Sinus des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-129">Returns the sine of the specified angle.</span></span>|  
+|<xref:System.Math.Sinh%2A>|<span data-ttu-id="d00ac-130">Gibt den Hyperbelsinus des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-130">Returns the hyperbolic sine of the specified angle.</span></span>|  
+|<xref:System.Math.Sqrt%2A>|<span data-ttu-id="d00ac-131">Gibt die Quadratwurzel einer angegebenen Zahl zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-131">Returns the square root of a specified number.</span></span>|  
+|<xref:System.Math.Tan%2A>|<span data-ttu-id="d00ac-132">Gibt den Tangens des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-132">Returns the tangent of the specified angle.</span></span>|  
+|<xref:System.Math.Tanh%2A>|<span data-ttu-id="d00ac-133">Gibt den Hyperbeltangens des angegebenen Winkels zurück.</span><span class="sxs-lookup"><span data-stu-id="d00ac-133">Returns the hyperbolic tangent of the specified angle.</span></span>|  
+|<xref:System.Math.Truncate%2A>|<span data-ttu-id="d00ac-134">Berechnet den ganzzahligen Teil einer angegebenen `Decimal` oder `Double` Anzahl.</span><span class="sxs-lookup"><span data-stu-id="d00ac-134">Calculates the integral part of a specified `Decimal` or `Double` number.</span></span>|  
   
- <span data-ttu-id="84416-135">Importieren Sie für die Verwendung dieser Funktionen ohne Qualifizierung der <xref:System.Math?displayProperty=nameWithType> Namespace in Ihrem Projekt durch den folgenden Code am Anfang der Quelldatei hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="84416-135">To use these functions without qualification, import the <xref:System.Math?displayProperty=nameWithType> namespace into your project by adding the following code to the top of your source file:</span></span>  
+ <span data-ttu-id="d00ac-135">Importieren Sie für die Verwendung dieser Funktionen ohne Qualifizierung der <xref:System.Math?displayProperty=nameWithType> Namespace in Ihrem Projekt durch den folgenden Code am Anfang der Quelldatei hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="d00ac-135">To use these functions without qualification, import the <xref:System.Math?displayProperty=nameWithType> namespace into your project by adding the following code to the top of your source file:</span></span>  
   
 ```  
 Imports System.Math  
 ```  
   
-## <a name="example"></a><span data-ttu-id="84416-136">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84416-136">Example</span></span>  
- <span data-ttu-id="84416-137">Dieses Beispiel verwendet die <xref:System.Math.Abs%2A> Methode der <xref:System.Math> Klasse, um den absoluten Wert einer Zahl zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="84416-137">This example uses the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class to compute the absolute value of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="d00ac-136">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d00ac-136">Example</span></span>  
+ <span data-ttu-id="d00ac-137">Dieses Beispiel verwendet die <xref:System.Math.Abs%2A> Methode der <xref:System.Math> Klasse, um den absoluten Wert einer Zahl zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="d00ac-137">This example uses the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class to compute the absolute value of a number.</span></span>  
   
 ```  
 ' Returns 50.3.  
@@ -71,8 +64,8 @@ Dim MyNumber1 As Double = Math.Abs(50.3)
 Dim MyNumber2 As Double = Math.Abs(-50.3)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="84416-138">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84416-138">Example</span></span>  
- <span data-ttu-id="84416-139">Dieses Beispiel verwendet die <xref:System.Math.Atan%2A> Methode der <xref:System.Math> Klasse, um den Wert von Pi zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="84416-139">This example uses the <xref:System.Math.Atan%2A> method of the <xref:System.Math> class to calculate the value of pi.</span></span>  
+## <a name="example"></a><span data-ttu-id="d00ac-138">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d00ac-138">Example</span></span>  
+ <span data-ttu-id="d00ac-139">Dieses Beispiel verwendet die <xref:System.Math.Atan%2A> Methode der <xref:System.Math> Klasse, um den Wert von Pi zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="d00ac-139">This example uses the <xref:System.Math.Atan%2A> method of the <xref:System.Math> class to calculate the value of pi.</span></span>  
   
 ```  
 Public Function GetPi() As Double  
@@ -81,8 +74,8 @@ Public Function GetPi() As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="84416-140">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84416-140">Example</span></span>  
- <span data-ttu-id="84416-141">Dieses Beispiel verwendet die <xref:System.Math.Cos%2A> Methode der <xref:System.Math> Klasse, um den Kosinuswert eines Winkels zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="84416-141">This example uses the <xref:System.Math.Cos%2A> method of the <xref:System.Math> class to return the cosine of an angle.</span></span>  
+## <a name="example"></a><span data-ttu-id="d00ac-140">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d00ac-140">Example</span></span>  
+ <span data-ttu-id="d00ac-141">Dieses Beispiel verwendet die <xref:System.Math.Cos%2A> Methode der <xref:System.Math> Klasse, um den Kosinuswert eines Winkels zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="d00ac-141">This example uses the <xref:System.Math.Cos%2A> method of the <xref:System.Math> class to return the cosine of an angle.</span></span>  
   
 ```  
 Public Function Sec(ByVal angle As Double) As Double  
@@ -91,8 +84,8 @@ Public Function Sec(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="84416-142">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84416-142">Example</span></span>  
- <span data-ttu-id="84416-143">Dieses Beispiel verwendet die <xref:System.Math.Exp%2A> Methode der <xref:System.Math> Klasse mit einem Exponenten Potenziert die Basis e zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="84416-143">This example uses the <xref:System.Math.Exp%2A> method of the <xref:System.Math> class to return e raised to a power.</span></span>  
+## <a name="example"></a><span data-ttu-id="d00ac-142">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d00ac-142">Example</span></span>  
+ <span data-ttu-id="d00ac-143">Dieses Beispiel verwendet die <xref:System.Math.Exp%2A> Methode der <xref:System.Math> Klasse mit einem Exponenten Potenziert die Basis e zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="d00ac-143">This example uses the <xref:System.Math.Exp%2A> method of the <xref:System.Math> class to return e raised to a power.</span></span>  
   
 ```  
 Public Function Sinh(ByVal angle As Double) As Double  
@@ -101,8 +94,8 @@ Public Function Sinh(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="84416-144">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84416-144">Example</span></span>  
- <span data-ttu-id="84416-145">Dieses Beispiel verwendet die <xref:System.Math.Log%2A> Methode der <xref:System.Math> Klasse, um den natürlichen Logarithmus einer Zahl zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="84416-145">This example uses the <xref:System.Math.Log%2A> method of the <xref:System.Math> class to return the natural logarithm of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="d00ac-144">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d00ac-144">Example</span></span>  
+ <span data-ttu-id="d00ac-145">Dieses Beispiel verwendet die <xref:System.Math.Log%2A> Methode der <xref:System.Math> Klasse, um den natürlichen Logarithmus einer Zahl zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="d00ac-145">This example uses the <xref:System.Math.Log%2A> method of the <xref:System.Math> class to return the natural logarithm of a number.</span></span>  
   
 ```  
 Public Function Asinh(ByVal value As Double) As Double  
@@ -111,16 +104,16 @@ Public Function Asinh(ByVal value As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="84416-146">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84416-146">Example</span></span>  
- <span data-ttu-id="84416-147">Dieses Beispiel verwendet die <xref:System.Math.Round%2A> Methode der <xref:System.Math> Klasse, um eine Zahl auf die nächste ganze Zahl gerundet.</span><span class="sxs-lookup"><span data-stu-id="84416-147">This example uses the <xref:System.Math.Round%2A> method of the <xref:System.Math> class to round a number to the nearest integer.</span></span>  
+## <a name="example"></a><span data-ttu-id="d00ac-146">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d00ac-146">Example</span></span>  
+ <span data-ttu-id="d00ac-147">Dieses Beispiel verwendet die <xref:System.Math.Round%2A> Methode der <xref:System.Math> Klasse, um eine Zahl auf die nächste ganze Zahl gerundet.</span><span class="sxs-lookup"><span data-stu-id="d00ac-147">This example uses the <xref:System.Math.Round%2A> method of the <xref:System.Math> class to round a number to the nearest integer.</span></span>  
   
 ```  
 ' Returns 3.  
 Dim MyVar2 As Double = Math.Round(2.8)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="84416-148">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84416-148">Example</span></span>  
- <span data-ttu-id="84416-149">Dieses Beispiel verwendet die <xref:System.Math.Sign%2A> Methode von der <xref:System.Math> -Klasse die Vorzeichen einer Zahl zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="84416-149">This example uses the <xref:System.Math.Sign%2A> method of the <xref:System.Math> class to determine the sign of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="d00ac-148">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d00ac-148">Example</span></span>  
+ <span data-ttu-id="d00ac-149">Dieses Beispiel verwendet die <xref:System.Math.Sign%2A> Methode von der <xref:System.Math> -Klasse die Vorzeichen einer Zahl zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="d00ac-149">This example uses the <xref:System.Math.Sign%2A> method of the <xref:System.Math> class to determine the sign of a number.</span></span>  
   
 ```  
 ' Returns 1.  
@@ -131,8 +124,8 @@ Dim MySign2 As Integer = Math.Sign(-2.4)
 Dim MySign3 As Integer = Math.Sign(0)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="84416-150">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84416-150">Example</span></span>  
- <span data-ttu-id="84416-151">Dieses Beispiel verwendet die <xref:System.Math.Sin%2A> Methode der <xref:System.Math> Klasse, um den Sinuswert eines Winkels zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="84416-151">This example uses the <xref:System.Math.Sin%2A> method of the <xref:System.Math> class to return the sine of an angle.</span></span>  
+## <a name="example"></a><span data-ttu-id="d00ac-150">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d00ac-150">Example</span></span>  
+ <span data-ttu-id="d00ac-151">Dieses Beispiel verwendet die <xref:System.Math.Sin%2A> Methode der <xref:System.Math> Klasse, um den Sinuswert eines Winkels zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="d00ac-151">This example uses the <xref:System.Math.Sin%2A> method of the <xref:System.Math> class to return the sine of an angle.</span></span>  
   
 ```  
 Public Function Csc(ByVal angle As Double) As Double  
@@ -141,8 +134,8 @@ Public Function Csc(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="84416-152">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84416-152">Example</span></span>  
- <span data-ttu-id="84416-153">Dieses Beispiel verwendet die <xref:System.Math.Sqrt%2A> Methode der <xref:System.Math> Klasse, um die Quadratwurzel einer Zahl zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="84416-153">This example uses the <xref:System.Math.Sqrt%2A> method of the <xref:System.Math> class to calculate the square root of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="d00ac-152">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d00ac-152">Example</span></span>  
+ <span data-ttu-id="d00ac-153">Dieses Beispiel verwendet die <xref:System.Math.Sqrt%2A> Methode der <xref:System.Math> Klasse, um die Quadratwurzel einer Zahl zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="d00ac-153">This example uses the <xref:System.Math.Sqrt%2A> method of the <xref:System.Math> class to calculate the square root of a number.</span></span>  
   
 ```  
 ' Returns 2.  
@@ -155,8 +148,8 @@ Dim MySqr3 As Double = Math.Sqrt(0)
 Dim MySqr4 As Double = Math.Sqrt(-4)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="84416-154">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84416-154">Example</span></span>  
- <span data-ttu-id="84416-155">Dieses Beispiel verwendet die <xref:System.Math.Tan%2A> Methode der <xref:System.Math> Klasse, um den Tangens eines Winkels zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="84416-155">This example uses the <xref:System.Math.Tan%2A> method of the <xref:System.Math> class to return the tangent of an angle.</span></span>  
+## <a name="example"></a><span data-ttu-id="d00ac-154">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d00ac-154">Example</span></span>  
+ <span data-ttu-id="d00ac-155">Dieses Beispiel verwendet die <xref:System.Math.Tan%2A> Methode der <xref:System.Math> Klasse, um den Tangens eines Winkels zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="d00ac-155">This example uses the <xref:System.Math.Tan%2A> method of the <xref:System.Math> class to return the tangent of an angle.</span></span>  
   
 ```  
 Public Function Ctan(ByVal angle As Double) As Double  
@@ -165,16 +158,16 @@ Public Function Ctan(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="84416-156">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="84416-156">Requirements</span></span>  
- <span data-ttu-id="84416-157">**Klasse:**<xref:System.Math></span><span class="sxs-lookup"><span data-stu-id="84416-157">**Class:** <xref:System.Math></span></span>  
+## <a name="requirements"></a><span data-ttu-id="d00ac-156">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d00ac-156">Requirements</span></span>  
+ <span data-ttu-id="d00ac-157">**Klasse:** <xref:System.Math></span><span class="sxs-lookup"><span data-stu-id="d00ac-157">**Class:** <xref:System.Math></span></span>  
   
- <span data-ttu-id="84416-158">**Namespace:**<xref:System></span><span class="sxs-lookup"><span data-stu-id="84416-158">**Namespace:** <xref:System></span></span>  
+ <span data-ttu-id="d00ac-158">**Namespace:** <xref:System></span><span class="sxs-lookup"><span data-stu-id="d00ac-158">**Namespace:** <xref:System></span></span>  
   
- <span data-ttu-id="84416-159">**Assembly:** "mscorlib" (in "mscorlib.dll")</span><span class="sxs-lookup"><span data-stu-id="84416-159">**Assembly:** mscorlib (in mscorlib.dll)</span></span>  
+ <span data-ttu-id="d00ac-159">**Assembly:** "mscorlib" (in "mscorlib.dll")</span><span class="sxs-lookup"><span data-stu-id="d00ac-159">**Assembly:** mscorlib (in mscorlib.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84416-160">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="84416-160">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d00ac-160">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d00ac-160">See Also</span></span>  
  <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>  
  <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>  
  <xref:System.Double.NaN>  
- [<span data-ttu-id="84416-161">Abgeleitete mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="84416-161">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
- [<span data-ttu-id="84416-162">Arithmetische Operatoren</span><span class="sxs-lookup"><span data-stu-id="84416-162">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+ [<span data-ttu-id="d00ac-161">Abgeleitete mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="d00ac-161">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
+ [<span data-ttu-id="d00ac-162">Arithmetische Operatoren</span><span class="sxs-lookup"><span data-stu-id="d00ac-162">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

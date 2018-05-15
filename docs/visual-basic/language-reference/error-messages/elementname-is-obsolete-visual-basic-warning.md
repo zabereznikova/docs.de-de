@@ -1,39 +1,30 @@
 ---
-title: '&#39; &lt;Elementname&gt;&#39; ist veraltet (Visual Basic-Warnung)'
+title: '&#39;&lt;Elementname&gt; &#39; ist veraltet (Visual Basic-Warnung)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40008
 - bc40008
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bd6580da794255a3324021a284816ef9700beee7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4dc2d0b8eace9bc411a344b4f2c4c79f7e09ac22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a><span data-ttu-id="4af80-102">&#39; &lt;Elementname&gt;&#39; ist veraltet (Visual Basic-Warnung)</span><span class="sxs-lookup"><span data-stu-id="4af80-102">&#39;&lt;elementname&gt;&#39; is obsolete (Visual Basic Warning)</span></span>
-<span data-ttu-id="4af80-103">Eine Anweisung versucht, auf ein Programmierelement zuzugreifen, das mit dem <xref:System.ObsoleteAttribute> -Attribut und der Direktive gekennzeichnet wurde, den Zugriffsversuch als Warnung zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="4af80-103">A statement attempts to access a programming element which has been marked with the <xref:System.ObsoleteAttribute> attribute and the directive to treat it as a warning.</span></span>  
+# <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a><span data-ttu-id="7ce5d-102">&#39;&lt;Elementname&gt; &#39; ist veraltet (Visual Basic-Warnung)</span><span class="sxs-lookup"><span data-stu-id="7ce5d-102">&#39;&lt;elementname&gt;&#39; is obsolete (Visual Basic Warning)</span></span>
+<span data-ttu-id="7ce5d-103">Eine Anweisung versucht, auf ein Programmierelement zuzugreifen, das mit dem <xref:System.ObsoleteAttribute> -Attribut und der Direktive gekennzeichnet wurde, den Zugriffsversuch als Warnung zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="7ce5d-103">A statement attempts to access a programming element which has been marked with the <xref:System.ObsoleteAttribute> attribute and the directive to treat it as a warning.</span></span>  
   
- <span data-ttu-id="4af80-104">Sie können jedes beliebige Programmierelement als nicht mehr in Gebrauch kennzeichnen, indem Sie <xref:System.ObsoleteAttribute> darauf anwenden.</span><span class="sxs-lookup"><span data-stu-id="4af80-104">You can mark any programming element as being no longer in use by applying <xref:System.ObsoleteAttribute> to it.</span></span> <span data-ttu-id="4af80-105">Dabei können Sie die <xref:System.ObsoleteAttribute.IsError%2A> -Eigenschaft des Attributs entweder auf `True` oder `False`festlegen.</span><span class="sxs-lookup"><span data-stu-id="4af80-105">If you do this, you can set the attribute's <xref:System.ObsoleteAttribute.IsError%2A> property to either `True` or `False`.</span></span> <span data-ttu-id="4af80-106">Wenn Sie sie auf `True`festlegen, behandelt der Compiler den Versuch, das Element zu verwenden, als Fehler.</span><span class="sxs-lookup"><span data-stu-id="4af80-106">If you set it to `True`, the compiler treats an attempt to use the element as an error.</span></span> <span data-ttu-id="4af80-107">Wenn Sie sie auf `False`festlegen oder die Standardeinstellung `False`übernehmen, gibt der Compiler bei dem Versuch, das Element zu verwenden, eine Warnung aus.</span><span class="sxs-lookup"><span data-stu-id="4af80-107">If you set it to `False`, or let it default to `False`, the compiler issues a warning if there is an attempt to use the element.</span></span>  
+ <span data-ttu-id="7ce5d-104">Sie können jedes beliebige Programmierelement als nicht mehr in Gebrauch kennzeichnen, indem Sie <xref:System.ObsoleteAttribute> darauf anwenden.</span><span class="sxs-lookup"><span data-stu-id="7ce5d-104">You can mark any programming element as being no longer in use by applying <xref:System.ObsoleteAttribute> to it.</span></span> <span data-ttu-id="7ce5d-105">Dabei können Sie die <xref:System.ObsoleteAttribute.IsError%2A> -Eigenschaft des Attributs entweder auf `True` oder `False`festlegen.</span><span class="sxs-lookup"><span data-stu-id="7ce5d-105">If you do this, you can set the attribute's <xref:System.ObsoleteAttribute.IsError%2A> property to either `True` or `False`.</span></span> <span data-ttu-id="7ce5d-106">Wenn Sie sie auf `True`festlegen, behandelt der Compiler den Versuch, das Element zu verwenden, als Fehler.</span><span class="sxs-lookup"><span data-stu-id="7ce5d-106">If you set it to `True`, the compiler treats an attempt to use the element as an error.</span></span> <span data-ttu-id="7ce5d-107">Wenn Sie sie auf `False`festlegen oder die Standardeinstellung `False`übernehmen, gibt der Compiler bei dem Versuch, das Element zu verwenden, eine Warnung aus.</span><span class="sxs-lookup"><span data-stu-id="7ce5d-107">If you set it to `False`, or let it default to `False`, the compiler issues a warning if there is an attempt to use the element.</span></span>  
   
- <span data-ttu-id="4af80-108">Diese Meldung ist standardmäßig eine Warnung, da die <xref:System.ObsoleteAttribute.IsError%2A> -Eigenschaft von <xref:System.ObsoleteAttribute> den Wert `False`aufweist.</span><span class="sxs-lookup"><span data-stu-id="4af80-108">By default, this message is a warning, because the <xref:System.ObsoleteAttribute.IsError%2A> property of <xref:System.ObsoleteAttribute> is `False`.</span></span> <span data-ttu-id="4af80-109">Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="4af80-109">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="7ce5d-108">Diese Meldung ist standardmäßig eine Warnung, da die <xref:System.ObsoleteAttribute.IsError%2A> -Eigenschaft von <xref:System.ObsoleteAttribute> den Wert `False`aufweist.</span><span class="sxs-lookup"><span data-stu-id="7ce5d-108">By default, this message is a warning, because the <xref:System.ObsoleteAttribute.IsError%2A> property of <xref:System.ObsoleteAttribute> is `False`.</span></span> <span data-ttu-id="7ce5d-109">Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="7ce5d-109">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="4af80-110">**Fehler-ID:** BC40008</span><span class="sxs-lookup"><span data-stu-id="4af80-110">**Error ID:** BC40008</span></span>  
+ <span data-ttu-id="7ce5d-110">**Fehler-ID:** BC40008</span><span class="sxs-lookup"><span data-stu-id="7ce5d-110">**Error ID:** BC40008</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4af80-111">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="4af80-111">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7ce5d-111">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="7ce5d-111">To correct this error</span></span>  
   
--   <span data-ttu-id="4af80-112">Stellen Sie sicher, dass der Elementname im Quellcodeverweis richtig geschrieben ist.</span><span class="sxs-lookup"><span data-stu-id="4af80-112">Ensure that the source-code reference is spelling the element name correctly.</span></span>  
+-   <span data-ttu-id="7ce5d-112">Stellen Sie sicher, dass der Elementname im Quellcodeverweis richtig geschrieben ist.</span><span class="sxs-lookup"><span data-stu-id="7ce5d-112">Ensure that the source-code reference is spelling the element name correctly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4af80-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4af80-113">See Also</span></span>  
- [<span data-ttu-id="4af80-114">Übersicht über Attribute</span><span class="sxs-lookup"><span data-stu-id="4af80-114">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="7ce5d-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7ce5d-113">See Also</span></span>  
+ [<span data-ttu-id="7ce5d-114">Übersicht über Attribute</span><span class="sxs-lookup"><span data-stu-id="7ce5d-114">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)

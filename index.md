@@ -5,11 +5,11 @@ hide_bc: true
 title: .NET-Dokumentation
 description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
-ms.openlocfilehash: 35a85cfc9f829f287a239d1a1bb98fd5d15487ca
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 3a2501d4eb0e40930bb119fb27f9cb630bc2a884
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/16/2018
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netframework-4.7.1">
+                <a href="/dotnet/api/?view=netframework-4.7.2">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -212,6 +212,26 @@ ms.lasthandoff: 04/16/2018
                                                 <p><a href="/dotnet/visual-basic/getting-started">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Einführung in Visual Basic</a></p>
                                                 <p><a href="/dotnet/visual-basic/language-reference">Sprachreferenz zu Visual Basic</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="/dotnet/images/hub/mldotnet.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/dotnet/machine-learning">Leitfaden für ML.NET</a></h3>
+                                                <p><a href="/dotnet/machine-learning/tutorials">Tutorials</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">Ressourcen</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/glossary">Glossar</a></p>
+                                                <p><a href="/dotnet/api?view=ml-dotnet">ML.NET-API-Referenz</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -584,7 +604,7 @@ ms.lasthandoff: 04/16/2018
                                             <div class="cardText">
                                                 <a href="https://www.visualstudio.com/vs/game-development">
                                                     <h3>Spieleentwicklung mit Visual Studio</h3>
-                                                    <p>Schreiben und debuggen Sie Spiele unter Verwendung des Spielmoduls Ihrer Wahl mit Visual Studio.
+                                                    <p>Schreiben und debuggen Sie Spiele unter Verwendung der Spiel-Engine Ihrer Wahl mit Visual Studio.
                                                     </p>
                                                 </a>
                                             </div>
@@ -644,6 +664,68 @@ ms.lasthandoff: 04/16/2018
                                                     <h3>Unity</h3>
                                                     <p>Erfahren Sie im Unity-Leitfaden, wie Sie Unity nutzen, um 2D- und 3D-Spiele mit C# zu erstellen.
                                                     </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#ml-ai">Machine Learning und KI</a>
+                        <ul id="ml-ai" class="cardsC">
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/dotnet/images/hub/swimlane-machine-learning-brain-lightbulb.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <a href="/dotnet/machine-learning">
+                                                    <h3>ML.NET</h3>
+                                                    <p>Erstellen Sie benutzerdefinierte KI-Lösungen, und integrieren Sie sie in Ihre .NET-Anwendungen.</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/dotnet/images/hub/swimlane-cognitive-services.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <a href="/azure/cognitive-services">
+                                                    <h3>Cognitive Services</h3>
+                                                    <p>Bringen Sie Apps, Websites und Bots zum Sehen, Hören, Sprechen und Verstehen.</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/dotnet/images/hub/swimlane-azure-machine-learning.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <a href="/azure/machine-learning">
+                                                    <h3>Azure Machine Learning</h3>
+                                                    <p>Machen Sie KI mit dieser skalierbaren und zuverlässigen End-to-End-Plattform mit Experimentieren und Modellverwaltung für alle verfügbar.</p>
                                                 </a>
                                             </div>
                                         </div>

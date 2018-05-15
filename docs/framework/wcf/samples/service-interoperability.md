@@ -1,31 +1,19 @@
 ---
-title: "Dienst-Interoperabilität"
-ms.custom: 
+title: Dienst-Interoperabilität
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3628557f-b8b3-47fc-8fdc-0c7d2e4268bd
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 69c7201e7d8f4778173bed0313e667dbd4bd4d81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 06ed369103b318582be05a72b33ba36dda46764c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="service-interoperability"></a><span data-ttu-id="32440-102">Dienst-Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="32440-102">Service Interoperability</span></span>
-<span data-ttu-id="32440-103">Dieser Abschnitt enthält Beispiele, in denen die Interaktion zwischen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] und anderen Diensttechnologien veranschaulicht wird.</span><span class="sxs-lookup"><span data-stu-id="32440-103">This section contains samples that demonstrate interaction between [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and other service technologies.</span></span>  
+# <a name="service-interoperability"></a><span data-ttu-id="4e270-102">Dienst-Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="4e270-102">Service Interoperability</span></span>
+<span data-ttu-id="4e270-103">Dieser Abschnitt enthält Beispiele, in denen Interaktion zwischen Windows Communication Foundation (WCF) und anderen diensttechnologien veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4e270-103">This section contains samples that demonstrate interaction between Windows Communication Foundation (WCF) and other service technologies.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="32440-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="32440-104">In This Section</span></span>  
- [<span data-ttu-id="32440-105">Verwenden des WCF-Monikers mit COM-Clients</span><span class="sxs-lookup"><span data-stu-id="32440-105">Using the WCF Moniker with COM Clients</span></span>](../../../../docs/framework/wcf/samples/using-the-wcf-moniker-with-com-clients.md)  
- <span data-ttu-id="32440-106">Veranschaulicht, wie Webdienste mithilfe des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstmonikers in COM-Entwicklungsumgebungen wie Microsoft Office Visual Basic for Applications (Office VBA) oder Visual Basic 6.0 integriert werden.</span><span class="sxs-lookup"><span data-stu-id="32440-106">Demonstrates how to use the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service moniker to integrate Web services into COM-based development environments, such as Microsoft Office Visual Basic for Applications (Office VBA) or Visual Basic 6.0.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="4e270-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="4e270-104">In This Section</span></span>  
+ [<span data-ttu-id="4e270-105">Verwenden des WCF-Monikers mit COM-Clients</span><span class="sxs-lookup"><span data-stu-id="4e270-105">Using the WCF Moniker with COM Clients</span></span>](../../../../docs/framework/wcf/samples/using-the-wcf-moniker-with-com-clients.md)  
+ <span data-ttu-id="4e270-106">Veranschaulicht, wie den WCF-Dienstmoniker Webdienste in COM-basierten entwicklungsumgebungen wie Microsoft Office Visual Basic for Applications (Office VBA) oder Visual Basic 6.0 integriert.</span><span class="sxs-lookup"><span data-stu-id="4e270-106">Demonstrates how to use the WCF service moniker to integrate Web services into COM-based development environments, such as Microsoft Office Visual Basic for Applications (Office VBA) or Visual Basic 6.0.</span></span>  
   
- [<span data-ttu-id="32440-107">ASMX-Client mit einem WCF-Dienst</span><span class="sxs-lookup"><span data-stu-id="32440-107">ASMX Client with a WCF Service</span></span>](../../../../docs/framework/wcf/samples/asmx-client-with-a-wcf-service.md)  
- <span data-ttu-id="32440-108">Zeigt, wie ein Dienst erstellt wird, der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet, und wie dann aus einem Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client (wie einem ASMX-Client) auf den Dienst zugegriffen wird.</span><span class="sxs-lookup"><span data-stu-id="32440-108">Demonstrates how to create a service using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and then access the service from a non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client, such as an ASMX client.</span></span>
+ [<span data-ttu-id="4e270-107">ASMX-Client mit einem WCF-Dienst</span><span class="sxs-lookup"><span data-stu-id="4e270-107">ASMX Client with a WCF Service</span></span>](../../../../docs/framework/wcf/samples/asmx-client-with-a-wcf-service.md)  
+ <span data-ttu-id="4e270-108">Veranschaulicht das Erstellen eines Diensts mithilfe von WCF, und klicken Sie dann auf den Dienst von einem nicht-WCF-Client, wie einem ASMX-Client zugreifen.</span><span class="sxs-lookup"><span data-stu-id="4e270-108">Demonstrates how to create a service using WCF and then access the service from a non-WCF client, such as an ASMX client.</span></span>

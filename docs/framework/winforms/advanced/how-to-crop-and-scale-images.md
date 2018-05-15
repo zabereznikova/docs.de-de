@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Zuschneiden und Skalieren von Bildern'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,37 +8,32 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de905cf70013098a4282e3f4af092ccbea16ccfd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d5acda50a1aa0f0cae6e77a748b011908fcc8c34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-crop-and-scale-images"></a><span data-ttu-id="b7561-102">Gewusst wie: Zuschneiden und Skalieren von Bildern</span><span class="sxs-lookup"><span data-stu-id="b7561-102">How to: Crop and Scale Images</span></span>
-<span data-ttu-id="b7561-103">Die <xref:System.Drawing.Graphics> Klasse stellt mehrere <xref:System.Drawing.Graphics.DrawImage%2A> Methoden, von denen einige Quell- und Zielschemas Rechteck Parameter haben, die zum Zuschneiden und Skalieren von Bildern verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="b7561-103">The <xref:System.Drawing.Graphics> class provides several <xref:System.Drawing.Graphics.DrawImage%2A> methods, some of which have source and destination rectangle parameters that you can use to crop and scale images.</span></span>  
+# <a name="how-to-crop-and-scale-images"></a><span data-ttu-id="13628-102">Gewusst wie: Zuschneiden und Skalieren von Bildern</span><span class="sxs-lookup"><span data-stu-id="13628-102">How to: Crop and Scale Images</span></span>
+<span data-ttu-id="13628-103">Die <xref:System.Drawing.Graphics> Klasse stellt mehrere <xref:System.Drawing.Graphics.DrawImage%2A> Methoden, von denen einige Quell- und Zielschemas Rechteck Parameter haben, die zum Zuschneiden und Skalieren von Bildern verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="13628-103">The <xref:System.Drawing.Graphics> class provides several <xref:System.Drawing.Graphics.DrawImage%2A> methods, some of which have source and destination rectangle parameters that you can use to crop and scale images.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b7561-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b7561-104">Example</span></span>  
- <span data-ttu-id="b7561-105">Das folgende Beispiel erstellt eine <xref:System.Drawing.Image> Objekt aus der Datenträgerdatei Apple.gif.</span><span class="sxs-lookup"><span data-stu-id="b7561-105">The following example constructs an <xref:System.Drawing.Image> object from the disk file Apple.gif.</span></span> <span data-ttu-id="b7561-106">Der Code zeichnet das gesamte Apple-Bild in seiner ursprünglichen Größe an.</span><span class="sxs-lookup"><span data-stu-id="b7561-106">The code draws the entire apple image in its original size.</span></span> <span data-ttu-id="b7561-107">Der Code ruft dann die <xref:System.Drawing.Graphics.DrawImage%2A> Methode von einer <xref:System.Drawing.Graphics> Objekt, das einen Teil der Apple-Bildes in ein Zielrechteck zu zeichnen, die größer als das ursprüngliche Apple-Image ist.</span><span class="sxs-lookup"><span data-stu-id="b7561-107">The code then calls the <xref:System.Drawing.Graphics.DrawImage%2A> method of a <xref:System.Drawing.Graphics> object to draw a portion of the apple image in a destination rectangle that is larger than the original apple image.</span></span>  
+## <a name="example"></a><span data-ttu-id="13628-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="13628-104">Example</span></span>  
+ <span data-ttu-id="13628-105">Das folgende Beispiel erstellt eine <xref:System.Drawing.Image> Objekt aus der Datenträgerdatei Apple.gif.</span><span class="sxs-lookup"><span data-stu-id="13628-105">The following example constructs an <xref:System.Drawing.Image> object from the disk file Apple.gif.</span></span> <span data-ttu-id="13628-106">Der Code zeichnet das gesamte Apple-Bild in seiner ursprünglichen Größe an.</span><span class="sxs-lookup"><span data-stu-id="13628-106">The code draws the entire apple image in its original size.</span></span> <span data-ttu-id="13628-107">Der Code ruft dann die <xref:System.Drawing.Graphics.DrawImage%2A> Methode von einer <xref:System.Drawing.Graphics> Objekt, das einen Teil der Apple-Bildes in ein Zielrechteck zu zeichnen, die größer als das ursprüngliche Apple-Image ist.</span><span class="sxs-lookup"><span data-stu-id="13628-107">The code then calls the <xref:System.Drawing.Graphics.DrawImage%2A> method of a <xref:System.Drawing.Graphics> object to draw a portion of the apple image in a destination rectangle that is larger than the original apple image.</span></span>  
   
- <span data-ttu-id="b7561-108">Die <xref:System.Drawing.Graphics.DrawImage%2A> Methode bestimmt, welcher Teil der Apple gezogen werden unter Verwendung des fünften und sechsten Argumente suchen soll.</span><span class="sxs-lookup"><span data-stu-id="b7561-108">The <xref:System.Drawing.Graphics.DrawImage%2A> method determines which portion of the apple to draw by looking at the source rectangle, which is specified by the third, fourth, fifth, and sixth arguments.</span></span> <span data-ttu-id="b7561-109">In diesem Fall wird die Apple 75 Prozent der Breite und 75 Prozent der Höhe zugeschnitten.</span><span class="sxs-lookup"><span data-stu-id="b7561-109">In this case, the apple is cropped to 75 percent of its width and 75 percent of its height.</span></span>  
+ <span data-ttu-id="13628-108">Die <xref:System.Drawing.Graphics.DrawImage%2A> Methode bestimmt, welcher Teil der Apple gezogen werden unter Verwendung des fünften und sechsten Argumente suchen soll.</span><span class="sxs-lookup"><span data-stu-id="13628-108">The <xref:System.Drawing.Graphics.DrawImage%2A> method determines which portion of the apple to draw by looking at the source rectangle, which is specified by the third, fourth, fifth, and sixth arguments.</span></span> <span data-ttu-id="13628-109">In diesem Fall wird die Apple 75 Prozent der Breite und 75 Prozent der Höhe zugeschnitten.</span><span class="sxs-lookup"><span data-stu-id="13628-109">In this case, the apple is cropped to 75 percent of its width and 75 percent of its height.</span></span>  
   
- <span data-ttu-id="b7561-110">Die <xref:System.Drawing.Graphics.DrawImage%2A> Methode bestimmt, wo Sie zugeschnittene Apple gezeichnet werden soll und wie groß die zugeschnittenen Apfels anhand des Zielrechtecks, dies ist durch das zweite Argument angegeben.</span><span class="sxs-lookup"><span data-stu-id="b7561-110">The <xref:System.Drawing.Graphics.DrawImage%2A> method determines where to draw the cropped apple and how big to make the cropped apple by looking at the destination rectangle, which is specified by the second argument.</span></span> <span data-ttu-id="b7561-111">In diesem Fall ist das Zielrechteck 30 Prozent breiter und 30 Prozent höher als das ursprüngliche Image.</span><span class="sxs-lookup"><span data-stu-id="b7561-111">In this case, the destination rectangle is 30 percent wider and 30 percent taller than the original image.</span></span>  
+ <span data-ttu-id="13628-110">Die <xref:System.Drawing.Graphics.DrawImage%2A> Methode bestimmt, wo Sie zugeschnittene Apple gezeichnet werden soll und wie groß die zugeschnittenen Apfels anhand des Zielrechtecks, dies ist durch das zweite Argument angegeben.</span><span class="sxs-lookup"><span data-stu-id="13628-110">The <xref:System.Drawing.Graphics.DrawImage%2A> method determines where to draw the cropped apple and how big to make the cropped apple by looking at the destination rectangle, which is specified by the second argument.</span></span> <span data-ttu-id="13628-111">In diesem Fall ist das Zielrechteck 30 Prozent breiter und 30 Prozent höher als das ursprüngliche Image.</span><span class="sxs-lookup"><span data-stu-id="13628-111">In this case, the destination rectangle is 30 percent wider and 30 percent taller than the original image.</span></span>  
   
- <span data-ttu-id="b7561-112">Die folgende Abbildung zeigt die ursprüngliche Apple und die skalierte Apple zugeschnitten.</span><span class="sxs-lookup"><span data-stu-id="b7561-112">The following illustration shows the original apple and the scaled, cropped apple.</span></span>  
+ <span data-ttu-id="13628-112">Die folgende Abbildung zeigt die ursprüngliche Apple und die skalierte Apple zugeschnitten.</span><span class="sxs-lookup"><span data-stu-id="13628-112">The following illustration shows the original apple and the scaled, cropped apple.</span></span>  
   
- <span data-ttu-id="b7561-113">![Zuschneiden und skalieren](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")</span><span class="sxs-lookup"><span data-stu-id="b7561-113">![Crop & Scale](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")</span></span>  
+ <span data-ttu-id="13628-113">![Zuschneiden und skalieren](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")</span><span class="sxs-lookup"><span data-stu-id="13628-113">![Crop & Scale](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b7561-114">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="b7561-114">Compiling the Code</span></span>  
- <span data-ttu-id="b7561-115">Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.</span><span class="sxs-lookup"><span data-stu-id="b7561-115">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="b7561-116">Achten Sie darauf, ersetzen Sie `Apple.gif` mit einem Dateinamen und Pfad, die auf Ihrem System gültig sind.</span><span class="sxs-lookup"><span data-stu-id="b7561-116">Make sure to replace `Apple.gif` with an image file name and path that are valid on your system.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="13628-114">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="13628-114">Compiling the Code</span></span>  
+ <span data-ttu-id="13628-115">Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.</span><span class="sxs-lookup"><span data-stu-id="13628-115">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="13628-116">Achten Sie darauf, ersetzen Sie `Apple.gif` mit einem Dateinamen und Pfad, die auf Ihrem System gültig sind.</span><span class="sxs-lookup"><span data-stu-id="13628-116">Make sure to replace `Apple.gif` with an image file name and path that are valid on your system.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b7561-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b7561-117">See Also</span></span>  
- [<span data-ttu-id="b7561-118">Bilder, Bitmaps und Metadateien</span><span class="sxs-lookup"><span data-stu-id="b7561-118">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [<span data-ttu-id="b7561-119">Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien</span><span class="sxs-lookup"><span data-stu-id="b7561-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="13628-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="13628-117">See Also</span></span>  
+ [<span data-ttu-id="13628-118">Bilder, Bitmaps und Metadateien</span><span class="sxs-lookup"><span data-stu-id="13628-118">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="13628-119">Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien</span><span class="sxs-lookup"><span data-stu-id="13628-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

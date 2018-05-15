@@ -1,27 +1,17 @@
 ---
 title: 'Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2b46750876e683e8ca5801d5c37267bf3d681cfe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7a8314ba6109f25b4bc5f5952b358695844eadab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="edc12-102">Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="edc12-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
-<span data-ttu-id="edc12-103">In diesem Beispiel wird veranschaulicht, wie nach allen Dateien mit einem angegebenen Suffix (z.B. „.txt“) in einer angegebenen Verzeichnisstruktur gesucht wird.</span><span class="sxs-lookup"><span data-stu-id="edc12-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="edc12-104">Es wird auch gezeigt, wie basierend auf dem Zeitpunkt der Erstellung entweder die neueste oder älteste Datei in der Struktur zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="edc12-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="2f3e4-102">Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2f3e4-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+<span data-ttu-id="2f3e4-103">In diesem Beispiel wird veranschaulicht, wie nach allen Dateien mit einem angegebenen Suffix (z.B. „.txt“) in einer angegebenen Verzeichnisstruktur gesucht wird.</span><span class="sxs-lookup"><span data-stu-id="2f3e4-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="2f3e4-104">Es wird auch gezeigt, wie basierend auf dem Zeitpunkt der Erstellung entweder die neueste oder älteste Datei in der Struktur zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="2f3e4-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="edc12-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="edc12-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2f3e4-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2f3e4-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -69,9 +59,9 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="edc12-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="edc12-106">Compiling the Code</span></span>  
- <span data-ttu-id="edc12-107">Erstellen Sie ein Projekt, das auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf "System.Core.dll" abzielt und einen `Imports` -Anweisung für den "System.Linq"-Namespace.</span><span class="sxs-lookup"><span data-stu-id="edc12-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2f3e4-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="2f3e4-106">Compiling the Code</span></span>  
+ <span data-ttu-id="2f3e4-107">Erstellen Sie ein Projekt, das auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf "System.Core.dll" abzielt und einen `Imports` -Anweisung für den "System.Linq"-Namespace.</span><span class="sxs-lookup"><span data-stu-id="2f3e4-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="edc12-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="edc12-108">See Also</span></span>  
- [<span data-ttu-id="edc12-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="edc12-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [<span data-ttu-id="edc12-110">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="edc12-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="2f3e4-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2f3e4-108">See Also</span></span>  
+ [<span data-ttu-id="2f3e4-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2f3e4-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [<span data-ttu-id="2f3e4-110">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="2f3e4-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

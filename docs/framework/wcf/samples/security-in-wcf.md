@@ -1,28 +1,18 @@
 ---
 title: Sicherheit in WCF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d73638-30a9-43b4-8c86-f27f57b6eef1
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c07a41ccbfb08e46c12ccc99ce016f1eb8f2c48c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a74f915132454e3f983c8bc73c17d4842a291406
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="security-in-wcf"></a><span data-ttu-id="2c26e-102">Sicherheit in WCF</span><span class="sxs-lookup"><span data-stu-id="2c26e-102">Security in WCF</span></span>
-<span data-ttu-id="2c26e-103">Dieser Abschnitt enthält Beispiele, die sich auf die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Sicherheit beziehen.</span><span class="sxs-lookup"><span data-stu-id="2c26e-103">This section contains samples relating to [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] security.</span></span>  
+# <a name="security-in-wcf"></a><span data-ttu-id="62d7f-102">Sicherheit in WCF</span><span class="sxs-lookup"><span data-stu-id="62d7f-102">Security in WCF</span></span>
+<span data-ttu-id="62d7f-103">Dieser Abschnitt enthält Beispiele, die im Zusammenhang mit der Windows Communication Foundation (WCF)-Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="62d7f-103">This section contains samples relating to Windows Communication Foundation (WCF) security.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2c26e-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="2c26e-104">In This Section</span></span>  
- [<span data-ttu-id="2c26e-105">Kryptografische Flexibilität in WCF-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="2c26e-105">Cryptographic Agility in WCF Security</span></span>](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)  
- <span data-ttu-id="2c26e-106">Zeigt, wie ein Standard- oder benutzerdefinierter Algorithmus angegeben wird, um eine agile Kryptografieimplementierung in einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client und -Dienst bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="2c26e-106">Demonstrates how to specify in a standard or custom algorithm to provide a cryptographic, agile implementation in a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client and service.</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="62d7f-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="62d7f-104">In This Section</span></span>  
+ [<span data-ttu-id="62d7f-105">Kryptografische Flexibilität in WCF-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="62d7f-105">Cryptographic Agility in WCF Security</span></span>](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)  
+ <span data-ttu-id="62d7f-106">Veranschaulicht, wie ein standardmäßiger oder benutzerdefinierter Algorithmus um eine agile kryptografieimplementierung in einem WCF-Client und Dienst bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="62d7f-106">Demonstrates how to specify in a standard or custom algorithm to provide a cryptographic, agile implementation in a WCF client and service.</span></span>

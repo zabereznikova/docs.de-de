@@ -1,57 +1,45 @@
 ---
-title: "StatusBar-Steuerelement (Windows Forms)"
-ms.custom: 
+title: StatusBar-Steuerelement (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - StatusBar control [Windows Forms]
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 945d9a658dd3d75dd0edb9f4eaca78334ee4d652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 66ec834778bd0eeacea642250c5430be8929b732
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="statusbar-control-windows-forms"></a><span data-ttu-id="7da03-102">StatusBar-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="7da03-102">StatusBar Control (Windows Forms)</span></span>
+# <a name="statusbar-control-windows-forms"></a><span data-ttu-id="221dd-102">StatusBar-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="221dd-102">StatusBar Control (Windows Forms)</span></span>
 > [!NOTE]
->  <span data-ttu-id="7da03-103">Obwohl das <xref:System.Windows.Forms.ToolStripStatusLabel>-Steuerelement das <xref:System.Windows.Forms.StatusBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.StatusBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</span><span class="sxs-lookup"><span data-stu-id="7da03-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> control replaces and adds functionality to the <xref:System.Windows.Forms.StatusBar> control; however, the <xref:System.Windows.Forms.StatusBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="221dd-103">Obwohl das <xref:System.Windows.Forms.ToolStripStatusLabel>-Steuerelement das <xref:System.Windows.Forms.StatusBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.StatusBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</span><span class="sxs-lookup"><span data-stu-id="221dd-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> control replaces and adds functionality to the <xref:System.Windows.Forms.StatusBar> control; however, the <xref:System.Windows.Forms.StatusBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="7da03-104">Das Windows Forms-Steuerelement <xref:System.Windows.Forms.StatusBar> wird auf Formularen als Bereich verwendet, der in der Regel am unteren Rand eines Fensters angezeigt wird, in dem eine Anwendung verschiedene Arten von Statusinformationen anzeigen kann.</span><span class="sxs-lookup"><span data-stu-id="7da03-104">The Windows Forms <xref:System.Windows.Forms.StatusBar> control is used on forms as an area, usually displayed at the bottom of a window, in which an application can display various kinds of status information.</span></span> <span data-ttu-id="7da03-105"><xref:System.Windows.Forms.StatusBar>Steuerelemente können Statusleistenbereichs darauf enthalten, Symbole, um anzugeben, Status oder eine Reihe von Symbolen in einer Animation, die darauf hinweisen, dass ein Prozess ausgeführt wird. Beispielsweise wird Microsoft Word zeigt an, dass das Dokument gespeichert.</span><span class="sxs-lookup"><span data-stu-id="7da03-105"><xref:System.Windows.Forms.StatusBar> controls can have status-bar panels on them that display icons to indicate state, or a series of icons in an animation that indicate a process is working; for example, Microsoft Word indicating that the document is being saved.</span></span>  
+ <span data-ttu-id="221dd-104">Das Windows Forms-Steuerelement <xref:System.Windows.Forms.StatusBar> wird auf Formularen als Bereich verwendet, der in der Regel am unteren Rand eines Fensters angezeigt wird, in dem eine Anwendung verschiedene Arten von Statusinformationen anzeigen kann.</span><span class="sxs-lookup"><span data-stu-id="221dd-104">The Windows Forms <xref:System.Windows.Forms.StatusBar> control is used on forms as an area, usually displayed at the bottom of a window, in which an application can display various kinds of status information.</span></span> <span data-ttu-id="221dd-105"><xref:System.Windows.Forms.StatusBar> Steuerelemente können Statusleistenbereichs darauf enthalten, Symbole, um anzugeben, Status oder eine Reihe von Symbolen in einer Animation, die darauf hinweisen, dass ein Prozess ausgeführt wird. Beispielsweise wird Microsoft Word zeigt an, dass das Dokument gespeichert.</span><span class="sxs-lookup"><span data-stu-id="221dd-105"><xref:System.Windows.Forms.StatusBar> controls can have status-bar panels on them that display icons to indicate state, or a series of icons in an animation that indicate a process is working; for example, Microsoft Word indicating that the document is being saved.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7da03-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="7da03-106">In This Section</span></span>  
- [<span data-ttu-id="7da03-107">Übersicht über das StatusBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="7da03-107">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  
- <span data-ttu-id="7da03-108">Stellt die allgemeinen Konzepte von der <xref:System.Windows.Forms.StatusBar> -Steuerelement, das ermöglicht es Benutzern, relevanten Informationen für das Steuerelement anzuzeigen, die Fokus besitzt.</span><span class="sxs-lookup"><span data-stu-id="7da03-108">Introduces the general concepts of the <xref:System.Windows.Forms.StatusBar> control, which enables users to see relevant information for the control that has focus.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="221dd-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="221dd-106">In This Section</span></span>  
+ [<span data-ttu-id="221dd-107">Übersicht über das StatusBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="221dd-107">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  
+ <span data-ttu-id="221dd-108">Stellt die allgemeinen Konzepte von der <xref:System.Windows.Forms.StatusBar> -Steuerelement, das ermöglicht es Benutzern, relevanten Informationen für das Steuerelement anzuzeigen, die Fokus besitzt.</span><span class="sxs-lookup"><span data-stu-id="221dd-108">Introduces the general concepts of the <xref:System.Windows.Forms.StatusBar> control, which enables users to see relevant information for the control that has focus.</span></span>  
   
- [<span data-ttu-id="7da03-109">Vorgehensweise: Hinzufügen von Bereichen zu einem StatusBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="7da03-109">How to: Add Panels to a StatusBar Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
- <span data-ttu-id="7da03-110">Erläutert das Hinzufügen programmierbarer Bereiche der <xref:System.Windows.Forms.StatusBar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="7da03-110">Explains how to add programmable panels to the <xref:System.Windows.Forms.StatusBar> control.</span></span>  
+ [<span data-ttu-id="221dd-109">Vorgehensweise: Hinzufügen von Bereichen zu einem StatusBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="221dd-109">How to: Add Panels to a StatusBar Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
+ <span data-ttu-id="221dd-110">Erläutert das Hinzufügen programmierbarer Bereiche der <xref:System.Windows.Forms.StatusBar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="221dd-110">Explains how to add programmable panels to the <xref:System.Windows.Forms.StatusBar> control.</span></span>  
   
- [<span data-ttu-id="7da03-111">Vorgehensweise: Bestimmen, auf welchen Bereich im StatusBar-Steuerelement in Windows Forms geklickt wurde</span><span class="sxs-lookup"><span data-stu-id="7da03-111">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- <span data-ttu-id="7da03-112">Erläutert das behandeln <xref:System.Windows.Forms.Control.Click> Ereignisse ausgelöst werden, aus der <xref:System.Windows.Forms.StatusBar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="7da03-112">Explains how to handle <xref:System.Windows.Forms.Control.Click> events raised from the <xref:System.Windows.Forms.StatusBar> control.</span></span>  
+ [<span data-ttu-id="221dd-111">Vorgehensweise: Bestimmen, auf welchen Bereich im StatusBar-Steuerelement in Windows Forms geklickt wurde</span><span class="sxs-lookup"><span data-stu-id="221dd-111">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ <span data-ttu-id="221dd-112">Erläutert das behandeln <xref:System.Windows.Forms.Control.Click> Ereignisse ausgelöst werden, aus der <xref:System.Windows.Forms.StatusBar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="221dd-112">Explains how to handle <xref:System.Windows.Forms.Control.Click> events raised from the <xref:System.Windows.Forms.StatusBar> control.</span></span>  
   
- [<span data-ttu-id="7da03-113">Gewusst wie: Festlegen der Größe eines Statusleistenbereichs</span><span class="sxs-lookup"><span data-stu-id="7da03-113">How to: Set the Size of Status-Bar Panels</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
- <span data-ttu-id="7da03-114">Bietet Informationen über die Eigenschaften, die die Breite des Steuerelements, und ändern Sie die Größe eines Statusleistenbereichs Verhalten zur Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="7da03-114">Gives details on the properties that control the width and resize behavior of status-bar panels at run time.</span></span>  
+ [<span data-ttu-id="221dd-113">Gewusst wie: Festlegen der Größe eines Statusleistenbereichs</span><span class="sxs-lookup"><span data-stu-id="221dd-113">How to: Set the Size of Status-Bar Panels</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
+ <span data-ttu-id="221dd-114">Bietet Informationen über die Eigenschaften, die die Breite des Steuerelements, und ändern Sie die Größe eines Statusleistenbereichs Verhalten zur Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="221dd-114">Gives details on the properties that control the width and resize behavior of status-bar panels at run time.</span></span>  
   
- [<span data-ttu-id="7da03-115">Exemplarische Vorgehensweise: Aktualisieren von Statusleisteninformationen zur Laufzeit</span><span class="sxs-lookup"><span data-stu-id="7da03-115">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
- <span data-ttu-id="7da03-116">Erläutert, wie die Daten im Statusleistenbereichs programmgesteuert zu kontrollieren.</span><span class="sxs-lookup"><span data-stu-id="7da03-116">Explains how to programmatically control the data within status-bar panels.</span></span>  
+ [<span data-ttu-id="221dd-115">Exemplarische Vorgehensweise: Aktualisieren von Statusleisteninformationen zur Laufzeit</span><span class="sxs-lookup"><span data-stu-id="221dd-115">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
+ <span data-ttu-id="221dd-116">Erläutert, wie die Daten im Statusleistenbereichs programmgesteuert zu kontrollieren.</span><span class="sxs-lookup"><span data-stu-id="221dd-116">Explains how to programmatically control the data within status-bar panels.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="7da03-117">Verweis</span><span class="sxs-lookup"><span data-stu-id="7da03-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="221dd-117">Referenz</span><span class="sxs-lookup"><span data-stu-id="221dd-117">Reference</span></span>  
  <xref:System.Windows.Forms.StatusBar>  
- <span data-ttu-id="7da03-118">Enthält Referenzinformationen zur Klasse und zu ihren Membern.</span><span class="sxs-lookup"><span data-stu-id="7da03-118">Provides reference information on the class and its members.</span></span>  
+ <span data-ttu-id="221dd-118">Enthält Referenzinformationen zur Klasse und zu ihren Membern.</span><span class="sxs-lookup"><span data-stu-id="221dd-118">Provides reference information on the class and its members.</span></span>  
   
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- <span data-ttu-id="7da03-119">Ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.StatusBar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="7da03-119">Replaces and adds functionality to the <xref:System.Windows.Forms.StatusBar> control.</span></span>  
+ <span data-ttu-id="221dd-119">Ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.StatusBar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="221dd-119">Replaces and adds functionality to the <xref:System.Windows.Forms.StatusBar> control.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="7da03-120">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="7da03-120">Related Sections</span></span>  
- [<span data-ttu-id="7da03-121">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="7da03-121">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="7da03-122">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="7da03-122">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="221dd-120">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="221dd-120">Related Sections</span></span>  
+ [<span data-ttu-id="221dd-121">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="221dd-121">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="221dd-122">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="221dd-122">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

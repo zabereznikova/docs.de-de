@@ -1,27 +1,17 @@
 ---
-title: "Vorgehensweise: zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ) (Visual Basic)"
-ms.custom: 
+title: 'Vorgehensweise: zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 82b40e11a72d26858cc2b0b5c0c759517f5b5ee3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a2e7b59ee1d289fe794fb83705d42ac0e48fb4a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="a924c-102">Vorgehensweise: zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a924c-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="a924c-103">Dieses Beispiel zeigt, wie Sie eine LINQ-Abfrage verwenden, um die Vorkommen eines angegebenen Worts in einer Zeichenfolge zu zählen.</span><span class="sxs-lookup"><span data-stu-id="a924c-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="a924c-104">Beachten Sie, dass zuerst die <xref:System.String.Split%2A>-Methode aufgerufen wird, um ein Array von Worten zu erstellen, damit die Zählung ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="a924c-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="a924c-105">Für die <xref:System.String.Split%2A>-Methode werden Leistungskosten berechnet.</span><span class="sxs-lookup"><span data-stu-id="a924c-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="a924c-106">Wenn der einzige Vorgang in der Zeichenfolge die Zählung der Wörter ist, überlegen Sie sich, ob Sie nicht stattdessen die <xref:System.Text.RegularExpressions.Regex.Matches%2A>- oder <xref:System.String.IndexOf%2A>-Methode verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="a924c-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="a924c-107">Wenn jedoch die Leistung kein zentrales Problem ist oder Sie die Sequenz in eine Reihenfolge gebracht haben, um andere Abfragetypen darauf auszuführen, macht es Sinn, auch LINQ zum Zählen der Wörter oder Sätze zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="a924c-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="80c2d-102">Vorgehensweise: zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="80c2d-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="80c2d-103">Dieses Beispiel zeigt, wie Sie eine LINQ-Abfrage verwenden, um die Vorkommen eines angegebenen Worts in einer Zeichenfolge zu zählen.</span><span class="sxs-lookup"><span data-stu-id="80c2d-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="80c2d-104">Beachten Sie, dass zuerst die <xref:System.String.Split%2A>-Methode aufgerufen wird, um ein Array von Worten zu erstellen, damit die Zählung ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="80c2d-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="80c2d-105">Für die <xref:System.String.Split%2A>-Methode werden Leistungskosten berechnet.</span><span class="sxs-lookup"><span data-stu-id="80c2d-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="80c2d-106">Wenn der einzige Vorgang in der Zeichenfolge die Zählung der Wörter ist, überlegen Sie sich, ob Sie nicht stattdessen die <xref:System.Text.RegularExpressions.Regex.Matches%2A>- oder <xref:System.String.IndexOf%2A>-Methode verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="80c2d-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="80c2d-107">Wenn jedoch die Leistung kein zentrales Problem ist oder Sie die Sequenz in eine Reihenfolge gebracht haben, um andere Abfragetypen darauf auszuführen, macht es Sinn, auch LINQ zum Zählen der Wörter oder Sätze zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="80c2d-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a924c-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a924c-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="80c2d-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="80c2d-108">Example</span></span>  
   
 ```vb  
 Class CountWords  
@@ -66,8 +56,8 @@ End Class
 ' 3 occurrence(s) of the search term "data" were found.  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a924c-109">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="a924c-109">Compiling the Code</span></span>  
- <span data-ttu-id="a924c-110">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.</span><span class="sxs-lookup"><span data-stu-id="a924c-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="80c2d-109">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="80c2d-109">Compiling the Code</span></span>  
+ <span data-ttu-id="80c2d-110">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.</span><span class="sxs-lookup"><span data-stu-id="80c2d-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a924c-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a924c-111">See Also</span></span>  
- [<span data-ttu-id="a924c-112">LINQ und Zeichenfolgen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a924c-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="80c2d-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="80c2d-111">See Also</span></span>  
+ [<span data-ttu-id="80c2d-112">LINQ und Zeichenfolgen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="80c2d-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
