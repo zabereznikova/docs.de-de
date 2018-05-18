@@ -1,9 +1,7 @@
 ---
 title: Datenfluss (Task Parallel Library)
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,15 +11,11 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 386d7a4ce7168fbe70d9037254a1540b7bf00478
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5581f825a23104ff005f3557de26420ee45b5c27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>Datenfluss (Task Parallel Library)
 <a name="top"></a> Die Task Parallel Library (TPL) stellt Datenflusskomponenten bereit, um die Stabilität von nebenläufigkeitsfähigen Anwendungen zu erhöhen. Diese Datenflusskomponenten werden zusammen als *TPL-Datenflussbibliothek* bezeichnet. Dieses Datenflussmodell begünstigt die akteurbasierte Programmierung durch eine prozessinterne Nachrichtenübergabe für simple Datenfluss- und Pipelineaufgaben. Die Datenflusskomponenten basieren auf den Typen und der Planungsinfrastruktur der TPL und sind in die C#-, Visual Basic- und F#-Sprachunterstützung für asynchrone Programmierung integriert. Diese Datenflusskomponenten sind hilfreich, wenn mehrere Vorgänge vorliegen, die asynchron miteinander kommunizieren müssen, oder wenn Sie Daten verarbeiten möchten, die gerade verfügbar werden. Denken Sie beispielsweise an eine Anwendung, die Bilddaten von einer Webcam verarbeitet. Durch das Datenflussmodell kann die Anwendung Bildframes verarbeiten, sobald diese verfügbar sind. Wenn die Anwendung Bildframes beispielsweise durch Lichtkorrektur oder Rote-Augen-Reduktion aufbessert, können Sie eine *Pipeline* von Datenflusskomponenten erstellen. Jede Phase der Pipeline kann grober strukturierte Parallelitätsfunktionen verwenden, wie z. B. die von der TPL bereitgestellten Funktionen zum Transformieren des Bilds.  

@@ -1,30 +1,19 @@
 ---
 title: Implementierung von freigegebenen Verhaltensweisen in der XslTransform-Klasse
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 98ad31039b5351a7dc4aa3cf033ae8cd0f896b7b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3c2ffa755c642b2a3c7dd47d7007bff7239f500f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementierung von freigegebenen Verhaltensweisen in der XslTransform-Klasse
 > [!NOTE]
->  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)-Klasse und [Migrieren von der XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)-Klasse.  
+>  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Freigegebene Verhaltensweisen sind die in der W3C-Empfehlung zu XSL-Transformationen (XSLT), Version 1.0 (www.w3.org/TR/xslt), aufgelisteten Verhaltensweisen, bei denen der Implemetierungsanbieter eine von mehreren Optionen zur Behandlung einer bestimmten Situation auswählt. Laut W3C-Empfehlung, Abschnitt 7.3, "Creating Processing Instructions", liegt z. B. ein Fehler vor, wenn durch Instanziierung des Inhalts von `xsl:processing-instruction` außer Textknoten auch andere Knoten erstellt werden. Bei bestimmten Problemen nennt das W3C auch Maßnahmen für den Fall, dass der Prozessor eine Wiederherstellung vom Fehler durchführt. Für das in Abschnitt 7.3 angeführte Problem empfiehlt das W3C, die Knoten einschließlich des Inhalts zu ignorieren, damit die Implementierung von diesem Fehler wiederherstellen kann.  
   
@@ -81,7 +70,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="optional-features-supported"></a>Unterstützte optionale Funktionen  
  In der folgenden Tabelle sind die Funktionen aufgeführt, die ein XSLT-Prozessor optional implementieren kann und die in der <xref:System.Xml.Xsl.XslTransform>-Klasse implementiert sind.  
   
-|Funktion|Referenzdokumentation|Hinweise|  
+|Feature|Referenzdokumentation|Hinweise|  
 |-------------|------------------------|-----------|  
 |Das `disable-output-escaping`-Attribut für das `<xsl:text...>`-Tag und das `<xsl:value-of...>`-Tag.|W3C-Empfehlung zu XSLT 1.0,<br /><br /> Abschnitt 16.4|Das `disable-output-escaping`-Attribut wird ignoriert, wenn das `xsl:text`-Element oder das `xsl:value-of`-Element in einem `xsl:comment`-Element, einem `xsl:processing-instruction`-Element oder einem `xsl:attribute`-Element verwendet wird.<br /><br /> Ergebnisstrukturfragmente, die Text enthalten, und deren Textausgabe nicht geschützt wurde, werden nicht unterstützt.<br /><br /> Das disable-output-escaping<xref:System.Xml.XmlReader>-Attribut wird bei der Transformation in ein <xref:System.Xml.XmlWriter>-Objekt oder ein -Objekt ignoriert.|  
   

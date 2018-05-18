@@ -1,26 +1,15 @@
 ---
-title: "Ändern von Knoten, Inhalten und Werten in einem XML-Dokument"
-ms.custom: 
+title: Ändern von Knoten, Inhalten und Werten in einem XML-Dokument
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 72039faef3bcde4db830d110938266c63689219e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 716270450a5f0ede545ffcbd906b0a42f547c20f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Ändern von Knoten, Inhalten und Werten in einem XML-Dokument
 Es gibt viele Möglichkeiten, die Knoten und den Inhalt eines Dokuments zu ändern. Sie haben folgende Möglichkeiten:  

@@ -1,29 +1,18 @@
 ---
 title: Verwenden von Threads und Threading
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5bed13950a29cfa787ef8c9eb2608c6d74dfd49f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 725a47cae6e3e91cf9e7385427bceece81f3c918
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
 Die Themen in diesem Abschnitt erläutern die Erstellung und Verwaltung von verwalteten Threads, das Übergeben von Daten an verwaltete Threads und Abrufen der Ergebnisse sowie das Zerstören von Threads und Behandeln einer <xref:System.Threading.ThreadAbortException>.  
@@ -41,7 +30,7 @@ Die Themen in diesem Abschnitt erläutern die Erstellung und Verwaltung von verw
  [Scheduling von Threads](../../../docs/standard/threading/scheduling-threads.md)  
  Erläutert Threadprioritäten und deren Einfluss auf die Threadplanung.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Threading.Thread>  
  Stellt die Referenzdokumentation für die <xref:System.Threading.Thread>-Klasse bereit, die einen verwalteten Thread repräsentiert, und zwar unabhängig davon, ob er von nicht verwaltetem Code stammt oder in einer verwalteten Anwendung erstellt wurde.  
   

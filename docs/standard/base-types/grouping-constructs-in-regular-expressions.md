@@ -1,13 +1,7 @@
 ---
-title: "Gruppierungskonstrukte in regulären Ausdrücken"
-ms.custom: 
+title: Gruppierungskonstrukte in regulären Ausdrücken
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 0830ec4022ca789d9aac0d1ae2c10ae6f76cc75e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Gruppierungskonstrukte in regulären Ausdrücken
 Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab und zeichnen die Teilzeichenfolgen einer Eingabezeichenfolge auf. Mit Gruppierungskonstrukten können Sie folgende Schritte ausführen:  
@@ -43,7 +32,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
 -   Rufen Sie einzelne Teilausdrücke aus der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft ab, und verarbeiten Sie sie getrennt vom entsprechenden Text als Ganzes.  
   
- Die folgende Tabelle führt die Gruppierungskonstrukte auf, die von dem .NET-Modul für reguläre Ausdrücke unterstützt werden, und gibt an, ob sie erfassend oder nicht erfassend sind.  
+ Die folgende Tabelle führt die Gruppierungskonstrukte auf, die von der .NET-Engine für reguläre Ausdrücke unterstützt werden, und gibt an, ob sie erfassend oder nicht erfassend sind.  
   
 |Gruppierungskonstrukt|Erfassend oder nicht erfassend|  
 |------------------------|-------------------------------|  
@@ -226,12 +215,12 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |`[^<>]*`|Finden Sie eine Entsprechung für null oder mehr Vorkommen eines die oft ausgegebene Befehlszeilen  Zeichens, das weder eine linke noch eine rechte spitze Klammern ist.|  
 |`((?'Close-Open'>)[^<>]*)+`|Finden Sie eine Entsprechung für ein oder mehr Vorkommen einer rechten spitzen Klammer, gefolgt von einem die oft ausgegebene Befehlszeilen  Zeichen, das weder eine linke noch eine rechte spitze Klammern ist. Wenn Sie die öffnende spitze Klammer zuordnen, weisen Sie die Teilzeichenfolge zwischen der `Open` -Gruppe und der aktuellen Gruppe der `Close` -Gruppe zu, und löschen Sie die Definition der `Open` -Gruppe. Dies ist die dritte Erfassungsgruppe.|  
 |`(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*`|Finden Sie eine Entsprechung für null oder mehr Vorkommen des folgenden Musters: ein oder mehr Vorkommen einer linken spitzen Klammer, gefolgt von null oder mehr Zeichen, die keine spitzen Klammern sind, gefolgt von einem oder mehr Vorkommen einer rechten spitzen Klammer, gefolgt von null oder mehr Vorkommen von nicht spitzen Klammern. Löschen Sie beim Abgleichen der schließenden spitzen Klammer die Definition der `Open` -Gruppe, und weisen Sie der `Open` -Gruppe die Teilzeichenfolge zwischen der `Close` -Gruppe und der aktuellen Gruppe zu. Dies ist die erste Erfassungsgruppe.|  
-|`(?(Open)(?!))`|Wenn die `Open` -Gruppe vorhanden ist und eine leere Zeichenfolge abgeglichen werden kann, geben Sie die Übereinstimmung auf, erhöhen Sie dabei jedoch nicht die Position des Moduls für den regulären Ausdruch in der Zeichenfolge. Dies ist eine negative Lookaheadassertion mit einer Breite von Null. Da eine leere Zeichenfolge in einer Eingabezeichenfolge immer implizit vorhanden ist, schlägt diese Übereinstimmung immer fehl. Das Fehlschlagen dieser Übereinstimmung weist darauf hin, dass die spitzen Klammern nicht ausgeglichen sind.|  
+|`(?(Open)(?!))`|Wenn die `Open`-Gruppe vorhanden ist und eine leere Zeichenfolge abgeglichen werden kann, geben Sie die Übereinstimmung auf, erhöhen Sie dabei jedoch nicht die Position der Engine für den regulären Ausdruck in der Zeichenfolge. Dies ist eine negative Lookaheadassertion mit einer Breite von Null. Da eine leere Zeichenfolge in einer Eingabezeichenfolge immer implizit vorhanden ist, schlägt diese Übereinstimmung immer fehl. Das Fehlschlagen dieser Übereinstimmung weist darauf hin, dass die spitzen Klammern nicht ausgeglichen sind.|  
 |`$`|Entsprechung für das Ende der Eingabezeichenfolge finden.|  
   
- Der abschließende Teilausdruck, `(?(Open)(?!))`, gibt an, ob die Schachtelungskonstrukte in der Eingabezeichenfolge ausgeglichen sind (z. B. ob jeder öffnenden spitzen Klammer eine entsprechende schließende spitze Klammer zugeordnet ist). Dabei wird eine bedingte Übereinstimmung auf Grundlage einer gültigen erfassten Gruppe verwendet. Weitere Informationen finden Sie unter [Alternation Constructs](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md). Wenn die `Open` -Gruppe definiert ist, versucht das Modul für reguläre Ausdrücke, eine Entsprechung für den `(?!)` -Teilausdruck in der Eingabezeichenfolge zu finden. Die `Open` -Gruppe sollte nur definiert werden, wenn Schachtelungskonstrukte nicht ausgeglichen sind. Daher sollte das in der Eingabezeichenfolge zu findende Muster immer dazu führen, dass die Übereinstimmung fehlschlägt. In diesem Fall ist `(?!)` eine negative Lookaheadassertion mit einer Breite von Null, die immer fehlschlägt, da eine leere Zeichenfolge immer an der nächsten Position in der Eingabezeichenfolge implizit vorhanden ist.  
+ Der abschließende Teilausdruck, `(?(Open)(?!))`, gibt an, ob die Schachtelungskonstrukte in der Eingabezeichenfolge ausgeglichen sind (z. B. ob jeder öffnenden spitzen Klammer eine entsprechende schließende spitze Klammer zugeordnet ist). Dabei wird eine bedingte Übereinstimmung auf Grundlage einer gültigen erfassten Gruppe verwendet. Weitere Informationen finden Sie unter [Alternation Constructs](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md). Wenn die `Open`-Gruppe definiert ist, versucht die Engine für reguläre Ausdrücke, eine Entsprechung für den `(?!)`-Teilausdruck in der Eingabezeichenfolge zu finden. Die `Open` -Gruppe sollte nur definiert werden, wenn Schachtelungskonstrukte nicht ausgeglichen sind. Daher sollte das in der Eingabezeichenfolge zu findende Muster immer dazu führen, dass die Übereinstimmung fehlschlägt. In diesem Fall ist `(?!)` eine negative Lookaheadassertion mit einer Breite von Null, die immer fehlschlägt, da eine leere Zeichenfolge immer an der nächsten Position in der Eingabezeichenfolge implizit vorhanden ist.  
   
- Bei diesem Beispiel wertet das Modul des regulären Ausdrucks die Eingabezeichenfolge „\<abc><mno\<xyz>>“ wie in der folgenden Tabelle angezeigt aus.  
+ Bei diesem Beispiel wertet die Engine des regulären Ausdrucks die Eingabezeichenfolge „\<abc&gt;&lt;mno\<xyz&gt;&gt;“ wie in der folgenden Tabelle angezeigt aus.  
   
 |Schritt|Muster|Ergebnis|  
 |----------|-------------|------------|  
@@ -239,24 +228,24 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |2|`[^<>]*`|Sucht vor der öffnenden spitzen Klammer nach Zeichen, die keine spitzen Klammern sind; findet keine Übereinstimmungen.|  
 |3|`(((?'Open'<)`|Findet eine Entsprechung für die öffnende spitze Klammer in „\<abc>“ und weist sie der `Open`-Gruppe zu.|  
 |4|`[^<>]*`|Entspricht "abc".|  
-|5|`)+`|"<abc" ist der Wert der zweiten erfassten Gruppe.<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist keine öffnende spitze Klammer. Deshalb führt das Modul für reguläre Ausdrücke keine Schleife zurück zum `(?'Open'<)[^<>]*)` -Teilmuster aus.|  
+|5|`)+`|"<abc" ist der Wert der zweiten erfassten Gruppe.<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist keine öffnende spitze Klammer. Deshalb führt die Engine für reguläre Ausdrücke keine Schleife zurück zum `(?'Open'<)[^<>]*)`-Teilmuster aus.|  
 |6|`((?'Close-Open'>)`|Findet eine Entsprechung für die schließende spitze Klammer in „\<abc>“, weist „abc“ (die Teilzeichenfolge zwischen der `Open`-Gruppe und der schließenden spitzen Klammer) der `Close`-Gruppe zu und löscht den aktuellen Wert („<“) der `Open`-Gruppe, der dann leer bleibt.|  
 |7|`[^<>]*`|Sucht nach der schließenden spitzen Klammer nach Zeichen, die keine spitzen Klammern sind; findet keine Übereinstimmungen.|  
-|8|`)+`|Der Wert der dritten erfassten Gruppe ist ">".<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist keine schließende spitze Klammer. Deshalb führt das Modul für reguläre Ausdrücke keine Schleife zurück zum `((?'Close-Open'>)[^<>]*)` -Teilmuster aus.|  
-|9|`)*`|Der Wert der ersten erfassten Gruppe ist „\<abc>“.<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist eine öffnende spitze Klammer, weshalb das Modul für reguläre Ausdrücke eine Schleife zurück zum `(((?'Open'<)` -Teilmuster ausführt.|  
+|8|`)+`|Der Wert der dritten erfassten Gruppe ist ">".<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist keine schließende spitze Klammer. Deshalb führt die Engine für reguläre Ausdrücke keine Schleife zurück zum `((?'Close-Open'>)[^<>]*)`-Teilmuster aus.|  
+|9|`)*`|Der Wert der ersten erfassten Gruppe ist „\<abc>“.<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist eine öffnende spitze Klammer, weshalb die Engine für reguläre Ausdrücke eine Schleife zurück zum `(((?'Open'<)` -Teilmuster ausführt.|  
 |10|`(((?'Open'<)`|Findet eine Entsprechung für die öffnende spitze Klammer in „\<mno>“ und weist sie der `Open`-Gruppe zu. Die <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Auflistung verfügt jetzt über einen einzelnen Wert "<".|  
 |11|`[^<>]*`|Entspricht "mno".|  
-|12|`)+`|"<mno" ist der Wert der zweiten erfassten Gruppe.<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist eine öffnende spitze Klammer, weshalb das Modul für reguläre Ausdrücke eine Schleife zurück zum `(?'Open'<)[^<>]*)` -Teilmuster ausführt.|  
+|12|`)+`|"<mno" ist der Wert der zweiten erfassten Gruppe.<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist eine öffnende spitze Klammer, weshalb die Engine für reguläre Ausdrücke eine Schleife zurück zum `(?'Open'<)[^<>]*)`-Teilmuster ausführt.|  
 |13|`(((?'Open'<)`|Findet eine Entsprechung für die öffnende spitze Klammer in „\<xyz>“ und weist sie der `Open`-Gruppe zu. Die <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Auflistung der `Open`-Gruppe schließt jetzt zwei Erfassungen ein: die öffnende spitze Klammer von „\<mno>“ und die öffnende spitze Klammer von „\<xyz>“.|  
 |14|`[^<>]*`|Entspricht "xyz".|  
-|15|`)+`|"<xyz" ist der Wert der zweiten erfassten Gruppe.<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist keine öffnende spitze Klammer. Deshalb führt das Modul für reguläre Ausdrücke keine Schleife zurück zum `(?'Open'<)[^<>]*)` -Teilmuster aus.|  
+|15|`)+`|"<xyz" ist der Wert der zweiten erfassten Gruppe.<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist keine öffnende spitze Klammer. Deshalb führt die Engine für reguläre Ausdrücke keine Schleife zurück zum `(?'Open'<)[^<>]*)`-Teilmuster aus.|  
 |16|`((?'Close-Open'>)`|Findet eine Übereinstimmung für die schließende spitze Klammer in „\<xyz>“. „xyz“ weist die Teilzeichenfolge zwischen der `Open` -Gruppe und der schließenden spitzen Klammer der `Close` -Gruppe zu und löscht den aktuellen Wert der `Open` -Gruppe. Der Wert der vorherigen Erfassung (die öffnende spitze Klammer in „\<mno>“) wird zum aktuellen Wert der `Open`-Gruppe. Die <xref:System.Text.RegularExpressions.Group.Captures%2A>-Auflistung der `Open`-Gruppe schließt jetzt eine einzelne Erfassung ein, die öffnende spitze Klammer von „\<xyz>“.|  
 |17|`[^<>]*`|Sucht nach Zeichen, die keine spitzen Klammern sind; findet keine Übereinstimmungen.|  
-|18|`)+`|Der Wert der dritten erfassten Gruppe ist ">".<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist eine schließende spitze Klammer, weshalb das Modul für reguläre Ausdrücke eine Schleife zurück zum `((?'Close-Open'>)[^<>]*)` -Teilmuster ausführt.|  
+|18|`)+`|Der Wert der dritten erfassten Gruppe ist ">".<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist eine schließende spitze Klammer, weshalb die Engine für reguläre Ausdrücke eine Schleife zurück zum `((?'Close-Open'>)[^<>]*)`-Teilmuster ausführt.|  
 |19|`((?'Close-Open'>)`|Findet eine Entsprechung für die abschließende rechte spitze Klammer in „xyz>>“, weist „mno\<xyz>“ (die Teilzeichenfolge zwischen der `Open`-Gruppe und der schließenden spitzen Klammer) der `Close`-Gruppe zu und löscht den aktuellen Wert der `Open`-Gruppe. Die `Open` -Gruppe ist jetzt leer.|  
 |20|`[^<>]*`|Sucht nach Zeichen, die keine spitzen Klammern sind; findet keine Übereinstimmungen.|  
-|21|`)+`|Der Wert der dritten erfassten Gruppe ist ">".<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist keine schließende spitze Klammer. Deshalb führt das Modul für reguläre Ausdrücke keine Schleife zurück zum `((?'Close-Open'>)[^<>]*)` -Teilmuster aus.|  
-|22|`)*`|Der Wert der ersten erfassten Gruppe ist „<mno\<xyz>“.<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist keine öffnende spitze Klammer. Deshalb führt das Modul für reguläre Ausdrücke keine Schleife zurück zum `(((?'Open'<)` -Teilmuster aus.|  
+|21|`)+`|Der Wert der dritten erfassten Gruppe ist ">".<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist keine schließende spitze Klammer. Deshalb führt die Engine für reguläre Ausdrücke keine Schleife zurück zum `((?'Close-Open'>)[^<>]*)`-Teilmuster aus.|  
+|22|`)*`|Der Wert der ersten erfassten Gruppe ist „<mno\<xyz>“.<br /><br /> Das nächste Zeichen in der Eingabezeichenfolge ist keine öffnende spitze Klammer. Deshalb führt die Engine für reguläre Ausdrücke keine Schleife zurück zum `(((?'Open'<)`-Teilmuster aus.|  
 |23|`(?(Open)(?!))`|Die `Open` -Gruppe ist nicht definiert, sodass keine Übereinstimmung gesucht wird.|  
 |24|`$`|Gleicht das Ende der Eingabezeichenfolge ab.|  
   
@@ -431,11 +420,11 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  wobei *Teilausdruck* ein beliebiges Muster eines regulären Ausdrucks ist.  
   
- Wenn ein regulärer Ausdruck ein optionales oder alternatives übereinstimmendes Muster einschließt und eine Übereinstimmung nicht erfolgreich ist, kann sich das Modul für reguläre Ausdrücke in mehrere Richtungen verzweigen, um eine Entsprechung zwischen einer Eingabezeichenfolge und einem Muster zu finden. Wenn eine Übereinstimmung nach der ersten Verzweigung nicht gefunden wird, kann das Modul für reguläre Ausdrücke den Punkt der ersten Übereinstimmung sichern bzw. den Punkt zurückverfolgen und die Übereinstimmung mithilfe der zweiten Verzweigung durchführen. Dieser Prozess kann fortgesetzt werden, bis alle Verzweigungen versucht wurden.  
+ Wenn ein regulärer Ausdruck ein optionales oder alternatives übereinstimmendes Muster einschließt und eine Übereinstimmung nicht erfolgreich ist, kann sich die Engine für reguläre Ausdrücke in mehrere Richtungen verzweigen, um eine Entsprechung zwischen einer Eingabezeichenfolge und einem Muster zu finden. Wenn eine Übereinstimmung nach der ersten Verzweigung nicht gefunden wird, kann die Engine für reguläre Ausdrücke den Punkt der ersten Übereinstimmung sichern bzw. den Punkt zurückverfolgen und die Übereinstimmung mithilfe der zweiten Verzweigung durchführen. Dieser Prozess kann fortgesetzt werden, bis alle Verzweigungen versucht wurden.  
   
- Die `(?>`*Teilausdruck*`)` deaktiviert die Rückverfolgung. Das Modul für reguläre Ausdrücke stimmt mit so vielen Zeichen in der Eingabezeichenfolge überein wie möglich. Wenn keine weitere Übereinstimmung möglich ist, findet keine Rückverfolgung statt, um alternative Musterübereinstimmungen zu versuchen. (Das heißt, der Teilausdruck sucht nur Entsprechungen für Zeichenfolgen, zu denen der Teilausdruck allein passen würde. Er versucht nicht, eine Entsprechung für eine Zeichenfolge auf Grundlage des Teilausdrucks und beliebige folgende Teilausdrücke zu finden.)  
+ Die `(?>`*Teilausdruck*`)` deaktiviert die Rückverfolgung. Die Engine für reguläre Ausdrücke stimmt mit so vielen Zeichen in der Eingabezeichenfolge überein wie möglich. Wenn keine weitere Übereinstimmung möglich ist, findet keine Rückverfolgung statt, um alternative Musterübereinstimmungen zu versuchen. (Das heißt, der Teilausdruck sucht nur Entsprechungen für Zeichenfolgen, zu denen der Teilausdruck allein passen würde. Er versucht nicht, eine Entsprechung für eine Zeichenfolge auf Grundlage des Teilausdrucks und beliebige folgende Teilausdrücke zu finden.)  
   
- Diese Option wird empfohlen, wenn Sie wissen, dass eine Rückverfolgung nicht erfolgreich ist. Indem verhindert wird, dass vom Modul für reguläre Ausdrücke unnötige Suchläufe durchgeführt werden, wird die Leistung verbessert.  
+ Diese Option wird empfohlen, wenn Sie wissen, dass eine Rückverfolgung nicht erfolgreich ist. Indem verhindert wird, dass von der Engine für reguläre Ausdrücke unnötige Suchläufe durchgeführt werden, wird die Leistung verbessert.  
   
  Im folgenden Beispiel wird veranschaulicht, wie ein nicht zurückverfolgender Teilausdruck die Ergebnisse einer Musterübereinstimmung ändert. Der rückverfolgende reguläre Ausdruck findet erfolgreich eine Entsprechung für eine Reihe von Zeichen, die von einem weiteren Vorkommen des gleichen Zeichens bei einer Wortgrenze gefolgt wird. Beim regulären Ausdruck ohne Rückverfolgung ist dies nicht der Fall.  
   

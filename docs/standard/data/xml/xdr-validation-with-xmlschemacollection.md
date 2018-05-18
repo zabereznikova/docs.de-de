@@ -1,29 +1,18 @@
 ---
-title: "XDR-Validierung mit „XmlSchemaCollection“"
-ms.custom: 
+title: XDR-Validierung mit „XmlSchemaCollection“
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f875169d43a2f733050b46c76cea0891b4cfabf7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4d4e970423693bbe221f0146ecc07dd69e27bc35
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XDR-Validierung mit „XmlSchemaCollection“
 Wenn das XDR-Schema (XML-Data Reduced), anhand dessen validiert wird, in der **XmlSchemaCollection** gespeichert ist, wird es dem beim Hinzufügen des Schemas zur Auflistung angegebenen Namespace-URI zugeordnet. **XmlValidatingReader** ordnet den Namespace-URI im XML-Dokument dem Schema zu, das diesem URI in der Auflistung entspricht.  

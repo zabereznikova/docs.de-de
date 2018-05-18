@@ -1,13 +1,6 @@
 ---
 title: Mpgo.exe (verwaltetes, profilgesteuertes Optimierungstool)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Mpgo.exe
 - training scenarios, generating profiles with
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49d2154b1af4350c3145f2cb9be30505e0967a4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 42e1fb080ac0af34c621cef3a991cad7bcf603ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (verwaltetes, profilgesteuertes Optimierungstool)
 Das verwaltete, profilgesteuerte Optimierungstool (Managed, Profile Guides Optimization Tool, Mpgo.exe) ist ein Befehlszeilentool, das allgemeine Endbenutzerszenarios verwendet, um die vom [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) erstellten Assemblys nativer Bilder zu optimieren. Mit diesem Tool können Sie Aus- und Weiterbildungsszenarien ausführen, die Profildaten generieren. Der [Native Image Generator (Ngen.exe) ](../../../docs/framework/tools/ngen-exe-native-image-generator.md) verwendet diese Daten, um die generierten Anwendungsassemblys nativer Bilder zu optimieren. Ein Aus- und Weiterbildungsszenario ist die Testausführung einer erwarteten Nutzung Ihrer Anwendung. Mpgo.exe ist in Visual Studio Ultimate 2012 und höheren Versionen verfügbar. Ab [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] können Sie Mpgo.exe auch zum Optimieren von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden.  

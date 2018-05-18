@@ -1,13 +1,7 @@
 ---
 title: Backtracking in regulären Ausdrücken
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,24 +16,19 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
-<a name="top"></a> Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)enthält und das Modul für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung des Moduls für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich das Modul für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
+<a name="top"></a> Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)enthält und das Modul für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung der Engine für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich die Engine für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
   
 > [!NOTE]
->  Bei einem NFA-Modul (Nondeterministic Finite Automaton) wie dem .NET-Modul für reguläre Ausdrücke liegt die Verantwortung für die Erstellung effizienter und schneller regulärer Ausdrücke im Allgemeinen beim Entwickler.  
+>  Bei einer NFA-Engine (Nondeterministic Finite Automaton) wie der .NET-Engine für reguläre Ausdrücke liegt die Verantwortung für die Erstellung effizienter und schneller regulärer Ausdrücke im Allgemeinen beim Entwickler.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -53,14 +42,14 @@ ms.lasthandoff: 03/23/2018
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>Linearer Vergleich ohne Rückverfolgung  
- Wenn das Muster eines regulären Ausdrucks nicht über optionale Quantifizierer oder Alternierungskonstrukte verfügt, wird das Modul für reguläre Ausdrücke zeitlich linear ausgeführt. Das heißt, nachdem das Modul für reguläre Ausdrücke dem ersten Sprachelement im Muster Text in der Eingabezeichenfolge zugeordnet hat, wird versucht, das nächste Sprachelement im Muster dem nächsten Zeichen oder der nächsten Zeichengruppe in der Eingabezeichenfolge zuzuordnen. Dies wird fortgesetzt, bis die Übereinstimmung erfolgreich ausgeführt wurde oder fehlschlägt. In beiden Fällen wechselt das Modul für reguläre Ausdrücke immer je ein Zeichen in der Eingabezeichenfolge weiter.  
+ Wenn das Muster eines regulären Ausdrucks nicht über optionale Quantifizierer oder Alternierungskonstrukte verfügt, wird die Engine für reguläre Ausdrücke zeitlich linear ausgeführt. Das heißt, nachdem die Engine für reguläre Ausdrücke dem ersten Sprachelement im Muster Text in der Eingabezeichenfolge zugeordnet hat, wird versucht, das nächste Sprachelement im Muster dem nächsten Zeichen oder der nächsten Zeichengruppe in der Eingabezeichenfolge zuzuordnen. Dies wird fortgesetzt, bis die Übereinstimmung erfolgreich ausgeführt wurde oder fehlschlägt. In beiden Fällen wechselt die Engine für reguläre Ausdrücke immer je ein Zeichen in der Eingabezeichenfolge weiter.  
   
  Dies wird im folgenden Beispiel veranschaulicht. Der reguläre Ausdruck `e{2}\w\b` sucht nach zwei Vorkommen des Buchstabens "e", gefolgt von einem beliebigen Wortzeichen, wiederum gefolgt von einer Wortgrenze.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking1.cs#1)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking1.vb#1)]  
   
- Obwohl dieser reguläre Ausdruck den Quantifizierer `{2}`einschließt, wird er auf lineare Weise ausgewertet. Das Modul für reguläre Ausdrücke wird nicht zurückverfolgt, da `{2}` kein optionaler Quantifizierer ist, sondern eine genaue Zahl angibt und keine variable Anzahl von Übereinstimmungen des vorherigen Teilausdrucks. Daher versucht das Modul für reguläre Ausdrücke, eine Übereinstimmung des regulären Ausdrucksmusters mit der Eingabezeichenfolge wie in der folgenden Tabelle dargestellt zu finden.  
+ Obwohl dieser reguläre Ausdruck den Quantifizierer `{2}`einschließt, wird er auf lineare Weise ausgewertet. Die Engine für reguläre Ausdrücke wird nicht zurückverfolgt, da `{2}` kein optionaler Quantifizierer ist, sondern eine genaue Zahl angibt und keine variable Anzahl von Übereinstimmungen des vorherigen Teilausdrucks. Daher versucht die Engine für reguläre Ausdrücke, eine Übereinstimmung des regulären Ausdrucksmusters mit der Eingabezeichenfolge wie in der folgenden Tabelle dargestellt zu finden.  
   
 |Vorgang|Position im Muster|Position in der Zeichenfolge|Ergebnis|  
 |---------------|-------------------------|------------------------|------------|  
@@ -84,20 +73,20 @@ ms.lasthandoff: 03/23/2018
 |18|\w|"d" (Index 13)|Mögliche Übereinstimmung.|  
 |19|\b|"" (Index 14)|Übereinstimmung.|  
   
- Wenn das Muster eines regulären Ausdrucks keine optionalen Quantifizierer oder Alternierungskonstrukte enthält, entspricht die maximale Anzahl von Vergleichen, die für die Übereinstimmung des regulären Ausdrucksmusters mit der Eingabezeichenfolge erforderlich sind, ungefähr der Anzahl der Zeichen in der Eingabezeichenfolge. In diesem Fall verwendet das Modul für reguläre Ausdrücke 19 Vergleiche, um mögliche Übereinstimmungen in dieser Zeichenfolge mit 13 Zeichen zu identifizieren.  Mit anderen Worten, das Modul für reguläre Ausdrücke wird zeitlich annähernd linear ausgeführt, wenn es keine optionalen Quantifizierer oder Alternierungskonstrukte enthält.  
+ Wenn das Muster eines regulären Ausdrucks keine optionalen Quantifizierer oder Alternierungskonstrukte enthält, entspricht die maximale Anzahl von Vergleichen, die für die Übereinstimmung des regulären Ausdrucksmusters mit der Eingabezeichenfolge erforderlich sind, ungefähr der Anzahl der Zeichen in der Eingabezeichenfolge. In diesem Fall verwendet die Engine für reguläre Ausdrücke 19 Vergleiche, um mögliche Übereinstimmungen in dieser Zeichenfolge mit 13 Zeichen zu identifizieren.  Mit anderen Worten, die Engine für reguläre Ausdrücke wird zeitlich annähernd linear ausgeführt, wenn sie keine optionalen Quantifizierer oder Alternierungskonstrukte enthält.  
   
  [Zurück zum Anfang](#top)  
   
 <a name="backtracking_with_optional_quantifiers_or_alternation_constructs"></a>   
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>Rückverfolgung mit optionalen Quantifizierern oder Alternierungskonstrukten  
- Wenn ein regulärer Ausdruck optionale Quantifizierer oder Alternierungskonstrukte enthält, erfolgt die Auswertung der Eingabezeichenfolge nicht mehr linear. Mustervergleiche mit einem NFA-Modul werden durch die Sprachelemente im regulären Ausdruck und nicht durch die Zeichen gesteuert, für die in der Eingabezeichenfolge Übereinstimmungen gefunden werden sollen. Daher versucht das Modul für reguläre Ausdrücke, vollständige Übereinstimmungen für die optionalen oder alternativen Teilausdrücke zu finden. Wenn zum nächsten Sprachelement im Teilausdruck gewechselt und keine Übereinstimmung gefunden wird, kann das Modul für reguläre Ausdrücke einen Teil der erfolgreichen Übereinstimmung aufgeben und zu einem zuvor gespeicherten Zustand zurückkehren, um eine Übereinstimmung des gesamten regulären Ausdrucks mit der Eingabezeichenfolge zu erzielen. Dieses Zurückkehren zu einem zuvor gespeicherten Zustand, um eine Übereinstimmung zu finden, wird als Rückverfolgung bezeichnet.  
+ Wenn ein regulärer Ausdruck optionale Quantifizierer oder Alternierungskonstrukte enthält, erfolgt die Auswertung der Eingabezeichenfolge nicht mehr linear. Mustervergleiche mit einer NFA-Engine werden durch die Sprachelemente im regulären Ausdruck und nicht durch die Zeichen gesteuert, für die in der Eingabezeichenfolge Übereinstimmungen gefunden werden sollen. Daher versucht die Engine für reguläre Ausdrücke, vollständige Übereinstimmungen für die optionalen oder alternativen Teilausdrücke zu finden. Wenn zum nächsten Sprachelement im Teilausdruck gewechselt und keine Übereinstimmung gefunden wird, kann die Engine für reguläre Ausdrücke einen Teil der erfolgreichen Übereinstimmung aufgeben und zu einem zuvor gespeicherten Zustand zurückkehren, um eine Übereinstimmung des gesamten regulären Ausdrucks mit der Eingabezeichenfolge zu erzielen. Dieses Zurückkehren zu einem zuvor gespeicherten Zustand, um eine Übereinstimmung zu finden, wird als Rückverfolgung bezeichnet.  
   
  Als Beispiel dient das reguläre Ausdrucksmuster `.*(es)`, das mit den Zeichen "es" und allen vorangestellten Zeichen übereinstimmt. Wenn die Eingabezeichenfolge "Essential services are provided by regular expressions." lautet, wird die gesamte Zeichenfolge bis einschließlich der Zeichen "es" im Wort "expressions" nach einer Übereinstimmung mit dem Muster durchsucht.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking2.cs#2)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking2.vb#2)]  
   
- Hierzu verwendet das Modul für reguläre Ausdrücke das Zurückverfolgen wie folgt:  
+ Hierzu verwendet die Engine für reguläre Ausdrücke das Zurückverfolgen wie folgt:  
   
 -   Die gesamte Eingabezeichenfolge wird auf Übereinstimmung mit `.*` (Übereinstimmung mit keinem, einem oder mehreren Vorkommen beliebiger Zeichen) geprüft.  
   
@@ -109,7 +98,7 @@ ms.lasthandoff: 03/23/2018
   
 -   Das "s" im Muster wird mit dem "s" verglichen, das dem übereinstimmenden Zeichen "e" folgt (das erste "s" in"expressions"). Die Übereinstimmung ist erfolgreich.  
   
- Bei einer Rückverfolgung erfordert das Abgleichen des regulären Ausdrucksmusters mit der Eingabezeichenfolge, die 55 Zeichen lang ist, 67 Vergleichsoperationen. Wenn das Muster des regulären Ausdrucks einen verzögerten Quantifizierer (`*?(es)`) enthält, sind für den Abgleich mit dem regulären Ausdruck interessanterweise weitere Vergleiche erforderlich. In diesem Fall muss keine Rückverfolgung vom Ende der Zeichenfolge bis zum "r" in "expressions" erfolgen, sondern das Modul für reguläre Ausdrücke würde eine Rückverfolgung bis zum Anfang der Zeichenfolge ausführen, um eine Übereinstimmung mit "Es" zu finden. Hierfür wären 113 Vergleiche erforderlich. Wenn das Muster eines regulären Ausdrucks ein einzelnes Alternierungskonstrukt oder einen einzelnen optionalen Quantifizierer enthält, ist die Anzahl der zum Abgleichen eines Musters erforderlichen Vergleichsoperationen im Allgemeinen mehr als doppelt so hoch wie die Anzahl der Zeichen in der Eingabezeichenfolge.  
+ Bei einer Rückverfolgung erfordert das Abgleichen des regulären Ausdrucksmusters mit der Eingabezeichenfolge, die 55 Zeichen lang ist, 67 Vergleichsoperationen. Wenn das Muster des regulären Ausdrucks einen verzögerten Quantifizierer (`*?(es)`) enthält, sind für den Abgleich mit dem regulären Ausdruck interessanterweise weitere Vergleiche erforderlich. In diesem Fall muss keine Rückverfolgung vom Ende der Zeichenfolge bis zum "r" in "expressions" erfolgen, sondern die Engine für reguläre Ausdrücke würde eine Rückverfolgung bis zum Anfang der Zeichenfolge ausführen, um eine Übereinstimmung mit "Es" zu finden. Hierfür wären 113 Vergleiche erforderlich. Wenn das Muster eines regulären Ausdrucks ein einzelnes Alternierungskonstrukt oder einen einzelnen optionalen Quantifizierer enthält, ist die Anzahl der zum Abgleichen eines Musters erforderlichen Vergleichsoperationen im Allgemeinen mehr als doppelt so hoch wie die Anzahl der Zeichen in der Eingabezeichenfolge.  
   
  [Zurück zum Anfang](#top)  
   
@@ -120,15 +109,15 @@ ms.lasthandoff: 03/23/2018
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking3.cs#3)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking3.vb#3)]  
   
- Wie die Ausgabe des Beispiels zeigt, brauchte das Modul für reguläre Ausdrücke zum Bestimmen, dass eine Eingabezeichenfolge nicht mit dem Muster übereinstimmt, etwa doppelt so lang wie für die Ermittlung einer übereinstimmenden Zeichenfolge. Dies liegt daran, dass eine fehlgeschlagene Übereinstimmung immer den ungünstigsten Fall darstellt. Das Modul für reguläre Ausdrücke muss den regulären Ausdruck verwenden, um allen möglichen Pfaden durch die Daten zu folgen, bevor es feststellen kann, ob die Übereinstimmung fehlschlägt. Durch die geschachtelten Klammern werden viele zusätzliche Pfade durch die Daten erstellt. Das Modul für reguläre Ausdrücke stellt fest, dass die zweite Zeichenfolge nicht mit dem Muster übereinstimmt, indem wie folgt vorgegangen wird:  
+ Wie die Ausgabe des Beispiels zeigt, brauchte die Engine für reguläre Ausdrücke zum Bestimmen, dass eine Eingabezeichenfolge nicht mit dem Muster übereinstimmt, etwa doppelt so lang wie für die Ermittlung einer übereinstimmenden Zeichenfolge. Dies liegt daran, dass eine fehlgeschlagene Übereinstimmung immer den ungünstigsten Fall darstellt. Die Engine für reguläre Ausdrücke muss den regulären Ausdruck verwenden, um allen möglichen Pfaden durch die Daten zu folgen, bevor es feststellen kann, ob die Übereinstimmung fehlschlägt. Durch die geschachtelten Klammern werden viele zusätzliche Pfade durch die Daten erstellt. Die Engine für reguläre Ausdrücke stellt fest, dass die zweite Zeichenfolge nicht mit dem Muster übereinstimmt, indem wie folgt vorgegangen wird:  
   
--   Das Modul überprüft, ob es sich am Anfang der Zeichenfolge befindet, und vergleicht dann die ersten fünf Zeichen in der Zeichenfolge mit dem Muster `a+`. Anschließend wird sichergestellt, dass keine weiteren Gruppen des Zeichens "a" in der Zeichenfolge vorhanden sind. Schließlich wird das Ende der Zeichenfolge überprüft. Da ein zusätzliches Zeichen in der Zeichenfolge verbleibt, schlägt die Übereinstimmung fehl. Diese fehlgeschlagene Suche nach Übereinstimmung erfordert 9 Vergleiche. Das Modul für reguläre Ausdrücke speichert darüber hinaus Zustandsinformationen aus den Übereinstimmungen von "a" (hier bezeichnet als Übereinstimmung 1), "aa" (Übereinstimmung 2), "aaa" (Übereinstimmung 3) und "aaaa" (Übereinstimmung 4).  
+-   Das Modul überprüft, ob es sich am Anfang der Zeichenfolge befindet, und vergleicht dann die ersten fünf Zeichen in der Zeichenfolge mit dem Muster `a+`. Anschließend wird sichergestellt, dass keine weiteren Gruppen des Zeichens "a" in der Zeichenfolge vorhanden sind. Schließlich wird das Ende der Zeichenfolge überprüft. Da ein zusätzliches Zeichen in der Zeichenfolge verbleibt, schlägt die Übereinstimmung fehl. Diese fehlgeschlagene Suche nach Übereinstimmung erfordert 9 Vergleiche. Die Engine für reguläre Ausdrücke speichert darüber hinaus Zustandsinformationen aus den Übereinstimmungen von "a" (hier bezeichnet als Übereinstimmung 1), "aa" (Übereinstimmung 2), "aaa" (Übereinstimmung 3) und "aaaa" (Übereinstimmung 4).  
   
 -   Das Modul kehrt zur zuvor gespeicherten Übereinstimmung 4 zurück. Es wird ermittelt, dass ein zusätzliches Zeichen "a" vorhanden ist, das einer zusätzlichen Erfassungsgruppe zugewiesen werden soll. Schließlich wird das Ende der Zeichenfolge überprüft. Da ein zusätzliches Zeichen in der Zeichenfolge verbleibt, schlägt die Übereinstimmung fehl. Diese fehlgeschlagene Suche nach Übereinstimmung erfordert 4 Vergleiche. Bisher wurden insgesamt 13 Vergleiche ausgeführt.  
   
 -   Das Modul kehrt zur zuvor gespeicherten Übereinstimmung 3 zurück. Es wird ermittelt, dass zwei zusätzliche "a"-Zeichen vorhanden sind, die einer zusätzlichen Erfassungsgruppe zugewiesen werden sollen. Allerdings schlägt die Überprüfung des Zeichenfolgenendes fehl. Anschließend kehrt das Modul zur Übereinstimmung 3 zurück und versucht, die zwei zusätzlichen "a"-Zeichen in zwei zusätzlichen Erfassungsgruppen abzugleichen. Die Überprüfung des Zeichenfolgenendes schlägt weiterhin fehl. Diese fehlgeschlagenen Übereinstimmungen erfordern 12 Vergleiche. Bisher wurden insgesamt 25 Vergleiche ausgeführt.  
   
- Der Vergleich der Eingabezeichenfolge mit dem regulären Ausdruck wird auf diese Weise fortgesetzt, bis das Modul für reguläre Ausdrücke alle möglichen Übereinstimmungskombinationen durchlaufen hat und dann feststellt, dass keine Übereinstimmung vorhanden ist. Aufgrund der geschachtelten Quantifizierer handelt, wird dieser Vergleich eine O (2<sup>n</sup>) oder einen exponentiellen Vorgang, wobei *n* ist die Anzahl der Zeichen in der Eingabezeichenfolge. Dies bedeutet, dass im ungünstigsten Fall für eine Eingabezeichenfolge von 30 Zeichen etwa 1.073.741.824 Vergleiche und für eine Eingabezeichenfolge von 40 Zeichen ungefähr 1.099.511.627.776 Vergleiche erforderlich sind. Wenn Sie Zeichenfolgen mit dieser oder sogar einer größeren Länge verwenden, kann die Ausführung von Methoden mit regulären Ausdrücken erhebliche Zeit in Anspruch nehmen, wenn diese Eingaben verarbeiten, die nicht mit dem regulären Ausdrucksmuster übereinstimmen.  
+ Der Vergleich der Eingabezeichenfolge mit dem regulären Ausdruck wird auf diese Weise fortgesetzt, bis die Engine für reguläre Ausdrücke alle möglichen Übereinstimmungskombinationen durchlaufen hat und dann feststellt, dass keine Übereinstimmung vorhanden ist. Aufgrund der geschachtelten Quantifizierer handelt es sich bei diesem Vergleich um O(2<sup>n</sup>) oder einen exponentiellen Vorgang, wobei *n* für die Anzahl von Zeichen in der Eingabezeichenfolge steht. Dies bedeutet, dass im ungünstigsten Fall für eine Eingabezeichenfolge von 30 Zeichen etwa 1.073.741.824 Vergleiche und für eine Eingabezeichenfolge von 40 Zeichen ungefähr 1.099.511.627.776 Vergleiche erforderlich sind. Wenn Sie Zeichenfolgen mit dieser oder sogar einer größeren Länge verwenden, kann die Ausführung von Methoden mit regulären Ausdrücken erhebliche Zeit in Anspruch nehmen, wenn diese Eingaben verarbeiten, die nicht mit dem regulären Ausdrucksmuster übereinstimmen.  
   
  [Zurück zum Anfang](#top)  
   
@@ -138,12 +127,12 @@ ms.lasthandoff: 03/23/2018
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>Definieren eines Timeoutintervalls  
- Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können Sie einen Timeoutwert für das längste Intervall festlegen, innerhalb dessen das Modul für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht, bevor der Versuch abgebrochen und eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> -Ausnahme ausgelöst wird. Sie geben das Timeoutintervall an, indem Sie einen <xref:System.TimeSpan>-Wert für den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>-Konstruktor für reguläre Ausdrucksinstanzen bereitstellen. Außerdem weist jede statische Methode für Musterübereinstimmungen eine Überladung mit einem <xref:System.TimeSpan> -Parameter auf, der es Ihnen ermöglicht, einen Timeoutwert anzugeben. Standardmäßig wird das Timeoutintervall auf <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> festgelegt, und das Modul für reguläre Ausdrücke gibt kein Timeout zurück.  
+ Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können Sie einen Timeoutwert für das längste Intervall festlegen, innerhalb dessen die Engine für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht, bevor der Versuch abgebrochen und eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> -Ausnahme ausgelöst wird. Sie geben das Timeoutintervall an, indem Sie einen <xref:System.TimeSpan>-Wert für den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>-Konstruktor für reguläre Ausdrucksinstanzen bereitstellen. Außerdem weist jede statische Methode für Musterübereinstimmungen eine Überladung mit einem <xref:System.TimeSpan> -Parameter auf, der es Ihnen ermöglicht, einen Timeoutwert anzugeben. Standardmäßig wird das Timeoutintervall auf <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> festgelegt, und das Modul für reguläre Ausdrücke gibt kein Timeout zurück.  
   
 > [!IMPORTANT]
 >  Es wird empfohlen, immer ein Timeoutintervall festzulegen, wenn ein regulärer Ausdruck auf Rückverfolgung angewiesen ist.  
   
- Eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> -Ausnahme gibt an, dass das Modul für reguläre Ausdrücke keine Übereinstimmung innerhalb des angegebenen Timeoutintervalls finden konnte, es gibt aber nicht an, warum die Ausnahme ausgelöst wurde. Der Grund kann eine übermäßige Rückverfolgung sein. Es ist jedoch auch möglich, dass das Timeoutintervall angesichts der Systembelastung zum Zeitpunkt, als die Ausnahme ausgelöst wurde, zu niedrig festgelegt wurde. Wenn Sie die Ausnahme behandeln, können Sie entweder weitere Übereinstimmungen mit der Eingabezeichenfolge abbrechen oder das Timeoutintervall erhöhen und den Vergleichsvorgang erneut ausführen.  
+ Eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> -Ausnahme gibt an, dass die Engine für reguläre Ausdrücke keine Übereinstimmung innerhalb des angegebenen Timeoutintervalls finden konnte, sie gibt aber nicht an, warum die Ausnahme ausgelöst wurde. Der Grund kann eine übermäßige Rückverfolgung sein. Es ist jedoch auch möglich, dass das Timeoutintervall angesichts der Systembelastung zum Zeitpunkt, als die Ausnahme ausgelöst wurde, zu niedrig festgelegt wurde. Wenn Sie die Ausnahme behandeln, können Sie entweder weitere Übereinstimmungen mit der Eingabezeichenfolge abbrechen oder das Timeoutintervall erhöhen und den Vergleichsvorgang erneut ausführen.  
   
  Im folgenden Code wird beispielsweise der <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>-Konstruktor aufgerufen, um ein <xref:System.Text.RegularExpressions.Regex>-Objekt mit einem Timeoutwert von einer Sekunde zu instanziieren. Das Muster des regulären Ausdrucks `(a+)+$`, das mit mindestens einer Sequenz von einem oder mehreren "a"-Zeichen am Ende einer Zeile übereinstimmt, unterliegt übermäßiger Rückverfolgung. Wenn <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ausgelöst wird, wird der Timeoutwert im Beispiel bis zu einem maximalen Intervall von drei Sekunden erhöht. Danach wird der Versuch, das Muster abzugleichen, abgebrochen.  
   
@@ -154,7 +143,7 @@ ms.lasthandoff: 03/23/2018
 ### <a name="nonbacktracking-subexpression"></a>Nicht zurückverfolgender Teilausdruck  
  Das Sprachelement `(?>` *Teilausdruck*`)` unterdrückt die Rückverfolgung in einem Teilausdruck. Das Element ist nützlich, um die mit fehlgeschlagenen Übereinstimmungen zusammenhängenden Leistungsprobleme zu vermeiden.  
   
- Das folgende Beispiel zeigt, wie das Unterdrücken der Rückverfolgung bei Verwendung von geschachtelten Quantifizierern die Leistung verbessert. Es wird gemessen, wie viel Zeit das Modul für reguläre Ausdrücke benötigt, um zu ermitteln, dass eine Eingabezeichenfolge nicht mit zwei regulären Ausdrücken übereinstimmt. Der erste reguläre Ausdruck verwendet die Rückverfolgung, um eine Übereinstimmung mit einer Zeichenfolge zu finden, in der Folgendes ein Mal oder mehrmals vorkommt: eine oder mehrere hexadezimale Ziffern, gefolgt von einem Doppelpunkt, gefolgt von einer oder mehreren hexadezimalen Ziffern, gefolgt von zwei Doppelpunkten. Der zweite reguläre Ausdruck ist mit dem ersten identisch, mit der Ausnahme, dass dieser die Rückverfolgung deaktiviert. Wie die Ausgabe im Beispiel zeigt, ist die Leistungsverbesserung durch das Deaktivieren der Rückverfolgung signifikant.  
+ Das folgende Beispiel zeigt, wie das Unterdrücken der Rückverfolgung bei Verwendung von geschachtelten Quantifizierern die Leistung verbessert. Es wird gemessen, wie viel Zeit die Engine für reguläre Ausdrücke benötigt, um zu ermitteln, dass eine Eingabezeichenfolge nicht mit zwei regulären Ausdrücken übereinstimmt. Der erste reguläre Ausdruck verwendet die Rückverfolgung, um eine Übereinstimmung mit einer Zeichenfolge zu finden, in der Folgendes ein Mal oder mehrmals vorkommt: eine oder mehrere hexadezimale Ziffern, gefolgt von einem Doppelpunkt, gefolgt von einer oder mehreren hexadezimalen Ziffern, gefolgt von zwei Doppelpunkten. Der zweite reguläre Ausdruck ist mit dem ersten identisch, mit der Ausnahme, dass dieser die Rückverfolgung deaktiviert. Wie die Ausgabe im Beispiel zeigt, ist die Leistungsverbesserung durch das Deaktivieren der Rückverfolgung signifikant.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking4.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
@@ -172,7 +161,7 @@ ms.lasthandoff: 03/23/2018
   
  Das erste Muster für reguläre Ausdrücke `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -183,7 +172,7 @@ ms.lasthandoff: 03/23/2018
   
  Das zweite Muster für reguläre Ausdrücke `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`verwendet eine positive Lookbehindassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -204,7 +193,7 @@ ms.lasthandoff: 03/23/2018
   
  Das erste Muster für reguläre Ausdrücke `^(([A-Z]\w*)+\.)*[A-Z]\w*$`ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`([A-Z]\w*)+\.`|Übereinstimmung mit einem Buchstaben (A-Z), gefolgt von keinem oder mehreren Wortzeichen (einmaliges oder mehrmaliges Vorkommen), gefolgt von einem Punkt. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -214,7 +203,7 @@ ms.lasthandoff: 03/23/2018
   
  Das zweite Muster für reguläre Ausdrücke `^((?=[A-Z])\w+\.)*[A-Z]\w*$`verwendet eine positive Lookaheadassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`(?=[A-Z])`|Lookahead zum ersten Zeichen und die Suche nach Übereinstimmungen fortsetzen, wenn es sich um einen Buchstaben (A-Z) handelt. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  

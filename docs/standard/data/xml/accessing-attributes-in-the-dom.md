@@ -1,29 +1,18 @@
 ---
 title: Zugreifen auf die Attribute im DOM
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4f134761c4dadcef4692194293c8c99899bb6be2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6b295c94fda22d4a17fb485add13ec67f1e9ae8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Zugreifen auf die Attribute im DOM
 Attribute sind Eigenschaften des Elements und keine untergeordneten Elemente des entsprechenden Elements. Dies stellt aufgrund der Methoden zum Navigieren zwischen nebengeordneten, übergeordneten und untergeordneten Knoten des XML-Dokumentobjektmodells (DOM) eine wichtige Unterscheidung dar. Die **PreviousSibling**- und die **NextSibling**-Methode werden beispielsweise nicht zum Wechseln von einem Element zu einem Attribut oder zwischen Attributen verwendet. Stattdessen ist ein Attribut eine Eigenschaft eines Elements und gehört zu einem Element. Das Attribut verfügt über eine **OwnerElement**-Eigenschaft und nicht über eine **parentNode**-Eigenschaft. Außerdem besitzt es verschiedene Navigationsmethoden.  

@@ -1,12 +1,6 @@
 ---
 title: Proxykonfiguration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Networking
 - adaptive proxies
@@ -17,16 +11,14 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 41f7cfe76acfb4b6bbf66207685935c190a51901
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 41e1dcee90531de605b6bddc1eedc1c44235d8eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="proxy-configuration"></a>Proxykonfiguration
 Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann eine angeforderte Ressource aus dem Cache zurückgeben oder die Anforderung an den Server weiterleiten, auf dem sich die Ressource befindet. Proxys können die Netzwerkleistung durch Reduzierung der Anzahl der an Remote-Server gesendeten Anforderungen verbessern. Proxys können auch verwendet werden, um den Zugriff auf Ressourcen einzuschränken.  
@@ -50,7 +42,7 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
   
  Die folgende Tabelle zeigt die Konfigurationsoptionen für einen adaptiven Proxy.  
   
-|Attribut-, Eigenschafts- oder Konfigurationseinstellung|Beschreibung|  
+|Attribut-, Eigenschafts- oder Konfigurationseinstellung|description|  
 |--------------------------------------------------------|-----------------|  
 |`scriptDownloadInterval`|Verstrichene Zeit in Sekunden zwischen den Script-Downloads.|  
 |`scriptDownloadTimeout`|Wartezeit (in Sekunden) für das Skript-Download.|  
@@ -85,7 +77,7 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
   
  Die folgende Tabelle zeigt die Konfigurationsoptionen für einen statischen Proxy.  
   
-|Attribut-, Eigenschafts- oder Konfigurationseinstellung|Beschreibung|  
+|Attribut-, Eigenschafts- oder Konfigurationseinstellung|description|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` oder <xref:System.Net.WebProxy.Address>|Die Adresse des Proxyservers, der verwendet werden soll.|  
 |`bypassonlocal` oder <xref:System.Net.WebProxy.BypassProxyOnLocal>|Steuert, ob der Proxy für lokale Adressen umgangen wird.|  

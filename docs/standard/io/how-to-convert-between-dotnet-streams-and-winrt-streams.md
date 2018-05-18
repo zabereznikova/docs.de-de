@@ -1,29 +1,18 @@
 ---
 title: 'Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-caps.latest.revision: 15
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 25df0b363e5c9b44ae51d14ef0c2286cbb80ced8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f67f88cd7f690e56664fa45878d1c9ac1f8a6b6b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams
 .NET Framework für Windows Store-Apps ist eine Teilmenge der Vollversion von .NET Framework. Aufgrund der Sicherheitsanforderungen und anderer Anforderungen an Windows Store-Apps können Sie nicht den vollständigen Satz von .NET Framework-APIs zum Öffnen und Lesen von Dateien verwenden. Weitere Informationen finden Sie unter [.NET für Windows Store-Apps – Übersicht](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Sie können die .NET Framework-APIs jedoch für andere Streambearbeitungsvorgänge verwenden. Um diese Streams zu bearbeiten, müssen Sie möglicherweise einen .NET Framework-Streamtyp wie <xref:System.IO.MemoryStream> oder <xref:System.IO.FileStream>in einen Windows-Runtime-Stream wie [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)oder [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx)konvertieren oder umgekehrt.  

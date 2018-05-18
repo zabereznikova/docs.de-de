@@ -1,24 +1,15 @@
 ---
 title: Abfragesyntax und Methodensyntax in LINQ (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-caps.latest.revision: "30"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0127ee0815c4ba6a697456fe45bd373bcf9ba4e4
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Abfragesyntax und Methodensyntax in LINQ (C#)
 Die meisten Abfragen in der einführenden Dokumentation der Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) wurden mithilfe der deklarierten Abfragesyntax von LINQ geschrieben. Die Abfragesyntax muss jedoch in Methodenaufrufe für die .NET Common Language Runtime (CLR) übersetzt werden, wenn der Code kompiliert wird. Diese Methodenaufrufe rufen die Standardabfrageoperatoren auf, die z.B. folgende Namen haben: `Where`, `Select`, `GroupBy`, `Join`, `Max` und `Average`. Sie können sie direkt mithilfe der Methodensyntax anstatt der Abfragesyntax aufrufen.  
@@ -45,7 +36,7 @@ Die meisten Abfragen in der einführenden Dokumentation der Language Integrated 
 ## <a name="lambda-expressions"></a>Lambda-Ausdrücke  
  Beachten Sie im vorherigen Beispiel, dass der bedingte Ausdruck `num % 2 == 0` als Inlineargument an die `Where`-Methode übergeben wird: `Where(num => num % 2 == 0).`. Dieser Inlineausdruck wird als Lambdaausdruck bezeichnet. Dies ist eine einfache Möglichkeit, Code zu schreiben, der sonst auf einem unpraktischeren Weg als anonyme Methode, generischer Delegat oder Ausdrucksbaumstruktur geschrieben werden müsste. In C# ist der Lambdaoperator `=>`, der als „wird zu“ gelesen wird. `num` auf der linken Seite des Operators ist die Eingabevariable, die `num` im Eingabeausdruck entspricht. Der Compiler kann den Typ von `num` ableiten, da er weiß, dass es sich bei `numbers` um einen generischen <xref:System.Collections.Generic.IEnumerable%601>-Typ handelt. Der Text des Lambdaausdrucks entspricht genau dem Ausdruck in der Abfragesyntax, in einem anderen Ausdruck oder in einer Anweisung in C#; er kann Methodenaufrufe und andere komplexe Logik enthalten. Der „Rückgabewert“ ist nur das Ergebnis des Ausdrucks.  
   
- Sie müssen Lambdaausdrücke nicht häufig verwenden, wenn Sie mit der Verwendung von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] beginnen. Allerdings können bestimme Abfragen nur in der Methodensyntax ausgedrückt werden, und einige von ihnen benötigen Lambdaausdrücke. Wenn Sie sich mit Lambdaausdrücken besser vertraut gemacht haben, werden Sie sehen, dass sie ein leistungsstarkes und flexibles Tool in Ihrer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Toolbox sind. Weitere Informationen finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Sie müssen Lambdaausdrücke nicht häufig verwenden, wenn Sie mit der Verwendung von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] beginnen. Allerdings können bestimme Abfragen nur in der Methodensyntax ausgedrückt werden, und einige von ihnen benötigen Lambdaausdrücke. Wenn Sie sich mit Lambdaausdrücken besser vertraut gemacht haben, werden Sie sehen, dass sie ein leistungsstarkes und flexibles Tool in Ihrer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Toolbox sind. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
 ## <a name="composability-of-queries"></a>Zusammensetzbarkeit von Abfragen  
  Beachten Sie im vorherigen Codebeispiel, dass die `OrderBy`-Methode durch Verwendung des Punktoperators auf dem Aufruf von `Where` aufgerufen wird. `Where` erzeugt eine gefilterte Sequenz, und `Orderby` bearbeitet sie anschließend durch Sortierung. Da Abfragen `IEnumerable` zurückgeben, erstellen Sie sie in der Methodensyntax durch Verkettung von Methodenaufrufen miteinander. Das führt auch der Compiler im Hintergrund aus, wenn Sie über die Abfragesyntax Abfragen erstellen. Da die Abfragevariable die Ergebnisse der Abfrage nicht speichert, können Sie sie jederzeit ändern oder als Basis für eine neue Abfrage verwenden, sogar, wenn sie bereits ausgeführt wurde.  

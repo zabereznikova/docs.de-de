@@ -1,31 +1,25 @@
 ---
 title: =&gt;-Operator (C#-Referenz)
 ms.date: 10/02/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 44cb0485aefa8b0ab10a00ae0525180020ce436d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d1565e262fbd3ebcee2d1576a2a0c8ed3ba8ce38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gt-operator-c-reference"></a>=&gt;-Operator (C#-Referenz)
 
-Der `=>`-Operator kann auf zweierlei Weise in C# verwendet werden:
+Der `=>`-Operator kann durch zwei Methoden in C# verwendet werden:
 
-- Als [Lambdaoperator](#lamba-operator) in einem [Lambdaausdruck](../../lambda-expressions.md) trennt er die Eingabevariablen vom Lambdatext.
+- Als [Lambdaoperator](#lamba-operator) in einem [Lambdaausdruck](../../lambda-expressions.md), trennt es die Eingabevariablen vom Lambdatext.
  
-- In einer [Ausdruckskörperdefinition](#expression-body-definition) trennt er einen Membernamen von der Memberimplementierung. 
+- In einer [Ausdruckskörperdefinition](#expression-body-definition) trennt es einen Membernamen von der Memberimplementierung. 
 
 ## <a name="lambda-operator"></a>Lambdaoperator
 
@@ -57,14 +51,14 @@ Console.WriteLine(shortestWordLength2);
 ### <a name="remarks"></a>Hinweise  
  Der Operator `=>` verfügt über die gleiche Rangfolge wie der Zuweisungsoperator (`=`) und ist rechtsassoziativ.  
   
- Sie können den Typ der Eingabevariablen explizit angeben oder vom Compiler ableiten lassen; in jedem Fall ist die Variable zur Kompilierzeit stark typisiert. Wenn Sie einen Typ angeben, müssen Sie den Typnamen und den Variablennamen wie im folgenden Beispiel gezeigt in Klammern setzen.  
+ Sie können den Typ der Eingabevariable explizit angeben oder vom Compiler ableiten lassen; in jedem Fall ist die Variable zur Kompilierzeit stark typisiert. Wenn Sie einen Typ angeben, müssen Sie den Typnamen und den Variablennamen wie im folgenden Beispiel gezeigt in Klammern setzen.  
   
 ```csharp  
 int shortestWordLength = words.Min((string w) => w.Length);  
 ```  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie ein Lambdaausdruck für die Überladung des Standardabfrageoperators <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> geschrieben wird, der zwei Argumente akzeptiert. Da der Lambdaausdruck über mehr als einen Parameter verfügt, müssen die Parameter in Klammern stehen. Der zweite Parameter `index` stellt den Index des aktuellen Elements in der Auflistung dar. Der `Where`-Ausdruck gibt alle Zeichenfolgen zurück, deren Länge ihre jeweilige Indexposition im Array unterschreitet.  
+ Im folgenden Beispiel wird gezeigt, wie ein Lambdaausdruck für die Überladung des Standardabfrageoperators <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> geschrieben wird, der zwei Argumente akzeptiert. Da der Lambda-Ausdruck über mehr als einen Parameter verfügt, müssen die Parameter in Klammern stehen. Der zweite Parameter `index` stellt den Index des aktuellen Elements in der Auflistung dar. Der `Where`-Ausdruck gibt alle Zeichenfolgen zurück, deren Länge ihre jeweilige Indexposition im Array unterschreitet.  
   
 ```csharp  
 static void Main(string[] args)  
@@ -90,22 +84,22 @@ static void Main(string[] args)
 ```  
 ## <a name="expression-body-definition"></a>Ausdruckskörperdefinition
 
-Eine Ausdruckskörperdefinition gibt die Implementierung eines Members in einer stark komprimierten lesbaren Form an. Die allgemeine Syntax sieht wie folgt aus:
+Eine Ausdruckskörperdefinition ermöglicht die Implementierung eines Members in einer sehr präzisen und lesbaren Form. Sie verwendet die folgende allgemeine Syntax:
 
 ```csharp
 member => expression;
 ```
-wobei *expression* ein gültiger Ausdruck ist. Beachten Sie, dass *expression* nur dann ein *Anweisungsausdruck* sein kann, wenn der Rückgabetyp des Members `void` oder der Member ein Konstruktor oder Finalizer ist.
+wobei *expression* ein gültiger Ausdruck ist. Beachten Sie, dass *expression* nur dann ein *Anweisungsausdruck* sein kann, wenn der Rückgabetyp des Members `void` ist oder der Member ein Konstruktor oder Finalizer ist.
 
-Ausdruckskörperdefinitionen für Methoden und Anweisungen zum Abrufen von Eigenschaften werden seit C# 6 unterstützt. Ausdruckskörperdefinitionen für Konstruktoren, Finalizer, Anweisungen zum Festlegen von Eigenschaften und Indexer werden seit C# 7 unterstützt.
+Ausdruckskörperdefinitionen für Methoden und die Get-Anweisungen der Eigenschaft werden ab C# 6 unterstützt. Ausdruckskörperdefinitionen für Konstruktoren, Finalizer, Set-Anweisungen der Eigenschaft und Indizes werden ab C# 7 unterstützt.
 
-Im Folgenden finden Sie eine Ausdruckskörperdefinition für eine `Person.ToString`-Methode:
+Im Folgenden wird eine Ausdruckskörperdefinition für eine `Person.ToString`-Methode angegeben:
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-Es handelt sich um eine verkürzte Version der folgenden Methodendefinition:
+Diese ist eine kompakte Version der folgenden Methodendefinition:
 
 ```csharp
 public override string ToString()
@@ -118,5 +112,5 @@ Ausführlichere Informationen zu Ausdruckskörperdefinitionen finden Sie unter [
 ## <a name="see-also"></a>Siehe auch  
 [C#-Referenz](../../../csharp/language-reference/index.md)   
 [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
-[Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-[Ausdruckskörpermember ](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+[Lambda-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
+[Ausdruckskörpermember](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

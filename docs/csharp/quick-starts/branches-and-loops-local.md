@@ -1,19 +1,13 @@
 ---
 title: 'Tutorial „Branches und Schleifen“: Lokale C#-Schnellstarts'
 description: In diesem Schnellstart zu Branches und Schleifen schreiben Sie C#-Code, um die Sprachsyntax zu erkunden, die bedingte Branches und Schleifen zur wiederholten Ausführung von Anweisungen unterstützt.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 711cc9b40284076d28b5003935bbbbb77dc36664
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="branches-and-loops"></a>Verzweigungen und Schleifen
 

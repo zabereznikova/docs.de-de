@@ -4,17 +4,12 @@ description: Beschreibt .NET-Architekturkomponenten wie die .NET Standardbibliot
 author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 51e6779d63cdaccc5633c9e81f97471d71099653
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 2415f0c360118389bc7a3ae3aaf74ca8daf24422
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-architectural-components"></a>.NET-Architekturkomponenten
 
@@ -84,7 +79,8 @@ Es stehen verschiedene Tools und Infrastrukturkomponenten zur Verfügung, die in
 
 - Die .NET-Sprachen und deren Compiler
 - Das .NET-Projektsystem, das auf *CSPROJ*-, *VBPROJ*- und *FSPROJ*-Dateien basiert)
-- [MSBuild](/visualstudio/msbuild/msbuild), das Buildmodul, mit dem Projekte erstellt werden
+- 
+  [MSBuild](/visualstudio/msbuild/msbuild), die Build-Engine, mit dem Projekte erstellt werden
 - [NuGet](/nuget/), der Paket-Manager von Microsoft für .NET
 - Open-Source-Buildorchestrierungtools, z.B. [CAKE](https://cakebuild.net/) und [FAKE](https://fake.build/)
 

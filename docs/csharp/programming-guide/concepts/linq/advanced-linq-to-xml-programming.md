@@ -1,28 +1,19 @@
 ---
 title: Erweiterte LINQ to XML-Programmierung (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0f451700dbd2bf9f924eacf6c3685b88ff2c8849
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e455b2b579c56632d5e06b4da5c44a71ea150416
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>Erweiterte LINQ to XML-Programmierung (C#)
 Dieser Abschnitt enthält Informationen, die nur für erfahrene Entwickler und in bestimmten [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Szenarios relevant sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|description|  
 |-----------|-----------------|  
 |[LINQ to XML-Anmerkungen](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md)|Beschreibt, wie Sie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Knoten und -Attributen Anmerkungen hinzufügen können.|  
 |[LINQ to XML-Ereignisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-events.md)|Beschreibt, wie Sie Ereignishandler für Ereignisse schreiben können, die beim Ändern einer XML-Struktur eintreten.|  

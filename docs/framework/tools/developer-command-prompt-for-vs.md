@@ -1,13 +1,6 @@
 ---
-title: "Developer-Eingabeaufforderung für Visual Studio."
-ms.custom: 
+title: Developer-Eingabeaufforderung für Visual Studio.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8bd7baec77e6e776f93a2a13156d66c1199f918
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3ff897e37e3fa2f7202a54c05c8093ba05282c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Developer-Eingabeaufforderung für Visual Studio.
 Die Developer-Eingabeaufforderung für Visual Studio legt die Umgebungsvariablen, die Ihnen die einfache Nutzung von .NET Framework-Tools ermöglichen, automatisch fest. Die Developer-Eingabeaufforderung wird mit vollständigen oder Community-Editionen von Visual Studio installiert. Sie wird nicht mit den Express-Versionen von Visual Studio installiert.  

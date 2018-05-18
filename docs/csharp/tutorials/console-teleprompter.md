@@ -1,20 +1,13 @@
 ---
 title: Konsolenanwendung
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
 ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net-core
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dba6125dd359a47115b0f363a081dc000ce29e6a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: bae03c9ae02f2888b1b70617ca712ef7927e9dce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="console-application"></a>Konsolenanwendung
 
@@ -43,7 +36,7 @@ Bevor Sie damit beginnen, Änderungen durchzuführen, gehen wir die Schritte zur
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Nach dem Wiederherstellen der Pakete führen Sie `dotnet build` aus. Hiermit wird das Buildmodul ausgeführt und die ausführbare Datei für Ihre Anwendung erstellt. Abschließend führen Sie `dotnet run` aus, um Ihre Anwendung zu starten.
+Nach dem Wiederherstellen der Pakete führen Sie `dotnet build` aus. Hiermit wird die Build-Engine ausgeführt und die ausführbare Datei für Ihre Anwendung erstellt. Abschließend führen Sie `dotnet run` aus, um Ihre Anwendung zu starten.
 
 Der gesamte Code für die einfache Hello World-Anwendung ist in „Program.cs“ enthalten. Öffnen Sie diese Datei mit Ihrem bevorzugten Text-Editor. Wir werden jetzt die ersten Änderungen vornehmen.
 Am Anfang der Datei sehen Sie eine using-Anweisung:

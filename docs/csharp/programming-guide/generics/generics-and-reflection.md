@@ -1,22 +1,15 @@
 ---
 title: Generische Typen und Reflektion (C#-Programmierhandbuch)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: 15
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3048cb6a9b333107f6ea37edf31ead96f9fe2057
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7e35c7d6712323bd7088ad68160da05cdf3a5115
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Generische Typen und Reflektion (C#-Programmierhandbuch)
 Da die Common Language Runtime (CLR) Zugriff auf generische Typinformationen zur Laufzeit verfügt, können Sie die Reflektion zum Abrufen von Informationen über generische Typen genauso wie für nicht generische Typen verwenden. Weitere Informationen finden Sie unter [Generika zur Laufzeit](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -25,7 +18,7 @@ Da die Common Language Runtime (CLR) Zugriff auf generische Typinformationen zur
   
  Eine Liste der invarianten Bedingungen für Begriffe, für Begriffe, die für die Reflektion mit generischen Methoden verwendet werden, finden Sie in den Hinweisen zur Eigenschaft <xref:System.Type.IsGenericType%2A>.  
   
-|System.Type-Membername|Beschreibung|  
+|System.Type-Membername|description|  
 |-----------------------------|-----------------|  
 |<xref:System.Type.IsGenericType%2A>|Gibt TRUE zurück, wenn ein Typ generisch ist|  
 |<xref:System.Type.GetGenericArguments%2A>|Gibt ein Array von `Type`-Objekten zurück, die die bereitgestellten Typargumente für einen konstruierten Typ oder die Typparameter einer generischen Typdefinition darstellen|  
@@ -41,7 +34,7 @@ Da die Common Language Runtime (CLR) Zugriff auf generische Typinformationen zur
   
  Zusätzlich ermöglichen neue Member der <xref:System.Reflection.MethodInfo>-Klasse Laufzeitinformationen für generische Methoden. Eine Liste der invarianten Bedingungen für Begriffe, die für die Reflektion mit generischen Methoden verwendet werden, finden Sie unter den Hinweisen zur Eigenschaft <xref:System.Reflection.MethodBase.IsGenericMethod%2A>.  
   
-|System.Reflection.MemberInfo-Membername|Beschreibung|  
+|System.Reflection.MemberInfo-Membername|description|  
 |----------------------------------------------|-----------------|  
 |<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Gibt TRUE zurück, wenn eine Methode generisch ist|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Gibt ein Array von Type-Objekten zurück, die die Typargumente einer konstruierten generischen Methode oder die Typparameter einer generischen Methodendefinition darstellen|  

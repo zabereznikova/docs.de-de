@@ -1,29 +1,18 @@
 ---
 title: Pushbasierte Validierung mit „XmlSchemaValidator“
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 60c2effea612a579b4c66b7c30243b785b86a263
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 36d91d4bd479c1592ae0b3f98d227947686188d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Pushbasierte Validierung mit „XmlSchemaValidator“
 Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse stellt eine effiziente leistungsstarke Methode zum Validieren von XML-Daten anhand von XML-Schemata in einem Push-Verfahren bereit. Zum Beispiel ermöglicht Ihnen die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse das direkte Validieren eines XML-Infosets, ohne es als XML-Dokument serialisieren zu müssen, und das anschließende erneute Analysieren des XML-Infosets mithilfe eines validierenden XML-Readers.  
@@ -158,7 +147,7 @@ validator.ValidateEndElement(null);
 ### <a name="validating-elements-attributes-and-content"></a>Validieren von Elementen, Attributen und Inhalt  
  Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse stellt verschiedene Methoden zum Validieren von Elementen, Attributen und Inhalt in einem XML-Infoset anhand von XML-Schemata bereit. In der folgenden Tabelle werden diese Methoden beschrieben.  
   
-|Methode|Beschreibung|  
+|Methode|description|  
 |------------|-----------------|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Validiert den Elementnamen im aktuellen Kontext.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Validiert das Attribut im aktuellen Elementkontext oder anhand des <xref:System.Xml.Schema.XmlSchemaAttribute>-Objekts, das als Parameter an die <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>-Methode übergeben wurde.|  
@@ -380,7 +369,7 @@ validator.ValidateEndElement(null);
  `</book>`  
   
 > [!NOTE]
->  Die Ergebnisse der Methoden <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> und <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse hängen vom aktuellen Kontext ab, der validiert wird. Weitere Informationen finden Sie in diesem Thema im Abschnitt "Validierungskontext".  
+>  Die Ergebnisse der Methoden <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> und <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse hängen vom aktuellen Kontext ab, der validiert wird. Weitere Informationen finden Sie in diesem Thema im Abschnitt „Validierungskontext“.  
   
  Ein Beispiel für die <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>-Methode finden Sie im Beispiel in der Einleitung. Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>-Methode finden Sie in der Referenzdokumentation der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse.  
   
@@ -392,7 +381,7 @@ validator.ValidateEndElement(null);
  Wenn Sie die <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>-Methode unmittelbar nach der <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>-Methode aufrufen, werden alle Attribute zurückgegeben, die im XML-Dokument vorhanden sein können. Wenn Sie jedoch die <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>-Methode nach einem oder mehreren Aufrufen der <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>-Methode aufrufen, werden die Attribute zurückgegeben, die bisher noch nicht für das aktuelle Element validiert wurden.  
   
 > [!NOTE]
->  Die Ergebnisse der Methoden <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> und <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse hängen vom aktuellen Kontext ab, der validiert wird. Weitere Informationen finden Sie in diesem Thema im Abschnitt "Validierungskontext".  
+>  Die Ergebnisse der Methoden <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> und <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse hängen vom aktuellen Kontext ab, der validiert wird. Weitere Informationen finden Sie in diesem Thema im Abschnitt „Validierungskontext“.  
   
  Ein Beispiel für die <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>-Methode finden Sie im Beispiel in der Einleitung. Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>-Methode finden Sie in der Referenzdokumentation der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse.  
   
@@ -458,7 +447,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  In der folgenden Tabelle wird beschrieben, welche Auswirkungen die Satzzeichen in der Tabelle der Zustandsübergänge oben auf die Methoden und andere Zustände haben, die für jeden Zustand im Zustandsübergang der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse aufgerufen werden können.  
   
-|Symbol|Beschreibung|  
+|Symbol|description|  
 |------------|-----------------|  
 |&#124;|Entweder die Methode bzw. der Zustand vor oder die Methode bzw. der Zustand nach dem senkrechten Strich, kann aufgerufen werden.|  
 |?|Die Methode oder der Zustand nach dem Fragezeichen ist optional, es kann jedoch nur ein Aufruf der Methode bzw. des Zustands erfolgen.|  

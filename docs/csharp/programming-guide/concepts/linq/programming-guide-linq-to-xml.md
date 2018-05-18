@@ -1,21 +1,12 @@
 ---
 title: Programmierhandbuch (LINQ to XML) (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7ee6ac9d13d265442e6d5b9f02c6d5788e75c50f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 03742916c973f9ddac8163fe231cba45750ff080
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Programmierhandbuch (LINQ to XML) (C#)
 Dieser Abschnitt enthält grundlegende Informationen und Anleitungen zum Programmieren mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -29,7 +20,7 @@ Dieser Abschnitt enthält grundlegende Informationen und Anleitungen zum Program
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|description|  
 |-----------|-----------------|  
 |[LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Bietet eine Übersicht über die [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen sowie detaillierte Informationen zu drei der wichtigsten Klassen: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> und <xref:System.Xml.Linq.XDocument>.|  
 |[Erstellen von XML-Bäumen (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|Enthält konzeptuelle und aufgabenbasierte Informationen zum Erstellen von XML-Strukturen. XML-Strukturen können mittels funktionaler Konstruktion oder durch Analysieren von XML-Text aus einer Zeichenfolge oder Datei erstellt werden. Sie können auch einen <xref:System.Xml.XmlReader> verwenden, um eine XML-Struktur aufzufüllen.|  

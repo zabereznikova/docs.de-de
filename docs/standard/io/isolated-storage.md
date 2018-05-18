@@ -1,13 +1,7 @@
 ---
 title: Isolierte Speicherung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data storage using isolated storage
 - stores
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0048c1946e5df59340bed211c5dbb81075047260
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7ab12ac28728535c3bc984d6b37d82f5bf371ba2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isolated-storage"></a>Isolierte Speicherung
 <a name="top"></a> Isolierte Speicherung ist ein Mechanismus zur Datenspeicherung von [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)]-Apps, der Isolation und Sicherheit gewährleistet. Dies wird durch die Definition standardisierter Verknüpfungen von Code mit gespeicherten Daten ermöglicht. Die Standardisierung hat weitere Vorteile. Administratoren können spezielle Tools zum Ändern isolierter Speichervorgänge verwenden, um Speicherplätze für Dateien zu konfigurieren, Sicherheitsrichtlinien festzulegen und nicht verwendete Daten zu löschen. Dank isolierter Speicherung benötigt der Code keine eindeutigen Pfade zur Festlegung sicherer Speicherplätze im Dateisystem. Außerdem werden die Daten vor anderen Anwendungen geschützt, die nur über Zugriff auf isolierte Speicherplätze verfügen. Fest codierte Daten, die den Speicherbereich einer Anwendung angeben, sind nicht erforderlich.  
@@ -180,7 +169,7 @@ ms.lasthandoff: 01/09/2018
 |[Datei- und Stream-E/A](../../../docs/standard/io/index.md)|Erläutert, wie Sie einen synchronen und asynchronen Datei- und Datenstreamzugriff ausführen können.|  
   
 <a name="reference"></a>   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>  
   
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>  

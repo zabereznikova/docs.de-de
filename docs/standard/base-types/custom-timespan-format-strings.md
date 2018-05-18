@@ -1,13 +1,7 @@
 ---
 title: Benutzerdefinierte TimeSpan-Formatzeichenfolgen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f86aeab5a024c463dbfbf0a0d0ff198cef80f7ac
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-timespan-format-strings"></a>Benutzerdefinierte TimeSpan-Formatzeichenfolgen
 Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatierungsvorgang resultierende Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts. Eine benutzerdefinierte Formatzeichenfolge besteht aus einem oder mehreren benutzerdefinierten <xref:System.TimeSpan>-Formatbezeichnern und einer beliebigen Anzahl von Literalzeichen. Alle Zeichenfolgen, bei denen es sich nicht um [standardmäßige TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md) handelt, werden als benutzerdefinierte <xref:System.TimeSpan>-Formatzeichenfolgen interpretiert.  
@@ -77,7 +66,7 @@ Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatier
 |"FFFFFF"|Die Millionstelsekunden in einem Zeitintervall. Nachkommanullen werden nicht angezeigt.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "FFFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|  
 |"FFFFFFF"|Die Zehnmillionstelsekunden in einem Zeitintervall. Nachkommanullen oder sieben Nullstellen werden nicht angezeigt.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|  
 |*„string“*|Trennzeichen für Literalzeichenfolge.<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
-|\|Das Escapezeichen.<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|Das Escapezeichen \|<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
 |Jedes andere Zeichen|Alle anderen Zeichen ohne Escapezeichen werden als benutzerdefinierte Formatbezeichner interpretiert.<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
   
 <a name="dSpecifier"></a>   

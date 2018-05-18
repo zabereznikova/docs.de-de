@@ -1,10 +1,6 @@
 ---
 title: Vererbung (C#-Programmierhandbuch)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-c-programming-guide"></a>Vererbung (C#-Programmierhandbuch)
 
@@ -46,7 +39,7 @@ Klassenvererbung
  Wenn eine Basisklasse eine Methode als [virtuell](../../../csharp/language-reference/keywords/virtual.md) deklariert, kann eine abgeleitete Klasse die Methode mit ihrer eigenen Implementierung [außer Kraft setzen](../../../csharp/language-reference/keywords/override.md). Wenn eine Basisklasse eine Methode als [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklariert, muss diese Methode in jeder nicht abstrakten Klasse außer Kraft gesetzt werden, die direkt von dieser Klasse erbt. Wenn eine abgeleitete Klasse selbst abstrakt ist, erbt sie abstrakte Member, ohne diese zu implementieren. Abstrakte und virtuelle Member sind die Basis für Polymorphie, die das zweite charakteristische Merkmal des objektorientierten Programmierens ist. Weitere Informationen finden Sie unter [Polymorphie](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
 ## <a name="abstract-base-classes"></a>Abstrakte Basisklassen  
- Sie können eine Klasse als [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklarieren, wenn Sie die direkte Instanziierung mit dem Schlüsselwort [new](../../../csharp/language-reference/keywords/new.md) vermeiden möchten. Wenn Sie dies machen, kann die Klasse nur verwendet werden, wenn eine neue Klasse von ihr abgeleitet wird. Eine abstrakte Klasse kann mindestens eine Methodensignatur enthalten, die selbst auch als abstrakt deklariert wurden. Diese Signaturen geben die Parameter und Rückgabewerte an, verfügen aber über keine Implementierung (Methodenkörper). Eine abstrakte Klasse muss nicht zwangsläufig abstrakte Member enthalten; wenn eine Klasse allerdings einen abstrakten Member enthält, muss die Klasse an sich auch als abstrakt deklariert werden. Abgeleitete Klassen, die nicht selbst abstrakt sind, müssen eine Implementierung für jede beliebige abstrakte Methode aus einer abstrakten Basisklasse bereitstellen. Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Sie können eine Klasse als [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklarieren, wenn Sie die direkte Instanziierung mit dem Schlüsselwort [new](../../../csharp/language-reference/keywords/new.md) vermeiden möchten. Wenn Sie dies machen, kann die Klasse nur verwendet werden, wenn eine neue Klasse von ihr abgeleitet wird. Eine abstrakte Klasse kann mindestens eine Methodensignatur enthalten, die selbst auch als abstrakt deklariert wurden. Diese Signaturen geben die Parameter und Rückgabewerte an, verfügen aber über keine Implementierung (Methodenkörper). Eine abstrakte Klasse muss nicht zwangsläufig abstrakte Member enthalten; wenn eine Klasse allerdings einen abstrakten Member enthält, muss die Klasse an sich auch als abstrakt deklariert werden. Abgeleitete Klassen, die nicht selbst abstrakt sind, müssen eine Implementierung für jede beliebige abstrakte Methode aus einer abstrakten Basisklasse bereitstellen. Weitere Informationen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="interfaces"></a>Schnittstellen  
  Eine *Schnittstelle* ist ein Verweistyp, der einer abstrakten Basisklasse leicht ähnelt, die nur aus zwei abstrakten Membern besteht. Wenn eine Klasse eine Schnittstelle implementiert, muss sie eine Implementierung für alle Member der Schnittstelle bereitstellen. Eine Klasse kann mehrere Schnittstellen implementieren, auch wenn sie nur von einer einzelnen direkten Basisklasse ableiten kann.  

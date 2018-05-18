@@ -1,13 +1,6 @@
 ---
 title: Lc.exe (License Compiler-Tool)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Lc.exe
 - .licx file
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2e890ff68967d04d5c0f487508c9ce559f377e56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5a8b38e819c323a06faad2edba586cb18d26edc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (License Compiler-Tool)
 Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung und erstellt eine Binärdatei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.  
@@ -53,7 +41,7 @@ Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung un
 |------------|-----------------|  
 |**/complist:** *filename*|Gibt den Namen einer Datei an, die die Liste der lizenzierten Komponenten enthält, die in die LICENSES-Datei eingebunden werden sollen. Auf die einzelnen Komponenten wird mit dem vollständigen Namen verwiesen, wobei pro Zeile jeweils nur eine Komponente aufgeführt wird.<br /><br /> Benutzer der Befehlszeile können für jedes Formular des Projekts eine eigene Datei angeben. "Lc.exe" akzeptiert mehrere Eingabedateien und erstellt eine einzige LICENSES-Datei.|  
 |**-h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|**/i:***module*|Gibt die Module an, die die in der Datei **/complist**aufgelisteten Komponenten enthalten. Verwenden Sie mehrere**/i**-Flags, um mehrere Module anzugeben.|  
+|**/i:***module*|Gibt die Module an, die die in der Datei **/complist**aufgelisteten Komponenten enthalten. Verwenden Sie mehrere **/i**-Flags, um mehrere Module anzugeben.|  
 |**/nologo**|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |**/outdir:** *path*|Gibt das Verzeichnis an, in dem die LICENSES-Ausgabedatei gespeichert werden soll.|  
 |**/target:** *targetPE*|Gibt die ausführbare Datei an, für die die LICENSES-Datei generiert wird.|  

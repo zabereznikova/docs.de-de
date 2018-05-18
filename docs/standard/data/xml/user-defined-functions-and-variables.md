@@ -1,29 +1,18 @@
 ---
 title: Benutzerdefinierte Funktionen und Variablen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b6870861541a063c56f83dcb286d21a5a970d1b1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c2ce474dac44de1ac72811ecd3bc294ba57ce40a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-functions-and-variables"></a>Benutzerdefinierte Funktionen und Variablen
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, die zur Interaktion mit <xref:System.Xml.XPath.XPathDocument>-Daten verwendet werden. Sie können die standardmäßigen XPath-Funktionen durch Implementieren von Erweiterungsfunktionen und -variablen für XPath-Abfrageausdrücke ersetzen. Die <xref:System.Xml.XPath.XPathExpression.SetContext%2A>-Methode akzeptiert einen von <xref:System.Xml.Xsl.XsltContext> abgeleiteten benutzerdefinierten Kontext. Benutzerdefinierte Funktionen werden von dem benutzerdefinierten Kontext aufgelöst.  

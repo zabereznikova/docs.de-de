@@ -1,12 +1,6 @@
 ---
 title: Speicherortbasierte Cacherichtlinien
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Cache If Available policy
 - reload policy
@@ -21,16 +15,14 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a09c8c47c91222d6292d46d2eea80a30ed786494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b4109cef8d527d397903854e05a2204a3e551938
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="location-based-cache-policies"></a>Speicherortbasierte Cacherichtlinien
 Eine speicherortbasierte Cacherichtlinie definiert die Aktualität gültiger zwischengespeicherter Einträge basierend darauf, woher die angeforderte Ressource stammen kann. Eine zwischengespeicherte Ressource ist gültig, wenn ihre Verwendung keinen Verstoß gegen vom Server angegebene Anforderungen an die erneute Überprüfung darstellt. Eine speicherortbasierte Cacherichtlinie wird programmgesteuert erstellt, indem ein <xref:System.Net.Cache.RequestCachePolicy>- oder <xref:System.Net.Cache.HttpRequestCachePolicy>-Klassenkonstruktor verwendet wird. Der Typ der speicherortbasierten Richtlinie wird mithilfe eines <xref:System.Net.Cache.RequestCacheLevel>- oder <xref:System.Net.Cache.HttpRequestCacheLevel>-Enumerationswerts an den Konstruktor übergeben. Codebeispiele, die speicherortbasierte Cacherichtlinien erstellen, finden Sie unter [Vorgehensweise: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Im folgenden Abschnitt wird jeder Typ der speicherortbasierten Cacherichtlinie für Hypertext Transfer-Protokollressourcen (http und https) erklärt.  

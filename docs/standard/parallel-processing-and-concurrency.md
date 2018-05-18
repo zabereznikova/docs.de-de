@@ -2,26 +2,19 @@
 title: Parallelverarbeitung, Parallelität und asynchrone Programmierung in .NET
 description: Erfahren Sie, wie Sie Ihre Anwendungen mit den .NET-Funktionen für Parallelverarbeitung und asynchrone Programmierung reaktionsfähiger und schneller gestalten.
 ms.date: 04/06/2018
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - parallel processing [.NET]
 - concurrency [.NET]
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e4ee282f226d553a8bca92c1afb184bc181d6bb7
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 896b572ef6a9b285787c39a41c99c8f0209b28cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>Parallelverarbeitung, Parallelität und asynchrone Programmierung in .NET
 .NET bietet mehrere Möglichkeiten zum Schreiben von asynchronem Code, um Ihre Anwendungen für einen Benutzer reaktionsfähiger zu gestalten, sowie zum Schreiben von parallelem Code, der mehrere Ausführungsthreads verwendet, um die Leistung des Computers Ihres Benutzers zu maximieren.  

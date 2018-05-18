@@ -1,30 +1,19 @@
 ---
 title: Threads und Threading
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - multiple threads
 - threading [.NET Framework]
 - threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02c676e3bb6c0dcc9e65858367d13f41adc797e8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threads-and-threading"></a>Threads und Threading
 Betriebssysteme verwenden Prozesse, um die verschiedenen ausgeführten Anwendungen voneinander zu trennen. Threads sind die Grundeinheit, der ein Betriebssystem Prozessorzeit zuweist, und mehrere Threads können gleichzeitig Code innerhalb dieses Prozesses ausführen. Jeder Thread unterhält Ausnahmehandler, eine Planungspriorität und eine Reihe von Strukturen, mit denen das System den Threadkontext speichert, bis er eingeplant ist. Der Threadkontext enthält alle Informationen, die der Thread benötigt, um die Ausführung nahtlos fortzusetzen. Dies schließt auch seine CPU-Register und seinen Stapel im Adressraum des Hostprozesses vom Thread ein.  

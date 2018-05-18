@@ -1,13 +1,7 @@
 ---
-title: "Das Objektmodell für reguläre Ausdrücke"
-ms.custom: 
+title: Das Objektmodell für reguläre Ausdrücke
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -41,18 +35,13 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8917ce764d615282f95aad2eee494fcc0ba7a847
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 14402b56a765fc8fe57f40e9c5c44f500267e266
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-regular-expression-object-model"></a>Das Objektmodell für reguläre Ausdrücke
 <a name="introduction"></a> In diesem Thema wird das Objektmodell beschrieben, das beim Arbeiten mit regulären .NET-Ausdrücken verwendet wird. Es enthält die folgenden Abschnitte:  
@@ -70,14 +59,14 @@ ms.lasthandoff: 02/19/2018
 -   [The Individual Capture (Die einzelne Erfassung)](#the_individual_capture)  
   
 <a name="Engine"></a>   
-## <a name="the-regular-expression-engine"></a>Das Modul für reguläre Ausdrücke  
- Die Engine für reguläre Ausdrücke in .NET wird durch die <xref:System.Text.RegularExpressions.Regex>-Klasse dargestellt. Das Modul für reguläre Ausdrücke ist für das Analysieren und Kompilieren eines regulären Ausdrucks sowie für das Ausführen von Vorgängen zuständig, die dem Muster eines regulären Ausdrucks mit einer Eingabezeichenfolge entsprechen. Die Engine ist die zentrale Komponente im .NET-Objektmodell für reguläre Ausdrücke.  
+## <a name="the-regular-expression-engine"></a>Die Engine für reguläre Ausdrücke  
+ Die Engine für reguläre Ausdrücke in .NET wird durch die <xref:System.Text.RegularExpressions.Regex>-Klasse dargestellt. Die Engine für reguläre Ausdrücke ist für das Analysieren und Kompilieren eines regulären Ausdrucks sowie für das Ausführen von Vorgängen zuständig, die dem Muster eines regulären Ausdrucks mit einer Eingabezeichenfolge entsprechen. Die Engine ist die zentrale Komponente im .NET-Objektmodell für reguläre Ausdrücke.  
   
- Das Modul für reguläre Ausdrücke kann auf zwei verschiedene Arten verwendet werden:  
+ Die Engine für reguläre Ausdrücke kann auf zwei verschiedene Arten verwendet werden:  
   
--   Durch Aufrufen der statischen Methoden der <xref:System.Text.RegularExpressions.Regex>-Klasse. Die Methodenparameter schließen die Eingabezeichenfolge und das Muster eines regulären Ausdrucks ein. Das Modul für reguläre Ausdrücke führt eine Zwischenspeicherung der regulären Ausdrücke aus, die in statischen Methodenaufrufen verwendet werden. Daher zeigen wiederholte Aufrufe von statischen regulären Ausdrucksmethoden, für die der gleiche reguläre Ausdruck verwendet wird, eine relativ gute Leistung.  
+-   Durch Aufrufen der statischen Methoden der <xref:System.Text.RegularExpressions.Regex>-Klasse. Die Methodenparameter schließen die Eingabezeichenfolge und das Muster eines regulären Ausdrucks ein. Die Engine für reguläre Ausdrücke führt eine Zwischenspeicherung der regulären Ausdrücke aus, die in statischen Methodenaufrufen verwendet werden. Daher zeigen wiederholte Aufrufe von statischen regulären Ausdrucksmethoden, für die der gleiche reguläre Ausdruck verwendet wird, eine relativ gute Leistung.  
   
--   Durch Instanziieren eines <xref:System.Text.RegularExpressions.Regex>-Objekts und durch Übergeben eines regulären Ausdrucks an den Klassenkonstruktor. In diesem Fall ist das <xref:System.Text.RegularExpressions.Regex>-Objekt unveränderlich (schreibgeschützt) und stellt ein Modul für reguläre Ausdrücke dar, das eng an einen einzelnen regulären Ausdruck gekoppelt ist. Da von <xref:System.Text.RegularExpressions.Regex>-Instanzen verwendete reguläre Ausdrücke nicht zwischengespeichert werden, sollte ein <xref:System.Text.RegularExpressions.Regex>-Objekt nicht mehrmals mit dem gleichen regulären Ausdruck instanziiert werden.  
+-   Durch Instanziieren eines <xref:System.Text.RegularExpressions.Regex>-Objekts und durch Übergeben eines regulären Ausdrucks an den Klassenkonstruktor. In diesem Fall ist das <xref:System.Text.RegularExpressions.Regex>-Objekt unveränderlich (schreibgeschützt) und stellt eine Engine für reguläre Ausdrücke dar, das eng an einen einzelnen regulären Ausdruck gekoppelt ist. Da von <xref:System.Text.RegularExpressions.Regex>-Instanzen verwendete reguläre Ausdrücke nicht zwischengespeichert werden, sollte ein <xref:System.Text.RegularExpressions.Regex>-Objekt nicht mehrmals mit dem gleichen regulären Ausdruck instanziiert werden.  
   
  Sie können die Methoden der <xref:System.Text.RegularExpressions.Regex>-Klasse aufrufen, um die folgenden Vorgänge auszuführen:  
   
@@ -128,7 +117,7 @@ ms.lasthandoff: 02/19/2018
 |`\b`|Beendet den Vergleich an einer Wortgrenze.|  
   
 ### <a name="extracting-all-matches"></a>Extrahieren aller Übereinstimmungen  
- Von der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode wird ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt zurückgegeben, das Informationen zu allen Übereinstimmungen enthält, die vom Modul für reguläre Ausdrücke in der Eingabezeichenfolge gefunden wurden. Zum Beispiel kann das vorherige Beispiel neu geschrieben werden, um die <xref:System.Text.RegularExpressions.Regex.Matches%2A>-Methode anstelle der <xref:System.Text.RegularExpressions.Regex.Match%2A>-Methode und der <xref:System.Text.RegularExpressions.Match.NextMatch%2A>-Methode aufzurufen.  
+ Von der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode wird ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt zurückgegeben, das Informationen zu allen Übereinstimmungen enthält, die von der Engine für reguläre Ausdrücke in der Eingabezeichenfolge gefunden wurden. Zum Beispiel kann das vorherige Beispiel neu geschrieben werden, um die <xref:System.Text.RegularExpressions.Regex.Matches%2A>-Methode anstelle der <xref:System.Text.RegularExpressions.Regex.Match%2A>-Methode und der <xref:System.Text.RegularExpressions.Match.NextMatch%2A>-Methode aufzurufen.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matches1.cs#3)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matches1.vb#3)]  
@@ -177,7 +166,7 @@ ms.lasthandoff: 02/19/2018
   
 <a name="the_match_collection"></a>   
 ### <a name="the-match-collection"></a>Die Match-Auflistung  
- Die <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode gibt ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt zurück, das <xref:System.Text.RegularExpressions.Match>-Objekte enthält, die alle Übereinstimmungen darstellen, die das Modul für reguläre Ausdrücke gefunden hat, und zwar in der Reihenfolge, in der sie in der Eingabezeichenfolge auftreten. Wenn keine Übereinstimmungen vorhanden sind, gibt die Methode ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt ohne Member zurück. Die <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft ermöglicht den Zugriff auf einzelne Member der Auflistung nach Index, von null bis eins weniger als es dem Wert der <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft entspricht. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> ist der Indexer (in C#) und die Standardeigenschaft der Auflistung (in Visual Basic).  
+ Die <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode gibt ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt zurück, das <xref:System.Text.RegularExpressions.Match>-Objekte enthält, die alle Übereinstimmungen darstellen, die die Engine für reguläre Ausdrücke gefunden hat, und zwar in der Reihenfolge, in der sie in der Eingabezeichenfolge auftreten. Wenn keine Übereinstimmungen vorhanden sind, gibt die Methode ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt ohne Member zurück. Die <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft ermöglicht den Zugriff auf einzelne Member der Auflistung nach Index, von null bis eins weniger als es dem Wert der <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft entspricht. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> ist der Indexer (in C#) und die Standardeigenschaft der Auflistung (in Visual Basic).  
   
  Der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode füllt standardmäßig das <xref:System.Text.RegularExpressions.MatchCollection>-Objekt mithilfe verzögerter Auswertung auf. Zugriff auf Eigenschaften, die eine vollständig aufgefüllte Auflistung erfordern, z. B. die <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft und die <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft, führt möglicherweise zu Leistungseinbußen. Daher wird empfohlen, dass Sie auf die Auflistung mit dem <xref:System.Collections.IEnumerator>-Objekt zugreifen, das von der <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>-Methode zurückgegeben wird. Einzelne Sprachen stellen Konstrukte bereit, z.B. `For``Each` in Visual Basic und `foreach` in C#, die die <xref:System.Collections.IEnumerator>-Schnittstelle der Auflistung umschließen.  
   

@@ -1,13 +1,6 @@
 ---
 title: Certmgr.exe (Certificate Manager-Tool)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c303a9d91d12305bd8be4e111aaa8d6ac13eb77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96edfd0f94240d51a224f4522573a450ab027330
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Certificate Manager-Tool)
 Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifikatvertrauenslisten (Certificate Trust Lists, CTLs) und Zertifikatsperrlisten (Certificate Revocation Lists, CRLs) verwalten.  
@@ -65,13 +55,13 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
 |**/add**|Fügt einem Zertifikatsspeicher Zertifikate, CTLs und CRLs hinzu.|  
 |**/all**|Fügt bei der Verwendung mit **/add** alle Einträge hinzu. Löscht bei der Verwendung mit **/del** alle Einträge. Zeigt bei der Verwendung ohne die Option **/add** oder **/del** alle Einträge an. Die Option **/all** kann nicht mit **/put** verwendet werden.|  
 |**/c**|Fügt bei der Verwendung mit **/add** Zertifikate hinzu. Löscht Zertifikate bei der Verwendung mit **/del**. Speichert Zertifikate bei der Verwendung mit **/put**. Zeigt bei der Verwendung ohne die Optionen **/add**, **/del** und **/put** Zertifikate an.|  
-|**/CRL**|Fügt bei der Verwendung mit **/add** CRLs hinzu. Löscht CRLs bei der Verwendung mit**/del**. Speichert CRLs bei der Verwendung mit **/put**. Zeigt bei der Verwendung ohne die Optionen **/add**, **/del** und **/put** CRLs an.|  
+|**/CRL**|Fügt bei der Verwendung mit **/add** CRLs hinzu. Löscht CRLs bei der Verwendung mit **/del**. Speichert CRLs bei der Verwendung mit **/put**. Zeigt bei der Verwendung ohne die Optionen **/add**, **/del** und **/put** CRLs an.|  
 |**/CTL**|Fügt bei der Verwendung mit **/add** CTLs hinzu. Löscht CTLs bei der Verwendung mit **/del**. Speichert CTLs bei der Verwendung mit **/put**. Zeigt bei der Verwendung ohne die Option **/add**, **/del** oder **/put** CTLs an.|  
 |**/del**|Löscht Zertifikate, CTLs und CRLs aus einem Zertifikatspeicher.|  
 |**/e** *encodingType*|Gibt den Codierungstyp des Zertifikats an. Die Standardeinstellung ist `X509_ASN_ENCODING`.|  
 |**/f** *dwFlags*|Gibt das Flag zum Öffnen des Speichers an. Dies ist der an *CertOpenStore* übergebene Parameter **dwFlags**. Der Standardwert ist CERT_SYSTEM_STORE_CURRENT_USER. Diese Option wird nur bei der Verwendung der Option **/y** berücksichtigt.|  
 |**/h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|**/n** *name*|Gibt den allgemeinen Namen des Zertifikats an, das hinzugefügt, gelöscht oder gespeichert werden soll. Diese Option kann nur für Zertifikate und nicht für CTLs und CRLs verwendet werden.|  
+|**/n** *nam*|Gibt den allgemeinen Namen des Zertifikats an, das hinzugefügt, gelöscht oder gespeichert werden soll. Diese Option kann nur für Zertifikate und nicht für CTLs und CRLs verwendet werden.|  
 |**/put**|Speichert ein X.509-Zertifikat, eine CTL oder eine CRL aus einem Zertifikatspeicher in einer Datei. Die Datei wird im Format X.509 gespeichert. Sie können die Option **/7** zusammen mit der Option **/put** verwenden, um die Datei im PKCS #7-Format zu speichern. Auf die Option **/put** muss entweder **/c**, **/CTL** oder **/CR** folgen. Die Option **/all** kann nicht mit **/put** verwendet werden.|  
 |**/r** *location*|Gibt den Speicherort des Systemspeichers in der Registrierung an. Diese Option wird nur berücksichtigt, wenn Sie die Option **/s** angeben. Für *location* muss einer der folgenden Werte angegeben werden:<br /><br /> -   `currentUser` gibt an, dass sich der Zertifikatspeicher unter dem Schlüssel HKEY_CURRENT_USER befindet. Dies ist die Standardeinstellung.<br />-   `localMachine` gibt an, dass sich der Zertifikatspeicher unter dem Schlüssel HKEY_LOCAL_MACHINE befindet.|  
 |**/s**|Gibt an, dass der Zertifikatspeicher ein Systemspeicher ist. Wenn Sie diese Option nicht angeben, wird angenommen, dass der Speicher vom Typ **StoreFile** ist.|  

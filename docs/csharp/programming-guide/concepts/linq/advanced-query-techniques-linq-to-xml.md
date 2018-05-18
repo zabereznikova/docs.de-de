@@ -1,28 +1,19 @@
 ---
 title: Erweiterte Abfragetechniken (LINQ to XML) (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5898813d5773f13fa2c969b065e5ab1412726e9e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b1045308d18afb46c5f3bb0da9d02b07f17db95e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>Erweiterte Abfragetechniken (LINQ to XML) (C#)
 Dieser Abschnitt enthält Beispiele für erweiterte [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragetechniken.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|description|  
 |-----------|-----------------|  
 |[Vorgehensweise: Verbinden von zwei Auflistungen (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|Zeigt, wie mit der `Join`-Klausel die Vorteile von Beziehungen in XML-Daten genutzt werden können.|  
 |[Vorgehensweise: Erstellen einer Hierarchie mittels Gruppierung (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)|Zeigt, wie Daten gruppiert werden und anschließend anhand der Gruppierung XML generiert wird.|  

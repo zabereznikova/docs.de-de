@@ -1,23 +1,16 @@
 ---
 title: Allgemeines Typsystem und Common Language Specification
-description: "Erfahren Sie, wie das allgemeine Typsystem (CTS) und die Common Language Specification (CLS) die .NET-Unterstützung mehrerer Sprachen ermöglichen."
-keywords: .NET, .NET Core
+description: Erfahren Sie, wie das allgemeine Typsystem (CTS) und die Common Language Specification (CLS) die .NET-Unterstützung mehrerer Sprachen ermöglichen.
 author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d7626b0a6a902465416187b2c09d624dfe9a9773
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 992f70cc7c2e55a0a2cfd08e08a3a9f16aad8c8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-type-system--common-language-specification"></a>Allgemeines Typsystem und Common Language Specification
 

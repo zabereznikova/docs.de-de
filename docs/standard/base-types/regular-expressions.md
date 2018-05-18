@@ -1,13 +1,7 @@
 ---
 title: Reguläre Ausdrücke von .NET Framework
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,24 +20,19 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d0ec5572776368fa9943a87fa72280a4ebeb03d
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 33aaf09e284db5c818eb0ff3917533cce5e70ad7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-regular-expressions"></a>Reguläre Ausdrücke von .NET
 Der Einsatz regulärer Ausdrücke stellt eine leistungsstarke, flexible und effiziente Methode zur Verarbeitung von Text dar. Durch die umfangreiche Notation regulärer Ausdrücke für den Mustervergleich können folgende Tasks ausgeführt werden: schnelle Analyse großer Textmengen zur Suche nach speziellen Zeichenmustern; Validieren von Text, um sicherzustellen, dass er einem vordefinierten Muster entspricht (z. B. eine E-Mail-Adresse); Extrahieren, Bearbeiten, Ersetzen oder Löschen von Textzeichenfolgen; Hinzufügen der extrahierten Zeichenfolgen zu einer Auflistung, um einen Bericht zu erstellen. Für viele Anwendungen, die mit Zeichenfolgen arbeiten oder große Textblöcke analysieren, sind reguläre Ausdrücke ein unverzichtbares Tool.  
   
 ## <a name="how-regular-expressions-work"></a>Funktionsweise von regulären Ausdrücken  
- Das Kernstück der Textverarbeitung mit regulären Ausdrücken ist das Modul für reguläre Ausdrücke, das durch das <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Objekt in .NET dargestellt wird. Für die Textverarbeitung mit regulären Ausdrücken ist mindestens erforderlich, dass das Modul für reguläre Ausdrücke mit den folgenden zwei Informationen bereitgestellt wird:  
+ Das Kernstück der Textverarbeitung mit regulären Ausdrücken ist die Engine für reguläre Ausdrücke, die durch das <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Objekt in .NET dargestellt wird. Für die Textverarbeitung mit regulären Ausdrücken ist mindestens erforderlich, dass die Engine für reguläre Ausdrücke mit den folgenden zwei Informationen bereitgestellt wird:  
   
 -   Das Muster des regulären Ausdrucks, das im Text identifiziert werden soll.  
   
@@ -107,7 +96,7 @@ Der Einsatz regulärer Ausdrücke stellt eine leistungsstarke, flexible und effi
   
 |||  
 |-|-|  
-|`\$`|Suche nach einem einzelnen Vorkommen des Dollarsymbols ($) in der Eingabezeichenfolge. Die Musterzeichenfolge des regulären Ausdrucks schließt einen umgekehrten Schrägstrich ein, der angibt, dass das Dollarsymbol nicht als Anchor des regulären Ausdrucks, sondern wörtlich interpretiert werden soll. (Das $-Symbol allein würde angeben, dass das Modul für reguläre Ausdrücke versuchen soll, mit der Suche nach Übereinstimmungen am Ende einer Zeichenfolge zu beginnen.) Um sicherzustellen, dass das Währungssymbol der aktuellen Kultur nicht als reguläres Ausdruckssymbol fehlinterpretiert wird, wird im Beispiel die <xref:System.Text.RegularExpressions.Regex.Escape%2A>-Methode aufgerufen, um das Zeichen mit Escapezeichen zu versehen.|  
+|`\$`|Suche nach einem einzelnen Vorkommen des Dollarsymbols ($) in der Eingabezeichenfolge. Die Musterzeichenfolge des regulären Ausdrucks schließt einen umgekehrten Schrägstrich ein, der angibt, dass das Dollarsymbol nicht als Anchor des regulären Ausdrucks, sondern wörtlich interpretiert werden soll. (Das $-Symbol allein würde angeben, dass die Engine für reguläre Ausdrücke versuchen soll, mit der Suche nach Übereinstimmungen am Ende einer Zeichenfolge zu beginnen.) Um sicherzustellen, dass das Währungssymbol der aktuellen Kultur nicht als reguläres Ausdruckssymbol fehlinterpretiert wird, wird im Beispiel die <xref:System.Text.RegularExpressions.Regex.Escape%2A>-Methode aufgerufen, um das Zeichen mit Escapezeichen zu versehen.|  
 |`\s*`|Suche nach 0 (null) oder mehr Vorkommen eines Leerstellenzeichens.|  
 |`[-+]?`|Suche nach 0 (null) oder einem Vorkommen entweder eines positiven oder eines negativen Vorzeichens.|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Die äußeren Klammern um diesen Ausdruck definieren ihn als Erfassungsgruppe oder Teilausdruck. Wenn eine Übereinstimmung gefunden wird, können Informationen über diesen Teil der übereinstimmenden Zeichenfolge aus dem zweiten <xref:System.Text.RegularExpressions.Group>-Objekt in dem <xref:System.Text.RegularExpressions.GroupCollection>-Objekt abgerufen werden, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird. (Das erste Element in der Auflistung stellt die gesamte Übereinstimmung dar.)|  

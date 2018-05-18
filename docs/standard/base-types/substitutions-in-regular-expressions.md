@@ -1,13 +1,7 @@
 ---
-title: "Ersetzungen in regulären Ausdrücken"
-ms.custom: 
+title: Ersetzungen in regulären Ausdrücken
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 53fd4ee63d49b3943fa0b1164591aaddaa764abc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
 <a name="Top"></a> Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode bereitgestellt, die über einen `replacement`-Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
@@ -180,7 +169,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.Regex.Language.Substitutions#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/after1.cs#5)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/after1.vb#5)]  
   
- In diesem Beispiel enthält die Eingabezeichenfolge `"aa1bb2cc3dd4ee5"` fünf Übereinstimmungen. Aus der folgenden Tabelle wird ersichtlich, wie die Ersetzung `$'` bewirkt, dass das Modul für reguläre Ausdrücke jede Übereinstimmung in der Eingabezeichenfolge ersetzt. Eingefügter Text wird in der Ergebnisspalte in Fettdruck angezeigt.  
+ In diesem Beispiel enthält die Eingabezeichenfolge `"aa1bb2cc3dd4ee5"` fünf Übereinstimmungen. Aus der folgenden Tabelle wird ersichtlich, wie die Ersetzung `$'` bewirkt, dass die Engine für reguläre Ausdrücke jede Übereinstimmung in der Eingabezeichenfolge ersetzt. Eingefügter Text wird in der Ergebnisspalte in Fettdruck angezeigt.  
   
 |Match|Position|Zeichenfolge nach Übereinstimmung|Ergebniszeichenfolge|  
 |-----------|--------------|------------------------|-------------------|  
@@ -222,7 +211,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.Regex.Language.Substitutions#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/entire1.cs#7)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/entire1.vb#7)]  
   
- In diesem Beispiel enthält die Eingabezeichenfolge `"ABC123DEF456"` zwei Übereinstimmungen. Aus der folgenden Tabelle wird ersichtlich, wie die Ersetzung `$_` bewirkt, dass das Modul für reguläre Ausdrücke jede Übereinstimmung in der Eingabezeichenfolge ersetzt. Eingefügter Text wird in der Ergebnisspalte in Fettdruck angezeigt.  
+ In diesem Beispiel enthält die Eingabezeichenfolge `"ABC123DEF456"` zwei Übereinstimmungen. Aus der folgenden Tabelle wird ersichtlich, wie die Ersetzung `$_` bewirkt, dass die Engine für reguläre Ausdrücke jede Übereinstimmung in der Eingabezeichenfolge ersetzt. Eingefügter Text wird in der Ergebnisspalte in Fettdruck angezeigt.  
   
 |Match|Position|Match|Ergebniszeichenfolge|  
 |-----------|--------------|-----------|-------------------|  

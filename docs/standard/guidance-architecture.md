@@ -1,20 +1,15 @@
 ---
-title: "Architekturrichtlinien für .NET"
-description: "In diesem Artikel erfahren Sie mehr über die empfohlenen Vorgehensweisen bezüglich der Architektur, des Entwurfs und der Erstellung von .NET-Software."
-keywords: Docker, Microservices, ASP.NET, Container, Architecture
+title: Architekturrichtlinien für .NET
+description: In diesem Artikel erfahren Sie mehr über die empfohlenen Vorgehensweisen bezüglich der Architektur, des Entwurfs und der Erstellung von .NET-Software.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.prod: .net
 ms.technology: dotnet
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 24c02dfec62304293ab574b90c24c1332ce78108
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7d636e842c7ec91949f2557f74ae724def858053
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-architecture-guidance"></a>Architekturrichtlinien für .NET
 

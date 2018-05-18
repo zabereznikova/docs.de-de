@@ -1,13 +1,7 @@
 ---
-title: "Gewusst wie: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer"
-ms.custom: 
+title: 'Gewusst wie: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - formatting [.NET Framework], dates
 - parsing strings [.NET Framework], date and time strings
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b6c68ddd29b8221a073b00ade87e3b9d3dc870b8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Gewusst wie: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer
 Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, die Datums- und Uhrzeitwerte analysieren und formatieren, bei der Interaktion mit dem Benutzer nicht von einem Standardformat (am häufigsten das Format der lokalen Kultur des Webservers) abhängen. Stattdessen sollten Webformulare, die vom Benutzer eingegebene Datums- und Uhrzeitzeichenfolgen behandeln, die Zeichenfolgen gemäß der bevorzugten Kultur des Benutzers analysieren. Entsprechend sollten Datums- und Uhrzeitdaten dem Benutzer in einem Format angezeigt werden, das seiner Kultur entspricht. In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  
@@ -36,15 +25,15 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
   
 1.  Bestimmen Sie, ob das von der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene Zeichenfolgenarray gefüllt ist. Wenn dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.  
   
-2.  Wenn das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray gefüllt ist, rufen Sie sein erstes Element ab. Das erste Element gibt die Standardeinstellung des Benutzers oder seine bevorzugte Sprache und Region an.  
+2.  Wenn das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray aufgefüllt ist, rufen Sie sein erstes Element ab. Das erste Element gibt die Standardeinstellung des Benutzers oder seine bevorzugte Sprache und Region an.  
   
 3.  Instanziieren Sie ein <xref:System.Globalization.CultureInfo>-Objekt durch Aufrufen des <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktors, das die bevorzugte Kultur des Benutzers darstellt.  
   
 4.  Rufen Sie entweder die `TryParse`- oder `Parse`-Methode des <xref:System.DateTime>- oder <xref:System.DateTimeOffset>-Typs ab, um die Konvertierung zu versuchen. Verwenden Sie eine Überladung der `TryParse`- oder `Parse`-Methode mit einem `provider`-Parameter, und übergeben Sie sie an eines der folgenden Objekte:  
   
-    -   Das in Schritt 3 erstellte <xref:System.Globalization.CultureInfo>-Objekt.  
+    -   Das in Schritt 3 erstellte <xref:System.Globalization.CultureInfo>-Objekt  
   
-    -   Das von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A>-Eigenschaft zurückgegebene <xref:System.Globalization.DateTimeFormatInfo>-Objekt des in Schritt 3 erstellten <xref:System.Globalization.CultureInfo>-Objekts.  
+    -   Das von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A>-Eigenschaft zurückgegebene <xref:System.Globalization.DateTimeFormatInfo>-Objekt des in Schritt 3 erstellten <xref:System.Globalization.CultureInfo>-Objekts  
   
 5.  Wenn bei der Konvertierung ein Fehler auftritt, wiederholen Sie die Schritte 2 bis 4 für jedes verbleibende Element im von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebenen Zeichenfolgenarray.  
   
@@ -96,7 +85,7 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
   
  Zum Füllen der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Eigenschaft kommen die Kulturnamen infrage, die sich in den `Accept-Language`-Headern befinden, die in einer HTTP-Anforderung enthalten sind. Allerdings sind nicht in den Anforderungen aller Browser `Accept-Language`-Header enthalten, und die Benutzer können die Header auch vollständig unterdrücken. Daher ist es wichtig, dass bei der Analyse der Benutzereingabe eine Fallbackkultur verfügbar ist. In der Regel ist die Fallbackkultur die von <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> zurückgegebene invariante Kultur. Benutzer können für den Internet Explorer auch Kulturnamen bereitstellen, die sie in ein Textfeld eingeben, was die Gefahr mit sich bringt, dass die Kulturnamen möglicherweise nicht gültig sind. Daher ist es wichtig, bei der Instanziierung eines <xref:System.Globalization.CultureInfo>-Objekts eine Ausnahmebehandlung zu verwenden.  
   
- Bei Abruf durch eine vom Internet Explorer übermittelte HTTP-Anforderung wird das <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Array in der durch die Benutzereinstellung vorgegebenen Reihenfolge aufgefüllt. Das erste Element im Array enthält den Namen der primären Kultur/Region des Benutzers. Wenn das Array zusätzliche Elemente enthält, weist Internet Explorer ihnen nach dem Zufallsprinzip einen Qualitätsspezifizierer zu, der durch ein Semikolon vom Namen der Kultur getrennt wird. Beispielsweise kann ein Eintrag für die Kultur „fr-FR“ die Form `fr-FR;q=0.7` haben.  
+ Beim Abrufen durch eine vom Internet Explorer übermittelte HTTP-Anforderung wird das <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Array in der durch die Benutzervoreinstellung vorgegebenen Reihenfolge aufgefüllt. Das erste Element im Array enthält den Namen der primären Kultur/Region des Benutzers. Wenn das Array zusätzliche Elemente enthält, weist der Internet Explorer ihnen nach dem Zufallsprinzip einen Qualitätsspezifizierer zu, der durch ein Semikolon vom Namen der Kultur getrennt wird. Beispielsweise kann ein Eintrag für die Kultur „fr-FR“ das Format `fr-FR;q=0.7` aufweisen.  
   
  Im Beispiel wird der <xref:System.Globalization.CultureInfo.%23ctor%2A>-Konstruktor mit seinem auf `false` festgelegten `useUserOverride`-Parametersatz zum Erstellen eines neuen <xref:System.Globalization.CultureInfo>-Objekts aufgerufen. Wenn der Kulturname der Standardkulturname auf dem Server ist, wird dadurch sichergestellt, dass das vom Klassenkonstruktor erstellte neue <xref:System.Globalization.CultureInfo>-Objekt die Standardeinstellungen einer Kultur enthält und keine mit der Anwendung **Regions- und Sprachoptionen** des Servers überschriebenen Einstellungen widerspiegelt. Es ist unwahrscheinlich, dass die Werte überschriebener Einstellungen auf dem Server auf dem System des Benutzers vorhanden sind oder in der Eingabe des Benutzers widergespiegelt werden.  
   
@@ -107,7 +96,7 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Um den Code zu kompilieren, erstellen Sie eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Webseite ohne CodeBehind. Anschließend kopieren Sie das Beispiel in die Webseite, damit es den vorhandenen Code ersetzt. Die [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Webseite sollte folgende Steuerelemente enthalten:  
   
--   Ein <xref:System.Web.UI.WebControls.Label>-Steuerelement, auf das im Code nicht verwiesen wird. Legen Sie seine <xref:System.Web.UI.WebControls.TextBox.Text%2A>-Eigenschaft auf „Geben Sie eine Zahl ein:" fest.  
+-   Ein <xref:System.Web.UI.WebControls.Label>-Steuerelement, auf das nicht im Code verwiesen wird. Legen Sie seine <xref:System.Web.UI.WebControls.TextBox.Text%2A>-Eigenschaft auf „Geben Sie eine Zahl ein:“ fest.  
   
 -   Ein <xref:System.Web.UI.WebControls.TextBox>-Steuerelement namens `DateString`.  
   

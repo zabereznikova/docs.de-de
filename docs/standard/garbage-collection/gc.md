@@ -1,23 +1,14 @@
 ---
 title: Automatische Speicherverwaltung und Garbage Collection
-description: "Bei der automatischen Speicherverwaltung handelt es sich um einen Dienst, der von der Common Language Runtime während der verwalteten Ausführung zur Verfügung gestellt wird."
-keywords: .NET, .NET Core
-author: dotnet-bot
-ms.author: dotnetcontent
+description: Bei der automatischen Speicherverwaltung handelt es sich um einen Dienst, der von der Common Language Runtime während der verwalteten Ausführung zur Verfügung gestellt wird.
 ms.date: 07/22/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a99d849cc1092e36181da7b7ab767a41ff5ef234
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b9ce8b1fec5c6fc0808b86f06408c3f5d612e492
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>Automatische Speicherverwaltung und Garbage Collection
 
@@ -31,7 +22,7 @@ Das Belegen von Speicher im verwalteten Heap beansprucht weniger Zeit als die ni
 
 ## <a name="releasing-memory"></a>Freigeben von Arbeitsspeicher
 
-Durch das Optimierungsmodul des Garbage Collectors wird der beste Zeitpunkt für das Ausführen einer Garbage Collection bestimmt, die auf den erfolgten Speicherbelegungen basiert. Beim Ausführen einer Garbage Collection wird Speicher freigegeben, den von der Anwendung nicht mehr benötigte Objekte beanspruchen. Durch Überprüfen der Stammelemente der Anwendung wird ermittelt, welche Objekte nicht mehr verwendet werden. Jede Anwendung verfügt über einen Satz von Stammelementen. Jedes Stammelement bezieht sich entweder auf ein Objekt im verwalteten Heap oder ist auf NULL festgelegt. Die Stammelemente einer Anwendung beinhalten statische Felder, lokale Variablen und Parameter im Stapel des Threads sowie CPU-Register. Der Garbage Collector hat Zugriff auf eine Liste der aktiven Stammelemente, die vom JIT-Compiler (Just-In-Time) und der Common Language Runtime verwaltet wird. Mithilfe dieser Liste werden die Stammelemente einer Anwendung durchsucht, und es wird ein Diagramm erstellt, in dem alle von den Stammelementen aus erreichbaren Objekte enthalten sind.
+Durch die Optimierungs-Engine des Garbage Collectors wird der beste Zeitpunkt für das Ausführen einer Garbage Collection bestimmt, die auf den erfolgten Speicherbelegungen basiert. Beim Ausführen einer Garbage Collection wird Speicher freigegeben, den von der Anwendung nicht mehr benötigte Objekte beanspruchen. Durch Überprüfen der Stammelemente der Anwendung wird ermittelt, welche Objekte nicht mehr verwendet werden. Jede Anwendung verfügt über einen Satz von Stammelementen. Jedes Stammelement bezieht sich entweder auf ein Objekt im verwalteten Heap oder ist auf NULL festgelegt. Die Stammelemente einer Anwendung beinhalten statische Felder, lokale Variablen und Parameter im Stapel des Threads sowie CPU-Register. Der Garbage Collector hat Zugriff auf eine Liste der aktiven Stammelemente, die vom JIT-Compiler (Just-In-Time) und der Common Language Runtime verwaltet wird. Mithilfe dieser Liste werden die Stammelemente einer Anwendung durchsucht, und es wird ein Diagramm erstellt, in dem alle von den Stammelementen aus erreichbaren Objekte enthalten sind.
 
 Objekte, die nicht in diesem Diagramm aufgeführt werden, können von den Stammelementen aus nicht erreicht werden. Diese nicht erreichbaren Objekte werden vom Garbage Collector als Abfall betrachtet, und der von diesen Objekten belegte Speicherplatz wird wieder freigegeben. Während einer Garbage Collection wird der verwaltete Heap nach den Blöcken des Adressraums durchsucht, in denen sich nicht erreichbare Objekte befinden. Beim Auffinden dieser Objekte werden die erreichbaren Objekte mithilfe einer Speicherkopierfunktion im Speicher komprimiert, und die von den nicht erreichbaren Objekten belegten Blöcke des Adressraums werden freigegeben. Nach dem Komprimieren des Speichers für die erreichbaren Objekte werden vom Garbage Collector die erforderlichen Korrekturen am Zeiger vorgenommen, sodass die Stammelemente der Anwendung auf die neuen Speicherorte der Objekte verweisen. Außerdem wird der Zeiger des verwalteten Heaps auf die Position hinter dem letzten erreichbaren Objekt gesetzt. Beachten Sie, dass der Speicher nur dann komprimiert wird, wenn in der Garbage Collection eine signifikante Anzahl nicht erreichbarer Objekte gefunden wird. Wenn nach einer Garbage Collection alle Objekte in einem verwalteten Heap verbleiben, bedarf es auch keiner Speicherkomprimierung.
 
@@ -47,7 +38,7 @@ Tatsächlich wird eine Garbage Collection erst dann eingeleitet, wenn der Berei
 
 Nach Durchführung einer Garbage Collection im Bereich der Generation 0 wird der Speicher für die erreichbaren Objekte komprimiert, wie weiter oben unter [Freigeben von Arbeitsspeicher](#releasing-memory) erläutert. Der Garbage Collector stuft dann diese Objekte höher und betrachtet diesen Teil des verwalteten Heaps als Generation 1. Da Objekte, die nach Garbage Collections noch vorhanden sind, normalerweise längere Lebensdauern haben, ist es sinnvoll, sie auf eine höhere Generation heraufzustufen. Auf diese Weise müssen die Objekte der Generationen 1 und 2 nicht bei jeder Garbage Collection, die für Objekte der Generation 0 durchgeführt wird, erneut vom Garbage Collector untersucht werden.
 
-Nachdem der Garbage Collector die erste Garbage Collection der Generation 0 ausgeführt und die erreichbaren Objekte auf Generation 1 hochgestuft hat, betrachtet er den Rest des verwalteten Heaps als Generation 0. Er fährt fort, Speicher für neue Objekte in Generation 0 zu belegen, bis Generation 0 voll ist und eine weitere Garbage Collection ausgeführt werden muss. An diesem Punkt wird vom Optimierungsmodul des Garbage Collectors ermittelt, ob auch die Objekte der älteren Generationen untersucht werden müssen. Wenn eine Garbage Collection der Generation 0 z. B. nicht genug Arbeitsspeicher für die Anwendung freigibt, um das Erstellen eines neuen Objekts erfolgreich auszuführen, kann der Garbage Collector eine Garbage Collection der Generation 1, dann Generation 2, ausführen. Wenn so nicht genug Arbeitsspeicher freigegeben wird, kann der Garbage Collector eine Garbage Collection der Generationen 2, 1 und 0 ausführen. Nach jeder Garbage Collection komprimiert der Garbage Collector die erreichbaren Objekte in Generation 0 und stuft sie auf Generation 1 herauf. Objekte in Generation 1, die nach den Garbage Collections noch vorhanden sind, werden auf Generation 2 hochgestuft. Da der Garbage Collector nur drei Generationen unterstützt, bleiben Objekte in Generation 2, die nach einer Garbage Collection noch vorhanden sind, in Generation 2, bis sie in einer späteren Garbage Collection als nicht erreichbar erkannt werden.
+Nachdem der Garbage Collector die erste Garbage Collection der Generation 0 ausgeführt und die erreichbaren Objekte auf Generation 1 hochgestuft hat, betrachtet er den Rest des verwalteten Heaps als Generation 0. Er fährt fort, Speicher für neue Objekte in Generation 0 zu belegen, bis Generation 0 voll ist und eine weitere Garbage Collection ausgeführt werden muss. An diesem Punkt wird von der Optimierungs-Engine des Garbage Collectors ermittelt, ob auch die Objekte der älteren Generationen untersucht werden müssen. Wenn eine Garbage Collection der Generation 0 z. B. nicht genug Arbeitsspeicher für die Anwendung freigibt, um das Erstellen eines neuen Objekts erfolgreich auszuführen, kann der Garbage Collector eine Garbage Collection der Generation 1, dann Generation 2, ausführen. Wenn so nicht genug Arbeitsspeicher freigegeben wird, kann der Garbage Collector eine Garbage Collection der Generationen 2, 1 und 0 ausführen. Nach jeder Garbage Collection komprimiert der Garbage Collector die erreichbaren Objekte in Generation 0 und stuft sie auf Generation 1 herauf. Objekte in Generation 1, die nach den Garbage Collections noch vorhanden sind, werden auf Generation 2 hochgestuft. Da der Garbage Collector nur drei Generationen unterstützt, bleiben Objekte in Generation 2, die nach einer Garbage Collection noch vorhanden sind, in Generation 2, bis sie in einer späteren Garbage Collection als nicht erreichbar erkannt werden.
 
 ## <a name="releasing-memory-for-unmanaged-resources"></a>Freigeben von Speicher für nicht verwaltete Ressourcen
 

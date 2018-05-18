@@ -1,13 +1,7 @@
 ---
 title: Isolationstypen
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6a7e9b28601970aecd139d2027bc0ebc73e869fc
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: c0c888181b5f2150c37a87957cd932e10a36f7f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-isolation"></a>Isolationstypen
 Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, der ihn erstellt hat. Bei der Implementierung dieses Isolationstyps verwendet die Common Language Runtime den Begriff der Benutzeridentität, der auch vom Betriebssystem erkannt wird. Dabei handelt es sich um die Identität, die mit dem Prozess verknüpft ist, in dem der Code beim Öffnen des Speichers ausgeführt wird. Diese Identität ist eine authentifizierte Benutzeridentität, wobei ein Identitätswechsel dazu führen kann, dass sich die Identität des aktuellen Benutzers dynamisch ändert.  
@@ -64,7 +53,7 @@ Typen von isoliertem Speicher
  Beachten Sie, dass isolierte Speicher (mit Ausnahme von Roamingspeichern) immer implizit nach Computer isoliert sind, da sie die Speicherfunktionen verwenden, die sich lokal auf einem bestimmten Computer befinden.  
   
 > [!IMPORTANT]
->  Isolierte Speicher ist nicht für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verfügbar. Verwenden Sie stattdessen die zum Speichern von lokalen Daten und Dateien in der `Windows.Storage` -API enthaltenen Anwendungsdatenklassen in den [!INCLUDE[wrt](../../../includes/wrt-md.md)] -Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)).  
+>  Isolierte Speicherung ist nicht für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps verfügbar. Verwenden Sie stattdessen die zum Speichern von lokalen Daten und Dateien in der `Windows.Storage` -API enthaltenen Anwendungsdatenklassen in den [!INCLUDE[wrt](../../../includes/wrt-md.md)] -Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Isolation nach Benutzer und Assembly  
@@ -101,7 +90,7 @@ Typen von isoliertem Speicher
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
 <a name="Roaming"></a>   
-## <a name="isolated-storage-and-roaming"></a>Isolierter Speicher und Roaming  
+## <a name="isolated-storage-and-roaming"></a>Isolierte Speicherung und Roaming  
  Roamingbenutzerprofile sind ein Windows-Feature, über das ein Benutzer eine Identität in einem Netzwerk einrichten und sich damit bei jedem Netzwerkcomputer anmelden kann, wobei alle personalisierten Einstellungen übernommen werden. In einer Assembly, die isolierten Speicher verwendet, kann festgelegt werden, dass der isolierte Speicher des Benutzers gemeinsam mit dem Roamingbenutzerprofil wandert bzw. wechselt. Roaming kann in Verbindung mit der Isolation nach Benutzer und Assembly oder mit der Isolation nach Benutzer, Domäne und Assembly verwendet werden. Wenn ein Roamingbereich nicht verwendet wird, wechseln Speicher selbst dann nicht mit dem Profil, wenn ein Roamingbenutzerprofil verwendet wird.  
   
  Im folgenden Codebeispiel wird ein Roamingspeicher abgerufen, der nach Benutzer und Assembly isoliert ist. Der Zugriff auf den Speicher wird durch das `isoFile`-Objekt ermöglicht.  

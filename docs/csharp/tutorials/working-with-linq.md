@@ -1,20 +1,13 @@
 ---
 title: Arbeiten mit LINQ
 description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
 ms.date: 03/28/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: ce6ed278c4e5a9583a827e8c3ff941c2f25bf182
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 17c294a372a05a05d3893fce7b3adc426c6305fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
@@ -281,7 +274,7 @@ Führen Sie das Programm erneut aus – das Mischen nach innen wurde auf 30 Abfr
 
 Sie dürfen dieses Beispiel aber nicht so interpretieren, dass alle Abfragen mit strikter Auswertung ausgeführt werden sollten. Dieses Beispiel sollte nur Anwendungsfälle veranschaulichen, bei denen eine verzögerte Auswertung zu Leistungsproblemen führen kann. Die Ursache des Problems ist, dass jede neue Anordnung des Kartenstapels aus der vorherigen Anordnung erstellt wird. Bei der verzögerten Auswertung bedeutet dies, dass jede neue Kartenstapelkonfiguration aus dem ursprünglichen Kartenstapel erzeugt wird. Dabei wird sogar der Code ausgeführt, der den `startingDeck`-Stapel erstellt hat. Das verursacht eine Menge zusätzlichen Aufwands. 
 
-In der Praxis werden manche Algorithmen besser mit der strikten Auswertung ausgeführt, für andere eignet sich die verzögerte Auswertung besser. (Im Allgemeinen eignet sich die verzögerte Auswertung wesentlich besser, wenn es sich bei der Datenquelle um einen separaten Prozess handelt, beispielsweise um ein Datenbankmodul. In diesen Fällen ermöglicht die verzögerte Auswertung komplexere Abfragen, um nur einen Roundtrip an den Datenbankprozess auszuführen.) LINQ ermöglicht sowohl eine verzögerte als auch eine strikte Auswertung. Wählen Sie die für Ihr jeweiliges Programm am besten geeignete Variante aus.
+In der Praxis werden manche Algorithmen besser mit der strikten Auswertung ausgeführt, für andere eignet sich die verzögerte Auswertung besser. (Im Allgemeinen eignet sich die verzögerte Auswertung wesentlich besser, wenn es sich bei der Datenquelle um einen separaten Prozess handelt, beispielsweise um eine Datenbank-Engine. In diesen Fällen ermöglicht die verzögerte Auswertung komplexere Abfragen, um nur einen Roundtrip an den Datenbankprozess auszuführen.) LINQ ermöglicht sowohl eine verzögerte als auch eine strikte Auswertung. Wählen Sie die für Ihr jeweiliges Programm am besten geeignete Variante aus.
 
 ## <a name="preparing-for-new-features"></a>Vorbereiten auf neue Funktionen
 

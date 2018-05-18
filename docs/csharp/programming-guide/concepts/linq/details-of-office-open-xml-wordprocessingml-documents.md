@@ -1,28 +1,19 @@
 ---
 title: Details eines Office Open XML-WordprocessingML-Dokuments (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 40c9ed57-b827-4c9e-a3e7-8b2163122106
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: acf09956b6399bb3944f43a5ecf741ccb82e7add
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 885286a87cf50a12e130deec161aa472ac141b71
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a>Details eines Office Open XML-WordprocessingML-Dokuments (C#)
 Dieser Abschnitt enthält Informationen zu den Details von Office Open XML WordprocessingML-Dokumenten. Sie finden hier Beispiele für den Dokument- und den Formatvorlagenteil eines Open XML-Dokuments.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|description|  
 |-----------|-----------------|  
 |[WordprocessingML-Dokumente mit Formatvorlagen](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)|Zeigt den Dokumentteil eines Office Open XML-WordprocessingML-Dokuments.|  
 |[Formatvorlagenteil eines WordprocessingML-Dokuments](../../../../csharp/programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md)|Zeigt den Formatvorlagenteil eines Office Open XML-WordprocessingML-Dokuments.|  

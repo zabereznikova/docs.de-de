@@ -2,8 +2,6 @@
 title: Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 description: Beschreibt bewährte Methoden für die Verwendung von Transport Layer Security (TLS) mit .NET Framework.
 ms.date: 03/15/2018
-ms.prod: .net-framework
-ms.topic: article
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -15,15 +13,11 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 41814129d038f8cb1ab98db0c7a4e0cbd7e7cd54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -124,7 +118,7 @@ Sie müssen die neuesten Betriebssystempatches installieren. Siehe [Sicherheitsu
 
 Das WCF-Framework wählt automatisch das höchste bis TLS 1.2 verfügbare Protokoll, es sei denn, Sie konfigurieren explizit eine Protokollversion. Weitere Informationen finden Sie im vorhergehenden Abschnitt [Für WCF-TCP-Transport unter Berücksichtigung der Transportsicherheit mit Zertifikatanmeldeinformationen](#wcf-tcp-cert).
 
-### <a name="for-net-framework-35---451-and-not-wcf"></a>Für .NET Framework 3.5 bis 4.5.1 und ohne WCF
+### <a name="for-net-framework-35---451-and-not-wcf"></a>Für .NET Framework 3.5 bis 4.5.1 und ohne WFC
 
 Es wird empfohlen, ein Upgrade Ihrer App auf .NET Framework 4.7 oder höher auszuführen. Wenn Sie kein Upgrade ausführen können, gehen Sie wie folgt vor. Möglicherweise tritt irgendwann in Ihrer Anwendung ein Fehler auf, bis Sie ein Upgrade auf .NET Framework 4.7 oder höher ausgeführt haben.
 

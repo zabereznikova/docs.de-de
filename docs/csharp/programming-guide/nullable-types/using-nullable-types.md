@@ -1,21 +1,14 @@
 ---
-title: "Verwenden von auf NULL festlegbaren Typen (C# Programmierhandbuch)"
+title: Verwenden von auf NULL festlegbaren Typen (C# Programmierhandbuch)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c8a42392bbcd2e53c54ff4c13bf98c048262ae4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Verwenden von auf NULL festlegbaren Typen (C# Programmierhandbuch)
 Auf NULL festlegbare Typen können alle Werte eines zugrundeliegenden Typs und einen zusätzlichen [NULL](../../../csharp/language-reference/keywords/null.md)-Wert darstellen. Auf NULL festlegbare Typen können auf zwei verschiedene Arten deklariert werden:  
@@ -106,13 +99,13 @@ Auf NULL festlegbare Typen können alle Werte eines zugrundeliegenden Typs und e
 |X|u|x&y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
-|true|false|false|true|  
+|true|False|false|true|  
 |true|NULL|NULL|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|NULL|false|NULL|  
+|False|true|False|true|  
+|False|False|False|False|  
+|False|NULL|False|NULL|  
 |NULL|true|NULL|true|  
-|NULL|false|false|NULL|  
+|NULL|False|False|NULL|  
 |NULL|NULL|NULL|NULL|  
   
 ## <a name="see-also"></a>Siehe auch  

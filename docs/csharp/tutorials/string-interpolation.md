@@ -1,125 +1,113 @@
 ---
-title: Zeichenfolgeninterpolation – C#
-description: Erfahren Sie, wie die Zeichenfolgeninterpolation in C# 6 funktioniert.
-keywords: .NET, .NET Core, C#, Zeichenfolge
-author: mgroves
-ms.author: wiwagn
-ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+title: Zeichenfolgeninterpolation in C#
+description: Informationen zum Hinzufügen von formatierten Ausdrucksergebnissen in einer Ergebniszeichenfolge in C# mithilfe von Zeichenfolgeninterpolation
+author: pkulikov
+ms.date: 05/09/2018
+ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="string-interpolation-in-c"></a>Zeichenfolgeninterpolation in C# #
 
-Die Zeichenfolgeninterpolation ermöglicht, dass Platzhalter in einer Zeichenfolge durch den Wert einer Zeichenfolgenvariablen ersetzt werden. Vor C# 6 wurde dies mit <xref:System.String.Format%2A?displayProperty=nameWithType> realisiert. Dies funktioniert gut, aber da dabei nummerierte Platzhalter verwendet werden, kann es schwieriger zu lesen und detaillierter sein.
+In diesem Tutorial erfahren Sie, wie Sie die [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) verwenden, um Ausdrucksergebnisse zu einer Ergebniszeichenfolge hinzuzufügen. Für diese Beispiele wird davon ausgegangen, dass Sie sich mit den grundlegenden C#-Konzepten und der .NET-Typformatierung auskennen. Wenn Sie sich mit der Zeichenfolgeninterpolation oder der .NET-Typformatierung nicht auskennen, lesen Sie zuerst den Schnellstart [Zeichenfolgeninterpolation in C#](../quick-starts/interpolated-strings.yml). Weitere Informationen zum Formatieren von Typen in .NET finden Sie unter [Formatieren von Typen in .NET](../../standard/base-types/formatting-types.md).
 
-In anderen Programmiersprachen ist die Zeichenfolgeninterpolation bereits seit einer Weile integriert. Zum Beispiel in PHP:
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-```php
-$name = "Jonas";
-echo "My name is $name.";
-// This will output "My name is Jonas."
-```
+## <a name="introduction"></a>Einführung
 
-In C# 6 haben wir nun diesen Zeichenfolgeninterpolations-Stil. Sie können ein `$` vor einer Zeichenfolge verwenden, um anzugeben, dass sie Variablen/Ausdrücke durch deren Werte ersetzen soll.
+Das Feature [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) ist ein Zusatz zum Feature [composite formating](../../standard/base-types/composite-formatting.md) (Kombinierte Formatierung) und ermöglicht eine Syntax, die lesbarer und zweckmäßiger ist, um formatierte Ausdrucksergebnisse zu einer Ergebniszeichenfolge hinzuzufügen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Seite [.NET Core](https://www.microsoft.com/net/core).
-Sie können diese Anwendung unter Windows, Ubuntu Linux, macOS oder in einem Docker-Container ausführen. Sie müssen Ihren bevorzugten Code-Editor installieren. In den folgenden Beschreibungen wird [Visual Studio Code](https://code.visualstudio.com/) verwendet. Hierbei handelt es sich um einen plattformübergreifenden Open Source-Editor. Sie können jedoch auch ein beliebiges anderes Tool verwenden, mit dem Sie vertraut sind.
+Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möchten, stellen Sie ihm ein `$`-Symbol voran. Sie können jeden gültigen C#-Ausdruck einbetten, der einen Wert in einer interpolierten Zeichenfolge zurückgibt. Im folgenden Beispiel wird das Ergebnis eines Ausdrucks in eine Zeichenfolge konvertiert und zu einer Ergebniszeichenfolge hinzugefügt, sobald ein Ausdruck berechnet wird:
 
-## <a name="create-the-application"></a>Erstellen der Anwendung
+[!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-Nachdem Sie alle Tools installiert haben, erstellen Sie eine neue .NET Core-Anwendung. Um den Befehlszeilengenerator zu verwenden, erstellen Sie ein Verzeichnis für Ihr Projekt, z.B. `interpolated`, und führen den folgenden Befehl in Ihrer bevorzugten Shell aus:
+Wie in dem Beispiel dargestellt, fügen Sie einen Ausdruck zu einer interpolierten Zeichenfolge hinzu, indem Sie diesen in Klammern setzen:
 
 ```
-dotnet new console
+{<interpolatedExpression>}
 ```
 
-Dieser Befehl erstellt ein neues .NET Core-Projekt mit der Projektdatei *interpolated.csproj* und der Quellcodedatei *Program.cs*. Sie müssen `dotnet restore` ausführen, um die Abhängigkeiten wiederherzustellen, die zum Kompilieren dieses Projekts erforderlich sind.
+Zur Kompilierzeit werden interpolierte Zeichenfolgen in der Regel in einen <xref:System.String.Format%2A?displayProperty=nameWithType>-Methodenaufruf transformiert. Dadurch können Sie sämtliche Funktionen des Features [string composite formatting](../../standard/base-types/composite-formatting.md) (zusammengesetzte Formatierung von Zeichenfolgen) auch für interpolierte Zeichenfolgen verwenden.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Angeben einer Formatierungszeichenfolge für einen interpolierten Ausdruck
 
-Verwenden Sie zum Ausführen des Programms `dotnet run`. Es sollte „Hello, World“ auf der Konsole ausgegeben werden.
-
-
-
-## <a name="intro-to-string-interpolation"></a>Einführung zur Zeichenfolgeninterpolation
-
-Mit <xref:System.String.Format%2A?displayProperty=nameWithType> geben Sie „Platzhalter“ in einer Zeichenfolge an, die von den Argumenten ersetzt werden, die auf die Zeichenfolge folgen. Zum Beispiel:
-
-[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
-
-Damit wird „My name is Matt Groves“ ausgegeben.
-
-In C# 6 definieren Sie eine interpolierte Zeichenfolge, indem Sie ihr das `$`-Symbol voranstellen und dann die Variablen direkt in der Zeichenfolge verwenden, anstatt `String.Format` zu verwenden. Zum Beispiel:
-
-[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
-
-Sie müssen nicht einfach Variablen verwenden. Sie können jeden Ausdruck innerhalb der Klammern verwenden. Zum Beispiel:
-
-[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
-
-Die Ausgabe wäre:
+Sie können eine Formatzeichenfolge angeben, die von dem Typ des Ausdrucksergebnisses unterstützt wird, indem Sie dem interpolierten Ausdruck einen Doppelpunkt („:“) und die Formatzeichenfolge anfügen:
 
 ```
-This is line number 1
-This is line number 2
-This is line number 3
-This is line number 4
-This is line number 5
+{<interpolatedExpression>:<formatString>}
 ```
 
-## <a name="how-string-interpolation-works"></a>So funktioniert die Zeichenfolgeninterpolation
+Im folgenden Beispiel wird veranschaulicht, wie Sie Standardformatzeichenfolgen und benutzerdefinierte Formatzeichenfolgen für Ausdrücke angeben, die Datums- oder Uhrzeitergebnisse bzw. numerische Ergebnisse ausgeben:
 
-Hinter den Kulissen wird diese Zeichenfolgeninterpolations-Syntax vom Compiler in `String.Format` übersetzt. So können Sie [das Gleiche tun, was Sie bereits mit `String.Format` getan haben](../../standard/base-types/formatting-types.md).
+[!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-Sie können z.B. auffüllen und numerisch formatieren:
+Weitere Informationen finden Sie im Artikel [Kombinierte Formatierung](../../standard/base-types/composite-formatting.md) im Abschnitt [Formatzeichenfolgenkomponente](../../standard/base-types/composite-formatting.md#format-string-component). In diesem Abschnitt finden Sie Links zu den Artikeln, in denen Standardzeichenfolgenkomponenten und benutzerdefinierte Zeichenfolgenkomponenten erläutert werden, die von den .NET-Basistypen unterstützt werden.
 
-[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Steuern der Feldbreite und -ausrichtung des formatierten interpolierten Ausdrucks
 
-Der obige Code würde folgende Ausgabe ergeben:
+Geben Sie die Mindestbreite und die Ausrichtung für das formatierte Ausdrucksergebnis an, indem Sie dem interpolierten Ausdruck ein Komma („,“) und den konstanten Ausdruck anschließen:
 
 ```
-998        5,177.67
-999        6,719.30
-1000       9,910.61
-1001       529.34
-1002       1,349.86
-1003       2,660.82
-1004       6,227.77
+{<interpolatedExpression>,<alignment>}
 ```
 
-Wenn der Name einer Variablen nicht gefunden werden kann, wird ein Kompilierzeitfehler generiert.
+Wenn der Wert der *Ausrichtung* positiv ist, wird das formatierte Ausdrucksergebnis rechtsbündig ausgerichtet. Ist der Wert negativ, wird das Ergebnis linksbündig ausgerichtet.
 
-Zum Beispiel:
+Wenn Sie sowohl die Ausrichtung als auch die Formatzeichenfolge angeben müssen, beginnen Sie mit der Ausrichtungskomponente:
 
-```csharp
-var animal = "fox";
-var localizeMe = $"The {adj} brown {animal} jumped over the lazy {otheranimal}";
-var adj = "quick";
-Console.WriteLine(localizeMe);
+```
+{<interpolatedExpression>,<alignment>:<formatString>}
 ```
 
-Wenn Sie dies kompilieren, erhalten Sie Fehlermeldungen:
- 
-* `Cannot use local variable 'adj' before it is declared` – die `adj`-Variable wurde erst *nach* der interpolierten Zeichenfolge deklariert.
-* `The name 'otheranimal' does not exist in the current context` – eine Variable namens `otheranimal` wurde nie deklariert
+Im folgenden Beispiel sehen Sie, wie Sie die Ausrichtung angeben. Es werden senkrechte Striche („|“) verwendet, um Textfelder zu begrenzen:
 
-## <a name="localization-and-internationalization"></a>Lokalisierung und Internationalisierung
+[!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-Eine interpolierte Zeichenfolge unterstützt <xref:System.IFormattable?displayProperty=nameWithType> und <xref:System.FormattableString?displayProperty=nameWithType>, was für die Internationalisierung nützlich sein kann.
+Wie Sie in der Beispielausgabe sehen können, wird der Wert *Ausrichtung* ignoriert, wenn die Länge des formatierten Ausdrucksergebnisses über die angegebene Feldbreite hinausgeht.
 
-Standardmäßig verwendet eine interpolierte Zeichenfolge die aktuelle Kultur. Um eine andere Kultur zu verwenden wandeln Sie eine interpolierte Zeichenfolge in `IFormattable` um. Zum Beispiel:
+Weitere Informationen finden Sie im Artikel [Kombinierte Formatierung](../../standard/base-types/composite-formatting.md) im Abschnitt [Ausrichtungskomponente](../../standard/base-types/composite-formatting.md#alignment-component).
 
-[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a>Verwenden von Escapesequenzen in einer interpolierten Zeichenfolge
 
-## <a name="conclusion"></a>Schlussbemerkung 
+Interpolierte Zeichenfolgen unterstützen alle Escapesequenzen, die in gewöhnlichen Zeichenfolgenliteralen verwendet werden können. Weitere Informationen finden Sie unter [Zeichenfolgenescapesequenzen](../programming-guide/strings/index.md#string-escape-sequences).
 
-In diesem Tutorial haben Sie gelernt, wie Sie Zeichenfolgeninterpolations-Funktionen von C# 6 verwenden. Es ist im Grunde eine kompaktere Methode, einfache `String.Format`-Anweisungen zu schreiben, mit einigen Einschränkungen für fortgeschrittenere Einsatzzwecke. Weitere Informationen finden Sie unter [Zeichenfolgeninterpolation](../../csharp//language-reference/tokens/interpolated.md).
+Verwenden Sie ein [ausführliches](../language-reference/tokens/verbatim.md) Zeichenfolgenliteral, um Escapesequenzen wörtlich zu interpretieren. In ausführlichen interpolierten Zeichenfolgen folgt auf das `$`-Zeichen ein `@`-Zeichen.
+
+Wenn Sie einer Ergebniszeichenfolge eine Klammer hinzufügen möchten „{“ oder „}“, sollten Sie jeweils zwei Klammern verwenden: „{{“ oder „}}“. Weitere Informationen finden Sie im Artikel [Kombinierte Formatierung](../../standard/base-types/composite-formatting.md) im Abschnitt [Versehen von geschweiften Klammern mit Escapezeichen](../../standard/base-types/composite-formatting.md#escaping-braces).
+
+Im folgenden Beispiel wird dargestellt, wie Sie Klammern zu einer Ergebniszeichenfolge hinzufügen und eine ausführliche interpolierte Zeichenfolge erstellen:
+
+[!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
+
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Verwenden eines ternären bedingten `?:`-Operators in einem interpolierten Ausdruck
+
+Da der Doppelpunkt („:“) in einem Element mit einem interpolierten Ausdruck eine besondere Funktion einnimmt, müssen Sie zur Verwendung eines [Bedingungsoperators](../language-reference/operators/conditional-operator.md) in einem interpolierten Ausdruck diesen Ausdruck wie folgt in runde Klammern einschließen:
+
+[!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
+
+## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a>Erstellen einer kulturspezifischen Ergebniszeichenfolge mit einer Zeichenfolgeninterpolation
+
+Standardmäßig verwendet eine interpolierte Zeichenfolge die aktuelle Kultur, die von der <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType>-Eigenschaft für alle Formatierungsvorgänge definiert ist. Verwenden Sie für eine interpolierte Zeichenfolge einen impliziten Wechsel in eine <xref:System.FormattableString?displayProperty=nameWithType>-Instanz, und rufen Sie deren <xref:System.FormattableString.ToString(System.IFormatProvider)>-Methode auf, um eine kulturspezifische Ergebniszeichenfolge zu erstellen. Das folgende Beispiel zeigt, wie Sie dabei vorgehen müssen:
+
+[!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
+
+Wie in dem Beispiel dargestellt, können Sie eine <xref:System.FormattableString>-Instanz verwenden, um mehrere Ergebniszeichenfolgen für verschiedene Kulturen zu generieren.
+
+## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Erstellen einer Ergebniszeichenfolge mithilfe der invarianten Kultur
+
+Neben der <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType>-Methode können Sie die statische <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType>-Methode verwenden, um eine interpolierte Zeichenfolge in eine Ergebniszeichenfolge für <xref:System.Globalization.CultureInfo.InvariantCulture> auszulösen. Das folgende Beispiel zeigt, wie Sie dabei vorgehen müssen:
+
+[!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
+
+## <a name="conclusion"></a>Schlussbemerkung
+
+In diesem Tutorial wurden häufig auftretende Szenarios zur Verwendung der Zeichenfolgeninterpolation beschrieben. Weitere Informationen zur Zeichenfolgeninterpolation finden Sie unter [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md). Weitere Informationen zum Formatieren von Typen in .NET finden Sie unter [Formatieren von Typen in .NET](../../standard/base-types/formatting-types.md) und [Kombinierte Formatierung](../../standard/base-types/composite-formatting.md).
+
+## <a name="see-also"></a>Siehe auch
+
+<xref:System.String.Format%2A?displayProperty=nameWithType>  
+<xref:System.FormattableString?displayProperty=nameWithType>  
+<xref:System.IFormattable?displayProperty=nameWithType>  
+[Zeichenfolgen](../programming-guide/strings/index.md)  

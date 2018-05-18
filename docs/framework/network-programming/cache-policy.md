@@ -1,12 +1,6 @@
 ---
 title: Cacherichtlinie
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - time-based cache policies
 - location-based cache policies
@@ -16,16 +10,14 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bafad45e6b6b546707c4f805f857e85549f0f071
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 36cf61982bb5a83e6031c35a19ba8ebf0b94aa6d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cache-policy"></a>Cacherichtlinie
 Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen, ob eine Anforderung mit der zwischengespeicherten Kopie der angeforderten Ressource erfüllt werden kann. Anwendungen geben Cache-Clientanforderungen für die Aktualität an, aber die effektive Cacherichtlinie richtet sich nach den Cache-Clientanforderungen, den Inhaltsablaufanforderungen des Servers sowie den Anforderungen zur erneuten Überprüfung des Servers. Die Interaktion der Cacherichtlinie und des Cacheservers für Clients resultiert immer in der konservativsten Cacherichtlinie, um sicherzustellen, dass die aktuellsten Inhalten an die Clientanwendung zurückgegeben werden.  
@@ -34,7 +26,7 @@ Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen
   
  Die in der folgenden Tabelle beschriebenen Klassen werden verwendet, um Cacherichtlinien anzugeben.  
   
-|Klassenname|Beschreibung|  
+|Klassenname|description|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|Stellt speicherortbasierte und zeitbasierte Cacherichtlinien für mithilfe von <xref:System.Net.HttpWebRequest>-Objekten angeforderte Ressourcen dar.|  
 |<xref:System.Net.Cache.RequestCachePolicy>|Stellt die speicherortbasierten oder die <xref:System.Net.Cache.RequestCacheLevel.Default>-zeitbasierten Cacherichtlinien für Ressourcen dar, die mithilfe von <xref:System.Net.WebRequest>-Objekten angefordert werden.|  

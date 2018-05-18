@@ -1,21 +1,12 @@
 ---
-title: "Übersicht der XAttribute-Klasse (C#)"
-ms.custom: 
+title: Übersicht der XAttribute-Klasse (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9cfedb476f44ef8c3eaeb45bac571d17802d525
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0020a8cd8841ef9a35781b534c82db5e15c257f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xattribute-class-overview-c"></a>Übersicht der XAttribute-Klasse (C#)
 Attribute sind Name/Wert-Paare, die einem Element zugeordnet sind. Die <xref:System.Xml.Linq.XAttribute>-Klasse stellt XML-Attribute dar.  
@@ -28,7 +19,7 @@ Attribute sind Name/Wert-Paare, die einem Element zugeordnet sind. Die <xref:Sys
 ## <a name="the-xattribute-constructor"></a>Der "XAttribute"-Konstruktor  
  Der folgende Konstruktor der <xref:System.Xml.Linq.XAttribute>-Klasse ist der Konstruktor, den Sie am häufigsten verwenden werden:  
   
-|Konstruktor|Beschreibung|  
+|Konstruktor|description|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|Sie erstellt ein <xref:System.Xml.Linq.XAttribute>-Objekt. Das `name`-Argument gibt den Namen des Attributs an, während `content` den Inhalt des Attributs angibt.|  
   

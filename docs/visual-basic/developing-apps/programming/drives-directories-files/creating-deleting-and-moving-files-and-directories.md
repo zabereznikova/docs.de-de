@@ -1,12 +1,6 @@
 ---
-title: "Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen in Visual Basic"
-ms.custom: 
+title: Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen in Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
 - I/O [Visual Basic], deleting folders
@@ -28,14 +22,11 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 388d8567235230003f0b770c2266e4a4d77ca754
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8b734b553e0ef4c14e372892e53b1184798390e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen in Visual Basic
 Dieser Abschnitt enthält die Aufgaben im Zusammenhang mit dem Erstellen, Löschen, Verschieben und Umbenennen von Dateien und Verzeichnissen in Visual Basic.  
@@ -83,7 +74,7 @@ Dieser Abschnitt enthält die Aufgaben im Zusammenhang mit dem Erstellen, Lösch
  [Gewusst wie: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  Veranschaulicht, wie `My`-Methoden verwendet werden, um Dateipfade zu kombinieren.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Beschreibt das `My.Computer.FileSystem`-Objekt und dessen Member  
   

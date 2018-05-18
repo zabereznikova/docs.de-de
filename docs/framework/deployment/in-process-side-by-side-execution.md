@@ -1,27 +1,17 @@
 ---
-title: "Prozessinterne parallele Ausführung"
-ms.custom: 
+title: Prozessinterne parallele Ausführung
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 023a8db1e34498c4c2cbe741225d218280c04e41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee9eb30d6966d8162b29286140c068d854f7911c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
 Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzelnen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
@@ -47,9 +37,9 @@ Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mi
   
      So wie in der folgenden Tabelle gezeigt, können Komponenten, die mit der .NET Framework-Version 1.1 erstellt wurden, parallel mit Komponenten der Version 4 ausgeführt werden. Sie können jedoch nicht mit Komponenten der Version 2.0, 3.0 oder 3.5 ausgeführt werden, da das parallele Hosting für diese Versionen nicht verfügbar ist.  
   
-    |.NET Framework-Version|1,1|2.0 - 3.5|4|  
+    |.NET Framework-Version|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1,1|Nicht zutreffend|Nein|Ja|  
+    |1.1|Nicht zutreffend|Nein|Ja|  
     |2.0 - 3.5|Nein|Nicht zutreffend|Ja|  
     |4|Ja|Ja|Nicht zutreffend|  
   

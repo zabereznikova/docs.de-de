@@ -1,26 +1,17 @@
 ---
-title: "Gewusst wie: Ändern von Benutzereinstellungen in Visual Basic"
-ms.custom: 
+title: 'Gewusst wie: Ändern von Benutzereinstellungen in Visual Basic'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic
 - user settings
 - My.Settings object [Visual Basic], changing user settings
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: db35a5d63938fcc508c23af5588957d8dc518676
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2f67c3713a77c37ce43647980a9d3b17e47ba1bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a>Gewusst wie: Ändern von Benutzereinstellungen in Visual Basic
 Sie können eine Benutzereinstellung ändern, indem Sie der Einstellung der Eigenschaft auf dem `My.Settings`-Objekt einen neuen Wert zuweisen.  

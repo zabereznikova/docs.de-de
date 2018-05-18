@@ -1,20 +1,13 @@
 ---
 title: C#-Attribute – Überblick über C#
 description: Informationen zur deklarativen Programmierung mithilfe von Attributen in C#
-keywords: .NET, csharp
-author: BillWagner
-ms.author: wiwagn
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: 6878a408ef892ee47a03bfa04f736b9bf9671696
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: d055f5386d1dddef0b70843a0a5fa6fc04922296
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes"></a>Attribute
 
@@ -33,4 +26,4 @@ In diesem Beispiel wird `HelpAttribute` an die `Widget`-Klasse angefügt. Darüb
 Wenn per Reflektion ein bestimmtes Attribut angefordert wird, wird der Konstruktor für die Attributklasse mit den in der Programmquelle angegebenen Informationen aufgerufen, und die resultierende Attributinstanz wird zurückgegeben. Wenn zusätzliche Informationen über Eigenschaften bereitgestellt wurden, werden diese Eigenschaften auf die vorgegebenen Werte festgelegt, bevor die Attributinstanz zurückgegeben wird.
 
 >[!div class="step-by-step"]
-[Zurück](delegates.md)
+[Vorherige](delegates.md)

@@ -1,20 +1,13 @@
 ---
 title: In Docker gehostete Microservices – C#
 description: Erfahren Sie, wie Sie ASP.NET Core-Dienste erstellen, die in Docker-Containern ausgeführt werden.
-keywords: .NET, .NET Core, Docker, C#, ASP.NET, Microservice
-author: BillWagner
-ms.author: wiwagn
 ms.date: 02/03/2017
-ms.topic: article
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: eacfa87e465e5f7737dbd2bfc4c6a77ffc5531c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>In Docker gehostete Microservices
 
@@ -45,7 +38,7 @@ Die zusätzlichen Aufgaben für eine Docker-Installation funktionieren in Verbin
 Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Seite [.NET Core](https://www.microsoft.com/net/core).
 Sie können diese Anwendung unter Windows, Ubuntu Linux, macOS oder in einem Docker-Container ausführen. Sie müssen Ihren bevorzugten Code-Editor installieren. In den folgenden Beschreibungen wird [Visual Studio Code](https://code.visualstudio.com/) verwendet. Hierbei handelt es sich um einen plattformübergreifenden Open Source-Editor. Sie können jedoch auch ein beliebiges anderes Tool verwenden, mit dem Sie vertraut sind.
 
-Sie müssen auch das Docker-Modul installieren. Anweisungen für Ihre Plattform finden Sie auf der [Docker-Installationsseite](http://www.docker.com/products/docker).
+Sie müssen auch die Docker-Engine installieren. Anweisungen für Ihre Plattform finden Sie auf der [Docker-Installationsseite](http://www.docker.com/products/docker).
 Docker kann in vielen Linux-Distributionen, unter macOS oder Windows installiert werden. Die oben erwähnte Seite enthält Abschnitte zu jeder verfügbaren Installation.
 
 Die meisten zu installierenden Komponenten sind einem Paket-Manager zugeordnet. Wenn Sie den Node.js-Paket-Manager `npm` installiert haben, können Sie diesen Schritt überspringen. Installieren Sie andernfalls das aktuelle NodeJS von [nodejs.org](https://nodejs.org), sodass der npm-Paket-Manager installiert wird. 

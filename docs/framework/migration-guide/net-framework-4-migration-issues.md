@@ -1,24 +1,17 @@
 ---
 title: Migrationsprobleme in .NET Framework 4
 ms.date: 05/02/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- mariaw
-ms.openlocfilehash: 05c86759b16fa4e1cbf31b7409601cb6b91cd08e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: aa8cbe0cc87e656eeb8cd0234875a87ade9c05f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-4-migration-issues"></a>Migrationsprobleme in .NET Framework 4
 
@@ -116,7 +109,8 @@ Namespace: <xref:System>, <xref:System.Runtime.ExceptionServices>; Assembly: msc
 | Feature | Unterschiede zu 3.5 SP1 | Empfohlene Änderungen |
 | ------- | ------------------------ | ------------------- |
 | **Ausnahmen für beschädigte Prozessstatus** | Die CLR übergibt keine Ausnahmen mehr für beschädigte Prozessstatus an Ausnahmehandler in verwaltetem Code. | Diese Ausnahmen deuten darauf hin, dass der Status eines Prozesses beschädigt wurde. Eine Ausführung Ihrer Anwendung in diesem Zustand ist nicht empfehlenswert.<br><br>Weitere Informationen finden Sie unter <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> und im Blogeintrag [Handling Corrupted State Exceptions (Behandeln beschädigter Statusausnahmen)](http://go.microsoft.com/fwlink/?LinkID=179681) im englischsprachigen Blog zur CLR. |
-| **Ausnahmen des Ausführungsmoduls** | <xref:System.ExecutionEngineException> ist jetzt veraltet, da der Prozess aufgrund einer abfangbaren Ausnahme weiterhin ausgeführt wird. Diese Änderung verbessert die Vorhersagbarkeit und Zuverlässigkeit in der Laufzeit. | Verwenden Sie <xref:System.InvalidOperationException>, um die Bedingung zu signalisieren. |
+| 
+  **Ausnahmen der Ausführungs-Engine** | <xref:System.ExecutionEngineException> ist jetzt veraltet, da der Prozess aufgrund einer abfangbaren Ausnahme weiterhin ausgeführt wird. Diese Änderung verbessert die Vorhersagbarkeit und Zuverlässigkeit in der Laufzeit. | Verwenden Sie <xref:System.InvalidOperationException>, um die Bedingung zu signalisieren. |
 
 ### <a name="reflection"></a>Spiegelung
 

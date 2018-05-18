@@ -22,7 +22,7 @@ Optional können Sie einstellen, dass der **DGML-Editor** Diagramme in der Schne
 1. Führen Sie den **Visual Studio-Installer** aus. 
 1. Klicken Sie auf **Ändern**. 
 1. Klicken Sie auf die Registerkarte **Einzelne Komponenten**. 
-1. Aktivieren Sie das Kontrollkästchen für das **.NET Compiler Platform SDK**. Sie finden es an letzter Stelle im Abschnitt **Compiler, Buildtools und Laufzeiten**.
+1. Aktivieren Sie das Kontrollkästchen für das **.NET Compiler Platform SDK**. Sie finden es an oberster Stelle im Abschnitt **Compiler, Buildtools und Laufzeiten**.
 
 Optional können Sie einstellen, dass der **DGML-Editor** Diagramme in der Schnellansicht anzeigt:
 

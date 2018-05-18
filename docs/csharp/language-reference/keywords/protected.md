@@ -1,29 +1,22 @@
 ---
 title: protected (C#-Referenz)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - protected
 - protected_CSharpKeyword
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 18278ed28f899d9030d6056eca9bbe83ebec04c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3115fe82b452f52ee75cf222302ece0fc67b330
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="protected-c-reference"></a>protected (C#-Referenz)
 Das `protected`-Schlüsselwort ist ein Zugriffsmodifizierer für Member. 
 
- > Auf dieser Seite deckt `protected` Zugriff. Die `protected` -Schlüsselwort ist auch Teil der [ `protected internal` ](./protected-internal.md) und [ `private protected` ](./private-protected.md) Zugriffsmodifizierer. 
+ > Auf dieser Seite wird der Zugriff auf `protected` behandelt. Das Schlüsselwort `protected` ist auch Teil der Zugriffsmodifizierer [`protected internal`](./protected-internal.md) und [`private protected`](./private-protected.md). 
 
 Auf einen geschützten Member kann innerhalb seiner Klasse und von Instanzen abgeleiteter Klasse zugegriffen werden. 
 

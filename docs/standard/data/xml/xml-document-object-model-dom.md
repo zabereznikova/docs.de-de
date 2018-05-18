@@ -1,26 +1,15 @@
 ---
 title: XML-Dokumentobjektmodell (DOM)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: af9473af6a315feb6b1f0a741525cbf42dd32d1d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23be7e47dbe54d95eb29ef3b3cb169caeee3eff4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-document-object-model-dom"></a>XML-Dokumentobjektmodell (DOM)
 Die XML-DOM-Klasse ist eine Darstellung eines XML-Dokuments im Speicher. Mit dem DOM können Sie ein XML-Dokument programmgesteuert lesen und ändern. Die **XmlReader**-Klasse liest auch XML. Sie bietet jedoch nur nicht zwischengespeicherten, schreibgeschützten Forward-Only-Zugriff. Das bedeutet, dass keine Funktionen zum Bearbeiten der Werte eines Attributs oder des Inhalts eines Elements existieren, oder dass Knoten nicht mit der **XmlReader**-Klasse eingefügt oder entfernt werden können. Der DOM erfüllt in erster Linie Bearbeitungsfunktionen. Es ist die herkömmliche strukturierte Methode, XML-Daten im Speicher darzustellen, obwohl die tatsächlichen XML-Daten linear gespeichert werden, wenn sie sich in einer Datei befinden oder aus einem anderen Objekt in eine Datei eingefügt werden. Im Folgenden werden XML-Daten dargestellt.  

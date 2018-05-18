@@ -1,13 +1,7 @@
 ---
-title: "Optionen für reguläre Ausdrücke"
-ms.custom: 
+title: Optionen für reguläre Ausdrücke
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 <a name="Top"></a> Standardmäßig wird beim Vergleich einer Eingabezeichenfolge mit Literalzeichen in einem Muster eines regulären Ausdrucks die Groß-/Kleinschreibung beachtet, Leerstellen in einem Muster eines regulären Ausdrucks werden als literale Leerstellenzeichen interpretiert, und Erfassungsgruppen in einem regulären Ausdruck werden implizit sowie explizit benannt. Sie können diese und andere Aspekte des Standardverhaltens regulärer Ausdrücke ändern, indem Sie Optionen für reguläre Ausdrücke angeben. Diese Optionen, die in der folgenden Tabelle aufgeführt sind, können inline als Teil des Musters eines regulären Ausdrucks enthalten sein, oder sie können für einen <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktor oder eine statische Mustervergleichsmethode als <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Enumerationswert angegeben werden.  
@@ -166,7 +155,7 @@ ms.lasthandoff: 03/15/2018
   
  Standardmäßig findet `$` nur eine Entsprechung für das Ende der Eingabezeichenfolge. Wenn Sie die <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option angeben, entspricht diese entweder dem Zeilenumbruchzeichen (`\n`) oder dem Ende der Eingabezeichenfolge. Sie entspricht jedoch nicht der Kombination aus Wagenrücklauf- und Zeilenvorschubzeichen. Um erfolgreich eine Entsprechung für sie zu finden, verwenden Sie den Teilausdruck `\r?$` statt nur `$`.  
   
- Im folgenden Beispiel werden die Namen und Ergebnisse von Bowlern extrahiert und in absteigender Reihenfolge sortiert einer <xref:System.Collections.Generic.SortedList%602>-Auflistung hinzugefügt. Die <xref:System.Text.RegularExpressions.Regex.Matches%2A>-Methode wird zweimal aufgerufen. Im ersten Methodenaufruf ist der reguläre Ausdruck `^(\w+)\s(\d+)$`. Es werden keine Optionen festgelegt. Wie die Ausgabe zeigt, werden keine Übereinstimmungen gefunden, da das Modul für reguläre Ausdrücke das Eingabemuster nicht mit dem Anfang und dem Ende der Eingabezeichenfolge vergleichen kann. Im zweiten Methodenaufruf wurde der reguläre Ausdruck in `^(\w+)\s(\d+)\r?$` geändert und die Optionen wurden auf <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> festgelegt. Wie die Ausgabe zeigt, werden die Namen und Ergebnisse erfolgreich abgeglichen, und die Ergebnisse werden in absteigender Reihenfolge angezeigt.  
+ Im folgenden Beispiel werden die Namen und Ergebnisse von Bowlern extrahiert und in absteigender Reihenfolge sortiert einer <xref:System.Collections.Generic.SortedList%602>-Auflistung hinzugefügt. Die <xref:System.Text.RegularExpressions.Regex.Matches%2A>-Methode wird zweimal aufgerufen. Im ersten Methodenaufruf ist der reguläre Ausdruck `^(\w+)\s(\d+)$`. Es werden keine Optionen festgelegt. Wie die Ausgabe zeigt, werden keine Übereinstimmungen gefunden, da die Engine für reguläre Ausdrücke das Eingabemuster nicht mit dem Anfang und dem Ende der Eingabezeichenfolge vergleichen kann. Im zweiten Methodenaufruf wurde der reguläre Ausdruck in `^(\w+)\s(\d+)\r?$` geändert und die Optionen wurden auf <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> festgelegt. Wie die Ausgabe zeigt, werden die Namen und Ergebnisse erfolgreich abgeglichen, und die Ergebnisse werden in absteigender Reihenfolge angezeigt.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline1.cs#3)]
  [!code-vb[Conceptual.Regex.Language.Options#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline1.vb#3)]  
@@ -249,9 +238,9 @@ ms.lasthandoff: 03/15/2018
   
 <a name="Compiled"></a>   
 ## <a name="compiled-regular-expressions"></a>Kompilierte reguläre Ausdrücke  
- Standardmäßig werden reguläre Ausdrücke in .NET interpretiert. Wenn ein <xref:System.Text.RegularExpressions.Regex>-Objekt instanziiert oder eine statische <xref:System.Text.RegularExpressions.Regex>-Methode aufgerufen wird, wird das Muster eines regulären Ausdrucks in einen Satz benutzerdefinierter Opcodes analysiert, und ein Interpreter führt den regulären Ausdruck mithilfe dieser Opcodes aus. Dabei wird ein Kompromiss eingegangen: Der Aufwand für die Initialisierung des Moduls für reguläre Ausdrücke wird auf Kosten der Laufzeitleistung minimiert.  
+ Standardmäßig werden reguläre Ausdrücke in .NET interpretiert. Wenn ein <xref:System.Text.RegularExpressions.Regex>-Objekt instanziiert oder eine statische <xref:System.Text.RegularExpressions.Regex>-Methode aufgerufen wird, wird das Muster eines regulären Ausdrucks in einen Satz benutzerdefinierter Opcodes analysiert, und ein Interpreter führt den regulären Ausdruck mithilfe dieser Opcodes aus. Dabei wird ein Kompromiss eingegangen: Der Aufwand für die Initialisierung der Engine für reguläre Ausdrücke wird auf Kosten der Laufzeitleistung minimiert.  
   
- Sie können kompilierte statt interpretierter regulärer Ausdrücke mit der <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>-Option verwenden. Wenn in diesem Fall ein Muster an das Modul für reguläre Ausdrücke übergeben wird, wird es in einen Satz von Opcodes aufgeschlüsselt und dann nach MSIL (Microsoft Intermediate Language) konvertiert, sodass es direkt an die Common Language Runtime übergeben werden kann. Kompilierte reguläre Ausdrücke maximieren die Laufzeitleistung auf Kosten der Initialisierungszeit.  
+ Sie können kompilierte statt interpretierter regulärer Ausdrücke mit der <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>-Option verwenden. Wenn in diesem Fall ein Muster an die Engine für reguläre Ausdrücke übergeben wird, wird es in einen Satz von Opcodes aufgeschlüsselt und dann nach MSIL (Microsoft Intermediate Language) konvertiert, sodass es direkt an die Common Language Runtime übergeben werden kann. Kompilierte reguläre Ausdrücke maximieren die Laufzeitleistung auf Kosten der Initialisierungszeit.  
   
 > [!NOTE]
 >  Ein regulärer Ausdruck kann nur kompiliert werden, indem der <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>-Wert an den `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex>-Klassenkonstruktors oder einer statischen Mustervergleichsmethode übergeben wird. Es besteht keine Verfügbarkeit als Inlineoption.  
@@ -273,7 +262,7 @@ ms.lasthandoff: 03/15/2018
   
 <a name="Whitespace"></a>   
 ## <a name="ignore-white-space"></a>Leerstellen ignorieren  
- Standardmäßig werden Leerstellen in einem Muster eines regulären Ausdrucks interpretiert. Das Modul für reguläre Ausdrücke sucht dann nach einem entsprechenden Leerstellenzeichen in der Eingabezeichenfolge. Daher sind die regulären Ausdrücke „`\b\w+\s`“ und „`\b\w+`“ weitgehend gleiche reguläre Ausdrücke. Außerdem wird das Nummernzeichen (#), wenn es in einem Muster eines regulären Ausdrucks gefunden wird, als Literalzeichen interpretiert und nach einer Übereinstimmung gesucht.  
+ Standardmäßig werden Leerstellen in einem Muster eines regulären Ausdrucks interpretiert. Die Engine für reguläre Ausdrücke sucht dann nach einem entsprechenden Leerstellenzeichen in der Eingabezeichenfolge. Daher sind die regulären Ausdrücke „`\b\w+\s`“ und „`\b\w+`“ weitgehend gleiche reguläre Ausdrücke. Außerdem wird das Nummernzeichen (#), wenn es in einem Muster eines regulären Ausdrucks gefunden wird, als Literalzeichen interpretiert und nach einer Übereinstimmung gesucht.  
   
  Die <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>-Option oder die `x`-Inlineoption ändert dieses Standardverhalten wie folgt:  
   
@@ -289,7 +278,7 @@ ms.lasthandoff: 03/15/2018
   
 -   Leerzeichen sind in Zeichenfolgen, die Sprachelemente einleiten, nicht zulässig. Zum Beispiel:  
   
-    -   Das Sprachelement `(?:`*Teilausdruck*`)` stellt eine nicht erfassende Gruppe dar, und der `(?:`-Teil des Elements darf keine eingebetteten Leerzeichen enthalten. Das Muster `(? :`*subexpression*`)` löst zur Laufzeit eine <xref:System.ArgumentException> aus, da das Modul für reguläre Ausdrücke das Muster nicht analysieren kann und das Muster `( ?:`*subexpression*`)` findet keine Übereinstimmung zu *subexpression*.  
+    -   Das Sprachelement `(?:`*Teilausdruck*`)` stellt eine nicht erfassende Gruppe dar, und der `(?:`-Teil des Elements darf keine eingebetteten Leerzeichen enthalten. Das Muster `(? :`*subexpression*`)` löst zur Laufzeit eine <xref:System.ArgumentException> aus, da die Engine für reguläre Ausdrücke das Muster nicht analysieren kann und das Muster `( ?:`*subexpression*`)` findet keine Übereinstimmung zu *subexpression*.  
   
     -   Das Sprachelement `\p{`*Name*`}`, das für eine Unicode-Kategorie oder einen benannten Block steht, darf im `\p{`-Teil des Elements kein eingebettetes Leerzeichen enthalten. Falls Sie trotzdem ein Leerzeichen einfügen, löst das Element zur Laufzeit eine <xref:System.ArgumentException> aus.  
   
@@ -313,7 +302,7 @@ ms.lasthandoff: 03/15/2018
   
 <a name="RightToLeft"></a>   
 ## <a name="right-to-left-mode"></a>Modus "von rechts nach links"  
- Standardmäßig sucht das Modul für reguläre Ausdrücke von links nach rechts. Sie können mit der Option <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> die Suchrichtung umkehren. Die Suche startet automatisch bei der Position des letzten Zeichens der Zeichenfolge. Bei Mustervergleichsmethoden, die einen Anfangspositionsparameter enthalten, wie z. B. <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType>, ist die Anfangsposition der Index der am weitesten rechts stehenden Zeichenposition, bei der die Suche beginnt.  
+ Standardmäßig sucht die Engine für reguläre Ausdrücke von links nach rechts. Sie können mit der Option <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> die Suchrichtung umkehren. Die Suche startet automatisch bei der Position des letzten Zeichens der Zeichenfolge. Bei Mustervergleichsmethoden, die einen Anfangspositionsparameter enthalten, wie z. B. <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType>, ist die Anfangsposition der Index der am weitesten rechts stehenden Zeichenposition, bei der die Suche beginnt.  
   
 > [!NOTE]
 >  Der Skriptmodus "von rechts nach links" ist nur verfügbar, wenn der <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType>-Wert an den `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex>-Klassenkonstruktors oder einer statischen Mustervergleichsmethode übergeben wird. Es besteht keine Verfügbarkeit als Inlineoption.  
@@ -342,7 +331,7 @@ ms.lasthandoff: 03/15/2018
   
 <a name="ECMAScript"></a>   
 ## <a name="ecmascript-matching-behavior"></a>ECMAScript-Vergleichsverhalten  
- Standardmäßig verwendet das Modul für reguläre Ausdrücke das kanonische Verhalten, wenn ein Muster eines regulären Ausdrucks mit dem Eingabetext verglichen wird. Sie können jedoch das Modul für reguläre Ausdrücke anweisen, das ECMAScript-Vergleichsverhalten zu verwenden, indem Sie die <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType>-Option angeben.  
+ Standardmäßig verwendet die Engine für reguläre Ausdrücke das kanonische Verhalten, wenn ein Muster eines regulären Ausdrucks mit dem Eingabetext verglichen wird. Sie können jedoch das Modul für reguläre Ausdrücke anweisen, das ECMAScript-Vergleichsverhalten zu verwenden, indem Sie die <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType>-Option angeben.  
   
 > [!NOTE]
 >  ECMAScript-kompatibles Verhalten ist nur verfügbar, wenn der <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType>-Wert an den `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex>-Klassenkonstruktors oder einer statischen Mustervergleichsmethode übergeben wird. Es besteht keine Verfügbarkeit als Inlineoption.  
@@ -384,7 +373,7 @@ ms.lasthandoff: 03/15/2018
   
 <a name="Invariant"></a>   
 ## <a name="comparison-using-the-invariant-culture"></a>Vergleiche mit der invarianten Kultur  
- Standardmäßig verwendet das Modul für reguläre Ausdrücke bei Vergleichen ohne Berücksichtigung der Groß- und Kleinschreibung die Groß-/Kleinschreibungskonventionen der aktuellen Kultur, um äquivalente Groß- und Kleinbuchstaben zu ermitteln.  
+ Standardmäßig verwendet die Engine für reguläre Ausdrücke bei Vergleichen ohne Berücksichtigung der Groß- und Kleinschreibung die Groß-/Kleinschreibungskonventionen der aktuellen Kultur, um äquivalente Groß- und Kleinbuchstaben zu ermitteln.  
   
  Dieses Verhalten ist jedoch für einige Typen von Vergleichen unerwünscht, insbesondere wenn Benutzereingaben mit Namen von Systemressourcen wie Kennwörtern, Dateien oder URLs verglichen werden. Dieser Prozess wird anhand des folgenden Szenarios veranschaulicht. Der Code ist dazu gedacht, den Zugriff auf jede Ressource zu blockieren, deren URL mit **FILE://** beginnt. Der reguläre Ausdruck sucht nach einer Übereinstimmung ohne Beachtung der Groß-/Kleinschreibung mit der Zeichenfolge unter Verwendung des regulären Ausdrucks `$FILE://`. Wenn die aktuelle Systemkultur jedoch "tr-TR (Türkisch-Türkei)" ist, ist "I" nicht der entsprechende Großbuchstabe zu "i". Als Ergebnis gibt der Aufruf der <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode `false` zurück, und der Zugriff auf die Datei wird zugelassen.  
   
@@ -399,7 +388,7 @@ ms.lasthandoff: 03/15/2018
 > [!NOTE]
 >  Vergleiche mit der invarianten Kultur sind nur möglich, indem der <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType>-Wert an den `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex>-Klassenkonstruktors oder einer statischen Mustervergleichsmethode übergeben wird. Es besteht keine Verfügbarkeit als Inlineoption.  
   
- Das folgende Beispiel ist mit dem vorherigen Beispiel identisch, abgesehen davon, dass die statische <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode mit Optionen aufgerufen wird, die <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> enthalten. Auch wenn die aktuelle Kultur auf "Türkisch (Türkei)" gesetzt ist, kann das Modul für reguläre Ausdrücke "FILE" und "file" erfolgreich zuordnen und den Zugriff auf die Dateiressource blockieren.  
+ Das folgende Beispiel ist mit dem vorherigen Beispiel identisch, abgesehen davon, dass die statische <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode mit Optionen aufgerufen wird, die <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> enthalten. Auch wenn die aktuelle Kultur auf "Türkisch (Türkei)" gesetzt ist, kann die Engine für reguläre Ausdrücke "FILE" und "file" erfolgreich zuordnen und den Zugriff auf die Dateiressource blockieren.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#15)]
  [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]  

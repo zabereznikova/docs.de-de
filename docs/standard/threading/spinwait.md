@@ -1,31 +1,20 @@
 ---
 title: SpinWait
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1e67dd59464de09a35941d91ef984db6b7779b8c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e5bb6262b32201207853ef702ae38002c2ded252
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> ist ein einfacher Synchronisierungstyp, den Sie in Szenarien auf niedriger Ebene verwenden können, um die aufwändigen Kontextwechsel und Kernelübergänge zu vermeiden, die für Kernelereignisse erforderlich sind. Wenn bei Computern mit mehreren Kernen nicht erwartet wird, dass eine Ressource für längere Zeit beibehalten wird, kann es effizienter sein, wenn ein wartender Thread für ein paar Dutzend oder Hundert Zyklen im Benutzermodus rotiert und dann versucht wird, die Ressource zu erlangen. Wenn die Ressource nach den Spinvorgängen verfügbar ist, haben Sie mehrere Tausend Zyklen gespeichert. Wenn die Ressource immer noch nicht verfügbar ist, haben Sie nur wenige Zyklen verbraucht und können weiterhin in einen kernelbasierten Wartevorgang eintreten. Diese Kombination aus Spin- und Wartevorgang wird manchmal als *zweiphasiger Wartevorgang* bezeichnet.  

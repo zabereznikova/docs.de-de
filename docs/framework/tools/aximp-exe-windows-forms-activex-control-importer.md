@@ -1,14 +1,6 @@
 ---
 title: Aximp.exe (Windows Forms ActiveX Control Importer-Tool)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
 - ActiveX Control Importer
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8098a44c9275be0a40ec8e067d33ac8a00654ec1
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: befc4484324fb28b0fe55ef49f038712bc81e913
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Control Importer-Tool)
 Der ActiveX Control Importer konvertiert Typdefinitionen in einer COM-Typbibliothek für ein ActiveX-Steuerelement in ein Windows Forms-Steuerelement.  
@@ -79,7 +67,7 @@ aximp [options]{file.dll | file.ocx}
   
  Die Verwendung von "Aximp.exe" zum Erstellen einer .NET-Assembly für das ActiveX-Steuerelement WebBrowser ("shdocvw.dll") wird nicht unterstützt.  
   
- Wenn Sie "Aximp.exe" für "shdocvw.dll" ausführen, wird immer eine weitere Datei mit dem Namen "shdocvw.dll" in dem Verzeichnis erstellt, in dem das Tool ausgeführt wird. Wenn diese Datei im Verzeichnis "Dokumente und Einstellungen" abgelegt wird, verursacht sie Probleme beim Ausführen von Microsoft Internet Explorer und Windows Explorer. Beim Neustart des Computers sucht Windows zuerst im Verzeichnis "Dokumente und Einstellungen" und dann erst im Verzeichnis "system32" nach einer Version von "shdocvw.dll". Zum Laden der verwalteten Wrapper verwendet Windows die im Verzeichnis "Dokumente und Einstellungen" gefundene Version. Der Grund dafür, dass Internet Explorer und Windows Explorer nicht einwandfrei funktionieren, liegt darin, dass sie auf dem Renderingmodul basieren, das in der "shdocvw.dll" im Verzeichnis "system32" enthalten ist. Falls dieses Problem auftritt, löschen Sie im Verzeichnis "Dokumente und Einstellungen" die Kopie von "shdocvw.dll", und starten Sie den Computer neu.  
+ Wenn Sie "Aximp.exe" für "shdocvw.dll" ausführen, wird immer eine weitere Datei mit dem Namen "shdocvw.dll" in dem Verzeichnis erstellt, in dem das Tool ausgeführt wird. Wenn diese Datei im Verzeichnis "Dokumente und Einstellungen" abgelegt wird, verursacht sie Probleme beim Ausführen von Microsoft Internet Explorer und Windows Explorer. Beim Neustart des Computers sucht Windows zuerst im Verzeichnis "Dokumente und Einstellungen" und dann erst im Verzeichnis "system32" nach einer Version von "shdocvw.dll". Zum Laden der verwalteten Wrapper verwendet Windows die im Verzeichnis "Dokumente und Einstellungen" gefundene Version. Der Grund dafür, dass Internet Explorer und Windows Explorer nicht einwandfrei funktionieren, liegt darin, dass sie auf der Rendering-Engine basieren, das in der "shdocvw.dll" im Verzeichnis "system32" enthalten ist. Falls dieses Problem auftritt, löschen Sie im Verzeichnis "Dokumente und Einstellungen" die Kopie von "shdocvw.dll", und starten Sie den Computer neu.  
   
  Wenn Sie mit "Aximp.exe" und "shdocvw.dll" eine .NET-Assembly für die Verwendung in der Anwendungsentwicklung erstellen, kann dies ebenfalls zu Problemen führen. In diesem Fall lädt die Anwendung sowohl die Systemversion als auch die erzeugte Version von "shdocvw.dll" und weist der Systemversion möglicherweise die Priorität zu. Wenn Sie in diesem Fall versuchen, im ActiveX-Steuerelement WebBrowser eine Webseite zu laden, wird möglicherweise ein Dialogfeld zum Öffnen oder Speichern angezeigt. Wenn der Benutzer auf **Öffnen** klickt, wird die Website in Internet Explorer geöffnet. Dies geschieht nur bei Computern, auf denen Internet Explorer Version 6 oder früher ausgeführt wird. Um dieses Problem zu verhindern, verwenden Sie das verwaltete <xref:System.Windows.Forms.WebBrowser>-Steuerelement oder Visual Studio, um die verwaltete Datei „shdocvw.dll“ wie in [How to: Add References to Type Libraries (Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken)](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) beschrieben zu erstellen.  
   

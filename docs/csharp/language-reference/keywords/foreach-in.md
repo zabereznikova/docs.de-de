@@ -1,9 +1,6 @@
 ---
 title: foreach, in (C#-Referenz)
 ms.date: 10/11/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-caps.latest.revision: "29"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d5601682d53a01ff07aba7e416aa81ded4c03e4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f00ae873e615f653d3e760f82b157a57fdaef6ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (C#-Referenz)
 Mit der `foreach`-Anweisung wird eine Gruppe von eingebetteten Anweisungen für jedes Element in einem Array oder einer Objektauflistung wiederholt, das die Schnittstelle <xref:System.Collections.IEnumerable?displayProperty=nameWithType> oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> implementiert. Die `foreach`-Anweisung wird verwendet, um die Auflistung zu durchlaufen und dadurch die gewünschten Informationen zu erhalten. Setzen Sie sie nicht ein, um der Auflistung Elemente hinzuzufügen oder aus ihr zu entfernen, um unvorhersehbare Nebeneffekte zu vermeiden. Wenn Sie Elemente zu der Quellauflistung hinzufügen oder daraus entfernen müssen, verwenden Sie eine [for](for.md)-Schleife.
@@ -37,10 +31,10 @@ Mit der `foreach`-Anweisung wird eine Gruppe von eingebetteten Anweisungen für 
  [Gewusst wie: Zugreifen auf Sammlungsklassen mit foreach](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
 
 ## <a name="example"></a>Beispiel
- Der folgende Code zeigt drei Beispiele.
+ Der folgende Code zeigt drei Beispiele:
 
 > [!TIP]
-> Sie können ändern, in den Beispielen Experimentieren mit der Syntax, und wiederholen verschiedene Verwendungen, die eher mit Ihrem Anwendungsfall vergleichbar sind. Drücken Sie "Ausführen", um den Code auszuführen, und bearbeiten, und drücken Sie "führen Sie" erneut aus.
+> Sie können die Beispiele bearbeiten, um mit der Syntax zu experimentieren und verschiedene Verwendungen auszuprobieren, die Ihrem Anwendungsfall eher entsprechen. Klicken Sie auf „Ausführen“, um den Code auszuführen, bearbeiten Sie ihn anschließend, und klicken Sie erneut auf „Ausführen“.
 
 -   eine typische `foreach`-Schleife, die den Inhalt eines Arrays von Ganzzahlen anzeigt
 

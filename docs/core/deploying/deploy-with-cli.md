@@ -4,16 +4,11 @@ description: Erfahren Sie mehr zur .NET Core-App-Bereitstellung mit CLI-Tools
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 21e824e6092b0d30e0499ff05c5471a291c8d269
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Bereitstellen von .NET Core-Apps mit CLI-Tools (command-line interface, Befehlszeilenschnittstelle)
 
@@ -61,13 +56,17 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter
       ```console
       dotnet publish -f netcoreapp1.1 -c Release
       ```
-   Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung. Die resultierenden Dateien werden in ein Verzeichnis namens *publish* platziert, das sich in einem Unterverzeichnis des *bin*-Unterverzeichnis Ihres Projekts befindet.
+   Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung. Die resultierenden Dateien werden in ein Verzeichnis namens *publish* platziert, das sich in einem Unterverzeichnis des *bin*-Verzeichnisses Ihres Projekts befindet.
 
-Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist vornehmlich für das Debuggen von Ausnahmen nützlich. Sie können sich auch dazu entschließen, sie nicht mit den Dateien Ihrer Anwendung zu verteilen. Jedoch sollten Sie sie für den Fall speichern, dass Sie das Releasebuild Ihrer App debuggen möchten.
+   Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist vornehmlich für das Debuggen von Ausnahmen nützlich. Sie können sich auch dazu entschließen, sie nicht mit den Dateien Ihrer Anwendung zu verteilen. Jedoch sollten Sie sie für den Fall speichern, dass Sie das Releasebuild Ihrer App debuggen möchten.
 
-Der vollständige Satz von Anwendungsdateien kann so bereitgestellt werden, wie Sie möchten. Sie können sie z.B. in einer ZIP-Datei verpacken, und einen einfachen `copy`-Befehl verwenden, oder sie mit jedem Installationspaket Ihrer Wahl bereitstellen. Sobald die Anwendung installiert ist, können Benutzer sie mithilfe des `dotnet`-Befehls ausführen und den Dateinamen der Anwendung bereitstellen, z.B. `dotnet fdd.dll`.
+   Der vollständige Satz von Anwendungsdateien kann so bereitgestellt werden, wie Sie möchten. Sie können sie z.B. in einer ZIP-Datei verpacken, und einen einfachen `copy`-Befehl verwenden, oder sie mit jedem Installationspaket Ihrer Wahl bereitstellen.
 
-Das Installationsprogramm sollte zusätzlich zu den Binärdateien der Anwendung das freigegebene Framework-Installationsprogramm bündeln, oder als erforderliche Komponente im Rahmen der Anwendungsinstallation überprüfen.  Die Installation des gemeinsam genutzten Frameworks erfordert Administrator-/Root-Zugriff.
+1. Ausführen der App
+
+   Sobald die Anwendung installiert ist, können Benutzer sie mithilfe des `dotnet`-Befehls ausführen und den Dateinamen der Anwendung bereitstellen, z.B. `dotnet fdd.dll`.
+
+   Das Installationsprogramm sollte zusätzlich zu den Binärdateien der Anwendung das freigegebene Framework-Installationsprogramm bündeln, oder als erforderliche Komponente im Rahmen der Anwendungsinstallation überprüfen.  Die Installation des gemeinsam genutzten Frameworks erfordert Administrator-/Root-Zugriff.
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Framework-abhängige Bereitstellung mit Drittanbieterabhängigkeiten
 

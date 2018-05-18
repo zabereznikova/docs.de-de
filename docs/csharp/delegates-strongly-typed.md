@@ -1,24 +1,17 @@
 ---
 title: Stark typisierte Delegate
 description: Informationen zur Verwendung von generischen Delegattypen zum Deklarieren von benutzerdefinierten Typen beim Erstellen eines Features, das Delegaten erfordert.
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 467ba18f8e032b9b3b8f480d4b10c92d0d7ba3b9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongly-typed-delegates"></a>Stark typisierte Delegate
 
-[Vorheriges](delegate-class.md)
+[Vorherige](delegate-class.md)
 
 Im vorherigen Artikel haben Sie gesehen, dass bestimmte Delegaten mithilfe des `delegate`-Schlüsselworts erstellen. 
 
@@ -39,7 +32,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 
 Die `in`-Modifizierer im generischen Typargument wird in diesem Artikel in Kovarianz behandelt.
 
-Es gibt Variationen der `Action` Delegat, der bis zu 16 Argumente enthalten, wie z. B. <xref:System.Action%6016>.
+Es gibt Variationen des `Action`-Delegaten, der bis zu 16 Argumente enthält, wie z.B. <xref:System.Action%6016>.
 Es ist wichtig, dass diese Definitionen andere generische Argumente für jeden der Delegatargumente verwenden: Das bietet Ihnen maximale Flexibilität. Die Methodenargumente müssen nicht, aber können der gleiche Typ sein.
 
 Verwenden Sie einen der `Action`-Typen für jeden Delegattyp, der über einen void-Rückgabetyp verfügt.
@@ -55,12 +48,12 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 Der `out`-Modifizierer im Ergebnisargument des generischen Typs wird in diesem Artikel in Kovarianz behandelt.
 
-Es gibt Variationen der `Func` wie z. B. mit bis zu 16 Eingabeargumente Delegieren <xref:System.Func%6017>.
+Es gibt Variationen des `Func`-Delegaten mit bis zu 16 Eingabeargumenten, wie z.B. <xref:System.Func%6017>.
 Der Typ des Ergebnisses ist immer der letzte Typparameter in allen `Func`-Deklarationen, gemäß der Konvention.
 
 Verwenden Sie einen der `Func`-Typen für jeden Delegattyp, der einen Wert zurückgibt.
 
-Es ist auch ein spezieller <xref:System.Predicate%601> Typ für einen Delegaten, der einen Test auf einen einzelnen Wert zurückgibt:
+Es gibt auch einen spezialisierten <xref:System.Predicate%601>-Typ für einen Delegaten, der einen Test für einen einzelnen Wert zurückgibt:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
@@ -82,4 +75,4 @@ Dies sollte Zeit sparen und die Anzahl neuer Typen minimieren, die Sie erstellen
 
 Im nächsten Artikel sehen Sie einige allgemeine Muster für die praktische Arbeit mit Delegaten.
 
-[Weiter](delegates-patterns.md)
+[Nächste](delegates-patterns.md)
