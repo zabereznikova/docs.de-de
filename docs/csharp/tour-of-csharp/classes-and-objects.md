@@ -184,7 +184,7 @@ Wenn die Deklaration einer Instanzmethode einen `virtual`-Modifizierer enthält,
 
 Beim Aufruf einer virtuellen Methode bestimmt der *Laufzeittyp* der Instanz, für die der Aufruf erfolgt, die tatsächlich aufzurufende Methodenimplementierung. Beim Aufruf einer nicht virtuellen Methode ist der *Kompilierzeittyp* der bestimmende Faktor.
 
-Eine virtuelle Methode kann in einer abgeleiteten Klasse nicht *überschrieben* werden. Wenn eine Instanzmethodendeklaration einen override-Modifizierer enthält, überschreibt die Methode eine geerbte virtuelle Methode mit derselben Signatur. Während eine Deklaration einer virtuellen Methode eine neue Methode einführt, spezialisiert eine Deklaration einer überschriebenen Methode eine vorhandene geerbte virtuelle Methode, indem eine neue Implementierung dieser Methode bereitgestellt wird.
+Eine virtuelle Methode kann in einer abgeleiteten Klasse *überschrieben* werden. Wenn eine Instanzmethodendeklaration einen override-Modifizierer enthält, überschreibt die Methode eine geerbte virtuelle Methode mit derselben Signatur. Während eine Deklaration einer virtuellen Methode eine neue Methode einführt, spezialisiert eine Deklaration einer überschriebenen Methode eine vorhandene geerbte virtuelle Methode, indem eine neue Implementierung dieser Methode bereitgestellt wird.
 
 Eine *abstrakte Methode* ist eine virtuelle Methode ohne Implementierung. Eine abstrakte Methode wird mit dem abstract-Modifizierer deklariert und ist nur in einer Klasse erlaubt, die auch als abstrakt deklariert wurde. Eine abstrakte Methode muss in jeder nicht abstrakten abgeleiteten Klasse überschrieben werden.
 
