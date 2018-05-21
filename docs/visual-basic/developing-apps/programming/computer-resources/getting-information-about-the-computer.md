@@ -1,38 +1,28 @@
 ---
-title: "Abrufen von Informationen über den Computer (Visual Basic)"
-ms.custom: 
+title: Abrufen von Informationen über den Computer (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8644392270993c32fb2ee57d59437d72ba28220d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 6e4336c2a1e7b9ed32883c772fd6929676658e68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="getting-information-about-the-computer-visual-basic"></a><span data-ttu-id="3f6c3-102">Abrufen von Informationen über den Computer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f6c3-102">Getting Information about the Computer (Visual Basic)</span></span>
-<span data-ttu-id="3f6c3-103">Das `My.Computer.Info`-Objekt stellt Eigenschaften zum Abrufen von Informationen über den Arbeitsspeicher des Computer, geladene Assemblys, Name und Betriebssystem bereit.</span><span class="sxs-lookup"><span data-stu-id="3f6c3-103">The `My.Computer.Info` object provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  
+# <a name="getting-information-about-the-computer-visual-basic"></a><span data-ttu-id="002c5-102">Abrufen von Informationen über den Computer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="002c5-102">Getting Information about the Computer (Visual Basic)</span></span>
+<span data-ttu-id="002c5-103">Das `My.Computer.Info`-Objekt stellt Eigenschaften zum Abrufen von Informationen über den Arbeitsspeicher des Computer, geladene Assemblys, Name und Betriebssystem bereit.</span><span class="sxs-lookup"><span data-stu-id="002c5-103">The `My.Computer.Info` object provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3f6c3-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3f6c3-104">Remarks</span></span>  
- <span data-ttu-id="3f6c3-105">Diese Tabelle listet Aufgaben auf, die häufig über das `My.Computer.Info`-Objekt durchgeführt werden und weist auf Themen hin, die zeigen, wie jede Aufgabe ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="3f6c3-105">This table lists tasks commonly accomplished through the `My.Computer.Info` object and points to topics demonstrating how to perform each.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="002c5-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="002c5-104">Remarks</span></span>  
+ <span data-ttu-id="002c5-105">Diese Tabelle listet Aufgaben auf, die häufig über das `My.Computer.Info`-Objekt durchgeführt werden und weist auf Themen hin, die zeigen, wie jede Aufgabe ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="002c5-105">This table lists tasks commonly accomplished through the `My.Computer.Info` object and points to topics demonstrating how to perform each.</span></span>  
   
-|<span data-ttu-id="3f6c3-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3f6c3-106">To</span></span>|<span data-ttu-id="3f6c3-107">Siehe</span><span class="sxs-lookup"><span data-stu-id="3f6c3-107">See</span></span>|  
+|<span data-ttu-id="002c5-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="002c5-106">To</span></span>|<span data-ttu-id="002c5-107">Siehe</span><span class="sxs-lookup"><span data-stu-id="002c5-107">See</span></span>|  
 |---|---|   
-|<span data-ttu-id="3f6c3-108">Bestimmen, wie viel virtueller Adressraum für den Computer verfügbar ist, auf dem die Anwendung installiert wird</span><span class="sxs-lookup"><span data-stu-id="3f6c3-108">Determine how much virtual address space is available for the computer on which the application is installed</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|  
-|<span data-ttu-id="3f6c3-109">Bestimmen des Plattformtyps des Computers, auf dem die Anwendung ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="3f6c3-109">Determine the platform type of the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|  
-|<span data-ttu-id="3f6c3-110">Bestimmen des Betriebssystems des Computers, auf dem die Anwendung ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="3f6c3-110">Determine the operating system of the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|  
-|<span data-ttu-id="3f6c3-111">Bestimmen, welche Service Packs auf dem Computer installiert wurden, auf dem die Anwendung ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="3f6c3-111">Determine what service packs have been installed on the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|  
-|<span data-ttu-id="3f6c3-112">Bestimmen der installierten `UICulture` auf dem Computer, auf dem die Anwendung ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="3f6c3-112">Determine the installed `UICulture` on the computer on which the application is running.</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|  
+|<span data-ttu-id="002c5-108">Bestimmen, wie viel virtueller Adressraum für den Computer verfügbar ist, auf dem die Anwendung installiert wird</span><span class="sxs-lookup"><span data-stu-id="002c5-108">Determine how much virtual address space is available for the computer on which the application is installed</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|  
+|<span data-ttu-id="002c5-109">Bestimmen des Plattformtyps des Computers, auf dem die Anwendung ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="002c5-109">Determine the platform type of the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|  
+|<span data-ttu-id="002c5-110">Bestimmen des Betriebssystems des Computers, auf dem die Anwendung ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="002c5-110">Determine the operating system of the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|  
+|<span data-ttu-id="002c5-111">Bestimmen, welche Service Packs auf dem Computer installiert wurden, auf dem die Anwendung ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="002c5-111">Determine what service packs have been installed on the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|  
+|<span data-ttu-id="002c5-112">Bestimmen der installierten `UICulture` auf dem Computer, auf dem die Anwendung ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="002c5-112">Determine the installed `UICulture` on the computer on which the application is running.</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|  
   
-## <a name="see-also"></a><span data-ttu-id="3f6c3-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3f6c3-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="002c5-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="002c5-113">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>

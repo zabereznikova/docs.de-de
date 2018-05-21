@@ -1,45 +1,34 @@
 ---
 title: 'Gewusst wie: Implementieren eines Wartevorgangs mit zwei Phasen mit SpinWait'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 63e4ea5c1c1d6143f1b6daa0312fa32b52af5787
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: af6e4e8d0d754b97478788422b4dd84eeddc6491
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a><span data-ttu-id="c845f-102">Gewusst wie: Implementieren eines Wartevorgangs mit zwei Phasen mit SpinWait</span><span class="sxs-lookup"><span data-stu-id="c845f-102">How to: Use SpinWait to Implement a Two-Phase Wait Operation</span></span>
-<span data-ttu-id="c845f-103">Das folgende Beispiel zeigt, wie Sie mit einem <xref:System.Threading.SpinWait?displayProperty=nameWithType>-Objekt einen zweiphasigen Wartevorgang implementieren.</span><span class="sxs-lookup"><span data-stu-id="c845f-103">The following example shows how to use a <xref:System.Threading.SpinWait?displayProperty=nameWithType> object to implement a two-phase wait operation.</span></span> <span data-ttu-id="c845f-104">In der ersten Phase rotiert das Synchronisierungsobjekt, ein `Latch`, für einige Zyklen und überprüft dabei, ob die Sperre verfügbar geworden ist.</span><span class="sxs-lookup"><span data-stu-id="c845f-104">In the first phase, the synchronization object, a `Latch`, spins for a few cycles while it checks whether the lock has become available.</span></span> <span data-ttu-id="c845f-105">Wenn in der zweiten Phase die Sperre verfügbar wird, erfolgt die Rückgabe der `Wait`-Methode ohne Verwendung von <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> zur Ausführung des Wartevorgangs; andernfalls führt `Wait` den Wartevorgang aus.</span><span class="sxs-lookup"><span data-stu-id="c845f-105">In the second phase, if the lock becomes available, then the `Wait` method returns without using the <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> to perform its wait; otherwise, `Wait` performs the wait.</span></span>  
+# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a><span data-ttu-id="aaf6c-102">Gewusst wie: Implementieren eines Wartevorgangs mit zwei Phasen mit SpinWait</span><span class="sxs-lookup"><span data-stu-id="aaf6c-102">How to: Use SpinWait to Implement a Two-Phase Wait Operation</span></span>
+<span data-ttu-id="aaf6c-103">Das folgende Beispiel zeigt, wie Sie mit einem <xref:System.Threading.SpinWait?displayProperty=nameWithType>-Objekt einen zweiphasigen Wartevorgang implementieren.</span><span class="sxs-lookup"><span data-stu-id="aaf6c-103">The following example shows how to use a <xref:System.Threading.SpinWait?displayProperty=nameWithType> object to implement a two-phase wait operation.</span></span> <span data-ttu-id="aaf6c-104">In der ersten Phase rotiert das Synchronisierungsobjekt, ein `Latch`, für einige Zyklen und überprüft dabei, ob die Sperre verfügbar geworden ist.</span><span class="sxs-lookup"><span data-stu-id="aaf6c-104">In the first phase, the synchronization object, a `Latch`, spins for a few cycles while it checks whether the lock has become available.</span></span> <span data-ttu-id="aaf6c-105">Wenn in der zweiten Phase die Sperre verfügbar wird, erfolgt die Rückgabe der `Wait`-Methode ohne Verwendung von <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> zur Ausführung des Wartevorgangs; andernfalls führt `Wait` den Wartevorgang aus.</span><span class="sxs-lookup"><span data-stu-id="aaf6c-105">In the second phase, if the lock becomes available, then the `Wait` method returns without using the <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> to perform its wait; otherwise, `Wait` performs the wait.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c845f-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c845f-106">Example</span></span>  
- <span data-ttu-id="c845f-107">Dieses Beispiel zeigt eine sehr grundlegende Implementierung einer Latchsynchronisierungsprimitiven.</span><span class="sxs-lookup"><span data-stu-id="c845f-107">This example shows a very basic implementation of a Latch synchronization primitive.</span></span> <span data-ttu-id="c845f-108">Sie können diese Datenstruktur verwenden, wenn die Wartezeiten voraussichtlich sehr kurz sind.</span><span class="sxs-lookup"><span data-stu-id="c845f-108">You can use this data structure when wait times are expected to be very short.</span></span> <span data-ttu-id="c845f-109">Das Beispiel dient nur der Veranschaulichung.</span><span class="sxs-lookup"><span data-stu-id="c845f-109">This example is for demonstration purposes only.</span></span> <span data-ttu-id="c845f-110">Wenn Sie in Ihrem Programm Latchfunktionalität benötigen, erwägen Sie die Verwendung von <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c845f-110">If you require latch-type functionality in your program, consider using <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.</span></span>  
+## <a name="example"></a><span data-ttu-id="aaf6c-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="aaf6c-106">Example</span></span>  
+ <span data-ttu-id="aaf6c-107">Dieses Beispiel zeigt eine sehr grundlegende Implementierung einer Latchsynchronisierungsprimitiven.</span><span class="sxs-lookup"><span data-stu-id="aaf6c-107">This example shows a very basic implementation of a Latch synchronization primitive.</span></span> <span data-ttu-id="aaf6c-108">Sie können diese Datenstruktur verwenden, wenn die Wartezeiten voraussichtlich sehr kurz sind.</span><span class="sxs-lookup"><span data-stu-id="aaf6c-108">You can use this data structure when wait times are expected to be very short.</span></span> <span data-ttu-id="aaf6c-109">Das Beispiel dient nur der Veranschaulichung.</span><span class="sxs-lookup"><span data-stu-id="aaf6c-109">This example is for demonstration purposes only.</span></span> <span data-ttu-id="aaf6c-110">Wenn Sie in Ihrem Programm Latchfunktionalität benötigen, erwägen Sie die Verwendung von <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="aaf6c-110">If you require latch-type functionality in your program, consider using <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.</span></span>  
   
  [!code-csharp[CDS_SpinWait#03](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait03.cs#03)]
  [!code-vb[CDS_SpinWait#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/spinwait2.vb#03)]  
   
- <span data-ttu-id="c845f-111">Der Latch verwendet das <xref:System.Threading.SpinWait>-Objekt für Schleifendurchläufe, bis der nächste Aufruf von `SpinOnce` veranlasst, dass <xref:System.Threading.SpinWait> das Zeitsegment des Threads bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="c845f-111">The latch uses the <xref:System.Threading.SpinWait> object to spin in place only until the next call to `SpinOnce` causes the <xref:System.Threading.SpinWait> to yield the time slice of the thread.</span></span> <span data-ttu-id="c845f-112">An diesem Punkt bewirkt der Latch seinen eigenen Kontextwechsel durch Aufruf von <xref:System.Threading.WaitHandle.WaitOne%2A> in <xref:System.Threading.ManualResetEvent> und Übergabe des Rests des Timeoutwerts.</span><span class="sxs-lookup"><span data-stu-id="c845f-112">At that point, the latch causes its own context switch by calling <xref:System.Threading.WaitHandle.WaitOne%2A> on the <xref:System.Threading.ManualResetEvent> and passing in the remainder of the time-out value.</span></span>  
+ <span data-ttu-id="aaf6c-111">Der Latch verwendet das <xref:System.Threading.SpinWait>-Objekt für Schleifendurchläufe, bis der nächste Aufruf von `SpinOnce` veranlasst, dass <xref:System.Threading.SpinWait> das Zeitsegment des Threads bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="aaf6c-111">The latch uses the <xref:System.Threading.SpinWait> object to spin in place only until the next call to `SpinOnce` causes the <xref:System.Threading.SpinWait> to yield the time slice of the thread.</span></span> <span data-ttu-id="aaf6c-112">An diesem Punkt bewirkt der Latch seinen eigenen Kontextwechsel durch Aufruf von <xref:System.Threading.WaitHandle.WaitOne%2A> in <xref:System.Threading.ManualResetEvent> und Übergabe des Rests des Timeoutwerts.</span><span class="sxs-lookup"><span data-stu-id="aaf6c-112">At that point, the latch causes its own context switch by calling <xref:System.Threading.WaitHandle.WaitOne%2A> on the <xref:System.Threading.ManualResetEvent> and passing in the remainder of the time-out value.</span></span>  
   
- <span data-ttu-id="c845f-113">Die Protokollausgabe zeigt, wie oft der Latch die Leistung durch Aktivieren der Sperre ohne Verwendung von <xref:System.Threading.ManualResetEvent> erhöhen konnte.</span><span class="sxs-lookup"><span data-stu-id="c845f-113">The logging output shows how often the Latch was able to increase performance by acquiring the lock without using the <xref:System.Threading.ManualResetEvent>.</span></span>  
+ <span data-ttu-id="aaf6c-113">Die Protokollausgabe zeigt, wie oft der Latch die Leistung durch Aktivieren der Sperre ohne Verwendung von <xref:System.Threading.ManualResetEvent> erhöhen konnte.</span><span class="sxs-lookup"><span data-stu-id="aaf6c-113">The logging output shows how often the Latch was able to increase performance by acquiring the lock without using the <xref:System.Threading.ManualResetEvent>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c845f-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c845f-114">See Also</span></span>  
- [<span data-ttu-id="c845f-115">SpinWait</span><span class="sxs-lookup"><span data-stu-id="c845f-115">SpinWait</span></span>](../../../docs/standard/threading/spinwait.md)  
- [<span data-ttu-id="c845f-116">Threading Objects and Features (Threadingobjekte und -funktionen)</span><span class="sxs-lookup"><span data-stu-id="c845f-116">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a><span data-ttu-id="aaf6c-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="aaf6c-114">See Also</span></span>  
+ [<span data-ttu-id="aaf6c-115">SpinWait</span><span class="sxs-lookup"><span data-stu-id="aaf6c-115">SpinWait</span></span>](../../../docs/standard/threading/spinwait.md)  
+ [<span data-ttu-id="aaf6c-116">Threading Objects and Features (Threadingobjekte und -funktionen)</span><span class="sxs-lookup"><span data-stu-id="aaf6c-116">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)
