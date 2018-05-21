@@ -1,36 +1,27 @@
 ---
-title: "Visual Studio-IDE und Toolunterstützung für LINQ (C#)"
-ms.custom: 
+title: Visual Studio-IDE und Toolunterstützung für LINQ (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 577338cc70bf9c335b162ca32bb3fc026addd49e
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 866b8938d127bf20314bb13d2951e0aa5f666094
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="visual-studio-ide-and-tools-support-for-linq-c"></a><span data-ttu-id="fed24-102">Visual Studio-IDE und Toolunterstützung für LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="fed24-102">Visual Studio IDE and Tools Support for LINQ (C#)</span></span>
-<span data-ttu-id="fed24-103">Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bietet die folgenden Features, die die LINQ-Anwendungsentwicklung unterstützen:</span><span class="sxs-lookup"><span data-stu-id="fed24-103">The Visual Studio integrated development environment (IDE) provides the following features that support LINQ application development:</span></span>  
+# <a name="visual-studio-ide-and-tools-support-for-linq-c"></a><span data-ttu-id="a24ba-102">Visual Studio-IDE und Toolunterstützung für LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="a24ba-102">Visual Studio IDE and Tools Support for LINQ (C#)</span></span>
+<span data-ttu-id="a24ba-103">Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bietet die folgenden Features, die die LINQ-Anwendungsentwicklung unterstützen:</span><span class="sxs-lookup"><span data-stu-id="a24ba-103">The Visual Studio integrated development environment (IDE) provides the following features that support LINQ application development:</span></span>  
   
-## <a name="object-relational-designer"></a><span data-ttu-id="fed24-104">Object Relational Designer</span><span class="sxs-lookup"><span data-stu-id="fed24-104">Object Relational Designer</span></span>  
- <span data-ttu-id="fed24-105">Der objektrelationale Designer ist ein visuelles Designtool, das Sie in [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)-Anwendungen zum Erstellen von Klassen in C# verwenden können, die die relationalen Daten in einer zugrunde liegenden Datenbank darstellen.</span><span class="sxs-lookup"><span data-stu-id="fed24-105">The Object Relational Designer is a visual design tool that you can use in [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) applications to generate classes in C# that represent the relational data in an underlying database.</span></span> <span data-ttu-id="fed24-106">Weitere Informationen finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span><span class="sxs-lookup"><span data-stu-id="fed24-106">For more information, see [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
+## <a name="object-relational-designer"></a><span data-ttu-id="a24ba-104">Object Relational Designer</span><span class="sxs-lookup"><span data-stu-id="a24ba-104">Object Relational Designer</span></span>  
+ <span data-ttu-id="a24ba-105">Der objektrelationale Designer ist ein visuelles Designtool, das Sie in [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)-Anwendungen zum Erstellen von Klassen in C# verwenden können, die die relationalen Daten in einer zugrunde liegenden Datenbank darstellen.</span><span class="sxs-lookup"><span data-stu-id="a24ba-105">The Object Relational Designer is a visual design tool that you can use in [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) applications to generate classes in C# that represent the relational data in an underlying database.</span></span> <span data-ttu-id="a24ba-106">Weitere Informationen finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span><span class="sxs-lookup"><span data-stu-id="a24ba-106">For more information, see [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
   
-## <a name="sqlmetal-command-line-tool"></a><span data-ttu-id="fed24-107">SQLMetal-Befehlszeilentool</span><span class="sxs-lookup"><span data-stu-id="fed24-107">SQLMetal Command Line Tool</span></span>  
- <span data-ttu-id="fed24-108">SQLMetal ist ein Befehlszeilentool, das in Buildprozessen zum Generieren von Klassen aus vorhandenen Datenbanken verwendet werden kann, die in LINQ to SQL-Anwendungen verwendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="fed24-108">SQLMetal is a command-line tool that can be used in build processes to generate classes from existing databases for use in LINQ to SQL  applications.</span></span> <span data-ttu-id="fed24-109">Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).</span><span class="sxs-lookup"><span data-stu-id="fed24-109">For more information, see [SqlMetal.exe (Code Generation Tool)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).</span></span>  
+## <a name="sqlmetal-command-line-tool"></a><span data-ttu-id="a24ba-107">SQLMetal-Befehlszeilentool</span><span class="sxs-lookup"><span data-stu-id="a24ba-107">SQLMetal Command Line Tool</span></span>  
+ <span data-ttu-id="a24ba-108">SQLMetal ist ein Befehlszeilentool, das in Buildprozessen zum Generieren von Klassen aus vorhandenen Datenbanken verwendet werden kann, die in LINQ to SQL-Anwendungen verwendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="a24ba-108">SQLMetal is a command-line tool that can be used in build processes to generate classes from existing databases for use in LINQ to SQL  applications.</span></span> <span data-ttu-id="a24ba-109">Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).</span><span class="sxs-lookup"><span data-stu-id="a24ba-109">For more information, see [SqlMetal.exe (Code Generation Tool)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).</span></span>  
   
-## <a name="linq-aware-code-editor"></a><span data-ttu-id="fed24-110">LINQ-fähiger Code-Editor</span><span class="sxs-lookup"><span data-stu-id="fed24-110">LINQ-Aware Code Editor</span></span>  
- <span data-ttu-id="fed24-111">Der C#-Code-Editor bietet umfassende Unterstützung für LINQ durch IntelliSense- und Formatierungsfunktionen.</span><span class="sxs-lookup"><span data-stu-id="fed24-111">The C# code editor supports LINQ extensively with IntelliSense and formatting capabilities.</span></span>  
+## <a name="linq-aware-code-editor"></a><span data-ttu-id="a24ba-110">LINQ-fähiger Code-Editor</span><span class="sxs-lookup"><span data-stu-id="a24ba-110">LINQ-Aware Code Editor</span></span>  
+ <span data-ttu-id="a24ba-111">Der C#-Code-Editor bietet umfassende Unterstützung für LINQ durch IntelliSense- und Formatierungsfunktionen.</span><span class="sxs-lookup"><span data-stu-id="a24ba-111">The C# code editor supports LINQ extensively with IntelliSense and formatting capabilities.</span></span>  
   
-## <a name="visual-studio-debugger-support"></a><span data-ttu-id="fed24-112">Unterstützung für Visual Studio-Debugger</span><span class="sxs-lookup"><span data-stu-id="fed24-112">Visual Studio Debugger Support</span></span>  
- <span data-ttu-id="fed24-113">Der Visual Studio-Debugger unterstützt das Debuggen von Abfrageausdrücken.</span><span class="sxs-lookup"><span data-stu-id="fed24-113">The Visual Studio debugger supports debugging of query expressions.</span></span> <span data-ttu-id="fed24-114">Weitere Informationen finden Sie unter [Debuggen von LINQ](/visualstudio/debugger/debugging-linq).</span><span class="sxs-lookup"><span data-stu-id="fed24-114">For more information, see [Debugging LINQ](/visualstudio/debugger/debugging-linq).</span></span>  
+## <a name="visual-studio-debugger-support"></a><span data-ttu-id="a24ba-112">Unterstützung für Visual Studio-Debugger</span><span class="sxs-lookup"><span data-stu-id="a24ba-112">Visual Studio Debugger Support</span></span>  
+ <span data-ttu-id="a24ba-113">Der Visual Studio-Debugger unterstützt das Debuggen von Abfrageausdrücken.</span><span class="sxs-lookup"><span data-stu-id="a24ba-113">The Visual Studio debugger supports debugging of query expressions.</span></span> <span data-ttu-id="a24ba-114">Weitere Informationen finden Sie unter [Debuggen von LINQ](/visualstudio/debugger/debugging-linq).</span><span class="sxs-lookup"><span data-stu-id="a24ba-114">For more information, see [Debugging LINQ](/visualstudio/debugger/debugging-linq).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fed24-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fed24-115">See Also</span></span>  
- [<span data-ttu-id="fed24-116">Language-Integrated Query (LINQ) (Sprachintegrierte Abfrage (LINQ))</span><span class="sxs-lookup"><span data-stu-id="fed24-116">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a><span data-ttu-id="a24ba-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a24ba-115">See Also</span></span>  
+ [<span data-ttu-id="a24ba-116">Language-Integrated Query (LINQ) (Sprachintegrierte Abfrage (LINQ))</span><span class="sxs-lookup"><span data-stu-id="a24ba-116">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)

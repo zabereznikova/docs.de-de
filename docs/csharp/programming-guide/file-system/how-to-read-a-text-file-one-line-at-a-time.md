@@ -1,27 +1,21 @@
 ---
-title: "Gewusst wie: Zeilenweises Lesen einer Textdatei (Visual C#)"
+title: 'Gewusst wie: Zeilenweises Lesen einer Textdatei (Visual C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5e43251f29030b8f912b10ee7adb5a6492f2afad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ed0069f9313955edc2cc46ecfd395a5f1ac2852
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a><span data-ttu-id="eaaaf-102">Gewusst wie: Zeilenweises Lesen einer Textdatei (Visual C#)</span><span class="sxs-lookup"><span data-stu-id="eaaaf-102">How to: Read a Text File One Line at a Time (Visual C#)</span></span>
-<span data-ttu-id="eaaaf-103">Dieses Beispiel liest den Inhalt einer Textdatei Zeile pro Zeile in eine Zeichenfolge mithilfe der `ReadLine`-Methode der `StreamReader`-Klasse.</span><span class="sxs-lookup"><span data-stu-id="eaaaf-103">This example reads the contents of a text file, one line at a time, into a string using the `ReadLine` method of the `StreamReader` class.</span></span> <span data-ttu-id="eaaaf-104">Jede Textzeile wird in der Zeichenfolge `line` gespeichert und auf dem Bildschirm angezeigt.</span><span class="sxs-lookup"><span data-stu-id="eaaaf-104">Each text line is stored into the string `line` and displayed on the screen.</span></span>  
+# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a><span data-ttu-id="2a146-102">Gewusst wie: Zeilenweises Lesen einer Textdatei (Visual C#)</span><span class="sxs-lookup"><span data-stu-id="2a146-102">How to: Read a Text File One Line at a Time (Visual C#)</span></span>
+<span data-ttu-id="2a146-103">Dieses Beispiel liest den Inhalt einer Textdatei Zeile pro Zeile in eine Zeichenfolge mithilfe der `ReadLine`-Methode der `StreamReader`-Klasse.</span><span class="sxs-lookup"><span data-stu-id="2a146-103">This example reads the contents of a text file, one line at a time, into a string using the `ReadLine` method of the `StreamReader` class.</span></span> <span data-ttu-id="2a146-104">Jede Textzeile wird in der Zeichenfolge `line` gespeichert und auf dem Bildschirm angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2a146-104">Each text line is stored into the string `line` and displayed on the screen.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="eaaaf-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="eaaaf-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2a146-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2a146-105">Example</span></span>  
   
 ```  
 int counter = 0;  
@@ -42,20 +36,20 @@ System.Console.WriteLine("There were {0} lines.", counter);
 System.Console.ReadLine();  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="eaaaf-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="eaaaf-106">Compiling the Code</span></span>  
- <span data-ttu-id="eaaaf-107">Kopieren Sie den Code, und fügen Sie ihn in die `Main`-Methode einer Konsolenanwendung ein.</span><span class="sxs-lookup"><span data-stu-id="eaaaf-107">Copy the code and paste it into the `Main` method of a console application.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2a146-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="2a146-106">Compiling the Code</span></span>  
+ <span data-ttu-id="2a146-107">Kopieren Sie den Code, und fügen Sie ihn in die `Main`-Methode einer Konsolenanwendung ein.</span><span class="sxs-lookup"><span data-stu-id="2a146-107">Copy the code and paste it into the `Main` method of a console application.</span></span>  
   
- <span data-ttu-id="eaaaf-108">Ersetzen Sie `"c:\test.txt"` durch den tatsächlichen Dateinamen.</span><span class="sxs-lookup"><span data-stu-id="eaaaf-108">Replace `"c:\test.txt"` with the actual file name.</span></span>  
+ <span data-ttu-id="2a146-108">Ersetzen Sie `"c:\test.txt"` durch den tatsächlichen Dateinamen.</span><span class="sxs-lookup"><span data-stu-id="2a146-108">Replace `"c:\test.txt"` with the actual file name.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="eaaaf-109">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="eaaaf-109">Robust Programming</span></span>  
- <span data-ttu-id="eaaaf-110">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="eaaaf-110">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="2a146-109">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="2a146-109">Robust Programming</span></span>  
+ <span data-ttu-id="2a146-110">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="2a146-110">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="eaaaf-111">Die Datei ist möglicherweise nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="eaaaf-111">The file may not exist.</span></span>  
+-   <span data-ttu-id="2a146-111">Die Datei ist möglicherweise nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="2a146-111">The file may not exist.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="eaaaf-112">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="eaaaf-112">.NET Framework Security</span></span>  
- <span data-ttu-id="eaaaf-113">Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens.</span><span class="sxs-lookup"><span data-stu-id="eaaaf-113">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="eaaaf-114">Bei der Datei `myFile.cs` handelt es sich möglicherweise nicht um eine C#-Quelldatei.</span><span class="sxs-lookup"><span data-stu-id="eaaaf-114">For example, the file `myFile.cs` may not be a C# source file.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="2a146-112">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="2a146-112">.NET Framework Security</span></span>  
+ <span data-ttu-id="2a146-113">Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens.</span><span class="sxs-lookup"><span data-stu-id="2a146-113">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="2a146-114">Bei der Datei `myFile.cs` handelt es sich möglicherweise nicht um eine C#-Quelldatei.</span><span class="sxs-lookup"><span data-stu-id="2a146-114">For example, the file `myFile.cs` may not be a C# source file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eaaaf-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eaaaf-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2a146-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2a146-115">See Also</span></span>  
  <xref:System.IO?displayProperty=nameWithType>  
- [<span data-ttu-id="eaaaf-116">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="eaaaf-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="eaaaf-117">Das Dateisystem und die Registrierung (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="eaaaf-117">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)
+ [<span data-ttu-id="2a146-116">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="2a146-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="2a146-117">Das Dateisystem und die Registrierung (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="2a146-117">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)

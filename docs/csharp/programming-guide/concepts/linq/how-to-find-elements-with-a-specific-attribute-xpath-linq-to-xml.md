@@ -1,31 +1,22 @@
 ---
 title: 'Vorgehensweise: Suchen nach Elementen mit bestimmten Attributen (XPath-LINQ to XML) (C#)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 66053135dbfdf6f61ff1f09b846acd9d9cfe054f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 18dbd3170b5e3f8f8b3e11c66430d71ba6acd0da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="c5cad-102">Vorgehensweise: Suchen nach Elementen mit bestimmten Attributen (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c5cad-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="c5cad-103">Es kann passieren, dass Sie alle Elemente ermitteln möchten, die ein bestimmtes Attribut besitzen.</span><span class="sxs-lookup"><span data-stu-id="c5cad-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="c5cad-104">Welchen Inhalt das Attribut hat, ist Ihnen dabei egal.</span><span class="sxs-lookup"><span data-stu-id="c5cad-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="c5cad-105">Alleiniges Kriterium für die Auswahl ist dessen Existenz.</span><span class="sxs-lookup"><span data-stu-id="c5cad-105">Instead, you want to select based on the existence of the attribute.</span></span>  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="c5020-102">Vorgehensweise: Suchen nach Elementen mit bestimmten Attributen (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c5020-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="c5020-103">Es kann passieren, dass Sie alle Elemente ermitteln möchten, die ein bestimmtes Attribut besitzen.</span><span class="sxs-lookup"><span data-stu-id="c5020-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="c5020-104">Welchen Inhalt das Attribut hat, ist Ihnen dabei egal.</span><span class="sxs-lookup"><span data-stu-id="c5020-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="c5020-105">Alleiniges Kriterium für die Auswahl ist dessen Existenz.</span><span class="sxs-lookup"><span data-stu-id="c5020-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- <span data-ttu-id="c5cad-106">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="c5cad-106">The XPath expression is:</span></span>  
+ <span data-ttu-id="c5020-106">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="c5020-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a><span data-ttu-id="c5cad-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c5cad-107">Example</span></span>  
- <span data-ttu-id="c5cad-108">Der folgende Code wählt nur die Elemente aus, die das `Select`-Attribut besitzen:</span><span class="sxs-lookup"><span data-stu-id="c5cad-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="c5020-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c5020-107">Example</span></span>  
+ <span data-ttu-id="c5020-108">Der folgende Code wählt nur die Elemente aus, die das `Select`-Attribut besitzen:</span><span class="sxs-lookup"><span data-stu-id="c5020-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(  
@@ -56,7 +47,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="c5cad-109">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="c5cad-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="c5020-109">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="c5020-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -64,5 +55,5 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c5cad-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c5cad-110">See Also</span></span>  
- [<span data-ttu-id="c5cad-111">LINQ to XML für XPath-Benutzer (C#)</span><span class="sxs-lookup"><span data-stu-id="c5cad-111">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="c5020-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c5020-110">See Also</span></span>  
+ [<span data-ttu-id="c5020-111">LINQ to XML für XPath-Benutzer (C#)</span><span class="sxs-lookup"><span data-stu-id="c5020-111">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

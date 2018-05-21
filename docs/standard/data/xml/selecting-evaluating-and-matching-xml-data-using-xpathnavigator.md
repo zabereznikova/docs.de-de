@@ -1,55 +1,44 @@
 ---
-title: "Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator"
-ms.custom: 
+title: Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e503c5be7bb23d15c2b11ef1b31c2eeb5e4d5aa8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 55344de87672c09305c03c25047c2f3cc3bdab7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a><span data-ttu-id="2bdd6-102">Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2bdd6-102">Selecting, Evaluating and Matching XML Data using XPathNavigator</span></span>
-<span data-ttu-id="2bdd6-103">Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Methoden zum Auswählen von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe einer XPath-Abfrage, zum Auswerten und Überprüfen der Ergebnisse eines XPath-Ausdrucks sowie zum Bestimmen, ob ein Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mit einem angegebenen XPath-Ausdruck übereinstimmt, bereit.</span><span class="sxs-lookup"><span data-stu-id="2bdd6-103">The <xref:System.Xml.XPath.XPathNavigator> class provides methods to select nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object using an XPath query, evaluate and examine the results of an XPath expression, and determine if a node in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object matches a given XPath expression.</span></span> <span data-ttu-id="2bdd6-104">Diese und andere Konzepte, die mit dem Auswählen, Auswerten und Zuordnen von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt verbunden sind, werden in den folgenden Themen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="2bdd6-104">These and other concepts that relate to selecting, evaluating and matching nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object are described in the following topics.</span></span>  
+# <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a><span data-ttu-id="7041c-102">Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="7041c-102">Selecting, Evaluating and Matching XML Data using XPathNavigator</span></span>
+<span data-ttu-id="7041c-103">Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Methoden zum Auswählen von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe einer XPath-Abfrage, zum Auswerten und Überprüfen der Ergebnisse eines XPath-Ausdrucks sowie zum Bestimmen, ob ein Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mit einem angegebenen XPath-Ausdruck übereinstimmt, bereit.</span><span class="sxs-lookup"><span data-stu-id="7041c-103">The <xref:System.Xml.XPath.XPathNavigator> class provides methods to select nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object using an XPath query, evaluate and examine the results of an XPath expression, and determine if a node in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object matches a given XPath expression.</span></span> <span data-ttu-id="7041c-104">Diese und andere Konzepte, die mit dem Auswählen, Auswerten und Zuordnen von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt verbunden sind, werden in den folgenden Themen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="7041c-104">These and other concepts that relate to selecting, evaluating and matching nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object are described in the following topics.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2bdd6-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="2bdd6-105">In This Section</span></span>  
- [<span data-ttu-id="2bdd6-106">Auswählen von XML-Daten mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2bdd6-106">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- <span data-ttu-id="2bdd6-107">Beschreibt eine Gruppe von Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse, mit denen eine Gruppe von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe eines XPath-Ausdrucks ausgewählt werden kann.</span><span class="sxs-lookup"><span data-stu-id="2bdd6-107">Describes the set of <xref:System.Xml.XPath.XPathNavigator> class methods used to select a set of nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object using an XPath expression.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="7041c-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="7041c-105">In This Section</span></span>  
+ [<span data-ttu-id="7041c-106">Auswählen von XML-Daten mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="7041c-106">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ <span data-ttu-id="7041c-107">Beschreibt eine Gruppe von Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse, mit denen eine Gruppe von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe eines XPath-Ausdrucks ausgewählt werden kann.</span><span class="sxs-lookup"><span data-stu-id="7041c-107">Describes the set of <xref:System.Xml.XPath.XPathNavigator> class methods used to select a set of nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object using an XPath expression.</span></span>  
   
- [<span data-ttu-id="2bdd6-108">Auswerten von XPath-Ausdrücken mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2bdd6-108">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- <span data-ttu-id="2bdd6-109">Beschreibt die <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse, die zum Auswerten eines XPath-Ausdrucks verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="2bdd6-109">Describes the <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> method of the <xref:System.Xml.XPath.XPathNavigator> class used to evaluate an XPath expression.</span></span>  
+ [<span data-ttu-id="7041c-108">Auswerten von XPath-Ausdrücken mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="7041c-108">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ <span data-ttu-id="7041c-109">Beschreibt die <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse, die zum Auswerten eines XPath-Ausdrucks verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="7041c-109">Describes the <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> method of the <xref:System.Xml.XPath.XPathNavigator> class used to evaluate an XPath expression.</span></span>  
   
- [<span data-ttu-id="2bdd6-110">Vergleich von Knoten mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2bdd6-110">Matching Nodes using XPathNavigator</span></span>](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- <span data-ttu-id="2bdd6-111">Beschreibt die <xref:System.Xml.XPath.XPathNavigator.Matches%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse, mit der bestimmt wird, ob ein Knoten mit einem XPath-Ausdruck übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="2bdd6-111">Describes the <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method of the <xref:System.Xml.XPath.XPathNavigator> class used to determine if a node matches an XPath expression.</span></span>  
+ [<span data-ttu-id="7041c-110">Vergleich von Knoten mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="7041c-110">Matching Nodes using XPathNavigator</span></span>](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ <span data-ttu-id="7041c-111">Beschreibt die <xref:System.Xml.XPath.XPathNavigator.Matches%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse, mit der bestimmt wird, ob ein Knoten mit einem XPath-Ausdruck übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="7041c-111">Describes the <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method of the <xref:System.Xml.XPath.XPathNavigator> class used to determine if a node matches an XPath expression.</span></span>  
   
- [<span data-ttu-id="2bdd6-112">In XPath-Abfragen erkannte Knotentypen</span><span class="sxs-lookup"><span data-stu-id="2bdd6-112">Node Types Recognized with XPath Queries</span></span>](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- <span data-ttu-id="2bdd6-113">Beschreibt die Knotentypen, die bei einer XPath-Abfrage erkannt werden.</span><span class="sxs-lookup"><span data-stu-id="2bdd6-113">Describes the types of nodes recognized in an XPath query.</span></span>  
+ [<span data-ttu-id="7041c-112">In XPath-Abfragen erkannte Knotentypen</span><span class="sxs-lookup"><span data-stu-id="7041c-112">Node Types Recognized with XPath Queries</span></span>](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+ <span data-ttu-id="7041c-113">Beschreibt die Knotentypen, die bei einer XPath-Abfrage erkannt werden.</span><span class="sxs-lookup"><span data-stu-id="7041c-113">Describes the types of nodes recognized in an XPath query.</span></span>  
   
- [<span data-ttu-id="2bdd6-114">XPath-Abfragen und Namespaces</span><span class="sxs-lookup"><span data-stu-id="2bdd6-114">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
- <span data-ttu-id="2bdd6-115">Beschreibt die Verwendung von Namespaces in einer XPath-Abfrage.</span><span class="sxs-lookup"><span data-stu-id="2bdd6-115">Describes the use of namespaces in an XPath query.</span></span>  
+ [<span data-ttu-id="7041c-114">XPath-Abfragen und Namespaces</span><span class="sxs-lookup"><span data-stu-id="7041c-114">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
+ <span data-ttu-id="7041c-115">Beschreibt die Verwendung von Namespaces in einer XPath-Abfrage.</span><span class="sxs-lookup"><span data-stu-id="7041c-115">Describes the use of namespaces in an XPath query.</span></span>  
   
- [<span data-ttu-id="2bdd6-116">Kompilierte XPath-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="2bdd6-116">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)  
- <span data-ttu-id="2bdd6-117">Beschreibt die <xref:System.Xml.XPath.XPathExpression>-Klasse, die eine kompilierte XPath-Abfrage darstellt.</span><span class="sxs-lookup"><span data-stu-id="2bdd6-117">Describes the <xref:System.Xml.XPath.XPathExpression> class that represents a compiled XPath query.</span></span>  
+ [<span data-ttu-id="7041c-116">Kompilierte XPath-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="7041c-116">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)  
+ <span data-ttu-id="7041c-117">Beschreibt die <xref:System.Xml.XPath.XPathExpression>-Klasse, die eine kompilierte XPath-Abfrage darstellt.</span><span class="sxs-lookup"><span data-stu-id="7041c-117">Describes the <xref:System.Xml.XPath.XPathExpression> class that represents a compiled XPath query.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2bdd6-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2bdd6-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7041c-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7041c-118">See Also</span></span>  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [<span data-ttu-id="2bdd6-119">Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells</span><span class="sxs-lookup"><span data-stu-id="2bdd6-119">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [<span data-ttu-id="2bdd6-120">Lesen von XML-Daten mithilfe von XPathDocument und XmlDocument</span><span class="sxs-lookup"><span data-stu-id="2bdd6-120">Reading XML Data using XPathDocument and XmlDocument</span></span>](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
- [<span data-ttu-id="2bdd6-121">Zugreifen auf XML-Daten mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2bdd6-121">Accessing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [<span data-ttu-id="2bdd6-122">Bearbeiten von XML-Daten mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="2bdd6-122">Editing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
- [<span data-ttu-id="2bdd6-123">Schemavalidierung mithilfe von „XPathNavigator“</span><span class="sxs-lookup"><span data-stu-id="2bdd6-123">Schema Validation using XPathNavigator</span></span>](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+ [<span data-ttu-id="7041c-119">Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells</span><span class="sxs-lookup"><span data-stu-id="7041c-119">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="7041c-120">Lesen von XML-Daten mithilfe von XPathDocument und XmlDocument</span><span class="sxs-lookup"><span data-stu-id="7041c-120">Reading XML Data using XPathDocument and XmlDocument</span></span>](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
+ [<span data-ttu-id="7041c-121">Zugreifen auf XML-Daten mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="7041c-121">Accessing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [<span data-ttu-id="7041c-122">Bearbeiten von XML-Daten mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="7041c-122">Editing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+ [<span data-ttu-id="7041c-123">Schemavalidierung mithilfe von „XPathNavigator“</span><span class="sxs-lookup"><span data-stu-id="7041c-123">Schema Validation using XPathNavigator</span></span>](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
