@@ -2,11 +2,11 @@
 title: Codekonventionen [F#]
 description: Erfahren Sie allgemeine Richtlinien und Idiome beim Schreiben von F#-Code.
 ms.date: 05/14/2018
-ms.openlocfilehash: 4db1e2b4fef97fc060f717a080cd762f9fe08ee0
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: adb2189540496046ccf6e392bd45807860e13520
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-coding-conventions"></a>Codekonventionen [F#]
 
@@ -108,12 +108,11 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Core.Printf
 open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.AbstractIL
+open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.IL
 open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.Internal
 open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
 
@@ -123,24 +122,23 @@ open Microsoft.FSharp.Compiler.CompileOps
 open Microsoft.FSharp.Compiler.CompileOptions
 open Microsoft.FSharp.Compiler.Driver
 open Microsoft.FSharp.Compiler.ErrorLogger
+open Microsoft.FSharp.Compiler.Infos
+open Microsoft.FSharp.Compiler.InfoReader
+open Microsoft.FSharp.Compiler.Lexhelp
+open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Lib
+open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.PrettyNaming
 open Microsoft.FSharp.Compiler.Parser
 open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Tast
 open Microsoft.FSharp.Compiler.Tastops
 open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.TypeChecker
 open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
 
 open Internal.Utilities
 open Internal.Utilities.Collections
-open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 ```
 
 Beachten Sie, dass ein Zeilenumbruch topologische Ebenen mit jeder Ebene, die zu sortierenden alphanumerisch anschließend trennt. Diese werden ordnungsgemäß Code ohne versehentlich shadowing Werte organisiert.
@@ -318,7 +316,7 @@ Typen wie `Result<'Success, 'Error>` eignen sich für Standardvorgänge, in dem 
 
 ## <a name="partial-application-and-point-free-programming"></a>Teilweise Anwendung und frei von Punkt-Programmierung
 
-F# unterstützt teilweise Anwendung, und somit auf verschiedene Arten der Programmierung in einem Format mit Punkt freizugeben. Dies kann für die Wiederverwendung von Code in einem Modul oder die Implementierung von etwas von Vorteil sein, allerdings handelt es sich im Allgemeinen nicht etwas, um die öffentlich verfügbar zu machen. Im Allgemeinen Punkt frei Programmierung ist ein Vorteil, dass es in und von sich selbst und kann ein großes cognitive Hindernis für Personen, die im entsprechenden Stil nicht mehr über sind hinzufügen. Punkt frei Programmierung in F# erläutert ist für eine gut trainierten Mathematiker grundlegende, jedoch für Personen, die mit Analysis Lambda nicht vertraut sind es schwierig sein kann.
+F# unterstützt teilweise Anwendung, und somit auf verschiedene Arten der Programmierung in einem Format mit Punkt freizugeben. Dies kann für die Wiederverwendung von Code in einem Modul oder die Implementierung von etwas von Vorteil sein, allerdings handelt es sich im Allgemeinen nicht etwas, um die öffentlich verfügbar zu machen. Im Allgemeinen Punkt frei Programmierung ist ein Vorteil, dass es in und von sich selbst und kann ein großes cognitive Hindernis für Personen, die im entsprechenden Stil nicht mehr über sind hinzufügen.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Verwenden Sie keine teilweise Anwendung und in öffentlichen APIs currying
 

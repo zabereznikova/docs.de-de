@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: bf25ddda2c7e381f0b43798b28179b18338d71cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2e63953e130dc83ce83bcdd2f8e9a2ffc7fe5f3
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
@@ -29,13 +29,13 @@ Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohn
   
  Die `WordCount`-Erweiterungsmethode kann mit dieser `using`-Direktive eingebunden werden:  
   
-```  
+```csharp  
 using ExtensionMethods;  
 ```  
   
  Sie kann darüber hinaus mit dieser Syntax von einer Anwendung aufgerufen werden:  
   
-```  
+```csharp  
 string s = "Hello Extension Methods";  
 int i = s.WordCount();  
 ```  
@@ -46,7 +46,7 @@ int i = s.WordCount();
   
  Im Allgemeinen werden Sie vermutlich viel häufiger Erweiterungsmethoden aufrufen, anstatt Ihre eigenen zu implementieren. Da Erweiterungsmethoden mit der Instanzmethodensyntax aufgerufen werden, sind für ihren Einsatz aus dem Clientcode keine besonderen Kenntnisse erforderlich. Um Erweiterungsmethoden für einen bestimmten Typ zu aktivieren, fügen Sie eine `using`-Direktive für den Namespace, in dem die Methoden definiert werden, hinzu. Um beispielsweise die Standardabfrageoperatoren zu verwenden, fügen Sie diese `using`-Direktive dem Code hinzu:  
   
-```  
+```csharp  
 using System.Linq;  
 ```  
   

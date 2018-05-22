@@ -3,11 +3,11 @@ title: Leitfaden für F#
 description: Dieses Handbuch enthält einen Überblick über die verschiedenen Lernmaterialien für f#, funktionalen Programmiersprachen, die auf .NET ausgeführt wird.
 author: jackfoxy
 ms.date: 03/19/2018
-ms.openlocfilehash: 393214a5da7445d8ee3dced844da8592f4ca6d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb829e904c006467e1470752b4fe8757ca694b05
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-guide"></a>Leitfaden für F#
 
@@ -49,6 +49,8 @@ F# ist zur Steigerung der Produktivität im Wesentlichen. Die toolunterstützung
 [Erste Schritte mit f# mit der .NET Core-CLI](get-started/get-started-command-line.md) , wenn Sie die Befehlszeilentools verwenden möchten.
 
 [Erste Schritte mit F#- und Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) für die mobile-Programmierung mit f#.
+
+[F# für Azure-Notebooks](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb) ist ein Lernprogramm für das Erlernen von f# in ein kostenloses, gehosteten Jupyter Notebook.
 
 ## <a name="references"></a>Verweise
 

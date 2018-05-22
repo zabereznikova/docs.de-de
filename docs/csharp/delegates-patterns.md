@@ -3,11 +3,11 @@ title: Gängige Muster für Delegate
 description: Erfahren Sie etwas über allgemeine Muster für die Verwendung von Delegaten in Ihrem Code, um starke Kopplung zwischen Komponenten zu vermeiden.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9762841656aa362589d01ed011407aeedfe4a20
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="common-patterns-for-delegates"></a>Gängige Muster für Delegate
 
@@ -27,7 +27,7 @@ Die `Where`-Methode verwendet einen Delegaten, der bestimmt, welche Elemente ein
 Der Prototyp für die Where-Methode ist:
 
 ```csharp
-public static IEnumerable<TSource> Where<in TSource> (IEnumerable<TSource> source, Func<TSource, bool> predicate);
+public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> source, Func<TSource, bool> predicate);
 ```
 
 Dieses Beispiel wird mit allen Methoden wiederholt, die Teil von LINQ sind. Alle basieren auf Delegaten für den Code, der die jeweilige Abfrage verwaltet. Dieses API-Entwurfsmuster ist ein sehr leistungsfähiges Muster zum Erlernen und Verstehen.

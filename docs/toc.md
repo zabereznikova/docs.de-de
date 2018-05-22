@@ -287,7 +287,7 @@
 ### [Get Started with the .NET Core CLI (Erste Schritte mit der .NET Core-CLI)](fsharp/get-started/get-started-command-line.md)
 
 ## [F#-Styleguide](fsharp/style-guide/index.md)
-### [Richtlinien für das Formatieren von F#](fsharp/style-guide/formatting.md)
+### [Richtlinien für das Formatieren von Code F#](fsharp/style-guide/formatting.md)
 ### [Codekonventionen für F#](fsharp/style-guide/conventions.md)
 ### [Entwurfsrichtlinien für die F#-Komponente](fsharp/style-guide/component-design-guidelines.md)
 

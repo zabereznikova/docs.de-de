@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 756a18da74ff49cbefaf6a63980302bbcb141713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur innerhalb der Assembly zugegriffen werden, die ihre Deklaration enthält.  
@@ -27,9 +27,10 @@ Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur innerhalb de
  `Friend` Zugriff ist häufig die bevorzugte für eine Anwendung Programmierelemente, und `Friend` ist der Standardzugriff von einer Schnittstelle, ein Modul, eine Klasse oder eine Struktur.  
   
  Sie können `Friend` nur auf das Modul, Schnittstelle oder Namespace-Ebene. Aus diesem Grund der Deklarationskontext für eine `Friend` Element muss eine Quelldatei, einen Namespace, eine Schnittstelle, ein Modul, eine Klasse oder eine Struktur sein; eine Prozedur kann nicht mehr.  
-  
- Können Sie die `Friend` Modifizierer in Verbindung mit der [geschützte](../../../visual-basic/language-reference/modifiers/protected.md) Modifizierer in der gleichen Deklaration. Diese Kombination überträgt sowohl `Friend` und geschützten Zugriff auf deklarierte Elemente, sodass sie über eine beliebige Stelle in der gleichen Assembly, von ihrer eigenen Klasse und von abgeleiteten Klassen zugänglich sind. Sie können angeben, `Protected Friend` nur auf Member von Klassen.  
-  
+
+> [!NOTE]
+> Sie können auch die [Protected Friend](protected-friend.md) Zugriffsmodifizierer, wodurch einen Klassenmember aus zugegriffen werden, in der betreffenden Klasse, die von abgeleiteten Klassen und aus der gleichen Assembly, in dem die Klasse definiert ist. Um den Zugriff auf ein Element innerhalb der Klasse und von abgeleiteten Klassen in der gleichen Assembly zu beschränken, verwenden Sie die [Private geschützte](private-protected.md) Zugriffsmodifizierer.
+
  Einen Vergleich der `Friend` und anderen Zugriffsmodifizierer, finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
@@ -74,6 +75,8 @@ Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur innerhalb de
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Geschützt privat](./private-protected.md)   
+ [Protected Friend](./protected-friend.md)   
  [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ecac9d30b390be886e9d81f11623070301f7d38
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 05/04/2018
 <a name="Introducing"></a>
 ## <a name="what-is-the-net-framework"></a>Was ist .NET Framework?
 
-.NET Framework ist eine verwaltete Ausführungsumgebung für Windows, die eine Vielzahl von Diensten für die darin ausgeführten Apps bereitstellt. Sie besteht aus zwei Hauptkomponenten: der CLR (Common Language Runtime), die als Ausführungsmodul die ausgeführten Apps behandelt, und der .NET Framework-Klassenbibliothek, einer Bibliothek mit getestetem, wiederverwendbarem Code, den Entwickler in ihren eigenen Apps aufrufen können. Zu den Diensten, die .NET Framework für ausgeführte Apps bereitstellt, gehören:
+.NET Framework ist eine verwaltete Ausführungsumgebung für Windows, die eine Vielzahl von Diensten für die darin ausgeführten Apps bereitstellt. Sie besteht aus zwei Hauptkomponenten: der CLR (Common Language Runtime), die als Ausführungs-Engine die ausgeführten Apps behandelt, und der .NET Framework-Klassenbibliothek, einer Bibliothek mit getestetem, wiederverwendbarem Code, den Entwickler in ihren eigenen Apps aufrufen können. Zu den Diensten, die .NET Framework für ausgeführte Apps bereitstellt, gehören:
 
 - Speicherverwaltung. Bei vielen Programmiersprachen sind die Programmierer für das Zuordnen und Freigeben von Arbeitsspeicher und das Behandeln der Objektlebensdauer zuständig. In .NET Framework-Apps stellt die CLR diese Dienste für die Apps zur Verfügung.
 
@@ -70,7 +70,7 @@ Gehen Sie beim Entwickeln von .NET Framework-Apps oder -Komponenten folgenderma�
 
 2. Wählen Sie die von .NET Framework unterstützten Sprachen aus, die Sie zur Entwicklung von Apps verwenden möchten. Es stehen mehrere Sprachen zur Verfügung, darunter [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) und C++/CLI von Microsoft. (Programmiersprachen, die Ihnen ermöglichen, Apps für .NET Framework zu entwickeln, erfüllen die [CLI-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=199862).)
 
-3. Wählen Sie die Entwicklungsumgebung aus, die Sie zum Erstellen der Apps verwenden möchten und die von der von Ihnen gewählten Programmiersprachen unterstützt werden, und installieren Sie sie. Die integrierte Microsoft-Entwicklungsumgebung (IDE) für .NET Framework-Apps ist [Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532). Es stehen verschiedene Editionen zur Verfügung.
+3. Wählen Sie die Entwicklungsumgebung aus, die Sie zum Erstellen der Apps verwenden möchten und die von der von Ihnen gewählten Programmiersprachen unterstützt werden, und installieren Sie sie. Die integrierte Microsoft-Entwicklungsumgebung (IDE) für .NET Framework-Apps ist [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Es stehen verschiedene Editionen zur Verfügung.
 
 Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgerichtet sind, finden Sie im [Entwicklungshandbuch](../../../docs/framework/development-guide.md).
 

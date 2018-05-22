@@ -7,11 +7,11 @@ helpviewer_keywords:
 - OR assignment operator (|=) [C#]
 - '|= operator (OR assignment) [C#]'
 ms.assetid: 8315b8cf-dd15-402f-92f0-c7db931696ca
-ms.openlocfilehash: 2abfbcbabb4229049c97aa6827abef3a053d6992
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18246d013275c8d6c8ad7e05409387457afc3442
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>Operator |= (C#-Referenz)
 Der OR-Zuweisungsoperator  
@@ -19,13 +19,13 @@ Der OR-Zuweisungsoperator
 ## <a name="remarks"></a>Hinweise  
  Ein Ausdruck mit dem Zuweisungsoperator `|=`, z.B.  
   
-```  
+```csharp  
 x |= y  
 ```  
   
  für die folgende Syntax:  
   
-```  
+```csharp  
 x = x | y  
 ```  
   

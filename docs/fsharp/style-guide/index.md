@@ -2,11 +2,11 @@
 title: Stilvorgaben [F#]
 description: Erfahren Sie, die fünf Prinzipien von gute f#-Code.
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-style-guide"></a>Stilvorgaben [F#]
 
@@ -40,8 +40,8 @@ Sie sollten die folgenden Prinzipien jederzeit bedenken, die Sie Schreiben von f
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Die [f# Formatierung Richtlinien](formatting.md) bieten eine Anleitung zum Code formatieren, sodass sie leicht zu lesen ist.
+Die [f#-Code, die Formatierung von Richtlinien](formatting.md) bieten eine Anleitung zum Code formatieren, sodass sie leicht zu lesen ist.
 
 Die [f# Codekonventionen](conventions.md) bieten eine Anleitung für F#-Programmierung Idiome, das die langfristige Wartung größere f# hilft Codebasen.
 
-Die [f# Komponente Entwurfsrichtlinien](component-design-guidelines.md) ist ein umfassender Satz von Leitfaden für das Erstellen von F#-Komponenten, z. B. Bibliotheken.
+Die [f# Komponente Entwurfsrichtlinien](component-design-guidelines.md) bieten eine Anleitung zum Erstellen von F#-Komponenten, z. B. Bibliotheken.

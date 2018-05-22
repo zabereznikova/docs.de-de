@@ -2,11 +2,11 @@
 title: private protected (C#-Referenz)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: b85b227989c9f79aa11486310f540b92ce5bdda6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee36cc713dd5fdb90ae20ef992f8e75eca09597d
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="private-protected-c-reference"></a>private protected (C#-Referenz)
 Die Schlüsselwortkombination `private protected` ist ein Zugriffsmodifizierer für Member. Ein Member vom Typ „private protected“ kann von der von Typen aus zugegriffen werden, die von der enthaltenden Klasse abgeleitet werden, jedoch nur innerhalb der enthaltenden Assembly. Einen Vergleich von `private protected` mit den anderen Zugriffsmodifizierern finden Sie unter [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md). 
@@ -14,7 +14,7 @@ Die Schlüsselwortkombination `private protected` ist ein Zugriffsmodifizierer f
 ## <a name="example"></a>Beispiel  
  Ein Member vom Typ „private protected“ einer Basisklasse kann nur dann von abgeleiteten Typen innerhalb seiner enthaltenden Assembly aus zugegriffen werden, wenn der statische Typ der Variable der abgeleitete Klassentyp ist. Sehen Sie sich z.B. folgenden Codeabschnitt an:  
   
- ```
+ ```csharp
  // Assembly1.cs  
  // Compile with: /target:library  
  public class BaseClass
@@ -38,7 +38,7 @@ Die Schlüsselwortkombination `private protected` ist ein Zugriffsmodifizierer f
  }
 ```  
   
-```  
+```csharp  
  // Assembly2.cs  
  // Compile with: /reference:Assembly1.dll  
  class DerivedClass2 : BaseClass

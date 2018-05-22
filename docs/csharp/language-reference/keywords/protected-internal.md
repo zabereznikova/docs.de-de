@@ -2,11 +2,11 @@
 title: protected internal (C#-Referenz)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: a2a649f0fdb924c26380e7261bd935be736f0665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ba2c811a1a4f095bcee65ed6678a7dc50fe94db
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C#-Referenz)
 Die Schlüsselwortkombination `protected internal` ist ein Zugriffsmodifizierer für Member. Ein Member vom Typ „protected internal“ kann von der aktuellen Assembly oder von Typen aus zugegriffen werden, die von der enthaltenden Klasse abgeleitet werden. Einen Vergleich von `protected internal` mit den anderen Zugriffsmodifizierern finden Sie unter [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md). 
@@ -14,7 +14,7 @@ Die Schlüsselwortkombination `protected internal` ist ein Zugriffsmodifizierer 
 ## <a name="example"></a>Beispiel  
  Ein Member vom Typ „protected internal“ einer Basisklasse kann von jedem Typ innerhalb seiner enthaltenden Assembly aus zugegriffen werden. Sie kann auch von einer abgeleiteten Klasse zugegriffen werden, die sich in einer anderen Assembly befindet, jedoch nur, wenn der Zugriff über eine Variable des abgeleiteten Klassentyps erfolgt. Sehen Sie sich z.B. folgenden Codeabschnitt an:  
 
-```
+```csharp
 // Assembly1.cs  
 // Compile with: /target:library  
 public class BaseClass   
@@ -32,7 +32,7 @@ class TestAccess
 }  
 ```  
   
-```  
+```csharp  
 // Assembly2.cs  
 // Compile with: /reference:Assembly1.dll  
 class DerivedClass : BaseClass   

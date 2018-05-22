@@ -2,11 +2,11 @@
 title: Statisch aufgelöste Typparameter (F#)
 description: Informationen zum Verwenden von f#-statisch aufgelösten Typparameter, der zur Kompilierzeit statt zur Laufzeit durch einen tatsächlichen Typ ersetzt wird.
 ms.date: 05/16/2016
-ms.openlocfilehash: 30a7de0a3bc523ef17c1f89d6f88549069f752f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12c2af4d9df7ae1e5e77efc9413eb8777459a83c
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="statically-resolved-type-parameters"></a>Statisch aufgelöste Typparameter
 
@@ -59,23 +59,25 @@ Die Ausgabe lautet wie folgt.
 Ab f# 4.1, können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben.  In früheren Versionen der Sprache des Typnamens tatsächlich vom Compiler abgeleitet werden, aber konnte nicht tatsächlich in der Signatur angegeben werden.  Ab f# 4.1 können Sie auch die konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben. Im Folgenden ein Beispiel:
 
 ```fsharp
+let inline konst x _ = x
+
 type CFunctor() = 
-      static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
-      static member inline fmap (f: ^a -> ^b, a: ^a option) =
+    static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
+    static member inline fmap (f: ^a -> ^b, a: ^a option) =
         match a with
         | None -> None
         | Some x -> Some (f x)
 
-      // default implementation of replace
-      static member inline replace< ^a, ^b, ^c, ^d, ^e when ^a :> CFunctor and (^a or ^d): (static member fmap: (^b -> ^c) * ^d -> ^e) > (a, f) =
+    // default implementation of replace
+    static member inline replace< ^a, ^b, ^c, ^d, ^e when ^a :> CFunctor and (^a or ^d): (static member fmap: (^b -> ^c) * ^d -> ^e) > (a, f) =
         ((^a or ^d) : (static member fmap : (^b -> ^c) * ^d -> ^e) (konst a, f))
 
-      // call overridden replace if present
-      static member inline replace< ^a, ^b, ^c when ^b: (static member replace: ^a * ^b -> ^c)>(a: ^a, f: ^b) =
+    // call overridden replace if present
+    static member inline replace< ^a, ^b, ^c when ^b: (static member replace: ^a * ^b -> ^c)>(a: ^a, f: ^b) =
         (^b : (static member replace: ^a * ^b -> ^c) (a, f))
 
 let inline replace_instance< ^a, ^b, ^c, ^d when (^a or ^c): (static member replace: ^b * ^c -> ^d)> (a: ^b, f: ^c) =
-      ((^a or ^c): (static member replace: ^b * ^c -> ^d) (a, f))
+        ((^a or ^c): (static member replace: ^b * ^c -> ^d) (a, f))
 
 // Note the concrete type 'CFunctor' specified in the signature
 let inline replace (a: ^a) (f: ^b): ^a0 when (CFunctor or  ^b): (static member replace: ^a *  ^b ->  ^a0) =

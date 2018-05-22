@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f867d6f65a28c36037ff6617cce9d18bc39a67d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eabaf1dd99fce7cd4c45f80666534f904fcdfdf9
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="ltlibrarygt-element-net-native"></a>&lt;Bibliothek&gt; Element (.NET Native)
 Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.  
@@ -57,7 +57,7 @@ Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur La
   
  Das `<Library>`-Element dient als Container für die Definition der Programmelemente, deren Metadaten zur Laufzeit benötigt werden. Dieses Element drückt keine Richtlinie aus. Zur Kompilierzeit durchsuchen die Compilertools nur die im `<Library>`-Element bezeichnete Bibliothek nach Programmelementen, die durch seine untergeordneten Elemente identifiziert werden. Im Gegensatz dazu durchsuchen Compilertools alle Bibliotheken, auch die .NET Framework-Kernbibliotheken, nach Programmelementen, die durch untergeordnete Elemente des [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)-Elements identifiziert werden.  
   
- `<Library>`-Direktiven können bedingt verwendet werden. Wenn der Name des `<Library>`-Elements mit einem Sternchen (*) beginnt und endet, wirkt sich die `<Library>`-Direktive nur aus, wenn von der App auf die zwischen den Sternchen angegebene Assembly verwiesen wird. Beispielsweise gilt die folgende Laufzeitanweisung nur dann, wenn von der App auf die Assembly Utillities.dll verwiesen wird.  
+ `<Library>`-Direktiven können bedingt verwendet werden. Wenn der Name des der `<Library>` Element beginnt und endet mit einem Sternchen (\*), wird die `<Library>` Richtlinie wirkt sich nur dann, wenn die app zwischen den Sternchen angegebene Assembly verwiesen wird. Beispielsweise gilt die folgende Laufzeitanweisung nur dann, wenn von der App auf die Assembly Utillities.dll verwiesen wird.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

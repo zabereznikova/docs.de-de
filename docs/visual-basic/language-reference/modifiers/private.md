@@ -7,20 +7,23 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: d7935cf691d961591ff5e3d2a290afb88de9165a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40b64b8d2b6306d458b7a9cc657c5b7dc4270eb2
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur aus ihrem Deklarationskontext einschließlich alle darin enthaltenen Typen aus zugegriffen werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn ein Programmierelement proprietäre Funktionalität darstellt oder vertrauliche Daten enthält, sollten Sie in der Regel den Zugriff darauf so stark wie möglich einschränken. Sie erreichen die maximale Beschränkung, nur das Modul, Klasse oder Struktur, die definiert, wenn Sie darauf zugreifen können. Um den Zugriff auf ein Element auf diese Weise beschränken möchten, deklarieren Sie es mit `Private`.  
-  
+
+> [!NOTE]
+> Sie können auch die [Private geschützte](private-protected.md) Zugriffsmodifizierer, wodurch ein Element aus zugegriffen werden, in der betreffenden Klasse und von abgeleiteten Klassen, die sich in der enthaltenden Assembly befinden.
+
 ## <a name="rules"></a>Regeln  
-  
+
 -   **Deklarationskontext.** Sie können `Private` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `Private` Element ein Modul, Klasse oder Struktur, und eine Quelldatei, Namespace, Schnittstelle oder Prozedur nicht möglich.  
   
 ## <a name="behavior"></a>Verhalten  
@@ -59,7 +62,8 @@ Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur aus ihrem De
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [Geschützt privat](./private-protected.md)   
+ [Protected Friend](./protected-friend.md)[Zugriffsebenen in Visual Basic    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

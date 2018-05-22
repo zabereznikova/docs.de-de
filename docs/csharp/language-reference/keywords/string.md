@@ -10,11 +10,11 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: 748016682db6e02cadbfb8c767391a18d48e1286
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f92a44283e59bd80421758a63b40bc5289c3628b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="string-c-reference"></a>string (C#-Referenz)
 Der Typ `string` stellt eine Sequenz von Null oder mehr Unicode-Zeichen dar. `string` ist ein Alias für <xref:System.String> in .NET.  
@@ -62,7 +62,7 @@ char x = str[2];  // x = 's';
   
  Zeichenfolgenliterale können jeden Zeichenliteral enthalten. Escapesequenzen sind enthalten. Im folgenden Beispiel wird die Escapesequenz `\\` für den umgekehrten Schrägstrich, `\u0066` für den Buchstaben „f“ und `\n` für den Zeilenumbruch verwendet.  
   
-```  
+```csharp  
 string a = "\\\u0066\n";  
 Console.WriteLine(a);  
 ```  

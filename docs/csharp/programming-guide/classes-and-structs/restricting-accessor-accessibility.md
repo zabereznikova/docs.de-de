@@ -38,7 +38,7 @@ Die [Get](../../../csharp/language-reference/keywords/get.md)- und [Set](../../.
   
  [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
-## <a name="implementing-interfaces"></a>Implementieren von Schnittsellen  
+## <a name="implementing-interfaces"></a>Implementieren von Schnittstellen  
  Bei der Verwendung eines Accessors zur Implementierung einer Schnittstelle darf der Accessor keinen Zugriffsmodifizierer besitzen. Wird jedoch zur Implementierung der Schnittstelle nur ein Accessor verwendet, z.B. `get`, kann der andere Accessor einen Zugriffsmodifizierer besitzen. Hier ein Beispiel:  
   
  [!code-csharp[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  

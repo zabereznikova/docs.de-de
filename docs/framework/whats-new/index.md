@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d12740333d869b2fd43914437a6f5b5f62f843
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 <a name="introduction"></a> Dieser Artikel beschreibt wichtige Funktionen und Änderungen in den folgenden Versionen von .NET Framework:  
@@ -49,7 +49,7 @@ Sie können .NET Framework 4.7.2 von den folgenden Speicherorten herunterladen:
 
 .NET Framework 4.7.2 kann unter Windows 10, Windows 8.1, Windows 7 SP1 und den entsprechenden Serverplattformen (beginnend mit Windows Server 2008 R2 SP1) installiert werden. Sie können .NET Framework 4.7.2 wahlweise mit dem Webinstaller oder Offlineinstaller installieren. Die empfohlene Vorgehensweise für die meisten Benutzer ist die Verwendung des Webinstallers.
 
-Sie können .NET Framework 4.7.2 in Visual Studio 2012 oder höheren Versionen als Ziel verwenden, indem Sie das [.NET Framework 4.7.2-Entwicklerpaket](http://go.microsoft.com/fwlink/?LinkId=863261) installieren. 
+Sie können .NET Framework 4.7.2 in Visual Studio 2012 oder höheren Versionen als Ziel verwenden, indem Sie das [.NET Framework 4.7.2-Entwicklerpaket](http://go.microsoft.com/fwlink/?LinkId=874338) installieren. 
 
 ### <a name="whats-new-in-the-net-framework-472"></a>Neuerungen in .NET Framework 4.7.2
 
@@ -201,7 +201,7 @@ Unterstützung für Dekomprimierung mithilfe von Windows-APIs ist standardmäßi
 
 .NET Framework 4.7.2 fügt den <xref:System.Collections.Generic.SortedSet%601>- und <xref:System.Collections.Generic.HashSet%601>-Typen eine Reihe von neuen APIs hinzu. Dazu gehören:
 
-- `TryGetValue`-Methoden, die das try-Muster, das in anderen Sammlungstypen verwendet wird, auf diese beiden Typen erweitern. Dabei handelt es sich um die folgenden Methoden:
+- `TryGetValue`-Methoden, die das try-Muster, das in anderen Sammlungstypen verwendet wird, auf diese beiden Typen erweitern. Dabei handelt es sich um folgenden Methoden:
    - [`public bool HashSet<T>.TryGetValue(T equalValue, out T actualValue);](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
    - [`public bool SortedSet<T>.TryGetValue(T equalValue, out T actualValue);](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 - `Enumerable.To*`-Erweiterungsmethoden, die eine Sammlung in ein <xref:System.Collections.Generic.HashSet%601> konvertieren:
@@ -701,7 +701,7 @@ public interface ISessionStateModule : IHttpModule {
 ### <a name="character-categories"></a>Zeichenkategorien
  Zeichen im [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] werden basierend auf dem [Unicode-Standard, Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/) klassifiziert. In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], werden Zeichen basierend auf den Zeichenkategorien von Unicode 6.3 klassifiziert.
 
- Die Unterstützung von Unicode 8.0 ist beschränkt auf die Klassifizierung von Zeichen durch die <xref:System.Globalization.CharUnicodeInfo>-Klasse und auf Typen und Methoden, die darauf basieren. Dazu gehören die <xref:System.Globalization.StringInfo>-Klasse, die überladene <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType>-Methode, und die [Zeichenklassen](../../../docs/standard/base-types/character-classes-in-regular-expressions.md), die vom .NET Framework-Modul für reguläre Ausdrücke erkannt werden.  Der Vergleich und die Sortierung von Zeichen und Zeichenfolgen sind von dieser Änderung nicht betroffen und beruhen weiterhin auf dem zugrunde liegenden Betriebssystem oder auf Windows 7-Systemen auf Zeichendaten, die vom .NET Framework bereitgestellt wurden.
+ Die Unterstützung von Unicode 8.0 ist beschränkt auf die Klassifizierung von Zeichen durch die <xref:System.Globalization.CharUnicodeInfo>-Klasse und auf Typen und Methoden, die darauf basieren. Dazu gehören die <xref:System.Globalization.StringInfo>-Klasse, die überladene <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType>-Methode, und die [Zeichenklassen](../../../docs/standard/base-types/character-classes-in-regular-expressions.md), die von der .NET Framework-Engine für reguläre Ausdrücke erkannt werden.  Der Vergleich und die Sortierung von Zeichen und Zeichenfolgen sind von dieser Änderung nicht betroffen und beruhen weiterhin auf dem zugrunde liegenden Betriebssystem oder auf Windows 7-Systemen auf Zeichendaten, die vom .NET Framework bereitgestellt wurden.
 
  Änderungen in Zeichenkategorien von Unicode 6.0 bis 7.0 Unicode finden Sie unter [Unicode Standard, Version 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/) auf der Website des Unicode-Konsortiums. Änderungen von Unicode 7.0 bis 8.0 Unicode finden Sie unter [Unicode Standard, Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/) auf der Website des Unicode-Konsortiums.
 
@@ -1223,7 +1223,7 @@ SqlClient ermöglicht jetzt automatisch schnellere Verbindungen mit einer Always
 
 - **ADO.NET**
 
-     ADO .NET unterstützt jetzt das in SQL Server 2016 Community Technology Preview 2 (CTP2) verfügbare Feature zum grundsätzlichen Verschlüsseln. Mit der grundsätzlichen Verschlüsselung kann SQL Server Operationen zu verschlüsselten Daten durchführen und das Beste ist, der Verschlüsselungsschlüssel ist bei der Anwendung in der vertrauenswürdigen Umgebung des Kunden abgelegt, nicht auf dem Server. Die grundsätzliche Verschlüsselung sichert Kundendaten so, dass DBAs keinen Zugriff auf Textdaten haben. Die Verschlüsselung und Entschlüsselung von Daten erfolgt transparent auf Treiberebene, dadurch werden die an vorhandenen Anwendungen erforderlichen Änderungen auf ein Mindestmaß reduziert. Weitere Informationen finden Sie unter [Always Encrypted (Datenbankmodul)](/sql/relational-databases/security/encryption/always-encrypted-database-engine) und [Always Encrypted (Cliententwicklung)](/sql/relational-databases/security/encryption/always-encrypted-client-development).
+     ADO .NET unterstützt jetzt das in SQL Server 2016 Community Technology Preview 2 (CTP2) verfügbare Feature zum grundsätzlichen Verschlüsseln. Mit der grundsätzlichen Verschlüsselung kann SQL Server Operationen zu verschlüsselten Daten durchführen und das Beste ist, der Verschlüsselungsschlüssel ist bei der Anwendung in der vertrauenswürdigen Umgebung des Kunden abgelegt, nicht auf dem Server. Die grundsätzliche Verschlüsselung sichert Kundendaten so, dass DBAs keinen Zugriff auf Textdaten haben. Die Verschlüsselung und Entschlüsselung von Daten erfolgt transparent auf Treiberebene, dadurch werden die an vorhandenen Anwendungen erforderlichen Änderungen auf ein Mindestmaß reduziert. Weitere Informationen finden Sie unter [Always Encrypted (Datenbank-Engine)](/sql/relational-databases/security/encryption/always-encrypted-database-engine) und [Always Encrypted (Cliententwicklung)](/sql/relational-databases/security/encryption/always-encrypted-client-development).
 
 - **64-Bit-JIT-Compiler für verwalteten Code**
 
@@ -1634,7 +1634,7 @@ SqlClient ermöglicht jetzt automatisch schnellere Verbindungen mit einer Always
 
 - Just-In-Time (JIT)-Kompilierung im Hintergrund zur Verbesserung der Anwendungsleistung, die optional auf Mehrkernprozessoren verfügbar ist. Siehe <xref:System.Runtime.ProfileOptimization>.
 
-- Festlegen der Zeit, die das Modul für reguläre Ausdrücke zum Auflösen eines regulären Ausdrucks bis zum Timeout benötigen darf. Siehe <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType>-Eigenschaft.
+- Festlegen der Zeit, die die Engine für reguläre Ausdrücke zum Auflösen eines regulären Ausdrucks bis zum Timeout benötigen darf. Siehe <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType>-Eigenschaft.
 
 - Definieren der Standardkultur für eine Anwendungsdomäne. Weitere Informationen finden Sie unter der <xref:System.Globalization.CultureInfo>-Klasse.
 

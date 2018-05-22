@@ -1,6 +1,6 @@
 ---
 title: Event-Anweisung
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="event-statement"></a>Event-Anweisung
 Deklariert ein benutzerdefiniertes Ereignis.  
@@ -58,7 +58,7 @@ End Event
 |Segment|Beschreibung|  
 |---|---|  
 |`attrlist`|Dies ist optional. Liste der Attribute, die für dieses Ereignis gelten. Mehrere Attribute werden durch Kommas getrennt. Setzen Sie die [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern ("`<`"und"`>`").|  
-|`accessmodifier`|Dies ist optional. Gibt an, welcher Code auf dieses Ereignis zugreifen kann. Einer der folgenden Werte ist möglich:<br /><br /> -   [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md)– jeglicher Code, der das Element zugreifen kann, die es deklariert darauf zugreifen kann.<br />-   [Geschützte](../../../visual-basic/language-reference/modifiers/protected.md)– nur Code innerhalb der Klasse oder einer abgeleiteten Klasse darauf zugreifen kann.<br />-   ["Friend"](../../../visual-basic/language-reference/modifiers/friend.md)– nur Code in der gleichen Assembly kann darauf zugreifen.<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)– nur Code innerhalb des Elements, das ihn deklariert, kann darauf zugreifen.<br /><br /> Sie können `Protected Friend` angeben, um den Zugriff auf den Code in der Klasse des Ereignisses, einer abgeleiteten Klasse oder derselben Assembly zu ermöglichen.|  
+|`accessmodifier`|Dies ist optional. Gibt an, welcher Code auf dieses Ereignis zugreifen kann. Einer der folgenden Werte ist möglich:<br /><br /> -   [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md)– jeglicher Code, der das Element zugreifen kann, die es deklariert darauf zugreifen kann.<br />-   [Geschützte](../../../visual-basic/language-reference/modifiers/protected.md)– nur Code innerhalb der Klasse oder einer abgeleiteten Klasse darauf zugreifen kann.<br />-   ["Friend"](../../../visual-basic/language-reference/modifiers/friend.md)– nur Code in der gleichen Assembly kann darauf zugreifen.<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)– nur Code innerhalb des Elements, das ihn deklariert, kann darauf zugreifen.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-nur Code in der Klasse des Ereignisses, einer abgeleiteten Klasse oder derselben Assembly darauf zugreifen kann. <br />- [Private geschützte](../../language-reference/modifiers/private-protected.md)-nur Code in der Klasse des Ereignisses oder einer abgeleiteten Klasse in der gleichen Assembly kann darauf zugreifen.|  
 |`Shared`|Dies ist optional. Gibt an, dass dieses Ereignis nicht mit einer bestimmten Instanz einer Klasse oder Struktur verknüpft ist.|  
 |`Shadows`|Dies ist optional. Gibt an, dass dieses Ereignis ein identisch benanntes Programmierelement oder einen Satz überladener Elemente in einen Basisklasse erneut deklariert und ausblendet. Sie können ein Shadowing von jedem deklarierten Element mit einer anderen Art vornehmen.<br /><br /> Ein schattiertes Element steht in der abgeleiteten Klasse, die es spiegelt, nicht zur Verfügung, und zwar mit Ausnahme von dem Punkt, wo nicht auf das Shadowing-Element zugriffen werden kann. Wenn beispielsweise ein `Private`-Element ein Basisklassenelement spiegelt, greift der Code, der nicht über die Berechtigung für den Zugriff auf das `Private`-Element verfügt, anstelle auf das Basisklassenelement zu.|  
 |`eventname`|Erforderlich. Der Name des Ereignisses; folgt standardmäßigen Variablennamenskonventionen.|  

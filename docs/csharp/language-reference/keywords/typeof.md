@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: be79fa4f2cfb1119a50201bf6c18a144726f2f21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4203b597d7045a13ffed9e61ddbbde57e2113c23
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="typeof-c-reference"></a>typeof (C#-Referenz)
 Wird zum Abrufen des Objekts `System.Type` eines Typs verwendet. Der Ausdruck `typeof` weist folgende Form auf:  
   
-```  
+```csharp  
 System.Type type = typeof(int);  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Um den Runtime-Typ eines Ausdrucks zu erhalten, können Sie die .NET Framework-Methode <xref:System.Object.GetType%2A> wie in folgendem Beispiel verwenden:  
   
-```  
+```csharp  
 int i = 0;  
 System.Type type = i.GetType();  
 ```  
@@ -32,7 +32,7 @@ System.Type type = i.GetType();
   
  Der Operator `typeof` kann auch bei offenen generischen Typen verwendet werden. Typen mit mehr als einem Parameter müssen die entsprechende Anzahl von Kommas in der Spezifikation haben. Das folgende Beispiel zeigt, wie Sie bestimmen, ob der Rückgabetyp einer Methode ein generischer <xref:System.Collections.Generic.IEnumerable%601> ist. Nehmen Sie an, dass die Methode eine Instanz eines MethodInfo-Typs ist:  
   
-```  
+```csharp  
 string s = method.ReturnType.GetInterface  
     (typeof(System.Collections.Generic.IEnumerable<>).FullName);  
 ```  

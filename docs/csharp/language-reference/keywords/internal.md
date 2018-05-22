@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: e636cb1edfa19b08c52ff09439e66aeb1424046a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2fcc19bb7bc6de373412e7728f3025647c0435d
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="internal-c-reference"></a>internal (C#-Referenz)
 Das Schlüsselwort `internal` ist ein [Zugriffsmodifizierer](../../../csharp/language-reference/keywords/access-modifiers.md) für Typen und Typmember. 
@@ -20,7 +20,7 @@ Das Schlüsselwort `internal` ist ein [Zugriffsmodifizierer](../../../csharp/lan
   
 Auf interne Typen oder Member kann nur innerhalb einer Datei in derselben Assembly zugegriffen werden, so wie in diesem Beispiel:  
   
-```  
+```csharp  
 public class BaseClass   
 {  
     // Only accessible within the same assembly  
@@ -39,7 +39,7 @@ public class BaseClass
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel enthält zwei Dateien, `Assembly1.cs` und `Assembly1_a.cs`. Die erste Datei enthält eine interne Basisklasse, `BaseClass`. In der zweiten Datei führt der Versuch, `BaseClass` zu instanziieren zu einem Fehler.  
   
-```  
+```csharp  
 // Assembly1.cs  
 // Compile with: /target:library  
 internal class BaseClass   
@@ -48,7 +48,7 @@ internal class BaseClass
 }  
 ```  
   
-```  
+```csharp  
 // Assembly1_a.cs  
 // Compile with: /reference:Assembly1.dll  
 class TestAccess   
@@ -63,7 +63,7 @@ class TestAccess
 ## <a name="example"></a>Beispiel  
  Verwenden Sie in diesem Beispiel dieselbe Datei, die Sie im ersten Beispiel verwendet haben, und ändern Sie die Zugriffsebene von `BaseClass` in `public`. Ändern Sie außerdem die Zugriffsebene des Members `IntM` in `internal`. Jetzt können Sie die Klasse instanziieren, aber Sie können nicht auf den internen Member zugreifen.  
   
-```  
+```csharp  
 // Assembly2.cs  
 // Compile with: /target:library  
 public class BaseClass   
@@ -72,7 +72,7 @@ public class BaseClass
 }  
 ```  
   
-```  
+```csharp  
 // Assembly2_a.cs  
 // Compile with: /reference:Assembly1.dll  
 public class TestAccess   

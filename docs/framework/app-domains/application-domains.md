@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="application-domains"></a>Anwendungsdomänen
 Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isolierung der Anwendungen voneinander. Windows verwendet beispielsweise Prozesse, um Anwendungen zu isolieren. Diese Isolierung ist erforderlich, um sicherzustellen, dass der in einer Anwendung ausgeführte Code andere, unabhängig davon ausgeführte Anwendungen nicht beeinträchtigt.  
@@ -74,11 +74,11 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
  Es gibt drei Möglichkeiten für das Laden domänenneutraler Assemblys:  
   
--   <xref:System.LoaderOptimization> – Es werden keine Assemblys als domänenneutral geladen, mit Ausnahme von Mscorlib, die immer domänenneutral geladen wird. Diese Einstellung wird als Einzeldomäne bezeichnet, da sie häufig verwendet wird, wenn der Host nur eine Anwendung im Prozess ausführt.  
-  
--   <xref:System.LoaderOptimization> – Alle Assemblys werden als domänenneutral geladen. Verwenden Sie diese Einstellung, wenn es mehrere Anwendungsdomänen im Prozess gibt, die alle den gleichen Code ausführen.  
-  
--   <xref:System.LoaderOptimization> – Assemblys mit starkem Namen werden als domänenneutral geladen, wenn sie und alle zugehörigen Abhängigkeiten im globalen Assemblycache installiert worden sind. Andere Assemblys werden geladen und für jede Anwendungsdomäne, in der sie geladen sind, separat JIT-kompiliert und können daher aus dem Prozess entladen werden. Verwenden Sie diese Einstellung, wenn mehrere Anwendungen in demselben Prozess ausgeführt werden oder wenn es eine Mischung aus Assemblys gibt, die von vielen Anwendungsdomänen und Assemblys gemeinsam genutzt werden, die aus dem Prozess entladen werden müssen.  
+- <xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType> – Es werden keine Assemblys als domänenneutral geladen, mit Ausnahme von Mscorlib, die immer domänenneutral geladen wird. Diese Einstellung wird als Einzeldomäne bezeichnet, da sie häufig verwendet wird, wenn der Host nur eine Anwendung im Prozess ausführt.
+
+- <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> – Alle Assemblys werden als domänenneutral geladen. Verwenden Sie diese Einstellung, wenn es mehrere Anwendungsdomänen im Prozess gibt, die alle den gleichen Code ausführen.
+
+- <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> – Assemblys mit starkem Namen werden als domänenneutral geladen, wenn sie und alle zugehörigen Abhängigkeiten im globalen Assemblycache installiert worden sind. Andere Assemblys werden geladen und für jede Anwendungsdomäne, in der sie geladen sind, separat JIT-kompiliert und können daher aus dem Prozess entladen werden. Verwenden Sie diese Einstellung, wenn mehrere Anwendungen in demselben Prozess ausgeführt werden oder wenn es eine Mischung aus Assemblys gibt, die von vielen Anwendungsdomänen und Assemblys gemeinsam genutzt werden, die aus dem Prozess entladen werden müssen.
   
  JIT-kompilierter Code kann nicht gemeinsam von Assemblys genutzt werden, die mit der <xref:System.Reflection.Assembly.LoadFrom%2A>-Methode der <xref:System.Reflection.Assembly>-Klasse in den LoadFrom-Kontext geladen werden oder die aus Abbildern mithilfe von Überladungen der <xref:System.Reflection.Assembly.Load%2A>-Methode geladen werden, die Bytearrays angeben.  
   

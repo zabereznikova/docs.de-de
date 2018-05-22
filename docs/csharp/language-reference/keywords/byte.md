@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 71af48f1cbfa82bafdd4888f0985cd88d44976b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="byte-c-reference"></a>byte (C#-Referenz)
 
@@ -45,27 +45,27 @@ Im Folgenden werden einige Beispiele veranschaulicht.
   
  Sie können nicht literale numerische Typen mit einer größeren Speichergröße nicht implizit zu `byte` konvertieren. Weitere Informationen zu Speichergrößen ganzzahliger Typen finden Sie unter [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md). Betrachten Sie z.B. die folgenden beiden `byte`-Variablen `x` und `y`:  
   
-```  
+```csharp  
 byte x = 10, y = 20;  
 ```  
   
  Die folgende Zuweisungsanweisung erzeugt einen Compilerfehler, da der arithmetische Ausdruck auf der rechten Seite des Zuweisungsoperators standardmäßig `int` ergibt.  
   
-```  
+```csharp  
 // Error: conversion from int to byte:  
 byte z = x + y;  
 ```  
   
  Verwenden Sie eine Umwandlung, um dieses Problem zu lösen:  
   
-```  
+```csharp  
 // OK: explicit conversion:  
 byte z = (byte)(x + y);  
 ```  
   
  Es ist jedoch möglich, die folgenden Anweisungen zu verwenden, bei denen die Zielvariable über dieselbe oder eine größere Speichergröße verfügt:  
   
-```  
+```csharp  
 int x = 10, y = 20;  
 int m = x + y;  
 long n = x + y;  
@@ -73,7 +73,7 @@ long n = x + y;
   
  Beachten Sie auch, dass es keine implizite Konvertierung von Gleitkommadatentypen in `byte` gibt. Die folgende Anweisung erzeugt z.B. einen Compilerfehler, außer es wird eine explizite Umwandlung verwendet:  
   
-```  
+```csharp  
 // Error: no implicit conversion from double:  
 byte x = 3.0;   
 // OK: explicit conversion:  
@@ -82,14 +82,14 @@ byte y = (byte)3.0;
   
  Beim Aufrufen überladener Methoden muss eine Typumwandlung durchgeführt werden. Betrachten Sie z.B. die folgenden überladenen Methoden, die die Parameter `byte` und [int](../../../csharp/language-reference/keywords/int.md) verwenden:  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(byte b) {}  
 ```  
   
  Die Verwendung der `byte`-Umwandlung gewährleistet, dass der richtige Typ aufgerufen wird, wie z.B.:  
   
-```  
+```csharp  
 // Calling the method with the int parameter:  
 SampleMethod(5);  
 // Calling the method with the byte parameter:  

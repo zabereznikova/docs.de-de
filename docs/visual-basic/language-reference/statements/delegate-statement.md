@@ -7,11 +7,11 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3965dc2d71ec9356cdb38d5ddcd4e00f9259951a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="delegate-statement"></a>Delegate-Anweisung
 Wird verwendet, um einen Delegaten zu deklarieren. Ein Delegat ist ein Verweistyp, der auf verweist eine `Shared` Methode eines Typs oder an eine Instanzmethode eines Objekts. Jede Prozedur mit passenden Parameter-und Rückgabetypen kann zum Erstellen einer Instanz dieser Klasse Delegaten verwendet werden. Die Prozedur kann dann über die Delegatinstanz aufgerufen werden.  
@@ -28,7 +28,7 @@ Wird verwendet, um einen Delegaten zu deklarieren. Ein Delegat ist ein Verweisty
 |Begriff|Definition|  
 |---|---|  
 |`attrlist`|Dies ist optional. Liste der Attribute, die für diesen Delegaten gelten. Mehrere Attribute werden durch Kommas getrennt. Setzen Sie die [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern ("`<`"und"`>`").|  
-|`accessmodifier`|Dies ist optional. Gibt an, welcher Code auf den Delegaten zugreifen kann. Einer der folgenden Werte ist möglich:<br /><br /> -   [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md). Jeglicher Code, der das Element zugreifen kann, das der Delegat deklariert, kann darauf zugreifen.<br />-   [Geschützte](../../../visual-basic/language-reference/modifiers/protected.md). Nur Code innerhalb der Klasse des Delegaten oder einer abgeleiteten Klasse kann darauf zugreifen.<br />-   ["Friend"](../../../visual-basic/language-reference/modifiers/friend.md). Nur Code innerhalb der gleichen Assembly kann es sich um den Delegaten zugreifen.<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md). Nur Code innerhalb des Elements, das der Delegat deklariert, kann darauf zugreifen.<br /><br /> Sie können angeben, `Protected Friend` zum Aktivieren des Zugriffs aus Code innerhalb der Klasse des Delegaten, einer abgeleiteten Klasse oder derselben Assembly.|  
+|`accessmodifier`|Dies ist optional. Gibt an, welcher Code auf den Delegaten zugreifen kann. Einer der folgenden Werte ist möglich:<br /><br /> - [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md). Jeglicher Code, der das Element zugreifen kann, das der Delegat deklariert, kann darauf zugreifen.<br />-   [Geschützte](../../../visual-basic/language-reference/modifiers/protected.md). Nur Code innerhalb der Klasse des Delegaten oder einer abgeleiteten Klasse kann darauf zugreifen.<br />-   ["Friend"](../../../visual-basic/language-reference/modifiers/friend.md). Nur Code innerhalb der gleichen Assembly kann es sich um den Delegaten zugreifen.<br />- [Private](../../../visual-basic/language-reference/modifiers/private.md). Nur Code innerhalb des Elements, das der Delegat deklariert, kann darauf zugreifen.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) nur Code innerhalb der Klasse des Delegaten, einer abgeleiteten Klasse oder derselben Assembly Delegaten zugreifen kann. <br />- [Private geschützte](../../language-reference/modifiers/private-protected.md) nur Code innerhalb der Klasse des Delegaten oder in einer abgeleiteten Klasse in der gleichen Assembly Delegaten zugreifen kann. |  
 |`Shadows`|Dies ist optional. Gibt an, dass dieser Delegat erneut deklariert und ein identisch benanntes Programmierelement oder einen Satz überladener Elemente in einer Basisklasse ausgeblendet. Sie können ein Shadowing von jedem deklarierten Element mit einer anderen Art vornehmen.<br /><br /> Ein schattiertes Element steht in der abgeleiteten Klasse, die es spiegelt, nicht zur Verfügung, und zwar mit Ausnahme von dem Punkt, wo nicht auf das Shadowing-Element zugriffen werden kann. Z. B. wenn ein `Private` Element führt Shadowing für eine Basisklasse-Element, Code, der keine Berechtigung zum Zugriff auf die `Private` Element greift auf das Basisklassenelement stattdessen.|  
 |`Sub`|Optional, doch entweder `Sub` oder `Function` muss angezeigt werden. Diese Prozedur als Delegat deklariert `Sub` Prozedur, die keinen Wert zurückgibt.|  
 |`Function`|Optional, doch entweder `Sub` oder `Function` muss angezeigt werden. Diese Prozedur als Delegat deklariert `Function` Prozedur, die einen Wert zurückgibt.|  
