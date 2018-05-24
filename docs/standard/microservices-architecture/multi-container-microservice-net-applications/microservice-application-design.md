@@ -1,21 +1,14 @@
 ---
 title: Entwerfen einer an Microservice orientierten Anwendung
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen einer an Microservice orientierten Anwendung
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: a5107e979dc2101380cf848dc574033caf750fd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Entwerfen einer an Microservice orientierten Anwendung
 
@@ -85,7 +78,7 @@ Die Anwendung besteht aus mehreren Subsystemen, einschließlich mehrerer Front-E
 
 -   Asynchrone, ereignisbasierte Kommunikation. Diese erfolgt über einen Ereignisbus und dient zur Verteilung von Updates zwischen Microservices oder zur Integration in externen Anwendungen. Der Ereignisbus kann mit jeder beliebigen Infrastrukturtechnologie des Nachrichtenbrokers wie RabbitMQ oder mithilfe von Service Bussen höherer Ebene wie Azure Service Bus, NServiceBus, MassTransit oder Brighter implementiert werden.
 
-Die Anwendung wird als eine Reihe von Microservices in der Form von Containern bereitgestellt. Client-Apps können sowohl mit diesen Containern als auch zwischen Microservices kommunizieren. Wie bereits erwähnt, wird bei dieser anfänglichen Architektur eine direkte Client-zu-Microservice-Kommunikationsarchitektur verwendet, wodurch eine Clientanwendung Anforderungen direkt an jeden der Microservices stellen kann. Jeder Microservice verfügt über einen öffentlichen Endpunkt wie „https://servicename.applicationname.companyname“. Falls erforderlich, kann jeder Microservice einen anderen TCP-Port verwenden. In der Produktionsumgebung wäre diese URL dem Lastenausgleich der Microservices zugeordnet, der Anforderungen auf die verfügbaren Microserviceinstanzen verteilt.
+Die Anwendung wird als eine Reihe von Microservices in der Form von Containern bereitgestellt. Client-Apps können sowohl mit diesen Containern als auch zwischen Microservices kommunizieren. Wie bereits erwähnt, wird bei dieser anfänglichen Architektur eine direkte Client-zu-Microservice-Kommunikationsarchitektur verwendet, wodurch eine Clientanwendung Anforderungen direkt an jeden der Microservices stellen kann. Jeder Microservice weißt einen öffentlichen Endpunkt wie https://servicename.applicationname.companyname auf. Falls erforderlich, kann jeder Microservice einen anderen TCP-Port verwenden. In der Produktionsumgebung wäre diese URL dem Lastenausgleich der Microservices zugeordnet, der Anforderungen auf die verfügbaren Microserviceinstanzen verteilt.
 
 **Wichtiger Hinweis zur API-Gateway im Vergleich zur direkten Kommunikation bei eShopOnContainers.** Wie bereits im Abschnitt zur Architektur in diesem Leitfaden erklärt, kann die direkte Client-zu-Microservice-Architektur Nachteile aufweisen, wenn Sie eine große und komplexe auf Microservices basierte Anwendung erstellen. Sie kann jedoch für eine kleine Anwendung gut genug sein. Beispielsweise für die Anwendung eShopOnContainers, bei der das Ziel ist, den Fokus auf eine einfachere Einsteigeranwendung zu legen, die auf Docker-Containern basiert. Es sollte zudem kein einzelnes monolithisches API-Gateway erstellt werden, das sich auf die Entwicklungsautonomie der Microservices auswirken kann.
 
@@ -104,7 +97,7 @@ Daher handelt es sich bei den Bereitstellungseinheiten für Microservices (und b
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **GitHub-Repository „eShopOnContainers“. Quellcode für die Verweis-Anwendung**
+-   **GitHub-Repository „eShopOnContainers“. Quellcode für die Verweisanwendung**
     *https://aka.ms/eShopOnContainers/*
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Vorteile eines auf Microservices basierenden Ansatzes

@@ -1,29 +1,19 @@
 ---
 title: Regasm.exe (Assembly Registration-Tool)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11ccdb4c75af2b37595d9be977f2ab881ebe1184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Assembly Registration-Tool)
 Die Metadaten in einer Assembly werden vom Assembly Registration-Tool gelesen, und die erforderlichen Einträge werden der Registrierung hinzugefügt. COM-Clients sind so in der Lage, .NET Framework-Klassen transparent zu erstellen. Sobald eine Klasse registriert ist, kann diese von jedem COM-Client wie eine COM-Klasse verwendet werden. Die Klasse wird beim Installieren der Assembly nur einmal registriert. COM kann keine Instanzen von Klassen in der Assembly erstellen, bevor diese nicht registriert wurden.  
@@ -58,7 +48,7 @@ regasm assemblyFile [options]
 |**/?** oder **/help**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
 > [!NOTE]
->  Bei den Befehlszeilenoptionen für "Regasm.exe" wird die Groß- und Kleinschreibung nicht beachtet. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Beispiel: **/n** entspricht **/nologo** und **/t:** *outfile.tlb* entspricht **/tlb:** *outfile.tlb*.  
+>  Bei den Befehlszeilenoptionen für "Regasm.exe" wird die Groß- und Kleinschreibung nicht beachtet. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Z.B.: **/n** entspricht **/nologo** und **/t:** *outfile.tlb* entspricht **/tlb:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Hinweise  
  Mit der Option **/regfile** können Sie eine REG-Datei mit den Registrierungseinträgen generieren, anstatt die Änderungen direkt in der Registrierung vorzunehmen. Sie können die Registrierung auf einem Computer aktualisieren, indem Sie die REG-Datei mit dem Registrierungs-Editor (Regedit.exe) importieren. Beachten Sie, dass die REG-Datei keine Aktualisierungen der Registrierung enthält, die durch benutzerdefinierte Registrierungsfunktionen vorgenommen werden können.  Beachten Sie außerdem, dass die Option **/regfile** nur Registrierungseinträge für verwaltete Klassen ausgibt.  Diese Option gibt keine Einträge für `TypeLibID`s oder `InterfaceID`s aus.  

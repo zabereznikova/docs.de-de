@@ -2,11 +2,11 @@
 title: Codekonventionen [F#]
 description: Erfahren Sie allgemeine Richtlinien und Idiome beim Schreiben von F#-Code.
 ms.date: 05/14/2018
-ms.openlocfilehash: adb2189540496046ccf6e392bd45807860e13520
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
-ms.translationtype: HT
+ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-coding-conventions"></a>Codekonventionen [F#]
 
@@ -91,7 +91,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 In F# erläutert werden, die Reihenfolge der Deklarationen ist von Belang, einschließlich mit `open` Anweisungen. Dies ist anders als bei c#, wobei die Auswirkung der `using` und `using static` ist unabhängig von der Reihenfolge der diese Anweisungen in einer Datei.
 
-In F# erläutert werden da Elemente, die in den Gültigkeitsbereich einer geöffnet zu überschatten, können vorhandene andere bereits. Dies bedeutet, dass dieser neuanordnung `open` alter-Anweisungen können die Bedeutung des Codes. Folglich sortieren alphanumerisch (oder pseudorandomly) wird im Allgemeinen nicht empfohlen, damit Sie sich im Verhalten etwas generieren, die Sie möglicherweise erwarten.
+In F# erläutert werden können Elemente, die in den Gültigkeitsbereich einer geöffnet Shadowing für andere bereits vorhanden. Dies bedeutet, dass dieser neuanordnung `open` alter-Anweisungen konnte die Bedeutung des Codes. Als Ergebnis jeder beliebige Sortierung aller `open` Anweisungen (z. B. alphanumerisch) ist im Allgemeinen nicht empfohlen werden, müssen Sie sich im Verhalten etwas generieren, die Sie möglicherweise erwarten.
 
 Stattdessen empfehlen wir, dass sie zu sortieren [topologisch](https://en.wikipedia.org/wiki/Topological_sorting); d. h. sortieren Ihre `open` Anweisungen in der Reihenfolge, in der _Ebenen_ Ihres Systems definiert sind. Auf diese Weise alphanumerische Sortierung in verschiedene topologische Ebenen kann ebenfalls berücksichtigt werden.
 
@@ -152,7 +152,9 @@ Es gibt viele Male Wenn Nebeneffekte, wie einen Kontext auf eine Datenbank oder 
 module MyApi =
     let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
-    let dep3 = Random().Next() // Random is not thread-safe
+
+    let private r = Random()
+    let dep3() = r.Next() // Problematic if multiple threads use this
 
     let function1 arg = doStuffWith dep1 dep2 dep3 arg
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
@@ -160,7 +162,9 @@ module MyApi =
 
 Dies ist häufig nicht sinnvoll, Gründen:
 
-Zunächst erleichtert die-API selbst auf gemeinsam verwendete Zustände angewiesen. Z. B. mehrere aufrufenden Threads möglicherweise den Zugriff auf die `dep3` Wert (und es ist nicht threadsicher). Zweitens, legt die Anwendungskonfiguration ab, in die Codebase selbst. Dies ist schwer zu verwalten, größere CodeBase.
+Zunächst Anwendungskonfiguration abgelegt wird, in die Codebase mit `dep1` und `dep2`. Dies ist schwer zu größeren Codebasen in verwalten.
+
+Zweitens statisch initialisierte Daten sollten keine Werte enthalten, die nicht threadsicher sind, wenn die Komponente selbst mehrere Threads verwendet wird. Dies ist eindeutig durch verletzt `dep3`.
 
 Schließlich wird Initialisierung des Moduls in einem statischen Konstruktor für die gesamte Kompilationseinheit kompiliert. Wenn ein Fehler bei der Initialisierung der Let-Grenzwert in diesem Modul auftritt, Manifeste als eine `TypeInitializationException` , klicken Sie dann für die gesamte Lebensdauer der Anwendung zwischengespeichert wird. Dies kann nur schwer zu diagnostizieren sein. In der Regel eine innere Ausnahme, der Sie versuchen, zu dem Grund besteht, aber wenn keine vorhanden ist, besteht keine mitteilen, was die Ursache ist.
 

@@ -1,21 +1,14 @@
 ---
 title: Erstellen eines einfachen datengesteuerten CRUD-Microservice
 description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Erstellen eines einfachen datengesteuerten CRUD-Microservice
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ca4bfd31b505754b508555ff2771a6380ae023b4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 85694cbfe8c30b8430200f0ffbd01379f11b3f9d
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Erstellen eines einfachen datengesteuerten CRUD-Microservice
 
@@ -262,7 +255,7 @@ Die docker-compose.yml-Dateien auf der Lösungsebene sind nicht nur flexibler al
 
 Abschließend können Sie diesen Wert aus Ihrem Code abrufen, indem Sie Configuration\["ConnectionString"\] verwenden, wie es in der ConfigureServices-Methode in einem Codebeispiel weiter oben gezeigt wurde.
 
-Allerdings kann es für Produktionsumgebungen sinnvoll sein, zusätzliche Methoden zu untersuchen, wie sich Secrets wie die Verbindungszeichenfolgen speichern lassen. In der Regel erfolgt diese Verwaltung durch den von Ihnen gewählten Orchestrator, und Sie könnten hierfür beispielsweise die [Docker Swarm-Secretverwaltung](https://docs.docker.com/engine/swarm/secrets/) verwenden.
+Allerdings kann es für Produktionsumgebungen sinnvoll sein, zusätzliche Methoden zu untersuchen, mit denen sich Geheimnisse wie die Verbindungszeichenfolgen speichern lassen. In der Regel erfolgt diese Verwaltung durch den von Ihnen gewählten Orchestrator, und Sie könnten hierfür beispielsweise die [Docker Swarm-Secretverwaltung](https://docs.docker.com/engine/swarm/secrets/) verwenden.
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>Implementieren einer Versionsverwaltung in ASP.NET Web-APIs
 

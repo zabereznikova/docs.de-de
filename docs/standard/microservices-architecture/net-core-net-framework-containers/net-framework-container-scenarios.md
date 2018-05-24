@@ -1,21 +1,14 @@
 ---
-title: "Wann sollte .NET Framework für Docker-Container verwendet werden?"
-description: ".NET Microservicesarchitektur für .NET-Containeranwendungen | Wann sollte .NET Framework für Docker-Container verwendet werden?"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Wann sollte .NET Framework für Docker-Container verwendet werden?
+description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Wann sollte .NET Framework für Docker-Container verwendet werden?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Wann sollte .NET Framework für Docker-Container verwendet werden?
 
@@ -55,16 +48,16 @@ Wenn eine der Plattformen oder einer der Dienste in Azure .NET Core weiterhin ni
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Leitfaden für .NET Core**
+-   **.NET Core Guide (Leitfaden für .NET Core)**
     [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
--   **Portieren von .NET Framework auf .NET Core**
+-   **Porting from .NET Framework to .NET Core (Portieren von .NET Framework zu .NET Core)**
     [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
 
--   **Bereitstellen von .NET Framework-Anwendungen mit Docker**
+-   **.NET Framework on Docker Guide (Leitfaden zu .NET Framework in Docker)**
     [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
 
--   **.NET-Architekturkomponenten**
+-   **.NET Components Overview (Übersicht zu .NET-Komponenten)**
     [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 

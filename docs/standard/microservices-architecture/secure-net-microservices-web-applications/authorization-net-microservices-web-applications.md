@@ -1,21 +1,14 @@
 ---
 title: Informationen zur Autorisierung in .NET-Microservices und Webanwendungen
-description: ".NET Microservices-Architektur für .NET-Containeranwendungen | Informationen zur Autorisierung in .NET-Microservices und Webanwendungen"
-keywords: Docker, Microservices, ASP.NET, Container
+description: .NET Microservices-Architektur für .NET-Containeranwendungen | Informationen zur Autorisierung in .NET-Microservices und Webanwendungen
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6cd7be9bc8216aecf85f99a76e859b411a8735b0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2ea56f5a28d115fc5d91a98604b82565c8bf5c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informationen zur Autorisierung in .NET-Microservices und Webanwendungen
 
@@ -119,16 +112,16 @@ Ein Beispiel für eine benutzerdefinierte Autorisierungsanforderung und einen Ha
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **ASP.NET Core-Authentifizierung**
+-   **ASP.NET Core Authentication (ASP.NET Core-Authentifizierung)**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
 
--   **ASP.NET Core-Autorisierung**
+-   **ASP.NET Core Authorization (ASP.NET Core-Autorisierung)**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
 
--   **Rollenbasierte Autorisierung**
+-   **Role based Authorization (Rollenbasierte Autorisierung)**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
 
--   **Benutzerdefinierte richtlinienbasierte Autorisierung**
+-   **Custom Policy-Based Authorization (Benutzerdefinierte, richtlinienbasierte Autorisierung)**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
 
 

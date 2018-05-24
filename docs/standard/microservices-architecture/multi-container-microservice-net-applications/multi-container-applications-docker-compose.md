@@ -1,21 +1,14 @@
 ---
 title: Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml 
 
@@ -434,11 +427,11 @@ Beachten Sie, dass die in der Laufzeitumgebung festgelegten Werte immer die inne
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Übersicht über Docker zu erstellen.**
+-   **Overview of Docker Compose (Übersicht zu Docker Compose)**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Mehrere verfassen Dateien**
-    [*https://docs.docker.com/compose/extends/\#mehrere verfassen Dateien*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+-   **Mehrere Compose-Dateien**
+    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Erstellen von optimierten Docker-Images für ASP.NET Core
 
@@ -468,7 +461,7 @@ Das .NET-Team hat sich große Mühe gegeben, damit .NET Core und ASP.NET Core ei
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Erstellen von optimiert Docker-Images mit ASP.NET Core**
+-   **Building Optimized Docker Images with ASP.NET Core (Erstellen von optimierten Docker-Images mit ASP.NET Core)**
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 ### <a name="building-the-application-from-a-build-ci-container"></a>Erstellen der Anwendung aus einem Buildcontainer (CI)
@@ -549,8 +542,8 @@ Zusammengefasst besteht der Vorteil daraus, dass Sie Ihre Anwendung genauso erst
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Erstellen von Bits von einem Container: Einrichten der eShopOnContainers-Lösung in einer Windows-CLI-Umgebung (Dotnet CLI, Docker-Befehlszeilenschnittstelle und Visual Studio Code)**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI, - Docker - CLI- und -VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
+-   **Erstellen von Bits aus einem Container: Einrichten der eShopOnContainers-Projektmappe in einer Windows CLI-Umgebung (dotnet CLI, Docker CLI und VS Code)**
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
 
 
 >[!div class="step-by-step"]

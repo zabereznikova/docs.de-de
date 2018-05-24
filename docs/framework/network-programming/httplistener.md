@@ -1,26 +1,17 @@
 ---
 title: HttpListener
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b4b8c1e916aa9382d156a197fa15c2e72e900a1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: db2c42dab15b4282c5474c50f970ffe47a101215
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="httplistener"></a>HttpListener
 Die <xref:System.Net.HttpListener>-Klasse stellt einen programmgesteuerten HTTP-Protokolllistener bereit. Der Listener ist für die Lebensdauer des <xref:System.Net.HttpListener>-Objekts aktiv und wird in der Anwendung ausgeführt.  
@@ -33,7 +24,7 @@ Die <xref:System.Net.HttpListener>-Klasse stellt einen programmgesteuerten HTTP-
  <xref:System.Net.HttpWebRequest>  
  <xref:System.Net.HttpWebResponse>  
  [HTTP-Server](http://go.microsoft.com/fwlink/?LinkID=178285)  
- [Security Enhancements in Internetinformation](http://go.microsoft.com/fwlink/?LinkID=178286)  
+ [Security Enhancements in Internet Information (Sicherheitsverbesserungen bei Internetinformationen)](http://go.microsoft.com/fwlink/?LinkID=178286)  
  [Beispiel zur HttpListener ASPX-Hostanwendung](http://go.microsoft.com/fwlink/?LinkID=179560)  
  [Beispiel zur HttpListener-Technologie](http://go.microsoft.com/fwlink/?LinkID=179558)  
  [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)

@@ -4,31 +4,30 @@ ms.custom: updateeachrelease
 description: Informationen zum Installieren von .NET Framework unter Windows 8.1
 author: rlander
 ms.author: mairaw
-keywords: .Net Framework, installieren
 ms.date: 10/22/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload: dotnet
-ms.openlocfilehash: 7bfdd0c4ac28873647a119d5446373fee98c345f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 761441798ff1f8261b573aa734580aec5849489b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Installieren von .NET Framework unter Windows 8.1 und Windows Server 2012 R2
 
-.NET Framework wird zum Ausführen zahlreicher Anwendungen unter Windows benötigt. Sie können die folgenden Anweisungen für die Installation verwenden. Sie wurden möglicherweise auf diese Seite geleitet, nachdem Sie versucht haben, eine Anwendung auszuführen und auf Ihrem Computer das folgende Dialogfeld angezeigt wurde.
+.NET Framework wird zum Ausführen zahlreicher Anwendungen unter Windows benötigt. Gehen Sie zur Installation entsprechend folgender Anleitung vor. Sie wurden möglicherweise auf diese Seite weitergeleitet, nachdem Sie versucht haben, eine Anwendung auszuführen, und auf Ihrem Computer das folgende Dialogfeld angezeigt wurde.
 
 ![Diese Anwendung konnte nicht gestartet werden](./media/this-application-could-not-be-started.png)
 
-Diese Anweisungen sollen Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) ist die neueste Version. Sie wird unter Windows 8.1 und Windows Server 2012 R2 unterstützt und ist in [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) und [Windows Server 2016 Version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) enthalten.
+Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) ist die aktuelle Version. Es wird von Windows 8.1 und Windows Server 2012 R2 unterstützt und ist im Lieferumfang vom [Windows 10-Update vom April 2018](https://www.microsoft.com/software-download/windows10) enthalten.
 
-## <a name="net-framework-471"></a>.NET Framework 4.7.1
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
-* [Download the .NET Framework 4.7.1 (Herunterladen von .NET Framework 4.7.1)](https://www.microsoft.com/net/framework/versions/net471?utm_source=ms-docs&utm_medium=referral)
+> [!div class="button"]
+[.NET Framework 4.7.2 herunterladen](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) kann verwendet werden, um Anwendungen auszuführen, die für .NET Framework 4.0 oder höher entwickelt wurden.
+
+<!-- (https://www.microsoft.com/net/framework/versions/net472?utm_source=ms-docs&utm_medium=referral) -->
+
+[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) kann verwendet werden, um Anwendungen auszuführen, die für .NET Framework 4.0 oder höher entwickelt wurden.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
@@ -43,5 +42,5 @@ Wenn Sie die richtige Version von .NET Framework nicht installieren können, [we
 ## <a name="see-also"></a>Siehe auch
 
 [Herunterladen von .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Troubleshoot blocked .NET Framework installations and uninstallations (Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework)](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Installieren von.NET Framework für Entwickler](guide-for-developers.md)
+[Problembehandlung von blockierten Installationen und Deinstallationen von .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
+[Installieren von .NET Framework für Entwickler](guide-for-developers.md)

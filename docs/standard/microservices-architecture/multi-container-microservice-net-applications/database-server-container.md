@@ -1,21 +1,14 @@
 ---
-title: "Verwenden eines Datenbankservers, der als Container ausgeführt wird"
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden eines Datenbankservers, der als Container ausgeführt wird"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Verwenden eines Datenbankservers, der als Container ausgeführt wird
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Verwenden eines Datenbankservers, der als Container ausgeführt wird
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Verwenden eines Datenbankservers, der als Container ausgeführt wird
 
@@ -54,7 +47,7 @@ Die Ausführung von SQL Server als Container ist nicht nur für eine Demo nützl
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Run the SQL Server Docker image on Linux, Mac, or Windows (Ausführen des SQL Server Docker-Image unter Linux, Mac oder Windows)**
+-   **Run the SQL Server Docker image on Linux, Mac, or Windows (Ausführen des SQL Server Docker-Images unter Linux, Mac oder Windows)**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
 -   **Connect and query SQL Server on Linux with sqlcmd (Verbinden und Abfragen von SQL Server unter Linux mit sqlcmd)**

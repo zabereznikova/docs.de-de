@@ -4,16 +4,12 @@ description: In diesem Schnellstart wird erläutert, wie Sie das Zeichenfolgenin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7ef904e30475d2cc0584f2baf56bc33a68e172d4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="string-interpolation"></a>Zeichenfolgeninterpolation
 
@@ -173,4 +169,4 @@ Sie haben den Schnellstart für die Zeichenfolgeninterpolation abgeschlossen.
 
 Sie können mit dem Schnellstart [Listensammlungen](arrays-and-collections.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
-Weitere Informationen zur Zeichenfolgeninterpolation finden Sie im Artikel [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) in der C#-Referenz.
+Weitere Informationen finden Sie im Artikel [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) und dem Tutorial [Zeichenfolgeninterpolation in C#](../tutorials/string-interpolation.md).

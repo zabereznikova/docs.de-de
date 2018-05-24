@@ -1,35 +1,24 @@
 ---
-title: "Eingaben für die XslCompiledTransform-Klasse"
-ms.custom: 
+title: Eingaben für die XslCompiledTransform-Klasse
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7aac1e85bdc27c9c8394eadcae841069115b369d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bc909b666b90d8c8825e7dbef33e48b6126bd7c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Eingaben für die XslCompiledTransform-Klasse
 Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode akzeptiert drei Eingabetypen für das Quelldokument: ein Objekt, das die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle implementiert, ein <xref:System.Xml.XmlReader>-Objekt, das das Quelldokument liest, oder einen Zeichenfolgen-URI.  
   
 > [!NOTE]
->  Mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wird Leerraum standardmäßig beibehalten. Dies entspricht Abschnitt 3.4 der Empfehlung des W3C zu XSLT, Version 1.0, (Abschnitt 3.4, http://www.w3.org/TR/xslt.html#strip).  
+>  Mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wird Leerraum standardmäßig beibehalten. Dies entspricht Abschnitt 3.4 der Empfehlung des W3C zu XSLT, Version 1.0, (Abschnitt 3.4, http://www.w3.org/TR/xslt.html#strip)).  
   
 ## <a name="ixpathnavigable-interface"></a>"IXPathNavigable"-Schnittstelle  
  Die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle ist in der <xref:System.Xml.XmlNode>-Klasse und der <xref:System.Xml.XPath.XPathDocument>-Klasse implementiert. Diese Klassen stellen einen speicherinternen Cache der XML-Daten dar.  

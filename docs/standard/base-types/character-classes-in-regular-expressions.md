@@ -1,13 +1,7 @@
 ---
 title: Zeichenklassen in regulären Ausdrücken
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Zeichenklassen in regulären Ausdrücken
 <a name="Top"></a> Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Eingabezeichenfolge enthalten sein kann, damit eine Übereinstimmung vorliegt. Die Sprache für reguläre Ausdrücke in .NET unterstützt die folgenden Zeichenklassen:  
@@ -138,7 +127,7 @@ ms.lasthandoff: 04/18/2018
  Das Zirkumflexzeichen (`^`) am Anfang einer negativen Zeichengruppe ist obligatorisch und gibt an, dass es sich um eine negative anstelle einer positiven Zeichengruppe handelt.  
   
 > [!IMPORTANT]
->  Bei einer negativen Zeichengruppe in einem größeren Muster eines regulären Ausdrucks handelt es sich nicht um eine Assertion mit einer Breite von Null. Dies bedeutet, dass nach dem Auswerten der negativen Zeichengruppe das Modul für reguläre Ausdrücke in der Eingabezeichenfolge zum nachfolgenden Zeichen übergeht.  
+>  Bei einer negativen Zeichengruppe in einem größeren Muster eines regulären Ausdrucks handelt es sich nicht um eine Assertion mit einer Breite von Null. Dies bedeutet, dass nach dem Auswerten der negativen Zeichengruppe die Engine für reguläre Ausdrücke in der Eingabezeichenfolge zum nachfolgenden Zeichen übergeht.  
   
  In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrücke mit negativen Zeichengruppen aufgeführt.  
   

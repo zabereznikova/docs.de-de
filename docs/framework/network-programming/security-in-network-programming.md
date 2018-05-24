@@ -1,8 +1,6 @@
 ---
-title: Sicherheit in der netzwerkprogrammierung - .NET Framework
+title: 'Sicherheit in der Netzwerkprogrammierung: .NET Framework'
 ms.date: 03/14/2018
-ms.prod: .net-framework
-ms.topic: article
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -17,22 +15,20 @@ ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2dd4133c31cf0595c06485a76490d78d469a0d38
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
-ms.translationtype: MT
+ms.openlocfilehash: a684fd1a7ce8cce52e00511b114cb4905ed0a42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="security-in-network-programming"></a>Sicherheit in der netzwerkprogrammierung
+# <a name="security-in-network-programming"></a>Sicherheit in der Netzwerkprogrammierung
 
 Die Klassen des .NET Framework Namespace <xref:System.Net> stellen integrierte Unterstützung für populäre Mechanismen zur Authentifizierung von Internetanwendungen und für .NET Framework-Codezugriffsberechtigungen bereit.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Transport Layer Security (TLS) bewährte Methoden für .NET Framework](tls.md)  
-Beschreibt bewährte Methoden für die .NET Framwork TLS.
+[Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](tls.md)  
+Beschreibt bewährte TLS-Methoden mit .NET Framework.
  
 [Using Secure Sockets Layer (Verwenden von Secure Sockets Layer)](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
 Hier erfahren Sie, wie Sie SSL-Verbindungen (Secure Sockets Layer) verwenden.  

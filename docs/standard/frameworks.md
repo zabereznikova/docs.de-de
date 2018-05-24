@@ -3,19 +3,14 @@ title: Zielframeworks
 description: Erfahren Sie mehr über Zielframeworks für .NET Core-Anwendungen und -Bibliotheken.
 author: richlander
 ms.author: mairaw
-ms.date: 09/22/2017
-ms.topic: article
+ms.date: 04/16/2018
 ms.custom: updateeachrelease
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: fa8049c9e33f0f6b2f16fd8572d6500ba1860c2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="target-frameworks"></a>Zielframeworks
 
@@ -31,13 +26,13 @@ Für paketbasierte Zielframeworks (z.B. .NET Standard und .NET Core) werden die 
 
 ## <a name="latest-target-framework-versions"></a>Neueste Zielframeworkversionen
 
-Die folgende Tabelle listet die häufigsten Zielframeworks auf, wie auf diese verwiesen wird und welche Version von [.NET Standard](~/docs/standard/net-standard.md) von ihnen implementiert wird. Diese Zielframeworkversionen sind die neuesten stabilen Versionen. Vorabversionen werden nicht angezeigt. Ein TFM ist ein standardisiertes Tokenformat zum Angeben des Zielframeworks einer .NET-App oder -Bibliothek. 
+Die folgende Tabelle listet die häufigsten Zielframeworks auf, wie auf diese verwiesen wird und welche Version von [.NET Standard](~/docs/standard/net-standard.md) von ihnen implementiert wird. Diese Zielframeworkversionen sind die neuesten stabilen Versionen. Vorabversionen werden nicht angezeigt. Ein TFM ist ein standardisiertes Tokenformat zum Angeben des Zielframeworks einer .NET-App oder -Bibliothek.
 
-| Zielframework      | Letzte Version | Zielframeworkmoniker (Target Framework Moniker, TFM) | Implementiert <br/> .NET-Standardversion |
-| :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
-| .NET-Standard         | 2.0            | netstandard2.0                 | Nicht zutreffend                                     |
-| .NET Core-Anwendung | 2.0            | netcoreapp2.0                  | 2.0                                     |
-| .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
+| Zielframework      | Latest <br/> Stabile Version | Zielframeworkmoniker (Target Framework Moniker, TFM) | Implementiert <br/> .NET-Standardversion |
+| :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
+| .NET-Standard         | 2.0                         | netstandard2.0                 | Nicht zutreffend                                     |
+| .NET Core-Anwendung | 2.0                         | netcoreapp2.0                  | 2.0                                     |
+| .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Unterstützte Zielframeworkversionen
 
@@ -46,8 +41,8 @@ Auf ein Zielframework wird normalerweise mit einem TFM verwiesen. In der folgend
 | Zielframework           | TFM |
 | -------------------------- | --- |
 | .NET-Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Windows Store              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -135,10 +130,10 @@ Die folgenden Zielframeworks sind veraltet. Pakete, die für diese Zielframework
 
 ## <a name="see-also"></a>Siehe auch
 
-[Pakete, Metapakete und Frameworks](~/docs/core/packages.md)  
-[Entwickeln von Bibliotheken mit plattformübergreifenden Tools](~/docs/core/tutorials/libraries.md)  
-[.NET-Standard](~/docs/standard/net-standard.md)  
-[.NET Core-Versionskontrolle](~/docs/core/versions/index.md)  
+[Pakete, Metapakete und Frameworks](../core/packages.md)  
+[Entwickeln von Bibliotheken mit plattformübergreifenden Tools](../core/tutorials/libraries.md)  
+[.NET-Standard](net-standard.md)  
+[.NET Core-Versionskontrolle](../core/versions/index.md)  
 [dotnet/standard-GitHub-Repository](https://github.com/dotnet/standard)  
 [GitHub-Repository NuGet-Tools)](https://github.com/joelverhagen/NuGetTools)  
 [Frameworkprofile in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

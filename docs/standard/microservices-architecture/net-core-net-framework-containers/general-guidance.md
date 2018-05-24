@@ -1,21 +1,14 @@
 ---
 title: Allgemeine Anleitung
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Allgemeine Anleitung"
-keywords: Docker, Microservices, ASP.NET, Container
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Allgemeine Anleitung
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-guidance"></a>Allgemeine Anleitung
 
@@ -45,7 +38,7 @@ Das Verwenden von .NET Framework auf Docker kann Ihre Bereitstellungen verbesser
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **e-book: Modernize existing .NET Framework applications with Azure and Windows Containers (E-Book: Modernisieren von vorhandenen .NET Framework-Anwendungen mit Azure- und Windows-Containern)**
+-   **e-book: Modernize existing .NET Framework applications with Azure and Windows Containers (E-Book: Modernisieren vorhandener .NET Framework-Anwendungen mit Azure und Windows-Containern)**
     [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
 -   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers (Beispiel-Apps: Modernisieren von veralteten ASP.NET-Web-Apps mithilfe von Windows-Containern)**

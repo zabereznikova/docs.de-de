@@ -1,4 +1,4 @@
-﻿---
+---
 title: using static-Direktive (C#-Referenz)
 ms.date: 03/10/2017
 helpviewer_keywords:
@@ -48,7 +48,7 @@ Im folgenden Beispiele wird die `using static`-Direktive verwendet, um die stati
 
 [!code-csharp[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-In diesem Beispiel hätte die `using static`-Direktive auch auf den Typ <xref:System.Double> angewendet werden können. Dies hätte es ermöglicht, die <xref:System.Double.TryParse(System.String,System.Double@)>-Methode auch ohne den Typ <xref:System.Double> aufzurufen. Hierdurch wird allerdings weniger gut zu lesender Code generiert, da die `using static`-Anweisungen überprüft werden müssen, um zu bestimmen, welche `TryParse`-Methode eines numerischen Typs aufgerufen wird.
+In diesem Beispiel hätte die `using static`-Direktive auch auf den Typ <xref:System.Double> angewendet werden können. Dadurch wäre es möglich geworden, die Methode <xref:System.Double.TryParse(System.String,System.Double@)> aufzurufen, ohne einen Typnamen anzugeben. Hierdurch wird allerdings weniger lesbarer Code generiert, da die `using static`-Anweisungen überprüft werden müssen, um zu bestimmen, welche `TryParse`-Methode eines numerischen Typs aufgerufen wird.
 
 ## <a name="see-also"></a>Siehe auch
 

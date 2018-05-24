@@ -4,7 +4,7 @@ description: Erfahren Sie, die Richtlinien zum Schreiben von F#-Komponenten, die
 ms.date: 05/14/2018
 ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
 ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
 ---

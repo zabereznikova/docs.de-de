@@ -1,21 +1,14 @@
 ---
 title: Strategien zum Beheben von Teilfehlern
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Strategien zum Beheben von Teilfehlern"
-keywords: Docker, Microservices, ASP.NET, Container
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Strategien zum Beheben von Teilfehlern
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: f1b2b59af96bf28035eeb32eb15eaa4105677cf4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Strategien zum Beheben von Teilfehlern
 
@@ -35,16 +28,16 @@ Zu den Strategien für den Umgang mit Teilfehlern zählen die folgenden:
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Resilienzmuster**
+-   **Resiliency patterns (Resilienzmuster)**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   **Adding Resilience and Optimizing Performance (Hinzufügen von Beständigkeit und Optimieren der Leistung)**
+-   **Adding Resilience and Optimizing Performance (Hinzufügen von Resilienz und Optimieren der Leistung)**
     [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
 -   **Bulkhead:** GitHub-Repository. Implementierung mit Polly-Richtlinie
     [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Entwerfen robuster Anwendungen für Azure**
+-   **Designing resilient applications for Azure (Entwerfen von robusten Anwendungen für Azure)**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
 -   **Behandlung vorübergehender Fehler**

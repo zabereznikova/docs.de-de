@@ -1,21 +1,14 @@
 ---
-title: "Implementieren eines Microservicedomänenmodells mit .NET Core"
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren eines Microservicedomänenmodells mit. NET Core"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Implementieren eines Microservicedomänenmodells mit .NET Core
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren eines Microservicedomänenmodells mit. NET Core
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b954efffe2ee7e3e2bdaa49bd1057d72d69088c
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: e0c931405b8b7e3b52bdcbd511737b449dc74273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core 
 
@@ -178,10 +171,10 @@ Beispielsweise enthält das nachfolgende OrderAggregate-Codebeispiel mehrere pri
 -   **Vaughn Vernon. Modeling Aggregates with DDD and Entity Framework (Modellieren von Aggregaten mit dem domänengesteuerten Design und Entity Framework).** Hinweis: Dieser Artikel gilt *nicht* für Entity Framework Core.
     [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman. Coding for Domain-Driven Design: Tips for Data-Focused Devs (Codieren für das domänengesteuerte Design: Tipps für Entwickler mit dem Schwerpunkt „Daten“)**
+-   **Julie Lerman. Coding for Domain-Driven Design: Tips for Data-Focused Devs (Codieren für Domain Driven Design: Tipps für Entwickler mit einem Fokus auf Daten)**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen von vollständig gekapselten Domänenmodellen)**
+-   **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen eines vollständig gekapselten Domänenmodells)**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 

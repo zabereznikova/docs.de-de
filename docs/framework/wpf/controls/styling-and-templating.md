@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 9c2c38020bb57a008d0948a360a5b2cbe401089d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="styling-and-templating"></a>Erstellen von Formaten und Vorlagen
 Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stehen eine Reihe von Funktionen (Stile, Vorlagen, Trigger und Storyboards) zur Verfügung, mit denen Entwickler und Designer visuell ansprechende Effekte erzeugen und ein einheitliches Erscheinungsbild ihres Produkts erstellen können. Obwohl Entwickler und/oder Designer die Darstellung in den einzelnen Anwendungen umfassend anpassen können, ist ein starkes Stil- und Vorlagenmodell erforderlich, um die Wartung und Freigabe der Darstellung innerhalb von Anwendungen und anwendungsübergreifend zu ermöglichen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt dieses Modell bereit.  
@@ -28,10 +28,8 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
   
  Diese Übersicht konzentriert sich auf die Aspekte der Stile und Vorlagen der Anwendung und geht nicht auf Datenbindungskonzepte ein. Weitere Informationen zur Datenbindung finden Sie unter [Übersicht über die Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Darüber hinaus ist es wichtig, die Ressourcen zu kennen, die die Wiederverwendung von Stilen und Vorlagen ermöglichen. Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
-  
- 
-  
+ Darüber hinaus ist es wichtig, die Ressourcen zu kennen, die die Wiederverwendung von Stilen und Vorlagen ermöglichen. Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).
+
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>Beispiel für das Erstellen von Stilen und Vorlagen  
  In dieser Übersicht verwendeten Codebeispiele basieren auf einem einfachen Fotobeispiel, das in der folgenden Abbildung dargestellt wird:  
@@ -183,9 +181,9 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
   
  Sie können Ressourcenverzeichnisse als einzelne Dateien definieren, die es Ihnen ermöglichen, ein Design in mehreren Anwendungen wieder zu verwenden. Sie können auch austauschbare Designs erstellen, indem Sie mehrere Ressourcenverzeichnisse definieren, welche dieselben Ressourcentypen bereitstellen, jedoch mit unterschiedlichen Werten. Das Neudefinieren dieser Stile oder anderer Ressourcen auf Anwendungsebene ist die empfohlene Vorgehensweise für das Skinning von Anwendungen.  
   
- Sie können eine Reihe von Ressourcen, einschließlich Stile und Vorlagen, anwendungsübergreifend freigeben erstellen eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei, und definieren einen <xref:System.Windows.ResourceDictionary>. Sehen Sie sich z.B. die folgende Abbildung an, die einen Teil des [Beispiels zum Formatieren mit ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041) zeigt:  
-  
- ![Beispiele für Steuerelementvorlagen](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+ Sie können eine Reihe von Ressourcen, einschließlich Stile und Vorlagen, anwendungsübergreifend freigeben erstellen eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei, und definieren einen <xref:System.Windows.ResourceDictionary>. Sehen Sie sich z.B. die folgende Abbildung an, die einen Teil des [Beispiels zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) zeigt:
+
+![Beispiele für Steuerelementvorlagen](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
  Wenn Sie die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Dateien in diesem Beispiel näher betrachten, werden Sie feststellen, dass alle Dateien über Folgendes verfügen:  
   

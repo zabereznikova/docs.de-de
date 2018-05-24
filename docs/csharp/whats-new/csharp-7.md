@@ -1,20 +1,13 @@
 ---
 title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in der bevorstehenden Version 7 der C#-Sprache.
-keywords: C#, .NET, .NET Core, neueste Funktionen, Neues
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/21/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
@@ -91,7 +84,7 @@ Die Felder werden nicht überprüft, und Sie können keine eigenen Methoden defi
 > Tupel waren schon vor C# 7.0 verfügbar, sie waren jedoch ineffizient und hatten keine Sprachunterstützung.
 > Das brachte mit sich, dass auf Tupelelemente nur als `Item1`, `Item2` usw. verwiesen werden konnte. Mit C# 7.0 wird Sprachunterstützung für Tupel eingeführt, wodurch semantische Namen für die Felder eines Tupels mit Einsatz neuer, effizienterer Tupeltypen möglich werden.
 
-Sie können ein Tupel erstellen, indem Sie jeden Member einem Wert zuweisen:
+Sie können ein Tupel erstellen, indem Sie jedem Member einen Wert zuweisen:
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
@@ -136,7 +129,7 @@ Sie können auch eine ähnliche Dekonstruktion für alle Typen in .NET bereitste
 
 [!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
  
-Sie können die einzelnen Felder extrahieren, indem Sie ein Tupel einem `Point` zuweisen:
+Sie können die einzelnen Felder extrahieren, indem Sie einem `Point` ein Tupel zuweisen:
 
 [!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
 

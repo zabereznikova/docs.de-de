@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed306098852e93d43a4055fd1d9b8cf97a01766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -345,7 +345,7 @@ interface _Graphics {
 }  
 ```  
   
- Die gleichen Regeln, die zum Marshallen von Werten und Verweisen an Plattformaufrufe gelten, gelten auch beim Marshallen über COM-Schnittstellen. Wenn eine Instanz des `Point`-Werttyps von .NET Framework an COM übergeben wird, wird der `Point` nach Wert übergeben. Wenn der `Point`-Werttyp durch Verweis übergeben wird, wird ein Zeiger auf den `Point` in den Stack übergeben. Der Interop-Marshaller unterstützt kein höheres Maß an Dereferenzierung (**Point \*\***) in beide Richtungen.  
+ Die gleichen Regeln, die zum Marshallen von Werten und Verweisen an Plattformaufrufe gelten, gelten auch beim Marshallen über COM-Schnittstellen. Wenn eine Instanz des `Point`-Werttyps von .NET Framework an COM übergeben wird, wird der `Point` nach Wert übergeben. Wenn der `Point`-Werttyp durch Verweis übergeben wird, wird ein Zeiger auf den `Point` in den Stack übergeben. Der Interop-Marshaller unterstützt kein höheres Maß an Dereferenzierung (**Punkt** \* \*) in beide Richtungen.  
   
 > [!NOTE]
 >  Strukturen, bei denen der <xref:System.Runtime.InteropServices.LayoutKind>-Enumerationswert auf **Explicit** (Explizit) festgelegt ist, können in COM-Interop nicht verwendet werden, da die exportierte Typbibliothek kein explizites Layout darstellen kann.  

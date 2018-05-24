@@ -1,10 +1,7 @@
 ---
 title: Veraltete Elemente in der .NET Framework-Klassenbibliothek
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
 .NET Framework unterliegt im Laufe der Zeit Änderungen. Jede neue Version erhält neue Typen und Typmember, die neue Funktionen bieten. Vorhandene Typen und deren Member werden im Laufe der Zeit ebenfalls geändert. Einige Typen verlieren z. B. an Bedeutung, da die von ihnen unterstützte Technologie durch eine neue Technologie ersetzt wird, und einige Methoden werden von neueren Methoden abgelöst, die entweder benutzerfreundlicher sind oder über einen größeren Funktionsumfang verfügen.  
@@ -62,16 +57,16 @@ ms.lasthandoff: 12/22/2017
   
 |.NET Framework-Version|`version`-Zeichenfolge|
 |-|-|  
-|4.7 (einschließlich 4.7.1)|v4.0|  
+|4.7 (einschließlich 4.7.1 und 4.7.2)|v4.0|  
 |4.6 (einschließlich 4.6.1 und 4.6.2)|v4.0|  
 |4.5 (inklusive 4.5.1 und 4.5.2)|v4.0|  
 |4|v4.0|  
 |3.5|v2.0.50727|  
 |2.0|v2.0.50727|  
-|1,1|v1.1.4322|  
-|1,0|v1.0.3705|  
+|1.1|v1.1.4322|  
+|1.0|v1.0.3705|  
   
-## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>Listen mit veralteten Komponenten für .NET Framework 4.5 und 4.6  
+## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Listen mit veralteten Komponenten für .NET Framework 4.5 und höhere Versionen  
  [Veraltete Typen](../../../docs/framework/whats-new/obsolete-types.md)  
   
  [Veraltete Member](../../../docs/framework/whats-new/obsolete-members.md)  

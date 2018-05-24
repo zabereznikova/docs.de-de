@@ -1,10 +1,7 @@
 ---
-title: "Kompatibilität von .NET Framework-Versionen"
+title: Kompatibilität von .NET Framework-Versionen
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, version compatibility
 - .NET Framework 4.5, compatibility with earlier versions
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 45bb0174bd4c757b6e51621f36b25eb5f4354c94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Kompatibilität von .NET Framework-Versionen
 Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Plattform entwickelte App in höheren Versionen dieser Plattform ausgeführt werden kann. Bei .NET Framework wird versucht, die Abwärtskompatibilität zu maximieren: Für eine Version von .NET Framework geschriebener Quellcode wird auf höheren Versionen von .NET Framework kompiliert, und Binärdateien, die auf einer Version von .NET Framework ausgeführt werden, verhalten sich auch auf höheren Versionen von .NET Framework gleich.  
@@ -50,7 +45,7 @@ Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Pl
   
  In der Praxis kann diese Kompatibilität von scheinbar belanglosen Änderungen in .NET Framework und von Änderungen in den Programmierverfahren aufgehoben werden. Leistungsverbesserungen an .NET Framework 4.5 können z. B. eine Racebedingung mit sich bringen, die unter früheren Versionen nicht aufgetreten ist. Auf ähnliche Weise sind das Verwenden eines hartcodierten Pfads zu .NET Framework-Assemblys, das Ausführen eines Gleichheitsvergleich mit einer bestimmten Version von .NET Framework und das Abrufen des Werts eines privaten Felds mithilfe einer Reflektion keine abwärtskompatiblen Maßnahmen. Außerdem schließt jede Version von .NET Framework Fehlerkorrekturen und sicherheitsbezogene Änderungen ein, die sich auf die Kompatibilität von einigen Apps und Komponenten auswirken können.  
   
- Wenn Ihre App oder Komponente nicht wie erwartet in .NET Framework 4.5 (einschließlich der zugehörigen Releases [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 oder 4.7.1) funktioniert, verwenden Sie die folgende Prüfliste:  
+ Wenn Ihre App oder Komponente nicht wie erwartet in .NET Framework 4.5 (einschließlich der zugehörigen Releases [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 oder 4.7.2) funktioniert, verwenden Sie die folgenden Checklisten:  
   
 -  Wenn Ihre App für alle Versionen von .NET Framework ab .NET Framework 4.0 entwickelt wurde, finden Sie unter [Anwendungskompatibilität im .NET Framework](application-compatibility.md) Informationen zum Generieren von Listen, die Änderungen zwischen der Version, mit der Ihre App ausgeführt wird, und der Zielversion von .NET Framework aufführt.  
 
@@ -64,7 +59,7 @@ Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Pl
   
 -   Wenn Sie feststellen, dass eine Änderung in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] das ordnungsgemäße Funktionieren der App verhindert hat, überprüfen Sie im [Schema für Laufzeiteinstellungen](../../../docs/framework/configure-apps/file-schema/runtime/index.md), ob Sie eine Laufzeiteinstellung in der App-Konfigurationsdatei verwenden können, um das vorherige Verhalten wiederherzustellen.  
   
--   Wenn ein Problem auftritt, das nicht dokumentiert ist, melden Sie den [Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=154815)-Fehler und wenden Sie sich mit der Fehlernummer an [netfxcf@microsoft.com](mailto:netfxcf@microsoft.com).  
+-   Wenn Sie auf ein Problem stoßen, das noch nicht dokumentiert ist, öffnen Sie ein Ticket auf der [Website für die .NET-Entwickler-Community](https://developercommunity.visualstudio.com/spaces/61/index.html) oder im [Microsoft/dotnet GitHub-Repository](https://github.com/microsoft/dotnet/issues).
   
 ## <a name="compatibility-and-side-by-side-execution"></a>Kompatibilität und parallele Ausführung  
  Wenn Sie keine geeignete Problemumgehung für das Problem finden können, beachten Sie, dass .NET Framework 4.5 (oder eine seiner Punktreleases) parallel mit den Versionen 1.1, 2.0 und 3.5 ausgeführt werden kann, und ein direktes Update ist, das Version 4 ersetzt. Sie können für Apps, die auf die Versionen 1.1, 2.0 und 3.5 ausgerichtet sind, die entsprechende Version von .NET Framework auf dem Zielcomputer installieren, um die App in der optimalen Umgebung auszuführen. Weitere Informationen über die parallele Ausführung finden Sie unter [Parallele Ausführung](../../../docs/framework/deployment/side-by-side-execution.md).  

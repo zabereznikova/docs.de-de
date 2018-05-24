@@ -1,27 +1,18 @@
 ---
 title: Peer-to-Peer-Zusammenarbeit
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5060e12fb6a9fcc1bac1dfe6ccdcbaea9f2e6385
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: MT
+ms.openlocfilehash: a933c81105399a9411fcb749a06e47bf769cf532
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-collaboration"></a>Peer-to-Peer-Zusammenarbeit
-Peer-zu-Peer Networking ist die Verwendung relativ leistungsfähiger Computer (Personalcomputer), die am Rand des Internets für mehr als nur clientbasierte Rechenaufgaben vorhanden sind. Die moderne PC (PC) verfügt über eine sehr schnellen Prozessor, vast Arbeitsspeicher und eine große Festplatte, die keines der voll beim Ausführen von allgemeinen Computeraufgaben wie e-Mail und Browsen im Internet ausgelastet sind. Der moderne PC kann einfach sowohl als Client als auch als Server (kein Peer) für viele Arten von Anwendungen fungieren.  
+Peer-zu-Peer Networking ist die Verwendung relativ leistungsfähiger Computer (Personalcomputer), die am Rand des Internets für mehr als nur clientbasierte Rechenaufgaben vorhanden sind. Der moderne Personalcomputer (PC) verfügt über einen sehr schnellen Prozessor, einen beträchtlichen Arbeitsspeicher und eine große Festplatte, die beim Ausführen von allgemeinen Rechenaufgaben, wie z.B. E-Mail und Webbrowsen allesamt nicht voll ausgelastet werden. Der moderne PC kann einfach sowohl als Client als auch als Server (kein Peer) für viele Arten von Anwendungen fungieren.  
   
 -   Die Peer-zu-Peer-Kollaborationsinfrastruktur ist eine vereinfachte Implementierung der Microsoft Windows-Peer-zu-Peer-Infrastruktur, die den Dienst „Personen in meiner Umgebung“ in Windows Vista und späteren Plattformen nutzt. Sie wird am besten für Peer-fähige Anwendungen innerhalb eines Subnetzes verwendet, für die der „Personen in meiner Umgebung“-Dienst ausgeführt wird, obwohl sie auch Internetendpunkte oder Kontakte bedienen kann. Sie beinhaltet den gängigen Contact Manager, der vom Live Messenger und anderen Live-fähigen Anwendungen verwendet wird, um die Kontaktendpunkte, die Verfügbarkeit und die Präsenz zu bestimmen.  
   

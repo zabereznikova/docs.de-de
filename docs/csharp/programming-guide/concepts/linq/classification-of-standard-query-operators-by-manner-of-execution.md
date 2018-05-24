@@ -1,21 +1,12 @@
 ---
-title: "Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#)"
-ms.custom: 
+title: Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ad1ad72526b7293cd81528bf1880b2326289f177
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40b5859631b37f8d5e810de3c999742bafe9f6ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#)
 Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit einer von zwei möglichen Arten ausgeführt: direkt oder zurückgestellt. Abfrageoperatoren, die die verzögerte Ausführung verwenden, können darüber hinaus in zwei Kategorien unterteilt werden: Streaming und Nicht-Streaming. Wenn Sie wissen, wie die einzelnen Abfrageoperatoren ausgeführt werden, erleichtert dies das Verständnis der Ergebnisse, die Sie von einer Abfrage erhalten. Dies ist insbesondere dann der Fall, wenn die Datenquelle geändert wird oder wenn Sie eine Abfrage auf Grundlage einer anderen Abfrage erstellen. In diesem Thema werden die Standardabfrageoperatoren gemäß ihrer Ausführungsarten klassifiziert.  
@@ -98,5 +89,5 @@ Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit ei
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Linq.Enumerable>  
  [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Abfrageausdruckssyntax für Standardabfrageoperatoren (c#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+ [Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

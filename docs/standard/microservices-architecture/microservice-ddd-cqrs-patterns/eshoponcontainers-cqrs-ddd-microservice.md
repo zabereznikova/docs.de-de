@@ -1,21 +1,14 @@
 ---
-title: "Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers"
-description: ".NET-Microservicesarchitektur für .NET-Containeranwendungen | Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 63e61a93aa2a162d7b48e0d423dab99dcea9d020
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 
@@ -53,10 +46,10 @@ Es gibt nur eine Anwendungsarchitektur: die Architektur der System- oder der End
 -   **Greg Young. CQS vs. CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. CQRS Documents (CQRS-Dokumente)**
+-   **Greg Young. CQRS-Dokumente**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young. CQRS, Task Based UIs and Event Sourcing (CQRS, auf Aufgaben basierende Benutzeroberflächen und Ereignis-Sourcing)**
+-   **Greg Young. CQRS, aufgabenbasierte Benutzeroberflächen und Event Sourcing**
     [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
 -   **Udi Dahan. Clarified CQRS (Erläuterung zu CQRS)**
@@ -65,7 +58,7 @@ Es gibt nur eine Anwendungsarchitektur: die Architektur der System- oder der End
 -   **CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Event-Sourcing (ES)**
+-   **Event Sourcing**
     [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 

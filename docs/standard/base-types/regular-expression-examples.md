@@ -1,30 +1,19 @@
 ---
-title: "Beispiele für reguläre Ausdrücke"
-ms.custom: 
+title: Beispiele für reguläre Ausdrücke
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - regular expressions [.NET Framework]
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4d2d3aced78d2afed3f0d1396efe5e954ef84102
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expression-examples"></a>Beispiele für reguläre Ausdrücke
 Dieser Abschnitt enthält Codebeispiele, die die Verwendung regulärer Ausdrücke in üblichen Anwendungen veranschaulichen.  
@@ -40,7 +29,7 @@ Dieser Abschnitt enthält Codebeispiele, die die Verwendung regulärer Ausdrück
  Enthält ein Beispiel, in dem Datumsangaben im Format „mm/tt/jj“ durch Datumsangaben im Format „tt-mm-jj“ ersetzt werden.  
   
  [Gewusst wie: Extrahieren eines Protokolls und einer Portnummer aus einer URL](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
- Enthält ein Beispiel, in dem ein Protokoll und eine Portnummer aus einer Zeichenfolge extrahiert werden, die eine URL enthält. Beispiel: „http://www.contoso.com:8080/letters/readme.html“ gibt „http:8080“ zurück.  
+ Enthält ein Beispiel, in dem ein Protokoll und eine Portnummer aus einer Zeichenfolge extrahiert werden, die eine URL enthält. http://www.contoso.com:8080/letters/readme.html gibt beispielsweise "http:8080" zurück.  
   
  [Gewusst wie: Entfernen von ungültigen Zeichen aus einer Zeichenfolge](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
  Enthält ein Beispiel, in dem ungültige, nicht alphanumerische Zeichen aus einer Zeichenfolge entfernt werden.  
@@ -48,7 +37,7 @@ Dieser Abschnitt enthält Codebeispiele, die die Verwendung regulärer Ausdrück
  [Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
  Enthält ein Beispiel, mit dem Sie überprüfen können, ob eine Zeichenfolge in einem gültigen E-Mail-Format vorliegt.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Text.RegularExpressions>  
  Enthält Informationen zu einer Klassenbibliotheksreferenz für den .NET-Namespace **System.Text.RegularExpressions**.  
   

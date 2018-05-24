@@ -1,21 +1,14 @@
 ---
-title: "Entwerfen von Validierungen auf der Domänenmodellebene"
-description: ".NET Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen von Validierungen auf der Domänenmodellebene"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Entwerfen von Validierungen auf der Domänenmodellebene
+description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen von Validierungen auf der Domänenmodellebene
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7a111ce20039f8c87d3c3d63efdeaf38a4e1e96
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce3cb0c79cbd492224ce1d4ecb25cd02062f11cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>Entwerfen von Validierungen auf der Domänenmodellebene
 
@@ -115,25 +108,25 @@ Wenn Sie z.B. die Feldvalidierung mit Datenanmerkungen verwenden, duplizieren Si
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Rachel Appel. Introduction to model validation in ASP.NET Core MVC (Einführung in die Modellvalidierung in ASP.NET Core MVC)**
+-   **Rachel Appel. Einführung in die Modellvalidierung im ASP.NET Core MVC**
     [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
 
--   **Rick Anderson. Adding validation (Hinzufügen einer Validierung)**
+-   **Rick Anderson. Adding validation (Hinzufügen der Überprüfung)**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations (Ersetzen der Ausnahmeauslösungen durch Validierungsbenachrichtigungen)**
+-   **Martin Fowler. Ersetzen des Auslösens von Ausnahmen durch Benachrichtigungen in Validierungen**
     [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
--   **Specification and Notification Patterns (Spezifikations- und Benachrichtigungsmuster)**
+-   **Spezifikation und Benachrichtigungsmuster**
     [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
--   **Lev Gorodinski. Validation in Domain-Driven Design (DDD) (Die Validierung in domänengesteuertem Design (DDD))**
+-   **Lev Gorodinski. Validierung in Domain-Driven-Design (DDD)**
     [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
--   **Colin Jack. Domain Model Validation (Domänenmodellvalidierung)**
+-   **Colin Jack. Überprüfung des Domänenmodells**
     [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
--   **Jimmy Bogard. Validation in a DDD world (Validierung in einer Welt mit DDD)**
+-   **Jimmy Bogard. Validierung in einer DDD-Welt**
     [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 

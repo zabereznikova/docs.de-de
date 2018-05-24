@@ -3,50 +3,47 @@ title: Installieren von .NET Framework unter Windows 10
 description: Erfahren Sie, wie Sie .NET Framework unter Windows 10 oder Windows Server 2016 installieren.
 author: rlander
 ms.author: mairaw
-keywords: .Net Framework, installieren
-ms.date: 12/20/2017
-ms.topic: article
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: bd588dff62e5d4ac1c1059e697a07598ba272042
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: f069686866c4fd0e8e380af3ef448d282df34801
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Installieren von .NET Framework unter Windows 10 und Windows Server 2016
 
-.NET Framework wird zum Ausführen zahlreicher Anwendungen unter Windows benötigt. Die Anweisungen in diesem Artikel unterstützen Sie dabei, die erforderlichen .NET Framework-Versionen zu installieren. [.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) ist die neueste verfügbare Version.
+.NET Framework wird zum Ausführen zahlreicher Anwendungen unter Windows benötigt. Die Anweisungen in diesem Artikel unterstützen Sie dabei, die erforderlichen .NET Framework-Versionen zu installieren. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) ist die neueste verfügbare Version.
 
 Sie wurden möglicherweise auf diese Seite geleitet, nach dem Sie versucht haben, eine Anwendung auszuführen und auf Ihrem Computer eine ähnliche Meldung wie die folgende angezeigt wurde:
 
 ![Diese Anwendung konnte nicht gestartet werden](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-471"></a>.NET Framework 4.7.1
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
-.NET Framework 4.7.1 ist enthalten in:
+.NET Framework 4.7.2 ist enthalten in:
 
-* [Windows 10 Fall Creators Update (Version 1709)](https://www.microsoft.com/software-download/windows10)
-* [Windows Server Version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
+* [Windows 10-Update für April 2018](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-[.NET Framework 4.7.1 herunterladen](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)
+[.NET Framework 4.7.2 herunterladen](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) kann zum Ausführen von Anwendungen verwendet werden, die für .NET Framework 4.0 bis 4.7.1 entwickelt wurden.
+[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) kann zum Ausführen von Anwendungen verwendet werden, die für .NET Framework 4.0 bis 4.7.1 entwickelt wurden.
 
-[.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) kann auf den folgenden Versionen installiert werden:
+[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) kann auf den folgenden Versionen installiert werden:
 
+* Windows 10 Fall Creators Update (Version 1709)
 * Windows 10 Creators Update (Version 1703)
 * Windows 10 Anniversary Update (Version 1607)
+* Windows Server, Version 1709
 * Windows Server 2016
 
-.NET Framework-Version 4.7.1 wird nicht unterstützt für:
+.NET Framework 4.7.2 wird für folgende Versionen nicht unterstützt:
 
 * Windows 10 1507
 * Windows 10 1511
 
-Wenn Sie Windows 10 1507 oder 1511 verwenden und .NET Framework 4.7.1 installieren möchten, müssen Sie zunächst ein Upgrade auf eine höhere Windows 10-Version durchführen.
+Wenn Sie Windows 10 1507 oder 1511 verwenden und .NET Framework 4.7.2 installieren möchten, müssen Sie zunächst ein Upgrade auf eine höhere Windows 10-Version durchführen.
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
@@ -79,5 +76,5 @@ Wenn Sie die richtige Version von .NET Framework nicht installieren können, [we
 ## <a name="see-also"></a>Siehe auch
 
 [.NET-Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)   
-[Troubleshoot blocked .NET Framework installations and uninstallations (Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework)](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Installieren von.NET Framework für Entwickler](guide-for-developers.md)
+[Problembehandlung von blockierten Installationen und Deinstallationen von .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
+[Installieren von .NET Framework für Entwickler](guide-for-developers.md)

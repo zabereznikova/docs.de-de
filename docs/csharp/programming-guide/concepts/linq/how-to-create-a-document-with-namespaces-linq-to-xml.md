@@ -1,21 +1,12 @@
 ---
 title: 'Gewusst wie: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d913cdf8b9018aa2bf91fd5a05b823e90ba63df2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Gewusst wie: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)
 In diesem Thema wird das Erstellen von Dokumenten mit Namespaces beschrieben.  
@@ -66,7 +57,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt das Erstellen eines Dokuments, das zwei Namespaces enthält. Einer der Namespaces ist der Standardnamespace. Der andere Namespace besitzt ein Präfix.  
   
- Durch das Aufnehmen von Namespaceattributen in das Stammelement werden die Namespaces so serialisiert, dass "http://www.adventure-works.com" zum Standardnamespace wird und "www.fourthcoffee.com" mit dem Präfix "fc" serialisiert wird. Zum Erstellen eines Attributs, das einen Standardnamespace deklariert, erstellen Sie ein Attribut mit dem Namen  <legacyBold>xmlns</legacyBold> ohne einen Namespace. Der Wert des Attributs ist der Standardnamespace-URI.  
+ Durch das Aufnehmen von Namespaceattributen in das Stammelement werden die Namespaces so serialisiert, dass http://www.adventure-works.com zum Standardnamespace wird und www.fourthcoffee.com mit dem Präfix „fc“ serialisiert wird. Zum Erstellen eines Attributs, das einen Standardnamespace deklariert, erstellen Sie ein Attribut mit dem Namen  <legacyBold>xmlns</legacyBold> ohne einen Namespace. Der Wert des Attributs ist der Standardnamespace-URI.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  

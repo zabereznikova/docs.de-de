@@ -1,13 +1,7 @@
 ---
 title: Escapezeichen in regulären Ausdrücken
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,25 +14,20 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8a4ec10bfa332c8caafce57385791d8069a7231a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapezeichen in regulären Ausdrücken
 Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine der folgenden Optionen stehen:  
   
 -   Das darauf folgende Zeichen ist ein Sonderzeichen, wie in der Tabelle im folgenden Abschnitt gezeigt. `\b` ist z. B. ein Anker, der angibt, dass die Übereinstimmung eines regulären Ausdrucks mit einer Wortgrenze beginnen sollte, `\t` stellt einen Tabulator dar und `\x020` stellt ein Leerzeichen dar.  
   
--   Ein Zeichen, das andernfalls als Sprachkonstrukt ohne Escapezeichen interpretiert werden würde, sollte als Zeichenliteral interpretiert werden. Durch eine geschweifte Klammer (`{`) wird z. B. der Beginn der Definition eines Quantifizierers angezeigt, aber ein von einer geschweiften Klammer (`\{`) gefolgter umgekehrter Schrägstrich gibt an, dass das Modul für reguläre Ausdrücke eine Entsprechung für die geschweifte Klammer finden sollte. Auf ähnliche Weise markiert ein einzelner umgekehrter Schrägstrich den Anfang eines Sprachkonstrukts mit Escapezeichen, aber zwei umgekehrte Schrägstriche (`\\`) geben an, dass das Modul für reguläre Ausdrücke eine Entsprechung für den umgekehrten Schrägstrich finden soll.  
+-   Ein Zeichen, das andernfalls als Sprachkonstrukt ohne Escapezeichen interpretiert werden würde, sollte als Zeichenliteral interpretiert werden. Durch eine geschweifte Klammer (`{`) wird z. B. der Beginn der Definition eines Quantifizierers angezeigt, aber ein von einer geschweiften Klammer (`\{`) gefolgter umgekehrter Schrägstrich gibt an, dass die Engine für reguläre Ausdrücke eine Entsprechung für die geschweifte Klammer finden sollte. Auf ähnliche Weise markiert ein einzelner umgekehrter Schrägstrich den Anfang eines Sprachkonstrukts mit Escapezeichen, aber zwei umgekehrte Schrägstriche (`\\`) geben an, dass die Engine für reguläre Ausdrücke eine Entsprechung für den umgekehrten Schrägstrich finden soll.  
   
 > [!NOTE]
 >  Escapezeichen werden in Mustern von regulären Ausdrücken, jedoch nicht in Ersetzungsmustern erkannt.  
@@ -46,9 +35,9 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
 ## <a name="character-escapes-in-net"></a>Escapezeichen in .NET  
  In der folgenden Tabelle sind die Escapezeichen aufgeführt, die von regulären Ausdrücken in .NET unterstützt werden.  
   
-|Zeichen oder Sequenz|Beschreibung|  
+|Zeichen oder Sequenz|description|  
 |---------------------------|-----------------|  
-|Alle Zeichen außer Folgenden:<br /><br /> sein. $ ^ { [ ( &#124; ) * + ? \|Zeichen nicht aufgelistet, die der **Zeichen oder Sequenz** Spalte haben keine speziellen Bedeutung in regulären Ausdrücken, sie selbst.<br /><br /> Die in der Spalte **Zeichen oder Sequenz** enthaltenen Zeichen sind spezielle Sprachelemente regulärer Ausdrücke. Um diese in einem regulären Ausdruck abzugleichen, müssen sie mit Escapezeichen versehen oder in eine [positive Zeichengruppe](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) einbezogen werden. Der reguläre Ausdruck `\$\d+` oder `[$]\d+` entspricht z. B. "$1200".|  
+|Alle Zeichen außer Folgenden:<br /><br /> sein. $ ^ { [ ( &#124; ) * + ? **Andere als die in der Spalte \|Zeichen oder Sequenz** aufgelisteten Zeichen haben keine spezielle Bedeutung in regulären Ausdrücken. Sie stehen für sich selbst.<br /><br /> Die in der Spalte **Zeichen oder Sequenz** enthaltenen Zeichen sind spezielle Sprachelemente regulärer Ausdrücke. Um diese in einem regulären Ausdruck abzugleichen, müssen sie mit Escapezeichen versehen oder in eine [positive Zeichengruppe](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) einbezogen werden. Der reguläre Ausdruck `\$\d+` oder `[$]\d+` entspricht z. B. "$1200".|  
 |`\a`|Entspricht dem Klingelzeichen (Warnsignal) `\u0007`.|  
 |`\b`|Entspricht in einer `[`*Zeichengruppe*`]`-Zeichenklasse einem Rücktastenzeichen `\u0008`.  (Siehe [Zeichenklassen](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Außerhalb einer Zeichenklasse ist `\b` ein Anker, der einer Wortgrenze entspricht. (Siehe [Anker](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)|  
 |`\t`|Entspricht dem Tabstoppzeichen `\u0009`.|  
@@ -71,7 +60,7 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
   
  Der reguläre Ausdruck `\G(.+)[\t|\u007c](.+)\r?\n` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung|  
+|Muster|description|  
 |-------------|-----------------|  
 |`\G`|Beginnen Sie den Abgleich an der Stelle, wo der letzte Abgleich geendet hat.|  
 |`(.+)`|Entspricht einem oder mehreren die oft ausgegebene Befehlszeilen  Zeichen. Dies ist die erste Erfassungsgruppe.|  
