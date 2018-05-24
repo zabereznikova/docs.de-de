@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f0c9e0ff5881695cc9426610056677d6053376a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1198249afe6933342aea1a05515e6766603ab147
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C#-Compileroptionen alphabetisch sortiert
 Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien sortierte Liste finden Sie unter [C#-Compileroptionen nach Kategorien sortiert](listed-by-category.md).  
@@ -42,13 +42,13 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |-incremental|Aktiviert die inkrementelle Kompilierung [veraltet].|  
 |[-keycontainer](keycontainer-compiler-option.md)|Gibt einen Schlüsselcontainer mit starkem Namen an.|  
 |[-keyfile](keyfile-compiler-option.md)|Gibt eine Schlüsseldatei mit starkem Namen an.|  
-|[-langversion:\<string>](langversion-compiler-option.md)|Gibt den Sprachversionsmodus an: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 oder Latest. |  
+|[-langversion:\<string>](langversion-compiler-option.md)|Gibt die Sprachversion an: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 oder Latest |  
 |[/lib](lib-compiler-option.md)|Gibt zusätzliche Verzeichnisse an, in denen nach Verweisen gesucht wird.|  
 |[-link](link-compiler-option.md)|Macht COM-Typinformationen in den angegebenen Assemblys für das Projekt verfügbar.|  
 |[-linkresource](linkresource-compiler-option.md)|Verknüpft die angegebene Ressource mit dieser Assembly.|  
 |[-main](main-compiler-option.md)|Gibt den Typ an, der den Einstiegspunkt enthält (alle anderen möglichen Einstiegspunkte werden ignoriert).|  
 |[-moduleassemblyname](moduleassemblyname-compiler-option.md)|Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreifen kann.|  
-|-modulename:\<string>|Geben Sie den Namen des Quellmoduls an|  
+|-modulename:\<string>|Gibt den Namen des Quellmoduls an|  
 |[-noconfig](noconfig-compiler-option.md)|Weist den Compiler an, die CSC.RSP-Datei nicht automatisch einzubeziehen.|  
 |[-nologo](nologo-compiler-option.md)|Unterdrückt die Compiler-Copyrightmeldung.|  
 |[-nostdlib](nostdlib-compiler-option.md)|Weist den Compiler an, die Standardbibliothek (mscorlib.dll) nicht zu referenzieren.|  
@@ -65,7 +65,7 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |[/refout](refout-compiler-option.md)|Generiert eine Verweisassembly zusätzlich zur primären Assembly|  
 |[/refonly](refonly-compiler-option.md)|Generiert eine Verweisassembly statt der primären Assembly|  
 |[-resource](resource-compiler-option.md)|Bettet die angegebene Ressource ein.|  
-|-ruleset:\<file>|Geben Sie eine Regelsatzdatei an, die bestimmte Diagnosefunktionen deaktiviert.|  
+|-ruleset:\<file>|Gibt eine Regelsatzdatei an, die bestimmte Diagnosefunktionen deaktiviert.|  
 |[-subsystemversion](subsystemversion-compiler-option.md)|Gibt die mindestens erforderliche Version des Subsystems an, die die generierte ausführbare Datei verwenden kann.|  
 |[-target](target-compiler-option.md)|Gibt das Format der Ausgabedatei mit einer der folgenden Optionen an: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md), [-target:winmdobj](target-winmdobj-compiler-option.md)|  
 |[/unsafe](unsafe-compiler-option.md)|Ermöglicht [unsicheren](../../../csharp/language-reference/keywords/unsafe.md) Code|  

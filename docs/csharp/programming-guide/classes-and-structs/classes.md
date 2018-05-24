@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="classes-c-programming-guide"></a>Klassen (C#-Programmierhandbuch)
 Ein *Klasse* ist ein Konstrukt, das Ihnen ermöglicht, Ihre eigenen benutzerdefinierten Typen erstellen, indem Variablen anderer Typen, Methoden und Ereignisse zusammengefasst werden. Eine Klasse ist mit einem Entwurf vergleichbar. Sie definiert die Daten und das Verhalten eines Typs. Wenn die Klasse nicht als statisch deklariert wird, kann der Clientcode *Instanzen* von ihr erstellen. Diese Instanzen sind *Objekte*, die einer Variable zugewiesen werden. Die Instanz einer Klasse verbleibt im Arbeitsspeicher, bis alle Verweise darauf ihre Gültigkeit verlieren. Zu diesem Zeitpunkt markiert die CLR sie als geeignet für die Garbage Collection. Wenn die Klasse als [statisch](../../../csharp/language-reference/keywords/static.md) deklariert wird, können Sie keine Instanzen erstellen, und der Clientcode kann nur über die Klasse selbst auf sie zugreifen. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
@@ -83,10 +83,9 @@ Beim Erstellen des Objekts wird der Speicher im verwalteten Heap belegt. Die Var
   
  Klassendefinitionen können zwischen verschiedenen Quelldateien aufgeteilt werden. Weitere Informationen finden Sie unter [Partielle Klassen und Methoden](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
   
-## <a name="description"></a>description  
- Im folgenden Beispiel wird eine öffentliche Klasse definiert, die ein einzelnes Feld, eine Methode und eine spezielle Methode namens Konstruktor enthält. Weitere Informationen finden Sie unter [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md). Die Klasse wird mit dem Schlüsselwort `new` instanziiert.  
-  
 ## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird eine öffentliche Klasse definiert, die [eine automatisch implementierte Eigenschaft](auto-implemented-properties.md), eine Methode und eine spezielle Methode, einen sogenannten Konstruktor, enthält. Weitere Informationen finden Sie in den Artikeln zu [Eigenschaften](properties.md), [Methoden](methods.md) und [Konstruktoren](constructors.md). Die Instanzen der Klasse werden mit dem Schlüsselwort `new` instanziiert.  
+  
  [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  

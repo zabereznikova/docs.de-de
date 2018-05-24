@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
 ---
@@ -30,7 +30,7 @@ Zum Aufrufen von Funktionen, die aus einer unverwalteten Bibliothek exportiert w
 ## <a name="platform-invoke-data-types"></a>Datentypen für den Plattformaufruf  
  Die folgende Tabelle listet die Datentypen auf, die in der WIN 32-API (aufgeführt in Wtypes.h) verwendet werden, und die Funktionen im C-Stil auf. Viele unverwaltete Bibliotheken enthalten Funktionen, die diese Datentypen als Parameter und Rückgabewerte übergeben. Die dritte Spalte enthält den entsprechenden in .NET Framework integrierten Werttype oder die Klasse, die Sie in verwaltetem Code verwenden. In einigen Fällen können Sie einen Typ der gleichen Größe durch den in der Tabelle aufgeführten Typ ersetzen.  
   
-|Unverwalteter Typ in Wtypes.h|Unverwalteter Typ in C-Sprache|Name der verwalteten Klasse|Beschreibung|  
+|Unverwalteter Typ in Wtypes.h|Unverwalteter Typ in C-Sprache|Name der verwalteten Klasse|description|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
 |**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 Bit unter 32-Bit-Windows-Betriebssystemen, 64 Bit unter 64-Bit-Windows-Betriebssystemen.|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 Bit|  

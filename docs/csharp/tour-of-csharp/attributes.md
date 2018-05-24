@@ -3,11 +3,11 @@ title: C#-Attribute – Überblick über C#
 description: Informationen zur deklarativen Programmierung mithilfe von Attributen in C#
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: d055f5386d1dddef0b70843a0a5fa6fc04922296
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671023f268ae78d63db8868ef6046b8f13880659
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="attributes"></a>Attribute
 
@@ -17,7 +17,7 @@ Im folgenden Beispiel wird ein `HelpAttribute`-Attribut deklariert, dass in Prog
 
 [!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]
 
-Alle Attributklassen werden von der <xref:System.Attribute> Basisklasse abgeleitet, die von der Standardbibliothek bereitgestellt wird. Attribute können durch Angabe ihres Namens angewendet werden, zusammen mit beliebigen Argumenten. Diese müssen in eckigen Klammern genau vor der zugehörigen Deklaration eingefügt werden. Wenn ein Attributname auf `Attribute` endet, kann dieser Teil des Namens beim Verweis auf das Attribut weggelassen werden. Beispielsweise kann das `HelpAttribute`-Attribut wie folgt verwendet werden.
+Alle Attributklassen werden von der <xref:System.Attribute> Basisklasse abgeleitet, die von der Standardbibliothek bereitgestellt wird. Attribute können durch Angabe ihres Namens angewendet werden, zusammen mit beliebigen Argumenten. Diese müssen in eckigen Klammern genau vor der zugehörigen Deklaration eingefügt werden. Wenn ein Attributname auf `Attribute` endet, kann dieser Teil des Namens beim Verweis auf das Attribut weggelassen werden. Beispielsweise kann `HelpAttribute` wie folgt verwendet werden.
 
 [!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
 

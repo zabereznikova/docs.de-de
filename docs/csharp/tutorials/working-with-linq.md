@@ -3,11 +3,11 @@ title: Arbeiten mit LINQ
 description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 17c294a372a05a05d3893fce7b3adc426c6305fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
@@ -200,7 +200,7 @@ Führen Sie das Beispiel aus, und sehen Sie sich an, wie der Kartenstapel nach j
 
 ## <a name="optimizations"></a>Optimierungen
 
-Das Beispiel, das Sie bisher erstellt haben, führt einen *Mischvorgang nach innen* aus, bei dem die oberste und unterste Karte bei jedem Durchgang gleich bleiben. Als Nächstes führen wir einen *Mischvorgang nach außen* aus, bei dem alle 52 Karten ihre Position ändern. Hierbei werden die Hälften so ineinander gefächert, dass die erste Karte der unteren Hälfte zur ersten Karte des Kartenstapels wird. Das bedeutet, dass die unterste Karte der oberen Hälfte zur untersten Karte des Stapels wird. Dazu muss nur eine Zeile geändert werden. Aktualisieren Sie den Aufruf zum Mischen so, dass die Reihenfolge der oberen und unteren Hälften des Kartenstapels getauscht wird:
+Das Beispiel, das Sie bisher erstellt haben, führt einen *Mischvorgang nach außen* aus, bei dem die oberste und unterste Karte bei jedem Durchgang gleich bleiben. Als Nächstes führen wir einen *Mischvorgang nach innen* aus, bei dem alle 52 Karten ihre Position ändern. Hierbei werden die Hälften so ineinander gefächert, dass die erste Karte der unteren Hälfte zur ersten Karte des Kartenstapels wird. Das bedeutet, dass die unterste Karte der oberen Hälfte zur untersten Karte des Stapels wird. Dazu muss nur eine Zeile geändert werden. Aktualisieren Sie den Aufruf zum Mischen so, dass die Reihenfolge der oberen und unteren Hälften des Kartenstapels getauscht wird:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -264,13 +264,13 @@ public static void Main(string[] args)
 }
 ```
 
-Beachten Sie, dass beim Zugreifen auf eine Abfrage kein Protokolleintrag erstellt wird. Ein Protokolleintrag wird nur erstellt, wenn Sie die ursprüngliche Abfrage erstellen. Die Ausführung des Programms dauert immer noch lang, aber nun sehen Sie den Grund dafür. Wenn Sie nicht warten möchten, bis das Mischen nach außen mit aktivierter Protokollierung ausgeführt wurde, wechseln Sie zurück zum Mischen nach innen. Sie sehen immer noch die Auswirkungen der verzögerten Auswertung. In einer Ausführung werden 2592 Abfragen ausgeführt, einschließlich der Generierung aller Werte und Farben.
+Beachten Sie, dass beim Zugreifen auf eine Abfrage kein Protokolleintrag erstellt wird. Ein Protokolleintrag wird nur erstellt, wenn Sie die ursprüngliche Abfrage erstellen. Die Ausführung des Programms dauert immer noch lang, aber nun sehen Sie den Grund dafür. Wenn Sie nicht warten möchten, bis das Mischen nach innen mit aktivierter Protokollierung ausgeführt wurde, wechseln Sie zurück zum Mischen nach außen. Sie sehen immer noch die Auswirkungen der verzögerten Auswertung. In einer Ausführung werden 2592 Abfragen ausgeführt, einschließlich der Generierung aller Werte und Farben.
 
 Es gibt eine einfache Möglichkeit, dieses Programm so zu ändern, dass all diese Ausführungen vermieden werden. Die LINQ-Methoden `ToArray()` und `ToList()` sorgen dafür, dass die Abfrage ausgeführt wird, und speichern die Ergebnisse in einem Array bzw. einer Liste. Sie verwenden diese Methoden dazu, die Datenergebnisse einer Abfrage zwischenzuspeichern, anstatt die Quellabfrage erneut auszuführen.  Fügen Sie die Abfragen, die die Kartenstapel generieren, an einen Aufruf von `ToArray()` an, und führen Sie die Abfrage erneut aus:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Führen Sie das Programm erneut aus – das Mischen nach innen wurde auf 30 Abfragen reduziert. Auch beim Mischen nach außen werden Sie ähnliche Verbesserungen feststellen. (Dabei werden jetzt 162 Abfragen ausgeführt.)
+Führen Sie das Programm erneut aus – das Mischen nach außen wurde auf 30 Abfragen reduziert. Auch beim Mischen nach innen werden Sie ähnliche Verbesserungen feststellen. (Dabei werden jetzt 162 Abfragen ausgeführt.)
 
 Sie dürfen dieses Beispiel aber nicht so interpretieren, dass alle Abfragen mit strikter Auswertung ausgeführt werden sollten. Dieses Beispiel sollte nur Anwendungsfälle veranschaulichen, bei denen eine verzögerte Auswertung zu Leistungsproblemen führen kann. Die Ursache des Problems ist, dass jede neue Anordnung des Kartenstapels aus der vorherigen Anordnung erstellt wird. Bei der verzögerten Auswertung bedeutet dies, dass jede neue Kartenstapelkonfiguration aus dem ursprünglichen Kartenstapel erzeugt wird. Dabei wird sogar der Code ausgeführt, der den `startingDeck`-Stapel erstellt hat. Das verursacht eine Menge zusätzlichen Aufwands. 
 
@@ -324,4 +324,4 @@ Kompilieren Sie den Code, und führen Sie ihn erneut aus. Die Ausgabe ist etwas 
 
 In diesem Beispiel wurden einige der in LINQ verwendeten Methoden veranschaulicht sowie das Erstellen von eigenen Methoden, die einfach mit für LINQ aktiviertem Code verwendet werden können. Das Beispiel hat auch die Unterschiede zwischen verzögerter und strikter Auswertung aufgezeigt und erläutert, wie sich die Entscheidung für die eine oder andere Variante auf die Leistung auswirken kann.
 
-Sie haben etwas über die Techniken von Zauberkünstlern erfahren. Zauberer verwenden den Faro-Shuffle, weil sie damit genau steuern können, wann sich welche Karte wo im Stapel befindet. Bei manchen Tricks bittet der Zauberer einen Zuschauer, eine Karte ganz nach oben auf den Stapel zu legen. Dann mischt der Zauberer die Karten einige Male und weiß genau, wo die Karte ist. Für andere Tricks muss der Kartenstapel auf eine ganz bestimmte Art sortiert sein. Der Zauberer bereitet den Stapel vor dem Trick vor. Dann mischt er den Stapel 5-mal nach innen. Auf der Bühne zeigt er den Zuschauern dann einen Kartenstapel, der zufällig gemischt aussieht, mischt ihn noch 3-mal und erzielt so genau die gewünschte Kartenreihenfolge.
+Sie haben etwas über die Techniken von Zauberkünstlern erfahren. Zauberer verwenden den Faro-Shuffle, weil sie damit genau steuern können, wann sich welche Karte wo im Stapel befindet. Bei manchen Tricks bittet der Zauberer einen Zuschauer, eine Karte ganz nach oben auf den Stapel zu legen. Dann mischt der Zauberer die Karten einige Male und weiß genau, wo die Karte ist. Für andere Tricks muss der Kartenstapel auf eine ganz bestimmte Art sortiert sein. Der Zauberer bereitet den Stapel vor dem Trick vor. Dann mischt er den Stapel fünfmal nach außen. Auf der Bühne zeigt er den Zuschauern dann einen Kartenstapel, der zufällig gemischt aussieht, mischt ihn noch 3-mal und erzielt so genau die gewünschte Kartenreihenfolge.

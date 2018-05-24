@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: a305daee2349341527b529c7556cc6fa84cc9fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0affaf3691d2392c9f8d7502204d0122f2ea428
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-compiler-options"></a>C#-Compileroptionen
 Der Compiler generiert ausführbare Dateien (EXE), Dynamic Link Libraries (DLL) oder Codemodule (NETMODULE).  
@@ -24,16 +24,16 @@ Der Compiler generiert ausführbare Dateien (EXE), Dynamic Link Libraries (DLL) 
  In Visual Studio legen Sie Compileroptionen in der Datei „web.config“ fest. Weitere Informationen finden Sie unter [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+ [Erstellen über die Befehlszeile mit csc.exe](command-line-building-with-csc-exe.md)  
  Informationen zum Erstellen einer Visual C#-Anwendung über die Befehlszeile  
   
- [Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+ [Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  Stellt Schritte zum Ausführen von „vsvars32.bat“ bereit, um Befehlszeilenbuilds zu ermöglichen  
   
- [C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [C#-Compileroptionen nach Kategorien sortiert](listed-by-category.md)  
  Eine nach Kategorien sortierte Liste der Compileroptionen  
   
- [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [C#-Compileroptionen alphabetisch sortiert](listed-alphabetically.md)  
  Eine alphabetisch sortierte Liste der Compileroptionen  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

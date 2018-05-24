@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>Operatoren (C#-Programmierhandbuch)
 In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operanden* in einem Ausdruck oder einer Anweisung angewendet wird. Operatoren mit einem Operanden, z. B. der Inkrementoperator (`++`) oder `new`, werden als *unäre* Operatoren bezeichnet. Operatoren mit zwei Operanden, z. B. arithmetische Operatoren (`+`,`-`,`*`,`/`), werden als *binäre* Operatoren bezeichnet. Der bedingte Operator (`?:`) verfügt über drei Operanden. Er ist der einzige ternäre Operator in C#.  
@@ -114,7 +114,7 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
 |Logisches OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Ganzzahliges bitweises OR, boolesches logisches OR|  
 |Bedingtes AND|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Wertet y nur aus, wenn x den Wert true hat.|  
 |Bedingtes OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Wertet y nur aus, wenn x den Wert false hat.|  
-|NULL-Sammeloperator|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) y|Ergibt y, wenn x den Wert NULL hat, andernfalls x.|  
+|NULL-Sammeloperator|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|Ergibt y, wenn x den Wert NULL hat, andernfalls x.|  
 |Bedingt|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Wird zu y ausgewertet, wenn x den Wert true hat, und zu z, wenn x den Wert false hat.|  
   
  **Zuweisungsoperatoren und anonyme Operatoren**  

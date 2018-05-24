@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 319a4df6f52768cf256c0ad92ca65607b99ce32c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7e944f224ff9bf6dc3b8cefc293182bb79f74f2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="throw-c-reference"></a>throw (C#-Referenz)
 Signalisiert das Auftreten einer Ausnahme während der Programmausführung.  
@@ -52,7 +52,7 @@ Ab C# 7.0 kann `throw` sowohl als Ausdruck als auch als Anweisung verwendet werd
 
    [!code-csharp[csrefKeyword#4](../../../../samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
-- [Der NULL-Sammeloperator](../operators/null-conditional-operator.md). Im folgenden Beispiel wird eine `throw`-Anweisung mit einem NULL-Sammeloperator verwendet, um eine Ausnahme auszulösen, wenn die Zeichenfolge, die einer Eigenschaft `Name` zugewiesen wurde, `null` ist.
+- [Der NULL-Sammeloperator](../operators/null-coalescing-operator.md). Im folgenden Beispiel wird eine `throw`-Anweisung mit einem NULL-Sammeloperator verwendet, um eine Ausnahme auszulösen, wenn die Zeichenfolge, die einer Eigenschaft `Name` zugewiesen wurde, `null` ist.
  
    [!code-csharp[csrefKeyword#5](../../../../samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]  
  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 1d6487f4136b5a3f8bfc2e1721ae268e06f5ba98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 
@@ -18,7 +18,7 @@ Einschränkungen informieren den Compiler über die Funktionen, über die ein Ty
 
 |Constraint|description|
 |----------------|-----------------|
-|`where T: struct`|Das Typargument muss ein Werttyp sein. Jeder Werttyp außer <xref:System.Nullable> kann angegeben werden. Weitere Informationen finden Sie unter [Using Nullable Types (Verwenden von Nullable-Typen)](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|Das Typargument muss ein Werttyp sein. Jeder Werttyp außer <xref:System.Nullable> kann angegeben werden. Weitere Informationen finden Sie unter [Using Nullable Types (Verwenden von Nullable-Typen)](../nullable-types/using-nullable-types.md).|
 |`where T : class`|Das Typargument muss ein Verweistyp sein. Diese Einschränkung gilt auch für jede Klasse, Schnittstelle, jeden Delegaten oder Arraytyp.|
 |`where T : unmanaged`|Das Typargument darf kein Verweistyp sein und darf keine Verweistypmitglieder auf einer Schachtelungsebene enthalten.|
 |`where T : new()`|Das Typargument muss einen öffentlichen, parameterlosen Konstruktor aufweisen. Beim gemeinsamen Verwenden anderen Constraints muss der `new()`-Constraint zuletzt angegeben werden.|

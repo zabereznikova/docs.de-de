@@ -9,7 +9,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acef752cf54d28dd1f07431b5dbbadbac0b7849e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
 ---
@@ -58,7 +58,7 @@ Die meisten Datentypen verfügen über eine allgemeine Darstellung in verwaltete
   
  Die folgende Tabelle listet nicht blitfähige Typen aus dem <xref:System>-Namespace auf. [Delegaten](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)) sind Datenstrukturen, die auf eine statische Methode oder auf eine Klasseninstanz verweisen, und sind nicht blitfähig.  
   
-|Nicht blitfähiger Typ|Beschreibung|  
+|Nicht blitfähiger Typ|description|  
 |-------------------------|-----------------|  
 |[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Konvertiert in ein Array im C-Format oder ein `SAFEARRAY`.|  
 |[System.Boolean](https://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9(v=vs.100))|Konvertiert in einen 1-, 2- oder 4-Byte-Wert mit `true` als 1 oder -1.|  

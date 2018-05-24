@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a3352b9f929382c7d5b7d0c62ef4022560caf371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f02ae84544a60a992177332d528dd7970f84bf3f
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C#-Compileroptionen nach Kategorien sortiert
 Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische Liste finden Sie unter [C#-Compileroptionen alphabetisch sortiert](listed-alphabetically.md).  
@@ -31,11 +31,11 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[-out](out-compiler-option.md)|Gibt die Ausgabedatei an.|  
 |[/pdb](pdb-compiler-option.md)|Gibt den Dateinamen und den Speicherort der PDB-Datei an.|  
 |[-platform](platform-compiler-option.md)|Gibt die Ausgabeplattform an.|  
-|[/preferreduilang](preferreduilang-compiler-option.md)|Geben Sie eine Sprache für die Compilerausgabe an.|  
+|[/preferreduilang](preferreduilang-compiler-option.md)|Gibt eine Sprache für die Compilerausgabe an.|  
 |[/refout](refout-compiler-option.md)|Generiert eine Verweisassembly zusätzlich zur primären Assembly|  
 |[/refonly](refonly-compiler-option.md)|Generiert eine Verweisassembly statt der primären Assembly|  
 |[-target](target-compiler-option.md)|Gibt das Format der Ausgabedatei mit einer der folgenden Optionen an: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) oder [-target:winmdobj](target-winmdobj-compiler-option.md).|  
-|-modulename:\<string>|Geben Sie den Namen des Quellmoduls an|  
+|-modulename:\<string>|Gibt den Namen des Quellmoduls an|  
   
 ### <a name="net-framework-assemblies"></a>.NET Framework-Assemblys  
   
@@ -91,7 +91,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[-codepage](codepage-compiler-option.md)|Gibt die für alle Quellcodedateien in der Kompilierung die zu verwendende Codepage an.|  
 |[-help](help-compiler-option.md)|Listet Compileroptionen in „stdout“ auf.|  
 |[-highentropyva](highentropyva-compiler-option.md)|Gibt an, dass die ausführbare Datei Address Space Layout Randomization (ASLR) unterstützt.|  
-|[-langversion](langversion-compiler-option.md)|Gibt den Sprachversionsmodus an: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 oder Latest. |  
+|[-langversion](langversion-compiler-option.md)|Gibt die Sprachversion an: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 oder Latest |  
 |[-main](main-compiler-option.md)|Gibt den Speicherort der **Main**-Methode an.|  
 |[-noconfig](noconfig-compiler-option.md)|Weist den Compiler an, nicht mit „csc.rsp“ zu kompilieren.|  
 |[-nologo](nologo-compiler-option.md)|Unterdrückt Compilerbannerinformationen.|  
@@ -100,7 +100,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[/unsafe](unsafe-compiler-option.md)|Aktiviert die Kompilierung von Code, der das Schlüsselwort [unsafe](../../../csharp/language-reference/keywords/unsafe.md) verwendet.|  
 |[-utf8output](utf8output-compiler-option.md)|Zeigt die Compilerausgabe mit UTF-8-Codierung an.|  
 |-parallel[+|-]|Gibt an, ob parallele Builds (+) verwendet werden sollen.|  
-|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte sind SHA1 (Standard) oder SHA256.|  
+|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte sind: SHA1 (Standard) oder SHA256.|  
   
 ## <a name="obsolete-options"></a>Veraltete Optionen  
   

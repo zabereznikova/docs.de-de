@@ -1,20 +1,20 @@
 ---
 title: fixed-Anweisung (C#-Referenz)
-ms.date: 04/20/2018
+ms.date: 05/10/2018
 f1_keywords:
 - fixed_CSharpKeyword
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e1664f508cb861ffa73b800eeb0da3a1f1cdc432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26e7e7f15dd48cf029d5f67bf5ef0de3e19b7bb
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="fixed-statement-c-reference"></a>fixed-Anweisung (C#-Referenz)
 
-Die `fixed`-Anweisung verhindert, dass der Garbage Collector eine bewegliche Variable verschiebt. Die `fixed`-Anweisung ist nur in einem [unsicheren (unsafe)](unsafe.md) Kontext zulässig. `Fixed` kann auch zum Erstellen eines [Puffers fester Größe](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md) verwendet werden.
+Die `fixed`-Anweisung verhindert, dass der Garbage Collector eine bewegliche Variable verschiebt. Die `fixed`-Anweisung ist nur in einem [unsicheren (unsafe)](unsafe.md) Kontext zulässig. `fixed` kann auch zum Erstellen eines [Puffers fester Größe](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md) verwendet werden.
 
 Die `fixed`-Anweisung setzt einen Zeiger auf eine verwaltete Variable und „fixiert“ diese Variable während der Ausführung der Anweisung. Zeiger auf verschiebbare verwaltete Variablen sind nur in einem `fixed`-Kontext nützlich. Ohne den `fixed`-Kontext könnte die automatische Speicherbereinigung die Variablen auf unvorhersehbare Weise verschieben. Mit dem C#-Compiler können Sie einer verwalteten Variablen nur in einer `fixed`-Anweisung einen Zeiger zuweisen.
 
@@ -23,6 +23,12 @@ Die `fixed`-Anweisung setzt einen Zeiger auf eine verwaltete Variable und „fix
 Sie können einen Zeiger mit einem Array, einer Zeichenfolge, einem Puffer fester Größe oder der Adresse einer Variablen initialisieren. Im folgenden Beispiel wird die Verwendung von Adressen, Arrays und Zeichenfolgen von Variablen veranschaulicht. Weitere Informationen zu Puffern fester Größe finden Sie unter [Puffer fester Größe](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
+
+Ab C# 7.3 funktioniert die `fixed`-Anweisung mit weiteren Typen, nicht nur mit Arrays, Zeichenfolgen, Puffern mit festgelegter Größe und nicht verwalteten Variablen. Jeder Typ, der eine Methode mit dem Namen `DangerousGetPinnableReference` implementiert, kann angeheftet werden. `DangerousGetPinnableReference` muss eine `ref`-Variable an einen nicht verwalteten Typ zurückgeben. Weitere Informationen erhalten Sie im Artikel zu [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md). Die .NET-Typen <xref:System.Span%601?displayProperty=nameWithType> und <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, die in .NET Core 2.0 eingeführt wurden, verwenden dieses Muster und können angeheftet werden. Dies wird im folgenden Beispiel gezeigt:
+
+[!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
+
+Wenn Sie Typen erstellen, die auch dieses Muster verwenden sollen, finden Sie unter <xref:System.Span%601.DangerousGetPinnableReference?displayProperty=nameWithType> ein Beispiel für die Implementierung des Musters.
 
 Wenn mehrere Zeiger vom selben Typ sind, können sie in einer gemeinsamen Anweisung initialisiert werden:
 
