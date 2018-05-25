@@ -1,12 +1,12 @@
 ---
 title: Verbindungszeichenfolgen-Syntax
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1df49a9ed5d45a1a1ee50145ff036c98ec72cca8
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="connection-string-syntax"></a>Verbindungszeichenfolgen-Syntax
 Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xref:System.Data.Common.DbConnection> erbt, sowie eine anbieterspezifische <xref:System.Data.Common.DbConnection.ConnectionString%2A>-Eigenschaft. Die spezifische Verbindungszeichenfolgensyntax für den jeweiligen Anbieter wird in dessen `ConnectionString`-Eigenschaft dokumentiert. In der folgenden Tabelle sind die vier Datenanbieter aufgelistet, die in .NET Framework enthalten sind.  
@@ -112,11 +112,11 @@ Sie können beim Erstellen einer Verbindungszeichenfolge auch die <xref:System.D
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Nein|Nicht zutreffend|Nein (Standard)|Ignoriert|Es erfolgt keine Verschlüsselung.|  
 |Nein|Nicht zutreffend|Ja|Nein (Standard)|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist. Andernfalls tritt ein Fehler beim Verbindungsversuch auf.|  
-|Nein|Nicht zutreffend|Ja|Ja|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist. Andernfalls tritt ein Fehler beim Verbindungsversuch auf.|  
-|Ja|Nein|Ignoriert|Ignoriert|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist. Andernfalls tritt ein Fehler beim Verbindungsversuch auf.|  
-|Ja|Ja|Nein (Standard)|Ignoriert|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist. Andernfalls tritt ein Fehler beim Verbindungsversuch auf.|  
-|Ja|Ja|Ja|Nein (Standard)|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist. Andernfalls tritt ein Fehler beim Verbindungsversuch auf.|  
-|Ja|Ja|Ja|Ja|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist. Andernfalls tritt ein Fehler beim Verbindungsversuch auf.|  
+|Nein|Nicht zutreffend|Ja|Ja|Verschlüsselung kann immer auftritt, jedoch ein selbst signiertes Serverzertifikat.|  
+|Ja|Nein|Ignoriert|Ignoriert|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist; Andernfalls schlägt der Verbindungsversuch fehl.|  
+|Ja|Ja|Nein (Standard)|Ignoriert|Verschlüsselung kann immer auftritt, jedoch ein selbst signiertes Serverzertifikat.|  
+|Ja|Ja|Ja|Nein (Standard)|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist; Andernfalls schlägt der Verbindungsversuch fehl.|  
+|Ja|Ja|Ja|Ja|Verschlüsselung kann immer auftritt, jedoch ein selbst signiertes Serverzertifikat.|  
   
  Weitere Informationen finden Sie unter [mithilfe von Verschlüsselung ohne Überprüfung](http://go.microsoft.com/fwlink/?LinkId=120500) in SQL Server-Onlinedokumentation.  
   

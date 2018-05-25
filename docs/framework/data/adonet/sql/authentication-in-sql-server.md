@@ -1,12 +1,12 @@
 ---
 title: Authentifizierung in SQL Server
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8fc6f17cd008fe24e041c52b4e5ee8fd4d261f40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2d290d22d27c43cf7fb3250bf7898e8260dce2b
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="authentication-in-sql-server"></a>Authentifizierung in SQL Server
 SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizierungsmodus und den gemischten Modus.  
@@ -16,7 +16,7 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
 -   Der gemischte Modus unterstützt die Authentifizierung durch Windows und durch SQL Server. Die Paare aus Benutzername und Kennwort werden innerhalb von SQL Server beibehalten.  
   
 > [!IMPORTANT]
->  Es wird empfohlen, möglichst immer die Windows-Authentifizierung zu verwenden. Die Windows-Authentifizierung verwendet zum Authentifizieren der Benutzer in SQL Server eine Reihe verschlüsselter Meldungen. Bei der Verwendung von SQL Server-Anmeldungen werden die SQL Server-Anmeldenamen und -Kennwörter über das Netzwerk übertragen und damit angreifbar.  
+>  Es wird empfohlen, möglichst immer die Windows-Authentifizierung zu verwenden. Die Windows-Authentifizierung verwendet zum Authentifizieren der Benutzer in SQL Server eine Reihe verschlüsselter Meldungen. Wenn SQL Server-Anmeldungen verwendet werden, sind SQL Server-Anmeldenamen und verschlüsselte Kennwörter über das Netzwerk übergeben, wodurch sie weniger sicher.  
   
  Bei der Windows-Authentifizierung sind die Benutzer bereits bei Windows angemeldet und müssen sich nicht noch einmal bei SQL Server anmelden. Die folgende `SqlConnection.ConnectionString` gibt die Windows-Authentifizierung an, bei der Benutzername und Kennwort nicht erforderlich sind.  
   
