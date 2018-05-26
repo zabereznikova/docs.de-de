@@ -47,7 +47,6 @@
 ## [Objekt- und Auflistungsinitialisierer](object-and-collection-initializers.md)
 ### [Gewusst wie: Initialisieren von Objekten mithilfe eines Objektinitialisierers](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [Gewusst wie: Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer](how-to-initialize-a-dictionary-with-a-collection-initializer.md)
-## [Gewusst wie: Zugreifen auf Sammlungsklassen mit foreach](how-to-access-a-collection-class-with-foreach.md)
 ## [Geschachtelte Typen](nested-types.md)
 ## [Partielle Klassen und Methoden](partial-classes-and-methods.md)
 ## [Anonyme Typen](anonymous-types.md)
