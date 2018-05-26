@@ -2,11 +2,11 @@
 title: Datensätze (F#)
 description: Erfahren Sie, wie einfache Aggregate benannter Werte, optional mit Mitgliedern von f#-Datensätzen darstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5bd1f76937bf5839b7da5cae7dea578747ec9b99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb853ee11ff8cacb45dadf6ef14a4f29400aad4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="records"></a>Datensätze
 
@@ -16,15 +16,15 @@ Datensätze stellen einfache Aggregate benannter Werte dar, optional mit Membern
 
 ```fsharp
 [ attributes ]
-type [accessibility-modifier] typename = {
-    [ mutable ] label1 : type1;
-    [ mutable ] label2 : type2;
-    ...
-}
+type [accessibility-modifier] typename =
+    { [ mutable ] label1 : type1;
+      [ mutable ] label2 : type2;
+      ... }
     [ member-list ]
 ```
 
 ## <a name="remarks"></a>Hinweise
+
 In der vorherigen Syntax *Typename* ist der Name des Datensatztyps, *label1* und *label2* sind Namen von Werten, die so genannte *Bezeichnungen*, und *Typ1* und *Typ2* sind die folgenden Werte sind. *Memberliste* ist die optionale Liste von Elementen für den Typ.  Sie können die `[<Struct>]` Attribut um einen Datensatz, der ein Verweistyp ist, anstatt einen Datensatz für die Struktur zu erstellen.
 
 Es folgen einige Beispiele.
@@ -48,6 +48,7 @@ Die Bezeichnungen der meisten zuletzt deklarierten Typ haben Vorrang gegenüber 
 Methoden können für Datensatztypen, so wie für Klassentypen definiert werden.
 
 ## <a name="creating-records-by-using-record-expressions"></a>Erstellen von Datensätzen mithilfe von Datensatz-Ausdrücken
+
 Sie können Datensätze initialisieren, indem Sie die Bezeichnungen, die im Datensatz definiert sind. Ein Ausdruck, die dies tut wird als bezeichnet eine *aufzeichnen Ausdruck*. Verwenden Sie geschweifte Klammern, um schließen die Datensatzausdruck ein, und verwenden Sie das Semikolon als Trennzeichen.
 
 Im folgende Beispiel wird gezeigt, wie einen Datensatz erstellt wird.
@@ -77,20 +78,19 @@ Verwenden Sie das DefaultValue-Attribut nicht mit Feldern Datensatzes. Ein besse
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
 type MyRecord =
-{
-    field1 : int
-    field2 : int
-}
+    { Field1 : int
+      Field2 : int }
 
-let defaultRecord1 = { field1 = 0; field2 = 0 }
-let defaultRecord2 = { field1 = 1; field2 = 25 }
+let defaultRecord1 = { Field1 = 0; Field2 = 0 }
+let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 
 // Use the with keyword to populate only a few chosen fields
 // and leave the rest with default values.
-let rr3 = { defaultRecord1 with field2 = 42 }
+let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
 ## <a name="pattern-matching-with-records"></a>Mustervergleich mit Datensätzen
+
 Datensätze können mit dem Mustervergleich verwendet werden. Sie können einige Felder explizit angeben und Bereitstellen von Variablen für die anderen Felder, die zugewiesen wird, wenn eine Übereinstimmung auftritt. Dies wird im folgenden Codebeispiel veranschaulicht.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
@@ -104,17 +104,25 @@ Point is at (10.000000, 0.000000, -1.000000).
 ```
 
 ## <a name="differences-between-records-and-classes"></a>Unterschiede zwischen Datensätzen und Klassen
+
 Datensatzfelder unterscheiden sich von Klassen, sie werden automatisch als Eigenschaften verfügbar gemacht, und es handelt sich bei der Erstellung verwendet und Kopieren von Datensätzen. Datensatz Konstruktion unterscheidet sich auch von der Klassenkonstruktion. Einen Konstruktor kann nicht definieren, in einen Datensatztyp. Stattdessen gilt die Konstruktionssyntax, die in diesem Thema beschrieben. Klassen verfügen über keine direkte Beziehung zwischen Konstruktorparameter, Felder und Eigenschaften.
 
 Wie Union "und" Struktur weisen Datensätze strukturelle Gleichheitssemantik auf. Klassen verfügen über Gleichheitssemantik auf. Dies wird im folgenden Codebeispiel veranschaulicht.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
+Die Ausgabe dieses Codes lautet wie folgt:
+
+```
+The records are equal.
+```
+
 Wenn Sie den gleichen Code mit Klassen schreiben, die zwei Klassenobjekte wäre ungleich daran, dass die beiden Werte zwei Objekte auf dem Heap darstellen und nur die Adressen verglichen werden würde (es sei denn, der Klassentyp überschreibt die `System.Object.Equals` Methode).
 
 Wenn Sie auf Gleichheit Datensätze verweisen müssen, fügen Sie das Attribut `[<ReferenceEquality>]` oberhalb des Datensatzes.
 
 ## <a name="see-also"></a>Siehe auch
+
 [F#-Typen](fsharp-types.md)
 
 [Klassen](classes.md)
