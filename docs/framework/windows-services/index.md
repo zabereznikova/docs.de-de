@@ -14,38 +14,38 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: af6e4bf7697b3139f6809295737fdd0d90b7f013
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-windows-service-applications"></a>Entwickeln von Windows-Dienstanwendungen
-Mithilfe von Microsoft Visual Studio oder Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, Sie Dienste können problemlos erstellt durch das Erstellen einer Anwendung, die als Dienst installiert ist. Diese Art von Anwendung wird einen Windows-Dienst aufgerufen. Framework-Funktionen können Sie Dienste erstellen, zu installieren und starten, beenden und Steuern des Verhaltens.  
+Über Microsoft Visual Studio oder das Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK können Dienste problemlos erstellt werden, indem eine Anwendung erstellt und als Dienst installiert wird. Dieser Anwendungstyp wird als Windows-Dienst bezeichnet. Mit Frameworkfeatures können Sie Dienste erstellen, diese installieren, starten, beenden oder auch auf andere Weise deren Verhalten steuern.  
   
 > [!WARNING]
->  Die Windows-Dienstvorlage für C++ war nicht in Visual Studio 2010 enthalten. Um ein Windows-Dienst zu erstellen, können Sie entweder einen Dienst erstellen, in verwaltetem Code in Visual c# oder Visual Basic, die mit vorhandenen C++-Code ggf. zusammenarbeiten kann, oder Sie können einen Windows-Dienst in systemeigenem C++ erstellen, mit der [ATL-Projekt-Assistent](/cpp/atl/reference/atl-project-wizard).  
+>  Die Windows-Dienstvorlage für C++ war in Visual Studio 2010 nicht enthalten. Um einen Windows-Dienst zu erstellen, können Sie entweder einen Dienst in verwaltetem Code in Visual C# oder Visual Basic erstellen, der ggf. mit vorhandenem C++-Code zusammenarbeitet, oder Sie können über den [ATL-Projekt-Assistenten](/cpp/atl/reference/atl-project-wizard) einen Windows-Dienst in der nativen Sprache C++ erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- Bietet einen Überblick über die Windows-dienstanwendungen, die Lebensdauer von einem Dienst und dienstanwendungen wie von anderen gängigen Arten des Projekts zu unterscheiden.  
+ Stellt eine Übersicht von Windows-Dienstanwendungen bereit, wie die Lebensdauer eines Dienst und wie Dienstanwendungen sich von anderen häufigen Projekttypen unterscheiden  
   
  [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- Enthält ein Beispiel zum Erstellen eines Diensts in Visual Basic und Visual c#.  
+ Stellt ein Beispiel zur Erstellung eines Diensts in Visual Basic und Visual C# bereit  
   
  [Programmierarchitektur für Dienstanwendungen](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- Erläutert die Sprachelemente in der Programmierung verwendet.  
+ Erläutert die Sprachelemente, die in der Dienstprogrammierung verwendet werden  
   
  [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- Beschreibt den Prozess zum Erstellen und Konfigurieren von Windows-Diensten, die mit der Projektvorlage für Windows-Dienst.  
+ Beschreibt den Vorgang des Erstellens und Konfigurierens von Windows-Diensten über die Windows-Dienstprojektvorlage  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  <xref:System.ServiceProcess.ServiceBase>  
- Beschreibt die wichtigsten Features von der <xref:System.ServiceProcess.ServiceBase> -Klasse, die zum Erstellen von Diensten verwendet wird.  
+ Beschreibt die Hauptfeatures der <xref:System.ServiceProcess.ServiceBase>-Klasse, die zum Erstellen von Diensten verwendet wird  
   
  <xref:System.ServiceProcess.ServiceProcessInstaller>  
- Beschreibt die Funktionen von der <xref:System.ServiceProcess.ServiceProcessInstaller> Klasse, die zusammen mit verwendet wird die <xref:System.ServiceProcess.ServiceInstaller> -Klasse zum Installieren und Deinstallieren von Diensten.  
+ Beschreibt die Features der <xref:System.ServiceProcess.ServiceProcessInstaller>-Klasse, die zusammen mit der <xref:System.ServiceProcess.ServiceInstaller>-Klasse zum Installieren und Deinstallieren Ihrer Dienste verwendet wird  
   
  <xref:System.ServiceProcess.ServiceInstaller>  
- Beschreibt die Funktionen von der <xref:System.ServiceProcess.ServiceInstaller> Klasse, die zusammen mit verwendet wird die <xref:System.ServiceProcess.ServiceProcessInstaller> Klasse installieren und deinstallieren den Dienst.  
+ Beschreibt die Features der <xref:System.ServiceProcess.ServiceInstaller>-Klasse, die zusammen mit der <xref:System.ServiceProcess.ServiceProcessInstaller>-Klasse zum Installieren und Deinstallieren Ihres Diensts verwendet wird  
   
- [NIB Erstellen von Projekten aus Vorlagen](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
- Beschreibt die Typen, die in diesem Kapitel und wie Sie die Auswahl zwischen diesen verwendet.
+ [NIB: Erstellen von Projekten aus Vorlagen](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ Beschreibt die Projekttypen, die in diesem Kapitel verwendet werden und wie Sie aus Ihnen wählen

@@ -3,11 +3,11 @@ title: In Docker gehostete Microservices – C#
 description: Erfahren Sie, wie Sie ASP.NET Core-Dienste erstellen, die in Docker-Containern ausgeführt werden.
 ms.date: 02/03/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: eacfa87e465e5f7737dbd2bfc4c6a77ffc5531c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7428051c1d9a29ba98ca1f28288b3c50ea36ae1a
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>In Docker gehostete Microservices
 
@@ -237,7 +237,7 @@ WORKDIR /app
 
 # copy csproj and restore as distinct layers
 
-COPY WeatherMicroservice.csproj .
+COPY WeatherMicroService.csproj .
 RUN dotnet restore 
 
 # copy and build everything else
@@ -255,7 +255,7 @@ Dadurch wird die Projektdatei aus dem aktuellen Verzeichnis in die Docker-VM kop
 Die letzte Zeile der Datei führt die Anwendung aus:
 
 ```
-ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.0.0.0:5000"]
+ENTRYPOINT ["dotnet", "out/WeatherMicroService.dll", "--server.urls", "http://0.0.0.0:5000"]
 ```
 
 Auf diesen konfigurierten Port wird im `--server.urls`-Argument für `dotnet` in der letzten Zeile der Docker-Datei verwiesen. Der `ENTRYPOINT`-Befehl teilt Docker mit, welcher Befehl und welche Befehlszeilenoptionen den Dienst starten. 

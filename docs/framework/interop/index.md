@@ -1,5 +1,5 @@
 ---
-title: Interoperation mit nicht verwaltetem code
+title: Interoperabilität mit nicht verwaltetem Code
 ms.date: 01/17/2018
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -14,11 +14,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
 ---
-# <a name="interoperating-with-unmanaged-code"></a>Interoperation mit nicht verwaltetem code
+# <a name="interoperating-with-unmanaged-code"></a>Interoperabilität mit nicht verwaltetem Code
 
 .NET Framework stuft die Interaktion mit COM-Komponenten, COM+-Diensten, externen Typbibliotheken und vielen Betriebssystemdiensten herauf. Datentypen, Methodensignaturen und Mechanismen zur Behandlung von Fehlern variieren zwischen verwalteten und nicht verwalteten Objektmodellen. Um die Interoperation zwischen .NET Framework-Komponenten und nicht verwaltetem Code sowie den Migrationspfad zu vereinfachen, verbirgt die Common Language Runtime die Unterschiede in diesen Objektmodellen vor jeweils Clients und Servern.
 
@@ -42,19 +42,19 @@ Beschreibt das Marshalling für COM-Interop sowie Plattformaufruf
 Beschreibt die Zuordnung zwischen Ausnahmen und HRESULTs
 
 [COM-Wrapper](com-wrappers.md)  
-Beschreibt die gebotenen COM-Interop-Wrapper.
+Beschreibt die von COM-Interop bereitgestellten Wrapper
 
 [Typäquivalenz und eingebettete Interop-Typen](type-equivalence-and-embedded-interop-types.md)  
-Beschreibt, wie die Typinformationen für COM-Typen in Assemblys eingebettet ist, und wie die common Language Runtime die Äquivalenz von eingebetteten COM-Typen bestimmt.
+Beschreibt, wie die Typinformation für COM-Typen in Assemblys eingebettet wird und wie die Common Language Runtime die Äquivalenz von eingebetteten COM-Typen bestimmt
 
 [Gewusst wie: Generieren primärer Interop-Assemblys mit "Tlbimp.exe"](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-Beschreibt, wie primäre Interop-Assemblys mit erzeugen *Tlbimp.exe* (Type Library Importer-Tool).
+Beschreibt, wie primäre Interop-Assemblys mit *Tlbimp.exe* (Type Library Importer-Tool) erstellt werden
 
 [Gewusst wie: Registrieren primärer Interop-Assemblys](how-to-register-primary-interop-assemblies.md)  
-Beschreibt, wie die primäre Interop-Assemblys zu registrieren, bevor Sie sie in Ihren Projekten verweisen können.
+Beschreibt, wie die primären Interop-Assemblys registriert werden, bevor Sie in Ihren Projekten auf diese verweisen können
 
 [COM-Interop ohne Registrierung](registration-free-com-interop.md)  
-Beschreibt, wie COM-Interop Komponenten ohne Verwendung der Windows-Registrierungs aktivieren kann.
+Beschreibt, wie COM-Interop Komponenten aktivieren kann, ohne die Windows-Registrierung zu verwenden
 
 [Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung](configure-net-framework-based-com-components-for-reg.md)  
-Beschreibt, wie Sie ein Anwendungsmanifest erstellen und das Erstellen und Einbetten eines Komponentenmanifests.
+Beschreibt, wie ein Anwendungsmanifest erstellt wird und wie ein Komponentenmanifest erstellt und eingebettet wird

@@ -2,11 +2,11 @@
 title: Auflistungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 85cbabf74a702a4d6442a29c3cf3d7b726ab38da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7400d4eee4df99cb1e255e428f83028fddf481f4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="collections-c"></a>Auflistungen (C#)
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.  
@@ -460,7 +460,7 @@ public class Car : IComparable<Car>
   
 <a name="BKMK_CustomCollection"></a>
 ## <a name="defining-a-custom-collection"></a>Definieren einer benutzerdefinierten Auflistung  
- Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Collections.IEnumerable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter [Vorgehensweise: Zugreifen auf Auflistungsklassen mit Foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).  
+ Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Collections.IEnumerable>-Schnittstelle implementieren.  
   
  Sie können zwar eine benutzerdefinierte Auflistung definieren, in der Regel ist es aber besser, die in .NET Framework enthaltenen Auflistungen zu verwenden. Diese werden unter [Arten von Auflistungen](#BKMK_KindsOfCollections) weiter oben in diesem Thema beschrieben.  
   
@@ -585,4 +585,3 @@ private static IEnumerable<int> EvenSequence(
  [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)  
  [Vergleiche und Sortierungen innerhalb von Auflistungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)  
- [Gewusst wie: Zugreifen auf Sammlungsklassen mit foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)
