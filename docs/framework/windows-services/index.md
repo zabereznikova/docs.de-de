@@ -1,14 +1,6 @@
 ---
 title: Entwickeln von Windows-Dienstanwendungen
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ServiceInstaller class, Windows Service applications
 - Service class, Windows Service applications
@@ -18,46 +10,42 @@ helpviewer_keywords:
 - services
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
-caps.latest.revision: 18
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc01c836daa73b1a39ceab0b523791b6a520dc70
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: af6e4bf7697b3139f6809295737fdd0d90b7f013
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="developing-windows-service-applications"></a><span data-ttu-id="f48ca-102">Entwickeln von Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="f48ca-102">Developing Windows Service Applications</span></span>
-<span data-ttu-id="f48ca-103">Mithilfe von Microsoft Visual Studio oder Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, Sie Dienste können problemlos erstellt durch das Erstellen einer Anwendung, die als Dienst installiert ist.</span><span class="sxs-lookup"><span data-stu-id="f48ca-103">Using Microsoft Visual Studio or the Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, you can easily create services by creating an application that is installed as a service.</span></span> <span data-ttu-id="f48ca-104">Diese Art von Anwendung wird einen Windows-Dienst aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="f48ca-104">This type of application is called a Windows service.</span></span> <span data-ttu-id="f48ca-105">Framework-Funktionen können Sie Dienste erstellen, zu installieren und starten, beenden und Steuern des Verhaltens.</span><span class="sxs-lookup"><span data-stu-id="f48ca-105">With framework features, you can create services, install them, and start, stop, and otherwise control their behavior.</span></span>  
+# <a name="developing-windows-service-applications"></a><span data-ttu-id="6191a-102">Entwickeln von Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="6191a-102">Developing Windows Service Applications</span></span>
+<span data-ttu-id="6191a-103">Über Microsoft Visual Studio oder das Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK können Dienste problemlos erstellt werden, indem eine Anwendung erstellt und als Dienst installiert wird.</span><span class="sxs-lookup"><span data-stu-id="6191a-103">Using Microsoft Visual Studio or the Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, you can easily create services by creating an application that is installed as a service.</span></span> <span data-ttu-id="6191a-104">Dieser Anwendungstyp wird als Windows-Dienst bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="6191a-104">This type of application is called a Windows service.</span></span> <span data-ttu-id="6191a-105">Mit Frameworkfeatures können Sie Dienste erstellen, diese installieren, starten, beenden oder auch auf andere Weise deren Verhalten steuern.</span><span class="sxs-lookup"><span data-stu-id="6191a-105">With framework features, you can create services, install them, and start, stop, and otherwise control their behavior.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="f48ca-106">Die Windows-Dienstvorlage für C++ war nicht in Visual Studio 2010 enthalten.</span><span class="sxs-lookup"><span data-stu-id="f48ca-106">The Windows service template for C++ was not included in Visual Studio 2010.</span></span> <span data-ttu-id="f48ca-107">Um ein Windows-Dienst zu erstellen, können Sie entweder einen Dienst erstellen, in verwaltetem Code in Visual c# oder Visual Basic, die mit vorhandenen C++-Code ggf. zusammenarbeiten kann, oder Sie können einen Windows-Dienst in systemeigenem C++ erstellen, mit der [ATL-Projekt-Assistent](/cpp/atl/reference/atl-project-wizard).</span><span class="sxs-lookup"><span data-stu-id="f48ca-107">To create a Windows service, you can either create a service in managed code in Visual C# or Visual Basic, which could interoperate with existing C++ code if required, or you can create a Windows service in native C++ by using the [ATL Project Wizard](/cpp/atl/reference/atl-project-wizard).</span></span>  
+>  <span data-ttu-id="6191a-106">Die Windows-Dienstvorlage für C++ war in Visual Studio 2010 nicht enthalten.</span><span class="sxs-lookup"><span data-stu-id="6191a-106">The Windows service template for C++ was not included in Visual Studio 2010.</span></span> <span data-ttu-id="6191a-107">Um einen Windows-Dienst zu erstellen, können Sie entweder einen Dienst in verwaltetem Code in Visual C# oder Visual Basic erstellen, der ggf. mit vorhandenem C++-Code zusammenarbeitet, oder Sie können über den [ATL-Projekt-Assistenten](/cpp/atl/reference/atl-project-wizard) einen Windows-Dienst in der nativen Sprache C++ erstellen.</span><span class="sxs-lookup"><span data-stu-id="6191a-107">To create a Windows service, you can either create a service in managed code in Visual C# or Visual Basic, which could interoperate with existing C++ code if required, or you can create a Windows service in native C++ by using the [ATL Project Wizard](/cpp/atl/reference/atl-project-wizard).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f48ca-108">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="f48ca-108">In This Section</span></span>  
- [<span data-ttu-id="f48ca-109">Einführung in Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="f48ca-109">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- <span data-ttu-id="f48ca-110">Bietet einen Überblick über die Windows-dienstanwendungen, die Lebensdauer von einem Dienst und dienstanwendungen wie von anderen gängigen Arten des Projekts zu unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="f48ca-110">Provides an overview of Windows service applications, the lifetime of a service, and how service applications differ from other common project types.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="6191a-108">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="6191a-108">In This Section</span></span>  
+ [<span data-ttu-id="6191a-109">Einführung in Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="6191a-109">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ <span data-ttu-id="6191a-110">Stellt eine Übersicht von Windows-Dienstanwendungen bereit, wie die Lebensdauer eines Dienst und wie Dienstanwendungen sich von anderen häufigen Projekttypen unterscheiden</span><span class="sxs-lookup"><span data-stu-id="6191a-110">Provides an overview of Windows service applications, the lifetime of a service, and how service applications differ from other common project types.</span></span>  
   
- [<span data-ttu-id="f48ca-111">Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer</span><span class="sxs-lookup"><span data-stu-id="f48ca-111">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- <span data-ttu-id="f48ca-112">Enthält ein Beispiel zum Erstellen eines Diensts in Visual Basic und Visual c#.</span><span class="sxs-lookup"><span data-stu-id="f48ca-112">Provides an example of creating a service in Visual Basic and Visual C#.</span></span>  
+ [<span data-ttu-id="6191a-111">Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer</span><span class="sxs-lookup"><span data-stu-id="6191a-111">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ <span data-ttu-id="6191a-112">Stellt ein Beispiel zur Erstellung eines Diensts in Visual Basic und Visual C# bereit</span><span class="sxs-lookup"><span data-stu-id="6191a-112">Provides an example of creating a service in Visual Basic and Visual C#.</span></span>  
   
- [<span data-ttu-id="f48ca-113">Programmierarchitektur für Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="f48ca-113">Service Application Programming Architecture</span></span>](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- <span data-ttu-id="f48ca-114">Erläutert die Sprachelemente in der Programmierung verwendet.</span><span class="sxs-lookup"><span data-stu-id="f48ca-114">Explains the language elements used in service programming.</span></span>  
+ [<span data-ttu-id="6191a-113">Programmierarchitektur für Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="6191a-113">Service Application Programming Architecture</span></span>](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
+ <span data-ttu-id="6191a-114">Erläutert die Sprachelemente, die in der Dienstprogrammierung verwendet werden</span><span class="sxs-lookup"><span data-stu-id="6191a-114">Explains the language elements used in service programming.</span></span>  
   
- [<span data-ttu-id="f48ca-115">Vorgehensweise: Erstellen von Windows-Diensten</span><span class="sxs-lookup"><span data-stu-id="f48ca-115">How to: Create Windows Services</span></span>](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- <span data-ttu-id="f48ca-116">Beschreibt den Prozess zum Erstellen und Konfigurieren von Windows-Diensten, die mit der Projektvorlage für Windows-Dienst.</span><span class="sxs-lookup"><span data-stu-id="f48ca-116">Describes the process of creating and configuring Windows services using the Windows service project template.</span></span>  
+ [<span data-ttu-id="6191a-115">Vorgehensweise: Erstellen von Windows-Diensten</span><span class="sxs-lookup"><span data-stu-id="6191a-115">How to: Create Windows Services</span></span>](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ <span data-ttu-id="6191a-116">Beschreibt den Vorgang des Erstellens und Konfigurierens von Windows-Diensten über die Windows-Dienstprojektvorlage</span><span class="sxs-lookup"><span data-stu-id="6191a-116">Describes the process of creating and configuring Windows services using the Windows service project template.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="f48ca-117">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="f48ca-117">Related Sections</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="6191a-117">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="6191a-117">Related Sections</span></span>  
  <xref:System.ServiceProcess.ServiceBase>  
- <span data-ttu-id="f48ca-118">Beschreibt die wichtigsten Features von der <xref:System.ServiceProcess.ServiceBase> -Klasse, die zum Erstellen von Diensten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="f48ca-118">Describes the major features of the <xref:System.ServiceProcess.ServiceBase> class, which is used to create services.</span></span>  
+ <span data-ttu-id="6191a-118">Beschreibt die Hauptfeatures der <xref:System.ServiceProcess.ServiceBase>-Klasse, die zum Erstellen von Diensten verwendet wird</span><span class="sxs-lookup"><span data-stu-id="6191a-118">Describes the major features of the <xref:System.ServiceProcess.ServiceBase> class, which is used to create services.</span></span>  
   
  <xref:System.ServiceProcess.ServiceProcessInstaller>  
- <span data-ttu-id="f48ca-119">Beschreibt die Funktionen von der <xref:System.ServiceProcess.ServiceProcessInstaller> Klasse, die zusammen mit verwendet wird die <xref:System.ServiceProcess.ServiceInstaller> -Klasse zum Installieren und Deinstallieren von Diensten.</span><span class="sxs-lookup"><span data-stu-id="f48ca-119">Describes the features of the <xref:System.ServiceProcess.ServiceProcessInstaller> class, which is used along with the <xref:System.ServiceProcess.ServiceInstaller> class to install and uninstall your services.</span></span>  
+ <span data-ttu-id="6191a-119">Beschreibt die Features der <xref:System.ServiceProcess.ServiceProcessInstaller>-Klasse, die zusammen mit der <xref:System.ServiceProcess.ServiceInstaller>-Klasse zum Installieren und Deinstallieren Ihrer Dienste verwendet wird</span><span class="sxs-lookup"><span data-stu-id="6191a-119">Describes the features of the <xref:System.ServiceProcess.ServiceProcessInstaller> class, which is used along with the <xref:System.ServiceProcess.ServiceInstaller> class to install and uninstall your services.</span></span>  
   
  <xref:System.ServiceProcess.ServiceInstaller>  
- <span data-ttu-id="f48ca-120">Beschreibt die Funktionen von der <xref:System.ServiceProcess.ServiceInstaller> Klasse, die zusammen mit verwendet wird die <xref:System.ServiceProcess.ServiceProcessInstaller> Klasse installieren und deinstallieren den Dienst.</span><span class="sxs-lookup"><span data-stu-id="f48ca-120">Describes the features of the <xref:System.ServiceProcess.ServiceInstaller> class, which is used along with the <xref:System.ServiceProcess.ServiceProcessInstaller> class to install and uninstall your service.</span></span>  
+ <span data-ttu-id="6191a-120">Beschreibt die Features der <xref:System.ServiceProcess.ServiceInstaller>-Klasse, die zusammen mit der <xref:System.ServiceProcess.ServiceProcessInstaller>-Klasse zum Installieren und Deinstallieren Ihres Diensts verwendet wird</span><span class="sxs-lookup"><span data-stu-id="6191a-120">Describes the features of the <xref:System.ServiceProcess.ServiceInstaller> class, which is used along with the <xref:System.ServiceProcess.ServiceProcessInstaller> class to install and uninstall your service.</span></span>  
   
- [<span data-ttu-id="f48ca-121">NIB Erstellen von Projekten aus Vorlagen</span><span class="sxs-lookup"><span data-stu-id="f48ca-121">NIB Creating Projects from Templates</span></span>](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
- <span data-ttu-id="f48ca-122">Beschreibt die Typen, die in diesem Kapitel und wie Sie die Auswahl zwischen diesen verwendet.</span><span class="sxs-lookup"><span data-stu-id="f48ca-122">Describes the projects types used in this chapter and how to choose between them.</span></span>
+ [<span data-ttu-id="6191a-121">NIB: Erstellen von Projekten aus Vorlagen</span><span class="sxs-lookup"><span data-stu-id="6191a-121">NIB Creating Projects from Templates</span></span>](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ <span data-ttu-id="6191a-122">Beschreibt die Projekttypen, die in diesem Kapitel verwendet werden und wie Sie aus Ihnen wählen</span><span class="sxs-lookup"><span data-stu-id="6191a-122">Describes the projects types used in this chapter and how to choose between them.</span></span>
