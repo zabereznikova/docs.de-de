@@ -7,11 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 24d0f1366a8e4309bbfb5b548af7407de50eaf76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483472"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017
 
@@ -24,12 +25,12 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü des Projektmappenknotens **ClassLibraryProject**, und wählen Sie **Hinzufügen** > **Neues Projekt** aus.
 
-1. Klicken Sie auf den Knoten **Visual C#** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **Komponententestprojekt (.NET Core)**. Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
+1. Klicken Sie auf den Knoten **Visual C#** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **MSTest-Testprojekt (.NET Core)**. Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
 
    ![Dialogfeld „Neues Projekt hinzufügen“](./media/testing-library-with-visual-studio/testproject.png)
 
    > [!NOTE]  
-   > Neben einem Komponententestprojekt können Sie auch Visual Studio verwenden, um ein xUnit-Testprojekt für .NET Core zu erstellen.
+   > Neben einem MSTest-Testprojekt können Sie auch Visual Studio verwenden, um ein xUnit-Testprojekt für .NET Core zu erstellen.
 
 1. Visual Studio erstellt das Projekt und öffnet die *UnitTest1.cs*-Datei im Codefenster.
 
@@ -53,12 +54,12 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü des Projektmappenknotens **ClassLibraryProject**, und wählen Sie **Hinzufügen** > **Neues Projekt** aus.
 
-1. Klicken Sie auf den Knoten **Visual Basic** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **Komponententestprojekt (.NET Core)**. Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
+1. Klicken Sie auf den Knoten **Visual Basic** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **MSTest-Testprojekt (.NET Core)**. Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
 
    ![Dialogfeld „Neues Projekt hinzufügen“](./media/testing-library-with-visual-studio/vb-testproject.png)
 
    > [!NOTE]  
-   > Neben einem Komponententestprojekt können Sie auch Visual Studio verwenden, um ein xUnit-Testprojekt für .NET Core zu erstellen.
+   > Neben einem MSTest-Testprojekt können Sie auch Visual Studio verwenden, um ein xUnit-Testprojekt für .NET Core zu erstellen.
 
 1. Visual Studio erstellt das Projekt und öffnet die *UnitTest1.vb*-Datei im Codefenster.
 

@@ -4,11 +4,12 @@ description: Unterstützte Versionen von Linux-Versionen und .NET Core-Abhängig
 author: jralexander
 ms.author: johalex
 ms.date: 05/08/2018
-ms.openlocfilehash: 41656bf8f18c2b66c35f0a65e4af0949db4464f9
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 4890f682ee2d0b55dc5059d8f1d3091def07a8a5
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483501"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Voraussetzungen für .NET Core unter Linux
 
@@ -65,29 +66,36 @@ Bei folgenden Paketen handelt es sich um Beispiele. Die exakten Versionen und Na
 
 Für Ubuntu-Verteilungen ist die Installation der folgenden Bibliotheken erforderlich:
 
-* libunwind8
 * liblttng-ust0
 * libcurl3
 * libssl1.0.0
-* libuuid1
 * libkrb5-3
 * zlib1g
 * libicu52 (für 14.X)
 * libicu55 (für 16.X)
 * libicu57 (für 17.X)
+* libicu60 (für 18.X)
+
+Für Versionen vor .NET Core 2.1 sind außerdem folgende Abhängigkeiten erforderlich:
+
+* libunwind8
+* libuuid1
 
 ### <a name="centos"></a>CentOS
 
 Für CentOS-Verteilungen ist die Installation der folgenden Bibliotheken erforderlich:
 
-* libunwind
 * lttng-ust
 * libcurl
 * openssl-libs
-* libuuid
 * krb5-libs
 * libicu
 * zlib
+
+Für Versionen vor .NET Core 2.1 sind außerdem folgende Abhängigkeiten erforderlich:
+
+* libunwind
+* libuuid
 
 Weitere Informationen zu den Abhängigkeiten finden Sie unter [Self contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) (Eigenständige Linux-Anwendungen).
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410019"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (verwaltetes, profilgesteuertes Optimierungstool)
 Das verwaltete, profilgesteuerte Optimierungstool (Managed, Profile Guides Optimization Tool, Mpgo.exe) ist ein Befehlszeilentool, das allgemeine Endbenutzerszenarios verwendet, um die vom [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) erstellten Assemblys nativer Bilder zu optimieren. Mit diesem Tool können Sie Aus- und Weiterbildungsszenarien ausführen, die Profildaten generieren. Der [Native Image Generator (Ngen.exe) ](../../../docs/framework/tools/ngen-exe-native-image-generator.md) verwendet diese Daten, um die generierten Anwendungsassemblys nativer Bilder zu optimieren. Ein Aus- und Weiterbildungsszenario ist die Testausführung einer erwarteten Nutzung Ihrer Anwendung. Mpgo.exe ist in Visual Studio Ultimate 2012 und höheren Versionen verfügbar. Ab [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] können Sie Mpgo.exe auch zum Optimieren von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden.  
