@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Programmgesteuertes Schreiben von Diensten'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,74 +8,72 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-caps.latest.revision: "21"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: cdb9c7bba564b71bfba86076218e48610cf73076
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 99fd44723bba21127e2a5e0ba3e9bfc4b90b52d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513285"
 ---
-# <a name="how-to-write-services-programmatically"></a><span data-ttu-id="a2238-102">Gewusst wie: Programmgesteuertes Schreiben von Diensten</span><span class="sxs-lookup"><span data-stu-id="a2238-102">How to: Write Services Programmatically</span></span>
-<span data-ttu-id="a2238-103">Wenn Sie nicht die Projektvorlage Windows-Dienst verwenden möchten, können Sie durch Einrichten der Vererbung und anderer Infrastrukturelemente eigene Dienste schreiben.</span><span class="sxs-lookup"><span data-stu-id="a2238-103">If you choose not to use the Windows Service project template, you can write your own services by setting up the inheritance and other infrastructure elements yourself.</span></span> <span data-ttu-id="a2238-104">Sobald Sie einen Dienst programmgesteuert erstellen, müssen sie mehrere Schritte ausführen, die andernfalls von der Vorlage behandelt würden:</span><span class="sxs-lookup"><span data-stu-id="a2238-104">When you create a service programmatically, you must perform several steps that the template would otherwise handle for you:</span></span>  
+# <a name="how-to-write-services-programmatically"></a><span data-ttu-id="411e4-102">Gewusst wie: Programmgesteuertes Schreiben von Diensten</span><span class="sxs-lookup"><span data-stu-id="411e4-102">How to: Write Services Programmatically</span></span>
+<span data-ttu-id="411e4-103">Wenn Sie nicht die Projektvorlage Windows-Dienst verwenden möchten, können Sie durch Einrichten der Vererbung und anderer Infrastrukturelemente eigene Dienste schreiben.</span><span class="sxs-lookup"><span data-stu-id="411e4-103">If you choose not to use the Windows Service project template, you can write your own services by setting up the inheritance and other infrastructure elements yourself.</span></span> <span data-ttu-id="411e4-104">Sobald Sie einen Dienst programmgesteuert erstellen, müssen sie mehrere Schritte ausführen, die andernfalls von der Vorlage behandelt würden:</span><span class="sxs-lookup"><span data-stu-id="411e4-104">When you create a service programmatically, you must perform several steps that the template would otherwise handle for you:</span></span>  
   
--   <span data-ttu-id="a2238-105">Sie müssen die Dienstklasse einrichten, damit sie von der <xref:System.ServiceProcess.ServiceBase>-Klasse erbt.</span><span class="sxs-lookup"><span data-stu-id="a2238-105">You must set up your service class to inherit from the <xref:System.ServiceProcess.ServiceBase> class.</span></span>  
+-   <span data-ttu-id="411e4-105">Sie müssen die Dienstklasse einrichten, damit sie von der <xref:System.ServiceProcess.ServiceBase>-Klasse erbt.</span><span class="sxs-lookup"><span data-stu-id="411e4-105">You must set up your service class to inherit from the <xref:System.ServiceProcess.ServiceBase> class.</span></span>  
   
--   <span data-ttu-id="a2238-106">Sie müssen für das Dienstprojekt eine `Main`-Methode erstellen, von der die auszuführenden Dienste festgelegt werden. Des Weiteren muss von ihr die <xref:System.ServiceProcess.ServiceBase.Run%2A>-Methode für die Dienste aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="a2238-106">You must create a `Main` method for your service project that defines the services to run and calls the <xref:System.ServiceProcess.ServiceBase.Run%2A> method on them.</span></span>  
+-   <span data-ttu-id="411e4-106">Sie müssen für das Dienstprojekt eine `Main`-Methode erstellen, von der die auszuführenden Dienste festgelegt werden. Des Weiteren muss von ihr die <xref:System.ServiceProcess.ServiceBase.Run%2A>-Methode für die Dienste aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="411e4-106">You must create a `Main` method for your service project that defines the services to run and calls the <xref:System.ServiceProcess.ServiceBase.Run%2A> method on them.</span></span>  
   
--   <span data-ttu-id="a2238-107">Sie müssen die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Prozedur und die <xref:System.ServiceProcess.ServiceBase.OnStop%2A>-Prozedur überschreiben und den Code einfügen, den diese ausführen sollen.</span><span class="sxs-lookup"><span data-stu-id="a2238-107">You must override the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> procedures and fill in any code you want them to run.</span></span>  
+-   <span data-ttu-id="411e4-107">Sie müssen die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Prozedur und die <xref:System.ServiceProcess.ServiceBase.OnStop%2A>-Prozedur überschreiben und den Code einfügen, den diese ausführen sollen.</span><span class="sxs-lookup"><span data-stu-id="411e4-107">You must override the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> procedures and fill in any code you want them to run.</span></span>  
   
-### <a name="to-write-a-service-programmatically"></a><span data-ttu-id="a2238-108">So schreiben Sie einen Dienst programmgesteuert</span><span class="sxs-lookup"><span data-stu-id="a2238-108">To write a service programmatically</span></span>  
+### <a name="to-write-a-service-programmatically"></a><span data-ttu-id="411e4-108">So schreiben Sie einen Dienst programmgesteuert</span><span class="sxs-lookup"><span data-stu-id="411e4-108">To write a service programmatically</span></span>  
   
-1.  <span data-ttu-id="a2238-109">Erstellen Sie ein leeres Projekt und einen Verweis auf die notwendigen Namespaces, indem Sie die folgenden Schritte ausführen:</span><span class="sxs-lookup"><span data-stu-id="a2238-109">Create an empty project and create a reference to the necessary namespaces by following these steps:</span></span>  
+1.  <span data-ttu-id="411e4-109">Erstellen Sie ein leeres Projekt und einen Verweis auf die notwendigen Namespaces, indem Sie die folgenden Schritte ausführen:</span><span class="sxs-lookup"><span data-stu-id="411e4-109">Create an empty project and create a reference to the necessary namespaces by following these steps:</span></span>  
   
-    1.  <span data-ttu-id="a2238-110">In **Projektmappen-Explorer**, mit der rechten Maustaste die **Verweise** Knoten, und klicken Sie auf **Verweis hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="a2238-110">In **Solution Explorer**, right-click the **References** node and click **Add Reference**.</span></span>  
+    1.  <span data-ttu-id="411e4-110">Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="411e4-110">In **Solution Explorer**, right-click the **References** node and click **Add Reference**.</span></span>  
   
-    2.  <span data-ttu-id="a2238-111">Auf der **.NET Framework** Registerkarte, einen Bildlauf zu **"System.dll"** , und klicken Sie auf **wählen**.</span><span class="sxs-lookup"><span data-stu-id="a2238-111">On the **.NET Framework** tab, scroll to **System.dll** and click **Select**.</span></span>  
+    2.  <span data-ttu-id="411e4-111">Führen Sie auf der Registerkarte **.NET Framework** einen Bildlauf zu **System.dll** durch, und klicken Sie auf **Auswählen**.</span><span class="sxs-lookup"><span data-stu-id="411e4-111">On the **.NET Framework** tab, scroll to **System.dll** and click **Select**.</span></span>  
   
-    3.  <span data-ttu-id="a2238-112">Führen Sie einen Bildlauf zum **System.ServiceProcess.dll** , und klicken Sie auf **wählen**.</span><span class="sxs-lookup"><span data-stu-id="a2238-112">Scroll to **System.ServiceProcess.dll** and click **Select**.</span></span>  
+    3.  <span data-ttu-id="411e4-112">Führen Sie einen Bildlauf zu **System.ServiceProcess.dll** durch, und klicken Sie auf **Auswählen**.</span><span class="sxs-lookup"><span data-stu-id="411e4-112">Scroll to **System.ServiceProcess.dll** and click **Select**.</span></span>  
   
-    4.  <span data-ttu-id="a2238-113">Klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="a2238-113">Click **OK**.</span></span>  
+    4.  <span data-ttu-id="411e4-113">Klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="411e4-113">Click **OK**.</span></span>  
   
-2.  <span data-ttu-id="a2238-114">Fügen Sie eine Klasse hinzu, und konfigurieren Sie diese, damit sie von <xref:System.ServiceProcess.ServiceBase> erbt:</span><span class="sxs-lookup"><span data-stu-id="a2238-114">Add a class and configure it to inherit from <xref:System.ServiceProcess.ServiceBase>:</span></span>  
+2.  <span data-ttu-id="411e4-114">Fügen Sie eine Klasse hinzu, und konfigurieren Sie diese, damit sie von <xref:System.ServiceProcess.ServiceBase> erbt:</span><span class="sxs-lookup"><span data-stu-id="411e4-114">Add a class and configure it to inherit from <xref:System.ServiceProcess.ServiceBase>:</span></span>  
   
      [!code-csharp[VbRadconService#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#7)]
      [!code-vb[VbRadconService#7](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#7)]  
   
-3.  <span data-ttu-id="a2238-115">Konfigurieren Sie die Dienstklasse, indem Sie folgenden Code hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="a2238-115">Add the following code to configure your service class:</span></span>  
+3.  <span data-ttu-id="411e4-115">Konfigurieren Sie die Dienstklasse, indem Sie folgenden Code hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="411e4-115">Add the following code to configure your service class:</span></span>  
   
      [!code-csharp[VbRadconService#8](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#8)]
      [!code-vb[VbRadconService#8](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#8)]  
   
-4.  <span data-ttu-id="a2238-116">Erstellen Sie für die Klasse eine `Main`-Methode, und verwenden Sie diese zum Definieren des Diensts, den diese Klasse enthält. `userService1` ist der Name der Klasse:</span><span class="sxs-lookup"><span data-stu-id="a2238-116">Create a `Main` method for your class, and use it to define the service your class will contain; `userService1` is the name of the class:</span></span>  
+4.  <span data-ttu-id="411e4-116">Erstellen Sie für die Klasse eine `Main`-Methode, und verwenden Sie diese zum Definieren des Diensts, den diese Klasse enthält. `userService1` ist der Name der Klasse:</span><span class="sxs-lookup"><span data-stu-id="411e4-116">Create a `Main` method for your class, and use it to define the service your class will contain; `userService1` is the name of the class:</span></span>  
   
      [!code-csharp[VbRadconService#9](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#9)]
      [!code-vb[VbRadconService#9](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#9)]  
   
-5.  <span data-ttu-id="a2238-117">Überschreiben Sie die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode, und definieren Sie die Verarbeitung beim Starten des Diensts.</span><span class="sxs-lookup"><span data-stu-id="a2238-117">Override the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, and define any processing you want to occur when your service is started.</span></span>  
+5.  <span data-ttu-id="411e4-117">Überschreiben Sie die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode, und definieren Sie die Verarbeitung beim Starten des Diensts.</span><span class="sxs-lookup"><span data-stu-id="411e4-117">Override the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, and define any processing you want to occur when your service is started.</span></span>  
   
      [!code-csharp[VbRadconService#10](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#10)]
      [!code-vb[VbRadconService#10](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#10)]  
   
-6.  <span data-ttu-id="a2238-118">Überschreiben sie alle anderen Methoden, für die Sie benutzerdefinierte Verarbeitung definieren möchten. Schreiben Sie Code, mit dem Sie bestimmen, welche Aktionen vom Dienst in den einzelnen Fällen ausgeführt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="a2238-118">Override any other methods you want to define custom processing for, and write code to determine the actions the service should take in each case.</span></span>  
+6.  <span data-ttu-id="411e4-118">Überschreiben sie alle anderen Methoden, für die Sie benutzerdefinierte Verarbeitung definieren möchten. Schreiben Sie Code, mit dem Sie bestimmen, welche Aktionen vom Dienst in den einzelnen Fällen ausgeführt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="411e4-118">Override any other methods you want to define custom processing for, and write code to determine the actions the service should take in each case.</span></span>  
   
-7.  <span data-ttu-id="a2238-119">Fügen Sie die für die Dienstanwendung erforderlichen Installationsprogramme hinzu.</span><span class="sxs-lookup"><span data-stu-id="a2238-119">Add the necessary installers for your service application.</span></span> <span data-ttu-id="a2238-120">Weitere Informationen finden Sie unter [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span><span class="sxs-lookup"><span data-stu-id="a2238-120">For more information, see [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>  
+7.  <span data-ttu-id="411e4-119">Fügen Sie die für die Dienstanwendung erforderlichen Installationsprogramme hinzu.</span><span class="sxs-lookup"><span data-stu-id="411e4-119">Add the necessary installers for your service application.</span></span> <span data-ttu-id="411e4-120">Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span><span class="sxs-lookup"><span data-stu-id="411e4-120">For more information, see [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>  
   
-8.  <span data-ttu-id="a2238-121">Erstellen Sie das Projekt, indem Sie auswählen **Projektmappe** aus der **erstellen** Menü.</span><span class="sxs-lookup"><span data-stu-id="a2238-121">Build your project by selecting **Build Solution** from the **Build** menu.</span></span>  
+8.  <span data-ttu-id="411e4-121">Erstellen Sie das Projekt, indem Sie im Menü **Erstellen** den Befehl **Projektmappe erstellen** auswählen.</span><span class="sxs-lookup"><span data-stu-id="411e4-121">Build your project by selecting **Build Solution** from the **Build** menu.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="a2238-122">Drücken Sie nicht F5, um das Projekt auszuführen. Dienstprojekte können auf diese Weise nicht ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="a2238-122">Do not press F5 to run your project — you cannot run a service project in this way.</span></span>  
+    >  <span data-ttu-id="411e4-122">Drücken Sie nicht F5, um das Projekt auszuführen. Dienstprojekte können auf diese Weise nicht ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="411e4-122">Do not press F5 to run your project — you cannot run a service project in this way.</span></span>  
   
-9. <span data-ttu-id="a2238-123">Erstellen Sie ein Setup-Projekt und die benutzerdefinierten Aktionen, um den Dienst zu installieren.</span><span class="sxs-lookup"><span data-stu-id="a2238-123">Create a setup project and the custom actions to install your service.</span></span> <span data-ttu-id="a2238-124">Ein Beispiel finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).</span><span class="sxs-lookup"><span data-stu-id="a2238-124">For an example, see [Walkthrough: Creating a Windows Service Application in the Component Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).</span></span>  
+9. <span data-ttu-id="411e4-123">Erstellen Sie ein Setup-Projekt und die benutzerdefinierten Aktionen, um den Dienst zu installieren.</span><span class="sxs-lookup"><span data-stu-id="411e4-123">Create a setup project and the custom actions to install your service.</span></span> <span data-ttu-id="411e4-124">Ein Beispiel hierzu finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).</span><span class="sxs-lookup"><span data-stu-id="411e4-124">For an example, see [Walkthrough: Creating a Windows Service Application in the Component Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).</span></span>  
   
-10. <span data-ttu-id="a2238-125">Installieren Sie den Dienst.</span><span class="sxs-lookup"><span data-stu-id="a2238-125">Install the service.</span></span> <span data-ttu-id="a2238-126">Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="a2238-126">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>  
+10. <span data-ttu-id="411e4-125">Installieren Sie den Dienst.</span><span class="sxs-lookup"><span data-stu-id="411e4-125">Install the service.</span></span> <span data-ttu-id="411e4-126">Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="411e4-126">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2238-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a2238-127">See Also</span></span>  
- [<span data-ttu-id="a2238-128">Einführung in Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="a2238-128">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [<span data-ttu-id="a2238-129">Vorgehensweise: Erstellen von Windows-Diensten</span><span class="sxs-lookup"><span data-stu-id="a2238-129">How to: Create Windows Services</span></span>](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [<span data-ttu-id="a2238-130">Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung</span><span class="sxs-lookup"><span data-stu-id="a2238-130">How to: Add Installers to Your Service Application</span></span>](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [<span data-ttu-id="a2238-131">Vorgehensweise: Protokollinformationen über Dienste</span><span class="sxs-lookup"><span data-stu-id="a2238-131">How to: Log Information About Services</span></span>](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [<span data-ttu-id="a2238-132">Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer</span><span class="sxs-lookup"><span data-stu-id="a2238-132">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+## <a name="see-also"></a><span data-ttu-id="411e4-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="411e4-127">See Also</span></span>  
+ [<span data-ttu-id="411e4-128">Einführung in Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="411e4-128">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [<span data-ttu-id="411e4-129">Vorgehensweise: Erstellen von Windows-Diensten</span><span class="sxs-lookup"><span data-stu-id="411e4-129">How to: Create Windows Services</span></span>](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [<span data-ttu-id="411e4-130">Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung</span><span class="sxs-lookup"><span data-stu-id="411e4-130">How to: Add Installers to Your Service Application</span></span>](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [<span data-ttu-id="411e4-131">Vorgehensweise: Protokollinformationen über Dienste</span><span class="sxs-lookup"><span data-stu-id="411e4-131">How to: Log Information About Services</span></span>](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [<span data-ttu-id="411e4-132">Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer</span><span class="sxs-lookup"><span data-stu-id="411e4-132">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
