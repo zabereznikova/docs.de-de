@@ -1,1 +1,0 @@
-<span data-ttu-id="ee7ad-101">Advanced Encryption Standard (AES)</span><span class="sxs-lookup"><span data-stu-id="ee7ad-101">Advanced Encryption Standard (AES)</span></span>

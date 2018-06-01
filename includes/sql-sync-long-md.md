@@ -1,1 +1,0 @@
-<span data-ttu-id="492c7-101">Microsoft Synchronization Services für ADO.NET</span><span class="sxs-lookup"><span data-stu-id="492c7-101">Microsoft Synchronization Services for ADO.NET</span></span>

@@ -1,1 +1,0 @@
-<span data-ttu-id="c94e0-101">Farbverwaltung (Image Color Management; ICM)</span><span class="sxs-lookup"><span data-stu-id="c94e0-101">Image Color Management (ICM)</span></span>

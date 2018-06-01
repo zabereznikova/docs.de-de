@@ -1,1 +1,0 @@
-<span data-ttu-id="c92c2-101">Globally Unique Identifier (GUID)</span><span class="sxs-lookup"><span data-stu-id="c92c2-101">globally unique identifier (GUID)</span></span>
