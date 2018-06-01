@@ -2,11 +2,12 @@
 title: Ausdrucksbaumstrukturen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: ac37dd63041ba0a0a8ee08651fe62334c3c30049
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: babee41f7df48f270d0c56cb2af91e463407d5c1
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696941"
 ---
 # <a name="expression-trees-visual-basic"></a>Ausdrucksbaumstrukturen (Visual Basic)
 Ausdrucksbaumstrukturen stellen Code in einer baumähnlichen Datenstruktur dar, in denen jeder Knoten ein Ausdruck ist, z. B. ein Methodenaufruf oder eine binäre Operation wie `x < y`.  
@@ -84,7 +85,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-Weitere Informationen finden Sie unter [Generating Dynamic Methods with Expression Trees in Visual Studio 2010 (Generieren dynamischer Methoden mit Ausdrucksbaumstrukturen in Visual Studio 2010)](http://go.microsoft.com/fwlink/p/?LinkId=169513). Dieser Artikel gilt auch für höhere Versionen von Visual Studio.
+Weitere Informationen finden Sie unter [Generating Dynamic Methods with Expression Trees in Visual Studio 2010 (Generieren dynamischer Methoden mit Ausdrucksbaumstrukturen in Visual Studio 2010)](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010). Dieser Artikel gilt auch für höhere Versionen von Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Analysieren von Ausdrucksbaumstrukturen  
  Im folgenden Codebeispiel wird veranschaulicht, wie die Ausdrucksbaumstruktur, die den Lambdaausdruck `Function(num) num < 5` darstellt, in seine Bestandteile zerlegt werden kann.  

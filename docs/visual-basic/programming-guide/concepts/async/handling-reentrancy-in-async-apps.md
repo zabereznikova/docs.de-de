@@ -2,11 +2,12 @@
 title: Des erneuten Eintretens in asynchronen Anwendungen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: bf4794385019e91a25026b0d2b3c1839fc77869a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b899a695fef0e626eb9db3d376a74acba17b086
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697156"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Des erneuten Eintretens in asynchronen Anwendungen (Visual Basic)
 Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintreten, also den erneuten Beginn eines asynchronen Vorgangs vor seinem Abschließen, berücksichtigen und möglicherweise verhindern. Wenn Sie Möglichkeiten für erneutes Eintreten nicht identifizieren und behandeln, kann dies zu unerwarteten Ergebnissen führen.  
@@ -103,7 +104,7 @@ TOTAL bytes returned:  890591
 ###  <a name="BKMK_DisableTheStartButton"></a> Die Schaltfläche „Start“ deaktivieren  
  Sie können die Schaltfläche **Start** während eines ausführenden Vorgangs blockieren, indem Sie die Schaltfläche oben im `StartButton_Click`-Ereignishandler deaktivieren. Sie können die Schaltfläche aus einem `Finally`-Block erneut aktivieren, sobald der Vorgang beendet ist, damit Benutzer die App erneut ausführen können.  
   
- Im folgenden Code werden diese Änderungen mit Sternchen gekennzeichnet dargestellt. Sie können Änderungen am Code am Ende dieses Themas hinzufügen, oder Sie können die fertige App unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](http://go.microsoft.com/fwlink/?LinkId=266571) herunterladen. Der Projektname ist "DisableStartButton".  
+ Im folgenden Code werden diese Änderungen mit Sternchen gekennzeichnet dargestellt. Sie können Änderungen am Code am Ende dieses Themas hinzufügen, oder Sie können die fertige App unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Projektname ist "DisableStartButton".  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -133,7 +134,7 @@ End Sub
   
  Weitere Informationen über Abbrüche finden Sie unter [Optimieren der Async-Anwendung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](http://go.microsoft.com/fwlink/?LinkId=266571) herunterladen. Der Name dieses Projekts lautet "CancelAndRestart".  
+ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name dieses Projekts lautet "CancelAndRestart".  
   
 1.  Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable, `cts`, die im Bereich für alle Methoden liegt.  
   
@@ -534,7 +535,7 @@ End Function
   
 ###  <a name="BKMK_DownloadingTheApp"></a> Herunterladen der App  
   
-1.  Sie können die komprimierte Datei unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](http://go.microsoft.com/fwlink/?LinkId=266571) herunterladen.  
+1.  Sie können die komprimierte Datei unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen.  
   
 2.  Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
   
