@@ -4,11 +4,12 @@ description: Lernen Sie die Terminologie für Pakete, Metapakete und Frameworks.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 915ccadbb4d2cca50fd1caa53d90aa05d83d9378
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472801"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakete, Metapakete und Frameworks
 
@@ -96,9 +97,10 @@ Es besteht eine bidirektionale Beziehung zwischen Frameworks und Paketen. Der er
 
 Der zweite Teil der Beziehung ist die Auswahl von Ressourcen. Pakete können Ressourcen für mehrere Frameworks enthalten. Bei einem Verweis auf eine Gruppe von Paketen und/oder Metapaketen ist das Framework erforderlich, um zu bestimmen, welche Ressource ausgewählt werden sollen, z.B. `net46` oder `netstandard1.3`. Es ist wichtig, dass Sie die richtige Ressource auswählen. Eine `net46`-Ressource zum Beispiel ist wahrscheinlich nicht mit .NET Framework 4.0 oder .NET Core 1.0 kompatibel.
 
-![Paketbasierte Framework-Komposition](./media/packages/package-framework.png)
 
-Sie können diese Beziehung in der Abbildung oben sehen. Die *API* hat das *Framework* als Ziel und definiert es. Das *Framework* wird zur *Ressourcenauswahl* verwendet. Von der *Ressource* erhalten Sie die API.
+Sie können diese Beziehung in der folgenden Abbildung sehen. Die *API* hat das *Framework* als Ziel und definiert es. Das *Framework* wird zur *Ressourcenauswahl* verwendet. Von der *Ressource* erhalten Sie die API.
+
+![Paketbasierte Framework-Komposition](./media/packages/package-framework.png)
 
 Die beiden primären paketbasierten Frameworks, die innerhalb .NET Core verwendet werden, sind:
 

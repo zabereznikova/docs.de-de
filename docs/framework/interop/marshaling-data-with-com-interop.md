@@ -8,9 +8,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0d94223223568efe921af3a340815a966cc6c6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388354"
 ---
 # <a name="marshaling-data-with-com-interop"></a>Marshallen von Daten mit COM-Interop
 COM-Interop bietet Unterstützung für sowohl die Verwendung von COM-Objekten aus verwaltetem Code als auch das Bereitstellen verwalteter Objekte für COM. Die Unterstützung für das Marshalling von Daten zu und von COM ist umfangreich und stellt fast immer das richtige Marshallingverhalten bereit.  
@@ -21,11 +22,11 @@ COM-Interop bietet Unterstützung für sowohl die Verwendung von COM-Objekten au
   
 -   [Type Library Exporter (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), der eine COM-Typbibliothek aus einer Assembly erzeugt und einen Wrapper generiert, der Marshalling während Methodenaufrufen ausführt.  
   
- In den folgenden Abschnitten link zu Themen über die Prozesse zum Anpassen von Interop-Wrappern, wenn Sie den Marshaller zusätzliche Typinformationen bereitstellen können (oder müssen).  
+ Die folgenden Abschnitte verweisen auf Themen, in denen die Prozesse zum Anpassen von Interop-Wrappern beschrieben werden, wenn Sie dem Marshaller zusätzliche Typinformationen bereitstellen können (oder müssen).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Vorgehensweise: Manuelles Erstellen von Wrappern](how-to-create-wrappers-manually.md)   
-Beschreibt, wie einen COM-Wrapper in verwaltetem Quellcode manuell erstellen. 
+Beschreibt, wie Sie einen COM-Wrapper in verwaltetem Quellcode manuell erstellen. 
  
  [How to: Migrate Managed-Code DCOM to WCF (Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF)](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
  Beschreibt, wie Sie verwalteten DCOM-Code zu WCF für die sicherste Lösung migrieren.  
@@ -35,7 +36,7 @@ Beschreibt, wie einen COM-Wrapper in verwaltetem Quellcode manuell erstellen.
  Stellt die entsprechenden verwalteten und nicht verwalteten Datentypen bereit.  
   
  [Anpassen von COM-Aufrufwrappern](https://msdn.microsoft.com/library/3bwc828w(v=vs.100).aspx)  
- Beschreibt, wie Sie explizites Marshalling von Datentypen mithilfe der <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut zur Entwurfszeit.  
+ Beschreibt, wie Sie Datentypen mithilfe des <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attributs zur Entwurfszeit explizit marshallen.  
   
  [Anpassen von Runtime Callable Wrappers](https://msdn.microsoft.com/library/e753eftz(v=vs.100).aspx)  
  Beschreibt, wie das Marshallingverhalten von Typen in einer Interop-Assembly angepasst und COM-Typen manuell definiert werden.  

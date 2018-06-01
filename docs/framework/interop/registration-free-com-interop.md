@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390249"
 ---
 # <a name="registration-free-com-interop"></a>COM-Interop ohne Registrierung
 COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Registrierung zum Speichern von Assemblyinformationen zu verwenden. Statt eine Komponente auf einem Computer während der Bereitstellung zu registrieren, erstellen Sie zur Entwurfszeit Win32-Manifestdateien, die Informationen zur Bindung und Aktivierung enthalten. Diese Manifestdateien steuern anstelle der Registrierungsschlüssel die Aktivierung eines Objekts.  
@@ -44,11 +45,11 @@ COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Regis
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung  
   
-1.  Damit eine COM-Komponente ohne Registrierung aktiviert werden kann, muss sie als parallele Assembly bereitgestellt werden. Parallele Assemblys sind nicht verwaltete Assemblys.  Weitere Informationen finden Sie unter [verwenden Side-by-Side Assemblys](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+1.  Damit eine COM-Komponente ohne Registrierung aktiviert werden kann, muss sie als parallele Assembly bereitgestellt werden. Parallele Assemblys sind nicht verwaltete Assemblys.  Weitere Informationen finden Sie unter [Verwenden paralleler Assemblys](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
   
      Zur Verwendung paralleler COM-Assemblys muss ein Entwickler von .NET-basierten Anwendungen ein Anwendungsmanifest bereitstellen, das die Bindungs- und Aktivierungsinformationen enthält. Die Unterstützung nicht verwalteter paralleler Assemblys ist in Windows XP integriert. Die vom Betriebssystem unterstützte COM Runtime durchsucht ein Anwendungsmanifest nach Aktivierungsinformationen, wenn die aktivierte Komponente nicht in der Registrierung vorhanden ist.  
   
-     Die Aktivierung ohne Registrierung ist für COM-Komponenten unter Windows XP optional. Detaillierte Anweisungen zum Hinzufügen von einer Seite-an-Seite-Assembly zu einer Anwendung finden Sie unter [verwenden Side-by-Side Assemblys](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+     Die Aktivierung ohne Registrierung ist für COM-Komponenten unter Windows XP optional. Detaillierte Anweisungen zum Hinzufügen einer parallelen Assembly zu einer Anwendung finden Sie unter [Verwenden paralleler Assemblys](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
   
     > [!NOTE]
     >  Die parallele Ausführung ist eine .NET Framework-Funktion, mit der mehrere Versionen der Common Language Runtime und mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausgeführt werden können. Die parallele Ausführung und parallele Assemblys sind unterschiedliche Mechanismen für die Bereitstellung paralleler Funktionen.  

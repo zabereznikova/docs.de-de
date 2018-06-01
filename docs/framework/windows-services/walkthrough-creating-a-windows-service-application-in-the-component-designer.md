@@ -12,9 +12,10 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520512"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer
 In diesem Artikel wird beschrieben, wie Sie eine einfache Windows-Dienstanwendung in Visual Studio erstellen, die Meldungen in ein Ereignisprotokoll schreibt. Hier werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen und Verwenden Ihres Dienstes:  
@@ -108,7 +109,7 @@ In diesem Artikel wird beschrieben, wie Sie eine einfache Windows-Dienstanwendun
     AddHandler timer.Elapsed, AddressOf Me.OnTimer  
     timer.Start()  
     ```  
-     Fügen Sie eine Membervariable der Klasse hinzu. Es enthält den Bezeichner des nächsten Ereignisses, in das Ereignisprotokoll zu schreiben.
+     Fügen Sie der Klasse eine Membervariable hinzu. Sie enthält den Bezeichner des nächsten Ereignisses, das in das Ereignisprotokoll geschrieben werden soll.
 
     ```csharp
     private int eventId = 1;
@@ -296,7 +297,7 @@ In diesem Artikel wird beschrieben, wie Sie eine einfache Windows-Dienstanwendun
   
 8.  Legen Sie die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft auf <xref:System.ServiceProcess.ServiceStartMode.Automatic> fest.  
   
-     ![Installer-Eigenschaften für einen Windows-Dienst](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
+     ![Installer-Eigenschaften für einen Windows-Dienst](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "Windows-Installer-Eigenschaften")  
   
 9. Klicken Sie im Designer auf **ServiceProcessInstaller1** , wenn es sich um ein Visual Basic#-Projekt handelt, bzw. auf **serviceProcessInstaller1** , wenn es sich um ein Visual Basic-Projekt handelt. Legen Sie die <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>-Eigenschaft auf <xref:System.ServiceProcess.ServiceAccount.LocalSystem> fest. Dadurch wird der Dienst installiert und auf einem lokalen Dienstkonto ausgeführt.  
   
@@ -429,7 +430,7 @@ Dieser Code ändert den **ImagePath** -Registrierungsschlüssel, der in der Rege
   
      Wenn der Dienst erfolgreich installiert ist, wird dies von installutil.exe gemeldet. Wenn das System InstallUtil.exe nicht finden kann, stellen Sie sicher, dass sie auf Ihrem Computer vorhanden ist. Dieses Tool wird mit dem.NET Framework im Ordner `%WINDIR%\Microsoft.NET\Framework[64]\`*Framework_version*installiert. Beispielsweise lautet der Standardpfad für die 32-Bit-Version von der.NET Framework 4, 4.5, 4.5.1 und 4.5.2 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`.  
   
-     Wenn der Prozess „installutil.exe“ Fehler meldet, überprüfen Sie das Installationsprotokoll, um die Gründe zu bestimmen. Standardmäßig befindet sich das Protokoll im gleichen Ordner wie die ausführbare Datei. Die Installation kann fehlschlagen, wenn die <xref:System.ComponentModel.RunInstallerAttribute> Klasse befindet sich nicht auf die `ProjectInstaller` -Klasse, ansonsten Attributs ist nicht festgelegt, um `true`, oder andernfalls `ProjectInstaller` Klasse ist nicht `public`.  
+     Wenn der Prozess „installutil.exe“ Fehler meldet, überprüfen Sie das Installationsprotokoll, um die Gründe zu bestimmen. Standardmäßig befindet sich das Protokoll im gleichen Ordner wie die ausführbare Datei. Bei der Installation kann ein Fehler auftreten, wenn die <xref:System.ComponentModel.RunInstallerAttribute>-Klasse nicht in der `ProjectInstaller`-Klasse vorhanden ist, das Attribut nicht auf `true` festgelegt ist oder die `ProjectInstaller`-Klasse nicht `public` ist.  
   
      Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
@@ -442,7 +443,7 @@ Dieser Code ändert den **ImagePath** -Registrierungsschlüssel, der in der Rege
   
      **MyNewService** müsste jetzt im Fenster **Dienste** angezeigt werden.  
   
-     ![MyNewService im Fenster Dienste. ] (../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG "WindowsServices_ServicesWindow")  
+     ![MyNewService im Fenster „Dienste“. ](../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG "Windows_Fenster „Dienste“")  
   
 2.  Im Fenster **Dienste** öffnen Sie das Kontextmenü für den Dienst und wählen Sie dann **Start**.  
   
@@ -456,7 +457,7 @@ Dieser Code ändert den **ImagePath** -Registrierungsschlüssel, der in der Rege
   
 2.  Suchen Sie den Eintrag für **MyNewLog** (oder **MyLogFile1**, wenn Sie das optionale Verfahren verwenden, um Befehlszeilenargumente hinzuzufügen), und erweitern Sie ihn. Sie sehen Einträge für die beiden Aktionen (Start und Stopp), die Ihr Dienst ausgeführt hat.  
   
-     ![Verwenden Sie die Ereignisanzeige, um die Einträge im Ereignisprotokoll anzuzeigen. ] (../../../docs/framework/windows-services/media/windowsservices-eventviewer.PNG "WindowsServices_EventViewer")  
+     ![Verwenden Sie die Ereignisanzeige, um die Einträge im Ereignisprotokoll anzuzeigen.](../../../docs/framework/windows-services/media/windowsservices-eventviewer.PNG "Windows_Ereignisanzeige")  
   
 <a name="BK_Uninstall"></a>   
 ## <a name="uninstalling-a-windows-service"></a>Ein Windowsdienst wird deinstalliert...  

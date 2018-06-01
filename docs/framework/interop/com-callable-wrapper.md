@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394965"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper (CCW)
 Wenn ein COM-Client ein .NET-Objekt aufruft, erstellt Common Language Runtime das verwaltete Objekt sowie einen CCW (COM Callable Wrapper) für dieses Objekt. COM-Clients verwenden den CCW als Proxy für das verwaltete Objekt, da sie nicht direkt auf ein .NET-Objekt verweisen können.  
@@ -38,16 +39,16 @@ Zugriff auf .NET-Objekte über den CCW
   
 ## <a name="simulating-com-interfaces"></a>Simulieren von COM-Schnittstellen
 
-COM Callable Wrapper macht alle öffentlichen, COM sichtbaren Schnittstellen, Datentypen und Rückgabewerte für COM-Clients in einer Weise, die mit COM-Durchsetzung von schnittstellenbasierten Interaktionen konsistent ist. Für einen COM-Client ist das Aufrufen von Methoden für ein .NET Framework-Objekt identisch wie das Aufrufen von Methoden für ein COM-Objekt.  
+Mit dem CCW werden alle öffentlichen, für COM sichtbaren Schnittstellen, Datentypen und Rückgabewerte für COM-Clients in einer Weise angezeigt, die mit der COM-Durchsetzung von schnittstellenbasierten Interaktionen konsistent ist. Für einen COM-Client ist das Aufrufen von Methoden für ein .NET Framework-Objekt identisch wie das Aufrufen von Methoden für ein COM-Objekt.  
   
  Zur Unterstützung dieses nahtlosen Ansatzes erstellt der CCW traditionelle COM-Schnittstellen wie **IUnknown** und **IDispatch**. Wie die folgende Abbildung zeigt, unterhält der CCW einen einzigen Verweis auf das .NET-Objekt, den er einschließt. Sowohl der COM-Client als auch das .NET-Objekt interagieren über den Proxy und die Stubkonstruktion des CCWs miteinander.  
   
  ![COM-Schnittstellen](./media/ccwwithinterfaces.gif "ccwwithinterfaces")  
-COM-Schnittstellen und den COM callable wrapper  
+COM-Schnittstellen und der COM Callable Wrapper  
   
  Neben der Offenlegung von Schnittstellen, die explizit mit einer Klasse in der verwalteten Umgebung implementiert wird, stellt .NET Framework für das Objekt Implementierungen der COM-Schnittstellen bereit, die in der folgenden Tabelle aufgeführt sind. Eine .NET-Klasse kann das Standardverhalten überschreiben, indem sie eigene Implementierungen dieser Schnittstellen bereitstellt. Zur Laufzeit stehen jedoch immer die Implementierungen der **IUnknown**- und **IDispatch**-Schnittstellen bereit.  
   
-|Interface|Beschreibung|  
+|Interface|description|  
 |---------------|-----------------|  
 |**Idispatch**|Stellt einen Mechanismus für die späte Bindung an den Typ bereit.|  
 |**IerrorInfo**|Stellt eine Textbeschreibung des Fehlers und der Fehlerquelle, eine Hilfedatei, den Hilfekontext und die GUID der Schnittstelle bereit, die den Fehler definiert hat (bei .NET-Klassen immer **GUID_NULL**).|  
@@ -58,17 +59,17 @@ COM-Schnittstellen und den COM callable wrapper
   
  Eine verwaltete Klasse kann zudem die COM-Schnittstellen bereitstellen, die in der folgenden Tabelle beschrieben werden.  
   
-|Schnittstelle|Beschreibung|  
+|Interface|description|  
 |---------------|-----------------|  
-|Der (\_*Classname*) Klassenschnittstelle|Schnittstelle, die von der Laufzeit offengelegt wird und nicht explizit definiert wird; legt alle öffentlichen Schnittstellen, Methoden, Eigenschaften und Felder offen, die für ein verwaltetes Objekt explizit offengelegt werden.|  
+|Die Klassenschnittstelle (\_*Klassenname*)|Schnittstelle, die von der Laufzeit offengelegt wird und nicht explizit definiert wird; legt alle öffentlichen Schnittstellen, Methoden, Eigenschaften und Felder offen, die für ein verwaltetes Objekt explizit offengelegt werden.|  
 |**IConnectionPoint** und **IconnectionPointContainer**|Schnittstelle für Objekte, die delegatbasierende Ereignisse bedienen (eine Schnittstelle für die Registrierung von Ereignisabonnenten).|  
 |**IdispatchEx**|Schnittstelle, die von der Laufzeit bereitgestellt wird, wenn die Klasse **IExpando** implementiert. Die **IDispatchEx**-Schnittstelle ist eine Erweiterung der **IDispatch**-Schnittstelle. Im Gegensatz zu **IDispatch** ermöglicht sie das Aufzählen, Hinzufügen, Löschen und Aufrufen von Membern unter Berücksichtigung von Groß-/Kleinschreibung.|  
 |**IEnumVARIANT**|Schnittstelle für Klassen von Typ „Auflistung“, die die Objekte in der Auflistung enumeriert, wenn die Klasse **IEnumerable** implementiert.|  
   
 ## <a name="introducing-the-class-interface"></a>Einführung in die Klassenschnittstelle  
- Die Klassenschnittstelle, in in verwaltetem Code nicht explizit definiert ist, ist eine Schnittstelle, die alle öffentlichen Methoden, Eigenschaften, Felder und Ereignisse offenlegt, die explizit für das .NET-Objekt verfügbar gemacht werden. Bei dieser Schnittstelle kann es sich um eine duale oder um eine nur für Dispatch vorgesehene Schnittstelle handeln. Die Klassenschnittstelle erhält den Namen von der .NET-Klasse selbst, mit vorangestelltem Unterstrich. Für Klasse "Mammal" heißt, ist die Klassenschnittstelle beispielsweise \_"Mammal" heißt.  
+ Die Klassenschnittstelle, in in verwaltetem Code nicht explizit definiert ist, ist eine Schnittstelle, die alle öffentlichen Methoden, Eigenschaften, Felder und Ereignisse offenlegt, die explizit für das .NET-Objekt verfügbar gemacht werden. Bei dieser Schnittstelle kann es sich um eine duale oder um eine nur für Dispatch vorgesehene Schnittstelle handeln. Die Klassenschnittstelle erhält den Namen von der .NET-Klasse selbst, mit vorangestelltem Unterstrich. Für die Klasse „Mammal“ heißt die Klassenschnittstelle beispielsweise „\_Mammal“.  
   
- Bei abgeleiteten Klassen legt die Klassenschnittstelle zudem alle öffentlichen Methoden, Eigenschaften und Felder der Basisklasse offen. Die abgeleitete Klasse macht zudem auch eine Klassenschnittstelle für jede Basisklasse verfügbar. Beispielsweise, wenn die Klasse "Mammal" Klasse "MammalSuperclass" Erweitert, die ihrerseits System.Object erweitert, macht die .NET für COM-Clients drei-Klasse Schnittstellen, die mit dem Namen \_"Mammal" heißt, \_"MammalSuperclass", und \_Objekt.  
+ Bei abgeleiteten Klassen legt die Klassenschnittstelle zudem alle öffentlichen Methoden, Eigenschaften und Felder der Basisklasse offen. Die abgeleitete Klasse macht zudem auch eine Klassenschnittstelle für jede Basisklasse verfügbar. Wenn die Klasse „Mammal“ beispielsweise die Klasse „MammalSuperclass“ erweitert, die ihrerseits System.Object erweitert, stellt das .NET-Objekt für COM-Clients drei Klassenschnittstellen mit Namen „\_Mammal“, „\_MammalSuperclass“ und „\_Object“ zur Verfügung.  
   
  Betrachten Sie beispielsweise die folgende .NET-Klasse:  
   
@@ -147,7 +148,7 @@ public class LoanApp : IExplicit {
   
  Der Wert **ClassInterfaceType.None** verhindert, dass die Klassenschnittstelle generiert wird, wenn die Metadaten der Klassen in eine Typbibliothek exportiert werden. Im vorstehenden Beispiel können COM-Clients nur über die `IExplicit`-Schnittstelle auf die `LoanApp`-Klasse zugreifen.  
   
-### <a name="avoid-caching-dispatch-identifiers-dispids"></a>Vermeiden Sie das Zwischenspeichern von Dispatch-IDs (DispIds)
+### <a name="avoid-caching-dispatch-identifiers-dispids"></a>Vermeiden Sie das Zwischenspeichern von Dispatch-IDs (DispIds).
  Die Verwendung der Klassenschnittstelle ist eine akzeptable Option für skriptgesteuerte Clients, Microsoft Visual Basic 6.0-Clients oder alle spät gebundenen Clients, die die DispIds von Schnittstellenmembern nicht zwischenspeichern. Mit DispIds werden Schnittstellenmember identifiziert, um ein spätes Binden zu ermöglichen.  
   
  Bei der Klassenschnittstelle basiert die Generierung von DispIDs auf der Position des Members in der Schnittstelle. Wenn Sie die Reihenfolge der Member ändern und die Klasse in eine Typbibliothek exportieren, ändern Sie die von der Klassenschnittstelle generierten DispIds.  

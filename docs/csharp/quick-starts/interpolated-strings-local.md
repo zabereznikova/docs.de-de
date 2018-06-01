@@ -5,11 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 80b7a2c39094f1101e714b47f0e77f0a7c4907f2
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472762"
 ---
 # <a name="string-interpolation"></a>Zeichenfolgeninterpolation
 
@@ -48,13 +49,13 @@ Im Folgenden finden Sie weitere Beispiele für die Zeichenfolgeninterpolation mi
 
 Im vorherigen Abschnitt haben Sie die Zeichenfolgeninterpolation verwendet, um eine Zeichenfolge in eine andere einzufügen. Das Ergebnis eines interpolierten Ausdrucks kann jedoch jeden Datentyp aufweisen. Im Folgenden werden mehrere Datentypen in eine interpolierte Zeichenfolge einbezogen.
 
-Im folgenden Beispiel wird zunächst der benutzerdefinierte Datentyp `Vegetable` definiert, der über die [Eigenschaft](../properties.md) `Name` und die Methode `ToString` verfügt. Der Clientcode kann diese Methode verwenden, um die Zeichenfolgendarstellung einer `Vegetable`-Instanz abzurufen. Im Beispiel gibt die Methode `Vegetable.ToString` den Wert der Eigenschaft `Name` zurück, die beim Konstruktor `Vegetable` initialisiert wird:
+Im folgenden Beispiel wird zunächst ein [Klassen](../programming-guide/classes-and-structs/classes.md)-Datentyp `Vegetable` definiert, der über die [Eigenschaft](../properties.md) `Name` und die [Methode](../methods.md) `ToString` verfügt. Diese Methode [setzt das Verhalten der <xref:System.Object.ToString?displayProperty=nameWithType>-Methode außer Kraft](../language-reference/keywords/override.md). Der [`public`-Zugriffsmodifizierer](../language-reference/keywords/public.md) stellt diese Methode jedem Clientcode zur Verfügung, um die Zeichenfolgendarstellung einer `Vegetable`-Instanz abzurufen. Im Beispiel gibt die Methode `Vegetable.ToString` den Wert der Eigenschaft `Name` zurück, die beim [Konstruktor](../programming-guide/classes-and-structs/constructors.md) `Vegetable` initialisiert wird:
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-Eine Instanz des Typs `Vegetable` wird mithilfe des Schlüsselworts `new` erstellt, und ein Name-Parameter für den Konstruktor `Vegetable` wird angegeben:
+Dann wird eine Instanz der Klasse `Vegetable` mithilfe des [Schlüsselworts `new`](../language-reference/keywords/new-operator.md) erstellt und ein Name-Parameter für den Konstruktor `Vegetable` angegeben:
 
 ```csharp
 var item = new Vegetable("eggplant");
@@ -93,7 +94,7 @@ Beachten Sie, dass der interpolierte Ausdruck `item` in der interpolierten Zeich
 
 - Wenn der interpolierte Ausdruck `null` ergibt, wird eine leere Zeichenfolge („“ oder <xref:System.String.Empty?displayProperty=nameWithType>) verwendet.
 
-- Wenn der interpolierte Ausdruck nicht `null` ergibt, wird in der Regel die Methode `ToString` des Ergebnistyps aufgerufen. Sie können dies testen, indem Sie die Implementierung der Methode `Vegetable.ToString` aktualisieren. Sie müssen die Methode `ToString` nicht implementieren, da jeder C#-Datentyp auf die eine oder andere Art über eine Implementierung dieser Methode verfügt. Sie können dies testen, indem Sie die Definition der Methode `Vegetable.ToString` im Beispiel auskommentieren (fügen Sie dazu ein Kommentarsymbol `//` davor ein). In der Ausgabe wird die Zeichenfolge „eggplant“ durch den vollqualifizierten Typnamen ersetzt (in diesem Beispiel „Vegetable“). Dies stellt das Standardverhalten der <xref:System.Object.ToString?displayProperty=nameWithType>-Methode dar. Das Standardverhalten der Methode `ToString` für einen Enumerationstyp besteht darin, die Zeichenfolgendarstellung eines Werts zurückzugeben, der in der Definition der Enumeration verwendet wird.
+- Wenn der interpolierte Ausdruck nicht `null` ergibt, wird in der Regel die Methode `ToString` des Ergebnistyps aufgerufen. Sie können dies testen, indem Sie die Implementierung der Methode `Vegetable.ToString` aktualisieren. Sie müssen die Methode `ToString` nicht einmal implementieren, da jeder Typ auf die eine oder andere Art über eine Implementierung dieser Methode verfügt. Sie können dies testen, indem Sie die Definition der Methode `Vegetable.ToString` im Beispiel auskommentieren (fügen Sie hierzu davor ein Kommentarsymbol `//` ein). In der Ausgabe wird die Zeichenfolge „eggplant“ durch den vollqualifizierten Typnamen ersetzt (in diesem Beispiel „Vegetable“). Dies stellt das Standardverhalten der <xref:System.Object.ToString?displayProperty=nameWithType>-Methode dar. Das Standardverhalten der Methode `ToString` für einen Enumerationswert besteht darin, die Zeichenfolgendarstellung eines Werts zurückzugeben.
 
 Bei der Ausgabe dieses Beispielcodes ist das Datum zu genau angegeben (der Preis von Auberginen ändert sich nicht sekündlich), und der Wert der Variablen „price“ gibt keine Währungsinformation an. Im nächsten Abschnitt erfahren Sie, wie Sie diese Probleme beheben, indem Sie das Format der Zeichenfolgendarstellung der Ergebnisse des Ausdrucks steuern.
 
@@ -169,4 +170,4 @@ Sie haben den Schnellstart für die Zeichenfolgeninterpolation abgeschlossen.
 
 Sie können mit dem Schnellstart [Listensammlungen](arrays-and-collections.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
-Weitere Informationen finden Sie im Artikel [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) und dem Tutorial [Zeichenfolgeninterpolation in C#](../tutorials/string-interpolation.md).
+Weitere Informationen finden Sie im Artikel zur [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) und dem Tutorial [Zeichenfolgeninterpolation in C#](../tutorials/string-interpolation.md).

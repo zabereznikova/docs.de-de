@@ -9,11 +9,12 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172502"
 ---
 # <a name="regular-expression-examples"></a>Beispiele für reguläre Ausdrücke
 Dieser Abschnitt enthält Codebeispiele, die die Verwendung regulärer Ausdrücke in üblichen Anwendungen veranschaulichen.  
@@ -35,7 +36,7 @@ Dieser Abschnitt enthält Codebeispiele, die die Verwendung regulärer Ausdrück
  Enthält ein Beispiel, in dem ungültige, nicht alphanumerische Zeichen aus einer Zeichenfolge entfernt werden.  
   
  [Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
- Enthält ein Beispiel, mit dem Sie überprüfen können, ob eine Zeichenfolge in einem gültigen E-Mail-Format vorliegt.  
+ Enthält ein Beispiel, mit dem überprüft werden kann, ob eine Zeichenfolge in einem gültigen E-Mail-Format vorliegt.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Text.RegularExpressions>  

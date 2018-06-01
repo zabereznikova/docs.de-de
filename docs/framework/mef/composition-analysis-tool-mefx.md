@@ -10,16 +10,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392576"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Kompositionsanalysetool (Mefx)
 Das Kompositionsanalysetool MEFX ist eine Befehlszeilenanwendung, die Bibliotheks- (.dll) und Anwendungsdateien (.exe) mit Teilen des Managed Extensibility Framework (MEF) analysiert. MEFX dient in erster Linie dazu, Entwicklern eine Möglichkeit zur Diagnose von Kompositionsfehlern in MEF-Anwendungen zu bieten, ohne dass der Anwendung selbst unübersichtlicher Ablaufverfolgungscode hinzugefügt werden muss. Darüber hinaus kann das Tool nützlich sein, um Teile einer Bibliothek zu verstehen, die von einem Drittanbieter bereitgestellt wird. In diesem Thema wird beschrieben, wie MEFX verwendet wird, und ein Verweis auf die Syntax wird bereitgestellt.  
   
 <a name="getting_mefx"></a>   
 ## <a name="getting-mefx"></a>Abrufen von MEFX  
- MEFX steht auf GitHub unter [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0). Nach dem Herunterladen müssen Sie das Tool nur noch entpacken.  
+ MEFX steht auf GitHub unter [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0) zur Verfügung. Nach dem Herunterladen müssen Sie das Tool nur noch entpacken.  
   
 <a name="basic_syntax"></a>   
 ## <a name="basic-syntax"></a>Allgemeine Syntax  
@@ -71,7 +72,7 @@ MyAddin.AddIn
   
 <a name="finding_rejected_parts"></a>   
 ## <a name="finding-rejected-parts"></a>Suchen abgelehnter Teile  
- Sobald die verfügbaren Teile geladen wurden, werden diese von MEFX mit dem MEF-Kompositionsmodul erstellt. Die Teile, die nicht erfolgreich erstellt werden können, werden als *abgelehnt*bezeichnet. Mit der `/rejected` -Aktion können Sie alle abgelehnten Teile auflisten.  
+ Sobald die verfügbaren Teile geladen wurden, werden diese von MEFX mit der MEF-Kompositions-Engine erstellt. Die Teile, die nicht erfolgreich erstellt werden können, werden als *abgelehnt*bezeichnet. Mit der `/rejected` -Aktion können Sie alle abgelehnten Teile auflisten.  
   
  Mit der `/verbose` -Option und der `/rejected` -Aktion können Sie detaillierte Informationen über abgelehnte Teile ausgeben. Die DLL-Datei `ClassLibrary1` im folgenden Beispiel enthält das Teil `AddIn` , mit dem das Teil `MemberPart` und das Teil `ChainOne` importiert werden. `ChainOne` importiert `ChainTwo`, `ChainTwo` ist jedoch nicht vorhanden. Dies bedeutet, dass `ChainOne` abgelehnt wird, wodurch `AddIn` abgelehnt wird.  
   

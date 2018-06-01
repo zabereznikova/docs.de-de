@@ -3,11 +3,12 @@ title: Neues in C# 6 – C#-Leitfaden
 description: Neues zu den neuen Features in Version 6 von C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 00aeb3ed940acfca748a1a9eb876fd0133baf6c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458004"
 ---
 # <a name="whats-new-in-c-6"></a>Neues in C# 6
 
@@ -351,7 +352,7 @@ Sie können diese nun mit <xref:System.Collections.Generic.Dictionary%602>-Aufli
 
 Dieses Feature bedeutet, dass assoziative Container mithilfe von Syntax initialisiert werden können, die ähnlich dem ist, was für Sequenzcontainern für einige Versionen vorhanden war.
 
-### <a name="extension-add-methods-in-collection-initializers"></a>Erweiterungs-`Add`-Methoden in Auflistungsinitialisierern
+## <a name="extension-add-methods-in-collection-initializers"></a>Erweiterungs-`Add`-Methoden in Auflistungsinitialisierern
 
 Ein weiteres Feature zur Vereinfachung der Auflistungsinitialisierer ist die Möglichkeit, eine *Erweiterungsmethode* für die `Add`-Methode zu verwenden. Dieses Feature wurde für die Parität mit Visual Basic hinzugefügt. 
 
@@ -370,10 +371,7 @@ Das können Sie nun tun, jedoch nur, wenn Sie eine Erweiterungsmethode erstellen
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-Mit diesem Feature ordnen Sie die Methode, die Elemente zu einer Sammlung hinzufügt, einer Methode mit dem Namen `Add` zu, indem Sie eine Erweiterungsmethode erstellen. 
-
-[!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
-[!code-csharp[ExtensionAddSample](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAddSample)]
+Mit diesem Feature ordnen Sie die Methode, die Elemente zu einer Auflistung hinzufügt, einer Methode mit dem Namen `Add` zu, indem Sie eine Erweiterungsmethode erstellen.
 
 ## <a name="improved-overload-resolution"></a>Verbesserte Überladungsauflösung
 

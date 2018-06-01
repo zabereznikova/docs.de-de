@@ -9,9 +9,10 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 3c8382d2e425d11dc8aa8b22e361b3cc5637744f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516216"
 ---
 # <a name="how-to-start-services"></a>Gewusst wie: Starten von Diensten
 Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wird die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode für die Dienstklasse aufgerufen. In der Regel werden die Vorgänge, die vom Dienst durchgeführt werden, von der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode definiert. Nachdem ein Dienst gestartet worden ist, bleibt er aktiv, solange er nicht manuell angehalten oder beendet wird.  
@@ -19,9 +20,9 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
  Für Dienste kann festgelegt werden, ob sie automatisch oder manuell gestartet werden. Ein automatisch startender Dienst wird gestartet, wenn der Computer, auf dem er installiert ist, neu gestartet oder zum ersten Mal eingeschaltet wird. Ein Dienst, der manuell gestartet wird, muss von Benutzern gestartet werden.  
   
 > [!NOTE]
->  Standardmäßig sind Dienste, die mit Visual Studio erstellten auf Manuelles Starten festgelegt.  
+>  Mit Visual Studio erstellte Dienste sind standardmäßig auf manuelles Starten festgelegt.  
   
- Es gibt mehrere Möglichkeiten, die Sie manuell einen Dienst zu starten – aus **Server-Explorer**, aus der **Dienststeuerungs-Manager**, oder von Code mithilfe einer Komponente namens der <xref:System.ServiceProcess.ServiceController>.  
+ Ein Dienst kann auf verschiedene Weise manuell gestartet werden: Mit dem **Server-Explorer**, dem **Dienststeuerungs-Manager** oder indem im Code die <xref:System.ServiceProcess.ServiceController>-Komponente verwendet wird.  
   
  Die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft für die <xref:System.ServiceProcess.ServiceInstaller>-Klasse wird festgelegt, um zu bestimmen, ob ein Dienst manuell oder automatisch gestartet werden soll.  
   
@@ -31,7 +32,7 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
   
 2.  Klicken Sie im Designer auf das Dienstinstallationsprogramm für den Dienst, mit dem Sie arbeiten.  
   
-3.  In der **Eigenschaften** legen die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> -Eigenschaft auf einen der folgenden:  
+3.  Legen Sie im Fenster **Eigenschaften** die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft auf einen der folgenden Werte fest:  
   
     |Installationszeitpunkt|Festzulegender Wert|  
     |----------------------------------|--------------------|  
@@ -39,37 +40,37 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
     |Sobald der Dienst von einer expliziten Benutzeraktion gestartet wird|**Manuell**|  
   
     > [!TIP]
-    >  Um zu verhindern, dass den Dienst gestartet wird, legen Sie die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> Eigenschaft **deaktiviert**. Wenn ein Server mehrmals neu gestartet wird, kann damit Zeit gespart werden, indem das Starten von Diensten verhindert wird, die in der Regel gestartet würden.  
+    >  Wenn der Dienst nie gestartet werden soll, legen Sie die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft auf **Deaktiviert** fest. Wenn ein Server mehrmals neu gestartet wird, kann damit Zeit gespart werden, indem das Starten von Diensten verhindert wird, die in der Regel gestartet würden.  
   
     > [!NOTE]
     >  Diese und weitere Eigenschaften können geändert werden, nachdem der Dienst installiert wurde.  
   
-     Es gibt mehrere Möglichkeiten, Sie können starten ein Diensts, dessen <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> Prozess festgelegt werden, um **manuell** – aus **Server-Explorer**, aus der **Windows-Dienstkontroll-Manager**, oder von Code. Es ist wichtig zu beachten, dass nicht alle diese Methoden tatsächlich den Dienst im Kontext der start der **Dienststeuerungs-Manager**; **Server-Explorer** und programmgesteuerte Methoden für das Starten des Diensts Startmethoden geändert, den Controller.  
+     Es stehen mehrere Möglichkeiten zur Verfügung, einen Dienst zu starten, dessen <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Vorgang auf **Manuell** festgelegt ist: mit dem **Server-Explorer**, dem **Dienststeuerungs-Manager** von Windows oder programmgesteuert. Wichtig dabei ist, dass der Dienst nicht von allen Methoden im Kontext des **Dienststeuerungs-Managers** gestartet wird. Tatsächlich wird der Controller mit dem **Server-Explorer** und mit programmgesteuerten Startmethoden geändert.  
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>So starten Sie einen Dienst manuell mit dem Server-Explorer  
   
-1.  In **Server-Explorer**, fügen Sie den Server soll, wenn er noch nicht aufgelistet ist. Weitere Informationen finden Sie unter Vorgehensweise: Zugriff und Server-Explorer-Datenbank-Explorer zu initialisieren.  
+1.  Fügen Sie im **Server-Explorer** den gewünschten Server hinzu, sofern dieser noch nicht aufgelistet ist. Weitere Informationen finden Sie unter „Vorgehensweise: Zugreifen auf und Initialisieren von Server-Explorer/Datenbank-Explorer“.  
   
-2.  Erweitern Sie die **Services** Knoten, und suchen Sie den Dienst, die Sie starten möchten.  
+2.  Erweitern Sie den Knoten **Dienste**, und suchen Sie den zu startenden Dienst.  
   
-3.  Maustaste auf den Namen des Diensts, und klicken Sie auf **starten**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Dienst, und klicken Sie dann auf **Starten**.  
   
 ### <a name="to-manually-start-a-service-from-services-control-manager"></a>So starten Sie einen Dienst manuell mit dem Dienststeuerungs-Manager  
   
-1.  Öffnen der **Dienststeuerungs-Manager** durch eine der folgenden Aktionen ausführen:  
+1.  Öffnen Sie den **Dienststeuerungs-Manager**, indem Sie einen der folgenden Schritte ausführen:  
   
-    -   Windows XP und 2000 Professional, mit der Maustaste **Arbeitsplatz** auf den Desktop, und klicken Sie dann auf **verwalten**. Erweitern Sie im angezeigten Dialogfeld die **Dienste und Anwendungen** Knoten.  
+    -   Klicken Sie in Windows XP und 2000 Professional auf dem Desktop des Computers mit der rechten Maustaste auf **Arbeitsplatz**, und klicken Sie anschließend auf **Verwalten**. Erweitern Sie im nun angezeigten Dialogfeld den Knoten **Dienste und Anwendungen**.  
   
          \- oder –  
   
-    -   Klicken Sie in Windows Server 2003 und Windows 2000 Server **starten**, zeigen Sie auf **Programme**, klicken Sie auf **Verwaltung**, und klicken Sie dann auf **Services**.  
+    -   Klicken Sie in Windows Server 2003 und Windows 2000 Server auf **Start**, und zeigen Sie auf **Programme**. Klicken Sie auf **Verwaltung** und anschließend auf **Dienste**.  
   
         > [!NOTE]
-        >  In Windows NT, Version 4.0, können Sie öffnen das Dialogfeld über **Systemsteuerung**.  
+        >  In Windows NT 4.0 kann das Dialogfeld über die **Systemsteuerung** geöffnet werden.  
   
-     Daraufhin sollte jetzt der Dienst die **Services** Bereich des Fensters.  
+     Der Dienst wird nun im Bereich **Dienste** des Fensters angezeigt.  
   
-2.  Wählen Sie den Dienst in der Liste der rechten Maustaste darauf, und klicken Sie dann auf **starten**.  
+2.  Wählen Sie den Dienst in der Liste aus, klicken Sie mit der rechten Maustaste darauf, und klicken Sie dann auf **Starten**.  
   
 ### <a name="to-manually-start-a-service-from-code"></a>So starten Sie einen Dienst programmgesteuert  
   

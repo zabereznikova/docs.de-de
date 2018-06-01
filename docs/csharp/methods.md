@@ -3,13 +3,14 @@ title: Methoden (Leitfaden für C#)
 description: Übersicht über Methoden, Methodenparameter und Methodenrückgabewerte
 author: rpetrusha
 ms.author: ronpet
-ms.date: 10/26/2016
+ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 6a99ccc0157b044eb1a9ed7189de94ca69225d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457955"
 ---
 # <a name="methods"></a>Methoden #
 
@@ -80,7 +81,7 @@ Sie können eine Methode aufrufen, indem Sie sowohl Positionsargumente als auch 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
  <a name="inherited"></a>
- ##<a name="inherited-and-overridden-methods"></a>Geerbte und überschriebene Methoden ##
+ ## <a name="inherited-and-overridden-methods"></a>Geerbte und überschriebene Methoden ##
 
 Zusätzlich zu den Elementen, die ausdrücklich in einem Typ definiert werden, erbt ein Typ Member, die in seiner Basisklasse definiert wurden. Da alle Typen im verwalteten Typsystem direkt oder indirekt von der <xref:System.Object>-Klasse erben, erben alle Typen ihre Member, z.B. <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType> und <xref:System.Object.ToString>. Im folgenden Beispiel wird eine `Person`-Klasse definiert, zwei `Person`-Objekte instanziiert, und es wird die `Person.Equals`-Methode aufgerufen, um zu bestimmen, ob die zwei Objekte gleich sind. Jedoch ist die `Equals`-Methode nicht in der `Person`-Klasse definiert; sie wird von <xref:System.Object> vererbt.
 
@@ -258,7 +259,7 @@ Wenn Sie eine Methode mit dem Modifizierer [async](language-reference/keywords/a
 > [!NOTE]
 > Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.
 
-Eine asynchrone Methode kann den Rückgabetyp <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> oder `void` haben. Der Rückgabetyp `void` wird hauptsächlich zum Definieren von Ereignishandlern verwendet, wobei ein `void`-Rückgabetyp erforderlich ist. Auf eine asynchrone Methode, die `void` zurückgibt, kann nicht gewartet werden, und der Aufrufer einer Methode mit void-Rückgabe kann keine Ausnahmen abfangen, die die Methode auslöst. Mit der Veröffentlichung von C# 7.0 wird diese Einschränkung gelockert, damit eine asynchrone Methode [jeden aufgabenähnlichen Typ zurückgeben](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md) kann.
+Eine asynchrone Methode kann den Rückgabetyp <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> oder `void` haben. Der Rückgabetyp `void` wird hauptsächlich zum Definieren von Ereignishandlern verwendet, wobei ein `void`-Rückgabetyp erforderlich ist. Auf eine asynchrone Methode, die `void` zurückgibt, kann nicht gewartet werden, und der Aufrufer einer Methode mit void-Rückgabe kann keine Ausnahmen abfangen, die die Methode auslöst. Ab C# 7.0 kann eine asynchrone Methode [jeden Task-ähnlichen Typ zurückgeben](./whats-new/csharp-7.md#generalized-async-return-types).
 
 Im folgenden Beispiel ist `DelayAsync` eine asynchrone Methode, die eine Rückgabeanweisung besitzt, die eine ganze Zahl zurückgibt. Da es sich um eine async-Methode handelt, muss die Methodendeklaration einen `Task<int>`-Rückgabetyp haben. Da der Rückgabetyp `Task<int>` ist, ergibt die Auswertung des `await`-Ausdrucks in `DoSomethingAsync` eine ganze Zahl, wie die folgende `int result = await delayTask`-Anweisung veranschaulicht.
 

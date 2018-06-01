@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3eeba609349bb9d5b7c68e15e0e0e6ff3f1b7ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390932"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Typäquivalenz und eingebettete Interop-Typen
 
@@ -32,7 +33,7 @@ Typäquivalenz bedeutet, dass ein COM-Objekt, das von einer verwalteten Assembly
 
 - Beide Typen haben die gleiche Identität, wie im nächsten Abschnitt beschrieben wird.
 
-- Beide Typen sind für Typäquivalenz, wie beschrieben in der [Markieren von COM-Typen für Typäquivalenz](#marking-com-types-for-type-equivalence) Abschnitt.
+- Beide Typen sind für die Typäquivalenz berechtigt, wie im Abschnitt [Markieren von COM-Typen für Typäquivalenz](#marking-com-types-for-type-equivalence) beschrieben wird.
 
 ### <a name="type-identity"></a>Typidentität
 

@@ -14,35 +14,36 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: e3e5ad7dd44dcaf1593ac80bbe6d0a367964e4e4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512475"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Gewusst wie: Angeben des Sicherheitskontexts für Dienste
-Standardmäßig werden Dienste in einem anderen Sicherheitskontext als dem des angemeldeten Benutzers ausgeführt. Wird aufgerufen, der Dienst ausgeführt wird, im Rahmen des Standardkontos System `LocalSystem`, die erhalten sie unterschiedliche Zugriffsrechte auf Systemressourcen, als der vom Benutzer. Sie können dieses Verhalten, um ein anderes Benutzerkonto angeben, unter dem der Dienst ausgeführt werden soll, ändern.  
+Standardmäßig werden Dienste in einem anderen Sicherheitskontext ausgeführt als dem des angemeldeten Benutzers. Dienste werden im Kontext des Standardsystemkontos, `LocalSystem`, ausgeführt, das ihnen andere Zugriffsberechtigungen für Systemressourcen erteilt als dem Benutzer. Sie können dieses Verhalten ändern und ein anderes Benutzerkonto angeben, unter dem Ihr Dienst ausgeführt werden sollte.  
   
- Festlegen des Sicherheitskontexts durch Bearbeiten der <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> Eigenschaft für den Prozess, in dem der Dienst ausgeführt wird. Diese Eigenschaft können Sie den Dienst auf einen der vier Kontotypen festlegen:  
+ Der Sicherheitskontext lässt sich festlegen, indem Sie die Eigenschaft <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> für den Prozess bearbeiten, in dem der Dienst ausgeführt wird. Mit dieser Eigenschaft können Sie den Dienst auf einen von vier Kontotypen festlegen:  
   
--   `User`, die bewirkt, dass des Systems für einen gültigen Benutzernamen und Kennwort aufgefordert werden, wenn der Dienst installiert ist und ausgeführt, im Kontext eines Kontos angegeben, die durch einen einzelnen Benutzer im Netzwerk wird;  
+-   `User`: Bewirkt, dass das System bei der Installation des Diensts zur Eingabe eines gültigen Benutzernamens und eines gültigen Kennworts auffordert und im Zusammenhang mit einem Konto ausgeführt wird, das von einem Benutzer im Netzwerk angegeben wurde.  
   
--   `LocalService`, der ausgeführt wird, im Kontext eines Kontos, das als nicht berechtigte Benutzer auf dem lokalen Computer fungiert und Remoteservern werden anonyme Anmeldeinformationen alle Remoteserver; übergeben  
+-   `LocalService`: Wird im Zusammenhang mit einem Konto ausgeführt, das als nicht berechtigter Benutzer des lokalen Computers fungiert, und stellt für beliebige Remoteserver Anmeldeinformationen bereit.  
   
--   `LocalSystem`, die im Kontext eines Kontos, das umfangreiche lokale Berechtigungen und stellt Anmeldeinformationen des Computers, auf alle RAS-Server ausgeführt wird  
+-   `LocalSystem`: Wird im Zusammenhang mit einem Konto ausgeführt, auf dem umfassende lokale Berechtigungen bereitgestellt werden, und stellt für beliebige Remoteserver die Anmeldeinformationen des Computers bereit.  
   
--   `NetworkService`, die im Kontext eines Kontos ein, die als nicht berechtigte Benutzer auf dem lokalen Computer fungiert, und stellt die Anmeldeinformationen des Computers mit remote-Server ausgeführt wird.  
+-   `NetworkService`: Wird im Zusammenhang mit einem Konto ausgeführt, das als nicht berechtigter Benutzer des lokalen Computers fungiert, und stellt für beliebige Remoteserver die Anmeldeinformationen des Computers bereit.  
   
  Weitere Informationen finden Sie unter der <xref:System.ServiceProcess.ServiceAccount>-Enumeration.  
   
-### <a name="to-specify-the-security-context-for-a-service"></a>Um den Sicherheitskontext für einen Dienst anzugeben.  
+### <a name="to-specify-the-security-context-for-a-service"></a>Angeben des Sicherheitskontexts für einen Dienst  
   
-1.  Nachdem Sie den Dienst erstellt haben, fügen Sie die erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Nachdem Sie den Dienst erstellt haben, fügen Sie die erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zu Ihrer Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  Im Designer Zugriff auf die `ProjectInstaller` Klasse, und klicken Sie auf das Dienstinstallationsprogramm-Prozess für den Dienst mit dem Sie arbeiten.  
+2.  Greifen Sie im Designer auf die Klasse `ProjectInstaller` zu, und klicken Sie bei dem Prozess, mit dem Sie arbeiten, auf den Dienstprozessinstaller.  
   
     > [!NOTE]
-    >  Für jede dienstanwendung sind mindestens zwei Installationskomponenten in der `ProjectInstaller` Klasse – eine, die die Prozesse für alle Dienste im Projekt und für jeden Dienst, der die Anwendung enthält einen Installer installiert. In diesem Fall sollten Sie auswählen möchten <xref:System.ServiceProcess.ServiceProcessInstaller>.  
+    >  Die Klasse `ProjectInstaller` enthält für jede Dienstanwendung mindestens zwei Installationskomponenten: eine Komponente, welche die Prozesse für sämtliche Dienste im Projekt installiert, und einen Installer für jeden in der App enthaltenen Dienst. Wählen Sie in dieser Instanz <xref:System.ServiceProcess.ServiceProcessInstaller> aus.  
   
-3.  In der **Eigenschaften** legen die <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> auf den entsprechenden Wert.  
+3.  Legen Sie im Fenster **Eigenschaften** <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> auf den entsprechenden Wert fest.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

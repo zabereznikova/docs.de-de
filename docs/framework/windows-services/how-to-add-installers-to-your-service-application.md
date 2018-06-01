@@ -14,51 +14,52 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514359"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Gewusst wie: Hinzufügen von Installern zur Dienstanwendung
-Visual Studio geliefert Installationskomponenten, die Ihre dienstanwendungen zugeordnete Ressourcen installieren können. Installationskomponenten registrieren Sie einen einzelnen Dienst auf dem System, das installiert wird, und lassen Sie den Dienststeuerungs-Manager wissen, dass der Dienst vorhanden ist. Bei der Arbeit mit einer dienstanwendung können Sie einen Link im Fenster Eigenschaften die entsprechenden Installationsprogramme automatisch zu Ihrem Projekt hinzufügen auswählen.  
+Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendungen zugeordnete Ressourcen installiert werden können. Installationskomponenten registrieren einen einzelnen Dienst auf dem System, auf dem dieser installiert wird, und informieren den Dienststeuerungs-Manager über das Vorhandensein des Diensts. Bei der Arbeit mit einer Dienstanwendung können Sie im Fenster „Eigenschaften“ einen Link auswählen, damit die entsprechenden Installer für Ihr Projekt automatisch hinzugefügt werden.  
   
 > [!NOTE]
->  Eigenschaftswerte für Ihren Dienst werden aus der Dienstklasse in die Installerklasse kopiert. Wenn Sie die Eigenschaftswerte in die Dienstklasse aktualisieren, werden sie in das Installationsprogramm nicht automatisch aktualisiert.  
+>  Eigenschaftswerte für Ihren Dienst werden aus der Dienstklasse in die Klasse des Installers kopiert. Wenn Sie die Eigenschaftswerte in der Dienstklasse aktualisieren, werden sie nicht automatisch im Installer aktualisiert.  
   
- Wenn Sie ein Installationsprogramm Ihrem Projekt eine neue Klasse hinzufügen (, die standardmäßig heißt `ProjectInstaller`) wird erstellt, in das Projekt, und klicken Sie auf Instanzen der entsprechenden Installation Komponenten darin erstellt werden. Diese Klasse fungiert als ein zentraler Verwaltungspunkt für alle Installationskomponenten für das Projekt benötigt. Wenn Sie Ihre Anwendung einen zweiten Dienst hinzu, und klicken Sie auf den Link Installer hinzufügen, wird eine zweite Installerklasse z. B. nicht erstellt; Stattdessen wird die vorhandene Klasse der erforderlichen zusätzlichen Installationskomponente für den zweiten Dienst hinzugefügt.  
+ Wenn Sie einen Installer zu Ihrem Projekt hinzufügen, wird in dem Projekt eine neue Klasse erstellt (sie trägt standardmäßig den Namen `ProjectInstaller`), und in dieser Klasse werden Instanzen der entsprechenden Installationskomponenten erstellt. Diese Klasse fungiert als Mittelpunkt für sämtliche Installationspunkte, die für Ihr Projekt erforderlich sind. Wenn Sie beispielsweise einen zweiten Dienst zu Ihrer App hinzufügen und auf den Link „Installer hinzufügen“ klicken, wird keine zweite Installerklasse erstellt. Stattdessen wird die erforderliche zusätzliche Installationskomponente für den zweiten Dienst zur vorhandenen Klasse hinzugefügt.  
   
- Sie brauchen keine besondere Codierung innerhalb der Installationsprogramme, stellen die Dienste ordnungsgemäß zu installieren. Allerdings müssen Sie gelegentlich den Inhalt der Installationsprogramme zu ändern, wenn Sie spezielle Funktionen während des Installationsvorgangs hinzufügen müssen.  
+ Für eine ordnungsgemäße Installation Ihrer Dienste ist innerhalb der Installer keine besondere Codierung erforderlich. Sie müssen jedoch möglicherweise gelegentlich die Inhalte der Installer ändern, wenn Sie besondere Funktionen zum Installer hinzufügen müssen.  
   
 > [!NOTE]
 >  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-add-installers-to-your-service-application"></a>Die dienstanwendung Installationsprogramme hinzu  
+### <a name="to-add-installers-to-your-service-application"></a>Vorgehensweise beim Hinzufügen von Installern zu Ihrer Dienstanwendung  
   
-1.  In **Projektmappen-Explorer**, Zugriff **Entwurf** Ansicht für den Dienst für die Sie eine Komponente hinzufügen möchten.  
+1.  Greifen Sie im **Projektmappen-Explorer** bei dem Dienst, für den Sie eine Installationskomponente hinzufügen möchten, auf die Ansicht **Entwurf** zu.  
   
-2.  Klicken Sie auf dem Hintergrund des Designers, um den Dienst ausgewählt haben, selbst statt einen seiner Inhalte.  
+2.  Klicken Sie auf den Hintergrund des Designers, um den Dienst selbst auszuwählen, nicht Elemente seines Inhalts.  
   
-3.  Mit dem Designer den Fokus hat, mit der rechten Maustaste, und klicken Sie dann auf **Installer hinzufügen**.  
+3.  Führen Sie einen Rechtsklick aus, während der Designer den Fokus hat, und klicken Sie anschließend auf **Installer hinzufügen**.  
   
-     Eine neue Klasse `ProjectInstaller`, und zwei Installationskomponenten <xref:System.ServiceProcess.ServiceProcessInstaller> und <xref:System.ServiceProcess.ServiceInstaller>, hinzukommen zum Projekt und Eigenschaftswerte für der Dienst für die Komponenten kopiert werden.  
+     Eine neue Klasse, `ProjectInstaller`, und zwei Installationskomponenten, <xref:System.ServiceProcess.ServiceProcessInstaller> und <xref:System.ServiceProcess.ServiceInstaller>, werden zu Ihrem Projekt hinzugefügt, und Eigenschaftswerte für den Dienst werden in die Komponenten kopiert.  
   
-4.  Klicken Sie auf die <xref:System.ServiceProcess.ServiceInstaller> Komponente und überprüfen Sie, ob der Wert des der <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> Eigenschaftensatz wird auf den gleichen Wert wie die <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> Eigenschaft für den Dienst selbst.  
+4.  Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceInstaller>, und überprüfen Sie, ob der Wert der Eigenschaft <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> auf den gleichen Wert festgelegt ist wie der Wert der Eigenschaft <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> für den Dienst selbst.  
   
-5.  Um zu bestimmen, wie der Dienst gestartet wird, klicken Sie auf die <xref:System.ServiceProcess.ServiceInstaller> Komponente, und legen die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> Eigenschaft auf den entsprechenden Wert.  
+5.  Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceInstaller>, und legen Sie die Eigenschaft <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> auf den entsprechenden Wert fest, um zu bestimmen, wie Ihr Dienst gestartet wird.  
   
     |Wert|Ergebnis|  
     |-----------|------------|  
     |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Der Dienst muss nach der Installation manuell gestartet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md).|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Der Dienst kann selbst gestartet, sobald der Computer neu gestartet wurde.|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Der Dienst startet selbst, sobald der Computer neu gestartet wird.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Der Dienst kann nicht gestartet werden.|  
   
-6.  Um den Sicherheitskontext fest, in dem der Dienst ausgeführt wird, klicken Sie auf die <xref:System.ServiceProcess.ServiceProcessInstaller> Komponente, und legen Sie die entsprechenden Eigenschaftswerte. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6.  Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceProcessInstaller>, und legen Sie die entsprechenden Eigenschaftswerte fest, um den Sicherheitskontext zu bestimmen, in dem Ihr Dienst ausgeführt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
   
-7.  Überschreiben Sie alle Methoden, die für die benutzerdefinierte Verarbeitung durchgeführt werden müssen.  
+7.  Setzen Sie alle Methoden außer Kraft, für die eine benutzerdefinierte Verarbeitung durchgeführt werden muss.  
   
-8.  Führen Sie die Schritte 1 bis 7 für jeden Dienst in Ihrem Projekt ein.  
+8.  Führen Sie für jeden weiteren Dienst in Ihrem Projekt die Schritte 1 bis 7 durch.  
   
     > [!NOTE]
-    >  Für jeden Dienst in Ihrem Projekt, müssen Sie ein zusätzliches hinzufügen <xref:System.ServiceProcess.ServiceInstaller> -Komponente auf des Projekts `ProjectInstaller` Klasse. Die <xref:System.ServiceProcess.ServiceProcessInstaller> Komponente, die in Schritt 3 hinzugefügten funktioniert mit allen einzelnen Dienstinstallationsprogramm im Projekt.  
+    >  Sie müssen für jeden weiteren Dienst in Ihrem Projekt eine zusätzliche <xref:System.ServiceProcess.ServiceInstaller>-Komponente für die Klasse `ProjectInstaller` des Projekts hinzufügen. Die in Schritt 3 hinzugefügte Komponente <xref:System.ServiceProcess.ServiceProcessInstaller> kann mit allen Dienstinstallern im Projekt ausgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

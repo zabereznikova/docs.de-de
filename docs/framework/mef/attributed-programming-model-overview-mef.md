@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392507"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Übersicht über das Modell der attributierten Programmierung (MEF)
 Im Managed Extensibility Framework (MEF) ist ein *Programmiermodell* eine besondere Methode, den Satz der konzeptionellen Objekte zu definieren, mit denen MEF ausgeführt wird. Diese konzeptionellen Objekte umfassen Teile, Importe und Exporte. MEF verwendet diese Objekte, gibt jedoch nicht an, wie sie dargestellt werden sollen. Daher ist eine Vielzahl von Programmiermodellen möglich, einschließlich benutzerdefinierter Programmiermodelle.  
@@ -81,7 +82,7 @@ End Class
 public class MyLogger : IMyAddin { }  
 ```  
   
- In diesem Export ist der Vertragstyp `MyLogger` anstatt `IMyAddin`. Obwohl `MyLogger` implementiert `IMyAddin`, und konnte daher umgewandelt werden, um ein `IMyAddin` Objekt dieser Export entspricht nicht den vorherigen Import, da die Vertragstypen nicht identisch sind.  
+ In diesem Export ist der Vertragstyp `MyLogger` anstatt `IMyAddin`. Obwohl `MyLogger` `IMyAddin` implementiert und daher in ein `IMyAddin`-Objekt umgewandelt werden kann, entspricht dieser Export nicht dem vorherigen Import, da die Vertragstypen nicht identisch sind.  
   
  Im Allgemeinen ist es nicht notwendig, den Vertragsnamen anzugeben, und die meisten Verträge sollten im Hinblick auf den Vertragstyp und die Metadaten definiert werden. Unter bestimmten Umständen ist es jedoch wichtig, den Vertragsnamen direkt anzugeben. Der häufigste Fall ist, wenn eine Klasse mehrere Werte exportiert, die gemeinsam einen allgemeinen Typ verwenden, z. B. Primitive. Der Vertragsname kann als erster Parameter des `Import` -Attributs oder des `Export` -Attributs angegeben werden. Im folgenden Code werden ein Import und ein Export mit dem angegebenen Vertragsnamen `MajorRevision`gezeigt.  
   
@@ -238,7 +239,7 @@ public class MyClass
 }  
 ```  
   
- Aus Sicht des Kompositionsmoduls wird der Vertragstyp `Lazy<T>` als identisch mit dem Vertragstyp `T`eingestuft. Daher entspricht der vorherige Import dem folgenden Export.  
+ Aus Sicht der Kompositions-Engine wird der Vertragstyp `Lazy<T>` als identisch mit dem Vertragstyp `T`eingestuft. Daher entspricht der vorherige Import dem folgenden Export.  
   
 ```vb  
 <Export(GetType(IMyAddin))>  
@@ -256,9 +257,9 @@ public class MyLogger : IMyAddin { }
  Der Vertragsname und Vertragstyp kann im `Import` -Attribut für einen verzögerten Import angegeben werden (siehe Abschnitt "Grundlegende Importe und Exporte").  
   
 ### <a name="prerequisite-imports"></a>Erforderliche Importe  
- Exportierte MEF-Teile werden in der Regel vom Kompositionsmodul erstellt, und zwar als Antwort auf eine direkte Anforderung oder die Notwendigkeit, einen übereinstimmenden Import aufzufüllen. Standardmäßig verwendet das Kompositionsmodul beim Erstellen eines Teils den parameterlosen Konstruktor. Damit das Modul einen anderen Konstruktor verwendet, können Sie es mit dem `ImportingConstructor` -Attribut markieren.  
+ Exportierte MEF-Teile werden in der Regel von der Kompositions-Engine erstellt, und zwar als Antwort auf eine direkte Anforderung oder die Notwendigkeit, einen übereinstimmenden Import aufzufüllen. Standardmäßig verwendet die Kompositions-Engine beim Erstellen eines Teils den parameterlosen Konstruktor. Damit die Engine einen anderen Konstruktor verwendet, können Sie sie mit dem `ImportingConstructor`-Attribut markieren.  
   
- Jeder Teil verfügt möglicherweise nur über einen Konstruktor für die Verwendung durch das Kompositionsmodul. Wenn kein Standardkonstruktor und kein `ImportingConstructor` -Attribut oder mehr als ein `ImportingConstructor` -Attribut angegeben wird, tritt ein Fehler auf.  
+ Jeder Teil verfügt möglicherweise nur über einen Konstruktor für die Verwendung durch die Kompositions-Engine. Wenn kein Standardkonstruktor und kein `ImportingConstructor` -Attribut oder mehr als ein `ImportingConstructor` -Attribut angegeben wird, tritt ein Fehler auf.  
   
  Um die Parameter eines Konstruktors auszufüllen, der mit dem `ImportingConstructor` -Attribut markiert ist, werden alle diese Parameter automatisch als Importe deklariert. Dies ist eine einfache Möglichkeit zum Deklarieren von Importen, die während der Teileinitialisierung verwendet werden. Die folgende Klasse verwendet `ImportingConstructor` , um einen Import zu deklarieren.  
   
@@ -728,7 +729,7 @@ public class MegaLogger : Logger        {
 }  
 ```  
   
- Wenn Sie das `InheritedExport`-Attribut erneut deklarieren, um Metadaten zu überschreiben, stellen Sie sicher, dass die Vertragstypen identisch sind. (Im vorherigen Beispiel ist `IPlugin` der Vertragstyp.) Wenn sie sich unterscheiden und nicht überschrieben werden, erstellt das zweite Attribut einen zweiten, unabhängigen Export des Teils. Im Allgemeinen bedeutet dies, dass Sie den Vertragstyp explizit angeben müssen, wenn Sie ein `InheritedExport`-Attribut überschreiben (siehe vorheriges Beispiel).  
+ Wenn Sie das `InheritedExport` -Attribut erneut deklarieren, um Metadaten zu überschreiben, stellen Sie sicher, dass die Vertragstypen identisch sind. (Im vorherigen Beispiel ist `IPlugin` der Vertragstyp.) Wenn sie sich unterscheiden und nicht überschrieben werden, erstellt das zweite Attribut einen zweiten, unabhängigen Export des Teils. Im Allgemeinen bedeutet dies, dass Sie den Vertragstyp explizit angeben müssen, wenn Sie ein `InheritedExport`-Attribut überschreiben (siehe vorheriges Beispiel).  
   
  Da Schnittstellen nicht direkt instanziiert werden können, können sie im Allgemeinen nicht mit `Export` -Attributen oder `Import` -Attribut ergänzt werden. Allerdings kann eine Schnittstelle mit einem `InheritedExport` -Attribut auf der Schnittstellenebene ergänzt werden. Dieser Export wird zusammen mit allen zugeordneten Metadaten von jeder beliebigen implementierenden Klasse geerbt. Die Schnittstelle selbst ist jedoch nicht als ein Teil verfügbar.  
   
@@ -800,7 +801,7 @@ public MyAddin myAddin { get; set; }
 ## <a name="creation-policies"></a>Erstellungsrichtlinien  
  Wenn ein Teil einen Import angibt und eine Komposition ausgeführt wird, versucht der Kompositionscontainer einen entsprechenden Export zu finden. Wenn der Import einem Export zugeordnet werden kann, wird der importierende Member auf eine Instanz des exportierten Objekts festgelegt. Der Ort, von dem die Instanz stammt, wird durch die *Erstellungsrichtlinie*des exportierenden Teils bestimmt.  
   
- Die zwei möglichen Erstellungsrichtlinien sind *freigegeben* und *nicht freigegeben*. Ein Teil mit der Erstellungsrichtlinie "Freigegeben" wird zwischen jedem Import im Container für einen Teil mit diesem Vertrag freigegeben. Wenn das Kompositionsmodul eine Übereinstimmung findet und eine importierende Eigenschaft festlegen muss, instanziiert es nur dann eine neue Kopie des Teils, wenn noch keine vorhanden ist; andernfalls wird die vorhandene Kopie angegeben. Dies bedeutet, dass viele Objekte möglicherweise Verweise auf den gleichen Teil besitzen. Für solche Teile sollte nicht der interne Zustand verwendet werden, der an vielen Stellen geändert werden kann. Diese Richtlinie ist für statische Teile, Teile, die Dienste bereitstellen, und Teile, die viel Arbeitsspeicher oder andere Ressourcen belegen, geeignet.  
+ Die zwei möglichen Erstellungsrichtlinien sind *freigegeben* und *nicht freigegeben*. Ein Teil mit der Erstellungsrichtlinie "Freigegeben" wird zwischen jedem Import im Container für einen Teil mit diesem Vertrag freigegeben. Wenn die Kompositions-Engine eine Übereinstimmung findet und eine importierende Eigenschaft festlegen muss, instanziiert sie nur dann eine neue Kopie des Teils, wenn noch keine vorhanden ist; andernfalls wird die vorhandene Kopie angegeben. Dies bedeutet, dass viele Objekte möglicherweise Verweise auf den gleichen Teil besitzen. Für solche Teile sollte nicht der interne Zustand verwendet werden, der an vielen Stellen geändert werden kann. Diese Richtlinie ist für statische Teile, Teile, die Dienste bereitstellen, und Teile, die viel Arbeitsspeicher oder andere Ressourcen belegen, geeignet.  
   
  Ein Teil mit der Erstellungsrichtlinie "Nicht freigegeben" wird bei jedem Auffinden eines übereinstimmenden Imports für einen der Exporte erstellt. Eine neue Kopie wird daher für jeden Import im Container instanziiert, der einem der exportierten Verträge des Teils entspricht. Der interne Zustand dieser Kopien wird nicht freigegeben. Diese Richtlinie ist geeignet für Teile, bei denen jeder Import einen eigenen internen Zustand benötigt.  
   
@@ -953,8 +954,8 @@ public class PartSeven
   
  Für langlebige Kompositionscontainer, kann der Speicherbedarf von Teilen mit der Erstellungsrichtlinie "Nicht freigegeben" ein Problem darstellen. Diese nicht freigegebenen Teile können mehrmals erstellt werden und werden erst freigegeben, wenn der Container selbst freigegeben wurde. Zu diesem Zweck verfügt der Container über die `ReleaseExport` -Methode. Durch Aufrufen dieser Methode für einen nicht freigegebenen Export wird der Export aus dem Kompositionscontainer entfernt und freigegeben. Teile, die nur vom entfernten Export usw. weiter unten in der Struktur verwendet werden, werden ebenfalls entfernt und freigegeben. Dadurch können Ressourcen ohne Freigabe des Kompositionscontainers selbst freigegeben werden.  
   
- `IPartImportsSatisfiedNotification` enthält eine Methode mit dem Namen `OnImportsSatisfied`. Diese Methode wird vom Kompositionscontainer für alle Teile aufgerufen, die die Schnittstelle implementieren, wenn die Komposition abgeschlossen wurde und die Importe des Teils verwendet werden können. Teile werden vom Kompositionsmodul erstellt, um die Importe anderer Teilen auszufüllen. Vor dem Festlegen der Importe eines Teils können Sie keine Initialisierung ausführen, die importierte Werte im Teilkonstruktor verwendet oder bearbeitet, sofern diese Werte nicht mithilfe des `ImportingConstructor` -Attributs als Voraussetzung angegeben wurden. Dies ist normalerweise die bevorzugte Methode, doch in einigen Fällen ist die Konstruktoreinfügung möglicherweise nicht verfügbar. In diesen Fällen kann die Initialisierung in `OnImportsSatisfied`ausgeführt werden, und der Teil sollte `IPartImportsSatisfiedNotification`implementieren.  
+ `IPartImportsSatisfiedNotification` enthält eine Methode mit dem Namen `OnImportsSatisfied`. Diese Methode wird vom Kompositionscontainer für alle Teile aufgerufen, die die Schnittstelle implementieren, wenn die Komposition abgeschlossen wurde und die Importe des Teils verwendet werden können. Teile werden von der Kompositions-Engine erstellt, um die Importe anderer Teilen auszufüllen. Vor dem Festlegen der Importe eines Teils können Sie keine Initialisierung ausführen, die importierte Werte im Teilkonstruktor verwendet oder bearbeitet, sofern diese Werte nicht mithilfe des `ImportingConstructor` -Attributs als Voraussetzung angegeben wurden. Dies ist normalerweise die bevorzugte Methode, doch in einigen Fällen ist die Konstruktoreinfügung möglicherweise nicht verfügbar. In diesen Fällen kann die Initialisierung in `OnImportsSatisfied`ausgeführt werden, und der Teil sollte `IPartImportsSatisfiedNotification`implementieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Channel 9-Video: Öffnen Sie Ihrer Anwendungen mit dem Managed Extensibility Framework](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Channel 9-Video: Öffnen Ihrer Anwendungen mit dem Managed Extensibility Framework](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
  [Channel 9-Video: Managed Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

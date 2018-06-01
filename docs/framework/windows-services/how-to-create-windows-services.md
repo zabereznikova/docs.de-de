@@ -9,12 +9,13 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517861"
 ---
 # <a name="how-to-create-windows-services"></a>Gewusst wie: Erstellen von Windows-Diensten
-Wenn Sie einen Dienst erstellen, können Sie Visual Studio-Projektvorlage **Windowsdienst**. Von dieser Vorlage wird ein großer Teil der Arbeit übernommen, indem auf die entsprechenden Klassen und Namespaces verwiesen wird, die Vererbung von den Basisklassen für Dienste eingerichtet wird und eine Reihe von Methoden überschrieben werden, die voraussichtlich überschrieben werden sollen.  
+Wenn Sie einen Dienst erstellen möchten, können Sie die Visual Studio-Projektvorlage **Windows-Dienst** verwenden. Von dieser Vorlage wird ein großer Teil der Arbeit übernommen, indem auf die entsprechenden Klassen und Namespaces verwiesen wird, die Vererbung von den Basisklassen für Dienste eingerichtet wird und eine Reihe von Methoden überschrieben werden, die voraussichtlich überschrieben werden sollen.  
   
 > [!WARNING]
 >  Die Projektvorlage Windows Service ist nicht in der Express Edition von Visual Studio verfügbar.  
@@ -29,14 +30,14 @@ Wenn Sie einen Dienst erstellen, können Sie Visual Studio-Projektvorlage **Wind
   
 ### <a name="to-create-a-windows-service-application"></a>So erstellen Sie eine Windows-Dienstanwendung  
   
-1.  Erstellen einer **Windowsdienst** Projekt.  
+1.  Erstellen Sie ein **Windows-Dienstprojekt**.  
   
     > [!NOTE]
-    >  Anleitungen zum Schreiben von einem Dienst ohne Verwendung der Vorlage finden Sie unter [wie: Schreiben Sie Dienste programmgesteuert](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    >  Anweisungen zum Schreiben von Diensten ohne die Vorlage finden Sie unter [Vorgehensweise: Programmgesteuertes Schreiben von Diensten](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
-2.  In der **Eigenschaften** legen die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> Eigenschaft für den Dienst.  
+2.  Legen Sie im Fenster **Eigenschaften** die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>-Eigenschaft für den Dienst fest.  
   
-     ![Legen Sie die ServiceName-Eigenschaft. ] (../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
+     ![Legen Sie die ServiceName-Eigenschaft fest.](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "Windows_Dienstname")  
   
     > [!NOTE]
     >  Der Wert der <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>-Eigenschaft muss immer mit dem Namen übereinstimmen, der in den Installationsprogrammklassen aufgezeichnet wurde. Wenn Sie diese Eigenschaft ändern, muss auch die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>-Eigenschaft der Installationsprogrammklassen aktualisiert werden.  
@@ -48,11 +49,11 @@ Wenn Sie einen Dienst erstellen, können Sie Visual Studio-Projektvorlage **Wind
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|Mit `True` wird angezeigt, dass vom Dienst Anforderungen zum Beenden angenommen werden. Mit `false` wird verhindert, dass der Dienst beendet werden kann.|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|Mit `True` wird angegeben, dass der Dienst benachrichtigt werden soll, wenn der ausführende Computer heruntergefahren wird. Dadurch wird ermöglicht, dass die <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>-Prozedur aufgerufen werden kann.|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|Mit `True` wird angegeben, dass vom Dienst Anforderungen zum Anhalten und Fortsetzen angenommen werden. Mit `false` wird verhindert, dass der Dienst angehalten oder fortgesetzt werden kann.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` um anzugeben, dass der Dienst Benachrichtigungen zu Änderungen an den Energiezustand des Computers behandeln kann. `false` um zu verhindern, dass den Dienst diese Änderungen informiert wird.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|Mit `True` werden informative Einträge in das Anwendungsereignisprotokoll geschrieben, sobald vom Dienst eine Aktion durchgeführt wird. Mit `false` wird diese Funktion deaktiviert. Weitere Informationen finden Sie unter [Vorgehensweise: Protokoll Informationen zu Diensten](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Hinweis:** standardmäßig <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> festgelegt ist, um `true`.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|Mit `True` wird angegeben, dass der Dienst Benachrichtigungen zu Änderungen des Leistungsstatus eines Computers verarbeiten kann. `false` gibt an, dass der Dienst nicht über diese Änderungen informiert wird.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|Mit `True` werden informative Einträge in das Anwendungsereignisprotokoll geschrieben, sobald vom Dienst eine Aktion durchgeführt wird. Mit `false` wird diese Funktion deaktiviert. Weitere Informationen finden Sie unter [Vorgehensweise: Protokollinformationen über Dienste](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Hinweis**: <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> ist standardmäßig auf `true` festgelegt.|  
   
     > [!NOTE]
-    >  Wenn <xref:System.ServiceProcess.ServiceBase.CanStop%2A> oder <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> festgelegt `false`, die **Dienststeuerungs-Manager** werden die entsprechenden Menüoptionen zum Beenden, Anhalten oder Fortsetzen des Diensts zu deaktivieren.  
+    >  Wenn <xref:System.ServiceProcess.ServiceBase.CanStop%2A> oder <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> auf `false` festgelegt sind, werden vom **Dienststeuerungs-Manager** die entsprechenden Menüoptionen zum Beenden, Anhalten oder Fortsetzen des Diensts deaktiviert.  
   
 4.  Greifen Sie auf den Code-Editor zu, und geben Sie die gewünschte Verarbeitung für die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Prozedur und die <xref:System.ServiceProcess.ServiceBase.OnStop%2A>-Prozedur ein.  
   
@@ -60,7 +61,7 @@ Wenn Sie einen Dienst erstellen, können Sie Visual Studio-Projektvorlage **Wind
   
 6.  Fügen Sie die für die Dienstanwendung erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-7.  Erstellen Sie das Projekt, indem Sie auswählen **Projektmappe** aus der **erstellen** Menü.  
+7.  Erstellen Sie das Projekt, indem Sie im Menü **Erstellen** den Befehl **Projektmappe erstellen** auswählen.  
   
     > [!NOTE]
     >  Drücken Sie nicht F5, um das Projekt auszuführen. Dienstprojekte können auf diese Weise nicht ausgeführt werden.  

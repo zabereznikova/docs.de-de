@@ -18,53 +18,54 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: f0c760d0f9b65fc9b612a8bee8abb68fa5b4ecae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516106"
 ---
 # <a name="service-application-programming-architecture"></a>Programmierarchitektur für Dienstanwendungen
-Windows-dienstanwendungen basieren auf einer Klasse, die von erben die <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> Klasse. Sie überschreiben die Methoden, die von dieser Klasse und Funktionen sind, um zu bestimmen, wie das Verhalten des Diensts definiert.  
+Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> erbt. Wenn Sie das Verhalten Ihres Diensts bestimmen möchten, können Sie Methoden aus dieser Klasse außer Kraft setzen und ihre Funktionen definieren.  
   
- Die wichtigsten Klassen diensterstellung beteiligt sind:  
+ Folgende Klassen sind wesentlich in die Diensterstellung eingebunden:  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> – Sie überschreiben Sie Methoden aus der <xref:System.ServiceProcess.ServiceBase> Klasse beim Erstellen eines Diensts, und definieren Sie den Code, um zu bestimmen, wie Ihre Service-Funktionen in dieser Klasse geerbt.  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>: Beim Erstellen eines Diensts setzen Sie Methoden aus der Klasse <xref:System.ServiceProcess.ServiceBase> außer Kraft und definieren den Code, um zu bestimmen, wie Ihr Dienst in dieser geerbten Klasse funktioniert.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> und <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> – verwenden Sie diese Klassen zum Installieren und deinstallieren den Dienst.  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> und <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType>: Mithilfe dieser Klassen lässt sich Ihr Dienst installieren und deinstallieren.  
   
- Darüber hinaus eine Klasse mit dem Namen <xref:System.ServiceProcess.ServiceController> können verwendet werden, um den Dienst selbst bearbeiten. Diese Klasse ist nicht zur Erstellung eines Diensts jedoch dienen zum Starten und beenden Sie den Dienst, Befehle an ihn übergeben und eine Reihe von Enumerationen zurück.  
+ Darüber hinaus kann die Klasse <xref:System.ServiceProcess.ServiceController> für die Bearbeitung des Diensts selbst verwendet werden. Diese Klasse ist nicht in die Erstellung eines Diensts eingebunden, kann jedoch für das Starten und Beenden des Diensts, für die Übergabe von Befehlen und für die Rückgabe einer Reihe von Enumerationen verwendet werden.  
   
-## <a name="defining-your-services-behavior"></a>Definieren des Verhaltens des Diensts  
- In Ihrer Dienstklasse überschreiben Sie die Funktionen der Basisklasse, die bestimmen, was geschieht, wenn der Status des Diensts im Dienststeuerungs-Manager geändert wird. Die <xref:System.ServiceProcess.ServiceBase> Klasse macht die folgenden Methoden, die Sie überschreiben können, um ein benutzerdefiniertes Verhalten hinzuzufügen.  
+## <a name="defining-your-services-behavior"></a>Definieren des Verhaltens Ihres Diensts  
+ In Ihrer Dienstklasse setzen Sie die Funktionen der Basisklasse außer Kraft, die bestimmen, was geschieht, wenn der Status Ihres Diensts im Dienststeuerungs-Manager geändert wird. Die Klasse <xref:System.ServiceProcess.ServiceBase> macht folgende Methoden verfügbar, die Sie außer Kraft setzen können, um benutzerdefiniertes Verhalten hinzuzufügen.  
   
-|Methode|Zum Überschreiben|  
+|Methode|Grund für die Außerkraftsetzung|  
 |------------|-----------------|  
-|<xref:System.ServiceProcess.ServiceBase.OnStart%2A>|Geben Sie an, welche Aktionen ausgeführt werden soll, wenn der Dienst ausgeführt wird. Sie müssen Code schreiben, in diesem Verfahren für Ihren Dienst um sinnvolle Aufgaben ausführen.|  
-|<xref:System.ServiceProcess.ServiceBase.OnPause%2A>|Geben Sie an, was geschehen soll, wenn der Dienst angehalten wird.|  
-|<xref:System.ServiceProcess.ServiceBase.OnStop%2A>|Geben Sie an, was geschehen soll, wenn der Dienst beendet wird.|  
-|<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>|Geben Sie an, was geschehen soll, wenn der Dienst wird fortgesetzt, normal funktionsfähig, nachdem er angehalten wurde.|  
-|<xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>|Geben Sie an, was unmittelbar vor dem Herunterfahren, des Systems geschehen soll, wenn der Dienst zu diesem Zeitpunkt ausgeführt wird.|  
-|<xref:System.ServiceProcess.ServiceBase.OnCustomCommand%2A>|Geben Sie an, was geschehen soll, wenn der Dienst einen benutzerdefinierten Befehl empfängt. Weitere Informationen über benutzerdefinierte Befehle finden Sie unter MSDN online.|  
-|<xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A>|Geben Sie an, wie der Dienst reagieren soll, wenn ein Verwaltungsereignis Power, z. B. eine Batterie oder angehalten empfangen wird.|  
+|<xref:System.ServiceProcess.ServiceBase.OnStart%2A>|Angabe, welche Maßnahmen ergriffen werden sollten, wenn Ihr Dienst ausgeführt wird. Sie müssen in dieser Prozedur Code schreiben, damit Ihr Dienst sinnvolle Arbeit leistet.|  
+|<xref:System.ServiceProcess.ServiceBase.OnPause%2A>|Angabe, was geschehen soll, wenn Ihr Dienst angehalten wird.|  
+|<xref:System.ServiceProcess.ServiceBase.OnStop%2A>|Angabe, was geschehen soll, wenn Ihr Dienst beendet wird.|  
+|<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>|Angabe, was geschehen soll, wenn Ihr Dienst wieder aufgenommen wird und normal funktioniert, nachdem er angehalten wurde.|  
+|<xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>|Angabe, was unmittelbar vor dem Herunterfahren Ihres Systems geschehen soll, wenn Ihr Dienst zu diesem Zeitpunkt ausgeführt wird.|  
+|<xref:System.ServiceProcess.ServiceBase.OnCustomCommand%2A>|Angabe, was geschehen soll, wenn Ihr Dienst einen benutzerdefinierten Befehl empfängt. Weitere Informationen zu benutzerdefinierten Befehlen finden Sie auf MSDN Online.|  
+|<xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A>|Angabe, wie der Dienst reagieren soll, wenn ein Energieverwaltungsereignis empfangen wird, wie z.B. ein niedriger Akkustand oder ein ausgesetzter Vorgang.|  
   
 > [!NOTE]
->  Diese Methoden darstellen, Status, in denen der Dienst während seiner Lebensdauer durchlaufen; der Dienst Übergänge von einem Status zum nächsten. Angenommen, Sie rufen niemals den Dienst so reagieren Sie auf eine <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> vor dem Befehl <xref:System.ServiceProcess.ServiceBase.OnStart%2A> aufgerufen wurde.  
+>  Diese Methoden stellen Status dar, die der Dienst in seiner Lebensdauer durchläuft: Er geht von einem Status in den nächsten über. So wird der Dienst niemals auf den Befehl <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> reagieren, bevor nicht <xref:System.ServiceProcess.ServiceBase.OnStart%2A> aufgerufen wurde.  
   
- Es gibt mehrere andere Eigenschaften und Methoden, die von Interesse sind. Dazu gehören:  
+ Es gibt einige andere Eigenschaften und Methoden, die von Interesse sind. Dazu gehören:  
   
--   Die <xref:System.ServiceProcess.ServiceBase.Run%2A> Methode für die <xref:System.ServiceProcess.ServiceBase> Klasse. Dies ist der Haupteinstiegspunkt für den Dienst. Wenn Sie einen Dienst mithilfe der Windows-Dienstvorlage erstellen, in der Anwendungsverzeichnis Code eingefügt `Main` Methode, um den Dienst auszuführen. Dieser Code sieht wie folgt:  
+-   Die Methode <xref:System.ServiceProcess.ServiceBase.Run%2A> in der Klasse <xref:System.ServiceProcess.ServiceBase>. Dies ist der Haupteinstiegspunkt für den Dienst. Wenn Sie einen Dienst mit der Windows-Dienstvorlage erstellen, wird Code in die Methode `Main` Ihrer Anwendung eingefügt, um den Dienst auszuführen. Dieser Code sieht wie folgt aus:  
   
      [!code-csharp[VbRadconService#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#6)]
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    >  In diesen Beispielen verwenden ein Array vom Typ <xref:System.ServiceProcess.ServiceBase>in die jeden Dienst, der die Anwendung enthält, kann hinzugefügt werden, und klicken Sie dann alle Dienste zusammen ausgeführt werden können. Wenn Sie nur einen einzelnen Dienst erstellen, allerdings empfiehlt sich nicht auf das Array verwenden, und deklarieren Sie einfach ein neues Objekt, das erben von <xref:System.ServiceProcess.ServiceBase> und führen Sie es dann. Ein Beispiel finden Sie unter [wie: Schreiben Sie Dienste programmgesteuert](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    >  In diesen Beispielen wird ein Array vom Typ <xref:System.ServiceProcess.ServiceBase> verwendet, in das jeder Dienst hinzugefügt werden kann, den Ihre App enthält. Anschließend können sämtliche Dienste zusammen ausgeführt werden. Wenn Sie nur einen Dienst erstellen, empfiehlt es sich jedoch, nicht das Array zu verwenden, sondern einfach ein neues Objekt zu deklarieren, das aus <xref:System.ServiceProcess.ServiceBase> erbt, und dieses Objekt auszuführen. Siehe beispielsweise [Vorgehensweise: Programmgesteuertes Schreiben von Diensten](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
--   Eine Reihe von Eigenschaften für die <xref:System.ServiceProcess.ServiceBase> Klasse. Diese bestimmen, welche Methoden für Ihren Dienst aufgerufen werden können. Beispielsweise, wenn die <xref:System.ServiceProcess.ServiceBase.CanStop%2A> -Eigenschaftensatz auf `true`, die <xref:System.ServiceProcess.ServiceBase.OnStop%2A> -Methode für Ihren Dienst aufgerufen werden kann. Wenn die <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> -Eigenschaftensatz auf `true`, <xref:System.ServiceProcess.ServiceBase.OnPause%2A> und <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> Methoden aufgerufen werden können. Beim Festlegen dieser Eigenschaften zu `true`, Sie sollten dann außer Kraft setzen und Verarbeitung für die zugeordneten Methoden definieren.  
+-   Eine Reihe von Eigenschaften in der Klasse <xref:System.ServiceProcess.ServiceBase>. Mit diesen Eigenschaften wird bestimmt, welche Methoden in Ihrem Dienst aufgerufen werden können. Wenn die Eigenschaft <xref:System.ServiceProcess.ServiceBase.CanStop%2A> beispielsweise auf `true` festgelegt wird, kann die Methode <xref:System.ServiceProcess.ServiceBase.OnStop%2A> in Ihrem Dienst aufgerufen werden. Wenn die Eigenschaft <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> auf `true` festgelegt wird, können die Methoden <xref:System.ServiceProcess.ServiceBase.OnPause%2A> und <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> aufgerufen werden. Wenn Sie eine dieser Eigenschaften auf `true` festlegen, sollten Sie anschließend die Verarbeitung für die zugeordneten Methoden außer Kraft setzen und definieren.  
   
     > [!NOTE]
-    >  Der Dienst muss über mindestens überschreiben <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> um nützlich zu sein.  
+    >  Ihr Dienst muss mindestens <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> außer Kraft setzen, um hilfreich zu sein.  
   
- Sie können auch eine Komponente mit dem Namen der <xref:System.ServiceProcess.ServiceController> Kommunikation mit und das Verhalten von einem vorhandenen Dienst steuern.  
+ Sie können auch die Komponente <xref:System.ServiceProcess.ServiceController> verwenden, um mit dem vorhandenen Dienst zu kommunizieren und sein Verhalten zu steuern.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
