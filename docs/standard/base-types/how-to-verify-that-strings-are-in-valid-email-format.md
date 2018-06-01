@@ -20,14 +20,18 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172329"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen
 Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeichenfolge ein gültiges E-Mail-Format aufweist.  
+
+> [!NOTE]
+>  Es wird empfohlen, die <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType>-Klasse zu verwenden, wenn die Zeichenfolge ein gültiges E-Mail-Adressformat aufweist. Übergeben Sie hierzu die E-Mail-Adresszeichenfolge an den <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>-Klassenkonstruktor. Dieser löst eine <xref:System.FormatException> aus, wenn die Zeichenfolge ein unbekanntes Format aufweist.  
   
 ## <a name="example"></a>Beispiel  
  Im Beispiel wird eine `IsValidEmail` -Methode definiert, die `true` zurückgibt, wenn die Zeichenfolge eine gültige E-Mail-Adresse enthält und andernfalls `false` ; es wird jedoch keine andere Aktion ausgeführt.  
@@ -67,9 +71,6 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
 |<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|Wenn es sich bei dem Zeichen, das @ folgt, um keine öffnende eckige Klammer handelt, wird ein alphanumerisches Zeichen mit einem Wert von A-Z, a-z oder 0-9 als Übereinstimmung verwendet, dem null oder mehr Vorkommen eines Bindestrichs und kein oder ein alphanumerisches Zeichen mit einem Wert von A-Z, a-z oder 0-9 sowie ein Punkt folgen. Dieses Muster kann ein- oder mehrmals wiederholt werden und der Domänenname der obersten Ebene muss darauf folgen.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|Der Domänenname der obersten Ebene muss mit einem alphanumerischen Zeichen (a-z, A-Z und 0-9) beginnen und enden. Er kann außerdem 0 bis 22 ASCII-Zeichen enthalten, die entweder alphanumerische Zeichen oder Bindestriche sind.|  
 |`$`|Beendet die Suche am Ende der Zeichenfolge.|  
-  
-> [!NOTE]
->  Anstatt für die Überprüfung der E-Mail-Adresse einen regulären Ausdruck zu verwenden, können Sie die <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType>-Klasse verwenden. Um zu bestimmen, ob eine E-Mail-Adresse gültig ist, übergeben Sie die E-Mail-Adresse an den <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>-Klassenkonstruktor.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Die `IsValidEmail` -Methode und die `DomainMapper` -Methode können in einer Bibliothek von Hilfsprogrammmethoden für reguläre Ausdrücke oder als private statische oder Instanzmethoden in der Anwendungsklasse enthalten sein.  
