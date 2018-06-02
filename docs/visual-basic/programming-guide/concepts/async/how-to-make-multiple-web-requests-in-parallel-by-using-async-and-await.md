@@ -2,11 +2,12 @@
 title: 'Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728442"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (Visual Basic)
 In einer asynchronen Methode werden Aufgaben gestartet, wenn sie erstellt werden. Die ["await"](../../../../visual-basic/language-reference/operators/await-operator.md) Operator angewendet wird, auf die Aufgabe an dem Punkt in der Methode, in denen die Verarbeitung nicht fortgesetzt, bis die Aufgabe abgeschlossen ist. Häufig wird eine Aufgabe erwartet, sobald sie erstellt wird, wie das folgende Beispiel zeigt.  
@@ -39,7 +40,7 @@ Dim result = Await myTask
   
  Ein weiteres Beispiel, das mehrere Tasks gleichzeitig beginnt, finden Sie unter [wie: Erweitern der asynchronen Walkthrough mithilfe von "Task.WhenAll" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
- Sie können den Code für dieses Beispiel auf der Seite für [Codebeispiele für Entwickler](http://go.microsoft.com/fwlink/?LinkId=254906) herunterladen.  
+ Sie können den Code für dieses Beispiel auf der Seite für [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) herunterladen.  
   
 ### <a name="to-set-up-the-project"></a>So richten Sie das Projekt ein  
   

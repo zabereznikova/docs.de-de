@@ -2,11 +2,12 @@
 title: Erste Schritte mit f# in Visual Studio
 description: Informationen Sie zum Verwenden von f# in Visual Studio.
 ms.date: 02/13/2017
-ms.openlocfilehash: d392e3a93d5b13206f654e35a266e9d9569942fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22fbe8086ec133605e1d9b4b28e524fe2ed8ac28
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728533"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Erste Schritte mit f# in Visual Studio
 
@@ -71,58 +72,6 @@ Jetzt sollte gedruckt an das Konsolenfenster, das Visual Studio per POP, um ausg
 ```
 
 Herzlichen Glückwunsch!  Erste f#-Projekts in Visual Studio erstellten haben, geschrieben, dass eine F#-Funktion die Ergebnisse der Aufrufe dieser Funktion gedruckt und führen Sie das Projekt, um einige Ergebnisse.
-
-## <a name="using-f-interactive"></a>Verwenden von f# Interactive
-
-Eine der besten Funktionen oder die Visual F#-Datenbanktools in Visual Studio ist das f# Interactive-Fenster.  Sie können Sie Code über an einen Prozess zu senden, Sie diesen Code aufrufen können und das Ergebnis interaktiv angezeigt.
-
-Um zu beginnen, verwenden es, markieren Sie die `square` Funktion, die in Ihrem Code definiert.  Halten Sie als Nächstes die **Alt** Schlüssel, und drücken Sie **EINGABETASTE**.  Dies führt den Code in der f# Interactive-Fenster.  Daraufhin sollte das f# Interactive-Fenster mit den folgenden darin angezeigt werden:
-
-```
->
-
-val square : x:int -> int
-
->
-```
-
-Dies zeigt die gleiche Funktionssignatur für die `square` -Funktion, die Sie zuvor gesehen haben, wenn Sie über die Funktion gezeigt.  Da `square` ist nun in der f# Interactive-Prozess definiert, können Sie es mit unterschiedlichen Werten aufrufen:
-
-```
-> square 12;;
-val it : int = 144
->square 13;;
-val it : int = 169
-```
-
-Dies führt die Funktion, bindet das Ergebnis in einen neuen Namen `it`, und zeigt den Typ und Wert des `it`.  Beachten Sie, dass Sie jede Zeile mit beenden müssen `;;`.  Dies ist wie f# Interactive weiß, wenn der Funktionsaufruf abgeschlossen ist.  Sie können auch neue Funktionen in f# Interactive definieren:
-
-```
-> let isOdd x = x % 2 <> 0;;
-
-val isOdd : x:int -> bool
-
-> isOdd 12;;
-val it : bool = false
-```
-
-Die oben genannten definiert eine neue Funktion `isOdd`, nimmt ein `int` und prüft, ob es ungerade ist! Sie können diese Funktion, um festzustellen, was es mit unterschiedlichen Eingaben zurückgibt aufrufen.  Sie können Funktionen in Funktionsaufrufen aufrufen:
-
-```
-> isOdd (square 15);;
-val it : bool = true
-```
-
-Sie können auch die [Pipe-Forward-Operator](../language-reference/symbol-and-operator-reference/index.md) pipeline den Wert in die zwei Funktionen für:
-
-```
-> 15 |> square |> isOdd;;
-val it : bool = true
-```
-
-Der Pipe-Forward-Operator und vieles mehr, werden in späteren Lernprogrammen behandelt.
-
-Dies ist nur einen Einblick in die Verwendungsmöglichkeiten mit f# Interactive. Weitere Auschecken [Interaktive Programmierung mit F#-](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
