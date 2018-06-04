@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9df41a404c091bb76490d762b55580c36cf33f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728679"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Beispiel für reguläre Ausdrücke: Suchen nach HREFs
 Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden alle href="..."-Werte und ihre Positionen in der Zeichenfolge angezeigt.  
@@ -43,9 +44,9 @@ Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden al
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
 |`=`|Sucht nach dem Gleichheitszeichen.|  
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Sucht nach einer der folgenden Zeichenkombinationen, ohne das Ergebnis einer erfassten Gruppe zuzuweisen:<br /> <ul><li><p>Ein Anführungszeichen oder Apostroph, gefolgt von null oder mehr Vorkommen eines beliebigen anderen Zeichens als einem Anführungszeichen oder Apostroph und einem Anführungszeichen oder einem Apostroph. Die Gruppe namens `1` ist in diesem Muster enthalten.</p></li><li><p>Ein oder mehrere Zeichen außer Leerzeichen. Die Gruppe namens `1` ist in diesem Muster enthalten.</p></li></ul>|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Sucht nach einer der folgenden Zeichenkombinationen, ohne das Ergebnis einer erfassten Gruppe zuzuweisen:<br /> <ul><li><p>Ein Anführungszeichen oder Apostroph, gefolgt von null oder mehr Vorkommen eines beliebigen anderen Zeichens als einem Anführungszeichen oder Apostroph und einem Anführungszeichen oder einem Apostroph. Die Gruppe namens `1` ist in diesem Muster enthalten.</p></li><li><p>Ein oder mehrere Zeichen außer Leerzeichen. Die Gruppe namens `1` ist in diesem Muster enthalten.</p></li></ul>|  
 |`(?<1>[^"']*)`|Weist der Erfassungsgruppe namens `1` null oder mehr Vorkommen eines beliebigen Zeichens außer Anführungszeichen oder Apostroph zu.|  
-|`"(?<1>\S+)`|Weist der Erfassungsgruppe namens `1` ein oder mehr Nicht-Leerzeichen zu.|  
+|`(?<1>\S+)`|Weist der Erfassungsgruppe namens `1` ein oder mehr Nicht-Leerzeichen zu.|  
   
 ## <a name="match-result-class"></a>Abgleichsergebnisklasse  
  Die Ergebnisse einer Suche werden in der <xref:System.Text.RegularExpressions.Match>-Klasse gespeichert, die Zugriff auf alle von der Suche extrahierten Teilzeichenfolgen bietet. Die durchsuchte Zeichenfolge und der verwendete reguläre Ausdruck werden ebenfalls gespeichert, sodass die <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>-Methode aufgerufen werden kann, um einen weiteren Suchvorgang ab der Stelle auszuführen, an der der letzte Suchvorgang beendet wurde.  
