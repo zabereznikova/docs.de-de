@@ -3,14 +3,15 @@ title: Zielframeworks
 description: Erfahren Sie mehr über Zielframeworks für .NET Core-Anwendungen und -Bibliotheken.
 author: richlander
 ms.author: mairaw
-ms.date: 04/16/2018
+ms.date: 05/31/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: fa8049c9e33f0f6b2f16fd8572d6500ba1860c2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 346eece8fdb391fd62b369db6ef65964fcd6e67a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728315"
 ---
 # <a name="target-frameworks"></a>Zielframeworks
 
@@ -31,7 +32,7 @@ Die folgende Tabelle listet die häufigsten Zielframeworks auf, wie auf diese ve
 | Zielframework      | Latest <br/> Stabile Version | Zielframeworkmoniker (Target Framework Moniker, TFM) | Implementiert <br/> .NET-Standardversion |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET-Standard         | 2.0                         | netstandard2.0                 | Nicht zutreffend                                     |
-| .NET Core-Anwendung | 2.0                         | netcoreapp2.0                  | 2.0                                     |
+| .NET Core             | 2.1                         | netcoreapp2.1                  | 2.0                                     |
 | .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Unterstützte Zielframeworkversionen

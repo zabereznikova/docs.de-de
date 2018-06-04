@@ -3,12 +3,13 @@ title: dotnet add-Paketbefehl– .NET Core-CLI
 description: Der Paketbefehl „dotnet add“ bietet eine praktische Option zum Hinzufügen von NuGet-Paketverweisen zu einem Projekt.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: fd3704bbb941835421d78e19f196fa52b3767c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696298"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Übersicht
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>description
 
@@ -30,7 +31,7 @@ Der `dotnet add package`-Befehl bietet eine praktische Option zum Hinzufügen vo
 
 Beispielsweise wird durch Hinzufügen von `Newtonsoft.Json` zu *ToDo.csproj* eine Ausgabe ähnlich der folgenden erzeugt:
 
-```
+```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
@@ -62,10 +63,6 @@ Hinzuzufügender Paketverweis.
 
 Druckt eine kurze Hilfe für den Befehl.
 
-`-v|--version <VERSION>`
-
-Die Version des Pakets.
-
 `-f|--framework <FRAMEWORK>`
 
 Fügt Paketverweise nur hinzu, wenn ein bestimmtes [Framework](../../standard/frameworks.md) verwendet werden soll.
@@ -74,13 +71,17 @@ Fügt Paketverweise nur hinzu, wenn ein bestimmtes [Framework](../../standard/fr
 
 Fügt Paketverweise hinzu, ohne eine Vorschau der Wiederherstellung und eine Kompatibilitätsüberprüfung durchzuführen.
 
+`--package-directory <PACKAGE_DIRECTORY>`
+
+Stellt das Paket im angegebenen Verzeichnis wieder her.
+
 `-s|--source <SOURCE>`
 
 Verwendet während des Wiederherstellungsvorgangs eine bestimmte NuGet-Paketquelle.
 
-`--package-directory <PACKAGE_DIRECTORY>`
+`-v|--version <VERSION>`
 
-Stellt das Paket im angegebenen Verzeichnis wieder her.
+Die Version des Pakets.
 
 ## <a name="examples"></a>Beispiele
 
