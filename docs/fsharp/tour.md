@@ -4,23 +4,24 @@ description: Untersuchen Sie in dieser Tour mithilfe von Codebeispielen einige d
 ms.date: 02/28/2018
 ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566284"
 ---
 # <a name="tour-of-f"></a>Überblick [F#] #
 
-Der beste Weg zum Kennenlernen von F# besteht darin, F#-Code zu lesen und zu schreiben. Dieser Artikel bietet eine Tour durch einige der wichtigsten Funktionen der Programmiersprache F# und stellt einige Codebeispiele bereit, die Sie selbst ausführen können. Weitere Informationen zum Einrichten einer Entwicklungsumgebung finden Sie unter [Erste Schritte](tutorials/getting-started/index.md).
+Der beste Weg zum Kennenlernen von F# besteht darin, F#-Code zu lesen und zu schreiben.  Dieser Artikel bietet eine Tour durch einige der wichtigsten Funktionen der Programmiersprache F# und stellt einige Codebeispiele bereit, die Sie selbst ausführen können.  Weitere Informationen zum Einrichten einer Entwicklungsumgebung finden Sie unter [Erste Schritte](tutorials/getting-started/index.md).
 
-Es gibt zwei primäre Konzepte in F#: Funktionen und Typen. In dieser Tour werden Features der Sprache vorgestellt, die unter diese beiden Konzepte fallen.
+Es gibt zwei primäre Konzepte in F#: Funktionen und Typen.  In dieser Tour werden Features der Sprache vorgestellt, die unter diese beiden Konzepte fallen.
 
 ## <a name="functions-and-modules"></a>Funktionen und Module
 
-Die wesentlichen Bausteine eines F#-Programms sind ***Funktionen***, die in ***Modulen*** organisiert sind. [Funktionen](language-reference/functions/index.md) arbeiten mit Eingaben, um Ausgaben zu erzeugen, und sie werden in [Modulen](language-reference/modules.md) organisiert – der primären Form der Gruppierung in F#. Die Module werden mithilfe der [`let`-Bindung](language-reference/functions/let-bindings.md) definiert, die die Funktion benennt und ihre Argumente definiert.
+Die wesentlichen Bausteine eines F#-Programms sind ***Funktionen***, die in ***Modulen*** organisiert sind.  [Funktionen](language-reference/functions/index.md) arbeiten mit Eingaben, um Ausgaben zu erzeugen, und sie werden in [Modulen](language-reference/modules.md) organisiert – der primären Form der Gruppierung in F#.  Die Module werden mithilfe der [`let`-Bindung](language-reference/functions/let-bindings.md) definiert, die die Funktion benennt und ihre Argumente definiert.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let` Bindungen wird auch genutzt, um Werte an einen Namen zu binden, ähnlich wie bei einer Variable in anderen Programmiersprachen.  `let` Bindungen sind standardmäßig ***unveränderlich*** . D. h., sobald ein Wert oder eine Funktion an einem Namen gebunden wird, können sie nicht direkte geändert werden. Dies steht im Gegensatz zu Variablen in anderen Sprachen, die  ***änderbar*** sind. Deren Wert kann also zu einem beliebigen Zeitpunkt geändert werden. Wenn Sie eine änderbare Bindung benötigen, können Sie die `let mutable ...` Syntax nutzen.
+`let` Bindungen sind auch an, wie Sie einen Wert an einen ähnlichen Namen, einer Variablen in anderen Sprachen wie binden.  `let` Bindungen sind ***unveränderlichen*** standardmäßig, d. h., sobald ein Wert oder eine Funktion mit einem Namen gebunden wird, es geändert werden kann direkte.  Dies steht im Gegensatz zu Variablen in anderen Sprachen, von denen sind ***änderbare***, d. h., deren Werte kann geändert werden zu einem beliebigen Zeitpunkt zeitlich.  Wenn Sie eine änderbare Bindung benötigen, können Sie `let mutable ...` Syntax.
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
@@ -42,23 +43,23 @@ Eine grundlegende Manipulation von [Zeichenfolgen](language-reference/strings.md
 
 ## <a name="tuples"></a>Tupel
 
-[Tupel](language-reference/tuples.md) sind ein großes Thema in F#. Bei Tupeln handelt sich um eine Gruppe von unbenannten, jedoch sortierten Werten, die als eigenständige Werte betrachten werden können. Stellen Sie sich Werte vor, die aus anderen Werten aggregiert werden. Sie können vielseitig eingesetzt werden, z.B. für ein bequemes Zurückgeben mehrerer Werte aus einer Funktion oder zur Vereinfachung in einer Ad-hoc-Gruppierung.
+[Tupel](language-reference/tuples.md) sind ein großes Thema in F#.  Bei Tupeln handelt sich um eine Gruppe von unbenannten, jedoch sortierten Werten, die als eigenständige Werte betrachten werden können.  Stellen Sie sich Werte vor, die aus anderen Werten aggregiert werden.  Sie können vielseitig eingesetzt werden, z.B. für ein bequemes Zurückgeben mehrerer Werte aus einer Funktion oder zur Vereinfachung in einer Ad-hoc-Gruppierung.
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L186-L203)]
 
-Ab F# 4.1 können Sie auch `struct`-Tupel erstellen. Diese bieten vollständige Interoperabilität mit Tupeln aus C# 7/Visual Basic 15, bei denen es sich ebenfalls um `struct`-Tupel handelt:
+Ab F# 4.1 können Sie auch `struct`-Tupel erstellen.  Diese bieten vollständige Interoperabilität mit Tupeln aus C# 7/Visual Basic 15, bei denen es sich ebenfalls um `struct`-Tupel handelt:
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L205-L218)]
 
-Folgendes muss jedoch beachtet werden: `struct`-Tupel sind keine Werttypen, deshalb können sie nicht implizit in Referenz-Tupel konvertiert werden oder umgekehrt. Sie müssen eine explizite Konvertierung zwischen Referenz-Tupel und Struktur-Tupel durchführen.
+Folgendes muss jedoch beachtet werden: `struct`-Tupel sind keine Werttypen, deshalb können sie nicht implizit in Referenz-Tupel konvertiert werden oder umgekehrt.  Sie müssen eine explizite Konvertierung zwischen Referenz-Tupel und Struktur-Tupel durchführen.
 
 ## <a name="pipelines-and-composition"></a>Pipelines und Komposition
 
-Übergabeoperatoren (`|>`, `<|`, `||>`, `<||`, `|||>`, `<|||`) und zusammengesetzte Operatoren (`>>` und `<<`) werden bei der Verarbeitung von Daten in F# extensiv verwendet. Diese Operatoren ermöglichen es Ihnen, in flexibler Weise "Pipelines" von Funktionen einzurichten. Das folgende Beispiel zeigt, wie Sie diese Operatoren zum Erstellen einer einfachen funktionalen Pipeline nutzen können.
+Übergabeoperatoren (`|>`, `<|`, `||>`, `<||`, `|||>`, `<|||`) und zusammengesetzte Operatoren (`>>` und `<<`) werden bei der Verarbeitung von Daten in F# extensiv verwendet.  Diese Operatoren ermöglichen es Ihnen, in flexibler Weise "Pipelines" von Funktionen einzurichten.  Das folgende Beispiel zeigt, wie Sie diese Operatoren zum Erstellen einer einfachen funktionalen Pipeline nutzen können.
 
 [!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L300)]
 
-Im obigen Beispiel wurden viele Features von F# verwendet, darunter Funktionen zur Listenverarbeitung, Funktionen erster Klasse und die [teilweise Anwendung](language-reference/functions/index.md#partial-application-of-arguments). Obwohl ein umfassendes Verständnis all dieser Konzepte einer weiterführenden Erläuterung bedarf, sollte klar geworden sein, wie einfach Funktionen beim Erstellen von Pipelines zum Verarbeiten von Daten verwendet werden können.
+Im obigen Beispiel wurden viele Features von F# verwendet, darunter Funktionen zur Listenverarbeitung, Funktionen erster Klasse und die[teilweise Anwendung](language-reference/functions/index.md#partial-application-of-arguments).  Obwohl ein umfassendes Verständnis all dieser Konzepte einer weiterführenden Erläuterung bedarf, sollte klar geworden sein, wie einfach Funktionen beim Erstellen von Pipelines zum Verarbeiten von Daten verwendet werden können.
 
 ## <a name="lists-arrays-and-sequences"></a>Listen, Arrays und Sequenzen
 
