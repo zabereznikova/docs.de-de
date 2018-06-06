@@ -2,16 +2,17 @@
 title: 'Lernprogramm: Bearbeiten von Inhalt in einem WordprocessingML-Dokument (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-ms.openlocfilehash: f43f193ed637656cef98583075ae0cb35e93c337
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18008ebdf7f8d2bb3ca7abcc157109c9dc9c1ffe
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753434"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>Lernprogramm: Bearbeiten von Inhalt in einem WordprocessingML-Dokument (Visual Basic)
 In diesem Tutorial wird gezeigt, wie Sie mit der funktionalen Transformation und LINQ to XML den Inhalt von XML-Dokumenten manipulieren können. Die Visual Basic-Beispiele für Abfragen und Bearbeiten von Informationen im Office Open XML-WordprocessingML-Dokumente, die von Microsoft Word gespeichert werden.  
   
- Weitere Informationen dazu finden Sie auf der [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573)-Website.  
+ Weitere Informationen finden Sie unter der [Eric White Blog](http://www.ericwhite.com).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
