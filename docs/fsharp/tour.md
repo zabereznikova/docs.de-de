@@ -2,18 +2,18 @@
 title: Überblick [F#]
 description: Untersuchen Sie in dieser Tour mithilfe von Codebeispielen einige der wichtigsten Funktionen der Programmiersprache F#.
 ms.date: 02/28/2018
-ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 63c38d59376a148c439482fcf47488fc72b7b8aa
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566284"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753486"
 ---
 # <a name="tour-of-f"></a>Überblick [F#] #
 
 Der beste Weg zum Kennenlernen von F# besteht darin, F#-Code zu lesen und zu schreiben.  Dieser Artikel bietet eine Tour durch einige der wichtigsten Funktionen der Programmiersprache F# und stellt einige Codebeispiele bereit, die Sie selbst ausführen können.  Weitere Informationen zum Einrichten einer Entwicklungsumgebung finden Sie unter [Erste Schritte](tutorials/getting-started/index.md).
 
-Es gibt zwei primäre Konzepte in F#: Funktionen und Typen.  In dieser Tour werden Features der Sprache vorgestellt, die unter diese beiden Konzepte fallen.
+Es gibt zwei primäre Konzepte in F#: Funktionen und Typen.   In dieser Tour werden Features der Sprache vorgestellt, die unter diese beiden Konzepte fallen.
 
 ## <a name="functions-and-modules"></a>Funktionen und Module
 
@@ -55,11 +55,11 @@ Folgendes muss jedoch beachtet werden: `struct`-Tupel sind keine Werttypen, desh
 
 ## <a name="pipelines-and-composition"></a>Pipelines und Komposition
 
-Übergabeoperatoren (`|>`, `<|`, `||>`, `<||`, `|||>`, `<|||`) und zusammengesetzte Operatoren (`>>` und `<<`) werden bei der Verarbeitung von Daten in F# extensiv verwendet.  Diese Operatoren ermöglichen es Ihnen, in flexibler Weise "Pipelines" von Funktionen einzurichten.  Das folgende Beispiel zeigt, wie Sie diese Operatoren zum Erstellen einer einfachen funktionalen Pipeline nutzen können.
+Leiten Sie Operatoren wie z. B. `|>` werden ausgiebig bei der Verarbeitung von Daten in f# verwendet werden. Diese Operatoren sind Funktionen, die Sie zum Einrichten von "Pipelines" Funktionen in flexibel zu ermöglichen. Im folgenden Beispiel wird exemplarisch davon ab, wie Sie diese Operatoren zum Erstellen einer einfachen funktionale Pipeline nutzen können:
 
-[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L300)]
+[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-Im obigen Beispiel wurden viele Features von F# verwendet, darunter Funktionen zur Listenverarbeitung, Funktionen erster Klasse und die[teilweise Anwendung](language-reference/functions/index.md#partial-application-of-arguments).  Obwohl ein umfassendes Verständnis all dieser Konzepte einer weiterführenden Erläuterung bedarf, sollte klar geworden sein, wie einfach Funktionen beim Erstellen von Pipelines zum Verarbeiten von Daten verwendet werden können.
+Im vorherigen Beispiel vorgenommen Verwendung vieler Funktionen von f#, einschließlich der Liste Verarbeitungsfunktionen, erstklassige Funktionen und [teilweise Anwendung](language-reference/functions/index.md#partial-application-of-arguments). Obwohl ein umfassendes Verständnis all dieser Konzepte einer weiterführenden Erläuterung bedarf, sollte klar geworden sein, wie einfach Funktionen beim Erstellen von Pipelines zum Verarbeiten von Daten verwendet werden können.
 
 ## <a name="lists-arrays-and-sequences"></a>Listen, Arrays und Sequenzen
 
