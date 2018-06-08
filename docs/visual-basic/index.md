@@ -6,11 +6,12 @@ helpviewer_keywords:
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1c9aa868636181a8dd4e59e61d3ed82c89c217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03c9c118104f6fe3196d0a4bb13d28a6a122d859
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805541"
 ---
 # <a name="visual-basic-guide"></a>Leitfaden für Visual Basic
 
@@ -51,5 +52,5 @@ Visual Basic wurde entwickelt, damit Sie typsichere und objektorientierte Anwend
  [Erste Schritte mit der Entwicklung in Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Stellt Links zu Themen bereit, in denen Sie mehr über die Grundlagen von Visual Studio erfahren.  
   
- [.NET Framework-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [.NET API-Browser](../../api/index.md)  
  Bietet Zugang zu der Bibliothek der Klassen, Schnittstellen und Werttypen, die in der Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK enthalten sind.
