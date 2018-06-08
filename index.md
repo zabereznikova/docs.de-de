@@ -5,11 +5,12 @@ hide_bc: true
 title: .NET-Dokumentation
 description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5967e21fcda580635dd53f976e2e5dabc0fbce8
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 25f01910ba6f004cafbe8b981e4a986791044ded
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826982"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -392,13 +393,13 @@ ms.lasthandoff: 05/11/2018
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/azure/cloud-services/cloud-services-dotnet-get-started">
-                                                    <h3>Azure Cloud Services und ASP.NET</h3>
-                                                    <p>Erfahren Sie, wie Sie Ihre Clouddienste in Azure konfigurieren, überwachen und skalieren.</p>
+                                                <a href="/azure/storage/">
+                                                    <h3>Azure Storage</h3>
+                                                    <p>Erfahren Sie mehr über Azure Storage und darüber, wie Sie Anwendungen mithilfe von Azure-Blobs, -Tabellen, -Warteschlangen und -Dateien erstellen.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -418,25 +419,6 @@ ms.lasthandoff: 05/11/2018
                                                 <a href="/dotnet/fsharp/using-fsharp-on-azure">
                                                     <h3>Verwenden von F# in Azure</h3>
                                                     <p>Erfahren Sie mehr über die verschiedenen Azure-Dienste in F# wie z.B. Azure Storage, Cloud Services und Azure Functions.</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/azure/storage/">
-                                                    <h3>Azure Storage</h3>
-                                                    <p>Erfahren Sie mehr über Azure Storage und darüber, wie Sie Anwendungen mithilfe von Azure-Blobs, -Tabellen, -Warteschlangen und -Dateien erstellen.</p>
                                                 </a>
                                             </div>
                                         </div>
