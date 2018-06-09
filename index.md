@@ -5,12 +5,12 @@ hide_bc: true
 title: .NET-Dokumentation
 description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
-ms.openlocfilehash: 25f01910ba6f004cafbe8b981e4a986791044ded
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 0914320c18818fb9d69fb1e0dbd89c0ec78acd61
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34826982"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231539"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -34,7 +34,7 @@ ms.locfileid: "34826982"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.0">
+                <a href="/dotnet/api/?view=netcore-2.1">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
