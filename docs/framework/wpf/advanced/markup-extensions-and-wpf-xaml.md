@@ -15,11 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 907d5dcaae8f6e09902c2b3548d5ba8ac9a2b077
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251167"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Markuperweiterungen und WPF-XAML
 Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XAML und enthält eine Erläuterung der Syntaxregeln, des Zweck und des zugrunde liegenden Klassenobjektmodels. Markuperweiterungen sind eine allgemeine Funktion der XAML-Sprache und der .NET-Implementierung von XAML-Diensten. In diesem Thema werden speziell Markuperweiterungen zur Verwendung in WPF XAML beschrieben.  
@@ -88,7 +89,7 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
 -   Wenn die einzelnen getrennten Token keine Gleichheitszeichen enthalten, wird jedes Token als Konstruktorargument behandelt. Jeder Konstruktorparameter muss als Typ angegeben werden, der von der Signatur erwartet wird, und die Angabe muss in der von der Signatur erwarteten Reihenfolge erfolgen.  
   
     > [!NOTE]
-    >  Ein XAML-Prozessor muss den Konstruktor aufrufen, der der Argumentanzahl der Anzahl von Paaren entspricht. Wenn Sie eine benutzerdefinierte Markuperweiterung implementieren, dürfen Sie aus diesem Grund nicht mehrere Parameter mit derselben Argumentanzahl bereitstellen. Das Verhalten eines XAML-Prozessors, wenn mehrere Konstruktorpfade der Markuperweiterung mit derselben Parameteranzahl vorhanden sind, ist nicht definiert. Sie sollten jedoch davon ausgehen, dass ein XAML-Prozessor eine Ausnahme auslösen kann, wenn diese Situation in den Typdefinitionen der Markuperweiterung vorliegt.  
+    >  Ein XAML-Prozessor muss den Konstruktor aufrufen, der der Argumentanzahl der Anzahl von Paaren entspricht. Aus diesem Grund Wenn Sie eine benutzerdefinierte Markuperweiterung implementieren, geben Sie nicht mehrere Konstruktoren mit derselben Anzahl von Argumenten. Das Verhalten eines XAML-Prozessors, wenn mehrere Konstruktorpfade der Markuperweiterung mit derselben Parameteranzahl vorhanden sind, ist nicht definiert. Sie sollten jedoch davon ausgehen, dass ein XAML-Prozessor eine Ausnahme auslösen kann, wenn diese Situation in den Typdefinitionen der Markuperweiterung vorliegt.  
   
 -   Wenn die einzelnen Token Gleichheitszeichen enthalten, ruft der XAML-Prozessor zuerst den Standardkonstruktor für die Markuperweiterung auf. Dann wird jedes Name=Wert-Paar als in der Markuperweiterung vorhandener Eigenschaftenname und als Wert interpretiert, der der Eigenschaft zuzuweisen ist.  
   
