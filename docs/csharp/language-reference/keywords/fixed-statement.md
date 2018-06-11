@@ -6,11 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e26e7e7f15dd48cf029d5f67bf5ef0de3e19b7bb
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 28c8e9bd078e07a185f541214aa5b5ff79018ff5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826993"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed-Anweisung (C#-Referenz)
 
@@ -24,11 +25,11 @@ Sie können einen Zeiger mit einem Array, einer Zeichenfolge, einem Puffer feste
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-Ab C# 7.3 funktioniert die `fixed`-Anweisung mit weiteren Typen, nicht nur mit Arrays, Zeichenfolgen, Puffern mit festgelegter Größe und nicht verwalteten Variablen. Jeder Typ, der eine Methode mit dem Namen `DangerousGetPinnableReference` implementiert, kann angeheftet werden. `DangerousGetPinnableReference` muss eine `ref`-Variable an einen nicht verwalteten Typ zurückgeben. Weitere Informationen erhalten Sie im Artikel zu [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md). Die .NET-Typen <xref:System.Span%601?displayProperty=nameWithType> und <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, die in .NET Core 2.0 eingeführt wurden, verwenden dieses Muster und können angeheftet werden. Dies wird im folgenden Beispiel gezeigt:
+Ab C# 7.3 funktioniert die `fixed`-Anweisung mit weiteren Typen, nicht nur mit Arrays, Zeichenfolgen, Puffern mit festgelegter Größe und nicht verwalteten Variablen. Jeder Typ, der eine Methode mit dem Namen `GetPinnableReference` implementiert, kann angeheftet werden. `GetPinnableReference` muss eine `ref`-Variable an einen nicht verwalteten Typ zurückgeben. Weitere Informationen erhalten Sie im Artikel zu [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md). Die .NET-Typen <xref:System.Span%601?displayProperty=nameWithType> und <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, die in .NET Core 2.0 eingeführt wurden, verwenden dieses Muster und können angeheftet werden. Dies wird im folgenden Beispiel gezeigt:
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
-Wenn Sie Typen erstellen, die auch dieses Muster verwenden sollen, finden Sie unter <xref:System.Span%601.DangerousGetPinnableReference?displayProperty=nameWithType> ein Beispiel für die Implementierung des Musters.
+Wenn Sie Typen erstellen, die auch dieses Muster verwenden sollen, finden Sie unter <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> ein Beispiel für die Implementierung des Musters.
 
 Wenn mehrere Zeiger vom selben Typ sind, können sie in einer gemeinsamen Anweisung initialisiert werden:
 

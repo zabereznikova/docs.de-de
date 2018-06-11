@@ -3,11 +3,12 @@ title: System.Delegate und das `delegate`-Schlüsselwort
 description: Informationen zu den Klassen in .NET Framework, die Delegaten unterstützen, und wie diese zum Schlüsselwort „delegate“ zugeordnet werden.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827299"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate und das `delegate`-Schlüsselwort
 
@@ -77,10 +78,8 @@ Entwickler, die die `List.Sort()`-Methode verwenden möchten, müssen eine Metho
 Nehmen wir an, Sie möchten eine Liste von Zeichenfolgen nach Länge sortieren. Die Vergleichsfunktion kann folgende sein:
 
 ```csharp
-private static int CompareLength(string left, string right)
-{
-    return left.Length.CompareTo(right.Length);
-}
+private static int CompareLength(string left, string right) =>
+    left.Length.CompareTo(right.Length);
 ```
 
 Die Methode wird als private Methode deklariert. Das ist in Ordnung. Möglicherweise möchten Sie nicht, dass diese Methode Teil der öffentlichen Schnittstelle ist. Sie kann dennoch als Vergleichsmethode verwendet werden, wenn sie an einen Delegaten angefügt wird. Der aufrufende Code wird diese Methode an die Zielliste des Delegatobjekts anfügen lassen und kann über diesen Delegaten darauf zugreifen.
