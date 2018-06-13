@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586398"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>Abgeleitete Klassen können keine Basisklassenereignisse auslösen.
 Ein Ereignis kann nur vom Deklarationsabschnitt ausgelöst werden, in der sie deklariert ist. Aus diesem Grund kann keine Klasse von einer anderen Klasse, eine Auslösen von Ereignissen von der sie abgeleitet ist.  

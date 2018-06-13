@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591618"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal-Datentyp (Visual Basic)
 Speichert signierte 128-Bit (16-Byte)-Werte, die ganze Zahl (12-Byte) der 96-Bit-Zahlen mit einer Variablen Potenz von 10 skaliert darstellt. Der Skalierungsfaktor gibt die Anzahl der Ziffern rechts vom Dezimaltrennzeichen an. Es reicht von 0 bis 28. Mit einer Skala von 0 (keine Dezimalstellen), ist der größtmögliche Wert +/-Wert 79,228,162,514,264,337,593,543,950,335 (+/-7 .9228162514264337593543950335E + 28). Klicken Sie mit 28 Dezimalstellen +/-7,9228162514264337593543950335 und der Höchstwert ist, und den kleinsten Wert ungleich NULL ist, +/-0,0000000000000000000000000001 (+/-1E-28).  

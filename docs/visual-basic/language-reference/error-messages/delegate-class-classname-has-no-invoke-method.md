@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588829"
 ---
 # <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Delegatklasse &#39; &lt;Classname&gt; &#39; hat Sie keine Invoke-Methode, damit ein Ausdruck dieses Typs kann nicht das Ziel eines Methodenaufrufs sein.
 Ein Aufruf von `Invoke` über einen Delegaten ist fehlgeschlagen, da `Invoke` nicht auf die Delegate-Klasse implementiert wird.  

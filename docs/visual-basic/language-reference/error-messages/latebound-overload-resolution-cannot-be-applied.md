@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589879"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Spät gebundene überladungsauflösung. kann nicht angewendet werden, um &#39; &lt;Prozedurname&gt; &#39; , da die Instanz beim Zugriff auf ein Schnittstellentyp ist.
 Der Compiler versucht, einen Verweis auf eine überladene Eigenschaft oder Prozedur aufzulösen, aber der Verweis schlägt fehl, da ein Argument des Typs ist `Object` und das verweisende Objekt weist den Datentyp einer Schnittstelle. Die `Object` Argument zwingt den Compiler zum Auflösen des Verweises als spät gebunden.  

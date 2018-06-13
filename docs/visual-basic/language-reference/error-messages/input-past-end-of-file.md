@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586740"
 ---
 # <a name="input-past-end-of-file"></a>Eingabe nach dem Dateiende.
 Entweder ein `Input` Anweisung ist das Lesen aus einer Datei, die leer ist oder in der alle Daten verwendet wird, oder Sie verwendet die `EOF` -Funktion mit einer Datei für den binären Zugriff geöffnet.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585768"
 ---
 # <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>Konstanter Ausdruck ist nicht im Typ darstellbar &#39; &lt;Typname&gt;&#39;
 Sie versuchen, eine Konstante auswerten, die nicht in den Zieltyp passen in der Regel verwendet werden, da sie den Bereich überläuft.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589866"
 ---
 # <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>Gewusst wie: Anzeigen von gebundenen Daten in einem DataRepeater-Steuerelement (Visual Studio)
 Die häufigste Verwendung von der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement wird zum Anzeigen von gebundener Daten aus einer Datenbank oder anderen Datenquelle.  
