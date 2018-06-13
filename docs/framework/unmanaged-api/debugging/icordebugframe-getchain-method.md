@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06c020b9f6c074be11e3433939ce6898586123cd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412606"
 ---
 # <a name="icordebugframegetchain-method"></a>ICorDebugFrame::GetChain-Methode
 Ruft einen Zeiger auf die Kette dieses Rahmens Teil ist.  

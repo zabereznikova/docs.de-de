@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549262"
 ---
 # <a name="optimizing-performance-controls"></a>Optimieren der Leistung: Steuerelemente
 In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stehen viele gängige Benutzeroberflächenkomponenten zur Verfügung, die in den meisten Windows Anwendungen verwendet werden. In diesem Thema werden Techniken dargestellt, mit denen Sie die Leistung Ihrer Benutzeroberfläche (UI) optimieren können.  

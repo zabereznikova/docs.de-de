@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0fe53490014a2a7d9acc0a426613af54867599e1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422122"
 ---
 # <a name="icordebugvalue-interface1"></a>ICorDebugValue Schnittstelle1
 Stellt einen Wert im gedebuggten Prozess dar. Der Wert kann eine Lese- oder Schreibzugriff Wert sein.  

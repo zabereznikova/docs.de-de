@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4605b893169ccfc592aae0d07dc032f455314cc5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412731"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning-Methode
 Ruft einen Wert, der angibt, ob die Threads im Prozess zurzeit frei ausgeführt werden.  

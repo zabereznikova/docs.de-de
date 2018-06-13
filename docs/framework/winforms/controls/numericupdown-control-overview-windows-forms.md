@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537160"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>Übersicht über das NumericUpDown-Steuerelement (Windows Forms)
 Die <xref:System.Windows.Forms.NumericUpDown> -Steuerelement sieht wie eine Kombination aus einem Textfeld und einem pfeilepaar zusammenlaufen, die der Benutzer klicken kann, um einen Wert anzupassen. Das Steuerelement zeigt an, und legt einen einzelnen numerischen Wert aus einer Liste von Optionen für feste numerischen Werten. Der Benutzer kann zu erhöhen und verringern Sie die Anzahl durch Klicken auf den nach-oben und nach unten weisenden Pfeil, durch Drücken der nach-oben und nach unten-Taste oder durch Eingabe einer Zahl in die Text-Feld-Teil des Steuerelements. Durch Drücken der nach-oben-Taste wird die Zahl für die maximale Anzahl; durch Drücken der nach-unten-Taste wird die Zahl in Richtung der Mindestwert.  

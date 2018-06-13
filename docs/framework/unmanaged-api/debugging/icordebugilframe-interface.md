@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4a97704e00278e19181df569f108f428cb1ec90f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417744"
 ---
 # <a name="icordebugilframe-interface1"></a>ICorDebugILFrame Schnittstelle1
 Stellt einen Stapelrahmen von Microsoft intermediate Language (MSIL)-Code dar. Diese Schnittstelle ist eine Unterklasse von ICorDebugFrame-Schnittstelle.  

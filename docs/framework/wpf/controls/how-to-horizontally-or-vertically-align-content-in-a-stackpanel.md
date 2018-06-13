@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550752"
 ---
 # <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a>Gewusst wie: Horizontales oder vertikales Ausrichten von Inhalt in einem StackPanel
 In diesem Beispiel wird gezeigt, wie zum Anpassen der <xref:System.Windows.Controls.StackPanel.Orientation%2A> von Inhalten innerhalb einer <xref:System.Windows.Controls.StackPanel> Element sowie zum Anpassen der <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> und <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> von untergeordnetem Inhalt.  

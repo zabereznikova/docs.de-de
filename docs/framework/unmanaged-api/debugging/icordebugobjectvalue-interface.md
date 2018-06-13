@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ddf3b60ed595aff8bc81d0bb59675fd1db12f7e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422412"
 ---
 # <a name="icordebugobjectvalue-interface1"></a>ICorDebugObjectValue Schnittstelle1
 Eine Unterklasse von "ICorDebugValue", die einen Wert darstellt, der ein Objekt enthält.  

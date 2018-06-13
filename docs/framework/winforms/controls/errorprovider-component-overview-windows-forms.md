@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528885"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>Übersicht über die ErrorProvider-Komponente (Windows Forms)
 Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) Komponente dient zum Überprüfen von Benutzereingaben in einem Formular oder Steuerelement. Es wird in der Regel in Verbindung mit Validieren von Benutzereingaben in einem Formular oder die Anzeige von Fehlern innerhalb eines Datasets verwendet. Ein ErrorProvider-Symbol ist eine bessere Alternative als eine Fehlermeldung in einem Meldungsfeld angezeigt, da sobald ein Meldungsfeld geschlossen wird, die Fehlermeldung nicht mehr sichtbar ist. Die <xref:System.Windows.Forms.ErrorProvider> Komponente zeigt ein Fehlersymbol (![Symbol "ErrorProvider"](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "VbErrorProviderIcon")) neben dem betreffenden Steuerelement, z. B. ein Textfeld; Wenn der Benutzer den Mauszeiger über positioniert das Symbol für Zertifikatfehler, wird eine QuickInfo, die Zeichenfolge der Fehlermeldung angezeigt.  

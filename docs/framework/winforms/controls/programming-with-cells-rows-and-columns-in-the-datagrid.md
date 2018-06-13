@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538540"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms
 Dieser Abschnitt enthält Themen, in denen verschiedene Programmieraufgaben, die im Zusammenhang mit Zellen-, Zeilen- und Spaltenobjekten veranschaulicht.  

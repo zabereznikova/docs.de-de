@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 52962ea7d2cf3dd1822b1a36cc6cfcb56bc427f4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417192"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID-Methode
 Ruft das aktuelle Betriebssystembezeichner des aktiven Teils des ICorDebugThread ab.  

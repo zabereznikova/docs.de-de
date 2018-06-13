@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0d8dc3afe188e18d0804055f869e5090ebc4224
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417676"
 ---
 # <a name="icordebugobjectvaluegetmanagedcopy-method"></a>ICorDebugObjectValue::GetManagedCopy-Methode
 `GetManagedCopy` ist veraltet. Rufen Sie diese Methode nicht.  

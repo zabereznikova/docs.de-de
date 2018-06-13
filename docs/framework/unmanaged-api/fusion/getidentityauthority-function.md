@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eae17c2dbccb4296d7542c60a30b341f1ad67f88
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429565"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority-Funktion
 Ruft einen Zeiger auf eine [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) Instanz, die Schlüssel für Codeobjekte verwaltet.  

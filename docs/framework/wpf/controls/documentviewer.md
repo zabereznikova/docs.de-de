@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550906"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FixedDocument> Inhalt (z. B. [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Dokumente) in einem paginierten Format.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63d79b0c1fed0178f8463174fe981f250d6f6fb5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430706"
 ---
 # <a name="eclrevent-enumeration"></a>EClrEvent-Enumeration
 Beschreibt die common Language Runtime (CLR)-Ereignisse, für die der Host Rückrufe registrieren kann.  

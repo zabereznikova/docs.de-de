@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f8d6b16f3eeb32e41f3568e0b237f18c945a8cb8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423896"
 ---
 # <a name="callid-structure"></a>CALL_ID-Struktur
 Enthält Informationen für einen Debugger zu einer Funktion, die aufgerufen wird. Finden Sie unter der [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) Schnittstelle für Weitere Informationen.  

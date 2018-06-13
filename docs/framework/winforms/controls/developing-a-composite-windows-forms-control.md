@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528287"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Entwickeln eines zusammengesetzten Windows Forms-Steuerelements
 Sie können ein zusammengesetztes Windows Forms-Steuerelement entwickeln, indem Sie andere Windows Forms-Steuerelemente kombinieren. Zusammengesetzte Steuerelemente, die davon Herleiten <xref:System.Web.UI.UserControl> werden als Benutzersteuerelemente bezeichnet. Die Basisklasse, <xref:System.Windows.Forms.UserControl>, ermöglicht Tastaturrouting für die untergeordneten Steuerelemente und stellt damit sicher, dass untergeordnete Steuerelemente den Fokus erhalten können. Ein Beispiel für ein Benutzersteuerelement, finden Sie unter der <xref:System.Windows.Forms.UserControl> -Beispiel in [wie: Anwenden von Attributen auf Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  

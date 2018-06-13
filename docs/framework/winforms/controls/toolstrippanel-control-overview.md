@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538489"
 ---
 # <a name="toolstrippanel-control-overview"></a>Übersicht über das ToolStripPanel-Steuerelement
 Ein <xref:System.Windows.Forms.ToolStripPanel> bietet einen einzelnen Bereich zum Positionieren und rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, und <xref:System.Windows.Forms.StatusStrip> Steuerelemente. Mehrere <xref:System.Windows.Forms.ToolStrip> Steuerelemente vertikal oder horizontal gestapelt je nach den <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> von der <xref:System.Windows.Forms.ToolStripPanel>.  

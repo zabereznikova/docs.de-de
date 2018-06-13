@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547484"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Gewusst wie: Behandeln des ContextMenuOpening -Ereignisses
 Die <xref:System.Windows.FrameworkElement.ContextMenuOpening> -Ereignis behandelt werden, in einer Anwendung anpassen entweder ein vorhandenes Kontextmenü vor um anzuzeigen, oder klicken Sie im Menü zu unterdrücken, die andernfalls durch die Einstellung angezeigt werden soll die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft `true` in den Ereignisdaten. Die häufiger Grund für die Einstellung <xref:System.Windows.RoutedEventArgs.Handled%2A> auf `true` im Ereignis Daten sind, klicken Sie im Menü vollständig durch ein neues ersetzt <xref:System.Windows.Controls.ContextMenu> -Objekt, der in einigen Fällen erfordert der Vorgang abgebrochen wird, und starten eine neue geöffnet. Wenn Sie Handler schreiben der <xref:System.Windows.FrameworkElement.ContextMenuOpening> Ereignis, Sie sollten Probleme mit den Zeitabläufen zwischen beachtet werden ein <xref:System.Windows.Controls.ContextMenu> -Steuerelement und dem Dienst, der für das Öffnen und die Position des Kontextmenüs für Steuerelemente im Allgemeinen zuständig ist. Dieses Thema veranschaulicht einige der Methoden Code für verschiedene Szenarien des Öffnens Kontextmenü und veranschaulicht einen Fall, in dem das Problem der zeitlichen Steuerung eine sprachbasierte stammen.  

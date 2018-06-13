@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497528"
 ---
 # <a name="security-considerations-in-wcf"></a>Überlegungen zur Sicherheit in WCF
 Die Themen in diesem Abschnitt Liste verschiedene sicherheitsrelevante Punkte zu berücksichtigen beim Entwerfen einer Anwendung für Windows Communication Foundation (WCF).  

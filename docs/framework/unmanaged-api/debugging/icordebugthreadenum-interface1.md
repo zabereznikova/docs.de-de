@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ca683e5925325fae2470aca3cd67be39c12a055d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423272"
 ---
 # <a name="icordebugthreadenum-interface1"></a>ICorDebugThreadEnum Schnittstelle1
 ICorDebugEnum-Methoden implementiert, und listet ICorDebugThread-Arrays.  

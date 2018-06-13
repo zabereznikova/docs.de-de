@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349011"
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;add&gt; von &lt;protocolMapping&gt;
 Stellt eine standardprotokollzuordnung zwischen einem transportprotokollschema (z. B. http, net.tcp, net.pipe usw.) und einer Bindung Windows Communication Foundation (WCF) dar. Beim Erstellen von Standardendpunkten zur Laufzeit wird WCF prüft die konfigurierten Zuordnungen und wählt die Bindung für eine bestimmte Basisadresse zu verwendende.  
