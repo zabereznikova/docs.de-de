@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545889"
 ---
 # <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Vorgehensweise: bestimmen, ob eine Seite im Browser gehostet wird
 In diesem Beispiel wird veranschaulicht, wie ermittelt werden, ob eine <xref:System.Windows.Controls.Page> in einem Browser gehostet wird.  

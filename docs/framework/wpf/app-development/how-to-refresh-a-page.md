@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546529"
 ---
 # <a name="how-to-refresh-a-page"></a>Vorgehensweise: Aktualisieren einer Seite
 In diesem Beispiel wird gezeigt, wie zum Aufrufen der <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> Methode zum Aktualisieren des aktuellen Inhalts in einen <xref:System.Windows.Navigation.NavigationWindow>.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548034"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Gewusst wie: Ermitteln, ob ein Druckauftrag zu dieser Tageszeit gedruckt werden kann
 Druckwarteschlangen sind für 24 Stunden pro Tag nicht immer verfügbar. Sie haben die Start- und Uhrzeit-Eigenschaften, die festgelegt werden können, um sie zu bestimmten Zeiten des Tages nicht verfügbar zu machen. Diese Funktion kann verwendet werden, einen Drucker, für die ausschließliche Verwendung von einer bestimmten Abteilung nach 17: 00 Uhr reservieren. Diese Abteilung müsste eine andere Warteschlange Wartung des Druckers als andere Abteilungen verwenden. Die Warteschlange für die anderen Abteilungen nach 17: 00 Uhr nicht verfügbar ist, festgelegt, während die Warteschlange für die Vorgabe Abteilung festgelegt werden konnte, werden jederzeit zur Verfügung stehen.  
