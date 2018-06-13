@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565544"
 ---
 # <a name="whitespace-processing-in-xaml"></a>Leerstellenverarbeitung in XAML
 Gemäß den Sprachregeln für XAML müssen signifikante Leerräume von einer [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -Prozessorimplementierung verarbeitet werden. In diesem Thema werden diese XAML-Sprachregeln erläutert. Außerdem wird die Behandlung zusätzlicher Leerräume erörtert, die durch die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] -Implementierung des XAML-Prozessors und des XAML-Writers für die Serialisierung definiert wird.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566768"
 ---
 # <a name="path-markup-syntax"></a>Pfadmarkupsyntax
 Pfade werden im erläutert [Formen und die grundlegenden Funktionen zum Zeichnen in WPF Übersicht](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) und [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), jedoch in diesem Thema wird detailliert beschrieben, die leistungsfähigere und komplexere Mini Sprache Sie den Pfad angeben können Geometrien kürzer mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

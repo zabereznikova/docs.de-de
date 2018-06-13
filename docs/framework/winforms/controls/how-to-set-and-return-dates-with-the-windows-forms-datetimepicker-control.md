@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535668"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Gewusst wie: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms
 Die aktuell im <xref:System.Windows.Forms.DateTimePicker>-Steuerelement von Windows Forms ausgewählte Datumsangabe (Datum und Uhrzeit) ist durch die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft bestimmt. Sie können die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft festlegen, bevor das Steuerelement angezeigt wird (z. B. zur Entwurfszeit oder im <xref:System.Windows.Forms.Form.Load>-Ereignis des Formulars), um zu bestimmen, welches Datum zunächst im Steuerelement ausgewählt ist. Standardmäßig wird die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft des Steuerelements auf das aktuelle Datum festgelegt. Wenn Sie die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft des Steuerelements im Code ändern, wird das Steuerelement auf dem Formular automatisch entsprechend der neuen Einstellung aktualisiert.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531296"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a>Gewusst wie: Implementieren eines benutzerdefinierten Layoutmoduls
 Im folgenden Codebeispiel wird veranschaulicht, wie ein benutzerdefinierten Layoutmoduls erstellen, das ein einfache Flusslayout ausführt. Implementiert ein Panel-Steuerelement mit dem Namen `DemoFlowPanel`, welche Außerkraftsetzungen der <xref:System.Windows.Forms.Control.LayoutEngine%2A> Eigenschaft zu einer Instanz von der `DemoFlowLayout` Klasse.  

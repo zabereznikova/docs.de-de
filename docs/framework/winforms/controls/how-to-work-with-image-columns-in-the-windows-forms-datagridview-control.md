@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532771"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Arbeiten mit Bildspalten im DataGridView-Steuerelement in Windows Forms
 Im folgenden Codebeispiel wird die Verwendung der <xref:System.Windows.Forms.DataGridView>-Bildspalten auf einer interaktiven Benutzeroberfläche (UI) veranschaulicht. Darüber hinaus werden in dem Beispiel auch die mit <xref:System.Windows.Forms.DataGridViewImageColumn> verfügbaren Bildanpassungs- und Layoutoptionen veranschaulicht.  

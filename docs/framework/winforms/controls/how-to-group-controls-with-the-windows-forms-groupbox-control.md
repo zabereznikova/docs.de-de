@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531923"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Gewusst wie: Gruppieren von Steuerelementen mit dem GroupBox-Steuerelement in Windows Forms
 Windows Forms <xref:System.Windows.Forms.GroupBox> Steuerelemente werden verwendet, um die Gruppierung anderer Steuerelemente. Es gibt drei Gründe zum Gruppieren von Steuerelementen:  
