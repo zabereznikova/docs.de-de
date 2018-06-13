@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553883"
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>Gewusst wie: Aufteilen von Bereichen mithilfe des DockPanel-Elements
 Das folgende Beispiel erstellt eine einfache [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Framework verwendet eine <xref:System.Windows.Controls.DockPanel> Element. Die <xref:System.Windows.Controls.DockPanel> teilt den verfügbaren Platz für seine untergeordneten Elemente.  

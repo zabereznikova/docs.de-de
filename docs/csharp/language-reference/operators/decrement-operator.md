@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288800"
 ---
 # <a name="---operator-c-reference"></a>Operator -- (C#-Referenz)
 Der Dekrementoperator (`--`) verringert seinen Operanden um 1. Der Dekrementoperator kann vor oder hinter seinem Operanden angezeigt werden: `--variable` und `variable--`. Die erste Form stellt eine Präfixdekrementoperation dar. Das Ergebnis der Operation ist der Wert des Operanden, „nachdem“ er vermindert worden ist. Die zweite Form stellt eine Postfixdekrementoperation dar. Das Ergebnis der Operation ist der Wert des Operanden, bevor er vermindert worden ist.  

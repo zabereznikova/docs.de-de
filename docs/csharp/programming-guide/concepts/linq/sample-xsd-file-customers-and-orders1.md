@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328567"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>Beispiel-XSD-Datei: Kunden und Bestellungen
 Die folgende XSD-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält eine Schemadefinition für die [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md). Das Schema verwendet die XSD-Funktionen `xs:key` und `xs:keyref`, um festzulegen, dass das `CustomerID`-Attribut des `Customer`-Elements ein Schlüssel ist, und um eine Beziehung zwischen dem `CustomerID`-Element in jedem `Order`-Element und dem `CustomerID`-Attribut in jedem `Customer`-Element einzurichten.  

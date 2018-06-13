@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548986"
 ---
 # <a name="propertypath-xaml-syntax"></a>XAML-Syntax von PropertyPath
 Die <xref:System.Windows.PropertyPath> Objekt unterstützt eine komplexe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Syntax zum Festlegen verschiedener Eigenschaften, die <xref:System.Windows.PropertyPath> Typ als ihren Wert. Dieses Thema zeigt die <xref:System.Windows.PropertyPath> Syntax, um die Syntax der Bindung und der Animation angewendet.  

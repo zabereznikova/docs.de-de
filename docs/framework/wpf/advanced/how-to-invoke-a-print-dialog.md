@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545557"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Gewusst wie: Aufrufen eines Druckdialogfelds
 Um die Möglichkeit zum Drucken aus der Anwendung zu ermöglichen, Sie können einfach erstellen und Öffnen einer <xref:System.Windows.Controls.PrintDialog> Objekt.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320865"
 ---
 # <a name="friend-assemblies-c"></a>Friend-Assemblys (C#)
 Eine *Friend-Assembly* ist eine Assembly, die auf die [internen](../../../../csharp/language-reference/keywords/internal.md) Typen und Member einer anderen Assembly zugreifen kann. Wenn Sie eine Assembly als Friend-Assembly identifizieren, müssen Sie Typen und Member nicht mehr als öffentlich markieren, damit andere Assemblys auf sie zugreifen können. Dies ist insbesondere in folgenden Szenarios nützlich:  

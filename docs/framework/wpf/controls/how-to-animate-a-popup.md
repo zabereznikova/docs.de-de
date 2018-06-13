@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553753"
 ---
 # <a name="how-to-animate-a-popup"></a>Gewusst wie: Animieren eines Popups
 Dieses Beispiel zeigt zwei Möglichkeiten zum Animieren einer <xref:System.Windows.Controls.Primitives.Popup> Steuerelement.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547367"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Exemplarische Vorgehensweise: Erstellen von Direct3D9-Inhalten zum Hosten in WPF
 In dieser exemplarischen Vorgehensweise veranschaulicht die Direct3D9 Inhalte zu erstellen, die für das hosting in einer Windows Presentation Foundation (WPF)-Anwendung geeignet ist. Weitere Informationen zum Hosten von Direct3D9-Inhalt in WPF-Anwendungen finden Sie unter [WPF und Direct3D9 Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548219"
 ---
 # <a name="packaging-fonts-with-applications"></a>Verpacken von Schriftarten mit Anwendungen
 Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit Ihrem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung.  

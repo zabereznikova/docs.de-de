@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549369"
 ---
 # <a name="table-overview"></a>Übersicht über Tabellen
 <xref:System.Windows.Documents.Table> ist ein Block-Level-Element, das rasterbasierte Darstellung des Dokumentinhalts Fluss unterstützt. Die Flexibilität dieses Elements macht es nicht nur sehr hilfreich, sondern auch schwieriger zu verstehen und richtig zu verwenden.  

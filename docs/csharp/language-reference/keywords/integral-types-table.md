@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267908"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabelle ganzzahliger Typen (C#-Referenz)
 Die folgende Tabelle enthält Größe und Bereich der integralen Typen, die eine Teilmenge der einfachen Typen bilden.  

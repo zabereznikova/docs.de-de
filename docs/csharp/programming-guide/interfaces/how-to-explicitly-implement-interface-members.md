@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332185"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Gewusst wie: Explizites Implementieren von Schnittstellenmembern (C#-Programmierhandbuch)
 Dieses Beispiel deklariert eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md), `IDimensions`, und eine Klasse, `Box`, die explizit die Schnittstellenmember `getLength` und `getWidth` implementiert. Die Member werden über eine Schnittstelleninstanz, `dimensions`, erreicht.  

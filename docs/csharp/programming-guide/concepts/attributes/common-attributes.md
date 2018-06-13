@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332529"
 ---
 # <a name="common-attributes-c"></a>Allgemeine Attribute (C#)
 Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwendet werden.  

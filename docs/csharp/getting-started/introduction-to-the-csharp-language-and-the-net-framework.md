@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217284"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Einführung in die Programmiersprache C# und in .NET Framework
 C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickler eine Vielzahl sicherer und robuster Anwendungen erstellen können, die in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ausgeführt werden. Mit C# können Sie Windows-Clientanwendungen, XML-Webdienste, verteilte Komponenten, Client-/Serveranwendungen, Datenbankanwendungen und vieles mehr erstellen. Visual C# bietet basierend auf der C#-Sprache und [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] einen erweiterten Code-Editor, komfortable Benutzeroberflächen-Designer, integrierte Debugger und viele weitere Tools zur einfachen Anwendungsentwicklung.  

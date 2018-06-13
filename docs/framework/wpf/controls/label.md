@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553727"
 ---
 # <a name="label"></a>Bezeichnung
 <xref:System.Windows.Controls.Label> Steuerelemente in der Regel bieten Informationen in den [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  In der Vergangenheit eine <xref:System.Windows.Controls.Label> hat nur-Text enthalten, aber da die <xref:System.Windows.Controls.Label> , im Lieferumfang [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ist eine <xref:System.Windows.Controls.ContentControl>, kann Text enthalten oder eine <xref:System.Windows.UIElement>.  
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
  Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.Label> "Designs", die als Ziel verwendet einen <xref:System.Windows.Controls.ComboBox>.  Wenn der Benutzer drückt, die <xref:System.Windows.Controls.ComboBox> den Fokus erhält.  Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen der Zieleigenschaft einer Bezeichnung](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
   
- ![Anzeigeeigenschaften zeigen Beschriftung nach Verwendung](../../../../docs/framework/wpf/controls/media/labeledby.JPG ""LabeledBy"")  
+ ![Anzeigeeigenschaften zeigen Beschriftung nach Verwendung](../../../../docs/framework/wpf/controls/media/labeledby.JPG "\"LabeledBy\"")  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Vorgehensweise: Festlegen der Eigenschaft „Target“ einer Bezeichnung](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
