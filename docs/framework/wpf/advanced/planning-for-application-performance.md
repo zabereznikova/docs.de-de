@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546951"
 ---
 # <a name="planning-for-application-performance"></a>Planen der Anwendungsleistung
 Der Erfolg der Leistungsziele zu erreichen, hängt davon ab, wie gut Ihre Leistungsstrategie entwickeln. Die Planung ist die erste Phase in einem Produkt zu entwickeln. Dieses Thema beschreibt einige sehr einfache Regeln für das Entwickeln einer Strategie für die gute Leistung.  

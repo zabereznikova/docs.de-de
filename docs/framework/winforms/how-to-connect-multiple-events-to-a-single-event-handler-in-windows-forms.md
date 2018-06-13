@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538579"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Gewusst wie: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignishandler in Windows Forms
 In Ihrem Datenbankentwurf vielleicht Sie finden es notwendig, einen einzelnen Ereignishandler für mehrere Ereignisse bzw. mehrere Ereignisse, die die gleiche Prozedur ausführen. Beispielsweise ist es oft eine leistungsstarke Zeitersparnis haben einen Menübefehl, lösen Sie das gleiche Ereignis, wie eine Schaltfläche auf dem Formular wird, wenn sie die gleiche Funktionalität verfügbar machen. Hierzu können Sie mithilfe der Ereignisansicht des Eigenschaftenfensters in c# oder mit der `Handles` Schlüsselwort und die **Klassenname** und **Methodennamen** Dropdownfelder in Visual Basic-Code-Editor.  

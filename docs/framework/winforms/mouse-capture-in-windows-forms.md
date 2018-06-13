@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538407"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Mauserfassung in Windows Forms
 *Mauseingaben* bezieht sich auf, wenn ein Befehl, der alle Mauseingaben hat. Wenn ein Steuerelement die Maus erfasst hat, empfängt es Mauseingaben, und zwar unabhängig davon, ob der Zeiger innerhalb seiner Grenzen befindet.  

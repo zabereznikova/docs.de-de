@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541069"
 ---
 # <a name="collecting-ink"></a>Erfassen von Freihandeingaben
 Als einen ihrer zentralen Funktionsbestandteile erfasst die [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)-Plattform Freihandeingaben. In diesem Thema werden die Methoden zum Erfassen von Freihandeingaben in Windows Presentation Foundation (WPF) erläutert.  

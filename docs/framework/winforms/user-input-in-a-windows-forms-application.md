@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538362"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Benutzereingabe in einer Windows Forms-Anwendung
 In Windows Forms wird eine Benutzereingabe an Anwendungen in Form von Windows-Nachrichten gesendet. Eine Reihe von überschreibbaren Methoden verarbeiten diese Nachrichten an die Anwendung, Form, und Steuern der Ebene. Wenn diese Methoden mit Maus und Tastatur Nachrichten empfangen, lösen sie Ereignisse, die zum Abrufen von Informationen über die Maus oder Tastatur Eingabe behandelt werden können. In vielen Fällen werden Windows Forms-Anwendungen alle Benutzereingaben zu verarbeiten, einfach, indem Sie diese Ereignisse behandeln können. In anderen Fällen muss eine Anwendung möglicherweise eine der Methoden überschreiben, das Verarbeiten von Nachrichten, um eine bestimmte Nachricht abfangen zu können, bevor es von der Anwendung, Formular oder Steuerelement empfangen wird.  

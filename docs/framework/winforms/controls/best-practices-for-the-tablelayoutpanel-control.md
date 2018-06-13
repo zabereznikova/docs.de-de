@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526451"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>Empfohlene Vorgehensweisen für das TableLayoutPanel-Steuerelement
 Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement umfasst leistungsstarke Layout-Funktionen, die Sie sorgfältig berücksichtigen sollten, bevor Sie in Windows Forms verwenden.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546656"
 ---
 # <a name="wpf-unmanaged-api-reference"></a>WPF-API-Referenz zur nicht verwalteten
 Windows Presentation Foundation (WPF)-Bibliotheken verfügbar machen eine Reihe von nicht verwalteten Funktionen, die nur zur internen Verwendung bestimmt sind. Sie sollten nicht von Benutzercode aufgerufen werden.  

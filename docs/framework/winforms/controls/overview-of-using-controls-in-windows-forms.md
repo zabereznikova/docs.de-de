@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537361"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Übersicht über die Verwendung von Steuerelementen in Windows Forms
 In diesem Thema wird beschrieben, die wichtigsten Elemente einer Windows Forms-Anwendung und stellt ein einfaches Beispiel, das Steuerelemente und Ereignisse in einer Windows Forms-Anwendung behandelt.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548856"
 ---
 # <a name="textelement-content-model-overview"></a>Übersicht über das TextElement-Inhaltsmodell
 In dieser Übersicht Inhaltsmodell beschreibt die unterstützten Inhalte für eine <xref:System.Windows.Documents.TextElement>. Die <xref:System.Windows.Documents.Paragraph> Klasse ist eine Art von <xref:System.Windows.Documents.TextElement>. Ein Inhaltsmodell beschreibt, welche Objekte/Elemente in anderen enthalten sein können. In dieser Übersicht werden zusammengefasst, das Inhaltsmodell für Objekte, die von abgeleiteten verwendet <xref:System.Windows.Documents.TextElement>. Weitere Informationen finden Sie unter [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  

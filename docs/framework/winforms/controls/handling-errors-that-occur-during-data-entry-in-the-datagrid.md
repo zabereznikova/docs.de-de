@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529233"
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten
 Behandeln von Fehlern aus dem zugrunde liegenden Datenspeicher ist ein erforderliches Feature für die eine Dateneingabe Anwendung. Windows Forms <xref:System.Windows.Forms.DataGridView> Steuerelement macht dies einfach, verfügbar machen, die <xref:System.Windows.Forms.DataGridView.DataError> Ereignis, das ausgelöst wird, wenn der Datenspeicher Verletzung einer Einschränkung oder Geschäftsregel ermittelt werden.  
