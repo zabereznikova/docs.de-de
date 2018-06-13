@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172292"
 ---
 # <a name="extern-c-reference"></a>extern (C#-Referenz)
 Der `extern`-Modifizierer wird verwendet, um eine extern implementierte Methode zu deklarieren. Der `extern`-Modifizierer wird häufig mit dem `DllImport`-Attribut verwendet, wenn Sie nicht verwalteten Code mit Interop-Diensten aufrufen. In diesem Fall muss die Methode auch als `static` deklariert werden, wie im folgenden Beispiel gezeigt:  

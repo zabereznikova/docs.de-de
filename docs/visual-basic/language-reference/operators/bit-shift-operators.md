@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596732"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>Bitschiebeoperatoren (Visual Basic)
 Es folgen die Bitschiebeoperatoren in Visual Basic definiert.  

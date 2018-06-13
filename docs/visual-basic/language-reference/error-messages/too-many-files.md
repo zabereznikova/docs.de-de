@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593966"
 ---
 # <a name="too-many-files"></a>Zu viele Dateien
 Wurden weitere Dateien in das Stammverzeichnis erstellt als im Betriebssystem zulässig oder mehr Dateien als die angegebene Zahl geöffnet wurden die **Dateien =** in der Datei CONFIG festlegen. SYS-Datei.  

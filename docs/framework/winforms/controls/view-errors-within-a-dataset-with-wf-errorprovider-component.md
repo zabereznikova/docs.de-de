@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537085"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Gewusst wie: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms
 Sie können Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponente Spaltenfehler innerhalb eines Datasets oder anderen Datenquelle anzeigen. Für ein <xref:System.Windows.Forms.ErrorProvider> Komponente, bei der Datenfehler anzuzeigen, die in einem Formular keine werden direkt mit einem Steuerelement verknüpft ist. Sobald es an eine Datenquelle gebunden ist, können sie ein Fehlersymbol neben jedem Steuerelement anzeigen, die an die gleiche Datenquelle gebunden ist.  

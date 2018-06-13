@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398871"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Sicherheitsaspekte bei der Reflektionsausgabe
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), jeweils mit eigenen Sicherheitsproblemen:  

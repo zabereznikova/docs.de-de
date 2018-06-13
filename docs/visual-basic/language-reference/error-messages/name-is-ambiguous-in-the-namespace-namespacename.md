@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593589"
 ---
 # <a name="39ltnamegt39-is-ambiguous-in-the-namespace-39ltnamespacenamegt39"></a>&#39;&lt;Namen&gt; &#39; ist im Namespace mehrdeutig &#39; &lt;Namespacename&gt;&#39;
 Sie haben einen Namen angegeben, der nicht eindeutig ist und daher einen Konflikt mit einem anderen Namen verursacht. Visual Basic-Compiler keine Regeln zur konfliktlösung; Sie müssen Namen selbst unterscheiden.  

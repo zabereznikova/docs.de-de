@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636370"
 ---
 # <a name="file-information-cannot-be-queried-while-open-for-writing"></a>Dateiinformationen können nicht abgefragt werden, während eine Datei zum Schreiben geöffnet ist.
 Es wurde versucht, Informationen zu einer Datei abrufen, die aktuell zum Schreiben geöffnet ist.  

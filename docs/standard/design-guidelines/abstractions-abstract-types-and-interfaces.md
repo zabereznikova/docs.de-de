@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573025"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstraktionen (abstrakte Typen und Schnittstellen)
 Eine Abstraktion ist ein Typ, der beschreibt einen Vertrag, aber keine vollständige Implementierung des Vertrags nicht bereitstellt. Abstraktionen sind in der Regel als abstrakte Klassen oder Schnittstellen implementiert, und sie werden mit einem genau definierten Satz von Referenzdokumentation, beschreibt die erforderliche Semantik der Typen, die den Vertrag implementieren. Einige der wichtigsten Abstraktionen in .NET Framework enthalten <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, und <xref:System.Object>.  

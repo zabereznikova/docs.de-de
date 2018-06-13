@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354932"
 ---
 # <a name="how-to-filter-at-the-datacontext-level"></a>Gewusst wie: Filtern auf DataContext-Ebene
 Sie können `EntitySets` auf `DataContext`-Ebene filtern. Solche Filter gelten für alle Abfragen, die mit dieser <xref:System.Data.Linq.DataContext>-Instanz erstellt wurden.  

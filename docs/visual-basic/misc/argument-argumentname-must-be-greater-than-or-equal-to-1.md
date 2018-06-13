@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598165"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-greater-than-or-equal-to-1"></a>Argument &#39; &lt;Argumentname&gt; &#39; muss größer als oder gleich 1 sein
 Der Wert eines Arguments ist kleiner als 1.  

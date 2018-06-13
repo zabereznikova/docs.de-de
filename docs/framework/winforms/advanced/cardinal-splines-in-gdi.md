@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517964"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Kardinale Splines in GDI+
 Eine cardinal-Splinekurve ist eine Sequenz von einzelne Kurven verknüpft, um eine größere Kurve zu bilden. Die Splinekurve durch ein Array von Punkten und Spannungsparameter angegeben. Eine cardinal-Splinekurve durchläuft problemlos auf jedem Punkt im Array; Es gibt keine abgerundete Ecken und keine abrupten Änderungen in die Dichtigkeit der Kurve. Die folgende Abbildung zeigt eine Reihe von Punkten und eine cardinal-Splinekurve, die jeden Punkt in der Gruppe durchläuft.  

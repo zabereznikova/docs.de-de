@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597395"
 ---
 # <a name="in-clause-visual-basic"></a>In-Klausel (Visual Basic)
 Gibt die Gruppe, der Schleifenvariablen in Durchlaufen einer `For Each` Schleife oder gibt die Auflistung in der Abfrage eine `From`, `Join`, oder `Group Join` Klausel.  

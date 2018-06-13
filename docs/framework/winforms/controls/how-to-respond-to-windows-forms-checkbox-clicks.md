@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539736"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Gewusst wie: Reagieren auf das Klicken auf Kontrollkästchen in Windows Forms
 Wenn ein Benutzer einer Windows Forms klickt <xref:System.Windows.Forms.CheckBox> -Steuerelement, das <xref:System.Windows.Forms.Control.Click> Ereignis tritt auf. Programmieren Sie Ihre Anwendung eine Aktion, die je nach Zustand des Kontrollkästchens auszuführen.  

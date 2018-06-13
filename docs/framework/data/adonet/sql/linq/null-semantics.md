@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357701"
 ---
 # <a name="null-semantics"></a>NULL-Semantik
 Die folgende Tabelle enthält Links zu verschiedenen Bestandteile der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentation, in denen `null` (`Nothing` in Visual Basic) werden Probleme erläutert.  

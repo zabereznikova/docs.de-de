@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597382"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>Eine XML-Kommentarausnahme benötigen eine &#39;Cref&#39; Attribut
 Die \<Ausnahme >-Tag bietet eine Möglichkeit, dokumentieren Sie die Ausnahmen, die von einer Methode ausgelöst werden können. Die erforderliche `cref` -Attribut legt den Namen eines Members, der von der Dokumentations-Generator aktiviert ist. Wenn das Element vorhanden ist, wird er in den kanonischen Namen in der Dokumentationsdatei übersetzt.  

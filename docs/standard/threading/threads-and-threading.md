@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592183"
 ---
 # <a name="threads-and-threading"></a>Threads und Threading
 Betriebssysteme verwenden Prozesse, um die verschiedenen ausgeführten Anwendungen voneinander zu trennen. Threads sind die Grundeinheit, der ein Betriebssystem Prozessorzeit zuweist, und mehrere Threads können gleichzeitig Code innerhalb dieses Prozesses ausführen. Jeder Thread unterhält Ausnahmehandler, eine Planungspriorität und eine Reihe von Strukturen, mit denen das System den Threadkontext speichert, bis er eingeplant ist. Der Threadkontext enthält alle Informationen, die der Thread benötigt, um die Ausführung nahtlos fortzusetzen. Dies schließt auch seine CPU-Register und seinen Stapel im Adressraum des Hostprozesses vom Thread ein.  
