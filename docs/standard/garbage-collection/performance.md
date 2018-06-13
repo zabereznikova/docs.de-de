@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579794"
 ---
 # <a name="garbage-collection-and-performance"></a><span data-ttu-id="5e2b8-102">Garbage Collection und Leistung</span><span class="sxs-lookup"><span data-stu-id="5e2b8-102">Garbage Collection and Performance</span></span>
 <a name="top"></a> <span data-ttu-id="5e2b8-103">In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speicherauslastung besprochen.</span><span class="sxs-lookup"><span data-stu-id="5e2b8-103">This topic describes issues related to garbage collection and memory usage.</span></span> <span data-ttu-id="5e2b8-104">Es werden Probleme beschrieben, die den verwalteten Heap betreffen, und es wird erläutert, wie die Auswirkungen der Garbage Collection auf Ihre Anwendungen minimiert werden können.</span><span class="sxs-lookup"><span data-stu-id="5e2b8-104">It addresses issues that pertain to the managed heap and explains how to minimize the effect of garbage collection on your applications.</span></span> <span data-ttu-id="5e2b8-105">Jedes Problem bietet Links zu Verfahren, mit denen Sie die Probleme untersuchen können.</span><span class="sxs-lookup"><span data-stu-id="5e2b8-105">Each issue has links to procedures that you can use to investigate problems.</span></span>  

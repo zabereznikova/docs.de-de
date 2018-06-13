@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579690"
 ---
 # <a name="character-classes-in-regular-expressions"></a><span data-ttu-id="47352-102">Zeichenklassen in regulären Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="47352-102">Character Classes in Regular Expressions</span></span>
 <a name="Top"></a> <span data-ttu-id="47352-103">Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Eingabezeichenfolge enthalten sein kann, damit eine Übereinstimmung vorliegt.</span><span class="sxs-lookup"><span data-stu-id="47352-103">A character class defines a set of characters, any one of which can occur in an input string for a match to succeed.</span></span> <span data-ttu-id="47352-104">Die Sprache für reguläre Ausdrücke in .NET unterstützt die folgenden Zeichenklassen:</span><span class="sxs-lookup"><span data-stu-id="47352-104">The regular expression language in .NET supports the following character classes:</span></span>  

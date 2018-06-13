@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580522"
 ---
 # <a name="parallel-diagnostic-tools"></a><span data-ttu-id="5bf91-102">Diagnosetools für die parallele Ausführung</span><span class="sxs-lookup"><span data-stu-id="5bf91-102">Parallel Diagnostic Tools</span></span>
 <span data-ttu-id="5bf91-103">Visual Studio bietet umfangreiche Unterstützung für das Debuggen und die Profilerstellung in Multithreadanwendungen.</span><span class="sxs-lookup"><span data-stu-id="5bf91-103">Visual Studio provides extensive support for debugging and profiling multi-threaded applications.</span></span>  
