@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765879"
 ---
 # <a name="identifiers-entity-sql"></a><span data-ttu-id="acb4e-102">Bezeichner (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="acb4e-102">Identifiers (Entity SQL)</span></span>
 <span data-ttu-id="acb4e-103">Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwendet, um Abfrageausdruckaliase, Verweise auf Variablen, Eigenschaften von Objekten und Funktionen usw. darzustellen.</span><span class="sxs-lookup"><span data-stu-id="acb4e-103">Identifiers are used in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to represent query expression aliases, variable references, properties of objects, functions, and so on.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="acb4e-104"> bietet zwei Arten von Bezeichnern: einfache Bezeichner und Bezeichner in Anführungszeichen.</span><span class="sxs-lookup"><span data-stu-id="acb4e-104"> provides two kinds of identifiers: simple identifiers and quoted identifiers.</span></span>  

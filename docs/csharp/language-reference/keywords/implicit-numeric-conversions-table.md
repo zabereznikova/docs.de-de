@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217193"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a><span data-ttu-id="f0d3c-102">Tabelle für implizite numerische Konvertierungen (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="f0d3c-102">Implicit Numeric Conversions Table (C# Reference)</span></span>
 <span data-ttu-id="f0d3c-103">Folgende Tabelle veranschaulicht vordefinierte implizite numerische Konvertierungen.</span><span class="sxs-lookup"><span data-stu-id="f0d3c-103">The following table shows the predefined implicit numeric conversions.</span></span> <span data-ttu-id="f0d3c-104">Implizite Konvertierungen können in vielen Situationen auftreten, einschließlich methodenaufrufender und Zuweisungsansweisungen.</span><span class="sxs-lookup"><span data-stu-id="f0d3c-104">Implicit conversions might occur in many situations, including method invoking and assignment statements.</span></span>  

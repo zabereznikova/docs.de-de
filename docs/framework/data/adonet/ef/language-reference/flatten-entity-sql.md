@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760569"
 ---
 # <a name="flatten-entity-sql"></a><span data-ttu-id="cc70e-102">FLATTEN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="cc70e-102">FLATTEN (Entity SQL)</span></span>
 <span data-ttu-id="cc70e-103">Konvertiert eine Auflistung von Auflistungen in eine vereinfachte Auflistung.</span><span class="sxs-lookup"><span data-stu-id="cc70e-103">Converts a collection of collections into a flattened collection.</span></span> <span data-ttu-id="cc70e-104">Die neue Auflistung enthält dieselben Elemente wie die alte Auflistung, jedoch ohne geschachtelte Struktur.</span><span class="sxs-lookup"><span data-stu-id="cc70e-104">The new collection contains all the same elements as the old collection, but without a nested structure.</span></span>  

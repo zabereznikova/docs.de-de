@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337703"
 ---
 # <a name="pointer-comparison-c-programming-guide"></a><span data-ttu-id="47de8-102">Zeigervergleich (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="47de8-102">Pointer Comparison (C# Programming Guide)</span></span>
 <span data-ttu-id="47de8-103">Sie können die folgenden Operatoren zum Vergleichen von Zeigern jeglichen Typs anwenden:</span><span class="sxs-lookup"><span data-stu-id="47de8-103">You can apply the following operators to compare pointers of any type:</span></span>  

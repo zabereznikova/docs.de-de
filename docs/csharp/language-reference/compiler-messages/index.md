@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213202"
 ---
 # <a name="c-compiler-errors"></a><span data-ttu-id="883fe-102">C#-Compilerfehler</span><span class="sxs-lookup"><span data-stu-id="883fe-102">C# Compiler Errors</span></span>
 <span data-ttu-id="883fe-103">Zu einigen C#-Compilerfehlern gibt es entsprechende Themen, die erläutern, warum ein Fehler generiert wurde und – in einigen Fällen – wie sich der Fehler beheben lässt.</span><span class="sxs-lookup"><span data-stu-id="883fe-103">Some C# compiler errors have corresponding topics that explain why the error is generated, and, in some cases, how to fix the error.</span></span> <span data-ttu-id="883fe-104">Finden Sie anhand der folgenden Schritte heraus, ob für eine bestimmte Fehlermeldung Hilfe verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="883fe-104">Use one of the following steps to see whether help is available for a particular error message.</span></span>  

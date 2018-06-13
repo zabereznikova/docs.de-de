@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338350"
 ---
 # <a name="serializing-xml-trees-c"></a><span data-ttu-id="9caec-102">Serialisieren von XML-Strukturen (C#)</span><span class="sxs-lookup"><span data-stu-id="9caec-102">Serializing XML Trees (C#)</span></span>
 <span data-ttu-id="9caec-103">Beim Serialisieren einer XML-Struktur wird aus der XML-Struktur XML generiert.</span><span class="sxs-lookup"><span data-stu-id="9caec-103">Serializing an XML tree means generating XML from the XML tree.</span></span> <span data-ttu-id="9caec-104">Eine Serialisierung kann in eine Datei, in eine konkrete Implementierung der <xref:System.IO.TextWriter>-Klasse oder in eine konkrete Implementierung eines <xref:System.Xml.XmlWriter> erfolgen.</span><span class="sxs-lookup"><span data-stu-id="9caec-104">You can serialize to a file, to a concrete implementation of the <xref:System.IO.TextWriter> class, or to a concrete implementation of an <xref:System.Xml.XmlWriter>.</span></span>  

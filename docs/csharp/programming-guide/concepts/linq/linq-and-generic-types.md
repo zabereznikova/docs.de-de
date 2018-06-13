@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327736"
 ---
 # <a name="linq-and-generic-types-c"></a><span data-ttu-id="42c3a-102">LINQ und generische Typen (C#)</span><span class="sxs-lookup"><span data-stu-id="42c3a-102">LINQ and Generic Types (C#)</span></span>
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="42c3a-103">-Abfragen basieren auf generischen Typen, die mit Version 2.0 von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] eingeführt wurden.</span><span class="sxs-lookup"><span data-stu-id="42c3a-103"> queries are based on generic types, which were introduced in version 2.0 of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="42c3a-104">Sie benötigen kein ausführliches Wissen über Generika, um Abfragen schreiben zu können.</span><span class="sxs-lookup"><span data-stu-id="42c3a-104">You do not need an in-depth knowledge of generics before you can start writing queries.</span></span> <span data-ttu-id="42c3a-105">Dennoch sollten Sie zwei grundlegende Konzepte verstehen:</span><span class="sxs-lookup"><span data-stu-id="42c3a-105">However, you may want to understand two basic concepts:</span></span>  

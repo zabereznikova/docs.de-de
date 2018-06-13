@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335834"
 ---
 # <a name="threading-c"></a><span data-ttu-id="0c9ba-102">Threading (C#)</span><span class="sxs-lookup"><span data-stu-id="0c9ba-102">Threading (C#)</span></span>
 <span data-ttu-id="0c9ba-103">Mit Threading kann Ihr C#-Programm parallele Verarbeitungsaufgaben durchführen, damit Sie mehr als einen Vorgang gleichzeitig durchführen können.</span><span class="sxs-lookup"><span data-stu-id="0c9ba-103">Threading enables your C# program to perform concurrent processing so that you can do more than one operation at a time.</span></span> <span data-ttu-id="0c9ba-104">Sie können z.B. Threading verwenden, um Benutzereingaben zu überwachen, Aufgaben im Hintergrund auszuführen und parallele Eingabestreams zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="0c9ba-104">For example, you can use threading to monitor input from the user, perform background tasks, and handle simultaneous streams of input.</span></span>  
