@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569732"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Ereignisbehandlung in einem XML-Dokument mit "XmlNodeChangedEventArgs"
 **XmlNodeChangedEventArgs** kapselt die Argumente, die den beim **XmlDocument**-Objekt zur Verarbeitung von Ereignissen registrierten Ereignishandlern übergeben werden. 	Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.  

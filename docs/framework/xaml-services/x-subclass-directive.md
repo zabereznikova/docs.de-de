@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566417"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass-Anweisung
 Ändert die Verwendung von XAML-Markup kompilieren Verhalten beim `x:Class` ebenfalls bereitgestellt wird. Statt eine partielle Klasse, die basierend auf `x:Class`, bereitgestellten `x:Class` wird als eine Zwischenklasse erstellt und die angegebene abgeleitete Klasse wird dann auf der Grundlage erwartet `x:Class`.  

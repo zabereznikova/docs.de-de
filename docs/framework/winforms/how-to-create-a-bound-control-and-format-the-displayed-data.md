@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542209"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Gewusst wie: Erstellen eines gebundenen Steuerelements und Formatieren der angezeigten Daten
 Mit Windows Forms-Datenbindung können Sie Daten formatieren, die in einem datengebundenen Steuerelement angezeigt wird, indem die **Formatierung und erweiterte Bindung** (Dialogfeld).  

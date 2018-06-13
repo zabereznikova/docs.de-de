@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4c77edfff640f796dd3f345eaeb4728830c5f4c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449143"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit-Schnittstelle
 Stellt Methoden zum Erstellen, ändern und Speichern von Metadaten über die Assembly im momentan definierten Bereich. Die Metadaten kann im Arbeitsspeicher gespeichert oder auf dem Datenträger gespeichert werden.  

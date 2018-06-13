@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172489"
 ---
 # <a name="data-templating-overview"></a>Übersicht über Datenvorlagen
 Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten flexibel definieren. WPF-Steuerelemente verfügen über integrierte Funktionen, die die Anpassung der Datendarstellung unterstützen. In diesem Thema veranschaulicht, wie definieren Sie zunächst eine <xref:System.Windows.DataTemplate> und führt dann andere Textvorlagen-Funktionen, wie z. B. die Auswahl von Vorlagen basierend auf benutzerdefinierte Logik und die Unterstützung für die Anzeige hierarchischer Daten.  

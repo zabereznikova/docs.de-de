@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569082"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Zugreifen auf XML-Daten mit XPathNavigator
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Methoden für das Durchsuchen von Knoten, das Extrahieren von XML-Daten und das Zugreifen auf stark typisierte XML-Daten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt bereit.  

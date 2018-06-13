@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541387"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Wiedergeben eines Windows Forms-Steuerelements
 Rendering bezieht sich auf den Prozess zum Erstellen einer visuellen Darstellung auf dem Bildschirm des Benutzers. Windows Forms verwendet [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (die neue Windows-Grafikbibliothek) für das Rendering. Die verwalteten Klassen, die Zugriff auf [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] befinden sich in der <xref:System.Drawing?displayProperty=nameWithType> Namespace und dessen untergeordneten Namespaces.  

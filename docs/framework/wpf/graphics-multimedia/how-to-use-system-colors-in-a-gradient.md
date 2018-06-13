@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562179"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>Gewusst wie: Verwenden von Systemfarben in einem Farbverlauf
 Um eine Systemfarbe in einem Farbverlauf zu verwenden, verwenden Sie die  *\<SystemColor >* Farbe und  *\<SystemColor >* ColorKey statische Eigenschaften der der <xref:System.Windows.SystemColors> Klasse zum Abrufen einer Verweis auf die Farbe, in denen  *\<SystemColor >* ist der Name des gewünschten Systemfarbe. Verwenden der  *\<SystemColor >* ColorKey-Eigenschaften, wenn Sie einen dynamischen Verweis erstellen, die das System Design ändert automatisch aktualisiert werden sollen. Verwenden Sie andernfalls die  *\<SystemColor >* Color-Eigenschaften.  

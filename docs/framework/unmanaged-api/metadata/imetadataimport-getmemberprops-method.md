@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d93763da2afbbdb1e738c802ba172e9f16e5f7af
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448457"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps-Methode
 Ruft Metadateninformationen, einschließlich Name, binäre Signatur und relative virtuelle Adresse, von der <xref:System.Type> Member auf, die vom angegebenen Metadatentoken verwiesen wird.  

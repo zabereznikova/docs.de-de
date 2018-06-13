@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569907"
 ---
 # <a name="memory-management-and-garbage-collection-in-net"></a>Speicherverwaltung und Garbage Collection in .NET
 In diesem Abschnitt der Dokumentation sind Informationen zum Verwalten des Arbeitsspeichers in .NET enthalten.  

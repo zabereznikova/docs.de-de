@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568936"
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Entfernen von Knoten, Inhalten und Werten aus einem XML-Dokument
 Sobald sich ein XML-Dokumentobjektmodell (DOM) im Speicher befindet, können Sie Knoten aus der Struktur oder Inhalte und Werte aus bestimmten Knotentypen entfernen. Informationen zum Entfernen eines Blattknotens oder einer ganzen Knotenunterstruktur aus einem Dokument finden Sie unter [Entfernen von Knoten aus dem DOM](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). Informationen zum Entfernen von Attributen aus einem Element finden Sie unter [Entfernen von Attributen aus einem Elementknoten im DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). Informationen zum Entfernen von Inhalten aus einem Knoten unter Beibehaltung des Knotens in der Struktur finden Sie unter [Entfernen von Knoteninhalt im Dokumentobjektmodell](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  

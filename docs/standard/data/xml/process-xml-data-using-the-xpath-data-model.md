@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569953"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells
 Der <xref:System.Xml?displayProperty=nameWithType>-Namespace bietet mithilfe der <xref:System.Xml.XmlDocument>-Klasse oder der <xref:System.Xml.XPath.XPathDocument>-Klasse eine programmgesteuerte Darstellung von XML-Dokumenten, XML-Fragmenten, XML-Knoten oder XML-Knotengruppen im Speicher.  
