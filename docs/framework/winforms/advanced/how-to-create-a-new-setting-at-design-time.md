@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523766"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Gewusst wie: Erstellen einer neuen Einstellung zur Entwurfszeit
 Sie können eine neue Einstellung zur Entwurfszeit erstellen, mit dem Einstellungs-Designer. Einstellungs-Designer ist ein Raster-Style-Schnittstelle, mit dem Sie neue Einstellungen erstellen und Eigenschaften für diese Einstellungen angeben. Sie müssen Namen, Wert, Typ und Bereich für die neuen Einstellungen angeben. Sobald eine Einstellung erstellt wurde, ist es im Code zugegriffen werden kann.  

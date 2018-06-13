@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519872"
 ---
 # <a name="extract-wf-data-using-tracking"></a>Extrahieren von WF-Daten mithilfe der Nachverfolgung
 In diesem Beispiel wird veranschaulicht, wie die Workflownachverfolgung verwendet wird, um Workflowvariablen und Argumente aus Aktivitäten zu extrahieren. Außerdem wird auch das Hinzufügen von Bemerkungen zu Überwachungsdatensätzen sowie das Extrahieren der Datennutzlast innerhalb von benutzerdefinierten Überwachungsdatensätzen dargestellt. Im Beispiel wird der ETW-Überwachungsteilnehmer (Ereignisablaufverfolgung für Windows) zum Extrahieren von Daten aus dem Workflow verwendet.  

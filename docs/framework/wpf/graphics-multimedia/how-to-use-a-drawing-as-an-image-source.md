@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562285"
 ---
 # <a name="how-to-use-a-drawing-as-an-image-source"></a>Gewusst wie: Verwenden einer Zeichnung als Bildquelle
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.Drawing> als die <xref:System.Windows.Controls.Image.Source%2A> für ein <xref:System.Windows.Controls.Image> Steuerelement. Anzuzeigende eine <xref:System.Windows.Media.Drawing> mit eine <xref:System.Windows.Controls.Image> steuern, verwenden Sie eine <xref:System.Windows.Media.DrawingImage> als die <xref:System.Windows.Controls.Image> des Steuerelements <xref:System.Windows.Controls.Image.Source%2A> und legen Sie die <xref:System.Windows.Media.DrawingImage> des Objekts <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> Eigenschaft, um die Zeichnung angezeigt werden soll.  

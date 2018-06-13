@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521322"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>Gewusst wie: Ausfüllen einer Form mit einer Volltonfarbe
 Um eine Form mit einer Volltonfarbe auszufüllen, erstellen Sie eine <xref:System.Drawing.SolidBrush> Objekts, und übergeben Sie, die <xref:System.Drawing.SolidBrush> Objekt als Argument an eine der Füllmethoden der der <xref:System.Drawing.Graphics> Klasse. Im folgende Beispiel wird gezeigt, wie eine Ellipse, die mit der Farbe Rot ausgefüllt wird.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518831"
 ---
 # <a name="content-based-correlation"></a>Inhaltsbasierte Korrelation
 Dieses Beispiel veranschaulicht, wie die Messagingaktivitäten (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply> und <xref:System.ServiceModel.Activities.ReceiveReply>) mit mehreren inhaltsbasierten Korrelationen und einer inhaltsbasierter Korrelation verwendet werden können. In diesem Szenario wird zuerst auf Grundlage einer Bestellungs-ID eine Korrelation initialisiert, und dann wird auf Grundlage der Kunden-ID später eine andere Korrelation erstellt. Dies zeigt, wie eine <xref:System.ServiceModel.Activities.Receive>-Aktivität basierend auf der gleichen eingehenden Nachricht einer vorhandenen Korrelation folgen und eine neue Korrelation initialisieren kann.  

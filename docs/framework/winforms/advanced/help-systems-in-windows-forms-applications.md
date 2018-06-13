@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520720"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Hilfesysteme in Windows Forms-Anwendungen
 Einer der wichtigsten Zusatzfunktionen Sie, wie ein Entwickler von Anwendungen, können Ihre Benutzer mit Dokumentationselement ist ein zuständigen Hilfesystem. Dies ist, in dem sie aktivieren wird, wenn sie verwechselt oder disoriented werden. Ein Hilfesystem in einer Windows-basierten Anwendung erfolgt einfach mithilfe der [HelpProvider-Komponente](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).  

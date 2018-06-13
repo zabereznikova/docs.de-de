@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522875"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Gewusst wie: Erfassen von Benutzereingaben in einem "PrintDialog" zur Laufzeit
 Druckoptionen zur Entwurfszeit festgelegt werden kann, sollten Sie manchmal zur Laufzeit, wahrscheinlich aufgrund der vom Benutzer ausgewählten Optionen diese Optionen ändern. Sie können Erfassen von Benutzereingaben zum Drucken von einem Dokument mithilfe der <xref:System.Windows.Forms.PrintDialog> und die <xref:System.Drawing.Printing.PrintDocument> Komponenten.  

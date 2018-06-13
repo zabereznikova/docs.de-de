@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520382"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Antialiasing bei Linien und Kurven
 Bei Verwendung von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] um eine Linie zeichnen, Sie geben Sie den Startpunkt und den Endpunkt der Linie, aber Sie müssen keine keine Informationen zu den einzelnen Pixel in der Zeile bereit. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funktioniert in Verbindung mit dem Bildschirmtreiber um zu bestimmen, welche Pixel aktiviert werden, werden um die Zeile auf die jeweiligen Ausgabegeräts angezeigt.  

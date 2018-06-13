@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519846"
 ---
 # <a name="using-and-creating-activities"></a>Verwenden und Erstellen von Aktivitäten
 Die Themen in diesem Abschnitt wird beschrieben, die vom System bereitgestellte Aktivitäten, die in Windows Workflow Foundation (WF) verfügbar.  

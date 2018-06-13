@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523795"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>Verwenden von Transformationen in Managed GDI+
 Affine Transformationen gehören drehen, skalieren, spiegeln, Scheren und übersetzen. In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]die <xref:System.Drawing.Drawing2D.Matrix> Klasse bildet die Grundlage für die Ausführung von affine Transformations auf Vektor Zeichnungen, Bilder und Text.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523682"
 ---
 # <a name="using-the-world-transformation"></a>Verwenden der globalen Transformation
 Die globale Transformation ist eine Eigenschaft der <xref:System.Drawing.Graphics> Klasse. Die Zahlen, die die globale Transformation angeben befinden sich einem <xref:System.Drawing.Drawing2D.Matrix> Objekt, das eine 3 x 3-Matrix darstellt. Die <xref:System.Drawing.Drawing2D.Matrix> und <xref:System.Drawing.Graphics> Klassen verfügen über mehrere Methoden zum Festlegen der Zahlen in die globale Transformationsmatrix.  

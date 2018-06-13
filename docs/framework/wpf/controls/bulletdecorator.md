@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551148"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> verfügt über zwei Inhaltseigenschaften: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> und <xref:System.Windows.Controls.Decorator.Child%2A>. Die <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> Eigenschaft definiert die <xref:System.Windows.UIElement> als Aufzählungszeichen verwenden. Die <xref:System.Windows.Controls.Decorator.Child%2A> Eigenschaft definiert eine <xref:System.Windows.UIElement> , die visuell mit Aufzählungszeichen ausgerichtet.  

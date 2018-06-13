@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519417"
 ---
 # <a name="order-processing-with-policy"></a>Auftragsverarbeitung mit Richtlinie
 Das Beispiel Auftragsverarbeitungsrichtlinie veranschaulicht einige der in [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] von Windows Workflow Foundation (WF) eingeführten Schlüsselfeatures. Die folgende Funktionalität ist für das WF-Regelmodul neu:  

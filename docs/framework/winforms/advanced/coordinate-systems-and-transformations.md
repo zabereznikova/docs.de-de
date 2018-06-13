@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521777"
 ---
 # <a name="coordinate-systems-and-transformations"></a>Koordinatensysteme und Transformationen
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet eine globale Transformation und eine Seitentransformation, damit Sie transformieren können (Drehen, zu skalieren, übersetzen usw.) die Elemente, die Sie zeichnen. Die beiden Transformationen können in einer Vielzahl von Koordinatensysteme arbeiten.  

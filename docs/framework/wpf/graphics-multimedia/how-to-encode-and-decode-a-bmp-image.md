@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558837"
 ---
 # <a name="how-to-encode-and-decode-a-bmp-image"></a>Gewusst wie: Codieren und Decodieren eines BMP-Bilds
 Die folgenden Beispiele zeigen, wie Sie decodieren und Codieren einer [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] -Bild mithilfe der spezifischen <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> und <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> Objekte.  

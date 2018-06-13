@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522446"
 ---
 # <a name="how-to-shear-colors"></a>Gewusst wie: Scheren von Farben
 Scheren erhöht oder verringert eine Farbe Komponente durch einen Betrag proportional zu einer anderen Farbe-Komponente. Betrachten Sie beispielsweise die Transformation, in dem die Hälfte der Wert des Blauanteils Rotanteils gestiegen ist. Unter solchen eine Transformation werden die Farbe (0,2, 0,5, 1), (0,7, 0,5, 1). Neuen Rotanteils ist 0,2 + ((1/2)(1) = 0,7.  

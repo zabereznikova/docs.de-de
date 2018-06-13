@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522108"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>Ellipsen und Bögen in GDI+
 Sie können problemlos zeichnen Ellipsen und Bögen mit der <xref:System.Drawing.Graphics.DrawEllipse%2A> und <xref:System.Drawing.Graphics.DrawArc%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  

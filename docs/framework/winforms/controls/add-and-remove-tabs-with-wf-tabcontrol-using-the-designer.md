@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525264"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Gewusst wie: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms mithilfe des Designers
 Beim Platzieren einer <xref:System.Windows.Forms.TabControl> Steuerelement auf dem Formular sie zwei Registerkarten in der Standardeinstellung enthält. Sie können hinzufügen oder Entfernen von Registerkarten, die mithilfe des Designers.  

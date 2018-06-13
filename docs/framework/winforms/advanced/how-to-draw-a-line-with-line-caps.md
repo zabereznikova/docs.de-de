@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523220"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Gewusst wie: Zeichnen einer Linie mit Linienenden
 Sie können den Anfang oder Ende einer Zeile in einer von mehreren Formen aufgerufen Linienenden zeichnen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] unterstützt mehrere Linienenden wie Round, Quadrat, Raute und Pfeilspitze an.  

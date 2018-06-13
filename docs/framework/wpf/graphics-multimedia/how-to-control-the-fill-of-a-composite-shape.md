@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563042"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Gewusst wie: Steuern des Ausfüllens einer zusammengesetzten Form
 Die <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Eigenschaft von einem <xref:System.Windows.Media.GeometryGroup> oder eine <xref:System.Windows.Media.PathGeometry>, gibt eine "Regel" die zusammengesetzte Form verwendet wird, um zu bestimmen, ob ein angegebener Punkt Teil der Geometrie ist. Es gibt zwei mögliche Werte für <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> und <xref:System.Windows.Media.FillRule.Nonzero>. In den folgenden Abschnitten wird beschrieben, wie diese beiden Regeln verwendet werden.  

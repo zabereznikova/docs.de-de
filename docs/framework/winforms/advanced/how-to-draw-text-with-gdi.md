@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522914"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Gewusst wie: Zeichnen von Text mit GDI
 Mit der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode in der <xref:System.Windows.Forms.TextRenderer> -Klasse, die Sie zugreifen können [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Funktionen zum Zeichnen von Text in einem Formular oder Steuerelement. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Textrendering bietet in der Regel eine bessere Leistung und genauere Text als messen [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  

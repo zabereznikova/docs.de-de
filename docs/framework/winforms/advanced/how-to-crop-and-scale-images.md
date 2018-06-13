@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521637"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Gewusst wie: Zuschneiden und Skalieren von Bildern
 Die <xref:System.Drawing.Graphics> Klasse stellt mehrere <xref:System.Drawing.Graphics.DrawImage%2A> Methoden, von denen einige Quell- und Zielschemas Rechteck Parameter haben, die zum Zuschneiden und Skalieren von Bildern verwendet werden können.  

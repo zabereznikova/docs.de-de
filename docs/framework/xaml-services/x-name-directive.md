@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565849"
 ---
 # <a name="xname-directive"></a>x:Name-Anweisung
 Identifiziert eindeutig XAML-definierte Elemente in einem XAML-Namensbereich. Verwendung von XAML-Namescopes und ihre Eindeutigkeitsmodelle können Frameworks APIs bereit, oder zum Implementieren von Verhaltensweisen, die Zugriff auf die XAML-erstellte Objektdiagramm zur Laufzeit auf die instanziierte Objekte angewendet werden.  

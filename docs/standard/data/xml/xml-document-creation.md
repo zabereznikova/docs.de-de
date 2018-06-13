@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572787"
 ---
 # <a name="xml-document-creation"></a>Erstellen eines XML-Dokuments
 Es gibt zwei Möglichkeiten, ein XML-Dokument zu erstellen. Eine besteht darin, ein **XmlDocument** ohne Parameter zu erstellen. Die andere Möglichkeit besteht darin, ein **XmlDocument** zu erstellen und ihm eine XmlNameTable als Parameter zu übergeben. Das folgende Beispiel zeigt, wie Sie ein neues, leeres **XmlDocument** ohne Parameter erstellen.  

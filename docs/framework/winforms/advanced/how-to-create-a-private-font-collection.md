@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523081"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Gewusst wie: Erstellen einer privaten Schriftartenauflistung
 Die <xref:System.Drawing.Text.PrivateFontCollection> Klasse erbt von der <xref:System.Drawing.Text.FontCollection> abstrakte Basisklasse. Sie können eine <xref:System.Drawing.Text.PrivateFontCollection> Objekt, das einen Satz von Schriftarten, die speziell für Ihre Anwendung zu verwalten. Installierten Systemschriftarten sowie Schriftarten, die nicht auf dem Computer installiert wurden, kann einer privaten schriftartenauflistung einschließen. Um eine Schriftartdatei zu einer privaten schriftartenauflistung hinzuzufügen, rufen Sie die <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> Methode von einer <xref:System.Drawing.Text.PrivateFontCollection> Objekt.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764017"
 ---
 # <a name="operator-precedence-entity-sql"></a>Operatorrangfolge (Entity SQL)
 Wenn ein [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfrage besitzt mehrere Operatoren, bestimmt die Operatorrangfolge die Reihenfolge, in der die Vorgänge ausgeführt werden. Die Ausführungsreihenfolge kann sich entscheidend auf das Abfrageergebnis auswirken.  

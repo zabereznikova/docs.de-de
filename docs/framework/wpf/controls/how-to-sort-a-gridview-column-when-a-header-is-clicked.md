@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554897"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Gewusst wie: Sortieren einer GridView-Spalte beim Klicken auf einen Header
 In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.ListView> -Steuerelement, implementiert eine <xref:System.Windows.Controls.GridView> anzeigen, Modus und sortiert die Daten zu Inhalten, wenn ein Benutzer auf einen Spaltenheader klickt.  

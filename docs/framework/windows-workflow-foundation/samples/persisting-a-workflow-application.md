@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519186"
 ---
 # <a name="persisting-a-workflow-application"></a>Beibehalten einer Workflowanwendung
 In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.WorkflowApplication> ausgeführt wird, wie sie im Leerlauf entladen wird und wie sie neu geladen wird, um ihre Ausführung fortzusetzen.  

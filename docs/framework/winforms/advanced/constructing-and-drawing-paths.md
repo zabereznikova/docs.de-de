@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520655"
 ---
 # <a name="constructing-and-drawing-paths"></a>Erstellen und Zeichnen von Pfaden
 Ein Pfad ist eine Sequenz von Graphics primitive (Linien, Rechtecke, Kurven, Text und Like), die bearbeitet und als einzelne Einheit gezeichnet werden können. Ein Pfad aufgeteilt werden kann *Abbildungen* , die entweder offen oder geschlossen werden. Eine Abbildung kann mehrere primitive Typen enthalten.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563796"
 ---
 # <a name="xshared-attribute"></a>x:Shared-Attribut
 Bei Festlegung auf `false`, WPF Abrufen von Ressourcen Verhalten ändert, so, dass Anforderungen für die attributierte Ressource einer neuen Instanz für jede Anforderung erstellen und für alle Anforderungen dieselbe Instanz gemeinsam.  

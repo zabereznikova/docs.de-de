@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558539"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Gewusst wie: Animieren eines Objekts mithilfe von Keyframes
 In diesem Beispiel wird gezeigt, wie ein Objekt animiert wird in diesem Beispiel wird die <xref:System.Windows.Controls.Page.Background%2A> Eigenschaft von einem <xref:System.Windows.Controls.Page> mithilfe von Keyframes.  

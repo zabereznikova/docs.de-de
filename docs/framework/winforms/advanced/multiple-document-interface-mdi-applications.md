@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523967"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>MDI-Anwendungen (Multiple Document Interface)
 Multiple Document Interface (MDI)-Anwendungen ermöglichen es Ihnen, mehrere Dokumente zur gleichen Zeit angezeigt, mit jedes Dokument in einem eigenen Fenster angezeigt. MDI-Anwendungen haben häufig ein Fenster Menüelement mit Untermenüs zum Wechseln zwischen Fenstern oder Dokumenten.  
