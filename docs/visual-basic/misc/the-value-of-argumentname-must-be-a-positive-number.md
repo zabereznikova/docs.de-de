@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638553"
 ---
 # <a name="the-value-of-ltargumentnamegt-must-be-a-positive-number"></a><span data-ttu-id="ca56f-102">Der Wert der &lt;Argumentname&gt; muss eine positive Zahl sein</span><span class="sxs-lookup"><span data-stu-id="ca56f-102">The value of &lt;argumentname&gt; must be a positive number</span></span>
 <span data-ttu-id="ca56f-103">Der Wert der Eigenschaft <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> muss größer als null sein.</span><span class="sxs-lookup"><span data-stu-id="ca56f-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property must be greater than zero.</span></span>  

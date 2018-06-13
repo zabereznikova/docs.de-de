@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542375"
 ---
 # <a name="handwriting-recognition"></a><span data-ttu-id="7f8f7-102">Schrifterkennung</span><span class="sxs-lookup"><span data-stu-id="7f8f7-102">Handwriting Recognition</span></span>
 <span data-ttu-id="7f8f7-103">Dieser Abschnitt beschreibt die Grundlagen der Erkennung in Bezug auf Freihandeingaben in der WPF-Plattform.</span><span class="sxs-lookup"><span data-stu-id="7f8f7-103">This section discusses the fundamentals of recognition as it pertains to digital ink in the WPF platform.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541095"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a><span data-ttu-id="4e9ba-102">Gewusst wie: Behandeln von Tastatureingaben auf Formularebene</span><span class="sxs-lookup"><span data-stu-id="4e9ba-102">How to: Handle Keyboard Input at the Form Level</span></span>
 <span data-ttu-id="4e9ba-103">Windows Forms bieten die Möglichkeit, Tastatureingaben auf Formularebene zu behandeln, bevor die Eingaben an ein Steuerelement weitergegeben werden.</span><span class="sxs-lookup"><span data-stu-id="4e9ba-103">Windows Forms provides the ability to handle keyboard messages at the form level, before the messages reach a control.</span></span> <span data-ttu-id="4e9ba-104">In diesem Thema wird gezeigt, wie Sie diese Aufgabe ausführen.</span><span class="sxs-lookup"><span data-stu-id="4e9ba-104">This topic shows how to accomplish this task.</span></span>  

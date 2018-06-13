@@ -1,14 +1,6 @@
 ---
 title: ICorThreadpool::CorCallOrQueueUserWorkItem-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorThreadpool.CorCallOrQueueUserWorkItem
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: a2081223-84ca-4331-a8d3-9352f422f3e7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb89ba5b13cb6c86f2d9b71d8ce822b79054301b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f18fcd5be15794449cc6c60d5217db702159e34d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436662"
 ---
-# <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a><span data-ttu-id="35b4a-102">ICorThreadpool::CorCallOrQueueUserWorkItem-Methode</span><span class="sxs-lookup"><span data-stu-id="35b4a-102">ICorThreadpool::CorCallOrQueueUserWorkItem Method</span></span>
-<span data-ttu-id="35b4a-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="35b4a-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a><span data-ttu-id="1f9cd-102">ICorThreadpool::CorCallOrQueueUserWorkItem-Methode</span><span class="sxs-lookup"><span data-stu-id="1f9cd-102">ICorThreadpool::CorCallOrQueueUserWorkItem Method</span></span>
+<span data-ttu-id="1f9cd-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="1f9cd-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35b4a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="35b4a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1f9cd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1f9cd-104">Syntax</span></span>  
   
 ```  
 HRESULT CorCallOrQueueUserWorkItem (  
@@ -48,14 +37,14 @@ HRESULT CorCallOrQueueUserWorkItem (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="35b4a-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="35b4a-105">Requirements</span></span>  
- <span data-ttu-id="35b4a-106">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="35b4a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1f9cd-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1f9cd-105">Requirements</span></span>  
+ <span data-ttu-id="1f9cd-106">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1f9cd-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="35b4a-107">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="35b4a-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1f9cd-107">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1f9cd-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="35b4a-108">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="35b4a-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1f9cd-108">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="1f9cd-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="35b4a-109">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35b4a-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1f9cd-109">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1f9cd-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35b4a-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="35b4a-110">See Also</span></span>  
- [<span data-ttu-id="35b4a-111">ICorThreadpool-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="35b4a-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1f9cd-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1f9cd-110">See Also</span></span>  
+ [<span data-ttu-id="1f9cd-111">ICorThreadpool-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1f9cd-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

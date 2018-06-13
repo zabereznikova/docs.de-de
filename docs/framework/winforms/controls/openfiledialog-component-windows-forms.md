@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539951"
 ---
 # <a name="openfiledialog-component-windows-forms"></a><span data-ttu-id="f70f3-102">OpenFileDialog-Komponente (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f70f3-102">OpenFileDialog Component (Windows Forms)</span></span>
 <span data-ttu-id="f70f3-103">Die <xref:System.Windows.Forms.OpenFileDialog>-Komponente von Windows Forms ist ein vorkonfiguriertes Dialogfeld.</span><span class="sxs-lookup"><span data-stu-id="f70f3-103">The Windows Forms <xref:System.Windows.Forms.OpenFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="f70f3-104">Er ist der gleiche **Dateiöffnungsmodus** (Dialogfeld), die von Windows-Betriebssystems verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="f70f3-104">It is the same **Open File** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="f70f3-105">Die Vererbung erfolgt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="f70f3-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  

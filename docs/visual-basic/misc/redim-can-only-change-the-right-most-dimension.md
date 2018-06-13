@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641182"
 ---
 # <a name="39redim39-can-only-change-the-right-most-dimension"></a><span data-ttu-id="9eab9-102">&#39;ReDim&#39; können nur die Dimension ganz rechts ändern</span><span class="sxs-lookup"><span data-stu-id="9eab9-102">&#39;ReDim&#39; can only change the right-most dimension</span></span>
 <span data-ttu-id="9eab9-103">Eine `ReDim` -Anweisung hat versucht, mithilfe des `Preserve` -Schlüsselworts eine Dimension eines Arrays zu ändern, die nicht die letzte Dimension ist.</span><span class="sxs-lookup"><span data-stu-id="9eab9-103">A `ReDim` statement attempted to use the `Preserve` keyword to change a dimension of an array that is not the last dimension.</span></span> <span data-ttu-id="9eab9-104">Bei Verwendung von `Preserve`können Sie nur die Größe der letzten Dimension eines Arrays ändern.</span><span class="sxs-lookup"><span data-stu-id="9eab9-104">When using `Preserve`, you can resize only the last dimension of an array.</span></span> <span data-ttu-id="9eab9-105">Für alle anderen Dimensionen müssen Sie die gleiche Größe wie für das vorhandene Array angeben.</span><span class="sxs-lookup"><span data-stu-id="9eab9-105">For all other dimensions, you must specify the same size as for the existing array.</span></span>  
