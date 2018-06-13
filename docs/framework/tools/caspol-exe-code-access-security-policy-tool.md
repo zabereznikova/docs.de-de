@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410097"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a><span data-ttu-id="08503-102">Caspol.exe (Richtlinientool für die Codezugriffssicherheit)</span><span class="sxs-lookup"><span data-stu-id="08503-102">Caspol.exe (Code Access Security Policy Tool)</span></span>
 <span data-ttu-id="08503-103">Das Sicherheitsrichtlinientool für den Codezugriff (Caspol.exe) ermöglicht es Benutzern und Administratoren, die Sicherheitsrichtlinien für die Richtlinienebene des Computers, des Benutzers und des Unternehmens zu ändern.</span><span class="sxs-lookup"><span data-stu-id="08503-103">The Code Access Security (CAS) Policy tool (Caspol.exe) enables users and administrators to modify security policy for the machine policy level, the user policy level, and the enterprise policy level.</span></span>  

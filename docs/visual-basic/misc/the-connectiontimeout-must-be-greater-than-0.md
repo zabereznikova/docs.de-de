@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640536"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a><span data-ttu-id="940ab-102">Der Verbindungstimeout-Wert muss größer als 0 sein.</span><span class="sxs-lookup"><span data-stu-id="940ab-102">The ConnectionTimeout must be greater than 0</span></span>
 <span data-ttu-id="940ab-103">Beim hoch- und Herunterladen von Dateien mit der [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network), geben Sie einen `connectionTimeout` größer als `0`.</span><span class="sxs-lookup"><span data-stu-id="940ab-103">When uploading and downloading files with the [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network), you must specify a `connectionTimeout` greater than `0`.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603911"
 ---
 # <a name="join-clause-visual-basic"></a><span data-ttu-id="d4363-102">Join-Klausel (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d4363-102">Join Clause (Visual Basic)</span></span>
 <span data-ttu-id="d4363-103">Fasst zwei Auflistungen zu einer einzelnen Auflistung zusammen.</span><span class="sxs-lookup"><span data-stu-id="d4363-103">Combines two collections into a single collection.</span></span> <span data-ttu-id="d4363-104">Die Join-Operation wird basierend auf übereinstimmenden Schlüsseln und verwendet die `Equals` Operator.</span><span class="sxs-lookup"><span data-stu-id="d4363-104">The join operation is based on matching keys and uses the `Equals` operator.</span></span>  

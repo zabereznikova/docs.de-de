@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335951"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="e3781-102">Suchen der standardmäßigen Absatzformatvorlage (C#)</span><span class="sxs-lookup"><span data-stu-id="e3781-102">Finding the Default Paragraph Style (C#)</span></span>
 <span data-ttu-id="e3781-103">Die erste Aufgabe im Tutorial „Bearbeiten des Inhalts eines WordprocessingML-Dokuments“ besteht darin, die Standardabsatzformatvorlage im Dokument zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="e3781-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  

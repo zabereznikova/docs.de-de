@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605328"
 ---
 # <a name="fornext-statement-visual-basic"></a><span data-ttu-id="3546a-102">For...Next-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3546a-102">For...Next Statement (Visual Basic)</span></span>
 <span data-ttu-id="3546a-103">Einer Gruppe von Anweisungen für eine angegebene Anzahl von Malen wiederholt wird.</span><span class="sxs-lookup"><span data-stu-id="3546a-103">Repeats a group of statements a specified number of times.</span></span>  

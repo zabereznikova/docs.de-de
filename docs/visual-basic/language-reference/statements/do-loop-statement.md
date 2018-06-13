@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604938"
 ---
 # <a name="doloop-statement-visual-basic"></a><span data-ttu-id="ee679-102">Do...Loop-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee679-102">Do...Loop Statement (Visual Basic)</span></span>
 <span data-ttu-id="ee679-103">Wiederholt einen Block von Anweisungen, die während einer `Boolean` Bedingung `True` oder bis die Bedingung wird `True`.</span><span class="sxs-lookup"><span data-stu-id="ee679-103">Repeats a block of statements while a `Boolean` condition is `True` or until the condition becomes `True`.</span></span>  
