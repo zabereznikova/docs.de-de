@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568757"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a><span data-ttu-id="615f2-102">Kompilierung und Wiederverwendung in regulären Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="615f2-102">Compilation and Reuse in Regular Expressions</span></span>
 <span data-ttu-id="615f2-103">Sie können die Leistung von Anwendungen optimieren, die umfangreichen Gebrauch von regulären Ausdrücken machen, wenn Sie verstehen, wie die Engine für reguläre Ausdrücke kompiliert, und wie reguläre Ausdrücke zwischengespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="615f2-103">You can optimize the performance of applications that make extensive use of regular expressions by understanding how the regular expression engine compiles expressions and by understanding how regular expressions are cached.</span></span> <span data-ttu-id="615f2-104">Dieses Thema behandelt das Kompilieren und das Zwischenspeichern.</span><span class="sxs-lookup"><span data-stu-id="615f2-104">This topic discusses both compilation and caching.</span></span>  

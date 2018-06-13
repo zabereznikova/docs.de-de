@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389212"
 ---
 # <a name="mitigation-xml-schema-validation"></a><span data-ttu-id="90d17-102">Entschärfung: XML-Schema-Validierung</span><span class="sxs-lookup"><span data-stu-id="90d17-102">Mitigation: XML Schema Validation</span></span>
 <span data-ttu-id="90d17-103">In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ermittelt die XSD-Schemavalidierung einen Verstoß gegen die Unique-Einschränkung, wenn ein Verbundschlüssel verwendet wird und ein Schlüssel leer ist.</span><span class="sxs-lookup"><span data-stu-id="90d17-103">In the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], XSD schema validation detects a violation of the unique constraint if a compound key is used and one key is empty.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395426"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="42511-102">Gewusst wie: Festlegen einer Cacherichtlinie für eine Anforderung</span><span class="sxs-lookup"><span data-stu-id="42511-102">How to: Set Cache Policy for a Request</span></span>
 <span data-ttu-id="42511-103">Das folgende Beispiel veranschaulicht das Festlegen einer Cacherichtlinie für eine Anforderung.</span><span class="sxs-lookup"><span data-stu-id="42511-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="42511-104">Die Beispieleingabe ist eine URI wie http://www.contoso.com/.</span><span class="sxs-lookup"><span data-stu-id="42511-104">The example input is a URI such as http://www.contoso.com/.</span></span>  

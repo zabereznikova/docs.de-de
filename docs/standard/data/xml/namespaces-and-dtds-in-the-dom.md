@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568679"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a><span data-ttu-id="180d4-102">Namespaces und DTDs im DOM</span><span class="sxs-lookup"><span data-stu-id="180d4-102">Namespaces and DTDs in the DOM</span></span>
 <span data-ttu-id="180d4-103">DTDs (Document Type Definition) erschweren die Namespace-Unterstützung.</span><span class="sxs-lookup"><span data-stu-id="180d4-103">Document type definitions (DTDs) complicate namespace support.</span></span> <span data-ttu-id="180d4-104">Das folgende XML-Beispiel enthält Standardattribute, deren Namen Doppelpunkte enthalten.</span><span class="sxs-lookup"><span data-stu-id="180d4-104">For example, the following XML contains default attributes containing colons in their names.</span></span>  

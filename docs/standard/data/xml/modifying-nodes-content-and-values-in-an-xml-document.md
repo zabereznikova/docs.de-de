@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571435"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a><span data-ttu-id="dd07f-102">Ändern von Knoten, Inhalten und Werten in einem XML-Dokument</span><span class="sxs-lookup"><span data-stu-id="dd07f-102">Modifying Nodes, Content, and Values in an XML Document</span></span>
 <span data-ttu-id="dd07f-103">Es gibt viele Möglichkeiten, die Knoten und den Inhalt eines Dokuments zu ändern.</span><span class="sxs-lookup"><span data-stu-id="dd07f-103">There are many ways you can modify the nodes and content in a document.</span></span> <span data-ttu-id="dd07f-104">Sie haben folgende Möglichkeiten:</span><span class="sxs-lookup"><span data-stu-id="dd07f-104">You can:</span></span>  

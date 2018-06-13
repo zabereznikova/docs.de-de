@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396918"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a><span data-ttu-id="45c22-102">Gewusst wie: Definieren eines generischen Typs mit Reflektionsausgabe</span><span class="sxs-lookup"><span data-stu-id="45c22-102">How to: Define a Generic Type with Reflection Emit</span></span>
 <span data-ttu-id="45c22-103">In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstelleneinschränkungen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.</span><span class="sxs-lookup"><span data-stu-id="45c22-103">This topic shows how to create a simple generic type with two type parameters, how to apply class constraints, interface constraints, and special constraints to the type parameters, and how to create members that use the type parameters of the class as parameter types and return types.</span></span>  

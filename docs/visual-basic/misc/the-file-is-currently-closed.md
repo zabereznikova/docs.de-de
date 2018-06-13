@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639531"
 ---
 # <a name="the-file-is-currently-closed"></a><span data-ttu-id="1d249-102">Die Datei ist derzeit geschlossen</span><span class="sxs-lookup"><span data-stu-id="1d249-102">The file is currently closed</span></span>
 <span data-ttu-id="1d249-103">Es wurde versucht, einen Vorgang auszuführen, der nur mit einer geöffneten Datei ausgeführt werden kann, doch die Datei ist gegenwärtig geschlossen.</span><span class="sxs-lookup"><span data-stu-id="1d249-103">An attempt has been made to perform an operation that can only be performed on an open file, but the file is currently closed.</span></span>  

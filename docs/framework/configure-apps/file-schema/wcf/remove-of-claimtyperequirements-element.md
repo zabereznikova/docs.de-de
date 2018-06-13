@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753242"
 ---
 # <a name="ltremovegt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="6779c-102">&lt;remove&gt; des &lt;claimTypeRequirements&gt;-Elements</span><span class="sxs-lookup"><span data-stu-id="6779c-102">&lt;remove&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="6779c-103">Gibt die Typen von Ansprüchen an, die in den verbundenen Anmeldeinformationen entfernt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="6779c-103">Specifies the types of claims to be removed in the federated credential.</span></span>  

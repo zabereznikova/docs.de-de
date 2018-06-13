@@ -1,14 +1,6 @@
 ---
 title: ICorDebugThreadEnum::Next-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugThreadEnum.Next
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: f967c93d-9a7f-4aaf-99a1-a1317899ff3f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac9ff468f85248631ffd7f3a39a8827b1aef45b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 050bfb08dfd95e29b6534f69dbd35400d59e6099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419603"
 ---
-# <a name="icordebugthreadenumnext-method"></a><span data-ttu-id="38443-102">ICorDebugThreadEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="38443-102">ICorDebugThreadEnum::Next Method</span></span>
-<span data-ttu-id="38443-103">Ruft die Anzahl der angegebenen ICorDebugThread-Instanzen aus der Enumeration, beginnend mit der aktuellen Position ab.</span><span class="sxs-lookup"><span data-stu-id="38443-103">Gets the number of specified ICorDebugThread instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugthreadenumnext-method"></a><span data-ttu-id="4a5c6-102">ICorDebugThreadEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="4a5c6-102">ICorDebugThreadEnum::Next Method</span></span>
+<span data-ttu-id="4a5c6-103">Ruft die Anzahl der angegebenen ICorDebugThread-Instanzen aus der Enumeration, beginnend mit der aktuellen Position ab.</span><span class="sxs-lookup"><span data-stu-id="4a5c6-103">Gets the number of specified ICorDebugThread instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38443-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="38443-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a5c6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4a5c6-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -49,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="38443-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="38443-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4a5c6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="4a5c6-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="38443-106">[in] Die Anzahl der `ICorDebugThread` Instanzen abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="38443-106">[in] The number of `ICorDebugThread` instances to be retrieved.</span></span>  
+ <span data-ttu-id="4a5c6-106">[in] Die Anzahl der `ICorDebugThread` Instanzen abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="4a5c6-106">[in] The number of `ICorDebugThread` instances to be retrieved.</span></span>  
   
  `threads`  
- <span data-ttu-id="38443-107">[out] Ein Array von Zeigern, die jeweils auf ein `ICorDebugThread` Objekt, das einen Thread darstellt.</span><span class="sxs-lookup"><span data-stu-id="38443-107">[out] An array of pointers, each of which points to an `ICorDebugThread` object that represents a thread.</span></span>  
+ <span data-ttu-id="4a5c6-107">[out] Ein Array von Zeigern, die jeweils auf ein `ICorDebugThread` Objekt, das einen Thread darstellt.</span><span class="sxs-lookup"><span data-stu-id="4a5c6-107">[out] An array of pointers, each of which points to an `ICorDebugThread` object that represents a thread.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="38443-108">[out] Zeiger auf die Anzahl der `ICorDebugThread` Instanzen, die tatsächlich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="38443-108">[out] Pointer to the number of `ICorDebugThread` instances actually returned.</span></span> <span data-ttu-id="38443-109">Dieser Wert kann null sein, wenn `celt` ist ein.</span><span class="sxs-lookup"><span data-stu-id="38443-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="4a5c6-108">[out] Zeiger auf die Anzahl der `ICorDebugThread` Instanzen, die tatsächlich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="4a5c6-108">[out] Pointer to the number of `ICorDebugThread` instances actually returned.</span></span> <span data-ttu-id="4a5c6-109">Dieser Wert kann null sein, wenn `celt` ist ein.</span><span class="sxs-lookup"><span data-stu-id="4a5c6-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="38443-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="38443-110">Requirements</span></span>  
- <span data-ttu-id="38443-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38443-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a5c6-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4a5c6-110">Requirements</span></span>  
+ <span data-ttu-id="4a5c6-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4a5c6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38443-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="38443-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4a5c6-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4a5c6-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="38443-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="38443-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4a5c6-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a5c6-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="38443-114">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38443-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4a5c6-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a5c6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

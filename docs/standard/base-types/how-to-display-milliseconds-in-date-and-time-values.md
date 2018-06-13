@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568003"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a><span data-ttu-id="4b21b-102">Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten</span><span class="sxs-lookup"><span data-stu-id="4b21b-102">How to: Display Milliseconds in Date and Time Values</span></span>
 <span data-ttu-id="4b21b-103">Bei den Standardformatierungsmethoden für Datum und Uhrzeit, wie <xref:System.DateTime.ToString?displayProperty=nameWithType>, werden die Stunden, Minuten und Sekunden eines Uhrzeitwerts berücksichtigt, deren Millisekundenkomponente jedoch nicht.</span><span class="sxs-lookup"><span data-stu-id="4b21b-103">The default date and time formatting methods, such as <xref:System.DateTime.ToString?displayProperty=nameWithType>, include the hours, minutes, and seconds of a time value but exclude its milliseconds component.</span></span> <span data-ttu-id="4b21b-104">In diesem Thema wird erläutert, wie die Millisekundenkomponente für Datum und Uhrzeit in eine formatierte Datums- und Uhrzeitzeichenfolge eingefügt wird.</span><span class="sxs-lookup"><span data-stu-id="4b21b-104">This topic shows how to include a date and time's millisecond component in formatted date and time strings.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395387"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a><span data-ttu-id="b9c71-102">Gewusst wie: Erstellen einer Klasse mit CodeDOM</span><span class="sxs-lookup"><span data-stu-id="b9c71-102">How to: Create a Class Using CodeDOM</span></span>
 <span data-ttu-id="b9c71-103">Die folgenden Verfahren stellen dar, wie ein CodeDOM-Diagramm erstellt und kompiliert, das eine Klasse erstellt, die zwei Felder, drei Eigenschaften, eine Methode, einen Konstruktor und einen Einstiegspunkt enthält.</span><span class="sxs-lookup"><span data-stu-id="b9c71-103">The following procedures illustrate how to create and compile a CodeDOM graph that generates a class containing two fields, three properties, a method, a constructor, and an entry point.</span></span>  
