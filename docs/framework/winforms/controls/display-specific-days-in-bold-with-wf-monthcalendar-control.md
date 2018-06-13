@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528530"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Gewusst wie: Anzeigen einzelner Tage in Fettschrift mit dem MonthCalendar-Steuerelement in Windows Forms
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> -Steuerelement kann Tage in Fettschrift, anzeigen, als singular Datumsangaben oder wiederholte regelmäßig. Sie können diese Option, um die Aufmerksamkeit auf spezielle Datumsangaben, z. B. Feiertage und Wochenenden zu lenken vornehmen.  

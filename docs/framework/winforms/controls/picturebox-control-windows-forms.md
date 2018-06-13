@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535209"
 ---
 # <a name="picturebox-control-windows-forms"></a>PictureBox-Steuerelement (Windows Forms)
 Windows Forms `PictureBox` Steuerelement wird verwendet, um die Anzeige von Grafiken in Bitmap, GIF, JPEG, Metadatei oder Symbol-Format.  

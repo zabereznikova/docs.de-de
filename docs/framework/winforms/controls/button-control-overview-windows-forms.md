@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526021"
 ---
 # <a name="button-control-overview-windows-forms"></a>Übersicht über das Button-Steuerelement (Windows Forms)
 Das Windows Forms <xref:System.Windows.Forms.Button>-Steuerelement ermöglicht es dem Benutzer, durch Klicken eine Aktion auszuführen. Wenn der Benutzer auf die Schaltfläche klickt, wird sie als gedrückt bzw. nicht gedrückt angezeigt. Sobald der Benutzer eine Schaltfläche klickt der <xref:System.Windows.Forms.Control.Click> -Ereignishandler wird aufgerufen. Sie fügen Sie Code in die <xref:System.Windows.Forms.Control.Click> Ereignishandler zum Ausführen aller Aktionen Wählen Sie Sie.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528342"
 ---
 # <a name="vector-graphics-overview"></a>Übersicht über Vektorgrafiken
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zeichnet Linien, Rechtecke und andere Formen auf einem Koordinatensystem. Sie können aus einer Vielzahl von Koordinatensysteme auswählen, aber das Standard-Koordinatensystem verfügt über den Ursprung in der oberen linken Ecke mit der x-Achse nach rechts und die y-Achse nach unten zeigendes verweist. Die Maßeinheit in der Standard-Koordinatensystem wird das Pixel.  

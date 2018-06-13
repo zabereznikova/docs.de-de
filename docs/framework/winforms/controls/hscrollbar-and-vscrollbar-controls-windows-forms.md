@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533152"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>HScrollBar-Steuerelement und VScrollBar-Steuerelement (Windows Forms)
 Windows Forms-Bildlaufleisten werden dazu verwendet, um die einfache Navigation in einer langen Liste von Elementen oder in einer großen Menge an Informationen entweder horizontal oder vertikal innerhalb einer Anwendung oder eines Steuerelements bereitzustellen. Bildlaufleisten sind ein häufiges Element der Windows-Benutzeroberfläche.  

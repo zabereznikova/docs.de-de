@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527014"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Gewusst wie: Ändern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers
 In einigen Fällen wird der Datentyp einer Spalte ändern möchten, die bereits zu einem Windows Forms hinzugefügt wurde <xref:System.Windows.Forms.DataGridView> Steuerelement. Beispielsweise empfiehlt es sich um die Typen von einige der Spalten zu ändern, die automatisch generiert werden, wenn Sie das Steuerelement an eine Datenquelle binden. Dies ist hilfreich, wenn die Tabelle, die Sie anzeigen, Spalten mit Fremdschlüsseln in Zeilen in einer verknüpften Tabelle verfügt. In diesem Fall empfiehlt es sich um Textspalten Feld zu ersetzen, die diese Fremdschlüssel Spalten mit Kombinationsfeldern angezeigt, in denen sinnvolle Werten aus der verknüpften Tabelle angezeigt.  

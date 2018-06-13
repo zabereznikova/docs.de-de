@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526695"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page"></a>Gewusst wie: Hinzufügen eines Steuerelements zu einer Registerkarte
 Sie können Windows Forms <xref:System.Windows.Forms.TabControl> andere Steuerelemente in einer strukturierten Weise angezeigt werden. Das folgende Verfahren zeigt, wie eine Schaltfläche auf der ersten Registerkarte hinzufügen. Informationen zum Hinzufügen eines Symbols auf der Bezeichnungsteil einer Registerkartenseite finden Sie unter [Vorgehensweise: Ändern der Darstellung der TabControl in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

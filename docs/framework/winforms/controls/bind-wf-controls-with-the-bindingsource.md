@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527562"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Gewusst wie: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers
 Nachdem Sie dem Formular Steuerelemente hinzugefügt und bestimmt die Benutzeroberfläche für Ihre Anwendung haben, können Sie die Steuerelemente an eine Datenquelle binden, sodass zur Laufzeit können Benutzer ändern und Speichern von Daten im Zusammenhang mit der Anwendung.  

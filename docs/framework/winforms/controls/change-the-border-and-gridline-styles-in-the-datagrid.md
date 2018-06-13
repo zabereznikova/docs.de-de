@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528748"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Ändern des Rahmen- und Rasterlinienstils im DataGridView-Steuerelement in Windows Forms
 Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, Sie können die Darstellung von Rahmen und Gitternetzlinien zur Verbesserung der benutzerfreundlichkeit des Steuerelements anpassen. Sie können die Farbe der Gitternetzlinien und den Rahmenstil zusätzlich die Rahmenarten für die Zellen im Steuerelement zu ändern. Sie können auch andere Zelle Rahmenarten für normale Zellen, Zeilenheaderzellen und Spaltenheaderzellen anwenden.  

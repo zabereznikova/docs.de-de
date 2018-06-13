@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529024"
 ---
 # <a name="types-of-bitmaps"></a>Bitmaptypen
 Eine Bitmap ist ein Array von Bits, die die Farbe jedes Pixels in einem rechteckigen Array von Pixeln anzugeben. Die Anzahl der Bits in einem einzelnen Pixels bestimmt die Anzahl der Farben, die das dieses Pixel zugewiesen werden kann. Beispielsweise um 4 Bits pro Pixel dargestellt, klicken Sie dann ein bestimmten Pixels kann zugewiesen werden eine der 16 verschiedenen Farben (2 ^ 4 = 16). Die folgende Tabelle zeigt einige Beispiele für die Anzahl der Farben, die ein Pixel, dargestellt durch eine angegebene Anzahl von Bits zugewiesen werden kann.  

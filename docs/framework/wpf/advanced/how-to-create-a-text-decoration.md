@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545408"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Gewusst wie: Erstellen einer Textdekoration
 Ein <xref:System.Windows.TextDecoration> Objekt ist eine visuelle Verzierung können Sie Text hinzufügen. Es gibt vier Arten von Textdekorationen: "Unterstreichen", die Baseline, durchgestrichen und Überstrichen. Das folgende Beispiel zeigt die Speicherorte der Textdekorationen relativ zu dem Text.  

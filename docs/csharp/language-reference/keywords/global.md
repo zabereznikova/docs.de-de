@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216021"
 ---
 # <a name="global-c-reference"></a>global (C#-Referenz)
 Wenn das Kontextschlüsselwort `global` dem [Operator „::“](../../../csharp/language-reference/operators/namespace-alias-qualifer.md) vorangestellt ist, verweist es auf den globalen Namespace. Dabei handelt es sich um den Standardnamespace für alle C#-Programme, der ansonsten unbenannt ist. Weitere Informationen finden Sie unter [How to: Use the Global Namespace Alias (Vorgehensweise: Verwenden des globalen Namespacealias)](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).  

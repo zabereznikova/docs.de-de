@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327358"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klassen und Strukturen (C#-Programmierhandbuch)
 Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Typsystems in .NET Framework. Bei beiden handelt es sich um eine Datenstruktur, die einen als logische Einheit zusammengehörenden Satz von Daten und Verhalten kapselt. Die Daten und die Verhalten sind die *Member* der Klasse oder Struktur. Diese enthalten deren Methoden, Eigenschaften, Ereignisse usw., die weiter unten in diesem Thema aufgeführt werden.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216147"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C#-Compileroptionen)
 Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei einfügen.  

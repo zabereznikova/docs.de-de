@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529882"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatische Skalierung in Windows Forms
 Die automatische Skalierung ermöglicht, dass ein Formular und seine Steuerelemente, die auf einem Computer mit einer bestimmten Bildschirmauflösung oder Systemschriftart entworfen wurden, ordnungsgemäß auf einem anderen Computer angezeigt werden, der eine andere Bildschirmauflösung oder Systemschriftart hat. Durch sie wird sichergestellt, dass die Größen des Formulars und seiner Steuerelemente intelligent geändert werden, sodass diese sowohl auf den Computern von Benutzern als auch auf denen von anderen Entwicklern konsistent zu systemeigenen Fenstern sowie anderen Anwendungen sind. Dadurch, dass [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] die automatische Skalierung und visuelle Stile unterstützt, kann für [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen im Vergleich zu systemeigenen Windows-Anwendungen ein konsistentes Aussehen und Verhalten auf dem Computer jedes Benutzers beibehalten werden.

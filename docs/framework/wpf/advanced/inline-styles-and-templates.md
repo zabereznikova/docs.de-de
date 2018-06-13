@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545882"
 ---
 # <a name="inline-styles-and-templates"></a>Inlinestile und -vorlagen
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet <xref:System.Windows.Style> Objekte und die Vorlagenobjekte (<xref:System.Windows.FrameworkTemplate> Unterklassen) als eine Möglichkeit, um die visuelle Darstellung eines Elements in den Ressourcen zu definieren, sodass sie verwendet werden können mehrere Male auf. Aus diesem Grund Attribute im [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , die anhand von den Typen <xref:System.Windows.Style> und <xref:System.Windows.FrameworkTemplate> fast immer Ressourcenverweise auf vorhandene Stile und Vorlagen, anstatt neue zu definieren.  

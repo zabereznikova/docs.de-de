@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527699"
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Gewusst wie: Hinzufügen von QuickInfos zu einzelnen Zellen in einem DataGridView-Steuerelement in Windows Forms
 Standardmäßig QuickInfos werden zum Anzeigen der Werte von <xref:System.Windows.Forms.DataGridView> Zellen, die zu klein, um den gesamten Inhalt anzuzeigen. Sie können dieses Verhalten jedoch überschreiben, um QuickInfo-Text-Werte für einzelne Zellen festzulegen. Dies ist hilfreich, die Benutzer zusätzliche Informationen zu einer Zelle angezeigt oder eine alternative Beschreibung des Zelleninhalts Benutzer bereitzustellen. Haben eine Zeile, die Statussymbolen anzeigt, sollten Sie erläuterungen zu den Text mithilfe von QuickInfos bereitstellen.  
