@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551881"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a><span data-ttu-id="c3dac-102">Gewusst wie: Erstellen eines Benutzeroberflächen-Standarddialogfelds unter Verwendung des Grid-Elements</span><span class="sxs-lookup"><span data-stu-id="c3dac-102">How to: Build a Standard UI Dialog Box by Using Grid</span></span>
 <span data-ttu-id="c3dac-103">In diesem Beispiel wird gezeigt, wie eine Standard- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Dialogfeld mithilfe der <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="c3dac-103">This example shows how to create a standard [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dialog box by using the <xref:System.Windows.Controls.Grid> element.</span></span>  

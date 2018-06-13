@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551686"
 ---
 # <a name="listbox"></a><span data-ttu-id="b5d1f-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="b5d1f-102">ListBox</span></span>
 <span data-ttu-id="b5d1f-103">Ein <xref:System.Windows.Controls.ListBox> Steuerelement bietet Benutzern eine Liste auswählbarer Elemente.</span><span class="sxs-lookup"><span data-stu-id="b5d1f-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  

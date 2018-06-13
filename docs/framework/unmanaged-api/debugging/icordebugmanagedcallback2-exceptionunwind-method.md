@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92c4f488dcdc5712dcd2632f489fb0cd65d05ee6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416256"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a><span data-ttu-id="b34a3-102">ICorDebugManagedCallback2::ExceptionUnwind-Methode</span><span class="sxs-lookup"><span data-stu-id="b34a3-102">ICorDebugManagedCallback2::ExceptionUnwind Method</span></span>
 <span data-ttu-id="b34a3-103">Stellt eine Benachrichtigung zum Status während des Entladungsprozesses Ausnahme bereit.</span><span class="sxs-lookup"><span data-stu-id="b34a3-103">Provides a status notification during the exception unwinding process.</span></span>  
