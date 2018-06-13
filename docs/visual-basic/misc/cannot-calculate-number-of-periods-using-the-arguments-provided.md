@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633119"
 ---
 # <a name="cannot-calculate-number-of-periods-using-the-arguments-provided"></a>Die Anzahl der Punkte kann mit den angegebenen Argumenten nicht berechnet werden.
 Ein Aufruf der `NPer` Funktion enthält nicht alle erforderlichen Argumente.  

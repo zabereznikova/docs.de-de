@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635043"
 ---
 # <a name="method-or-data-member-not-found"></a>Die Methode oder der Datenmember wurde nicht gefunden.
 Die Methode oder der Datenmember, auf den Sie zugreifen möchten, wurde nicht gefunden.  

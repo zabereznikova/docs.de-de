@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639297"
 ---
 # <a name="system-event-log-cannot-be-deleted"></a>Das Systemereignisprotokoll kann nicht gelöscht werden.
 Es wurde versucht, das Systemereignisprotokoll zu löschen, das nicht gelöscht werden kann. Das Systemprotokoll verfolgt Systemereignisse wie den Systemstart und Hardwarefehler.  

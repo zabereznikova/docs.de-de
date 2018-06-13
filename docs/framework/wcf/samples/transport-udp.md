@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808415"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und Multicast als benutzerdefinierte Windows Communication Foundation (WCF)-Transport implementiert wird. Im Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in WCF anhand des kanalframeworks und WCF-best Practices beschrieben. Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:  

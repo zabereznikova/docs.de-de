@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637318"
 ---
 # <a name="no-method-39ltmethodnamegt39-can-accept-an-argument-of-type-39lttypenamegt39-for-parameter-39ltparameternamegt39"></a>Keine Methode &#39; &lt;Methodname&gt; &#39; akzeptiert ein Argument des Typs &#39; &lt;Typename&gt; &#39; für Parameter &#39; &lt;Parametername&gt;&#39;
 Ein Methodenaufruf enthält ein Argument, das einen ungültigen Typ hat.  

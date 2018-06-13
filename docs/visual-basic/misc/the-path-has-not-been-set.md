@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638329"
 ---
 # <a name="the-path-has-not-been-set"></a>Der Pfad wurde nicht festgelegt.
 Es wurde eine Dateioperation versucht, z. B. das Verschieben oder Kopieren einer Datei, ohne den erforderlichen Pfad anzugeben. Dies kann sich durch die fehlerhafte Analyse des Pfads ergeben haben.  

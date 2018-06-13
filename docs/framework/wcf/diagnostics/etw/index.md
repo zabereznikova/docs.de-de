@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809263"
 ---
 # <a name="analytic-tracing-with-etw"></a>Analytische Ablaufverfolgung per ETW
 Analytische Ablaufverfolgung von Windows Communication Foundation (WCF) bietet eine Möglichkeit zum Erfassen von Diagnoseinformationen während der Ausführung eines WCF-Diensts. WCF-analytischen Ablaufverfolgungsereignisse werden zu wichtigen Zeitpunkten zu ermöglichen, zur Problembehandlung von WCF-Diensten in einer produktiven Umgebung Stapelrahmen WCF ausgegeben. Analytische Ablaufverfolgung für WCF-Dienste hat minimale Auswirkungen auf die Leistung eines produktservers, der als Host [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] WCF-Dienste wie diese Ereignisse sehr effizient in eine Sitzung für Event Tracing for Windows (ETW) ausgegeben werden.  

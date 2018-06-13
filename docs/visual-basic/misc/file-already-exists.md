@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636652"
 ---
 # <a name="file-already-exists"></a>Datei bereits vorhanden
 Dieser Fehler tritt auf, wenn eine neue Datei mit dem Namen einer vorhandenen Datei benannt wird oder der Befehl **Speichern unter** verwendet wird, um ein aktuell geladenes Projekt unter einem Namen zu speichern, der bereits vorhanden ist.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655283"
 ---
 # <a name="extension-methods-visual-basic"></a>Erweiterungsmethoden (Visual Basic)
 Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefinierten Funktionen, Datentypen, die bereits definiert sind, ohne dass einen neuen abgeleiteten Typ erstellt. Erweiterungsmethoden ermöglichen das Schreiben einer Methode, die aufgerufen werden können, als wäre sie eine des vorhandenen Typs Instanzenmethode.  

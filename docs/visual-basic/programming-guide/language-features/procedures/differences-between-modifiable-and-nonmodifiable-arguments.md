@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649762"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten (Visual Basic)
 Wenn Sie eine Prozedur aufrufen, übergeben Sie ein oder mehrere Argumente in der Regel darauf. Jedes Argument entspricht einem zugrunde liegenden Programmierelement. Die zugrunde liegenden Elemente und die Argumente selbst können geändert werden kann oder nicht veränderbaren sein.  

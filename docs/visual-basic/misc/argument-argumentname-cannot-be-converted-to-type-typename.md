@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599046"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39lttypenamegt39"></a>Argument &#39; &lt;Argumentname&gt; &#39; kann nicht konvertiert werden, um geben &#39; &lt;Typname&gt;&#39;
 Eine Konvertierung versucht, ein Argument in einen Typ zu ändern, der ungültig ist.  
