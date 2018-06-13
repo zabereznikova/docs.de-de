@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fdaa6aab28eb82450db7b9f946e033bfad55faf5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446068"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent-Methode
 Legt fest, dass die angegebenen Member auf, wie er durch einen vorherigen Aufruf [DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), ist ein Member des angegebenen Typs gemäß der Definition von einem vorherigen Aufruf für [DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  

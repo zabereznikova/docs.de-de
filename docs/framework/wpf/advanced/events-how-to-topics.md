@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543526"
 ---
 # <a name="events-how-to-topics"></a>Gewusst-wie-Themen zu Ereignissen
 Die Themen in diesem Abschnitt wird beschrieben, wie Ereignisse in WPF verwendet.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536692"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Gewusst wie: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms
 Sie können Text in Windows Forms programmgesteuert auswählen <xref:System.Windows.Forms.TextBox> Steuerelement. Wenn Sie eine Funktion, mit dem Text für eine bestimmte Zeichenfolge gesucht erstellen, können Sie z. B. den Text den Reader die gefundene Zeichenfolge Position visuell Warnungen auswählen.  

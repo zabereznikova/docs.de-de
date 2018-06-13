@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543718"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Gewusst wie: Überschreiben von Metadaten für eine Abhängigkeitseigenschaft
 In diesem Beispiel wird gezeigt, wie Metadaten für Abhängigkeitseigenschaften Standard zu überschreiben, die stammen von einer geerbten Klasse durch Aufrufen der <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> -Methode und typspezifische Metadaten bereitgestellt.  

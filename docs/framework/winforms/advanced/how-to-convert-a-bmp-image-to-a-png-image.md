@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520785"
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>Gewusst wie: Konvertieren eines BMP-Bildes in ein PNG-Bild
 Sie möchten sicher oft eine Datei von einem Bilddateiformat in ein anderes konvertieren. Sie können diese Konvertierung einfach durchführen, indem Sie die <xref:System.Drawing.Image.Save%2A>-Methode der <xref:System.Drawing.Image>-Klasse aufrufen und das <xref:System.Drawing.Imaging.ImageFormat> für das gewünschte Bilddateiformat angeben.  

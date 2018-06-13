@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352589"
 ---
 # <a name="how-to-represent-primary-keys"></a>Gewusst wie: Darstellen von Primärschlüsseln
 Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> Eigenschaft auf die <xref:System.Data.Linq.Mapping.ColumnAttribute> Attribut um eine Eigenschaft oder ein Feld zur Darstellung des Primärschlüssels für eine Datenbankspalte zu kennzeichnen.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530246"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Gewusst wie: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms
 Sie können die Darstellung von Windows Forms konfigurieren <xref:System.Windows.Forms.ColorDialog> Komponente mit dem eine Reihe von seiner Eigenschaften. Das Dialogfeld enthält zwei Abschnitte – eines, das anzeigt, Grundfarben und eine, die dem Benutzer ermöglicht, benutzerdefinierte Farben definieren.  

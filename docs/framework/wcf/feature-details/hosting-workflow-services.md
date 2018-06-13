@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491325"
 ---
 # <a name="hosting-workflow-services"></a>Hosten von Workflowdiensten
 Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagieren kann. Workflowdienste verwenden die WCF-Messaginginfrastruktur und werden daher auf ähnliche Weise gehostet. Workflowdienste können in jeder verwalteten Anwendung, unter Internet Information Services (IIS) oder unter Windows Process Activation Services (WAS) gehostet werden, wie WCF-Dienste. Außerdem können Workflowdienste unter Windows Server AppFabric gehostet werden. Weitere Informationen zu Windows Server AppFabric finden Sie unter [Dokumentation zu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=196494), und [AppFabric-Hostingkonzepte](http://go.microsoft.com/fwlink/?LinkId=196495). Weitere Informationen über die verschiedenen Methoden zum Hosten Sie WCF finden Sie unter Services [Hostingdienste](../../../../docs/framework/wcf/hosting-services.md).  

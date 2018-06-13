@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335463"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Erstellen von XML-Strukturen in C# (LINQ to XML)
 Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in C#.  

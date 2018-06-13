@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d87243da4d68eb1ec12fda7aa62a5c4006b9729
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440424"
 ---
 # <a name="ihostsemaphorewait-method"></a>IHostSemaphore::Wait-Methode
 Bewirkt, dass die aktuelle [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) Instanz warten, bis er Besitzer ist oder die angegebene Zeitspanne verstrichen ist.  

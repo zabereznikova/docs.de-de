@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490151"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag
 Eine Funktion von Windows Communication Foundation (WCF), ist die Fähigkeit zum Erstellen eines Diensts, das ein duplexnachrichtenmuster verwendet. Anhand dieses Musters kann ein Dienst mit dem Client über einen Rückruf kommunizieren In diesem Thema wird gezeigt, die Schritte zum Erstellen von eines WCF-Clients in einer Clientklasse, die die Rückrufschnittstelle implementiert wird.  

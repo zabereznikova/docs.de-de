@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542752"
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Gewusst wie: Bestimmen, ob ein Freezable-Objekt fixiert ist
 Dieses Beispiel zeigt, wie Sie ermitteln, ob ein <xref:System.Windows.Freezable> Objekt eingefroren ist. Wenn Sie versuchen, ein fixierter ändern <xref:System.Windows.Freezable> -Objekt löst eine <xref:System.InvalidOperationException>. Verwenden, um zu vermeiden, dass diese Ausnahme ausgelöst, die <xref:System.Windows.Freezable.IsFrozen%2A> Eigenschaft von der <xref:System.Windows.Freezable> bestimmt, ob es eingefroren wurde.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338717"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 ## <a name="types-variables-and-values"></a>Typen, Variablen und Werte  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494938"
 ---
 # <a name="routing"></a>Routing
 In den Themen dieses Abschnitts wird der Routingdienst behandelt. Der Routingdienst ist ein generischer konfigurierbarer SOAP-Vermittler. Mit dem Routingdienst können Sie inhaltsbasiertes Routing konfigurieren, die Protokollüberbrückung einrichten, Kommunikationsfehler behandeln und die Routinglogik zur Laufzeit dynamisch aktualisieren.  

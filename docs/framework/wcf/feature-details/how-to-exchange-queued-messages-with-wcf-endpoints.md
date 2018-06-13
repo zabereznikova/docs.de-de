@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494656"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Gewusst wie: Austauschen von Nachrichten in einer Warteschlange mit WCD-Endpunkten
 Warteschlangen sicherstellen, dass zuverlässiges messaging zwischen einem Client und einem Windows Communication Foundation (WCF)-Dienst auftreten kann, selbst wenn der Dienst zum Zeitpunkt der Kommunikation nicht verfügbar ist. Die folgenden Verfahren zeigen, wie stabile Kommunikation zwischen einem Client und einem Dienst mit den standardmäßigen der Warteschlange enthaltenen Bindung beim Implementieren des WCF-Diensts sicherzustellen.  
