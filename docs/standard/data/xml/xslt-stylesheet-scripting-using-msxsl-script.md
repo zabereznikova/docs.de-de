@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577175"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Skripterstellung für ein XSLT-Stylesheet mit &lt;msxsl:script&gt;
 Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element.  
