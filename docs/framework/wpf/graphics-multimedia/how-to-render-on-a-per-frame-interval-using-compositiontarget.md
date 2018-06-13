@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561659"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Gewusst wie: Rendern in Pro-Frame-Intervallen mit CompositionTarget
 Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animationsmodul stellt zahlreiche Funktionen zum Erstellen framebasierter Animationen bereit. In manchen Anwendungsszenarios müssen Sie das Rendering jedoch pro Frame detaillierter steuern können. Die <xref:System.Windows.Media.CompositionTarget> -Objekt stellt die Fähigkeit zum Erstellen von benutzerdefinierter Animationen basierend auf einer pro-Frame-Rückruf bereit.  

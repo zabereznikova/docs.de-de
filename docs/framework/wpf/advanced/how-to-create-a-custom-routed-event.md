@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543705"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Gewusst wie: Erstellen eines benutzerdefinierten Routingereignisses
 Für das benutzerdefinierte Ereignis Ereignisrouting unterstützen, müssen Sie zum Registrieren einer <xref:System.Windows.RoutedEvent> mithilfe der <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> Methode. Dieses Beispiel zeigt die Grundlagen der Erstellung eines benutzerdefinierten Routingereignisses.  

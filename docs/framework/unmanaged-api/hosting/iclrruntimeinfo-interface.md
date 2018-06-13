@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc8225b6612c7bf07d220b20d515f64a346b9691
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436467"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo-Schnittstelle
 Enthält Methoden, die Informationen über eine bestimmte common Language Runtime (CLR), einschließlich der Version, Verzeichnis und Auslastungsstatus zurückgeben. Diese Schnittstelle bietet außerdem laufzeitspezifische Funktionalität ohne Initialisieren der Common Language Runtime. Es enthält die Common Language Runtime-Relative [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) -Methode, die Common Language Runtime-Modul-spezifische [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) -Methode und die Common Language Runtime bereitgestellten Schnittstellen durch die [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)Methode.  

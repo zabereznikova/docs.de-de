@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558108"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Treffertests in der visuellen Ebene
 Dieses Thema enthält eine Übersicht über die Treffertestfunktionen der visuellen Ebene. Unterstützung für Treffertests können Sie bestimmen, ob ein Geometrie oder Punkt-Wert in den gerenderten Inhalt fällt eine <xref:System.Windows.Media.Visual>, sodass Sie Benutzeroberflächenverhalten z. B. ein Auswahlrechteck zum Auswählen mehrerer Objekte zu implementieren.  

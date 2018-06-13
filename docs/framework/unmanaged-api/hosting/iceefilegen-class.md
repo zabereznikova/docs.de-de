@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436308"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen-Klasse
 Stellt Funktionen zum Erstellen einer systemeigenen portable ausführbare Datei (PE) Datei bereit. Die Schnittstelle wird in der Regel vom Compiler verwendet werden, um ihre kompilierte ausführbare Ausgabedatei zu generieren.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561461"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>Gewusst wie: Steuern eines Storyboards nach dem Start
 Dieses Beispiel zeigt, wie Code, um zu steuern verwendet eine <xref:System.Windows.Media.Animation.Storyboard> nachdem dieser gestartet wurde. Zum Steuern eines Storyboards in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], verwenden Sie <xref:System.Windows.Trigger> und <xref:System.Windows.TriggerAction> Objekte ist ein Beispiel finden Sie unter [Ereignistriggern verwenden, um ein Storyboard nach Beginn steuern](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  

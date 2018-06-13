@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561045"
 ---
 # <a name="how-to-draw-a-rectangle"></a>Gewusst wie: Zeichnen eines Rechtecks
 Dieses Beispiel zeigt, wie Sie ein Rechteck mit dem <xref:System.Windows.Shapes.Rectangle> Element.  

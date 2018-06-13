@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558186"
 ---
 # <a name="drawing-objects-overview"></a>Übersicht über Zeichnungsobjekte
 Dieses Thema enthält <xref:System.Windows.Media.Drawing> Objekte und beschreibt deren Verwendung zum Zeichnen von Formen, Bitmaps, Text und Medien effizient. Verwenden Sie <xref:System.Windows.Media.Drawing> Zeichnen von Objekten, die bei der Erstellung von ClipArt-Objekt, mit einem <xref:System.Windows.Media.DrawingBrush>, oder verwenden Sie <xref:System.Windows.Media.Visual> Objekte.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b6cdfa9f3717e4025ff6f4fe6da3c1457cdebf7e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422330"
 ---
 # <a name="icordebugreferencevalue-interface1"></a>ICorDebugReferenceValue Schnittstelle1
 Enthält Methoden, die einen Wert zu verwalten, der einen Verweis auf ein Objekt ist. (D. h. diese Schnittstelle stellt Methoden bereit, die einen Zeiger zu verwalten.) Diese Schnittstelle implementiert "ICorDebugValue".  
