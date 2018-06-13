@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216173"
 ---
 # <a name="contextual-keywords-c-reference"></a><span data-ttu-id="f7d0b-102">Kontextabhängige Schlüsselwörter (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="f7d0b-102">Contextual Keywords (C# Reference)</span></span>
 <span data-ttu-id="f7d0b-103">Ein Kontextschlüsselwort wird verwendet, um eine spezifische Bedeutung im Code bereitzustellen, es ist jedoch kein reserviertes Wort in C#.</span><span class="sxs-lookup"><span data-stu-id="f7d0b-103">A contextual keyword is used to provide a specific meaning in the code, but it is not a reserved word in C#.</span></span> <span data-ttu-id="f7d0b-104">In diesem Abschnitt werden die folgenden Kontextschlüsselwörter eingeführt:</span><span class="sxs-lookup"><span data-stu-id="f7d0b-104">The following contextual keywords are introduced in this section:</span></span>  
