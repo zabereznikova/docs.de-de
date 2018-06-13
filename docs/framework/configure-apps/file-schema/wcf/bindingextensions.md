@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750774"
 ---
 # <a name="ltbindingextensionsgt"></a><span data-ttu-id="ba35d-102">&lt;bindingExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="ba35d-102">&lt;bindingExtensions&gt;</span></span>
 <span data-ttu-id="ba35d-103">Dieser Abschnitt aktiviert die Verwendung einer benutzerdefinierten Bindung für eine Computer- oder Anwendungskonfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="ba35d-103">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="ba35d-104">Sie können eine benutzerdefinierte Bindung zur Auflistung hinzufügen, indem Sie das `add`-Schlüsselwort verwenden und das `type`-Attribut des Elements auf eine benutzerdefinierte Bindung sowie das `name`-Attribut auf den Namen der benutzerdefinierten Bindung festlegen.</span><span class="sxs-lookup"><span data-stu-id="ba35d-104">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  

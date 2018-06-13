@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398234"
 ---
 # <a name="specifying-a-character-set"></a><span data-ttu-id="c229d-102">Angeben eines Zeichensatzes</span><span class="sxs-lookup"><span data-stu-id="c229d-102">Specifying a Character Set</span></span>
 <span data-ttu-id="c229d-103">Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>-Feld steuert das Marshallen von Zeichenfolgen und bestimmt, wie Plattformaufrufe Funktionsnamen in einer DLL finden.</span><span class="sxs-lookup"><span data-stu-id="c229d-103">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field controls string marshaling and determines how platform invoke finds function names in a DLL.</span></span> <span data-ttu-id="c229d-104">In diesem Abschnitt werden beide Verhaltensweisen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="c229d-104">This topic describes both behaviors.</span></span>  

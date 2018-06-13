@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754261"
 ---
 # <a name="ltqualifyassemblygt-element"></a><span data-ttu-id="e63b5-102">&lt;QualifyAssembly&gt; Element</span><span class="sxs-lookup"><span data-stu-id="e63b5-102">&lt;qualifyAssembly&gt; Element</span></span>
 <span data-ttu-id="e63b5-103">Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll, wenn Sie ein Teilname verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e63b5-103">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>  

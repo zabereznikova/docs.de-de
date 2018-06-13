@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766854"
 ---
 # <a name="oracle-schema-collections"></a><span data-ttu-id="f0bde-102">Oracle-Schemaauflistungen</span><span class="sxs-lookup"><span data-stu-id="f0bde-102">Oracle Schema Collections</span></span>
 <span data-ttu-id="f0bde-103">Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den allgemeinen Schemaauflistungen die folgenden spezifischen Schemaauflistungen:</span><span class="sxs-lookup"><span data-stu-id="f0bde-103">The Microsoft .NET Framework Data Provider for Oracle supports the following specific schema collections in addition to the common schema collections:</span></span>  

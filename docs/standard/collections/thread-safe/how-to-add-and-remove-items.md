@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569745"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a><span data-ttu-id="ace7d-102">Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary</span><span class="sxs-lookup"><span data-stu-id="ace7d-102">How to: Add and Remove Items from a ConcurrentDictionary</span></span>
 <span data-ttu-id="ace7d-103">Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und von einer <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="ace7d-103">This example shows how to add, retrieve, update, and remove items from a <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>.</span></span> <span data-ttu-id="ace7d-104">Diese Auflistungsklasse ist eine threadsichere Implementierung.</span><span class="sxs-lookup"><span data-stu-id="ace7d-104">This collection class is a thread-safe implementation.</span></span> <span data-ttu-id="ace7d-105">Es empfiehlt sich, diese Klasse immer dann zu verwenden, wenn möglicherweise mehrere Threads gleichzeitig versuchen, auf Elemente zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="ace7d-105">We recommend that you use it whenever multiple threads might be attempting to access the elements concurrently.</span></span>  

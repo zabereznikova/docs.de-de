@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746175"
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a><span data-ttu-id="9178b-102">&lt;AssemblyBinding&gt; -Element für &lt;Common Language Runtime&gt;</span><span class="sxs-lookup"><span data-stu-id="9178b-102">&lt;assemblyBinding&gt; Element for &lt;runtime&gt;</span></span>
 <span data-ttu-id="9178b-103">Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.</span><span class="sxs-lookup"><span data-stu-id="9178b-103">Contains information about assembly version redirection and the locations of assemblies.</span></span>  

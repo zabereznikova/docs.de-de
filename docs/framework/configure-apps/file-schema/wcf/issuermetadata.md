@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752932"
 ---
 # <a name="ltissuermetadatagt"></a><span data-ttu-id="ce7b4-102">&lt;issuerMetadata&gt;</span><span class="sxs-lookup"><span data-stu-id="ce7b4-102">&lt;issuerMetadata&gt;</span></span>
 <span data-ttu-id="ce7b4-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="ce7b4-103">\<system.serviceModel></span></span>  

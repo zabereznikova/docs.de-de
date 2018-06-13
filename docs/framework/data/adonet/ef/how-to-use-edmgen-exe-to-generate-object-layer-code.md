@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761089"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a><span data-ttu-id="b7ea9-102">Gewusst wie: Generieren von Objektebenencode mit "EdmGen.exe"</span><span class="sxs-lookup"><span data-stu-id="b7ea9-102">How to: Use EdmGen.exe to Generate Object-Layer Code</span></span>
 <span data-ttu-id="b7ea9-103">In diesem Thema zeigt, wie die [EDM Generator (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) Tool zum Generieren von Objektebenencode auf Grundlage der CSDL-Datei.</span><span class="sxs-lookup"><span data-stu-id="b7ea9-103">This topic shows how to use the [EDM Generator (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) tool to generate object-layer code  based on the .csdl file.</span></span>  

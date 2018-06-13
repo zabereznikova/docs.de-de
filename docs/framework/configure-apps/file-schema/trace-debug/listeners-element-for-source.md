@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746838"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a><span data-ttu-id="2c7cb-102">&lt;Listener&gt; -Element für &lt;Quelle&gt;</span><span class="sxs-lookup"><span data-stu-id="2c7cb-102">&lt;listeners&gt; Element for &lt;source&gt;</span></span>
 <span data-ttu-id="2c7cb-103">Hinzufügt oder entfernt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A> Auflistung für einen <xref:System.Diagnostics.TraceSource>.</span><span class="sxs-lookup"><span data-stu-id="2c7cb-103">Adds or removes listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A> collection for a <xref:System.Diagnostics.TraceSource>.</span></span> <span data-ttu-id="2c7cb-104">Ein Listener leitet die Ablaufverfolgungsausgabe an ein entsprechendes Ziel, z. B. ein Protokoll, Fenster oder Textdatei.</span><span class="sxs-lookup"><span data-stu-id="2c7cb-104">A listener directs the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763669"
 ---
 # <a name="merging-dataset-contents"></a><span data-ttu-id="f845b-102">Zusammenführen von DataSet-Inhalten</span><span class="sxs-lookup"><span data-stu-id="f845b-102">Merging DataSet Contents</span></span>
 <span data-ttu-id="f845b-103">Sie können die <xref:System.Data.DataSet.Merge%2A>-Methode verwenden, um den Inhalt eines <xref:System.Data.DataSet>-, <xref:System.Data.DataTable>- oder <xref:System.Data.DataRow>-Arrays in einem vorhandenen `DataSet` zusammenzuführen.</span><span class="sxs-lookup"><span data-stu-id="f845b-103">You can use the <xref:System.Data.DataSet.Merge%2A> method to merge the contents of a <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, or <xref:System.Data.DataRow> array into an existing `DataSet`.</span></span> <span data-ttu-id="f845b-104">Wie die neuen Daten in einem vorhandenen `DataSet` zusammengeführt werden, hängt von mehreren Faktoren und Optionen ab.</span><span class="sxs-lookup"><span data-stu-id="f845b-104">Several factors and options affect how new data is merged into an existing `DataSet`.</span></span>  

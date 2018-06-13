@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745778"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="9379e-102">&lt;Filter&gt; -Element für &lt;hinzufügen&gt; für &lt;Listener&gt; für &lt;Trace&gt;</span><span class="sxs-lookup"><span data-stu-id="9379e-102">&lt;filter&gt; Element for &lt;add&gt; for &lt;listeners&gt; for &lt;trace&gt;</span></span>
 <span data-ttu-id="9379e-103">Fügt einen Filter mit einem Listener in der `Listeners` Auflistung für eine Ablaufverfolgung.</span><span class="sxs-lookup"><span data-stu-id="9379e-103">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>  

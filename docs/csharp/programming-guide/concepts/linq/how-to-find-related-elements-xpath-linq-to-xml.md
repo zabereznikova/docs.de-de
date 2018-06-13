@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330655"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="3546c-102">Vorgehensweise: Suchen nach verwandten Elementen (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="3546c-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="3546c-103">In diesem Thema wird gezeigt, wie Sie ein Element abrufen können, das auf der Basis eines Attributs ausgewählt wird, auf das vom Wert eines anderen Elements verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="3546c-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  

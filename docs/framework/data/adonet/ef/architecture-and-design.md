@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766867"
 ---
 # <a name="architecture-and-design"></a><span data-ttu-id="0a03c-102">Architektur und Entwurf</span><span class="sxs-lookup"><span data-stu-id="0a03c-102">Architecture and Design</span></span>
 <span data-ttu-id="0a03c-103">Das SQL-Generierungsmodul im die [Beispielanbieter](http://go.microsoft.com/fwlink/?LinkId=180616) wird als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt implementiert.</span><span class="sxs-lookup"><span data-stu-id="0a03c-103">The SQL generation module in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) is implemented as a visitor on the expression tree that represents the command tree.</span></span> <span data-ttu-id="0a03c-104">Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.</span><span class="sxs-lookup"><span data-stu-id="0a03c-104">The generation is done in a single pass over the expression tree.</span></span>  

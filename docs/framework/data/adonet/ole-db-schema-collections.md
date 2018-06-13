@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766932"
 ---
 # <a name="ole-db-schema-collections"></a><span data-ttu-id="f5446-102">OLE DB-Schemaauflistungen</span><span class="sxs-lookup"><span data-stu-id="f5446-102">OLE DB Schema Collections</span></span>
 <span data-ttu-id="f5446-103">In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC-Anbieter für Microsoft SQL Server, Oracle und Microsoft Jet diskutiert.</span><span class="sxs-lookup"><span data-stu-id="f5446-103">This section discusses schema collection support for the OLE DB providers for Microsoft SQL Server, Oracle, and Microsoft Jet.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760504"
 ---
 # <a name="how-to-execute-a-parameterized-stored-procedure-using-entitycommand"></a><span data-ttu-id="0736e-102">Gewusst wie: Ausführen einer parametrisierten gespeicherten Prozedur mithilfe von "EntityCommand"</span><span class="sxs-lookup"><span data-stu-id="0736e-102">How to: Execute a Parameterized Stored Procedure Using EntityCommand</span></span>
 <span data-ttu-id="0736e-103">In diesem Thema wird beschrieben, wie eine parametrisierte gespeicherte Prozedur mithilfe der <xref:System.Data.EntityClient.EntityCommand>-Klasse ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0736e-103">This topic shows how to execute a parameterized stored procedure by using the <xref:System.Data.EntityClient.EntityCommand> class.</span></span>  

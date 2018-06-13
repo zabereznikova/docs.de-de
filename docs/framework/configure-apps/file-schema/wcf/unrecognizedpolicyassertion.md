@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766919"
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a><span data-ttu-id="ff025-102">&lt;unrecognizedPolicyAssertion&gt;</span><span class="sxs-lookup"><span data-stu-id="ff025-102">&lt;unrecognizedPolicyAssertion&gt;</span></span>
 <span data-ttu-id="ff025-103">Stellt ein Bindungselement dar, das die Richtlinienassertion angibt.</span><span class="sxs-lookup"><span data-stu-id="ff025-103">Represents a binding element that specifies policy assertion.</span></span> <span data-ttu-id="ff025-104">Dieses Element verfügt über kein Attribut und ist als leerer Schalter vorhanden.</span><span class="sxs-lookup"><span data-stu-id="ff025-104">This element has no attribute and is present as an empty switch.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327157"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a><span data-ttu-id="95195-102">Abrufen des Texts der Absätze (C#)</span><span class="sxs-lookup"><span data-stu-id="95195-102">Retrieving the Text of the Paragraphs (C#)</span></span>
 <span data-ttu-id="95195-103">Dieses Beispiel baut auf dem vorherigen Beispiel [Retrieving the Paragraphs and Their Styles (C#) (Abrufen der Absätze und deren Formate (C#))](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md) auf.</span><span class="sxs-lookup"><span data-stu-id="95195-103">This example builds on the previous example, [Retrieving the Paragraphs and Their Styles (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span></span> <span data-ttu-id="95195-104">Dieses neue Beispiel ruft den Text jedes einzelnen Absatzes als Zeichenfolge ab</span><span class="sxs-lookup"><span data-stu-id="95195-104">This new example retrieves the text of each paragraph as a string.</span></span>  

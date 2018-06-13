@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762922"
 ---
 # <a name="multiset-entity-sql"></a><span data-ttu-id="31c97-102">MULTISET (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="31c97-102">MULTISET (Entity SQL)</span></span>
 <span data-ttu-id="31c97-103">Erstellt eine Instanz einer Multimenge aus einer Liste von Werten.</span><span class="sxs-lookup"><span data-stu-id="31c97-103">Creates an instance of a multiset from a list of values.</span></span> <span data-ttu-id="31c97-104">Alle Werte im MULTISET-Konstruktor müssen von einem kompatiblen `T`-Typ sein.</span><span class="sxs-lookup"><span data-stu-id="31c97-104">All the values in the MULTISET constructor must be of a compatible type `T`.</span></span> <span data-ttu-id="31c97-105">Leere Multimengenkonstruktoren sind nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="31c97-105">Empty multiset constructors are not allowed.</span></span>  

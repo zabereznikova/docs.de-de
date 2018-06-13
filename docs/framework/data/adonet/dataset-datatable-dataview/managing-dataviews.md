@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757904"
 ---
 # <a name="managing-dataviews"></a><span data-ttu-id="b8da5-102">Verwalten von "DataViews"</span><span class="sxs-lookup"><span data-stu-id="b8da5-102">Managing DataViews</span></span>
 <span data-ttu-id="b8da5-103">Mit einem <xref:System.Data.DataViewManager> können Sie die Ansichtseinstellungen für alle Tabellen in einer <xref:System.Data.DataView> verwalten.</span><span class="sxs-lookup"><span data-stu-id="b8da5-103">You can use a <xref:System.Data.DataViewManager> to manage view settings for all the tables in a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="b8da5-104">Wenn Sie ein Steuerelement, das Sie an mehrere Tabellen binden möchten, z. B. ein Raster, das Beziehungen navigiert, eine **DataViewManager** ist ideal.</span><span class="sxs-lookup"><span data-stu-id="b8da5-104">If you have a control that you want to bind to multiple tables, such as a grid that navigates relationships, a **DataViewManager** is ideal.</span></span>  

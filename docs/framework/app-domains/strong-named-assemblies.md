@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741944"
 ---
 # <a name="strong-named-assemblies"></a><span data-ttu-id="d3d24-102">Assemblys mit starkem Namen</span><span class="sxs-lookup"><span data-stu-id="d3d24-102">Strong-Named Assemblies</span></span>
 <span data-ttu-id="d3d24-103">Durch die Vergabe eines starken Namens erhalten Assemblys eine eindeutige Identität. Außerdem werden Assemblykonflikte verhindert.</span><span class="sxs-lookup"><span data-stu-id="d3d24-103">Strong-naming an assembly creates a unique identity for the assembly, and can prevent assembly conflicts.</span></span>  

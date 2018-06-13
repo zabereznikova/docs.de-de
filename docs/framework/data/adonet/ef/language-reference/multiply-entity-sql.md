@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762545"
 ---
 # <a name="-multiply-entity-sql"></a><span data-ttu-id="313e1-102">\* (Multiplikation) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="313e1-102">\* (Multiply) (Entity SQL)</span></span>
 <span data-ttu-id="313e1-103">Multipliziert zwei Ausdrücke.</span><span class="sxs-lookup"><span data-stu-id="313e1-103">Multiplies two expressions.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748892"
 ---
 # <a name="lthttpdigestgt-element"></a><span data-ttu-id="899db-102">&lt;httpDigest&gt;-Element</span><span class="sxs-lookup"><span data-stu-id="899db-102">&lt;httpDigest&gt; Element</span></span>
 <span data-ttu-id="899db-103">Gibt Anmeldeinformationen vom Typ Hashwert an, die bei der Authentifizierung des Clients bei einem Dienst verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="899db-103">Specifies a digest type credential used when authenticating the client to a service.</span></span>  

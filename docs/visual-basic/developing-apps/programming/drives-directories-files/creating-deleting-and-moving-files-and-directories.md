@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590945"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a><span data-ttu-id="e84c0-102">Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e84c0-102">Creating, Deleting, and Moving Files and Directories in Visual Basic</span></span>
 <span data-ttu-id="e84c0-103">Dieser Abschnitt enthält die Aufgaben im Zusammenhang mit dem Erstellen, Löschen, Verschieben und Umbenennen von Dateien und Verzeichnissen in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="e84c0-103">This section lists tasks associated with creating, deleting, moving, and renaming files and directories in Visual Basic.</span></span>  

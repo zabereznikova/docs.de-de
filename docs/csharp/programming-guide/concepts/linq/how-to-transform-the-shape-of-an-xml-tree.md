@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326104"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a><span data-ttu-id="cb9be-102">Vorgehensweise: Transformieren der Form eines XML-Baums (C#)</span><span class="sxs-lookup"><span data-stu-id="cb9be-102">How to: Transform the Shape of an XML Tree (C#)</span></span>
 <span data-ttu-id="cb9be-103">Die *Form* eines XML-Dokuments wird von dessen Elementnamen, Attributnamen und den Merkmalen seiner Hierarchie bestimmt.</span><span class="sxs-lookup"><span data-stu-id="cb9be-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  

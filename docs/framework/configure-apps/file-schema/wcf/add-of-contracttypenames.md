@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750192"
 ---
 # <a name="ltaddgt-of-ltcontracttypenamesgt"></a><span data-ttu-id="dec72-102">&lt;add&gt; von &lt;contractTypeNames&gt;</span><span class="sxs-lookup"><span data-stu-id="dec72-102">&lt;add&gt; of &lt;contractTypeNames&gt;</span></span>
 <span data-ttu-id="dec72-103">Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen gesucht wird, sowie die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="dec72-103">A configuration element that specifies the contract name of the services being searched for, and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="dec72-104">Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die ALLEN Verträgen entsprechen.</span><span class="sxs-lookup"><span data-stu-id="dec72-104">If more than one contract name is specified, only service endpoints matching ALL contracts will reply.</span></span> <span data-ttu-id="dec72-105">Beachten Sie, dass in der Windows Communication Foundation (WCF) ein Endpunkt nur als einen Vertrag unterstützen kann.</span><span class="sxs-lookup"><span data-stu-id="dec72-105">Note that in Windows Communication Foundation (WCF), an endpoint can only support one contract.</span></span>  

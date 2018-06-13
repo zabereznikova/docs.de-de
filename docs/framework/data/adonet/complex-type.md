@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756812"
 ---
 # <a name="complex-type"></a><span data-ttu-id="1256e-102">Komplexer Typ</span><span class="sxs-lookup"><span data-stu-id="1256e-102">complex type</span></span>
 <span data-ttu-id="1256e-103">Ein *komplexen Typ* ist eine Vorlage zum Definieren von umfangreichen, strukturierter Eigenschaften für [Entitätstypen](../../../../docs/framework/data/adonet/entity-type.md) oder andere komplexe Typen.</span><span class="sxs-lookup"><span data-stu-id="1256e-103">A *complex type* is a template for defining rich, structured properties on [entity types](../../../../docs/framework/data/adonet/entity-type.md) or on other complex types.</span></span> <span data-ttu-id="1256e-104">Jede Vorlage enthält Folgendes:</span><span class="sxs-lookup"><span data-stu-id="1256e-104">Each template contains the following:</span></span>  

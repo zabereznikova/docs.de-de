@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766542"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a><span data-ttu-id="3aeab-102">SqlClient für Entity Framework-Typen</span><span class="sxs-lookup"><span data-stu-id="3aeab-102">SqlClient for Entity FrameworkTypes</span></span>
 <span data-ttu-id="3aeab-103">Die Anbietermanifestdatei des .NET Framework-Datenanbieters für SQL Server (SqlClient) enthält eine Liste der primitiven Typen des Anbieters, die Facets für jeden Typ, die Zuordnungen zwischen den primitiven Typen von konzeptionellem Modell und Speichermodell sowie die Höherstufungs- und Konvertierungsregeln zwischen den primitiven Typen von konzeptionellem Modell und Speichermodell.</span><span class="sxs-lookup"><span data-stu-id="3aeab-103">The .NET Framework Data Provider for SQL Server (SqlClient) provider manifest file includes the list of the provider primitive types, facets for each type, the mappings between the conceptual and storage model primitive types, and the promotion and conversion rules between the conceptual and storage model primitive types.</span></span>  
