@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754518"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a><span data-ttu-id="5167d-102">&lt;Hinzufügen&gt; Bypasslist (Network Settings)-Element</span><span class="sxs-lookup"><span data-stu-id="5167d-102">&lt;add&gt; Element for bypasslist (Network Settings)</span></span>
 <span data-ttu-id="5167d-103">Fügt eine IP-Adresse oder einen DNS-Namen, die Proxyumgehungsliste.</span><span class="sxs-lookup"><span data-stu-id="5167d-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  

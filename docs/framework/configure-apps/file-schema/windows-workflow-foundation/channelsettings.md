@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756916"
 ---
 # <a name="ltchannelsettingsgt"></a><span data-ttu-id="b2917-102">&lt;channelSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="b2917-102">&lt;channelSettings&gt;</span></span>
 <span data-ttu-id="b2917-103">Gibt die Einstellungen des Channelcaches an.</span><span class="sxs-lookup"><span data-stu-id="b2917-103">Specifies the settings of the channel cache.</span></span>  

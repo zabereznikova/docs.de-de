@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755847"
 ---
 # <a name="ltworkflowruntimegt"></a><span data-ttu-id="b9f14-102">&lt;workflowRuntime&gt;</span><span class="sxs-lookup"><span data-stu-id="b9f14-102">&lt;workflowRuntime&gt;</span></span>
 <span data-ttu-id="b9f14-103">Gibt die Einstellungen für eine Instanz von <xref:System.Workflow.Runtime.WorkflowRuntime> zum Hosten von Windows Communication Foundation (WCF)-Workflows basierenden-Diensten.</span><span class="sxs-lookup"><span data-stu-id="b9f14-103">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based Windows Communication Foundation (WCF) services.</span></span>  

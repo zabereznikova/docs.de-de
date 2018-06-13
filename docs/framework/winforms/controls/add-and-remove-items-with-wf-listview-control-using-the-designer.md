@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528732"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a><span data-ttu-id="d2f5a-102">Gewusst wie: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="d2f5a-102">How to: Add and Remove Items with the Windows Forms ListView Control Using the Designer</span></span>
 <span data-ttu-id="d2f5a-103">Beim Hinzufügen eines Elements zu einem Windows Forms <xref:System.Windows.Forms.ListView> -Steuerelement besteht aus in erster Linie das Element angeben und Eigenschaften zuweisen.</span><span class="sxs-lookup"><span data-stu-id="d2f5a-103">The process of adding an item to a Windows Forms <xref:System.Windows.Forms.ListView> control consists primarily of specifying the item and assigning properties to it.</span></span> <span data-ttu-id="d2f5a-104">Hinzufügen oder Entfernen von Listenelementen kann zu einem beliebigen Zeitpunkt erfolgen.</span><span class="sxs-lookup"><span data-stu-id="d2f5a-104">Adding or removing list items can be done at any time.</span></span>  

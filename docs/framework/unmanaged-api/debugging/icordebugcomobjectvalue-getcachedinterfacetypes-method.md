@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db1de215eaa0c0cc7021a119e54591caede76d3b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417124"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a><span data-ttu-id="8d76f-102">ICorDebugComObjectValue::GetCachedInterfaceTypes-Methode</span><span class="sxs-lookup"><span data-stu-id="8d76f-102">ICorDebugComObjectValue::GetCachedInterfaceTypes Method</span></span>
 <span data-ttu-id="8d76f-103">Stellt einen Enumerator für die Schnittstellentypen bereit, dass das aktuelle Objekt umgewandelt oder als verwendet wurde.</span><span class="sxs-lookup"><span data-stu-id="8d76f-103">Provides an enumerator for the interface types that the current object has been cast to or used as.</span></span>  
