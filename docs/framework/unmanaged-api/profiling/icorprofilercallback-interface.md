@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 96c8c9de7a6b26c9a00a0ffaf4fb50c08a80d5a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461616"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback-Schnittstelle
 Enthält Methoden, die von der common Language Runtime (CLR) verwendet werden, um einen Codeprofiler benachrichtigt, wenn die Ereignisse, die der Profiler abonniert hat, auftreten.  

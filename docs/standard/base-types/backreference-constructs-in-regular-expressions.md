@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574607"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Rückverweiskonstrukte in regulären Ausdrücken
 Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder eine Teilzeichenfolge innerhalb einer Zeichenfolge zu identifizieren. Wenn z.B. die Eingabezeichenfolge mehrere Vorkommen einer beliebigen Teilzeichenfolge enthält, können Sie das erste Vorkommen mit einer Erfassungsgruppe abgleichen und dann mit einem Rückverweis nachfolgende Vorkommen der Teilzeichenfolge abgleichen.  

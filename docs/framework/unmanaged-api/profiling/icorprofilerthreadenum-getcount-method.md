@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2b803c83b905df47b3957e07c0d64e7ce6f6d303
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455477"
 ---
 # <a name="icorprofilerthreadenumgetcount-method"></a>ICorProfilerThreadEnum::GetCount-Methode
 Ruft die Anzahl der Threads ab, die von der Anwendung verwendet werden.  
