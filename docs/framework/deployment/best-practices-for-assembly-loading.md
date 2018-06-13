@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394152"
 ---
 # <a name="best-practices-for-assembly-loading"></a><span data-ttu-id="03831-102">Best Practices für das Laden von Assemblys</span><span class="sxs-lookup"><span data-stu-id="03831-102">Best Practices for Assembly Loading</span></span>
 <span data-ttu-id="03831-103">In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können.</span><span class="sxs-lookup"><span data-stu-id="03831-103">This article discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span> <span data-ttu-id="03831-104">In diesem Artikel werden folgende Empfehlungen besprochen:</span><span class="sxs-lookup"><span data-stu-id="03831-104">The article discusses the following recommendations:</span></span>  

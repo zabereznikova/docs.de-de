@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389251"
 ---
 # <a name="net-core-and-open-source"></a><span data-ttu-id="b562e-102">.NET Core und Open-Source</span><span class="sxs-lookup"><span data-stu-id="b562e-102">.NET Core and Open-Source</span></span>
 <span data-ttu-id="b562e-103">Dieses Thema enthält einen kurzen Überblick über .NET Core und zeigt, wie Sie weitere Informationen erhalten können.</span><span class="sxs-lookup"><span data-stu-id="b562e-103">This topic provides a brief overview  of what .NET Core is and shows how you can find more information.</span></span> <span data-ttu-id="b562e-104">Die vollständige Liste der Themen für .NET Core finden Sie im [Leitfaden für .NET Core](../../core/index.md).</span><span class="sxs-lookup"><span data-stu-id="b562e-104">To find the complete list of topics for .NET Core, visit the [.NET Core Guide](../../core/index.md).</span></span>

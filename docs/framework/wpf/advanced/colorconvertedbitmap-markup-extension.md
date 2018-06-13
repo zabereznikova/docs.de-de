@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538909"
 ---
 # <a name="colorconvertedbitmap-markup-extension"></a><span data-ttu-id="e5646-102">ColorConvertedBitmap-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="e5646-102">ColorConvertedBitmap Markup Extension</span></span>
 <span data-ttu-id="e5646-103">Bietet eine Möglichkeit, eine Bitmapquelle angeben, die nicht über ein eingebettetes Profil verfügt.</span><span class="sxs-lookup"><span data-stu-id="e5646-103">Provides a way to specify a bitmap source that does not have an embedded profile.</span></span> <span data-ttu-id="e5646-104">Farbe von Kontexten / Profile werden angegeben, indem [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], wie die Bildquelle [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5646-104">Color contexts / profiles are specified by [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], as is the image source [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>  

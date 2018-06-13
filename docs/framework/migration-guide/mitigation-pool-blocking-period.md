@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389953"
 ---
 # <a name="mitigation-pool-blocking-period"></a><span data-ttu-id="63faa-102">Entschärfung: Poolsperrfrist</span><span class="sxs-lookup"><span data-stu-id="63faa-102">Mitigation: Pool Blocking Period</span></span>
 <span data-ttu-id="63faa-103">Die Sperrfrist für den Verbindungspool wurde für Verbindungen mit Azure SQL-Datenbanken entfernt.</span><span class="sxs-lookup"><span data-stu-id="63faa-103">The connection pool blocking period has been removed for connections to Azure SQL databases.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218383"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a><span data-ttu-id="629cc-102">Tabelle für explizite numerische Konvertierungen (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="629cc-102">Explicit Numeric Conversions Table (C# Reference)</span></span>
 <span data-ttu-id="629cc-103">Eine explizite numerische Konvertierung wird verwendet, um einen numerischen Typ mithilfe eines Umwandlungausdrucks in einen beliebigen anderen numerischen Typ zu konvertieren, für den es keine implizite Konvertierung gibt.</span><span class="sxs-lookup"><span data-stu-id="629cc-103">Explicit numeric conversion is used to convert any numeric type to any other numeric type, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="629cc-104">Die folgende Tabelle zeigt diese Konvertierungen.</span><span class="sxs-lookup"><span data-stu-id="629cc-104">The following table shows these conversions.</span></span>  

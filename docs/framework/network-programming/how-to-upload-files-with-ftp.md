@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393028"
 ---
 # <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="f2332-102">Gewusst wie: Hochladen von Dateien über FTP</span><span class="sxs-lookup"><span data-stu-id="f2332-102">How to: Upload Files with FTP</span></span>
 <span data-ttu-id="f2332-103">Dieses Beispiel zeigt, wie eine Datei auf einen FTP-Server hochgeladen werden kann.</span><span class="sxs-lookup"><span data-stu-id="f2332-103">This sample shows how to upload a file to an FTP server.</span></span>  

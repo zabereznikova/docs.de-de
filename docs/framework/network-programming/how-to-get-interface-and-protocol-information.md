@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395085"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="3a301-102">Gewusst wie: Abrufen von Schnittstellen- und Protokollinformationen</span><span class="sxs-lookup"><span data-stu-id="3a301-102">How to: Get Interface and Protocol Information</span></span>
 <span data-ttu-id="3a301-103">Dieses Beispiel demonstriert, wie die TCP-Statistiken einer Netzwerkschnittstelle gelesen werden.</span><span class="sxs-lookup"><span data-stu-id="3a301-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  

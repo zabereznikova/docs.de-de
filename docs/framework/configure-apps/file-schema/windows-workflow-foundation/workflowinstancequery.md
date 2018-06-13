@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757839"
 ---
 # <a name="ltworkflowinstancequerygt"></a><span data-ttu-id="3c2d5-102">&lt;workflowInstanceQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="3c2d5-102">&lt;workflowInstanceQuery&gt;</span></span>
 <span data-ttu-id="3c2d5-103">Stellt eine Abfrage dar, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgt, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.</span><span class="sxs-lookup"><span data-stu-id="3c2d5-103">Represents a query that tracks workflow instance life cycle changes such as a started or completed event.</span></span>  

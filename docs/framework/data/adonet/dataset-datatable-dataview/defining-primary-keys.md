@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757579"
 ---
 # <a name="defining-primary-keys"></a><span data-ttu-id="75491-102">Definieren von Primärschlüsseln</span><span class="sxs-lookup"><span data-stu-id="75491-102">Defining Primary Keys</span></span>
 <span data-ttu-id="75491-103">Eine Datenbanktabelle enthält i. d. R. eine Spalte oder eine Gruppe von Spalten, die jede Zeile in der Tabelle eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="75491-103">A database table commonly has a column or group of columns that uniquely identifies each row in the table.</span></span> <span data-ttu-id="75491-104">Diese identifizierende Spalte oder Spaltengruppe wird als Primärschlüssel bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="75491-104">This identifying column or group of columns is called the primary key.</span></span>  

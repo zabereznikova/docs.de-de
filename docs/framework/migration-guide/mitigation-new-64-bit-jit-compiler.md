@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391939"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a><span data-ttu-id="f4f8c-102">Entschärfung: Neuer 64-Bit-JIT-Compiler</span><span class="sxs-lookup"><span data-stu-id="f4f8c-102">Mitigation: New 64-bit JIT Compiler</span></span>
 <span data-ttu-id="f4f8c-103">Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für die Just-in-Time-Kompilierung.</span><span class="sxs-lookup"><span data-stu-id="f4f8c-103">Starting with the .NET Framework 4.6, the runtime includes a new 64-bit JIT compiler for just-in-time compilation.</span></span> <span data-ttu-id="f4f8c-104">Diese Änderung wirkt sich nicht auf die Kompilierung mit dem 32-Bit-JIT-Compiler aus.</span><span class="sxs-lookup"><span data-stu-id="f4f8c-104">This change does not affect compilation with the  32-bit JIT compiler.</span></span>  

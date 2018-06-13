@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392189"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a><span data-ttu-id="0b5af-102">Handbuch für die Bereitstellung von .NET Framework für Entwickler</span><span class="sxs-lookup"><span data-stu-id="0b5af-102">.NET Framework deployment guide for developers</span></span>
 <span data-ttu-id="0b5af-103">Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version des .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.</span><span class="sxs-lookup"><span data-stu-id="0b5af-103">This topic provides information for developers who want to install any version of the .NET Framework from the .NET Framework 4.5 to the [!INCLUDE[net_current](../../../includes/net-current-version.md)] with their apps.</span></span>

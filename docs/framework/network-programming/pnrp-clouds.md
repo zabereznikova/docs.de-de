@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393841"
 ---
 # <a name="pnrp-clouds"></a><span data-ttu-id="94c64-102">PNRP-Clouds</span><span class="sxs-lookup"><span data-stu-id="94c64-102">PNRP Clouds</span></span>
 <span data-ttu-id="94c64-103">Eine PNRP-Cloud stellt eine Gruppe von Knoten dar, die über das Netzwerk miteinander kommunizieren können.</span><span class="sxs-lookup"><span data-stu-id="94c64-103">A PNRP "cloud" represents a set of nodes that can communicate with each other through the network.</span></span> <span data-ttu-id="94c64-104">Der Begriff „Cloud“ wird synonym mit „Peermesh“ und „Peer-to-Peer-Diagramm“ verwendet.</span><span class="sxs-lookup"><span data-stu-id="94c64-104">The term "cloud" is synonymous with "peer mesh" and "peer-to-peer graph".</span></span>  

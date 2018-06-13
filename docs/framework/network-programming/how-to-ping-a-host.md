@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394026"
 ---
 # <a name="how-to-ping-a-host"></a><span data-ttu-id="d7284-102">Gewusst wie: Pingen eines Hosts</span><span class="sxs-lookup"><span data-stu-id="d7284-102">How to: Ping a Host</span></span>
 <span data-ttu-id="d7284-103">In diesem Beispiel wird gezeigt, wie Sie einen Ping für einen Remotehost durchführen können.</span><span class="sxs-lookup"><span data-stu-id="d7284-103">This sample shows how to ping a remote host.</span></span>  

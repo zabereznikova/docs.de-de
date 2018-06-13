@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395852"
 ---
 # <a name="socket-code-examples"></a><span data-ttu-id="5f05c-102">Socketcodebeispiele</span><span class="sxs-lookup"><span data-stu-id="5f05c-102">Socket Code Examples</span></span>
 <span data-ttu-id="5f05c-103">Die folgenden Codebeispiele veranschaulichen, wie die <xref:System.Net.Sockets.Socket>-Klasse als Client für die Verbindung zu einem Remotenetzwerkdienst und als Server zum Überwachen von Verbindungen von Remoteclients verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="5f05c-103">The following code examples demonstrate how to use the <xref:System.Net.Sockets.Socket> class as a client to connect to remote network services and as a server to listen for connections from remote clients.</span></span>  
