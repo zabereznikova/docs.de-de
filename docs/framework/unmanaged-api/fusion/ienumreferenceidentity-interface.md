@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ebc9fe36955bac8b93ec95e9a55fc8ac1197d9a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429120"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity-Schnittstelle
 Dient als Enumerator für eine Auflistung von `IReferenceIdentity` Objekte.  

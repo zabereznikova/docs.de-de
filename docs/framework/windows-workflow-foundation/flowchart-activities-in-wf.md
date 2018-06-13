@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511614"
 ---
 # <a name="flowchart-activities-in-wf"></a>Flussdiagrammaktivitäten in WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält mehrere vom System bereitgestellte Aktivitäten zum Steuern der Ausführung und zum Verzweigen innerhalb eines Flussdiagramms.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358738"
 ---
 # <a name="xml-data-in-sql-server"></a>XML-Daten in SQL Server
 SQL Server macht die Funktionen von SQLXML innerhalb von .NET Framework verfügbar. Entwickler können Anwendungen schreiben, die aus einer Instanz von SQL Server auf XML-Daten zugreifen, die Daten in die .NET Framework-Umgebung importieren, sie verarbeiten und die Updates zurück zu SQL Server senden. In SQL Server gibt es verschiedene Verwendungsmöglichkeiten für XML-Daten, z. B. beim Speichern von Daten oder als Parameterwerte beim Abrufen von Daten. Die **SqlXml** Klasse in .NET Framework bietet clientseitige Unterstützung zum Arbeiten mit Daten in einer XML-Spalte in SQL Server gespeichert. Weitere Informationen finden Sie unter "SQLXML Managed Classes" in der SQL Server-Onlinedokumentation.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518812"
 ---
 # <a name="about-gdi-managed-code"></a>Verwalteter Code in GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ist der Teil von Windows, der zweidimensionale Vektorgrafik, Bildverarbeitung und Typografie bereitstellt. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] verbessert [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (das Graphics Device Interface (Schnittstelle für Grafikgeräte) in früheren Versionen von Windows) durch Hinzufügen neuer Features und Optimieren von vorhandenen Features.  

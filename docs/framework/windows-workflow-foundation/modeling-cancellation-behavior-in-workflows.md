@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519898"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modellieren des Abbruchverhaltens in Workflows
 Aktivitäten können innerhalb eines Workflows abgebrochen werden, z. B. durch eine <xref:System.Activities.Statements.Parallel>-Aktivität, die unvollständige Verzweigungen abbricht, wenn ihre <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> `true` ergibt, oder von außerhalb des Workflows, wenn der Host <xref:System.Activities.WorkflowApplication.Cancel%2A> aufruft. Workflowautoren können die Abbruchbehandlung mithilfe der <xref:System.Activities.Statements.CancellationScope>-Aktivität oder der <xref:System.Activities.Statements.CompensableActivity>-Aktivität bereitstellen oder können benutzerdefinierte Aktivitäten erstellen, die eine Abbruchlogik bereitstellen. Dieses Thema bietet eine Übersicht über den Abbruch in Workflows.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508191"
 ---
 # <a name="service-identity-and-authentication"></a>Dienstidentität und Authentifizierung
 Eines Diensts *Endpunktidentität*ist ein Wert, der vom Dienst Web Services Description Language (WSDL) generiert. Dieser an jeden Client weitergegebene Wert wird zum Authentifizieren des Diensts verwendet. Nachdem der Client eine Kommunikation mit einem Endpunkt initiiert und der Dienst sich gegenüber dem Client authentifiziert hat, vergleicht der Client den Wert der Endpunktidentität mit dem tatsächlichen Wert, den der Vorgang der Authentifizierung des Endpunkts zurückgegeben hat. Stimmen sie überein, kann der Client sicher sein, dass er Kontakt zu dem erwarteten Dienstendpunkt hergestellt hat. Diese Funktion als Schutz gegen *Phishing* indem verhindert, dass einen Client an einen von einem böswilligen Dienst gehosteten Endpunkt umgeleitet wird.  

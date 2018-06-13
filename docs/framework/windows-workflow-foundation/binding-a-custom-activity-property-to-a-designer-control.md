@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513548"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Binden einer benutzerdefinierten Aktivitätseigenschaft an ein Designersteuerelement
 Das Binden eines Textfeld-Designersteuerelements an ein Aktivitätsargument ist recht einfach. Das Binden eines komplexes Designersteuerelements (z. B. ein Kombinationsfeld) an ein Aktivitätsargument kann jedoch eine besondere Herausforderung darstellen. In diesem Thema wird erläutert, wie ein Aktivitätsargument an ein Kombinationsfeld-Steuerelement in einem benutzerdefinierten Aktivitätsdesigner gebunden wird.  

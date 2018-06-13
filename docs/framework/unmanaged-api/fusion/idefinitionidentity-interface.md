@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 401c23e44cc473d0a27a82a00343852693cb0f2e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429344"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity-Schnittstelle
 Stellt die eindeutige Signatur des Codes, der die Anwendung im aktuellen Bereich definiert.  

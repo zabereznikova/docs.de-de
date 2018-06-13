@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517935"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>StateMachine-Szenario mit einer Kombination aus FlowChart und Pick
 Dieses Beispiel veranschaulicht, wie ein einfaches Szenario mit einer Stoppuhr mithilfe einer Kombination der <xref:System.Activities.Statements.Flowchart>-Aktivität und der <xref:System.Activities.Statements.Pick>-Aktivität implementiert wird. Stoppuhrereignisse werden mithilfe von Empfangs- und Sendeaktivitäten innerhalb der Pick-Aktivität überwacht.  

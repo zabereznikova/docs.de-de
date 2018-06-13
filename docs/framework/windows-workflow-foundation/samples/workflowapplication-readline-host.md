@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518537"
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication-ReadLine-Host
 Dieses Beispiel stellt einen generischen ReadLine-Host dar. Sie können einen beliebigen Workflow mithilfe der eingeschlossenen `ReadLine`-Aktivität (oder anderen ähnlichen Aktivitäten, die Daten aus Lesezeichen abrufen, die mit Zeichenfolgen wieder aufgenommen werden) laden und ausführen. Ausgaben von der `WriteLine`-Aktivität oder Ausgaben, die in die <xref:System.Activities.Statements.WriteLine.TextWriter%2A>-Erweiterung schreiben, werden an das Hostfenster weitergeleitet. Wenn sich eine Instanz im Leerlauf befindet, werden die verfügbaren Lesezeichen für diese Instanz in einem Kombinationsfeld angezeigt. Durch Auswählen eines Lesezeichens, Eingeben von Text und Drücken der Schaltfläche zum Wiederaufnehmen von Lesezeichen wird die Ausführung des Workflows fortgesetzt. Sie können einen ausgewählten Workflow auch abbrechen oder beenden. Persistenz ist standardmäßig aktiviert. Sie können den Host herunterfahren und neu starten; die Instanzliste wird daraufhin mit den in der Datenbank gespeicherten Instanzen aufgefüllt. Die Nachverfolgung wird verwendet, um Ereignisse auf <xref:System.Activities.WorkflowApplication>-Ebene an den Host auszugeben, mit der Option, eine ausführliche Nachverfolgung auf Aktivitätsebene hinzuzufügen.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533685"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Gewusst wie: Überlagern von Objekten in Windows Forms
 Wenn Sie eine komplexe Benutzeroberfläche erstellen oder mit einem Formular der multiple Document Interface (MDI arbeiten), sollten Sie häufig überlagern Sie die Steuerelemente und untergeordnete Formulare komplexere Benutzeroberflächen (UI) zu erstellen. Zum Verschieben und das Verfolgen von Steuerelemente und Fenster innerhalb des Kontexts einer Gruppe, bearbeiten Sie ihre Z-Reihenfolge. *Z-Reihenfolge* ist die Schichtung der Steuerelemente in einem Formular auf das Formular z-Achse (Tiefe). Das Fenster am Anfang der Z-Reihenfolge überschneidet sich mit allen anderen Fenstern. Alle überlappen anderen Fenster am unteren Rand der Z-Reihenfolge.  

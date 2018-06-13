@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524341"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Verwenden eines Stiftes zum Zeichnen von Linien und Formen
 Verwendung [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` Objekte Liniensegmente, Kurven und Umrisse von Formen gezeichnet werden soll. In diesem Abschnitt *Zeile* bezieht sich auf alle von diesen, sofern angegeben, um nur ein Liniensegment bedeuten. Legen Sie die Eigenschaften eines Stiftes zum Steuern der Farbe, Breite, Ausrichtung und die Art des mit diesem Stift gezeichneten Linien verwendet werden.  

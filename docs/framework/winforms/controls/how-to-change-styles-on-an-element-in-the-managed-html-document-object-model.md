@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531250"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Gewusst wie: Ändern von Formaten eines Elements im verwalteten HTML-Dokumentobjektmodell
 Formate können im HTML-Format Sie um die Darstellung eines Dokuments und seiner Elemente zu steuern. <xref:System.Windows.Forms.HtmlDocument> und <xref:System.Windows.Forms.HtmlElement> unterstützen <xref:System.Windows.Forms.HtmlElement.Style%2A> Eigenschaften, die Formatzeichenfolgen Folgendes Format verwenden:  

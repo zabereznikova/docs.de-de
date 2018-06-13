@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359711"
 ---
 # <a name="clr-user-defined-functions"></a>Benutzerdefinierte CLR-Funktionen
 Benutzerdefinierte Funktionen sind Routinen, die Parameter akzeptieren, Berechnungen oder andere Aktionen vornehmen und ein Ergebnis zurückgeben. Sie können benutzerdefinierte Funktionen in jeder Programmiersprache von Microsoft .NET Framework, z. B. Microsoft Visual Basic .NET oder Microsoft Visual C#, schreiben.  

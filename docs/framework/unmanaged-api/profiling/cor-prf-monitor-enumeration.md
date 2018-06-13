@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a12f3ffb14de9dcacdb4873d1c03ad1d096d7cd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462115"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR-Enumeration
 Enthält Werte, die zur Angabe von Verhalten, Funktionen oder Ereignissen verwendet werden, die der Profiler abonnieren möchte.  

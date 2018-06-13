@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513213"
 ---
 # <a name="creating-custom-flow-control-activities"></a>Erstellen von benutzerdefinierten Flusssteuerungsaktivitäten
 .NET Framework enthält eine Vielzahl von Flusssteuerungsaktivitäten, die ähnlich wie abstrakte Programmierungsstrukturen (z. B. <xref:System.Activities.Statements.Flowchart>) oder standardmäßige Programmierungsstrukturen (z. B. <xref:System.Activities.Statements.If>) funktionieren. In diesem Thema wird erläutert, die Architektur eines die Beispielprojekte [nicht generische ForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md).  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755096"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 Legt den Typ des Anspruchs, der angibt, die <xref:System.Security.Principal.IIdentity.Name%2A> Eigenschaft. Der Typ des Anspruchs zur Suche nach einer <xref:System.Security.Claims.Claim> in der Auflistung der <xref:System.Security.Claims.ClaimsIdentity> zurückgegebenen Objekte die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode diese Tokenhandler. Der Wert, der den übereinstimmenden Anspruch wird festgelegt, als den Namen des der <xref:System.Security.Principal.IIdentity> aus diesen token Handler generiert.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b9c3899c4319c623bc991d0775945f0a4dc09e6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434754"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect-Methode
 Erzwingt eine Garbagecollection für die angegebene Generation.  

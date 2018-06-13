@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522268"
 ---
 # <a name="how-to-print-a-windows-form"></a>Gewusst wie: Drucken eines Windows Form
 Als Teil des Entwicklungsprozesses sollten Sie in der Regel eine Kopie der Windows Form zu drucken. Im folgenden Codebeispiel wird veranschaulicht, wie auf eine Kopie des aktuellen Formulars gedruckt werden, indem Sie mit der <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode.  

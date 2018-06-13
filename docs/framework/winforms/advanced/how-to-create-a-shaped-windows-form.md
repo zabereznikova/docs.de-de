@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522216"
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>Gewusst wie: Erstellen von geformten Windows Forms
 In diesem Beispiel wird ein Formular bietet eine elliptische Form, die mit dem Formular ändert die Größe.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516161"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Vorgehensweise: Abfrage von nicht persistenten Instanzen
 Wenn eine neue Dienstinstanz erstellt wird und für den Dienst das SQL-Workflowinstanzspeicher-Verhalten definiert ist, erstellt der Diensthost einen ersten Eintrag für diese Dienstinstanz im Instanzspeicher. Bei der ersten permanenten Speicherung der Dienstinstanz speichert das SQL-Workflowinstanzspeicher-Verhalten den aktuellen Instanzstatus zusammen mit weiteren Daten, die zur Aktivierung, Wiederherstellung und Steuerung erforderlich sind.  

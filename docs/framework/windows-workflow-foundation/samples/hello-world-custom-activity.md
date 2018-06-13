@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515838"
 ---
 # <a name="hello-world-custom-activity"></a>Benutzerdefinierte Aktivität „Hello World“
 Dieses Beispiel zeigt mehrere Hauptfunktionen von Windows Workflow Foundation (WF), einschließlich Informationen zum Erstellen einer einfachen benutzerdefinierten Aktivität. Einige der Funktionen, die in diesem Beispiel veranschaulicht werden, erstellen eine benutzerdefinierte Aktivität in C# und verwenden `in`-Argumente und `out`-Argumente (<xref:System.Activities.InArgument> und <xref:System.Activities.OutArgument>).  

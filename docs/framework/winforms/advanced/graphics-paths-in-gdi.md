@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523887"
 ---
 # <a name="graphics-paths-in-gdi"></a>Grafikpfade in GDI+
 Pfade werden durch Kombinieren von Linien, Rechtecke und einfachen Kurven gebildet. Beachten Sie aus der [Übersicht über Vektorgrafiken](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) , dass die folgenden grundlegenden Bausteine besonders hilfreich erwiesen haben für das Zeichnen von Bildern:  

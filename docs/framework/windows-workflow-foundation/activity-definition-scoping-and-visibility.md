@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518501"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Bereichsauswahl und Sichtbarkeit der Aktivitätsdefinition
 Wie die Bereichsauswahl und Sichtbarkeit eines Objekts beschreibt die Bereichsauswahl und Sichtbarkeit der Aktivitätsdefinition die Fähigkeit anderer Objekte oder Aktivitäten, auf Member der Aktivität zuzugreifen. Die Aktivitätsdefinition erfolgt durch folgende Implementierungen:  

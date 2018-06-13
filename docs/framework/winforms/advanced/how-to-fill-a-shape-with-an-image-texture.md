@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523289"
 ---
 # <a name="how-to-fill-a-shape-with-an-image-texture"></a>Gewusst wie: Ausfüllen einer Form mit einer Bildstruktur
 Sie können mit einer Textur eine geschlossene Form ausfüllen, mithilfe der <xref:System.Drawing.Image> Klasse und die <xref:System.Drawing.TextureBrush> Klasse.  

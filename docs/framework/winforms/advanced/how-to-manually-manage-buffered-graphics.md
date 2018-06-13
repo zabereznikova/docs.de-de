@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523954"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Gewusst wie: Manuelles Verwalten von gepufferten Grafiken
 Für erweiterte Szenarien mit doppelter Pufferung können Sie die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Klassen, Ihre eigene Logik Doppelpufferung implementieren. Die Klasse, die verantwortlich für das zuordnen und Verwalten einzelner Grafikpuffer ist die <xref:System.Drawing.BufferedGraphicsContext> Klasse. Jede Anwendung verfügt über einen eigenen Standard <xref:System.Drawing.BufferedGraphicsContext> , verwaltet alle Standardeinstellungen, die doppelte Pufferung für die Anwendung. Sie können einen Verweis auf diese Instanz abrufen, durch Aufrufen der <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
