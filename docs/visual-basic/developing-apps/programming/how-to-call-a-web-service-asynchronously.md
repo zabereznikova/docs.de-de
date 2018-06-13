@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589036"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a><span data-ttu-id="df10f-102">Gewusst wie: Asynchrones Aufrufen eines Webdiensts (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df10f-102">How to: Call a Web Service Asynchronously (Visual Basic)</span></span>
 <span data-ttu-id="df10f-103">Dieses Beispiel hängt einen Handler an das asynchrone Handlerereignis eines Webdiensts an, sodass dieses das Ergebnis eines asynchronen Methodenaufrufs abrufen kann.</span><span class="sxs-lookup"><span data-stu-id="df10f-103">This example attaches a handler to a Web service's asynchronous handler event, so that it can retrieve the result of an asynchronous method call.</span></span> <span data-ttu-id="df10f-104">Dieses Beispiel verwendet den Webdienst DemoTemperatureService unter http://www.xmethods.net.</span><span class="sxs-lookup"><span data-stu-id="df10f-104">This example used the DemoTemperatureService Web service at http://www.xmethods.net.</span></span>  

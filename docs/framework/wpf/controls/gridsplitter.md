@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550893"
 ---
 # <a name="gridsplitter"></a><span data-ttu-id="3e861-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="3e861-102">GridSplitter</span></span>
 <span data-ttu-id="3e861-103">Die <xref:System.Windows.Controls.GridSplitter> verteilt den Abstand zwischen Spalten oder Zeilen mit einem <xref:System.Windows.Controls.Grid> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="3e861-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  

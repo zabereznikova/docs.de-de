@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 07606bf58709f088db486e0263e5cb519ab5b4cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456666"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a><span data-ttu-id="32ac5-102">ICorProfilerInfo2::GetNotifiedExceptionClauseInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="32ac5-102">ICorProfilerInfo2::GetNotifiedExceptionClauseInfo Method</span></span>
 <span data-ttu-id="32ac5-103">Der systemeigene Adresse und Rahmen für die Ausnahmeklausel abgerufen (`catch`/`finally`/`filter`), die auszuführende ist oder gerade ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="32ac5-103">Gets the native address and frame information for the exception clause (`catch`/`finally`/`filter`) that is about to be run or has just been run.</span></span>  

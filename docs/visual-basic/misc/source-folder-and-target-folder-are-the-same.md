@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640484"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a><span data-ttu-id="b1eb8-102">Quell- und Zielordner sind identisch.</span><span class="sxs-lookup"><span data-stu-id="b1eb8-102">Source folder and target folder are the same</span></span>
 <span data-ttu-id="b1eb8-103">Es wurde versucht, eine Datei zu kopieren oder zu verschieben, aber Quell- und Zielverzeichnis sind identisch.</span><span class="sxs-lookup"><span data-stu-id="b1eb8-103">An attempt has been made to copy or move a file, but the specified source directory and target directory are the same.</span></span> <span data-ttu-id="b1eb8-104">Dies kann das Ergebnis einer fehlerhaften Analyse eines Dateipfads sein.</span><span class="sxs-lookup"><span data-stu-id="b1eb8-104">This may be a result of incorrectly parsing a file path.</span></span>  
