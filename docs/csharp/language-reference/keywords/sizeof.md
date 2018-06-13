@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270577"
 ---
 # <a name="sizeof-c-reference"></a>sizeof (C#-Referenz)
 Wird verwendet, um die Größe eines nicht verwalteten Typs in Bytes abzurufen. Nicht verwaltete Typen umfassen die in der unteren Tabelle aufgelisteten integrierten Typen sowie folgende Typen:  

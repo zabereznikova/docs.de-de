@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529989"
 ---
 # <a name="autosize-property-overview"></a>Übersicht über die AutoSize-Eigenschaft
 Die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft ein Steuerelement seine Größe ändern, bei Bedarf, um den angegebenen Wert erreichen kann die <xref:System.Windows.Forms.Control.PreferredSize%2A> Eigenschaft. Sie stellen das Größenanpassungsverhalten für bestimmte Steuerelemente durch Festlegen der `AutoSizeMode` Eigenschaft.  

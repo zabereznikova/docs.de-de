@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499088"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation-Sicherheit
 Die Themen in diesem Abschnitt beschreiben die Windows Communication Foundation (WCF)--Sicherheitsfunktionen und ihre Verwendung zur Sicherung von Nachrichten.  

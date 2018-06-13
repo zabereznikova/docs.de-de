@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497151"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP-Anschlussfreigabe
 Windows Communication Foundation (WCF) bietet eine neue TCP-basiertes Netzwerkprotokoll (net.tcp://) für hochleistungskommunikation. WCF führt außerdem eine neue Systemkomponente, die Net.TCP-Portfreigabedienst, mit der net.tcp-Ports für mehrfache Benutzervorgänge freigegeben werden können.  

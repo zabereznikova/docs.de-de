@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527731"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Änderungsbenachrichtigung in der Windows Forms-Datenbindung
 Einer der wichtigsten Konzepte des Windows Forms-Datenbindung ist *änderungsbenachrichtigung*. Um sicherzustellen, dass die Datenquelle und gebundenen Steuerelementen immer die aktuellsten Daten haben, müssen Sie die änderungsbenachrichtigung für die Datenbindung hinzufügen. Insbesondere sollen, stellen Sie sicher, dass gebundene Steuerelemente Änderungen benachrichtigt werden, die mit ihrer Datenquelle vorgenommen wurden, und die Datenquelle an die gebundenen Eigenschaften eines Steuerelements vorgenommenen Änderungen benachrichtigt.  

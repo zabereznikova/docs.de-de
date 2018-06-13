@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528203"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>Gewusst wie: Hinzufügen und Entfernen von Knoten mit dem TreeView-Steuerelement in Windows Forms mithilfe des Designers
 Da das Windows Forms <xref:System.Windows.Forms.TreeView> Steuerelement auf hierarchische Weise angeordnete Knoten angezeigt, beim Hinzufügen eines Knotens müssen Sie achten Sie darauf, was der übergeordneten Knoten ist.  
