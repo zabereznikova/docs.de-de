@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644380"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Friend-Assemblys (Visual Basic)
 Ein *Friend-Assembly* ist eine Assembly, die auf einer anderen Assembly zugreifen kann ["Friend"](../../../../visual-basic/language-reference/modifiers/friend.md) Typen und Member. Wenn Sie eine Assembly als Friend-Assembly identifizieren, müssen Sie Typen und Member nicht mehr als öffentlich markieren, damit andere Assemblys auf sie zugreifen können. Dies ist insbesondere in folgenden Szenarios nützlich:  

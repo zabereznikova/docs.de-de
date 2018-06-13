@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642807"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Gewusst wie: Erstellen einer Liste von Elementen
 Der Code in diesem Thema definiert eine `Student`-Klasse und erstellt eine Liste von Instanzen der Klasse. Die Liste soll das Thema unterstützen [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Sie kann auch für jede Anwendung verwendet werden, die eine Liste von Objekten benötigt. Der Code definiert die Elemente in der Liste der Schüler mithilfe von Objektinitialisierern.  

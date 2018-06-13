@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596605"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>Let-Prozedur der Eigenschaft ist nicht definiert, und Get-Prozedur hat kein Objekt zurückgegeben.
 Bestimmte Eigenschaften, Methoden und Vorgänge können gelten nur für `Collection` Objekte. Sie ein Vorgang oder eine Eigenschaft, die nur für Auflistungen wird angegeben, aber das Objekt ist keine Auflistung.  

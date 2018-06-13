@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596206"
 ---
 # <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>Argument &lt;Argumentname&gt; muss größer als oder gleich null sein
 Ein Argumentwert ist kleiner als 0 (null). Argumentwerte müssen größer als oder gleich 0 (null) sein.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637555"
 ---
 # <a name="cannot-determine-array-type-because-it-is-nothing"></a>Der Arraytyp kann nicht bestimmt werden, da er 'Nothing' ist.
 Der Typ des Arrays kann nicht bestimmt werden, da er auf den Wert `Nothing`festgelegt wurde.  

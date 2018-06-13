@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647903"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Umgestalten mit einer Erweiterungsmethode (Visual Basic)
 Dieses Beispiel baut auf dem vorhergehenden Beispiel [Abrufen des Textes aus den Absätzen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), gestaltet die Verkettung von Zeichenfolgen mit einer reinen Funktion um, die implementiert wird, als eine Erweiterungsmethode.  

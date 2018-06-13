@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603430"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>Ein Protokoll mit diesem Namen wurde bereits auf diesem Computer erstellt
 Es wurde versucht, ein Protokoll mit einem Namen zu erstellen, der bereits verwendet wird.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638481"
 ---
 # <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a>Die Adresse für UploadFile muss einen Dateinamen enthalten.
 Beim Hochladen von Dateien mit der `UploadFile` -Methode müssen Sie einen Dateinamen im Zielpfad angeben.  
