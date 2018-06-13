@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584845"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a><span data-ttu-id="7f658-102">Gewusst wie: Erstellen einer Datei in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7f658-102">How to: Create a File in Visual Basic</span></span>
 <span data-ttu-id="7f658-103">Dieses Beispiel erstellt mithilfe der <xref:System.IO.File.Create%2A>-Methode in der <xref:System.IO.File>-Klasse eine leere Textdatei auf dem bestimmten Pfad.</span><span class="sxs-lookup"><span data-stu-id="7f658-103">This example creates an empty text file at the specified path using the <xref:System.IO.File.Create%2A> method in the <xref:System.IO.File> class.</span></span>  

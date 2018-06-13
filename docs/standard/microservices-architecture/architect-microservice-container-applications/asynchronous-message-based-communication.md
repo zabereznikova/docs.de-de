@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579131"
 ---
 # <a name="asynchronous-message-based-communication"></a><span data-ttu-id="9544d-103">Asynchrone nachrichtenbasierte Kommunikation</span><span class="sxs-lookup"><span data-stu-id="9544d-103">Asynchronous message-based communication</span></span>
 

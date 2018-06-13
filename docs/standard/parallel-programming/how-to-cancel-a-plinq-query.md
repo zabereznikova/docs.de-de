@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584279"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a><span data-ttu-id="51ce7-102">Gewusst wie: Abbrechen einer PLINQ-Abfrage</span><span class="sxs-lookup"><span data-stu-id="51ce7-102">How to: Cancel a PLINQ Query</span></span>
 <span data-ttu-id="51ce7-103">In den folgenden Beispielen werden zwei Möglichkeiten zum Ändern einer PLINQ-Abfrage veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="51ce7-103">The following examples show two ways to cancel a PLINQ query.</span></span> <span data-ttu-id="51ce7-104">Das erste Beispiel zeigt, wie eine Abfrage abgebrochen wird, die größtenteils aus Datendurchlauf besteht.</span><span class="sxs-lookup"><span data-stu-id="51ce7-104">The first example shows how to cancel a query that consists mostly of data traversal.</span></span> <span data-ttu-id="51ce7-105">Im zweiten Beispiel wird gezeigt, wie eine Abfrage abgebrochen wird, die eine rechenintensive Benutzerfunktion enthält.</span><span class="sxs-lookup"><span data-stu-id="51ce7-105">The second example shows how to cancel a query that contains a user function that is computationally expensive.</span></span>  

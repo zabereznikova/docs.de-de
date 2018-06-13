@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579352"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a><span data-ttu-id="7c45c-103">Entwerfen eines DDD-orientierten Microservices</span><span class="sxs-lookup"><span data-stu-id="7c45c-103">Designing a DDD-oriented microservice</span></span>
 

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583863"
 ---
 # <a name="array-subscript-expression-missing"></a><span data-ttu-id="df125-102">Fehlender Arraysubscriptausdruck</span><span class="sxs-lookup"><span data-stu-id="df125-102">Array subscript expression missing</span></span>
 <span data-ttu-id="df125-103">Eine Arrayinitialisierung verlässt, eine oder mehrere der Indizes, die die Arraygrenzen definieren.</span><span class="sxs-lookup"><span data-stu-id="df125-103">An array initialization leaves out one or more of the subscripts that define the array bounds.</span></span> <span data-ttu-id="df125-104">Die Anweisung kann beispielsweise den Ausdruck enthalten `myArray (5,5,,10)`, belässt das dritte Subscript.</span><span class="sxs-lookup"><span data-stu-id="df125-104">For example, the statement might contain the expression `myArray (5,5,,10)`, which leaves out the third subscript.</span></span>  

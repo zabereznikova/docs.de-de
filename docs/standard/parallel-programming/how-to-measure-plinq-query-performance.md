@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584604"
 ---
 # <a name="how-to-measure-plinq-query-performance"></a><span data-ttu-id="d81c1-102">Gewusst wie: Messen der Leistung von PLINQ-Abfragen</span><span class="sxs-lookup"><span data-stu-id="d81c1-102">How to: Measure PLINQ Query Performance</span></span>
 <span data-ttu-id="d81c1-103">Dieses Beispiel zeigt, wie Sie mithilfe der <xref:System.Diagnostics.Stopwatch>-Klasse messen können, wie viel Zeit für die Ausführung einer PLINQ-Abfrage benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="d81c1-103">This example shows how use the <xref:System.Diagnostics.Stopwatch> class to measure the time it takes for a PLINQ query to execute.</span></span>  
