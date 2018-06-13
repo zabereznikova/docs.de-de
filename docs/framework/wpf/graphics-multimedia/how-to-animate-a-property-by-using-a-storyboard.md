@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561071"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a><span data-ttu-id="da2d6-102">Gewusst wie: Animieren einer Eigenschaft unter Verwendung eines Storyboards</span><span class="sxs-lookup"><span data-stu-id="da2d6-102">How to: Animate a Property by Using a Storyboard</span></span>
 <span data-ttu-id="da2d6-103">Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.Animation.Storyboard> zum Animieren von Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="da2d6-103">This example shows how to use a <xref:System.Windows.Media.Animation.Storyboard> to animate properties.</span></span> <span data-ttu-id="da2d6-104">Zum Animieren einer Eigenschaft mithilfe einer <xref:System.Windows.Media.Animation.Storyboard>, erstellen Sie eine Animation für jede Eigenschaft, die Sie verwenden möchten, dem animiert werden soll, und erstellen außerdem eine <xref:System.Windows.Media.Animation.Storyboard> Animationen enthalten.</span><span class="sxs-lookup"><span data-stu-id="da2d6-104">To animate a property by using a <xref:System.Windows.Media.Animation.Storyboard>, create an animation for each property that you want to animate and also create a <xref:System.Windows.Media.Animation.Storyboard> to contain the animations.</span></span>  

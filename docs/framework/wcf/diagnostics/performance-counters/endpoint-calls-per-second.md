@@ -1,31 +1,20 @@
 ---
 title: 'Endpunkt: Calls Per Second'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ca0fc06d-d68f-4236-bd5f-c7ff6214acdd
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 480e0758df7e3062f9bd2b0b089c7a9b75e1c012
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 186d59d2f0255f0f964130659a2053fc8f440dd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474505"
 ---
-# <a name="endpoint-calls-per-second"></a><span data-ttu-id="bcebc-102">Endpunkt: Calls Per Second</span><span class="sxs-lookup"><span data-stu-id="bcebc-102">Endpoint: Calls Per Second</span></span>
-<span data-ttu-id="bcebc-103">Indikatorname: Calls Per Second.</span><span class="sxs-lookup"><span data-stu-id="bcebc-103">Counter Name: Calls Per Second.</span></span>  
+# <a name="endpoint-calls-per-second"></a><span data-ttu-id="302a1-102">Endpunkt: Calls Per Second</span><span class="sxs-lookup"><span data-stu-id="302a1-102">Endpoint: Calls Per Second</span></span>
+<span data-ttu-id="302a1-103">Indikatorname: Calls Per Second.</span><span class="sxs-lookup"><span data-stu-id="302a1-103">Counter Name: Calls Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bcebc-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="bcebc-104">Description</span></span>  
- <span data-ttu-id="bcebc-105">Anzahl von Aufrufen an diesen Endpunkt pro Sekunde.</span><span class="sxs-lookup"><span data-stu-id="bcebc-105">Number of calls to this endpoint in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="302a1-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="302a1-104">Description</span></span>  
+ <span data-ttu-id="302a1-105">Anzahl von Aufrufen an diesen Endpunkt pro Sekunde.</span><span class="sxs-lookup"><span data-stu-id="302a1-105">Number of calls to this endpoint in a second.</span></span>  
   
- <span data-ttu-id="bcebc-106">Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="bcebc-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="302a1-106">Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="302a1-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="bcebc-107">(N 1 - N 0)/( (D 1 - D 0)/F)</span><span class="sxs-lookup"><span data-stu-id="bcebc-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="302a1-107">(N 1 - N 0)/( (D 1 - D 0)/F)</span><span class="sxs-lookup"><span data-stu-id="302a1-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

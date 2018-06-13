@@ -1,14 +1,6 @@
 ---
 title: ICorProfilerInfo::GetClassFromObject-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.GetClassFromObject
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ffc2e72746074776caee6fa9b87563df41fcc6b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 104dfcaa4120d72f3aa758b66134050f178fef75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453420"
 ---
-# <a name="icorprofilerinfogetclassfromobject-method"></a><span data-ttu-id="debec-102">ICorProfilerInfo::GetClassFromObject-Methode</span><span class="sxs-lookup"><span data-stu-id="debec-102">ICorProfilerInfo::GetClassFromObject Method</span></span>
-<span data-ttu-id="debec-103">Ruft die `ClassID` eines Objekts, mit dessen `ObjectID`.</span><span class="sxs-lookup"><span data-stu-id="debec-103">Gets the `ClassID` of an object, given its `ObjectID`.</span></span>  
+# <a name="icorprofilerinfogetclassfromobject-method"></a><span data-ttu-id="a792c-102">ICorProfilerInfo::GetClassFromObject-Methode</span><span class="sxs-lookup"><span data-stu-id="a792c-102">ICorProfilerInfo::GetClassFromObject Method</span></span>
+<span data-ttu-id="a792c-103">Ruft die `ClassID` eines Objekts, mit dessen `ObjectID`.</span><span class="sxs-lookup"><span data-stu-id="a792c-103">Gets the `ClassID` of an object, given its `ObjectID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="debec-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="debec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a792c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a792c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClassFromObject(  
@@ -46,24 +35,24 @@ HRESULT GetClassFromObject(
     [out] ClassID *pClassId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="debec-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="debec-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a792c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a792c-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="debec-106">[in] Die ID des Objekts, für das Abrufen der `ClassID`.</span><span class="sxs-lookup"><span data-stu-id="debec-106">[in] The ID of the object for which to get the `ClassID`.</span></span>  
+ <span data-ttu-id="a792c-106">[in] Die ID des Objekts, für das Abrufen der `ClassID`.</span><span class="sxs-lookup"><span data-stu-id="a792c-106">[in] The ID of the object for which to get the `ClassID`.</span></span>  
   
  `pClassId`  
- <span data-ttu-id="debec-107">[out] Ein Zeiger auf das zurückgegebene `ClassID`.</span><span class="sxs-lookup"><span data-stu-id="debec-107">[out] A pointer to the returned `ClassID`.</span></span>  
+ <span data-ttu-id="a792c-107">[out] Ein Zeiger auf das zurückgegebene `ClassID`.</span><span class="sxs-lookup"><span data-stu-id="a792c-107">[out] A pointer to the returned `ClassID`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="debec-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="debec-108">Remarks</span></span>  
- <span data-ttu-id="debec-109">Ein NULL-Wert `pClassId` gibt an, dass `objectId` hat einen Typ, der entladen wird.</span><span class="sxs-lookup"><span data-stu-id="debec-109">A null `pClassId` indicates that `objectId` has a type that is unloading.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a792c-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a792c-108">Remarks</span></span>  
+ <span data-ttu-id="a792c-109">Ein NULL-Wert `pClassId` gibt an, dass `objectId` hat einen Typ, der entladen wird.</span><span class="sxs-lookup"><span data-stu-id="a792c-109">A null `pClassId` indicates that `objectId` has a type that is unloading.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="debec-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="debec-110">Requirements</span></span>  
- <span data-ttu-id="debec-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="debec-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a792c-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a792c-110">Requirements</span></span>  
+ <span data-ttu-id="a792c-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a792c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="debec-112">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="debec-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a792c-112">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a792c-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="debec-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="debec-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a792c-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a792c-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="debec-114">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="debec-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a792c-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a792c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="debec-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="debec-115">See Also</span></span>  
- [<span data-ttu-id="debec-116">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="debec-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a792c-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a792c-115">See Also</span></span>  
+ [<span data-ttu-id="a792c-116">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a792c-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

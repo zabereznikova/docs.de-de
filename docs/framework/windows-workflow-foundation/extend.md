@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511890"
 ---
 # <a name="extending-windows-workflow-foundation"></a><span data-ttu-id="5a361-102">Erweitern der Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="5a361-102">Extending Windows Workflow Foundation</span></span>
 <span data-ttu-id="5a361-103">Im folgende Abschnitt wird beschrieben, wie zum Erweitern von Windows Workflow Foundation (WF) mit benutzerdefinierten Aktivitäten und Designern in neu gehosteten Umgebungen außerhalb [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5a361-103">The following section describes how to extend Windows Workflow Foundation (WF) with custom activities and designers in rehosted environments outside [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  

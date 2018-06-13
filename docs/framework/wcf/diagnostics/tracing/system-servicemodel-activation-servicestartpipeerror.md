@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476759"
 ---
 # <a name="systemservicemodelactivationservicestartpipeerror"></a><span data-ttu-id="c4d79-102">System.ServiceModel.Activation.ServiceStartPipeError</span><span class="sxs-lookup"><span data-stu-id="c4d79-102">System.ServiceModel.Activation.ServiceStartPipeError</span></span>
 <span data-ttu-id="c4d79-103">System.ServiceModel.Activation.ServiceStartPipeError</span><span class="sxs-lookup"><span data-stu-id="c4d79-103">System.ServiceModel.Activation.ServiceStartPipeError</span></span>  

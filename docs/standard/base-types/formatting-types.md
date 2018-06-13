@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579846"
 ---
 # <a name="formatting-types-in-net"></a><span data-ttu-id="8597f-102">Formatieren von Typen in .NET</span><span class="sxs-lookup"><span data-stu-id="8597f-102">Formatting Types in .NET</span></span>
 <a name="Introduction"></a> <span data-ttu-id="8597f-103">Bei der Formatierung wird eine Instanz einer Klasse, Struktur oder eines Enumerationswerts in die entsprechende Zeichenfolgendarstellung konvertiert. Die resultierende Zeichenfolge kann dann häufig Benutzern angezeigt oder sie kann deserialisiert werden, um den ursprünglichen Datentyp wiederherzustellen.</span><span class="sxs-lookup"><span data-stu-id="8597f-103">Formatting is the process of converting an instance of a class, structure, or enumeration value to its string representation, often so that the resulting string can be displayed to users or deserialized to restore the original data type.</span></span> <span data-ttu-id="8597f-104">Diese Konvertierung kann eine Reihe von Problemen beinhalten:</span><span class="sxs-lookup"><span data-stu-id="8597f-104">This conversion can pose a number of challenges:</span></span>  

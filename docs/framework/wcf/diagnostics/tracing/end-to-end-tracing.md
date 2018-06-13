@@ -1,43 +1,32 @@
 ---
 title: End-to-End-Ablaufverfolgung
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 733ea0724fdbaea9c7d28ed2a94aba25f67ef87c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474219"
 ---
-# <a name="end-to-end-tracing"></a><span data-ttu-id="69b03-102">End-to-End-Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="69b03-102">End-to-End Tracing</span></span>
-<span data-ttu-id="69b03-103">Die End-to-End (e2e)-Ablaufverfolgung ermöglicht Entwicklern das Nachverfolgen der Ausführung von Code in der [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Infrastruktur, um zu ermitteln, warum bei einem Codepfad ein Fehler aufgetreten ist, oder um eine ausführliche Ablaufverfolgung zur Kapazitätsplanung und Leistungsanalyse bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="69b03-103">End to End (e2e) Tracing allows developers to follow the execution of code in the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] infrastructure to investigate why a code path has failed, or to provide detailed tracing for capacity planning and performance analysis.</span></span> [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<span data-ttu-id="69b03-104"> verfügt über drei Korrelationsmechanismen zum Ermitteln von Fehlerursachen: Aktivitäten, Übertragungen und Weitergabe.</span><span class="sxs-lookup"><span data-stu-id="69b03-104"> provides three correlation mechanisms to help diagnose the cause of an error: activities, transfers, and propagation.</span></span>  
+# <a name="end-to-end-tracing"></a><span data-ttu-id="af441-102">End-to-End-Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="af441-102">End-to-End Tracing</span></span>
+<span data-ttu-id="af441-103">End-to-End kann (e2e) Tracing Entwickler führen die Ausführung von Code in der Windows Communication Foundation (WCF)-Infrastruktur zu untersuchen, warum ein Codepfad ein Fehler aufgetreten ist, oder um ausführliche Ablaufverfolgung zur kapazitätsplanung und leistungsverwaltung Leistungsanalyse bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="af441-103">End to End (e2e) Tracing allows developers to follow the execution of code in the Windows Communication Foundation (WCF) infrastructure to investigate why a code path has failed, or to provide detailed tracing for capacity planning and performance analysis.</span></span> <span data-ttu-id="af441-104">Windows Communication Foundation (WCF) enthält drei korrelationsmechanismen zum Diagnostizieren der Ursache eines Fehlers: Aktivitäten, Übertragungen und Weitergabe.</span><span class="sxs-lookup"><span data-stu-id="af441-104">Windows Communication Foundation (WCF) provides three correlation mechanisms to help diagnose the cause of an error: activities, transfers, and propagation.</span></span>  
   
- <span data-ttu-id="69b03-105">Finden Sie unter [End-To-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) eine Liste der End-to-End-ablaufverfolgungsszenarien und ihre entsprechenden Aktivität und Entwurf tracing.</span><span class="sxs-lookup"><span data-stu-id="69b03-105">See [End-To-End Tracing Scenarios](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) for a list of end-to-end tracing scenarios, and their respective activity and tracing design.</span></span>  
+ <span data-ttu-id="af441-105">Finden Sie unter [End-To-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) eine Liste der End-to-End-ablaufverfolgungsszenarien und ihre entsprechenden Aktivität und Entwurf tracing.</span><span class="sxs-lookup"><span data-stu-id="af441-105">See [End-To-End Tracing Scenarios](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) for a list of end-to-end tracing scenarios, and their respective activity and tracing design.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="69b03-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="69b03-106">In This Section</span></span>  
- <span data-ttu-id="69b03-107">[Aktivität](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): aktivitätsablaufverfolgungen im beschreibt die [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] aktivitätsablaufverfolgungs-Modell.</span><span class="sxs-lookup"><span data-stu-id="69b03-107">[Activity](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md):  Describes activity traces in the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tracing model.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="af441-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="af441-106">In This Section</span></span>  
+ <span data-ttu-id="af441-107">[Aktivität](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): aktivitätsablaufverfolgungen in der Windows Communication Foundation (WCF)-aktivitätsablaufverfolgungs-Modell beschreibt.</span><span class="sxs-lookup"><span data-stu-id="af441-107">[Activity](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md):  Describes activity traces in the Windows Communication Foundation (WCF) tracing model.</span></span>  
   
- <span data-ttu-id="69b03-108">[Übertragung](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): Beschreibt die Übertragung in die [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tracing Modell und Übertragung zum Korrelieren von Aktivitäten innerhalb von Endpunkten verwenden.</span><span class="sxs-lookup"><span data-stu-id="69b03-108">[Transfer](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md):  Describes transfer in the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tracing model, and using transfer to correlate activities within endpoints.</span></span>  
+ <span data-ttu-id="af441-108">[Übertragung](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): Verwendung zum Korrelieren von Aktivitäten innerhalb von Endpunkten übertragen und Übertragung in die Windows Communication Foundation (WCF)-aktivitätsablaufverfolgungs-Modell beschreibt.</span><span class="sxs-lookup"><span data-stu-id="af441-108">[Transfer](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md):  Describes transfer in the Windows Communication Foundation (WCF) tracing model, and using transfer to correlate activities within endpoints.</span></span>  
   
- <span data-ttu-id="69b03-109">[Weitergabe](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): Aktivitätsweitergabe im beschreibt die [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tracing Modell, und Verwenden der Weitergabe zur Korrelation von Aktivitäten über Endpunkte hinweg.</span><span class="sxs-lookup"><span data-stu-id="69b03-109">[Propagation](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md):  Describes activity propagation in the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tracing model, and using propagation to correlate activities across endpoints.</span></span>  
+ <span data-ttu-id="af441-109">[Weitergabe](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): Aktivitätsweitergabe in Windows Communication Foundation (WCF) tracing Modell, und Verwenden der Weitergabe zur Korrelation von Aktivitäten über Endpunkte hinweg beschrieben.</span><span class="sxs-lookup"><span data-stu-id="af441-109">[Propagation](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md):  Describes activity propagation in the Windows Communication Foundation (WCF) tracing model, and using propagation to correlate activities across endpoints.</span></span>  
   
- [<span data-ttu-id="69b03-110">Ablaufverfolgungstyp – Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="69b03-110">Trace Type Summary</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
+ [<span data-ttu-id="af441-110">Ablaufverfolgungstyp – Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="af441-110">Trace Type Summary</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
   
- <span data-ttu-id="69b03-111">Bietet eine Zusammenfassung aller Aktivitätsablaufverfolgungstypen.</span><span class="sxs-lookup"><span data-stu-id="69b03-111">Provides a summary of all activity trace types</span></span>  
+ <span data-ttu-id="af441-111">Bietet eine Zusammenfassung aller Aktivitätsablaufverfolgungstypen.</span><span class="sxs-lookup"><span data-stu-id="af441-111">Provides a summary of all activity trace types</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69b03-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="69b03-112">See Also</span></span>  
- [<span data-ttu-id="69b03-113">Konfigurieren der Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="69b03-113">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [<span data-ttu-id="69b03-114">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)</span><span class="sxs-lookup"><span data-stu-id="69b03-114">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [<span data-ttu-id="69b03-115">End-to-End-Ablaufverfolgungsszenarien</span><span class="sxs-lookup"><span data-stu-id="69b03-115">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [<span data-ttu-id="69b03-116">Service Trace Viewer-Tool (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="69b03-116">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a><span data-ttu-id="af441-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="af441-112">See Also</span></span>  
+ [<span data-ttu-id="af441-113">Konfigurieren der Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="af441-113">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [<span data-ttu-id="af441-114">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)</span><span class="sxs-lookup"><span data-stu-id="af441-114">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [<span data-ttu-id="af441-115">End-to-End-Ablaufverfolgungsszenarien</span><span class="sxs-lookup"><span data-stu-id="af441-115">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [<span data-ttu-id="af441-116">Service Trace Viewer-Tool (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="af441-116">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

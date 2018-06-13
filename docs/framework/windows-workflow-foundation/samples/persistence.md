@@ -1,24 +1,13 @@
 ---
 title: Persistenz
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 79c14759-9f87-458a-b339-beec8300e339
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e07e215b9afed5cc2af950186cfe66c9808c8f2
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6a492449c988cbcac2c650fa77a277620be6dfd3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514581"
 ---
 # <a name="persistence"></a><span data-ttu-id="22485-102">Persistenz</span><span class="sxs-lookup"><span data-stu-id="22485-102">Persistence</span></span>
 <span data-ttu-id="22485-103">Dieser Abschnitt enthält Beispiele, in denen auf einem permanenten Medium in Windows Workflow Foundation (WF) beibehalten von Workflows veranschaulicht wird.</span><span class="sxs-lookup"><span data-stu-id="22485-103">This section contains samples that demonstrate persisting workflows to a durable medium in Windows Workflow Foundation (WF).</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579573"
 ---
 # <a name="globalization"></a><span data-ttu-id="8890c-102">Globalisierung</span><span class="sxs-lookup"><span data-stu-id="8890c-102">Globalization</span></span>
 <span data-ttu-id="8890c-103">Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Benutzeroberflächen und regionale Daten für Benutzer verschiedener Kulturen unterstützen.</span><span class="sxs-lookup"><span data-stu-id="8890c-103">Globalization involves designing and developing a world-ready app that supports localized interfaces and regional data for users in multiple cultures.</span></span> <span data-ttu-id="8890c-104">Bevor Sie mit der Entwurfsphase beginnen, sollten Sie festlegen, welche Kulturen die App unterstützen soll.</span><span class="sxs-lookup"><span data-stu-id="8890c-104">Before beginning the design phase, you should determine which cultures your app will support.</span></span> <span data-ttu-id="8890c-105">Auch wenn eine App standardmäßig auf eine einzige Kultur oder Region ausgerichtet ist, kann Sie so entworfen und geschrieben werden, dass sie leicht auf Benutzer in anderen Kulturen oder Regionen ausgeweitet werden kann.</span><span class="sxs-lookup"><span data-stu-id="8890c-105">Although an app targets a single culture or region as its default, you can design and write it so that it can easily be extended to users in other cultures or regions.</span></span>  

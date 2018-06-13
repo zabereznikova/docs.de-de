@@ -1,14 +1,6 @@
 ---
 title: ISymUnmanagedWriter3::Commit-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter3.Commit
 api_location:
@@ -23,32 +15,29 @@ helpviewer_keywords:
 ms.assetid: f6961922-46ec-4d2c-8369-85f880731f37
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 10c36f1972e3c55b22a472c81ec8499fcfde3405
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9e4e2cd49bdffd0a1293a5601cb44e4804e2b1ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428953"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="49695-102">ISymUnmanagedWriter3::Commit-Methode</span><span class="sxs-lookup"><span data-stu-id="49695-102">ISymUnmanagedWriter3::Commit Method</span></span>
-<span data-ttu-id="49695-103">Führt einen Commit der Änderungen, die bisher in den Stream geschrieben.</span><span class="sxs-lookup"><span data-stu-id="49695-103">Commits the changes written so far to the stream.</span></span>  
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="ca135-102">ISymUnmanagedWriter3::Commit-Methode</span><span class="sxs-lookup"><span data-stu-id="ca135-102">ISymUnmanagedWriter3::Commit Method</span></span>
+<span data-ttu-id="ca135-103">Führt einen Commit der Änderungen, die bisher in den Stream geschrieben.</span><span class="sxs-lookup"><span data-stu-id="ca135-103">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49695-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="49695-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ca135-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ca135-104">Syntax</span></span>  
   
 ```  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="49695-105">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="49695-105">Return Value</span></span>  
- <span data-ttu-id="49695-106">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="49695-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ca135-105">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="ca135-105">Return Value</span></span>  
+ <span data-ttu-id="ca135-106">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="ca135-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49695-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="49695-107">Requirements</span></span>  
- <span data-ttu-id="49695-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="49695-108">**Header:** CorSym.idl , CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ca135-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ca135-107">Requirements</span></span>  
+ <span data-ttu-id="ca135-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ca135-108">**Header:** CorSym.idl , CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49695-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="49695-109">See Also</span></span>  
- [<span data-ttu-id="49695-110">ISymUnmanagedWriter3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="49695-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ca135-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ca135-109">See Also</span></span>  
+ [<span data-ttu-id="ca135-110">ISymUnmanagedWriter3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ca135-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
