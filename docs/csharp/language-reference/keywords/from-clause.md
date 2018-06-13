@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218396"
 ---
 # <a name="from-clause-c-reference"></a><span data-ttu-id="5d02a-102">from-Klausel (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="5d02a-102">from clause (C# Reference)</span></span>
 <span data-ttu-id="5d02a-103">Ein Abfrageausdruck muss mit einer `from`-Klausel beginnen.</span><span class="sxs-lookup"><span data-stu-id="5d02a-103">A query expression must begin with a `from` clause.</span></span> <span data-ttu-id="5d02a-104">Darüber hinaus kann ein Abfrageausdruck Unterabfragen enthalten, die auch mit einer `from`-Klausel beginnen.</span><span class="sxs-lookup"><span data-stu-id="5d02a-104">Additionally, a query expression can contain sub-queries, which also begin with a `from` clause.</span></span> <span data-ttu-id="5d02a-105">Die `from`-Klausel gibt Folgendes an:</span><span class="sxs-lookup"><span data-stu-id="5d02a-105">The `from` clause specifies the following:</span></span>  

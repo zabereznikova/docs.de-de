@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216816"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a><span data-ttu-id="f3d05-103">Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)</span><span class="sxs-lookup"><span data-stu-id="f3d05-103">Using .NET Core SDK and tools in Continuous Integration (CI)</span></span>
 

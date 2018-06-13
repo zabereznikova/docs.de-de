@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266567"
 ---
 # <a name="using-c-reference"></a><span data-ttu-id="3e71d-102">using (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="3e71d-102">using (C# Reference)</span></span>
 <span data-ttu-id="3e71d-103">Das Schlüsselwort `using` hat zwei Hauptverwendungen:</span><span class="sxs-lookup"><span data-stu-id="3e71d-103">The `using` keyword has two major uses:</span></span>  

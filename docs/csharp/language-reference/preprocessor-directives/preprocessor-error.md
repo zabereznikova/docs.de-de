@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269398"
 ---
 # <a name="error-c-reference"></a><span data-ttu-id="c905f-102">#error (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="c905f-102">#error (C# Reference)</span></span>
 <span data-ttu-id="c905f-103">Mit `#error` können Sie von einem bestimmten Ort in Ihrem Code aus einen Fehler generieren.</span><span class="sxs-lookup"><span data-stu-id="c905f-103">`#error` lets you generate an error from a specific location in your code.</span></span> <span data-ttu-id="c905f-104">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="c905f-104">For example:</span></span>  

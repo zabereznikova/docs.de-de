@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219078"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a><span data-ttu-id="8f0e7-103">Erforderliche Komponenten für .NET Core unter macOS</span><span class="sxs-lookup"><span data-stu-id="8f0e7-103">Prerequisites for .NET Core on macOS</span></span>
 

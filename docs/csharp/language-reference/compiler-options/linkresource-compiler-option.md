@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219179"
 ---
 # <a name="-linkresource-c-compiler-options"></a><span data-ttu-id="d167f-102">-linkresource (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="d167f-102">-linkresource (C# Compiler Options)</span></span>
 <span data-ttu-id="d167f-103">Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei</span><span class="sxs-lookup"><span data-stu-id="d167f-103">Creates a link to a .NET Framework resource in the output file.</span></span> <span data-ttu-id="d167f-104">Die Ressourcendateien wird nicht in die Ausgabedatei eingefügt.</span><span class="sxs-lookup"><span data-stu-id="d167f-104">The resource file is not added to the output file.</span></span> <span data-ttu-id="d167f-105">Dies ist ein Unterschied zur Option [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), die eine Ressourcendatei in die Ausgabedatei einbettet.</span><span class="sxs-lookup"><span data-stu-id="d167f-105">This differs from the [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) option which does embed a resource file in the output file.</span></span>  

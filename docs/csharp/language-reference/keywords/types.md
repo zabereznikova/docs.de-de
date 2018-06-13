@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270424"
 ---
 # <a name="types-c-reference"></a><span data-ttu-id="ea9c7-102">Typen (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ea9c7-102">Types (C# Reference)</span></span>
 <span data-ttu-id="ea9c7-103">Das C#-Typensystem enthält die folgenden Kategorien:</span><span class="sxs-lookup"><span data-stu-id="ea9c7-103">The C# typing system contains the following categories:</span></span>  

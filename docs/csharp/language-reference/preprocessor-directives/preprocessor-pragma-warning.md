@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273656"
 ---
 # <a name="pragma-warning-c-reference"></a><span data-ttu-id="955b0-102">#pragma warning (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="955b0-102">#pragma warning (C# Reference)</span></span>
 <span data-ttu-id="955b0-103">`#pragma warning` kann bestimmte Warnungen aktivieren oder deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="955b0-103">`#pragma warning` can enable or disable certain warnings.</span></span>  

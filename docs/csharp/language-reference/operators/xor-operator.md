@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271249"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="d5dc2-102">Operator ^ (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="d5dc2-102">^ Operator (C# Reference)</span></span>
 <span data-ttu-id="d5dc2-103">Binäre `^`-Operatoren sind für integrale Typen und `bool` vordefiniert.</span><span class="sxs-lookup"><span data-stu-id="d5dc2-103">Binary `^` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="d5dc2-104">Für integrale Typen berechnet `^` die bitweise XOR-Operation der Operanden.</span><span class="sxs-lookup"><span data-stu-id="d5dc2-104">For integral types, `^` computes the bitwise exclusive-OR of its operands.</span></span> <span data-ttu-id="d5dc2-105">Für `bool`-Operanden berechnet `^` den XOR-Operator seiner Operanden. Das bedeutet, dass das Ergebnis nur dann `true` ist, wenn einer und nur einer der Operanden `true` ist.</span><span class="sxs-lookup"><span data-stu-id="d5dc2-105">For `bool` operands, `^` computes the logical exclusive-or of its operands; that is, the result is `true` if and only if exactly one of its operands is `true`.</span></span>  

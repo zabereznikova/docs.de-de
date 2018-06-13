@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272438"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="bc4b7-102">Operator != (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="bc4b7-102">!= Operator (C# Reference)</span></span>
 <span data-ttu-id="bc4b7-103">Der Ungleichheitsoperator (`!=`) gibt FALSE zurück, wenn die Operanden gleich sind; andernfalls TRUE.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-103">The inequality operator (`!=`) returns false if its operands are equal, true otherwise.</span></span> <span data-ttu-id="bc4b7-104">Vergleichsoperatoren sind für alle Typen, einschließlich Zeichenfolgen und Objekte vordefiniert.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-104">Inequality operators are predefined for all types, including string and object.</span></span> <span data-ttu-id="bc4b7-105">Benutzerdefinierte Typen können den Operator `!=` überladen.</span><span class="sxs-lookup"><span data-stu-id="bc4b7-105">User-defined types can overload the `!=` operator.</span></span>  

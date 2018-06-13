@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273314"
 ---
 # <a name="operator-keywords-c-reference"></a><span data-ttu-id="cd7e2-102">Operatorschlüsselwörter (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="cd7e2-102">Operator Keywords (C# Reference)</span></span>
 <span data-ttu-id="cd7e2-103">Werden verwendet, um verschiedene Aktionen auszuführen wie das Erstellen von Objekten, das Überprüfen des Laufzeittyps eines Objekts, das Abrufen der Größe eines Typs usw.</span><span class="sxs-lookup"><span data-stu-id="cd7e2-103">Used to perform miscellaneous actions such as creating objects, checking the run-time type of an object, obtaining the size of a type, and other actions.</span></span> <span data-ttu-id="cd7e2-104">In diesem Abschnitt werden die folgenden Schlüsselwörter beschrieben:</span><span class="sxs-lookup"><span data-stu-id="cd7e2-104">This section introduces the following keywords:</span></span>  

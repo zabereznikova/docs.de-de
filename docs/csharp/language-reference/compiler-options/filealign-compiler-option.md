@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218370"
 ---
 # <a name="-filealign-c-compiler-options"></a><span data-ttu-id="4c359-102">-filealign (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="4c359-102">-filealign (C# Compiler Options)</span></span>
 <span data-ttu-id="4c359-103">Mit der Option **-filealign** können Sie die Größe der Abschnitte in Ihrer Ausgabedatei angeben.</span><span class="sxs-lookup"><span data-stu-id="4c359-103">The **-filealign** option lets you specify the size of sections in your output file.</span></span>  

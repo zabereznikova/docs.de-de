@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526157"
 ---
 # <a name="contextmenu-component-windows-forms"></a><span data-ttu-id="ba691-102">ContextMenu-Komponente (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ba691-102">ContextMenu Component (Windows Forms)</span></span>
 > [!NOTE]
