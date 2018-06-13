@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514767"
 ---
 # <a name="properties-vs-arguments"></a><span data-ttu-id="27c6f-102">Eigenschaften im Vergleich zu Argumente</span><span class="sxs-lookup"><span data-stu-id="27c6f-102">Properties vs. Arguments</span></span>
 <span data-ttu-id="27c6f-103">Es gibt mehrere Möglichkeiten für die Übergabe von Daten an eine Aktivität.</span><span class="sxs-lookup"><span data-stu-id="27c6f-103">There are several options available for passing data into an activity.</span></span> <span data-ttu-id="27c6f-104">Neben dem Verwenden von <xref:System.Activities.InArgument> können auch Aktivitäten entwickelt werden, um Daten entweder mit CLR-Standardeigenschaften oder öffentlichen <xref:System.Activities.ActivityAction>-Eigenschaften zu empfangen.</span><span class="sxs-lookup"><span data-stu-id="27c6f-104">In addition to using <xref:System.Activities.InArgument>, activities can also be developed that receive data using either standard CLR Properties or public <xref:System.Activities.ActivityAction> properties.</span></span> <span data-ttu-id="27c6f-105">In diesem Thema wird erläutert, wie der richtige Methodentyp ausgewählt wird.</span><span class="sxs-lookup"><span data-stu-id="27c6f-105">This topic discusses how to select the appropriate method type.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529765"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="adf6c-102">Gewusst wie: Aktivieren von Drag & Drop-Operationen mithilfe des RichTextBox-Steuerelements von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="adf6c-102">How to: Enable Drag-and-Drop Operations with the Windows Forms RichTextBox Control</span></span>
 <span data-ttu-id="adf6c-103">Drag &amp; Drop-Vorgänge mit dem Windows Forms-Steuerelement <xref:System.Windows.Forms.RichTextBox> erfolgen durch Verarbeitung der Ereignisse <xref:System.Windows.Forms.RichTextBox.DragEnter> und <xref:System.Windows.Forms.RichTextBox.DragDrop> .</span><span class="sxs-lookup"><span data-stu-id="adf6c-103">Drag-and-drop operations with the Windows Forms <xref:System.Windows.Forms.RichTextBox> control are done by handling the <xref:System.Windows.Forms.RichTextBox.DragEnter> and <xref:System.Windows.Forms.RichTextBox.DragDrop> events.</span></span> <span data-ttu-id="adf6c-104">Durch das <xref:System.Windows.Forms.RichTextBox> -Steuerelement werden Drag &amp; Drop-Vorgänge daher sehr einfach.</span><span class="sxs-lookup"><span data-stu-id="adf6c-104">Thus, drag-and-drop operations are extremely simple with the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
