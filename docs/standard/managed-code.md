@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574542"
 ---
 # <a name="what-is-managed-code"></a><span data-ttu-id="8cc0a-103">Was ist „verwalteter Code“?</span><span class="sxs-lookup"><span data-stu-id="8cc0a-103">What is "managed code"?</span></span>
 

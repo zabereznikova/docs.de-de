@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571422"
 ---
 # <a name="implementing-retries-with-exponential-backoff"></a><span data-ttu-id="b3c11-103">Implementieren von Wiederholungen mit exponentiellem Backoff</span><span class="sxs-lookup"><span data-stu-id="b3c11-103">Implementing retries with exponential backoff</span></span>
 
