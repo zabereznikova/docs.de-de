@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561406"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a><span data-ttu-id="eda11-102">Gewusst wie: Angeben des Ursprungs einer Transformation mithilfe von relativen Werten</span><span class="sxs-lookup"><span data-stu-id="eda11-102">How to: Specify the Origin of a Transform by Using Relative Values</span></span>
 <span data-ttu-id="eda11-103">Dieses Beispiel veranschaulicht die relativen Werte verwenden, um den Ursprung der angeben einer <xref:System.Windows.UIElement.RenderTransform%2A> angewendeten eine <xref:System.Windows.FrameworkElement>.</span><span class="sxs-lookup"><span data-stu-id="eda11-103">This example shows how to use relative values to specify the origin of a <xref:System.Windows.UIElement.RenderTransform%2A> that is applied to a <xref:System.Windows.FrameworkElement>.</span></span>  

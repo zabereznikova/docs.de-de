@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497632"
 ---
 # <a name="security-concepts-used-in-wcf"></a><span data-ttu-id="93c5c-102">In WCF verwendete Sicherheitsbegriffe</span><span class="sxs-lookup"><span data-stu-id="93c5c-102">Security Concepts Used in WCF</span></span>
 <span data-ttu-id="93c5c-103">Windows Communication Foundation (WCF)-Sicherheit wird baut auf Begriffen bereits in Verwendung und in diversen Sicherheitsinfrastrukturen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="93c5c-103">Windows Communication Foundation (WCF) security is built upon concepts already in use and deployed in various security infrastructures.</span></span>  

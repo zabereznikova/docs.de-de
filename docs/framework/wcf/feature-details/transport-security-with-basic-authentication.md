@@ -1,60 +1,49 @@
 ---
 title: Transportsicherheit mit Standardauthentifizierung
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-caps.latest.revision: 18
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7430767c80515d14ae23e17ae2b94e0acc97ff30
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 65d076a9fef716fca4fe87df6bc5c7773e2dda0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499114"
 ---
-# <a name="transport-security-with-basic-authentication"></a><span data-ttu-id="04f73-102">Transportsicherheit mit Standardauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="04f73-102">Transport Security with Basic Authentication</span></span>
-<span data-ttu-id="04f73-103">Die folgende Abbildung zeigt einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst und -Client.</span><span class="sxs-lookup"><span data-stu-id="04f73-103">The following illustration shows a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service and client.</span></span> <span data-ttu-id="04f73-104">Der Server benötigt ein gültiges X.509-Zertifikat, das für Secure Sockets Layer (SSL) verwendet werden kann, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen.</span><span class="sxs-lookup"><span data-stu-id="04f73-104">The server needs a valid X.509 certificate that can be used for Secure Sockets Layer (SSL), and the clients must trust the server’s certificate.</span></span> <span data-ttu-id="04f73-105">Außerdem verfügt der Webdienst bereits über eine SSL-Implementierung, die Sie verwenden können.</span><span class="sxs-lookup"><span data-stu-id="04f73-105">Further, the Web service already has an SSL implementation that can be used.</span></span> <span data-ttu-id="04f73-106">Weitere Informationen zum Aktivieren der Standardauthentifizierung auf Internet Information Services (IIS) finden Sie unter [ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822).</span><span class="sxs-lookup"><span data-stu-id="04f73-106">For more information about enabling basic authentication on Internet Information Services (IIS), see [http://go.microsoft.com/fwlink/?LinkId=83822](http://go.microsoft.com/fwlink/?LinkId=83822).</span></span>  
+# <a name="transport-security-with-basic-authentication"></a><span data-ttu-id="5278e-102">Transportsicherheit mit Standardauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="5278e-102">Transport Security with Basic Authentication</span></span>
+<span data-ttu-id="5278e-103">Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst und Client.</span><span class="sxs-lookup"><span data-stu-id="5278e-103">The following illustration shows a Windows Communication Foundation (WCF) service and client.</span></span> <span data-ttu-id="5278e-104">Der Server benötigt ein gültiges X.509-Zertifikat, das für Secure Sockets Layer (SSL) verwendet werden kann, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen.</span><span class="sxs-lookup"><span data-stu-id="5278e-104">The server needs a valid X.509 certificate that can be used for Secure Sockets Layer (SSL), and the clients must trust the server’s certificate.</span></span> <span data-ttu-id="5278e-105">Außerdem verfügt der Webdienst bereits über eine SSL-Implementierung, die Sie verwenden können.</span><span class="sxs-lookup"><span data-stu-id="5278e-105">Further, the Web service already has an SSL implementation that can be used.</span></span> <span data-ttu-id="5278e-106">Weitere Informationen zum Aktivieren der Standardauthentifizierung auf Internet Information Services (IIS) finden Sie unter [ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822).</span><span class="sxs-lookup"><span data-stu-id="5278e-106">For more information about enabling basic authentication on Internet Information Services (IIS), see [http://go.microsoft.com/fwlink/?LinkId=83822](http://go.microsoft.com/fwlink/?LinkId=83822).</span></span>  
   
- <span data-ttu-id="04f73-107">![Transportsicherheit mit Standardauthentifizierung](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")</span><span class="sxs-lookup"><span data-stu-id="04f73-107">![Transport security with basic authentication](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")</span></span>  
+ <span data-ttu-id="5278e-107">![Transportsicherheit mit Standardauthentifizierung](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")</span><span class="sxs-lookup"><span data-stu-id="5278e-107">![Transport security with basic authentication](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")</span></span>  
   
-|<span data-ttu-id="04f73-108">Merkmal</span><span class="sxs-lookup"><span data-stu-id="04f73-108">Characteristic</span></span>|<span data-ttu-id="04f73-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="04f73-109">Description</span></span>|  
+|<span data-ttu-id="5278e-108">Merkmal</span><span class="sxs-lookup"><span data-stu-id="5278e-108">Characteristic</span></span>|<span data-ttu-id="5278e-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5278e-109">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="04f73-110">Sicherheitsmodus</span><span class="sxs-lookup"><span data-stu-id="04f73-110">Security Mode</span></span>|<span data-ttu-id="04f73-111">Transport</span><span class="sxs-lookup"><span data-stu-id="04f73-111">Transport</span></span>|  
-|<span data-ttu-id="04f73-112">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="04f73-112">Interoperability</span></span>|<span data-ttu-id="04f73-113">Mit vorhandenen Webdienstclients und Diensten</span><span class="sxs-lookup"><span data-stu-id="04f73-113">With existing Web service clients and services</span></span>|  
-|<span data-ttu-id="04f73-114">Authentifizierung (Server)</span><span class="sxs-lookup"><span data-stu-id="04f73-114">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="04f73-115">Authentifizierung (Client)</span><span class="sxs-lookup"><span data-stu-id="04f73-115">Authentication (Client)</span></span>|<span data-ttu-id="04f73-116">Ja (mithilfe von HTTPS)</span><span class="sxs-lookup"><span data-stu-id="04f73-116">Yes (using HTTPS)</span></span><br /><br /> <span data-ttu-id="04f73-117">Ja (mithilfe von Benutzername/Kennwort)</span><span class="sxs-lookup"><span data-stu-id="04f73-117">Yes (through User name/Password)</span></span>|  
-|<span data-ttu-id="04f73-118">Integrität</span><span class="sxs-lookup"><span data-stu-id="04f73-118">Integrity</span></span>|<span data-ttu-id="04f73-119">Ja</span><span class="sxs-lookup"><span data-stu-id="04f73-119">Yes</span></span>|  
-|<span data-ttu-id="04f73-120">Vertraulichkeit</span><span class="sxs-lookup"><span data-stu-id="04f73-120">Confidentiality</span></span>|<span data-ttu-id="04f73-121">Ja</span><span class="sxs-lookup"><span data-stu-id="04f73-121">Yes</span></span>|  
-|<span data-ttu-id="04f73-122">Transport</span><span class="sxs-lookup"><span data-stu-id="04f73-122">Transport</span></span>|<span data-ttu-id="04f73-123">HTTPS</span><span class="sxs-lookup"><span data-stu-id="04f73-123">HTTPS</span></span>|  
-|<span data-ttu-id="04f73-124">Bindung</span><span class="sxs-lookup"><span data-stu-id="04f73-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="5278e-110">Sicherheitsmodus</span><span class="sxs-lookup"><span data-stu-id="5278e-110">Security Mode</span></span>|<span data-ttu-id="5278e-111">Transport</span><span class="sxs-lookup"><span data-stu-id="5278e-111">Transport</span></span>|  
+|<span data-ttu-id="5278e-112">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="5278e-112">Interoperability</span></span>|<span data-ttu-id="5278e-113">Mit vorhandenen Webdienstclients und Diensten</span><span class="sxs-lookup"><span data-stu-id="5278e-113">With existing Web service clients and services</span></span>|  
+|<span data-ttu-id="5278e-114">Authentifizierung (Server)</span><span class="sxs-lookup"><span data-stu-id="5278e-114">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="5278e-115">Authentifizierung (Client)</span><span class="sxs-lookup"><span data-stu-id="5278e-115">Authentication (Client)</span></span>|<span data-ttu-id="5278e-116">Ja (mithilfe von HTTPS)</span><span class="sxs-lookup"><span data-stu-id="5278e-116">Yes (using HTTPS)</span></span><br /><br /> <span data-ttu-id="5278e-117">Ja (mithilfe von Benutzername/Kennwort)</span><span class="sxs-lookup"><span data-stu-id="5278e-117">Yes (through User name/Password)</span></span>|  
+|<span data-ttu-id="5278e-118">Integrität</span><span class="sxs-lookup"><span data-stu-id="5278e-118">Integrity</span></span>|<span data-ttu-id="5278e-119">Ja</span><span class="sxs-lookup"><span data-stu-id="5278e-119">Yes</span></span>|  
+|<span data-ttu-id="5278e-120">Vertraulichkeit</span><span class="sxs-lookup"><span data-stu-id="5278e-120">Confidentiality</span></span>|<span data-ttu-id="5278e-121">Ja</span><span class="sxs-lookup"><span data-stu-id="5278e-121">Yes</span></span>|  
+|<span data-ttu-id="5278e-122">Transport</span><span class="sxs-lookup"><span data-stu-id="5278e-122">Transport</span></span>|<span data-ttu-id="5278e-123">HTTPS</span><span class="sxs-lookup"><span data-stu-id="5278e-123">HTTPS</span></span>|  
+|<span data-ttu-id="5278e-124">Bindung</span><span class="sxs-lookup"><span data-stu-id="5278e-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="04f73-125">Dienst</span><span class="sxs-lookup"><span data-stu-id="04f73-125">Service</span></span>  
- <span data-ttu-id="04f73-126">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="04f73-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="04f73-127">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="04f73-127">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="5278e-125">Dienst</span><span class="sxs-lookup"><span data-stu-id="5278e-125">Service</span></span>  
+ <span data-ttu-id="5278e-126">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="5278e-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="5278e-127">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="5278e-127">Do one of the following:</span></span>  
   
--   <span data-ttu-id="04f73-128">Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="04f73-128">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="5278e-128">Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="5278e-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="04f73-129">Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.</span><span class="sxs-lookup"><span data-stu-id="04f73-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="5278e-129">Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.</span><span class="sxs-lookup"><span data-stu-id="5278e-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="04f73-130">Code</span><span class="sxs-lookup"><span data-stu-id="04f73-130">Code</span></span>  
- <span data-ttu-id="04f73-131">Der folgende Code zeigt, wie Sie einen Dienstendpunkt erstellen, der zur Sicherstellung der Übertragungssicherheit einen Benutzernamen und ein Kennwort für die Windows-Domäne verwendet.</span><span class="sxs-lookup"><span data-stu-id="04f73-131">The following code shows how to create a service endpoint that uses a Windows domain user name and password for transfer security.</span></span> <span data-ttu-id="04f73-132">Beachten Sie, dass der Dienst ein X.509-Zertifikat erfordert, um den Client zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="04f73-132">Note that the service requires an X.509 certificate to authenticate to the client.</span></span> <span data-ttu-id="04f73-133">Weitere Informationen finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) und [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="04f73-133">For more information, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
+### <a name="code"></a><span data-ttu-id="5278e-130">Code</span><span class="sxs-lookup"><span data-stu-id="5278e-130">Code</span></span>  
+ <span data-ttu-id="5278e-131">Der folgende Code zeigt, wie Sie einen Dienstendpunkt erstellen, der zur Sicherstellung der Übertragungssicherheit einen Benutzernamen und ein Kennwort für die Windows-Domäne verwendet.</span><span class="sxs-lookup"><span data-stu-id="5278e-131">The following code shows how to create a service endpoint that uses a Windows domain user name and password for transfer security.</span></span> <span data-ttu-id="5278e-132">Beachten Sie, dass der Dienst ein X.509-Zertifikat erfordert, um den Client zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="5278e-132">Note that the service requires an X.509 certificate to authenticate to the client.</span></span> <span data-ttu-id="5278e-133">Weitere Informationen finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) und [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="5278e-133">For more information, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a><span data-ttu-id="04f73-134">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="04f73-134">Configuration</span></span>  
- <span data-ttu-id="04f73-135">Der folgende Code konfiguriert einen Dienst, um die Standardauthentifizierung mit der Sicherheit auf Transportebene zu verwenden:</span><span class="sxs-lookup"><span data-stu-id="04f73-135">The following configures a service to use basic authentication with transport-level security:</span></span>  
+## <a name="configuration"></a><span data-ttu-id="5278e-134">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="5278e-134">Configuration</span></span>  
+ <span data-ttu-id="5278e-135">Der folgende Code konfiguriert einen Dienst, um die Standardauthentifizierung mit der Sicherheit auf Transportebene zu verwenden:</span><span class="sxs-lookup"><span data-stu-id="5278e-135">The following configures a service to use basic authentication with transport-level security:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -82,22 +71,22 @@ ms.lasthandoff: 04/30/2018
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="04f73-136">Client</span><span class="sxs-lookup"><span data-stu-id="04f73-136">Client</span></span>  
+## <a name="client"></a><span data-ttu-id="5278e-136">Client</span><span class="sxs-lookup"><span data-stu-id="5278e-136">Client</span></span>  
   
-### <a name="code"></a><span data-ttu-id="04f73-137">Code</span><span class="sxs-lookup"><span data-stu-id="04f73-137">Code</span></span>  
- <span data-ttu-id="04f73-138">Der folgende Code zeigt den Clientcode, der den Benutzernamen und das Kennwort enthält.</span><span class="sxs-lookup"><span data-stu-id="04f73-138">The following code shows the client code that includes the user name and password.</span></span> <span data-ttu-id="04f73-139">Beachten Sie, dass der Benutzer einen gültigen Windows-Benutzernamen und ein Kennwort angeben muss.</span><span class="sxs-lookup"><span data-stu-id="04f73-139">Note that the user must provide a valid Windows user name and password.</span></span> <span data-ttu-id="04f73-140">Der Code zum Zurückgeben des Benutzernamens und des Kennworts ist hier nicht gezeigt.</span><span class="sxs-lookup"><span data-stu-id="04f73-140">The code to return the user name and password is not shown here.</span></span> <span data-ttu-id="04f73-141">Verwenden Sie ein Dialogfeld oder ein anderes Oberflächenelement, um die Informationen vom Benutzer abzufragen.</span><span class="sxs-lookup"><span data-stu-id="04f73-141">Use a dialog box or other interface to query the user for the information.</span></span>  
+### <a name="code"></a><span data-ttu-id="5278e-137">Code</span><span class="sxs-lookup"><span data-stu-id="5278e-137">Code</span></span>  
+ <span data-ttu-id="5278e-138">Der folgende Code zeigt den Clientcode, der den Benutzernamen und das Kennwort enthält.</span><span class="sxs-lookup"><span data-stu-id="5278e-138">The following code shows the client code that includes the user name and password.</span></span> <span data-ttu-id="5278e-139">Beachten Sie, dass der Benutzer einen gültigen Windows-Benutzernamen und ein Kennwort angeben muss.</span><span class="sxs-lookup"><span data-stu-id="5278e-139">Note that the user must provide a valid Windows user name and password.</span></span> <span data-ttu-id="5278e-140">Der Code zum Zurückgeben des Benutzernamens und des Kennworts ist hier nicht gezeigt.</span><span class="sxs-lookup"><span data-stu-id="5278e-140">The code to return the user name and password is not shown here.</span></span> <span data-ttu-id="5278e-141">Verwenden Sie ein Dialogfeld oder ein anderes Oberflächenelement, um die Informationen vom Benutzer abzufragen.</span><span class="sxs-lookup"><span data-stu-id="5278e-141">Use a dialog box or other interface to query the user for the information.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="04f73-142">Sie können den Benutzernamen und das Kennwort nur mithilfe von Code festlegen.</span><span class="sxs-lookup"><span data-stu-id="04f73-142">User name and password can only be set using code.</span></span>  
+>  <span data-ttu-id="5278e-142">Sie können den Benutzernamen und das Kennwort nur mithilfe von Code festlegen.</span><span class="sxs-lookup"><span data-stu-id="5278e-142">User name and password can only be set using code.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="04f73-143">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="04f73-143">Configuration</span></span>  
- <span data-ttu-id="04f73-144">Der folgende Code zeigt die Clientkonfiguration.</span><span class="sxs-lookup"><span data-stu-id="04f73-144">The following code shows the client configuration.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="5278e-143">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="5278e-143">Configuration</span></span>  
+ <span data-ttu-id="5278e-144">Der folgende Code zeigt die Clientkonfiguration.</span><span class="sxs-lookup"><span data-stu-id="5278e-144">The following code shows the client configuration.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="04f73-145">Sie können die Konfiguration nicht verwenden, um den Benutzernamen und das Kennwort festzulegen.</span><span class="sxs-lookup"><span data-stu-id="04f73-145">You cannot use configuration to set the user name and password.</span></span> <span data-ttu-id="04f73-146">Die hier gezeigte Konfiguration muss mithilfe von Code erweitert werden, um den Benutzernamen und das Kennwort festzulegen.</span><span class="sxs-lookup"><span data-stu-id="04f73-146">The configuration shown here must be augmented using code to set the user name and password.</span></span>  
+>  <span data-ttu-id="5278e-145">Sie können die Konfiguration nicht verwenden, um den Benutzernamen und das Kennwort festzulegen.</span><span class="sxs-lookup"><span data-stu-id="5278e-145">You cannot use configuration to set the user name and password.</span></span> <span data-ttu-id="5278e-146">Die hier gezeigte Konfiguration muss mithilfe von Code erweitert werden, um den Benutzernamen und das Kennwort festzulegen.</span><span class="sxs-lookup"><span data-stu-id="5278e-146">The configuration shown here must be augmented using code to set the user name and password.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -123,11 +112,11 @@ ms.lasthandoff: 04/30/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="04f73-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="04f73-147">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5278e-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5278e-147">See Also</span></span>  
  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
  <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
- [<span data-ttu-id="04f73-148">Arbeiten mit Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="04f73-148">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [<span data-ttu-id="04f73-149">Vorgehensweise: Konfigurieren eines Ports mit einem SSL-Zertifikat</span><span class="sxs-lookup"><span data-stu-id="04f73-149">How to: Configure a Port with an SSL Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [<span data-ttu-id="04f73-150">Übersicht über die Sicherheit</span><span class="sxs-lookup"><span data-stu-id="04f73-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="04f73-151">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="04f73-151">\<clientCredentials></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
- [<span data-ttu-id="04f73-152">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="04f73-152">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [<span data-ttu-id="5278e-148">Arbeiten mit Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="5278e-148">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="5278e-149">Vorgehensweise: Konfigurieren eines Ports mit einem SSL-Zertifikat</span><span class="sxs-lookup"><span data-stu-id="5278e-149">How to: Configure a Port with an SSL Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [<span data-ttu-id="5278e-150">Übersicht über die Sicherheit</span><span class="sxs-lookup"><span data-stu-id="5278e-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="5278e-151">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="5278e-151">\<clientCredentials></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
+ [<span data-ttu-id="5278e-152">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="5278e-152">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

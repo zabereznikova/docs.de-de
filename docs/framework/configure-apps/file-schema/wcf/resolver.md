@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749022"
 ---
 # <a name="ltresolvergt"></a><span data-ttu-id="a4ff7-102">&lt;Konfliktlöser&gt;</span><span class="sxs-lookup"><span data-stu-id="a4ff7-102">&lt;resolver&gt;</span></span>
 <span data-ttu-id="a4ff7-103">Gibt einen Peerresolver an, der zum Auflösen einer Peermesh-ID in einen Satz von Peerknotenadressen verwendet wird, die verschiedene Knoten im Mesh angeben.</span><span class="sxs-lookup"><span data-stu-id="a4ff7-103">Specifies a peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>  

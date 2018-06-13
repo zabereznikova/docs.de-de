@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498578"
 ---
 # <a name="syndication-extensibility"></a><span data-ttu-id="e8ef6-102">Syndication-Erweiterbarkeit</span><span class="sxs-lookup"><span data-stu-id="e8ef6-102">Syndication Extensibility</span></span>
 <span data-ttu-id="e8ef6-103">Die Syndication-API ist darauf ausgelegt, ein formatunabhängiges Programmiermodell bereitzustellen, mit dem Fremdinhalte in verschiedenen Formaten ausgegeben und direkt übertragen werden können.</span><span class="sxs-lookup"><span data-stu-id="e8ef6-103">The Syndication API is designed to provide a format-neutral programming model that allows syndicated content to be written to the wire in a variety of formats.</span></span> <span data-ttu-id="e8ef6-104">Das abstrakte Datenmodell besteht aus den folgenden Klassen:</span><span class="sxs-lookup"><span data-stu-id="e8ef6-104">The abstract data model consists of the following classes:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496379"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a><span data-ttu-id="71b1e-102">Bereitstellen eines IIS-gehosteten WCF-Diensts</span><span class="sxs-lookup"><span data-stu-id="71b1e-102">Deploying an Internet Information Services-Hosted WCF Service</span></span>
 <span data-ttu-id="71b1e-103">Entwickeln und Bereitstellen eines Windows Communication Foundation (WCF)-Diensts, das in Internet Information Services (IIS) gehostet wird umfasst die folgenden Aufgaben:</span><span class="sxs-lookup"><span data-stu-id="71b1e-103">Developing and deploying a Windows Communication Foundation (WCF) service that is hosted in Internet Information Services (IIS) consists of the following tasks:</span></span>  

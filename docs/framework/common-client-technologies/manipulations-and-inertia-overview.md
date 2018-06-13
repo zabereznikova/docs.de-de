@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744394"
 ---
 # <a name="manipulations-and-inertia-overview"></a><span data-ttu-id="cee97-102">Überblick über Manipulationen und Trägheit</span><span class="sxs-lookup"><span data-stu-id="cee97-102">Manipulations and Inertia Overview</span></span>
 <span data-ttu-id="cee97-103">Mit *Manipulationen* sind Benutzer in der Lage, Elemente der Benutzeroberfläche (User Interface, UI) mithilfe von *Manipulatoren* zu verschieben, zu drehen und in der Größe zu ändern.</span><span class="sxs-lookup"><span data-stu-id="cee97-103">*Manipulations* enable users to move, rotate, and resize user interface (UI) elements by using *manipulators*.</span></span> <span data-ttu-id="cee97-104">Ein Manipulator kann eine Maus oder (in einem Touchscreen-Szenario) ein Stift oder ein Finger sein.</span><span class="sxs-lookup"><span data-stu-id="cee97-104">A manipulator represents a mouse or (in a touch-enabled scenario) a stylus or a finger.</span></span>  

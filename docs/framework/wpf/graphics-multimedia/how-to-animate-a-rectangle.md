@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561429"
 ---
 # <a name="how-to-animate-a-rectangle"></a><span data-ttu-id="51c09-102">Gewusst wie: Animieren eines Rechtecks</span><span class="sxs-lookup"><span data-stu-id="51c09-102">How to: Animate a Rectangle</span></span>
 <span data-ttu-id="51c09-103">Dieses Beispiel zeigt, wie Änderungen an Größe und Position eines Rechtecks animiert werden.</span><span class="sxs-lookup"><span data-stu-id="51c09-103">This example shows how to animate changes to the size and position of a rectangle.</span></span>  

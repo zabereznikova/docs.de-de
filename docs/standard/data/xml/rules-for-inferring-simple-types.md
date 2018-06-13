@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576392"
 ---
 # <a name="rules-for-inferring-simple-types"></a><span data-ttu-id="6fade-102">Regeln zum Herleiten einfacher Typen</span><span class="sxs-lookup"><span data-stu-id="6fade-102">Rules for Inferring Simple Types</span></span>
 <span data-ttu-id="6fade-103">Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="6fade-103">Describes how the <xref:System.Xml.Schema.XmlSchemaInference> class infers the data type for attributes and elements.</span></span>  

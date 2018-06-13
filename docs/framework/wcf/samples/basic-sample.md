@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502137"
 ---
 # <a name="basic-sample"></a><span data-ttu-id="a88a8-102">Einfaches Beispiel</span><span class="sxs-lookup"><span data-stu-id="a88a8-102">Basic Sample</span></span>
 <span data-ttu-id="a88a8-103">In diesem Beispiel wird erläutert, wie ein Dienst sichtbar gemacht wird und wie nach einem sichtbaren Dienst gesucht und dieser aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="a88a8-103">This sample shows how to make a service discoverable and how to search for and call a discoverable service.</span></span> <span data-ttu-id="a88a8-104">Dieses Beispiel besteht aus zwei Projekten: Dienst und Client.</span><span class="sxs-lookup"><span data-stu-id="a88a8-104">This sample is composed of two projects: service and client.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506693"
 ---
 # <a name="transaction-protocols-version-10"></a><span data-ttu-id="dca90-102">Transaktionsprotokolle, Version 1.0</span><span class="sxs-lookup"><span data-stu-id="dca90-102">Transaction Protocols version 1.0</span></span>
 <span data-ttu-id="dca90-103">Windows Communication Foundation (WCF) Version 1 implementiert Version 1.0 der Protokolle WS-Atomic Transaction und WS-Coordination.</span><span class="sxs-lookup"><span data-stu-id="dca90-103">Windows Communication Foundation (WCF) version 1 implements version 1.0 of the WS-Atomic Transaction and WS-Coordination protocols.</span></span> <span data-ttu-id="dca90-104">Weitere Informationen zu Version 1.1, finden Sie unter [Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).</span><span class="sxs-lookup"><span data-stu-id="dca90-104">For more information about version 1.1, see [Transaction Protocols](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).</span></span>  

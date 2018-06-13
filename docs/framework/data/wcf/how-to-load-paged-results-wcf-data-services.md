@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Laden von ausgelagerten Ergebnissen (WCF Data Services)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,34 +8,30 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 405bea18b03ba695dcb952d10a193decc124841d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6706ad2eb6821c2c30b5d2482f709ba849b59f32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356585"
 ---
-# <a name="how-to-load-paged-results-wcf-data-services"></a><span data-ttu-id="99b0e-102">Gewusst wie: Laden von ausgelagerten Ergebnissen (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="99b0e-102">How to: Load Paged Results (WCF Data Services)</span></span>
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="99b0e-103"> ermöglicht es dem Datendienst, die Anzahl von Entitäten zu beschränken, die in einem einzelnen Antwortfeed zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="99b0e-103"> enables the data service to limit the number of entities that are returned in a single response feed.</span></span> <span data-ttu-id="99b0e-104">In diesem Fall enthält der abschließende Eintrag im Feed einen Link zur nächsten Datenseite.</span><span class="sxs-lookup"><span data-stu-id="99b0e-104">When this happens, the final entry in the feed contains a link to the next page of data.</span></span> <span data-ttu-id="99b0e-105">Der URI zur nächsten Datenseite wird abgerufen, indem Sie die <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A>-Methode der <xref:System.Data.Services.Client.QueryOperationResponse%601> aufrufen, die beim Ausführen der <xref:System.Data.Services.Client.DataServiceQuery%601> zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="99b0e-105">The URI for the next page of data is obtained by calling the <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> method of the <xref:System.Data.Services.Client.QueryOperationResponse%601>, which is returned when the <xref:System.Data.Services.Client.DataServiceQuery%601> is executed.</span></span> <span data-ttu-id="99b0e-106">Der von diesem Objekt dargestellte URI wird dann verwendet, um die nächste Ergebnisseite zu laden.</span><span class="sxs-lookup"><span data-stu-id="99b0e-106">The URI represented by this object is then used to load the next page of results.</span></span> <span data-ttu-id="99b0e-107">Weitere Informationen finden Sie unter [Content verzögerte Laden von](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="99b0e-107">For more information, see [Loading Deferred Content](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span></span>  
+# <a name="how-to-load-paged-results-wcf-data-services"></a><span data-ttu-id="077d3-102">Gewusst wie: Laden von ausgelagerten Ergebnissen (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="077d3-102">How to: Load Paged Results (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="077d3-103"> ermöglicht es dem Datendienst, die Anzahl von Entitäten zu beschränken, die in einem einzelnen Antwortfeed zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="077d3-103"> enables the data service to limit the number of entities that are returned in a single response feed.</span></span> <span data-ttu-id="077d3-104">In diesem Fall enthält der abschließende Eintrag im Feed einen Link zur nächsten Datenseite.</span><span class="sxs-lookup"><span data-stu-id="077d3-104">When this happens, the final entry in the feed contains a link to the next page of data.</span></span> <span data-ttu-id="077d3-105">Der URI zur nächsten Datenseite wird abgerufen, indem Sie die <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A>-Methode der <xref:System.Data.Services.Client.QueryOperationResponse%601> aufrufen, die beim Ausführen der <xref:System.Data.Services.Client.DataServiceQuery%601> zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="077d3-105">The URI for the next page of data is obtained by calling the <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> method of the <xref:System.Data.Services.Client.QueryOperationResponse%601>, which is returned when the <xref:System.Data.Services.Client.DataServiceQuery%601> is executed.</span></span> <span data-ttu-id="077d3-106">Der von diesem Objekt dargestellte URI wird dann verwendet, um die nächste Ergebnisseite zu laden.</span><span class="sxs-lookup"><span data-stu-id="077d3-106">The URI represented by this object is then used to load the next page of results.</span></span> <span data-ttu-id="077d3-107">Weitere Informationen finden Sie unter [Content verzögerte Laden von](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="077d3-107">For more information, see [Loading Deferred Content](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="99b0e-108">Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet.</span><span class="sxs-lookup"><span data-stu-id="99b0e-108">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="99b0e-109">Dieser Dienst und die clientdatenklassen werden erstellt, wenn Sie die [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="99b0e-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="077d3-108">Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet.</span><span class="sxs-lookup"><span data-stu-id="077d3-108">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="077d3-109">Dieser Dienst und die clientdatenklassen werden erstellt, wenn Sie die [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="077d3-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="99b0e-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="99b0e-110">Example</span></span>  
- <span data-ttu-id="99b0e-111">In diesem Beispiel werden `do…while`-Entitäten aus ausgelagerten Ergebnissen aus dem Datendienst mithilfe einer `Customers`-Schleife geladen.</span><span class="sxs-lookup"><span data-stu-id="99b0e-111">This example uses a `do…while` loop to load `Customers` entities from a paged results from the data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="077d3-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="077d3-110">Example</span></span>  
+ <span data-ttu-id="077d3-111">In diesem Beispiel werden `do…while`-Entitäten aus ausgelagerten Ergebnissen aus dem Datendienst mithilfe einer `Customers`-Schleife geladen.</span><span class="sxs-lookup"><span data-stu-id="077d3-111">This example uses a `do…while` loop to load `Customers` entities from a paged results from the data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspaged)]
  [!code-vb[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspaged)]  
   
-## <a name="example"></a><span data-ttu-id="99b0e-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="99b0e-112">Example</span></span>  
- <span data-ttu-id="99b0e-113">In diesem Beispiel werden verknüpfte `Orders`-Entitäten mit jeder `Customers`-Entität zurückgegeben, und es wird eine `do…while`-Schleife zum Laden von `Customers`-Entitätenseiten und eine geschachtelte `while`-Schleife zum Laden verknüpfter `Orders`-Entitäten aus dem Datendienst verwendet.</span><span class="sxs-lookup"><span data-stu-id="99b0e-113">This example returns related `Orders` entities with each `Customers` entity and uses a `do…while` loop to load `Customers` entities pages and a nested `while` loop to load pages of related `Orders` entities from the data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="077d3-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="077d3-112">Example</span></span>  
+ <span data-ttu-id="077d3-113">In diesem Beispiel werden verknüpfte `Orders`-Entitäten mit jeder `Customers`-Entität zurückgegeben, und es wird eine `do…while`-Schleife zum Laden von `Customers`-Entitätenseiten und eine geschachtelte `while`-Schleife zum Laden verknüpfter `Orders`-Entitäten aus dem Datendienst verwendet.</span><span class="sxs-lookup"><span data-stu-id="077d3-113">This example returns related `Orders` entities with each `Customers` entity and uses a `do…while` loop to load `Customers` entities pages and a nested `while` loop to load pages of related `Orders` entities from the data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspagednested)]
  [!code-vb[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspagednested)]  
   
-## <a name="see-also"></a><span data-ttu-id="99b0e-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="99b0e-114">See Also</span></span>  
- [<span data-ttu-id="99b0e-115">Laden von verzögerten Inhalten</span><span class="sxs-lookup"><span data-stu-id="99b0e-115">Loading Deferred Content</span></span>](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
- [<span data-ttu-id="99b0e-116">Vorgehensweise: Laden von verbundenen Entitäten</span><span class="sxs-lookup"><span data-stu-id="99b0e-116">How to: Load Related Entities</span></span>](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="077d3-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="077d3-114">See Also</span></span>  
+ [<span data-ttu-id="077d3-115">Laden von verzögerten Inhalten</span><span class="sxs-lookup"><span data-stu-id="077d3-115">Loading Deferred Content</span></span>](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ [<span data-ttu-id="077d3-116">Vorgehensweise: Laden von verbundenen Entitäten</span><span class="sxs-lookup"><span data-stu-id="077d3-116">How to: Load Related Entities</span></span>](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)

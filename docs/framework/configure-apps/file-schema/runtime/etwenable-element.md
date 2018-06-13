@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745174"
 ---
 # <a name="ltetwenablegt-element"></a><span data-ttu-id="ed03b-102">&lt;EtwEnable&gt; Element</span><span class="sxs-lookup"><span data-stu-id="ed03b-102">&lt;etwEnable&gt; Element</span></span>
 <span data-ttu-id="ed03b-103">Gibt an, ob die Ereignisablaufverfolgung für Windows (ETW) für Common Language Runtime-Ereignisse aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="ed03b-103">Specifies whether to enable event tracing for Windows (ETW) for common language runtime events.</span></span>  
