@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487801"
 ---
 # <a name="transactionflowattribute"></a><span data-ttu-id="b6375-102">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="b6375-102">TransactionFlowAttribute</span></span>
 <span data-ttu-id="b6375-103">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="b6375-103">TransactionFlowAttribute</span></span>  

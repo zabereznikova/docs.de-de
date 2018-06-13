@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742789"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="c5463-102">&lt;Hinzufügen&gt; WebRequestModules (Network Settings)-Element</span><span class="sxs-lookup"><span data-stu-id="c5463-102">&lt;add&gt; Element for webRequestModules (Network Settings)</span></span>
 <span data-ttu-id="c5463-103">Fügt eine benutzerdefinierte Webmodul der Anforderung an die Anwendung an.</span><span class="sxs-lookup"><span data-stu-id="c5463-103">Adds a custom Web request module to the application.</span></span>  

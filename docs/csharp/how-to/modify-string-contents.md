@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217876"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a><span data-ttu-id="3fb8a-102">Vorgehensweise: Ändern von Zeichenfolgeninhalten in C#</span><span class="sxs-lookup"><span data-stu-id="3fb8a-102">How to: Modify string contents in C#</span></span> #
 

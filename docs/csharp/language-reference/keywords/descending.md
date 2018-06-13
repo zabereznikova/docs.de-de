@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214178"
 ---
 # <a name="descending-c-reference"></a><span data-ttu-id="6587f-102">descending (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="6587f-102">descending (C# Reference)</span></span>
 <span data-ttu-id="6587f-103">Das kontextbezogene Schlüsselwort `descending` wird in der [orderby-Klausel](../../../csharp/language-reference/keywords/orderby-clause.md) in Abfrageausdrücken verwendet, um die Sortierreihenfolge vom größten zum kleinsten Element festzulegen.</span><span class="sxs-lookup"><span data-stu-id="6587f-103">The `descending` contextual keyword is used in the [orderby clause](../../../csharp/language-reference/keywords/orderby-clause.md) in query expressions to specify that the sort order is from largest to smallest.</span></span>  

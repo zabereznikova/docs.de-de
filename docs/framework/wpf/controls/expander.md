@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551966"
 ---
 # <a name="expander"></a><span data-ttu-id="c9bd4-102">Expander</span><span class="sxs-lookup"><span data-stu-id="c9bd4-102">Expander</span></span>
 <span data-ttu-id="c9bd4-103">Ein <xref:System.Windows.Controls.Expander> ermöglicht es einem Benutzer auf einen Header anzuzeigen und zu erweitern, um weitere Details anzuzeigen oder um einen Abschnitt eines Headers zu reduzieren.</span><span class="sxs-lookup"><span data-stu-id="c9bd4-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
