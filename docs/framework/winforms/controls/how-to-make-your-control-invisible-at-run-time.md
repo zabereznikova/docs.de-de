@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532411"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Gewusst wie: Ausblenden des Steuerelements zur Laufzeit
 Es gibt Situationen, wenn Sie möchten möglicherweise ein benutzerdefiniertes Steuerelement zu erstellen, die zur Laufzeit nicht sichtbar ist. Ein Steuerelement, das einen Wecker möglicherweise z. B. nicht sichtbar, außer wenn das Warnsignal. Dies erfolgt einfach durch Festlegen der <xref:System.Windows.Forms.Control.Visible%2A> Eigenschaft. Wenn die <xref:System.Windows.Forms.Control.Visible%2A> Eigenschaft `true`, erscheint das Steuerelement wie gewohnt. Wenn `false`, wird das Steuerelement ausgeblendet werden. Obwohl Code in das Steuerelement beim unsichtbar weiter ausgeführt werden kann, werden Sie nicht mit dem Steuerelement über die Benutzeroberfläche interagieren können. Wenn Sie ein Steuerelement erstellen, das weiterhin auf eine Benutzereingabe (z. B. Mausklicks) reagiert möchten, sollten Sie ein transparente Steuerelement erstellen. Weitere Informationen finden Sie unter [Verwenden eines transparenten Hintergrunds für ein Steuerelement](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md).  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528276"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Gewusst wie: Hinzufügen von Suchfunktionen zu einem ListView-Steuerelement
 Häufig bei der Arbeit mit einer langen Liste von Elementen in einem <xref:System.Windows.Forms.ListView> Steuerelement aus, das Sie Suchfunktionen für den Benutzer anbieten möchten. Die <xref:System.Windows.Forms.ListView> Steuerelement bietet diese Funktion auf zwei unterschiedliche Arten: Zuordnen von Text und Speicherort zu suchen.  

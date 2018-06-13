@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359932"
 ---
 # <a name="creating-the-object-model"></a>Erstellen des Objektmodells
 Sie können Ihr Objektmodell aus einer vorhandenen Datenbank erstellen und dieses in seinem Standardzustand verwenden. Sie können auch zahlreiche Aspekte des Modells und seines Verhaltens anpassen.  

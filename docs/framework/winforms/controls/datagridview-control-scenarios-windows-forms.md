@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529037"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Szenarien für das DataGridView-Steuerelement (Windows Forms)
 Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, Sie können Tabellendaten aus einer Vielzahl von Datenquellen anzeigen. Für einfache verwendet wird, können Sie manuell Auffüllen einer <xref:System.Windows.Forms.DataGridView> und bearbeiten Sie die Daten nicht direkt über das Steuerelement. In der Regel jedoch Sie Speichern Ihrer Daten in einer externen Datenquelle und Binden des Steuerelements an ihn über eine <xref:System.Windows.Forms.BindingSource> Komponente.  

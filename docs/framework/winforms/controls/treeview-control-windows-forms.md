@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538235"
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView-Steuerelement (Windows Forms)
 Mit dem `TreeView`-Steuerelement in Windows Forms wird eine Hierarchie von Knoten angezeigt, die mit der Anzeige der Dateien und Ordner im linken Bereich des Windows Explorer-Features von Windows-Betriebssystemen vergleichbar ist.  

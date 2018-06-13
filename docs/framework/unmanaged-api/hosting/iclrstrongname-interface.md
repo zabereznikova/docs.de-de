@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92ae4c2f4a6fb126f5d86cee216e5b2bb6170e66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436110"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName-Schnittstelle
 Stellt grundlegende globale statische Funktionen zum Signieren von Assemblys mit starken Namen an. Alle `ICLRStrongName` Methoden geben standard-COM-HRESULTs zurück.  

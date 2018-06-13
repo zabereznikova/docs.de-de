@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536301"
 ---
 # <a name="label-control-overview-windows-forms"></a>Übersicht über das Label-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Label> Steuerelemente dienen zum Anzeigen von Text oder Bilder, die vom Benutzer bearbeitet werden können. Sie werden verwendet, um Objekte in einem Formular zu identifizieren, ergeben eine Beschreibung, welche eines bestimmten Steuerelements wird Wenn geklickt haben, z. B., oder Informationen als Antwort auf ein Laufzeitereignis oder ein Prozess in der Anwendung anzeigen. Bezeichnungen können Sie z. B. Textfelder, Listenfelder und Kombinationsfelder, usw. beschreibende Titel hinzufügen. Sie können auch Code schreiben, die den Text angezeigt, indem eine Bezeichnung als Antwort auf Ereignisse zur Laufzeit ändert. Wenn Ihre Anwendung ein paar Minuten verarbeitet eine Änderung dauert, können Sie z. B. eine Verarbeitungsstatus Nachricht in eine Bezeichnung anzeigen.  

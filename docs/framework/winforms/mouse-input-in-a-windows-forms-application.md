@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537589"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Mauseingabe in einer Windows Forms-Anwendung
 Windows Forms umfasst eine Vielzahl von Mausereignissen und zusätzliche Unterstützung für benutzerdefinierte Mauscursor, Mauserfassung und Drag & Drop-Verhalten.  

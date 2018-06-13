@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364222"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorisierung und Berechtigungen in SQL Server
 Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähren, damit die Benutzer auch auf die Datenbankobjekte zugreifen können. Jedes sicherungsfähige Objekt verfügt über Berechtigungen, die einem Prinzipal mithilfe von Berechtigungsanweisungen gewährt werden können.  

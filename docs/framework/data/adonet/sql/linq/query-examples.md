@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362626"
 ---
 # <a name="query-examples"></a>Abfragebeispiele
 Dieser Abschnitt enthält Visual Basic- und C#-Beispiele für typische [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen. Entwickler, die mit Visual Studio finden viele weitere Beispiele in einer beispiellösung im Abschnitt Beispiele. Weitere Informationen finden Sie unter [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532784"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes mithilfe des Designers
 Einige Windows Forms-Steuerelemente können Bilder anzuzeigen. Das Bild kann ein Symbol, das den Zweck des Steuerelements, wie z. B. auf eine Schaltfläche, ein Datenträgersymbol verdeutlicht die **speichern** Befehl. Das Symbol kann auch ein Hintergrundbild auf dem Steuerelement den gewünschten Stil sein.  

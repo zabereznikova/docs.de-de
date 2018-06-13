@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532315"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Gewusst wie: Andocken von Steuerelementen in Windows Forms
 Sie können Steuerelemente an den Rändern des Formulars angedockt oder Steuerelementcontainers (ein Formular oder Containersteuerelement) ausfüllen. Z. B. Windows-Explorer dockt an seine <xref:System.Windows.Forms.TreeView> Steuerelement auf der linken Seite des Fensters und die zugehörige <xref:System.Windows.Forms.ListView> Steuerelement auf die rechte Seite des Fensters. Verwenden der <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft für alle sichtbaren Windows Forms-Steuerelemente den Andockmodus definieren.  

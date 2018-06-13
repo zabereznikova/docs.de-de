@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534637"
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter-Steuerelement (Windows Forms)
 Windows Forms `Splitter` Steuerelemente werden verwendet, um die Größe der angedockten Steuerelemente zur Laufzeit. Die `Splitter` Steuerelement wird in Formularen mit Steuerelementen, die Daten an, wie Windows-Explorer, deren Daten Bereiche Informationen zu unterschiedlichen breiten zu unterschiedlichen Zeiten enthalten variabler Länge haben häufig verwendet.  

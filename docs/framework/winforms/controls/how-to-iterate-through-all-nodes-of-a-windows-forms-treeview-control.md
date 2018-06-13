@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532755"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Gewusst wie: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows Forms
 Es ist manchmal hilfreich, untersuchen Sie jeden Knoten in einer Windows Forms <xref:System.Windows.Forms.TreeView> Steuerelement, um eine Berechnung für die Knotenwerte ausführen. Dieser Vorgang kann über eine rekursive Prozedur (rekursive Methode in C# und C++) ausgeführt werden, die jeden Knoten in jeder Auflistung der Struktur durchläuft.  

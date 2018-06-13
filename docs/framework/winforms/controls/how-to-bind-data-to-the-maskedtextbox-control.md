@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530915"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Gewusst wie: Binden von Daten an das MaskedTextBox-Steuerelement
 Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> steuern, wie Sie andere Windows Forms-Steuerelement. Wenn das Format der Daten in der Datenbank nicht das erwartete durch Ihre Maskendefinition Format übereinstimmt, müssen Sie die Daten neu zu formatieren. Das folgende Verfahren veranschaulicht, wie Sie diesen Vorgang mit der <xref:System.Windows.Forms.Binding.Format> und <xref:System.Windows.Forms.Binding.Parse> Ereignisse der <xref:System.Windows.Forms.Binding> Klasse zum Anzeigen von separaten Telefonnummer und phone-Erweiterung Datenbankfeldern als einzelnes Feld bearbeitet werden.  

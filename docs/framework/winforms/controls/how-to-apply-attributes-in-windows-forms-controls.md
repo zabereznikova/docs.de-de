@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529635"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Gewusst wie: Anwenden von Attributen auf Windows Forms-Steuerelemente
 Zum Entwickeln von Komponenten und Steuerelementen, die die entwurfsumgebung ordnungsgemäß interagieren und zur Laufzeit ordnungsgemäß ausgeführt, müssen Sie Attribute ordnungsgemäß auf Klassen und Member anwenden.  

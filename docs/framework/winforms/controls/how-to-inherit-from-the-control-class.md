@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534582"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Gewusst wie: Erben von der Control-Klasse
 Wenn Sie ein vollständig benutzerdefiniertes Steuerelement für die Verwendung in einem Windows Form erstellen möchten, sollten Sie erben von der <xref:System.Windows.Forms.Control> Klasse. Beim Erben von der <xref:System.Windows.Forms.Control> Klasse erfordert, dass Sie ausführen, Planung und Implementierung bereit, sondern auch Sie mit der größten Palette von Optionen. Beim Erben von <xref:System.Windows.Forms.Control>, Sie erben die Basisfunktionalität, die Steuerelemente, die verwendet wird. Die Funktionalität, die eine inhärente Eigenschaft der <xref:System.Windows.Forms.Control> Klasse behandelt Benutzereingaben über die Tastatur und Maus, definiert die Grenzen und die Größe des Steuerelements stellt ein Windows-Handle und Meldungsbehandlung und Sicherheit. Sie enthält keine Zeichnungen, bei denen es sich in diesem Fall um das eigentliche Rendering der grafischen Benutzeroberfläche des Steuerelements handelt, und keine spezifische Funktionalität für Benutzerinteraktion. Sie müssen alle diese Aspekte über benutzerdefinierten Code bereitstellen.  

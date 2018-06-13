@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529060"
 ---
 # <a name="using-nested-graphics-containers"></a>Verwenden geschachtelter Grafikcontainer
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] stellt Container, die Sie verwenden können, vorübergehend zu ersetzen oder erweitern Teil des Zustands in einem <xref:System.Drawing.Graphics> Objekt. Erstellen Sie einen Container durch Aufrufen der <xref:System.Drawing.Graphics.BeginContainer%2A> Methode von einem <xref:System.Drawing.Graphics> Objekt. Sie können Aufrufen <xref:System.Drawing.Graphics.BeginContainer%2A> wiederholt, um geschachtelte Container zu bilden. Jeder Aufruf von <xref:System.Drawing.Graphics.BeginContainer%2A> muss mit einem Aufruf von gekoppelt werden <xref:System.Drawing.Graphics.EndContainer%2A>.  

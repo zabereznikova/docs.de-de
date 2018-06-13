@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534809"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Gewusst wie: Gruppieren von Elementen in einem ListView-Steuerelement in Windows Forms
 Mit der Grouping-Funktion von der <xref:System.Windows.Forms.ListView> -Steuerelement, Verwandte Gruppen von Elementen in Gruppen angezeigt werden können. Diese Gruppen werden auf dem Bildschirm durch horizontale Gruppenheader getrennt, die die Gruppentitel enthalten. Sie können <xref:System.Windows.Forms.ListView> Gruppen aus, um die Navigation in umfangreichen Listen einfacher durch Gruppieren Elemente alphabetisch nach Datum oder eine beliebige andere logische Gruppierung vornehmen. Die folgende Abbildung zeigt einige gruppierten Elemente.  

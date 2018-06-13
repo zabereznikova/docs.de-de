@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528343"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>Übersicht über das DateTimePicker-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> Control ermöglicht dem Benutzer die Auswahl eines einzelnen Elements aus einer Liste von Datums- oder Zeitangaben. Zur Darstellung eines Datums verwendet, wird in zwei Teilen: einer Dropdownliste mit einem Datum dargestellt in Text- und ein Raster, das angezeigt wird, wenn Sie auf den Dropdownpfeil neben der Liste klicken. Das Raster sieht wie der <xref:System.Windows.Forms.MonthCalendar> Steuerelement, das zur Auswahl mehrerer Datumsangaben verwendet werden kann. Weitere Informationen zu den <xref:System.Windows.Forms.MonthCalendar> steuern, finden Sie unter [Übersicht über das MonthCalendar-Steuerelement](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).  

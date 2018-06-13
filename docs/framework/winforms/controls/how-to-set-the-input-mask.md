@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537040"
 ---
 # <a name="how-to-set-the-input-mask"></a>Gewusst wie: Festlegen des Eingabeformats
 Das maskierte Textfeld-Steuerelement ist eine verbesserte Textfeld-Steuerelement, die eine deklarative Syntax zum Akzeptieren oder ablehnen von Benutzereingaben unterstützt. Durch Festlegen der Mask-Eigenschaft, können Sie die zulässigen Benutzereingaben angeben, ohne dass eine benutzerdefinierte Validierungslogik in der Anwendung geschrieben. Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.Windows.Forms.MaskedTextBox> Klasse.  

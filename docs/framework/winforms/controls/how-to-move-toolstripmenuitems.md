@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534907"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Gewusst wie: Verschieben von ToolStripMenuItems
 Zur Entwurfszeit können Sie wechseln ganze Menüs der obersten Ebene und ihre Menüelemente an eine andere Stelle der <xref:System.Windows.Forms.MenuStrip>. Sie können auch einzelne Menüelemente zwischen Menüs der obersten Ebene verschieben oder Ändern der Position von Menüelementen in einem Menü.  

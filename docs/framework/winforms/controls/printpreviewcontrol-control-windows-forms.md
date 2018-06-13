@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534312"
 ---
 # <a name="printpreviewcontrol-control-windows-forms"></a>PrintPreviewControl-Steuerelement (Windows Forms)
 Mit dem `PrintPreviewControl`-Steuerelement von Windows Forms wird ein Dokument so angezeigt, wie es gedruckt wird. Da dieses Steuerelement weder Schaltflächen noch andere Elemente einer Benutzeroberfläche besitzt, verwenden Sie `PrintPreviewControl` in der Regel nur, wenn Sie eine eigene Benutzeroberfläche für die Seitenansicht programmieren möchten. Wenn Sie die Standardbenutzeroberfläche verwenden möchten, setzen Sie ein <xref:System.Windows.Forms.PrintPreviewDialog>-Steuerelement ein.  

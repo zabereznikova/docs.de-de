@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361694"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Gewusst wie: Auflösen von Parallelitätskonflikten durch Beibehalten von Datenbankwerten
 Wenn Sie Unterschiede zwischen den erwarteten und den tatsächlichen Datenbankwerten ausgleichen möchten, bevor Sie versuchen, Ihre Änderungen erneut zu übergeben, können Sie die Datenbankwerte mithilfe von <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> erhalten. Die aktuellen Werte im Objektmodell werden dann überschrieben. Weitere Informationen finden Sie unter [vollständige Parallelität: Übersicht über](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  

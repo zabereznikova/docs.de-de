@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358855"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Zurückgeben des Durchschnittswerts aus einer numerischen Sequenz
 Der <xref:System.Linq.Enumerable.Average%2A>-Operator ermittelt den Durchschnitt aus einer Sequenz numerischer Werte.  

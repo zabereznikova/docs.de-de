@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537617"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>Gewusst wie: Rendern eines visuellen Stilelements
 Die <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespace macht <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Objekte, die die Windows-Benutzer darstellen Benutzeroberflächenelemente (UI) von visuelle Stile unterstützt. In diesem Thema veranschaulicht, wie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Klasse zum Rendern der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> darstellt, die die **Abmelden** und **Herunterfahren** Schaltflächen im Startmenü.  

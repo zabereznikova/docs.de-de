@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c9f22f23835f01022d5d62596b2cf63425759193
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426062"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute-Methode
 Ruft ein benutzerdefiniertes Attribut anhand seines Namens ab. Diese benutzerdefinierten Attribute sind im Gegensatz zu benutzerdefinierten Metadatenattributen im Symbolspeicher gespeichert.  

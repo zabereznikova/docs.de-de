@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 139cf540617e278eeaae8a2a5acf10dd797d5d10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429885"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable-Enumeration
 Enthält Werte, die die Menge des freien physischen Arbeitsspeichers auf dem Computer angeben. Diese Werte logisch ordnen Sie auf die Ereignisse für die oberen und unteren zurückgegebene Arbeitsspeicher aus der `CreateMemoryResourceNotification` -Funktion in der Win32-API.  

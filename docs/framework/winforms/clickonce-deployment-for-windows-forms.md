@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529533"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>ClickOnce-Bereitstellung für Windows Forms
 Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], eine Technologie für die einfache Bereitstellung von Windows Forms-Anwendungen auf Clientcomputern.  

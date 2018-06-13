@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538027"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Gewusst wie: Anzeigen von Optionsfeldern in einem MenuStrip (Windows Forms)
 Optionsfelder, auch bekannt als Optionsfelder ähneln Kontrollkästchen, mit dem Unterschied, dass Benutzer nur jeweils einzeln auswählen können. Zwar wird standardmäßig die <xref:System.Windows.Forms.ToolStripMenuItem> Klasse keine Optionsfeld Verhalten bereit, die Klasse bietet ein Kontrollkästchen-Verhalten, das Sie anpassen können, um das Implementieren von Optionsfeld Verhalten für Menüelemente in einer <xref:System.Windows.Forms.MenuStrip> Steuerelement.  

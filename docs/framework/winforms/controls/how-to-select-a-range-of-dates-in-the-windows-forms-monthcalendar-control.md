@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534059"
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Gewusst wie: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms
 Ein wichtiges Feature von Windows Forms <xref:System.Windows.Forms.MonthCalendar> Steuerelement ist, dass der Benutzer einen Datumsbereich auswählen kann. Diese Funktion ist eine Verbesserung gegenüber der Datumsauswahl Funktion von der <xref:System.Windows.Forms.DateTimePicker> -Steuerelement, das nur die Benutzer in einer einzelnen Datums-/Uhrzeitwert auswählen kann. Sie können einen Datumsbereich festlegen oder Abrufen einer vom Benutzer festgelegt werden, mithilfe der Eigenschaften des Auswahlbereichs der <xref:System.Windows.Forms.MonthCalendar> Steuerelement. Im folgenden Codebeispiel wird veranschaulicht, wie einen Auswahlbereich festgelegt wird.  

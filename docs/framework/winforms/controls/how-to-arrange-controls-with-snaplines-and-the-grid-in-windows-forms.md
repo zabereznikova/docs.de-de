@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528368"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Gewusst wie: Anordnen von Steuerelementen mithilfe der Ausrichtungslinien und des Rasters in Windows Forms
 Verwenden das Layoutfunktionen von Visual Studio, können Sie genau steuern, in die Steuerelemente auf einem Formular platziert werden. Steuerelemente zu einem Formular hinzugefügt oder in einem Formular verschoben können automatisch in die Zeilen und Spalten des Rasters für die Windows Forms-Designer ausgerichtet werden oder können Sie Steuerelemente mithilfe von Ausrichtungslinien ausrichten.  

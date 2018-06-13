@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533506"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Gewusst wie: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement
 Können Sie den auflistungs-Editor von der <xref:System.Windows.Forms.TableLayoutPanel> als Steuerelement der **Spalten- und Zeilenstile** (Dialogfeld), um die Zeilen und Spalten der Steuerelemente zu bearbeiten.  

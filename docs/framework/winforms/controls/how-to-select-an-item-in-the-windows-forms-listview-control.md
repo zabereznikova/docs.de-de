@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532820"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Gewusst wie: Auswählen eines Elements im ListView-Steuerelement in Windows Forms
 In diesem Beispiel wird veranschaulicht, wie ein Element in einer Windows Forms programmgesteuert ausgewählt <xref:System.Windows.Forms.ListView> Steuerelement. Auswählen eines Elements programmgesteuert automatisch ändert nicht den Fokus an das <xref:System.Windows.Forms.ListView> Steuerelement. Aus diesem Grund werden Sie in der Regel auch das Element festlegen möchten, wie sich der Fokus beim Auswählen eines Elements.  

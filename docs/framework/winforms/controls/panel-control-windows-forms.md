@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536721"
 ---
 # <a name="panel-control-windows-forms"></a>Panel-Steuerelement (Windows Forms)
 Windows Forms `Panel` Steuerelemente werden verwendet, um eine erkennbare Gruppierung für andere Steuerelemente bereitstellen. In der Regel verwenden Sie Bereiche, um ein Formular von Funktion zu unterteilen. Die `Panel` Steuerelement ähnelt der <xref:System.Windows.Forms.GroupBox> steuern; allerdings nur die `Panel` Steuerelement Bildlaufleisten angezeigt werden, haben kann und nur die <xref:System.Windows.Forms.GroupBox> -Steuerelement zeigt eine Beschriftung.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535268"
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon-Komponente (Windows Forms)
 Windows Forms `NotifyIcon` Komponente werden Symbole im Statusbereich der Taskleiste angezeigt, für die Prozesse, die im Hintergrund ausgeführt, und andernfalls würde nicht über Benutzeroberflächen verfügen. Ein Beispiel ist ein Virenschutzprogramm, auf das durch Klicken auf ein Symbol im Statusbereich der Taskleiste zugegriffen werden kann.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360464"
 ---
 # <a name="querying-across-relationships"></a>Beziehungsübergreifendes Abfragen
 Verweise auf andere Objekte oder Auflistungen in Ihren Klassendefinitionen entsprechen direkt den Fremdschlüsselbeziehungen in der Datenbank. Sie können diese Beziehungen nutzen, wenn Sie eine Abfrage mit der dot-Schreibweise vornehmen, um auf die Beziehungseigenschaften zuzugreifen und von einem Objekt zu einem anderen zu navigieren. Diese Zugriffsoperationen werden in komplexere Joins oder korrelierte Unterabfragen in den entsprechenden SQL-Befehlen übersetzt.  

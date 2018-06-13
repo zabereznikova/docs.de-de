@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533473"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Gewusst wie: Festlegen von Bildern zur Laufzeit (Windows Forms)
 Bild von einer Windows Forms angezeigt können programmgesteuert festgelegt werden <xref:System.Windows.Forms.PictureBox> Steuerelement.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522394"
 ---
 # <a name="how-to-rotate-colors"></a>Gewusst wie: Drehen von Farben
 Drehungswinkel in einem vierdimensionalen Farbraum ist schwer zu visualisieren. Wir können Drehung zu visualisieren, indem Sie einverstanden sind, behalten Sie eine der festen Farbe Komponenten vereinfachen. Angenommen Sie, wir akzeptieren Sie den Alphaanteil auf 1 festgesetzt (vollständig deckend) beibehalten. Dann können wir einen dreidimensionale Farbraum mit Rot-, Grün- und Blau-Achsen darstellen, in der folgenden Abbildung dargestellt.  

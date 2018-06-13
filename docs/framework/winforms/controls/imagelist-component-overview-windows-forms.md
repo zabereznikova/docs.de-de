@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535284"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>Übersicht über die ImageList-Komponente (Windows Forms)
 Die <xref:System.Windows.Forms.ImageList>-Komponente in Windows Forms wird zum Speichern von Bildern verwendet, die dann von Steuerelementen angezeigt werden können. Mit einer Bildliste können Sie Code für einen einzelnen, konsistenten Katalog von Bildern schreiben. So können z. B. Bilder, die durch ein <xref:System.Windows.Forms.Button>-Steuerelement angezeigt werden, gedreht werden, indem einfach die <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A>- oder <xref:System.Windows.Forms.ButtonBase.ImageKey%2A>-Eigenschaft der Schaltfläche geändert wird. Dieselbe Bildliste kann auch mit mehreren Steuerelementen verbunden werden. Wenn z. B. sowohl ein <xref:System.Windows.Forms.ListView>-Steuerelement als auch ein <xref:System.Windows.Forms.TreeView>-Steuerelement verwendet werden, um dieselbe Liste von Dateien anzuzeigen, bewirkt eine Änderung des Dateisymbols in der Bildliste, dass das neue Symbol in beiden Ansichten angezeigt wird.  

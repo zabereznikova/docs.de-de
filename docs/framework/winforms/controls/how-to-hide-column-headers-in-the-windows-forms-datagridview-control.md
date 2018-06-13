@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532274"
 ---
 # <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Ausblenden von Spaltenheadern im DataGridView-Steuerelement in Windows Forms
 Mitunter kann es gewünscht zum Anzeigen einer <xref:System.Windows.Forms.DataGridView> ohne Spaltenüberschriften. In der <xref:System.Windows.Forms.DataGridView> -Steuerelement, das <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> Eigenschaftswert bestimmt, ob die Spaltenheader angezeigt werden.  
