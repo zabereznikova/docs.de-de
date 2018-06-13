@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757514"
 ---
 # <a name="datarow-deletion"></a>"DataRow"-Löschung
 Stehen zwei Methoden, die Sie löschen können eine <xref:System.Data.DataRow> -Objekt aus einer <xref:System.Data.DataTable> Objekt: der **entfernen** Methode der <xref:System.Data.DataRowCollection> -Objekt, und die <xref:System.Data.DataRow.Delete%2A> Methode der **DataRow**Objekt. Während der <xref:System.Data.DataRowCollection.Remove%2A> -Methode löscht eine **DataRow** aus der **DataRowCollection**, die <xref:System.Data.DataRow.Delete%2A> Methode nur die Zeile zum Löschen markiert. Das eigentliche löschen erfolgt, wenn die Anwendung aufruft, die **AcceptChanges** Methode. Mithilfe von <xref:System.Data.DataRow.Delete%2A> können Sie programmgesteuert überprüfen, welche Zeilen zum Löschen markiert sind, bevor Sie sie tatsächlich entfernen. Wenn eine Zeile zum Löschen markiert ist, wird deren <xref:System.Data.DataRow.RowState%2A>-Eigenschaft auf <xref:System.Data.DataRow.Delete%2A> festgelegt.  

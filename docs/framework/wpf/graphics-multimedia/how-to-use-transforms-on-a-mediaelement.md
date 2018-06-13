@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559781"
 ---
 # <a name="how-to-use-transforms-on-a-mediaelement"></a>Gewusst wie: Verwenden von Transformationen für MediaElement
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.RotateTransform> auf eine <xref:System.Windows.Controls.MediaElement>.  

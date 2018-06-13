@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605263"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>End &lt;Schlüsselwort&gt; -Anweisung (Visual Basic)
 Wenn ein zusätzliches Schlüsselwort folgt, beendet die Definition des der Anweisungsblock durch dieses Schlüsselwort eingeführt.  

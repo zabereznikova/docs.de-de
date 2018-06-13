@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525535"
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip-Steuerelement
 Das <xref:System.Windows.Forms.ContextMenuStrip>-Steuerelement stellt ein Kontextmenü bereit, das Sie einem Steuerelement zuordnen.  

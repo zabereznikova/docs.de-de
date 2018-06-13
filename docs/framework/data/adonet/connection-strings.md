@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757215"
 ---
 # <a name="connection-strings-in-adonet"></a>Verbindungszeichenfolgen in ADO.NET
 .NET Framework 2.0 führte neue Funktionen zum Arbeiten mit Verbindungszeichenfolgen ein. So wurden z. B. die Klassen des Verbindungszeichenfolgen-Generators um neue Schlüsselwörter erweitert, sodass gültige Verbindungszeichenfolgen zur Laufzeit erstellt werden können.  

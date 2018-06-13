@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524972"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Gewusst wie: Zeichnen von umbrochenem Text in einem Rechteck
 Umbrochenen Text können in einem Rechteck gezeichnet werden, mithilfe der <xref:System.Drawing.Graphics.DrawString%2A> überladene Methode, der die <xref:System.Drawing.Graphics> -Klasse, akzeptiert eine <xref:System.Drawing.Rectangle> oder <xref:System.Drawing.RectangleF> Parameter. Verwenden Sie ebenfalls eine <xref:System.Drawing.Brush> und ein <xref:System.Drawing.Font>.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755993"
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 Gibt den Satz von URIs, die akzeptable Bezeichner der vertrauenden (RP) sind. Token werden nicht akzeptiert, es sei denn, sie eines der zulässigen "Audience"-URIs begrenzt sind.  

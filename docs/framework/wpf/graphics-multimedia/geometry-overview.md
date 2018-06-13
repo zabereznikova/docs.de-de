@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558069"
 ---
 # <a name="geometry-overview"></a>Übersicht über die Geometrie
 In dieser Übersicht wird beschrieben, wie mithilfe der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> Klassen, die Formen zu beschreiben. In diesem Thema sind auch die Unterschiede zwischen <xref:System.Windows.Media.Geometry> Objekte und <xref:System.Windows.Shapes.Shape> Elemente.  

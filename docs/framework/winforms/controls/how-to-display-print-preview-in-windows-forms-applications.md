@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532807"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Gewusst wie: Anzeigen der Seitenansicht in Windows Forms-Anwendungen
 Sie können die <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement, damit Benutzer ein Dokument anzuzeigen, noch bevor es gedruckt wird.  

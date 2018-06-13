@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525764"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Ändern der Reihenfolge von Spalten des DataGridView-Steuerelements in Windows Forms mithilfe des Designers
 Wenn Sie eine Windows Forms binden <xref:System.Windows.Forms.DataGridView> Steuerelement mit einer Datenquelle, die Anzeigereihenfolge der automatisch generierten Spalten von der Datenquelle vorgegeben ist. Wenn diese Reihenfolge nicht wie gewünscht wird, können Sie die Reihenfolge der Spalten, die mithilfe des Designers ändern. Sie sollten auch ungebundene Spalten zum Steuerelement hinzufügen und ändern ihre Anzeigereihenfolge. Informationen dazu, wie Sie programmgesteuert die Spaltenreihenfolge zu ändern, finden Sie unter [Vorgehensweise: Ändern der Reihenfolge von Spalten im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  

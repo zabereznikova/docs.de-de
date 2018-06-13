@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560575"
 ---
 # <a name="how-to-create-a-reflection"></a>Gewusst wie: Erstellen einer Reflektion
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.VisualBrush> eine Reflektion erstellt. Da eine <xref:System.Windows.Media.VisualBrush> vorhandene visuelle angezeigt werden können, können Sie diese Funktion verwenden, um interessante visuelle Effekte wie Reflektionen und Vergrößerung zu erzeugen.  

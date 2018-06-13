@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566573"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Übersicht über Markuperweiterungen für XAML
 Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen eines Werts, der weder ein primitiver noch ein spezifischer XAML-Typ ist. Für die Attributverwendung verwenden Markuperweiterungen die bekannte Zeichensequenz einer öffnenden geschweiften Klammer `{` für den Anfang des Markuperweiterungsbereichs und eine schließende geschweifte Klammer `}` zum Beenden. Beim Verwenden von .NET Framework-XAML-Diensten können Sie einige der vordefinierten XAML-Sprachmarkuperweiterungen aus der Assembly „System.Xaml“ verwenden. Sie können zudem in „System.Xaml“ definierte Subklassen aus der Klasse <xref:System.Windows.Markup.MarkupExtension> verwenden und Ihre eigenen Markuperweiterungen definieren. Alternativ können Sie durch ein bestimmtes Framework definierte Markuperweiterungen verwenden, wenn Sie dieses Framework bereits referenzieren.  

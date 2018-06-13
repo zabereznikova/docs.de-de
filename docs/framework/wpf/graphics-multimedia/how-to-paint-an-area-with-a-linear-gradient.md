@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560876"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Gewusst wie: Zeichnen eines Bereichs mit einem linearen Farbverlauf
 Dieses Beispiel zeigt, wie die <xref:System.Windows.Media.LinearGradientBrush> Klasse, um einen Bereich mit einem linearen Farbverlauf zu zeichnen. Im folgenden Beispiel die <xref:System.Windows.Shapes.Shape.Fill%2A> von einem <xref:System.Windows.Shapes.Rectangle> mit einer diagonalen linearen Farbverlauf, der von Gelb zu Rot Blau Gelbgrün übergeht gezeichnet wird.  

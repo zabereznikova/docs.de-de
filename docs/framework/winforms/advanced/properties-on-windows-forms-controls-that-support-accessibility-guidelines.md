@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524487"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Eigenschaften für Windows Forms-Steuerelemente, die Richtlinien für Eingabehilfen unterstützen
 In der standard-Toolbox für Windows Forms-Steuerelemente unterstützen viele der Richtlinien für Eingabehilfen, einschließlich Verfügbarmachung des Tastaturfokus und das Verfügbarmachen von der Bildschirmelemente.  

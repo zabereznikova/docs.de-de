@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526877"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>Übersicht über die FontDialog-Komponente (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FontDialog> Komponente ist ein vorkonfiguriertes Dialogfeld, das Windows-Standarddialogfeld also **Schriftart** Dialogfeld verwendet, um die Schriftarten verfügbar machen, die zurzeit auf dem System installiert sind. Verwenden Sie es in Ihrer Windows basierenden Anwendung als einfache Lösung für eine Schriftartauswahl anstatt ein eigenes Dialogfeld zu konfigurieren.  

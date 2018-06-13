@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745837"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;GcConcurrent&gt; Element
 Gibt an, ob die Common Language Runtime die Garbage Collection auf einem separaten Thread ausführt.  

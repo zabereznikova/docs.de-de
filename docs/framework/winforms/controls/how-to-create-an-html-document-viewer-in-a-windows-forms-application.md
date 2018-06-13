@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530542"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Gewusst wie: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung
 Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement zum Anzeigen und Drucken von HTML-Dokumente ohne Angabe der vollständigen Funktionalität von einem Browser Internet. Dies ist hilfreich, wenn Sie die Formatierungsfunktionen von HTML nutzen möchten, aber nicht möchten, Ihre Benutzer, beliebige Webseiten zu laden, die möglicherweise nicht vertrauenswürdige Websteuerelemente oder potenziell bösartige Skriptcode enthalten. Möglicherweise möchten Sie die Funktionalität des Einschränken der <xref:System.Windows.Forms.WebBrowser> Steuern auf diese Weise z. B. auf, um ihn als eine HTML-e-Mail-Viewer verwenden oder HTML-Hilfe in der Anwendung bereitzustellen.  

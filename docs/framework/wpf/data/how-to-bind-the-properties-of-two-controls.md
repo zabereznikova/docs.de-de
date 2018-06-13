@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555580"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Gewusst wie: Binden der Eigenschaften von zwei Steuerelementen
 In diesem Beispiel wird gezeigt, wie zum Binden der Eigenschaft des Steuerelements mit einem instanziierten an, die von einem anderen mithilfe der <xref:System.Windows.Data.Binding.ElementName%2A> Eigenschaft.  

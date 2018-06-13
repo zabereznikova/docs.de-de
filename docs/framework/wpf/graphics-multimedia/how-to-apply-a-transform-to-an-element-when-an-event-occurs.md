@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558976"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Gewusst wie: Anwenden einer Transformation auf ein Element beim Auftreten eines Ereignisses
 In diesem Beispiel wird gezeigt, wie zum Anwenden einer <xref:System.Windows.Media.ScaleTransform> bei Auftreten eines Ereignisses. Mithilfe des hier dargestellten Konzepts können Sie auch andere Transformationstypen anwenden. Weitere Informationen zu den verfügbaren Typen von Transformationen finden Sie unter der <xref:System.Windows.Media.Transform> Klasse oder [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  

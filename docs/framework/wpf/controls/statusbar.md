@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554475"
 ---
 # <a name="statusbar"></a>StatusBar
 Ein <xref:System.Windows.Controls.Primitives.StatusBar> ist ein horizontaler Bereich am unteren Rand eines Fensters, in dem eine Anwendung Statusinformationen anzeigen kann.  

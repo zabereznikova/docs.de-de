@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528566"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Wenn Benutzer Daten anzeigen, die in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement in Windows Forms angezeigt werden, müssen sie mitunter häufig auf eine bestimmte Spalte oder Gruppe von Spalten zugreifen. Wenn Sie eine Tabelle mit Kundendaten, die viele Spalten enthält anzeigen, ist es beispielsweise empfiehlt es sich um den Kundennamen jederzeit während andere Spalten außerhalb des sichtbaren Bereichs liegen anzuzeigen.  

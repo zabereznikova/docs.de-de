@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761427"
 ---
 # <a name="navigating-datarelations"></a>Navigieren in "DataRelations"
 Eine der Hauptfunktionen einer <xref:System.Data.DataRelation> besteht darin, die Navigation von einer <xref:System.Data.DataTable> zu einer anderen innerhalb eines <xref:System.Data.DataSet> zu ermöglichen. Dies ermöglicht es Ihnen, alle verwandten <xref:System.Data.DataRow> Objekte in einem **DataTable** Wenn eine einzelne **DataRow** aus einer verknüpften **DataTable**. Beispielsweise nach dem Herstellen einer **DataRelation** zwischen einer Tabelle möglicher Kunden und eine Tabelle der Aufträge, können Sie alle Auftragszeilen für eine bestimmte Kundenzeile mit abrufen **GetChildRows**.  

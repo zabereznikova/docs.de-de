@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555428"
 ---
 # <a name="toolbar"></a>ToolBar
 Die <xref:System.Windows.Controls.ToolBar> Steuerelement ist ein Container für eine Gruppe von Befehlen oder Steuerelementen, die in der Regel in ihrer Funktion beziehen.  

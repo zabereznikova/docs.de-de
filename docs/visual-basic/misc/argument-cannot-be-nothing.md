@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600063"
 ---
 # <a name="argument-cannot-be-nothing"></a>Das Argument kann nicht 'Nothing' sein.
 Ein NULL-Wert wurde für ein Argument angegeben, das einen Wert aufweisen muss.  

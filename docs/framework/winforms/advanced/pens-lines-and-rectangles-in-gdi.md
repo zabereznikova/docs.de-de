@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527469"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Stifte, Linien und Rechtecke in GDI+
 Zum Zeichnen von Linien mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] müssen Sie erstellen eine <xref:System.Drawing.Graphics> Objekt und ein <xref:System.Drawing.Pen> Objekt. Die <xref:System.Drawing.Graphics> Objekt enthält die Methoden, die den Zeichenvorgang ausführen und die <xref:System.Drawing.Pen> Objekt speichert Attribute, z. B. Farbe, Breite und Stil.  

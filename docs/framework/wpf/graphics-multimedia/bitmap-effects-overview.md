@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558004"
 ---
 # <a name="bitmap-effects-overview"></a>Übersicht über Bitmapeffekte
 Bitmapeffekten können Designer und Entwickler visuelle Effekte auf gerenderte anwenden Windows Presentation Foundation (WPF) Inhalt. Beispielsweise Bitmapeffekte können Sie problemlos Anwenden einer <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> Effekt oder Weichzeichnereffekt auf ein Bild oder eine Schaltfläche.  

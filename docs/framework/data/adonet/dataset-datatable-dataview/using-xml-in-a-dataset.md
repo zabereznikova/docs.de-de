@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760332"
 ---
 # <a name="using-xml-in-a-dataset"></a>Verwenden von XML in einem "DataSet"
 Mit ADO.NET können Sie ein <xref:System.Data.DataSet> über einen XML-Stream oder ein XML-Dokument füllen. Die können den XML-Stream oder das XML-Dokument verwenden, um das <xref:System.Data.DataSet> mit Daten oder Schemainformationen oder mit beidem zu versorgen. Die vom XML-Stream oder vom XML-Dokument bereitgestellten Daten können mit vorhandenen Daten oder Schemainformationen kombiniert werden, die bereits im <xref:System.Data.DataSet> enthalten sind.  

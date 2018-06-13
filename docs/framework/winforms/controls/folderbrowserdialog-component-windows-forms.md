@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524451"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog-Komponente (Windows Forms)
 Windows Forms `FolderBrowserDialog` Komponente zeigt eine Schnittstelle mit dem Benutzer können durchsuchen, und wählen Sie einen Ordner oder ein neues erstellen. Es ist eine Ergänzung der [OpenFileDialog-Komponente](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) -Komponente, die zum Durchsuchen und Auswählen von Dateien verwendet wird.  

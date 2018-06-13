@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559732"
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Gewusst wie: Anwenden von Material auf die Vorder- und Rückseite eines 3D-Objekts
 Im folgende Beispiel wird gezeigt, wie zum Anwenden einer <xref:System.Windows.Media.Media3D.Material> in den Vordergrund und Rückseite eine 3D-Objekt und das Objekt zum Anzeigen von beiden Seiten des Objekts animiert. Die <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> Eigenschaft eine <xref:System.Windows.Media.Media3D.GeometryModel3D> wird verwendet, um einen roten gelten <xref:System.Windows.Media.Brush> auf der Vorderseite des Objekts und die <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> Eigenschaft der <xref:System.Windows.Media.Media3D.GeometryModel3D> wird verwendet, um ein blaues anwenden <xref:System.Windows.Media.Brush> auf der Rückseite des Objekts. Der folgende Code zeigt die Anwendung der Materialien auf das Objekt:  

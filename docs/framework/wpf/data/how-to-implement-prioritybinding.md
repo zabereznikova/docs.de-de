@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557757"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Gewusst wie: Implementieren von PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funktioniert, indem Sie eine Liste der Bindungen angeben. Die Liste der Bindungen ist von der höchsten Priorität bis zur niedrigsten Priorität geordnet. Wenn die höchste Priorität Bindung einen Wert zurückgibt besteht erfolgreich bei ihrer Verarbeitung niemals müssen die anderen Bindungen in der Liste zu verarbeiten. Es könnte sein, die Groß-/Kleinschreibung, die die höchste Priorität Bindung auszuwertende lange dauert, die höchsten Priorität, die einen Wert, erfolgreich zurückgibt verwendet werden, bis eine Bindung eine höhere Priorität erfolgreich einen Wert zurückgibt.  

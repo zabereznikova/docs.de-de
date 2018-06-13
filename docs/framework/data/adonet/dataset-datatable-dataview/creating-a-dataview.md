@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759113"
 ---
 # <a name="creating-a-dataview"></a>Erstellen eines "DataViews"
 Es gibt zwei Möglichkeiten zum Erstellen einer <xref:System.Data.DataView>: Können Sie die **"DataView"** -Konstruktor verwenden, oder Sie erstellen einen Verweis auf die <xref:System.Data.DataTable.DefaultView%2A> Eigenschaft von der <xref:System.Data.DataTable>. Die **"DataView"** Konstruktor kann leer sein oder akzeptiert entweder eine **DataTable** als ein einzelnes Argument oder eine **DataTable** zusammen mit Filterkriterien, Sortierkriterien und eine Zeile Statusfilter. Weitere Informationen über die zusätzlichen Argumente für die Verwendung mit der **"DataView"**, finden Sie unter [sortieren und Filtern von Daten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  

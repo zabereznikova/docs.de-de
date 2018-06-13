@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744495"
 ---
 # <a name="client-application-services-overview"></a>Übersicht über Clientanwendungsdienste
 Clientanwendungsdienste ermöglichen vereinfachten Zugriff auf [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anmeldung, Rollen und Profildienste von Windows Forms- und Windows Presentation Foundation-Anwendungen (WPF). [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdienste sind in den Microsoft ASP.NET 2.0 AJAX-Erweiterungen enthalten, die wiederum in [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] und [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] enthalten sind. Diese Dienste ermöglichen mehreren web- und Windows-basierten Anwendungen die gemeinsame Nutzung von Benutzerinformationen und Benutzerverwaltungsfunktionen von einem einzelnen Server aus.  

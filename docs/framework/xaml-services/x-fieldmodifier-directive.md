@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565054"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier-Anweisung
 Verwendung von XAML-Kompilierungsverhalten ändert, sodass Felder für benannte Objektverweise mit definiert sind <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> anstelle von Zugriff auf die <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Standardverhalten.  

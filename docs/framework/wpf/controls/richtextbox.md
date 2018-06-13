@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554091"
 ---
 # <a name="richtextbox"></a>RichTextBox
 Die <xref:System.Windows.Controls.RichTextBox> Element definiert ein Bearbeitungssteuerelement mit integrierter Unterstützung für Funktionen wie Ausschneiden und einfügen, Dokumentpräsentation und Inhaltsauswahl.  

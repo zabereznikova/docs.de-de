@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555788"
 ---
 # <a name="menu"></a>Menü
 Ein <xref:System.Windows.Controls.Menu> ist ein Steuerelement, hierarchische Organisation von Elementen, die Befehle oder Ereignishandler zugeordnet werden können. Jede <xref:System.Windows.Controls.Menu> kann mehrere enthalten <xref:System.Windows.Controls.MenuItem> Steuerelemente. Jede <xref:System.Windows.Controls.MenuItem> können aufrufen ein Befehls oder beim Aufrufen einer `Click` -Ereignishandler. Ein <xref:System.Windows.Controls.MenuItem> können auch verfügen über mehrere <xref:System.Windows.Controls.MenuItem> Elemente als untergeordnete Elemente, die ein Untermenü bilden.  

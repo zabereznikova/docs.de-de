@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530496"
 ---
 # <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a>Gewusst wie: Erkennen des Mauszeigers auf einem ToolStripItem
 Verwenden Sie das folgende Verfahren um zu erkennen, wenn der Mauszeiger über ein <xref:System.Windows.Forms.ToolStripItem>.  

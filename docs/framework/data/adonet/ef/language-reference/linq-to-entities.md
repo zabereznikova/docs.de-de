@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760777"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es Entwicklern ermöglicht, in Visual Basic oder Visual C# Abfragen für das konzeptionelle Modell im Entity Framework zu schreiben. Abfragen für das Entity Framework werden als Befehlsstrukturabfragen dargestellt, die für den Objektkontext ausgeführt werden. LINQ to Entities wandelt LINQ (Language-Integrated Queries)-Abfragen in Befehlsstrukturabfragen um, führt die Abfragen für das Entity Framework aus und gibt Objekte zurück, die sowohl vom Entity Framework als auch von LINQ verwendet werden können. Mit folgendem Vorgang können Sie eine LINQ to Entities-Abfrage erstellen und ausführen:  

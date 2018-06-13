@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527186"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Gewusst wie: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms
 Elemente können hinzugefügt werden, um ein Windows Forms-Kombinationsfeld, Listenfeld oder Listenfeld eine Vielzahl von Möglichkeiten, nicht überprüft, da diese Steuerelemente an eine Vielzahl von Datenquellen gebunden werden können. Allerdings wird in diesem Thema zeigt die einfachste Methode, und erfordert keine Datenbindung. Die angezeigten Elemente sind in der Regel Zeichenfolgen. Allerdings kann jedes Objekt verwendet werden. Der im Steuerelement angezeigte Text ist der Wert, der von dem Objekt zurückgegebenen `ToString` Methode.  

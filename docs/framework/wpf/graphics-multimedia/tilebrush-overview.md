@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566336"
 ---
 # <a name="tilebrush-overview"></a>Übersicht über TileBrush
 <xref:System.Windows.Media.TileBrush> -Objekte ermöglichen den steuern, wie ein Bereich mit einem Bild gezeichnet wird mit einer hohen <xref:System.Windows.Media.Drawing>, oder <xref:System.Windows.Media.Visual>. Dieses Thema beschreibt, wie <xref:System.Windows.Media.TileBrush> Funktionen erhalten Sie besser steuern, wie ein <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, oder <xref:System.Windows.Media.VisualBrush> zeichnet einen Bereich.  

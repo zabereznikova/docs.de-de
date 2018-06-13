@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555672"
 ---
 # <a name="how-to-accelerate-or-decelerate-an-animation"></a>Gewusst wie: Beschleunigen oder Verlangsamen einer Animation
 Dieses Beispiel zeigt, wie Sie eine Animation beschleunigt und verlangsamt werden kann. Im folgenden Beispiel werden mehrere Rechtecke von Animationen mit verschiedenen animiert <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> und <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> Einstellungen.  

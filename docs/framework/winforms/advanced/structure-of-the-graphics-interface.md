@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525901"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Struktur der grafischen Oberfläche
 Die Schnittstelle für verwaltete Klassen zu [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ca. 60 Klassen, 50 Enumerationen und 8 Strukturen enthält. Die <xref:System.Drawing.Graphics> Klasse bildet den Kern der [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Funktionen wird die Klasse, die tatsächlich Linien, Kurven, Formen, Bilder und Text zeichnet.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766477"
 ---
 # <a name="string-functions"></a>String-Funktionen
 Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt `String`-Funktionen zur Verfügung, die einen eingegebenen `String` verarbeiten und als Ergebnis einen `String` oder einen numerischen Wert zurückgeben. Diese Funktionen befinden sich im SQLServer-Namespace, der bei der Verwendung von SqlClient verfügbar ist. Anhand der Namespaceigenschaft des Anbieters kann Entity Framework ermitteln, welches Präfix von diesem Anbieter für spezifische Konstrukte, wie Typen und Funktionen, verwendet wird.  

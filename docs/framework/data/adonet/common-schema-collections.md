@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759308"
 ---
 # <a name="common-schema-collections"></a>Allgemeine Schemaauflistungen
 Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbietern für .NET Framework implementierten Schemaauflistungen. Sie können einen verwalteten .NET Framework-Datenanbieter, um die Liste der unterstützten schemaauflistungen durch Aufrufen von Abfragen die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben. In diesen Auflistungen werden alle erforderlichen Spalten beschrieben. Anbieter können ggf. zusätzliche Spalten hinzufügen. So fügen beispielsweise `SqlClient` und `OracleClient` der Auflistung der Einschränkungen "ParameterName" hinzu.  

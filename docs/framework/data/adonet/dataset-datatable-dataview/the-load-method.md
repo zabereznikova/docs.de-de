@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758307"
 ---
 # <a name="the-load-method"></a>Load-Methode
 Mithilfe der <xref:System.Data.DataTable.Load%2A>-Methode kann eine <xref:System.Data.DataTable> mit Zeilen aus einer Datenquelle geladen werden. Dies ist eine überladene Methode, die in der einfachsten Form einen einzelnen Parameter akzeptiert eine **DataReader**. In dieser Form lädt sie einfach die **DataTable** mit Zeilen. Optional können Sie angeben der **LoadOption** Parameter steuern, wie Daten hinzugefügt werden die **DataTable**.  

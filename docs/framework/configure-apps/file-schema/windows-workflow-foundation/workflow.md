@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758645"
 ---
 # <a name="ltworkflowgt"></a>&lt;workflow&gt;
 Ein Konfigurationselement, das alle Abfragen für einen bestimmten Workflow identifizierte enthält die **einen HYPERLINK "http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" CtivityDefinitionId** Eigenschaft.  

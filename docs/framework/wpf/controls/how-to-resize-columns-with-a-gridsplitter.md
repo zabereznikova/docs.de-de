@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556149"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>Gewusst wie: Änderung der Spaltengröße mit einem GridSplitter
 In diesem Beispiel wird gezeigt, wie zum Erstellen einer vertikales <xref:System.Windows.Controls.GridSplitter> zum Verteilen des Abstand zwischen zwei Spalten in einem <xref:System.Windows.Controls.Grid> ohne Änderung der Dimensionen des der <xref:System.Windows.Controls.Grid>.  

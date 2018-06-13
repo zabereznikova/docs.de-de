@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524425"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Gewusst wie: Hinzufügen eines Steuerelements zu ToolStripContentPanel
 Sie können ein oder mehrere Steuerelemente programmgesteuert zu einem <xref:System.Windows.Forms.ToolStripContentPanel> hinzufügen.  

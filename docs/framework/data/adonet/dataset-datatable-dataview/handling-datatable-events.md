@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760228"
 ---
 # <a name="handling-datatable-events"></a>Behandeln von DataTable-Ereignissen
 Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit, die von einer Anwendung verarbeitet werden können. Eine Beschreibung dieser `DataTable`-Ereignisse finden Sie in der folgenden Tabelle:  

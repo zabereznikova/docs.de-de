@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530288"
 ---
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Gewusst wie: Erstellen eines Rahmens um ein Windows Forms-Steuerelement mithilfe von Abständen
 Im folgenden Codebeispiel wird veranschaulicht, wie erstellen einen Rahmen oder Kontur um eine <xref:System.Windows.Forms.RichTextBox> Steuerelement. Im Beispiel wird der Wert von einer <xref:System.Windows.Forms.Panel> des Steuerelements <xref:System.Windows.Forms.Padding> -Eigenschaft auf 5 und legt die <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft eines untergeordneten Elements <xref:System.Windows.Forms.RichTextBox> die Steuerung an <xref:System.Windows.Forms.DockStyle.Fill>. Die <xref:System.Windows.Forms.Control.BackColor%2A> von der <xref:System.Windows.Forms.Panel> Steuerelement festgelegt ist, um <xref:System.Drawing.Color.Blue%2A>, einen blauen Rahmen erstellt die <xref:System.Windows.Forms.RichTextBox> Steuerelement.  

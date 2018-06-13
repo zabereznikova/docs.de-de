@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557620"
 ---
 # <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>Gewusst wie: Hinzufügen eines Animationsausgabewerts zu einem Animationsstartwert
 In diesem Beispiel wird gezeigt, wie ein Anfangswert der Animation einen Ausgabewert der Animation hinzugefügt wird.  

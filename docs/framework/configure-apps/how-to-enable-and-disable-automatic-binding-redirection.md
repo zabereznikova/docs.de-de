@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757566"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung
 Ab [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] werden beim Kompilieren von Apps, die auf [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] abzielen, Bindungsumleitungen automatisch zur App-Konfigurationsdatei hinzugefügt, um die Assemblyvereinheitlichung zu überschreiben. Bindungsumleitungen werden hinzugefügt, wenn die App oder ihre Komponenten auf mehr als eine Version der gleichen Assembly verweisen, auch wenn Sie manuell Bindungsumleitungen in der Konfigurationsdatei für Ihre App angeben. Die automatische Bindungsumleitung wirkt sich auf herkömmliche Desktop-Apps und Web-Apps aus, die auf [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] abzielen, obwohl das Verhalten für eine Web-App etwas anders ist. Sie können die automatische Bindungsumleitung aktivieren, wenn Sie über Apps verfügen, die auf frühere Versionen von .NET Framework abzielen, oder Sie können diese Funktion deaktivieren, wenn Sie manuell erstellte Bindungsumleitungen beibehalten möchten.  

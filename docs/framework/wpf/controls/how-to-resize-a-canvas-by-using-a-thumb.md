@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555063"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Gewusst wie: Ändern der Canvas-Größe mithilfe eines Ziehpunkts
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Controls.Primitives.Thumb> Steuerelement, um die Größe einer <xref:System.Windows.Controls.Canvas> Steuerelement.  

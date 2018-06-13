@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534495"
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>Gewusst wie: Gruppieren von RadioButton-Steuerelementen in Windows Forms für die Verwendung als Set
 Windows Forms <xref:System.Windows.Forms.RadioButton> Steuerelemente wurden dafür entwickelt, darin, Benutzern eine Auswahl aus mindestens zwei Einstellungen, von denen nur eine an eine Prozedur oder das Objekt zugewiesen werden kann. Angenommen, eine Gruppe von <xref:System.Windows.Forms.RadioButton> Steuerelemente können eine Auswahl von Transportunternehmen für eine Bestellung anzeigen, aber nur eines der Netzbetreiber verwendet werden. Daher nur ein <xref:System.Windows.Forms.RadioButton> zu einem Zeitpunkt kann ausgewählt werden, auch wenn sie einen Teil einer funktionalen Gruppe ist.  

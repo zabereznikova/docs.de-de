@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559969"
 ---
 # <a name="how-to-create-a-composite-shape"></a>Gewusst wie: Erstellen einer zusammengesetzten Form
 In diesem Beispiel wird gezeigt, wie zum Erstellen von zusammengesetzter Formen mit <xref:System.Windows.Media.Geometry> Objekte und angezeigt werden können mithilfe einer <xref:System.Windows.Shapes.Path> Element. Im folgenden Beispiel ein <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>, und ein <xref:System.Windows.Media.RectangleGeometry> werden zusammen mit einer <xref:System.Windows.Media.GeometryGroup> um eine zusammengesetzte Form zu erstellen. Die Geometrie gezeichnet Klicken Sie dann mit einem <xref:System.Windows.Shapes.Path> Element.  

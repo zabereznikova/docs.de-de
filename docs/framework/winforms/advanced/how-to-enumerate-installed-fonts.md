@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524438"
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>Gewusst wie: Auflisten installierter Schriftarten
 Die <xref:System.Drawing.Text.InstalledFontCollection> Klasse erbt von der <xref:System.Drawing.Text.FontCollection> abstrakte Basisklasse. Sie können eine <xref:System.Drawing.Text.InstalledFontCollection> auf dem Computer installierten Schriftarten aufzulistende Objekt. Die <xref:System.Drawing.Text.FontCollection.Families%2A> Eigenschaft ein <xref:System.Drawing.Text.InstalledFontCollection> Objekt ist ein Array von <xref:System.Drawing.FontFamily> Objekte.  

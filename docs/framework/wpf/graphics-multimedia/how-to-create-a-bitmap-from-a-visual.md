@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559765"
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a>Gewusst wie: Erstellen einer Bitmap mit einem visuellen Element
 Dieses Beispiel zeigt die Erstellung einer Bitmap aus einem <xref:System.Windows.Media.Visual>. Ein <xref:System.Windows.Media.DrawingVisual> wird beim Rendering <xref:System.Windows.Media.FormattedText>. Die <xref:System.Windows.Media.Visual> wird dann gerendert werden, auf die <xref:System.Windows.Media.Imaging.RenderTargetBitmap> Erstellen eines Bitmaps des angegebenen Texts.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560640"
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Gewusst wie: Zeichnen eines Bereichs mit einem radialen Farbverlauf
 Dieses Beispiel zeigt, wie die <xref:System.Windows.Media.RadialGradientBrush> Klasse, um einen Bereich mit einem radialen Farbverlauf zu zeichnen.  

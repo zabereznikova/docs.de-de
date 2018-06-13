@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558864"
 ---
 # <a name="how-to-chain-bitmapsource-objects-together"></a>Gewusst wie: Verketten von BitmapSource-Objekten
 In diesem Beispiel wird gezeigt, wie Sie eine Vielzahl von Auswirkungen auf eine Bildquelle durch Verkettung anwenden können mehrere <xref:System.Windows.Media.Imaging.BitmapSource> abgeleiteten Objekten zusammen.  

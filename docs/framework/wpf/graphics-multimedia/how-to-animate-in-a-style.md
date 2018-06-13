@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558812"
 ---
 # <a name="how-to-animate-in-a-style"></a>Gewusst wie: Animieren in einem Stil
 In diesem Beispiel wird gezeigt, wie zum Animieren von Eigenschaften in einem Format festgelegt wird. Wenn Sie innerhalb eines Stils animieren, kann nur die Framework-Element, das für das die Formatvorlage definiert wird direkt angesprochen werden. Um ein freezable-Objekt als Ziel festzulegen, müssen Sie "nach unten aus einer Eigenschaft des formatierten Elements dot".  

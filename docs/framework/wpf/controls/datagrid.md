@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557081"
 ---
 # <a name="datagrid"></a>DataGrid
 Die <xref:System.Windows.Controls.DataGrid> Steuerelement können Sie anzeigen und Bearbeiten von Daten aus vielen verschiedenen Quellen, wie z. B. von einer SQL-Datenbank, die LINQ-Abfrage oder eine beliebige andere bindbare Datenquelle. Weitere Informationen finden Sie unter [Übersicht über Bindungsquellen](../../../../docs/framework/wpf/data/binding-sources-overview.md).  

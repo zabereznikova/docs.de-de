@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557601"
 ---
 # <a name="menu-overview"></a>Übersicht über Menu
 Die <xref:System.Windows.Controls.Menu> -Klasse ermöglicht es Ihnen, zum Organisieren von Elementen, die Befehlen und Ereignishandlern in einer hierarchischen Reihenfolge zugeordnet. Jede <xref:System.Windows.Controls.Menu> Element enthält eine Auflistung von <xref:System.Windows.Controls.MenuItem> Elemente.  

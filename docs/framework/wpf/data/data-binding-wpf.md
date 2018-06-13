@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555775"
 ---
 # <a name="data-binding-wpf"></a>Datenbindung (WPF)
 Windows Presentation Foundation (WPF)-Datenbindung ermöglicht ein einfaches und konsistentes Anwendungen und interagieren mit Daten. Elemente können aus einer Vielzahl von Datenquellen in Form von common Language Runtime (CLR)-Objekte und XML-Daten gebunden werden.  

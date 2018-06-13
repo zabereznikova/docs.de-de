@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525059"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Gewusst wie: Zeichnen von kardinalen Splines
 Eine cardinal-Splinekurve ist eine Kurve, die einen bestimmten Satz von Punkten gleichmäßig zu durchlaufen. Um eine cardinal-Splinekurve zu zeichnen, erstellen Sie eine <xref:System.Drawing.Graphics> Objekts und übergeben Sie die Adresse des ein Array von Punkten um die <xref:System.Drawing.Graphics.DrawCurve%2A> Methode.  

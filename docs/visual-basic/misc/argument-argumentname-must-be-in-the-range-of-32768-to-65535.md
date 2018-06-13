@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600739"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-in-the-range-of--32768-to-65535"></a>Argument &#39; &lt;Argumentname&gt; &#39; muss im Bereich zwischen-32768 und 65535 sein
 Der Wert eines Arguments liegt außerhalb des zulässigen Bereichs von-32768 bis 65535.  
