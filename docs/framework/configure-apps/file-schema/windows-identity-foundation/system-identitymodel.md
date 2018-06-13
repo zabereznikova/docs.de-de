@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755252"
 ---
 # <a name="ltsystemidentitymodelgt"></a><span data-ttu-id="fa624-102">&lt;system.identityModel&gt;</span><span class="sxs-lookup"><span data-stu-id="fa624-102">&lt;system.identityModel&gt;</span></span>
 <span data-ttu-id="fa624-103">Ermöglicht die Konfiguration für Windows Identity Foundation (WIF)-Optionen in Anwendungen zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="fa624-103">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>  

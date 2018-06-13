@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266109"
 ---
 # <a name="return-c-reference"></a><span data-ttu-id="6d196-102">return (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="6d196-102">return (C# Reference)</span></span>
 <span data-ttu-id="6d196-103">Die Anweisung `return` beendet die Ausführung der Methode, in der sie angezeigt wird, und gibt das Steuerelement an die aufrufende Methode zurück.</span><span class="sxs-lookup"><span data-stu-id="6d196-103">The `return` statement terminates execution of the method in which it appears and returns control to the calling method.</span></span> <span data-ttu-id="6d196-104">Zudem kann ein optionaler Wert zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="6d196-104">It can also return an optional value.</span></span> <span data-ttu-id="6d196-105">Wenn es sich bei der Methode um einen `void`-Typ handelt, kann die Anweisung `return` ausgelassen werden.</span><span class="sxs-lookup"><span data-stu-id="6d196-105">If the method is a `void` type, the `return` statement can be omitted.</span></span>  

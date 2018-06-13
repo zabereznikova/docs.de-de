@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282391"
 ---
 # <a name="query-a-collection-of-objects"></a><span data-ttu-id="7cc3b-103">Abfrage einer Auflistung von Objekten</span><span class="sxs-lookup"><span data-stu-id="7cc3b-103">Query a collection of objects</span></span>
 <span data-ttu-id="7cc3b-104">In diesem Beispiel wird veranschaulicht, wie eine einfache Abfrage für eine Liste von `Student`-Objekten ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="7cc3b-104">This example shows how to perform a simple query over a list of `Student` objects.</span></span> <span data-ttu-id="7cc3b-105">Jedes `Student`-Objekt enthält grundlegende Informationen über den Studenten und eine Liste, die die Ergebnisse des Studenten aus vier Prüfungen darstellt.</span><span class="sxs-lookup"><span data-stu-id="7cc3b-105">Each `Student` object contains some basic information about the student, and a list that represents the student's scores on four examinations.</span></span>  

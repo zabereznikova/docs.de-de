@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758372"
 ---
 # <a name="ltchunkedcookiehandlergt"></a><span data-ttu-id="7841e-102">&lt;chunkedCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="7841e-102">&lt;chunkedCookieHandler&gt;</span></span>
 <span data-ttu-id="7841e-103">Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span><span class="sxs-lookup"><span data-stu-id="7841e-103">Configures the <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span></span> <span data-ttu-id="7841e-104">Dieses Element kann nur vorhanden sein, wenn die `mode` Attribut des der `<cookieHandler>` Element ist "Default" oder "Aufgeteilte".</span><span class="sxs-lookup"><span data-stu-id="7841e-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Default" or "Chunked".</span></span>  

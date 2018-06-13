@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756695"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="8d5f3-102">Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind</span><span class="sxs-lookup"><span data-stu-id="8d5f3-102">Map Relations Specified for Nested Elements</span></span>
 <span data-ttu-id="8d5f3-103">Es kann ein Schema enthalten eine **msdata: Relationship** Anmerkung, um die Zuordnung zwischen zwei beliebigen Elementen im Schema explizit anzugeben.</span><span class="sxs-lookup"><span data-stu-id="8d5f3-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="8d5f3-104">Die zwei Elemente im angegebenen **msdata: Relationship** können im Schema geschachtelt sein, aber nicht unbedingt sein.</span><span class="sxs-lookup"><span data-stu-id="8d5f3-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="8d5f3-105">Der Zuordnungsprozess verwendet **msdata: Relationship** im Schema für den primären Schlüssel/Fremdschlüssel-Beziehung zwischen den beiden Spalten zu generieren.</span><span class="sxs-lookup"><span data-stu-id="8d5f3-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  

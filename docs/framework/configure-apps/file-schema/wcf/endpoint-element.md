@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749503"
 ---
 # <a name="ltendpointgt-element"></a><span data-ttu-id="f9473-102">&lt;endpoint&gt;-Element</span><span class="sxs-lookup"><span data-stu-id="f9473-102">&lt;endpoint&gt; element</span></span>
 <span data-ttu-id="f9473-103">Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt an, der zur Verfügbarmachung von Diensten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="f9473-103">Specifies binding, contract, and address properties for a service endpoint, which is used to expose services.</span></span>  

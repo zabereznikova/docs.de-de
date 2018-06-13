@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750881"
 ---
 # <a name="ltnetpeertcpbindinggt"></a><span data-ttu-id="4f4a9-102">&lt;netPeerTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="4f4a9-102">&lt;netPeerTcpBinding&gt;</span></span>
 <span data-ttu-id="4f4a9-103">Definiert eine Bindung für Peerkanal-spezifisches TCP-Messaging.</span><span class="sxs-lookup"><span data-stu-id="4f4a9-103">Defines a binding for peer channel specific TCP messaging.</span></span>  

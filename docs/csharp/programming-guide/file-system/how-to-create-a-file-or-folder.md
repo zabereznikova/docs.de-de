@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334833"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a><span data-ttu-id="5bee7-102">Gewusst wie: Erstellen einer Datei oder eines Ordners (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="5bee7-102">How to: Create a File or Folder (C# Programming Guide)</span></span>
 <span data-ttu-id="5bee7-103">Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unterordner erstellen, eine Datei im Unterordner erstellen und Daten in die Datei schreiben.</span><span class="sxs-lookup"><span data-stu-id="5bee7-103">You can programmatically create a folder on your computer, create a subfolder, create a file in the subfolder, and write data to the file.</span></span>  
