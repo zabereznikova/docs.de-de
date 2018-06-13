@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387103"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="8e53a-102">COM-Interop-Beispiel: .NET-Client und COM-Server</span><span class="sxs-lookup"><span data-stu-id="8e53a-102">COM Interop Sample: .NET Client and COM Server</span></span>
 <span data-ttu-id="8e53a-103">In diesem Beispiel wird veranschaulicht, wie ein [.NET Client](#cpconcominteropsamplenetclientcomserveranchor1), der für den Zugriff auf einen [COM-Server](#cpconcominteropsamplenetclientcomserveranchor2) erstellt wurde, eine Instanz einer COM-Co-Klasse erstellt und Klassenmember aufruft, um Hypothekenberechnungen durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="8e53a-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  

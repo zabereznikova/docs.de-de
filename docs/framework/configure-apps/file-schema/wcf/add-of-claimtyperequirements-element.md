@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745408"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="e4ee1-102">&lt;add&gt; des &lt;claimTypeRequirements&gt;-Elements</span><span class="sxs-lookup"><span data-stu-id="e4ee1-102">&lt;add&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="e4ee1-103">Gibt die Typen der erforderlichen und optionalen Ansprüche an, die in verbundenen Anmeldeinformationen vorhanden sein sollen.</span><span class="sxs-lookup"><span data-stu-id="e4ee1-103">Specifies the types of required and optional claims expected to appear in the federated credential.</span></span> <span data-ttu-id="e4ee1-104">Zum Beispiel geben die Dienste die Anforderungen für eingehende Anmeldeinformationen an, die einen bestimmten Satz von Anspruchstypen verarbeiten müssen.</span><span class="sxs-lookup"><span data-stu-id="e4ee1-104">For example, services state the requirements on incoming credentials, which must possess a certain set of claim types.</span></span>  

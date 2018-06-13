@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330439"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a><span data-ttu-id="7c3af-102">Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="7c3af-102">How to: Compare the Contents of Two Folders (LINQ) (C#)</span></span>
 <span data-ttu-id="7c3af-103">Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:</span><span class="sxs-lookup"><span data-stu-id="7c3af-103">This example demonstrates three ways to compare two file listings:</span></span>  

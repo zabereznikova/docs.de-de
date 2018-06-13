@@ -24,6 +24,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744082"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a><span data-ttu-id="8c1e2-102">Gewusst wie: Erstellen einer Mehrfachdateiassembly</span><span class="sxs-lookup"><span data-stu-id="8c1e2-102">How to: Build a Multifile Assembly</span></span>
 <span data-ttu-id="8c1e2-103">In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird, und es wird Code vorgestellt, der jeden Schritt in der Vorgehensweise veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="8c1e2-103">This article explains how to create a multifile assembly and provides code that illustrates each step in the procedure.</span></span>  

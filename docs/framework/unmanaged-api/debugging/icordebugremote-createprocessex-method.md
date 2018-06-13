@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06bdc3605d981acad68a97901627f361da4061c7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423318"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a><span data-ttu-id="19004-102">ICorDebugRemote::CreateProcessEx-Methode</span><span class="sxs-lookup"><span data-stu-id="19004-102">ICorDebugRemote::CreateProcessEx Method</span></span>
 <span data-ttu-id="19004-103">Startet einen Prozess auf einem Remotecomputer unter dem Debugger.</span><span class="sxs-lookup"><span data-stu-id="19004-103">Launches a process on a remote machine under the debugger.</span></span>  

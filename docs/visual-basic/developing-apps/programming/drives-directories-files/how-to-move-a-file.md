@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587292"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a><span data-ttu-id="db80d-102">Gewusst wie: Verschieben von Dateien in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="db80d-102">How to: Move a File in Visual Basic</span></span>
 <span data-ttu-id="db80d-103">Mit der `My.Computer.FileSystem.MoveFile` -Methode kann eine Datei in einen anderen Ordner verschoben werden.</span><span class="sxs-lookup"><span data-stu-id="db80d-103">The `My.Computer.FileSystem.MoveFile` method can be used to move a file to another folder.</span></span> <span data-ttu-id="db80d-104">Wenn die Zielstruktur nicht vorhanden ist, wird sie erstellt.</span><span class="sxs-lookup"><span data-stu-id="db80d-104">If the target structure does not exist, it will be created.</span></span>  

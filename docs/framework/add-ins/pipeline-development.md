@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744576"
 ---
 # <a name="pipeline-development"></a><span data-ttu-id="eb3a8-102">Pipeline-Entwicklung</span><span class="sxs-lookup"><span data-stu-id="eb3a8-102">Pipeline Development</span></span>
 <span data-ttu-id="eb3a8-103">Die Add-in-Pipeline ist der Pfad der Pipelinesegmente, die die hostanwendung und seine-Add-in verwenden müssen, um miteinander kommunizieren.</span><span class="sxs-lookup"><span data-stu-id="eb3a8-103">The add-in pipeline is the path of pipeline segments that the host application and its add-in must use to communicate with each other.</span></span>  

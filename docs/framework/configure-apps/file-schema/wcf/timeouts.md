@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753000"
 ---
 # <a name="lttimeoutsgt"></a><span data-ttu-id="cdbea-102">&lt;timeOuts&gt;</span><span class="sxs-lookup"><span data-stu-id="cdbea-102">&lt;timeOuts&gt;</span></span>
 <span data-ttu-id="cdbea-103">Stellt ein Konfigurationselement dar, das das für das Öffnen und Schließen des Diensthosts zulässige Zeitintervall angibt.</span><span class="sxs-lookup"><span data-stu-id="cdbea-103">Represents a configuration element that specifies the interval of time allowed for the service host to open or close.</span></span>  

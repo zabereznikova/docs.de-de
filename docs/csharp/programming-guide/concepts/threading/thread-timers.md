@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323442"
 ---
 # <a name="thread-timers-c"></a><span data-ttu-id="8ffd5-102">Threadzeitgeber (C#)</span><span class="sxs-lookup"><span data-stu-id="8ffd5-102">Thread Timers (C#)</span></span>
 <span data-ttu-id="8ffd5-103">Die <xref:System.Threading.Timer?displayProperty=nameWithType>-Klasse eignet sich für eine Aufgabe, die in regelmäßigen Abständen in einem separaten Thread ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="8ffd5-103">The <xref:System.Threading.Timer?displayProperty=nameWithType> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="8ffd5-104">Beispielsweise können Sie einen Threadzeitgeber verwenden, um den Status und die Integrität einer Datenbank zu überprüfen oder wichtige Dateien zu sichern.</span><span class="sxs-lookup"><span data-stu-id="8ffd5-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  

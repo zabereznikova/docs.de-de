@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326315"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a><span data-ttu-id="36427-102">Erweiterte Abfragetechniken (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="36427-102">Advanced Query Techniques (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="36427-103">Dieser Abschnitt enthält Beispiele für erweiterte [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragetechniken.</span><span class="sxs-lookup"><span data-stu-id="36427-103">This section provides examples of more advanced [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query techniques.</span></span>  

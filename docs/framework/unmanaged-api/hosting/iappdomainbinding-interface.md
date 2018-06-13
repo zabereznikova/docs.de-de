@@ -1,14 +1,6 @@
 ---
 title: IAppDomainBinding-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAppDomainBinding
 api_location:
@@ -22,35 +14,32 @@ helpviewer_keywords:
 ms.assetid: 368881ab-c4ea-4731-bf22-c596aac7c66c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3a6f26c8337f89d829f42e00a9e5e79731a15156
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430820"
 ---
-# <a name="iappdomainbinding-interface"></a><span data-ttu-id="3db6d-102">IAppDomainBinding-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3db6d-102">IAppDomainBinding Interface</span></span>
-<span data-ttu-id="3db6d-103">Stellt eine Methode, die aufgerufen wird, von der common Language Runtime (CLR), um der hostanwendung zu benachrichtigen, dass eine Anwendungsdomäne erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="3db6d-103">Provides a method that is called by the common language runtime (CLR) to notify the host application that an application domain has been created.</span></span>  
+# <a name="iappdomainbinding-interface"></a><span data-ttu-id="f2660-102">IAppDomainBinding-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f2660-102">IAppDomainBinding Interface</span></span>
+<span data-ttu-id="f2660-103">Stellt eine Methode, die aufgerufen wird, von der common Language Runtime (CLR), um der hostanwendung zu benachrichtigen, dass eine Anwendungsdomäne erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="f2660-103">Provides a method that is called by the common language runtime (CLR) to notify the host application that an application domain has been created.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="3db6d-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="3db6d-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f2660-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="f2660-104">Methods</span></span>  
   
-|<span data-ttu-id="3db6d-105">Methode</span><span class="sxs-lookup"><span data-stu-id="3db6d-105">Method</span></span>|<span data-ttu-id="3db6d-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3db6d-106">Description</span></span>|  
+|<span data-ttu-id="f2660-105">Methode</span><span class="sxs-lookup"><span data-stu-id="f2660-105">Method</span></span>|<span data-ttu-id="f2660-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f2660-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="3db6d-107">OnAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="3db6d-107">OnAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|<span data-ttu-id="3db6d-108">Wird aufgerufen, von der common Language Runtime (CLR), um den Host zu benachrichtigen, dass eine Anwendungsdomäne erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="3db6d-108">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>|  
+|[<span data-ttu-id="f2660-107">OnAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="f2660-107">OnAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|<span data-ttu-id="f2660-108">Wird aufgerufen, von der common Language Runtime (CLR), um den Host zu benachrichtigen, dass eine Anwendungsdomäne erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="f2660-108">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3db6d-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3db6d-109">Requirements</span></span>  
- <span data-ttu-id="3db6d-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3db6d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f2660-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f2660-109">Requirements</span></span>  
+ <span data-ttu-id="f2660-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f2660-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3db6d-111">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3db6d-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f2660-111">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f2660-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3db6d-112">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="3db6d-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f2660-112">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="f2660-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3db6d-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3db6d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f2660-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2660-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3db6d-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3db6d-114">See Also</span></span>  
- [<span data-ttu-id="3db6d-115">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="3db6d-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f2660-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f2660-114">See Also</span></span>  
+ [<span data-ttu-id="f2660-115">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="f2660-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

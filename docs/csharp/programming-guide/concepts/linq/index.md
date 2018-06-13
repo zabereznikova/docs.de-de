@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329906"
 ---
 # <a name="language-integrated-query-linq"></a><span data-ttu-id="3bd48-102">Sprachintegrierte Abfrage (Language-Integrated Query, LINQ)</span><span class="sxs-lookup"><span data-stu-id="3bd48-102">Language Integrated Query (LINQ)</span></span>
 
