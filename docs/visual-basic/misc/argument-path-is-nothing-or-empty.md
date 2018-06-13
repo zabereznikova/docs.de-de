@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599479"
 ---
 # <a name="argument-39path39-is-nothing-or-empty"></a>Argument &#39;Pfad&#39; ist ' Nothing ' oder leer.
 Ein Pfadname ist ungültig, da er mit `Nothing` initialisiert wurde oder leer ist. Ein Pfad muss einen bestimmten Datentyp und einen gültigen Namen haben.  

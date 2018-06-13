@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810030"
 ---
 # <a name="udp-activation"></a>UDP-Aktivierung
 Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel. Es erweitert die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Stichprobe, die prozessaktivierung mit dem Windows Process Activation Service (WAS) unterstützen.  

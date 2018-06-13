@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584669"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Gewusst wie: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen
 Dieses Beispiel zeigt, wie Sie threadlokale Variablen verwenden, um den Status in jeder separaten Aufgabe zu speichern und abzurufen, die von einer <xref:System.Threading.Tasks.Parallel.For%2A>-Schleife erstellt wird. Durch die Verwendung von threadlokalen Daten können Sie den mit der Synchronisierung einer großen Anzahl von Zugriffen auf einen Freigabezustand verbundenen Mehraufwand vermeiden. Statt an eine freigegebene Ressourcen in jeder Iteration zu schreiben, berechnen und speichern Sie den Wert, bis alle Iterationen für die Aufgabe abgeschlossen sind. Sie können dann das endgültige Ergebnis einmal an die freigegebene Ressource schreiben oder sie an eine andere Methoden übergeben.  

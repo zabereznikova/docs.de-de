@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583239"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Gewusst wie: Meldungen in einen Datenflussblock schreiben und Meldungen daraus lesen
 In diesem Dokument wird beschrieben, wie die TPL-Datenflussbibliothek verwendet wird, um Nachrichten in einen Datenflussblock zu schreiben und aus einem Datenflussblock zu lesen. Die TPL-Datenflussbibliothek bietet synchrone und asynchrone Methoden zum Schreiben von Nachrichten an einen Datenflussblock und zum Lesen von Nachrichten aus einem Datenflussblock. In diesem Dokument wird die <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>-Klasse verwendet. Die <xref:System.Threading.Tasks.Dataflow.BufferBlock%601>-Klasse puffert Nachrichten und fungiert als Nachrichtenquelle und als Nachrichtenziel.  

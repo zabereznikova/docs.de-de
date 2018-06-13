@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471663"
 ---
 # <a name="core-communications-internal-duplex-transport-channels"></a>Kernkommunikation: Interne Duplextransportkanäle
 Dieses Thema enthält alle Ausnahmen, die von Windows Communication Foundation (WCF) internen Duplextransportkanälen generiert.  

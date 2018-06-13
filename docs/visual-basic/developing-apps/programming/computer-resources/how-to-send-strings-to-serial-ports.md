@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584026"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen in Visual Basic
 Dieses Thema beschreibt, wie `My.Computer.Ports` zum Senden von Zeichenfolgen an serielle Ports des Computers in Visual Basic verwendet wird.  
