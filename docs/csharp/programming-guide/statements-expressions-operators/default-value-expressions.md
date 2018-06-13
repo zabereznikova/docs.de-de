@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336800"
 ---
 # <a name="default-value-expressions-c-programming-guide"></a><span data-ttu-id="d4436-103">Standardwertausdrücke (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="d4436-103">default value expressions (C# programming guide)</span></span>
 

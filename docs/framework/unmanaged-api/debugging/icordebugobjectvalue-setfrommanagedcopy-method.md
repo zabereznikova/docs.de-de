@@ -1,14 +1,6 @@
 ---
 title: ICorDebugObjectValue::SetFromManagedCopy-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugObjectValue.SetFromManagedCopy
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 2cee9108-a58d-48a8-b7d4-6beb6da3f4bb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e1b0a9789dc0b5082bee33835cd5eaf40d87005d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7a2905caa011df4f0699445bafb8523c6b7e9eb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413864"
 ---
-# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="48cf8-102">ICorDebugObjectValue::SetFromManagedCopy-Methode</span><span class="sxs-lookup"><span data-stu-id="48cf8-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
-<span data-ttu-id="48cf8-103">`SetFromManagedCopy` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="48cf8-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="48cf8-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="48cf8-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="61a66-102">ICorDebugObjectValue::SetFromManagedCopy-Methode</span><span class="sxs-lookup"><span data-stu-id="61a66-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
+<span data-ttu-id="61a66-103">`SetFromManagedCopy` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="61a66-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="61a66-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="61a66-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48cf8-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="48cf8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61a66-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="61a66-105">Syntax</span></span>  
   
 ```  
 HRESULT SetFromManagedCopy (  
@@ -46,9 +35,9 @@ HRESULT SetFromManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="48cf8-106">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="48cf8-106">Requirements</span></span>  
- <span data-ttu-id="48cf8-107">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="48cf8-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61a66-106">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="61a66-106">Requirements</span></span>  
+ <span data-ttu-id="61a66-107">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="61a66-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48cf8-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="48cf8-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="61a66-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="61a66-108">See Also</span></span>  
     
  

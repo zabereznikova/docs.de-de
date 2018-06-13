@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322129"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="4151e-102">Vorgehensweise: Auflisten aller Knoten in einem Baum (C#)</span><span class="sxs-lookup"><span data-stu-id="4151e-102">How to: List All Nodes in a Tree (C#)</span></span>
 <span data-ttu-id="4151e-103">Manchmal ist es hilfreich, alle in einer Struktur vorhandenen Knoten aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="4151e-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="4151e-104">Dies kann sinnvoll sein, wenn Sie genau verstehen möchten, wie sich eine Methode oder eine Eigenschaft auf die Struktur auswirkt.</span><span class="sxs-lookup"><span data-stu-id="4151e-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="4151e-105">Eine Möglichkeit, alle Knoten in Textform aufzulisten, besteht darin, einen XPath-Ausdruck zu generieren, der exakt und spezifisch jeden Knoten in der Struktur identifiziert.</span><span class="sxs-lookup"><span data-stu-id="4151e-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7654a91180dd0b4148cfb85b35bf1ce730764f28
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422684"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a><span data-ttu-id="4633c-102">ICorDebugStepper::SetInterceptMask-Methode</span><span class="sxs-lookup"><span data-stu-id="4633c-102">ICorDebugStepper::SetInterceptMask Method</span></span>
 <span data-ttu-id="4633c-103">Legt einen Wert, der angibt, die Typen von Code, der durchlaufen werden.</span><span class="sxs-lookup"><span data-stu-id="4633c-103">Sets a value that specifies the types of code that are stepped into.</span></span>  

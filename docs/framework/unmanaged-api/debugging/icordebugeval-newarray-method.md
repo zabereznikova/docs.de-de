@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413939"
 ---
 # <a name="icordebugevalnewarray-method"></a><span data-ttu-id="b03fc-102">ICorDebugEval::NewArray-Methode</span><span class="sxs-lookup"><span data-stu-id="b03fc-102">ICorDebugEval::NewArray Method</span></span>
 <span data-ttu-id="b03fc-103">Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.</span><span class="sxs-lookup"><span data-stu-id="b03fc-103">Allocates a new array of the specified element type and dimensions.</span></span>  

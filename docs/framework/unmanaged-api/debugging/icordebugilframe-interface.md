@@ -1,14 +1,6 @@
 ---
 title: ICorDebugILFrame Schnittstelle1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugILFrame
 api_location:
@@ -22,49 +14,46 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1db53f50e942e70517fc06dfd90e75d04158ea9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4a97704e00278e19181df569f108f428cb1ec90f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417744"
 ---
-# <a name="icordebugilframe-interface1"></a><span data-ttu-id="2174d-102">ICorDebugILFrame Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="2174d-102">ICorDebugILFrame Interface1</span></span>
-<span data-ttu-id="2174d-103">Stellt einen Stapelrahmen von Microsoft intermediate Language (MSIL)-Code dar.</span><span class="sxs-lookup"><span data-stu-id="2174d-103">Represents a stack frame of Microsoft intermediate language (MSIL) code.</span></span> <span data-ttu-id="2174d-104">Diese Schnittstelle ist eine Unterklasse von ICorDebugFrame-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="2174d-104">This interface is a subclass of the ICorDebugFrame interface.</span></span>  
+# <a name="icordebugilframe-interface1"></a><span data-ttu-id="fe287-102">ICorDebugILFrame Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="fe287-102">ICorDebugILFrame Interface1</span></span>
+<span data-ttu-id="fe287-103">Stellt einen Stapelrahmen von Microsoft intermediate Language (MSIL)-Code dar.</span><span class="sxs-lookup"><span data-stu-id="fe287-103">Represents a stack frame of Microsoft intermediate language (MSIL) code.</span></span> <span data-ttu-id="fe287-104">Diese Schnittstelle ist eine Unterklasse von ICorDebugFrame-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="fe287-104">This interface is a subclass of the ICorDebugFrame interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="2174d-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="2174d-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="fe287-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="fe287-105">Methods</span></span>  
   
-|<span data-ttu-id="2174d-106">Methode</span><span class="sxs-lookup"><span data-stu-id="2174d-106">Method</span></span>|<span data-ttu-id="2174d-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2174d-107">Description</span></span>|  
+|<span data-ttu-id="fe287-106">Methode</span><span class="sxs-lookup"><span data-stu-id="fe287-106">Method</span></span>|<span data-ttu-id="fe287-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fe287-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="2174d-108">CanSetIP-Methode</span><span class="sxs-lookup"><span data-stu-id="2174d-108">CanSetIP Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-cansetip-method.md)|<span data-ttu-id="2174d-109">Ruft einen Wert, der angibt, ob den Anweisungszeiger am angegebenen Offset Speicherort festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="2174d-109">Gets a value that indicates whether it is safe to set the instruction pointer to the specified offset location.</span></span>|  
-|[<span data-ttu-id="2174d-110">EnumerateArguments-Methode</span><span class="sxs-lookup"><span data-stu-id="2174d-110">EnumerateArguments Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratearguments-method.md)|<span data-ttu-id="2174d-111">Ruft einen Enumerator für die Argumente in diesem Frame ab.</span><span class="sxs-lookup"><span data-stu-id="2174d-111">Gets an enumerator for the arguments in this frame.</span></span>|  
-|[<span data-ttu-id="2174d-112">EnumerateLocalVariables-Methode</span><span class="sxs-lookup"><span data-stu-id="2174d-112">EnumerateLocalVariables Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md)|<span data-ttu-id="2174d-113">Ruft einen Enumerator für die lokalen Variablen in diesem Frame ab.</span><span class="sxs-lookup"><span data-stu-id="2174d-113">Gets an enumerator for the local variables in this frame.</span></span>|  
-|[<span data-ttu-id="2174d-114">GetArgument-Methode</span><span class="sxs-lookup"><span data-stu-id="2174d-114">GetArgument Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getargument-method.md)|<span data-ttu-id="2174d-115">Ruft den Wert des angegebenen Arguments in MSIL-Stapelrahmen ab.</span><span class="sxs-lookup"><span data-stu-id="2174d-115">Gets the value of the specified argument in this MSIL stack frame.</span></span>|  
-|[<span data-ttu-id="2174d-116">GetIP-Methode</span><span class="sxs-lookup"><span data-stu-id="2174d-116">GetIP Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md)|<span data-ttu-id="2174d-117">Ruft den Wert des Anweisungszeigers und eine bitweise Kombination-Wert, der beschreibt, wie der Wert des Anweisungszeigers abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="2174d-117">Gets the value of the instruction pointer and a bitwise combination value that describes how the value of the instruction pointer was obtained.</span></span>|  
-|[<span data-ttu-id="2174d-118">GetLocalVariable-Methode</span><span class="sxs-lookup"><span data-stu-id="2174d-118">GetLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)|<span data-ttu-id="2174d-119">Ruft den Wert der angegebenen lokalen Variablen in MSIL-Stapelrahmen ab.</span><span class="sxs-lookup"><span data-stu-id="2174d-119">Gets the value of the specified local variable in this MSIL stack frame.</span></span>|  
-|[<span data-ttu-id="2174d-120">GetStackDepth-Methode</span><span class="sxs-lookup"><span data-stu-id="2174d-120">GetStackDepth Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getstackdepth-method.md)|<span data-ttu-id="2174d-121">Nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="2174d-121">Not implemented.</span></span>|  
-|[<span data-ttu-id="2174d-122">GetStackValue-Methode</span><span class="sxs-lookup"><span data-stu-id="2174d-122">GetStackValue Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getstackvalue-method.md)|<span data-ttu-id="2174d-123">Nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="2174d-123">Not implemented.</span></span>|  
-|[<span data-ttu-id="2174d-124">SetIP-Methode</span><span class="sxs-lookup"><span data-stu-id="2174d-124">SetIP Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)|<span data-ttu-id="2174d-125">Legt den Anweisungszeiger auf die angegebene Offsetposition im MSIL-Code fest.</span><span class="sxs-lookup"><span data-stu-id="2174d-125">Sets the instruction pointer to the specified offset location in the MSIL code.</span></span>|  
+|[<span data-ttu-id="fe287-108">CanSetIP-Methode</span><span class="sxs-lookup"><span data-stu-id="fe287-108">CanSetIP Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-cansetip-method.md)|<span data-ttu-id="fe287-109">Ruft einen Wert, der angibt, ob den Anweisungszeiger am angegebenen Offset Speicherort festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="fe287-109">Gets a value that indicates whether it is safe to set the instruction pointer to the specified offset location.</span></span>|  
+|[<span data-ttu-id="fe287-110">EnumerateArguments-Methode</span><span class="sxs-lookup"><span data-stu-id="fe287-110">EnumerateArguments Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratearguments-method.md)|<span data-ttu-id="fe287-111">Ruft einen Enumerator für die Argumente in diesem Frame ab.</span><span class="sxs-lookup"><span data-stu-id="fe287-111">Gets an enumerator for the arguments in this frame.</span></span>|  
+|[<span data-ttu-id="fe287-112">EnumerateLocalVariables-Methode</span><span class="sxs-lookup"><span data-stu-id="fe287-112">EnumerateLocalVariables Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md)|<span data-ttu-id="fe287-113">Ruft einen Enumerator für die lokalen Variablen in diesem Frame ab.</span><span class="sxs-lookup"><span data-stu-id="fe287-113">Gets an enumerator for the local variables in this frame.</span></span>|  
+|[<span data-ttu-id="fe287-114">GetArgument-Methode</span><span class="sxs-lookup"><span data-stu-id="fe287-114">GetArgument Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getargument-method.md)|<span data-ttu-id="fe287-115">Ruft den Wert des angegebenen Arguments in MSIL-Stapelrahmen ab.</span><span class="sxs-lookup"><span data-stu-id="fe287-115">Gets the value of the specified argument in this MSIL stack frame.</span></span>|  
+|[<span data-ttu-id="fe287-116">GetIP-Methode</span><span class="sxs-lookup"><span data-stu-id="fe287-116">GetIP Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md)|<span data-ttu-id="fe287-117">Ruft den Wert des Anweisungszeigers und eine bitweise Kombination-Wert, der beschreibt, wie der Wert des Anweisungszeigers abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="fe287-117">Gets the value of the instruction pointer and a bitwise combination value that describes how the value of the instruction pointer was obtained.</span></span>|  
+|[<span data-ttu-id="fe287-118">GetLocalVariable-Methode</span><span class="sxs-lookup"><span data-stu-id="fe287-118">GetLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)|<span data-ttu-id="fe287-119">Ruft den Wert der angegebenen lokalen Variablen in MSIL-Stapelrahmen ab.</span><span class="sxs-lookup"><span data-stu-id="fe287-119">Gets the value of the specified local variable in this MSIL stack frame.</span></span>|  
+|[<span data-ttu-id="fe287-120">GetStackDepth-Methode</span><span class="sxs-lookup"><span data-stu-id="fe287-120">GetStackDepth Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getstackdepth-method.md)|<span data-ttu-id="fe287-121">Nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="fe287-121">Not implemented.</span></span>|  
+|[<span data-ttu-id="fe287-122">GetStackValue-Methode</span><span class="sxs-lookup"><span data-stu-id="fe287-122">GetStackValue Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getstackvalue-method.md)|<span data-ttu-id="fe287-123">Nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="fe287-123">Not implemented.</span></span>|  
+|[<span data-ttu-id="fe287-124">SetIP-Methode</span><span class="sxs-lookup"><span data-stu-id="fe287-124">SetIP Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)|<span data-ttu-id="fe287-125">Legt den Anweisungszeiger auf die angegebene Offsetposition im MSIL-Code fest.</span><span class="sxs-lookup"><span data-stu-id="fe287-125">Sets the instruction pointer to the specified offset location in the MSIL code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2174d-126">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2174d-126">Remarks</span></span>  
- <span data-ttu-id="2174d-127">Die `ICorDebugILFrame` Schnittstelle ist eine spezielle ICorDebugFrame-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="2174d-127">The `ICorDebugILFrame` interface is a specialized ICorDebugFrame interface.</span></span> <span data-ttu-id="2174d-128">Es dient für Rahmen der MSIL-Code oder für Just-in-Time (JIT) kompilierten Frames.</span><span class="sxs-lookup"><span data-stu-id="2174d-128">It is used either for MSIL code frames or for just-in-time (JIT) compiled frames.</span></span> <span data-ttu-id="2174d-129">Die JIT-kompilierten Rahmen implementieren sowohl die `ICorDebugILFrame` Schnittstelle und die ICorDebugNativeFrame-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="2174d-129">The JIT-compiled frames implement both the `ICorDebugILFrame` interface and the ICorDebugNativeFrame interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fe287-126">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fe287-126">Remarks</span></span>  
+ <span data-ttu-id="fe287-127">Die `ICorDebugILFrame` Schnittstelle ist eine spezielle ICorDebugFrame-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="fe287-127">The `ICorDebugILFrame` interface is a specialized ICorDebugFrame interface.</span></span> <span data-ttu-id="fe287-128">Es dient für Rahmen der MSIL-Code oder für Just-in-Time (JIT) kompilierten Frames.</span><span class="sxs-lookup"><span data-stu-id="fe287-128">It is used either for MSIL code frames or for just-in-time (JIT) compiled frames.</span></span> <span data-ttu-id="fe287-129">Die JIT-kompilierten Rahmen implementieren sowohl die `ICorDebugILFrame` Schnittstelle und die ICorDebugNativeFrame-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="fe287-129">The JIT-compiled frames implement both the `ICorDebugILFrame` interface and the ICorDebugNativeFrame interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2174d-130">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="2174d-130">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="fe287-130">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="fe287-130">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2174d-131">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2174d-131">Requirements</span></span>  
- <span data-ttu-id="2174d-132">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2174d-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fe287-131">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fe287-131">Requirements</span></span>  
+ <span data-ttu-id="fe287-132">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe287-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2174d-133">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2174d-133">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fe287-133">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fe287-133">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2174d-134">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2174d-134">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fe287-134">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fe287-134">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2174d-135">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2174d-135">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fe287-135">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe287-135">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2174d-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2174d-136">See Also</span></span>  
- [<span data-ttu-id="2174d-137">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="2174d-137">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="fe287-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fe287-136">See Also</span></span>  
+ [<span data-ttu-id="fe287-137">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="fe287-137">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

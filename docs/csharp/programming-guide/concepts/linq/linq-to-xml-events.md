@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322392"
 ---
 # <a name="linq-to-xml-events-c"></a><span data-ttu-id="f71d8-102">LINQ to XML-Ereignisse (C#)</span><span class="sxs-lookup"><span data-stu-id="f71d8-102">LINQ to XML Events (C#)</span></span>
 <span data-ttu-id="f71d8-103">Mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Ereignissen können Sie sich benachrichtigen lassen, wenn eine XML-Struktur geändert wird.</span><span class="sxs-lookup"><span data-stu-id="f71d8-103">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events enable you to be notified when an XML tree is altered.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a395579892ff2410865a4fcdd19cf20449b82b88
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421071"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a><span data-ttu-id="4e625-102">ICorDebugHeapValue3::GetMonitorEventWaitList-Methode</span><span class="sxs-lookup"><span data-stu-id="4e625-102">ICorDebugHeapValue3::GetMonitorEventWaitList Method</span></span>
 <span data-ttu-id="4e625-103">Stellt eine geordnete Liste von Threads in der Warteschlange auf das Ereignis, das einen Monitorsperre zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="4e625-103">Provides an ordered list of threads that are queued on the event that is associated with a monitor lock.</span></span>  

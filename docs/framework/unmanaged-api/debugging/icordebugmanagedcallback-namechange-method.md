@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a7ef478fed697f4152a6348931ddf3b4b4b2885
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415008"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a><span data-ttu-id="06e55-102">ICorDebugManagedCallback::NameChange-Methode</span><span class="sxs-lookup"><span data-stu-id="06e55-102">ICorDebugManagedCallback::NameChange Method</span></span>
 <span data-ttu-id="06e55-103">Benachrichtigt den Debugger, dass der Name einer Anwendungsdomäne oder einem Thread geändert wurde.</span><span class="sxs-lookup"><span data-stu-id="06e55-103">Notifies the debugger that the name of either an application domain or a thread has changed.</span></span>  

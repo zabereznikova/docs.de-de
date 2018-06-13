@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc4e51ec60c7526f36bbe4909bec91a527e0862c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419909"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a><span data-ttu-id="3a095-102">ICorDebugStepper::SetUnmappedStopMask-Methode</span><span class="sxs-lookup"><span data-stu-id="3a095-102">ICorDebugStepper::SetUnmappedStopMask Method</span></span>
 <span data-ttu-id="3a095-103">Legt einen Wert, der den Typ des nicht zugeordneten Codes angibt, in dem die Ausführung angehalten wird.</span><span class="sxs-lookup"><span data-stu-id="3a095-103">Sets a value that specifies the type of unmapped code in which execution will halt.</span></span>  

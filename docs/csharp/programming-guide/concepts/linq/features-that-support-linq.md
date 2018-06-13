@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325207"
 ---
 # <a name="c-features-that-support-linq"></a><span data-ttu-id="15e9d-102">C#-Funktionen mit LINQ-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="15e9d-102">C# Features That Support LINQ</span></span>
 <span data-ttu-id="15e9d-103">Im folgenden Abschnitt werden neue Sprachkonstrukte, die in C# 3.0 eingeführt werden, vorgestellt.</span><span class="sxs-lookup"><span data-stu-id="15e9d-103">The following section introduces new language constructs introduced in C# 3.0.</span></span> <span data-ttu-id="15e9d-104">Obwohl diese neuen Funktionen zu einem gewissen Grad mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen verwendet werden, sind sie nicht beschränkt auf [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] und können in jedem Kontext, in dem Sie sie nützlich finden, verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="15e9d-104">Although these new features are all used to a degree with [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, they are not limited to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] and can be used in any context where you find them useful.</span></span>  
