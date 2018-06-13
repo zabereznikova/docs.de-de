@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 29501eeb6085dbc235112d98e8099fcfa4565000
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427794"
 ---
 # <a name="isymunmanagedbinder2-interface"></a>ISymUnmanagedBinder2-Schnittstelle
 Stellt einen Symbolbinder für nicht verwalteten Code dar und erweitert die [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) Schnittstelle.  

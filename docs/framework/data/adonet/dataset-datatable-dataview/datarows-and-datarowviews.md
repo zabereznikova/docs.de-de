@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762870"
 ---
 # <a name="datarows-and-datarowviews"></a>"DataRows" und "DataRowViews"
 Eine <xref:System.Data.DataView> macht eine aufzählbare Auflistung von <xref:System.Data.DataRowView>-Objekten verfügbar. Die **DataRowView** Objekte, die Werte als Objektarrays, die durch den Namen oder den Ordinalzahlverweis der Spalte in der zugrunde liegenden Tabelle indiziert werden verfügbar gemacht. Sie erreichen die <xref:System.Data.DataRow> , verfügbar gemacht wird durch die **DataRowView** mithilfe der <xref:System.Data.DataRowView.Row%2A> Eigenschaft der **DataRowView**.  

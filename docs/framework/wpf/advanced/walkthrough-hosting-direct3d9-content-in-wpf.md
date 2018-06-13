@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546168"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF
 In dieser exemplarischen Vorgehensweise zeigt, wie Direct3D9-Inhalt in eine Windows Presentation Foundation (WPF)-Anwendung gehostet wird.  

@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4d0758a8603b7c31844b39c9f3beefea04e0a029
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422958"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>ICorDebugProcess6::GetExportStepInfo-Methode
 Enthält Informationen über die exportierten Laufzeitfunktionen, welche dabei helfen, den verwaltetem Code schrittweise durchzugehen.  

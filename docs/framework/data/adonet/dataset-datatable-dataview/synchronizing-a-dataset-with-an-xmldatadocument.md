@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763266"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Synchronisieren eines „DataSet“ mit einem „XmlDataDocument“
 In diesem Abschnitt wird ein Schritt bei der Verarbeitung einer Bestellung mit einem <xref:System.Data.DataSet> mit strikter Typbindung beschrieben, das mit einem <xref:System.Xml.XmlDataDocument> synchronisiert wird. Erstellen Sie die folgenden Beispielen ein **DataSet** mit einem minimalistischen Schema, die nur einen Teil des XML-Quelldokuments übereinstimmt. Die Beispiele verwenden eine **XmlDataDocument** Originaltreue von XML-Quelldokument aktivieren die **DataSet** verwendet werden, um eine Teilmenge des XML-Dokuments verfügbar zu machen.  

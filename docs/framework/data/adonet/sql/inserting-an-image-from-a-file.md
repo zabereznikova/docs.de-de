@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359314"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Einfügen eines Bilds aus einer Datei
 Je nach Feldtyp in der Datenquelle können Sie ein Binary Large Object (BLOB) entweder als Binär- oder Zeichendaten in eine Datenbank schreiben. BLOB ist ein generischer Begriff und verweist auf die Datentypen `text`, `ntext` und `image`, die in der Regel Dokumente und Bilder enthalten.  

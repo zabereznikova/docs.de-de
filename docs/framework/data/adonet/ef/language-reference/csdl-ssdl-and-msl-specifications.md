@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762360"
 ---
 # <a name="csdl-ssdl-and-msl-specifications"></a>CSDL-, SSDL- und MSL-Spezifikationen
 Die [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) Standort wurde am Hauptstandort für den Inhalt des Entity Framework.  

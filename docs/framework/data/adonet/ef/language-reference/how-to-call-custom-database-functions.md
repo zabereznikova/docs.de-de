@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762844"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Gewusst wie: Aufrufen benutzerdefinierter Datenbankfunktionen
 In diesem Thema wird das Aufrufen von benutzerdefinierten Funktionen beschrieben, die in der Datenbank in LINQ to Entities-Abfragen definiert werden.  

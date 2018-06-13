@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763942"
 ---
 # <a name="getschema-and-schema-collections"></a>"GetSchema" und Schemaauflistungen
 Die **Verbindung** -Klassen aller von .NET Framework verwalteten Anbieter implementieren eine **GetSchema** Methode dient zum Abrufen von Schemainformationen über die Datenbank, die derzeit verbunden ist, und die Schemainformationen zurückgegeben, aus der **GetSchema** Methode kommt in Form von einer <xref:System.Data.DataTable>. Die **GetSchema** Methode ist eine überladene Methode, die optionale Parameter zum Angeben der zurückzugebenden schemaauflistung und zum Einschränken der zurückzugebenden Informationsmenge bereitstellt.  

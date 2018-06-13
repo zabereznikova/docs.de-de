@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761076"
 ---
 # <a name="inferring-columns"></a>Ableiten von Spalten
 Nachdem von ADO.NET anhand eines XML-Dokuments ermittelt wurde, welche Elemente als Tabellen für ein <xref:System.Data.DataSet>-Objekt abgeleitet werden sollen, werden die Spalten für diese Tabellen abgeleitet. Neu in ADO.NET 2.0 eingeführt, ein neues Schema inferenzmodul, die einen stark typisierten Datentyp für jede leitet **SimpleType** Element. In früheren Versionen der Datentyp eines hergeleiteten **SimpleType** handelte es sich immer **xsd: String**.  

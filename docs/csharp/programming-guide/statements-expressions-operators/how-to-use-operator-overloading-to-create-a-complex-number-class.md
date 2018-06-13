@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328863"
 ---
 # <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a>Gewusst wie: Verwenden der Operatorüberladung zum Erstellen einer Klasse für komplexe Zahlen (C#-Programmierhandbuch)
 In diesem Beispiel wird gezeigt, wie Sie die Operatorüberladung verwenden können, um die komplexe Zahlenklasse `Complex` zu erstellen, die die komplexe Addition definiert. Das Programm zeigt den Imaginär- und den Realteil der Zahlen und das Ergebnis der Addition durch Überschreiben der `ToString`-Methode an.  

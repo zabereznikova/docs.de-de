@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545437"
 ---
 # <a name="how-to-apply-animations-to-text"></a>Gewusst wie: Anwenden von Animationen auf Text
 Animationen können die Anzeige und die Darstellung von Text in Ihrer Anwendung ändern. In den folgenden Beispielen verschiedene Arten von Animationen verwenden, um zu beeinflussen, die Anzeige von Text in einem <xref:System.Windows.Controls.TextBlock> Steuerelement.  

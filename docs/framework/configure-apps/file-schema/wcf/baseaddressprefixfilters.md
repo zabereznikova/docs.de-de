@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358540"
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
 Stellt eine Auflistung der Konfiguration, die Elemente, die angeben gefiltert,, die einen Mechanismus übergeben für die entsprechenden (Internet Information Services, IIS)-Bindungen auszuwählen, wenn die Windows Communication Foundation (WCF)-Anwendung in IIS gehostet wird.  

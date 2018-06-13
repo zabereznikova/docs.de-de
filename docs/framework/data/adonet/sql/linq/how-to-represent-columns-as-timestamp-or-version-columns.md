@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361238"
 ---
 # <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>Gewusst wie: Darstellen von Spalten als Zeitstempel- oder Versionsspalten
 Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> Eigenschaft von der <xref:System.Data.Linq.Mapping.ColumnAttribute> Attribut so kennzeichnen Sie ein Feld oder eine Eigenschaft, die eine Datenbankspalte, die Datenbank-Timestamps oder-Versionsnummern enthält darstellt.  
