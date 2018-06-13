@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524399"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel-Steuerelement (Windows Forms)
 Das `FlowLayoutPanel`-Steuerelement ordnet seinen Inhalt in horizontaler oder vertikaler Flussrichtung an. Dieser Inhalt kann von einer Zeile zur nächsten oder von einer Spalte zur nächsten umbrochen werden. Alternativ kann dieser Inhalt abgeschnitten werden, statt dass er umbrochen wird.  

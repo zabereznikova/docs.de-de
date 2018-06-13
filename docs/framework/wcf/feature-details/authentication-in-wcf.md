@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489109"
 ---
 # <a name="authentication-in-wcf"></a>Authentifizierung in WCF
 In den folgenden Themen demonstrieren eine Reihe unterschiedlicher Mechanismen in Windows Communication Foundation (WCF), die Authentifizierung, z. B. bereitstellen, Windows-Authentifizierung, x. 509-Zertifikate und Benutzernamen und Kennwörter.  

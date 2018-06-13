@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522095"
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>Gewusst wie: Ausschneiden mit einem Bereich
 Eine der Eigenschaften von der <xref:System.Drawing.Graphics> Klasse ist die Clip-Bereich. Alle Zeichnungen geschieht, indem eine angegebene <xref:System.Drawing.Graphics> Objekt ist nur für den Ausschneidebereich dieses <xref:System.Drawing.Graphics> Objekt. Sie können die Clip-Bereich festlegen, durch Aufrufen der <xref:System.Drawing.Graphics.SetClip%2A> Methode.  

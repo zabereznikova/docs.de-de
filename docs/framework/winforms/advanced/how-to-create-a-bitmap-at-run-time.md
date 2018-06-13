@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520639"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>Gewusst wie: Erstellen einer Bitmap zur Laufzeit
 In diesem Beispiel erstellt und zeichnet Sie einem <xref:System.Drawing.Bitmap> -Objekt und zeigt ihn in einer vorhandenen Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerelement.  

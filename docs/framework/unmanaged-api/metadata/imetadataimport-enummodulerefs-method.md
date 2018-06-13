@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 294156983507476b7ddfda3bc3cad16bb32f422b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445408"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs-Methode
 Zählt ModuleRef-Token auf, die importierte Module darstellen.  

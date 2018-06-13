@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551001"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>Programmgesteuertes Ändern der Auswahl in einem RichTextBox-Element
 In diesem Beispiel wird gezeigt, wie so ändern Sie programmgesteuert auf die aktuelle Auswahl in einem <xref:System.Windows.Controls.RichTextBox>. Diese Auswahl ist identisch, als ob der Benutzer den Inhalt mithilfe der Benutzeroberfläche ausgewählt haben.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522014"
 ---
 # <a name="how-to-join-lines"></a>Gewusst wie: Verknüpfen von Linien
 Ein Join Zeile ist der allgemeinen Bereich, der zwei Zeilen gebildet wird, deren Enden erfüllen oder sich überlappen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet drei Linienarten Join: Linienverbindungsstile, abschrägungen und gerundet wird. Linienverbindungsstil ist eine Eigenschaft der <xref:System.Drawing.Pen> Klasse. Wenn Sie einen Linienverbindungsstil für eine <xref:System.Drawing.Pen> -Objekt, dass auf alle miteinander verbundenen Linien in einem Linienverbindungsstil angewendet werden <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt mit diesem Stift gezeichnet.  

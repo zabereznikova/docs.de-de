@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517169"
 ---
 # <a name="application-settings-for-windows-forms"></a>Anwendungseinstellungen für Windows Forms
 Die Funktion Anwendungseinstellungen von Windows Forms erleichtert das Erstellen, Speichern und Verwalten von benutzerdefinierten Einstellungen für Anwendungen und Benutzer auf dem Client. Mit Anwendungseinstellungen können Sie nicht nur Anwendungsdaten wie Datenbankverbindungszeichenfolgen, sondern auch benutzerspezifische Daten, etwa Symbolleistenpositionen und zuletzt verwendete Listen, speichern.  

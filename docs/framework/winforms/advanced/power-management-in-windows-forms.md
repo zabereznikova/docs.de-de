@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523490"
 ---
 # <a name="power-management-in-windows-forms"></a>Energieverwaltung in Windows Forms
 Windows Forms-Anwendungen können die Power Management-Funktionen in Windows-Betriebssystems nutzen. Ihre Anwendungen können den Energiezustand eines Computers überwachen und Maßnahmen ergreifen, tritt eine statusänderung. Wenn Ihre Anwendung auf einem tragbaren Computer ausgeführt wird, sollten Sie z. B. bestimmte Funktionen in Ihrer Anwendung deaktivieren, wenn der Akku des Computers unter einer bestimmten Ebene liegt.  

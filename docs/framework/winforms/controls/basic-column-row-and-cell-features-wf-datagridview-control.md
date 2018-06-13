@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525493"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms
 Viele grundlegende Verhaltensweisen von `DataGridView` Zellen, Zeilen und Spalten können durch das Festlegen einzelner Eigenschaften geändert werden. Die Themen in diesem Abschnitt werden einige der am häufigsten verwendeten Features beschrieben.  

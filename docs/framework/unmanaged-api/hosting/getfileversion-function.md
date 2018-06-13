@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430618"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion-Funktion
 Ruft ab, der zur common Language Runtime (CLR) Version der angegebenen Datei unter Verwendung des angegebenen Puffers.  

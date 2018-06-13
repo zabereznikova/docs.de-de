@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487619"
 ---
 # <a name="wmi-class-reference"></a>WMI-Klassenreferenz
 Dieser Abschnitt enthält alle WMI-Klassen, die von der Windows Communication Foundation (WCF)-WMI-Anbieter verfügbar gemacht werden.  

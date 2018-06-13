@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524653"
 ---
 # <a name="windows-forms-accessibility"></a>Windows Forms-Barrierefreiheit
 Mit den Barrierefreiheitsfunktionen von Windows Forms können Sie Ihre Anwendung einer Vielzahl von Benutzern zur Verfügung stellen.  

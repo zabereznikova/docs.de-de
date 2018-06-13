@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 707e482a6952ee1266950dc181fbc85e5d6ef398
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448054"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources-Methode
 Ruft einen Zeiger auf einem Enumerator für die Ressourcen, die im aktuellen Assemblymanifest verwiesen wird.  

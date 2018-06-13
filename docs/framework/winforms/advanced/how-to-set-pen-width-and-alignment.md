@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522281"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Gewusst wie: Festlegen von Stiftbreite und -ausrichtung
 Beim Erstellen einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite als eines der Argumente an den Konstruktor bereitstellen. Sie können auch die Stiftbreite mit ändern die <xref:System.Drawing.Pen.Width%2A> Eigenschaft von der <xref:System.Drawing.Pen> Klasse.  

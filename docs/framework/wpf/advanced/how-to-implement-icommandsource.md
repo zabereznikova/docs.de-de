@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547026"
 ---
 # <a name="how-to-implement-icommandsource"></a>Gewusst wie: Implementieren von "ICommandSource"
 In diesem Beispiel wird gezeigt, wie durch die Implementierung eine Befehlsquelle erstellen <xref:System.Windows.Input.ICommandSource>.  Eine Befehlsquelle ist ein Objekt, das zum Aufrufen eines Befehls bekannt ist.  Die <xref:System.Windows.Input.ICommandSource> Schnittstelle macht drei Member: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, und <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> ist der Befehl, der aufgerufen wird. Die <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> ein benutzerdefinierten Datentyp auf, der von der Befehlsquelle an die Methode übergeben wird, die den Befehl behandelt wird. Die <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ist das Objekt, das der Befehl ausgeführt wird.  

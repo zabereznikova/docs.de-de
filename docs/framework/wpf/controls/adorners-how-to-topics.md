@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550084"
 ---
 # <a name="adorners-how-to-topics"></a>Gewusst-wie-Themen zu Adorner
 In den folgenden Beispielen wird gezeigt, wie häufige Aufgaben mit der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adornerframework.  

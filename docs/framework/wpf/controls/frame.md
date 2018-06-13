@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552044"
 ---
 # <a name="frame"></a>Frame
 Die <xref:System.Windows.Controls.Frame> Steuerelement unterstützt Inhaltsnavigation im Inhalt. <xref:System.Windows.Controls.Frame> aufgenommen werden kann, durch ein Stammelement wie <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, oder als Insel innerhalb einer Struktur, die ein Stammelement gehört.  

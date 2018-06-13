@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401686"
 ---
 # <a name="wif-api-reference"></a>WIF-API-Verweis
 Windows Identity Foundation-Klassen (WIF) werden in folgende Assemblys unterteilt: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) und `System.ServiceModel` (System.ServiceModel.dll). Dieses Thema enthält Links zu den WIF-Namespaces und kurze Erläuterungen zu den Klassen, die jeder Namespace enthält.  

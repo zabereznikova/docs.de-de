@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552778"
 ---
 # <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>Gewusst wie: Verwenden eines benutzerdefinierten Kontextmenüs mit "TextBox"
 In diesem Beispiel wird gezeigt, wie definieren und Implementieren eines einfachen benutzerdefinierten Kontextmenüs für eine <xref:System.Windows.Controls.TextBox>.  

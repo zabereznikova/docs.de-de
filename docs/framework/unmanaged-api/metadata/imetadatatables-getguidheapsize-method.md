@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 97d196769b549022ce498958fc34cf08df442d0a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447089"
 ---
 # <a name="imetadatatablesgetguidheapsize-method"></a>IMetaDataTables::GetGuidHeapSize-Methode
 Ruft die Größe in Bytes der GUID-Heap.  

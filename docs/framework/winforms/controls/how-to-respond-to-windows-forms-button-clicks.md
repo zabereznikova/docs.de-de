@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534250"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms
 Die grundlegendste Verwendung von Windows Forms <xref:System.Windows.Forms.Button> Steuerelement ist, um Code auszuführen, auf die Schaltfläche geklickt wird.  

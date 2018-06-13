@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521484"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Gewusst wie: Erstellen von Miniaturbildern
 Ein Miniaturbild ist eine kleine Version eines Bilds. Sie können ein Miniaturbild erstellen, durch Aufrufen der <xref:System.Drawing.Image.GetThumbnailImage%2A> Methode ein <xref:System.Drawing.Image> Objekt.  

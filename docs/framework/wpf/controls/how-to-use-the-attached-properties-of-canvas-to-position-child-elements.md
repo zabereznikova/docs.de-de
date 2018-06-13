@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552373"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Gewusst wie: Positionieren von untergeordneten Elementen mithilfe der angefügten Eigenschaften von Canvas
 Dieses Beispiel zeigt, wie der angefügten Eigenschaften des <xref:System.Windows.Controls.Canvas> um untergeordnete Elemente zu positionieren.  

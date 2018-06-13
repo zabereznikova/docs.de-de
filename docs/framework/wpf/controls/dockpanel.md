@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550812"
 ---
 # <a name="dockpanel"></a>DockPanel
 Die <xref:System.Windows.Controls.DockPanel> Element wird verwendet, um untergeordneten Inhalt am Rand eines Layoutcontainers zu positionieren.  
