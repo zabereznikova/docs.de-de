@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496892"
 ---
 # <a name="metadata-architecture-overview"></a>Übersicht über die Metadatenarchitektur
 Windows Communication Foundation (WCF) bietet eine umfangreiche Infrastruktur für exportieren, veröffentlichen, abrufen und Importieren von Dienstmetadaten. WCF-Dienste mithilfe von Metadaten beschrieben, wie für die Interaktion mit den Endpunkten des Diensts, sodass Tools, z. B. Svcutil.exe, automatisch Clientcode für den Zugriff auf den Dienst generieren können.  

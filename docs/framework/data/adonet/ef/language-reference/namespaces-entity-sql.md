@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763640"
 ---
 # <a name="namespaces-entity-sql"></a>Namespaces (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vermeidet Namenskonflikte bei globalen Bezeichnern wie Typnamen, Entitätenmengen, Funktionen usw. mithilfe von Namespaces. Unterstützung von Namespaces in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ähnelt die Namespaceunterstützung in den [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].  

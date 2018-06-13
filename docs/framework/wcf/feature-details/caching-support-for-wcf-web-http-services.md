@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496824"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Cacheunterstützung für WCF-Web-HTTP-Dienste
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ermöglicht es Ihnen, verwenden Sie deklarative Zwischenspeichermechanismus in ASP.NET in Ihre WCF-Web-HTTP-Dienste bereits verfügbar. Auf diese Weise können Sie Antworten der WCF-Web-HTTP-Dienstvorgänge zwischenspeichern. Wenn ein Benutzer HTTP GET an den Dienst sendet, der zum Zwischenspeichern konfiguriert ist, sendet ASP.NET die zwischengespeicherte Antwort zurück, und die Dienstmethode wird nicht aufgerufen. Wenn der Cache abgelaufen ist, wird beim nächsten Senden eines HTTP GET durch einen Benutzer die Dienstmethode aufgerufen und die Antwort erneut zwischengespeichert. Weitere Informationen zur Zwischenspeicherung in ASP.NET finden Sie unter [Übersicht über das Zwischenspeichern von ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  

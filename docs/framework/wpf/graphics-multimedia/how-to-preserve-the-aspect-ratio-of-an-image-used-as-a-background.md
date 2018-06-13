@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562715"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Gewusst wie: Beibehalten des Seitenverhältnisses bei einem als Hintergrund verwendeten Bild
 Dieses Beispiel zeigt, wie die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft ein <xref:System.Windows.Media.ImageBrush> um das Seitenverhältnis des Bild beizubehalten.  
