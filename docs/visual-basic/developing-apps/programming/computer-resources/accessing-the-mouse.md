@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582589"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Zugreifen auf die Maus (Visual Basic)
 Mit dem `My.Computer.Mouse`-Objekt können Sie Informationen zu der Maus des Computers abrufen: Ist eine Maus vorhanden, wie viele Tasten hat sie und welche Informationen zum Mausrad liegen vor?  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594346"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>Die Variable verwendet einen Automatisierungstyp, der von Visual Basic nicht unterstützt wird.
 Sie haben versucht, verwenden Sie eine Variable, die definiert, die in einer Typbibliothek oder Objektbibliothek, die einen Datentyp, der von Visual Basic nicht unterstützt.  

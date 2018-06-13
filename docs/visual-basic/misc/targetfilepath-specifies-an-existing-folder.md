@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639310"
 ---
 # <a name="targetfilepath-specifies-an-existing-folder"></a>'TargetFilePath' gibt einen vorhandenen Ordner an.
 Der Parameter `TargetFilePath` gibt ein vorhandenes Verzeichnis an, muss aber den Namen des neuen Verzeichnisses angeben.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594818"
 ---
 # <a name="name-39ltnamegt39-is-not-declared"></a>Namen &#39; &lt;Namen&gt; &#39; ist nicht deklariert
 Eine Anweisung verweist auf ein Programmierelement, aber der Compiler ein Element mit genau diesem Namen kann nicht gefunden werden.  

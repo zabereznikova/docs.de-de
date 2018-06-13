@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578988"
 ---
 # <a name="dispose-pattern"></a>Dispose-Muster
 Alle Programme abrufen eine oder mehrere Systemressourcen, z. B. Arbeitsspeicher, Systemhandles oder Datenbankverbindungen, im Rahmen ihrer Ausführung. Entwickler müssen solche Systemressourcen mit Vorsicht werden, da sie freigegeben werden müssen, nachdem sie eingerichtet und verwendet wurden.  

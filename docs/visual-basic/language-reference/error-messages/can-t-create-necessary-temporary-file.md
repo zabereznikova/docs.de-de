@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585051"
 ---
 # <a name="can39t-create-necessary-temporary-file"></a>Können&#39;t erforderlichen temporären Datei erstellen
 Entweder ist das Laufwerk voll ist, die durch die Umgebungsvariable TEMP angegebene Verzeichnis enthält, oder die TEMP-Umgebungsvariable gibt eine ungültige oder nur-Lese Laufwerk oder ein Verzeichnis.  

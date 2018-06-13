@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585579"
 ---
 # <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39;Ist&#39; erfordert Operanden, die Verweistypen sind, aber dieser Operand hat den Werttyp &#39; &lt;Typname&gt;&#39;
 Die `Is` Vergleichsoperator bestimmt, ob zwei Objektvariablen auf dieselbe Instanz verweisen. Dieser Vergleich ist für Werttypen nicht definiert.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584578"
 ---
 # <a name="error-creating-win32-resources-lterror-messagegt"></a>Fehler beim Erstellen von Win32-Ressourcen: &lt;Fehlermeldung&gt;
 Visual Basic-Compiler Ruft den Assemblylinker (Al.exe, auch bekannt als Alink) auf, um eine Assembly mit einem Manifest zu erstellen. Der Linker hat einen Fehler beim Erstellen einer speicherinternen Ressource gemeldet. Das kann ein Problem mit der Umgebung sein oder Ihr Computer hat wenig Arbeitsspeicher.  

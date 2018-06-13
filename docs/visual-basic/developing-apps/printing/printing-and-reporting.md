@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582791"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Drucken und Berichterstellung (Visual Basic)
 Visual Basic bietet mehrere Optionen zum Drucken und berichterstellung. Die folgenden Themen enthalten eine Übersicht sowie Links zu der entsprechenden Dokumentation, die im Zusammenhang mit drucken und berichterstellung.  

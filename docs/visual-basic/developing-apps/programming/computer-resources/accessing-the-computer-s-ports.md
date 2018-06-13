@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585540"
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Zugreifen auf die Anschlüsse des Computers (Visual Basic)
 Das Objekt `My.Computer.Ports` stellt eine Eigenschaft und eine Methode bereit, mit deren Hilfe Sie auf die seriellen Anschlüsse eines Computer zugreifen können.  

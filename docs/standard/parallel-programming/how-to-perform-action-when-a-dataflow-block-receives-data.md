@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583018"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Gewusst wie: Eine Aktion ausführen, wenn ein Datenflussblock Daten empfängt
 *Ausführungsdatenflussblock*-Typen rufen einen vom Benutzer bereitgestellten Delegaten auf, wenn sie Daten empfangen. Die Klassen <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sind Typen von Ausführungsdatenflussblöcken. Sie können das Schlüsselwort `delegate` (`Sub` in Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> oder einen Lambdaausdruck verwenden, wenn Sie eine Arbeitsfunktion für einen Ausführungsdatenflussblock bereitstellen. In diesem Dokument wird beschrieben, wie <xref:System.Func%602> und Lambdaausdrücke verwendet werden, um Aktionen in Ausführungsblöcken auszuführen.  

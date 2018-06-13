@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581852"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Zugreifen auf Anwendungsformulare (Visual Basic)
 Mit dem `My.Forms`-Objekt können Sie ganz einfach auf eine Instanz von jedem Windows-Formular zugreifen, die im Projekt der Anwendung deklariert wurde. Außerdem können Sie mit den Eigenschaften des `My.Application`-Objekts auf den Begrüßungsbildschirm und das Hauptformular der Anwendung zugreifen und eine Liste der offenen Formulare der Anwendung abrufen.  

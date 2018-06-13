@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591806"
 ---
 # <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Kopieren den Wert der &#39;ByRef&#39; Parameter &#39; &lt;Parametername&gt; &#39; schränkt Sie zurück in das entsprechende Argument vom Typ &#39; &lt;Typname1&gt; &#39; Typ &#39; &lt;Typname2&gt;&#39;
 Eine Prozedur wird aufgerufen, mit der ein Argument, das auf den entsprechenden Parametertyp erweitert, und die Konvertierung aus dem Parameter an das Argument einschränkend.  

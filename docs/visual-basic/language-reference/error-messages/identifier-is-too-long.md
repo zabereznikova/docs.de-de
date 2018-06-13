@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586450"
 ---
 # <a name="identifier-is-too-long"></a>Der Bezeichner ist zu lang.
 Der Name oder Bezeichner jedes Programmierelements ist auf 1023 Zeichen beschränkt. Darüber hinaus darf für ein vollqualifizierten Namen 1023 Zeichen nicht überschreiten. Dies bedeutet, dass die gesamte Bezeichnerzeichenfolge (`<namespace>.<...>.<namespace>.<class>.<element>`) kann nicht mehr als 1023 Zeichen lang sein, einschließlich den Memberzugriffsoperator (`.`) Zeichen.  

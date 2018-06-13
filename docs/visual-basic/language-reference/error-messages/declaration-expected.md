@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583889"
 ---
 # <a name="declaration-expected"></a>Deklaration erwartet.
 Eine nicht deklarierte-Anweisung, z. B. eine Zuordnung oder Loop-Anweisung befindet sich außerhalb einer Prozedur. Nur Deklarationen sind externe Prozeduren zulässig.  

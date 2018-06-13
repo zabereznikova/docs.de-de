@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583837"
 ---
 # <a name="bad-dll-calling-convention"></a>Fehlerhafte DLL-Aufrufkonvention
 Weitergegebenen Argumenten um eine Dynamic Link Library (DLL) müssen genau mit denen von der Routine erwartet entsprechen. Aufrufkonventionen befassen sich mit Anzahl, Typ und die Reihenfolge der Argumente. Das Programm möglicherweise eine Routine in einer DLL aufrufen, der den falschen Typ oder die Anzahl von Argumenten übergeben wird.  

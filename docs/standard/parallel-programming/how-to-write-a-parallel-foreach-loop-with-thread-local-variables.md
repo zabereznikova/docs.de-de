@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582736"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Gewusst wie: Schreiben einer Parallel.ForEach-Schleife mit thread-lokalen Variablen
 Im folgenden Beispiel wird gezeigt, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Methode geschrieben wird, für die threadlokale Variablen verwendet werden. Wenn eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife ausgeführt wird, wird die Quellauflistung in mehrere Partitionen unterteilt. Jede Partition erhält eine eigene Kopie der "threadlokalen" Variable. (Der Begriff "threadlokal" ist hier etwas ungenau, da in einigen Fälle zwei Partitionen möglicherweise im gleichen Thread ausgeführt werden.)  

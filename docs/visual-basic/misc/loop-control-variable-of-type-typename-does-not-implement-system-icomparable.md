@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637447"
 ---
 # <a name="loop-control-variable-of-type-39lttypenamegt39-does-not-implement-the-39systemicomparable39-interface"></a>Loop-Steuerungsvariable des Typs &#39; &lt;Typename&gt; &#39; implementiert nicht die &#39;System.IComparable&#39; Schnittstelle
 Eine Variable hat einen Typ, der die `System.IComparable` -Schnittstelle nicht implementiert. `System.IComparable` muss von einem Werttyp oder einer Klasse implementiert werden.  

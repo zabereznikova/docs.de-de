@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582648"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Zugreifen auf die Tastatur (Visual Basic)
 Das `My.Computer.Keyboard`-Objekt bietet Eigenschaften für den Zugriff auf den aktuellen Zustand der Tastatur: z.B. welche Tasten werden gerade gedrückt? Außerdem bietet es eine Methode, mit der Sie Tastatureingaben an ein aktives Fenster schicken können.  

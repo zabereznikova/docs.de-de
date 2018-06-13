@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587432"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Die Handles-Klausel erfordert eine WithEvents-Variable, die im enthaltenden Typ oder einem seiner Basistypen definiert wird.
 Sie keine angeben eine `WithEvents` -Variable in Ihre `Handles` Klausel. Die `Handles` -Schlüsselwort am Ende der Prozedurdeklaration, bewirkt, dass durch eine Objektvariable deklariert mit ausgelöste Ereignisse behandeln die `WithEvents` Schlüsselwort.  

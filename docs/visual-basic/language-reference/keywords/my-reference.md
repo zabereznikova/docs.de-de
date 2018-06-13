@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597320"
 ---
 # <a name="my-reference-visual-basic"></a>My-Referenz (Visual Basic)
 Die `My` Funktion nutzt die Programmierung schneller und einfacher intuitiven Zugriff auf häufig verwendete Methoden, Eigenschaften und Ereignisse ermöglicht. Diese Tabelle listet die Objekte, die in enthaltenen `My`, sowie die Aktionen, die mit jedem ausgeführt werden können.  

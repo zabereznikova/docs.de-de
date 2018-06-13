@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595825"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>XML-Entitätsverweise werden nicht unterstützt
 Ein Entitätsverweis (z. B. `©`) ist nicht definiert in dem XML 1.0-Spezifikation als Wert für ein XML-Literal enthalten ist. Nur `&`, `"`, `<`, `>`, und `'` XML-Entitätsverweise werden in XML-Literalen unterstützt.  

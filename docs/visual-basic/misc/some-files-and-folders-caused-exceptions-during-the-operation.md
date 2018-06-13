@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638681"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a>Einige Dateien und Ordner haben Ausnahmen während des Vorgangs verursacht
 Verzeichnisse und Dateien können u. U. Ausnahmen auslösen, wenn ein Vorgang versucht wird, ohne dass der Benutzer über die erforderlichen Berechtigungen verfügt.  

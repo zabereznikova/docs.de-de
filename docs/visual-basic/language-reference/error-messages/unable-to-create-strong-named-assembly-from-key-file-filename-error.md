@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595045"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>So erstellen Sie die Assembly mit starkem Namen aus der Schlüsseldatei konnte nicht &#39; &lt;Filename&gt;&#39;: &lt;Fehler&gt;
 Eine Assembly mit starkem Namen konnte nicht aus der angegebenen Schlüsseldatei erstellt werden.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584201"
 ---
 # <a name="visual-basic-power-packs-controls"></a>Visual Basic Power Packs-Steuerelemente
 Visual Basic Power Packs-Steuerelemente sind zusätzliche Windows Forms-Steuerelemente. Sie sind nicht in Visual Studio enthalten.  Sie können [herunterladen](http://go.microsoft.com/fwlink/?LinkId=321343), jedoch als angegebenen-ohne Unterstützung.  

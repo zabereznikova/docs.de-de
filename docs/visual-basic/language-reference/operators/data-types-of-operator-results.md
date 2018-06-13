@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605432"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Datentypen von Operatorergebnissen (Visual Basic)
 Visual Basic bestimmt den Datentyp des Ergebnisses eines Vorgangs basierend auf den Datentypen der Operanden. In einigen Fällen kann dies einen Datentyp mit einem größeren Bereich als der beiden Operanden sein.  

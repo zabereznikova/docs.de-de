@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586656"
 ---
 # <a name="expression-does-not-produce-a-value"></a>Der Ausdruck ergibt keinen Wert
 Sie haben versucht, einen Ausdruck verwenden, die einen Wert in einem Kontext, mit dem Wert erzeugt, wie ein Aufruf nicht generiert eine `Sub` in einem Kontext, in dem ein `Function` wird erwartet.  

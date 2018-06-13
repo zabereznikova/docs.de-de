@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583152"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Gewusst wie: Synchronisieren gleichzeitiger Vorgänge mit einer Barriere
 Das folgende Beispiel zeigt das Synchronisieren gleichzeitiger Aufgaben mit einer <xref:System.Threading.Barrier>.  

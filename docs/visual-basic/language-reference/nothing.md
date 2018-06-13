@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603989"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Stellt den Standardwert eines beliebigen Datentyps dar. Für Verweistypen, der Standardwert ist die `null` Verweis. Der Standardwert hängt für Werttypen gibt an, ob der Werttyp NULL ist.  

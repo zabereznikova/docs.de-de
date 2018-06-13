@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635184"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>Eine Registrierungsstruktur kann nicht gelöscht werden.
 Es wurde versucht, eine Registrierungsstruktur zu löschen. Strukturen sind Registrierungsschlüssel der obersten Ebene, z. B. `HKEY_CURRENT_USER` und `HKEY_LOCAL_MACHINE`, und können nicht gelöscht werden.  

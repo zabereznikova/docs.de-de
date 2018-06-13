@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585501"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Gewusst wie: Einen Aufgabenplaner in einem Datenflussblock angeben
 Dieses Dokument veranschaulicht, wie Sie einen bestimmten Aufgabenplaner zuweisen, wenn Sie Datenfluss in Ihrer Anwendung verwenden. Das Beispiel verwendet die <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType>-Klasse in einer Windows Forms-Anwendung, um anzuzeigen, wann die Readeraufgaben aktiv sind und wann eine Writeraufgabe aktiv ist. Darüber hinaus verwendet das Beispiel die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode, um zu ermögliche, dass ein Datenflussblock im Benutzeroberflächenthread ausgeführt wird.

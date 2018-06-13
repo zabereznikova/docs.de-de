@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581367"
 ---
 # <a name="serialization-how-to-topics"></a>Gewusst-wie-Themen zur Serialisierung
 Die folgende Liste enthält Links zu den Gewusst-wie-Themen in der Begriffsdokumentation zur Serialisierung.  

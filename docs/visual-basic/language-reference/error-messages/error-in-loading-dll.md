@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584682"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Fehler beim Laden der DLL (Visual Basic)
 Eine Dynamic Link Library (DLL) ist eine Bibliothek, die im angegebenen der `Lib` -Klausel eine `Declare` Anweisung. Mögliche Ursachen für diesen Fehler  

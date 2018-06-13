@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597149"
 ---
 # <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Geben Sie der &#39; &lt;Variablename&gt; &#39; kann nicht abgeleitet werden, weil die schleifenbegrenzungen und die Step-Variable nicht auf den gleichen Typ erweitert werden
 Sie selbst geschrieben haben eine `For...Next` Schleife, in denen der Compiler keinen Datentyp für die Loop-Steuerelementvariable ableiten, da die folgenden Bedingungen erfüllt sind:  
