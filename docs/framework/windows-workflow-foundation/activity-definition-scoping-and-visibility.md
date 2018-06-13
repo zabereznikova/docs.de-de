@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518501"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a><span data-ttu-id="b3137-102">Bereichsauswahl und Sichtbarkeit der Aktivitätsdefinition</span><span class="sxs-lookup"><span data-stu-id="b3137-102">Activity Definition Scoping and Visibility</span></span>
 <span data-ttu-id="b3137-103">Wie die Bereichsauswahl und Sichtbarkeit eines Objekts beschreibt die Bereichsauswahl und Sichtbarkeit der Aktivitätsdefinition die Fähigkeit anderer Objekte oder Aktivitäten, auf Member der Aktivität zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="b3137-103">Activity definition scoping and visibility, just like scoping and visibility of an object, is the ability of other objects or activities to access members of the activity.</span></span> <span data-ttu-id="b3137-104">Die Aktivitätsdefinition erfolgt durch folgende Implementierungen:</span><span class="sxs-lookup"><span data-stu-id="b3137-104">Activity definition is performed by the following implementations:</span></span>  

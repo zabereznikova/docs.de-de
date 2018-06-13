@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214588"
 ---
 # <a name="-recurse-c-compiler-options"></a><span data-ttu-id="84e1e-102">-recurse (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="84e1e-102">-recurse (C# Compiler Options)</span></span>
 <span data-ttu-id="84e1e-103">Mit der Option „-recurse“ können Sie Quellcodedateien in allen untergeordneten Verzeichnissen des angegebenen Verzeichnisses (dir) oder des Projektverzeichnisses kompilieren.</span><span class="sxs-lookup"><span data-stu-id="84e1e-103">The -recurse option enables you to compile source code files in all child directories of either the specified directory (dir) or of the project directory.</span></span>  

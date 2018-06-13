@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514323"
 ---
 # <a name="custom-compensation-sample"></a><span data-ttu-id="5dc01-102">Beispiel für benutzerdefinierte Kompensationslogik</span><span class="sxs-lookup"><span data-stu-id="5dc01-102">Custom Compensation Sample</span></span>
 <span data-ttu-id="5dc01-103">In diesem Beispiel wird gezeigt, wie <xref:System.Activities.Statements.CompensableActivity> und der zugehörige Kompensierungshandler zur Definition benutzerdefinierter Kompensierungslogik verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5dc01-103">This sample shows how to use <xref:System.Activities.Statements.CompensableActivity> and its compensation handler to define custom compensation logic.</span></span> <span data-ttu-id="5dc01-104">Das Szenario in diesem Beispiel ist eine LKW-Vermietung.</span><span class="sxs-lookup"><span data-stu-id="5dc01-104">The scenario modeled in this sample is a Truck Rental Agency.</span></span>  

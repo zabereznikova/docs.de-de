@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398130"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a><span data-ttu-id="f3bb5-102">Integrierte Windows-Authentifizierung mit erweitertem Schutz</span><span class="sxs-lookup"><span data-stu-id="f3bb5-102">Integrated Windows Authentication with Extended Protection</span></span>
 <span data-ttu-id="f3bb5-103">Es wurden Verbesserungen vorgenommen, die beeinflussen, wie die integrierte Windows-Authentifizierung durch <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> und verknüpfte Klassen in <xref:System.Net> sowie verknüpfte Namespaces behandelt wird.</span><span class="sxs-lookup"><span data-stu-id="f3bb5-103">Enhancements were made that affect how integrated Windows authentication is handled by the <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, and related classes in the <xref:System.Net> and related namespaces.</span></span> <span data-ttu-id="f3bb5-104">Unterstützung für erweiterten Schutz wurde zur Verbesserung der Sicherheit hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f3bb5-104">Support was added for extended protection to enhance security.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217320"
 ---
 # <a name="custom-templates-for-dotnet-new"></a><span data-ttu-id="da12a-103">Benutzerdefinierte Vorlagen für dotnet new</span><span class="sxs-lookup"><span data-stu-id="da12a-103">Custom templates for dotnet new</span></span>
 

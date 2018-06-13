@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389992"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a><span data-ttu-id="ced67-102">Gewusst wie: Generieren primärer Interop-Assemblys mit "Tlbimp.exe"</span><span class="sxs-lookup"><span data-stu-id="ced67-102">How to: Generate Primary Interop Assemblies Using Tlbimp.exe</span></span>
 <span data-ttu-id="ced67-103">Es gibt zwei Möglichkeiten, eine primäre Interop-Assembly zu generieren:</span><span class="sxs-lookup"><span data-stu-id="ced67-103">There are two ways to generate a primary interop assembly:</span></span>  

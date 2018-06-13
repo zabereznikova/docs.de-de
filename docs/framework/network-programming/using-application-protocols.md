@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394864"
 ---
 # <a name="using-application-protocols"></a><span data-ttu-id="9326b-102">Verwenden von Anwendungsprotokollen</span><span class="sxs-lookup"><span data-stu-id="9326b-102">Using Application Protocols</span></span>
 <span data-ttu-id="9326b-103">.NET Framework unterstützt häufig verwendete Internetanwendungsprotokolle.</span><span class="sxs-lookup"><span data-stu-id="9326b-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="9326b-104">Dieser Abschnitt enthält Informationen zur Verwendung der [HTTP](../../../docs/framework/network-programming/http.md)-, „TCP“- und „UDP“-Protokolle sowie Informationen zur Verwendung der [Windows Sockets](../../../docs/framework/network-programming/sockets.md)-Schnittstelle zum Implementieren von benutzerdefinierten Protokollen.</span><span class="sxs-lookup"><span data-stu-id="9326b-104">This section includes information on using the [HTTP](../../../docs/framework/network-programming/http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interface to implement custom protocols.</span></span>  

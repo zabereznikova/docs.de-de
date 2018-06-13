@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356262"
 ---
 # <a name="lttypeparamrefgt-c-programming-guide"></a><span data-ttu-id="9695e-102">&lt;typeparamref&gt; (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="9695e-102">&lt;typeparamref&gt; (C# Programming Guide)</span></span>
 ## <a name="syntax"></a><span data-ttu-id="9695e-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="9695e-103">Syntax</span></span>  

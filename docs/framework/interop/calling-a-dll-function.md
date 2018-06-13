@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387132"
 ---
 # <a name="calling-a-dll-function"></a><span data-ttu-id="eed30-102">Aufrufen einer DLL-Funktion</span><span class="sxs-lookup"><span data-stu-id="eed30-102">Calling a DLL Function</span></span>
 <span data-ttu-id="eed30-103">Obwohl Aufrufe nicht verwalteter DLL-Funktionen nahezu identisch mit anderen Aufrufen von verwaltetem Code sind, bestehen Unterschiede, die DLL-Funktionen zuerst verwirrend erscheinen lassen.</span><span class="sxs-lookup"><span data-stu-id="eed30-103">Although calling unmanaged DLL functions is nearly identical to calling other managed code, there are differences that can make DLL functions seem confusing at first.</span></span> <span data-ttu-id="eed30-104">Dieser Abschnitt enthält Themen, in denen einige ungewöhnliche aufrufbezogene Probleme beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="eed30-104">This section introduces topics that describe some of the unusual calling-related issues.</span></span>  

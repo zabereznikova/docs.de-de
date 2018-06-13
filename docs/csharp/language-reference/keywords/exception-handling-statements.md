@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213222"
 ---
 # <a name="exception-handling-statements-c-reference"></a><span data-ttu-id="2348d-102">Ausnahmebehandlungsanweisungen (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="2348d-102">Exception Handling Statements (C# Reference)</span></span>
 <span data-ttu-id="2348d-103">C# bietet integrierte Unterstützung für die Behandlung außergewöhnlicher Situationen, bekannt als Ausnahmen, die während der Ausführung des Programms auftreten können.</span><span class="sxs-lookup"><span data-stu-id="2348d-103">C# provides built-in support for handling anomalous situations, known as exceptions, which may occur during the execution of your program.</span></span> <span data-ttu-id="2348d-104">Diese Ausnahmen werden durch Code verarbeitet, der außerhalb der normalen Ablaufsteuerung liegt.</span><span class="sxs-lookup"><span data-stu-id="2348d-104">These exceptions are handled by code that is outside the normal flow of control.</span></span>  

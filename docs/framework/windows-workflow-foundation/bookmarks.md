@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515567"
 ---
 # <a name="bookmarks"></a><span data-ttu-id="44fe6-102">Lesezeichen</span><span class="sxs-lookup"><span data-stu-id="44fe6-102">Bookmarks</span></span>
 <span data-ttu-id="44fe6-103">Lesezeichen stellen für eine Aktivität eine Möglichkeit dar, passiv auf eine Eingabe zu warten, ohne einen Workflowthread weiter auszuführen.</span><span class="sxs-lookup"><span data-stu-id="44fe6-103">Bookmarks are the mechanism that enables an activity to passively wait for input without holding onto a workflow thread.</span></span> <span data-ttu-id="44fe6-104">Wenn eine Aktivität signalisiert, dass sie auf eine Reaktion wartet, kann sie ein Lesezeichen erstellen.</span><span class="sxs-lookup"><span data-stu-id="44fe6-104">When an activity signals that it is waiting for stimulus, it can create a bookmark.</span></span> <span data-ttu-id="44fe6-105">Damit wird der Laufzeit angezeigt, dass die Ausführung der Aktivität nicht als abgeschlossen betrachtet werden kann, auch wenn die momentan ausgeführte Methode (die das <xref:System.Activities.Bookmark> erstellt hat) zurückkehrt.</span><span class="sxs-lookup"><span data-stu-id="44fe6-105">This indicates to the runtime that the activity’s execution should not be considered complete even when the currently executing method (which created the <xref:System.Activities.Bookmark>) returns.</span></span>  

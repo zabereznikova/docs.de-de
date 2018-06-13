@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33212419"
 ---
 # <a name="-main-c-compiler-options"></a><span data-ttu-id="52c75-102">-main (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="52c75-102">-main (C# Compiler Options)</span></span>
 <span data-ttu-id="52c75-103">Diese Option gibt die Klasse an, die den Einstiegspunkt des Programms enthält, wenn mehr als eine Klasse eine **Main**-Methode enthält.</span><span class="sxs-lookup"><span data-stu-id="52c75-103">This option specifies the class that contains the entry point to the program, if more than one class contains a **Main** method.</span></span>  

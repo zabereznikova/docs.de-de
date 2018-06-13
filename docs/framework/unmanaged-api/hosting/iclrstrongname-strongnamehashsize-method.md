@@ -1,14 +1,6 @@
 ---
 title: ICLRStrongName::StrongNameHashSize-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameHashSize
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4a05ee56-08e4-4f3a-86a9-9b52083d5c0f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: acc2812567ce2d47d3f06c000fc387708c2e8acb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0ebf2e0225cf497a0b89a46ecdb3e203d5b9a4cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432013"
 ---
-# <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="ce6c5-102">ICLRStrongName::StrongNameHashSize-Methode</span><span class="sxs-lookup"><span data-stu-id="ce6c5-102">ICLRStrongName::StrongNameHashSize Method</span></span>
-<span data-ttu-id="ce6c5-103">Ruft die Größe des Puffers für einen Hash, der mithilfe des angegebenen Hashalgorithmus erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="ce6c5-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="dbd15-102">ICLRStrongName::StrongNameHashSize-Methode</span><span class="sxs-lookup"><span data-stu-id="dbd15-102">ICLRStrongName::StrongNameHashSize Method</span></span>
+<span data-ttu-id="dbd15-103">Ruft die Größe des Puffers für einen Hash, der mithilfe des angegebenen Hashalgorithmus erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="dbd15-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce6c5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ce6c5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbd15-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="dbd15-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameHashSize (  
@@ -47,24 +36,24 @@ HRESULT StrongNameHashSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ce6c5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ce6c5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="dbd15-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="dbd15-105">Parameters</span></span>  
  `ulHashAlg`  
- <span data-ttu-id="ce6c5-106">[in] Der Hashalgorithmus verwendet, um die Größe des Puffers zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="ce6c5-106">[in] The hash algorithm used to compute the buffer size.</span></span>  
+ <span data-ttu-id="dbd15-106">[in] Der Hashalgorithmus verwendet, um die Größe des Puffers zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="dbd15-106">[in] The hash algorithm used to compute the buffer size.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="ce6c5-107">[out] Die Größe des zurückgegebenen Puffers in Bytes.</span><span class="sxs-lookup"><span data-stu-id="ce6c5-107">[out] The returned buffer size, in bytes.</span></span>  
+ <span data-ttu-id="dbd15-107">[out] Die Größe des zurückgegebenen Puffers in Bytes.</span><span class="sxs-lookup"><span data-stu-id="dbd15-107">[out] The returned buffer size, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ce6c5-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="ce6c5-108">Return Value</span></span>  
- <span data-ttu-id="ce6c5-109">`S_OK`Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).</span><span class="sxs-lookup"><span data-stu-id="ce6c5-109">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dbd15-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="dbd15-108">Return Value</span></span>  
+ <span data-ttu-id="dbd15-109">`S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).</span><span class="sxs-lookup"><span data-stu-id="dbd15-109">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce6c5-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ce6c5-110">Requirements</span></span>  
- <span data-ttu-id="ce6c5-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce6c5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbd15-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="dbd15-110">Requirements</span></span>  
+ <span data-ttu-id="dbd15-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dbd15-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ce6c5-112">**Header:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ce6c5-112">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="dbd15-112">**Header:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="dbd15-112">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="ce6c5-113">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="ce6c5-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dbd15-113">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="dbd15-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ce6c5-114">**.NET Framework-Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce6c5-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="dbd15-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbd15-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ce6c5-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ce6c5-115">See Also</span></span>  
- [<span data-ttu-id="ce6c5-116">ICLRStrongName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ce6c5-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="dbd15-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dbd15-115">See Also</span></span>  
+ [<span data-ttu-id="dbd15-116">ICLRStrongName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="dbd15-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
