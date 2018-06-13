@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339838"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a><span data-ttu-id="e0f1f-102">Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)</span><span class="sxs-lookup"><span data-stu-id="e0f1f-102">Query Expression Syntax for Standard Query Operators (C#)</span></span>
 <span data-ttu-id="e0f1f-103">Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von C#, wodurch sie als Teil eines *Abfrageausdrucks* aufgerufen werden können.</span><span class="sxs-lookup"><span data-stu-id="e0f1f-103">Some of the more frequently used standard query operators have dedicated C# language keyword syntax that enables them to be called as part of a *query expression*.</span></span> <span data-ttu-id="e0f1f-104">Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen *methodenbasierter* Entsprechung.</span><span class="sxs-lookup"><span data-stu-id="e0f1f-104">A query expression is a different, more readable form of expressing a query than its *method-based*  equivalent.</span></span> <span data-ttu-id="e0f1f-105">Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt.</span><span class="sxs-lookup"><span data-stu-id="e0f1f-105">Query expression clauses are translated into calls to the query methods at compile time.</span></span>  

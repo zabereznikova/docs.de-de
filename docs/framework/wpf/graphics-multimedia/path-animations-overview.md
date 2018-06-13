@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565688"
 ---
 # <a name="path-animations-overview"></a><span data-ttu-id="0284f-102">Übersicht über Pfadanimationen</span><span class="sxs-lookup"><span data-stu-id="0284f-102">Path Animations Overview</span></span>
 <a name="introduction"></a> <span data-ttu-id="0284f-103">In diesem Thema werden Pfadanimationen beschrieben, die Ihnen ermöglichen, mithilfe eines geometrischen Pfads Ausgabewerte zu generieren.</span><span class="sxs-lookup"><span data-stu-id="0284f-103">This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="0284f-104">Pfadanimationen eignen sich zum Verschieben und Drehen von Objekten auf komplexen Pfaden.</span><span class="sxs-lookup"><span data-stu-id="0284f-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  

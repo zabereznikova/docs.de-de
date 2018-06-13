@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340410"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a><span data-ttu-id="57f8c-102">Exemplarische Vorgehensweise: Schreiben von Abfragen in C# (LINQ)</span><span class="sxs-lookup"><span data-stu-id="57f8c-102">Walkthrough: Writing Queries in C# (LINQ)</span></span>
 <span data-ttu-id="57f8c-103">Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von LINQ-Abfrageausdrücke verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="57f8c-103">This walkthrough demonstrates the C# language features that are used to write LINQ query expressions.</span></span>  

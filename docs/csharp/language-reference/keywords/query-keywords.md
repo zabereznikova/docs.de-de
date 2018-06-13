@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275700"
 ---
 # <a name="query-keywords-c-reference"></a><span data-ttu-id="c31cd-102">Abfrageschlüsselwörter (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="c31cd-102">Query Keywords (C# Reference)</span></span>
 <span data-ttu-id="c31cd-103">Dieser Abschnitt enthält die kontextabhängigen Schlüsselwörter, die in Abfrageausdrücken verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c31cd-103">This section contains the contextual keywords used in query expressions.</span></span>  

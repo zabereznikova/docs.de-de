@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339617"
 ---
 # <a name="ref-returns-and-ref-locals"></a><span data-ttu-id="eb4a9-103">Ref-Rückgaben und lokale ref-Variablen</span><span class="sxs-lookup"><span data-stu-id="eb4a9-103">Ref returns and ref locals</span></span>
 

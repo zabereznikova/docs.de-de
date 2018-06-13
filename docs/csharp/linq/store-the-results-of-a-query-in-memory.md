@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279632"
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a><span data-ttu-id="e20a2-103">Speichern der Ergebnisse einer Abfrage im Speicher</span><span class="sxs-lookup"><span data-stu-id="e20a2-103">Store the results of a query in memory</span></span>
 

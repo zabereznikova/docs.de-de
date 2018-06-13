@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284849"
 ---
 # <a name="handle-exceptions-in-query-expressions"></a><span data-ttu-id="89232-103">Behandeln von Ausnahmen in Abfrageausdrücken</span><span class="sxs-lookup"><span data-stu-id="89232-103">Handle exceptions in query expressions</span></span>
 

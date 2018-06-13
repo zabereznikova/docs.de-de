@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268995"
 ---
 # <a name="new-constraint-c-reference"></a><span data-ttu-id="275b1-102">new-Einschränkung (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="275b1-102">new Constraint (C# Reference)</span></span>
 <span data-ttu-id="275b1-103">Die `new`-Einschränkung gibt an, dass jedes Typargument in einer generischen Klassendeklaration über einen öffentlichen parameterlosen Konstruktor verfügen muss.</span><span class="sxs-lookup"><span data-stu-id="275b1-103">The `new` constraint specifies that any type argument in a generic class declaration must have a public parameterless constructor.</span></span> <span data-ttu-id="275b1-104">Der Typ kann nicht abstrakt sein, um die neue Einschränkung zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="275b1-104">To use the new constraint, the type cannot be abstract.</span></span>  

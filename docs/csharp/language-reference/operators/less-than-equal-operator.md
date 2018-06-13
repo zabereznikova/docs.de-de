@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271161"
 ---
 # <a name="lt-operator-c-reference"></a><span data-ttu-id="fc41d-102">Operator &lt;= (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="fc41d-102">&lt;= Operator (C# Reference)</span></span>
 <span data-ttu-id="fc41d-103">Alle numerischen und Emumerationstypen definieren einen relationalen „weniger oder gleich“-Operator (`<=`), der `true` zurückgibt, wenn der erste Operand weniger oder gleich dem zweiten ist, andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="fc41d-103">All numeric and enumeration types define a "less than or equal" relational operator (`<=`) that returns `true` if the first operand is less than or equal to the second, `false` otherwise.</span></span>  

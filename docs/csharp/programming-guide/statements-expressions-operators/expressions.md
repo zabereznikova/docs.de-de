@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339656"
 ---
 # <a name="expressions-c-programming-guide"></a><span data-ttu-id="72502-102">Ausdrücke (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="72502-102">Expressions (C# Programming Guide)</span></span>
 <span data-ttu-id="72502-103">Ein *Ausdruck* ist eine Sequenz von einem oder mehr Operanden und null oder mehr Operatoren, die einen einzelnen Wert, ein Objekt, eine Methode oder ein Namespace annehmen können.</span><span class="sxs-lookup"><span data-stu-id="72502-103">An *expression* is a sequence of one or more operands and zero or more operators that can be evaluated to a single value, object, method, or namespace.</span></span> <span data-ttu-id="72502-104">Ausdrücke können einen literalen Wert, einen Methodenaufruf, einen Operator und die entsprechenden Operanden oder einen *einfachen Namen* enthalten.</span><span class="sxs-lookup"><span data-stu-id="72502-104">Expressions can consist of a literal value, a method invocation, an operator and its operands, or a *simple name*.</span></span> <span data-ttu-id="72502-105">Einfache Namen können der Name einer Variablen, eines Typmembers, eines Methodenparameters, eines Namespaces oder eines Typs sein.</span><span class="sxs-lookup"><span data-stu-id="72502-105">Simple names can be the name of a variable, type member, method parameter, namespace or type.</span></span>  

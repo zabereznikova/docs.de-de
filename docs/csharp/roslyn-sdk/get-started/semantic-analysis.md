@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358751"
 ---
 # <a name="get-started-with-semantic-analysis"></a><span data-ttu-id="ef4a0-103">Erste Schritte mit der semantischen Analyse</span><span class="sxs-lookup"><span data-stu-id="ef4a0-103">Get started with semantic analysis</span></span>
 

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274949"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a><span data-ttu-id="35f21-103">Gewusst wie: Zurückgeben einer Abfrage aus einer Methode (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="35f21-103">How to: Return a Query from a Method (C# Programming Guide)</span></span>
 <span data-ttu-id="35f21-104">In diesem Beispiel wird gezeigt, wie Sie eine Abfrage aus einer Methode als Rückgabewert oder `out`-Parameter zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="35f21-104">This example shows how to return a query from a method as the return value and as an `out` parameter.</span></span>  

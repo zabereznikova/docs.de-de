@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269699"
 ---
 # <a name="order-the-results-of-a-join-clause"></a><span data-ttu-id="ae7b5-103">Sortieren der Ergebnisse einer Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="ae7b5-103">Order the results of a join clause</span></span>
 <span data-ttu-id="ae7b5-104">Dieses Beispiel zeigt, wie Sie die Ergebnisse einer Verknüpfungsoperation sortieren.</span><span class="sxs-lookup"><span data-stu-id="ae7b5-104">This example shows how to order the results of a join operation.</span></span> <span data-ttu-id="ae7b5-105">Beachten Sie, dass die Sortierung nach der Verknüpfung ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ae7b5-105">Note that the ordering is performed after the join.</span></span> <span data-ttu-id="ae7b5-106">Obwohl Sie eine `orderby`-Klausel mit einer oder mehreren Quellsequenzen verwenden können, wird dies normalerweise nicht empfohlen.</span><span class="sxs-lookup"><span data-stu-id="ae7b5-106">Although you can use an `orderby` clause with one or more of the source sequences before the join, generally we do not recommend it.</span></span> <span data-ttu-id="ae7b5-107">Einige LINQ-Anbieter könnten diese Sortierung nach der Verknüpfung vielleicht nicht beibehalten.</span><span class="sxs-lookup"><span data-stu-id="ae7b5-107">Some LINQ providers might not preserve that ordering after the join.</span></span>  
