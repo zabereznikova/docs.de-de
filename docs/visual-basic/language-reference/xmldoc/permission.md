@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601994"
 ---
 # <a name="ltpermissiongt-visual-basic"></a><span data-ttu-id="ec8ee-102">&lt;Berechtigung&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec8ee-102">&lt;permission&gt; (Visual Basic)</span></span>
 <span data-ttu-id="ec8ee-103">Gibt eine erforderliche Berechtigung für das Element an.</span><span class="sxs-lookup"><span data-stu-id="ec8ee-103">Specifies a required permission for the member.</span></span>  

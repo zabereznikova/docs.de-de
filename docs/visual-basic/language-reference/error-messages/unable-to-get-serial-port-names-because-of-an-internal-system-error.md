@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596654"
 ---
 # <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a><span data-ttu-id="5ffdb-102">Aufgrund eines internen Systemfehlers können die seriellen Anschlussnamen nicht abgerufen werden</span><span class="sxs-lookup"><span data-stu-id="5ffdb-102">Unable to get serial port names because of an internal system error</span></span>
 <span data-ttu-id="5ffdb-103">Beim Aufrufen der Eigenschaft `My.Computer.Ports.SerialPortNames` ist ein interner Fehler aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="5ffdb-103">An internal error occurred when the `My.Computer.Ports.SerialPortNames` property was called.</span></span>  

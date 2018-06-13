@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603664"
 ---
 # <a name="q-z-statements"></a><span data-ttu-id="a7948-102">Anweisungen Q – Z</span><span class="sxs-lookup"><span data-stu-id="a7948-102">Q-Z Statements</span></span>
 <span data-ttu-id="a7948-103">Die folgende Tabelle enthält eine Liste der Visual Basic-sprachanweisungen.</span><span class="sxs-lookup"><span data-stu-id="a7948-103">The following table contains a listing of Visual Basic language statements.</span></span>  

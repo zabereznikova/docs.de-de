@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602826"
 ---
 # <a name="skip-clause-visual-basic"></a><span data-ttu-id="90099-102">Skip-Klausel (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="90099-102">Skip Clause (Visual Basic)</span></span>
 <span data-ttu-id="90099-103">Überspringt eine festgelegte Anzahl von Elementen in einer Auflistung und gibt anschließend die übrigen Elemente zurück.</span><span class="sxs-lookup"><span data-stu-id="90099-103">Bypasses a specified number of elements in a collection and then returns the remaining elements.</span></span>  
