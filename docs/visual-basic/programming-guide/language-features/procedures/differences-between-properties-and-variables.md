@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651504"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Unterschiede zwischen Eigenschaften und Variablen in Visual Basic
 Variablen und Eigenschaften, die beide Werte darzustellen, die Sie zugreifen können. Es gibt jedoch Unterschiede in den Speicher und die Implementierung.  

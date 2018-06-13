@@ -1,6 +1,6 @@
 ---
 title: Winres.exe (Windows Forms Resource Editor-Tool)
-ms.date: 05/21/2018
+ms.date: 03/30/2017
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -12,20 +12,18 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14e90916261250452c1f07e66a46bee400da0428
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 69ba816e5b7cf05ef094153b7ff044d573ac1760
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472580"
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Windows Forms Resource Editor-Tool)
 Der Windows Forms Resource Editor, "Winres.exe", ist ein visuelles Layouttool, das Lokalisierungsexperten beim Lokalisieren von Ressourcen der Windows Forms-Benutzeroberfläche unterstützt, die von Formularen verwendet werden. Die als Eingabe für "Winres.exe" verwendeten RESX- oder RESOURCES-Dateien können unter Verwendung einer visuellen Entwurfsumgebung, wie Microsoft Visual Studio, erstellt werden. Informationen zum Bereitstellen von Ressourcen in .NET Framework-Anwendungen finden Sie unter [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md).  
   
  Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-
-> [!IMPORTANT]
-> Sie sollten RESX-Dateien nur dann laden und verwenden, wenn die Quelle vertrauenswürdig ist. RESX-Dateien können ausführbaren Code enthalten und sollten bei der Sicherheit wie ausführbare Dateien (.exe) behandelt werden.
-
+  
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
 ## <a name="syntax"></a>Syntax  

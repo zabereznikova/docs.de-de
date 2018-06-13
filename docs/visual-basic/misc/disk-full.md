@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635576"
 ---
 # <a name="disk-full-visual-basic"></a>Der Datenträger ist voll (Visual Basic)
 Entweder ist zum Abschließen eines `Print`-, `Write`- oder `FileClose` -Vorgangs oder zum Erstellen erforderlicher Dateien nicht genügend Platz auf dem Datenträger verfügbar.  

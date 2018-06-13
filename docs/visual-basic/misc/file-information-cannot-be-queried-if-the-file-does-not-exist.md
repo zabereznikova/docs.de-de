@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638480"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>Dateiinformationen können nicht abgefragt werden, wenn die Datei nicht vorhanden ist.
 Es wurde versucht, ein <xref:System.IO.FileInfo> -Objekt nach Informationen zu einer Datei abzufragen, die nicht vorhanden ist. Dies liegt in der Regel an einem Fehler bei der Angabe des Dateinamens.  

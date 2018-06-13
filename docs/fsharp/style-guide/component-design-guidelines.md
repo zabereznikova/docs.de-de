@@ -2,11 +2,12 @@
 title: F#-Komponente Entwurfsrichtlinien
 description: Erfahren Sie, die Richtlinien zum Schreiben von F#-Komponenten, die für die Nutzung durch andere Aufrufer vorgesehen.
 ms.date: 05/14/2018
-ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458085"
 ---
 # <a name="f-component-design-guidelines"></a>F#-Komponente Entwurfsrichtlinien
 
@@ -483,7 +484,7 @@ Allerdings die logischen Punktnotation Vorgänge für diesen Typ sind nicht iden
 
 Bei Bibliotheken für die Verwendung anderer Sprachen .NET zu entwerfen, ist es wichtig, entsprechen die [Entwurfsrichtlinien von .NET Bibliothek](../../standard/design-guidelines/index.md). In diesem Dokument diese Bibliotheken herkömmlichen .NET Bibliotheken, im Gegensatz zu f# beschriftet-zugängliche Bibliotheken, die f# verwenden ohne Einschränkung erstellt. Entwerfen von herkömmlichen .NET Bibliotheken bedeutet Bereitstellen von vertraut sind und idiomatische-APIs, die konsistent mit dem Rest des .NET Framework minimieren die Verwendung von f#-spezifische Konstrukte in der öffentlichen API. Die Regeln werden in den folgenden Abschnitten erläutert.
 
-### <a name="namespace-and-type-sesign-for-libraries-for-use-from-other-net-languages"></a>Namespace und Typ Sesign (für Bibliotheken für die Verwendung anderer Sprachen .NET)
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace und Typ Entwurf (für Bibliotheken für die Verwendung anderer Sprachen .NET)
 
 #### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>Übernehmen Sie die .NET-Namenskonventionen, um die öffentliche API-Komponenten
 

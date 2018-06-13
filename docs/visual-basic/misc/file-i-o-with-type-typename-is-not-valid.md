@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636486"
 ---
 # <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a>Datei e/a mit dem Typ &#39; &lt;Typename&gt; &#39; ist ungültig
 Sie versuchen, einen nicht unterstützten Typ in eine Datei zu schreiben.  

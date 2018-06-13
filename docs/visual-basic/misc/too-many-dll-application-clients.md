@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639639"
 ---
 # <a name="too-many-dll-application-clients"></a>Zu viele Clients für die DLL-Anwendung
 Die Dynamic Link Library (DLL) für Visual Basic kann nur den Zugriff durch eine begrenzte Anzahl von hostanwendungen aufnehmen. Ihre Anwendung und andere Clientanwendungen, die Visual Basic-Hosts sind (von denen einige von der Anwendung zugegriffen werden kann), versuchen gleichzeitig auf die Visual Basic-DLL.  

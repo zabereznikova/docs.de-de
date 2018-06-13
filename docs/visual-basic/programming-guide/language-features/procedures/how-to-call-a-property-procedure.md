@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654816"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Gewusst wie: Aufrufen einer Eigenschaftenprozedur (Visual Basic)
 Zum Aufrufen einer Eigenschaftenprozedur zum Speichern eines Werts in der Eigenschaft oder der Wert abgerufen. Eine Eigenschaft die gleiche Weise, die Sie Zugriff auf eine Variable zugegriffen.  

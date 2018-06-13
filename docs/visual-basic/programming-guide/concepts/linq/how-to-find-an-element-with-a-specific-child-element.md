@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644008"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Vorgehensweise: Suchen nach einem Element mit einem bestimmten untergeordneten Element (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie nach einem bestimmten Element suchen können, das ein untergeordnetes Element mit einem bestimmten Wert besitzt.  
