@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cfc8800915009912716ec2ed9044a633a8ad0582
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401744"
 ---
 # <a name="icordebugboxvaluegetobject-method"></a>ICorDebugBoxValue::GetObject-Methode
 Ruft den durch Boxing konvertierten Wert.  

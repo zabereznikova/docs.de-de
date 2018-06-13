@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361542"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Abrufen und Ändern von Daten in ADO.NET
 Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen der darin enthaltenen Daten. Die .NET Framework-Datenanbieter von ADO.NET bilden eine Brücke zwischen einer Anwendung und einer Datenquelle können Sie zum Ausführen von Befehlen sowie zum Abrufen von Daten mithilfe einer **DataReader** oder ein **"DataAdapter"** . Eine Hauptfunktion jeder Datenbank ist die Fähigkeit, die in ihr gespeicherten Daten zu aktualisieren. In ADO.NET aktualisieren von Daten werden mithilfe der **"DataAdapter"** und <xref:System.Data.DataSet>, und **Befehl** Objekte und u. u. auch Transaktionen.  

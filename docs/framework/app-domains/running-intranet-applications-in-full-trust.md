@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356783"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Ausführen von Intranetanwendungen mit voller Vertrauenswürdigkeit
 Ab .NET Framework version 3.5 Service Pack 1 (SP1) können Anwendungen und deren Bibliothekassemblys als Assemblys mit voller Vertrauenswürdigkeit von einer Netzwerkfreigabe ausgeführt werden. Der Zonenbeweis <xref:System.Security.SecurityZone.MyComputer> wird automatisch zu Assemblys hinzugefügt, die aus einer Intranetfreigabe geladen wurden. Durch diesen Beweis erhalten alle Assemblys den gleichen Satz an Berechtigungen (normalerweise volles Vertrauen) wie die Assemblys, die sich auf dem Computer befinden. Diese Funktion gilt nicht für ClickOnce-Anwendungen oder für Anwendungen, die dafür entwickelt wurden, auf einem Host ausgeführt zu werden.  

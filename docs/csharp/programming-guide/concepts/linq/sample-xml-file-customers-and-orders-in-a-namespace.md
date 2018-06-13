@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337209"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Beispiel-XML-Datei: Kunden und Bestellungen in einem Namespace
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Sie enthält Kunden (<legacyBold>Customers</legacyBold>) und Aufträge (<legacyBold>Orders</legacyBold>). Der XML-Code befindet sich in einem Namespace.  

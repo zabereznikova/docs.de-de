@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352863"
 ---
 # <a name="clr-triggers"></a>CLR-Auslöser
 Ein Trigger ist ein besonderer Typ einer gespeicherten Prozedur, die während der Ausführung eines Sprachereignisses automatisch ausgeführt wird. Aufgrund der Integration der .NET Framework-CLR (Common Language Runtime) in Microsoft SQL Server können Sie mit allen .NET Framework-Sprachen CLR-Trigger erstellen.  

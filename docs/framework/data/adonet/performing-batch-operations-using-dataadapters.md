@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361984"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Ausführen von Batchvorgängen mit "DataAdapters"
 Durch Batch-Unterstützung in ADO.NET kann ein <xref:System.Data.Common.DataAdapter> die Operationen INSERT, UPDATE und DELETE aus einem <xref:System.Data.DataSet> oder einer <xref:System.Data.DataTable> an einen Server zusammenfassen, anstatt nur jeweils eine Operation senden zu können. Durch das Reduzieren der Anzahl von Roundtrips zum Server kann im Allgemeinen die Leistung beträchtlich gesteigert werden. Batchupdates werden für die .NET-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) und Oracle (<xref:System.Data.OracleClient>) unterstützt.  

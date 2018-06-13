@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340267"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Wann müssen die Schlüsselwörter "override" und "new" verwendet werden? (C#-Programmierhandbuch)
 In C# kann eine Methode in einer abgeleiteten Klasse den gleichen Namen wie eine Methode in einer Basisklasse haben. Sie können mit den Schlüsselwörtern [new](../../../csharp/language-reference/keywords/new.md) und [override](../../../csharp/language-reference/keywords/override.md) festlegen, wie die Methoden interagieren. Der `override`-Modifizierer *erweitert* die Methode der Basisklasse, und der `new`-Modifizierer *verbirgt* sie. Der Unterschied wird in den Beispielen in diesem Thema veranschaulicht.  

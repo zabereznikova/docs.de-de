@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318587"
 ---
 # <a name="creating-xml-trees-c"></a>Erstellen von XML-Strukturen (C#)
 Eine der häufigsten XML-Aufgaben besteht darin, eine XML-Struktur zu konstruieren. In diesem Abschnitt werden mehrere Möglichkeiten für die Erstellung solcher Strukturen beschrieben.  

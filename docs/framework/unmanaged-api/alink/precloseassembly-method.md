@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 82421fa83a6f0d24492d70f961e731b679c25728
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400717"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly-Methode
 Schließt die Assemblydatei an. Rufen Sie diese Methode aus, schließen Sie alle anderen Dateien, jedoch vor dem Schließen der Assemblydatei. Rufen Sie diese Methode nicht für ungebundenen Modulen.  

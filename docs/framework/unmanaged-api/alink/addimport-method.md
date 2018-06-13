@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98fefc0240f6496a3e7bfb491e27a57e98cfea1c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404065"
 ---
 # <a name="addimport-method1"></a>AddImport Methode1
 Importe und die Assembly hinzugefügt.  

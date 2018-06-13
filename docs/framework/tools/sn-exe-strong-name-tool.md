@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401120"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Strong Name-Tool)
 Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../../docs/framework/app-domains/strong-named-assemblies.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
