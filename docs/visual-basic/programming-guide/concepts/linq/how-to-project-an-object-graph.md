@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643775"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a><span data-ttu-id="ef06c-102">Vorgehensweise: Projektieren eines Objektdiagramms (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ef06c-102">How to: Project an Object Graph (Visual Basic)</span></span>
 <span data-ttu-id="ef06c-103">In diesem Thema wird gezeigt, wie Sie ein XML-Dokument für das Projizieren (oder Auffüllen) eines Objektdiagramms verwenden können.</span><span class="sxs-lookup"><span data-stu-id="ef06c-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  

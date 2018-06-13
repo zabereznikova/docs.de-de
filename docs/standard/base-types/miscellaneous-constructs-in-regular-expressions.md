@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571981"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a><span data-ttu-id="2f09b-102">Verschiedene Konstrukte in regulären Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="2f09b-102">Miscellaneous Constructs in Regular Expressions</span></span>
 <span data-ttu-id="2f09b-103">Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte.</span><span class="sxs-lookup"><span data-stu-id="2f09b-103">Regular expressions in .NET include three miscellaneous language constructs.</span></span> <span data-ttu-id="2f09b-104">Einer ermöglicht Ihnen das Aktivieren oder Deaktivieren bestimmter Vergleichsoptionen mitten in einem Muster für reguläre Ausdrücke.</span><span class="sxs-lookup"><span data-stu-id="2f09b-104">One lets you enable or disable particular matching options in the middle of a regular expression pattern.</span></span> <span data-ttu-id="2f09b-105">Mithilfe der beiden anderen können Sie Kommentare in einen regulären Ausdruck aufnehmen.</span><span class="sxs-lookup"><span data-stu-id="2f09b-105">The remaining two let you include comments in a regular expression.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574558"
 ---
 # <a name="delegates-and-lambdas"></a><span data-ttu-id="2edaf-103">Delegaten und Lambdas</span><span class="sxs-lookup"><span data-stu-id="2edaf-103">Delegates and lambdas</span></span>
 

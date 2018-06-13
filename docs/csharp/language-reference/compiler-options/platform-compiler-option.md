@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216511"
 ---
 # <a name="-platform-c-compiler-options"></a><span data-ttu-id="0683c-102">-platform (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="0683c-102">-platform (C# Compiler Options)</span></span>
 <span data-ttu-id="0683c-103">Gibt an, welche Version der Common Language Runtime (CLR) die Assembly ausführen kann.</span><span class="sxs-lookup"><span data-stu-id="0683c-103">Specifies which version of the Common Language Runtime (CLR) can run the assembly.</span></span>  

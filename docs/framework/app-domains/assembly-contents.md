@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741827"
 ---
 # <a name="assembly-contents"></a><span data-ttu-id="e3b52-102">Assemblyinhalte</span><span class="sxs-lookup"><span data-stu-id="e3b52-102">Assembly Contents</span></span>
 <span data-ttu-id="e3b52-103">Im Allgemeinen kann eine statische Assembly vier Elemente enthalten:</span><span class="sxs-lookup"><span data-stu-id="e3b52-103">In general, a static assembly can consist of four elements:</span></span>  

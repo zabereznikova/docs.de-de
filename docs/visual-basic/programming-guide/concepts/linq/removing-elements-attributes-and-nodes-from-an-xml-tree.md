@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645927"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a><span data-ttu-id="57b6f-102">Entfernen von Elementen, Attributen und Knoten aus einer XML-Struktur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57b6f-102">Removing Elements, Attributes, and Nodes from an XML Tree (Visual Basic)</span></span>
 <span data-ttu-id="57b6f-103">Sie können eine XML-Struktur ändern, indem Sie Elemente, Attribute und andere Knotentypen entfernen.</span><span class="sxs-lookup"><span data-stu-id="57b6f-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>  

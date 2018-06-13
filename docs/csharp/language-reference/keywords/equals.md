@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216166"
 ---
 # <a name="equals-c-reference"></a><span data-ttu-id="2a83f-102">equals (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="2a83f-102">equals (C# Reference)</span></span>
 <span data-ttu-id="2a83f-103">Das kontextabhängige Schlüsselwort `equals` wird in einer `join`-Klausel in einem Abfrageausdruck verwendet, um die Elemente zweier Sequenzen zu vergleichen.</span><span class="sxs-lookup"><span data-stu-id="2a83f-103">The `equals` contextual keyword is used in a `join` clause in a query expression to compare the elements of two sequences.</span></span> <span data-ttu-id="2a83f-104">Weitere Informationen finden Sie unter [Join-Klausel](../../../csharp/language-reference/keywords/join-clause.md).</span><span class="sxs-lookup"><span data-stu-id="2a83f-104">For more information, see [join clause](../../../csharp/language-reference/keywords/join-clause.md).</span></span>  

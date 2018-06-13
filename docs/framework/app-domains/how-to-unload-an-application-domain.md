@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742087"
 ---
 # <a name="how-to-unload-an-application-domain"></a><span data-ttu-id="aa6d7-102">Gewusst wie: Entladen einer Anwendungsdomäne</span><span class="sxs-lookup"><span data-stu-id="aa6d7-102">How to: Unload an Application Domain</span></span>
 <span data-ttu-id="aa6d7-103">Wenn Sie die Nutzung einer Anwendungsdomäne beenden möchten, entladen Sie sie mithilfe der <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>-Methode.</span><span class="sxs-lookup"><span data-stu-id="aa6d7-103">When you have finished using an application domain, unload it using the <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="aa6d7-104">Durch die **Unload**-Methode wird die angegebene Anwendungsdomäne ordnungsgemäß geschlossen.</span><span class="sxs-lookup"><span data-stu-id="aa6d7-104">The **Unload** method gracefully shuts down the specified application domain.</span></span> <span data-ttu-id="aa6d7-105">Während des Entladevorgangs können keine neuen Threads auf die Anwendungsdomäne zugreifen. Alle anwendungsdomänenspezifischen Strukturen werden freigegeben.</span><span class="sxs-lookup"><span data-stu-id="aa6d7-105">During the unloading process, no new threads can access the application domain, and all application domain–specific data structures are freed.</span></span>  

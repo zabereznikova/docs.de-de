@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215309"
 ---
 # <a name="-fullpaths-c-compiler-options"></a><span data-ttu-id="03a30-102">-fullpaths (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="03a30-102">-fullpaths (C# Compiler Options)</span></span>
 <span data-ttu-id="03a30-103">Die Option **-fullpaths** bewirkt, dass der Compiler beim Auflisten von Kompilierungsfehlern und -warnungen den vollständigen Pfad zur Datei angibt.</span><span class="sxs-lookup"><span data-stu-id="03a30-103">The **-fullpaths** option causes the compiler to specify the full path to the file when listing compilation errors and warnings.</span></span>  

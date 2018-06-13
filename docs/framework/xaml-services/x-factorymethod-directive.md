@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563414"
 ---
 # <a name="xfactorymethod-directive"></a><span data-ttu-id="c34b9-102">x:FactoryMethod-Anweisung</span><span class="sxs-lookup"><span data-stu-id="c34b9-102">x:FactoryMethod Directive</span></span>
 <span data-ttu-id="c34b9-103">Gibt eine Methode als einen Konstruktor, den ein XAML-Prozessor verwenden soll, um ein Objekt nach seiner Unterstützungstyp auflösen zu initialisieren.</span><span class="sxs-lookup"><span data-stu-id="c34b9-103">Specifies a method other than a constructor that a XAML processor should use to initialize an object after resolving its backing type.</span></span>  

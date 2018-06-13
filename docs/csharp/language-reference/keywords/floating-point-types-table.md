@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219273"
 ---
 # <a name="floating-point-types-table-c-reference"></a><span data-ttu-id="c4a74-102">Tabelle für Gleitkommatypen (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="c4a74-102">Floating-Point Types Table (C# Reference)</span></span>
 <span data-ttu-id="c4a74-103">Die folgende Tabelle zeigt die Genauigkeit und den ungefähren Bereich für die Gleitkommatypen.</span><span class="sxs-lookup"><span data-stu-id="c4a74-103">The following table shows the precision and approximate ranges for the floating-point types.</span></span>  

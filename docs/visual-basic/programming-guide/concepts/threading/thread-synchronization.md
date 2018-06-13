@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655090"
 ---
 # <a name="thread-synchronization-visual-basic"></a><span data-ttu-id="78e3a-102">Threadsynchronisierung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="78e3a-102">Thread Synchronization (Visual Basic)</span></span>
 <span data-ttu-id="78e3a-103">In den folgenden Abschnitten werden Funktionen und Klassen beschrieben, die zum Synchronisieren des Zugriffs auf Ressourcen in Multithreadanwendungen verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="78e3a-103">The following sections describe features and classes that can be used to synchronize access to resources in multithreaded applications.</span></span>  

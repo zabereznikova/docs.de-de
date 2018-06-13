@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647305"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a><span data-ttu-id="2c74e-102">Situationen für die Verwendung von Enumerationen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c74e-102">When to Use an Enumeration (Visual Basic)</span></span>
 <span data-ttu-id="2c74e-103">Enumerationen bieten eine einfache Möglichkeit zum Arbeiten mit Gruppen verwandter Konstanten.</span><span class="sxs-lookup"><span data-stu-id="2c74e-103">Enumerations offer an easy way to work with sets of related constants.</span></span> <span data-ttu-id="2c74e-104">Eine Enumeration oder `Enum`, ist ein symbolischer Namen für einen Satz von Werten.</span><span class="sxs-lookup"><span data-stu-id="2c74e-104">An enumeration, or `Enum`, is a symbolic name for a set of values.</span></span> <span data-ttu-id="2c74e-105">Enumerationen werden als Datentypen behandelt können, und sie Sätze von Konstanten für die Verwendung mit Variablen und Eigenschaften zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2c74e-105">Enumerations are treated as data types, and you can use them to create sets of constants for use with variables and properties.</span></span>  

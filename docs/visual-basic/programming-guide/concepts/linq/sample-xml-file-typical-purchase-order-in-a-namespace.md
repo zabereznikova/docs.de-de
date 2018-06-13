@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644780"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="74989-102">Beispiel-XML-Datei: Typische Bestellung in einem Namespace</span><span class="sxs-lookup"><span data-stu-id="74989-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
 <span data-ttu-id="74989-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="74989-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="74989-104">Dabei handelt es sich um einen typischen Auftrag.</span><span class="sxs-lookup"><span data-stu-id="74989-104">This file is a typical purchase order.</span></span> <span data-ttu-id="74989-105">Der XML-Code befindet sich in einem Namespace.</span><span class="sxs-lookup"><span data-stu-id="74989-105">The XML is in a namespace.</span></span>  

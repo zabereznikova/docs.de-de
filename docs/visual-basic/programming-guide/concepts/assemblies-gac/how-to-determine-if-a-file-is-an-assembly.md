@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643232"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a><span data-ttu-id="564f8-102">Vorgehensweise: bestimmen, ob eine Datei eine Assembly (Visual Basic) ist.</span><span class="sxs-lookup"><span data-stu-id="564f8-102">How to: Determine If a File Is an Assembly (Visual Basic)</span></span>
 <span data-ttu-id="564f8-103">Eine Datei ist nur dann eine Assembly, wenn sie verwaltet wird und einen Assemblyeintrag in ihren Metadaten enthält.</span><span class="sxs-lookup"><span data-stu-id="564f8-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="564f8-104">Weitere Informationen über Assemblys und Metadaten finden Sie im Thema [Assemblymanifest](../../../../framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="564f8-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../framework/app-domains/assembly-manifest.md).</span></span>  

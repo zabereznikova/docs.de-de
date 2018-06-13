@@ -1,14 +1,6 @@
 ---
 title: IDENTITY_ATTRIBUTE_BLOB-Struktur
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 dev_langs:
 - cpp
 api_name:
@@ -24,22 +16,19 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05f8f44579b8169a4a8a13ae527adcf0c2a2839a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 59b4c832a4bbc915749aadf435b204e084828698
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434345"
 ---
-# <a name="identityattributeblob-structure"></a><span data-ttu-id="8bd16-102">IDENTITY_ATTRIBUTE_BLOB-Struktur</span><span class="sxs-lookup"><span data-stu-id="8bd16-102">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>
-<span data-ttu-id="8bd16-103">Enthält Informationen über ein einzelnes Attribut in einer Assembly und besteht aus drei `DWORD`s.</span><span class="sxs-lookup"><span data-stu-id="8bd16-103">Contains information about a single attribute in an assembly, and consists of three `DWORD`s.</span></span> <span data-ttu-id="8bd16-104">Jede `DWORD` ist ein Offset in einen Zeichenpuffer von erzeugt der `CurrentIntoBuffer` Methode der [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8bd16-104">Each `DWORD` is an offset into a character buffer produced by the `CurrentIntoBuffer` method of the [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface</span></span>  
+# <a name="identityattributeblob-structure"></a><span data-ttu-id="a6f6a-102">IDENTITY_ATTRIBUTE_BLOB-Struktur</span><span class="sxs-lookup"><span data-stu-id="a6f6a-102">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>
+<span data-ttu-id="a6f6a-103">Enthält Informationen über ein einzelnes Attribut in einer Assembly und besteht aus drei `DWORD`s.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-103">Contains information about a single attribute in an assembly, and consists of three `DWORD`s.</span></span> <span data-ttu-id="a6f6a-104">Jede `DWORD` ist ein Offset in einen Zeichenpuffer von erzeugt der `CurrentIntoBuffer` Methode der [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a6f6a-104">Each `DWORD` is an offset into a character buffer produced by the `CurrentIntoBuffer` method of the [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8bd16-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="8bd16-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6f6a-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="a6f6a-105">Syntax</span></span>  
   
 ```  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
@@ -49,24 +38,24 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8bd16-106">Member</span><span class="sxs-lookup"><span data-stu-id="8bd16-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a6f6a-106">Member</span><span class="sxs-lookup"><span data-stu-id="a6f6a-106">Members</span></span>  
   
-|<span data-ttu-id="8bd16-107">Member</span><span class="sxs-lookup"><span data-stu-id="8bd16-107">Member</span></span>|<span data-ttu-id="8bd16-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8bd16-108">Description</span></span>|  
+|<span data-ttu-id="a6f6a-107">Member</span><span class="sxs-lookup"><span data-stu-id="a6f6a-107">Member</span></span>|<span data-ttu-id="a6f6a-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a6f6a-108">Description</span></span>|  
 |------------|-----------------|  
-|`ofsNamespace`|<span data-ttu-id="8bd16-109">Der erste Offset in der Zeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="8bd16-109">The first offset into the character buffer.</span></span> <span data-ttu-id="8bd16-110">Dieser Offset ist nicht durch den Namespace für das Attribut jedoch durch eine Reihe von Null-Zeichen folgt.</span><span class="sxs-lookup"><span data-stu-id="8bd16-110">This offset is not followed by the attribute's namespace, but by a series of null characters.</span></span> <span data-ttu-id="8bd16-111">Aus diesem Grund ist es nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="8bd16-111">Therefore, it is not used.</span></span>|  
-|`ofsName`|<span data-ttu-id="8bd16-112">Der zweite Offset in der Zeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="8bd16-112">The second offset into the character buffer.</span></span> <span data-ttu-id="8bd16-113">Dieser Speicherort kennzeichnet den Beginn der den Namen des Attributs.</span><span class="sxs-lookup"><span data-stu-id="8bd16-113">This location marks the start of the attribute's name.</span></span>|  
-|`ofsValue`|<span data-ttu-id="8bd16-114">Der dritte Offset in der Zeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="8bd16-114">The third offset into the character buffer.</span></span> <span data-ttu-id="8bd16-115">Dieser Speicherort kennzeichnet den Beginn der Wert des Attributs.</span><span class="sxs-lookup"><span data-stu-id="8bd16-115">This location marks the start of the attribute's value.</span></span>|  
+|`ofsNamespace`|<span data-ttu-id="a6f6a-109">Der erste Offset in der Zeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-109">The first offset into the character buffer.</span></span> <span data-ttu-id="a6f6a-110">Dieser Offset ist nicht durch den Namespace für das Attribut jedoch durch eine Reihe von Null-Zeichen folgt.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-110">This offset is not followed by the attribute's namespace, but by a series of null characters.</span></span> <span data-ttu-id="a6f6a-111">Aus diesem Grund ist es nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-111">Therefore, it is not used.</span></span>|  
+|`ofsName`|<span data-ttu-id="a6f6a-112">Der zweite Offset in der Zeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-112">The second offset into the character buffer.</span></span> <span data-ttu-id="a6f6a-113">Dieser Speicherort kennzeichnet den Beginn der den Namen des Attributs.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-113">This location marks the start of the attribute's name.</span></span>|  
+|`ofsValue`|<span data-ttu-id="a6f6a-114">Der dritte Offset in der Zeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-114">The third offset into the character buffer.</span></span> <span data-ttu-id="a6f6a-115">Dieser Speicherort kennzeichnet den Beginn der Wert des Attributs.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-115">This location marks the start of the attribute's value.</span></span>|  
   
-## <a name="sample"></a><span data-ttu-id="8bd16-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8bd16-116">Sample</span></span>  
- <span data-ttu-id="8bd16-117">Das folgende Beispiel veranschaulicht mehrere grundlegende Schritte, die schließlich ein aufgefülltes führen `IDENTITY_ATTRIBUTE_BLOB` Struktur:</span><span class="sxs-lookup"><span data-stu-id="8bd16-117">The following example illustrates several basic steps, which eventually result in a populated `IDENTITY_ATTRIBUTE_BLOB` structure:</span></span>  
+## <a name="sample"></a><span data-ttu-id="a6f6a-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a6f6a-116">Sample</span></span>  
+ <span data-ttu-id="a6f6a-117">Das folgende Beispiel veranschaulicht mehrere grundlegende Schritte, die schließlich ein aufgefülltes führen `IDENTITY_ATTRIBUTE_BLOB` Struktur:</span><span class="sxs-lookup"><span data-stu-id="a6f6a-117">The following example illustrates several basic steps, which eventually result in a populated `IDENTITY_ATTRIBUTE_BLOB` structure:</span></span>  
   
-1.  <span data-ttu-id="8bd16-118">Abrufen einer [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) für die Assembly.</span><span class="sxs-lookup"><span data-stu-id="8bd16-118">Obtain an [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) for the assembly.</span></span>  
+1.  <span data-ttu-id="a6f6a-118">Abrufen einer [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) für die Assembly.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-118">Obtain an [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) for the assembly.</span></span>  
   
-2.  <span data-ttu-id="8bd16-119">Rufen Sie die `IReferenceIdentity::EnumAttributes` -Methode, und rufen eine [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).</span><span class="sxs-lookup"><span data-stu-id="8bd16-119">Call the `IReferenceIdentity::EnumAttributes` method, and obtain an [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).</span></span>  
+2.  <span data-ttu-id="a6f6a-119">Rufen Sie die `IReferenceIdentity::EnumAttributes` -Methode, und rufen eine [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).</span><span class="sxs-lookup"><span data-stu-id="a6f6a-119">Call the `IReferenceIdentity::EnumAttributes` method, and obtain an [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).</span></span>  
   
-3.  <span data-ttu-id="8bd16-120">Erstellen Sie einen Zeichenpuffer, und wandeln Sie es als ein `IDENTITY_ATTRIBUTE_BLOB` Struktur.</span><span class="sxs-lookup"><span data-stu-id="8bd16-120">Create a character buffer, and cast it as an `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
+3.  <span data-ttu-id="a6f6a-120">Erstellen Sie einen Zeichenpuffer, und wandeln Sie es als ein `IDENTITY_ATTRIBUTE_BLOB` Struktur.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-120">Create a character buffer, and cast it as an `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
   
-4.  <span data-ttu-id="8bd16-121">Rufen Sie die `CurrentIntoBuffer` Methode der `IEnumIDENTITY_ATTRIBUTE` Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="8bd16-121">Call the `CurrentIntoBuffer` method of the `IEnumIDENTITY_ATTRIBUTE` interface.</span></span> <span data-ttu-id="8bd16-122">Diese Methode kopiert die Attribute `Namespace`, `Name`, und `Value` in der Zeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="8bd16-122">This method copies the attributes `Namespace`, `Name`, and `Value` into the character buffer.</span></span> <span data-ttu-id="8bd16-123">Die drei Offsets zu diesen Zeichenfolgen zur Verfügung gestellt, in der `IDENTITY_ATTRIBUTE_BLOB` Struktur.</span><span class="sxs-lookup"><span data-stu-id="8bd16-123">The three offsets to those strings will become available in the `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
+4.  <span data-ttu-id="a6f6a-121">Rufen Sie die `CurrentIntoBuffer` Methode der `IEnumIDENTITY_ATTRIBUTE` Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-121">Call the `CurrentIntoBuffer` method of the `IEnumIDENTITY_ATTRIBUTE` interface.</span></span> <span data-ttu-id="a6f6a-122">Diese Methode kopiert die Attribute `Namespace`, `Name`, und `Value` in der Zeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-122">This method copies the attributes `Namespace`, `Name`, and `Value` into the character buffer.</span></span> <span data-ttu-id="a6f6a-123">Die drei Offsets zu diesen Zeichenfolgen zur Verfügung gestellt, in der `IDENTITY_ATTRIBUTE_BLOB` Struktur.</span><span class="sxs-lookup"><span data-stu-id="a6f6a-123">The three offsets to those strings will become available in the `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -232,29 +221,29 @@ Exit:
 }  
 ```  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="8bd16-124">So führen Sie das Beispiel aus</span><span class="sxs-lookup"><span data-stu-id="8bd16-124">To run the sample</span></span>  
- <span data-ttu-id="8bd16-125">"C:"\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span><span class="sxs-lookup"><span data-stu-id="8bd16-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="a6f6a-124">So führen Sie das Beispiel aus</span><span class="sxs-lookup"><span data-stu-id="a6f6a-124">To run the sample</span></span>  
+ <span data-ttu-id="a6f6a-125">"C:"\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span><span class="sxs-lookup"><span data-stu-id="a6f6a-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span></span>  
   
-### <a name="sample-output"></a><span data-ttu-id="8bd16-126">Beispielausgabe:</span><span class="sxs-lookup"><span data-stu-id="8bd16-126">Sample output</span></span>  
- <span data-ttu-id="8bd16-127">Culture = Neutral</span><span class="sxs-lookup"><span data-stu-id="8bd16-127">Culture = neutral</span></span>  
+### <a name="sample-output"></a><span data-ttu-id="a6f6a-126">Beispielausgabe:</span><span class="sxs-lookup"><span data-stu-id="a6f6a-126">Sample output</span></span>  
+ <span data-ttu-id="a6f6a-127">Culture = Neutral</span><span class="sxs-lookup"><span data-stu-id="a6f6a-127">Culture = neutral</span></span>  
   
- <span data-ttu-id="8bd16-128">Name = System</span><span class="sxs-lookup"><span data-stu-id="8bd16-128">name = System</span></span>  
+ <span data-ttu-id="a6f6a-128">Name = System</span><span class="sxs-lookup"><span data-stu-id="a6f6a-128">name = System</span></span>  
   
- <span data-ttu-id="8bd16-129">ProcessorArchitecture = MSIL</span><span class="sxs-lookup"><span data-stu-id="8bd16-129">processorArchitecture = MSIL</span></span>  
+ <span data-ttu-id="a6f6a-129">ProcessorArchitecture = MSIL</span><span class="sxs-lookup"><span data-stu-id="a6f6a-129">processorArchitecture = MSIL</span></span>  
   
- <span data-ttu-id="8bd16-130">PublicKeyToken = b77a5c561934e089</span><span class="sxs-lookup"><span data-stu-id="8bd16-130">PublicKeyToken = b77a5c561934e089</span></span>  
+ <span data-ttu-id="a6f6a-130">PublicKeyToken = b77a5c561934e089</span><span class="sxs-lookup"><span data-stu-id="a6f6a-130">PublicKeyToken = b77a5c561934e089</span></span>  
   
- <span data-ttu-id="8bd16-131">Version = 2.0.0.0</span><span class="sxs-lookup"><span data-stu-id="8bd16-131">Version = 2.0.0.0</span></span>  
+ <span data-ttu-id="a6f6a-131">Version = 2.0.0.0</span><span class="sxs-lookup"><span data-stu-id="a6f6a-131">Version = 2.0.0.0</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8bd16-132">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8bd16-132">Requirements</span></span>  
- <span data-ttu-id="8bd16-133">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8bd16-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6f6a-132">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a6f6a-132">Requirements</span></span>  
+ <span data-ttu-id="a6f6a-133">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a6f6a-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8bd16-134">**Header:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="8bd16-134">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="a6f6a-134">**Header:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="a6f6a-134">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="8bd16-135">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bd16-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a6f6a-135">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6f6a-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8bd16-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8bd16-136">See Also</span></span>  
- [<span data-ttu-id="8bd16-137">IReferenceIdentity-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8bd16-137">IReferenceIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- [<span data-ttu-id="8bd16-138">IEnumIDENTITY_ATTRIBUTE-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8bd16-138">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
- [<span data-ttu-id="8bd16-139">IDENTITY_ATTRIBUTE-Struktur</span><span class="sxs-lookup"><span data-stu-id="8bd16-139">IDENTITY_ATTRIBUTE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- [<span data-ttu-id="8bd16-140">Fusion-Strukturen</span><span class="sxs-lookup"><span data-stu-id="8bd16-140">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a><span data-ttu-id="a6f6a-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a6f6a-136">See Also</span></span>  
+ [<span data-ttu-id="a6f6a-137">IReferenceIdentity-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a6f6a-137">IReferenceIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
+ [<span data-ttu-id="a6f6a-138">IEnumIDENTITY_ATTRIBUTE-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a6f6a-138">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
+ [<span data-ttu-id="a6f6a-139">IDENTITY_ATTRIBUTE-Struktur</span><span class="sxs-lookup"><span data-stu-id="a6f6a-139">IDENTITY_ATTRIBUTE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
+ [<span data-ttu-id="a6f6a-140">Fusion-Strukturen</span><span class="sxs-lookup"><span data-stu-id="a6f6a-140">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

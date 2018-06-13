@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647695"
 ---
 # <a name="declared-elements-in-visual-basic"></a><span data-ttu-id="53843-102">Deklarierte Elemente in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="53843-102">Declared Elements in Visual Basic</span></span>
 <span data-ttu-id="53843-103">Ein *deklariertes Element* ist ein Programmierelement, das in einer Deklarationsanweisung definiert ist.</span><span class="sxs-lookup"><span data-stu-id="53843-103">A *declared element* is a programming element that is defined in a declaration statement.</span></span> <span data-ttu-id="53843-104">Deklarierte Elemente enthalten Variablen, Konstanten, Enumerationen, Klassen, Strukturen, Module, Schnittstellen, Prozeduren, Prozedurparameter, Funktionsrückgaben, externe Prozedurverweise, Operatoren, Eigenschaften, Ereignisse und Delegaten.</span><span class="sxs-lookup"><span data-stu-id="53843-104">Declared elements include variables, constants, enumerations, classes, structures, modules, interfaces, procedures, procedure parameters, function returns, external procedure references, operators, properties, events, and delegates.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647136"
 ---
 # <a name="linq-to-xml-axes-visual-basic"></a><span data-ttu-id="1c56c-102">LINQ to XML-Achsen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c56c-102">LINQ to XML Axes (Visual Basic)</span></span>
 <span data-ttu-id="1c56c-103">Nachdem Sie eine XML-Struktur erstellt oder ein XML-Dokument in eine XML-Struktur geladen haben, können Sie durch Abfragen der XML-Struktur nach Elementen und Attributen suchen und deren Werte abrufen.</span><span class="sxs-lookup"><span data-stu-id="1c56c-103">After you have created an XML tree or loaded an XML document into an XML tree, you can query it to find elements and attributes and retrieve their values.</span></span>  

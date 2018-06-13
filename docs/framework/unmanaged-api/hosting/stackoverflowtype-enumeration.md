@@ -1,14 +1,6 @@
 ---
 title: StackOverflowType-Enumeration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StackOverflowType
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a04db61a16aeae24476fb0b191a3d2dc89743dee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440868"
 ---
-# <a name="stackoverflowtype-enumeration"></a><span data-ttu-id="8e7e3-102">StackOverflowType-Enumeration</span><span class="sxs-lookup"><span data-stu-id="8e7e3-102">StackOverflowType Enumeration</span></span>
-<span data-ttu-id="8e7e3-103">Enthält Werte, die angeben, die Ursache eines Stack Overflow-Ereignisses.</span><span class="sxs-lookup"><span data-stu-id="8e7e3-103">Contains values that indicate the underlying cause of a stack overflow event.</span></span>  
+# <a name="stackoverflowtype-enumeration"></a><span data-ttu-id="678fe-102">StackOverflowType-Enumeration</span><span class="sxs-lookup"><span data-stu-id="678fe-102">StackOverflowType Enumeration</span></span>
+<span data-ttu-id="678fe-103">Enthält Werte, die angeben, die Ursache eines Stack Overflow-Ereignisses.</span><span class="sxs-lookup"><span data-stu-id="678fe-103">Contains values that indicate the underlying cause of a stack overflow event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8e7e3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8e7e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="678fe-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="678fe-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -47,25 +36,25 @@ typedef enum {
 } StackOverflowType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8e7e3-105">Member</span><span class="sxs-lookup"><span data-stu-id="8e7e3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="678fe-105">Member</span><span class="sxs-lookup"><span data-stu-id="678fe-105">Members</span></span>  
   
-|<span data-ttu-id="8e7e3-106">Member</span><span class="sxs-lookup"><span data-stu-id="8e7e3-106">Member</span></span>|<span data-ttu-id="8e7e3-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8e7e3-107">Description</span></span>|  
+|<span data-ttu-id="678fe-106">Member</span><span class="sxs-lookup"><span data-stu-id="678fe-106">Member</span></span>|<span data-ttu-id="678fe-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="678fe-107">Description</span></span>|  
 |------------|-----------------|  
-|`SO_ClrEngine`|<span data-ttu-id="8e7e3-108">Der Stapelüberlauf wurde durch das Ausführungsmodul verursacht.</span><span class="sxs-lookup"><span data-stu-id="8e7e3-108">The stack overflow was caused by the execution engine.</span></span>|  
-|`SO_Managed`|<span data-ttu-id="8e7e3-109">Der Stapelüberlauf wurde von verwaltetem Code verursacht.</span><span class="sxs-lookup"><span data-stu-id="8e7e3-109">The stack overflow was caused by managed code.</span></span>|  
-|`SO_Other`|<span data-ttu-id="8e7e3-110">Der Stapelüberlauf wurde von nicht verwaltetem Code verursacht.</span><span class="sxs-lookup"><span data-stu-id="8e7e3-110">The stack overflow was caused by unmanaged code.</span></span>|  
+|`SO_ClrEngine`|<span data-ttu-id="678fe-108">Der Stapelüberlauf wurde durch das Ausführungsmodul verursacht.</span><span class="sxs-lookup"><span data-stu-id="678fe-108">The stack overflow was caused by the execution engine.</span></span>|  
+|`SO_Managed`|<span data-ttu-id="678fe-109">Der Stapelüberlauf wurde von verwaltetem Code verursacht.</span><span class="sxs-lookup"><span data-stu-id="678fe-109">The stack overflow was caused by managed code.</span></span>|  
+|`SO_Other`|<span data-ttu-id="678fe-110">Der Stapelüberlauf wurde von nicht verwaltetem Code verursacht.</span><span class="sxs-lookup"><span data-stu-id="678fe-110">The stack overflow was caused by unmanaged code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8e7e3-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8e7e3-111">Remarks</span></span>  
- <span data-ttu-id="8e7e3-112">Diese Informationen werden an den Host übergeben, durch einen Aufruf der [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="8e7e3-112">This information is passed to the host through a call to the [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="678fe-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="678fe-111">Remarks</span></span>  
+ <span data-ttu-id="678fe-112">Diese Informationen werden an den Host übergeben, durch einen Aufruf der [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="678fe-112">This information is passed to the host through a call to the [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8e7e3-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8e7e3-113">Requirements</span></span>  
- <span data-ttu-id="8e7e3-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8e7e3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="678fe-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="678fe-113">Requirements</span></span>  
+ <span data-ttu-id="678fe-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="678fe-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8e7e3-115">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8e7e3-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="678fe-115">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="678fe-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8e7e3-116">**Bibliothek:** "Mscoree.dll"</span><span class="sxs-lookup"><span data-stu-id="8e7e3-116">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="678fe-116">**Bibliothek:** "Mscoree.dll"</span><span class="sxs-lookup"><span data-stu-id="678fe-116">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8e7e3-117">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e7e3-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="678fe-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="678fe-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8e7e3-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8e7e3-118">See Also</span></span>  
- [<span data-ttu-id="8e7e3-119">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="8e7e3-119">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="678fe-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="678fe-118">See Also</span></span>  
+ [<span data-ttu-id="678fe-119">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="678fe-119">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

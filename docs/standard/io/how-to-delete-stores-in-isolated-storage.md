@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572326"
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a><span data-ttu-id="a537c-102">Gewusst wie: Löschen von Speichern im isolierten Speicher</span><span class="sxs-lookup"><span data-stu-id="a537c-102">How to: Delete Stores in Isolated Storage</span></span>
 <span data-ttu-id="a537c-103">Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile> -Klasse stellt zwei Methoden zum Löschen von isolierten Speicherdateien zur Verfügung:</span><span class="sxs-lookup"><span data-stu-id="a537c-103">The <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class supplies two methods for deleting isolated storage files:</span></span>  

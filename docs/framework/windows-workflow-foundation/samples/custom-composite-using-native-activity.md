@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519209"
 ---
 # <a name="custom-composite-using-native-activity"></a><span data-ttu-id="cc3c4-102">Benutzerdefinierte Zusammensetzungen mit NativeActivity</span><span class="sxs-lookup"><span data-stu-id="cc3c4-102">Custom Composite using Native Activity</span></span>
 <span data-ttu-id="cc3c4-103">In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.NativeActivity> geschrieben wird, die andere <xref:System.Activities.Activity>-Objekte plant, um den Fluss der Ausführung eines Workflows zu steuern.</span><span class="sxs-lookup"><span data-stu-id="cc3c4-103">This sample demonstrates how to write a <xref:System.Activities.NativeActivity> that schedules other <xref:System.Activities.Activity> objects to control the flow of a workflow’s execution.</span></span> <span data-ttu-id="cc3c4-104">Zur Veranschaulichung dieses Vorgangs werden in diesem Beispiel zwei häufige Ablaufsteuerungen verwendet: Sequence und While.</span><span class="sxs-lookup"><span data-stu-id="cc3c4-104">This sample uses two common control flows, Sequence and While, to demonstrate how to do this.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647803"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a><span data-ttu-id="79d43-102">Gewusst wie: Überprüfen von Dateinamen und Pfaden in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="79d43-102">How to: Validate File Names and Paths in Visual Basic</span></span>
 <span data-ttu-id="79d43-103">In diesem Beispiel gibt eine `Boolean` -Wert, der angibt, ob eine Zeichenfolge einen Dateinamen oder den Pfad darstellt.</span><span class="sxs-lookup"><span data-stu-id="79d43-103">This example returns a `Boolean` value that indicates whether a string represents a file name or path.</span></span> <span data-ttu-id="79d43-104">Die Überprüfung wird überprüft, ob der Name Zeichen enthält, die vom Dateisystem zugelassen sind.</span><span class="sxs-lookup"><span data-stu-id="79d43-104">The validation checks if the name contains characters that are not allowed by the file system.</span></span>  

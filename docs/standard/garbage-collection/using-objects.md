@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576323"
 ---
 # <a name="using-objects-that-implement-idisposable"></a><span data-ttu-id="cb2f2-102">Verwenden von Objekten, die IDisposable implementieren</span><span class="sxs-lookup"><span data-stu-id="cb2f2-102">Using objects that implement IDisposable</span></span>
 

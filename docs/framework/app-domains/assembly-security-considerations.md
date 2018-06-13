@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743419"
 ---
 # <a name="assembly-security-considerations"></a><span data-ttu-id="2ea24-102">Überlegungen zur Assemblysicherheit</span><span class="sxs-lookup"><span data-stu-id="2ea24-102">Assembly Security Considerations</span></span>
 <a name="top"></a> <span data-ttu-id="2ea24-103">Beim Erstellen einer Assembly können Sie eine Reihe von Berechtigungen angeben, die erforderlich sind, um die Assembly auszuführen.</span><span class="sxs-lookup"><span data-stu-id="2ea24-103">When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="2ea24-104">Das Erteilen bestimmter Berechtigungen für eine Assembly beruht auf Beweisen.</span><span class="sxs-lookup"><span data-stu-id="2ea24-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521741"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a><span data-ttu-id="19159-102">Gewusst wie: Ausfüllen einer Form mit einer Schraffur</span><span class="sxs-lookup"><span data-stu-id="19159-102">How to: Fill a Shape with a Hatch Pattern</span></span>
 <span data-ttu-id="19159-103">Eine Schraffur besteht aus zwei Farben: eine für den Hintergrund und eine für die Zeilen, die das Muster über dem Hintergrund bilden.</span><span class="sxs-lookup"><span data-stu-id="19159-103">A hatch pattern is made from two colors: one for the background and one for the lines that form the pattern over the background.</span></span> <span data-ttu-id="19159-104">Um eine geschlossene Form mit einer Schraffur zu füllen, verwenden Sie eine <xref:System.Drawing.Drawing2D.HatchBrush> Objekt.</span><span class="sxs-lookup"><span data-stu-id="19159-104">To fill a closed shape with a hatch pattern, use a <xref:System.Drawing.Drawing2D.HatchBrush> object.</span></span> <span data-ttu-id="19159-105">Im folgenden Beispiel wird veranschaulicht, wie eine Ellipse, die mit einer Schraffur füllen:</span><span class="sxs-lookup"><span data-stu-id="19159-105">The following example demonstrates how to fill an ellipse with a hatch pattern:</span></span>  

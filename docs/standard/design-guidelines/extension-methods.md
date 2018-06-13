@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574516"
 ---
 # <a name="extension-methods"></a><span data-ttu-id="0be8d-102">Erweiterungsmethoden</span><span class="sxs-lookup"><span data-stu-id="0be8d-102">Extension Methods</span></span>
 <span data-ttu-id="0be8d-103">Erweiterungsmethoden sind eine Sprachfunktion, die statische Methoden, um mithilfe der Aufruf der Instanzmethodensyntax aufgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="0be8d-103">Extension methods are a language feature that allows static methods to be called using instance method call syntax.</span></span> <span data-ttu-id="0be8d-104">Diese Methoden müssen mindestens einen Parameter annehmen und somit die Instanz, die die Methode ist darstellt, das verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="0be8d-104">These methods must take at least one parameter, which represents the instance the method is to operate on.</span></span>  
