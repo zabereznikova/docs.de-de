@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636131"
 ---
 # <a name="format-not-valid-in-resource-file"></a><span data-ttu-id="ca91b-102">Die Ressourcendatei enthält ein ungültiges Format.</span><span class="sxs-lookup"><span data-stu-id="ca91b-102">Format not valid in resource file</span></span>
 <span data-ttu-id="ca91b-103">Eine Ressourcendatei im Projekt befolgt nicht das Standardformat für eine Windows-Ressourcendatei, oder es besteht ein Konflikt zwischen der Ressourcendatei und Visual Basic-Projekt.</span><span class="sxs-lookup"><span data-stu-id="ca91b-103">A resource file in your project does not follow the standard format for a Windows resource file or there is a mismatch between the resource file and the Visual Basic project.</span></span>  
