@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363563"
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Verfügbarmachen der Daten als Dienst (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] integriert in Visual Studio für die Ihnen ermöglichen, Dienste, um das Verfügbarmachen von Daten als einfacher definieren [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Stellt einen Datendienst erstellen, die eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feed umfasst die folgenden grundlegenden Schritte:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364004"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Zugreifen auf den Dienst mit einem Webbrowser (WCF Data Services-Schnellstart)
 In dieser Aufgabe starten Sie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aus Visual Studio und deaktivieren optional das Feedlesen im Webbrowser. Sie werden dann Dienstdokuments Definition abrufen sowie greifen auf datendienstressourcen von HTTP-GET-Anforderungen über einen Webbrowser auf die verfügbar gemachten Ressourcen senden.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543246"
 ---
 # <a name="how-to-erase-ink-on-a-custom-control"></a>Gewusst wie: Löschen von Freihandeingaben auf einem benutzerdefinierten Steuerelement
 Die <xref:System.Windows.Ink.IncrementalStrokeHitTester> bestimmt, ob die aktuell gezeichnete Strich mit einer anderen Strich überschneidet.  Dies ist hilfreich, für die Erstellung eines Steuerelements, den Benutzer Teile eines Strichs löschen kann, wie ein Benutzer kann auf eine <xref:System.Windows.Controls.InkCanvas> bei der <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> festgelegt ist, um <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>.  

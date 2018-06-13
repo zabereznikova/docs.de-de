@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388055"
 ---
 # <a name="pinvokestackimbalance-mda"></a>pInvokeStackImbalance-MDA
 Der `pInvokeStackImbalance`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn die CLR erkennt, dass die Stapeltiefe nach einem Plattformaufruf nicht mit der Stapeltiefe übereinstimmt, die in Anbetracht der im <xref:System.Runtime.InteropServices.DllImportAttribute>-Attribut angegebenen Aufrufkonvention und der Parameter in der verwalteten Signatur zu erwarten war.  

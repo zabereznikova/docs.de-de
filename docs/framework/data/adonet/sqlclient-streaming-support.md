@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364735"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient-Streamingunterstützung
 Streamingunterstützung zwischen SQL Server und einer Anwendung (neu in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) unterstützt unstrukturierte Daten auf dem Server (Dokumente, Bilder und Mediendateien-Dateien). Eine SQL Server-Datenbank kann binary large Objects (BLOBs) speichern, aber beim Abrufen von BLOBS viel Arbeitsspeicher verwenden kann.  

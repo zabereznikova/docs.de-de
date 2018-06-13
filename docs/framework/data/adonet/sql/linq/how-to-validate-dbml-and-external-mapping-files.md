@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362161"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Gewusst wie: Überprüfen von DBML- und externen Zuordnungsdateien
 Externe Zuordnungsdateien und von Ihnen geänderte .dbml-Dateien müssen hinsichtlich ihrer jeweiligen Schemadefinitionen überprüft werden. Dieses Thema enthält Visual Studio-Benutzer mit den Schritten zum Implementieren des Validierungsprozesses.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543431"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Gewusst wie: Erstellen eines schreibgeschützten Freezable-Objekts
 Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.Freezable> schreibgeschützt sind und durch Aufrufen seiner <xref:System.Windows.Freezable.Freeze%2A> Methode.  

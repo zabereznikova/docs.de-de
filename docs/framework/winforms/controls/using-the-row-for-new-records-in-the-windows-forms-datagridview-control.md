@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540658"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Verwenden der Zeile für neue Datensätze im DataGridView-Steuerelement in Windows Forms
 Bei Verwendung einer <xref:System.Windows.Forms.DataGridView> für die Bearbeitung von Daten in der Anwendung wird häufig auf Ihre Benutzer die Möglichkeit zum Hinzufügen von neuer Zeilen mit Daten im Datenspeicher erhalten sollen. Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt diese Funktionalität durch die Bereitstellung einer Zeile für neue Datensätze, die immer als die letzte Zeile angezeigt wird. Er ist mit einem Sternchen (*) im Zeilenkopf gekennzeichnet. Den folgenden Abschnitten werden einige Dinge, die Sie berücksichtigen sollten, wenn das Programm mit der Zeile für neue Datensätze aktiviert.  

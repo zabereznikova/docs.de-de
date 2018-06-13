@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540881"
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox-Steuerelement (Windows Forms)
 Windows Forms `RichTextBox` Steuerelement zum Anzeigen, eingeben und Bearbeiten von Text mit Formatierung verwendet wird. Die `RichTextBox` Steuerelement ist alles, was die <xref:System.Windows.Forms.TextBox> Steuerelement bewirkt, kann jedoch auch anzeigen, Schriftarten, Farben und Links; Laden Sie Text und eingebettete Bilder aus einer Datei; rückgängig und wiederholen Bearbeitungsvorgänge; und angegebene Zeichen gefunden. Die `RichTextBox` Steuerelement wird normalerweise verwendet, geben Sie die Bearbeitung von Text und Anzeigen von Funktionen, wie Textverarbeitungsprogramm erstellten Anwendungen wie Microsoft Word. Wie die <xref:System.Windows.Forms.TextBox> -Steuerelement, die `RichTextBox` Steuerelement Bildlaufleisten anzeigen kann, aber im Gegensatz zu der <xref:System.Windows.Forms.TextBox> -Steuerelement, es horizontale und vertikale Bildlaufleisten werden standardmäßig angezeigt und verfügt über zusätzliche Scrollbar-Einstellungen.  

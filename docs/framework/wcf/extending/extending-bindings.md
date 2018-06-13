@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485788"
 ---
 # <a name="extending-bindings"></a>Erweitern von Bindungen
 Bindungen geben den Transport, die Codierung sowie das Protokoll an, die erforderlich sind, um eine Verbindung mit einem Endpunkt herzustellen. Bindungserweiterungen und benutzerdefinierte Bindungen implementieren die benutzerdefinierten Kommunikationsfunktionen, die erforderlich sind, um Anwendungsfunktionen zu unterstützen.  

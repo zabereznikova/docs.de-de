@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539665"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Gewusst wie: Entwickeln eines einfachen Windows Forms-Steuerelements
 Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von benutzerdefinierten Windows Forms-Steuerelementen. Ein einfache Steuerelement entwickelt, die in dieser exemplarischen Vorgehensweise können Sie die Ausrichtung des seine <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft geändert werden. Es löst keine Ereignisse aus oder behandelt sie.  

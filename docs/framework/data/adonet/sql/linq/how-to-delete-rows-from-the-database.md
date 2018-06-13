@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360451"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Gewusst wie: Löschen von Zeilen aus der Datenbank
 Sie können Zeilen in einer Datenbank löschen, indem das entsprechende entfernen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objekte aus ihrer Tabelle verknüpften Auflistung. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt die Änderungen in die entsprechenden SQL `DELETE` Befehle.  

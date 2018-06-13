@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537641"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Verwendung von Auswahl und Zwischenablage mit dem DataGridView-Steuerelement in Windows Forms
 Die `DataGridView` gesteuert, die Sie mit einer Vielzahl von Optionen zum Konfigurieren, wie Benutzer Zellen, Zeilen und Spalten auswählen können. Beispielsweise können Sie aktivieren einfach- oder Mehrfachauswahl, Auswahl der ganze Zeilen oder Spalten, wenn Benutzer Zellen klicken oder Auswahl ganzer Zeilen oder Spalten nur, wenn Benutzer ihre Header auf die Zellenauswahl sowie ermöglicht. Wenn Sie eine eigene Benutzeroberfläche für die Auswahl bereitstellen möchten, können normale Auswahl deaktivieren und die gesamte Auswahl programmgesteuert zu behandeln. Darüber hinaus können Sie Benutzern die ausgewählten Werte in die Zwischenablage kopieren.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542050"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Übersicht über das ToolStrip-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> -Steuerelement und die zugehörigen Klassen bieten ein allgemeines Framework zum Zusammenfassen von Benutzeroberflächenelementen in Symbolleisten, Statusleisten und Menüs. <xref:System.Windows.Forms.ToolStrip> Steuerelemente bieten eine komfortable während der Entwurfszeit, die direkte Aktivierung und bearbeiten, benutzerdefiniertes Layout und rafting, umfasst also die Möglichkeit von Symbolleisten, horizontalen oder vertikalen Abstand gemeinsam verwenden.  

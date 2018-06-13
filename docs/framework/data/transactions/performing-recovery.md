@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363929"
 ---
 # <a name="performing-recovery"></a>Durchführen einer Wiederherstellung
 Ein Ressourcen-Manager erleichtert das Auflösen dauerhafter Eintragungen in einer Transaktion, indem er den Transaktionsteilnehmer nach einem Fehler der Ressource neu einträgt.  

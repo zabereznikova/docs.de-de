@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365169"
 ---
 # <a name="data-binding"></a>Datenbindung
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt das Binden an allgemeine Steuerelemente, z. B. an Rastersteuerelemente. Insbesondere [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definiert das Grundmuster für die Bindung an ein Datenraster und Behandeln von Master / Detail-Bindung, die im Hinblick auf Anzeige und Aktualisierung.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487856"
 ---
 # <a name="custom-authorization"></a>Benutzerdefinierte Autorisierung
 Autorisierung ist der Prozess, Zugriff auf Ressourcen und Aufgaben zu kontrollieren. Die Themen in diesem Abschnitt ermöglichen es Ihnen, verschiedene Anspruchstypen oder Richtlinien zu erstellen und zu implementieren.  

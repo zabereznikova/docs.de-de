@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488981"
 ---
 # <a name="data-contract-serializer"></a>Data Contract Serializer
 Die Windows Communication Foundation (WCF)-Infrastruktur verwendet die <xref:System.Runtime.Serialization.DataContractSerializer> -Klasse als Standardserialisierungsprogramm. Die Themen in diesem Abschnitt enthalten weitere Informationen über deren Verwendung als eigenständiges Serialisierungsprogramm.  

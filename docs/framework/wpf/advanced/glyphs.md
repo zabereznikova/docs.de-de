@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543065"
 ---
 # <a name="glyphs"></a>Symbole
 Symbole sind eine systemnahe Darstellung eines Zeichens, auf dem Bildschirm gezeichnet werden soll. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet direkten Zugriff auf die Symbole für Kunden abfangen und Text nach der Formatierung beibehalten werden soll.  

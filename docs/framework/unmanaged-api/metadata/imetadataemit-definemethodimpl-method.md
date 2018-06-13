@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2ab66fecfaa66b5c56690950f6b19ecfd7e85e33
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443988"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl-Methode
 Erstellt eine Definition für die Implementierung einer Methode, die von einer Schnittstelle geerbt, und gibt ein Token zu dieser Definition der Implementierung der Methode zurück.  

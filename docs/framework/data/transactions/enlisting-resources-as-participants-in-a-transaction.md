@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365604"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Eintragen von Ressourcen als Teilnehmer an einer Transaktion
 Jede an einer Transaktion teilnehmende Ressource wird von einem Ressourcen-Manager (RM) verwaltet, dessen Aktionen von einem Transaktions-Manager (TM) koordiniert werden. Die Koordination erfolgt anhand von Benachrichtigungen, die Abonnenten übermittelt werden, die sich über den TM in eine Transaktion eingetragen haben.  

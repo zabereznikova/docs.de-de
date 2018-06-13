@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543113"
 ---
 # <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>Gewusst wie: Ändern der Farbe eines Elements mithilfe von Fokusereignissen
 In diesem Beispiel wird gezeigt, wie die Farbe eines Elements ändern, wenn er erhält und verliert den Fokus mit der <xref:System.Windows.UIElement.GotFocus> und <xref:System.Windows.UIElement.LostFocus> Ereignisse.  

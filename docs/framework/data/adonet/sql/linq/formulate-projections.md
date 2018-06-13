@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364947"
 ---
 # <a name="formulate-projections"></a>Formulieren von Projektionen
 Das folgende Beispiel zeigt wie die `select` -Anweisung in c# und `Select` -Anweisung in Visual Basic kann zusammen mit anderen Funktionen, um Abfrageprojektionen zu bilden.  
