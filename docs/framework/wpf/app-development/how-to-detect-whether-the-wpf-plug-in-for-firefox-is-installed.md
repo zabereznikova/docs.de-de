@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546987"
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a><span data-ttu-id="7656f-102">Gewusst wie: Erkennen einer Installation des WPF-Plug-Ins für Firefox</span><span class="sxs-lookup"><span data-stu-id="7656f-102">How to: Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>
 <span data-ttu-id="7656f-103">Der Windows Presentation Foundation-Plug-In für Firefox (WPF) können [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und loose XAML-Dateien in den Mozilla Firefox-Browser ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="7656f-103">The Windows Presentation Foundation (WPF) plug-in for Firefox enables [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] and loose XAML files to run in the Mozilla Firefox browser.</span></span> <span data-ttu-id="7656f-104">Dieses Thema enthält ein Skript geschrieben in HTML und JavaScript, die Administratoren verwenden können, um zu bestimmen, ob das WPF-Plug-In für Firefox installiert ist.</span><span class="sxs-lookup"><span data-stu-id="7656f-104">This topic provides a script written in HTML and JavaScript that administrators can use to determine whether the WPF plug-in for Firefox is installed.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335347"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a><span data-ttu-id="fe027-102">Abrufen der Absätze und ihrer Stile (C#)</span><span class="sxs-lookup"><span data-stu-id="fe027-102">Retrieving the Paragraphs and Their Styles (C#)</span></span>
 <span data-ttu-id="fe027-103">In diesem Beispiel schreiben wir eine Abfrage, die die Absatzknoten aus einem WordprocessingML-Dokument abruft.</span><span class="sxs-lookup"><span data-stu-id="fe027-103">In this example, we write a query that retrieves the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="fe027-104">Außerdem ermittelt es für jeden Absatz die verwendete Formatvorlage.</span><span class="sxs-lookup"><span data-stu-id="fe027-104">It also identifies the style of each paragraph.</span></span>  

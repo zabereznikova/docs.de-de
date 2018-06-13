@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761076"
 ---
 # <a name="inferring-columns"></a><span data-ttu-id="7e95f-102">Ableiten von Spalten</span><span class="sxs-lookup"><span data-stu-id="7e95f-102">Inferring Columns</span></span>
 <span data-ttu-id="7e95f-103">Nachdem von ADO.NET anhand eines XML-Dokuments ermittelt wurde, welche Elemente als Tabellen für ein <xref:System.Data.DataSet>-Objekt abgeleitet werden sollen, werden die Spalten für diese Tabellen abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="7e95f-103">After ADO.NET has determined from an XML document which elements to infer as tables for a <xref:System.Data.DataSet>, it then infers the columns for those tables.</span></span> <span data-ttu-id="7e95f-104">Neu in ADO.NET 2.0 eingeführt, ein neues Schema inferenzmodul, die einen stark typisierten Datentyp für jede leitet **SimpleType** Element.</span><span class="sxs-lookup"><span data-stu-id="7e95f-104">ADO.NET 2.0 introduced a new schema inference engine that infers a strongly typed data type for each **simpleType** element.</span></span> <span data-ttu-id="7e95f-105">In früheren Versionen der Datentyp eines hergeleiteten **SimpleType** handelte es sich immer **xsd: String**.</span><span class="sxs-lookup"><span data-stu-id="7e95f-105">In previous versions, the data type of an inferred **simpleType** element was always **xsd:string**.</span></span>  

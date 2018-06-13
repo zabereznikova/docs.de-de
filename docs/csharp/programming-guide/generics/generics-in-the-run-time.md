@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334534"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a><span data-ttu-id="fd600-102">Generika zur Laufzeit (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="fd600-102">Generics in the Run Time (C# Programming Guide)</span></span>
 <span data-ttu-id="fd600-103">Beim Kompilieren eines generischen Typs oder einer generischen Methode in Microsoft Intermediate Language (MSIL) wird über Metadaten auf das Vorkommen von Typparametern hingewiesen.</span><span class="sxs-lookup"><span data-stu-id="fd600-103">When a generic type or method is compiled into Microsoft intermediate language (MSIL), it contains metadata that identifies it as having type parameters.</span></span> <span data-ttu-id="fd600-104">Die Art der Verwendung von MSIL für einen generischen Typ hängt davon ab, ob es sich bei dem übergebenen Typparameter um einen Werttyp oder einen Referenztyp handelt.</span><span class="sxs-lookup"><span data-stu-id="fd600-104">How the MSIL for a generic type is used differs based on whether the supplied type parameter is a value type or reference type.</span></span>  

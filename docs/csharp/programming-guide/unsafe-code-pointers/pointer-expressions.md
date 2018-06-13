@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330332"
 ---
 # <a name="pointer-expressions-c-programming-guide"></a><span data-ttu-id="85d85-102">Zeigerausdrücke (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="85d85-102">Pointer Expressions (C# Programming Guide)</span></span>
 <span data-ttu-id="85d85-103">In diesem Abschnitt werden die folgenden Zeigerausdrücke behandelt:</span><span class="sxs-lookup"><span data-stu-id="85d85-103">In this section, the following pointer expressions are discussed:</span></span>  
