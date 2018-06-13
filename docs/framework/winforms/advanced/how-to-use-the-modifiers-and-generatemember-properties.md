@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523993"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Gewusst wie: Verwenden von Modifizierern und GenerateMember-Eigenschaften
 Wenn Sie eine Komponente in einem Windows Form platzieren, werden zwei Eigenschaften von der entwurfsumgebung bereitgestellt: `GenerateMember` und `Modifiers`. Die `GenerateMember` Eigenschaft gibt an, wann eine Membervariable für eine Komponente von Windows Forms-Designer generiert. Die `Modifiers` Eigenschaft ist für den Zugriffsmodifizierer auf diese Membervariable zugewiesen. Wenn der Wert von der `GenerateMember` Eigenschaft ist `false`, den Wert des der `Modifiers` Eigenschaft hat keine Auswirkungen.  

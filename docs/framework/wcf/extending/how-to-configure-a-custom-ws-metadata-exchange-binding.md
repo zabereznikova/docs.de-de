@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488698"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Vorgehensweise: Konfigurieren einer benutzerdefinierten WS-Metadatenaustausch-Bindung
 In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaustausch-Bindung konfigurieren. Windows Communication Foundation (WCF) enthält vier vom System definierte metadatenbindungen, aber Sie können Metadaten mit jeder gewünschten Bindung veröffentlichen. In diesem Thema wird beschrieben, wie Metadaten mit der `wsHttpBinding` veröffentlicht werden. Diese Bindung ermöglicht es Ihnen, Metadaten auf eine sichere Weise verfügbar zu machen. Der Code in diesem Artikel wird basierend auf den [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

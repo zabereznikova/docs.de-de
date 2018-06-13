@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543169"
 ---
 # <a name="how-to-data-bind-to-an-inkcanvas"></a>Gewusst wie: Datenbindung an ein InkCanvas-Steuerelement
 ## <a name="example"></a>Beispiel  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543285"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>Gewusst wie: Programmgesteuertes Einfügen eines Elements in Text
 Das folgende Beispiel zeigt, wie zwei <xref:System.Windows.Documents.TextPointer> Objekte an einen Bereich innerhalb von Text anzuwendende ein <xref:System.Windows.Documents.Span> Element.  

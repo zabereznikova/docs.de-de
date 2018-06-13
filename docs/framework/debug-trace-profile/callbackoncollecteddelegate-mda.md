@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356354"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>CallbackOnCollectedDelegate-MDA
 Der `callbackOnCollectedDelegate`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn das Marshalling eines Delegaten von verwaltetem zu nicht verwaltetem Code als Funktionszeiger durchgeführt wird und nach der Garbage Collection des Delegaten ein Rückruf mit diesem Funktionszeiger erfolgt.  

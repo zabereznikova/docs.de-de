@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955965"
 ---
 # <a name="event-c-reference"></a>event (C#-Referenz)
 Das `event`-Schlüsselwort wird verwendet, um ein Ereignis in einer Publisher-Klasse zu deklarieren.  

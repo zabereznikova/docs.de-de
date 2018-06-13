@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ee808ba403a513b897134420b45ebe8cd3537571
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442244"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation-Enumeration
 Enthält Flagwerte für die Behandlung von lokalen Verweisen.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542228"
 ---
 # <a name="windows-forms-security"></a>Sicherheit in Windows Forms
 Windows Forms bietet ein Sicherheitsmodell, das Code-basierte (Sicherheit) festgelegte Ebenen für Code kann unabhängig von der Benutzer, den Code ausführt, ist. Dies erfolgt zusätzlich zu Sicherheit Schemas, die bereits auf Ihrem Computer vorhanden sein können. Diese können in den Browser (z. B. die Zone-basierte Sicherheit in Internet Explorer verfügbar) oder des Betriebssystems (z. B. die Anmeldeinformationen-basierte Sicherheit von Windows NT) umfassen.  
