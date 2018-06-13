@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4dfb31a2fad8a07b3821ac85bbb43b25693f11d8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404098"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder-Methode
 Die Tabelle der angegebenen Assembly hinzugefügt typweiterleitung für einen geschachtelten Typ.  

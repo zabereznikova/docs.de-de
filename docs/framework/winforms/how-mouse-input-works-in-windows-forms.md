@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540868"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Funktionsweise von Mauseingaben in Windows Forms
 Empfangen und Behandeln von Mauseingaben ist ein wichtiger Bestandteil jeder Windows-Anwendung. Sie können verarbeitet Mausereignisse in Ihrer Anwendung eine Aktion auszuführen oder Mauspositionsinformationen zum Ausführen von Treffertests oder andere Aktionen verwenden. Darüber hinaus können Sie die Art ändern, die Steuerelemente in Ihrer Anwendung Mauseingaben behandeln. Dieses Thema beschreibt diese Mausereignisse in Detail- und das Abrufen und Ändern von Systemeinstellungen für die Maus. Weitere Informationen zu den Daten bereitgestellt, mit der Maus Ereignisse und die Reihenfolge, in dem die Maus click-Ereignisse, ausgelöst werden, finden Sie unter [Mausereignisse in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  

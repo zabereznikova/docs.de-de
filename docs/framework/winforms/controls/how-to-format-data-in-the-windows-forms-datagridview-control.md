@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538860"
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms
 Die folgenden Prozeduren veranschaulichen einfache Formatierung von Zellenwerten durch die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> Eigenschaft ein <xref:System.Windows.Forms.DataGridView> Steuerelement und für bestimmte Spalten in einem Steuerelement. Informationen zum erweiterten Daten zu formatieren, finden Sie unter [wie: Anpassen der Datenformatierung im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  

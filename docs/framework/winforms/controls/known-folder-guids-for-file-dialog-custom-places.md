@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541563"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs von bekannten Ordnern für benutzerdefinierte Speicherorte im Dateidialogfeld
 Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bekannten Ordner beim Hinzufügen von Ordnern auf einer <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Auflistung. Bekannte Ordner-GUIDs wird die Groß-/ Kleinschreibung nicht und werden in der Datei KnownFolders.h definiert die [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  

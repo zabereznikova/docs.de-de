@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528995"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Binden von Daten an das DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Können Sie die Verbindung den Designer einen <xref:System.Windows.Forms.DataGridView> Steuerelement Datenquellen verschiedenster, z. B. Datenbanken, Geschäftsobjekte oder Webdienste. Wenn Sie das Steuerelement mit einer Datenquelle mithilfe des Designers binden, wird das Steuerelement automatisch an gebunden eine <xref:System.Windows.Forms.BindingSource> Komponente, die die Datenquelle darstellt. Darüber hinaus werden automatisch Spalten im Steuerelement erstellt, damit sie den Schemainformationen der Datenquelle entsprechen.  

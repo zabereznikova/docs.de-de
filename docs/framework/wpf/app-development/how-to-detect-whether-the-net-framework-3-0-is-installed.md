@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546490"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Gewusst wie: Erkennen einer .NET Framework 3.0-Installation
 Administratoren Microsoft .NET Framework-Anwendungen auf einem System bereitstellen können, müssen sie zunächst sicher, dass es sich bei .NET Framework-Laufzeit vorhanden ist. Dieses Thema enthält ein Skript in HTML/JavaScript geschrieben wurden, die Administratoren verwenden können, um zu bestimmen, ob .NET Framework auf einem System vorhanden ist.  

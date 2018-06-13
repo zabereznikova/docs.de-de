@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408072"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Hilfethemen zu Benutzeroberflächenautomatisierungs-Anbietern für verwalteten Code
 > [!NOTE]

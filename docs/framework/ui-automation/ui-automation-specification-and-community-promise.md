@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401153"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>Spezifikation für die Benutzeroberflächenautomatisierung und Zusicherung an die Community
 UI-Automatisierung ermöglicht programmgesteuerten Zugriff auf die meisten Elemente der Benutzeroberfläche (UI) auf dem Desktop, sodass Hilfstechnologieprodukte, z. B. die Bildschirmsprachausgabe, Informationen über die Benutzeroberfläche für Endbenutzer bereitstellen und die Benutzeroberfläche mit anderen Verfahren als Standardeingaben ändern .  

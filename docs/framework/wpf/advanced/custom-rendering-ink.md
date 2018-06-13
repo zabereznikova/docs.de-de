@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540432"
 ---
 # <a name="custom-rendering-ink"></a>Benutzerdefiniertes Rendern von Freihandeingaben
 Die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Eigenschaft eines Strichs ermöglicht Ihnen das Festlegen der Darstellung des Strichs, z. B. seine Größe, Farbe und Form ", aber möglicherweise gibt es Zeiten, die zum Anpassen der Darstellung hinausgehen sollen <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> zulassen. Sie können beispielsweise die Darstellung von Freihandeingaben so anpassen, dass sie wie ein Airbrush- oder Ölgemälde aussieht oder mit vielen weiteren Effekten gerendert wird. Windows Presentation Foundation (WPF) ermöglicht es Ihnen, benutzerdefinierte Ink durch Implementierung eines benutzerdefinierten Rendern <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> und <xref:System.Windows.Ink.Stroke> Objekt.  

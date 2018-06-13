@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538964"
 ---
 # <a name="getting-started-with-windows-forms"></a>Erste Schritte mit Windows Forms
 Mit Windows Forms können Sie leistungsfähige Windows-basierten Anwendungen erstellen. In den folgenden Themen beschrieben ausführliche nutzen die Leistungsfähigkeit von Windows Forms, um Daten anzuzeigen, Benutzereingaben zu behandeln und Bereitstellen Ihrer Anwendungen einfach und mit erweiterter Sicherheit.  

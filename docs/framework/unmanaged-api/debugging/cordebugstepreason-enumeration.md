@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404530"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason-Enumeration
 Gibt das Ergebnis eines einzelnen Schritts an.  

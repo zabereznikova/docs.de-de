@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392930"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Gewusst wie: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern
 Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivieren, deaktivieren und filtern.  

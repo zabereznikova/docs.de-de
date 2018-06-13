@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555801"
 ---
 # <a name="listview-how-to-topics"></a>Gewusst-wie-Themen zu ListView
 Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.ListView> Steuerelement um einen Satz von Datenelementen anzuzeigen.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366007"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Reflektionsanbieter (WCF Data Services)
 Zusätzlich zu Daten aus einem Datenmodell über das Entity Framework kann [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Daten verfügbar machen, die in einem entitätsbasierten Modell nicht streng definiert sind. Der Reflexionsanbieter macht Daten in Klassen verfügbar, die Typen zurückgeben, die die <xref:System.Linq.IQueryable%601>-Schnittstelle implementieren. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verwendet Reflexion, um ein Datenmodell für diese Klassen abzuleiten, und kann adressenbasierte Abfragen nach Ressourcen in LINQ (Language Integrated Query)-basierte Abfragen nach den verfügbar gemachten <xref:System.Linq.IQueryable%601>-Typen übersetzen.  

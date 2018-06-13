@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b772ae37baed44b90e4f5420e0f7724201a56abe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401810"
 ---
 # <a name="getfiledef-method"></a>GetFileDef-Methode
 Ruft ab, das tatsächliche FileDef-Token, die in den Metadaten (im Gegensatz zu den Token, das von ALink zugewiesen) verwendet.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541056"
 ---
 # <a name="creating-an-ink-input-control"></a>Erstellen eines Freihandeingabesteuerelements
 Sie können ein benutzerdefiniertes Steuerelement erstellen, die dynamisch und statisch Freihandeingabe gerendert. Freihandeingaben gerendert wird, wenn ein Benutzer ein Strichs zeichnet, verursacht die Freihandeingabe "Datenfluss" aus der Tablettstift, Freihandeingaben nach der er angezeigt wird hinzugefügt und an das Steuerelement entweder über den Tablettstift aus der Zwischenablage eingefügten oder aus einer Datei geladen werden. Um Freihandeingaben dynamisch zu rendern, das Steuerelement verwenden, muss ein <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Um Freihandeingaben statisch zu rendern, müssen Sie den Tablettstiftereignismethoden überschreiben (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, und <xref:System.Windows.UIElement.OnStylusUp%2A>) sammeln <xref:System.Windows.Input.StylusPoint> , Striche zu erstellen und Hinzufügen einer <xref:System.Windows.Controls.InkPresenter> (so wird die Freihandeingabe auf das Steuerelement gerendert wird).  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552726"
 ---
 # <a name="how-to-get-a-listboxitem"></a>Gewusst wie: Abrufen eines ListBoxItem
 Wenn Sie einen bestimmten abrufen müssen <xref:System.Windows.Controls.ListBoxItem> an einem bestimmten Index in einem <xref:System.Windows.Controls.ListBox>, können Sie eine <xref:System.Windows.Controls.ItemContainerGenerator>.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408745"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Assembly Registration-Tool)
 Die Metadaten in einer Assembly werden vom Assembly Registration-Tool gelesen, und die erforderlichen Einträge werden der Registrierung hinzugefügt. COM-Clients sind so in der Lage, .NET Framework-Klassen transparent zu erstellen. Sobald eine Klasse registriert ist, kann diese von jedem COM-Client wie eine COM-Klasse verwendet werden. Die Klasse wird beim Installieren der Assembly nur einmal registriert. COM kann keine Instanzen von Klassen in der Assembly erstellen, bevor diese nicht registriert wurden.  

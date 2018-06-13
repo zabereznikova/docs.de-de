@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529161"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Gewusst wie: Erstellen eines linearen Pfadfarbverlaufs
 Die <xref:System.Drawing.Drawing2D.PathGradientBrush> -Klasse ermöglicht es Ihnen die Möglichkeit, die Sie ausfüllen einer Form mit allmählich Ändern der Farben anpassen. Beispielsweise können Sie eine Farbe für den Mittelpunkt eines Pfads und eine andere Farbe für die Grenze eines Pfads angeben. Sie können auch separate Farben für jede mehrere Punkte entlang der Grenze eines Pfads angeben.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557107"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfläche
 Wie der Name andeutet, ist Windows Presentation Foundation (WPF) sich hervorragend für umfangreiche Erfahrungen Kunden zu stellen. In diesen exemplarischen Vorgehensweisen zeigen, wie das Aussehen und Verhalten einer Schaltfläche (einschließlich Animationen) anpassen. Diese Anpassung erfolgt über einen Stil und eine Vorlage, damit Sie diese benutzerdefinierte Schaltfläche leicht auf alle Schaltflächen in der Anwendung anwenden können. Die folgende Abbildung zeigt der benutzerdefinierten Schaltfläche, die Sie erstellen.  

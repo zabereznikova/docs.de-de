@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393701"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Gewusst wie: Konfigurieren einer App für die Unterstützung von .NET Framework 4 oder 4.5
 Alle Apps, die die Common Language Runtime (CLR) hosten, müssen die CLR starten oder *aktivieren*, um verwalteten Code auszuführen. Normalerweise wird eine .NET Framework-App in der CLR-Version ausgeführt, für die sie erstellt wurde, aber Sie können dieses Verhalten für Desktop-Apps ändern, indem Sie eine Anwendungskonfigurationsdatei (auch als app.config-Datei bezeichnet) verwenden. Das Standardaktivierungsverhalten für Windows Store-Apps oder Windows Phone-Apps kann jedoch nicht mit einer Anwendungskonfigurationsdatei geändert werden. In diesem Artikel wird beschrieben, wie Sie eine Desktop-App in einer anderen Version von .NET Framework ausführen, und wie auf die Version 4 oder 4.5 abgezielt werden kann.  

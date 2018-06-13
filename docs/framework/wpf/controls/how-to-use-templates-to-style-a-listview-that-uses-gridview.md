@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553831"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Gewusst wie: Formatieren eines ListView-Steuerelements mit einem GridView mithilfe von Vorlagen
 Dieses Beispiel zeigt, wie die <xref:System.Windows.DataTemplate> und <xref:System.Windows.Style> Objekte an, die Darstellung des eine <xref:System.Windows.Controls.ListView> -Steuerelements, verwendet eine <xref:System.Windows.Controls.GridView> Ansichtsmodus.  

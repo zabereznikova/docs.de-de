@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ff6ffdd733cf6e7b923d88d057d7cd230c8d8541
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407114"
 ---
 # <a name="icordebugappdomain2-interface1"></a>ICorDebugAppDomain2 Schnittstelle1
 Stellt Methoden zum Arbeiten mit Arrays, Zeigern, Funktionszeigern und Verweistypen. Diese Schnittstelle ist eine Erweiterung der ICorDebugAppDomain-Schnittstelle.  

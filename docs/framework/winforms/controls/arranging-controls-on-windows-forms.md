@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527312"
 ---
 # <a name="arranging-controls-on-windows-forms"></a>Anordnen von Steuerelementen in Windows Forms
 Durch die verschiedenen Möglichkeiten, Steuerelemente in Formularen zu platzieren und zu bearbeiten, können Sie Benutzeroberflächen erstellen, die gleichermaßen intuitiv und funktionell sind.  

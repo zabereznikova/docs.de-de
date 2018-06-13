@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541153"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms
 Möglicherweise möchten Sie häufig Tabellendaten anzeigen, die nicht aus einer Datenbank stammen. Beispielsweise empfiehlt es sich um den Inhalt des ein zweidimensionales Array von Zeichenfolgen anzuzeigen. Die <xref:System.Windows.Forms.DataGridView> -Klasse bietet eine einfache und hochgradig anpassungsfähiger Möglichkeit zum Anzeigen von Daten ohne Bindung an eine Datenquelle. In dieser exemplarischen Vorgehensweise wird gezeigt, wie zum Auffüllen einer <xref:System.Windows.Forms.DataGridView> steuern und verwalten Sie das Hinzufügen und Löschen von Zeilen im "ungebundenen" Modus. Standardmäßig kann Benutzer neue Zeilen hinzufügen. Zum Hinzufügen von Zeilen zu verhindern, legen Sie die <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> Eigenschaft ist `false`.  

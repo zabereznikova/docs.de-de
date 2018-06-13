@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541884"
 ---
 # <a name="binding-markup-extension"></a>Bindung als Markuperweiterung
 Orientiert sich einen Eigenschaftswert, um einem datengebundenen Wert und einen intermediate Expression-Objekt erstellen und zum Interpretieren der Datenkontext, der auf das Element und seine Bindung zur Laufzeit angewendet wird.  
