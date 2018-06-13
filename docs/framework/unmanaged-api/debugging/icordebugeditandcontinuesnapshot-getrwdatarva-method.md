@@ -1,14 +1,6 @@
 ---
 title: ICorDebugEditAndContinueSnapshot::GetRwDataRVA-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEditAndContinueSnapshot.GetRwDataRVA
 api_location:
@@ -23,20 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3e07b233-dd41-45ba-a4f9-662e4b006f1f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3028820d9b56243bf5da57756ff5640b7cca4acf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c2bc4dc831e87d72c6147e0f42ae3c4d1c79e113
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414163"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="53dff-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="53dff-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
-<span data-ttu-id="53dff-103">`GetRwDataRVA` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="53dff-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="53dff-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="53dff-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="76439-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="76439-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
+<span data-ttu-id="76439-103">`GetRwDataRVA` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="76439-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="76439-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="76439-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53dff-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="53dff-105">See Also</span></span>  
- [<span data-ttu-id="53dff-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="53dff-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="76439-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="76439-105">See Also</span></span>  
+ [<span data-ttu-id="76439-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="76439-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

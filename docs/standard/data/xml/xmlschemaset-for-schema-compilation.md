@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579079"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a><span data-ttu-id="0f892-102">"XmlSchemaSet" zur Kompilierung von Schemata</span><span class="sxs-lookup"><span data-stu-id="0f892-102">XmlSchemaSet for Schema Compilation</span></span>
 <span data-ttu-id="0f892-103">Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen Cache handelt, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.</span><span class="sxs-lookup"><span data-stu-id="0f892-103">Describes the <xref:System.Xml.Schema.XmlSchemaSet>, a cache where XML Schema definition language (XSD) schemas can be stored and validated.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33463767"
 ---
 # <a name="3402---signatureverificationsuccess"></a><span data-ttu-id="d8571-102">3402 - SignatureVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="d8571-102">3402 - SignatureVerificationSuccess</span></span>
 ## <a name="properties"></a><span data-ttu-id="d8571-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="d8571-103">Properties</span></span>  

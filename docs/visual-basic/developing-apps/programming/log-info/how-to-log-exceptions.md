@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588525"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a><span data-ttu-id="908b2-102">Gewusst wie: Protokollieren von Ausnahmen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="908b2-102">How to: Log Exceptions in Visual Basic</span></span>
 <span data-ttu-id="908b2-103">Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen zu Ausnahmen zu protokollieren, die in Ihrer Anwendung auftreten.</span><span class="sxs-lookup"><span data-stu-id="908b2-103">You can use the `My.Application.Log` and `My.Log` objects to log information about exceptions that occur in your application.</span></span> <span data-ttu-id="908b2-104">In diesen Beispielen wird gezeigt, wie Sie die `My.Application.Log.WriteException`-Methode verwenden können, um Ausnahmen zu protokollieren, die Sie explizit abfangen bzw. die unbehandelt sind.</span><span class="sxs-lookup"><span data-stu-id="908b2-104">These examples show how to use the `My.Application.Log.WriteException` method to log exceptions that you catch explicitly and exceptions that are unhandled.</span></span>  

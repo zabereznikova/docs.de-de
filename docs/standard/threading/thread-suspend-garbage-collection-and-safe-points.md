@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582160"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a><span data-ttu-id="6e8d4-102">Thread.Suspend, Garbage Collection und Sicherungspunkte</span><span class="sxs-lookup"><span data-stu-id="6e8d4-102">Thread.Suspend, Garbage Collection, and Safe Points</span></span>
 <span data-ttu-id="6e8d4-103">Beim Aufruf von <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> in einem Thread hält das System fest, dass eine Threadunterbrechung angefordert wurde, und ermöglicht vor dem Unterbrechen des Threads dessen Ausführung bis zu einem sicheren Punkt.</span><span class="sxs-lookup"><span data-stu-id="6e8d4-103">When you call <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> on a thread, the system notes that a thread suspension has been requested and allows the thread to execute until it has reached a safe point before actually suspending the thread.</span></span> <span data-ttu-id="6e8d4-104">Ein sicherer Punkt für einen Thread ist ein Punkt in seiner Ausführung, an dem eine Garbage Collection durchgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="6e8d4-104">A safe point for a thread is a point in its execution at which garbage collection can be performed.</span></span>  

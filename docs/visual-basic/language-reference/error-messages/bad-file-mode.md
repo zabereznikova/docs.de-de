@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587383"
 ---
 # <a name="bad-file-mode"></a><span data-ttu-id="b2b63-102">Fehlerhafter Dateimodus.</span><span class="sxs-lookup"><span data-stu-id="b2b63-102">Bad file mode</span></span>
 <span data-ttu-id="b2b63-103">-Anweisungen in Bearbeiten des Dateiinhalts müssen in den Modus geeignet sein, in denen die Datei geöffnet wurde.</span><span class="sxs-lookup"><span data-stu-id="b2b63-103">Statements used in manipulating file contents must be appropriate to the mode in which the file was opened.</span></span> <span data-ttu-id="b2b63-104">Mögliche Ursachen sind:</span><span class="sxs-lookup"><span data-stu-id="b2b63-104">Possible causes include:</span></span>  

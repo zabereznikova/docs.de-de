@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596836"
 ---
 # <a name="argument-39conversion39-is-not-valid"></a><span data-ttu-id="ac71e-102">Argument &#39;Konvertierung&#39; ist ungültig</span><span class="sxs-lookup"><span data-stu-id="ac71e-102">Argument &#39;Conversion&#39; is not valid</span></span>
 <span data-ttu-id="ac71e-103">Ein Wert für die `VbStrConv` -Enumeration ist ungültig, möglicherweise weil er kleiner als null ist.</span><span class="sxs-lookup"><span data-stu-id="ac71e-103">A value for the `VbStrConv` enumeration is not valid, possibly because it is less than zero.</span></span> <span data-ttu-id="ac71e-104">Enumerationswerte {0} müssen größer oder gleich null sein.</span><span class="sxs-lookup"><span data-stu-id="ac71e-104">Enumeration values must be greater than or equal to zero.</span></span>  

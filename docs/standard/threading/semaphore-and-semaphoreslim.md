@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591311"
 ---
 # <a name="semaphore-and-semaphoreslim"></a><span data-ttu-id="eb2c4-102">Semaphore und SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="eb2c4-102">Semaphore and SemaphoreSlim</span></span>
 <span data-ttu-id="eb2c4-103">Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt ein benanntes (systemweites) oder lokales Semaphor dar.</span><span class="sxs-lookup"><span data-stu-id="eb2c4-103">The <xref:System.Threading.Semaphore?displayProperty=nameWithType> class represents a named (systemwide) or local semaphore.</span></span> <span data-ttu-id="eb2c4-104">Dabei handelt es sich um einen einfachen Wrapper um das Win32-Semaphorobjekt.</span><span class="sxs-lookup"><span data-stu-id="eb2c4-104">It is a thin wrapper around the Win32 semaphore object.</span></span> <span data-ttu-id="eb2c4-105">Win32-Semaphoren sind zählende Semaphoren, die zum Steuern des Zugriffs auf einen Ressourcenpool verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="eb2c4-105">Win32 semaphores are counting semaphores, which can be used to control access to a pool of resources.</span></span>  

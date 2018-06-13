@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4414bab535b63f55a580e93cc6de9cb0dedc073c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415515"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a><span data-ttu-id="e96da-102">ICorDebugManagedCallback::EvalException-Methode</span><span class="sxs-lookup"><span data-stu-id="e96da-102">ICorDebugManagedCallback::EvalException Method</span></span>
 <span data-ttu-id="e96da-103">Benachrichtigt den Debugger, dass eine Auswertung mit einer nicht behandelten Ausnahme beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="e96da-103">Notifies the debugger that an evaluation has terminated with an unhandled exception.</span></span>  
