@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333384"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a><span data-ttu-id="e3208-102">Vorgehensweise: Auffangen von Parsingfehlern (C#)</span><span class="sxs-lookup"><span data-stu-id="e3208-102">How to: Catch Parsing Errors (C#)</span></span>
 <span data-ttu-id="e3208-103">In diesem Thema wird gezeigt, wie nicht wohlgeformter oder ungültiger XML-Code erkannt werden kann.</span><span class="sxs-lookup"><span data-stu-id="e3208-103">This topic shows how to detect badly formed or invalid XML.</span></span>  

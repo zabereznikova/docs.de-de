@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321492"
 ---
 # <a name="filtering-data-c"></a><span data-ttu-id="20adc-102">Filtern von Daten (C#)</span><span class="sxs-lookup"><span data-stu-id="20adc-102">Filtering Data (C#)</span></span>
 <span data-ttu-id="20adc-103">Mit Filtern wird die Einschränkung des Resultsets auf Elemente bezeichnet, die eine bestimmte Bedingung erfüllen.</span><span class="sxs-lookup"><span data-stu-id="20adc-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="20adc-104">Es ist auch bekannt als Auswahl.</span><span class="sxs-lookup"><span data-stu-id="20adc-104">It is also known as selection.</span></span>  

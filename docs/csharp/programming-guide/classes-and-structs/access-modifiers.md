@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314108"
 ---
 # <a name="access-modifiers-c-programming-guide"></a><span data-ttu-id="3a93e-102">Zugriffsmodifizierer (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="3a93e-102">Access Modifiers (C# Programming Guide)</span></span>
 <span data-ttu-id="3a93e-103">Alle Typen und Typmember haben eine Zugriffsebene, die steuert, ob sie von anderem Code in Ihrer Assembly oder anderen Assemblys verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="3a93e-103">All types and type members have an accessibility level, which controls whether they can be used from other code in your assembly or other assemblies.</span></span> <span data-ttu-id="3a93e-104">Sie können die folgenden Zugriffsmodifizierer verwenden, um den Zugriff auf einen Typ oder Member anzugeben, wenn Sie sie deklarieren:</span><span class="sxs-lookup"><span data-stu-id="3a93e-104">You can use the following access modifiers to specify the accessibility of a type or member when you declare it:</span></span>  

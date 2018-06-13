@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329880"
 ---
 # <a name="preserving-white-space-while-serializing"></a><span data-ttu-id="ba51b-102">Beibehalten von Leerzeichen beim Serialisieren</span><span class="sxs-lookup"><span data-stu-id="ba51b-102">Preserving White Space While Serializing</span></span>
 <span data-ttu-id="ba51b-103">In diesem Thema wird beschrieben, wie Sie das Leerraumverhalten beim Serialisieren von XML-Strukturen steuern können.</span><span class="sxs-lookup"><span data-stu-id="ba51b-103">This topic describes how to control white space when serializing an XML tree.</span></span>  

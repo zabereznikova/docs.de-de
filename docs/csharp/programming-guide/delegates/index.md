@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335279"
 ---
 # <a name="delegates-c-programming-guide"></a><span data-ttu-id="b6116-102">Delegaten (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="b6116-102">Delegates (C# Programming Guide)</span></span>
 <span data-ttu-id="b6116-103">Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp darstellt.</span><span class="sxs-lookup"><span data-stu-id="b6116-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) is a type that represents references to methods with a particular parameter list and return type.</span></span> <span data-ttu-id="b6116-104">Wenn Sie einen Delegaten instanziieren, können Sie jeder Methode seine Instanz mit einer kompatiblen Signatur und dem Rückgabetyp zuordnen.</span><span class="sxs-lookup"><span data-stu-id="b6116-104">When you instantiate a delegate, you can associate its instance with any method with a compatible signature and return type.</span></span> <span data-ttu-id="b6116-105">Sie können die Methode über die Delegatinstanz aufrufen.</span><span class="sxs-lookup"><span data-stu-id="b6116-105">You can invoke (or call) the method through the delegate instance.</span></span>  
