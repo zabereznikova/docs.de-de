@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395257"
 ---
 # <a name="configuring-caching-in-network-applications"></a>Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen
 Um die Zwischenspeicherung zu konfigurieren, müssen Sie eine Cacherichtlinie in der Anwendung oder <xref:System.Net.WebRequest>-Ebene angeben. Die folgenden Themen enthalten Codebeispiele, die die Konfiguration von Anwendungen und Anforderungen zur Verwendung der Zwischenspeicherung veranschaulichen.  

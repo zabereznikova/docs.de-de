@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362184"
 ---
 # <a name="data-types-and-functions"></a>Datentypen und Funktionen
 In den in der folgenden Tabelle aufgeführten Themen wird LINQ to SQL-Unterstützung für Member, Konstrukte und Umwandlungen der Common Language Runtime (CLR) beschrieben. Unterstützte Member und Konstrukte stehen zur Verwendung in LINQ to SQL-Abfragen zur Verfügung.  

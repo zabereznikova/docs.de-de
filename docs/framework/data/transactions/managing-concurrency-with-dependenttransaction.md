@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363203"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Verwalten von Parallelität mit DependentTransaction
 Das <xref:System.Transactions.Transaction>-Objekt wird mit der <xref:System.Transactions.Transaction.DependentClone%2A>-Methode erstellt. Sein einziger Zweck besteht darin, sicherzustellen, dass die Transaktion keinen Commit durchführen kann, während andere Codeteile (beispielsweise ein Arbeitsthread) noch Aktionen für die Transaktion ausführen. Wenn die Aktionen innerhalb der geklonten Transaktion abgeschlossen und für den Commit bereit sind, kann es den Ersteller der Transaktion mithilfe der <xref:System.Transactions.DependentTransaction.Complete%2A>-Methode informieren. Auf diese Weise können Sie Konsistenz und Richtigkeit der Daten bewahren.  

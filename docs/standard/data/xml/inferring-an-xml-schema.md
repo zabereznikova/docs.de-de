@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568783"
 ---
 # <a name="inferring-an-xml-schema"></a>Herleiten eines XML-Schemas
 Beschreibt die Verwendung der SOM-Klasse (Schema Object Model) <xref:System.Xml.Schema.XmlSchemaInference> zum Herleiten eines XSD-Schemas (XML Schema Definition Language) aus der Struktur eines XML-Dokuments.  

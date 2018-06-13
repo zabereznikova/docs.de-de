@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536240"
 ---
 # <a name="property-changed-events"></a>Durch geänderte Eigenschaften ausgelöste Ereignisse
 Wenn Sie möchten, dass das Steuerelement zum Senden von Benachrichtigungen, wenn sich eine Eigenschaft mit dem Namen *PropertyName* ändert, definieren Sie ein Ereignis namens *PropertyName* `Changed` und eine Methode namens `On` *PropertyName* `Changed` , der das Ereignis auslöst. Die Benennungskonvention in Windows Forms wird das Wort anzufügende *Changed* auf den Namen der Eigenschaft. Ist der Delegattyp zugeordneten Ereignissen durch geänderte Eigenschaften ausgelöste Ereignisse <xref:System.EventHandler>, und der Ereignis-Datentyp ist <xref:System.EventArgs>. Die Basisklasse <xref:System.Windows.Forms.Control> definiert viele durch geänderte Eigenschaften ausgelöste Ereignisse, z. B. <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>, und andere. Hintergrundinformationen zu Ereignissen finden Sie unter [Ereignisse](../../../../docs/standard/events/index.md) und [Ereignisse in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392956"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Ablaufverfolgung und Instrumentieren von Anwendungen
 Mithilfe der Ablaufverfolgung kann die Ausführung einer Anwendung überwacht werden. Beim Entwickeln können Sie eine .NET Framework-Anwendung mit einer Ablaufverfolgungs- und Debugginginstrumentation versehen, die sowohl beim Entwickeln als auch nach der Bereitstellung der Anwendung eingesetzt werden kann. Mit den Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> können Sie Informationen zu Fehlern und zur Anwendungsausführung in Protokollen, Textdateien oder auf anderen Medien für eine spätere Analyse aufzeichnen.   

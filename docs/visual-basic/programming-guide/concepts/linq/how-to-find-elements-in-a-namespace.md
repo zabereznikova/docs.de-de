@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641026"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (Visual Basic)
 XPath-Ausdrücke können nach Knoten in einem bestimmten Namespace suchen. Zum Angeben der Namespaces werden Namespacepräfixe verwendet. Wenn Sie einen XPath-Ausdruck, der Namespacepräfixe enthält, analysieren möchten, müssen Sie den XPath-Methoden ein Objekt übergeben, das <xref:System.Xml.IXmlNamespaceResolver> implementiert. In diesem Beispiel wird <xref:System.Xml.XmlNamespaceManager> verwendet.  

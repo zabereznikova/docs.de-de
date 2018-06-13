@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758866"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Gewusst wie: Erstellen eines LINQ to DataSet-Projekts in Visual Studio
 Die unterschiedlichen Arten von [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Projekten benötigen bestimmte importierte Namespaces (Visual Basic) oder `using`-Direktiven (C#) und -Verweise. Die Mindestanforderung ist ein Verweis auf <legacyBold>System.Core.dll</legacyBold> und eine `using`-Direktive für <xref:System.Linq>. Standardmäßig werden diese angegeben, wenn Sie ein neues [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)]-Projekt erstellen. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] erfordert außerdem einen Verweis auf "System.Data.dll" und "System.Data.DataSetExtensions.dll" sowie eine `Imports`-Direktive (Visual Basic) oder eine `using`-Direktive (C#).  

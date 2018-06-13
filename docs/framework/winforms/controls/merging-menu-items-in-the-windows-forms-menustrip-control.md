@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539788"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Zusammenführen von Menüelementen im MenuStrip-Steuerelement von Windows Forms
 Wenn Sie eine Anwendung Multiple Document Interface (MDI) verfügen, können Sie Menüelemente oder ganze Menüs des untergeordneten Formulars in den Menüs des übergeordneten Formulars zusammenführen.  

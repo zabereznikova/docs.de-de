@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641959"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-are-not-applicable-to-the-locale-specified"></a>'VbStrConv.Wide' und 'VbStrConv.Narrow' können auf das angegebene Gebietsschema nicht angewendet werden.
 Die Anwendung versucht, das `VbStrConv` -Enumerationsmember `Wide` oder `Narrow`zu verwenden, die beide nicht auf das angegebene Gebietsschema angewendet werden können.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759269"
 ---
 # <a name="redirecting-assembly-versions"></a>Umleiten von Assemblyversionen
 Sie können Bindungsverweise zu .NET Framework-Assemblys oder Assemblys, die von Drittanbietern oder aus Ihrer eigenen App stammen, zum Zeitpunkt der Kompilierung umleiten. Es gibt mehrere Möglichkeiten, eine App so umzuleiten, dass sie eine andere Version einer Assembly verwendet: per Herausgeberrichtlinie, über eine App-Konfigurationsdatei oder mithilfe der Computerkonfigurationsdatei. In diesem Artikel wird erklärt, wie Assemblybindung in .NET Framework funktioniert und wie diese konfiguriert werden kann.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392943"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode-MDA
 Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das Verhalten der <xref:System.Object>-Klasse, um einen Modulo-Vorgang auf dem Hashcode auszuführen, der von der <xref:System.Object.GetHashCode%2A>-Methode zurückgegeben wurde. Der Standard-Modulo dieses MDA beträgt 1, wodurch <xref:System.Object.GetHashCode%2A> für alle Objekte 0 zurückgibt.  

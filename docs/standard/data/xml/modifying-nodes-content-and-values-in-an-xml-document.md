@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571435"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Ändern von Knoten, Inhalten und Werten in einem XML-Dokument
 Es gibt viele Möglichkeiten, die Knoten und den Inhalt eines Dokuments zu ändern. Sie haben folgende Möglichkeiten:  

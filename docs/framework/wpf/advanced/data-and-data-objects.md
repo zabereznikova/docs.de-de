@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540318"
 ---
 # <a name="data-and-data-objects"></a>Daten und Datenobjekte
 Daten, die als Teil eines Drag-and-Drop-Vorgangs übertragen werden, werden in einem Datenobjekt gespeichert.  Im Prinzip besteht aus einem Datenobjekt eine oder mehrere der folgenden Paare:  

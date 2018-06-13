@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759321"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  

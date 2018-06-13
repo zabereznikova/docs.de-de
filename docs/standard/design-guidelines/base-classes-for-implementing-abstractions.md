@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571507"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Basisklassen zum Implementieren von Abstraktionen
 Streng genommen wird eine Klasse eine Basisklasse aus, wenn die einer anderen Klasse abgeleitet ist. In diesem Abschnitt ist eine Basisklasse jedoch eine Klasse, die hauptsächlich für die bieten einer allgemeine Abstraktion oder für andere Klassen einige wiederverwenden Standardimplementierung über Vererbung konzipiert. Basisklassen befinden sich in der Regel in der Mitte Vererbungshierarchien zwischen eine Abstraktion der Stamm einer Hierarchie und mehrere benutzerdefinierte Implementierungen unten.  

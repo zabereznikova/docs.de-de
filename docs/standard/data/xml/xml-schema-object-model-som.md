@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570124"
 ---
 # <a name="xml-schema-object-model-som"></a>XML-Schemaobjektmodell (SOM)
 Ein XML-Schema ist ein leistungsstarkes und komplexes Tool zum Erstellen und Validieren von Strukturen in XML-kompatiblen Dokumenten. Wie bei der Datenmodellierung in einer relationalen Datenbank kann mithilfe eines Schemas die Struktur von XML-Dokumenten definiert werden. Dies erfolgt durch Festlegen der Elemente, die in Dokumenten verwendet werden dürfen, einschließlich der Struktur und der Typen, denen diese Elemente entsprechen müssen, um für dieses spezielle Schema gültig zu sein.  
