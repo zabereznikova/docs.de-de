@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598955"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-a-numeric-value"></a><span data-ttu-id="f51ad-102">Argument &#39; &lt;Argumentname&gt; &#39; kann nicht in einen numerischen Wert konvertiert werden</span><span class="sxs-lookup"><span data-stu-id="f51ad-102">Argument &#39;&lt;argumentname&gt;&#39; cannot be converted to a numeric value</span></span>
 <span data-ttu-id="f51ad-103">Bei einer Konvertierung wurde versucht, eine Variable, z. B. eine Zeichenfolge, in einen numerischen Wert zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="f51ad-103">A conversion attempted to convert a variable, such as a string, to a numeric value.</span></span>  

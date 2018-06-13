@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596745"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmembernamegt39-for-interface-39ltinterfacenamegt39"></a><span data-ttu-id="e95c1-102">&lt;Typ1&gt;&#39;&lt;Typename&gt; &#39; implementieren müssen &#39; &lt;Membername&gt; &#39; für Schnittstelle &#39; &lt;Schnittstellenname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="e95c1-102">&lt;type1&gt;&#39;&lt;typename&gt;&#39; must implement &#39;&lt;membername&gt;&#39; for interface &#39;&lt;interfacename&gt;&#39;</span></span>
 <span data-ttu-id="e95c1-103">"\<Typename >" implementieren müssen "\<Membername >' für die Schnittstelle"\<Schnittstellenname >'.</span><span class="sxs-lookup"><span data-stu-id="e95c1-103">'\<typename>' must implement '\<membername>' for interface '\<interfacename>'.</span></span> <span data-ttu-id="e95c1-104">Implementieren die Eigenschaft müssen übereinstimmen "ReadOnly" / "WriteOnly" Spezifizierer.</span><span class="sxs-lookup"><span data-stu-id="e95c1-104">Implementing property must have matching 'ReadOnly'/'WriteOnly' specifiers.</span></span>  

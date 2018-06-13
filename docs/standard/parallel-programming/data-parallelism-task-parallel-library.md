@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584656"
 ---
 # <a name="data-parallelism-task-parallel-library"></a><span data-ttu-id="0d85c-102">Datenparallelität (Task Parallel Library)</span><span class="sxs-lookup"><span data-stu-id="0d85c-102">Data Parallelism (Task Parallel Library)</span></span>
 <span data-ttu-id="0d85c-103">*Datenparallelismus* verweist auf Szenarios, in denen der gleiche Vorgang gleichzeitig (d.h. parallel) für Elemente in einer Quellauflistung oder einem Array ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0d85c-103">*Data parallelism* refers to scenarios in which the same operation is performed concurrently (that is, in parallel) on elements in a source collection or array.</span></span> <span data-ttu-id="0d85c-104">In parallelen Datenvorgängen wird die Quellauflistung partitioniert, sodass mehrere Threads gleichzeitig auf verschiedene Segmente angewendet werden können.</span><span class="sxs-lookup"><span data-stu-id="0d85c-104">In data parallel operations, the source collection is partitioned so that multiple threads can operate on different segments concurrently.</span></span>  

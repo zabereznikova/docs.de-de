@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33463385"
 ---
 # <a name="3346---connectionreadersendfault"></a><span data-ttu-id="9f225-102">3346 - ConnectionReaderSendFault</span><span class="sxs-lookup"><span data-stu-id="9f225-102">3346 - ConnectionReaderSendFault</span></span>
 ## <a name="properties"></a><span data-ttu-id="9f225-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="9f225-103">Properties</span></span>  
