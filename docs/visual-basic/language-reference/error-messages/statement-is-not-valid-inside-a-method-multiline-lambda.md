@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598854"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a><span data-ttu-id="cbcc2-102">Die Anweisung ist innerhalb einer Methode oder eines mehrzeiligen Lambda-Ausdrucks nicht gültig.</span><span class="sxs-lookup"><span data-stu-id="cbcc2-102">Statement is not valid inside a method/multiline lambda</span></span>
 <span data-ttu-id="cbcc2-103">Die Anweisung gilt nicht innerhalb einer `Sub`, `Function`, Eigenschaft `Get`, oder die Eigenschaft `Set` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="cbcc2-103">The statement is not valid within a `Sub`, `Function`, property `Get`, or property `Set` procedure.</span></span> <span data-ttu-id="cbcc2-104">Einige Anweisungen können auf das Modul oder Klassenebene platziert werden.</span><span class="sxs-lookup"><span data-stu-id="cbcc2-104">Some statements can be placed at the module or class level.</span></span> <span data-ttu-id="cbcc2-105">Andere, z. B. `Option Strict`, werden auf Namespaceebene und vor allen anderen Deklarationen stehen müssen.</span><span class="sxs-lookup"><span data-stu-id="cbcc2-105">Others, such as `Option Strict`, must be at namespace level and precede all other declarations.</span></span>  
