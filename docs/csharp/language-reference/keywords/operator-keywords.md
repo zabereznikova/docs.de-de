@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273314"
 ---
 # <a name="operator-keywords-c-reference"></a>Operatorschlüsselwörter (C#-Referenz)
 Werden verwendet, um verschiedene Aktionen auszuführen wie das Erstellen von Objekten, das Überprüfen des Laufzeittyps eines Objekts, das Abrufen der Größe eines Typs usw. In diesem Abschnitt werden die folgenden Schlüsselwörter beschrieben:  

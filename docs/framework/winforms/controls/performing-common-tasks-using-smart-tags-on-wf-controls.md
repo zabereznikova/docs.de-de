@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537943"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen
 Wie Sie Formulare und Steuerelemente für Windows Forms-Anwendung erstellen, sind viele Aufgaben, die wiederholt ausgeführt werden. Dies sind einige der häufig ausgeführten Aufgaben, die auftreten können:  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218175"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C#-Compileroptionen)
 Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../../../csharp/language-reference/keywords/public.md) Typinformationen in der angegebenen Datei in das aktuelle Projekt zu importieren, sodass die Verweismetadaten aus den angegebenen Assemblydateien aktiviert werden.  

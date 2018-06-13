@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219179"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C#-Compileroptionen)
 Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressourcendateien wird nicht in die Ausgabedatei eingefügt. Dies ist ein Unterschied zur Option [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), die eine Ressourcendatei in die Ausgabedatei einbettet.  

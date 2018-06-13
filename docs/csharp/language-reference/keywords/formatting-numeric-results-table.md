@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216911"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabelle zur Formatierung numerischer Ergebnisse (C#-Referenz)
 Sie können numerische Ergebnisse mithilfe der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode, durch die Methoden <xref:System.Console.Write%2A?displayProperty=nameWithType> und <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, die `String.Format` aufrufen, oder durch die [Zeichenfolgeninterpolation](../tokens/interpolated.md) formatieren. Das Format wird mithilfe von Formatzeichenfolgen angegeben. Die folgende Tabelle enthält die unterstützen Standardformatzeichenfolgen. Die Formatzeichenfolge nimmt die folgende Form an: `Axx`, wobei `A` der Formatbezeichner und `xx` die Genauigkeitsangabe ist. Der Formatbezeichner steuert den Formatierungstyp, der auf den numerischen Wert angewendet wird. Die Genauigkeitsangabe steuert die Anzahl signifikanter Stellen oder Dezimalstellen der formatierten Ausgabe. Der Wert der Genauigkeitsangabe liegt im Bereich 0–99.  

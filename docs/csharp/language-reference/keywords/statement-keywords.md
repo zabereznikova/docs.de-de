@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269660"
 ---
 # <a name="statement-keywords-c-reference"></a>Anweisungsschlüsselwörter (C#-Referenz)
 Anweisungen sind Instruktionen des Programms. Sie werden nacheinander ausgeführt, mit Ausnahme der Anweisungen, auf die in der folgenden Tabelle verwiesen wird. In der folgenden Tabelle sind die C#-Anweisungsschlüsselwörter aufgeführt. Weitere Informationen zu Anweisungen, die durch kein Schlüsselwort ausgedrückt werden, finden Sie unter [Anweisungen](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  

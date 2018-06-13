@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218019"
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio 2017
 

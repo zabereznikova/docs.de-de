@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526063"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator-Steuerelement (Windows Forms)
 Das `BindingNavigator`-Steuerelement dient als Benutzeroberfläche zum Navigieren und Bearbeiten von Steuerelementen, die an Daten gebunden sind. Mithilfe des `BindingNavigator`-Steuerelements können Benutzer durch Daten in einem Windows Form navigieren und diese bearbeiten.  
