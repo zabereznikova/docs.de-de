@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597685"
 ---
 # <a name="else-statement-visual-basic"></a><span data-ttu-id="a343b-102">Else-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a343b-102">Else Statement (Visual Basic)</span></span>
 <span data-ttu-id="a343b-103">Stellt eine Gruppe von Anweisungen ausgeführt oder kompiliert, wenn keine bedingten Gruppe von Anweisungen ausgeführt oder kompiliert wurde.</span><span class="sxs-lookup"><span data-stu-id="a343b-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  

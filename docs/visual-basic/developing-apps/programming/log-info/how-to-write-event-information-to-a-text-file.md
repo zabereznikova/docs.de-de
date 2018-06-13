@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589057"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a><span data-ttu-id="4a193-102">Gewusst wie: Schreiben von Ereignisinformationen in eine Textdatei (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4a193-102">How to: Write Event Information to a Text File (Visual Basic)</span></span>
 <span data-ttu-id="4a193-103">Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen über Ereignisse zu protokollieren, die in Ihrer Anwendung auftreten.</span><span class="sxs-lookup"><span data-stu-id="4a193-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="4a193-104">Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry`-Methode zum Protokollieren von Nachverfolgungsinformationen, um eine Datei zu protokollieren.</span><span class="sxs-lookup"><span data-stu-id="4a193-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.</span></span>  

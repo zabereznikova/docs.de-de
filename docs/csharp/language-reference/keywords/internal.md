@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172671"
 ---
 # <a name="internal-c-reference"></a><span data-ttu-id="7c636-102">internal (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="7c636-102">internal (C# Reference)</span></span>
 <span data-ttu-id="7c636-103">Das Schlüsselwort `internal` ist ein [Zugriffsmodifizierer](../../../csharp/language-reference/keywords/access-modifiers.md) für Typen und Typmember.</span><span class="sxs-lookup"><span data-stu-id="7c636-103">The `internal` keyword is an [access modifier](../../../csharp/language-reference/keywords/access-modifiers.md) for types and type members.</span></span> 

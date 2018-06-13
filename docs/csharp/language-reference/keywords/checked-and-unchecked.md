@@ -14,6 +14,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34234372"
 ---
 # <a name="checked-and-unchecked-c-reference"></a><span data-ttu-id="47273-102">Checked und Unchecked (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="47273-102">Checked and Unchecked (C# Reference)</span></span>
 <span data-ttu-id="47273-103">C#-Anweisungen könnten entweder in einem geprüften oder nicht geprüften Kontext (checked oder unchecked) ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="47273-103">C# statements can execute in either checked or unchecked context.</span></span> <span data-ttu-id="47273-104">In einem überprüften Kontext löst der arithmetische Überlauf eine Ausnahme aus.</span><span class="sxs-lookup"><span data-stu-id="47273-104">In a checked context, arithmetic overflow raises an exception.</span></span> <span data-ttu-id="47273-105">In einem nicht aktivierten Kontext wird der arithmetische Überlauf ignoriert und das Ergebnis gekürzt, indem alle höherwertigen Bits verworfen werden, die nicht in den Zieltyp passen.</span><span class="sxs-lookup"><span data-stu-id="47273-105">In an unchecked context, arithmetic overflow is ignored and the result is truncated by discarding any high-order bits that don't fit in the destination type.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572722"
 ---
 # <a name="how-to-raise-and-consume-events"></a><span data-ttu-id="2a99a-102">Gewusst wie: Auslösen und Behandeln von Ereignissen</span><span class="sxs-lookup"><span data-stu-id="2a99a-102">How to: Raise and Consume Events</span></span>
 <span data-ttu-id="2a99a-103">Mithilfe der Beispiele in diesem Thema wird veranschaulicht, wie mit Ereignissen gearbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="2a99a-103">The examples in this topic show how to work with events.</span></span> <span data-ttu-id="2a99a-104">Sie schließen Beispiele für den <xref:System.EventHandler>-Delegaten, den <xref:System.EventHandler%601>-Delegaten und einen benutzerdefinierten Delegaten ein, um Ereignisse mit und ohne Daten zu veranschaulichen.</span><span class="sxs-lookup"><span data-stu-id="2a99a-104">They include examples of the <xref:System.EventHandler> delegate, the <xref:System.EventHandler%601> delegate, and a custom delegate, to illustrate events with and without data.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171862"
 ---
 # <a name="private-c-reference"></a><span data-ttu-id="46340-102">private (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="46340-102">private (C# Reference)</span></span>
 <span data-ttu-id="46340-103">Das `private`-Schlüsselwort ist ein Zugriffsmodifizierer für Member.</span><span class="sxs-lookup"><span data-stu-id="46340-103">The `private` keyword is a member access modifier.</span></span> 

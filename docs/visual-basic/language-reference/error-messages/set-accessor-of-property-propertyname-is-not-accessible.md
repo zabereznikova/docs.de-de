@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595851"
 ---
 # <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a><span data-ttu-id="ebb68-102">&#39;Legen Sie&#39; Accessor der Eigenschaft &#39; &lt;Propertyname&gt; &#39; kann nicht zugegriffen werden</span><span class="sxs-lookup"><span data-stu-id="ebb68-102">&#39;Set&#39; accessor of property &#39;&lt;propertyname&gt;&#39; is not accessible</span></span>
 <span data-ttu-id="ebb68-103">Eine Anweisung versucht, den Wert einer Eigenschaft zu speichern, wenn sie keinen Zugriff auf der Eigenschaft hat `Set` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="ebb68-103">A statement attempts to store the value of a property when it does not have access to the property's `Set` procedure.</span></span>  

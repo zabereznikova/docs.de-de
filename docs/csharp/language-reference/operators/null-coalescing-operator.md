@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458100"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="65248-103">??</span><span class="sxs-lookup"><span data-stu-id="65248-103">??</span></span> <span data-ttu-id="65248-104">Operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="65248-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="65248-105">Der Operator `??` wird NULL-Sammeloperator genannt.</span><span class="sxs-lookup"><span data-stu-id="65248-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="65248-106">Der linke Operand wird zurückgegeben, falls dieser nicht NULL ist. Andernfalls wird der rechte Operand zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="65248-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  

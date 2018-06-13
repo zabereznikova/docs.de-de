@@ -1,27 +1,16 @@
 ---
 title: 'Dienst: Calls Outstanding'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 88eb4019-b99b-491d-bfd6-15129bb32821
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83986f52f629d68014ee27ae27d50614894435c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe28f67e391d603d6ca48e7ba947f71c17f0017
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472358"
 ---
-# <a name="service-calls-outstanding"></a><span data-ttu-id="a1829-102">Dienst: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="a1829-102">Service: Calls Outstanding</span></span>
-<span data-ttu-id="a1829-103">Indikatorname: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="a1829-103">Counter Name: Calls Outstanding</span></span>  
+# <a name="service-calls-outstanding"></a><span data-ttu-id="69851-102">Dienst: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="69851-102">Service: Calls Outstanding</span></span>
+<span data-ttu-id="69851-103">Indikatorname: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="69851-103">Counter Name: Calls Outstanding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a1829-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a1829-104">Description</span></span>  
- <span data-ttu-id="a1829-105">Anzahl von aktuell verarbeiteten Aufrufen dieses Diensts.</span><span class="sxs-lookup"><span data-stu-id="a1829-105">Number of in-progress calls to this service.</span></span>
+## <a name="description"></a><span data-ttu-id="69851-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="69851-104">Description</span></span>  
+ <span data-ttu-id="69851-105">Anzahl von aktuell verarbeiteten Aufrufen dieses Diensts.</span><span class="sxs-lookup"><span data-stu-id="69851-105">Number of in-progress calls to this service.</span></span>

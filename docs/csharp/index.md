@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472373"
 ---
 # <a name="c-guide"></a><span data-ttu-id="c2190-103">Leitfaden für C#</span><span class="sxs-lookup"><span data-stu-id="c2190-103">C# Guide</span></span>
 

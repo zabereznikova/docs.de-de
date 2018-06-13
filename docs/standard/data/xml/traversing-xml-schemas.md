@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575361"
 ---
 # <a name="traversing-xml-schemas"></a><span data-ttu-id="f15a8-102">Durchlaufen von XML-Schemata</span><span class="sxs-lookup"><span data-stu-id="f15a8-102">Traversing XML Schemas</span></span>
 <span data-ttu-id="f15a8-103">Das Durchlaufen eines XML-Schemas mithilfe einer SOM-API (Schema Object Model) ermöglicht den Zugriff auf die im SOM gespeicherten Elemente, Attribute und Typen.</span><span class="sxs-lookup"><span data-stu-id="f15a8-103">Traversing an XML schema using the Schema Object Model (SOM) API provides access to the elements, attributes, and types stored in the SOM.</span></span> <span data-ttu-id="f15a8-104">Der erste Schritt beim Bearbeiten eines XML-Schemas mithilfe der SOM-API ist das Durchlaufen des im SOM geladenen XML-Schemas.</span><span class="sxs-lookup"><span data-stu-id="f15a8-104">Traversing an XML schema loaded into the SOM is also the first step in editing an XML schema using the SOM API.</span></span>  

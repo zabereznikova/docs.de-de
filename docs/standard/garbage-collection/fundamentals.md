@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579534"
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="ccaeb-102">Grundlagen der Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="ccaeb-102">Fundamentals of Garbage Collection</span></span>
 <a name="top"></a> <span data-ttu-id="ccaeb-103">In der Common Language Runtime (CLR) dient der Garbage Collector als automatischer Speicher-Manager.</span><span class="sxs-lookup"><span data-stu-id="ccaeb-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="ccaeb-104">Der Garbage Collector bietet folgende Vorteile:</span><span class="sxs-lookup"><span data-stu-id="ccaeb-104">It provides the following benefits:</span></span>  

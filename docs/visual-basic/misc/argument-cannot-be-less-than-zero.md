@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599882"
 ---
 # <a name="argument-cannot-be-less-than-zero"></a><span data-ttu-id="8189e-102">Ein Argument darf nicht kleiner als 0 (null) sein.</span><span class="sxs-lookup"><span data-stu-id="8189e-102">Argument cannot be less than zero</span></span>
 <span data-ttu-id="8189e-103">Es wurde ein Wert angegeben, der kleiner als 0 (null) ist, doch das Argument darf nicht kleiner als 0 (null) sein.</span><span class="sxs-lookup"><span data-stu-id="8189e-103">A value that is less than zero has been supplied, but the argument cannot be less than zero.</span></span>  

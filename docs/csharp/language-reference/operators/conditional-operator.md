@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457215"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="04b00-102">Operator ?: (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="04b00-102">?: Operator (C# Reference)</span></span>
 <span data-ttu-id="04b00-103">Der bedingte Operator (`?:`), gemeinhin als ternärer bedingter Operator bekannt, gibt abhängig vom Wert eines booleschen Ausdrucks einen von zwei Werten zurück.</span><span class="sxs-lookup"><span data-stu-id="04b00-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="04b00-104">Nachfolgend ist die Syntax für den bedingten Operator aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="04b00-104">Following is the syntax for the conditional operator.</span></span>  

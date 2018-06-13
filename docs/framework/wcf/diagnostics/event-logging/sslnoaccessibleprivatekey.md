@@ -1,35 +1,24 @@
 ---
 title: SslNoAccessiblePrivateKey
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90cc793e-7ac8-45b2-81b8-2976e2485734
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02b9e1f1648afc8e017df3ce454a6e1a47a04703
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2552c185c7559664a01bcb31906ddccb2c869caa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472270"
 ---
-# <a name="sslnoaccessibleprivatekey"></a><span data-ttu-id="d0418-102">SslNoAccessiblePrivateKey</span><span class="sxs-lookup"><span data-stu-id="d0418-102">SslNoAccessiblePrivateKey</span></span>
-<span data-ttu-id="d0418-103">ID: 155</span><span class="sxs-lookup"><span data-stu-id="d0418-103">Id: 155</span></span>  
+# <a name="sslnoaccessibleprivatekey"></a><span data-ttu-id="1de84-102">SslNoAccessiblePrivateKey</span><span class="sxs-lookup"><span data-stu-id="1de84-102">SslNoAccessiblePrivateKey</span></span>
+<span data-ttu-id="1de84-103">ID: 155</span><span class="sxs-lookup"><span data-stu-id="1de84-103">Id: 155</span></span>  
   
- <span data-ttu-id="d0418-104">Schweregrad: Fehler</span><span class="sxs-lookup"><span data-stu-id="d0418-104">Severity: Error</span></span>  
+ <span data-ttu-id="1de84-104">Schweregrad: Fehler</span><span class="sxs-lookup"><span data-stu-id="1de84-104">Severity: Error</span></span>  
   
- <span data-ttu-id="d0418-105">Kategorie: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="d0418-105">Category: TransactionBridge</span></span>  
+ <span data-ttu-id="1de84-105">Kategorie: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="1de84-105">Category: TransactionBridge</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d0418-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d0418-106">Description</span></span>  
- <span data-ttu-id="d0418-107">Dieses Ereignis zeigt an, dass ein Identitätszertifikat mit dem bestimmten Betreffnamen und Fingerabdruck keinen zugreifbaren privaten Schlüssel besitzt.</span><span class="sxs-lookup"><span data-stu-id="d0418-107">This event indicates that an identity certificate with the specific subject name and thumbprint does not have an accessible private key.</span></span> <span data-ttu-id="d0418-108">Das Ereignis führt den Prozessnamen und die Prozess-ID auf.</span><span class="sxs-lookup"><span data-stu-id="d0418-108">The event lists the process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="1de84-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1de84-106">Description</span></span>  
+ <span data-ttu-id="1de84-107">Dieses Ereignis zeigt an, dass ein Identitätszertifikat mit dem bestimmten Betreffnamen und Fingerabdruck keinen zugreifbaren privaten Schlüssel besitzt.</span><span class="sxs-lookup"><span data-stu-id="1de84-107">This event indicates that an identity certificate with the specific subject name and thumbprint does not have an accessible private key.</span></span> <span data-ttu-id="1de84-108">Das Ereignis führt den Prozessnamen und die Prozess-ID auf.</span><span class="sxs-lookup"><span data-stu-id="1de84-108">The event lists the process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0418-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d0418-109">See Also</span></span>  
- [<span data-ttu-id="d0418-110">Ereignisprotokollierung</span><span class="sxs-lookup"><span data-stu-id="d0418-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="d0418-111">Allgemeine Referenz zu Ereignissen</span><span class="sxs-lookup"><span data-stu-id="d0418-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="1de84-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1de84-109">See Also</span></span>  
+ [<span data-ttu-id="1de84-110">Ereignisprotokollierung</span><span class="sxs-lookup"><span data-stu-id="1de84-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="1de84-111">Allgemeine Referenz zu Ereignissen</span><span class="sxs-lookup"><span data-stu-id="1de84-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

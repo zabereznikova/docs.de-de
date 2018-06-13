@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575186"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a><span data-ttu-id="5c043-102">Gewusst wie: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher</span><span class="sxs-lookup"><span data-stu-id="5c043-102">How to: Create Files and Directories in Isolated Storage</span></span>
 <span data-ttu-id="5c043-103">Nachdem Sie einen isolierten Speicher abgerufen haben, können Sie Verzeichnisse und Dateien zum Speichern von Daten erstellen.</span><span class="sxs-lookup"><span data-stu-id="5c043-103">After you have obtained an isolated store, you can create directories and files for storing data.</span></span> <span data-ttu-id="5c043-104">In einem Speicher sind Datei- und Verzeichnisnamen relativ zum Stamm des virtuellen Dateisystems angegeben.</span><span class="sxs-lookup"><span data-stu-id="5c043-104">Within a store, file and directory names are specified with respect to the root of the virtual file system.</span></span>  

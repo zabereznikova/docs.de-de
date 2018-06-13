@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594470"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a><span data-ttu-id="d149d-102">Geschachtelte Funktion verfügt nicht über eine Signatur, die mit dem Delegaten kompatibel ist &#39; &lt;Delegatname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="d149d-102">Nested function does not have a signature that is compatible with delegate &#39;&lt;delegatename&gt;&#39;</span></span>
 <span data-ttu-id="d149d-103">Ein Lambda-Ausdruck wurde an einen Delegaten zugewiesen, die eine nicht kompatible Signatur verfügt.</span><span class="sxs-lookup"><span data-stu-id="d149d-103">A lambda expression has been assigned to a delegate that has an incompatible signature.</span></span> <span data-ttu-id="d149d-104">Im folgenden Code wird z. B. Delegieren `Del` verfügt über zwei Integer-Parameter.</span><span class="sxs-lookup"><span data-stu-id="d149d-104">For example, in the following code, delegate `Del` has two integer parameters.</span></span>  

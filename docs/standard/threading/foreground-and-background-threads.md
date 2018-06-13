@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583072"
 ---
 # <a name="foreground-and-background-threads"></a><span data-ttu-id="b54f2-102">Vordergrund- und Hintergrundthreads</span><span class="sxs-lookup"><span data-stu-id="b54f2-102">Foreground and Background Threads</span></span>
 <span data-ttu-id="b54f2-103">Ein verwalteter Thread ist entweder ein Hintergrund- oder Vordergrundthread.</span><span class="sxs-lookup"><span data-stu-id="b54f2-103">A managed thread is either a background thread or a foreground thread.</span></span> <span data-ttu-id="b54f2-104">Hintergrundthreads sind mit einer Ausnahme identisch mit Vordergrundthreads: Ein Hintergrundthread erhält nicht die Ausführung der verwalteten Ausführungsumgebung aufrecht.</span><span class="sxs-lookup"><span data-stu-id="b54f2-104">Background threads are identical to foreground threads with one exception: a background thread does not keep the managed execution environment running.</span></span> <span data-ttu-id="b54f2-105">Sobald alle Vordergrundthreads in einem verwalteten Prozess (wobei die EXE-Datei eine verwaltete Assembly ist) beendet sind, beendet das System alle Hintergrundthreads und fährt herunter.</span><span class="sxs-lookup"><span data-stu-id="b54f2-105">Once all foreground threads have been stopped in a managed process (where the .exe file is a managed assembly), the system stops all background threads and shuts down.</span></span>  

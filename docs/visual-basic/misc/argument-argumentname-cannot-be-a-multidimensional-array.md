@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599592"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-a-multidimensional-array"></a><span data-ttu-id="65d0c-102">Argument &#39; &lt;Argumentname&gt; &#39; ein mehrdimensionales Array ist nicht möglich</span><span class="sxs-lookup"><span data-stu-id="65d0c-102">Argument &#39;&lt;argumentname&gt;&#39; cannot be a multidimensional array</span></span>
 <span data-ttu-id="65d0c-103">Der Rang eines Arrayarguments ist größer als 1, aber es darf nur ein eindimensionales Array sein.</span><span class="sxs-lookup"><span data-stu-id="65d0c-103">The rank of an array argument is greater than 1, but it can only be a one-dimensional array.</span></span>  
