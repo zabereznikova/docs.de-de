@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546135"
 ---
 # <a name="preview-events"></a>Vorschauereignisse
 Vorschauereignisse, auch bekannt als Tunneling-Ereignisse, sind Routingereignisse übertragen werden, in denen die Richtung der Route aus den Anwendungsstamm für das Element, das das Ereignis ausgelöst hat, und wird als Quelle in den Ereignisdaten gemeldet. Nicht alle Ereignisszenarien unterstützen oder erfordern Vorschauereignisse; Dieses Thema beschreibt die Situationen, in denen Vorschauereignisse vorhanden wie Anwendungen oder Komponenten, die sie behandeln soll, sowie die Fälle, die, in dem Vorschauereignisse in benutzerdefinierten Komponenten oder Klassen erstellen geeignet sein könnte.  

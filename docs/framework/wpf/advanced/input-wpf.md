@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544231"
 ---
 # <a name="input-wpf"></a>Eingabe (WPF)
 Windows Presentation Foundation (WPF) umfasst Unterstützung für verschiedene Arten von Eingaben. Diese Eingabe enthält Text, Touch, Maus, Befehle, den Fokus, Fingereingabe, Drag & Drop und Freihandeingaben. Dieser Abschnitt enthält Themen im Zusammenhang mit in WPF eingegeben.  

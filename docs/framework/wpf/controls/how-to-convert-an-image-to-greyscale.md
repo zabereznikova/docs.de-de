@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550481"
 ---
 # <a name="how-to-convert-an-image-to-greyscale"></a>Gewusst wie: Konvertieren eines Bilds in Graustufen
 In diesem Beispiel wird gezeigt, wie ein Bild in Graustufen mit konvertiert <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.  

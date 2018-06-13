@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550653"
 ---
 # <a name="dockpanel-how-to-topics"></a>Gewusst-wie-Themen zu DockPanel
 Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.DockPanel> Element untergeordnete Elemente am Rand eines Layoutcontainers zu positionieren.  

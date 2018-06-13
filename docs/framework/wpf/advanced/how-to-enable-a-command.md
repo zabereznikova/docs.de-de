@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545281"
 ---
 # <a name="how-to-enable-a-command"></a>Gewusst wie: Aktivieren eines Befehls
 Im folgenden Beispiel wird veranschaulicht, wie Befehle in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Im Beispiel veranschaulicht das Zuordnen einer <xref:System.Windows.Input.RoutedCommand> auf eine <xref:System.Windows.Controls.Button>, erstellen eine <xref:System.Windows.Input.CommandBinding>, und erstellen Sie die Ereignishandler die implementieren die <xref:System.Windows.Input.RoutedCommand>.  Weitere Informationen über Befehle finden Sie unter der [Befehle (Übersicht)](../../../../docs/framework/wpf/advanced/commanding-overview.md).  

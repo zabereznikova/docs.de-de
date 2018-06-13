@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544394"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Gewusst wie: Horizontales oder vertikales Kippen eines UIElement
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.ScaleTransform> Blättern eine <xref:System.Windows.UIElement> horizontal oder vertikal. In diesem Beispiel eine <xref:System.Windows.Controls.Button> Steuerelement (eine Art von <xref:System.Windows.UIElement>) wird durch Anwenden von gekippt eine <xref:System.Windows.Media.ScaleTransform> auf seine <xref:System.Windows.UIElement.RenderTransform%2A> Eigenschaft.  

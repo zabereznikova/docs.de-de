@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547354"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Hosten von Win32-Inhalt in WPF
 ## <a name="prerequisites"></a>Erforderliche Komponenten  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545297"
 ---
 # <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>Vorgehensweise: Bearbeiten eine Tabelle&#39;s Spalten durch die Spalten-Eigenschaft
 Dieses Beispiel zeigt einige der häufigeren Vorgänge, die auf Spalten einer Tabelle mit ausgeführt werden, können die <xref:System.Windows.Documents.Table.Columns%2A> Eigenschaft.  

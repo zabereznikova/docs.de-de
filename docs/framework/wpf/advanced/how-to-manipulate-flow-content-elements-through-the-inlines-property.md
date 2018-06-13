@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545570"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Gewusst wie: Bearbeiten von fortlaufenden Inhaltselementen mit der Inlines-Eigenschaft
 Diese Beispiele zeigen einige der häufigeren Vorgänge, die für den Inline-Inhaltselemente ausgeführt werden können (und Container von solchen Elementen, z. B. <xref:System.Windows.Controls.TextBlock>) über die **Inlines** Eigenschaft. Diese Eigenschaft dient zum Hinzufügen und Entfernen von Elementen aus <xref:System.Windows.Documents.InlineCollection>. Fortlaufenden Inhaltselemente mit einer **Inlines** -Eigenschaft enthalten:  

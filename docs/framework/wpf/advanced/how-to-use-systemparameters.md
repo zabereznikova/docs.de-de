@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544634"
 ---
 # <a name="how-to-use-systemparameters"></a>Gewusst wie: Verwenden von SystemParameters
 In diesem Beispiel wird gezeigt, wie zugreifen auf und verwenden die Eigenschaften des <xref:System.Windows.SystemParameters> um formatieren oder Anpassen einer Schaltfläche.  

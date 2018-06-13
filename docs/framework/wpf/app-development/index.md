@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548885"
 ---
 # <a name="application-development"></a>Anwendungsentwicklung
 <a name="introduction"></a> Windows Presentation Foundation (WPF) ist ein zu testendes Präsentationsframework, die verwendet werden kann, um die folgenden Typen von Anwendungen zu entwickeln:  

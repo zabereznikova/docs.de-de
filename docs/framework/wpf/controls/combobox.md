@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551190"
 ---
 # <a name="combobox"></a>ComboBox
 Die <xref:System.Windows.Controls.ComboBox> -Steuerelement stellt Benutzern eine Liste mit Optionen. Die Liste wird angezeigt und ausgeblendet, wenn das Steuerelement erweitert oder reduziert. Die Liste ist in seinem Standardzustand reduziert und zeigt nur eine Auswahl. Der Benutzer klickt auf eine Schaltfläche, um die vollständige Liste der Optionen anzuzeigen.  

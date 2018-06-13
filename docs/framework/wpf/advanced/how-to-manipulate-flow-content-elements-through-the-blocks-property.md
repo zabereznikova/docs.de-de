@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544549"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Gewusst wie: Bearbeiten von fortlaufenden Inhaltselementen mit der Blocks-Eigenschaft
 Diese Beispiele zeigen einige der häufigeren Vorgänge, die für Inhaltselemente über ausgeführt werden, können die **Blöcke** Eigenschaft. Diese Eigenschaft dient zum Hinzufügen und Entfernen von Elementen aus <xref:System.Windows.Documents.BlockCollection>. Fortlaufenden Inhaltselemente mit einem **Blöcke** -Eigenschaft enthalten:  

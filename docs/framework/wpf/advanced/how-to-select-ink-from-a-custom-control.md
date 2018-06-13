@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548366"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>Gewusst wie: Auswählen von Freihandeingaben aus einem benutzerdefinierten Steuerelement
 Durch Hinzufügen einer <xref:System.Windows.Ink.IncrementalLassoHitTester> an das benutzerdefinierte Steuerelement können Sie das Steuerelement aktivieren, damit ein Benutzer mit einem Lassowerkzeug, ähnlich wie die auswählen kann die <xref:System.Windows.Controls.InkCanvas> Freihandeingaben mit einem Lasso wählt.  

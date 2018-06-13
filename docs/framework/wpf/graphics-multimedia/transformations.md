@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561913"
 ---
 # <a name="transformations"></a>Transformationen
 Transformationen werden verwendet, um drehen, zu skalieren, übersetzt oder verzerren <xref:System.Windows.FrameworkElement> Objekte.  

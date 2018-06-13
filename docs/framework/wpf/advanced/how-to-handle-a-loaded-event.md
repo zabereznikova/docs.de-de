@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544191"
 ---
 # <a name="how-to-handle-a-loaded-event"></a>Gewusst wie: Behandeln eines geladenen Ereignisses
 In diesem Beispiel wird gezeigt, wie behandelt die <xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType> Ereignisses, und ein entsprechendes Szenario für die Behandlung dieses Ereignisses. Der Ereignishandler erstellt ein <xref:System.Windows.Controls.Button> beim Laden der Seite.  

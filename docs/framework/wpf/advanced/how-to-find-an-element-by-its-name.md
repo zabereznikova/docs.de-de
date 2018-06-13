@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543575"
 ---
 # <a name="how-to-find-an-element-by-its-name"></a>Gewusst wie: Suchen nach einem Element anhand des Namens
 Dieses Beispiel beschreibt, wie die <xref:System.Windows.FrameworkElement.FindName%2A> Methode, um ein Element durch Ermitteln der <xref:System.Windows.FrameworkElement.Name%2A> Wert.  

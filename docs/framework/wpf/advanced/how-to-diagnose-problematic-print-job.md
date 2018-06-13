@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546740"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Gewusst wie: Diagnose von Problemen mit Druckaufträgen
 Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckaufträge, die gar nicht oder nur langsam gedruckt werden. Die umfangreichen Satz von Eigenschaften eines Druckauftrags verfügbar gemacht werden, der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] von Microsoft .NET Framework bieten Sie eine Möglichkeit für eine schnelle Diagnose Druckaufträge remote ausführen.  

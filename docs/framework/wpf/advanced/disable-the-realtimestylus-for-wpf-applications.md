@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545661"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>Deaktivieren des RealTimeStylus für WPF-Anwendungen
 Windows Presentation Foundation (WPF) verfügt über integrierte Unterstützung für die Verarbeitung von Windows 7 Fingereingabe. Die Unterstützung wird über die Tablet-Plattform in Echtzeit Stifteingabe als <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, und <xref:System.Windows.UIElement.OnStylusMove%2A> Ereignisse. Windows 7 enthält außerdem die Multi-Touch-Eingabe als Win32-WM_TOUCH fenstermeldungen. Diese zwei APIs gegenseitig auf demselben HWND. Aktivieren des Touch eingehende deaktiviert WM_TOUCH Nachrichten, über die Plattform (die Standardeinstellung für WPF-Anwendungen). Um WM_TOUCH verwenden, um Touch-Nachrichten aus einem WPF-Fenster zu erhalten, müssen Sie daher die integrierten Tablettstift-Unterstützung in WPF deaktivieren. Dies gilt in einem Szenario wie beispielsweise ein WPF-Fenster, das Hosten einer Komponente, die WM_TOUCH verwendet.  

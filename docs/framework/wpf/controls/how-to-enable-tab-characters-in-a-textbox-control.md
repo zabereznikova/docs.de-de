@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550185"
 ---
 # <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>Gewusst wie: Aktivieren von Tabstoppzeichen in einem TextBox-Steuerelement
 In diesem Beispiel wird gezeigt, wie So aktivieren Sie die Annahme von Tabstopps als normale Eingabe in einem <xref:System.Windows.Controls.TextBox> Steuerelement.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543588"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Gewusst wie: Auflisten einer Teilmenge von Druckwarteschlangen
 Eine allgemeine Situation gegenüberstehen (IT) Spezialisten verwalten einen Satz unternehmensweiten der Drucker ist zum Generieren einer Liste von Druckern mit bestimmten Merkmalen. Diese Funktionalität wird bereitgestellt, indem Sie die <xref:System.Printing.PrintServer.GetPrintQueues%2A> Methode von einer <xref:System.Printing.PrintServer> Objekt und die <xref:System.Printing.EnumeratedPrintQueueTypes> Enumeration.  

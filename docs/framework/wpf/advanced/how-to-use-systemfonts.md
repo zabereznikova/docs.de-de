@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544676"
 ---
 # <a name="how-to-use-systemfonts"></a>Gewusst wie: Verwenden von SystemFonts
 In diesem Beispiel wird gezeigt, wie für die Verwendung der statischen Ressourcen von der <xref:System.Windows.SystemFonts> Klasse, um zu formatieren oder Anpassen einer Schaltfläche.  

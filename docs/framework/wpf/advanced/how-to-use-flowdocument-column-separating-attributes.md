@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543770"
 ---
 # <a name="how-to-use-flowdocument-column-separating-attributes"></a>Gewusst wie: Verwenden von FlowDocument-Attributen für die Trennung von Spalten
 In diesem Beispiel wird gezeigt, wie die Trennung von Spalten Funktionen verwendet einen <xref:System.Windows.Documents.FlowDocument>.  

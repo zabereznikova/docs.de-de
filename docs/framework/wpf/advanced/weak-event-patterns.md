@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549346"
 ---
 # <a name="weak-event-patterns"></a>Schwache Ereignismuster
 Bei Anwendungen ist es möglich, dass ein Handler, die auf Ereignisquellen angefügt sind nicht in Abstimmung mit dem Listenerobjekt zerstört werden, die die Quelle den Handler angefügt. Diese Situation kann zu Speicherverlusten führen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt ein Entwurfsmuster, die verwendet werden kann, um dieses Problem zu beheben, stellen Sie eine dedizierte Managerklasse für bestimmte Ereignisse bereit, und Implementieren einer Schnittstelle zum Listener für dieses Ereignis an. Dieses Entwurfsmusters heißt die *schwacher Ereignismuster*.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544964"
 ---
 # <a name="how-to-create-outlined-text"></a>Gewusst wie: Erstellen von Text mit Kontur
 In den meisten Fällen, wenn Sie Textzeichenfolgen in Verzierung Hinzufügen Ihrer [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Anwendung können Sie Text im Hinblick auf eine Auflistung von diskreten Zeichen oder Symbole verwenden. Sie könnten z. B. einen linearen Farbverlaufspinsel erstellen und anwenden, die <xref:System.Windows.Controls.Control.Foreground%2A> Eigenschaft von einem <xref:System.Windows.Controls.TextBox> Objekt. Beim Anzeigen oder bearbeiten im Textfeld wird der lineare Farbverlaufspinsel automatisch auf den aktuellen Satz von Zeichen in der Textzeichenfolge angewendet.  

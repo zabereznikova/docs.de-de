@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545635"
 ---
 # <a name="how-to-open-a-message-box"></a>Vorgehensweise: Öffnen Sie ein Meldungsfeld
 In diesem Beispiel wird gezeigt, wie ein Meldungsfeld geöffnet wird.  
