@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748359"
 ---
 # <a name="ltcustomgt"></a><span data-ttu-id="262b5-102">&lt;Benutzerdefinierte&gt;</span><span class="sxs-lookup"><span data-stu-id="262b5-102">&lt;custom&gt;</span></span>
 <span data-ttu-id="262b5-103">Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverdienst an.</span><span class="sxs-lookup"><span data-stu-id="262b5-103">Specifies settings for a custom peer resolver service.</span></span>  

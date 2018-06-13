@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747124"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="75b24-102">&lt;clear&gt; von &lt;claimTypeRequirements&gt;</span><span class="sxs-lookup"><span data-stu-id="75b24-102">&lt;clear&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="75b24-103">Gibt an, dass alle Anspruchstypen in den verbundenen Anmeldeinformationen entfernt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="75b24-103">Specifies that all the claim types to be removed in the federated credential.</span></span> <span data-ttu-id="75b24-104">Dadurch wird sichergestellt, dass die Auflistung beim Starten leer ist.</span><span class="sxs-lookup"><span data-stu-id="75b24-104">This ensures that the collection starts empty.</span></span>  

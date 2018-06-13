@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748346"
 ---
 # <a name="ltcompositeduplexgt"></a><span data-ttu-id="b8e45-102">&lt;compositeDuplex&gt;</span><span class="sxs-lookup"><span data-stu-id="b8e45-102">&lt;compositeDuplex&gt;</span></span>
 <span data-ttu-id="b8e45-103">Definiert das zu verwendende Bindungselement, wenn der Client einen Endpunkt für den Dienst zum Senden von Nachrichten zurück an den Client verfügbar machen muss.</span><span class="sxs-lookup"><span data-stu-id="b8e45-103">Defines the binding element that is used when the client must expose an endpoint for the service to send messages back to the client.</span></span>  

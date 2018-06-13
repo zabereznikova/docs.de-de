@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752493"
 ---
 # <a name="message-encoding"></a><span data-ttu-id="60645-102">Nachrichtenverschlüsselung</span><span class="sxs-lookup"><span data-stu-id="60645-102">Message Encoding</span></span>
 <span data-ttu-id="60645-103">Beim Kodieren werden Unicode-Zeichen in eine Bytefolge transformiert.</span><span class="sxs-lookup"><span data-stu-id="60645-103">Encoding is the process of transforming a set of Unicode characters into a sequence of bytes.</span></span> <span data-ttu-id="60645-104">Beim Decodieren wird dieser Prozess umgekehrt.</span><span class="sxs-lookup"><span data-stu-id="60645-104">Decoding is the reverse process.</span></span> <span data-ttu-id="60645-105">Windows Communication Foundation (WCF) enthält drei Typen für die Codierung von SOAP-Nachrichten: Text, binär und Message Transmission Optimization Mechanism (MTOM).</span><span class="sxs-lookup"><span data-stu-id="60645-105">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  

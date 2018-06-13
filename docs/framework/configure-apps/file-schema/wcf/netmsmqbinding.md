@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751674"
 ---
 # <a name="ltnetmsmqbindinggt"></a><span data-ttu-id="8a226-102">&lt;netMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="8a226-102">&lt;netMsmqBinding&gt;</span></span>
 <span data-ttu-id="8a226-103">Definiert eine Bindung in der Warteschlange, die für eine computerübergreifende Kommunikation geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="8a226-103">Defines a queued binding suitable for cross-machine communication.</span></span>  

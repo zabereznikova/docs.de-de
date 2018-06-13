@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748632"
 ---
 # <a name="ltaddgt-of-ltnamespacetablegt"></a><span data-ttu-id="c15a5-102">&lt;add&gt; von &lt;namespaceTable&gt;</span><span class="sxs-lookup"><span data-stu-id="c15a5-102">&lt;add&gt; of &lt;namespaceTable&gt;</span></span>
 <span data-ttu-id="c15a5-103">Stellt ein Konfigurationselement dar, das eine Namespace-/Präfix-Zuordnung enthält, die zu Routingzwecken in XPath-Filtern verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="c15a5-103">Represents a configuration element that contains a namespace to prefix mapping that can then be used in XPath filters for routing.</span></span>  

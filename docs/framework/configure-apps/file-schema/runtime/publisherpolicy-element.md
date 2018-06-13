@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746097"
 ---
 # <a name="ltpublisherpolicygt-element"></a><span data-ttu-id="06173-102">&lt;PublisherPolicy&gt; Element</span><span class="sxs-lookup"><span data-stu-id="06173-102">&lt;publisherPolicy&gt; Element</span></span>
 <span data-ttu-id="06173-103">Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.</span><span class="sxs-lookup"><span data-stu-id="06173-103">Specifies whether the runtime applies publisher policy.</span></span>  

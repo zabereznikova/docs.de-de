@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752662"
 ---
 # <a name="ltdisablecommitthreadstackgt-element"></a><span data-ttu-id="832bf-102">&lt;DisableCommitThreadStack&gt; Element</span><span class="sxs-lookup"><span data-stu-id="832bf-102">&lt;disableCommitThreadStack&gt; Element</span></span>
 <span data-ttu-id="832bf-103">Gibt an, ob beim Starten eines Threads für den vollständigen Threadstapel ein Commit ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="832bf-103">Specifies whether the full thread stack is committed when a thread is started.</span></span>  

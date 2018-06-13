@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762259"
 ---
 # <a name="ltwshttpbindinggt"></a><span data-ttu-id="7bf4c-102">&lt;wsHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="7bf4c-102">&lt;wsHttpBinding&gt;</span></span>
 <span data-ttu-id="7bf4c-103">Definiert eine sichere, zuverlässige und interoperable Bindung für Nicht-Duplexdienstverträge dar.</span><span class="sxs-lookup"><span data-stu-id="7bf4c-103">Defines a secure, reliable, interoperable binding suitable for non-duplex service contracts.</span></span> <span data-ttu-id="7bf4c-104">Die Bindung implementiert die folgenden Spezifikationen: WS-Reliable Messaging für Zuverlässigkeit und WS-Security für Nachrichtensicherheit und Authentifizierung.</span><span class="sxs-lookup"><span data-stu-id="7bf4c-104">The binding implements the following specifications: WS-Reliable Messaging for reliability, and WS-Security for message security and authentication.</span></span> <span data-ttu-id="7bf4c-105">Für den Transport wird HTTP verwendet und für die Nachrichtencodierung Text/XML-Codierung.</span><span class="sxs-lookup"><span data-stu-id="7bf4c-105">The transport is HTTP, and message encoding is Text/XML encoding.</span></span>  

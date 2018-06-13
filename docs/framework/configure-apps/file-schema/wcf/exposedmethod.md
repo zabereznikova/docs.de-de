@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747381"
 ---
 # <a name="ltexposedmethodgt"></a><span data-ttu-id="d3d40-102">&lt;exposedMethod&gt;</span><span class="sxs-lookup"><span data-stu-id="d3d40-102">&lt;exposedMethod&gt;</span></span>
 <span data-ttu-id="d3d40-103">Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstelle für eine COM+-Komponente als Webdienst bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="d3d40-103">Represents a COM+ method that is exposed when the interface on a COM+ component is exposed as a Web service.</span></span>  

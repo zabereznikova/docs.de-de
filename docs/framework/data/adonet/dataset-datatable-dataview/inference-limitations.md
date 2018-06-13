@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760049"
 ---
 # <a name="inference-limitations"></a><span data-ttu-id="f1e26-102">Rückschlusseinschränkungen</span><span class="sxs-lookup"><span data-stu-id="f1e26-102">Inference Limitations</span></span>
 <span data-ttu-id="f1e26-103">Beim Herleiten eines <xref:System.Data.DataSet>-Schemas aus XML können sich in Abhängigkeit von den XML-Elementen jedes Dokuments verschiedene Schemata ergeben.</span><span class="sxs-lookup"><span data-stu-id="f1e26-103">The process of inferring a <xref:System.Data.DataSet> schema from XML can result in different schemas depending on the XML elements in each document.</span></span> <span data-ttu-id="f1e26-104">Betrachten Sie beispielsweise den folgenden XML-Code:</span><span class="sxs-lookup"><span data-stu-id="f1e26-104">For example, consider the following XML documents.</span></span>  

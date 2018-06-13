@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395764"
 ---
 # <a name="creating-internet-requests"></a><span data-ttu-id="c6000-102">Erstellen von Internetanforderungen</span><span class="sxs-lookup"><span data-stu-id="c6000-102">Creating Internet Requests</span></span>
 <span data-ttu-id="c6000-103">Anwendungen erstellen mithilfe der <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>-Methode <xref:System.Net.WebRequest>-Instanzen.</span><span class="sxs-lookup"><span data-stu-id="c6000-103">Applications create <xref:System.Net.WebRequest> instances through the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c6000-104">Diese statische Methode erstellt eine von **WebRequest** abgeleitete Klasse basierend auf dem URI-Schema, das an sie übergeben wurde.</span><span class="sxs-lookup"><span data-stu-id="c6000-104">This is a static method that creates a class derived from **WebRequest** based on the URI scheme passed to it.</span></span>  

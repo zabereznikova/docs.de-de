@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759958"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a><span data-ttu-id="9bb32-102">Gewusst wie: Erstellen einer EntityConnection-Verbindungszeichenfolge</span><span class="sxs-lookup"><span data-stu-id="9bb32-102">How to: Build an EntityConnection Connection String</span></span>
 <span data-ttu-id="9bb32-103">In diesem Thema wird anhand eines Beispiels gezeigt, wie eine <xref:System.Data.EntityClient.EntityConnection> erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="9bb32-103">This topic provides an example of how to build an <xref:System.Data.EntityClient.EntityConnection>.</span></span>  

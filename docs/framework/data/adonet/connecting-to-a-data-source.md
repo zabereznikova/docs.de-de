@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757111"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a><span data-ttu-id="5a156-102">Verbinden mit einer Datenquelle in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="5a156-102">Connecting to a Data Source in ADO.NET</span></span>
 <span data-ttu-id="5a156-103">In ADO.NET verwenden Sie eine **Verbindung** Objekt einer Verbindung mit einer bestimmten Datenquelle erforderlichen Authentifizierungsinformationen in einer Verbindungszeichenfolge angeben.</span><span class="sxs-lookup"><span data-stu-id="5a156-103">In ADO.NET you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string.</span></span> <span data-ttu-id="5a156-104">Die **Verbindung** Objekt, die Sie verwenden, hängt vom Typ der Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="5a156-104">The **Connection** object you use depends on the type of data source.</span></span>  

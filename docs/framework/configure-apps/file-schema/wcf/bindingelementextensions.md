@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747748"
 ---
 # <a name="ltbindingelementextensionsgt"></a><span data-ttu-id="8fd33-102">&lt;bindingElementExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="8fd33-102">&lt;bindingElementExtensions&gt;</span></span>
 <span data-ttu-id="8fd33-103">Dieser Abschnitt aktiviert die Verwendung eines benutzerdefinierten Elements für einen Computer oder eine Anwendungskonfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="8fd33-103">This section enables the use of a custom binding element from a machine or application configuration file.</span></span> <span data-ttu-id="8fd33-104">Sie können ein benutzerdefiniertes Bindungselement zur Auflistung hinzufügen, indem Sie das `add`-Schlüsselwort verwenden und das `type`-Attribut des Elements auf eine Bindungselementerweiterung sowie das `name`-Attribut auf das benutzerdefinierte Bindungselement festlegen.</span><span class="sxs-lookup"><span data-stu-id="8fd33-104">You can add a custom binding element to this collection by using the `add` keyword, and setting the `type` attribute of the element to a binding element extension, as well as the `name` attribute to the custom binding element.</span></span>  

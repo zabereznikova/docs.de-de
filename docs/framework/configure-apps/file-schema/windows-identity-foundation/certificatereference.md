@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756838"
 ---
 # <a name="ltcertificatereferencegt"></a><span data-ttu-id="a9ad5-102">&lt;CertificateReference&gt;</span><span class="sxs-lookup"><span data-stu-id="a9ad5-102">&lt;certificateReference&gt;</span></span>
 <span data-ttu-id="a9ad5-103">Gibt die Einstellungen, die zum finden und überprüfen ein x. 509-Zertifikat in keinem Zertifikatspeicher verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a9ad5-103">Specifies settings that are used to find and validate an X.509 certificate in a certificate store.</span></span>  
