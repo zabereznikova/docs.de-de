@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640279"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a><span data-ttu-id="ff650-102">Dieser Vorgang kann nur durchgeführt werden, wenn die Datei geschlossen ist</span><span class="sxs-lookup"><span data-stu-id="ff650-102">This operation can only be done when the File is closed</span></span>
 <span data-ttu-id="ff650-103">Bei einer geöffneten Datei wurde versucht, einen Vorgang auszuführen, der nur ausgeführt werden kann, wenn die Datei geschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="ff650-103">When a file is open, an attempt has been made to perform an operation that can only be performed when the file is closed.</span></span>  

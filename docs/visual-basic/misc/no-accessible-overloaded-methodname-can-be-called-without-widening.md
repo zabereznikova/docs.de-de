@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636801"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-widening-conversion-ltlistgt"></a><span data-ttu-id="ef258-102">Keine zugreifbare überladene &#39; &lt;Methodname&gt; &#39; kann mit diesen Argumenten ohne eine erweiternde Konvertierung aufgerufen werden: &lt;Liste&gt;</span><span class="sxs-lookup"><span data-stu-id="ef258-102">No accessible overloaded &#39;&lt;methodname&gt;&#39; can be called with these arguments without a widening conversion: &lt;list&gt;</span></span>
 <span data-ttu-id="ef258-103">Eine überladene Methode wurde aufgerufen, aber ohne eine erweiternde Konvertierung kann keine Methode mit der Liste der bereitgestellten Argumente abgeglichen werden.</span><span class="sxs-lookup"><span data-stu-id="ef258-103">An overloaded method was called, but no method could be matched with the list of provided arguments without a widening conversion.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653662"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a><span data-ttu-id="b304e-102">Beispiel für Kompilierungsbefehlszeilen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b304e-102">Sample compilation command lines (Visual Basic)</span></span>
 <span data-ttu-id="b304e-103">Als Alternative zum Kompilieren von Visual Basic-Programmen in Visual Studio können Sie über die Befehlszeile, um ausführbare Dateien (.exe) oder Dynamic Link Library (DLL) Dateien kompilieren.</span><span class="sxs-lookup"><span data-stu-id="b304e-103">As an alternative to compiling Visual Basic programs from within Visual Studio, you can compile from the command line to produce executable (.exe) files or dynamic-link library (.dll) files.</span></span>  

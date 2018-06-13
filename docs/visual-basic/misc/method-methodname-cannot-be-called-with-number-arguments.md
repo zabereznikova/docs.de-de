@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636118"
 ---
 # <a name="method-39ltmethodnamegt39-cannot-be-called-with-ltnumbergt-arguments"></a><span data-ttu-id="e27a5-102">Methode &#39; &lt;Methodname&gt; &#39; kann nicht aufgerufen werden, mit &lt;Anzahl&gt; Argumente</span><span class="sxs-lookup"><span data-stu-id="e27a5-102">Method &#39;&lt;methodname&gt;&#39; cannot be called with &lt;number&gt; arguments</span></span>
 <span data-ttu-id="e27a5-103">Ein Methodenaufruf enthält die falsche Anzahl von Argumenten.</span><span class="sxs-lookup"><span data-stu-id="e27a5-103">A method call contains the wrong number of arguments.</span></span>  

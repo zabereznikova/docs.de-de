@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648196"
 ---
 # <a name="decision-structures-visual-basic"></a><span data-ttu-id="9a2d3-102">Entscheidungsstrukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a2d3-102">Decision Structures (Visual Basic)</span></span>
 <span data-ttu-id="9a2d3-103">Visual Basic können Sie testbedingungen und andere Vorgänge abhängig von den Ergebnissen dieser Tests ausführen.</span><span class="sxs-lookup"><span data-stu-id="9a2d3-103">Visual Basic lets you test conditions and perform different operations depending on the results of that test.</span></span> <span data-ttu-id="9a2d3-104">Sie können testen, auf eine Bedingung "true" oder "false" für verschiedene Werte für einen Ausdruck oder für verschiedene Ausnahmen generiert, wenn Sie eine Reihe von Anweisungen ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="9a2d3-104">You can test for a condition being true or false, for various values of an expression, or for various exceptions generated when you execute a series of statements.</span></span>  

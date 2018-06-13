@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653402"
 ---
 # <a name="-optioncompare"></a><span data-ttu-id="b534f-102">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="b534f-102">-optioncompare</span></span>
 <span data-ttu-id="b534f-103">Gibt an, wie Zeichenfolgenvergleiche durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="b534f-103">Specifies how string comparisons are made.</span></span>  

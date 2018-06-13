@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637529"
 ---
 # <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a><span data-ttu-id="1ed9b-102">Öffentliche Member &#39; &lt;Membername&gt; &#39; für den Typ &#39; &lt;Typename&gt; &#39; wurde nicht gefunden.</span><span class="sxs-lookup"><span data-stu-id="1ed9b-102">Public member &#39;&lt;membername&gt;&#39; on type &#39;&lt;typename&gt;&#39; not found</span></span>
 <span data-ttu-id="1ed9b-103">Der Member, auf den Sie versuchen zuzugreifen, konnte nicht gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="1ed9b-103">The member you are trying to access cannot be found.</span></span> <span data-ttu-id="1ed9b-104">Dieser Fehler kann beim Zugriff auf nicht öffentliche Member von spät gebundenen Objekten auftreten.</span><span class="sxs-lookup"><span data-stu-id="1ed9b-104">This error can occur when accessing non-public members of late-bound objects.</span></span>  

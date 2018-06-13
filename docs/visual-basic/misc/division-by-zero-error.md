@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636758"
 ---
 # <a name="division-by-zero-visual-basic-error"></a><span data-ttu-id="1291b-102">Division durch 0 (null) (Visual Basic-Fehler)</span><span class="sxs-lookup"><span data-stu-id="1291b-102">Division by zero (Visual Basic Error)</span></span>
 <span data-ttu-id="1291b-103">Der Wert eines Ausdrucks, der als Divisor verwendet wird, ist 0 (null).</span><span class="sxs-lookup"><span data-stu-id="1291b-103">The value of an expression used as a divisor is zero.</span></span>  
