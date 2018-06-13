@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588225"
 ---
 # <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;Wie ein anderer&#39; wird nicht unterstützt &#39;Declare&#39; Anweisungen
 Die `Any` wurde mit dem verwendet `Declare` Anweisungen in Visual Basic 6.0 und früheren Versionen gestatten die Verwendung von Argumenten, die beliebige Datentypen enthalten kann. Visual Basic unterstützt jedoch Überladen und ermöglicht die `Any` -Datentyp ab.  

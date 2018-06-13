@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589008"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>Ein Ausdruck vom Typ &lt;Typ&gt; kann nicht abgefragt werden
 Ein Ausdruck vom Typ \<Typ > kann nicht abgefragt werden. Stellen Sie sicher, dass Sie keinen Assembly-Verweis und/oder Namespace Import für LINQ-Anbieter fehlt.  

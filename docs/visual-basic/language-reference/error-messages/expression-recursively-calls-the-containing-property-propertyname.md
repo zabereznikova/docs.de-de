@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588842"
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Der Ausdruck ruft rekursiv den enthaltende Eigenschaft &#39; &lt;Propertyname&gt;&#39;
 Eine Anweisung in der `Set` Prozedur mit einer Eigenschaftendefinition speichert einen Wert in den Namen der Eigenschaft.  

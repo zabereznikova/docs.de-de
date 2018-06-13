@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604548"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Gibt an, dass eine oder mehrere deklarierte Programmierelemente einer Klasse oder Struktur an größeren, und nicht mit einer bestimmten Instanz der Klasse oder Struktur zugeordnet sind.  

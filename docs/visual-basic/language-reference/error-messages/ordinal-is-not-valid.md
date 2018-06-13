@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593602"
 ---
 # <a name="ordinal-is-not-valid"></a>Ungültiger Ordinalwert.
 Rufen Sie eine Dynamic Link Library (DLL) angegeben wird, eine Zahl statt einem Prozedurnamen verwenden mithilfe der `#num` Syntax. Dieser Fehler hat die folgenden möglichen Ursachen:  

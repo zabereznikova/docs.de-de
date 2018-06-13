@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592155"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Anpassen der verfügbaren Objekte in "My" (Visual Basic)
 In diesem Thema wird beschrieben, wie Sie die steuern können `My` Objekte sind aktiviert, indem Sie des Projekts `_MYTYPE` Konstante für bedingte Kompilierung. Die Visual Studio Umgebung IDE (Integrated Development) behält die `_MYTYPE` Konstante für bedingte Kompilierung für ein Projekt mit dem Typ des Projekts synchronisiert.  

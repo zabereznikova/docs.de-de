@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594187"
 ---
 # <a name="xml-namespace-uri-39httpwwww3orgxml1998namespace39-can-be-bound-only-to-39xmlns39"></a>XML-Namespace-URI &#39; http://www.w3.org/XML/1998/namespace&#39; kann nur für gebunden werden &#39;Xmlns&#39;
 Der URI http://www.w3.org/XML/1998/namespace wird in der Deklaration eines XML-Namespace verwendet. Dieser URI wird von einem reservierten Namespace und kann nicht in eine XML-Namespacedeklaration enthalten sein.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585956"
 ---
 # <a name="cannot-create-activex-component"></a>ActiveX-Komponente kann nicht erstellt werden
 Sie haben versucht, beim Entwerfen ein ActiveX-Steuerelement auf einem Formular zu platzieren oder ein Formular zu einem Projekt mit einem ActiveX-Steuerelement hinzuzufügen, doch die zugewiesenen Informationen in der Registrierung wurden nicht gefunden.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596836"
 ---
 # <a name="argument-39conversion39-is-not-valid"></a>Argument &#39;Konvertierung&#39; ist ungültig
 Ein Wert für die `VbStrConv` -Enumeration ist ungültig, möglicherweise weil er kleiner als null ist. Enumerationswerte {0} müssen größer oder gleich null sein.  

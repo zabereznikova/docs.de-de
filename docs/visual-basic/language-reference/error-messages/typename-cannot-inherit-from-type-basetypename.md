@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598423"
 ---
 # <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a>&#39;&lt;TypeName&gt; &#39; kann nicht Vererben &lt;Typ&gt; &#39; &lt;Basistypname&gt; &#39; erweitert den Zugriff von Basis-und &lt;Typ&gt; außerhalb der Assembly
 Eine Klasse oder Schnittstelle erbt von einer Basisklasse oder Schnittstelle enthält jedoch eine weniger restriktive Zugriffsebene.  

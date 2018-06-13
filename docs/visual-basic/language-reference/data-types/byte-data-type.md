@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590533"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte-Datentyp (Visual Basic)
 Enthält die 8-Bit (1-Byte)-Ganzzahlen ohne Vorzeichen, die im Wert von 0 bis 255 liegen.

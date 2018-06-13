@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595185"
 ---
 # <a name="type-39lttypenamegt39-is-not-defined"></a>Typ &#39; &lt;Typename&gt; &#39; ist nicht definiert
 Die Anweisung machte Verweis auf einen Typ, der nicht definiert wurde. Sie können einen Typ wie z. B. in einer deklarationsanweisung definieren `Enum`, `Structure`, `Class`, oder `Interface`.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590854"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Zugriff auf die Standardeigenschaft ist nicht die geerbten Schnittstellenmember eindeutig &#39; &lt;Defaultpropertyname&gt; &#39; Schnittstelle &#39; &lt;schnittstellenname1&gt; &#39; und &#39; &lt;Defaultpropertyname&gt; &#39; Schnittstelle &#39; &lt;schnittstellenname2&gt;&#39;
 Eine Schnittstelle erbt von zwei Schnittstellen, von die jede eine Standardeigenschaft mit demselben Namen deklariert. Der Compiler kann keinen Zugriff auf diese Eigenschaft standardmäßig ohne Qualifizierung aufgelöst werden. Dies wird anhand des folgenden Beispiels veranschaulicht.  

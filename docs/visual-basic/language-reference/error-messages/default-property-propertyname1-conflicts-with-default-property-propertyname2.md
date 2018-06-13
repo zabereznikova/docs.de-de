@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586623"
 ---
 # <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a>Standardeigenschaft &#39; &lt;eigenschaftsname1&gt; &#39; steht in Konflikt mit der Standardeigenschaft &#39; &lt;propertyname2&gt; &#39; in &#39; &lt;Classname&gt; &#39;und sollte daher deklariert werden &#39;Schatten&#39;
 Mit dem gleichen Namen wie eine in der Basisklasse definierte Eigenschaft ist eine Eigenschaft deklariert. In diesem Fall muss die Eigenschaft in dieser Klasse die Eigenschaft der Basisklasse überschatten.  

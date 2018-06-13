@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602774"
 ---
 # <a name="registry-summary-visual-basic"></a>Registrierung: Zusammenfassung (Visual Basic)
 Visual Studio-Programmiersprachen-Schlüsselwörter und Member der Laufzeitbibliothek nach ihrem Zweck organisiert sind, und verwenden.  

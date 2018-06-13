@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604171"
 ---
 # <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>Kann nicht geladen werden Informationen über die Klasse &#39; &lt;Klassenname&gt;&#39;
 Ein Verweis wurde auf eine Klasse erstellt, die nicht verfügbar ist.  
