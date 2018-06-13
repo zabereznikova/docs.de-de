@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654085"
 ---
 # <a name="-win32manifest-visual-basic"></a><span data-ttu-id="0ee16-102">-win32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ee16-102">-win32manifest (Visual Basic)</span></span>
 <span data-ttu-id="0ee16-103">Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die übertragbare ausführbare Datei (PE) eines Projekts eingebettet werden soll.</span><span class="sxs-lookup"><span data-stu-id="0ee16-103">Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>  

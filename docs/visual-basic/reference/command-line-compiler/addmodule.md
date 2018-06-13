@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656005"
 ---
 # <a name="-addmodule"></a><span data-ttu-id="e4ea2-102">-addmodule</span><span class="sxs-lookup"><span data-stu-id="e4ea2-102">-addmodule</span></span>
 <span data-ttu-id="e4ea2-103">Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, sämtliche Typinformationen aus den angegebenen Dateien bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="e4ea2-103">Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.</span></span>  

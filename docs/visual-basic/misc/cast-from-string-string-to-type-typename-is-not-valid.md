@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635705"
 ---
 # <a name="cast-from-string-quotltstringgtquot-to-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="50ec9-102">Umwandeln einer Zeichenfolge &quot; &lt;Zeichenfolge&gt; &quot; Eingabe &#39; &lt;Typename&gt; &#39; ist ungültig</span><span class="sxs-lookup"><span data-stu-id="50ec9-102">Cast from string &quot;&lt;string&gt;&quot; to type &#39;&lt;typename&gt;&#39; is not valid</span></span>
 <span data-ttu-id="50ec9-103">Ein Versuch, eine Zeichenfolgenvariable in einen anderen Typ zu konvertieren, ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="50ec9-103">An attempt to convert a string variable to another type is not valid.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637555"
 ---
 # <a name="cannot-determine-array-type-because-it-is-nothing"></a><span data-ttu-id="84c5a-102">Der Arraytyp kann nicht bestimmt werden, da er 'Nothing' ist.</span><span class="sxs-lookup"><span data-stu-id="84c5a-102">Cannot determine array type because it is Nothing</span></span>
 <span data-ttu-id="84c5a-103">Der Typ des Arrays kann nicht bestimmt werden, da er auf den Wert `Nothing`festgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="84c5a-103">The type of your array cannot be determined because it has been set to the value `Nothing`.</span></span>  

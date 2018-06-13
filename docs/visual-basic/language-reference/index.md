@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602632"
 ---
 # <a name="visual-basic-language-reference"></a><span data-ttu-id="b1f3d-102">Sprachreferenz zu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b1f3d-102">Visual Basic Language Reference</span></span>
 <span data-ttu-id="b1f3d-103">Dieser Abschnitt enthält Referenzinformationen zu verschiedenen Aspekten der Sprache Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b1f3d-103">This section provides reference information for various aspects of the Visual Basic language.</span></span>  

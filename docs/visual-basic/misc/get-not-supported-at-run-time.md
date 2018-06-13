@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636564"
 ---
 # <a name="get-not-supported-at-run-time"></a><span data-ttu-id="b466c-102">'Get' wird zur Laufzeit nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="b466c-102">Get not supported at run time</span></span>
 <span data-ttu-id="b466c-103">Sie haben versucht, eine Eigenschaft zur Laufzeit zu lesen, auf die nur zur Entwurfszeit zugegriffen werden kann.</span><span class="sxs-lookup"><span data-stu-id="b466c-103">You tried to read a property at run time that is only accessible at design time.</span></span>  

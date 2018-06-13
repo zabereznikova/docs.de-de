@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638782"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a><span data-ttu-id="ff7cc-102">Der Eingabepfad verweist auf eine Datei, endet jedoch mit einem Verzeichnistrennzeichen.</span><span class="sxs-lookup"><span data-stu-id="ff7cc-102">The input path refers to a file but ends with a directory separator character</span></span>
 <span data-ttu-id="ff7cc-103">Es wurde ein Vorgang versucht, der die Angabe eines Dateinamens erfordert, aber der angegebene Name endet mit einem Verzeichnistrennzeichen (`\`).</span><span class="sxs-lookup"><span data-stu-id="ff7cc-103">An operation was attempted requiring that a filename be supplied, but the supplied name ends with a directory separator character (`\`).</span></span> <span data-ttu-id="ff7cc-104">Dies kann das Ergebnis eines falsch analysierten Dateipfads sein.</span><span class="sxs-lookup"><span data-stu-id="ff7cc-104">This may be the result of an incorrectly parsed file path.</span></span>  

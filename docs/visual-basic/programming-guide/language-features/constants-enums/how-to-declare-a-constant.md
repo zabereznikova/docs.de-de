@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649736"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a><span data-ttu-id="78485-102">Gewusst wie: Deklarieren einer Konstante (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="78485-102">How to: Declare A Constant (Visual Basic)</span></span>
 <span data-ttu-id="78485-103">Sie verwenden die `Const` -Anweisung zum Deklarieren einer Konstante mit dem Wert.</span><span class="sxs-lookup"><span data-stu-id="78485-103">You use the `Const` statement to declare a constant and set its value.</span></span> <span data-ttu-id="78485-104">Durch Deklarieren einer Konstante, weisen Sie einen aussagekräftigen Namen auf einen Wert an.</span><span class="sxs-lookup"><span data-stu-id="78485-104">By declaring a constant, you assign a meaningful name to a value.</span></span> <span data-ttu-id="78485-105">Sobald eine Konstante deklariert wird, kann nicht geändert oder einen neuer Wert zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="78485-105">Once a constant is declared, it cannot be modified or assigned a new value.</span></span>  
