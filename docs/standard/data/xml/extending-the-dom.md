@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572251"
 ---
 # <a name="extending-the-dom"></a>Erweitern des DOM
 Microsoft .NET Framework enthält einen Basisgruppe an Klassen, die eine Implementierung des XML-DOM (Document Object Model) bereitstellt. Die <xref:System.Xml.XmlNode>-Klasse und deren abgeleitete Klassen stellen Methoden und Eigenschaften zum Navigieren, Abfragen und Ändern des Inhalts und der Struktur von XML-Dokumenten bereit.  

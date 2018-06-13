@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577093"
 ---
 # <a name="property-design"></a>Eigenschaftenentwurf
 Obwohl die Eigenschaften, Methoden technisch sehr ähnlich sind, sind sie sehr unterschiedliche im Hinblick auf ihre Szenarien für die Verwendung. Sie sollte als intelligente Felder angezeigt werden. Sie verfügen über die Funktionsaufrufsyntax von Feldern und die Flexibilität der Methoden.  

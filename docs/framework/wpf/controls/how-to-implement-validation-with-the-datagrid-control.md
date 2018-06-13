@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557874"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Gewusst wie: Implementieren von Validierung mit dem DataGrid-Steuerelement
 Die <xref:System.Windows.Controls.DataGrid> -Steuerelement ermöglicht Ihnen die Durchführung der Validierung auf die Zelle und die Zeile. Überprüfen Sie mit Überprüfung auf Zellenebene einzelne Eigenschaften eines gebundenen Objekts aus, wenn ein Benutzer einen Wert aktualisiert. Mit Überprüfung auf Zeilenebene wird der gesamte Dataset Objekte überprüfen, wenn ein Benutzer Änderungen an einer Zeile ein Commit ausgeführt wird. Sie können auch angepasste visuelles Feedback für Validierungsfehler oder verwenden Sie die standardmäßige visuelles Feedback, die die <xref:System.Windows.Controls.DataGrid> gesteuert.  

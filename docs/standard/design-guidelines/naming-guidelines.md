@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572969"
 ---
 # <a name="naming-guidelines"></a>Richtlinien für die Benennung
 Befolgen konsistente Benennungskonventionen in die Entwicklung von einem Framework kann einen wesentlichen Beitrag das Framework verwendbarkeits-sein. Es kann das Framework weit getrennte Projekte für viele Entwickler verwendet werden. Über die Konsistenz des Formulars Namen von Frameworkelemente leicht verstanden werden müssen und müssen die Funktion der einzelnen Elemente zu vermitteln.  

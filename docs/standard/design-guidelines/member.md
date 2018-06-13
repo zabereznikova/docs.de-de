@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571396"
 ---
 # <a name="member-design-guidelines"></a>Entwurfsrichtlinien für Member
 Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder werden zusammenfassend als Mitglieder bezeichnet. Mitglieder werden letztlich von der Framework-Funktionalitäten an die Endbenutzer von einem Framework verfügbar gemacht wird.  

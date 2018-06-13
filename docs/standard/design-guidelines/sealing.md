@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573737"
 ---
 # <a name="sealing"></a>Versiegeln
 Eine der Funktionen des Frameworks objektorientierte ist, dass Entwickler erweitern und Möglichkeiten, die bis zur servicebereitstellung durch die Framework-Designer anpassen können. Dies ist die Leistungsfähigkeit und die Gefahr eines extensible Entwurf. Wenn Sie Ihr Framework entwerfen, es ist daher sehr wichtig für die Erweiterbarkeit sorgfältig entworfen wird, wenn es gewünscht wird, und Erweiterbarkeit eingeschränkt werden, wenn es gefährlich ist.  

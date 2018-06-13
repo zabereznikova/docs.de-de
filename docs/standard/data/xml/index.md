@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576089"
 ---
 # <a name="xml-documents-and-data"></a>XML-Dokumente und XML-Daten
 .NET Framework bietet eine umfangreiche und integrierte Gruppe von Klassen, mit denen auf einfache Weise XML-fähige Apps erstellt werden können. Die Klassen in den folgenden Namespaces unterstützen das Analysieren und Schreiben von XML, das Bearbeiten von XML-Daten im Arbeitsspeicher, die Datenvalidierung und die XSLT-Transformation.  

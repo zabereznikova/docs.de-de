@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572020"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Zugreifen auf die Attribute im DOM
 Attribute sind Eigenschaften des Elements und keine untergeordneten Elemente des entsprechenden Elements. Dies stellt aufgrund der Methoden zum Navigieren zwischen nebengeordneten, übergeordneten und untergeordneten Knoten des XML-Dokumentobjektmodells (DOM) eine wichtige Unterscheidung dar. Die **PreviousSibling**- und die **NextSibling**-Methode werden beispielsweise nicht zum Wechseln von einem Element zu einem Attribut oder zwischen Attributen verwendet. Stattdessen ist ein Attribut eine Eigenschaft eines Elements und gehört zu einem Element. Das Attribut verfügt über eine **OwnerElement**-Eigenschaft und nicht über eine **parentNode**-Eigenschaft. Außerdem besitzt es verschiedene Navigationsmethoden.  

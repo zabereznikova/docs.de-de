@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561591"
 ---
 # <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Gewusst wie: Steuern eines MediaElement mit einem Storyboard
 In diesem Beispiel wird gezeigt, wie zur Steuerung einer <xref:System.Windows.Controls.MediaElement> mithilfe einer <xref:System.Windows.Media.MediaTimeline> in eine <xref:System.Windows.Media.Animation.Storyboard>.  

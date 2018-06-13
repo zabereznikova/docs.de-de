@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556756"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>Gewusst wie: Sortieren von Daten in einer Ansicht
 In diesem Beispiel wird das Sortieren von Daten in einer Ansicht beschreibt.  

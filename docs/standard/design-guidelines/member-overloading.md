@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573554"
 ---
 # <a name="member-overloading"></a>Überladen von Membern
 Überladen von Membern bedeutet das Erstellen von zwei oder mehr Elemente für den gleichen Typ, die denselben Namen aufweisen, unterscheiden sich nur hinsichtlich der Anzahl oder dem Typ der Parameter. Im folgenden wird beispielsweise der `WriteLine` -Methode ist überladen:  

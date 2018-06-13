@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559473"
 ---
 # <a name="how-to-create-a-new-bitmapsource"></a>Gewusst wie: Erstellen einer neuen BitmapSource
 In diesem Beispiel wird veranschaulicht, wie die <xref:System.Windows.Media.Imaging.BitmapSource.Create%2A> Methode <xref:System.Windows.Media.Imaging.BitmapSource> zum Erstellen eines neuen <xref:System.Windows.Media.Imaging.BitmapSource> Objekt.  

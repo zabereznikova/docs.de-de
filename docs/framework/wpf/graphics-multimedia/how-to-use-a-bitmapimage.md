@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561500"
 ---
 # <a name="how-to-use-a-bitmapimage"></a>Gewusst wie: Verwenden eines BitmapImage
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.Imaging.BitmapImage> als Quelle für eine <xref:System.Windows.Controls.Image> steuern [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

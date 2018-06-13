@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576681"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Gewusst wie: Erhalten von Speichern für isolierten Speicher
 Ein isolierter Speicher macht ein virtuelles Dateisystem in einem Datendepot verfügbar. Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile>-Klasse bietet eine Reihe von Methoden für die Interaktion mit einem isolierten Speicher. Zum Erstellen und Abrufen von Speichern stellt <xref:System.IO.IsolatedStorage.IsolatedStorageFile> drei statische Methoden bereit:  

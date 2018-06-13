@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559170"
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Gewusst wie: Animieren der Position eines Objekts mit PointAnimation
 Dieses Beispiel zeigt, wie die <xref:System.Windows.Media.Animation.PointAnimation> Klasse, um ein Objekt entlang Animieren einer <xref:System.Windows.Shapes.Path>.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568624"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Abrufen von geordneten Knoten anhand des Indexes
 Das W3C-XML-Dokumentobjektmodell (Document Object Model – DOM) beschreibt auch eine NodeList. Diese kann eine geordnete Liste von Knoten behandeln, anders als die **XmlNamedNodeMap**, die einen ungeordneten Knotensatz behandelt. Die NodeList in Microsoft .NET Framework wird als **XmlNodeList** bezeichnet. Folgende Methoden und Eigenschaften geben eine **XmlNodeList** zurück:  

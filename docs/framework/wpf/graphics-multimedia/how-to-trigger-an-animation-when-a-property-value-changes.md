@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561316"
 ---
 # <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>Gewusst wie: Auslösen einer Animation bei Änderung eines Eigenschaftswerts
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Trigger> zum Starten einer <xref:System.Windows.Media.Animation.Storyboard> Wenn sich ein Eigenschaftswert ändert. Sie können eine <xref:System.Windows.Trigger> innerhalb einer <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, oder <xref:System.Windows.DataTemplate>.  

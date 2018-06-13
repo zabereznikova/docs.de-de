@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560659"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>Gewusst wie: Erstellen einer GeometryDrawing
 In diesem Beispiel wird gezeigt, wie zum Erstellen und Anzeigen einer <xref:System.Windows.Media.GeometryDrawing>. Ein <xref:System.Windows.Media.GeometryDrawing> ermöglicht es Ihnen, die Form mit einer Füllung und Konturen zu erstellen, durch das Zuordnen einer <xref:System.Windows.Media.Pen> und ein <xref:System.Windows.Media.Brush> mit einer <xref:System.Windows.Media.Geometry>. Die <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> beschreibt die Struktur, die <xref:System.Windows.Media.GeometryDrawing.Brush%2A> beschreibt die Füllung der Form, und die <xref:System.Windows.Media.GeometryDrawing.Pen%2A> beschreibt den Rand der Form.  
