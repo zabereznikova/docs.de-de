@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755161"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="6d397-102">&lt;System.Web&gt; Element (Webeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="6d397-102">&lt;system.web&gt; Element (Web Settings)</span></span>
 <span data-ttu-id="6d397-103">Enthält Informationen dazu, wie die Hostebene ASP.NET prozessübergreifende Verhalten verwaltet.</span><span class="sxs-lookup"><span data-stu-id="6d397-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  

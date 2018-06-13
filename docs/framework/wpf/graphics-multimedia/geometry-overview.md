@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558069"
 ---
 # <a name="geometry-overview"></a><span data-ttu-id="63155-102">Übersicht über die Geometrie</span><span class="sxs-lookup"><span data-stu-id="63155-102">Geometry Overview</span></span>
 <span data-ttu-id="63155-103">In dieser Übersicht wird beschrieben, wie mithilfe der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> Klassen, die Formen zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="63155-103">This overview describes how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> classes to describe shapes.</span></span> <span data-ttu-id="63155-104">In diesem Thema sind auch die Unterschiede zwischen <xref:System.Windows.Media.Geometry> Objekte und <xref:System.Windows.Shapes.Shape> Elemente.</span><span class="sxs-lookup"><span data-stu-id="63155-104">This topic also contrasts the differences between <xref:System.Windows.Media.Geometry> objects and <xref:System.Windows.Shapes.Shape> elements.</span></span>  

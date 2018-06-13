@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557263"
 ---
 # <a name="brushes"></a><span data-ttu-id="788b9-102">Pinsel</span><span class="sxs-lookup"><span data-stu-id="788b9-102">Brushes</span></span>
 <span data-ttu-id="788b9-103">In den folgenden Themen wird beschrieben, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel zum Inhalt auf dem Bildschirm "Zeichnen"</span><span class="sxs-lookup"><span data-stu-id="788b9-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  

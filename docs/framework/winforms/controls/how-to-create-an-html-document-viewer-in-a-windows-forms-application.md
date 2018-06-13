@@ -1,14 +1,6 @@
 ---
 title: 'Gewusst wie: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,45 +9,40 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58f964be53c6ddb8abf0af539b773344ce09d948
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1330e20cc4fe7df86e51bebca28e4a71e3108673
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530542"
 ---
-# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a><span data-ttu-id="bdaa9-102">Gewusst wie: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="bdaa9-102">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>
-<span data-ttu-id="bdaa9-103">Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement zum Anzeigen und Drucken von HTML-Dokumente ohne Angabe der vollständigen Funktionalität von einem Browser Internet.</span><span class="sxs-lookup"><span data-stu-id="bdaa9-103">You can use the <xref:System.Windows.Forms.WebBrowser> control to display and print HTML documents without providing the full functionality of an Internet Web browser.</span></span> <span data-ttu-id="bdaa9-104">Dies ist hilfreich, wenn Sie die Formatierungsfunktionen von HTML nutzen möchten, aber nicht möchten, Ihre Benutzer, beliebige Webseiten zu laden, die möglicherweise nicht vertrauenswürdige Websteuerelemente oder potenziell bösartige Skriptcode enthalten.</span><span class="sxs-lookup"><span data-stu-id="bdaa9-104">This is useful when you want to take advantage of the formatting capabilities of HTML but do not want your users to load arbitrary Web pages that may contain untrusted Web controls or potentially malicious script code.</span></span> <span data-ttu-id="bdaa9-105">Möglicherweise möchten Sie die Funktionalität des Einschränken der <xref:System.Windows.Forms.WebBrowser> Steuern auf diese Weise z. B. auf, um ihn als eine HTML-e-Mail-Viewer verwenden oder HTML-Hilfe in der Anwendung bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="bdaa9-105">You might want to restrict the capability of the <xref:System.Windows.Forms.WebBrowser> control in this manner, for example, to use it as an HTML email viewer or to provide HTML-formatted help in your application.</span></span>  
+# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a><span data-ttu-id="2ccf1-102">Gewusst wie: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="2ccf1-102">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>
+<span data-ttu-id="2ccf1-103">Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement zum Anzeigen und Drucken von HTML-Dokumente ohne Angabe der vollständigen Funktionalität von einem Browser Internet.</span><span class="sxs-lookup"><span data-stu-id="2ccf1-103">You can use the <xref:System.Windows.Forms.WebBrowser> control to display and print HTML documents without providing the full functionality of an Internet Web browser.</span></span> <span data-ttu-id="2ccf1-104">Dies ist hilfreich, wenn Sie die Formatierungsfunktionen von HTML nutzen möchten, aber nicht möchten, Ihre Benutzer, beliebige Webseiten zu laden, die möglicherweise nicht vertrauenswürdige Websteuerelemente oder potenziell bösartige Skriptcode enthalten.</span><span class="sxs-lookup"><span data-stu-id="2ccf1-104">This is useful when you want to take advantage of the formatting capabilities of HTML but do not want your users to load arbitrary Web pages that may contain untrusted Web controls or potentially malicious script code.</span></span> <span data-ttu-id="2ccf1-105">Möglicherweise möchten Sie die Funktionalität des Einschränken der <xref:System.Windows.Forms.WebBrowser> Steuern auf diese Weise z. B. auf, um ihn als eine HTML-e-Mail-Viewer verwenden oder HTML-Hilfe in der Anwendung bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="2ccf1-105">You might want to restrict the capability of the <xref:System.Windows.Forms.WebBrowser> control in this manner, for example, to use it as an HTML email viewer or to provide HTML-formatted help in your application.</span></span>  
   
-### <a name="to-create-an-html-document-viewer"></a><span data-ttu-id="bdaa9-106">So erstellen ein HTML-Dokument-viewer</span><span class="sxs-lookup"><span data-stu-id="bdaa9-106">To create an HTML document viewer</span></span>  
+### <a name="to-create-an-html-document-viewer"></a><span data-ttu-id="2ccf1-106">So erstellen ein HTML-Dokument-viewer</span><span class="sxs-lookup"><span data-stu-id="2ccf1-106">To create an HTML document viewer</span></span>  
   
-1.  <span data-ttu-id="bdaa9-107">Festlegen der <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> Eigenschaft, um `false` um zu verhindern, dass die <xref:System.Windows.Forms.WebBrowser> -Steuerelement aus, Öffnen von Dateien, die auf ihm abgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="bdaa9-107">Set the <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from opening files dropped onto it.</span></span>  
+1.  <span data-ttu-id="2ccf1-107">Festlegen der <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> Eigenschaft, um `false` um zu verhindern, dass die <xref:System.Windows.Forms.WebBrowser> -Steuerelement aus, Öffnen von Dateien, die auf ihm abgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="2ccf1-107">Set the <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from opening files dropped onto it.</span></span>  
   
      [!code-csharp[WebBrowserMisc#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
      [!code-vb[WebBrowserMisc#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
   
-2.  <span data-ttu-id="bdaa9-108">Legen Sie die <xref:System.Windows.Forms.WebBrowser.Url%2A> Eigenschaft, um den Speicherort der ursprünglichen Datei angezeigt.</span><span class="sxs-lookup"><span data-stu-id="bdaa9-108">Set the <xref:System.Windows.Forms.WebBrowser.Url%2A> property to the location of the initial file to display.</span></span>  
+2.  <span data-ttu-id="2ccf1-108">Legen Sie die <xref:System.Windows.Forms.WebBrowser.Url%2A> Eigenschaft, um den Speicherort der ursprünglichen Datei angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2ccf1-108">Set the <xref:System.Windows.Forms.WebBrowser.Url%2A> property to the location of the initial file to display.</span></span>  
   
      [!code-csharp[WebBrowserMisc#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
      [!code-vb[WebBrowserMisc#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="bdaa9-109">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="bdaa9-109">Compiling the Code</span></span>  
- <span data-ttu-id="bdaa9-110">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="bdaa9-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2ccf1-109">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="2ccf1-109">Compiling the Code</span></span>  
+ <span data-ttu-id="2ccf1-110">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="2ccf1-110">This example requires:</span></span>  
   
--   <span data-ttu-id="bdaa9-111">Ein <xref:System.Windows.Forms.WebBrowser>-Steuerelement namens `webBrowser1`.</span><span class="sxs-lookup"><span data-stu-id="bdaa9-111">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
+-   <span data-ttu-id="2ccf1-111">Ein <xref:System.Windows.Forms.WebBrowser>-Steuerelement namens `webBrowser1`.</span><span class="sxs-lookup"><span data-stu-id="2ccf1-111">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
   
--   <span data-ttu-id="bdaa9-112">Verweise auf die Assemblys `System` und `System.Windows.Forms`.</span><span class="sxs-lookup"><span data-stu-id="bdaa9-112">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
+-   <span data-ttu-id="2ccf1-112">Verweise auf die Assemblys `System` und `System.Windows.Forms`.</span><span class="sxs-lookup"><span data-stu-id="2ccf1-112">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bdaa9-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bdaa9-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2ccf1-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2ccf1-113">See Also</span></span>  
  <xref:System.Windows.Forms.WebBrowser>  
  <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>  
  <xref:System.Windows.Forms.WebBrowser.Url%2A>  
- [<span data-ttu-id="bdaa9-114">Übersicht über das WebBrowser-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="bdaa9-114">WebBrowser Control Overview</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
- [<span data-ttu-id="bdaa9-115">WebBrowser-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="bdaa9-115">WebBrowser Security</span></span>](../../../../docs/framework/winforms/controls/webbrowser-security.md)  
- [<span data-ttu-id="bdaa9-116">Gewusst wie: Navigieren zu einer URL mit dem WebBrowser-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="bdaa9-116">How to: Navigate to a URL with the WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- [<span data-ttu-id="bdaa9-117">Gewusst wie: Drucken mit einem WebBrowser-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="bdaa9-117">How to: Print with a WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+ [<span data-ttu-id="2ccf1-114">Übersicht über das WebBrowser-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="2ccf1-114">WebBrowser Control Overview</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
+ [<span data-ttu-id="2ccf1-115">WebBrowser-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="2ccf1-115">WebBrowser Security</span></span>](../../../../docs/framework/winforms/controls/webbrowser-security.md)  
+ [<span data-ttu-id="2ccf1-116">Gewusst wie: Navigieren zu einer URL mit dem WebBrowser-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="2ccf1-116">How to: Navigate to a URL with the WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [<span data-ttu-id="2ccf1-117">Gewusst wie: Drucken mit einem WebBrowser-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="2ccf1-117">How to: Print with a WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)

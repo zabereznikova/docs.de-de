@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748840"
 ---
 # <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="c4eb9-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="c4eb9-102">&lt;system.serviceModel.activation&gt;</span></span>
 <span data-ttu-id="c4eb9-103">Dieser Konfigurationsabschnitt stellt die Konfigurationseinstellungen für das Tool SMSvcHost.exe dar.</span><span class="sxs-lookup"><span data-stu-id="c4eb9-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="c4eb9-104">Die Konfigurationselemente können in der SMSvcHost.exe.config-Datei konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="c4eb9-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="c4eb9-105">Sie enthält insbesondere alle computerweiten Einstellungen, die konfiguriert werden müssen.</span><span class="sxs-lookup"><span data-stu-id="c4eb9-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  

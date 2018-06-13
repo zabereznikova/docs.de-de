@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604574"
 ---
 # <a name="selectcase-statement-visual-basic"></a><span data-ttu-id="64ef5-102">Select...Case-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64ef5-102">Select...Case Statement (Visual Basic)</span></span>
 <span data-ttu-id="64ef5-103">Führt eine von mehreren Gruppen von Anweisungen, je nach dem Wert eines Ausdrucks.</span><span class="sxs-lookup"><span data-stu-id="64ef5-103">Runs one of several groups of statements, depending on the value of an expression.</span></span>  

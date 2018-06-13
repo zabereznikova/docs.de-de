@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754570"
 ---
 # <a name="ltstategt-of-wcf-ltworkflowinstancequerygt"></a><span data-ttu-id="b9565-102">&lt;state&gt; von WCF, &lt;workflowInstanceQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="b9565-102">&lt;state&gt; of WCF, &lt;workflowInstanceQuery&gt;</span></span>
 <span data-ttu-id="b9565-103">Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz dar.</span><span class="sxs-lookup"><span data-stu-id="b9565-103">Represents a collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>  

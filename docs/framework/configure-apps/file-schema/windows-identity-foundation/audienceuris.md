@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755993"
 ---
 # <a name="ltaudienceurisgt"></a><span data-ttu-id="ea02b-102">&lt;audienceUris&gt;</span><span class="sxs-lookup"><span data-stu-id="ea02b-102">&lt;audienceUris&gt;</span></span>
 <span data-ttu-id="ea02b-103">Gibt den Satz von URIs, die akzeptable Bezeichner der vertrauenden (RP) sind.</span><span class="sxs-lookup"><span data-stu-id="ea02b-103">Specifies the set of URIs that are acceptable identifiers of the relying party (RP).</span></span> <span data-ttu-id="ea02b-104">Token werden nicht akzeptiert, es sei denn, sie eines der zulässigen "Audience"-URIs begrenzt sind.</span><span class="sxs-lookup"><span data-stu-id="ea02b-104">Tokens will not be accepted unless they are scoped for one of the allowed audience URIs.</span></span>  

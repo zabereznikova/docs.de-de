@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745486"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a><span data-ttu-id="bc87c-102">&lt;UseSmallInternalThreadStacks&gt; Element</span><span class="sxs-lookup"><span data-stu-id="bc87c-102">&lt;UseSmallInternalThreadStacks&gt; Element</span></span>
 <span data-ttu-id="bc87c-103">Fordert an, dass die common Language Runtime (CLR) Speicher reduzieren verwenden, indem Sie explizite Stack-Größe angeben, wenn es bestimmte Threads, die sie intern verwendet erstellt, anstatt die Standardgröße des Stapel für diese Threads.</span><span class="sxs-lookup"><span data-stu-id="bc87c-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  

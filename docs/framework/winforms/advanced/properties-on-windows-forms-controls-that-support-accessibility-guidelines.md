@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524487"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a><span data-ttu-id="621e6-102">Eigenschaften für Windows Forms-Steuerelemente, die Richtlinien für Eingabehilfen unterstützen</span><span class="sxs-lookup"><span data-stu-id="621e6-102">Properties on Windows Forms Controls That Support Accessibility Guidelines</span></span>
 <span data-ttu-id="621e6-103">In der standard-Toolbox für Windows Forms-Steuerelemente unterstützen viele der Richtlinien für Eingabehilfen, einschließlich Verfügbarmachung des Tastaturfokus und das Verfügbarmachen von der Bildschirmelemente.</span><span class="sxs-lookup"><span data-stu-id="621e6-103">Controls on the standard toolbox for Windows Forms support many of the accessibility guidelines, including exposing the keyboard focus and exposing the screen elements.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757852"
 ---
 # <a name="ltaddgt"></a><span data-ttu-id="e4b5a-102">&lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="e4b5a-102">&lt;add&gt;</span></span>
 <span data-ttu-id="e4b5a-103">Fügt den angegebenen Sicherheits-Tokenhandler der Tokenhandler Auflistung hinzu.</span><span class="sxs-lookup"><span data-stu-id="e4b5a-103">Adds the specified security token handler to the token handler collection.</span></span>  

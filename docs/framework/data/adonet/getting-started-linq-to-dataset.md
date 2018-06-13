@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765346"
 ---
 # <a name="getting-started-linq-to-dataset"></a><span data-ttu-id="002b0-102">Erste Schritte (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="002b0-102">Getting Started (LINQ to DataSet)</span></span>
 <span data-ttu-id="002b0-103">Dieser Abschnitt enthält einführende Informationen über das Programmieren mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="002b0-103">This section provides introductory information about programming with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  

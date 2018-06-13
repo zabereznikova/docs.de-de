@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758268"
 ---
 # <a name="specifying-an-assembly39s-location"></a><span data-ttu-id="9a60b-102">Angeben einer Assemblys&#39;s-Speicherort</span><span class="sxs-lookup"><span data-stu-id="9a60b-102">Specifying an Assembly&#39;s Location</span></span>
 <span data-ttu-id="9a60b-103">Es gibt zwei Möglichkeiten zum Angeben des Speicherortes einer Assembly:</span><span class="sxs-lookup"><span data-stu-id="9a60b-103">There are two ways to specify an assembly's location:</span></span>  

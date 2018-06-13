@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755369"
 ---
 # <a name="ltactivityscheduledquerygt"></a><span data-ttu-id="40b02-102">&lt;activityScheduledQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="40b02-102">&lt;activityScheduledQuery&gt;</span></span>
 <span data-ttu-id="40b02-103">Stellt eine Auflistung von Abfragen dar, die verwendet werden, um eine Aktivität zu verfolgen, deren Ausführung von einer übergeordneten Aktivität geplant wurde.</span><span class="sxs-lookup"><span data-stu-id="40b02-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="40b02-104">Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer die Datensätze der geplanten Aktivität abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="40b02-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  

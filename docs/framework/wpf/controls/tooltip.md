@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556977"
 ---
 # <a name="tooltip"></a><span data-ttu-id="5d2d6-102">QuickInfo</span><span class="sxs-lookup"><span data-stu-id="5d2d6-102">ToolTip</span></span>
 <span data-ttu-id="5d2d6-103">Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutzer den Mauszeiger über ein Element, z. B. über hält eine <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="5d2d6-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  

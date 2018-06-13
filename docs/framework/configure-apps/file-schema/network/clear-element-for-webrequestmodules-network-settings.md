@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752727"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="2ea7b-102">&lt;Deaktivieren Sie&gt; WebRequestModules (Network Settings)-Element</span><span class="sxs-lookup"><span data-stu-id="2ea7b-102">&lt;clear&gt; Element for webRequestModules (Network Settings)</span></span>
 <span data-ttu-id="2ea7b-103">Entfernt alle registrierten Anforderung Webmodule aus der Anwendung an.</span><span class="sxs-lookup"><span data-stu-id="2ea7b-103">Removes all registered Web request modules from the application.</span></span>  

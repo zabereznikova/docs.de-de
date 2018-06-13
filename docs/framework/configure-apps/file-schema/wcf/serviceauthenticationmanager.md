@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748967"
 ---
 # <a name="ltserviceauthenticationmanagergt"></a><span data-ttu-id="0ce3c-102">&lt;serviceAuthenticationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="0ce3c-102">&lt;serviceAuthenticationManager&gt;</span></span>
 <span data-ttu-id="0ce3c-103">Stellt ein Workflowkonfigurationselement bereit, das die Gültigkeit einer Übertragung, Meldung oder eines Absenders auf Dienstebene festlegt.</span><span class="sxs-lookup"><span data-stu-id="0ce3c-103">Provides a workflow configuration element that establishes at the service level the validity of a transmission, message, or originator..</span></span>  

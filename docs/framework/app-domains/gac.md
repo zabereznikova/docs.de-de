@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751973"
 ---
 # <a name="global-assembly-cache"></a><span data-ttu-id="a875d-102">Globaler Assemblycache</span><span class="sxs-lookup"><span data-stu-id="a875d-102">Global Assembly Cache</span></span>
 <span data-ttu-id="a875d-103">Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt einen computerweiten Codecache, den so genannten globalen Assemblycache.</span><span class="sxs-lookup"><span data-stu-id="a875d-103">Each computer where the Common Language Runtime is installed has a machine-wide code cache called the Global Assembly Cache.</span></span> <span data-ttu-id="a875d-104">Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind.</span><span class="sxs-lookup"><span data-stu-id="a875d-104">The Global Assembly Cache stores assemblies specifically designated to be shared by several applications on the computer.</span></span>  

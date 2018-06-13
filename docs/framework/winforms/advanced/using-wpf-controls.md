@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526603"
 ---
 # <a name="using-wpf-controls"></a><span data-ttu-id="a4196-102">Verwenden von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="a4196-102">Using WPF Controls</span></span>
 <span data-ttu-id="a4196-103">Sie können Windows Presentation Foundation (WPF)-Steuerelemente in Windows Forms-basierten Anwendungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="a4196-103">You can use Windows Presentation Foundation (WPF) controls in your Windows Forms-based applications.</span></span> <span data-ttu-id="a4196-104">Obwohl diese zwei unterschiedliche Ansicht Technologien sind, zusammenarbeiten sie reibungslos.</span><span class="sxs-lookup"><span data-stu-id="a4196-104">Although these are two different view technologies, they interoperate smoothly.</span></span>  

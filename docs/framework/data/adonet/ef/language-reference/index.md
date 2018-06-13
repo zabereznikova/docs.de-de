@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761921"
 ---
 # <a name="entity-sql-language-reference"></a><span data-ttu-id="f7cec-102">Entity SQL-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="f7cec-102">Entity SQL Language Reference</span></span>
 <span data-ttu-id="f7cec-103">Dieser Abschnitt bietet ausführliche Dokumentationen zu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)] und den Modell- und Zuordnungssprachen, die von [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f7cec-103">This section provides detailed documentation [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)], and the modeling and mapping languages used by the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span>  

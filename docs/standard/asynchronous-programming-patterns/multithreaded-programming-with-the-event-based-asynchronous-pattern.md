@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567301"
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a><span data-ttu-id="fc67b-102">Multithreadprogrammierung mit dem ereignisbasierten asynchronen Muster</span><span class="sxs-lookup"><span data-stu-id="fc67b-102">Multithreaded Programming with the Event-based Asynchronous Pattern</span></span>
 <span data-ttu-id="fc67b-103">Es gibt verschiedene Möglichkeiten, asynchrone Funktionen für Clientcode verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="fc67b-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="fc67b-104">Das ereignisbasierte asynchrone Muster gibt Klassen das empfohlene Verfahren zum Präsentieren von asynchronem Verhalten vor.</span><span class="sxs-lookup"><span data-stu-id="fc67b-104">The Event-based Asynchronous Pattern prescribes the recommended way for classes to present asynchronous behavior.</span></span>  

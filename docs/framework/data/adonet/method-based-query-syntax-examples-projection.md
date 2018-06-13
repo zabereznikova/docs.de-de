@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757748"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a><span data-ttu-id="88525-102">Beispiele für die methodenbasierte Abfragesyntax: Projektion (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="88525-102">Method-Based Query Syntax Examples: Projection (LINQ to DataSet)</span></span>
 <span data-ttu-id="88525-103">In den Beispielen in diesem Thema wird gezeigt, wie Sie mithilfe der Methoden <xref:System.Linq.Enumerable.Select%2A> und <xref:System.Linq.Enumerable.SelectMany%2A> und der methodenbasierten Abfragesyntax ein <xref:System.Data.DataSet> abfragen können.</span><span class="sxs-lookup"><span data-stu-id="88525-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Select%2A> and <xref:System.Linq.Enumerable.SelectMany%2A> methods to query a <xref:System.Data.DataSet> using the method-based query syntax.</span></span>  

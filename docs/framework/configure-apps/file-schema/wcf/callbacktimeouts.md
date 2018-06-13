@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749565"
 ---
 # <a name="ltcallbacktimeoutsgt"></a><span data-ttu-id="62385-102">&lt;callbackTimeouts&gt;</span><span class="sxs-lookup"><span data-stu-id="62385-102">&lt;callbackTimeouts&gt;</span></span>
 <span data-ttu-id="62385-103">Gibt den Timeoutwert bei der Weitergabe von Transaktionen vom Server zum Client in einem Duplexrückrufvertragsszenario an.</span><span class="sxs-lookup"><span data-stu-id="62385-103">Specifies the timeout value when flowing transactions from server to client.in a duplex callback contract scenario.</span></span>  

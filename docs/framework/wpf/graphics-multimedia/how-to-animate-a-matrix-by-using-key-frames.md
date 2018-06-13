@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557016"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a><span data-ttu-id="cf861-102">Gewusst wie: Animieren einer Matrix mithilfe von Keyframes</span><span class="sxs-lookup"><span data-stu-id="cf861-102">How to: Animate a Matrix by Using Key Frames</span></span>
 <span data-ttu-id="cf861-103">In diesem Beispiel wird gezeigt, wie zum Animieren der <xref:System.Windows.Media.MatrixTransform.Matrix%2A> Eigenschaft eine <xref:System.Windows.Media.MatrixTransform> mithilfe von Keyframes.</span><span class="sxs-lookup"><span data-stu-id="cf861-103">This example shows how to animate the <xref:System.Windows.Media.MatrixTransform.Matrix%2A> property of a <xref:System.Windows.Media.MatrixTransform> by using key frames.</span></span>  

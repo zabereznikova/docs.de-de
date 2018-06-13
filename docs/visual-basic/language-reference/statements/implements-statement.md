@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604210"
 ---
 # <a name="implements-statement"></a><span data-ttu-id="f8b1a-102">Implements-Anweisung</span><span class="sxs-lookup"><span data-stu-id="f8b1a-102">Implements Statement</span></span>
 <span data-ttu-id="f8b1a-103">Gibt eine oder mehrere Schnittstellen oder Schnittstellenmember wird, die in der Klasse implementiert werden müssen oder Strukturdefinition, die in dem er angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="f8b1a-103">Specifies one or more interfaces, or interface members, that must be implemented in the class or structure definition in which it appears.</span></span>  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756682"
 ---
 # <a name="lttrackinggt"></a><span data-ttu-id="3c562-102">&lt;Nachverfolgen&gt;</span><span class="sxs-lookup"><span data-stu-id="3c562-102">&lt;tracking&gt;</span></span>
 <span data-ttu-id="3c562-103">Stellt einen Konfigurationsabschnitt zum Definieren von Nachverfolgungseinstellungen für einen Workflowdienst dar.</span><span class="sxs-lookup"><span data-stu-id="3c562-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  
