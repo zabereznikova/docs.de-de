@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171992"
 ---
 # <a name="public-c-reference"></a>public (C#-Referenz)
 Das Schlüsselwort `public` ist ein Zugriffsmodifizierer für Typen und Typmember. Der öffentlicher Zugriff ist die eingeschränkteste Zugriffsebene. Es gibt keine Einschränkungen für den Zugriff auf öffentliche Member, wie im folgenden Beispiel veranschaulicht:  

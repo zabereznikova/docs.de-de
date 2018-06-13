@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a6d97d3e4a93985f9b2de3ed9785eff5f7f46c36
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444678"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save-Methode
 Speichert alle Metadaten im aktuellen Bereich für die Datei an der angegebenen Adresse an.  

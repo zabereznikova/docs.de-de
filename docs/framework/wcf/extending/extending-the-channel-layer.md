@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488233"
 ---
 # <a name="extending-the-channel-layer"></a>Erweitern der Kanalschicht
 Die Kanalschicht ist für den Nachrichtenaustausch zwischen Clients und Diensten verantwortlich. Durch Kanalerweiterungen können neue Protokollfunktionen implementiert werden, wie beispielsweise Sicherheits- oder Transportfunktionen. So kann zum Beispiel ein neuer Netzwerktransport für die Übermittlung von SOAP-Nachrichten implementiert werden.  
