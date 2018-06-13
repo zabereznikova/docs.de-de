@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582134"
 ---
 # <a name="security-and-race-conditions"></a>Sicherheit und Racebedingungen
 Eine andere Stelle relevant ist, potenzielle Sicherheitslücken ausgenutzt Racebedingungen. Es gibt mehrere Möglichkeiten, die in denen dies geschehen kann. In den Unterthemen, die Folgen werden einige der gravierenden Fehler, die der Entwickler zu vermeiden, muss.  

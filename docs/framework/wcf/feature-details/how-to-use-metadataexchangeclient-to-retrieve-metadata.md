@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494227"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Vorgehensweise: Die Verwendung von MetadataExchangeClient zum Abrufen von Metadaten
 Verwenden Sie die <xref:System.ServiceModel.Description.MetadataExchangeClient>-Klasse, um Metadaten mit dem WS-MetadataExchange (MEX)-Protokoll herunterzuladen. Die abgerufenen Metadatendateien werden als <xref:System.ServiceModel.Description.MetadataSet>-Objekt zurückgegeben. Das zurückgegebene <xref:System.ServiceModel.Description.MetadataSet>-Objekt enthält eine Auflistung der <xref:System.ServiceModel.Description.MetadataSection>-Objekte, von denen jedes einen bestimmten Metadatendialekt sowie eine ID enthält. Sie können die zurückgegebenen Metadaten in Dateien schreiben. Wenn die zurückgegebenen Metadaten WSDL (Web Services Description Language)-Dokumente enthalten, können Sie die Metadaten mit <xref:System.ServiceModel.Description.WsdlImporter> importieren.  

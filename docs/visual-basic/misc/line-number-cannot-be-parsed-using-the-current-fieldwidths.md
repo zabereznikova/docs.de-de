@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637916"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Zeile &lt;Anzahl&gt; kann nicht mit den aktuellen FieldWidths nicht analysiert werden
 Die angegebene Zeile kann nicht analysiert werden, da ihre Felder nicht die angegebenen Breiten haben.  

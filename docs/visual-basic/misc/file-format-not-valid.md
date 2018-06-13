@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637373"
 ---
 # <a name="file-format-not-valid"></a>Ungültiges Dateiformat
 Entweder Sie haben versucht, eine Datei in eine Komponente zu laden, und das Format der Daten in der Datei war mit der Komponente nicht kompatibel, oder Sie haben versucht, Komponentendaten in einer Datei zu speichern, aber das Format der Daten war mit dem Format der Datei nicht kompatibel.  

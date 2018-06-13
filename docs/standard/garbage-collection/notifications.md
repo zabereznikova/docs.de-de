@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579157"
 ---
 # <a name="garbage-collection-notifications"></a>Garbage Collection-Benachrichtigungen
 Es gibt Situationen, in denen eine vollständige Garbage Collection (d.h. eine Garbage Collection der Generation 2) der Common Language Runtime die Leistung beeinträchtigen kann. Dies kann vor allem bei Servern, die eine hohe Zahl an Anforderungen verarbeiten, ein Problem sein; in diesem Fall kann eine lange Garbage Collection einen Anforderungstimeout verursachen. Um eine vollständige Garbage Collection im Rahmen eines kritischen Zeitraums zu verhindern, können Sie benachrichtigt werden, wenn eine vollständige Garbage Collection bevorsteht, und Maßnahmen ergreifen, um die Workload auf eine andere Serverinstanz umzuleiten. Sie können auch selbst eine Garbage Collection auslösen, vorausgesetzt, dass die aktuelle Serverinstanz keine Anforderungen verarbeiten muss.  

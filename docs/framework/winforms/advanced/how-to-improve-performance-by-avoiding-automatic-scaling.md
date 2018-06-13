@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523041"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Gewusst wie: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ein Bild kann automatisch skaliert werden, wie Sie es zeichnen. Alternativ können Sie steuern, die Skalierung des Bilds durch Übergeben der Dimensionen des Zielrechtecks an die <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  

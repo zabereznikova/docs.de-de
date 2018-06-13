@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547198"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource-Markuperweiterung
 Stellt einen Wert für eine beliebige [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Eigenschaftsattribut, das durch einen Verweis auf eine bereits definierte Ressource nachschlagen. Suchverhalten für diese Ressource ist analog zur Ladezeit Suche, bei der nach Ressourcen gesucht werden, die zuvor aus dem Markup des aktuellen geladen wurden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sowie andere Quellen für die Anwendung, und generiert dieses Ressourcenwert als der der Eigenschaftswert in der Laufzeit-Objekten.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585300"
 ---
 # <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39;&lt;Membername&gt; &#39; ist nicht eindeutig &#39; &lt;schnittstellenname1&gt; &#39; und &#39; &lt;schnittstellenname2&gt;&#39;
 Die Schnittstelle erbt zwei oder mehr Elemente mit demselben Namen von mehreren Schnittstellen.  

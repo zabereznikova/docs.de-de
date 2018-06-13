@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fdea4c456f04911c37acd69ced65ba841f7959ff
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449350"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport-Schnittstelle
 Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer portablen ausführbaren Datei (PE-Datei) oder einer anderen Quelle wie einer Typbibliothek oder einer eigenständigen Laufzeit-Metadatenbinärdatei bereit  

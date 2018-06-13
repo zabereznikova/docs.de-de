@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636847"
 ---
 # <a name="can39t-perform-requested-operation-visual-basic"></a>Können&#39;t ausführen, der angeforderte Vorgang (Visual Basic)
 Ein Vorgang kann nicht durchgeführt werden, da er den aktuellen Zustand des Projekts ungültig machen würde. Sie haben z. B. möglicherweise versucht, ausgeführten Code programmgesteuert zu ändern.  

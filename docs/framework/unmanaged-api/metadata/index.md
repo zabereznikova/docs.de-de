@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 194184f6ddafa1341fbb731ba51e9635ea66ffa3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450501"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>Metadaten (Referenz zur nicht verwalteten API)
 Die Metadaten-API ermöglicht einem Client (z. B. einem Compiler) das Generieren oder den Zugriff auf die Metadaten einer Komponente, ohne dass die Typen von der Common Language Runtime (CLR) geladen werden.  

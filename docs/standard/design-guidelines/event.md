@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575389"
 ---
 # <a name="event-design"></a>Ereignisentwurf
 Ereignisse werden am häufigsten verwendete Form von Rückrufen (Konstrukte, die das Framework zum Aufrufen von Benutzercode zu ermöglichen). Andere Rückrufmechanismen enthalten Elemente und Delegaten, virtuelle Member und schnittstellenbasierten-Plug-ins. Daten aus der Verwendbarkeit Studien anzugeben, dass die meisten Entwickler sind nachrichtenorientierten Ereignisse verwenden, als sie die anderen Rückrufmechanismen verwenden. Ereignisse sind gut mit Visual Studio und vielen Sprachen integriert.  

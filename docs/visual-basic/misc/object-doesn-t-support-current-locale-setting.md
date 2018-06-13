@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636797"
 ---
 # <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a>Objekt ist nicht&#39;t Support aktuellen Gebietsschema (Visual Basic)
 Sie haben versucht, auf ein Objekt zuzugreifen, das die Gebietsschemaeinstellung für das aktuelle Projekt nicht unterstützt.  

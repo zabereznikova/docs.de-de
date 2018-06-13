@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523454"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Gewusst wie: Drehen, Spiegeln und Zerren von Bildern
 Sie können drehen, wider und ein Bild von Zielpunkte für die oberen linken, oberen rechten und unteren linken Ecke des ursprünglichen Bilds verzerren. Die drei Zielpunkte bestimmen eine affine Transformation, die ein Parallelogramm dem ursprungsabbild rechteckigen zuordnet.  

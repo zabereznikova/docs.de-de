@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520054"
 ---
 # <a name="c-expressions"></a>C#-Ausdrücke
 Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C#-Ausdrücke werden in Windows Workflow Foundation (WF) unterstützt. Neue in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] erstellte C#-Workflowprojekte mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] als Zielframework verwenden C#-Ausdrücke, und Visual Basic-Workflowprojeke verwenden Visual Basic-Ausdrücke. Vorhandene [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Workflowprojekte, die Visual Basic-Ausdrücke verwenden, können unabhängig von der Projektsprache zu [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] migieren und werden unterstützt. Dieses Thema bietet eine Übersicht über C#-Ausdrücke in [!INCLUDE[wf1](../../../includes/wf1-md.md)].  

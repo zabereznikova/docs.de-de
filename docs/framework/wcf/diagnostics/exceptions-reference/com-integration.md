@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469686"
 ---
 # <a name="com-integration"></a>COM+-Integration
 In diesem Thema sind alle Ausnahmen aufgeführt, die von der COM+Integration generiert werden.  

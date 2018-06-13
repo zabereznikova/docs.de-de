@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517572"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;Zier Splines in GDI +
 Ein Bézier-Spline ist eine von vier Punkte angegebene Kurve: zwei Endpunkte (p1 und p2) und die beiden Steuerpunkte (c1 und c2). Die Kurve beginnt bei p1 und p2 endet. Leitet die Kurve nicht über die Steuerpunkte, aber die Steuerpunkte als Magnete, bestimmte erfahren Sie, wie die Kurve herausziehen und Schätzung vor bzw. beeinflusst die Möglichkeit Steuerpunkte fungieren. Die folgende Abbildung zeigt eine Bézier-Kurve zusammen mit den End- und Steuerpunkte.  

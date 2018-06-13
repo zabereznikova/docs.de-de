@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572839"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Eingaben für die XslCompiledTransform-Klasse
 Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode akzeptiert drei Eingabetypen für das Quelldokument: ein Objekt, das die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle implementiert, ein <xref:System.Xml.XmlReader>-Objekt, das das Quelldokument liest, oder einen Zeichenfolgen-URI.  

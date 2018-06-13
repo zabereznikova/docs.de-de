@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571660"
 ---
 # <a name="unsealed-classes"></a>Unversiegelte Klassen
 Versiegelte Klassen können nicht vererbt werden, aus, und sie verhindern, dass Erweiterungen. Im Gegensatz dazu werden Klassen, die vom geerbt werden können, nicht versiegelte Klassen bezeichnet.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1a11c0b697a32b184a2c4a60c2f2c88a4b47aaf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451535"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables-Schnittstelle
 Stellt Methoden zum Speichern und Abrufen von Metadateninformationen in Tabellen bereit.  

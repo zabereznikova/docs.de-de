@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523383"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Netzwerkfunktionen in Windows Forms-Anwendungen
 .NET Framework stellt Klassen für die Web Pages anzeigen, Herunterladen von Webinhalten, Interaktion mit File Transfer Protocol (FTP) Sites und Verwenden von Webdiensten, die Dies erleichtert die Netzwerk-Funktionalität in Ihrer Anwendung integrieren. Die folgenden Ressourcen zeigt Ihnen die networking-Technologien von .NET Framework und wie Sie sie in Windows Forms integrieren können.  

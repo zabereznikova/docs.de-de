@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569888"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Herausnehmen und Entfernen von Zeichen aus Zeichenfolgen in .NET
 Wenn Sie einen Satz in einzelne Wörter auflösen, erhalten Sie möglicherweise Wörter mit Leerzeichen (auch als Leerräume bezeichnet) auf beiden Seiten des jeweiligen Wortes. In diesem Fall können Sie eine der Entfernungsmethoden aus der **System.String**-Klasse verwenden, um an einer bestimmten Position der Zeichenfolge eine beliebige Anzahl von Leerzeichen oder anderen Zeichen zu entfernen. In der folgenden Tabelle sind die verfügbaren Entfernungsmethoden aufgeführt.  

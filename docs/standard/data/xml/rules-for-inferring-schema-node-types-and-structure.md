@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578234"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regeln für Rückschlussschemaknotentypen und Struktur
 In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem XML-Dokument auftretenden Knotentypen in eine XSD-Struktur (XML Schema Definition) übersetzt.  
