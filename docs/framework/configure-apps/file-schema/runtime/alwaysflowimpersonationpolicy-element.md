@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752272"
 ---
 # <a name="ltalwaysflowimpersonationpolicygt-element"></a><span data-ttu-id="fc97d-102">&lt;AlwaysFlowImpersonationPolicy&gt; Element</span><span class="sxs-lookup"><span data-stu-id="fc97d-102">&lt;alwaysFlowImpersonationPolicy&gt; Element</span></span>
 <span data-ttu-id="fc97d-103">Gibt an, dass die Windows-Identität immer über asynchrone Punkte verläuft, unabhängig davon, wie der Identitätswechsel durchgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="fc97d-103">Specifies that the Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>  
