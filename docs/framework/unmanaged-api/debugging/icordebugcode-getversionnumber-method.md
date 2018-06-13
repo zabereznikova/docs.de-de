@@ -1,14 +1,6 @@
 ---
 title: ICorDebugCode::GetVersionNumber-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode.GetVersionNumber
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: c8e02518-679f-4e9f-8a28-ba4a89a3876f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6efcfa60a6254081ea28aeb9d51f41410ab5049e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a3d4609d79bb424cabc011122480f952f0f877f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411233"
 ---
-# <a name="icordebugcodegetversionnumber-method"></a><span data-ttu-id="f6718-102">ICorDebugCode::GetVersionNumber-Methode</span><span class="sxs-lookup"><span data-stu-id="f6718-102">ICorDebugCode::GetVersionNumber Method</span></span>
-<span data-ttu-id="f6718-103">Ruft ab, die mit eins beginnende Zahl, die die Version des Codes, die identifiziert "ICorDebugCode" darstellt.</span><span class="sxs-lookup"><span data-stu-id="f6718-103">Gets the one-based number that identifies the version of the code that this "ICorDebugCode" represents.</span></span>  
+# <a name="icordebugcodegetversionnumber-method"></a><span data-ttu-id="3f4ed-102">ICorDebugCode::GetVersionNumber-Methode</span><span class="sxs-lookup"><span data-stu-id="3f4ed-102">ICorDebugCode::GetVersionNumber Method</span></span>
+<span data-ttu-id="3f4ed-103">Ruft ab, die mit eins beginnende Zahl, die die Version des Codes, die identifiziert "ICorDebugCode" darstellt.</span><span class="sxs-lookup"><span data-stu-id="3f4ed-103">Gets the one-based number that identifies the version of the code that this "ICorDebugCode" represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f6718-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f6718-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f4ed-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3f4ed-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVersionNumber (  
@@ -46,21 +35,21 @@ HRESULT GetVersionNumber (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f6718-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f6718-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3f4ed-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3f4ed-105">Parameters</span></span>  
  `nVersion`  
- <span data-ttu-id="f6718-106">[out] Ein Zeiger auf die Versionsnummer des Codes.</span><span class="sxs-lookup"><span data-stu-id="f6718-106">[out] A pointer to the version number of the code.</span></span>  
+ <span data-ttu-id="3f4ed-106">[out] Ein Zeiger auf die Versionsnummer des Codes.</span><span class="sxs-lookup"><span data-stu-id="3f4ed-106">[out] A pointer to the version number of the code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f6718-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f6718-107">Remarks</span></span>  
- <span data-ttu-id="f6718-108">Die Versionsnummer wird jedes Mal erhöht, die ein Vorgang für bearbeiten und Fortfahren (EnC) für den Code ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="f6718-108">The version number is incremented each time an edit-and-continue (EnC) operation is performed on the code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f4ed-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3f4ed-107">Remarks</span></span>  
+ <span data-ttu-id="3f4ed-108">Die Versionsnummer wird jedes Mal erhöht, die ein Vorgang für bearbeiten und Fortfahren (EnC) für den Code ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="3f4ed-108">The version number is incremented each time an edit-and-continue (EnC) operation is performed on the code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f6718-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f6718-109">Requirements</span></span>  
- <span data-ttu-id="f6718-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f6718-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f4ed-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3f4ed-109">Requirements</span></span>  
+ <span data-ttu-id="3f4ed-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f4ed-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f6718-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f6718-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3f4ed-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f4ed-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f6718-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f6718-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3f4ed-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f4ed-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f6718-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6718-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3f4ed-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f4ed-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6718-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f6718-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3f4ed-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3f4ed-114">See Also</span></span>  
  

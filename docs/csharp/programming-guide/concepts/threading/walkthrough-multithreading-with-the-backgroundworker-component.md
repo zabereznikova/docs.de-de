@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339367"
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a><span data-ttu-id="5c048-102">Exemplarische Vorgehensweise: Multithreading mit der BackgroundWorker-Komponente (C#)</span><span class="sxs-lookup"><span data-stu-id="5c048-102">Walkthrough: Multithreading with the BackgroundWorker Component (C#)</span></span>
 <span data-ttu-id="5c048-103">In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie man eine Windows Forms-Multithreadanwendung erstellt, die in einer Textdatei nach dem Vorkommen eines Worts sucht.</span><span class="sxs-lookup"><span data-stu-id="5c048-103">This walkthrough demonstrates how to create a multithreaded Windows Forms application that searches a text file for occurrences of a word.</span></span> <span data-ttu-id="5c048-104">Folgendes wird veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="5c048-104">It demonstrates:</span></span>  

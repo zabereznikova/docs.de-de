@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325681"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a><span data-ttu-id="5b944-102">Trennzeichen für Dokumentationstags (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="5b944-102">Delimiters for Documentation Tags (C# Programming Guide)</span></span>
 <span data-ttu-id="5b944-103">Die Verwendung von XML-Dokumentkommentaren erfordert Trennzeichen, die dem Compiler angeben, wo ein Dokumentationskommentar beginnt und endet.</span><span class="sxs-lookup"><span data-stu-id="5b944-103">The use of XML doc comments requires delimiters, which indicate to the compiler where a documentation comment begins and ends.</span></span> <span data-ttu-id="5b944-104">Sie können die folgenden Arten von Trennzeichen mit den XML-Dokumentationstags verwenden:</span><span class="sxs-lookup"><span data-stu-id="5b944-104">You can use the following kinds of delimiters with the XML documentation tags:</span></span>  

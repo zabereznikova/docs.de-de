@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339675"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a><span data-ttu-id="db186-102">Generische Typen und Attribute (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="db186-102">Generics and Attributes (C# Programming Guide)</span></span>
 <span data-ttu-id="db186-103">Das Anwenden von Attributen auf generische Typen erfolgt in derselben Weise wie auf nicht generische Typen.</span><span class="sxs-lookup"><span data-stu-id="db186-103">Attributes can be applied to generic types in the same way as non-generic types.</span></span> <span data-ttu-id="db186-104">Weitere Informationen zum Anwenden von Attributen finden Sie unter [Attribute](../../../csharp/programming-guide/concepts/attributes/index.md).</span><span class="sxs-lookup"><span data-stu-id="db186-104">For more information on applying attributes, see [Attributes](../../../csharp/programming-guide/concepts/attributes/index.md).</span></span>  

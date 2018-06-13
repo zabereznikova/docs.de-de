@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325941"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a><span data-ttu-id="d3374-102">Vorgehensweise: Abrufen des Shallow-Werts eines Elements (C#)</span><span class="sxs-lookup"><span data-stu-id="d3374-102">How to: Retrieve the Shallow Value of an Element (C#)</span></span>
 <span data-ttu-id="d3374-103">In diesem Thema wird gezeigt, wie Sie den flachen Wert eines Elements abrufen.</span><span class="sxs-lookup"><span data-stu-id="d3374-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="d3374-104">Der flache Wert ist ausschließlich der Wert des jeweiligen Elements, im Gegensatz zum tiefen Wert, der die Werte aller Nachfolgerelemente enthält, die zu einer einzelnen Zeichenkette verkettet werden.</span><span class="sxs-lookup"><span data-stu-id="d3374-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  

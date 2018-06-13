@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322691"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a><span data-ttu-id="985e3-102">Zeigerkonvertierungen (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="985e3-102">Pointer Conversions (C# Programming Guide)</span></span>
 <span data-ttu-id="985e3-103">Die folgende Tabelle zeigt vordefinierte implizite Zeigerkonvertierungen.</span><span class="sxs-lookup"><span data-stu-id="985e3-103">The following table shows the predefined implicit pointer conversions.</span></span> <span data-ttu-id="985e3-104">Implizite Konvertierungen können in vielen Situationen auftreten, einschließlich methodenaufrufender und Zuweisungsansweisungen.</span><span class="sxs-lookup"><span data-stu-id="985e3-104">Implicit conversions might occur in many situations, including method invoking and assignment statements.</span></span>  

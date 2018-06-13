@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413279"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a><span data-ttu-id="49f06-102">ICorDebugEval2::NewParameterizedArray-Methode</span><span class="sxs-lookup"><span data-stu-id="49f06-102">ICorDebugEval2::NewParameterizedArray Method</span></span>
 <span data-ttu-id="49f06-103">Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.</span><span class="sxs-lookup"><span data-stu-id="49f06-103">Allocates a new array of the specified element type and dimensions.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339674"
 ---
 # <a name="manipulating-pointers-c-programming-guide"></a><span data-ttu-id="4ed30-102">Bearbeiten von Zeigern (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="4ed30-102">Manipulating Pointers (C# Programming Guide)</span></span>
 <span data-ttu-id="4ed30-103">Dieser Abschnitt enthält die folgenden Zeigeroperationen:</span><span class="sxs-lookup"><span data-stu-id="4ed30-103">This section includes the following pointer operations:</span></span>  

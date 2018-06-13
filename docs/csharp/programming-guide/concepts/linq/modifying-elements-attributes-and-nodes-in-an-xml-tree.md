@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321268"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a><span data-ttu-id="25508-102">Ändern von Elementen, Attributen und Knoten in einer XML-Struktur</span><span class="sxs-lookup"><span data-stu-id="25508-102">Modifying Elements, Attributes, and Nodes in an XML Tree</span></span>
 <span data-ttu-id="25508-103">Die folgende Tabelle enthält eine Zusammenstellung der Methoden und Eigenschaften, die Sie zum Ändern eines Elements, der untergeordneten Elemente dieses Elements oder seiner Attribute verwenden können.</span><span class="sxs-lookup"><span data-stu-id="25508-103">The following table summarizes the methods and properties that you can use to modify an element, its child elements, or its attributes.</span></span>  

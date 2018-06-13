@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766734"
 ---
 # <a name="entity-sql-reference"></a><span data-ttu-id="84fc9-102">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="84fc9-102">Entity SQL Reference</span></span>
 <span data-ttu-id="84fc9-103">Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-bezogene Referenzthemen.</span><span class="sxs-lookup"><span data-stu-id="84fc9-103">This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] reference topics.</span></span> <span data-ttu-id="84fc9-104">Dieses Thema fasst zusammen und gruppiert die [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Operatoren nach Kategorie.</span><span class="sxs-lookup"><span data-stu-id="84fc9-104">This topic summarizes and groups the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators by category.</span></span>  

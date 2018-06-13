@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340657"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a><span data-ttu-id="873ed-102">Vorgehensweise: Erstellen von signierten Friend-Assemblys (C#)</span><span class="sxs-lookup"><span data-stu-id="873ed-102">How to: Create Signed Friend Assemblies (C#)</span></span>
 <span data-ttu-id="873ed-103">Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen verwenden.</span><span class="sxs-lookup"><span data-stu-id="873ed-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="873ed-104">Beide Assemblys müssen starke Namen erhalten.</span><span class="sxs-lookup"><span data-stu-id="873ed-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="873ed-105">Obwohl beide Assemblys in diesem Beispiel die gleichen Schlüssel verwenden, können Sie unterschiedliche Schlüssel für zwei Assemblys verwenden.</span><span class="sxs-lookup"><span data-stu-id="873ed-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  

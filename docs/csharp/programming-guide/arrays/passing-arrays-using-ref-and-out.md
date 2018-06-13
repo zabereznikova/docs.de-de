@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313569"
 ---
 # <a name="passing-arrays-using-ref-and-out-c-programming-guide"></a><span data-ttu-id="48aec-102">Übergeben von Arrays mithilfe von "ref" und "out" (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="48aec-102">Passing Arrays Using ref and out (C# Programming Guide)</span></span>
 <span data-ttu-id="48aec-103">Wie alle [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md)-Parameter muss auch ein `out`-Parameter eines Arraytyps vor der Verwendung zugewiesen werden, d.h., er muss vom Aufgerufenen zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="48aec-103">Like all [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parameters, an `out` parameter of an array type must be assigned before it is used; that is, it must be assigned by the callee.</span></span> <span data-ttu-id="48aec-104">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="48aec-104">For example:</span></span>  
