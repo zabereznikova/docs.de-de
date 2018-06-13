@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591295"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Ausnahmebehandlung (Task Parallel Library)
 Nicht behandelte Ausnahmen, die von innerhalb einer Aufgabe ausgeführtem Benutzercode ausgelöst werden, werden zurück zum aufrufenden Thread geleitet. Hiervon ausgenommen sind bestimmte Szenarios, die weiter unten in diesem Thema beschrieben werden. Ausnahmen werden weitergegeben, wenn Sie die statische oder instanzbasierte <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>- oder <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` -Methode verwenden. Zur Behandlung dieser Ausnahmen schließen Sie den Aufruf in eine `try`/`catch`-Anweisung ein. Wenn eine Aufgabe das übergeordnete Element angefügter untergeordneter Aufgaben ist oder wenn Sie auf mehrere Aufgaben warten, können mehrere Ausnahmen ausgelöst werden.  

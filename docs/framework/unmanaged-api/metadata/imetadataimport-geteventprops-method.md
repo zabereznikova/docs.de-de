@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6ac1ecb73257782888c963082953ed243177a86b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448803"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps-Methode
 Ruft Metadateninformationen für das Ereignis durch das angegebene Ereignistoken, z. B. den deklarierenden Typ, hinzufügen und Entfernen von Entfernungsmethoden für Delegaten und alle Kennzeichnungen und sonstigen zugeordneten Daten dargestellt.  

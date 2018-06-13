@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449063"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager-Schnittstelle
 Enthält Methoden, die die common Language Runtime (CLR) arbeiten mit Aufgaben, die über den Host anstatt das standard-Betriebssystems threading oder Fiber-Funktionen zu ermöglichen.  

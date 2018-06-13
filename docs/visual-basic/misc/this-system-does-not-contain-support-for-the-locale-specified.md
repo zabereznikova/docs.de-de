@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639769"
 ---
 # <a name="this-system-does-not-contain-support-for-the-locale-specified"></a>Das System unterstützt das angegebene Gebietsschema nicht
 Sie versuchen, die `VbStrConv` -Enumeration zu verwenden, Ihr System unterstützt das angegebene Gebietsschema aber nicht.  

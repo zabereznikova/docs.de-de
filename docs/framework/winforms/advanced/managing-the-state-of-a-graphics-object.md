@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525118"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Verwalten des Zustands eines Graphics-Objekts
 Die <xref:System.Drawing.Graphics> Klasse ist der Kern von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Zum Zeichnen, erhalten Sie eine <xref:System.Drawing.Graphics> Objekt, dessen Eigenschaften festlegen und ihre Methoden aufrufen <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, usw.).  
