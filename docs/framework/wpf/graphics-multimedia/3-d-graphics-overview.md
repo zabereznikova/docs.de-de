@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558316"
 ---
 # <a name="3-d-graphics-overview"></a>Übersicht über 3D-Grafiken
 <a name="introduction"></a> Mit der [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Funktionalität in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] können Entwickler 3D-Grafiken jeweils in Markup- und prozeduralem Code zeichnen, umwandeln und animieren. Entwickler können [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]- und [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Grafiken kombinieren, um umfassende Steuerelemente zu erstellen, komplexe Illustrationen von Daten bereitstellen oder die Benutzererfahrung einer Anwendungsschnittstelle erweitern. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Unterstützung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist nicht dazu da, um eine vollständige Plattform zur Spieleentwicklung bereitzustellen. Dieses Thema bietet eine Übersicht über [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]-Funktionen im [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Grafiksystem.  

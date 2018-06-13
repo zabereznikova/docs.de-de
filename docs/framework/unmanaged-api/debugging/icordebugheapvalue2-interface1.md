@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5eb8fa52a3f599787edaa6c47c260f48aa143e61
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412148"
 ---
 # <a name="icordebugheapvalue2-interface1"></a>ICorDebugHeapValue2 Schnittstelle1
 Eine Erweiterung von ICorDebugHeapValue, Unterstützung für common Language Runtime (CLR) behandelt.  

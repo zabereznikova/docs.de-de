@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339393"
 ---
 # <a name="inside-a-c-program"></a>Einblicke in ein C#-Programm
 In diesem Abschnitt wird die allgemeine Struktur eines C#-Programms erläutert, einschließlich des herkömmlichen Programms „Hello, World!“ Beispiel.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557224"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Gewusst wie: Steuern, wann der TextBox-Text die Quelle aktualisiert
 Dieses Thema beschreibt, wie die <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Eigenschaft, um die zeitliche Steuerung von bindungsquellenaktualisierungen steuern. Das Thema verwendet die <xref:System.Windows.Controls.TextBox> Steuerelement als Beispiel.  

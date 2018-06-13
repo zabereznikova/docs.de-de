@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b458739db024bdbe8cf0fb5a12a5d5f508d332da
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441720"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem-Methode
 Fügt eine Funktion für die Ausführung der Warteschlange hinzu und gibt ein Objekt mit Daten, die von dieser Funktion verwendet werden. Die Funktion ausgeführt wird, wenn ein Thread verfügbar ist.  

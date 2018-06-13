@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358611"
 ---
 # <a name="oracle-sequences"></a>Oracle-Sequenzen
 Der .NET Framework-Datenanbieter für Oracle bietet Unterstützung für das Abrufen der vom Server generierten Oracle-Sequenz-Schlüsselwerte, nachdem mit <xref:System.Data.OracleClient.OracleDataAdapter> Einfügevorgänge ausgeführt wurden.  

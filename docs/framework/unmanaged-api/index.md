@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442916"
 ---
 # <a name="unmanaged-api-reference"></a>Referenz zur nicht verwalteten API
 Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwendungen mit verwaltetem Code verwendet werden können, wie Laufzeithosts, Compiler, Disassembler, Obfuskatoren, Debugger und Profiler.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d479e271c2cc4ebf9ea6ff349fd28bff37c3857
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436097"
 ---
 # <a name="iclrruntimehoststop-method"></a>ICLRRuntimeHost::Stop-Methode
 Beendet die Ausführung von Code von der common Language Runtime (CLR).  

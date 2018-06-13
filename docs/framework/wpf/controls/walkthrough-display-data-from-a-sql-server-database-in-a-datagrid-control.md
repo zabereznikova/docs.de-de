@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557458"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Exemplarische Vorgehensweise: Anzeigen von Daten aus einer SQL Server-Datenbank in einem DataGrid-Steuerelement
 In dieser exemplarischen Vorgehensweise können Sie auch Daten aus einer SQL Server-Datenbank abgerufen und Daten angezeigt werden, in einem <xref:System.Windows.Controls.DataGrid> Steuerelement. Sie verwenden das ADO.NET Entity Framework, um die Entitätsklassen erstellt wurden, die die Daten darstellen, und Verwenden von LINQ eine Abfrage schreiben, die die angegebenen Daten aus einer Entitätsklasse abruft.  

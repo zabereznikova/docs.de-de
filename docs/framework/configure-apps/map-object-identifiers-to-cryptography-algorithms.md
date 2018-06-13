@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756617"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen
 Digitale Signaturen stellen Sie sicher, dass die Daten nicht manipuliert werden, wenn es von einem Programm zu einem anderen gesendet wird. In der Regel wird die digitale Signatur durch Anwenden einer mathematischen Funktion mit dem Hashwert der zu signierenden Daten berechnet. Beim Formatieren eines Hashwert zu signierenden anfügen einige Algorithmen für digitale Signaturen ein ASN. 1-Objektbezeichner (OID) als Teil des Formatierungsvorgangs an. Die OID identifiziert den Algorithmus, mit dem der Hashwert berechnet wurde. Sie können die Algorithmen für Objektbezeichner die kryptografischen Mechanismen zur Verwendung von benutzerdefinierten Algorithmen erweitern zuordnen. Im folgende Beispiel wird gezeigt, wie einen neuen Hashalgorithmus Objekt-ID zugeordnet.  

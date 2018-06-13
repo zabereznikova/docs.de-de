@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352488"
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Windows Workflow Foundation-Konfigurationsschema
 Windows Workflow Foundation (WF)-Konfigurationselemente ermöglichen es Ihnen zu workflowanwendungen konfigurieren. Für eine Workflowanwendung können Sie unter anderem Nachverfolgung und Ablaufverfolgung konfigurieren. Weitere Informationen zur Nach- und Ablaufverfolgung finden Sie unter [Workflow Tracking and Tracing (Nachverfolgung und Ablaufverfolgung für Workflows)](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Für Workflow Services können Sie auch Windows Communication Foundation (WCF)-Konfigurationselemente. Weitere Details zur WCF finden Sie unter [WCF-Konfigurationsschema](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  

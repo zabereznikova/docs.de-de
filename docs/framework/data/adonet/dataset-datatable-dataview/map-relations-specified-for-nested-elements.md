@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756695"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind
 Es kann ein Schema enthalten eine **msdata: Relationship** Anmerkung, um die Zuordnung zwischen zwei beliebigen Elementen im Schema explizit anzugeben. Die zwei Elemente im angegebenen **msdata: Relationship** können im Schema geschachtelt sein, aber nicht unbedingt sein. Der Zuordnungsprozess verwendet **msdata: Relationship** im Schema für den primären Schlüssel/Fremdschlüssel-Beziehung zwischen den beiden Spalten zu generieren.  

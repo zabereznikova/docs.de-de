@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743094"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Gewusst-wie-Themen zu Anwendungsdomänen und Assemblys
 Die folgenden Abschnitte enthalten Links zu allen Themen zur Vorgehensweise in der Begriffsdokumentation zum Programmieren mit Anwendungsdomänen und Assemblys.  

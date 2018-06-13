@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756604"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>"AcceptChanges" und "RejectChanges"
 Nach der Überprüfung der Genauigkeit von Änderungen an Daten in eine <xref:System.Data.DataTable>, können Sie akzeptieren, die Änderungen mithilfe der <xref:System.Data.DataRow.AcceptChanges%2A> Methode der <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, oder <xref:System.Data.DataSet>, festzulegen der **aktuelle** Zeile Werte verwendet werden die **ursprünglichen** Werte und legt die **RowState** Eigenschaft **Unchanged**. Übernehmen oder Zurückweisen von Änderungen löscht jegliche **RowError** Informationen und legt die **HasErrors** Eigenschaft **"false"**. Das Übernehmen oder Zurückweisen von Änderungen kann sich auch auf das Update von Daten in der Datenquelle auswirken. Weitere Informationen finden Sie unter [Aktualisieren von Datenquellen mit "DataAdapters"](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  

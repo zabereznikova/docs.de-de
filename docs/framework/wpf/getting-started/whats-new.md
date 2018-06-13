@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558095"
 ---
 # <a name="what39s-new-in-wpf-version-45"></a>Neues in WPF Version 4.5
 <a name="introduction"></a> Dieses Thema enthält Informationen zu neuen und verbesserten Features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Version 4.5.  

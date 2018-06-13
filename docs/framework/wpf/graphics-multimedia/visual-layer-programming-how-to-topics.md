@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561975"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Gewusst-wie-Themen zu visueller Ebenenprogrammierung
 Die Themen in diesem Abschnitt veranschaulichen, wie die visuelle Ebene für Treffertests und Low-Level-Komposition verwendet wird.  

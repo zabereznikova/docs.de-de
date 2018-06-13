@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743250"
 ---
 # <a name="configuring-cryptography-classes"></a>Konfigurieren kryptografischer Klassen
 Die [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Computeradministratoren so konfigurieren Sie die standardmäßige kryptografische Algorithmen und Algorithmus-Implementierungen, die .NET Framework und entsprechend geschriebene Anwendungen verwenden können.  Beispielsweise ein Unternehmen, das über eine eigene Implementierung eines kryptografischen Algorithmus kann als, dass diese Implementierung standardanwendung anstelle der Implementierung, die im Lieferumfang der [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Zwar verwaltete Anwendungen, die Kryptografie verwenden immer auswählen können, um explizit an eine bestimmte Implementierung zu binden, wird empfohlen, sie kryptografische Objekte mithilfe der CryptoAPI Konfigurationssystem erstellen.  

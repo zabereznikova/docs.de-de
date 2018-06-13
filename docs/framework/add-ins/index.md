@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744524"
 ---
 # <a name="add-ins-and-extensibility"></a>Add-Ins und Erweiterbarkeit
 <a name="top"></a> Add-Ins stellen erweiterte Funktionen oder Dienste für eine Hostanwendung bereit. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt ein Programmiermodell bereit, mit dem Entwickler Add-Ins entwickeln und in ihrer Hostanwendung aktivieren können. Zu diesem Zweck erstellt das Modell eine Kommunikationspipeline zwischen dem Host und dem Add-In. Das Modell wird implementiert, indem die Typen in den Namespaces <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>und <xref:System.AddIn.Contract> verwendet werden.  

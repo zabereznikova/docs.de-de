@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558056"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
 <a name="introduction"></a> Ein <xref:System.Windows.Controls.ControlTemplate> gibt an, die visuelle Struktur und das visuelle Verhalten eines Steuerelements. Sie können die Darstellung eines Steuerelements anpassen, indem Sie ein neues zuweisen <xref:System.Windows.Controls.ControlTemplate>. Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, ersetzen Sie die Darstellung von einem vorhandenen Steuerelement, ohne seine Funktionalität zu ändern. Z. B. möglich die Schaltflächen in der Anwendung anstelle der quadratischen Standardform round, aber die Schaltfläche "" weiterhin löst die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  

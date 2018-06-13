@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556691"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Gewusst wie: Binden an XDocument, XElement oder LINQ für XML-Abfrageergebnisse
 Dieses Beispiel veranschaulicht das Binden von XML-Daten in eine <xref:System.Windows.Controls.ItemsControl> mit <xref:System.Xml.Linq.XDocument>.  

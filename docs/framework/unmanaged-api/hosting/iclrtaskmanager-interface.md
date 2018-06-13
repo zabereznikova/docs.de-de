@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 14c2c9b70ac2e57983ea4b16772add6a1dff5ff4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438066"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager-Schnittstelle
 Enthält Methoden, die dem Host explizit anfordern, die die common Language Runtime (CLR) ermöglichen, Erstellen eines neuen Tasks, die aktuell ausgeführte Aufgabe erhalten und die geografische Sprache und Kultur für den Task festlegen.  

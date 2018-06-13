@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557393"
 ---
 # <a name="toolbar-overview"></a>Übersicht überToolBar
 <xref:System.Windows.Controls.ToolBar> -Steuerelemente sind Container für eine Gruppe von Befehlen oder Steuerelemente, die in der Regel in ihrer Funktion miteinander verbunden sind. Ein <xref:System.Windows.Controls.ToolBar> enthält in der Regel Schaltflächen, die Befehle aufrufen.  

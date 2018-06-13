@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356602"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Prozessinternes spezifisches Verhalten von ADO.NET in SQL Server
 Es gibt vier wesentliche funktionale Erweiterungen für ADO.NET, die sich im <xref:Microsoft.SqlServer.Server>-Namespace befinden und spezifisch für die prozessinterne Verwendung sind: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext> und <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  

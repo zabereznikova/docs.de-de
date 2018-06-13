@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764410"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>Beispiele für die methodenbasierte Abfragesyntax: Filtern
 In den Beispielen in diesem Thema wird gezeigt, wie mithilfe der `Where` und `Where…Contains` Methoden zum Abfragen der [AdventureWorks Sales-Modell](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) mit der methodenbasierten Abfragesyntax. Beachten Sie, wo...`Contains` kann nicht verwendet werden, als Teil einer [kompilierte Abfrage](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  

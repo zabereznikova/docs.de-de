@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356858"
 ---
 # <a name="transaction-management-escalation"></a>Eskalation der Transaktionsverwaltung
 Windows umfasst eine Reihe von Diensten und Modulen, die zusammen einen Transaktions-Manager bilden. Unter der Eskalation der Transaktionsverwaltung wird die Übertragung einer Transaktion von einer Komponente zu einer anderen Komponente des Transaktions-Managers verstanden.  

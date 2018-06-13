@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d7120e092b422b755ecbde9e48236b42e67636fc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414937"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>ICorDebugManagedCallback::Break-Methode
 Benachrichtigt den Debugger, wenn eine <xref:System.Reflection.Emit.OpCodes.Break> -Anweisung im Codestream ausgeführt wird.  

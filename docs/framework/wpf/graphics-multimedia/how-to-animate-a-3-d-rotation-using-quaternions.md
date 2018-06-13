@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556938"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>Gewusst wie: Animieren einer 3D-Drehung mit Quaternionen
 In diesem Beispiel wird gezeigt, wie eine Drehung ein 3D-Objekt mit Quaternionen animiert wird.  

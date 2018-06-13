@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763370"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Gewusst wie: Aufrufen modelldefinierter Funktionen als Objektmethoden
 In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode für ein <xref:System.Data.Objects.ObjectContext>-Objekt oder als statische Methode für eine benutzerdefinierte Klasse aufgerufen wird. Ein *modelldefinierte Funktion* ist eine Funktion, die im konzeptionellen Modell definiert ist. Die folgenden Prozeduren beschreiben, wie diese Funktionen direkt aufgerufen werden, anstatt sie von LINQ to Entities-Abfragen aufzurufen. Informationen zum Aufrufen modelldefinierter Funktionen in LINQ to Entities-Abfragen finden Sie unter [Vorgehensweise: Call Model-Defined-Funktionen in Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  

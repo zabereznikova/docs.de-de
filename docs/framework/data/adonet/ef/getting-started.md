@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756474"
 ---
 # <a name="getting-started-entity-framework"></a>Erste Schritte (Entity Framework)
 Die [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt datenorientierte Anwendungen und Dienste, und bietet eine Plattform für das Programmieren für Daten, die die Ebene der Abstraktion, die von der logischen relationalen Ebene auf die konzeptionelle Ebene auslöst. Da Entwickler nun auf einer höheren Abstraktionsebene mit Daten arbeiten können, unterstützt das [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Code, der von Datenspeichermodulen oder relationalen Schemas unabhängig ist. Weitere Informationen finden Sie unter [Übersicht über Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).  

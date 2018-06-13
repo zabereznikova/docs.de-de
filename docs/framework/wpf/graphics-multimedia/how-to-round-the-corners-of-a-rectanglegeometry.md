@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561640"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Gewusst wie: Abrunden der Ecken einer "RectangleGeometry"
 Um das Abrunden der Ecken des eine <xref:System.Windows.Media.RectangleGeometry>legen seine <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> und <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> Eigenschaften auf einen Wert größer als 0 (null). Je größer die Werte, desto runder die Ecken des Rechtecks.  
