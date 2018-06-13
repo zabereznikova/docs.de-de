@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646551"
 ---
 # <a name="control-flow-in-visual-basic"></a>Ablaufsteuerung in Visual Basic
 Verbleibt unkontrolliert; ein Programm durchläuft seine Anweisungen von Anfang bis Ende. Einige sehr einfache Programme können nur mit diesem unidirektionalen Ablauf geschrieben werden. Ein Großteil der Leistung und der Hilfsprogramme einer Programmiersprache stammt jedoch von der Fähigkeit, die Ausführungsreihenfolge mit Steuerungsanweisungen und Schleifen zu ändern.  

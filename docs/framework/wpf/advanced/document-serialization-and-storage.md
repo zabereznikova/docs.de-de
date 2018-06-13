@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546680"
 ---
 # <a name="document-serialization-and-storage"></a>Serialisierung und Speicherung von Dokumenten
 Microsoft .NET Framework stellt eine leistungsstarke Umgebung zum Erstellen und Anzeigen von Dokumenten mit hoher Qualität.  Verbesserte Funktionen, die-Dokumente und Flow-Dokumente, erweiterte unterstützen Anzeigen von Steuerelementen mit leistungsstarke 2D kombiniert, und grafische 3D-Funktionen dauern .NET Framework-Anwendungen auf eine neue Ebene der Qualität und benutzerfreundlichkeit.  Eine speicherinterne Darstellung eines Dokuments flexibel verwalten können, ist ein wichtiges Feature von .NET Framework und effizient zu speichern und Laden Dokumente aus einem Datenspeicher ist beinahe jede Anwendung erforderlich.  Der Prozess der Konvertierung eines Dokuments aus einer speicherinternen Darstellung in einen externen Datenspeicher wird als Serialisierung bezeichnet.  Der umgekehrte Vorgang des Lesens eines Datenspeichers und Neuerstellens der ursprünglichen Instanz im Speicher wird Deserialisierung genannt.  

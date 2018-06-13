@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649047"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Gewusst wie: Aufrufen einer Prozedur, die keinen Wert zurückgibt (Visual Basic)
 Ein `Sub` Prozedur wird einen Wert nicht an den aufrufenden Code zurückgegeben. Sie rufen es explizit mit einer eigenständigen aufrufende Anweisung. Sie können keine es einfach mit seinen Namen innerhalb eines Ausdrucks aufrufen.  

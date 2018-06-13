@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213437"
 ---
 # <a name="by-c-reference"></a>by (C#-Referenz)
 Das Kontextschlüsselwort `by` wird in der `group`-Klausel in einem Abfrageausdruck verwendet, um anzugeben, wie die zurückgegebenen Elemente gruppiert werden sollen. Weitere Informationen finden Sie unter [group-Klausel](../../../csharp/language-reference/keywords/group-clause.md).  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525141"
 ---
 # <a name="groupbox-control-windows-forms"></a>GroupBox-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.GroupBox> Steuerelemente werden verwendet, um eine erkennbare Gruppierung für andere Steuerelemente bereitstellen. Normalerweise verwenden Sie Gruppenfelder darin, um eine Form von Funktion zu unterteilen. Sie möglicherweise z. B. ein Bestellformular, der angibt, mailing Optionen wie z. B. welche über Nacht Netzbetreiber verwenden. Gruppieren alle Optionen in einem Gruppenfeld erhält der Benutzer, einen logischen visuellen Hinweis auf. Die <xref:System.Windows.Forms.GroupBox> Steuerelement ähnelt der <xref:System.Windows.Forms.Panel> steuern; allerdings nur die <xref:System.Windows.Forms.GroupBox> -Steuerelement zeigt eine Beschriftung und nur die <xref:System.Windows.Forms.Panel> Steuerelement Bildlaufleisten haben kann.  

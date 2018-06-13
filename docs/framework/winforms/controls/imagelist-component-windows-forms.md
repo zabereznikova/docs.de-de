@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532937"
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList-Komponente (Windows Forms)
 Die `ImageList`-Komponente in Windows Forms wird zum Speichern von Bildern verwendet, die dann von Steuerelementen angezeigt werden können. Mit einer Bildliste können Sie Code für einen einzelnen, konsistenten Katalog von Bildern schreiben.  

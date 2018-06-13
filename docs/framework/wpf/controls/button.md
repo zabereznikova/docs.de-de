@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551699"
 ---
 # <a name="button"></a>Schaltfläche
 Ein <xref:System.Windows.Controls.Button> Steuerelement auf Benutzereingaben reagiert, die über eine Maus, Tastatur, Stift, oder andere Eingabegerät und löst eine <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis. Ein <xref:System.Windows.Controls.Button> ist eine grundlegende [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Komponente, die einfachen Inhalt, z. B. Text, enthalten und kann auch enthalten komplexen Inhalt, z. B. Bilder und <xref:System.Windows.Controls.Panel> Steuerelemente.  

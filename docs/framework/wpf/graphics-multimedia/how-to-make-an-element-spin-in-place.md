@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562510"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a>Gewusst wie: Drehen von Elementen ohne Positionsänderung
 Dieses Beispiel zeigt, wie Sie ein Element mit spin eine <xref:System.Windows.Media.RotateTransform> und ein <xref:System.Windows.Media.Animation.DoubleAnimation>.  

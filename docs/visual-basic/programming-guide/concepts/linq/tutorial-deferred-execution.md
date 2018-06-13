@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645875"
 ---
 # <a name="tutorial-deferred-execution-visual-basic"></a>Lernprogramm: Verzögerte Ausführung (Visual Basic)
 Dieses Lernprogramm zeigt das Verarbeitungsmodell für das Verketten von Abfragen. Das Verketten von Abfragen ist ein wichtiger Bestandteil des Schreibens funktionaler Transformationen. Es ist daher wichtig, genau zu verstehen, wie verkettete Abfragen funktionieren.  

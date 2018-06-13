@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647929"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Gewusst wie: Zuweisen eines Arrays zu einem anderen Array (Visual Basic)
 Da Arrays Objekte sind, können Sie sie in zuweisungsanweisungen wie andere Objekttypen. Eine Arrayvariable enthält einen Zeiger auf die Daten enthalten sind, die die Elemente des Arrays und die Informationen Rang und die Länge und eine Zuordnung kopiert nur this-Zeiger.  

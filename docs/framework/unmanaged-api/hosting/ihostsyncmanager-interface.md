@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa9f039cb7eaa7ccd22bad36098c00a697d818d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443972"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager-Schnittstelle
 Enthält Methoden, mit die die common Language Runtime (CLR) Synchronisierungsprimitive erstellen, durch den Host anstelle der Win32-Synchronisierungsfunktionen aufrufen können.  

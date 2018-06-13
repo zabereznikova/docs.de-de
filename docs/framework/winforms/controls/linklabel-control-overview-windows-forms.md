@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535011"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>Übersicht über das LinkLabel-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.LinkLabel> Steuerelement ermöglicht es Ihnen, Windows Forms-Anwendungen Weblinks hinzu. Können Sie die <xref:System.Windows.Forms.LinkLabel> Control für alle Elemente, die Sie verwenden können, die <xref:System.Windows.Forms.Label> für steuern; Sie können auch Teile des Texts als Link in einer Datei, einem Ordner oder einer Webseite festlegen.  

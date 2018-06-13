@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526542"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker-Steuerelement (Windows Forms)
 Windows Forms `DateTimePicker` Control ermöglicht dem Benutzer die Auswahl eines einzelnen Elements aus einer Liste von Datums- oder Zeitangaben. Zur Darstellung eines Datums verwendet, wird in zwei Teilen: einer Dropdownliste mit einem Datum dargestellt in Text- und ein Raster, das angezeigt wird, wenn Sie auf den Dropdownpfeil neben der Liste klicken.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527222"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Integrieren von Benutzerhilfe in Windows Forms
 Ein Aspekt unerlässlich, aber häufig übersehene Erstellen von Windows-basierten Anwendungen ist das Hilfesystem auf, weil es sich handelt, in dem Benutzer um Unterstützung zu erhalten, in Zeiten Verwirrung aktivieren. Windows Forms unterstützen zwei verschiedene Arten von Hilfe, die [HelpProvider-Komponente](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). Die erste Möglichkeit besteht, zeigen den Benutzer zu einer Hilfedatei HTML-oder HTML-Hilfe-1. *x* oder höher vorliegen. Die zweite kann anzeigen, kurze "Was This is"-Geben Sie die Hilfe auf einzelne Steuerelemente Dies ist besonders für Dialogfelder. Beide Arten von Hilfe können im selben Formular verwendet werden.  

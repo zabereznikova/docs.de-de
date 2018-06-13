@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534104"
 ---
 # <a name="how-to-use-a-control-rendering-class"></a>Gewusst wie: Verwenden einer Steuerelementwiedergabeklasse
 In diesem Beispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ComboBoxRenderer> Klasse, um den Dropdown Pfeil einem Kombinationsfeld-Steuerelement gerendert werden. Das Beispiel besteht das <xref:System.Windows.Forms.Control.OnPaint%2A> Methode eines einfachen benutzerdefinierten Steuerelements. Die <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> Eigenschaft wird verwendet, um zu bestimmen, ob in den Clientbereich des Anwendungsfenster visuelle Stile aktiviert sind. Wenn visuelle Stile aktiviert sind, gibt die <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> Methode rendert das Dropdown-Pfeil mit visuellen Stilen; andernfalls die <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> Methode rendert das Dropdown-Pfeil in der klassischen Windows-Stil.  

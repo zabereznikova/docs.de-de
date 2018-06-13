@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644394"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Einführung in COM-Interop (Visual Basic)
 Das Component Object Model (COM) können ein Objekt, dessen Funktionalität mit anderen Komponenten und zum Hosten von Anwendungen verfügbar zu machen. COM-Objekte für das Windows-Programmierung für viele Jahre grundlegender Wichtigkeit wurden, Wiederherstellungsfunktionen Anwendungen für die common Language Runtime (CLR) bietet zahlreiche Vorteile.  

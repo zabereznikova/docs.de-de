@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647263"
 ---
 # <a name="structures-visual-basic"></a>Strukturen (Visual Basic)
 Ein *Struktur* ist eine Verallgemeinerung des benutzerdefinierten Typs (UDT) von früheren Versionen von Visual Basic unterstützt. Zusätzlich zu Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen. Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können einzelne Zugriffsebenen für jedes Feld deklarieren.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5164e85ecc97de99dcc493c2ba5efa8fc3468471
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443179"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo-Struktur
 Enthält Informationen über die `Event_MDAFired` -Ereignis, das die Erstellung von ein Assistent für verwaltetes Debuggen (MDA) ausgelöst.  

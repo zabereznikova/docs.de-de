@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647195"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Typkonvertierung in Visual Basic
 Der Prozess zum Ändern eines Werts von einem Datentyp in einen anderen Typ wird aufgerufen, *Konvertierung*. Konvertierungen sind entweder *erweiternde* oder *einschränkende*, abhängig von der Datenkapazität der beteiligten Typen. Außerdem sind Sie *implizite* oder *explizite*, abhängig von der Syntax in den Quellcode einfügen.  

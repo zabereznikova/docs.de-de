@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655188"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Grundlagen der Vererbung (Visual Basic)
 Die `Inherits` Anweisung wird verwendet, um eine neue Klasse mit dem Namen zu deklarieren einer *abgeleitete Klasse*basierend auf einer vorhandenen Klasse, die als bezeichnet eine *Basisklasse*. Abgeleitete Klassen erben, und erweitern können, die Eigenschaften, Methoden, Ereignisse, Felder und Konstanten, die in der Basisklasse definiert. Der folgende Abschnitt beschreibt einige der Regeln für die Vererbung, und der Modifizierer, die Sie verwenden können, so ändern Sie die Möglichkeit Klassen erben oder geerbt werden:  

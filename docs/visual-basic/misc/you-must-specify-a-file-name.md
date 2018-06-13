@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641006"
 ---
 # <a name="you-must-specify-a-file-name"></a>Sie müssen einen Dateinamen angeben.
 Sie haben versucht, einen Vorgang auszuführen, z. B. das Verschieben oder Kopieren einer Datei, für die ein Dateiname angegeben werden muss.  

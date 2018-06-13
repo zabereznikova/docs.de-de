@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531263"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Gewusst wie: Ändern der Abstände und der Ausrichtung der ToolStrip-Elemente in Windows Forms
 Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstützt Layoutfunktionen, z. B. das Ändern der Größe, des Abstands des <xref:System.Windows.Forms.ToolStripItem> steuert im Verhältnis zueinander, die Anordnung der Steuerelemente auf die <xref:System.Windows.Forms.ToolStrip>, und der Abstand der Steuerelemente relativ zu den <xref:System.Windows.Forms.ToolStrip>.  

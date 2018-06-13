@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642063"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>Der Ordner kann nicht erstellt werden, da eine Datei mit dem gleichen Pfad bereits vorhanden ist.
 Es wurde versucht, ein Verzeichnis zu erstellen, doch mit diesem Pfad ist bereits eine Datei vorhanden. Ursache ist möglicherweise eine fehlerhafte Pfadanalyse, besonders bei Verwendung von relativen Pfaden.  

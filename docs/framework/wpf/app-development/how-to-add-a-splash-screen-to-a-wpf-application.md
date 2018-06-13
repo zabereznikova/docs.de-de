@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547000"
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Gewusst wie: Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung
 In diesem Thema wird gezeigt, wie ein Startfenster hinzufügen oder *Begrüßungsbildschirm*, um eine Windows Presentation Foundation (WPF)-Anwendung.  

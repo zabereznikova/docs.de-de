@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550123"
 ---
 # <a name="contextmenu"></a>ContextMenu
 Die <xref:System.Windows.Controls.ContextMenu> ermöglicht es einem Steuerelement zum Anzeigen einer <xref:System.Windows.Controls.Menu> , ist nur für den Kontext des Steuerelements. In der Regel die <xref:System.Windows.Controls.ContextMenu> wird verfügbar gemacht, der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] über die rechte Maustaste gedrückt oder über die Tastatur Menüschaltfläche.  

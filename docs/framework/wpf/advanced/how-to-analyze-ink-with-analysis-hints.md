@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543601"
 ---
 # <a name="how-to-analyze-ink-with-analysis-hints"></a>Gewusst wie: Analysieren von Freihandeingaben mit Analysehinweisen
 Ein [System.Windows.Ink.AnalysisHintNode](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode(v=vs.100).aspx) bietet einen Hinweis für die [System.Windows.Ink.InkAnalyzer](https://msdn.microsoft.com/library/system.windows.ink.inkanalyzer(v=vs.100).aspx) , dem er zugeordnet ist.  Der Hinweis gilt für den vom angegebenen Bereich der [System.Windows.Ink.ContextNode.Location%2A](https://msdn.microsoft.com/library/system.windows.ink.contextnode.location(v=vs.100).aspx) Eigenschaft von der [System.Windows.Ink.AnalysisHintNode](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode(v=vs.100).aspx) und stellt zusätzlichen Kontext, um die Freihand-Analyzer Verbessern Sie die Genauigkeit der Erkennung. Die [System.Windows.Ink.InkAnalyzer](https://msdn.microsoft.com/library/system.windows.ink.inkanalyzer(v=vs.100).aspx) gilt diese Kontextinformationen beim Analysieren von Freihandeingaben aus innerhalb der Hinweis Bereichs abgerufen werden.  

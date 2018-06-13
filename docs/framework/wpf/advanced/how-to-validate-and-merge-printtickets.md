@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548492"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Gewusst wie: Überprüfen und Zusammenführen von PrintTickets
 Die [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) enthält, die flexibel und erweiterbar sind <xref:System.Printing.PrintCapabilities> und <xref:System.Printing.PrintTicket> Elemente. Zählt die Funktionen von einem Druckgerät erstere auf und gibt der zweite Wert an, wie das Gerät für diese Funktionen in Bezug auf eine bestimmte Sequenz von Dokumenten, einzelnes Dokument oder eine einzelne Seite verwenden, sollten.  
