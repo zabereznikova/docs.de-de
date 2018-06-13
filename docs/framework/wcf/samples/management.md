@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809965"
 ---
 # <a name="management"></a><span data-ttu-id="8a068-102">Verwaltung</span><span class="sxs-lookup"><span data-stu-id="8a068-102">Management</span></span>
 <span data-ttu-id="8a068-103">Dieser Abschnitt enthält Beispiele für die Verwaltung von Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="8a068-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) management.</span></span>  

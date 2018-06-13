@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809302"
 ---
 # <a name="custom-lifetime"></a><span data-ttu-id="62c05-102">Benutzerdefinierte Lebensdauer</span><span class="sxs-lookup"><span data-stu-id="62c05-102">Custom Lifetime</span></span>
 <span data-ttu-id="62c05-103">Dieses Beispiel veranschaulicht, wie so schreiben Sie eine Windows Communication Foundation (WCF)-Erweiterung, um benutzerdefinierte Lebensdauerdienste für freigegebene Instanzen von WCF-Dienst bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="62c05-103">This sample demonstrates how to write a Windows Communication Foundation (WCF) extension to provide custom lifetime services for shared WCF service instances.</span></span>  

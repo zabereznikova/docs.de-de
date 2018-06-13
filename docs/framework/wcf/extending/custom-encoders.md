@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809276"
 ---
 # <a name="custom-encoders"></a><span data-ttu-id="5c31f-102">Benutzerdefinierte Encoder</span><span class="sxs-lookup"><span data-stu-id="5c31f-102">Custom Encoders</span></span>
 <span data-ttu-id="5c31f-103">In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.</span><span class="sxs-lookup"><span data-stu-id="5c31f-103">This topic discusses how to create custom encoders.</span></span>  

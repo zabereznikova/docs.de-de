@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655283"
 ---
 # <a name="extension-methods-visual-basic"></a><span data-ttu-id="0c9b2-102">Erweiterungsmethoden (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c9b2-102">Extension Methods (Visual Basic)</span></span>
 <span data-ttu-id="0c9b2-103">Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefinierten Funktionen, Datentypen, die bereits definiert sind, ohne dass einen neuen abgeleiteten Typ erstellt.</span><span class="sxs-lookup"><span data-stu-id="0c9b2-103">Extension methods enable developers to add custom functionality to data types that are already defined without creating a new derived type.</span></span> <span data-ttu-id="0c9b2-104">Erweiterungsmethoden ermöglichen das Schreiben einer Methode, die aufgerufen werden können, als wäre sie eine des vorhandenen Typs Instanzenmethode.</span><span class="sxs-lookup"><span data-stu-id="0c9b2-104">Extension methods make it possible to write a method that can be called as if it were an instance method of the existing type.</span></span>  

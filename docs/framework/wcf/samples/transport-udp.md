@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808415"
 ---
 # <a name="transport-udp"></a><span data-ttu-id="21cee-102">Transport: UDP</span><span class="sxs-lookup"><span data-stu-id="21cee-102">Transport: UDP</span></span>
 <span data-ttu-id="21cee-103">Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und Multicast als benutzerdefinierte Windows Communication Foundation (WCF)-Transport implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="21cee-103">The UDP Transport sample demonstrates how to implement UDP unicast and multicast as a custom Windows Communication Foundation (WCF) transport.</span></span> <span data-ttu-id="21cee-104">Im Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in WCF anhand des kanalframeworks und WCF-best Practices beschrieben.</span><span class="sxs-lookup"><span data-stu-id="21cee-104">The sample describes the recommended procedure for creating a custom transport in WCF, by using the channel framework and following WCF best practices.</span></span> <span data-ttu-id="21cee-105">Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="21cee-105">The steps to create a custom transport are as follows:</span></span>  

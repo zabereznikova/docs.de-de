@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809156"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a><span data-ttu-id="96b7f-102">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="96b7f-102">Using Tracing to Troubleshoot Your Application</span></span>
 <span data-ttu-id="96b7f-103">Dieser Abschnitt enthält verschiedene Themen, in denen beschrieben wird, wie Sie Anwendungsfehler mit der Ablaufverfolgung beheben.</span><span class="sxs-lookup"><span data-stu-id="96b7f-103">This section contains various topics that describe how you can use tracing to troubleshoot your application.</span></span>  

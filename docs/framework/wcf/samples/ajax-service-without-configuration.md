@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809185"
 ---
 # <a name="ajax-service-without-configuration"></a><span data-ttu-id="e34fe-102">AJAX-Dienst ohne Konfiguration</span><span class="sxs-lookup"><span data-stu-id="e34fe-102">AJAX Service Without Configuration</span></span>
 <span data-ttu-id="e34fe-103">Dieses Beispiel veranschaulicht die Windows Communication Foundation (WCF) verwenden, um einen grundlegenden (ASP.NET Asynchronous JavaScript and XML (AJAX)-Dienst (ein Dienst, die Sie mithilfe von JavaScript-Codes über einen Webbrowserclient zugreifen können) zu erstellen, ohne eine Konfiguration Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="e34fe-103">This sample demonstrates how to use Windows Communication Foundation (WCF) to create a basic ASP.NET Asynchronous JavaScript and XML (AJAX) service (a service that you can access by using JavaScript code from a Web browser client) without using any configuration settings.</span></span> <span data-ttu-id="e34fe-104">Der Dienst verwendet eine besondere Syntax in der .svc-Datei zur automatischen Aktivierung eines AJAX-Endpunkts.</span><span class="sxs-lookup"><span data-stu-id="e34fe-104">The service uses special syntax in the .svc file to automatically enable an AJAX endpoint.</span></span>  

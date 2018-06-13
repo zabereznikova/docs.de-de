@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809449"
 ---
 # <a name="basic"></a><span data-ttu-id="343e8-102">Standard</span><span class="sxs-lookup"><span data-stu-id="343e8-102">Basic</span></span>
 <span data-ttu-id="343e8-103">Dieser Abschnitt enthält Teile von Beispielen, die mit grundlegenden Windows Communication Foundation (WCF)-Funktionen zu veranschaulichen.</span><span class="sxs-lookup"><span data-stu-id="343e8-103">This section includes sections of samples that demonstrate basic Windows Communication Foundation (WCF)functionality.</span></span>  

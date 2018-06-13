@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810056"
 ---
 # <a name="building-clients"></a><span data-ttu-id="18677-102">Erstellen von Clients</span><span class="sxs-lookup"><span data-stu-id="18677-102">Building Clients</span></span>
 <span data-ttu-id="18677-103">Die Themen in diesem Abschnitt veranschaulichen, wie zum Erstellen und verwenden Sie einen Windows Communication Foundation (WCF)-Client.</span><span class="sxs-lookup"><span data-stu-id="18677-103">The topics in this section demonstrate how to create and use a Windows Communication Foundation (WCF) client.</span></span>  

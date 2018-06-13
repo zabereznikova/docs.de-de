@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809364"
 ---
 # <a name="contract"></a><span data-ttu-id="2a814-102">Vertrag</span><span class="sxs-lookup"><span data-stu-id="2a814-102">Contract</span></span>
 <span data-ttu-id="2a814-103">Dieser Abschnitt enthält Beispiele, in denen Verträge in der Windows Communication Foundation (WCF) veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="2a814-103">This section contains samples that demonstrate contracts in Windows Communication Foundation (WCF).</span></span>  
