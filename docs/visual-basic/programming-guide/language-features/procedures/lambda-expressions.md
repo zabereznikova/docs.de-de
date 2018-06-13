@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654793"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambdaausdrücke (Visual Basic)
 Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine ohne Namen, die verwendet werden kann, wo ein Delegat zulässig ist. Lambda-Ausdrücke können Funktionen oder Unterroutinen werden und einzeilige bzw. mehrzeilige werden können. Sie können Werte aus dem aktuellen Bereich an einen Lambda-Ausdruck übergeben.  

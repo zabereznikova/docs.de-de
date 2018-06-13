@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650893"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Merkmale deklarierter Elemente (Visual Basic)
 Ein *Merkmal* eines deklarierten Elements ist ein Aspekt des jeweiligen Elements, die beeinflussen, wie Code mit ihm interagieren kann. Jedem deklariertes Element verfügt über eine oder mehrere der folgenden Eigenschaften zugeordnet:  

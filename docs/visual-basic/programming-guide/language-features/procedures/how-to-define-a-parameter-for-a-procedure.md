@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651112"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Gewusst wie: Definieren eines Parameters für eine Prozedur (Visual Basic)
 Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben werden, wenn es aufgerufen. Sie deklarieren jeden Parameter für eine Prozedur auf die gleiche Weise wie Sie eine Variable zu deklarieren, die den Namen und den Datentyp angibt. Sie geben auch den Übergabemechanismus und gibt an, ob der Parameter optional ist.  

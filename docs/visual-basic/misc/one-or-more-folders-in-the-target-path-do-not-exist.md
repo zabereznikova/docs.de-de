@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636714"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>Mindestens ein Ordner im Zielpfad ist nicht vorhanden.
 Mindestens ein im Zielpfad angegebenes Verzeichnis ist nicht vorhanden. Dies kann das Ergebnis eines nicht ordnungsgemäß analysierten Pfades sein, insbesondere bei der Bereitstellung eines relativen Pfades.  

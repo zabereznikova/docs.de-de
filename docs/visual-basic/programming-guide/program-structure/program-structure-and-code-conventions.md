@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654941"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Programmstruktur und Codekonventionen (Visual Basic)
 In diesem Abschnitt führt die typische Visual Basic-Programmstruktur, bietet ein einfaches Visual Basic-Programm "Hello, World" und Visual Basic-Code-Konventionen erläutert. Codekonventionen sind Vorschläge, die sich nicht auf die Logik eines Programms, sondern auf seine physische Struktur und sein Erscheinungsbild konzentrieren. Wenn Sie diese Konventionen einhalten, ist Programmcode besser lesbar, leichter verständlich und einfacher zu verwalten. Codekonventionen umfassen u. a.:  

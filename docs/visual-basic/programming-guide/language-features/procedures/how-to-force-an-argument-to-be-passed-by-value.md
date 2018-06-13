@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651076"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird (Visual Basic)
 In der Prozedurdeklaration des Übergabemechanismus. Wenn ein deklarierter Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic erwartet, dass das entsprechende Argument als Verweis zu übergeben. Dadurch wird das Verfahren zum Ändern des Werts, der das Programmierelement, die dem Argument im aufrufenden Code zugrunde liegt. Wenn Sie das zugrunde liegende Element gegen eine solche Änderung schützen möchten, können Sie überschreiben die `ByRef` Übergabemechanismus in der Prozedur aufrufen, indem der Name des Arguments in Klammern einschließen. Die Klammern sind zusätzlich zu der Klammern, die die Argumentliste im Aufruf einschließen.  

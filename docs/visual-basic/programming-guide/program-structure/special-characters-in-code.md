@@ -35,6 +35,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654355"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Sonderzeichen in Code (Visual Basic)
 In einigen Fällen müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwenden, die nicht alphabetisch oder numerisch sind. Interpunktion und Sonderzeichen in der Visual Basic-Zeichensatz haben verschiedene Funktionen, reichen von der Strukturierung Programmtext zur Definition der Aufgaben, die der Compiler oder das kompilierte Programm ausführt. Sie legen keine auszuführende Operation fest.  

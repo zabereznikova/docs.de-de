@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473514"
 ---
 # <a name="com"></a>COM+
 Die folgende Abbildung zeigt, wie Sie in einer COM+-Anwendung die Aktivitätsablaufverfolgung verwenden können. Anstatt den Benutzercode auf dem Server auszuführen, können wir eine COM+-Aktivität für jeden Methodenaufruf des COM+-Objektmodells definieren.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655113"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Exemplarische Vorgehensweise: Behandeln von Ereignissen (Visual Basic)
 Dies ist die zweite von zwei Themen, die zum Arbeiten mit Ereignissen zu veranschaulichen. Das erste Thema [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), deklarieren und Auslösen von Ereignissen veranschaulicht. In diesem Abschnitt werden das Formular und die Klasse aus der dieser exemplarischen Vorgehensweise verwendet, um die zeigen, wie Sie das Behandeln von Ereignissen, die sie vorgenommen werden.  

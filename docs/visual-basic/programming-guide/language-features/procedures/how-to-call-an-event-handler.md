@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652681"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Gewusst wie: Aufrufen eines Ereignishandlers in Visual Basic
 Ein *Ereignis* ist eine Aktion oder ein Vorkommen – z. B. eine Maus klicken oder ein Kreditlimit überschritten –, wird von einigen Programmkomponente, und für die Sie Code schreiben können reagieren erkannt. Ein *Ereignishandler* ist der Code, die Sie schreiben, um auf ein Ereignis zu reagieren.  

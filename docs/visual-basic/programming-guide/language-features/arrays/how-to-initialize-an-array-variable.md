@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651569"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Gewusst wie: Initialisieren einer Arrayvariablen in Visual Basic
 Sie initialisieren eine Arrayvariable, in dem Sie ein Arrayliteral in einer `New`-Klausel einfügen und die Anfangswerte des Arrays angeben. Sie können den Typ angeben oder ihn von den Werten im Arrayliteral ableiten lassen. Weitere Informationen dazu, wie der Typ nicht abgeleitet ist, finden Sie unter "Auffüllen eines Arrays mit Anfangswerten" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  

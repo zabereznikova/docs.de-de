@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654368"
 ---
 # <a name="-reference-visual-basic"></a>-Verweis (Visual Basic)
 Bewirkt, dass der Compiler Typinformationen in den angegebenen Assemblys dem Projekt zur Verfügung, das Sie gerade kompilieren.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651491"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Gewusst wie: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern (Visual Basic)
 Wenn eine Prozedur besitzt einen [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) Parameter keine überladene Version ein eindimensionales Array für das Parameterarray definieren. Weitere Informationen finden Sie unter "Implizite Überladungen für ein ParamArray-Parameter" in [Überlegungen in Überladen von Prozeduren](./considerations-in-overloading-procedures.md).  

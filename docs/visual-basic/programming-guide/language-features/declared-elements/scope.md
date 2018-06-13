@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656294"
 ---
 # <a name="scope-in-visual-basic"></a>Gültigkeitsbereich in Visual Basic
 Die *Bereich* eines deklarierten Elements ist die Menge des gesamten Codes, die darauf verweisen kann, ohne seinen Namen qualifizieren oder durch Verfügbarmachen einer [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Ein Element kann in einem der folgenden Ebenen Bereich aufweisen:  

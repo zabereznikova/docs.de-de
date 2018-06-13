@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651654"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
 Wenn Sie ein oder mehrere Argumente an eine Prozedur übergeben, entspricht jedes Argument einer zugrunde liegenden Programmierelement im aufrufenden Code. Sie können entweder den Wert dieses Elements zugrunde liegenden oder einen Verweis darauf übergeben. Dies bezeichnet man die *Übergabemechanismus*.  

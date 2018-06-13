@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650438"
 ---
 # <a name="composite-data-types-visual-basic"></a>Zusammengesetzte Datentypen (Visual Basic)
 Zusätzlich zu den bereitgestellten elementarer Datentyp Typen Visual Basic können Sie auch Elemente unterschiedlichen Typs zu erstellen assemblieren *zusammengesetzte Datentypen* wie z. B. Arrays, Strukturen und Klassen. Sie können zusammengesetzte Datentypen aus elementare Typen und aus anderen zusammengesetzten Typen erstellen. Sie können z. B. ein Array von Strukturelementen oder eine Struktur mit Arraymember definieren.  

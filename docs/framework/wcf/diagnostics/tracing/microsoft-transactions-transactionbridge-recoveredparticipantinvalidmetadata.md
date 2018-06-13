@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33475269"
 ---
 # <a name="microsofttransactionstransactionbridgerecoveredparticipantinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata
 Der in einem Wiederherstellungsprotokolleintrag für einen Teilnehmer gefundene Endpunktverweis enthielt ungültige oder nicht kompatible Metadaten.  

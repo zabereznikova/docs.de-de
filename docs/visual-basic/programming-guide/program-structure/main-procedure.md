@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652151"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Main-Prozedur in Visual Basic
 Alle Visual Basic-Anwendung muss eine Prozedur namens enthalten `Main`. Diese Prozedur dient, wie die Start- und gesamtsteuerung für Ihre Anwendung. Die .NET Framework Aufrufe der `Main` -Prozedur, wenn die Anwendung geladen hat und bereit für die Steuerung an sie übergeben wird. Wenn Sie eine Windows Forms-Anwendung erstellen, müssen Sie schreiben die `Main` Verfahren für Anwendungen, die auf ihre eigenen ausgeführt.  

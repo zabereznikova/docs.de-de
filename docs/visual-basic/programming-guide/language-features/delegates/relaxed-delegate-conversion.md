@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650826"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Gelockerte Delegatenkonvertierung (Visual Basic)
 Gelockerte delegatenkonvertierung ermöglicht es Ihnen Unterroutinen und Funktionen Delegaten oder der Handler zugewiesen werden, selbst wenn die Signaturen nicht identisch sind. Aus diesem Grund wird die Bindung an den Delegaten konsistent mit der Bindung, die bereits für Methodenaufrufe zulässig.  

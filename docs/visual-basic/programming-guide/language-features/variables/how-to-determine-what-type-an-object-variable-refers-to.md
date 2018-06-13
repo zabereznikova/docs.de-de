@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651313"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Gewusst wie: Bestimmen des Typs, auf den eine Objektvariable verweist (Visual Basic)
 Eine Objektvariable enthält einen Zeiger auf Daten, die an anderer Stelle gespeichert werden. Der Typ der Daten kann während der Laufzeit ändern. Zu jedem Zeitpunkt können Sie die <xref:System.Type.GetTypeCode%2A> Methode, um den aktuellen Laufzeittyp festzulegen oder die [TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) um zu ermitteln, ob der aktuelle Laufzeittyp mit einem angegebenen Typ kompatibel ist.  

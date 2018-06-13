@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655797"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolesche Ausdrücke (Visual Basic)
 Ein *booleschen Ausdruck* ist ein Ausdruck, der einen Wert ergibt die [booleschen Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` oder `False`. `Boolean` Ausdrücke können mehrere Formen annehmen. Die einfachste Technologie ist des direkten Zeichenfolgenvergleichs den Wert des eine `Boolean` -Variable auf einen `Boolean` Literal, wie im folgenden Beispiel gezeigt.  

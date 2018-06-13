@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655211"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Gewusst wie: Vergleichen einer Zeichenfolge mit einem Muster (Visual Basic)
 Wenn Sie, ob einen Ausdruck eines ermitteln möchten der [String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md) einem Muster entspricht, dann können Sie mithilfe der [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  

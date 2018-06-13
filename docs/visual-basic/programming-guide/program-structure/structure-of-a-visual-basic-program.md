@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654829"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struktur von Visual Basic-Programmen
 Visual Basic-Programm ist aus Standardbausteinen erstellt. Ein *Lösung* umfasst eine oder mehrere Projekte. Ein *Projekt* wiederum können eine oder mehrere Assemblys enthalten. Jede *Assembly* , die über eine oder mehrere Quelldateien kompiliert wird. Ein *Quelldatei* enthält die Definition und Implementierung von Klassen, Strukturen, Module und Schnittstellen, die letztendlich den gesamten Code enthalten.  

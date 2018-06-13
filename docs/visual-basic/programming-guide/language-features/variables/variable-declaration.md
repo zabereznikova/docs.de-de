@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656138"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Variablendeklaration in Visual Basic
 Sie deklarieren eine Variable, um seinen Namen und die Eigenschaften anzugeben. Ist der deklarationsanweisung für Variablen die [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md). Bestimmen die Variable Merkmale, sein Speicherort und sein Inhalt.  

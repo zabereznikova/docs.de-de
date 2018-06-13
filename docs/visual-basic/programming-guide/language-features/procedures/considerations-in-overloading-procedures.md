@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654329"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Überlegungen zur Prozedurüberladung (Visual Basic)
 Wenn Sie eine Prozedur zu überladen, müssen Sie ein anderes verwenden *Signatur* für jede überladene Version. Dies bedeutet normalerweise, dass jede Version eine andere Parameterliste angeben muss. Weitere Informationen finden Sie unter "Andere Signatur" in [Prozedurüberladung](./procedure-overloading.md).  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656255"
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonyme Typen (Visual Basic)
 Visual Basic unterstützt anonyme Typen, die Ihnen ermöglichen, Objekte zu erstellen, ohne eine Klassendefinition für den Datentyp zu schreiben. Stattdessen erzeugt der Compiler eine Klasse. Die Klasse hat keinen verwendbaren Namen, erbt direkt von <xref:System.Object>, und enthält die Eigenschaften, die Sie in der Deklaration des Objekts angeben. Da der Name des Datentyps nicht angegeben ist, wird bezeichnet als ein *anonymen Typ*.  

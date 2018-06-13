@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656031"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic-Compileroptionen alphabetisch sortiert
 Die Visual Basic-Befehlszeilencompiler wird als Alternative zum Kompilieren von Programmen über die integrierte Entwicklungsumgebung (IDE) von Visual Studio bereitgestellt. Im folgenden finden eine Liste von der Visual Basic Befehlszeilen-Compileroptionen alphabetisch sortiert.  

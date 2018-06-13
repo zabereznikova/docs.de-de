@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651465"
 ---
 # <a name="array-conversions-visual-basic"></a>Arraykonvertierungen (Visual Basic)
 Sie können einen Arraytyp in einen anderen Arraytyp konvertieren, falls Sie die folgenden Bedingungen erfüllen:  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653428"
 ---
 # <a name="overload-resolution-visual-basic"></a>Überladungsauflösung (Visual Basic)
 Stößt der Visual Basic-Compiler einen Aufruf an eine Prozedur, die in mehreren überladenen Versionen definiert ist, muss der Compiler die Überladung aufrufen, entscheiden. Dies geschieht durch die folgenden Schritte ausführen:  

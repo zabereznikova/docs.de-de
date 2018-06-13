@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652024"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Strukturen und andere Programmierelemente (Visual Basic)
 Sie können Strukturen in Verbindung mit Arrays, Objekten und Prozeduren sowie miteinander verwenden. Die Interaktionen verwenden dieselbe Syntax wie diese Elemente einzeln zu verwenden.  

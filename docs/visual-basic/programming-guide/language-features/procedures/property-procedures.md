@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656086"
 ---
 # <a name="property-procedures-visual-basic"></a>Eigenschaftenprozeduren (Visual Basic)
 Eine Eigenschaftenprozedur ist eine Reihe von Visual Basic-Anweisungen, die eine benutzerdefinierte Eigenschaft für ein Modul, eine Klasse oder eine Struktur zu bearbeiten. -Eigenschaftenprozeduren werden auch bekannt als *Eigenschaftenaccessoren*.  

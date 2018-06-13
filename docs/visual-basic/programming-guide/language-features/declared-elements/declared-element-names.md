@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651478"
 ---
 # <a name="declared-element-names-visual-basic"></a>Namen deklarierter Elemente (Visual Basic)
 Jedem deklariertes Element hat einen Namen, so genannte ein *Bezeichner*, wird der Code dazu verwendet wird, um darauf zu verweisen.  

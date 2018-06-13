@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655418"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Erweiternde und eingrenzende Konvertierungen (Visual Basic)
 Ein wichtiger Aspekt mit einer Typumwandlung ist, ob das Ergebnis der Konvertierung innerhalb des Bereichs des Zieltyps Daten ist.  
