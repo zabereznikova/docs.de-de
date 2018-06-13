@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593892"
 ---
 # <a name="path-not-found"></a>Der Pfad wurde nicht gefunden
 Das Betriebssystem konnte während eines Datei- oder Datenträgerzugriffs-Vorgangs den angegebenen Pfad nicht finden. Der Pfad zu einer Datei enthält die Laufwerksangabe sowie die Verzeichnisse und Unterverzeichnisse enthalten, die durchlaufen werden müssen, um die Datei zu suchen. Ein Pfad kann relativ oder absolut sein.  

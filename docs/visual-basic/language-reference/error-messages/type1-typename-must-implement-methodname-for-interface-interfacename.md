@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594382"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmethodnamegt39-for-interface-39ltinterfacenamegt39"></a>&lt;Typ1&gt;&#39;&lt;Typename&gt; &#39; implementieren müssen &#39; &lt;Methodname&gt; &#39; für Schnittstelle &#39; &lt;Schnittstellenname&gt;&#39;
 Eine Klasse oder Struktur Ansprüche an, um eine Schnittstelle zu implementieren, implementiert jedoch keine Prozedur, die von der Schnittstelle definiert. Jeder Member der Schnittstelle muss implementiert werden.  

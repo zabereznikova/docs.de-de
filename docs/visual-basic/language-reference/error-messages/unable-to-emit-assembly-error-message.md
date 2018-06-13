@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595172"
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>Assembly kann nicht ausgegeben: &lt;Fehlermeldung&gt;
 Visual Basic-Compiler Ruft den Assemblylinker (Al.exe, auch bekannt als Alink) auf eine Assembly mit einem Manifest zu erstellen, mit der Linker in der Ausgabephase der Assemblyerstellung ein Fehler gemeldet.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650477"
 ---
 # <a name="multithreaded-applications-visual-basic"></a>Multithreadanwendungen verwendet werden können (Visual Basic)
 In Visual Basic können Sie Anwendungen schreiben, die mehrere Aufgaben gleichzeitig ausführen. Aufgaben, die möglicherweise andere Aufgaben aufhalten, können in separaten Threads ausgeführt werden. Dieser Prozess ist als *Multithreading* oder *Freies Threading* bekannt.  
