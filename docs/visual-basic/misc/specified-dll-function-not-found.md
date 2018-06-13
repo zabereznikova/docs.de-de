@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639754"
 ---
 # <a name="specified-dll-function-not-found"></a>Die angegebene DLL-Funktion wurde nicht gefunden.
 Die Dynamic Link Library (DLL) im Verweis einer Benutzerbibliothek wurde gefunden, aber die angegebene DLL-Funktion in der DLL wurde nicht gefunden.  

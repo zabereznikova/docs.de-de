@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642838"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Vorgehensweise: Abfragen von ArrayList mit LINQ (Visual Basic)
 Bei Verwendung von LINQ zum Abfragen nicht generischer <xref:System.Collections.IEnumerable>-Auflistungen wie z.B. <xref:System.Collections.ArrayList> müssen Sie den Typ der Bereichsvariablen entsprechend dem spezifischen Typ der Objekte in der Auflistung explizit deklarieren. Angenommen, Sie haben eine <xref:System.Collections.ArrayList> von `Student` Objekte, die [From-Klausel](../../../../visual-basic/language-reference/queries/from-clause.md) sollte wie folgt aussehen:  

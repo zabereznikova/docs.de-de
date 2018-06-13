@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457486"
 ---
 # <a name="throw-c-reference"></a>throw (C#-Referenz)
 Signalisiert das Auftreten einer Ausnahme während der Programmausführung.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804234"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Autorisierungsrichtlinie
 Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unterstützt ein anspruchsbasiertes Autorisierungsmodell. Ansprüche werden aus Token extrahiert, wahlweise von der benutzerdefinierten Autorisierungsrichtlinie verarbeitet und in einen <xref:System.IdentityModel.Policy.AuthorizationContext> platziert, der dann untersucht werden kann, um Autorisierungsentscheidungen zu treffen. Eine benutzerdefinierte Richtlinie kann zum Transformieren von Ansprüchen von eingehenden Token in von der Anwendung erwartete Ansprüche verwendet werden. Auf diese Weise kann die Anwendungsschicht gegenüber Details zu den verschiedenen Ansprüchen von den anderen Tokentypen, die WCF unterstützt isoliert sein. In diesem Thema wird gezeigt, wie eine benutzerdefinierte Autorisierungsrichtlinie implementiert und wie diese Richtlinie einer Sammlung von Richtlinien, die von einem Dienst verwendet werden, hinzugefügt wird.  

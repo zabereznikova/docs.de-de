@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804712"
 ---
 # <a name="significant-traces"></a>Bedeutende Ablaufverfolgungen
 In diesem Thema werden einige der hauptablaufverfolgungen ausgegeben, von der Windows Communication Foundation (WCF) aufgelistet.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804475"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Clientidentitätsüberprüfung
 Die *Identität* Feature von Windows Communication Foundation (WCF) kann ein Client im Voraus angeben der erwarteten Identität des Diensts. Bei jeder Authentifizierung eines Servers beim Client wird die Identität mit der erwarteten Identität verglichen. (Eine Erläuterung der Identitäts- und deren Funktionsweise, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  

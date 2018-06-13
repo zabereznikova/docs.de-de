@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649203"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Gewusst wie: Zugriff auf untergeordnete XML-Elemente (Visual Basic)
 Dieses Beispiel zeigt, wie eines untergeordneten Achseneigenschaft auf alle untergeordnete XML-Elemente, die den angegebenen Namen in ein XML-Element aufweisen. Insbesondere verwendet die <xref:System.Xml.Linq.XElement.Value%2A> -Eigenschaft rufen Sie den Wert des ersten Elements in der Auflistung, die die `name` untergeordnete Achse Eigenschaft gibt. Die `name` Child Axis-Eigenschaft ruft alle untergeordneten Elemente mit dem Namen `phone` in die `contact` Objekt. Dieses Beispiel verwendet außerdem die `phone` Child Axis-Eigenschaft auf alle untergeordneten Elemente mit dem Namen `phone` enthalten sind die `contact` Objekt.  

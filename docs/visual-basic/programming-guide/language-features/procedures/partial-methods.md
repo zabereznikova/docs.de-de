@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651595"
 ---
 # <a name="partial-methods-visual-basic"></a>Partielle Methoden (Visual Basic)
 Partielle Methoden können Entwickler benutzerdefinierten Logik in Code einzufügen. In der Regel ist der Code Teil einer vom Designer generierte Klasse. Partielle Methoden werden in einer partiellen Klasse, die von einem Codegenerator erstellt wird definiert, und sie werden häufig verwendet, um die Benachrichtigung angeben, dass etwas geändert wurde. Sie ermöglichen es den Entwickler, die benutzerdefiniertes Verhalten als Reaktion auf die Änderung angeben.  

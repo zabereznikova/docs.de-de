@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649262"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Gewusst wie: Erstellen einer Prozedur (Visual Basic)
 Sie setzen eine Prozedur zwischen einer Start-deklarationsanweisung (`Sub` oder `Function`) und ein Enddatum deklarationsanweisung (`End Sub` oder `End Function`). Alle Prozedur Code liegt zwischen diesen Anweisungen.  

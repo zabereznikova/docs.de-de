@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807758"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Feed-Beispiel
 Dieses Beispiel veranschaulicht, wie einen RSS/Atom-feed für die Syndizierung mit Windows Communication Foundation (WCF) zu erstellen. Es ist eine einfache "Hello World"-Programm, das veranschaulicht die Grundlagen des Objektmodells und zum Einrichten eines Windows Communication Foundation (WCF)-Diensts.  

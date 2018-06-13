@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172005"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Implizit typisierte lokale Variablen (C#-Programmierhandbuch)
 Lokale Variablen können deklariert werden, ohne einen expliziten Typ anzugeben. Das `var`-Schlüsselwort weist den Compiler an, den Typ der Variablen vom Ausdruck auf der rechten Seite der Initialisierungsanweisung abzuleiten. Der hergeleitete Typ ist möglicherweise ein integrierter Typ, ein anonymer Typ, ein benutzerdefinierter Typ oder ein Typ, der in der .NET Framework-Klassenbibliothek definiert wurde. Weitere Informationen zur Initialisierung von Arrays mithilfe von `var` finden Sie unter [Implizit typisierte Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  

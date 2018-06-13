@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805472"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu dem er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.  

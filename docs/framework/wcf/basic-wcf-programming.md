@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803740"
 ---
 # <a name="basic-wcf-programming"></a>Basis-WCF-Programmierung
 In diesem Abschnitt werden die Grundlagen zum Erstellen von Windows Communication Foundation (WCF)-Anwendungen.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651222"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Exemplarische Vorgehensweise: Verschlüsseln und Entschlüsseln von Zeichenfolgen in Visual Basic
 Diese exemplarische Vorgehensweise veranschaulicht das Verwenden der <xref:System.Security.Cryptography.DESCryptoServiceProvider> Klasse zum Verschlüsseln und Entschlüsseln von Zeichenfolgen mithilfe von cryptographic Service Provider (CSP)-Version von Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) Algorithmus. Der erste Schritt ist zum Erstellen einer einfachen Wrapperklasse, die den 3DES-Algorithmus kapselt und speichert die verschlüsselten Daten als Base64-codierte Zeichenfolge. Anschließend wird dieser Wrapper verwendet, um private Benutzerdaten in einem öffentlich zugänglichen Textdatei sicher zu speichern.  

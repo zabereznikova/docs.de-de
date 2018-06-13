@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649811"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Gewusst wie: Definieren mehrerer Versionen einer Prozedur (Visual Basic)
 Sie können eine Prozedur definieren, in mehreren Versionen von *überladen* , es mit dem gleichen Namen, aber eine andere Parameterliste für die einzelnen Versionen. Der Zweck des Überladens werden mehrere eng verwandte Versionen einer Prozedur definieren, ohne sie anhand des Namens zu unterscheiden.  

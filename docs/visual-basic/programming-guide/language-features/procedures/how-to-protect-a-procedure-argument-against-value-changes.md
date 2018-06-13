@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651517"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen (Visual Basic)
 Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic Code der Prozedur bietet einen direkten Verweis auf das Programmierelement, die dem Argument im aufrufenden Code zugrunde liegt. Dies ermöglicht das Verfahren zum Ändern des Werts, der dem Argument im aufrufenden Code zugrunde liegt. In einigen Fällen kann der aufrufende Code eine solche Änderung schützen möchten.  

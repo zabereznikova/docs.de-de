@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636590"
 ---
 # <a name="myapplicationlog-cannot-determine-the-amount-of-free-disk-space"></a>My.Application.Log kann den freien Speicherplatz nicht ermitteln.
 Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> -Klasse konnte den freien Speicherplatz nicht ermitteln.  

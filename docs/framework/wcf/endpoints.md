@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803393"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation-Endpunkte
 Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die einen WCF-Dienst anbietet.  

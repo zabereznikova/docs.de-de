@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804169"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client
 Sie können zu überprüfen oder ändern Sie die eingehenden oder ausgehenden Nachrichten über einen WCF-Client, durch die Implementierung einer <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> und in die Clientlaufzeit einfügen. Weitere Informationen finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md). Die entsprechende Funktion für den Dienst ist der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Ein vollständiges Codebeispiel finden Sie unter der [Nachrichteninspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md) Beispiel.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172515"
 ---
 # <a name="double-c-reference"></a>double (C#-Referenz)
 Das `double`-Schlüsselwort kennzeichnet einen einfachen Typ, der 64-Bit-Gleitkommawerte speichert. Die folgende Tabelle zeigt die Genauigkeit und den ungefähren Bereich für den `double`-Typ an.  

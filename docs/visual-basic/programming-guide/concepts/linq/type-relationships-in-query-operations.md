@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655341"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Typbeziehungen in Abfrageoperationen (Visual Basic)
 Im verwendeten Variablen [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Abfrage Vorgänge sind stark typisiert und müssen miteinander kompatibel sein. Starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in die Ausführung der Abfrage verwendet werden. Die folgende Abbildung Begriffe, die zum Beschreiben einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage. Weitere Informationen über die Teile einer Abfrage finden Sie unter [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

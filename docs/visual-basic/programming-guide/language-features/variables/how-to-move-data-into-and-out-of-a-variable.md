@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650867"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Gewusst wie: Verschieben von Daten in und aus einer Variablen (Visual Basic)
 Sie können einen Wert in einer Variablen speichern, indem Sie den Variablennamen auf der linken Seite einer zuweisungsanweisung.  

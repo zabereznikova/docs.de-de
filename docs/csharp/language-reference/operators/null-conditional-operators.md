@@ -17,6 +17,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457799"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. und ?[]: NULL-bedingte Operatoren (C# und Visual Basic)
 Diese Operatoren testen, ob der Wert des linken Operanden NULL ist, bevor ein Memberzugriffs- (`?.`) oder Indexzugriffsvorgang (`?[]`) ausgeführt wird. Sie geben `null` zurück, wenn der linke Operand `null` ergibt. 
