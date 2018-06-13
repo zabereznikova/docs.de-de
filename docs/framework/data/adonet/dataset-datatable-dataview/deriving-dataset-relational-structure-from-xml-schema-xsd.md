@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759607"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)
 Dieser Abschnitt enthält eine Übersicht über das Erstellen des relationalen Schemas eines `DataSet` aus einem XSD-Schemadokument (XML Schema Definition Language). Im Allgemeinen wird für jede `complexType` untergeordnetes Element eines Schemaelements eine Tabelle wird generiert, der `DataSet`. Die Tabellenstruktur wird durch die Definition des komplexen Typs festgelegt. Tabellen werden erstellt, der `DataSet` für Elemente der obersten Ebene im Schema. Allerdings wird eine Tabelle nur für ein auf oberster Ebene erstellt `complexType` Element bei der `complexType` in einem anderen Element geschachtelt ist `complexType` Element, in dem Fall wird das geschachtelte `complexType` Element zugeordnet ist ein `DataTable` innerhalb der `DataSet`.  

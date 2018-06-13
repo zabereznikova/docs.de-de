@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322181"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Vorgehensweise: Abrufen von Absätzen aus einem Office Open-XML-Dokument (C#)
 Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet und eine Auflistung aller in diesem Dokument vorhandenen Absätze abruft.  

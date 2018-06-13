@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566482"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>XAML-bezogene CLR-Attribute für benutzerdefinierte Typen und Bibliotheken
 Dieses Thema beschreibt die common Language Common Language Runtime (CLR)-Attribute, die von .NET Framework XAML Services definiert sind. Es beschreibt auch andere CLR-Attribute, die in .NET Framework definiert sind, die einen XAML-bezogene-Szenario für die Anwendung auf Assemblys oder Typen aufweisen. Attributierung Assemblys, Typen oder Member mit diesen Attributen CLR bietet Systeminformationen von XAML-Typ im Zusammenhang mit den Typen. Informationen werden für alle XAML-Consumer bereitgestellt, die .NET Framework-XAML-Dienste für die Verarbeitung von XAML-Knotenstream direkt oder über die dedizierte XAML-Readern und XAML-Writern verwendet.  

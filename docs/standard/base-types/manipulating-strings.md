@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567587"
 ---
 # <a name="manipulating-strings-in-net"></a>Bearbeiten von Zeichenfolgen in .NET
 .NET bietet einen umfangreichen Satz von Routinen, mit denen Sie Zeichenfolgen effizient erstellen, vergleichen und ändern sowie große Mengen von Text und Daten schnell analysieren können, um Textmuster zu suchen, zu entfernen und zu ersetzen.  

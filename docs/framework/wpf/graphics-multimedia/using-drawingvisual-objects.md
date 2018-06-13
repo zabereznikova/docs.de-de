@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565313"
 ---
 # <a name="using-drawingvisual-objects"></a>Verwenden von DrawingVisual-Objekten
 Dieses Thema bietet einen Überblick zum Verwenden <xref:System.Windows.Media.DrawingVisual> Objekte in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visueller Ebene.  

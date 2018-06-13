@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566898"
 ---
 # <a name="storyboards-overview"></a>Übersicht über Storyboards
 In diesem Thema zeigt, wie <xref:System.Windows.Media.Animation.Storyboard> Objekte zu organisieren und Animationen anzuwenden. Es wird beschrieben, wie interaktiv bearbeiten <xref:System.Windows.Media.Animation.Storyboard> Objekte und die indirekte Verwendung der Syntax von Eigenschaften beschrieben.  
