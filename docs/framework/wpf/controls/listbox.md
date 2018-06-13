@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551686"
 ---
 # <a name="listbox"></a>ListBox
 Ein <xref:System.Windows.Controls.ListBox> Steuerelement bietet Benutzern eine Liste auswählbarer Elemente.  

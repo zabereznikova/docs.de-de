@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 07d6dcc1873e24f84f97c877e8198c27eceef0c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420790"
 ---
 # <a name="icordebugloadedmodule-interface"></a>ICorDebugLoadedModule-Schnittstelle
 Stellt Informationen zu einem geladenen Modul bereit.  
