@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604535"
 ---
 # <a name="math-functions-visual-basic"></a>Mathematische Funktionen (Visual Basic)
 Die Methoden der <xref:System.Math?displayProperty=nameWithType> Klasse bereitstellen trigonometrische, logarithmische und andere gebräuchliche mathematische Funktionen.  

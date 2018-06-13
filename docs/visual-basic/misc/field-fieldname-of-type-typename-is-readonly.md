@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638566"
 ---
 # <a name="field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-39readonly39"></a>Feld &#39; &lt;Fieldname&gt; &#39; des Typs &#39; &lt;Typename&gt; &#39; ist &#39;ReadOnly&#39;
 Sie haben versucht, in ein Feld zu schreiben, das als `ReadOnly`deklariert ist.  

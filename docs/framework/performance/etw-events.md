@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395303"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW-Ereignisse in .NET Framework
 Die Ereignisablaufverfolgung für Windows (ETW) ist ein leistungsstarkes, skalierbares Ablaufverfolgungssystem mit geringem Verwaltungsaufwand, das von den Windows-Betriebssystemen bereitgestellt wird. Es stellt eine Ergänzung zur Unterstützung für die Profilerstellung und das Debuggen dar, die von .NET Framework bereitgestellt werden und kann zur Problembehebung von einer Vielzahl von Szenarios verwendet werden.  

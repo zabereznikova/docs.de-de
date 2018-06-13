@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603911"
 ---
 # <a name="join-clause-visual-basic"></a>Join-Klausel (Visual Basic)
 Fasst zwei Auflistungen zu einer einzelnen Auflistung zusammen. Die Join-Operation wird basierend auf übereinstimmenden Schlüsseln und verwendet die `Equals` Operator.  

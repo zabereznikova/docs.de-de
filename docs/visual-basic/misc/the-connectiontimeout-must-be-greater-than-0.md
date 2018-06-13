@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640536"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>Der Verbindungstimeout-Wert muss größer als 0 sein.
 Beim hoch- und Herunterladen von Dateien mit der [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network), geben Sie einen `connectionTimeout` größer als `0`.  
