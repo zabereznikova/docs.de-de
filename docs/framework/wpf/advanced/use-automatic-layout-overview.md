@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548314"
 ---
 # <a name="use-automatic-layout-overview"></a>Übersicht über die Verwendung eines automatischen Layouts
 Dieses Thema enthält Richtlinien für Entwickler zum Schreiben [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen in lokalisierbare [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. In der Vergangenheit Lokalisierung von einem [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wurde eine Zeit in Anspruch. Jede Sprache, die die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] angepasst wurde, für eine Anpassung x Pixel erforderlich. Heute mit der rechten Entwurf und rechts Codierungsstandards, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] konstruiert werden kann, sodass Lokalisierungsexperten kleiner hierzu neu positionieren und ihre Größe haben. Der Ansatz zum Schreiben von Anwendungen, die leichter dessen Größe geändert wurde und neu positioniert werden können Automatisches Layout aufgerufen wird, und kann erreicht werden, indem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungsentwurf.  

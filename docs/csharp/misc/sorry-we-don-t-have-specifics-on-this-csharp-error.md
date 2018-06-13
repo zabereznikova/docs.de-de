@@ -884,9 +884,10 @@ helpviewer_keywords:
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314069"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem C#-Fehler
 Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren Fragen:  

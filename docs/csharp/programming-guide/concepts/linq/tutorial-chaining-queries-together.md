@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323709"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Tutorial: Verketten von Abfragen (C#)
 Dieses Lernprogramm zeigt das Verarbeitungsmodell für das Verketten von Abfragen. Das Verketten von Abfragen ist ein wichtiger Bestandteil des Schreibens funktionaler Transformationen. Es ist daher wichtig, genau zu verstehen, wie verkettete Abfragen funktionieren.  

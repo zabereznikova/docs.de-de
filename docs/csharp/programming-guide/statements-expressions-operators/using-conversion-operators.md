@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332307"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>Verwenden von Konvertierungsoperatoren (C#-Programmierhandbuch)
 Sie können die einfacheren `implicit`-Konvertierungsoperatoren verwenden oder die `explicit`-Konvertierungsoperatoren, die eindeutig signalisieren, dass ein Typ konvertiert wird. In diesem Thema werden beide Typen von Konvertierungsoperatoren veranschaulicht.  
