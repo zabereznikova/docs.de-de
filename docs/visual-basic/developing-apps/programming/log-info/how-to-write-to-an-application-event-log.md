@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590685"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a><span data-ttu-id="f1bbd-102">Gewusst wie: Schreiben in ein Anwendungsereignisprotokoll (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f1bbd-102">How to: Write to an Application Event Log (Visual Basic)</span></span>
 <span data-ttu-id="f1bbd-103">Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen über Ereignisse zu erfassen, die in Ihrer Anwendung auftreten.</span><span class="sxs-lookup"><span data-stu-id="f1bbd-103">You can use the `My.Application.Log` and `My.Log` objects to write information about events that occur in your application.</span></span> <span data-ttu-id="f1bbd-104">Dieses Beispiel veranschaulicht, wie ein Ereignisprotokolllistener konfiguriert wird, damit `My.Application.Log` Ablaufverfolgungsinformationen in das Anwendungsereignisprotokoll schreibt.</span><span class="sxs-lookup"><span data-stu-id="f1bbd-104">This example shows how to configure an event log listener so `My.Application.Log` writes tracing information to the Application event log.</span></span>  

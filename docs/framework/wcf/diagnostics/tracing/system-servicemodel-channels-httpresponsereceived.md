@@ -1,32 +1,21 @@
 ---
 title: System.ServiceModel.Channels.HttpResponseReceived
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 23101c3b-c1c2-4544-bb2f-aceec3e4e724
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3846700a4e6d8c5e26168c24f64127e7cb1b5dd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43103f8abf97c70e060d8d94107893b9b72e6bcc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478230"
 ---
-# <a name="systemservicemodelchannelshttpresponsereceived"></a><span data-ttu-id="a0fb8-102">System.ServiceModel.Channels.HttpResponseReceived</span><span class="sxs-lookup"><span data-stu-id="a0fb8-102">System.ServiceModel.Channels.HttpResponseReceived</span></span>
-<span data-ttu-id="a0fb8-103">System.ServiceModel.Channels.HttpResponseReceived</span><span class="sxs-lookup"><span data-stu-id="a0fb8-103">System.ServiceModel.Channels.HttpResponseReceived</span></span>  
+# <a name="systemservicemodelchannelshttpresponsereceived"></a><span data-ttu-id="3bb50-102">System.ServiceModel.Channels.HttpResponseReceived</span><span class="sxs-lookup"><span data-stu-id="3bb50-102">System.ServiceModel.Channels.HttpResponseReceived</span></span>
+<span data-ttu-id="3bb50-103">System.ServiceModel.Channels.HttpResponseReceived</span><span class="sxs-lookup"><span data-stu-id="3bb50-103">System.ServiceModel.Channels.HttpResponseReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a0fb8-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a0fb8-104">Description</span></span>  
- <span data-ttu-id="a0fb8-105">Eine HTTP-Antwort wurde empfangen.</span><span class="sxs-lookup"><span data-stu-id="a0fb8-105">An HTTP response was received.</span></span>  
+## <a name="description"></a><span data-ttu-id="3bb50-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3bb50-104">Description</span></span>  
+ <span data-ttu-id="3bb50-105">Eine HTTP-Antwort wurde empfangen.</span><span class="sxs-lookup"><span data-stu-id="3bb50-105">An HTTP response was received.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0fb8-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a0fb8-106">See Also</span></span>  
- [<span data-ttu-id="a0fb8-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="a0fb8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a0fb8-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="a0fb8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a0fb8-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="a0fb8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3bb50-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3bb50-106">See Also</span></span>  
+ [<span data-ttu-id="3bb50-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="3bb50-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3bb50-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="3bb50-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="3bb50-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="3bb50-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

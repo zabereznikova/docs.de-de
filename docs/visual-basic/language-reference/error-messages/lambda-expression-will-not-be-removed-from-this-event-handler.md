@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590166"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a><span data-ttu-id="c324f-102">Der Lambdaausdruck wird nicht aus diesem Ereignishandler entfernt</span><span class="sxs-lookup"><span data-stu-id="c324f-102">Lambda expression will not be removed from this event handler</span></span>
 <span data-ttu-id="c324f-103">Lambda-Ausdruck wird nicht aus diesem Ereignishandler entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="c324f-103">Lambda expression will not be removed from this event handler.</span></span> <span data-ttu-id="c324f-104">Weisen Sie den Lambda-Ausdruck einer Variablen zu und verwenden Sie die Variable hinzufügen und entfernen das Ereignis.</span><span class="sxs-lookup"><span data-stu-id="c324f-104">Assign the lambda expression to a variable and use the variable to add and remove the event.</span></span>  

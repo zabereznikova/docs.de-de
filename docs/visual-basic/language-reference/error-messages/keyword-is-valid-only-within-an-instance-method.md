@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586359"
 ---
 # <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a><span data-ttu-id="4d171-102">&#39;&lt;Schlüsselwort&gt; &#39; ist nur innerhalb einer Instanzmethode gültig</span><span class="sxs-lookup"><span data-stu-id="4d171-102">&#39;&lt;keyword&gt;&#39; is valid only within an instance method</span></span>
 <span data-ttu-id="4d171-103">Die `Me`, `MyClass`, und `MyBase` Schlüsselwörter beziehen sich auf bestimmte Klasseninstanzen.</span><span class="sxs-lookup"><span data-stu-id="4d171-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="4d171-104">Können Sie nicht in einem gemeinsam verwendeten `Function` oder `Sub` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="4d171-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  
