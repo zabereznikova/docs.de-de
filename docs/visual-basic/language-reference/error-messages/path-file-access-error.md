@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598582"
 ---
 # <a name="pathfile-access-error"></a><span data-ttu-id="3f6f1-102">Pfad-/Dateizugriffsfehler</span><span class="sxs-lookup"><span data-stu-id="3f6f1-102">Path/File access error</span></span>
 <span data-ttu-id="3f6f1-103">Während eines Datei- oder Datenträgerzugriffs womöglich des Betriebssystems eine Verbindung zwischen den Pfad und den Dateinamen nicht.</span><span class="sxs-lookup"><span data-stu-id="3f6f1-103">During a file-access or disk-access operation, the operating system could not make a connection between the path and the file name.</span></span>  

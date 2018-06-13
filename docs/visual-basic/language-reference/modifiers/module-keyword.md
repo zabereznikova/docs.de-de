@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595276"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a><span data-ttu-id="5f8ef-102">Modul &lt;Schlüsselwort&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5f8ef-102">Module &lt;keyword&gt; (Visual Basic)</span></span>
 <span data-ttu-id="5f8ef-103">Gibt an, dass ein Attribut am Anfang einer Quelldatei für das aktuelle Assemblymodul gilt.</span><span class="sxs-lookup"><span data-stu-id="5f8ef-103">Specifies that an attribute at the beginning of a source file applies to the current assembly module.</span></span>  

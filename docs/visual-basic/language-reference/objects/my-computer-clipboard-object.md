@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595159"
 ---
 # <a name="mycomputerclipboard-object"></a><span data-ttu-id="58bfe-102">My.Computer.Clipboard-Objekt</span><span class="sxs-lookup"><span data-stu-id="58bfe-102">My.Computer.Clipboard Object</span></span>
 <span data-ttu-id="58bfe-103">Stellt Methoden zur Bearbeitung der Zwischenablage bereit.</span><span class="sxs-lookup"><span data-stu-id="58bfe-103">Provides methods for manipulating the Clipboard.</span></span>  

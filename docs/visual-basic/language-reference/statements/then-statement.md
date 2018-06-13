@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598397"
 ---
 # <a name="then-statement"></a><span data-ttu-id="bed98-102">Then-Anweisung</span><span class="sxs-lookup"><span data-stu-id="bed98-102">Then Statement</span></span>
 <span data-ttu-id="bed98-103">Führt einen Anweisungsblock kompiliert oder ausgeführt wird, wenn eine getestete Bedingung "true" ist.</span><span class="sxs-lookup"><span data-stu-id="bed98-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  

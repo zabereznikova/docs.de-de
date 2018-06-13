@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579677"
 ---
 # <a name="development-workflow-for-docker-apps"></a><span data-ttu-id="77c6c-103">Entwicklungsworkflow für Docker-Apps</span><span class="sxs-lookup"><span data-stu-id="77c6c-103">Development workflow for Docker apps</span></span>
 

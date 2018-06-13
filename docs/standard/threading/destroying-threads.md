@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582932"
 ---
 # <a name="destroying-threads"></a><span data-ttu-id="b3197-102">Zerstören von Threads</span><span class="sxs-lookup"><span data-stu-id="b3197-102">Destroying Threads</span></span>
 <span data-ttu-id="b3197-103">Die <xref:System.Threading.Thread.Abort%2A>-Methode wird verwendet, um einen verwalteten Thread dauerhaft zu beenden.</span><span class="sxs-lookup"><span data-stu-id="b3197-103">The <xref:System.Threading.Thread.Abort%2A> method is used to stop a managed thread permanently.</span></span> <span data-ttu-id="b3197-104">Beim Aufruf von <xref:System.Threading.Thread.Abort%2A> löst die Common Language Runtime eine <xref:System.Threading.ThreadAbortException> im Zielthread aus, die der Zielthread abfangen kann.</span><span class="sxs-lookup"><span data-stu-id="b3197-104">When you call <xref:System.Threading.Thread.Abort%2A>, the common language runtime throws a <xref:System.Threading.ThreadAbortException> in the target thread, which the target thread can catch.</span></span> <span data-ttu-id="b3197-105">Weitere Informationen finden Sie unter <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b3197-105">For more information, see <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.</span></span>  

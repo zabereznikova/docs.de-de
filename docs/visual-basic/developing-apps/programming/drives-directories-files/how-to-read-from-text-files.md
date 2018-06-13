@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591585"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a><span data-ttu-id="2ca13-102">Gewusst wie: Lesen von Textdateien in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2ca13-102">How to: Read From Text Files in Visual Basic</span></span>
 <span data-ttu-id="2ca13-103">Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A>-Methode des `My.Computer.FileSystem`-Objekts ermöglicht das Lesen aus einer Textdatei.</span><span class="sxs-lookup"><span data-stu-id="2ca13-103">The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> method of the `My.Computer.FileSystem` object allows you to read from a text file.</span></span> <span data-ttu-id="2ca13-104">Die Dateicodierung kann angegeben werden, wenn beim Inhalt der Datei eine Codierung wie ASCII oder UTF-8 verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="2ca13-104">The file encoding can be specified if the contents of the file use an encoding such as ASCII or UTF-8.</span></span>  

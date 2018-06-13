@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599173"
 ---
 # <a name="alias-clause-visual-basic"></a><span data-ttu-id="70529-102">Alias-Klausel (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70529-102">Alias Clause (Visual Basic)</span></span>
 <span data-ttu-id="70529-103">Gibt an, dass eine externe Prozedur in der DLL einen anderen Namen aufweist.</span><span class="sxs-lookup"><span data-stu-id="70529-103">Indicates that an external procedure has another name in its DLL.</span></span>  

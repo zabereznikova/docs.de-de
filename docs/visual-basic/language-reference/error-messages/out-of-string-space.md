@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594445"
 ---
 # <a name="out-of-string-space-visual-basic"></a><span data-ttu-id="c7e60-102">Nicht genügend Zeichenfolgenspeicher (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7e60-102">Out of string space (Visual Basic)</span></span>
 <span data-ttu-id="c7e60-103">In Visual Basic können Sie sehr große Zeichenfolgen verwenden.</span><span class="sxs-lookup"><span data-stu-id="c7e60-103">With Visual Basic, you can use very large strings.</span></span> <span data-ttu-id="c7e60-104">Die Anforderungen von anderen Programmen und die Möglichkeit, die Sie mit Zeichenfolgen arbeiten können jedoch weiterhin diesen Fehler verursachen.</span><span class="sxs-lookup"><span data-stu-id="c7e60-104">However, the requirements of other programs and the way you work with your strings can still cause this error.</span></span>  
