@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551338"
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a>Gewusst wie: Animieren eines BorderThickness-Werts
 In diesem Beispiel wird gezeigt, wie Änderungen an die Stärke eines Rahmens mit Animieren der <xref:System.Windows.Media.Animation.ThicknessAnimation> Klasse.  

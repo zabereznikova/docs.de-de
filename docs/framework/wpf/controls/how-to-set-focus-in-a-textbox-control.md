@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552538"
 ---
 # <a name="how-to-set-focus-in-a-textbox-control"></a>Gewusst wie: Setzen des Fokus in einem TextBox-Steuerelement
 Dieses Beispiel zeigt, wie die <xref:System.Windows.UIElement.Focus%2A> -Methode zum Festlegen des Fokus auf ein <xref:System.Windows.Controls.TextBox> Steuerelement.  
