@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566768"
 ---
 # <a name="path-markup-syntax"></a><span data-ttu-id="c6c69-102">Pfadmarkupsyntax</span><span class="sxs-lookup"><span data-stu-id="c6c69-102">Path Markup Syntax</span></span>
 <span data-ttu-id="c6c69-103">Pfade werden im erläutert [Formen und die grundlegenden Funktionen zum Zeichnen in WPF Übersicht](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) und [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), jedoch in diesem Thema wird detailliert beschrieben, die leistungsfähigere und komplexere Mini Sprache Sie den Pfad angeben können Geometrien kürzer mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c6c69-103">Paths are discussed in [Shapes and Basic Drawing in WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) and the [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), however, this topic describes in detail the powerful and complex mini-language you can use to specify path geometries more compactly using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  

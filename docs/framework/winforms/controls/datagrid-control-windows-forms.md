@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529950"
 ---
 # <a name="datagrid-control-windows-forms"></a><span data-ttu-id="cbb0d-102">DataGrid-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="cbb0d-102">DataGrid Control (Windows Forms)</span></span>
 > [!NOTE]

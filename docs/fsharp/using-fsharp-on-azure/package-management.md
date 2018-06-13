@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566969"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a><span data-ttu-id="0d884-103">Verwalten von Paketen für F#-Azure-Abhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="0d884-103">Package Management for F# Azure Dependencies</span></span>
 
