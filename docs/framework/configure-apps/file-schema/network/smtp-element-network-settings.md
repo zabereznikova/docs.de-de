@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741892"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="a2a81-102">&lt;SMTP&gt; -Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="a2a81-102">&lt;smtp&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="a2a81-103">Konfiguriert das übermittlungsformat, die Übermittlungsmethode und die Absenderadresse zum Senden von e-Mail-Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="a2a81-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  

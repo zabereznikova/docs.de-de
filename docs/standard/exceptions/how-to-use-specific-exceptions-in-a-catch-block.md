@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571797"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a><span data-ttu-id="b8e15-102">Gewusst wie: Verwenden spezifischer Ausnahmen in einem Catch-Block</span><span class="sxs-lookup"><span data-stu-id="b8e15-102">How to use specific exceptions in a catch block</span></span>
 

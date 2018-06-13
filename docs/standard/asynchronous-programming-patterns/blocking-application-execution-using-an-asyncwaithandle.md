@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567324"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a><span data-ttu-id="46c55-102">Blockieren der Anwendungsausführung mithilfe von AsyncWaitHandle</span><span class="sxs-lookup"><span data-stu-id="46c55-102">Blocking Application Execution Using an AsyncWaitHandle</span></span>
 <span data-ttu-id="46c55-103">Anwendungen, die während des Wartens auf die Ergebnisse eines asynchronen Vorgangs nicht weiterarbeiten können, werden blockiert, bis der Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="46c55-103">Applications that cannot continue to do other work while waiting for the results of an asynchronous operation must block until the operation completes.</span></span> <span data-ttu-id="46c55-104">Verwenden Sie eine der folgenden Optionen, um den Hauptthread Ihrer Anwendung zu blockieren, während Sie darauf warten, dass ein asynchroner Vorgang abgeschlossen wird:</span><span class="sxs-lookup"><span data-stu-id="46c55-104">Use one of the following options to block your application's main thread while waiting for an asynchronous operation to complete:</span></span>  

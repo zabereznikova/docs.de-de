@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397259"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a><span data-ttu-id="fb19d-103">Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fb19d-103">Transport Layer Security (TLS) best practices with the .NET Framework</span></span>
 

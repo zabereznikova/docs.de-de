@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565574"
 ---
 # <a name="xstatic-markup-extension"></a><span data-ttu-id="057a2-102">x:Statische Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="057a2-102">x:Static Markup Extension</span></span>
 <span data-ttu-id="057a2-103">Verweist auf eine statische per-Wert-Code-Entität, die in definiert ist eine [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– kompatible Weise.</span><span class="sxs-lookup"><span data-stu-id="057a2-103">References any static by-value code entity that is defined in a [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]–compliant way.</span></span> <span data-ttu-id="057a2-104">Die statische Eigenschaft, auf die verwiesen wird, kann, geben Sie den Wert einer Eigenschaft in XAML verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="057a2-104">The static property that is referenced can be used to provide the value of a property in XAML.</span></span>  

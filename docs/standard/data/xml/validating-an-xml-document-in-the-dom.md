@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576310"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a><span data-ttu-id="be236-102">Validieren eines XML-Dokuments im Dokumentobjektmodell</span><span class="sxs-lookup"><span data-stu-id="be236-102">Validating an XML Document in the DOM</span></span>
 <span data-ttu-id="be236-103">Die <xref:System.Xml.XmlDocument>-Klasse validiert das XML-Dokument im DOM (Dokumentobjektmodell) standardmäßig nicht anhand eines XSD-Schemas (XML Schema Definition Language) oder einer DTD (Document Type Definition). Das XML-Dokument wird nur validiert, damit es wohlgeformt ist.</span><span class="sxs-lookup"><span data-stu-id="be236-103">The <xref:System.Xml.XmlDocument> class does not validate the XML in the Document Object Model (DOM) against an XML Schema definition language (XSD) schema or document type definition (DTD) by default; the XML is only verified to be well-formed.</span></span>  

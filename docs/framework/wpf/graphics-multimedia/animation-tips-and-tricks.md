@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558355"
 ---
 # <a name="animation-tips-and-tricks"></a><span data-ttu-id="d46c8-102">Tipps und Tricks zu Animationen</span><span class="sxs-lookup"><span data-stu-id="d46c8-102">Animation Tips and Tricks</span></span>
 <span data-ttu-id="d46c8-103">Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], es gibt eine Reihe von Tipps und Tricks, die die Animationen vornehmen können, bieten eine bessere Leistung, und speichern Sie Sie Frustration.</span><span class="sxs-lookup"><span data-stu-id="d46c8-103">When working with animations in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], there are a number of tips and tricks that can make your animations perform better and save you frustration.</span></span>  

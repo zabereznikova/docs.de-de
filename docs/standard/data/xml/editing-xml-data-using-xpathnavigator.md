@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568588"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a><span data-ttu-id="3aea2-102">Bearbeiten von XML-Daten mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="3aea2-102">Editing XML Data using XPathNavigator</span></span>
 <span data-ttu-id="3aea2-103">Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Methoden zum Einfügen, Ändern oder Entfernen von Knoten und Werten aus einem XML-Dokument bereit, das in einem <xref:System.Xml.XmlDocument>-Objekt enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="3aea2-103">The <xref:System.Xml.XPath.XPathNavigator> class provides methods to insert, modify and remove nodes and values from an XML document contained in an <xref:System.Xml.XmlDocument> object.</span></span> <span data-ttu-id="3aea2-104">Um eine der Methoden zum Einfügen, Ändern oder Entfernen von Knoten und Werten verwenden zu können, muss das <xref:System.Xml.XPath.XPathNavigator>-Objekt editierbar sein, d. h., seine <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>-Eigenschaft muss auf true festgelegt sein.</span><span class="sxs-lookup"><span data-stu-id="3aea2-104">In order to use any of these methods to insert, modify, and remove nodes and values, the <xref:System.Xml.XPath.XPathNavigator> object must be editable, that is, its <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> property must be true.</span></span>  

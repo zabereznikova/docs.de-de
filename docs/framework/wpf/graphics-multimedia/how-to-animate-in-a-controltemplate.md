@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558767"
 ---
 # <a name="how-to-animate-in-a-controltemplate"></a><span data-ttu-id="4571a-102">Gewusst wie: Animieren in einer "ControlTemplate"</span><span class="sxs-lookup"><span data-stu-id="4571a-102">How to: Animate in a ControlTemplate</span></span>
 <span data-ttu-id="4571a-103">Dieses Beispiel zeigt, wie <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.EventTrigger>, und <xref:System.Windows.Trigger> Objekte zu animierende innerhalb einer <xref:System.Windows.Controls.ControlTemplate>.</span><span class="sxs-lookup"><span data-stu-id="4571a-103">This example shows how to use <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.EventTrigger>, and <xref:System.Windows.Trigger> objects to animate within a <xref:System.Windows.Controls.ControlTemplate>.</span></span>  

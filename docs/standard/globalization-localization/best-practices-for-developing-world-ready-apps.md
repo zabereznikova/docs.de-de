@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578197"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a><span data-ttu-id="d2bc7-102">Empfehlungen für die Entwicklung weltweit einsatzfähiger Anwendungen</span><span class="sxs-lookup"><span data-stu-id="d2bc7-102">Best Practices for Developing World-Ready Applications</span></span>
 <span data-ttu-id="d2bc7-103">In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltweit einsatzfähigen Anwendungen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="d2bc7-103">This section describes the best practices to follow when developing world-ready applications.</span></span>  

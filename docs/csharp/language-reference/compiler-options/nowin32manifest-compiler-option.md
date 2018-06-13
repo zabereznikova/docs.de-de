@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214931"
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a><span data-ttu-id="1ff28-102">-nowin32manifest (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="1ff28-102">-nowin32manifest (C# Compiler Options)</span></span>
 <span data-ttu-id="1ff28-103">Verwenden Sie die Option **-nowin32manifest**, um den Compiler anzuweisen, kein Anwendungsmanifest in die ausführbare Datei einzubetten.</span><span class="sxs-lookup"><span data-stu-id="1ff28-103">Use the **-nowin32manifest** option to instruct the compiler not to embed any application manifest into the executable file.</span></span>  

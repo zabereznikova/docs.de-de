@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744274"
 ---
 # <a name="64-bit-applications"></a><span data-ttu-id="f90d2-102">64-Bit-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="f90d2-102">64-bit Applications</span></span>
 <span data-ttu-id="f90d2-103">Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem Windows-Betriebssystem mit 64 Bit entweder als systemeigene Anwendung oder unter WOW64 (Windows-32-Bit-On-Windows-64-Bit) ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="f90d2-103">When you compile an application, you can specify that it should run on a Windows 64-bit operating system either as a native application or under WOW64 (Windows 32-bit on Windows 64-bit).</span></span> <span data-ttu-id="f90d2-104">WOW64 ist eine Kompatibilitätsumgebung, die die Ausführung einer 32-Bit-Anwendung auf einem 64-Bit-System ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="f90d2-104">WOW64 is a compatibility environment that enables a 32-bit application to run on a 64-bit system.</span></span> <span data-ttu-id="f90d2-105">WOW64 ist allen in 64-Bit-Versionen des Windows-Betriebssystems enthalten.</span><span class="sxs-lookup"><span data-stu-id="f90d2-105">WOW64 is included in all 64-bit versions of the Windows operating system.</span></span>  

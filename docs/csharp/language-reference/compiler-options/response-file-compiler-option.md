@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215068"
 ---
 # <a name="-c-compiler-options"></a><span data-ttu-id="bf751-102">@ (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="bf751-102">@ (C# Compiler Options)</span></span>
 <span data-ttu-id="bf751-103">Mit der @-Option können Sie eine Datei angeben, die Compileroptionen und zu kompilierende Quellcodedateien enthält.</span><span class="sxs-lookup"><span data-stu-id="bf751-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  

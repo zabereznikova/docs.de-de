@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575439"
 ---
 # <a name="xslt-compiler-xsltcexe"></a><span data-ttu-id="50148-102">XSLT-Compiler (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="50148-102">XSLT Compiler (xsltc.exe)</span></span>
 <span data-ttu-id="50148-103">Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly.</span><span class="sxs-lookup"><span data-stu-id="50148-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="50148-104">Das kompilierte Stylesheet kann dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="50148-104">The compiled style sheet can then be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="50148-105">Sie können mit xsltc.exe keine signierten Assemblys generieren.</span><span class="sxs-lookup"><span data-stu-id="50148-105">You cannot generate signed assemblies with xsltc.exe.</span></span>  
