@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569732"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="8768f-102">Ereignisbehandlung in einem XML-Dokument mit "XmlNodeChangedEventArgs"</span><span class="sxs-lookup"><span data-stu-id="8768f-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
 <span data-ttu-id="8768f-103">**XmlNodeChangedEventArgs** kapselt die Argumente, die den beim **XmlDocument**-Objekt zur Verarbeitung von Ereignissen registrierten Ereignishandlern übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="8768f-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="8768f-104">	Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="8768f-104">The events and a description of when they are fired is given in the following table.</span></span>  
