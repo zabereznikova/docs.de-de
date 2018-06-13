@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635947"
 ---
 # <a name="property-value-is-not-valid"></a><span data-ttu-id="66c8a-102">Der Eigenschaftswert ist nicht gültig.</span><span class="sxs-lookup"><span data-stu-id="66c8a-102">Property value is not valid</span></span>
 <span data-ttu-id="66c8a-103">Eine der Eigenschaften eines Objekts oder Steuerelements wurde auf einen Wert außerhalb des gültigen Bereichs festgelegt.</span><span class="sxs-lookup"><span data-stu-id="66c8a-103">One of the properties of an object or control was set to a value outside its range.</span></span>  

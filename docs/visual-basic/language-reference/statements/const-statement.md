@@ -11,6 +11,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233846"
 ---
 # <a name="const-statement-visual-basic"></a><span data-ttu-id="250b5-102">Const-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="250b5-102">Const Statement (Visual Basic)</span></span>
 <span data-ttu-id="250b5-103">Deklariert und definiert eine oder mehrere Konstanten.</span><span class="sxs-lookup"><span data-stu-id="250b5-103">Declares and defines one or more constants.</span></span>  

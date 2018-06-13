@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171417"
 ---
 # <a name="gtgt-operator-c-reference"></a><span data-ttu-id="955af-102">&gt;Operator &gt;= (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="955af-102">&gt;&gt;= Operator (C# Reference)</span></span>
 <span data-ttu-id="955af-103">Der Rechtsschiebezuweisungsoperator.</span><span class="sxs-lookup"><span data-stu-id="955af-103">The right-shift assignment operator.</span></span>  

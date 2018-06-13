@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655418"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a><span data-ttu-id="15cd7-102">Erweiternde und eingrenzende Konvertierungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15cd7-102">Widening and Narrowing Conversions (Visual Basic)</span></span>
 <span data-ttu-id="15cd7-103">Ein wichtiger Aspekt mit einer Typumwandlung ist, ob das Ergebnis der Konvertierung innerhalb des Bereichs des Zieltyps Daten ist.</span><span class="sxs-lookup"><span data-stu-id="15cd7-103">An important consideration with a type conversion is whether the result of the conversion is within the range of the destination data type.</span></span>  

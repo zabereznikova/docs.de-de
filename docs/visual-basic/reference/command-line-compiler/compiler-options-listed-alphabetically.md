@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656031"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a><span data-ttu-id="48a48-102">Visual Basic-Compileroptionen alphabetisch sortiert</span><span class="sxs-lookup"><span data-stu-id="48a48-102">Visual Basic compiler options listed alphabetically</span></span>
 <span data-ttu-id="48a48-103">Die Visual Basic-Befehlszeilencompiler wird als Alternative zum Kompilieren von Programmen über die integrierte Entwicklungsumgebung (IDE) von Visual Studio bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="48a48-103">The Visual Basic command-line compiler is provided as an alternative to compiling programs from the Visual Studio integrated development environment (IDE).</span></span> <span data-ttu-id="48a48-104">Im folgenden finden eine Liste von der Visual Basic Befehlszeilen-Compileroptionen alphabetisch sortiert.</span><span class="sxs-lookup"><span data-stu-id="48a48-104">The following is a list of the Visual Basic command-line compiler options sorted alphabetically.</span></span>  

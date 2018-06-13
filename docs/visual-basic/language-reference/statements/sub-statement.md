@@ -34,6 +34,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234175"
 ---
 # <a name="sub-statement-visual-basic"></a><span data-ttu-id="285fb-102">Sub-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="285fb-102">Sub Statement (Visual Basic)</span></span>
 <span data-ttu-id="285fb-103">Deklariert den Namen, Parameter und Code, definieren eine `Sub` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="285fb-103">Declares the name, parameters, and code that define a `Sub` procedure.</span></span>  

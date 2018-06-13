@@ -35,6 +35,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654355"
 ---
 # <a name="special-characters-in-code-visual-basic"></a><span data-ttu-id="738f1-102">Sonderzeichen in Code (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="738f1-102">Special Characters in Code (Visual Basic)</span></span>
 <span data-ttu-id="738f1-103">In einigen Fällen müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwenden, die nicht alphabetisch oder numerisch sind.</span><span class="sxs-lookup"><span data-stu-id="738f1-103">Sometimes you have to use special characters in your code, that is, characters that are not alphabetical or numeric.</span></span> <span data-ttu-id="738f1-104">Interpunktion und Sonderzeichen in der Visual Basic-Zeichensatz haben verschiedene Funktionen, reichen von der Strukturierung Programmtext zur Definition der Aufgaben, die der Compiler oder das kompilierte Programm ausführt.</span><span class="sxs-lookup"><span data-stu-id="738f1-104">The punctuation and special characters in the Visual Basic character set have various uses, from organizing program text to defining the tasks that the compiler or the compiled program performs.</span></span> <span data-ttu-id="738f1-105">Sie legen keine auszuführende Operation fest.</span><span class="sxs-lookup"><span data-stu-id="738f1-105">They do not specify an operation to be performed.</span></span>  

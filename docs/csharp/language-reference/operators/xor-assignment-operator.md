@@ -11,6 +11,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172372"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="d917b-102">Operator ^= (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="d917b-102">^= Operator (C# Reference)</span></span>
 <span data-ttu-id="d917b-103">Der XOR-Zuweisungsoperator („exklusives Oder“)</span><span class="sxs-lookup"><span data-stu-id="d917b-103">The exclusive-OR assignment operator.</span></span>  

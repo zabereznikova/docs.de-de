@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635158"
 ---
 # <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a><span data-ttu-id="952c0-102">Zeile &lt;Anzahl&gt; kann nicht gelesen werden, weil sie die maximale Zeilengröße überschreitet.</span><span class="sxs-lookup"><span data-stu-id="952c0-102">Line &lt;number&gt; cannot be read because it exceeds the maximum line size.</span></span>
 <span data-ttu-id="952c0-103">Die Zeile kann nicht gelesen werden, weil sie die maximale Zeilengröße überschreitet.</span><span class="sxs-lookup"><span data-stu-id="952c0-103">The line cannot be read because it exceeds the maximum line size.</span></span> <span data-ttu-id="952c0-104">In der Regel bedeutet dies, dass in der Datei ein öffnendes Anführungszeichen, aber kein schließendes Anführungszeichen vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="952c0-104">Usually this means that there is an opening quotation mark in the file, but no closing quotation mark.</span></span>  

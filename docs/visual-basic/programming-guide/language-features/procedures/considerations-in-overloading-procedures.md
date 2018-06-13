@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654329"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a><span data-ttu-id="dc862-102">Überlegungen zur Prozedurüberladung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc862-102">Considerations in Overloading Procedures (Visual Basic)</span></span>
 <span data-ttu-id="dc862-103">Wenn Sie eine Prozedur zu überladen, müssen Sie ein anderes verwenden *Signatur* für jede überladene Version.</span><span class="sxs-lookup"><span data-stu-id="dc862-103">When you overload a procedure, you must use a different *signature* for each overloaded version.</span></span> <span data-ttu-id="dc862-104">Dies bedeutet normalerweise, dass jede Version eine andere Parameterliste angeben muss.</span><span class="sxs-lookup"><span data-stu-id="dc862-104">This usually means each version must specify a different parameter list.</span></span> <span data-ttu-id="dc862-105">Weitere Informationen finden Sie unter "Andere Signatur" in [Prozedurüberladung](./procedure-overloading.md).</span><span class="sxs-lookup"><span data-stu-id="dc862-105">For more information, see "Different Signature" in [Procedure Overloading](./procedure-overloading.md).</span></span>  

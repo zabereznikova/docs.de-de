@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651112"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a><span data-ttu-id="34c3a-102">Gewusst wie: Definieren eines Parameters für eine Prozedur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="34c3a-102">How to: Define a Parameter for a Procedure (Visual Basic)</span></span>
 <span data-ttu-id="34c3a-103">Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben werden, wenn es aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="34c3a-103">A *parameter* allows the calling code to pass a value to the procedure when it calls it.</span></span> <span data-ttu-id="34c3a-104">Sie deklarieren jeden Parameter für eine Prozedur auf die gleiche Weise wie Sie eine Variable zu deklarieren, die den Namen und den Datentyp angibt.</span><span class="sxs-lookup"><span data-stu-id="34c3a-104">You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type.</span></span> <span data-ttu-id="34c3a-105">Sie geben auch den Übergabemechanismus und gibt an, ob der Parameter optional ist.</span><span class="sxs-lookup"><span data-stu-id="34c3a-105">You also specify the passing mechanism, and whether the parameter is optional.</span></span>  

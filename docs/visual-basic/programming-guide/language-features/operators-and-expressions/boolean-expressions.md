@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655797"
 ---
 # <a name="boolean-expressions-visual-basic"></a><span data-ttu-id="5fd57-102">Boolesche Ausdrücke (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5fd57-102">Boolean Expressions (Visual Basic)</span></span>
 <span data-ttu-id="5fd57-103">Ein *booleschen Ausdruck* ist ein Ausdruck, der einen Wert ergibt die [booleschen Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` oder `False`.</span><span class="sxs-lookup"><span data-stu-id="5fd57-103">A *Boolean expression* is an expression that evaluates to a value of the [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` or `False`.</span></span> <span data-ttu-id="5fd57-104">`Boolean` Ausdrücke können mehrere Formen annehmen.</span><span class="sxs-lookup"><span data-stu-id="5fd57-104">`Boolean` expressions can take several forms.</span></span> <span data-ttu-id="5fd57-105">Die einfachste Technologie ist des direkten Zeichenfolgenvergleichs den Wert des eine `Boolean` -Variable auf einen `Boolean` Literal, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="5fd57-105">The simplest is the direct comparison of the value of a `Boolean` variable to a `Boolean` literal, as shown in the following example.</span></span>  

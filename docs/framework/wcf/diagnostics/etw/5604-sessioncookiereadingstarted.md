@@ -1,39 +1,28 @@
 ---
 title: 5604 - SessionCookieReadingStarted
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7348caaa-add0-473d-8af3-b2dadb68abdb
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24eb70850505af93fbbff1da2130e28f67b4ab08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 549ece457f4c4498f38a7c19cf4d31137fbe7eff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470249"
 ---
-# <a name="5604---sessioncookiereadingstarted"></a><span data-ttu-id="92504-102">5604 - SessionCookieReadingStarted</span><span class="sxs-lookup"><span data-stu-id="92504-102">5604 - SessionCookieReadingStarted</span></span>
-## <a name="properties"></a><span data-ttu-id="92504-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="92504-103">Properties</span></span>  
+# <a name="5604---sessioncookiereadingstarted"></a><span data-ttu-id="a9309-102">5604 - SessionCookieReadingStarted</span><span class="sxs-lookup"><span data-stu-id="a9309-102">5604 - SessionCookieReadingStarted</span></span>
+## <a name="properties"></a><span data-ttu-id="a9309-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="a9309-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="92504-104">ID</span><span class="sxs-lookup"><span data-stu-id="92504-104">ID</span></span>|<span data-ttu-id="92504-105">5604</span><span class="sxs-lookup"><span data-stu-id="92504-105">5604</span></span>|  
-|<span data-ttu-id="92504-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="92504-106">Keywords</span></span>|<span data-ttu-id="92504-107">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="92504-107">Security</span></span>|  
-|<span data-ttu-id="92504-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="92504-108">Level</span></span>|<span data-ttu-id="92504-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="92504-109">Verbose</span></span>|  
-|<span data-ttu-id="92504-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="92504-110">Channel</span></span>|<span data-ttu-id="92504-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="92504-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="a9309-104">ID</span><span class="sxs-lookup"><span data-stu-id="a9309-104">ID</span></span>|<span data-ttu-id="a9309-105">5604</span><span class="sxs-lookup"><span data-stu-id="a9309-105">5604</span></span>|  
+|<span data-ttu-id="a9309-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="a9309-106">Keywords</span></span>|<span data-ttu-id="a9309-107">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="a9309-107">Security</span></span>|  
+|<span data-ttu-id="a9309-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="a9309-108">Level</span></span>|<span data-ttu-id="a9309-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="a9309-109">Verbose</span></span>|  
+|<span data-ttu-id="a9309-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="a9309-110">Channel</span></span>|<span data-ttu-id="a9309-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="a9309-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="92504-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="92504-112">Description</span></span>  
- <span data-ttu-id="92504-113">Dieses Ereignis wird ausgegeben, wenn das Lesen des Sitzungstokens aus dem Sitzungscookie gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="92504-113">This event is emitted when the reading session token from session cookie started.</span></span>  
+## <a name="description"></a><span data-ttu-id="a9309-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a9309-112">Description</span></span>  
+ <span data-ttu-id="a9309-113">Dieses Ereignis wird ausgegeben, wenn das Lesen des Sitzungstokens aus dem Sitzungscookie gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="a9309-113">This event is emitted when the reading session token from session cookie started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="92504-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="92504-114">Message</span></span>  
- <span data-ttu-id="92504-115">Lesen des Sitzungstokens aus dem Sitzungscookie gestartet.</span><span class="sxs-lookup"><span data-stu-id="92504-115">Reading session token from session cookie started.</span></span>  
+## <a name="message"></a><span data-ttu-id="a9309-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="a9309-114">Message</span></span>  
+ <span data-ttu-id="a9309-115">Lesen des Sitzungstokens aus dem Sitzungscookie gestartet.</span><span class="sxs-lookup"><span data-stu-id="a9309-115">Reading session token from session cookie started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="92504-116">Details</span><span class="sxs-lookup"><span data-stu-id="92504-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="a9309-116">Details</span><span class="sxs-lookup"><span data-stu-id="a9309-116">Details</span></span>

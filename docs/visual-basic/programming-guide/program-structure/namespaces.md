@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655557"
 ---
 # <a name="namespaces-in-visual-basic"></a><span data-ttu-id="7f7c7-102">Namespaces in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7f7c7-102">Namespaces in Visual Basic</span></span>
 <span data-ttu-id="7f7c7-103">Namespaces organisieren die in einer Assembly definierten Objekte.</span><span class="sxs-lookup"><span data-stu-id="7f7c7-103">Namespaces organize the objects defined in an assembly.</span></span> <span data-ttu-id="7f7c7-104">Assemblys können mehrere Namespaces enthalten, die wiederum andere Namespaces enthalten können.</span><span class="sxs-lookup"><span data-stu-id="7f7c7-104">Assemblies can contain multiple namespaces, which can in turn contain other namespaces.</span></span> <span data-ttu-id="7f7c7-105">Namespaces vermeiden Mehrdeutigkeit und vereinfachen Verweise, wenn Sie große Gruppen von Objekten verwenden, zum Beispiel Klassenbibliotheken.</span><span class="sxs-lookup"><span data-stu-id="7f7c7-105">Namespaces prevent ambiguity and simplify references when using large groups of objects such as class libraries.</span></span>  

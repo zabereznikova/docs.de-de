@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656151"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a><span data-ttu-id="458f1-102">Logische und bitweise Operatoren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="458f1-102">Logical and Bitwise Operators in Visual Basic</span></span>
 <span data-ttu-id="458f1-103">Logische Operatoren vergleichen `Boolean` Ausdrücke und der Rückgabewert eine `Boolean` Ergebnis.</span><span class="sxs-lookup"><span data-stu-id="458f1-103">Logical operators compare `Boolean` expressions and return a `Boolean` result.</span></span> <span data-ttu-id="458f1-104">Die `And`, `Or`, `AndAlso`, `OrElse`, und `Xor` Operatoren sind *binäre* , da sie zwei Operanden in Anspruch nehmen, während er sich die `Not` Operator *unäre* , da er einen einzigen Operanden akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="458f1-104">The `And`, `Or`, `AndAlso`, `OrElse`, and `Xor` operators are *binary* because they take two operands, while the `Not` operator is *unary* because it takes a single operand.</span></span> <span data-ttu-id="458f1-105">Einige dieser Operatoren können auch bitweise logische Operationen für ganzzahlige Werte ausführen.</span><span class="sxs-lookup"><span data-stu-id="458f1-105">Some of these operators can also perform bitwise logical operations on integral values.</span></span>  

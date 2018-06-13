@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171966"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="f6f55-102">Operator %= (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="f6f55-102">%= Operator (C# Reference)</span></span>
 <span data-ttu-id="f6f55-103">Der Restzuweisungsoperator</span><span class="sxs-lookup"><span data-stu-id="f6f55-103">The remainder assignment operator.</span></span>  

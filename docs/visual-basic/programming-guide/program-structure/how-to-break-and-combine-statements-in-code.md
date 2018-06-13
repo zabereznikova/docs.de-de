@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651017"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a><span data-ttu-id="cd63d-102">Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cd63d-102">How to: Break and Combine Statements in Code (Visual Basic)</span></span>
 <span data-ttu-id="cd63d-103">Beim Schreiben von Code können Sie manchmal lange Anweisungen erstellen, die einer horizontalen Bildlauf im Code-Editor.</span><span class="sxs-lookup"><span data-stu-id="cd63d-103">When writing your code, you might at times create lengthy statements that necessitate horizontal scrolling in the Code Editor.</span></span> <span data-ttu-id="cd63d-104">Obwohl dies Einfluss auf die nicht der Code ausgeführt wird, es erschwert es für Sie oder andere Personen, den Code zu lesen, wie er auf dem Bildschirm angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="cd63d-104">Although this doesn't affect the way your code runs, it makes it difficult for you or anyone else to read the code as it appears on the monitor.</span></span> <span data-ttu-id="cd63d-105">In solchen Fällen sollten Sie erwägen, die lange Anweisung in mehrere Zeilen aufgeteilt.</span><span class="sxs-lookup"><span data-stu-id="cd63d-105">In such cases, you should consider breaking the single long statement into several lines.</span></span>  

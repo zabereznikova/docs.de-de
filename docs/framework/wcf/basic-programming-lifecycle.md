@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803691"
 ---
 # <a name="basic-programming-lifecycle"></a><span data-ttu-id="e437f-102">Grundlegender Programmierlebenszyklus</span><span class="sxs-lookup"><span data-stu-id="e437f-102">Basic Programming Lifecycle</span></span>
 <span data-ttu-id="e437f-103">Windows Communication Foundation (WCF) ermöglicht es Anwendungen zu kommunizieren, ob sie über das Internet oder auf verschiedenen Anwendungsplattformen auf demselben Computer befinden.</span><span class="sxs-lookup"><span data-stu-id="e437f-103">Windows Communication Foundation (WCF) enables applications to communicate whether they are on the same computer, across the Internet, or on different application platforms.</span></span> <span data-ttu-id="e437f-104">Dieses Thema beschreibt die Aufgaben, die zum Erstellen einer WCF-Anwendung erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="e437f-104">This topic outlines the tasks that are required to build a WCF application.</span></span> <span data-ttu-id="e437f-105">Eine funktionierende beispielanwendung finden Sie unter [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="e437f-105">For a working sample application, see [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652681"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a><span data-ttu-id="60317-102">Gewusst wie: Aufrufen eines Ereignishandlers in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="60317-102">How to: Call an Event Handler in Visual Basic</span></span>
 <span data-ttu-id="60317-103">Ein *Ereignis* ist eine Aktion oder ein Vorkommen – z. B. eine Maus klicken oder ein Kreditlimit überschritten –, wird von einigen Programmkomponente, und für die Sie Code schreiben können reagieren erkannt.</span><span class="sxs-lookup"><span data-stu-id="60317-103">An *event* is an action or occurrence — such as a mouse click or a credit limit exceeded — that is recognized by some program component, and for which you can write code to respond.</span></span> <span data-ttu-id="60317-104">Ein *Ereignishandler* ist der Code, die Sie schreiben, um auf ein Ereignis zu reagieren.</span><span class="sxs-lookup"><span data-stu-id="60317-104">An *event handler* is the code you write to respond to an event.</span></span>  

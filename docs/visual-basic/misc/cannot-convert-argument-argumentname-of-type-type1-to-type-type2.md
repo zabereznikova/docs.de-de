@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635132"
 ---
 # <a name="cannot-convert-argument-39ltargumentnamegt39-of-type-39lttype1gt39-to-type-39lttype2gt39"></a><span data-ttu-id="fa897-102">Argument kann nicht konvertiert &#39; &lt;Argumentname&gt; &#39; des Typs &#39; &lt;Typ1&gt; &#39; Eingabe &#39; &lt;Typ2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="fa897-102">Cannot convert argument &#39;&lt;argumentname&gt;&#39; of type &#39;&lt;type1&gt;&#39; to type &#39;&lt;type2&gt;&#39;</span></span>
 <span data-ttu-id="fa897-103">Eine Konvertierungsoperation versucht, ein Argument in einen inkompatiblen Typ zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="fa897-103">A conversion operation attempts to convert an argument to an incompatible type.</span></span>  

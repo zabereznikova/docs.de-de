@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653493"
 ---
 # <a name="-bugreport"></a><span data-ttu-id="c3962-102">-bugreport</span><span class="sxs-lookup"><span data-stu-id="c3962-102">-bugreport</span></span>
 <span data-ttu-id="c3962-103">Erstellt eine Datei, die Sie verwenden können, wenn Sie einen Fehlerbericht einreichen.</span><span class="sxs-lookup"><span data-stu-id="c3962-103">Creates a file that you can use when you file a bug report.</span></span>  

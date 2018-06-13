@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654147"
 ---
 # <a name="-debug-visual-basic"></a><span data-ttu-id="40947-102">-Debug (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="40947-102">-debug (Visual Basic)</span></span>
 <span data-ttu-id="40947-103">Bewirkt, dass der Compiler Debuginformationen zu generieren und in den Ausgabedateien zu speichern.</span><span class="sxs-lookup"><span data-stu-id="40947-103">Causes the compiler to generate debugging information and place it in the output file(s).</span></span>  

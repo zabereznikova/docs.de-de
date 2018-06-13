@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636714"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a><span data-ttu-id="d547e-102">Mindestens ein Ordner im Zielpfad ist nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="d547e-102">One or more folders in the target path do not exist</span></span>
 <span data-ttu-id="d547e-103">Mindestens ein im Zielpfad angegebenes Verzeichnis ist nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="d547e-103">One or more of the directories supplied in the target path do not exist.</span></span> <span data-ttu-id="d547e-104">Dies kann das Ergebnis eines nicht ordnungsgemäß analysierten Pfades sein, insbesondere bei der Bereitstellung eines relativen Pfades.</span><span class="sxs-lookup"><span data-stu-id="d547e-104">This may be a result of an incorrectly parsed path, particularly if supplying a relative path.</span></span>  

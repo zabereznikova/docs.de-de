@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654793"
 ---
 # <a name="lambda-expressions-visual-basic"></a><span data-ttu-id="436df-102">Lambdaausdrücke (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="436df-102">Lambda Expressions (Visual Basic)</span></span>
 <span data-ttu-id="436df-103">Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine ohne Namen, die verwendet werden kann, wo ein Delegat zulässig ist.</span><span class="sxs-lookup"><span data-stu-id="436df-103">A *lambda expression* is a function or subroutine without a name that can be used wherever a delegate is valid.</span></span> <span data-ttu-id="436df-104">Lambda-Ausdrücke können Funktionen oder Unterroutinen werden und einzeilige bzw. mehrzeilige werden können.</span><span class="sxs-lookup"><span data-stu-id="436df-104">Lambda expressions can be functions or subroutines and can be single-line or multi-line.</span></span> <span data-ttu-id="436df-105">Sie können Werte aus dem aktuellen Bereich an einen Lambda-Ausdruck übergeben.</span><span class="sxs-lookup"><span data-stu-id="436df-105">You can pass values from the current scope to a lambda expression.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654751"
 ---
 # <a name="visual-basic-language-walkthroughs"></a><span data-ttu-id="bbe92-102">Exemplarische Vorgehensweisen für Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bbe92-102">Visual Basic Language Walkthroughs</span></span>
 <span data-ttu-id="bbe92-103">Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien, sodass sie der ideale Ausgangspunkt sind, um mehr über das Produkt oder einen bestimmten Funktionsbereich zu erfahren.</span><span class="sxs-lookup"><span data-stu-id="bbe92-103">Walkthroughs give step-by-step instructions for common scenarios, which makes them a good place to start learning about the product or a particular feature area.</span></span>  
