@@ -1,39 +1,28 @@
 ---
 title: 604 - AspNetRoute
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 761748b5-1b7c-4b17-98ba-0579876632f1
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e58b06244a73d8eea600850c34867d3f9646f353
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cd961511c15d49c78029c042b0db8fd9ec4a6a66
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33468269"
 ---
-# <a name="604---aspnetroute"></a><span data-ttu-id="a7f9f-102">604 - AspNetRoute</span><span class="sxs-lookup"><span data-stu-id="a7f9f-102">604 - AspNetRoute</span></span>
-## <a name="properties"></a><span data-ttu-id="a7f9f-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="a7f9f-103">Properties</span></span>  
+# <a name="604---aspnetroute"></a><span data-ttu-id="fac32-102">604 - AspNetRoute</span><span class="sxs-lookup"><span data-stu-id="fac32-102">604 - AspNetRoute</span></span>
+## <a name="properties"></a><span data-ttu-id="fac32-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="fac32-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="a7f9f-104">ID</span><span class="sxs-lookup"><span data-stu-id="a7f9f-104">ID</span></span>|<span data-ttu-id="a7f9f-105">604</span><span class="sxs-lookup"><span data-stu-id="a7f9f-105">604</span></span>|  
-|<span data-ttu-id="a7f9f-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="a7f9f-106">Keywords</span></span>|<span data-ttu-id="a7f9f-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="a7f9f-107">RoutingServices</span></span>|  
-|<span data-ttu-id="a7f9f-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="a7f9f-108">Level</span></span>|<span data-ttu-id="a7f9f-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="a7f9f-109">Verbose</span></span>|  
-|<span data-ttu-id="a7f9f-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="a7f9f-110">Channel</span></span>|<span data-ttu-id="a7f9f-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="a7f9f-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="fac32-104">ID</span><span class="sxs-lookup"><span data-stu-id="fac32-104">ID</span></span>|<span data-ttu-id="fac32-105">604</span><span class="sxs-lookup"><span data-stu-id="fac32-105">604</span></span>|  
+|<span data-ttu-id="fac32-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="fac32-106">Keywords</span></span>|<span data-ttu-id="fac32-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="fac32-107">RoutingServices</span></span>|  
+|<span data-ttu-id="fac32-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="fac32-108">Level</span></span>|<span data-ttu-id="fac32-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="fac32-109">Verbose</span></span>|  
+|<span data-ttu-id="fac32-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="fac32-110">Channel</span></span>|<span data-ttu-id="fac32-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="fac32-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="a7f9f-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a7f9f-112">Description</span></span>  
- <span data-ttu-id="a7f9f-113">Dieses Ereignis wird ausgegeben, wenn eine neue Asp.Net-Route '%1' mit serviceType '%2' und serviceHostFactoryType '%3' hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="a7f9f-113">This event is emitted when a new Asp.Net route '%1' with serviceType '%2' and serviceHostFactoryType '%3' is added.</span></span>  
+## <a name="description"></a><span data-ttu-id="fac32-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fac32-112">Description</span></span>  
+ <span data-ttu-id="fac32-113">Dieses Ereignis wird ausgegeben, wenn eine neue Asp.Net-Route '%1' mit serviceType '%2' und serviceHostFactoryType '%3' hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="fac32-113">This event is emitted when a new Asp.Net route '%1' with serviceType '%2' and serviceHostFactoryType '%3' is added.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="a7f9f-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="a7f9f-114">Message</span></span>  
- <span data-ttu-id="a7f9f-115">Eine neue Asp.Net-Route '%1' mit serviceType '%2' und serviceHostFactoryType '%3' wird hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="a7f9f-115">A new Asp.Net route '%1' with serviceType '%2' and serviceHostFactoryType '%3' is added.</span></span>  
+## <a name="message"></a><span data-ttu-id="fac32-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="fac32-114">Message</span></span>  
+ <span data-ttu-id="fac32-115">Eine neue Asp.Net-Route '%1' mit serviceType '%2' und serviceHostFactoryType '%3' wird hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="fac32-115">A new Asp.Net route '%1' with serviceType '%2' and serviceHostFactoryType '%3' is added.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="a7f9f-116">Details</span><span class="sxs-lookup"><span data-stu-id="a7f9f-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="fac32-116">Details</span><span class="sxs-lookup"><span data-stu-id="fac32-116">Details</span></span>

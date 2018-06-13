@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552817"
 ---
 # <a name="gridsplitter-how-to-topics"></a><span data-ttu-id="a6acb-102">Gewusst-wie-Themen zu GridSplitter</span><span class="sxs-lookup"><span data-stu-id="a6acb-102">GridSplitter How-to Topics</span></span>
 <span data-ttu-id="a6acb-103">Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.GridSplitter> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="a6acb-103">The topics in this section describe how to use the <xref:System.Windows.Controls.GridSplitter> control.</span></span>  

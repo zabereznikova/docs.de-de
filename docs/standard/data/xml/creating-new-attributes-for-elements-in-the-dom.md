@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570379"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a><span data-ttu-id="6ff8a-102">Erstellen von neuen Attributen für Elemente im Dokumentobjektmodell</span><span class="sxs-lookup"><span data-stu-id="6ff8a-102">Creating New Attributes for Elements in the DOM</span></span>
 <span data-ttu-id="6ff8a-103">Das Erstellen von neuen Attributen unterscheidet sich vom Erstellen anderer Knotentypen, da Attribute keine Knoten sind, sondern Eigenschaften eines Elementknotens, und in einer mit dem Element verknüpften **XmlAttributeCollection** enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="6ff8a-103">Creating new attributes is different than creating other node types, because attributes are not nodes, but are properties of an element node and are contained in an **XmlAttributeCollection** associated with the element.</span></span> <span data-ttu-id="6ff8a-104">Es gibt verschiedene Möglichkeiten, ein Attribut zu erstellen und an ein Element anzuhängen:</span><span class="sxs-lookup"><span data-stu-id="6ff8a-104">There are multiple ways to create an attribute and attach it to an element:</span></span>  

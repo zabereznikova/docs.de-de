@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742243"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a><span data-ttu-id="de943-102">Typweiterleitung in der Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="de943-102">Type Forwarding in the Common Language Runtime</span></span>
 <span data-ttu-id="de943-103">Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben, ohne Anwendungen, die die ursprüngliche Assembly verwenden, neu kompilieren zu müssen.</span><span class="sxs-lookup"><span data-stu-id="de943-103">Type forwarding allows you to move a type to another assembly without having to recompile applications that use the original assembly.</span></span>  

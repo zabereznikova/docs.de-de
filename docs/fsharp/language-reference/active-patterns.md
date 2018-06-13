@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564445"
 ---
 # <a name="active-patterns"></a><span data-ttu-id="6c41a-103">Aktive Muster</span><span class="sxs-lookup"><span data-stu-id="6c41a-103">Active Patterns</span></span>
 

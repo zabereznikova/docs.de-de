@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519638"
 ---
 # <a name="state-machine-workflows"></a><span data-ttu-id="90030-102">Zustandsautomatworkflows</span><span class="sxs-lookup"><span data-stu-id="90030-102">State Machine Workflows</span></span>
 <span data-ttu-id="90030-103">Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="90030-103">A state machine is a well-known paradigm for developing programs.</span></span> <span data-ttu-id="90030-104">Die <xref:System.Activities.Statements.StateMachine>-Aktivität kann zusammen mit <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> und anderen Aktivitäten verwendet werden, um Zustandsautomatenworkflow-Programme zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="90030-104">The <xref:System.Activities.Statements.StateMachine> activity, along with <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, and other activities can be used to build state machine workflow programs.</span></span> <span data-ttu-id="90030-105">Dieses Thema bietet eine Übersicht über das Erstellen von Zustandsautomatenworkflows.</span><span class="sxs-lookup"><span data-stu-id="90030-105">This topic provides an overview of creating state machine workflows.</span></span>  

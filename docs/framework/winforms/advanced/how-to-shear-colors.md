@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522446"
 ---
 # <a name="how-to-shear-colors"></a><span data-ttu-id="98a28-102">Gewusst wie: Scheren von Farben</span><span class="sxs-lookup"><span data-stu-id="98a28-102">How to: Shear Colors</span></span>
 <span data-ttu-id="98a28-103">Scheren erhöht oder verringert eine Farbe Komponente durch einen Betrag proportional zu einer anderen Farbe-Komponente.</span><span class="sxs-lookup"><span data-stu-id="98a28-103">Shearing increases or decreases a color component by an amount proportional to another color component.</span></span> <span data-ttu-id="98a28-104">Betrachten Sie beispielsweise die Transformation, in dem die Hälfte der Wert des Blauanteils Rotanteils gestiegen ist.</span><span class="sxs-lookup"><span data-stu-id="98a28-104">For example, consider the transformation where the red component is increased by one half the value of the blue component.</span></span> <span data-ttu-id="98a28-105">Unter solchen eine Transformation werden die Farbe (0,2, 0,5, 1), (0,7, 0,5, 1).</span><span class="sxs-lookup"><span data-stu-id="98a28-105">Under such a transformation, the color (0.2, 0.5, 1) would become (0.7, 0.5, 1).</span></span> <span data-ttu-id="98a28-106">Neuen Rotanteils ist 0,2 + ((1/2)(1) = 0,7.</span><span class="sxs-lookup"><span data-stu-id="98a28-106">The new red component is 0.2 + (1/2)(1) = 0.7.</span></span>  

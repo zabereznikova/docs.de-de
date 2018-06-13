@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767426"
 ---
 # <a name="ltclaimtypegt"></a><span data-ttu-id="9185d-102">&lt;ClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="9185d-102">&lt;claimType&gt;</span></span>
 <span data-ttu-id="9185d-103">Gibt einen einzelnen Anspruch aus erforderliche oder optionale für eingehende Sicherheitstoken an.</span><span class="sxs-lookup"><span data-stu-id="9185d-103">Specifies a single optional or required claim for incoming security tokens.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570548"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a><span data-ttu-id="7ece1-102">Entfernen von Attributen aus einem Elementknoten im DOM</span><span class="sxs-lookup"><span data-stu-id="7ece1-102">Removing Attributes from an Element Node in the DOM</span></span>
 <span data-ttu-id="7ece1-103">Es gibt viele Möglichkeiten, Attribute zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="7ece1-103">There are many ways to remove attributes.</span></span> <span data-ttu-id="7ece1-104">Eine Möglichkeit besteht darin, Attribute aus der Attributauflistung zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="7ece1-104">One technique is to remove them from the attribute collection.</span></span> <span data-ttu-id="7ece1-105">Dabei werden die folgenden Schritte ausgeführt:</span><span class="sxs-lookup"><span data-stu-id="7ece1-105">To do this, the following steps are performed:</span></span>  
