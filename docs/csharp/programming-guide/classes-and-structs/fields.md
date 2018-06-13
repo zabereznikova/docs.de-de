@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314326"
 ---
 # <a name="fields-c-programming-guide"></a><span data-ttu-id="aa296-102">Felder (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="aa296-102">Fields (C# Programming Guide)</span></span>
 <span data-ttu-id="aa296-103">Ein *Feld* ist eine Variable eines beliebigen Typs, die direkt in einer [class](../../../csharp/language-reference/keywords/class.md) oder [struct](../../../csharp/language-reference/keywords/struct.md) deklariert ist.</span><span class="sxs-lookup"><span data-stu-id="aa296-103">A *field* is a variable of any type that is declared directly in a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md).</span></span> <span data-ttu-id="aa296-104">Felder sind *Member* Ihres enthaltenden Typs.</span><span class="sxs-lookup"><span data-stu-id="aa296-104">Fields are *members* of their containing type.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313848"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a><span data-ttu-id="aaf1a-102">Mehrdimensionale Arrays (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="aaf1a-102">Multidimensional Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="aaf1a-103">Arrays können mehr als eine Dimension aufweisen.</span><span class="sxs-lookup"><span data-stu-id="aaf1a-103">Arrays can have more than one dimension.</span></span> <span data-ttu-id="aaf1a-104">Die folgende Deklaration erstellt z.B. ein zweidimensionales Array mit vier Zeilen und zwei Spalten.</span><span class="sxs-lookup"><span data-stu-id="aaf1a-104">For example, the following declaration creates a two-dimensional array of four rows and two columns.</span></span>  

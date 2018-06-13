@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329283"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="5a702-102">Vorgehensweise: Serialisieren mit DataContractSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="5a702-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
 <span data-ttu-id="5a702-103">Dieses Thema enthält ein Beispiel, das zum Serialisieren und Deserialisieren <xref:System.Runtime.Serialization.DataContractSerializer> verwendet.</span><span class="sxs-lookup"><span data-stu-id="5a702-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
