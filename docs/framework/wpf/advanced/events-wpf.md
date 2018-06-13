@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542586"
 ---
 # <a name="events-wpf"></a>Ereignisse (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt Routingereignisse zum Aufrufen von Handlern ein, die auf verschiedenen Listenern in der Elementstruktur einer Anwendung vorhanden sind.  

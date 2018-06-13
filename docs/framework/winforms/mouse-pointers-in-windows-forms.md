@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539516"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Mauszeiger in Windows Forms
 Die Maus *Zeiger*, die manchmal als des Cursors bezeichnet ist eine Bitmap, die einen Fokuspunkt gibt an, auf dem Bildschirm für Benutzereingaben mit der Maus. Dieses Thema bietet einen Überblick über der Mauszeiger in Windows Forms und beschreibt einige der Methoden zum Ändern und Steuern der Mauszeiger die Form.  

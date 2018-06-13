@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393041"
 ---
 # <a name="securing-exception-handling"></a>Sichern der Ausnahmebehandlung
 In Visual C++ und Visual Basic ein Filterausdruck weiter oben im Stapel ausgeführt wird, bevor eine **schließlich** Anweisung. Die **catch** Block zugeordnet diesen Filter ausgeführt wird, nachdem die **schließlich** Anweisung. Weitere Informationen finden Sie unter [Verwenden benutzergefilterter Ausnahmen](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Auswirkungen auf die Sicherheit der angegebenen Reihenfolge. Betrachten Sie die folgenden Pseudocodebeispiel zur Veranschaulichung der Reihenfolge, in welcher filteranweisungen und **schließlich** Anweisungen ausführen.  

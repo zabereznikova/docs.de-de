@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541858"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Gewusst wie: Threadsicheres Aufrufen von Windows Forms-Steuerelementen
 Bei Verwendung von Multithreading zur Verbesserung der Leistung von Windows Forms-Anwendungen müssen Sie sicherstellen, dass Sie die Steuerelemente auf threadsichere Weise aufrufen.  

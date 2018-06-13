@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538726"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Gewusst wie: Zugreifen auf verschlüsselte Auflistungen in Windows Forms
 -   Sie können einzelne Auflistungselemente durch Schlüssel zugreifen. Diese Funktionalität wurde um viele Auflistungsklassen hinzugefügt, die in der Regel von Windows Forms-Anwendungen verwendet werden. Die folgende Liste enthält einige der Auflistungsklassen, die zugänglich schlüsselgebundene Auflistungen haben:  

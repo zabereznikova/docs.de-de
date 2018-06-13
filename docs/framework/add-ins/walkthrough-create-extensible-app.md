@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744823"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen
 In dieser exemplarischen Vorgehensweise beschreibt, wie eine Pipeline für ein Add-in zu erstellen, das einfachen Rechnerfunktionen ausführt. Es wird nicht auf einem realen Szenario veranschaulicht; Stattdessen stellt es die grundlegende Funktionalität eines einer Pipeline und wie ein Add-in Dienste für einen Host bereitstellen kann.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757293"
 ---
 # <a name="copying-dataset-contents"></a>Kopieren von DataSet-Inhalten
 Sie können eine Kopie erstellen eine <xref:System.Data.DataSet> , damit Sie mit Daten arbeiten, ohne Auswirkungen auf die ursprünglichen Daten oder arbeiten können mit einer Teilmenge der Daten aus einer **DataSet**. Beim Kopieren einer **DataSet**, können Sie:  

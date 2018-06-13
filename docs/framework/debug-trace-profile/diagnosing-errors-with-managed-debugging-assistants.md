@@ -36,6 +36,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392319"
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen
 MDAs (Managed Debugging Assistants, Assistenten für verwaltetes Debuggen) sind Hilfsmittel für das Debuggen, die mit der CLR (Common Language Runtime) zusammenarbeiten, um Informationen zum Laufzeitzustand bereitzustellen. Die Assistenten generieren Informationsmeldungen über Laufzeitereignisse, die Sie auf keine andere Art abfangen können. Sie können MDAs verwenden, um schwer aufzufindende Anwendungsfehler zu isolieren, die bei Übergängen zwischen verwaltetem und nicht verwaltetem Code auftreten. Alle MDAs können durch Hinzufügen eines Schlüssels zur Windows-Registrierung oder durch Festlegen einer Umgebungsvariable bereitgestellt bzw. deren Bereitstellung aufgehoben werden. Sie können bestimmte MDAs mithilfe von Anwendungskonfigurationseinstellungen aktivieren. In der Konfigurationsdatei der Anwendung können Sie zusätzliche Konfigurationseinstellungen für einige der MDAs festlegen. Da die Konfigurationsdateien beim Laden der Laufzeit analysiert werden, müssen Sie den MDA bereitstellen, bevor die verwaltete Anwendung gestartet wird. Sie können ihn nicht für Anwendungen bereitstellen, die bereits gestartet wurden.  

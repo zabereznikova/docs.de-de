@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393815"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migrieren von .NET Framework 1.1
 [!INCLUDE[win7](../../../includes/win7-md.md)] und neuere Versionen des Windows-Betriebssystems unterstützen [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] nicht. Folglich können Anwendungen, die auf [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] ausgerichtet sind, unter [!INCLUDE[win7](../../../includes/win7-md.md)] oder neueren Betriebssystemversionen nicht ohne Änderung ausgeführt werden. In diesem Thema werden die Schritte zum Ausführen einer Anwendung erläutert, die auf [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] unter [!INCLUDE[win7](../../../includes/win7-md.md)] und neueren Versionen des Windows-Betriebssystems ausgerichtet ist. Weitere Informationen zu [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] und [!INCLUDE[win8](../../../includes/win8-md.md)] finden Sie unter [Ausführen von .NET Framework 1.1-Apps unter Windows 8 und späteren Versionen](../../../docs/framework/install/run-net-framework-1-1-apps.md).  

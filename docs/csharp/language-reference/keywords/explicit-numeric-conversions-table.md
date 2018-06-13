@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218383"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabelle für explizite numerische Konvertierungen (C#-Referenz)
 Eine explizite numerische Konvertierung wird verwendet, um einen numerischen Typ mithilfe eines Umwandlungausdrucks in einen beliebigen anderen numerischen Typ zu konvertieren, für den es keine implizite Konvertierung gibt. Die folgende Tabelle zeigt diese Konvertierungen.  

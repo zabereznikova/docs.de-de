@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538711"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Gewusst wie: Positionieren von Steuerelementen in Windows Forms
 Positionieren von Steuerelementen, die Windows Forms-Designer verwenden, oder geben den <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft.  

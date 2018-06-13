@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391032"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Richtlinien für die Erstellung von Komponenten für die parallele Ausführung
 Befolgen Sie die nachstehenden allgemeinen Richtlinien zum Erstellen von verwalteten Anwendungen oder Komponenten, die für die parallele Ausführung entwickelt wurden:  

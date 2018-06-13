@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393723"
 ---
 # <a name="releasehandlefailed-mda"></a>ReleaseHandleFailed-MDA
 Der `releaseHandleFailed`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, um einen Entwickler zu benachrichtigen, wenn die <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Methode einer Klasse, die aus <xref:System.Runtime.InteropServices.SafeHandle> oder <xref:System.Runtime.InteropServices.CriticalHandle> abgeleitet wurde, `false` zurückgibt.  
