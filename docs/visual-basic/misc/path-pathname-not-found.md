@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641356"
 ---
 # <a name="path-39ltpathnamegt39-not-found"></a>Pfad &#39; &lt;Pathname&gt; &#39; wurde nicht gefunden.
 Das Betriebssystem kann den angegebenen Pfad während eines Datei- oder Datenträgerzugriffs nicht finden. Der Pfad zu einer Datei muss die Laufwerksangabe sowie die Verzeichnisse und Unterverzeichnisse enthalten, die durchlaufen werden müssen, um zu der Datei zu gelangen. Ein Pfad kann relativ oder absolut sein.  
