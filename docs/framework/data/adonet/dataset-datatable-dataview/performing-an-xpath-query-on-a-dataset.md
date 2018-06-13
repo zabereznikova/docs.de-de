@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762409"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Ausführen einer XPath-Abfrage für ein DataSet
 Die Beziehung zwischen einem synchronisierten <xref:System.Data.DataSet> und <xref:System.Xml.XmlDataDocument> bietet die Möglichkeit zum Verwenden von XML-Diensten, z. B. die XML Path Language (XPath)-Abfrage, die auf die **XmlDataDocument** und bestimmte Funktionen ausführen können Komfortabler Zugriff auf die **DataSet** direkt. Z. B. statt der **wählen** Methode eine <xref:System.Data.DataTable> beim Navigieren von Beziehungen zu anderen Tabellen in eine **DataSet**, können Sie eine XPath-Abfrage ausführen, auf ein **XmlDataDocument**  synchronisiertes der **DataSet**, um eine Liste von XML-Elementen in Form von erhalten eine <xref:System.Xml.XmlNodeList>. Die Knoten in der **XmlNodeList**, umgewandelt als <xref:System.Xml.XmlElement> Knoten, klicken Sie dann auf übergeben werden kann die **GetRowFromElement** Methode der **XmlDataDocument**Übereinstimmung zurückgegeben <xref:System.Data.DataRow> Verweise auf die Zeilen der Tabelle in der synchronisierten **DataSet**.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365929"
 ---
 # <a name="features-provided-by-systemtransactions"></a>Von System.Transactions bereitgestellte Funktionen
 In diesem Abschnitt wird beschrieben, wie Sie anhand der Funktionen, die der <xref:System.Transactions>-Namespace bereitstellt, Ihre eigene Transaktionsanwendung und Ihren eigenen Ressourcen-Manager schreiben können. In diesem Abschnitt wird insbesondere darauf eingegangen, wie eine (lokale oder verteilte) Transaktion erstellt wird und ein oder mehrere Teilnehmer daran teilnehmen können.  

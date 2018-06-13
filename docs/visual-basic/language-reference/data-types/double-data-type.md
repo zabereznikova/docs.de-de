@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590263"
 ---
 # <a name="double-data-type-visual-basic"></a>Double-Datentyp (Visual Basic)
 Speichert signierte IEEE-64-Bit (8 Byte) mit doppelter Genauigkeit Gleitkommazahlen, die von - 1.79769313486231570E + 308 bis - Wertebereich 4.94065645841246544E-324 für negative Werte und 4.94065645841246544E-324 bis 1.79769313486231570E + 308 für positive Werte zulässig sind. Zahlen mit doppelter Genauigkeit Näherung eine einer reellen Zahl.  

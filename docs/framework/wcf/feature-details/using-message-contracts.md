@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508578"
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
 In der Regel beim Erstellen von Windows Communication Foundation (WCF)-Anwendungen, Entwickler Achten Sie besonders auf die Datenstrukturen und serialisierungsprobleme und müssen nicht selbst mit der Struktur der Nachrichten betreffen, in dem die Daten übergeben werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766165"
 ---
 # <a name="method-based-query-syntax-examples-partitioning-linq"></a>Beispiele für die methodenbasierte Abfragesyntax: Partitionierung (LINQ)
 Die Beispiele in diesem Thema zeigen, wie Sie mit der <xref:System.Linq.Enumerable.Skip%2A>-Methode, der <xref:System.Linq.Enumerable.SkipWhile%2A>-Methode, der <xref:System.Linq.Enumerable.Take%2A>-Methode und der <xref:System.Linq.Enumerable.TakeWhile%2A>-Methode und mithilfe der Abfrageausdruckssyntax ein <xref:System.Data.DataSet> abfragen können.  

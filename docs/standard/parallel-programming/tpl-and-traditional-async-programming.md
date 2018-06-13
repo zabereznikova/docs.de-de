@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591754"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL und herkömmliche asynchrone .NET Framework-Programmierung
 .NET Framework stellt die folgenden zwei Standardmuster zum Ausführen von E/A-gebundenen und rechnergebundenen asynchronen Vorgängen bereit:  

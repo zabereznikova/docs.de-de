@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497502"
 ---
 # <a name="security-guidance-and-best-practices"></a>Sicherheitsleitfaden und empfohlene Vorgehensweisen
 Die Themen in diesem Abschnitt enthalten Richtlinien und berücksichtigen Sie beim Erstellen sicherer Anwendungen für Windows Communication Foundation (WCF). Weitere Informationen zu Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheit Modell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

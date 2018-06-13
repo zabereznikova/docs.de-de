@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508877"
 ---
 # <a name="transacted-batching"></a>Transaktive Batchverarbeitung:
 In diesem Beispiel wird die Batchverarbeitung durchgeführter Lesevorgänge mithilfe von Message Queuing (MSMQ) veranschaulicht. Transaktive Batchverarbeitung ist eine Leistungsoptimierungsfunktion für durchgeführte Lesevorgänge in Kommunikation unter Verwendung von Warteschlangen.  

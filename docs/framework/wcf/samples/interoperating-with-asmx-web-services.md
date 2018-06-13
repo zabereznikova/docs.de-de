@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502250"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Zusammenwirken mit ASMX-Webdiensten
 Dieses Beispiel veranschaulicht, wie eine Windows Communication Foundation (WCF)-Client-Anwendung mit einem vorhandenen ASMX-Webdienst integriert wird.  

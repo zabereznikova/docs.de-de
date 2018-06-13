@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592014"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Übersicht über Synchronisierungsprimitiven
 <a name="top"></a> .NET Framework stellt eine Reihe von Synchronisierungsmechanismen zum Steuern der Interaktionen von Threads und zum Vermeiden von Racebedingungen bereit. Diese können grob in drei Kategorien eingeteilt werden: Sperren, Signalisieren und Interlocked-Vorgänge.  

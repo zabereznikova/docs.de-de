@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575413"
 ---
 # <a name="xslt-security-considerations"></a>XSLT-Sicherheitsaspekte
 Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leistungsfähigkeit und Flexibilität. Sie enthält viele Funktionen, die zwar hilfreich sind, jedoch auch von externen Quellen ausgenutzt werden können. Um die XSLT-Sicherheit zu verwenden, müssen Sie die verschiedenen Arten von Sicherheitsproblemen kennen und die grundlegenden Strategien verstehen, mit denen Sie diese verringern können.  

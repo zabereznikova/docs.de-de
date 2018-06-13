@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593112"
 ---
 # <a name="textfieldparser-is-unable-to-complete-the-read-operation-because-maximum-buffer-size-has-been-exceeded"></a>TextFieldParser kann den Lesevorgang nicht abschließen, da die maximale Puffergröße überschritten wurde.
 Der Vorgang kann nicht abgeschlossen werden, weil die maximale Puffergröße (10.000.000 Bytes) überschritten wurde.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766100"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtern mit DataView (LINQ to DataSet)
 Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu filtern und Teilmengen von Datenzeilen, die bestimmte Filterkriterien erfüllen, zurückzugeben. Neben den zeichenfolgenbasierten Filterfunktionen <xref:System.Data.DataView> bietet außerdem die Möglichkeit, mit [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Ausdrücke für die Filterkriterien. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] -Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Filteroperationen als die zeichenfolgenbasierte Filterung.  

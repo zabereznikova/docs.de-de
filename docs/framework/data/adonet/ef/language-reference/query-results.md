@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762321"
 ---
 # <a name="query-results"></a>Abfrageergebnisse
 Nachdem eine [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfrage in eine Befehlsstruktur konvertiert und ausgeführt wurde, werden die Abfrageergebnisse im Allgemeinen in einer der folgenden Formen zurückgegeben:  

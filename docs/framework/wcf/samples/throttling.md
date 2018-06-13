@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503481"
 ---
 # <a name="throttling"></a>Einschränkung
 Im Einschränkungsbeispiel wird die Verwendung von Einschränkungssteuerelementen veranschaulicht. Mit der Einschränkung wird die Anzahl gleichzeitiger Aufrufe, Instanzen oder Sitzungen begrenzt, um eine übermäßige Ressourcenbeanspruchung zu verhindern. Das Einschränkungsverhalten wird in Dienstkonfigurations-Dateieinstellungen angegeben. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst.  

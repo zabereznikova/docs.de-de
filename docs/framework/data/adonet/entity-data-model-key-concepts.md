@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765632"
 ---
 # <a name="entity-data-model-key-concepts"></a>Schlüsselkonzepte im Entity Data Model
 Das Entity Data Model (EDM) verwendet drei wichtige Konzepte zum Beschreiben der Datenstruktur: *Entitätstyp*, *Zuordnungstyp*, und *Eigenschaft*. Diese sind die wichtigsten Konzepte zum Beschreiben der Datenstruktur in einer beliebigen Implementierung des EDM.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588092"
 ---
 # <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a>&#39;&lt;Membername&gt; &#39; kann nicht verfügbar machen &#39; &lt;Typename&gt; &#39; außerhalb des Projekts durch &lt;Containertype&gt; &#39; &lt;Containertypename&gt;&#39;
 Eine Variable, Prozedurparameter oder Funktionsrückgabe wird außerhalb des zugehörigen Containers verfügbar gemacht, aber es ist deklariert, als ein Typ, der außerhalb des Containers nicht verfügbar gemacht werden muss.  

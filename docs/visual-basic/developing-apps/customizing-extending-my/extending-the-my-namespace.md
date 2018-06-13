@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591832"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Erweitern des My-Namespaces in Visual Basic
 Die `My` Namespaces in Visual Basic macht Eigenschaften und Methoden, mit denen Sie einfach die Leistungsfähigkeit von .NET Framework nutzen können. Die `My` Namespace vereinfacht allgemeine Programmierprobleme, löst häufig eine einzige Codezeile eine schwierige Aufgabe. Darüber hinaus die `My` Namespace ist vollständig erweiterbar, sodass Sie das Verhalten anpassen können `My` und fügen Sie neue Dienste in seine Hierarchie anwendungsspezifische Anforderungen angepasst werden kann. In diesem Artikel werden beide zum Anpassen von vorhandener Elementen von der `My` Namespace und wie Sie eigene benutzerdefinierte Klassen zum Hinzufügen der `My` Namespace.  

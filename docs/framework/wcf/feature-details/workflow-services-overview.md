@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502727"
 ---
 # <a name="workflow-services-overview"></a>Übersicht über Workflowdienste
 Workflowdienste sind WCF-basierte Dienste, die mithilfe von Workflows implementiert werden. Workflowdienste sind Workflows, die die messagingaktivitäten zum Senden und Empfangen von Nachrichten von Windows Communication Foundation (WCF) verwenden. Mit .NET Framework 4.5 werden eine Reihe von Messagingaktivitäten eingeführt, mit denen Sie Nachrichten aus einem Workflow senden oder darin empfangen können. Weitere Informationen zu messagingaktivitäten und wie sie zum Implementieren verschiedener Nachrichtenaustauschmuster verwendet werden können, finden Sie unter [Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  

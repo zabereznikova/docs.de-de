@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590960"
 ---
 # <a name="principal-and-identity-objects"></a>Principal- und Identitätsobjekte
 Verwalteter Code kann ermitteln, die Identität oder Rolle eines Prinzipals durch eine <xref:System.Security.Principal.IPrincipal> -Objekt, das enthält einen Verweis auf ein <xref:System.Security.Principal.IIdentity> Objekt. Es kann hilfreich sein, Identity- und Principal-Objekte (Identitäts- und Prinzipalobjekte) mit vertrauten Konzepten wie Benutzer- und Gruppenkonten zu vergleichen. In den meisten Netzwerkumgebungen entsprechen Benutzerkonten Personen oder Programmen und Gruppenkonten bestimmten Kategorien von Benutzern sowie den Rechten, die diese haben. Ähnlich entsprechen Identitätsobjekte in .NET Framework Benutzern, während Rollen Mitgliedschaften und Sicherheitskontexten entsprechen. In .NET Framework kapselt das Prinzipalobjekt sowohl ein Identitätsobjekt als auch eine Rolle. .NET Framework-Anwendungen gewähren dem Prinzipal gemäß seiner Identität oder, dies ist häufiger der Fall, gemäß seiner Rolle bestimmte Rechte.  

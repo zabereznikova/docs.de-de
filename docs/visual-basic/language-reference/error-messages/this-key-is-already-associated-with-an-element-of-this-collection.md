@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593261"
 ---
 # <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a>Dieser Schlüssel ist bereits einem Element dieser Auflistung zugeordnet
 Der angegebene Schlüssel für ein Element der Auflistung bereits einen anderen Member der Auflistung identifiziert. Ein Schlüssel ist eine Zeichenfolge, die im angegebenen die `Add` Methode, die einen bestimmten Member einer Auflistung eindeutig identifiziert.  

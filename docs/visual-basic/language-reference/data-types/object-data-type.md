@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591620"
 ---
 # <a name="object-data-type"></a>Object Data Type
 Enthält die Adressen, die auf Objekte verweisen. Sie können Verweistyp (Zeichenfolge, Array, Klasse oder Schnittstelle) zuweisen, um eine `Object` Variable. Ein `Object` Variable kann auch auf Daten mit einem beliebigen Werttyp verweisen (numeric, `Boolean`, `Char`, `Date`, Struktur oder Enumeration).  

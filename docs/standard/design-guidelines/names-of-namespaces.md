@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576431"
 ---
 # <a name="names-of-namespaces"></a>Namen von Namespaces
 Als ist mit anderen Benennungsrichtlinien das Ziel beim Benennen von Namespaces erstellen ausreichend Klarheit für Programmierer, die mithilfe des Frameworks sofort zu wissen, was der Inhalt des Namespaces wahrscheinlich ist. Die folgende Vorlage gibt an, die in der Regel für die Benennung von Namespaces:  

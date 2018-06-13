@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589446"
 ---
 # <a name="leading-3939-or-3939-can-only-appear-inside-a-39with39-statement"></a>Führende &#39;. &#39; oder &#39;! &#39; kann nur verwendet werden, in einem &#39;mit&#39; Anweisung
 Ein Punkt (.) oder ein Ausrufezeichen (!) ist, die nicht in einem `With` Blockierung tritt auf, ohne einen Ausdruck auf der linken Seite. Memberzugriff (`.`) und wörterbuchmemberzugriff (`!`) erfordern einen Ausdruck, der das Element mit dem Element angeben. Dies muss sofort angezeigt, auf der linken Seite des Accessors oder als Ziel einer `With` Block, der den Memberzugriffsoperator enthält.  

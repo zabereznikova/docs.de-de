@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501969"
 ---
 # <a name="multiple-endpoints"></a>Mehrere Endpunkte
 Das Beispiel zu mehreren Endpunkten zeigt, wie mehrere Endpunkte für einen Dienst konfiguriert werden und wie von einem Client mit jedem Endpunkt kommuniziert wird. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). Die Dienstkonfiguration wurde so geändert, dass zwei Endpunkte definiert werden, die den `ICalculator`-Vertrag unterstützen, jeder Endpunkt jedoch unter einer anderen Adresse und mit unterschiedlicher Bindung. Die Clientkonfiguration und der Code wurden geändert, um mit beiden Dienstendpunkten zu kommunizieren.  

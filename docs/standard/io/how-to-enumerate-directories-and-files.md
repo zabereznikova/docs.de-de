@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575849"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Gewusst wie: Auflisten von Verzeichnissen und Dateien
 Sie können Verzeichnisse und Dateien mithilfe von Methoden aufzählen, die eine aufzählbare Sammlung von Zeichenfolgen ihrer Namen zurückgeben. Sie können auch Methoden verwenden, die eine aufzählbare Sammlung von <xref:System.IO.DirectoryInfo>-, <xref:System.IO.FileInfo>- oder <xref:System.IO.FileSystemInfo>-Objekten zurückgeben. Aufzählbare Sammlungen bieten bei der Arbeit mit großen Sammlungen von Verzeichnissen und Dateien eine bessere Leistung als Arrays.  

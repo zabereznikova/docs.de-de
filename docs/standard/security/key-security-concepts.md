@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590919"
 ---
 # <a name="key-security-concepts"></a>Schlüsselbegriffe der Sicherheit
 Microsoft .NET Framework bietet rollenbasierte Sicherheit, um Sicherheitsprobleme bei mobilem Code zu beheben und Komponenten die Möglichkeit einzuräumen, die Berechtigungen von Benutzern zu überprüfen.  

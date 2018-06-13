@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590237"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Der Ausdruck ist ein Wert und kann nicht als Ziel einer Zuweisung verwendet werden
 Eine Anweisung versucht, ein Ausdruck einen Wert zuweisen. Sie können einen Wert zur Laufzeit nur auf eine schreibbare Variable, eine Eigenschaft oder ein Arrayelement zuweisen. Im folgende Beispiel wird veranschaulicht, wie dieser Fehler kann auftreten.  

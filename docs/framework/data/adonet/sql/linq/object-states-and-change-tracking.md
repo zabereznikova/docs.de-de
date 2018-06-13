@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364254"
 ---
 # <a name="object-states-and-change-tracking"></a>Objektzustände und Änderungsverfolgung
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Objekte weisen stets einige *Zustand*. Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] z. B. ein neues Objekt erstellt, befindet sich dieses im `Unchanged`-Zustand. Ein neues Objekt, das Sie selbst erstellen, ist unbekannt, um die <xref:System.Data.Linq.DataContext> und befindet sich im `Untracked` Zustand. Nach der erfolgreichen Ausführung von <xref:System.Data.Linq.DataContext.SubmitChanges%2A> befinden sich alle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bekannten Objekte im `Unchanged`-Zustand. (Die einzige Ausnahme besteht in Objekten, die erfolgreich aus der Datenbank gelöscht wurden und sich im `Deleted`-Zustand befinden, weshalb sie für die <xref:System.Data.Linq.DataContext>-Instanz nicht nutzbar sind.)  
