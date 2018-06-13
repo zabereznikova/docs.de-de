@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289151"
 ---
 # <a name="c-keywords"></a><span data-ttu-id="b9bc5-102">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="b9bc5-102">C# Keywords</span></span>
 <span data-ttu-id="b9bc5-103">Bei Schlüsselwörtern handelt es sich um vordefinierte reservierte Bezeichner, die eine besondere Bedeutung für den Compiler haben.</span><span class="sxs-lookup"><span data-stu-id="b9bc5-103">Keywords are predefined, reserved identifiers that have special meanings to the compiler.</span></span> <span data-ttu-id="b9bc5-104">Sie können nur dann als Bezeichner in einem Programm verwendet werden, wenn `@` als Präfix vorangestellt wird.</span><span class="sxs-lookup"><span data-stu-id="b9bc5-104">They cannot be used as identifiers in your program unless they include `@` as a prefix.</span></span> <span data-ttu-id="b9bc5-105">Beispiel: `@if` ist ein gültiger Bezeichner, aber `if` nicht, da `if` ein Schlüsselwort ist.</span><span class="sxs-lookup"><span data-stu-id="b9bc5-105">For example, `@if` is a valid identifier, but `if` is not because `if` is a keyword.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397532"
 ---
 # <a name="proxy-configuration"></a><span data-ttu-id="9a4d2-102">Proxykonfiguration</span><span class="sxs-lookup"><span data-stu-id="9a4d2-102">Proxy Configuration</span></span>
 <span data-ttu-id="9a4d2-103">Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="9a4d2-103">A proxy server handles client requests for resources.</span></span> <span data-ttu-id="9a4d2-104">Ein Proxy kann eine angeforderte Ressource aus dem Cache zurückgeben oder die Anforderung an den Server weiterleiten, auf dem sich die Ressource befindet.</span><span class="sxs-lookup"><span data-stu-id="9a4d2-104">A proxy can return a requested resource from its cache or forward the request to the server where the resource resides.</span></span> <span data-ttu-id="9a4d2-105">Proxys können die Netzwerkleistung durch Reduzierung der Anzahl der an Remote-Server gesendeten Anforderungen verbessern.</span><span class="sxs-lookup"><span data-stu-id="9a4d2-105">Proxies can improve network performance by reducing the number of requests sent to remote servers.</span></span> <span data-ttu-id="9a4d2-106">Proxys können auch verwendet werden, um den Zugriff auf Ressourcen einzuschränken.</span><span class="sxs-lookup"><span data-stu-id="9a4d2-106">Proxies can also be used to restrict access to resources.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397714"
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a><span data-ttu-id="7eafe-102">Gewusst wie: Anfordern von Daten mithilfe der WebRequest-Klasse</span><span class="sxs-lookup"><span data-stu-id="7eafe-102">How to: Request Data Using the WebRequest Class</span></span>
 <span data-ttu-id="7eafe-103">Das folgende Verfahren beschreibt die Schritte zum Anfordern einer Ressource von einem Server, z.B. einer Webseite oder Webdatei.</span><span class="sxs-lookup"><span data-stu-id="7eafe-103">The following procedure describes the steps used to request a resource from a server, for example, a Web page or file.</span></span> <span data-ttu-id="7eafe-104">Die Ressource muss von einem URI identifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="7eafe-104">The resource must be identified by a URI.</span></span>  

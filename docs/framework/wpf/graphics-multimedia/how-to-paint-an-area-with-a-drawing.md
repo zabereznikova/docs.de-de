@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Zeichnen eines Bereichs mit einer Zeichnung'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,41 +9,37 @@ helpviewer_keywords:
 - painting [WPF], with drawings
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fbb7c4aff56fae9b4cc0346f8086bc490269ec8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 222aa3fbb72ebaf15be3ed7f9804936e7e1187e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560902"
 ---
-# <a name="how-to-paint-an-area-with-a-drawing"></a><span data-ttu-id="68f6f-102">Gewusst wie: Zeichnen eines Bereichs mit einer Zeichnung</span><span class="sxs-lookup"><span data-stu-id="68f6f-102">How to: Paint an Area with a Drawing</span></span>
-<span data-ttu-id="68f6f-103">Dieses Beispiel zeigt, wie Sie einen Bereich mit einer Zeichnung zeichnen.</span><span class="sxs-lookup"><span data-stu-id="68f6f-103">This example shows how to paint an area with a drawing.</span></span> <span data-ttu-id="68f6f-104">Um einen Bereich mit einer Zeichnung zu zeichnen, verwenden Sie eine <xref:System.Windows.Media.DrawingBrush> und eine oder mehrere <xref:System.Windows.Media.Drawing> Objekte.</span><span class="sxs-lookup"><span data-stu-id="68f6f-104">To paint an area with a drawing, you use a <xref:System.Windows.Media.DrawingBrush> and one or more <xref:System.Windows.Media.Drawing> objects.</span></span>   <span data-ttu-id="68f6f-105">Im folgenden Beispiel wird eine <xref:System.Windows.Media.DrawingBrush> ein Objekt mit einer Zeichnung von zwei Ellipsen Paint-Ereignis.</span><span class="sxs-lookup"><span data-stu-id="68f6f-105">The following example uses a <xref:System.Windows.Media.DrawingBrush> to paint an object with a drawing of two ellipses.</span></span>  
+# <a name="how-to-paint-an-area-with-a-drawing"></a><span data-ttu-id="fedc6-102">Gewusst wie: Zeichnen eines Bereichs mit einer Zeichnung</span><span class="sxs-lookup"><span data-stu-id="fedc6-102">How to: Paint an Area with a Drawing</span></span>
+<span data-ttu-id="fedc6-103">Dieses Beispiel zeigt, wie Sie einen Bereich mit einer Zeichnung zeichnen.</span><span class="sxs-lookup"><span data-stu-id="fedc6-103">This example shows how to paint an area with a drawing.</span></span> <span data-ttu-id="fedc6-104">Um einen Bereich mit einer Zeichnung zu zeichnen, verwenden Sie eine <xref:System.Windows.Media.DrawingBrush> und eine oder mehrere <xref:System.Windows.Media.Drawing> Objekte.</span><span class="sxs-lookup"><span data-stu-id="fedc6-104">To paint an area with a drawing, you use a <xref:System.Windows.Media.DrawingBrush> and one or more <xref:System.Windows.Media.Drawing> objects.</span></span>   <span data-ttu-id="fedc6-105">Im folgenden Beispiel wird eine <xref:System.Windows.Media.DrawingBrush> ein Objekt mit einer Zeichnung von zwei Ellipsen Paint-Ereignis.</span><span class="sxs-lookup"><span data-stu-id="fedc6-105">The following example uses a <xref:System.Windows.Media.DrawingBrush> to paint an object with a drawing of two ellipses.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="68f6f-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="68f6f-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fedc6-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fedc6-106">Example</span></span>  
  [!code-xaml[drawingbrush_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/DrawingBrushExample.xaml#drawingbrushexamplewholepage)]  
   
  [!code-csharp[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/DrawingBrushExample.cs#drawingbrushexamplewholepage)]
  [!code-vb[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/drawingbrush_procedural_snip/VisualBasic/DrawingBrushExample.vb#drawingbrushexamplewholepage)]  
   
- <span data-ttu-id="68f6f-107">Die folgende Abbildung zeigt die Ausgabe des Beispiels.</span><span class="sxs-lookup"><span data-stu-id="68f6f-107">The following illustration shows the example's output.</span></span>  
+ <span data-ttu-id="fedc6-107">Die folgende Abbildung zeigt die Ausgabe des Beispiels.</span><span class="sxs-lookup"><span data-stu-id="fedc6-107">The following illustration shows the example's output.</span></span>  
   
- <span data-ttu-id="68f6f-108">![Ausgabe eines DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-simple.png "Graphicsmm_drawingbrush_simple")</span><span class="sxs-lookup"><span data-stu-id="68f6f-108">![Output from a DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-simple.png "graphicsmm_drawingbrush_simple")</span></span>  
+ <span data-ttu-id="fedc6-108">![Ausgabe eines DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-simple.png "Graphicsmm_drawingbrush_simple")</span><span class="sxs-lookup"><span data-stu-id="fedc6-108">![Output from a DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-simple.png "graphicsmm_drawingbrush_simple")</span></span>  
   
- <span data-ttu-id="68f6f-109">(Die Mitte der Form ist weiß [steuern die Füllung für eine zusammengesetzte Form](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md).)</span><span class="sxs-lookup"><span data-stu-id="68f6f-109">(The center of the shape is white for reasons described in     [Control the Fill of a Composite Shape](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md).)</span></span>  
+ <span data-ttu-id="fedc6-109">(Die Mitte der Form ist weiß [steuern die Füllung für eine zusammengesetzte Form](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md).)</span><span class="sxs-lookup"><span data-stu-id="fedc6-109">(The center of the shape is white for reasons described in     [Control the Fill of a Composite Shape](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md).)</span></span>  
   
- <span data-ttu-id="68f6f-110">Durch Festlegen einer <xref:System.Windows.Media.DrawingBrush> des Objekts <xref:System.Windows.Media.TileBrush.Viewport%2A> und <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaften, Sie können ein sich wiederholendes Muster erstellen.</span><span class="sxs-lookup"><span data-stu-id="68f6f-110">By setting a <xref:System.Windows.Media.DrawingBrush> object's <xref:System.Windows.Media.TileBrush.Viewport%2A> and <xref:System.Windows.Media.TileBrush.TileMode%2A> properties, you can create a repeating pattern.</span></span> <span data-ttu-id="68f6f-111">Im folgenden Beispiel wird ein Objekt mit einem aus einer Zeichnung von zwei Ellipsen erstellten Muster gezeichnet.</span><span class="sxs-lookup"><span data-stu-id="68f6f-111">The following example paints an object with a pattern created from a drawing of two ellipses.</span></span>  
+ <span data-ttu-id="fedc6-110">Durch Festlegen einer <xref:System.Windows.Media.DrawingBrush> des Objekts <xref:System.Windows.Media.TileBrush.Viewport%2A> und <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaften, Sie können ein sich wiederholendes Muster erstellen.</span><span class="sxs-lookup"><span data-stu-id="fedc6-110">By setting a <xref:System.Windows.Media.DrawingBrush> object's <xref:System.Windows.Media.TileBrush.Viewport%2A> and <xref:System.Windows.Media.TileBrush.TileMode%2A> properties, you can create a repeating pattern.</span></span> <span data-ttu-id="fedc6-111">Im folgenden Beispiel wird ein Objekt mit einem aus einer Zeichnung von zwei Ellipsen erstellten Muster gezeichnet.</span><span class="sxs-lookup"><span data-stu-id="fedc6-111">The following example paints an object with a pattern created from a drawing of two ellipses.</span></span>  
   
  [!code-xaml[drawingbrush_snip#TiledDrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/TiledDrawingBrushExample.xaml#tileddrawingbrushexamplewholepage)]  
   
  [!code-csharp[drawingbrush_procedural_snip#TiledDrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/TiledDrawingBrushExample.cs#tileddrawingbrushexamplewholepage)]
  [!code-vb[drawingbrush_procedural_snip#TiledDrawingBrushExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/drawingbrush_procedural_snip/VisualBasic/TiledDrawingBrushExample.vb#tileddrawingbrushexamplewholepage)]  
   
- <span data-ttu-id="68f6f-112">Die folgende Abbildung zeigt die nebeneinander <xref:System.Windows.Media.DrawingBrush> Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="68f6f-112">The following illustration shows the tiled <xref:System.Windows.Media.DrawingBrush> output.</span></span>  
+ <span data-ttu-id="fedc6-112">Die folgende Abbildung zeigt die nebeneinander <xref:System.Windows.Media.DrawingBrush> Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="fedc6-112">The following illustration shows the tiled <xref:System.Windows.Media.DrawingBrush> output.</span></span>  
   
- <span data-ttu-id="68f6f-113">![Ausgabe eines DrawingBrush in Kachelform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-tiled.png "Graphicsmm_drawingbrush_tiled")</span><span class="sxs-lookup"><span data-stu-id="68f6f-113">![Tiled output from a DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-tiled.png "graphicsmm_drawingbrush_tiled")</span></span>  
+ <span data-ttu-id="fedc6-113">![Ausgabe eines DrawingBrush in Kachelform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-tiled.png "Graphicsmm_drawingbrush_tiled")</span><span class="sxs-lookup"><span data-stu-id="fedc6-113">![Tiled output from a DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-tiled.png "graphicsmm_drawingbrush_tiled")</span></span>  
   
- <span data-ttu-id="68f6f-114">Weitere Informationen zu zeichnen Pinsel, finden Sie unter [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span><span class="sxs-lookup"><span data-stu-id="68f6f-114">For more information about drawing brushes, see [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span> <span data-ttu-id="68f6f-115">Weitere Informationen zu <xref:System.Windows.Media.Drawing> anzuzeigen, die [Drawing Objects Overview](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).</span><span class="sxs-lookup"><span data-stu-id="68f6f-115">For more information about <xref:System.Windows.Media.Drawing> objects, see the [Drawing Objects Overview](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).</span></span>
+ <span data-ttu-id="fedc6-114">Weitere Informationen zu zeichnen Pinsel, finden Sie unter [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span><span class="sxs-lookup"><span data-stu-id="fedc6-114">For more information about drawing brushes, see [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span> <span data-ttu-id="fedc6-115">Weitere Informationen zu <xref:System.Windows.Media.Drawing> anzuzeigen, die [Drawing Objects Overview](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).</span><span class="sxs-lookup"><span data-stu-id="fedc6-115">For more information about <xref:System.Windows.Media.Drawing> objects, see the [Drawing Objects Overview](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).</span></span>

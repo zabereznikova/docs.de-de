@@ -1,14 +1,6 @@
 ---
 title: ITypeNameBuilder::AddByRef-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ITypeNameBuilder.AddByRef
 api_location:
@@ -23,35 +15,32 @@ helpviewer_keywords:
 ms.assetid: 3f1b6bc4-6efb-4b90-8be0-b1ba8d856ca0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c259fae944939978ec9629eeeea771d9c0e46718
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3118f80086df13681e43ecc0c46c276a9cf9e033
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442130"
 ---
-# <a name="itypenamebuilderaddbyref-method"></a><span data-ttu-id="c1222-102">ITypeNameBuilder::AddByRef-Methode</span><span class="sxs-lookup"><span data-stu-id="c1222-102">ITypeNameBuilder::AddByRef Method</span></span>
-<span data-ttu-id="c1222-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="c1222-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderaddbyref-method"></a><span data-ttu-id="55e32-102">ITypeNameBuilder::AddByRef-Methode</span><span class="sxs-lookup"><span data-stu-id="55e32-102">ITypeNameBuilder::AddByRef Method</span></span>
+<span data-ttu-id="55e32-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="55e32-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c1222-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c1222-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55e32-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="55e32-104">Syntax</span></span>  
   
 ```  
 HRESULT AddByRef ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c1222-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c1222-105">Requirements</span></span>  
- <span data-ttu-id="c1222-106">**Plattformen:** WindoSee [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c1222-106">**Platforms:** WindoSee [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55e32-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="55e32-105">Requirements</span></span>  
+ <span data-ttu-id="55e32-106">**Plattformen:** WindoSee [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55e32-106">**Platforms:** WindoSee [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c1222-107">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c1222-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="55e32-107">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="55e32-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c1222-108">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="c1222-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="55e32-108">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="55e32-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c1222-109">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1222-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="55e32-109">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55e32-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1222-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c1222-110">See Also</span></span>  
- [<span data-ttu-id="c1222-111">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="c1222-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="55e32-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="55e32-110">See Also</span></span>  
+ [<span data-ttu-id="55e32-111">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="55e32-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

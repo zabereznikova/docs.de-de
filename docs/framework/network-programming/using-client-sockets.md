@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395946"
 ---
 # <a name="using-client-sockets"></a><span data-ttu-id="e2ec1-102">Verwenden von Clientsockets</span><span class="sxs-lookup"><span data-stu-id="e2ec1-102">Using Client Sockets</span></span>
 <span data-ttu-id="e2ec1-103">Bevor Sie eine Konversation über <xref:System.Net.Sockets.Socket> initiieren können, müssen Sie eine Datenpipeline zwischen Ihrer Anwendung und dem Remotegerät erstellen.</span><span class="sxs-lookup"><span data-stu-id="e2ec1-103">Before you can initiate a conversation through a <xref:System.Net.Sockets.Socket>, you must create a data pipe between your application and the remote device.</span></span> <span data-ttu-id="e2ec1-104">Obwohl andere Netzwerkadressfamilien und -protokolle vorhanden sind, zeigt dieses Beispiel, wie eine TCP/IP-Verbindung mit einem Remotedienst erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="e2ec1-104">Although other network address families and protocols exist, this example shows how to create a TCP/IP connection to a remote service.</span></span>  

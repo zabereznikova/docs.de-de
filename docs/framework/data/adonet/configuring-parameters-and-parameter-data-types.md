@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759542"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a><span data-ttu-id="0c990-102">Konfigurieren von Parametern und Parameterdatentypen</span><span class="sxs-lookup"><span data-stu-id="0c990-102">Configuring Parameters and Parameter Data Types</span></span>
 <span data-ttu-id="0c990-103">Befehlsobjekte verwenden Parameter, um Werte an SQL-Anweisungen oder gespeicherte Prozeduren zu übergeben, und ermöglichen so Typüberprüfungen und Validierungen.</span><span class="sxs-lookup"><span data-stu-id="0c990-103">Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation.</span></span> <span data-ttu-id="0c990-104">Im Unterschied zu Befehlstext wird die Parametereingabe als Literalwert und nicht als ausführbarer Code behandelt.</span><span class="sxs-lookup"><span data-stu-id="0c990-104">Unlike command text, parameter input is treated as a literal value, not as executable code.</span></span> <span data-ttu-id="0c990-105">Dies hilft beim Schutz vor SQL Injection-Angriffen, bei denen ein Angreifer einen SQL-Befehl, der die Sicherheit auf dem Server gefährdet, in eine SQL-Anweisung einschleust.</span><span class="sxs-lookup"><span data-stu-id="0c990-105">This helps guard against "SQL injection" attacks, in which an attacker inserts a command that compromises security on the server into an SQL statement.</span></span>  
