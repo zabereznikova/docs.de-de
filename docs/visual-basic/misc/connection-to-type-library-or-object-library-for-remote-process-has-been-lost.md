@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635683"
 ---
 # <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a><span data-ttu-id="10373-102">Die Verbindung zur Typen- oder Objektbibliothek für den Remoteprozess ist nicht mehr verfügbar.</span><span class="sxs-lookup"><span data-stu-id="10373-102">Connection to type library or object library for remote process has been lost</span></span>
 <span data-ttu-id="10373-103">Sie haben die Verbindung zur Objekt- oder Typenbibliothek für den Remoteprozess verloren.</span><span class="sxs-lookup"><span data-stu-id="10373-103">You lost your connection to the remote process's object library or type library.</span></span>  

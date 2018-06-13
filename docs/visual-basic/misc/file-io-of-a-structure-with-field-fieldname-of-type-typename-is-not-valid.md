@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634927"
 ---
 # <a name="file-io-of-a-structure-with-field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="08066-102">Datei-e/a einer Struktur mit Feld &#39; &lt;Fieldname&gt; &#39; des Typs &#39; &lt;Typename&gt; &#39; ist ungültig</span><span class="sxs-lookup"><span data-stu-id="08066-102">File I/O of a structure with field &#39;&lt;fieldname&gt;&#39; of type &#39;&lt;typename&gt;&#39; is not valid</span></span>
 <span data-ttu-id="08066-103">Die Struktur, die Sie in eine Datei schreiben möchten, enthält einen nicht unterstützten Typ.</span><span class="sxs-lookup"><span data-stu-id="08066-103">The structure you are attempting to write to a file contains an unsupported type.</span></span>  

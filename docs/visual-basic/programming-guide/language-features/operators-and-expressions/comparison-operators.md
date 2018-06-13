@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655135"
 ---
 # <a name="comparison-operators-in-visual-basic"></a><span data-ttu-id="a9d85-102">Vergleichsoperatoren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a9d85-102">Comparison Operators in Visual Basic</span></span>
 <span data-ttu-id="a9d85-103">Vergleichsoperatoren vergleichen zwei Ausdrücke und Zurückgeben einer `Boolean` Wert, der die Beziehung zwischen ihren Werten darstellt.</span><span class="sxs-lookup"><span data-stu-id="a9d85-103">Comparison operators compare two expressions and return a `Boolean` value that represents the relationship of their values.</span></span> <span data-ttu-id="a9d85-104">Es sind Operatoren zum Vergleichen von numerischen Werten, Operatoren zum Vergleichen von Zeichenfolgen und Operatoren zum Vergleichen von Objekten.</span><span class="sxs-lookup"><span data-stu-id="a9d85-104">There are operators for comparing numeric values, operators for comparing strings, and operators for comparing objects.</span></span> <span data-ttu-id="a9d85-105">Alle drei Typen von Operatoren werden in diesem Dokument erläutert.</span><span class="sxs-lookup"><span data-stu-id="a9d85-105">All three types of operators are discussed herein.</span></span>  

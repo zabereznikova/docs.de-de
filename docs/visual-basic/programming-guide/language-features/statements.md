@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655720"
 ---
 # <a name="statements-in-visual-basic"></a><span data-ttu-id="b4004-102">Anweisungen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b4004-102">Statements in Visual Basic</span></span>
 <span data-ttu-id="b4004-103">Eine Anweisung in Visual Basic ist eine vollständige Anweisung.</span><span class="sxs-lookup"><span data-stu-id="b4004-103">A statement in Visual Basic is a complete instruction.</span></span> <span data-ttu-id="b4004-104">Sie können Schlüsselwörter, Operatoren, Variablen, Konstanten und Ausdrücke enthalten.</span><span class="sxs-lookup"><span data-stu-id="b4004-104">It can contain keywords, operators, variables, constants, and expressions.</span></span> <span data-ttu-id="b4004-105">Jede Anweisung gehört zu einer der folgenden Kategorien:</span><span class="sxs-lookup"><span data-stu-id="b4004-105">Each statement belongs to one of the following categories:</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635834"
 ---
 # <a name="could-not-obtain-memory-information-due-to-internal-error"></a><span data-ttu-id="553df-102">Interner Fehler. Die Speicherinformationen konnten nicht abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="553df-102">Could not obtain memory information due to internal error</span></span>
 <span data-ttu-id="553df-103">Fehler beim Aufruf einer der Eigenschaften für Speicherinformationen des `My.Computer.Info` -Objekts.</span><span class="sxs-lookup"><span data-stu-id="553df-103">A call to one of the memory-information properties of the `My.Computer.Info` object failed.</span></span>  

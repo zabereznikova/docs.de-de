@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634149"
 ---
 # <a name="cannot-convert-start-value-of-type-39lttype1gt39-limit-value-of-39lttype2gt39-and-step-value-of-39lttype3gt39-to-a-common-type"></a><span data-ttu-id="9b1ae-102">Startwert des Typs kann nicht konvertiert &#39; &lt;Typ1&gt;&#39;, limit-Wert von &#39; &lt;Typ2&gt; &#39; und step-Wert des &#39; &lt;Typ3&gt; &#39; auf eine Allgemeine Typ</span><span class="sxs-lookup"><span data-stu-id="9b1ae-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39;, limit value of &#39;&lt;type2&gt;&#39; and step value of &#39;&lt;type3&gt;&#39; to a common type</span></span>
 <span data-ttu-id="9b1ae-103">Die angegebenen `For...Next` -Steuerelementwerte weisen unterschiedliche Typen auf und sind daher ungültig, da sie nicht in einen gemeinsamen Typ konvertiert werden können.</span><span class="sxs-lookup"><span data-stu-id="9b1ae-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  

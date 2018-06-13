@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634845"
 ---
 # <a name="device-unavailable"></a><span data-ttu-id="aedbc-102">Das Gerät ist nicht verfügbar</span><span class="sxs-lookup"><span data-stu-id="aedbc-102">Device unavailable</span></span>
 <span data-ttu-id="aedbc-103">Entweder wurde die Netzwerkverbindung getrennt, oder das Gerät, auf das Sie zugreifen möchten, ist offline oder nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="aedbc-103">Either you have lost your network connection, or the device that you are trying to access is offline or does not exist.</span></span>  
