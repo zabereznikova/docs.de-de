@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359919"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ to SQL mit eng verknüpften Client-Server-Anwendungen
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann auf der mittleren Ebene mit eng verknüpften intelligenten Clients auf der Darstellungsebene verwendet werden. Szenarien mit schreibgeschütztem Datenzugriff, ohne Überprüfungen auf vollständige Parallelität oder ohne vollständige Parallelität mit Timestamps sind nicht wesentlich komplexer als Szenarien ohne Remotezugriff. Wenn für eine Datenbank jedoch eine Überprüfung auf vollständige Parallelität mit ursprünglichen Werten erforderlich ist, bietet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht die erforderliche Unterstützung für Roundtrips durch die in DataSets enthaltenen Daten. Eine mittlere [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Ebene kann Daten jedoch mit Clients auf beliebigen Plattformen austauschen.  

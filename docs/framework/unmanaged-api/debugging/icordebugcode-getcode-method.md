@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402688"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode-Methode
 Ruft den gesamten für die Disassembly formatierten Code für die angegebene Funktion ab. Diese Methode ist in .NET Framework, Version 2.0 veraltet. Verwendung [ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) stattdessen.  

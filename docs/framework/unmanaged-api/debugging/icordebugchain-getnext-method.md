@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 839052b72d908e48a4b6f88dab05ec3c3d575d65
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405410"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext-Methode
 Ruft die nächste Kette von Frames für den Thread an.  

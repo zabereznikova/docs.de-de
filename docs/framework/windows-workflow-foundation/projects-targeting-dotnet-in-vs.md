@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513818"
 ---
 # <a name="writing-projects-targeting-the-net-framework-30-and-35-in-visual-studio-2010"></a>Erstellen von Projekten für .NET Framework 3.0 und 3.5 in Visual Studio 2010
 Mit [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] können Sie Projekte für [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], Version 3.0 oder 3.5, erstellen. In diesem Thema wird die dafür erforderliche Vorgehensweise beschrieben.  

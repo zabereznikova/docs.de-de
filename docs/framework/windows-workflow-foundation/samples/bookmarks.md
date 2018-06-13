@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514155"
 ---
 # <a name="bookmarks"></a>Lesezeichen
 In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte Aktivität geschrieben wird, die ein Lesezeichen erstellt, um externe Eingaben zu empfangen. Das Beispiel umfasst auch eine Basiskonsolenanwendung, die die benutzerdefinierte Aktivität in einem Workflow verwendet und anzeigt, wie einer ausgeführten Workflowinstanz zugeordnete Lesezeichen ermittelt und fortgesetzt werden. Weitere Informationen zu Lesezeichen, finden Sie unter [Lesezeichen](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

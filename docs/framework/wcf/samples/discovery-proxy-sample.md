@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503183"
 ---
 # <a name="discovery-proxy-sample"></a>Suchproxybeispiel
 In diesem Beispiel wird gezeigt, wie eine Implementierung eines Suchproxys erstellt wird, um Informationen zu vorhandenen Diensten zu speichern, und wie Clients Informationen von diesem Proxy abfragen können. Dieses Beispiel umfasst drei Projekte:  

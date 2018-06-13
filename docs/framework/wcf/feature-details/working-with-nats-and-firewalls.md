@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508102"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Arbeiten mit NATs und Firewalls
 Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig nicht über eine direkte und offene Verbindung. Die Datenpakete werden gefiltert, weitergeleitet, analysiert und verändert – sowohl vom Absender und vom Empfänger als auch von den Zwischenstationen im Netzwerk. Netzwerkadressübersetzungen (NAT) und Firewalls sind gängige Beispiele für zwischengeschaltete Anwendungen, die an der Kommunikation im Netzwerk beteiligt sein können.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513125"
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a>Anleitung zur Windows-Workflow-Dokumentation
 Dieses Thema enthält Informationen zum Verwenden der Windows Workflow Foundation-Dokumentation. Die verknüpften Dokumente sind empfohlene Startpunkte, die nach Sachgebiet und Niveau gruppiert sind.  

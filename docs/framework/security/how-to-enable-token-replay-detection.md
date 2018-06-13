@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408059"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Vorgehensweise: Aktivieren der Erkennung einer Tokenmehrfachverwendung
 ## <a name="applies-to"></a>Gilt für  

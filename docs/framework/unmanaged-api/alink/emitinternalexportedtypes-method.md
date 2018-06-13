@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 55b9d185804f25c7431f2696d67753cc3ba02d1f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402040"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes-Methode
 Gibt die Typen, die auf die Assembly hinzugefügt. Rufen Sie diese Methode, nachdem bekannt, dass die interne Typen hinzugefügt wurden.  

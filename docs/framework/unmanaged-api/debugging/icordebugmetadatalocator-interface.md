@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d1673b6045a6344ee0eeadf4ec3003206f92cde4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415677"
 ---
 # <a name="icordebugmetadatalocator-interface"></a>ICorDebugMetaDataLocator-Schnittstelle
 Stellt Metadateninformationen für den Debugger bereit.  

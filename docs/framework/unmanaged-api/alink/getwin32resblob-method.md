@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f40b99c0a81bf0f2b622c7d23157dbb5736df1ca
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403291"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob-Methode
 Ruft die Win32-Ressource Blob ab. Rufen Sie diese Methode nach dem Festlegen der Assemblyoptionen.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512599"
 ---
 # <a name="configuring-activity-validation"></a>Konfigurieren der Aktivitätsvalidierung
 Die Aktivitätsvalidierung ermöglicht es Autoren und Benutzern von Aktivitäten, Fehler in der Konfiguration einer Aktivität vor der Ausführung zu identifizieren und zu melden. Windows Workflow Foundation (WF) stellt die folgenden drei Arten von aktivitätsvalidierung bereit:  

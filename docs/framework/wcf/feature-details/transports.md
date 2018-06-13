@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498123"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transporte in Windows Communication Foundation
 Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels. Hauptsächlich in Windows Communication Foundation (WCF) verwendeten Transportprotokolle sind HTTP, HTTPS, TCP und named Pipes. Die Themen in diesem Abschnitt behandeln die Auswahl dieser Transporte, das Konfigurieren des Transports und das Festlegen von Optimierungseigenschaften.  

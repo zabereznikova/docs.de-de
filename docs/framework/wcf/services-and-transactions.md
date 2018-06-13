@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504318"
 ---
 # <a name="services-and-transactions"></a>Dienste und Transaktionen
 Windows Communication Foundation (WCF)-Anwendungen können eine Transaktion von einem Client initiieren und die Transaktion im Dienstvorgang koordinieren. Clients können eine Transaktion initiieren und mehrere Dienstvorgänge aufrufen und sicherstellen, dass für die Dienstvorgänge entweder ein Commit oder ein Rollback als einzelne Einheit ausgeführt wurde.  

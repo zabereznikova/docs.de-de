@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512426"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Veraltete Typen in Windows Workflow Foundation
 In .NET 4 hat das Workflowteam ein neues Workflowmodul im <xref:System.Activities>-Namespace eingeführt. Mit der Version von .NET 4.5 Beta werden wir die meisten Typen in den "WF3" markieren <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, und <xref:System.Workflow.Runtime> Namespaces als veraltet gekennzeichnet.  

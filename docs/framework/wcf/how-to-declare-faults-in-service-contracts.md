@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500232"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Vorgehensweise: Deklarieren von Fehlern in Dienstverträgen
 In verwaltetem Code werden Ausnahmen bei Auftreten von Fehlerbedingungen ausgelöst. In Windows Communication Foundation (WCF)-Anwendungen geben jedoch Dienstverträge Fehlerinformationen an Clients zurückgegeben wird, indem SOAP-Fehler im Dienstvertrag deklariert. Eine Übersicht über die Beziehung zwischen den Ausnahmen und Fehlern, finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

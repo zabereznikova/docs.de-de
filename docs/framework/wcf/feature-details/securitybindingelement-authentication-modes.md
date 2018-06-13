@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507757"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement-Authentifizierungsmodi
 Windows Communication Foundation (WCF) stellt verschiedene Modi, die durch die Clients und Dienste gegenseitig authentifizieren. Sie können Sicherheitsbindungselemente für diese Authentifizierungsmodi erstellen. Dazu verwenden Sie statische Methoden für die <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse oder führen eine entsprechende Konfiguration durch. In diesem Thema werden die 18 Authentifizierungsmodi kurz beschrieben.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505729"
 ---
 # <a name="conditional-get-and-put"></a>Bedingtes GET und PUT
 In diesem Beispiel wird veranschaulicht, wie die neuen bedingten Abruf- und Aktualisierungs-APIs für das WCF REST-Programmiermodell verwendet werden. Da bedingtes abrufen und aktualisieren für am besten geeignet sind Ressource orientierten und REST-Dienste, die in diesem Beispiel erweitert die [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel. Dieses Beispiel befasst sich das Hinzufügen der Unterstützung für bedingten Abruf- und aktualisieren Sie auf die [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) -Beispiels mit der neuen APIs in eingeführte [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  

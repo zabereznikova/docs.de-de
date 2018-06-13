@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750478"
 ---
 # <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>&lt;authentication&gt;-Element des &lt;clientCertificate&gt;-Elements
 Gibt die Authentifizierungsverhalten für Clientzertifikate an, die von einem Dienst verwendet werden.  

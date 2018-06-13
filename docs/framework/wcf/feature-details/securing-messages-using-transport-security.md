@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499462"
 ---
 # <a name="securing-messages-using-transport-security"></a>Sichern von Nachrichten mit Transportsicherheit
 In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher erläutert, mit der Sie an eine Warteschlange gesendete Nachrichten sichern können.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506756"
 ---
 # <a name="firewall-instructions"></a>Firewall-Anweisungen
 Sie müssen mehrere Ports oder Programme in der Firewall aktivieren, damit der Windows Communication Foundation (WCF)-Beispiele fungieren können. In vielen der Beispiele findet die Kommunikation über die Ports im Bereich 8000-8003 und über Port 9000 statt. Die Firewall ist standardmäßig aktiviert und verhindert den Zugriff auf diese Ports. Um die Beispiele mit der Firewall verwenden zu können, haben Sie abhängig von Ihren Anforderungen und Ihrer Sicherheitsumgebung mehrere Möglichkeiten:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508214"
 ---
 # <a name="stream"></a>Stream
 Das Streambeispiel zeigt die Verwendung des Kommunikationsstream-Übertragungsmodus. Der Dienst macht mehrere Vorgänge verfügbar, die Streams senden und empfangen. Dieses Beispiel ist selbst gehostet. Sowohl der Client als auch der Dienst sind Konsolenprogramme.  

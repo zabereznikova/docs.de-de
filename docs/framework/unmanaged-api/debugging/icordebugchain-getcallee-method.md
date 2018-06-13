@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f050a3d9d37e43713c40896fb162bcf9932c6512
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403369"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee-Methode
 Ruft die Kette, die durch diese Kette aufgerufen wurde.  

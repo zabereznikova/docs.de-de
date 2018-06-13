@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514051"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Vorgehensweise: Deserialisieren von Instanzdateneigenschaften
 Es gibt möglicherweise Situationen, in denen ein Benutzer oder Workflowadministrator den Zustand einer beibehaltenen Workflowinstanz manuell überprüfen möchte. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> bietet eine Ansicht der Instanzentabelle, die die folgenden vier Spalten verfügbar macht:  

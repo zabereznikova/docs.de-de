@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513483"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>Anhalten und Fortsetzen eines Workflows
 Workflows werden in Abhängigkeit von Lesezeichen und Blockieraktivitäten wie <xref:System.Activities.Statements.Delay> angehalten und fortgesetzt, können jedoch auch durch Persistenz explizit angehalten, entladen und wieder aufgenommen werden.  

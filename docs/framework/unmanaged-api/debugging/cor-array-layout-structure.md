@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406395"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT-Struktur
 Bietet Informationen zum Layout eines Arrayobjekts im Speicher.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505768"
 ---
 # <a name="getting-started-sample"></a>Beispiel 'Erste Schritte'
 Das erste Schritte-Beispiel veranschaulicht ein typischer Dienst und ein typischer Client mithilfe der Windows Communication Foundation (WCF) zu implementieren. Es dient als Grundlage für alle anderen grundlegenden Technologiebeispiele.  

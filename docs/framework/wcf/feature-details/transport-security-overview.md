@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507096"
 ---
 # <a name="transport-security-overview"></a>Übersicht über die Transportsicherheit
 Sicherheitsmechanismen in Windows Communication Foundation (WCF) hängt von der Bindung und dem verwendeten Transport ab. Wenn Sie z. B. die <xref:System.ServiceModel.WSHttpBinding>-Klasse verwenden, lautet der Transportmechanismus HTTP, und der primäre Mechanismus zum Sichern des Transports ist Secure Sockets Layer (SSL) über HTTP, allgemein als HTTPS bezeichnet. Dieses Thema erläutert die wichtigsten Sicherheitsmechanismen, die in den WCF-System bereitgestellten Bindungen verwendet werden.  
