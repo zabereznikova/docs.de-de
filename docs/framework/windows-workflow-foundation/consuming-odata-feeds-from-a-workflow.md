@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520499"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Verarbeiten von OData-Feeds eines Workflows
 WCF Data Services ist eine Komponente von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zum Erstellen von Diensten, die Daten mithilfe des Open Data Protocol (OData) und unter Verwendung von REST (Representational State Transfer)-Semantik via Internet oder Intranet verfügbar und nutzbar machen. OData macht Daten als durch URIs adressierbare Ressourcen verfügbar. Mit einem OData-basierten Datendienst kann jede Anwendung interagieren, die HTTP-Anforderungen senden und von einem Datendienst zurückgegebene OData-Feeds verarbeiten kann. WCF Data Services enthält außerdem Clientbibliotheken, die umfangreichere Programmierfunktionen bieten, wenn Sie OData-Feeds aus [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] -Anwendungen verarbeiten. Dieses Thema bietet einen Überblick über die Verarbeitung von OData-Feeds in einem Workflow mit bzw. ohne Clientbibliotheken.  

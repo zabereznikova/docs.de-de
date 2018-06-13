@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568541"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Zuordnen von XML-Datentypen zu CLR-Typen
 In der folgenden Tabelle wird die Zuordnung zwischen XML-Datentypen und CLR-Typen (Common Language Runtime) beschrieben.  

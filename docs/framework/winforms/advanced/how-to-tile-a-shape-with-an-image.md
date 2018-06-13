@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523122"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Gewusst wie: Kacheln einer Form mit einem Bild
 Wie Kacheln eine Etage abdecken nebeneinander platziert werden können, können rechteckige Bilder zum Füllen (Kachel) eine Form vom Typ nebeneinander platziert werden. Um das Innere einer Form gekachelt, verwenden Sie einen Strukturpinsel. Bei der Erstellung einer <xref:System.Drawing.TextureBrush> Objekt eines der Argumente, die Sie an den Konstruktor übergeben, wird ein <xref:System.Drawing.Image> Objekt. Wenn Sie die Strukturpinsel verwenden, um das Innere einer Form zu zeichnen, wird die Form mit wiederholten Kopien dieses Bild gefüllt.  

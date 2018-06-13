@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215309"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths (C#-Compileroptionen)
 Die Option **-fullpaths** bewirkt, dass der Compiler beim Auflisten von Kompilierungsfehlern und -warnungen den vollständigen Pfad zur Datei angibt.  

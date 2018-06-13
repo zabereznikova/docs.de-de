@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575335"
 ---
 # <a name="exceptions-and-performance"></a>Ausnahmen und Leistung
 Eine allgemeine Sorge, die im Zusammenhang mit Ausnahmen ist, dass Ausnahmen für Code verwendet werden, die routinemäßig fehlschlägt, die Leistung der Implementierung nicht akzeptabel ist. Dies ist eine gültige relevant. Wenn ein Element eine Ausnahme auslöst, kann die Leistung erheblich langsamer sein. Allerdings ist es möglich, die gute Leistung bei der Einhaltung streng an die Ausnahme, die mit Fehlercodes zu unterbinden, erzielen. Zwei Muster, die in diesem Abschnitt beschriebenen Möglichkeiten vorgeschlagen, dies zu tun.  

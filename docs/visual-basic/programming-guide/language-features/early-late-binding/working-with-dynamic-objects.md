@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647348"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>Arbeiten mit dynamischen Objekten (Visual Basic)
 Dynamische Objekte bieten eine weitere Möglichkeit, andere als die `Object` Typ späte Bindung an ein Objekt zur Laufzeit. Ein dynamisches Objekt macht Elemente wie z. B. Eigenschaften und Methoden zur Laufzeit mithilfe von dynamischen Schnittstellen, die in definierten der <xref:System.Dynamic> Namespace. Sie können die Klassen in der <xref:System.Dynamic> Namespace zum Erstellen von Objekten, die mit Datenstrukturen zu arbeiten, der nicht statischen Typ oder Format übereinstimmt. Sie können auch die dynamische Objekte, die in dynamischen Sprachen wie z. B. IronPython und IronRuby definiert sind. Finden Sie Beispiele, die zeigen, wie Sie dynamische Objekte erstellen, oder verwenden Sie ein dynamisches Objekt in einer dynamischen Sprache definiert, [Exemplarische Vorgehensweise: Erstellen und mit dynamischen Objekten](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md), <xref:System.Dynamic.DynamicObject>, oder <xref:System.Dynamic.ExpandoObject>.  

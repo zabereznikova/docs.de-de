@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573422"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries"></a>Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen
 Um ACL-Einträge (Access Control List, Zugriffssteuerungsliste) zu einer Datei hinzuzufügen oder aus einer Datei zu entfernen, muss das <xref:System.Security.AccessControl.FileSecurity>-Objekt oder das <xref:System.Security.AccessControl.DirectorySecurity>-Objekt aus der Datei oder aus dem Verzeichnis abgerufen, geändert und dann wieder auf die Datei oder das Verzeichnis angewendet werden.  

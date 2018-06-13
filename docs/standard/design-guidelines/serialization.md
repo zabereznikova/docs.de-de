@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578065"
 ---
 # <a name="serialization"></a>Serialisierung
 Serialisierung ist der Prozess der Konvertierung eines Objekts in ein Format, das unmittelbar persistent gespeichert und transportiert werden kann. Sie können z. B. ein Objekt serialisieren, transportieren, über das Internet mithilfe von HTTP und deserialisiert es auf dem Zielcomputer.  

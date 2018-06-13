@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644302"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten (Visual Basic)
 Sie können aus Visual Basic-Klassen ableiten `Public` Klassen in COM-Objekte, einschließlich derer, die in früheren Versionen von Visual Basic erstellt. Die Eigenschaften und Methoden von Klassen geerbt von COM-Objekte können außer Kraft gesetzt oder überladen, ebenso wie die Eigenschaften und Methoden der anderen Basisklasse überschreiben oder überladen werden können. Vererbung von COM-Objekten ist nützlich, wenn Sie eine vorhandene Klassenbibliothek verfügen, die nicht neu kompiliert werden soll.  

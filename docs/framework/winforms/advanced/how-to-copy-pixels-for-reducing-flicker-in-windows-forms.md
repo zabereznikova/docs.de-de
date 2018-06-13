@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522043"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Gewusst wie: Kopieren von Pixeln zum Vermindern des Flackerns in Windows Forms
 Wenn Sie eine einfache Grafik animieren, können Benutzer manchmal Flackern oder andere unerwünschte visuelle Effekte auftreten. Eine Möglichkeit, dieses Problem zu beschränken ist, einen "Bitblt" auf die Grafik zu verwenden. BitBlt ist die "Bitblocktransfer" der Farbdaten aus einem Ursprung Rechteck aus Pixeln einen Ziel-Rechteck aus Pixeln.  

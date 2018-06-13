@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0d154985e9c1614e6b8f13a55410ead0cb5e861b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441054"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions-Enumeration
 Gibt Flags für die Auswahl von Optionen für den Metadatenlinker an.  

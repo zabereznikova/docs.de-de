@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566833"
 ---
 # <a name="xaml-services"></a>XAML-Dienste
 Dieses Thema beschreibt die Funktionen einer Technologie Menge als .NET Framework-XAML-Dienste bezeichnet. Die meisten Dienste und der beschriebenen APIs befinden sich in der Assembly "System.xaml", also eine Assembly eingeführt wird, mit der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Satz von .NET Core-Assemblys. Dienste umfassen, Reader und Writer, Schemaklassen und schemaunterstützung, Factorys, Attributierung von Klassen, systeminterne Unterstützung von XAML-Sprache und anderen Features der XAML-Sprache.  

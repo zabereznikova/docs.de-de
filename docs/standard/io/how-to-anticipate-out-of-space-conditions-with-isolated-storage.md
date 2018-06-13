@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575579"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Gewusst wie: Vorhersehen von Speicherengpässen bei isoliertem Speicher
 Code, der isolierten Speicher verwendet, ist durch ein [Kontingent](../../../docs/standard/io/isolated-storage.md#quotas) eingeschränkt, das die maximale Größe für das Datendepot festlegt, in dem isolierte Speicherdateien und Verzeichnisse vorhanden sind. Das Kontingent wird durch die Sicherheitsrichtlinie definiert und kann von Administratoren konfiguriert werden. Falls die maximal zulässige Größe überschritten wird, wenn Sie versuchen, Daten zu schreiben, wird eine <xref:System.IO.IsolatedStorage.IsolatedStorageException>-Ausnahme ausgelöst, und bei dem Vorgang tritt ein Fehler auf. Dies hilft, bösartige Denial-of-Service-Angriffe zu vermeiden, die dazu führen könnten, dass die Anwendung Anforderungen verweigert, da der Datenspeicher gefüllt ist.  

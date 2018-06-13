@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a84da2a337554873e94b47eb51916088edbb5a6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439032"
 ---
 # <a name="ihostgcmanagersuspensionstarting-method"></a>IHostGCManager::SuspensionStarting-Methode
 Benachrichtigt den Host, dass die common Language Runtime (CLR) unterbricht die Ausführung von Aufgaben auf, um eine Garbagecollection auszuführen.  

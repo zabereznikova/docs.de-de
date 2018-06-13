@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565486"
 ---
 # <a name="timing-events-overview"></a>Übersicht über Zeitsteuerungsereignisse
 Dieses Thema beschreibt, wie die fünf Ereignisse zu abfrageantwortzeiten verfügbar <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> Objekte.  

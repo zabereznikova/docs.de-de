@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577397"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrieren von der XslTransform-Klasse
 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] wartet mit einer umgestalteten XSLT-Architektur auf. Die <xref:System.Xml.Xsl.XslTransform>-Klasse wurde durch die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse ersetzt.  

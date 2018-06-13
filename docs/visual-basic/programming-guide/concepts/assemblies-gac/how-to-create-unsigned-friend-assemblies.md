@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643064"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Vorgehensweise: Erstellen von unsignierten Friend-Assemblys (Visual Basic)
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwenden.  

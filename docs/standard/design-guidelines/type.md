@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572888"
 ---
 # <a name="type-design-guidelines"></a>Richtlinien für den Entwurf von Typen
 Aus der Perspektive CLR stehen nur zwei Kategorien von Typen – Verweistypen und Werttypen, aber für eine Erläuterung zu Framework-Designs, teilen wir Typen in mehr logische Gruppen, jeweils einen eigenen bestimmten Regeln.  

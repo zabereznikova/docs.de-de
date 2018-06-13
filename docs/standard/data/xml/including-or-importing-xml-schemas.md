@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573062"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Einfügen oder Importieren von XML-Schemata
 Ein XML-Schema kann die Elemente `<xs:import />`, `<xs:include />` und `<xs:redefine />` enthalten. Diese Schemaelemente verweisen auf andere XML-Schemata, mit denen die Struktur des Schemas ergänzt werden kann, in das Sie eingefügt bzw. importiert werden. Im SOM-API (Schemaobjektmodell) werden die Klassen <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> und <xref:System.Xml.Schema.XmlSchemaRedefine> diesen Elementen zugeordnet.  

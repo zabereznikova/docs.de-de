@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648384"
 ---
 # <a name="constants-overview-visual-basic"></a>Übersicht über Konstanten (Visual Basic)
 Eine Konstante ist, einen aussagekräftigen Namen, der anstelle einer Zahl oder eine Zeichenfolge, die nicht geändert wird. Konstanten speichern Werte, die, wie der Name schon sagt, während der Ausführung einer Anwendung unverändert bleiben. Sie können erheblich verbessern die Lesbarkeit des Codes und stellen die einfacher zu verwalten, bei dem Konstanten. In Code, der Werte enthält, die wieder zu verwenden, oder, abhängig ist, bestimmte Zahlen, die schwer zu merken, oder keine offensichtliche Bedeutung haben.  

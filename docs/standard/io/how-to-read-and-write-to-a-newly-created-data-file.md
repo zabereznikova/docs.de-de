@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572696"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei
 Die <xref:System.IO.BinaryWriter>-Klasse und die <xref:System.IO.BinaryReader?displayProperty=nameWithType>-Klasse werden eher zum Schreiben und Lesen von Daten als von Zeichenfolgen verwendet. Im folgenden Beispiel wird gezeigt, wie Daten in einen neuen, leeren Dateistream mit dem Namen `Test.data` geschrieben und daraus gelesen werden. Nach dem Erstellen der Datendatei im aktuellen Verzeichnis werden die zugeordneten <xref:System.IO.BinaryWriter>- und <xref:System.IO.BinaryReader>-Objekte erstellt. Das <xref:System.IO.BinaryWriter>-Objekt wird zum Schreiben der ganzen Zahlen 0 bis 10 in `Test.data` verwendet, wodurch der Dateizeiger am Ende der Datei verbleibt. Nach dem Zurücksetzen des Dateizeigers auf seinen Ursprung liest das <xref:System.IO.BinaryReader>-Objekt den angegebenen Inhalt aus.  

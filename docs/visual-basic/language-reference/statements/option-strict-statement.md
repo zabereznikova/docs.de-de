@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605354"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Implizite datentypkonvertierungen nur erweiterungskonvertierungen beschränkt, lässt spätes Binden und lässt keine implizite Typisierung, die in einem `Object` Typ.  

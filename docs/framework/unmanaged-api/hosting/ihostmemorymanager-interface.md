@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3edae4cb112f46643734c5f1612d9df36ad47e9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441324"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager-Schnittstelle
 Stellt Methoden, mit die die common Language Runtime (CLR) virtueller Arbeitsspeicher Anforderungen über den Host vornehmen können statt der standardmäßigen Win32 virtueller Arbeitsspeicher Funktionen bereit.  

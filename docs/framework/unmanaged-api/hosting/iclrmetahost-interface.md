@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e4db5f3c7deb300a9666182cb6b712eacf42cfa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436227"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost-Schnittstelle
 Enthält Methoden, die eine bestimmte Version der common Language Runtime (CLR) basierend auf ihrer Versionsnummer zurückgeben, alle installierten clrs, Liste alle Laufzeiten, die in einem angegebenen Prozess geladen sind, ermitteln die CLR-Version verwendet, um eine Assembly kompilieren, einen Prozess beenden mit einem sauberen Runtime beendet, und die legacy-API abfragebindung.  

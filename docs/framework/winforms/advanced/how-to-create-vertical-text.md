@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521471"
 ---
 # <a name="how-to-create-vertical-text"></a>Gewusst wie: Erstellen von vertikalem Text
 Sie können eine <xref:System.Drawing.StringFormat> Objekt, um anzugeben, dass Text vertikal oder horizontal gezeichnet werden soll.  

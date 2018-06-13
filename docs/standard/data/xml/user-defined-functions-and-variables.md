@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570463"
 ---
 # <a name="user-defined-functions-and-variables"></a>Benutzerdefinierte Funktionen und Variablen
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, die zur Interaktion mit <xref:System.Xml.XPath.XPathDocument>-Daten verwendet werden. Sie können die standardmäßigen XPath-Funktionen durch Implementieren von Erweiterungsfunktionen und -variablen für XPath-Abfrageausdrücke ersetzen. Die <xref:System.Xml.XPath.XPathExpression.SetContext%2A>-Methode akzeptiert einen von <xref:System.Xml.Xsl.XsltContext> abgeleiteten benutzerdefinierten Kontext. Benutzerdefinierte Funktionen werden von dem benutzerdefinierten Kontext aufgelöst.  

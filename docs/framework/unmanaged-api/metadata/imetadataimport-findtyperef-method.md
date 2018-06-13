@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 375dbaf03384b4d05a7815a11612814d8b427170
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444439"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef-Methode
 Ruft einen Zeiger auf das TypeRef-token für die <xref:System.Type> Referenz, die sich auf den angegebenen Bereich und den angegebenen Namen aufweist.  

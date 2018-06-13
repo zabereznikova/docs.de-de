@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434892"
 ---
 # <a name="fusion-interfaces"></a>Fusion-Schnittstellen
 In diesem Abschnitt wird beschrieben, die nicht verwalteten Schnittstellen, die die Fusion-API verwendet, um die Eigenschaften der Ressourcen einer Anwendung zugreifen und die richtigen Versionen dieser Ressourcen für die Anwendung zu suchen.  

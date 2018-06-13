@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647695"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Deklarierte Elemente in Visual Basic
 Ein *deklariertes Element* ist ein Programmierelement, das in einer Deklarationsanweisung definiert ist. Deklarierte Elemente enthalten Variablen, Konstanten, Enumerationen, Klassen, Strukturen, Module, Schnittstellen, Prozeduren, Prozedurparameter, Funktionsrückgaben, externe Prozedurverweise, Operatoren, Eigenschaften, Ereignisse und Delegaten.  

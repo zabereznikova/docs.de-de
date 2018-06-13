@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650919"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Gewusst wie: Zugreifen auf Member eines Objekts (Visual Basic)
 Wenn Sie eine Objektvariable, die auf ein Objekt verweist verfügen, Sie häufig mit den Elementen des Objekts, z. B. die Methoden, Eigenschaften, Felder und Ereignisse arbeiten möchten. Angenommen, nachdem Sie erstellt haben ein neues <xref:System.Windows.Forms.Form> -Objekts können Sie möglicherweise festlegen möchten ihre <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft oder der Aufruf seiner <xref:System.Windows.Forms.Control.Focus%2A> Methode.  

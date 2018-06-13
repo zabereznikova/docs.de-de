@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564377"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier-Anweisung
 Ändert die XAML-Kompilierungsverhalten beim `x:Class` ebenfalls bereitgestellt wird. Speziell, statt eine partielle `class` , besitzt eine `Public` Zugriffsebene (Standardeinstellung), bereitgestellten `x:Class` wird erstellt, mit einer `NotPublic` Zugriffsebene. Dieses Verhalten wirkt sich auf die Zugriffsebene für die Klasse in die generierten Assemblys.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218715"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C#-Compileroptionen)
 Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihres Programms.  

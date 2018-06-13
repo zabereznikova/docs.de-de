@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522665"
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Gewusst wie: Extrahieren eines mit einer Datei verknüpften Symbols in Windows Forms
 Viele Dateien verfügen über eingebettete Symbole, die eine visuelle Darstellung des zugeordneten Dateityps bereitstellen. Microsoft Word-Dokumente enthalten z. B. ein Symbol, das sie als Word-Dokumenten identifiziert. Zum Anzeigen von Dateien in einem Listensteuerelement oder Table-Steuerelement können Sie das Symbol für den Dateityp neben den einzelnen Dateinamen anzeigen möchten. Hierzu können Sie einfach mithilfe der <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> Methode.  

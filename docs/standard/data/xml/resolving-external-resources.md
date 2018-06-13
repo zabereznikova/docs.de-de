@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577087"
 ---
 # <a name="resolving-external-resources"></a>Auflösen von externen Ressourcen
 Mit der **XmlResolver**-Eigenschaft von **XmlDocument** sucht die **XmlDocument**-Klasse nach Ressourcen, die sich nicht inline in den XML-Daten befinden, z.B. externe Document Type Definitions (DTDs – Dokumenttypdefinitionen), Entitäten und Schemata. Diese Elemente können in einem Netzwerk oder auf einem lokalen Laufwerk gesucht werden und sind durch einen URI (Uniform Resource Identifier) gekennzeichnet. Somit kann **XmlDocument** im Dokument vorhandene **EntityReference**-Knoten auflösen und das Dokument entsprechend der externen DTD oder dem externen Schema validieren.  

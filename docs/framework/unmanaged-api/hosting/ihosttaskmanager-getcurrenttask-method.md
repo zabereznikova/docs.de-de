@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2420ddb5cf9be2cfb08f89d27d9aa277305e7ffb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442691"
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>IHostTaskManager::GetCurrentTask-Methode
 Ruft einen Schnittstellenzeiger auf die Aufgabe, die gerade auf den Betriebssystemthread ausgeführt wird, von dem dieser Aufruf erfolgt.  

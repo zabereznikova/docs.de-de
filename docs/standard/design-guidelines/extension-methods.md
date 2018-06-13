@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574516"
 ---
 # <a name="extension-methods"></a>Erweiterungsmethoden
 Erweiterungsmethoden sind eine Sprachfunktion, die statische Methoden, um mithilfe der Aufruf der Instanzmethodensyntax aufgerufen werden kann. Diese Methoden müssen mindestens einen Parameter annehmen und somit die Instanz, die die Methode ist darstellt, das verarbeitet werden.  

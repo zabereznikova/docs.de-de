@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523341"
 ---
 # <a name="how-to-draw-a-line-on-a-windows-form"></a>Gewusst wie: Zeichnen einer Linie in Windows Forms
 Dieses Beispiel zeichnet eine verbindende Linie in einem Formular. In der Regel, wenn Sie in einem Formular zeichnen, behandeln Sie des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis und die Ausführung der Zeichnung mit der <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> Eigenschaft von der <xref:System.Windows.Forms.PaintEventArgs>, wie im folgenden Beispiel gezeigt  

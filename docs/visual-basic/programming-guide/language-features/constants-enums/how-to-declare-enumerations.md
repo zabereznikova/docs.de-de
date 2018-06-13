@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650802"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Gewusst wie: Deklarieren einer Enumeration (Visual Basic)
 Sie erstellen eine Enumeration mit den `Enum` Anweisung im Deklarationsabschnitt einer Klasse oder das Modul. Eine Enumeration innerhalb einer Methode nicht deklariert werden. Verwenden Sie zum Angeben der entsprechenden Ebene des Zugriffs `Private`, `Protected`, `Friend`, oder `Public`.  
