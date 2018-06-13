@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566807"
 ---
 # <a name="xclass-directive"></a>x:Class-Anweisung
 Konfiguriert die Verwendung von XAML-Markupkompilierung partielle Klassen zwischen Markup und CodeBehind verknüpft. Die partielle Klasse im Code wird in einer separaten Codedatei im definiert eine [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] Sprache, während die partielle Klasse im Markup in der Regel durch die Generierung von Code während der Verwendung von XAML-Kompilierung erstellt wird.  

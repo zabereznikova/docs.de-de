@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758156"
 ---
 # <a name="connection-events"></a>Verbindungsereignisse
 Alle .NET Framework-Datenanbieter besitzen **Verbindung** Objekte mit zwei Ereignisse, die Sie verwenden können, um informationsmeldungen aus einer Datenquelle abzurufen oder um festzustellen, den Status des eine **Verbindung** hat geändert. Die folgende Tabelle beschreibt die Ereignisse der **Verbindung** Objekt.  

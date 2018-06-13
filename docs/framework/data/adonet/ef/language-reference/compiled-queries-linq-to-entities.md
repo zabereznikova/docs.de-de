@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761596"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Kompilierte Abfragen (LINQ to Entities)
 Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen ausführt, kann in vielen Fällen die Leistung gesteigert werden, indem die Abfrage einmal kompiliert und anschließend mehrmals mit verschiedenen Parametern ausgeführt wird. So können beispielsweise mithilfe einer Anwendung alle Kunden in einer bestimmten Stadt abgerufen werden, wobei die Stadt zur Laufzeit vom Benutzer in einem Formular festgelegt wird. Für derartige Aufgaben unterstützt LINQ to Entities die Verwendung kompilierter Abfragen.  

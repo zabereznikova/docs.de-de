@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763718"
 ---
 # <a name="querying-a-conceptual-model"></a>Abfragen eines konzeptionellen Modells
 Die [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ermöglicht es Ihnen, Abfragen eines konzeptionelles Modells. Um das konzeptionelle Modell anhand der neuesten Version von Entity Framework abzufragen, finden Sie unter [Abfragen von Daten](http://go.microsoft.com/fwlink/?LinkId=235282).

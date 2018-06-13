@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763669"
 ---
 # <a name="merging-dataset-contents"></a>Zusammenführen von DataSet-Inhalten
 Sie können die <xref:System.Data.DataSet.Merge%2A>-Methode verwenden, um den Inhalt eines <xref:System.Data.DataSet>-, <xref:System.Data.DataTable>- oder <xref:System.Data.DataRow>-Arrays in einem vorhandenen `DataSet` zusammenzuführen. Wie die neuen Daten in einem vorhandenen `DataSet` zusammengeführt werden, hängt von mehreren Faktoren und Optionen ab.  

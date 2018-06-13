@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604015"
 ---
 # <a name="-operator-visual-basic"></a>+=-Operator (Visual Basic)
 Fügt den Wert eines numerischen Variablen oder einer Eigenschaft den Wert eines numerischen Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft. Kann auch zum Verketten verwendet eine `String` Ausdruck, der eine `String` Variablen oder einer Eigenschaft und das Ergebnis der Variablen oder Eigenschaft zuzuweisen.  

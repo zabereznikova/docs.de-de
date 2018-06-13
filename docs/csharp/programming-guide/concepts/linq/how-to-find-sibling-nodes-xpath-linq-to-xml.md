@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324160"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Vorgehensweise: Suchen nach nebengeordneten Knoten (XPath-LINQ to XML) (C#)
 Sie können nach allen nebengeordneten Knoten eines Knotens mit einem bestimmten Namen suchen. Die resultierende Auflistung kann den Kontextknoten enthalten, sofern der Kontextknoten ebenfalls diesen Namen besitzt.  

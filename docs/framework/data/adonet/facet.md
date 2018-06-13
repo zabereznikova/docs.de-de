@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762422"
 ---
 # <a name="facet"></a>Facet
 Ein *Facet* wird verwendet, um einer primitiven typeigenschaftendefinition Details hinzuzufügen. Ein [Eigenschaft](../../../../docs/framework/data/adonet/property.md) Definition enthält Informationen zum Eigenschaftentyp, oft ausführlicher ist jedoch erforderlich. Ein Entitätstyp in einem konzeptionellen Modell könnte z. B. über eine Eigenschaft vom Typ `String` verfügen, deren Wert nicht auf NULL festgelegt werden kann. Mit Facets können Sie diese Detailebene angeben.  

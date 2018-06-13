@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590828"
 ---
 # <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Der erste Operand in eine Binärdatei &#39;Wenn&#39; Ausdruck muss NULL-Werte zulässt, oder geben Sie ein Verweis
 Ein `If` -Ausdruck kann entweder zwei oder drei Argumente übernehmen. Wenn Sie nur zwei Argumente senden, sind für das erste Argument muss ein Verweistyp oder ein NULL-Werte zulässt. Wenn das erste Argument zu beliebiegen Dokumentbestandteilen außer ergibt `Nothing`, dessen Wert zurückgegeben wird. Wenn das erste Argument ergibt `Nothing`, das zweite Argument ausgewertet und zurückgegeben.  

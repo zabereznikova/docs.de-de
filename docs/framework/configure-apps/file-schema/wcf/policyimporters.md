@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749097"
 ---
 # <a name="ltpolicyimportersgt"></a>&lt;policyImporters&gt;
 Dieses Konfigurationselement gibt alle Richtlinienimporter an, die den Import von benutzerdefinierten Richtlinienassertionen zu Bindungen steuern. Jedes untergeordnete Element ist ein <`policyImporter`>, mit dem benutzerdefinierte Richtlinienerklärungen über Bindungsfeatures gesucht werden. Außerdem wird ein benutzerdefiniertes Bindungselement angefügt, mit dem die für die Erklärung erforderlichen Features implementiert werden.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764865"
 ---
 # <a name="paging-entity-sql"></a>Paging (Entity SQL)
 Physisches Paging kann ausgeführt werden, mithilfe der [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) und [Grenzwert](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) -Unterklausel in der [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) Klausel. Um physisches Paging deterministisch durchzuführen, sollten Sie SKIP und LIMIT verwenden. Wenn Sie nur die Anzahl der Zeilen in einer Tabelle in einer nicht-deterministische Weise beschränken möchten, verwenden Sie [oben](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md). TOP und SKIP/LIMIT schließen sich gegenseitig aus.  

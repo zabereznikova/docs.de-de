@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592118"
 ---
 # <a name="string-data-type-visual-basic"></a>String-Datentyp (Visual Basic)
 Enthält Sequenzen vorzeichenlose 16-Bit (2-Byte)-Codepunkte dieses Bereichs liegt im Bereich zwischen 0 und 65535 an. Jede *Codepunkt*, oder Zeichencode stellt ein einzelnes Unicode-Zeichen dar. Eine Zeichenfolge darf zwischen 0 und etwa zwei Milliarden (2 ^ 31) Unicode-Zeichen.  

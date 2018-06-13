@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604587"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Member der Visual Basic-Laufzeitbibliothek
 Die `Microsoft.VisualBasic` -Namespace enthält Klassen, Module, Konstanten und Enumerationen, die Visual Basic-Laufzeitbibliothek bilden. Diese Bibliothek Member kann von Prozeduren, Eigenschaften und Konstante Werte, die Sie in Ihrem Code verwenden können. Jedes Modul und die Klasse stellt eine bestimmte Kategorie von Funktionen dar.  

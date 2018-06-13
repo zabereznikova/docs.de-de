@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757891"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Datenbindung und LINQ to DataSet
 *Die Datenbindung* ist der Prozess, der eine Verbindung zwischen der Benutzeroberfläche der Anwendung und die Geschäftslogik hergestellt wird. Wenn die Bindungseinstellungen korrekt sind und bei einer Änderung des Werts ordnungsgemäße Benachrichtigungen ausgegeben werden, werden die Elemente, die an die Daten gebunden sind, automatisch aktualisiert. Beim <xref:System.Data.DataSet> handelt es sich um eine im Arbeitsspeicher residierende Darstellung von Daten, die – unabhängig von der Quelle der Daten – ein konsistentes relationales Programmiermodell bereitstellt. Die ADO.NET 2.0-<xref:System.Data.DataView> ermöglicht es Ihnen, die in einer <xref:System.Data.DataTable> gespeicherten Daten zu sortieren und zu filtern. Diese Funktionalität wird häufig in Datenbindungsanwendungen verwendet. Mit einer <xref:System.Data.DataView> können Sie die Daten in einer Tabelle mit verschiedenen Sortierreihenfolgen verfügbar machen und nach Zeilenstatus oder auf der Basis eines Filterausdrucks filtern. Weitere Informationen zu den <xref:System.Data.DataView> Objekt, finden Sie unter ["DataViews"](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  

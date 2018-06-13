@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327157"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Abrufen des Texts der Absätze (C#)
 Dieses Beispiel baut auf dem vorherigen Beispiel [Retrieving the Paragraphs and Their Styles (C#) (Abrufen der Absätze und deren Formate (C#))](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md) auf. Dieses neue Beispiel ruft den Text jedes einzelnen Absatzes als Zeichenfolge ab  

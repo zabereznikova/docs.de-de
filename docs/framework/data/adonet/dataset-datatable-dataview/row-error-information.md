@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767192"
 ---
 # <a name="row-error-information"></a>Zeilenfehlerinformationen
 Um nicht jedes Mal auf einen Zeilenfehler reagieren zu müssen, während Sie Werte in einer <xref:System.Data.DataTable> bearbeiten, können Sie der Zeile die Fehlerinformationen zur späteren Verwendung der Zeile hinzufügen. Das <xref:System.Data.DataRow>-Objekt stellt zu diesem Zweck für jede Zeile eine <xref:System.Data.DataRow.RowError%2A>-Eigenschaft bereit. Hinzufügen von Daten zu der **RowError** Eigenschaft eine **DataRow** legt der <xref:System.Data.DataRow.HasErrors%2A> Eigenschaft der **DataRow** zu **"true"**. Wenn die **DataRow** ist Teil einer **DataTable**, und **DataRow.HasErrors** ist **"true"**, **DataTable.HasErrors** -Eigenschaft ist ebenfalls **"true"**. Dies gilt auch für die **DataSet** , der die **DataTable** gehört. Beim Testen der Fehler sehen Sie sich die **HasErrors** -Eigenschaft können Sie bestimmen, ob alle Zeilen Fehlerinformationen hinzugefügt wurden. Wenn **HasErrors** ist **"true"**, können Sie die <xref:System.Data.DataTable.GetErrors%2A> Methode der **DataTable** zurückgeben, und überprüfen nur die Zeilen mit Fehlern aus, wie im folgenden Beispiel gezeigt.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761271"
 ---
 # <a name="null-comparisons"></a>NULL-Vergleiche
 Ein `null`-Wert in der Datenquelle gibt an, dass der Wert unbekannt ist. Sie können in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen auf NULL-Werte überprüfen, damit bestimmte Berechnungen oder Vergleiche nur für Zeilen mit gültigen Daten bzw. Daten, die nicht den Wert NULL haben, ausgeführt werden. Die NULL-Semantik der CLR unterscheidet sich jedoch möglicherweise von der NULL-Semantik der Datenquelle. Die meisten Datenbanken verwenden eine Logikversion mit einer dritten Möglichkeit der Auswertung, um NULL-Vergleiche zu behandeln. D. h., dass jeder Vergleich mit einem null-Wert wird nicht ausgewertet `true` oder `false`, ergibt es `unknown`. Oft ist dies eine Implementierung von ANSI-Nullen, das ist jedoch nicht immer der Fall.  

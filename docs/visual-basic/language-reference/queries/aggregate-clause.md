@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604899"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate-Klausel (Visual Basic)
 Wendet eine oder mehrere Aggregatfunktionen auf eine Auflistung an.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604069"
 ---
 # <a name="attribute-list-visual-basic"></a>Attributliste (Visual Basic)
 Gibt die Attribute, die auf eine deklarierte Programmierelement angewendet werden. Mehrere Attribute werden durch Kommas getrennt. Nachfolgend ist die Syntax für ein Attribut.  

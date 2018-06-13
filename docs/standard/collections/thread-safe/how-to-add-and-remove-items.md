@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569745"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary
 Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und von einer <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> entfernt werden. Diese Auflistungsklasse ist eine threadsichere Implementierung. Es empfiehlt sich, diese Klasse immer dann zu verwenden, wenn möglicherweise mehrere Threads gleichzeitig versuchen, auf Elemente zuzugreifen.  

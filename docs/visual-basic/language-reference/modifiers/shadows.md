@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604651"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 Gibt an, dass ein deklarierte Programmierelement erneut deklariert und ein identisch benanntes Element oder einen Satz überladener Elemente in einer Basisklasse ausgeblendet.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767179"
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Gewusst wie: Ausführen einer parametrisierten Entity SQL-Abfrage mithilfe von "EntityCommand"
 In diesem Thema wird gezeigt, wie zum Ausführen einer [!INCLUDE[esql](../../../../../includes/esql-md.md)] Abfrage mit Parametern mithilfe einer <xref:System.Data.EntityClient.EntityCommand> Objekt.  

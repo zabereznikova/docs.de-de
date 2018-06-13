@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321612"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Vorgehensweise: Projektieren eines Objektdiagramms (C#)
 In diesem Thema wird gezeigt, wie Sie ein XML-Dokument für das Projizieren (oder Auffüllen) eines Objektdiagramms verwenden können.  

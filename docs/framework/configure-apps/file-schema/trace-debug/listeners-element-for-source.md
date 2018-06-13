@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746838"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;Listener&gt; -Element für &lt;Quelle&gt;
 Hinzufügt oder entfernt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A> Auflistung für einen <xref:System.Diagnostics.TraceSource>. Ein Listener leitet die Ablaufverfolgungsausgabe an ein entsprechendes Ziel, z. B. ein Protokoll, Fenster oder Textdatei.  

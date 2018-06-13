@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604249"
 ---
 # <a name="objects-visual-basic"></a>Objekte (Visual Basic)
 Dieses Thema stellt Links zu anderen Themen bereit, die die Visual Basic-Laufzeitobjekte dokumentieren und Tabellen der Member und Prozeduren sowie der Eigenschaften und Ereignisse enthalten.  

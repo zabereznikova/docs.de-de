@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766867"
 ---
 # <a name="architecture-and-design"></a>Architektur und Entwurf
 Das SQL-Generierungsmodul im die [Beispielanbieter](http://go.microsoft.com/fwlink/?LinkId=180616) wird als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt implementiert. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.  
