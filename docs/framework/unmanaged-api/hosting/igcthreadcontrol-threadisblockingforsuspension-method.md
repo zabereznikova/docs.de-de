@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6f4b767fe7134833ee2e404be30bb51bf1385ec9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437036"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>IGCThreadControl::ThreadIsBlockingForSuspension-Methode
 Benachrichtigt den Host, dass der Thread, der den Aufruf ausgeführt hat zu blockieren, möglicherweise für eine Garbagecollection oder eine andere Unterbrechung ist.  

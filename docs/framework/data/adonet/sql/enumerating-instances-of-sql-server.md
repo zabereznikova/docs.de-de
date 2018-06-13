@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355521"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Aufzählen von SQL Server-Instanzen (ADO.NET)
 SQL Server ermöglicht Anwendungen die Suche von SQL Server-Instanzen im aktuellen Netzwerk. Die hierzu erforderlichen Informationen werden den Entwicklern von Anwendungen durch die <xref:System.Data.Sql.SqlDataSourceEnumerator>-Klasse als <xref:System.Data.DataTable> verfügbar gemacht, die Informationen zu allen sichtbaren Servern enthält. Diese zurückgegebene Tabelle enthält eine Liste der verfügbaren im Netzwerk entspricht der Liste bereitgestellt, wenn ein Benutzer versucht, eine neue Verbindung zu erstellen, wird die Dropdown-Liste mit allen verfügbaren Servern erweitert Serverinstanzen die **Verbindung Eigenschaften** (Dialogfeld). Die Liste der angezeigten Ergebnisse ist nicht immer vollständig.  

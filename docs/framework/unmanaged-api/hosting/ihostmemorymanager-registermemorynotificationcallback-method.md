@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d68790cdb671efdd0761ceef59196e8646654d5f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439600"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback-Methode
 Registriert einen Zeiger auf eine Rückruffunktion, die der Host aufruft, damit die common Language Runtime (CLR) benachrichtigt werden, von der aktuellen Auslastung des Arbeitsspeichers auf dem Computer an.  

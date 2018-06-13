@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 821f524cc8ff7f9983f811f539e2badb2306be26
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437702"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask-Methode
 Fordert an, dass die common Language Runtime (CLR) die Aufgabe zurückstellt, die das aktuelle [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) -Instanz darstellt, und stellen Sie die CPU-Zeit für andere Aufgaben verfügbar.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539399"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Drag & Drop-Funktionen in Windows Forms
 Windows Forms umfasst eine Reihe von Methoden, Ereignissen und Klassen, die das Drag & Drop-Verhalten implementieren. Dieses Thema enthält eine Übersicht über die Drag & Drop-Unterstützung in Windows Forms.  Siehe auch [Drag-and-Drop-Operationen und Unterstützung der Zwischenablage](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  

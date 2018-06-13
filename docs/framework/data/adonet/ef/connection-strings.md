@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766984"
 ---
 # <a name="connection-strings"></a>Verbindungszeichenfolgen
 Eine Verbindungszeichenfolge enthält Initialisierungsinformationen, die als Parameter von einem Datenanbieter an eine Datenquelle übergeben werden. Die Syntax ist abhängig vom Datenanbieter, und die Verbindungszeichenfolge wird beim Versuch analysiert, eine Verbindung herzustellen. Von Entity Framework verwendete Verbindungszeichenfolgen enthalten Informationen zum Herstellen einer Verbindung mit dem zugrunde liegenden ADO.NET-Datenanbieter, der Entity Framework unterstützt. Sie enthalten auch Informationen zu den erforderlichen Modell- und Zuordnungsdateien.  

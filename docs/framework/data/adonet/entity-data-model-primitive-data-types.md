@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765970"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Entity Data Model: Primitive Datentypen
 Das Entity Data Model (EDM) unterstützt eine Reihe abstrakter primitiver Datentypen (z. B. eine Zeichenfolge, boolescher Wert, Int32, usw.), mit denen definieren [Eigenschaften](../../../../docs/framework/data/adonet/property.md) in einem konzeptionellen Modell. Diese primitiven Datentypen sind Proxys für tatsächliche primitive Datentypen, die in der Speicher- oder Hostingumgebung unterstützt werden, z. B. eine SQL Server-Datenbank oder die Common Language Runtime (CLR). Das EDM definiert keine Semantik von Vorgängen oder Konvertierungen für primitive Datentypen. Diese Semantik wird von der Speicher- oder Hostingumgebung definiert. In der Regel werden primitive Datentypen im EDM entsprechenden primitiven Datentypen in der Speicher- oder Hostingumgebung zugeordnet. Informationen wie das Entity Framework primitive Datentypen im EDM in SQL Server-Datentypen zugeordnet werden, finden Sie unter [SqlClient für Entity Framework-Typen](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  

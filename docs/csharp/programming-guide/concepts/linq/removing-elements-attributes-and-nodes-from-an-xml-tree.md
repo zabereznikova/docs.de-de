@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339968"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Entfernen von Elementen, Attributen und Knoten aus einem XML-Baum (C#)
 Sie können eine XML-Struktur ändern, indem Sie Elemente, Attribute und andere Knotentypen entfernen.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765437"
 ---
 # <a name="adonet"></a>ADO.NET
 Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste für .NET Framework-Programmierer verfügbar machen. ADO.NET umfasst eine Vielzahl von Komponenten zum Erstellen von verteilten Anwendungen mit Datenfreigabe. Es ist in .NET Framework integriert und ermöglicht den Zugriff auf relationale, XML- und Anwendungsdaten. ADO.NET unterstützt eine Reihe von Entwicklungsanforderungen, z. B. das Erstellen von Front-End-Datenbankclients und Geschäftsobjekten mittlerer Ebene, die von Anwendungen, Tools, Sprachen oder Internetbrowsern verwendet werden.  

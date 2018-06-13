@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333023"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Instanzkonstruktoren (C#-Programmierhandbuch)
 Instanzkonstruktoren werden zum Erstellen und Initialisieren von Instanzmembervariablen verwendet, wenn Sie die Ausdruck [new](../../../csharp/language-reference/keywords/new.md) verwenden, um ein Objekt einer [Klasse](../../../csharp/language-reference/keywords/class.md) zu erstellen. Sie müssen einen statischen Konstruktor definieren um eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse oder eine statische Variable in einer nicht statischen Klasse zu initialisieren. Weitere Informationen finden Sie unter [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  

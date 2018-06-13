@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551894"
 ---
 # <a name="how-to-rotate-an-image"></a>Gewusst wie: Drehen eines Bilds
 In diesem Beispiel wird gezeigt, wie Sie ein Bild mit 90 Grad drehen eine <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> Eigenschaft von einem <xref:System.Windows.Media.Imaging.BitmapImage>.  

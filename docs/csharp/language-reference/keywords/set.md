@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265787"
 ---
 # <a name="set-c-reference"></a>set (C#-Referenz)
 Das Schlüsselwort `set` definiert eine *Accessor*-Methode in einer Eigenschaft oder einem Indexer, die der Eigenschaft oder dem Indexer-Element einen Wert zuweist. Weitere Informationen und Beispiele finden Sie unter [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md), [Automatisch implementierte Eigenschaften](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) und [Indexers](../../../csharp/programming-guide/indexers/index.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766633"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)
 In diesem Abschnitt werden Informationen über die Language-Integrated Query (LINQ)-Standardabfrageoperatoren bereitgestellt, die in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen unterstützt bzw. nicht unterstützt werden. Viele der LINQ-Standardabfrageoperatoren verfügen über eine überladene Version, der ein ganzzahliges Argument übergeben werden kann. Das ganzzahlige Argument entspricht einem nullbasierten Index in der Sequenz, die bearbeiteten ist ein <xref:System.Collections.Generic.IEqualityComparer%601>, oder <xref:System.Collections.Generic.IComparer%601>. Sofern nicht anders angegeben, werden diese überladenen Versionen der LINQ-Standardabfrageoperatoren nicht unterstützt, und bei ihrer Verwendung wird eine Ausnahme ausgelöst.  

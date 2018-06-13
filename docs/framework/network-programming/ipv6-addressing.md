@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394835"
 ---
 # <a name="ipv6-addressing"></a>IPv6-Adressierung
 Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund für solch einen großen Adressbereich ist das Unterteilen der verfügbaren Adressen in eine Hierarchie von Routingdomänen, die die Topologie des Internets widerspiegeln. Ein weiterer Grund ist das Zuordnen der Adressen des Netzwerkadapters (oder der Netzwerkschnittstellen), die Geräte mit dem Netzwerk verbinden. IPv6 verfügt über die inhärente Funktion, Adressen auf ihrer niedrigsten Ebene aufzulösen, bei der es sich um die Ebene der Netzwerkschnittstelle handelt. Weiterhin verfügt es über Funktionen zur automatischen Konfiguration.  

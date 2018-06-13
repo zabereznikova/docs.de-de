@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393428"
 ---
 # <a name="ipv6-auto-configuration"></a>Automatische IPv6-Konfiguration
 Ein wichtiges Ziel von IPv6 ist die Unterstützung von Plug & Play für Knoten. Das bedeutet, dass es möglich sein soll, dass ein Knoten in ein IPv6-Netzwerk eingeführt und dann automatisch ohne Benutzereingriff konfiguriert wird.  

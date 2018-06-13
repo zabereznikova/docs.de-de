@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539490"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Vorgehensweise: erstellen eine Windows Forms-Anwendung über die Befehlszeile
 In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen. Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe auch [Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  

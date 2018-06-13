@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758554"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von keyref-XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen
 Die **Keyref** Element können Sie Links zwischen Elementen in einem Dokument herstellen. Dies ist mit einer Fremdschlüsselbeziehung in einer relationalen Datenbank vergleichbar. Wenn ein Schema gibt die **Keyref** Element, das Element wird konvertiert, während die Schemazuordnungsprozesses in eine entsprechende foreign Key-Einschränkung für die Spalten in den Tabellen der der <xref:System.Data.DataSet>. Wird standardmäßig die **Keyref** Element generiert auch eine Beziehung mit der **ParentTable**, **untergeordneteTabelle**, **ParentColumn**, und  **ChildColumn** Eigenschaften der Beziehung angegeben.  

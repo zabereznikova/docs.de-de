@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398894"
 ---
 # <a name="claims-based-identity-model"></a>Anspruchsbasiertes Identitätsmodell
 Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeridentität in der Anwendung als Satz von Ansprüchen dargestellt. Ein Anspruch ist möglicherweise der Name des Benutzers, ein anderer eine e-Mail-Adresse. Das zugrunde liegende Konzept besteht darin, dass ein externes Identitätssystem konfiguriert wird, um der Anwendung mit jeder Anforderung alle erforderlichen Informationen über den Benutzer zu geben. Außerdem wird die kryptografische Zusicherung gegeben, dass die Identitätsdaten, die Sie erhalten, aus einer vertrauenswürdigen Quelle stammen.  

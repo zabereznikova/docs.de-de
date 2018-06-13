@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539539"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Gewusst wie: Sicherstellen, dass mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, synchronisiert bleiben
 Häufig bei der Arbeit mit dem Datenbindung in Windows Forms werden mehrere Steuerelemente, die an die gleiche Datenquelle gebunden. In einigen Fällen kann es erforderlich sein, zusätzliche Schritte ausführen, um sicherzustellen, dass die gebundenen Eigenschaften der Steuerelemente untereinander und mit der Datenquelle synchronisiert bleiben. Diese Schritte sind in zwei Situationen notwendig:  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324674"
 ---
 # <a name="objects-c-programming-guide"></a>Objekte (C#-Programmierhandbuch)
 Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, der angibt, was der Typ machen kann. Ein Objekt ist im Grunde ein Speicherblock, der nach Plan zugewiesen und konfiguriert wurde. Ein Programm kann viele Objekte der selben Klasse erstellen. Objekte werden auch Instanzen genannt, und sie können entweder in einer benannten Variable, einem Array oder in einer Auflistung gespeichert werden. Der Client-Code ist der Code, der diese Variablen verwendet, um die Methoden aufzurufen und um auf die öffentlichen Eigenschaften des Objekts zuzugreifen. In einer objektorientierten Programmiersprache wie C# besteht ein typisches Programm aus mehreren Objekten, die dynamisch interagieren.  

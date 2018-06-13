@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329867"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Generische Methoden (C#-Programmierhandbuch)
 Bei einer generischen Methode handelt es sich um eine mit Typparametern deklarierte Methode, wie folgt:  

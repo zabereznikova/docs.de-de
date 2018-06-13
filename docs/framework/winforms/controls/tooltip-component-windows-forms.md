@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538782"
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip-Komponente (Windows Forms)
 Die <xref:System.Windows.Forms.ToolTip>-Komponente in Windows Forms zeigt Text an, wenn der Benutzer auf Steuerelemente zeigt. Jedem Steuerelement kann eine QuickInfo zugeordnet werden. Sie könnten dieses Steuerelement beispielsweise verwenden, um Platz auf einem Formular zu sparen, indem Sie ein kleines Symbol auf einer Schaltfläche anzeigen und die Funktion der Schaltfläche mit einer QuickInfo erklären.  

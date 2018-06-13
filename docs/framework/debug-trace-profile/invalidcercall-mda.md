@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393616"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall-MDA
 Der `invalidCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein Aufruf innerhalb des Diagramms des eingeschränkten Ausführungsbereichs (CER) an eine Methode stattfindet, die keinen Zuverlässigkeitsvertrag oder einen übermäßig schwachen Vertrag besitzt. Ein schwacher Vertrag ist ein Vertrag, der deklariert, dass die schlimmste Zustandsbeschädigung einen größeren Umfang hat als die an den Aufruf übergebene Instanz. <xref:System.AppDomain> oder der Prozessstatus werden also möglicherweise beschädigt oder das Ergebnis bei einem Aufruf innerhalb eines CER kann nicht immer deterministisch berechnet werden.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758476"
 ---
 # <a name="connection-string-builders"></a>Verbindungszeichenfolgen-Generatoren
 In früheren Versionen von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], der Kompilierung von Verbindungszeichenfolgen mit verketteten Zeichenfolge Werte nicht erfolgt ist, sodass zur Laufzeit ein falsches Schlüsselwort generiert eine <xref:System.ArgumentException>. Jeder [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter unterstützte eine andere Syntax für Schlüsselwörter in Verbindungszeichenfolgen, was die manuelle Konstruktion gültiger Verbindungszeichenfolgen erschwerte. Zur Beseitigung dieses Problems wurden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 neue Verbindungszeichenfolgen-Generatoren für jeden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter eingeführt. Alle Datenanbieter stellen eine stark typisierte Verbindungszeichenfolgen-Generatorklasse bereit, die von <xref:System.Data.Common.DbConnectionStringBuilder> erbt. In der folgenden Tabelle werden die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter und ihre jeweiligen Verbindungszeichenfolgen-Generatorklassen aufgelistet.  

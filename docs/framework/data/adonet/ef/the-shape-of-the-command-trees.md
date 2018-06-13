@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766035"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Form der Befehlsstrukturen
 Das SQL-Generierungsmodul generiert anhand eines angegebenen Eingabeabfragebefehlsstruktur-Ausdrucks eine Back-End-spezifische SQL-Abfrage. In diesem Abschnitt werden die Merkmale, die Eigenschaften und die Struktur der Abfragebefehlsstrukturen erläutert.  

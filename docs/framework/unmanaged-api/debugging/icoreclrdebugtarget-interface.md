@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 371768a8306c3751e7fc54b91a8583df41ad219b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422281"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget-Schnittstelle
 Stellt Methoden, die zum Steuern der Verweiszähler, Auflisten von Prozessen und einen Debugger, der mit einem Remoteziel für Macintosh Silverlight angefügt ist zugeordneten Arbeitsspeicher freizugeben.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751349"
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 Führt dazu, dass ein Kanal Nachrichten in der MSMQ-Sitzung überträgt, wenn er in einer benutzerdefinierten Bindung enthalten ist.  

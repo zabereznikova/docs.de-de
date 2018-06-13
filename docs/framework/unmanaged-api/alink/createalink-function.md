@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e29c9c246649229900beba2fcc9ab482071ae46
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400665"
 ---
 # <a name="createalink-function"></a>CreateALink-Funktion
 Erstellt eine Instanz der Assembly Linker aus, und legt einen Zeiger auf die angegebene Schnittstelle fest.  
