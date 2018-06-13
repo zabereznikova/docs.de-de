@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576821"
 ---
 # <a name="building-xml-schemas"></a><span data-ttu-id="45e42-102">Erstellen von XML-Schemata</span><span class="sxs-lookup"><span data-stu-id="45e42-102">Building XML Schemas</span></span>
 <span data-ttu-id="45e42-103">Die Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace werden den Strukturen zugeordnet, die in der XML-Schemaempfehlung des W3C (World Wide Web Consortium) definiert sind, und können zum speicherinternen Erstellen von XML-Schemata verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="45e42-103">The classes in the <xref:System.Xml.Schema?displayProperty=nameWithType> namespace map to the structures defined in the World Wide Web Consortium (W3C) XML Schema Recommendation and can be used to build XML schemas in-memory.</span></span>  

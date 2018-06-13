@@ -1,13 +1,6 @@
 ---
 title: 'Gewusst wie: Animieren von Kameraposition und -richtung mithilfe von Keyframes'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], camera direction with key frames
 - key frames [WPF], animating camera direction
@@ -16,29 +9,25 @@ helpviewer_keywords:
 - key frames [WPF], animating camera position
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 06e815ddd8beb48f80f13d93604773079fcffa06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5be14513755c3b5c80c13cbc5cae889cc4663cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558833"
 ---
-# <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a><span data-ttu-id="e8e4d-102">Gewusst wie: Animieren von Kameraposition und -richtung mithilfe von Keyframes</span><span class="sxs-lookup"><span data-stu-id="e8e4d-102">How to: Animate Camera Position and Direction Using Key Frames</span></span>
-<span data-ttu-id="e8e4d-103">Im folgenden Beispiel <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> wird verwendet, um die Position des Animieren einer <xref:System.Windows.Media.Media3D.PerspectiveCamera> in einer 3D-Szene.</span><span class="sxs-lookup"><span data-stu-id="e8e4d-103">In the following example, <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> is used to animate the position of a <xref:System.Windows.Media.Media3D.PerspectiveCamera> in a 3D scene.</span></span> <span data-ttu-id="e8e4d-104">Darüber hinaus <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> wird verwendet, um die Richtung zu animieren, wird die Kamera in der 3D-Szene zeigt.</span><span class="sxs-lookup"><span data-stu-id="e8e4d-104">In addition, <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> is used to animate the direction the camera is pointing in the 3D scene.</span></span> <span data-ttu-id="e8e4d-105">Beide dieser Animationen verwenden mehrere Keyframes, die eine Reihe von Animationseffekte erstellen:</span><span class="sxs-lookup"><span data-stu-id="e8e4d-105">Both of these animations use several key frames which create a series of animation effects:</span></span>  
+# <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a><span data-ttu-id="b3552-102">Gewusst wie: Animieren von Kameraposition und -richtung mithilfe von Keyframes</span><span class="sxs-lookup"><span data-stu-id="b3552-102">How to: Animate Camera Position and Direction Using Key Frames</span></span>
+<span data-ttu-id="b3552-103">Im folgenden Beispiel <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> wird verwendet, um die Position des Animieren einer <xref:System.Windows.Media.Media3D.PerspectiveCamera> in einer 3D-Szene.</span><span class="sxs-lookup"><span data-stu-id="b3552-103">In the following example, <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> is used to animate the position of a <xref:System.Windows.Media.Media3D.PerspectiveCamera> in a 3D scene.</span></span> <span data-ttu-id="b3552-104">Darüber hinaus <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> wird verwendet, um die Richtung zu animieren, wird die Kamera in der 3D-Szene zeigt.</span><span class="sxs-lookup"><span data-stu-id="b3552-104">In addition, <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> is used to animate the direction the camera is pointing in the 3D scene.</span></span> <span data-ttu-id="b3552-105">Beide dieser Animationen verwenden mehrere Keyframes, die eine Reihe von Animationseffekte erstellen:</span><span class="sxs-lookup"><span data-stu-id="b3552-105">Both of these animations use several key frames which create a series of animation effects:</span></span>  
   
-1.  <span data-ttu-id="e8e4d-106"><xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame>und <xref:System.Windows.Media.Animation.LinearVector3DKeyFrame> werden verwendet, um eine glatte, lineare Interpolation zwischen Werten zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e8e4d-106"><xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame> and <xref:System.Windows.Media.Animation.LinearVector3DKeyFrame> are used to create a smooth, linear interpolation between values.</span></span>  
+1.  <span data-ttu-id="b3552-106"><xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame> und <xref:System.Windows.Media.Animation.LinearVector3DKeyFrame> werden verwendet, um eine glatte, lineare Interpolation zwischen Werten zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="b3552-106"><xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame> and <xref:System.Windows.Media.Animation.LinearVector3DKeyFrame> are used to create a smooth, linear interpolation between values.</span></span>  
   
-2.  <span data-ttu-id="e8e4d-107"><xref:System.Windows.Media.Animation.DiscretePoint3DKeyFrame>und <xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame> werden verwendet, um einen plötzlichen "Sprünge" zwischen Werten (keine Interpolation) zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e8e4d-107"><xref:System.Windows.Media.Animation.DiscretePoint3DKeyFrame> and <xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame> are used to create sudden "jumps" between values (no interpolation).</span></span>  
+2.  <span data-ttu-id="b3552-107"><xref:System.Windows.Media.Animation.DiscretePoint3DKeyFrame> und <xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame> werden verwendet, um einen plötzlichen "Sprünge" zwischen Werten (keine Interpolation) zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="b3552-107"><xref:System.Windows.Media.Animation.DiscretePoint3DKeyFrame> and <xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame> are used to create sudden "jumps" between values (no interpolation).</span></span>  
   
-3.  <span data-ttu-id="e8e4d-108"><xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame>und <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> werden verwendet, um einen variablen Übergang zwischen Werten, je nach Erstellen der <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="e8e4d-108"><xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame> and <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> are used to create a variable transition between values depending on the <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="e8e4d-109">Im folgenden Beispiel wird die Animation zunächst langsam gegen Ende des Zeitsegments, exponentiell beschleunigt.</span><span class="sxs-lookup"><span data-stu-id="e8e4d-109">In the example below, the animation starts off slow but toward the end of the time segment, speeds up exponentially.</span></span>  
+3.  <span data-ttu-id="b3552-108"><xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame> und <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> werden verwendet, um einen variablen Übergang zwischen Werten, je nach Erstellen der <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="b3552-108"><xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame> and <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> are used to create a variable transition between values depending on the <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="b3552-109">Im folgenden Beispiel wird die Animation zunächst langsam gegen Ende des Zeitsegments, exponentiell beschleunigt.</span><span class="sxs-lookup"><span data-stu-id="b3552-109">In the example below, the animation starts off slow but toward the end of the time segment, speeds up exponentially.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e8e4d-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e8e4d-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b3552-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b3552-110">Example</span></span>  
  [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="e8e4d-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e8e4d-111">See Also</span></span>  
- [<span data-ttu-id="e8e4d-112">Animieren der Kameraposition und -richtung in 3D-Szenen</span><span class="sxs-lookup"><span data-stu-id="e8e4d-112">Animate Camera Position and Direction in a 3D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [<span data-ttu-id="e8e4d-113">Übersicht über 3D-Grafiken</span><span class="sxs-lookup"><span data-stu-id="e8e4d-113">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+## <a name="see-also"></a><span data-ttu-id="b3552-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b3552-111">See Also</span></span>  
+ [<span data-ttu-id="b3552-112">Animieren der Kameraposition und -richtung in 3D-Szenen</span><span class="sxs-lookup"><span data-stu-id="b3552-112">Animate Camera Position and Direction in a 3D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [<span data-ttu-id="b3552-113">Übersicht über 3D-Grafiken</span><span class="sxs-lookup"><span data-stu-id="b3552-113">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

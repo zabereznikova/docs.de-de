@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579378"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a><span data-ttu-id="e43b8-102">Einfügen von XML-Daten mit XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="e43b8-102">Insert XML Data using XPathNavigator</span></span>
 <span data-ttu-id="e43b8-103">Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, die zum Einfügen von nebengeordneten und untergeordneten Knoten sowie von Attributknoten in ein XML-Dokument verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e43b8-103">The <xref:System.Xml.XPath.XPathNavigator> class provides a set of methods used to insert sibling, child, and attribute nodes in an XML document.</span></span> <span data-ttu-id="e43b8-104">Diese Methoden können nur dann verwendet werden, wenn das <xref:System.Xml.XPath.XPathNavigator>-Objekt bearbeitet werden kann, d. h. seine <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>-Eigenschaft muss `true` sein.</span><span class="sxs-lookup"><span data-stu-id="e43b8-104">In order to use these methods, the <xref:System.Xml.XPath.XPathNavigator> object must be editable, that is, its <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> property must be `true`.</span></span>  

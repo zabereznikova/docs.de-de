@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761336"
 ---
 # <a name="createref-entity-sql"></a><span data-ttu-id="47c9e-102">CREATEREF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="47c9e-102">CREATEREF (Entity SQL)</span></span>
 <span data-ttu-id="47c9e-103">Erstellt Verweise auf eine Entität in einer Entitätenmenge.</span><span class="sxs-lookup"><span data-stu-id="47c9e-103">Fabricates references to an entity in an entityset.</span></span>  

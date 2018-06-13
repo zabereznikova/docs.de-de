@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578052"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a><span data-ttu-id="54559-103">SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)</span><span class="sxs-lookup"><span data-stu-id="54559-103">Seedwork (reusable base classes and interfaces for your domain model)</span></span>
 

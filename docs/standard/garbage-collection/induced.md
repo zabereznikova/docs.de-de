@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575862"
 ---
 # <a name="induced-collections"></a><span data-ttu-id="30e97-102">Indizierte Auflistungen</span><span class="sxs-lookup"><span data-stu-id="30e97-102">Induced Collections</span></span>
 <span data-ttu-id="30e97-103">In den meisten Fällen können Sie es dem Garbage Collector überlassen, den am besten geeigneten Zeitpunkt für eine Collection zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="30e97-103">In most cases, the garbage collector can determine the best time to perform a collection, and you should let it run independently.</span></span> <span data-ttu-id="30e97-104">In seltenen Fällen kann das Erzwingen einer Auflistung jedoch die Leistung der Anwendung erhöhen.</span><span class="sxs-lookup"><span data-stu-id="30e97-104">There are rare situations when a forced collection might improve your application's performance.</span></span> <span data-ttu-id="30e97-105">In diesen Fällen können Sie die Garbage Collection auslösen, indem Sie die <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methode zum Erzwingen einer Garbage Collection wählen.</span><span class="sxs-lookup"><span data-stu-id="30e97-105">In these cases, you can induce garbage collection by using the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method to force a garbage collection.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389274"
 ---
 # <a name="how-to-implement-callback-functions"></a><span data-ttu-id="37091-102">Gewusst wie: Implementieren von Rückruffunktionen</span><span class="sxs-lookup"><span data-stu-id="37091-102">How to: Implement Callback Functions</span></span>
 <span data-ttu-id="37091-103">Im folgenden Verfahren und Beispiel wird veranschaulicht, wie eine verwaltete Anwendung den Handlewert für jedes Fenster auf dem lokalen Computer mithilfe eines Plattformaufrufs drucken kann.</span><span class="sxs-lookup"><span data-stu-id="37091-103">The following procedure and example demonstrate how a managed application, using platform invoke, can print the handle value for each window on the local computer.</span></span> <span data-ttu-id="37091-104">Insbesondere verwenden das Verfahren und das Beispiel die **EnumWindows**-Funktion, um die Liste von Fenstern und eine verwaltete Rückruffunktion (namens „CallBack“) zu durchlaufen, um den Wert des Fensterhandles auszugeben.</span><span class="sxs-lookup"><span data-stu-id="37091-104">Specifically, the procedure and example use the **EnumWindows** function to step through the list of windows and a managed callback function (named CallBack) to print the value of the window handle.</span></span>  

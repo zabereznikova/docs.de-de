@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592469"
 ---
 # <a name="managed-threading-best-practices"></a><span data-ttu-id="99621-102">Empfohlene Vorgehensweise für das verwaltete Threading</span><span class="sxs-lookup"><span data-stu-id="99621-102">Managed Threading Best Practices</span></span>
 <span data-ttu-id="99621-103">Wenn Sie mehrere Threads verwenden, ist eine sorgfältige Programmierung erforderlich.</span><span class="sxs-lookup"><span data-stu-id="99621-103">Multithreading requires careful programming.</span></span> <span data-ttu-id="99621-104">Für die meisten Aufgaben können Sie die Komplexität reduzieren, indem Sie Ausführungsanforderungen mithilfe von Threadpoolthreads in Warteschlangen einfügen.</span><span class="sxs-lookup"><span data-stu-id="99621-104">For most tasks, you can reduce complexity by queuing requests for execution by thread pool threads.</span></span> <span data-ttu-id="99621-105">Dieses Thema behandelt problematische Situationen wie die Koordinierung der Verarbeitung von mehreren Threads oder die Behandlung von blockierenden Threads.</span><span class="sxs-lookup"><span data-stu-id="99621-105">This topic addresses more difficult situations, such as coordinating the work of multiple threads, or handling threads that block.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762321"
 ---
 # <a name="query-results"></a><span data-ttu-id="c8bcf-102">Abfrageergebnisse</span><span class="sxs-lookup"><span data-stu-id="c8bcf-102">Query Results</span></span>
 <span data-ttu-id="c8bcf-103">Nachdem eine [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfrage in eine Befehlsstruktur konvertiert und ausgeführt wurde, werden die Abfrageergebnisse im Allgemeinen in einer der folgenden Formen zurückgegeben:</span><span class="sxs-lookup"><span data-stu-id="c8bcf-103">After a [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query is converted to command trees and executed, the query results are usually returned as one of the following:</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387379"
 ---
 # <a name="mitigation-path-colon-checks"></a><span data-ttu-id="e9f77-102">Entschärfung: Überprüfung von Pfaden auf Doppelpunkte</span><span class="sxs-lookup"><span data-stu-id="e9f77-102">Mitigation: Path Colon Checks</span></span>
 <span data-ttu-id="e9f77-103">Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an wurde eine Reihe von Änderungen vorgenommen, um zuvor nicht unterstützte Pfade zu unterstützen (im Hinblick auf Länge und Format).</span><span class="sxs-lookup"><span data-stu-id="e9f77-103">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a number of changes were made to support previously unsupported paths (both in terms of length and format).</span></span> <span data-ttu-id="e9f77-104">Insbesondere wurden Prüfungen auf ordnungsgemäße Syntax von Laufwerkstrennzeichen (den Doppelpunkt) strenger definiert.</span><span class="sxs-lookup"><span data-stu-id="e9f77-104">In particular, checks for the proper drive separator syntax (the colon) were made more correct.</span></span>  

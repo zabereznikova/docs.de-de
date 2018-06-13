@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588261"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a><span data-ttu-id="24a5a-102">Fehler beim Kompilieren der XML-Schemas im Projekt</span><span class="sxs-lookup"><span data-stu-id="24a5a-102">Errors occurred while compiling the XML schemas in the project</span></span>
 <span data-ttu-id="24a5a-103">Fehler beim Kompilieren der XML-Schemas im Projekt.</span><span class="sxs-lookup"><span data-stu-id="24a5a-103">Errors occurred while compiling the XML schemas in the project.</span></span> <span data-ttu-id="24a5a-104">Aus diesem Grund ist die XML-IntelliSense nicht verfügbar.</span><span class="sxs-lookup"><span data-stu-id="24a5a-104">Because of this, XML IntelliSense is not available.</span></span>  

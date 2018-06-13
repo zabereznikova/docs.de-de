@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327752"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a><span data-ttu-id="56cac-102">Gewusst wie: Steuern von Namespacepräfixen (C#) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="56cac-102">How to: Control Namespace Prefixes (C#) (LINQ to XML)</span></span>
 <span data-ttu-id="56cac-103">In diesem Thema wird beschrieben, wie Sie beim Serialisieren einer XML-Struktur Namespacepräfixe steuern können.</span><span class="sxs-lookup"><span data-stu-id="56cac-103">This topic describes how you can control namespace prefixes when serializing an XML tree.</span></span>  

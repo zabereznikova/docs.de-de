@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592014"
 ---
 # <a name="overview-of-synchronization-primitives"></a><span data-ttu-id="257c2-102">Übersicht über Synchronisierungsprimitiven</span><span class="sxs-lookup"><span data-stu-id="257c2-102">Overview of Synchronization Primitives</span></span>
 <a name="top"></a> <span data-ttu-id="257c2-103">.NET Framework stellt eine Reihe von Synchronisierungsmechanismen zum Steuern der Interaktionen von Threads und zum Vermeiden von Racebedingungen bereit.</span><span class="sxs-lookup"><span data-stu-id="257c2-103">The .NET Framework provides a range of synchronization primitives for controlling the interactions of threads and avoiding race conditions.</span></span> <span data-ttu-id="257c2-104">Diese können grob in drei Kategorien eingeteilt werden: Sperren, Signalisieren und Interlocked-Vorgänge.</span><span class="sxs-lookup"><span data-stu-id="257c2-104">These can be roughly divided into three categories: locking, signaling, and interlocked operations.</span></span>  
