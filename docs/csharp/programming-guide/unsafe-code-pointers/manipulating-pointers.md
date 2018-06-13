@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339674"
 ---
 # <a name="manipulating-pointers-c-programming-guide"></a>Bearbeiten von Zeigern (C#-Programmierhandbuch)
 Dieser Abschnitt enthält die folgenden Zeigeroperationen:  

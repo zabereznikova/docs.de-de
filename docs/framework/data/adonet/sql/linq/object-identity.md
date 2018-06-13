@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358468"
 ---
 # <a name="object-identity"></a>Objektidentität
 Objekte verfügen zur Laufzeit über eindeutige Identitäten. Zwei Variablen, die sich auf das gleiche Objekt beziehen, verweisen tatsächlich auf die gleiche Objektinstanz. Aufgrund dieser Tatsache sind Änderungen, die Sie über einen Pfad durch eine Variable vornehmen, sofort über die andere Variable sichtbar.  

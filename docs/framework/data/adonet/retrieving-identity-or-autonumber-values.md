@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357150"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Abrufen von Identity- oder Autonumber-Werten
 Ein Primärschlüssel in einer relationalen Datenbank ist eine Spalte oder eine Kombination aus Spalten, die stets eindeutige Werte enthält. Wenn Sie den Primärschlüsselwert kennen, können Sie die Zeile lokalisieren, die den Wert enthält. Relationale Datenbankmodule, wie SQL Server, Oracle und Microsoft Access/Jet, unterstützen das Erstellen automatisch inkrementierender Spalten, die als Primärschlüssel verwendet werden können. Diese Werte werden vom Server generiert, wenn einer Tabelle Zeilen hinzugefügt werden. In SQL Server legen Sie die Identität einer Spalte fest, in Oracle erstellen Sie eine Sequenz, und in Microsoft Access erstellen Sie eine AutoWert-Spalte.  

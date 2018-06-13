@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358316"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan-Methoden
 Die Elementunterstützung für <xref:System.TimeSpan?displayProperty=nameWithType> ist stark abhängig von den verwendeten Versionen von .NET Framework und Microsoft SQL Server.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766734"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL-Referenz
 Dieser Abschnitt enthält [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-bezogene Referenzthemen. Dieses Thema fasst zusammen und gruppiert die [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Operatoren nach Kategorie.  

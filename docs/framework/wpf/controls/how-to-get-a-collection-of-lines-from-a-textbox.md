@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552739"
 ---
 # <a name="how-to-get-a-collection-of-lines-from-a-textbox"></a>Gewusst wie: Abrufen einer Auflistung der Zeilen aus einem "TextBox"-Element
 In diesem Beispiel wird gezeigt, wie eine Auflistung von Textzeilen aus Abrufen einer <xref:System.Windows.Controls.TextBox>.  

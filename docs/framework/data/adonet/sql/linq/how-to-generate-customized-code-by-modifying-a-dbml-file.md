@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354571"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Gewusst wie: Generieren von angepasstem Code durch Verändern einer DBML-Datei
 Sie können Visual Basic- oder C#-Quellcode aus einer Database Markup Language (.dbml)-Metadatendatei zu generieren. Dieser Ansatz bietet die Möglichkeit zur Anpassung der standardmäßigen .dbml-Datei vor dem Erzeugen des Codes für die Anwendungszuweisung. Dies ist eine erweiterte Funktion.  

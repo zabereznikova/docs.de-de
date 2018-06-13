@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526432"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Zugreifen auf nicht verfügbar gemachte Member des verwalteten HTML-Dokumentobjektmodells
 Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse mit dem Namen <xref:System.Windows.Forms.HtmlElement> , verfügbar macht, die Eigenschaften, Methoden und Ereignisse, die alle HTML-Elemente gemeinsam haben. In einigen Fällen müssen Sie jedoch auf Member zuzugreifen, die nicht direkt von die verwaltete Schnittstelle verfügbar macht. In diesem Thema werden zwei Methoden für den Zugriff auf nicht verfügbar gemachte Member an, einschließlich untersucht [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] und VBScript-Funktionen, die innerhalb einer Webseite definiert.  

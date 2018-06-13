@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352651"
 ---
 # <a name="ltsecuritygt-of-ltnethttpbinding"></a>&lt;security&gt; von &lt;netHttpBinding
 Definiert die Sicherheitsfunktionen des der [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  

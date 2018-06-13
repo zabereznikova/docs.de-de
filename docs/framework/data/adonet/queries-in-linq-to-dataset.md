@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362350"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Abfragen in LINQ to DataSet
 Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] bietet ein einfacheres, konsistentes Modell zum Arbeiten mit Daten über verschiedene Arten von Datenquellen und Formate hinweg. In einer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Programmierobjekten.  

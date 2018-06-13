@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528602"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> -Steuerelement kann Daten in drei verschiedenen Modi anzeigen: gebunden, ungebunden und virtuellen. Wählen Sie die je nach Ihren Anforderungen am besten geeigneten Modus.  

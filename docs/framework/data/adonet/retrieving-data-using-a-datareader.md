@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353259"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Abrufen von Daten mit "DataReader"
 Abrufen von Daten mittels einer **DataReader** umfasst das Erstellen einer Instanz von der **Befehl** Objekt und der anschließenden Erstellung eine **DataReader** durch Aufrufen von  **Command.ExecuteReader** zum Abrufen von Zeilen aus einer Datenquelle. Im folgende Beispiel wird die Verwendung einer **DataReader** , in denen `reader` gültige "DataReader" darstellt und `command` ein gültiges Command-Objekt darstellt.  

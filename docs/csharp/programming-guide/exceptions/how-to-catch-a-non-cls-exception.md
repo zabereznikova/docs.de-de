@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340020"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Gewusst wie: Abfangen einer Nicht-CLS-Ausnahme
 Einige .NET-Sprachen, einschließlich C++/CLI, erlauben Objekten, Ausnahmen auszulösen, die nicht aus <xref:System.Exception> stammen. Diese Ausnahmen werden als *Nicht-CLS-Ausnahmen* oder *Nicht-Ausnahmen* bezeichnet. In Visual C# können Sie zwar keine Nicht-CLS-Ausnahmen auslösen, aber Sie können sie auf zwei Arten abfangen:  

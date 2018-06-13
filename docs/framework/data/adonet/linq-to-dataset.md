@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764852"
 ---
 # <a name="linq-to-dataset"></a>LINQ to DataSet
 Mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] können Daten, die in einem <xref:System.Data.DataSet>-Objekt zwischengespeichert sind, leichter und schneller abgefragt werden. Insbesondere [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] vereinfacht, da der Entwickler Schreiben von Abfragen in der Programmiersprache selbst, anstatt eine separate Abfragesprache mit Abfragen. Dies ist besonders nützlich für Visual Studio-Entwickler, jetzt die syntaxüberprüfung der Zeitpunkt der Kompilierung, statische Typisierung und IntelliSense-Unterstützung, die von der Visual Studio in seinen Abfragen bereitgestellt nutzen können.  

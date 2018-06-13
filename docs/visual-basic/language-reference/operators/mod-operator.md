@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604847"
 ---
 # <a name="mod-operator-visual-basic"></a>MOD-Operator (Visual Basic)
 Dividiert zwei Zahlen und gibt nur den Restwert zurück.  

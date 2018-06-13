@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363753"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>Gewusst wie: Aktualisieren von Zeilen in der Datenbank
 Sie können Zeilen in einer Datenbank aktualisieren, indem Sie die Memberwerte der zugeordneten Objekte ändern die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> Auflistung und anschließend übergeben Sie die Änderungen an der Datenbank. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ihre Änderungen in die entsprechenden SQL übersetzt `UPDATE` Befehle.  

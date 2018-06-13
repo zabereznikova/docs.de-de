@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765694"
 ---
 # <a name="working-with-data-providers"></a>Arbeiten mit Datenanbietern
 In den Themen in diesem Abschnitt werden die Dienste und Datenanbieter erläutert, die Abfragen für ein konzeptionelles Modell in nativen Abfragen einer von Entity Framework unterstützten Datenquelle transformieren.  

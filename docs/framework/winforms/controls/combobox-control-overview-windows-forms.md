@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527390"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>Übersicht über das ComboBox-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ComboBox> Steuerelement wird verwendet, um Daten aus einem Dropdown-Kombinationsfeld angezeigt. Wird standardmäßig die <xref:System.Windows.Forms.ComboBox> Steuerelement wird in zwei Teilen: der obere Bereich ist ein Textfeld, das dem Benutzer ermöglicht, geben Sie ein Listenelement. Der zweite Teil ist ein Listenfeld, in dem eine Liste von Elementen angezeigt, in dem der Benutzer eine auswählen kann. Weitere Informationen zu anderen Formaten des Kombinationsfelds finden Sie unter [verwenden Sie eine Windows Forms ComboBox Instead Of ' ListBox '](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).  

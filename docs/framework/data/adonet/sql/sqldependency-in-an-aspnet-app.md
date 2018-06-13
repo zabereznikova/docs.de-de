@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363363"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>"SqlDependency" in einer ASP.NET-Anwendung
 Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System.Data.SqlClient.SqlDependency> durch Verwendung des ASP.NET-<xref:System.Web.Caching.SqlCacheDependency>-Objekts. Das <xref:System.Web.Caching.SqlCacheDependency>-Objekt verwendet eine <xref:System.Data.SqlClient.SqlDependency>, um Benachrichtigungen zu empfangen und den Cache ordnungsgemäß zu aktualisieren.  

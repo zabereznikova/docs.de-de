@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526577"
 ---
 # <a name="how-to-read-image-metadata"></a>Gewusst wie: Lesen von Bildmetadaten
 Einige Bilddateien enthalten Metadaten, die Sie lesen können, um zu bestimmen, die Funktionen des Bilds. Angenommen, enthält ein digitales Foto Metadaten, die Sie lesen können, um zu bestimmen, den Hersteller und Modell der Kamera verwendet, um das Abbild aufzeichnen. Mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], können Sie vorhandene Metadaten gelesen, und Sie können auch neue Metadaten in Bilddateien geschrieben.  

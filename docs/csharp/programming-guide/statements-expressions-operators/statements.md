@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339526"
 ---
 # <a name="statements-c-programming-guide"></a>Anweisungen (C#-Programmierhandbuch)
 Von einer Anwendung ausgeführte Aktionen werden in Anweisungen ausgedrückt. Häufig verwendete Aktionen umfassen das Deklarieren von Variablen, Zuweisen von Werten, Aufrufen von Methoden, Durchlaufen von Auflistungen und das Verzweigen auf einen oder einen anderen Codeblock, je nach gegebener Bedingung. Die Reihenfolge, in der Anweisungen in einem Programm ausgeführt werden, wird „Ablaufsteuerung“ oder „Ausführungsablauf“ genannt. Die Ablaufsteuerung kann jedes Mal, wenn ein Programm ausgeführt wird, variieren, je nachdem, wie die Anwendung auf eine Eingabe reagiert, die sie während der Laufzeit empfängt.  

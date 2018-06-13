@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767127"
 ---
 # <a name="adding-data-to-a-datatable"></a>Hinzufügen von Daten zu einer "DataTable"
 Nachdem Sie eine <xref:System.Data.DataTable> erstellt und deren Struktur mithilfe von Spalten und Einschränkungen definiert haben, können Sie der Tabelle neue Datenzeilen hinzufügen. Dazu deklarieren Sie eine neue Variable als <xref:System.Data.DataRow>-Typ. Ein neues **DataRow** Objekt wird zurückgegeben, wenn Sie rufen die <xref:System.Data.DataTable.NewRow%2A> Methode. Die **DataTable** erstellt dann die **DataRow** Objekt basierend auf der Struktur der Tabelle, gemäß der <xref:System.Data.DataColumnCollection>.  

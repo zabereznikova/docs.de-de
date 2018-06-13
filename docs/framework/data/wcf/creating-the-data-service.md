@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362835"
 ---
 # <a name="creating-the-data-service"></a>Erstellen des Datendiensts
 In dieser Aufgabe erstellen Sie einen beispieldatendienst, der verwendet [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verfügbar machen eine [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Feed, die auf die Beispieldatenbank Northwind basiert. Die Aufgabe umfasst die folgenden grundlegenden Schritte:  

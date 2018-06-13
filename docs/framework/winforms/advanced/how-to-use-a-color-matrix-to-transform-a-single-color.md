@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527403"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Gewusst wie: Verwenden einer Farbmatrix zum Transformieren einer Farbe
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Stellt die <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Klassen zum Speichern und Bearbeiten von Bildern. <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Objekte speichern die Farbe jedes Pixels als 32-Bit-Zahl: jeweils 8 Bit für Rot, Grün, Blau und Alpha. Jede der vier Komponenten ist eine Zahl zwischen 0 und 255, wobei 0 für keine Intensität und 255 für volle Farbintensität. Mit dem Alphaanteil gibt die Transparenz der Farbe: 0 vollständig transparent ist, und 255 ist nicht vollständig transparent.  

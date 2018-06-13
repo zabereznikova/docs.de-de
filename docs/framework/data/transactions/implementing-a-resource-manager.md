@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363262"
 ---
 # <a name="implementing-a-resource-manager"></a>Implementieren eines Ressourcen-Managers
 Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager (RM) verwaltet, dessen Aktionen von einem Transaktions-Manager (TM) koordiniert werden. RMs arbeiten mit dem TM zusammen, um der Anwendung die Unteilbarkeit und Isolation zu garantieren. Microsoft SQL Server, dauerhafte Meldungswarteschlangen und speicherinterne Hashtabellen sind Beispiele für Ressourcen-Manager.  

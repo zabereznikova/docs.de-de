@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359490"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>Erste Schritte mit WCF Data Services
 Die Themen in diesem Abschnitt finden Sie Informationen schnell herausfinden [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] und Verwendung [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] und nutzbar machen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds mithilfe der zugrunde liegenden Technologien erläutern. Dieser Abschnitt enthält sowohl konzeptionelle Inhalte und ein [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Lernprogramm.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217229"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C#-Compileroption)
 Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreifen kann.  

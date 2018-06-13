@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354222"
 ---
 # <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>Beispiele für die Abfrageausdruckssyntax: Einschränkung (LINQ to DataSet)
 In den Beispielen in diesem Thema wird gezeigt, wie Sie mithilfe der <xref:System.Linq.Enumerable.Where%2A>-Methode und der Abfrageausdruckssyntax ein <xref:System.Data.DataSet> abfragen können.  

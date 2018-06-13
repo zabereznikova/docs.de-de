@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766087"
 ---
 # <a name="distributed-transactions"></a>Verteilte Transaktionen
 Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgaben, die entweder in ihrer Gesamtheit erfolgreich abgeschlossen werden (Commit) oder nicht (Abort). Ein *verteilte Transaktion* ist eine Transaktion, die sich auf verschiedene Ressourcen auswirkt. Damit ein Commit einer verteilten Transaktion erfolgreich ausgeführt werden kann, müssen alle Beteiligten gewährleisten, dass jede vorgenommene Datenänderung dauerhaft ist. Änderungen müssen auch im Fall von Systemausfällen oder anderen unvorhergesehenen Ereignissen dauerhaft sein. Sobald auch nur ein Beteiligter dies nicht gewährleisten kann, kann die gesamte Transaktion nicht ausgeführt werden, und sämtliche im Zuge der Transaktion durchgeführten Datenänderungen werden in einem Rollback zurückgenommen.  

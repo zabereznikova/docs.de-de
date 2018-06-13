@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354238"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Gewusst wie: Behandeln von zusammengesetzten Schlüsseln in Abfragen
 Einige Operatoren können nur ein Argument annehmen. Muss Ihr Argument mehrere Datenbankspalten aufnehmen, müssen Sie einen anonymen Typ erstellen, um die Kombination darzustellen.  

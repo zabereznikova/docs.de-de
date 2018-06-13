@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340683"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring mithilfe einer reinen Funktion (C#)
 Das folgende Beispiel gestaltet das vorherige Beispiel, [Refactoring Using an Extension Method (Refactoring mit einer Erweiterungsmethode (C#))](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) so um, dass es eine reine Funktion verwendet. In diesem Beispiel wird der Code, der den Text eines Absatzes ermitteln soll, in die reine statische Methode `ParagraphText` verschoben.  

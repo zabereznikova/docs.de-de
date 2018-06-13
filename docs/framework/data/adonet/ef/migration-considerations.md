@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766435"
 ---
 # <a name="migration-considerations-entity-framework"></a>Migrationsüberlegungen (Entity Framework)
 Das [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework bietet für eine vorhandene Anwendung mehrere Vorteile. Einer der wichtigsten dieser Vorteile ist die Möglichkeit, mithilfe eines konzeptionellen Modells von der Anwendung verwendete Datenstrukturen vom Schema in der Datenquelle zu trennen. Damit können Änderungen am Speichermodell oder an der Datenquelle selbst vorgenommen werden, ohne dass entsprechende Änderungen an der Anwendung notwendig werden. Weitere Informationen zu den Vorteilen der Verwendung der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], finden Sie unter [Übersicht über Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) und [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  

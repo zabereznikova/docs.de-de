@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362849"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting des Datendiensts (WCF Data Services)
 Mithilfe von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], können Sie einen Dienst, die Daten als verfügbar macht erstellen eine [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Dieser Datendienst wird als Klasse definiert, die von <xref:System.Data.Services.DataService%601> erbt. Diese Klasse stellt die Funktionalität erforderlich, um Anforderungsnachrichten zu verarbeiten, Updates für die Datenquelle auszuführen und antwortmeldungen zu generieren, gemäß [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Allerdings kann kein Datendienst zu binden und ein Netzwerksocket eingehenden HTTP-Anforderungen gelauscht. Für diese erforderliche Funktion benötigt der Datendienst eine Hostingkomponente.  

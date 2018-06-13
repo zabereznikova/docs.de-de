@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365565"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Binden von Daten an Steuerelemente (WCF Data Services)
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steuerelemente wie `ComboBox` und `ListView` an eine Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse binden. Diese Auflistung, die von der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse erbt, enthält die Daten aus einem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-Feed. Die Klasse stellt eine dynamische Datensammlung dar, die Benachrichtigungen bereitstellt, wenn Elemente hinzugefügt oder entfernt werden. Bei Verwendung eine Instanz von <xref:System.Data.Services.Client.DataServiceCollection%601> für die Datenbindung, die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliotheken diese Ereignisse um sicherzustellen, dass Objekte durch verfolgte die <xref:System.Data.Services.Client.DataServiceContext> mit den Daten im gebundenen Benutzeroberflächenelement synchronisiert bleiben.  

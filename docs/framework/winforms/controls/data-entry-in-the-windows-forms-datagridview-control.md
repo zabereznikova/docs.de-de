@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526819"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Dateneingabe im DataGridView-Steuerelement in Windows Forms
 Die `DataGridView` Steuerelement stellt mehrere Funktionen bereit, mit denen Sie ändern, wie Benutzer hinzufügen oder Ändern von Daten im Steuerelement. Beispielsweise können Sie Dateneingabe effizienter gestalten, indem Sie Standardwerte für neue Zeilen bereitstellen und warnen der Benutzer bei Auftreten eines Fehlers.  

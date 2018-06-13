@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554375"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Gewusst wie: Binden einer TreeView an Daten mit nicht bestimmbarer Tiefe
 Gibt es möglicherweise vorkommen, dass Sie binden möchten, eine <xref:System.Windows.Controls.TreeView> mit einer Datenquelle, dessen Tiefe ist nicht bekannt.  Dies kann auftreten, wenn die Daten rekursiv sind, z. B. einem Dateisystem, in dem Ordner Ordner enthalten können, oder die Organisationsstruktur für ein Unternehmen sind, Mitarbeiter, für andere Mitarbeiter als direkt unterstellte Mitarbeiter haben.  

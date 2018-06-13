@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 64b09c173e2f66d4c650083cc12f8a0ac2c92007
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417227"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification-Methode
 Stellt die Benachrichtigung, dass die Ausführung von Code ein Assistent für verwaltetes Debuggen (MDA) in der Anwendung gefunden hat, die gedebuggt wird.  

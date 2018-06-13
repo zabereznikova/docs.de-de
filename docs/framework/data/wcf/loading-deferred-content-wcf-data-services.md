@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365201"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Laden von verzögerten Inhalten (WCF Data Services)
 Standardmäßig schränkt [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] die Datenmenge ein, die eine Abfrage zurückgibt. Sie können jedoch explizit weitere Daten aus dem Datendienst laden, einschließlich verknüpfter Entitäten, ausgelagerter Antwortdaten und binärer Datenströme, wenn sie benötigt werden. In diesem Thema wird beschrieben, wie dieser verzögerte Inhalt in die Anwendung geladen wird.  

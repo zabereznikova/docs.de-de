@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551998"
 ---
 # <a name="controls-by-category"></a>Kategorien von Steuerelementen
 Windows Presentation Foundation (WPF)-Steuerelemente können in verschiedene Kategorien gruppiert werden. Diese Kategorien können verwendet werden, um das entsprechende Steuerelement für das Szenario auszuwählen, indem Ihnen angezeigt wird, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  

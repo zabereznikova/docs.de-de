@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357208"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Gewusst wie: Anfügen einer vorhandenen Entität an "DataServiceContext" (WCF Data Services)
 Wenn eine Entität in einem Datendienst bereits die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothek ermöglicht es Ihnen, ein Objekt anzufügen, die die Entität darstellt, die direkt an die <xref:System.Data.Services.Client.DataServiceContext> ohne zuerst eine Abfrage ausführt. Weitere Informationen finden Sie unter [Aktualisieren des Datendiensts](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

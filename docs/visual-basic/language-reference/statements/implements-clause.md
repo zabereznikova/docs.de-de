@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603404"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements-Klausel (Visual Basic)
 Gibt an, dass die Implementierung für einen in einer Schnittstelle definierten Member einer Klasse oder Struktur-Element bereitstellt.  

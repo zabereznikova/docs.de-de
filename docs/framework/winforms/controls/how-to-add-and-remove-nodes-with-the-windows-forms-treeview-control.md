@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525937"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Gewusst wie: Hinzufügen oder Entfernen von Knoten mit dem TreeView-Steuerelement in Windows Forms
 Windows Forms <xref:System.Windows.Forms.TreeView> Steuerelement speichert der Knoten der obersten Ebene in der <xref:System.Windows.Forms.TreeView.Nodes%2A> Auflistung. Jede <xref:System.Windows.Forms.TreeNode> hat auch ein eigenes <xref:System.Windows.Forms.TreeNode.Nodes%2A> Auflistung zum Speichern der untergeordneten Knoten. Beide Auflistungseigenschaften sind vom Typ <xref:System.Windows.Forms.TreeNodeCollection>, standardsammlungsregel-Elemente, die Sie hinzufügen möchten, aktivieren Sie entfernen, und ordnen die Knoten auf einer einzigen Ebene der Knotenhierarchie bietet.  
