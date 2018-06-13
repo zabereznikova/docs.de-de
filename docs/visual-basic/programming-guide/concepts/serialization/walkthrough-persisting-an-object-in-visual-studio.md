@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655609"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (Visual Basic)
 Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standardwerte festlegen können, gehen während der Laufzeit eingegebene Werte verloren, wenn das Objekt zerstört wird. Sie können die Serialisierung verwenden, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.  

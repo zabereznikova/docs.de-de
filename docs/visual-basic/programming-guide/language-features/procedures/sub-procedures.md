@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652564"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub-Prozeduren (Visual Basic)
 Ein `Sub` Verfahren besteht aus einer Reihe von Visual Basic-Anweisungen von der `Sub` und `End Sub` Anweisungen. Die `Sub` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die Steuerung an den aufrufenden Code zurückgegeben, aber es wird keinen Wert an den aufrufenden Code zurückgegeben.  

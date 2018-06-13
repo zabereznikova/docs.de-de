@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804962"
 ---
 # <a name="determining-service-operation-duration"></a>Ermitteln der Dienstvorgangsdauer
 Wenn die analytische Ablaufverfolgung in einer Windows Communication Foundation (WCF)-Anwendung aktiviert ist, kann die Dauer der Ausführung für einen Dienstvorgang problemlos ermittelt werden im Ereignisprotokoll.  Dieses Thema veranschaulicht, wie die Zeitdauer bestimmt wird, die ein Dienstvorgang bis zu seinem Abschluss benötigt.  

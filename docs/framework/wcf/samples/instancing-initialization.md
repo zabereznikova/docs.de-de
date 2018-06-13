@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807921"
 ---
 # <a name="instancing-initialization"></a>Initialisierung der Instanziierung
 Dieses Beispiel erweitert die [Pooling](../../../../docs/framework/wcf/samples/pooling.md) durch Definieren einer Schnittstelle Sample `IObjectControl`, die passt die Initialisierung eines Objekts durch das Aktivieren und deaktivieren es an. Der Client ruft Methoden auf, die das Objekt an den Pool zurückgeben und das Objekt nicht an den Pool zurückgeben.  

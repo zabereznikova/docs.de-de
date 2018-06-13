@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641679"
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Gewusst wie: Steuern von Namespacepräfixen (Visual Basic) (LINQ to XML)
 In diesem Thema wird beschrieben, wie Sie Namespacepräfixe steuern können.  

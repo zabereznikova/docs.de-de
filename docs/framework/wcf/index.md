@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804270"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Entwickeln von dienstorientierten Anwendungen mit WCF
 Dieser Abschnitt der Dokumentation enthält Informationen zu Windows Communication Foundation (WCF), einem einheitlichen Programmiermodell zum Erstellen von serviceorientierten Anwendungen. Es ermöglicht Entwicklern das Erstellen sicherer, zuverlässiger und transaktiver Lösungen für die plattformübergreifende Integration und bietet unfassende Interoperabilität mit vorhandenen Investitionen.

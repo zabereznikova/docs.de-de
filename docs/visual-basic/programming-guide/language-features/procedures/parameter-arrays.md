@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652376"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parameterarrays (Visual Basic)
 Sie können nicht in der Regel eine Prozedur mit mehrere Argumente als gibt an, der Deklaration der Prozedur aufrufen. Wenn Sie eine unbegrenzte Anzahl von Argumenten benötigen, können Sie deklarieren eine *Parameterarray*, womit eine Prozedur, ein Array von Werten für einen Parameter akzeptieren. Sie müssen nicht die Anzahl der Elemente im Parameterarray kennen, wenn Sie die Prozedur definieren. Die Größe des Arrays wird durch jeden Aufruf der Prozedur einzeln bestimmt.  

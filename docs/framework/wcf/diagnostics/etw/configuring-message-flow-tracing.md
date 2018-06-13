@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804845"
 ---
 # <a name="configuring-message-flow-tracing"></a>Konfigurieren der Ablaufverfolgung des Nachrichtenflusses
 Wenn Windows Communication Foundation (WCF)-aktivitätsablaufverfolgung aktiviert ist, sind End-To-End-Aktivitäts-IDs logischer Aktivitäten im ganzen Stapel WCF zugewiesen. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] verfügt jetzt über eine leistungsstärkere Version dieser Funktion, die in Verbindung mit der Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) verwendet werden kann und als Ablaufverfolgung des Nachrichtenflusses bezeichnet wird. Bei Aktivierung dieser Funktion werden die End-to-End-Aktivität-IDs von eingehenden Nachrichten verwendet (bzw. bei Bedarf zugewiesen) und für alle Ablaufverfolgungsereignisse übernommen, die ausgegeben werden, nachdem die Nachricht vom Kanal decodiert wurde. Kunden können diese Funktion zum Wiederherstellen von Nachrichtenflüssen mit Ablaufverfolgungsprotokollen verschiedener Dienste nach der Decodierung verwenden.  

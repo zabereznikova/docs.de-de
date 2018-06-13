@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649099"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Nullbasierter und. Zeichenfolge einsbasierte Zugriff in Visual Basic
 In diesem Thema vergleicht, wie Visual Basic und die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ermöglichen den Zugriff auf die Zeichen in einer Zeichenfolge. Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] stellt immer nullbasierten Zugriff auf die Zeichen in einer Zeichenfolge bereit, während Visual Basic nullbasierte und einsbasierte Zugriff abhängig von der Funktion enthält.  

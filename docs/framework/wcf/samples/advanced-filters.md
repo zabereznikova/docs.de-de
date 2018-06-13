@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805615"
 ---
 # <a name="advanced-filters"></a>Erweiterte Filter
 Dieses Beispiel zeigt einen Windows Communication Foundation (WCF)-routing-Dienst. Der Routingdienst ist eine WCF-Komponente, die integrieren ein inhaltsbasierten Routers in die Anwendung aufnehmen vereinfacht. In diesem Beispiel wird der standardmäßigen WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel wird gezeigt, wie die inhaltsbasierte Routinglogik durch die Verwendung von Nachrichtenfiltern und Nachrichtenfiltertabellen definiert wird.  

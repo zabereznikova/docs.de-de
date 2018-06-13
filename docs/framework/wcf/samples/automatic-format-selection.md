@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803945"
 ---
 # <a name="automatic-format-selection"></a>Automatische Formatauswahl
 Dieses Beispiel veranschaulicht, wie So aktivieren Sie die automatische Formatauswahl (XML oder JSON) mit dem Windows Communication Foundation (WCF)-REST-Programmierung, Modell und wie das Format im Vorgangscode explizit festgelegt.  

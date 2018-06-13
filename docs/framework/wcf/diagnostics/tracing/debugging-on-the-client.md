@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809003"
 ---
 # <a name="debugging-on-the-client"></a>Debuggen auf dem Client
 Um Benutzern das Schreiben von Clientanwendungen für den WCF-Dienst zu vereinfachen, fügen Sie der [ \<ServiceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) -Dienstverhalten in die Konfigurationsdatei des Diensts. Dieses Verhalten kann zum Veröffentlichen von Hilfeseiten und für die Rückgabe von verwalteten Ausnahmeinformationen in den Details der SOAP-Fehler, die an den Client zurückgegeben werden, verwendet werden.

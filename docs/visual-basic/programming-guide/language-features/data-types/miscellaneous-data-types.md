@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647335"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Sonstige Datentypen (Visual Basic)
 Visual Basic bietet verschiedene Datentypen, die nicht auf Zahlen oder Zeichen ausgerichtet sind. Stattdessen verarbeiten sie spezielle Daten wie z. B. Ja/Nein-Werte, Datums-/Uhrzeitwerte und Objekt-Adressen.  

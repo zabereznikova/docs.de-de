@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639251"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>Der Remoteservercomputer ist nicht vorhanden oder nicht verfügbar (Visual Basic).
 Sie versuchen, die Verbindung mit einem Remoteserver herzustellen, der nicht verfügbar oder nicht vorhanden ist. Dieser Fehler kann durch eine unterbrochene Netzwerkverbindung verursacht werden.  

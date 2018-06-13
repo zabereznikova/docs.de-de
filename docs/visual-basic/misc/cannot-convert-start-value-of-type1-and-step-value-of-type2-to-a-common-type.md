@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637065"
 ---
 # <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Startwert des Typs kann nicht konvertiert &#39; &lt;Typ1&gt; &#39; und step-Wert des Typs &#39; &lt;Typ2&gt; &#39; in einen gemeinsamen Typ
 Die angegebenen `For...Next` -Steuerelementwerte weisen unterschiedliche Typen auf und sind daher ungültig, da sie nicht in einen gemeinsamen Typ konvertiert werden können.  

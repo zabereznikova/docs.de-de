@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806220"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET-Kompatibilität
 Dieses Beispiel veranschaulicht das Aktivieren von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Kompatibilitätsmodus in Windows Communication Foundation (WCF). Dienste, die im [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Kompatibilitätsmodus ausgeführt werden, nehmen vollständig an der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendungspipeline teil und können [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Funktionen, wie Datei-/URL-Autorisierung, Sitzungsstatus und die <xref:System.Web.HttpContext>-Klasse, nutzen. Die <xref:System.Web.HttpContext>-Klasse lässt Zugriff auf Cookies, Sitzungen und andere [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Funktionen zu. Dieser Modus erfordert, dass die Bindungen den HTTP-Transport verwenden und der Dienst selbst in IIS gehostet ist.  

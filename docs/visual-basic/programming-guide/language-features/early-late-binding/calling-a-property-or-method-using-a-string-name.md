@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649226"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Aufrufen einer Eigenschaft oder Methode mit einem Zeichenfolgennamen (Visual Basic)
 In den meisten Fällen können Sie zur Entwurfszeit die Eigenschaften und Methoden eines Objekts zu ermitteln und Code schreiben, um deren Behandlung. Jedoch in einigen Fällen Sie möglicherweise nicht über die Eigenschaften und Methoden eines Objekts im Voraus wissen, oder sollten Sie nur die Flexibilität, Endbenutzer, geben Sie Eigenschaften oder Methoden zur Laufzeit ausführen.  

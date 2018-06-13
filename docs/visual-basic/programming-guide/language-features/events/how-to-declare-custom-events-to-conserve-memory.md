@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647180"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um Speicherplatz zu sparen (Visual Basic)
 Es gibt mehrere Situationen können, ist es wichtig, dass eine Anwendung die speicherauslastung gering halten. Benutzerdefinierte Ereignisse können die Anwendung Speicher nur für die Ereignisse zu nutzen, die ihn verarbeitet.  

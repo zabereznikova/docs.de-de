@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806460"
 ---
 # <a name="wcf-service-publishing"></a>WCF-Dienstpublishing
 Windows Communication Foundation (WCF)-Dienst veröffentlichen hilft Ihnen beim Fortschreiten von der frühen Entwicklungsumgebung, die von WCF-Diensthost oder WCF-Testclient zur eigentlichen Bereitstellung der Anwendung in einer produktionsumgebung zu Testzwecken bereitgestellt. Bevor Sie auf einen finalen Bereitstellungsplan festlegen, können Sie Windows Communication Foundation (WCF)-Dienst veröffentlichen verwenden, um sicherzustellen, dass der WCF-Dienst ordnungsgemäß funktioniert und für die Veröffentlichung bereit ist. Sie könne auch die WCF-Dienst-Bibliotheken für verschiedene Zielspeicherorte für Tests bereitstellen.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636538"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>Keine zugreifbare überladene &#39; &lt;Methodname&gt; &#39; kann mit diesen Argumenten ohne eine einschränkende Konvertierung aufgerufen werden: &lt;Liste&gt;
 Eine überladene Methode wurde aufgerufen, aber ohne eine einschränkende Konvertierung kann die Methode nicht mit der Liste der bereitgestellten Argumente abgeglichen werden.  

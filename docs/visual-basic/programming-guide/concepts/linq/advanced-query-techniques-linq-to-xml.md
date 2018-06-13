@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641972"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)
 Dieser Abschnitt enthält Beispiele für erweiterte [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragetechniken.  

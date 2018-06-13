@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804063"
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>Windows Communication Foundation-Beispiele [WCF]
 Diese Beispiele erhalten Sie Anweisungen zu verschiedenen Aspekten der Windows Communication Foundation (WCF).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808535"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Empfohlene Vorgehensweisen: Versionsverwaltung von Datenverträgen
 In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenverträgen aufgeführt, die sich im Laufe der Zeit auf einfache Weise entwickeln können. Weitere Informationen zu Datenverträgen finden Sie unter den Themen in [mithilfe von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  

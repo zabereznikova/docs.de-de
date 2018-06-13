@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648579"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Enumerationen und Namensqualifikation (Visual Basic)
 Beim Verweisen auf einen Member einer Enumeration müssen Sie normalerweise den Elementnamen mit dem Enumerationsnamen qualifizieren. Z. B. zum Verweisen auf die `Sunday` Mitglied Ihrer `Days` -Enumeration, würden Sie die folgende Syntax verwenden:  

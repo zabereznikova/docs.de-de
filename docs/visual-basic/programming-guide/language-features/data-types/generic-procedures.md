@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649395"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generische Prozeduren in Visual Basic
 Ein *generische Prozedur*auch Namens eine *generische Methode*, wird eine Prozedur mit mindestens einem Typparameter definiert. Dadurch wird den aufrufenden Code ein, um die Datentypen, die Anforderungen anzupassen, jedes Mal der Prozedur aufrufen.  

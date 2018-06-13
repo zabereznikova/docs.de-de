@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639135"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>Zeile &lt;Anzahl&gt; kann nicht unter Verwendung der aktuellen Trennzeichen analysiert werden
 Die angegebene Zeile kann nicht analysiert werden, da sie andere als die angegebenen Trennzeichen verwendet.  

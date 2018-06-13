@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637007"
 ---
 # <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a>Der Auflistungsindex muss größer als oder gleich 1 und kleiner als oder genauso groß wie die Auflistungsgröße sein.
 Der angegebene Indexwert liegt außerhalb des gültigen Bereichs, der 1 für die Größe der Auflistung entspricht.  

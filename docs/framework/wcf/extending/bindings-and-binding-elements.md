@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804624"
 ---
 # <a name="bindings-and-binding-elements"></a>Bindungen und Bindungselemente
 Bindungen sind Sammlungen spezieller Konfigurationselemente, die aufgerufen *Bindungselementen*, werden ausgewertet, von der Service-Laufzeit, wenn ein Client oder ein Dienstendpunkt erstellt wird. Der Typ und die Reihenfolge der Bindungselemente in einer Bindung bestimmen die Auswahl und Stapelreihenfolge des Protokolls und der Transportkanäle in einem Endpunkt-Kanalstapel.  
