@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599843"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 Die `Key` Schlüsselwort ermöglicht Ihnen das Verhalten für Eigenschaften von anonymen Typen festlegen. Nur Eigenschaften bestimmen Sie, wie die Tests der auf Gleichheit zwischen Instanzen eines anonymen Typs oder eine Berechnung des Hashcodewerte Schlüsseleigenschaften teilnehmen. Die Werte von Schlüsseleigenschaften können nicht geändert werden.  

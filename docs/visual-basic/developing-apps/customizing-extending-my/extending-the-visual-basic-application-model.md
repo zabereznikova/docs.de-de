@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591871"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Erweitern des Visual Basic-Anwendungsmodells
 Sie können das Anwendungsmodell Funktionalität hinzufügen, durch Überschreiben der `Overridable` Mitglied der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Klasse. Bei dieser Technik können Sie das Verhalten des Anwendungsmodells anpassen und Ihre eigenen Methoden zu aufrufen hinzufügen, wie die Anwendung gestartet und heruntergefahren.  

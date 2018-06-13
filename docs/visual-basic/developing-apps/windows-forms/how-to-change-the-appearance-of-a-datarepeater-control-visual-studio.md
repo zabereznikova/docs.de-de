@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590120"
 ---
 # <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a>Gewusst wie: Ändern der Darstellung eines DataRepeater-Steuerelements (Visual Studio)
 Sie können die Darstellung der Ändern einer <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> -Steuerelements zur Entwurfszeit durch Festlegen von Eigenschaften oder zur Laufzeit durch Behandeln der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> Ereignis.  

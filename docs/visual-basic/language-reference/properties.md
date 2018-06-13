@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599976"
 ---
 # <a name="properties-visual-basic"></a>Eigenschaften (Visual Basic)
 Auf dieser Seite sind die Eigenschaften, die Mitglieder der Visual Basic-Module sind. Andere Eigenschaften, die Mitglieder bestimmter Visual Basic-Objekte sind in aufgelisteten [Objekte](../../visual-basic/language-reference/objects/index.md).  

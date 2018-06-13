@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462285"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR-Profiler und den Windows Store-Apps
 Dieses Thema bietet eine Übersicht zu bedenken, wenn das Schreiben von Diagnosetools, die Analyse von verwaltetem Code, die innerhalb einer Windows Store-Apps ausgeführt wird.  Darüber hinaus Richtlinien, um Ihre vorhandenen Entwicklungstools zu ändern, sodass bei der Ausführung für Windows Store-apps funktionieren weiterhin.  Um diese Informationen zu verstehen, ist es am besten, wenn Sie mit der Common Language Runtime Profiling-API vertraut sind, Sie bereits diese API in ein Diagnosetool verwendet haben, dass ausgeführt wird, ordnungsgemäß für Windows-desktopanwendungen, und Sie jetzt interessiert sind, ändern Sie das tool für Windows Store-apps ordnungsgemäß ausgeführt wird.  

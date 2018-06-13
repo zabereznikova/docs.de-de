@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 933694a6a033dbfe817e3848b9008f05b86f51f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449011"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods-Methode
 Zählt MethodDef-Token auf, die Methoden des angegebenen Typs darstellen.  

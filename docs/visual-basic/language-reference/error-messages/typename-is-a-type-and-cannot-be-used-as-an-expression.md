@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597408"
 ---
 # <a name="39lttypenamegt39-is-a-type-and-cannot-be-used-as-an-expression"></a>&#39;&lt;TypeName&gt; &#39; ist ein Typ und kann nicht als Ausdruck verwendet werden
 Ein Typname tritt auf, wo ein Ausdruck erforderlich ist. Ein Ausdruck muss aus einer Kombination von Variablen, Konstanten, Literalen, Eigenschaften und `Function` -Prozeduraufrufen bestehen.  
