@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505680"
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
 Windows Communication Foundation (WCF) ist eine SOAP-Nachrichten basierende verteilte Programmierplattform, und Sichern von Nachrichten zwischen Clients und Diensten ist wichtig, den Schutz von Daten. WCF bietet eine vielseitige und interoperable Plattform für den Austausch sicherer Nachrichten auf Grundlage der vorhandenen Sicherheitsinfrastruktur und der anerkannten Sicherheitsstandards für SOAP-Nachrichten.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501094"
 ---
 # <a name="wsdl-and-policy"></a>WSDL und Richtlinie
 Dieses Thema enthält Windows Communication Foundation (WCF)-WSDL 1.1, WS-Policy und WS-PolicyAttachment Implementierungsdetails sowie zusätzliche WS-Policy-Assertionen und WSDL 1.1-Erweiterungen, die von WCF eingeführt.  

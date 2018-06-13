@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561406"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Gewusst wie: Angeben des Ursprungs einer Transformation mithilfe von relativen Werten
 Dieses Beispiel veranschaulicht die relativen Werte verwenden, um den Ursprung der angeben einer <xref:System.Windows.UIElement.RenderTransform%2A> angewendeten eine <xref:System.Windows.FrameworkElement>.  

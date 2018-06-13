@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539451"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Gewusst wie: Reagieren auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung
 In den Windows-Betriebssystemen kann ein Benutzer die systemweite schriftarteinstellungen, um die Standardschriftart angezeigt vergrößern oder verkleinern möchten ändern. Das Ändern dieser schriftarteinstellungen ist wichtig für Benutzer, die Sehbehinderte sind, und größeren Typ zum Lesen des Texts auf ihre Bildschirme benötigen. Sie können anpassen, dass Ihre Windows Forms-Anwendung, um diese Änderungen, die durch erhöhen oder verringern die Größe des Formulars und alle enthaltenen Text bei jeder Änderung des Schriftartenschemas zu reagieren. Wenn das Formular, um dynamisch Änderungen in Schriftgrade Ihren Bedürfnissen gerecht zu werden soll, können Sie Code zum Formular hinzufügen.  

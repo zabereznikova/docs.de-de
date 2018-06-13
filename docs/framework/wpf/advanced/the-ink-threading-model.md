@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547878"
 ---
 # <a name="the-ink-threading-model"></a>Das Threadmodell für Freihandeingaben
 Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es mit einem regulären Stift und Papier viel wie beim Schreiben idealer.  Um dies zu erreichen, erfasst der Tablettstift Eingabedaten eine viel höhere Ausfallrate als eine Maus und die Freihandeingabe während des Schreibvorgangs rendert.  Thread (Benutzeroberflächenthread) der Anwendung reicht nicht für das Sammeln von Daten und zum Rendern von Freihandeingaben, da er blockiert werden kann.  Um dies zu lösen eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung zwei zusätzliche Threads verwendet, wenn Freihandeingabe.  

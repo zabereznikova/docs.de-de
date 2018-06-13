@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550825"
 ---
 # <a name="flowdocumentscrollviewer"></a>FlowDocumentScrollViewer
 Die <xref:System.Windows.Controls.FlowDocumentScrollViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> Inhalt in einem fortlaufenden Container. Im Gegensatz dazu <xref:System.Windows.Controls.FlowDocumentPageViewer>, die Inhalte auf Basis pro Seite anzeigt.  

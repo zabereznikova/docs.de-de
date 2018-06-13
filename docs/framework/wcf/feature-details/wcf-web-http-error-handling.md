@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498484"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF-Web-HTTP-Fehlerbehandlung
 Windows Communication Foundation (WCF)-Web-HTTP-Fehlerbehandlung können Sie zur Rückgabe von Fehlern von WCF-Web-HTTP-Diensten, die einen HTTP-Statuscode und Zurückgeben von Fehlerdetails, die mit dem gleichen Format wie des Vorgangs (z. B. XML oder JSON).  

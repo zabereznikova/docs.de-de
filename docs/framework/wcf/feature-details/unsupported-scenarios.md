@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507712"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WCF) einige bestimmte Sicherheitsszenarien nicht. Beispielsweise [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI- oder Kerberos-Authentifizierungsprotokolle nicht implementiert und daher WCF unterstützt keine Ausführung eines Diensts mit Windows-Authentifizierung auf dieser Plattform. Andere Authentifizierungsmechanismen, beispielsweise Benutzername/Kennwort und HTTP/HTTPS-integrierte Authentifizierung werden unterstützt, wenn WCF unter Windows XP Home Edition ausgeführt wird.  

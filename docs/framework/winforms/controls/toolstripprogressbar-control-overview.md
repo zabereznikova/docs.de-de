@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537751"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>Übersicht über das ToolStripProgressBar-Steuerelement
 Die <xref:System.Windows.Forms.ToolStripProgressBar> kombiniert die rafting und Funktionen für das Rendern von allen <xref:System.Windows.Forms.ToolStrip> Steuerelemente mit seinen normalen Prozess Tracking-Funktionen. Ein <xref:System.Windows.Forms.ToolStripProgressBar> wird von den meisten Fällen gehostet <xref:System.Windows.Forms.StatusStrip>, und weniger häufig durch eine <xref:System.Windows.Forms.ToolStrip>.  

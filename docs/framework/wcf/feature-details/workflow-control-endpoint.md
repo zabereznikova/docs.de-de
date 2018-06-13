@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502591"
 ---
 # <a name="workflow-control-endpoint"></a>Workflowsteuerungsendpunkt
 Der Workflowsteuerungsendpunkt ermöglicht Entwicklern das Aufrufen von Steuerungsvorgängen, um mit <xref:System.ServiceModel.Activities.WorkflowServiceHost> gehostete Workflowinstanzen remote zu steuern. Diese Funktion kann verwendet werden, um Steuerungsvorgänge wie das Anhalten, Fortsetzen und Beenden programmgesteuert auszuführen.  

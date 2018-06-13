@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537732"
 ---
 # <a name="user-input-in-windows-forms"></a>Benutzereingaben in Windows Forms
 Windows Forms umfasst ein Modell für Benutzereingaben auf der Grundlage von Ereignissen, die ausgelöst werden, während zugehörige Windows-Nachrichten verarbeitet werden. Die Themen in diesem Abschnitt enthalten Informationen zu Benutzereingaben über die Maus und Tastatur, einschließlich Codebeispielen, die zeigen, wie bestimmte Aufgaben ausgeführt werden.  

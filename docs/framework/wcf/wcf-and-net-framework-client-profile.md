@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500977"
 ---
 # <a name="wcf-and-net-framework-client-profile"></a>Clientprofil für WCF und .NET&#160;Framework
 Bei [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] handelt es sich um eine vereinfachte Version von .Net Framework, die für Clients konzipiert ist, die nicht das gesamte Framework benötigen. Windows Communication Foundation wird vom Clientframework nicht in vollem Umfang unterstützt.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508383"
 ---
 # <a name="troubleshooting-correlation"></a>Problembehandlung bei der Korrelation
 Mit Korrelation werden Workflowdienstnachrichten miteinander und mit der richtigen Workflowinstanz verknüpft. Wenn die Konfiguration jedoch nicht richtig durchgeführt wurde, werden Meldungen nicht empfangen, und Anwendungen funktionieren nicht ordnungsgemäß. Dieses Thema bietet eine Übersicht über mehrere Methoden zum Beheben von Korrelationsproblemen. Des Weiteren werden einige häufig auftretende Probleme aufgeführt, die bei der Verwendung der Korrelation auftreten können.  

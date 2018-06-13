@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504139"
 ---
 # <a name="custom-message-filter"></a>Benutzerdefinierter Nachrichtenfilter
 In diesem Beispiel wird veranschaulicht, wie die Nachrichtenfilter ersetzt, die Windows Communication Foundation (WCF) verwendet wird, um Nachrichten auf Endpunkte verteilt wird.  

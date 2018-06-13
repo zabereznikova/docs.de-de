@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499475"
 ---
 # <a name="how-to-examine-the-security-context"></a>Vorgehensweise: Prüfen des Sicherheitskontexts
 Beim Programmieren von Windows Communication Foundation (WCF)-Dienste kann dienstsicherheitskontextes Sie Informationen über die Clientanmeldeinformationen und Ansprüche verwendet, um die Authentifizierung mit dem Dienst zu erhalten. Dies geschieht anhand der Eigenschaften der <xref:System.ServiceModel.ServiceSecurityContext>-Klasse.  

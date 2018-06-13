@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497944"
 ---
 # <a name="using-metadata"></a>Verwenden von Metadaten
 Dienstmetadaten enthalten eine maschinell lesbare Beschreibung des Diensts. Dienstmetadaten schließen Beschreibungen der Dienstendpunkte, Bindungen, Verträge, Vorgänge und Nachrichten ein. Sie können Dienstmetadaten für verschiedene Zwecke verwenden, z. B. automatisches Generieren eines Clients zur Verwendung des Diensts, Implementieren der Dienstbeschreibung und dynamische Aktualisierung der Bindung für einen Client.  

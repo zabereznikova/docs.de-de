@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503762"
 ---
 # <a name="form-post"></a>Formularbereitstellung
 In diesem Beispiel wird veranschaulicht, wie das WCF-REST-Programmiermodell zur Unterstützung neuer Formate für eingehende Antworten erweitert wird. Das Beispiel umfasst auch die Implementierung eines Formatierungsprogramms, mit dem eine Anforderung von einer HTML-Formularbereitstellung in einen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typ deserialisiert werden kann. Im Beispiel wird außerdem eine T4-Vorlage verwendet, um eine HTML-Seite zurückzugeben. Sie stellt das HTML-Formular bereit, das die Benutzer an den WCF REST-Dienst zurücksenden können.  

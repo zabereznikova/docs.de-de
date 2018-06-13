@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497281"
 ---
 # <a name="schema-import-and-export"></a>Import und Export von Schemas
 Windows Communication Foundation (WCF) enthält ein neues Serialisierungsmodul, das <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` übersetzt zwischen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekten und XML (in beide Richtungen). Zusätzlich zum Serialisierungsprogramm selbst umfasst WCF zugeordneten Schema-Import / Export-Mechanismen Schema. *Schema* ist eine formale, genaue und maschinenlesbare Beschreibung der Form des XML-Codes, die die Serialisierung erstellt oder auf die das Deserialisierungsprogramm zugreifen kann. WCF verwendet das World Wide Web Consortium (W3C) XML-Schemadefinitionssprache (XSD) als die schemendarstellung, die mit zahlreichen Plattformen von Drittanbietern weitgehend interoperabel ist.  

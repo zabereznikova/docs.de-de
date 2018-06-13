@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538155"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Übersicht über Ereignishandler (Windows Forms)
 Ein Ereignishandler ist eine Methode, die auf ein Ereignis gebunden ist. Wenn das Ereignis ausgelöst wird, wird der Code im Ereignishandler ausgeführt. Jeder Ereignishandler bietet zwei Parameter, mit die das Ereignis ordnungsgemäß verarbeiten können. Das folgende Beispiel zeigt einen Ereignishandler für ein <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Click> Ereignis.  

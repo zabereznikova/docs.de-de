@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495995"
 ---
 # <a name="accessing-services-using-a-client"></a>Zugreifen auf Dienste mithilfe eines Clients
 Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF Client- oder kanalobjekt Objekte für die Kommunikation mit Diensten. Die [Überblick über WCF-Client](../../../../docs/framework/wcf/wcf-client-overview.md) Thema bietet einen Überblick über die Objekte und die Schritte zum Erstellen von Objekten für grundlegende Client- und kanalobjekten und deren Verwendung.  

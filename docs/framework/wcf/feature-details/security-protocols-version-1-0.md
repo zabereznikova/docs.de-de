@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509176"
 ---
 # <a name="security-protocols-version-10"></a>Sicherheitsprotokolle, Version&#160;1.0
 Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, die alle vorhandenen Nachrichtensicherheitsanforderungen eines Unternehmens abdecken. In diesem Abschnitt wird beschrieben, die Versionsdetails der Windows Communication Foundation (WCF) 1.0 (implementiert der <xref:System.ServiceModel.Channels.SecurityBindingElement>) der folgenden Webdienste-Sicherheitsprotokolle.  

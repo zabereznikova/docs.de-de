@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499127"
 ---
 # <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>Vorgehensweise: Hosten eines WCF-Diensts, der mit .NET Framework 3.5 unter IIS geschrieben wurde und unter .NET Framework 4 ausgeführt wird
 Wenn ein Windows Communication Foundation (WCF)-Dienst mit geschriebene gehostet [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] auf einem Computer mit [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], erhalten Sie möglicherweise eine <xref:System.ServiceModel.ProtocolException> mit dem folgenden Text.  

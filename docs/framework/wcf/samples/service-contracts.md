@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500918"
 ---
 # <a name="service-contracts"></a>Dienstverträge
 Dieser Abschnitt enthält Beispiele, in denen Dienstverträge in der Windows Communication Foundation (WCF) veranschaulicht.  

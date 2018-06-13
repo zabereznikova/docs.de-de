@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507354"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben werden
 In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe) generierten Fehlercodes und die empfohlenen Maßnahmen aufgelistet.  

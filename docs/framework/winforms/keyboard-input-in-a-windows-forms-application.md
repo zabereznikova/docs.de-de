@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537072"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Tastatureingaben in einer Windows Forms-Anwendung
 Windows Forms umfasst Standardtastatur-Ereignisse, die ermöglichen es Ihnen, die auf bestimmte Tastatureingaben zu reagieren, und bietet auch Methoden, mit denen Sie abfangen, zu ändern, und Nutzen von Tastatureingaben auf der Anwendungsebene wird die Form, und Ebene steuern.  

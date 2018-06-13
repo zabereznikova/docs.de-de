@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216764"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C#-Compileroptionen)
 Die Option **-win32res** fügt eine Win32-Ressource in die Ausgabedatei ein.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497957"
 ---
 # <a name="wcf-discovery"></a>WCF-Suche
 Windows Communication Foundation (WCF) bietet Unterstützung dafür, dass Dienste erkennbar zur Laufzeit auf interoperable Weise mit dem WS-Discovery-Protokoll verwendet wird. WCF-Dienste können ihre Verfügbarkeit im Netzwerk mit einer Multicastnachricht oder einen suchproxyserver ankündigen. Clientanwendungen können ein Netzwerk oder einen Suchproxyserver durchsuchen, um Dienste zu ermitteln, die eine bestimmte Gruppe von Kriterien erfüllen. Die Themen in diesem Abschnitt enthalten eine Übersicht, und das Programmiermodell für diese Funktion wird ausführlich beschrieben.  

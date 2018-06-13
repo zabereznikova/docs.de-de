@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535560"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Gewusst wie: Festlegen und Zurückgeben von numerischen Werten mit dem NumericUpDown-Steuerelement in Windows Forms
 Der numerische Wert des Windows Forms <xref:System.Windows.Forms.NumericUpDown> Steuerelement richtet sich nach seiner <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft. Sie können die bedingte Tests für den Wert des Steuerelements wie bei einer anderen Eigenschaft schreiben. Einmal die <xref:System.Windows.Forms.NumericUpDown.Value%2A> festgelegt wird, können Sie es direkt durch Schreiben von Code zum Ausführen von Vorgängen auf Anpassen oder Sie erreichen die <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> und <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> Methoden.  

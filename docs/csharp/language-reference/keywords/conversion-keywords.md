@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213947"
 ---
 # <a name="conversion-keywords-c-reference"></a>Konvertierungsschlüsselwörter (C#-Referenz)
 In diesem Abschnitt werden Schlüsselwörter beschrieben, die in Typkonvertierungen verwendet werden:  

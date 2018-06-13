@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535514"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente
 In Windows Forms hinzugefügte Steuerelemente haben Eigenschaften und Methoden, die dazu verwendet werden, die Benutzerfreundlichkeit weiter zu spezialisieren. Ein Anpassen der Benutzeroberfläche an die Bedürfnisse der Benutzer ist äußerst wichtig für gut gestaltete Windows-Anwendungen.  

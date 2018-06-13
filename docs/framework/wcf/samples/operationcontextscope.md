@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505143"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 Im OperationContextScope-Beispiel veranschaulicht das Senden von zusätzlichen Informationen auf einen Header mit Windows Communication Foundation (WCF)-Aufruf. In diesem Beispiel sind Server und Client Konsolenanwendungen.  
