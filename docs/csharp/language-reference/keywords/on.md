@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265232"
 ---
 # <a name="on-c-reference"></a>on (C#-Referenz)
 Das kontextabhängiges Schlüsselwort `on` wird in der [join-Klausel](../../../csharp/language-reference/keywords/join-clause.md) eines Abfrageausdrucks, um die Verknüpfungsbedingung anzugeben.  
