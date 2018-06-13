@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558264"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Anwendungen sind Dateien, die nicht ausführbare Daten, z. B. enthalten häufig abhängig [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Bilder, Video und Audio. Windows Presentation Foundation (WPF) bietet spezielle Unterstützung zum Konfigurieren, identifizieren und Verwendung dieser Typen von Datendateien, die Datendateien der Anwendung aufgerufen werden. Diese Unterstützung bezieht sich auf einen bestimmten Satz von Anwendungsdatendateitypen, einschließlich:  

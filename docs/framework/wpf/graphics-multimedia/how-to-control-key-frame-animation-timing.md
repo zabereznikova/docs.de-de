@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562289"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Gewusst wie: Zeitliche Steuerung einer Keyframe-Animation
 Dieses Beispiel zeigt, wie die zeitliche Abfolge von Keyframes innerhalb einer Keyframe Animation steuern. Wie andere Animationen Keyframe-Animationen haben eine <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Eigenschaft. Zusätzlich zur Angabe der Dauer der Animation, müssen Sie angeben, welcher Teil dieser Dauer auf die einzelnen Keyframes zugewiesen wird. Um die Zeit zuzuweisen, geben Sie einen <xref:System.Windows.Media.Animation.KeyTime> für jeden Keyframe in der Animation.  

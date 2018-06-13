@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557120"
 ---
 # <a name="adorners-overview"></a>Übersicht über Adorner
 Adorner sind eine besondere Art von <xref:System.Windows.FrameworkElement>, wird verwendet, um visuelle Hinweise für einen Benutzer bereitzustellen. Adorner können unter anderem verwendet werden, um Elementen funktionale Ziehpunkte hinzuzufügen oder Zustandsinformationen über Steuerelemente bereitzustellen.  

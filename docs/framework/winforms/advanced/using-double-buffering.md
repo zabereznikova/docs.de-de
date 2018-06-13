@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523909"
 ---
 # <a name="using-double-buffering"></a>Verwenden der doppelten Pufferung
 Sie können doppelt gepufferte Grafiken verwenden, um Flackern in Ihren Anwendungen zu reduzieren, die komplexe Zeichenoperationen enthalten. .NET Framework enthält integrierte Unterstützung für die doppelte Pufferung, oder Sie verwalten und Rendern von Grafiken manuell.  

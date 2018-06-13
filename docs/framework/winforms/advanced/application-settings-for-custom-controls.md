@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518563"
 ---
 # <a name="application-settings-for-custom-controls"></a>Anwendungseinstellungen für benutzerdefinierte Steuerelemente
 Führen Sie die bestimmte Aufgaben aus, um der benutzerdefinierten Steuerelemente bieten die Möglichkeit, Anwendungseinstellungen beizubehalten, wenn die Steuerelemente in der Anwendung eines Drittanbieters gehostet werden.  

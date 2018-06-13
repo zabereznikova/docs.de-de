@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569628"
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema-Compilation-Infoset
 In der [W3C-Empfehlung (World Wide Web Consortium) zum XML Schema](https://www.w3.org/XML/Schema) wird der Informationssatz (Infoset) erörtert, der für die Pre-Schema-Validierung und die Post-Schema-Kompilierung verfügbar gemacht werden muss. Das XML-SOM (Schema Object Model) zeigt dieses Offenlegen vor und nachdem die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode vom <xref:System.Xml.Schema.XmlSchemaSet> aufgerufen wird an.  

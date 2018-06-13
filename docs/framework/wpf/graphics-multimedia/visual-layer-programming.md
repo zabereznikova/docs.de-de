@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561734"
 ---
 # <a name="visual-layer-programming"></a>Programmierung auf visueller Ebene
 Die <xref:System.Windows.Media.Visual> -Objekt ist ein zentrales [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Objekt, dessen primäre Rolle Rendering zu unterstützen. Steuerelemente der Benutzeroberfläche, z. B. <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.TextBox>, leiten Sie von der <xref:System.Windows.Media.Visual> Klasse, und verwenden sie für ihre Renderingdaten beibehalten.  

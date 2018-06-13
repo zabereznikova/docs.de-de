@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557679"
 ---
 # <a name="gridview-overview"></a>Übersicht über GridView
 <xref:System.Windows.Controls.GridView> Ansichtsmodus ist einer der Ansichtsmodi für ein <xref:System.Windows.Controls.ListView> Steuerelement. Die <xref:System.Windows.Controls.GridView> -Klasse und unterstützenden Klassen aktivieren Sie und Ihre Benutzer Element Auflistungen in einer Tabelle anzuzeigen, die Schaltflächen in der Regel als interaktive Spaltenüberschriften verwendet. Dieses Thema enthält die <xref:System.Windows.Controls.GridView> Klasse und ihre Verwendung erläutert.  

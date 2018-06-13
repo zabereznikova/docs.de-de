@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362575"
 ---
 # <a name="retrieving-binary-data"></a>Abrufen von Binärdaten
 Wird standardmäßig die **DataReader** lädt eingehende Daten als eine Zeile, sobald eine ganze Datenzeile verfügbar ist. BLOBs (Binary Large Objects) müssen jedoch anders behandelt werden, da sie mehrere Gigabyte an Daten umfassen können, die nicht in eine einzelne Zeile passen. Die **Command.ExecuteReader** Methode verfügt über eine Überladung, mit denen gelangen eine <xref:System.Data.CommandBehavior> Argument so ändern Sie das Standardverhalten der **DataReader**. Sie übergeben können <xref:System.Data.CommandBehavior.SequentialAccess> auf der **ExecuteReader** Methode, um das Standardverhalten ändern der **DataReader** so, dass anstelle von Laden von Datenzeilen aus, es Daten sequenziell geladen werden Daten beim Empfang. Diese Methode eignet sich hervorragend zum Laden von BLOBs oder anderen großen Datenstrukturen. Beachten Sie, dass dieses Verhalten je nach Datenquelle verschieden sein kann. Wenn beispielsweise ein BLOB von Microsoft Access zurückgegeben wird, werden die Daten beim Empfang nicht sequenziell geladen, sondern das BLOB wird vollständig in den Speicher geladen.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362526"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Erstellen von Anwendungsrollen in SQL Server
 Anwendungsrollen bieten die Möglichkeit, einer Anwendung anstelle von Datenbankrollen oder Benutzern Berechtigungen zuzuweisen. Benutzer können eine Verbindung mit der Datenbank herstellen, die Anwendungsrolle aktivieren und die der Anwendung erteilten Berechtigungen annehmen. Die der Anwendungsrolle gewährten Berechtigungen sind so lange in Kraft, wie die Verbindung besteht.  

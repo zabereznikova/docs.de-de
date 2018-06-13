@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364797"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Server- und Datenbankrollen in SQL Server
 Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie einer Rolle, also einer ganzen Gruppe von Benutzern, Berechtigungen zuweisen können, statt Berechtigungen individuell für jeden Benutzer einzeln festzulegen. Feste Server- und feste Datenbankrollen besitzen einen festen Satz von ihnen übertragenen Berechtigungen.  

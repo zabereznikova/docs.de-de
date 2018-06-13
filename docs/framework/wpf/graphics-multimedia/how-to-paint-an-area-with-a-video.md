@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560776"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Gewusst wie: Zeichnen eines Bereichs mit einem Video
 In diesem Beispiel wird gezeigt, wie einen Bereich mit Medien gezeichnet wird. Eine Möglichkeit zum Zeichnen eines Bereichs mit Medien ist die Verwendung einer <xref:System.Windows.Controls.MediaElement> zusammen mit einem <xref:System.Windows.Media.VisualBrush>. Verwenden der <xref:System.Windows.Controls.MediaElement> zum Laden und Wiedergeben der Medien und Verwendung zur Festlegung der <xref:System.Windows.Media.VisualBrush.Visual%2A> Eigenschaft von der <xref:System.Windows.Media.VisualBrush>. Anschließend können Sie die <xref:System.Windows.Media.VisualBrush> um einen Bereich mit den geladenen Medien zu zeichnen.  

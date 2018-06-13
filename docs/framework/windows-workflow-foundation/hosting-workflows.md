@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514542"
 ---
 # <a name="hosting-workflows"></a>Hosten von Workflows
 In den Themen in diesem Abschnitt wird das Hosten von Workflows behandelt.  

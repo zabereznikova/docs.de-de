@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742152"
 ---
 # <a name="manipulations-and-inertia"></a>Manipulationen und Trägheit
 Die Prozessorklassen *Manipulationen* und *Trägheit* unterstützen Ihre Anwendung beim Verschieben von UI-Elementen (User Interface, Benutzeroberfläche) auf dem Bildschirm auf natürliche und intuitive Weise. Durch Manipulationen können Benutzer Komponenten mit Manipulatoren verschieben, drehen und deren Größe verändern. Solche Manipulatoren sind z.B. Computermäuse, Stifte oder (bei einem Szenario mit Touchscreen) die Finger der Benutzer. *Trägheit* emuliert das Echtzeitverhalten von UI-Elementen, die sich in Bewegung befinden, indem Reibungskräfte für die Elemente simuliert werden. Damit sind Elemente in der Lage, ihre Bewegung (sowohl linear als auch winkelförmig) graduell zu verlangsamen, bevor die Bewegung angehalten wird.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522607"
 ---
 # <a name="using-regions"></a>Verwenden von Bereichen
 Die [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> -Klasse ermöglicht es Ihnen, eine benutzerdefinierte Form zu definieren. Die Form kann sich von Linien, Polygone und Kurven erfolgen.  

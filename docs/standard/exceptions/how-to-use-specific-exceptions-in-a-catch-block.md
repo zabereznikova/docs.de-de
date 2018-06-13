@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571797"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Gewusst wie: Verwenden spezifischer Ausnahmen in einem Catch-Block
 

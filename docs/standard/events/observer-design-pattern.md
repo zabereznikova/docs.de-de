@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578113"
 ---
 # <a name="observer-design-pattern"></a>Beobachterentwurfsmuster
 Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen. Es ist für jedes Szenario geeignet, das pushbasierte Benachrichtigungen erfordert. Das Muster definiert einen *Anbieter* (auch als *Antragssteller* oder *Observable* bezeichnet) und keinen, einen oder mehrere *Beobachter*. Beobachter registrieren sich beim Anbieter, und sobald eine vordefinierte Bedingung, ein Ereignis oder eine Statusänderung stattfindet, benachrichtigt der Anbieter automatisch alle Beobachter, indem er eine ihrer Methoden aufruft. In diesem Methodenaufruf kann der Anbieter den Beobachtern auch aktuelle Statusinformationen bereitstellen. In .NET Framework wird das Entwurfsmuster "Beobachter" angewendet, indem die generischen Schnittstellen <xref:System.IObservable%601?displayProperty=nameWithType> und <xref:System.IObserver%601?displayProperty=nameWithType> implementiert werden. Der generische Typparameter stellt den Typ dar, der Benachrichtigungsinformationen bereitstellt.  

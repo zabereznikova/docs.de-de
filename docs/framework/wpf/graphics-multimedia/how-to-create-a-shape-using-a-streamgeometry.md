@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560366"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Gewusst wie: Erstellen einer Form mithilfe von StreamGeometry
 <xref:System.Windows.Media.StreamGeometry> Lightweight-Alternative zu <xref:System.Windows.Media.PathGeometry> für das geometrische Formen erstellen. Verwenden einer <xref:System.Windows.Media.StreamGeometry> müssen Sie eine komplexe Geometrie beschreiben, aber nicht möchten, den Aufwand für die Unterstützung von datenbindungen, Animationen und Änderungen. Mögliche Ursachen: die Effizienz der <xref:System.Windows.Media.StreamGeometry> Klasse ist eine gute Wahl zum Beschreiben von Adornern.  

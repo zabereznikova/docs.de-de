@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557575"
 ---
 # <a name="popup-overview"></a>Übersicht über Popups
 Die <xref:System.Windows.Controls.Primitives.Popup> Steuerelement bietet eine Möglichkeit, Inhalte in einem separaten Fenster angezeigt, die über die aktuelle Anwendungsfenster relativ zu einer angegebenen Koordinate der Element- oder Bildschirm gleitet. Dieses Thema enthält die <xref:System.Windows.Controls.Primitives.Popup> steuern und enthält Informationen zu Verwendungsmöglichkeiten.  

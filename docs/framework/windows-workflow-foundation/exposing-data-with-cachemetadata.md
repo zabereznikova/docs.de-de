@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515251"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Verfügbarmachen von Daten mit CacheMetadata
 Vor dem Ausführen einer Aktivität ruft die Workflowlaufzeit alle Aktivitätsinformationen ab, die für die Ausführung erforderlich sind. Die Workflowlaufzeit ruft diese Informationen während der Ausführung der <xref:System.Activities.Activity.CacheMetadata%2A>-Methode ab. Die Standardimplementierung dieser Methode stellt der Laufzeit alle öffentlichen Argumente, Variablen und untergeordneten Aktivitäten bereit, die von der Aktivität zur Ausführungszeit verfügbar gemacht werden. Wenn die Aktivität mehr Informationen als diese an die Laufzeit übergeben muss (z. B. private Member oder Aktivitäten, die von der Aktivität geplant werden sollen), kann diese Methode überschrieben werden, um diese Informationen zur Verfügung zu stellen.  

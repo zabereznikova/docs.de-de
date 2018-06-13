@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516551"
 ---
 # <a name="workflow-hosting-options"></a>Optionen zum Hosten von Workflows
 Die meisten Windows Workflow Foundation (WF)-Beispiele verwenden die Workflows, die in einer Konsolenanwendung gehostet werden, dies ist jedoch einem realistischen Szenario für realen Workflows. Workflows in realen Geschäftsanwendungen werden in persistenten Prozessen gehostet – entweder in einem vom Entwickler erstellten Webdienst oder in einer Serveranwendung wie [!INCLUDE[iisver](../../../includes/iisver-md.md)] oder AppFabric. Zwischen diesen Vorgehensweisen bestehen die folgenden Unterschiede.  

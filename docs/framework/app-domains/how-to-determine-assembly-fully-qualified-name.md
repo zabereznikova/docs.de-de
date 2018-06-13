@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743185"
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Vorgehensweise: Bestimmen des vollqualifizierten Namens einer Assembly
 Um den vollqualifizierten Namen einer Assembly im globalen Assemblycache zu ermitteln, verwenden Sie das GAC-Tool ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Siehe [Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  

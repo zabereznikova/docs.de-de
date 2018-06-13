@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744303"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Arbeiten mit Assemblys und dem globalen Assemblychache
 Wenn Sie eine Assembly freigeben und für mehrere Anwendungen gemeinsam nutzen möchten, können Sie die Assembly im globalen Assemblycache installieren. Jeder Computer, auf dem die Common Language Runtime installiert ist, verfügt über diesen computerweiten Codecache. Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind. Eine Assembly muss einen starken Namen haben, um im globalen Assemblycache installiert werden zu können.  

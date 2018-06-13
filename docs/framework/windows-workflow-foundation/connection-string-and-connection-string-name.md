@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511929"
 ---
 # <a name="connection-string-and-connection-string-name"></a>Verbindungszeichenfolge und Name der Verbindungszeichenfolge
 **Verbindungszeichenfolge** Eigenschaft gibt die Verbindungszeichenfolge, die der SQL-Workflowinstanzspeicher verwenden soll, eine Verbindung zur persistenten Datenbank herstellen. Dieser Parameter ist ein optionaler Parameter. **Verbindungszeichenfolgenname** Eigenschaft gibt den Namen der benannten Verbindungszeichenfolge an, die der SQL-Workflowinstanzspeicher verwenden soll, eine Verbindung mit der persistenten Datenbank herstellen. Dieser Parameter ist ein optionaler Parameter. Sie sollten einen Wert für die Verbindungszeichenfolgenname-Eigenschaft oder die Verbindungszeichenfolgen-Eigenschaft angeben, wenn Sie nicht, dass der SQL-Workflowinstanzspeicher die benannte Standard-Verbindungszeichenfolge möchten **DefaultSqlWorkflowInstanceStoreConnectionString** .

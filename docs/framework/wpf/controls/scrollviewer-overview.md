@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557926"
 ---
 # <a name="scrollviewer-overview"></a>Übersicht über ScrollViewer
 Der Inhalt einer Benutzeroberfläche ist häufig größer als der Anzeigebereich eines Computerbildschirms. Die <xref:System.Windows.Controls.ScrollViewer> Steuerelement stellt eine einfache Möglichkeit, aktivieren Sie Bildläufe von Inhalt in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen. Dieses Thema enthält die <xref:System.Windows.Controls.ScrollViewer> Element sowie mehrere Beispiele für die Verwendung.  

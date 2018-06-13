@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560918"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>Gewusst wie: Treffertest für eine Geometrie in einem visuellen Objekt
 In diesem Beispiel wird gezeigt, wie einen Treffertest für ein visuelles Objekt ausführen, der einem oder mehreren besteht <xref:System.Windows.Media.Geometry> Objekte.  

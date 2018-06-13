@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557783"
 ---
 # <a name="treeview-overview"></a>Übersicht über TreeView
 Die <xref:System.Windows.Controls.TreeView> Steuerelement bietet eine Möglichkeit zum Anzeigen von Informationen in einer hierarchischen Struktur mit reduzierbaren Knoten. Dieses Thema enthält die <xref:System.Windows.Controls.TreeView> und <xref:System.Windows.Controls.TreeViewItem> steuert und einfache Beispiele für deren Verwendung bereitstellt.  

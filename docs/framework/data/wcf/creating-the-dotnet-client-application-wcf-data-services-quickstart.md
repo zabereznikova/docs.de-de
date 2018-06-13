@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365354"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Erstellen der .NET Framework-Clientanwendung (WCF Data Services-Schnellstart)
 Dies ist die letzte Aufgabe des der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Schnellstart. In dieser Aufgabe fügen Sie der Projektmappe eine Konsolenanwendung, fügen einen Verweis auf die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Zuführung in dieser neuen Clientanwendung und den Zugriff der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed von der Clientanwendung mithilfe der generierten clientdatendienstklassen und Client Bibliotheken.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576310"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validieren eines XML-Dokuments im Dokumentobjektmodell
 Die <xref:System.Xml.XmlDocument>-Klasse validiert das XML-Dokument im DOM (Dokumentobjektmodell) standardmäßig nicht anhand eines XSD-Schemas (XML Schema Definition Language) oder einer DTD (Document Type Definition). Das XML-Dokument wird nur validiert, damit es wohlgeformt ist.  

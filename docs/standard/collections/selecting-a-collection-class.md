@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574932"
 ---
 # <a name="selecting-a-collection-class"></a>Auswählen einer Auflistungsklasse
 Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein falscher Typ kann die Verwendung der Auflistung einschränken. Vermeiden Sie im Allgemeinen die Verwendung der Typen im <xref:System.Collections>-Namespace - es sei denn, Ihr Ziel ist ausdrücklich .NET Framework, Version 1.1. Die generischen und parallelen Versionen der Auflistungen sind vorzuziehen, weil sie größere Typsicherheit und andere Optimierungen aufweisen.  

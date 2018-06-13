@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554840"
 ---
 # <a name="3-d-graphics-how-to-topics"></a>Gewusst-wie-Themen zu 3D-Grafiken
 Die Themen in diesem Abschnitt zeigen, wie [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] Grafiken in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen.  

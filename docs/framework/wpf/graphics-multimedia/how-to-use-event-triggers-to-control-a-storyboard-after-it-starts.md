@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561293"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Gewusst wie: Verwenden von Ereignistriggern zum Steuern eines Storyboards nach dessen Start
 In diesem Beispiel wird gezeigt, wie zur Steuerung einer <xref:System.Windows.Media.Animation.Storyboard> nach dem Start. Starten einer <xref:System.Windows.Media.Animation.Storyboard> mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], verwenden <xref:System.Windows.Media.Animation.BeginStoryboard>, die verteilt der Animationen an die Objekte und Eigenschaften, die sie dem animiert werden soll, und startet dann das Storyboard. Wenn verfügt <xref:System.Windows.Media.Animation.BeginStoryboard> einen Namen durch Angabe seiner <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> -Eigenschaft, ist er ein Storyboard steuerbares. Sie können dann das Storyboard interaktiv steuern nach dem Start.  

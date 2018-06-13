@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743952"
 ---
 # <a name="shadow-copying-assemblies"></a>Erstellen von Schattenkopien von Assemblys
 Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne verwendet werden, aktualisiert werden können, ohne die Anwendungsdomäne zu entladen. Dies ist besonders hilfreich für Anwendungen, die permanent verfügbar sein müssen, wie ASP.NET-Websites.  

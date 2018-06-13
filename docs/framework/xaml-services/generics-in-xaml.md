@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563583"
 ---
 # <a name="generics-in-xaml"></a>Generika in XAML
 .NET Framework XAML Services wie in "System.xaml" implementiert bietet Unterstützung für die Verwendung von generischer CLR-Typen. Diese Unterstützung umfasst, die Einschränkungen von Generika als Typargument angeben und erzwingen die Einschränkung durch Aufrufen der entsprechenden `Add` Methode für die generische Auflistung von Fällen. In diesem Thema werden Aspekte der Verwendung von und verweisen auf generische Typen in XAML beschrieben.  

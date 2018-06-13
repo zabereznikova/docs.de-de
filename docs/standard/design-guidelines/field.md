@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571112"
 ---
 # <a name="field-design"></a>Feldentwurf
 Das Prinzip der Kapselung ist einer der wichtigsten Konzepte in eines objektorientierten Entwurfs. Dieses Prinzip gibt an, dass in einem Objekt gespeicherte Daten nur auf dieses Objekt zugegriffen werden soll.  

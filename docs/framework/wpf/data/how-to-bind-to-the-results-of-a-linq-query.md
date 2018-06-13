@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554992"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Gewusst wie: Binden an die Ergebnisse einer LINQ-Abfrage
 In diesem Beispiel wird veranschaulicht, wie eine LINQ-Abfrage ausführen, und klicken Sie dann mit den Ergebnissen binden.  

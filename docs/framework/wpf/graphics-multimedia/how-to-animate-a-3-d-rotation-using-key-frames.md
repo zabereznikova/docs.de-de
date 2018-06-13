@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557619"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>Gewusst wie: Animieren einer 3D-Drehung mithilfe von Keyframes
 Im folgenden Beispiel <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> wird verwendet, um ein 3D-Objekt gedreht wird, während die Achse der Drehung eine Animation, was zu einem "bringen". Dieser Animation verwendet folgende Keyframes:  

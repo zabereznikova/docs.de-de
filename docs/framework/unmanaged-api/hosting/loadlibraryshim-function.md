@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8936fa3d22cfde4c2536fccf9d46c1990133db1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445311"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim-Funktion
 Lädt die angegebene Version einer DLL, die in das verteilbare .NET Framework-Paket enthalten ist.  

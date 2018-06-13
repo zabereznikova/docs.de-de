@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398065"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Grundlegendes zu WebRequest-Problemen und -Ausnahmen
 <xref:System.Net.WebRequest> und die abgeleiteten Klassen (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> und <xref:System.Net.FileWebRequest>) lösen Ausnahmen aus, um einen nicht ordnungsgemäßen Zustand zu signalisieren. In einigen Fällen ist die Lösung dieser Probleme nicht offensichtlich.  

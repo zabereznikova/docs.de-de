@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577116"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Gewusst wie: Schreiben von Text in eine Datei
 Dieses Thema veranschaulicht verschiedene Arten, wie Sie Text in eine Datei für .NET Framework-Anwendungen oder [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps schreiben können. Die folgenden Klassen und Methoden werden in der Regel zum Schreiben von Text in eine Datei verwendet:  

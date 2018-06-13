@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565574"
 ---
 # <a name="xstatic-markup-extension"></a>x:Statische Markuperweiterung
 Verweist auf eine statische per-Wert-Code-Entität, die in definiert ist eine [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– kompatible Weise. Die statische Eigenschaft, auf die verwiesen wird, kann, geben Sie den Wert einer Eigenschaft in XAML verwendet werden.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570591"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Entwurfsrichtlinien für Ausnahmen
 Behandlung von Ausnahmen hat viele Vorteile gegenüber dem Rückgabewert wertbasierte-Fehlerberichterstattung. Gute Frameworkentwurf kann Entwickler die Vorteile von Ausnahmen. In diesem Abschnitt wird erläutert, die Vorteile von Ausnahmen und Richtlinien zur effektiven Verwendung von ihnen vorgestellt.  

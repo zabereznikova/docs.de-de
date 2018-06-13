@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365305"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementieren einer impliziten Transaktion mit Transaktionsbereich
 Mit der <xref:System.Transactions.TransactionScope>-Klasse lassen sich Codeblöcke einfach als an einer Transaktion beteiligte Codeblöcke markieren, ohne die Transaktion selbst bearbeiten zu müssen. Ein Transaktionsbereich kann die Ambient-Transaktion automatisch auswählen und verwalten. Wegen ihrer einfachen Verwendung und Effizienz wird empfohlen, die <xref:System.Transactions.TransactionScope>-Klasse zur Entwicklung von Transaktionsanwendungen zu verwenden.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568523"
 ---
 # <a name="node-collections-in-namednodemaps-and-nodelists"></a>Knotenauflistungen in "NamedNodeMaps" und "NodeLists"
 Sie können eine Gruppe von Knoten abrufen und sie in eine geordnete oder ungeordnete Auflistung bringen. Wenn ein Gruppe von Knoten in eine ungeordnete Auflistung gebracht wird, wird diese Gruppe vom W3C (World Wide Web Consortium) als "NamedNodeMap" bezeichnet. Die Daten können aus dieser Art von Auflistung sowohl nach Namen als auch nach Index abgerufen werden. Eine geordnete Auflistung mit einer Gruppe von Knoten wird vom W3C als "NodeList" bezeichnet. Die Daten können über einen nullbasierten Index abgerufen werden. "NamedNodeMaps" und "NodeLists" werden vom W3C beschrieben. In Microsoft .NET Framework wird „NamedNodeMap“ durch **XmlNamedNodeMap** und „NodeList“ durch **XmlNodeList** implementiert.  

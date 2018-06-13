@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523873"
 ---
 # <a name="how-to-display-pop-up-help"></a>Gewusst wie: Anzeigen der kontextbezogenen Hilfe
 Eine Möglichkeit zum Anzeigen von Hilfe in Windows Forms wird durch die **Hilfe** Schaltfläche auf der rechten Seite der Titelleiste, über die <xref:System.Windows.Forms.Form.HelpButton%2A> Eigenschaft. Diese Art, die Hilfe aufzurufen, eignet sich besonders für Dialogfelder. In modal (mit der <xref:System.Windows.Forms.Form.ShowDialog%2A>-Methode) angezeigten Dialogfeldern ist das Aufrufen externer Hilfesysteme problematisch, da modale Dialogfelder zuerst geschlossen werden müssen, ehe der Fokus auf ein anderes Fenster gerichtet werden kann. Darüber hinaus verwenden die **Hilfe** Schaltfläche erfordert, ergibt sich keine **Minimieren** Schaltfläche oder **Maximieren** Schaltfläche in der Titelleiste angezeigt. Dies ist eine Konvention Standardkonvention für Dialogfelder, wohingegen Formulare in der Regel sind **Minimieren** und **Maximieren** Schaltflächen.  
