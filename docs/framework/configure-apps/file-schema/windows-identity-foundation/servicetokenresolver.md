@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755759"
 ---
 # <a name="ltservicetokenresolvergt"></a><span data-ttu-id="110bd-102">&lt;serviceTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="110bd-102">&lt;serviceTokenResolver&gt;</span></span>
 <span data-ttu-id="110bd-103">Registriert die Dienst-Resolver, die vom Handler in der Auflistung Tokenhandler verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="110bd-103">Registers the service token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="110bd-104">Die Dienst-tokenresolver dient zum Auflösen des Tokens Verschlüsselung auf eingehende Token und Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="110bd-104">The service token resolver is used to resolve the encryption token on incoming tokens and messages.</span></span>  

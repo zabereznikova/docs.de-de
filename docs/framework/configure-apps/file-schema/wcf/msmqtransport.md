@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751349"
 ---
 # <a name="ltmsmqtransportgt"></a><span data-ttu-id="4daa9-102">&lt;msmqTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="4daa9-102">&lt;msmqTransport&gt;</span></span>
 <span data-ttu-id="4daa9-103">Führt dazu, dass ein Kanal Nachrichten in der MSMQ-Sitzung überträgt, wenn er in einer benutzerdefinierten Bindung enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="4daa9-103">Causes a channel to transfers messages on the MSMQ transport when it is included in a custom binding.</span></span>  

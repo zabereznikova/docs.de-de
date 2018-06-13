@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321703"
 ---
 # <a name="parsing-xml-c"></a><span data-ttu-id="e63b4-102">Parsen von XML (C#)</span><span class="sxs-lookup"><span data-stu-id="e63b4-102">Parsing XML (C#)</span></span>
 <span data-ttu-id="e63b4-103">In den Themen in diesem Abschnitt wird das Analysieren von XML-Dokumenten beschrieben.</span><span class="sxs-lookup"><span data-stu-id="e63b4-103">The topics in this section describe how to parse XML documents.</span></span>  

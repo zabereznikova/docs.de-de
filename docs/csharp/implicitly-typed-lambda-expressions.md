@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33211822"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a><span data-ttu-id="64223-103">Implizit typisierte Lambdaausdrücke</span><span class="sxs-lookup"><span data-stu-id="64223-103">Implicitly typed lambda expressions</span></span>
 

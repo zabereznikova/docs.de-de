@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766503"
 ---
 # <a name="string-canonical-functions"></a><span data-ttu-id="088f7-102">Kanonische Zeichenfolgefunktionen</span><span class="sxs-lookup"><span data-stu-id="088f7-102">String Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="088f7-103"> enthält kanonische Zeichenfolgenfunktionen.</span><span class="sxs-lookup"><span data-stu-id="088f7-103"> includes string canonical functions.</span></span>  

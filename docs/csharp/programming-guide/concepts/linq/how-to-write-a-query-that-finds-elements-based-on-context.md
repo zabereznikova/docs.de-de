@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322012"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a><span data-ttu-id="2b9d8-102">Vorgehensweise: Schreiben einer Abfrage, die Elemente basierend auf dem Kontext sucht (C#)</span><span class="sxs-lookup"><span data-stu-id="2b9d8-102">How to: Write a Query that Finds Elements Based on Context (C#)</span></span>
 <span data-ttu-id="2b9d8-103">Es kann vorkommen, dass Sie eine Abfrage schreiben möchten, die Elemente auf der Grundlage ihres Kontexts sucht.</span><span class="sxs-lookup"><span data-stu-id="2b9d8-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="2b9d8-104">Dabei soll die Filterung auf den vorausgehenden oder folgenden nebengeordneten Elementen erfolgen.</span><span class="sxs-lookup"><span data-stu-id="2b9d8-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="2b9d8-105">Außerdem möchten Sie vielleicht auch nach untergeordneten oder indirekt übergeordneten Elementen filtern.</span><span class="sxs-lookup"><span data-stu-id="2b9d8-105">You might want to filter based on child or ancestor elements.</span></span>  

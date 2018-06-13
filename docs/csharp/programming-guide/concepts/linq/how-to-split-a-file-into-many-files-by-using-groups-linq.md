@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326972"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="9f8ad-102">Vorgehensweise: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="9f8ad-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
 <span data-ttu-id="9f8ad-103">Dieses Beispiel zeigt eine Möglichkeit, den Inhalt von zwei Dateien zusammenführen und dann einen Satz von neuen Dateien zu erstellen, die die Daten auf neue Weise organisieren.</span><span class="sxs-lookup"><span data-stu-id="9f8ad-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  

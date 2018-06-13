@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340371"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a><span data-ttu-id="823fa-102">Verzögerte Ausführung und Auswertung in LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="823fa-102">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>
 <span data-ttu-id="823fa-103">Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzögerte Ausführung (Deferred Execution) verwenden.</span><span class="sxs-lookup"><span data-stu-id="823fa-103">Query and axis operations are often implemented to use deferred execution.</span></span> <span data-ttu-id="823fa-104">In diesem Thema werden die Voraussetzungen und die Vorteile der verzögerten Ausführung erläutert und einige Überlegungen zur Implementierung angestellt.</span><span class="sxs-lookup"><span data-stu-id="823fa-104">This topic explains the requirements and advantages of deferred execution, and some implementation considerations.</span></span>  

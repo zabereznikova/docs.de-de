@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339968"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a><span data-ttu-id="aa488-102">Entfernen von Elementen, Attributen und Knoten aus einem XML-Baum (C#)</span><span class="sxs-lookup"><span data-stu-id="aa488-102">Removing Elements, Attributes, and Nodes from an XML Tree (C#)</span></span>
 <span data-ttu-id="aa488-103">Sie können eine XML-Struktur ändern, indem Sie Elemente, Attribute und andere Knotentypen entfernen.</span><span class="sxs-lookup"><span data-stu-id="aa488-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>  

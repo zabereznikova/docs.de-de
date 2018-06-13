@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767101"
 ---
 # <a name="ltworkflowinstancemanagementgt"></a><span data-ttu-id="6ead9-102">&lt;workflowInstanceManagement&gt;</span><span class="sxs-lookup"><span data-stu-id="6ead9-102">&lt;workflowInstanceManagement&gt;</span></span>
 <span data-ttu-id="6ead9-103">Ein Dienstverhalten, das es ermöglicht, Einstellungen anzugeben, die steuern, wie Workflowinstanzen ausgeführt werden. Diese Einstellungen bestimmen auch die Dauerhaftigkeit sowie das Verhalten bei nicht behandelten Ausnahmen und im Leerlauf.</span><span class="sxs-lookup"><span data-stu-id="6ead9-103">A service behavior that enables you to specify settings that control how workflow instances are run, including persistence, unhandled Exception behavior and idle behavior.</span></span>  

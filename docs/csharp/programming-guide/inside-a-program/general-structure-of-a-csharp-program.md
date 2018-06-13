@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331213"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a><span data-ttu-id="e1d10-102">Allgemeine Struktur eines C#-Programms (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="e1d10-102">General Structure of a C# Program (C# Programming Guide)</span></span>
 <span data-ttu-id="e1d10-103">C#-Programme bestehen aus mindestens einer Datei.</span><span class="sxs-lookup"><span data-stu-id="e1d10-103">C# programs can consist of one or more files.</span></span> <span data-ttu-id="e1d10-104">Jede Datei kann 0 (null) oder mehrere Namespaces enthalten.</span><span class="sxs-lookup"><span data-stu-id="e1d10-104">Each file can contain zero or more namespaces.</span></span> <span data-ttu-id="e1d10-105">Ein Namespace kann Typen, z.B. Klassen, Strukturen, Schnittstellen, Enumerationen und Delegaten sowie andere Namespaces enthalten.</span><span class="sxs-lookup"><span data-stu-id="e1d10-105">A namespace can contain types such as classes, structs, interfaces, enumerations, and delegates, in addition to other namespaces.</span></span> <span data-ttu-id="e1d10-106">Im Folgenden wird das Grundgerüst eines C#-Programms dargestellt, das alle diese Elemente enthält.</span><span class="sxs-lookup"><span data-stu-id="e1d10-106">The following is the skeleton of a C# program that contains all of these elements.</span></span>  

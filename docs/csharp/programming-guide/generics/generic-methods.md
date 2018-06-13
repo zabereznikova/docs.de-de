@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329867"
 ---
 # <a name="generic-methods-c-programming-guide"></a><span data-ttu-id="ad1cf-102">Generische Methoden (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="ad1cf-102">Generic Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="ad1cf-103">Bei einer generischen Methode handelt es sich um eine mit Typparametern deklarierte Methode, wie folgt:</span><span class="sxs-lookup"><span data-stu-id="ad1cf-103">A generic method is a method that is declared with type parameters, as follows:</span></span>  
