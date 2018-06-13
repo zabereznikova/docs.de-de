@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562975"
 ---
 # <a name="collections-and-collection-types-for-xaml"></a><span data-ttu-id="7dc46-102">Auflistungen und Auflistungstypen für XAML</span><span class="sxs-lookup"><span data-stu-id="7dc46-102">Collections and Collection Types for XAML</span></span>
 <span data-ttu-id="7dc46-103">Dieses Thema beschreibt die Eigenschaften der Typen zu definieren, die zur Unterstützung einer auflistungs, um die Verwendung von XAML-Syntax zu unterstützen, zum Instanziieren der Auflistungselemente als untergeordnete Elemente eines übergeordneten Object-Element oder die Property-Element bestimmt werden.</span><span class="sxs-lookup"><span data-stu-id="7dc46-103">This topic describes how to define properties of types that are intended to support a collection, and to support the XAML syntax for instantiating collection items as element children of a parent object element or property element.</span></span>  
