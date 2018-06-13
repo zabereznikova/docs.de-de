@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570338"
 ---
 # <a name="common-design-patterns"></a><span data-ttu-id="97b87-102">Allgemeine Entwurfsmuster</span><span class="sxs-lookup"><span data-stu-id="97b87-102">Common Design Patterns</span></span>
 <span data-ttu-id="97b87-103">Es gibt zahlreiche Bücher unter Software Mustern, Muster Sprachen und Antipatterns, die den sehr weit gefasste Betreff von Mustern zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="97b87-103">There are numerous books on software patterns, pattern languages, and antipatterns that address the very broad subject of patterns.</span></span> <span data-ttu-id="97b87-104">Daher bietet dieses Kapitel Richtlinien und Diskussion im Zusammenhang mit der ein sehr eingeschränkter Satz von Mustern, die häufig in den Entwurf der .NET Framework-APIs verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="97b87-104">Thus, this chapter provides guidelines and discussion related to a very limited set of patterns that are used frequently in the design of the .NET Framework APIs.</span></span>  

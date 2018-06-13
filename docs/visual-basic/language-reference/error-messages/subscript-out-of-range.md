@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594266"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a><span data-ttu-id="5e158-102">Index außerhalb des definierten Bereichs (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5e158-102">Subscript out of range (Visual Basic)</span></span>
 <span data-ttu-id="5e158-103">Ein Arrayfeldindex ist ungültig, weil es außerhalb des zulässigen Bereichs liegt.</span><span class="sxs-lookup"><span data-stu-id="5e158-103">An array subscript is not valid because it falls outside the allowable range.</span></span> <span data-ttu-id="5e158-104">Für eine Dimension der niedrigste Indexwert ist immer 0, und der höchste Indexwert wird zurückgegeben, durch die `GetUpperBound` Methode für diese Dimension.</span><span class="sxs-lookup"><span data-stu-id="5e158-104">The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.</span></span>  

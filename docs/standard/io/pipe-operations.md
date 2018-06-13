@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574365"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a><span data-ttu-id="6681b-102">Pipeoperationen in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="6681b-102">Pipe Operations in the .NET Framework</span></span>
 <span data-ttu-id="6681b-103">Pipes stellen eine Möglichkeit zur prozessübergreifenden Kommunikation dar.</span><span class="sxs-lookup"><span data-stu-id="6681b-103">Pipes provide a means for interprocess communication.</span></span> <span data-ttu-id="6681b-104">Es gibt zwei Arten von Pipes:</span><span class="sxs-lookup"><span data-stu-id="6681b-104">There are two types of pipes:</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575283"
 ---
 # <a name="capitalization-conventions"></a><span data-ttu-id="3ed49-102">Konventionen für die Groß-/Kleinschreibung</span><span class="sxs-lookup"><span data-stu-id="3ed49-102">Capitalization Conventions</span></span>
 <span data-ttu-id="3ed49-103">Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwendung von Fall, dass beim stellen-IDs für Typen, Member und Parameter, die leicht zu lesen konsistent angewendet.</span><span class="sxs-lookup"><span data-stu-id="3ed49-103">The guidelines in this chapter lay out a simple method for using case that, when applied consistently, make identifiers for types, members, and parameters easy to read.</span></span>  

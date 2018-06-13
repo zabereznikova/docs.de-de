@@ -31,9 +31,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461912"
 ---
 # <a name="profiling-overview"></a><span data-ttu-id="c92fa-102">Übersicht über die Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="c92fa-102">Profiling Overview</span></span>
 <a name="top"></a> <span data-ttu-id="c92fa-103">Ein Profiler ist ein Tool, das die Ausführung einer anderen Anwendung überwacht.</span><span class="sxs-lookup"><span data-stu-id="c92fa-103">A profiler is a tool that monitors the execution of another application.</span></span> <span data-ttu-id="c92fa-104">Ein Common Language Runtime (CLR)-Profiler ist eine Dynamic Link Library (DLL), die aus Funktionen besteht, die mithilfe der Profilerstellungs-API Meldungen von der CLR empfangen und an diese senden.</span><span class="sxs-lookup"><span data-stu-id="c92fa-104">A common language runtime (CLR) profiler is a dynamic link library (DLL) that consists of functions that receive messages from, and send messages to, the CLR by using the profiling API.</span></span> <span data-ttu-id="c92fa-105">Die Profiler-DLL wird zur Laufzeit von der CLR geladen.</span><span class="sxs-lookup"><span data-stu-id="c92fa-105">The profiler DLL is loaded by the CLR at run time.</span></span>  

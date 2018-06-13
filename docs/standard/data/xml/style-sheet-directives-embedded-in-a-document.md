@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569329"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a><span data-ttu-id="c372f-102">In ein Dokument eingebettete Stylesheetanweisungen</span><span class="sxs-lookup"><span data-stu-id="c372f-102">Style Sheet Directives Embedded in a Document</span></span>
 <span data-ttu-id="c372f-103">Gelegentlich enthält vorhandener XML-Code die Stylesheetdirektive `<?xml:stylesheet?>`.</span><span class="sxs-lookup"><span data-stu-id="c372f-103">Occasionally, existing XML contains the style sheet directive of `<?xml:stylesheet?>`.</span></span> <span data-ttu-id="c372f-104">Microsoft Internet Explorer akzeptiert diese als Alternative zur `<?xml-stylesheet?>`-Syntax.</span><span class="sxs-lookup"><span data-stu-id="c372f-104">Microsoft Internet Explorer accepts this as an alternative to the `<?xml-stylesheet?>` syntax.</span></span> <span data-ttu-id="c372f-105">Wenn die XML-Daten, wie im Folgenden dargestellt, eine `<?xml:stylesheet?>`-Direktive enthalten, wird durch den Versuch, diese Daten in das Dokumentobjektmodell (DOM) zu laden, eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="c372f-105">When the XML data contains an `<?xml:stylesheet?>` directive, as shown in the following data, attempting to load this data into the XML Document Object Model (DOM) throws an exception.</span></span>  

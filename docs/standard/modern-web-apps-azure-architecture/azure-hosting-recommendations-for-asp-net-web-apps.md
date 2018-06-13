@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590332"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a><span data-ttu-id="c3d1d-103">Empfehlungen für das Hosting mit Azure für ASP.NET Core-Web-Apps</span><span class="sxs-lookup"><span data-stu-id="c3d1d-103">Azure Hosting Recommendations for ASP.NET Core Web Apps</span></span>
 

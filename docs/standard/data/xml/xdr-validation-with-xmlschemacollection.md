@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569952"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a><span data-ttu-id="67fe3-102">XDR-Validierung mit „XmlSchemaCollection“</span><span class="sxs-lookup"><span data-stu-id="67fe3-102">XDR Validation with XmlSchemaCollection</span></span>
 <span data-ttu-id="67fe3-103">Wenn das XDR-Schema (XML-Data Reduced), anhand dessen validiert wird, in der **XmlSchemaCollection** gespeichert ist, wird es dem beim Hinzufügen des Schemas zur Auflistung angegebenen Namespace-URI zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="67fe3-103">If the XML-Data Reduced (XDR) schema you are validating against is stored in the **XmlSchemaCollection**, it is associated with the namespace URI specified when the schema was added to the collection.</span></span> <span data-ttu-id="67fe3-104">**XmlValidatingReader** ordnet den Namespace-URI im XML-Dokument dem Schema zu, das diesem URI in der Auflistung entspricht.</span><span class="sxs-lookup"><span data-stu-id="67fe3-104">**XmlValidatingReader** maps the namespace URI in the XML document to the schema that corresponds to that URI in the collection.</span></span>  

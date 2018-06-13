@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593713"
 ---
 # <a name="object-required-visual-basic"></a><span data-ttu-id="6dad8-102">Objekt erforderlich (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6dad8-102">Object required (Visual Basic)</span></span>
 <span data-ttu-id="6dad8-103">Verweise auf Eigenschaften und Methoden erfordern häufig eine explizite Objektqualifizierers.</span><span class="sxs-lookup"><span data-stu-id="6dad8-103">References to properties and methods often require an explicit object qualifier.</span></span> <span data-ttu-id="6dad8-104">Dies ist der Fall.</span><span class="sxs-lookup"><span data-stu-id="6dad8-104">This is such a case.</span></span>  

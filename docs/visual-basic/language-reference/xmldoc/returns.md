@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598364"
 ---
 # <a name="ltreturnsgt-visual-basic"></a><span data-ttu-id="63a83-102">&lt;Gibt&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="63a83-102">&lt;returns&gt; (Visual Basic)</span></span>
 <span data-ttu-id="63a83-103">Gibt den Rückgabewert der Eigenschaft oder Funktion.</span><span class="sxs-lookup"><span data-stu-id="63a83-103">Specifies the return value of the property or function.</span></span>  

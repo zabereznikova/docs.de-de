@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573486"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a><span data-ttu-id="b5f14-102">Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher</span><span class="sxs-lookup"><span data-stu-id="b5f14-102">How to: Delete Files and Directories in Isolated Storage</span></span>
 <span data-ttu-id="b5f14-103">Sie können Verzeichnisse und Dateien in einer isolierten Speicherdatei löschen.</span><span class="sxs-lookup"><span data-stu-id="b5f14-103">You can delete directories and files within an isolated storage file.</span></span> <span data-ttu-id="b5f14-104">In einem Speicher sind Datei- und Verzeichnisnamen abhängig und werden relativ zum Stamm des virtuellen Dateisystems angegeben.</span><span class="sxs-lookup"><span data-stu-id="b5f14-104">Within a store, file and directory names are operating-system dependent and are specified as relative to the root of the virtual file system.</span></span> <span data-ttu-id="b5f14-105">In Windows-Betriebssystemen wird bei ihnen nicht zwischen Groß- und Kleinschreibung unterschieden.</span><span class="sxs-lookup"><span data-stu-id="b5f14-105">They are not case-sensitive on Windows operating systems.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573658"
 ---
 # <a name="nested-types"></a><span data-ttu-id="169a3-102">Geschachtelte Typen</span><span class="sxs-lookup"><span data-stu-id="169a3-102">Nested Types</span></span>
 <span data-ttu-id="169a3-103">Ein geschachtelter Typ ist ein Typ, der innerhalb des Gültigkeitsbereichs eines anderen Typs, der aufgerufen wird, den einschließenden Typ definiert.</span><span class="sxs-lookup"><span data-stu-id="169a3-103">A nested type is a type defined within the scope of another type, which is called the enclosing type.</span></span> <span data-ttu-id="169a3-104">Ein geschachtelter Typ hat Zugriff auf alle Member des einschließenden Typs.</span><span class="sxs-lookup"><span data-stu-id="169a3-104">A nested type has access to all members of its enclosing type.</span></span> <span data-ttu-id="169a3-105">Beispielsweise verfügt es über Zugriff auf private Felder, die in der einschließende Typ und zu schützende in alle vorausgehenden Elemente des einschließenden Typs definierten öffentlichen Felder definiert.</span><span class="sxs-lookup"><span data-stu-id="169a3-105">For example, it has access to private fields defined in the enclosing type and to protected fields defined in all ascendants of the enclosing type.</span></span>  

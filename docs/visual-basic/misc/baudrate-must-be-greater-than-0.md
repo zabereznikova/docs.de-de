@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599147"
 ---
 # <a name="baudrate-must-be-greater-than-0"></a><span data-ttu-id="de5a9-102">'BaudRate' muss größer als 0 sein.</span><span class="sxs-lookup"><span data-stu-id="de5a9-102">BaudRate must be greater than 0</span></span>
 <span data-ttu-id="de5a9-103">Das `BaudRate` -Argument, das für die `My.Computer.Ports.OpenSerialPort` -Methode angegeben wurde, muss größer als 0 (null) sein.</span><span class="sxs-lookup"><span data-stu-id="de5a9-103">The `BaudRate` argument specified for the `My.Computer.Ports.OpenSerialPort` method must be greater than zero.</span></span>  

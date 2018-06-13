@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172109"
 ---
 # <a name="delegate-c-reference"></a><span data-ttu-id="b5c83-102">Delegat (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="b5c83-102">delegate (C# Reference)</span></span>
 <span data-ttu-id="b5c83-103">Die Deklaration eines Delegattyps ähnelt einer Methodensignatur.</span><span class="sxs-lookup"><span data-stu-id="b5c83-103">The declaration of a delegate type is similar to a method signature.</span></span> <span data-ttu-id="b5c83-104">Er verfügt über einen Rückgabewert und eine beliebige Anzahl Parameter eines beliebigen Typs:</span><span class="sxs-lookup"><span data-stu-id="b5c83-104">It has a return value and any number of parameters of any type:</span></span>  

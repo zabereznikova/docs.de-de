@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337502"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a><span data-ttu-id="51c73-102">Überblick über die Interoperabilität (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="51c73-102">Interoperability Overview (C# Programming Guide)</span></span>
 <span data-ttu-id="51c73-103">Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwischen von C#-verwaltetem und nicht verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="51c73-103">The topic describes methods to enable interoperability between C# managed code and unmanaged code.</span></span>  

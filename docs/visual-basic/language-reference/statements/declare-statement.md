@@ -32,6 +32,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233976"
 ---
 # <a name="declare-statement"></a><span data-ttu-id="98577-102">Declare Statement</span><span class="sxs-lookup"><span data-stu-id="98577-102">Declare Statement</span></span>
 <span data-ttu-id="98577-103">Deklariert einen Verweis auf eine Prozedur in einer externen Datei implementiert.</span><span class="sxs-lookup"><span data-stu-id="98577-103">Declares a reference to a procedure implemented in an external file.</span></span>  

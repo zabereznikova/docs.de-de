@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569719"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a><span data-ttu-id="d0acc-102">Einlesen eines XML-Dokuments in das DOM</span><span class="sxs-lookup"><span data-stu-id="d0acc-102">Reading an XML Document into the DOM</span></span>
 <span data-ttu-id="d0acc-103">XML-Daten werden aus verschiedenen Formaten in den Speicher eingelesen.</span><span class="sxs-lookup"><span data-stu-id="d0acc-103">XML information is read into memory from different formats.</span></span> <span data-ttu-id="d0acc-104">Dies kann z. B. aus einer Zeichenfolge, einem Datenstream, einer URL, einem Textreader oder einer von <xref:System.Xml.XmlReader> abgeleiteten Klasse erfolgen.</span><span class="sxs-lookup"><span data-stu-id="d0acc-104">It can be read from a string, stream, URL, text reader, or a class derived from the <xref:System.Xml.XmlReader>.</span></span>  

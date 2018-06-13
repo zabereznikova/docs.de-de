@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571116"
 ---
 # <a name="type-conversion-tables-in-net"></a><span data-ttu-id="cc881-102">Typkonvertierungstabellen in .NET</span><span class="sxs-lookup"><span data-stu-id="cc881-102">Type Conversion Tables in .NET</span></span>
 <span data-ttu-id="cc881-103">Eine erweiternde Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in einen anderen Typ konvertiert wird, der gleich groß oder größer ist.</span><span class="sxs-lookup"><span data-stu-id="cc881-103">Widening conversion occurs when a value of one type is converted to another type that is of equal or greater size.</span></span> <span data-ttu-id="cc881-104">Eine einschränkende Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in einen anderen Typ konvertiert wird, der kleiner ist.</span><span class="sxs-lookup"><span data-stu-id="cc881-104">A narrowing conversion occurs when a value of one type is converted to a value of another type that is of a smaller size.</span></span> <span data-ttu-id="cc881-105">Die Tabellen in diesem Thema veranschaulichen die Verhaltensweisen dieser beiden Konvertierungsarten.</span><span class="sxs-lookup"><span data-stu-id="cc881-105">The tables in this topic illustrate the behaviors exhibited by both types of conversions.</span></span>  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233937"
 ---
 # <a name="event-statement"></a><span data-ttu-id="eac92-102">Event-Anweisung</span><span class="sxs-lookup"><span data-stu-id="eac92-102">Event Statement</span></span>
 <span data-ttu-id="eac92-103">Deklariert ein benutzerdefiniertes Ereignis.</span><span class="sxs-lookup"><span data-stu-id="eac92-103">Declares a user-defined event.</span></span>  

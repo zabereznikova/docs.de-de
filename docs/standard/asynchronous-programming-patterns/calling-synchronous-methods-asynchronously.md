@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575492"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a><span data-ttu-id="0e575-102">Asynchrones Aufrufen von synchronen Methoden</span><span class="sxs-lookup"><span data-stu-id="0e575-102">Calling Synchronous Methods Asynchronously</span></span>
 <span data-ttu-id="0e575-103">.NET Framework ermöglicht es, jede Methode auch asynchron aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="0e575-103">The .NET Framework enables you to call any method asynchronously.</span></span> <span data-ttu-id="0e575-104">Hierzu definieren Sie einen Delegaten mit der gleichen Signatur wie die Methode, die Sie aufrufen möchten. Die Common Language Runtime definiert für diesen Delegaten automatisch eine `BeginInvoke` -Methode und eine `EndInvoke` -Methode mit den entsprechenden Signaturen.</span><span class="sxs-lookup"><span data-stu-id="0e575-104">To do this you define a delegate with the same signature as the method you want to call; the common language runtime automatically defines `BeginInvoke` and `EndInvoke` methods for this delegate, with the appropriate signatures.</span></span>  

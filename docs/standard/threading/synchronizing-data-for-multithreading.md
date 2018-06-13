@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591530"
 ---
 # <a name="synchronizing-data-for-multithreading"></a><span data-ttu-id="83263-102">Datensynchronisierung für Multithreading</span><span class="sxs-lookup"><span data-stu-id="83263-102">Synchronizing Data for Multithreading</span></span>
 <span data-ttu-id="83263-103">Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufrufen können, ist es wichtig, dass diese Aufrufe synchronisiert werden.</span><span class="sxs-lookup"><span data-stu-id="83263-103">When multiple threads can make calls to the properties and methods of a single object, it is critical that those calls be synchronized.</span></span> <span data-ttu-id="83263-104">Andernfalls kann ein Thread möglicherweise die Aufgabe eines anderen Threads unterbrechen, und das Objekt bleibt womöglich in einem ungültigen Status zurück.</span><span class="sxs-lookup"><span data-stu-id="83263-104">Otherwise one thread might interrupt what another thread is doing, and the object could be left in an invalid state.</span></span> <span data-ttu-id="83263-105">Eine Klasse, deren Mitglieder vor solchen Unterbrechungen geschützt, wird threadsicher genannt.</span><span class="sxs-lookup"><span data-stu-id="83263-105">A class whose members are protected from such interruptions is called thread-safe.</span></span>  

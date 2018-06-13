@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567628"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a><span data-ttu-id="e186c-102">Gewusst wie: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen</span><span class="sxs-lookup"><span data-stu-id="e186c-102">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>
 <span data-ttu-id="e186c-103">Viele Komponenten bieten Ihnen die Möglichkeit, ihre Arbeit asynchron auszuführen.</span><span class="sxs-lookup"><span data-stu-id="e186c-103">Many components provide you with the option of performing their work asynchronously.</span></span> <span data-ttu-id="e186c-104">Mit den Komponenten <xref:System.Media.SoundPlayer> und <xref:System.Windows.Forms.PictureBox> können Sie beispielsweise Sounds und Bilder „im Hintergrund“ laden, während Ihr Hauptthread ohne Unterbrechung weiterläuft.</span><span class="sxs-lookup"><span data-stu-id="e186c-104">The <xref:System.Media.SoundPlayer> and <xref:System.Windows.Forms.PictureBox> components, for example, enable you to load sounds and images "in the background" while your main thread continues running without interruption.</span></span>  

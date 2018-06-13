@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33468959"
 ---
 # <a name="5603---federationmessagecreationsuccess"></a><span data-ttu-id="6f70e-102">5603 - FederationMessageCreationSuccess</span><span class="sxs-lookup"><span data-stu-id="6f70e-102">5603 - FederationMessageCreationSuccess</span></span>
 ## <a name="properties"></a><span data-ttu-id="6f70e-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="6f70e-103">Properties</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573580"
 ---
 # <a name="choosing-between-class-and-struct"></a><span data-ttu-id="8bcb5-102">Auswählen zwischen Klasse und Struktur</span><span class="sxs-lookup"><span data-stu-id="8bcb5-102">Choosing Between Class and Struct</span></span>
 <span data-ttu-id="8bcb5-103">Eine der grundlegenden Designentscheidungen, die jede Framework Designer portalclient ist, ob einen Typ als Klasse (ein Verweistyp) oder als eine Struktur (Werttyp) entworfen.</span><span class="sxs-lookup"><span data-stu-id="8bcb5-103">One of the basic design decisions every framework designer faces is whether to design a type as a class (a reference type) or as a struct (a value type).</span></span> <span data-ttu-id="8bcb5-104">Die Kenntnis der Unterschiede im Verhalten von Verweistypen und Werttypen ist in dieser Auswahl entscheidend.</span><span class="sxs-lookup"><span data-stu-id="8bcb5-104">Good understanding of the differences in the behavior of reference types and value types is crucial in making this choice.</span></span>  

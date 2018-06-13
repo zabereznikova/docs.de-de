@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574854"
 ---
 # <a name="how-to-implement-an-observer"></a><span data-ttu-id="409cd-102">Gewusst wie: Implementieren eines Observers</span><span class="sxs-lookup"><span data-stu-id="409cd-102">How to: Implement an Observer</span></span>
 <span data-ttu-id="409cd-103">Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Observer, der für den Empfang von Benachrichtigungen registriert wird, und einem Anbieter, der Daten überwacht und Benachrichtigungen an mindestens einen Observer sendet.</span><span class="sxs-lookup"><span data-stu-id="409cd-103">The observer design pattern requires a division between an observer, which registers for notifications, and a provider, which monitors data and sends notifications to one or more observers.</span></span> <span data-ttu-id="409cd-104">In diesem Thema wird das Erstellen eines Observers behandelt.</span><span class="sxs-lookup"><span data-stu-id="409cd-104">This topic discusses how to create an observer.</span></span> <span data-ttu-id="409cd-105">In dem verwandten Thema [Gewusst wie: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md) wird erläutert, wie ein Anbieter erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="409cd-105">A related topic, [How to: Implement a Provider](../../../docs/standard/events/how-to-implement-a-provider.md), discusses how to create an provider.</span></span>  

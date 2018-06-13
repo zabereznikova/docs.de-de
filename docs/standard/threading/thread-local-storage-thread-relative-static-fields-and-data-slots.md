@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589853"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a><span data-ttu-id="51fb1-102">Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots</span><span class="sxs-lookup"><span data-stu-id="51fb1-102">Thread Local Storage: Thread-Relative Static Fields and Data Slots</span></span>
 <span data-ttu-id="51fb1-103">Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum Speichern von Daten verwenden, die für einen Thread und die Anwendungsdomäne eindeutig sind.</span><span class="sxs-lookup"><span data-stu-id="51fb1-103">You can use managed thread local storage (TLS) to store data that is unique to a thread and application domain.</span></span> <span data-ttu-id="51fb1-104">.NET Framework bietet zwei Möglichkeiten zur Verwendung von verwaltetem TLS: threadbezogene statische Felder und Datenslots.</span><span class="sxs-lookup"><span data-stu-id="51fb1-104">The .NET Framework provides two ways to use managed TLS: thread-relative static fields and data slots.</span></span>  
