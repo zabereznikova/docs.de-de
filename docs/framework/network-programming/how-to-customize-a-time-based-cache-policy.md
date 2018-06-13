@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390964"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a><span data-ttu-id="6e705-102">Gewusst wie: Anpassen einer zeitbasierten Cacherichtlinie</span><span class="sxs-lookup"><span data-stu-id="6e705-102">How to: Customize a Time-Based Cache Policy</span></span>
 <span data-ttu-id="6e705-103">Wenn Sie eine zeitbasierte Cacherichtlinie erstellen, können Sie das Cacheverhalten anpassen, indem Sie Werte für das maximale Alter, die minimale Aktualität, die maximale Überalterung oder das Datum für die Cachesynchronisierung angeben.</span><span class="sxs-lookup"><span data-stu-id="6e705-103">When creating a time-based cache policy, you can customize caching behavior by specifying values for maximum age, minimum freshness, maximum staleness, or cache synchronization date.</span></span> <span data-ttu-id="6e705-104">Das <xref:System.Net.Cache.HttpRequestCachePolicy>-Objekt enthält mehrere Konstruktoren, mit denen Sie gültige Kombinationen dieser Werte angeben können.</span><span class="sxs-lookup"><span data-stu-id="6e705-104">The <xref:System.Net.Cache.HttpRequestCachePolicy> object provides several constructors that allow you to specify valid combinations of these values.</span></span>  

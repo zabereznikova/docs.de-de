@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392745"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a><span data-ttu-id="a99f4-102">Gewusst wie: Migrieren von verwaltetem Code DCOM zu WCF</span><span class="sxs-lookup"><span data-stu-id="a99f4-102">How to: Migrate Managed-Code DCOM to WCF</span></span>
 <span data-ttu-id="a99f4-103">Windows Communication Foundation (WCF) ist für Aufrufe von verwaltetem Code zwischen Servern und Clients in einer verteilten Umgebung die empfohlene und sichere Wahl im Vergleich zu DCOM (Distributed Component Object Model).</span><span class="sxs-lookup"><span data-stu-id="a99f4-103">Windows Communication Foundation (WCF) is the recommended and secure choice over Distributed Component Object Model (DCOM) for managed code calls between servers and clients in a distributed environment.</span></span> <span data-ttu-id="a99f4-104">In diesem Artikel wird für die folgenden Szenarien gezeigt, wie Sie Code aus DCOM zu WCF migrieren.</span><span class="sxs-lookup"><span data-stu-id="a99f4-104">This article shows how you to migrate code from DCOM to WCF for the following scenarios.</span></span>  

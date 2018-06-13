@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409827"
 ---
 # <a name="tlbimpexe-type-library-importer"></a><span data-ttu-id="6c53f-102">Tlbimp.exe (Type Library Importer-Tool)</span><span class="sxs-lookup"><span data-stu-id="6c53f-102">Tlbimp.exe (Type Library Importer)</span></span>
 <span data-ttu-id="6c53f-103">Das Type Library Importer-Tool konvertiert die Typdefinitionen einer COM-Typbibliothek in äquivalente Definitionen einer Common Language Runtime-Assembly.</span><span class="sxs-lookup"><span data-stu-id="6c53f-103">The Type Library Importer converts the type definitions found within a COM type library into equivalent definitions in a common language runtime assembly.</span></span> <span data-ttu-id="6c53f-104">Die Ausgabe von "Tlbimp.exe" besteht aus einer binären Datei (einer Assembly), die Laufzeitmetadaten für die in der ursprünglichen Typbibliothek definierten Typen enthält.</span><span class="sxs-lookup"><span data-stu-id="6c53f-104">The output of Tlbimp.exe is a binary file (an assembly) that contains runtime metadata for the types defined within the original type library.</span></span> <span data-ttu-id="6c53f-105">Diese Datei können Sie mit Tools wie [Ildasm.exe](ildasm-exe-il-disassembler.md) überprüfen.</span><span class="sxs-lookup"><span data-stu-id="6c53f-105">You can examine this file with tools such as [Ildasm.exe](ildasm-exe-il-disassembler.md).</span></span>  

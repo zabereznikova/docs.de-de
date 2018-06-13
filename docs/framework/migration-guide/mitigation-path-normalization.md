@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389513"
 ---
 # <a name="mitigation-path-normalization"></a><span data-ttu-id="3186a-102">Entschärfung: Pfadnormalisierung</span><span class="sxs-lookup"><span data-stu-id="3186a-102">Mitigation: Path Normalization</span></span>
 <span data-ttu-id="3186a-103">Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an hat sich die Pfadnormalisierung in .NET Framework geändert.</span><span class="sxs-lookup"><span data-stu-id="3186a-103">Starting with apps the target  the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization in the .NET Framework has changed.</span></span>  

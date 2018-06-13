@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396258"
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a><span data-ttu-id="35175-102">Gewusst wie: Erkennen von Netzwerkverfügbarkeit und Adressänderungen</span><span class="sxs-lookup"><span data-stu-id="35175-102">How to: Detect Network Availability and Address Changes</span></span>
 <span data-ttu-id="35175-103">In diesem Beispiel wird gezeigt, wie Änderungen in der Netzwerkadresse einer Schnittstelle erkannt werden können.</span><span class="sxs-lookup"><span data-stu-id="35175-103">This sample shows how to detect changes in the network address of an interface.</span></span>  

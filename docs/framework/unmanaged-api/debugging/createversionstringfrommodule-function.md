@@ -1,14 +1,6 @@
 ---
 title: CreateVersionStringFromModule-Funktion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateVersionStringFromModule
 api_location:
@@ -24,22 +16,19 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9d7d545256393cfbe37216f0d6db064d5e7cb410
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0988b2c4471cb5449f7c7fac82c6e94bcd537b7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409279"
 ---
-# <a name="createversionstringfrommodule-function"></a><span data-ttu-id="7adfc-102">CreateVersionStringFromModule-Funktion</span><span class="sxs-lookup"><span data-stu-id="7adfc-102">CreateVersionStringFromModule Function</span></span>
-<span data-ttu-id="7adfc-103">Erstellt eine Versionszeichenfolge aus einem CLR-Pfad (Common Language Runtime) in einem Zielprozess.</span><span class="sxs-lookup"><span data-stu-id="7adfc-103">Creates a version string from a common language runtime (CLR) path in a target process.</span></span>  
+# <a name="createversionstringfrommodule-function"></a><span data-ttu-id="d26af-102">CreateVersionStringFromModule-Funktion</span><span class="sxs-lookup"><span data-stu-id="d26af-102">CreateVersionStringFromModule Function</span></span>
+<span data-ttu-id="d26af-103">Erstellt eine Versionszeichenfolge aus einem CLR-Pfad (Common Language Runtime) in einem Zielprozess.</span><span class="sxs-lookup"><span data-stu-id="d26af-103">Creates a version string from a common language runtime (CLR) path in a target process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7adfc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7adfc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d26af-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d26af-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateVersionStringFromModule (  
@@ -52,48 +41,48 @@ HRESULT CreateVersionStringFromModule (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7adfc-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7adfc-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d26af-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d26af-105">Parameters</span></span>  
  `pidDebuggee`  
- <span data-ttu-id="7adfc-106">[in] Bezeichner des Prozesses, in den die Ziel-CLR geladen wird.</span><span class="sxs-lookup"><span data-stu-id="7adfc-106">[in] Identifier of the process in which the target CLR is loaded.</span></span>  
+ <span data-ttu-id="d26af-106">[in] Bezeichner des Prozesses, in den die Ziel-CLR geladen wird.</span><span class="sxs-lookup"><span data-stu-id="d26af-106">[in] Identifier of the process in which the target CLR is loaded.</span></span>  
   
  `szModuleName`  
- <span data-ttu-id="7adfc-107">[in] Vollständiger oder relativer Pfad zur im Prozess geladenen Ziel-CLR.</span><span class="sxs-lookup"><span data-stu-id="7adfc-107">[in] Full or relative path to the target CLR that is loaded in the process.</span></span>  
+ <span data-ttu-id="d26af-107">[in] Vollständiger oder relativer Pfad zur im Prozess geladenen Ziel-CLR.</span><span class="sxs-lookup"><span data-stu-id="d26af-107">[in] Full or relative path to the target CLR that is loaded in the process.</span></span>  
   
  `pBuffer`  
- <span data-ttu-id="7adfc-108">[out] Rückgabepuffer zum Speichern der Versionszeichenfolge für die Ziel-CLR.</span><span class="sxs-lookup"><span data-stu-id="7adfc-108">[out] Return buffer for storing the version string for the target CLR.</span></span>  
+ <span data-ttu-id="d26af-108">[out] Rückgabepuffer zum Speichern der Versionszeichenfolge für die Ziel-CLR.</span><span class="sxs-lookup"><span data-stu-id="d26af-108">[out] Return buffer for storing the version string for the target CLR.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="7adfc-109">[in] Größe von `pBuffer`.</span><span class="sxs-lookup"><span data-stu-id="7adfc-109">[in] Size of `pBuffer`.</span></span>  
+ <span data-ttu-id="d26af-109">[in] Größe von `pBuffer`.</span><span class="sxs-lookup"><span data-stu-id="d26af-109">[in] Size of `pBuffer`.</span></span>  
   
  `pdwLength`  
- <span data-ttu-id="7adfc-110">[out] Länge der von `pBuffer` zurückgegebenen Versionszeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="7adfc-110">[out] Length of the version string returned by `pBuffer`.</span></span>  
+ <span data-ttu-id="d26af-110">[out] Länge der von `pBuffer` zurückgegebenen Versionszeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="d26af-110">[out] Length of the version string returned by `pBuffer`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7adfc-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7adfc-111">Return Value</span></span>  
- <span data-ttu-id="7adfc-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="7adfc-112">S_OK</span></span>  
- <span data-ttu-id="7adfc-113">Die Versionszeichenfolge für die Ziel-CLR wurde erfolgreich in `pBuffer` zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="7adfc-113">The version string for the target CLR was successfully returned in `pBuffer`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d26af-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d26af-111">Return Value</span></span>  
+ <span data-ttu-id="d26af-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="d26af-112">S_OK</span></span>  
+ <span data-ttu-id="d26af-113">Die Versionszeichenfolge für die Ziel-CLR wurde erfolgreich in `pBuffer` zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="d26af-113">The version string for the target CLR was successfully returned in `pBuffer`.</span></span>  
   
- <span data-ttu-id="7adfc-114">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="7adfc-114">E_INVALIDARG</span></span>  
- <span data-ttu-id="7adfc-115">`szModuleName` ist NULL, oder `pBuffer` oder `cchBuffer` ist NULL.</span><span class="sxs-lookup"><span data-stu-id="7adfc-115">`szModuleName` is null, or either `pBuffer` or `cchBuffer` is null.</span></span> <span data-ttu-id="7adfc-116">`pBuffer` und `cchBuffer` müssen beide NULL oder nicht NULL sein.</span><span class="sxs-lookup"><span data-stu-id="7adfc-116">`pBuffer` and `cchBuffer` must both be null or non-null.</span></span>  
+ <span data-ttu-id="d26af-114">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="d26af-114">E_INVALIDARG</span></span>  
+ <span data-ttu-id="d26af-115">`szModuleName` ist NULL, oder `pBuffer` oder `cchBuffer` ist NULL.</span><span class="sxs-lookup"><span data-stu-id="d26af-115">`szModuleName` is null, or either `pBuffer` or `cchBuffer` is null.</span></span> <span data-ttu-id="d26af-116">`pBuffer` und `cchBuffer` müssen beide NULL oder nicht NULL sein.</span><span class="sxs-lookup"><span data-stu-id="d26af-116">`pBuffer` and `cchBuffer` must both be null or non-null.</span></span>  
   
- <span data-ttu-id="7adfc-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="7adfc-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>  
- <span data-ttu-id="7adfc-118">`pdwLength` ist größer als `cchBuffer`.</span><span class="sxs-lookup"><span data-stu-id="7adfc-118">`pdwLength` is greater than `cchBuffer`.</span></span> <span data-ttu-id="7adfc-119">Dies kann ein erwartetes Ergebnis sein, wenn Sie NULL für `pBuffer` und `cchBuffer` übergeben haben und die erforderliche Puffergröße mithilfe von `pdwLength` abgefragt haben.</span><span class="sxs-lookup"><span data-stu-id="7adfc-119">This may be an expected result if you have passed null for both `pBuffer` and `cchBuffer`, and queried the necessary buffer size by using `pdwLength`.</span></span>  
+ <span data-ttu-id="d26af-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="d26af-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>  
+ <span data-ttu-id="d26af-118">`pdwLength` ist größer als `cchBuffer`.</span><span class="sxs-lookup"><span data-stu-id="d26af-118">`pdwLength` is greater than `cchBuffer`.</span></span> <span data-ttu-id="d26af-119">Dies kann ein erwartetes Ergebnis sein, wenn Sie NULL für `pBuffer` und `cchBuffer` übergeben haben und die erforderliche Puffergröße mithilfe von `pdwLength` abgefragt haben.</span><span class="sxs-lookup"><span data-stu-id="d26af-119">This may be an expected result if you have passed null for both `pBuffer` and `cchBuffer`, and queried the necessary buffer size by using `pdwLength`.</span></span>  
   
- <span data-ttu-id="7adfc-120">HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)</span><span class="sxs-lookup"><span data-stu-id="7adfc-120">HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)</span></span>  
- <span data-ttu-id="7adfc-121">`szModuleName` enthält keinen Pfad zu einer gültigen CLR im Zielprozess.</span><span class="sxs-lookup"><span data-stu-id="7adfc-121">`szModuleName` does not contain a path to a valid CLR in the target process.</span></span>  
+ <span data-ttu-id="d26af-120">HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)</span><span class="sxs-lookup"><span data-stu-id="d26af-120">HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)</span></span>  
+ <span data-ttu-id="d26af-121">`szModuleName` enthält keinen Pfad zu einer gültigen CLR im Zielprozess.</span><span class="sxs-lookup"><span data-stu-id="d26af-121">`szModuleName` does not contain a path to a valid CLR in the target process.</span></span>  
   
- <span data-ttu-id="7adfc-122">E_FAIL (oder andere E_-Rückgabecodes)</span><span class="sxs-lookup"><span data-stu-id="7adfc-122">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="7adfc-123">`pidDebuggee` verweist auf keinen gültigen Prozess, oder anderer Fehler,</span><span class="sxs-lookup"><span data-stu-id="7adfc-123">`pidDebuggee` does not refer to a valid process, or other failure.</span></span>  
+ <span data-ttu-id="d26af-122">E_FAIL (oder andere E_-Rückgabecodes)</span><span class="sxs-lookup"><span data-stu-id="d26af-122">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="d26af-123">`pidDebuggee` verweist auf keinen gültigen Prozess, oder anderer Fehler,</span><span class="sxs-lookup"><span data-stu-id="d26af-123">`pidDebuggee` does not refer to a valid process, or other failure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7adfc-124">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7adfc-124">Remarks</span></span>  
- <span data-ttu-id="7adfc-125">Diese Funktion akzeptiert einen CLR-Prozess, der von `pidDebuggee` und einem Zeichenfolgepfad identifiziert wird, der durch `szModuleName` angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="7adfc-125">This function accepts a CLR process that is identified by `pidDebuggee` and a string path that is specified by `szModuleName`.</span></span> <span data-ttu-id="7adfc-126">Die Versionszeichenfolge wird im Puffer zurückgegeben, auf den `pBuffer` zeigt.</span><span class="sxs-lookup"><span data-stu-id="7adfc-126">The version string is returned in the buffer that `pBuffer` points to.</span></span> <span data-ttu-id="7adfc-127">Diese Zeichenfolge ist für den Funktionsbenutzer nicht transparent. Das heißt, gibt es keine systeminterne Bedeutung in der Versionszeichenfolge selbst.</span><span class="sxs-lookup"><span data-stu-id="7adfc-127">This string is opaque to the function user; that is, there is no intrinsic meaning in the version string itself.</span></span> <span data-ttu-id="7adfc-128">Es wird nur im Kontext dieser Funktion verwendet und die [CreateDebuggingInterfaceFromVersion-Funktion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).</span><span class="sxs-lookup"><span data-stu-id="7adfc-128">It is used solely in the context of this function and the [CreateDebuggingInterfaceFromVersion function](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d26af-124">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d26af-124">Remarks</span></span>  
+ <span data-ttu-id="d26af-125">Diese Funktion akzeptiert einen CLR-Prozess, der von `pidDebuggee` und einem Zeichenfolgepfad identifiziert wird, der durch `szModuleName` angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="d26af-125">This function accepts a CLR process that is identified by `pidDebuggee` and a string path that is specified by `szModuleName`.</span></span> <span data-ttu-id="d26af-126">Die Versionszeichenfolge wird im Puffer zurückgegeben, auf den `pBuffer` zeigt.</span><span class="sxs-lookup"><span data-stu-id="d26af-126">The version string is returned in the buffer that `pBuffer` points to.</span></span> <span data-ttu-id="d26af-127">Diese Zeichenfolge ist für den Funktionsbenutzer nicht transparent. Das heißt, gibt es keine systeminterne Bedeutung in der Versionszeichenfolge selbst.</span><span class="sxs-lookup"><span data-stu-id="d26af-127">This string is opaque to the function user; that is, there is no intrinsic meaning in the version string itself.</span></span> <span data-ttu-id="d26af-128">Es wird nur im Kontext dieser Funktion verwendet und die [CreateDebuggingInterfaceFromVersion-Funktion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).</span><span class="sxs-lookup"><span data-stu-id="d26af-128">It is used solely in the context of this function and the [CreateDebuggingInterfaceFromVersion function](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).</span></span>  
   
- <span data-ttu-id="7adfc-129">Diese Funktion sollte zweimal aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="7adfc-129">This function should be called twice.</span></span> <span data-ttu-id="7adfc-130">Übergeben Sie beim ersten Aufruf NULL für `pBuffer` und `cchBuffer`.</span><span class="sxs-lookup"><span data-stu-id="7adfc-130">When you call it the first time, pass null for both `pBuffer` and `cchBuffer`.</span></span> <span data-ttu-id="7adfc-131">In diesem Fall wird die für `pBuffer` erforderliche Größe des Puffers in `pdwLength` zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="7adfc-131">When you do this, the size of the buffer necessary for `pBuffer` will be returned in `pdwLength`.</span></span> <span data-ttu-id="7adfc-132">Sie können dann die Funktion ein zweites Mal aufrufen und den Puffer in `pBuffer` und dessen Größe in `cchBuffer` übergeben.</span><span class="sxs-lookup"><span data-stu-id="7adfc-132">You can then call the function a second time, and pass the buffer in `pBuffer` and its size in `cchBuffer`.</span></span>  
+ <span data-ttu-id="d26af-129">Diese Funktion sollte zweimal aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="d26af-129">This function should be called twice.</span></span> <span data-ttu-id="d26af-130">Übergeben Sie beim ersten Aufruf NULL für `pBuffer` und `cchBuffer`.</span><span class="sxs-lookup"><span data-stu-id="d26af-130">When you call it the first time, pass null for both `pBuffer` and `cchBuffer`.</span></span> <span data-ttu-id="d26af-131">In diesem Fall wird die für `pBuffer` erforderliche Größe des Puffers in `pdwLength` zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="d26af-131">When you do this, the size of the buffer necessary for `pBuffer` will be returned in `pdwLength`.</span></span> <span data-ttu-id="d26af-132">Sie können dann die Funktion ein zweites Mal aufrufen und den Puffer in `pBuffer` und dessen Größe in `cchBuffer` übergeben.</span><span class="sxs-lookup"><span data-stu-id="d26af-132">You can then call the function a second time, and pass the buffer in `pBuffer` and its size in `cchBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7adfc-133">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7adfc-133">Requirements</span></span>  
- <span data-ttu-id="7adfc-134">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7adfc-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d26af-133">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d26af-133">Requirements</span></span>  
+ <span data-ttu-id="d26af-134">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d26af-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7adfc-135">**Header:** dbgshim.h</span><span class="sxs-lookup"><span data-stu-id="7adfc-135">**Header:** dbgshim.h</span></span>  
+ <span data-ttu-id="d26af-135">**Header:** dbgshim.h</span><span class="sxs-lookup"><span data-stu-id="d26af-135">**Header:** dbgshim.h</span></span>  
   
- <span data-ttu-id="7adfc-136">**Bibliothek:** dbgshim.dll</span><span class="sxs-lookup"><span data-stu-id="7adfc-136">**Library:** dbgshim.dll</span></span>  
+ <span data-ttu-id="d26af-136">**Bibliothek:** dbgshim.dll</span><span class="sxs-lookup"><span data-stu-id="d26af-136">**Library:** dbgshim.dll</span></span>  
   
- <span data-ttu-id="7adfc-137">**.NET Framework-Versionen:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="7adfc-137">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="d26af-137">**.NET Framework-Versionen:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="d26af-137">**.NET Framework Versions:** 3.5 SP1</span></span>

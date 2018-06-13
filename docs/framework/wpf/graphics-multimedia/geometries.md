@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556054"
 ---
 # <a name="geometries"></a><span data-ttu-id="7032f-102">Geometrien</span><span class="sxs-lookup"><span data-stu-id="7032f-102">Geometries</span></span>
 <span data-ttu-id="7032f-103"><xref:System.Windows.Media.Geometry> ist eine vielseitige Klasse, die zum Rendern verwendet [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] Grafiken, Treffertests für Objekte und Clipping Regionen definieren</span><span class="sxs-lookup"><span data-stu-id="7032f-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30957645"
 ---
 # <a name="samples-and-tutorials"></a><span data-ttu-id="b46f8-104">Beispiele und Tutorials</span><span class="sxs-lookup"><span data-stu-id="b46f8-104">Samples and tutorials</span></span>
 

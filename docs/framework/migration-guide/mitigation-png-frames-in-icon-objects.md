@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387925"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a><span data-ttu-id="221fd-102">Problemumgehung: PNG-Bilder in Symbolobjekten</span><span class="sxs-lookup"><span data-stu-id="221fd-102">Mitigation: PNG Frames in Icon Objects</span></span>
 <span data-ttu-id="221fd-103">Ab .NET Framework 4.6 konvertiert die <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> -Methode Symbole mit PNG-Bildern erfolgreich in <xref:System.Drawing.Bitmap> -Objekte.</span><span class="sxs-lookup"><span data-stu-id="221fd-103">Starting with the .NET Framework 4.6, the <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> method successfully converts icons with PNG frames into <xref:System.Drawing.Bitmap> objects.</span></span>  

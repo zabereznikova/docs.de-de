@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557523"
 ---
 # <a name="richtextbox-overview"></a><span data-ttu-id="1d234-102">Übersicht über RichTextBox</span><span class="sxs-lookup"><span data-stu-id="1d234-102">RichTextBox Overview</span></span>
 <span data-ttu-id="1d234-103">Die <xref:System.Windows.Controls.RichTextBox> Steuerelement können Sie zum Anzeigen oder Bearbeiten von fortlaufenden Inhalt, einschließlich Absätze, Bilder und Tabellen.</span><span class="sxs-lookup"><span data-stu-id="1d234-103">The <xref:System.Windows.Controls.RichTextBox> control enables you to display or edit flow content including paragraphs, images, tables, and more.</span></span> <span data-ttu-id="1d234-104">Dieses Thema enthält die <xref:System.Windows.Controls.TextBox> -Klasse und stellt Beispiele für die Verwendung in beiden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und c#.</span><span class="sxs-lookup"><span data-stu-id="1d234-104">This topic introduces the <xref:System.Windows.Controls.TextBox> class and provides examples of how to use it in both [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] and C#.</span></span>  

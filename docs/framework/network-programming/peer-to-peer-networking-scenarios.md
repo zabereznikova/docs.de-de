@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395452"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a><span data-ttu-id="a32f9-102">Peer-to-Peer-Netzwerkszenarien</span><span class="sxs-lookup"><span data-stu-id="a32f9-102">Peer-to-Peer Networking Scenarios</span></span>
 <span data-ttu-id="a32f9-103">Peer-to-Peer-Netzwerke ermöglichen oder erweitern die folgenden Szenarios:</span><span class="sxs-lookup"><span data-stu-id="a32f9-103">Peer-to-peer networking enables or enhances the following scenarios:</span></span>  

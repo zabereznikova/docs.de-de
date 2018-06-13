@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555937"
 ---
 # <a name="how-to-position-a-tooltip"></a><span data-ttu-id="1ce08-102">Gewusst wie: Positionieren einer QuickInfo</span><span class="sxs-lookup"><span data-stu-id="1ce08-102">How to: Position a ToolTip</span></span>
 <span data-ttu-id="1ce08-103">Dieses Beispiel zeigt, wie die Position einer QuickInfo auf dem Bildschirm an.</span><span class="sxs-lookup"><span data-stu-id="1ce08-103">This example shows how to specify the position of a tooltip on the screen.</span></span>  

@@ -1,14 +1,6 @@
 ---
 title: ICorDebugAssembly::EnumerateModules-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugAssembly.EnumerateModules
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: c7ba51a1-0dd5-4452-b471-232febe0f897
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5bc6aced78d1d7ffc6521bca52bed1b2e232bbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ada2e0e81c9e022e152e01472839d5d506332fac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402381"
 ---
-# <a name="icordebugassemblyenumeratemodules-method"></a><span data-ttu-id="151c1-102">ICorDebugAssembly::EnumerateModules-Methode</span><span class="sxs-lookup"><span data-stu-id="151c1-102">ICorDebugAssembly::EnumerateModules Method</span></span>
-<span data-ttu-id="151c1-103">Ruft einen Enumerator für die Module enthalten, die der `ICorDebugAssembly`.</span><span class="sxs-lookup"><span data-stu-id="151c1-103">Gets an enumerator for the modules contained in the `ICorDebugAssembly`.</span></span>  
+# <a name="icordebugassemblyenumeratemodules-method"></a><span data-ttu-id="a5a6c-102">ICorDebugAssembly::EnumerateModules-Methode</span><span class="sxs-lookup"><span data-stu-id="a5a6c-102">ICorDebugAssembly::EnumerateModules Method</span></span>
+<span data-ttu-id="a5a6c-103">Ruft einen Enumerator für die Module enthalten, die der `ICorDebugAssembly`.</span><span class="sxs-lookup"><span data-stu-id="a5a6c-103">Gets an enumerator for the modules contained in the `ICorDebugAssembly`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="151c1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="151c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5a6c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a5a6c-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateModules (  
@@ -46,15 +35,15 @@ HRESULT EnumerateModules (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="151c1-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="151c1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a5a6c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a5a6c-105">Parameters</span></span>  
  `ppModules`  
- <span data-ttu-id="151c1-106">[out] Ein Zeiger auf die Adresse der ICorDebugModuleEnum-Schnittstelle, die der Enumerator ist.</span><span class="sxs-lookup"><span data-stu-id="151c1-106">[out] A pointer to the address of the ICorDebugModuleEnum interface that is the enumerator.</span></span>  
+ <span data-ttu-id="a5a6c-106">[out] Ein Zeiger auf die Adresse der ICorDebugModuleEnum-Schnittstelle, die der Enumerator ist.</span><span class="sxs-lookup"><span data-stu-id="a5a6c-106">[out] A pointer to the address of the ICorDebugModuleEnum interface that is the enumerator.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="151c1-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="151c1-107">Requirements</span></span>  
- <span data-ttu-id="151c1-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="151c1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5a6c-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a5a6c-107">Requirements</span></span>  
+ <span data-ttu-id="a5a6c-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5a6c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="151c1-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="151c1-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a5a6c-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a5a6c-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="151c1-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="151c1-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a5a6c-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5a6c-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="151c1-111">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="151c1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="a5a6c-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5a6c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553785"
 ---
 # <a name="panel-how-to-topics"></a><span data-ttu-id="fb93b-102">Gewusst-wie-Themen zu Panel</span><span class="sxs-lookup"><span data-stu-id="fb93b-102">Panel How-to Topics</span></span>
 <span data-ttu-id="fb93b-103">Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.Panel> Element und die zugehörigen [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fb93b-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  

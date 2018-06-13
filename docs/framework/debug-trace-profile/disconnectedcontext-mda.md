@@ -1,13 +1,6 @@
 ---
 title: disconnectedContext-MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DisconnectedContext MDA
 - MDAs (managed debugging assistants), disconnected context
@@ -16,36 +9,34 @@ helpviewer_keywords:
 - context disconnections
 - managed debugging assistants (MDAs), disconnected context
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 90e840fc24361735b65879702293daadce0bc90e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5232a01d877484591df63afc68f672327d4b9d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386248"
 ---
-# <a name="disconnectedcontext-mda"></a><span data-ttu-id="b6107-102">disconnectedContext-MDA</span><span class="sxs-lookup"><span data-stu-id="b6107-102">disconnectedContext MDA</span></span>
-<span data-ttu-id="b6107-103">Der `disconnectedContext`-Assistent für verwaltetes Debuggen (MDA) wird aktiviert, wenn die CLR versucht, einen Übergang zu einem getrennten Apartment oder Kontext durchzuführen, während gerade eine Anforderung für ein COM-Objekt verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="b6107-103">The `disconnectedContext` managed debugging assistant (MDA) is activated when the CLR attempts to transition into a disconnected apartment or context while servicing a request concerning a COM object.</span></span>  
+# <a name="disconnectedcontext-mda"></a><span data-ttu-id="d73b0-102">disconnectedContext-MDA</span><span class="sxs-lookup"><span data-stu-id="d73b0-102">disconnectedContext MDA</span></span>
+<span data-ttu-id="d73b0-103">Der `disconnectedContext`-Assistent für verwaltetes Debuggen (MDA) wird aktiviert, wenn die CLR versucht, einen Übergang zu einem getrennten Apartment oder Kontext durchzuführen, während gerade eine Anforderung für ein COM-Objekt verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="d73b0-103">The `disconnectedContext` managed debugging assistant (MDA) is activated when the CLR attempts to transition into a disconnected apartment or context while servicing a request concerning a COM object.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="b6107-104">Symptome</span><span class="sxs-lookup"><span data-stu-id="b6107-104">Symptoms</span></span>  
- <span data-ttu-id="b6107-105">Aufrufe, die auf einem [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) ausgeführt werden, werden an die zugrunde liegende COM-Komponente im aktuellen Apartment oder Kontext zugestellt, statt an den, in dem sie vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="b6107-105">Calls made on a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) are delivered to the underlying COM component in the current apartment or context instead of the one in which they exist.</span></span> <span data-ttu-id="b6107-106">Dies kann zur Beschädigung oder zu Datenverlusten führen, wenn die COM-Komponente keine Multithread-Komponente ist, wie im Fall von Singlethread-Apartment-Komponenten (Single Thread Apartment, STA).</span><span class="sxs-lookup"><span data-stu-id="b6107-106">This can cause corruption and or data loss if the COM component is not multithreaded, as in the case of single-threaded apartment (STA) components.</span></span> <span data-ttu-id="b6107-107">Alternativ kann der Aufruf, wenn der RCW selbst ein Proxy ist, dazu führen, dass eine <xref:System.Runtime.InteropServices.COMException> mit einem HRESULT von RPC_E_WRONG_THREAD ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="b6107-107">Alternatively, if the RCW is itself a proxy, the call might result in the throwing of a <xref:System.Runtime.InteropServices.COMException> with an HRESULT of RPC_E_WRONG_THREAD.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="d73b0-104">Symptome</span><span class="sxs-lookup"><span data-stu-id="d73b0-104">Symptoms</span></span>  
+ <span data-ttu-id="d73b0-105">Aufrufe, die auf einem [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) ausgeführt werden, werden an die zugrunde liegende COM-Komponente im aktuellen Apartment oder Kontext zugestellt, statt an den, in dem sie vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="d73b0-105">Calls made on a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) are delivered to the underlying COM component in the current apartment or context instead of the one in which they exist.</span></span> <span data-ttu-id="d73b0-106">Dies kann zur Beschädigung oder zu Datenverlusten führen, wenn die COM-Komponente keine Multithread-Komponente ist, wie im Fall von Singlethread-Apartment-Komponenten (Single Thread Apartment, STA).</span><span class="sxs-lookup"><span data-stu-id="d73b0-106">This can cause corruption and or data loss if the COM component is not multithreaded, as in the case of single-threaded apartment (STA) components.</span></span> <span data-ttu-id="d73b0-107">Alternativ kann der Aufruf, wenn der RCW selbst ein Proxy ist, dazu führen, dass eine <xref:System.Runtime.InteropServices.COMException> mit einem HRESULT von RPC_E_WRONG_THREAD ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="d73b0-107">Alternatively, if the RCW is itself a proxy, the call might result in the throwing of a <xref:System.Runtime.InteropServices.COMException> with an HRESULT of RPC_E_WRONG_THREAD.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="b6107-108">Ursache</span><span class="sxs-lookup"><span data-stu-id="b6107-108">Cause</span></span>  
- <span data-ttu-id="b6107-109">Das OLE-Apartment oder der OLE-Kontext wurde heruntergefahren, als die CLR versucht hat, darin überzugehen.</span><span class="sxs-lookup"><span data-stu-id="b6107-109">The OLE apartment or context has been shut down when the CLR attempts to transition into it.</span></span> <span data-ttu-id="b6107-110">Dies wird meist durch STA-Apartments verursacht, die heruntergefahren werden, bevor alle COM-Komponenten, die im Besitz des Apartments sind, vollständig freigegeben wurden. Dies kann als Ergebnis eines expliziten Aufrufs aus Benutzercode von einem RCW auftreten, oder während die CLR selbst die COM-Komponente manipuliert, z. B. wenn die CLR die COM-Komponente freigibt, nachdem für den zugeordneten RCW eine Garbage Collection durchgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="b6107-110">This is most commonly caused by STA apartments being shut down before all the COM components owned by the apartment were completely released This can occur as a result of an explicit call from user code on an RCW or while the CLR itself is manipulating the COM component, for example when the CLR is releasing the COM component when the associated RCW has been garbage collected.</span></span>  
+## <a name="cause"></a><span data-ttu-id="d73b0-108">Ursache</span><span class="sxs-lookup"><span data-stu-id="d73b0-108">Cause</span></span>  
+ <span data-ttu-id="d73b0-109">Das OLE-Apartment oder der OLE-Kontext wurde heruntergefahren, als die CLR versucht hat, darin überzugehen.</span><span class="sxs-lookup"><span data-stu-id="d73b0-109">The OLE apartment or context has been shut down when the CLR attempts to transition into it.</span></span> <span data-ttu-id="d73b0-110">Dies wird meist durch STA-Apartments verursacht, die heruntergefahren werden, bevor alle COM-Komponenten, die im Besitz des Apartments sind, vollständig freigegeben wurden. Dies kann als Ergebnis eines expliziten Aufrufs aus Benutzercode von einem RCW auftreten, oder während die CLR selbst die COM-Komponente manipuliert, z. B. wenn die CLR die COM-Komponente freigibt, nachdem für den zugeordneten RCW eine Garbage Collection durchgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="d73b0-110">This is most commonly caused by STA apartments being shut down before all the COM components owned by the apartment were completely released This can occur as a result of an explicit call from user code on an RCW or while the CLR itself is manipulating the COM component, for example when the CLR is releasing the COM component when the associated RCW has been garbage collected.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="b6107-111">Lösung</span><span class="sxs-lookup"><span data-stu-id="b6107-111">Resolution</span></span>  
- <span data-ttu-id="b6107-112">Um dieses Problem zu vermeiden, stellen Sie sicher, dass der Thread, der das STA besitzt, nicht beendet wird, bevor die Anwendung mit allen Objekten fertig ist, die in diesem Apartment vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="b6107-112">To avoid this problem, ensure the thread that owns the STA does not terminate before the application has finished with all the objects that live in the apartment.</span></span> <span data-ttu-id="b6107-113">Dasselbe gilt für Kontexte. Stellen Sie sicher, dass Kontexte nicht heruntergefahren werden, bevor die Anwendung mit allen COM-Komponenten vollständig fertig ist, die in diesem Kontext vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="b6107-113">The same applies to contexts; ensure contexts are not shut down before the application is completely finished with any COM components that live inside the context.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="d73b0-111">Lösung</span><span class="sxs-lookup"><span data-stu-id="d73b0-111">Resolution</span></span>  
+ <span data-ttu-id="d73b0-112">Um dieses Problem zu vermeiden, stellen Sie sicher, dass der Thread, der das STA besitzt, nicht beendet wird, bevor die Anwendung mit allen Objekten fertig ist, die in diesem Apartment vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="d73b0-112">To avoid this problem, ensure the thread that owns the STA does not terminate before the application has finished with all the objects that live in the apartment.</span></span> <span data-ttu-id="d73b0-113">Dasselbe gilt für Kontexte. Stellen Sie sicher, dass Kontexte nicht heruntergefahren werden, bevor die Anwendung mit allen COM-Komponenten vollständig fertig ist, die in diesem Kontext vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="d73b0-113">The same applies to contexts; ensure contexts are not shut down before the application is completely finished with any COM components that live inside the context.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="b6107-114">Auswirkungen auf die Laufzeit</span><span class="sxs-lookup"><span data-stu-id="b6107-114">Effect on the Runtime</span></span>  
- <span data-ttu-id="b6107-115">Dieser MDA hat keine Auswirkungen auf die CLR.</span><span class="sxs-lookup"><span data-stu-id="b6107-115">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="b6107-116">Es werden nur Daten zu dem getrennten Kontext gemeldet.</span><span class="sxs-lookup"><span data-stu-id="b6107-116">It only reports data about the disconnected context.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="d73b0-114">Auswirkungen auf die Laufzeit</span><span class="sxs-lookup"><span data-stu-id="d73b0-114">Effect on the Runtime</span></span>  
+ <span data-ttu-id="d73b0-115">Dieser MDA hat keine Auswirkungen auf die CLR.</span><span class="sxs-lookup"><span data-stu-id="d73b0-115">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="d73b0-116">Es werden nur Daten zu dem getrennten Kontext gemeldet.</span><span class="sxs-lookup"><span data-stu-id="d73b0-116">It only reports data about the disconnected context.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="b6107-117">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="b6107-117">Output</span></span>  
- <span data-ttu-id="b6107-118">Meldet das Kontextcookie des getrennten Apartments oder Kontexts.</span><span class="sxs-lookup"><span data-stu-id="b6107-118">Reports the context cookie of the disconnected apartment or context.</span></span>  
+## <a name="output"></a><span data-ttu-id="d73b0-117">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="d73b0-117">Output</span></span>  
+ <span data-ttu-id="d73b0-118">Meldet das Kontextcookie des getrennten Apartments oder Kontexts.</span><span class="sxs-lookup"><span data-stu-id="d73b0-118">Reports the context cookie of the disconnected apartment or context.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="b6107-119">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="b6107-119">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="d73b0-119">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="d73b0-119">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -55,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b6107-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b6107-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d73b0-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d73b0-120">See Also</span></span>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="b6107-121">Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)</span><span class="sxs-lookup"><span data-stu-id="b6107-121">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="b6107-122">Interop Marshaling (Interop-Marshalling)</span><span class="sxs-lookup"><span data-stu-id="b6107-122">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+ [<span data-ttu-id="d73b0-121">Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)</span><span class="sxs-lookup"><span data-stu-id="d73b0-121">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="d73b0-122">Interop Marshaling (Interop-Marshalling)</span><span class="sxs-lookup"><span data-stu-id="d73b0-122">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

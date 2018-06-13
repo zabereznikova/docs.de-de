@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540529"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a><span data-ttu-id="ca3a3-102">Gewusst wie: Speichern von Dateien mit der SaveFileDialog-Komponente</span><span class="sxs-lookup"><span data-stu-id="ca3a3-102">How to: Save Files Using the SaveFileDialog Component</span></span>
 <span data-ttu-id="ca3a3-103">Die <xref:System.Windows.Forms.SaveFileDialog> Komponente ermöglicht Benutzern das Dateisystem durchsuchen und Auswählen von Dateien gespeichert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ca3a3-103">The <xref:System.Windows.Forms.SaveFileDialog> component allows users to browse the file system and select files to be saved.</span></span> <span data-ttu-id="ca3a3-104">Das Dialogfeld gibt den Pfad und den Namen der ausgewählten Datei zurück.</span><span class="sxs-lookup"><span data-stu-id="ca3a3-104">The dialog box returns the path and name of the file the user has selected in the dialog box.</span></span> <span data-ttu-id="ca3a3-105">Sie müssen jedoch den Code schreiben, mit dem die Dateien letztendlich auf den Datenträger geschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="ca3a3-105">However, you must write the code to actually write the files to disk.</span></span>  
