@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742483"
 ---
 # <a name="ltipv6gt-element-network-settings"></a><span data-ttu-id="f2003-102">&lt;IPv6&gt; -Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="f2003-102">&lt;ipv6&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="f2003-103">Internetprotokoll Version 6 (IPv6) ermöglicht Antworten von veralteten Member, der die <xref:System.Net.Dns> Klasse.</span><span class="sxs-lookup"><span data-stu-id="f2003-103">Enables Internet Protocol version 6 (IPv6) responses from obsolete members of the <xref:System.Net.Dns> class.</span></span>  

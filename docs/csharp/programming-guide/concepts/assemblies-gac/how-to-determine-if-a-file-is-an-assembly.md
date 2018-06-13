@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317982"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a><span data-ttu-id="07fb8-102">Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist (C#)</span><span class="sxs-lookup"><span data-stu-id="07fb8-102">How to: Determine If a File Is an Assembly (C#)</span></span>
 <span data-ttu-id="07fb8-103">Eine Datei ist nur dann eine Assembly, wenn sie verwaltet wird und einen Assemblyeintrag in ihren Metadaten enthält.</span><span class="sxs-lookup"><span data-stu-id="07fb8-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="07fb8-104">Weitere Informationen über Assemblys und Metadaten finden Sie im Thema [Assemblymanifest](../../../../../docs/framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="07fb8-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../../docs/framework/app-domains/assembly-manifest.md).</span></span>  

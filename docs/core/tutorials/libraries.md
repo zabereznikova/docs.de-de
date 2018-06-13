@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218146"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a><span data-ttu-id="7e7b9-103">Entwickeln von Bibliotheken mit plattformübergreifenden Tools</span><span class="sxs-lookup"><span data-stu-id="7e7b9-103">Developing Libraries with Cross Platform Tools</span></span>
 

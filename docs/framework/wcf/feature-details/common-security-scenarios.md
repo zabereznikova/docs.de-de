@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490902"
 ---
 # <a name="common-security-scenarios"></a><span data-ttu-id="781cf-102">Häufige Sicherheitsszenarien</span><span class="sxs-lookup"><span data-stu-id="781cf-102">Common Security Scenarios</span></span>
 <span data-ttu-id="781cf-103">Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und Dienstsicherheitskonfigurationen.</span><span class="sxs-lookup"><span data-stu-id="781cf-103">The topics in this section catalog a number of possible client and service security configurations.</span></span> <span data-ttu-id="781cf-104">Die Konfigurationen ändern sich aufgrund verschiedenster Faktoren.</span><span class="sxs-lookup"><span data-stu-id="781cf-104">Configurations vary according to a number of factors.</span></span> <span data-ttu-id="781cf-105">Zum Beispiel ob sich ein Dienst oder Client im Intranet befindet oder ob die Sicherheit von Windows oder vom Transport (wie HTTPS) gewährleistet wird.</span><span class="sxs-lookup"><span data-stu-id="781cf-105">For example, whether a service or client is on an intranet, or whether the security is provided by Windows or transport (such as HTTPS).</span></span>  

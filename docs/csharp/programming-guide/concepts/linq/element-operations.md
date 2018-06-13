@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317446"
 ---
 # <a name="element-operations-c"></a><span data-ttu-id="80d85-102">Elementvorgänge (C#)</span><span class="sxs-lookup"><span data-stu-id="80d85-102">Element Operations (C#)</span></span>
 <span data-ttu-id="80d85-103">Bei Elementvorgängen werden einzelne, spezifische Elemente aus einer Sequenz zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="80d85-103">Element operations return a single, specific element from a sequence.</span></span>  

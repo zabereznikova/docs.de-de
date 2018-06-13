@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217346"
 ---
 # <a name="-refonly-c-compiler-options"></a><span data-ttu-id="958b1-102">-refonly (C# Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="958b1-102">-refonly (C# Compiler Options)</span></span>
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505009"
 ---
 # <a name="impersonating-the-client"></a><span data-ttu-id="26078-102">Durchführen eines Identitätswechsels für den Client</span><span class="sxs-lookup"><span data-stu-id="26078-102">Impersonating the Client</span></span>
 <span data-ttu-id="26078-103">Das Beispiel für einen Identitätswechsel veranschaulicht, wie die Identität der Aufruferanwendung vom Dienst angenommen wird, sodass der Dienst im Namen des Aufrufers auf Systemressourcen zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="26078-103">The Impersonation sample demonstrates how to impersonate the caller application at the service so that the service can access system resources on behalf of the caller.</span></span>  

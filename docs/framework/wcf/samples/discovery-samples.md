@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500843"
 ---
 # <a name="discovery-samples"></a><span data-ttu-id="314f8-102">Suche (Beispiele)</span><span class="sxs-lookup"><span data-stu-id="314f8-102">Discovery (Samples)</span></span>
 <span data-ttu-id="314f8-103">Dieser Abschnitt enthält Beispiele, die sich auf die Suchfunktion beziehen.</span><span class="sxs-lookup"><span data-stu-id="314f8-103">This section contains samples related to the Discovery feature.</span></span>  

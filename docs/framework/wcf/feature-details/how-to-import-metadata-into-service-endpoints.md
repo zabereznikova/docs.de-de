@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492543"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a><span data-ttu-id="5bec4-102">Vorgehensweise: Importieren von Metadaten in Dienstendpunkte</span><span class="sxs-lookup"><span data-stu-id="5bec4-102">How to: Import Metadata into Service Endpoints</span></span>
 <span data-ttu-id="5bec4-103">In diesem Thema wird erläutert, wie zum Importieren von Metadaten in eine Auflistung von Dienstendpunkten und verwenden Sie den Dienst definiert, der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="5bec4-103">This topic explains how to import metadata into a collection of service endpoints and use the service defined in the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="5bec4-104">Im Thema wird gezeigt, wie Sie eine Clientanwendung erstellen, die Metadaten aus dem Dienst importiert und anschließend die`Add`-Methode für den Dienst aufruft.</span><span class="sxs-lookup"><span data-stu-id="5bec4-104">This topic show how to create a client application that imports metadata from the service and then calls the `Add` method on the service.</span></span>  

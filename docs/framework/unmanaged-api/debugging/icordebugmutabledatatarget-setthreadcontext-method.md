@@ -1,29 +1,20 @@
 ---
 title: ICorDebugMutableDataTarget::SetThreadContext Method
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
-caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 077dfacc62c5bb450bc656c8fc102245d581eccc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05f0c0d23b4885f2d6fd351fdf845a25c899228e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418417"
 ---
-# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a><span data-ttu-id="853ec-102">ICorDebugMutableDataTarget::SetThreadContext Method</span><span class="sxs-lookup"><span data-stu-id="853ec-102">ICorDebugMutableDataTarget::SetThreadContext Method</span></span>
-<span data-ttu-id="853ec-103">Legt den Kontext (Registerwerte) für einen Thread fest.</span><span class="sxs-lookup"><span data-stu-id="853ec-103">Sets the context (register values) for a thread.</span></span>  
+# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a><span data-ttu-id="1fcf1-102">ICorDebugMutableDataTarget::SetThreadContext Method</span><span class="sxs-lookup"><span data-stu-id="1fcf1-102">ICorDebugMutableDataTarget::SetThreadContext Method</span></span>
+<span data-ttu-id="1fcf1-103">Legt den Kontext (Registerwerte) für einen Thread fest.</span><span class="sxs-lookup"><span data-stu-id="1fcf1-103">Sets the context (register values) for a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="853ec-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="853ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1fcf1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1fcf1-104">Syntax</span></span>  
   
 ```  
 HRESULT SetThreadContext(  
@@ -31,28 +22,28 @@ HRESULT SetThreadContext(
    [in] ULONG32 contextSize,   [in, size_is(contextSize)] const BYTE * pContext);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="853ec-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="853ec-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1fcf1-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="1fcf1-105">Parameters</span></span>  
  `dwThreadID`  
- <span data-ttu-id="853ec-106">[in] Der vom Betriebssystem definierte Threadbezeichner.</span><span class="sxs-lookup"><span data-stu-id="853ec-106">[in] The operating system-defined thread identifier.</span></span>  
+ <span data-ttu-id="1fcf1-106">[in] Der vom Betriebssystem definierte Threadbezeichner.</span><span class="sxs-lookup"><span data-stu-id="1fcf1-106">[in] The operating system-defined thread identifier.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="853ec-107">[in] Die Größe des zu schreibenden `pContext`-Puffers.</span><span class="sxs-lookup"><span data-stu-id="853ec-107">[in] The size of the `pContext` buffer to be written.</span></span>  
+ <span data-ttu-id="1fcf1-107">[in] Die Größe des zu schreibenden `pContext`-Puffers.</span><span class="sxs-lookup"><span data-stu-id="1fcf1-107">[in] The size of the `pContext` buffer to be written.</span></span>  
   
  `pContext`  
- <span data-ttu-id="853ec-108">[in] Ein Zeiger auf die zu schreibenden Bytes.</span><span class="sxs-lookup"><span data-stu-id="853ec-108">[in] A pointer to the bytes to be written.</span></span>  
+ <span data-ttu-id="1fcf1-108">[in] Ein Zeiger auf die zu schreibenden Bytes.</span><span class="sxs-lookup"><span data-stu-id="1fcf1-108">[in] A pointer to the bytes to be written.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="853ec-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="853ec-109">Remarks</span></span>  
- <span data-ttu-id="853ec-110">Die `SetThreadContext`-Methode aktualisiert den aktuellen Kontext für den Thread, der durch das vom Betriebssystem definierte `dwThreadID`-Argument angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="853ec-110">The `SetThreadContext` method updates the current context for the thread specified by the operating system-defined `dwThreadID` argument.</span></span> <span data-ttu-id="853ec-111">Das Format des Kontextdatensatzes wird von der Plattform erkennbar bestimmt die [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="853ec-111">The format of the context record is determined by the platform indicated by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="853ec-112">Unter Windows ist dies ein [Kontext](http://msdn.microsoft.com/library/windows/desktop/ms679284.aspx) Struktur.</span><span class="sxs-lookup"><span data-stu-id="853ec-112">On Windows, this is a [CONTEXT](http://msdn.microsoft.com/library/windows/desktop/ms679284.aspx) structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1fcf1-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1fcf1-109">Remarks</span></span>  
+ <span data-ttu-id="1fcf1-110">Die `SetThreadContext`-Methode aktualisiert den aktuellen Kontext für den Thread, der durch das vom Betriebssystem definierte `dwThreadID`-Argument angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="1fcf1-110">The `SetThreadContext` method updates the current context for the thread specified by the operating system-defined `dwThreadID` argument.</span></span> <span data-ttu-id="1fcf1-111">Das Format des Kontextdatensatzes wird von der Plattform erkennbar bestimmt die [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="1fcf1-111">The format of the context record is determined by the platform indicated by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="1fcf1-112">Unter Windows ist dies ein [Kontext](http://msdn.microsoft.com/library/windows/desktop/ms679284.aspx) Struktur.</span><span class="sxs-lookup"><span data-stu-id="1fcf1-112">On Windows, this is a [CONTEXT](http://msdn.microsoft.com/library/windows/desktop/ms679284.aspx) structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="853ec-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="853ec-113">Requirements</span></span>  
- <span data-ttu-id="853ec-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="853ec-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1fcf1-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1fcf1-113">Requirements</span></span>  
+ <span data-ttu-id="1fcf1-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1fcf1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="853ec-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="853ec-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1fcf1-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1fcf1-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="853ec-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="853ec-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1fcf1-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1fcf1-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="853ec-117">**.NET Framework-Versionen:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="853ec-117">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
+ <span data-ttu-id="1fcf1-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1fcf1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="853ec-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="853ec-118">See Also</span></span>  
- [<span data-ttu-id="853ec-119">ICorDebugMutableDataTarget-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="853ec-119">ICorDebugMutableDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)  
- [<span data-ttu-id="853ec-120">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="853ec-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="1fcf1-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1fcf1-118">See Also</span></span>  
+ [<span data-ttu-id="1fcf1-119">ICorDebugMutableDataTarget-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1fcf1-119">ICorDebugMutableDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)  
+ [<span data-ttu-id="1fcf1-120">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="1fcf1-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

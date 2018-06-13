@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494780"
 ---
 # <a name="message-security-with-a-windows-client"></a><span data-ttu-id="1d6ef-102">Nachrichtensicherheit über einen Windows-Client</span><span class="sxs-lookup"><span data-stu-id="1d6ef-102">Message Security with a Windows Client</span></span>
 <span data-ttu-id="1d6ef-103">Dieses Szenario zeigt, ein Windows Communication Foundation (WCF)-Client und Server, die von der nachrichtensicherheitsmodus gesichert werden.</span><span class="sxs-lookup"><span data-stu-id="1d6ef-103">This scenario shows a Windows Communication Foundation (WCF) client and server secured by message security mode.</span></span> <span data-ttu-id="1d6ef-104">Client und Dienst werden mit Windows-Anmeldeinformationen authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="1d6ef-104">The client and service are authenticated using Windows credentials.</span></span>  

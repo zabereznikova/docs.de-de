@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213987"
 ---
 # <a name="default-c-reference"></a><span data-ttu-id="bc3e7-102">default (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="bc3e7-102">default (C# Reference)</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751245"
 ---
 # <a name="ltservicediscoverygt"></a><span data-ttu-id="c9b67-102">&lt;serviceDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="c9b67-102">&lt;serviceDiscovery&gt;</span></span>
 <span data-ttu-id="c9b67-103">Gibt die Ermittelbarkeit von Dienstendpunkten an.</span><span class="sxs-lookup"><span data-stu-id="c9b67-103">Specifies the discoverability of service endpoints.</span></span>  

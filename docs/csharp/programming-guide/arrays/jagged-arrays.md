@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297367"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a><span data-ttu-id="00215-102">Verzweigte Arrays (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="00215-102">Jagged Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="00215-103">Ein verzweigtes Array ist ein Array, dessen Elemente wiederum Arrays sind.</span><span class="sxs-lookup"><span data-stu-id="00215-103">A jagged array is an array whose elements are arrays.</span></span> <span data-ttu-id="00215-104">Die Elemente eines verzweigten Arrays können eine unterschiedliche Dimension und Größe besitzen.</span><span class="sxs-lookup"><span data-stu-id="00215-104">The elements of a jagged array can be of different dimensions and sizes.</span></span> <span data-ttu-id="00215-105">Ein verzweigtes Array wird auch „Array aus Arrays“ genannt.</span><span class="sxs-lookup"><span data-stu-id="00215-105">A jagged array is sometimes called an "array of arrays."</span></span> <span data-ttu-id="00215-106">Die folgenden Beispiele zeigen, wie Sie verzweigte Arrays deklarieren, initialisieren und auf sie zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="00215-106">The following examples show how to declare, initialize, and access jagged arrays.</span></span>  

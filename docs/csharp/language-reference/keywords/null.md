@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268119"
 ---
 # <a name="null-c-reference"></a><span data-ttu-id="8531e-102">null (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="8531e-102">null (C# Reference)</span></span>
 <span data-ttu-id="8531e-103">Das Schlüsselwort `null` ist ein Literal, das einen NULL-Verweis darstellt, der auf kein Objekt verweist.</span><span class="sxs-lookup"><span data-stu-id="8531e-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="8531e-104">`null` ist der Standardwert einer Verweistypvariablen.</span><span class="sxs-lookup"><span data-stu-id="8531e-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="8531e-105">Normale Verweistypen dürfen nicht NULL sein.</span><span class="sxs-lookup"><span data-stu-id="8531e-105">Ordinary value types cannot be null.</span></span> <span data-ttu-id="8531e-106">C# 2.0 hat jedoch auf NULL festlegbare Werttypen eingeführt.</span><span class="sxs-lookup"><span data-stu-id="8531e-106">However, C# 2.0 introduced nullable value types.</span></span> <span data-ttu-id="8531e-107">Siehe [Nullable-Typen](../../../csharp/programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="8531e-107">See [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md).</span></span>  

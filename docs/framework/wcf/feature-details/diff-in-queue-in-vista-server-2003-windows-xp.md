@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492023"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a><span data-ttu-id="beb2b-102">Unterschiede zwischen den Warteschlangenfunktionen in Windows Vista, Windows Server 2003 und Windows XP</span><span class="sxs-lookup"><span data-stu-id="beb2b-102">Differences in Queuing Features in Windows Vista, Windows Server 2003, and Windows XP</span></span>
 <span data-ttu-id="beb2b-103">In diesem Thema werden die Unterschiede in der Windows Communication Foundation (WCF)-Warteschlangenfunktion zwischen zusammengefasst [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], und [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="beb2b-103">This topic summarizes the differences in the Windows Communication Foundation (WCF) queues feature between [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], and [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span></span>  

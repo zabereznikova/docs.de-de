@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493028"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a><span data-ttu-id="a7869-102">Vorgehensweise: Erstellen eines grundlegenden Atom-Feeds</span><span class="sxs-lookup"><span data-stu-id="a7869-102">How to: Create a Basic Atom Feed</span></span>
 <span data-ttu-id="a7869-103">Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Diensts, das einen Syndication-feed verfügbar macht.</span><span class="sxs-lookup"><span data-stu-id="a7869-103">Windows Communication Foundation (WCF) allows you to create a service that exposes a syndication feed.</span></span> <span data-ttu-id="a7869-104">In diesem Thema wird erläutert, wie ein Syndication-Dienst erstellt wird, der einen Atom-Syndication-Feed verfügbar macht.</span><span class="sxs-lookup"><span data-stu-id="a7869-104">This topic discusses how to create a syndication service that exposes an Atom syndication feed.</span></span>  
