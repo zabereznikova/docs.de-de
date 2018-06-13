@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560223"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>Gewusst wie: Interaktives Steuern einer Uhr
 Ein <xref:System.Windows.Media.Animation.Clock> des Objekts <xref:System.Windows.Media.Animation.ClockController> Eigenschaft können Sie interaktiv starten, anhalten, fortsetzen, seek, setzen die Uhr auf den Füllzeitraum, und beenden die Uhr. Nur die Stammuhr einer Zeitstruktur kann interaktiv gesteuert werden.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336042"
 ---
 # <a name="multithreaded-applications-c"></a>Multithreadanwendungen (C#)
 Sie können mit C# Anwendungen schreiben, die mehrere Aufgaben zur gleichen Zeit ausführen. Aufgaben, die möglicherweise andere Aufgaben aufhalten, können in separaten Threads ausgeführt werden. Dieser Prozess ist als *Multithreading* oder *Freies Threading* bekannt.  

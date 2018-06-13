@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560715"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Gewusst wie: Drehen eines Objekts mithilfe eines geometrischen Pfads
 In diesem Beispiel wird gezeigt, wie zum Drehen ein Objekt entlang eines geometrischen Pfads, der durch definiert ist ein <xref:System.Windows.Media.PathGeometry> Objekt.  

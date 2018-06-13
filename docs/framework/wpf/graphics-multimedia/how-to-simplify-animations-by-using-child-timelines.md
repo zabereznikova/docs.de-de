@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561672"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Gewusst wie: Vereinfachen von Animationen durch untergeordnete Timeline-Objekte
 Dieses Beispiel zeigt, wie Sie Animationen zu vereinfachen, indem Sie untergeordnete <xref:System.Windows.Media.Animation.ParallelTimeline> Objekte. Ein <xref:System.Windows.Media.Animation.Storyboard> ist eine Art von <xref:System.Windows.Media.Animation.Timeline> Zielinformationen für die Zeitachsen, er enthält, bereitstellt. Verwenden einer <xref:System.Windows.Media.Animation.Storyboard> Zeitachse Adressieren von Informationen, einschließlich Informationen zu Objekt und Eigenschaft bereitstellen.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557172"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Gewusst wie: Abrufen der Standardansicht einer Datenauflistung
 Ansichten können die gleichen Datensammlung unterschiedlich, je nach sortieren, filtern oder Gruppierungskriterien angezeigt werden. Jede Auflistung verfügt über eine freigegebene Standardansicht, die als tatsächliche Bindungsquelle verwendet wird, wenn eine Bindung eine Auflistung als Updatequelle angibt. In diesem Beispiel wird gezeigt, wie die Standardansicht einer Auflistung abgerufen werden.  

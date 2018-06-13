@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558217"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Richtlinien zum Entwerfen formatierbarer Steuerelemente
 Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksichtigen sind, wenn Sie ein Steuerelement erstellen, das einfach zu formatieren ist und damit bequem Vorlagen damit erstellt werden können. Wir kamen durch Experimentieren zu dieser Reihe bewährter Methoden, während wir an Steuerelementstilen für Designs für die integrierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente gearbeitet haben. Wir haben gelernt, dass die erfolgreiche Formatierung genau so eine Funktion eines gut strukturierten Objektmodells ist wie für den Stil selbst. Die Zielgruppe für dieses Dokument sind die Autoren des Steuerelements und nicht der Autoren der Stile.  

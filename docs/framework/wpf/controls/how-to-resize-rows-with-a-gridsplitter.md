@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554884"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Gewusst wie: Änderung der Zeilengröße mit einem GridSplitter
 Dieses Beispiel zeigt, wie eine horizontale <xref:System.Windows.Controls.GridSplitter> erneut zu verteilende den Abstand zwischen den zwei Zeilen in einer <xref:System.Windows.Controls.Grid> ohne Änderung der Dimensionen des der <xref:System.Windows.Controls.Grid>.  

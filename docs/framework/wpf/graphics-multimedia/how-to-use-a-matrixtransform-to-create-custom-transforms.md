@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561159"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Gewusst wie: Verwenden von MatrixTransform zum Erstellen benutzerdefinierter Transformationen
 Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.MatrixTransform> übersetzt (verschoben) der Position Strecken und Zerren von einem <xref:System.Windows.Controls.Button>.  

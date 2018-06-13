@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556678"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>Gewusst wie: Erstellen einer Bindung in Code
 In diesem Beispiel wird gezeigt, wie das Erstellen und Festlegen einer <xref:System.Windows.Data.Binding> im Code.  

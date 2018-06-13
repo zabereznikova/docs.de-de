@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561390"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Gewusst wie: Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)
 Im folgende Beispiel wird gezeigt, wie zum Steuern der Wiedergabe von Medien mit einem <xref:System.Windows.Controls.MediaElement>. Im Beispiel wird einen einfacher Media-Player, mit dem Sie wiedergeben, anhalten, beenden, und überspringen hin-und in den Medien sowie passen Sie das Volume und Geschwindigkeit Verhältnis erstellt.  

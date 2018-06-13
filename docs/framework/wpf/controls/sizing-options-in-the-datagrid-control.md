@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557848"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Größenänderungsoptionen im DataGrid-Steuerelement
 Verschiedene Optionen stehen in Steuerelement wie die <xref:System.Windows.Controls.DataGrid> passt sich. Die <xref:System.Windows.Controls.DataGrid>, und einzelne Zeilen und Spalten in der <xref:System.Windows.Controls.DataGrid>, kann festgelegt werden, automatisch auf ihren Inhalt angepasst, oder auf bestimmte Werte festgelegt werden. Wird standardmäßig die <xref:System.Windows.Controls.DataGrid> vergrößern und verkleinern Sie die Größe seines Inhalts angepasst wird.  

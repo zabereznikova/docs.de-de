@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559157"
 ---
 # <a name="how-to-read-metadata-from-a-bitmap"></a>Gewusst wie: Lesen von Metadaten aus einer Bitmap
 Dieses Beispiel zeigt, wie mithilfe der Metadaten-Abfragesprache Bitmapmetadaten gelesen.  

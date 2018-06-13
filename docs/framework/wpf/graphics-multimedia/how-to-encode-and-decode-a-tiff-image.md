@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559486"
 ---
 # <a name="how-to-encode-and-decode-a-tiff-image"></a>Gewusst wie: Codieren und Decodieren eines TIFF-Bilds
 Die folgenden Beispiele zeigen, wie Sie decodieren und Codieren einer [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] -Bild mithilfe der spezifischen <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> und <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> Objekte.  

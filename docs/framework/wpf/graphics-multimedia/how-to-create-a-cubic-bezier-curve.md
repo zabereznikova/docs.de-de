@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560103"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>Gewusst wie: Erstellen einer kubischen Bézierkurve
 Dieses Beispiel zeigt, wie Sie eine kubische Bézier-Kurve zu erstellen. Um eine kubische Bézier-Kurve zu erstellen, verwenden Sie die <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, und <xref:System.Windows.Media.BezierSegment> Klassen.  Verwenden Sie zum Anzeigen der resultierenden Geometrie eine <xref:System.Windows.Shapes.Path> Element, oder verwenden sie eine <xref:System.Windows.Media.GeometryDrawing> oder eine <xref:System.Windows.Media.DrawingContext>. In den folgenden Beispielen wird eine kubische Bézier-Kurve von gezeichnet (10, 100), (300, 100). Die Kurve hat Steuerpunkte von (100, 0) und (200, 200).  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559365"
 ---
 # <a name="how-to-draw-an-ellipse-or-a-circle"></a>Gewusst wie: Zeichnen einer Ellipse oder eines Kreises
 In diesem Beispiel wird gezeigt, wie zum Zeichnen von Ellipsen und Kreise mithilfe der <xref:System.Windows.Shapes.Ellipse> Element. Erstellen Sie zum Zeichnen einer Ellipse, die eine <xref:System.Windows.Shapes.Ellipse> Element, und geben Sie ihre <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A>. Verwenden der <xref:System.Windows.Shapes.Shape.Fill%2A> -Eigenschaft an die <xref:System.Windows.Media.Brush> , wird verwendet, um das Innere der Ellipse gezeichnet. Verwenden der <xref:System.Windows.Shapes.Shape.Stroke%2A> -Eigenschaft an die <xref:System.Windows.Media.Brush> , die zum Zeichnen der Umrisslinie der Ellipse verwendet wird. Die <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Eigenschaft gibt die Stärke der Kontur Ellipse.  

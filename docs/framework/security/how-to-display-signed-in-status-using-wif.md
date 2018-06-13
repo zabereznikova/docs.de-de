@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398917"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Gewusst wie: Anzeigen des Anmeldestatus mit WIF
 ## <a name="applies-to"></a>Gilt für  
