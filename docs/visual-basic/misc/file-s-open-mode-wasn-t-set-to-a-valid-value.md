@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635905"
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>Datei&#39;s öffnen Modus Einzelbasis&#39;t in einen gültigen Wert festgelegt
 Der für den Öffnungsmodus der Datei angegebene Wert war ungültig. In der folgenden Tabelle sind gültige Werte für die <xref:Microsoft.VisualBasic.OpenMode> -Enumeration aufgeführt:  

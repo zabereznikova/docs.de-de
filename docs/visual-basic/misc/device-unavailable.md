@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634845"
 ---
 # <a name="device-unavailable"></a>Das Gerät ist nicht verfügbar
 Entweder wurde die Netzwerkverbindung getrennt, oder das Gerät, auf das Sie zugreifen möchten, ist offline oder nicht vorhanden.  

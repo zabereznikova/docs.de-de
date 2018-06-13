@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650198"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Gewusst wie: Beschleunigen des Zugriffs auf ein Objekt mit langem Qualifizierungspfad (Visual Basic)
 Wenn Sie häufig auf ein Objekt, die einen Qualifizierungspfad mehrere Methoden und Eigenschaften erforderlich sind zugreifen, können Sie den Code durch die Wiederholung nicht des Qualifizierungspfads beschleunigen.  

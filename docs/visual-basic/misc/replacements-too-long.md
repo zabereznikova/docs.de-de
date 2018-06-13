@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634832"
 ---
 # <a name="replacements-too-long"></a>Die Ersetzungen sind zu lang
 Sie haben eine Ersetzung angegeben, die die maximal zulässige Länge überschreitet.  
