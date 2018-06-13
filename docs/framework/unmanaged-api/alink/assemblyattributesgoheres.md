@@ -1,14 +1,6 @@
 ---
 title: AssemblyAttributesGoHereS
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - AssemblyAttributesGoHereS
 api_location:
@@ -23,38 +15,35 @@ helpviewer_keywords:
 ms.assetid: 4e817f35-a2bc-4403-9e6f-f731e6b9fe23
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac8f25632521f2e8abe5209608e42632293feb4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d68450d05f667851404a009c0984f8722253e71e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402909"
 ---
-# <a name="assemblyattributesgoheres"></a><span data-ttu-id="5567c-102">AssemblyAttributesGoHereS</span><span class="sxs-lookup"><span data-stu-id="5567c-102">AssemblyAttributesGoHereS</span></span>
-<span data-ttu-id="5567c-103">Wird von ALink als Platzhalter verwendet, um Informationen über benutzerdefinierte Attribute zu speichern.</span><span class="sxs-lookup"><span data-stu-id="5567c-103">Used by ALink as a placeholder to store information about custom attributes.</span></span>  
+# <a name="assemblyattributesgoheres"></a><span data-ttu-id="46af2-102">AssemblyAttributesGoHereS</span><span class="sxs-lookup"><span data-stu-id="46af2-102">AssemblyAttributesGoHereS</span></span>
+<span data-ttu-id="46af2-103">Wird von ALink als Platzhalter verwendet, um Informationen über benutzerdefinierte Attribute zu speichern.</span><span class="sxs-lookup"><span data-stu-id="46af2-103">Used by ALink as a placeholder to store information about custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5567c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5567c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46af2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="46af2-104">Syntax</span></span>  
   
 ```  
 AssemblyAttributesGoHereS  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="5567c-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="5567c-105">Remarks</span></span>  
- <span data-ttu-id="5567c-106">Verweise auf diesen Typ können in NETMODULE-Dateien eingebettet sein, deren Quellen benutzerdefinierte Assemblyattribute enthalten.</span><span class="sxs-lookup"><span data-stu-id="5567c-106">References to this type might be embedded inside netmodules whose sources contain assembly custom attributes.</span></span> <span data-ttu-id="5567c-107">Beim Erstellen eines Assemblymanifests aus mindestens einer NETMODULE-Datei, die Verweise auf diese Typen enthält, verwendet ALink die zu diesen Verweisen gehörenden Informationen, um echte benutzerdefinierte Attribute auszugeben.</span><span class="sxs-lookup"><span data-stu-id="5567c-107">When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes.</span></span> <span data-ttu-id="5567c-108">Daher wird dieser Typ nie instanziiert, und Verweise auf diesen Typ werden nur als Teil des Buildprozesses verwendet und erfüllen in der endgültigen Assembly keinen Zweck.</span><span class="sxs-lookup"><span data-stu-id="5567c-108">As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="46af2-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="46af2-105">Remarks</span></span>  
+ <span data-ttu-id="46af2-106">Verweise auf diesen Typ können in NETMODULE-Dateien eingebettet sein, deren Quellen benutzerdefinierte Assemblyattribute enthalten.</span><span class="sxs-lookup"><span data-stu-id="46af2-106">References to this type might be embedded inside netmodules whose sources contain assembly custom attributes.</span></span> <span data-ttu-id="46af2-107">Beim Erstellen eines Assemblymanifests aus mindestens einer NETMODULE-Datei, die Verweise auf diese Typen enthält, verwendet ALink die zu diesen Verweisen gehörenden Informationen, um echte benutzerdefinierte Attribute auszugeben.</span><span class="sxs-lookup"><span data-stu-id="46af2-107">When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes.</span></span> <span data-ttu-id="46af2-108">Daher wird dieser Typ nie instanziiert, und Verweise auf diesen Typ werden nur als Teil des Buildprozesses verwendet und erfüllen in der endgültigen Assembly keinen Zweck.</span><span class="sxs-lookup"><span data-stu-id="46af2-108">As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.</span></span>  
   
- <span data-ttu-id="5567c-109">Verweise auf diesen Typ geben benutzerdefinierte Attribute an, die sicherheitsrelevant sind und nicht mehrfach verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5567c-109">References to this type indicate custom attributes that are security related and are not multiple-use.</span></span>  
+ <span data-ttu-id="46af2-109">Verweise auf diesen Typ geben benutzerdefinierte Attribute an, die sicherheitsrelevant sind und nicht mehrfach verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="46af2-109">References to this type indicate custom attributes that are security related and are not multiple-use.</span></span>  
   
- <span data-ttu-id="5567c-110">Diese Typen sind in .NET Framework mit "intern" markiert und befinden sich in <xref:System.Runtime.CompilerServices>.</span><span class="sxs-lookup"><span data-stu-id="5567c-110">These types are marked "internal" within the .NET Framework, and are located in <xref:System.Runtime.CompilerServices>.</span></span>  
+ <span data-ttu-id="46af2-110">Diese Typen sind in .NET Framework mit "intern" markiert und befinden sich in <xref:System.Runtime.CompilerServices>.</span><span class="sxs-lookup"><span data-stu-id="46af2-110">These types are marked "internal" within the .NET Framework, and are located in <xref:System.Runtime.CompilerServices>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5567c-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5567c-111">Requirements</span></span>  
- <span data-ttu-id="5567c-112">mscorlib.dll</span><span class="sxs-lookup"><span data-stu-id="5567c-112">mscorlib.dll</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46af2-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="46af2-111">Requirements</span></span>  
+ <span data-ttu-id="46af2-112">mscorlib.dll</span><span class="sxs-lookup"><span data-stu-id="46af2-112">mscorlib.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5567c-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5567c-113">See Also</span></span>  
- [<span data-ttu-id="5567c-114">AssemblyAttributesGoHere</span><span class="sxs-lookup"><span data-stu-id="5567c-114">AssemblyAttributesGoHere</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
- [<span data-ttu-id="5567c-115">AssemblyAttributesGoHereM</span><span class="sxs-lookup"><span data-stu-id="5567c-115">AssemblyAttributesGoHereM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)  
- [<span data-ttu-id="5567c-116">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="5567c-116">AssemblyAttributesGoHereSM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)
+## <a name="see-also"></a><span data-ttu-id="46af2-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="46af2-113">See Also</span></span>  
+ [<span data-ttu-id="46af2-114">AssemblyAttributesGoHere</span><span class="sxs-lookup"><span data-stu-id="46af2-114">AssemblyAttributesGoHere</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
+ [<span data-ttu-id="46af2-115">AssemblyAttributesGoHereM</span><span class="sxs-lookup"><span data-stu-id="46af2-115">AssemblyAttributesGoHereM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)  
+ [<span data-ttu-id="46af2-116">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="46af2-116">AssemblyAttributesGoHereSM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)

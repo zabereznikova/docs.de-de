@@ -1,14 +1,6 @@
 ---
 title: ICorDebugBreakpoint Schnittstelle1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugBreakpoint
 api_location:
@@ -22,44 +14,41 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd2c4245b5e3dcc4f7b989a3ca9add8d568467cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 220cd1a41ed69325b557e6498a511865b78817ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404514"
 ---
-# <a name="icordebugbreakpoint-interface1"></a><span data-ttu-id="97aa2-102">ICorDebugBreakpoint Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="97aa2-102">ICorDebugBreakpoint Interface1</span></span>
-<span data-ttu-id="97aa2-103">Stellt einen Haltepunkt in einer Funktion oder einen Beobachtungspunkt für einen Wert dar.</span><span class="sxs-lookup"><span data-stu-id="97aa2-103">Represents a breakpoint in a function, or a watch point on a value.</span></span>  
+# <a name="icordebugbreakpoint-interface1"></a><span data-ttu-id="0be68-102">ICorDebugBreakpoint Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="0be68-102">ICorDebugBreakpoint Interface1</span></span>
+<span data-ttu-id="0be68-103">Stellt einen Haltepunkt in einer Funktion oder einen Beobachtungspunkt für einen Wert dar.</span><span class="sxs-lookup"><span data-stu-id="0be68-103">Represents a breakpoint in a function, or a watch point on a value.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="97aa2-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="97aa2-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="0be68-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="0be68-104">Methods</span></span>  
   
-|<span data-ttu-id="97aa2-105">Methode</span><span class="sxs-lookup"><span data-stu-id="97aa2-105">Method</span></span>|<span data-ttu-id="97aa2-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="97aa2-106">Description</span></span>|  
+|<span data-ttu-id="0be68-105">Methode</span><span class="sxs-lookup"><span data-stu-id="0be68-105">Method</span></span>|<span data-ttu-id="0be68-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0be68-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="97aa2-107">Activate-Methode</span><span class="sxs-lookup"><span data-stu-id="97aa2-107">Activate Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|<span data-ttu-id="97aa2-108">Legt den Zustand "aktiven" dieses `ICorDebugBreakpoint`.</span><span class="sxs-lookup"><span data-stu-id="97aa2-108">Sets the active state of this `ICorDebugBreakpoint`.</span></span>|  
-|[<span data-ttu-id="97aa2-109">IsActive-Methode</span><span class="sxs-lookup"><span data-stu-id="97aa2-109">IsActive Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|<span data-ttu-id="97aa2-110">Ruft einen Wert, der angibt, ob dies `ICorDebugBreakpoint` aktiv ist.</span><span class="sxs-lookup"><span data-stu-id="97aa2-110">Gets a value that indicates whether this `ICorDebugBreakpoint` is active.</span></span>|  
+|[<span data-ttu-id="0be68-107">Activate-Methode</span><span class="sxs-lookup"><span data-stu-id="0be68-107">Activate Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|<span data-ttu-id="0be68-108">Legt den Zustand "aktiven" dieses `ICorDebugBreakpoint`.</span><span class="sxs-lookup"><span data-stu-id="0be68-108">Sets the active state of this `ICorDebugBreakpoint`.</span></span>|  
+|[<span data-ttu-id="0be68-109">IsActive-Methode</span><span class="sxs-lookup"><span data-stu-id="0be68-109">IsActive Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|<span data-ttu-id="0be68-110">Ruft einen Wert, der angibt, ob dies `ICorDebugBreakpoint` aktiv ist.</span><span class="sxs-lookup"><span data-stu-id="0be68-110">Gets a value that indicates whether this `ICorDebugBreakpoint` is active.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="97aa2-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="97aa2-111">Remarks</span></span>  
- <span data-ttu-id="97aa2-112">Bedingte Ausdrücke unterstützt Haltepunkte nicht direkt.</span><span class="sxs-lookup"><span data-stu-id="97aa2-112">Breakpoints do not directly support conditional expressions.</span></span> <span data-ttu-id="97aa2-113">Wenn solche Funktionen gewünscht ist, muss ein Debugger implementieren sie auf der Basis von `ICorDebugBreakpoint`.</span><span class="sxs-lookup"><span data-stu-id="97aa2-113">If such functionality is desired, a debugger must implement it on top of `ICorDebugBreakpoint`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0be68-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0be68-111">Remarks</span></span>  
+ <span data-ttu-id="0be68-112">Bedingte Ausdrücke unterstützt Haltepunkte nicht direkt.</span><span class="sxs-lookup"><span data-stu-id="0be68-112">Breakpoints do not directly support conditional expressions.</span></span> <span data-ttu-id="0be68-113">Wenn solche Funktionen gewünscht ist, muss ein Debugger implementieren sie auf der Basis von `ICorDebugBreakpoint`.</span><span class="sxs-lookup"><span data-stu-id="0be68-113">If such functionality is desired, a debugger must implement it on top of `ICorDebugBreakpoint`.</span></span>  
   
- <span data-ttu-id="97aa2-114">ICorDebugFunctionBreakpoint-Schnittstelle erweitert `ICorDebugBreakpoint` um Haltepunkte innerhalb von Funktionen zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="97aa2-114">The ICorDebugFunctionBreakpoint interface extends `ICorDebugBreakpoint` to support breakpoints within functions.</span></span>  
+ <span data-ttu-id="0be68-114">ICorDebugFunctionBreakpoint-Schnittstelle erweitert `ICorDebugBreakpoint` um Haltepunkte innerhalb von Funktionen zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="0be68-114">The ICorDebugFunctionBreakpoint interface extends `ICorDebugBreakpoint` to support breakpoints within functions.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="97aa2-115">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="97aa2-115">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="0be68-115">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="0be68-115">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97aa2-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="97aa2-116">Requirements</span></span>  
- <span data-ttu-id="97aa2-117">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97aa2-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0be68-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0be68-116">Requirements</span></span>  
+ <span data-ttu-id="0be68-117">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0be68-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97aa2-118">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="97aa2-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0be68-118">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0be68-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="97aa2-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="97aa2-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0be68-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0be68-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="97aa2-120">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97aa2-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0be68-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0be68-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97aa2-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="97aa2-121">See Also</span></span>  
- [<span data-ttu-id="97aa2-122">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="97aa2-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="0be68-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0be68-121">See Also</span></span>  
+ [<span data-ttu-id="0be68-122">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="0be68-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

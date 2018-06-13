@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410032"
 ---
 # <a name="resgenexe-resource-file-generator"></a><span data-ttu-id="95823-102">Resgen.exe (Resource File Generator)</span><span class="sxs-lookup"><span data-stu-id="95823-102">Resgen.exe (Resource File Generator)</span></span>
 <span data-ttu-id="95823-103">Der Resource File Generator (Resgen.exe) konvertiert Textdateien (TXT- oder RESTEXT-Dateien) und Dateien im XML-basierten Ressourcenformat (RESX-Dateien) in binäre Common Language Runtime-Dateien (RESOURCES-Dateien), die in ausführbare Laufzeit-Binärdateien oder Satellitenassemblys eingebettet werden können.</span><span class="sxs-lookup"><span data-stu-id="95823-103">The Resource File Generator (Resgen.exe) converts text (.txt or .restext) files and XML-based resource format (.resx) files to common language runtime binary (.resources) files that can be embedded in a runtime binary executable or satellite assembly.</span></span> <span data-ttu-id="95823-104">(Weitere Informationen finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)</span><span class="sxs-lookup"><span data-stu-id="95823-104">(See [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)</span></span>  

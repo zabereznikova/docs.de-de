@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409077"
 ---
 # <a name="lcexe-license-compiler"></a><span data-ttu-id="03b5d-102">Lc.exe (License Compiler-Tool)</span><span class="sxs-lookup"><span data-stu-id="03b5d-102">Lc.exe (License Compiler)</span></span>
 <span data-ttu-id="03b5d-103">Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung und erstellt eine Binärdatei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.</span><span class="sxs-lookup"><span data-stu-id="03b5d-103">The License Compiler reads text files that contain licensing information and produces a binary file that can be embedded in a common language runtime executable as a resource.</span></span>  

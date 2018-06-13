@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402027"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a><span data-ttu-id="0af25-102">Developer-Eingabeaufforderung für Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="0af25-102">Developer Command Prompt for Visual Studio</span></span>
 <span data-ttu-id="0af25-103">Die Developer-Eingabeaufforderung für Visual Studio legt die Umgebungsvariablen, die Ihnen die einfache Nutzung von .NET Framework-Tools ermöglichen, automatisch fest.</span><span class="sxs-lookup"><span data-stu-id="0af25-103">The Developer Command Prompt for Visual Studio automatically sets the environment variables that enable you to easily use .NET Framework tools.</span></span> <span data-ttu-id="0af25-104">Die Developer-Eingabeaufforderung wird mit vollständigen oder Community-Editionen von Visual Studio installiert.</span><span class="sxs-lookup"><span data-stu-id="0af25-104">The Developer Command Prompt is installed with full or community editions of Visual Studio.</span></span> <span data-ttu-id="0af25-105">Sie wird nicht mit den Express-Versionen von Visual Studio installiert.</span><span class="sxs-lookup"><span data-stu-id="0af25-105">It is not installed with the Express versions of Visual Studio.</span></span>  

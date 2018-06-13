@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398703"
 ---
 # <a name="security-considerations-for-reflection"></a><span data-ttu-id="22ff6-102">Sicherheitsüberlegungen für die Reflektion</span><span class="sxs-lookup"><span data-stu-id="22ff6-102">Security Considerations for Reflection</span></span>
 <span data-ttu-id="22ff6-103">Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen und auf Member zuzugreifen (d. h. Aufrufen von Methoden und Konstruktoren, Abrufen und Festlegen von Eigenschaftswerten, Hinzufügen und Entfernen von Ereignishandlern usw.).</span><span class="sxs-lookup"><span data-stu-id="22ff6-103">Reflection provides the ability to obtain information about types and members, and to access members (that is, to call methods and constructors, to get and set property values, to add and remove event handlers, and so on).</span></span> <span data-ttu-id="22ff6-104">Die Verwendung von Reflektion, um Typ- und Memberinformationen abzurufen, ist nicht eingeschränkt.</span><span class="sxs-lookup"><span data-stu-id="22ff6-104">The use of reflection to obtain information about types and members is not restricted.</span></span> <span data-ttu-id="22ff6-105">Jeglicher Code kann Reflektion verwenden, um die folgenden Aufgaben auszuführen:</span><span class="sxs-lookup"><span data-stu-id="22ff6-105">All code can use reflection to perform the following tasks:</span></span>  

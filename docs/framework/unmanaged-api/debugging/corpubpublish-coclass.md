@@ -1,14 +1,6 @@
 ---
 title: CorpubPublish-Co-Klasse
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorpubPublish Coclass
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 191015da-f54a-4bac-a28a-1de7ab3c3428
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f3dec1175715bdbddc3c975924e91e238fa6d5f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9941a9be7d9f68255636b405db29a623be8d37e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406437"
 ---
-# <a name="corpubpublish-coclass"></a><span data-ttu-id="b0d69-102">CorpubPublish-Co-Klasse</span><span class="sxs-lookup"><span data-stu-id="b0d69-102">CorpubPublish Coclass</span></span>
-<span data-ttu-id="b0d69-103">Stellt Schnittstellen für die Veröffentlichung von Informationen über Anwendungsdomänen und Prozesse bereit.</span><span class="sxs-lookup"><span data-stu-id="b0d69-103">Provides interfaces for publishing information about application domains and processes.</span></span>  
+# <a name="corpubpublish-coclass"></a><span data-ttu-id="430bd-102">CorpubPublish-Co-Klasse</span><span class="sxs-lookup"><span data-stu-id="430bd-102">CorpubPublish Coclass</span></span>
+<span data-ttu-id="430bd-103">Stellt Schnittstellen für die Veröffentlichung von Informationen über Anwendungsdomänen und Prozesse bereit.</span><span class="sxs-lookup"><span data-stu-id="430bd-103">Provides interfaces for publishing information about application domains and processes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0d69-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b0d69-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="430bd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="430bd-104">Syntax</span></span>  
   
 ```  
 coclass CorpubPublish {  
@@ -49,27 +38,27 @@ coclass CorpubPublish {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="b0d69-105">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="b0d69-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="430bd-105">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="430bd-105">Interfaces</span></span>  
   
-|<span data-ttu-id="b0d69-106">Interface</span><span class="sxs-lookup"><span data-stu-id="b0d69-106">Interface</span></span>|<span data-ttu-id="b0d69-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b0d69-107">Description</span></span>|  
+|<span data-ttu-id="430bd-106">Interface</span><span class="sxs-lookup"><span data-stu-id="430bd-106">Interface</span></span>|<span data-ttu-id="430bd-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="430bd-107">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="b0d69-108">ICorPublish-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b0d69-108">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|<span data-ttu-id="b0d69-109">Stellt Methoden für die Veröffentlichung von Informationen über Prozesse und die Anwendungsdomänen in diesen Prozessen bereit.</span><span class="sxs-lookup"><span data-stu-id="b0d69-109">Provides methods for publishing information about processes and the application domains in those processes.</span></span>|  
-|[<span data-ttu-id="b0d69-110">ICorPublishAppDomain-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b0d69-110">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|<span data-ttu-id="b0d69-111">Stellt dar, und enthält Informationen zu einer Anwendungsdomäne in einem Prozess.</span><span class="sxs-lookup"><span data-stu-id="b0d69-111">Represents, and provides information about, an application domain in a process.</span></span>|  
-|[<span data-ttu-id="b0d69-112">ICorPublishAppDomainEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b0d69-112">ICorPublishAppDomainEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|<span data-ttu-id="b0d69-113">Enthält Methoden, die eine Auflistung von Anwendungsdomänen durchlaufen, die derzeit innerhalb eines Prozesses vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="b0d69-113">Provides methods that traverse a collection of application domains that currently exist within a process.</span></span>|  
-|[<span data-ttu-id="b0d69-114">ICorPublishProcess-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b0d69-114">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|<span data-ttu-id="b0d69-115">Entspricht einem Prozess, der auf einem Computer ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b0d69-115">Represents a process that is running on a computer.</span></span>|  
-|[<span data-ttu-id="b0d69-116">ICorPublishProcessEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b0d69-116">ICorPublishProcessEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|<span data-ttu-id="b0d69-117">Enthält Methoden, die eine Auflistung von Prozessen durchlaufen, die auf einem Computer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="b0d69-117">Provides methods that traverse a collection of processes that are running on a computer.</span></span>|  
+|[<span data-ttu-id="430bd-108">ICorPublish-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="430bd-108">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|<span data-ttu-id="430bd-109">Stellt Methoden für die Veröffentlichung von Informationen über Prozesse und die Anwendungsdomänen in diesen Prozessen bereit.</span><span class="sxs-lookup"><span data-stu-id="430bd-109">Provides methods for publishing information about processes and the application domains in those processes.</span></span>|  
+|[<span data-ttu-id="430bd-110">ICorPublishAppDomain-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="430bd-110">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|<span data-ttu-id="430bd-111">Stellt dar, und enthält Informationen zu einer Anwendungsdomäne in einem Prozess.</span><span class="sxs-lookup"><span data-stu-id="430bd-111">Represents, and provides information about, an application domain in a process.</span></span>|  
+|[<span data-ttu-id="430bd-112">ICorPublishAppDomainEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="430bd-112">ICorPublishAppDomainEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|<span data-ttu-id="430bd-113">Enthält Methoden, die eine Auflistung von Anwendungsdomänen durchlaufen, die derzeit innerhalb eines Prozesses vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="430bd-113">Provides methods that traverse a collection of application domains that currently exist within a process.</span></span>|  
+|[<span data-ttu-id="430bd-114">ICorPublishProcess-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="430bd-114">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|<span data-ttu-id="430bd-115">Entspricht einem Prozess, der auf einem Computer ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="430bd-115">Represents a process that is running on a computer.</span></span>|  
+|[<span data-ttu-id="430bd-116">ICorPublishProcessEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="430bd-116">ICorPublishProcessEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|<span data-ttu-id="430bd-117">Enthält Methoden, die eine Auflistung von Prozessen durchlaufen, die auf einem Computer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="430bd-117">Provides methods that traverse a collection of processes that are running on a computer.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b0d69-118">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b0d69-118">Remarks</span></span>  
- <span data-ttu-id="b0d69-119">Ein typisches Szenario für die publishing umfasst einen Entwickler möchte, Debuggen Sie verwalteten Code, der auf einem Computer in einer Anwendungsdomäne ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b0d69-119">A typical publishing scenario involves a developer who wants to debug managed code that is running on a computer within an application domain.</span></span> <span data-ttu-id="b0d69-120">Die hostumgebung möglicherweise mehr als eine Anwendungsdomäne innerhalb eines Prozesses ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="b0d69-120">The hosting environment may be running more than one application domain within a process.</span></span> <span data-ttu-id="b0d69-121">Der Entwickler möchte eine grafische Benutzeroberfläche oder andere Weise verwenden, um alle Prozesse aufzulisten, die auf dem Computer ausgeführt werden, und wählen Sie einen bestimmten Prozess.</span><span class="sxs-lookup"><span data-stu-id="b0d69-121">The developer would like to use a graphical user interface or some other means to list all of the processes that are running on the computer, and pick a specific process.</span></span> <span data-ttu-id="b0d69-122">Die Auflistung sollte alle Anwendungsdomänen innerhalb von Prozessen enthalten, die verwalteten Code ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="b0d69-122">The listing should include all of the application domains within processes that are running managed code.</span></span> <span data-ttu-id="b0d69-123">Klicken Sie dann kann den bestimmten Anwendungsdomäne zu identifizieren und Anfügen eines Debuggers an, dass diese Domäne.</span><span class="sxs-lookup"><span data-stu-id="b0d69-123">The developer can then identify the specific application domain and attach a debugger to that domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="430bd-118">Hinweise</span><span class="sxs-lookup"><span data-stu-id="430bd-118">Remarks</span></span>  
+ <span data-ttu-id="430bd-119">Ein typisches Szenario für die publishing umfasst einen Entwickler möchte, Debuggen Sie verwalteten Code, der auf einem Computer in einer Anwendungsdomäne ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="430bd-119">A typical publishing scenario involves a developer who wants to debug managed code that is running on a computer within an application domain.</span></span> <span data-ttu-id="430bd-120">Die hostumgebung möglicherweise mehr als eine Anwendungsdomäne innerhalb eines Prozesses ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="430bd-120">The hosting environment may be running more than one application domain within a process.</span></span> <span data-ttu-id="430bd-121">Der Entwickler möchte eine grafische Benutzeroberfläche oder andere Weise verwenden, um alle Prozesse aufzulisten, die auf dem Computer ausgeführt werden, und wählen Sie einen bestimmten Prozess.</span><span class="sxs-lookup"><span data-stu-id="430bd-121">The developer would like to use a graphical user interface or some other means to list all of the processes that are running on the computer, and pick a specific process.</span></span> <span data-ttu-id="430bd-122">Die Auflistung sollte alle Anwendungsdomänen innerhalb von Prozessen enthalten, die verwalteten Code ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="430bd-122">The listing should include all of the application domains within processes that are running managed code.</span></span> <span data-ttu-id="430bd-123">Klicken Sie dann kann den bestimmten Anwendungsdomäne zu identifizieren und Anfügen eines Debuggers an, dass diese Domäne.</span><span class="sxs-lookup"><span data-stu-id="430bd-123">The developer can then identify the specific application domain and attach a debugger to that domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0d69-124">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b0d69-124">Requirements</span></span>  
- <span data-ttu-id="b0d69-125">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0d69-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="430bd-124">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="430bd-124">Requirements</span></span>  
+ <span data-ttu-id="430bd-125">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="430bd-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0d69-126">**Header:** CorPub.idl</span><span class="sxs-lookup"><span data-stu-id="b0d69-126">**Header:** CorPub.idl</span></span>  
+ <span data-ttu-id="430bd-126">**Header:** CorPub.idl</span><span class="sxs-lookup"><span data-stu-id="430bd-126">**Header:** CorPub.idl</span></span>  
   
- <span data-ttu-id="b0d69-127">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0d69-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="430bd-127">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="430bd-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b0d69-128">**.NET Framework-Versionen:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0d69-128">**.NET Framework Versions:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="430bd-128">**.NET Framework-Versionen:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="430bd-128">**.NET Framework Versions:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0d69-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b0d69-129">See Also</span></span>  
- [<span data-ttu-id="b0d69-130">Debuggen</span><span class="sxs-lookup"><span data-stu-id="b0d69-130">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="430bd-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="430bd-129">See Also</span></span>  
+ [<span data-ttu-id="430bd-130">Debuggen</span><span class="sxs-lookup"><span data-stu-id="430bd-130">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

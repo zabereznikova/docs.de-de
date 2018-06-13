@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399755"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a><span data-ttu-id="0a61b-102">Exemplarische Vorgehensweise: Ausgeben von Code in Szenarien mit teilweiser Vertrauenswürdigkeit</span><span class="sxs-lookup"><span data-stu-id="0a61b-102">Walkthrough: Emitting Code in Partial Trust Scenarios</span></span>
 <span data-ttu-id="0a61b-103">Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit den gleichen API-Satz, für teilweise vertrauenswürdigen Code erfordern einige Funktionen allerdings besondere Berechtigungen.</span><span class="sxs-lookup"><span data-stu-id="0a61b-103">Reflection emit uses the same API set in full or partial trust, but some features require special permissions in partially trusted code.</span></span> <span data-ttu-id="0a61b-104">Außerdem verfügt die Reflektionsausgabe über eine Funktion für anonym gehostete dynamische Methoden, die zur Verwendung mit teilweiser Vertrauenswürdigkeit und sicherheitstransparenten Assemblys vorgesehen ist.</span><span class="sxs-lookup"><span data-stu-id="0a61b-104">In addition, reflection emit has a feature, anonymously hosted dynamic methods, that is designed to be used with partial trust and by security-transparent assemblies.</span></span>  

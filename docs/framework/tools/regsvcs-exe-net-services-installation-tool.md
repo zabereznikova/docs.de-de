@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400249"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a><span data-ttu-id="b5d97-102">Regsvcs.exe (.NET Services Installation-Tool)</span><span class="sxs-lookup"><span data-stu-id="b5d97-102">Regsvcs.exe (.NET Services Installation Tool)</span></span>
 <span data-ttu-id="b5d97-103">Mit dem .NET Services Installation-Tool können folgende Aktionen ausgeführt werden:</span><span class="sxs-lookup"><span data-stu-id="b5d97-103">The .NET Services Installation tool performs the following actions:</span></span>  

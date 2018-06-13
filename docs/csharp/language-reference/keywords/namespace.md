@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276018"
 ---
 # <a name="namespace-c-reference"></a><span data-ttu-id="ff66d-102">Namespace (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ff66d-102">namespace (C# Reference)</span></span>
 <span data-ttu-id="ff66d-103">Das `namespace`-Schlüsselwort wird verwendet, um einen Gültigkeitsbereich zu deklarieren, der eine Gruppe von verwandten Objekten enthält.</span><span class="sxs-lookup"><span data-stu-id="ff66d-103">The `namespace` keyword is used to declare a scope that contains a set of related objects.</span></span> <span data-ttu-id="ff66d-104">Sie können einen Namespace verwenden, um Codeelemente zu organisieren und global eindeutige Typen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="ff66d-104">You can use a namespace to organize code elements and to create globally unique types.</span></span>  

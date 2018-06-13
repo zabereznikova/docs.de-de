@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354659"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a><span data-ttu-id="ff0af-103">Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="ff0af-103">Explore code with the Roslyn syntax visualizer in Visual Studio</span></span>
 

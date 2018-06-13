@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398871"
 ---
 # <a name="security-issues-in-reflection-emit"></a><span data-ttu-id="9466f-102">Sicherheitsaspekte bei der Reflektionsausgabe</span><span class="sxs-lookup"><span data-stu-id="9466f-102">Security Issues in Reflection Emit</span></span>
 <span data-ttu-id="9466f-103">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), jeweils mit eigenen Sicherheitsproblemen:</span><span class="sxs-lookup"><span data-stu-id="9466f-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides three ways to emit Microsoft intermediate language (MSIL), each with its own security issues:</span></span>  

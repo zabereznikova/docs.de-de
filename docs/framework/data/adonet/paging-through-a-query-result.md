@@ -1,36 +1,25 @@
 ---
 title: Paging durch ein Abfrageergebnis
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 83e8241fed71ec4dd0ea32f97b02373f3a1d56bb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 73475f8521b4112929339cc7f1116e36ffebedb7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358967"
 ---
-# <a name="paging-through-a-query-result"></a><span data-ttu-id="eb774-102">Paging durch ein Abfrageergebnis</span><span class="sxs-lookup"><span data-stu-id="eb774-102">Paging Through a Query Result</span></span>
-<span data-ttu-id="eb774-103">Beim Paging durch ein Abfrageergebnis werden die Ergebnisse einer Abfrage in kleineren Untergruppen von Daten oder Seiten zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="eb774-103">Paging through a query result is the process of returning the results of a query in smaller subsets of data, or pages.</span></span> <span data-ttu-id="eb774-104">Dies ist eine allgemein übliche Vorgehensweise, um einem Benutzer Ergebnisse in kleinen Blöcken anzuzeigen, die sich leicht verwalten lassen.</span><span class="sxs-lookup"><span data-stu-id="eb774-104">This is a common practice for displaying results to a user in small, easy-to-manage chunks.</span></span>  
+# <a name="paging-through-a-query-result"></a><span data-ttu-id="40fd4-102">Paging durch ein Abfrageergebnis</span><span class="sxs-lookup"><span data-stu-id="40fd4-102">Paging Through a Query Result</span></span>
+<span data-ttu-id="40fd4-103">Beim Paging durch ein Abfrageergebnis werden die Ergebnisse einer Abfrage in kleineren Untergruppen von Daten oder Seiten zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="40fd4-103">Paging through a query result is the process of returning the results of a query in smaller subsets of data, or pages.</span></span> <span data-ttu-id="40fd4-104">Dies ist eine allgemein übliche Vorgehensweise, um einem Benutzer Ergebnisse in kleinen Blöcken anzuzeigen, die sich leicht verwalten lassen.</span><span class="sxs-lookup"><span data-stu-id="40fd4-104">This is a common practice for displaying results to a user in small, easy-to-manage chunks.</span></span>  
   
- <span data-ttu-id="eb774-105">Die **"DataAdapter"** bietet die Möglichkeit zum Zurückgeben von nur einer Seite mit Daten, die über Überladungen des der **füllen** Methode.</span><span class="sxs-lookup"><span data-stu-id="eb774-105">The **DataAdapter** provides a facility for returning only a page of data, through overloads of the **Fill** method.</span></span> <span data-ttu-id="eb774-106">Allerdings dies möglicherweise nicht die beste Wahl für umfangreiche Abfrageergebnisse durchgehen, da Sie zwar die **"DataAdapter"** füllt das Ziel <xref:System.Data.DataTable> oder <xref:System.Data.DataSet> mit nur den angeforderten Datensätzen, die Ressourcen zum Zurückgeben der gesamte Abfrage werden weiterhin verwendet.</span><span class="sxs-lookup"><span data-stu-id="eb774-106">However, this might not be the best choice for paging through large query results because, although the **DataAdapter** fills the target <xref:System.Data.DataTable> or <xref:System.Data.DataSet> with only the requested records, the resources to return the entire query are still used.</span></span> <span data-ttu-id="eb774-107">Geben Sie zusätzliche Kriterien für Ihre Abfrage ein, um eine Seite mit Daten von einer Datenquelle ohne die Ressourcen zurückzugeben, die zum Zurückgeben der gesamten Abfrage erforderlich sind, sodass nur die erforderlichen Zeilen zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="eb774-107">To return a page of data from a data source without using the resources to return the entire query, specify additional criteria for your query that reduce the rows returned to only those required.</span></span>  
+ <span data-ttu-id="40fd4-105">Die **"DataAdapter"** bietet die Möglichkeit zum Zurückgeben von nur einer Seite mit Daten, die über Überladungen des der **füllen** Methode.</span><span class="sxs-lookup"><span data-stu-id="40fd4-105">The **DataAdapter** provides a facility for returning only a page of data, through overloads of the **Fill** method.</span></span> <span data-ttu-id="40fd4-106">Allerdings dies möglicherweise nicht die beste Wahl für umfangreiche Abfrageergebnisse durchgehen, da Sie zwar die **"DataAdapter"** füllt das Ziel <xref:System.Data.DataTable> oder <xref:System.Data.DataSet> mit nur den angeforderten Datensätzen, die Ressourcen zum Zurückgeben der gesamte Abfrage werden weiterhin verwendet.</span><span class="sxs-lookup"><span data-stu-id="40fd4-106">However, this might not be the best choice for paging through large query results because, although the **DataAdapter** fills the target <xref:System.Data.DataTable> or <xref:System.Data.DataSet> with only the requested records, the resources to return the entire query are still used.</span></span> <span data-ttu-id="40fd4-107">Geben Sie zusätzliche Kriterien für Ihre Abfrage ein, um eine Seite mit Daten von einer Datenquelle ohne die Ressourcen zurückzugeben, die zum Zurückgeben der gesamten Abfrage erforderlich sind, sodass nur die erforderlichen Zeilen zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="40fd4-107">To return a page of data from a data source without using the resources to return the entire query, specify additional criteria for your query that reduce the rows returned to only those required.</span></span>  
   
- <span data-ttu-id="eb774-108">Verwenden der **füllen** Geben Sie die Methode zum Zurückgeben einer Seite der Daten, eine **StartRecord** Parameter, für den ersten Datensatz auf der Seite der Daten, und ein **MaxRecords** -Parameter, für die Anzahl der die Datensätze in die Seite der Daten.</span><span class="sxs-lookup"><span data-stu-id="eb774-108">To use the **Fill** method to return a page of data, specify a **startRecord** parameter, for the first record in the page of data, and a **maxRecords** parameter, for the number of records in the page of data.</span></span>  
+ <span data-ttu-id="40fd4-108">Verwenden der **füllen** Geben Sie die Methode zum Zurückgeben einer Seite der Daten, eine **StartRecord** Parameter, für den ersten Datensatz auf der Seite der Daten, und ein **MaxRecords** -Parameter, für die Anzahl der die Datensätze in die Seite der Daten.</span><span class="sxs-lookup"><span data-stu-id="40fd4-108">To use the **Fill** method to return a page of data, specify a **startRecord** parameter, for the first record in the page of data, and a **maxRecords** parameter, for the number of records in the page of data.</span></span>  
   
- <span data-ttu-id="eb774-109">Im folgenden Codebeispiel wird veranschaulicht, wie die **füllen** Methode, um die erste Seite eines Abfrageergebnisses zurückzugeben, wobei fünf Datensätze ist die Seitengröße.</span><span class="sxs-lookup"><span data-stu-id="eb774-109">The following code example shows how to use the **Fill** method to return the first page of a query result where the page size is five records.</span></span>  
+ <span data-ttu-id="40fd4-109">Im folgenden Codebeispiel wird veranschaulicht, wie die **füllen** Methode, um die erste Seite eines Abfrageergebnisses zurückzugeben, wobei fünf Datensätze ist die Seitengröße.</span><span class="sxs-lookup"><span data-stu-id="40fd4-109">The following code example shows how to use the **Fill** method to return the first page of a query result where the page size is five records.</span></span>  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -57,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- <span data-ttu-id="eb774-110">Im vorherigen Beispiel der **DataSet** gefüllt wird nur mit fünf Datensätzen, aber die gesamte **Aufträge** Tabelle zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="eb774-110">In the previous example, the **DataSet** is only filled with five records, but the entire **Orders** table is returned.</span></span> <span data-ttu-id="eb774-111">Zum Auffüllen der **DataSet** mit diesen fünf Datensätzen, aber nur fünf Datensätze zurückzugeben, verwenden Sie die TOP und WHERE-Klauseln in der SQL-Anweisung, wie im folgenden Codebeispiel wird.</span><span class="sxs-lookup"><span data-stu-id="eb774-111">To fill the **DataSet** with those same five records, but only return five records, use the TOP and WHERE clauses in your SQL statement, as in the following code example.</span></span>  
+ <span data-ttu-id="40fd4-110">Im vorherigen Beispiel der **DataSet** gefüllt wird nur mit fünf Datensätzen, aber die gesamte **Aufträge** Tabelle zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="40fd4-110">In the previous example, the **DataSet** is only filled with five records, but the entire **Orders** table is returned.</span></span> <span data-ttu-id="40fd4-111">Zum Auffüllen der **DataSet** mit diesen fünf Datensätzen, aber nur fünf Datensätze zurückzugeben, verwenden Sie die TOP und WHERE-Klauseln in der SQL-Anweisung, wie im folgenden Codebeispiel wird.</span><span class="sxs-lookup"><span data-stu-id="40fd4-111">To fill the **DataSet** with those same five records, but only return five records, use the TOP and WHERE clauses in your SQL statement, as in the following code example.</span></span>  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -82,7 +71,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
- <span data-ttu-id="eb774-112">Wenn Sie die Abfrageergebnisse auf diese Weise durchgehen, müssen Sie den eindeutigen Bezeichner, nach dem die Zeilen geordnet sind, beibehalten, um die eindeutige ID an den Befehl zu übergeben und die nächste Seite mit Datensätzen zurückzugeben (siehe folgendes Codebeispiel).</span><span class="sxs-lookup"><span data-stu-id="eb774-112">Note that, when paging through the query results in this way, you must preserve the unique identifier that orders the rows, in order to pass the unique ID to the command to return the next page of records, as shown in the following code example.</span></span>  
+ <span data-ttu-id="40fd4-112">Wenn Sie die Abfrageergebnisse auf diese Weise durchgehen, müssen Sie den eindeutigen Bezeichner, nach dem die Zeilen geordnet sind, beibehalten, um die eindeutige ID an den Befehl zu übergeben und die nächste Seite mit Datensätzen zurückzugeben (siehe folgendes Codebeispiel).</span><span class="sxs-lookup"><span data-stu-id="40fd4-112">Note that, when paging through the query results in this way, you must preserve the unique identifier that orders the rows, in order to pass the unique ID to the command to return the next page of records, as shown in the following code example.</span></span>  
   
 ```vb  
 Dim lastRecord As String = _  
@@ -94,7 +83,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- <span data-ttu-id="eb774-113">Die nächste Seite mit Datensätzen durch die Überladung der zurückzugebenden der **füllen** Methode, die **StartRecord** und **MaxRecords** Parameter, erhöhen Sie den aktuellen Datensatzindex durch die Seitengröße und Ausfüllen der Tabelle.</span><span class="sxs-lookup"><span data-stu-id="eb774-113">To return the next page of records using the overload of the **Fill** method that takes the **startRecord** and **maxRecords** parameters, increment the current record index by the page size and fill the table.</span></span> <span data-ttu-id="eb774-114">Denken Sie daran, dass der Datenbankserver alle Abfrageergebnisse zurückgibt, selbst wenn nur eine Seite mit Datensätzen hinzugefügt wird die **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="eb774-114">Remember that the database server returns the entire query results even though only one page of records is added to the **DataSet**.</span></span> <span data-ttu-id="eb774-115">Im folgenden Codebeispiel wird der Inhalt der Tabellenzeilen gelöscht, bevor sie mit der nächsten Seite mit Daten gefüllt werden.</span><span class="sxs-lookup"><span data-stu-id="eb774-115">In the following code example, the table rows are cleared before they are filled with the next page of data.</span></span> <span data-ttu-id="eb774-116">Möglicherweise soll eine bestimmte Anzahl zurückgegebener Zeilen in einem lokalen Cache beibehalten werden, um die Anzahl der Schleifen zum Datenbankserver zu reduzieren.</span><span class="sxs-lookup"><span data-stu-id="eb774-116">You might want to preserve a certain number of returned rows in a local cache to reduce trips to the database server.</span></span>  
+ <span data-ttu-id="40fd4-113">Die nächste Seite mit Datensätzen durch die Überladung der zurückzugebenden der **füllen** Methode, die **StartRecord** und **MaxRecords** Parameter, erhöhen Sie den aktuellen Datensatzindex durch die Seitengröße und Ausfüllen der Tabelle.</span><span class="sxs-lookup"><span data-stu-id="40fd4-113">To return the next page of records using the overload of the **Fill** method that takes the **startRecord** and **maxRecords** parameters, increment the current record index by the page size and fill the table.</span></span> <span data-ttu-id="40fd4-114">Denken Sie daran, dass der Datenbankserver alle Abfrageergebnisse zurückgibt, selbst wenn nur eine Seite mit Datensätzen hinzugefügt wird die **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="40fd4-114">Remember that the database server returns the entire query results even though only one page of records is added to the **DataSet**.</span></span> <span data-ttu-id="40fd4-115">Im folgenden Codebeispiel wird der Inhalt der Tabellenzeilen gelöscht, bevor sie mit der nächsten Seite mit Daten gefüllt werden.</span><span class="sxs-lookup"><span data-stu-id="40fd4-115">In the following code example, the table rows are cleared before they are filled with the next page of data.</span></span> <span data-ttu-id="40fd4-116">Möglicherweise soll eine bestimmte Anzahl zurückgegebener Zeilen in einem lokalen Cache beibehalten werden, um die Anzahl der Schleifen zum Datenbankserver zu reduzieren.</span><span class="sxs-lookup"><span data-stu-id="40fd4-116">You might want to preserve a certain number of returned rows in a local cache to reduce trips to the database server.</span></span>  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -112,7 +101,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- <span data-ttu-id="eb774-117">Geben Sie restriktive Kriterien für die SQL-Anweisung SELECT an, um die nächste Seite mit Datensätzen zurückzugeben, ohne dass der Datenbankserver die gesamte Abfrage zurückgeben muss.</span><span class="sxs-lookup"><span data-stu-id="eb774-117">To return the next page of records without having the database server return the entire query, specify restrictive criteria to the SELECT statement.</span></span> <span data-ttu-id="eb774-118">Da im vorhergehenden Beispiel der zuletzt zurückgegebene Datensatz beibehalten wurde, können Sie ihn in der WHERE-Klausel verwenden, um – wie im folgenden Codebeispiel gezeigt – einen Ausgangspunkt für die Abfrage anzugeben.</span><span class="sxs-lookup"><span data-stu-id="eb774-118">Because the preceding example preserved the last record returned, you can use it in the WHERE clause to specify a starting point for the query, as shown in the following code example.</span></span>  
+ <span data-ttu-id="40fd4-117">Geben Sie restriktive Kriterien für die SQL-Anweisung SELECT an, um die nächste Seite mit Datensätzen zurückzugeben, ohne dass der Datenbankserver die gesamte Abfrage zurückgeben muss.</span><span class="sxs-lookup"><span data-stu-id="40fd4-117">To return the next page of records without having the database server return the entire query, specify restrictive criteria to the SELECT statement.</span></span> <span data-ttu-id="40fd4-118">Da im vorhergehenden Beispiel der zuletzt zurückgegebene Datensatz beibehalten wurde, können Sie ihn in der WHERE-Klausel verwenden, um – wie im folgenden Codebeispiel gezeigt – einen Ausgangspunkt für die Abfrage anzugeben.</span><span class="sxs-lookup"><span data-stu-id="40fd4-118">Because the preceding example preserved the last record returned, you can use it in the WHERE clause to specify a starting point for the query, as shown in the following code example.</span></span>  
   
 ```vb  
 orderSQL = "SELECT TOP " & pageSize & _  
@@ -134,6 +123,6 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="eb774-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eb774-119">See Also</span></span>  
- [<span data-ttu-id="eb774-120">DataAdapters und DataReaders</span><span class="sxs-lookup"><span data-stu-id="eb774-120">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [<span data-ttu-id="eb774-121">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="eb774-121">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="40fd4-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="40fd4-119">See Also</span></span>  
+ [<span data-ttu-id="40fd4-120">DataAdapters und DataReaders</span><span class="sxs-lookup"><span data-stu-id="40fd4-120">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="40fd4-121">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="40fd4-121">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

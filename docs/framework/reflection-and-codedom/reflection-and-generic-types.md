@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399703"
 ---
 # <a name="reflection-and-generic-types"></a><span data-ttu-id="aec15-102">Reflektion und generische Typen</span><span class="sxs-lookup"><span data-stu-id="aec15-102">Reflection and Generic Types</span></span>
 <a name="top"></a> <span data-ttu-id="aec15-103">Aus Sicht der Reflektion besteht der Unterschied zwischen einem generischen und einem normalen Typ darin, dass ein generischer Typ mit einem Typparameterset (bei einer generischen Typdefinition) oder mit Typargumenten (bei einem konstruierten Typ) verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="aec15-103">From the point of view of reflection, the difference between a generic type and an ordinary type is that a generic type has associated with it a set of type parameters (if it is a generic type definition) or type arguments (if it is a constructed type).</span></span> <span data-ttu-id="aec15-104">Auf dieselbe Art unterscheidet sich eine generische Methode von einer normalen Methode.</span><span class="sxs-lookup"><span data-stu-id="aec15-104">A generic method differs from an ordinary method in the same way.</span></span>  

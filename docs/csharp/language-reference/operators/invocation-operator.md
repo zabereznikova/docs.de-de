@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275024"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="77566-102">Operator () (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="77566-102">() Operator (C# Reference)</span></span>
 <span data-ttu-id="77566-103">Zusätzlich zur Angabe der Reihenfolge von Vorgängen in einem Ausdruck werden Klammern verwendet, um folgende Aufgaben auszuführen:</span><span class="sxs-lookup"><span data-stu-id="77566-103">In addition to being used to specify the order of operations in an expression, parentheses are used to perform the following tasks:</span></span>  

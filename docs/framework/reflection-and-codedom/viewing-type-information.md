@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399742"
 ---
 # <a name="viewing-type-information"></a><span data-ttu-id="f0d3b-102">Anzeigen von Typinformationen</span><span class="sxs-lookup"><span data-stu-id="f0d3b-102">Viewing Type Information</span></span>
 <span data-ttu-id="f0d3b-103">Die Klasse <xref:System.Type?displayProperty=nameWithType> ist für die Reflektion wesentlich.</span><span class="sxs-lookup"><span data-stu-id="f0d3b-103">The <xref:System.Type?displayProperty=nameWithType> class is central to reflection.</span></span> <span data-ttu-id="f0d3b-104">Die Common Language Runtime (CLR) erstellt **Type** für einen geladenen Typ, wenn die Reflektion diesen anfordert.</span><span class="sxs-lookup"><span data-stu-id="f0d3b-104">The common language runtime creates the **Type** for a loaded type when reflection requests it.</span></span> <span data-ttu-id="f0d3b-105">Sie können die Methoden, Felder, Eigenschaften und geschachtelten Klassen eines **Type**-Objekts dazu verwenden, alle Informationen zu diesem Typ zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="f0d3b-105">You can use a **Type** object's methods, fields, properties, and nested classes to find out everything about that type.</span></span>  

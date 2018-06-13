@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399593"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a><span data-ttu-id="8850a-102">Gacutil.exe (Global Assembly Cache-Tool)</span><span class="sxs-lookup"><span data-stu-id="8850a-102">Gacutil.exe (Global Assembly Cache Tool)</span></span>
 <span data-ttu-id="8850a-103">Das Global Assembly Cache-Tool ermöglicht das Anzeigen und Bearbeiten vom Inhalt des globalen Assemblycaches und des Downloadcaches.</span><span class="sxs-lookup"><span data-stu-id="8850a-103">The Global Assembly Cache tool allows you to view and manipulate the contents of the global assembly cache and download cache.</span></span>  

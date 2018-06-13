@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399820"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a><span data-ttu-id="100f9-102">Erstellen von Ressourcendateien für Desktop-Apps</span><span class="sxs-lookup"><span data-stu-id="100f9-102">Creating Resource Files for Desktop Apps</span></span>
 <span data-ttu-id="100f9-103">Sie können Ressourcen (z. B. Zeichenfolgen, Bilder oder Objektdaten) in Ressourcendateien einschließen, um sie für die Anwendung leicht verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="100f9-103">You can include resources, such as strings, images, or object data, in resources files to make them easily available to your application.</span></span> <span data-ttu-id="100f9-104">.NET Framework bietet fünf Möglichkeiten, Ressourcendateien zu erstellen:</span><span class="sxs-lookup"><span data-stu-id="100f9-104">The .NET Framework offers five ways to create resources files:</span></span>  

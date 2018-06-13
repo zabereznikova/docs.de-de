@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752545"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a><span data-ttu-id="7c3e1-102">&lt;authentication&gt; des &lt;serviceCertificate&gt;-Elements</span><span class="sxs-lookup"><span data-stu-id="7c3e1-102">&lt;authentication&gt; of &lt;serviceCertificate&gt; Element</span></span>
 <span data-ttu-id="7c3e1-103">Gibt die vom Clientproxy zum Authentifizieren von Dienstzertifikaten verwendeten Einstellungen an, die mittels SSL/TLS-Verhandlung abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="7c3e1-103">Specifies the settings used by the client proxy to authenticate service certificates that are obtained using SSL/TLS negotiation.</span></span>  

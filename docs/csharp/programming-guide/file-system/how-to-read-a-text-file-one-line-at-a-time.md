@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339734"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a><span data-ttu-id="2a146-102">Gewusst wie: Zeilenweises Lesen einer Textdatei (Visual C#)</span><span class="sxs-lookup"><span data-stu-id="2a146-102">How to: Read a Text File One Line at a Time (Visual C#)</span></span>
 <span data-ttu-id="2a146-103">Dieses Beispiel liest den Inhalt einer Textdatei Zeile pro Zeile in eine Zeichenfolge mithilfe der `ReadLine`-Methode der `StreamReader`-Klasse.</span><span class="sxs-lookup"><span data-stu-id="2a146-103">This example reads the contents of a text file, one line at a time, into a string using the `ReadLine` method of the `StreamReader` class.</span></span> <span data-ttu-id="2a146-104">Jede Textzeile wird in der Zeichenfolge `line` gespeichert und auf dem Bildschirm angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2a146-104">Each text line is stored into the string `line` and displayed on the screen.</span></span>  
