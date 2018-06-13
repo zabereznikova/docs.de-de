@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589970"
 ---
 # <a name="interlocked-operations"></a>Interlocked-Vorgänge
 Die <xref:System.Threading.Interlocked>-Klasse stellt Methoden bereit, die den Zugriff auf eine Variable synchronisieren, die von mehreren Threads gemeinsam genutzt wird. Threads aus verschiedenen Prozessen können diesen Mechanismus verwenden, wenn sich die Variable im freigegebenen Speicher befindet. Interlocked-Vorgänge sind unteilbare (atomarische) Vorgänge. Der gesamte Vorgang ist eine Einheit, die durch einen anderen Interlocked-Vorgang mit derselben Variablen nicht unterbrochen werden kann. Dies ist in Betriebssystemen mit präemptivem Multithreading von Bedeutung, bei denen ein Thread nach dem Laden eines Werts aus einer Speicheradresse unterbrochen werden kann, bevor der Wert geändert oder gespeichert wurde.  

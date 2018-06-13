@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573720"
 ---
 # <a name="exception-throwing"></a>Auslösen von Ausnahmen
 Ausnahme auslösende-Richtlinien, die in diesem Abschnitt beschriebenen erfordern eine gute Definition der Bedeutung der Ausführung ein Fehler aufgetreten. Fehler bei der Ausführung tritt auf, wenn es sich bei Mitglied nicht seiner Vorgehensweise (welche die Elementnamen impliziert) entwickelt. Beispielsweise, wenn die `OpenFile` Methode kann nicht an den Aufrufer eine geöffnete Dateihandle zurückgeben, es werden Fehler bei der Ausführung betrachtet.  

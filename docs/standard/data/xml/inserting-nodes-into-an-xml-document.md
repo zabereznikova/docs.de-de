@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568542"
 ---
 # <a name="inserting-nodes-into-an-xml-document"></a>Einfügen von Knoten in ein XML-Dokument
 Sie können das Dokument durch Einfügen von neuen Knoten ändern. Die Knoten können neu erstellt werden, im gleichen Dokument vorhanden sein oder aus einem anderen Dokument importiert werden. Weitere Informationen zum Erstellen neuer Knoten finden Sie unter [Erstellen von neuen Knoten im Dokumentobjektmodell](../../../../docs/standard/data/xml/create-new-nodes-in-the-dom.md). Weitere Informationen zum Kopieren von vorhandenen Knoten finden Sie unter [Kopieren bestehender Knoten](../../../../docs/standard/data/xml/copy-existing-nodes.md), [Kopieren bestehender Knoten aus einem Dokument in ein anderes](../../../../docs/standard/data/xml/copying-existing-nodes-from-one-document-to-another.md) und [Kopieren von Dokumentfragmenten](../../../../docs/standard/data/xml/copying-document-fragments.md).  

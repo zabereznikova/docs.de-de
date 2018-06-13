@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234677"
 ---
 # <a name="delegate-statement"></a>Delegate-Anweisung
 Wird verwendet, um einen Delegaten zu deklarieren. Ein Delegat ist ein Verweistyp, der auf verweist eine `Shared` Methode eines Typs oder an eine Instanzmethode eines Objekts. Jede Prozedur mit passenden Parameter-und Rückgabetypen kann zum Erstellen einer Instanz dieser Klasse Delegaten verwendet werden. Die Prozedur kann dann über die Delegatinstanz aufgerufen werden.  

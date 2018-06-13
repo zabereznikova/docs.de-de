@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593203"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>Das Objekt oder die Klasse unterstützt diese Gruppe von Ereignissen nicht.
 Sie haben versucht, mit einem `WithEvents` Variable mit einer Komponente, die als Ereignisquelle für den angegebenen Satz von Ereignissen nicht funktionieren. Sie möchten z. B. die Ereignisse eines Objekts aufzufangen und anschließend ein anderes Objekt zu erstellen, die `Implements` das erste Objekt. Obwohl Sie denken, dass Sie die Ereignisse aus dem Objekt implementiert sink konnte vielleicht, ist dies nicht immer der Fall. `Implements` nur eine Schnittstelle für Methoden und Eigenschaften implementiert wird. `WithEvents` wird nicht unterstützt für Private `UserControls`, da die Typinformationen zum Auslösen der `ObjectEvent` zur Laufzeit nicht verfügbar ist.  

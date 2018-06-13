@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595994"
 ---
 # <a name="permission-denied-visual-basic"></a>Berechtigung verweigert (Visual Basic)
 Es wurde in einem schreibgeschützten Datenträger zu schreiben oder auf eine gesperrte Datei zuzugreifen versucht.  

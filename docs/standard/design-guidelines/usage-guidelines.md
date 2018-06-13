@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571032"
 ---
 # <a name="usage-guidelines"></a>Verwendungsrichtlinien
 Dieser Abschnitt enthält Richtlinien für die Verwendung von gemeinsamer Typen in öffentlich zugängliche-APIs. Er behandelt die Nutzung des integrierten Framework-Typen (z. B. Serialisierungsattribute) und allgemeine Operatoren überladen.  

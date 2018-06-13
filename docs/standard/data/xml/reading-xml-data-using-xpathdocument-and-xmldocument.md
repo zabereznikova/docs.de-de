@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575465"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Lesen von XML-Daten mithilfe von XPathDocument und XmlDocument
 Es gibt zwei Möglichkeiten, wie ein XML-Dokument in einem <xref:System.Xml.XPath?displayProperty=nameWithType>-Namespace gelesen werden kann. Zum einem kann ein XML-Dokument mithilfe der schreibgeschützten <xref:System.Xml.XPath.XPathDocument>-Klasse und zum anderen mithilfe der editierbaren <xref:System.Xml.XmlDocument>-Klasse im <xref:System.Xml?displayProperty=nameWithType>-Namespace gelesen werden.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568016"
 ---
 # <a name="copying-document-fragments"></a>Kopieren von Dokumentfragmenten
 Sie können einen **XmlDocumentFragment**-Knoten erstellen und diesem untergeordnete Knoten hinzufügen. Wenn der **XmlDocumentFragment**-Knoten mit der **InsertNode**-Methode eingefügt wird, wird der **XmlDocumentFragment**-Knoten nicht kopiert, aber seine untergeordneten Knoten werden in das XML-Dokumentobjektmodell (DOM) eingefügt.  

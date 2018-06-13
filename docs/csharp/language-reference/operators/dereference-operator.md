@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171979"
 ---
 # <a name="-gt-operator-c-reference"></a>-&gt;-Operator (C#-Referenz)
 Der Operator `->` kombiniert Zeigerdereferenzierung und Memberzugriff.  
