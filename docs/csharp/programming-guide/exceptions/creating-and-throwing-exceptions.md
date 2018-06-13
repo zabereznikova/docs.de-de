@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336055"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a><span data-ttu-id="f895a-102">Erstellen und Auslösen von Ausnahmen (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="f895a-102">Creating and Throwing Exceptions (C# Programming Guide)</span></span>
 <span data-ttu-id="f895a-103">Ausnahmen werden verwendet, um anzugeben, dass während der Ausführung des Programms ein Fehler aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="f895a-103">Exceptions are used to indicate that an error has occurred while running the program.</span></span> <span data-ttu-id="f895a-104">Ausnahmeobjekte, die einen Fehler beschreiben, werden erstellt und dann mit dem Schlüsselwort [throw](../../../csharp/language-reference/keywords/throw.md) (auslösen) *ausgelöst*.</span><span class="sxs-lookup"><span data-stu-id="f895a-104">Exception objects that describe an error are created and then *thrown* with the [throw](../../../csharp/language-reference/keywords/throw.md) keyword.</span></span> <span data-ttu-id="f895a-105">Die Laufzeit sucht dann nach dem kompatibelsten Ausnahmehandler.</span><span class="sxs-lookup"><span data-stu-id="f895a-105">The runtime then searches for the most compatible exception handler.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642973"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a><span data-ttu-id="2e159-102">Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e159-102">How to: Debug Empty Query Results Sets (Visual Basic)</span></span>
 <span data-ttu-id="2e159-103">Eines der häufigsten Probleme beim Abfragen von XML-Strukturen besteht darin, dass der Entwickler, wenn die XML-Struktur einen Standardnamespace besitzt, mitunter die Abfrage so schreibt, als würde sich das XML nicht in einem Namespace befinden.</span><span class="sxs-lookup"><span data-stu-id="2e159-103">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
