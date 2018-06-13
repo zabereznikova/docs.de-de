@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322090"
 ---
 # <a name="how-to-execute-expression-trees-c"></a><span data-ttu-id="63b0c-102">Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#)</span><span class="sxs-lookup"><span data-stu-id="63b0c-102">How to: Execute Expression Trees (C#)</span></span>
 <span data-ttu-id="63b0c-103">In diesem Thema erfahren Sie, wie eine Ausdrucksbaumstruktur ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="63b0c-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="63b0c-104">Die Ausführung einer Ausdrucksbaumstruktur gibt möglicherweise einen Wert zurück. Es kann jedoch auch nur eine Aktion ausgeführt werden, z.B. das Aufrufen einer Methode.</span><span class="sxs-lookup"><span data-stu-id="63b0c-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  

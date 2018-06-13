@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326718"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a><span data-ttu-id="1d412-102">Details eines Office Open XML-WordprocessingML-Dokuments (C#)</span><span class="sxs-lookup"><span data-stu-id="1d412-102">Details of Office Open XML WordprocessingML Documents (C#)</span></span>
 <span data-ttu-id="1d412-103">Dieser Abschnitt enthält Informationen zu den Details von Office Open XML WordprocessingML-Dokumenten.</span><span class="sxs-lookup"><span data-stu-id="1d412-103">This section provides information about the details of Office Open XML WordprocessingML documents.</span></span> <span data-ttu-id="1d412-104">Sie finden hier Beispiele für den Dokument- und den Formatvorlagenteil eines Open XML-Dokuments.</span><span class="sxs-lookup"><span data-stu-id="1d412-104">It shows examples of the document and style parts of an Open XML document.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319643"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a><span data-ttu-id="919c4-102">Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (C#)</span><span class="sxs-lookup"><span data-stu-id="919c4-102">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>
 <span data-ttu-id="919c4-103">Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL) wird zur Laufzeit mit dem Programm verknüpft.</span><span class="sxs-lookup"><span data-stu-id="919c4-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="919c4-104">Betrachten Sie das folgende Szenario, das die Erstellung und Verwendung einer DLL zeigt:</span><span class="sxs-lookup"><span data-stu-id="919c4-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328444"
 ---
 # <a name="polymorphism-c-programming-guide"></a><span data-ttu-id="e94f1-102">Polymorphismus (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="e94f1-102">Polymorphism (C# Programming Guide)</span></span>
 <span data-ttu-id="e94f1-103">Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte Säule der objektorientierten Programmierung bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="e94f1-103">Polymorphism is often referred to as the third pillar of object-oriented programming, after encapsulation and inheritance.</span></span> <span data-ttu-id="e94f1-104">Es handelt sich dabei um ein griechisches Wort, das "Vielgestaltigkeit" bedeutet und zwei verschiedene Aspekte umfasst:</span><span class="sxs-lookup"><span data-stu-id="e94f1-104">Polymorphism is a Greek word that means "many-shaped" and it has two distinct aspects:</span></span>  

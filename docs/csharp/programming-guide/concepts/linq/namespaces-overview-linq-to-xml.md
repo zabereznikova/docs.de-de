@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323848"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a><span data-ttu-id="c821f-102">Übersicht über Namespaces (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c821f-102">Namespaces Overview (LINQ to XML)</span></span>
 <span data-ttu-id="c821f-103">Dieses Thema enthält eine Einführung in die Namespaces, die <xref:System.Xml.Linq.XName>-Klasse und die <xref:System.Xml.Linq.XNamespace>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="c821f-103">This topic introduces namespaces, the <xref:System.Xml.Linq.XName> class, and the <xref:System.Xml.Linq.XNamespace> class.</span></span>  

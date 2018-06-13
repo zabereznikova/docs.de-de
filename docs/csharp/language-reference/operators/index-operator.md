@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286028"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="3d8eb-102">Operator [] (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="3d8eb-102">[] Operator (C# Reference)</span></span>
 <span data-ttu-id="3d8eb-103">Eckige Klammern (`[]`) werden für Arrays, Indexer und Attribute verwendet.</span><span class="sxs-lookup"><span data-stu-id="3d8eb-103">Square brackets (`[]`) are used for arrays, indexers, and attributes.</span></span> <span data-ttu-id="3d8eb-104">Sie können auch mit Zeigern verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="3d8eb-104">They can also be used with pointers.</span></span>  

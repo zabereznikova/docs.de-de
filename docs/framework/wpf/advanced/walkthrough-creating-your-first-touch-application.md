@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548350"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a><span data-ttu-id="bec6f-102">Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung</span><span class="sxs-lookup"><span data-stu-id="bec6f-102">Walkthrough: Creating Your First Touch Application</span></span>
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="bec6f-103"> ermöglicht Anwendungen, um touch reagieren.</span><span class="sxs-lookup"><span data-stu-id="bec6f-103"> enables applications to respond to touch.</span></span> <span data-ttu-id="bec6f-104">Beispielsweise eine Anwendung interagieren, indem Sie eine oder mehrere Finger auf einem Gerät mit Touch unterschieden, z. B. einem Touchscreen dar, die in dieser exemplarischen Vorgehensweise eine Anwendung, die dem Benutzer ermöglicht erstellt, zu verschieben, Ändern der Größe oder drehen Sie ein einzelnes Objekt mit Touch.</span><span class="sxs-lookup"><span data-stu-id="bec6f-104">For example, you can interact with an application by using one or more fingers on a touch-sensitive device, such as a touchscreen This walkthrough creates an application that enables the user to move, resize, or rotate a single object by using touch.</span></span>  

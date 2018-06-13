@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333182"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a><span data-ttu-id="1044e-102">Gewusst wie: Identifizieren eines Typs, der NULL-Werte zulässt (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="1044e-102">How to: Identify a Nullable Type (C# Programming Guide)</span></span>
 <span data-ttu-id="1044e-103">Sie können den C#-Operator [typeof](../../../csharp/language-reference/keywords/typeof.md) zum Erstellen eines <xref:System.Type>-Objekts verwenden, der einen Nullable-Typ darstellt:</span><span class="sxs-lookup"><span data-stu-id="1044e-103">You can use the C# [typeof](../../../csharp/language-reference/keywords/typeof.md) operator to create a <xref:System.Type> object that represents a Nullable type:</span></span>  

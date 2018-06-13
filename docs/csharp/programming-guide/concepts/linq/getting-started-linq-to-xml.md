@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330849"
 ---
 # <a name="getting-started-linq-to-xml"></a><span data-ttu-id="005c7-102">Erste Schritte (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="005c7-102">Getting Started (LINQ to XML)</span></span>
 <span data-ttu-id="005c7-103">Die folgenden Themen enthalten eine Einführung in LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="005c7-103">The following topics introduce LINQ to XML.</span></span>  

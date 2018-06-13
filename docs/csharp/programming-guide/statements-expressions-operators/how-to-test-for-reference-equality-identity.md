@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322340"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a><span data-ttu-id="e4e0d-102">Gewusst wie: Überprüfen auf Verweisgleichheit (Identität) (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="e4e0d-102">How to: Test for Reference Equality (Identity) (C# Programming Guide)</span></span>
 <span data-ttu-id="e4e0d-103">Sie müssen zur Unterstützung von Verweisgleichheitsprüfungen in Ihren Typen keine benutzerdefinierte Logik implementieren.</span><span class="sxs-lookup"><span data-stu-id="e4e0d-103">You do not have to implement any custom logic to support reference equality comparisons in your types.</span></span> <span data-ttu-id="e4e0d-104">Diese Funktionalität wird für alle Typen mit der statischen <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>-Methode bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="e4e0d-104">This functionality is provided for all types by the static <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> method.</span></span>  

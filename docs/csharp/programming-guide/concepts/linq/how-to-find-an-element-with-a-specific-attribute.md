@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325694"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a><span data-ttu-id="a1b7a-102">Vorgehensweise: Suchen nach einem Element mit bestimmten Attributen (C#)</span><span class="sxs-lookup"><span data-stu-id="a1b7a-102">How to: Find an Element with a Specific Attribute (C#)</span></span>
 <span data-ttu-id="a1b7a-103">In diesem Thema wird gezeigt, wie Sie nach einem Element mit einem bestimmten Wert suchen können.</span><span class="sxs-lookup"><span data-stu-id="a1b7a-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  

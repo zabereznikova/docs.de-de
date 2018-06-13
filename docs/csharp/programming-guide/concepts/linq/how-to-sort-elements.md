@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319766"
 ---
 # <a name="how-to-sort-elements-c"></a><span data-ttu-id="0457a-102">Vorgehensweise: Sortieren von Elementen (C#)</span><span class="sxs-lookup"><span data-stu-id="0457a-102">How to: Sort Elements (C#)</span></span>
 <span data-ttu-id="0457a-103">In diesem Beispiel wird gezeigt, wie Sie eine Abfrage schreiben können, die ihre Ergebnisse sortiert.</span><span class="sxs-lookup"><span data-stu-id="0457a-103">This example shows how to write a query that sorts its results.</span></span>  

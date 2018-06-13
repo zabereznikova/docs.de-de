@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332219"
 ---
 # <a name="wordprocessingml-document-with-styles"></a><span data-ttu-id="fdba3-102">WordprocessingML-Dokumente mit Formatvorlagen</span><span class="sxs-lookup"><span data-stu-id="fdba3-102">WordprocessingML Document with Styles</span></span>
 <span data-ttu-id="fdba3-103">Kompliziertere WordprocessingML-Dokumente besitzen Absätze, die mit Formatvorlagen formatiert sind.</span><span class="sxs-lookup"><span data-stu-id="fdba3-103">More complicated WordprocessingML documents have paragraphs that are formatted with styles.</span></span>  

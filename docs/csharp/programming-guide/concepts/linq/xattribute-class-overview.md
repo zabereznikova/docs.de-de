@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324417"
 ---
 # <a name="xattribute-class-overview-c"></a><span data-ttu-id="5b5fd-102">Übersicht der XAttribute-Klasse (C#)</span><span class="sxs-lookup"><span data-stu-id="5b5fd-102">XAttribute Class Overview (C#)</span></span>
 <span data-ttu-id="5b5fd-103">Attribute sind Name/Wert-Paare, die einem Element zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="5b5fd-103">Attributes are name/value pairs that are associated with an element.</span></span> <span data-ttu-id="5b5fd-104">Die <xref:System.Xml.Linq.XAttribute>-Klasse stellt XML-Attribute dar.</span><span class="sxs-lookup"><span data-stu-id="5b5fd-104">The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324810"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a><span data-ttu-id="43d24-102">Vorgehensweise: Schreiben von Abfragen mit komplexer Filterung (C#)</span><span class="sxs-lookup"><span data-stu-id="43d24-102">How to: Write Queries with Complex Filtering (C#)</span></span>
 <span data-ttu-id="43d24-103">Es kann vorkommen, dass Sie LINQ to XML-Abfragen mit komplexen Filtern schreiben möchten.</span><span class="sxs-lookup"><span data-stu-id="43d24-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="43d24-104">Vielleicht möchten Sie z. B. auf diese Weise nach allen Elementen suchen, die ein untergeordnetes Element mit einem bestimmten Namen und einem bestimmten Wert besitzen.</span><span class="sxs-lookup"><span data-stu-id="43d24-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="43d24-105">In diesem Thema finden Sie ein Beispiel für das Schreiben von Fragen mit komplexer Filterung.</span><span class="sxs-lookup"><span data-stu-id="43d24-105">This topic gives an example of writing a query with complex filtering.</span></span>  

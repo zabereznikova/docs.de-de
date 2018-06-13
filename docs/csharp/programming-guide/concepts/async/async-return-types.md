@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334183"
 ---
 # <a name="async-return-types-c"></a><span data-ttu-id="cd5ed-102">Asynchrone Rückgabetypen (C#)</span><span class="sxs-lookup"><span data-stu-id="cd5ed-102">Async Return Types (C#)</span></span>
 <span data-ttu-id="cd5ed-103">Asynchrone Methoden können folgende Rückgabetypen haben:</span><span class="sxs-lookup"><span data-stu-id="cd5ed-103">Async methods can have the following return types:</span></span>

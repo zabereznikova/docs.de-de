@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325343"
 ---
 # <a name="join-operations-c"></a><span data-ttu-id="30c82-102">Verknüpfungsvorgänge (C#)</span><span class="sxs-lookup"><span data-stu-id="30c82-102">Join Operations (C#)</span></span>
 <span data-ttu-id="30c82-103">Eine *Verknüpfung* zweier Datenquellen entspricht der Zuordnung von Objekten einer Datenquelle zu den Objekten einer anderen Datenquelle, die ein Attribut gemeinsam haben.</span><span class="sxs-lookup"><span data-stu-id="30c82-103">A *join* of two data sources is the association of objects in one data source with objects that share a common attribute in another data source.</span></span>  

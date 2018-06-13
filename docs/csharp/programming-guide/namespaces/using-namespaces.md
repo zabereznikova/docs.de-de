@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329546"
 ---
 # <a name="using-namespaces-c-programming-guide"></a><span data-ttu-id="86cd2-102">Verwenden von Namespaces (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="86cd2-102">Using Namespaces (C# Programming Guide)</span></span>
 <span data-ttu-id="86cd2-103">Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwendet.</span><span class="sxs-lookup"><span data-stu-id="86cd2-103">Namespaces are heavily used within C# programs in two ways.</span></span> <span data-ttu-id="86cd2-104">Erstens: Die .NET Framework-Klassen verwenden Namespaces, um ihre zahlreichen Klassen zu organisieren.</span><span class="sxs-lookup"><span data-stu-id="86cd2-104">Firstly, the .NET Framework classes use namespaces to organize its many classes.</span></span> <span data-ttu-id="86cd2-105">Zweitens: Eigene Namespaces zu deklarieren kann Ihnen dabei helfen, den Umfang der Klassen- und Methodennamen in größeren Programmierprojekten zu steuern.</span><span class="sxs-lookup"><span data-stu-id="86cd2-105">Secondly, declaring your own namespaces can help control the scope of class and method names in larger programming projects.</span></span>  

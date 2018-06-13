@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329003"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="739ce-102">Beispiel-XML-Datei: Numerische Daten in einem Namespace</span><span class="sxs-lookup"><span data-stu-id="739ce-102">Sample XML File: Numerical Data in a Namespace</span></span>
 <span data-ttu-id="739ce-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="739ce-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="739ce-104">Diese Datei enthält numerische Daten zum Summieren, zur Durchschnittsberechnung und zum Gruppieren.</span><span class="sxs-lookup"><span data-stu-id="739ce-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="739ce-105">Der XML-Code befindet sich in einem Namespace.</span><span class="sxs-lookup"><span data-stu-id="739ce-105">The XML is in a namespace.</span></span>  

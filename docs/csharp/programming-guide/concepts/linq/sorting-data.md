@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332558"
 ---
 # <a name="sorting-data-c"></a><span data-ttu-id="ee8c2-102">Sortieren von Daten (C#)</span><span class="sxs-lookup"><span data-stu-id="ee8c2-102">Sorting Data (C#)</span></span>
 <span data-ttu-id="ee8c2-103">Bei einem Sortiervorgang werden die Elemente einer Sequenz auf Grundlage eines oder mehrerer Attribute sortiert.</span><span class="sxs-lookup"><span data-stu-id="ee8c2-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="ee8c2-104">Mit dem ersten Sortierkriterium wird eine primäre Sortierung der Elemente ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="ee8c2-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="ee8c2-105">Sie können die Elemente innerhalb jeder primären Sortiergruppe sortieren, indem Sie ein zweites Sortierkriterium angeben.</span><span class="sxs-lookup"><span data-stu-id="ee8c2-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  

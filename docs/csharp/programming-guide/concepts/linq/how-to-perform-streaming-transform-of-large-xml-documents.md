@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325603"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a><span data-ttu-id="7a492-102">Vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#)</span><span class="sxs-lookup"><span data-stu-id="7a492-102">How to: Perform Streaming Transform of Large XML Documents (C#)</span></span>
 <span data-ttu-id="7a492-103">Es kann vorkommen, dass Sie große XML-Dateien transformieren und Ihre Anwendung so schreiben müssen, dass der Arbeitsspeicherbedarf der Anwendung vorhersehbar ist.</span><span class="sxs-lookup"><span data-stu-id="7a492-103">Sometimes you have to transform large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="7a492-104">Wenn Sie versuchen, eine XML-Struktur mit einer sehr großen XML-Datei zu füllen, ändert sich Ihre Speicherbeanspruchung proportional zur Größe der Datei, also exzessiv.</span><span class="sxs-lookup"><span data-stu-id="7a492-104">If you try to populate an XML tree with a very large XML file, your memory usage will be proportional to the size of the file (that is, excessive).</span></span> <span data-ttu-id="7a492-105">Deshalb sollten Sie stattdessen ein Streamingverfahren verwenden.</span><span class="sxs-lookup"><span data-stu-id="7a492-105">Therefore, you should use a streaming technique instead.</span></span>  

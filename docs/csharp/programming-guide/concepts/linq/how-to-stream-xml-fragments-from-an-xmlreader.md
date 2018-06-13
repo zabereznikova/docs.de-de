@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321063"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a><span data-ttu-id="4f4ff-102">Vorgehensweise: Streamen von XML-Fragmenten aus einem XmlReader (C#)</span><span class="sxs-lookup"><span data-stu-id="4f4ff-102">How to: Stream XML Fragments from an XmlReader (C#)</span></span>
 <span data-ttu-id="4f4ff-103">Wenn Sie große XML-Dateien verarbeiten müssen, kann u. U. nicht die gesamte XML-Struktur in den Arbeitsspeicher geladen werden.</span><span class="sxs-lookup"><span data-stu-id="4f4ff-103">When you have to process large XML files, it might not be feasible to load the whole XML tree into memory.</span></span> <span data-ttu-id="4f4ff-104">In diesem Thema wird gezeigt, wie mit einem <xref:System.Xml.XmlReader> Fragmente gestreamt werden können.</span><span class="sxs-lookup"><span data-stu-id="4f4ff-104">This topic shows how to stream fragments using an <xref:System.Xml.XmlReader>.</span></span>  

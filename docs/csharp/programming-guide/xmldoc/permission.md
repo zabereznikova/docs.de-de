@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321476"
 ---
 # <a name="ltpermissiongt-c-programming-guide"></a><span data-ttu-id="bea34-102">&lt;permission&gt; (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="bea34-102">&lt;permission&gt; (C# Programming Guide)</span></span>
 ## <a name="syntax"></a><span data-ttu-id="bea34-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="bea34-103">Syntax</span></span>  
