@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279983"
 ---
 # <a name="select-clause-c-reference"></a><span data-ttu-id="6cc46-102">select-Klausel (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="6cc46-102">select clause (C# Reference)</span></span>
 <span data-ttu-id="6cc46-103">In einem Abfrageausdruck gibt die `select`-Klausel den Typ der Werte an, die beim Ausführen der Abfrage erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="6cc46-103">In a query expression, the `select` clause specifies the type of values that will be produced when the query is executed.</span></span> <span data-ttu-id="6cc46-104">Das Ergebnis basiert auf der Auswertung aller vorherigen Klauseln und auf allen Ausdrücke in der `select`-Klausel selbst.</span><span class="sxs-lookup"><span data-stu-id="6cc46-104">The result is based on the evaluation of all the previous clauses and on any expressions in the `select` clause itself.</span></span> <span data-ttu-id="6cc46-105">Ein Abfrageausdruck muss entweder mit einer `select`-Klausel oder einer [group](../../../csharp/language-reference/keywords/group-clause.md)-Klausel enden.</span><span class="sxs-lookup"><span data-stu-id="6cc46-105">A query expression must terminate with either a `select` clause or a [group](../../../csharp/language-reference/keywords/group-clause.md) clause.</span></span>  

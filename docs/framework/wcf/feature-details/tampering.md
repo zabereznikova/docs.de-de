@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498630"
 ---
 # <a name="tampering"></a><span data-ttu-id="daa39-102">Verfälschungen</span><span class="sxs-lookup"><span data-stu-id="daa39-102">Tampering</span></span>
 <span data-ttu-id="daa39-103">*Manipulationen* dient der Änderung einer Nachricht oder der Lieferung einer Nachricht und die Nutzung der geänderten Nachrichten für einen Zweck als Ihren Zweck wurde.</span><span class="sxs-lookup"><span data-stu-id="daa39-103">*Tampering* is the act of altering a message, or the delivery of a message, and using the altered message for a purpose other than what it was intended for.</span></span>  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33287939"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a><span data-ttu-id="a54e0-103">Dynamisches Festlegen von Prädikatfiltern zur Laufzeit</span><span class="sxs-lookup"><span data-stu-id="a54e0-103">Dynamically specify predicate filters at runtime</span></span>
 

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529989"
 ---
 # <a name="autosize-property-overview"></a><span data-ttu-id="5949c-102">Übersicht über die AutoSize-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="5949c-102">AutoSize Property Overview</span></span>
 <span data-ttu-id="5949c-103">Die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft ein Steuerelement seine Größe ändern, bei Bedarf, um den angegebenen Wert erreichen kann die <xref:System.Windows.Forms.Control.PreferredSize%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="5949c-103">The <xref:System.Windows.Forms.Control.AutoSize%2A> property enables a control to change its size, if necessary, to attain the value specified by the <xref:System.Windows.Forms.Control.PreferredSize%2A> property.</span></span> <span data-ttu-id="5949c-104">Sie stellen das Größenanpassungsverhalten für bestimmte Steuerelemente durch Festlegen der `AutoSizeMode` Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="5949c-104">You adjust the sizing behavior for specific controls by setting the `AutoSizeMode` property.</span></span>  

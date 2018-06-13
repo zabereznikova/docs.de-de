@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757722"
 ---
 # <a name="ltsendmessagechannelcachegt"></a><span data-ttu-id="2c4c8-102">&lt;sendmessagechannelcache an&gt;</span><span class="sxs-lookup"><span data-stu-id="2c4c8-102">&lt;sendMessageChannelCache&gt;</span></span>
 <span data-ttu-id="2c4c8-103">Ein Dienstverhalten, die es ermöglicht die Anpassung der cachefreigabeebenen, die Einstellungen des channelfactorycaches und die Einstellungen des channelcaches für Workflows, die für das Senden von Nachrichten an Dienstendpunkte senden Messagingaktivität verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2c4c8-103">A service behavior that enables the customization of the cache sharing levels, the settings of the channel factory cache, and the settings of the channel cache for workflows that send messages to service endpoints using Send messaging activities.</span></span>  

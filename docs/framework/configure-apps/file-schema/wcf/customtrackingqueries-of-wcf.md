@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749685"
 ---
 # <a name="ltcustomtrackingqueriesgt-of-wcf"></a><span data-ttu-id="26de1-102">&lt;customTrackingQueries&gt; von WCF</span><span class="sxs-lookup"><span data-stu-id="26de1-102">&lt;customTrackingQueries&gt; of WCF</span></span>
 <span data-ttu-id="26de1-103">Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Ereignisse nachzuverfolgen, die Sie in den Codeaktivitäten definieren.</span><span class="sxs-lookup"><span data-stu-id="26de1-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="26de1-104">Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer benutzerdefinierte Nachverfolgungsdatensätze abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="26de1-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  
