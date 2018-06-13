@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599235"
 ---
 # <a name="automation-object-does-not-have-a-default-value"></a><span data-ttu-id="c4879-102">Das Automatisierungsobjekt hat keinen Standardwert.</span><span class="sxs-lookup"><span data-stu-id="c4879-102">Automation object does not have a default value</span></span>
 <span data-ttu-id="c4879-103">Visual Basic kann nicht das Standardelement für das angegebene Objekt bestimmt werden.</span><span class="sxs-lookup"><span data-stu-id="c4879-103">Visual Basic cannot determine the default member for the specified object.</span></span>  

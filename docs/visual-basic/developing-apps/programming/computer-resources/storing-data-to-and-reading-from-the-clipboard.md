@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591378"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a><span data-ttu-id="8afa6-102">Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8afa6-102">Storing data to and reading from the Clipboard (Visual Basic)</span></span>
 <span data-ttu-id="8afa6-103">Die Zwischenablage kann zum Speichern von Daten, z.B. Texten und Bildern, verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8afa6-103">The Clipboard can be used to store data, such as text and images.</span></span> <span data-ttu-id="8afa6-104">Da die Zwischenablage von allen aktiven Prozessen genutzt wird, kann sie zur Übertragung von Daten zwischen den Prozessen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8afa6-104">Because the Clipboard is shared by all active processes, it can be used to transfer data between them.</span></span> <span data-ttu-id="8afa6-105">Mit dem Objekt `My.Computer.Clipboard` können Sie einfach auf die Zwischenablage zugreifen, aus ihr lesen sowie in sie schreiben.</span><span class="sxs-lookup"><span data-stu-id="8afa6-105">The `My.Computer.Clipboard` object allows you to easily access the Clipboard and to read from and write to it.</span></span>  

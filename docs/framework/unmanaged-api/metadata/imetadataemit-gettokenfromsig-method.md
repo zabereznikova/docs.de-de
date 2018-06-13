@@ -1,14 +1,6 @@
 ---
 title: IMetaDataEmit::GetTokenFromSig-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.GetTokenFromSig
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: df454b8dd95839f4cabe3c725e206f3683437ec4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: be42fea034be4fe5d48874b00db86977a3039a34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448219"
 ---
-# <a name="imetadataemitgettokenfromsig-method"></a><span data-ttu-id="6a4dd-102">IMetaDataEmit::GetTokenFromSig-Methode</span><span class="sxs-lookup"><span data-stu-id="6a4dd-102">IMetaDataEmit::GetTokenFromSig Method</span></span>
-<span data-ttu-id="6a4dd-103">Ruft ein Token für die angegebene Metadatensignatur ab.</span><span class="sxs-lookup"><span data-stu-id="6a4dd-103">Gets a token for the specified metadata signature.</span></span>  
+# <a name="imetadataemitgettokenfromsig-method"></a><span data-ttu-id="37a9f-102">IMetaDataEmit::GetTokenFromSig-Methode</span><span class="sxs-lookup"><span data-stu-id="37a9f-102">IMetaDataEmit::GetTokenFromSig Method</span></span>
+<span data-ttu-id="37a9f-103">Ruft ein Token für die angegebene Metadatensignatur ab.</span><span class="sxs-lookup"><span data-stu-id="37a9f-103">Gets a token for the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a4dd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6a4dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37a9f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="37a9f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTokenFromSig (   
@@ -48,25 +37,25 @@ HRESULT GetTokenFromSig (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6a4dd-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6a4dd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="37a9f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="37a9f-105">Parameters</span></span>  
  `pvSig`  
- <span data-ttu-id="6a4dd-106">[in] Die Signatur, die beibehalten werden und gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="6a4dd-106">[in] The signature to be persisted and stored.</span></span>  
+ <span data-ttu-id="37a9f-106">[in] Die Signatur, die beibehalten werden und gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="37a9f-106">[in] The signature to be persisted and stored.</span></span>  
   
  `cbSig`  
- <span data-ttu-id="6a4dd-107">[in] Die Anzahl der Bytes im `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="6a4dd-107">[in] The count of bytes in `pvSig`.</span></span>  
+ <span data-ttu-id="37a9f-107">[in] Die Anzahl der Bytes im `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="37a9f-107">[in] The count of bytes in `pvSig`.</span></span>  
   
  `pmsig`  
- <span data-ttu-id="6a4dd-108">[out] Die `mdSignature` Token zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="6a4dd-108">[out] The `mdSignature` token assigned.</span></span>  
+ <span data-ttu-id="37a9f-108">[out] Die `mdSignature` Token zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="37a9f-108">[out] The `mdSignature` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a4dd-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6a4dd-109">Requirements</span></span>  
- <span data-ttu-id="6a4dd-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a4dd-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37a9f-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="37a9f-109">Requirements</span></span>  
+ <span data-ttu-id="37a9f-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37a9f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a4dd-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6a4dd-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="37a9f-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="37a9f-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6a4dd-112">**Bibliothek:** als Ressource in MSCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="6a4dd-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="37a9f-112">**Bibliothek:** als Ressource in MSCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="37a9f-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6a4dd-113">**.NET Framework-Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a4dd-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="37a9f-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37a9f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a4dd-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6a4dd-114">See Also</span></span>  
- [<span data-ttu-id="6a4dd-115">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6a4dd-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="6a4dd-116">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6a4dd-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="37a9f-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="37a9f-114">See Also</span></span>  
+ [<span data-ttu-id="37a9f-115">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="37a9f-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [<span data-ttu-id="37a9f-116">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="37a9f-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

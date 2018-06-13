@@ -1,39 +1,28 @@
 ---
 title: 3381 - SequenceAcknowledgementSent
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 42630d32-c24d-41b9-9106-9ca1a3e2f7d8
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4bea1dfd6b85070063623f0932756d1c87b097d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9ad623090b617150bba005b7e0109295ff1ad10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33464356"
 ---
-# <a name="3381---sequenceacknowledgementsent"></a><span data-ttu-id="79219-102">3381 - SequenceAcknowledgementSent</span><span class="sxs-lookup"><span data-stu-id="79219-102">3381 - SequenceAcknowledgementSent</span></span>
-## <a name="properties"></a><span data-ttu-id="79219-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="79219-103">Properties</span></span>  
+# <a name="3381---sequenceacknowledgementsent"></a><span data-ttu-id="96307-102">3381 - SequenceAcknowledgementSent</span><span class="sxs-lookup"><span data-stu-id="96307-102">3381 - SequenceAcknowledgementSent</span></span>
+## <a name="properties"></a><span data-ttu-id="96307-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="96307-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="79219-104">ID</span><span class="sxs-lookup"><span data-stu-id="79219-104">ID</span></span>|<span data-ttu-id="79219-105">3381</span><span class="sxs-lookup"><span data-stu-id="79219-105">3381</span></span>|  
-|<span data-ttu-id="79219-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="79219-106">Keywords</span></span>|<span data-ttu-id="79219-107">Kanal</span><span class="sxs-lookup"><span data-stu-id="79219-107">Channel</span></span>|  
-|<span data-ttu-id="79219-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="79219-108">Level</span></span>|<span data-ttu-id="79219-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="79219-109">Verbose</span></span>|  
-|<span data-ttu-id="79219-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="79219-110">Channel</span></span>|<span data-ttu-id="79219-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="79219-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="96307-104">ID</span><span class="sxs-lookup"><span data-stu-id="96307-104">ID</span></span>|<span data-ttu-id="96307-105">3381</span><span class="sxs-lookup"><span data-stu-id="96307-105">3381</span></span>|  
+|<span data-ttu-id="96307-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="96307-106">Keywords</span></span>|<span data-ttu-id="96307-107">Kanal</span><span class="sxs-lookup"><span data-stu-id="96307-107">Channel</span></span>|  
+|<span data-ttu-id="96307-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="96307-108">Level</span></span>|<span data-ttu-id="96307-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="96307-109">Verbose</span></span>|  
+|<span data-ttu-id="96307-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="96307-110">Channel</span></span>|<span data-ttu-id="96307-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="96307-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="79219-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="79219-112">Description</span></span>  
- <span data-ttu-id="79219-113">Dieses Ereignis wird ausgegeben, wenn das SequenceAcknowledgement gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="79219-113">This event is emitted when the SequenceAcknowledgement is sent.</span></span>  
+## <a name="description"></a><span data-ttu-id="96307-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="96307-112">Description</span></span>  
+ <span data-ttu-id="96307-113">Dieses Ereignis wird ausgegeben, wenn das SequenceAcknowledgement gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="96307-113">This event is emitted when the SequenceAcknowledgement is sent.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="79219-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="79219-114">Message</span></span>  
- <span data-ttu-id="79219-115">Bestätigung für SessionId: %1 wurde gesendet.</span><span class="sxs-lookup"><span data-stu-id="79219-115">SessionId:%1 acknowledgement sent.</span></span>  
+## <a name="message"></a><span data-ttu-id="96307-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="96307-114">Message</span></span>  
+ <span data-ttu-id="96307-115">Bestätigung für SessionId: %1 wurde gesendet.</span><span class="sxs-lookup"><span data-stu-id="96307-115">SessionId:%1 acknowledgement sent.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="79219-116">Details</span><span class="sxs-lookup"><span data-stu-id="79219-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="96307-116">Details</span><span class="sxs-lookup"><span data-stu-id="96307-116">Details</span></span>
