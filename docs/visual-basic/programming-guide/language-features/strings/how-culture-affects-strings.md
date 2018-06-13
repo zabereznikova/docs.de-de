@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654738"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a><span data-ttu-id="0ae1a-102">Auswirkungen der Kultur auf Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0ae1a-102">How Culture Affects Strings in Visual Basic</span></span>
 <span data-ttu-id="0ae1a-103">Diese Hilfeseite wird erläutert, wie Visual Basic kulturinformationen verwendet, zeichenfolgenkonvertierungen und Vergleiche durchführen.</span><span class="sxs-lookup"><span data-stu-id="0ae1a-103">This Help page discusses how Visual Basic uses culture information to perform string conversions and comparisons.</span></span>  

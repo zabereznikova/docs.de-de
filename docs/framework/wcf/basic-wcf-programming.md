@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803740"
 ---
 # <a name="basic-wcf-programming"></a><span data-ttu-id="e1023-102">Basis-WCF-Programmierung</span><span class="sxs-lookup"><span data-stu-id="e1023-102">Basic WCF Programming</span></span>
 <span data-ttu-id="e1023-103">In diesem Abschnitt werden die Grundlagen zum Erstellen von Windows Communication Foundation (WCF)-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="e1023-103">This section presents the fundamentals for creating Windows Communication Foundation (WCF) applications.</span></span>  

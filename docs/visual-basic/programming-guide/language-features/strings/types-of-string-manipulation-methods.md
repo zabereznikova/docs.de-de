@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648693"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a><span data-ttu-id="1cbf8-102">Verschiedene Typen von Zeichenfolgenbearbeitungsmethoden in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1cbf8-102">Types of String Manipulation Methods in Visual Basic</span></span>
 <span data-ttu-id="1cbf8-103">Es gibt verschiedene Möglichkeiten, analysieren und Bearbeiten von Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="1cbf8-103">There are several different ways to analyze and manipulate your strings.</span></span> <span data-ttu-id="1cbf8-104">Einige der Methoden sind Teil der Sprache Visual Basic und andere sind Bestandteil der `String` Klasse.</span><span class="sxs-lookup"><span data-stu-id="1cbf8-104">Some of the methods are a part of the Visual Basic language, and others are inherent in the `String` class.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636551"
 ---
 # <a name="file-39ltfilenamegt39-is-write-protected"></a><span data-ttu-id="c9475-102">Datei &#39; &lt;Filename&gt; &#39; ist schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="c9475-102">File &#39;&lt;filename&gt;&#39; is write protected</span></span>
 <span data-ttu-id="c9475-103">Die Datei, in die Sie zu schreiben versuchen, ist schreibgeschützt und kann daher nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="c9475-103">The file you are attempting to write to is write-protected and therefore cannot be changed.</span></span>  

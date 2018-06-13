@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641739"
 ---
 # <a name="this-system-does-not-contain-support-for-the-traditional-chinese-locale"></a><span data-ttu-id="c7ca2-102">Dieses System unterstützt das Gebietsschema für Chinesisch (traditionell) nicht.</span><span class="sxs-lookup"><span data-stu-id="c7ca2-102">This system does not contain support for the Traditional Chinese locale</span></span>
 <span data-ttu-id="c7ca2-103">Sie haben versucht, den `VbStrConv.TraditionalChinese` -Enumerationsmember zu verwenden, aber Ihr System unterstützt das Gebietsschema für Chinesisch (traditionell) nicht.</span><span class="sxs-lookup"><span data-stu-id="c7ca2-103">You attempted to use the `VbStrConv.TraditionalChinese` enumeration member, but your system does not support the Traditional Chinese locale.</span></span>  

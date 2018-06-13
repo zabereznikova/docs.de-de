@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647708"
 ---
 # <a name="strings-in-visual-basic"></a><span data-ttu-id="4b3ff-102">Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4b3ff-102">Strings in Visual Basic</span></span>
 <span data-ttu-id="4b3ff-103">Dieser Abschnitt beschreibt die grundlegenden Konzepte für die Verwendung von Zeichenfolgen in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="4b3ff-103">This section describes the basic concepts behind using strings in Visual Basic.</span></span>  

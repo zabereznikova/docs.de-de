@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637881"
 ---
 # <a name="cannot-save-file-to-temp"></a><span data-ttu-id="419e6-102">Die Datei kann nicht in TEMP gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="419e6-102">Cannot save file to TEMP</span></span>
 <span data-ttu-id="419e6-103">Eine Komponente kann das Verzeichnis "TEMP" nicht finden, oder auf dem Laufwerk oder der Partition, das bzw. die das Verzeichnis "TEMP" enthält, steht nicht genügend Speicherplatz zum Speichern von Informationen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="419e6-103">Either a component cannot find a directory named TEMP, or the drive or partition containing the TEMP directory lacks sufficient space to save information.</span></span>  
