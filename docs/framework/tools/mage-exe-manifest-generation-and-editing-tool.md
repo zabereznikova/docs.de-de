@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410389"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
 Bei dem Tool zur Generierung und Bearbeitung von Manifesten (Mage.exe) handelt es sich um ein Befehlszeilentool, das Sie beim Erstellen und Bearbeiten von Anwendungs- und Bereitstellungsmanifesten unterstützt. Als Befehlszeilentool kann "Mage.exe" von Batchskripten und anderen Windows-basierten Anwendungen aus ausgeführt werden, einschließlich [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Anwendungen.  

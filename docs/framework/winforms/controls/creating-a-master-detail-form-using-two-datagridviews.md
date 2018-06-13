@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529440"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Exemplarische Vorgehensweise: Erstellen eines Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms
 Eines der häufigsten Szenarien für die Verwendung der <xref:System.Windows.Forms.DataGridView> -Steuerelement ist die *Master/Detail-* Form, in dem eine über-/unterordnungsbeziehung zwischen zwei Datenbanktabellen angezeigt wird. Auswählen von Zeilen in der master-Tabelle bewirkt, dass die Detailtabelle, mit den entsprechenden untergeordneten Daten zu aktualisieren.  

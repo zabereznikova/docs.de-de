@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526008"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Gewusst wie: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> Steuerelement bietet Ihnen die Flexibilität beim Formatieren der Anzeige von Datums- und Uhrzeitangaben im Steuerelement. Die <xref:System.Windows.Forms.DateTimePicker.Format%2A> -Eigenschaft können Sie in aufgeführten vordefinierten Formate aus der <xref:System.Windows.Forms.DateTimePickerFormat>. Wenn keiner dieser für Ihre Zwecke angemessen ist, können Sie eigene Formatstil Formatieren von Zeichen in aufgeführt erstellen <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  

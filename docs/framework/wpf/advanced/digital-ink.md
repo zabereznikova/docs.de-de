@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537472"
 ---
 # <a name="digital-ink"></a>Freihandeingaben
 In diesem Abschnitt erläutert die Verwendung von Freihandeingaben in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Bisher nur in den Tablet PC-SDK gefunden, ist Freihandeingaben jetzt im Windows Presentation Foundation-Kern verfügbar. Dies bedeutet, dass Sie jetzt vollwertige Tablet PC-Anwendungen entwickeln können, indem Sie die Leistungsfähigkeit von Windows Presentation Foundation.  

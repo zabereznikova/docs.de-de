@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527283"
 ---
 # <a name="matrix-representation-of-transformations"></a>Matrixdarstellung von Transformationen
 Eine m x n Matrix ist ein Satz von Zahlen, die in Zeilen m und n Spalten angeordnet sind. Die folgende Abbildung zeigt mehrere Matrizen.  

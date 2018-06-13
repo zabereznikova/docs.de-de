@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af99bd165386f86d2045a7f5a5a7708c7b0d0b8c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419721"
 ---
 # <a name="icordebugstepperenum-interface1"></a>ICorDebugStepperEnum Schnittstelle1
 ICorDebugEnum-Methoden implementiert, und listet ICorDebugStepper-Arrays.  

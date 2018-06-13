@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542248"
 ---
 # <a name="windows-forms"></a>Windows Forms
 Da Formulare die Grundelemente einer Anwendung sind, ist es erforderlich, dass Sie sich deren Funktion und Entwurf genauer ansehen. Ein Formular ist letztlich eine leere Schiefertafel, die Sie als Entwickler mit Steuerelementen, um eine Benutzeroberfläche zu erstellen, und mit Code erweitern, um Daten zu bearbeiten. Zu diesem Zweck Visual Studio bietet Ihnen eine integrierte Entwicklungsumgebung (IDE), und die Zustellung erleichtern das Schreiben von Code sowie eine Vielzahl von Steuerelementen geschrieben wurden, mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Dadurch, dass Sie die Funktionalität dieser Steuerelemente mit eigenem Code ergänzen, können Sie einfach und schnell die Lösungen entwickeln, die Sie benötigen.  

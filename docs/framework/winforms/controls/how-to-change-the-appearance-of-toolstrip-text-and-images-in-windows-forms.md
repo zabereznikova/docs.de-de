@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530529"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Gewusst wie: Ändern der Darstellung von ToolStrip-Text und -Bildern in Windows Forms
 Sie können steuern, ob Text und Bilder angezeigt werden eine <xref:System.Windows.Forms.ToolStripItem> und wie sie relativ zueinander ausgerichtet sind und die <xref:System.Windows.Forms.ToolStrip>.  
