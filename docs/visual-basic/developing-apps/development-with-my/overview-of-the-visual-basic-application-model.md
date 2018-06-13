@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591598"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Übersicht über das Visual Basic-Anwendungsmodell
 Visual Basic bietet eine klar definierte Modell zur Steuerung des Verhaltens von Windows Forms-Anwendungen: die Visual Basic-Anwendungsmodell. Dieses Modell enthält Ereignisse für der Anwendungsverzeichnis starten und Herunterfahren, sowie Ereignisse für das Abfangen von nicht behandelten Ausnahmen behandeln. Es bietet auch Unterstützung für die Entwicklung von Einzelinstanz-Anwendungen. Das Anwendungsmodell ist erweiterbar, damit Entwickler, die mehr Kontrolle benötigen die überschreibbaren Methoden anpassen können.  

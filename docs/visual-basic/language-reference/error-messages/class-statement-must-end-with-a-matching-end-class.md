@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585514"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Klasse&#39; Anweisung enden mit einem übereinstimmenden &#39;End-Klasse&#39;
 `Class` Dient zum Initiieren einer `Class` blockieren; kann daher nur am Anfang des Blocks mit einer passenden auftreten `End Class` -Anweisung beendet den Block. Entweder ist eine redundante `Class` -Anweisung, oder Sie wurde nicht beendet. Ihr `Class` -block mit `End Class`.  

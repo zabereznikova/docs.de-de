@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594145"
 ---
 # <a name="non-cls-compliant-ltmembernamegt-is-not-allowed-in-a-cls-compliant-interface"></a>Nicht CLS-kompatible &lt;Membername&gt; ist in einem CLS-kompatible Schnittstelle nicht zulässig
 Einer Eigenschaft, Prozedur oder einem Ereignis in einer Schnittstelle ist als gekennzeichnet `<CLSCompliant(True)>` Wenn die Schnittstelle selbst markiert ist, als `<CLSCompliant(False)>` oder überhaupt nicht gekennzeichnet.  

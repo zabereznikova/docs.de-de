@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579716"
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt werden können. Eine Zeichencodierung ist ein System, in dem jedes Zeichen in einem unterstützten Zeichensatz mit einem Wert verknüpft wird, der dieses Zeichen darstellt. Beispielsweise handelt es sich beim Morsealphabet um eine Zeichencodierung, die alle Zeichen im römischen Alphabet mit einem Muster aus Punkten und Bindestrichen verknüpft, das für die Übertragung über Telegrafenleitungen geeignet ist. Bei einer Zeichencodierung für Computer wird jedes Zeichen in einem unterstützten Zeichensatz mit einem numerischen Wert verknüpft, der das jeweilige Zeichen darstellt. Eine Zeichencodierung verfügt über zwei verschiedene Komponenten:  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579248"
 ---
 # <a name="enum-design"></a>Enum-Entwurf
 Enumerationen sind eine besondere Art von Werttyp. Es gibt zwei Arten von Enumerationen: Einfache Enumerationen und Flags-Enumerationen.  

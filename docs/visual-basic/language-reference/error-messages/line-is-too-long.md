@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584790"
 ---
 # <a name="line-is-too-long"></a>Die Zeile ist zu lang
 Text Quellzeilen darf 65535 Zeichen nicht überschreiten.  

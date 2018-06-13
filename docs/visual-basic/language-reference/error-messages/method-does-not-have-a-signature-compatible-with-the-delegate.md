@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593248"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>Die Signatur der Methode ist nicht mit dem Delegaten kompatibel
 Es wird eine Inkompatibilität zwischen den Signaturen der Methode und des Delegaten, die, den Sie verwenden möchten. Die `Delegate` -Anweisung definiert die Parameter- und Rückgabetypen einer Delegatklasse. Jede Prozedur, die übereinstimmende kompatible Typen Parameter und Rückgabewerte Typen verwendet werden können, um eine Instanz dieses Delegattyps zu erstellen.  

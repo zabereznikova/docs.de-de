@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597698"
 ---
 # <a name="argument-39life39-cannot-be-zero"></a>Argument &#39;Leben&#39; darf nicht NULL sein
 Ein Argument für `Life`, das vom Typ `Double` sein muss und die Länge der Nutzungsdauer der Ressource angibt, ist ungültig.  

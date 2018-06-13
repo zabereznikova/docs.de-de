@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595276"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a>Modul &lt;Schlüsselwort&gt; (Visual Basic)
 Gibt an, dass ein Attribut am Anfang einer Quelldatei für das aktuelle Assemblymodul gilt.  

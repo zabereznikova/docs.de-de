@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599173"
 ---
 # <a name="alias-clause-visual-basic"></a>Alias-Klausel (Visual Basic)
 Gibt an, dass eine externe Prozedur in der DLL einen anderen Namen aufweist.  

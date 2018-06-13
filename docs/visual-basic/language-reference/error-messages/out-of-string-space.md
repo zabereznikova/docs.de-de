@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594445"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Nicht genügend Zeichenfolgenspeicher (Visual Basic)
 In Visual Basic können Sie sehr große Zeichenfolgen verwenden. Die Anforderungen von anderen Programmen und die Möglichkeit, die Sie mit Zeichenfolgen arbeiten können jedoch weiterhin diesen Fehler verursachen.  

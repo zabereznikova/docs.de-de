@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577019"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Das Navigieren durch Attribut- und Namespaceknoten mit XPathNavigator
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt zwei Gruppen von Navigationsmethoden bereit: Die erste Gruppe, die unter dem Thema [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) beschrieben wird, wird zum Navigieren durch *Knotengruppen* in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder <xref:System.Xml.XmlDocument>-Objekt verwendet. Die zweite Gruppe, die in diesem Thema beschrieben wird, wird zum Navigieren durch *Attribut- und Namespaceknoten* in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder <xref:System.Xml.XmlDocument>-Objekt verwendet.  

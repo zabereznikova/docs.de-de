@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580223"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente
 In diesen Beispielen wird gezeigt, wie Sie die folgenden Aufgaben ausführen:  

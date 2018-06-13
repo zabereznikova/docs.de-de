@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580376"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>Gewusst wie: Erstellen und Ausführen einer einfachen PLINQ-Abfrage
 Das folgende Beispiel zeigt, wie Sie eine einfache Parallel LINQ-Abfrage erstellen, indem Sie die <xref:System.Linq.ParallelEnumerable.AsParallel%2A>-Erweiterungsmethode in der Quellsequenz verwenden und die Abfrage mit der <xref:System.Linq.ParallelEnumerable.ForAll%2A>-Methode ausführen.  

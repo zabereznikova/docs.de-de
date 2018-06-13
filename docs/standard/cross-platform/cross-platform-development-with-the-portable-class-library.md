@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579664"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek
 Der .NET Framework-Projekttyp "Portable Klassenbibliothek" in Visual Studio hilft Ihnen, plattformübergreifende Apps und Bibliotheken für Microsoft-Plattformen schnell und einfach zu erstellen.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598152"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (generischer Modifizierer) (Visual Basic)
 Für generische Typparameter der `Out` -Schlüsselwort Gibt an, dass der Typ kovariant ist.  
