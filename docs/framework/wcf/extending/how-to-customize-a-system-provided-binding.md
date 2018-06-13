@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803670"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a><span data-ttu-id="f6ce8-102">Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung</span><span class="sxs-lookup"><span data-stu-id="f6ce8-102">How to: Customize a System-Provided Binding</span></span>
 <span data-ttu-id="f6ce8-103">Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestellte Bindungen, mit die Sie einige der Eigenschaften von zugrundeliegenden Bindungselementen, aber nicht alle Eigenschaften konfigurieren können.</span><span class="sxs-lookup"><span data-stu-id="f6ce8-103">Windows Communication Foundation (WCF) includes several system-provided bindings that allow you to configure some of the properties of the underlying binding elements, but not all of the properties.</span></span> <span data-ttu-id="f6ce8-104">In diesem Thema wird veranschaulicht, wie Sie Eigenschaften für die Bindungselemente festlegen, um eine benutzerdefinierte Bindung zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="f6ce8-104">This topic demonstrates how to set properties on the binding elements to create a custom binding.</span></span>  

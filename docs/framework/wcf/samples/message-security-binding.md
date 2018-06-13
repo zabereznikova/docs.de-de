@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805040"
 ---
 # <a name="message-security-binding"></a><span data-ttu-id="60309-102">Nachrichtensicherheitsbindung</span><span class="sxs-lookup"><span data-stu-id="60309-102">Message Security Binding</span></span>
 <span data-ttu-id="60309-103">Dieser Abschnitt enthält Beispiele, in denen nachrichtensicherheitsbindung in Windows-Diensten in WCF.</span><span class="sxs-lookup"><span data-stu-id="60309-103">This section contains samples that demonstrate message security binding in Windows Services in WCF.</span></span>  

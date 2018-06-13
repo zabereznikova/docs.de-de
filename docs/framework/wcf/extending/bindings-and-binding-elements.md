@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804624"
 ---
 # <a name="bindings-and-binding-elements"></a><span data-ttu-id="72c5b-102">Bindungen und Bindungselemente</span><span class="sxs-lookup"><span data-stu-id="72c5b-102">Bindings and Binding Elements</span></span>
 <span data-ttu-id="72c5b-103">Bindungen sind Sammlungen spezieller Konfigurationselemente, die aufgerufen *Bindungselementen*, werden ausgewertet, von der Service-Laufzeit, wenn ein Client oder ein Dienstendpunkt erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="72c5b-103">Bindings are collections of special configuration elements, called *binding elements*, which are evaluated by the service runtime whenever a client or service endpoint is being constructed.</span></span> <span data-ttu-id="72c5b-104">Der Typ und die Reihenfolge der Bindungselemente in einer Bindung bestimmen die Auswahl und Stapelreihenfolge des Protokolls und der Transportkanäle in einem Endpunkt-Kanalstapel.</span><span class="sxs-lookup"><span data-stu-id="72c5b-104">The type and order of the binding elements within a binding determines the selection and stacking order of the protocol and transport channels in an endpoint's channel stack.</span></span>  

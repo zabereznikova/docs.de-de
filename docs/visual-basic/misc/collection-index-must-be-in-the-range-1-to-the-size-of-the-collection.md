@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637007"
 ---
 # <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a><span data-ttu-id="9bea8-102">Der Auflistungsindex muss größer als oder gleich 1 und kleiner als oder genauso groß wie die Auflistungsgröße sein.</span><span class="sxs-lookup"><span data-stu-id="9bea8-102">Collection index must be in the range 1 to the size of the collection</span></span>
 <span data-ttu-id="9bea8-103">Der angegebene Indexwert liegt außerhalb des gültigen Bereichs, der 1 für die Größe der Auflistung entspricht.</span><span class="sxs-lookup"><span data-stu-id="9bea8-103">The supplied index value falls outside the valid range, which is 1 to the size of the collection.</span></span>  

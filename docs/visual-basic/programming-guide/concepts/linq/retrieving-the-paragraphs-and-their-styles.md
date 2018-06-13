@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648306"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a><span data-ttu-id="bca58-102">Abrufen der Absätze und deren Stile (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bca58-102">Retrieving the Paragraphs and Their Styles (Visual Basic)</span></span>
 <span data-ttu-id="bca58-103">In diesem Beispiel schreiben wir eine Abfrage, die die Absatzknoten aus einem WordprocessingML-Dokument abruft.</span><span class="sxs-lookup"><span data-stu-id="bca58-103">In this example, we write a query that retrieves the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="bca58-104">Außerdem ermittelt es für jeden Absatz die verwendete Formatvorlage.</span><span class="sxs-lookup"><span data-stu-id="bca58-104">It also identifies the style of each paragraph.</span></span>  

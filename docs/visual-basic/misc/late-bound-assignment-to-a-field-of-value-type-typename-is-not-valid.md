@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637639"
 ---
 # <a name="late-bound-assignment-to-a-field-of-value-type-39lttypenamegt39-is-not-valid-when-39ltnamegt39-is-the-result-of-a-late-bound-expression"></a><span data-ttu-id="416b5-102">Spät gebundene Zuweisung an ein Feld des Werttyps &#39; &lt;Typename&gt; &#39; ist nicht gültig, wenn &#39; &lt;Namen&gt; &#39; ist das Ergebnis eines spät gebundenen Ausdrucks</span><span class="sxs-lookup"><span data-stu-id="416b5-102">Late-bound assignment to a field of value type &#39;&lt;typename&gt;&#39; is not valid when &#39;&lt;name&gt;&#39; is the result of a late-bound expression</span></span>
 <span data-ttu-id="416b5-103">Sie haben versucht, eine spät gebundene Zuweisung zu verwenden, die nicht gültig ist.</span><span class="sxs-lookup"><span data-stu-id="416b5-103">You attempted a late-bound assignment that is not valid.</span></span>  

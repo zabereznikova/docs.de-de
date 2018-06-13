@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646165"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a><span data-ttu-id="95768-102">LINQ und Dateiverzeichnisse (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="95768-102">LINQ and File Directories (Visual Basic)</span></span>
 <span data-ttu-id="95768-103">Viele Dateisystemvorgänge sind im Wesentlichen Abfragen und sind deshalb für die LINQ-Vorgehensweise gut geeignet.</span><span class="sxs-lookup"><span data-stu-id="95768-103">Many file system operations are essentially queries and are therefore well-suited to the LINQ approach.</span></span>  

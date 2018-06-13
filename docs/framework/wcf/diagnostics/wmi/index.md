@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805940"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a><span data-ttu-id="50703-102">Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose</span><span class="sxs-lookup"><span data-stu-id="50703-102">Using Windows Management Instrumentation for Diagnostics</span></span>
 <span data-ttu-id="50703-103">Windows Communication Foundation (WCF) macht inspektionsdaten eines Diensts zur Laufzeit über einen WCF (Windows Management Instrumentation, WMI)-Anbieter verfügbar.</span><span class="sxs-lookup"><span data-stu-id="50703-103">Windows Communication Foundation (WCF) exposes inspection data of a service at runtime through a WCF Windows Management Instrumentation (WMI) provider.</span></span>  

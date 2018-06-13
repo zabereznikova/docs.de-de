@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647335"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a><span data-ttu-id="1616a-102">Sonstige Datentypen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1616a-102">Miscellaneous Data Types (Visual Basic)</span></span>
 <span data-ttu-id="1616a-103">Visual Basic bietet verschiedene Datentypen, die nicht auf Zahlen oder Zeichen ausgerichtet sind.</span><span class="sxs-lookup"><span data-stu-id="1616a-103">Visual Basic supplies several data types that are not oriented toward numbers or characters.</span></span> <span data-ttu-id="1616a-104">Stattdessen verarbeiten sie spezielle Daten wie z. B. Ja/Nein-Werte, Datums-/Uhrzeitwerte und Objekt-Adressen.</span><span class="sxs-lookup"><span data-stu-id="1616a-104">Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.</span></span>  

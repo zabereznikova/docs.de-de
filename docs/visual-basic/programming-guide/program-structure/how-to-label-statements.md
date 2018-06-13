@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650123"
 ---
 # <a name="how-to-label-statements-visual-basic"></a><span data-ttu-id="e9b8f-102">Gewusst wie: Label-Anweisungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9b8f-102">How to: Label Statements (Visual Basic)</span></span>
 <span data-ttu-id="e9b8f-103">Anweisungsblöcke erfolgen der Codezeilen, die durch Doppelpunkte getrennt.</span><span class="sxs-lookup"><span data-stu-id="e9b8f-103">Statement blocks are made up of lines of code delimited by colons.</span></span> <span data-ttu-id="e9b8f-104">Codezeilen, die eine identifizierende Zeichenfolge oder eine ganze Zahl vorangestellt werden als *mit der Bezeichnung*.</span><span class="sxs-lookup"><span data-stu-id="e9b8f-104">Lines of code preceded by an identifying string or integer are said to be *labeled*.</span></span> <span data-ttu-id="e9b8f-105">Anweisungsbezeichnungen dienen zum Kennzeichnen einer Zeile des Codes für die Verwendung mit Anweisungen wie z. B. dienen `On Error Goto`.</span><span class="sxs-lookup"><span data-stu-id="e9b8f-105">Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.</span></span>  

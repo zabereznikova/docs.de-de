@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652564"
 ---
 # <a name="sub-procedures-visual-basic"></a><span data-ttu-id="5ebdb-102">Sub-Prozeduren (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ebdb-102">Sub Procedures (Visual Basic)</span></span>
 <span data-ttu-id="5ebdb-103">Ein `Sub` Verfahren besteht aus einer Reihe von Visual Basic-Anweisungen von der `Sub` und `End Sub` Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="5ebdb-103">A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` and `End Sub` statements.</span></span> <span data-ttu-id="5ebdb-104">Die `Sub` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die Steuerung an den aufrufenden Code zurückgegeben, aber es wird keinen Wert an den aufrufenden Code zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="5ebdb-104">The `Sub` procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.</span></span>  

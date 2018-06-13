@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806317"
 ---
 # <a name="custom-message-interceptor"></a><span data-ttu-id="46161-102">Benutzerdefinierter Nachrichteninterceptor</span><span class="sxs-lookup"><span data-stu-id="46161-102">Custom Message Interceptor</span></span>
 <span data-ttu-id="46161-103">In diesem Beispiel wird die Verwendung des Kanalerweiterbarkeitsmodells veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="46161-103">This sample demonstrates the use of the channel extensibility model.</span></span> <span data-ttu-id="46161-104">Es zeigt insbesondere, wie ein benutzerdefiniertes Bindungselement implementiert wird, das Kanalfactorys und Kanallistener erstellt, um sämtliche ein- und ausgehenden Nachrichten an einer bestimmten Stelle im Laufzeitstapel abzufangen.</span><span class="sxs-lookup"><span data-stu-id="46161-104">In particular, it shows how to implement a custom binding element that creates channel factories and channel listeners to intercept all incoming and outgoing messages at a particular point in the run-time stack.</span></span> <span data-ttu-id="46161-105">Im Beispiel sind auch ein Client und ein Server, die die Verwendung dieser benutzerdefinierten Factorys veranschaulichen, enthalten.</span><span class="sxs-lookup"><span data-stu-id="46161-105">The sample also includes a client and server that demonstrate the use of these custom factories.</span></span>  

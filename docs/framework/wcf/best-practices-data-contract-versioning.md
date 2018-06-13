@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808535"
 ---
 # <a name="best-practices-data-contract-versioning"></a><span data-ttu-id="fa325-102">Empfohlene Vorgehensweisen: Versionsverwaltung von Datenverträgen</span><span class="sxs-lookup"><span data-stu-id="fa325-102">Best Practices: Data Contract Versioning</span></span>
 <span data-ttu-id="fa325-103">In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenverträgen aufgeführt, die sich im Laufe der Zeit auf einfache Weise entwickeln können.</span><span class="sxs-lookup"><span data-stu-id="fa325-103">This topic lists the best practices for creating data contracts that can evolve easily over time.</span></span> <span data-ttu-id="fa325-104">Weitere Informationen zu Datenverträgen finden Sie unter den Themen in [mithilfe von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="fa325-104">For more information about data contracts, see the topics in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span></span>  

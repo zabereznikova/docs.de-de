@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805979"
 ---
 # <a name="basic-ajax-service"></a><span data-ttu-id="0f042-102">Einfacher AJAX-Dienst</span><span class="sxs-lookup"><span data-stu-id="0f042-102">Basic AJAX Service</span></span>
 <span data-ttu-id="0f042-103">Dieses Beispiel veranschaulicht, wie Windows Communication Foundation (WCF) zu verwenden, um das Erstellen eines grundlegenden (ASP.NET Asynchronous JavaScript and XML (AJAX)-Diensts (ein Dienst, die Sie mithilfe von JavaScript-Codes über einen Webbrowserclient zugreifen können).</span><span class="sxs-lookup"><span data-stu-id="0f042-103">This sample demonstrates how to use Windows Communication Foundation (WCF) to create a basic ASP.NET Asynchronous JavaScript and XML (AJAX) service (a service that you can access using JavaScript code from a Web browser client).</span></span> <span data-ttu-id="0f042-104">Der Dienst nutzt das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut, um sicherzustellen, dass der Dienst auf HTTP GET-Anforderungen antwortet und für die Verwendung von JSON-Daten (JavaScript Object Notation) für Antworten konfiguriert ist.</span><span class="sxs-lookup"><span data-stu-id="0f042-104">The service uses the <xref:System.ServiceModel.Web.WebGetAttribute> attribute to ensure that the service responds to HTTP GET requests and is configured to use the JavaScript Object Notation (JSON) data format for responses.</span></span>  

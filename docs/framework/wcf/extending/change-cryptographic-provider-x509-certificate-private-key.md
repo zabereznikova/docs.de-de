@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808090"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a><span data-ttu-id="0d14e-102">Vorgehensweise: Ändern des Kryptografieanbieters für ein x. 509-Zertifikat&#39;s privaten Schlüssel</span><span class="sxs-lookup"><span data-stu-id="0d14e-102">How to: Change the Cryptographic Provider for an X.509 Certificate&#39;s Private Key</span></span>
 <span data-ttu-id="0d14e-103">In diesem Thema wird gezeigt, wie so ändern Sie den Kryptografieanbieter verwendet, um private Schlüssel eines x. 509-Zertifikats bereitzustellen und den Anbieter in der Windows Communication Foundation (WCF)--Sicherheitsframework integrieren.</span><span class="sxs-lookup"><span data-stu-id="0d14e-103">This topic shows how to change the cryptographic provider used to provide an X.509 certificate's private key and how to integrate the provider into the Windows Communication Foundation (WCF) security framework.</span></span> <span data-ttu-id="0d14e-104">Weitere Informationen zur Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="0d14e-104">For more information about using certificates, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>  

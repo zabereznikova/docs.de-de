@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652268"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a><span data-ttu-id="45672-102">Gewusst wie: Einbetten von Ausdrücken in XML-Literalen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="45672-102">How to: Embed Expressions in XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="45672-103">Sie können XML-Literale kombinieren, mit eingebetteten Ausdrücken erstellen Sie eine XML-Dokument, Fragment oder Element, das zur Laufzeit erstellte Inhalte enthält.</span><span class="sxs-lookup"><span data-stu-id="45672-103">You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time.</span></span> <span data-ttu-id="45672-104">In den folgenden Beispielen wird gezeigt, wie eingebettete Ausdrücke, die zum Auffüllen von Elementinhalt, Attribute und Elementnamen zur Laufzeit verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="45672-104">The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.</span></span>  

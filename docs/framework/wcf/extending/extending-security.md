@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809400"
 ---
 # <a name="extending-security"></a><span data-ttu-id="40ebe-102">Erweitern der Sicherheit</span><span class="sxs-lookup"><span data-stu-id="40ebe-102">Extending Security</span></span>
 <span data-ttu-id="40ebe-103">Um neue Anspruchstypen und benutzerdefinierte Token aufnehmen zu können, können Sie die Sicherheitsinfrastruktur von Windows Communication Foundation (WCF) erweitern.</span><span class="sxs-lookup"><span data-stu-id="40ebe-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="40ebe-104">Die Themen dieses Abschnitts erläutern die entsprechende Vorgehensweise.</span><span class="sxs-lookup"><span data-stu-id="40ebe-104">The topics in this section show you how this is done.</span></span>  

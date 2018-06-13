@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649593"
 ---
 # <a name="accessing-xml-in-visual-basic"></a><span data-ttu-id="243f4-102">Zugreifen auf XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="243f4-102">Accessing XML in Visual Basic</span></span>
 <span data-ttu-id="243f4-103">Visual Basic bietet XML-Achseneigenschaften für den Zugriff auf und die berichtsnavigation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Strukturen.</span><span class="sxs-lookup"><span data-stu-id="243f4-103">Visual Basic provides XML axis properties for accessing and navigating [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures.</span></span> <span data-ttu-id="243f4-104">Diese Eigenschaften verwenden eine spezielle Syntax, um die Elemente und Attribute zugreifen, indem Sie die XML-Namen angeben können.</span><span class="sxs-lookup"><span data-stu-id="243f4-104">These properties use a special syntax to enable you to access elements and attributes by specifying the XML names.</span></span>  

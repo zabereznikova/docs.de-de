@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643571"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a><span data-ttu-id="dedd2-102">Anwendbarkeit der funktionalen Transformation (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dedd2-102">Applicability of Functional Transformation (Visual Basic)</span></span>
 <span data-ttu-id="dedd2-103">Reine funktionale Transformationen können in vielen Situationen angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="dedd2-103">Pure functional transformations are applicable in a wide variety of situations.</span></span>  

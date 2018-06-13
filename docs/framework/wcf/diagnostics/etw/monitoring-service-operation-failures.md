@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803766"
 ---
 # <a name="monitoring-service-operation-failures"></a><span data-ttu-id="9400f-102">Fehler beim Überwachen von Dienstvorgängen</span><span class="sxs-lookup"><span data-stu-id="9400f-102">Monitoring Service Operation Failures</span></span>
 <span data-ttu-id="9400f-103">Wenn die analytische Ablaufverfolgung für eine Anwendung aktiviert ist, können Dienstfehler in der Ereignisanzeige auf einfache Weise überwacht werden.</span><span class="sxs-lookup"><span data-stu-id="9400f-103">If analytic tracing is enabled for an application, service failures can easily be monitored in the event viewer.</span></span>  <span data-ttu-id="9400f-104">In diesem Thema wird erläutert, wie festgestellt wird, wenn ein Dienstvorgang fehlschlägt, und wie die Fehlerursache bestimmt wird.</span><span class="sxs-lookup"><span data-stu-id="9400f-104">This topic demonstrates how to determine when a service operation fails, and how to determine what caused the failure.</span></span>  

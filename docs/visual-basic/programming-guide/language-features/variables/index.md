@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654472"
 ---
 # <a name="variables-in-visual-basic"></a><span data-ttu-id="de99a-102">Variablen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="de99a-102">Variables in Visual Basic</span></span>
 <span data-ttu-id="de99a-103">Sie müssen häufig Werte beim Ausführen von Berechnungen mit Visual Basic zu speichern.</span><span class="sxs-lookup"><span data-stu-id="de99a-103">You often have to store values when you perform calculations with Visual Basic.</span></span> <span data-ttu-id="de99a-104">Sie möchten z.B. mehrere Werte berechnen, sie vergleichen und je nach Ergebnis des Vergleichs unterschiedliche Vorgänge auf diesen ausführen.</span><span class="sxs-lookup"><span data-stu-id="de99a-104">For example, you might want to calculate several values, compare them, and perform different operations on them, depending on the result of the comparison.</span></span> <span data-ttu-id="de99a-105">Sie müssen die Werte beibehalten, wenn Sie sie vergleichen möchten.</span><span class="sxs-lookup"><span data-stu-id="de99a-105">You have to retain the values if you want to compare them.</span></span>  

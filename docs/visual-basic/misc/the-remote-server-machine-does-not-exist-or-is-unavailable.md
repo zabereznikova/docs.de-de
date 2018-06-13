@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639251"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="4fa4d-102">Der Remoteservercomputer ist nicht vorhanden oder nicht verfügbar (Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="4fa4d-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
 <span data-ttu-id="4fa4d-103">Sie versuchen, die Verbindung mit einem Remoteserver herzustellen, der nicht verfügbar oder nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="4fa4d-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="4fa4d-104">Dieser Fehler kann durch eine unterbrochene Netzwerkverbindung verursacht werden.</span><span class="sxs-lookup"><span data-stu-id="4fa4d-104">This error may be caused by your network connection being lost.</span></span>  

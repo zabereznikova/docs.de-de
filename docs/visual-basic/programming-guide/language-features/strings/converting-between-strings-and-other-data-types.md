@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648280"
 ---
 # <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a><span data-ttu-id="56643-102">Konvertieren zwischen Zeichenfolgen und anderen Datentypen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="56643-102">Converting Between Strings and Other Data Types in Visual Basic</span></span>
 <span data-ttu-id="56643-103">In diesem Abschnitt wird beschrieben, wie Zeichenfolgen in andere Datentypen konvertiert werden.</span><span class="sxs-lookup"><span data-stu-id="56643-103">This section describes how to convert strings into other data types.</span></span>  
