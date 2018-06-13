@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642880"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="67335-102">Erstellen von benutzerdefinierten Attributen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67335-102">Creating Custom Attributes (Visual Basic)</span></span>
 <span data-ttu-id="67335-103">Sie können eigene benutzerdefinierte Attribute erstellen, indem Sie eine Attributklasse definieren. Dies ist eine Klasse, die direkt oder indirekt von <xref:System.Attribute> abgeleitet wird, was es einfach macht, schnell Attributdefinitionen in Metadaten zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="67335-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="67335-104">Angenommen, Sie möchten Typen mit dem Namen des Programmierers markieren, der den Typ geschrieben hat.</span><span class="sxs-lookup"><span data-stu-id="67335-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="67335-105">Sie definieren möglicherweise eine benutzerdefinierte `Author`-Attributklasse:</span><span class="sxs-lookup"><span data-stu-id="67335-105">You might define a custom `Author` attribute class:</span></span>  

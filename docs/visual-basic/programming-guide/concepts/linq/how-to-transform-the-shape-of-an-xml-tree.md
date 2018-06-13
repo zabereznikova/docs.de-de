@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643938"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a><span data-ttu-id="04bb6-102">Vorgehensweise: Transformieren der Form einer XML-Struktur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="04bb6-102">How to: Transform the Shape of an XML Tree (Visual Basic)</span></span>
 <span data-ttu-id="04bb6-103">Die *Form* eines XML-Dokuments wird von dessen Elementnamen, Attributnamen und den Merkmalen seiner Hierarchie bestimmt.</span><span class="sxs-lookup"><span data-stu-id="04bb6-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  

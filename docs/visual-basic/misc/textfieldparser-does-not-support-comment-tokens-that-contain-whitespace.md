@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641224"
 ---
 # <a name="textfieldparser-does-not-support-comment-tokens-that-contain-whitespace"></a><span data-ttu-id="a54a8-102">TextFieldParser unterstützt keine Kommentartoken, die Leerzeichen enthalten.</span><span class="sxs-lookup"><span data-stu-id="a54a8-102">TextFieldParser does not support comment tokens that contain whitespace</span></span>
 <span data-ttu-id="a54a8-103">Es wurde ein Kommentartoken bereitgestellt, das Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="a54a8-103">A comment token that contains white space has been supplied.</span></span> <span data-ttu-id="a54a8-104">Der `TextFieldParser` unterstützt keine Kommentartoken, die Leerzeichen enthalten, es sei denn, die Leerzeichen befinden sich am Anfang des Tokens.</span><span class="sxs-lookup"><span data-stu-id="a54a8-104">The `TextFieldParser` does not support comment tokens that contain white space unless the white space occurs at the beginning of the token.</span></span> <span data-ttu-id="a54a8-105">Leerzeichen, die sich am Anfang eines Tokens befinden, werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="a54a8-105">White space occurring at the beginning of a token is ignored.</span></span>  
