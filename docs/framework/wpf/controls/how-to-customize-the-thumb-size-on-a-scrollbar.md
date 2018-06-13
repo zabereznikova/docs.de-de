@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551803"
 ---
 # <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>Gewusst wie: Anpassen der Größe des Ziehpunkts auf einer Bildlaufleiste
 In diesem Thema wird erläutert, wie festzulegende der <xref:System.Windows.Controls.Primitives.Thumb> des eine <xref:System.Windows.Controls.Primitives.ScrollBar> eine feste Größe und zum Angeben der Mindestgröße für die <xref:System.Windows.Controls.Primitives.Thumb> des eine <xref:System.Windows.Controls.Primitives.ScrollBar>.  

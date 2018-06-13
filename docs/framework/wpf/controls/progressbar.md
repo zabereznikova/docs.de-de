@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552895"
 ---
 # <a name="progressbar"></a>ProgressBar
 Ein <xref:System.Windows.Controls.ProgressBar> gibt den Status eines Vorgangs. Die <xref:System.Windows.Controls.ProgressBar> -Steuerelement besteht aus einem Fenster, Fortschreiten eines Vorgangs mit der Hervorhebungsfarbe des Systems ausgefüllt wird.  

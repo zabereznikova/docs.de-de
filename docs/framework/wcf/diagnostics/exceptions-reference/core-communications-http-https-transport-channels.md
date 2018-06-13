@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473326"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Kernkommunikation: HTTP/HTTPS-Transportkanäle
 In diesem Thema sind alle von Windows Communication Foundation (WCF)-HTTP/HTTPS-Transportkanälen generierte Ausnahmen aufgeführt.  

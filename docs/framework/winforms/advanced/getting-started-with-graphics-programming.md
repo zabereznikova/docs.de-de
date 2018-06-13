@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522824"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Erste Schritte mit der Grafikprogrammierung
 In diesem Abschnitt wird gezeigt, wie die ersten Schritte mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in einer Windows Forms-Anwendung. In den folgenden Themen wird gezeigt, wie Sie verschiedene [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Aufgaben wie zeichnen und Ausfüllen von Formen und Text.  

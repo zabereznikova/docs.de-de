@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515813"
 ---
 # <a name="using-the-workflowinvoker-class"></a>Verwenden der WorkflowInvoker-Klasse
 Dieses Beispiel veranschaulicht, wie die <xref:System.Activities.WorkflowInvoker>-Klasse verwendet wird, um eine Aktivität wie eine Methode aufzurufen.  

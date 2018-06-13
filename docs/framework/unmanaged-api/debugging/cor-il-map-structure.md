@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9676730a4f11ed77996b7a4aab4e538aba9b53c4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407361"
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP-Struktur
 Gibt Änderungen im relativen Offset einer Funktion an.  

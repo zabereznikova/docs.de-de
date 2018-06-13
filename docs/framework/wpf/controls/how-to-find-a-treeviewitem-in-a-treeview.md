@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554754"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Gewusst wie: Suchen eines TreeViewItem-Elements in TreeView
 Die <xref:System.Windows.Controls.TreeView> Steuerelement stellt eine einfache Möglichkeit zum Anzeigen von hierarchischen Daten. Wenn Ihre <xref:System.Windows.Controls.TreeView> an eine Datenquelle gebunden ist die <xref:System.Windows.Controls.TreeView.SelectedItem%2A> Eigenschaft bietet eine einfache Möglichkeit für Sie die ausgewählten Daten-Objekt schnell abgerufen werden. Es wird in der Regel empfohlen, das zugrunde liegende Datenobjekt arbeiten, aber in einigen Fällen müssen Sie möglicherweise programmgesteuert zu bearbeiten, die der Daten enthält <xref:System.Windows.Controls.TreeViewItem>. Sie möchten z. B. programmgesteuert erweitern die <xref:System.Windows.Controls.TreeViewItem>, oder wählen Sie ein anderes Element in der <xref:System.Windows.Controls.TreeView>.  

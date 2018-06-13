@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551966"
 ---
 # <a name="expander"></a>Expander
 Ein <xref:System.Windows.Controls.Expander> ermöglicht es einem Benutzer auf einen Header anzuzeigen und zu erweitern, um weitere Details anzuzeigen oder um einen Abschnitt eines Headers zu reduzieren.  

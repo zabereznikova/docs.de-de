@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552804"
 ---
 # <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a>Gewusst wie: Anwenden von Stretch-Eigenschaften auf den Inhalt einer Viewbox
 ## <a name="example"></a>Beispiel  

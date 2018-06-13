@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550753"
 ---
 # <a name="checkbox"></a>CheckBox
 Können Sie eine <xref:System.Windows.Controls.CheckBox> in der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] der Anwendung, um die Optionen darstellen, die ein Benutzer aktivieren oder deaktivieren kann. Können Sie ein einzelnes Kontrollkästchen, oder Sie können zwei oder mehrere Kontrollkästchen gruppieren.  

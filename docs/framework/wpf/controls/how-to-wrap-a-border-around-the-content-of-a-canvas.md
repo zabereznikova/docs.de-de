@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551790"
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a>Gewusst wie: Inhalt von Canvas mit einem Rahmen umschließen
 In diesem Beispiel wird gezeigt, wie zum Umschließen einer <xref:System.Windows.Controls.Canvas> Element mit einem <xref:System.Windows.Controls.Border>.  
