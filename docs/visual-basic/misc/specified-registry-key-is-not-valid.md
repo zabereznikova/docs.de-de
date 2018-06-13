@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639447"
 ---
 # <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a>Der angegebene Registrierungsschlüssel ist ungültig, da er mindestens zwei aufeinanderfolgende umgekehrte Schrägstriche enthält
 Ein mit einem Pfad angegebener Registrierungsschlüssel enthält mindestens zwei aufeinanderfolgende umgekehrte Schrägstriche. Dies kann ein Ergebnis der Kombination von mehreren Zeichenfolgen zur Formung des Pfad sein, wobei versehentlich zu viele umgekehrte Schrägstriche eingefügt wurden.  

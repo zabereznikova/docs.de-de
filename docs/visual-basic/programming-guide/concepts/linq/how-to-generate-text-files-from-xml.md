@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642778"
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Vorgehensweise: Generieren von Textdateien aus XML (Visual Basic)
 In diesem Beispiel wird gezeigt, wie Sie aus einer XML-Datei eine CSV-Datei generieren können.  

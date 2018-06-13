@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643012"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Hinzufügen von Elementen, Attributen und Knoten zu einer XML-Struktur (Visual Basic)
 Sie können einer vorhandenen XML-Struktur Inhalt (Elemente, Attribute, Kommentare, Verarbeitungsanweisungen, Text und CDATA) hinzufügen.  

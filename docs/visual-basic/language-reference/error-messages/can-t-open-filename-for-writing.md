@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586535"
 ---
 # <a name="can39t-open-39ltfilenamegt39-for-writing"></a>Können&#39;t öffnen &#39; &lt;Filename&gt; &#39; zum Schreiben
 Die angegebene Datei kann nicht geöffnet werden, zum Schreiben, vielleicht weil er bereits geöffnet wurde.  

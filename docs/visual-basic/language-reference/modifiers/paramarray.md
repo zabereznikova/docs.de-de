@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597359"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
 Gibt an, dass ein Prozedurparameter, ein optionales Array von Elementen des angegebenen Typs akzeptiert. `ParamArray` kann nur für den letzten Parameter einer Parameterliste verwendet werden.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648989"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ in Visual Basic
 Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen zum Verständnis und zur Verwendung von Visual Basic und [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  

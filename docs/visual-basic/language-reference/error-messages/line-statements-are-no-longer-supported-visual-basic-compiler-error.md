@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587878"
 ---
 # <a name="39line39-statements-are-no-longer-supported-visual-basic-compiler-error"></a>&#39;Zeile&#39; Anweisungen werden nicht mehr unterstützt (Visual Basic-Compilerfehler)
 Line-Anweisungen werden nicht mehr unterstützt. Datei-e/a-Funktionalität steht als `Microsoft.VisualBasic.FileSystem.LineInput` und Grafikfunktionen steht als `System.Drawing.Graphics.DrawLine`.  

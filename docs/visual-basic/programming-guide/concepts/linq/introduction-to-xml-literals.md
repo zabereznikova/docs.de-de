@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646808"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Einführung in XML-Literale in Visual Basic
 Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in Visual Basic.  

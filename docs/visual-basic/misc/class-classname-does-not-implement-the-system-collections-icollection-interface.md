@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637386"
 ---
 # <a name="class-39ltclassnamegt39-does-not-implement-the-systemcollectionsicollection-interface"></a>Klasse &#39; &lt;Classname&gt; &#39; implementiert nicht die System.Collections.ICollection-Schnittstelle
 Die Klasse implementiert die `System.Collections.ICollection` -Schnittstelle nicht, die Größe, Enumeratoren und Synchronisierungsmethoden für alle Sammlungen definiert. Es möglicherweise erforderlich, Visual Studio neu zu installieren.  

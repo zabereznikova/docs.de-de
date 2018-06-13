@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642703"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Vorgehensweise: Generieren von XML aus CSV-Dateien (Visual Basic)
 In diesem Beispiel wird gezeigt, wie Sie mit [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.  

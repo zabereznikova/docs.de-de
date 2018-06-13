@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643301"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>Vorgehensweise: Verketten von Aufrufen der Axis-Methode (LINQ to XML) (Visual Basic)
 Eine gebräuchliche Vorgehensweise im Code besteht darin, erst eine Achsenmethode und dann eine der Erweiterungsmethodenachsen aufzurufen.  

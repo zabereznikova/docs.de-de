@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648904"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Arbeiten mit globalen Namespaces (Visual Basic) (LINQ to XML)
 Eine der Schlüsselfunktionen von XML-Literalen in Visual Basic ist die Fähigkeit, XML-Namespaces zu deklarieren der `Imports` Anweisung. Mithilfe dieser Funktionen können Sie einen XML-Namespace, der einen Präfix verwendet, oder einen XML-Standardnamespace deklarieren.  

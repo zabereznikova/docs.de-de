@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647149"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Abrufen des Textes aus den Absätzen (Visual Basic)
 Dieses Beispiel baut auf dem vorhergehenden Beispiel [Abrufen der Absätze und deren Stile (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Dieses neue Beispiel ruft den Text jedes einzelnen Absatzes als Zeichenfolge ab  

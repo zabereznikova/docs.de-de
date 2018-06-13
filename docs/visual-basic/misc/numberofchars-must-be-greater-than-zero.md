@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637665"
 ---
 # <a name="numberofchars-must-be-greater-than-zero"></a>NumberOfChars muss größer als 0 (null) sein
 Bei Verwendung der `PeekChars` -Methode des `TextFieldParser` -Objekts müssen Sie einen `NumberOfChars` -Wert angeben, der größer als `0`ist.  

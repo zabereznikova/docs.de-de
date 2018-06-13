@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605497"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Deklariert das Symbol "Operator", die Operanden und den Code, die eine Operatorprozedur für eine Klasse oder Struktur definieren.  

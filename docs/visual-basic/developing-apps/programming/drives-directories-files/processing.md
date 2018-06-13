@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586753"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Verarbeiten von Laufwerken, Verzeichnissen und Dateien (Visual Basic)
 Sie können Visual Basic zum Verarbeiten von Laufwerken, Ordnern und Dateien mit dem `My.Computer.FileSystem`-Objekt verwenden, das eine bessere Leistung bietet und einfacher zu verwenden ist als herkömmliche Methoden, wie z.B. die `FileOpen`- und `Write`-Funktionen (obwohl sie immer noch verfügbar sind). In den folgenden Abschnitten werden diese Methoden ausführlich erörtert.  

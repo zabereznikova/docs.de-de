@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588079"
 ---
 # <a name="end-of-statement-expected"></a>end of-Anweisung erwartet.
 Eine zusätzliche Programmierelement folgt das Element, das die Anweisung abgeschlossen ist, aber die Anweisung syntaktisch abgeschlossen ist. Ein Zeilenabschlusszeichen ist am Ende jeder Anweisung erforderlich.

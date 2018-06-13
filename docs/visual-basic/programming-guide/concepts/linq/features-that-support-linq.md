@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643899"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Visual Basic-Funktionen, die LINQ unterstützen
 Der Name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] bezieht sich auf Technologie in Visual Basic unterstützt Abfragesyntax und andere Sprachkonstrukte direkt in der Sprache. Mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], Sie müssen keine erfahren, eine neue Sprache für die Abfrage einer externen Datenquelle. Sie können für Daten in relationalen Datenbanken, XML-Speicher oder Objekte Abfragen, mit Visual Basic. Dank der Integration von Abfragefunktionen in der Sprache ermöglicht kompilierzeitüberprüfung für Syntaxfehler und typsicherheit. Diese Integration wird auch sichergestellt, dass Sie bereits, die meisten Sie habe kennen sollten wissen, um umfassenden und vielfältigen Abfragen in Visual Basic schreiben.  

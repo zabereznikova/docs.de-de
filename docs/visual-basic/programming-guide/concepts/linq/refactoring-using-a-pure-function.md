@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645014"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Umgestalten mit einer reinen Funktion (Visual Basic)
 Im folgenden Beispiel wird umgestaltet, im vorherige Beispiel [Umgestalten mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), um eine reine Funktion In diesem Beispiel den Code zu suchen, wird der Text eines Absatzes in die reinen statische Methode verschoben`ParagraphText`.  

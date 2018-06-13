@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579599"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Pushbasierte Validierung mit „XmlSchemaValidator“
 Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse stellt eine effiziente leistungsstarke Methode zum Validieren von XML-Daten anhand von XML-Schemata in einem Push-Verfahren bereit. Zum Beispiel ermöglicht Ihnen die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse das direkte Validieren eines XML-Infosets, ohne es als XML-Dokument serialisieren zu müssen, und das anschließende erneute Analysieren des XML-Infosets mithilfe eines validierenden XML-Readers.  

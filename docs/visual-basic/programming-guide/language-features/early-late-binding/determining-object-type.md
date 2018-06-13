@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648293"
 ---
 # <a name="determining-object-type-visual-basic"></a>Bestimmen des Objekttyps (Visual Basic)
 Generische Objektvariablen (d. h. Variablen Sie als deklarieren `Object`) Objekte aus einer Klasse enthalten kann. Bei Verwendung von Variablen des Typs `Object`, müssen Sie möglicherweise unterschiedliche Aktionen basierend auf der Klasse des Objekts, z. B. einige Objekte möglicherweise nicht unterstützen, eine bestimmte Eigenschaft oder Methode. Visual Basic bietet zwei Möglichkeit zum bestimmen, welche Art von Objekt in der Objektvariable gespeichert ist: der `TypeName` Funktion und die `TypeOf...Is` Operator.  

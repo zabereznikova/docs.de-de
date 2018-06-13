@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641474"
 ---
 # <a name="set-not-permitted"></a>"Set" ist unzulässig.
 Sie haben versucht, eine Eigenschaft zu ändern, deren Einstellungen nicht zur Laufzeit oder nur unter bestimmten Bedingungen festgelegt werden können. Sie haben beispielsweise versucht, die Eigenschafteneinstellungen `Appearance`, `ControlBox`,`MinButton`oder `MaxButton` für das Formular zur Laufzeit zu ändern, oder Sie haben versucht, die Eigenschaft `Visible` für das letzte sichtbare Untermenü in einem übergeordneten Menü auf `False` festzulegen.  

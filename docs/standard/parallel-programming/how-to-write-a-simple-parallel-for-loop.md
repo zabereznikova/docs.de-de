@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586142"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Gewusst wie: Schreiben einer einfachen Parallel.For-Schleife
 Dieses Thema enthält zwei Beispiele, die die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode veranschaulichen. Im ersten Beispiel wird die <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>-Methodenüberladung und im zweiten Beispiel wird die <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>-Überladung verwendet. Dies beiden Überladungen sind die einfachsten Überladungen der <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode. Sie können diese beiden Überladungen der <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode verwenden, wenn keiner der folgenden Vorgänge erforderlich ist: Abbrechen der Schleife, vorzeitiges Beenden der Schleifeniterationen oder Beibehalten eines threadlokalen Zustands.  

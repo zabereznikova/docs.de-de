@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579144"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Verwenden der StringBuilder-Klasse in .NET
 Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine der Methoden in der <xref:System.String?displayProperty=nameWithType>-Klasse verwenden, erstellen Sie ein neues Zeichenfolgenobjekt im Speicher, das eine neue Speicherbelegung für dieses neue Objekt erfordert. In Fällen, in denen Sie wiederholte Änderungen an einer Zeichenfolge vornehmen müssen, kann der Mehraufwand, der mit dem Erstellen eines neuen <xref:System.String>-Objekts verbunden ist, erheblich sein. Die <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Klasse kann verwendet werden, wenn Sie eine Zeichenfolge ändern möchten, ohne ein neues Objekt zu erstellen. Beispielsweise lässt sich durch Verwenden der <xref:System.Text.StringBuilder>-Klasse die Leistung steigern, wenn zahlreiche Zeichenfolgen in einer Schleife verkettet werden.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643748"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Vorgehensweise: Auflisten aller Knoten in einer Struktur (Visual Basic)
 Manchmal ist es hilfreich, alle in einer Struktur vorhandenen Knoten aufzulisten. Dies kann sinnvoll sein, wenn Sie genau verstehen möchten, wie sich eine Methode oder eine Eigenschaft auf die Struktur auswirkt. Eine Möglichkeit, alle Knoten in Textform aufzulisten, besteht darin, einen XPath-Ausdruck zu generieren, der exakt und spezifisch jeden Knoten in der Struktur identifiziert.  

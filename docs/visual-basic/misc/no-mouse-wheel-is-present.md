@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637399"
 ---
 # <a name="no-mouse-wheel-is-present"></a>Es ist kein Mausrad vorhanden.
 Die `My.Computer.Mouse.WheelScrollLines` -Eigenschaft wurde aufgerufen, aber die Maus besitzt kein Mausrad.  

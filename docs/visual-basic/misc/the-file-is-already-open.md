@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638459"
 ---
 # <a name="the-file-is-already-open"></a>Die Datei ist bereits geöffnet.
 Es wurde versucht, eine Datei zu öffnen, die bereits geöffnet ist.  
