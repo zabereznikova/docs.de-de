@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595786"
 ---
 # <a name="access-denied-to-39ltnamegt39"></a>Zugriff verweigert, &#39; &lt;Name&gt;&#39;
 Auf ein Gerät, eine Datei oder einen Datenträger kann nicht zugegriffen werden, weil die Sicherheitsberechtigungen des Computers nicht ausreichen.  

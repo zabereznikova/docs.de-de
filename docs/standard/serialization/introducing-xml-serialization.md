@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592222"
 ---
 # <a name="introducing-xml-serialization"></a>Einführung in die XML-Serialisierung
 Unter Serialisierung wird das Konvertieren des Zustands eines Objekts in eine Form verstanden, die sofort transportiert werden kann. Beispielsweise können Sie ein Objekt serialisieren und mittels HTTP über das Internet zwischen einem Client und einem Server transportieren. Bei der Deserialisierung wird das Objekt dagegen aus dem Stream rekonstruiert.  

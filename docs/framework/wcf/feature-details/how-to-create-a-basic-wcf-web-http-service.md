@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493473"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts
 Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Diensts, das einen Webendpunkt verfügbar macht. Webendpunkte senden Daten über XML oder JSON; es gibt keinen SOAP-Umschlag. Dieses Thema veranschaulicht, wie ein solcher Endpunkt verfügbar gemacht wird.  

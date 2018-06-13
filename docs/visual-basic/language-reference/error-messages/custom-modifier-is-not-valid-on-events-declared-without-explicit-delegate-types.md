@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587518"
 ---
 # <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;Benutzerdefinierte&#39; Modifizierer ist nicht gültig für Ereignisse, die ohne expliziten Delegattyp deklariert werden.
 Im Gegensatz zu einem Ereignis nicht benutzerdefinierte eine `Custom Event` Deklaration erfordert eine `As` -Klausel nach dem Ereignisnamen, die explizit den Typ des Delegaten für das Ereignis angibt.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587357"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Nach Sprungmarken, die Zahlen sind, muss ein Doppelpunkt stehen.
 Zeilennummern folgen denselben Regeln wie andere Arten von Bezeichnungen, und es müssen einen Doppelpunkt enthalten.  

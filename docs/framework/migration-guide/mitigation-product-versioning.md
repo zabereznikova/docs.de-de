@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389404"
 ---
 # <a name="mitigation-product-versioning"></a>Entschärfung: Produktversionsverwaltung
 In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und höher wurde die Produktversionsverwaltung im Vergleich zu früheren Releases von .NET Framework (.NET Framework 4, 4.5, 4.5.1 und 4.5.2) geändert.  

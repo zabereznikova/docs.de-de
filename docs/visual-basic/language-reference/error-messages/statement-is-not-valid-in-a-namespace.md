@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594766"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>Die Anweisung ist in einem Namespace ungültig.
 Die Anweisung darf nicht auf der Ebene eines Namespace stehen. Die einzigen Deklarationen, die auf Namespaceebene zulässig sind, Modul, Schnittstelle, Klasse, Delegat, Enumeration und Strukturdeklarationen.  

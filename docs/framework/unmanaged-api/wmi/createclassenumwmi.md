@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f84902586a2b940d52eb6365a141af61af802dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461453"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi-Funktion
 Gibt einen Enumerator für alle Klassen, die die angegebenen Auswahlkriterien entsprechen.  

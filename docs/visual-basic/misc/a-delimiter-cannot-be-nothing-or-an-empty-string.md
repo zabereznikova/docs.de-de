@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596849"
 ---
 # <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a>Ein Trennzeichen kann nicht "Nothing" oder leer sein.
 Der `TextFieldParser` kann nicht aus der Datei lesen, da die `Delimiters` -Eigenschaft auf `Nothing` festgelegt oder eine leere `String` ("") ist.  

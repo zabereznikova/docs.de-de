@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594779"
 ---
 # <a name="need-property-array-index"></a>Ein Eigenschaftenarrayindex wird benötigt
 Dieser Eigenschaftswert besteht aus einem Array, anstelle eines einzelnen Werts. Sie haben keinen Index für das Eigenschaftenarray angegeben, auf das Sie zugreifen wollten.  
