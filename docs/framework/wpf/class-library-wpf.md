@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550965"
 ---
 # <a name="class-library-wpf"></a><span data-ttu-id="55531-102">Klassenbibliothek (WPF)</span><span class="sxs-lookup"><span data-stu-id="55531-102">Class Library (WPF)</span></span>
 <span data-ttu-id="55531-103">Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="55531-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  

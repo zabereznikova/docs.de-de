@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552882"
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a><span data-ttu-id="8b369-102">Gewusst wie: Durchführen eines Bildlaufs von Inhalten mithilfe der IScrollInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8b369-102">How to: Scroll Content by Using the IScrollInfo Interface</span></span>
 <span data-ttu-id="8b369-103">In diesem Beispiel wird gezeigt, wie einen Bildlauf im Inhalt mithilfe der <xref:System.Windows.Controls.Primitives.IScrollInfo> Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="8b369-103">This example shows how to scroll content by using the <xref:System.Windows.Controls.Primitives.IScrollInfo> interface.</span></span>  
