@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649824"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a><span data-ttu-id="d88c4-102">Gewusst wie: Bestimmen des Bezugs zwischen zwei Objekten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d88c4-102">How to: Determine Whether Two Objects Are Related (Visual Basic)</span></span>
 <span data-ttu-id="d88c4-103">Sie können vergleichen zwei Objekte, um die Beziehung zwischen den Klassen ggf. zu bestimmen, von denen sie erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="d88c4-103">You can compare two objects to determine the relationship, if any, between the classes from which they are created.</span></span> <span data-ttu-id="d88c4-104">Die <xref:System.Type.IsInstanceOfType%2A> Methode der <xref:System.Type?displayProperty=nameWithType> zurück `True` , wenn die angegebene Klasse von der aktuellen Klasse erbt oder der aktuelle Typ eine Schnittstelle, die von der angegebenen Klasse unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="d88c4-104">The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.</span></span>  

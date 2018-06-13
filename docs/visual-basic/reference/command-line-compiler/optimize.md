@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649944"
 ---
 # <a name="-optimize"></a><span data-ttu-id="0beb5-102">-Optimierung</span><span class="sxs-lookup"><span data-stu-id="0beb5-102">-optimize</span></span>
 <span data-ttu-id="0beb5-103">Aktiviert oder deaktiviert compileroptimierungen.</span><span class="sxs-lookup"><span data-stu-id="0beb5-103">Enables or disables compiler optimizations.</span></span>  

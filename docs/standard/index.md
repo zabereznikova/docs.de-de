@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457010"
 ---
 # <a name="net-guide"></a><span data-ttu-id="5ebb8-103">Leitfaden für .NET</span><span class="sxs-lookup"><span data-stu-id="5ebb8-103">.NET Guide</span></span>
 

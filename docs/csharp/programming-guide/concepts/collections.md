@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549619"
 ---
 # <a name="collections-c"></a><span data-ttu-id="edbe2-102">Auflistungen (C#)</span><span class="sxs-lookup"><span data-stu-id="edbe2-102">Collections (C#)</span></span>
 <span data-ttu-id="edbe2-103">Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten.</span><span class="sxs-lookup"><span data-stu-id="edbe2-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="edbe2-104">Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.</span><span class="sxs-lookup"><span data-stu-id="edbe2-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

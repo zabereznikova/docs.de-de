@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650994"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a><span data-ttu-id="30615-102">Gewusst wie: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="30615-102">How to: Declare and Call a Default Property in Visual Basic</span></span>
 <span data-ttu-id="30615-103">Ein *Standardeigenschaft* ist eine Klasse oder Struktur-Eigenschaft, die der Code zugreifen kann, ohne dass es.</span><span class="sxs-lookup"><span data-stu-id="30615-103">A *default property* is a class or structure property that your code can access without specifying it.</span></span> <span data-ttu-id="30615-104">Beim Aufrufen von Code Namen einer Klasse oder Struktur, nicht jedoch eine Eigenschaft angibt und den Kontext ermöglicht den Zugriff auf eine Eigenschaft, Visual Basic löst den Zugriff auf diese Klasse oder Struktur Standardeigenschaft, falls vorhanden.</span><span class="sxs-lookup"><span data-stu-id="30615-104">When calling code names a class or structure but not a property, and the context allows access to a property, Visual Basic resolves the access to that class or structure's default property if one exists.</span></span>  

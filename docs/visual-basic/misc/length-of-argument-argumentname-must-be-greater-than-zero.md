@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635618"
 ---
 # <a name="length-of-argument-39ltargumentnamegt39-must-be-greater-than-zero"></a><span data-ttu-id="0af04-102">Die Länge des Arguments &#39; &lt;Argumentname&gt; &#39; muss größer als 0 (null) sein</span><span class="sxs-lookup"><span data-stu-id="0af04-102">Length of argument &#39;&lt;argumentname&gt;&#39; must be greater than zero</span></span>
 <span data-ttu-id="0af04-103">Ein Wert eines Arguments ist gleich oder kleiner als 0 (null).</span><span class="sxs-lookup"><span data-stu-id="0af04-103">An argument has a value that is equal to or less than zero.</span></span>  

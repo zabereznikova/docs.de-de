@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649873"
 ---
 # <a name="-win32resource"></a><span data-ttu-id="ea635-102">-win32resource</span><span class="sxs-lookup"><span data-stu-id="ea635-102">-win32resource</span></span>
 <span data-ttu-id="ea635-103">Fügt eine Win32-Ressourcendatei in die Ausgabedatei ein.</span><span class="sxs-lookup"><span data-stu-id="ea635-103">Inserts a Win32 resource file in the output file.</span></span>  

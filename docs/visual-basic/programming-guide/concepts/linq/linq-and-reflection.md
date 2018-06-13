@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644874"
 ---
 # <a name="linq-and-reflection-visual-basic"></a><span data-ttu-id="00fbf-102">LINQ und Reflection (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="00fbf-102">LINQ and Reflection (Visual Basic)</span></span>
 <span data-ttu-id="00fbf-103">Die Reflektions-APIs der .NET Framework-Klassenbibliothek können verwendet werden, um die Metadaten in einer .NET-Assembly zu untersuchen und Auflistungen von Typen, Typmembern, Parametern usw., die sich in der Assembly befinden, zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="00fbf-103">The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly.</span></span> <span data-ttu-id="00fbf-104">Da diese Auflistungen die generische `IEnumerable`-Schnittstelle unterstützen, können sie mithilfe von LINQ abgefragt werden.</span><span class="sxs-lookup"><span data-stu-id="00fbf-104">Because these collections support the generic `IEnumerable` interface, they can be queried by using LINQ.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648046"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a><span data-ttu-id="4be27-102">Gewusst wie: Zugreifen auf eine Variable, die von einer abgeleiteten Klasse ausgeblendet wird (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4be27-102">How to: Access a Variable Hidden by a Derived Class (Visual Basic)</span></span>
 <span data-ttu-id="4be27-103">Wenn Code in einer abgeleiteten Klasse eine Variable zugreift, löst der Compiler normalerweise dem Verweis auf die nächstgelegenen zugänglich Version, d. h. die zugegriffen werden kann die wenigsten Ableitungsschritte von der Zugriff auf-Klasse.</span><span class="sxs-lookup"><span data-stu-id="4be27-103">When code in a derived class accesses a variable, the compiler normally resolves the reference to the closest accessible version, that is, the accessible version the fewest derivational steps backward from the accessing class.</span></span> <span data-ttu-id="4be27-104">Wenn die Variable in der abgeleiteten Klasse definiert ist, greift der Code normalerweise dieser Definition.</span><span class="sxs-lookup"><span data-stu-id="4be27-104">If the variable is defined in the derived class, the code normally accesses that definition.</span></span>  

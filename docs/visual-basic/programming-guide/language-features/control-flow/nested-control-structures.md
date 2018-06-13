@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648070"
 ---
 # <a name="nested-control-structures-visual-basic"></a><span data-ttu-id="b6fd9-102">Geschachtelte Steuerungsstrukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6fd9-102">Nested Control Structures (Visual Basic)</span></span>
 <span data-ttu-id="b6fd9-103">Sie fügen die Steueranweisungen in andere Steueranweisungen, z. B. ein `If...Then...Else` -Block in einem `For...Next` Schleife.</span><span class="sxs-lookup"><span data-stu-id="b6fd9-103">You can place control statements inside other control statements, for example an `If...Then...Else` block within a `For...Next` loop.</span></span> <span data-ttu-id="b6fd9-104">Eine steuerungsanweisung, die innerhalb einer anderen Steueranweisung platziert gilt als *geschachtelte*.</span><span class="sxs-lookup"><span data-stu-id="b6fd9-104">A control statement placed inside another control statement is said to be *nested*.</span></span>  

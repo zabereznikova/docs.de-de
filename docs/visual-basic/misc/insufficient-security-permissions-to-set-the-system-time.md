@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633806"
 ---
 # <a name="insufficient-security-permissions-to-set-the-system-time"></a><span data-ttu-id="5b52e-102">Keine ausreichenden Sicherheitsberechtigungen zum Festlegen der Systemzeit</span><span class="sxs-lookup"><span data-stu-id="5b52e-102">Insufficient security permissions to set the system time</span></span>
 <span data-ttu-id="5b52e-103">Die Sicherheitsberechtigungen zum Festlegen der Systemzeit sind unzureichend.</span><span class="sxs-lookup"><span data-stu-id="5b52e-103">The security permissions are insufficient to set the system time.</span></span>  

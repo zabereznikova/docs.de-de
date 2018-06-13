@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653913"
 ---
 # <a name="procedure-overloading-visual-basic"></a><span data-ttu-id="cbdb6-102">Prozedurüberladung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cbdb6-102">Procedure Overloading (Visual Basic)</span></span>
 <span data-ttu-id="cbdb6-103">*Überladen von* eine Prozedur bedeutet, dass es in mehreren Versionen, die mit dem gleichen Namen, aber unterschiedlichen Parameterlisten definiert.</span><span class="sxs-lookup"><span data-stu-id="cbdb6-103">*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists.</span></span> <span data-ttu-id="cbdb6-104">Der Zweck des Überladens werden mehrere eng verwandte Versionen einer Prozedur definieren, ohne sie anhand des Namens zu unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="cbdb6-104">The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.</span></span> <span data-ttu-id="cbdb6-105">Dazu müssen Sie die Parameterliste variabler.</span><span class="sxs-lookup"><span data-stu-id="cbdb6-105">You do this by varying the parameter list.</span></span>  

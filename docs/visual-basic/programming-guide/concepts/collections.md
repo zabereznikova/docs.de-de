@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644315"
 ---
 # <a name="collections-visual-basic"></a><span data-ttu-id="79110-102">Auflistungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79110-102">Collections (Visual Basic)</span></span>
 <span data-ttu-id="79110-103">Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten.</span><span class="sxs-lookup"><span data-stu-id="79110-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="79110-104">Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.</span><span class="sxs-lookup"><span data-stu-id="79110-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

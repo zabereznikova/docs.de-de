@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654725"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a><span data-ttu-id="f28c3-102">Allgemeine Aufgaben, die mit Visual Basic-Operatoren ausgeführt werden</span><span class="sxs-lookup"><span data-stu-id="f28c3-102">Common Tasks Performed with Visual Basic Operators</span></span>
 <span data-ttu-id="f28c3-103">Operatoren führen viele allgemeine Aufgaben, die im Zusammenhang mit einem oder mehreren Ausdrücken aufgerufen *Operanden*.</span><span class="sxs-lookup"><span data-stu-id="f28c3-103">Operators perform many common tasks involving one or more expressions called *operands*.</span></span>  

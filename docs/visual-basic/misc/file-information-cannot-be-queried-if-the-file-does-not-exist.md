@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638480"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a><span data-ttu-id="24f63-102">Dateiinformationen können nicht abgefragt werden, wenn die Datei nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="24f63-102">File information cannot be queried if the file does not exist</span></span>
 <span data-ttu-id="24f63-103">Es wurde versucht, ein <xref:System.IO.FileInfo> -Objekt nach Informationen zu einer Datei abzufragen, die nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="24f63-103">An attempt has been made to query a <xref:System.IO.FileInfo> object for information about a file that does not exist.</span></span> <span data-ttu-id="24f63-104">Dies liegt in der Regel an einem Fehler bei der Angabe des Dateinamens.</span><span class="sxs-lookup"><span data-stu-id="24f63-104">Usually this is due to a mistake made when supplying the file name.</span></span>  
