@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955965"
 ---
 # <a name="event-c-reference"></a><span data-ttu-id="2968a-102">event (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="2968a-102">event (C# Reference)</span></span>
 <span data-ttu-id="2968a-103">Das `event`-Schlüsselwort wird verwendet, um ein Ereignis in einer Publisher-Klasse zu deklarieren.</span><span class="sxs-lookup"><span data-stu-id="2968a-103">The `event` keyword is used to declare an event in a publisher class.</span></span>  
