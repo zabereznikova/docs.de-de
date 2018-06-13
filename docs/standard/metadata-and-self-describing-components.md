@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579326"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadaten und selbstbeschreibende Komponenten
 Früher konnte eine in einer bestimmten Sprache geschriebene Softwarekomponente (.exe oder .dll) nicht einfach eine andere Softwarekomponente verwenden, die in einer anderen Sprache geschrieben war. COM ist die Lösung dieses Problems angegangen. Mit .NET Framework wird die Interoperation von Komponenten erleichtert, indem zusätzliche deklarative Informationen von Compilern an alle Module und Assemblys weitergegeben werden. Diese Informationen, so genannte Metadaten, ermöglichen eine nahtlose Interaktion der Komponenten.  

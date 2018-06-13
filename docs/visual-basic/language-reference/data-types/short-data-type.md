@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590711"
 ---
 # <a name="short-data-type-visual-basic"></a>Short-Datentyp (Visual Basic)
 Speichert signierte 16-Bit (2-Byte) ganze Zahlen, die im Wert von-32.768 bis 32.767 reichen.  

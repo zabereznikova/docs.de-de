@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474031"
 ---
 # <a name="message-logging"></a>Nachrichtenprotokollierung
 Windows Communication Foundation (WCF) bietet die Möglichkeit, eingehende und ausgehende Nachrichten für die offlineverarbeitung zu protokollieren. Bei der Nachrichtenprotokollierung können Sie die Nachricht und den Nachrichtentext sehen. Diese Art der Protokollierung ist besonders hilfreich, um zu sehen, welche Argumente übergeben und wie diese vom empfangenden Endpunkt als XML empfangen wurden. Indem Sie die Nachricht protokollieren, wie sie empfangen wurde, können Sie außerdem falsch formatierte Nachrichten erkennen und sehen, wie die Nachricht empfangen wurde. Außerdem können Sie die verwendeten Sicherheitstoken, verschlüsselte und signierte Nachrichtenteile sowie unveränderte Nachrichtenteile untersuchen.  

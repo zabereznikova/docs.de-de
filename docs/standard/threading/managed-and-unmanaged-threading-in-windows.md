@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591689"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Verwaltetes und nicht verwaltetes Threading in Windows
 Die Verwaltung aller Threads erfolgt über die <xref:System.Threading.Thread> -Klasse, einschließlich Threads, die von der Common Language Runtime erstellt werden, und Threads, die außerhalb der Runtime erstellt werden und in die verwaltete Umgebung eintreten, um Code auszuführen. Die Laufzeit überwacht alle Threads in ihrem Prozess, die jemals Code in der verwalteten Ausführungsumgebung ausgeführt haben. Sie verfolgt keine anderen Threads. Threads können über COM-Interop (da die Runtime verwaltete Objekte als COM-Objekte für die nicht verwaltete Umgebung verfügbar macht), über die COM-[DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx)-Funktion und über einen Plattformaufruf in die verwaltete Ausführungsumgebung eintreten.  

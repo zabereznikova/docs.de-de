@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588118"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Schreiben in Dateien in Visual Basic
 In diesem Abschnitt wird beschrieben, wie Sie Aufgaben ausführen können, in denen Sie in Dateien schreiben müssen.  

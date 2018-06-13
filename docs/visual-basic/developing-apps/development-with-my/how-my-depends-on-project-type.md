@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592079"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Merkmale von "My" auf Grundlage des Projekttyps (Visual Basic)
 `My` verfügbar nur die Objekte, die durch einen bestimmten Projekttyp erforderlich macht. Z. B. die `My.Forms` Objekt ist in einer Windows Forms-Anwendung verfügbar, aber nicht in einer Konsolenanwendung verfügbar. In diesem Thema wird beschrieben, welche `My` Objekte in anderen Projekttypen verfügbar sind.  

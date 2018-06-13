@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386170"
 ---
 # <a name="wcf-directive-syntax"></a>WCF-Anweisungssyntax
 Gibt die Einstellungen, die von der Windows Communication Foundation (WCF)-Anweisungen in der SVC-Dateien verwendet, um den Compiler zu leiten. Jede Anweisung kann eines oder mehrere Attribute enthalten (jeweils mit einem Wert), die für diese Anweisung spezifisch sind. WCF bietet nur die [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) Richtlinie.  
