@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534637"
 ---
 # <a name="splitter-control-windows-forms"></a><span data-ttu-id="6fdc4-102">Splitter-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="6fdc4-102">Splitter Control (Windows Forms)</span></span>
 <span data-ttu-id="6fdc4-103">Windows Forms `Splitter` Steuerelemente werden verwendet, um die Größe der angedockten Steuerelemente zur Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="6fdc4-103">Windows Forms `Splitter` controls are used to resize docked controls at run time.</span></span> <span data-ttu-id="6fdc4-104">Die `Splitter` Steuerelement wird in Formularen mit Steuerelementen, die Daten an, wie Windows-Explorer, deren Daten Bereiche Informationen zu unterschiedlichen breiten zu unterschiedlichen Zeiten enthalten variabler Länge haben häufig verwendet.</span><span class="sxs-lookup"><span data-stu-id="6fdc4-104">The `Splitter` control is often used on forms with controls that have varying lengths of data to present, like Windows Explorer, whose data panes contain information of varying widths at different times.</span></span>  

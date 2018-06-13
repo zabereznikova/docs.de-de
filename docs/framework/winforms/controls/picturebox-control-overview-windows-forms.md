@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534400"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a><span data-ttu-id="2d92f-102">Übersicht über das PictureBox-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="2d92f-102">PictureBox Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="2d92f-103">Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerelement wird verwendet, um die Anzeige von Grafiken in Bitmap, GIF, JPEG, Metadatei oder Symbol-Format.</span><span class="sxs-lookup"><span data-stu-id="2d92f-103">The Windows Forms <xref:System.Windows.Forms.PictureBox> control is used to display graphics in bitmap, GIF, JPEG, metafile, or icon format.</span></span>  

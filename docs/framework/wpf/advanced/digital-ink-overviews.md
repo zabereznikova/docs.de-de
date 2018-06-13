@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536104"
 ---
 # <a name="digital-ink-overviews"></a><span data-ttu-id="05333-102">Übersicht über Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="05333-102">Digital Ink Overviews</span></span>
 ## <a name="in-this-section"></a><span data-ttu-id="05333-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="05333-103">In This Section</span></span>  

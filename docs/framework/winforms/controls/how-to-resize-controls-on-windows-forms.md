@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533925"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a><span data-ttu-id="077ba-102">Gewusst wie: Ändern der Größe von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="077ba-102">How to: Resize Controls on Windows Forms</span></span>
 <span data-ttu-id="077ba-103">Sie können einzelne Steuerelemente ändern und Sie können mehrere Steuerelemente des gleichen oder anderen Art, wie z. B. Größe <xref:System.Windows.Forms.Button> und <xref:System.Windows.Forms.GroupBox> Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="077ba-103">You can resize individual controls, and you can resize multiple controls of the same or different kind, such as <xref:System.Windows.Forms.Button> and <xref:System.Windows.Forms.GroupBox> controls.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533434"
 ---
 # <a name="how-to-use-toolstrippanels-for-mdi"></a><span data-ttu-id="b0daa-102">Gewusst wie: Verwenden von ToolStripPanels für MDI</span><span class="sxs-lookup"><span data-stu-id="b0daa-102">How to: Use ToolStripPanels for MDI</span></span>
 <span data-ttu-id="b0daa-103">Das <xref:System.Windows.Forms.ToolStripPanel> bietet die Flexibilität für MDI-Anwendungen (Multiple Document Interface), indem die <xref:System.Windows.Forms.ToolStripPanel.Join%2A>-Methode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="b0daa-103">The <xref:System.Windows.Forms.ToolStripPanel> provides flexibility for multiple-document interface (MDI) applications by using the <xref:System.Windows.Forms.ToolStripPanel.Join%2A> method.</span></span>  

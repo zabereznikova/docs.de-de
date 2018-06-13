@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532784"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a><span data-ttu-id="bc62b-102">Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="bc62b-102">How to: Set the Image Displayed by a Windows Forms Control Using the Designer</span></span>
 <span data-ttu-id="bc62b-103">Einige Windows Forms-Steuerelemente können Bilder anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="bc62b-103">Several Windows Forms controls can display images.</span></span> <span data-ttu-id="bc62b-104">Das Bild kann ein Symbol, das den Zweck des Steuerelements, wie z. B. auf eine Schaltfläche, ein Datenträgersymbol verdeutlicht die **speichern** Befehl.</span><span class="sxs-lookup"><span data-stu-id="bc62b-104">The image can be an icon that clarifies the purpose of the control, such as a disk icon on a button denoting the **Save** command.</span></span> <span data-ttu-id="bc62b-105">Das Symbol kann auch ein Hintergrundbild auf dem Steuerelement den gewünschten Stil sein.</span><span class="sxs-lookup"><span data-stu-id="bc62b-105">Alternatively, the icon can be a background image to give the control the appearance you want.</span></span>  

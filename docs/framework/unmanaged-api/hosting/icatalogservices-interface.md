@@ -1,14 +1,6 @@
 ---
 title: ICatalogServices-Schnittstelle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICatalogServices
 api_location:
@@ -22,29 +14,26 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c2cf6a244f38147cc450428ecdbddeeaf7c8bc90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 078fac7f21ac31b21e5ac442ef81a1c0f496db93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430401"
 ---
-# <a name="icatalogservices-interface"></a><span data-ttu-id="fc88a-102">ICatalogServices-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fc88a-102">ICatalogServices Interface</span></span>
-<span data-ttu-id="fc88a-103">Stellt Methoden zum Katalogisieren von Diensten bereit.</span><span class="sxs-lookup"><span data-stu-id="fc88a-103">Provides methods for cataloging services.</span></span>  
+# <a name="icatalogservices-interface"></a><span data-ttu-id="66369-102">ICatalogServices-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="66369-102">ICatalogServices Interface</span></span>
+<span data-ttu-id="66369-103">Stellt Methoden zum Katalogisieren von Diensten bereit.</span><span class="sxs-lookup"><span data-stu-id="66369-103">Provides methods for cataloging services.</span></span>  
   
- <span data-ttu-id="fc88a-104">Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="fc88a-104">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="66369-104">Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="66369-104">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fc88a-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="fc88a-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="66369-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="66369-105">Methods</span></span>  
   
-|<span data-ttu-id="fc88a-106">Methode</span><span class="sxs-lookup"><span data-stu-id="fc88a-106">Method</span></span>|<span data-ttu-id="fc88a-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc88a-107">Description</span></span>|  
+|<span data-ttu-id="66369-106">Methode</span><span class="sxs-lookup"><span data-stu-id="66369-106">Method</span></span>|<span data-ttu-id="66369-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="66369-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fc88a-108">Autodone-Methode</span><span class="sxs-lookup"><span data-stu-id="fc88a-108">Autodone Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|<span data-ttu-id="fc88a-109">Nur für die interne Verwendung vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="fc88a-109">Reserved for internal use only.</span></span>|  
-|[<span data-ttu-id="fc88a-110">NotAutodone-Methode</span><span class="sxs-lookup"><span data-stu-id="fc88a-110">NotAutodone Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|<span data-ttu-id="fc88a-111">Nur für die interne Verwendung vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="fc88a-111">Reserved for internal use only.</span></span>|  
+|[<span data-ttu-id="66369-108">Autodone-Methode</span><span class="sxs-lookup"><span data-stu-id="66369-108">Autodone Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|<span data-ttu-id="66369-109">Nur für die interne Verwendung vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="66369-109">Reserved for internal use only.</span></span>|  
+|[<span data-ttu-id="66369-110">NotAutodone-Methode</span><span class="sxs-lookup"><span data-stu-id="66369-110">NotAutodone Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|<span data-ttu-id="66369-111">Nur für die interne Verwendung vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="66369-111">Reserved for internal use only.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="fc88a-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fc88a-112">See Also</span></span>  
- [<span data-ttu-id="fc88a-113">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="fc88a-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="66369-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="66369-112">See Also</span></span>  
+ [<span data-ttu-id="66369-113">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="66369-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

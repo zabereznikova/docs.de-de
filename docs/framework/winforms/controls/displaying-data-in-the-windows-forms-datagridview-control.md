@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529427"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="cc1dd-102">Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc1dd-102">Displaying Data in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="cc1dd-103">Die `DataGridView` Steuerelement wird verwendet, um Daten aus einer Vielzahl externer Datenquellen anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="cc1dd-103">The `DataGridView` control is used to display data from a variety of external data sources.</span></span> <span data-ttu-id="cc1dd-104">Alternativ können Sie Zeilen und Spalten zum Steuerelement hinzufügen und es manuell mit Daten aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="cc1dd-104">Alternatively, you can add rows and columns to the control and manually populate it with data.</span></span>  

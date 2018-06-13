@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535450"
 ---
 # <a name="linklabel-control-windows-forms"></a><span data-ttu-id="dbe92-102">LinkLabel-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="dbe92-102">LinkLabel Control (Windows Forms)</span></span>
 <span data-ttu-id="dbe92-103">Windows Forms `LinkLabel` Steuerelement können Sie Weblinks zu Windows Forms-Anwendungen hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="dbe92-103">The Windows Forms `LinkLabel` control enables you to add Web-style links to Windows Forms applications.</span></span> <span data-ttu-id="dbe92-104">Können Sie die `LinkLabel` Control für alle Elemente, die Sie verwenden können, die <xref:System.Windows.Forms.Label> für steuern; Sie können auch Teile des Texts als Link auf ein Objekt oder Webseite festlegen.</span><span class="sxs-lookup"><span data-stu-id="dbe92-104">You can use the `LinkLabel` control for everything that you can use the <xref:System.Windows.Forms.Label> control for; you also can set part of the text as a link to an object or Web page.</span></span>  
