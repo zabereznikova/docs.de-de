@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746708"
 ---
 # <a name="ltentriesgt"></a><span data-ttu-id="3ce9e-102">&lt;Einträge&gt;</span><span class="sxs-lookup"><span data-stu-id="3ce9e-102">&lt;entries&gt;</span></span>
 <span data-ttu-id="3ce9e-103">Ein Routingeintrag, der Zuordnungen zwischen den Routingfiltern und den Zielendpunkten enthält, an die bei Filterübereinstimmung Nachrichten gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="3ce9e-103">A routing entry that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  

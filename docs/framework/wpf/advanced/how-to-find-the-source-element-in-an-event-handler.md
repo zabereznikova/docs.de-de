@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544000"
 ---
 # <a name="how-to-find-the-source-element-in-an-event-handler"></a><span data-ttu-id="31179-102">Gewusst wie: Suchen des Quellelements in einem Ereignishandler</span><span class="sxs-lookup"><span data-stu-id="31179-102">How to: Find the Source Element in an Event Handler</span></span>
 <span data-ttu-id="31179-103">Dieses Beispiel zeigt, wie Sie die Source-Element in einem Ereignishandler zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="31179-103">This example shows how to find the source element in an event handler.</span></span>  

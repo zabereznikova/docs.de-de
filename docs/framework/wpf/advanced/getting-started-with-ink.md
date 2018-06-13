@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546236"
 ---
 # <a name="getting-started-with-ink"></a><span data-ttu-id="ee495-102">Erste Schritte mit Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="ee495-102">Getting Started with Ink</span></span>
 <span data-ttu-id="ee495-103">Freihandeingaben in Ihre Anwendungen integrieren ist einfacher als je zuvor.</span><span class="sxs-lookup"><span data-stu-id="ee495-103">Incorporating digital ink into your applications is easier than ever.</span></span> <span data-ttu-id="ee495-104">Freihandeingaben wurden von wird eine begleitende COM und Windows Forms-Methode der Programmierung zum Erzielen einer vollständige Integration in die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ee495-104">Ink has evolved from being a corollary to the COM and Windows Forms method of programming to achieving full integration into the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="ee495-105">Sie müssen keine separaten SDKs oder Laufzeitbibliotheken installieren.</span><span class="sxs-lookup"><span data-stu-id="ee495-105">You do not need to install separate SDKs or runtime libraries.</span></span>  

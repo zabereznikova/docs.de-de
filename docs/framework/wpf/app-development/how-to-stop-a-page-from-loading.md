@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545544"
 ---
 # <a name="how-to-stop-a-page-from-loading"></a><span data-ttu-id="4acc8-102">Vorgehensweise: Beenden des Ladens eine Seite</span><span class="sxs-lookup"><span data-stu-id="4acc8-102">How to: Stop a Page from Loading</span></span>
 <span data-ttu-id="4acc8-103">In diesem Beispiel wird gezeigt, wie zum Aufrufen der <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> Methode, um die Navigation zu Inhalt zu beenden, bevor er abgeschlossen wurde, wird heruntergeladen.</span><span class="sxs-lookup"><span data-stu-id="4acc8-103">This example shows how to call the <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> method to stop navigation to content before it has finished being downloaded.</span></span>  
