@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397545"
 ---
 # <a name="using-streams-on-the-network"></a><span data-ttu-id="335e2-102">Verwenden von Streams im Netzwerk</span><span class="sxs-lookup"><span data-stu-id="335e2-102">Using Streams on the Network</span></span>
 <span data-ttu-id="335e2-103">Netzwerkressourcen werden in .NET Framework als Streams dargestellt.</span><span class="sxs-lookup"><span data-stu-id="335e2-103">Network resources are represented in the .NET Framework as streams.</span></span> <span data-ttu-id="335e2-104">Durch die generische Verarbeitung von Streams verfügt .NET Framework über folgende Funktionen:</span><span class="sxs-lookup"><span data-stu-id="335e2-104">By treating streams generically, the .NET Framework offers the following capabilities:</span></span>  
