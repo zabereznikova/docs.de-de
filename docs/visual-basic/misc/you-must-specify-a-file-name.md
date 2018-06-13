@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641006"
 ---
 # <a name="you-must-specify-a-file-name"></a><span data-ttu-id="d6ad2-102">Sie müssen einen Dateinamen angeben.</span><span class="sxs-lookup"><span data-stu-id="d6ad2-102">You must specify a file name</span></span>
 <span data-ttu-id="d6ad2-103">Sie haben versucht, einen Vorgang auszuführen, z. B. das Verschieben oder Kopieren einer Datei, für die ein Dateiname angegeben werden muss.</span><span class="sxs-lookup"><span data-stu-id="d6ad2-103">You attempted an operation, such as moving or copying a file, which requires supplying a file name.</span></span>  

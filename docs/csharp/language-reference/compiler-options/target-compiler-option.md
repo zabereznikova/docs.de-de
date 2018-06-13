@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215497"
 ---
 # <a name="-target-c-compiler-options"></a><span data-ttu-id="d00fa-102">-target (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="d00fa-102">-target (C# Compiler Options)</span></span>
 <span data-ttu-id="d00fa-103">Die Compileroption **-target** kann in einem von vier Formaten angegeben werden:</span><span class="sxs-lookup"><span data-stu-id="d00fa-103">The **-target** compiler option can be specified in one of four forms:</span></span>  

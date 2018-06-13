@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648566"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a><span data-ttu-id="56397-102">Gewusst wie: Aufrufen einer Erweiterungsmethode (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56397-102">How to: Call an Extension Method (Visual Basic)</span></span>
 <span data-ttu-id="56397-103">Erweiterungsmethoden können Sie Methoden zur einer vorhandenen Klasse hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="56397-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="56397-104">Nachdem eine Erweiterungsmethode deklariert und in den Gültigkeitsbereich eingebunden ist, können Sie es wie eine Instanzmethode des Typs aufrufen, die sie erweitert.</span><span class="sxs-lookup"><span data-stu-id="56397-104">After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends.</span></span> <span data-ttu-id="56397-105">Weitere Informationen über das Schreiben einer Erweiterungsmethode finden Sie unter [wie: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md).</span><span class="sxs-lookup"><span data-stu-id="56397-105">For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213437"
 ---
 # <a name="by-c-reference"></a><span data-ttu-id="31b80-102">by (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="31b80-102">by (C# Reference)</span></span>
 <span data-ttu-id="31b80-103">Das Kontextschlüsselwort `by` wird in der `group`-Klausel in einem Abfrageausdruck verwendet, um anzugeben, wie die zurückgegebenen Elemente gruppiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="31b80-103">The `by` contextual keyword is used in the `group` clause in a query expression to specify how the returned items should be grouped.</span></span> <span data-ttu-id="31b80-104">Weitere Informationen finden Sie unter [group-Klausel](../../../csharp/language-reference/keywords/group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="31b80-104">For more information, see [group clause](../../../csharp/language-reference/keywords/group-clause.md).</span></span>  

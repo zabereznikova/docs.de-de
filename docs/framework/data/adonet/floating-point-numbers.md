@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764722"
 ---
 # <a name="floating-point-numbers"></a><span data-ttu-id="ab83d-102">Gleitkommazahlen</span><span class="sxs-lookup"><span data-stu-id="ab83d-102">Floating-Point Numbers</span></span>
 <span data-ttu-id="ab83d-103">In diesem Thema werden einige der Probleme beschrieben, auf die Entwickler beim Arbeiten mit Gleitkommazahlen in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] häufig stoßen.</span><span class="sxs-lookup"><span data-stu-id="ab83d-103">This topic describes some of the issues that developers frequently encounter when they work with floating-point numbers in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span> <span data-ttu-id="ab83d-104">Diese Probleme werden wie Computer Gleitkommazahlen speichern, und es sind z. B. nicht spezifisch für einen bestimmten Anbieter verursacht <xref:System.Data.SqlClient> oder <xref:System.Data.OracleClient>.</span><span class="sxs-lookup"><span data-stu-id="ab83d-104">These issues are caused by the way that computers store floating-point numbers, and are not specific to a particular provider such as <xref:System.Data.SqlClient> or <xref:System.Data.OracleClient>.</span></span>  

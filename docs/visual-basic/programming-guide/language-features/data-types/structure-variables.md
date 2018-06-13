@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648498"
 ---
 # <a name="structure-variables-visual-basic"></a><span data-ttu-id="3d175-102">Strukturvariablen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3d175-102">Structure Variables (Visual Basic)</span></span>
 <span data-ttu-id="3d175-103">Nachdem Sie eine Struktur erstellt haben, können Sie Variablen auf Prozedurebene und auf Modulebene als diesen Typ deklarieren.</span><span class="sxs-lookup"><span data-stu-id="3d175-103">Once you have created a structure, you can declare procedure-level and module-level variables as that type.</span></span> <span data-ttu-id="3d175-104">Beispielsweise können Sie eine Struktur, zeichnet Informationen zu einem Computersystem erstellen.</span><span class="sxs-lookup"><span data-stu-id="3d175-104">For example, you can create a structure that records information about a computer system.</span></span> <span data-ttu-id="3d175-105">Dies wird im folgenden Beispiel veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="3d175-105">The following example demonstrates this.</span></span>  

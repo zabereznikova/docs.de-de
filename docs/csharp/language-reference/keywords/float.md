@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219244"
 ---
 # <a name="float-c-reference"></a><span data-ttu-id="06bc9-102">float (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="06bc9-102">float (C# Reference)</span></span>
 <span data-ttu-id="06bc9-103">Das `float`-Schlüsselwort kennzeichnet einen einfachen Typ, der 32-Bit-Gleitkommawerte speichert.</span><span class="sxs-lookup"><span data-stu-id="06bc9-103">The `float` keyword signifies a simple type that stores 32-bit floating-point values.</span></span> <span data-ttu-id="06bc9-104">Die folgende Tabelle zeigt die Genauigkeit und den ungefähren Bereich für den `float`-Typ an.</span><span class="sxs-lookup"><span data-stu-id="06bc9-104">The following table shows the precision and approximate range for the `float` type.</span></span>  

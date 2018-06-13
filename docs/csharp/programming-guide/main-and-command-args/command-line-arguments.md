@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335324"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a><span data-ttu-id="f1641-102">Befehlszeilenargumente (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="f1641-102">Command-Line Arguments (C# Programming Guide)</span></span>
 <span data-ttu-id="f1641-103">Sie können Argumente an die `Main`- Methode senden, indem Sie die Methode auf eine der folgenden Arten definieren:</span><span class="sxs-lookup"><span data-stu-id="f1641-103">You can send arguments to the `Main` method by defining the method in one of the following ways:</span></span>  

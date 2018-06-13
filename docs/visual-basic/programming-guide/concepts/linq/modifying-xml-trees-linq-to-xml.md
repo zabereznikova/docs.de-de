@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645615"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a><span data-ttu-id="c6841-102">Ändern von XML-Strukturen (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c6841-102">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="c6841-103"> ist ein Speicher im Arbeitsspeicher, der XML-Strukturen speichert.</span><span class="sxs-lookup"><span data-stu-id="c6841-103"> is an in-memory store for an XML tree.</span></span> <span data-ttu-id="c6841-104">Nachdem Sie eine XML-Struktur aus einer Quelle geladen oder analysiert haben, können Sie diese Struktur in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ändern, sie anschließend serialisieren und möglicherweise in einer Datei speichern oder an einen Remoteserver senden.</span><span class="sxs-lookup"><span data-stu-id="c6841-104">After you load or parse an XML tree from a source, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] lets you modify that tree in place, and then serialize the tree, perhaps saving it to a file or sending it to a remote server.</span></span>  

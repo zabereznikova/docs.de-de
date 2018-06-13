@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649190"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a><span data-ttu-id="04644-102">Gewusst wie: Steuern des Gültigkeitsbereichs einer Variablen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="04644-102">How to: Control the Scope of a Variable (Visual Basic)</span></span>
 <span data-ttu-id="04644-103">In der Regel wird eine Variable ist *Bereich*, sichtbar zu Referenzzwecken innerhalb der Region, in dem Sie wurde deklariert.</span><span class="sxs-lookup"><span data-stu-id="04644-103">Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it.</span></span> <span data-ttu-id="04644-104">In einigen Fällen die Variable des *Zugriffsebene* Bereich beeinflussen können.</span><span class="sxs-lookup"><span data-stu-id="04644-104">In some cases, the variable's *access level* can influence its scope.</span></span>  

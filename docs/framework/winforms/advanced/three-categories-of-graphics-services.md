@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525046"
 ---
 # <a name="three-categories-of-graphics-services"></a><span data-ttu-id="c89cf-102">Drei Kategorien von Grafikdiensten</span><span class="sxs-lookup"><span data-stu-id="c89cf-102">Three Categories of Graphics Services</span></span>
 <span data-ttu-id="c89cf-103">Die Angebote Grafiken in Windows Forms werden in den folgenden drei allgemeine Kategorien fallen:</span><span class="sxs-lookup"><span data-stu-id="c89cf-103">The graphics offerings in Windows Forms fall into the following three broad categories:</span></span>  

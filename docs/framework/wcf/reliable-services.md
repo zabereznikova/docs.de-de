@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803753"
 ---
 # <a name="reliable-services"></a><span data-ttu-id="c22f2-102">Zuverlässige Dienste</span><span class="sxs-lookup"><span data-stu-id="c22f2-102">Reliable Services</span></span>
 <span data-ttu-id="c22f2-103">Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Foundation (WCF)-Funktionen, die zuverlässiges messaging implementieren.</span><span class="sxs-lookup"><span data-stu-id="c22f2-103">Queues and reliable sessions are the Windows Communication Foundation (WCF) features that implement reliable messaging.</span></span> <span data-ttu-id="c22f2-104">In diesem Thema wird erläutert, die Funktionen für zuverlässigen messaging von WCF.</span><span class="sxs-lookup"><span data-stu-id="c22f2-104">This topic explains the reliable messaging features of WCF.</span></span>  

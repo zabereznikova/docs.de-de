@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527101"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="ac775-102">Gewusst wie: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="ac775-102">How to: Add Buttons to a ToolBar Control</span></span>
 > [!NOTE]
