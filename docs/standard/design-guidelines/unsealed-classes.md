@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571660"
 ---
 # <a name="unsealed-classes"></a><span data-ttu-id="3f417-102">Unversiegelte Klassen</span><span class="sxs-lookup"><span data-stu-id="3f417-102">Unsealed Classes</span></span>
 <span data-ttu-id="3f417-103">Versiegelte Klassen können nicht vererbt werden, aus, und sie verhindern, dass Erweiterungen.</span><span class="sxs-lookup"><span data-stu-id="3f417-103">Sealed classes cannot be inherited from, and they prevent extensibility.</span></span> <span data-ttu-id="3f417-104">Im Gegensatz dazu werden Klassen, die vom geerbt werden können, nicht versiegelte Klassen bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="3f417-104">In contrast, classes that can be inherited from are called unsealed classes.</span></span>  

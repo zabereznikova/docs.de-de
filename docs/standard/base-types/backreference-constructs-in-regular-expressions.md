@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574607"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a><span data-ttu-id="25ca3-102">Rückverweiskonstrukte in regulären Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="25ca3-102">Backreference Constructs in Regular Expressions</span></span>
 <span data-ttu-id="25ca3-103">Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder eine Teilzeichenfolge innerhalb einer Zeichenfolge zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="25ca3-103">Backreferences provide a convenient way to identify a repeated character or substring within a string.</span></span> <span data-ttu-id="25ca3-104">Wenn z.B. die Eingabezeichenfolge mehrere Vorkommen einer beliebigen Teilzeichenfolge enthält, können Sie das erste Vorkommen mit einer Erfassungsgruppe abgleichen und dann mit einem Rückverweis nachfolgende Vorkommen der Teilzeichenfolge abgleichen.</span><span class="sxs-lookup"><span data-stu-id="25ca3-104">For example, if the input string contains multiple occurrences of an arbitrary substring, you can match the first occurrence with a capturing group, and then use a backreference to match subsequent occurrences of the substring.</span></span>  

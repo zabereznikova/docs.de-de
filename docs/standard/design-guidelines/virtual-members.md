@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573086"
 ---
 # <a name="virtual-members"></a><span data-ttu-id="3ae2f-102">Virtuelle Member</span><span class="sxs-lookup"><span data-stu-id="3ae2f-102">Virtual Members</span></span>
 <span data-ttu-id="3ae2f-103">Virtuelle Member können überschrieben werden, damit ändern das Verhalten der Unterklasse.</span><span class="sxs-lookup"><span data-stu-id="3ae2f-103">Virtual members can be overridden, thus changing the behavior of the subclass.</span></span> <span data-ttu-id="3ae2f-104">Sie sind im Hinblick auf die Erweiterbarkeit bereitgestellten von Rückrufen zu sehr ähnlich, aber sie sind im Hinblick auf Leistung bei der abfrageausführung und arbeitsspeichernutzung besser.</span><span class="sxs-lookup"><span data-stu-id="3ae2f-104">They are quite similar to callbacks in terms of the extensibility they provide, but they are better in terms of execution performance and memory consumption.</span></span> <span data-ttu-id="3ae2f-105">Außerdem können virtuelle Member natürlicher in Szenarien, die erfordern, erstellen eine spezielle Art von einem vorhandenen Typ (Spezialisierung).</span><span class="sxs-lookup"><span data-stu-id="3ae2f-105">Also, virtual members feel more natural in scenarios that require creating a special kind of an existing type (specialization).</span></span>  

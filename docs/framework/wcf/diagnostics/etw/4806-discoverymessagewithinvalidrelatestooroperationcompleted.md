@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33467107"
 ---
 # <a name="4806---discoverymessagewithinvalidrelatestooroperationcompleted"></a><span data-ttu-id="d177a-102">4806 - DiscoveryMessageWithInvalidRelatesToOrOperationCompleted</span><span class="sxs-lookup"><span data-stu-id="d177a-102">4806 - DiscoveryMessageWithInvalidRelatesToOrOperationCompleted</span></span>
 ## <a name="properties"></a><span data-ttu-id="d177a-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="d177a-103">Properties</span></span>  

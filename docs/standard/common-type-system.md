@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569547"
 ---
 # <a name="common-type-system--common-language-specification"></a><span data-ttu-id="c2ae3-103">Allgemeines Typsystem und Common Language Specification</span><span class="sxs-lookup"><span data-stu-id="c2ae3-103">Common Type System & Common Language Specification</span></span>
 

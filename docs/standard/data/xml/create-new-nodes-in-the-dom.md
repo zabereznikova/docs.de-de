@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569303"
 ---
 # <a name="create-new-nodes-in-the-dom"></a><span data-ttu-id="527ea-102">Erstellen von neuen Knoten im Dokumentobjektmodell</span><span class="sxs-lookup"><span data-stu-id="527ea-102">Create New Nodes in the DOM</span></span>
 <span data-ttu-id="527ea-103">Das <xref:System.Xml.XmlDocument> verfügt über eine create-Methode für alle Knotentypen.</span><span class="sxs-lookup"><span data-stu-id="527ea-103">The <xref:System.Xml.XmlDocument> has a create method for all of the node types.</span></span> <span data-ttu-id="527ea-104">Stellen Sie der Methode, falls erforderlich, einen Namen und Inhalt oder andere Parameter für die Knoten bereit, die Inhalt aufweisen (z. B. ein Textknoten), und der Knoten wird erstellt.</span><span class="sxs-lookup"><span data-stu-id="527ea-104">Supply the method with a name when required, and content or other parameters for those nodes that have content (for example, a text node), and the node is created.</span></span> <span data-ttu-id="527ea-105">Für die folgenden Methoden muss ein Name angegeben sein und es müssen einige andere Parameter ausgefüllt sein, damit ein entsprechender Knoten erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="527ea-105">The following methods are ones that need a name and a few other parameters filled to create an appropriate node.</span></span>  

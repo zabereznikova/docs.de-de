@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578143"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a><span data-ttu-id="78aed-103">Automatische Speicherverwaltung und Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="78aed-103">Automatic memory management and garbage collection</span></span>
 

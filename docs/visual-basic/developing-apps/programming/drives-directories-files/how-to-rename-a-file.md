@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586411"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a><span data-ttu-id="d949d-102">Gewusst wie: Umbenennen einer Datei in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d949d-102">How to: Rename a File in Visual Basic</span></span>
 <span data-ttu-id="d949d-103">Verwenden Sie die `RenameFile`-Methode des `My.Computer.FileSystem`-Objekts, um eine Datei umzubenennen, indem Sie den aktuellen Standort, Dateinamen sowie den neuen Dateinamen bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="d949d-103">Use the `RenameFile` method of the `My.Computer.FileSystem` object to rename a file by supplying the current location, file name, and the new file name.</span></span> <span data-ttu-id="d949d-104">Diese Methode kann nicht dazu verwendet werden, um eine Datei zu verschieben; verwenden Sie die `MoveFile`-Methode, um die Datei zu verschieben und umzubenennen.</span><span class="sxs-lookup"><span data-stu-id="d949d-104">This method cannot be used to move a file; use the `MoveFile` method to move and rename the file.</span></span>  
