@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655836"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Gewusst wie: Ändern des Werts eines Prozedurarguments (Visual Basic)
 Wenn Sie eine Prozedur aufrufen, entspricht jedes Argument, das Sie angeben eines Parameters in der Prozedur definiert. In einigen Fällen kann der Code die Prozedur den Wert, der ein Argument im aufrufenden Code zugrunde liegt, ändern. In anderen Fällen kann die Prozedur nur die lokale Kopie eines Arguments ändern.  

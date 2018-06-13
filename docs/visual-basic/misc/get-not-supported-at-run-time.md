@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636564"
 ---
 # <a name="get-not-supported-at-run-time"></a>'Get' wird zur Laufzeit nicht unterstützt.
 Sie haben versucht, eine Eigenschaft zur Laufzeit zu lesen, auf die nur zur Entwurfszeit zugegriffen werden kann.  

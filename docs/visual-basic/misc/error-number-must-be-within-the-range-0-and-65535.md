@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634482"
 ---
 # <a name="error-number-must-be-within-the-range-0-and-65535"></a>Die Fehlernummer muss im Bereich von 0 bis 65535 liegen
 Eine Fehlernummer liegt außerhalb des gültigen Bereichs von 0 bis 65535.  

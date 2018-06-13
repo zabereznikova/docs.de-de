@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655810"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Verweise auf deklarierte Elemente (Visual Basic)
 Wenn Ihr Code eine deklarierte Element verweist, wird der Name in den Verweis auf die entsprechende Deklaration mit diesem Namen von Visual Basic-Compiler abgeglichen. Wenn mehr als ein Element mit demselben Namen deklariert wird, können Sie steuern, welche dieser Elemente sind von verwiesen wird *qualifizierenden* seinen Namen.  

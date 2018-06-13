@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599189"
 ---
 # <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a>Der Argumentwert &#39; &lt;Pathname&gt; &#39; enthält Zeichen, die in einem Pfadnamen nicht gültig sind
 Ein Pfadname enthält ungültige Zeichen.  
