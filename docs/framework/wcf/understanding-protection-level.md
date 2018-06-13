@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809780"
 ---
 # <a name="understanding-protection-level"></a><span data-ttu-id="b9597-102">Grundlagen der Schutzebene</span><span class="sxs-lookup"><span data-stu-id="b9597-102">Understanding Protection Level</span></span>
 <span data-ttu-id="b9597-103">Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B. die <xref:System.ServiceModel.ServiceContractAttribute>-Klasse und die <xref:System.ServiceModel.OperationContractAttribute>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="b9597-103">The `ProtectionLevel` property is found on many different classes, such as the <xref:System.ServiceModel.ServiceContractAttribute> and the <xref:System.ServiceModel.OperationContractAttribute> classes.</span></span> <span data-ttu-id="b9597-104">Die Eigenschaft steuert, wie eine Nachricht zum Teil (oder ganz) geschützt wird.</span><span class="sxs-lookup"><span data-stu-id="b9597-104">The property controls how a part (or whole) of a message is protected.</span></span> <span data-ttu-id="b9597-105">In diesem Thema wird erläutert, die Windows Communication Foundation (WCF)-Funktion und wie diese funktioniert.</span><span class="sxs-lookup"><span data-stu-id="b9597-105">This topic explains the Windows Communication Foundation (WCF) feature and how it works.</span></span>  

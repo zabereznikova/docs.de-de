@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808607"
 ---
 # <a name="durable-instance-context"></a><span data-ttu-id="f8da1-102">Permanenter Instanzkontext</span><span class="sxs-lookup"><span data-stu-id="f8da1-102">Durable Instance Context</span></span>
 <span data-ttu-id="f8da1-103">Dieses Beispiel veranschaulicht das Anpassen der Windows Communication Foundation (WCF)-Laufzeit, um permanente instanzkontexte zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="f8da1-103">This sample demonstrates how to customize the Windows Communication Foundation (WCF) runtime to enable durable instance contexts.</span></span> <span data-ttu-id="f8da1-104">Dabei wird als Sicherungsspeicher SQL Server 2005 (in diesem Fall SQL Server 2005 Express) verwendet.</span><span class="sxs-lookup"><span data-stu-id="f8da1-104">It uses SQL Server 2005 as its backing store (SQL Server 2005 Express in this case).</span></span> <span data-ttu-id="f8da1-105">Aber es bietet auch eine Möglichkeit, auf benutzerdefinierte Speichermechanismen zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="f8da1-105">However, it also provides a way to access custom storage mechanisms.</span></span>  

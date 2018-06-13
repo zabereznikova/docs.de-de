@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804978"
 ---
 # <a name="conceptual-overview"></a><span data-ttu-id="1624c-102">Konzeptionelle Übersicht</span><span class="sxs-lookup"><span data-stu-id="1624c-102">Conceptual Overview</span></span>
 <span data-ttu-id="1624c-103">In diesem Thema werden Informationen über die Windows Communication Foundation (WCF)-Nachrichtensystem und den Klassen, die seine Verwendung unterstützen zusammengefasst.</span><span class="sxs-lookup"><span data-stu-id="1624c-103">This topic summarizes information about the Windows Communication Foundation (WCF) messaging system and the classes that support its use.</span></span>  

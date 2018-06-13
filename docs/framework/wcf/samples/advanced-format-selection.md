@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805589"
 ---
 # <a name="advanced-format-selection"></a><span data-ttu-id="af12b-102">Erweiterte Formatauswahl</span><span class="sxs-lookup"><span data-stu-id="af12b-102">Advanced Format Selection</span></span>
 <span data-ttu-id="af12b-103">In diesem Beispiel wird veranschaulicht, wie der Windows Communication Foundation (WCF)-REST-Programmiermodell zur Unterstützung neuer Formate für ausgehende Antworten erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="af12b-103">This sample demonstrates how to extend the Windows Communication Foundation (WCF) REST programming model to support new outgoing response formats.</span></span> <span data-ttu-id="af12b-104">In diesem Beispiel wird zusätzlich eine T4-Vorlage verwendet, damit die Antwort als XHTML-Seite zurückgegeben wird. Auf diese Weise wird veranschaulicht, wie ein Programmiermodell zur Ansicht implementiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="af12b-104">In addition, the sample uses a T4 Template to return the response as an XHTML page, demonstrating how a view-style programming model can be implemented.</span></span>  

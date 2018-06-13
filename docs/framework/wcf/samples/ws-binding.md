@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804913"
 ---
 # <a name="ws-binding"></a><span data-ttu-id="82daf-102">WS-Bindung</span><span class="sxs-lookup"><span data-stu-id="82daf-102">WS Binding</span></span>
 <span data-ttu-id="82daf-103">Dieser Abschnitt enthält Beispiele für die Windows-dienstbindung in Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="82daf-103">This section contains samples that demonstrate Windows Service binding in Windows Communication Foundation (WCF).</span></span>  

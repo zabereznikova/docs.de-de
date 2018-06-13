@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648732"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a><span data-ttu-id="997f7-102">Gewusst wie: Schreiben einer Erweiterungsmethode (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="997f7-102">How to: Write an Extension Method (Visual Basic)</span></span>
 <span data-ttu-id="997f7-103">Erweiterungsmethoden können Sie Methoden zur einer vorhandenen Klasse hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="997f7-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="997f7-104">Die Erweiterungsmethode kann aufgerufen werden, als handele es sich um eine Instanz dieser Klasse.</span><span class="sxs-lookup"><span data-stu-id="997f7-104">The extension method can be called as if it were an instance of that class.</span></span>  

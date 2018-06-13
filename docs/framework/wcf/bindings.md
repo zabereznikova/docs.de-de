@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803594"
 ---
 # <a name="windows-communication-foundation-bindings"></a><span data-ttu-id="35a71-102">Windows Communication Foundation-Bindungen</span><span class="sxs-lookup"><span data-stu-id="35a71-102">Windows Communication Foundation Bindings</span></span>
 <span data-ttu-id="35a71-103">Bindungen geben an, wie ein Windows Communication Foundation (WCF) Dienstendpunkt mit anderen Endpunkten kommuniziert.</span><span class="sxs-lookup"><span data-stu-id="35a71-103">Bindings specify how a Windows Communication Foundation (WCF) service endpoint communicates with other endpoints.</span></span> <span data-ttu-id="35a71-104">Eine Bindung muss grundsätzlich erst einmal den zu verwendenden Transportweg festlegen (z. B. HTTP oder TCP).</span><span class="sxs-lookup"><span data-stu-id="35a71-104">At its most basic, a binding must specify the transport (for example, HTTP or TCP) to use.</span></span> <span data-ttu-id="35a71-105">Sie können jedoch auch andere Merkmale wie Sicherheit und Transaktionssupport über Bindungen festlegen.</span><span class="sxs-lookup"><span data-stu-id="35a71-105">You can also set other characteristics, such as security and transaction support, through bindings.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807227"
 ---
 # <a name="httpcookiesession"></a><span data-ttu-id="99e91-102">HttpCookieSession</span><span class="sxs-lookup"><span data-stu-id="99e91-102">HttpCookieSession</span></span>
 <span data-ttu-id="99e91-103">In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals für die Verwendung von HTTP-Cookies für die Sitzungsverwaltung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="99e91-103">This sample demonstrates how to build a custom protocol channel to use HTTP cookies for session management.</span></span> <span data-ttu-id="99e91-104">Dieser Kanal ermöglicht die Kommunikation zwischen Windows Communication Foundation (WCF)-Dienste und ASMX-Clients oder WCF-Clients und ASMX-Diensten.</span><span class="sxs-lookup"><span data-stu-id="99e91-104">This channel enables communication between Windows Communication Foundation (WCF) services and ASMX clients or between WCF clients and ASMX services.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805498"
 ---
 # <a name="srmp"></a><span data-ttu-id="81421-102">SRMP</span><span class="sxs-lookup"><span data-stu-id="81421-102">SRMP</span></span>
 <span data-ttu-id="81421-103">In diesem Beispiel wird veranschaulicht, wie eine abgewickelte Warteschlangenkommunikation mithilfe von Message Queuing (MSMQ) über HTTP durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="81421-103">This sample demonstrates how to perform transacted queued communication by using Message Queuing (MSMQ) over HTTP.</span></span>  

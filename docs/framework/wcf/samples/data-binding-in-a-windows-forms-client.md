@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804377"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a><span data-ttu-id="8d626-102">Datenbindung in einem Windows Forms-Client</span><span class="sxs-lookup"><span data-stu-id="8d626-102">Data Binding in a Windows Forms Client</span></span>
 <span data-ttu-id="8d626-103">Dieses Beispiel veranschaulicht das Binden an Daten, die von einem Windows Communication Foundation (WCF)-Dienst in einer Windows Forms-Anwendung zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="8d626-103">This sample demonstrates how to bind to data returned by a Windows Communication Foundation (WCF) service in a Windows Forms application.</span></span>  

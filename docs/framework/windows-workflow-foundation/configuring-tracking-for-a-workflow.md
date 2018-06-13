@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809702"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a><span data-ttu-id="b91b2-102">Konfigurieren der Nachverfolgung für einen Workflow</span><span class="sxs-lookup"><span data-stu-id="b91b2-102">Configuring Tracking for a Workflow</span></span>
 <span data-ttu-id="b91b2-103">Es gibt drei Möglichkeiten zum Ausführen eines Workflows:</span><span class="sxs-lookup"><span data-stu-id="b91b2-103">A workflow can execute in three ways:</span></span>  

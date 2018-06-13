@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803789"
 ---
 # <a name="address-headers"></a><span data-ttu-id="f4fbc-102">Adressheader</span><span class="sxs-lookup"><span data-stu-id="f4fbc-102">Address Headers</span></span>
 <span data-ttu-id="f4fbc-103">Beispiel zu Adressheadern wird veranschaulicht, wie Clients Verweisparameter an einen Dienst mithilfe von Windows Communication Foundation (WCF) übergeben können.</span><span class="sxs-lookup"><span data-stu-id="f4fbc-103">The Address Headers sample demonstrates how clients can pass reference parameters to a service using Windows Communication Foundation (WCF).</span></span>  

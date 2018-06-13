@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807524"
 ---
 # <a name="load-balancing"></a><span data-ttu-id="82982-102">Lastenausgleich</span><span class="sxs-lookup"><span data-stu-id="82982-102">Load Balancing</span></span>
 <span data-ttu-id="82982-103">Eine Möglichkeit zum Erhöhen der Kapazität der Windows Communication Foundation (WCF)-Anwendungen werden sie skalieren, indem sie in einer Serverfarm mit Lastenausgleich bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="82982-103">One way to increase the capacity of Windows Communication Foundation (WCF) applications is to scale them out by deploying them into a load-balanced server farm.</span></span> <span data-ttu-id="82982-104">WCF-Anwendungen können mithilfe von standardmäßigen lastenausgleichstechniken, einschließlich der Software Load balancer wie Windows Network Load Balancing sowie hardwarebasierte Lastenausgleich Einheiten sein.</span><span class="sxs-lookup"><span data-stu-id="82982-104">WCF applications can be load balanced using standard load balancing techniques, including software load balancers such as Windows Network Load Balancing as well as hardware-based load balancing appliances.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803236"
 ---
 # <a name="propagation"></a><span data-ttu-id="0b2c3-102">Weitergabe</span><span class="sxs-lookup"><span data-stu-id="0b2c3-102">Propagation</span></span>
 <span data-ttu-id="0b2c3-103">Dieses Thema beschreibt die Aktivitätsweitergabe in der Windows Communication Foundation (WCF)-aktivitätsablaufverfolgungs-Modell.</span><span class="sxs-lookup"><span data-stu-id="0b2c3-103">This topic describes activity propagation in the Windows Communication Foundation (WCF) tracing model.</span></span>  

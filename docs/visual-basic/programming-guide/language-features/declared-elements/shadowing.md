@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656070"
 ---
 # <a name="shadowing-in-visual-basic"></a><span data-ttu-id="04206-102">Shadowing in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="04206-102">Shadowing in Visual Basic</span></span>
 <span data-ttu-id="04206-103">Wenn zwei Programmierelemente denselben Namen tragen, eine von ihnen kann auszublenden, oder *Schatten*, eine andere.</span><span class="sxs-lookup"><span data-stu-id="04206-103">When two programming elements share the same name, one of them can hide, or *shadow*, the other one.</span></span> <span data-ttu-id="04206-104">In einer solchen Situation ist nicht das Shadowing-Element als Referenz verfügbar; Stattdessen, wenn Ihr Code den Elementnamen verwendet wird, löst Visual Basic-Compiler es in das shadowing-Element.</span><span class="sxs-lookup"><span data-stu-id="04206-104">In such a situation, the shadowed element is not available for reference; instead, when your code uses the element name, the Visual Basic compiler resolves it to the shadowing element.</span></span>  

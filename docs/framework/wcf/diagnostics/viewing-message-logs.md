@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33802976"
 ---
 # <a name="viewing-message-logs"></a><span data-ttu-id="22a3a-102">Anzeigen von Nachrichtenprotokollen</span><span class="sxs-lookup"><span data-stu-id="22a3a-102">Viewing Message Logs</span></span>
 <span data-ttu-id="22a3a-103">In diesem Thema wird beschrieben, wie Sie Nachrichtenprotokolle anzeigen können.</span><span class="sxs-lookup"><span data-stu-id="22a3a-103">This topic describes how you can view message logs.</span></span>  

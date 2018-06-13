@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806743"
 ---
 # <a name="creating-user-defined-bindings"></a><span data-ttu-id="018c2-102">Erstellen benutzerdefinierter Bindungen</span><span class="sxs-lookup"><span data-stu-id="018c2-102">Creating User-Defined Bindings</span></span>
 <span data-ttu-id="018c2-103">Es gibt mehrere Möglichkeiten, Bindungen zu erstellen, die nicht vom System bereitgestellt werden:</span><span class="sxs-lookup"><span data-stu-id="018c2-103">There are several ways to create bindings not provided by the system:</span></span>  

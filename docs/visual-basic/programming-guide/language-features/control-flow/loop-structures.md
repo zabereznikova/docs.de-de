@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647890"
 ---
 # <a name="loop-structures-visual-basic"></a><span data-ttu-id="039ac-102">Schleifenstruktur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="039ac-102">Loop Structures (Visual Basic)</span></span>
 <span data-ttu-id="039ac-103">Visual Basic-Schleifenstruktur ermöglichen Ihnen, eine oder mehrere Codezeilen wiederholt auszuführen.</span><span class="sxs-lookup"><span data-stu-id="039ac-103">Visual Basic loop structures allow you to run one or more lines of code repetitively.</span></span> <span data-ttu-id="039ac-104">Sie können die Anweisungen in einer Schleifenstruktur wiederholen, bis eine Bedingung ist `True`, bis eine Bedingung ist `False`, eine angegebene Anzahl, wie oft oder einmal für jedes Element in einer Auflistung.</span><span class="sxs-lookup"><span data-stu-id="039ac-104">You can repeat the statements in a loop structure until a condition is `True`, until a condition is `False`, a specified number of times, or once for each element in a collection.</span></span>  

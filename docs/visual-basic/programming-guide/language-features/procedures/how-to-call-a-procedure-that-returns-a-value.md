@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649411"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a><span data-ttu-id="11cd3-102">Gewusst wie: Aufrufen einer Prozedur, die einen Wert zurückgibt (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="11cd3-102">How to: Call a Procedure That Returns a Value (Visual Basic)</span></span>
 <span data-ttu-id="11cd3-103">Ein `Function` Prozedur gibt einen Wert an den aufrufenden Code zurück.</span><span class="sxs-lookup"><span data-stu-id="11cd3-103">A `Function` procedure returns a value to the calling code.</span></span> <span data-ttu-id="11cd3-104">Rufen Sie sie einschließlich Name und Argumente entweder auf der rechten Seite einer zuweisungsanweisung oder in einem Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="11cd3-104">You call it by including its name and arguments either on the right side of an assignment statement or in an expression.</span></span>  

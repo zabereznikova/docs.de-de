@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652421"
 ---
 # <a name="-recurse"></a><span data-ttu-id="0de75-102">-Recurse</span><span class="sxs-lookup"><span data-stu-id="0de75-102">-recurse</span></span>
 <span data-ttu-id="0de75-103">Kompiliert Quellcode Dateien in allen untergeordneten Verzeichnissen des angegebenen Verzeichnis oder das Projektverzeichnis.</span><span class="sxs-lookup"><span data-stu-id="0de75-103">Compiles source-code files in all child directories of either the specified directory or the project directory.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805407"
 ---
 # <a name="aspnet-caching-integration"></a><span data-ttu-id="6546f-102">ASP.NET-Zwischenspeicherungsintegration</span><span class="sxs-lookup"><span data-stu-id="6546f-102">ASP.NET Caching Integration</span></span>
 <span data-ttu-id="6546f-103">In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HTTP-Programmiermodell verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="6546f-103">This sample demonstrates how to utilize the ASP.NET output cache with the WCF WEB HTTP programming model.</span></span> <span data-ttu-id="6546f-104">Finden Sie unter der [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel eine selbst gehostete Version dieses Szenarios, die die dienstimplementierung ausführlich erläutert wird.</span><span class="sxs-lookup"><span data-stu-id="6546f-104">Please see the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample for a self-hosted version of this scenario that discusses the service implementation in depth.</span></span> <span data-ttu-id="6546f-105">Dieses Thema befasst sich mit den Integrationsfunktion des ASP.NET-Ausgabecaches.</span><span class="sxs-lookup"><span data-stu-id="6546f-105">This topic focuses on the ASP.NET output cache integration feature.</span></span>  

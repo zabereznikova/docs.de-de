@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804991"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a><span data-ttu-id="4c9f2-102">Datenbindung in einem ASP.NET-Client</span><span class="sxs-lookup"><span data-stu-id="4c9f2-102">Data Binding in an ASP.NET Client</span></span>
 <span data-ttu-id="4c9f2-103">Dieses Beispiel veranschaulicht das Binden von Daten von einem normalen Windows Communication Foundation (WCF)-Dienst in einer Web Forms-Anwendung zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="4c9f2-103">This sample demonstrates how to bind data returned by a typical Windows Communication Foundation (WCF) service in a Web Forms application.</span></span>  

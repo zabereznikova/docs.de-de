@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806629"
 ---
 # <a name="hierarchical-configuration-model"></a><span data-ttu-id="d08d1-102">Hierarchisches Konfigurationsmodell</span><span class="sxs-lookup"><span data-stu-id="d08d1-102">Hierarchical Configuration Model</span></span>
 <span data-ttu-id="d08d1-103">In diesem Beispiel wird veranschaulicht, wie eine Hierarchie von Konfigurationsdateien für Dienste implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="d08d1-103">This sample demonstrates how to implement a hierarchy of configuration files for services.</span></span> <span data-ttu-id="d08d1-104">Es wird auch gezeigt, wie Bindungen, Dienstverhalten und Endpunktverhalten von höheren Ebenen in der Hierarchie geerbt werden.</span><span class="sxs-lookup"><span data-stu-id="d08d1-104">It also shows how bindings, service behaviors, and endpoint behaviors are inherited from higher levels in the hierarchy.</span></span>  

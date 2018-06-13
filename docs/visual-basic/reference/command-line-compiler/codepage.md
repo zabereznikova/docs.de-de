@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648527"
 ---
 # <a name="-codepage-visual-basic"></a><span data-ttu-id="cc953-102">-Codepage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc953-102">-codepage (Visual Basic)</span></span>
 <span data-ttu-id="cc953-103">Gibt für alle Quellcodedateien in der Kompilierung die zu verwendende Codepage an.</span><span class="sxs-lookup"><span data-stu-id="cc953-103">Specifies the code page to use for all source-code files in the compilation.</span></span>  

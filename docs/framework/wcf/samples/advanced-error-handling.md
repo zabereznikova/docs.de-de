@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810082"
 ---
 # <a name="advanced-error-handling"></a><span data-ttu-id="30aee-102">Erweiterte Fehlerbehandlung</span><span class="sxs-lookup"><span data-stu-id="30aee-102">Advanced Error Handling</span></span>
 <span data-ttu-id="30aee-103">Diesem Beispiel wird den Windows Communication Foundation (WCF)-Routingdienst veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="30aee-103">This sample demonstrates the Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="30aee-104">Der Routingdienst ist eine WCF-Komponente, die integrieren ein inhaltsbasierten Routers in die Anwendung aufnehmen vereinfacht.</span><span class="sxs-lookup"><span data-stu-id="30aee-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="30aee-105">In diesem Beispiel wird gezeigt, wie der Routingdienst eine intelligente Fehlerwiederherstellung mit Transaktionen und anderen komplexen Messagingkonzepten (z. B. Multicasting) ausführt.</span><span class="sxs-lookup"><span data-stu-id="30aee-105">This sample shows how the routing service intelligently recovers from errors, using transactions and other more complex messaging concepts such as multicasting.</span></span>  

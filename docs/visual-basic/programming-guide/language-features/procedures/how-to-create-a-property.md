@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656242"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a><span data-ttu-id="e32e9-102">Gewusst wie: Erstellen einer Eigenschaft (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e32e9-102">How to: Create a Property (Visual Basic)</span></span>
 <span data-ttu-id="e32e9-103">Sie setzen eine Eigenschaftsdefinition zwischen einer `Property` Anweisung und eine `End Property` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="e32e9-103">You enclose a property definition between a `Property` statement and an `End Property` statement.</span></span> <span data-ttu-id="e32e9-104">Innerhalb dieser Definition, die Sie definieren eine `Get` Prozedur, eine `Set` Prozedur oder beides.</span><span class="sxs-lookup"><span data-stu-id="e32e9-104">Within this definition you define a `Get` procedure, a `Set` procedure, or both.</span></span> <span data-ttu-id="e32e9-105">Alle Eigenschaft Code ist in diesen Prozeduren.</span><span class="sxs-lookup"><span data-stu-id="e32e9-105">All the property's code lies within these procedures.</span></span>  
