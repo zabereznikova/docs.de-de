@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490834"
 ---
 # <a name="performance-considerations"></a>Überlegungen zur Leistung
 Beim Entwickeln von Anwendungen sollten immer die Leistungsaspekte berücksichtigt werden. Dieser Abschnitt enthält Einträge bezüglich der Leistung und der Sicherheit.  

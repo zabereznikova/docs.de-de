@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496711"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Vorgehensweise: Implementieren eines Suchproxys
 In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere Informationen zu den Discovery-Feature in Windows Communication Foundation (WCF), finden Sie unter [Überblick über WCF-Ermittlung](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Sie können einen Suchproxy implementieren, indem Sie eine Klasse erstellen, die die abstrakte <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Klasse erweitert. Es gibt eine Reihe von anderen Unterstützungsklassen, die in diesem Beispiel definiert und verwendet werden. `OnResolveAsyncResult`, `OnFindAsyncResult` und `AsyncResult`. Diese Klassen implementieren die <xref:System.IAsyncResult>-Schnittstelle. Weitere Informationen zu <xref:System.IAsyncResult> finden Sie unter [System.IAsyncResult-Schnittstelle](xref:System.IAsyncResult).

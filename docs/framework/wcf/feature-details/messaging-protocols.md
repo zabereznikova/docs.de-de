@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496636"
 ---
 # <a name="messaging-protocols"></a>Messagingprotokolle
 Der Windows Communication Foundation (WCF)-Kanalstapel wendet Codierungs- und Transportkanäle interne nachrichtendarstellung in Übertragungsformat und ihn über einen bestimmten Transport zu senden. Der am häufigsten verwendete Transport, der für die Interoperabilität bei Webdiensten verwendet wird, ist HTTP, und die am häufigsten von Webdiensten verwendeten Codierungen sind das XML-basierte SOAP 1.1, SOAP 1.2 und der Message Transmission Optimization Mechanism (MTOM).  

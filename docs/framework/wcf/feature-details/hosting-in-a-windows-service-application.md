@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492231"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hosten in einer Windows-Dienstanwendung
 Windows-Dienste (früher Windows NT-Dienste) bieten ein Prozessmodell, das besonders für Anwendungen geeignet ist, die sich in ausführbaren Dateien mit langer Laufzeit befinden müssen und keinerlei Benutzeroberfläche anzeigen. Die Prozesslebensdauer einer Windows-Dienstanwendung wird vom Dienststeuerungs-Manager (Service Control Manager, SCM) verwaltet, mit dem Sie Windows-Dienstanwendungen starten, beenden und anhalten können. Sie können ein Windows-Dienstprozess für den automatischen start beim Starten des Computers somit eine angemessene Hostingumgebung für "immer aktiviert" Anwendungen konfigurieren. Weitere Informationen zu Windows-dienstanwendungen, finden Sie unter [Windows-Dienstanwendungen](http://go.microsoft.com/fwlink/?LinkId=89450).  

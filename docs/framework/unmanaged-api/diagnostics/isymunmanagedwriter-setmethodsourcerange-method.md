@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d057201c7d7bec3070027bb1d9de62735d583cf6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429001"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange-Methode
 Gibt "true" Anfang und Ende einer Methode innerhalb einer Quelldatei. Verwenden Sie diese Methode, um das Ausmaß der eine Methode unabhängig von der Sequenzpunkte anzugeben, die innerhalb der Methode vorhanden sein.  

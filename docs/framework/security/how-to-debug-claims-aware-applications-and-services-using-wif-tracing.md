@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408631"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Vorgehensweise: Debuggen von Ansprüche-unterstützenden Anwendungen und Diensten mittels WIF-Ablaufverfolgung
 ## <a name="applies-to"></a>Gilt für  

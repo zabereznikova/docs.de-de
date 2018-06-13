@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494198"
 ---
 # <a name="interoperability-with-pox-applications"></a>Interoperabilität mit POX-Anwendungen
 "Plain Old XML" (POX)-Anwendungen kommunizieren, indem Sie den Austausch von unformatierte HTTP-Nachrichten, die nur XML-Anwendungsdaten enthalten, die nicht in einen SOAP-Umschlag eingeschlossen ist. Windows Communication Foundation (WCF) bieten, Dienste und Clients, die POX-Nachrichten verwenden. Für den Dienst kann WCF verwendet werden, implementieren Sie Dienste, die von Endpunkten für Clients, z. B. Webbrowser verfügbar zu machen und Skriptsprachen, mit die POX-Nachrichten senden und empfangen. Auf dem Client kann WCF-Programmiermodell verwendet werden, um Clients zu implementieren, die mit POX-basierten Diensten kommunizieren.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495053"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Nachrichtensicherheit mit einem anonymen Client
 Das folgende Szenario zeigt einen Client und Dienst von Windows Communication Foundation (WCF)-nachrichtensicherheit gesichert werden. Ein Entwurfsziel ist die Verwendung von Nachrichtensicherheit statt Transportsicherheit, sodass zu einem späteren Zeitpunkt ein komplexeres anspruchsbasierter Modell unterstützt werden kann. Weitere Informationen zur Verwendung von rich-Ansprüche für die Autorisierung finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  

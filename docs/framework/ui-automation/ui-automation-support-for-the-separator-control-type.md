@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410363"
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Separator-Steuerelementtyp
 > [!NOTE]

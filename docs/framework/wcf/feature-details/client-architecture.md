@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494090"
 ---
 # <a name="client-architecture"></a>Clientarchitektur
 Anwendungen verwenden Windows Communication Foundation (WCF)-Clientobjekte, um Dienstvorgänge aufzurufen. In diesem Thema werden WCF-Clientobjekten, WCF-Clientkanäle und ihre Beziehungen zu der zugrunde liegenden Kanalarchitektur erläutert. Eine grundlegende Übersicht über WCF-Clientobjekten finden Sie unter [Überblick über WCF-Client](../../../../docs/framework/wcf/wcf-client-overview.md). Weitere Informationen über die Kanalschicht finden Sie unter [Erweitern der Kanalschicht](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  

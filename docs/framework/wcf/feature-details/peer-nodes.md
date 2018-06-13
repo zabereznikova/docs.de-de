@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491530"
 ---
 # <a name="peer-nodes"></a>Peerknoten
 Ein PeerNode ist ein einzelner Endpunkt in einem Peerkanalnetz. Eine Anwendung kann auch über mehrere Peerknoten verfügen, die an anderen Netzen teilnehmen. So kann z.&#160;B. eine Peer-to-Peer-Chatanwendung Teil von zwei separaten Netzen sein: Ein Netz zum Chatten mit Schulfreunden und ein anderes zum Chatten mit Arbeitskollegen.  

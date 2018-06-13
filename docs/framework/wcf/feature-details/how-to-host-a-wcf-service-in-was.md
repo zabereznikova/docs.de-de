@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492667"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Gewusst wie: Hosten eines WCF-Diensts in WAS
 Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows Process Activation Service (auch bekannt als WAS) gehosteten Windows Communication Foundation (WCF)-Dienst. WAS ist der neue Prozessaktivierungsdienst, der eine Generalisierung der Funktionen der Internetinformationsdienste (IIS) darstellt, die mit Nicht-HTTP-Transportprotokollen arbeiten. WCF verwendet die Schnittstelle des listeneradapters, um aktivierungsanforderungen weiterzugeben, die über die nicht-HTTP-Protokolle, die von WCF, z. B. TCP, named Pipes und Message Queuing unterstützt empfangen werden.  

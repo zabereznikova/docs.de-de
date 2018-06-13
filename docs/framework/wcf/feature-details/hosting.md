@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489397"
 ---
 # <a name="hosting"></a>Hosting
 In den Themen dieses Abschnitts wird das Diensthosting beschrieben. Ein Dienst kann von Internet Information Services (IIS), Windows Process Activation Service (WAS), Windows Server AppFabric, einem Windows-Dienst oder von einer verwalteten Anwendung gehostet werden: Diese Option wird häufig als bezeichnet *Self-hosting*.  

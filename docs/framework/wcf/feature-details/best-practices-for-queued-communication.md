@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495582"
 ---
 # <a name="best-practices-for-queued-communication"></a>Bewährte Methoden für die Kommunikation unter Verwendung von Warteschlangen
 Dieses Thema enthält empfohlene Vorgehensweisen für die warteschlangenkommunikation in Windows Communication Foundation (WCF). In den folgenden Abschnitten werden bewährte Methoden aus der Perspektive eines Szenarios vorgestellt.  

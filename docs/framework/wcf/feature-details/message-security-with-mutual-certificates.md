@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494175"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Nachrichtensicherheit durch gegenseitige Zertifikate
 Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst und die Clients im nachrichtensicherheitsmodus gesichert. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert.  

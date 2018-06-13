@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495534"
 ---
 # <a name="choosing-a-transport"></a>Wählen eines Transports
 In diesem Artikel werden die Kriterien zum Wählen einer der drei Transportarten, die in der Windows Communication Foundation (WCF) enthalten sind: HTTP, TCP und named Pipes. WCF enthält auch einen Message queuing (auch als MSMQ bezeichnet) zu transportieren, aber dieses Dokument deckt nicht die Message queuing.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494534"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Ändern der Cachefreigabeebenen für Send-Aktivitäten
 Mit der Erweiterung <xref:System.ServiceModel.Activities.SendMessageChannelCache> können Sie die Cachefreigabeebenen, die Einstellungen des Kanalfactorycaches und die Einstellungen des Kanalcaches für Workflows anpassen, die Nachrichten mit <xref:System.ServiceModel.Activities.Send>-Messagingaktivitäten an Dienstendpunkte senden. Diese Workflows sind in der Regel Clientworkflows, könnten jedoch auch Workflowdienste sein, die in einem <xref:System.ServiceModel.WorkflowServiceHost> gehostet werden. Der Kanalfactorycache enthält zwischengespeicherte <xref:System.ServiceModel.ChannelFactory%601>-Objekte. Der Kanalcache enthält zwischengespeicherte Kanäle.  

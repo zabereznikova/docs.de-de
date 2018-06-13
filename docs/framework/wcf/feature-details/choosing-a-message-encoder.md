@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494861"
 ---
 # <a name="choosing-a-message-encoder"></a>Auswählen eines Nachrichtenencoders
 In diesem Artikel werden die Kriterien für die Auswahl zwischen der Nachrichtenencoder, die in der Windows Communication Foundation (WCF) enthalten sind: Text, Binär und Message Transmission Optimization Mechanism (MTOM).  

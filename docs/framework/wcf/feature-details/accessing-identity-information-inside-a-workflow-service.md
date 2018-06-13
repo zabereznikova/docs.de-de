@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491974"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Zugriff auf Identitätsinformationen in einem Workflowdienst
 Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Sie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback>-Schnittstelle in einer benutzerdefinierten Ausführungseigenschaft implementieren. In der <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>-Methode können Sie auf den <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> zugreifen, um auf Identitätsinformationen zuzugreifen. In diesem Thema erhalten Sie schrittweise Anweisungen zum Implementieren dieser Ausführungseigenschaft sowie einer benutzerdefinierten Aktivität, die diese Eigenschaft zur Laufzeit für die <xref:System.ServiceModel.Activities.Receive>-Aktivität sichtbar macht.  Die benutzerdefinierte Aktivität implementiert dasselbe Verhalten wie eine <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` Aktivität, wenn jedoch eine <xref:System.ServiceModel.Activities.Receive> darin platziert wird, die <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aufgerufen, und die Identitätsinformationen werden abgerufen.  

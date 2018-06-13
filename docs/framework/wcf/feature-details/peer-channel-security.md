@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494503"
 ---
 # <a name="peer-channel-security"></a>Peerkanalsicherheit
 Der Peerkanal ermöglicht die Verwendung einer Vielzahl von verteilten Anwendungstypen, die von Mehrparteienmessaging abhängen. Beispielsweise gehört hierzu eine Inhaltsverteilung auf Internetebene, wobei eine vertrauenswürdige Quelle Inhalte (wie beispielsweise Medien- oder Softwareupdates) verteilt, eine Gruppe von Freunden Musik oder Fotos austauscht oder ein Team von Kollegen zusammen ein Dokument bearbeitet. Jedes dieser Szenarien erfordert ein individuelles Sicherheitsmodell. Das Peerkanal-Sicherheitsmodell ist auf die Adressierung dieser Szenarien ausgelegt und bietet ein umfangreiches Sicherheitsmodell für die entsprechenden Anforderungen an unterschiedliche Identitäten, Authentifizierung und Autorisierungsmodelle.  

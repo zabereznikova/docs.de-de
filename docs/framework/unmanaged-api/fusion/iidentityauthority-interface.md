@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 692ac4ef4fe8ea64c6a63dc2f02cc04244a842c3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432525"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority-Schnittstelle
 Verwaltet die Identitätsschlüssel für Codeobjekte.  

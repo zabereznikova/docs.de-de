@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491282"
 ---
 # <a name="correlation"></a>Korrelation
 Wenn Workflowdienstanwendungen mit anderen Diensten kommunizieren, ist es wichtig, dass ausgetauschte Nachrichten an die richtige Workflowinstanz weitergeleitet werden. Die Korrelation stellt den Mechanismus dafür bereit. Die Themen in diesem Abschnitt bieten eine Übersicht über die Korrelation und ihre Verwendung in unterschiedlichen Workflowdienstszenarien.  

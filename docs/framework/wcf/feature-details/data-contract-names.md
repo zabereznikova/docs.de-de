@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494269"
 ---
 # <a name="data-contract-names"></a>Datenvertragsnamen
 Zuweilen verfügen Client und Dienst nicht über dieselben Typen. Sie können jedoch Daten austauschen, wenn die Datenverträge auf beiden Seiten gleich sind. [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) basiert auf Datenvertrag und Datenmembernamen und aus diesem Grund wird ein Mechanismus bereitgestellt, um die Typen und Member dieser Namen zuordnen. In diesem Thema erläutert die Regeln für die Benennung von Datenverträgen sowie das Standardverhalten der Windows Communication Foundation (WCF)-Infrastruktur, beim Erstellen von Namen.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579235"
 ---
 # <a name="custom-numeric-format-strings"></a>Benutzerdefinierte Zahlenformatzeichenfolgen
 Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern bestehende benutzerdefinierte numerische Formatzeichenfolge erstellen, um anzugeben, wie numerische Daten formatiert werden sollen. Eine benutzerdefinierte numerische Formatzeichenfolge wird wie jede Formatzeichenfolge definiert, bei der es sich nicht um eine [standardmäßige numerische Formatzeichenfolge](../../../docs/standard/base-types/standard-numeric-format-strings.md)handelt.  

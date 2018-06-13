@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490284"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Suchankündigungen und Ankündigungsclient
 Die WCF-Suchfunktion kann Komponenten, um ihre Verfügbarkeit anzukündigen. Bei entsprechender Konfiguration sendet ein Dienst Hello- und Bye-Ankündigungen. Clients oder andere Komponenten können eine Überwachung auf diese Ankündigungsnachrichten durchführen und dann reagieren. Dies stellt für Clients eine alternative Methode zum Erkennen von Diensten dar. Die Ankündigungsfunktion hat mehrere Verwendungen. Falls die Dienste ein Netzwerk z. B. häufig "betreten" und wieder verlassen, sind Ankündigungen ggf. eine bessere Möglichkeit als das Suchen nach Diensten. Bei diesem Ansatz wird der Netzwerkverkehr reduziert, und der Client ist über das Vorhandensein bzw. das Verlassen des Diensts informiert, sobald er die Ankündigungen empfangen hat.  

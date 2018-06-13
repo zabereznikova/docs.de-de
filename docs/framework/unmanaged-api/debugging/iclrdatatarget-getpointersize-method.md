@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 749ec14af7bffee87afbe5c0705a6ddf68da5fd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406493"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize-Methode
 Ruft die Größe in Bytes des Zeigertyps, die der Zielprozess verwendet. Diese Methode wird von den Datenzugriffsdiensten der common Language Runtime aufgerufen.  

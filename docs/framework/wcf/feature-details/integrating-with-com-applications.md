@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491841"
 ---
 # <a name="integrating-with-com-applications"></a>Integrieren von COM-Anwendungen
 Windows Communication Foundation (WCF)-Dienste können direkt in den vorhandenen Code integriert werden, mithilfe des WCF-dienstmonikers. Der Dienstmoniker kann in vielen verschiedenen COM-basierten Entwicklungsumgebungen wie Office VBA, Visual Basic 6.0 oder Visual C++ 6.0 verwendet werden.  

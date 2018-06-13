@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492904"
 ---
 # <a name="federation-and-trust"></a>Verbund und Vertrauenswürdigkeit
 In diesem Thema werden verschiedene Aspekte im Zusammenhang mit verbundanwendungen, Vertrauensgrenzen und Konfiguration und Verwendung von ausgestellten Token in der Windows Communication Foundation (WCF) behandelt.  

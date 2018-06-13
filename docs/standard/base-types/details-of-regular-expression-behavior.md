@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579339"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Einzelheiten zum Verhalten regulärer Ausdrücke
 Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende Engine zum Abgleich regulärer Ausdrücke, die eine herkömmliche NFA-Engine (Nondeterministic Finite Automaton) beinhaltet, wie sie beispielsweise auch von Perl, Python, Emacs und Tcl verwendet wird. Dadurch unterscheidet es sich von schnelleren, aber vom Umfang her beschränkten DFA-Engines (Deterministic Finite Automaton), die reine reguläre Ausdrücke verwenden. Diese werden z.B. in awk, egrep oder lex verwendet. Außerdem unterscheidet es sich dadurch von standardisierten, aber langsameren POSIX-NFAs. Im folgenden Abschnitt werden die drei Typen von Engines für reguläre Ausdrücke beschrieben, und es wird erklärt, warum reguläre Ausdrücke in .NET Framework mit einer herkömmlichen NFA-Engine implementiert werden.  

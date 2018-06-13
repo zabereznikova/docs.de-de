@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490439"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst
 Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unterstützt eine erweiterbare anspruchsbasierte Autorisierung-Modell. Ansprüche werden aus Token extrahiert, wahlweise mit benutzerdefinierten Autorisierungsrichtlinien verarbeitet und dann in einem <xref:System.IdentityModel.Policy.AuthorizationContext> platziert. Die Ansprüche im <xref:System.IdentityModel.Policy.AuthorizationContext> werden von einem Autorisierungs-Manager geprüft und als Grundlage für Autorisierungsentscheidungen herangezogen.  

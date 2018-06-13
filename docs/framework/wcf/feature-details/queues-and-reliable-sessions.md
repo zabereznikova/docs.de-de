@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494669"
 ---
 # <a name="queues-and-reliable-sessions"></a>Warteschlangen und zuverlässige Sitzungen
 Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Foundation (WCF)-Funktionen, die zuverlässiges messaging implementieren. Die Themen in diesem Abschnitt erläutern die WCF-Funktionen für zuverlässigen messaging.  

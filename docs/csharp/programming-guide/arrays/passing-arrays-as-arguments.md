@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315515"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Übergeben von Arrays als Argumente (C#-Programmierhandbuch)
 Arrays können als Argumente an Methodenparameter übergeben werden. Da es sich bei Arrays um Verweistypen handelt, kann die Methode den Wert der Elemente ändern.  

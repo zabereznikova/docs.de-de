@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579625"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachenunabhängigkeit und sprachunabhängige Komponenten
 Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer der zahlreichen Sprachen entwickeln kann, die auf .NET Framework ausgerichtet sind, z. B. C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL und Windows PowerShell. Sie können auf die Typen und Member von Klassenbibliotheken, die für .NET Framework entwickelt wurden, zugreifen, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen zu müssen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET Framework-Apps sprachenunabhängig auf die Komponente zugegriffen werden.  

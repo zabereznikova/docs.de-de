@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489595"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Vorbereitungen für Windows Communication Foundation: Einfachere Integration in der Zukunft
 Dieses Thema enthält Anleitungen, um sicherzustellen, dass neue ASP.NET-Webdienste auch zusammen mit WCF-Anwendungen funktioniert, wenn Sie heute ASP.NET verwenden und mithilfe von WCF in der Zukunft erwarten.  

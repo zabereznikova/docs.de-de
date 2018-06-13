@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495631"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement
 Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestellte Bindungen, die konfiguriert werden können, aber bieten keine vollständige Flexibilität aus, wenn die Sicherheitsoptionen zu konfigurieren, die WCF unterstützt. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494708"
 ---
 # <a name="wcf-feature-details"></a>Details zur WCF-Funktion
 Windows Communication Foundation (WCF) lässt es sich um eine umfangreiche Kontrolle über die Messagingfunktionen einer Anwendung. Die Themen in diesem Abschnitt erläutern die verfügbaren Funktionen im Detail. Weitere Informationen zur grundlegenden-Programmierung finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  

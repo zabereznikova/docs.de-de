@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494295"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Interoperabilität mit ASP.NET-Webdiensten
 Interoperabilität zwischen [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webdienste und Windows Communication Foundation (WCF)-Webdienste erreichen, indem sichergestellt wird, dass mithilfe beider Technologien implementierte Dienste, die mit WS entsprechen-I Basic Profile 1.1-Spezifikation. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webdienste, die mit WS-I Basic Profile 1.1 werden mithilfe der vom System bereitgestellte Bindung WCF mit WCF-Clients interoperabel <xref:System.ServiceModel.BasicHttpBinding>.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494055"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Einblicke in den CustomPeerResolverService: Clientregistrierungen
 Jeder Knoten im Netz veröffentlicht seine Endpunktinformationen für den Resolverdienst durch die `Register`-Funktion. Der Resolverdienst speichert diese Informationen als Registrierungsdatensatz. Dieser Datensatz enthält einen eindeutigen Bezeichner (RegistrationID) sowie Endpunktinformationen (PeerNodeAddress) für den Knoten.  

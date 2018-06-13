@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490596"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist
 Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Sie einen suchproxy implementieren. In diesem Thema erstellen Sie einen WCF-Dienst, der ankündigungsnachrichten sendet (`Hello` und `Bye`) an den ermittlungsproxy wegen der er zum Registrieren und Aufheben der Registrierung selbst mit den suchproxy.  

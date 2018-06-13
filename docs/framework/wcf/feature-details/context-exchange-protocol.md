@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493191"
 ---
 # <a name="context-exchange-protocol"></a>Kontextaustauschprotokoll
 In diesem Abschnitt wird beschrieben, die in Windows Communication Foundation (WCF) Version .NET Framework Version 3.5 eingeführte kontextaustauschprotokoll. Mithilfe dieses Protokolls kann vom Clientkanal ein vom Dienst bereitgestellter Kontext akzeptiert und für alle nachfolgenden Anforderungen übernommen werden, die über dieselbe Clientkanalinstanz an den Dienst gesendet werden. Zur Implementierung des Kontextaustauschprotokolls kann einer der beiden folgenden Mechanismen verwendet werden, um den Kontext zwischen dem Server und dem Client zu propagieren: HTTP-Cookies oder ein SOAP-Header.  

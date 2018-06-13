@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489384"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>Vorgehensweise: Einheitliche Verweise auf X.509-Zertifikate
 Sie haben verschiedene Möglichkeiten, Zertifikate anzugeben: anhand des Hashwerts des Zertifikats, anhand des Ausstellers und der Seriennummer oder anhand der Schlüsselkennung des Antragstellers (Subject Key Identifier, SKI). Die Schlüsselkennung des Antragstellers gibt den öffentlichen Schlüssel des Zertifikatantagstellers eindeutig an. Sie wird häufig für digitale XML-Signaturen verwendet. Der SKI-Wert wird in der Regel Bestandteil des x. 509-Zertifikats als ein *x. 509-zertifikatserweiterung*. Windows Communication Foundation (WCF) verfügt über einen standardmäßigen *verweisstil* , den Aussteller und die Seriennummer verwendet, wenn die SKI-Erweiterung das Zertifikat nicht vorhanden ist. Enthält das Zertifikat die SKI-Erweiterung, verwendet der Standardverweis die Schlüsselkennung des Antragstellers, um auf das Zertifikat zu verweisen. Wenn zwischendurch über die Entwicklung einer Anwendung, wechseln Sie von Zertifikaten, die nicht die SKI-Erweiterung von Zertifikaten verwenden, die die SKI-Erweiterung verwenden, ändert sich auch der verweisstil in WCF generierten Nachrichten verwendet.  

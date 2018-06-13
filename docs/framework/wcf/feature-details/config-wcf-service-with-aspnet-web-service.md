@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490375"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Vorgehensweise: Konfigurieren eines WCF-Diensts für die Zusammenarbeit mit ASP.NET Webdienstclients
 So konfigurieren Sie einen Dienstendpunkt Windows Communication Foundation (WCF), um die Interoperabilität mit werden [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Webdienstclients ist, verwenden Sie die <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> -Typ als Bindungstyp für den Dienstendpunkt.  

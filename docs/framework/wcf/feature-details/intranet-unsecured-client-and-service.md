@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492247"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Intranet: Ungesicherter Client und Dienst
 Die folgende Abbildung zeigt einen einfachen Windows Communication Foundation (WCF)-Dienst entwickelt, um Informationen zu einem sicheren privaten Netzwerk zu einer WCF-Anwendung bereitzustellen. Sicherheit ist nicht erforderlich, da die Daten unwichtig, das Netzwerk als grundsätzlich sicher eingestuft wird, oder die Sicherheit wird durch eine Ebene unterhalb der WCF-Infrastruktur bereitgestellt.  

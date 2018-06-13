@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491800"
 ---
 # <a name="how-to-service-data-partitioning"></a>Vorgehensweise: Dienstdatenpartitionierung
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um Meldungen über mehrere Instanzen des gleichen Zieldiensts zu partitionieren. Die Partitionierung von Dienstdaten wird in der Regel verwendet, wenn Sie einen Dienst skalieren müssen, um eine bessere Dienstqualität bereitzustellen, oder wenn Sie Anforderungen verschiedener Kunden jeweils auf bestimmte Art und Weise behandeln müssen. Beispielsweise können Nachrichten von wichtigen Kunden oder "Gold"-Kunden mit einer höheren Priorität als Nachrichten von einem Standardkunden verarbeitet werden müssen.  

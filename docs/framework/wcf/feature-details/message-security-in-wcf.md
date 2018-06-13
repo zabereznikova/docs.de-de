@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493890"
 ---
 # <a name="message-security-in-wcf"></a>Nachrichtensicherheit in WCF
 Windows Communication Foundation (WCF) verfügt über zwei Hauptmodi zum Bereitstellen von Sicherheit (`Transport` und `Message`) und einen dritten Modus (`TransportWithMessageCredential`), die die beiden kombiniert. In diesem Thema werden die Nachrichtensicherheit und die Gründe für deren Verwendung erläutert.  

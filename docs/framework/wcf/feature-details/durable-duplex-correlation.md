@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491487"
 ---
 # <a name="durable-duplex-correlation"></a>Permanente Duplexkorrelation
 Die permanente Duplexkorrelation, die auch als Rückrufkorrelation bezeichnet wird, ist nützlich, wenn für einen Workflowdienst eine Anforderung besteht, einen Rückruf an den ursprünglichen Aufrufer zu senden. Im Gegensatz zu WCF-Duplex kann der Rückruf jederzeit in der Zukunft geschehen und ist nicht an den gleichen Kanal bzw. die Kanallebensdauer gebunden. Die einzige Anforderung besteht darin, dass der Aufrufer über einen aktiven Endpunkt verfügt, der die Rückrufnachricht überwacht. Auf diese Weise können zwei Workflowdienste eine lange Konversation führen. Dieses Thema bietet eine Übersicht über die permanente Duplexkorrelation.  

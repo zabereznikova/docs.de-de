@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506010"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>Beispiel zum UriTemplate-Tabellenverteiler
 Die <xref:System.UriTemplateTable>-Klasse stellt eine wörterbuchähnliche assoziative Tabellenstruktur zum Arbeiten mit einem Satz von <xref:System.UriTemplate>-Instanzen bereit. Dieses Beispiel demonstriert ein grundlegendes, mit `UriTemplateTable` erstelltes Verteilermodul, ein allgemeines Verwendungsszenario für die `UriTemplateTable`-Klasse.  

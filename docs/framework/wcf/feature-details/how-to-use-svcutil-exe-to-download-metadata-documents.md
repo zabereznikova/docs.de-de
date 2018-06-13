@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492397"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Gewusst wie: Verwenden von Svcutil.exe zum Herunterladen von Metadatendokumenten
 Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herunterzuladen und die Metadaten in lokalen Dateien zu speichern. Bei HTTP und HTTPS-URL-Schemas versucht Svcutil.exe zum Abrufen von Metadaten mit WS-MetadataExchange und [XML-Webdienstsuche](http://go.microsoft.com/fwlink/?LinkId=94950). Bei allen anderen URL-Schemas verwendet Svcutil.exe nur WS-MetadataExchange.  

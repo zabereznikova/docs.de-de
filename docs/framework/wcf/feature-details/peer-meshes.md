@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493336"
 ---
 # <a name="peer-meshes"></a>Peer-Meshs
 Ein *mesh* ist eine benannte Auflistung (ein verbundenes Diagramm) von Peerknoten, die untereinander kommunizieren können und durch eine eindeutige Mesh-ID gekennzeichnet sind, Jeder Knoten ist mit mehreren anderen Knoten verbunden. In einer gut organisierten Netzstruktur besteht zwischen zwei Knoten immer eine Verbindung, und zwischen den am weitesten außen liegenden Knoten liegen immer nur wenige Hops. Darüber hinaus bleibt die Verbindung des Netzes auch dann bestehen, wenn einige Knoten oder Verbindungen ausfallen. Aktive Knoten im Mesh veröffentlichen ihre Endpunktinformationen mit einer entsprechenden Mesh-ID, sodass andere Peers sie finden können.  

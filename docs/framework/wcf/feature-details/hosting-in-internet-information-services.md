@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494113"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hosten in Internetinformationsdiensten
 Eine Möglichkeit zum Hosten von Windows Communication Foundation (WCF)-Dienste ist innerhalb einer Anwendung (Internet Information Services, IIS). Dieses Hostmodell ist dem Modell ähnlich, das von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]- und ASP.NET-Webdiensten (ASMX) verwendet wird.  
