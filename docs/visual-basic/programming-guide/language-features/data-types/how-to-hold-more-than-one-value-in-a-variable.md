@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646671"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Gewusst wie: Ablegen mehrerer Werte in einer Variablen (Visual Basic)
 Eine Variable enthält mehr als einen Wert aus, wenn Sie vom deklariert eine *zusammengesetzten Datentyp*.  

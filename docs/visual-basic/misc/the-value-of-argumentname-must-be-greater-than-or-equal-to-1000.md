@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640429"
 ---
 # <a name="the-value-of-ltargumentnamegt-must-be-greater-than-or-equal-to-1000"></a>Der Wert der &lt;Argumentname&gt; muss größer als oder gleich 1000 sein
 Der Wert der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> -Eigenschaft muss größer oder gleich 1000 sein.  
