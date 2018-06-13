@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325759"
 ---
 # <a name="linq-to-adonet-portal-page"></a><span data-ttu-id="f0c71-102">LINQ to ADO.NET (Portalseite)</span><span class="sxs-lookup"><span data-stu-id="f0c71-102">LINQ to ADO.NET (Portal Page)</span></span>
 <span data-ttu-id="f0c71-103">Mit [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] können Sie in [!INCLUDE[vstecado](~/includes/vstecado-md.md)] mithilfe des Programmiermodells [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] jedes aufzählbare Objekt abfragen.</span><span class="sxs-lookup"><span data-stu-id="f0c71-103">[!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] enables you to query over any enumerable object in [!INCLUDE[vstecado](~/includes/vstecado-md.md)] by using the [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] programming model.</span></span>  

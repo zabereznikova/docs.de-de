@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325369"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="e8ccf-102">Beispiel für die Ausgabe von Office Open-XML-Dokumentbausteinen (C#)</span><span class="sxs-lookup"><span data-stu-id="e8ccf-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
 <span data-ttu-id="e8ccf-103">In diesem Thema wird gezeigt, wie Sie ein Office Open XML-Dokument öffnen und auf Teile davon zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="e8ccf-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  

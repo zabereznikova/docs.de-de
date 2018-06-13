@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744368"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a><span data-ttu-id="f6633-102">Gewusst wie: Empfangen von Ausnahmebenachrichtigungen (erste Chance)</span><span class="sxs-lookup"><span data-stu-id="f6633-102">How to: Receive First-Chance Exception Notifications</span></span>
 <span data-ttu-id="f6633-103">Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.AppDomain>-Klasse erhalten Sie eine Benachrichtigung bezüglich einer ausgelösten Ausnahme, bevor die CLR mit der Suche nach Ausnahmehandlern beginnt.</span><span class="sxs-lookup"><span data-stu-id="f6633-103">The <xref:System.AppDomain.FirstChanceException> event of the <xref:System.AppDomain> class lets you receive a notification that an exception has been thrown, before the common language runtime has begun searching for exception handlers.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749633"
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a><span data-ttu-id="bcff1-102">&lt;add&gt; von &lt;transportConfigurationType&gt;</span><span class="sxs-lookup"><span data-stu-id="bcff1-102">&lt;add&gt; of &lt;transportConfigurationType&gt;</span></span>
 <span data-ttu-id="bcff1-103">Dieses Element ist ein Schlüssel-Wert-Paar, das den Typ eines bestimmten Transports identifiziert.</span><span class="sxs-lookup"><span data-stu-id="bcff1-103">This element is a key/value pair, which identifies the type of a particular transport.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754053"
 ---
 # <a name="ltparametergt"></a><span data-ttu-id="5ff74-102">&lt;parameter&gt;</span><span class="sxs-lookup"><span data-stu-id="5ff74-102">&lt;parameter&gt;</span></span>
 <span data-ttu-id="5ff74-103">Gibt den generischen Parameter an, wenn ein deklarierter Typ ein generischer Typ ist.</span><span class="sxs-lookup"><span data-stu-id="5ff74-103">Specifies the generic parameter when a declared type is a generic type.</span></span>  

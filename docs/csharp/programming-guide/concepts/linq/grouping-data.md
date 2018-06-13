@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327436"
 ---
 # <a name="grouping-data-c"></a><span data-ttu-id="fa831-102">Gruppieren von Daten (C#)</span><span class="sxs-lookup"><span data-stu-id="fa831-102">Grouping Data (C#)</span></span>
 <span data-ttu-id="fa831-103">Als „Gruppieren“ wird das Anordnen von Daten in Gruppen bezeichnet, sodass die Elemente in jeder Gruppe über ein gemeinsames Attribut verfügen.</span><span class="sxs-lookup"><span data-stu-id="fa831-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  

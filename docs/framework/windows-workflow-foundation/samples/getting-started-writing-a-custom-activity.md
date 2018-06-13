@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513311"
 ---
 # <a name="getting-started-writing-a-custom-activity"></a><span data-ttu-id="d4760-102">Erste Schritte zum Schreiben einer benutzerdefinierten Aktivität</span><span class="sxs-lookup"><span data-stu-id="d4760-102">Getting Started Writing a Custom Activity</span></span>
 <span data-ttu-id="d4760-103">In diesem Beispiel wird veranschaulicht, wie eine einfache benutzerdefinierte Aktivität in XAML definiert wird.</span><span class="sxs-lookup"><span data-stu-id="d4760-103">This sample demonstrates how to define a simple custom activity in XAML.</span></span> <span data-ttu-id="d4760-104">Der Aktivität wird der Name `Rhyme` zugewiesen, und ihre Logik ist eine Sequenz von drei <xref:System.Activities.Statements.WriteLine>-Aktivitäten.</span><span class="sxs-lookup"><span data-stu-id="d4760-104">The activity is given the name `Rhyme`, and its logic is a sequence of three <xref:System.Activities.Statements.WriteLine> activities.</span></span>  

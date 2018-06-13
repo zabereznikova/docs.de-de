@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753728"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a><span data-ttu-id="83cde-102">Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache</span><span class="sxs-lookup"><span data-stu-id="83cde-102">How to: Remove an Assembly from the Global Assembly Cache</span></span>
 <span data-ttu-id="83cde-103">Es gibt zwei Möglichkeiten, eine Assembly aus dem globalen Assemblycache (GAC) zu entfernen:</span><span class="sxs-lookup"><span data-stu-id="83cde-103">There are two ways to remove an assembly from the global assembly cache (GAC):</span></span>  

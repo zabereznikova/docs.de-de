@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513249"
 ---
 # <a name="composite"></a><span data-ttu-id="de057-102">Zusammengesetzt</span><span class="sxs-lookup"><span data-stu-id="de057-102">Composite</span></span>
 <span data-ttu-id="de057-103">Dieser Abschnitt enthält benutzerdefinierte aktivitätsbeispiele, die von anderen Aktivitäten in Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="de057-103">This section contains custom activity samples composed of other activities in Windows Workflow Foundation (WF).</span></span>  

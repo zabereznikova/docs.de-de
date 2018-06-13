@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752558"
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a><span data-ttu-id="d0c73-102">&lt;transport&gt; von &lt;netTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="d0c73-102">&lt;transport&gt; of &lt;netTcpBinding&gt;</span></span>
 <span data-ttu-id="d0c73-103">Definiert den Typ der Sicherheit auf Nachrichtenebene Anforderungen für einen Endpunkt konfiguriert, mit der [ \<NetTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="d0c73-103">Defines the type of message-level security requirements for an endpoint configured with the [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span>  

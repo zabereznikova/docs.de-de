@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508102"
 ---
 # <a name="working-with-nats-and-firewalls"></a><span data-ttu-id="4eb9d-102">Arbeiten mit NATs und Firewalls</span><span class="sxs-lookup"><span data-stu-id="4eb9d-102">Working with NATs and Firewalls</span></span>
 <span data-ttu-id="4eb9d-103">Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig nicht über eine direkte und offene Verbindung.</span><span class="sxs-lookup"><span data-stu-id="4eb9d-103">The client and server of a network connection frequently do not have a direct and open path for communication.</span></span> <span data-ttu-id="4eb9d-104">Die Datenpakete werden gefiltert, weitergeleitet, analysiert und verändert – sowohl vom Absender und vom Empfänger als auch von den Zwischenstationen im Netzwerk.</span><span class="sxs-lookup"><span data-stu-id="4eb9d-104">Packets are filtered, routed, analyzed, and transformed both on the endpoint machines and by intermediate machines on the network.</span></span> <span data-ttu-id="4eb9d-105">Netzwerkadressübersetzungen (NAT) und Firewalls sind gängige Beispiele für zwischengeschaltete Anwendungen, die an der Kommunikation im Netzwerk beteiligt sein können.</span><span class="sxs-lookup"><span data-stu-id="4eb9d-105">Network address translations (NATs) and firewalls are common examples of intermediate applications that can participate in network communication.</span></span>  

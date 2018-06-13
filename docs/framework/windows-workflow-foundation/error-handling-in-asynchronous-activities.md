@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511981"
 ---
 # <a name="error-handling-in-asynchronous-activities"></a><span data-ttu-id="6b31f-102">Fehlerbehandlung in asynchronen Aktivitäten</span><span class="sxs-lookup"><span data-stu-id="6b31f-102">Error handling in asynchronous activities</span></span>
 <span data-ttu-id="6b31f-103">Bei der Bereitstellung der Fehlerbehandlung in <xref:System.Activities.AsyncCodeActivity> wird der Fehler durch das Rückrufsystem der Aktivität zurückverfolgt.</span><span class="sxs-lookup"><span data-stu-id="6b31f-103">Providing error handling in an <xref:System.Activities.AsyncCodeActivity> involves routing the error through the activity’s callback system.</span></span> <span data-ttu-id="6b31f-104">In diesem Thema wird mithilfe des Beispiels zur SendMail-Aktivität beschrieben, wie ein Fehler, der in einem asynchronen Vorgang auftritt, an den Host zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="6b31f-104">This topic describes how to get an error that is thrown in an asynchronous operation back to the host, using the SendMail activity sample.</span></span>  

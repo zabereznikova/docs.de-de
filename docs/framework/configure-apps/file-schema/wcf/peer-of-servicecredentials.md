@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747680"
 ---
 # <a name="ltpeergt-of-ltservicecredentialsgt"></a><span data-ttu-id="39da2-102">&lt;peer&gt; von &lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="39da2-102">&lt;peer&gt; of &lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="39da2-103">Gibt die aktuellen Anmeldeinformationen für einen Peerknoten an.</span><span class="sxs-lookup"><span data-stu-id="39da2-103">Specifies the current credentials for a peer node.</span></span>  

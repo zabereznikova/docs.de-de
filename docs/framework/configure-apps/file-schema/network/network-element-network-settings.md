@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744667"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a><span data-ttu-id="48ee7-102">&lt;Netzwerk&gt; -Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="48ee7-102">&lt;network&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="48ee7-103">Konfiguriert die Netzwerkoptionen für einen externen (SMTP, Simple Mail Transport Protocol)-Server.</span><span class="sxs-lookup"><span data-stu-id="48ee7-103">Configures the network options for an external Simple Mail Transport Protocol (SMTP) server.</span></span>  
