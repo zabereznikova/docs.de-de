@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338285"
 ---
 # <a name="generic-classes-c-programming-guide"></a><span data-ttu-id="25bee-102">Generische Klassen (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="25bee-102">Generic Classes (C# Programming Guide)</span></span>
 <span data-ttu-id="25bee-103">Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmten Datentyp sind.</span><span class="sxs-lookup"><span data-stu-id="25bee-103">Generic classes encapsulate operations that are not specific to a particular data type.</span></span> <span data-ttu-id="25bee-104">Generische Klassen werden am häufigsten bei Auflistungen verwendet, z.B. bei verknüpften Listen, Hashtabellen, Stapeln, Warteschlangen, Strukturen usw.</span><span class="sxs-lookup"><span data-stu-id="25bee-104">The most common use for generic classes is with collections like linked lists, hash tables, stacks, queues, trees, and so on.</span></span> <span data-ttu-id="25bee-105">Vorgänge wie das Hinzufügen oder Entfernen von Elementen aus der Auflistung werden nahezu auf die gleiche Art und Weise ausgeführt, unabhängig vom Typ der gespeicherten Daten.</span><span class="sxs-lookup"><span data-stu-id="25bee-105">Operations such as adding and removing items from the collection are performed in basically the same way regardless of the type of data being stored.</span></span>  

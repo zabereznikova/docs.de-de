@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745889"
 ---
 # <a name="ltdisablefusionupdatesfromadmanagergt-element"></a><span data-ttu-id="1043a-102">&lt;DisableFusionUpdatesFromADManager&gt; Element</span><span class="sxs-lookup"><span data-stu-id="1043a-102">&lt;disableFusionUpdatesFromADManager&gt; Element</span></span>
 <span data-ttu-id="1043a-103">Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem Laufzeithost das Außerkraftsetzen von Konfigurationseinstellungen für eine Anwendungsdomäne zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="1043a-103">Specifies whether the default behavior, which is to allow the runtime host to override configuration settings for an application domain, is disabled.</span></span>  

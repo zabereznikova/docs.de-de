@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336920"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a><span data-ttu-id="656a1-102">Verwenden von auf NULL festlegbaren Typen (C# Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="656a1-102">Using Nullable Types (C# Programming Guide)</span></span>
 <span data-ttu-id="656a1-103">Auf NULL festlegbare Typen können alle Werte eines zugrundeliegenden Typs und einen zusätzlichen [NULL](../../../csharp/language-reference/keywords/null.md)-Wert darstellen.</span><span class="sxs-lookup"><span data-stu-id="656a1-103">Nullable types can represent all the values of an underlying type, and an additional [null](../../../csharp/language-reference/keywords/null.md) value.</span></span> <span data-ttu-id="656a1-104">Auf NULL festlegbare Typen können auf zwei verschiedene Arten deklariert werden:</span><span class="sxs-lookup"><span data-stu-id="656a1-104">Nullable types are declared in one of two ways:</span></span>  

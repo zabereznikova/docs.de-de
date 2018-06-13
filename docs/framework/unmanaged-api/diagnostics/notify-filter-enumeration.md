@@ -1,14 +1,6 @@
 ---
 title: NOTIFY_FILTER-Enumeration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - NOTIFY_FILTER
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ef72cb965bec8f424f5df35d4f66715fa11a5e46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 98c3e1ed3da209cbded5d76d938d2420fce606be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431015"
 ---
-# <a name="notifyfilter-enumeration"></a><span data-ttu-id="eb6c0-102">NOTIFY_FILTER-Enumeration</span><span class="sxs-lookup"><span data-stu-id="eb6c0-102">NOTIFY_FILTER Enumeration</span></span>
-<span data-ttu-id="eb6c0-103">Identifiziert die Rückrufe für Debuggerfunktionen.</span><span class="sxs-lookup"><span data-stu-id="eb6c0-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="eb6c0-104">Weitere Informationen finden Sie unter der [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="eb6c0-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
+# <a name="notifyfilter-enumeration"></a><span data-ttu-id="0686e-102">NOTIFY_FILTER-Enumeration</span><span class="sxs-lookup"><span data-stu-id="0686e-102">NOTIFY_FILTER Enumeration</span></span>
+<span data-ttu-id="0686e-103">Identifiziert die Rückrufe für Debuggerfunktionen.</span><span class="sxs-lookup"><span data-stu-id="0686e-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="0686e-104">Weitere Informationen finden Sie unter der [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="0686e-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb6c0-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="eb6c0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0686e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="0686e-105">Syntax</span></span>  
   
 ```  
 enum tagNOTIFY_FILTER  
@@ -52,20 +41,20 @@ enum tagNOTIFY_FILTER
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="eb6c0-106">Member</span><span class="sxs-lookup"><span data-stu-id="eb6c0-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0686e-106">Member</span><span class="sxs-lookup"><span data-stu-id="0686e-106">Members</span></span>  
   
-|<span data-ttu-id="eb6c0-107">Member</span><span class="sxs-lookup"><span data-stu-id="eb6c0-107">Member</span></span>|<span data-ttu-id="eb6c0-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="eb6c0-108">Description</span></span>|  
+|<span data-ttu-id="0686e-107">Member</span><span class="sxs-lookup"><span data-stu-id="0686e-107">Member</span></span>|<span data-ttu-id="0686e-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0686e-108">Description</span></span>|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|<span data-ttu-id="eb6c0-109">Gibt an, dass die [INotifySink2:: OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) Methode aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="eb6c0-109">Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|<span data-ttu-id="eb6c0-110">Gibt an, dass die [INotifySink2:: OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) Methode aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="eb6c0-110">Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|<span data-ttu-id="eb6c0-111">Gibt an, dass die [INotifySink2:: OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) Methode aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="eb6c0-111">Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|<span data-ttu-id="eb6c0-112">Gibt an, dass die [INotifySink2:: OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) Methode aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="eb6c0-112">Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ALLSYNC`|<span data-ttu-id="eb6c0-113">Gibt an, dass alle von der [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) Methoden aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="eb6c0-113">Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ALL`|<span data-ttu-id="eb6c0-114">Aktiviert alle vorhandene und zukünftige Benachrichtigungen an.</span><span class="sxs-lookup"><span data-stu-id="eb6c0-114">Activates all existing and future notifications.</span></span>|  
-|`NOTIFY_FILTER_NONE`|<span data-ttu-id="eb6c0-115">Gibt an, dass keine Benachrichtigungsmethoden aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="eb6c0-115">Indicates that no notification methods should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|<span data-ttu-id="0686e-109">Gibt an, dass die [INotifySink2:: OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) Methode aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="0686e-109">Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|<span data-ttu-id="0686e-110">Gibt an, dass die [INotifySink2:: OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) Methode aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="0686e-110">Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|<span data-ttu-id="0686e-111">Gibt an, dass die [INotifySink2:: OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) Methode aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="0686e-111">Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|<span data-ttu-id="0686e-112">Gibt an, dass die [INotifySink2:: OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) Methode aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="0686e-112">Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ALLSYNC`|<span data-ttu-id="0686e-113">Gibt an, dass alle von der [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) Methoden aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="0686e-113">Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ALL`|<span data-ttu-id="0686e-114">Aktiviert alle vorhandene und zukünftige Benachrichtigungen an.</span><span class="sxs-lookup"><span data-stu-id="0686e-114">Activates all existing and future notifications.</span></span>|  
+|`NOTIFY_FILTER_NONE`|<span data-ttu-id="0686e-115">Gibt an, dass keine Benachrichtigungsmethoden aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="0686e-115">Indicates that no notification methods should be invoked.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="eb6c0-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="eb6c0-116">Requirements</span></span>  
- <span data-ttu-id="eb6c0-117">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="eb6c0-117">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0686e-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0686e-116">Requirements</span></span>  
+ <span data-ttu-id="0686e-117">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="0686e-117">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb6c0-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eb6c0-118">See Also</span></span>  
- [<span data-ttu-id="eb6c0-119">Diagnosesymbolspeicher-Enumerationen</span><span class="sxs-lookup"><span data-stu-id="eb6c0-119">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="0686e-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0686e-118">See Also</span></span>  
+ [<span data-ttu-id="0686e-119">Diagnosesymbolspeicher-Enumerationen</span><span class="sxs-lookup"><span data-stu-id="0686e-119">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

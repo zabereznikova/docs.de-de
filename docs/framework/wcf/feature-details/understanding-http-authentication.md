@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500141"
 ---
 # <a name="understanding-http-authentication"></a><span data-ttu-id="40262-102">Grundlagen der HTTP-Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="40262-102">Understanding HTTP Authentication</span></span>
 <span data-ttu-id="40262-103">Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt ist, auf eine Ressource zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="40262-103">Authentication is the process of identifying whether a client is eligible to access a resource.</span></span> <span data-ttu-id="40262-104">Das HTTP-Protokoll unterstützt die Authentifizierung zum Aushandeln des Zugriffs auf eine sichere Ressource.</span><span class="sxs-lookup"><span data-stu-id="40262-104">The HTTP protocol supports authentication as a means of negotiating access to a secure resource.</span></span>  

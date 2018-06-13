@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742571"
 ---
 # <a name="ltidngt-element-uri-settings"></a><span data-ttu-id="5d089-102">&lt;IDN&gt; Element (Uri-Einstellungen)</span><span class="sxs-lookup"><span data-stu-id="5d089-102">&lt;idn&gt; Element (Uri Settings)</span></span>
 <span data-ttu-id="5d089-103">Gibt an, ob Internationalized Domain Name (IDN) Analyse an den Domänennamen angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="5d089-103">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name.</span></span>  

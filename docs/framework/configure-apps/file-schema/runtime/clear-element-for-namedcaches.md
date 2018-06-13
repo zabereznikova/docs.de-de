@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745512"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a><span data-ttu-id="3879e-102">&lt;Deaktivieren Sie&gt; -Element für &lt;NamedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="3879e-102">&lt;clear&gt; Element for &lt;namedCaches&gt;</span></span>
 <span data-ttu-id="3879e-103">Löscht alle `namedCache` Einträge in der `namedCaches` Auflistung für einen Arbeitsspeichercache.</span><span class="sxs-lookup"><span data-stu-id="3879e-103">Clears all `namedCache` entries in the `namedCaches` collection for a memory cache.</span></span>  
