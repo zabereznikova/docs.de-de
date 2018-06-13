@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362425"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Gewusst wie: Angeben, welche Member auf Parallelitätskonflikte getestet werden
 Wenden Sie eine der drei Enums auf die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> Eigenschaft auf einen <xref:System.Data.Linq.Mapping.ColumnAttribute> Attribut, um anzugeben, welche Member in Update enthalten sind updateprüfungen zur Erkennung von Konflikten durch vollständige Parallelität.  

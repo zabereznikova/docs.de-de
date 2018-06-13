@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506606"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Handbuch für die Interoperabilität von Webdienstprotokollen
 Windows Communication Foundation (WCF) wird eine Anzahl von Webdienstprotokollen implementiert. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. Dieses Thema enthält eine Liste von Webdienstprotokollen, die von die WCF implementiert. In den weiteren Themen dieses Abschnitts finden Sie ausführlichere Informationen zur Implementierung der einzelnen unterstützten Protokolle.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509109"
 ---
 # <a name="stand-alone-json-serialization"></a>Eigenständige JSON-Serialisierung.
 JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendung von JavaScript-Code entworfen wurde, der auf Webseiten innerhalb des Browsers ausgeführt wird. Es ist das Standarddatenformat, die von ASP.NET AJAX-Diensten in Windows Communication Foundation (WCF) erstellt.  

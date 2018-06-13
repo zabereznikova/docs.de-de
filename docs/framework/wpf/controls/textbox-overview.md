@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557770"
 ---
 # <a name="textbox-overview"></a>Übersicht über TextBox
 Die <xref:System.Windows.Controls.TextBox> -Klasse ermöglicht es Ihnen, anzeigen oder Bearbeiten von nicht formatiertem Text. Eine häufige Verwendung einer <xref:System.Windows.Controls.TextBox> Bearbeiten von nicht formatiertem Text in einem Formular ist. Z. B. ein Formular in der der Benutzername, Telefonnummer, usw. verwenden <xref:System.Windows.Controls.TextBox> Steuerelemente für die Texteingabe. Dieses Thema enthält die <xref:System.Windows.Controls.TextBox> -Klasse und stellt Beispiele für die Verwendung in beiden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und c#.  

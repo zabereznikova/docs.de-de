@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556704"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-storyboards"></a>Gewusst wie: Animieren einer 3D-Drehung mit Storyboards
 Im folgende Beispiel wird gezeigt, wie ein 3D-Objekt gedreht wird, während es "durch animieren wackelt" die <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> und <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> Eigenschaften einer <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> Objekt. Dies <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> Objekt gibt an, die Drehungstransformation des 3D Objekts und die Desire Drehung Auswirkungen also die Animation seiner Eigenschaften erstellt. Innerhalb des Storyboards <xref:System.Windows.Media.Animation.DoubleAnimation> dient zum Animieren der <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> Eigenschaft beim <xref:System.Windows.Media.Animation.Vector3DAnimation> wird verwendet, um dem animiert werden soll die <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> Eigenschaft.  

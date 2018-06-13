@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86be3e7edb7149ed42dd053156de0f649f1480b4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423714"
 ---
 # <a name="debugging-unmanaged-api-reference"></a>Debuggen (Referenz zur nicht verwalteten API)
 Die Debug-API ermöglicht es dem Debugger, Code zu debuggen, der in der CLR-Umgebung (Common Language Runtime) ausgeführt wird. Der zu debuggende Code kann jede Art von Code sein, der von der CLR unterstützt wird.  

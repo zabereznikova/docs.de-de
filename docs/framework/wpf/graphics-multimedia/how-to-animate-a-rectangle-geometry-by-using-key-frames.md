@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559281"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Gewusst wie: Animieren einer Rechteckgeometrie mithilfe von Keyframes
 In diesem Beispiel wird gezeigt, wie zum Animieren der <xref:System.Windows.Media.RectangleGeometry.Rect%2A> Eigenschaft eine <xref:System.Windows.Media.RectangleGeometry> mithilfe von Keyframes.  

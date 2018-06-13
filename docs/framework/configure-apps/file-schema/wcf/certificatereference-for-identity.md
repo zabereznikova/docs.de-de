@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747641"
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;CertificateReference&gt; für &lt;Identität&gt;
 Legt die Einstellungen für die X.509-Zertifikatvalidierung fest. Eine sichere Windows Communication Foundation (WCF)-Client, der an einen Endpunkt mit dieser Identität eine Verbindung herstellt sicher, dass die vom Server bereitgestellten Ansprüche den Identitätsanspruch verwendet zum Erstellen dieser Identität enthalten.  

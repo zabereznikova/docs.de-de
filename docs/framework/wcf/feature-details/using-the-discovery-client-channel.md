@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499746"
 ---
 # <a name="using-the-discovery-client-channel"></a>Verwenden des Suchclientchannels
 Beim Schreiben einer WCF-Clientanwendung müssen Sie die Endpunktadresse des Diensts kennen, den Sie aufrufen. In vielen Situationen ist die Endpunktadresse eines Diensts nicht im Voraus bekannt, oder die Adresse des Diensts ändert sich im Laufe der Zeit. Mithilfe des Discovery-Clientchannels können Sie eine WCF-Clientanwendung schreiben und den aufzurufenden Dienst beschreiben. Der Client sendet dann automatisch eine Überprüfungsanforderung. Wenn ein Dienst antwortet, ruft der Discovery-Clientchannel die Endpunktadresse für den Dienst aus der Überprüfungsantwort ab und verwendet diese zum Aufrufen des Diensts.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272681"
 ---
 # <a name="modifiers-c-reference"></a>Modifizierer (C#-Referenz)
 Modifizierer werden zum Ändern von Typ- und Typmemberdeklarationen verwendet. In diesem Abschnitt werden die C#-Modifizierer beschrieben.  

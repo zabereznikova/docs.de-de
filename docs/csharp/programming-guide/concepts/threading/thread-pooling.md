@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334196"
 ---
 # <a name="thread-pooling-c"></a>Pooling von Threads (C#)
 Ein *Threadpool* ist eine Auflistung von Threads, die verwendet werden kann, um verschiedene Aufgaben im Hintergrund auszuführen. (Weitere Hintergrundinformationen finden Sie unter [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md).) Dies lässt den primären Thread frei, um andere Aufgaben asynchron auszuführen.  

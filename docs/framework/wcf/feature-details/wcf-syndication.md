@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499166"
 ---
 # <a name="wcf-syndication"></a>WCF Syndication
 Windows Communication Foundation (WCF) unterstützt das problemlose arbeiten mit Syndication-Feeds in Atom, RSS oder anderen benutzerdefinierten Formaten, dies Ihnen ermöglicht, lesen und erstellen sowie das Verfügbarmachen für einen Dienstendpunkt. In den Themen dieses Abschnitts wird dieses Programmiermodell für Syndication genau beschrieben.  

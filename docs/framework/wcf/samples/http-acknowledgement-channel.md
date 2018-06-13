@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502831"
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP-Bestätigungskanal
 Der HTTP-Bestätigungskanal ist ein Beispiel für einen geschichteten Kanal, der das unidirektionale Nachrichtenmuster ändert, sodass nicht automatisch beim Eingang eine Bestätigung gesendet wird, sondern ein Dienst eingehende Nachrichten bestätigen oder ablehnen kann. Der HTTP-Bestätigungskanal ermöglicht es auch, dass der Dienst die Bestätigung verzögern kann, bis auf Geschäftsebene garantiert werden kann, dass die Nachricht verarbeitet wird.  

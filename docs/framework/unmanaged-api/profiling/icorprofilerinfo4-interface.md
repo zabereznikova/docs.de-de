@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f452a3324365fb23e1affc11dbdb2ede15346010
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462441"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4-Schnittstelle
 Enthält Methoden, mit denen Codeprofiler mit der common Language Runtime (CLR), um die ereignisüberwachung zu steuern und Informationen zu kommunizieren. sein. Die `ICorProfilerInfo4` Schnittstelle ist eine Erweiterung der anderen `ICorProfilerInfo` Schnittstellen. Es bietet neue Methoden zur Unterstützung von Just-in-Time (JIT)-Neukompilierung hinzugefügt, der [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  

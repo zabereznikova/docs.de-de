@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496623"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Gewusst wie: Veröffentlichen von Metadaten für einen Dienst über den Code
 Dies ist eine von zwei Themen zur Vorgehensweise, die die Veröffentlichung von Metadaten für einen Windows Communication Foundation (WCF)-Dienst zu beschreiben. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe von Code dargestellt.  

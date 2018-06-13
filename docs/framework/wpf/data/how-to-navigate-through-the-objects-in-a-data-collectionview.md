@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557003"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Gewusst wie: Navigieren durch die Objekte in einer Datenauflistungsansicht
 Ansichten können die gleichen Datensammlung unterschiedlich, je nach sortieren, filtern oder gruppieren angezeigt werden. Ansichten auch Geben Sie einen aktuellen Datensatzzeiger Konzept und verschieben den Zeiger zu aktivieren. In diesem Beispiel wird gezeigt, wie das aktuelle Objekt abgerufen sowie zum Navigieren durch die Objekte in einer Datensammlung, die mithilfe der Funktionen der <xref:System.Windows.Data.CollectionView> Klasse.  

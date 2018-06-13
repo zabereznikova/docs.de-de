@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496934"
 ---
 # <a name="message-filters"></a>Nachrichtenfilter
 Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <xref:System.ServiceModel.Dispatcher.MessageFilter>-Implementierungen, die bestimmte Abschnitte einer Nachricht überprüfen, z. B. Adresse, Endpunktname oder eine bestimmte XPath-Anweisung. Wenn keiner der von [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] bereitgestellten Nachrichtenfilter Ihren Anforderungen entspricht, können Sie einen benutzerdefinierten Filter erstellen, indem Sie eine neue Implementierung der <xref:System.ServiceModel.Dispatcher.MessageFilter>-Basisklasse erstellen.  

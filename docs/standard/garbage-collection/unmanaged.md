@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575933"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Bereinigen von nicht verwalteten Ressourcen
 Für die meisten von der App erstellten Objekte führt der Garbage Collector von .NET die Speicherverwaltung aus. Wenn Sie jedoch Objekte erstellen, die nicht verwaltete Ressourcen enthalten, müssen Sie diese Ressourcen explizit freigeben, wenn diese nicht mehr von der App verwendet werden. Die geläufigsten Typen von nicht verwalteten Ressourcen sind Objekte, die Betriebssystemressourcen umschließen, wie etwa Dateien, Fenster, Netzwerkverbindungen oder Datenbankverbindungen. Der Garbage Collector kann die Lebensdauer eines Objekts nachverfolgen, das eine nicht verwaltete Ressource kapselt, er kann jedoch die nicht verwaltete Ressource nicht freigeben und bereinigen.  

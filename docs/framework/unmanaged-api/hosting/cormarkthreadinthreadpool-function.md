@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b395bc4d199738b309be74868243b61f924878c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431232"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool-Funktion
 Markiert den aktuell ausgeführten Thread aus dem Threadpool für die Ausführung von verwaltetem Code. Ab .NET Framework Version 2.0 besitzt diese Funktion keine Auswirkungen. Es ist nicht erforderlich und kann aus dem Code entfernt werden. Diese Funktion ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  

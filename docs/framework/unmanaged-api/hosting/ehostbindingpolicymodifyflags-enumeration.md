@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2fa8cc15f77ff59e3d3c570341d9bba70cf1e953
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431713"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>EHostBindingPolicyModifyFlags-Enumeration
 Ermöglicht es dem Host um den Typ der Umleitung anzugeben, die die common Language Runtime (CLR) beim Anwenden der Richtlinie Änderungen aus einer Assembly der Ereignisquelle an eine Zielassembly durchführen sollten.  

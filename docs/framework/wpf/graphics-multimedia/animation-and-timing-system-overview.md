@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557965"
 ---
 # <a name="animation-and-timing-system-overview"></a>Übersicht über das Animations- und Zeitsteuerungssystem
 In diesem Thema wird beschrieben, wie die Zeitsteuerungssystems die Animation verwendet <xref:System.Windows.Media.Animation.Timeline>, und <xref:System.Windows.Media.Animation.Clock> Klassen zum Animieren von Eigenschaften.  

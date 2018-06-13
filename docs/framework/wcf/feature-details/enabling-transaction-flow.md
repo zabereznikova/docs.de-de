@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497090"
 ---
 # <a name="enabling-transaction-flow"></a>Aktivieren des Transaktionsflusses
 Windows Communication Foundation (WCF) bietet mit sehr flexible Optionen zum Steuern des Transaktionsflusses. Die Transaktionsflusseinstellungen eines Dienstes können durch eine Kombination aus Attributen und Konfigurationen ausgedrückt werden.  

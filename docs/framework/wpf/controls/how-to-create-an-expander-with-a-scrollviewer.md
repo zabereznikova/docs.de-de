@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553061"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>Gewusst wie: Erstellen eines Expanders mit einem ScrollViewer
 In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.Expander> Steuerelement, das komplexen Inhalt, z. B. ein Bild und Text enthält. Dieses Beispiel enthält auch den Inhalt der <xref:System.Windows.Controls.Expander> in einer <xref:System.Windows.Controls.ScrollViewer> Steuerelement.  
