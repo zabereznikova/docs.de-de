@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265232"
 ---
 # <a name="on-c-reference"></a><span data-ttu-id="3dd0d-102">on (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="3dd0d-102">on (C# Reference)</span></span>
 <span data-ttu-id="3dd0d-103">Das kontextabhängiges Schlüsselwort `on` wird in der [join-Klausel](../../../csharp/language-reference/keywords/join-clause.md) eines Abfrageausdrucks, um die Verknüpfungsbedingung anzugeben.</span><span class="sxs-lookup"><span data-stu-id="3dd0d-103">The `on` contextual keyword is used in the [join clause](../../../csharp/language-reference/keywords/join-clause.md) of a query expression to specify the join condition.</span></span>  

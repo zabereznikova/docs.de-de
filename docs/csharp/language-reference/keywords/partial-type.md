@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266688"
 ---
 # <a name="partial-type-c-reference"></a><span data-ttu-id="ce9aa-102">partial (Typ) (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ce9aa-102">partial (Type) (C# Reference)</span></span>
 <span data-ttu-id="ce9aa-103">Partielle Typdefinitionen ermöglichen, dass die Definition einer Klasse, Struktur oder Schnittstelle in mehrere Dateien aufgeteilt wird.</span><span class="sxs-lookup"><span data-stu-id="ce9aa-103">Partial type definitions allow for the definition of a class, struct, or interface to be split into multiple files.</span></span>  
