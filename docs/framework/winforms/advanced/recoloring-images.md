@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525953"
 ---
 # <a name="recoloring-images"></a>Neueinfärben von Bildern
 Neufärben von versteht man Bildfarben anpassen. Einige Beispiele für Neufärben von sind eine Farbe in eine andere, Farbintensität relativ zu einer anderen Farbe Anpassung, Anpassen der Helligkeit oder Kontrast aller Farben und Konvertieren von Farben in Graustufen ändern.  

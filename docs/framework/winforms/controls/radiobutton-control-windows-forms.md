@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534966"
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton-Steuerelement (Windows Forms)
 Windows Forms `RadioButton` Steuerelemente enthalten eine Reihe von mindestens zwei sich gegenseitig ausschließende Optionen für dem Benutzer. Während Optionsfelder und Kontrollkästchen scheinbar ordnungsgemäß funktionieren auf ähnliche Weise, gibt es einen wichtigen Unterschied: Wenn ein Benutzer ein Optionsfeld auswählt, die anderen Optionsfelder in der gleichen Gruppe kann nicht ausgewählt werden ebenfalls.  

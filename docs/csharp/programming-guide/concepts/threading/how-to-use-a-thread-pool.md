@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340475"
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>Vorgehensweise: Verwenden von Threadpools (C#)
 *Threadpooling* ist eine Form des Multithreadings, bei dem Aufgaben einer Warteschlange hinzugefügt werden und automatisch gestartet werden, wenn Threads erstellt werden. Weitere Informationen finden Sie unter [Threadpooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md).  

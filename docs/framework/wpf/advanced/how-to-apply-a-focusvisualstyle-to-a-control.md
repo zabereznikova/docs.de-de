@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543731"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Gewusst wie: Anwenden eines FocusVisualStyle auf ein Steuerelement
 Dieses Beispiel zeigt, wie einen visuelle Stil des Fokus in Ressourcen erstellen und Anwenden der Formatvorlage auf ein Steuerelement mit der <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> Eigenschaft.  

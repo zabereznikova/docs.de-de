@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541660"
 ---
 # <a name="data-binding-and-windows-forms"></a>Datenbindung und Windows Forms
 In Windows Forms können Sie nicht nur an herkömmliche Datenquellen binden, sondern auch an beinahe alle Strukturen, die Daten enthalten. Sie können an ein Array von Werten binden, die Sie zur Laufzeit berechnen, aus einer Datei lesen oder aus den Werten anderer Steuerelemente ableiten.  

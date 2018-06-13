@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543373"
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a>Gewusst-wie-Themen zu Elementstruktur und Serialisierung
 Die Themen in diesem Abschnitt wird beschrieben, wie die WPF-Elementstruktur verwenden.  

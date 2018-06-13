@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557407"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Gewusst wie: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl
 In einem einfachen Master / Detail-Szenario haben Sie ein datengebundenes <xref:System.Windows.Controls.ItemsControl> wie z. B. eine <xref:System.Windows.Controls.ListBox>. Basierend auf der Auswahl des Benutzers, zeigen Sie weitere Informationen zum ausgewählten Element. In diesem Beispiel wird gezeigt, wie dieses Szenario implementiert wird.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356510"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Gewusst wie: Hinzufügen, Ändern und Löschen von Entitäten (WCF Data Services)
 Mit der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliotheken, Sie können erstellen, aktualisieren und Löschen von Entitätsdaten in einem Datendienst anhand der entsprechende Aktionen für Objekte in der <xref:System.Data.Services.Client.DataServiceContext>. Weitere Informationen finden Sie unter [Aktualisieren des Datendiensts](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

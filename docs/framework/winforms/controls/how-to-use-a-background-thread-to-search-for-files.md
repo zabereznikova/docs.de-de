@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540302"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Gewusst wie: Verwenden eines Hintergrundthreads zur Dateisuche
 Die <xref:System.ComponentModel.BackgroundWorker> Komponente ersetzt und funktionell erweitert, um die <xref:System.Threading> Namespace, aber die <xref:System.Threading> Namespace wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht. Weitere Informationen finden Sie unter [Übersicht über die BackgroundWorker-Komponente](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  

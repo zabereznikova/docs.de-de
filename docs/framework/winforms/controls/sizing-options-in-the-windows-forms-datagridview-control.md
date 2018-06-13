@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541752"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms
 <xref:System.Windows.Forms.DataGridView> Zeilen, Spalten und Header können aus zahlreichen Gründen ihre Größe ändern. Die folgende Tabelle zeigt diese vorkommen.  

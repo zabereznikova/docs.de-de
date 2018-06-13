@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541020"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Virtueller Modus im DataGridView-Steuerelement in Windows Forms
 Mit dem virtuellen Modus können Sie verwalten die Interaktion zwischen der <xref:System.Windows.Forms.DataGridView> -Steuerelement und einen benutzerdefinierten Datencache. Zum Implementieren des virtuellen Modus legen die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true` und eine oder mehrere der in diesem Thema beschriebenen Ereignisse zu behandeln. Behandeln Sie in der Regel mindestens die `CellValueNeeded` Ereignis, das Werte im Datencache Steuerelement suchen kann.  

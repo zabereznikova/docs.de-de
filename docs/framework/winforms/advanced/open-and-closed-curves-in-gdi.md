@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527147"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>Offene und geschlossene Kurven in GDI+
 Die folgende Abbildung zeigt zwei Kurven: eine offene und eine geschlossen.  

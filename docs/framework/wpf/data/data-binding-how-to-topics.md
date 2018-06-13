@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557692"
 ---
 # <a name="data-binding-how-to-topics"></a>Gewusst-wie-Themen zur Datenbindung
 Die Themen in diesem Abschnitt beschrieben, wie die Datenbindung zu verwenden, um Elemente aus einer Vielzahl von Datenquellen in Form von common Language Runtime (CLR)-Objekte und XML-Daten zu binden.  

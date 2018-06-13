@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339318"
 ---
 # <a name="getting-started-with-linq-in-c"></a>Erste Schritte mit LINQ in C#
 Dieser Abschnitt enthält grundlegende Informationen, die Ihnen helfen werden den Rest der LINQ-Dokumentation und die Beispiele zu verstehen.  

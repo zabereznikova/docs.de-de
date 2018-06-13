@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362027"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Vorgehensweise: Binden von Daten mit einer Projektdatenquelle (WCF Data Services)
 Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in einer [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientanwendung basieren. Wenn Sie einen Verweis auf einen Datendienst hinzufügen, indem Sie mit der **Hinzufügen eines Dienstverweises** im Dialogfeld eine Projektdatenquelle wird zusammen mit den generierten clientdatenklassen erstellt. Eine Datenquelle wird für jede Entitätenmenge erstellt, die der Datendienst verfügbar macht. Sie können Formulare, die Daten des Diensts anzuzeigen, ziehen diese Datenquellenelemente aus erstellen die **Datenquellen** Fenster in den Designer. Diese Elemente werden zu Steuerelementen, die an die Datenquelle gebunden sind. Während der Ausführung dieser Datenquelle gebunden ist, mit einer Instanz von der <xref:System.Data.Services.Client.DataServiceCollection%601> -Klasse, die mit Objekten gefüllt ist, die von einer Abfrage an den Datendienst zurückgegeben werden. Weitere Informationen finden Sie unter [Binden von Daten an Steuerelemente](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

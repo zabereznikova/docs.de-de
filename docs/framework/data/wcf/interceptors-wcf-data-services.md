@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363799"
 ---
 # <a name="interceptors-wcf-data-services"></a>Interceptors (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht einer Anwendung zum Abfangen von Anforderungsnachrichten, damit Sie einen Vorgang benutzerdefinierten Logik hinzufügen können. Sie können diese benutzerdefinierten Logik zum Überprüfen der Daten in eingehenden Nachrichten verwenden. Sie können damit außerdem den Bereich einer Abfrageanforderung weiter einschränken, z. B. um eine benutzerdefinierte Autorisierungsrichtlinie für jede Anforderung einzufügen.  

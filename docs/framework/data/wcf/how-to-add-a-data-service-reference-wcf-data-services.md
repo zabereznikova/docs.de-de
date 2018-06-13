@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356230"
 ---
 # <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>Gewusst wie: Hinzufügen eines Datendienstverweises (WCF Data Services)
 Sie können die **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio einen Verweis hinzufügen [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Dies erleichtert Ihnen den Zugriff auf einen Datendienst in einer Clientanwendung, den Sie in Visual Studio entwickeln. Wenn Sie diese Prozedur ausführen, werden Datenklassen auf Grundlage von aus dem Datendienst abgerufenen Metadaten generiert. Weitere Informationen finden Sie unter [Generieren der Datendienst-Clientbibliothek](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).  
