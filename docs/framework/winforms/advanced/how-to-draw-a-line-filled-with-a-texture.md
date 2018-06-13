@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522187"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>Gewusst wie: Zeichnen einer mit einer Textur ausgefüllten Linie
 Statt eine Linie mit einer Volltonfarbe, können Sie eine Zeile mit einer Textur zeichnen. Zum Zeichnen von Linien und Kurven mit einer Textur erstellen Sie eine <xref:System.Drawing.TextureBrush> Objekts, und übergeben, die <xref:System.Drawing.TextureBrush> -Objekt an eine <xref:System.Drawing.Pen.%23ctor%2A> Konstruktor. Wenn der Stift eine Linie oder Kurve zeichnet, überdeckt die Strichbreite des Stifts bestimmte Pixel gekachelt, und die Bitmap der Texturpinsel zugeordneten wird verwendet, um die Ebene (unsichtbar) Kachel.  

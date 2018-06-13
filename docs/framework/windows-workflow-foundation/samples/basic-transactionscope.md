@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516801"
 ---
 # <a name="basic-transactionscope"></a>Grundlegender TransactionScope
 Dieses Beispiel veranschaulicht die Schachtelung von <xref:System.Activities.Statements.TransactionScope>-Instanzen anhand von vier Szenarios. Im ersten Szenario wird die Aktivität eines Drittanbieters geschachtelt, deren Konstruktionsmethode dem Autor nicht bekannt ist. Im zweiten und dritten Szenario wird die Einhaltung von Timeouts veranschaulicht, und im letzten Szenario wird die <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A>-Einstellung gezeigt.  

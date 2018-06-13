@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520889"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Schriftarten mit dem gleichen Schriftart, aber unterschiedliche Stile gruppiert in Schriftartfamilien. Die Schriftart Arial Familie enthält beispielsweise die folgenden Schriftarten:  

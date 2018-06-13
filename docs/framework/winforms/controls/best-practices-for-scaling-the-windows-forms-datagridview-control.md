@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529807"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement wurde entwickelt, um maximale Skalierbarkeit bereitzustellen. Wenn Sie große Mengen von Daten anzeigen möchten, sollten Sie die in diesem Thema, um große Mengen an Arbeitsspeicher fest, und beeinträchtigt die Reaktionsfähigkeit der Benutzeroberfläche (UI) beschriebenen Richtlinien folgen. In diesem Thema wird Folgendes erläutert:  

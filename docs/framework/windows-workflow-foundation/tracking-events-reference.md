@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520213"
 ---
 # <a name="tracking-events-reference"></a>Referenz zu Nachverfolgungsereignissen
 Während der Ausführung löst ein Workflow in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] während der verschiedenen Stadien des Lebenszyklus Überwachungsereignisse aus. Der Host kann diese Ereignisse abonnieren und den aktuellen Status des Workflows in den verschiedenen Stadien des Lebenszyklus nachverfolgen. Die ausgelösten Überwachungsereignisse werden in diesem Abschnitt erläutert.  

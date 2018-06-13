@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490759"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts
 Windows Communication Foundation (WCF) verwendet einen Windows-Dienst, der den Net.TCP-Portfreigabedienst aufgerufen, um zu vereinfachen, die gemeinsame Nutzung von TCP-Ports für mehrere Prozesse. Dieser Dienst wird im Rahmen des WCF installiert, aber der Dienst ist nicht standardmäßig aktiviert, als Sicherheitsmaßnahme und daher muss manuell aktiviert werden vor der ersten Verwendung. In diesem Thema wird beschrieben, wie Sie den NET.TCP-Portfreigabedienst mit dem Microsoft Management Console (MMC)-Snap-In konfigurieren können.  

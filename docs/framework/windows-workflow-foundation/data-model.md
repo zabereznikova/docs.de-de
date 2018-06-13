@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512040"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Windows Workflow Foundation-Datenmodell
 Das Windows Workflow Foundation-Datenmodell besteht aus drei Einzelkonzepten: Variablen, Argumenten und Ausdrücken. Variablen stellen den Speicher von Daten dar, während Argumente den Datenstrom in und aus einer Aktivität darstellen. Argumente werden gebunden (Zuweisen eines Werts), indem Ausdrücke verwendet werden, die auf Variablen verweisen können.  

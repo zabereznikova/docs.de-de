@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519937"
 ---
 # <a name="compensation"></a>Kompensierung
 Kompensierung in Windows Workflow Foundation (WF) ist der Mechanismus, mit dem zuvor abgeschlossene Arbeit kann rückgängig gemacht oder kompensiert (gemäß der von der Anwendung definierten Logik) Wenn nachfolgend ein Fehler auftritt. In diesem Abschnitt wird beschrieben, wie die Kompensation in Workflows verwendet wird.  

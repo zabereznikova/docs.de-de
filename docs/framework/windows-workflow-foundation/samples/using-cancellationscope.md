@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517465"
 ---
 # <a name="using-cancellationscope"></a>Verwenden von CancellationScope
 Mit diesem Beispiel wird veranschaulicht, wie die <xref:System.Activities.Statements.CancellationScope>-Aktivität verwendet wird, um die Arbeit in einer Anwendung abzubrechen.  

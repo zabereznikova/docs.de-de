@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742509"
 ---
 # <a name="multifile-assemblies"></a>Mehrfachdateiassemblys
 Sie können Mehrfachdateiassemblys mit dem Befehlszeilencompiler oder mit [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] in Visual C++ erstellen. Eine Datei in der Assembly muss das Assemblymanifest enthalten. Eine Assembly, die eine Anwendung startet, muss außerdem einen Einstiegspunkt enthalten, wie z.B. die Methoden „Main“ oder „WinMain“.  

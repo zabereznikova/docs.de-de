@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526529"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Gewusst wie: Bereitstellen von Hilfe in einer Windows-Anwendung
 Können Sie von der <xref:System.Windows.Forms.HelpProvider> Komponente Hilfethemen in einer Hilfedatei bestimmten Steuerelementen in Windows Forms zuzuordnen. Die Hilfedatei kann entweder im Format HTML oder HTMLHelp 1.x oder höher vorliegen.  

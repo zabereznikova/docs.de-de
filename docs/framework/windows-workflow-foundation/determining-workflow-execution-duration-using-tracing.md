@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515084"
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a>Bestimmen der Workflowausführungsdauer mithilfe der Ablaufverfolgung
 In diesem Thema wird veranschaulicht, wie mit der Workflowüberwachung der Zeitraum bestimmt werden kann, den ein erfolgreich abgeschlossener und selbst gehosteter Workflow zur Ausführung benötigt.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520226"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Verwenden der Interop-Aktivität in einem .NET Framework 4-Workflow
 Mit [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] oder [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] erstellte Aktivitäten können in einem [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Workflow mithilfe der <xref:System.Activities.Statements.Interop>-Aktivität verwendet werden. Dieses Thema enthält eine Übersicht über die Verwendung der <xref:System.Activities.Statements.Interop>-Aktivität.  
