@@ -18,6 +18,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235881"
 ---
 # <a name="class-statement-visual-basic"></a><span data-ttu-id="9305a-102">Class-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9305a-102">Class Statement (Visual Basic)</span></span>
 <span data-ttu-id="9305a-103">Der Name einer Klasse deklariert, und führt die Definitionen der Variablen, Eigenschaften, Ereignisse und Prozeduren, die die Klasse umfasst.</span><span class="sxs-lookup"><span data-stu-id="9305a-103">Declares the name of a class and introduces the definition of the variables, properties, events, and procedures that the class comprises.</span></span>  

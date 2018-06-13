@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335821"
 ---
 # <a name="converting-data-types-c"></a><span data-ttu-id="dd715-102">Konvertieren von Datentypen (C#)</span><span class="sxs-lookup"><span data-stu-id="dd715-102">Converting Data Types (C#)</span></span>
 <span data-ttu-id="dd715-103">Konvertierungsmethoden ändern den Typ von Eingabeobjekten.</span><span class="sxs-lookup"><span data-stu-id="dd715-103">Conversion methods change the type of input objects.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215770"
 ---
 # <a name="-addmodule-c-compiler-options"></a><span data-ttu-id="560ac-102">-addmodule (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="560ac-102">-addmodule (C# Compiler Options)</span></span>
 <span data-ttu-id="560ac-103">Mit dieser Option wird ein Modul hinzugefügt, das mit dem Schalter „target:mocule“ in der aktuellen Kompilierung erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="560ac-103">This option adds a module that was created with the target:module switch to the current compilation.</span></span>  

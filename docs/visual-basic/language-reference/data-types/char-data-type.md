@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590808"
 ---
 # <a name="char-data-type-visual-basic"></a><span data-ttu-id="9a186-102">Char-Datentyp (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a186-102">Char Data Type (Visual Basic)</span></span>
 <span data-ttu-id="9a186-103">Enthält, die vorzeichenlose 16-Bit (2-Byte) Codepunkten im Bereich von 0 bis 65535.</span><span class="sxs-lookup"><span data-stu-id="9a186-103">Holds unsigned 16-bit (2-byte) code points ranging in value from 0 through 65535.</span></span> <span data-ttu-id="9a186-104">Jede *Codepunkt*, oder Zeichencode stellt ein einzelnes Unicode-Zeichen dar.</span><span class="sxs-lookup"><span data-stu-id="9a186-104">Each *code point*, or character code, represents a single Unicode character.</span></span>  

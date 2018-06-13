@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635644"
 ---
 # <a name="invalid-pattern-string"></a><span data-ttu-id="77c4a-102">Ungültige Musterzeichenfolge</span><span class="sxs-lookup"><span data-stu-id="77c4a-102">Invalid pattern string</span></span>
 <span data-ttu-id="77c4a-103">Die angegebene Musterzeichenfolge in der `Like` -Operation einer Suche ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="77c4a-103">The pattern string specified in the `Like` operation of a search is invalid.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334898"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a><span data-ttu-id="b6e7f-102">Funktionale Programmierung und Imperative Programmierung (C#)</span><span class="sxs-lookup"><span data-stu-id="b6e7f-102">Functional Programming vs. Imperative Programming (C#)</span></span>
 <span data-ttu-id="b6e7f-103">In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen Programmierung und der herkömmlichen imperativen (prozeduralen) Programmierung erläutert.</span><span class="sxs-lookup"><span data-stu-id="b6e7f-103">This topic compares and contrasts functional programming with more traditional imperative (procedural) programming.</span></span>  

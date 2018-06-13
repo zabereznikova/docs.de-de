@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587722"
 ---
 # <a name="managed-thread-states"></a><span data-ttu-id="b12c3-102">Zustände von verwalteten Threads</span><span class="sxs-lookup"><span data-stu-id="b12c3-102">Managed Thread States</span></span>
 <span data-ttu-id="b12c3-103">Die Eigenschaft <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> stellt eine Bitmaske zur Verfügung, die den aktuellen Zustand des Threads angibt.</span><span class="sxs-lookup"><span data-stu-id="b12c3-103">The property <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> provides a bit mask that indicates the thread's current state.</span></span> <span data-ttu-id="b12c3-104">Ein Thread ist immer in mindestens einem der möglichen Zustände in der <xref:System.Threading.ThreadState> -Enumeration und kann mehrere Zustände zugleich aufweisen.</span><span class="sxs-lookup"><span data-stu-id="b12c3-104">A thread is always in at least one of the possible states in the <xref:System.Threading.ThreadState> enumeration, and can be in multiple states at the same time.</span></span>  

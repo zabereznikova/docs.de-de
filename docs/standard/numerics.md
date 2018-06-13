@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588696"
 ---
 # <a name="numerics-in-the-net-framework"></a><span data-ttu-id="49c3c-102">Numerische Ausdrücke in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="49c3c-102">Numerics in the .NET Framework</span></span>
 <span data-ttu-id="49c3c-103">.NET Framework unterstützt die standardmäßigen numerischen Ganzzahlen und Gleitkomma-Primitive sowie <xref:System.Numerics.BigInteger>, ein ganzzahliger Typ ohne theoretische obere oder untere Grenze, <xref:System.Numerics.Complex>, einen komplexe Zahlen darstellenden Typ, und eine Reihe von SIMD-fähigen Vektortypen im <xref:System.Numerics>-Namespace.</span><span class="sxs-lookup"><span data-stu-id="49c3c-103">The .NET Framework supports the standard numeric integral and floating-point primitives, as well as <xref:System.Numerics.BigInteger>, an integral type with no theoretical upper or lower bound, <xref:System.Numerics.Complex>, a type that represents complex numbers, and a set of SIMD-enabled vector types in the <xref:System.Numerics> namespace.</span></span>  

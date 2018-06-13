@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333775"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a><span data-ttu-id="453c3-102">Vorgehensweise: Verketten von Achsenmethodenaufrufen (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="453c3-102">How to: Chain Axis Method Calls (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="453c3-103">Eine gebräuchliche Vorgehensweise im Code besteht darin, erst eine Achsenmethode und dann eine der Erweiterungsmethodenachsen aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="453c3-103">A common pattern that you will use in your code is to call an axis method, then call one of the extension method axes.</span></span>  

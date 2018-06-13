@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214555"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a><span data-ttu-id="81d02-103">Verwenden des Microsoft XML Serializer Generators auf .NET Core</span><span class="sxs-lookup"><span data-stu-id="81d02-103">Using Microsoft XML Serializer Generator on .NET Core</span></span>
 

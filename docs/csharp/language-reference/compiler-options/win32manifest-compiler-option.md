@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214957"
 ---
 # <a name="-win32manifest-c-compiler-options"></a><span data-ttu-id="0b8e9-102">-win32manifest (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="0b8e9-102">-win32manifest (C# Compiler Options)</span></span>
 <span data-ttu-id="0b8e9-103">Verwenden Sie die Option **-win32manifest**, um eine benutzerdefinierte Win32-Anwendungsmanifestdatei anzugeben, die in die übertragbare ausführbare Datei (portable executable, PE) eines Projekts eingebettet werden soll.</span><span class="sxs-lookup"><span data-stu-id="0b8e9-103">Use the **-win32manifest** option to specify a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592138"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a><span data-ttu-id="23b13-102">Exemplarische Vorgehensweise: Erstellen eines Datenflussblock-Typs</span><span class="sxs-lookup"><span data-stu-id="23b13-102">Walkthrough: Creating a Custom Dataflow Block Type</span></span>
 <span data-ttu-id="23b13-103">Obwohl die TPL Dataflow Library mehrere Datenflussblocktypen zur Verfügung stellt, die eine Vielzahl von Funktionen ermöglichen, können Sie auch benutzerdefinierte Blocktypen erstellen.</span><span class="sxs-lookup"><span data-stu-id="23b13-103">Although the TPL Dataflow Library provides several dataflow block types that enable a variety of functionality, you can also create custom block types.</span></span> <span data-ttu-id="23b13-104">Dieses Dokument beschreibt, wie Sie einen Datenflussblocktyp erstellen, der benutzerdefiniertes Verhalten implementiert.</span><span class="sxs-lookup"><span data-stu-id="23b13-104">This document describes how to create a dataflow block type that implements custom behavior.</span></span>  

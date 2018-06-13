@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598126"
 ---
 # <a name="argument-ltargumentnamegt-cannot-be-an-empty-string-or-nothing"></a><span data-ttu-id="0c99e-102">Argument &lt;Argumentname&gt; darf keine leere Zeichenfolge oder ' Nothing ' sein</span><span class="sxs-lookup"><span data-stu-id="0c99e-102">Argument &lt;argumentname&gt; cannot be an empty string or Nothing</span></span>
 <span data-ttu-id="0c99e-103">Das Argument erfordert einen anderen Wert als eine leere Zeichenfolge ("") oder `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="0c99e-103">The argument requires a value other than an empty string ("") or `Nothing`.</span></span> <span data-ttu-id="0c99e-104">Dies kann das Ergebnis eines falsch berechneten Werts sein.</span><span class="sxs-lookup"><span data-stu-id="0c99e-104">This may be a result of incorrectly calculating the value.</span></span>  

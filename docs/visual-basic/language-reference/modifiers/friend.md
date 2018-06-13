@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234588"
 ---
 # <a name="friend-visual-basic"></a><span data-ttu-id="57606-102">Friend (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57606-102">Friend (Visual Basic)</span></span>
 <span data-ttu-id="57606-103">Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur innerhalb der Assembly zugegriffen werden, die ihre Deklaration enthält.</span><span class="sxs-lookup"><span data-stu-id="57606-103">Specifies that one or more declared programming elements are accessible only from within the assembly that contains their declaration.</span></span>  

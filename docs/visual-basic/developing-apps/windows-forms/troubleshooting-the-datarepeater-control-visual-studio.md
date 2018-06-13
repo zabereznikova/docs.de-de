@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591897"
 ---
 # <a name="troubleshooting-the-datarepeater-control-visual-studio"></a><span data-ttu-id="da6b5-102">Problembehandlung beim DataRepeater-Steuerelement (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="da6b5-102">Troubleshooting the DataRepeater Control (Visual Studio)</span></span>
 <span data-ttu-id="da6b5-103">Dieses Thema listet häufige Probleme, die auftreten können, bei der Arbeit mit der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="da6b5-103">This topic lists common issues that may occur when you are working with the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span>  

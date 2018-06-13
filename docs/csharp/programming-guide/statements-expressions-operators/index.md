@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338795"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a><span data-ttu-id="967e6-102">Anweisungen, Ausdrücke und Operatoren (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="967e6-102">Statements, Expressions, and Operators (C# Programming Guide)</span></span>
 <span data-ttu-id="967e6-103">Der C#-Code, der eine Anwendung umfasst, besteht aus Anweisungen, die aus Schlüsselwörtern, Ausdrücken und Operatoren bestehen.</span><span class="sxs-lookup"><span data-stu-id="967e6-103">The C# code that comprises an application consists of statements made up of keywords, expressions and operators.</span></span> <span data-ttu-id="967e6-104">Dieser Abschnitt enthält Informationen bezüglich dieser wichtigen Elemente eines C#-Programms.</span><span class="sxs-lookup"><span data-stu-id="967e6-104">This section contains information regarding these fundamental elements of a C# program.</span></span>  

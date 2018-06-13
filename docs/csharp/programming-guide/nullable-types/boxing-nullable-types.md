@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334755"
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a><span data-ttu-id="ced3f-102">Boxing von Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="ced3f-102">Boxing Nullable Types (C# Programming Guide)</span></span>
 <span data-ttu-id="ced3f-103">Objekte, die auf Typen basieren, die NULL-Werte zulassen, werden nur dann umschlossen, wenn das Objekt ungleich NULL ist.</span><span class="sxs-lookup"><span data-stu-id="ced3f-103">Objects based on nullable types are only boxed if the object is non-null.</span></span> <span data-ttu-id="ced3f-104">Wenn <xref:System.Nullable%601.HasValue%2A> `false` ist, wird der Objektverweis `null` zugewiesen, anstatt dass er geboxt wird.</span><span class="sxs-lookup"><span data-stu-id="ced3f-104">If <xref:System.Nullable%601.HasValue%2A> is `false`, the object reference is assigned to `null` instead of boxing.</span></span> <span data-ttu-id="ced3f-105">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="ced3f-105">For example:</span></span>  

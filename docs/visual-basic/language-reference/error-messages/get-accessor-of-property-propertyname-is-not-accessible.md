@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590204"
 ---
 # <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a><span data-ttu-id="b31b6-102">&#39;Abrufen&#39; Accessor der Eigenschaft &#39; &lt;Propertyname&gt; &#39; kann nicht zugegriffen werden</span><span class="sxs-lookup"><span data-stu-id="b31b6-102">&#39;Get&#39; accessor of property &#39;&lt;propertyname&gt;&#39; is not accessible</span></span>
 <span data-ttu-id="b31b6-103">Eine Anweisung versucht, den Wert einer Eigenschaft abzurufen, wenn er keinen Zugriff auf der Eigenschaft hat `Get` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="b31b6-103">A statement attempts to retrieve the value of a property when it does not have access to the property's `Get` procedure.</span></span>  
