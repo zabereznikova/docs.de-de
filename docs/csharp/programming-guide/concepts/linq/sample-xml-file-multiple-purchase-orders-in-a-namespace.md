@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338434"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="634d2-102">Beispiel-XML-Datei: Mehrere Bestellungen in einem Namespace</span><span class="sxs-lookup"><span data-stu-id="634d2-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
 <span data-ttu-id="634d2-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="634d2-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="634d2-104">Diese Datei enthält mehrere Aufträge.</span><span class="sxs-lookup"><span data-stu-id="634d2-104">This file contains several purchase orders.</span></span> <span data-ttu-id="634d2-105">Der XML-Code befindet sich in einem Namespace.</span><span class="sxs-lookup"><span data-stu-id="634d2-105">The XML is in a namespace.</span></span>  

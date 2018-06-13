@@ -1,30 +1,19 @@
 ---
 title: Aufrufen eines REST-Diensts aus einem WCF-Dienst
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b056e2c4dad46429462b377994919b46109cb9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f520b1f77b9ca41b9fd2b8d51c1b935ab1e0a87
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488510"
 ---
-# <a name="calling-a-rest-style-service-from-a-wcf-service"></a><span data-ttu-id="ebfda-102">Aufrufen eines REST-Diensts aus einem WCF-Dienst</span><span class="sxs-lookup"><span data-stu-id="ebfda-102">Calling a REST-style service from a WCF service</span></span>
-<span data-ttu-id="ebfda-103">Beim Aufrufen eines REST-Diensts in einem regulären (SOAP-basierten) WCF-Dienst überschreibt der Vorgangskontext in der Dienstmethode (die Informationen über die eingehende Anforderung enthält) den Kontext, der von der ausgehenden Anforderung verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ebfda-103">When calling a REST-style service from a regular (SOAP-based) WCF service, the operation context on the service method (which contains information about the incoming request) overrides the context which should be used by the outgoing request.</span></span> <span data-ttu-id="ebfda-104">Dies bewirkt, dass HTTP GET-Anforderungen in HTTP POST-Anforderungen geändert werden.</span><span class="sxs-lookup"><span data-stu-id="ebfda-104">This causes HTTP GET requests to change to HTTP POST requests.</span></span> <span data-ttu-id="ebfda-105">Um zu erzwingen, dass der WCF-Dienst den richtigen Kontext zum Aufrufen des REST-Diensts verwendet, erstellen Sie einen neuen <xref:System.ServiceModel.OperationContextScope>, und rufen Sie den REST-Dienst aus dem Vorgangskontextbereich auf.</span><span class="sxs-lookup"><span data-stu-id="ebfda-105">To force the WCF service to use the right context for calling the REST-style service, create a new <xref:System.ServiceModel.OperationContextScope> and call the REST-style service from inside the operation context scope.</span></span> <span data-ttu-id="ebfda-106">In diesem Thema wird das Erstellen eines einfachen Beispiels beschrieben, das dieses Verfahren veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="ebfda-106">This topic will describe how to create a simple sample that illustrates this technique.</span></span>  
+# <a name="calling-a-rest-style-service-from-a-wcf-service"></a><span data-ttu-id="a9d31-102">Aufrufen eines REST-Diensts aus einem WCF-Dienst</span><span class="sxs-lookup"><span data-stu-id="a9d31-102">Calling a REST-style service from a WCF service</span></span>
+<span data-ttu-id="a9d31-103">Beim Aufrufen eines REST-Diensts in einem regulären (SOAP-basierten) WCF-Dienst überschreibt der Vorgangskontext in der Dienstmethode (die Informationen über die eingehende Anforderung enthält) den Kontext, der von der ausgehenden Anforderung verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="a9d31-103">When calling a REST-style service from a regular (SOAP-based) WCF service, the operation context on the service method (which contains information about the incoming request) overrides the context which should be used by the outgoing request.</span></span> <span data-ttu-id="a9d31-104">Dies bewirkt, dass HTTP GET-Anforderungen in HTTP POST-Anforderungen geändert werden.</span><span class="sxs-lookup"><span data-stu-id="a9d31-104">This causes HTTP GET requests to change to HTTP POST requests.</span></span> <span data-ttu-id="a9d31-105">Um zu erzwingen, dass der WCF-Dienst den richtigen Kontext zum Aufrufen des REST-Diensts verwendet, erstellen Sie einen neuen <xref:System.ServiceModel.OperationContextScope>, und rufen Sie den REST-Dienst aus dem Vorgangskontextbereich auf.</span><span class="sxs-lookup"><span data-stu-id="a9d31-105">To force the WCF service to use the right context for calling the REST-style service, create a new <xref:System.ServiceModel.OperationContextScope> and call the REST-style service from inside the operation context scope.</span></span> <span data-ttu-id="a9d31-106">In diesem Thema wird das Erstellen eines einfachen Beispiels beschrieben, das dieses Verfahren veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="a9d31-106">This topic will describe how to create a simple sample that illustrates this technique.</span></span>  
   
-## <a name="define-the-rest-style-service-contract"></a><span data-ttu-id="ebfda-107">Definieren des REST-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="ebfda-107">Define the REST-style service contract</span></span>  
- <span data-ttu-id="ebfda-108">Definieren Sie einen einfachen REST-Dienstvertrag:</span><span class="sxs-lookup"><span data-stu-id="ebfda-108">Define a simple  REST-style service contract:</span></span>  
+## <a name="define-the-rest-style-service-contract"></a><span data-ttu-id="a9d31-107">Definieren des REST-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="a9d31-107">Define the REST-style service contract</span></span>  
+ <span data-ttu-id="a9d31-108">Definieren Sie einen einfachen REST-Dienstvertrag:</span><span class="sxs-lookup"><span data-stu-id="a9d31-108">Define a simple  REST-style service contract:</span></span>  
   
 ```csharp
 [ServiceContract]
@@ -38,8 +27,8 @@ public interface IRestInterface
 }
 ```
   
-## <a name="implement-the-rest-style-service-contract"></a><span data-ttu-id="ebfda-109">Implementieren des REST-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="ebfda-109">Implement the REST-style service contract</span></span>  
- <span data-ttu-id="ebfda-110">Implementieren Sie den REST-Dienstvertrag:</span><span class="sxs-lookup"><span data-stu-id="ebfda-110">Implement the REST-style service contract:</span></span>  
+## <a name="implement-the-rest-style-service-contract"></a><span data-ttu-id="a9d31-109">Implementieren des REST-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="a9d31-109">Implement the REST-style service contract</span></span>  
+ <span data-ttu-id="a9d31-110">Implementieren Sie den REST-Dienstvertrag:</span><span class="sxs-lookup"><span data-stu-id="a9d31-110">Implement the REST-style service contract:</span></span>  
   
 ```csharp
 public class RestService : IRestInterface
@@ -56,8 +45,8 @@ public class RestService : IRestInterface
 }
 ```
   
-## <a name="define-the-wcf-service-contract"></a><span data-ttu-id="ebfda-111">Definieren des WCF-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="ebfda-111">Define the WCF service contract</span></span>  
- <span data-ttu-id="ebfda-112">Definieren Sie einen WCF-Dienstvertrag, der zum Aufrufen des REST-Diensts verwendet wird:</span><span class="sxs-lookup"><span data-stu-id="ebfda-112">Define a WCF service contract  that will be used to call the REST-style service:</span></span>  
+## <a name="define-the-wcf-service-contract"></a><span data-ttu-id="a9d31-111">Definieren des WCF-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="a9d31-111">Define the WCF service contract</span></span>  
+ <span data-ttu-id="a9d31-112">Definieren Sie einen WCF-Dienstvertrag, der zum Aufrufen des REST-Diensts verwendet wird:</span><span class="sxs-lookup"><span data-stu-id="a9d31-112">Define a WCF service contract  that will be used to call the REST-style service:</span></span>  
   
 ```csharp
 [ServiceContract]
@@ -71,8 +60,8 @@ public interface INormalInterface
 }
 ```  
   
-## <a name="implement-the-wcf-service-contract"></a><span data-ttu-id="ebfda-113">Implementieren des WCF-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="ebfda-113">Implement the WCF service contract</span></span>  
- <span data-ttu-id="ebfda-114">Implementieren Sie den WCF-Dienstvertrag:</span><span class="sxs-lookup"><span data-stu-id="ebfda-114">Implement the WCF service contract:</span></span>  
+## <a name="implement-the-wcf-service-contract"></a><span data-ttu-id="a9d31-113">Implementieren des WCF-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="a9d31-113">Implement the WCF service contract</span></span>  
+ <span data-ttu-id="a9d31-114">Implementieren Sie den WCF-Dienstvertrag:</span><span class="sxs-lookup"><span data-stu-id="a9d31-114">Implement the WCF service contract:</span></span>  
   
 ```csharp
 public class NormalService : INormalInterface  
@@ -90,8 +79,8 @@ public class NormalService : INormalInterface
 }  
 ```  
   
-## <a name="create-the-client-proxy-for-the-rest-style-service"></a><span data-ttu-id="ebfda-115">Erstellen des Clientproxys für den REST-Vertrag</span><span class="sxs-lookup"><span data-stu-id="ebfda-115">Create the client proxy for the REST-style service</span></span>  
- <span data-ttu-id="ebfda-116">Mit <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` Clientproxy zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="ebfda-116">Using <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` implement the client proxy.</span></span> <span data-ttu-id="ebfda-117">Für jede aufgerufene Methode wird ein neuer <xref:System.ServiceModel.OperationContextScope> erstellt und zum Aufrufen des Vorgangs verwendet.</span><span class="sxs-lookup"><span data-stu-id="ebfda-117">For each method called, a new <xref:System.ServiceModel.OperationContextScope> is created and used to call the operation.</span></span>  
+## <a name="create-the-client-proxy-for-the-rest-style-service"></a><span data-ttu-id="a9d31-115">Erstellen des Clientproxys für den REST-Vertrag</span><span class="sxs-lookup"><span data-stu-id="a9d31-115">Create the client proxy for the REST-style service</span></span>  
+ <span data-ttu-id="a9d31-116">Mit <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` Clientproxy zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="a9d31-116">Using <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` implement the client proxy.</span></span> <span data-ttu-id="a9d31-117">Für jede aufgerufene Methode wird ein neuer <xref:System.ServiceModel.OperationContextScope> erstellt und zum Aufrufen des Vorgangs verwendet.</span><span class="sxs-lookup"><span data-stu-id="a9d31-117">For each method called, a new <xref:System.ServiceModel.OperationContextScope> is created and used to call the operation.</span></span>  
   
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
@@ -120,8 +109,8 @@ public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
 }
 ```  
   
-## <a name="host-and-call-the-services"></a><span data-ttu-id="ebfda-118">Hosten und Aufrufen der Dienste</span><span class="sxs-lookup"><span data-stu-id="ebfda-118">Host and call the services</span></span>  
- <span data-ttu-id="ebfda-119">Hosten Sie beide Dienste in einer Konsolenanwendung, und fügen Sie die erforderlichen Endpunkte sowie das erforderliche Verhalten hinzu.</span><span class="sxs-lookup"><span data-stu-id="ebfda-119">Host both services in a console app, adding the needed endpoints and behaviors.</span></span> <span data-ttu-id="ebfda-120">Rufen Sie dann den regulären WCF-Dienst auf:</span><span class="sxs-lookup"><span data-stu-id="ebfda-120">And then call the regular WCF service:</span></span>  
+## <a name="host-and-call-the-services"></a><span data-ttu-id="a9d31-118">Hosten und Aufrufen der Dienste</span><span class="sxs-lookup"><span data-stu-id="a9d31-118">Host and call the services</span></span>  
+ <span data-ttu-id="a9d31-119">Hosten Sie beide Dienste in einer Konsolenanwendung, und fügen Sie die erforderlichen Endpunkte sowie das erforderliche Verhalten hinzu.</span><span class="sxs-lookup"><span data-stu-id="a9d31-119">Host both services in a console app, adding the needed endpoints and behaviors.</span></span> <span data-ttu-id="a9d31-120">Rufen Sie dann den regulären WCF-Dienst auf:</span><span class="sxs-lookup"><span data-stu-id="a9d31-120">And then call the regular WCF service:</span></span>  
   
 ```csharp
 public static void Main()
@@ -144,8 +133,8 @@ public static void Main()
 }
 ```  
   
-## <a name="complete-code-listing"></a><span data-ttu-id="ebfda-121">Vollständige Codeliste</span><span class="sxs-lookup"><span data-stu-id="ebfda-121">Complete code listing</span></span>  
- <span data-ttu-id="ebfda-122">Im Folgenden finden Sie eine vollständige Liste des in diesem Thema implementierten Beispiels:</span><span class="sxs-lookup"><span data-stu-id="ebfda-122">The following is a complete listing of the sample implemented in this topic:</span></span>  
+## <a name="complete-code-listing"></a><span data-ttu-id="a9d31-121">Vollständige Codeliste</span><span class="sxs-lookup"><span data-stu-id="a9d31-121">Complete code listing</span></span>  
+ <span data-ttu-id="a9d31-122">Im Folgenden finden Sie eine vollständige Liste des in diesem Thema implementierten Beispiels:</span><span class="sxs-lookup"><span data-stu-id="a9d31-122">The following is a complete listing of the sample implemented in this topic:</span></span>  
   
 ```csharp
 public class CallingRESTSample  
@@ -244,6 +233,6 @@ public class CallingRESTSample
 }
 ```
   
-## <a name="see-also"></a><span data-ttu-id="ebfda-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ebfda-123">See Also</span></span>  
- [<span data-ttu-id="ebfda-124">Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts</span><span class="sxs-lookup"><span data-stu-id="ebfda-124">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- [<span data-ttu-id="ebfda-125">Objektmodell für WCF-Web-HTTP-Programmierung</span><span class="sxs-lookup"><span data-stu-id="ebfda-125">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a><span data-ttu-id="a9d31-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a9d31-123">See Also</span></span>  
+ [<span data-ttu-id="a9d31-124">Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts</span><span class="sxs-lookup"><span data-stu-id="a9d31-124">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ [<span data-ttu-id="a9d31-125">Objektmodell für WCF-Web-HTTP-Programmierung</span><span class="sxs-lookup"><span data-stu-id="a9d31-125">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

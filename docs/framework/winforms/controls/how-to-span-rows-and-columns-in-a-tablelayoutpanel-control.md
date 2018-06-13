@@ -1,14 +1,6 @@
 ---
-title: "Gewusst wie: Überspannen von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement"
-ms.custom: 
+title: 'Gewusst wie: Überspannen von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor.TLP.SpanRowsColumns
 helpviewer_keywords:
@@ -18,35 +10,30 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 24b281e6e1ab56e2c7387435bf2429e7e107c4b8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a78286be8ef64212d945b3cb11a2963d5a1b2e79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535346"
 ---
-# <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a><span data-ttu-id="1042b-102">Gewusst wie: Überspannen von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="1042b-102">How to: Span Rows and Columns in a TableLayoutPanel Control</span></span>
-<span data-ttu-id="1042b-103">Steuerelemente in einem <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement können Sie benachbarte Zeilen und Spalten umfassen.</span><span class="sxs-lookup"><span data-stu-id="1042b-103">Controls in a <xref:System.Windows.Forms.TableLayoutPanel> control can span adjacent rows and columns.</span></span>  
+# <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a><span data-ttu-id="13ac6-102">Gewusst wie: Überspannen von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="13ac6-102">How to: Span Rows and Columns in a TableLayoutPanel Control</span></span>
+<span data-ttu-id="13ac6-103">Steuerelemente in einem <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement können Sie benachbarte Zeilen und Spalten umfassen.</span><span class="sxs-lookup"><span data-stu-id="13ac6-103">Controls in a <xref:System.Windows.Forms.TableLayoutPanel> control can span adjacent rows and columns.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1042b-104">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="1042b-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="1042b-105">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="1042b-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="1042b-106">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="1042b-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="13ac6-104">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="13ac6-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="13ac6-105">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="13ac6-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="13ac6-106">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="13ac6-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### <a name="to-span-columns-and-rows"></a><span data-ttu-id="1042b-107">Spalten und Zeilen erstrecken.</span><span class="sxs-lookup"><span data-stu-id="1042b-107">To span columns and rows</span></span>  
+### <a name="to-span-columns-and-rows"></a><span data-ttu-id="13ac6-107">Spalten und Zeilen erstrecken.</span><span class="sxs-lookup"><span data-stu-id="13ac6-107">To span columns and rows</span></span>  
   
-1.  <span data-ttu-id="1042b-108">Ziehen Sie eine <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.</span><span class="sxs-lookup"><span data-stu-id="1042b-108">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
+1.  <span data-ttu-id="13ac6-108">Ziehen Sie eine <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.</span><span class="sxs-lookup"><span data-stu-id="13ac6-108">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
   
-2.  <span data-ttu-id="1042b-109">Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** in der linken oberen Zelle von den <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="1042b-109">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the upper-left cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
+2.  <span data-ttu-id="13ac6-109">Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** in der linken oberen Zelle von den <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="13ac6-109">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the upper-left cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
-3.  <span data-ttu-id="1042b-110">Legen Sie die <xref:System.Windows.Forms.Button> des Steuerelements **ColumnSpan** Eigenschaft **2**.</span><span class="sxs-lookup"><span data-stu-id="1042b-110">Set the <xref:System.Windows.Forms.Button> control's **ColumnSpan** property to **2**.</span></span> <span data-ttu-id="1042b-111">Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelement umfasst der ersten und zweiten Spalte.</span><span class="sxs-lookup"><span data-stu-id="1042b-111">Note that the <xref:System.Windows.Forms.Button> control spans the first and second columns.</span></span>  
+3.  <span data-ttu-id="13ac6-110">Legen Sie die <xref:System.Windows.Forms.Button> des Steuerelements **ColumnSpan** Eigenschaft **2**.</span><span class="sxs-lookup"><span data-stu-id="13ac6-110">Set the <xref:System.Windows.Forms.Button> control's **ColumnSpan** property to **2**.</span></span> <span data-ttu-id="13ac6-111">Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelement umfasst der ersten und zweiten Spalte.</span><span class="sxs-lookup"><span data-stu-id="13ac6-111">Note that the <xref:System.Windows.Forms.Button> control spans the first and second columns.</span></span>  
   
-4.  <span data-ttu-id="1042b-112">Legen Sie die <xref:System.Windows.Forms.Button> des Steuerelements **RowSpan** Eigenschaft **2**.</span><span class="sxs-lookup"><span data-stu-id="1042b-112">Set the <xref:System.Windows.Forms.Button> control's **RowSpan** property to **2**.</span></span> <span data-ttu-id="1042b-113">Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelement erstreckt sich über die ersten und zweiten Zeilen.</span><span class="sxs-lookup"><span data-stu-id="1042b-113">Note that the <xref:System.Windows.Forms.Button> control spans the first and second rows.</span></span>  
+4.  <span data-ttu-id="13ac6-112">Legen Sie die <xref:System.Windows.Forms.Button> des Steuerelements **RowSpan** Eigenschaft **2**.</span><span class="sxs-lookup"><span data-stu-id="13ac6-112">Set the <xref:System.Windows.Forms.Button> control's **RowSpan** property to **2**.</span></span> <span data-ttu-id="13ac6-113">Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelement erstreckt sich über die ersten und zweiten Zeilen.</span><span class="sxs-lookup"><span data-stu-id="13ac6-113">Note that the <xref:System.Windows.Forms.Button> control spans the first and second rows.</span></span>  
   
-5.  <span data-ttu-id="1042b-114">Legen Sie die <xref:System.Windows.Forms.Button> des Steuerelements **ColumnSpan** Eigenschaft **1**.</span><span class="sxs-lookup"><span data-stu-id="1042b-114">Set the <xref:System.Windows.Forms.Button> control's **ColumnSpan** property to **1**.</span></span> <span data-ttu-id="1042b-115">Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelement bewegt sich in der ersten Spalte und erstreckt sich über die ersten und zweiten Zeilen.</span><span class="sxs-lookup"><span data-stu-id="1042b-115">Note that the <xref:System.Windows.Forms.Button> control moves into the first column and spans the first and second rows.</span></span>  
+5.  <span data-ttu-id="13ac6-114">Legen Sie die <xref:System.Windows.Forms.Button> des Steuerelements **ColumnSpan** Eigenschaft **1**.</span><span class="sxs-lookup"><span data-stu-id="13ac6-114">Set the <xref:System.Windows.Forms.Button> control's **ColumnSpan** property to **1**.</span></span> <span data-ttu-id="13ac6-115">Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelement bewegt sich in der ersten Spalte und erstreckt sich über die ersten und zweiten Zeilen.</span><span class="sxs-lookup"><span data-stu-id="13ac6-115">Note that the <xref:System.Windows.Forms.Button> control moves into the first column and spans the first and second rows.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1042b-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1042b-116">See Also</span></span>  
- [<span data-ttu-id="1042b-117">TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="1042b-117">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="13ac6-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="13ac6-116">See Also</span></span>  
+ [<span data-ttu-id="13ac6-117">TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="13ac6-117">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

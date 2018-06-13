@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333039"
 ---
 # <a name="basic-linq-query-operations-c"></a><span data-ttu-id="e92c1-102">Grundlegende LINQ-Abfragevorgänge (C#)</span><span class="sxs-lookup"><span data-stu-id="e92c1-102">Basic LINQ Query Operations (C#)</span></span>
 <span data-ttu-id="e92c1-103">Dieses Thema gibt einen kurzen Überblick über [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdrücke und einige der geläufigsten Vorgänge, die Sie in einer Abfrage durchführen können.</span><span class="sxs-lookup"><span data-stu-id="e92c1-103">This topic gives a brief introduction to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions and some of the typical kinds of operations that you perform in a query.</span></span> <span data-ttu-id="e92c1-104">Ausführlichere Informationen finden Sie unter den folgenden Themen:</span><span class="sxs-lookup"><span data-stu-id="e92c1-104">More detailed information is in the following topics:</span></span>  

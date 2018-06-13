@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213509"
 ---
 # <a name="expression-trees-summary"></a><span data-ttu-id="fe28b-103">Zusammenfassung der Ausdrucksbaumstrukturen</span><span class="sxs-lookup"><span data-stu-id="fe28b-103">Expression Trees Summary</span></span>
 

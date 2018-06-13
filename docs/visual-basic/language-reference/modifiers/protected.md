@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234756"
 ---
 # <a name="protected-visual-basic"></a><span data-ttu-id="e9dc3-102">Protected (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9dc3-102">Protected (Visual Basic)</span></span>
 <span data-ttu-id="e9dc3-103">Zugriffsmodifizierer für einen Member, der angibt, dass eine oder mehrere Programmierelemente deklariert werden nur von ihrer eigenen Klasse oder von einer abgeleiteten Klasse zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="e9dc3-103">A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.</span></span>  

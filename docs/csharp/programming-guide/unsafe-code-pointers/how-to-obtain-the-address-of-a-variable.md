@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340124"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a><span data-ttu-id="3a726-102">Gewusst wie: Abrufen der Adresse einer Variablen (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="3a726-102">How to: Obtain the Address of a Variable (C# Programming Guide)</span></span>
 <span data-ttu-id="3a726-103">Verwenden Sie den address-of-Operator `&` zum Abrufen der Adresse eines unären Ausdrucks, der eine feste Variable ergibt:</span><span class="sxs-lookup"><span data-stu-id="3a726-103">To obtain the address of a unary expression, which evaluates to a fixed variable, use the address-of operator `&`:</span></span>  

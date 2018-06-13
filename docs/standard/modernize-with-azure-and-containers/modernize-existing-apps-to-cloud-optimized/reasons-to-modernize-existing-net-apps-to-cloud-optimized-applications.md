@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957980"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a><span data-ttu-id="b5129-103">Gründe für die vorhandenen .NET apps für Cloud-optimierte Anwendungen zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="b5129-103">Reasons to modernize existing .NET apps to Cloud-Optimized applications</span></span>
 

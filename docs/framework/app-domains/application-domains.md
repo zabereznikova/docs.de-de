@@ -19,6 +19,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34233950"
 ---
 # <a name="application-domains"></a><span data-ttu-id="52bd6-102">Anwendungsdomänen</span><span class="sxs-lookup"><span data-stu-id="52bd6-102">Application Domains</span></span>
 <span data-ttu-id="52bd6-103">Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isolierung der Anwendungen voneinander.</span><span class="sxs-lookup"><span data-stu-id="52bd6-103">Operating systems and runtime environments typically provide some form of isolation between applications.</span></span> <span data-ttu-id="52bd6-104">Windows verwendet beispielsweise Prozesse, um Anwendungen zu isolieren.</span><span class="sxs-lookup"><span data-stu-id="52bd6-104">For example, Windows uses processes to isolate applications.</span></span> <span data-ttu-id="52bd6-105">Diese Isolierung ist erforderlich, um sicherzustellen, dass der in einer Anwendung ausgeführte Code andere, unabhängig davon ausgeführte Anwendungen nicht beeinträchtigt.</span><span class="sxs-lookup"><span data-stu-id="52bd6-105">This isolation is necessary to ensure that code running in one application cannot adversely affect other, unrelated applications.</span></span>  
