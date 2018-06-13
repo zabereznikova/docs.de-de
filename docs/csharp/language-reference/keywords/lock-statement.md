@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274218"
 ---
 # <a name="lock-statement-c-reference"></a><span data-ttu-id="f0ef9-102">lock-Anweisung (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="f0ef9-102">lock Statement (C# Reference)</span></span>
 <span data-ttu-id="f0ef9-103">Das Schlüsselwort `lock` kennzeichnet einen Anweisungsblock als kritischen Abschnitt, indem es die sich gegenseitig ausschließende Sperre für ein gegebenes Objekt abruft, eine Anweisung ausführt und anschließend die Sperre aufhebt.</span><span class="sxs-lookup"><span data-stu-id="f0ef9-103">The `lock` keyword marks a statement block as a critical section by obtaining the mutual-exclusion lock for a given object, executing a statement, and then releasing the lock.</span></span> <span data-ttu-id="f0ef9-104">Das folgende Beispiel enthält eine `lock`-Anweisung.</span><span class="sxs-lookup"><span data-stu-id="f0ef9-104">The following example includes a `lock` statement.</span></span>  

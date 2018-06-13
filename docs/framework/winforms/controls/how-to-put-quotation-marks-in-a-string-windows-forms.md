@@ -1,14 +1,6 @@
 ---
 title: 'Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen (Windows Forms)'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,28 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd7c6a460f24b1406ad914e20b9113920814737c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7fcc2e8692880f1e5c2b8df807cf7943a5575c56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534832"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="03edf-102">Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="03edf-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
-<span data-ttu-id="03edf-103">Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Textzeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="03edf-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="03edf-104">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="03edf-104">For example:</span></span>  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="d4d24-102">Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="d4d24-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
+<span data-ttu-id="d4d24-103">Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Textzeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="d4d24-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="d4d24-104">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="d4d24-104">For example:</span></span>  
   
- <span data-ttu-id="03edf-105">She said, "You deserve a treat!" (Sie sagte: „Du verdienst eine Belohnung!“)</span><span class="sxs-lookup"><span data-stu-id="03edf-105">She said, "You deserve a treat!"</span></span>  
+ <span data-ttu-id="d4d24-105">She said, "You deserve a treat!" (Sie sagte: „Du verdienst eine Belohnung!“)</span><span class="sxs-lookup"><span data-stu-id="d4d24-105">She said, "You deserve a treat!"</span></span>  
   
- <span data-ttu-id="03edf-106">Als Alternative können Sie auch die <xref:Microsoft.VisualBasic.ControlChars.Quote> Feld als Konstante.</span><span class="sxs-lookup"><span data-stu-id="03edf-106">As an alternative, you can also use the <xref:Microsoft.VisualBasic.ControlChars.Quote> field as a constant.</span></span>  
+ <span data-ttu-id="d4d24-106">Als Alternative können Sie auch die <xref:Microsoft.VisualBasic.ControlChars.Quote> Feld als Konstante.</span><span class="sxs-lookup"><span data-stu-id="d4d24-106">As an alternative, you can also use the <xref:Microsoft.VisualBasic.ControlChars.Quote> field as a constant.</span></span>  
   
-### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a><span data-ttu-id="03edf-107">So platzieren Sie Anführungszeichen in einer Zeichenfolge in Ihrem Code</span><span class="sxs-lookup"><span data-stu-id="03edf-107">To place quotation marks in a string in your code</span></span>  
+### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a><span data-ttu-id="d4d24-107">So platzieren Sie Anführungszeichen in einer Zeichenfolge in Ihrem Code</span><span class="sxs-lookup"><span data-stu-id="d4d24-107">To place quotation marks in a string in your code</span></span>  
   
-1.  <span data-ttu-id="03edf-108">Fügen Sie in Visual Basic zwei Anführungszeichen in einer Zeile als eine eingebettete Anführungszeichen ein.</span><span class="sxs-lookup"><span data-stu-id="03edf-108">In Visual Basic, insert two quotation marks in a row as an embedded quotation mark.</span></span> <span data-ttu-id="03edf-109">In Visual C#- und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], legen Sie die-Escapesequenz \\"als eingebetteten Anführungszeichen ein.</span><span class="sxs-lookup"><span data-stu-id="03edf-109">In Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insert the escape sequence \\" as an embedded quotation mark.</span></span> <span data-ttu-id="03edf-110">Verwenden Sie z.B. folgenden Code, um die oben genannte Zeichenfolge zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="03edf-110">For example, to create the preceding string, use the following code.</span></span>  
+1.  <span data-ttu-id="d4d24-108">Fügen Sie in Visual Basic zwei Anführungszeichen in einer Zeile als eine eingebettete Anführungszeichen ein.</span><span class="sxs-lookup"><span data-stu-id="d4d24-108">In Visual Basic, insert two quotation marks in a row as an embedded quotation mark.</span></span> <span data-ttu-id="d4d24-109">In Visual C#- und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], legen Sie die-Escapesequenz \\"als eingebetteten Anführungszeichen ein.</span><span class="sxs-lookup"><span data-stu-id="d4d24-109">In Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insert the escape sequence \\" as an embedded quotation mark.</span></span> <span data-ttu-id="d4d24-110">Verwenden Sie z.B. folgenden Code, um die oben genannte Zeichenfolge zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="d4d24-110">For example, to create the preceding string, use the following code.</span></span>  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -61,9 +48,9 @@ ms.lasthandoff: 04/26/2018
        }  
     ```  
   
-     <span data-ttu-id="03edf-111">- oder - </span><span class="sxs-lookup"><span data-stu-id="03edf-111">-or-</span></span>  
+     <span data-ttu-id="d4d24-111">- oder - </span><span class="sxs-lookup"><span data-stu-id="d4d24-111">-or-</span></span>  
   
-2.  <span data-ttu-id="03edf-112">Fügen Sie das ASCII- oder Unicode-Zeichen für ein Anführungszeichen ein.</span><span class="sxs-lookup"><span data-stu-id="03edf-112">Insert the ASCII or Unicode character for a quotation mark.</span></span> <span data-ttu-id="03edf-113">Verwenden Sie in Visual Basic das ASCII-Zeichen (34).</span><span class="sxs-lookup"><span data-stu-id="03edf-113">In Visual Basic, use the ASCII character (34).</span></span> <span data-ttu-id="03edf-114">Verwenden Sie in Visual c# das Unicode-Zeichen (\u0022).</span><span class="sxs-lookup"><span data-stu-id="03edf-114">In Visual C#, use the Unicode character (\u0022).</span></span>  
+2.  <span data-ttu-id="d4d24-112">Fügen Sie das ASCII- oder Unicode-Zeichen für ein Anführungszeichen ein.</span><span class="sxs-lookup"><span data-stu-id="d4d24-112">Insert the ASCII or Unicode character for a quotation mark.</span></span> <span data-ttu-id="d4d24-113">Verwenden Sie in Visual Basic das ASCII-Zeichen (34).</span><span class="sxs-lookup"><span data-stu-id="d4d24-113">In Visual Basic, use the ASCII character (34).</span></span> <span data-ttu-id="d4d24-114">Verwenden Sie in Visual c# das Unicode-Zeichen (\u0022).</span><span class="sxs-lookup"><span data-stu-id="d4d24-114">In Visual C#, use the Unicode character (\u0022).</span></span>  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -78,11 +65,11 @@ ms.lasthandoff: 04/26/2018
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="03edf-115">In diesem Beispiel können Sie \u0022 nicht verwenden, da Sie keinen universellen Zeichennamen verwenden dürfen, der ein Zeichen im Basiszeichensatz bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="03edf-115">In this example, you cannot use \u0022 because you cannot use a universal character name that designates a character in the basic character set.</span></span> <span data-ttu-id="03edf-116">Andernfalls wird C3851 ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="03edf-116">Otherwise, you produce C3851.</span></span> <span data-ttu-id="03edf-117">Weitere Informationen finden Sie unter [Compilerfehler C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span><span class="sxs-lookup"><span data-stu-id="03edf-117">For more information, see [Compiler Error C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span></span>  
+    >  <span data-ttu-id="d4d24-115">In diesem Beispiel können Sie \u0022 nicht verwenden, da Sie keinen universellen Zeichennamen verwenden dürfen, der ein Zeichen im Basiszeichensatz bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="d4d24-115">In this example, you cannot use \u0022 because you cannot use a universal character name that designates a character in the basic character set.</span></span> <span data-ttu-id="d4d24-116">Andernfalls wird C3851 ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="d4d24-116">Otherwise, you produce C3851.</span></span> <span data-ttu-id="d4d24-117">Weitere Informationen finden Sie unter [Compilerfehler C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span><span class="sxs-lookup"><span data-stu-id="d4d24-117">For more information, see [Compiler Error C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span></span>  
   
-     <span data-ttu-id="03edf-118">- oder - </span><span class="sxs-lookup"><span data-stu-id="03edf-118">-or-</span></span>  
+     <span data-ttu-id="d4d24-118">- oder - </span><span class="sxs-lookup"><span data-stu-id="d4d24-118">-or-</span></span>  
   
-3.  <span data-ttu-id="03edf-119">Sie können auch eine Konstante für das Zeichen definieren und bei Bedarf verwenden.</span><span class="sxs-lookup"><span data-stu-id="03edf-119">You can also define a constant for the character, and use it where needed.</span></span>  
+3.  <span data-ttu-id="d4d24-119">Sie können auch eine Konstante für das Zeichen definieren und bei Bedarf verwenden.</span><span class="sxs-lookup"><span data-stu-id="d4d24-119">You can also define a constant for the character, and use it where needed.</span></span>  
   
     ```vb  
     Const quote As String = """"  
@@ -101,13 +88,13 @@ ms.lasthandoff: 04/26/2018
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="03edf-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="03edf-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d4d24-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d4d24-120">See Also</span></span>  
  <xref:System.Windows.Forms.TextBox>  
  <xref:Microsoft.VisualBasic.ControlChars.Quote>  
- [<span data-ttu-id="03edf-121">Übersicht über das TextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="03edf-121">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [<span data-ttu-id="03edf-122">Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="03edf-122">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [<span data-ttu-id="03edf-123">Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="03edf-123">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [<span data-ttu-id="03edf-124">Vorgehensweise: Erstellen eines schreibgeschützten Textfelds</span><span class="sxs-lookup"><span data-stu-id="03edf-124">How to: Create a Read-Only Text Box</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [<span data-ttu-id="03edf-125">Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="03edf-125">How to: Select Text in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [<span data-ttu-id="03edf-126">Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="03edf-126">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [<span data-ttu-id="03edf-127">TextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="03edf-127">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+ [<span data-ttu-id="d4d24-121">Übersicht über das TextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d4d24-121">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="d4d24-122">Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d4d24-122">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="d4d24-123">Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d4d24-123">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="d4d24-124">Vorgehensweise: Erstellen eines schreibgeschützten Textfelds</span><span class="sxs-lookup"><span data-stu-id="d4d24-124">How to: Create a Read-Only Text Box</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [<span data-ttu-id="d4d24-125">Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d4d24-125">How to: Select Text in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="d4d24-126">Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d4d24-126">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="d4d24-127">TextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d4d24-127">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

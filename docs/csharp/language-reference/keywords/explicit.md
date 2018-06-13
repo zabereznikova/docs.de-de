@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216476"
 ---
 # <a name="explicit-c-reference"></a><span data-ttu-id="d8ca7-102">explicit (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="d8ca7-102">explicit (C# Reference)</span></span>
 <span data-ttu-id="d8ca7-103">Das `explicit`-Schlüsselwort deklariert einen benutzerdefinierten Typkonvertierungsoperator, der mit einer Umwandlung aufgerufen werden muss.</span><span class="sxs-lookup"><span data-stu-id="d8ca7-103">The `explicit` keyword declares a user-defined type conversion operator that must be invoked with a cast.</span></span> <span data-ttu-id="d8ca7-104">Beispielsweise konvertiert dieser Operator aus einer Klasse „Fahrenheit“ in die Klasse „Celsius“:</span><span class="sxs-lookup"><span data-stu-id="d8ca7-104">For example, this operator converts from a class called Fahrenheit to a class called Celsius:</span></span>  

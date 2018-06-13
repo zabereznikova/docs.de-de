@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218657"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a><span data-ttu-id="16bbf-102">-target:winmdobj (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="16bbf-102">-target:winmdobj (C# Compiler Options)</span></span>
 <span data-ttu-id="16bbf-103">Wenn Sie die Compileroption **-target:winmdobj** verwenden, erstellt der Compiler eine WINMDOBJ-Zwischendatei, die Sie in eine binäre Windows Runtime-Datei (.winmd) konvertieren können.</span><span class="sxs-lookup"><span data-stu-id="16bbf-103">If you use the **-target:winmdobj** compiler option, the compiler creates an intermediate .winmdobj file that you can convert to a Windows Runtime binary (.winmd) file.</span></span> <span data-ttu-id="16bbf-104">Die WINMD-Datei kann dann von verwalteten Sprachprogrammen und auch von JavaScript- und C++-Programmen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="16bbf-104">The .winmd file can then be consumed by JavaScript and C++ programs, in addition to managed language programs.</span></span>  

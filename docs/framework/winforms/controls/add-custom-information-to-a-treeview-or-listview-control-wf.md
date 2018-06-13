@@ -1,14 +1,6 @@
 ---
 title: 'Gewusst wie: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,24 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8c7d8b881b3aa79122134deda7f5d95a98a68461
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b4131504e5c5d7f2075c72c72b98153c783000d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527416"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a><span data-ttu-id="ffc24-102">Gewusst wie: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ffc24-102">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>
-<span data-ttu-id="ffc24-103">Sie können einen abgeleiteten Knoten erstellen, in einer Windows Forms <xref:System.Windows.Forms.TreeView> Steuerelement oder ein abgeleitetes Element in einem <xref:System.Windows.Forms.ListView> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="ffc24-103">You can create a derived node in a Windows Forms <xref:System.Windows.Forms.TreeView> control or a derived item in a <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="ffc24-104">Durch Ableitung können Sie jegliche Felder, die Sie benötigen, sowie die benutzerdefinierten Methoden und Konstruktoren für deren Behandlung hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="ffc24-104">Derivation allows you to add any fields you require, as well as custom methods and constructors for handling them.</span></span> <span data-ttu-id="ffc24-105">Eine Verwendung dieser Funktion ist das Anfügen eines Customer-Objekts an jeden Strukturknoten oder jedes Listenelement.</span><span class="sxs-lookup"><span data-stu-id="ffc24-105">One use of this feature is to attach a Customer object to each tree node or list item.</span></span> <span data-ttu-id="ffc24-106">Die hier dargestellten Beispiele sind für eine <xref:System.Windows.Forms.TreeView> Steuerelement jedoch den gleichen Ansatz für verwendet werden kann ein <xref:System.Windows.Forms.ListView> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="ffc24-106">The examples here are for a <xref:System.Windows.Forms.TreeView> control, but the same approach can be used for a <xref:System.Windows.Forms.ListView> control.</span></span>  
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a><span data-ttu-id="4712b-102">Gewusst wie: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="4712b-102">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>
+<span data-ttu-id="4712b-103">Sie können einen abgeleiteten Knoten erstellen, in einer Windows Forms <xref:System.Windows.Forms.TreeView> Steuerelement oder ein abgeleitetes Element in einem <xref:System.Windows.Forms.ListView> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="4712b-103">You can create a derived node in a Windows Forms <xref:System.Windows.Forms.TreeView> control or a derived item in a <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="4712b-104">Durch Ableitung können Sie jegliche Felder, die Sie benötigen, sowie die benutzerdefinierten Methoden und Konstruktoren für deren Behandlung hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="4712b-104">Derivation allows you to add any fields you require, as well as custom methods and constructors for handling them.</span></span> <span data-ttu-id="4712b-105">Eine Verwendung dieser Funktion ist das Anfügen eines Customer-Objekts an jeden Strukturknoten oder jedes Listenelement.</span><span class="sxs-lookup"><span data-stu-id="4712b-105">One use of this feature is to attach a Customer object to each tree node or list item.</span></span> <span data-ttu-id="4712b-106">Die hier dargestellten Beispiele sind für eine <xref:System.Windows.Forms.TreeView> Steuerelement jedoch den gleichen Ansatz für verwendet werden kann ein <xref:System.Windows.Forms.ListView> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="4712b-106">The examples here are for a <xref:System.Windows.Forms.TreeView> control, but the same approach can be used for a <xref:System.Windows.Forms.ListView> control.</span></span>  
   
-### <a name="to-derive-a-tree-node"></a><span data-ttu-id="ffc24-107">So leiten Sie einen Strukturknoten ab</span><span class="sxs-lookup"><span data-stu-id="ffc24-107">To derive a tree node</span></span>  
+### <a name="to-derive-a-tree-node"></a><span data-ttu-id="4712b-107">So leiten Sie einen Strukturknoten ab</span><span class="sxs-lookup"><span data-stu-id="4712b-107">To derive a tree node</span></span>  
   
--   <span data-ttu-id="ffc24-108">Erstellen Sie eine neue Knotenklasse abgeleitet wurde. die <xref:System.Windows.Forms.TreeNode> -Klasse, die ein benutzerdefiniertes Feld für einen Dateipfad verfügt.</span><span class="sxs-lookup"><span data-stu-id="ffc24-108">Create a new node class, derived from the <xref:System.Windows.Forms.TreeNode> class, which has a custom field to record a file path.</span></span>  
+-   <span data-ttu-id="4712b-108">Erstellen Sie eine neue Knotenklasse abgeleitet wurde. die <xref:System.Windows.Forms.TreeNode> -Klasse, die ein benutzerdefiniertes Feld für einen Dateipfad verfügt.</span><span class="sxs-lookup"><span data-stu-id="4712b-108">Create a new node class, derived from the <xref:System.Windows.Forms.TreeNode> class, which has a custom field to record a file path.</span></span>  
   
     ```vb  
     Class myTreeNode  
@@ -81,11 +68,11 @@ ms.lasthandoff: 04/26/2018
     };  
     ```  
   
-### <a name="to-use-a-derived-tree-node"></a><span data-ttu-id="ffc24-109">So verwenden Sie einen abgeleiteten Strukturknoten</span><span class="sxs-lookup"><span data-stu-id="ffc24-109">To use a derived tree node</span></span>  
+### <a name="to-use-a-derived-tree-node"></a><span data-ttu-id="4712b-109">So verwenden Sie einen abgeleiteten Strukturknoten</span><span class="sxs-lookup"><span data-stu-id="4712b-109">To use a derived tree node</span></span>  
   
-1.  <span data-ttu-id="ffc24-110">Sie können den neuen abgeleiteten Strukturknoten als Parameter für Funktionsaufrufe verwenden.</span><span class="sxs-lookup"><span data-stu-id="ffc24-110">You can use the new derived tree node as a parameter to function calls.</span></span>  
+1.  <span data-ttu-id="4712b-110">Sie können den neuen abgeleiteten Strukturknoten als Parameter für Funktionsaufrufe verwenden.</span><span class="sxs-lookup"><span data-stu-id="4712b-110">You can use the new derived tree node as a parameter to function calls.</span></span>  
   
-     <span data-ttu-id="ffc24-111">Im folgenden Beispiel ist der Pfad für den Speicherort der Textdatei der Ordner „Eigene Dateien“.</span><span class="sxs-lookup"><span data-stu-id="ffc24-111">In the example below, the path set for the location of the text file is the My Documents folder.</span></span> <span data-ttu-id="ffc24-112">Dies geschieht, da Sie davon ausgehen können, dass die meisten Computer, auf denen das Betriebssystem Windows ausgeführt wird, über dieses Verzeichnis verfügen.</span><span class="sxs-lookup"><span data-stu-id="ffc24-112">This is done because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="ffc24-113">Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen.</span><span class="sxs-lookup"><span data-stu-id="ffc24-113">This also allows users with minimal system access levels to safely run the application.</span></span>  
+     <span data-ttu-id="4712b-111">Im folgenden Beispiel ist der Pfad für den Speicherort der Textdatei der Ordner „Eigene Dateien“.</span><span class="sxs-lookup"><span data-stu-id="4712b-111">In the example below, the path set for the location of the text file is the My Documents folder.</span></span> <span data-ttu-id="4712b-112">Dies geschieht, da Sie davon ausgehen können, dass die meisten Computer, auf denen das Betriebssystem Windows ausgeführt wird, über dieses Verzeichnis verfügen.</span><span class="sxs-lookup"><span data-stu-id="4712b-112">This is done because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="4712b-113">Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen.</span><span class="sxs-lookup"><span data-stu-id="4712b-113">This also allows users with minimal system access levels to safely run the application.</span></span>  
   
     ```vb  
     ' You should replace the bold text file   
@@ -113,7 +100,7 @@ ms.lasthandoff: 04/26/2018
        "\\TextFile.txt")));  
     ```  
   
-2.  <span data-ttu-id="ffc24-114">Wenn Sie den Strukturknoten übergeben werden, und es als typisiert ist, sind eine <xref:System.Windows.Forms.TreeNode> Klasse, und klicken Sie dann in die abgeleitete Klasse umgewandelt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ffc24-114">If you are passed the tree node and it is typed as a <xref:System.Windows.Forms.TreeNode> class, then you will need to cast to your derived class.</span></span> <span data-ttu-id="ffc24-115">Die Umwandlung ist eine explizite Konvertierung von einem Objekt in ein anderes.</span><span class="sxs-lookup"><span data-stu-id="ffc24-115">Casting is an explicit conversion from one type of object to another.</span></span> <span data-ttu-id="ffc24-116">Weitere Informationen zum Umwandeln finden Sie unter [implizite und explizite Konvertierungen](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [(Operator)](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual c#), oder [Umwandlungsoperator: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</span><span class="sxs-lookup"><span data-stu-id="ffc24-116">For more information on casting, see [Implicit and Explicit Conversions](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [() Operator](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), or [Cast Operator: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</span></span>  
+2.  <span data-ttu-id="4712b-114">Wenn Sie den Strukturknoten übergeben werden, und es als typisiert ist, sind eine <xref:System.Windows.Forms.TreeNode> Klasse, und klicken Sie dann in die abgeleitete Klasse umgewandelt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="4712b-114">If you are passed the tree node and it is typed as a <xref:System.Windows.Forms.TreeNode> class, then you will need to cast to your derived class.</span></span> <span data-ttu-id="4712b-115">Die Umwandlung ist eine explizite Konvertierung von einem Objekt in ein anderes.</span><span class="sxs-lookup"><span data-stu-id="4712b-115">Casting is an explicit conversion from one type of object to another.</span></span> <span data-ttu-id="4712b-116">Weitere Informationen zum Umwandeln finden Sie unter [implizite und explizite Konvertierungen](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [(Operator)](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual c#), oder [Umwandlungsoperator: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</span><span class="sxs-lookup"><span data-stu-id="4712b-116">For more information on casting, see [Implicit and Explicit Conversions](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [() Operator](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), or [Cast Operator: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</span></span>  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -143,6 +130,6 @@ ms.lasthandoff: 04/26/2018
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ffc24-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ffc24-117">See Also</span></span>  
- [<span data-ttu-id="ffc24-118">TreeView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="ffc24-118">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [<span data-ttu-id="ffc24-119">ListView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="ffc24-119">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="4712b-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4712b-117">See Also</span></span>  
+ [<span data-ttu-id="4712b-118">TreeView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4712b-118">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [<span data-ttu-id="4712b-119">ListView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4712b-119">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

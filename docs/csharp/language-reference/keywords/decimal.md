@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219335"
 ---
 # <a name="decimal-c-reference"></a><span data-ttu-id="83b6e-102">decimal (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="83b6e-102">decimal (C# Reference)</span></span>
 <span data-ttu-id="83b6e-103">Das `decimal`-Schlüsselwort kennzeichnet einen 128-Bit-Datentyp.</span><span class="sxs-lookup"><span data-stu-id="83b6e-103">The `decimal` keyword indicates a 128-bit data type.</span></span> <span data-ttu-id="83b6e-104">Im Vergleich zu anderen Gleitkommatypen verfügt der `decimal`-Typ über höhere Genauigkeit und einen kleineren Wertebereich. Dadurch eignet er sich für Finanz- und Währungskalkulationen.</span><span class="sxs-lookup"><span data-stu-id="83b6e-104">Compared to other floating-point types, the `decimal` type has more precision and a smaller range, which makes it appropriate for financial and monetary calculations.</span></span> <span data-ttu-id="83b6e-105">Der folgenden Tabelle können Sie den ungefähren Bereich und die Genauigkeit des `decimal`-Typs entnehmen.</span><span class="sxs-lookup"><span data-stu-id="83b6e-105">The approximate range and precision for the `decimal` type are shown in the following table.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271070"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="e4f20-102">Operator % (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="e4f20-102">% Operator (C# Reference)</span></span>
 <span data-ttu-id="e4f20-103">Der Restoperator `%` berechnet den Rest nach der Division seines ersten Operanden durch den zweiten.</span><span class="sxs-lookup"><span data-stu-id="e4f20-103">The remainder operator (`%`) computes the remainder after dividing its first operand by its second.</span></span> <span data-ttu-id="e4f20-104">Alle numerischen Typen besitzen vordefinierte Restoperatoren.</span><span class="sxs-lookup"><span data-stu-id="e4f20-104">All numeric types have predefined remainder operators.</span></span> 

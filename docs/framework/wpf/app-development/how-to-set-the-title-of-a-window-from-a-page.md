@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546184"
 ---
 # <a name="how-to-set-the-title-of-a-window-from-a-page"></a><span data-ttu-id="00328-102">Vorgehensweise: Festlegen des Titels einer Seite eines Fensters</span><span class="sxs-lookup"><span data-stu-id="00328-102">How to: Set the Title of a Window from a Page</span></span>
 <span data-ttu-id="00328-103">In diesem Beispiel wird gezeigt, wie in der den Titel des Fensters Festlegen einer <xref:System.Windows.Controls.Page> gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="00328-103">This example shows how to set the title of the window in which a <xref:System.Windows.Controls.Page> is hosted.</span></span>  

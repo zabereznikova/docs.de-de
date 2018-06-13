@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286174"
 ---
 # <a name="ltlt-operator-c-reference"></a><span data-ttu-id="7e4d6-102">&lt;&lt;-Operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="7e4d6-102">&lt;&lt; Operator (C# Reference)</span></span>
 <span data-ttu-id="7e4d6-103">Der Left Shift-Operator (`<<`) verschiebt den ersten Operanden um die Anzahl von Bits nach links, die durch den zweiten Operanden angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="7e4d6-103">The left-shift operator (`<<`) shifts its first operand left by the number of bits specified by its second operand.</span></span> <span data-ttu-id="7e4d6-104">Der Typ des zweiten Operanden muss ein [int](../../../csharp/language-reference/keywords/int.md) oder ein Typ sein, der eine vordefinierte implizite numerische Konvertierung in `int` besitzt.</span><span class="sxs-lookup"><span data-stu-id="7e4d6-104">The type of the second operand must be an [int](../../../csharp/language-reference/keywords/int.md) or a type that has a predefined implicit numeric conversion to `int`.</span></span>  

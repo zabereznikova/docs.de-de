@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218257"
 ---
 # <a name="false-operator-c-reference"></a><span data-ttu-id="0b190-102">false-Operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="0b190-102">false Operator (C# Reference)</span></span>
 <span data-ttu-id="0b190-103">Gibt den [bool](../../../csharp/language-reference/keywords/bool.md)-Wert `true` zurück, um anzugeben, dass ein Operand `false` ist, und gibt ansonsten `false` zurück.</span><span class="sxs-lookup"><span data-stu-id="0b190-103">Returns the [bool](../../../csharp/language-reference/keywords/bool.md) value `true` to indicate that an operand is `false` and returns `false` otherwise.</span></span>  

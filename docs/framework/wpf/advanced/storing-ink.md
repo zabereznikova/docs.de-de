@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546096"
 ---
 # <a name="storing-ink"></a><span data-ttu-id="a9028-102">Speichern von Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="a9028-102">Storing Ink</span></span>
 <span data-ttu-id="a9028-103">Die <xref:System.Windows.Ink.StrokeCollection.Save%2A> Methoden bieten Unterstützung für das Speichern von Freihandeingaben als ISF Ink Serialized Format ().</span><span class="sxs-lookup"><span data-stu-id="a9028-103">The <xref:System.Windows.Ink.StrokeCollection.Save%2A> methods provide support for storing ink as Ink Serialized Format (ISF).</span></span> <span data-ttu-id="a9028-104">Konstruktoren für die <xref:System.Windows.Ink.StrokeCollection> Klasse bieten Unterstützung für das Lesen von Freihanddaten.</span><span class="sxs-lookup"><span data-stu-id="a9028-104">Constructors for the <xref:System.Windows.Ink.StrokeCollection> class provide support for reading ink data.</span></span>  
