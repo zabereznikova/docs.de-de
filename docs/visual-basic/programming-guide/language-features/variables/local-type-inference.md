@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655322"
 ---
 # <a name="local-type-inference-visual-basic"></a>Lokaler Typrückschluss (Visual Basic)
 Visual Basic-Compiler verwendet *typableitung* um zu bestimmen, die die Datentypen für lokale Variablen deklariert, ohne eine `As` Klausel. Der Compiler leitet den Datentyp der Variablen vom Typ des Initialisierungsausdrucks ab. Dadurch können Sie Variablen zu deklarieren, ohne explizit einen Typ anzugeben, wie im folgenden Beispiel gezeigt. Als Ergebnis die Deklarationen sowohl `num1` und `num2` sind stark typisiert als ganze Zahlen.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805563"
 ---
 # <a name="custom-demux"></a>Benutzerdefinierter Demux
 In diesem Beispiel wird veranschaulicht, wie MSMQ-Nachrichtenheader unterschiedlichen Dienstvorgängen zugeordnet werden können, damit Windows Communication Foundation (WCF), bei denen services <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> besteht keine Einschränkung auf die Verwendung eines einzigen Dienstvorgangs aus, wie in der [ Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) und [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) Beispiele.  

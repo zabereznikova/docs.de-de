@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810173"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Synchrone Szenarien mit HTTP, TCP oder benannten Pipes
 In diesem Thema werden die Aktivitäten und Übertragungen für verschiedene synchrone Anforderungs-/Antwortszenarien beschrieben. Dabei werden HTTP, TCP oder benannte Pipes mit einem Singlethreadclient verwendet. Finden Sie unter [asynchrone Szenarien mit HTTP, TCP oder Named Pipe-](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) für Weitere Informationen zu Multithread-Anforderungen.  

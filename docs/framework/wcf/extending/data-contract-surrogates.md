@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809468"
 ---
 # <a name="data-contract-surrogates"></a>Datenvertrag-Ersatzzeichen
 Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem datenvertragsmodell basiert. Diese Funktion wurde zur Verwendung für die Typanpassung und -ersetzung entwickelt, wenn Benutzer Änderungen daran vornehmen möchten, wie ein Typ serialisiert, deserialisiert oder in Metadaten projiziert wird. Einige Szenarien, in denen ein Ersatzzeichen verwendet werden kann, sind die fehlende Spezifizierung eines Datenvertrags für den Typ, die fehlende Markierung von Feldern und Eigenschaften mit dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut oder wenn Benutzer die dynamische Erstellung von Schemavarianten wünschen.  

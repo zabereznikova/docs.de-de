@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807318"
 ---
 # <a name="using-performance-counters"></a>Verwenden von Leistungsindikatoren
 In diesem Beispiel wird veranschaulicht, wie Zugriff auf Leistungsindikatoren für Windows Communication Foundation (WCF) und benutzerdefinierte Leistungsindikatoren erstellen. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

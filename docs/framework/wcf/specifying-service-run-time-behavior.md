@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807537"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Angeben des Dienstlaufzeitverhaltens
 Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) und implementiert ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) haben, können Sie das Vorgangsverhalten der Dienstlaufzeit konfigurieren. In diesem Thema werden vom System bereitgestellte Dienste und Vorhangsverhalten erörtert und beschrieben, wo Sie weitere Informationen zur Erstellung neuer Verhalten finden. Einige Verhalten werden als Attribute angewendet, aber viele Verhalten werden mithilfe einer Konfigurationsdatei oder programmgesteuert angewendet. Weitere Informationen zum Konfigurieren der Service-Anwendung finden Sie unter [Konfigurieren von Services](../../../docs/framework/wcf/configuring-services.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805128"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>ASMX-Client mit einem WCF-Dienst
 Dieses Beispiel veranschaulicht, wie zum Erstellen eines Diensts mit Windows Communication Foundation (WCF), und klicken Sie dann auf den Dienst von einem nicht-WCF-Client, wie einem ASMX-Client zugegriffen wird.  

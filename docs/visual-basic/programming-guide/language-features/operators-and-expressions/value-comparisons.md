@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649606"
 ---
 # <a name="value-comparisons-visual-basic"></a>Wertevergleich (Visual Basic)
 Vergleichsoperatoren können verwendet werden, um Ausdrücke zu erstellen, die die Werte von numerischen Variablen vergleichen. Diese Ausdrücke Zurückgeben einer `Boolean` Wert basierend darauf, ob der Vergleich "true" oder "false". Beispiele für ein solcher Ausdruck sind wie folgt aus.  

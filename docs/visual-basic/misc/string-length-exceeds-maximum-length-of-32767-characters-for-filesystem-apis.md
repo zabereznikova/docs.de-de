@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638355"
 ---
 # <a name="string-length-exceeds-maximum-length-of-32767-characters-for-39filesystem39-apis"></a>Länge der Zeichenfolge überschreitet die maximale Länge von 32767 Zeichen für &#39;FileSystem&#39; APIs
 Eine Zeichenfolge überschreitet die maximale Länge von 32767 Zeichen.  

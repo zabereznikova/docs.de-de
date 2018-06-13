@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652808"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen (Visual Basic)
 Diese exemplarische Vorgehensweise veranschaulicht, wie deklarieren und Auslösen von Ereignissen für eine Klasse mit dem Namen `Widget`. Nachdem Sie die Schritte abgeschlossen haben, möglicherweise möchten die Begleit-Thema zu lesen [Exemplarische Vorgehensweise: Behandeln von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), die zeigt, wie Ereignisse aus `Widget` Objekte Statusinformationen in einer Anwendung bereitstellen.  

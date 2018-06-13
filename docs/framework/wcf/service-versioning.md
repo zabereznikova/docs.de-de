@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809689"
 ---
 # <a name="service-versioning"></a>Dienstversionsverwaltung
 Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen die Dienste (und die Endpunkte, die sie verfügbar machen) eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z.&#160;B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Jede Änderung führt zu einer neuen Version des Diensts. In diesem Thema wird erläutert, Überlegungen zur versionsverwaltung in Windows Communication Foundation (WCF).  

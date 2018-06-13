@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651582"
 ---
 # <a name="value-types-and-reference-types"></a>Wert- und Verweistypen
 In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementiert. Die Visual Basic-Datentypen können, ob eine Variable eines bestimmten Typs eigene Daten oder ein Zeiger auf die Daten gespeichert klassifiziert werden. Wenn sie einen eigenen Datenspeicher wird ein *Werttyp*; Wenn es einen Zeiger auf die Daten an anderer Stelle im Arbeitsspeicher enthält es ein *Verweistyp*.  

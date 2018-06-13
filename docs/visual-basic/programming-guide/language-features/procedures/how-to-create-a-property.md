@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656242"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Gewusst wie: Erstellen einer Eigenschaft (Visual Basic)
 Sie setzen eine Eigenschaftsdefinition zwischen einer `Property` Anweisung und eine `End Property` Anweisung. Innerhalb dieser Definition, die Sie definieren eine `Get` Prozedur, eine `Set` Prozedur oder beides. Alle Eigenschaft Code ist in diesen Prozeduren.  

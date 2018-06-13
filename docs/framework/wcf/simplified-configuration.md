@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808509"
 ---
 # <a name="simplified-configuration"></a>Vereinfachte Konfiguration
 Konfigurieren von Windows Communication Foundation (WCF)-Dienste kann aufwändig sein. Es gibt viele verschiedene Optionen, und es ist nicht immer einfach zu bestimmen, welche Einstellungen erforderlich sind. Während der Konfigurationsdateien erhöhen die Flexibilität des WCF-Dienste sind auch die Quelle für viele schwer zu findende Probleme. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] behandelt diese Probleme und gibt Benutzern die Möglichkeit, den Umfang und die Komplexität der Dienstkonfiguration zu reduzieren.  

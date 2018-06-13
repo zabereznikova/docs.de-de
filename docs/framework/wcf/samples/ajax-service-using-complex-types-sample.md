@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804078"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Beispiel für AJAX-Dienst mit komplexen Typen
 Dieses Beispiel veranschaulicht, wie Windows Communication Foundation (WCF) verwenden, um einen Dienst (ASP.NET Asynchronous JavaScript and XML (AJAX) zu erstellen, der Instanzen komplexer Typen erstellt und sendet diese zwischen Dienst und Client als JavaScript Object Notation (JSON). Sie können auf einen AJAX-Dienst zugreifen, indem Sie JavaScript-Code in einem Webbrowserclient verwenden. Dieses Beispiel baut auf den [einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md) Beispiel.  

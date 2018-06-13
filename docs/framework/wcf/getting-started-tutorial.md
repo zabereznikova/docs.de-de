@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806018"
 ---
 # <a name="getting-started-tutorial"></a>Lernprogramm 'Erste Schritte'
 In diesem Abschnitt enthaltenen Themen sollen Sie schnelle Offenlegung an der Windows Communication Foundation (WCF) Programmierung geben. Die Liste am Ende dieses Themas gibt Aufschluss über die Reihenfolge, in der die Aufgaben ausgeführt werden müssen. Dieses Lernprogramm bietet Ihnen Grundkenntnisse zu der die erforderlichen Schritte zum Erstellen von WCF-Dienst und Client Anwendungen. Ein Dienst macht einen oder mehrere Endpunkte verfügbar, von denen jeder wiederum einen oder mehrere Dienstvorgänge zur Verfügung stellt. Die *Endpunkt* eines Diensts gibt die Adresse, auf dem der Dienst gefunden werden kann, eine Bindung, die Informationen, die beschreibt enthält, wie ein Client kommunizieren muss, mit dem Dienst und einen Vertrag, der die Funktionen definiert sind, vom Dienst für seine Clients bereitgestellt werden.  

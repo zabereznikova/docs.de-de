@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652960"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Gewusst wie: Transformieren von XML unter Verwendung von LINQ (Visual Basic)
 [XML-Literale](../../../../visual-basic/language-reference/xml-literals/index.md) erleichtern das XML aus einer Quelle gelesen und in eine neue XML-Format zu transformieren. Sie können Nutzen von LINQ-Abfragen zum Abrufen des Inhalts zu transformieren, ändern oder Inhalt in einem vorhandenen Dokument auf eine neue XML-Format.  

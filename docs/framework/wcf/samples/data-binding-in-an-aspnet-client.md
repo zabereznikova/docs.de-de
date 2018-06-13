@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804991"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Datenbindung in einem ASP.NET-Client
 Dieses Beispiel veranschaulicht das Binden von Daten von einem normalen Windows Communication Foundation (WCF)-Dienst in einer Web Forms-Anwendung zurückgegeben.  

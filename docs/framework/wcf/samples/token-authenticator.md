@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808326"
 ---
 # <a name="token-authenticator"></a>Tokenauthentifizierer
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenauthentifizierers. Ein Tokenauthentifizierer in Windows Communication Foundation (WCF) Dient zum Überprüfen des Tokens, die mit der Nachricht verwendete prüft, ob es in sich selbst konsistent und Authentifizieren der Identität mit dem Token zugeordnet.  

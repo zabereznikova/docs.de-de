@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809426"
 ---
 # <a name="durable-duplex"></a>Permanenter Duplex
 Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter duplexnachrichtenaustausch mithilfe der messagingaktivitäten in Windows Workflow Foundation (WF). Ein permanenter Duplexnachrichtenaustausch ist ein bidirektionaler Nachrichtenaustausch, der im Verlauf eines langen Zeitraums stattfindet. Die Lebensdauer des Nachrichtenaustauschs ist möglicherweise länger als die Lebensdauer des Kommunikationskanals und die Lebensdauer der Dienstinstanzen im Arbeitsspeicher.  

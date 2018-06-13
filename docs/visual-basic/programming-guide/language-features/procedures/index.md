@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655131"
 ---
 # <a name="procedures-in-visual-basic"></a>Prozeduren in Visual Basic
 Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklarationsanweisung eingeschlossen (`Function`, `Sub`, `Operator`, `Get`, `Set`) und ein entsprechender `End` Deklaration. Alle ausführbaren Anweisungen in Visual Basic müssen innerhalb einer Prozedur sein.  

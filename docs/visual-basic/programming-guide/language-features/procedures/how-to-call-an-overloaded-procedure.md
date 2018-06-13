@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649125"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Gewusst wie: Aufrufen einer überladenen Prozedur (Visual Basic)
 Der Vorteil der überladen einer Prozedur ist die Flexibilität des Aufrufs. Der aufrufende Code erhalten die Informationen, die sie an die Prozedur übergeben, und rufen Sie anschließend auf einen einzelnen Prozedurnamen, unabhängig davon, welche Argumente übergeben werden muss.  

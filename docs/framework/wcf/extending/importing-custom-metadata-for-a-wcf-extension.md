@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806860"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung
 In Windows Communication Foundation (WCF) ist Metadatenimport der Prozess, der eine abstrakte Darstellung eines Diensts oder seiner Komponenten aus dessen Metadaten generiert. Beispielsweise kann WCF importieren <xref:System.ServiceModel.Description.ServiceEndpoint> Instanzen <xref:System.ServiceModel.Channels.Binding> Instanzen oder <xref:System.ServiceModel.Description.ContractDescription> Instanzen aus einem WSDL-Dokument für einen Dienst. Zum Importieren von Metadaten von Diensten in WCF mit einer Implementierung der der <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> abstrakte Klasse. Typen, die Ableitung der <xref:System.ServiceModel.Description.MetadataImporter> Klasse implementieren die Unterstützung für das Importieren von metadatenformaten, die WS-Richtlinie nutzen Logik in WCF importieren.  

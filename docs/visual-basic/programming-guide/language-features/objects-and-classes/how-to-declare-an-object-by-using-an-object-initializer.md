@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649164"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Gewusst wie: Deklarieren eines Objekts mithilfe eines Objektinitialisierers (Visual Basic)
 Objektinitialisierer ermöglichen es Ihnen, deklarieren und instanziieren Sie eine Instanz einer Klasse in einer einzelnen Anweisung. Darüber hinaus können Sie eine oder mehrere Member der Instanz zur gleichen Zeit initialisieren, ohne einen parametrisierten Konstruktor aufzurufen.  

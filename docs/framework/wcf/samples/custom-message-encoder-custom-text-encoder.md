@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808064"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Benutzerdefinierter Nachrichtenencoder: Benutzerdefinierter Textencoder
 In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierter textnachrichtenencoder mit Windows Communication Foundation (WCF) implementiert.  

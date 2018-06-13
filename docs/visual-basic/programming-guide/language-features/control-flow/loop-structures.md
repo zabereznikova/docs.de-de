@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647890"
 ---
 # <a name="loop-structures-visual-basic"></a>Schleifenstruktur (Visual Basic)
 Visual Basic-Schleifenstruktur ermöglichen Ihnen, eine oder mehrere Codezeilen wiederholt auszuführen. Sie können die Anweisungen in einer Schleifenstruktur wiederholen, bis eine Bedingung ist `True`, bis eine Bedingung ist `False`, eine angegebene Anzahl, wie oft oder einmal für jedes Element in einer Auflistung.  

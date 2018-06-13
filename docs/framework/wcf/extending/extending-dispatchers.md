@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808237"
 ---
 # <a name="extending-dispatchers"></a>Erweitern von Verteilern
 Verteiler sind dafür verantwortlich, eingehende Nachrichten aus den zugrunde liegenden Kanälen abzufangen, sie in Methodenaufrufe im Anwendungscode zu übersetzen und die Ergebnisse zurück an den Aufrufer zu senden. Verteilererweiterungen versetzen Sie in die Lage, diese Verarbeitung zu ändern.  Sie können Nachrichten- oder Parameterinspektoren implementieren, die den Inhalt von Nachrichten oder Parametern überprüfen bzw. ändern.  Sie können die Weiterleitung von Nachrichten an Vorgänge ändern oder andere Funktionalität bereitstellen.  

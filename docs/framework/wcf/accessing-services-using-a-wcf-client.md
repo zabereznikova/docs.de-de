@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810108"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Zugreifen auf Dienste mithilfe eines WCF-Clients
 Nachdem Sie einen Dienst erstellt haben, besteht der nächste Schritt erstellen Sie einen WCF-Clientproxy. Eine Clientanwendung verwendet den WCF-Clientproxy, um mit dem Dienst kommunizieren. Clientanwendungen importieren normalerweise Metadaten eines Diensts, um WCF-Clientcode generieren, die zum Aufrufen des Diensts verwendet werden kann.  

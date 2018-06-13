@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806538"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Vorgehensweise: Endpunkte im Unternehmen sperren
 Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der Sicherheitsrichtlinien der Unternehmen entwickelt werden. Im folgende Thema wird erläutert, wie zum Entwickeln und installieren eine clientendpunktbestätigung, die verwendet werden kann, überprüfen Sie alle Windows Communication Foundation (WCF)-Clientanwendungen, die auf Computern installiert wird.  

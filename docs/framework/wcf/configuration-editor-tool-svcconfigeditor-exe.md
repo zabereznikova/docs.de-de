@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809874"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Configuration Editor-Tool (SvcConfigEditor.exe)
 Der Service Configuration Editor (SvcConfigEditor.exe) der Windows Communication Foundation (WCF) ermöglicht Administratoren und Entwicklern, Konfigurationseinstellungen für WCF-Dienste anhand einer grafischen Benutzeroberfläche zu erstellen und zu bearbeiten. Mit diesem Tool können Sie die Einstellungen für Bindungen, Verhalten, Dienste und Diagnosen von WCF verwalten, ohne XML-Dateien direkt bearbeiten zu müssen.  

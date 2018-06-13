@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803870"
 ---
 # <a name="security-in-wcf"></a>Sicherheit in WCF
 Dieser Abschnitt enthält Beispiele, die im Zusammenhang mit der Windows Communication Foundation (WCF)-Sicherheit.  

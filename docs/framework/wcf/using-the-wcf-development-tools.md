@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806782"
 ---
 # <a name="using-the-wcf-development-tools"></a>Verwenden der WCF-Entwicklungstools
 Dieser Abschnitt beschreibt die Visual Studio-Entwicklungstools, die bei der Entwicklung von Entwicklungswerkzeuge helfen können.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804514"
 ---
 # <a name="syndication"></a>Syndication
 Dieser Abschnitt enthält Beispiele für die Veröffentlichung von Windows Communication Foundation (WCF).  

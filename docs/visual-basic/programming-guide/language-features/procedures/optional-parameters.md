@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651608"
 ---
 # <a name="optional-parameters-visual-basic"></a>Optionale Parameter (Visual Basic)
 Sie können angeben, dass ein Prozedurparameter optional ist und in Aufrufen der Prozedur kein Argument dafür bereitgestellt werden muss. *Optionale Parameter* Warnschwellenwerts durch die `Optional` Schlüsselwort in der Prozedurdefinition ab. Dabei gelten folgende Regeln:  

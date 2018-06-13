@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803380"
 ---
 # <a name="custom-binding"></a>Benutzerdefinierte Bindung
 Dieser Abschnitt enthält grundlegende Beispiele, in denen die Verwendung des benutzerdefinierten Bindungsattributs eines Endpunktelements veranschaulicht wird.  

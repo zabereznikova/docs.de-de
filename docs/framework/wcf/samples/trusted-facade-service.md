@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807660"
 ---
 # <a name="trusted-facade-service"></a>Vertrauenswürdiger Fassadendienst
 Dieses Szenariobeispiel veranschaulicht, wie Informationen Identität des Aufrufers von einem Dienst an einen anderen mithilfe von Windows Communication Foundation (WCF) ausgetauscht Sicherheitstokendienst-Infrastruktur.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805888"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Auswählen eines Nachrichtenaustauschmusters
 Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht, zu entscheiden, welche *Nachrichtenaustauschmuster* (oder Nachrichtenaustauschmuster) für die von Ihnen entwickelten Kanal erforderlich sind. In diesem Thema werden die verfügbaren Optionen beschrieben und die verschiedenen Anforderungen erläutert. Dies ist die erste Aufgabe in der Aufgabenliste kanalentwicklung in beschriebenen [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  

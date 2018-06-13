@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806259"
 ---
 # <a name="contract-first-tool"></a>Vertrag zuerst-Tool
 Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] können Datenvertragsklassen mithilfe des Vertrag zuerst-Tools automatisch aus vorhandenen Diensten erstellt werden. Zum Verwenden des Vertrag zuerst-Tools muss die XSD (XML Schema Definition)-Datei lokal heruntergeladen werden. Das Tool kann keine Remotedatenverträge per HTTP importieren.  

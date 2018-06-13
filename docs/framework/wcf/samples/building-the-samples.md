@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806954"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Erstellen der Windows Communication Foundation-Beispiele
 Der Windows Communication Foundation (WCF)-Beispiele erstellt werden können, mithilfe von Visual Studio 2010 oder mit der **Msbuild** Befehl über die Befehlszeile. In diesem Thema werden beide Vorgehensweisen beschrieben.  

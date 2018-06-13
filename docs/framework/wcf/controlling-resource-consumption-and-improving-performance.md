@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805524"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung
 Dieses Thema beschreibt verschiedene Eigenschaften in verschiedenen Bereichen der Windows Communication Foundation (WCF)-Architektur, die Einfluss auf die Leistungsmetriken und auf den Ressourcenverbrauch Steuerelement arbeiten.  

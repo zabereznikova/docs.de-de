@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649112"
 ---
 # <a name="object-variables-in-visual-basic"></a>Objektvariablen in Visual Basic
 Zusätzlich zum Speichern von Werten direkt, kann eine Variable auf ein Objekt verweisen. Sie können eine Variable ein Objekt zuweisen, denselben Gründen, die Sie einen beliebigen Wert einer Variablen zuweisen:  

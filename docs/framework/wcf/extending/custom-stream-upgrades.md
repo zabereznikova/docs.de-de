@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806031"
 ---
 # <a name="custom-stream-upgrades"></a>Benutzerdefinierte Stream-Upgrades
 Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlaufenden Bytestream zwischen Client und Server ausgeführt. Dieser Stream wird durch ein <xref:System.IO.Stream>-Objekt realisiert. Bei einem Stream-Upgrade will der Client dem Kanalstapel eine optionale Protokollebene hinzufügen und fordert das andere Ende des Kommunikationskanals dazu auf. Das Stream-Upgrade besteht aus dem Ersetzen des ursprünglichen <xref:System.IO.Stream>-Objekts durch ein aktualisiertes Objekt.  

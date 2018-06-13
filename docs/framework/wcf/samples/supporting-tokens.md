@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808795"
 ---
 # <a name="supporting-tokens"></a>Unterstützende Token
 Im Beispiel für unterstützende Token wird veranschaulicht, wie einer Nachricht, die WS-Sicherheit verwendet, zusätzliche Token hinzugefügt werden. Das Beispiel fügt zusätzlich zu einem Sicherheitstoken für den Benutzernamen ein binäres X.509-Sicherheitstoken hinzu. Das Token wird in einem WS-Sicherheit-Nachrichtenkopf vom Client zum Dienst übergeben, und ein Teil der Nachricht wird mit dem privaten Schlüssel signiert, der dem X.509-Sicherheitstoken zugeordnet ist, um dem Empfänger den Besitz des X.509-Zertifikats nachzuweisen. Dies ist nützlich, wenn die Anforderung besteht, dass einer Nachricht mehrere Ansprüche zugeordnet sein müssen, um den Absender zu authentifizieren oder zu autorisieren. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  

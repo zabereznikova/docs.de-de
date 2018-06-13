@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808607"
 ---
 # <a name="durable-instance-context"></a>Permanenter Instanzkontext
 Dieses Beispiel veranschaulicht das Anpassen der Windows Communication Foundation (WCF)-Laufzeit, um permanente instanzkontexte zu aktivieren. Dabei wird als Sicherungsspeicher SQL Server 2005 (in diesem Fall SQL Server 2005 Express) verwendet. Aber es bietet auch eine Möglichkeit, auf benutzerdefinierte Speichermechanismen zuzugreifen.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808591"
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert eine Gruppe von Nachrichten zu einer Konversation. WCF-Sitzungen unterscheiden sich von denen das Sitzungsobjekt verfügbar in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendungen, unterstützen andere Verhaltensweisen und werden auf andere Weise gesteuert. Dieses Thema beschreibt die Funktionen, mit denen Sitzungen in WCF-Anwendungen und deren Verwendung.  

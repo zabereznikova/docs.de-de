@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655534"
 ---
 # <a name="function-procedures-visual-basic"></a>Function-Prozeduren (Visual Basic)
 Ein `Function` Verfahren besteht aus einer Reihe von Visual Basic-Anweisungen von der `Function` und `End Function` Anweisungen. Die `Function` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die Steuerung an den aufrufenden Code zurückgegeben. Wenn er die Steuerung zurückgibt, gibt es auch einen Wert an den aufrufenden Code zurück.  

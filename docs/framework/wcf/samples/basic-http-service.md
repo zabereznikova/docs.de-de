@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808857"
 ---
 # <a name="basic-http-service"></a>Einfacher HTTP-Dienst
 In diesem Beispiel wird veranschaulicht, wie einen HTTP-basierter, RPC-basierter Dienst - bzw. BYOD bezeichnet als "POX" (Plain Old XML)-Dienst – mithilfe der Windows Communication Foundation (WCF)-REST-Programmiermodells implementiert wird. Dieses Beispiel besteht aus zwei Komponenten: einem selbst gehosteten WCF-HTTP-Dienst (Service.cs) und einer Konsolenanwendung (Program.cs), die den Dienst erstellt und es aufruft.  

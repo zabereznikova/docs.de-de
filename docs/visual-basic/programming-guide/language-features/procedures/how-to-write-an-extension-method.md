@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648732"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Gewusst wie: Schreiben einer Erweiterungsmethode (Visual Basic)
 Erweiterungsmethoden können Sie Methoden zur einer vorhandenen Klasse hinzugefügt. Die Erweiterungsmethode kann aufgerufen werden, als handele es sich um eine Instanz dieser Klasse.  

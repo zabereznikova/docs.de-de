@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805407"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET-Zwischenspeicherungsintegration
 In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HTTP-Programmiermodell verwendet wird. Finden Sie unter der [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel eine selbst gehostete Version dieses Szenarios, die die dienstimplementierung ausführlich erläutert wird. Dieses Thema befasst sich mit den Integrationsfunktion des ASP.NET-Ausgabecaches.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808311"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurieren und Erweitern der Laufzeit mit Verhalten
 Verhalten ermöglichen es Ihnen, Standardverhalten ändern und benutzerdefinierte Erweiterungen, die zu überprüfen und Dienstkonfiguration zu überprüfen oder das Laufzeitverhalten in Windows Communication Foundation (WCF)-Client und Dienst Anwendungen hinzufügen. In diesem Thema werden die Verhaltensschnittstellen beschrieben und erläutert, wie sie implementiert und wie sie zur Dienstbeschreibung (in einer Dienstanwendung) oder zu einem Endpunkt (in einer Clientanwendung) programmgesteuert oder in einer Konfigurationsdatei hinzugefügt werden können. Weitere Informationen zum Verwenden von vom System bereitgestellte Verhalten, finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) und [Angabe zur Laufzeit Clientverhalten](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807188"
 ---
 # <a name="creating-a-bindingelement"></a>Erstellen eines BindingElement
 Bindungen und Bindungselemente (Objekte, die erweitern <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> und <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>bzw.) sind die Orte, wo das Anwendungsmodell für Windows Communication Foundation (WCF) mit kanalfactorys und Kanallistenern verknüpft ist. Ohne Bindungen mithilfe von benutzerdefinierten Kanälen erfordert Programmierung auf Kanalebene wie beschrieben in [Programmierung auf Kanalebene Dienst](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) und [Programmierung auf Kanalebene Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). In diesem Thema wird erläutert, die Mindestanforderung zu aktivieren, verwenden den Kanal in WCF, die Entwicklung von einem <xref:System.ServiceModel.Channels.BindingElement> für Ihr Kanal, und aktivieren, verwenden Sie aus der Anwendung, wie in Schritt 4 des beschrieben [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807524"
 ---
 # <a name="load-balancing"></a>Lastenausgleich
 Eine Möglichkeit zum Erhöhen der Kapazität der Windows Communication Foundation (WCF)-Anwendungen werden sie skalieren, indem sie in einer Serverfarm mit Lastenausgleich bereitzustellen. WCF-Anwendungen können mithilfe von standardmäßigen lastenausgleichstechniken, einschließlich der Software Load balancer wie Windows Network Load Balancing sowie hardwarebasierte Lastenausgleich Einheiten sein.  

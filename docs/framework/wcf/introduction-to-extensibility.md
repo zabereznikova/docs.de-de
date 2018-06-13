@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804432"
 ---
 # <a name="introduction-to-extensibility"></a>Einführung in die Erweiterbarkeit
 Das Anwendungsmodell für Windows Communication Foundation (WCF) Dient zur-Anwendungsmodell die kommunikationsanforderungen aller beliebigen verteilten Anwendungen zu beheben. Es treten jedoch häufig Szenarien auf, die das Standardanwendungsmodell und vom System bereitgestellte Implementierungen nicht unterstützen. Die WCF-Erweiterbarkeitsmodell werden benutzerdefinierte Szenarien unterstützt, da Sie auf das Systemverhalten auf jeder Ebene bis zur Ersatz des gesamten Anwendungsmodells selbst zu ändern. Dieses Thema gliedert die verschiedenen Bereiche der Erweiterung und verweist auf weitere Informationen zu jeder Erweiterung.  

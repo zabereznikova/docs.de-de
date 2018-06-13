@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805053"
 ---
 # <a name="nettcpbinding"></a>NetTCPBinding
 Dieser Abschnitt enthält Beispiele, in denen veranschaulicht die Verwendung von TCP-Bindung in der Windows Communication Foundation (WCF).  

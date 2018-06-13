@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808636"
 ---
 # <a name="analytic-trace-event-reference"></a>Ereignisverweis der analytischen Ablaufverfolgung
 In der folgenden Tabelle definiert die Ereignisebenen, Bezeichner und Nachrichten, WCF analytische Ablaufverfolgung.  

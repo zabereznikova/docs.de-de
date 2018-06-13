@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655583"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Arithmetische Operatoren in Visual Basic
 Arithmetische Operatoren werden verwendet, um viele bekannte arithmetischen Operationen ausführen, die die Berechnung von numerischen Werten, die durch die Literale, Variablen, andere Ausdrücke, Funktion und Eigenschaftenaufrufe und Konstanten dargestellt einschließen. Auch mit arithmetischen Operatoren klassifiziert sind Bitschiebeoperatoren, die auf der Ebene der einzelnen Bits der Operanden fungieren und ihre Bitmuster nach links oder rechts.  

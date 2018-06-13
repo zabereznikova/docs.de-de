@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809315"
 ---
 # <a name="tracing"></a>Ablaufverfolgung
 Windows Communication Foundation (WCF) stellt Anwendungsinstrumentation und Diagnosedaten für Fehlerüberwachung und die Analyse bereit. Sie können die Ablaufverfolgung an Stelle eines Debuggers verwenden, um zu erfahren, wie sich eine Anwendung verhält oder warum sie Fehler generiert. Für ein End-to-End-Ereignis können Sie auch Fehler und Verarbeitung über mehrere Komponenten hinweg korrelieren.  

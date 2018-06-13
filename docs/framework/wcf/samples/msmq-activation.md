@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808129"
 ---
 # <a name="msmq-activation"></a>MSMQ-Aktivierung
 Dieses Beispiel veranschaulicht das Hosten von Anwendungen in Windows Process Activation Service (WAS), die von einer Nachrichtenwarteschlange gelesen werden. Dieses Beispiel verwendet die `netMsmqBinding` und basiert auf der [bidirektionaler Kommunikation](../../../../docs/framework/wcf/samples/two-way-communication.md) Beispiel. In diesem Fall handelt es sich bei dem Dienst um eine im Internet gehostete Anwendung. Der Client ist selbst gehostet und gibt an die Konsole aus, um den Status eingereichter Bestellungen zu beobachten.  

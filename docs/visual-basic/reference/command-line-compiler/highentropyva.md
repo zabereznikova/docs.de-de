@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656318"
 ---
 # <a name="-highentropyva-visual-basic"></a>-Highentropyva (Visual Basic)
 Gibt an, ob eine ausführbare 64-Bit- oder eine ausführbare Datei, die durch die markiert ist die [/Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) Compileroption unterstützt Adresse Space Layout Randomization (ASLR) mit hohen Entropie.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806512"
 ---
 # <a name="troubleshooting-setup-issues"></a>Behandeln von Setup-Problemen
 In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) richten Sie Probleme beheben werden.  
