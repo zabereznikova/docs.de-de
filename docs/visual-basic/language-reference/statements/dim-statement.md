@@ -34,6 +34,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234726"
 ---
 # <a name="dim-statement-visual-basic"></a><span data-ttu-id="8b274-102">Dim-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b274-102">Dim Statement (Visual Basic)</span></span>
 <span data-ttu-id="8b274-103">Deklariert und reserviert Speicherplatz für eine oder mehrere Variablen.</span><span class="sxs-lookup"><span data-stu-id="8b274-103">Declares and allocates storage space for one or more variables.</span></span>  

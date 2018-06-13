@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172122"
 ---
 # <a name="sealed-c-reference"></a><span data-ttu-id="1588c-102">sealed (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="1588c-102">sealed (C# Reference)</span></span>
 <span data-ttu-id="1588c-103">Der Modifizierer `sealed` verhindert, dass andere Klassen von einer Klasse erben, wenn er auf diese Klasse angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="1588c-103">When applied to a class, the `sealed` modifier prevents other classes from inheriting from it.</span></span> <span data-ttu-id="1588c-104">Im folgenden Beispiel erbt die Klasse `B` von der Klasse `A`, allerdings kann keine Klasse von der Klasse `B` erben.</span><span class="sxs-lookup"><span data-stu-id="1588c-104">In the following example, class `B` inherits from class `A`, but no class can inherit from class `B`.</span></span>  

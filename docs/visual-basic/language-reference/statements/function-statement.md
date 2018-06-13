@@ -33,6 +33,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234123"
 ---
 # <a name="function-statement-visual-basic"></a><span data-ttu-id="9ab95-102">Function-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9ab95-102">Function Statement (Visual Basic)</span></span>
 <span data-ttu-id="9ab95-103">Deklariert den Namen, Parameter und Code, definieren eine `Function` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="9ab95-103">Declares the name, parameters, and code that define a `Function` procedure.</span></span>  

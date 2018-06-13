@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474297"
 ---
 # <a name="activity-id-propagation"></a><span data-ttu-id="ebfcf-102">Weitergabe der Aktivitäts-ID</span><span class="sxs-lookup"><span data-stu-id="ebfcf-102">Activity ID Propagation</span></span>
 <span data-ttu-id="ebfcf-103">Die Weitergabe erfolgt, wenn die ServiceModel-Aktivitätsablaufverfolgung aktiviert (ServiceModel-Weitergabe) oder deaktiviert (Benutzer-zu-Benutzer-Aktivitätsweitergabe) ist.</span><span class="sxs-lookup"><span data-stu-id="ebfcf-103">Propagation happens when ServiceModel activity tracing is enabled (ServiceModel propagation) or disabled (User-to-User activity propagation).</span></span>  

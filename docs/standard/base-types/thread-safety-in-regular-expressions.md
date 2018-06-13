@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567717"
 ---
 # <a name="thread-safety-in-regular-expressions"></a><span data-ttu-id="2601c-102">Threadsicherheit in regulären Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="2601c-102">Thread Safety in Regular Expressions</span></span>
 <span data-ttu-id="2601c-103">Die <xref:System.Text.RegularExpressions.Regex>-Klasse selbst ist threadsicher und nicht änderbar (schreibgeschützt).</span><span class="sxs-lookup"><span data-stu-id="2601c-103">The <xref:System.Text.RegularExpressions.Regex> class itself is thread safe and immutable (read-only).</span></span> <span data-ttu-id="2601c-104">**Regex**-Objekte können also in jedem Thread erzeugt und von mehreren Threads gemeinsam genutzt werden. Übereinstimmende Methoden können von jedem Thread aufgerufen werden und ändern keinen globalen Zustand.</span><span class="sxs-lookup"><span data-stu-id="2601c-104">That is, **Regex** objects can be created on any thread and shared between threads; matching methods can be called from any thread and never alter any global state.</span></span>  

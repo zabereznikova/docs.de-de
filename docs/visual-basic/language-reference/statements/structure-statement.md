@@ -17,6 +17,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234464"
 ---
 # <a name="structure-statement"></a><span data-ttu-id="cbd2d-102">Structure Statement</span><span class="sxs-lookup"><span data-stu-id="cbd2d-102">Structure Statement</span></span>
 <span data-ttu-id="cbd2d-103">Deklariert den Namen einer Struktur und führt die Definitionen der Variablen, Eigenschaften, Ereignisse und Prozeduren ein, aus denen die Struktur besteht.</span><span class="sxs-lookup"><span data-stu-id="cbd2d-103">Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.</span></span>  
