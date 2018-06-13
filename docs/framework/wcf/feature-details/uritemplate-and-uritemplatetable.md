@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508819"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate und UriTemplateTable
 Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. Windows Communication Foundation (WCF) hinzugefügt, zwei neue Klassen zum Steuern der URIs Entwicklern. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage für die URI-basierten dispatchmoduls in WCF. Diese Klassen können auch auf ihre eigenen, sodass Entwickler profitieren von Vorlagen und der URI-abbildungsmechanismus verwendet werden, ohne Sie zu implementieren eines WCF-Diensts.  

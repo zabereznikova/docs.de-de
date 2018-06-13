@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595799"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log-Objekt
 Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis- und Ausnahmeinformationen in die Protokolllistener der Anwendung bereit.  

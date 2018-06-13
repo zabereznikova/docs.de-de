@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596683"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a>Anweisung kann nicht beendet einen Block außerhalb einer Zeile &#39;Wenn&#39; Anweisung
 Eine einzeilige `If` -Anweisung enthält mehrere Anweisungen, die getrennt durch Doppelpunkte (:)), von denen eine `End` -Anweisung für einen Kontrollblock außerhalb der einzeiligen `If`. Einzeilige `If` Anweisungen verwenden Sie nicht die `End If` Anweisung.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599030"
 ---
 # <a name="argument-39period39-must-be-less-than-or-equal-to-argument-39life39"></a>Argument &#39;Zeitraum&#39; muss kleiner oder gleich Argument &#39;Leben&#39;
 Der Wert des `Period` -Arguments, das den Zeitraum angibt, für den das Veralten von Ressourcen berechnet wird, ist größer als der Wert des `Life` -Arguments.  

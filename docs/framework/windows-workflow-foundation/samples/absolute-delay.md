@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518384"
 ---
 # <a name="absolute-delay"></a>Absolute Verzögerung
 Das Hauptszenario für dieses Beispiel ist die Verzögerung eines Vorgangs in einer Workflowanwendung mithilfe von permanenten Zeitgebern bis zu einem angegebenen Zeitpunkt (<xref:System.DateTime>). Dies unterscheidet sich von der Verwendung der integrierten <xref:System.Activities.Statements.Delay>-Aktivität, da ein Vorgang hierdurch nur für eine bestimmte Zeitspanne (<xref:System.TimeSpan>) bzw. eine Anzahl von Minuten/Sekunden verzögert werden kann.  

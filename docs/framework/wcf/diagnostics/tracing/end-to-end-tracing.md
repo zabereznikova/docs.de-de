@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474219"
 ---
 # <a name="end-to-end-tracing"></a>End-to-End-Ablaufverfolgung
 End-to-End kann (e2e) Tracing Entwickler führen die Ausführung von Code in der Windows Communication Foundation (WCF)-Infrastruktur zu untersuchen, warum ein Codepfad ein Fehler aufgetreten ist, oder um ausführliche Ablaufverfolgung zur kapazitätsplanung und leistungsverwaltung Leistungsanalyse bereitzustellen. Windows Communication Foundation (WCF) enthält drei korrelationsmechanismen zum Diagnostizieren der Ursache eines Fehlers: Aktivitäten, Übertragungen und Weitergabe.  

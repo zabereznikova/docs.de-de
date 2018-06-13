@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505969"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel-Attribute und ServiceDescription-Referenz
 Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> Klasse), die zusammen jeden Aspekt eines Diensts beschreiben. Windows Communication Foundation (WCF) verwendet eine beschreibungsstruktur zum Erstellen einer gültigen Dienstlaufzeit, zum Veröffentlichen von Web Services Description Language (WSDL), XML-Schemadefinitionssprache (XSD) sowie Richtlinienassertionen (Metadaten) über den Dienst, mit denen Clients können Verbinden mit und verwenden Sie den Dienst und zum Generieren verschiedener Code- und konfigurationsdateidarstellungen der beschreibungsstrukturwerte.  

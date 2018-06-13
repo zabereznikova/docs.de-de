@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 56fc0273fb2c1b77c74d7a1d853886f47170497e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447927"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum-Methode
 Setzt den angegebenen Enumerator auf die der angegebene Position zurück.  

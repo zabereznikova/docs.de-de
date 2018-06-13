@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520301"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz
 Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren, beispielsweise um eine Fehlerkorrektur oder neue Anforderungen zu implementieren oder um unerwartete Änderungen zu berücksichtigen. Dieser Schritt im Lernprogramm veranschaulicht, wie dynamische Updates zum Ändern der persistenter Instanzen verwenden den `v1` Anzahl erraten Workflow entsprechend der neue Funktionen, eingeführt in [Vorgehensweise: Host mehrere Versionen einer Workflow-Seite-an-Seite ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  

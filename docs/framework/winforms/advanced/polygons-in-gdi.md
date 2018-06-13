@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525846"
 ---
 # <a name="polygons-in-gdi"></a>Polygone in GDI+
 Ein Polygon ist eine geschlossene Form mit drei oder mehr geraden Seiten. Z. B. einem Dreieck ist ein Polygon mit drei Seiten ein Rechteck ist ein Polygon mit vier Seiten und ein Fünfeck ist ein Polygon mit fünf Seiten. Die folgende Abbildung zeigt verschiedene Polygone.  

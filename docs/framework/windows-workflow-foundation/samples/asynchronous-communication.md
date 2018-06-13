@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515159"
 ---
 # <a name="asynchronous-communication"></a>Asynchrone Kommunikation
 In diesem Beispiel wird veranschaulicht, wie die Kommunikation zwischen zwei verschiedenen Windows Workflow Foundation (WF)-Dienste standardmäßig asynchron ausgeführt wird.  

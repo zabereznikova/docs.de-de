@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517835"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Entfernen des vom Designer zu einer XAML-Datei hinzugefügten Ansichtzustands
 Dieses Beispiel veranschaulicht, wie eine Klasse erstellt wird, die von <xref:System.Windows.Markup.XamlWriter> abgeleitet wird, und entfernt den Ansichtszustand aus einer XAML-Datei. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] schreibt Informationen in das XAML-Dokument, das als Ansichtszustand bezeichnet wird. Der Ansichtszustand bezieht sich auf die Informationen, die während der Entwurfszeit erforderlich sind, z. B. die Layoutpositionierung, jedoch nicht zur Laufzeit. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] fügt diese Informationen in das XAML-Dokument ein, während es bearbeitet wird. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] schreibt den Ansichtszustand in der XAML-Datei mit dem `mc:Ignorable`-Attribut. Daher werden diese Informationen nicht geladen, wenn die Laufzeit die XAML-Datei lädt. In diesem Beispiel wird veranschaulicht, wie eine Klasse erstellt wird, mit der diese Ansichtszustandsinformationen bei der Verarbeitung von XAML-Knoten entfernt werden.  

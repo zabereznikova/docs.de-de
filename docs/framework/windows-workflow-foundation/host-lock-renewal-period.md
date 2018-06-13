@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513717"
 ---
 # <a name="host-lock-renewal-period"></a>Host Lock Renewal Period
 Die **Host Lock Renewal Period** -Eigenschaft des SQL-Workflowinstanzspeichers können Sie den Zeitraum angeben, anhand derer der Host seine Sperre für eine Workflowinstanz erneuert. Die Sperre bleibt für den Host Lock Renewal Period-Zeitraum und 30 Sekunden danach gültig. Falls der Host die Sperre innerhalb dieses Zeitraums nicht erneuert (anders ausgedrückt: den Lease verlängert), läuft die Sperre ab, und der Persistenzanbieter entsperrt die Instanz. Der Wert für diese Eigenschaft ist der Typ "TimeSpan" im Format "hh". Der zulässige Mindestwert beträgt "00: 00:01" (1 Sekunde). Der Standardwert dieser Eigenschaft ist "00: 00:30" (30 Sekunden).  

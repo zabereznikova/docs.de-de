@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 743fb1c77e2dd74487a7498be25ea23b4919032a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447297"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob-Methode
 Ruft einen Zeiger auf das binary large Object (BLOB) am angegebenen Spaltenindex.  

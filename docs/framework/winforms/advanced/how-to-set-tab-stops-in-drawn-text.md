@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523636"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Gewusst wie: Festlegen von Tabstopps in gezeichnetem Text
 Festlegen von Tabstopps für Text können durch Aufrufen der <xref:System.Drawing.StringFormat.SetTabStops%2A> Methode eine <xref:System.Drawing.StringFormat> Objekt und deren Übergabe, die <xref:System.Drawing.StringFormat> -Objekt an die <xref:System.Drawing.Graphics.DrawString%2A> Methode der <xref:System.Drawing.Graphics> Klasse.  

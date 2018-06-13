@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 77de59de8fcf3797237245ce42c7f0eaa96d3d24
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451781"
 ---
 # <a name="functionenter-function"></a>FunctionEnter-Funktion
 Benachrichtigt den Profiler, dass Steuerelement an eine Funktion übergeben wird.  

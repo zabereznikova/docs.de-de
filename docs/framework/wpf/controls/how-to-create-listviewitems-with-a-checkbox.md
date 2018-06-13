@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552674"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>Gewusst wie: Erstellen von ListViewItems mit einem Kontrollkästchen
 In diesem Beispiel wird gezeigt, wie eine Spalte des anzuzeigenden <xref:System.Windows.Controls.CheckBox> Steuerelemente in eine <xref:System.Windows.Controls.ListView> -Steuerelements, verwendet eine <xref:System.Windows.Controls.GridView>.  

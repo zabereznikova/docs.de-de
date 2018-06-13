@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559460"
 ---
 # <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Gewusst wie: Zeichnen einer geschlossener Form mithilfe des Polygon-Elements
 Dieses Beispiel zeigt, wie eine geschlossene Form gezeichnet wird, mithilfe der <xref:System.Windows.Shapes.Polygon> Element. Um eine geschlossene Form zu zeichnen, erstellen eine <xref:System.Windows.Shapes.Polygon> Element und verwenden seiner <xref:System.Windows.Shapes.Polygon.Points%2A> Eigenschaft, um den Scheitelpunkten einer Form anzugeben. Automatisch wird eine Linie gezeichnet, die die erste und letzte Punkt eine Verbindung herstellt. Geben Sie schließlich an einen <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>, oder beides.  

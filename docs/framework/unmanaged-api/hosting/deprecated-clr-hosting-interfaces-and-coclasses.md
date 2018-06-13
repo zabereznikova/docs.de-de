@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429223"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Veraltete CLR-Hostingschnittstellen und Co-Klassen
 Dieser Abschnitt beschreibt die Schnittstellen, die nicht verwaltete Hosts können in den .NET Framework-Versionen 1.0 und 1.1 in ihre Anwendungen integrieren die common Language Runtime (CLR) verwenden. Diese Schnittstellen bieten Methoden für einen Host zu konfigurieren und die Common Language Runtime in einen Prozess zu laden.  

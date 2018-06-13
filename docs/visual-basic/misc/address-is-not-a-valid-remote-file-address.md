@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599898"
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;Adresse&gt; ist keine gültige Remotedateiadresse
 \<Adresse > ist keine gültige Remotedateiadresse. Eine gültige Adresse muss ein Protokoll, einen Pfad und einen Dateinamen enthalten.  

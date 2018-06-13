@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517282"
 ---
 # <a name="instance-locked-exception-action"></a>Instance Locked Exception Action
 Mit der <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A>-Eigenschaft des SQL-Workflowinstanzspeichers können Sie angeben, welche Aktion der SQL-Persistenzanbieter ausführen soll, wenn er <xref:System.Runtime.DurableInstancing.InstanceLockedException> empfängt. Der Persistenzanbieter empfängt diese Ausnahme, wenn er versucht, eine Workflowdienstinstanz zu sperren, die von einem anderen Diensthost gesperrt wurde. Folgende Werte sind für diese Eigenschaft möglich: <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>, <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry> und <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>. Der Standardwert ist <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>. In der folgenden Liste werden die drei Optionen beschrieben:  
