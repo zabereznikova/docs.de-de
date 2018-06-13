@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591819"
 ---
 # <a name="date-data-type-visual-basic"></a><span data-ttu-id="7a74c-102">Date-Datentyp (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7a74c-102">Date Data Type (Visual Basic)</span></span>
 <span data-ttu-id="7a74c-103">Enthält IEEE-64-Bit(8-Byte)-Werte, die Datumsangaben im Bereich vom 1. Januar des Jahres 0001 bis zum 31. Dezember des Jahres 9999 und Uhrzeiten von 00:00:00 Uhr (Mitternacht) bis 23:59:59.9999999 Uhr darstellen.</span><span class="sxs-lookup"><span data-stu-id="7a74c-103">Holds IEEE 64-bit (8-byte) values that represent dates ranging from January 1 of the year 0001 through December 31 of the year 9999, and times from 12:00:00 AM (midnight) through 11:59:59.9999999 PM.</span></span> <span data-ttu-id="7a74c-104">Jedes Inkrement stellt 100 Nanosekunden verstrichener Zeit seit Beginn des 1. Januar des Jahres 1 im gregorianischen Kalender dar.</span><span class="sxs-lookup"><span data-stu-id="7a74c-104">Each increment represents 100 nanoseconds of elapsed time since the beginning of January 1 of the year 1 in the Gregorian calendar.</span></span> <span data-ttu-id="7a74c-105">Der maximale Wert stellt 100 Nanosekunden vor Beginn des 1. Januar des Jahres 10000 dar.</span><span class="sxs-lookup"><span data-stu-id="7a74c-105">The maximum value represents 100 nanoseconds before the beginning of January 1 of the year 10000.</span></span>  

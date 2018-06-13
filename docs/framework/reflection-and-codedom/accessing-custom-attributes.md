@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397090"
 ---
 # <a name="accessing-custom-attributes"></a><span data-ttu-id="f7a9d-102">Zugreifen auf benutzerdefinierte Attribute</span><span class="sxs-lookup"><span data-stu-id="f7a9d-102">Accessing Custom Attributes</span></span>
 <span data-ttu-id="f7a9d-103">Nachdem Attribute Programmierelementen zugeordnet worden sind, kann Reflektion benutzt werden, um deren Existenz und Werte abzufragen.</span><span class="sxs-lookup"><span data-stu-id="f7a9d-103">After attributes have been associated with program elements, reflection can be used to query their existence and values.</span></span> <span data-ttu-id="f7a9d-104">In der .NET Framework Version 1.0 und 1.1 werden benutzerdefinierte Attribute im Ausführungskontext untersucht.</span><span class="sxs-lookup"><span data-stu-id="f7a9d-104">In the .NET Framework version 1.0 and 1.1, custom attributes are examined in the execution context.</span></span> <span data-ttu-id="f7a9d-105">Die .NET Framework Version 2.0 stellt einen neuen Ladekontext bereit, den reflektionsbezogener Ladekontext, der zum Untersuchen von Code benutzt werden kann, der nicht für die Ausführung geladen werden kann.</span><span class="sxs-lookup"><span data-stu-id="f7a9d-105">The .NET Framework version 2.0 provides a new load context, the reflection-only context, which can be used to examine code that cannot be loaded for execution.</span></span>  

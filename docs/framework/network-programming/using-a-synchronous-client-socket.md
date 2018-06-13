@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397701"
 ---
 # <a name="using-a-synchronous-client-socket"></a><span data-ttu-id="16158-102">Verwenden eines synchronen Clientsockets</span><span class="sxs-lookup"><span data-stu-id="16158-102">Using a Synchronous Client Socket</span></span>
 <span data-ttu-id="16158-103">Ein synchroner Clientsocket hält das Anwendungsprogramm an, während der Netzwerkvorgang abgeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="16158-103">A synchronous client socket suspends the application program while the network operation completes.</span></span> <span data-ttu-id="16158-104">Synchrone Serversockets eignen sich nicht für Anwendungen, die das Netzwerk in ihrem Betrieb stark nutzen, aber sie können einfachen Zugang zu Netzwerkdiensten für andere Anwendungen ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="16158-104">Synchronous sockets are not suitable for applications that make heavy use of the network for their operation, but they can enable simple access to network services for other applications.</span></span>  

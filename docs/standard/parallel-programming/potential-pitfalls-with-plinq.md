@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591715"
 ---
 # <a name="potential-pitfalls-with-plinq"></a><span data-ttu-id="0c2d6-102">Potenzielle Fehler bei PLINQ</span><span class="sxs-lookup"><span data-stu-id="0c2d6-102">Potential Pitfalls with PLINQ</span></span>
 <span data-ttu-id="0c2d6-103">In vielen Fällen kann PLINQ erhebliche Leistungssteigerungen gegenüber sequenziellen LINQ to Objects-Abfragen bieten.</span><span class="sxs-lookup"><span data-stu-id="0c2d6-103">In many cases, PLINQ can provide significant performance improvements over sequential LINQ to Objects queries.</span></span> <span data-ttu-id="0c2d6-104">Die Parallelisierung der Abfragenausführung erhöht jedoch die Komplexität des Vorgangs, was Probleme nach sich ziehen kann, die in sequenziellem Code weniger häufig oder gar nicht vorkommen.</span><span class="sxs-lookup"><span data-stu-id="0c2d6-104">However, the work of parallelizing the query execution introduces complexity that can lead to problems that, in sequential code, are not as common or are not encountered at all.</span></span> <span data-ttu-id="0c2d6-105">In diesem Thema sind bestimmte Fehlerquellen aufgeführt, die beim Schreiben von PLINQ-Abfragen vermieden werden sollten.</span><span class="sxs-lookup"><span data-stu-id="0c2d6-105">This topic lists some practices to avoid when you write PLINQ queries.</span></span>  

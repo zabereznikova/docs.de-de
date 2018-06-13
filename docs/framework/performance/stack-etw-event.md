@@ -1,52 +1,43 @@
 ---
 title: ETW-Stapelereignis
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1107c6608fe5136eb6159b1d4f0a438e95c4dabb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 073622c22b957975ed799cf5b3bc3826473114b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396353"
 ---
-# <a name="stack-etw-event"></a><span data-ttu-id="e48d7-102">ETW-Stapelereignis</span><span class="sxs-lookup"><span data-stu-id="e48d7-102">Stack ETW Event</span></span>
-<span data-ttu-id="e48d7-103">Das Stapelereignis sollte in Verbindung mit anderen Ereignissen verwendet werden, um Stapelüberwachungen zu generieren, nachdem ein Ereignis ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="e48d7-103">The stack event should be used in conjunction with other events to generate stack traces after an event is raised.</span></span> <span data-ttu-id="e48d7-104">Es wird protokolliert, wann der Laufzeitanbieter aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="e48d7-104">It is logged when the runtime provider is enabled.</span></span> <span data-ttu-id="e48d7-105">Dieses Ereignis hat eine hohe Frequenz, da es ausgelöst wird, wenn ein anderes Laufzeitereignis ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="e48d7-105">This is a very high frequency event, because it is raised whenever another runtime event is raised.</span></span> <span data-ttu-id="e48d7-106">Aus diesem Grund wird empfohlen, dass Sie dieses Ereignis mit Vorsicht verwenden.</span><span class="sxs-lookup"><span data-stu-id="e48d7-106">For this reason, we recommend that you use this event with caution.</span></span>  
+# <a name="stack-etw-event"></a><span data-ttu-id="16b07-102">ETW-Stapelereignis</span><span class="sxs-lookup"><span data-stu-id="16b07-102">Stack ETW Event</span></span>
+<span data-ttu-id="16b07-103">Das Stapelereignis sollte in Verbindung mit anderen Ereignissen verwendet werden, um Stapelüberwachungen zu generieren, nachdem ein Ereignis ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="16b07-103">The stack event should be used in conjunction with other events to generate stack traces after an event is raised.</span></span> <span data-ttu-id="16b07-104">Es wird protokolliert, wann der Laufzeitanbieter aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="16b07-104">It is logged when the runtime provider is enabled.</span></span> <span data-ttu-id="16b07-105">Dieses Ereignis hat eine hohe Frequenz, da es ausgelöst wird, wenn ein anderes Laufzeitereignis ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="16b07-105">This is a very high frequency event, because it is raised whenever another runtime event is raised.</span></span> <span data-ttu-id="16b07-106">Aus diesem Grund wird empfohlen, dass Sie dieses Ereignis mit Vorsicht verwenden.</span><span class="sxs-lookup"><span data-stu-id="16b07-106">For this reason, we recommend that you use this event with caution.</span></span>  
   
- <span data-ttu-id="e48d7-107">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="e48d7-107">The following table shows the keyword and level.</span></span> <span data-ttu-id="e48d7-108">(Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="e48d7-108">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
+ <span data-ttu-id="16b07-107">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="16b07-107">The following table shows the keyword and level.</span></span> <span data-ttu-id="16b07-108">(Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="16b07-108">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|<span data-ttu-id="e48d7-109">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="e48d7-109">Keyword for raising the event</span></span>|<span data-ttu-id="e48d7-110">Ebene</span><span class="sxs-lookup"><span data-stu-id="e48d7-110">Level</span></span>|  
+|<span data-ttu-id="16b07-109">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="16b07-109">Keyword for raising the event</span></span>|<span data-ttu-id="16b07-110">Ebene</span><span class="sxs-lookup"><span data-stu-id="16b07-110">Level</span></span>|  
 |-----------------------------------|-----------|  
-|<span data-ttu-id="e48d7-111">`StackKeyword` (0x40000000)</span><span class="sxs-lookup"><span data-stu-id="e48d7-111">`StackKeyword` (0x40000000)</span></span>|<span data-ttu-id="e48d7-112">LogAlways(0)</span><span class="sxs-lookup"><span data-stu-id="e48d7-112">LogAlways(0)</span></span>|  
+|<span data-ttu-id="16b07-111">`StackKeyword` (0x40000000)</span><span class="sxs-lookup"><span data-stu-id="16b07-111">`StackKeyword` (0x40000000)</span></span>|<span data-ttu-id="16b07-112">LogAlways(0)</span><span class="sxs-lookup"><span data-stu-id="16b07-112">LogAlways(0)</span></span>|  
   
- <span data-ttu-id="e48d7-113">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="e48d7-113">The following table shows the event information.</span></span>  
+ <span data-ttu-id="16b07-113">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="16b07-113">The following table shows the event information.</span></span>  
   
-|<span data-ttu-id="e48d7-114">Ereignis</span><span class="sxs-lookup"><span data-stu-id="e48d7-114">Event</span></span>|<span data-ttu-id="e48d7-115">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="e48d7-115">Event ID</span></span>|<span data-ttu-id="e48d7-116">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="e48d7-116">Raised when</span></span>|  
+|<span data-ttu-id="16b07-114">Ereignis</span><span class="sxs-lookup"><span data-stu-id="16b07-114">Event</span></span>|<span data-ttu-id="16b07-115">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="16b07-115">Event ID</span></span>|<span data-ttu-id="16b07-116">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="16b07-116">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`CLRStackWalk`|<span data-ttu-id="e48d7-117">82</span><span class="sxs-lookup"><span data-stu-id="e48d7-117">82</span></span>|<span data-ttu-id="e48d7-118">In Verbindung mit anderen Ereignissen zum Generieren von Stapelüberwachungen nach einem Ereignis.</span><span class="sxs-lookup"><span data-stu-id="e48d7-118">In conjunction with other events to generate stack traces following an event.</span></span>|  
+|`CLRStackWalk`|<span data-ttu-id="16b07-117">82</span><span class="sxs-lookup"><span data-stu-id="16b07-117">82</span></span>|<span data-ttu-id="16b07-118">In Verbindung mit anderen Ereignissen zum Generieren von Stapelüberwachungen nach einem Ereignis.</span><span class="sxs-lookup"><span data-stu-id="16b07-118">In conjunction with other events to generate stack traces following an event.</span></span>|  
   
- <span data-ttu-id="e48d7-119">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="e48d7-119">The following table shows the event data.</span></span>  
+ <span data-ttu-id="16b07-119">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="16b07-119">The following table shows the event data.</span></span>  
   
-|<span data-ttu-id="e48d7-120">Feldname</span><span class="sxs-lookup"><span data-stu-id="e48d7-120">Field name</span></span>|<span data-ttu-id="e48d7-121">Datentyp</span><span class="sxs-lookup"><span data-stu-id="e48d7-121">Data Type</span></span>|<span data-ttu-id="e48d7-122">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e48d7-122">Description</span></span>|  
+|<span data-ttu-id="16b07-120">Feldname</span><span class="sxs-lookup"><span data-stu-id="16b07-120">Field name</span></span>|<span data-ttu-id="16b07-121">Datentyp</span><span class="sxs-lookup"><span data-stu-id="16b07-121">Data Type</span></span>|<span data-ttu-id="16b07-122">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="16b07-122">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|<span data-ttu-id="e48d7-123">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="e48d7-123">ClrInstanceID</span></span>|<span data-ttu-id="e48d7-124">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="e48d7-124">win:Uint16</span></span>|<span data-ttu-id="e48d7-125">URI.</span><span class="sxs-lookup"><span data-stu-id="e48d7-125">Unique runtime identifier.</span></span>|  
-|<span data-ttu-id="e48d7-126">Reserved1</span><span class="sxs-lookup"><span data-stu-id="e48d7-126">Reserved1</span></span>|<span data-ttu-id="e48d7-127">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="e48d7-127">win:UInt8</span></span>|<span data-ttu-id="e48d7-128">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="e48d7-128">Reserved.</span></span>|  
-|<span data-ttu-id="e48d7-129">Reserved2</span><span class="sxs-lookup"><span data-stu-id="e48d7-129">Reserved2</span></span>|<span data-ttu-id="e48d7-130">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="e48d7-130">win:UInt8</span></span>|<span data-ttu-id="e48d7-131">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="e48d7-131">Reserved.</span></span>|  
-|<span data-ttu-id="e48d7-132">FrameCount</span><span class="sxs-lookup"><span data-stu-id="e48d7-132">FrameCount</span></span>|<span data-ttu-id="e48d7-133">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="e48d7-133">win:UInt32</span></span>|<span data-ttu-id="e48d7-134">Die Anzahl von Frames in der Stapelüberwachung.</span><span class="sxs-lookup"><span data-stu-id="e48d7-134">The number of frames in the stack trace.</span></span>|  
-|<span data-ttu-id="e48d7-135">Stapel</span><span class="sxs-lookup"><span data-stu-id="e48d7-135">Stack</span></span>|<span data-ttu-id="e48d7-136">win:Pointer</span><span class="sxs-lookup"><span data-stu-id="e48d7-136">win:Pointer</span></span>|<span data-ttu-id="e48d7-137">Anweisungszeigerspalten.</span><span class="sxs-lookup"><span data-stu-id="e48d7-137">Columns of instruction pointers.</span></span>|  
+|<span data-ttu-id="16b07-123">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="16b07-123">ClrInstanceID</span></span>|<span data-ttu-id="16b07-124">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="16b07-124">win:Uint16</span></span>|<span data-ttu-id="16b07-125">URI.</span><span class="sxs-lookup"><span data-stu-id="16b07-125">Unique runtime identifier.</span></span>|  
+|<span data-ttu-id="16b07-126">Reserved1</span><span class="sxs-lookup"><span data-stu-id="16b07-126">Reserved1</span></span>|<span data-ttu-id="16b07-127">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="16b07-127">win:UInt8</span></span>|<span data-ttu-id="16b07-128">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="16b07-128">Reserved.</span></span>|  
+|<span data-ttu-id="16b07-129">Reserved2</span><span class="sxs-lookup"><span data-stu-id="16b07-129">Reserved2</span></span>|<span data-ttu-id="16b07-130">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="16b07-130">win:UInt8</span></span>|<span data-ttu-id="16b07-131">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="16b07-131">Reserved.</span></span>|  
+|<span data-ttu-id="16b07-132">FrameCount</span><span class="sxs-lookup"><span data-stu-id="16b07-132">FrameCount</span></span>|<span data-ttu-id="16b07-133">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="16b07-133">win:UInt32</span></span>|<span data-ttu-id="16b07-134">Die Anzahl von Frames in der Stapelüberwachung.</span><span class="sxs-lookup"><span data-stu-id="16b07-134">The number of frames in the stack trace.</span></span>|  
+|<span data-ttu-id="16b07-135">Stapel</span><span class="sxs-lookup"><span data-stu-id="16b07-135">Stack</span></span>|<span data-ttu-id="16b07-136">win:Pointer</span><span class="sxs-lookup"><span data-stu-id="16b07-136">win:Pointer</span></span>|<span data-ttu-id="16b07-137">Anweisungszeigerspalten.</span><span class="sxs-lookup"><span data-stu-id="16b07-137">Columns of instruction pointers.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="e48d7-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e48d7-138">See Also</span></span>  
- [<span data-ttu-id="e48d7-139">CLR-ETW-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="e48d7-139">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a><span data-ttu-id="16b07-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="16b07-138">See Also</span></span>  
+ [<span data-ttu-id="16b07-139">CLR-ETW-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="16b07-139">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

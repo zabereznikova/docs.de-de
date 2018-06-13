@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578013"
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a><span data-ttu-id="b8c91-103">Implementieren des Trennschaltermusters</span><span class="sxs-lookup"><span data-stu-id="b8c91-103">Implementing the Circuit Breaker pattern</span></span>
 

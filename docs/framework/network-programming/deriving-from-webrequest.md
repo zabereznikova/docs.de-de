@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396817"
 ---
 # <a name="deriving-from-webrequest"></a><span data-ttu-id="d49ac-102">Ableiten von WebRequest</span><span class="sxs-lookup"><span data-stu-id="d49ac-102">Deriving from WebRequest</span></span>
 <span data-ttu-id="d49ac-103">Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die grundlegende Methoden und Eigenschaften bereitstellt, mit denen ein protokollspezifischer Anforderungshandler erstellt wird, der in das austauschbare Protokollmodell von .NET Framework passt.</span><span class="sxs-lookup"><span data-stu-id="d49ac-103">The <xref:System.Net.WebRequest> class is an abstract base class that provides the basic methods and properties for creating a protocol-specific request handler that fits the .NET Framework pluggable protocol model.</span></span> <span data-ttu-id="d49ac-104">Anwendungen, die die **WebRequest**-Klasse verwenden, können Daten mit einem beliebigen unterstützten Protokoll anfordern, ohne das verwendete Protokoll anzugeben.</span><span class="sxs-lookup"><span data-stu-id="d49ac-104">Applications that use the **WebRequest** class can request data using any supported protocol without needing to specify the protocol used.</span></span>  

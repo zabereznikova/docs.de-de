@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590932"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a><span data-ttu-id="d8f61-102">Exemplarische Vorgehensweise: Bestimmen, wohin "My.Application.Log" Informationen schreibt (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d8f61-102">Walkthrough: Determining Where My.Application.Log Writes Information (Visual Basic)</span></span>
 <span data-ttu-id="d8f61-103">Das `My.Application.Log` -Objekt kann Informationen in mehrere Protokolllistener schreiben.</span><span class="sxs-lookup"><span data-stu-id="d8f61-103">The `My.Application.Log` object can write information to several log listeners.</span></span> <span data-ttu-id="d8f61-104">Die Protokolllistener werden durch die Konfigurationsdatei des Computers konfiguriert und können durch die Konfigurationsdatei einer Anwendung außer Kraft gesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="d8f61-104">The log listeners are configured by the computer's configuration file and can be overridden by an application's configuration file.</span></span> <span data-ttu-id="d8f61-105">Dieses Thema beschreibt die Standardeinstellungen und erläutert, wie Sie die Einstellungen für Ihre Anwendung ermitteln.</span><span class="sxs-lookup"><span data-stu-id="d8f61-105">This topic describes the default settings and how to determine the settings for your application.</span></span>  

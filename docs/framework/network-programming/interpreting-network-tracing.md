@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396960"
 ---
 # <a name="interpreting-network-tracing"></a><span data-ttu-id="fb85d-102">Interpretieren von Netzwerkablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="fb85d-102">Interpreting Network Tracing</span></span>
 <span data-ttu-id="fb85d-103">Wenn die Netzwerkablaufverfolgung aktiviert ist, können Sie die Ablaufverfolgung zum Erfassen von Aufrufen durch Ihre Anwendung an verschiedene <xref:System.Net>-Klassenmember verwenden.</span><span class="sxs-lookup"><span data-stu-id="fb85d-103">When network tracing is enabled, you can use tracing to capture calls your application makes to various <xref:System.Net> class members.</span></span> <span data-ttu-id="fb85d-104">Die Ausgabe dieser Aufrufe ähnelt möglicherweise den folgenden Beispielen.</span><span class="sxs-lookup"><span data-stu-id="fb85d-104">The output from these calls may be similar to the following examples.</span></span>  

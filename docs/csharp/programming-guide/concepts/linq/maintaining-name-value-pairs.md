@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325577"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a><span data-ttu-id="291a3-102">Warten von Name/Wert-Paaren (C#)</span><span class="sxs-lookup"><span data-stu-id="291a3-102">Maintaining Name/Value Pairs (C#)</span></span>
 <span data-ttu-id="291a3-103">Viele Anwendungen müssen Informationen verwalten, die am besten als Name/Wert-Paare geführt werden.</span><span class="sxs-lookup"><span data-stu-id="291a3-103">Many applications have to maintain information that is best kept as name/value pairs.</span></span> <span data-ttu-id="291a3-104">Solche Informationen können z. B. Konfigurationsinformationen oder globale Einstellungen sein.</span><span class="sxs-lookup"><span data-stu-id="291a3-104">This information might be configuration information or global settings.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="291a3-105"> enthält einige Methoden, die das Unterhalten von Name/Wert-Paaren vereinfachen.</span><span class="sxs-lookup"><span data-stu-id="291a3-105"> contains some methods that make it easy to keep a set of name/value pairs.</span></span> <span data-ttu-id="291a3-106">Sie können die Informationen entweder als Attribute oder als Satz untergeordneter Elemente unterhalten.</span><span class="sxs-lookup"><span data-stu-id="291a3-106">You can either keep the information as attributes or as a set of child elements.</span></span>  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398221"
 ---
 # <a name="basic-and-digest-authentication"></a><span data-ttu-id="30986-102">Standard- und Digestauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="30986-102">Basic and Digest Authentication</span></span>
 <span data-ttu-id="30986-103">Die <xref:System.Net>-Implementierung der Standard- und Digestauthentifizierung entspricht der RFC2617 – HTTP-Authentifizierung: Standard- und Digestauthentifizierung (verfügbar auf der World Wide Web Consortium-Website unter www.w3.org).</span><span class="sxs-lookup"><span data-stu-id="30986-103">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the World Wide Web Consortium's Web site at www.w3.org).</span></span>  
