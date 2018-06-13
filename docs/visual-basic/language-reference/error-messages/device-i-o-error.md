@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585527"
 ---
 # <a name="device-io-error"></a>Geräte-E/A-Fehler
 Das Programm auf einem Gerät wie einen Drucker oder das Laufwerk verwendet wurde, ist ein Eingabe- oder Fehler aufgetreten.  

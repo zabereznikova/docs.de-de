@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588855"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Gewusst wie: Speichern von asymmetrischen Schlüsseln in einem Schlüsselcontainer
 Asymmetrische private Schlüssel sollten in keinem Fall in vollem Wortlaut oder in Klartext auf dem lokalen Computer gespeichert werden. Wenn ein privater Schlüssel gespeichert werden muss, sollten Sie einen Schlüsselcontainer verwenden. Weitere Informationen zu Schlüsselcontainern finden Sie unter [RSA-Schlüsselcontainer auf Computerebene und Benutzerebene](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  

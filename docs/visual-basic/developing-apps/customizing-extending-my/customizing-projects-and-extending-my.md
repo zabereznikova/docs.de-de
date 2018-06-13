@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586837"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Anpassen von Projekten und Erweitern von "My" mit Visual Basic
 Sie können anpassen, Projektvorlagen, geben Sie zusätzliche `My` Objekte. Dies erleichtert es anderen Entwicklern zu suchen und Ihre Objekte verwenden.  

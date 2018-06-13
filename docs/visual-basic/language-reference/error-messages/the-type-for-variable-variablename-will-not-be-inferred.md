@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594282"
 ---
 # <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Der Typ für die Variable &#39; &lt;Variablename&gt; &#39; wird nicht abgeleitet werden, da er auf ein Feld in einem einschließenden Bereich gebunden ist
 Der Typ für die Variable "\<Variablename >' wird nicht abgeleitet werden, da er auf ein Feld in einem einschließenden Bereich gebunden ist. Ändern Sie entweder den Namen des "\<Variablename >', oder verwenden Sie den vollqualifizierten Namen (z. B. 'Me.Variablenname' oder 'MyBase.Variablenname').  

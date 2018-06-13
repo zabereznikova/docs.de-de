@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590771"
 ---
 # <a name="single-data-type-visual-basic"></a>Single-Datentyp (Visual Basic)
 Speichert signierte IEEE-32-Bit (4-Byte) einzelne Gleitkommazahlen mit doppelter Genauigkeit im Bereich von - 3,4028235E + 38 bis - 1.401298E-45 für negative Werte und 1.401298E-45 bis 3,4028235E + 38 für positive Werte zulässig sind. Zahlen mit einfacher Genauigkeit Näherung eine einer reellen Zahl.  
