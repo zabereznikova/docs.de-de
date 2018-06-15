@@ -3044,25 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231462"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem Visual Basic-Fehler
 Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren fragen:  
   
- [Visual Basic-Sprache](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ [Visual Basic-Sprache](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  Bietet ein Forum für Fragen und allgemeine Diskussionen zu der Visual Basic-Sprachsyntax und des Compilers.  
   
- [Visual Basic-Interop und -Upgrade](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ [Visual Basic-Interop und -Upgrade](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  Bietet ein Forum für Fragen und Probleme mit einem Upgrade auf Visual Basic und die Arbeit mit Interoperabilitätsfunktionen.  
   
- [Visual Basic-IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ [Visual Basic-IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Bietet ein Forum für Fragen zum Arbeiten in der Visual Studio-Umgebung.  
   
- [Allgemeines zu Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ [Allgemeines zu Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
  Bietet ein Forum für Fragen und Probleme mit Visual Basic, die in anderen Foren nicht diskutiert werden.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
