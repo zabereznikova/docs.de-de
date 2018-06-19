@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583876"
 ---
 # <a name="automation-error"></a><span data-ttu-id="17778-102">Automatisierungsfehler</span><span class="sxs-lookup"><span data-stu-id="17778-102">Automation error</span></span>
 <span data-ttu-id="17778-103">Beim Ausführen einer Methode oder Abrufen oder Festlegen einer Eigenschaft einer Objektvariable ist ein Fehler aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="17778-103">An error occurred while executing a method or getting or setting a property of an object variable.</span></span> <span data-ttu-id="17778-104">Der Fehler wurde von der Anwendung gemeldet, mit der das Objekt erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="17778-104">The error was reported by the application that created the object.</span></span>  

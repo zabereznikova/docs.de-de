@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586220"
 ---
 # <a name="clipboard-format-is-not-valid"></a><span data-ttu-id="1635a-102">Das Format der Zwischenablage ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="1635a-102">Clipboard format is not valid</span></span>
 <span data-ttu-id="1635a-103">Das angegebene Format der Zwischenablage ist nicht kompatibel mit der Methode, die gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="1635a-103">The specified Clipboard format is incompatible with the method being executed.</span></span> <span data-ttu-id="1635a-104">Zu den möglichen Ursachen für diesen Fehler sind:</span><span class="sxs-lookup"><span data-stu-id="1635a-104">Among the possible causes for this error are:</span></span>  
