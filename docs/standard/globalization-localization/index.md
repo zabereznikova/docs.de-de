@@ -1,25 +1,26 @@
 ---
-title: Globalisieren und Lokalisieren von .NET Framework-Anwendungen
-ms.date: 03/30/2017
+title: Globalisieren und Lokalisieren von .NET-Anwendungen
+ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- international applications [.NET Framework]
-- globalization [.NET Framework], encoding
+- international applications [.NET]
+- globalization [.NET], encoding
 - global applications
 - internationalization
 - world-ready applications
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c237d082a56d17b2d8493bff52dbac6faca8b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35250998"
 ---
-# <a name="globalizing-and-localizing-net-framework-applications"></a>Globalisieren und Lokalisieren von .NET Framework-Anwendungen
+# <a name="globalizing-and-localizing-net-applications"></a>Globalisieren und Lokalisieren von .NET-Anwendungen
 Die Entwicklung einer [weltweit einsetzbaren Anwendung](http://msdn.microsoft.com/goglobal/bb978433.aspx), einschließlich einer Anwendung, die in eine oder mehrere Sprachen lokalisiert werden kann, umfasst drei Schritte: Globalisierung, Prüfung der Lokalisierbarkeit und Lokalisierung.  
   
  [Globalisierung](../../../docs/standard/globalization-localization/globalization.md)  
@@ -37,7 +38,7 @@ Die Entwicklung einer [weltweit einsetzbaren Anwendung](http://msdn.microsoft.co
   
 -   Dadurch ergeben sich lokalisierte Anwendungen, die stabiler sind und weniger Fehler haben.  
   
- .NET Framework bietet umfangreiche Unterstützung für die Entwicklung weltweit einsetzbarer und lokalisierter Anwendungen. Zahlreiche Typmember in der .NET Framework-Klassenbibliothek vereinfachen die Globalisierung, indem sie Werte zurückgeben, die die Konventionen der Kultur des aktuellen Benutzers oder einer angegebenen Kultur widerspiegeln. Außerdem unterstützt .NET Framework Satellitenassemblys, die den Lokalisierungsprozess einer Anwendung erleichtern.  
+ .NET bietet umfangreiche Unterstützung für die Entwicklung weltweit einsetzbarer und lokalisierter Anwendungen. Zahlreiche Typmember in der .NET-Klassenbibliothek vereinfachen die Globalisierung, indem sie Werte zurückgeben, die die Konventionen der Kultur des aktuellen Benutzers oder einer angegebenen Kultur widerspiegeln. Außerdem unterstützt .NET Satellitenassemblys, die den Lokalisierungsprozess einer Anwendung erleichtern.  
   
  Weitere Informationen finden Sie in der [Dokumentation zur Globalisierung](/globalization/).  
   
@@ -52,7 +53,7 @@ Die Entwicklung einer [weltweit einsetzbaren Anwendung](http://msdn.microsoft.co
  Erläutert die finale Phase der Erstellung einer lokalisierten Anwendung, die das Anpassen der Benutzeroberfläche einer Anwendung für bestimmte Bereiche oder Länder beinhaltet.  
   
  [Kulturunabhängige Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- Beschreibt die Verwendung von standardmäßig kulturabhängigen .NET Framework-Methoden und -Klassen zum Abrufen kulturunabhängiger Ergebnisse.  
+ Beschreibt die Verwendung von standardmäßig kulturabhängigen .NET-Methoden und -Klassen zum Abrufen kulturunabhängiger Ergebnisse.  
   
  [Empfehlungen für die Entwicklung weltweit einsatzfähiger Anwendungen](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Beschreibt empfohlene Vorgehensweisen zur Durchführung der Globalisierung, Lokalisierung und Entwicklung weltweit einsatzfähiger ASP.NET-Anwendungen.  
