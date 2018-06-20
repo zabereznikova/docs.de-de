@@ -2,11 +2,12 @@
 title: Berechnungsausdrücke (F#)
 description: Informationen Sie zum Erstellen zweckmäßigen Syntax zum Schreiben von Berechnungen in F# erläutert, die während Ihrer Sequenzierung werden können und mit Control Flow Konstrukte und Bindungen kombiniert.
 ms.date: 05/16/2016
-ms.openlocfilehash: a4ddb3fde284452bc901c5270551611e43742c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207432"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
@@ -14,6 +15,7 @@ Berechnungsausdrücke in f# bieten eine bequeme Syntax zum Schreiben von Berechn
 
 
 ## <a name="built-in-workflows"></a>Integrierte Workflows
+
 Sequenzausdrücke sind ein Beispiel für einen Ausdruck für die Berechnung, wie asynchrone Workflows und Abfrageausdrücke sind. Weitere Informationen finden Sie unter [Sequenzen](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [Abfrageausdrücke](query-expressions.md).
 
 Bestimmte Funktionen gelten für Sequenzausdrücke und asynchrone Workflows und veranschaulicht die grundlegende Syntax für einen Ausdruck für die Berechnung:

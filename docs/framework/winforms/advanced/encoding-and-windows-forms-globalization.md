@@ -19,11 +19,12 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: e610b4fc5506043835377bf9f5750550d8aec694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208573"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Codierung und die Globalisierung von Windows Forms
 Windows Forms-Anwendungen sind vollständig Unicode-aktiviert, was bedeutet, dass jedes Zeichen durch eine eindeutige Nummer, unabhängig von Plattform, Programm oder Sprache, dargestellt wird. Weitere Informationen zu Unicode finden Sie unter der [Website des Unicode Consortium](http://www.unicode.org).  
@@ -35,5 +36,6 @@ Windows Forms-Anwendungen sind vollständig Unicode-aktiviert, was bedeutet, das
   
  Unicode-kompatible Alternativen zu den <xref:System.Windows.Forms.ToolBar>- und <xref:System.Windows.Forms.StatusBar>-Steuerelementen stellen die <xref:System.Windows.Forms.ToolStrip>- und <xref:System.Windows.Forms.StatusStrip>-Steuerelemente dar, die diese älteren Steuerelemente ersetzen. Um ein ähnliches Erscheinungsbild der visuellen Elemente in der Anwendung zu gewährleisten, verwenden Sie anstelle des <xref:System.Windows.Forms.MainMenu>-Steuerelements das <xref:System.Windows.Forms.MenuStrip>-Steuerelement zum Rendern von Menüs. Wie <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.StatusStrip> kann auch <xref:System.Windows.Forms.MenuStrip> Unicode-Zeichen verarbeiten und anzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Globalisieren von Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+
+[Globalisieren von Windows Forms-Anwendungen](globalizing-windows-forms.md)

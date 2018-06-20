@@ -5,11 +5,12 @@ helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 750d94caf08776ae457dbff153afbc8ec9368f07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1a79bc3a799edc8b0472bb31983a7215f6f9e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208587"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Erweitern von Windows Forms-Anwendungen
 Windows Forms enthält viele Funktionen, mit denen Sie die Leistung von Windows-basierten Anwendungen steigern und die spezifischen Anforderungen der Benutzer erfüllen können. Unter den folgenden Themen werden diese Funktionen und ihre Verwendung beschrieben.  
@@ -30,7 +31,7 @@ Windows Forms enthält viele Funktionen, mit denen Sie die Leistung von Windows-
  [Netzwerkfunktionen in Windows Forms-Anwendungen](../../../../docs/framework/winforms/advanced/networking-in-windows-forms-applications.md)  
  Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie Netzwerkfunktionen in Windows Forms verwenden.  
   
- [Globalisieren von Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ [Globalisieren von Windows Forms-Anwendungen](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  Enthält Links zu Themen, in denen veranschaulicht wird, wie Sie Windows Forms-Anwendungen globalisieren.  
   
  [Windows Forms und nicht verwaltete Anwendungen](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  

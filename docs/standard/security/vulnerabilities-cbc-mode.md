@@ -4,16 +4,16 @@ description: Informationen Sie zum Erkennen und zeitlichen Steuerung Sicherheits
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: a07acbb943c430f6e26bec44f55a5c84306da513
-ms.sourcegitcommit: 73a662360bbe2f43c19aca1fbcc2565025c60cd8
-ms.translationtype: HT
+ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327453"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208686"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Zeitliche Steuerung von Sicherheitsrisiken mit CBC-Modus symmetrische Entschlüsselung mit Auffüllung
 
-Microsoft, basierend auf derzeit bekannte kryptografische Forschung, geht davon aus, dass mit Ausnahme von ganz bestimmten Situationen nicht mehr Entschlüsseln von Daten, die mit dem Modus Cipher Block Chaining (CBC) der symmetrischen Verschlüsselung verschlüsselt werden gefahrlos, wenn überprüfbar Auffüllung wurde übernommen, ohne zuerst die Gewährleistung der Integrität der verschlüsselte Text.
+Microsoft geht davon aus, dass es nicht mehr zum Entschlüsseln von Daten, die mit dem Modus Cipher Block Chaining (CBC) der symmetrischen Verschlüsselung verschlüsselt werden, wenn überprüfbar Auffüllung angewendet wurde, ohne zuerst sicherstellen der Integrität des Chiffretexts, mit Ausnahme von sicheren ist sehr spezifisch Umstände. Diese Entscheidung basiert auf derzeit bekannte kryptografische Forschung. 
 
 ## <a name="introduction"></a>Einführung
 

@@ -9,11 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1a15477e858a77ee7829f1d4a9d052457cd30f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208576"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Bidirektionale Unterstützung für Windows Forms-Anwendungen
 Sie können Visual Studio verwenden, um Windows-basierten Anwendungen zu erstellen, die bidirektionale (von rechts nach links) Sprachen wie Arabisch und Hebräisch unterstützen. Dies beinhaltet Standardformulare, Dialogfelder, MDI-Formulare und alle Steuerelemente, die Sie in diesen Formularen verwenden können, also alle Objekte im <xref:System.Windows.Forms.Control>-Namespace.  
@@ -116,6 +117,7 @@ Sie können Visual Studio verwenden, um Windows-basierten Anwendungen zu erstell
   
  Einige Steuerelemente sind versiegelt. Es ist deshalb nicht möglich, neue Steuerelemente von ihnen abzuleiten. Dazu gehören das <xref:System.Windows.Forms.ImageList>-Steuerelement und das <xref:System.Windows.Forms.ProgressBar>-Steuerelement.   
   
-## <a name="see-also"></a>Siehe auch  
- [Bidirektionale Unterstützung für ASP.NET-Webanwendungen](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
- [Globalisieren von Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+
+[Bidirektionale Unterstützung für ASP.NET-Webanwendungen](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[Globalisieren von Windows Forms-Anwendungen](globalizing-windows-forms.md)

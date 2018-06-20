@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 85a50d5425b8eec0166c839440f15e31500f3984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a38727a638f7764c01db5da6506b705267b7bd6e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365565"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207481"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Binden von Daten an Steuerelemente (WCF Data Services)
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steuerelemente wie `ComboBox` und `ListView` an eine Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse binden. Diese Auflistung, die von der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse erbt, enthält die Daten aus einem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-Feed. Die Klasse stellt eine dynamische Datensammlung dar, die Benachrichtigungen bereitstellt, wenn Elemente hinzugefügt oder entfernt werden. Bei Verwendung eine Instanz von <xref:System.Data.Services.Client.DataServiceCollection%601> für die Datenbindung, die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliotheken diese Ereignisse um sicherzustellen, dass Objekte durch verfolgte die <xref:System.Data.Services.Client.DataServiceContext> mit den Daten im gebundenen Benutzeroberflächenelement synchronisiert bleiben.  
@@ -22,7 +22,7 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steu
  Die <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse implementiert (indirekt) die <xref:System.Collections.Specialized.INotifyCollectionChanged>-Schnittstelle, um den Kontext zu warnen, wenn Objekte der Sammlung hinzugefügt oder daraus entfernt werden. Mit einer <xref:System.Data.Services.Client.DataServiceCollection%601>-Instanz verwendete Datendiensttypobjekte müssen auch die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle implementieren, um die <xref:System.Data.Services.Client.DataServiceCollection%601>-Instanz zu warnen, wenn sich Eigenschaften von Objekten in der Bindungssammlung geändert haben.  
   
 > [!NOTE]
->  Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld oder die[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) -tool mit der `/dataservicecollection` option zum Generieren der clientdatendienstklassen, implementieren die generierten Datenklassen die <xref:System.ComponentModel.INotifyPropertyChanged> Schnittstelle. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Generieren von Clientdatendienstklassen](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+>  Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld oder die [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) -tool mit der `/dataservicecollection` option zum Generieren der clientdatendienstklassen, implementieren die generierten Datenklassen die <xref:System.ComponentModel.INotifyPropertyChanged> Schnittstelle. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Generieren von Clientdatendienstklassen](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
 ## <a name="creating-the-binding-collection"></a>Erstellen der Bindungsauflistung  
  Erstellen Sie eine neue Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse, indem Sie eine der Klassenkonstruktormethoden mit einer angegebenen <xref:System.Data.Services.Client.DataServiceContext>-Instanz und optional eine <xref:System.Data.Services.Client.DataServiceQuery%601> oder LINQ-Abfrage aufrufen, die bei Ausführung eine <xref:System.Collections.Generic.IEnumerable%601>-Instanz zurückgibt. Dies <xref:System.Collections.Generic.IEnumerable%601> stellt die Quelle von Objekten für die bindungsauflistung, die von materialisiert werden ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Weitere Informationen finden Sie unter [Objektmaterialisierung](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md). Standardmäßig werden an in die Auflistung eingefügten gebundenen Objekten und Elementen vorgenommene Änderungen automatisch vom <xref:System.Data.Services.Client.DataServiceContext> nachverfolgt. Wenn Sie diese Änderungen manuell nachverfolgen müssen, rufen Sie eine der Konstruktormethoden auf, die akzeptiert eine `trackingMode` Parameter und geben Sie den Wert <xref:System.Data.Services.Client.TrackingMode.None>.  

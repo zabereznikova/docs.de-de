@@ -2,12 +2,12 @@
 title: Dynamisches Update
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520356"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207520"
 ---
 # <a name="dynamic-update"></a>Dynamisches Update
 Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren, beispielsweise um eine Fehlerkorrektur oder neue Anforderungen zu implementieren oder um unerwartete Änderungen zu berücksichtigen. Dieses Thema enthält eine Übersicht über die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführte dynamische Updatefunktionalität.  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  Nachdem ein dynamisches Update angewendet wurde, kann die Workflowinstanz fortgesetzt werden. Beachten Sie, dass die neue aktualisierte Definition und <xref:System.Activities.WorkflowIdentity> verwendet werden müssen.  
   
 > [!NOTE]
->  Weitere Informationen zum Arbeiten mit <xref:System.Activities.WorkflowApplication> und <xref:System.Activities.WorkflowIdentity>, finden Sie unter[Verwenden von WorkflowIdentity und Versionsverwaltung](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+>  Weitere Informationen zum Arbeiten mit <xref:System.Activities.WorkflowApplication> und <xref:System.Activities.WorkflowIdentity>, finden Sie unter [Verwenden von WorkflowIdentity und Versionsverwaltung](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
  Im folgenden Beispiel wurde der `MortgageWorkflow_v1.1.xaml`-Workflow aus dem vorherigen Beispiel kompiliert. Anschließend wird er geladen und mit der aktualisierten Workflowdefinition fortgesetzt.  
   
