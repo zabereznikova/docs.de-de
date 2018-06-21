@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522043"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270434"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Gewusst wie: Kopieren von Pixeln zum Vermindern des Flackerns in Windows Forms
 Wenn Sie eine einfache Grafik animieren, können Benutzer manchmal Flackern oder andere unerwünschte visuelle Effekte auftreten. Eine Möglichkeit, dieses Problem zu beschränken ist, einen "Bitblt" auf die Grafik zu verwenden. BitBlt ist die "Bitblocktransfer" der Farbdaten aus einem Ursprung Rechteck aus Pixeln einen Ziel-Rechteck aus Pixeln.  
@@ -28,7 +28,7 @@ Wenn Sie eine einfache Grafik animieren, können Benutzer manchmal Flackern oder
  Im folgenden Beispiel wird eine Form gezeichnet wird, auf dem Formular in seiner <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Anschließend wird die <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode wird verwendet, um die Form zu duplizieren.  
   
 > [!NOTE]
->  Festlegen des Formulars <xref:System.Windows.Forms.Control.DoubleBuffered%2A> Eigenschaft `true` stellen grafikbasierte Code in die <xref:System.Windows.Forms.Control.Paint> Ereignis werden doppelt gepuffert. Während dies alle wahrnehmbaren Leistungssteigerungen keinen wird bei den folgenden Code verwenden, ist es etwas zu bedenken, bei der Arbeit mit komplexen grafikbearbeitung Code.  
+>  Festlegen des Formulars <xref:System.Windows.Forms.Control.DoubleBuffered%2A> Eigenschaft `true` stellen grafikbasierte Code in die <xref:System.Windows.Forms.Control.Paint> Ereignis werden doppelt gepuffert. Obwohl dies nicht über messbaren Leistungssteigerung besitzt, wenn Sie den folgenden Code verwenden, ist es etwas zu bedenken, bei der Arbeit mit komplexen grafikbearbeitung Code.  
   
 ## <a name="example"></a>Beispiel  
   
