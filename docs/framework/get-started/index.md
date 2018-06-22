@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ecac9d30b390be886e9d81f11623070301f7d38
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 07b19c062d314fe3280d9ebed818b484ff9d1b13
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312026"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314749"
 ---
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
 
@@ -71,7 +71,7 @@ Gehen Sie beim Entwickeln von .NET Framework-Apps oder -Komponenten folgenderma�
 
 2. Wählen Sie die von .NET Framework unterstützten Sprachen aus, die Sie zur Entwicklung von Apps verwenden möchten. Es stehen mehrere Sprachen zur Verfügung, darunter [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) und C++/CLI von Microsoft. (Programmiersprachen, die Ihnen ermöglichen, Apps für .NET Framework zu entwickeln, erfüllen die [CLI-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=199862).)
 
-3. Wählen Sie die Entwicklungsumgebung aus, die Sie zum Erstellen der Apps verwenden möchten und die von der von Ihnen gewählten Programmiersprachen unterstützt werden, und installieren Sie sie. Die integrierte Microsoft-Entwicklungsumgebung (IDE) für .NET Framework-Apps ist [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Es stehen verschiedene Editionen zur Verfügung.
+3. Wählen Sie die Entwicklungsumgebung aus, die Sie zum Erstellen der Apps verwenden möchten und die von der von Ihnen gewählten Programmiersprachen unterstützt werden, und installieren Sie sie. Die integrierte Microsoft-Entwicklungsumgebung (IDE) für .NET Framework-Apps ist [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Es stehen verschiedene Editionen zur Verfügung.
 
 Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgerichtet sind, finden Sie im [Entwicklungshandbuch](../../../docs/framework/development-guide.md).
 

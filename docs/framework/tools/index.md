@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8ec8a5b1f665196fee62a4556e59201f45a6bff
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 4034a23b076bc0f3041f09dc4756646a926d6915
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312039"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314684"
 ---
 # <a name="net-framework-tools"></a>.NET Framework-Tools
 Die .NET Framework-Tools erleichtern Ihnen das Erstellen, Bereitstellen und Verwalten von Anwendungen und Komponenten für .NET Framework.  
   
-Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden automatisch mit Visual Studio installiert. Sie können Visual Studio von der [Visual Studio-Downloadseite](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) herunterladen.
+Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden automatisch mit Visual Studio installiert. Sie können Visual Studio von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) herunterladen.
   
  Mit Ausnahme des Assembly Cache Viewer (Shfusion.dll) können Sie alle Tools von der Befehlszeile aus starten. Auf "Shfusion.dll" muss über den Datei-Explorer zugegriffen werden.  
   
