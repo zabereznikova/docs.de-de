@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a679a69b5a4cc7076fd2f31a0870d48ef47dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579664"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314938"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek
 Der .NET Framework-Projekttyp "Portable Klassenbibliothek" in Visual Studio hilft Ihnen, plattformübergreifende Apps und Bibliotheken für Microsoft-Plattformen schnell und einfach zu erstellen.  
@@ -51,8 +51,8 @@ Der .NET Framework-Projekttyp "Portable Klassenbibliothek" in Visual Studio hilf
 |Visual Studio Express 2010-Versionen|Nein.|  
 |Visual Studio 2012 Professional, Premium oder Ultimate|Ja. Für Windows Phone 8.0-Unterstützung installieren der [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Visual Studio Express 2012-Versionen|Nein.|  
-|Visual Studio 2013 Professional, Premium oder Ultimate|Ja. Für Windows Phone 8.1-Unterstützung installieren der [neueste Version von Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/).|  
-|Visual Studio Community 2013 für Windows|Ja, bei der Installation der [neueste Version von Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), das Update 2 enthält.|  
+|Visual Studio 2013 Professional, Premium oder Ultimate|Ja. Für Windows Phone 8.1-Unterstützung installieren der [neueste Version von Visual Studio 2013](https://visualstudio.microsoft.com/vs/older-downloads/).|  
+|Visual Studio Community 2013 für Windows|Ja, bei der Installation der [neueste Version von Visual Studio Community 2013](https://visualstudio.microsoft.com/vs/older-downloads/), das Update 2 enthält.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Erstellen eines Projekts mit portablen Klassenbibliotheken  

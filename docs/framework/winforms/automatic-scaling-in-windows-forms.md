@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529882"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314762"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatische Skalierung in Windows Forms
 Die automatische Skalierung ermöglicht, dass ein Formular und seine Steuerelemente, die auf einem Computer mit einer bestimmten Bildschirmauflösung oder Systemschriftart entworfen wurden, ordnungsgemäß auf einem anderen Computer angezeigt werden, der eine andere Bildschirmauflösung oder Systemschriftart hat. Durch sie wird sichergestellt, dass die Größen des Formulars und seiner Steuerelemente intelligent geändert werden, sodass diese sowohl auf den Computern von Benutzern als auch auf denen von anderen Entwicklern konsistent zu systemeigenen Fenstern sowie anderen Anwendungen sind. Dadurch, dass [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] die automatische Skalierung und visuelle Stile unterstützt, kann für [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen im Vergleich zu systemeigenen Windows-Anwendungen ein konsistentes Aussehen und Verhalten auf dem Computer jedes Benutzers beibehalten werden.
@@ -41,15 +41,7 @@ Während dieser Mechanismus für die meisten Zwecke ausreichend war, brachte er 
 
 - Automatische Skalierung war nur in der <xref:System.Windows.Forms.Form>-Klasse, nicht in der <xref:System.Windows.Forms.ContainerControl>-Klasse implementiert. Daher wurden Benutzersteuerelemente nur ordnungsgemäß skaliert, wenn das Benutzersteuerelement mit derselben Auflösung wie das Formular entworfen und zur Entwurfszeit im Formular positioniert wurde.
 
-- Formulare und deren untergeordneten Steuerelemente konnten nur dann gleichzeitig von mehreren Entwicklern gestaltet werden, wenn die Bildschirmauflösungen ihrer Computer identisch waren. Dies bedingte außerdem, dass das Erben durch ein Formular von der Auflösung abhängig war, die dem übergeordneten Formular zugeordnet war.
-
-> [!NOTE]
-> Mit Ausnahme der extreme Unterschiede in der Anzeige DPIs, insbesondere in modernen Geräte für in-2-1 kann dies mit den aktuellsten Versionen von .NET Framework und Visual Studio auftreten. Behandeln diese in einem Team mit anderen DPI zeigt, stellen Sie sicher, dass Visual Studio immer wird in einem nicht-DPI-fähigen Modus gestartet, damit Windows Forms-Designer immer die Berechnung Layout auf 96 DPI Basen. Legen Sie zu diesem Zweck einfach den folgenden Registrierungsschlüssel, um Visual Studio HighDPI Awareness zu deaktivieren:
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
+- Formulare und deren untergeordneten Steuerelemente konnten nur dann gleichzeitig von mehreren Entwicklern gestaltet werden, wenn die Bildschirmauflösungen ihrer Computer identisch waren. Dies bedingte außerdem, dass das Erben durch ein Formular von der Auflösung abhängig war, die dem übergeordneten Formulars zugeordnet war.
 
 - Diese Skalierung ist nicht mit neueren Layout-Managern kompatibel, die mit [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 eingeführt wurden, z. B. <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel>.
 
