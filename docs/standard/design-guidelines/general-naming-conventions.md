@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc54b8bdc96a5038dc75111d9833e70e7ffd2e9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578039"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36338103"
 ---
 # <a name="general-naming-conventions"></a>Allgemeine Benennungskonventionen
 Dieser Abschnitt beschreibt allgemeine Benennungskonventionen angeben, die auf Wortwahl, beziehen Richtlinien zur Verwendung von Abkürzungen und Akronyme und Empfehlungen zum Vermeiden Sie die Verwendung von sprachspezifischen Namen.  
@@ -85,7 +85,7 @@ Dieser Abschnitt beschreibt allgemeine Benennungskonventionen angeben, die auf W
   
  **Führen Sie ✓** bevorzugen Sie ein Suffix anstelle ein Präfix an, dass eine neue Version einer vorhandenen API hinzufügen.  
   
- Dadurch wird die Ermittlung unterstützt, beim Durchsuchen der Dokumentation, oder Verwenden von Intellisense. Die alte Version der API wird in der Nähe der neuen APIs organisiert werden, da die meisten Browsern und Intellisense Bezeichner in alphabetischer Reihenfolge anzuzeigen.  
+ Dadurch wird die Ermittlung unterstützt, beim Durchsuchen der Dokumentation, oder Verwenden von IntelliSense. Die alte Version der API wird in der Nähe der neuen APIs organisiert werden, da die meisten Browsern und IntelliSense Bezeichner in alphabetischer Reihenfolge anzuzeigen.  
   
  **✓ GGF.** mithilfe eines brandneuen, jedoch aussagekräftigen-Bezeichners, anstatt ein Suffix oder Präfix.  
   
