@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7887c1142b721249526a318257149e419affd967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89989b4b7730f4e252dc846377b385cb359dbee1
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572290"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315120"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Übersicht: Common Language Runtime (CLR)
 
@@ -32,7 +32,7 @@ ms.locfileid: "33572290"
 Compiler und Tools machen die Funktionen der Common Language Runtime verfügbar und ermöglichen das Schreiben von Code, mit dem die Vorteile dieser verwalteten Ausführungsumgebung genutzt werden können. Mit einem Sprachcompiler für die Common Language Runtime entwickelter Code wird "verwalteter Code" genannt. Dieser nutzt Features wie sprachübergreifende Integration, sprachübergreifende Ausnahmebehandlung, erhöhte Sicherheit, Unterstützung bei der Versionserstellung und Bereitstellung, ein vereinfachtes Modell für die Interaktion von Komponenten sowie Debug- und Profilerstellungsdienste.
 
 > [!NOTE]
-> Compiler und Tools sind in der Lage, eine von der Common Language Runtime nutzbare Ausgabe zu erzeugen, da sowohl das Typsystem, das Format der Metadaten als auch die Laufzeitumgebung (das virtuelle Ausführungssystem) von einem öffentlichen Standard definiert werden, dem ECMA-Standard für die Common Language Infrastructure. Weitere Informationen finden Sie unter [ECMA C# und Common Language Infrastructure Standards](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/).
+> Compiler und Tools sind in der Lage, eine von der Common Language Runtime nutzbare Ausgabe zu erzeugen, da sowohl das Typsystem, das Format der Metadaten als auch die Laufzeitumgebung (das virtuelle Ausführungssystem) von einem öffentlichen Standard definiert werden, dem ECMA-Standard für die Common Language Infrastructure. Weitere Informationen finden Sie unter [ECMA C# und Common Language Infrastructure Standards](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
 
 Damit die Common Language Runtime Dienste für verwalteten Code bereitstellen kann, müssen Sprachcompiler Metadaten ausgeben, mit denen die Typen, Member und Verweise im Code beschrieben werden. Metadata werden gemeinsam mit dem Code gespeichert. Jede PE (Portable Executable)-Datei der Common Language Runtime, die geladen werden kann, enthält Metadaten. Die Laufzeit verwendet Metadaten zum Suchen und Laden von Klassen, Anordnen von Instanzen im Speicher, Auflösen von Methodenaufrufen, Generieren von systemeigenem Code, Erzwingen von Sicherheit und zum Festlegen von Begrenzungen im Laufzeitkontext.
 
