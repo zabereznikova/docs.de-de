@@ -1,40 +1,44 @@
 ---
 title: while (C#-Referenz)
-ms.date: 07/20/2015
+ms.date: 05/28/2018
 f1_keywords:
 - while_CSharpKeyword
 - while
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 23c5ca3bb7dc401a894a6c3918fbaec9a9306153
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c082107472ac53d05b3b43dd4d9d8afc508a16cb
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565864"
 ---
-# <a name="while-c-reference"></a><span data-ttu-id="0d2c5-102">while (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="0d2c5-102">while (C# Reference)</span></span>
-<span data-ttu-id="0d2c5-103">Die `while`-Anweisung führt eine Anweisung oder einen Anweisungsblock aus, bis ein bestimmter Ausdruck `false` ergibt.</span><span class="sxs-lookup"><span data-stu-id="0d2c5-103">The `while` statement executes a statement or a block of statements until a specified expression evaluates to `false`.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="0d2c5-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0d2c5-104">Example</span></span>  
- [!code-csharp[csrefKeywordsIteration#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_1.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="0d2c5-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0d2c5-105">Example</span></span>  
- [!code-csharp[csrefKeywordsIteration#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_2.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="0d2c5-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0d2c5-106">Example</span></span>  
- <span data-ttu-id="0d2c5-107">Da der `while`-Ausdruck vor jeder Ausführung der Schleife getestet wird, wird eine `while`-Schleife entweder nie oder mehrmals ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="0d2c5-107">Because the test of the `while` expression takes place before each execution of the loop, a `while` loop executes zero or more times.</span></span> <span data-ttu-id="0d2c5-108">Dies unterscheidet sich von der [do](../../../csharp/language-reference/keywords/do.md)-Schleife, die ein oder mehrmals ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0d2c5-108">This differs from the [do](../../../csharp/language-reference/keywords/do.md) loop, which executes one or more times.</span></span>  
-  
- <span data-ttu-id="0d2c5-109">Eine `while`-Schleife kann beendet werden, wenn eine [break](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) oder [throw](../../../csharp/language-reference/keywords/throw.md)-Anweisung die Steuerung außerhalb der Schleife überträgt.</span><span class="sxs-lookup"><span data-stu-id="0d2c5-109">A `while` loop can be terminated when a [break](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), or [throw](../../../csharp/language-reference/keywords/throw.md) statement transfers control outside the loop.</span></span> <span data-ttu-id="0d2c5-110">Verwenden Sie die [continue](../../../csharp/language-reference/keywords/continue.md)-Anweisung, um die Steuerung an die nächste Iteration zu übertragen, ohne die Schleife zu beenden.</span><span class="sxs-lookup"><span data-stu-id="0d2c5-110">To pass control to the next iteration without exiting the loop, use the [continue](../../../csharp/language-reference/keywords/continue.md) statement.</span></span> <span data-ttu-id="0d2c5-111">Beachten Sie den Unterschied in der Ausgabe in den drei vorherigen Beispielen. Der Unterschied ist abhängig davon, wo `int n` inkrementiert wird.</span><span class="sxs-lookup"><span data-stu-id="0d2c5-111">Notice the difference in output in the three previous examples, depending on where `int n` is incremented.</span></span> <span data-ttu-id="0d2c5-112">Im Beispiel unten wird keine Ausgabe generiert.</span><span class="sxs-lookup"><span data-stu-id="0d2c5-112">In the example below no output is generated.</span></span>  
-  
- [!code-csharp[csrefKeywordsIteration#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_3.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="0d2c5-113">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="0d2c5-113">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="0d2c5-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0d2c5-114">See Also</span></span>  
- [<span data-ttu-id="0d2c5-115">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="0d2c5-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="0d2c5-116">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="0d2c5-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="0d2c5-117">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="0d2c5-117">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="0d2c5-118">while-Anweisung (C++)</span><span class="sxs-lookup"><span data-stu-id="0d2c5-118">while Statement (C++)</span></span>](/cpp/cpp/while-statement-cpp)  
- [<span data-ttu-id="0d2c5-119">Iterationsanweisungen</span><span class="sxs-lookup"><span data-stu-id="0d2c5-119">Iteration Statements</span></span>](../../../csharp/language-reference/keywords/iteration-statements.md)
+# <a name="while-c-reference"></a><span data-ttu-id="e3dd5-102">while (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="e3dd5-102">while (C# Reference)</span></span>
+
+<span data-ttu-id="e3dd5-103">Die Anweisung `while` führt eine Anweisung oder einen Anweisungsblock aus, während ein angegebener boolescher Ausdruck `true` ergibt.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-103">The `while` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span> <span data-ttu-id="e3dd5-104">Da der Ausdruck vor jeder Ausführung der Schleife ausgewertet wird, wird eine `while`-Schleife entweder nie oder mehrmals ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-104">Because that expression is evaluated before each execution of the loop, a `while` loop executes zero or more times.</span></span> <span data-ttu-id="e3dd5-105">Dies unterscheidet sich von der [do](do.md)-Schleife, die ein oder mehrmals ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-105">This differs from the [do](do.md) loop, which executes one or more times.</span></span>
+
+<span data-ttu-id="e3dd5-106">Sie können zu jedem Zeitpunkt im Anweisungsblock `while` aus der Schleife ausbrechen, indem Sie die Anweisung [break](break.md) verwenden.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-106">At any point within the `while` statement block, you can break out of the loop by using the [break](break.md) statement.</span></span>
+
+<span data-ttu-id="e3dd5-107">Sie können mithilfe der [continue](continue.md)-Anweisung direkt die Auswertung des `while`-Ausdrucks ausführen.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-107">You can step directly to the evaluation of the `while` expression by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="e3dd5-108">Wenn der Ausdruck `true` ergibt, wird die Ausführung bei der ersten Anweisung in der Schleife fortgesetzt.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-108">If the expression evaluates to `true`, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="e3dd5-109">Andernfalls wird die Ausführung mit der ersten Anweisung nach der Schleife ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-109">Otherwise, execution continues at the first statement after the loop.</span></span>
+
+<span data-ttu-id="e3dd5-110">Sie können eine `while`-Schleife auch mit den Anweisungen [goto](goto.md), [return](return.md) oder [throw](throw.md) beenden.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-110">You also can exit a `while` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+
+## <a name="example"></a><span data-ttu-id="e3dd5-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e3dd5-111">Example</span></span>
+
+<span data-ttu-id="e3dd5-112">Im folgenden Beispiel wird die Verwendung der `while`-Anweisung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-112">The following example shows the usage of the `while` statement.</span></span> <span data-ttu-id="e3dd5-113">Klicken Sie auf **Run** (Ausführen), um den Beispielcode auszuführen.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-113">Select **Run** to run the example code.</span></span> <span data-ttu-id="e3dd5-114">Danach können Sie Änderungen am Code vornehmen und ihn erneut ausführen.</span><span class="sxs-lookup"><span data-stu-id="e3dd5-114">After that you can modify the code and run it again.</span></span>
+
+[!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
+
+## <a name="c-language-specification"></a><span data-ttu-id="e3dd5-115">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="e3dd5-115">C# language specification</span></span>
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="e3dd5-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e3dd5-116">See also</span></span>
+
+ [<span data-ttu-id="e3dd5-117">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="e3dd5-117">C# Reference</span></span>](../index.md)  
+ [<span data-ttu-id="e3dd5-118">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="e3dd5-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+ [<span data-ttu-id="e3dd5-119">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="e3dd5-119">C# Keywords</span></span>](index.md)  
+ [<span data-ttu-id="e3dd5-120">while-Anweisung (C++)</span><span class="sxs-lookup"><span data-stu-id="e3dd5-120">while Statement (C++)</span></span>](/cpp/cpp/while-statement-cpp)  
+ [<span data-ttu-id="e3dd5-121">Iterationsanweisungen</span><span class="sxs-lookup"><span data-stu-id="e3dd5-121">Iteration Statements</span></span>](iteration-statements.md)  
+ [<span data-ttu-id="e3dd5-122">do-Anweisung</span><span class="sxs-lookup"><span data-stu-id="e3dd5-122">do statement</span></span>](do.md)  

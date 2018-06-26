@@ -3,67 +3,136 @@ title: dotnet nuget delete-Befehl – .NET Core-CLI
 description: Der dotnet-nuget-delete-Befehl löscht ein Paket vom Server oder hebt dessen Auflistung auf.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 639ade54bfed5eb2de89bdb3b7f451393b4be187
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/01/2018
+ms.openlocfilehash: 1b58136d0bc04947f0a5baba320e5e6b3e45e2f1
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728413"
 ---
-# <a name="dotnet-nuget-delete"></a><span data-ttu-id="2c9e1-103">dotnet nuget delete</span><span class="sxs-lookup"><span data-stu-id="2c9e1-103">dotnet nuget delete</span></span>
+# <a name="dotnet-nuget-delete"></a><span data-ttu-id="dd2b2-103">dotnet nuget delete</span><span class="sxs-lookup"><span data-stu-id="dd2b2-103">dotnet nuget delete</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="2c9e1-104">name</span><span class="sxs-lookup"><span data-stu-id="2c9e1-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="dd2b2-104">name</span><span class="sxs-lookup"><span data-stu-id="dd2b2-104">Name</span></span>
 
-<span data-ttu-id="2c9e1-105">`dotnet nuget delete` – Löscht ein Paket vom Server oder hebt dessen Auflistung auf.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-105">`dotnet nuget delete` - Deletes or unlists a package from the server.</span></span>
+<span data-ttu-id="dd2b2-105">`dotnet nuget delete` – Löscht ein Paket vom Server oder hebt dessen Auflistung auf.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-105">`dotnet nuget delete` - Deletes or unlists a package from the server.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="2c9e1-106">Übersicht</span><span class="sxs-lookup"><span data-stu-id="2c9e1-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="dd2b2-106">Übersicht</span><span class="sxs-lookup"><span data-stu-id="dd2b2-106">Synopsis</span></span>
 
-`dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [-s|--source] [--non-interactive] [-k|--api-key] [--force-english-output] [-h|--help]`
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="dd2b2-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="dd2b2-107">.NET Core 2.1</span></span>](#tab/netcore21)
+```
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--no-service-endpoint]
+    [--non-interactive] [-s|--source]
+dotnet nuget delete [-h|--help]
+```
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="dd2b2-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="dd2b2-108">.NET Core 2.0</span></span>](#tab/netcore20)
+```
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
+    [-s|--source]
+dotnet nuget delete [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="dd2b2-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="dd2b2-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+```
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
+    [-s|--source]
+dotnet nuget delete [-h|--help]
+```
+---
 
-## <a name="description"></a><span data-ttu-id="2c9e1-107">description</span><span class="sxs-lookup"><span data-stu-id="2c9e1-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="dd2b2-110">description</span><span class="sxs-lookup"><span data-stu-id="dd2b2-110">Description</span></span>
 
-<span data-ttu-id="2c9e1-108">Der `dotnet nuget delete`-Befehl löscht ein Paket vom Server oder hebt dessen Auflistung auf.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-108">The `dotnet nuget delete` command deletes or unlists a package from the server.</span></span> <span data-ttu-id="2c9e1-109">Für [nuget.org](https://www.nuget.org/) wird die Auflistung des Pakets aufgehoben.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-109">For [nuget.org](https://www.nuget.org/), the action is to unlist the package.</span></span>
+<span data-ttu-id="dd2b2-111">Der `dotnet nuget delete`-Befehl löscht ein Paket vom Server oder hebt dessen Auflistung auf.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-111">The `dotnet nuget delete` command deletes or unlists a package from the server.</span></span> <span data-ttu-id="dd2b2-112">Für [nuget.org](https://www.nuget.org/) wird die Auflistung des Pakets aufgehoben.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-112">For [nuget.org](https://www.nuget.org/), the action is to unlist the package.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="2c9e1-110">Argumente</span><span class="sxs-lookup"><span data-stu-id="2c9e1-110">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="dd2b2-113">Argumente</span><span class="sxs-lookup"><span data-stu-id="dd2b2-113">Arguments</span></span>
 
 `PACKAGE_NAME`
 
-<span data-ttu-id="2c9e1-111">Zu löschendes Paket.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-111">Package to delete.</span></span>
+<span data-ttu-id="dd2b2-114">Name/ID des zu löschenden Pakets.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-114">Name/ID of the package to delete.</span></span>
 
 `PACKAGE_VERSION`
 
-<span data-ttu-id="2c9e1-112">Version des zu löschenden Pakets.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-112">Version of the package to delete.</span></span>
+<span data-ttu-id="dd2b2-115">Version des zu löschenden Pakets.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-115">Version of the package to delete.</span></span>
 
-## <a name="options"></a><span data-ttu-id="2c9e1-113">Optionen</span><span class="sxs-lookup"><span data-stu-id="2c9e1-113">Options</span></span>
+## <a name="options"></a><span data-ttu-id="dd2b2-116">Optionen</span><span class="sxs-lookup"><span data-stu-id="dd2b2-116">Options</span></span>
 
-`-h|--help`
-
-<span data-ttu-id="2c9e1-114">Druckt eine kurze Hilfe für den Befehl.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-114">Prints out a short help for the command.</span></span>
-
-`-s|--source <SOURCE>`
-
-<span data-ttu-id="2c9e1-115">Gibt die Server-URL an.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-115">Specifies the server URL.</span></span> <span data-ttu-id="2c9e1-116">Unterstützte URLs für „nuget.org“ sind u.a. `http://www.nuget.org`, `http://www.nuget.org/api/v3` und `http://www.nuget.org/api/v2/package`.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-116">Supported URLs for nuget.org include `http://www.nuget.org`, `http://www.nuget.org/api/v3`, and `http://www.nuget.org/api/v2/package`.</span></span> <span data-ttu-id="2c9e1-117">Ersetzen Sie für private Feeds den Hostnamen (z.B. `%hostname%/api/v3`).</span><span class="sxs-lookup"><span data-stu-id="2c9e1-117">For private feeds, substitute the host name (for example, `%hostname%/api/v3`).</span></span>
-
-`--non-interactive`
-
-<span data-ttu-id="2c9e1-118">Fordert nicht zu Eingaben oder Bestätigungen des Benutzers auf.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-118">Doesn't prompt for user input or confirmations.</span></span>
-
-`-k|--api-key <API_KEY>`
-
-<span data-ttu-id="2c9e1-119">Der API-Schlüssel für den Server.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-119">The API key for the server.</span></span>
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="dd2b2-117">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="dd2b2-117">.NET Core 2.1</span></span>](#tab/netcore21)
 
 `--force-english-output`
 
-<span data-ttu-id="2c9e1-120">Erzwingt, dass die Befehlszeilenausgabe auf Englisch ist.</span><span class="sxs-lookup"><span data-stu-id="2c9e1-120">Forces command-line output in English.</span></span>
+ <span data-ttu-id="dd2b2-118">Erzwingt die Ausführung der Anwendung mithilfe einer invarianten Kultur, die auf Englisch basiert.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-118">Forces the application to run using an invariant, English-based culture.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="2c9e1-121">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2c9e1-121">Examples</span></span>
+`-h|--help`
 
-<span data-ttu-id="2c9e1-122">Löscht Version 1.0 des Pakets `Microsoft.AspNetCore.Mvc`:</span><span class="sxs-lookup"><span data-stu-id="2c9e1-122">Deletes version 1.0 of package `Microsoft.AspNetCore.Mvc`:</span></span>
+<span data-ttu-id="dd2b2-119">Druckt eine kurze Hilfe für den Befehl.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-119">Prints out a short help for the command.</span></span>
 
-`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0` 
+`-k|--api-key <API_KEY>`
 
-<span data-ttu-id="2c9e1-123">Löscht Version 1.0 des Pakets `Microsoft.AspNetCore.Mvc`, wobei der Benutzer nicht zur Eingabe von Anmeldeinformationen oder zu anderen Eingaben aufgefordert wird:</span><span class="sxs-lookup"><span data-stu-id="2c9e1-123">Deletes version 1.0 of package `Microsoft.AspNetCore.Mvc`, not prompting user for credentials or other input:</span></span>
+<span data-ttu-id="dd2b2-120">Der API-Schlüssel für den Server.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-120">The API key for the server.</span></span>
+
+<span data-ttu-id="dd2b2-121">`--no-service-endpoint` fügt „api/v2/package“ nicht der Quell-URL an.fügen</span><span class="sxs-lookup"><span data-stu-id="dd2b2-121">`--no-service-endpoint` Doesn't append "api/v2/package" to the source URL.</span></span>
+
+`--non-interactive`
+
+<span data-ttu-id="dd2b2-122">Fordert nicht zu Eingaben oder Bestätigungen des Benutzers auf.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-122">Doesn't prompt for user input or confirmations.</span></span>
+
+`-s|--source <SOURCE>`
+
+<span data-ttu-id="dd2b2-123">Gibt die Server-URL an.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-123">Specifies the server URL.</span></span> <span data-ttu-id="dd2b2-124">Unterstützte URLs für „nuget.org“ sind u.a. `http://www.nuget.org`, `http://www.nuget.org/api/v3` und `http://www.nuget.org/api/v2/package`.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-124">Supported URLs for nuget.org include `http://www.nuget.org`, `http://www.nuget.org/api/v3`, and `http://www.nuget.org/api/v2/package`.</span></span> <span data-ttu-id="dd2b2-125">Ersetzen Sie für private Feeds den Hostnamen (z.B. `%hostname%/api/v3`).</span><span class="sxs-lookup"><span data-stu-id="dd2b2-125">For private feeds, replace the host name (for example, `%hostname%/api/v3`).</span></span>
+
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="dd2b2-126">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="dd2b2-126">.NET Core 2.0</span></span>](#tab/netcore20)
+
+`--force-english-output`
+
+ <span data-ttu-id="dd2b2-127">Erzwingt die Ausführung der Anwendung mithilfe einer invarianten Kultur, die auf Englisch basiert.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-127">Forces the application to run using an invariant, English-based culture.</span></span>
+
+`-h|--help`
+
+<span data-ttu-id="dd2b2-128">Druckt eine kurze Hilfe für den Befehl.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-128">Prints out a short help for the command.</span></span>
+
+`-k|--api-key <API_KEY>`
+
+<span data-ttu-id="dd2b2-129">Der API-Schlüssel für den Server.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-129">The API key for the server.</span></span>
+
+`--non-interactive`
+
+<span data-ttu-id="dd2b2-130">Fordert nicht zu Eingaben oder Bestätigungen des Benutzers auf.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-130">Doesn't prompt for user input or confirmations.</span></span>
+
+`-s|--source <SOURCE>`
+
+<span data-ttu-id="dd2b2-131">Gibt die Server-URL an.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-131">Specifies the server URL.</span></span> <span data-ttu-id="dd2b2-132">Unterstützte URLs für „nuget.org“ sind u.a. `http://www.nuget.org`, `http://www.nuget.org/api/v3` und `http://www.nuget.org/api/v2/package`.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-132">Supported URLs for nuget.org include `http://www.nuget.org`, `http://www.nuget.org/api/v3`, and `http://www.nuget.org/api/v2/package`.</span></span> <span data-ttu-id="dd2b2-133">Ersetzen Sie für private Feeds den Hostnamen (z.B. `%hostname%/api/v3`).</span><span class="sxs-lookup"><span data-stu-id="dd2b2-133">For private feeds, replace the host name (for example, `%hostname%/api/v3`).</span></span>
+
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="dd2b2-134">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="dd2b2-134">.NET Core 1.x</span></span>](#tab/netcore1x)
+
+`--force-english-output`
+
+ <span data-ttu-id="dd2b2-135">Erzwingt die Ausführung der Anwendung mithilfe einer invarianten Kultur, die auf Englisch basiert.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-135">Forces the application to run using an invariant, English-based culture.</span></span>
+
+`-h|--help`
+
+<span data-ttu-id="dd2b2-136">Druckt eine kurze Hilfe für den Befehl.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-136">Prints out a short help for the command.</span></span>
+
+`-k|--api-key <API_KEY>`
+
+<span data-ttu-id="dd2b2-137">Der API-Schlüssel für den Server.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-137">The API key for the server.</span></span>
+
+`--non-interactive`
+
+<span data-ttu-id="dd2b2-138">Fordert nicht zu Eingaben oder Bestätigungen des Benutzers auf.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-138">Doesn't prompt for user input or confirmations.</span></span>
+
+`-s|--source <SOURCE>`
+
+<span data-ttu-id="dd2b2-139">Gibt die Server-URL an.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-139">Specifies the server URL.</span></span> <span data-ttu-id="dd2b2-140">Unterstützte URLs für „nuget.org“ sind u.a. `http://www.nuget.org`, `http://www.nuget.org/api/v3` und `http://www.nuget.org/api/v2/package`.</span><span class="sxs-lookup"><span data-stu-id="dd2b2-140">Supported URLs for nuget.org include `http://www.nuget.org`, `http://www.nuget.org/api/v3`, and `http://www.nuget.org/api/v2/package`.</span></span> <span data-ttu-id="dd2b2-141">Ersetzen Sie für private Feeds den Hostnamen (z.B. `%hostname%/api/v3`).</span><span class="sxs-lookup"><span data-stu-id="dd2b2-141">For private feeds, replace the host name (for example, `%hostname%/api/v3`).</span></span>
+
+---
+
+## <a name="examples"></a><span data-ttu-id="dd2b2-142">Beispiele</span><span class="sxs-lookup"><span data-stu-id="dd2b2-142">Examples</span></span>
+
+<span data-ttu-id="dd2b2-143">Löscht Version 1.0 des Pakets `Microsoft.AspNetCore.Mvc`:</span><span class="sxs-lookup"><span data-stu-id="dd2b2-143">Deletes version 1.0 of package `Microsoft.AspNetCore.Mvc`:</span></span>
+
+`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0`
+
+<span data-ttu-id="dd2b2-144">Löscht Version 1.0 des Pakets `Microsoft.AspNetCore.Mvc`, wobei der Benutzer nicht zur Eingabe von Anmeldeinformationen oder zu anderen Eingaben aufgefordert wird:</span><span class="sxs-lookup"><span data-stu-id="dd2b2-144">Deletes version 1.0 of package `Microsoft.AspNetCore.Mvc`, not prompting user for credentials or other input:</span></span>
 
 `dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive`
