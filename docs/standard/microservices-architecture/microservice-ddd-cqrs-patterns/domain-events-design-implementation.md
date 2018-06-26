@@ -4,11 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Dom
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 424408ca095eadeda33690277dcf38bac923e29f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697195"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -151,7 +152,7 @@ public abstract class Entity
 
 Wenn Sie ein Ereignis auslösen möchten, fügen Sie es einfach der Ereignissammlung aus Code auf jeder Methode der Aggregat-Stamm-Entität hinzu.
 
-Der folgende Code ist Teil von [Order agregate-root at eShopOnContainers (Aggregatstamm von Bestellung bei eShopOnContainers)](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) und enthält ein Beispiel:
+Der folgende Code ist Teil von [Order aggregate-root at eShopOnContainers (Aggregatstamm von Bestellung bei eShopOnContainers)](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) und enthält ein Beispiel:
 
 ```csharp
 var orderStartedDomainEvent = new OrderStartedDomainEvent(this, //Order object

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: b6b7dc0a4d3970ddfbbb6635ccebbbd5b75671e4
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 7613590686f7f7ec6439da4a2bb672e524ab01e8
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549376"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565705"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (C#-Referenz)
 
@@ -23,7 +23,7 @@ Die Anweisung `foreach` führt eine Anweisung oder einen Block von Anweisungen f
 - Er weist die öffentliche parameterlose Methode `GetEnumerator` auf, deren Rückgabetyp entweder Klasse, Struktur oder Schnittstellentyp ist.
 - Der Rückgabetyp der Methode `GetEnumerator` weist die öffentliche Eigenschaft `Current` und die öffentliche parameterlose Methode `MoveNext` auf, deren Rückgabetyp <xref:System.Boolean> ist.
 
-Sie können die Schleife an jedem Punkt im `foreach`-Anweisungsblock mit dem Schlüsselwort [break](break.md) unterbrechen oder mit dem Schlüsselwort [continue](continue.md) direkt zum nächsten Durchlauf der Schleife springen. Sie können eine `foreach`-Schleife auch mit den Anweisungen [goto](goto.md), [return](return.md) oder [throw](throw.md) beenden.
+Sie können die Schleife an jedem Punkt im `foreach`-Anweisungsblock mit der Anweisung [break](break.md) unterbrechen oder mit der Anweisung [continue](continue.md) direkt zum nächsten Durchlauf der Schleife springen. Sie können eine `foreach`-Schleife auch mit den Anweisungen [goto](goto.md), [return](return.md) oder [throw](throw.md) beenden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -37,7 +37,7 @@ Im nächste Beispiel wird die Anweisung `foreach` mit einer Instanz des Typs <xr
 
 [!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

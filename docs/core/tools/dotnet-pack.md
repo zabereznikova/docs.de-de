@@ -3,12 +3,13 @@ title: dotnet pack-Befehl – .NET Core-CLI
 description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 6e6136e22c4bac201cfa0e4af321329432c04936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696818"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -21,16 +22,15 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>Übersicht
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
+    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 ---
@@ -41,7 +41,7 @@ Der Befehl `dotnet pack` erstellt das Projekt und NuGet-Pakete. Das Ergebnis die
 
 NuGet-Abhängigkeiten des gepackten Projekts werden der Datei *nuspec* hinzugefügt. Sie werden ordnungsgemäß aufgelöst, wenn das Paket installiert wird. Verweise zwischen Projekten werden innerhalb des Projekts nicht gepackt. Derzeit benötigen Sie ein Paket pro Projekt, wenn Sie Abhängigkeiten zwischen Projekten haben.
 
-`dotnet pack` erstellt standardmäßig zuerst das Projekt. Wenn Sie dieses Verhalten vermeiden möchten, übergeben Sie die Option `--no-build`. Dies ist bei Buildszenarios der Continuous Integration (CI) oft hilfreich, bei denen Sie wissen, dass der Code kürzlich erstellt wurde.
+`dotnet pack` erstellt standardmäßig zuerst das Projekt. Wenn Sie dieses Verhalten vermeiden möchten, übergeben Sie die Option `--no-build`. Diese Option ist bei Buildszenarios der Continuous Integration (CI) oft hilfreich, bei denen Sie wissen, dass der Code kürzlich erstellt wurde.
 
 Sie können dem `dotnet pack`-Befehl MSBuild-Eigenschaften für den Packvorgang bereitstellen. Weitere Informationen finden Sie in den [NuGet-Metadateneigenschaften](csproj.md#nuget-metadata-properties) und in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference). Der Abschnitt [Beispiele](#examples) enthält Informationen darüber, wie die MSBuild-Eigenschaft „/p“ für verschiedene Szenarien verwendet wird.
 
@@ -51,7 +51,7 @@ Sie können dem `dotnet pack`-Befehl MSBuild-Eigenschaften für den Packvorgang 
 
 `PROJECT`
 
-Das zu packende Projekt. Es ist entweder ein Pfad zu einer [csproj-Datei](csproj.md) oder zu einem Verzeichnis. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis angegeben.
+Das zu packende Projekt. Es ist entweder ein Pfad zu einer [csproj-Datei](csproj.md) oder zu einem Verzeichnis. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis gewählt.
 
 ## <a name="options"></a>Optionen
 
@@ -61,7 +61,9 @@ Das zu packende Projekt. Es ist entweder ein Pfad zu einer [csproj-Datei](csproj
 
 Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
 
-`--force` erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dies entspricht dem Löschen der Datei *project.assets.json*.
+`--force`
+
+Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
 
 `-h|--help`
 
@@ -77,7 +79,7 @@ Generiert die Symbole `nupkg`.
 
 `--no-build`
 
-Erstellt das Projekt nicht vor dem Packen.
+Erstellt das Projekt nicht vor dem Packen. Das `--no-restore`-Flag wird implizit festgelegt.
 
 `--no-dependencies`
 
@@ -85,13 +87,13 @@ Ignoriert Verweise zwischen Projekten und stellt nur das zum Erstellen angegeben
 
 `--no-restore`
 
-Führt kein implizites Wiederherstellen durch, wenn der Befehl ausgeführt wird
+Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Platziert die erstellten Pakete in das angegebene Verzeichnis.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+`--runtime <RUNTIME_IDENTIFIER>`
 
 Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
 

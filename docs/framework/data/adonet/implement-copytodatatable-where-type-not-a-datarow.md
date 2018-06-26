@@ -1,30 +1,37 @@
 ---
-title: 'Vorgehensweise: Implementieren von CopyToDataTable&lt;T&gt; , in dem der generische Typ T ist keiner DataRow'
+title: 'Vorgehensweise: Implementieren von CopyToDataTable&lt;T&gt; mit einem anderen generischen Typ T als DataRow'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: 77adcd1f2070ba3ccfe036d37384a7a855ebf132
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 106442c26f0bb02cf57dcc5d8b1ac534c70320ac
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753512"
 ---
-# <a name="how-to-implement-copytodatatablelttgt-where-the-generic-type-t-is-not-a-datarow"></a>Vorgehensweise: Implementieren von CopyToDataTable&lt;T&gt; , in dem der generische Typ T ist keiner DataRow
+# <a name="how-to-implement-copytodatatablelttgt-where-the-generic-type-t-is-not-a-datarow"></a>Vorgehensweise: Implementieren von CopyToDataTable&lt;T&gt; mit einem anderen generischen Typ T als DataRow
 Das <xref:System.Data.DataTable>-Objekt wird oft für die Datenbindung verwendet. Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode kopiert die Ergebnisse einer Abfrage in eine <xref:System.Data.DataTable>, die dann für die Datenbindung verwendet werden kann. Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methoden arbeiten allerdings nur mit einer <xref:System.Collections.Generic.IEnumerable%601>-Quelle, bei der der generische Parameter `T` den Typ <xref:System.Data.DataRow> aufweist. Obwohl dies hilfreich ist, können Tabellen dabei nicht aus einer Sequenz von Skalartypen, aus Abfragen, die anonyme Typen darstellen oder aus Abfragen, die Tabellenjoins durchführen, erstellt werden.  
   
  In diesem Thema wird beschrieben, wie zwei benutzerdefinierte `CopyToDataTable<T>`-Erweiterungsmethoden implementiert werden, die einen generischen Parameter `T` annehmen, der einen anderen Typ als <xref:System.Data.DataRow> aufweist. Die Logik zum Erstellen einer <xref:System.Data.DataTable> aus einer <xref:System.Collections.Generic.IEnumerable%601>-Quelle ist in der `ObjectShredder<T>`-Klasse enthalten, die wiederum von zwei überladenen `CopyToDataTable<T>`-Erweiterungsmethoden umschlossen wird. Die `Shred`-Methode der `ObjectShredder<T>`-Klasse gibt die gefüllte <xref:System.Data.DataTable> zurück und nimmt drei Eingabeparameter an: eine <xref:System.Collections.Generic.IEnumerable%601>-Quelle, eine <xref:System.Data.DataTable> und eine <xref:System.Data.LoadOption>-Enumeration. Das anfängliche Schema der zurückgegebenen <xref:System.Data.DataTable> basiert auf dem Schema des Typs `T`. Wenn eine vorhandene Tabelle als Eingabe bereitgestellt wird, muss deren Schema mit dem Schema des Typs `T` übereinstimmen. Jede öffentliche Eigenschaft und jedes Feld des Typs `T` wird in eine <xref:System.Data.DataColumn> in der zurückgegebenen Tabelle konvertiert. Wenn die Quellsequenz einen von `T` abgeleiteten Typ enthält, wird das zurückgegebene Tabellenschema um zusätzliche öffentliche Eigeschaften bzw. Felder erweitert.  
   
- Beispiele für die Verwendung der benutzerdefinierten `CopyToDataTable<T>` Methoden, finden Sie unter [Erstellen einer DataTable aus einer Abfrage](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md).  
+ Beispiele für die Verwendung der benutzerdefinierten `CopyToDataTable<T>`-Methoden finden Sie unter [Creating a DataTable From a Query (Erstellen einer DataTable aus einer Abfrage)](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md).  
   
-### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a>Zum Implementieren von benutzerdefinierten CopyToDataTable\<T > Methoden in Ihrer Anwendung  
+### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a>So implementieren Sie die benutzerdefinierte CopyToDataTable\<T>-Methode in Ihrer Anwendung  
   
 1.  Implementieren Sie die `ObjectShredder<T>`-Klasse, um eine <xref:System.Data.DataTable> aus einer <xref:System.Collections.Generic.IEnumerable%601>-Quelle zu erstellen:  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#objectshredderclass)]
      [!code-vb[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#objectshredderclass)]  
-  
+
+    Das obige Beispiel setzt voraus, dass die Eigenschaften von `DataColumn` keine Nullable-Typen sind. Verwenden Sie zum Behandeln von Eigenschaften mit Nullable-Typen den folgenden Code:
+
+    ```csharp
+    DataColumn dc = table.Columns.Contains(p.Name) ? table.Columns[p.Name] : table.Columns.Add(p.Name, Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType);
+    ```
+
 2.  Implementieren Sie die benutzerdefinierten `CopyToDataTable<T>`-Erweiterungsmethoden in einer Klasse:  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#customcopytodatatablemethods)]

@@ -3,12 +3,13 @@ title: dotnet build-Befehl – .NET Core-CLI
 description: Der dotnet build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 4fc93e013c271fdf856f5c73affffd3880d0dbea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697130"
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -44,9 +45,9 @@ Das Erstellen erfordert die *project.assets.json*-Datei, die die Abhängigkeiten
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-`dotnet build` verwendet MSBuild, um das Projekt zu erstellen und unterstützt daher parallele und inkrementelle Builds. Weitere Informationen finden Sie unter [Inkrementelle Builds](/visualstudio/msbuild/incremental-builds).
+`dotnet build` verwendet MSBuild zum Erstellen des Projekts und unterstützt daher parallele und inkrementelle Builds. Weitere Informationen finden Sie unter [Incremental Builds](/visualstudio/msbuild/incremental-builds) (Inkrementelle Builds).
 
-Zusätzlich zu diesen Optionen akzeptiert der `dotnet build`-Befehl MSBuild-Optionen, wie z.B. `/p` zum Festlegen von Eigenschaften oder `/l` zum Definieren eines Protokolls. Erfahren Sie mehr über diese Optionen in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference). 
+Zusätzlich zu diesen Optionen akzeptiert der `dotnet build`-Befehl MSBuild-Optionen, wie z.B. `/p` zum Festlegen von Eigenschaften oder `/l` zum Definieren eines Protokolls. Weitere Informationen zu diesen Optionen finden Sie in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference).
 
 Ob das Projekt ausführbar ist oder nicht, richtet sich nach der `<OutputType>`-Eigenschaft in der Projektdatei. Das folgende Beispiel zeigt ein Projekt, das ausführbaren Code erzeugt:
 
@@ -56,7 +57,7 @@ Ob das Projekt ausführbar ist oder nicht, richtet sich nach der `<OutputType>`-
 </PropertyGroup>
 ```
 
-Lassen Sie die `<OutputType>`-Eigenschaft weg, um eine Bibliothek zu erstellen. Der Hauptunterschied in der Buildausgabe ist, dass die IL-DLL für eine Bibliothek keine Einstiegspunkte enthält und nicht ausgeführt werden kann. 
+Lassen Sie die `<OutputType>`-Eigenschaft weg, um eine Bibliothek zu erstellen. Der Hauptunterschied in der Buildausgabe ist, dass die IL-DLL für eine Bibliothek keine Einstiegspunkte enthält und nicht ausgeführt werden kann.
 
 ## <a name="arguments"></a>Argumente
 
@@ -78,7 +79,7 @@ Kompiliert für ein bestimmtes [Framework](../../standard/frameworks.md). Das Fr
 
 `--force`
 
- Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dies entspricht dem Löschen der Datei *project.assets.json*.
+Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
 
 `-h|--help`
 
@@ -86,15 +87,15 @@ Druckt eine kurze Hilfe für den Befehl.
 
 `--no-dependencies`
 
-Ignoriert Verweise zwischen Projekten (P2P) und erstellt nur das zum Erstellen angegebene Stammprojekt.
+Ignoriert Verweise zwischen Projekten (P2P) und erstellt nur das angegebene Stammprojekt.
 
 `--no-incremental`
 
-Markiert den Build als unsicher für inkrementelle Builds. Deaktiviert die inkrementelle Kompilierung und erzwingt eine komplette Neuerstellung des Abhängigkeitsdiagramms des Projekts.
+Markiert den Build als unsicher für inkrementelle Builds. Das Flag deaktiviert die inkrementelle Kompilierung und erzwingt eine komplette Neuerstellung des Abhängigkeitsdiagramms des Projekts.
 
 `--no-restore`
 
-Führt ekine implizite Wiederherstellung während der Projekterstellung durch.
+Führt keine implizite Wiederherstellung während der Projekterstellung durch.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -128,11 +129,11 @@ Druckt eine kurze Hilfe für den Befehl.
 
 `--no-dependencies`
 
-Ignoriert Verweise zwischen Projekten (P2P) und erstellt nur das zum Erstellen angegebene Stammprojekt.
+Ignoriert Verweise zwischen Projekten (P2P) und erstellt nur das angegebene Stammprojekt.
 
 `--no-incremental`
 
-Markiert den Build als unsicher für inkrementelle Builds. Deaktiviert die inkrementelle Kompilierung und erzwingt eine komplette Neuerstellung des Abhängigkeitsdiagramms des Projekts.
+Markiert den Build als unsicher für inkrementelle Builds. Das Flag deaktiviert die inkrementelle Kompilierung und erzwingt eine komplette Neuerstellung des Abhängigkeitsdiagramms des Projekts.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 

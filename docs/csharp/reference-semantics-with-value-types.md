@@ -3,26 +3,19 @@ title: Verweissemantik mit Werttypen
 description: Grundlegendes zu Sprachfeatures, die das Kopieren von Strukturen auf ein Minimum reduzieren
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3c53a426a6adb37f5091e4ad61835fef6c9f7729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0646a7fbc01ed76883fb6b16ce04006049ef054a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566279"
 ---
 # <a name="reference-semantics-with-value-types"></a>Verweissemantik mit Werttypen
 
 Das Verwenden von Werttypen hat den Vorteil, dass sie häufig Heapzuweisungen vermeiden.
 Ihr Nachteil ist, dass sie als Wert kopiert werden. Dies macht es schwieriger, Algorithmen zu optimieren, die mit großen Datenmengen arbeiten. Neue Sprachfeatures in C# 7.2 bieten Mechanismen, die eine Semantik zur Übergabe als Verweis mit Werttypen ermöglichen. Wenn Sie diese Features geschickt einsetzen, können Sie sowohl Speicherbelegungen als auch Kopiervorgänge minimieren. In diesem Artikel werden diese neuen Features untersucht.
 
-Viele der Codebeispiele in diesem Artikel veranschaulichen die neuen Features von C# 7.2. Um diese Features nutzen zu können, müssen Sie Ihr Projekt für die Verwendung von C# 7.2 oder höher konfigurieren. Sie können zur Auswahl Visual Studio verwenden. Klicken Sie für jedes Projekt im Menü **Projekt** auf **Eigenschaften**. Wählen Sie die Registerkarte **Build** aus, und klicken Sie auf **Erweitert**. Hier können Sie die Sprachversion konfigurieren. Wählen Sie entweder „7.2“ oder „Neueste“.  Alternativ können Sie die *CSPROJ*-Datei bearbeiten und den folgenden Knoten hinzufügen:
-
-```XML
-  <PropertyGroup>
-    <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-```
-
-Sie können als Wert entweder „7.2“ oder „latest“ verwenden.
+Viele der Codebeispiele in diesem Artikel veranschaulichen die neuen Features von C# 7.2. Um diese Features nutzen zu können, müssen Sie Ihr Projekt für die Verwendung von C# 7.2 oder höher konfigurieren. Weitere Informationen zum Festlegen der Sprachversion finden Sie unter [configure the language version (Konfigurieren der Sprachversion)](language-reference/configure-language-version.md).
 
 ## <a name="passing-arguments-by-readonly-reference"></a>Übergeben von Argumenten als schreibgeschützte Verweise
 

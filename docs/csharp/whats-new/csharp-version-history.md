@@ -3,11 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696974"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C# #
 
@@ -98,7 +99,7 @@ Mit den Versionen 3.0 und 5.0 wurde C# um einige beeindruckende Features in eine
 - [Nullpropagator](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
 - [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md)
 - [nameof-Operator](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [Wörterbuchinitialisierer](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
+- [Indexinitialisierer](csharp-6.md#index-initializers)
 
 Jedes dieser Features ist auf seine eigene Weise interessant. Wenn Sie die Features jedoch zusammen betrachten, erkennen Sie ein interessantes Muster. In dieser Version von C# wurden Codebausteine eliminiert, um den Code knapper und besser lesbar zu machen. Für Anhänger von klarem, einfachem Code war diese Sprachversion ein großer Gewinn.
 

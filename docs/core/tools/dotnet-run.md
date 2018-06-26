@@ -3,12 +3,13 @@ title: dotnet run-Befehl – .NET Core-CLI
 description: Der dotnet run-Befehl bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: b45d6772cabd6be90ea8e8b5da57c16692b20322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 82c6e44e52aa6af7044edf72fd6e57b7614a70f3
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696311"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -20,20 +21,23 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Übersicht
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>description
@@ -46,23 +50,23 @@ Wenn das Projekt mehrere Frameworks angibt, führt das Ausführen von `dotnet ru
 
 Der Befehl `dotnet run` wird im Kontext von Projekten verwendet, nicht von erstellten Assemblys. Wenn Sie stattdessen eine Framework-abhängige DLL-Anwendung ausführen möchten, müssen Sie [dotnet](dotnet.md) ohne einen Befehl verwenden. Zum Ausführen von `myapp.dll` verwenden Sie z.B.:
 
-```
+```console
 dotnet myapp.dll
 ```
 
 Weitere Informationen zum `dotnet`-Treiber finden Sie unter dem Thema [.NET Core-Befehlszeilentools (CLI)](index.md).
 
-Um die Anwendung auszuführen, löst der `dotnet run`-Befehl die Abhängigkeiten der Anwendung außerhalb der freigegebenen Laufzeit aus dem NuGet-Cache. Da sie zwischengespeicherte Abhängigkeiten verwendet, wird nicht empfohlen, `dotnet run` zur Ausführung der Anwendungen in der Produktion zu verwenden. Stattdessen [erstellen Sie eine Bereitstellung](../deploying/index.md) mithilfe des [`dotnet publish`](dotnet-publish.md)-Befehls und stellen die veröffentlichte Ausgabe bereit.
+Der Befehl `dotnet run` löst die Abhängigkeiten der Anwendungen außerhalb der freigegebenen Laufzeit aus dem NuGet-Cache, um die Anwendung auszuführen. Da sie zwischengespeicherte Abhängigkeiten verwendet, wird nicht empfohlen, `dotnet run` zur Ausführung der Anwendungen in der Produktion zu verwenden. Stattdessen [erstellen Sie eine Bereitstellung](../deploying/index.md) mithilfe des [`dotnet publish`](dotnet-publish.md)-Befehls und stellen die veröffentlichte Ausgabe bereit.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="options"></a>Optionen
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--`
 
-Grenzt Argumente für `dotnet run` von Argumenten für die ausgeführte Anwendung ab. Alle nachfolgenden Argumente werden der Anwendungsausführung übergeben.
+Grenzt Argumente für `dotnet run` von Argumenten für die ausgeführte Anwendung ab. Alle Argumente nach diesem Trennzeichen werden an die Anwendungsausführung übergeben.
 
 `-c|--configuration {Debug|Release}`
 
@@ -74,7 +78,7 @@ Erstellt und führt die Anwendung mithilfe des angegebenen [Frameworks](../../st
 
 `--force`
 
-Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dies entspricht dem Löschen von *project.assets.json*.
+Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
 
 `-h|--help`
 
@@ -86,7 +90,7 @@ Der Name des beim Start einer Anwendung zu verwendenden Startprofils (falls vorh
 
 `--no-build`
 
-Erstellt das Projekt nicht vor der Ausführung.
+Erstellt das Projekt nicht vor der Ausführung. Das `--no-restore`-Flag wird implizit festgelegt.
 
 `--no-dependencies`
 
@@ -98,7 +102,61 @@ Versucht nicht, die Anwendung mit *launchSettings.json* zu konfigurieren.
 
 `--no-restore`
 
-Führt kein implizites Wiederherstellen durch, wenn der Befehl ausgeführt wird
+Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird.
+
+`-p|--project <PATH>`
+
+Gibt den Pfad der auszuführenden Projektdatei an (Ordnername oder vollständiger Pfad). Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis gewählt.
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
+
+`-v|--verbosity <LEVEL>`
+
+Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`--`
+
+Grenzt Argumente für `dotnet run` von Argumenten für die ausgeführte Anwendung ab. Alle Argumente nach diesem Trennzeichen werden an die Anwendungsausführung übergeben.
+
+`-c|--configuration {Debug|Release}`
+
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Erstellt und führt die Anwendung mithilfe des angegebenen [Frameworks](../../standard/frameworks.md) aus. Das Framework muss in der Projektdatei angegeben werden.
+
+`--force`
+
+Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
+
+`-h|--help`
+
+Druckt eine kurze Hilfe für den Befehl.
+
+`--launch-profile <NAME>`
+
+Der Name des beim Start einer Anwendung zu verwendenden Startprofils (falls vorhanden). Startprofile werden in der Datei *launchSettings.json* definiert und heißen normalerweise `Development`, `Staging` und `Production`. Weitere Informationen finden Sie unter [Working with multiple environments (Verwenden von mehreren Umgebungen)](/aspnet/core/fundamentals/environments).
+
+`--no-build`
+
+Erstellt das Projekt nicht vor der Ausführung. Das `--no-restore`-Flag wird implizit festgelegt.
+
+`--no-dependencies`
+
+Wenn Sie ein Projekt mit Projekt-zu-Projekt-Verweisen (P2P) wiederherstellen, stellen Sie das Stammprojekt wieder her und nicht die Verweise.
+
+`--no-launch-profile`
+
+Versucht nicht, die Anwendung mit *launchSettings.json* zu konfigurieren.
+
+`--no-restore`
+
+Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird.
 
 `-p|--project <PATH>`
 
@@ -112,7 +170,7 @@ Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine L
 
 `--`
 
-Grenzt Argumente für `dotnet run` von Argumenten für die ausgeführte Anwendung ab. Alle nachfolgenden Argumente werden der Anwendungsausführung übergeben.
+Grenzt Argumente für `dotnet run` von Argumenten für die ausgeführte Anwendung ab. Alle Argumente nach diesem Trennzeichen werden an die Anwendungsausführung übergeben.
 
 `-c|--configuration {Debug|Release}`
 

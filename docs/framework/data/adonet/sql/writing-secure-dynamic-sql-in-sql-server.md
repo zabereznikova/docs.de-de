@@ -2,11 +2,12 @@
 title: Schreiben von sicherem dynamischen SQL in SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 0dc372b4e5554623d51a4add9a43f33d4a320f18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753473"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Schreiben von sicherem dynamischen SQL in SQL Server
 Die Einschleusung von SQL-Befehlen (SQL Injection-Angriff) ist eine Möglichkeit, Anwendungen anzugreifen. Dabei werden anstelle einer gültigen Eingabe Transact-SQL-Anweisungen in den Code eingeschleust. Wenn die Eingabe direkt und ohne Validierung an den Server weitergeleitet wird und die Anwendung den eingeschleusten Code ausführt, können Daten beschädigt oder sogar zerstört werden.  
@@ -45,9 +46,9 @@ Die Einschleusung von SQL-Befehlen (SQL Injection-Angriff) ist eine Möglichkeit
   
  SQL Server verfügt über Methoden, um Benutzern mithilfe von gespeicherten Prozeduren und benutzerdefinierten Funktionen, die dynamischen SQL-Code ausführen, den Zugriff auf Daten zu gewähren.  
   
--   Verwenden des Identitätswechsels mit der Transact-SQL EXECUTE AS-Klausel, wie in beschrieben [Anpassen von Berechtigungen durch Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+-   Die Verwendung vom Identitätswechsel mit der T-SQL-Klausel EXECUTE AS, wie im Artikel zum [Anpassen von Berechtigungen durch Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md) beschrieben wird.  
   
--   Signieren von gespeicherten Prozeduren mit Zertifikaten, wie in beschrieben [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+-   Das Signieren von gespeicherten Prozeduren mit Zertifikaten, wie im Artikel zum [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  Die EXECUTE AS-Klausel ersetzt die Berechtigungen des Aufrufers durch die Berechtigungen des in der EXECUTE AS-Klausel angegebenen Benutzers. Geschachtelte gespeicherte Prozeduren oder Trigger werden im Sicherheitskontext des Proxybenutzers ausgeführt. Bei Anwendungen, die sich auf zeilenbasierte Sicherheit stützen oder eine Überwachung verlangen, kann dies zum Abbruch führen. Einige Funktionen, die die Identität des Benutzers zurückgeben, geben den in der EXECUTE AS-Klausel angegebenen Benutzer und nicht den ursprünglichen Aufrufer zurück. Der Ausführungskontext geht erst dann wieder auf den ursprünglichen Aufrufer über, wenn die Ausführung der Prozedur abgeschlossen wurde oder wenn eine REVERT-Anweisung ausgegeben wird.  
@@ -56,15 +57,14 @@ Die Einschleusung von SQL-Befehlen (SQL Injection-Angriff) ist eine Möglichkeit
  Bei der Ausführung einer mit einem Zertifikat signierten gespeicherten Prozedur werden die dem Zertifikatsbenutzer gewährten Berechtigungen mit den Berechtigungen des Aufrufers zusammengeführt. Der Ausführungskontext bleibt identisch. Der Zertifikatsbenutzer nimmt nicht die Identität des Aufrufers an. Für das Signieren gespeicherter Prozeduren müssen verschiedene Schritte ausgeführt werden. Jedes Mal, wenn die Prozedur geändert wird, muss sie neu signiert werden.  
   
 ### <a name="cross-database-access"></a>Datenbankübergreifender Zugriff  
- Bei der Ausführung dynamisch erstellter SQL-Anweisungen funktioniert die datenbankübergreifende Besitzverkettung nicht. Sie können dieses Problem umgehen in SQL Server durch Erstellen einer gespeicherten Prozedur, die Daten in einer anderen Datenbank zugreift, und Signieren die Prozedur mit einem Zertifikat, das in beiden Datenbanken vorhanden ist. Die Benutzer können dann auf die von der Prozedur verwendeten Datenbankressourcen zugreifen, ohne dass ihnen Zugriffsrechte für die Datenbank oder andere Berechtigungen erteilt werden müssen.  
+ Bei der Ausführung dynamisch erstellter SQL-Anweisungen funktioniert die datenbankübergreifende Besitzverkettung nicht. Dieses Problem können Sie in SQL Server umgehen, indem Sie eine gespeicherte Prozedur erstellen, die auf die Daten in einer anderen Datenbank zugreift, und die Prozedur mit einem Zertifikat signieren, das in beiden Datenbanken vorhanden ist. Die Benutzer können dann auf die von der Prozedur verwendeten Datenbankressourcen zugreifen, ohne dass ihnen Zugriffsrechte für die Datenbank oder andere Berechtigungen erteilt werden müssen.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Ressource|description|  
 |--------------|-----------------|  
-|[Gespeicherte Prozeduren](http://go.microsoft.com/fwlink/?LinkId=98233) und [SQL Injection](http://go.microsoft.com/fwlink/?LinkId=98234) in SQL Server-Onlinedokumentation|In den Themen wird beschrieben, wie Sie gespeicherte Prozeduren erstellen und wie die Einschleusung von SQL-Befehlen bei SQL Injection-Angriffen funktioniert.|  
-|[Neue SQL-Kürzungsangriffe und zum Vermeiden](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) im MSDN Magazin.|Beschreibt den Umgang mit Begrenzern und Bezeichnern, Praktiken zur Einschleusung von SQL-Befehlen (SQL Injection) sowie Angriffe, bei denen Codeänderungen durch Abschneidung vorgenommen werden.|  
+|[Gespeicherte Prozeduren](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) und [SQL Injection](/sql/relational-databases/security/sql-injection) in der SQL Server-Onlinedokumentation|In den Themen wird beschrieben, wie Sie gespeicherte Prozeduren erstellen und wie die Einschleusung von SQL-Befehlen bei SQL Injection-Angriffen funktioniert.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

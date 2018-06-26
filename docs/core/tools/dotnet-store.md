@@ -3,12 +3,13 @@ title: dotnet store-befehl
 description: Der „dotnet store“-Befehl speichert die angegebenen Assemblys im Laufzeitpaketspeicher.
 author: bleroy
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: f819444c92afde0e1a5349a58918f993868a0143
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696324"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -34,7 +35,7 @@ Gibt das [Zielframework](../../standard/frameworks.md) an.
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-Die *Manifestdatei des Paketspeichers* ist eine XML-Datei, die die Liste der zu speichernden Pakete enthält. Das Format der Manifestdatei ist mit dem *csproj*-Format kompatibel. Also kann eine *csproj*-Projektdatei, die auf das gewünschte Paket verweist, mit der Option `-m|--manifest` verwendet werden, um Assemblys im Laufzeitpaketspeicher zu speichern. Um mehrere Manifestdateien anzugeben, wiederholen Sie die Option und den Pfad für jede Datei: `--manifest packages1.csproj --manifest packages2.csproj`.
+Die *Manifestdatei des Paketspeichers* ist eine XML-Datei, die die Liste der zu speichernden Pakete enthält. Das Format der Manifestdatei ist mit dem SDK-Projektformat kompatibel. Also kann eine Projektdatei, die auf das gewünschte Paket verweist, mit der Option `-m|--manifest` verwendet werden, um Assemblys im Laufzeitpaketspeicher zu speichern. Wiederholen Sie die Option und den Pfad für jede Datei, um mehrere Manifestdateien anzugeben. Beispiel: `--manifest packages1.csproj --manifest packages2.csproj`.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -82,4 +83,4 @@ Speichern Sie die in der Datei *packages.csproj* angegebenen Pakete ohne Optimie
 
 ## <a name="see-also"></a>Siehe auch
 
-[Laufzeitpaketspeicher](../deploying/runtime-store.md)   
+[Laufzeitpaketspeicher](../deploying/runtime-store.md)

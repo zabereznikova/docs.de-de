@@ -8,11 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b75429d0de69c60e7c24551bf1d9218e74d0c5ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728640"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität im .NET Framework
 
@@ -25,7 +26,7 @@ Jede App hat eine bestimmte Version von .NET Framework als Ziel, die durch Folge
 * Angeben des Zielframeworks in einer Projektdatei
 * Anwenden einer <xref:System.Runtime.Versioning.TargetFrameworkAttribute> auf dem Quellcode
 
-Wenn .NET Framework auf einer neueren Version anstatt auf der beabsichtigten ausgeführt wird, wird ein besonderes Verhalten angewendet, um die ältere Zielversion zu imitieren. Anders ausgedrückt: Die App wird auf der neueren Version des Framework ausgeführt, sich aber so verhalten, als würde sie auf der älteren Version ausgeführt werden. Viele Kompatibilitätsprobleme zwischen den .NET Framework-Versionen werden durch dieses besondere Modell minimiert.
+Wenn .NET Framework auf einer neueren Version anstatt auf der beabsichtigten ausgeführt wird, wird ein besonderes Verhalten angewendet, um die ältere Zielversion zu imitieren. Anders ausgedrückt: Die App wird auf der neueren Version des Framework ausgeführt, sich aber so verhalten, als würde sie auf der älteren Version ausgeführt werden. Viele Kompatibilitätsprobleme zwischen den .NET Framework-Versionen werden durch dieses besondere Modell minimiert. Die Version von .NET Framework, für die eine Anwendung ausgerichtet ist, wird durch die Zielversion der Einstiegsassembly für die Anwendungsdomäne bestimmt, in der der Code ausgeführt wird. Alle zusätzlichen in dieser Anwendungsdomäne geladenen Assemblys sind für diese Version von .NET Framework ausgelegt. Bei einer ausführbaren Datei ist z.B. der Kompatibilitätsmodus das Zielframework der ausführbaren Datei, unter dem alle Assemblys in der AppDomain ausgeführt werden.
 
 ## <a name="runtime-changes"></a>Laufzeitänderungen
 

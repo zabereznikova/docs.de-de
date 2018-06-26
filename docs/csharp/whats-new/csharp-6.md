@@ -3,12 +3,12 @@ title: Neues in C# 6 – C#-Leitfaden
 description: Neues zu den neuen Features in Version 6 von C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458004"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565877"
 ---
 # <a name="whats-new-in-c-6"></a>Neues in C# 6
 
@@ -38,6 +38,8 @@ Die Version 6.0 von C# enthält zahlreiche Features, die die Produktivität für
     - Auflistungsinitialisierer können neben Membermethoden zugängliche Erweiterungsmethoden verwenden.
 * [Verbesserte Überladungsauflösung](#improved-overload-resolution):
     - Einige Konstrukte, die zuvor mehrdeutige Methodenaufrufe generiert haben, werden nun korrekt aufgelöst.
+* [Compileroption `deterministic`](#deterministic-compiler-output):
+    - Die deterministische Compileroption stellt sicher, dass aufeinanderfolgende Kompilierungen der gleichen Quelle die gleiche binäre Ausgabe generieren.
 
 Der Gesamteffekt dieser Features ist es, dass Sie präziseren Code schreiben, der zudem lesbarer ist. Die Syntax benötigt weniger Aufwand für viele allgemeine Methoden. Es ist einfacher, die Entwurfsabsicht mit weniger Aufwand anzuzeigen. Lernen Sie diese Features gut, und Sie können produktiver sein, mehr lesbaren Code schreiben und sich vermehrt auf Ihre Codefeatures konzentrieren, anstatt auf die Konstrukte der Sprache.
 
@@ -342,11 +344,11 @@ Die Implementierungsdetails für das Hinzufügen von `await`-Unterstützung in `
 
 ## <a name="index-initializers"></a>Indexinitialisierer
 
-Der *Indexinitialisierer* ist eine von zwei Funktionen, die Auflistungsinitialisierer konsistenter machen. In früheren Versionen von C# konnten Sie *Auflistungsinitialisierer* nur mit Auflistungen im Sequenzformat verwenden:
+Der *Indexinitialisierer* ist eines von zwei Features, die Auflistungsinitialisierer konsistenter mit der Indexnutzung machen. In früheren Releases von C# konnten Sie *Auflistungsinitialisierer* nur mit Auflistungen im Sequenzformat mit <xref:System.Collections.Generic.Dictionary%602> verwenden, indem Sie Klammern um Schlüssel- und Wertpaare gesetzt haben:
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#ListInitializer)]
 
-Sie können diese nun mit <xref:System.Collections.Generic.Dictionary%602>-Auflistungen und ähnlichen Typen verwenden:
+Sie können diese nun mit <xref:System.Collections.Generic.Dictionary%602>-Auflistungen und ähnlichen Typen verwenden. Die neue Syntax unterstützt Zuweisungen mit einem Index in die Auflistung:
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 
@@ -388,3 +390,12 @@ Der frühere Compiler konnte nicht richtig zwischen `Task.Run(Action)` und `Task
 [!code-csharp[Lambda](../../../samples/snippets/csharp/new-in-6/overloads.cs#Lambda)]
 
 Der C# 6-Compiler bestimmt ordnungsgemäß, dass `Task.Run(Func<Task>())` eine bessere Wahl ist.
+
+### <a name="deterministic-compiler-output"></a>Deterministische Compilerausgabe
+
+Die Option `-deterministic` weist den Compiler an, eine Byte für Byte identische Ausgabeassembly für aufeinanderfolgende Kompilierungen der gleichen Quelldateien zu erstellen.
+
+Jede Kompilierung erzeugt standardmäßig eine eindeutige Ausgabe. Der Compiler fügt einen Zeitstempel und eine aus zufälligen Zahlen generierte GUID hinzu. Sie können diese Option verwenden, wenn Sie die Byte für Byte Ausgabe vergleichen möchten, um die Konsistenz über Builds hinweg sicherzustellen.
+
+Weitere Informationen finden Sie im Artikel zur Compileroption [-deterministic](../language-reference/compiler-options/deterministic-compiler-option.md).
+

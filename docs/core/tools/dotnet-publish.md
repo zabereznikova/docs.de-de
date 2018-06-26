@@ -3,13 +3,13 @@ title: dotnet publish-Befehl – .NET Core-CLI
 description: Der „dotnet publish“-Befehl veröffentlicht ein .NET Core-Projekt in einem Verzeichnis.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.date: 05/29/2018
+ms.openlocfilehash: 38224aa8472f99df107e523667e18892384a20b0
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472629"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696659"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -21,32 +21,36 @@ ms.locfileid: "34472629"
 
 ## <a name="synopsis"></a>Übersicht
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
+    [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
 ```
-
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
+    [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [-h|--help]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+    [--version-suffix]
 dotnet publish [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>description
 
-`dotnet publish` kompiliert die Anwendung, liest ihre Abhängigkeiten, die in der Projektdatei angegeben sind, und veröffentlicht die resultierenden Dateien in einem Verzeichnis. Die Ausgabe wird Folgendes enthalten:
+`dotnet publish` kompiliert die Anwendung, liest ihre Abhängigkeiten, die in der Projektdatei angegeben sind, und veröffentlicht die resultierenden Dateien in einem Verzeichnis. Die Ausgabe umfasst die folgenden Objekte:
 
 * Intermediate Language-Code (IL) in einer Assembly mit einer *DLL*-Erweiterung.
-* *deps.json*-Datei, die alle Abhängigkeiten des Projekts enthält.
+* *.deps.json*-Datei, die alle Abhängigkeiten des Projekts enthält.
 * Eine *.runtime.config.json*-Datei, die die freigegebene Laufzeit angibt, die die Anwendung erwartet, sowie andere Konfigurationsoptionen für die Laufzeit (z.B. Typ der automatischen Speicherbereinigung).
-* Die Abhängigkeiten der Anwendung. Diese werden aus dem NuGet-Cache in den Ausgabeordner kopiert.
+* Die Abhängigkeiten der Anwendung, die aus dem NuGet-Cache in den Ausgabeordner kopiert werden.
 
-Die `dotnet publish`-Ausgabe des Befehls ist bereit für die Bereitstellung auf einem Hostsystem (z.B. ein Server, PC, Mac, Laptops) für die Ausführung und ist der einzige offiziell unterstützte Weg, um die Anwendung für die Bereitstellung vorzubereiten. Je nach Art der Bereitstellung, die im Projekt angegeben ist, hat das Hostsystem die freigegebene .NET Core-Laufzeit installiert oder nicht. Weitere Informationen finden Sie unter [.NET Core Anwendungsbereitstellung](../deploying/index.md). Die Verzeichnisstruktur der veröffentlichten Anwendung finden Sie unter [Directory structure (Verzeichnisstruktur)](/aspnet/core/hosting/directory-structure).
+Die Ausgabe des Befehls `dotnet publish` steht für die Bereitstellung zur Ausführung auf einem Hostsystem bereit (z.B. ein Server, Computer, Mac oder Laptop). Es ist die einzige offiziell unterstützte Methode zum Vorbereiten der Anwendung für die Bereitstellung. Je nach Art der Bereitstellung, die im Projekt angegeben ist, hat das Hostsystem die freigegebene .NET Core-Laufzeit installiert oder nicht. Weitere Informationen finden Sie unter [.NET Core Anwendungsbereitstellung](../deploying/index.md). Die Verzeichnisstruktur der veröffentlichten Anwendung finden Sie unter [Directory structure (Verzeichnisstruktur)](/aspnet/core/hosting/directory-structure).
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -54,11 +58,11 @@ Die `dotnet publish`-Ausgabe des Befehls ist bereit für die Bereitstellung auf 
 
 `PROJECT`
 
-Das zu veröffentlichende Projekt – standardmäßig das aktuelle Verzeichnis, wenn nicht angegeben.
+Das zu veröffentlichende Projekt. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis gewählt.
 
 ## <a name="options"></a>Optionen
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
@@ -70,7 +74,62 @@ Veröffentlicht die Anwendung für das angegebene [Zielframework](../../standard
 
 `--force`
 
-Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dies entspricht dem Löschen der Datei *project.assets.json*.
+Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
+
+`-h|--help`
+
+Druckt eine kurze Hilfe für den Befehl.
+
+`--manifest <PATH_TO_MANIFEST_FILE>`
+
+Gibt mindestens ein [Zielmanifest](../deploying/runtime-store.md) an, das verwendet wird, um die Menge an mit der App veröffentlichten Paketen zu senken. Die Manifestdatei ist Teil der Ausgabe des [`dotnet store`-Befehls](dotnet-store.md). Um mehrere Manifeste anzugeben, fügen Sie die `--manifest`-Option für jedes Manifest hinzu. Diese Option ist am dem .NET Core 2.0 SDK verfügbar.
+
+`--no-build`
+
+Erstellt das Projekt nicht vor der Veröffentlichung. Das `--no-restore`-Flag wird implizit festgelegt.
+
+`--no-dependencies`
+
+Ignoriert Verweise zwischen Projekten und stellt nur das zum Erstellen angegebene Stammprojekt wieder her.
+
+`--no-restore`
+
+Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Gibt den Pfad für das Ausgabeverzeichnis an. Wenn nicht angegeben, wird standardmäßig *./bin/[configuration]/[framework]/publish/* für eine Framework-abhängige Bereitstellung oder *./bin/[configuration]/[framework]/[runtime]/publish/* für eine eigenständige Bereitstellung gewählt.
+Bei einem relativen Pfad ist das generierte Ausgabeverzeichnis relativ zum Speicherort der Projektdatei anstatt zum aktuellen Arbeitsverzeichnis.
+
+`--self-contained`
+
+Veröffentlicht die .NET Core-Runtime mit Ihrer Anwendung, sodass die Runtime nicht auf dem Zielcomputer installiert werden muss. Wenn ein Runtimebezeichner angegeben ist, ist der Standardwert `true`. Weitere Informationen zu den verschiedenen Bereitstellungstypen finden Sie unter [.NET Core application deployment (Bereitstellung von .NET Core-Anwendungen)](../deploying/index.md).
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Wird bei der Erstellung einer [eigenständigen Bereitstellung (Self-contained deployments, SCD)](../deploying/index.md#self-contained-deployments-scd) verwendet. Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md). Standardmäßig wird eine [Framework-abhängige Bereitstellung (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) veröffentlicht.
+
+`-v|--verbosity <LEVEL>`
+
+Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+
+`--version-suffix <VERSION_SUFFIX>`
+
+Definiert das Versionssuffix zum Ersetzen des Sternchens (`*`) im Versionsfeld der Projektdatei.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`-c|--configuration {Debug|Release}`
+
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Veröffentlicht die Anwendung für das angegebene [Zielframework](../../standard/frameworks.md). Sie müssen das Zielframework in der Projektdatei angeben.
+
+`--force`
+
+Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
 
 `-h|--help`
 
@@ -86,7 +145,7 @@ Ignoriert Verweise zwischen Projekten und stellt nur das zum Erstellen angegeben
 
 `--no-restore`
 
-Führt kein implizites Wiederherstellen durch, wenn der Befehl ausgeführt wird
+Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 

@@ -3,12 +3,13 @@ title: dotnet-msbuild-Befehl – .NET Core-CLI
 description: Der Befehl dotnet msbuild ermöglicht den Zugriff auf die MSBuild-Befehlszeile.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: c51c058391de4925afd4339fe84e28500d692e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 58aac2a5314758b8711c0b014154022168fb671c
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696844"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/04/2018
 
 Der `dotnet msbuild`-Befehl ermöglicht den Zugriff auf eine voll funktionsfähige MSBuild-Instanz.
 
-Der Befehl weist genau die gleichen Funktionen wie der vorhandene MSBuild-Befehlszeilenclient auf. Alle Optionen sind gleich. Informationen zu den verfügbaren Optionen finden Sie unter [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference). 
+Der Befehl weist genau die gleichen Funktionen wie der vorhandene MSBuild-Befehlszeilenclient auf. Alle Optionen sind gleich. Weitere Informationen zu den verfügbaren Optionen finden Sie in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference).
 
 ## <a name="examples"></a>Beispiele
 

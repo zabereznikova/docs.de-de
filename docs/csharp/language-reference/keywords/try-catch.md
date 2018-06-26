@@ -10,11 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696438"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C#-Referenz)
 Die try-catch-Anweisung besteht aus einem `try`-Block gefolgt von einer oder mehreren `catch`-Klauseln, die Handler für verschiedene Ausnahmen angeben.  
@@ -42,7 +43,7 @@ catch (InvalidCastException e)
   
  Es ist möglich, mehrere spezifische `catch`-Klauseln in derselben try-catch-Anweisung zu verwenden. In diesem Fall ist die Reihenfolge der `catch`-Klauseln wichtig, da die `catch`-Klauseln nacheinander überprüft werden. Fangen Sie spezifischere Ausnahmen vor den weniger spezifischen ab. Der Compiler erzeugt einen Fehler, wenn Sie Ihre catch-Blöcke so anordnen, dass ein neuerer Block nie erreicht werden kann.  
   
- Die Verwendung von `catch`-Argumenten ist eine Möglichkeit zum Filtern der Ausnahmen, die Sie behandeln möchten.  Sie können auch einen Prädikatausdruck verwenden, der die Ausnahme weiter untersucht, um zu entscheiden, ob Sie sie behandeln möchten.  Wenn der Prädikatausdruck „false“ zurückgibt, wird die Suche nach einem Ausnahmehandler fortgesetzt.  
+ Die Verwendung von `catch`-Argumenten ist eine Möglichkeit zum Filtern der Ausnahmen, die Sie behandeln möchten.  Sie können auch einen Ausnahmefilter verwenden, der die Ausnahme weiter untersucht, um zu entscheiden, ob Sie sie behandeln möchten.  Wenn der Ausnahmefilter „FALSE“ zurückgibt, wird die Suche nach einem Ausnahmehandler fortgesetzt.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -50,7 +51,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- Ausnahmefilter sind dem Abfangen und erneuten Auslösen vorzuziehen (siehe nachfolgende Erläuterung), da der Filter den Stapel nicht beschädigt.  Wenn ein späterer Handler den Stapel löscht, können Sie feststellen, wo die Ausnahme ursprünglich herkam, und nicht nur die letzte Stelle, an der sie erneut ausgelöst wurde.  Filterausdrücke für Ausnahmen werden häufig zu Protokollierungszwecken eingesetzt.  Sie können eine Prädikatfunktion erstellen, die immer FALSE zurückgibt und außerdem Ausgaben in ein Protokoll schreibt, und Sie können Ausnahmen protokollieren, wenn sie auftreten, ohne sie zu behandeln und erneut auszulösen.  
+ Ausnahmefilter sind dem Abfangen und erneuten Auslösen vorzuziehen (siehe nachfolgende Erläuterung), da der Filter den Stapel nicht beschädigt.  Wenn ein späterer Handler den Stapel löscht, können Sie feststellen, wo die Ausnahme ursprünglich herkam, und nicht nur die letzte Stelle, an der sie erneut ausgelöst wurde.  Filterausdrücke für Ausnahmen werden häufig zu Protokollierungszwecken eingesetzt.  Sie können einen Filter erstellen, der immer FALSE zurückgibt und außerdem Ausgaben in ein Protokoll schreibt, und Sie können Ausnahmen protokollieren, wenn sie auftreten, ohne sie zu behandeln und erneut auszulösen.  
   
  Eine [throw`catch`-Anweisung kann in einem ](../../../csharp/language-reference/keywords/throw.md)-Block verwendet werden, um die von der `catch`-Anweisung abgefangene Ausnahme erneut auszulösen. Im folgenden Beispiel werden Quellinformationen aus einer <xref:System.IO.IOException>-Ausnahme extrahiert, anschließend wird die Ausnahme in der übergeordneten Methode ausgelöst.  
   
@@ -92,9 +93,19 @@ catch (InvalidCastException e)
     {  
         // Take some action.  
     }  
- }  
+}  
 ```  
-  
+
+> [!NOTE]
+> Es ist auch möglich, einen Ausnahmefilter zu verwenden, um ein ähnliches Ergebnis auf eine meist übersichtlichere Weise zu erhalten (sowie ohne den Stapel zu bearbeiten, wie weiter oben in diesem Artikel erläutert wurde). Das folgende Beispiel verfügt über das gleiche Verhalten für Aufrufer wie das vorherige Beispiel. Die Funktion gibt `InvalidCastException` an den Aufrufer zurück, wenn `e.Data` `null` ist.
+> 
+> ```csharp
+> catch (InvalidCastException e) when (e.Data != null)   
+> {  
+>     // Take some action.  
+> }
+> ```   
+
  Initialisieren Sie innerhalb eines `try`-Blocks nur Variablen, die auch in diesem deklariert sind. Andernfalls kann eine Ausnahme auftreten, bevor die Ausführung des Blocks abgeschlossen ist. Beispiel: Im folgenden Codebeispiel wird die `n`-Variable innerhalb des `try`-Blocks initialisiert. Beim Versuch, diese Variable außerhalb des `try`-Blocks in der `Write(n)`-Anweisung zu verwenden, wird ein Compilerfehler generiert.  
   
 ```csharp  

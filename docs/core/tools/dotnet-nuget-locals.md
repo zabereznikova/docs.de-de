@@ -3,12 +3,13 @@ title: dotnet nuget locals-Befehl – .NET Core-CLI
 description: Der dotnet nuget locals-Befehl löscht lokale NuGet-Ressourcen, z.B. den http-Anforderungscache, den temporären Cache oder Ordner mit globalen Paketen auf dem Computer, bzw. listet diese Ressourcen auf.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d0c900a06b00fd5e6b7ad66527c6582483222c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 799acb92d6ab7439e15c23c9f0b7b572c966adda
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696870"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -20,7 +21,10 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Übersicht
 
-`dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
+```
+dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
+dotnet nuget locals [-h|--help]
+```
 
 ## <a name="description"></a>description
 
@@ -30,7 +34,7 @@ Der `dotnet nuget locals`-Befehl löscht lokale NuGet-Ressourcen im http-Anforde
 
 `CACHE_LOCATION`
 
-Einer der folgenden Werte:
+Der aufzulistende oder zu löschende Cachespeicherort. Einer der folgenden Werte wird akzeptiert:
 
 * `all`: gibt an, dass der angegebene Vorgang auf alle Cachetypen angewendet wird: Auf den http-Anforderungscache, den Cache für globale Pakete und den temporären Cache.
 * `http-cache`: gibt an, dass der angegebene Vorgang nur auf den http-Anforderungscache angewendet wird. Die anderen Cachespeicherorte sind nicht betroffen.
@@ -39,21 +43,21 @@ Einer der folgenden Werte:
 
 ## <a name="options"></a>Optionen
 
+`--force-english-output`
+
+Erzwingt die Ausführung der Anwendung mithilfe einer invarianten Kultur, die auf Englisch basiert.
+
 `-h|--help`
 
 Druckt eine kurze Hilfe für den Befehl.
 
 `-c|--clear`
 
-Die clear-Option führt einen Löschvorgang für den angegebenen Cachetyp aus. Die Inhalte der Cacheverzeichnisse werden rekursiv gelöscht. Der ausführende Benutzer (bzw. die Gruppe) muss über Berechtigungen für die Dateien in den Cacheverzeichnissen verfügen. Andernfalls wird ein Fehler angezeigt, der die Dateien/Ordner angibt, die nicht gelöscht wurden.
+Die Option „clear“ führt einen Löschvorgang für den angegebenen Cachetyp aus. Die Inhalte der Cacheverzeichnisse werden rekursiv gelöscht. Der ausführende Benutzer (bzw. die Gruppe) muss über Berechtigungen für die Dateien in den Cacheverzeichnissen verfügen. Andernfalls wird ein Fehler angezeigt, der die Dateien/Ordner angibt, die nicht gelöscht wurden.
 
 `-l|--list`
 
-Die list-Option wird verwendet, um den Speicherort des angegebenen Cachetyps anzuzeigen. 
-
-`--force-english-output`
-
-Erzwingt, dass die Befehlszeilenausgabe auf Englisch ist.
+Die list-Option wird verwendet, um den Speicherort des angegebenen Cachetyps anzuzeigen.
 
 ## <a name="examples"></a>Beispiele
 
