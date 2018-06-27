@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 039015f895a491d8709815d6aff52eb6139d779f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576115"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948484"
 ---
 # <a name="dependency-properties"></a>Abhängigkeitseigenschaften
 Eine Abhängigkeitseigenschaft (DP) ist eine reguläre Eigenschaft, die den Wert in einen Eigenschaftenspeicher, z. B. in einer Variablen des Typs (Feld), speichern, statt speichert.  
@@ -43,7 +43,7 @@ Eine Abhängigkeitseigenschaft (DP) ist eine reguläre Eigenschaft, die den Wert
   
  Ein klassisches Beispiel einer angefügten Eigenschaft ist die <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> Eigenschaft. Die Eigenschaft darstellt, Spaltenposition Schaltfläche (nicht des Datenblatts), aber es ist nur relevant, wenn die Schaltfläche in einem Raster enthalten ist, weshalb es "Schaltflächen von Rastern angefügt ist".  
   
-```  
+```xaml
 <Grid>  
     <Grid.ColumnDefinitions>  
         <ColumnDefinition />  
@@ -57,7 +57,7 @@ Eine Abhängigkeitseigenschaft (DP) ist eine reguläre Eigenschaft, die den Wert
   
  Die Definition einer angefügten Eigenschaft sieht größtenteils wie eine reguläre Abhängigkeit-Eigenschaft, mit dem Unterschied, dass die Accessoren durch statische Get- und Set-Methoden dargestellt werden:  
   
-```  
+```csharp
 public class Grid {  
   
     public static int GetColumn(DependencyObject obj) {  
