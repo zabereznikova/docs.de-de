@@ -51,7 +51,7 @@ Dieses Thema beschreibt die erforderlichen Schritte zum Einrichten von Windows P
     ```  
   
     > [!NOTE]
-    >  Dieser Befehl ist eine einzelne Textzeile. Dieser Befehl aktiviert die /\<*WCF-Anwendung*> Anwendung darauf zugegriffen werden beide http://localhost  */ \<WCF-Anwendung >* und net.tcp:// "localhost" /*\<WCF-Anwendung >*.  
+    >  Dieser Befehl ist eine einzelne Textzeile. Dieser Befehl aktiviert die /\<*WCF-Anwendung*> Anwendung darauf zugegriffen werden beide http://localhost*/\<WCF-Anwendung>* und net.tcp:// "localhost" /*\<WCF-Anwendung >*.  
   
      Entfernen Sie die net.tcp-Sitebindung, die für dieses Beispiel hinzugefügt wurde.  
   
