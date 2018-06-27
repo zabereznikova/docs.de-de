@@ -119,7 +119,7 @@ WCF Data Services ist eine Komponente von [!INCLUDE[dnprdnshort](../../../includ
  **Xmlns:m = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **Xmlns = "http://www.w3.org/2005/Atom" >**  
  **\<Typ Title = "Text" > Aufträge \< /title >**  
- **\<ID >http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI') / Orders \< /ID >**  
+ **\<ID>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders\</ID>**  
  **\<aktualisiert > 2010-05-19T19:37:07Z\</ aktualisiert >**  
  **\<Link Rel = "Self" Title = "Orders" Href = "Orders" / >**  
  **\<Eintrag >**  
