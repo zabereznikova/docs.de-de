@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: c67986b1deb504f2b05f2903a263bf1a91f70b08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3ae0c05a7e94d739a3442ecdb11564a70567963
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568120"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071174"
 ---
 # <a name="common-container-design-principles"></a>Allgemeine Container Entwurfsprinzipien
 
@@ -23,4 +23,5 @@ Sie möglicherweise ein Szenario, in dem mehrere Prozesse in einem einzelnen Con
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Design-Docker-applications.md) [weiter] (monolithischen applications.md)
+[Zurück](design-docker-applications.md)
+[Weiter](monolithic-applications.md)

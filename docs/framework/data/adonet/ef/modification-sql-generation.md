@@ -2,12 +2,12 @@
 title: Generierung von Änderungen in SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766659"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071951"
 ---
 # <a name="modification-sql-generation"></a>Generierung von Änderungen in SQL
 In diesem Abschnitt wird erläutert, wie ein SQL-Änderungsgenerierungsmodul für den Anbieter (von SQL:1999-kompatiblen Datenbanken) entwickelt wird. Mit diesem Modul wird eine Änderungsbefehlsstruktur in die entsprechenden INSERT-, UPDATE- oder DELETE-Anweisungen von SQL übersetzt.  
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Generieren eines SQL-Insert-Befehls  
  Der generierte Einfügebefehl folgt für eine bestimmte DbInsertCommandTree im Beispielanbieter einer der beiden folgenden Einfügevorlagen.  
   
- Die erste Vorlage verfügt über einen Befehl, mit dem der Einfügevorgang mithilfe der Werte in der Liste mit SetClauses durchgeführt werden kann, sowie über eine SELECT-Anweisung, um die in der Returning-Eigenschaft für die eingefügte Zeile angegebenen Eigenschaften zurückzugeben, sofern die Returning-Eigenschaft nicht NULL ist. Das prädikatelement "@@ROWCOUNT > 0" ist "true", wenn eine Zeile eingefügt wurde. Das prädikatelement "KeyMemberI = KeyValueI &#124; scope_identity()" nimmt die Form "KeyMemberI = SCOPE_IDENTITY()" "nur, wenn KeyMemeberI ein Speicher generierter Schlüssel ist, da scope_identity() den letzten Identitätswert eingefügt () eine Identität zurückgibt Speicher generierte) Identitätsspalte.  
+ Die erste Vorlage verfügt über einen Befehl, mit dem der Einfügevorgang mithilfe der Werte in der Liste mit SetClauses durchgeführt werden kann, sowie über eine SELECT-Anweisung, um die in der Returning-Eigenschaft für die eingefügte Zeile angegebenen Eigenschaften zurückzugeben, sofern die Returning-Eigenschaft nicht NULL ist. Das prädikatelement "\@ @ROWCOUNT > 0" ist "true", wenn eine Zeile eingefügt wurde. Das prädikatelement "KeyMemberI = KeyValueI &#124; scope_identity()" nimmt die Form "KeyMemberI = SCOPE_IDENTITY()" "nur, wenn KeyMemeberI ein Speicher generierter Schlüssel ist, da scope_identity() den letzten Identitätswert eingefügt () eine Identität zurückgibt Speicher generierte) Identitätsspalte.  
   
 ```  
 -- first insert Template  

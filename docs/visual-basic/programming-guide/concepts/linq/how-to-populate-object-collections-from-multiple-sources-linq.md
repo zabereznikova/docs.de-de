@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 097a41614b4e7fb48c3ef3903faec8ed9ee3d5b6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948448"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070862"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)
 
@@ -25,7 +25,6 @@ In diesem Beispiel erfahren Sie, wie Sie Daten aus unterschiedlichen Quellen in 
 In folgendem Beispiel erfahren Sie, wie Sie einen benannten Typ `Student` zum Speichern zusammengeführter Daten aus zwei Zeichenfolgeauflistungen, die Arbeitsblätter im .csv-Format simulieren, im Arbeitsspeicher verwenden könne. Die erste Zeichenfolgeauflistung stellt die Namen der Studenten und deren Matrikelnummer dar, und die zweite Zeichenfolgeauflistung stellt die Matrikelnummer (in der ersten Spalte) und vier Prüfungsergebnisse dar. Die Matrikelnummer wird als Fremdschlüssel verwendet.
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 
@@ -133,7 +132,8 @@ Next
 
 Erstellen und Kompilieren eines Projekts, das als Ziel eine der folgenden Optionen verwendet:
 
-- .NET Framework, Version 3.5 oder höher mit einem Verweis auf "System.Core.dll".
+- .NET Framework Version 3.5 mit einem Verweis auf "System.Core.dll".
+- .NET Framework Version 4.0 oder höher.
 - .NET Core-Version 1.0 oder höher.
 
 ## <a name="see-also"></a>Siehe auch

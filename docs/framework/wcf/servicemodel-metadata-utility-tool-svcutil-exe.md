@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 011f37cbbfa3eacab92705cd8e4363b36a746cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ca518e1d98e26755167ec6cf2f67ba9f7295679
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509150"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071330"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata Utility-Tool (Svcutil.exe)
 Das ServiceModel Metadata Utility Tool wird zum Generieren von Service Model-Code aus Metadatendokumenten und zum Generieren von Metadatendokumenten aus Service Model-Code verwendet.  
@@ -66,7 +66,7 @@ Das ServiceModel Metadata Utility Tool wird zum Generieren von Service Model-Cod
  Für einen Dienst mit einem BasicHttpContextbinding-Endpunkt generiert Svcutil.exe stattdessen eine BasicHttpBinding, deren `allowCookies`-Attribut auf `true` festgelegt ist. Die Cookies werden auf dem Server für den Kontext verwendet. Möchten Sie den Kontext auf dem Client verwalten, wenn der Dienst Cookies verwendet, so können Sie die Konfiguration manuell für die Verwendung einer Kontextbindung ändern.  
   
 > [!CAUTION]
->  Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL- oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird generiert durch die Aneinanderreihung von Benutzername, "@" und vollqualifiziertem Domänennamen (FQDN). Für in Active Directory registrierte Benutzer ist dieses Format jedoch nicht gültig, und der vom Tool generierte UPN verursacht einen Fehler bei der Kerberos-Authentifizierung mit der Fehlermeldung "Der Anmeldeversuch ist fehlgeschlagen". Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell reparieren.  
+>  Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL- oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird durch die Aneinanderreihung von Benutzername, generiert "\@" und einen vollständig qualifizierten Domänennamen (FQDN). Für in Active Directory registrierte Benutzer ist dieses Format jedoch nicht gültig, und der vom Tool generierte UPN verursacht einen Fehler bei der Kerberos-Authentifizierung mit der Fehlermeldung "Der Anmeldeversuch ist fehlgeschlagen". Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell reparieren.  
   
  `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`  
   

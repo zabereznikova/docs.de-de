@@ -2,12 +2,12 @@
 title: '&lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 9cfd1d6cc7c278fd7e95c13df0a6f801cfabbc33
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1fc47b9595f409cf375dc75f2bf43e83f58491df
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749165"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071291"
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwartete Identität des Diensts angeben. Während des handshakevorgangs zwischen Client und Dienst die Windows Communication Foundation (WCF)-Infrastruktur sicherstellen, dass die Identität des erwarteten Diensts mit den Werten dieses Elements übereinstimmt, und daher kann authentifiziert werden kann. Weitere Informationen finden Sie unter [-Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
@@ -48,7 +48,7 @@ Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwart
 |dns|Gibt den DNS eines X.509-Zertifikats an, das zum Authentifizieren eines Diensts verwendet wird. Dieses Element enthält ein `value`-Attribut, das eine Zeichenfolge ist und die tatsächliche Identität enthält.|  
 |rsa|Gibt den Wert des RSA-Felds eines für die Authentifizierung eines Diensts am Client verwendeten X.509-Zertifikats an. Dieses Element enthält ein `value`-Attribut, das eine Zeichenfolge ist und die tatsächliche Identität enthält.|  
 |servicePrincipalName|Gibt eine SPN-Identität an, die dem Prinzipalnamen entspricht, der vom Client zum eindeutigen Identifizieren einer Dienstinstanz verwendet wird. Dieses Element enthält ein `value`-Attribut, das eine Zeichenfolge ist und den tatsächlichen Prinzipalnamen enthält. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>.|  
-|userPrincipalName|Gibt eine UPN-Identität an, die dem Anmeldenamenstyp eines Benutzers in einem Netzwerk entspricht. Der Benutzerprinzipalname besteht aus dem in Active Directory verwendeten Benutzerobjektnamen, gefolgt vom at-Symbol (@) und der übergeordneten Domäne im Domain Name System (DNS). Z. B. möglicherweise Jeff in der Fabrikam.com-Domänenstruktur den Benutzerprinzipalnamen [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com).  Dieses Element enthält ein `value`-Attribut, das eine Zeichenfolge ist und den tatsächlichen Prinzipalnamen enthält. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
+|userPrincipalName|Gibt eine UPN-Identität an, die dem Anmeldenamenstyp eines Benutzers in einem Netzwerk entspricht. Der Benutzerprinzipalname besteht aus den Objekt-Benutzernamen, die in Active Directory, gefolgt vom verwendeten das at-Zeichen (\@), und klicken Sie dann in der Regel das Domain Name System übergeordnete Domäne. Z. B. möglicherweise Jeff in der Fabrikam.com-Domänenstruktur den Benutzerprinzipalnamen [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com).  Dieses Element enthält ein `value`-Attribut, das eine Zeichenfolge ist und den tatsächlichen Prinzipalnamen enthält. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

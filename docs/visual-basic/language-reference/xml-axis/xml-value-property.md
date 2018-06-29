@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 31c9ce2774d6c6182403885a4438c4aa6bf143ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 927158f940d9b96cd06873c7d3e710be91b887e9
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604184"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071617"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML-Value-Eigenschaft (Visual Basic)
 Bietet Zugriff auf den Wert des ersten Elements einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte.  
@@ -38,7 +38,7 @@ object.Value
  Die <xref:System.Xml.Linq.XElement.Value%2A> Eigenschaft erleichtert das Zugriff auf den Wert des ersten Elements in einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte. Diese Eigenschaft überprüft zuerst, ob die Auflistung über mindestens ein Objekt enthält. Wenn die Auflistung leer ist, gibt diese Eigenschaft `Nothing`. Andernfalls gibt diese Eigenschaft den Wert der die <xref:System.Xml.Linq.XElement.Value%2A> Eigenschaft des ersten Elements in der Auflistung.  
   
 > [!NOTE]
->  Beim Zugriff auf den Wert eines XML-Attributs mithilfe der "@" Bezeichner, den Wert des Attributs wird zurückgegeben, als eine `String` und Sie müssen nicht explizit angeben der <xref:System.Xml.Linq.XAttribute.Value%2A> Eigenschaft.  
+>  Beim Zugriff auf den Wert eines XML-Attributs mithilfe der "\@" Bezeichner, den Wert des Attributs wird zurückgegeben, als eine `String` und Sie müssen nicht explizit angeben der <xref:System.Xml.Linq.XAttribute.Value%2A> Eigenschaft.  
   
  Um andere Elemente in einer Auflistung zuzugreifen, können Sie die XML-Erweiterungsindexereigenschaft verwenden. Weitere Informationen finden Sie unter [Erweiterungsindexereigenschaft](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
   

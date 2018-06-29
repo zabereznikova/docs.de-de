@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2451885c673515eb6690b0784fd5bd22de629209
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539451"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071145"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Gewusst wie: Reagieren auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung
 In den Windows-Betriebssystemen kann ein Benutzer die systemweite schriftarteinstellungen, um die Standardschriftart angezeigt vergrößern oder verkleinern möchten ändern. Das Ändern dieser schriftarteinstellungen ist wichtig für Benutzer, die Sehbehinderte sind, und größeren Typ zum Lesen des Texts auf ihre Bildschirme benötigen. Sie können anpassen, dass Ihre Windows Forms-Anwendung, um diese Änderungen, die durch erhöhen oder verringern die Größe des Formulars und alle enthaltenen Text bei jeder Änderung des Schriftartenschemas zu reagieren. Wenn das Formular, um dynamisch Änderungen in Schriftgrade Ihren Bedürfnissen gerecht zu werden soll, können Sie Code zum Formular hinzufügen.  
@@ -40,13 +40,13 @@ In den Windows-Betriebssystemen kann ein Benutzer die systemweite schriftarteins
   
 5.  Implementieren Sie schließlich einen Handler für die <xref:System.Windows.Forms.Form.FormClosing> Ereignis, das trennt die <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> -Ereignishandler.  
   
-> [!IMPORTANT]
->  Dieser Code wird die Anwendung zu Speicherverlust führen.  
+     > [!IMPORTANT]
+     > Dieser Code wird die Anwendung zu Speicherverlust führen.  
   
- [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
- [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  Kompilieren Sie den Code, und führen Sie diesen aus.  
+6.  Kompilieren Sie den Code, und führen Sie diesen aus.  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>So ändern manuell die Schriftartenschemas in Windows XP  
   
@@ -56,7 +56,7 @@ In den Windows-Betriebssystemen kann ein Benutzer die systemweite schriftarteins
   
 3.  Aus der **Schriftgrad** Dropdown-Liste wählen eine andere Schriftgröße.  
   
-     Beachten Sie, dass das Formular jetzt reagiert auf zeitänderungen in der desktop Schriftartenschemas ausgeführt. Wenn der Benutzer zwischen ändert **Normal**, **große Schriftarten**, und **Extragroß**, dem Formular die Schriftart und ordnungsgemäß skaliert.  
+     Sie werden bemerken, dass das Formular jetzt auf Änderungen an der Laufzeit in der desktop Schriftartenschemas reagiert. Wenn der Benutzer zwischen ändert **Normal**, **große Schriftarten**, und **Extragroß**, dem Formular die Schriftart und ordnungsgemäß skaliert.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
