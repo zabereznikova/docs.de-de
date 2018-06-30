@@ -4,12 +4,12 @@ description: .NET Microservices-Architektur für .NET-Containeranwendungen | Ent
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 881817f4f1007edad85eefb9002d56764cbf2a02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61bc9ca6fed8f5249dcb125619aa1b07f290ba7e
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574783"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106878"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Entwicklungsprozess für auf Docker-basierende Anwendungen
 
@@ -46,4 +46,5 @@ Wie in vorherigen Abschnitten diese Handbuchs erwähnt, können Sie .NET Framewo
 
 
 >[!div class="step-by-step"]
-[Zurück] (../architect-microservice-container-applications/using-azure-service-fabric.md) [Weiter] (docker-app-development-workflow.md)
+[Zurück](../architect-microservice-container-applications/using-azure-service-fabric.md)
+[Weiter](docker-app-development-workflow.md)

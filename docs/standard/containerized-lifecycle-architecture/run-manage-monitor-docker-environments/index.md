@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 1bd1abccb55fe9f837b024cc0f61eea71d3b64c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc9cfe583b5e52b9bb3d089a4b12d285726d5c69
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567925"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106839"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen
 
@@ -21,4 +21,5 @@ Wie Sie Ihre containerisierten Anwendungen in der Produktion ausführen (Infrast
 
 
 >[!div class="step-by-step"]
-[Vorheriger] (../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md) [Nächster] (run-microservices-based-applications-in-production.md)
+[Zurück](../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md)
+[Weiter](run-microservices-based-applications-in-production.md)

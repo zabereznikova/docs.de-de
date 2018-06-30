@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 0fa43263e789bba5b720792e7e8dc5321af795b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c7de61f421cf2c45cd3c5ee9afc5a388e985b52
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576219"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105562"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Container als Grundlage für die Zusammenarbeit mit DevOps
 
@@ -68,4 +68,5 @@ Hier sind einige der wichtigsten Vorteile, die eine solide DevOps-Workflow:
 -   Plug & play-gut mit vielen vorhandenen DevOps-Investitionen, einschließlich der Investitionen in open-source
 
 >[!div class="step-by-step"]
-[Vorherigen] (index.md) [weiter] (.. /Microsoft-Platform-Tools-containerized-Apps/Index.MD)
+[Zurück](index.md)
+[Weiter](../Microsoft-platform-tools-containerized-apps/index.md)

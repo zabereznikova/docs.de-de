@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 84ba63c1685fcc3a49c6333a5e88c363bdad8ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568978"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104637"
 ---
 # <a name="key-takeaways"></a>Wichtige Erkenntnisse
 
@@ -26,4 +26,4 @@ ms.locfileid: "33568978"
 Visual Studio Team Services vereinfacht Ihre DevOps-Umgebung erheblich, die für Docker-Umgebungen von Ihren Continuous Deployment-Pipelines vorgesehen ist, einschließlich einfacher Docker-Umgebungen oder komplexerer Microservice- und Containerorchestratoren, die auf Azure basieren.
 
 >[!div class="step-by-step"]
-[Vorheriger] (../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+[Vorherige](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Mig
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01b84d29a559bde02ebd30535488c272d5208167
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578832"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106514"
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Migrieren von monolithischen .NET Framework-Anwendungen der Vorversion zu Windows-Containern
 
@@ -186,4 +186,5 @@ Es gibt einige Unterschiede zwischen der Entwicklungskonfiguration und einer Pro
 In der Entwicklungsumgebung müssen Sie alle Container auf dem gleichen Betriebssystem ausführen. Docker CE für Windows unterstützt nicht das gleichzeitige Ausführen von Windows- und Linux-basierten Containern. In der Produktion können Sie entscheiden, ob Sie den Katalog-Microservice in einem Windows-Container in einem einzigen Docker-Host (oder -Cluster) ausführen möchten, oder ob Sie möchten, dass die Web Forms-Anwendung mit einer Instanz des Katalog-Microservices kommuniziert, der in einem Linux-Container in einem anderen Docker-Host ausgeführt wird. Das hängt davon ab, wie Sie die Netzwerklatenz optimieren möchten. In den meisten Fällen sollten Ihre Anwendungen von der Ausführung im selben Docker-Host (oder -Schwarm) abhängig sein, um die Bereitstellung zu erleichtern und die Kommunikationslatenz zu verringern. In diesen Konfigurationen findet die einzige kostspielige Kommunikation zwischen den Microservice-Instanzen und den Hochverfügbarkeitsdiensten des beständigen Datenspeichers statt.
 
 >[!div class="step-by-step"]
-[Zurück] (../net-core-single-containers-linux-windows-server-hosts/index.md) [Weiter] (../multi-container-microservice-net-applications/index.md)
+[Zurück](../net-core-single-containers-linux-windows-server-hosts/index.md)
+[Weiter](../multi-container-microservice-net-applications/index.md)

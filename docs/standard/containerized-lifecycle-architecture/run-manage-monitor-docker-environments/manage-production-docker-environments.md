@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 5ecf1fbc164ff4170951894abc071908f45178d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 169ffa7ba61fa5dff09229410adb534f8e34a35c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573880"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104584"
 ---
 # <a name="manage-production-docker-environments"></a>Verwalten Sie Docker produktionsumgebungen
 
@@ -46,4 +46,5 @@ Service Fabric-Verwaltungstools für folgen:
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Run-microservices-based-applications-in-production.md) [weiter] (Monitor-Containern-Anwendung-services.md)
+[Zurück](run-microservices-based-applications-in-production.md)
+[Weiter](monitor-containerized-application-services.md)

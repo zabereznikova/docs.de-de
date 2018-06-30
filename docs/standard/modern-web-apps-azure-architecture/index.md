@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Einf
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 57c2a598e48f855dd540b96c7ebdb522b4197b91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 085ec85002fc1661d6e20b3c3f11cf4b6ea2161b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580262"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37103918"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
 
@@ -73,4 +73,4 @@ Sie können diesen Leitfaden gerne an Ihr Team weiterleiten, um ein gemeinsames 
 <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
-[Nächster] (modern-web-applications-characteristics.md)
+[Nächste](modern-web-applications-characteristics.md)

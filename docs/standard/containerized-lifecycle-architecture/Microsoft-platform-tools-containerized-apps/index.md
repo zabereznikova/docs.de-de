@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 02bd144f5bfd64ab3a0b0d30aad642c5c3099c7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576242"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106190"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Einführung in die Microsoft-Plattform und -Tools für Container-Apps
 
@@ -48,7 +48,8 @@ Mit VSTS können Entwickler containerzentrierte DevOps für einen schnellen, ite
 
 -   **Docker-Tools** : Sie können Ihre Containeranwendungen mit vertrauten Tools verwalten. Es besteht keine Notwendigkeit, Ihre vorhandenen Docker-Verwaltungsverfahren zu ändern, um Containerworkloads in die Cloud zu verschieben. Nutzen Sie die Ihnen bereits vertrauten Anwendungsverwaltungstools, und verbinden Sie sich über die API-Standardendpunkte mit dem Orchestrator Ihrer Wahl. Sie können auch andere Tools von Drittanbietern verwenden, um Ihre Docker-Anwendungen zu verwalten, z.B. Docker Datacenter oder sogar CLI-Tools von Docker.
 
--   **Open Source-Tools** : Da ACS die API-Standardendpunkte für das Orchestrierungsmodul bereitstellt, sind die gängigsten Tools mit ACS kompatibel und in den meisten Fällen sofort einsatzbereit (einschließlich Visualisierung, Überwachung, Befehlzeilentools und sogar zukünftige Tools, sobald diese verfügbar sind).
+-   
+  **Open Source-Tools** : Da ACS die API-Standardendpunkte für die Orchestrierungs-Engine bereitstellt, sind die gängigsten Tools mit ACS kompatibel und in den meisten Fällen sofort einsatzbereit (einschließlich Visualisierung, Überwachung, Befehlzeilentools und sogar zukünftige Tools, sobald diese verfügbar sind).
 
 **Überwachung**: Während der Ausführung von Produktionsumgebungen können Sie jedes Detail überwachen, indem Sie Folgendes verwenden:
 
@@ -59,4 +60,5 @@ Mit VSTS können Entwickler containerzentrierte DevOps für einen schnellen, ite
 Damit stellt Microsoft eine vollständige Grundlage für einen End-to-End-Lebenszyklus von Docker-Containeranwendungen breit. Es handelt sich jedoch um *eine Sammlung von Produkten und Technologien, die es Ihnen ermöglichen, optional vorhandene Tools und Prozesse auszuwählen und zu integrieren*. Die Flexibilität durch einen umfassenden Ansatz und die Stärke der tiefgreifenden Funktionen versetzen Microsoft in eine starke Position für die Entwicklung von Docker-Containeranwendungen.
 
 >[!div class="step-by-step"]
-[Vorheriger] (../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md) [Nächster] (../design-develop-containerized-apps/index.md)
+[Zurück](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+[Weiter](../design-develop-containerized-apps/index.md)

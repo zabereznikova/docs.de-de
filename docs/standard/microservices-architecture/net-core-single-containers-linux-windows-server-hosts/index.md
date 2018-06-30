@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Ber
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f429bc0c6e76c2be2e4f491768a15ab36ecb0d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591093"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105526"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Bereitstellen von einzelnen auf Containern basierenden .NET Core-Webanwendungen auf Linux- oder Windows Nano Server-Hosts
 
@@ -142,4 +142,5 @@ Sie sollten ausgeführte Prozesse beenden, wenn Sie zwischen verschiedenen Konfi
 Der Assistent, der die Docker-Unterstützung hinzufügt, kommuniziert mit dem ausgeführten Docker-Prozess. Der Assistent wird nicht ordnungsgemäß ausgeführt, wenn Docker beim Starten des Assistenten nicht ausgeführt wird. Darüber hinaus überprüft der Assistent Ihre aktuelle Containerwahl, um die richtige Docker-Unterstützung hinzuzufügen. Wenn Sie Unterstützung für Windows-Container hinzufügen möchten, führen Sie den Assistenten aus, während Docker mit der Konfiguration für Windows-Container ausgeführt wird. Wenn Sie Unterstützung für Linux-Container hinzufügen möchten, führen Sie den Assistenten aus, während Docker mit der Konfiguration für Linux-Container ausgeführt wird.
 
 >[!div class="step-by-step"]
-[Zurück] (../docker-application-development-process/docker-app-development-workflow.md) [Weiter] (../containerize-net-framework-applications/index.md)
+[Zurück](../docker-application-development-process/docker-app-development-workflow.md)
+[Weiter](../containerize-net-framework-applications/index.md)

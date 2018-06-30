@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 37313c4eb437b6b7a362456a7d1ee3b3aecb6020
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 276071a5d55015f2feecc27020ad614684907b4c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569417"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105210"
 ---
 # <a name="soa-applications"></a>SOA-Anwendungen
 
@@ -21,4 +21,5 @@ Am Ende des Tages eignen sich die Container-clustering-Lösungen für beide eine
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (State-and-data-in-docker-applications.md) [weiter] (orchestrieren-High-Skalierbarkeit-availability.md)
+[Zurück](state-and-data-in-docker-applications.md)
+[Weiter](orchestrate-high-scalability-availability.md)

@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4adbdd7099dfc1c5ef13d5bbb4370ae2f14aba1e
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 3da7816127982c3657129561975eed6d1f5aad5a
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696779"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104506"
 ---
 # <a name="development-environment-for-docker-apps"></a>Entwicklungsumgebung für Docker-Apps
 
@@ -48,4 +48,5 @@ Grundsätzlich können Sie eine moderne Sprache, die von Docker unter Linux oder
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (orchestrieren-High-Skalierbarkeit-availability.md) [weiter] (Docker-apps-Inner-Schleife-workflow.md)
+[Zurück](orchestrate-high-scalability-availability.md)
+[Weiter](docker-apps-inner-loop-workflow.md)

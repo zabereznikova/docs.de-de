@@ -4,12 +4,12 @@ description: .NET Microservices-Architektur für .NET-Containeranwendungen | Wah
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: b483214e7bd039a71ae642aa26e69d63222af8ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f6689468eda1dd1b12c24927e650b2b01381274
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580126"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104441"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Wahl zwischen .NET Core und .NET Framework für Docker-Container
 
@@ -17,4 +17,5 @@ Bei der Erstellung von serverseitigen Containeranwendungen von Docker mit .NET w
 
 
 >[!div class="step-by-step"]
-[Zurück] (../container-docker-introduction/docker-containers-images-registries.md) [Weiter] (general-guidance.md)
+[Zurück](../container-docker-introduction/docker-containers-images-registries.md)
+[Weiter](general-guidance.md)

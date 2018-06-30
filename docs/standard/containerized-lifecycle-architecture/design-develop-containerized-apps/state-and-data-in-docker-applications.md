@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b27be902779c7e22a568c679362851f745ea494d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 438733b2cde1d4eff178a5fd4a4ed0bb93804f76
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569680"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105448"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
@@ -51,4 +51,5 @@ Von Remotedatenquellen und wie SQL-Datenbank, DocumentDB oder eine remote-Cache 
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (monolithischen applications.md) [weiter] (Soa-applications.md)
+[Zurück](monolithic-applications.md)
+[Weiter](soa-applications.md)

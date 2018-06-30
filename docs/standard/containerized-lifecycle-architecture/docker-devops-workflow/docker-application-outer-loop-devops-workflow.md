@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 198313c260b36d3f3025606e73e220c361a7ebb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88eb5637bf266ab2e0a6d255f2e83f6aadc8af2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579001"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106161"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte in der äußeren Schleife DevOps-Workflow für einen Docker-Anwendung
 
@@ -234,4 +234,5 @@ In diesem Thema wird auch im nächsten Kapitel behandelt, als Teil der Aufgaben,
 Nur bei der Überwachung und Diagnose zu 100 % in den Bereich des DevOps sind sind die Überwachungsfunktionen Prozesse und Analysen, die vom Entwicklungsteam für Test- oder Beta-Umgebungen ausgeführt. Dies erfolgt durch Ausführen von ladetests oder einfach durch Überwachung Beta oder QA-Umgebungen, in denen Betatester die neuen Versionen versuchen.
 
 >[!div class="step-by-step"]
-[Vorherigen] (index.md) [weiter] (.. /Run-Manage-Monitor-docker-Environments/Index.MD)
+[Zurück](index.md)
+[Weiter](../run-manage-monitor-docker-environments/index.md)
