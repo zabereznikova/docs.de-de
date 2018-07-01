@@ -2,12 +2,12 @@
 title: Konfiguration und Metadatenunterstützung
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 4dfeeba6db220e03ad981b13e2bb093bedcd43c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486723"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140150"
 ---
 # <a name="configuration-and-metadata-support"></a>Konfiguration und Metadatenunterstützung
 In diesem Thema wird beschrieben, wie Konfigurations- und Metadatenunterstützung für Bindungen und Bindungselemente aktiviert wird.  
@@ -182,7 +182,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  Das benutzerdefinierte Bindungselement kann Richtlinienassertionen in die WSDL-Bindung für einen Dienstendpunkt exportieren, um die Funktionen dieses Bindungselements auszudrücken. Der folgende Beispielcode stammt aus dem [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
   
 #### <a name="policy-export"></a>Richtlinienexport  
- Die `UdpTransportBindingElement` Typ implementiert ''<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> Unterstützung für das Exportieren der Richtlinie hinzuzufügen. Als Ergebnis schließt <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> `UdpTransportBindingElement` in die Generierung der Richtlinie für eine Bindung, die dieses enthält, ein.  
+ Die `UdpTransportBindingElement` Typ implementiert <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> Unterstützung für das Exportieren der Richtlinie hinzuzufügen. Als Ergebnis schließt <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> `UdpTransportBindingElement` in die Generierung der Richtlinie für eine Bindung, die dieses enthält, ein.  
   
  Fügen Sie in <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType> eine Assertion für UDP und eine weitere Assertion ein, wenn der Kanal sich im Multicastmodus befindet. Grund hierfür ist, dass der Multicastmodus Einfluss auf die Art und Weise hat, in der der Kommunikationsstapel erstellt wird, weshalb eine Koordinierung zwischen beiden Seiten stattfinden muss.  
   
