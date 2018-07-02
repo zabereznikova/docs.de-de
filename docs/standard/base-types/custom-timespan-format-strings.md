@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f65e8bb1a61bad458cb33a3bf9d2553479c750e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208172"
 ---
 # <a name="custom-timespan-format-strings"></a>Benutzerdefinierte TimeSpan-Formatzeichenfolgen
 Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatierungsvorgang resultierende Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts. Eine benutzerdefinierte Formatzeichenfolge besteht aus einem oder mehreren benutzerdefinierten <xref:System.TimeSpan>-Formatbezeichnern und einer beliebigen Anzahl von Literalzeichen. Alle Zeichenfolgen, bei denen es sich nicht um [standardmäßige TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md) handelt, werden als benutzerdefinierte <xref:System.TimeSpan>-Formatzeichenfolgen interpretiert.  
@@ -66,7 +67,7 @@ Eine <xref:System.TimeSpan>-Formatzeichenfolge definiert die aus einem Formatier
 |"FFFFFF"|Die Millionstelsekunden in einem Zeitintervall. Nachkommanullen werden nicht angezeigt.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "FFFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|  
 |"FFFFFFF"|Die Zehnmillionstelsekunden in einem Zeitintervall. Nachkommanullen oder sieben Nullstellen werden nicht angezeigt.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|  
 |*„string“*|Trennzeichen für Literalzeichenfolge.<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
-|Das Escapezeichen \|<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|\\|Das Escapezeichen<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
 |Jedes andere Zeichen|Alle anderen Zeichen ohne Escapezeichen werden als benutzerdefinierte Formatbezeichner interpretiert.<br /><br /> Weitere Informationen finden Sie unter [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
   
 <a name="dSpecifier"></a>   

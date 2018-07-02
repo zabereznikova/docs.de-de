@@ -3,26 +3,28 @@ title: Ausführen von Ausdrucksbaumstrukturen
 description: Informationen zum Ausführen von Ausdrucksbaumstrukturen, indem sie in Anweisungen einer ausführbaren Zwischensprache (IL) konvertiert werden.
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 54706cd5d8ebe60bb893bc82f05aecddae370602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218162"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207390"
 ---
 # <a name="executing-expression-trees"></a>Ausführen von Ausdrucksbaumstrukturen
 
 [Vorheriges – Framework-Typen, die Ausdrucksbaumstrukturen unterstützen](expression-classes.md)
 
 Eine *Ausdrucksbaumstruktur* ist eine Datenstruktur, die Code darstellt.
-Es ist ein nicht kompilierter und ausführbarer Code. Wenn Sie den .NET-Code ausführen möchten, der durch eine Ausdrucksbaumstruktur dargestellt wird, müssen Sie ihn in ausführbare IL-Anweisungen konvertieren. 
+Es ist ein nicht kompilierter und ausführbarer Code. Wenn Sie den .NET-Code ausführen möchten, der durch eine Ausdrucksbaumstruktur dargestellt wird, müssen Sie ihn in ausführbare IL-Anweisungen konvertieren.
+
 ## <a name="lambda-expressions-to-functions"></a>Lambdaausdrücke zu Funktionen
-Sie können jede LambdaExpression oder jeden Typ, der von LambdaExpression in eine ausführbare IL abgeleitet wurde, konvertieren. Andere Ausdruckstypen können nicht direkt in Code konvertiert werden. Diese Einschränkung wirkt sich kaum auf die Praxis aus. Lambdaausdrücke sind die einzigen Typen von Ausdrücken, die Sie ausführen möchten, indem Sie sie in eine ausführbare Zwischensprache (Intermediate Language, IL) konvertieren. (Denken Sie darüber nach, was es bedeuten würde, eine `ConstantExpression` direkt auszuführen. Würde es etwas Nützliches bedeuten?) Jede beliebige Ausdrucksbaumstruktur, die eine `LamdbaExpression` ist, oder ein abgeleiteter Typ von `LambdaExpression`, kann in eine IL konvertiert werden.
+
+Sie können jede LambdaExpression oder jeden Typ, der von LambdaExpression in eine ausführbare IL abgeleitet wurde, konvertieren. Andere Ausdruckstypen können nicht direkt in Code konvertiert werden. Diese Einschränkung wirkt sich kaum auf die Praxis aus. Lambdaausdrücke sind die einzigen Typen von Ausdrücken, die Sie ausführen möchten, indem Sie sie in eine ausführbare Zwischensprache (Intermediate Language, IL) konvertieren. (Denken Sie darüber nach, was es bedeuten würde, eine `ConstantExpression` direkt auszuführen. Würde es etwas Nützliches bedeuten?) Jede beliebige Ausdrucksbaumstruktur, die eine `LambdaExpression` ist, oder ein abgeleiteter Typ von `LambdaExpression`, kann in eine IL konvertiert werden.
 Der Ausdruckstyp `Expression<TDelegate>` ist das einzige konkrete Beispiel in den .NET Core-Bibliotheken. Hiermit wird ein Ausdruck dargestellt, der jedem Delegattyp zugeordnet ist. Da dieser Typ einem Delegattyp zugeordnet ist, kann .NET den Ausdruck untersuchen, und die IL für einen entsprechenden Delegaten generieren, der der Signatur des Lambdaausdrucks entspricht. 
 
 In den meisten Fällen erstellt dies eine einfache Zuordnung zwischen einem Ausdruck und seinem entsprechenden Delegaten. Angenommen, eine Ausdrucksbaumstruktur, die durch `Expression<Func<int>>` dargestellt wird, wird in einen Delegaten des Typs `Func<int>` konvertiert. Für einen Lambdaausdruck mit beliebigem Rückgabetyp und Argumentliste besteht ein Delegattyp, der der Zieltyp für den ausführbaren Code ist, der von diesem Lambdaausdruck dargestellt wird.
 
-Der `LamdbaExpression`-Typ enthält `Compile`- und `CompileToMethod`-Member, die Sie verwenden würden, um eine Ausdrucksbaumstruktur in ausführbaren Code zu konvertieren. Die `Compile`-Methode erstellt einen Delegaten. Die `CompileToMethod`-Methode aktualisiert ein `MethodBuilder`-Objekt mit der IL, das die kompilierte Ausgabe der Ausdrucksbaumstruktur darstellt. Beachten Sie, dass `CompileToMethod` nur auf dem Desktop-Framework verfügbar ist, nicht auf dem .NET Core-Framework.
+Der `LambdaExpression`-Typ enthält `Compile`- und `CompileToMethod`-Member, die Sie verwenden würden, um eine Ausdrucksbaumstruktur in ausführbaren Code zu konvertieren. Die `Compile`-Methode erstellt einen Delegaten. Die `CompileToMethod`-Methode aktualisiert ein `MethodBuilder`-Objekt mit der IL, das die kompilierte Ausgabe der Ausdrucksbaumstruktur darstellt. Beachten Sie, dass `CompileToMethod` nur im Desktop-Framework verfügbar ist, nicht in .NET Core.
 
 Optional können Sie auch einen `DebugInfoGenerator` angeben, der das Symbol „Debuginformationen“ für das generierte Delegatobjekt empfängt. Dies ermöglicht es Ihnen, die Ausdrucksbaumstruktur in ein Delegatobjekt zu konvertieren, und über vollständige Debuginformationen über die generierten Delegate zu verfügen.
 
@@ -35,11 +37,11 @@ var answer = func(); // Invoke Delegate
 Console.WriteLine(answer);
 ```
 
-Beachten Sie, dass der Delegattyp auf den Ausdruckstyp basiert. Sie müssen den Rückgabetyp und die Argumentliste kennen, wenn Sie das Delegatobjekt mit strikter Typzuordnung verwenden möchten. Die `LambdaExpression.Compile()`-Methode gibt den `Delegate`-Typ zurück. Sie müssen es in den richtigen Delegattyp umwandeln, um Kompilierzeittools die Argumentliste des Rückgabetyps überprüfen zu lassen.
+Beachten Sie, dass der Delegattyp auf den Ausdruckstyp basiert. Sie müssen den Rückgabetyp und die Argumentliste kennen, wenn Sie das Delegatobjekt mit strikter Typzuordnung verwenden möchten. Die `LambdaExpression.Compile()`-Methode gibt den `Delegate`-Typ zurück. Sie müssen es in den richtigen Delegattyp umwandeln, um Kompilierzeittools die Argumentliste oder den Rückgabetyp überprüfen zu lassen.
 
 ## <a name="execution-and-lifetimes"></a>Ausführung und Lebensdauer
 
-Sie führen den Code durch Aufrufen des Delegaten aus, den Sie beim Aufrufen von `LamdbaExpression.Compile()` erstellt haben. Dies sehen Sie oben, wo `add.Compile()` einen Delegaten zurückgibt. Rufen Sie diesen Delegaten durch Aufrufen von `func()` aus, der den Code ausführt.
+Sie führen den Code durch Aufrufen des Delegaten aus, den Sie beim Aufrufen von `LambdaExpression.Compile()` erstellt haben. Dies sehen Sie oben, wo `add.Compile()` einen Delegaten zurückgibt. Rufen Sie diesen Delegaten durch Aufrufen von `func()` aus, der den Code ausführt.
 
 Dieser Delegat stellt den Code in der Ausdrucksbaumstruktur dar. Sie können das Handle für diesen Delegaten beibehalten und es später aufrufen. Sie müssen die Ausdrucksbaumstruktur nicht jedes Mal kompilieren, wenn Sie den Code ausführen möchten, den sie darstellt. (Beachten Sie, dass Ausdrucksbaumstrukturen unveränderlich sind und dass das spätere Kompilieren der gleichen Ausdrucksbaumstruktur einen Delegaten erstellt, der den gleichen Code ausführt.)
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b816087f54e652f07dc791b7d66eb1af8f52f55e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: deea4e6128eace0ffa539d77bb63f7629eb72354
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406506"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207403"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT-Struktur
 Enthält Informationen zu einem Bereich des Arbeitsspeichers im verwalteten Heap.  
@@ -39,20 +39,20 @@ typedef struct _COR_SEGMENT {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|description|  
 |------------|-----------------|  
-|`start`|Die Startadresse des Arbeitsspeicherbereichs.|  
-|`end`|Die Endadresse für den Speicherbereich.|  
-|`gen`|Ein [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) Enumerationsmember, der die Generierung von den Speicherbereich angibt.|  
-|`heap`|Die Heap-Anzahl in der der Speicherbereich befindet. Weitere Informationen finden Sie im Abschnitt Hinweise.|  
+|`start`|Die Startadresse des Arbeitsspeicherbereichs|  
+|`end`|Die Endadresse des Arbeitsspeicherbereichs|  
+|`gen`|Ein [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md)-Enumerationsmember, der die Generierung des Arbeitsspeicherbereichs angibt.|  
+|`heap`|Die Nummer des Heaps, in dem sich der Arbeitsspeicherbereich befindet. Weitere Informationen finden Sie im Abschnitt Hinweise.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `COR_SEGMENTS` -Struktur stellt einen Bereich des Arbeitsspeichers im verwalteten Heap dar.  `COR_SEGMENTS` Objekte sind Mitglieder der [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) Auflistungsobjekt, das durch Aufrufen von Werten aufgefüllt ist die[icordebugprocess5:: Enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) Methode.  
+ Die `COR_SEGMENTS`-Struktur stellt einen Bereich des Arbeitsspeichers im verwalteten Heap dar.  `COR_SEGMENTS`-Objekte sind Member des Auflistungsobjekts [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md), das durch einen Aufruf der Methode [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) aufgefüllt wird.  
   
- Die `heap` Feld wird die Prozessor-Zahl, die dem Heap gemeldet wird entspricht. Für die Arbeitsstation Garbage Collectors ist der Wert immer 0 (null), Schreibberechtigung Arbeitsstationen nur eine Garbage Collection-Heap an. Für Server-Garbage Collectors entspricht der Wert der Prozessor, dem der Heap zugeordnet ist. Beachten Sie, dass möglicherweise mehr oder weniger Garbagecollection heaps als tatsächliche Prozessoren aufgrund von den Implementierungsdetails der Garbage Collector vorhanden sind.  
+ Das `heap`-Feld ist die Nummer des Prozessors, der dem gemeldeten Heap entspricht. Für Arbeitsstation-Garbage Collectors ist der Wert immer 0 (null), da Arbeitsstationen nur über einen Garbage Collection-Heap verfügen. Für Server-Garbage Collector entspricht der Wert dem Prozessor, dem der Heap angefügt ist. Beachten Sie, dass es aufgrund der Implementierungsdetails des Garbage Collectors mehr oder weniger Garbage Collection-Heaps als tatsächliche Prozessoren geben kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

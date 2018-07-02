@@ -1,6 +1,6 @@
 ---
 title: Standardmäßige Zahlenformatzeichenfolgen
-ms.date: 09/10/2017
+ms.date: 06/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,13 +18,15 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1cad76c234ce73772d3b65b11596ab0e4e0ae3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208169"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardmäßige Zahlenformatzeichenfolgen
+
 Standardformatzeichenfolgen für Zahlen werden für die Formatierung allgemeiner numerischer Typen verwendet. Eine Standardformatzeichenfolge für Zahlen besitzt das Format `Axx`, wobei:  
   
 -   `A` ist ein einzelnes alphabetisches Zeichen, das als *Formatbezeichner* bezeichnet wird. Jede Zahlenformatzeichenfolge, die mehr als ein alphabetisches Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
@@ -64,24 +66,27 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
   
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>Verwenden von numerischen Standardformatzeichenfolgen  
- Eine numerische Standardformatzeichenfolge kann verwendet werden, um die Formatierung eines numerischen Werts wie folgt zu definieren:  
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+
+Eine numerische Standardformatzeichenfolge kann verwendet werden, um die Formatierung eines numerischen Werts wie folgt zu definieren:  
   
 -   Die Zeichenfolge kann an eine Überladung der `ToString`-Methode übergeben werden, die über einen `format`-Parameter verfügt. Im folgenden Beispiel wird ein numerischer Wert in der aktuellen Kultur (in diesem Fall „en-US“) als Währungszeichenfolge formatiert.  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
-     [!code-csharp[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
 -   Die Zeichenfolge kann als `formatString`-Argument in einem Formatelement angegeben werden, das beispielsweise mit den Methoden <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> und <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> verwendet wird. Weitere Informationen finden Sie unter [Zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md). Im folgenden Beispiel wird ein Währungswert mit einem Formatelement in eine Zeichenfolge eingefügt.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
-     [!code-csharp[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
      [!code-vb[Formatting.Numeric.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#11)]  
   
      Optional können Sie ein `alignment`-Argument bereitstellen, um die Breite des numerischen Felds anzugeben und festzulegen, ob sein Wert rechts- oder linksbündig ausgerichtet ist. Im folgenden Beispiel wird ein Währungswert in einem 28-stelligen Feld linksbündig und ein Währungswert in einem 14-stelligen Feld rechtsbündig ausgerichtet.  
   
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
-     [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
 -   Die Zeichenfolge kann als `formatString`-Argument in einem interpolierten Ausdruckselement einer interpolierten Zeichenfolge bereitgestellt werden. Weitere Informationen finden Sie im Artikel [Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) der C#-Referenz oder im Artikel [Interpolierte Zeichenfolgen](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) in der Visual Basic-Referenz.  
@@ -110,7 +115,7 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
  Im folgenden Beispiel wird ein <xref:System.Double>-Wert mit dem Währungsformatbezeichner formatiert.  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
- [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
  [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]  
   
  [Zurück zur Tabelle](#table)  
@@ -130,7 +135,7 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
  Im folgenden Beispiel wird ein <xref:System.Int32>-Wert mit dem Dezimalformatbezeichner formatiert.  
   
  [!code-cpp[Formatting.Numeric.Standard#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#2)]
- [!code-csharp[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
  [!code-vb[Formatting.Numeric.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#2)]  
   
  [Zurück zur Tabelle](#table)  
@@ -154,7 +159,7 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
  Im folgenden Beispiel wird ein <xref:System.Double>-Wert mit dem Exponentialformatbezeichner formatiert.  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
- [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
  [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]  
   
  [Zurück zur Tabelle](#table)  
@@ -176,7 +181,7 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
  Im folgenden Beispiel wird ein <xref:System.Double>-Wert und ein <xref:System.Int32>-Wert mit dem Festkommaformatbezeichner formatiert.  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
- [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
  [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]  
   
  [Zurück zur Tabelle](#table)  
@@ -205,10 +210,10 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
  
 Beachten Sie, dass der Formatbezeichner „G17“ bei Verwendung mit einem <xref:System.Double>-Wert sicherstellt, dass der ursprüngliche <xref:System.Double>-Wert erfolgreich Roundtrips ausführt. Grund hierfür ist, dass es sich bei <xref:System.Double> um eine mit IEEE 754-2008 konformer Gleitkommazahl mit doppelter Genauigkeit (`binary64`) handelt, die bis zu 17 gültige Stellen aufweist. Es wird empfohlen, diesen anstelle des [Formatbezeichners „R“](#RFormatString) zu verwenden, da „R“ in einigen Fällen keine Roundtrips für Gleitkommawerte mit doppelter Genauigkeit durchführen kann. Einer dieser Fälle wird anhand des folgenden Beispiels veranschaulicht.
 
-[!code-csharp[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
+[!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
-Bei Verwendung mit einem <xref:System.Single>-Wert stellt der Formatbezeichner „G9“ sicher, dass der ursprüngliche <xref:System.Single>-Wert erfolgreich Roundtrips durchführt. Grund hierfür ist, dass es sich bei <xref:System.Single> um eine mit IEEE 754-2008 konformer Gleitkommazahl mit einfacher Genauigkeit (`binary32`) handelt, die bis zu neun gültige Stellen aufweist. Es wird empfohlen, diesen anstelle des [Formatbezeichners „R“](#RFormatString) zu verwenden, da „R“ in einigen Fällen keine Roundtrips für Gleitkommawerte mit einfacher Genauigkeit ausführen kann.
+Bei Verwendung mit einem <xref:System.Single>-Wert stellt der Formatbezeichner „G9“ sicher, dass der ursprüngliche <xref:System.Single>-Wert erfolgreich Roundtrips durchführt. Grund hierfür ist, dass es sich bei <xref:System.Single> um eine mit IEEE 754-2008 konformer Gleitkommazahl mit einfacher Genauigkeit (`binary32`) handelt, die bis zu neun gültige Stellen aufweist. Aus Leistungsgründen wird empfohlen, dass dies der Verwendung des [Formatbezeichners „R“](#RFormatString) vorziehen.
 
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabellen sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der Ergebniszeichenfolge steuern.  
   
@@ -221,7 +226,7 @@ Bei Verwendung mit einem <xref:System.Single>-Wert stellt der Formatbezeichner �
  Im folgenden Beispiel werden gemischte Gleitkommawerte mit dem allgemeinen Formatbezeichner formatiert.  
   
  [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
- [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
  [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]  
   
  [Zurück zur Tabelle](#table)  
@@ -244,7 +249,7 @@ Bei Verwendung mit einem <xref:System.Single>-Wert stellt der Formatbezeichner �
  Im folgenden Beispiel werden gemischte Gleitkommawerte mit dem Zahlenformatbezeichner formatiert.  
   
  [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
- [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
  [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]  
   
  [Zurück zur Tabelle](#table)  
@@ -269,7 +274,7 @@ Bei Verwendung mit einem <xref:System.Single>-Wert stellt der Formatbezeichner �
  Im folgenden Beispiel werden gemischte Gleitkommawerte mit dem Prozentformatbezeichner formatiert.  
   
  [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
- [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
  [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]  
   
  [Zurück zur Tabelle](#table)  
@@ -278,7 +283,7 @@ Bei Verwendung mit einem <xref:System.Single>-Wert stellt der Formatbezeichner �
 ## <a name="the-round-trip-r-format-specifier"></a>Der Schleifenformatbezeichner "R"  
  Der Formatbezeichner für Roundtrips „R“ stellt sicher, dass ein in eine Zeichenfolge konvertierter numerischer Wert wieder in denselben numerischen Wert zurück konvertiert wird. Dieses Format wird nur für folgende Typen unterstützt: <xref:System.Single>, <xref:System.Double> und <xref:System.Numerics.BigInteger>.  
 
-Bei <xref:System.Double>- und <xref:System.Single>-Werten kann der Formatbezeichner „R“ in einigen Fällen keinen Roundtrip für den ursprünglichen Wert ausführen und bietet zudem eine relativ schwache Leistung. Stattdessen empfehlen wir zur erfolgreichen Durchführung von Roundtrips für <xref:System.Single>-Werte, den Formatbezeichner [„G17“](#GFormatString) für <xref:System.Double>-Werte und den Formatbezeichner [„G9“](#GFormatString) zu verwenden.
+Bei <xref:System.Double>-Werten kann der Formatbezeichner „R“ in einigen Fällen keinen Roundtrip für den ursprünglichen Wert durchführen. Für die Werte <xref:System.Double> und <xref:System.Single> bietet er auch eine relativ schlechte Leistung. Stattdessen empfehlen wir zur erfolgreichen Durchführung von Roundtrips für <xref:System.Single>-Werte, den Formatbezeichner [„G17“](#GFormatString) für <xref:System.Double>-Werte und den Formatbezeichner [„G9“](#GFormatString) zu verwenden.
 
  Wenn ein <xref:System.Numerics.BigInteger>-Wert mit diesem Bezeichner formatiert wird, enthält seine Zeichenfolgendarstellung alle signifikanten Stellen im <xref:System.Numerics.BigInteger>-Wert.  
   
@@ -294,7 +299,7 @@ Bei <xref:System.Double>- und <xref:System.Single>-Werten kann der Formatbezeich
  Im folgenden Beispiel wird ein <xref:System.Numerics.BigInteger>-Wert mit dem Roundtripformatbezeichner formatiert.  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
- [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
+ [!code-csharp-interactive[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
  [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]  
   
 > [!IMPORTANT]
@@ -302,7 +307,7 @@ Bei <xref:System.Double>- und <xref:System.Single>-Werten kann der Formatbezeich
   
  Um das Problem zu umgehen, dass mit der standardmäßigen numerischen Formatierungszeichenfolge „R“ formatierte <xref:System.Double>-Werte bei der Kompilierung mit der `/platform:x64`-Option oder der `/platform:anycpu`-Option und bei Ausführung auf 64-Bit-Systemen keinen erfolgreichen Roundtrip durchführen, können Sie <xref:System.Double>-Werte mit der standardmäßigen numerischen Formatierungszeichenfolge „G17“ formatieren. Im folgenden Beispiel wird die Formatzeichenfolge "R" mit einem <xref:System.Double>-Wert verwendet, der nicht erfolgreich zurückkonvertiert wird, und es wird die Formatzeichenfolge "G17" verwendet, um erfolgreich in den ursprünglichen Wert zurückzukonvertieren.  
   
- [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
+ [!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
   
  [Zurück zur Tabelle](#table)  
@@ -318,7 +323,7 @@ Bei <xref:System.Double>- und <xref:System.Single>-Werten kann der Formatbezeich
  Im folgenden Beispiel wird <xref:System.Int32>-Werte mit dem Hexadezimal-Formatbezeichner formatiert.  
   
  [!code-cpp[Formatting.Numeric.Standard#9](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#9)]
- [!code-csharp[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
  [!code-vb[Formatting.Numeric.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#9)]  
   
  [Zurück zur Tabelle](#table)  
@@ -343,11 +348,13 @@ Bei <xref:System.Double>- und <xref:System.Single>-Werten kann der Formatbezeich
 ### <a name="floating-point-infinities-and-nan"></a>Unendlichkeiten und NaN bei Gleitkommawerten  
  Wenn der Wert eines <xref:System.Single>-Gleitkommatyps oder eines <xref:System.Double>-Gleitkommatyps positiv unendlich, negativ unendlich oder keine Zahl (Not a Number, NaN) ist, handelt es sich bei der formatierten Zeichenfolge unabhängig von der Formatzeichenfolge um den Wert der entsprechenden <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>-Eigenschaft, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>-Eigenschaft oder <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A>-Eigenschaft, die durch das derzeit gültige <xref:System.Globalization.NumberFormatInfo>-Objekt angegeben wird.  
   
-<a name="example"></a>   
 ## <a name="example"></a>Beispiel  
+ 
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+ 
  Durch das folgende Beispiel werden mithilfe der Kultur en-US und allen Standardzahlen-Formatbezeichnern ein ganzzahliger Wert und ein numerischer Gleitkommawert formatiert. In diesem Beispiel werden zwei bestimmte numerische Typen (<xref:System.Double> und <xref:System.Int32>) verwendet. Die Ergebnisse sind jedoch für alle numerischen Basistypen (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> und <xref:System.Single>) ähnlich.  
   
- [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
+ [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch  

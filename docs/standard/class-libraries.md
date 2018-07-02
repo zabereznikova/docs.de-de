@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 7d2f81ef08892c994163d609a56008c1accadaa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570600"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207172"
 ---
 # <a name="net-class-libraries"></a>.NET-Klassenbibliotheken
 
@@ -39,7 +39,7 @@ Wenn Sie eine portable Bibliothek erstellen, wählen Sie eine Plattformkonfigura
 
 Viele Bibliotheksentwickler sind von der Produktion mehrerer plattformspezifischer Bibliotheken aus einer Quelle (mit bedingten Kompilierungsdirektiven) zu portablen Bibliotheken gewechselt. Es gibt [mehrere Ansätze](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) für den Zugriff auf plattformspezifische Funktionalität in portablen Bibliotheken, wobei das [Lockvogelangebot](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) im Moment das gängigste Verfahren ist.
 
-### <a name="net-standard-class-libraries"></a>.NET Standard-Klassenbibliotheken
+## <a name="net-standard-class-libraries"></a>.NET Standard-Klassenbibliotheken
 
 .NET Standard-Bibliotheken sind ein Ersatz für plattformspezifische und portable Bibliothekenkonzepte. Sie sind plattformspezifisch in dem Sinne, dass sie die gesamte Funktionalität der zugrunde liegenden Plattform (keine synthetischen Plattformen oder Plattformschnittmengen) verfügbar machen. Sie sind portabel in dem Sinne, dass sie auf allen unterstützenden Plattformen funktionieren.
 
@@ -60,6 +60,6 @@ Die folgenden Plattformen unterstützen .NET Standard-Bibliotheken:
 
 Weitere Informationen finden Sie im Artikel [.NET Standard](net-standard.md).
 
-### <a name="mono-class-libraries"></a>Mono-Klassenbibliotheken
+## <a name="mono-class-libraries"></a>Mono-Klassenbibliotheken
 
 Klassenbibliotheken, einschließlich der drei oben beschriebenen Typen von Bibliotheken, werden unter Mono unterstützt. Mono ist häufig (richtigerweise) als eine plattformübergreifende Implementierung von Microsoft .NET Framework angesehen worden. Dies lag teilweise daran, dass plattformspezifische .NET Framework-Bibliotheken in der Mono-Runtime ohne Änderung oder erneute Kompilierung ausgeführt werden konnten. Dieses Merkmal existierte vor der Erstellung portabler Klassenbibliotheken, und es war naheliegend, so binäre Portabilität zwischen .NET Framework und Mono zu ermöglichen (obwohl es nur in einer Richtung funktionierte).

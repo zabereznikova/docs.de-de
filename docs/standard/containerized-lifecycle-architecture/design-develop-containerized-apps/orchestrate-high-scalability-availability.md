@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 3a505e10b2a37032a7ccfefdf4a6f4bb64d65486
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7016fa8b731170a63f5d0f9d9bed3b72090be4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579547"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106378"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Microservices und multicontainer Anwendungen für die hohe Skalierbarkeit und Verfügbarkeit orchestriert
 
@@ -181,4 +181,5 @@ Beachten Sie, dass Docker-Container selbst zustandslos sind. Wenn Sie einen zust
 
 
 >[!div class="step-by-step"]
-[Vorherigen] (Soa-applications.md) [weiter] (Docker-apps-Development-environment.md)
+[Zurück](soa-applications.md)
+[Weiter](docker-apps-development-environment.md)

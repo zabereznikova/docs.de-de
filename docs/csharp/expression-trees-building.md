@@ -3,12 +3,12 @@ title: Erstellen von Ausdrucksbaumstrukturen
 description: Informationen zu den Verfahren zum Erstellen von Ausdrucksbaumstrukturen.
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 52e03bd1ea2635d75da6d70af6918b33b64622b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216313"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207188"
 ---
 # <a name="building-expression-trees"></a>Erstellen von Ausdrucksbaumstrukturen
 
@@ -43,10 +43,10 @@ var addition = Expression.Add(one, two);
 Sobald Sie den Additionsausdruck haben, können Sie den Lambdaausdruck erstellen:
 
 ```csharp
-var lamdba = Expression.Lambda(addition);
+var lambda = Expression.Lambda(addition);
 ```
 
-Dies ist eine sehr einfache LambdaExpression, da sie keine Argumente enthält.
+Dies ist ein sehr einfacher Lambdaausdruck, da er keine Argumente enthält.
 In diesem Abschnitt erfahren Sie später, wie Sie Parametern Argumente zuordnen und kompliziertere Ausdrücke erstellen.
 
 Für Ausdrücke, die so einfach wie dieser sind, können Sie alle Aufrufe in einer einzelnen Anweisung kombinieren:

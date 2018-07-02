@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4f791ea339c9188ac8fada525611fc68821351d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743419"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270421"
 ---
 # <a name="assembly-security-considerations"></a>Überlegungen zur Assemblysicherheit
 <a name="top"></a> Beim Erstellen einer Assembly können Sie eine Reihe von Berechtigungen angeben, die erforderlich sind, um die Assembly auszuführen. Das Erteilen bestimmter Berechtigungen für eine Assembly beruht auf Beweisen.  
@@ -45,9 +45,13 @@ ms.locfileid: "32743419"
  Zur Ladezeit wird der Beweis der Assembly als Eingabe für die Sicherheitsrichtlinie verwendet. Die Sicherheitsrichtlinie wird durch den Administrator der Organisation und des Computers sowie durch die Benutzerrichtlinieneinstellungen eingerichtet und bestimmt den Satz von Berechtigungen, der sämtlichem verwalteten Code beim Ausführen erteilt wird. Die Sicherheitsrichtlinie kann für den Herausgeber der Assembly eingerichtet werden (dazu ist eine mit dem Signaturtool generierte Signatur erforderlich). Sie kann außerdem für die Website und die Zone (als solche in Internet Explorer bezeichnet), von der die Assembly heruntergeladen wurde, oder für den starken Namen der Assembly eingerichtet werden. Der für einen Computer zuständige Administrator kann z. B. eine Sicherheitsrichtlinie einrichten, über die Code, der von einer Website heruntergeladen und von einer bestimmten Softwarefirma signiert ist, auf die Datenbank auf einem Computer zugreifen kann. Die Sicherheitsrichtlinie lässt es aber nicht zu, dass auf die Festplatte dieses Computers geschrieben wird.  
   
 ## <a name="strong-named-assemblies-and-signing-tools"></a>Assemblys mit starkem Namen und Signaturtools  
+
+ > [!WARNING]
+ > Verlassen Sie sich für die Sicherheit nicht auf starke Namen. Diese Namen bieten lediglich eine eindeutige Identität.
+
  Sie können eine Assembly auf zwei unterschiedliche, sich jedoch gegenseitig ergänzende Arten signieren: mit einem starken Namen oder mithilfe von [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md). Beim Signieren einer Assembly mit einem starken Namen wird der Datei, die das Assemblymanifest enthält, eine Verschlüsselung mit einem öffentlichen Schlüssel hinzugefügt. Das Signieren mit starkem Namen gewährleistet die Eindeutigkeit der Namen, verhindert das Vortäuschen von Namen (Spoofing) und stellt Aufrufern beim Auflösen eines Verweises eine Identität bereit.  
   
- Mit einem starken Namen ist jedoch keine Vertrauensebene verknüpft. Daher ist die Verwendung von [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) wichtig. Beim Einsatz der beiden Signaturtools müssen Herausgeber ihre Identität gegenüber einer dritten Stelle beweisen und ein Zertifikat anfordern. Dieses Zertifikat wird dann in die Datei eingebettet und kann von einem Administrator bei der Entscheidung verwendet werden, ob die Authentizität von Code vertrauenswürdig ist.  
+ Mit einem starken Namen ist keine Vertrauensebene verknüpft. Daher ist die Verwendung von [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) wichtig. Beim Einsatz der beiden Signaturtools müssen Herausgeber ihre Identität gegenüber einer dritten Stelle beweisen und ein Zertifikat anfordern. Dieses Zertifikat wird dann in die Datei eingebettet und kann von einem Administrator bei der Entscheidung verwendet werden, ob die Authentizität von Code vertrauenswürdig ist.  
   
  Sie können einer Assembly sowohl einen starken Namen als auch eine mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) erstellte digitale Signatur zuordnen, können diese Optionen jedoch auch einzeln verwenden. Mit den beiden Signaturtools kann immer nur jeweils eine Datei signiert werden. Bei einer Mehrfachdateiassembly signieren Sie die Datei, die das Assemblymanifest enthält. Ein starker Name ist in der Datei mit dem Assemblymanifest gespeichert, eine mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) erstellte Signatur wird jedoch in einem reservierten Slot der PE-Datei (Portable Executable, übertragbare ausführbare Datei) mit dem Assemblymanifest gespeichert. Eine Assembly kann mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) signiert werden (mit oder ohne starken Namen), wenn bereits eine Vertrauenshierarchie auf der Basis von mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) generierten Signaturen vorhanden ist oder die Richtlinie nur den Teil mit dem Schlüssel verwendet und keine Kette von Vertrauensstellungen überprüft.  
   

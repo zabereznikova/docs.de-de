@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Impl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 7c785814c4726dd805ad7b0dccb6a3584118cc65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572540f17e5628d7f71c94ee68f7cba17d64d07
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579755"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207637"
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
 
@@ -667,7 +667,7 @@ public class CreateOrderCommandHandler
 
 Das ist der Code, der Befehle mit Befehlshandlern korreliert. Der Handler nur eine einfache Klasse, aber er erbt vom RequestHandler&lt;T&gt;, und MediatR stellt sicher, dass sichergestellt, die er mit der richtigen Nutzlast aufgerufen wird.
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-meadiatr"></a>Anwenden von querschnittlichen Belangen, wenn Befehle mit Verhalten in MeadiatR verarbeitet werden
+## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Anwenden von übergreifenden Belangen, wenn Befehle mit Verhalten in MediatR verarbeitet werden
 
 Es gibt zudem die Möglichkeit, querschnittliche Belange auf die Vermittlerpipeline anzuwenden. Sie können auch am Ende des Autofac-Registrierungsmodulcodes sehen, wie ein Verhaltenstyp registriert wird, insbesondere eine benutzerdefinierte LoggingBehavior-Klasse und eine ValidatorBehavior-Klasse. Sie können jedoch auch andere benutzerdefinierten Verhaltensweisen hinzufügen.
 
@@ -827,12 +827,12 @@ Auf ähnliche Weise könnten Sie andere Verhaltensweisen für zusätzliche Aspek
 
 ##### <a name="the-mediator-pattern"></a>Das Vermittlermuster
 
--   **Mediator pattern**
+-   **Vermittlermuster**
     [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>Das Decorator-Muster
 
--   **Decorator pattern**
+-   **Decorator-Muster**
     [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
