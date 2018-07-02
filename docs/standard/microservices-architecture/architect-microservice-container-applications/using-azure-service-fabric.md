@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Verw
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: d65968e3d37f53cceee55120110ad4bb3c13d304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5058023aa7cbb42bcf39d061a3273b30e0e9b74c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577677"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105819"
 ---
 # <a name="using-azure-service-fabric"></a>Verwenden von Azure Service Fabric
 
@@ -89,4 +89,5 @@ Andere Microserviceframeworks, die zustandsbehaftete Dienste zulassen, die das A
 Beachten Sie, dass Docker-Container selbst zustandslos sind. Wenn Sie einen zustandsbehafteten Dienst implementieren möchten, benötigen Sie eines der bereits erwähnten zusätzlich reglementierenden Frameworks auf höherer Ebene. 
 
 >[!div class="step-by-step"]
-[Zurück] (scalable-available-multi-container-microservice-applications.md) [Weiter] (../docker-application-development-process/index.md)
+[Zurück](scalable-available-multi-container-microservice-applications.md)
+[Weiter](../docker-application-development-process/index.md)

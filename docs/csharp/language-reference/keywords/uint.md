@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-ms.openlocfilehash: fa0169ad92819cee36832d6c928202eb0dd6733e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ee19688ff0a6687bcf761857958aa2022fdb0c8
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288904"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027810"
 ---
 # <a name="uint-c-reference"></a>uint (C#-Referenz)
 
 Das Schlüsselwort `uint` kennzeichnet einen ganzzahligen Typ, der Werte anhand der Größe und des Bereichs speichert, die in der folgenden Tabelle gezeigt werden.  
   
-|Typ|Bereich|Größe|.NET Framework-Typ|  
+|Typ|Bereich|Größe|.NET-Typ|  
 |----------|-----------|----------|-------------------------|  
 |`uint`|0 bis 4.294.967.295|32-Bit Ganzzahl ohne Vorzeichen|<xref:System.UInt32?displayProperty=nameWithType>|  
   

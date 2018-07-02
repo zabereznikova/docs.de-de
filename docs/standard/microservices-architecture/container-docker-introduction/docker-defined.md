@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Was 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: fadd2611283f0a7dadbf1734fe48f7d1a13096ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06dd5199b8dbc42ce3e9ae35bc5c3673d01cb4de
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576193"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106800"
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 
@@ -58,4 +58,5 @@ Mit einem Containerimage können Sie eine Anwendung oder einen Dienst packen und
 Docker-Entwickler würden niemals sagen: „Es funktioniert auf meinem Computer. Warum also nicht auch in der Produktion?“ Sie würden eher folgenden Satz hören: „Es wird unter Docker ausgeführt.“ Von Docker gepackte Apps können in allen unterstützten Docker-Umgebungen ausgeführt werden. Von Docker gepackte Apps werden konsistent auf allen Bereitstellungszielen ausgeführt (Entwicklung, Qualitätssicherung, Staging, Produktion).
 
 >[!div class="step-by-step"]
-[Zurück] (index.md) [Weiter] (docker-terminology.md)
+[Zurück](index.md)
+[Weiter](docker-terminology.md)

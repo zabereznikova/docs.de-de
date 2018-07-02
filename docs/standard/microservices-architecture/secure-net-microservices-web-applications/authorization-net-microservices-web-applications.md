@@ -4,12 +4,12 @@ description: .NET Microservices-Architektur für .NET-Containeranwendungen | Inf
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2ea56f5a28d115fc5d91a98604b82565c8bf5c78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b2981579f28c083a31d7af6ae42f4e3ca8bbd88
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582820"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105500"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informationen zur Autorisierung in .NET-Microservices und Webanwendungen
 
@@ -129,4 +129,5 @@ Ein Beispiel für eine benutzerdefinierte Autorisierungsanforderung und einen Ha
 
 
 >[!div class="step-by-step"]
-[Zurück] (index.md) [Weiter] (developer-app-secrets-storage.md)
+[Zurück](index.md)
+[Weiter](developer-app-secrets-storage.md)

@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Das 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 75a7c0557319ca948d2112ba0a58f1761368e6f3
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: 83ec054239814ba20ebeec1f3d50b9f7e6dcdd87
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231550"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106277"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -33,9 +33,9 @@ Eine Architektur zur direkten Kommunikation zwischen Client und Microservice kan
 
 Beachten Sie die folgenden Fragen, wenn Sie eine große Anwendung erstellen, die auf Microservices basiert:
 
-- *Wie können Client-Apps die Anzahl von Anforderungen an das Back-End übergeben und eine umfangreiche Kommunikation mit mehreren Microservices reduzieren?*
+- *Wie können Client-Apps die Anzahl von Anforderungen an das Back-End übergeben und umfangreiche Kommunikation von mehreren Microservices reduzieren?*
 
-Wenn zum Erstellen einer einzigen Benutzeroberflächenanzeige mit mehreren Microservices interagiert wird, steigt die Anzahl von Roundtrips im Internet. Dadurch werden Latenz und Komplexität auf Seite der Benutzeroberfläche erhöht. Idealerweise sollten Antworten auf Serverseite effizient aggregiert werden. Dadurch wird die Latenz verringert, da mehrere Daten gleichzeitig zurückgegeben werden und ein Teil der Benutzeroberfläche die Daten anzeigen kann, sobald sie verfügbar sind.
+Wenn zum Erstellen einer einzigen Benutzeroberflächenanzeige mit mehreren Microservices interagiert wird, steigt die Anzahl von Roundtrips im Internet. Dadurch wird die Wartezeit und die Komplexität auf Benutzeroberflächenseite verringert. Idealerweise sollten Antworten auf Serverseite effizient aggregiert werden. Dadurch wird die Latenz verringert, da mehrere Daten gleichzeitig zurückgegeben werden und ein Teil der Benutzeroberfläche die Daten anzeigen kann, sobald sie verfügbar sind.
 
 - *Wie können übergreifende Aspekte wie die Autorisierung, Datentransformationen und die dynamische Weiterleitung von Anforderungen gehandhabt werden?*
 
@@ -178,4 +178,5 @@ Nachdem wir Architektur und Muster beschrieben haben, wird in den nächsten Absc
 - **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Video)** (Messaging und Microservices auf der GOTO 2016) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 >[!div class="step-by-step"]
-[Zurück] (identify-microservice-domain-model-boundaries.md) [Weiter] (communication-in-microservice-architecture.md)
+[Zurück](identify-microservice-domain-model-boundaries.md)
+[Weiter](communication-in-microservice-architecture.md)

@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Entw
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 520f2928eb0d300ab0dc2d328d974455e102e4d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579352"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105770"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Entwerfen eines DDD-orientierten Microservices
 
@@ -106,4 +106,5 @@ Dieser Ebenenentwurf sollte bei jedem Microservice unabhängig erfolgen. Wie ber
 
 
 >[!div class="step-by-step"]
-[Zurück] (cqrs-microservice-reads.md) [Weiter] (microservice-domain-model.md)
+[Zurück](cqrs-microservice-reads.md)
+[Weiter](microservice-domain-model.md)

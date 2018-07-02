@@ -4,11 +4,12 @@ description: Erfahren Sie, wie Sie Bibliotheksprojekte von .NET Framework zu .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 88513eaee35a82d6424fc2218f8cbbe635a8e02c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028044"
 ---
 # <a name="porting-to-net-core---libraries"></a>Portieren auf .NET Core – Bibliotheken
 
@@ -71,18 +72,6 @@ Verwenden Sie vom Betriebssystem bereitgestellte Sicherheitsgrenzen, wie Virtual
 Ähnlich wie CAS ermöglicht die Sicherheitstransparenz das Trennen von Sandboxcode von sicherheitsrelevantem Code in einer deklarativen Weise, aber sie wird [nicht mehr als eine Sicherheitsgrenze unterstützt](~/docs/framework/misc/security-transparent-code.md). Diese Funktion wird oft von Silverlight verwendet. 
 
 Verwenden Sie vom Betriebssystem bereitgestellte Sicherheitsgrenzen, wie Virtualisierung, Container oder Benutzerkonten zum Ausführen von Prozessen mit den geringsten Rechten.
-
-### <a name="globaljson"></a>global.json
-
-Die *global.json*-Datei ist eine optionale Datei, die es Ihnen erlaubt, die .NET Core-Toolsversion eines Projekts festzulegen. Wenn Sie nächtliche Builds von .NET Core verwenden und eine bestimmte Version des SDK angeben möchten, geben Sie die Version mit einer *global.json*-Datei an. Es befindet sich in der Regel im aktuellen Arbeitsverzeichnis oder in einem seiner übergeordneten Verzeichnisse. 
-
-```json
-{
-  "sdk": {
-    "version": "2.1.0-preview1-006491"
-  }
-}
-```
 
 ## <a name="converting-a-pcl-project"></a>Konvertieren eines PCL-Projekts
 

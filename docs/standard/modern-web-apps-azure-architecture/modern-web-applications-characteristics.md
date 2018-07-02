@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Merk
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: e01d07f4006982b21ff952b89375b0ab0d8f36b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc4493bf8e45c41a94e8e6f719318b14ad5b05f1
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583054"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105806"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Merkmale moderner Webanwendungen
 
@@ -77,4 +77,5 @@ Neben ASP.NET Core ist das herkömmliche ASP.NET 4.x weiterhin eine stabile und 
 > <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
-[Zurück] (index.md) [Weiter] (choose-between-traditional-web-and-single-page-apps.md)
+[Zurück](index.md)
+[Weiter](choose-between-traditional-web-and-single-page-apps.md)

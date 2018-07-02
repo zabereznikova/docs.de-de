@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2c47b172afee8745cdf5f68323d64dd550ea59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579144"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072955"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Verwenden der StringBuilder-Klasse in .NET
 Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine der Methoden in der <xref:System.String?displayProperty=nameWithType>-Klasse verwenden, erstellen Sie ein neues Zeichenfolgenobjekt im Speicher, das eine neue Speicherbelegung für dieses neue Objekt erfordert. In Fällen, in denen Sie wiederholte Änderungen an einer Zeichenfolge vornehmen müssen, kann der Mehraufwand, der mit dem Erstellen eines neuen <xref:System.String>-Objekts verbunden ist, erheblich sein. Die <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Klasse kann verwendet werden, wenn Sie eine Zeichenfolge ändern möchten, ohne ein neues Objekt zu erstellen. Beispielsweise lässt sich durch Verwenden der <xref:System.Text.StringBuilder>-Klasse die Leistung steigern, wenn zahlreiche Zeichenfolgen in einer Schleife verkettet werden.  
@@ -43,7 +43,7 @@ Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine de
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>Festlegen von Kapazität und Länge  
- Obwohl ein <xref:System.Text.StringBuilder>-Objekt ein dynamisches Objekt ist, das die Erhöhung der Zeichenanzahl der darin gekapselten Zeichenfolge ermöglicht, können Sie einen Wert für die maximale Anzahl von Zeichen festlegen, die das Objekt enthalten darf. Dieser Wert wird als Kapazität des Objekts bezeichnet und darf nicht mit der Länge der Zeichenfolge verwechselt werden, die im aktuellen <xref:System.Text.StringBuilder>-Objekt enthalten ist. Sie könnten z.B. eine neue Instanz der <xref:System.Text.StringBuilder>-Klasse mit der Zeichenfolge „Hello“ erstellen, die eine Länge von 5 Zeichen hat, und angeben, dass das Objekt eine maximale Kapazität von 25 Zeichen hat. Bei einer Änderung des <xref:System.Text.StringBuilder>-Objekts ordnet es sich selbst erst dann eine neue Größe zu, wenn die Kapazität erreicht ist. Tritt dieser Fall ein, wird der neue Speicherplatz automatisch zugeordnet, und die Kapazität wird verdoppelt. Sie können die Kapazität der <xref:System.Text.StringBuilder>-Klasse angeben, indem Sie einen der überladenen Konstruktoren verwenden. Im folgenden Beispiel wird festgelegt, dass das `MyStringBuilder`-Objekt auf maximal 25 Zeichen erweitert werden kann.  
+ Obwohl ein <xref:System.Text.StringBuilder>-Objekt ein dynamisches Objekt ist, das die Erhöhung der Zeichenanzahl der darin gekapselten Zeichenfolge ermöglicht, können Sie einen Wert für die maximale Anzahl von Zeichen festlegen, die das Objekt enthalten darf. Dieser Wert wird als Kapazität des Objekts bezeichnet und darf nicht mit der Länge der Zeichenfolge verwechselt werden, die im aktuellen <xref:System.Text.StringBuilder>-Objekt enthalten ist. Sie könnten z.B. eine neue Instanz der <xref:System.Text.StringBuilder>-Klasse mit der Zeichenfolge „Hello“ erstellen, die eine Länge von 5 Zeichen hat, und angeben, dass das Objekt eine maximale Kapazität von 25 Zeichen hat. Bei einer Änderung des <xref:System.Text.StringBuilder>-Objekts ordnet es sich selbst erst dann eine neue Größe zu, wenn die Kapazität erreicht ist. Tritt dieser Fall ein, wird der neue Speicherplatz automatisch zugeordnet, und die Kapazität wird verdoppelt. Sie können die Kapazität der <xref:System.Text.StringBuilder>-Klasse angeben, indem Sie einen der überladenen Konstruktoren verwenden. Im folgenden Beispiel wird festgelegt, dass das `myStringBuilder`-Objekt auf maximal 25 Zeichen erweitert werden kann.  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]

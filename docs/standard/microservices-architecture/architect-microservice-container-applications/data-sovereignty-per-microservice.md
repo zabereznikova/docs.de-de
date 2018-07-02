@@ -4,12 +4,12 @@ description: .NET Microservices-Architektur für .NET-Containeranwendungen | Dat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d739cc33dec372f6bd9569c05d034dcd25be8395
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d66f5d40234e689685b1b8c36367cc9dc2fc7c6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577292"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106865"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Datensouveränität pro Microservice
 
@@ -63,4 +63,5 @@ DDD profitiert von Microservices durch echte Grenzen in Form von verteilten Micr
 
 
 >[!div class="step-by-step"]
-[Zurück] (microservices-architecture.md) [Weiter] (logical-versus-physical-architecture.md)
+[Zurück](microservices-architecture.md)
+[Weiter](logical-versus-physical-architecture.md)

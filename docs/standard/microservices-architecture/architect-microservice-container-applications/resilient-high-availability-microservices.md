@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Resi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1cdd938fb53e194a80f0eb3e6bc82ebed271af49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578202"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106316"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und Hochverfügbarkeit bei Microservices
 
@@ -78,4 +78,5 @@ Unterschiedliche Orchestratoren können ähnlich klingen. Die Diagnosefunktionen
 
 
 >[!div class="step-by-step"]
-[Zurück] (microservice-based-composite-ui-shape-layout.md) [Weiter] (scalable-available-multi-container-microservice-applications.md)
+[Zurück](microservice-based-composite-ui-shape-layout.md)
+[Weiter](scalable-available-multi-container-microservice-applications.md)

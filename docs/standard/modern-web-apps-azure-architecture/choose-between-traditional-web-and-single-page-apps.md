@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Microsoft Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208162"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104765"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwendungen (SPAs)
 
@@ -92,4 +92,5 @@ In der folgenden Entscheidungstabelle werden einige der grundlegenden Faktoren z
   | Umfangreiche und komplexe Anforderungen für die Benutzeroberfläche | **Eingeschränkt** | **Gut geeignet** |
 
 >[!div class="step-by-step"]
-[Zurück] (modern-web-applications-characteristics.md) [Weiter](architectural-principles.md)
+[Zurück](modern-web-applications-characteristics.md)
+[Weiter](architectural-principles.md)

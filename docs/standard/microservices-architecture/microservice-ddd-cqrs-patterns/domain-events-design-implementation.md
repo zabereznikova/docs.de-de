@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Dom
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 44fbe79c9ed7cfd4a79daf6ee9b3d39afd33a910
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697195"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106024"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -366,4 +366,5 @@ Verwenden Sie Domänenereignisse, um explizit Nebenwirkungen von Änderungen in 
 
 
 >[!div class="step-by-step"]
-[Zurück] (client-side-validation.md) [Weiter] (infrastructure-persistence-layer-design.md)
+[Zurück](client-side-validation.md)
+[Weiter](infrastructure-persistence-layer-design.md)
