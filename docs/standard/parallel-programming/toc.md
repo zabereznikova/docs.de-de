@@ -4,7 +4,7 @@
 #### [How to: Write a Simple Parallel.For Loop (Vorgehensweise: Schreiben einer einfachen Parallel.For-Schleife)](how-to-write-a-simple-parallel-for-loop.md)
 #### [How to: Write a Simple Parallel.ForEach Loop (Vorgehensweise: Schreiben einer einfachen Parallel.ForEach-Schleife)](how-to-write-a-simple-parallel-foreach-loop.md)
 #### [How to: Write a Parallel.For Loop with Thread-Local Variables (Vorgehensweise: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen)](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-#### [How to: Write a Parallel.ForEach Loop with Thread-Local Variables (Vorgehensweise: Schreiben einer Parallel.ForEach-Schleife mit thread-lokalen Variablen)](how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)
+#### [Vorgehensweise: Schreiben einer Parallel.ForEach-Schleife mit partitionslokalen Variablen](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)
 #### [How to: Cancel a Parallel.For or ForEach Loop (Vorgehensweise: Abbrechen einer Parallel.For-Schleife oder einer ForEach-Schleife)](how-to-cancel-a-parallel-for-or-foreach-loop.md)
 #### [Gewusst wie: Behandeln von Ausnahmen in parallelen Schleifen](how-to-handle-exceptions-in-parallel-loops.md)
 #### [How to: Speed Up Small Loop Bodies (Vorgehensweise: Beschleunigen von kurzen Schleifenkörpern)](how-to-speed-up-small-loop-bodies.md)
