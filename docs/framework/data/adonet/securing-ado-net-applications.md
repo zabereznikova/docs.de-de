@@ -2,11 +2,12 @@
 title: Sichern von ADO.NET-Anwendungen
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 5e4363ada4ebdb94801378bc61139f68085b462d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efe25082b4e4de9170179ebeff6a1dca8f67446c
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728601"
 ---
 # <a name="securing-adonet-applications"></a>Sichern von ADO.NET-Anwendungen
 Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fallstricke bei der Codierung zu umgehen, wie die Nichtvalidierung von Benutzereingaben. Eine Anwendung, die auf Daten zugreift, verfügt über viele mögliche Schwachstellen, über die ein Hacker vertrauliche Daten abrufen, manipulieren oder vernichten kann. Es ist daher unerlässlich, alle Sicherheitsaspekte zu verstehen, und zwar beginnend bei der Erstellung von Gefahrenmodellen während des Anwendungsentwurfs bis hin zur eigentlichen Bereitstellung der Anwendung und ihrem laufenden Betrieb.  
@@ -39,12 +40,12 @@ Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fall
  Beschreibt Sicherheitsfunktionen für Entity Framework-Anwendungen.  
   
  [Sicherheit](../../../../docs/standard/security/index.md)  
- Enthält Links zu Themen, in denen alle Aspekte der Sicherheit in .NET Framework beschrieben werden.  
+ Enthält Links zu Themen, in denen alle Aspekte der Sicherheit in .NET beschrieben werden.  
   
  [Sicherheitstools](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  .NET Framework-Tools zum Sichern und Verwalten von Sicherheitsrichtlinien.  
   
- [Ressourcen zum Erstellen sicherer Anwendungen](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Ressourcen für das Erstellen sicherer Anwendungen](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  Enthält Links zu Themen zum Erstellen sicherer Anwendungen.  
   
  [Sicherheitsbibliographie](/visualstudio/ide/security-bibliography)  

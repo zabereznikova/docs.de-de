@@ -3,11 +3,12 @@ title: Das aktualisierte .NET Core-Ereignismuster
 description: Erfahren Sie, wie das .NET Core-Ereignismuster die Flexibilität mit Abwärtskompabilität erhöht und wie Sie sichere Ereignisverarbeitung mit asynchronen Abonnenten implementieren können.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: d0ad85479265041d895039d6c72f1f9909ea5fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827179"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Das aktualisierte .NET Core-Ereignismuster
 
@@ -22,22 +23,7 @@ Das Programm funktioniert genauso.
 
 Sie könnten auch `SearchDirectoryArgs` in eine Struktur ändern, wenn Sie eine weitere Änderung vornehmen:
 
-```csharp  
-internal struct SearchDirectoryArgs  
-{  
-    internal string CurrentSearchDirectory { get; }  
-    internal int TotalDirs { get; }  
-    internal int CompletedDirs { get; }  
-    
-    internal SearchDirectoryArgs(string dir, int totalDirs, 
-        int completedDirs) : this()  
-    {  
-        CurrentSearchDirectory = dir;  
-        TotalDirs = totalDirs;  
-        CompletedDirs = completedDirs;  
-    }  
-}  
-```   
+[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
 
 Die zusätzliche Änderung besteht darin, den Standardkonstruktor aufzurufen, bevor der Konstruktor eingegeben wird, der alle Felder initialisiert. Ohne diesen Zusatz würden die Regeln von C# berichten, dass auf die Eigenschaften zugegriffen wird, bevor sie zugewiesen wurden.
 

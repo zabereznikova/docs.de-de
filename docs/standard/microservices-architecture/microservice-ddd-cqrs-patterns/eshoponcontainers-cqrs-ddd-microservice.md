@@ -4,17 +4,18 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Anwe
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa26aa86e09f7a5d390336e460fa0272f76e17a4
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805473"
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 
 Die Struktur des Microservices für Bestellungen in der Referenzanwendung „eShopOnContainers“ basiert auf CQRS-Prinzipien. Allerdings wird darin der einfachste Ansatz verwendet, bei dem Abfragen von Befehlen getrennt werden und dieselbe Datenbank für beide Aktionen dient.
 
-Das Wichtigste daran ist, dass Abfragen idempotent sind: Egal wie oft Sie ein System abfragen, der Zustand des Systems ändert sich nicht, selbst wenn Sie ein anderes Datenmodell für Lesevorgänge verwenden als das Domänenmodell für Schreibvorgänge der Transaktionslogik, obwohl der Microservice für Bestellungen dieselbe Datenbank verwendet. Daher ist es ein vereinfachter CQRS-Ansatz.
+Das Wesentliche dieser Muster und der wichtige Punkt bestehen hier darin, dass Abfragen idempotent sind: unabhängig davon, wie oft Sie Abfragen an ein System richten, ändert sich der Status des entsprechenden Systems nicht. Sie könnten auch ein anderes „reads“-Datenmodell als das transaktionslogische „writes“-Domänenmodell verwenden, obwohl die Microservices für Bestellungen dieselbe Datenbank verwenden. Daher ist es ein vereinfachter CQRS-Ansatz.
 
 Befehle, die Transaktionen und Datenupdates auslösen, ändern wiederum den Zustand im System. Mit Befehlen müssen Sie im Zusammenhang mit Komplexität und sich kontinuierlich ändernden Geschäftsregeln sorgfältig umgehen. An dieser Stelle können Sie DDD-Techniken anwenden, um das System besser zu modellieren.
 

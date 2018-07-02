@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63767a3ba2831ca9cadd9b99998eb871780143e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579040"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105653"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. Im .NET Framework enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
@@ -26,6 +26,8 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
   
 ## <a name="files-and-directories"></a>Dateien und Verzeichnisse  
  Sie können die Typen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, um mit Dateien und Verzeichnissen zu interagieren. Beispielsweise können Sie Eigenschaften für Dateien und Verzeichnisse abrufen und festlegen oder Auflistungen von Dateien und Verzeichnissen anhand von Suchkriterien abrufen.  
+
+Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Windows-Systeme formulieren können (z.B. die DOS-Gerätesyntax, die in .NET Core 1.1 und höher und in .NET Framework 4.6.2 und höher unterstützt wird) finden Sie unter [File path formats on Windows systems (Dateipfadformate unter Windows-Systemen)](file-path-formats.md). 
   
  Im Folgenden sind einige häufig verwendete Datei- und Verzeichnisklassen aufgeführt:  
   

@@ -4,12 +4,12 @@ description: .NET Microservices-Architektur für .NET-Containeranwendungen | Sic
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c2c7d692517c6a46225542936e05656db915bf0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591975"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106696"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Sichern von .NET-Microservices und Webanwendungen
 
@@ -224,7 +224,7 @@ Die Middleware für die JWT-Bearerauthentifizierung kann auch erweiterte Szenari
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Sharing cookies between applications (Gemeinsames Verwenden von Cookies von mehreren Anwendungen)**
+-   **Gemeinsames Verwenden von Cookies in mehreren Anwendungen**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
 -   **Introduction to Identity (Einführung in die Identität)**
@@ -250,4 +250,5 @@ Die Middleware für die JWT-Bearerauthentifizierung kann auch erweiterte Szenari
 
 
 >[!div class="step-by-step"]
-[Zurück] (../implement-resilient-applications/monitor-app-health.md) [Weiter] (authorization-net-microservices-web-applications.md)
+[Zurück](../implement-resilient-applications/monitor-app-health.md)
+[Weiter](authorization-net-microservices-web-applications.md)

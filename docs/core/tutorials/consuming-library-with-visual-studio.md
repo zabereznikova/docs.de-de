@@ -1,21 +1,22 @@
 ---
-title: Verarbeiten einer Klassenbibliothek mit .NET Core in Visual Studio 2017
+title: Verwenden einer .NET Standard-Bibliothek in Visual Studio 2017
 description: Erfahren Sie, wie Sie die Elemente in einer Klassenbibliothek mit Visual Studio 2017 aufrufen.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0a7002f2a5dba5a5aad32a83a43a933cd2cc5722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e71001ee8595741119293304190fd9ef4251148
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827312"
 ---
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Verarbeiten einer Klassenbibliothek mit .NET Core in Visual Studio 2017
+# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Verwenden einer .NET Standard-Bibliothek in Visual Studio 2017
 
-Nachdem Sie eine Klassenbibliothek anhand der unter [Building a C# class library with .NET Core in Visual Studio 2017 (Erstellen einer C#-Klassenbibliothek mit .NET Core in Visual Studio 2017)](./library-with-visual-studio.md) oder [Building a Visual Basic class library with .NET Core in Visual Studio 2017 (Erstellen einer Visual Basic-Klassenbibliothek mit .NET Core in Visual Studio 2017)](vb-library-with-visual-studio.md) beschriebenen Schritte erstellt und Sie in [Testing a class library with .NET Core in Visual Studio 2017 (Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017)](testing-library-with-visual-studio.md) getestet und eine Releaseversion der Bibliothek erstellt haben, können Sie sie im nächsten Schritt für Aufrufer verfügbar machen. Dazu gibt es zwei Möglichkeiten:
+Nachdem Sie eine .NET Standard-Klassenbibliothek anhand der unter [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](./library-with-visual-studio.md) oder [Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) beschriebenen Schritte erstellt und Sie in [Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) getestet und eine Releaseversion der Bibliothek erstellt haben, können Sie sie im nächsten Schritt für Aufrufer verfügbar machen. Dazu gibt es zwei Möglichkeiten:
 
 * Wenn die Bibliothek von einer einzelnen Projektmappe verwendet wird (wenn es sich z.B. um eine Komponente in einer großen Einzelanwendung handelt), können Sie die Bibliothek als Projekt in Ihre Projektmappe einfügen.
 
@@ -48,7 +49,7 @@ Ebenso wie Sie Komponententests in dieselbe Projektmappe eingeschlossen haben wi
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   Der Code verwendet die Eigenschaft [Console.WindowHeight](xref:System.Console.WindowHeight), um die Anzahl der Zeilen im Konsolenfenster zu ermitteln. Immer dann, wenn die Eigenschaft [Console.CursorTop](xref:System.Console.CursorTop) größer oder gleich der Anzahl von Zeilen im Konsolenfenster ist, löscht der Code das Konsolenfenster und zeigt dem Benutzer eine Meldung an.
+   Der Code verwendet die `row`-Variable, um die Anzahl der in das Konsolenfenster geschriebenen Datenzeilen festzuhalten. Wenn sie mindestens 25 beträgt, löscht der Code das Konsolenfenster und zeigt eine Meldung für den Benutzer an.
 
    Das Programm selbst fordert den Benutzer zur Eingabe einer Zeichenfolge auf. Es zeigt an, ob die Zeichenfolge mit einem Großbuchstaben beginnt. Wenn der Benutzer die EINGABETASTE drückt, ohne eine Zeichenfolge einzugeben, wird das Konsolenfenster geschlossen, und die Anwendung wird beendet.
 
@@ -78,7 +79,7 @@ Ebenso wie Sie Komponententests in dieselbe Projektmappe eingeschlossen haben wi
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   Der Code verwendet die Eigenschaft [Console.WindowHeight](xref:System.Console.WindowHeight), um die Anzahl der Zeilen im Konsolenfenster zu ermitteln. Immer dann, wenn die Eigenschaft [Console.CursorTop](xref:System.Console.CursorTop) größer oder gleich der Anzahl von Zeilen im Konsolenfenster ist, löscht der Code das Konsolenfenster und zeigt dem Benutzer eine Meldung an.
+   Der Code verwendet die `row`-Variable, um die Anzahl der in das Konsolenfenster geschriebenen Datenzeilen festzuhalten. Wenn sie mindestens 25 beträgt, löscht der Code das Konsolenfenster und zeigt eine Meldung für den Benutzer an.
 
    Das Programm selbst fordert den Benutzer zur Eingabe einer Zeichenfolge auf. Es zeigt an, ob die Zeichenfolge mit einem Großbuchstaben beginnt. Wenn der Benutzer die EINGABETASTE drückt, ohne eine Zeichenfolge einzugeben, wird das Konsolenfenster geschlossen, und die Anwendung wird beendet.
 

@@ -91,6 +91,7 @@
 ### [Abhängigkeitsverwaltung](core/tools/dependencies.md)
 ### [Erweiterungen des CSPROJ-Formats](core/tools/csproj.md)
 ## Migration
+### [.NET Core 2.0 bis 2.1](core/migration/20-21.md)
 ### [Migration in das csproj-Format](core/migration/index.md)
 ### [Die Zuordnung zwischen project.json und csproj](core/tools/project-json-to-csproj.md)
 ### [Migrieren von DNX](core/migration/from-dnx.md)
@@ -414,7 +415,7 @@
 ### [Namespaces](fsharp/language-reference/namespaces.md)
 ### [Module](fsharp/language-reference/modules.md)
 ### [Importdeklarationen: Das open-Schlüsselwort](fsharp/language-reference/import-declarations-the-open-keyword.md)
-### [Signaturen](fsharp/language-reference/signatures.md)
+### [Signaturdateien](fsharp/language-reference/signature-files.md)
 ### [Maßeinheiten](fsharp/language-reference/units-of-measure.md)
 ### [XML-Dokumentation](fsharp/language-reference/xml-documentation.md)
 ### [Verzögerte Berechnungen](fsharp/language-reference/lazy-computations.md)

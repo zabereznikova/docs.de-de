@@ -6,18 +6,20 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 01eb2e94b57da5e5dad0fa355246bcbcbc153dab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457010"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105171"
 ---
 # <a name="net-guide"></a>Leitfaden für .NET
 
 Der Leitfaden für .NET enthält viele Informationen zu .NET.  Je nachdem, wie vertraut Sie mit .NET sind, können Sie sich unterschiedliche Abschnitte des Leitfadens und weitere Teile der .NET-Dokumentation anschauen.
 
 ## <a name="new-to-net"></a>Neu bei .NET?
+
+Einen allgemeinen Überblick über .NET finden Sie unter [What is .NET? (Was ist .NET?)](https://www.microsoft.com/net/learn/what-is-dotnet).
 
 Wenn .NET für Sie neu ist, schauen Sie sich den Artikel zu den [ersten Schritten](get-started.md) an.
 

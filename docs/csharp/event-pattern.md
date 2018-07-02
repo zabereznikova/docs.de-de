@@ -3,11 +3,12 @@ title: Standardereignismuster in .NET
 description: Erfahren Sie etwas über Ereignismuster in .NET und wie Sie standardmäßige Ereignisquellen erstellen und Standardereignisse in Ihrem Code abonnieren und verarbeiten können.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 633a90062f2d068cfa050c0aa151885608cc4172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bd9f71726647966dd1e4426b260484decb048c6
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827247"
 ---
 # <a name="standard-net-event-patterns"></a>Standardereignismuster in .NET
 
@@ -38,17 +39,7 @@ Ein Ereignismodell bietet einige Vorteile beim Entwurf. Sie können mehrere Erei
 
 Hier ist die erste Ereignisargumentdeklaration für die Suche nach einer gesuchten Datei: 
 
-```csharp
-public class FileFoundArgs : EventArgs
-{
-    public string FoundFile { get; }
-
-    public FileFoundArgs(string fileName)
-    {
-        FoundFile = fileName;
-    }
-}
-```
+[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
 Obwohl dieser Typ wie ein kleiner, Nur-Daten-Typ aussieht, sollten Sie die Konvention einhalten und ihm einen Verweis (`class`)-Typ geben. Dies bedeutet, dass das Argumentobjekt als Verweis übergeben wird, und alle Updates der Daten von allen Abonnenten gesehen werden. Die erste Version ist ein unveränderliches Objekt. Sie sollten die Eigenschaften im Ereignisargumenttyp auf unveränderlich einstellen. Auf diese Weise kann ein Abonnent die Werte nicht ändern, bevor ein anderer Abonnent sie sieht. (Es gibt Ausnahmen dafür, wie Sie unten sehen werden.)  
 
@@ -56,42 +47,21 @@ Als Nächstes müssen wir die Ereignisdeklaration in der FileSearcher-Klasse ers
 
 Füllen wir die FileSearcher-Klasse aus, um nach Dateien mit dem Muster zu suchen und das richtige Ereignis auszulösen, wenn eine Übereinstimmung gefunden wird.
 
-```csharp
-public class FileSearcher
-{
-    public event EventHandler<FileFoundArgs> FileFound;
-
-    public void Search(string directory, string searchPattern)
-    {
-        foreach (var file in Directory.EnumerateFiles(directory, searchPattern))
-        {
-            FileFound?.Invoke(this, new FileFoundArgs(file));
-        }
-    }
-}
-```
+[!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="definining-and-raising-field-like-events"></a>Definieren und Auslösen von feldähnlichen Ereignissen
 
-Die einfachste Möglichkeit, Ihrer Klasse ein Ereignis hinzuzufügen, ist das Deklarieren des Ereignisses als öffentliches Feld, wie im obigen Beispiel:
+Die einfachste Möglichkeit, Ihrer Klasse ein Ereignis hinzuzufügen, ist das Deklarieren des Ereignisses als öffentliches Feld, wie im vorherigen Beispiel:
 
-```csharp
-public event EventHandler<FileFoundArgs> FileFound;
-```
+[!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-Dies scheint ein öffentliches Feld zu deklarieren, das als eine Vorgehensweise eines ungültigen Objekts erscheinen würde. Sie möchten den Datenzugriff über Eigenschaften oder Methoden schützen. Während dies anscheinend kein empfehlenswertes Verfahren ist, erstellt der vom Compiler generierte Code Wrapper, damit auf die Ereignisobjekte nur auf sichere Weise zugegriffen werden kann. Die einzig verfügbaren Vorgänge für ein feldähnliches Ereignis sind das Hinzufügen von Handlern:
+Dies scheint ein öffentliches Feld zu deklarieren, was als schlechte objektorientierte Vorgehensweise erscheinen würde. Sie möchten den Datenzugriff über Eigenschaften oder Methoden schützen. Während dies anscheinend kein empfehlenswertes Verfahren ist, erstellt der vom Compiler generierte Code Wrapper, damit auf die Ereignisobjekte nur auf sichere Weise zugegriffen werden kann. Die einzig verfügbaren Vorgänge für ein feldähnliches Ereignis sind das Hinzufügen von Handlern:
 
-```csharp
-EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
-    Console.WriteLine(eventArgs.FoundFile);
-lister.FileFound += onFileFound;
-```
+[!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
 und das Entfernen von Handlern:
 
-```csharp
-lister.FileFound -= onFileFound;
-```
+[!code-csharp[RemoveEventHandler](../../samples/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
 
 Beachten Sie, dass eine lokale Variable für den Handler vorhanden ist. Wenn Sie den Text des Lambda-Ausdrucks verwenden, würde das Entfernen nicht ordnungsgemäß funktionieren. Es wäre eine andere Instanz des Delegaten, und es würde stillschweigend nichts geschehen.
 
@@ -113,22 +83,11 @@ Für dieses Muster wird ein neues Feld mit `false` initialisiert. Jeder Abonnent
 Das zweite Muster würde nur den Vorgang abbrechen, wenn alle Abonnenten den Vorgang abgebrochen haben möchten. In diesem Muster wird das neue Feld initialisiert, um anzugeben, dass der Vorgang abgebrochen werden soll, und jeder Abonnent kann dies ändern, um anzugeben, dass der Vorgang fortgesetzt werden soll.
 Nachdem alle Abonnenten das ausgelöste Ereignis gesehen haben, untersucht die Komponente FileSearcher den booleschen Wert und ergreift Maßnahmen. Es gibt einen zusätzlichen Schritt in diesem Muster: Die Komponente muss wissen, ob jeder Abonnent das Ereignis gesehen hat. Wenn keine Abonnenten vorhanden sind, würde das Feld fälschlicherweise einen Abbruch angeben.
 
-Implementieren wir die erste Version für dieses Beispiel. Sie müssen ein boolesches Feld zum FileFoundEventArgs-Typ hinzufügen:
+Implementieren wir die erste Version für dieses Beispiel. Sie müssen ein boolesches Feld mit dem Namen `CancelRequested` dem `FileFoundArgs`-Typ hinzufügen:
 
-```csharp
-public class FileFoundArgs : EventArgs
-{
-    public string FoundFile { get; }
-    public bool CancelRequested { get; set; }
+[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgs "Update event arguments")]
 
-    public FileFoundArgs(string fileName)
-    {
-        FoundFile = fileName;
-    }
-}
-```
-
-Dieses neue Feld sollte mit FALSE initialisiert werden, damit Sie nicht ohne Grund abbrechen. Das ist der Standardwert für ein boolesches Feld, damit dies automatisch geschieht. Die einzige andere Änderung der Komponente ist das Überprüfen des Flag nach dem Auslösen des Ereignisses, um festzustellen, ob einer der Abonnenten einen Abbruch angefordert hat:
+Dieses neue Feld wird automatisch mit `false` initialisiert, dem Standardwert für ein boolesches Feld, damit Sie nicht versehentlich abbrechen. Die einzige andere Änderung der Komponente ist das Überprüfen des Flag nach dem Auslösen des Ereignisses, um festzustellen, ob einer der Abonnenten einen Abbruch angefordert hat:
 
 ```csharp
 public void List(string directory, string searchPattern)
@@ -164,88 +123,25 @@ In einem Verzeichnis mit vielen Unterverzeichnisse könnte dies ein längerer Vo
 
 Sie beginnen mit dem Erstellen der neuen abgeleiteten EventArgs-Klasse für die Berichte des neuen Verzeichnisses und Status. 
 
-```csharp
-internal class SearchDirectoryArgs : EventArgs
-{
-    internal string CurrentSearchDirectory { get; }
-    internal int TotalDirs { get; }
-    internal int CompletedDirs { get; }
-
-    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs)
-    {
-        CurrentSearchDirectory = dir;
-        TotalDirs = totalDirs;
-        CompletedDirs = completedDirs;
-    }
-}
-``` 
+[!code-csharp[DirEventArgs](../../samples/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
 In diesem Fall können Sie erneut der Empfehlung für das Erstellen eines nicht änderbaren Verweistyps für die Ereignisargumente folgen.
 
-Definieren Sie als Nächstes das Ereignis. Dieses Mal werden Sie eine andere Syntax verwenden. Zusätzlich zur Verwendung der Feldsyntax, können Sie die Eigenschaft explizit erstellen, mit dem Hinzufügen- und Entfernen-Handler. In diesem Beispiel werden Sie für diese Handler in diesem Projekt keinen zusätzlichen Code benötigen, aber dies zeigt, wie Sie sie erstellen würden.
+Definieren Sie als Nächstes das Ereignis. Dieses Mal werden Sie eine andere Syntax verwenden. Zusätzlich zur Verwendung der Feldsyntax, können Sie die Eigenschaft explizit erstellen, mit dem Hinzufügen- und Entfernen-Handler. In diesem Beispiel werden Sie für diese Handler keinen zusätzlichen Code benötigen, aber dies zeigt, wie Sie sie erstellen würden.
 
-```csharp
-internal event EventHandler<SearchDirectoryArgs> DirectoryChanged
-{
-    add { directoryChanged += value; }
-    remove { directoryChanged -= value; }
-}
-private EventHandler<SearchDirectoryArgs> directoryChanged;
-```
+[!code-csharp[Declare event with add and remove handlers](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
 
 In vielerlei Hinsicht spiegelt der Code, den Sie hier schreiben, den vom Compiler generierten Code für die Feldereignisdefinitionen wider, die Sie zuvor gesehen haben. Sie erstellen das Ereignis mithilfe der Syntax ähnlich der für [Eigenschaften](properties.md). Beachten Sie, dass die Handler unterschiedliche Namen haben: `add` und `remove`. Diese werden aufgerufen, um das Ereignis zu abonnieren oder sich vom Ereignis abzumelden. Beachten Sie, dass Sie auch ein privates Unterstützungsfeld zum Speichern der Ereignisvariable deklarieren müssen. Es wird mit NULL initialisiert.
 
 Als Nächstes fügen wir die Überladung der Search()-Methode hinzu, die Unterverzeichnisse durchsucht und beide Ereignisse auslöst. Die einfachste Möglichkeit besteht darin, ein Standardargument zu verwenden, um anzugeben, dass alle Verzeichnisse durchsucht werden sollen:
 
-```csharp
-public void Search(string directory, string searchPattern, bool searchSubDirs = false)
-{
-    if (searchSubDirs)
-    {
-        var allDirectories = Directory.GetDirectories(directory, "*.*", SearchOption.AllDirectories);
-        var completedDirs = 0;
-        var totalDirs = allDirectories.Length + 1;
-        foreach (var dir in allDirectories)
-        {
-            directoryChanged?.Invoke(this,
-                new SearchDirectoryArgs(dir, totalDirs, completedDirs++));
-            // Recursively search this child directory:
-            SearchDirectory(dir, searchPattern);
-        }
-        // Include the Current Directory:
-        directoryChanged?.Invoke(this,
-            new SearchDirectoryArgs(directory, totalDirs, completedDirs++));
-        SearchDirectory(directory, searchPattern);
-    }
-    else
-    {
-        SearchDirectory(directory, searchPattern);
-    }
-}
-
-private void SearchDirectory(string directory, string searchPattern)
-{
-    foreach (var file in Directory.EnumerateFiles(directory, searchPattern))
-    {
-        var args = new FileFoundArgs(file);
-        FileFound?.Invoke(this, args);
-        if (args.CancelRequested)
-            break;
-    }
-}
-```
+[!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
 An diesem Punkt können Sie die Anwendung durch das Aufrufen der Überladung für die Suche aller Unterverzeichnisse ausführen. Es sind keine Abonnenten auf dem neuen `ChangeDirectory`-Ereignis vorhanden, aber mit den `?.Invoke()`-Ausdruck wird sichergestellt, dass es ordnungsgemäß funktioniert.
 
  Fügen wir einen Handler hinzu, um eine Zeile zu schreiben, die den Status im Konsolenfenster anzeigt. 
 
-```csharp
-lister.DirectoryChanged += (sender, eventArgs) =>
-{
-    Console.Write($"Entering '{eventArgs.CurrentSearchDirectory}'.");
-    Console.WriteLine($" {eventArgs.CompletedDirs} of {eventArgs.TotalDirs} completed...");
-};
-```
+[!code-csharp[Search](../../samples/csharp/events/Program.cs#Search "Declare event handler")]
 
 Sie haben Muster gesehen, die im .NET-Ökosystem eingehalten werden.
 Indem Sie diese Muster und Konventionen erlernen, werden Sie schnell idiomatische C# und .NET schreiben können.
