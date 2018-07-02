@@ -4,12 +4,12 @@ description: Untersuchen Sie die anderen in ML.NET unterstützten Machine Learni
 ms.date: 06/04/2018
 author: aditidugar
 ms.author: johalex
-ms.openlocfilehash: 22249ac2d275a4168dbd8b03b90d9698fe90f2d1
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 875006a9cddb87b5f9436b78773420858fd842dd
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34860666"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207725"
 ---
 # <a name="machine-learning-tasks"></a>Machine Learning-Aufgaben
 
@@ -29,13 +29,17 @@ Eine [überwachte Machine Learning](glossary.md#supervised-machine-learning)-Auf
 * Diagnostizieren, ob bei einem Patienten eine bestimmte Krankheit vorliegt oder nicht.
 * Treffen einer Entscheidung, um eine E-Mail-Nachricht als „Spam“ zu markieren oder nicht.
 
-## <a name="multi-class-classification"></a>Multiklassenklassifizierung
+Weitere Informationen finden Sie auf Wikipedia im Artikel zur [binären Klassifizierung](https://en.wikipedia.org/wiki/Binary_classification).
+
+## <a name="multiclass-classification"></a>Multiklassenklassifizierung
 
 Eine [überwachte Machine Learning](glossary.md#supervised-machine-learning)-Aufgabe, um die Klasse (Kategorie) einer Dateninstanz vorherzusagen. Die Eingabe eines Klassifizierungsalgorithmus ist ein Satz bezeichneter Beispiele. Jede Bezeichnung ist eine ganze Zahl zwischen 0 und k-1, wobei k die Anzahl der Klassen ist. Die Ausgabe eines Klassifizierungsalgorithmus ist ein Klassifizierer, den Sie verwenden können, um die Klasse der neuen nicht bezeichneten Instanzen vorherzusagen. Zu den Beispielen für Multiklassen-Klassifizierungsszenarien zählen:
 
 * Ermitteln der Rasse eines Hundes als „Sibirischer Husky“, „Golden Retriever“, „Pudel“ usw.
 * Verstehen von Filmkritiken als „positiv“, „neutral“ oder „negativ“.
 * Kategorisieren von Hoteltests in „Lage“, „Preis“, „Sauberkeit“ usw.
+
+Weitere Informationen finden Sie auf Wikipedia im Artikel zur [Multiklassenklassifizierung](https://en.wikipedia.org/wiki/Multiclass_classification).
 
 ## <a name="regression"></a>Regression
 
