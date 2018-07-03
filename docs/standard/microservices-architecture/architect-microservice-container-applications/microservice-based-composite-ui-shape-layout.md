@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Erst
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: cbadb13109c51ba53530011a17006b585573f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576792"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105368"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Erstellen einer zusammengesetzten Benutzeroberfläche auf der Grundlage von Microservices, wobei das Layout der Benutzeroberfläche wiederum von mehreren Microservices generiert wurde
 
@@ -58,4 +58,5 @@ Wir empfehlen Ihnen, sich in den folgenden Ressourcen weiter über die mithilfe 
 
 
 >[!div class="step-by-step"]
-[Zurück] (microservices-addressability-service-registry.md) [Weiter] (resilient-high-availability-microservices.md)
+[Zurück](microservices-addressability-service-registry.md)
+[Weiter](resilient-high-availability-microservices.md)

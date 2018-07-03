@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b22e0e109144b4abd04cd4199cfdec244d8fa7af
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208168"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106501"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -273,4 +273,5 @@ public class CatalogControllerGetImage : BaseWebTest
 Dieser Funktionstest führt den gesamten ASP.NET Core MVC-Anwendungsstapel aus, einschließlich aller Middleware, Filter, Binder, usw., die verfügbar sind. Er überprüft, ob die angegebene Route (im Beispiel oben „/catalog/pic/1“) das erwartete Bytearray für eine Datei an einem bekannten Speicherort zurückgibt. Das funktioniert, ohne dass ein echter Webserver eingerichtet werden muss, und vermeidet deshalb einen Großteil der Fehleranfälligkeit, die bei einem echten Webserver auftreten kann (z.B. Probleme mit den Einstellungen der Firewall). Funktionstests, die für den TestServer ausgeführt werden, sind in der Regel langsamer als Integrations- und Komponententests, aber deutlich schneller als Tests, die über das Netzwerk auf einem Testwebserver ausgeführt werden.
 
 >[!div class="step-by-step"]
-[Zurück] (work-with-data-in-asp-net-core-apps.md) [Weiter] (development-process-for-azure.md)
+[Zurück](work-with-data-in-asp-net-core-apps.md)
+[Weiter](development-process-for-azure.md)

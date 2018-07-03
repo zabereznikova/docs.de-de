@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Zust
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: c5cfe617335d8150d069149ac87f79206b1b5eca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1469038af29167f7dbb1a161b951eee742cf4bec
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578654"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105617"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
@@ -59,4 +59,5 @@ Tools für **Remotedatenquellen und -caches** wie Azure SQL-Datenbank, Azure Cos
 
 
 >[!div class="step-by-step"]
-[Zurück] (containerize-monolithic-applications.md) [Weiter] (service-oriented-architecture.md)
+[Zurück](containerize-monolithic-applications.md)
+[Weiter](service-oriented-architecture.md)
