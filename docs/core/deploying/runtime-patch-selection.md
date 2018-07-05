@@ -4,16 +4,16 @@ description: Erfahren Sie mehr über die Änderungen an „dotnet publish“ fü
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 40d28e81e2ac1b27e7fd89e16d2d906a080fd18b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697210"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071031"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Rollforward der eigenständigen Runtimebereitstellung
 
-[Eigenständige Anwendungsbereitstellungen](index.md) von .NET Core enthalten sowohl die .NET Core-Bibliotheken als auch die .NET Core-Runtime. Beginnend mit .NET Core SDK 2.1.300 (.NET Core 2.1) veröffentlicht eine eigenständige Anwendungsbereitstellung [nun die höchste Patch-Runtime auf Ihrem Computer](https://github.com/dotnet/designs/pull/36). [`dotnet publish`](../tools/dotnet-publish.md) wählt für eine eigenständige Bereitstellung standardmäßig die aktuellste installierte Version als Teil des SDK auf dem veröffentlichenden Computer aus. Dadurch kann Ihre bereitgestellte Anwendung während `publish` mit Problembehebungen der Sicherheit (und anderen Problembehebungen) ausgeführt werden. Die Anwendung muss neu veröffentlicht werden, um einen neuen Patch abzurufen. Eigenständige Anwendungen werden durch Angabe von `-r <RID>` auf dem Befehl `dotnet publish` oder durch Angabe des [Runtime-Bezeichners (RID)](../rid-catalog.md) in der Projektdatei (CSPROJ/VBPROJ) oder der Befehlszeile erstellt.
+[Eigenständige Anwendungsbereitstellungen](index.md) von .NET Core enthalten sowohl die .NET Core-Bibliotheken als auch die .NET Core-Runtime. Beginnend mit .NET Core SDK 2.1.300 (.NET Core 2.1) veröffentlicht eine eigenständige Anwendungsbereitstellung [ die höchste Patch-Runtime auf Ihrem Computer](https://github.com/dotnet/designs/pull/36). [`dotnet publish`](../tools/dotnet-publish.md) wählt für eine eigenständige Bereitstellung standardmäßig die aktuellste installierte Version als Teil des SDK auf dem veröffentlichenden Computer aus. Dadurch kann Ihre bereitgestellte Anwendung während `publish` mit Problembehebungen der Sicherheit (und anderen Problembehebungen) ausgeführt werden. Die Anwendung muss neu veröffentlicht werden, um einen neuen Patch abzurufen. Eigenständige Anwendungen werden durch Angabe von `-r <RID>` auf dem Befehl `dotnet publish` oder durch Angabe des [Runtime-Bezeichners (RID)](../rid-catalog.md) in der Projektdatei (CSPROJ/VBPROJ) oder der Befehlszeile erstellt.
 
 ## <a name="patch-version-roll-forward-overview"></a>Übersicht über Rollforward der Patchversion
 
@@ -35,8 +35,8 @@ Das Ausführen von `restore` als Teil des `publish`-Vorgangs kann für Ihr Szena
 
 Wenn Sie sowohl eigenständige Anwendungen und [Framework-abhängige Anwendungen](index.md) mit derselben Projektdatei erstellen und das Argument `--no-restore` mit `dotnet publish` verwenden möchten, wählen Sie eine der folgenden Optionen aus:
 
-1. Framework-abhängiges Verhalten bevorzugen. Wenn die Anwendung Framework-abhängig ist, ist dies das Standardverhalten. Wenn die Anwendung eigenständig ist und eine nicht gepatchte lokale Runtime (2.1.0) verwenden kann, legen Sie `false` für `TargetLatestRuntimePatch` in der Projektdatei (CSPROJ/VBPROJ) fest.
+1. Framework-abhängiges Verhalten bevorzugen. Wenn die Anwendung Framework-abhängig ist, ist dies das Standardverhalten. Wenn die Anwendung eigenständig ist und eine nicht gepatchte lokale Runtime (2.1.0) verwenden kann, legen Sie `false` für `TargetLatestRuntimePatch` in der Projektdatei fest.
 
-2. Eigenständiges Verhalten bevorzugen. Wenn die Anwendung eigenständig ist, ist dies das Standardverhalten. Wenn die Anwendung Framework-abhängig ist und den neuesten Patch erfordert, legen Sie `true` für `TargetLatestRuntimePatch` in der Projektdatei (CSPROJ/VBPROJ) fest.
+2. Eigenständiges Verhalten bevorzugen. Wenn die Anwendung eigenständig ist, ist dies das Standardverhalten. Wenn die Anwendung Framework-abhängig ist und den neuesten Patch erfordert, legen Sie `true` für `TargetLatestRuntimePatch` in der Projektdatei fest.
 
-3. Übernehmen Sie die explizite Kontrolle über die Runtime-Framework-Version, indem Sie für `RuntimeFrameworkVersion` die spezifische Patchversion in der Projektdatei (CSPROJ/VBPROJ) festlegen.
+3. Übernehmen Sie die explizite Kontrolle über die Runtime-Framework-Version, indem Sie für `RuntimeFrameworkVersion` die spezifische Patchversion in der Projektdatei festlegen.

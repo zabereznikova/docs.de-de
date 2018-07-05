@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in C# und
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: b76e577d3950dd13b038f47c1b133e3529867c38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cfc389a1ee526d8dc4383c5efd6fb3299eb08d8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216095"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105601"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Komponententests für C# mit MSTest und .NET Core
 
@@ -17,7 +17,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 
 ### <a name="creating-the-source-project"></a>Erstellen des Quellprojekts
 
-Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-using-dotnet-test*, um die Projektmappe zu speichern. Führen Sie in diesem neuen Verzeichnis [`dotnet new sln`](../tools/dotnet-new.md) aus, um eine neue Projektmappendatei für die Klassenbibliothek und das Testprojekt zu erstellen. Erstellen Sie als Nächstes ein *PrimeService*-Verzeichnis. Die folgende Gliederung zeigt die Verzeichnis- und Dateistruktur:
+Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-using-mstest*, um darin die Projektmappe zu speichern. Führen Sie in diesem neuen Verzeichnis [`dotnet new sln`](../tools/dotnet-new.md) aus, um eine neue Projektmappendatei für die Klassenbibliothek und das Testprojekt zu erstellen. Erstellen Sie als Nächstes ein *PrimeService*-Verzeichnis. Die folgende Gliederung zeigt die Verzeichnis- und Dateistruktur:
 
 ```
 /unit-testing-using-mstest

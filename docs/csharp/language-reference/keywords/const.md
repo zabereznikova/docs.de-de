@@ -1,5 +1,5 @@
 ---
-title: const (C#-Referenz)
+title: Schlüsselwort „const“ (C#-Referenz)
 ms.date: 07/20/2015
 f1_keywords:
 - const_CSharpKeyword
@@ -7,59 +7,65 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 0038c1472964e618ee52ded9731fcb3e1e3ca204
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 985ba9cfefce458fac73aa4b92de0b3d438405c6
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216245"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948341"
 ---
 # <a name="const-c-reference"></a>const (C#-Referenz)
-Sie verwenden das `const`-Schlüsselwort, um ein konstantes Feld oder eine konstante lokale Variable zu deklarieren. Konstante Felder und lokale Felder sind keine Variablen und können daher nicht geändert werden. Konstanten können Nummern, boolesche Werte, Zeichenfolgen oder ein NULL-Verweis sein. Erstellen Sie keine Konstante, um Informationen darzustellen, von denen Sie ausgehen, dass sie sich einmal ändern. Verwenden Sie beispielsweise kein konstantes Feld, um den Preis einer Dienstleistung, einer Produktversionsnummer oder den Markennamen eines Unternehmens zu speichern. Diese Werte können sich im Laufe der Zeit ändern, und da Compiler Konstanten weitergeben, muss anderer Code, der mit Ihren Bibliotheken kompiliert wird, neu kompiliert werden, damit die Änderungen sichtbar werden. Weitere Informationen finden Sie auch unter dem [readonly](../../../csharp/language-reference/keywords/readonly.md)-Schlüsselwort. Zum Beispiel:  
-  
+
+Sie verwenden das `const`-Schlüsselwort, um ein konstantes Feld oder eine konstante lokale Variable zu deklarieren. Konstante Felder und lokale Felder sind keine Variablen und können daher nicht geändert werden. Konstanten können Nummern, boolesche Werte, Zeichenfolgen oder ein NULL-Verweis sein. Erstellen Sie keine Konstante, um Informationen darzustellen, von denen Sie ausgehen, dass sie sich einmal ändern. Verwenden Sie beispielsweise kein konstantes Feld, um den Preis einer Dienstleistung, einer Produktversionsnummer oder den Markennamen eines Unternehmens zu speichern. Diese Werte können sich im Laufe der Zeit ändern, und da Compiler Konstanten weitergeben, muss anderer Code, der mit Ihren Bibliotheken kompiliert wird, neu kompiliert werden, damit die Änderungen sichtbar werden. Weitere Informationen finden Sie auch unter dem [readonly](../../../csharp/language-reference/keywords/readonly.md)-Schlüsselwort. Zum Beispiel:
+
 ```csharp
-const int x = 0;  
-public const double gravitationalConstant = 6.673e-11;  
-private const string productName = "Visual C#";  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Der Typ einer Konstantendeklaration gibt den Typ der Member an, die durch die Deklaration eingeführt werden. Der Initialisierer einer konstanten lokalen Variable oder eines konstanten Felds muss ein konstanter Ausdruck sein, der implizit in den Zieltyp konvertiert werden kann.  
-  
- Ein konstanter Ausdruck ist ein Ausdruck, der während der Kompilierung vollständig ausgewertet werden kann. Daher sind `string` und ein NULL-Verweis die einzig möglichen Werte für Verweistypkonstanten.  
-  
- In der Konstantendeklaration können mehrere Konstanten deklariert werden, z. B.:  
-  
+const int x = 0;
+public const double gravitationalConstant = 6.673e-11;
+private const string productName = "Visual C#";
+```
+
+## <a name="remarks"></a>Hinweise
+
+Der Typ einer Konstantendeklaration gibt den Typ der Member an, die durch die Deklaration eingeführt werden. Der Initialisierer einer konstanten lokalen Variable oder eines konstanten Felds muss ein konstanter Ausdruck sein, der implizit in den Zieltyp konvertiert werden kann.
+
+Ein konstanter Ausdruck ist ein Ausdruck, der während der Kompilierung vollständig ausgewertet werden kann. Daher sind `string` und ein NULL-Verweis die einzig möglichen Werte für Verweistypkonstanten.
+
+In der Konstantendeklaration können mehrere Konstanten deklariert werden, z. B.:
+
 ```csharp
-public const double x = 1.0, y = 2.0, z = 3.0;  
-```  
-  
- Der `static`-Modifizierer ist in einer Konstantendeklaration nicht zulässig.  
-  
- Eine Konstante kann wie folgt einen Teil eines konstanten Ausdrucks darstellen:  
-  
+public const double x = 1.0, y = 2.0, z = 3.0;
+```
+
+Der `static`-Modifizierer ist in einer Konstantendeklaration nicht zulässig.
+
+Eine Konstante kann wie folgt einen Teil eines konstanten Ausdrucks darstellen:
+
 ```csharp
-public const int c1 = 5;  
-public const int c2 = c1 + 100;  
-```  
-  
+public const int c1 = 5;
+public const int c2 = c1 + 100;
+```
+
 > [!NOTE]
->  Das [readonly](../../../csharp/language-reference/keywords/readonly.md)-Schlüsselwort unterscheidet sich vom `const`-Schlüsselwort. Ein `const`-Feld kann nur bei der Deklaration des Felds initialisiert werden. Ein `readonly`-Feld kann entweder bei der Deklaration oder in einem Konstruktor initialisiert werden. Daher können `readonly`-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen. Außerdem ist ein `const`-Feld eine Kompilierzeitkonstante, während ein `readonly`-Feld für Laufzeitkonstanten verwendet werden kann, wie in der folgenden Codezeile: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`.  
-  
-## <a name="example"></a>Beispiel  
- [!code-csharp[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_1.cs)]  
-  
-## <a name="example"></a>Beispiel  
- In diesem Beispiel wird das Verwenden von Konstanten als lokale Variablen demonstriert.  
-  
- [!code-csharp[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_2.cs)]  
-  
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)  
- [readonly](../../../csharp/language-reference/keywords/readonly.md)
+> Das [readonly](../../../csharp/language-reference/keywords/readonly.md)-Schlüsselwort unterscheidet sich vom `const`-Schlüsselwort. Ein `const`-Feld kann nur bei der Deklaration des Felds initialisiert werden. Ein `readonly`-Feld kann entweder bei der Deklaration oder in einem Konstruktor initialisiert werden. Daher können `readonly`-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen. Außerdem ist ein `const`-Feld eine Kompilierzeitkonstante, während ein `readonly`-Feld für Laufzeitkonstanten verwendet werden kann, wie in der folgenden Codezeile: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`.
+
+## <a name="example"></a>Beispiel
+
+[!code-csharp[csrefKeywordsModifiers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#5)]
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel wird das Verwenden von Konstanten als lokale Variablen demonstriert.
+
+[!code-csharp[csrefKeywordsModifiers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#6)]
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Siehe auch
+
+[C#-Referenz](../../../csharp/language-reference/index.md)  
+[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+[Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)  
+[readonly](../../../csharp/language-reference/keywords/readonly.md)

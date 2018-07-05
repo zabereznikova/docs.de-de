@@ -1,5 +1,5 @@
 ---
-title: class (C#-Referenz)
+title: Schlüsselwort „class“ (C#-Referenz)
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e64e825e4297ceb432393c7bd145a6cf4fcb2c
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216751"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948510"
 ---
 # <a name="class-c-reference"></a>class (C#-Referenz)
 
@@ -21,12 +21,13 @@ Klassen werden mithilfe des Schlüsselworts `class` deklariert, wie im folgenden
 ```csharp
 class TestClass
 {
-    // Methods, properties, fields, events, delegates 
+    // Methods, properties, fields, events, delegates
     // and nested classes go here.
 }
 ```
 
 ## <a name="remarks"></a>Hinweise
+
 In C# ist nur die einfache Vererbung zulässig. Eine Klasse kann also Implementierungen aus nur einer Basisklasse erben. Es kann allerdings mehr als eine Schnittstelle implementiert werden. Die folgende Tabelle zeigt Beispiele für Klassenvererbung und Implementierung der Schnittstelle:
 
 |Vererbung|Beispiel|
@@ -73,11 +74,13 @@ Eine Klasse kann Deklarationen der folgenden Member enthalten:
 - [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
 ## <a name="example"></a>Beispiel
+
 Das folgende Beispiel zeigt das Deklarieren von Klassenfeldern, Konstruktoren und Methoden. Darüber hinaus veranschaulicht es Objektinstanziierung und Ausgabe von Instanzdaten. In diesem Beispiel werden zwei Klassen deklariert. Die erste Klasse, `Child`, enthält zwei private Felder (`name` und `age`), zwei öffentliche Konstruktoren und eine öffentliche Methode. Die zweite Klasse, `StringTest`, enthält `Main`.
 
-[!code-csharp[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
+[!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
 ## <a name="comments"></a>Kommentare
+
 Beachten Sie, dass im vorherigen Beispiel nur über die öffentliche Methode der Klasse `Child` auf die privaten Felder (`name` und `age`) zugegriffen werden kann. Sie können z.B. den Namen des untergeordneten Elements nicht aus der `Main`-Methode mit einer Anweisung wie folgt drucken:
 
 ```csharp
@@ -90,11 +93,13 @@ Typen, die innerhalb einer Klasse ohne Zugriffsmodifizierer deklariert werden, s
 
 Beachten Sie schließlich, dass für das Objekt, das mit dem Standardkonstruktor (`child3`) erstellt wurde, das Altersfeld standardmäßig auf 0 initialisiert wurde.
 
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)
+
+[C#-Referenz](../../../csharp/language-reference/index.md)  
+[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+[Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)

@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Abo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 8ef9f39b0d99db32438e7dcf83318a1aa9054967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592443"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106576"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
@@ -378,4 +378,5 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
 
 
 >[!div class="step-by-step"]
-[Zurück] (rabbitmq-event-bus-development-test-environment.md) [Weiter] (test-aspnet-core-services-web-apps.md)
+[Zurück](rabbitmq-event-bus-development-test-environment.md)
+[Weiter](test-aspnet-core-services-web-apps.md)

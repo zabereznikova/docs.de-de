@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Clie
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2adce39561dd2b97910155ebed595a2df7785c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574672"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104568"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
 
@@ -29,7 +29,7 @@ Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von 
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Prüfung von mobilen Xamarin-Apps
 
--   **Validate Text Input and Show Errors (Überprüfen von Texteingabe und Anzeigen von Fehlern)**
+-   **Validate Text Input and Show Errors (Validieren von Texteingaben und Anzeigen von Validierungsfehlern)**
     [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **Validation Callback (Überprüfungsrückruf)**
@@ -65,4 +65,5 @@ Dies sind die wichtigsten Konzepte in Bezug auf die Prüfung:
 
 
 >[!div class="step-by-step"]
-[Zurück] (domain-model-layer-validations.md) [Weiter] (domain-events-design-implementation.md)
+[Zurück](domain-model-layer-validations.md)
+[Weiter](domain-events-design-implementation.md)

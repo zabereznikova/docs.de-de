@@ -3,12 +3,12 @@ title: Klassen und Objekte in C# – Überblick über C#
 description: Neu bei C#? Lesen Sie diese Übersicht über Klassen, Objekte und Vererbung.
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298291"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140280"
 ---
 # <a name="classes-and-objects"></a>Klassen und Objekte
 
@@ -55,7 +55,7 @@ Nachfolgend finden Sie einen Überblick über die Memberarten, die eine Klasse e
 
 ## <a name="accessibility"></a>Zugriff
 
-Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des Programmtexts steuert, die auf den Member zugreifen können. Es gibt fünf mögliche Formen des Zugriffs. Diese werden nachfolgend zusammengefasst.
+Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des Programmtexts steuert, die auf den Member zugreifen können. Es gibt sechs mögliche Formen des Zugriffs. Diese werden nachfolgend zusammengefasst.
 
 * `public`
     - Der Zugriff ist nicht eingeschränkt.
@@ -64,7 +64,7 @@ Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des
 * `internal`
     - Der Zugriff ist auf die aktuelle Assembly beschränkt (.exe, .dll, usw.)
 * `protected internal`
-    - Der Zugriff ist auf die enthaltende Klasse oder auf Klassen beschränkt, die von der enthaltenden Klasse abgeleitet sind.
+    - Der Zugriff ist auf die enthaltende Klasse, auf Klassen, die von der enthaltenden Klasse abgeleitet sind, oder auf Klassen innerhalb der gleichen Assembly beschränkt.
 * `private`
     - Der Zugriff ist auf diese Klasse beschränkt.
 * `private protected`

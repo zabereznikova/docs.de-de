@@ -1,20 +1,21 @@
 ---
 title: 'Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ)'
-ms.date: 07/20/2015
+ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: c6af2c0f90d3ebb69438b670a4f0cecb10d8d2fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 444276f6ad68e988b2dbc2cd7401248a6f5da072
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319168"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071834"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ)
+
 In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen getrennten Dateien mit gemeinsamem Wert, der als übereinstimmender Schlüssel verwendet wird, verknüpft werden. Diese Technik kann hilfreich sein, wenn Sie Daten aus zwei Arbeitsblättern oder aus einem Arbeitsblatt und einer Datei, die ein anderes Format aufweist, in einer neuen Datei kombinieren möchten. Sie können das Beispiel auch abändern, damit es mit jeder Art von strukturiertem Text funktioniert.  
   
-### <a name="to-create-the-data-files"></a>So erstellen Sie die Datendateien  
+## <a name="to-create-the-data-files"></a>So erstellen Sie die Datendateien
   
-1.  Kopieren Sie die folgenden Zeilen in eine Datei namens „scores.csv“, und speichern Sie sie in Ihrem Projektordner. Diese Datei stellt das Arbeitsblatt dar. Spalte 1 enthält die ID des Studierenden und die Spalten 2 bis 5 enthalten die Testergebnisse.  
+1.  Kopieren Sie die folgenden Zeilen in eine Datei namens *scores.csv*, und speichern Sie sie in Ihrem Projektordner. Diese Datei stellt das Arbeitsblatt dar. Spalte 1 enthält die ID des Studierenden und die Spalten 2 bis 5 enthalten die Testergebnisse.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -31,7 +32,7 @@ In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen g
     122, 94, 92, 91, 91  
     ```  
   
-2.  Kopieren Sie die folgenden Zeilen in eine Datei namens „names.csv“, und speichern Sie sie in Ihrem Projektordner. Die Datei stellt ein Arbeitsblatt dar, das den Nachnamen, den Vornamen und die ID des Studierenden enthält.  
+2.  Kopieren Sie die folgenden Zeilen in eine Datei namens *names.csv*, und speichern Sie sie in Ihrem Projektordner. Die Datei stellt ein Arbeitsblatt dar, das den Nachnamen, den Vornamen und die ID des Studierenden enthält.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,8 +50,12 @@ In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen g
     ```  
   
 ## <a name="example"></a>Beispiel  
-  
-```csharp  
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 class JoinStrings  
 {  
     static void Main()  
@@ -78,7 +83,7 @@ class JoinStrings
             let nameFields = name.Split(',')  
             from id in scores  
             let scoreFields = id.Split(',')  
-            where nameFields[2] == scoreFields[0]  
+            where Convert.ToInt32(nameFields[2]) == Convert.ToInt32(scoreFields[0])
             select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]   
                    + "," + scoreFields[3] + "," + scoreFields[4];  
   
@@ -102,26 +107,32 @@ class JoinStrings
     }  
 }  
 /* Output:  
-Merge two spreadsheets:  
-Adams, 99, 82, 81, 79  
-Fakhouri, 99, 86, 90, 94  
-Feng, 93, 92, 80, 87  
-Garcia, 97, 89, 85, 82  
-Garcia, 35, 72, 91, 70  
-Garcia, 92, 90, 83, 78  
-Mortensen, 88, 94, 65, 91  
-O'Donnell, 75, 84, 91, 39  
-Omelchenko, 97, 92, 81, 60  
-Tucker, 68, 79, 88, 92  
-Tucker, 94, 92, 91, 91  
-Zabokritski, 96, 85, 91, 60  
-12 total names in list  
+Merge two spreadsheets:
+Omelchenko, 97, 92, 81, 60
+O'Donnell, 75, 84, 91, 39
+Mortensen, 88, 94, 65, 91
+Garcia, 97, 89, 85, 82
+Garcia, 35, 72, 91, 70
+Fakhouri, 99, 86, 90, 94
+Feng, 93, 92, 80, 87
+Garcia, 92, 90, 83, 78
+Tucker, 68, 79, 88, 92
+Adams, 99, 82, 81, 79
+Zabokritski, 96, 85, 91, 60
+Tucker, 94, 92, 91, 91
+12 total names in list
  */  
-```  
+```
+
+## <a name="compiling-the-code"></a>Kompilieren des Codes
+
+Erstellen und kompilieren Sie ein Projekt, das eine der folgenden Optionen als Ziel verwendet:
+
+- .NET Framework-Version 3.5 mit einem Verweis auf „System.Core.dll“.
+- .NET Framework-Version 4.0 oder höher.
+- .NET Core-Version 1.0 oder höher.
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.  
-  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
+
  [LINQ und Zeichenfolgen (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ und Dateiverzeichnisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

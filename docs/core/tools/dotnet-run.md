@@ -4,12 +4,12 @@ description: Der dotnet run-Befehl bietet eine praktische Option zum Ausführen 
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 82c6e44e52aa6af7044edf72fd6e57b7614a70f3
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 609ac27f21e6801992b9e10c7d465a805492859e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696311"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071759"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -201,9 +201,9 @@ Führt das Projekt im aktuellen Verzeichnis aus:
 
 Führt das angegebene Projekt aus:
 
-`dotnet run --project /projects/proj1/proj1.csproj`
+`dotnet run --project ./projects/proj1/proj1.csproj`
 
-Führt das Projekt im aktuellen Verzeichnis aus (das Argument `--help` in diesem Beispiel wird der Anwendung übergeben, da das Argument `--` verwendet wird):
+Führt das Projekt im aktuellen Verzeichnis aus (das Argument `--help` in diesem Beispiel wird der Anwendung übergeben, da die leere Option `--` verwendet wird):
 
 `dotnet run --configuration Release -- --help`
 

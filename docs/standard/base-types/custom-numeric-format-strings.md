@@ -1,6 +1,6 @@
 ---
 title: Benutzerdefinierte Zahlenformatzeichenfolgen
-ms.date: 03/30/2017
+ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,16 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa1ab1d9a9ff3d652ce97d4fe7e6d04f744aea98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b9cf18c4893b618d16ef24bab83a19154e19a9c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579235"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106527"
 ---
 # <a name="custom-numeric-format-strings"></a>Benutzerdefinierte Zahlenformatzeichenfolgen
+
 Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern bestehende benutzerdefinierte numerische Formatzeichenfolge erstellen, um anzugeben, wie numerische Daten formatiert werden sollen. Eine benutzerdefinierte numerische Formatzeichenfolge wird wie jede Formatzeichenfolge definiert, bei der es sich nicht um eine [standardmäßige numerische Formatzeichenfolge](../../../docs/standard/base-types/standard-numeric-format-strings.md)handelt.  
   
+
  Benutzerdefinierte numerische Formatzeichenfolgen werden von einigen Überladungen der `ToString` -Methode aller numerischen Typen unterstützt. Sie können z. B. eine numerische Formatzeichenfolge an die <xref:System.Int32.ToString%28System.String%29> -Methode und <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> -Methode des <xref:System.Int32> -Typs übergeben. Benutzerdefinierte numerische Formatzeichenfolgen werden auch vom .NET-Feature für die [kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md) unterstützt, die von einigen `Write`-Methoden und `WriteLine`-Methoden der <xref:System.Console>-Klasse und der <xref:System.IO.StreamWriter>-Klasse, der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode und der <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>-Methode verwendet wird. Das Feature [Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) unterstützt auch benutzerdefinierte numerische Formatzeichenfolgen.  
   
 > [!TIP]
@@ -45,14 +47,16 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
 |"‰"|Promilleplatzhalter|Multipliziert eine Zahl mit 1000 und fügt ein lokalisiertes Promillesymbol in die Ergebniszeichenfolge ein.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Bezeichner "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Exponentialschreibweise|Formatiert das Ergebnis mit der Exponentialschreibweise, wenn mindestens einmal 0 (null) darauf folgt. Die Groß- oder Kleinschreibung ("E" oder "e") gibt die Schreibweise des Symbols für den Exponenten in der Ergebniszeichenfolge an. Die Anzahl der Nullen, die auf das Zeichen "E" oder auf das Zeichen "e" folgen, bestimmt die Mindestanzahl der Ziffern im Exponenten. Ein Pluszeichen (+) gibt an, dass dem Exponenten immer ein Vorzeichen vorausgeht. Ein Minuszeichen (-) gibt an, dass nur negativen Exponenten ein Vorzeichen vorausgeht.<br /><br /> Weitere Informationen finden Sie unter [Die benutzerdefinierten Bezeichner "E" und "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
 |"\\"|Escapezeichen|Das Zeichen, das auf das Escapezeichen folgt, wird als Literal und nicht als benutzerdefinierter Formatbezeichner interpretiert.<br /><br /> Weitere Informationen finden Sie unter [Das Escapezeichen „\\“](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
-|'*Zeichenfolge*'<br /><br /> "*Zeichenfolge*"|Zeichenfolgenliteraltrennzeichen|Gibt an, dass die eingeschlossenen Zeichen unverändert in die Ergebniszeichenfolge kopiert werden sollen.|68 ("# ' Grad'") -> 68 Grad<br /><br /> 68 ("#' Grad'") -> 68 Grad|  
+|'*Zeichenfolge*'<br /><br /> "*Zeichenfolge*"|Zeichenfolgenliteraltrennzeichen|Gibt an, dass die eingeschlossenen Zeichen unverändert in die Ergebniszeichenfolge kopiert werden sollen.<br/><br/>Weitere Informationen finden Sie unter [Zeichenliterale](#character-literals).|68 ("# ' Grad'") -> 68 Grad<br /><br /> 68 ("#' Grad'") -> 68 Grad|  
 |;|Abschnittstrennzeichen|Definiert Abschnitte mit separaten Formatzeichenfolgen für positive und negative Zahlen sowie Nullen.<br /><br /> Weitere Informationen finden Sie unter [Das Abschnittstrennzeichen ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
-|Andere|Alle anderen Zeichen|Das Zeichen wird unverändert in die Ergebniszeichenfolge kopiert.|68 ("# °") -> 68 °|  
+|Andere|Alle anderen Zeichen|Das Zeichen wird unverändert in die Ergebniszeichenfolge kopiert.<br/><br/>Weitere Informationen finden Sie unter [Zeichenliterale](#character-literals).|68 ("# °") -> 68 °|  
   
  Die folgenden Abschnitte enthalten ausführliche Informationen zu den einzelnen benutzerdefinierten Zahlenformatbezeichnern.  
+
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-culture-note.md)] 
   
 <a name="Specifier0"></a>   
-## <a name="the-0-custom-specifier"></a>Der benutzerdefinierte Bezeichner "0"  
+## <a name="the-0-custom-specifier"></a>Der benutzerdefinierte Bezeichner „0“  
  Der benutzerdefinierte Formatbezeichner "0" dient als 0-Platzhalterzeichen. Wenn der zu formatierende Wert über eine Ziffer an der Stelle verfügt, an der die Ziffer 0 in der Formatzeichenfolge steht, wird diese Ziffer in die Ergebniszeichenfolge kopiert; andernfalls erscheint die Ziffer 0 in der Ergebniszeichenfolge. Die Positionen der Ziffer 0, die am weitesten links vor dem Dezimaltrennzeichen steht, und die Position der Ziffer 0, die am weitesten rechts hinter dem Dezimaltrennzeichen steht, bestimmen den Bereich der Ziffern, die immer in der Ergebniszeichenfolge enthalten sind.  
   
  Mit dem Bezeichner "00" wird der Wert immer auf die direkt dem Dezimaltrennzeichen vorausgehende Zahl aufgerundet. Eine Formatierung des Werts 34.5 mit "00" ergibt z. B. den Wert 35.  
@@ -60,13 +64,13 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  Im folgenden Beispiel werden mehrere Werte angezeigt, die mit benutzerdefinierten Formatzeichenfolgen formatiert werden, in denen 0-Platzhalter enthalten sind.  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [Zurück zur Tabelle](#table)  
   
 <a name="SpecifierD"></a>   
-## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner "#"  
+## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner „#“  
  Der benutzerdefinierte Bezeichner "#" dient als Platzhaltersymbol für Ziffern. Wenn der zu formatierende Wert über eine Ziffer an der Stelle verfügt, an der das "#"-Symbol in der Formatzeichenfolge steht, wird diese Ziffer in die Ergebniszeichenfolge kopiert. Andernfalls wird an dieser Position nichts in der Ergebniszeichenfolge gespeichert.  
   
  Beachten Sie, dass dieser Bezeichner nie die Ziffer 0 anzeigt, wenn es sich nicht um eine signifikante Ziffer handelt, auch wenn die Ziffer 0 die einzige Ziffer in der Zeichenfolge ist. Die Ziffer 0 wird nur angezeigt, wenn es sich um eine signifikante Ziffer in der angezeigten Zahl handelt.  
@@ -76,19 +80,19 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  Im folgenden Beispiel werden mehrere Werte angezeigt, die mit benutzerdefinierten Formatzeichenfolgen formatiert werden, in denen Ziffernplatzhalter enthalten sind.  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  Verwenden Sie das Feature für die [zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md) , und geben Sie eine Feldbreite an, wie im folgenden Beispiel veranschaulicht, um eine Ergebniszeichenfolge zurückzugeben, in der fehlende Ziffern oder führende Nullen durch Leerzeichen ersetzt werden.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Zurück zur Tabelle](#table)  
   
 <a name="SpecifierPt"></a>   
-## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner  ".".  
+## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner „.“  
  Der benutzerdefinierte Formatbezeichner "." fügt ein lokalisiertes Dezimaltrennzeichen in die Ergebniszeichenfolge ein. Der erste Punkt in der Formatzeichenfolge bestimmt die Position des Dezimaltrennzeichens im formatierten Wert; alle weiteren Punkte werden ignoriert.  
   
  Das Zeichen, das als Dezimaltrennzeichen in der Ergebniszeichenfolge verwendet wird, wird von der <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> -Eigenschaft des <xref:System.Globalization.NumberFormatInfo> -Objekts festgelegt, das die Formatierung steuert; es muss nicht immer ein Punkt sein.  
@@ -96,13 +100,13 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  Im folgenden Beispiel wird der "."-Formatbezeichner verwendet, um die Position des Dezimalzeichens in mehreren Ergebniszeichenfolgeketten zu definieren.  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [Zurück zur Tabelle](#table)  
   
 <a name="SpecifierTh"></a>   
-## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner ","  
+## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner „,“  
  Das Zeichen "," dient sowohl als Bezeichner für Gruppentrennzeichen als auch als Bezeichner für Zahlenskalierung.  
   
 -   Bezeichner für Gruppentrennzeichen: Wenn eines oder mehrere Kommas zwischen zwei Ziffernplatzhaltern (0 oder #) angegeben sind, die die ganzzahligen Ziffern einer Zahl formatieren, wird zwischen jeder Zahlengruppe im ganzzahligen Teil der Ausgabe ein Gruppentrennzeichen eingefügt.  
@@ -116,55 +120,55 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  Im folgenden Beispiel wird die Verwendung des Kommas als Gruppentrennzeichen veranschaulicht.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  Das folgende Beispiel veranschaulicht der Verwendung des Kommas als Bezeichner für die Zahlenskalierung.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [Zurück zur Tabelle](#table)  
   
 <a name="SpecifierPct"></a>   
-## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner "%"  
+## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner „%“  
  Wenn eine Formatzeichenfolge ein Prozentzeichen (%) enthält, wird die Zahl vor dem Formatieren mit 100 multipliziert. Das lokalisierte Prozentzeichen wird in der Zahl an der Stelle eingefügt, an der % in der Formatzeichenfolge steht. Das verwendete Prozentzeichen wird von der <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> -Eigenschaft des aktuellen <xref:System.Globalization.NumberFormatInfo> -Objekts definiert.  
   
  Im folgenden Beispiel werden mehrere benutzerdefinierte Formatzeichenfolgen definiert, in denen der benutzerdefinierte Bezeichner "%" enthalten ist.  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [Zurück zur Tabelle](#table)  
   
 <a name="SpecifierPerMille"></a>   
-## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner "‰"  
+## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner „‰“  
  Wenn eine Formatzeichenfolge ein Promillezeichen (‰ oder \u2030) enthält, wird die Zahl vor dem Formatieren mit 1.000 multipliziert. Das entsprechende Promillesymbol wird in der Rückgabezeichenfolge an der Stelle eingefügt, an der das Symbol ‰ in der Formatzeichenfolge steht. Das verwendete Promillezeichen wird von der <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType>-Eigenschaft des Objekts definiert, das kulturspezifische Formatierungsinformationen zur Verfügung stellt.  
   
  Im folgenden Beispiel wird eine benutzerdefinierte Formatzeichenfolge mit dem benutzerdefinierten Bezeichner "‰" definiert.  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [Zurück zur Tabelle](#table)  
   
 <a name="SpecifierExponent"></a>   
-## <a name="the-e-and-e-custom-specifiers"></a>Die benutzerdefinierten Bezeichner "E" und "e"  
+## <a name="the-e-and-e-custom-specifiers"></a>Die benutzerdefinierten Bezeichner „E“ und „e“  
  Wenn die Formatzeichenfolge die Zeichenfolge "E", "E+", "E-", "e", "e+" oder "e-" enthält und direkt danach mindestens einmal die Ziffer 0, wird die Zahl mit der wissenschaftlichen Notation formatiert und ein "E" bzw. "e" zwischen der Zahl und dem Exponenten eingefügt. Die Anzahl der Nullen nach dem Bezeichner für die wissenschaftliche Notation bestimmt die Mindestanzahl der Ziffern, die für den Exponenten ausgegeben werden. Das "E+"-Format und das "e+"-Format geben an, dass immer ein Vorzeichen (Plus oder Minus) vor dem Exponenten steht. Die Formate "E", "E-", "e" oder "e-" geben an, dass nur vor negativen Exponenten ein Vorzeichen steht.  
   
  Im folgenden Beispiel werden mehrere numerische Werte mit den Bezeichnern für die wissenschaftliche Notation formatiert.  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [Zurück zur Tabelle](#table)  
   
 <a name="SpecifierEscape"></a>   
-## <a name="the--escape-character"></a>Das Escapezeichen „\\“  
+## <a name="the--escape-character"></a>Das Escapezeichen \\  
  Die Symbole "#", "0", ".", ",", "%" und "‰" in einer Formatzeichenfolge werden als Formatbezeichner und nicht als Literalzeichen interpretiert. Je nach Position in einer benutzerdefinierten Formatzeichenfolge können das Zeichen "E" bzw. "e" und die Symbole "+" und "-" auch als Formatbezeichner interpretiert werden.  
   
  Um zu verhindern, dass ein Zeichen als Formatbezeichner interpretiert wird, können Sie einen umgekehrten Schrägstrich als Escapezeichen voranstellen. Das Escapezeichen gibt an, dass das folgende Zeichen ein Zeichenliteral ist, das unverändert in der Ergebniszeichenfolge enthalten sein soll.  
@@ -177,13 +181,13 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  Im folgenden Beispiel wird das Escapezeichen verwendet, um zu verhindern, dass der Formatierungsvorgang die Zeichen „#“, „0“ und „\\“ als Escapezeichen oder als Formatspezifizierer interpretiert. In den C#-Beispielen wird ein zusätzlicher umgekehrter Schrägstrich verwendet, um sicherzustellen, dass ein umgekehrter Schrägstrich als Literalzeichen interpretiert wird.  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
- [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
  [!code-vb[Formatting.Numeric.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/escape1.vb#11)]  
   
  [Zurück zur Tabelle](#table)  
   
 <a name="SectionSeparator"></a>   
-## <a name="the--section-separator"></a>Das Abschnittstrennzeichen ";"  
+## <a name="the--section-separator"></a>Das Abschnittstrennzeichen „;“  
  Das Semikolon (;) ist ein bedingter Formatbezeichner, der Zahlen unterschiedlich formatiert, je nachdem, ob sein Wert positiv, negativ oder 0 (null) ist. Dafür kann eine benutzerdefinierte Formatzeichenfolge bis zu drei durch Semikolons getrennte Abschnitte enthalten. Diese Abschnitte werden in der folgenden Tabelle beschrieben.  
   
 |Anzahl der Abschnitte|description|  
@@ -197,11 +201,43 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  Im folgenden Beispiel wird der Formatbezeichner ";" verwendet, um positive und negative Zahlen sowie Nullen unterschiedlich zu formatieren.  
   
  [!code-cpp[Formatting.Numeric.Custom#8](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#8)]
- [!code-csharp[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
  [!code-vb[Formatting.Numeric.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#8)]  
   
  [Zurück zur Tabelle](#table)  
+
+## <a name="character-literals"></a>Zeichenliterale  
+ 
+Formatbezeichner, die in einer benutzerdefinierten numerischen Formatzeichenfolge auftreten, werden immer als Formatierungszeichen, nicht als Literalzeichen interpretiert. Dies beinhaltet die folgenden Zeichen:  
+
+- [0](#Specifier0)
+- [\#](#SpecifierD)
+- [%](#SpecifierPct)
+- [‰](#SpecifierPerMille)
+- '
+- [\\](#SpecifierEscape)
+- [.](#SpecifierPt)
+- [,](#SpecifierTh)
+- [E oder e](#SpecifierExponent), je nach Position in der Formatzeichenfolge.
+
+Alle anderen Zeichen werden immer als Zeichenliterale interpretiert und bei einem Formatierungsvorgang unverändert in die Ergebniszeichenfolge übernommen.  In einem Analysevorgang müssen die Zeichen exakt den Zeichen in der Eingabezeichenfolge entsprechen, beim Vergleich wird die Groß- und Kleinschreibung beachtet.  
   
+In folgendem Beispiel wird eine häufige Verwendung von Literalzeicheneinheiten (in diesem Fall Tausender) veranschaulicht:
+  
+ [!code-csharp-interactive[literal characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal2.cs#1)]
+ [!code-vb[literal characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal2.vb#1)]  
+  
+ Es gibt zwei Möglichkeiten, um anzugeben, dass Zeichen nicht als Formatierungszeichen, sondern als Literalzeichen interpretiert werden sollen, damit sie in eine Ergebniszeichenfolge eingeschlossen oder in einer Eingabezeichenfolge erfolgreich analysiert werden können:  
+  
+- Durch Versehen eines Formatierungszeichens mit Escapezeichen. Weitere Informationen finden Sie unter [Das Escapezeichen \\](#SpecifierEscape).
+  
+- Durch Einschließen der gesamten Literalzeichenfolge in Apostrophe.
+
+In folgendem Beispiel werden beide Ansätze verwendet, um reservierte Zeichen in eine benutzerdefinierte numerische Formatzeichenfolge einzufügen.  
+  
+     [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/literal1.cs#1)]
+     [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/literal1.vb#1)]  
+    
 <a name="NotesCustomFormatting"></a>   
 ## <a name="notes"></a>Hinweise  
   
@@ -223,13 +259,13 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  Im folgenden Beispiel werden zwei benutzerdefinierte numerische Formatzeichenfolgen veranschaulicht. In beiden Fällen werden die numerischen Daten durch einen Ziffernplatzhalter (`#`) angezeigt. Alle anderen Zeichen werden in die Ergebniszeichenfolge kopiert.  
   
  [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
- [!code-csharp[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
  [!code-vb[Formatting.Numeric.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/example1.vb#10)]  
   
  [Zurück zur Tabelle](#table)  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Globalization.NumberFormatInfo>  
+ <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
  [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
  [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Vorgehensweise: Auffüllen einer Zahl mit führenden Nullen](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  

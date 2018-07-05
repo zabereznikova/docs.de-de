@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41161d1511f7dce975ac5ad916750734972fa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579872"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948604"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
 <a name="top"></a> Reguläre Ausdrücke sind Muster, für die das Modul für reguläre Ausdrücke eine Entsprechung im Eingabetext sucht. Muster können aus einem oder mehr Zeichenliteralen, Operatoren oder Konstrukten bestehen.  Eine kurze Einführung finden Sie unter [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -93,8 +93,8 @@ ms.locfileid: "33579872"
   
 |Assertion|description|Muster|Übereinstimmungen|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Der Vergleich muss am Anfang der Zeichenfolge oder Zeile beginnen.|`^\d{3}`|"901" in<br /><br /> "901-333-"|  
-|`$`|Der Vergleich muss am Ende der Zeichenfolge oder vor `\n` am Ende der Zeile oder Zeichenfolge erfolgen.|`-\d{3}$`|"-333" in<br /><br /> "-901-333"|  
+|`^`|Die Übereinstimmung muss standardmäßig zu Anfang der Zeichenfolge beginnen. Im Mehrzeilenmodus muss sie am Anfang der Zeile beginnen.|`^\d{3}`|"901" in<br /><br /> "901-333-"|  
+|`$`|Die Übereinstimmung muss standardmäßig am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie am Ende der Zeile oder vor `\n` am Ende der Zeile erfolgen.|`-\d{3}$`|"-333" in<br /><br /> "-901-333"|  
 |`\A`|Der Vergleich muss am Beginn der Zeichenfolge erfolgen.|`\A\d{3}`|"901" in<br /><br /> "901-333-"|  
 |`\Z`|Der Vergleich muss am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge erfolgen.|`-\d{3}\Z`|"-333" in<br /><br /> "-901-333"|  
 |`\z`|Der Vergleich muss am Ende der Zeichenfolge erfolgen.|`-\d{3}\z`|"-333" in<br /><br /> "-901-333"|  

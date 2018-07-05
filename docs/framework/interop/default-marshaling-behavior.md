@@ -1,6 +1,6 @@
 ---
 title: Standardmarshallingverhalten
-ms.date: 03/30/2017
+ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457393"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028070"
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -113,7 +113,9 @@ interface DelegateTest : IDispatch {
 ```  
   
  Ein Funktionszeiger kann dereferenziert werden, wie jeder andere nicht verwaltete Funktionszeiger dereferenziert werden kann.  
-  
+
+In diesem Beispiel ist das Ergebnis ein `int`-Typ und ein Zeiger auf einen `int`-Typ, wenn zwei Delegaten als <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType> gemarshallt werden. Da Delegattypen gemarshallt werden, stellt `int` hier einen Zeiger auf einen `void*`-Typ dar, der der Adresse des Delegaten im Arbeitsspeicher entspricht. Das Ergebnis bezieht sich also auf 32-Bit-Windows-Systeme, da `int` in diesem Fall die Größe des Funktionszeigers darstellt.
+
 > [!NOTE]
 >  Ein Verweis auf den Funktionszeiger auf einen verwalteten Delegaten in nicht verwaltetem Code hindert die Common Language Runtime nicht daran, eine Garbage Collection für das verwaltete Objekt durchzuführen.  
   

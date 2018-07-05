@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: dotnet-ml
 ms.devlang: dotnet
 manager: wpickett
-ms.openlocfilehash: 332d9e14bea165992f9f00b048286e185269ea79
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34860660"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207732"
 ---
 # <a name="machine-learning-glossary"></a>Maschinelles Lernen – Glossar
 
@@ -33,9 +33,9 @@ Verwandte ML.NET-API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Auc?
 
 ## <a name="binary-classification"></a>Binäre Klassifizierung
 
-Ein [Klassifizierungsfall](#classification), bei dem die [Bezeichnung](#label) nur eine von zwei Klassen ist. Weitere Informationen finden Sie auf Wikipedia im Artikel zur [binären Klassifizierung](https://en.wikipedia.org/wiki/Binary_classification).
+Ein [Klassifizierungsfall](#classification), bei dem die [Bezeichnung](#label) nur eine von zwei Klassen ist. Weitere Informationen finden Sie im Abschnitt [Binäre Klassifizierung](tasks.md#binary-classification) des Artikels [Machine Learning-Aufgaben](tasks.md).
 
-## <a name="classification"></a>Klassifizierung
+## <a name="classification"></a>Klassifikation
 
 Wenn die Daten zur Vorhersage einer Kategorie verwendet werden, wird der [überwachte Task für maschinelles Lernen](#supervised-machine-learning) als Klassifizierung bezeichnet. Die [binäre Klassifizierung](#binary-classification) bezieht sich auf die Vorhersage von nur zwei Kategorien (z.B. die Klassifizierung eines Bilds als Bild einer „Katze“ oder eines „Hunds“). Die [Multiklassenklassifizierung](#multiclass-classification) bezieht sich auf die Vorhersage mehrerer Kategorien (z.B. bei der Klassifizierung eines Bilds als Bild einer bestimmten Hunderasse).
 
@@ -45,7 +45,7 @@ Bei der [Regression](#regression) gibt diese Auswertungsmetrik an, wie gut Daten
 
 Verwandte ML.NET-API: <xref:Microsoft.ML.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
-## <a name="feature"></a>Funktion
+## <a name="feature"></a>Feature
 
 Eine messbare Eigenschaft des zu messenden Phänomens, typischerweise ein numerischer Wert (double). Mehrere Funktionen werden als **Funktionsvektor** bezeichnet und typischerweise als `double[]` gespeichert. Funktionen definieren die wichtigen Eigenschaften des zu messenden Phänomens. Weitere Informationen finden Sie auf Wikipedia im Artikel zum Thema [Funktion](https://en.wikipedia.org/wiki/Feature_(machine_learning)).
 
@@ -85,7 +85,7 @@ In der Regel handelt es sich hierbei um die Parameter für die Vorhersagefunktio
 
 ## <a name="multiclass-classification"></a>Multiklassenklassifizierung
 
-Ein [Klassifizierungsfall](#classification), bei dem die [Bezeichnung](#label) nur eine von mindestens drei Klassen ist. Weitere Informationen finden Sie auf Wikipedia im Artikel zur [Multiklassenklassifizierung](https://en.wikipedia.org/wiki/Multiclass_classification).
+Ein [Klassifizierungsfall](#classification), bei dem die [Bezeichnung](#label) nur eine von mindestens drei Klassen ist. Weitere Informationen finden Sie im Abschnitt [Multiklassenklassifizierung](tasks.md#multiclass-classification) des Artikels [Machine Learning-Aufgaben](tasks.md).
 
 ## <a name="n-gram"></a>N-gram
 
@@ -99,7 +99,7 @@ Ein Vektor aus [Funktionen](#feature) besteht ausschließlich aus numerischen We
 
 Alle Vorgänge, die zur Anpassung eines Modells an einen Datensatz erforderlich sind. Eine Pipeline besteht aus Datenimport, Transformation, Funktionsbereitstellung und Lernschritten. Ist eine Pipeline einmal trainiert, wird sie zum Modell.
 
-## <a name="precision"></a>Präzision
+## <a name="precision"></a>Genauigkeit
 
 Bei der [Klassifizierung](#classification) steht die Genauigkeit für eine Klasse für die Anzahl der Elemente, die korrekt als zu dieser Klasse gehörend vorhergesagt werden, geteilt durch die Gesamtzahl der Elemente, die als zu dieser Klasse gehörend vorhergesagt werden.
 
@@ -113,7 +113,7 @@ Verwandte ML.NET-API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Nega
 
 ## <a name="regression"></a>Regression
 
-Ein Task für [überwachtes maschinelles Lernen](#supervised-machine-learning), durch den ein reeller Wert, z.B. „double“, ausgegeben wird. Ein gutes Beispiel ist die Vorhersage von Aktienkursen.
+Ein Task für [überwachtes maschinelles Lernen](#supervised-machine-learning), durch den ein reeller Wert, z.B. „double“, ausgegeben wird. Ein gutes Beispiel ist die Vorhersage von Aktienkursen. Weitere Informationen finden Sie im Abschnitt [Regression](tasks.md#regression) des Artikels [Machine Learning-Aufgaben](tasks.md).
 
 ## <a name="relative-absolute-error"></a>Relativer absoluter Fehler
 
@@ -133,7 +133,7 @@ Verwandte ML.NET-API: <xref:Microsoft.ML.Models.RegressionMetrics.Rms?displayPro
 
 Eine Unterklasse des maschinellen Lernens, in der ein gewünschtes Modell die Bezeichnung für noch unbekannte Daten vorhersagt. Beispiele hierfür sind Klassifizierung, Regression und strukturierte Vorhersage. Weitere Informationen finden Sie auf Wikipedia im Artikel [Überwachtes Lernen](https://en.wikipedia.org/wiki/Supervised_learning).
 
-## <a name="training"></a>Training
+## <a name="training"></a>Aus- und Weiterbildung
 
 Der Prozess der Identifizierung eines [Modells](#model) für einen bestimmten Trainingsdatensatz. Für ein lineares Modell bedeutet dies, die Gewichtung zu finden. Bei einem Baum geht es darum, die Entscheidungspunkte zu identifizieren.
 

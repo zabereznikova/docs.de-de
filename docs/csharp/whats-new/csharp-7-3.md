@@ -2,12 +2,12 @@
 title: Neuerungen in C# 7.3
 description: Eine Übersicht der neuen Features in C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 1d1aca2564c26315cf8b3af60a863ea3c70fd385
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 135351fa06a498e4aa90cb4d9372880b8119de0f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827097"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106774"
 ---
 # <a name="whats-new-in-c-73"></a>Neuerungen in C# 7.3
 
@@ -72,7 +72,7 @@ class C
 {
     static S s = new S();
 
-    public void M()
+    unsafe public void M()
     {
         fixed (int* ptr = s.myFixedField)
         {
@@ -93,7 +93,7 @@ ref VeryLargeStruct refLocal = ref veryLargeStruct; // initialization
 refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
 ```
 
-Weitere Informationen finden Sie im Artikel zu [`ref`-Rückgaben und lokalen `ref`-Variablen](../programming-guide/classes-and-structs/ref-returns.md).
+Weitere Informationen finden Sie im Artikel zu [`ref`-Rückgaben und lokalen `ref`-Variablen](../programming-guide/classes-and-structs/ref-returns.md) und im Artikel zu [`foreach`](../language-reference/keywords/foreach-in.md).
 
 ### <a name="stackalloc-arrays-support-initializers"></a>`stackalloc`-Arrays unterstützen Initialisierer
 

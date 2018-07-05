@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b1295185bf0fa06884b1332762d01f86f138a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 902c82f77240c957cc6070c9437b95d0c89fca53
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572222"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105348"
 ---
 # <a name="xml-processing-options"></a>XML-Verarbeitungsoptionen
 Eine Liste der Microsoft-Technologien zur Verarbeitung von XML-Daten finden Sie in den folgenden Tabellen.  
@@ -19,7 +19,7 @@ Eine Liste der Microsoft-Technologien zur Verarbeitung von XML-Daten finden Sie 
   
 |**Option**|**Verarbeitungstyp**|**Beschreibung**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq>-Namespace)|Im Arbeitsspeicher|-   Basiert auf der Language Integrated Query (LINQ)-Technologie in .NET Framework.<br />-   Erzielt eine Abfrageleistung, die mit der SQL-Leistung für Objekte, relationale Daten und XML-Daten vergleichbar ist.<br />-   Stellt Funktionen für die intuitive Erstellung und Transformation von Dokumenten bereit.<br />-   Verwenden Sie diese Option beim Schreiben von neuem Code.|  
+|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq>-Namespace)|Im Arbeitsspeicher|-   Basiert auf der Language Integrated Query (LINQ)-Technologie in .NET Framework.<br />-   Erzielt eine Abfrageleistung, die mit der SQL-Leistung für Objekte, relationale Daten und XML-Daten vergleichbar ist.<br />‒   Stellt Funktionen für die intuitive Erstellung und Transformation von Dokumenten bereit.<br />-   Verwenden Sie diese Option beim Schreiben von neuem Code.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Streambasiert|-   Stellt eine schnelle, vorwärts gerichtete Methode für den Zugriff auf XML-Daten ohne Zwischenspeicherung bereit.<br />-   Sie können Objekte mithilfe der <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType>-Methode erstellen und die für das Objekt zu aktivierenden Funktionen mithilfe der <xref:System.Xml.XmlReaderSettings>-Klasse angeben.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Streambasiert|-   Stellt eine schnelle, vorwärts gerichtete Methode zum Generieren von XML-Daten ohne Zwischenspeicherung bereit.<br />-   Sie können Objekte mithilfe der <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType>-Methode erstellen und die für das Objekt zu aktivierenden Funktionen mithilfe der <xref:System.Xml.XmlWriterSettings>-Klasse angeben.|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Im Arbeitsspeicher|-   Implementiert die W3C-Empfehlungen [Document Object Model (DOM) Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) und [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/).<br />-   Zum Erstellen, Einfügen, Entfernen und Ändern von Knoten können Sie die Methoden und Eigenschaften verwenden, die auf dem vertrauten DOM-Modell basieren.<br />-   Verwenden Sie diese Option zum Ändern vorhandenen Codes, der W3C DOM verwendet.|  

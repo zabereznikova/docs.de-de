@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Verw
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580402"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105283"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktionszeit
 
@@ -75,4 +75,5 @@ In diesem Beispiel erfolgt der Aufruf von „AddAzureKeyVault“ am Ende der Reg
     [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
-[Zurück](developer-app-secrets-storage.md) [Weiter] (../key-takeaways.md)
+[Zurück](developer-app-secrets-storage.md)
+[Weiter](../key-takeaways.md)

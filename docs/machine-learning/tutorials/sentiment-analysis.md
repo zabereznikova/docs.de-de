@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie ML.NET in einem Szenario mit binärer Klassif
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314837"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948617"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Verwenden von ML.NET in einem Standpunktanalyse-Szenario mit binärer Klassifizierung
 
@@ -113,13 +113,13 @@ Fügen Sie am Anfang der Datei *Program.cs* folgende zusätzliche `using`-Anweis
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-Sie müssen drei globale Variablen erstellen, die den Pfad zu den zuletzt heruntergeladenen Dateien enthalten:
+Sie müssen drei globale Felder erstellen, die den Pfad zu den zuletzt heruntergeladenen Dateien enthalten:
 
 * `_dataPath` enthält den Pfad zu dem Dataset, das zum Trainieren des Modells verwendet wird.
 * `_testDataPath` enthält den Pfad zu dem Dataset, das zum Evaluieren des Modells verwendet wird.
 * `_modelPath` enthält den Pfad zu dem Speicherort, in dem das trainierte Modell gespeichert ist.
 
-Fügen Sie den folgenden Code der Zeile direkt oberhalb der `Main`-Methode hinzu, um die zuletzt heruntergeladenen Dateien anzugeben:
+Fügen Sie den folgenden Code der Zeile direkt über der `Main`-Methode hinzu, um diese Pfade anzugeben:
 
 [!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
 

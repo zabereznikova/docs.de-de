@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Defi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430fbe3fc6d63fd3b90b578f32b42831c368ba10
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592352"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106303"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml 
 
@@ -431,7 +431,7 @@ Beachten Sie, dass die in der Laufzeitumgebung festgelegten Werte immer die inne
 -   **Overview of Docker Compose (Übersicht zu Docker Compose)**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Mehrere Compose-Dateien**
+-   **Multiple Compose files (Mehrere Compose-Dateien)**
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Erstellen von optimierten Docker-Images für ASP.NET Core
@@ -548,4 +548,5 @@ Zusammengefasst besteht der Vorteil daraus, dass Sie Ihre Anwendung genauso erst
 
 
 >[!div class="step-by-step"]
-[Zurück] (data-driven-crud-microservice.md) [Weiter] (database-server-container.md)
+[Zurück](data-driven-crud-microservice.md)
+[Weiter](database-server-container.md)

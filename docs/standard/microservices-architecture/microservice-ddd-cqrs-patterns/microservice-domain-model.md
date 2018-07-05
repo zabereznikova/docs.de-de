@@ -4,12 +4,12 @@ description: .NET Microservices-Architektur für .NET-Containeranwendungen | Ent
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579456"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106251"
 ---
 # <a name="designing-a-microservice-domain-model"></a>Entwerfen eines Domänenmodells für Microservices
 
@@ -133,7 +133,7 @@ Für das Identifizieren von und Arbeiten mit Aggregaten sind Recherchen und Erfa
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Vaughn Vernon. Effective Aggregate Design – Part I: Modeling a Single Aggregate (Effektive Aggregatentwicklung – Teil I: Modellieren eines einzelnen Aggregats)**
+-   **Vaughn Vernon. Effective Aggregate Design – Part I: Modeling a Single Aggregate (Effektive Aggregatentwicklung, Teil 1: Modellieren eines einzelnen Aggregats)**
     [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
 -   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung – Teil II: Kooperation von Aggregaten)**
@@ -153,4 +153,5 @@ Für das Identifizieren von und Arbeiten mit Aggregaten sind Recherchen und Erfa
 
 
 >[!div class="step-by-step"]
-[Zurück] (ddd-oriented-microservice.md) [Weiter] (net-core-microservice-domain-model.md)
+[Zurück](ddd-oriented-microservice.md)
+[Weiter](net-core-microservice-domain-model.md)

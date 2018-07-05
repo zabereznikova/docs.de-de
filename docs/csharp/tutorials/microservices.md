@@ -3,12 +3,12 @@ title: In Docker gehostete Microservices – C#
 description: Erfahren Sie, wie Sie ASP.NET Core-Dienste erstellen, die in Docker-Containern ausgeführt werden.
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: b043b0109bcf8a67867d2c73a5ab22e43a4963cf
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208002"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106349"
 ---
 # <a name="microservices-hosted-in-docker"></a>In Docker gehostete Microservices
 
@@ -46,15 +46,17 @@ Docker kann in vielen Linux-Distributionen, unter macOS oder Windows installiert
 
 ## <a name="create-the-application"></a>Erstellen der Anwendung
 
-Da Sie nun alle Tools installiert haben, können Sie eine neue ASP.NET Core-Anwendung erstellen. Erstellen Sie hierzu das neue Verzeichnis „WeatherMicroservice“, und führen Sie in diesem den folgenden Befehl in Ihrer bevorzugten Shell aus:
+Da Sie nun alle Tools installiert haben, erstellen Sie eine neue ASP.NET Core-Anwendung in einem Verzeichnis namens „WeatherMicroservice“, indem Sie den folgenden Befehl in Ihrer bevorzugten Shell ausführen:
 
 ```console
-dotnet new web
+dotnet new web -o WeatherMicroservice
 ```
 
 Der `dotnet`-Befehl führt die erforderlichen Tools für die .NET-Entwicklung aus. Jedes Verb führt einen anderen Befehl aus.
 
 Mit dem `dotnet new`-Befehl werden .NET Core-Projekte erstellt.
+
+Die Option `-o WeatherMicroservice` nach dem Befehl `dotnet new` wird verwendet, um den Speicherort für die Erstellung der ASP.NET Core-Anwendung anzugeben.
 
 Da für diesen Microservice eine möglichst einfache und kompakte Webanwendung zum Einsatz kommen soll, wurde die Vorlage „ASP.NET Core leer“ durch Angabe des Kurznamens `web` verwendet.
 
