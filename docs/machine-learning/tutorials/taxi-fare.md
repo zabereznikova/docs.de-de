@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 690e39dcbd02d81b8d4afe918a74795aa02f7fc6
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314964"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948630"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Tutorial: Verwenden von ML.NET, um Taxifahrtpreise in New York vorherzusagen (Regression)
 
@@ -82,7 +82,7 @@ Erstellen Sie Klassen für die Eingabedaten und die Vorhersagen:
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie dann **Hinzufügen** > **Neues Element** aus.
 1. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Klasse** aus, und ändern Sie das Feld **Name** in *TaxiTrip.cs*. Wählen Sie dann die Schaltfläche **Hinzufügen** aus.
-1. Fügen Sie folgenden `using`-Anweisungen der neuen Datei hinzu:
+1. Fügen Sie der Formularklasse die folgenden `using`-Anweisungen hinzu:
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
@@ -96,15 +96,19 @@ Die `TaxiTripFarePrediction`-Klasse wird verwendet, um die vorhergesagten Ergebn
 
 ## <a name="define-data-and-model-paths"></a>Definieren von Daten und Modellpfaden
 
-Wechseln Sie zurück zur Datei *Program.cs*, und erstellen Sie drei globale Konstanten, um die Pfade zu den Dateien mit Datasets einzufügen und das Modell zu speichern:
+Wechseln Sie zurück zur Datei *Program.cs*, und fügen Sie drei Felder hinzu, die die Pfade zu den Dateien mit Datasets und zur Datei zum Speichern des Modells enthalten:
 
-* `_datapath` enthält den Pfad zu dem Dataset, das zum Trainieren des Modells verwendet wird.
-* `_testdatapath` enthält den Pfad zu dem Dataset, das zum Evaluieren des Modells verwendet wird.
-* `_modelpath` enthält den Pfad zu dem Speicherort, in dem das trainierte Modell gespeichert ist.
+* `_datapath` enthält den Pfad zur Datei mit dem Dataset, das zum Trainieren des Modells verwendet wird.
+* `_testdatapath` enthält den Pfad zur Datei mit dem Dataset, das zum Evaluieren des Modells verwendet wird.
+* `_modelpath` enthält den Pfad zur Datei, in der das trainierte Modell gespeichert ist.
 
-Fügen Sie den folgenden Code der Zeile direkt über der `Main`-Methode hinzu, um diese Pfade anzugeben:
+Fügen Sie den folgenden Code direkt über der `Main`-Methode hinzu, um diese Pfade anzugeben:
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
+
+Fügen Sie die folgende `using`-Anweisung am Anfang der Datei *Program.cs* hinzu, um den obenstehenden Code zu kompilieren:
+
+[!code-csharp[AddUsingsForPaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Using statements for path definitions")]
 
 ## <a name="create-a-learning-pipeline"></a>Erstellen einer Lernpipeline
 
@@ -135,7 +139,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>Laden und Transformieren der Daten
 
-Der erste Schritt in der Lernpipeline ist das Laden von Daten aus dem Trainingsdataset. In diesem Fall wird das Trainingsdataset in der Textdatei mit einem Pfad gespeichert, der von der Konstante `_datapath` definiert wird. Die Datei enthält den Header mit den Spaltennamen, weshalb die erste Zeile beim Laden der Daten ignoriert werden sollte. Die Spalten in der Datei werden durch Kommas („,“) getrennt. Fügen Sie den folgenden Code der `Train`-Methode hinzu:
+Der erste Schritt in der Lernpipeline ist das Laden von Daten aus dem Trainingsdataset. In diesem Fall wird das Trainingsdataset in der Textdatei mit einem Pfad gespeichert, der vom Feld `_datapath` definiert wird. Die Datei enthält den Header mit den Spaltennamen, weshalb die erste Zeile beim Laden der Daten ignoriert werden sollte. Die Spalten in der Datei werden durch Kommas („,“) getrennt. Fügen Sie den folgenden Code der `Train`-Methode hinzu:
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579768"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071863"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
 <a name="top"></a> Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)enthält und das Modul für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung der Engine für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich die Engine für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
@@ -128,7 +128,7 @@ ms.locfileid: "33579768"
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>Definieren eines Timeoutintervalls  
- Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können Sie einen Timeoutwert für das längste Intervall festlegen, innerhalb dessen die Engine für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht, bevor der Versuch abgebrochen und eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> -Ausnahme ausgelöst wird. Sie geben das Timeoutintervall an, indem Sie einen <xref:System.TimeSpan>-Wert für den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>-Konstruktor für reguläre Ausdrucksinstanzen bereitstellen. Außerdem weist jede statische Methode für Musterübereinstimmungen eine Überladung mit einem <xref:System.TimeSpan> -Parameter auf, der es Ihnen ermöglicht, einen Timeoutwert anzugeben. Standardmäßig wird das Timeoutintervall auf <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> festgelegt, und das Modul für reguläre Ausdrücke gibt kein Timeout zurück.  
+ Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können Sie einen Timeoutwert für das längste Intervall festlegen, innerhalb dessen die Engine für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht, bevor der Versuch abgebrochen und eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> -Ausnahme ausgelöst wird. Sie geben das Timeoutintervall an, indem Sie einen <xref:System.TimeSpan>-Wert für den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>-Konstruktor für reguläre Ausdrucksinstanzen bereitstellen. Außerdem weist jede statische Methode für Musterübereinstimmungen eine Überladung mit einem <xref:System.TimeSpan> -Parameter auf, der es Ihnen ermöglicht, einen Timeoutwert anzugeben. Standardmäßig wird das Timeoutintervall auf <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> festgelegt, und die Engine für reguläre Ausdrücke gibt kein Timeout zurück.  
   
 > [!IMPORTANT]
 >  Es wird empfohlen, immer ein Timeoutintervall festzulegen, wenn ein regulärer Ausdruck auf Rückverfolgung angewiesen ist.  
@@ -169,7 +169,7 @@ ms.locfileid: "33579768"
 |`[-.\w]*`|Übereinstimmung mit keinem, einem oder mehreren Vorkommen eines Bindestrichs, eines Punkts oder eines Wortzeichens.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen.|  
 |`([-.\w]*[0-9A-Z])*`|Übereinstimmung mit keinem oder mehreren Vorkommen der Kombination aus keinem oder mehreren Bindestrichen, Punkten oder Wortzeichen, gefolgt von einem alphanumerischen Zeichen. Dies ist die erste Erfassungsgruppe.|  
-|`@`|Übereinstimmung mit einem @-Zeichen.|  
+|`@`|Übereinstimmung mit einem \@-Zeichen.|  
   
  Das zweite Muster für reguläre Ausdrücke `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`verwendet eine positive Lookbehindassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33579768"
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
 |`[-.\w]*`|Übereinstimmung mit keinem oder mehreren Vorkommen eines Bindestrichs, eines Punkts oder eines Wortzeichens.|  
 |`(?<=[0-9A-Z])`|Überprüfung des letzten übereinstimmenden Zeichens und Fortsetzen des Abgleichs, wenn es sich um ein alphanumerisches Zeichen handelt. Beachten Sie, dass alphanumerische Zeichen eine Teilmenge des Satzes sind, der aus Punkten, Bindestrichen und allen Wortzeichen besteht.|  
-|`@`|Übereinstimmung mit einem @-Zeichen.|  
+|`@`|Übereinstimmung mit einem \@-Zeichen.|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>Lookaheadassertionen  
