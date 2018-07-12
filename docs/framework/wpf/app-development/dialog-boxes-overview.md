@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549155"
 ---
 # <a name="dialog-boxes-overview"></a>Übersicht über Dialogfelder
 Eigenständige Anwendungen verfügen in der Regel ein Hauptfenster, dass beide zeigt die wichtigsten Daten über den die Anwendung ausgeführt wird, und macht die Funktionalität zum Verarbeiten von Daten über [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Mechanismen wie Menüs, Symbolleisten und Statusleisten. Eine nicht triviale Anwendung kann auch zusätzliche Fenster anzeigen, um Folgendes auszuführen:  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460446"
 ---
 # <a name="getmethod-function"></a>GetMethod-Funktion
 Ruft Informationen über die angegebene Methode ab.
