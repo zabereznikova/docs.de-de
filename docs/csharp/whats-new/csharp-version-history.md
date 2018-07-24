@@ -73,7 +73,7 @@ C# Version 3.0 wurde Ende 2007 zusammen mit Visual Studio 2008 veröffentlicht. 
 - [Erweiterungsmethoden](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [Implizit typisierte lokale Variablen](../language-reference/keywords/var.md)
 - [Partielle Methoden](../language-reference/keywords/partial-method.md)
-- Objekt- und Auflistungsinitialisierer
+- Objekt- und Sammlungsinitialisierer
 
 Rückblickend scheinen viele dieser Features unvermeidlich und untrennbar. Sie alle passen strategisch zusammen. Im Allgemeinen wird angenommen, dass das durchschlagende Feature dieser Version von C# der Abfrageausdruck war, auch bekannt als Language Integrated Query (LINQ).
 
@@ -98,7 +98,7 @@ Eingebettete Interop-Typen überwanden eine Schwierigkeit beim Entwickeln. Gener
 
 Das wichtigste Feature war die Einführung des `dynamic`-Schlüsselworts. Das in C# Version 4.0 eingeführte `dynamic`-Schlüsselwort gibt die Möglichkeit zum Überschreiben des Compilers bei Eingabe zur Kompilierzeit. Durch die Verwendung des dynamischen Schlüsselworts können Sie Konstrukte schreiben, die dynamisch typisierten Sprachen wie JavaScript ähneln. Sie können ein `dynamic x = "a string"` erstellen und dann sechs hinzufügen, und überlassen Sie es der Runtime herauszufinden, was als Nächstes geschehen soll.
 
-Die dynamische Bindung kann zu Fehlern führen, aber gleichzeitig ermöglicht es hohe Leistung innerhalb der Sprache.
+Die dynamische Bindung kann zu Fehlern führen, bietet aber gleichzeitig eine hohe Leistungsfähigkeit innerhalb der Sprache.
 
 ## <a name="c-version-50"></a>C# Version 5.0
 
@@ -113,7 +113,7 @@ Die eigentlichen Stars dieser Version sind aber `async` und `await`. Als diese F
 
 ## <a name="c-version-60"></a>C# Version 6.0
 
-Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objektorientierten Sprache erweitert. Mit Version 6.0 brachte man nicht mehr ein dominantes, durchschlagendes Feature heraus, sondern stattdessen viele kleine Features, die die Produktivität beim Programmieren mit C# gesteigert haben. Hier sind einige davon:
+Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objektorientierten Sprache erweitert. Bei Version 6.0 kam man davon ab, mit einem dominanten „Killerfeature“ aufwarten zu wollen. Stattdessen wurden nun viele kleine Verbesserungen implementiert, die das Programmieren mit C# noch effizienter machten. Hier sind einige davon:
 
 - [Statische Importe](../language-reference/keywords/using-static.md)
 - [Ausnahmefilter](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)

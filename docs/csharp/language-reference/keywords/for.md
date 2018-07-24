@@ -29,7 +29,7 @@ for (initializer; condition; iterator)
     body  
 ```
 
-Alle drei Abschnitte sind optional. Der Text der Schleife ist entweder eine Anweisung und ein Block von Anweisungen.
+Alle drei Abschnitte sind optional. Der Schleifenkörper ist entweder eine Anweisung oder ein Anweisungsblock
 
 Im folgenden Beispiel wird die `for`-Anweisung mit allen Abschnitten definiert dargestellt:
 
@@ -63,7 +63,7 @@ int i = 0
 
 ### <a name="the-condition-section"></a>Der Abschnitt *condition*
 
-Der Abschnitt *condition* muss ein boolescher Ausdruck sein, wenn er vorhanden ist. Dieser Ausdruck wird vor jeder Schleifeniteration ausgewertet. Wenn der Abschnitt *condition* nicht vorhanden ist, oder der boolesche Ausdruck `true` ergibt, wird die nächste Schleifeniteration ausgeführt. Andernfalls wird die Schleife beendet.
+Der Abschnitt *condition* muss ein boolescher Ausdruck sein, wenn er vorhanden ist. Dieser Ausdruck wird vor jeder Schleifeniteration ausgewertet. Wenn der Abschnitt *condition* nicht vorhanden ist oder der boolesche Ausdruck `true` ergibt, wird die nächste Schleifeniteration ausgeführt. Andernfalls wird die Schleife beendet.
 
 Im obigen Beispiel wird durch den Abschnitt *condition* bestimmt, ob die Schleife basierend auf dem Wert der lokalen Schleifenvariable beendet wird:
 
@@ -73,7 +73,7 @@ i < 5
 
 ### <a name="the-iterator-section"></a>Der Abschnitt *iterator*
 
-Der Abschnitt *iterator* definiert, was nach jeder Iteration des Texts der Schleife geschieht. Der Abschnitt *iterator* enthält keine oder mehrere der folgenden durch Kommas getrennten Anweisungsausdrücke:  
+Der Abschnitt *iterator* definiert, was nach jeder Iteration des Schleifenkörpers geschieht. Der Abschnitt *iterator* enthält keine oder mehrere der folgenden durch Kommas getrennten Anweisungsausdrücke:  
 
 - [Zuweisungsanweisung](../operators/assignment-operator.md)
 
