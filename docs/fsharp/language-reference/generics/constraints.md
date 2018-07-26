@@ -1,17 +1,17 @@
 ---
 title: Einschränkungen (F#)
-description: Informationen Sie zu F#-Einschränkungen, die für generische Typparameter an die Anforderungen für die ein Type-Argument in einem generischen Typ oder einer Funktion gültig.
+description: Informationen Sie zu F#-Einschränkungen, die für generische Typparameter an die Anforderungen für die ein Typargument in einer generischen Typ oder eine Funktion gelten.
 ms.date: 05/16/2016
-ms.openlocfilehash: f0722cafe27a4e2c38dfbf091973edb136cf5228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7af064159d2722256f0db8286a99fc02435a99cd
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562309"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936864"
 ---
 # <a name="constraints"></a>Einschränkungen
 
-In diesem Thema wird beschrieben, Einschränkungen, die Sie für generische gelten können Typparameter an die Anforderungen für die ein Type-Argument in einer generischen Typ- oder Funktion.
+In diesem Thema wird beschrieben, Einschränkungen, die Sie auf generische anwenden können Geben Sie Parameter, um die Anforderungen für die ein Typargument in einer generischen Typ oder eine Funktion anzugeben.
 
 
 ## <a name="syntax"></a>Syntax
@@ -21,30 +21,30 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>Hinweise
-Es gibt mehrere unterschiedliche Einschränkungen, die Sie anwenden können, um die Typen beschränken, die in einem generischen Typ verwendet werden kann. In der folgenden Tabelle aufgelistet und beschrieben von diesen Einschränkungen.
+Es gibt mehrere andere Einschränkungen, die Sie anwenden können, um die Typen beschränken, die in einem generischen Typ verwendet werden kann. Die folgende Tabelle enthält und beschreibt diese Einschränkungen.
 
 |Constraint|Syntax|Beschreibung|
 |----------|------|-----------|
-|Typeinschränkung|*Typparameter* :&gt; *Typ*|Der bereitgestellte Typ muss gleich oder abgeleiteten aus dem angegebenen Typ oder, wenn der Typ eine Schnittstelle ist, muss der angegebene Typ der Schnittstelle implementieren.|
-|NULL-Einschränkung|*Typparameter* : null|Der angegebene Typ muss das null-Literal unterstützen. Dies schließt alle Objekttypen .NET jedoch nicht F#-Liste, Tupel, Funktion, Klasse, Datensatz oder union-Typen.|
-|Explizites Mitglied-Einschränkung|[()]*Typparameter* [oder... oder *Typparameter*)]: (* Membersignatur *)|Mindestens eines der bereitgestellten Typargumente benötigen ein Element, das die angegebene Signatur verfügt; nicht für die allgemeine Verwendung vorgesehen. Mitglieder müssen entweder explizit auf den Typ oder die Teil einer Erweiterung impliziter Typ werden als gültige Ziele für eine explizite Schnittstellenmember-Einschränkung definiert werden.|
-|Konstruktoreinschränkung|*Typparameter* : (new: Einheit -&gt; "ein)|Der bereitgestellte Typ muss einen Standardkonstruktor verfügen.|
-|Werttypeinschränkung|: Struktur|Der angegebene Typ muss ein Werttyp .NET.|
-|Reference-Typ-Einschränkung|: nicht-Struktur|Der angegebene Typ muss ein Verweistyp .NET.|
-|Enumeration Typeinschränkung|: Enum&lt;*zugrunde liegenden Typ*&gt;|Der bereitgestellte Typ muss ein enumerierter Typ, mit dem angegebenen zugrunde liegenden Datentyp; nicht für die allgemeine Verwendung vorgesehen.|
-|Delegieren der Einschränkung|: Delegieren&lt;*Tupel Parametertyp*, *Return-Type*&gt;|Der bereitgestellte Typ muss werden einem Delegattyp als Typ, der die angegebenen Argumenten verfügt und Rückgabewert; nicht für die allgemeine Verwendung vorgesehen.|
-|Vergleich-Einschränkung|: Vergleich|Der angegebene Typ muss Vergleich unterstützen.|
-|Equality-Einschränkung|: auf Gleichheit|Der angegebene Typ muss Gleichheit unterstützen.|
-|Nicht verwaltete Einschränkung|: nicht verwaltete|Der angegebene Typ muss einen nicht verwalteten Typ. Nicht verwaltete Typen sind entweder bestimmte primitiven Typen (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, oder `decimal`), Enumerationstypen, `nativeptr&lt;_&gt;`, oder eine nicht generische Struktur, deren Felder alle nicht verwalteten Typen.|
-Sie müssen eine Einschränkung hinzufügen, wenn der Code hat eine Funktion verwenden, die in der Regel auf den Einschränkungstyp jedoch nicht für Typen verfügbar ist. Wenn Sie die Einschränkung des Typs verwenden, um einen Klassentyp anzugeben, können Sie eine der Methoden dieser Klasse in der generischen Funktion oder einen Typ verwenden.
+|Typeinschränkung|*Typparameter* :&gt; *Typ*|Der bereitgestellte Typ muss gleich oder abgeleitet aus dem angegebenen Typ oder, wenn der Typ eine Schnittstelle ist, muss der angegebene Typ die Schnittstelle implementieren.|
+|NULL-Einschränkung|*Typparameter* : null|Der angegebene Typ muss es sich um das null-Literal unterstützen. Dies schließt alle Objekttypen .NET, aber nicht F#-Liste, Tupel, Funktion, Klasse, Datensatz oder union-Typen.|
+|Explizites Mitglied-Einschränkung|[()]*Typparameter* [oder... oder *Typparameter*)]: (*Membersignatur*)|Mindestens eines der bereitgestellten Typargumente müssen ein Mitglied, das die angegebene Signatur verfügt; nicht für die allgemeine Verwendung vorgesehen. Mitglieder müssen entweder explizit auf den Typ oder einem Teil einer Erweiterung impliziter Typ werden gültige Ziele für eine explizite Einschränkung für Member definiert werden.|
+|Konstruktoreinschränkung|*Typparameter* : (neu: Unit -&gt; "ein)|Der angegebene Typ muss einen Standardkonstruktor verfügen.|
+|Werttypeinschränkung|: Struktur|Der angegebene Typ muss ein.|
+|Verweistypeinschränkung|: nicht-Struktur|Der angegebene Typ muss ein Verweistyp für .NET.|
+|Eine Einschränkung für Enumeration|: Enumeration&lt;*vom zugrunde liegenden Typ*&gt;|Der bereitgestellte Typ muss es sich um ein enumerierter Typ sein, der den angegebenen zugrunde liegenden Typ aufweist; nicht für die allgemeine Verwendung vorgesehen.|
+|Delegieren der Einschränkung|: Delegieren&lt;*Tupel-Parameter-Type*, *Rückgabetyp*&gt;|Der angegebene Typ muss ein Delegattyp, die die angegebenen Argumenten sein und Rückgabewert; nicht für die allgemeine Verwendung vorgesehen.|
+|Comparison-Einschränkung|: Vergleich|Der angegebene Typ muss es sich um Vergleich unterstützen.|
+|Equality-Einschränkung|: auf Gleichheit|Der angegebene Typ muss die Gleichheit unterstützen.|
+|Nicht verwaltete Einschränkungen|: nicht verwaltete|Der angegebene Typ muss es sich um einen nicht verwalteten Typ sein. Nicht verwaltete Typen sind entweder bestimmten primitiven Typen (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, oder `decimal`), Enumerationstypen, `nativeptr&lt;_&gt;`, oder eine nicht generische Struktur, deren Felder alle nicht verwalteten Typen werden.|
+Sie müssen eine Einschränkung hinzufügen, wenn Ihr Code muss eine Funktion verwenden, die in der Regel auf den Einschränkungstyp jedoch nicht für Typen verfügbar ist. Wenn Sie die typeinschränkung verwenden, um einen Klassentyp anzugeben, können Sie z. B. eine der Methoden dieser Klasse in der generischen Funktion oder einen Typ verwenden.
 
-Angeben von Einschränkungen ist manchmal erforderlich, wenn Typparameter explizit zu schreiben, da ohne Einschränkung, hat der Compiler keine Möglichkeit zu überprüfen, dass die Funktionen, mit dem Sie, auf einen beliebigen Typ zur Verfügung stehen, der zur Laufzeit für den Typ angegeben werden kann Parameter.
+Angeben von Einschränkungen ist manchmal erforderlich, wenn Typparameter explizit zu schreiben, da ohne Einschränkung, der Compiler kann nicht überprüft haben, dass die Funktionen, die Sie verwenden in einen beliebigen Typ verfügbar sein werden, der zur Laufzeit für den Typ angegeben werden kann der Parameter.
 
-Die am häufigsten verwendeten Einschränkungen, die in f#-Code verwendet werden, typeinschränkungen, die Basisklassen oder Schnittstellen angeben. Die anderen Einschränkungen werden entweder von der f#-Bibliothek verwendet, um bestimmte Funktionen, z. B. die Einschränkung explizites Mitglied zu implementieren, wird verwendet, um den Operator für arithmetische Operatoren überladen implementieren oder dienen hauptsächlich da f# das vollständige unterstützt ein Satz von Einschränkungen, die von der common Language Runtime unterstützt wird.
+Die am häufigsten verwendeten Einschränkungen, die Sie in F#-Code verwenden, sind die typeinschränkungen, die angeben, Basisklassen oder Schnittstellen. Die anderen Einschränkungen werden entweder von der F#-Bibliothek verwendet, um bestimmte Funktionen, z. B. die Einschränkung explizites Mitglied zu implementieren, die zum Implementieren von arithmetischen Operatoren überladen verwendet oder dienen hauptsächlich deshalb, weil f# die vollständige unterstützt Reihe von Einschränkungen, die von der common Language Runtime unterstützt wird.
 
-Beim Rückschlussprozess Typ sind einige Einschränkungen automatisch vom Compiler abgeleitet. Angenommen, Sie verwenden die `+` -Operator in einer Funktion, leitet der Compiler eine explizite Schnittstellenmember-Einschränkung für Variablentypen, die im Ausdruck verwendet werden.
+Beim Rückschlussprozess geben sind einige Einschränkungen automatisch vom Compiler abgeleitet. Angenommen, Sie verwenden die `+` Operator in einer Funktion, leitet der Compiler eine explizite Mitglieder-Einschränkung auf Variablen Typen, die im Ausdruck verwendet werden.
 
-Der folgende Code zeigt einige Einschränkung Deklarationen.
+Der folgende Code zeigt einige Einschränkung-Deklarationen.
 
 ```fsharp
 // Base Type Constraint

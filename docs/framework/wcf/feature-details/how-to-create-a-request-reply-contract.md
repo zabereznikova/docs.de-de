@@ -2,12 +2,12 @@
 title: 'Gewusst wie: Erstellen eines Anforderung-Antwort-Vertrags'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 76a3bbb9415a34218896bc561066c7ac4a30e6b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d41973d04fc75f70011505a3361e71e89a05276
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489572"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220983"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Gewusst wie: Erstellen eines Anforderung-Antwort-Vertrags
 Ein Anforderung-Antwort-Vertrag gibt eine Methode an, die eine Antwort zurückgibt. Die Antwort muss gesendet und unter den Bedingungen dieses Vertrags mit der Anforderung in Beziehung gesetzt werden. Selbst wenn die Methode keine Antwort (`void` in C# oder `Sub` in Visual Basic) zurückgibt, wird von der Infrastruktur eine leere Nachricht erstellt und gesendet, um dem Aufrufer mitzuteilen, dass die Methode einen Wert zurückgegeben hat. Verwenden Sie einen unidirektionalen Vertrag für die Operation, um das Senden einer leeren Mitteilung zu unterbinden.  
@@ -25,7 +25,7 @@ Ein Anforderung-Antwort-Vertrag gibt eine Methode an, die eine Antwort zurückgi
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Vertrag für einen Rechnerdienst definiert, der die `Add`-Methode und die `Subtract`-Methode bereitstellt. Die `Multiply`-Methode ist nicht Teil des Vertrags, weil sie von der <xref:System.ServiceModel.OperationContractAttribute>-Klasse nicht gekennzeichnet wurde und somit nicht für Clients verfügbar ist.  
   
-```
+```csharp
 using System.ServiceModel;
 
 [ServiceContract]
@@ -43,7 +43,7 @@ public interface ICalculator
 }
 ```
   
--   Weitere Informationen zum Angeben von vorgangsverträgen finden Sie unter der <xref:System.ServiceModel.OperationContractAttribute> Klasse und die <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> Eigenschaft.  
+-   Weitere Informationen zur Vorgehensweise beim Angeben von vorgangsverträgen finden Sie unter den <xref:System.ServiceModel.OperationContractAttribute> Klasse und die <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> Eigenschaft.  
   
 -   Durch Anwenden des <xref:System.ServiceModel.ServiceContractAttribute>-Attributs und des <xref:System.ServiceModel.OperationContractAttribute>-Attributs wird die automatische Generierung von Dienstvertragsdefinitionen in einem WSDL (Web Services Description Language)-Dokument ermöglicht, sobald der Dienst bereitgestellt wird. Das Dokument wird durch Anfügen von `?wsdl` an die HTTP-Basisadresse des Diensts heruntergeladen. Beispiel: `http://microsoft/CalculatorService?wsdl`  
   
