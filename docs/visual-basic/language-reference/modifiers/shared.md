@@ -11,46 +11,46 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b15dd08d69f372317b9140001e8072eeb66d44ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b76d999bfe3f7ae5205cb9486e040c1d6191b78c
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143530"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
-Gibt an, dass eine oder mehrere deklarierte Programmierelemente einer Klasse oder Struktur an größeren, und nicht mit einer bestimmten Instanz der Klasse oder Struktur zugeordnet sind.  
+Gibt an, dass eine oder mehrere deklarierte Programmierelemente einer Klasse oder Struktur, die in großen, und nicht mit einer bestimmten Instanz der Klasse oder Struktur zugeordnet sind.  
   
 ## <a name="remarks"></a>Hinweise  
   
-## <a name="when-to-use-shared"></a>Verwendung von Shared  
- Einen Member einer Klasse oder Struktur Freigabe verfügbar gemacht, jede Instanz statt *nicht freigegebene*, wobei jede Instanz eine eigene Kopie beibehält. Dies ist beispielsweise hilfreich, der Wert einer Variablen für die gesamte Anwendung gilt. Wenn Sie diese Variable zu deklarieren `Shared`, klicken Sie dann alle Instanzen am gleichen Speicherort, und wenn eine Instanz den Wert der Variablen ändert, alle Instanzen auf zugreifen den aktualisierten Wert.  
+## <a name="when-to-use-shared"></a>Verwendung freigegeben  
+ Ein Member einer Klasse oder Struktur Freigabe verfügbar macht jede Instanz statt *nicht freigegebene*, wobei jede Instanz eine eigene Kopie verfügen. Dies ist beispielsweise hilfreich, der Wert einer Variablen für die gesamte Anwendung gilt. Wenn Sie diese Variable deklarieren `Shared`, klicken Sie dann alle Instanzen am gleichen Speicherort zugreifen, und wenn eine Instanz der Wert der Variablen ändert, greifen alle Instanzen auf den aktualisierten Wert.  
   
- Freigeben, wird die Zugriffsebene eines Members nicht verändert. Ein Klassenmember kann z. B. freigegeben werden und in "Privat" (kann nur zugegriffen werden innerhalb der Klasse), oder nicht freigegeben und öffentlich. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Freigeben von wird die Zugriffsebene eines Members nicht geändert werden. Ein Klassenmember kann z. B. freigegeben werden und Private (nur von innerhalb der Klasse verfügbar), oder nicht freigegeben und öffentlich. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Regeln  
   
--   **Deklarationskontext.** Sie können `Shared` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `Shared` Element einer Klasse oder Struktur, und eine Quelldatei, Namespace oder Prozedur nicht möglich.  
+-   **Deklarationskontext.** Sie können `Shared` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `Shared` Element muss eine Klasse oder Struktur sein, und eine Quelldatei, Namespace oder Prozedur nicht möglich.  
   
 -   **Kombinierte Modifizierer.** Sie können keine angeben `Shared` zusammen mit [überschreibt](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), oder [ Statische](../../../visual-basic/language-reference/modifiers/static.md) in der gleichen Deklaration.  
   
--   **Beim Zugriff auf.** Sie greifen auf eine freigegebene Element durch die Qualifizierung mit dem Namen Klasse oder Struktur, nicht mit dem Variablennamen einer bestimmten Instanz ihrer Klasse oder Struktur. Sie müssen auch keinen zum Erstellen einer Instanz einer Klasse oder Struktur, um ihre freigegebenen Member zuzugreifen.  
+-   **Zugriff auf.** Sie haben einen freigegebenen Elements durch die Qualifizierung mit dem Namen Klasse oder Struktur, die nicht mit dem Variablennamen, die einer bestimmten Instanz der Klasse oder Struktur zugreifen. Sie müssen auch keinen zum Erstellen einer Instanz einer Klasse oder Struktur auf freigegebenen Member zuzugreifen.  
   
-     Im folgenden Beispiel wird die freigegebene Prozedur <xref:System.Double.IsNaN%2A> verfügbar gemacht werden, indem Sie die <xref:System.Double> Struktur.  
+     Im folgenden Beispiel wird die freigegebene Prozedur <xref:System.Double.IsNaN%2A> verfügbar gemacht werden, indem die <xref:System.Double> Struktur.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **Implizite Freigabe.** Können keine der `Shared` -Modifizierer in einer [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md), aber Konstanten sind implizit freigegeben. Auf ähnliche Weise kann nicht Mitglied von einem Modul oder eine Schnittstelle sein deklariert `Shared`, aber sie werden implizit freigegeben.  
+-   **Implizite freigeben.** Können keine der `Shared` -Modifizierer in einer [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md), aber Konstanten sind implizit freigegeben. Auf ähnliche Weise können Sie nicht Mitglied ein Modul oder eine Schnittstelle sein deklarieren `Shared`, aber sie werden implizit freigegeben.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Speicher.** Eine freigegebene Variable oder ein Ereignis wird nur einmal auf, unabhängig davon, wie viele Instanzen der Klasse oder Struktur erstellen im Arbeitsspeicher gespeichert werden. Auf ähnliche Weise werden für eine freigegebene Prozedur oder Eigenschaft nur einen Satz von lokalen Variablen enthält.  
+-   **Speicher.** Eine freigegebene Variable oder ein Ereignis wird im Arbeitsspeicher gespeichert, nur nach dem, unabhängig davon, wie viele oder wenige Instanzen der Klasse oder Struktur erstellen. Analog dazu enthält ein gemeinsames Verfahren oder eine Eigenschaft nur einen Satz von lokalen Variablen.  
   
--   **Zugreifen auf über eine Instanzvariable.** Es ist möglich, die Zugriff auf eine freigegebene Element durch die Qualifizierung mit dem Namen einer Variablen, die eine bestimmte Instanz ihrer Klasse oder Struktur enthält. Obwohl dies in der Regel funktioniert wie erwartet, wird der Compiler eine Warnung generiert, und führt den Zugriff über den Namen der Klasse oder Struktur anstelle der Variablen.  
+-   **Zugriff auf durch eine Instanzvariable.** Es ist möglich, die Zugriff auf einen freigegebenen Elements durch die Qualifizierung mit dem Namen einer Variablen, die eine bestimmte Instanz der Klasse oder Struktur enthält. Obwohl dies in der Regel funktioniert wie erwartet, kann der Compiler generiert eine Warnung angezeigt und führt den Zugriff über den Namen der Klasse oder Struktur anstelle der Variablen.  
   
--   **Zugriff über einen Instanzausdruck.** Wenn Sie ein freigegebene Element durch einen Ausdruck, die eine Instanz der Klasse oder Struktur zurückgegeben wird zuzugreifen, führt der Compiler den Zugriff durch den Namen der Klasse oder Struktur anstelle von Auswertung des Ausdrucks an. Dies erzeugt unerwartete Ergebnisse, wenn Sie den Ausdruck zum Ausführen von anderen Aktionen sowie das Zurückgeben der Instanz, für die Verwendung vorgesehen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+-   **Zugriff auf durch einen Instanzausdruck.** Wenn Sie einen freigegebenen Elements durch einen Ausdruck, die eine Instanz ihrer Klasse oder Struktur zurückgibt zugreifen, wird der Compiler den Zugriff durch den Namen der Klasse oder Struktur, anstelle die Auswertung des Ausdrucks. Dies erzeugt unerwartete Ergebnisse, wenn das beabsichtigt ist des Ausdrucks, der andere Aktionen sowie die Instanz zurückgeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-    ```  
+    ```vb
     Sub main()  
         shareTotal.total = 10  
         ' The preceding line is the preferred way to access total.  
@@ -76,7 +76,7 @@ Gibt an, dass eine oder mehrere deklarierte Programmierelemente einer Klasse ode
     End Class  
     ```  
   
-     Im vorherigen Beispiel generiert der Compiler eine Warnung beide Zeitangaben, die der Code greift auf die freigegebene Variable `total` über eine Instanz. In jedem Fall den Zugriff direkt über die Klasse vereinfacht `shareTotal` und führt nicht dazu, dass eine Instanz verwenden. Im Fall von der beabsichtigten Aufruf der Prozedur `returnClass`, dies bedeutet, dass es selbst generiert keinen Aufruf von `returnClass`, sodass die zusätzliche Aktion zum Anzeigen von "Function returnClass() called" nicht ausgeführt wird.  
+     Im vorherigen Beispiel generiert der Compiler eine Warnmeldung an beide Male, die der Code greift auf die freigegebene Variable `total` durch eine Instanz. In jedem Fall vereinfacht den Zugriff direkt über die Klasse `shareTotal` und macht nicht zu einer beliebigen Instanz verwenden. Im Fall von der beabsichtigten Aufruf der Prozedur `returnClass`, dies bedeutet, dass Sie selbst generiert keinen Aufruf von `returnClass`, sodass die zusätzliche Aktion anzeigen von "Function returnClass() namens" nicht ausgeführt wird.  
   
  Der `Shared`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   

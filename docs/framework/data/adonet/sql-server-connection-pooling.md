@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 78e852e2f1894f92e5b43228faedfad0d78981fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364476"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874594"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server-Verbindungspooling (ADO.NET)
 Beim Herstellen einer Verbindung mit einem Datenbankserver müssen normalerweise mehrere zeitaufwändige Schritte ausgeführt werden. Es muss u. a. ein physischer Channel (z. B. ein Socket oder eine benannte Pipe) erstellt, der anfängliche Handshake durchgeführt, die Informationen der Verbindungszeichenfolge analysiert, die Verbindung vom Server authentifiziert und Überprüfungen zum Eintragen in die aktuelle Transaktion ausgeführt werden.  
   
- In der Praxis verwenden die meisten Anwendungen nur eine oder einige unterschiedliche Konfigurationen für Verbindungen. Dies bedeutet, dass beim Ausführen von Anwendungen viele identische Verbindungen wiederholt geöffnet und geschlossen werden. Zur Minimierung der Kosten für das Herstellen von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] verwendet eine Optimierungstechnik, die auch aufgerufen *Verbindungspooling*.  
+ In der Praxis verwenden die meisten Anwendungen nur eine oder einige unterschiedliche Konfigurationen für Verbindungen. Dies bedeutet, dass beim Ausführen von Anwendungen viele identische Verbindungen wiederholt geöffnet und geschlossen werden. Die Kosten für das Herstellen von Verbindungen zu minimieren [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] verwendet eine Optimierungstechnik, die Namen *Verbindungspooling*.  
   
  Beim Verbindungspooling wird die Häufigkeit reduziert, mit der neue Verbindungen hergestellt werden müssen. Die *Pooler* bleibt im Besitz der physischen Verbindung. Er verwaltet Verbindungen, indem er eine Reihe aktiver Verbindungen für jede angegebene Verbindungskonfiguration beibehält. Sobald ein Benutzer `Open` für eine Verbindung aufruft, sucht der Pooler nach einer verfügbaren Verbindung im Pool. Wenn eine Verbindung in einem Pool verfügbar ist, gibt der Pooler die Verbindung an den Aufrufer zurück, anstatt eine neue Verbindung herzustellen. Wenn die Anwendung `Close` für eine Verbindung aufruft, wird diese vom Pooler an die aktiven Verbindungen im Pool zurückgegeben, anstatt diese zu beenden. Nachdem die Verbindung an den Pool zurückgegeben wurde, kann sie für den nächsten `Open`-Aufruf erneut verwendet werden.  
   
@@ -67,13 +67,12 @@ using (SqlConnection connection = new SqlConnection(
  Die Verbindungspoolfunktion erfüllt diese Verbindungsanforderungen, indem Verbindungen erneut zugewiesen werden, sobald sie wieder für den Pool freigegeben werden. Wenn die maximale Poolgröße erreicht ist und keine verwendbare Verbindung verfügbar ist, wird die Anforderung in die Warteschlange gestellt. Der Pooler versucht anschließend, alle Verbindungen wieder anzufordern, bis das Timeout erreicht ist (der Standardwert beträgt 15 Sekunden). Wenn der Pooler die Anforderung nicht erfüllt, bevor das Zeitlimit für die Verbindung überschritten ist, wird eine Ausnahme ausgelöst.  
   
 > [!CAUTION]
->  Es ist unbedingt zu empfehlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben wird. Hierzu können Sie entweder die `Close` oder `Dispose` Methoden der `Connection` -Objekt, oder öffnen Sie alle Verbindungen innerhalb einer `using` -Anweisung in c#, oder eine `Using` -Anweisung in Visual Basic. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Weitere Informationen finden Sie unter [mit Anweisung](~/docs/csharp/language-reference/keywords/using-statement.md) oder [wie: Freigeben einer Systemressource](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) für Visual Basic.  
+>  Es ist unbedingt zu empfehlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben wird. Hierzu können Sie entweder die `Close` oder `Dispose` Methoden der `Connection` Objekt, oder öffnen Sie alle Verbindungen innerhalb einer `using` -Anweisung in c#, oder ein `Using` -Anweisung in Visual Basic. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Weitere Informationen finden Sie unter [using-Anweisung](~/docs/csharp/language-reference/keywords/using-statement.md) oder [Vorgehensweise: Freigeben einer Systemressource](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) für Visual Basic.  
   
 > [!NOTE]
 >  Rufen Sie nicht `Close` oder `Dispose` für eine `Connection`, einen `DataReader` oder ein anderes verwaltetes Objekt in der `Finalize`-Methode der Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
   
-> [!NOTE]
->  Wenn eine Verbindung aus dem Verbindungspool abgerufen oder an diesen zurückgegeben wird, werden keine Anmelde- und Abmeldeereignisse auf dem Server ausgelöst. Dies liegt daran, dass die Verbindung bei der Rückgabe an den Verbindungspool nicht geschlossen wird. Weitere Informationen finden Sie unter [Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx) und [Audit Logout (Ereignisklasse)](http://msdn2.microsoft.com/library/ms175827.aspx) in SQL Server-Onlinedokumentation.  
+Weitere Informationen zu Ereignissen im Zusammenhang mit öffnen und Schließen von Verbindungen, finden Sie unter [Audit Login Event Class](/sql/relational-databases/event-classes/audit-login-event-class) und [Audit Logout (Ereignisklasse)](/sql/relational-databases/event-classes/audit-logout-event-class) in der SQL Server-Dokumentation.  
   
 ## <a name="removing-connections"></a>Entfernen von Verbindungen  
  Die Verbindungspoolfunktion entfernt eine Verbindung aus dem Pool, nachdem sie für eine Zeitspanne von etwa 4–8 Minuten nicht verwendet wurde oder wenn festgestellt wird, dass die Verbindung mit dem Server unterbrochen wurde. Beachten Sie, dass eine unterbrochene Verbindung nur nach einem Versuch, mit dem Server zu kommunizieren, festgestellt werden kann. Wenn eine Verbindung gefunden wird, die nicht mehr mit dem Server verbunden ist, wird sie als ungültig markiert. Ungültige Verbindungen werden erst aus dem Verbindungspool entfernt, nachdem sie geschlossen oder freigegeben wurden.  

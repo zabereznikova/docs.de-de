@@ -3,11 +3,11 @@ title: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemb
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
 ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644185"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245468"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)
 Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbetten, können Sie Typen in einer Anwendung lose koppeln, um versionsunabhängig zu werden. Ihr Programm kann daher für Typen aus unterschiedlichen Versionen einer verwalteten Bibliothek geschrieben werden; eine erneute Kompilierung für jede Version ist nicht erforderlich.  
@@ -20,7 +20,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 -   Die eingebetteten Schnittstellen werden mit einem `ComImport`-Attribut und einem `Guid`-Attribut (und einer eindeutigen GUID) kommentiert.  
   
--   Die Assembly wird mit dem `ImportedFromTypeLib`-Attribut oder dem `PrimaryInteropAssembly`-Attribut und einem `Guid`-Attribut auf Assemblyebene kommentiert. (Visual Basic-Projektvorlagen enthalten standardmäßig einen auf Assemblyebene `Guid` Attribut.)  
+-   Die Assembly wird mit dem `ImportedFromTypeLib`-Attribut oder dem `PrimaryInteropAssembly`-Attribut und einem `Guid`-Attribut auf Assemblyebene kommentiert. (Visual Basic-Projektvorlagen enthalten standardmäßig eine auf Assemblyebene `Guid` Attribut.)  
   
  Nachdem Sie die öffentlichen Schnittstellen angegeben haben, die eingebettet werden können, können Sie Laufzeitklassen erstellen, die diese Schnittstellen implementieren. Ein Clientprogramm kann dann die Typinformationen für diese Schnittstellen zur Entwurfszeit einbetten, indem auf die Assembly verwiesen wird, die die öffentlichen Schnittstellen enthält und die Eigenschaft `Embed Interop Types` des Verweises auf `True` festgelegt wird. Dies entspricht dem Verwenden des Befehlszeilencompilers und Verweisen auf die Assembly mit der Compileroption `/link`. Das Clientprogramm kann dann Instanzen Ihrer Laufzeitobjekte laden, die als diese Schnittstellen typisiert sind. Wenn Sie eine neue Version Ihrer Runtime-Assembly mit starkem Namen erstellen, muss das Clientprogramm nicht erneut mit der aktualisierten Runtime-Assembly kompiliert werden. Stattdessen verwendet das Clientprogramm weiterhin die verfügbare Version der Runtime-Assembly und verwendet die eingebetteten Typinformationen für die öffentlichen Schnittstellen.  
   
@@ -56,7 +56,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 2.  Überprüfen Sie, ob im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** der Eintrag **Windows** ausgewählt ist. Wählen Sie im Bereich **Vorlagen** die Option **Klassenbibliothek** aus. Geben Sie im Feld **Name** die Bezeichnung `TypeEquivalenceInterface` ein, und klicken Sie dann auf **OK**. Das neue Projekt wird erstellt.  
   
-3.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei Class1.vb, und klicken Sie auf **umbenennen**. Benennen Sie die Datei in `ISampleInterface.vb` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `ISampleInterface` umbenannt. Diese Klasse stellt die öffentliche Schnittstelle für die Klasse dar.  
+3.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei "Class1.vb", und klicken Sie auf **umbenennen**. Benennen Sie die Datei in `ISampleInterface.vb` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `ISampleInterface` umbenannt. Diese Klasse stellt die öffentliche Schnittstelle für die Klasse dar.  
   
 4.  Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceInterface“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Kompilieren**. Legen Sie den Ausgabepfad auf einen gültigen Speicherort auf dem Entwicklungscomputer fest, z.B. auf `C:\TypeEquivalenceSample`. Dieser Speicherort wird auch in einem späteren Schritt in dieser exemplarischen Vorgehensweise verwendet.  
   
@@ -81,7 +81,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 9. Klicken Sie im Menü **Projekt** auf **Alle Dateien anzeigen**.  
   
-10. In **Projektmappen-Explorer**, erweitern Sie die **Mein Projekt** Ordner. Doppelklicken Sie auf die Datei AssemblyInfo.vb. Fügen Sie folgendes Attribut zur Datei hinzu.  
+10. In **Projektmappen-Explorer**, erweitern Sie die **Mein Projekt** Ordner. Doppelklicken Sie auf die AssemblyInfo.vb. Fügen Sie folgendes Attribut zur Datei hinzu.  
   
     ```vb  
     <Assembly: ImportedFromTypeLib("")>  
@@ -101,7 +101,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 2.  Überprüfen Sie, ob im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** der Eintrag **Windows** ausgewählt ist. Wählen Sie im Bereich **Vorlagen** die Option **Klassenbibliothek** aus. Geben Sie im Feld **Name** die Bezeichnung `TypeEquivalenceRuntime` ein, und klicken Sie dann auf **OK**. Das neue Projekt wird erstellt.  
   
-3.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei Class1.vb, und klicken Sie auf **umbenennen**. Benennen Sie die Datei in `SampleClass.vb` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `SampleClass` umbenannt. Diese Klasse implementiert die `ISampleInterface`-Schnittstelle.  
+3.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei "Class1.vb", und klicken Sie auf **umbenennen**. Benennen Sie die Datei in `SampleClass.vb` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `SampleClass` umbenannt. Diese Klasse implementiert die `ISampleInterface`-Schnittstelle.  
   
 4.  Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Kompilieren**. Legen Sie den Ausgabepfad auf denselben Speicherort fest, den Sie im Projekt „TypeEquivalenceInterface“ verwendet haben, z.B. auf `C:\TypeEquivalenceSample`.  
   
@@ -155,7 +155,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 6.  Erweitern Sie im **Projektmappen-Explorer** den Ordner **Verweise**. Wählen Sie den Verweis „TypeEquivalenceInterface“ aus. Legen Sie im Eigenschaftenfenster für den Verweis „TypeEquivalenceInterface“ die Eigenschaft **Einbetten von Interop-Typen** auf **True** fest.  
   
-7.  Fügen Sie den folgenden Code, um die Datei "Module1.vb" So erstellen Sie die Clientprogramm.  
+7.  Fügen Sie den folgenden Code, um die Datei "Module1.vb", um das Clientprogramm zu erstellen.  
   
     ```vb  
     Imports TypeEquivalenceInterface  

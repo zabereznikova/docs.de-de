@@ -1,17 +1,17 @@
 ---
 title: F#-Sprachreferenz
-description: Finden Sie F#-Sprache Funktionsinformationen aus dieser Referenz in sprachtoken, Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen.
+description: Informieren Sie sich F#-Sprache-Feature von diesem Verweis zum sprachtoken Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1c25ab4a4936b532a21aed8b2b0202fec1dd7133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566690"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937084"
 ---
 # <a name="f-language-reference"></a>F#-Sprachreferenz
 
-Dieser Abschnitt ist ein Verweis auf die F#-Sprache, eine Programmiersprache Zielversion .NET. Die Sprache F# unterstützt funktionale, objektorientierte und imperative Programmiermodelle.
+Dieser Abschnitt ist ein Verweis auf die Sprache f#, eine Multi-Paradigma-Programmiersprache für .NET. Die Sprache F# unterstützt funktionale, objektorientierte und imperative Programmiermodelle.
 
 
 ## <a name="f-tokens"></a>F#-Token
@@ -63,7 +63,7 @@ Die folgende Tabelle enthält verfügbare Referenzthemen, die von F# unterstütz
 |Titel|Beschreibung|
 |-----|-----------|
 |[Werte](values/index.md)|Beschreibt Werte, die unveränderliche Mengen darstellen und einen bestimmten Typ aufweisen. Werte können Ganzzahlen oder Gleitkommazahlen, Zeichen oder Text, Listen, Sequenzen, Arrays, Tupeln, Unterscheidungs-Unions, Datensätze, Klassentypen oder Funktionswerte sein.|
-|[Primitive Typen](primitive-types.md)|Beschreibt die grundlegenden primitiven Typen, die in der Sprache F# verwendet werden. Darüber hinaus werden die entsprechenden Typen in .NET und die minimalen und maximalen Werte für jeden Typ bereitgestellt.|
+|[Grundlegende Typen](basic-types.md)|Beschreibt die grundlegenden grundlegenden Typen, die in der Sprache f# verwendet werden. Darüber hinaus werden die entsprechenden Typen in .NET und die minimalen und maximalen Werte für jeden Typ bereitgestellt.|
 |[Unit-Typ](unit-type.md)|Beschreibt den `unit`-Typ, der ein Typ ist, der das Fehlen eines bestimmten Werts beschreibt; der `unit`-Typ verfügt nur über einen einzigen Wert, der als Platzhalter fungiert, wenn kein anderer Wert vorhanden oder erforderlich ist.|
 |[Zeichenfolgen](strings.md)|Beschreibt Zeichenfolgen in F#. Die `string`-Typ stellt unveränderlichen Text als eine Sequenz von Unicode-Zeichen dar. `string` ist ein Alias für `System.String` in .NET Framework.|
 |[Tupel](tuples.md)|Beschreibt Tupel, die Gruppierungen unbenannter aber sortierter Werte möglicher unterschiedlicher Typen sind.|

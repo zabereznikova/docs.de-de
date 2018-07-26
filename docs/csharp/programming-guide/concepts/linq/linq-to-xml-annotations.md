@@ -3,11 +3,11 @@ title: LINQ to XML-Anmerkungen 3
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
 ms.openlocfilehash: 8b8e03b0174ad2bf044c21eb9a9d3391da37fb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320117"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960698"
 ---
 # <a name="linq-to-xml-annotations"></a>LINQ to XML-Anmerkungen
 Mit Anmerkungen in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] können Sie Objekte eines beliebigen Typs mit jeder beliebigen XML-Komponente in einer XML-Struktur verknüpfen.  
@@ -19,7 +19,7 @@ Mit Anmerkungen in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] können
 ## <a name="methods"></a>Methoden  
  Beim Arbeiten mit Anmerkungen können Sie die folgenden Methoden verwenden:  
   
-|Methode|description|  
+|Methode|Beschreibung |  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XObject.AddAnnotation%2A>|Fügt der Anmerkungsliste eines <xref:System.Xml.Linq.XObject> ein Objekt hinzu.|  
 |<xref:System.Xml.Linq.XObject.Annotation%2A>|Ruft das erste Anmerkungsobjekt des angegebenen Typs aus einem <xref:System.Xml.Linq.XObject> ab.|  

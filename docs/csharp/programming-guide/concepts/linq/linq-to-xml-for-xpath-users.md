@@ -3,11 +3,11 @@ title: LINQ to XML für XPath-Benutzer (C#)
 ms.date: 07/20/2015
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
 ms.openlocfilehash: e55e763db2169b704b0b1fcc72e21d9e339b01f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337895"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199120"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>LINQ to XML für XPath-Benutzer (C#)
 Die Themen in diesem Abschnitt demonstrieren eine Reihe von XPath-Ausdrücken und deren [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Entsprechungen.  
@@ -16,7 +16,7 @@ Die Themen in diesem Abschnitt demonstrieren eine Reihe von XPath-Ausdrücken un
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|description|  
+|Thema|Beschreibung |  
 |-----------|-----------------|  
 |[Vergleich zwischen XPath und LINQ to XML](../../../../csharp/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|Bietet eine Übersicht über die Gemeinsamkeiten und Unterschiede von XPath und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Vorgehensweise: Suchen eines untergeordneten Elements (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|Vergleicht die XPath-Achse für untergeordnete Elemente mit der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>-Methode.<br /><br /> Der zugehörige XPath-Ausdruck ist `"DeliveryNotes"`.|  

@@ -1,6 +1,6 @@
 ---
 title: App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,26 +14,28 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11b9bde41e2209a88a042eb6c61de37def9da787
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578220"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245493"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind
-Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) Projekttyp, um sicherzustellen, dass von mehreren Plattformen Ressourcen in den Klassenbibliotheken zugegriffen werden können. Dieser Projekttyp ist in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] verfügbar, und er ist für die portable Teilmenge der .NET Framework-Klassenbibliothek vorgesehen. Durch die Verwendung von [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] wird sichergestellt, dass von Desktop-Apps, Silverlight-Apps, Windows Phone-Apps und [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps auf die Bibliothek zugegriffen werden kann.  
+Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) Projekttyp, um sicherzustellen, dass Ressourcen in den Klassenbibliotheken, die von mehreren Plattformen zugegriffen werden kann. Dieser Projekttyp ist in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] verfügbar, und er ist für die portable Teilmenge der .NET Framework-Klassenbibliothek vorgesehen. Durch die Verwendung von [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] wird sichergestellt, dass von Desktop-Apps, Silverlight-Apps, Windows Phone-Apps und [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps auf die Bibliothek zugegriffen werden kann.  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
   
  Das [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]-Projekt macht nur eine sehr geringe Teilmenge der Typen im <xref:System.Resources>-Namespace für die Anwendung verfügbar. Es ermöglicht Ihnen jedoch das Abrufen von Ressourcen mithilfe der <xref:System.Resources.ResourceManager>-Klasse. Wenn Sie jedoch eine Anwendung unter Verwendung von Visual Studio erstellen, sollten Sie den von Visual Studio erstellten stark typisierten Wrapper verwenden und nicht die <xref:System.Resources.ResourceManager>-Klasse direkt verwenden.  
   
- Um einen stark typisierten Wrapper in Visual Studio erstellen möchten, legen Sie die Hauptressourcendatei **Zugriffsmodifizierer** in der Visual Studio-Ressourcen-Designer auf **öffentlichen**. Dadurch wird eine [resourceFileName].designer.cs-Datei oder [resourceFileName].designer.vb-Datei erstellt, die den stark typisierten ResourceManager-Wrapper enthält. Weitere Informationen zur Verwendung von einer stark typisierten ressourcenwrappers finden Sie im Abschnitt "Generieren einer stark typisierten Ressourcenklasse" in der [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) Thema.  
+ Um einen stark typisierten Wrapper in Visual Studio zu erstellen, legen Sie die Hauptressourcendatei **Zugriffsmodifizierer** in der Visual Studio-Ressourcen-Designer auf **öffentliche**. Dadurch wird eine [resourceFileName].designer.cs-Datei oder [resourceFileName].designer.vb-Datei erstellt, die den stark typisierten ResourceManager-Wrapper enthält. Weitere Informationen zur Verwendung eines stark typisierten ressourcenwrappers finden Sie im Abschnitt "Generieren einer stark typisierten Ressourcenklasse" in der [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) Thema.  
   
 ## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a>Ressourcen-Manager in [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
  In einem [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]-Projekt wird der gesamte Zugriff auf Ressourcen von der <xref:System.Resources.ResourceManager>-Klasse behandelt. Da in einem <xref:System.Resources>-Projekt nicht auf Typen im <xref:System.Resources.ResourceReader>-Namespace, z. B. <xref:System.Resources.ResourceSet> und [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], zugegriffen werden kann, können sie nicht für den Zugriff auf Ressourcen verwendet werden.  
   
  Das [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]-Projekt enthält die vier <xref:System.Resources.ResourceManager>-Member, die in der folgenden Tabelle aufgeführt sind. Diese Konstruktoren und Methoden ermöglichen es Ihnen, ein <xref:System.Resources.ResourceManager>-Objekt zu instanziieren und Zeichenfolgenressourcen abzurufen.  
   
-|`ResourceManager`-Member|Beschreibung|  
+|`ResourceManager`-Member|Description|  
 |------------------------------|-----------------|  
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Erstellt eine <xref:System.Resources.ResourceManager>-Instanz für den Zugriff auf die benannte Ressourcendatei in der angegebenen Assembly.|  
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Erstellt eine <xref:System.Resources.ResourceManager>-Instanz, die dem angegebenen Typ entspricht.|  
@@ -65,7 +67,7 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
 |NameLength|25|  
 |Titel|Mitarbeiterdatenbank|  
   
- Der folgende Code definiert eine `UILibrary` Klasse, die den Ressourcen-Manager-Wrapper verwendet `resources` von Visual Studio generiert bei der **Zugriffsmodifizierer** für die Datei, in geändert wird **öffentlichen** . Die UILibrary-Klasse analysiert die Zeichenfolgendaten nach Bedarf. . Beachten Sie, dass sich die Klasse im `MyCompany.Employees`-Namespace befindet.  
+ Der folgende Code definiert eine `UILibrary` -Klasse, den Resource Manager-Wrapper, der mit dem Namen verwendet `resources` von Visual Studio generiert bei der **Zugriffsmodifizierer** für die Datei, um geändert wird **öffentliche** . Die UILibrary-Klasse analysiert die Zeichenfolgendaten nach Bedarf. . Beachten Sie, dass sich die Klasse im `MyCompany.Employees`-Namespace befindet.  
   
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]  
@@ -80,7 +82,7 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
   
 ## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Beispiel: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] mit Lokalisierung  
- Das folgende Beispiel für [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] mit Lokalisierung enthält Ressourcen für die Kulturen Französisch (Frankreich) und Englisch (USA). Die Kultur Englisch (Vereinigte Staaten) ist die Standardkultur der app; Ihre Ressourcen werden angezeigt, in der Tabelle in der [vorherigen Abschnitt](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Die Ressourcendatei für die Kultur Französisch (Frankreich) hat den Namen LibResources.fr-FR.resx, und sie besteht aus den Zeichenfolgenressourcen in der folgenden Tabelle. Der Quellcode für die `UILibrary`-Klasse ist mit dem Quellcode im vorherigen Abschnitt identisch.  
+ Das folgende Beispiel für [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] mit Lokalisierung enthält Ressourcen für die Kulturen Französisch (Frankreich) und Englisch (USA). Kultur Englisch (Vereinigte Staaten) ist die Standardkultur der app. die Ressourcen werden angezeigt, in der Tabelle in der [vorherigen Abschnitt](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Die Ressourcendatei für die Kultur Französisch (Frankreich) hat den Namen LibResources.fr-FR.resx, und sie besteht aus den Zeichenfolgenressourcen in der folgenden Tabelle. Der Quellcode für die `UILibrary`-Klasse ist mit dem Quellcode im vorherigen Abschnitt identisch.  
   
 |Ressourcenname|Ressourcenwert|  
 |-------------------|--------------------|  

@@ -11,15 +11,15 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741892"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874922"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; -Element (Netzwerkeinstellungen)
-Konfiguriert das übermittlungsformat, die Übermittlungsmethode und die Absenderadresse zum Senden von e-Mail-Nachrichten.  
+Konfiguriert das übermittlungsformat, die Übermittlungsmethode und die Absenderadresse zum Senden von e-Mails.  
   
  \<configuration>  
 \<system.net>  
@@ -46,8 +46,8 @@ Konfiguriert das übermittlungsformat, die Übermittlungsmethode und die Absende
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |`deliveryFormat`|Gibt das übermittlungsformat für ausgehende e-Mails an. Zulässige Werte sind "SevenBit" und "International".|  
-|`deliveryMethod`|Gibt die Übermittlungsmethode für e-Mails an. Zulässige Werte sind "network", "pickupDirectoryFromIis" und "specifiedPickupDirectory".|  
-|`from`|Gibt die Absenderadresse für ausgehende e-Mails.|  
+|`deliveryMethod`|Gibt die Übermittlungsmethode für e-Mails an. Zulässige Werte sind, Netzwerk, PickupDirectoryFromIis und "specifiedPickupDirectory".|  
+|`from`|Gibt an, die Absenderadresse für ausgehende e-Mails.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -63,13 +63,13 @@ Konfiguriert das übermittlungsformat, die Übermittlungsmethode und die Absende
 |[\<mailSettings>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Konfiguriert E-Mail-Sendeoptionen.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die entsprechenden SMTP-Parameter, um e-Mail-Nachricht mit der Standard-Netzwerkanmeldeinformationen zu senden.  
+ Das folgende Beispiel gibt die entsprechenden SMTP-Parameter zum Senden von e-Mails, die über die Standardanmeldeinformationen an.  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
+      <smtp deliveryMethod="Network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
         <network  
           host="localhost"  
           port="25"  

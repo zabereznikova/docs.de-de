@@ -11,12 +11,12 @@ ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3a982bdbe4953691d4e8e7663f14059ff4771934
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50ab7387fc5e2cac65cac1a6dba0e563225beec9
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743975"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874701"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;"specifiedPickupDirectory"&gt; -Element (Netzwerkeinstellungen)
 Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Protocol)-Server.  
@@ -42,7 +42,7 @@ Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Proto
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|Das Verzeichnis, in denen Anwendungen für e-Mail-Nachrichten für spätere Verarbeitung vom SMTP-Server speichern.|  
+|`pickupDirectoryLocation`|Das Verzeichnis, in dem Anwendungen für e-Mail-Adresse, zur späteren Verarbeitung durch den SMTP-Server speichern.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -54,16 +54,16 @@ Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Proto
 |[\<SMTP >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Konfiguriert (SMTP, Simple Mail Transport Protocol) e-Mail-Sendeoptionen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `specifiedPickupDirectory` Attribut legt das Verzeichnis, in dem Speichern Anwendungen e-Mail-Nachrichten an den SMTP-Server verarbeitet werden.  
+ Die `specifiedPickupDirectory` Attribut legt das Verzeichnis, in dem Anwendungen vom SMTP-Server zu verarbeitende e-Mail-Nachrichten speichern.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird c:\maildrop als e-Mail-pickup-Verzeichnis.  
+ Im folgenden Beispiel wird die c:\maildrop als e-Mail-pickup-Verzeichnis.  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="specifiedPickupDirectory">  
+      <smtp deliveryMethod="SpecifiedPickupDirectory">  
         <specifiedPickupDirectory  
           pickupDirectoryLocation="c:\maildrop"  
         />  

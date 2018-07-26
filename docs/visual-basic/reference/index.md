@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 ms.openlocfilehash: f9005a25b99b0a17f8e00f350547aa4bc313c4ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652843"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961020"
 ---
 # <a name="reference-visual-basic"></a>Referenz
-Dieser Abschnitt enthält Links zu Referenzinformationen zu verschiedenen Aspekten von Visual Basic-Programmierung.  
+Dieser Abschnitt enthält Links zu Referenzinformationen zu verschiedenen Aspekten der Programmierung mit Visual Basic.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)  
- Enthält Referenzinformationen zu verschiedenen Aspekten der Sprache Visual Basic.  
+ Enthält Referenzinformationen für verschiedene Aspekte der Visual Basic-Sprache.  
   
  [Visual Basic-Befehlszeilencompiler](../../visual-basic/reference/command-line-compiler/index.md)  
  Enthält Links zu Informationen über den Befehlszeilencompiler, der eine Alternative zur Kompilierung von Visual Studio-IDE-Programmen bietet.  
@@ -26,7 +26,7 @@ Dieser Abschnitt enthält Links zu Referenzinformationen zu verschiedenen Aspekt
  Enthält Links zu Informationen zum Verwenden der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Klassenbibliothek.  
   
  [Visual Basic-Sprachspezifikation](../../visual-basic/reference/language-specification/index.md)  
- Enthält Links zu den vollständige Visual Basic-Sprachspezifikation, der ausführliche Informationen zu allen Aspekten der Sprache enthält.  
+ Enthält Links zu die vollständige Visual Basic-Sprachspezifikation, die detaillierte Informationen zu allen Aspekten der Programmiersprache enthält.  
   
 ## <a name="reference"></a>Referenz  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
@@ -37,7 +37,7 @@ Dieser Abschnitt enthält Links zu Referenzinformationen zu verschiedenen Aspekt
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Allgemeine Elemente der Benutzeroberfläche (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Enthält Themen zu den Dialogfeldern und Fenstern in Visual Studio verwendet.  
+ Enthält Themen, die für die Dialogfelder und Fenster in Visual Studio verwendet.  
   
  [XML-Tools in Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Enthält Links zu Themen auf verschiedenen XML-Tools in Visual Studio verfügbar.  

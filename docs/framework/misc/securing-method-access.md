@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0d9ddbd6c7b027a7c342f4c14192a7571beb592
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 314ceb86219ce143e84a00392727d610c0779e48
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397883"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243677"
 ---
 # <a name="securing-method-access"></a>Sichern des Methodenzugriffs
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,9 +28,9 @@ ms.locfileid: "33397883"
   
  Verwalteter Code bietet mehrere Möglichkeiten zum Einschränken des Zugriffs auf Methoden:  
   
--   Einschränken des Zugriffsbereichs auf die Klasse, Assembly oder abgeleiteten Klassen, wenn diese vertrauenswürdig sind. Dies ist die einfachste Möglichkeit, um den Methodenzugriff einzuschränken. Beachten Sie, dass abgeleitete Klassen im Allgemeinen weniger vertrauenswürdig sind als die Klasse, von der sie abgeleitet wurden, obwohl sie in einigen Fällen die Identität der übergeordneten Klasse teilen. Leiten Sie insbesondere nicht vertrauen, von dem Schlüsselwort **geschützt**, die nicht unbedingt im Sicherheitskontext verwendet.  
+-   Einschränken des Zugriffsbereichs auf die Klasse, Assembly oder abgeleiteten Klassen, wenn diese vertrauenswürdig sind. Dies ist die einfachste Möglichkeit, um den Methodenzugriff einzuschränken. Beachten Sie, dass abgeleitete Klassen im Allgemeinen weniger vertrauenswürdig sind als die Klasse, von der sie abgeleitet wurden, obwohl sie in einigen Fällen die Identität der übergeordneten Klasse teilen. Leiten Sie insbesondere keine Vertrauenswürdigkeit vom Schlüsselwort **geschützt**, wird die nicht unbedingt im Sicherheitskontext verwendet.  
   
--   Beschränken Sie den Methodenzugriff auf Aufrufer mit einer angegebenen Identität ein – im Wesentlichen auf bestimmte [Beweis](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (starker Name, Herausgeber, Zone usw.), die Sie auswählen.  
+-   Beschränken Sie den Methodenzugriff auf Aufrufer mit einer angegebenen Identität – im Wesentlichen eine bestimmte [Beweise](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (starker Name, Herausgeber, Zone usw.), die Sie auswählen.  
   
 -   Schränken Sie den Methodenzugriff auf Aufrufer mit von Ihnen ausgewählten Berechtigungen ein.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33397883"
   
 -   Für abgeleitete Klassen, die bestimmte Methoden außer Kraft setzen, eine bestimmte Identität oder Berechtigung anfordern.  
   
- Das folgende Beispiel zeigt, wie eine öffentliche Klasse durch den eingeschränkten Zugriff geschützt wird, indem Sie festlegen, dass Aufrufer mit einem bestimmten starken Namen signiert werden müssen. Dieses Beispiel verwendet die <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> mit einem **Bedarf** nach einem starken Namen. Aufgabenbasierte Informationen zum Signieren einer Assembly mit einem starken Namen finden Sie unter [erstellen und Verwenden von Assemblys](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Das folgende Beispiel zeigt, wie eine öffentliche Klasse durch den eingeschränkten Zugriff geschützt wird, indem Sie festlegen, dass Aufrufer mit einem bestimmten starken Namen signiert werden müssen. Dieses Beispiel verwendet die <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> mit einem **Bedarf** für den starken Namen. Aufgabenbasierte Informationen zum Signieren einer Assembly mit einem starken Namen finden Sie [erstellen und Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -110,7 +110,7 @@ End Class
 ```csharp  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name="FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name="FullTrust")]  
-public abstract class CannotCreateInstanceOfMe_CanCastToMe{}  
+public abstract class CannotCreateInstanceOfMe_CanCastToMe {}  
 ```  
   
  Für öffentliche virtuelle Funktionen:  
@@ -145,7 +145,7 @@ End Class 'Base2
 ```  
   
 ```csharp  
-abstract class Base2{  
+abstract class Base2 {  
 [System.Security.Permissions.PermissionSetAttribute(  
 System.Security.Permissions.SecurityAction.InheritanceDemand, Name = "FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(  
@@ -234,9 +234,9 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Überschreibungen von "virtual internal" oder "Overloads Overridable Friend"  
   
 > [!NOTE]
->  In diesem Abschnitt warnt vor einem Sicherheitsproblem beim Deklarieren einer Methode wie `virtual` und `internal` (`Overloads``Overridable``Friend` in Visual Basic). Diese Warnung gilt nur für die .NET Framework-Versionen 1.0 und 1.1, es gilt nicht für höhere Versionen.  
+>  In diesem Abschnitt zeigt eine Warnung vor einem Sicherheitsproblem beim Deklarieren einer Methode wie `virtual` und `internal` (`Overloads``Overridable``Friend` in Visual Basic). Diese Warnung gilt nur für die .NET Framework-Versionen 1.0 und 1.1, sie gelten nicht für höhere Versionen.  
   
- In der .NET Framework-Versionen 1.0 und 1.1 muss Sie eine Nuance Typsystemzugriffs beachten bei der Bestätigung, dass der Code für andere Assemblys nicht verfügbar ist. Eine Methode, die deklariert wird **virtuellen** und **interne** (**Overloads Overridable Friend** in Visual Basic) können Vtable-Eintrag der übergeordneten Klasse überschreiben und kann nur verwendet werden innerhalb der gleichen Assembly, da diese intern verfügbar ist. Allerdings wird der Zugriff für die Außerkraftsetzung von bestimmt die **virtuellen** -Schlüsselwort, und dies kann aus einer anderen Assembly überschrieben werden, solange dieser Code Zugriff auf die Klasse selbst hat. Wenn die Möglichkeit der Außerkraftsetzung ein Problem darstellt, verwenden Sie deklarative Sicherheit korrigieren oder Entfernen der **virtuellen** Schlüsselwort, wenn es nicht unbedingt erforderlich ist.  
+ In der .NET Framework-Versionen 1.0 und 1.1 muss Sie ein Merkmal des Typsystemzugriffs Typsystemzugriffs beachten bei der Bestätigung, dass der Code für andere Assemblys nicht verfügbar ist. Eine Methode, die deklariert wird **virtuellen** und **interne** (**Overloads Overridable Friend** in Visual Basic) können Vtable-Eintrag der übergeordneten Klasse überschreiben und kann nur verwendet werden in der gleichen Assembly, da diese intern verfügbar ist. Allerdings wird der Zugriff für die Außerkraftsetzung durch bestimmt die **virtuellen** -Schlüsselwort, und dies kann aus einer anderen Assembly überschrieben werden, solange dieser Code Zugriff auf die Klasse selbst hat. Wenn die Möglichkeit der Außerkraftsetzung ein Problem darstellt, verwenden Sie die deklarative Sicherheit korrigieren oder Entfernen der **virtuellen** Schlüsselwort, wenn es nicht unbedingt erforderlich ist.  
   
  Auch wenn ein Sprachcompiler diese Außerkraftsetzungen durch einen Kompilierungsfehler verhindert, ist die Außerkraftsetzung mithilfe von Code möglich, der mit anderen Compilern geschrieben wurde.  
   
