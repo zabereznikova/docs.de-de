@@ -25,6 +25,9 @@
             - name: '.NET-Microservices: E-Book zu DevOps'
               tocHref: /dotnet/standard/containerized-lifecycle-architecture/
               topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
+            - name: E-Book zu serverlosen Apps
+              tocHref: /dotnet/standard/serverless-architecture/
+              topicHref: /dotnet/standard/serverless-architecture/index
             - name: Muster für die asynchrone Programmierung
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
