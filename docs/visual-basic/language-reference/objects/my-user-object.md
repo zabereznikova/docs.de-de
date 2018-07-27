@@ -1,16 +1,16 @@
 ---
-title: My.User-Objekt
+title: My.User-Objekt (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.User property
 - My.User object
 ms.assetid: caa7462e-2149-4bdb-8850-802b80b93cbf
-ms.openlocfilehash: b317d8afe145342f2971dbd883f9ee97aab78b8b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb54ec40ca83ac03bb94df25f0433df2103dd0b4
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594519"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296259"
 ---
 # <a name="myuser-object"></a>My.User-Objekt
 Stellt den Zugriff auf Informationen über den aktuellen Benutzer bereit.  
@@ -18,7 +18,7 @@ Stellt den Zugriff auf Informationen über den aktuellen Benutzer bereit.
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften der `My.User` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
   
- Weitere Informationen finden Sie unter [Zugriff auf Benutzerdaten](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ Weitere Informationen finden Sie unter [den Zugriff auf Benutzerdaten](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Assembly:** Visual Basic-Laufzeitbibliothek (in "Microsoft.VisualBasic.dll")  

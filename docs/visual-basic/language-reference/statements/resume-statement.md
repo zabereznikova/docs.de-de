@@ -1,5 +1,5 @@
 ---
-title: Resume-Anweisung
+title: Resume-Anweisung (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Resume
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 1d03f631893be51529f29af824de0d684bf43804
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 853f3fe060b70c8a43957d3c843fb95539981679
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603781"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296155"
 ---
 # <a name="resume-statement"></a>Resume-Anweisung
 Setzt die Ausführung fort, nachdem eine Fehlerbehandlungsroutine abgeschlossen ist.  
   
- Es wird empfohlen, strukturierte Ausnahmebehandlung im Code nach Möglichkeit statt mit der unstrukturierten Ausnahmebehandlung zu verwenden und die `On Error` und `Resume` Anweisungen. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Es wird empfohlen, dass Sie die strukturierte Ausnahmebehandlung im Code nach Möglichkeit anstelle der Verwendung nicht strukturierte Ausnahmebehandlung verwenden und die `On Error` und `Resume` Anweisungen. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,25 +35,25 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>Teile  
  `Resume`  
- Erforderlich. Wenn in der gleichen Prozedur wie der Fehlerhandler der Fehler aufgetreten ist, setzt die Ausführung mit der Anweisung, die den Fehler verursacht hat. Wenn der Fehler in einer aufgerufenen Prozedur setzt die Ausführung bei der Anweisung, die zuletzt aus der Prozedur mit der Fehlerbehandlungsroutine aufgerufen.  
+ Erforderlich. Wenn der Fehler in der gleichen Prozedur wie der Fehlerhandler, setzt die Ausführung mit der Anweisung, die den Fehler verursacht hat. Wenn der Fehler in einer aufgerufenen Prozedur setzt die Ausführung bei der Anweisung, die aus der Prozedur die Fehlerbehandlungsroutine mit dem letzten Aufruf.  
   
  `Next`  
- Dies ist optional. Wenn in der gleichen Prozedur wie der Fehlerhandler der Fehler aufgetreten ist, setzt die Ausführung mit der Anweisung sofort nach der Anweisung, die den Fehler verursacht hat. Wenn der Fehler in einer aufgerufenen Prozedur die Ausführung wird fortgesetzt, mit der Anweisung sofort nach der Anweisung, die zuletzt aus der Prozedur mit der Fehlerbehandlungsroutine aufgerufen (oder `On Error Resume Next` Anweisung).  
+ Dies ist optional. Wenn der Fehler in der gleichen Prozedur wie der Fehlerhandler, setzt die Ausführung mit der Anweisung sofort nach der Anweisung, die den Fehler verursacht hat. Wenn der Fehler in einer aufgerufenen Prozedur Ausführung fortgesetzt wird, mit der Anweisung sofort nach der Anweisung, die aus der Prozedur die Fehlerbehandlungsroutine mit dem letzten Aufruf (oder `On Error Resume Next` Anweisung).  
   
  `line`  
- Dies ist optional. Die Ausführung wird fortgesetzt, in der Befehlszeile angegeben werden, in das erforderliche `line` Argument. Die `line` Argument ist eine zeilenbezeichnung oder Zeilennummer und muss in der gleichen Prozedur wie der Fehlerhandler.  
+ Dies ist optional. Ausführung fortgesetzt wird, in der Zeile, die in die erforderlichen angegebenen `line` Argument. Die `line` Argument ist eine zeilenbezeichnung oder Zeilennummer und muss in der gleichen Prozedur wie der Fehlerhandler.  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Wir empfehlen die Verwendung von strukturierter Ausnahmebehandlung im Code nach Möglichkeit statt mit der unstrukturierten Ausnahmebehandlung und das `On Error` und `Resume` Anweisungen. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+>  Es wird empfohlen, dass Sie die strukturierte Ausnahmebehandlung im Code nach Möglichkeit anstelle der Verwendung nicht strukturierte Ausnahmebehandlung verwenden und die `On Error` und `Resume` Anweisungen. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
- Bei Verwendung einer `Resume` Anweisung überall außer in eine Fehlerbehandlungsroutine, ein Fehler auftritt.  
+ Bei Verwendung einer `Resume` Anweisung überall außer in einer Fehlerbehandlungsroutine, ein Fehler auftritt.  
   
- Die `Resume` Anweisung kann nicht verwendet werden, in einer Prozedur, deren enthält eine `Try...Catch...Finally` Anweisung.  
+ Die `Resume` Anweisung kann nicht verwendet werden, in einer beliebigen Prozedur, die enthält eine `Try...Catch...Finally` Anweisung.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `Resume` Anweisung für die Fehlerbehandlung in einer Prozedur zu beenden, und klicken Sie dann fortsetzen Ausführung mit der Anweisung, die den Fehler verursacht hat. Fehlernummer 55 generiert, um die Verwendung der veranschaulichen die `Resume` Anweisung.  
+ Dieses Beispiel verwendet die `Resume` Anweisung, um die Fehlerbehandlung in einer Prozedur beendet, und klicken Sie dann fortsetzen Ausführung mit der Anweisung, die den Fehler verursacht hat. Fehlernummer 55 wird generiert, um die Verwendung von veranschaulichen die `Resume` Anweisung.  
   
  [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
