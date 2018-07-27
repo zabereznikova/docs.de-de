@@ -4,12 +4,12 @@ description: .NET Microservices-Architektur für .NET-Containeranwendungen | Sic
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 0e55a68432dfd44c7a73ae51512f50d481ae100c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106696"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937032"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Sichern von .NET-Microservices und Webanwendungen
 
@@ -43,7 +43,7 @@ services.AddDbContext<ApplicationDbContext>(options =>
 
 Sobald ASP.NET Core Identity konfiguriert ist, aktivieren Sie den Dienst, indem Sie „app.UseIdentity“ in der Startup.Configure-Methode des Diensts aufrufen.
 
-Durch die Verwendung von ASP.NET Code Identity sind mehrere Szenarios möglich:
+Durch die Verwendung von ASP.NET Core Identity sind mehrere Szenarios möglich:
 
 -   Erstellen Sie neue Benutzerinformationen mithilfe des UserManager-Typs (userManager.CreateAsync).
 

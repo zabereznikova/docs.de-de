@@ -1,66 +1,102 @@
 ---
 title: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
-description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Einführung
+description: Ein Leitfaden, der eine End-to-End-Anleitung zur Erstellung monolithischer Webanwendungen mit ASP.NET Core und Azure bietet.
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 085ec85002fc1661d6e20b3c3f11cf4b6ea2161b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: e2d2545108b55043c322baffbd609b2422d2743b
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37103918"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936983"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
 
-![Titelbild](./media/cover.jpg)
+![Titelbild](./media/cover.png)
 
+VERÖFFENTLICHT VON
+
+Microsoft Developer Division, .NET- und Visual Studio-Produktteams
+
+Eine Abteilung der Microsoft Corporation
+
+One Microsoft Way
+
+Redmond, Washington 98052-6399
+
+Copyright © 2018 by Microsoft Corporation
+
+Alle Rechte vorbehalten. Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.
+
+Dieses Buch wird unverändert bereitgestellt und drückt die Ansichten und Meinungen des Autors aus. Die Ansichten, Meinungen und Informationen, die in diesem Buch zum Ausdruck gebracht werden, einschließlich URLs und anderer Verweise auf Internetwebsites, können ohne vorherige Ankündigung geändert werden.
+
+Einige der hier dargestellten Beispiele dienen nur zu Illustrationszwecken und sind fiktiv. Keinerlei Zuordnung oder Verbindung zu realen Gegebenheiten ist beabsichtigt oder sollte gefolgert werden.
+
+Microsoft und die auf der Webseite „Marken“ unter https://www.microsoft.com aufgelisteten Marken sind Marken der Microsoft-Unternehmensgruppe.
+
+Mac und macOS sind Marken von Apple Inc.
+
+Das Logo des Docker-Wals ist eine registrierte Marke von Docker, Inc. Verwendet mit Genehmigung.
+
+Alle anderen Marken und Logos sind Eigentum der jeweiligen Besitzer.
+
+Autor:
+
+> **Steve Smith (@ardalis)**, Software Architecture Advisor, [Ardalis.com](https://ardalis.com)
+
+Editoren:
+
+> **Maira Wenzel**
+
+## <a name="introduction"></a>Einführung
 
 .NET Core und ASP.NET Core bieten mehrere Vorteile gegenüber der traditionellen .NET-Entwicklung. Sie sollten .NET Core für Ihre Serveranwendungen verwenden, wenn einige oder alle der folgenden Punkte für den Erfolg Ihrer Anwendung wichtig sind:
 
--   Plattformübergreifende Unterstützung
+- Plattformübergreifende Unterstützung
 
--   Verwendung von Microservices
+- Verwendung von Microservices
 
--   Verwendung von Docker-Containern
+- Verwendung von Docker-Containern
 
--   Anforderungen für hohe Leistung und Skalierbarkeit
+- Anforderungen für hohe Leistung und Skalierbarkeit
 
--   Parallele Versionsverwaltung von .NET-Versionen durch Anwendung auf demselben Server
+- Parallele Versionsverwaltung von .NET-Versionen durch Anwendung auf demselben Server
 
 Traditionelle .NET-Anwendungen können und werden diese Anforderungen unterstützen, aber ASP.NET Core und .NET Core wurden optimiert, um eine verbesserte Unterstützung für die oben genannten Szenarien zu bieten.
 
 Immer mehr Unternehmen entscheiden sich dafür, ihre Webanwendungen in der Cloud zu hosten, indem sie Dienste wie Microsoft Azure nutzen. Sie sollten in Erwägung ziehen, Ihre Anwendung in der Cloud zu hosten, wenn die folgenden Punkte für Ihre Anwendung oder Organisation wichtig sind:
 
--   Geringere Investitionen in die Kosten des Datencenters (Hardware, Software, Speicherplatz, Hilfsprogramme usw.)
+- Geringere Investitionen in die Kosten des Datencenters (Hardware, Software, Speicherplatz, Hilfsprogramme usw.)
 
--   Flexible Preisgestaltung (nutzungsbasierte Abrechnung, nicht nach Leerlaufkapazität)
+- Flexible Preisgestaltung (nutzungsbasierte Abrechnung, nicht nach Leerlaufkapazität)
 
--   Extreme Zuverlässigkeit
+- Extreme Zuverlässigkeit
 
--   Verbesserte App-Mobilität, einfaches Ändern, wo und wie Ihre App bereitgestellt wird
+- Verbesserte App-Mobilität, einfaches Ändern, wo und wie Ihre App bereitgestellt wird
 
--   Flexible Kapazität, Hoch- oder Herunterskalierung basieren auf dem tatsächlichen Bedarf
+- Flexible Kapazität, Hoch- oder Herunterskalierung basieren auf dem tatsächlichen Bedarf
 
-Das Erstellen von Webanwendungen mit ASP.NET Core (gehostet in Microsoft Azure) bietet zahlreiche Wettbewerbsvorteile gegenüber herkömmlichen Alternativen. ASP.NET Core ist für moderne Webanwendungs-Entwicklungspraktiken und Cloudhostingszenarien optimiert. In diesem Leitfaden erfahren Sie, wie Sie Ihre ASP.NET Core-Anwendungen so gestalten, dass Sie diese Funktionen optimal nutzen können.
+Das Erstellen von Webanwendungen mit ASP.NET Core (gehostet in Azure) bietet eine Menge Wettbewerbsvorteile gegenüber herkömmlichen Alternativen. ASP.NET Core ist für moderne Webanwendungs-Entwicklungspraktiken und Cloudhostingszenarien optimiert. In diesem Leitfaden erfahren Sie, wie Sie Ihre ASP.NET Core-Anwendungen so gestalten, dass Sie diese Funktionen optimal nutzen können.
 
 ## <a name="purpose"></a>Zweck
 
 Dieser Leitfaden bietet eine End-to-End-Anleitung zur Erstellung monolithischer Webanwendungen mit ASP.NET Core und Azure.
 
-Dieser Leitfaden ist das Gegenstück zum Dokument „*Entwerfen und Entwickeln von containerisierten und auf Microservices basierenden Anwendungen mit .NET*“, das sich mehr auf Docker, Microservices und die Bereitstellung von Containern für Unternehmensanwendungen konzentriert.
+Dieser Leitfaden ist eine Ergänzung zum E-Book [„_.NET Microservices. Architektur für .NET-Containeranwendungen_“](../microservices-architecture/index.md), das sich mehr auf Docker, Microservices und die Bereitstellung von Containern zum Hosten von Unternehmensanwendungen konzentriert.
 
-> ### <a name="architecting-and-developing-containerized-microservice-based-apps-in-net"></a>Entwerfen und Entwickeln von containerisierten und auf Microservices basierenden Apps in .NET
-> - **E-Book**  
-> <http://aka.ms/MicroservicesEbook>
-> - **Beispielanwendung**  
-> <http://aka.ms/microservicesarchitecture>
+### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET-Microservices. .NET-Microservices-Architektur für .NET-Containeranwendungen
+
+- **E-Book**  
+  <https://aka.ms/MicroservicesEbook>
+- **Beispielanwendung**  
+  <https://aka.ms/microservicesarchitecture>
 
 ## <a name="who-should-use-this-guide"></a>Zielgruppe dieses Leitfadens
 
 Die Zielgruppe dieses Leitfadens sind hauptsächlich Entwickler, Entwicklungsleiter und Architekten, die daran interessiert sind, moderne Webanwendungen mit Microsoft-Technologien und -Diensten in der Cloud zu erstellen.
 
-Eine zweite Zielgruppe sind technische Entscheidungsträger, die bereits mit ASP.NET und/oder Azure vertraut sind und Informationen dazu suchen, ob ein Upgrade auf ASP.NET Core für neue oder vorhandene Projekte sinnvoll ist.
+Eine zweite Zielgruppe sind technische Entscheidungsträger, die bereits mit ASP.NET oder Azure vertraut sind und Informationen dazu suchen, ob ein Upgrade auf ASP.NET Core für neue oder vorhandene Projekte sinnvoll ist.
 
 ## <a name="how-you-can-use-this-guide"></a>Wie Sie diesen Leitfaden verwenden können
 
@@ -69,8 +105,9 @@ Dieser Leitfaden wurde in einem relativ kleinen Dokument zusammengefasst, das si
 Sie können diesen Leitfaden gerne an Ihr Team weiterleiten, um ein gemeinsames Verständnis dieser Überlegungen und Möglichkeiten zu gewährleisten. Wenn alle Beteiligten mit einer gemeinsamen Terminologie und den zugrunde liegenden Prinzipien arbeiten, kann eine konsistente Anwendung von Architekturmustern und -praktiken gewährleistet werden.
 
 ## <a name="references"></a>Verweise
+
 - **Wahl zwischen .NET Core und .NET Framework für Server-Apps**  
-<https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
 [Nächste](modern-web-applications-characteristics.md)

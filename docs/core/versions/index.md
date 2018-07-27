@@ -4,12 +4,12 @@ description: Informationen zur Versionierung in .NET Core
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.openlocfilehash: 33c545fdea254133fe6e65f4d6dd725f5184faec
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: aa4f05a1a95c1bfbd16f41ca695ea23d48606772
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298239"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792321"
 ---
 # <a name="net-core-versioning"></a>.NET Core-Versionskontrolle
 
@@ -32,6 +32,15 @@ Ab .NET Core 2.0 weisen Downloads eine einzige Versionsnummer im Dateinamen auf.
 * das `Microsoft.NETCore.App`-Metapaket
 
 Der Gebrauch einer einzelnen Versionsnummer erleichtert es Benutzern zu wissen, welche Version des SDK sie auf ihren Entwicklungscomputern installieren müssen und was die entsprechende Version des freigegebenen Frameworks sein soll, wenn sie eine Produktionsumgebung bereitstellen. Beim Herunterladen eines SDK oder einer Runtime ist die angezeigt Versionsnummer die gleiche.
+
+### <a name="version-selection"></a>Versionsauswahl
+
+.NET Core wendet bestimmte Richtlinien an, die bestimmen, welche Version der .NET Core-Runtime und des SDK in verschiedenen Szenarios verwendet werden. Diese Szenarios und Richtlinien werden im Artikel zur [Versionsauswahl](selection.md) vollständig erläutert.
+
+Diese Richtlinien sind für die Ausführung der folgenden Rollen zuständig:
+
+* Ermöglichung der einfachen und effizienten Bereitstellen von .NET Core, einschließlich der Sicherheit und verlässlicher Updates
+* Ermöglichung der Verwendung der neuesten Tools und Befehle unabhängig von der Zielruntime
 
 ### <a name="installers"></a>Installer
 

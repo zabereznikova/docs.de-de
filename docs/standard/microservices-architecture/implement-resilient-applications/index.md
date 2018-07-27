@@ -3,13 +3,13 @@ title: Implementieren von widerstandsfähigen Anwendungen
 description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Implementieren von widerstandsfähigen Anwendungen
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: ddb0f54b15735b9192d2088495947588f59829a0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106050"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875120"
 ---
 # <a name="implementing-resilient-applications"></a>Implementieren von widerstandsfähigen Anwendungen
 
