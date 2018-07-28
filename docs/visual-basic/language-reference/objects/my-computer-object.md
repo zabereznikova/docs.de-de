@@ -1,15 +1,15 @@
 ---
-title: My.Computer-Objekt
+title: My.Computer-Objekt (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: c3af674bf56694d1ccf589033f97421faafd8c46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0518a380ee8b1e33a9b1ceeac7db6c0251c48edf
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597346"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39323039"
 ---
 # <a name="mycomputer-object"></a>My.Computer-Objekt
 Stellt Eigenschaften für die Bearbeitung von Computerkomponenten bereit, z.B. Audio, die Uhr, die Tastatur, das Dateisystem und so weiter.  
