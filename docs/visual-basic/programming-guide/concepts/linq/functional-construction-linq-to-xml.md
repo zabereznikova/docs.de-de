@@ -3,11 +3,11 @@ title: Funktionale Konstruktion (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: 360c321f993c8adb17767987060a0edcccad082a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644289"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333012"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>Funktionale Konstruktion (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet mit der *funktionalen Konstruktion* eine leistungsfähige Möglichkeit zur Erstellung von XML-Elementen. Funktionale Konstruktion ist die Fähigkeit, eine XML-Struktur in einer einzelnen Anweisung zu erstellen.  
@@ -22,7 +22,7 @@ ms.locfileid: "33644289"
   
  Im Folgenden finden Sie ein Beispiel dazu:  
   
- Diese Funktionen ermöglichen es Ihnen das Schreiben von Code mit XML-Literale, eine XML-Struktur erstellen und Code schreiben, verwendet die Ergebnisse der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragen, wenn Sie eine XML-Struktur erstellen:  
+ Diese Funktionen ermöglichen es Ihnen, zum Schreiben von Code mit XML-Literalen aus, um eine XML-Struktur zu erstellen und auch Code schreiben, verwendet die Ergebnisse der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragen, bei der Erstellung einer XML-Struktur:  
   
 ```vb  
 Dim srcTree As XElement = _  

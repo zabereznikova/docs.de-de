@@ -3,11 +3,11 @@ title: 'Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 65321b9c-1239-45e4-af40-eb86cedf7abd
 ms.openlocfilehash: 4a0d16013ba85eace6cca374f2f284c4a6e39f69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644900"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332653"
 ---
 # <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Dabei handelt es sich um einen typischen Auftrag.  

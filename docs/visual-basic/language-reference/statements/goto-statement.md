@@ -1,5 +1,5 @@
 ---
-title: GoTo-Anweisung
+title: GoTo-Anweisung (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adb7668b6a818b2042a38f9458685a6f93085dc8
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604743"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332986"
 ---
 # <a name="goto-statement"></a>GoTo-Anweisung
-Verzweigungen bedingungslos an eine angegebene Zeile in einer Prozedur.  
+Brancht ohne Bedingungen in eine angegebene Zeile in einer Prozedur.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,31 +34,31 @@ GoTo line
  Erforderlich. Alle zeilenbezeichnungen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GoTo` -Anweisung verzweigen kann, nur für Zeilen in der Prozedur, in dem er angezeigt wird. Die Zeile benötigen eine Linie, die Bezeichnung `GoTo` finden können. Weitere Informationen finden Sie unter [wie: Label-Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ Die `GoTo` -Anweisung kann nur für Zeilen in der Prozedur, die in der es auftritt verzweigen. Die Zeile benötigen eine Zeile, die Bezeichnung `GoTo` können zu verweisen. Weitere Informationen finden Sie unter [wie: Label-Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
->  `GoTo` Anweisungen können, dass Code schwierig zu lesen und zu verwalten. Wann immer möglich, verwenden Sie stattdessen eine Steuerelement-Struktur. Weitere Informationen finden Sie unter [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+>  `GoTo` -Anweisungen können, dass Code schwierig zu lesen und zu verwalten. Wann immer möglich, verwenden Sie stattdessen eine Steuerelement-Struktur. Weitere Informationen finden Sie unter [Ablaufsteuerung](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
- Sie können keine `GoTo` Anweisung außerhalb von einer `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, oder `Using`... `End Using` Konstruktion zu einer Bezeichnung in.  
+ Sie können keine `GoTo` Anweisung außerhalb von einer `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, oder `Using`... `End Using` Erstellung zu einer Bezeichnung in.  
   
-## <a name="branching-and-try-constructions"></a>Verzweigung und Try-Konstrukten  
- Innerhalb einer `Try`... `Catch`... `Finally` Konstruktion, die folgenden Regeln gelten, für die Verzweigung mit der `GoTo` Anweisung.  
+## <a name="branching-and-try-constructions"></a>Verzweigen und versuchen Sie es Konstruktionen  
+ Innerhalb einer `Try`... `Catch`... `Finally` Konstruktion die folgenden Regeln gelten zur Verzweigung mit dem `GoTo` Anweisung.  
   
-|Blockieren oder region|Verzweigung von außerhalb|Verzweigen Sie von innerhalb|  
+|Block oder eine region|Verzweigung von außerhalb|Verzweigen Sie von innerhalb|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` Blockieren|Nur von einem `Catch` Block mit der gleichen Konstruktion <sup>1</sup>|Nur für außerhalb der gesamten Konstruktion|  
-|`Catch` Blockieren|Nie zulässig.|Nur für außerhalb der gesamten Konstruktion oder auf die `Try` Block mit der gleichen Konstruktion <sup>1</sup>|  
-|`Finally` Blockieren|Nie zulässig.|Nie zulässig.|  
+|`Try` Block|Nur von einem `Catch` Block, der die gleiche Konstruktion <sup>1</sup>|Nur für außerhalb der gesamten Konstruktion|  
+|`Catch` Block|Nicht zulässig.|Nur für außerhalb der gesamten Konstruktion oder auf die `Try` Block, der die gleiche Konstruktion <sup>1</sup>|  
+|`Finally` Block|Nicht zulässig.|Nicht zulässig.|  
   
- <sup>1</sup> sofern `Try`... `Catch`... `Finally` Konstruktion in einer anderen geschachtelt ist ein `Catch` Block kann keine Verzweigung in die `Try` Block auf einem eigenen Schachtelungsebene, jedoch nicht in einen anderen `Try` Block. Eine geschachtelte `Try`... `Catch`... `Finally` -Konstruktion muss vollständig in enthalten eine `Try` oder `Catch` Block der Konstruktion, in dem sie geschachtelt ist.  
+ <sup>1</sup> sofern `Try`... `Catch`... `Finally` -Konstruktion innerhalb einer anderen geschachtelt ist eine `Catch` -Block verzweigen kann, in der `Try` Block, eine eigene Schachtelungsebene, aber nicht in einen anderen `Try` Block. Eine geschachtelte `Try`... `Catch`... `Finally` Konstruktion muss vollständig im enthalten sein, eine `Try` oder `Catch` Block von der Konstruktion, in dem sie geschachtelt ist.  
   
- Die folgende Abbildung zeigt eine `Try` Konstruktion in einer anderen geschachtelt. Verschiedene Verzweigungen zwischen den Blöcken des zwei Konstruktionen werden als gültig oder ungültig gekennzeichnet.  
+ Die folgende Abbildung zeigt eine `Try` Konstruktion in einer anderen geschachtelt. Verschiedene getestete Branches zwischen die beiden Konstruktionen Datenblöcke werden als gültig oder ungültig angegeben.  
   
- ![Grafisches Diagramm der Verzweigung in Try-Konstrukten](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
-Gültigen und ungültigen Verzweigungen in Try-Konstrukten  
+ ![Grafisches Diagramm zum Branchen in Try-Konstrukten](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
+Gültige und ungültige Branches in Try-Konstrukten  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `GoTo` Anweisung zum Verzweigen zeilenbezeichnungen in einer Prozedur.  
+ Im folgenden Beispiel wird die `GoTo` Branch in Zeile Bezeichnungen in einer Prozedur-Anweisung.  
   
  [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   

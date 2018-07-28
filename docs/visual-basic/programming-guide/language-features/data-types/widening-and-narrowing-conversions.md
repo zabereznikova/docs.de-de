@@ -20,23 +20,23 @@ helpviewer_keywords:
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
 ms.openlocfilehash: e574c20ec259953fea4b11d8f65e546373a4fe8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655418"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332573"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Erweiternde und eingrenzende Konvertierungen (Visual Basic)
-Ein wichtiger Aspekt mit einer Typumwandlung ist, ob das Ergebnis der Konvertierung innerhalb des Bereichs des Zieltyps Daten ist.  
+Ein wichtiger Aspekt bei einer typkonvertierung ist, ob das Ergebnis der Konvertierung innerhalb des Bereichs des Ziel-Datentyps.  
   
- Ein *erweiternde Konvertierung* ändert einen Wert in einen Datentyp, die für jeden möglichen Wert der ursprünglichen Daten zulassen kann.  Erweiterungskonvertierungen beibehalten des Quellwerts. jedoch kann seine Darstellung zu ändern. Dies geschieht, wenn Sie einen ganzzahligen Typ zu konvertieren `Decimal`, oder von `Char` auf `String`.  
+ Ein *eine erweiternde Konvertierung* ändert einen Wert in einen Datentyp, die für jeden möglichen Wert der ursprünglichen Daten ermöglichen.  Erweiternde Konvertierungen den Quellwert beibehalten, aber es können die Darstellung ändern. Dies geschieht, wenn Sie einen ganzzahligen Typ zu konvertieren `Decimal`, oder von `Char` zu `String`.  
   
- Eine *einschränkende* Konvertierung ändert einen Wert in einen Datentyp, der möglicherweise nicht in der Lage ist, alle möglichen Werte zu speichern. Beispielsweise wird ein Dezimalstellenwert gerundet, bei der Konvertierung in einen ganzzahligen Typ und einen numerischen Typ konvertiert wird, um `Boolean` wird reduziert, entweder `True` oder `False`.  
+ Eine *einschränkende* Konvertierung ändert einen Wert in einen Datentyp, der möglicherweise nicht in der Lage ist, alle möglichen Werte zu speichern. Zum Beispiel wird ein Dezimalstellenwert gerundet, bei der Konvertierung in einen ganzzahligen Typ und einen numerischen Typ konvertiert wird, um `Boolean` wird reduziert, entweder `True` oder `False`.  
   
 ## <a name="widening-conversions"></a>Erweiterungskonvertierungen  
- Die folgende Tabelle zeigt die erweiterungskonvertierungen Standard.  
+ Die folgende Tabelle zeigt die Standard-erweiternde Konvertierungen.  
   
-|Datentyp|Wird erweitert, um Datentypen <sup>1</sup>|  
+|Datentyp|Datentypen erweitert <sup>1</sup>|  
 |---|---|  
 |[SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|`SByte`, `Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
 |[Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|`Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
@@ -49,54 +49,54 @@ Ein wichtiger Aspekt mit einer Typumwandlung ist, ob das Ergebnis der Konvertier
 |[Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
-|Alle Aufzählungstyp ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Die zugrunde liegenden Ganzzahltyp und beliebigen Typs, der der zugrunde liegenden Typ erweitert werden kann.|  
+|Einem Enumerationstyp ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Die zugrunde liegenden ganzzahligen Typ und einen beliebigen Typ, der zugrunde liegenden Typ erweitert wird.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|`Char`-Array|`Char` Array, `String`|  
+|`Char`-Array|`Char` Array `String`|  
 |Beliebiger Typ|[Objekt](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
-|Alle abgeleiteten Typ|Alle Basistypen, die von der sie abgeleitet ist <sup>3</sup>.|  
-|Beliebiger Typ|Eine beliebige Schnittstelle implementiert.|  
-|[Nothing](../../../../visual-basic/language-reference/nothing.md)|Jeder beliebige Datentyp oder der Objekttyp.|  
+|Alle abgeleiteten Typ|Alle Basistyp, die von der sie abgeleitet ist <sup>3</sup>.|  
+|Beliebiger Typ|Jede Schnittstelle, die er implementiert.|  
+|[Nothing](../../../../visual-basic/language-reference/nothing.md)|Jeder Datentyp oder ein Objekttyp.|  
   
- <sup>1</sup> per Definition jedes-Datentyp wird auf sich selbst.  
+ <sup>1</sup> per Definition an, die für jeden Datentyp an sich selbst erweitert wird.  
   
- <sup>2</sup> Konvertierungen von `Integer`, `UInteger`, `Long`, `ULong`, oder `Decimal` auf `Single` oder `Double` wird unter Umständen in einem Genauigkeitsverlust, aber nie in Verlust der Größe. In diesem Sinn ist kein Verlust von Typinformationen erforderlich.  
+ <sup>2</sup> Konvertierungen von `Integer`, `UInteger`, `Long`, `ULong`, oder `Decimal` zu `Single` oder `Double` kann dazu führen, dass Genauigkeit verloren gehen, niemals in der Verlust der Größe. In diesem Sinne fallen sie keine Informationen verloren gehen.  
   
- <sup>3</sup> scheint es überrascht, dass die Konvertierung eines abgeleiteten Typs auf einen der Basistypen erweiternde Konvertierung ist. Die Ausrichtung ist, dass der abgeleitete Typ alle Member des Basistyps, enthält damit es als eine Instanz des Basistyps qualifiziert. In die entgegengesetzte Richtung enthält der Basistyp keiner neuer Member, die vom abgeleiteten Typ definiert.  
+ <sup>3</sup> es vielleicht überraschend, dass die Konvertierung eines abgeleiteten Typs auf einen der Basistypen erweiternde Konvertierung ist. Die Ausrichtung ist, dass der abgeleitete Typ alle Member des Basistyps, enthält damit es als eine Instanz des Basistyps qualifiziert. In die entgegengesetzte Richtung enthält der Basistyp keine neuen Member, die vom abgeleiteten Typ definiert.  
   
- Erweiternde Konvertierungen zur Laufzeit immer erfolgreich sein und Verlust von Daten niemals anfallen. Sie können immer ausführen, werden implizit, gibt an, ob die [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) legt die typüberprüfung zu wechseln `On` oder `Off`.  
+ Erweiternde Konvertierungen immer erfolgreich, zur Laufzeit und verursachen keine Daten verloren gehen. Immer durchführen können sie implizit, ob die [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) bestimmt den Typ an, wechseln Sie zur Überprüfung `On` oder `Off`.  
   
 ## <a name="narrowing-conversions"></a>Eingrenzungskonvertierungen  
- Die standardmäßigen einschränkenden Konvertierungen umfassen Folgendes:  
+ Die standardmäßige einschränkenden Konvertierungen umfassen Folgendes:  
   
--   Die umgekehrte Richtung erweiternde Konvertierungen in den vorherigen Tabelle (außer, dass jeder Typ an sich selbst erweitert)  
+-   Die umgekehrte erfahren Sie, wie der erweiternden Konvertierungen in der vorherigen Tabelle (außer, dass jeder Typ an sich selbst erweitert wird)  
   
 -   Konvertierungen in beide Richtungen zwischen [booleschen](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) und alle numerischen Typen  
   
--   Konvertierungen von numerischen Typen an ein beliebiges Aufzählungstyp (`Enum`)  
+-   Konvertierungen von numerischen Typen in einen Enumerationstyp (`Enum`)  
   
--   Konvertierungen in beide Richtungen zwischen [Zeichenfolge](../../../../visual-basic/language-reference/data-types/string-data-type.md) und alle numerischen Typen `Boolean`, oder [Datum](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+-   Konvertierungen in beide Richtungen zwischen [Zeichenfolge](../../../../visual-basic/language-reference/data-types/string-data-type.md) und alle numerischen Typen, `Boolean`, oder [Datum](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   Geben Sie die Konvertierungen von einem Datentyp oder das Objekt in einen Typ, der davon abgeleitete  
+-   Geben Sie die Konvertierungen von einem Datentyp oder das Objekt zu einem Typ abgeleitet wird  
   
- Einschränkende Konvertierungen nicht immer erfolgreich ausgeführt werden Sie, zur Laufzeit und können fehlschlagen Sie oder verursachen Sie Datenverlust. Ein Fehler tritt auf, wenn der Zieldatentyp den konvertierten Wert empfangen kann. Beispielsweise kann eine numerische Konvertierung zu einem Überlauf führen. Der Compiler lässt nicht zu, Sie zum Durchführen von einschränkende Konvertierungen implizit, wenn die [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) legt der Switch die typüberprüfung `Off`.  
+ Einschränkende Konvertierungen nicht immer erfolgreich zur Laufzeit und können fehlschlagen oder Datenverlust verursachen. Ein Fehler tritt auf, wenn den konvertierte Wert nicht der Zieldatentyp erhalten kann. Beispielsweise kann eine numerische Konvertierung zu einem Überlauf führen. Der Compiler lässt nicht zum Durchführen von einschränkende Konvertierungen implizit, wenn die [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) bestimmt den Typ an, wechseln Sie zur Überprüfung `Off`.  
   
 > [!NOTE]
->  Die einschränkende Konvertierung Fehler unterdrückt für Konvertierungen von den Elementen in einem `For Each…Next` -Auflistung, um die Loop-Steuerelementvariable. Weitere Informationen und Beispiele finden Sie im Abschnitt "Einschränkende Konvertierungen" [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+>  Der einschränkende Konvertierung-Fehler unterdrückt für Konvertierungen aus den Elementen in einem `For Each…Next` -Auflistung, um die Schleifensteuerungsvariable. Weitere Informationen und Beispiele finden Sie im Abschnitt "Einschränkende Konvertierungen" in [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-### <a name="when-to-use-narrowing-conversions"></a>Einschränkende Konvertierungen verwenden  
- Verwenden Sie eine einschränkende Konvertierung, wenn Sie wissen, dass der Quellwert in den Zieldatentyp ohne Fehler oder Datenverlust konvertiert werden kann. Angenommen, Sie haben eine `String` , dass Sie wissen, entweder "True" oder "False" enthält, können Sie die `CBool` Schlüsselwort umzuwandeln `Boolean`.  
+### <a name="when-to-use-narrowing-conversions"></a>Verwenden Sie einschränkende Konvertierungen  
+ Verwenden Sie eine einschränkende Konvertierung, wenn Sie wissen, dass sich der Quellwert in den Zieltyp für die Daten ohne Fehler oder Datenverlust konvertiert werden kann. Angenommen, Sie haben eine `String` , dass Sie wissen, entweder "True" oder "False" enthält, können Sie die `CBool` Schlüsselwort konvertiert `Boolean`.  
   
 ## <a name="exceptions-during-conversion"></a>Ausnahmen während der Konvertierung  
- Da immer erweiternde Konvertierungen erfolgreich ausgeführt werden, lösen sie keine Ausnahmen. Die folgenden Ausnahmen einschränkende Konvertierungen, wenn diese nicht am häufigsten ausgelöst werden:  
+ Da immer erweiternde Konvertierungen erfolgreich ausgeführt werden, werden sie keine Ausnahmen auslösen. Einschränkende Konvertierungen, wenn ein Fehler auftritt, löst am häufigsten gelten folgenden Ausnahmen:  
   
--   <xref:System.InvalidCastException> – Wenn keine Konvertierung zwischen den beiden Typen definiert ist  
+-   <xref:System.InvalidCastException> Wenn keine Konvertierung zwischen den beiden Typen definiert ist  
   
--   <xref:System.OverflowException> – (nur bei ganzzahligen Typen) Wenn der konvertierte Wert für den Zieltyp zu groß ist.  
+-   <xref:System.OverflowException> – (nur bei ganzzahligen Typen), wenn der konvertierte Wert für den Zieltyp zu groß ist.  
   
- Wenn eine Klasse oder Struktur definiert eine [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) als ein Konvertierungsoperator zu oder von dieser Klasse oder Struktur, dienen, `CType` geeignete Ausnahmen auslösen können. Darüber hinaus, `CType` möglicherweise Visual Basic-Funktionen aufrufen oder [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Methoden, die wiederum eine Vielzahl von Ausnahmen auslösen können.  
+ Wenn eine Klasse oder Struktur definiert eine [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) als Operator für die Konvertierung in oder aus dieser Klasse oder Struktur, dienen, `CType` können geeignete Ausnahmen auslösen. Darüber hinaus, `CType` kann Visual Basic-Funktionen aufrufen oder [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Methoden, die wiederum eine Vielzahl von Ausnahmen auslösen können.  
   
-## <a name="changes-during-reference-type-conversions"></a>Änderungen bei Verweis Typkonvertierungen  
- Eine Konvertierung von einem *Verweistyp* kopiert nur die Zeiger auf den Wert. Der Wert selbst wird weder kopiert noch in keiner Weise geändert. Das einzige, das sich ändern kann ist den Datentyp der Variablen den Zeiger. Im folgenden Beispiel der Datentyp wird von der abgeleiteten Klasse von deren Basisklasse umgewandelt, aber das Objekt, das beide Variablen jetzt auf bleibt unverändert.  
+## <a name="changes-during-reference-type-conversions"></a>Änderungen bei der Verweistypkonvertierungen  
+ Eine Konvertierung von einem *Verweistyp* wird nur der Zeiger auf den Wert. Der Wert selbst werden nicht kopiert oder in einer Weise geändert. Das einzige, das geändert werden kann ist den Datentyp der Variablen den Zeiger enthält. Klicken Sie im folgenden Beispiel der Datentyp aus der abgeleiteten Klasse konvertiert wird, mit der Basisklasse, aber das Objekt, dem beide Variablen zeigen jetzt auf bleibt unverändert.  
   
 ```  
 ' Assume class cSquare inherits from class cShape.  
@@ -109,7 +109,7 @@ shape = square
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Konvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
