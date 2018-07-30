@@ -15,19 +15,19 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/26/2018
 ms.locfileid: "33575348"
 ---
 # <a name="names-of-type-members"></a>Namen von Typmembern
-Typen von Elementen vorgenommen werden: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden die Richtlinien für die Benennung von Typmembern beschrieben.  
+Typen bestehen aus Membern: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden die Richtlinien zum Benennen von Typmembern beschrieben.  
   
 ## <a name="names-of-methods"></a>Namen von Methoden  
- Da Methoden überprüfbarer Aktionen sind, müssen die Entwurfsrichtlinien Methodennamen Verben oder verbale Ausdrücke sein. Befolgen diese Richtlinie auch dient zur Unterscheidung von Methodennamen aus den Namen der Eigenschaft, und geben die Nomen oder Adjektiv Ausdrücke sind.  
+ Da Methoden das Ausführen von Aktionen ermöglichen, erfordern die Entwurfsrichtlinien, dass Methodennamen Verben oder Verbalphrasen sind. Mit dieser Richtlinie ist es auch möglich, Methodennamen von Eigenschafts- und Typnamen zu unterscheiden, die Nominal- oder Adjektivphrasen sind.  
   
- **Führen Sie ✓** Geben Sie einen Methodennamen, die Verben oder verbale Ausdrücke sind.  
+ **✓ DO**: Geben Sie Methodennamen an, die Verben oder Verbalphrasen sind.  
   
 ```  
 public class String {  
@@ -38,24 +38,24 @@ public class String {
 ```  
   
 ## <a name="names-of-properties"></a>Namen von Eigenschaften  
- Im Gegensatz zu anderen Mitgliedern Eigenschaften nominaler Ausdruck oder adjektivische Namen Unternehmensservern benötigen. Grund hierfür eine Eigenschaft bezieht sich auf Daten und der Namen der Eigenschaft angibt, ist. PascalCasing wird immer für Eigenschaftennamen verwendet.  
+ Anders als bei anderen Membern sollten Sie Eigenschaften einen Namen geben, der eine Nominal- oder Adjektivphrase ist. Der Grund dafür ist, dass sich eine Eigenschaft auf Daten bezieht, und der Name der Eigenschaft dies widerspiegelt. Eigenschaftennamen werden immer in Pascal-Schreibweise geschrieben.  
   
- **Führen Sie ✓** Benennen von Eigenschaften, die über ein Nomen, nominaler Ausdruck oder Adjektiv.  
+ **✓ DO**: Benennen Sie Eigenschaften mit einem Nomen, einer Nominalphrase oder einem Adjektiv.  
   
- **X nicht** verfügen über Eigenschaften, die den Namen des "Get"-Methoden, wie im folgenden Beispiel entsprechen:  
+ **X DO NOT**: Nutzen Sie keine Eigenschaften, die mit dem Namen von „Get“-Methoden übereinstimmen, so wie in folgendem Beispiel dargestellt:  
   
  `public string TextWriter { get {...} set {...} }`  
  `public string GetTextWriter(int value) { ... }`  
   
- Dieses Muster gibt normalerweise an, dass die Eigenschaft wirklich ein Methode sein sollte.  
+ Dieses Muster gibt normalerweise an, dass die Eigenschaft eigentlich eine Methode sein soll.  
   
- **Führen Sie ✓** benennen Sammlungseigenschaften mit einem im plural Ausdruck beschreiben die Elemente in der Auflistung anstatt im singular Ausdruck gefolgt von "List" oder "Collection".  
+ **✓ DO**: Benennen Sie Sammlungseigenschaften mit einer Phrase im Plural, mit dem die Elemente in der Sammlung beschrieben werden, anstatt mit einer Phrase im Singular, gefolgt von „List“ oder „Collection“.  
   
- **Führen Sie ✓** benennen boolesche Eigenschaften, die mit einem positiven Begriff (`CanSeek` anstelle von `CantSeek`). Optional, Sie können auch das Präfix boolescher Eigenschaften, die mit "Is", "kann" oder "Hat," jedoch nur, sofern der Wert hinzugefügt.  
+ **✓ DO**: Benennen Sie boolesche Eigenschaften mit einem positiven Ausdruck (`CanSeek` anstelle von `CantSeek`). Optional können Sie auch booleschen Eigenschaften „Is,“, „Can,“ oder „Has,“ voranstellen, jedoch nur, wo es Sinn ergibt.  
   
- **✓ GGF.** erteilen einer Eigenschaft den gleichen Namen wie den Typ.  
+ **✓ CONSIDER**: Ziehen Sie in Betracht, einer Eigenschaft den gleichen Namen wie ihrem Typ zu geben.  
   
- Beispielsweise ruft die folgende Eigenschaft ordnungsgemäß und legt einen Enumerationswert, der mit dem Namen `Color`, sodass die Eigenschaft heißt `Color`:  
+ Die folgende Eigenschaft ruft ordnungsgemäß einen Enumerationswert namens `Color` ab und legt ihn fest. Die Eigenschaft heißt also `Color`:  
   
 ```  
 public enum Color {...}  
@@ -65,42 +65,42 @@ public class Control {
 ```  
   
 ## <a name="names-of-events"></a>Namen von Ereignissen  
- Ereignisse beziehen sich immer auf eine Aktion aus, entweder ein Fehler oder eine, die aufgetreten ist. Daher wie bei Methoden, Ereignisse mit Verben heißen und Verb Zeitformen wird verwendet, um den Zeitpunkt angibt, wann das Ereignis ausgelöst wird.  
+ Ereignisse beziehen sich immer auf Aktionen, also entweder auf eine Aktion, die gerade passiert oder eine, die in der Vergangenheit liegt. Deshalb werden Ereignisse mit Verben benannt (wie Methoden auch), und die Verbkonjugation wird genutzt, um den Zeitpunkt anzugeben, wann das Ereignis ausgelöst wird.  
   
- **Führen Sie ✓** benennen Sie Ereignisse mit einem Verb oder ein Ausdruck.  
+ **✓ DO**: Benennen Sie Ereignisse mit einem Verb oder einer Verbalphrase.  
   
- Beispiele hierfür sind `Clicked`, `Painting`, `DroppedDown`und so weiter.  
+ Beispiele dafür sind `Clicked`, `Painting`, `DroppedDown` usw.  
   
- **Führen Sie ✓** benennen Ereignisse Namen durch ein Konzept von vor und nach, mit der vorhanden und der Vergangenheit Zeitformen.  
+ **✓ DO**: Geben Sie Ereignissen Namen, die sich auf Vergangenheit und Zukunft beziehen. Verwenden Sie dazu Gegenwarts- und Vergangenheitsformen.  
   
- Beispielsweise würde ein Schließen-Ereignis, das ausgelöst wird, bevor ein Fenster geschlossen wird aufgerufen werden `Closing`, und eine, die ausgelöst wird, nachdem das Fenster geschlossen wird aufgerufen `Closed`.  
+ Beispielsweise wird ein Schließereignis, das ausgelöst wird, bevor ein Fenster geschlossen wird, als `Closing` bezeichnet. Ein Ereignis, das nach dem Schließen des Fensters ausgelöst wird, wird als `Closed` bezeichnet.  
   
- **X nicht** "Before" oder "After"-Präfixe oder Suffixe an, dass vor und nach der Ereignisse verwenden. Verwenden Sie vorhanden und Vergangenheit Zeitformen wie gerade beschrieben.  
+ **X DO NOT**: Verwenden Sie keine „Before“- und „After“-Präfixe und -Postfixe, um eine Aktion vor oder nach Ereignissen anzugeben. Verwenden Sie wie oben beschrieben die Gegenwarts- und Vergangenheitsformen.  
   
- **Führen Sie ✓** Ereignishandlerauflistung (Delegaten als Typen von Ereignissen verwendet) mit dem Suffix "EventHandler" nennen, wie im folgenden Beispiel gezeigt:  
+ **✓ DO**: Benennen Sie Ereignishandler (Delegaten, die als Typen von Ereignissen verwendet werden) mit dem Suffix „EventHandler“, wie in folgendem Beispiel dargestellt:  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
- **Führen Sie ✓** verwenden zwei Parameter mit dem Namen `sender` und `e` in den Ereignishandlern.  
+ **✓ DO**: Verwenden Sie in Ereignishandlern zwei Parameter mit der Bezeichnung `sender` und `e`.  
   
- Der Parameter Sender stellt das Objekt, das das Ereignis ausgelöst hat. Der Absenderparameter ist in der Regel vom Typ `object`, selbst wenn es möglich ist, einen spezifischeren Typ zu verwenden.  
+ Der sender-Parameter stellt das Objekt dar, das das Ereignis ausgelöst hat. Der sender-Parameter ist in der Regel vom Typ `object`, auch wenn es möglich ist, einen spezifischeren Typ zu verwenden.  
   
- **Führen Sie ✓** benennen Sie Ereignisargumentklassen mit dem Suffix "EventArgs".  
+ **✓ DO**: Benennen Sie Ereignisargumentklassen mit dem Suffix „EventArgs“.  
   
-## <a name="names-of-fields"></a>Namen von Feldern  
- Die Benennung von Feld-Richtlinien gelten für statische öffentliche und geschützte Felder. Interne und private Felder werden nicht behandelt, durch die Richtlinien und öffentlichen oder geschützten Instanzfelder sind nicht zulässig, durch die [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md).  
+## <a name="names-of-fields"></a>Feldnamen  
+ Die Richtlinien für die Benennung von Feldern gelten für statische öffentliche und geschützte Felder. Interne und private Felder sind nicht Gegenstand von Richtlinien, und öffentliche oder geschützte Instanzfelder sind laut den [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md) nicht zulässig.  
   
- **Führen Sie ✓** PascalCasing in Feldnamen verwenden.  
+ **✓ DO**: Verwenden Sie die Pascal-Schreibweise in Feldnamen.  
   
- **Führen Sie ✓** Namen von Feldern an, indem ein Nomen, nominaler Ausdruck oder Adjektiv.  
+ **✓ DO**: Benennen Sie Felder mit einem Nomen, einer Nominalphrase oder einem Adjektiv.  
   
- **X nicht** verwenden Sie ein Präfix für Feldnamen.  
+ **X DO NOT**: Verwenden Sie kein Präfix für Feldnamen.  
   
- Verwenden Sie z. B. nicht "G_" oder "S_" an, dass statische Felder.  
+ Verwenden Sie beispielsweise nicht „g_“ oder „s_“, um statische Felder anzugeben.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch  
  [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
