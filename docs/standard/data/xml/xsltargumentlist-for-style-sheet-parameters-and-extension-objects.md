@@ -8,56 +8,56 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 808d21ae0eabdc7502ef97facc3d45f2220883af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1a17e32b98405d1b35b5b19e3e9144cffef5bfe
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576808"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332999"
 ---
-# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="503e2-102">"XsltArgumentList" für Stylesheetparameter und Erweiterungsobjekte</span><span class="sxs-lookup"><span data-stu-id="503e2-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
-<span data-ttu-id="503e2-103">Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible Stylesheet Transformation) und XSLT-Erweiterungsobjekte.</span><span class="sxs-lookup"><span data-stu-id="503e2-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="503e2-104">Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="503e2-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="1499c-102">"XsltArgumentList" für Stylesheetparameter und Erweiterungsobjekte</span><span class="sxs-lookup"><span data-stu-id="1499c-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
+<span data-ttu-id="1499c-103">Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible Stylesheet Transformation) und XSLT-Erweiterungsobjekte.</span><span class="sxs-lookup"><span data-stu-id="1499c-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="1499c-104">Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1499c-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="503e2-105">Die <xref:System.Xml.Xsl.XslTransform>-Klasse und die <xref:System.Xml.Xsl.XsltArgumentList>-Klasse sind in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet.</span><span class="sxs-lookup"><span data-stu-id="503e2-105">The <xref:System.Xml.Xsl.XslTransform> and <xref:System.Xml.Xsl.XsltArgumentList> classes are obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="503e2-106">Sie können XSLT-Transformationen mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse durchführen.</span><span class="sxs-lookup"><span data-stu-id="503e2-106">You can perform XSLT transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="503e2-107">Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).</span><span class="sxs-lookup"><span data-stu-id="503e2-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+>  <span data-ttu-id="1499c-105">Die <xref:System.Xml.Xsl.XslTransform>-Klasse und die <xref:System.Xml.Xsl.XsltArgumentList>-Klasse sind in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet.</span><span class="sxs-lookup"><span data-stu-id="1499c-105">The <xref:System.Xml.Xsl.XslTransform> and <xref:System.Xml.Xsl.XsltArgumentList> classes are obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="1499c-106">Sie können XSLT-Transformationen mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse durchführen.</span><span class="sxs-lookup"><span data-stu-id="1499c-106">You can perform XSLT transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="1499c-107">Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).</span><span class="sxs-lookup"><span data-stu-id="1499c-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="503e2-108">Die <xref:System.Xml.Xsl.XsltArgumentList>-Klasse enthält XSLT-Parameter und XSLT-Erweiterungsobjekte.</span><span class="sxs-lookup"><span data-stu-id="503e2-108">The <xref:System.Xml.Xsl.XsltArgumentList> class contains XSLT parameters and XSLT extension objects.</span></span> <span data-ttu-id="503e2-109">Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="503e2-109">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
+ <span data-ttu-id="1499c-108">Die <xref:System.Xml.Xsl.XsltArgumentList>-Klasse enthält XSLT-Parameter und XSLT-Erweiterungsobjekte.</span><span class="sxs-lookup"><span data-stu-id="1499c-108">The <xref:System.Xml.Xsl.XsltArgumentList> class contains XSLT parameters and XSLT extension objects.</span></span> <span data-ttu-id="1499c-109">Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1499c-109">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
   
- <span data-ttu-id="503e2-110">Die Übergabe eines Objekts bietet gegenüber der Verwendung eines eingebetteten Skripts folgende Vorteile:</span><span class="sxs-lookup"><span data-stu-id="503e2-110">The following are advantages to passing an object rather than using an embedded script:</span></span>  
+ <span data-ttu-id="1499c-110">Die Übergabe eines Objekts bietet gegenüber der Verwendung eines eingebetteten Skripts folgende Vorteile:</span><span class="sxs-lookup"><span data-stu-id="1499c-110">The following are advantages to passing an object rather than using an embedded script:</span></span>  
   
--   <span data-ttu-id="503e2-111">Sie ermöglicht eine bessere Kapselung und Wiederverwendung von Klassen.</span><span class="sxs-lookup"><span data-stu-id="503e2-111">Provides better encapsulation and reuse of classes.</span></span>  
+-   <span data-ttu-id="1499c-111">Sie ermöglicht eine bessere Kapselung und Wiederverwendung von Klassen.</span><span class="sxs-lookup"><span data-stu-id="1499c-111">Provides better encapsulation and reuse of classes.</span></span>  
   
--   <span data-ttu-id="503e2-112">Stylesheets werden kleiner und sind besser verwaltbar.</span><span class="sxs-lookup"><span data-stu-id="503e2-112">Allows style sheets to be smaller and more maintainable.</span></span>  
+-   <span data-ttu-id="1499c-112">Stylesheets werden kleiner und sind besser verwaltbar.</span><span class="sxs-lookup"><span data-stu-id="1499c-112">Allows style sheets to be smaller and more maintainable.</span></span>  
   
--   <span data-ttu-id="503e2-113">Das Aufrufen von Methoden für Klassen, die zu anderen Namespaces gehören als zu denen, die im Rahmen der unterstützten <xref:System>-Namespaces definiert sind, wird unterstützt.</span><span class="sxs-lookup"><span data-stu-id="503e2-113">Supports calling methods on classes belonging to namespaces other than those defined within the set of supported <xref:System> namespaces.</span></span>  
+-   <span data-ttu-id="1499c-113">Das Aufrufen von Methoden für Klassen, die zu anderen Namespaces gehören als zu denen, die im Rahmen der unterstützten <xref:System>-Namespaces definiert sind, wird unterstützt.</span><span class="sxs-lookup"><span data-stu-id="1499c-113">Supports calling methods on classes belonging to namespaces other than those defined within the set of supported <xref:System> namespaces.</span></span>  
   
--   <span data-ttu-id="503e2-114">Bei Verwendung von <xref:System.Xml.XPath.XPathNodeIterator> wird die Übergabe von Ergebnisstrukturfragmenten an das Stylesheet unterstützt.</span><span class="sxs-lookup"><span data-stu-id="503e2-114">Supports passing result tree fragments to the style sheet with the use of the <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
+-   <span data-ttu-id="1499c-114">Bei Verwendung von <xref:System.Xml.XPath.XPathNodeIterator> wird die Übergabe von Ergebnisstrukturfragmenten an das Stylesheet unterstützt.</span><span class="sxs-lookup"><span data-stu-id="1499c-114">Supports passing result tree fragments to the style sheet with the use of the <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
   
-## <a name="xslt-style-sheet-parameters"></a><span data-ttu-id="503e2-115">XSLT-Stylesheetparameter</span><span class="sxs-lookup"><span data-stu-id="503e2-115">XSLT Style Sheet Parameters</span></span>  
- <span data-ttu-id="503e2-116">XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="503e2-116">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="503e2-117">Dabei wird ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.</span><span class="sxs-lookup"><span data-stu-id="503e2-117">A qualified name and namespace Uniform Resource Identifier (URI) are associated with the parameter object at that time.</span></span>  
+## <a name="xslt-style-sheet-parameters"></a><span data-ttu-id="1499c-115">XSLT-Stylesheetparameter</span><span class="sxs-lookup"><span data-stu-id="1499c-115">XSLT Style Sheet Parameters</span></span>  
+ <span data-ttu-id="1499c-116">XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="1499c-116">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="1499c-117">Dabei wird ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.</span><span class="sxs-lookup"><span data-stu-id="1499c-117">A qualified name and namespace Uniform Resource Identifier (URI) are associated with the parameter object at that time.</span></span>  
   
- <span data-ttu-id="503e2-118">Das Parameterobjekt muss einem W3C-Typ entsprechen.</span><span class="sxs-lookup"><span data-stu-id="503e2-118">The parameter object should correspond to a World Wide Web Consortium (W3C) type.</span></span> <span data-ttu-id="503e2-119">In der folgenden Tabelle sind die jeweiligen W3C-Typen mit den entsprechenden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Klassen (Typ) aufgelistet und es ist angegeben, ob es sich bei dem W3C-Typ um einen XPath-Typ (XML Path Language) oder einen XSLT-Typ handelt.</span><span class="sxs-lookup"><span data-stu-id="503e2-119">The following table shows the corresponding W3C types, the equivalent [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] classes (type), and whether the W3C type is an XML Path Language (XPath) type or XSLT type.</span></span>  
+ <span data-ttu-id="1499c-118">Das Parameterobjekt muss einem W3C-Typ entsprechen.</span><span class="sxs-lookup"><span data-stu-id="1499c-118">The parameter object should correspond to a World Wide Web Consortium (W3C) type.</span></span> <span data-ttu-id="1499c-119">In der folgenden Tabelle sind die jeweiligen W3C-Typen mit den entsprechenden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Klassen (Typ) aufgelistet und es ist angegeben, ob es sich bei dem W3C-Typ um einen XPath-Typ (XML Path Language) oder einen XSLT-Typ handelt.</span><span class="sxs-lookup"><span data-stu-id="1499c-119">The following table shows the corresponding W3C types, the equivalent [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] classes (type), and whether the W3C type is an XML Path Language (XPath) type or XSLT type.</span></span>  
   
-|<span data-ttu-id="503e2-120">W3C-Typ</span><span class="sxs-lookup"><span data-stu-id="503e2-120">W3C Type</span></span>|<span data-ttu-id="503e2-121">Entsprechende .NET Framework-Klasse (Typ)</span><span class="sxs-lookup"><span data-stu-id="503e2-121">Equivalent .NET Framework class (type)</span></span>|<span data-ttu-id="503e2-122">XPath-Typ oder XSLT-Typ</span><span class="sxs-lookup"><span data-stu-id="503e2-122">XPath type or XSLT type</span></span>|  
+|<span data-ttu-id="1499c-120">W3C-Typ</span><span class="sxs-lookup"><span data-stu-id="1499c-120">W3C Type</span></span>|<span data-ttu-id="1499c-121">Entsprechende .NET Framework-Klasse (Typ)</span><span class="sxs-lookup"><span data-stu-id="1499c-121">Equivalent .NET Framework class (type)</span></span>|<span data-ttu-id="1499c-122">XPath-Typ oder XSLT-Typ</span><span class="sxs-lookup"><span data-stu-id="1499c-122">XPath type or XSLT type</span></span>|  
 |--------------|----------------------------------------------|-----------------------------|  
-|<span data-ttu-id="503e2-123">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="503e2-123">String</span></span>|<span data-ttu-id="503e2-124">System.String</span><span class="sxs-lookup"><span data-stu-id="503e2-124">System.String</span></span>|<span data-ttu-id="503e2-125">XPath</span><span class="sxs-lookup"><span data-stu-id="503e2-125">XPath</span></span>|  
-|<span data-ttu-id="503e2-126">Boolesch</span><span class="sxs-lookup"><span data-stu-id="503e2-126">Boolean</span></span>|<span data-ttu-id="503e2-127">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="503e2-127">System.Boolean</span></span>|<span data-ttu-id="503e2-128">XPath</span><span class="sxs-lookup"><span data-stu-id="503e2-128">XPath</span></span>|  
-|<span data-ttu-id="503e2-129">Anzahl</span><span class="sxs-lookup"><span data-stu-id="503e2-129">Number</span></span>|<span data-ttu-id="503e2-130">System.Double</span><span class="sxs-lookup"><span data-stu-id="503e2-130">System.Double</span></span>|<span data-ttu-id="503e2-131">XPath</span><span class="sxs-lookup"><span data-stu-id="503e2-131">XPath</span></span>|  
-|<span data-ttu-id="503e2-132">Ergebnisstrukturfragment</span><span class="sxs-lookup"><span data-stu-id="503e2-132">Result Tree Fragment</span></span>|<span data-ttu-id="503e2-133">System.Xml.XPath.XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="503e2-133">System.Xml.XPath.XPathNavigator</span></span>|<span data-ttu-id="503e2-134">XSLT</span><span class="sxs-lookup"><span data-stu-id="503e2-134">XSLT</span></span>|  
-|<span data-ttu-id="503e2-135">Knotengruppe</span><span class="sxs-lookup"><span data-stu-id="503e2-135">Node Set</span></span>|<span data-ttu-id="503e2-136">System.Xml.XPath.XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="503e2-136">System.Xml.XPath.XPathNodeIterator</span></span>|<span data-ttu-id="503e2-137">XPath</span><span class="sxs-lookup"><span data-stu-id="503e2-137">XPath</span></span>|  
+|<span data-ttu-id="1499c-123">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="1499c-123">String</span></span>|<span data-ttu-id="1499c-124">System.String</span><span class="sxs-lookup"><span data-stu-id="1499c-124">System.String</span></span>|<span data-ttu-id="1499c-125">XPath</span><span class="sxs-lookup"><span data-stu-id="1499c-125">XPath</span></span>|  
+|<span data-ttu-id="1499c-126">Boolesch</span><span class="sxs-lookup"><span data-stu-id="1499c-126">Boolean</span></span>|<span data-ttu-id="1499c-127">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="1499c-127">System.Boolean</span></span>|<span data-ttu-id="1499c-128">XPath</span><span class="sxs-lookup"><span data-stu-id="1499c-128">XPath</span></span>|  
+|<span data-ttu-id="1499c-129">Anzahl</span><span class="sxs-lookup"><span data-stu-id="1499c-129">Number</span></span>|<span data-ttu-id="1499c-130">System.Double</span><span class="sxs-lookup"><span data-stu-id="1499c-130">System.Double</span></span>|<span data-ttu-id="1499c-131">XPath</span><span class="sxs-lookup"><span data-stu-id="1499c-131">XPath</span></span>|  
+|<span data-ttu-id="1499c-132">Ergebnisstrukturfragment</span><span class="sxs-lookup"><span data-stu-id="1499c-132">Result Tree Fragment</span></span>|<span data-ttu-id="1499c-133">System.Xml.XPath.XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="1499c-133">System.Xml.XPath.XPathNavigator</span></span>|<span data-ttu-id="1499c-134">XSLT</span><span class="sxs-lookup"><span data-stu-id="1499c-134">XSLT</span></span>|  
+|<span data-ttu-id="1499c-135">Knotengruppe</span><span class="sxs-lookup"><span data-stu-id="1499c-135">Node Set</span></span>|<span data-ttu-id="1499c-136">System.Xml.XPath.XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="1499c-136">System.Xml.XPath.XPathNodeIterator</span></span>|<span data-ttu-id="1499c-137">XPath</span><span class="sxs-lookup"><span data-stu-id="1499c-137">XPath</span></span>|  
   
- <span data-ttu-id="503e2-138">Wenn es sich bei dem Parameterobjekt um keine der obigen Klassen handelt, wird je nach Bedarf entweder ein Double oder ein String erzwungen.</span><span class="sxs-lookup"><span data-stu-id="503e2-138">If the parameter object is not one of the above classes, it is forced to either a Double or String, as appropriate.</span></span> <span data-ttu-id="503e2-139">Für die Typen Int16, UInt16, Int32, UInt32, Int64, UInt64, Single und Decimal wird ein Double erzwungen.</span><span class="sxs-lookup"><span data-stu-id="503e2-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single and Decimal types are forced to a Double.</span></span> <span data-ttu-id="503e2-140">Für alle anderen Typen wird mit der `ToString`-Methode ein string erzwungen.</span><span class="sxs-lookup"><span data-stu-id="503e2-140">All other types are forced to a String using the `ToString` method.</span></span>  
+ <span data-ttu-id="1499c-138">Wenn es sich bei dem Parameterobjekt um keine der obigen Klassen handelt, wird je nach Bedarf entweder ein Double oder ein String erzwungen.</span><span class="sxs-lookup"><span data-stu-id="1499c-138">If the parameter object is not one of the above classes, it is forced to either a Double or String, as appropriate.</span></span> <span data-ttu-id="1499c-139">Für die Typen Int16, UInt16, Int32, UInt32, Int64, UInt64, Single und Decimal wird ein Double erzwungen.</span><span class="sxs-lookup"><span data-stu-id="1499c-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single and Decimal types are forced to a Double.</span></span> <span data-ttu-id="1499c-140">Für alle anderen Typen wird mit der `ToString`-Methode ein string erzwungen.</span><span class="sxs-lookup"><span data-stu-id="1499c-140">All other types are forced to a String using the `ToString` method.</span></span>  
   
-#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a><span data-ttu-id="503e2-141">So verwenden Sie den XSLT-Parameter:</span><span class="sxs-lookup"><span data-stu-id="503e2-141">To use the XSLT parameter, the user needs to do the following:</span></span>  
+#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a><span data-ttu-id="1499c-141">So verwenden Sie den XSLT-Parameter:</span><span class="sxs-lookup"><span data-stu-id="1499c-141">To use the XSLT parameter, the user needs to do the following:</span></span>  
   
-1.  <span data-ttu-id="503e2-142">Erstellen Sie eine <xref:System.Xml.Xsl.XsltArgumentList> und fügen Sie die Objekte mit <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> hinzu.</span><span class="sxs-lookup"><span data-stu-id="503e2-142">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the objects using <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span></span>  
+1.  <span data-ttu-id="1499c-142">Erstellen Sie eine <xref:System.Xml.Xsl.XsltArgumentList> und fügen Sie die Objekte mit <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> hinzu.</span><span class="sxs-lookup"><span data-stu-id="1499c-142">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the objects using <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span></span>  
   
-2.  <span data-ttu-id="503e2-143">Rufen Sie die Parameter aus dem Stylesheet auf.</span><span class="sxs-lookup"><span data-stu-id="503e2-143">Call the parameters from the style sheet.</span></span>  
+2.  <span data-ttu-id="1499c-143">Rufen Sie die Parameter aus dem Stylesheet auf.</span><span class="sxs-lookup"><span data-stu-id="1499c-143">Call the parameters from the style sheet.</span></span>  
   
-3.  <span data-ttu-id="503e2-144">Übergeben Sie die <xref:System.Xml.Xsl.XsltArgumentList> an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="503e2-144">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
+3.  <span data-ttu-id="1499c-144">Übergeben Sie die <xref:System.Xml.Xsl.XsltArgumentList> an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="1499c-144">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="503e2-145">Beispiel</span><span class="sxs-lookup"><span data-stu-id="503e2-145">Example</span></span>  
- <span data-ttu-id="503e2-146">Im folgenden Beispiel wird mit der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode ein Parameter erstellt, der das berechnete Skontodatum enthält.</span><span class="sxs-lookup"><span data-stu-id="503e2-146">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold a calculated discount date.</span></span> <span data-ttu-id="503e2-147">Das Skontodatum ist 20 Tage nach dem Auftragsdatum.</span><span class="sxs-lookup"><span data-stu-id="503e2-147">The discount date is calculated to be 20 days from the order date.</span></span>  
+### <a name="example"></a><span data-ttu-id="1499c-145">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1499c-145">Example</span></span>  
+ <span data-ttu-id="1499c-146">Im folgenden Beispiel wird mit der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode ein Parameter erstellt, der das berechnete Skontodatum enthält.</span><span class="sxs-lookup"><span data-stu-id="1499c-146">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold a calculated discount date.</span></span> <span data-ttu-id="1499c-147">Das Skontodatum ist 20 Tage nach dem Auftragsdatum.</span><span class="sxs-lookup"><span data-stu-id="1499c-147">The discount date is calculated to be 20 days from the order date.</span></span>  
   
 ```vb  
 Imports System  
@@ -139,8 +139,8 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a><span data-ttu-id="503e2-148">Eingabe</span><span class="sxs-lookup"><span data-stu-id="503e2-148">Input</span></span>  
- <span data-ttu-id="503e2-149">order.xml</span><span class="sxs-lookup"><span data-stu-id="503e2-149">order.xml</span></span>  
+### <a name="input"></a><span data-ttu-id="1499c-148">Eingabe</span><span class="sxs-lookup"><span data-stu-id="1499c-148">Input</span></span>  
+ <span data-ttu-id="1499c-149">order.xml</span><span class="sxs-lookup"><span data-stu-id="1499c-149">order.xml</span></span>  
   
 ```xml  
 <!--Represents a customer order-->  
@@ -156,7 +156,7 @@ public class Sample
 </order>  
 ```  
   
- <span data-ttu-id="503e2-150">discount.xsl</span><span class="sxs-lookup"><span data-stu-id="503e2-150">discount.xsl</span></span>  
+ <span data-ttu-id="1499c-150">discount.xsl</span><span class="sxs-lookup"><span data-stu-id="1499c-150">discount.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
@@ -171,7 +171,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a><span data-ttu-id="503e2-151">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="503e2-151">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="1499c-151">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="1499c-151">Output</span></span>  
   
 ```xml  
 <order>  
@@ -180,25 +180,25 @@ public class Sample
 </order>  
 ```  
   
-## <a name="xslt-extension-objects"></a><span data-ttu-id="503e2-152">XSLT-Erweiterungsobjekte</span><span class="sxs-lookup"><span data-stu-id="503e2-152">XSLT Extension Objects</span></span>  
- <span data-ttu-id="503e2-153">XSLT-Erweiterungsobjekte werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="503e2-153">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="503e2-154">Dabei wird ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.</span><span class="sxs-lookup"><span data-stu-id="503e2-154">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
+## <a name="xslt-extension-objects"></a><span data-ttu-id="1499c-152">XSLT-Erweiterungsobjekte</span><span class="sxs-lookup"><span data-stu-id="1499c-152">XSLT Extension Objects</span></span>  
+ <span data-ttu-id="1499c-153">XSLT-Erweiterungsobjekte werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="1499c-153">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="1499c-154">Dabei wird ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.</span><span class="sxs-lookup"><span data-stu-id="1499c-154">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
   
- <span data-ttu-id="503e2-155">Wenn ein Objekt hinzugefügt wird, muss der Aufrufer von <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> in den Sicherheitsrichtlinien mit vollständiger Vertrauenswürdigkeit eingestuft sein.</span><span class="sxs-lookup"><span data-stu-id="503e2-155">When an object is added, the caller of the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> must be fully trusted in the security policy.</span></span> <span data-ttu-id="503e2-156">Wenn der Aufrufer nur teilweise vertrauenswürdig ist, schlägt das Hinzufügen fehl.</span><span class="sxs-lookup"><span data-stu-id="503e2-156">If the caller is semi-trusted, the addition will fail.</span></span>  
+ <span data-ttu-id="1499c-155">Wenn ein Objekt hinzugefügt wird, muss der Aufrufer von <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> in den Sicherheitsrichtlinien mit vollständiger Vertrauenswürdigkeit eingestuft sein.</span><span class="sxs-lookup"><span data-stu-id="1499c-155">When an object is added, the caller of the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> must be fully trusted in the security policy.</span></span> <span data-ttu-id="1499c-156">Wenn der Aufrufer nur teilweise vertrauenswürdig ist, schlägt das Hinzufügen fehl.</span><span class="sxs-lookup"><span data-stu-id="1499c-156">If the caller is semi-trusted, the addition will fail.</span></span>  
   
- <span data-ttu-id="503e2-157">Das erfolgreiche Hinzufügen eines Objekts garantiert jedoch nicht zwangsläufig eine erfolgreiche Ausführung.</span><span class="sxs-lookup"><span data-stu-id="503e2-157">Though an object is added successfully, it does not guarantee that the execution will be successful.</span></span> <span data-ttu-id="503e2-158">Wenn die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode aufgerufen wird, werden die Berechtigungen mit den zur <xref:System.Xml.Xsl.XslTransform.Load%2A>-Zeit bereitgestellten Beweisen berechnet, und dem gesamten Transformationsprozess wird dieser Berechtigungssatz zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="503e2-158">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at <xref:System.Xml.Xsl.XslTransform.Load%2A> time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="503e2-159">Bei dem Versuch, durch ein Erweiterungsobjekt eine Aktion zu initiieren, die eine nicht im Berechtigungssatz enthaltene Berechtigung erfordert, wird eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="503e2-159">If an extension object attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
+ <span data-ttu-id="1499c-157">Das erfolgreiche Hinzufügen eines Objekts garantiert jedoch nicht zwangsläufig eine erfolgreiche Ausführung.</span><span class="sxs-lookup"><span data-stu-id="1499c-157">Though an object is added successfully, it does not guarantee that the execution will be successful.</span></span> <span data-ttu-id="1499c-158">Wenn die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode aufgerufen wird, werden die Berechtigungen mit den zur <xref:System.Xml.Xsl.XslTransform.Load%2A>-Zeit bereitgestellten Beweisen berechnet, und dem gesamten Transformationsprozess wird dieser Berechtigungssatz zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="1499c-158">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at <xref:System.Xml.Xsl.XslTransform.Load%2A> time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="1499c-159">Bei dem Versuch, durch ein Erweiterungsobjekt eine Aktion zu initiieren, die eine nicht im Berechtigungssatz enthaltene Berechtigung erfordert, wird eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="1499c-159">If an extension object attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
   
- <span data-ttu-id="503e2-160">Von Erweiterungsobjekten kann einer der vier XPath-Grunddatentypen (node-set, Boolean, number oder string) zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="503e2-160">The data types returned from extension objects are one of the four basic XPath data types of number, string, Boolean, and node set.</span></span>  
+ <span data-ttu-id="1499c-160">Von Erweiterungsobjekten kann einer der vier XPath-Grunddatentypen (node-set, Boolean, number oder string) zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="1499c-160">The data types returned from extension objects are one of the four basic XPath data types of number, string, Boolean, and node set.</span></span>  
   
-#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a><span data-ttu-id="503e2-161">So verwenden Sie das XSLT-Erweiterungsobjekt:</span><span class="sxs-lookup"><span data-stu-id="503e2-161">To use the XSLT extension object, the user needs to do the following:</span></span>  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a><span data-ttu-id="1499c-161">So verwenden Sie das XSLT-Erweiterungsobjekt:</span><span class="sxs-lookup"><span data-stu-id="1499c-161">To use the XSLT extension object, the user needs to do the following:</span></span>  
   
-1.  <span data-ttu-id="503e2-162">Erstellen Sie eine <xref:System.Xml.Xsl.XsltArgumentList>, und fügen Sie das Erweiterungsobjekt mit <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> hinzu.</span><span class="sxs-lookup"><span data-stu-id="503e2-162">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span></span>  
+1.  <span data-ttu-id="1499c-162">Erstellen Sie eine <xref:System.Xml.Xsl.XsltArgumentList>, und fügen Sie das Erweiterungsobjekt mit <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> hinzu.</span><span class="sxs-lookup"><span data-stu-id="1499c-162">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span></span>  
   
-2.  <span data-ttu-id="503e2-163">Rufen Sie das Erweiterungsobjekt aus dem Stylesheet auf.</span><span class="sxs-lookup"><span data-stu-id="503e2-163">Invoke the extension object from the style sheet.</span></span>  
+2.  <span data-ttu-id="1499c-163">Rufen Sie das Erweiterungsobjekt aus dem Stylesheet auf.</span><span class="sxs-lookup"><span data-stu-id="1499c-163">Invoke the extension object from the style sheet.</span></span>  
   
-3.  <span data-ttu-id="503e2-164">Übergeben Sie die <xref:System.Xml.Xsl.XsltArgumentList> an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="503e2-164">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
+3.  <span data-ttu-id="1499c-164">Übergeben Sie die <xref:System.Xml.Xsl.XsltArgumentList> an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="1499c-164">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="503e2-165">Beispiel</span><span class="sxs-lookup"><span data-stu-id="503e2-165">Example</span></span>  
- <span data-ttu-id="503e2-166">Im folgenden Beispiel wird der Umfang eines Kreises bei gegebenem Radius berechnet.</span><span class="sxs-lookup"><span data-stu-id="503e2-166">The following example calculates the circumference of a circle given its radius.</span></span>  
+### <a name="example"></a><span data-ttu-id="1499c-165">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1499c-165">Example</span></span>  
+ <span data-ttu-id="1499c-166">Im folgenden Beispiel wird der Umfang eines Kreises bei gegebenem Radius berechnet.</span><span class="sxs-lookup"><span data-stu-id="1499c-166">The following example calculates the circumference of a circle given its radius.</span></span>  
   
 ```vb  
 Imports System  
@@ -295,7 +295,7 @@ public class Sample
   }  
   
   //Calculates the circumference of a circle given the radius.  
-  public class Calculate{  
+  public class Calculate {  
   
     private double circ = 0;  
   
@@ -307,8 +307,8 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a><span data-ttu-id="503e2-167">Eingabe</span><span class="sxs-lookup"><span data-stu-id="503e2-167">Input</span></span>  
- <span data-ttu-id="503e2-168">number.xml</span><span class="sxs-lookup"><span data-stu-id="503e2-168">number.xml</span></span>  
+### <a name="input"></a><span data-ttu-id="1499c-167">Eingabe</span><span class="sxs-lookup"><span data-stu-id="1499c-167">Input</span></span>  
+ <span data-ttu-id="1499c-168">number.xml</span><span class="sxs-lookup"><span data-stu-id="1499c-168">number.xml</span></span>  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -322,7 +322,7 @@ public class Sample
 </data>    
 ```  
   
- <span data-ttu-id="503e2-169">circle.xsl</span><span class="sxs-lookup"><span data-stu-id="503e2-169">circle.xsl</span></span>  
+ <span data-ttu-id="1499c-169">circle.xsl</span><span class="sxs-lookup"><span data-stu-id="1499c-169">circle.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -343,7 +343,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a><span data-ttu-id="503e2-170">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="503e2-170">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="1499c-170">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="1499c-170">Output</span></span>  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -364,5 +364,5 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a><span data-ttu-id="503e2-171">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="503e2-171">See Also</span></span>  
- [<span data-ttu-id="503e2-172">Implementierung des XSLT-Prozessors durch die XslTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="503e2-172">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a><span data-ttu-id="1499c-171">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1499c-171">See Also</span></span>  
+ [<span data-ttu-id="1499c-172">Implementierung des XSLT-Prozessors durch die XslTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="1499c-172">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
