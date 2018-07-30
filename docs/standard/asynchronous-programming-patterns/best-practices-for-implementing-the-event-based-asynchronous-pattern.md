@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: eaf410fa198fdb38a39a0474e9e147542919df8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 519c22e3c2647e2ae3423688b468e133a3e5eb84
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578420"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937113"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters
 Das ereignisbasierte asynchrone Muster bietet Ihnen eine effektive Methode, um asynchrones Verhalten in Klassen mit einer vertrauten Ereignis- und Delegatsemantik verfügbar zu machen. Für eine Implementierung des ereignisbasierten asynchronen Musters müssen Sie einige spezielle Verhaltensanforderungen befolgen. In den folgenden Abschnitten sind Anforderungen und Richtlinien beschrieben, die Sie bei der Implementierung einer Klasse berücksichtigen sollten, die dem ereignisbasierten asynchronen Muster folgt.  
@@ -28,14 +28,14 @@ Das ereignisbasierte asynchrone Muster bietet Ihnen eine effektive Methode, um a
  Wenn Sie das ereignisbasierte asynchrone Muster implementieren, müssen Sie eine Reihe von Garantien bereitstellen, um sicherzustellen, dass sich Ihre Klasse ordnungsgemäß verhält und die Clients Ihrer Klasse sich auf dieses Verhalten verlassen können.  
   
 ### <a name="completion"></a>Abschluss  
- Rufen Sie immer den Ereignishandler *MethodName***Completed** auf, wenn ein erfolgreicher Abschluss, ein Fehler oder ein Abbruch vorliegt. Anwendungen sollten niemals auf eine Situation treffen, in der sie im Leerlauf bleiben und ein Abschluss niemals erfolgt. Eine Ausnahme zu dieser Regel ist, wenn der asynchrone Vorgang an sich so entwickelt wurde, dass er nie abgeschlossen wird.  
+ Rufen Sie immer den Ereignishandler <em>MethodName</em>**Completed** auf, wenn ein erfolgreicher Abschluss, ein Fehler oder ein Abbruch vorliegt. Anwendungen sollten niemals auf eine Situation treffen, in der sie im Leerlauf bleiben und ein Abschluss niemals erfolgt. Eine Ausnahme zu dieser Regel ist, wenn der asynchrone Vorgang an sich so entwickelt wurde, dass er nie abgeschlossen wird.  
   
 ### <a name="completed-event-and-eventargs"></a>Abgeschlossenes Event und EventArgs  
- Wenden Sie für jede separate *MethodName***Async**-Methode die folgenden Entwurfsanforderungen an:  
+ Wenden Sie für jede separate <em>MethodName</em>**Async**-Methode die folgenden Entwurfsanforderungen an:  
   
--   Definieren Sie ein *MethodName***Completed**-Ereignis in derselben Klasse wie die Methode.  
+-   Definieren Sie ein <em>MethodName</em>**Completed**-Ereignis in derselben Klasse wie die Methode.  
   
--   Definieren Sie eine <xref:System.EventArgs>-Klasse und einen begleitenden Delegaten für das *MethodName***Completed**-Ereignis, das von der <xref:System.ComponentModel.AsyncCompletedEventArgs>-Klasse abgeleitet ist. Der Standardklassenname sollte die Form *MethodName***CompletedEventArgs** haben.  
+-   Definieren Sie eine <xref:System.EventArgs>-Klasse und einen begleitenden Delegaten für das <em>MethodName</em>**Completed**-Ereignis, das von der <xref:System.ComponentModel.AsyncCompletedEventArgs>-Klasse abgeleitet ist. Der Standardklassenname sollte die Form *MethodName***CompletedEventArgs** haben.  
   
 -   Stellen Sie sicher, dass die Klasse <xref:System.EventArgs> für die Rückgabewerte der Methode *MethodName* spezifisch ist. Wenn Sie die Klasse <xref:System.EventArgs> verwenden, sollten Sie von Entwicklern niemals verlangen, das Ergebnis umzuwandeln.  
   

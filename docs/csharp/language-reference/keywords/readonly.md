@@ -1,64 +1,103 @@
 ---
-title: readonly (C#-Referenz)
-ms.date: 07/20/2015
+title: Schlüsselwort „readonly“ (C#-Referenz)
+ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: d2f8a2f192dc319ad806aeef4bfbaeecc44b07a3
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 96607f1dd7f019169446e29a08496fb54e1ed493
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172632"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961182"
 ---
 # <a name="readonly-c-reference"></a>readonly (C#-Referenz)
-Das Schlüsselwort `readonly` ist ein Modifizierer, den Sie für Felder verwenden können. Wenn eine Felddeklaration einen `readonly`-Modifizierer enthält, können Zuweisungen an die Felder, die von der Deklaration eingeführt wurden, nur als Teil der Deklaration oder in einem Konstruktor in derselben Klasse auftreten.  
-  
+
+Das Schlüsselwort `readonly` ist ein Modifizierer, der in drei Kontexten verwendet werden kann:
+
+- In einer [Felddeklaration](#readonly-field-example) gibt `readonly` an, dass die Zuweisung zum Feld nur als Teil der Deklaration oder in einem Konstruktor derselben Klasse erfolgen kann.
+- In einer [`readonly struct`-Definition](#readonly-struct-example) gibt `readonly` an, dass `struct` unveränderlich ist.
+- In einer [`ref readonly`-Methodenrückgabe](#ref-readonly-return-example) gibt der `readonly`-Modifizierer an, dass die Methode eine Referenz zurückgibt, und Schreibvorgänge für diese Referenz nicht zulässig sind.
+
+Die letzten beiden Kontexte wurden in C# 7.2 hinzugefügt.
+
 ## <a name="readonly-field-example"></a>Beispiel für ein readonly-Feld  
- In diesem Beispiel kann der Wert des Felds `year` nicht zur Methode `ChangeYear` geändert werden, obwohl ihm im Klassenkonstruktor ein Wert zugewiesen ist:  
+
+In diesem Beispiel kann der Wert des Felds `year` nicht zur Methode `ChangeYear` geändert werden, obwohl ihm im Klassenkonstruktor ein Wert zugewiesen ist:  
   
- [!code-csharp[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
+[!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]  
   
- Sie können einem `readonly`-Feld nur in den folgenden Kontexten einen Wert zuweisen:  
+Sie können einem `readonly`-Feld nur in den folgenden Kontexten einen Wert zuweisen:  
   
--   Wenn die Variable in der Deklaration initialisiert ist, z.B.:  
-  
-    ```csharp  
-    public readonly int y = 5;  
-    ```  
-  
--   Für ein Instanzenfeld, in den Instanzkonstruktoren der Klasse, die die Felddeklaration enthält oder für ein statisches Feld im statischen Konstruktor der Klasse, die die Felddeklaration enthält. Hierbei handelt es sich auch um die einzigen Kontexte, in denen es gültig ist, ein `readonly`-Feld als [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) oder [ref](../../../csharp/language-reference/keywords/ref.md)-Parameter zu übergeben.  
+- Wenn die Variable in der Deklaration initialisiert ist, z.B.:  
+
+```csharp
+public readonly int y = 5;  
+```
+
+- In einem Instanzenkonstruktor der Klasse, die die Deklaration des Instanzfelds enthält.
+- Im statischen Konstruktor der Klasse, die die Deklaration des statischen Felds enthält.
+
+Diese Konstruktorkontexte sind auch die einzigen Kontexte, in denen es gültig ist, ein `readonly`-Feld als [out](out-parameter-modifier.md)- oder [ref](ref.md)-Parameter zu übergeben.  
   
 > [!NOTE]
->  Das Schlüsselwort `readonly` unterscheidet sich vom Schlüsselwort [const](../../../csharp/language-reference/keywords/const.md). Ein `const`-Feld kann nur bei der Deklaration des Felds initialisiert werden. Ein `readonly`-Feld kann entweder bei der Deklaration oder in einem Konstruktor initialisiert werden. Daher können `readonly`-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen. Außerdem ist ein `const`-Feld eine Kompilierzeitkonstante, während ein `readonly`-Feld wie im folgenden Beispiel für Laufzeitkonstanten verwendet werden kann:  
-  
-```csharp  
+> Das Schlüsselwort `readonly` unterscheidet sich vom Schlüsselwort [const](const.md). Ein `const`-Feld kann nur bei der Deklaration des Felds initialisiert werden. Ein `readonly`-Feld kann entweder bei der Deklaration oder in einem Konstruktor initialisiert werden. Daher können `readonly`-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen. Außerdem ist ein `const`-Feld eine Kompilierzeitkonstante, während ein `readonly`-Feld wie im folgenden Beispiel für Laufzeitkonstanten verwendet werden kann:  
+
+```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
-```  
+```
+
+[!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]  
   
-## <a name="comparing-readonly-and-non-readonly-instance-fields"></a>Vergleich von readonly-Instanzfeldern und Instanzfeldern, für die readonly nicht gilt  
- [!code-csharp[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
+Wenn Sie im vorherigen Beispiel eine Anweisung wie die folgende verwenden:  
   
- Im vorherigen Beispiel, wenn Sie eine Anweisung wie folgt verwenden:  
+`p2.y = 66;        // Error`  
   
- `p2.y = 66;        // Error`  
+erhalten Sie die Compilerfehlermeldung:  
   
- erhalten Sie die Compilerfehlermeldung:  
+`The left-hand side of an assignment must be an l-value`  
   
- `The left-hand side of an assignment must be an l-value`  
-  
- Es handelt sich um den gleichen Fehler, den Sie erhalten, wenn Sie versuchen, einen Wert einer Konstanten zuzuweisen.  
-  
+Es handelt sich um den gleichen Fehler, den Sie erhalten, wenn Sie versuchen, einen Wert einer Konstanten zuzuweisen.  
+
+## <a name="readonly-struct-example"></a>Beispiel für readonly struct
+
+Der `readonly`-Modifizierer für eine `struct`-Definition deklariert, dass die Struktur **unveränderlich** ist. Jedes Instanzfeld für `struct` muss mit `readonly` markiert sein, wie im folgenden Beispiel gezeigt:
+
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]  
+
+Das vorhergehende Beispiel verwendet [schreibgeschützte automatische Eigenschaften](../../properties.md#read-only), um den Speicher zu deklarieren. Dadurch wird der Compiler angewiesen, `readonly`-Unterstützungsfelder für diese Eigenschaften zu erstellen. Sie können `readonly`-Felder auch direkt deklarieren:
+
+```csharp
+public readonly struct Point
+{
+    public readonly double X;
+    public readonly double Y;
+
+    public Point(double x, double y) => (X, Y) = (x, y);
+
+    public override string ToString() => $"({X}, {Y})";
+}
+```
+
+Das Hinzufügen eines Felds, das nicht mit `readonly` markiert ist, erzeugt den Compilerfehler `CS8340`: „Instanzfelder oder schreibgeschützten Strukturen müssen schreibgeschützt sein.“
+
+## <a name="ref-readonly-return-example"></a>Rückgabebeispiel für ref readonly
+
+Der Modifizierer `readonly` für `ref return` gibt an, dass die zurückgegebene Referenz nicht geändert werden kann. Das folgende Beispiel gibt einen Verweis auf den Ursprung zurück. Der `readonly`-Modifizierer gibt dabei an, dass die aufrufenden Funktionen den Ursprung nicht ändern können:
+
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]  
+Der zurückgegebene Typ muss nicht `readonly struct` aufweisen. Jeder Typ, der von `ref` zurückgegeben werden kann, kann auch von `ref readonly` zurückgegeben werden.
+
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)  
- [const](../../../csharp/language-reference/keywords/const.md)  
- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)
+[C#-Referenz](../../../csharp/language-reference/index.md)  
+[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+[Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)  
+[const](../../../csharp/language-reference/keywords/const.md)  
+[Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336556"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296142"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
 Weil C# zur Laufzeit statisch kompiliert ist, kann eine Variable, nachdem sie deklariert wurde, nicht noch einmal deklariert oder dazu verwendet werden, Werte anderer Typen zu speichern, es sei denn, der Wert ist in den Wert der Variablen konvertierbar. Es gibt z.B. keine Konvertierung einer Ganzzahl in eine willkürliche Zeichenfolge. Deshalb können Sie, nachdem Sie `i` Ganzzahl deklariert haben, die Zeichenfolge „Hello“ nicht zuweisen, wie in folgendem Codebeispiel gezeigt.  

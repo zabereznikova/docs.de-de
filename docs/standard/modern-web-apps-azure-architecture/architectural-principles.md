@@ -3,20 +3,18 @@ title: Architekturprinzipien
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Architekturprizipien
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 4ee14b128d3b83fd446352bb6f78afc08fb38c52
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105858"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404437"
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
 > „Wenn Architekten Gebäude so bauen würden, wie Programmierer Programme erstellen, würde der erste Specht, der auftauchen würde, die Zivilisation zerstören.“  
 > _\- Gerald Weinberg_
-
-## <a name="summary"></a>Zusammenfassung
 
 Sie sollten Softwarelösungen mit der Verwaltbarkeit im Hinterkopf entwickeln und entwerfen. Die Prinzipien, die in diesem Artikel erläutert werden, können Ihnen bei Entscheidungen bezüglich der Architektur helfen, wodurch Sie ordentliche und verwaltbare Anwendungen erstellen können. Im Allgemeinen begleiten Sie diese Prinzipien in Richtung der Erstellung von Anwendungen aus einzelnen Komponenten, die nicht eng an andere Teile Ihrer Anwendung gebunden sind, sondern die eher über explizite Schnittstellen oder Nachrichtensysteme kommunizieren.
 
@@ -56,7 +54,7 @@ Die **Abhängigkeitsumkehrung** ist ein wichtiger Bestandteil beim Erstellen von
 
 Durch Befolgen des expliziten Abhängigkeitsprinzips sind Ihre Klassen und Methoden gegenüber den Kunden ehrlich, wenn es um die Elemente geht, die sie benötigen, um ordnungsgemäß zu arbeiten. Dadurch dokumentiert Ihr Code vermehrt selbst, und Ihr Codierungsvertrag wird benutzerfreundlicher, da Benutzer größeres Vertrauen in dem Zusammenhang entwickeln, dass wenn sie das bereitstellen, was für Methoden oder Konstruktorparameter erforderlich ist, sich die Objekte, mit denen sie arbeiten, zur Laufzeit ordnungsgemäß verhalten.
 
-### <a name="single-responsibility"></a>Die einzige Verantwortung (Single Responsibility)
+### <a name="single-responsibility"></a>Prinzip der einzigen Verantwortung (Single Responsibility)
 
 Das Prinzip der einzigen Verantwortung gilt für ein objektorientiertes Design, kann aber auch als Architekturprinzip ähnlich der Separation of Concerns angesehen werden. Es besagt, dass Objekte nur eine Verantwortung haben dürfen und dass sie nur einen Grund für eine Änderung haben dürfen. Dies bedeutet, dass das Objekt nur dann geändert werden muss, wenn die Art und Weise, wie es seine einzige Aufgabe durchführt, aktualisiert werden muss. Wenn Sie dieses Prinzip befolgen, können Sie mehr lose gekoppelte und modulare Systeme erstellen, da viele Teile des neuen Verhalten als neue Klassen implementiert werden können, und so wird vorhandenen Klassen keine zusätzliche Verantwortung hinzugefügt. Das Hinzufügen neuer Klassen ist immer sicherer als das Ändern vorhandener Klassen, da noch kein Code von den neuen Klassen abhängig ist.
 
@@ -64,7 +62,7 @@ In einer monolithischen Anwendung können wir das Prinzip der einzigen Verantwor
 
 Wenn dieses Prinzip auf die Anwendungsarchitektur angewendet wird und bis zu ihrem logischen Endpunkt reicht, erhalten Sie Microservices. Ein bestimmter Microservice muss über eine einzige Verantwortung verfügen. Wenn Sie das Verhalten eines Systems erweitern müssen, ist es in der Regel am besten, dies durch Hinzufügen von zusätzlichen Microservices zu tun, anstatt Verantwortung zu einem vorhandenen Verhalten hinzuzufügen.
 
-[Weitere Informationen zur Microservicearchitektur](http://aka.ms/MicroservicesEbook)
+[Weitere Informationen zur Microservicearchitektur](https://aka.ms/MicroservicesEbook)
 
 ### <a name="dont-repeat-yourself-dry"></a>Don't Repeat Yourself (DRY)
 
@@ -81,17 +79,17 @@ Das **Ignorieren der Persistenz** (Persistence Ignorance, PI) bezieht sich auf T
 
 Einige Beispiele für Verstöße gegen dieses Prinzip:
 
--   Eine erforderliche Basisklasse
+- Eine erforderliche Basisklasse
 
--   Eine erforderliche Schnittstellenimplementierung
+- Eine erforderliche Schnittstellenimplementierung
 
--   Klassen, die für die Speicherung von sich selbst verantwortlich sind (wie etwa das „Active Record“-Muster)
+- Klassen, die für die Speicherung von sich selbst verantwortlich sind (z. B. das Muster „Aktiver Datensatz“)
 
--   Erforderlicher Standardkonstruktor
+- Erforderlicher Standardkonstruktor
 
--   Eigenschaften, die ein virtuelles Schlüsselwort erfordern
+- Eigenschaften, die ein virtuelles Schlüsselwort erfordern
 
--   Für die Persistenz spezifische erforderliche Attribute
+- Eigens für die Persistenz erforderliche Attribute
 
 Die Anforderung, dass Klassen über eines der oben genannten Features oder Verhalten verfügen müssen hat zur Folge, dass die Kopplung zwischen Typen beibehalten werden muss, sowie die Wahl der Persistenztechnologie. So wird es schwieriger, zukünftig neue Strategien für den Datenzugriff zu realisieren.
 
@@ -103,19 +101,20 @@ Anstatt eine Datenbank mit anderen Anwendungen zu teilen, sollten einzelne Weban
 
 > ### <a name="references--modern-web-applications"></a>Ressourcen: Moderne Webanwendungen
 > - **Separation of Concerns**  
-> <http://deviq.com/separation-of-concerns/>
-> - **Encapsulation (Kapselung)**<http://deviq.com/encapsulation/>
+> <https://deviq.com/separation-of-concerns/>
+> - **Kapselung**  
+> <https://deviq.com/encapsulation/>
 > - **Das Prinzip der Abhängigkeitsumkehr (Dependency Inversion)**  
-> <http://deviq.com/dependency-inversion-principle/>
+> <https://deviq.com/dependency-inversion-principle/>
 > - **Prinzip der expliziten Abhängigkeiten**  
-> <http://deviq.com/explicit-dependencies-principle/>
+> <https://deviq.com/explicit-dependencies-principle/>
 > - **Don't Repeat Yourself**  
-> <http://deviq.com/don-t-repeat-yourself/>
+> <https://deviq.com/don-t-repeat-yourself/>
 > - **Ignorieren der Persistenz**  
-> <http://deviq.com/persistence-ignorance/>
+> <https://deviq.com/persistence-ignorance/>
 > - **Kontextgrenze**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
-> [!div class="step-by-step"]
+>[!div class="step-by-step"]
 [Zurück](choose-between-traditional-web-and-single-page-apps.md)
 [Weiter](common-web-application-architectures.md)
