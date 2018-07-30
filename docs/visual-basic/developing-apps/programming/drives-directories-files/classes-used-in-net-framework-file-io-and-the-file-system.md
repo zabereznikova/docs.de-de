@@ -5,11 +5,11 @@ helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590698"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333038"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)
 In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Framework-Datei-E/A verwendet werden, kategorisiert in Datei-E/A-Klassen, Klassen zum Erstellen von Streams und Klassen zum Lesen und Schreiben in Streams.  
@@ -19,7 +19,7 @@ In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Fr
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Grundlegende E/A-Klassen für Dateien, Laufwerke und Verzeichnisse  
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die für Datei-E/A verwendet werden.  
   
-|Klasse|description|  
+|Klasse|Beschreibung |  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Stellt statische Methoden zum Erstellen, Verschieben und Auflisten über Verzeichnisse und Unterverzeichnisse hinweg zur Verfügung.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Stellt Instanzmethoden zum Erstellen, Verschieben und Auflisten über Verzeichnisse und Unterverzeichnisse hinweg zur Verfügung.|  
@@ -36,7 +36,7 @@ In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Fr
 ## <a name="classes-used-to-create-streams"></a>Klassen zum Erstellen von Streams  
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die zum Erstellen von Streams verwendet werden.  
   
-|Klasse|description|  
+|Klasse|Beschreibung |  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Fügt eine Pufferebene zu Lese- und Schreibvorgängen auf einem anderen Stream hinzu.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Unterstützt den zufälligen Zugriff auf Dateien über die <xref:System.IO.FileStream.Seek%2A>-Methode. <xref:System.IO.FileStream> öffnet Dateien standardmäßig synchron, unterstützt aber auch den asynchronen Vorgang.|  

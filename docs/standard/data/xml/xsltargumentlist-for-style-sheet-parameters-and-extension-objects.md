@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 808d21ae0eabdc7502ef97facc3d45f2220883af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1a17e32b98405d1b35b5b19e3e9144cffef5bfe
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576808"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332999"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>"XsltArgumentList" für Stylesheetparameter und Erweiterungsobjekte
 Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible Stylesheet Transformation) und XSLT-Erweiterungsobjekte. Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.  
@@ -295,7 +295,7 @@ public class Sample
   }  
   
   //Calculates the circumference of a circle given the radius.  
-  public class Calculate{  
+  public class Calculate {  
   
     private double circ = 0;  
   
