@@ -21,49 +21,49 @@ ms.locfileid: "33578273"
 # <a name="parameter-design"></a>Parameterentwurf
 Dieser Abschnitt enthält allgemeine Richtlinien für Parameter Entwurf, einschließlich Abschnitte mit Richtlinien für die Überprüfung der Argumente. Sie sollten darüber hinaus finden Sie in der beschriebenen Richtlinien [Benennung von Parametern](../../../docs/standard/design-guidelines/naming-parameters.md).  
   
- **Führen Sie ✓** verwenden, der am wenigsten abgeleiteten Parametertyp, die die Funktionen für das Element bereitstellt.  
+ **✓ DO** verwenden, der am wenigsten abgeleiteten Parametertyp, die die Funktionen für das Element bereitstellt.  
   
  Nehmen Sie beispielsweise an, dass eine Methode zu entwerfen, die listet und jedes Element in der Konsole ausgegeben, werden sollen. Eine solche Methode ergreift <xref:System.Collections.IEnumerable> als Parameter nicht <xref:System.Collections.ArrayList> oder <xref:System.Collections.IList>, z. B.  
   
- **X nicht** reservierte Parameter verwenden.  
+ **X DO NOT** reservierte Parameter verwenden.  
   
  Wenn weitere Eingabe für ein Element in einer künftigen Version erforderlich ist, kann eine neue Überladung hinzugefügt werden.  
   
- **X nicht** haben öffentlich verfügbar gemachten Methoden, die Zeiger, Arrays von Zeigern oder mehrdimensionale Arrays als Parameter akzeptieren.  
+ **X DO NOT** haben öffentlich verfügbar gemachten Methoden, die Zeiger, Arrays von Zeigern oder mehrdimensionale Arrays als Parameter akzeptieren.  
   
  Zeiger und mehrdimensionale Arrays sind relativ schwer, ordnungsgemäß zu verwenden. In fast allen Fällen können APIs neu gestaltet werden, um zu vermeiden, diese Typen als Parameter übernimmt.  
   
- **✓ FÜHREN** platzieren Sie alle `out` Parameter, die alle per-Wert und `ref` Parameter (ausgenommen Parameterarrays), auch wenn dies zu einer Inkonsistenz der Sortierung zwischen Überladungen Parameter führt (finden Sie unter [Member Überladen von](../../../docs/standard/design-guidelines/member-overloading.md)).  
+ **✓ DO** platzieren Sie alle `out` Parameter, die alle per-Wert und `ref` Parameter (ausgenommen Parameterarrays), auch wenn dies zu einer Inkonsistenz der Sortierung zwischen Überladungen Parameter führt (finden Sie unter [Member Überladen von](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
  Die `out` Parameter können als zusätzliche Werte angezeigt werden, und gruppieren sie macht die Signatur der Methode leichter zu verstehen.  
   
- **Führen Sie ✓** benennen Parameter aus, wenn Sie Member überschreiben oder Implementieren von Schnittstellenmembern konsistent sein.  
+ **✓ DO** benennen Parameter aus, wenn Sie Member überschreiben oder Implementieren von Schnittstellenmembern konsistent sein.  
   
  Dies kommuniziert besser die Beziehung zwischen den Methoden.  
   
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>Auswählen zwischen Enum und booleschen Parametern  
- **Führen Sie ✓** Enumerationen verwenden, wenn ein Element mindestens zwei boolesche Parameter hätten.  
+ **✓ DO** Enumerationen verwenden, wenn ein Element mindestens zwei boolesche Parameter hätten.  
   
- **X nicht** boolesche Werte verwenden, es sei denn, Sie absolut sicher, dass es werden nie mehr als zwei Werte erforderlich sind.  
+ **X DO NOT** boolesche Werte verwenden, es sei denn, Sie absolut sicher, dass es werden nie mehr als zwei Werte erforderlich sind.  
   
  Enumerationen bieten Ihnen einige Platz für zukünftige Werte hinzufügen, aber Sie sollten alle verbundenen Auswirkungen auf den zum Hinzufügen von Werten für Enumerationen, die in beschrieben werden [Enum-Entwurf](../../../docs/standard/design-guidelines/enum.md).  
   
- **✓ GGF.** mit boolesche Werte für Konstruktorparameter, die tatsächlich zwei-Status-Werte sind und zur Initialisierung von boolescher Eigenschaften, die einfach verwendet werden.  
+ **✓ CONSIDER** mit boolesche Werte für Konstruktorparameter, die tatsächlich zwei-Status-Werte sind und zur Initialisierung von boolescher Eigenschaften, die einfach verwendet werden.  
   
 ### <a name="validating-arguments"></a>Überprüfen von Argumenten  
- **Führen Sie ✓** weitergegebenen Argumenten um öffentlich, geschützt oder explizit implementierten Member zu überprüfen. Löst <xref:System.ArgumentException?displayProperty=nameWithType>, oder eine ihrer Unterklassen, wenn die Validierung fehlschlägt.  
+ **✓ DO** weitergegebenen Argumenten um öffentlich, geschützt oder explizit implementierten Member zu überprüfen. Löst <xref:System.ArgumentException?displayProperty=nameWithType>, oder eine ihrer Unterklassen, wenn die Validierung fehlschlägt.  
   
  Beachten Sie, dass die tatsächliche Validierung nicht unbedingt in der öffentlichen oder geschützten Member selbst durchgeführt werden soll. Dies kann auf einer niedrigeren Ebene in eine private oder interne Routine eintreten. Im Mittelpunkt ist, überprüft die Argumente, die gesamte Oberfläche, die den Endbenutzern zur Verfügung gestellt wird.  
   
- **Führen Sie ✓** auslösen <xref:System.ArgumentNullException> Wenn ein null-Argument übergeben wird und das Element keine null-Argumente unterstützt.  
+ **✓ DO** auslösen <xref:System.ArgumentNullException> Wenn ein null-Argument übergeben wird und das Element keine null-Argumente unterstützt.  
   
- **Führen Sie ✓** Enum-Parameter überprüft.  
+ **✓ DO** Enum-Parameter überprüft.  
   
  Führen Sie Sie nicht davon gehen Sie aus, dass die Enum-Argumente in den Bereich, der durch die Enumeration definiert werden. Die CLR ermöglicht es, einen ganzzahligen Wert in einen Enum-Wert umwandeln, selbst wenn der Wert nicht in der Enumeration definiert ist.  
   
- **X nicht** verwenden <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> für Enum Bereich überprüft.  
+ **X DO NOT** verwenden <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> für Enum Bereich überprüft.  
   
- **Führen Sie ✓** Beachten Sie, dass änderbare Argumente möglicherweise geändert wurden, nachdem sie überprüft wurden.  
+ **✓ DO** Beachten Sie, dass änderbare Argumente möglicherweise geändert wurden, nachdem sie überprüft wurden.  
   
  Wenn der Member sicherheitsrelevant ist, werden Sie aufgefordert, erstellen Sie eine Kopie, und klicken Sie dann zu überprüfen und verarbeiten das Argument.  
   
@@ -76,11 +76,11 @@ Dieser Abschnitt enthält allgemeine Richtlinien für Parameter Entwurf, einschl
   
  `Out` Parameter sind ähnlich `ref` Parameter, mit einige geringfügige Unterschiede. Der Parameter ist anfänglich betrachtet werden, nicht zugewiesen und kann im Hauptteil Elements gelesen werden, bevor ihr einen Wert zugewiesen wird. Außerdem muss der Parameter einen Wert zugewiesen werden, bevor das Element zurückgibt.  
   
- **X vermeiden** mit `out` oder `ref` Parameter.  
+ **X AVOID** mit `out` oder `ref` Parameter.  
   
  Mit `out` oder `ref` Parameter erfordert Erfahrung mit Zeigern, Kenntnisse der Unterschiede zwischen Wert- und Verweistypen und Arbeiten mit Methoden mit mehreren Rückgabewerten. Außerdem ist der Unterschied zwischen `out` und `ref` Parameter wird nicht umfassend unterstützt. Framework Architekten Entwerfen für eine Breite Zielgruppe sollten nicht erwarten, dass der Benutzer mit `out` oder `ref` Parameter.  
   
- **X nicht** Verweistypen als Verweis übergeben.  
+ **X DO NOT** Verweistypen als Verweis übergeben.  
   
  Es gibt einige wenige Ausnahmen für die Regel ein, z. B. eine Methode, die zum Austauschen von Verweise verwendet werden kann.  
   
@@ -111,44 +111,44 @@ public class String {
   
  Beachten Sie, dass der Params-Schlüsselworts nur der letzte Parameter in der Parameterliste hinzugefügt werden kann.  
   
- **✓ GGF.** Arrayparameter des Params-Schlüsselworts hinzugefügt, wenn Sie davon ausgehen, die Endbenutzer zum Übergeben von Arrays mit einer kleinen Anzahl von Elementen dass. Wenn davon ausgegangen wird, dass viele Elemente gemeinsam Szenarien übergeben werden, Benutzer übergibt diese Elemente Inline wahrscheinlich nicht trotzdem und des Params-Schlüsselworts ist daher nicht erforderlich.  
+ **✓ CONSIDER** Arrayparameter des Params-Schlüsselworts hinzugefügt, wenn Sie davon ausgehen, die Endbenutzer zum Übergeben von Arrays mit einer kleinen Anzahl von Elementen dass. Wenn davon ausgegangen wird, dass viele Elemente gemeinsam Szenarien übergeben werden, Benutzer übergibt diese Elemente Inline wahrscheinlich nicht trotzdem und des Params-Schlüsselworts ist daher nicht erforderlich.  
   
- **X vermeiden** Params-Arrays verwenden, wenn ein Aufrufer fast immer die Eingabe bereits in einem Array würde.  
+ **X AVOID** Params-Arrays verwenden, wenn ein Aufrufer fast immer die Eingabe bereits in einem Array würde.  
   
  Mitglieder mit Arrayparametern Byte würde z. B. durch Übergeben der einzelnen Bytes fast nie aufgerufen werden. Aus diesem Grund verwenden Sie Byte Arrayparametern in .NET Framework nicht des Params-Schlüsselworts.  
   
- **X nicht** Params-Arrays verwenden, wenn das Array vom dauert des Params-Array Parameters-Element geändert wird.  
+ **X DO NOT** Params-Arrays verwenden, wenn das Array vom dauert des Params-Array Parameters-Element geändert wird.  
   
  Aufgrund der Tatsache, dass viele Compiler die Argumente für das Element in ein temporäres Array an der Aufrufsite verwandeln, das Array kann kein temporäres Objekt sein, und daher keine Änderungen an das Array verloren.  
   
- **✓ GGF.** des Params-Schlüsselworts in einer einfachen Überladung verwenden, auch wenn eine komplexere Überladung, konnte ihn nicht verwenden.  
+ **✓ CONSIDER** des Params-Schlüsselworts in einer einfachen Überladung verwenden, auch wenn eine komplexere Überladung, konnte ihn nicht verwenden.  
   
  Fragen Sie sich, wenn Benutzer das Parameterarray in einer Überladung müssen, auch wenn es in alle Überladungen wurden keine Wert würde.  
   
- **Führen Sie ✓** versuchen, Order-Parameter, und es Ihnen ermöglicht mithilfe des Params-Schlüsselworts.  
+ **✓ DO** versuchen, Order-Parameter, und es Ihnen ermöglicht mithilfe des Params-Schlüsselworts.  
   
- **✓ GGF.** spezielle Überladungen und Codepfade für Aufrufe mit einer kleinen Anzahl von Argumenten in extrem leistungsabhängigen-APIs bereitstellen.  
+ **✓ CONSIDER** spezielle Überladungen und Codepfade für Aufrufe mit einer kleinen Anzahl von Argumenten in extrem leistungsabhängigen-APIs bereitstellen.  
   
  Dadurch möglich, vermeiden Sie das Array von Objekten erstellen, wenn die API mit einer kleinen Anzahl von Argumenten aufgerufen wird. Bilden Sie die Namen der Parameter ein Singularform des Arrayparameter und sowie ein numerisches Suffix hinzugefügt.  
   
  Sie sollten dies nur tun, wenn Sie beabsichtigen, um Sonderfällen der gesamte Codepfad, erstellen Sie nicht nur ein Array und rufen Sie die allgemeine Methode.  
   
- **Führen Sie ✓** Beachten Sie, dass Null kann als ein Params-Argument übergeben werden.  
+ **✓ DO** Beachten Sie, dass Null kann als ein Params-Argument übergeben werden.  
   
  Sie sollten überprüfen, dass das Array nicht vor der Verarbeitung null ist.  
   
- **X nicht** verwenden die `varargs` Methoden, sogenannten mit den Auslassungspunkten.  
+ **X DO NOT** verwenden die `varargs` Methoden, sogenannten mit den Auslassungspunkten.  
   
  Einige CLR-Sprachen, z. B. C++, unterstützen eine alternative Konvention für die Übergabe von Variablen Parameterlisten aufgerufen `varargs` Methoden. Die Konvention sollte nicht in Frameworks verwendet werden, da sie nicht CLS-kompatibel ist.  
   
 ### <a name="pointer-parameters"></a>Zeigerparameter  
  Im Allgemeinen Zeiger nicht in den öffentlichen Oberflächenbereich ein Framework ausgereifte verwalteten Code angezeigt werden soll. In den meisten Fällen, sollte als Zeiger gekapselt werden. Jedoch in einigen Fällen Zeiger aus Gründen der Interoperabilität erforderlich sind, und Verwendung von Zeigern in solchen Fällen ist geeignet.  
   
- **Führen Sie ✓** bieten eine Alternative für ein Element, das ein Zeigerargument akzeptiert, da Zeiger nicht CLS-kompatibel sind.  
+ **✓ DO** bieten eine Alternative für ein Element, das ein Zeigerargument akzeptiert, da Zeiger nicht CLS-kompatibel sind.  
   
- **X vermeiden** auf diese Weise die aufwändige Prüfung von Zeigerargumente Argument.  
+ **X AVOID** auf diese Weise die aufwändige Prüfung von Zeigerargumente Argument.  
   
- **Führen Sie ✓** Konventionen gemeinsamen Zeiger-bezogene beim Entwerfen der Member mit Zeigern.  
+ **✓ DO** Konventionen gemeinsamen Zeiger-bezogene beim Entwerfen der Member mit Zeigern.  
   
  Beispielsweise besteht keine Notwendigkeit, übergeben den Startindex, da einfache Zeigerarithmetik verwendet werden kann, um das gleiche Ergebnis zu erreichen.  
   

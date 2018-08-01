@@ -15,7 +15,7 @@ ms.lasthandoff: 05/15/2018
 ms.locfileid: "34172148"
 ---
 # <a name="struct-c-reference"></a>struct (C#-Referenz)
-Ein `struct`-Typ ist ein ein Werttyp, der in der Regeln verwendet wird, um eine kleine Gruppe verwandter Variablen zusammenzufassen, z. B. Koordinaten eines Rechtecks oder die Merkmale eines Lagerartikels. Im folgenden Beispiel wird eine einfache Strukturdeklaration veranschaulicht:  
+Ein `struct`-Typ ist ein ein Werttyp, der in der Regel verwendet wird, um eine kleine Gruppe verwandter Variablen zusammenzufassen, z. B. Koordinaten eines Rechtecks oder die Merkmale eines Lagerartikels. Im folgenden Beispiel wird eine einfache Strukturdeklaration veranschaulicht:  
   
 ```csharp  
 public struct Book  
