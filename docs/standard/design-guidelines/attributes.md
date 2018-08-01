@@ -26,25 +26,25 @@ ms.locfileid: "33574633"
   
  Eigenschaften, die nicht unbedingt angegeben werden, wenn das Attribut angewendet wird, werden optionale Eigenschaften (oder optionale Argumente) bezeichnet. Sie werden durch festlegbaren Eigenschaften dargestellt. Compiler bieten spezielle Syntax, um diese Eigenschaften festzulegen, wenn ein Attribut angewendet wird. Z. B. die <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> Eigenschaft darstellt, ein optionales Argument.  
   
- **Führen Sie ✓** benennen Sie benutzerdefinierte Attributklassen mit dem Suffix "-Attribut" an.  
+ **✓ DO** benennen Sie benutzerdefinierte Attributklassen mit dem Suffix "-Attribut" an.  
   
- **Führen Sie ✓** gelten die <xref:System.AttributeUsageAttribute> zu benutzerdefinierten Attributen.  
+ **✓ DO** gelten die <xref:System.AttributeUsageAttribute> zu benutzerdefinierten Attributen.  
   
- **Führen Sie ✓** festlegbare Eigenschaften bereitstellen, für die optionalen Argumente.  
+ **✓ DO** festlegbare Eigenschaften bereitstellen, für die optionalen Argumente.  
   
- **Führen Sie ✓** nur Get-Eigenschaften für die erforderlichen Argumente bereitstellen.  
+ **✓ DO** nur Get-Eigenschaften für die erforderlichen Argumente bereitstellen.  
   
- **Führen Sie ✓** Konstruktorparameter zum Initialisieren der Eigenschaften, die erforderlichen Argumente bereitstellen. Jeder Parameter muss den gleichen Namen (obwohl mit abweichender Groß-/Kleinschreibung) als die entsprechende Eigenschaft verfügen.  
+ **✓ DO** Konstruktorparameter zum Initialisieren der Eigenschaften, die erforderlichen Argumente bereitstellen. Jeder Parameter muss den gleichen Namen (obwohl mit abweichender Groß-/Kleinschreibung) als die entsprechende Eigenschaft verfügen.  
   
- **X vermeiden** Konstruktorparameter zum Initialisieren der Eigenschaften, die die optionalen Argumente bereitstellen.  
+ **X AVOID** Konstruktorparameter zum Initialisieren der Eigenschaften, die die optionalen Argumente bereitstellen.  
   
  Das heißt, keine Eigenschaften, die mit einem Konstruktor und einen Setter festgelegt werden können. Diese Richtlinie stellt sehr explizite, welche Argumente optional sind und die erforderlich sind, und vermeidet zwei Möglichkeiten, auf diese Weise dieselbe Bedeutung.  
   
- **X vermeiden** Überladen von Konstruktoren des benutzerdefinierten Attributs.  
+ **X AVOID** Überladen von Konstruktoren des benutzerdefinierten Attributs.  
   
  Nur über einen Konstruktor mit kommuniziert eindeutig für den Benutzer die Argumente erforderlich sind und welche optional sind.  
   
- **Führen Sie ✓** versiegeln Sie benutzerdefinierte Attributklassen, falls möglich. Dies beschleunigt die Suchregeln für das Attribut.  
+ **✓ DO** versiegeln Sie benutzerdefinierte Attributklassen, falls möglich. Dies beschleunigt die Suchregeln für das Attribut.  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

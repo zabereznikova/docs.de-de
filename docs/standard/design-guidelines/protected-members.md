@@ -24,9 +24,9 @@ Geschützte Member selbst bieten keine Erweiterungen können, sie jedoch Erweite
   
  Framework-Entwickler müssen mit geschützte Member vorsichtig sein, da der Namen "geschützt" auf "false" wie Sicherheit geben kann. Jeder Benutzer kann auf Unterklasse in einer unversiegelten Klasse und den Zugriff auf geschützte Member und also alle den gleichen defensive Codierungstechniken für öffentliche Member verwendet, die auf geschützte Member anwenden.  
   
- **✓ GGF.** mit geschützte Member für die erweiterte Anpassung.  
+ **✓ CONSIDER** mit geschützte Member für die erweiterte Anpassung.  
   
- **Führen Sie ✓** geschützte Member in nicht versiegelten Klassen als öffentlich für die Sicherheit, Dokumentation und Kompatibilität Analyse zu behandeln.  
+ **✓ DO** geschützte Member in nicht versiegelten Klassen als öffentlich für die Sicherheit, Dokumentation und Kompatibilität Analyse zu behandeln.  
   
  Jeder kann von einer Klasse erben und die geschützten Member zuzugreifen.  
   

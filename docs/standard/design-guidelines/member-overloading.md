@@ -34,23 +34,23 @@ public static class Console {
   
  Überladen ist eine der wichtigsten Methoden zur Verbesserung der Nutzbarkeit und Produktivität und Lesbarkeit wieder verwendbare Bibliotheken. Auf der Anzahl von Parametern überladen ermöglicht die einfachere Versionen von Konstruktoren und Methoden bereitstellen. Überladen für den Parametertyp erleichtert möglich, demselben Membernamen für Elemente, die identische Vorgänge für eine ausgewählte Gruppe von verschiedenen Typen zu verwenden.  
   
- **Führen Sie ✓** versuchen, beschreibende Parameternamen zu verwenden, um anzugeben, die Standardeinstellung von kürzeren Überladungen verwendet.  
+ **✓ DO** versuchen, beschreibende Parameternamen zu verwenden, um anzugeben, die Standardeinstellung von kürzeren Überladungen verwendet.  
   
- **X vermeiden** nach dem Zufallsprinzip varying Parameternamen in Überladungen. Wenn ein Parameter in einer Überladung dieselbe Eingabe als Parameter in einer anderen Überladung darstellt, sollte der Parameter denselben Namen aufweisen.  
+ **X AVOID** nach dem Zufallsprinzip varying Parameternamen in Überladungen. Wenn ein Parameter in einer Überladung dieselbe Eingabe als Parameter in einer anderen Überladung darstellt, sollte der Parameter denselben Namen aufweisen.  
   
- **X vermeiden** Mitglieder überlastet werden in der Reihenfolge der Parameter in inkonsistent. Parameter mit dem gleichen Namen sollte in der gleichen Position alle Überladungen angezeigt werden.  
+ **X AVOID** Mitglieder überlastet werden in der Reihenfolge der Parameter in inkonsistent. Parameter mit dem gleichen Namen sollte in der gleichen Position alle Überladungen angezeigt werden.  
   
- **Führen Sie ✓** stellen nur die längste Überladung virtuellen (wenn Erweiterbarkeit erforderlich ist). Kürzere Überladungen sollten einfach über eine längere Überladung aufrufen.  
+ **✓ DO** stellen nur die längste Überladung virtuellen (wenn Erweiterbarkeit erforderlich ist). Kürzere Überladungen sollten einfach über eine längere Überladung aufrufen.  
   
- **X nicht** verwenden `ref` oder `out` Modifizierer zum Überladen von Membern.  
+ **X DO NOT** verwenden `ref` oder `out` Modifizierer zum Überladen von Membern.  
   
  Für einige Sprachen nicht aufrufen an Überladungen wie folgt aufgelöst werden. Darüber hinaus sollte solche Überladungen wurden in der Regel vollständig unterschiedliche Semantiken wahrscheinlich auch nicht Überladungen jedoch zwei separate Methoden stattdessen.  
   
- **X nicht** Überladungen mit Parametern, die an der gleichen Position und ähnliche Typen noch mit einer anderen Semantik haben.  
+ **X DO NOT** Überladungen mit Parametern, die an der gleichen Position und ähnliche Typen noch mit einer anderen Semantik haben.  
   
- **Führen Sie ✓** zulassen `null` für optionale Argumente übergeben werden soll.  
+ **✓ DO** zulassen `null` für optionale Argumente übergeben werden soll.  
   
- **Führen Sie ✓** verwenden Member überladen, anstatt Elemente mit Standardargumenten definieren.  
+ **✓ DO** verwenden Member überladen, anstatt Elemente mit Standardargumenten definieren.  
   
  Standardargumente sind nicht CLS-kompatibel.  
   

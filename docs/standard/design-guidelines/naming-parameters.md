@@ -18,20 +18,20 @@ ms.locfileid: "33570485"
 # <a name="naming-parameters"></a>Benennen von Parametern
 Über die offensichtlichen Grund der Lesbarkeit ist es wichtig, die Richtlinien für Parameternamen zu folgen, da der Parameter in der Dokumentation und im Designer angezeigt werden, wenn visuellen Entwurfstools Intellisense und Funktionen durchsuchen Klasse bereitzustellen.  
   
- **Führen Sie ✓** CamelCasing Parameternamen verwenden.  
+ **✓ DO** CamelCasing Parameternamen verwenden.  
   
- **Führen Sie ✓** beschreibende Parameternamen verwenden.  
+ **✓ DO** beschreibende Parameternamen verwenden.  
   
- **✓ GGF.** mit Namen basierend auf den Typ des Parameters, anstatt die Bedeutung eines Parameters.  
+ **✓ CONSIDER** mit Namen basierend auf den Typ des Parameters, anstatt die Bedeutung eines Parameters.  
   
 ### <a name="naming-operator-overload-parameters"></a>Benennen der-Operator Überladung Parameter  
- **Führen Sie ✓** verwenden `left` und `right` für binären Operator Überladung Parameternamen, wenn keine Bedeutung für den Parameter vorhanden ist.  
+ **✓ DO** verwenden `left` und `right` für binären Operator Überladung Parameternamen, wenn keine Bedeutung für den Parameter vorhanden ist.  
   
- **Führen Sie ✓** verwenden `value` für unäre Operator überladen Parameternamen, wenn keine Bedeutung für den Parameter vorhanden ist.  
+ **✓ DO** verwenden `value` für unäre Operator überladen Parameternamen, wenn keine Bedeutung für den Parameter vorhanden ist.  
   
- **✓ GGF.** aussagekräftige Namen für den Operator überladen Parameter aus, wenn dies also erheblichem Wert hinzugefügt.  
+ **✓ CONSIDER** aussagekräftige Namen für den Operator überladen Parameter aus, wenn dies also erheblichem Wert hinzugefügt.  
   
- **X nicht** verwenden Abkürzungen oder numerischen Indizes für Operator überladen Parameternamen.  
+ **X DO NOT** verwenden Abkürzungen oder numerischen Indizes für Operator überladen Parameternamen.  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

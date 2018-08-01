@@ -21,15 +21,15 @@ Ausnahme auslösende-Richtlinien, die in diesem Abschnitt beschriebenen erforder
   
  Die meisten Entwickler haben mit der Verwendung von Ausnahmen für Verwendungsfehler z. B. Division durch 0 (null) oder null-Verweise vertraut werden. Ausnahmen werden in das Framework für alle fehlerbedingungen, einschließlich Fehler bei der Ausführung verwendet.  
   
- **X nicht** Fehlercodes zurück.  
+ **X DO NOT** Fehlercodes zurück.  
   
  Ausnahmen sind das primäre Mittel zum Melden von Fehlern in Frameworks.  
   
- **Führen Sie ✓** Ausführungsfehler durch das Auslösen von Ausnahmen gemeldet werden.  
+ **✓ DO** Ausführungsfehler durch das Auslösen von Ausnahmen gemeldet werden.  
   
- **✓ GGF.** Beenden des Prozesses durch Aufrufen von `System.Environment.FailFast` (Feature von .NET Framework 2.0) anstatt eine Ausnahme auszulösen, wenn Ihr Code eine Situation vorfindet, wo es unsicher, für die weitere Ausführung ist.  
+ **✓ CONSIDER** Beenden des Prozesses durch Aufrufen von `System.Environment.FailFast` (Feature von .NET Framework 2.0) anstatt eine Ausnahme auszulösen, wenn Ihr Code eine Situation vorfindet, wo es unsicher, für die weitere Ausführung ist.  
   
- **X nicht** verwenden Sie Ausnahmen für die normale ablaufsteuerung, falls möglich.  
+ **X DO NOT** verwenden Sie Ausnahmen für die normale ablaufsteuerung, falls möglich.  
   
  Mit Ausnahme von Systemfehlern und Vorgänge mit potenzielle Racebedingungen sollten Framework-Entwickler APIs entwerfen, damit Benutzer Code schreiben können, der keine Ausnahmen auslöst. Sie können z. B. angeben, dass eine Möglichkeit zum Überprüfen von Vorbedingungen vor dem Mitglied aufrufen, damit Benutzer Code schreiben können, der keine Ausnahmen auslöst.  
   
@@ -37,29 +37,29 @@ Ausnahme auslösende-Richtlinien, die in diesem Abschnitt beschriebenen erforder
   
  Es gibt Fälle, wenn der Tester-Ausführer-Muster ein inakzeptabler Leistung auswirken können. In solchen Fällen sollte dem so genannten Try-Analyse Muster berücksichtigt werden (finden Sie unter [Ausnahmen und Leistungsfähigkeit](../../../docs/standard/design-guidelines/exceptions-and-performance.md) für Weitere Informationen).  
   
- **✓ GGF.** Leistungseinbußen bei der Auslösen von Ausnahmen. Throw-Raten über 100 pro Sekunde sind wahrscheinlich die Leistung der meisten Anwendung deutlich beeinträchtigen.  
+ **✓ CONSIDER** Leistungseinbußen bei der Auslösen von Ausnahmen. Throw-Raten über 100 pro Sekunde sind wahrscheinlich die Leistung der meisten Anwendung deutlich beeinträchtigen.  
   
- **Führen Sie ✓** Dokument alle Ausnahmen öffentlich aufrufbare Member aufgrund einer Verletzung des Elements (anstatt aufgrund eines Systemfehlers) Vertrag, und behandeln Sie sie als Bestandteil des Vertrags.  
+ **✓ DO** Dokument alle Ausnahmen öffentlich aufrufbare Member aufgrund einer Verletzung des Elements (anstatt aufgrund eines Systemfehlers) Vertrag, und behandeln Sie sie als Bestandteil des Vertrags.  
   
  Ausnahmen, die Bestandteil des Vertrags sind sollten nicht von einer Version zur nächsten ändern (d. h. Ausnahmetyp nicht ändern sollten, und neue Ausnahmen nicht hinzugefügt werden sollen).  
   
- **X nicht** haben öffentliche Member, die entweder auslösen oder keine können basierend auf bestimmte Option.  
+ **X DO NOT** haben öffentliche Member, die entweder auslösen oder keine können basierend auf bestimmte Option.  
   
- **X nicht** öffentliche Member, die zum Zurückgeben von Ausnahmen als Rückgabewert oder ein `out` Parameter.  
+ **X DO NOT** öffentliche Member, die zum Zurückgeben von Ausnahmen als Rückgabewert oder ein `out` Parameter.  
   
  Zurückgeben von Ausnahmen von öffentlichen APIs, statt sie unterlaufen kann viele der Vorteile von Ausnahmen basierende-Fehlerberichterstattung.  
   
- **✓ GGF.** Ausnahme-Generator-Methoden verwenden.  
+ **✓ CONSIDER** Ausnahme-Generator-Methoden verwenden.  
   
  Es ist üblich, die von verschiedenen Positionen in die gleiche Ausnahme auslöst. Um Codeumfang zu vermeiden, verwenden Sie Hilfsmethoden, die Ausnahmen zu erstellen und initialisieren Sie ihre Eigenschaften.  
   
  Außerdem werden Elemente, die Ausnahmen auslösen nicht abrufen Inlining. Verschieben die Throw-Anweisung in der Generator lassen möglicherweise das Element inline zu setzen.  
   
- **X nicht** lösen Ausnahmen aus Ausnahmeblöcke-Filter.  
+ **X DO NOT** lösen Ausnahmen aus Ausnahmeblöcke-Filter.  
   
  Wenn ein Ausnahmefilter eine Ausnahme auslöst, wird die Ausnahme von der CLR und der Filter "false" zurückgegeben. Dieses Verhalten ist nicht von den Filter ausführen und explizit "false" zurückgeben und ist daher sehr schwer zu beheben.  
   
- **X vermeiden** explizit Auslösen von Ausnahmen von finally-Blöcke. Implizit ausgelöste Ausnahmen, Aufrufen von Methoden, die ausgelöst werden, sind zulässig.  
+ **X AVOID** explizit Auslösen von Ausnahmen von finally-Blöcke. Implizit ausgelöste Ausnahmen, Aufrufen von Methoden, die ausgelöst werden, sind zulässig.  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

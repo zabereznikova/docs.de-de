@@ -23,23 +23,23 @@ Obwohl die meisten APIs am besten mithilfe von Klassen und Strukturen modelliert
   
  Das andere Szenario, in welche, das definieren eine Schnittstelle geeignet ist, ist bei der Erstellung einer gemeinsamen Schnittstelle, die von mehreren Typen, z. B. einige Werttypen unterstützt werden kann. Werttypen nicht außer von Typen erben <xref:System.ValueType>, jedoch Schnittstellen implementieren, also über eine Schnittstelle ist die einzige Option, um einen allgemeinen Basistyp bereitzustellen.  
   
- **Führen Sie ✓** definieren Sie eine Schnittstelle aus, wenn Sie einige gemeinsame-API benötigen, von einem Satz von Typen unterstützt werden müssen, die Werttypen enthält.  
+ **✓ DO** definieren Sie eine Schnittstelle aus, wenn Sie einige gemeinsame-API benötigen, von einem Satz von Typen unterstützt werden müssen, die Werttypen enthält.  
   
- **✓ GGF.** zum Definieren einer Schnittstelle, wenn Sie seine Funktionalität auf Typen zu unterstützen, die bereits von einem anderen Typ erben müssen.  
+ **✓ CONSIDER** zum Definieren einer Schnittstelle, wenn Sie seine Funktionalität auf Typen zu unterstützen, die bereits von einem anderen Typ erben müssen.  
   
- **X vermeiden** Markerschnittstellen (ohne Member) verwenden.  
+ **X AVOID** Markerschnittstellen (ohne Member) verwenden.  
   
  Wenn Sie eine Klasse mit einem bestimmten Merkmal (Marker) markieren müssen, verwenden Sie in der Regel eine Schnittstelle, anstatt ein benutzerdefiniertes Attribut.  
   
- **Führen Sie ✓** Geben Sie mindestens einen Typ, die Implementierung einer Schnittstelle.  
+ **✓ DO** Geben Sie mindestens einen Typ, die Implementierung einer Schnittstelle.  
   
  Dies So überprüfen Sie den Entwurf der Schnittstelle. Beispielsweise <xref:System.Collections.Generic.List%601> ist eine Implementierung der <xref:System.Collections.Generic.IList%601> Schnittstelle.  
   
- **Führen Sie ✓** Geben Sie mindestens eine API, die jede Schnittstelle nutzt Sie definieren (eine Methode, die die Schnittstelle als Parameter oder einer Eigenschaft annimmt, die als Schnittstelle eingegeben wird).  
+ **✓ DO** Geben Sie mindestens eine API, die jede Schnittstelle nutzt Sie definieren (eine Methode, die die Schnittstelle als Parameter oder einer Eigenschaft annimmt, die als Schnittstelle eingegeben wird).  
   
  Dies So überprüfen Sie den Schnittstellenentwurf. Beispielsweise <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> nutzt die <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> Schnittstelle.  
   
- **X nicht** Hinzufügen von Mitgliedern zu einer Schnittstelle, die zuvor gesendet wurde.  
+ **X DO NOT** Hinzufügen von Mitgliedern zu einer Schnittstelle, die zuvor gesendet wurde.  
   
  Auf diese Weise wird die Implementierung der Schnittstelle unterbrochen. Sie sollten eine neue Schnittstelle erstellen, um Versionsprobleme zu vermeiden.  
   

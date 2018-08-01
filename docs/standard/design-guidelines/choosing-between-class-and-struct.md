@@ -36,9 +36,9 @@ Eine der grundlegenden Designentscheidungen, die jede Framework Designer portalc
   
  Als Faustregel gilt sollte die meisten Typen in einem Framework Klassen sein. Es gibt jedoch einige Situationen, in denen die Merkmale eines Werttyps besser geeignet ist, verwenden von Strukturen zu vereinfachen.  
   
- **✓ GGF.** eine Struktur anstelle einer Klasse definieren, wenn Instanzen des Typs klein und im Allgemeinen kurzlebig sind oder in anderen Objekten eingebettet sind.  
+ **✓ CONSIDER** eine Struktur anstelle einer Klasse definieren, wenn Instanzen des Typs klein und im Allgemeinen kurzlebig sind oder in anderen Objekten eingebettet sind.  
   
- **X vermeiden** eine Struktur definieren, es sei denn, der Typ aller folgende Merkmale aufweist:  
+ **X AVOID** eine Struktur definieren, es sei denn, der Typ aller folgende Merkmale aufweist:  
   
 -   Logisch stellt dar, einen einzelnen Wert, der ähnlich wie primitive Typen (`int`, `double`usw..).  
   

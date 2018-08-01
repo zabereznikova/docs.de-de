@@ -21,29 +21,29 @@ ms.locfileid: "33571016"
 # <a name="equality-operators"></a>Gleichheitsoperatoren
 In diesem Abschnitt wird erläutert, das Überladen von Gleichheitsoperatoren und bezieht sich auf `operator==` und `operator!=` als Gleichheitsoperatoren.  
   
- **X nicht** die Gleichheitsoperatoren und die andere Überladung.  
+ **X DO NOT** die Gleichheitsoperatoren und die andere Überladung.  
   
- **Führen Sie ✓** sicher, dass <xref:System.Object.Equals%2A?displayProperty=nameWithType> und die Gleichheitsoperatoren haben genau die gleiche Semantik und ähnliche Leistungsmerkmale.  
+ **✓ DO** sicher, dass <xref:System.Object.Equals%2A?displayProperty=nameWithType> und die Gleichheitsoperatoren haben genau die gleiche Semantik und ähnliche Leistungsmerkmale.  
   
  Dies bedeutet, dass häufig `Object.Equals` außer Kraft gesetzt werden, wenn die Gleichheitsoperatoren überladen werden muss.  
   
- **X vermeiden** Auslösen von Ausnahmen von Gleichheitsoperatoren.  
+ **X AVOID** Auslösen von Ausnahmen von Gleichheitsoperatoren.  
   
  Gibt beispielsweise auf "false", wenn eines der Argumente null statt ist `NullReferenceException`.  
   
 ## <a name="equality-operators-on-value-types"></a>Gleichheitsoperatoren für Werttypen  
- **Führen Sie ✓** Überladen von Gleichheitsoperatoren für Werttypen, wenn Gleichheit sinnvoll ist.  
+ **✓ DO** Überladen von Gleichheitsoperatoren für Werttypen, wenn Gleichheit sinnvoll ist.  
   
  In den meisten Programmiersprachen, es ist keine Standardimplementierung von `operator==` für Werttypen.  
   
 ## <a name="equality-operators-on-reference-types"></a>Gleichheitsoperatoren für Referenztypen  
- **X vermeiden** Überladen von Gleichheitsoperatoren auf änderbare Referenztypen.  
+ **X AVOID** Überladen von Gleichheitsoperatoren auf änderbare Referenztypen.  
   
  Viele Sprachen haben integrierte Gleichheitsoperatoren für Verweistypen. Integrierte Operatoren in der Regel implementiert die Verweisgleichheit und viele Entwickler sind überrascht, wenn das Standardverhalten in der Wertgleichheit geändert wird.  
   
  Dieses Problem wird für unveränderliche Verweistypen verringert, da Unveränderlichkeit viel schwieriger, den Unterschied zwischen Verweisgleichheit und Wertgleichheit beachtet wird.  
   
- **X vermeiden** Überladen von Gleichheitsoperatoren für Verweistypen, bei die Implementierung wesentlich langsamer als der Verweisgleichheit wäre.  
+ **X AVOID** Überladen von Gleichheitsoperatoren für Verweistypen, bei die Implementierung wesentlich langsamer als der Verweisgleichheit wäre.  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

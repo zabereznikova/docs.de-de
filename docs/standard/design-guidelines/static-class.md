@@ -24,15 +24,15 @@ Eine statische Klasse als eine Klasse, nur statische Member enthält, definiert 
   
  Statische Klassen sind, einen Kompromiss zwischen reinen eines objektorientierten Entwurfs und Einfachheit. Sie werden häufig verwendet, um Verknüpfungen zu anderen Vorgängen bereitzustellen (z. B. <xref:System.IO.File?displayProperty=nameWithType>), Inhaber von Erweiterungsmethoden [c#], oder Funktionen, die für die ein vollständige objektorientierten Wrapper unbefugten ist (z. B. <xref:System.Environment?displayProperty=nameWithType>).  
   
- **Führen Sie ✓** statische Klassen nur selten zu verwenden.  
+ **✓ DO** statische Klassen nur selten zu verwenden.  
   
  Statische Klassen sollte nur als unterstützende Klassen für den objektorientierten Kern des Frameworks verwendet werden.  
   
- **X nicht** statische Klassen als Bucket für verschiedene Elemente behandeln.  
+ **X DO NOT** statische Klassen als Bucket für verschiedene Elemente behandeln.  
   
- **X nicht** deklarieren oder Instanzmember in statischen Klassen zu überschreiben.  
+ **X DO NOT** deklarieren oder Instanzmember in statischen Klassen zu überschreiben.  
   
- **Führen Sie ✓** deklarieren Sie statische Klassen als versiegelt, "abstract", und fügen Sie eine private Instanzkonstruktor hinzu, wenn Ihre Programmiersprache keine integrierten Unterstützung für statische Klassen.  
+ **✓ DO** deklarieren Sie statische Klassen als versiegelt, "abstract", und fügen Sie eine private Instanzkonstruktor hinzu, wenn Ihre Programmiersprache keine integrierten Unterstützung für statische Klassen.  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

@@ -20,11 +20,11 @@ ms.locfileid: "33570424"
 # <a name="names-of-assemblies-and-dlls"></a>Namen von Assemblys und DLLs
 Eine Assembly ist die Einheit der Bereitstellung und Identität für verwalteten Code Programme. Obwohl Assemblys eine oder mehrere Dateien umfassen können, in der Regel ordnet eine Assembly eine DLL eins zu eins. Dieser Abschnitt beschreibt daher nur DLL Benennungskonventionen, der dann Benennungskonventionen Assembly zugeordnet werden können.  
   
- **Führen Sie ✓** wählen Sie Namen für die Assembly DLLs, die große Blöcke von Funktionen, z. B. "System.Data" vorschlagen.  
+ **✓ DO** wählen Sie Namen für die Assembly DLLs, die große Blöcke von Funktionen, z. B. "System.Data" vorschlagen.  
   
  Assembly- und DLL-Namen müssen den Namespace-Namen entsprechen, aber es ist angemessen, des Namespacenamens befolgen beim Benennen von Assemblys. Eine gute Faustregel ist, der basierend auf einem gemeinsamen Präfix der Namespaces in der Assembly enthaltenen DLL-name. Angenommen, eine Assembly mit zwei Namespaces `MyCompany.MyTechnology.FirstFeature` und `MyCompany.MyTechnology.SecondFeature`, aufgerufen werden `MyCompany.MyTechnology.dll`.  
   
- **✓ GGF.** naming DLLs nach dem folgenden Muster:  
+ **✓ CONSIDER** naming DLLs nach dem folgenden Muster:  
   
  `<Company>.<Component>.dll`  
   

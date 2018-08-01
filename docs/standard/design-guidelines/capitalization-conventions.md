@@ -43,9 +43,9 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
  `ioStream`  
  `htmlTag`  
   
- **Führen Sie ✓** verwenden Sie PascalCasing für alle öffentlichen Member, Typnamen und Namespacenamen Namen aus mehreren Wörtern bestehen.  
+ **✓ DO** verwenden Sie PascalCasing für alle öffentlichen Member, Typnamen und Namespacenamen Namen aus mehreren Wörtern bestehen.  
   
- **Führen Sie ✓** CamelCasing für Parameternamen verwenden.  
+ **✓ DO** CamelCasing für Parameternamen verwenden.  
   
  Die folgende Tabelle beschreibt die Regeln der Groß-/Kleinschreibung für verschiedene Arten von Bezeichnern.  
   
@@ -64,7 +64,7 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Großschreibung zusammengesetzte Wörter und häufig verwendete Begriffe  
  Die meisten zusammengesetzten Wörter werden als einzelne Wörter für Zwecke der Groß-/Kleinschreibung behandelt.  
   
- **X nicht** jedes Wort in so genannten geschlossener Form zusammengesetzte Wörter profitieren.  
+ **X DO NOT** jedes Wort in so genannten geschlossener Form zusammengesetzte Wörter profitieren.  
   
  Hierbei handelt es sich um zusammengesetzte Wörter, die als ein einzelnes Wort, wie z. B. Endpunkt geschrieben. Für die Richtlinien zur Groß-und Kleinschreibung behandeln Sie ein zusammengesetztes Wort in geschlossener Form als einzelnes Wort. Verwenden Sie eine aktuelle Wörterbuch, um zu bestimmen, ob ein zusammengesetztes Wort in geschlossener Form geschrieben wird.  
   
@@ -99,7 +99,7 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
 ## <a name="case-sensitivity"></a>Groß- und Kleinschreibung  
  Sprachen, die in der CLR ausgeführt werden können sind nicht erforderlich, um die Unterscheidung, zu unterstützen, obwohl Teils häufiger erledigen. Auch wenn Ihre Sprache unterstützt wird, nicht anderen Sprachen, die möglicherweise Ihr Framework zugegriffen wird. Keine APIs, die extern zugegriffen werden kann nicht auf Fall allein zu Unterschieden zwischen den zwei Namen in demselben Kontext aus diesem Grund verlassen.  
   
- **X nicht** wird davon ausgegangen, dass alle Programmiersprachen die Groß-/Kleinschreibung beachtet werden. Das sind sie nicht. Namen dürfen sich nicht nach Groß-/Kleinschreibung allein unterscheiden.  
+ **X DO NOT** wird davon ausgegangen, dass alle Programmiersprachen die Groß-/Kleinschreibung beachtet werden. Das sind sie nicht. Namen dürfen sich nicht nach Groß-/Kleinschreibung allein unterscheiden.  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

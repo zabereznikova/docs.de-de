@@ -28,11 +28,11 @@ Eine Abstraktion ist ein Typ, der beschreibt einen Vertrag, aber keine vollstän
   
  Abstraktionen bieten jedoch äußerst wichtiger Erweiterbarkeit, die die andere Mechanismen für Erweiterbarkeit häufig zuordnen können. Sie sind der Kern des architektonische Muster, z. B.-Plug-ins, die Umkehrung des Steuerelements (IoC), Pipelines und So weiter. Sie sind auch für Prüfbarkeit Frameworks äußerst wichtig. Gute Abstraktionen ermöglichen die stub-out starker Abhängigkeiten für Komponententests bereit. Zusammengefasst sind die Abstraktionen für die gefragtesten Umfang die moderne, objektorientierte Frameworks verantwortlich.  
   
- **X nicht** stellen Abstraktionen bereit, es sei denn, sie getestet werden, indem Sie mehrere konkrete Implementierungen und APIs, nutzen die Abstraktionen entwickeln.  
+ **X DO NOT** stellen Abstraktionen bereit, es sei denn, sie getestet werden, indem Sie mehrere konkrete Implementierungen und APIs, nutzen die Abstraktionen entwickeln.  
   
- **Führen Sie ✓** wählen Sie beim Entwerfen einer Abstraktion sorgfältig zwischen eine abstrakte Klasse und einer Schnittstelle.  
+ **✓ DO** wählen Sie beim Entwerfen einer Abstraktion sorgfältig zwischen eine abstrakte Klasse und einer Schnittstelle.  
   
- **✓ GGF.** Verweis Tests für konkrete Implementierungen von Abstraktionen bereitstellen. Solche Tests sollten Benutzern zu prüfen, ob ihre Implementierungen ordnungsgemäß den Vertrag implementieren.  
+ **✓ CONSIDER** Verweis Tests für konkrete Implementierungen von Abstraktionen bereitstellen. Solche Tests sollten Benutzern zu prüfen, ob ihre Implementierungen ordnungsgemäß den Vertrag implementieren.  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

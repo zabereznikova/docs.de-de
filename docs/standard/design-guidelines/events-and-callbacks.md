@@ -22,23 +22,23 @@ Rückrufe sind Erweiterungspunkte, mit die ein Framework zum Benutzercode über 
   
  Ereignisse sind ein spezieller Fall der Rückrufe, der bequeme, einheitliche Syntax unterstützt werden, für den Delegaten (einen Ereignishandler) angeben. Darüber hinaus bieten Visual Studio Anweisungsvervollständigung und Designern Hilfe zur Verwendung der ereignisbasierten-APIs. (Siehe [Ereignis Entwurf](../../../docs/standard/design-guidelines/event.md).)  
   
- **✓ GGF.** Verwendung von Rückrufen Benutzer geben Sie benutzerdefinierten Code, der durch das Framework ausgeführt werden darf.  
+ **✓ CONSIDER** Verwendung von Rückrufen Benutzer geben Sie benutzerdefinierten Code, der durch das Framework ausgeführt werden darf.  
   
- **✓ GGF.** Ereignisse verwenden, um Benutzern das Anpassen des Verhaltens von einem Framework ohne die Notwendigkeit, um zu verstehen, eines objektorientierten Entwurfs zu ermöglichen.  
+ **✓ CONSIDER** Ereignisse verwenden, um Benutzern das Anpassen des Verhaltens von einem Framework ohne die Notwendigkeit, um zu verstehen, eines objektorientierten Entwurfs zu ermöglichen.  
   
- **Führen Sie ✓** plain Rückrufe Ereignisse vorziehen, da sie mehr zu einem breiteren Spektrum von Entwicklern vertraut sind und mit Visual Studio-Anweisungsvervollständigung integriert sind.  
+ **✓ DO** plain Rückrufe Ereignisse vorziehen, da sie mehr zu einem breiteren Spektrum von Entwicklern vertraut sind und mit Visual Studio-Anweisungsvervollständigung integriert sind.  
   
- **X vermeiden** Rückrufe in leistungsabhängigen-APIs verwenden.  
+ **X AVOID** Rückrufe in leistungsabhängigen-APIs verwenden.  
   
- **✓ FÜHREN** verwenden Sie die neue `Func<...>`, `Action<...>`, oder `Expression<...>` Typen anstelle von benutzerdefinierten Delegaten, wenn APIs mit Rückrufe zu definieren.  
+ **✓ DO** verwenden Sie die neue `Func<...>`, `Action<...>`, oder `Expression<...>` Typen anstelle von benutzerdefinierten Delegaten, wenn APIs mit Rückrufe zu definieren.  
   
  `Func<...>` und `Action<...>` generische Delegaten darstellen. `Expression<...>` Stellt Funktionsdefinitionen, die kompiliert und anschließend zur Laufzeit kann aber auch aufgerufen werden können werden serialisiert und an remote-Prozesse übergeben.  
   
- **Führen Sie ✓** messen und Verstehen von Auswirkungen auf die Leistung der Verwendung von `Expression<...>`, anstatt `Func<...>` und `Action<...>` Delegaten.  
+ **✓ DO** messen und Verstehen von Auswirkungen auf die Leistung der Verwendung von `Expression<...>`, anstatt `Func<...>` und `Action<...>` Delegaten.  
   
  `Expression<...>` Typen sind in den meisten Fällen ist logisch äquivalent zu `Func<...>` und `Action<...>` Delegaten. Der Hauptunterschied zwischen beiden ist, dass die Delegaten in lokalen Prozess Szenarien verwendet werden sollen. Ausdrücke sind für Fälle vorgesehen, in denen es vorteilhaft und zum Auswerten des Ausdrucks in einer remote-Prozess oder Computer möglich ist.  
   
- **Führen Sie ✓** verstehen, dass durch den Aufruf eines Delegaten, beliebigen Code ausführen und bei denen konnte Sicherheit, Richtigkeit und Kompatibilität Verarbeitungsverhaltens.  
+ **✓ DO** verstehen, dass durch den Aufruf eines Delegaten, beliebigen Code ausführen und bei denen konnte Sicherheit, Richtigkeit und Kompatibilität Verarbeitungsverhaltens.  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

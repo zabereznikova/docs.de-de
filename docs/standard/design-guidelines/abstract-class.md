@@ -20,17 +20,17 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570547"
 ---
 # <a name="abstract-class-design"></a>Entwurf abstrakter Klassen
-**X nicht** öffentliche oder geschützte interne Konstruktoren in abstrakten Typen definieren.  
+**X DO NOT** öffentliche oder geschützte interne Konstruktoren in abstrakten Typen definieren.  
   
  Konstruktoren sollten öffentlich nur, wenn Benutzer zum Erstellen von Instanzen des Typs müssen sein. Da Sie die Instanzen eines abstrakten Datentyps erstellen können, ist ein abstrakter Typ mit einem öffentlichen Konstruktor falsch irreführend, für die Benutzer.  
   
- **Führen Sie ✓** einer geschützten oder internen-Konstruktor in abstrakten Klassen definieren.  
+ **✓ DO** einer geschützten oder internen-Konstruktor in abstrakten Klassen definieren.  
   
  Ein geschützter Konstruktor ist eher üblich und einfach die Basisklasse, um eine eigene Initialisierungsschritte auszuführen. wenn Untertypen erstellt werden kann.  
   
  Ein interner Konstruktor kann verwendet werden, beschränken Sie konkrete Implementierungen von der abstrakten Klasse auf die Assembly, die die Klasse definiert.  
   
- **Führen Sie ✓** Geben Sie mindestens einen konkreten Typ, die von jeder abstrakten Klasse erbt, die Sie versenden.  
+ **✓ DO** Geben Sie mindestens einen konkreten Typ, die von jeder abstrakten Klasse erbt, die Sie versenden.  
   
  Dies So überprüfen Sie den Entwurf einer abstrakten Klasse. Beispielsweise <xref:System.IO.FileStream?displayProperty=nameWithType> ist eine Implementierung der <xref:System.IO.Stream?displayProperty=nameWithType> abstrakte Klasse.  
   

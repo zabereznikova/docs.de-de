@@ -25,13 +25,13 @@ Virtuelle Member können überschrieben werden, damit ändern das Verhalten der 
   
  Virtuelle Member, z. B. Rückrufe (und ggf. mehr als Rückrufe) sind Aufwand zu entwerfen, testen und zu verwalten, da jeder Aufruf an einen virtuellen Member werden, auf unvorhersehbare Weise überschrieben kann und beliebigen Code ausgeführt werden kann. Darüber hinaus wird in der Regel erheblich mehr Aufwand erforderlich, um den Vertrag des virtuelle Member klar zu definieren, damit die Kosten für das Entwerfen und Dokumentieren sie höher ist.  
   
- **X nicht** machen Sie Member virtuellen, es sei denn, Sie einen guten Grund haben dazu, und Sie kennen die von den Kosten, die im Zusammenhang mit entwerfen, testen und Verwalten virtueller Member.  
+ **X DO NOT** machen Sie Member virtuellen, es sei denn, Sie einen guten Grund haben dazu, und Sie kennen die von den Kosten, die im Zusammenhang mit entwerfen, testen und Verwalten virtueller Member.  
   
  Virtuelle Member sind weniger Datentypkonflikte in Bezug auf Änderungen, die mit ihnen hergestellt werden können, ohne Unterbrechung der Kompatibilität. Darüber hinaus sind sie langsamer als nicht virtuelle Member größtenteils, da Aufrufe an virtuelle Member nicht inline sind.  
   
- **✓ GGF.** Beschränken der Erweiterbarkeit um nur was dies absolut notwendig ist.  
+ **✓ CONSIDER** Beschränken der Erweiterbarkeit um nur was dies absolut notwendig ist.  
   
- **Führen Sie ✓** bevorzugt geschützten Zugriff über öffentlichen Zugriff für virtuelle Member. Öffentliche Member sollten Erweiterbarkeit bereitstellen (falls erforderlich) durch eine geschützte virtuelle Memberfunktion aufrufen.  
+ **✓ DO** bevorzugt geschützten Zugriff über öffentlichen Zugriff für virtuelle Member. Öffentliche Member sollten Erweiterbarkeit bereitstellen (falls erforderlich) durch eine geschützte virtuelle Memberfunktion aufrufen.  
   
  Die öffentlichen Member einer Klasse sollte der richtigen Gruppe von Funktionen für direkte Consumer dieser Klasse bereitstellen. Virtuelle Member in Unterklassen überschreiben werden sollen, und geschützte Barrierefreiheit ist eine hervorragende Möglichkeit, den Bereich aller virtuellen Erweiterungspunkte, um, in dem sie verwendet werden können.  
   

@@ -22,7 +22,7 @@ Eine der Funktionen des Frameworks objektorientierte ist, dass Entwickler erweit
   
  Ein leistungsstarken Mechanismus, der die Erweiterbarkeit verhindert wird versiegeln. Sie können die Klasse oder die einzelnen Mitglieder versiegeln. Versiegelns einer Klasse wird verhindert, dass Benutzer von der Klasse erben. Versiegeln ein Element wird verhindert, dass Benutzer einen bestimmten Member überschreiben.  
   
- **X nicht** Klassen ohne einen guten Grund dazu versiegeln.  
+ **X DO NOT** Klassen ohne einen guten Grund dazu versiegeln.  
   
  Versiegelns einer Klasse, da Sie eine Erweiterbarkeitsszenarios vorstellen können keine ist keinen guten Grund. Framework-Benutzer mögen aus verschiedenen Gründen nonobvious wie das Hinzufügen von halber Member von Klassen erben. Finden Sie unter [nicht versiegelte Klassen](../../../docs/standard/design-guidelines/unsealed-classes.md) Beispiele nonobvious Gründe für Benutzer von einem Typ erben möchten.  
   
@@ -36,11 +36,11 @@ Eine der Funktionen des Frameworks objektorientierte ist, dass Entwickler erweit
   
 -   Die Klasse ist ein Attribut, das sehr schnelle Runtime Suche erfordert. Versiegelte Attribute haben leicht höhere Leistung als nicht versiegelten diejenigen. finden Sie unter [Attribute](../../../docs/standard/design-guidelines/attributes.md).  
   
- **X nicht** geschützten oder virtuellen Member für versiegelte Typen deklarieren.  
+ **X DO NOT** geschützten oder virtuellen Member für versiegelte Typen deklarieren.  
   
  Per Definition können nicht versiegelte Typen von vererbt werden. Dies bedeutet, dass geschützte Member in versiegelten Typen nicht aufgerufen werden, und virtuelle Methoden für versiegelte Typen können nicht überschrieben werden.  
   
- **✓ GGF.** versiegeln Elemente, die Sie außer Kraft setzen.  
+ **✓ CONSIDER** versiegeln Elemente, die Sie außer Kraft setzen.  
   
  Probleme, die auftreten können, aus der Einführung in virtuelle Member (in behandelten [virtuelle Member](../../../docs/standard/design-guidelines/virtual-members.md)) gelten für Außerkraftsetzungen, auch in einem etwas geringeren Grad an. Versiegeln einer Außerkraftsetzung schützt Sie vor solchen Problemen, die von diesem Punkt in der Vererbungshierarchie ab.  
   

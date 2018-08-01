@@ -25,29 +25,29 @@ Enumerationen sind eine besondere Art von Werttyp. Es gibt zwei Arten von Enumer
   
  Flags-Enumerationen dienen zur Unterstützung von bitweiser Operations für den Enum-Werte. Ein gängiges Beispiel Flags-Enumeration wird eine Liste der Optionen an.  
   
- **Führen Sie ✓** mit, dass eine Enumeration typisieren Parameter, Eigenschaften und Rückgabewerte, die Sätze von Werten darstellen.  
+ **✓ DO** mit, dass eine Enumeration typisieren Parameter, Eigenschaften und Rückgabewerte, die Sätze von Werten darstellen.  
   
- **Führen Sie ✓** statische Konstanten anstelle einer Enumeration begünstigen.  
+ **✓ DO** statische Konstanten anstelle einer Enumeration begünstigen.  
   
- **X nicht** Enum für offene Gruppen (z. B. die Version des Betriebssystems, Namen von Ihrer Freunde usw.) verwenden.  
+ **X DO NOT** Enum für offene Gruppen (z. B. die Version des Betriebssystems, Namen von Ihrer Freunde usw.) verwenden.  
   
- **X nicht** Geben Sie für die zukünftige Verwendung reservierte Enumerationswerte, die vorgesehen sind.  
+ **X DO NOT** Geben Sie für die zukünftige Verwendung reservierte Enumerationswerte, die vorgesehen sind.  
   
  Sie können Werte immer einfach der vorhandenen Enumeration zu einem späteren Zeitpunkt hinzufügen. Finden Sie unter [Hinzufügen von Werten für Enumerationen](#add_value) detaillierte Informationen zum Hinzufügen von Werten für Enumerationen. Reservierten Werte einfach dadurch die echte Wertemenge und tendenziell zu Benutzerfehler führen.  
   
- **X vermeiden** öffentlich verfügbar machen Enumerationen mit nur einem Wert.  
+ **X AVOID** öffentlich verfügbar machen Enumerationen mit nur einem Wert.  
   
  Üblicherweise für zukünftige Erweiterungen der C-APIs sichergestellt wird Methodensignaturen reservierte Parameter hinzu. Solche reservierte Parameter können als Enumerationen mit einem einzelnen Wert ausgedrückt werden. Dies sollte nicht in der verwalteten APIs erfolgen. Überladen von Methoden ermöglicht das Hinzufügen von Parametern in zukünftigen Versionen.  
   
- **X nicht** Sentinel Werte in Enumerationen enthalten.  
+ **X DO NOT** Sentinel Werte in Enumerationen enthalten.  
   
  Obwohl sie manchmal hilfreich, Frameworkentwickler sind, sind Sentinel Werte für Benutzer von Framework verwirrend. Sie werden verwendet, den Status der Enumeration, statt wird einer der Werte aus der Gruppe, dargestellt durch die Enumeration zu verfolgen.  
   
- **Führen Sie ✓** Geben Sie einen Wert von 0 zu einfachen Enumerationen.  
+ **✓ DO** Geben Sie einen Wert von 0 zu einfachen Enumerationen.  
   
  Rufen Sie den Wert etwa "None". Wenn ein solcher Wert nicht für diese bestimmte Enumeration geeignet ist, sollte der am häufigsten verwendete Standardwert für die Enumeration den zugrunde liegenden Wert von 0 (null) zugewiesen werden.  
   
- **✓ GGF.** mit <xref:System.Int32> (die Standardeinstellung in den meisten Programmiersprachen) als zugrunde liegende Typ einer Enumeration, wenn eine der folgenden Aussagen zutrifft:  
+ **✓ CONSIDER** mit <xref:System.Int32> (die Standardeinstellung in den meisten Programmiersprachen) als zugrunde liegende Typ einer Enumeration, wenn eine der folgenden Aussagen zutrifft:  
   
 -   Die Enumeration ist eine Flags-Enumeration, und Sie haben mehr als 32 Flags, oder voraussichtlich mehr in der Zukunft verbunden.  
   
@@ -63,33 +63,33 @@ Enumerationen sind eine besondere Art von Werttyp. Es gibt zwei Arten von Enumer
   
  Für die Verwendung im Arbeitsspeicher, Bedenken Sie, dass verwaltete Objekte immer sind `DWORD`-ausgerichtet, sodass effektiv mehrere Enumerationen oder andere kleineren Strukturen in einer Instanz auf eine kleinere Aufzählung mit pack um einen Unterschied machen, da immer die gesamte Instanzgröße ist erforderlich zu rundende bis zu einem `DWORD`.  
   
- **Führen Sie ✓** benennen Flags-Enumerationen mit Nomen im plural oder Substantivausdrücke und einfache Enumerationen mit Nomen im singular oder nominale Ausdrücke.  
+ **✓ DO** benennen Flags-Enumerationen mit Nomen im plural oder Substantivausdrücke und einfache Enumerationen mit Nomen im singular oder nominale Ausdrücke.  
   
- **X nicht** erweitern <xref:System.Enum?displayProperty=nameWithType> direkt.  
+ **X DO NOT** erweitern <xref:System.Enum?displayProperty=nameWithType> direkt.  
   
  <xref:System.Enum?displayProperty=nameWithType> eine besondere Art ist von der CLR zum Erstellen von benutzerdefinierten Enumerationen verwendet werden. Die meisten Programmiersprachen bieten ein Programmierelement, das Ihnen den Zugriff auf diese Funktionalität bietet. Beispielsweise ist in c# die `enum` Schlüsselwort wird verwendet, um eine Enumeration zu definieren.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Entwerfen von Flags-Enumerationen  
- **Führen Sie ✓** gelten die <xref:System.FlagsAttribute?displayProperty=nameWithType> Flags-Enumerationen. Dieses Attribut nicht auf einfache Enumerationen anwenden.  
+ **✓ DO** gelten die <xref:System.FlagsAttribute?displayProperty=nameWithType> Flags-Enumerationen. Dieses Attribut nicht auf einfache Enumerationen anwenden.  
   
- **Führen Sie ✓** Potenzen von 2 für die Kennzeichnung Enum-Werte verwenden, damit diese problemlos kombiniert werden, können mit dem bitweisen OR-Operation.  
+ **✓ DO** Potenzen von 2 für die Kennzeichnung Enum-Werte verwenden, damit diese problemlos kombiniert werden, können mit dem bitweisen OR-Operation.  
   
- **✓ GGF.** Kombinationen der Flags verwendet spezielle Enumerationswerte für häufig bereitstellen.  
+ **✓ CONSIDER** Kombinationen der Flags verwendet spezielle Enumerationswerte für häufig bereitstellen.  
   
  Bitweise Operationen sollte sind ein Konzept, das erweitert und nicht für einfache Aufgaben erforderlich. <xref:System.IO.FileAccess.ReadWrite> ist ein Beispiel eines speziellen Werts.  
   
- **X vermeiden** Erstellen von Flags-Enumerationen, in denen bestimmte Kombinationen von Werten ungültig sind.  
+ **X AVOID** Erstellen von Flags-Enumerationen, in denen bestimmte Kombinationen von Werten ungültig sind.  
   
- **X vermeiden** mit Flagwerten Enum 0 (null), wenn der Wert "deaktiviert sind alle Flags" darstellt und Sie heißt entsprechend, wie der nächsten Richtlinie vorgesehen.  
+ **X AVOID** mit Flagwerten Enum 0 (null), wenn der Wert "deaktiviert sind alle Flags" darstellt und Sie heißt entsprechend, wie der nächsten Richtlinie vorgesehen.  
   
- **Führen Sie ✓** benennen Sie den Wert 0 (null) von Flags-Enumerationen `None`. Für eine Flags-Enumeration muss der Wert immer bedeuten, dass "alle Flags gelöscht werden."  
+ **✓ DO** benennen Sie den Wert 0 (null) von Flags-Enumerationen `None`. Für eine Flags-Enumeration muss der Wert immer bedeuten, dass "alle Flags gelöscht werden."  
   
 <a name="add_value"></a>   
 ### <a name="adding-value-to-enums"></a>Enumerationen Wert hinzugefügt  
  Es ist üblich, um zu ermitteln, müssen Sie Werte einer Enumeration hinzufügen, nachdem Sie bereits versendet habe. Ein potenzieller Anwendung Kompatibilitätsproblem vorliegt, wenn der neu hinzugefügte Wert aus einer vorhandenen API zurückgegeben wird da schlecht geschriebene Anwendungen den neuen Wert nicht ordnungsgemäß verarbeiten können.  
   
- **✓ GGF.** Enumerationen, die trotz eines geringen Kompatibilitätsproblems Werte hinzugefügt.  
+ **✓ CONSIDER** Enumerationen, die trotz eines geringen Kompatibilitätsproblems Werte hinzugefügt.  
   
  Wenn Sie sich um echte Daten zur Anwendungsinkompatibilitäten durch Hinzufügen einer Enumeration verursacht haben, erwägen Sie eine neue API, die den alten und neuen Werte zurückgibt, und als veraltet markiert die alten API, die fortgesetzt werden nur die alten Werte zurückgeben soll. Dadurch wird sichergestellt, dass Ihre vorhandenen Anwendungen kompatibel bleiben.  
   

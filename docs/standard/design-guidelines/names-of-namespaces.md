@@ -27,24 +27,24 @@ Als ist mit anderen Benennungsrichtlinien das Ziel beim Benennen von Namespaces 
  `Fabrikam.Math`  
  `Litware.Security`  
   
- **Führen Sie ✓** Präfix Namespacenamen mit einem Firmennamen, um zu verhindern, dass Namespaces aus verschiedenen Unternehmen über den gleichen Namen verfügen.  
+ **✓ DO** Präfix Namespacenamen mit einem Firmennamen, um zu verhindern, dass Namespaces aus verschiedenen Unternehmen über den gleichen Namen verfügen.  
   
- **Führen Sie ✓** ein stabiler, versionsunabhängige Produktname auf der zweiten Ebene eine Namespace-Namen verwenden.  
+ **✓ DO** ein stabiler, versionsunabhängige Produktname auf der zweiten Ebene eine Namespace-Namen verwenden.  
   
- **X nicht** Organisationseinheit Hierarchien für Namen in Namespacehierarchien, als Grundlage verwenden, da Gruppennamen in Unternehmen häufig kurzlebig sind. Organisieren Sie die Hierarchie von Namespaces, um Gruppen von verwandten Technologien.  
+ **X DO NOT** Organisationseinheit Hierarchien für Namen in Namespacehierarchien, als Grundlage verwenden, da Gruppennamen in Unternehmen häufig kurzlebig sind. Organisieren Sie die Hierarchie von Namespaces, um Gruppen von verwandten Technologien.  
   
- **Führen Sie ✓** PascalCasing und abgetrennten Namespacekomponenten mit Zeiträumen verwenden (z. B. `Microsoft.Office.PowerPoint`). Wenn Ihre Marke traditionelle Groß-/Kleinschreibung verwendet, sollten Sie die Groß-/Kleinschreibung definiert Ihre Marke folgen, selbst wenn er von der normalen Namespace Groß-/Kleinschreibung abweicht.  
+ **✓ DO** PascalCasing und abgetrennten Namespacekomponenten mit Zeiträumen verwenden (z. B. `Microsoft.Office.PowerPoint`). Wenn Ihre Marke traditionelle Groß-/Kleinschreibung verwendet, sollten Sie die Groß-/Kleinschreibung definiert Ihre Marke folgen, selbst wenn er von der normalen Namespace Groß-/Kleinschreibung abweicht.  
   
- **✓ GGF.** plural Namespacenamen verwenden, falls zutreffend.  
+ **✓ CONSIDER** plural Namespacenamen verwenden, falls zutreffend.  
   
  Verwenden Sie z. B. `System.Collections` anstelle von `System.Collection`. Markennamen und Akronyme sind jedoch Ausnahmen von dieser Regel. Verwenden Sie z. B. `System.IO` anstelle von `System.IOs`.  
   
- **X nicht** denselben Namen für einen Namespace und einen Typ in diesem Namespace verwenden.  
+ **X DO NOT** denselben Namen für einen Namespace und einen Typ in diesem Namespace verwenden.  
   
  Verwenden Sie z. B. nicht `Debug` wie ein Namespace benennen, und geben Sie dann auch eine Klasse namens `Debug` im selben Namespace. Einige Compiler erfordern, dass solche Typen vollqualifiziert sein.  
   
 ### <a name="namespaces-and-type-name-conflicts"></a>Namespaces und Typnamenskonflikte  
- **X nicht** führen Sie die generischen Namen wie z. B. `Element`, `Node`, `Log`, und `Message`.  
+ **X DO NOT** führen Sie die generischen Namen wie z. B. `Element`, `Node`, `Log`, und `Message`.  
   
  Es ist ein sehr hoher Wahrscheinlichkeit, dass dies hätte, führen um zu eingeben gemeinsame Szenarien steht in Konflikt. Sie sollten die generischen Namen qualifizieren (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`).  
   
@@ -57,7 +57,7 @@ Als ist mit anderen Benennungsrichtlinien das Ziel beim Benennen von Namespaces 
      `System.Windows*`   
      `System.Web.UI*`  
   
-     **X nicht** weisen den gleichen Namen auf Typen in Namespaces in einem einzigen Anwendungsmodell.  
+     **X DO NOT** weisen den gleichen Namen auf Typen in Namespaces in einem einzigen Anwendungsmodell.  
   
      Z. B. einen Typ mit dem Namen nicht hinzufügen `Page` auf die <xref:System.Web.UI.Adapters?displayProperty=nameWithType> Namespace, da die <xref:System.Web.UI?displayProperty=nameWithType> -Namespace enthält bereits einen Typ mit dem Namen `Page`.  
   
@@ -69,7 +69,7 @@ Als ist mit anderen Benennungsrichtlinien das Ziel beim Benennen von Namespaces 
   
      Core-Namespaces enthalten alle `System` Namespaces, die ausschließlich Namespaces und die Anwendungsmodelle und der Infrastruktur-Namespaces. Core-Namespaces enthalten, u. a. `System`, `System.IO`, `System.Xml`, und `System.Net`.  
   
-     **X nicht** erteilen, die in Konflikt stehenden Namen mit einem beliebigen Typ in den Core-Namespaces Typen.  
+     **X DO NOT** erteilen, die in Konflikt stehenden Namen mit einem beliebigen Typ in den Core-Namespaces Typen.  
   
      Verwenden Sie z. B. niemals `Stream` als Typname. Es steht in Konflikt mit <xref:System.IO.Stream?displayProperty=nameWithType>, eine sehr häufig verwendete Typ.  
   
@@ -77,9 +77,9 @@ Als ist mit anderen Benennungsrichtlinien das Ziel beim Benennen von Namespaces 
   
      Diese Kategorie umfasst alle Namespaces mit den gleichen ersten beiden Namespaceknoten `(<Company>.<Technology>*`), wie z. B. `Microsoft.Build.Utilities` und `Microsoft.Build.Tasks`. Es ist wichtig, dass Typen, die auf eine einzelne Technologie gehören nicht miteinander in Konflikt stehen.  
   
-     **X nicht** Typnamen, die in Konflikt stehen würde mit anderen Typen in einer einzelnen Technologie zuweisen.  
+     **X DO NOT** Typnamen, die in Konflikt stehen würde mit anderen Typen in einer einzelnen Technologie zuweisen.  
   
-     **X nicht** einführen Typnamenskonflikte zwischen Typen in Technologienamespaces und eine Anwendungsmodellnamespace (es sei denn, die Technologie nicht mit dem Anwendungsmodell verwendet werden sollen).  
+     **X DO NOT** einführen Typnamenskonflikte zwischen Typen in Technologienamespaces und eine Anwendungsmodellnamespace (es sei denn, die Technologie nicht mit dem Anwendungsmodell verwendet werden sollen).  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

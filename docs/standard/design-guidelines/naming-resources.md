@@ -21,15 +21,15 @@ ms.locfileid: "33571185"
 # <a name="naming-resources"></a>Benennen von Ressourcen
 Da lokalisierbare Ressourcen als wären sie Eigenschaften über bestimmte Objekte verwiesen werden können, sind die Benennungsrichtlinien für Ressourcen Eigenschaft Richtlinien ähnlich.  
   
- **Führen Sie ✓** PascalCasing in Ressourcenschlüssel verwenden.  
+ **✓ DO** PascalCasing in Ressourcenschlüssel verwenden.  
   
- **Führen Sie ✓** beschreibenden statt kurzer Bezeichner bereitstellen.  
+ **✓ DO** beschreibenden statt kurzer Bezeichner bereitstellen.  
   
- **X nicht** sprachspezifische Schlüsselwörter der wichtigsten CLR-Sprachen verwenden.  
+ **X DO NOT** sprachspezifische Schlüsselwörter der wichtigsten CLR-Sprachen verwenden.  
   
- **Führen Sie ✓** nur alphanumerische Zeichen und Unterstriche enthalten, Benennen von Ressourcen verwenden.  
+ **✓ DO** nur alphanumerische Zeichen und Unterstriche enthalten, Benennen von Ressourcen verwenden.  
   
- **Führen Sie ✓** die folgende Namenskonvention für die Ausnahme Nachricht Ressourcen verwenden.  
+ **✓ DO** die folgende Namenskonvention für die Ausnahme Nachricht Ressourcen verwenden.  
   
  Der Ressourcenbezeichner muss der Typname der Ausnahme sowie einem kurzen Bezeichner der Ausnahme:  
   

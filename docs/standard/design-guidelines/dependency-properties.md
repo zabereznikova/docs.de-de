@@ -17,26 +17,26 @@ Eine Abhängigkeitseigenschaft (DP) ist eine reguläre Eigenschaft, die den Wert
   
  Eine angehängte Abhängigkeitseigenschaft ist eine Art von Abhängigkeitseigenschaft modelliert als statische Get- und Set-Methoden, die "Eigenschaften" Beschreiben von Beziehungen zwischen Objekten und deren Container darstellen (z. B. die Position des eine `Button` -Objekt, auf eine `Panel` Container).  
   
- **Führen Sie ✓** die Abhängigkeitseigenschaften bereitstellen, sollten Sie die Eigenschaften, WPF-Funktionen wie formatieren, Trigger, Datenbindung, Animationen, dynamische Ressourcen und Vererbung unterstützen.  
+ **✓ DO** die Abhängigkeitseigenschaften bereitstellen, sollten Sie die Eigenschaften, WPF-Funktionen wie formatieren, Trigger, Datenbindung, Animationen, dynamische Ressourcen und Vererbung unterstützen.  
   
 ## <a name="dependency-property-design"></a>Entwerfen der Abhängigkeit-Eigenschaft  
- **Führen Sie ✓** Vererben <xref:System.Windows.DependencyObject>, oder einem seiner Untertypen, bei der Implementierung von Abhängigkeitseigenschaften. Der Typ bietet eine äußerst effiziente Implementierung des einen Eigenschaftenspeicher und WPF-Datenbindung automatisch unterstützt.  
+ **✓ DO** Vererben <xref:System.Windows.DependencyObject>, oder einem seiner Untertypen, bei der Implementierung von Abhängigkeitseigenschaften. Der Typ bietet eine äußerst effiziente Implementierung des einen Eigenschaftenspeicher und WPF-Datenbindung automatisch unterstützt.  
   
- **Führen Sie ✓** Geben Sie einen regulären CLR-Eigenschaft und eine öffentliche statische schreibgeschützte Feld Speichern von einer Instanz von <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> für jede Abhängigkeitseigenschaft.  
+ **✓ DO** Geben Sie einen regulären CLR-Eigenschaft und eine öffentliche statische schreibgeschützte Feld Speichern von einer Instanz von <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> für jede Abhängigkeitseigenschaft.  
   
- **Führen Sie ✓** Implementieren von Abhängigkeitseigenschaften durch Aufrufen von Instanzmethoden <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> und <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
+ **✓ DO** Implementieren von Abhängigkeitseigenschaften durch Aufrufen von Instanzmethoden <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> und <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
   
- **Führen Sie ✓** benennen statische Abhängigkeit Eigenschaftenfeld Breitzeichenformat den Namen der Eigenschaft mit dem "Property".  
+ **✓ DO** benennen statische Abhängigkeit Eigenschaftenfeld Breitzeichenformat den Namen der Eigenschaft mit dem "Property".  
   
- **X nicht** Standardwerte von Abhängigkeitseigenschaften explizit im Code festlegen; stattdessen in den Metadaten festgelegte.  
+ **X DO NOT** Standardwerte von Abhängigkeitseigenschaften explizit im Code festlegen; stattdessen in den Metadaten festgelegte.  
   
  Wenn Sie den Standardwert der Eigenschaft explizit festlegen, können Sie verhindern, dass diese Eigenschaft implizite Weise, wie z. B. eine Formatvorlage festgelegt wird.  
   
- **X nicht** fügen Sie Code in den Eigenschaftenaccessoren als standard Code auf das statische Feld zugreifen.  
+ **X DO NOT** fügen Sie Code in den Eigenschaftenaccessoren als standard Code auf das statische Feld zugreifen.  
   
  Code ausgeführt wird nicht, wenn implizite Wege, wie z. B. eine Formatvorlage, die Eigenschaft festgelegt ist, da Formatierung verwendet das statische Feld direkt.  
   
- **X nicht** Abhängigkeitseigenschaften verwenden, um sichere Daten zu speichern. Selbst bei privaten Abhängigkeitseigenschaften können öffentlich zugegriffen werden.  
+ **X DO NOT** Abhängigkeitseigenschaften verwenden, um sichere Daten zu speichern. Selbst bei privaten Abhängigkeitseigenschaften können öffentlich zugegriffen werden.  
   
 ## <a name="attached-dependency-property-design"></a>Abhängigkeit angefügte Eigenschaftenentwurf  
  Im vorherigen Abschnitt beschriebene Abhängigkeitseigenschaften darstellen systeminterne Eigenschaften des deklarierenden Typs; z. B. die `Text` Eigenschaft ist eine Eigenschaft des `TextButton`, die es deklariert wird. Eine spezielle Art von Abhängigkeitseigenschaft ist das angehängte Abhängigkeitseigenschaft.  
@@ -82,15 +82,15 @@ public class Grid {
   
  Leider können keine Abhängigkeit Eigenschaftenaccessoren beliebige Validierungscode enthalten. Stattdessen muss die Abhängigkeit Eigenschaft Validierungslogik während der Registrierung angegeben werden.  
   
- **X nicht** Abhängigkeit Eigenschaft Validierungslogik in den Eigenschaftenaccessoren abgelegt. Stattdessen übergeben, um einen Validierungsrückruf `DependencyProperty.Register` Methode.  
+ **X DO NOT** Abhängigkeit Eigenschaft Validierungslogik in den Eigenschaftenaccessoren abgelegt. Stattdessen übergeben, um einen Validierungsrückruf `DependencyProperty.Register` Methode.  
   
 ## <a name="dependency-property-change-notifications"></a>Abhängigkeit Eigenschaft Änderungsbenachrichtigungen  
- **X nicht** Change Notification Logik in den Eigenschaftenaccessoren Abhängigkeit implementieren. Abhängigkeitseigenschaften verfügen über eine integrierte Änderung Benachrichtigungen-Funktion, die verwendet werden muss, durch Angabe eines Rückrufs zum Ändern der <xref:System.Windows.PropertyMetadata>.  
+ **X DO NOT** Change Notification Logik in den Eigenschaftenaccessoren Abhängigkeit implementieren. Abhängigkeitseigenschaften verfügen über eine integrierte Änderung Benachrichtigungen-Funktion, die verwendet werden muss, durch Angabe eines Rückrufs zum Ändern der <xref:System.Windows.PropertyMetadata>.  
   
 ## <a name="dependency-property-value-coercion"></a>Abhängigkeit Eigenschaft-Wert-Umwandlung  
  Eigenschaft Umwandlung findet statt, wenn der angegebene Wert auf einen Eigenschaften-Setter von Setter-Methode geändert wird, bevor der Eigenschaftenspeicher tatsächlich geändert wird.  
   
- **X nicht** Umwandlung Logik in den Eigenschaftenaccessoren Abhängigkeit implementieren.  
+ **X DO NOT** Umwandlung Logik in den Eigenschaftenaccessoren Abhängigkeit implementieren.  
   
  Abhängigkeitseigenschaften verfügen über eine integrierte Koersion-Funktion und kann verwendet werden, durch einen Rückruf Umwandlung zur Angabe der `PropertyMetadata`.  
   

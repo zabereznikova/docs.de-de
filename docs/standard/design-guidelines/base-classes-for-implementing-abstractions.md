@@ -24,11 +24,11 @@ Streng genommen wird eine Klasse eine Basisklasse aus, wenn die einer anderen Kl
   
  Wie zuvor erwähnt Basisklassen können wertvolle Hilfe für Benutzer, die Abstraktionen implementieren müssen, nach Belieben zur gleichen Zeit eine erhebliche Haftung sein. Sie Oberfläche hinzufügen und erhöhen die Tiefe der Vererbungshierarchien und Dienstantwort erschweren das Framework. Aus diesem Grund sollte Basisklassen verwendet werden, nur dann, wenn sie erheblichem Wert für die Benutzer des Frameworks bieten. Sie sollten vermieden werden, wenn sie Wert nur für die Implementierung von Frameworks bieten in denen Groß-/Kleinschreibung Delegierung an eine interne Implementierung anstelle von Vererbung von einer Basisklasse stark berücksichtigt werden soll.  
   
- **✓ GGF.** machen Basisklassen abstrakt, auch wenn sie keine abstrakten Member enthalten. Dies deutlich kommuniziert mit den Benutzern, die die Klasse dient ausschließlich zu geerbt werden.  
+ **✓ CONSIDER** machen Basisklassen abstrakt, auch wenn sie keine abstrakten Member enthalten. Dies deutlich kommuniziert mit den Benutzern, die die Klasse dient ausschließlich zu geerbt werden.  
   
- **✓ GGF.** Basisklassen in einem separaten Namespace aus den danach werden die Hauptszenarien Szenario platzieren. Definitionsgemäß Basisklassen sind für erweiterte Erweiterbarkeitsszenarios gedacht und sind daher nicht für die meisten Benutzer interessant.  
+ **✓ CONSIDER** Basisklassen in einem separaten Namespace aus den danach werden die Hauptszenarien Szenario platzieren. Definitionsgemäß Basisklassen sind für erweiterte Erweiterbarkeitsszenarios gedacht und sind daher nicht für die meisten Benutzer interessant.  
   
- **X vermeiden** naming Basisklassen, mit dem Suffix "Basis", wenn die Klasse zur Verwendung in öffentlichen APIs vorgesehen ist.  
+ **X AVOID** naming Basisklassen, mit dem Suffix "Basis", wenn die Klasse zur Verwendung in öffentlichen APIs vorgesehen ist.  
   
  *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

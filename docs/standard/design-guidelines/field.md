@@ -23,19 +23,19 @@ Das Prinzip der Kapselung ist einer der wichtigsten Konzepte in eines objektorie
   
  Wir ausschließen Konstanten und statische schreibgeschützte Felder aus dieser Einschränkung strict, da Suchfelder, fast per Definition nie erforderlich sind, ändern.  
   
- **X nicht** bieten Instanzfelder, die öffentlich und/oder geschützt sind.  
+ **X DO NOT** bieten Instanzfelder, die öffentlich und/oder geschützt sind.  
   
  Sie sollten Eigenschaften für den Zugriff auf Felder und trifft diese öffentliche oder geschützte bereitstellen.  
   
- **Führen Sie ✓** verwenden Sie Konstante Felder für Konstanten, die nie geändert wird.  
+ **✓ DO** verwenden Sie Konstante Felder für Konstanten, die nie geändert wird.  
   
  Der Compiler brennt const Felder die Werte direkt in Aufrufen von Code. Aus diesem Grund können Konstante Werte ohne beschädigen Kompatibilität nie geändert werden.  
   
- **Führen Sie ✓** öffentliche statische `readonly` Felder für vordefinierte Objektinstanzen.  
+ **✓ DO** öffentliche statische `readonly` Felder für vordefinierte Objektinstanzen.  
   
  Wenn die vordefinierten Instanzen des Typs vorhanden sind, deklarieren Sie diese als öffentliche schreibgeschützte statische Felder des Typs selbst.  
   
- **X nicht** Zuweisen von Instanzen von Typen, die auf änderbare `readonly` Felder.  
+ **X DO NOT** Zuweisen von Instanzen von Typen, die auf änderbare `readonly` Felder.  
   
  Ein änderbarer Typ ist ein Typ mit Instanzen, die geändert werden können, nachdem sie instanziiert werden. Z. B. Arrays, die meisten Auflistungen und Streams änderbare Typen sind jedoch <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, und <xref:System.String?displayProperty=nameWithType> sind alle unveränderlich. Den schreibgeschützten Modifizierer auf einen Typ Verweisfeld wird verhindert, dass die Instanz, die in das Feld ersetzt wird gespeichert, aber es verhindert jedoch nicht das Feld Instanzdaten bearbeitet werden durch Aufrufen von Membern die Instanz ändern.  
   

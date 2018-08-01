@@ -32,7 +32,7 @@ Aus der Perspektive CLR stehen nur zwei Kategorien von Typen – Verweistypen un
   
  Delegaten, Ausnahmen, Attribute, Arrays und Sammlungen sind alle Sonderfälle von Verweistypen, die für einen bestimmten Verwendungszweck gedacht und Richtlinien für Design und Nutzung werden an anderer Stelle in diesem Handbuch erläutert.  
   
- **Führen Sie ✓** stellen Sie sicher, dass jeder Typ einen genau definierten Satz verwandter Elemente, nicht nur eine zufällige Sammlung von unabhängigen Funktionalität ist.  
+ **✓ DO** stellen Sie sicher, dass jeder Typ einen genau definierten Satz verwandter Elemente, nicht nur eine zufällige Sammlung von unabhängigen Funktionalität ist.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Auswählen zwischen Klasse und Struktur](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
