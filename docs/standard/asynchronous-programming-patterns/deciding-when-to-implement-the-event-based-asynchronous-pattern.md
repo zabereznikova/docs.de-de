@@ -12,17 +12,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 3f9b18b3362155e256c922a84f3f1cdb6d255a4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b00b01cb82f7fa2f1d9af42438c37592bb1e8181
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570977"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198875"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Gründe für das Implementieren des ereignisbasierten asynchronen Musters
 Mit dem ereignisbasierten asynchronen Muster kann das asynchrone Verhalten einer Klasse verfügbar gemacht werden. Mit der Einführung dieses Musters definiert das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zwei Muster, um asynchrones Verhalten verfügbar zu machen: das asynchrone Muster basierend auf der <xref:System.IAsyncResult?displayProperty=nameWithType>-Schnittstelle und das ereignisbasierte Muster. In diesem Thema wird beschrieben, in welchen Fällen die Muster implementiert werden sollten.  
   
- Weitere Informationen zur asynchronen Programmierung mit der <xref:System.IAsyncResult>-Benutzeroberfläche finden Sie unter [Ereignisbasiertes asynchrones Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+ Weitere Informationen zur asynchronen Programmierung mit der <xref:System.IAsyncResult>-Benutzeroberfläche finden Sie unter [Asynchrones Programmiermodell (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
   
 ## <a name="general-principles"></a>Allgemeine Prinzipien  
  Allgemein sollten Sie asynchrone Features, die das ereignisbasierte asynchrone Muster verwenden, nach Möglichkeit verfügbar machen. Es gibt jedoch einige Anforderungen, die das ereignisbasierte Muster nicht erfüllen kann. In diesen Fällen müssen Sie neben dem ereignisbasierten Muster möglicherweise auch das <xref:System.IAsyncResult>-Muster implementieren.  

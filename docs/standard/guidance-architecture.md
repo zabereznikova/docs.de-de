@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.technology: dotnet
-ms.openlocfilehash: 7d636e842c7ec91949f2557f74ae724def858053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570498"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404173"
 ---
 # <a name="net-architecture-guidance"></a>Architekturrichtlinien für .NET
 
@@ -28,4 +28,8 @@ Dieses Handbuch enthält eine Einführung zur empfohlenen Architektur, zum Entwu
 
 ## <a name="architecting-container-and-microservice-based-applicationsmicroservices-architectureindexmd"></a>[Architecting Container and Microservice Based Applications (Architekturcontainer und auf Microservice basierende Anwendungen)](microservices-architecture/index.md)
 
-Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern. 
+Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern.
+
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Serverlose Apps: Architektur, Muster und Azure-Implementierung](serverless-architecture/index.md)
+
+Dies ist eine Anleitung zum Erstellen von serverlosen Anwendungen anhand von Beispielen mithilfe von Azure. Hier werden verschiedene Architektur- und Entwurfsansätze, die Vorteile und Herausforderungen serverloser Anwendungen sowie Szenarios und Anwendungsfälle erläutert.

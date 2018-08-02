@@ -2,12 +2,12 @@
 title: Asynchrone Rückgabetypen (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 07aefcf3149b2210e3dc97713647fa3a0133a535
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143556"
 ---
 # <a name="async-return-types-c"></a>Asynchrone Rückgabetypen (C#)
 Asynchrone Methoden können folgende Rückgabetypen haben:
@@ -24,7 +24,7 @@ Weitere Informationen über die Methode „Async“ finden Sie unter [Asynchrono
   
 Jeder Rückgabetyp wird in einem der folgenden Abschnitte untersucht und am Ende des Themas wird ein vollständiges Beispiel aller drei Typen verwenden.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Task(T)-Rückgabetyp  
+##  Rückgabetyp <a name="BKMK_TaskTReturnType"></a> Task\<TResult\>  
 Der <xref:System.Threading.Tasks.Task%601>-Rückgabetyp wird für eine asynchrone Methode verwendet, die eine [Rückgabeanweisung](../../../../csharp/language-reference/keywords/return.md) (C#) enthält, in der der Operand den Typ `TResult` hat.  
   
 Im folgenden Beispiel enthält die asynchrone `GetLeisureHours`-Methode eine `return`-Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund muss die Methodendeklaration den Rückgabetyp `Task<int>` haben.  Die asynchrone Methode <xref:System.Threading.Tasks.Task.FromResult%2A> ist ein Platzhalter für einen Vorgang, der eine Zeichenfolge zurückgibt.
@@ -56,17 +56,17 @@ Der folgende Code trennt Aufrufe der Methode `WaitAndApologize` vom Erwarten der
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
 ##  <a name="BKMK_VoidReturnType"></a> Rückgabetyp „Void“  
-Der Rückgabetyp `void` wird in asynchronen Ereignishandlern verwendet, die den Rückgabetyp `void` erfordern. Da andere Methoden als Ereignishandler keinen Wert zurückgeben, sollten Sie stattdessen eine <xref:System.Threading.Tasks.Task> zurückgeben, da eine `void` zurückgebende asynchrone Methode nicht erwartet werden kann. Jeder Aufrufer einer solchen Methode muss in der Lage sein, in seiner Ausführung bis zum Abschluss fortzufahren, ohne auf die aufgerufene asynchrone Methode zu warten, und der Aufrufer muss unabhängig von den Werten oder Ausnahmen sein, die die asynchrone Methode generiert.  
+Der Rückgabetyp `void` wird in asynchronen Ereignishandlern verwendet, die den Rückgabetyp `void` erfordern. Für andere Methoden als Ereignishandler, die keinen Wert zurückgeben, sollten Sie stattdessen <xref:System.Threading.Tasks.Task> zurückgeben, da eine asynchrone Methode, die `void` zurückgibt, nicht erwartet werden kann. Jeder Aufrufer einer solchen Methode muss in der Lage sein, in seiner Ausführung bis zum Abschluss fortzufahren, ohne auf die aufgerufene asynchrone Methode zu warten, und der Aufrufer muss unabhängig von den Werten oder Ausnahmen sein, die die asynchrone Methode generiert.  
   
 Der Aufrufer einer "void" zurückgebenden asynchronen Methode kann die von der Methode ausgelöste Ausnahmen nicht behandeln, und solche Ausnahmefehler können möglicherweise zu Fehlern in der Anwendung führen. Wenn eine Ausnahme in einer asynchronen Methode auftritt, die <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurückgibt, wird die Ausnahme in der zurückgegebenen Aufgabe gespeichert und erneut ausgelöst, wenn die Aufgabe erwartet wird. Daher stellen Sie sicher, dass jede asynchrone Methode, die eine Ausnahme erstellen kann, über einen Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> verfügt und die Aufrufe der Methode erwartet werden.  
   
-Weitere Informationen zum Auffangen von Ausnahmen in async-Methoden finden Sie unter [try-catch](../../../../csharp/language-reference/keywords/try-catch.md).  
+Weitere Informationen zum Auffangen von Ausnahmen in asynchronen Methoden finden Sie im Abschnitt [Ausnahmen in asynchronen Methoden](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) im Thema [try-catch (C#-Referenz)](../../../language-reference/keywords/try-catch.md).  
   
 Das folgende Beispiel definiert einen asynchronen Ereignishandler.  
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  
-## <a name="generalized-async-return-types-and-valuetaskt"></a>Generalisierte asynchrone Rückgabetypen und ValueTask<T>
+## <a name="generalized-async-return-types-and-valuetasktresult"></a>Generalisierte asynchrone Rückgabetypen und ValueTask\<TResult\>
 
 Ab C# 7.0 kann eine asynchrone Methode jeden Typ zurückgeben, der über eine zugängliche `GetAwaiter`-Methode verfügt.
  

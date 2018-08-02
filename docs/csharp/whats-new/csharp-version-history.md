@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207533"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404592"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C# #
 
@@ -73,7 +73,7 @@ C# Version 3.0 wurde Ende 2007 zusammen mit Visual Studio 2008 veröffentlicht. 
 - [Erweiterungsmethoden](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [Implizit typisierte lokale Variablen](../language-reference/keywords/var.md)
 - [Partielle Methoden](../language-reference/keywords/partial-method.md)
-- Objekt- und Sammlungsinitialisierer
+- [Objekt- und Elementinitialisierer](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 Rückblickend scheinen viele dieser Features unvermeidlich und untrennbar. Sie alle passen strategisch zusammen. Im Allgemeinen wird angenommen, dass das durchschlagende Feature dieser Version von C# der Abfrageausdruck war, auch bekannt als Language Integrated Query (LINQ).
 

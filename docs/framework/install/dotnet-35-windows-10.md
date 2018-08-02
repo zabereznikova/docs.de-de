@@ -3,13 +3,13 @@ title: Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windo
 description: Informationen zum Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8.
 author: rlander
 ms.author: mairaw
-ms.date: 03/30/2018
-ms.openlocfilehash: 226449b8ee7c9360e6bfdc5bfa5dfeb59f19bd2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 07/16/2018
+ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387415"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245529"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8
 
@@ -42,3 +42,6 @@ Sie können .NET Framework 3.5 auch über die Systemsteuerung aktivieren. Für d
 Während der Installation tritt möglicherweise der Fehler 0x800f0906, 0x800f0907, 0x800f081f oder 0x800F0922 auf. In diesem Fall finden Sie unter [.NET Framework 3.5-Installationsfehler: 0x800f0906, 0x800f0907 oder 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) Informationen zur Problemlösung.
 
 Wenn Sie das Installationsproblem weiterhin nicht lösen können oder keine Internetverbindung zur Verfügung steht, können Sie versuchen, die Installation über Ihr Windows-Installationsmedium durchzuführen. Weitere Informationen finden Sie unter [Bereitstellen von .NET Framework 3.5 mit der Abbildverwaltung für die Bereitstellung (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Wenn keine Installationsmedien vorhanden sind, lesen Sie [Erstellen eines Installationsmediums für Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+
+> [!WARNING]
+> Wenn Sie .NET Framework 3.5 nicht über Windows Update installieren, müssen Sie sicherstellen, dass ausschließlich Quellen derselben Windows-Betriebssystemversion verwendet werden. Die Verwendung eines Quellpfads, der nicht derselben Windows-Version entspricht, verhindert nicht, dass eine nicht übereinstimmende Version von .NET Framework 3.5 installiert wird. Dies führt jedoch dazu, dass das System in einem nicht unterstützten und nicht wartbaren Status wechselt.

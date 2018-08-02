@@ -3,13 +3,13 @@ title: Strategien zum Beheben von Teilfehlern
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Strategien zum Beheben von Teilfehlern
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: c36ea31ad19b02fb02bc8e7185bfe8687b87764f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: ac82f6d506213614c7a4079e0f55f798f26a6550
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104208"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874402"
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Strategien zum Beheben von Teilfehlern
 

@@ -1,6 +1,7 @@
 ---
 title: Timer
-ms.date: 03/30/2017
+description: Erfahren Sie, welche .NET-Timer in einer Multithreadumgebung verwendet werden können.
+ms.date: 07/03/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,29 +11,53 @@ helpviewer_keywords:
 - threading [.NET Framework], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
-author: rpetrusha
+author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 478484651bf839f842148f0b4164c9387db3b98a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae41c535d8bc1c0a05174b9051ba34f1a0a34638
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584956"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875065"
 ---
 # <a name="timers"></a>Timer
-Timer sind kompakte Objekte, mit denen angegeben werden kann, dass ein Delegat zu einem bestimmten Zeitpunkt aufgerufen werden soll. Der Wartevorgang wird von einem Thread im Threadpool ausgeführt.  
-  
- Die Verwendung der <xref:System.Threading.Timer?displayProperty=nameWithType>-Klasse ist einfach. Sie erstellen einen **Timer**, der einen <xref:System.Threading.TimerCallback>-Delegaten an die Rückrufmethode übergibt, ein Objekt, das den an den Rückruf zu übergebenden Zustand darstellt, einen Zeitpunkt für den ersten Aufruf und eine Zeitspanne, die das Intervall zwischen den Aufrufen des Rückrufs darstellt. Um einen anstehenden Timer zu löschen, rufen Sie die **Timer.Dispose**-Funktion auf.  
-  
+
+.NET stellt zwei Timer zur Verfügung, die in einer Multithreadumgebung verwendet werden können:
+
+- <xref:System.Threading.Timer?displayProperty=nameWithType>, der eine einmalige Callbackmethode in regelmäßigen Intervallen für einen <xref:System.Threading.ThreadPool>-Thread ausführt.
+- <xref:System.Timers.Timer?displayProperty=nameWithType>, der standardmäßig in regelmäßigen Intervallen ein Ereignis in einem <xref:System.Threading.ThreadPool>-Thread auslöst.
+
 > [!NOTE]
->  Es gibt zwei weitere Timerklassen. Die <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>-Klasse ist ein Steuerelement, dass mit visuellen Designern arbeitet und für die Verwendung im Benutzeroberflächenkontext vorgesehen ist. Es löst Ereignisse für den Benutzeroberflächenthread aus. Die <xref:System.Timers.Timer?displayProperty=nameWithType>-Klasse ist von <xref:System.ComponentModel.Component> abgeleitet und kann daher mit visuellen Designern verwendet werden. Sie löst ebenfalls Ereignisse aus, jedoch für einen <xref:System.Threading.ThreadPool>-Thread. Die <xref:System.Threading.Timer?displayProperty=nameWithType>-Klasse nimmt Rückrufe für einen <xref:System.Threading.ThreadPool>-Thread vor und verwendet das Ereignismodell nicht. Im Gegensatz zu anderen Zeitgebern stellt sie der Rückrufmethode auch ein Zustandsobjekt bereit. Dies ist eine sehr einfache Klasse.  
+> Einige .NET-Implementierungen können zusätzliche Timer enthalten:
+>
+> - <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>: eine Windows Forms-Komponente, die in regelmäßigen Abständen ein Ereignis auslöst. Die Komponente besitzt keine Benutzeroberfläche und wurde für die Verwendung in einer Singlethreadumgebung entwickelt.  
+> - <xref:System.Web.UI.Timer?displayProperty=nameWithType>: eine ASP.NET-Komponente, die asynchrone oder synchrone Webseitenpostbacks in regelmäßigen Intervallen ausführt.
+> - <xref:System.Windows.Threading.DispatcherTimer?displayProperty=nameWithType>: ein Timer, der in die <xref:System.Windows.Threading.Dispatcher>-Warteschlange integriert ist. Diese wird in einem festgelegten Zeitintervall und mit einer festgelegten Priorität verarbeitet.
+
+## <a name="the-systemthreadingtimer-class"></a>Die System.Threading.Timer-Klasse
+
+Mithilfe der <xref:System.Threading.Timer?displayProperty=nameWithType>-Klasse können Sie einen Delegaten kontinuierlich in bestimmten Zeitintervallen aufrufen. Sie können diese Klasse ebenfalls verwenden, um einen einzelnen Aufruf eines Delegaten in einem bestimmten Zeitintervall zu planen. Der Delegat wird in einem <xref:System.Threading.ThreadPool>-Thread ausgeführt.
+
+Wenn Sie ein <xref:System.Threading.Timer?displayProperty=nameWithType>-Objekt erstellen, geben Sie einen <xref:System.Threading.TimerCallback>-Delegaten an, der die Callbackmethode definiert, ein optionales Zustandsobjekt, das an die Callbackmethode übergeben wird, die Verzögerung vor dem ersten Aufruf der Callbackmethode und das Zeitintervall zwischen den Aufrufen der Callbackmethode. Wenn Sie einen anstehenden Timer löschen möchten, rufen Sie die <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType>-Methode auf.
+
+Im folgenden Beispiel wird ein Timer erstellt, der den bereitgestellten Delegaten zum ersten Mal nach einer Sekunde (1000 Millisekunden) und dann alle zwei Sekunden aufruft. Das Zustandsobjekt im Beispiel wird verwendet, um die Häufigkeit der Aufrufe des Delegaten zu zählen. Der Timer wird beendet, wenn der Delegat mindestens zehnmal aufgerufen wurde.
+
+[!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
+[!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
+[!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]
+
+Weitere Informationen und Beispiele finden Sie unter <xref:System.Threading.Timer?displayProperty=nameWithType>.
+
+## <a name="the-systemtimerstimer-class"></a>Die System.Timers.Timer-Klasse
+
+Ein weiterer Timer, der in einer Multithreadumgebung verwendet werden kann, ist <xref:System.Timers.Timer?displayProperty=nameWithType>. Dieser löst standardmäßig ein Ereignis in einem <xref:System.Threading.ThreadPool>-Thread aus.
+
+Wenn Sie ein <xref:System.Timers.Timer?displayProperty=nameWithType>-Objekt erstellen, können Sie das Zeitintervall angeben, in dem ein <xref:System.Timers.Timer.Elapsed>-Ereignis ausgelöst werden soll. Verwenden Sie die <xref:System.Timers.Timer.Enabled%2A>-Eigenschaft, um anzugeben, ob ein Timer ein <xref:System.Timers.Timer.Elapsed>-Ereignis auslösen soll. Wenn ein <xref:System.Timers.Timer.Elapsed>-Event nur ausgelöst werden soll, nachdem das angegebene Intervall verstrichen ist, legen Sie <xref:System.Timers.Timer.AutoReset%2A> auf `false` fest. Der Standardwert der <xref:System.Timers.Timer.AutoReset%2A>-Eigenschaft ist `true`. Das bedeutet, dass ein <xref:System.Timers.Timer.Elapsed>-Ereignis regelmäßig in dem von der <xref:System.Timers.Timer.Interval%2A>-Eigenschaft angegebenen Intervall ausgelöst wird.
+
+Weitere Informationen und Beispiele finden Sie unter <xref:System.Timers.Timer?displayProperty=nameWithType>.
   
- Im folgenden Codebeispiel wird ein Timer gestartet, der nach einer Sekunde (1.000 Millisekunden) startet und jede Sekunde hochzählt, bis die **Enter**-Taste gedrückt wird. Bei der Variablen mit dem Verweis auf den Timer handelt es sich um ein Feld auf Klassenebene, um zu verhindern, dass der Timer während der Ausführung von der Garbage Collection erfasst wird. Weitere Informationen über die aggressive Garbage Collection finden Sie unter <xref:System.GC.KeepAlive%2A>.  
-  
- [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
- [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
- [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]  
-  
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.Timer>  
- [Threading Objects and Features (Threadingobjekte und -funktionen)](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Siehe auch
+
+ <xref:System.Threading.Timer?displayProperty=nameWithType>  
+ <xref:System.Timers.Timer?displayProperty=nameWithType>  
+ [Threading Objects and Features (Threadingobjekte und -funktionen)](threading-objects-and-features.md)

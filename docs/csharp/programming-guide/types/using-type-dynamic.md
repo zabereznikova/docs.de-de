@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 67eb39fd6f2077d2adf1d38d001e801b815d687d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 296b9c80b4ea8b09e8efce71e3b388f7e453850b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336637"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404375"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Verwenden des Typs dynamic (C#-Programmierhandbuch)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] führt einen neuen Typ ein, `dynamic`. Bei diesem Typ handelt es sich um einen statischen Typ. Ein Objekt des Typs `dynamic` umgeht aber die Überprüfung statischer Typen. In den meisten Fällen entspricht es der Funktionsweise des Typs `object`. Bei einem Element, das zur Kompilierzeit als `dynamic` typisiert wird, wird davon ausgegangen, dass es alle Vorgänge unterstützt. Daher müssen Sie sich keine Gedanken darüber machen, ob das Objekt seinen Wert von einer COM-API, einer dynamischen Sprache wie IronPython, vom HTML-DOM (Document Object Model), aus der Reflektion oder von einer anderen Quelle im Programm erhält. Wenn der Code jedoch nicht gültig ist, werden Fehler zur Laufzeit abgefangen.  
@@ -27,7 +27,12 @@ ms.locfileid: "33336637"
   
  [!code-csharp[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_3.cs)]  
   
- Vorgänge, in denen das Ergebnis nicht `dynamic` ist, enthalten Konvertierungen von `dynamic` in einen anderen Typ, und Konstruktoraufrufe, die Argumente vom Typ `dynamic` enthalten. In der folgende Deklaration ist der Typ von `testInstance` z.B. `ExampleClass`, nicht `dynamic`.  
+ Vorgänge, in denen das Ergebnis nicht `dynamic` lautet, sind z.B.:
+ 
+* Konvertierungen von `dynamic` in einen anderen Typ 
+* Konstruktoraufrufe, die Argumente des Typs `dynamic` enthalten 
+
+In der folgenden Deklaration ist der Typ von `testInstance` z.B. `ExampleClass`, nicht `dynamic`:
   
  [!code-csharp[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_4.cs)]  
   
@@ -63,7 +68,7 @@ ms.locfileid: "33336637"
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|description|  
+|Titel|Beschreibung |  
 |-----------|-----------------|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|Beschreibt die Verwendung des Schlüsselworts `dynamic`.|  
 |[Übersicht über die Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Bietet eine Übersicht über die Dynamic Language Runtime (DLR), eine Laufzeitumgebung, die der Common Language Runtime (CLR) eine Reihe von Diensten für dynamische Sprachen hinzufügt.|  

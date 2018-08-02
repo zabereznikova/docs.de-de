@@ -1,17 +1,17 @@
 ---
 title: Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen Diese Technik ist besonders wichtig, wenn Sie Azure SQL-Datenbank in der Cloud verwenden.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 79f115a2d897463c213eda6f4d6951ff0cbeb3ca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: c1324eafc9dc0286128e8e942f95ad7c4c0a5d98
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105474"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874935"
 ---
-# <a name="implementing-resilient-entity-framework-core-sql-connections"></a>Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen
+# <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen
 
 Entity Framework Core bietet bereits interne Datenbankverbindungsresilienz und Wiederholungslogik für Azure SQL DB. Jedoch müssen Sie die Entity Framework-Ausführungsstrategie für jede DbContext-Verbindung aktivieren, wenn Sie [robuste EF Core-Verbindungen](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) erzielen wollen.
 
@@ -25,13 +25,13 @@ public class Startup
     public IServiceProvider ConfigureServices(IServiceCollection services)
     {
         // ...
-        services.AddDbContext<OrderingContext>(options =>
+        services.AddDbContext<CatalogContext>(options =>
         {
             options.UseSqlServer(Configuration["ConnectionString"],
             sqlServerOptionsAction: sqlOptions =>
             {
                 sqlOptions.EnableRetryOnFailure(
-                maxRetryCount: 5,
+                maxRetryCount: 10,
                 maxRetryDelay: TimeSpan.FromSeconds(30),
                 errorNumbersToAdd: null);
             });
@@ -85,13 +85,13 @@ Das erste DbContext-Objekt ist \_catalogContext, das zweite befindet sich im Obj
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
+-   **Verbindungsresilienz** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+
 -   **Connection Resiliency and Command Interception with the Entity Framework (Verbindungsresilienz und Abfangen von Befehlen mit Entity Framework)**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
 -   **Cesar de la Torre. Using Resilient Entity Framework Core Sql Connections and Transactions (Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen und Transaktionen)**
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
-
 >[!div class="step-by-step"]
-[Zurück](implement-retries-exponential-backoff.md)
-[Weiter](implement-custom-http-call-retries-exponential-backoff.md)
+[Zurück](implement-retries-exponential-backoff.md) [Weiter]explore-custom-http-call-retries-exponential-backoff.md)

@@ -1,40 +1,38 @@
 ---
 title: Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwendungen (SPAs)
-description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Microsoft Azure
+description: In diesem Artikel erfahren Sie, wie Sie beim Erstellen von Webanwendungen zwischen herkömmlichen Web-Apps und Single-Page-Webanwendungen (Single Page Application, SPAs) auswählen.
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104765"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404145"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwendungen (SPAs)
 
 > „Atwoods Gesetz: Alle Anwendungen, die in JavaScript geschrieben werden können, werden früher oder später in JavaScript geschrieben.“  
 > _\- Jeff Atwood_
 
-## <a name="summary"></a>Zusammenfassung
-
 Heutzutage gibt es zwei allgemeine Ansätze für das Erstellen von Webanwendungen: herkömmliche Webanwendungen, die einen Großteil der Anwendungslogik auf dem Server ausführen, und Single-Page-Webanwendungen (SPAs), die einen Großteil der Logik der Benutzeroberfläche in einem Webbrowser ausführen und mit dem Webserver überwiegend über Web-APIs kommunizieren. Ein hybrider Ansatz ist ebenfalls möglich, am einfachsten ist das Hosten von mindestens einer umfangreichen SPA-ähnlichen Unteranwendung in einer größeren herkömmlichen Webanwendung.
 
 Sie sollten herkömmliche Webanwendungen in folgenden Szenarios verwenden:
 
--   Die clientseitigen Anforderungen Ihrer Anwendung sind einfach oder schreibgeschützt.
+- Die clientseitigen Anforderungen Ihrer Anwendung sind einfach oder schreibgeschützt.
 
--   Ihre Anwendung muss in Browsern ohne Unterstützung für JavaScript funktionieren.
+- Ihre Anwendung muss in Browsern ohne Unterstützung für JavaScript funktionieren.
 
--   Ihr Team ist nicht mit Entwicklungstechniken mit JavaScript oder TypeScript vertraut.
+- Ihr Team ist nicht mit Entwicklungstechniken mit JavaScript oder TypeScript vertraut.
 
 In folgenden Szenarios sollten Sie eine Single-Page-Webanwendung verwenden:
 
--   Ihre Anwendung muss eine umfangreiche Benutzeroberfläche mit vielen Features zur Verfügung stellen.
+- Ihre Anwendung muss eine umfangreiche Benutzeroberfläche mit vielen Features zur Verfügung stellen.
 
--   Ihr Team ist mit der Entwicklung mit JavaScript und bzw. oder TypeScript vertraut.
+- Ihr Team ist mit der Entwicklung mit JavaScript und bzw. oder TypeScript vertraut.
 
--   Ihre Anwendung muss bereits eine API für andere (interne oder öffentliche) Clients zur Verfügung stellen.
+- Ihre Anwendung muss bereits eine API für andere (interne oder öffentliche) Clients zur Verfügung stellen.
 
 Darüber hinaus erfordern SPA-Frameworks ausführlichere Kenntnisse zur Architektur und Sicherheit. Aufgrund von regelmäßigen Aktualisierungen und neuen Frameworks erfordern sie einen größeren Änderungsumfang als herkömmliche Webanwendungen. Das Konfigurieren von automatisierten Build- und Bereitstellungsprozessen und die Verwendung von Bereitstellungsoptionen, z.B. Container, ist mit Single-Page-Webanwendungen schwieriger als mit herkömmlichen Webanwendungen.
 
@@ -71,10 +69,11 @@ Beachten Sie, dass für SPAs regelmäßig Features implementiert werden müssen,
 Das Schreiben von SPAs erfordert Erfahrung mit JavaScript und bzw. oder TypeScript und clientseitigen Programmiertechniken sowie Bibliotheken. Ihr Team sollte dazu in der Lage sein, modernes JavaScript mit einem SPA-Framework wie „Angular“ zu schreiben.
 
 > ### <a name="references--spa-frameworks"></a>Ressourcen: SPA-Frameworks
+>
 > - **Angular**  
-> <https://angular.io>
+>   <https://angular.io>
 > - **Vergleich von JavaScript-Frameworks**  
-> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **Ihre Anwendung muss bereits eine API für andere (interne oder öffentliche) Clients zur Verfügung stellen**
 
@@ -84,12 +83,12 @@ Wenn Sie bereits eine Web-API für die Verwendung durch andere Clients unterstü
 
 In der folgenden Entscheidungstabelle werden einige der grundlegenden Faktoren zusammengefasst, die bei der Auswahl zwischen einer herkömmlichen Webanwendung und einer SPA beachtet werden sollten.
 
-  | **Aspekt** | **Herkömmliche Webanwendung** | **Einzelseitenanwendung** |
-  |---|---|---|
-  | Erforderliche Vertrautheit des Teams mit JavaScript oder TypeScript | **Minimal** | **Erforderlich** |
-  | Unterstützt Browser ohne Skript | **Unterstützt** | **Nicht unterstützt** |
-  | Minimales clientseitiges Anwendungsverhalten | **Gut geeignet** | **Zu viel Aufwand** |
-  | Umfangreiche und komplexe Anforderungen für die Benutzeroberfläche | **Eingeschränkt** | **Gut geeignet** |
+| **Aspekt**                                           | **Herkömmliche Webanwendung** | **Einzelseitenanwendung** |
+| ---------------------------------------------------- | ----------------------- | --------------------------- |
+| Erforderliche Vertrautheit des Teams mit JavaScript oder TypeScript | **Minimal**             | **Erforderlich**                |
+| Unterstützt Browser ohne Skript                   | **Unterstützt**           | **Nicht unterstützt**           |
+| Minimales clientseitiges Anwendungsverhalten             | **Gut geeignet**         | **Zu viel Aufwand**                |
+| Umfangreiche und komplexe Anforderungen für die Benutzeroberfläche            | **Eingeschränkt**             | **Gut geeignet**             |
 
 >[!div class="step-by-step"]
 [Zurück](modern-web-applications-characteristics.md)

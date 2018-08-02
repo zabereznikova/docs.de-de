@@ -1,57 +1,87 @@
 ---
 title: Erste Schritte mit .NET Core
 description: Suchen Sie Ressourcen, um zu erfahren, wie Sie .NET Core-Anwendungen auf Windows, Linux und Mac OS erstellen können.
-author: johalex
-ms.author: johalex
-ms.date: 09/14/2017
-ms.openlocfilehash: 7e70cd4ba9891403f6b5890aa585dafb77c76898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+author: thraka
+ms.author: adegeo
+ms.date: 06/27/2018
+ms.openlocfilehash: fa5deb46b64e1a09c9ad6582486a993a24336b42
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212949"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792399"
 ---
 # <a name="get-started-with-net-core"></a>Erste Schritte mit .NET Core
 
-.NET Core wird auf [Windows](#windows), [Linux](#linux) und [Mac OS / OS X](#os-x--macos) ausgeführt.
+Dieser Artikel enthält Informationen zu den ersten Schritten mit .NET Core. .NET Core kann unter Windows, Linux und macOS installiert werden. Außerdem können Sie in Ihrem bevorzugten Text-Editor programmieren und plattformübergreifende Bibliotheken und Anwendungen erstellen. 
 
-## <a name="windows"></a>Windows
+Wenn Sie nicht sicher sind, was .NET Core ist oder in welcher Beziehung es zu anderen .NET-Technologien steht, sollten Sie mit [What is .NET (Was ist .NET)](https://www.microsoft.com/net/learn/what-is-dotnet) beginnen. Einfach ausgedrückt, ist .NET Core eine plattformübergreifende Open-Source-Implementierung von .NET.
 
-Installieren Sie .NET Core auf [Windows](https://www.microsoft.com/net/core#windows). 
+## <a name="create-an-application"></a>Erstellen einer Anwendung
 
-Sie können .NET Core-Anwendungen entwickeln, indem Sie diese Schritt-für-Schritt-Tutorials befolgen.
+Laden Sie das [.NET Core SDK](https://www.microsoft.com/net/download/) auf Ihrem Computer herunter, und installieren Sie es.
 
-* [Erstellen einer C#-Hello World-Anwendung mit .NET Core in Visual Studio 2017](./tutorials/with-visual-studio.md): Erfahren Sie, wie Sie eine einfache .NET Core-Konsolenanwendung mit C# und Visual Studio 2017 erstellen, debuggen und veröffentlichen.
-* [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](./tutorials/library-with-visual-studio.md): Erfahren Sie, wie Sie eine in C# geschriebene Klassenbibliothek mithilfe von Visual Studio 2017 erstellen.
-* [Erstellen einer Visual Basic-Hello World-Anwendung mit .NET Core in Visual Studio 2017](./tutorials/vb-with-visual-studio.md): Erfahren Sie, wie Sie eine einfache .NET Core-Konsolenanwendung mit Visual Basic und Visual Studio 2017 erstellen, debuggen und veröffentlichen. 
-* [Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md): Erfahren Sie, wie Sie eine in Visual Basic geschriebene Klassenbibliothek mithilfe von Visual Studio 2017 erstellen.
-* [Erste Schritte mit Visual Studio Code mithilfe von C# und .NET Core auf Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio Code](https://code.visualstudio.com/), Microsofts einfachen, plattformübergreifenden Code-Editor, installieren und nutzen können, um Ihre erste Konsolenanwendung in .NET Core zu erstellen.
-* [Get Started with .NET Core and Visual Studio 2017 (Erste Schritte mit .NET Core and Visual Studio 2017)](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), Microsofts vollausgestattete IDE, installieren und nutzen können, um Ihre erste plattformübergreifende Konsolenanwendung in .NET Core zu erstellen.
-* [Erste Schritte mit .NET Core mit Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md) ‒ Verwenden Sie irgendeinen Code-Editor mit der [ plattformübergreifenden .NET Core-Befehlszeilenschnittstelle (CLI)](tools/index.md).
+Als Nächstes öffnen Sie ein Terminal, z.B. **PowerShell**, die **Eingabeaufforderung** oder die **Bash**. Geben Sie die folgenden `dotnet`-Befehle ein, um eine C#-Anwendung zu erstellen und zu veröffentlichen:
 
-Finden Sie unter dem Thema [Prerequisites for Windows development (erforderliche Komponenten für Windows-Entwicklung)](windows-prerequisites.md) eine Liste der unterstützten Windows-Versionen.
+```console
+dotnet new console --output sample1
+dotnet run --project sample1
+```
 
-## <a name="linux"></a>Linux
+Die folgende Ausgabe wird angezeigt:
 
-Installieren Sie .NET Core unter [Linux](https://www.microsoft.com/net/core#linuxredhat).
+```console
+Hello World!
+```
 
-Sie können .NET Core-Anwendungen entwickeln, indem Sie diese Schritt-für-Schritt-Tutorials befolgen.
+Herzlichen Glückwunsch! Sie haben eine einfache .NET Core-Anwendung erstellt. Sie können auch [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio 2017](tutorials/with-visual-studio.md) (nur Windows) oder [Visual Studio für Mac](tutorials/using-on-mac-vs.md) (nur macOS) verwenden, um eine .NET Core-Anwendung zu erstellen.
 
-* [Erste Schritte mit .NET Core mit Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md) ‒ Verwenden Sie irgendeinen Code-Editor mit der [ plattformübergreifenden .NET Core-Befehlszeilenschnittstelle (CLI)](tools/index.md).
-* [Erste Schritte mit Visual Studio Code unter Verwendung von C# und .NET Core auf Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio Code](https://code.visualstudio.com/) – den einfachen, plattformübergreifenden Code-Editor von Microsoft – installieren und nutzen können, um Ihre erste Konsolenanwendung in .NET Core auf Ubuntu 14.04 zu erstellen.
+## <a name="tutorials"></a>Tutorials
 
-Im Thema [Voraussetzungen für .NET Core unter Linux](linux-prerequisites.md) finden Sie eine Liste der unterstützten Linux-Distributionen und -Versionen.
+Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwickeln von .NET Core-Anwendungen.
 
-## <a name="os-x--macos"></a>OS X/Mac OS
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-Installieren Sie .NET Core für [macOS](https://www.microsoft.com/net/core#macos). Auf OS X El Capitan (Version 10.11) und macOS Sierra (Version 10.12) wird .NET Core nicht unterstützt.
+* [Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio 2017](./tutorials/with-visual-studio.md)
 
-Sie können .NET Core-Anwendungen entwickeln, indem Sie diese Schritt-für-Schritt-Tutorials befolgen.
+* [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](./tutorials/library-with-visual-studio.md)
 
-* [Erste Schritte mit Visual Studio Code unter Verwendung von C# und .NET Core auf macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac): Dieses [Channel9](https://channel9.msdn.com)-Video zeigt Ihnen, wie Sie [Visual Studio Code](https://code.visualstudio.com/) – den einfachen, plattformübergreifenden Code-Editor von Microsoft – installieren und nutzen können, um Ihre erste Konsolenanwendung in .NET Core zu erstellen. 
-* [Erste Schritte mit .NET Core auf macOS unter Verwendung von Visual Studio Code](tutorials/using-on-macos.md): Eine Übersicht über die Schritte und den Workflow zum Erstellen einer .NET Core-Lösung mithilfe von Visual Studio Code, der Komponententests, Drittanbieterbibliotheken und Tipps zur Verwendung der Debugtools enthält.
-* [Erste Schritte mit .NET Core mit Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md) ‒ Verwenden Sie irgendeinen Code-Editor mit der [ plattformübergreifenden .NET Core-Befehlszeilenschnittstelle (CLI)](tools/index.md).
-* [Getting started with .NET Core on macOS using Visual Studio for Mac (Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac)](tutorials/using-on-mac-vs.md): Dieses Tutorial veranschaulicht das Erstellen einer einfachen .NET Core-Konsolenanwendung mithilfe von Visual Studio für Mac.
-* [Building a complete .NET Core solution on macOS using Visual Studio for Mac (Erstellen einer vollständigen .NET Core-Projektmappe unter macOS mit Visual Studio für Mac)](tutorials/using-on-mac-vs-full-solution.md): Dieses Tutorial veranschaulicht Ihnen, wie Sie eine vollständige .NET Core-Projektmappe erstellen, die eine wieder verwendbare Bibliothek und Komponententests enthält.
+* [Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017](./tutorials/vb-with-visual-studio.md)
 
-Finden Sie unter dem Thema [Prerequisites for macOS development (erforderliche Komponenten für macOS-Entwicklung)](macos-prerequisites.md) eine Liste der unterstützten macOS-Versionen.
+* [Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md)  
+
+* Sehen Sie sich ein Video zum [Installieren und Verwenden von Visual Studio Code und .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/) an.
+
+* Sehen Sie sich ein Video zum [Installieren und Verwenden von Visual Studio 2017 und .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/) an.
+
+* [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md)
+
+Eine Liste der unterstützten Windows-Versionen finden Sie unter [Voraussetzungen für .NET Core unter Windows](windows-prerequisites.md).
+
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+
+Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwickeln von .NET Core-Anwendungen.
+
+* [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md)
+
+* Sehen Sie sich ein Video zu den [ersten Schritte mit Visual Studio Code mit C# und .NET Core unter Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) an.
+
+Eine Liste der unterstützten Linux-Versionen finden Sie unter [Voraussetzungen für .NET Core unter Linux](linux-prerequisites.md).
+
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
+
+Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwickeln von .NET Core-Anwendungen.
+
+* Sehen Sie sich ein Video zu den [ersten Schritte mit Visual Studio Code mit C# und .NET Core unter macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac) an.
+
+* [Erste Schritte mit .NET Core unter Mac OS](tutorials/using-on-macos.md)
+
+* [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md)
+
+* [Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac](tutorials/using-on-mac-vs.md)
+
+* [Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac](tutorials/using-on-mac-vs-full-solution.md)
+
+Eine Liste der unterstützten macOS-Versionen finden Sie unter [Voraussetzungen für .NET Core unter OS X/macOS](macos-prerequisites.md).
+
+***

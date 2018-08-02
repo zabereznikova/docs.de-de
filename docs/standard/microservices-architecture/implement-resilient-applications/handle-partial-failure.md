@@ -3,13 +3,13 @@ title: Behandeln von Teilfehlern
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Behandeln von Teilfehlern
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 957a0b1b8b4d217fac591db54e4ee053098bc7da
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: 723719b22c1c7de63f19f68acf91e6499c1a4e43
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105194"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875182"
 ---
 # <a name="handling-partial-failure"></a>Behandeln von Teilfehlern
 
@@ -27,7 +27,7 @@ In einer großen, auf Microservices basierten Anwendung können Teilfehler vor a
 
 **Abbildung 10-2**. Die Auswirkungen eines falschen Entwurfs mit langen Ketten von HTTP-Anforderungen
 
-Zeitweilige Fehler sind in einem System quasi garantiert, das auf der Verteilung und der Cloud basiert, selbst wenn jede Abhängigkeit eigens über eine hervorragende Verfügbarkeit verfügt. Diesen Fakt sollten Sie berücksichtigen.
+Zeitweilige Fehler sind in einem verteilten und cloudbasierten System garantiert, auch wenn jede Abhängigkeit eine hervorragende Verfügbarkeit aufweist. Diesen Fakt sollten Sie berücksichtigen.
 
 Wenn Sie keine Techniken für die Fehlertoleranz entwerfen oder implementieren, können selbst kleine Ausfälle verstärkt werden. Wegen dieser ausbreitenden Wirkung würden zum Beispiel 50 Abhängigkeiten mit einer Verfügbarkeit von 99,99% für mehrere Stunden im Monat ausfallen. Wenn eine Microserviceabhängigkeit beim Behandeln einer großen Anzahl von Anforderungen fehlschlägt, kann dieser Fehler schnell alle verfügbaren Anforderungsthreads in jedem Dienst beanspruchen und die gesamte Anwendung zum Abstürzen bringen.
 
@@ -35,7 +35,7 @@ Wenn Sie keine Techniken für die Fehlertoleranz entwerfen oder implementieren, 
 
 **Abbildung 10-3**. Teilfehler, der durch Microservices mit langen Ketten von synchronen HTTP-Aufrufen verstärkt wurde
 
-Zur Minimierung dieses Problems wird im Abschnitt *Asynchrone Integration von Microservices erzwingt die Autonomie eines Microservice* empfohlen, die asynchrone Kommunikation über die internen Microservices hinweg zu verwenden. Weitere Informationen dazu finden Sie im nächsten Abschnitt.
+Zur Minimierung dieses Problems wird im Abschnitt *Asynchronous microservice integration enforce microservice’s autonomy (Asynchrone Integration von Microservices erzwingt die Autonomie eines Microservice)* (Kapitel zur Architektur) empfohlen, die asynchrone Kommunikation in allen internen Microservices zu verwenden. 
 
 Darüber hinaus ist es wichtig, dass Sie Ihre Microservices und Clientanwendungen dafür entwerfen, Teilfehler zu behandeln – d.h. robuste Microservices und Clientanwendungen zu erstellen.
 

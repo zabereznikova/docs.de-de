@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 830c68e6857e72fe19099753ba57a7e22491af2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339656"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936948"
 ---
 # <a name="expressions-c-programming-guide"></a>Ausdrücke (C#-Programmierhandbuch)
 Ein *Ausdruck* ist eine Sequenz von einem oder mehr Operanden und null oder mehr Operatoren, die einen einzelnen Wert, ein Objekt, eine Methode oder ein Namespace annehmen können. Ausdrücke können einen literalen Wert, einen Methodenaufruf, einen Operator und die entsprechenden Operanden oder einen *einfachen Namen* enthalten. Einfache Namen können der Name einer Variablen, eines Typmembers, eines Methodenparameters, eines Namespaces oder eines Typs sein.  
@@ -61,8 +61,9 @@ DoWork();
 ## <a name="lambda-expressions"></a>Lambdaausdrücke  
  Lambdaausdrücke stellen „Inlinemethoden“ dar, die keinen Namen haben, jedoch über Eingabeparameter und mehrere Anweisungen verfügen können. Sie werden häufig in LINQ verwendet, um Argumente Methoden zu übergeben. Lambdaausdrücke werden entweder zu Delegaten oder Ausdrucksbaumstrukturen kompiliert. Dies hängt vom Kontext ab, in dem sie verwendet werden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
-## <a name="expression-trees"></a>Ausdrucksbaumstrukturen  
- Mithilfe von Ausdrucksbaumstrukturen können Ausdrücke als Datenstrukturen dargestellt werden. Sie werden häufig von LINQ-Anbietern verwendet, um Abfrageausdrücke in Code zu übersetzen, der in einem anderen Kontext aussagekräftig ist, z.B. als SQL-Datenbank. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
+## <a name="expression-trees"></a>Ausdrucksbaumstrukturen
+
+Mithilfe von Ausdrucksbaumstrukturen können Ausdrücke als Datenstrukturen dargestellt werden. Sie werden häufig von LINQ-Anbietern verwendet, um Abfrageausdrücke in Code zu übersetzen, der in einem anderen Kontext aussagekräftig ist, z.B. als SQL-Datenbank. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen (C#)](../concepts/expression-trees/index.md).
   
 ## <a name="expression-body-definitions"></a>Ausdruckstextdefinitionen
 

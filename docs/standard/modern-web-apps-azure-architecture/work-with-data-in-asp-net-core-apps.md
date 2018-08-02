@@ -1,23 +1,21 @@
 ---
 title: Arbeiten mit Daten in ASP.NET Core-Apps
-description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbeiten mit Daten in ASP
+description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbeiten mit Daten in ASP.NET Core-Apps
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: c9f1350f57ed649b9bf53968c19ab652b3c74384
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106174"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404657"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
 > „Daten sind ein wertvolles Gut und werden länger erhalten bleiben als die Systeme.“
-
-Tim Berners-Lee
-
-## <a name="summary"></a>Zusammenfassung
+>
+> Tim Berners-Lee
 
 Der Datenzugriff stellt in beinahe allen Softwareanwendungen einen wichtigen Bestandteil dar. ASP.NET Core unterstützt verschiedene Datenzugriffsoptionen, einschließlich Entity Framework Core und Entity Framework 6, sowie alle .NET-Frameworks für den Datenzugriff. Welches Framework für den Datenzugriff verwendet werden soll, hängt von den Anforderungen der jeweiligen App ab. Wenn Sie die Auswahlmöglichkeiten aus ApplicationCore und Benutzeroberflächenprojekten zusammenfassen und Informationen zur Implementierung in der Infrastruktur kapseln, können sie loser gekoppelte, testbare Software erstellen.
 
@@ -35,7 +33,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
 ### <a name="the-dbcontext"></a>DbContext
 
-Sie benötigen zum Arbeiten mit EF Core eine Unterklasse von DbContext. Diese Klasse enthält Eigenschaften, die Auflistungen der Entitäten darstellt, mit denen Ihre Anwendung arbeiten soll. Das eShopOnWeb-Beispiel umfasst CatalogContext mit Auflistungen für Elemente, Marken und Typen:
+Sie benötigen zum Arbeiten mit EF Core eine Unterklasse von <xref:Microsoft.EntityFrameworkCore.DbContext>. Diese Klasse enthält Eigenschaften, die Auflistungen der Entitäten darstellt, mit denen Ihre Anwendung arbeiten soll. Das eShopOnWeb-Beispiel umfasst CatalogContext mit Auflistungen für Elemente, Marken und Typen:
 
 ```csharp
 public class CatalogContext : DbContext
@@ -114,9 +112,9 @@ await _context.SaveChangesAsync();
 
 EF Core unterstützt sowohl synchrone als auch asynchrone Methoden zum Abrufen und Speichern. In Webanwendungen wird empfohlen, das Async/Await-Muster mit der Async-Methode zu verwenden, damit keine Webserverthreads blockiert werden, während darauf gewartet wird, dass Datenzugriffsvorgänge abgeschlossen werden.
 
-### <a name="fetching-related-data"></a>Abrufen von verknüpften Daten
+### <a name="fetching-related-data"></a>Abrufen zugehöriger Daten
 
-Wenn EF Core Entitäten abruft, werden alle Eigenschaften aufgefüllt, die direkt mit dieser Entität in der Datenbank gespeichert werden. Navigationseigenschaften wie Listen mit verknüpften Entitäten werden nicht aufgefüllt, und ihr Wert ist möglicherweise auf NULL festgelegt. Dadurch wird sichergestellt, dass EF Core nicht mehr Daten abruft als nötig. Dies ist besonders wichtig für Webanwendungen, die schnell Anforderungen verarbeiten und auf effiziente Weise Antworten zurückgeben müssen. Geben Sie wie im Folgenden dargestellt unter Verwendung der Erweiterungsmethode „Include“ bei der Abfrage die Eigenschaft an, um über *Eager Loading* Beziehungen zu einer Entität hinzuzufügen:
+Wenn EF Core Entitäten abruft, werden alle Eigenschaften aufgefüllt, die direkt mit dieser Entität in der Datenbank gespeichert werden. Navigationseigenschaften wie Listen mit verknüpften Entitäten werden nicht aufgefüllt, und ihr Wert ist möglicherweise auf NULL festgelegt. Dadurch wird sichergestellt, dass EF Core nicht mehr Daten abruft als nötig. Dies ist besonders wichtig für Webanwendungen, die schnell Anforderungen verarbeiten und auf effiziente Weise Antworten zurückgeben müssen. Geben Sie wie im Folgenden dargestellt unter Verwendung der Erweiterungsmethode „Include“ bei der Abfrage die Eigenschaft an, um über _Eager Loading_ Beziehungen zu einer Entität hinzuzufügen:
 
 ```csharp
 // .Include requires using Microsoft.EntityFrameworkCore
@@ -127,13 +125,15 @@ var brandsWithItems = await _context.CatalogBrands
 
 Sie können unter Verwendung von ThenInclude mehrere Beziehungen sowie untergeordnete Beziehungen hinzufügen. EF Core führt dann eine einzelne Abfrage aus, um die daraus entstehenden Entitäten abzurufen.
 
-Sie können auch das *explizite Laden* verwenden, um verknüpfte Daten zu laden. Beim expliziten Laden können Sie zusätzliche Daten in eine Entität laden, die bereits abgerufen wurde. Da dies eine separate Anforderung an die Datenbank umfasst, wird dies nicht für Webanwendungen empfohlen, die die Anzahl von Datenbankroundtrips pro Anforderung reduzieren sollen.
+Sie können auch das _explizite Laden_ verwenden, um verknüpfte Daten zu laden. Beim expliziten Laden können Sie zusätzliche Daten in eine Entität laden, die bereits abgerufen wurde. Da dies eine separate Anforderung an die Datenbank umfasst, wird dies nicht für Webanwendungen empfohlen, die die Anzahl von Datenbankroundtrips pro Anforderung reduzieren sollen.
 
-Beim *verzögerten Laden* handelt es sich um ein Feature, das automatisch verknüpfte Daten lädt, wenn die Anwendung auf dieses verweist. Derzeit wird dieses Feature in EF Core nicht unterstützt und sollte genau wie beim expliziten Laden normalerweise für Webanwendungen deaktiviert sein.
+Beim _verzögerten Laden_ handelt es sich um ein Feature, das automatisch verknüpfte Daten lädt, wenn die Anwendung auf dieses verweist. EF Core Version 2.1 unterstützt verzögertes Laden. Verzögertes Laden ist standardmäßig deaktiviert und erfordert die Installation von `Microsoft.EntityFrameworkCore.Proxies`. Ähnlich wie das explizite Laden sollte das verzögerte Laden in der Regel für Webanwendungen deaktiviert sein, da dessen Verwendung zu zusätzlichen Datenbankabfragen in jeder Webanforderung führt. Der vom verzögerten Laden verursachte zeitliche Mehraufwand wird zur Entwicklungszeit oft nicht beachtet, wenn die Wartezeit kurz ist und die für die Tests verwendeten Datasets klein sind. Allerdings können die zusätzlichen Datenbankanforderungen oft zu schlechter Leistung bei Webanwendungen führen, die intensiven Gebrauch vom verzögerten Laden machen, da in der Produktion mehr Benutzer sowie Daten vorhanden sind und höhere Wartezeiten auftreten.
+
+[Avoid Lazy Loading Entities in Web Applications (Vermeiden von verzögertem Laden von Entitäten in Webanwendungen)](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
 
 ### <a name="resilient-connections"></a>Robuste Verbindungen
 
-Es kann sein, dass externe Ressourcen wie SQL-Datenbanken zeitweise nicht verfügbar sind. Wenn es zu einem temporären Ausfall kommen sollte, können Anwendungen die Wiederholungslogik verwenden, damit keine Ausnahmen ausgelöst werden. Diese Technik wird als *Verbindungsresilienz* bezeichnet. Sie können Ihre eigene Technik für [Wiederholungen mit exponentiellem Backoff verwenden](https://docs.microsoft.com/azure/architecture/patterns/retry), indem Sie so viele Wiederholungen durchführen, bis die maximale Anzahl von möglichen Wiederholungen erreicht ist, und dabei die Wartezeit zwischen den einzelnen Wiederholungen immer weiter ausdehnen. Diese Technik berücksichtigt den Umstand, dass Cloudressourcen zeitweise nicht verfügbar sein können, wodurch einige Anforderungen fehlschlagen.
+Es kann sein, dass externe Ressourcen wie SQL-Datenbanken zeitweise nicht verfügbar sind. Wenn es zu einem temporären Ausfall kommen sollte, können Anwendungen die Wiederholungslogik verwenden, damit keine Ausnahmen ausgelöst werden. Diese Technik wird als _Verbindungsresilienz_ bezeichnet. Sie können Ihre eigene Technik für [Wiederholungen mit exponentiellem Backoff verwenden](https://docs.microsoft.com/azure/architecture/patterns/retry), indem Sie so viele Wiederholungen durchführen, bis die maximale Anzahl von möglichen Wiederholungen erreicht ist, und dabei die Wartezeit zwischen den einzelnen Wiederholungen immer weiter ausdehnen. Diese Technik berücksichtigt den Umstand, dass Cloudressourcen zeitweise nicht verfügbar sein können, wodurch einige Anforderungen fehlschlagen.
 
 Entity Framework Core bietet bereits interne Datenbankverbindungsresilienz und Wiederholungslogik für Azure SQL DB. Jedoch müssen Sie die Entity Framework-Ausführungsstrategie für jede DbContext-Verbindung aktivieren, wenn Sie robuste EF Core-Verbindungen erzielen wollen.
 
@@ -153,19 +153,19 @@ public class Startup
         {
             sqlOptions.EnableRetryOnFailure(
             maxRetryCount: 5,
-            maxRetryDelay: TimeSpan.FromSeconds(30), 
-            errorNumbersToAdd: null); 
+            maxRetryDelay: TimeSpan.FromSeconds(30),
+            errorNumbersToAdd: null);
         });
     });
 }
 //...
 ```
 
-  #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Ausführungsstrategien und explizite Transaktionen mit „BeginTransaction“ und mehreren DbContext-Objekten 
-  
-  Wenn Wiederholungen in EF Core-Verbindungen aktiviert sind, wird jeder Vorgang, den Sie mit EF Core durchführen, zu einem individuell wiederholbaren Vorgang. Jede Abfrage und jeder Aufruf von „SaveChanges“ wird als eine Einheit wiederholt, wenn ein vorübergehender Fehler auftritt.
-  
-  Wenn Ihr Code jedoch eine Transaktion mit „BeginTransaction“ ausführt, definieren Sie Ihre eigene Gruppe von Vorgängen, die als Einheit behandelt werden müssen. Alles innerhalb dieser Transaktion wird zurückgesetzt, wenn ein Fehler auftritt. Eine Ausnahme wie die Folgende wird angezeigt, wenn Sie versuchen, diese Transaktion auszuführen, wenn Sie die EF-Ausführungsstrategie verwenden (Wiederholungsrichtlinie) und der Transaktion mehrere SaveChanges-Elemente von mehreren DbContext-Objekten hinzufügen.
+#### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Ausführungsstrategien und explizite Transaktionen mit „BeginTransaction“ und mehreren DbContext-Objekten
+
+Wenn Wiederholungen in EF Core-Verbindungen aktiviert sind, wird jeder Vorgang, den Sie mit EF Core durchführen, zu einem individuell wiederholbaren Vorgang. Jede Abfrage und jeder Aufruf von „SaveChanges“ wird als eine Einheit wiederholt, wenn ein vorübergehender Fehler auftritt.
+
+Wenn Ihr Code jedoch eine Transaktion mit „BeginTransaction“ ausführt, definieren Sie Ihre eigene Gruppe von Vorgängen, die als Einheit behandelt werden müssen. Alles innerhalb dieser Transaktion wird zurückgesetzt, wenn ein Fehler auftritt. Eine Ausnahme wie die Folgende wird angezeigt, wenn Sie versuchen, diese Transaktion auszuführen, wenn Sie die EF-Ausführungsstrategie verwenden (Wiederholungsrichtlinie) und der Transaktion mehrere SaveChanges-Elemente von mehreren DbContext-Objekten hinzufügen.
 
 System.InvalidOperationException: Die konfigurierte Ausführungsstrategie „SqlServerRetryingExecutionStrategy“ unterstützt keine vom Benutzer instanziierten Transaktionen. Verwenden Sie die Ausführungsstrategie, die von „DbContext.Database.CreateExecutionStrategy()“ zurückgegeben wird, um alle Vorgänge in der Transaktion als wiederholbare Einheit auszuführen.
 
@@ -176,7 +176,7 @@ Die Lösung ist, die EF-Ausführungsstrategie mit einem Delegaten manuell aufzur
 // within an explicit transaction
 // See:
 // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
-var strategy = _catalogContext.Database.CreateExecutionStrategy(); 
+var strategy = _catalogContext.Database.CreateExecutionStrategy();
 await strategy.ExecuteAsync(async () =>
 {
     // Achieving atomicity between original Catalog database operation and the
@@ -185,7 +185,7 @@ await strategy.ExecuteAsync(async () =>
     {
         _catalogContext.CatalogItems.Update(catalogItem);
         await _catalogContext.SaveChangesAsync();
-        
+
         // Save to EventLog only if product price changed
         if (raiseProductPriceChangedEvent)
         await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
@@ -197,12 +197,13 @@ await strategy.ExecuteAsync(async () =>
 Das erste DbContext-Objekt ist \_catalogContext und das zweite befindet sich im Objekt \_integrationEventLogService. Zum Schluss wird die Commitaktion unter Verwendung einer EF-Ausführungsstrategie für mehrere DbContext-Objekte ausgeführt.
 
 > ### <a name="references--entity-framework-core"></a>Ressourcen: Entity Framework Core
+>
 > - **EF Core-Dokumentation**  
-> <https://docs.microsoft.com/ef/>
+>   <https://docs.microsoft.com/ef/>
 > - **EF Core: Related Data (EF Core: Verknüpfte Daten)**  
-> <https://docs.microsoft.com/ef/core/querying/related-data>
+>   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Avoid Lazy Loading Entities in ASPNET Applications (Vermeiden von verzögertem Laden von Entitäten in ASP.NET-Anwendungen)**  
-> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+>   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core oder Mikro-ORM?
 
@@ -270,8 +271,7 @@ NoSQL-Datenbanken erzwingen in der Regel nicht das [ACID](https://en.wikipedia.o
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 
-Azure DocumentDB ist ein vollständig verwalteter Dienst für NoSQL-Datenbanken, der einen cloudbasierten schemalosen Datenspeicher umfasst. DocumentDB ist auf schnelle und vorhersagbare Leistung, Hochverfügbarkeit, elastische Skalierung und globale Verteilung ausgerichtet. Obwohl es sich um einen Dienst für NoSQL-Datenbanken handelt, können Entwickler aufwändige und vertraute SQL-Abfragefunktionen für JSON-Daten verwenden. Alle Ressourcen in DocumentDB werden als JSON-Dokumente gespeichert. Ressourcen werden als *Elemente*, bei denen es sich um Dokumente mit Metadaten handelt, und als *Feeds* verwaltet, bei denen es sich um Auflistungen von Elementen handelt. In Abbildung 8–2 wird die Beziehung zwischen verschiedenen DocumentDB-Ressourcen dargestellt.
-
+Azure DocumentDB ist ein vollständig verwalteter Dienst für NoSQL-Datenbanken, der einen cloudbasierten schemalosen Datenspeicher umfasst. DocumentDB ist auf schnelle und vorhersagbare Leistung, Hochverfügbarkeit, elastische Skalierung und globale Verteilung ausgerichtet. Obwohl es sich um einen Dienst für NoSQL-Datenbanken handelt, können Entwickler aufwändige und vertraute SQL-Abfragefunktionen für JSON-Daten verwenden. Alle Ressourcen in DocumentDB werden als JSON-Dokumente gespeichert. Ressourcen werden als _Elemente_, bei denen es sich um Dokumente mit Metadaten handelt, und als _Feeds_ verwaltet, bei denen es sich um Auflistungen von Elementen handelt. In Abbildung 8–2 wird die Beziehung zwischen verschiedenen DocumentDB-Ressourcen dargestellt.
 
 ![Die hierarchische Beziehung zwischen Ressourcen in DocumentDB; eine NoSQL-Datenbank im JSON-Format](./media/image8-2.png)
 
@@ -281,25 +281,25 @@ Bei der DocumentDB-Abfragesprache handelt es sich um eine einfache, aber leistun
 
 **Ressourcen: DocumentDB**
 
--   Einführung in DocumentDB
-    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Einführung in DocumentDB
+  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Andere Persistenzoptionen
 
 Neben relationalen Speicheroptionen und NoSQL-Optionen können ASP.NET Core-Anwendungen auch Azure Storage verwenden, um verschiedene Datenformate und Dateien auf cloudbasierte, skalierbare Weise zu speichern. Azure Storage ist im großen Umfang skalierbar, d.h., Sie können zunächst kleine Mengen von Daten speichern und zentral hochskalieren, und den Umfang dann auf mehrere Hundert Terrabyte ausweiten, falls dies die Anwendung erfordert. Azure Storage unterstützt vier verschiedene Arten von Daten:
 
--   Blob Storage für unstrukturierten Text oder als Binärspeicher (auch als Objektspeicher bezeichnet)
+- Blob Storage für unstrukturierten Text oder als Binärspeicher (auch als Objektspeicher bezeichnet)
 
--   Table Storage für strukturierte Datasets, auf die über Zeilenschlüssel zugegriffen werden kann
+- Table Storage für strukturierte Datasets, auf die über Zeilenschlüssel zugegriffen werden kann
 
--   Queue Storage für zuverlässiges warteschlangenbasiertes Messaging
+- Queue Storage für zuverlässiges warteschlangenbasiertes Messaging
 
--   File Storage für den Zugriff auf freigegebene Dateien zwischen virtuellen Azure-Computern und lokalen Anwendungen
+- File Storage für den Zugriff auf freigegebene Dateien zwischen virtuellen Azure-Computern und lokalen Anwendungen
 
 **Ressourcen: Azure Storage**
 
--   Einführung in Azure Storage
-    <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Einführung in Azure Storage
+  <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Zwischenspeicherung
 
@@ -315,16 +315,17 @@ ASP.NET Core unterstützt zwei Ebenen des Zwischenspeicherns von Antworten. Auf 
     [ResponseCache(Duration = 60)]
     public IActionResult Contact()
     { }
-    
+
     ViewData["Message"] = "Your contact page.";
     return View();
 }
+```
 
-The above example will result in the following header being added to the response, instructing clients to cache the result for up to 60 seconds.
+Im vorherigen Beispiel wird der folgende Header der Antwort hinzugefügt, der Clients dazu auffordert, das Ergebnis bis zu 60 Sekunden lang zwischenzuspeichern.
 
 Cache-Control: public,max-age=60
 
-In order to add server-side in-memory caching to the application, you must reference the Microsoft.AspNetCore.ResponseCaching NuGet package, and then add the Response Caching middleware. This middleware is configured in both ConfigureServices and Configure in Startup:
+Damit die serverseitige Zwischenspeicherung im Arbeitsspeicher der Anwendung hinzugefügt werden kann, müssen Sie auf das NuGet-Paket „Microsoft.AspNetCore.ResponseCaching“ verweisen, und dann die Antworten zwischenspeichernde Middleware hinzufügen. Diese Middleware wird beim Start sowohl in „ConfigureServices“ als auch in „Configure“ konfiguriert:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -338,11 +339,11 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-Die Antworten zwischenspeichernde Middleware speichert automatisch auf der Grundlage von einigen Bedingungen Antworten zwischen, die Sie anpassen können. Standardmäßig werden nur „200 – OK“-Antworten zwischengespeichert, die über die Methoden GET oder HEAD angefordert werden. Außerdem müssen Anforderungen über eine Antwort mit Cache-Control und öffentlichen Headers verfügen und können keine Header für das Authorization- oder Set-Cookie umfassen. Weitere Informationen finden Sie in einer [vollständigen Liste von Zwischenspeicherungsbedingungen, die von der Antworten zwischenspeichernden Middleware verwendet werden](https://docs.microsoft.com/aspnet/core/performance/caching/middleware#conditions-for-caching).
+Die Antworten zwischenspeichernde Middleware speichert automatisch auf der Grundlage von einigen Bedingungen Antworten zwischen, die Sie anpassen können. Standardmäßig werden nur „200 – OK“-Antworten zwischengespeichert, die über die Methoden GET oder HEAD angefordert werden. Außerdem müssen Anforderungen über eine Antwort mit Cache-Control und öffentlichen Headers verfügen und können keine Header für das Authorization- oder Set-Cookie umfassen. Weitere Informationen finden Sie in einer [vollständigen Liste von Zwischenspeicherungsbedingungen, die von der Antworten zwischenspeichernden Middleware verwendet werden](/aspnet/core/performance/caching/middleware#conditions-for-caching).
 
-### <a name="data-caching"></a>Datencaching
+### <a name="data-caching"></a>Zwischenspeichern von Daten
 
-Anstelle des oder neben dem Zwischenspeichern vollständiger Webantworten können Sie auch die Ergebnisse einzelner Datenabfragen zwischenspeichern. Dafür können Sie speicherinternes Caching auf dem Webserver oder einen [verteilten Cache verwenden](https://docs.microsoft.com/aspnet/core/performance/caching/distributed). In diesem Abschnitt erfahren Sie, wie Sie das speicherinterne Caching implementieren.
+Anstelle des oder neben dem Zwischenspeichern vollständiger Webantworten können Sie auch die Ergebnisse einzelner Datenabfragen zwischenspeichern. Dafür können Sie speicherinternes Caching auf dem Webserver oder einen [verteilten Cache verwenden](/aspnet/core/performance/caching/distributed). In diesem Abschnitt erfahren Sie, wie Sie das speicherinterne Caching implementieren.
 
 Sie fügen in ConfigureServices Unterstützung für speicherinternes oder verteiltes Zwischenspeichern hinzu:
 
@@ -373,7 +374,7 @@ public class CachedCatalogService : ICatalogService
         _cache = cache;
         _catalogService = catalogService;
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetBrands()
     {
         return await _cache.GetOrCreateAsync(_brandsKey, async entry =>
@@ -382,7 +383,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetBrands();
         });
     }
-    
+
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
         string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
@@ -392,7 +393,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetCatalogItems(pageIndex, itemsPage, brandID, typeId);
         });
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetTypes()
     {
         return await _cache.GetOrCreateAsync(_typesKey, async entry =>
@@ -414,7 +415,7 @@ services.AddScoped<CatalogService>();
 
 Wenn dies funktioniert, sendet die Datenbank anstatt bei jeder Anforderung nur einmal pro Minute einen Aufruf, um die Katalogdaten abzurufen. Je nachdem, wie viel Datenverkehr an die Website gesendet wird, kann dies deutliche Auswirkungen auf die Anzahl von Abfragen, die an die Datenbank gesendet werden, und die durchschnittliche Seitenladezeit der Startseite haben, die zu diesem Zeitpunkt von allen drei Abfragen abhängig ist, die von diesem Dienst zur Verfügung gestellt werden.
 
-Wenn Sie allerdings das Caching implementieren, kann dies dazu führen, dass *veraltete Daten* verwendet werden. Damit sind Daten gemeint, die in der Quelle verändert wurden, von denen aber eine veraltete Version im Cache erhalten bleibt. Dieses Problem können Sie umgehen, wenn Sie eine kurze Cachedauer verwenden, da es für häufig verwendete Anwendungen nur wenig hilfreich ist, diese Dauer auszuweiten. Angenommen, Sie verfügen z.B. über eine Seite, die eine einzelne Datenbankabfrage sendet und zehnmal pro Sekunde abgerufen wird. Wenn diese Seite für eine Minute zwischengespeichert wird, hat dies zur Folge, dass die Anzahl der Datenbankabfragen pro Minute von 600 auf 1, also um 99,8 %, reduziert wird. Wenn die Cachedauer stattdessen auf eine Stunde festgelegt werden würde, würde die Anzahl der Abfragen insgesamt um 99,997 % reduziert werden. Dann kann es jedoch sein, dass die zwischengespeicherten Daten viel häufiger veralten.
+Wenn Sie allerdings das Caching implementieren, kann dies dazu führen, dass _veraltete Daten_ verwendet werden. Damit sind Daten gemeint, die in der Quelle verändert wurden, von denen aber eine veraltete Version im Cache erhalten bleibt. Dieses Problem können Sie umgehen, wenn Sie eine kurze Cachedauer verwenden, da es für häufig verwendete Anwendungen nur wenig hilfreich ist, diese Dauer auszuweiten. Angenommen, Sie verfügen z.B. über eine Seite, die eine einzelne Datenbankabfrage sendet und zehnmal pro Sekunde abgerufen wird. Wenn diese Seite für eine Minute zwischengespeichert wird, hat dies zur Folge, dass die Anzahl der Datenbankabfragen pro Minute von 600 auf 1, also um 99,8 %, reduziert wird. Wenn die Cachedauer stattdessen auf eine Stunde festgelegt werden würde, würde die Anzahl der Abfragen insgesamt um 99,997 % reduziert werden. Dann kann es jedoch sein, dass die zwischengespeicherten Daten viel häufiger veralten.
 
 Stattdessen können Sie proaktiv Cacheeinträge entfernen, wenn die darin enthaltenen Daten aktualisiert werden. Jeder einzelne Eintrag kann entfernt werden, wenn dessen Schlüssel bekannt ist:
 
@@ -435,6 +436,8 @@ new CancellationChangeToken(cts.Token));
 // elsewhere, expire the cache by cancelling the token\
 _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
+
+Die Zwischenspeicherung kann die Leistung von Webseiten drastisch verbessern, die immer wieder die gleichen Werte von der Datenbank anfordern. Stellen Sie sicher, dass Sie den Datenzugriff und die Seitenleistung messen, bevor Sie die Zwischenspeicherung hinzufügen. Wenden Sie die Zwischenspeicherung nur für notwendige Verbesserungen an. Das Zwischenspeichern verbraucht Arbeitsspeicherressourcen des Webservers, und die Anwendung wird komplexer, weshalb es wichtig ist, dass Sie diese Art von Optimierung nicht voreilig durchführen.
 
 >[!div class="step-by-step"]
 [Zurück](develop-asp-net-core-mvc-apps.md)

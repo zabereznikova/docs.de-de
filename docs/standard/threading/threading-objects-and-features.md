@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02f88faab6ddbaa026e73ad61bc63fbe8e5e00ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591325"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874786"
 ---
 # <a name="threading-objects-and-features"></a>Threadingobjekte und -funktionen
 .NET Framework stellt eine Reihe von Objekten bereit, mit denen Sie Multithreadanwendungen erstellen und verwalten können. Verwaltete Threads werden durch die <xref:System.Threading.Thread>-Klasse repräsentiert. Die <xref:System.Threading.ThreadPool>-Klasse ermöglicht eine einfache Erstellung und Verwaltung von Multithreaded-Hintergrundaufgaben. Die <xref:System.ComponentModel.BackgroundWorker>-Klasse erfüllt den gleichen Zweck für Aufgaben, die mit der Benutzeroberfläche interagieren. Die <xref:System.Threading.Timer> -Klasse führt Hintergrundaufgaben in festgelegten Intervallen aus.  
@@ -25,7 +25,7 @@ ms.locfileid: "33591325"
  Erläutert die **ThreadPool**-Klasse, mit der Sie einen Thread zum Ausführen einer Aufgabe anfordern können, ohne den Thread in irgendeiner Form selbst verwalten zu müssen.  
   
  [Timer](../../../docs/standard/threading/timers.md)  
- Hier wird erläutert, wie Sie mit einem **Timer** einen Delegaten angeben, der zu einer bestimmten Zeit aufgerufen werden soll.  
+ Beschreibt Zeitgeber, die in einer Multithreadumgebung verwendet werden können.  
   
  [Monitore](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  Erläutert, wie die **Monitor**-Klasse zum Synchronisieren des Zugriffs auf ein Member oder zum Erstellen eigener Threadverwaltungsarten verwendet wird.  

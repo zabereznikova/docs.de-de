@@ -3,20 +3,18 @@ title: Allgemeine clientseitige Webtechnologien
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Allgemeine clientseitige Webtechnologien
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 79dac220e40274889783d29c0e04679dd878fda5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106761"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404605"
 ---
 # <a name="common-client-side-web-technologies"></a>Allgemeine clientseitige Webtechnologien
 
 > „Websites sollten auf der Oberfläche und in ihrem Inneren gut aussehen.“  
 > _– Paul Cookson_
-
-## <a name="summary"></a>Zusammenfassung
 
 ASP.NET Core-Anwendungen sind Webanwendungen. Sie bauen normalerweise auf clientseitigen Webtechnologien wie HTML, CSS oder JavaScript auf. Indem der Inhalt der Seite (die HTML) vom Layout und Format (das CSS) und dessen Verhalten (über JavaScript) getrennt wird, können komplexe Web-Apps dem Prinzip der Separation of Concerns folgen. Die Struktur, das Design und das Verhalten der Anwendung können so unkomplizierter angepasst werden, da sie nicht miteinander verknüpft sind.
 
@@ -38,7 +36,7 @@ Es wird empfohlen, Formate in getrennten Stylesheetdateien zu speichern und das 
 
 ### <a name="css-preprocessors"></a>CSS-Präprozessoren
 
-CSS-Stylesheets unterstützen keine bedingte Logik, Variablen oder andere Programmiersprachenfeatures. Deshalb beinhalten große Stylesheets oft viele Wiederholungen, da die gleiche Farbe, Schriftart oder eine andere Einstellung auf verschiedene Varianten von HTML-Elementen und CSS-Klassen angewendet wird. CSS-Präprozessoren tragen dazu bei, dass Ihre Stylesheets dem [DRY-Prinzip](http://deviq.com/don-t-repeat-yourself/) treu bleiben, indem sie Unterstützung für Variablen und Logik hinzufügen.
+CSS-Stylesheets unterstützen keine bedingte Logik, Variablen oder andere Programmiersprachenfeatures. Deshalb beinhalten große Stylesheets oft viele Wiederholungen, da die gleiche Farbe, Schriftart oder eine andere Einstellung auf verschiedene Varianten von HTML-Elementen und CSS-Klassen angewendet wird. CSS-Präprozessoren tragen dazu bei, dass Ihre Stylesheets dem [DRY-Prinzip](https://deviq.com/don-t-repeat-yourself/) treu bleiben, indem sie Unterstützung für Variablen und Logik hinzufügen.
 
 Die bekanntesten CSS-Präprozessoren sind Sass und LESS. Beide erweitern CSS und stellen Rückwärtskompatibilität bereit. Das bedeutet, dass eine CSS-Datei eine gültige Sass- oder LESS-Datei ist. Sass basiert auf Ruby und LESS auf JavaScript. Beide werden normalerweise im Rahmen Ihres lokalen Entwicklungsprozesses ausgeführt. Beide verfügen über Befehlszeilentools. Visual Studio verfügt über integrierte Unterstützung für ihre Ausführung mithilfe von Gulp- und Grunt-Tasks.
 
@@ -48,13 +46,13 @@ JavaScript ist eine dynamische, interpretierte Programmiersprache, die in der EC
 
 Wenn Sie JavaScript in Ihrer Webanwendung verwenden, müssen Sie zumeist folgende Aufgaben ausführen:
 
--   Sie müssen ein HTML-Element auswählen und dieses abrufen und/oder dessen Wert aktualisieren.
+- Sie müssen ein HTML-Element auswählen und dieses abrufen und/oder dessen Wert aktualisieren.
 
--   Sie müssen eine Web-API abfragen, um Daten zu erhalten.
+- Sie müssen eine Web-API abfragen, um Daten zu erhalten.
 
--   Sie müssen einen Befehl an eine Web-API senden (und auf einen Rückruf mit ihrem Ergebnis reagieren).
+- Sie müssen einen Befehl an eine Web-API senden (und auf einen Rückruf mit ihrem Ergebnis reagieren).
 
--   Sie müssen eine Validierung durchführen.
+- Sie müssen eine Validierung durchführen.
 
 Diese Aufgaben können Sie alle mit JavaScript alleine durchführen, aber es gibt viele Bibliotheken, die Ihnen den Vorgang erleichtern. Eine der ersten und erfolgreichsten Bibliotheken ist jQuery, die immer noch sehr beliebt ist, wenn es darum geht, diese Aufgaben auf Webseiten zu erleichtern. jQuery bietet für Single-Page-Webanwendungen (SPAs) nur wenige der erwünschten Features, die von den Bibliotheken „Angular“ und „React“ bereitgestellt werden.
 
@@ -100,9 +98,9 @@ Komponenten werden mit der Decorator-Funktion @Component definiert, die Metadate
 
 Da Angular-Anwendungen mit Komponenten und Vorlagen statt mit DOM-Elementen arbeiten, ist ihr Grad an Abstraktion höher, und sie erfordern insgesamt weniger Code als Apps, die nur mit JavaScript (auch als „Vanilla JS“ bezeichnet) oder jQuery geschrieben wurden. Außerdem sorgt Angular für einen gewissen Grad an Ordnung bei der Organisation Ihrer clientseitigen Skriptdateien. Gemäß der Konvention verwenden Angular-Apps eine gemeinsame Ordnerstruktur, wobei sich Modul- und Komponentenskriptdateien in einem App-Ordner befinden. Angular-Skripts zum Erstellen, Bereitstellen und Testen der App befinden sich normalerweise in einem Ordner auf einer höheren Ebene.
 
-Angular setzt CLI-Tools (Befehlszeilenschnittstelle) optimal ein. Um lokal mit der Angular-Entwicklung beginnen zu können (wenn man davon ausgeht, dass sie git und npm bereit installiert haben), müssen Sie einfach nur ein Repository von GitHub kopieren und \`npm install\` und \`npm start\` ausführen. Darüber hinaus ist ein eigenes CLI-Tool im Lieferumfang von Angular enthalten, mit dem Projekte erstellt, Dateien hinzugefügt und Test-, Bündelungs- und Bereitstellungstasks unterstützt werden können. Durch diese CLI-Toolfähigkeit ist Angular insbesondere kompatibel mit ASP.NET Core, das auch CLI-Unterstützung beinhaltet.
+Angular setzt CLI-Tools (Befehlszeilenschnittstelle) optimal ein. Um lokal mit der Angular-Entwicklung beginnen zu können (wenn Sie git und npm bereits installiert haben), müssen Sie einfach nur ein Repository von GitHub kopieren und `npm install` und `npm start` ausführen. Darüber hinaus ist ein eigenes CLI-Tool im Lieferumfang von Angular enthalten, mit dem Projekte erstellt, Dateien hinzugefügt und Test-, Bündelungs- und Bereitstellungstasks unterstützt werden können. Durch diese CLI-Toolfähigkeit ist Angular insbesondere kompatibel mit ASP.NET Core, das auch CLI-Unterstützung beinhaltet.
 
-Microsoft hat die Beispielanwendung [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) entwickelt, die eine Angular-SPA-Implementierung enthält. Diese App beinhaltet Angular-Module zum Verwalten von Einkaufswagen in Onlineshops, zum Laden und Anzeigen von Artikeln aus dem Katalog des Shops und zum Verarbeiten einer Bestellung. Sie können die Beispielanwendung von [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) herunterladen.
+Microsoft hat die Beispielanwendung [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) entwickelt, die eine Angular-SPA-Implementierung enthält. Diese App beinhaltet Angular-Module zum Verwalten von Einkaufswagen in Onlineshops, zum Laden und Anzeigen von Artikeln aus dem Katalog des Shops und zum Verarbeiten einer Bestellung. Sie können die Beispielanwendung von [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) herunterladen.
 
 ### <a name="react"></a>React
 
@@ -128,17 +126,17 @@ Da es sich bei React nicht um ein vollständiges Framework handelt, sollten sich
 
 Wenn Sie sich für ein JavaScript-Framework entscheiden müssen, das Ihre SPA am besten unterstützt, beachten Sie besonders die folgenden Aspekte:
 
--   Kennt sich Ihr Team mit dem Framework und dessen Abhängigkeiten aus (dies umfasst in einigen Fällen auch TypeScript)?
+- Kennt sich Ihr Team mit dem Framework und dessen Abhängigkeiten aus (dies umfasst in einigen Fällen auch TypeScript)?
 
--   Wie „eigenwillig“ ist das Framework, und passt sein Standardverhalten zu Ihren Bedürfnissen?
+- Wie „eigenwillig“ ist das Framework, und passt sein Standardverhalten zu Ihren Bedürfnissen?
 
--   Enthält es (oder eine zugehörige Bibliothek) alle Features, die Ihre App benötigt?
+- Enthält es (oder eine zugehörige Bibliothek) alle Features, die Ihre App benötigt?
 
--   Ist eine ausführliche Dokumentation vorhanden?
+- Ist eine ausführliche Dokumentation vorhanden?
 
--   Wie aktiv ist seine Community? Werden damit neue Projekte erstellt?
+- Wie aktiv ist seine Community? Werden damit neue Projekte erstellt?
 
--   Wie aktiv ist das Kernteam? Werden Probleme behoben und regelmäßig neue Versionen veröffentlicht?
+- Wie aktiv ist das Kernteam? Werden Probleme behoben und regelmäßig neue Versionen veröffentlicht?
 
 JavaScript-Frameworks entwickeln sich in Rekordgeschwindigkeit weiter. Entscheiden Sie sich anhand der oben aufgelisteten Fragen für ein geeignetes Framework. Wenn es sein kann, dass sich ein Framework für Sie schnell als ungeeignet herausstellt, entscheiden Sie sich für ein Framework, dass kommerziellen Support anbietet und/oder von einem großen Unternehmen entwickelt wird.
 

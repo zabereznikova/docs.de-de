@@ -1,175 +1,92 @@
 ---
 title: Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit Polly
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit Polly
+description: Erfahren Sie, wie Sie HTTP-Fehler mit Polly und HttpClientFactory verarbeiten können.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: cce1392bb381859e7cad89c9f2518113241ae724
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/10/2018
+ms.openlocfilehash: c16f4c0f2ef09f346c8b46ff8089883cedcf0c7e
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106930"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874896"
 ---
-# <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit Polly
+# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit HttpClientFactory und Polly-Richtlinien
 
 Für Wiederholungen mit exponentiellem Backoff wird empfohlen, fortgeschrittenere .NET-Bibliotheken wie die Open Source-Bibliothek [Polly](https://github.com/App-vNext/Polly) zu verwenden.
 
-Polly ist eine .NET-Bibliothek, die Funktionen für die Flexibilität und die Behandlung von vorübergehenden Fehlern bereitstellt. Sie können diese Funktionen einfach implementieren, indem Sie Polly-Richtlinien wie „Retry“, „Circuit Breaker“, „Bulkhead Isolation“, „Timeout“, und „Fallback“ anwenden. Polly ist auf .NET 4.x und die Version 1.0 von .NET Standard (die .NET Core unterstützt) ausgelegt.
+Polly ist eine .NET-Bibliothek, die Funktionen für die Flexibilität und die Behandlung von vorübergehenden Fehlern bereitstellt. Sie können diese Funktionen implementieren, indem Sie Polly-Richtlinien wie „Retry“, „Circuit Breaker“, „Bulkhead Isolation“, „Timeout“, und „Fallback“ anwenden. Polly ist auf .NET 4.x und die .NET Standard-Bibliothek 1.0 (die .NET Core unterstützt) ausgelegt.
 
-In Polly wird die Richtlinie „Retry“ in „eShopOnContainers“ verwendet, um HTTP-Wiederholungsversuche zu implementieren. Sie können eine Schnittstelle implementieren, damit Sie eine Standardfunktion von „HttpClient“ oder eine robuste Version von „HttpClient“ mithilfe von Polly injizieren können, je nach der gewünschten Konfiguration der Wiederholungsrichtlinie.
+Die Verwendung der Polly-Bibliothek mit eigenem benutzerdefinierten Code mit HttpClient kann sich jedoch sehr komplex gestalten. In der ursprünglichen Version von eShopOnContainers war der Baustein [ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/Resilience/Resilience.Http/ResilientHttpClient.cs) enthalten, der auf Polly basierte. Mit dem Release von HttpClientFactory wurde die Implementierung von robuster HTTP-Kommunikation wesentlich einfacher, sodass dieser Baustein von eShopOnContainers nun als veraltet gilt. 
 
-Das folgende Beispiel zeigt die implementierte Schnittstelle in „eShopOnContainers“.
+Die folgenden Schritte veranschaulichen, wie Sie HTTP-Wiederholungen mit Polly in HttpClientFactory verwenden können. Die Integration von Polly wird im vorherigen Abschnitt erläutert.
+
+**Verweis auf das ASP.NET Core 2.1-Paket**
+
+Ihr Projekt muss ASP.NET Core 2.1-Pakete von NuGet verwenden. Sie benötigen üblicherweise das Metapaket `AspNetCore` und das Erweiterungspaket `Microsoft.Extensions.Http.Polly`.
+
+**Konfigurieren eines Clients mit der Polly-Wiederholungsrichtlinie in der Startup-Klasse**
+
+Wie in den vorherigen Abschnitten beschrieben wurde, müssen Sie eine benannte oder typisierte HttpClient-Clientkonfiguration in Ihrer Startup.ConfigureServices(...)-Standardmethode definieren. Nun fügen Sie jedoch inkrementellen Code hinzu, der die Richtlinie für die HTTP-Wiederholungen mit exponentiellem Backoff angibt:
 
 ```csharp
-public interface IHttpClient
+//ConfigureServices()  - Startup.cs
+services.AddHttpClient<IBasketService, BasketService>()
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to five minutes
+        .AddPolicyHandler(GetRetryPolicy());
+```
+
+Durch die Methode **AddPolicyHandler()** werden Richtlinien zum `HttpClient`-Objekt hinzugefügt, das Sie verwenden werden. In diesem Fall wird eine Polly-Richtlinie für HTTP-Wiederholungen mit exponentiellem Backoff hinzugefügt.
+
+Für einen modulareren Ansatz kann die HTTP-Wiederholungsrichtlinie in einer separaten Methoden innerhalb der ConfigureServices()-Methode definiert werden. Dies wird im folgenden Code veranschaulicht.
+
+```csharp
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 {
-    Task<string> GetStringAsync(string uri, string authorizationToken = null,
-        string authorizationMethod = "Bearer");
-        Task<HttpResponseMessage> PostAsync<T>(string uri, T item,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer");
-
-    Task<HttpResponseMessage> DeleteAsync(string uri,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer");
-
-    // Other methods ...
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+        .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2,
+                                                                    retryAttempt)));
 }
 ```
 
-Sie können die Standardimplementierung verwenden, wenn Sie keinen robusten Mechanismus verwenden möchten, z.B. wenn Sie einfachere Ansätze entwickeln oder testen. Der folgende Code zeigt die Standardimplementierung von „HttpClient“, was Anforderungen mit Authentifizierungstokens als optionaler Fall ermöglicht.
+Mit Polly können Sie eine Wiederholungsrichtlinie definieren, die die Anzahl von Wiederholungen, die Konfiguration des exponentiellen Backoffs und die Aktionen enthält, die ausgeführt werden, wenn eine HTTP-Ausnahme ausgelöst wird, z.B. die Protokollierung des Fehlers. In diesem Fall ist die Richtlinie dafür konfiguriert, sechs Versuche mit einer exponentiellen Wiederholung durchzuführen, die bei zwei Sekunden beginnt. 
+
+Es werden also sechs Versuche durchgeführt, und die Sekunden zwischen jeder Wiederholung steigen beginnend bei zwei Sekunden exponentiell.
+
+### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Hinzufügen einer Jitterstrategie zur Wiederholungsrichtlinie
+
+Eine reguläre Wiederholungsrichtlinie kann ein System negativ beeinflussen, falls hohe Parallelität, hohe Skalierbarkeit und ein hohes Konfliktpotenzial vorhanden sind. Um mit Spitzenlasten umgehen zu können, die bei ähnlichen Wiederholungsanforderungen von vielen Clients bei einem Teilausfall auftreten, empfiehlt es sich als Notlösung, den Wiederholungsalgorithmus oder die Wiederholungsrichtlinie um eine Jitterstrategie zu ergänzen. Wenn für den exponentiellen Backoff der Jitter zufällig festgelegt wird, kann dies die Gesamtleistung des End-to-End-Systems verbessern. Dadurch lassen sich beim Auftreten von Problemen Lastspitzen verteilen. Wenn Sie eine einfache Polly-Richtlinie verwenden, könnte der Code zum Implementieren des Jitters wie folgt aussehen:
 
 ```csharp
-public class StandardHttpClient : IHttpClient
-{
-    private HttpClient _client;
-    private ILogger<StandardHttpClient> _logger;
-
-    public StandardHttpClient(ILogger<StandardHttpClient> logger)
-    {
-        _client = new HttpClient();
-        _logger = logger;
-    }
-
-    public async Task<string> GetStringAsync(string uri,
-        string authorizationToken = null,
-        string authorizationMethod = "Bearer")
-    {
-        var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
-        if (authorizationToken != null)
-        {
-            requestMessage.Headers.Authorization =
-                new AuthenticationHeaderValue(authorizationMethod, authorizationToken);
-        }
-        var response = await _client.SendAsync(requestMessage);
-        return await response.Content.ReadAsStringAsync();
-    }
-
-    public async Task<HttpResponseMessage> PostAsync<T>(string uri, T item,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer")
-    {
-        // Rest of the code and other Http methods ...
+Random jitterer = new Random(); 
+Policy
+  .Handle<HttpResponseException>() // etc
+  .WaitAndRetry(5,    // exponential back-off plus some jitter
+      retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
+                    + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+  );
 ```
 
-Die interessante Implementierung besteht darin, eine weitere ähnliche Klasse zu codieren, aber Polly zu verwenden, um die robusten Mechanismen zu implementieren, die Sie verwenden möchten. Im folgenden Beispiel sind das Wiederholungen mit exponentiellem Backoff.
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-```csharp
-public class ResilientHttpClient : IHttpClient
-{
-    private HttpClient _client;
-    private PolicyWrap _policyWrapper;
-    private ILogger<ResilientHttpClient> _logger;
+-   **Retry pattern (Wiederholungsmuster)**
+    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
-    public ResilientHttpClient(Policy[] policies,
-        ILogger<ResilientHttpClient> logger)
-    {
-        _client = new HttpClient();
-        _logger = logger;
-        // Add Policies to be applied
-        _policyWrapper = Policy.WrapAsync(policies);
-    }
+-   **Polly und HttpClientFactory**
+    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
-    private Task<T> HttpInvoker<T>(Func<Task<T>> action)
-    {
-        // Executes the action applying all
-        // the policies defined in the wrapper
-        return _policyWrapper.ExecuteAsync(() => action());
-    }
+-   **Polly (.NET-Bibliothek zur Gewährleistung von Resilienz und zur Behandlung temporärer Fehler)**
 
-    public Task<string> GetStringAsync(string uri,
-        string authorizationToken = null,
-        string authorizationMethod = "Bearer")
-    {
-        return HttpInvoker(async () =>
-        {
-            var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
-            // The Token's related code eliminated for clarity in code snippet
-            var response = await _client.SendAsync(requestMessage);
-            return await response.Content.ReadAsStringAsync();
-        });
-    }
-    // Other Http methods executed through HttpInvoker so it applies Polly policies
-    // ...
-}
-```
+    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-Mit Polly definieren Sie eine Wiederholungsrichtlinie mit der Anzahl an Wiederholungen, der Konfiguration des exponentiellen Backoffs und den Aktionen, die ausgeführt werden, wenn eine HTTP-Ausnahme ausgelöst wird, z.B. die Protokollierung des Fehlers. In diesem Fall ist die Richtlinie so konfiguriert, dass sie den Versuch so oft wie angegeben wiederholt, wenn die Typen im IoC-Container registriert werden. Wegen der Konfiguration des exponentiellen Backoffs werden HTTP-Anforderungen nach einer bestimmten Zeit wiederholt, wenn der Code eine HttpRequest-Ausnahme erkennt. Die Anzahl der Wiederholungen steigt exponentiell an, je nachdem, wie die Richtlinie konfiguriert wurde.
+-   **Marc Brooker. Jitter: Making Things Better With Randomness (Jitter: Dinge durch Zufall verbessern)**
 
-Die wichtige Methode ist „HttpInvoker“, die die HTTP-Anforderungen in dieser gesamten Hilfsprogrammklasse stellt. Diese Methode führt die HTTP-Anforderung mit \_policyWrapper.ExecuteAsync aus, wobei die Wiederholungsrichtlinie berücksichtigt wird.
+    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
-In „eShopOnContainers“ geben Sie wie im folgenden Code aus der [MVC-Web-App in der startup.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs)-Klasse Polly-Richtlinien an, wenn die Typen im IoC-Container registriert werden.
-
-```csharp
-// Startup.cs class
-if (Configuration.GetValue<string>("UseResilientHttp") == bool.TrueString)
-{
-    services.AddTransient<IResilientHttpClientFactory,
-        ResilientHttpClientFactory>();
-    services.AddSingleton<IHttpClient,
-        ResilientHttpClient>(sp =>
-            sp.GetService<IResilientHttpClientFactory>().
-            CreateResilientHttpClient());
-}
-else
-{
-    services.AddSingleton<IHttpClient, StandardHttpClient>();
-}
-```
-
-Beachten Sie, dass die IHttpClient-Objekte als Singleton instanziiert sind und nicht als vorübergehend, sodass TCP-Verbindungen effizient von dem Dienst genutzt werden und kein [Problem mit Sockets](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) auftritt.
-
-Der wichtige Punkt zur Flexibilität ist, dass Sie die Polly-Richtlinie „WaitAndRetryAsync“ innerhalb von „ResilientHttpClientFactory“ in der Methode „CreateResilientHttpClient“ anwenden. Dies wird im folgenden Code dargestellt:
-
-```csharp
-public ResilientHttpClient CreateResilientHttpClient()
-    => new ResilientHttpClient(CreatePolicies(), _logger);
-
-// Other code
-private Policy[] CreatePolicies()
-    => new Policy[]
-    {
-        Policy.Handle<HttpRequestException>()
-            .WaitAndRetryAsync(
-        // number of retries
-        6,
-        // exponential backoff
-        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)),
-        // on retry
-        (exception, timeSpan, retryCount, context) =>
-        {
-            var msg = $"Retry {retryCount} implemented with Pollys RetryPolicy " +
-            $"of {context.PolicyKey} " +
-            $"at {context.ExecutionKey}, " +
-            $"due to: {exception}.";
-            _logger.LogWarning(msg);
-            _logger.LogDebug(msg);
-        }),
-    }
-```
 
 
 >[!div class="step-by-step"]
-[Zurück](implement-custom-http-call-retries-exponential-backoff.md)
+[Zurück](explore-custom-http-call-retries-exponential-backoff.md)
 [Weiter](implement-circuit-breaker-pattern.md)
