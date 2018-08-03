@@ -15,10 +15,10 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579651"
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
@@ -109,7 +109,7 @@ ms.locfileid: "33579651"
   
 <a name="Default"></a>   
 ## <a name="default-options"></a>Standardoptionen  
- Die <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>-Option gibt an, dass keine Optionen angegeben wurden, und das Modul für reguläre Ausdrücke verwendet sein Standardverhalten. Hierzu gehören folgende Elemente:  
+ Die <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>-Option gibt an, dass keine Optionen angegeben wurden, und die Engine für reguläre Ausdrücke verwendet sein Standardverhalten. Hierzu gehören folgende Elemente:  
   
 -   Das Muster wird kanonisch und nicht als regulärer ECMAScript-Ausdruck interpretiert.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "33579651"
 > [!NOTE]
 >  Die <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>-Option besitzt keine Inlineentsprechung. Wenn reguläre Ausdrucksoptionen inline übernommen werden, wird das Standardverhalten auf optionsweiser Basis durch Deaktivieren einer bestimmten Option wiederhergestellt. `(?i)` aktiviert z. B. Vergleiche, bei denen nicht zwischen Groß- und Kleinschreibung unterschieden wird, und `(?-i)` stellt das Standardverhalten mit Beachtung der Groß-/Kleinschreibung wieder her.  
   
- Da die <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>-Option das Standardverhalten des Moduls für reguläre Ausdrücke darstellt, wird sie selten explizit in einem Methodenaufruf angegeben. Stattdessen wird ein Konstruktor oder eine statische Mustervergleichsmethode ohne `options`-Parameter aufgerufen.  
+ Da die <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>-Option das Standardverhalten der Engine für reguläre Ausdrücke darstellt, wird sie selten explizit in einem Methodenaufruf angegeben. Stattdessen wird ein Konstruktor oder eine statische Mustervergleichsmethode ohne `options`-Parameter aufgerufen.  
   
  [Zurück zum Anfang](#Top)  
   
@@ -152,7 +152,7 @@ ms.locfileid: "33579651"
   
 <a name="Multiline"></a>   
 ## <a name="multiline-mode"></a>Mehrzeilenmodus  
- Die <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option oder die `m` Inlineoption aktiviert das Modul für reguläre Ausdrücke für die Behandlung einer Eingabezeichenfolge, die aus mehreren Zeilen besteht. Ändert die Bedeutung der Sprachelemente `^` und `$`, sodass sie jeweils dem Anfang und dem Ende einer Zeile und nicht nur dem Anfang und dem Ende der Eingabezeichenfolge entsprechen.  
+ Die <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option oder die `m` Inlineoption aktiviert die Engine für reguläre Ausdrücke für die Behandlung einer Eingabezeichenfolge, die aus mehreren Zeilen besteht. Ändert die Bedeutung der Sprachelemente `^` und `$`, sodass sie jeweils dem Anfang und dem Ende einer Zeile und nicht nur dem Anfang und dem Ende der Eingabezeichenfolge entsprechen.  
   
  Standardmäßig findet `$` nur eine Entsprechung für das Ende der Eingabezeichenfolge. Wenn Sie die <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option angeben, entspricht diese entweder dem Zeilenumbruchzeichen (`\n`) oder dem Ende der Eingabezeichenfolge. Sie entspricht jedoch nicht der Kombination aus Wagenrücklauf- und Zeilenvorschubzeichen. Um erfolgreich eine Entsprechung für sie zu finden, verwenden Sie den Teilausdruck `\r?$` statt nur `$`.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "33579651"
   
  Das Muster für reguläre Ausdrücke `^(\w+)\s(\d+)\r*$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`^`|Am Anfang der Zeile beginnen.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -181,7 +181,7 @@ ms.locfileid: "33579651"
   
 <a name="Singleline"></a>   
 ## <a name="single-line-mode"></a>Einzeilenmodus  
- Die <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option oder die `s` Inlineoption sorgt dafür, dass das Modul für reguläre Ausdrücke die Eingabezeichenfolge so behandelt, als ob sie aus einer einzigen Zeile besteht. Es wird das Verhalten des Sprachelements Punkt (`.`) geändert, sodass dieser jedem Zeichen entspricht, anstatt jedem Zeichen außer dem Zeilenumbruchzeichen `\n` oder \u000A.  
+ Die <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option oder die `s` Inlineoption sorgt dafür, dass die Engine für reguläre Ausdrücke die Eingabezeichenfolge so behandelt, als ob sie aus einer einzigen Zeile besteht. Es wird das Verhalten des Sprachelements Punkt (`.`) geändert, sodass dieser jedem Zeichen entspricht, anstatt jedem Zeichen außer dem Zeilenumbruchzeichen `\n` oder \u000A.  
   
  Im folgenden Beispiel wird veranschaulicht, wie sich das Verhalten des `.`-Sprachelements ändert, wenn Sie die <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option verwenden. Der reguläre `^.+`-Ausdruck beginnt am Anfang der Zeichenfolge und stimmt mit jedem Zeichen überein. Standardmäßig endet die Übereinstimmung am Ende der ersten Zeile. Das Muster für den regulären Ausdruck stimmt mit dem Wagenrücklaufzeichen (`\r` oder "\u000D"), jedoch nicht mit `\n` überein. Da die gesamte Eingabezeichenfolge von der <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option als einzelne Zeile interpretiert wird, liegt für jedes enthaltene Zeichen eine Übereinstimmung vor, einschließlich `\n`.  
   
@@ -207,16 +207,16 @@ ms.locfileid: "33579651"
   
  sollen nur Sätze mit einem Punkt, Ausrufezeichen oder Fragezeichen am Ende aus einem Dokument extrahiert werden. Nur der resultierende Satz (der durch das <xref:System.Text.RegularExpressions.Match>-Objekt dargestellt wird) ist von Interesse. Die einzelnen Wörter in der Auflistung sind irrelevant.  
   
- Erfassungsgruppen, die anschließend nicht verwendet werden, können speicherintensiv sein, da das Modul für reguläre Ausdrücke sowohl das <xref:System.Text.RegularExpressions.GroupCollection>- als auch das <xref:System.Text.RegularExpressions.CaptureCollection>-Auflistungsobjekt auffüllen muss. Als Alternative können Sie entweder die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Option oder die `n`-Inlineoption verwenden, um anzugeben, dass die einzigen gültigen Erfassungen explizit benannte oder nummerierte Gruppen sind, die durch das Konstrukt `(?<`*name*`>` *subexpression*`)` angegeben werden.  
+ Erfassungsgruppen, die anschließend nicht verwendet werden, können speicherintensiv sein, da die Engine für reguläre Ausdrücke sowohl das <xref:System.Text.RegularExpressions.GroupCollection>- als auch das <xref:System.Text.RegularExpressions.CaptureCollection>-Auflistungsobjekt auffüllen muss. Als Alternative können Sie entweder die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Option oder die `n`-Inlineoption verwenden, um anzugeben, dass die einzigen gültigen Erfassungen explizit benannte oder nummerierte Gruppen sind, die durch das Konstrukt `(?<`*name*`>` *subexpression*`)` angegeben werden.  
   
- Das folgende Beispiel zeigt Informationen zu den Übereinstimmungen an, die vom Muster eines regulären Ausdrucks `\b\(?((\w+),?\s?)+[\.!?]\)?` zurückgegeben werden, wenn die <xref:System.Text.RegularExpressions.Regex.Match%2A>-Methode mit und ohne die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Option aufgerufen wird. Wie die Ausgabe des ersten Methodenaufrufs zeigt, füllt das Modul für reguläre Ausdrücke das <xref:System.Text.RegularExpressions.GroupCollection>-Auflistungsobjekt und das <xref:System.Text.RegularExpressions.CaptureCollection>-Auflistungsobjekt vollständig mit Informationen zu erfassten Teilzeichenfolgen auf. Da die zweite Methode mit `options` mit dem Wert <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> aufgerufen wird, werden keine Informationen zu Gruppen erfasst.  
+ Das folgende Beispiel zeigt Informationen zu den Übereinstimmungen an, die vom Muster eines regulären Ausdrucks `\b\(?((\w+),?\s?)+[\.!?]\)?` zurückgegeben werden, wenn die <xref:System.Text.RegularExpressions.Regex.Match%2A>-Methode mit und ohne die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Option aufgerufen wird. Wie die Ausgabe des ersten Methodenaufrufs zeigt, füllt die Engine für reguläre Ausdrücke das <xref:System.Text.RegularExpressions.GroupCollection>-Auflistungsobjekt und das <xref:System.Text.RegularExpressions.CaptureCollection>-Auflistungsobjekt vollständig mit Informationen zu erfassten Teilzeichenfolgen auf. Da die zweite Methode mit `options` mit dem Wert <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> aufgerufen wird, werden keine Informationen zu Gruppen erfasst.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit1.cs#9)]
  [!code-vb[Conceptual.Regex.Language.Options#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit1.vb#9)]  
   
  Das Muster für reguläre Ausdrücke `\b\(?((?>\w+),?\s?)+[\.!?]\)?` ist entsprechend der folgenden Tabelle definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|Bei einer Wortgrenze beginnen.|  
 |`\(?`|Sucht nach einer Übereinstimmung mit null oder einem Vorkommen der öffnenden Klammer ("(").|  
@@ -254,7 +254,7 @@ ms.locfileid: "33579651"
   
 -   Das <xref:System.Text.RegularExpressions.Regex>-Objekt darf den Gültigkeitsbereich nicht verlassen, daher kann es wiederverwendet werden.  
   
--   Ein statischer regulärer Ausdruck wird in mehreren Aufrufen regulärer Ausdrucksmustervergleichsmethoden verwendet. (Die Leistungsverbesserung ist möglich, da reguläre in statischen Methodenaufrufen verwendete Ausdrücke vom Modul für reguläre Ausdrücke zwischengespeichert werden.)  
+-   Ein statischer regulärer Ausdruck wird in mehreren Aufrufen regulärer Ausdrucksmustervergleichsmethoden verwendet. (Die Leistungsverbesserung ist möglich, da reguläre in statischen Methodenaufrufen verwendete Ausdrücke von der Engine für reguläre Ausdrücke zwischengespeichert werden.)  
   
 > [!NOTE]
 >  Die <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>-Option steht in keinem Zusammenhang mit der <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>-Methode, die eine zweckgebundene Assembly erstellt, die vordefinierte kompilierte reguläre Ausdrücke enthält.  
@@ -275,7 +275,7 @@ ms.locfileid: "33579651"
   
 -   Leerzeichen in einer Zeichenklasse werden stets literal interpretiert. Der reguläre Ausdruck `[ .,;:]` findet z. B. ein einzelnes Leerstellenzeichen, Punkt, Komma, Semikolon oder einen Doppelpunkt.  
   
--   Leerzeichen sind innerhalb von in Klammern gesetzten Quantifizierern wie `{`*n*`}`, `{`*n*`,}` und `{`*n*`,`*m*`}` nicht zulässig. Das Muster eines regulären Ausdrucks `\d{1. 3}` findet z. B. keine Übereinstimmung mit Ziffernsequenzen von einer bis zu drei Ziffern, da es ein Leerzeichen enthält.  
+-   Leerzeichen sind innerhalb von in Klammern gesetzten Quantifizierern wie `{`*n*`}`, `{`*n*`,}` und `{`*n*`,`*m*`}` nicht zulässig. Das Muster eines regulären Ausdrucks `\d{1, 3}` findet z. B. keine Übereinstimmung mit Ziffernsequenzen von einer bis zu drei Ziffern, da es ein Leerzeichen enthält.  
   
 -   Leerzeichen sind in Zeichenfolgen, die Sprachelemente einleiten, nicht zulässig. Zum Beispiel:  
   
@@ -320,7 +320,7 @@ ms.locfileid: "33579651"
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`(?<=\d{1,2}\s)`|Dem Anfang der Übereinstimmung müssen eine oder zwei von einem Leerzeichen gefolgte Dezimalstellen vorangestellt sein.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -332,7 +332,7 @@ ms.locfileid: "33579651"
   
 <a name="ECMAScript"></a>   
 ## <a name="ecmascript-matching-behavior"></a>ECMAScript-Vergleichsverhalten  
- Standardmäßig verwendet die Engine für reguläre Ausdrücke das kanonische Verhalten, wenn ein Muster eines regulären Ausdrucks mit dem Eingabetext verglichen wird. Sie können jedoch das Modul für reguläre Ausdrücke anweisen, das ECMAScript-Vergleichsverhalten zu verwenden, indem Sie die <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType>-Option angeben.  
+ Standardmäßig verwendet die Engine für reguläre Ausdrücke das kanonische Verhalten, wenn ein Muster eines regulären Ausdrucks mit dem Eingabetext verglichen wird. Sie können jedoch die Engine für reguläre Ausdrücke anweisen, das ECMAScript-Vergleichsverhalten zu verwenden, indem Sie die <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType>-Option angeben.  
   
 > [!NOTE]
 >  ECMAScript-kompatibles Verhalten ist nur verfügbar, wenn der <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType>-Wert an den `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex>-Klassenkonstruktors oder einer statischen Mustervergleichsmethode übergeben wird. Es besteht keine Verfügbarkeit als Inlineoption.  
@@ -355,7 +355,7 @@ ms.locfileid: "33579651"
   
      Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-    |Muster|description|  
+    |Muster|Beschreibung |  
     |-------------|-----------------|  
     |(a+)|Entspricht einem oder mehreren Vorkommen des Buchstabens "a". Dies ist die zweite Erfassungsgruppe.|  
     |(\1)|Entspricht der Teilzeichenfolge, die von der ersten Erfassungsgruppe erfasst wurde. Dies ist die dritte Erfassungsgruppe.|  

@@ -21,10 +21,10 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33564747"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML-Zeichenentitäten und XAML
@@ -38,7 +38,7 @@ XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem
   
  Sie haben dennoch die Möglichkeit, die Klammern als Literalzeichen anzuzeigen, indem Sie eine Escapesequenz verwenden, die für XAML statt für XML spezifisch ist. Weitere Informationen finden Sie unter [ {} Escape-Sequence - Markuperweiterung](escape-sequence-markup-extension.md).  
   
- Beachten Sie, dass ein umgekehrter Schrägstrich (\\) eine Escapesequenz ist nicht erforderlich, wenn er als Zeichenfolge behandelt wird.  
+ Beachten Sie, dass ein umgekehrter Schrägstrich (\\) erfordert keine Escapesequenz aus, wenn er als Zeichenfolge behandelt wird.  
   
 <a name="xml_character_entities"></a>   
 ## <a name="xml-character-entities"></a>XML-Zeichenentitäten  
@@ -48,11 +48,11 @@ XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem
 |---------------|------------|-----------|  
 |& (Und)|\&amp;|Muss sowohl in Attributwerten als auch in Elementinhalten verwendet werden.|  
 |> (Größer als-Zeichen)|\&gt;|Muss in Attributwerten verwendet werden, ist in Elementinhalten zulässig, wenn dem nicht < vorausgeht.|  
-|< (Kleiner als-Zeichen)|\&lt;|Muss ein Wert des Attributs verwendet werden, aber \< ist in Elementinhalten zulässig, wenn der Inhalt eines Elements solange > stimmt nicht überein.|  
+|< (Kleiner als-Zeichen)|\&lt;|Für einen Attributwert muss verwendet werden, aber \< ist in Elementinhalten zulässig, wenn der Inhalt eines Elements so lange wie > werden nicht befolgt.|  
 |" (gerades Anführungszeichen)|\&quot;|Muss in Attributwerten verwendet werden. Jedoch ist ein gerades Anführungszeichen (") in Elementinhalten zulässig. Beachten Sie, dass Attributwerte durch ein einzelnes gerades Anführungszeichen (') oder ein gerades Anführungszeichen (") umschlossen werden können. Das Zeichen, das zuerst vorkommt, wird als Umschließungszeichen für Attributwerte festgelegt, und das andere Zeichen kann im Wert als Literalzeichen verwendet werden.|  
 |' (einfaches gerades Anführungszeichen)|\&apos;|Muss in Attributwerten verwendet werden. Jedoch ist ein einzelnes gerades Anführungszeichen (') in Elementinhalten zulässig. Beachten Sie, dass Attributwerte durch ein einzelnes gerades Anführungszeichen (') oder ein gerades Anführungszeichen (") umschlossen werden können. Das Zeichen, das zuerst vorkommt, wird als Umschließungszeichen für Attributwerte festgelegt, und das andere Zeichen kann im Wert als Literalzeichen verwendet werden.|  
 |(Zuordnungen numerischer Zeichen)|&#*[Ganzzahl]* ; oder & #x *[Hexadezimalzahl]*;|XAML unterstützt die Zuordnung numerischer Zeichen in der aktiven Codierung.|  
-|(geschütztes Leerzeichen)|&\#160; (vorausgesetzt, UTF-8-Codierung)|Bei Flussdokumentelementen oder Elementen für die Aufnahme von Text wie <xref:System.Windows.Controls.TextBox> von WPF werden geschützte Leerzeichen nicht außerhalb des Markups normalisiert, auch nicht für  `xml:space="default"`. (Weitere Informationen finden Sie unter [Leerstellenverarbeitung in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
+|(geschütztes Leerzeichen)|&\#160; (vorausgesetzt, UTF-8-Codierung)|Bei Flussdokumentelementen oder Elementen für die Aufnahme von Text wie <xref:System.Windows.Controls.TextBox> von WPF werden geschützte Leerzeichen nicht außerhalb des Markups normalisiert, auch nicht für  `xml:space="default"`. (Weitere Informationen finden Sie unter [White-Space-Verarbeitung in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   
 <a name="xml_comment_format"></a>   
 ## <a name="xml-comment-format"></a>Format von XML-Kommentaren  
@@ -60,10 +60,10 @@ XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem
   
 <a name="xml_processing_instructions"></a>   
 ## <a name="xml-processing-instructions"></a>XML-Verarbeitungsanweisungen  
- XAML behandelt XML-Verarbeitungsanweisungen gemäß den XML-Spezifikationen, die angeben, dass die Anweisungen übergeben werden müssen. XAML-Verarbeitung in .NET Framework XAML Services verwendet nicht die verarbeitungsanweisungen. Andere vorhandene Frameworks, die XAML verwenden, verwenden auch keine Verarbeitungsanweisungen von XAML.  
+ XAML behandelt XML-Verarbeitungsanweisungen gemäß den XML-Spezifikationen, die angeben, dass die Anweisungen übergeben werden müssen. XAML-Verarbeitung in .NET Framework-XAML-Dienste werden keine verarbeitungsanweisungen verwendet. Andere vorhandene Frameworks, die XAML verwenden, verwenden auch keine Verarbeitungsanweisungen von XAML.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [Markuperweiterungen und WPF-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
  [XamlName-Grammatik](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [Leerstellenverarbeitung in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+ [Leerzeichen in XAML verarbeitet](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)

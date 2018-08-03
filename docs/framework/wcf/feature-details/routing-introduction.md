@@ -3,10 +3,10 @@ title: Einführung in das Routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33496863"
 ---
 # <a name="routing-introduction"></a>Einführung in das Routing
@@ -15,13 +15,13 @@ Der Routingdienst stellt einen generischen austauschbaren SOAP-Vermittler bereit
  Dieses Thema richtet sich an Personen, die mit dem Routingdienst noch nicht vertraut sind, und behandelt die grundlegende Konfiguration und das Hosten des Routingdiensts.  
   
 ## <a name="configuration"></a>Konfiguration  
- Der Routingdienst wird als WCF-Dienst implementiert, der einen oder mehrere Dienstendpunkte verfügbar macht, die Nachrichten von Clientanwendungen empfangen und die Nachrichten an einen oder mehrere Zielendpunkte weiterleiten. Der Dienst stellt ein <xref:System.ServiceModel.Routing.RoutingBehavior>-Objekt bereit, das auf die vom Dienst verfügbar gemachten Dienstendpunkte angewendet wird. Dieses Verhalten wird verwendet, um verschiedene Aspekte in Bezug auf die Funktionsweise des Diensts zu konfigurieren. Zur Vereinfachung der Konfiguration bei der Verwendung einer Konfigurationsdatei, die Parameter angegeben werden, auf die **RoutingBehavior**. In codebasierten Szenarien würde diese Parameter angegeben werden als Teil einer <xref:System.ServiceModel.Routing.RoutingConfiguration> -Objekt, das dann für übergeben werden, kann eine **RoutingBehavior**.  
+ Der Routingdienst wird als WCF-Dienst implementiert, der einen oder mehrere Dienstendpunkte verfügbar macht, die Nachrichten von Clientanwendungen empfangen und die Nachrichten an einen oder mehrere Zielendpunkte weiterleiten. Der Dienst stellt ein <xref:System.ServiceModel.Routing.RoutingBehavior>-Objekt bereit, das auf die vom Dienst verfügbar gemachten Dienstendpunkte angewendet wird. Dieses Verhalten wird verwendet, um verschiedene Aspekte in Bezug auf die Funktionsweise des Diensts zu konfigurieren. Zur Erleichterung der Konfiguration, die bei der Verwendung einer Konfigurationsdatei, die Parameter angegeben sind, auf die **RoutingBehavior**. In codebasierten Szenarien, würde dieser Parameter angegeben werden als Teil einer <xref:System.ServiceModel.Routing.RoutingConfiguration> -Objekt, das dann zum übergeben werden kann eine **RoutingBehavior**.  
   
- Beim Starten fügt dieses Verhalten den Clientendpunkten das <xref:System.ServiceModel.Routing.SoapProcessingBehavior> hinzu. Dieses Verhalten wird für die SOAP-Verarbeitung von Nachrichten verwendet. Dadurch wird der Routingdienst Nachrichten an Endpunkte übertragen werden, die eine andere erfordern **MessageVersion** als der Endpunkt, der über die Nachricht empfangen wurde. Die **RoutingBehavior** registriert auch eine diensterweiterung, die <xref:System.ServiceModel.Routing.RoutingExtension>, die einen Zugangspunkt zum Ändern der routingdienstkonfiguration zur Laufzeit.  
+ Beim Starten fügt dieses Verhalten den Clientendpunkten das <xref:System.ServiceModel.Routing.SoapProcessingBehavior> hinzu. Dieses Verhalten wird für die SOAP-Verarbeitung von Nachrichten verwendet. Dies ermöglicht der Routingdienst Nachrichten an Endpunkte übertragen, die eine andere erfordern **MessageVersion** als der Endpunkt, über die Nachricht empfangen wurde. Die **RoutingBehavior** registriert auch eine diensterweiterung, die <xref:System.ServiceModel.Routing.RoutingExtension>, die einen Zugangspunkt zum Ändern der routingdienstkonfiguration zur Laufzeit bereitstellt.  
   
- Die **RoutingConfiguration** -Klasse bietet eine einheitliche Möglichkeit zum Konfigurieren und aktualisieren die Konfiguration des Routingdiensts.  Sie enthält Parameter, die als die Einstellungen für den Routingdienst fungieren und dient zum Konfigurieren der **RoutingBehavior** beim Starten des Diensts oder übergeben wird, um die **RoutingExtension** routing ändern die Konfiguration zur Laufzeit.  
+ Die **RoutingConfiguration** Klasse stellt eine einheitliche Möglichkeit zum Konfigurieren und aktualisieren die Konfiguration des Routingdiensts bereit.  Enthält Parameter, die als die Einstellungen für den Routingdienst fungieren und dient zum Konfigurieren der **RoutingBehavior** beim Starten des Diensts, oder übergeben wird, um die **RoutingExtension** routing ändern die Konfiguration zur Laufzeit.  
   
- Die Routinglogik, mit der das inhaltsbasierte Routing von Nachrichten durchgeführt wird, wird definiert, indem mehrere <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte zu Filtertabellen (<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601>-Objekten) gruppiert werden. Eingehende Nachrichten werden anhand der in der Filtertabelle vorhanden und für jeden enthaltenen Nachrichtenfilter ausgewertet **MessageFilter** , entspricht die Nachricht an einen Zielendpunkt weitergeleitet. Die Filtertabelle, die zum Weiterleiten von Nachrichten verwendet werden soll wird angegeben, indem Sie entweder die **RoutingBehavior** in der Konfiguration oder per Code mit der **RoutingConfiguration** Objekt.  
+ Die Routinglogik, mit der das inhaltsbasierte Routing von Nachrichten durchgeführt wird, wird definiert, indem mehrere <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte zu Filtertabellen (<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601>-Objekten) gruppiert werden. Eingehende Nachrichten werden ausgewertet, für die Nachrichtenfilter enthalten, in der Filtertabelle vorhanden ist, und für jeden **MessageFilter** , entspricht die Nachricht an einen Zielendpunkt weitergeleitet. Die Filtertabelle, die zum Weiterleiten von Nachrichten verwendet werden soll angegeben ist, indem Sie entweder die **RoutingBehavior** in der Konfiguration oder mithilfe von Code mithilfe der **RoutingConfiguration** Objekt.  
   
 ### <a name="defining-endpoints"></a>Definieren von Endpunkten  
  Es scheint so zu sein, als ob Sie die Konfiguration beginnen sollten, indem Sie die zu verwendende Routinglogik definieren. Stattdessen sollte der erste Schritt darin bestehen, die Form der Endpunkte zu ermitteln, an die Sie Nachrichten weiterleiten möchten. Der Routingdienst verwendet Verträge, die die Form der Kanäle definieren, die zum Empfangen und Senden von Nachrichten verwendet werden. Aus diesem Grund muss die Form des Eingabekanals mit der Form des Ausgabekanals übereinstimmen.  Wenn Sie die Weiterleitung z. B. an Endpunkte durchführen, die die Anforderung-Antwort-Kanalform verwenden, müssen Sie an den Eingangsendpunkten einen kompatiblen Vertrag verwenden, z. B. <xref:System.ServiceModel.Routing.IRequestReplyRouter>.  
@@ -31,9 +31,9 @@ Der Routingdienst stellt einen generischen austauschbaren SOAP-Vermittler bereit
 > [!NOTE]
 >  Beim Arbeiten mit Verträgen, die mehrere Kommunikationsmuster angeben (z. B. eine Mischung aus unidirektionalen und bidirektionalen Vorgängen), besteht eine Problemumgehung in der Verwendung eines Duplexvertrags für den Routingdienst, z. B. <xref:System.ServiceModel.Routing.IDuplexSessionRouter>. Dies bedeutet jedoch, dass die Bindung für die Duplexkommunikation geeignet sein muss, was ggf. nicht für alle Szenarios der Fall ist. In Szenarios, in denen dies nicht möglich ist, kann das Verteilen der Kommunikation auf mehrere Endpunkte oder das Ändern der Anwendung erforderlich sein.  
   
- Weitere Informationen zu routingverträge, finden Sie unter [Routingverträge](../../../../docs/framework/wcf/feature-details/routing-contracts.md).  
+ Weitere Informationen zu routingverträgen finden Sie unter [Routingverträge](../../../../docs/framework/wcf/feature-details/routing-contracts.md).  
   
- Nachdem der Dienstendpunkt definiert wurde, können Sie die **RoutingBehavior** zuordnen einen bestimmten **RoutingConfiguration** mit dem Endpunkt. Beim Konfigurieren des Routingdiensts mithilfe einer Konfigurationsdatei angegeben und die **RoutingBehavior** wird verwendet, um die Filtertabelle angeben, die die Routinglogik zum Verarbeiten von Nachrichten, die an diesem Endpunkt empfangen enthält. Wenn Sie den Routingdienst programmgesteuert konfigurieren können Sie die Filtertabelle angeben, mit der **RoutingConfiguration**.  
+ Nachdem der Dienstendpunkt definiert wurde, können Sie die **RoutingBehavior** zuordnen einen bestimmten **RoutingConfiguration** mit dem Endpunkt. Beim Konfigurieren des Routingdiensts mithilfe einer Konfigurationsdatei das **RoutingBehavior** verwendet, um die Filtertabelle anzugeben, die die Routinglogik zum Verarbeiten von Nachrichten, die an diesem Endpunkt empfangen enthält. Wenn Sie den Routingdienst programmgesteuert konfigurieren können Sie die Filtertabelle angeben, mit der **RoutingConfiguration**.  
   
  Im folgenden Beispiel werden die Dienst- und Clientendpunkte, die vom Routingdienst verwendet werden, sowohl programmgesteuert als auch unter Verwendung einer Konfigurationsdatei definiert.  
   
@@ -98,18 +98,18 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- In diesem Beispiel wird der Routingdienst, um einen einzigen Endpunkt mit der Adresse verfügbar zu machen "http://localhost:8000/routingservice/router", die zum Empfangen von Nachrichten weitergeleitet werden. Da die Nachrichten an die Anforderung-Antwort-Endpunkte weitergeleitet werden, verwendet der Dienstendpunkt den <xref:System.ServiceModel.Routing.IRequestReplyRouter>-Vertrag. Diese Konfiguration definiert auch einen einzelnen Clientendpunkt "http://localhost:8000/servicemodelsample/service", dass die Nachrichten weitergeleitet werden. Der Filtertabelle vorhanden (nicht dargestellt) mit dem Namen "routingTable1" enthält die Routinglogik zum Weiterleiten von Nachrichten und bezieht sich auf den Dienstendpunkt mithilfe der **RoutingBehavior** (nach einer Konfigurationsdatei) oder  **RoutingConfiguration** (für programmgesteuerte Konfiguration).  
+ In diesem Beispiel wird der Routingdienst zum Verfügbarmachen von eines einzelnen Endpunkts mit der Adresse konfiguriert "http://localhost:8000/routingservice/router", die zum Empfangen von Nachrichten weitergeleitet werden. Da die Nachrichten an die Anforderung-Antwort-Endpunkte weitergeleitet werden, verwendet der Dienstendpunkt den <xref:System.ServiceModel.Routing.IRequestReplyRouter>-Vertrag. Diese Konfiguration definiert auch einen einzelnen Clientendpunkt "http://localhost:8000/servicemodelsample/service", dass die Nachrichten weitergeleitet werden. Die Filtertabelle (nicht dargestellt) mit dem Namen "routingTable1" enthält die Routinglogik zum Weiterleiten von Nachrichten und mit dem Dienstendpunkt zugeordnet ist, mithilfe der **RoutingBehavior** (für eine Konfigurationsdatei) oder  **RoutingConfiguration** (für programmgesteuerte Konfiguration).  
   
 ### <a name="routing-logic"></a>Routinglogik  
  Um die Routinglogik zum Weiterleiten von Nachrichten zu definieren, müssen Sie ermitteln, welche in den eingehenden Nachrichten enthaltenen Daten eindeutig verarbeitet werden können. Wenn beispielsweise alle Zielendpunkte der Weiterleitung die gleichen SOAP-Aktionen verwenden, ist der Wert von "Action" innerhalb der Nachricht kein guter Indikator dafür, an welchen Endpunkt die Nachricht jeweils genau weitergeleitet werden soll. Falls Sie Nachrichten nur an einen bestimmten Endpunkt weiterleiten müssen, sollten Sie nach Daten filtern, die den Zielendpunkt eindeutig identifizieren, an den die Nachricht weitergeleitet wird.  
   
- Der Routingdienst stellt mehrere **MessageFilter** Implementierungen, die bestimmte Werte innerhalb der Nachricht, z. B. die Adresse, Aktion, Endpunktname oder sogar eine XPath-Abfrage zu überprüfen. Wenn keine dieser Implementierungen Ihre Anforderungen erfüllt erstellen Sie eine benutzerdefinierte **MessageFilter** Implementierung. Weitere Informationen zu Nachrichtenfilter und einen Vergleich der vom Routingdienst verwendeten Implementierungen, finden Sie unter [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md) und [Auswählen eines Filters](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md).  
+ Der Routingdienst stellt mehrere **MessageFilter** Implementierungen, die bestimmte Werte innerhalb der Nachricht, z. B. die Adresse, Aktion, Endpunktname oder sogar eine XPath-Abfrage zu überprüfen. Wenn keine dieser Implementierungen Ihre Anforderungen erfüllt erstellen Sie eine benutzerdefinierte **MessageFilter** Implementierung. Weitere Informationen zu Nachrichtenfiltern und einen Vergleich der vom Routingdienst verwendeten Implementierungen finden Sie unter [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md) und [Auswählen eines Filters](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md).  
   
  Mehrere Nachrichtenfilter werden zusammen in Filtertabellen, mit denen jedem organisiert **MessageFilter** ein Zielendpunkt zugeordnet. Optional kann die Filtertabelle auch verwendet werden, um auch eine Liste mit Sicherungsendpunkten anzugeben. Der Routingdienst versucht dann, die Nachricht bei einem Übertragungsfehler an diese Endpunkte zu senden.  
   
- Standardmäßig werden alle Nachrichtenfilter einer Filtertabelle gleichzeitig ausgewertet. Sie können jedoch eine <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A>-Eigenschaft angeben, die bewirkt, dass die Nachrichtenfilter in einer bestimmten Reihenfolge ausgewertet werden. Alle Einträge mit der höchsten Priorität werden zuerst ausgewertet, und Nachrichtenfilter mit niedrigeren Prioritäten werden nicht ausgewertet, wenn eine Übereinstimmung mit einer höheren Prioritätsstufe gefunden wird. Weitere Informationen zu Filtertabellen, finden Sie unter [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Standardmäßig werden alle Nachrichtenfilter einer Filtertabelle gleichzeitig ausgewertet. Sie können jedoch eine <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A>-Eigenschaft angeben, die bewirkt, dass die Nachrichtenfilter in einer bestimmten Reihenfolge ausgewertet werden. Alle Einträge mit der höchsten Priorität werden zuerst ausgewertet, und Nachrichtenfilter mit niedrigeren Prioritäten werden nicht ausgewertet, wenn eine Übereinstimmung mit einer höheren Prioritätsstufe gefunden wird. Weitere Informationen zu Filtertabellen finden Sie unter [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- In den folgenden Beispielen wird das <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>-Objekt verwendet, das für alle Nachrichten `true` ergibt. Dies **MessageFilter** wird hinzugefügt, der Filtertabelle "routingTable1", die verknüpft die **MessageFilter** mit dem Clientendpunkt mit dem Namen "CalculatorService". Die **RoutingBehavior** dann gibt an, dass diese Tabelle zum Weiterleiten von Nachrichten verarbeitet, die vom Dienstendpunkt verwendet werden soll.  
+ In den folgenden Beispielen wird das <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>-Objekt verwendet, das für alle Nachrichten `true` ergibt. Dies **MessageFilter** hinzugefügt wird, um die Filtertabelle "routingTable1", erfolgt die **MessageFilter** mit den Clientendpunkt, der mit dem Namen "CalculatorService". Die **RoutingBehavior** gibt dann an, dass diese Tabelle zum Weiterleiten von Nachrichten verarbeitet, die vom Dienstendpunkt verwendet werden soll.  
   
 ```xml  
 <behaviors>  
@@ -160,7 +160,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   Mehrere Filter müssen beim Auswerten der Nachricht `true` zurückgeben.  
   
- Falls diese Bedingungen erfüllt sind, wird die Nachricht an alle Endpunkte aller Filter weitergeleitet, für die die Auswertung `true` ergibt. Das folgende Beispiel definiert eine Routingkonfiguration beschrieben, das Nachrichten an beide Endpunkte weitergeleitet werden, wenn die Endpunktadresse in der Nachricht ist dazu http://localhost:8000/routingservice/router/rounding.  
+ Falls diese Bedingungen erfüllt sind, wird die Nachricht an alle Endpunkte aller Filter weitergeleitet, für die die Auswertung `true` ergibt. Das folgende Beispiel definiert eine Konfiguration für routing, das Nachrichten an beide Endpunkte weitergeleitet wird, ist die Endpunktadresse in der Nachricht dazu http://localhost:8000/routingservice/router/rounding.  
   
 ```xml  
 <!--ROUTING SECTION -->  
@@ -189,19 +189,19 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
 ```  
   
 ### <a name="soap-processing"></a>SOAP-Verarbeitung  
- Um das routing von Nachrichten zwischen unterschiedlichen Protokollen zu unterstützen die **RoutingBehavior** Standardmäßig fügt der <xref:System.ServiceModel.Routing.SoapProcessingBehavior> auf allen Clientendpunkten, die Nachrichten weitergeleitet werden. Dieses Verhalten erstellt automatisch eine neue **MessageVersion** vor der Weiterleitung der Nachricht an den Endpunkt sowie eine kompatible **MessageVersion** für Antwortdokumente vor der Rückgabe an die anfordernde Clientanwendung.  
+ Um das routing von Nachrichten zwischen unterschiedlichen Protokollen zu unterstützen die **RoutingBehavior** Standardmäßig fügt die <xref:System.ServiceModel.Routing.SoapProcessingBehavior> auf allen Clientendpunkten, die Nachrichten weitergeleitet werden. Dieses Verhalten erstellt automatisch eine neue **MessageVersion** vor dem Weiterleiten der Nachricht an den Endpunkt als auch eine kompatible **MessageVersion** für Antwortdokumente vor der Rückgabe an die anfordernde Clientanwendung.  
   
- Die Schritte zum Erstellen eines neuen **MessageVersion** für die ausgehende Nachricht lauten wie folgt:  
+ Welche Schritte zum Erstellen eines neuen **MessageVersion** für die ausgehende Nachricht lauten wie folgt:  
   
- **Anforderungsverarbeitung**  
+ **Verarbeiten von Anforderungen**  
   
--   Abrufen der **MessageVersion** der ausgehenden Bindung bzw. des Kanals.  
+-   Abrufen der **MessageVersion** von der ausgehenden Bindung bzw. des Kanals.  
   
 -   Rufen Sie den Textreader für die ursprüngliche Nachricht ab.  
   
 -   Erstellen Sie eine neue Nachricht mit der gleichen Aktion, TextReader und ein neues **MessageVersion**.  
   
--   Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From, "FaultTo" kopieren und RelatesTo-Header in die neue Nachricht.  
+-   Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From "," FaultTo, kopieren und RelatesTo-Header in die neue Nachricht.  
   
 -   Kopieren Sie alle Eigenschaften der Nachricht in die neue Nachricht.  
   
@@ -209,21 +209,21 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
 -   Geben Sie die neue Anforderungsnachricht zurück.  
   
- **Verarbeitung der Antwort**  
+ **Antworten zu verarbeiten**  
   
 -   Abrufen der **MessageVersion** der ursprünglichen Anforderungsnachricht.  
   
 -   Rufen Sie den Textreader für die empfangene Antwortnachricht ab.  
   
--   Erstellen Sie eine neue Antwortnachricht mit der gleichen Aktion, TextReader und der **MessageVersion** der ursprünglichen Anforderungsnachricht.  
+-   Erstellen Sie eine neue Antwortnachricht mit der gleichen Aktion, TextReader und **MessageVersion** der ursprünglichen Anforderungsnachricht.  
   
--   Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From, "FaultTo" kopieren und RelatesTo-Header in die neue Nachricht.  
+-   Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From "," FaultTo, kopieren und RelatesTo-Header in die neue Nachricht.  
   
 -   Kopieren Sie die Eigenschaften der Nachricht in die neue Nachricht.  
   
 -   Geben Sie die neue Antwortnachricht zurück.  
   
- Wird standardmäßig die **SoapProcessingBehavior** den Clientendpunkten automatisch hinzugefügt wird die <xref:System.ServiceModel.Routing.RoutingBehavior> beim Starten des Diensts; Sie können jedoch steuern, ob SOAP-Verarbeitung mit allen Clientendpunkten hinzugefügt wird die <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> Eigenschaft. Sie können das Verhalten auch direkt einem bestimmten Endpunkt hinzufügen und es auf Endpunktebene aktivieren oder deaktivieren, falls eine präzisere Steuerung der SOAP-Verarbeitung erforderlich ist.  
+ Standardmäßig die **SoapProcessingBehavior** wird automatisch hinzugefügt, den Clientendpunkten die <xref:System.ServiceModel.Routing.RoutingBehavior> Wenn der Dienst gestartet wird; allerdings können Sie steuern, ob SOAP-Verarbeitung mit allen Clientendpunkten hinzugefügt wird die <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> Eigenschaft. Sie können das Verhalten auch direkt einem bestimmten Endpunkt hinzufügen und es auf Endpunktebene aktivieren oder deaktivieren, falls eine präzisere Steuerung der SOAP-Verarbeitung erforderlich ist.  
   
 > [!NOTE]
 >  Wenn die SOAP-Verarbeitung für einen Endpunkt deaktiviert ist, der eine andere MessageVersion als die der ursprünglichen Anforderungsnachricht erfordert, müssen Sie einen benutzerdefinierten Mechanismus zum Ausführen aller SOAP-Änderungen bereitstellen, die vor dem Senden der Nachricht an den Zielendpunkt erforderlich sind.  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>Dynamische Konfiguration  
  Wenn Sie zusätzliche Clientendpunkte hinzufügen oder die Filter zum Weiterleiten von Nachrichten ändern, müssen Sie eine Möglichkeit schaffen, die Konfiguration zur Laufzeit dynamisch zu aktualisieren. Auf diese Weise verhindern Sie die Unterbrechung des Diensts zu den Endpunkten, die momentan Nachrichten über den Routingdienst empfangen. Das Ändern einer Konfigurationsdatei oder des Codes der Hostanwendung ist nicht immer ausreichend, weil bei beiden Verfahren die Wiederverwendung der Anwendung erforderlich ist. Dies kann zum Verlust aller Nachrichten führen, die gerade übertragen werden, und es kann beim Warten auf den Neustart des Diensts zu einer Ausfallzeit kommen.  
   
- Sie können nur ändern, die **RoutingConfiguration** programmgesteuert. Während Sie den Dienst zunächst mithilfe einer Konfigurationsdatei konfigurieren können, können Sie die Konfiguration zur Laufzeit nur ändern, indem Sie eine neue **Routingconfiguration** und und übergeben sie als Parameter an die <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> Methode verfügbar gemacht werden, indem Sie die <xref:System.ServiceModel.Routing.RoutingExtension> -diensterweiterung. Alle Nachrichten bei der Übertragung weiterhin mithilfe der vorherigen Konfigurations nach dem Aufruf von empfangenen Nachrichten weitergeleitet werden **ApplyConfiguration** verwenden Sie die neue Konfiguration. Im folgenden Beispiel wird das Erstellen einer Instanz des Routingdiensts und anschließend das Ändern der Konfiguration veranschaulicht.  
+ Sie können nur die **RoutingConfiguration** programmgesteuert. Während Sie den Dienst zunächst mithilfe einer Konfigurationsdatei konfigurieren können, können Sie die Konfiguration zur Laufzeit nur ändern, indem eine neue **Routingconfiguration** und übergeben es als Parameter an die <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> Methode verfügbar gemacht werden, indem die <xref:System.ServiceModel.Routing.RoutingExtension> -diensterweiterung. Nachrichten, die derzeit in der Übertragung mithilfe von Nachrichten nach dem Aufruf von der vorherigen Konfiguration weitergeleitet werden weiterhin **ApplyConfiguration** verwenden Sie die neue Konfiguration. Im folgenden Beispiel wird das Erstellen einer Instanz des Routingdiensts und anschließend das Ändern der Konfiguration veranschaulicht.  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  
@@ -280,17 +280,17 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 >  Alle Sitzungen, die mit der vorherigen Konfiguration geöffnet wurden, verwenden weiterhin die vorherige Konfiguration. Die neue Konfiguration wird nur von neuen Sitzungen verwendet.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
- Wenn beim versuchten Senden einer Nachricht eine <xref:System.ServiceModel.CommunicationException> auftritt, wird die Fehlerbehandlung ausgeführt. Diese Ausnahmen weisen in der Regel darauf hin, dass beim Versuch der Kommunikation mit dem definierten Clientendpunkt ein Problem aufgetreten ist, z. B. <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> oder <xref:System.ServiceModel.CommunicationObjectFaultedException>. Der Fehlerbehandlungscode ebenfalls abfangen und versuchen, erneut zu senden, wenn eine <xref:System.TimeoutException> auftritt, also in eine andere häufige Ausnahme, die nicht von abgeleitet ist **CommunicationException**.  
+ Wenn beim versuchten Senden einer Nachricht eine <xref:System.ServiceModel.CommunicationException> auftritt, wird die Fehlerbehandlung ausgeführt. Diese Ausnahmen weisen in der Regel darauf hin, dass beim Versuch der Kommunikation mit dem definierten Clientendpunkt ein Problem aufgetreten ist, z. B. <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> oder <xref:System.ServiceModel.CommunicationObjectFaultedException>. Der Fehlerbehandlungscode auch abfangen und versuchen, erneut zu senden, wenn eine <xref:System.TimeoutException> auftritt, d.h., dass eine andere häufige Ausnahme, die nicht von abgeleitet ist **CommunicationException**.  
   
  Wenn eine der vorangehenden Ausnahmen auftritt, führt der Routingdienst ein Failover zu einer Liste von Sicherungsendpunkten aus. Falls für alle Sicherungsendpunkte ein Kommunikationsfehler auftritt oder falls ein Endpunkt eine Ausnahme zurückgibt, die einen Fehler beim Zieldienst angibt, gibt der Routingdienst einen Fehler an die Clientanwendung zurück.  
   
 > [!NOTE]
->  Die Fehlerbehandlungsfunktion erfasst und behandelt Ausnahmen, die beim versuchten Senden einer Nachricht oder Schließen eines Kanals auftreten. Der Fehlerbehandlungscode ist nicht vorgesehen, zu erkennen oder zum Behandeln von Ausnahmen, die durch die Anwendungsendpunkte, mit dem Sie kommunizieren wird, erstellt; eine <xref:System.ServiceModel.FaultException> ausgelöst durch ein Dienst angezeigt wird, den Routingdienst als eine **FaultMessage** und zurück an den Client übergeben wird.  
+>  Die Fehlerbehandlungsfunktion erfasst und behandelt Ausnahmen, die beim versuchten Senden einer Nachricht oder Schließen eines Kanals auftreten. Der Fehlerbehandlungscode dient nicht erkannt oder zum Behandeln von Ausnahmen, die durch die Anwendungsendpunkte, die mit dem es kommuniziert wird erstellt; eine <xref:System.ServiceModel.FaultException> ausgelöst durch ein Dienst angezeigt wird, den Routingdienst als eine **FaultMessage** und wird an den Client zurück.  
 >   
 >  Wenn beim Weiterleiten einer Nachricht durch den Routingdienst ein Fehler auftritt, erhalten Sie eventuell auf der Clientseite eine <xref:System.ServiceModel.FaultException> und keine <xref:System.ServiceModel.EndpointNotFoundException>, die Sie normalerweise bei nicht vorhandenem Routingdienst erhalten. Daher maskiert der Routingdienst möglicherweise Ausnahmen und bietet keine vollständige Transparenz, es sei denn, Sie überprüfen geschachtelte Ausnahmen.  
   
 ### <a name="tracing-exceptions"></a>Nachverfolgen von Ausnahmen  
- Beim Senden eine Nachricht an einen Endpunkt in einer Liste ein Fehler auftritt, wird der Routingdienst die sich ergebenden Ausnahmedaten verfolgt und fügt die Details der Ausnahme als Nachrichteneigenschaft mit dem Namen **Ausnahmen**. Dabei werden die Ausnahmedaten beibehalten, und Benutzern wird der programmgesteuerte Zugriff über einen Nachrichteninspektor ermöglicht.  Die Ausnahmedaten werden pro Nachricht in einem Wörterbuch gespeichert. Das Wörterbuch ordnet den Endpunktnamen den Ausnahmedetails zu, die beim versuchten Senden einer Nachricht an diesen Endpunkt auftreten.  
+ Beim Senden eine Nachricht an einen Endpunkt in einer Liste ein Fehler auftritt, wird der Routingdienst führt eine Ablaufverfolgung für die sich ergebenden Ausnahmedaten und fügt die Details der Ausnahme als Nachrichteneigenschaft mit dem Namen **Ausnahmen**. Dabei werden die Ausnahmedaten beibehalten, und Benutzern wird der programmgesteuerte Zugriff über einen Nachrichteninspektor ermöglicht.  Die Ausnahmedaten werden pro Nachricht in einem Wörterbuch gespeichert. Das Wörterbuch ordnet den Endpunktnamen den Ausnahmedetails zu, die beim versuchten Senden einer Nachricht an diesen Endpunkt auftreten.  
   
 ### <a name="backup-endpoints"></a>Sicherungsendpunkte  
  Jeder Filtereintrag innerhalb der Filtertabelle kann optional eine Liste mit Sicherungsendpunkten angeben, die verwendet werden, wenn beim Senden an den primären Endpunkt ein Übertragungsfehler auftritt. Bei einem Fehler dieser Art versucht der Routingdienst, die Nachricht an den ersten Eintrag der Liste mit den Sicherungsendpunkten zu senden. Falls bei diesem Sendeversuch ebenfalls ein Übertragungsfehler auftritt, wird der nächste Endpunkt in der Liste verwendet. Der Routingdienst sendet die Nachricht an jeden Endpunkt in der Liste, bis die Nachricht erfolgreich empfangen wurde, alle Endpunkte einen Übertragungsfehler zurückgeben oder ein Endpunkt einen anderen Fehler als einen Übertragungsfehler zurückgibt.  
@@ -392,7 +392,7 @@ using (ServiceHost serviceHost =
 ## <a name="routing-service-and-impersonation"></a>Routingdienst und Identitätswechsel  
  Der WCR-Routingdienst kann mit dem Identitätswechsel sowohl zum Senden als auch zum Empfangen von Nachrichten verwendet werden. Alle üblichen Windows-Einschränkungen des Identitätswechsels sind gültig. Wenn es beim Schreiben eines eigenen Diensts erforderlich ist, Dienst- oder Kontoberechtigungen für die Verwendung des Identitätswechsels einzurichten, müssen Sie dieselben Schritte ausführen, um den Identitätswechsel mit dem Routingdienst zu verwenden. Weitere Informationen finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
- Der Identitätswechsel mit dem Routingdienst erfordert entweder die Verwendung des ASP.NET-Identitätswechsels (im ASP.NET-Kompatibilitätsmodus) oder die Verwendung von Windows-Anmeldeinformationen, die konfiguriert wurden, um den Identitätswechsel zu ermöglichen. Weitere Informationen zu den ASP.NET-Kompatibilitätsmodus, finden Sie unter [WCF-Dienste und ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ Der Identitätswechsel mit dem Routingdienst erfordert entweder die Verwendung des ASP.NET-Identitätswechsels (im ASP.NET-Kompatibilitätsmodus) oder die Verwendung von Windows-Anmeldeinformationen, die konfiguriert wurden, um den Identitätswechsel zu ermöglichen. Weitere Informationen zum ASP.NET-Kompatibilitätsmodus finden Sie unter [WCF-Dienste und ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 > [!WARNING]
 >  Der WCF-Routingdienst unterstützt keinen Identitätswechsel mit Standardauthentifizierung.  

@@ -16,10 +16,10 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: c080ff7ebef680712581d1f77fd4eb1ec99c6a86
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "32742613"
 ---
 # <a name="network-settings-schema"></a>Netzwerkeinstellungsschema
@@ -31,8 +31,7 @@ Netzwerkeinstellungen geben an, wie Verbindungen zwischen .NET Framework und dem
 |[\<connectionManagement>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit Internethosts an.|  
 |[\<defaultProxy>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Gibt den Proxyserver an, der für HTTP-Anforderungen an das Internet verwendet wird.|  
 |[\<mailSettings>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Enthält Einstellungen für E-Mail-Sendeoptionen.|  
-|[\<requestCaching>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Gibt die Module an, die zum Anfordern von Informationen von Internethosts verwendet werden.|  
-|[\<requestCaching>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProperty=nameWithType>-Namespace.|  
+|[\<requestCaching>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Steuert den Zwischenspeichermechanismus für netzwerkanforderungen.|  
 |[\<webRequestModules>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die Module an, die zum Anfordern von Informationen von Internethosts verwendet werden.|  
   
  URI-Einstellungen geben an, wie .NET Framework Webadressen behandelt, die mithilfe von URIs (Uniform Resource Identifier) ausgedrückt werden. Die folgende Tabelle beschreibt die Funktion der einzelnen untergeordneten Konfigurationselemente des [\<Uri>-Elements (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md).  
