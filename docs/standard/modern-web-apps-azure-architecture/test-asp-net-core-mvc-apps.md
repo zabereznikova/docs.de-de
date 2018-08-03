@@ -3,20 +3,18 @@ title: Testen von ASP.NET Core MVC-Apps
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Testen von ASP.NET Core MVC-Apps
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/08/2017
-ms.openlocfilehash: b22e0e109144b4abd04cd4199cfdec244d8fa7af
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: b6c881a445f5848829ab5ccc6ce8547a390d89f3
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106501"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404618"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
-> _„Wenn es Ihnen nicht gefällt, Komponententests für Ihr Produkt auszuführen, ist es sehr wahrscheinlich, dass es Ihren Kunden auch nicht gefallen wird.“_
->  _–Anonym_
-
-## <a name="summary"></a>Zusammenfassung
+> *„Wenn es Ihnen nicht gefällt, Komponententests für Ihr Produkt auszuführen, ist es sehr wahrscheinlich, dass es Ihren Kunden auch nicht gefallen wird.“*
+ > \_–Anonym
 
 Software von beliebiger Komplexität kann aufgrund von Änderungen auf unerwartete Weisen fehlschlagen. Daher ist es erforderlich, Anwendungen auf Änderungen zu testen, mit Ausnahme von unbedeutenden (bzw. weniger wichtigen) Anwendungen. Manuelle Tests sind die langsamste, unzuverlässigste und aufwendigste Möglichkeit zum Testen von Software. Leider können diese die einzige verfügbare Methode sein, wenn Anwendungen nicht dafür entworfen wurden, testbar zu sein. Anwendungen, die nach den folgenden, in Kapitel X beschriebenen Architekturprinzipien geschrieben wurden, sollten mit Komponententests testbar sein, und ASP.NET Core-Anwendungen sollten zusätzlich die automatisierte Integration und Funktionstests unterstützen.
 
@@ -68,7 +66,7 @@ Integrationstests werden aus der Perspektive des Entwicklers geschrieben, um sic
 
 > „Oft wird das Entwickeln eines Systems mit dem Erbauen eines Hauses verglichen. Auch wenn diese Analogie nicht ganz richtig ist, können wir sie verwenden, um den Unterschied zwischen Komponententests und Funktionstests besser zu verstehen. Komponententests entsprechen einem Bauinspektor, der die Baustelle eines Hauses begutachtet. Er konzentriert sich auf die verschiedenen internen Systeme des Hauses, also das Gebäudefundament, den Rohbau, die Stromversorgung, die sanitären Einrichtungen, usw. Er stellt sicher (überprüft), dass die einzelnen Teile des Hauses voll funktionsfähig und sicher sind, d.h., dass sie der Bauordnung entsprechen. Funktionstests entsprechen in diesem Szenario dem Hauseigentümer, der ebenfalls diese Baustelle besucht. Er geht davon aus, dass die internen Systeme funktionieren und der Bauinspektor seine Arbeit macht. Der Hauseigentümer konzentriert sich darauf, wie es sein wird, in diesem Haus zu leben. Er kümmert sich zum Beispiel darum, wie das Haus aussieht, ob die verschiedenen Räume die passende Größe haben, ob das Haus den Bedürfnissen einer Familie gerecht wird, und ob die Fenster eine gute Ausrichtung dafür haben, die Morgensonne herein zu lassen. Der Hauseigentümer führt Funktionstests am Haus durch. Seine Perspektive ist die des Benutzers. Der Bauinspektor führt Komponententests am Haus durch. Seine Perspektive ist die des Entwicklers.“
 
-Quelle: [Unit Testing versus Functional Tests (Vergleich von Komponententests und Funktionstests)](http://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
+Quelle: [Unit Testing versus Functional Tests (Vergleich von Komponententests und Funktionstests)](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 
 Unter Entwicklern sagt man gern: „Als Entwickler machen wir zwei Fehler: wir erstellen falsch, oder wir erstellen das Falsche.“ Mit Komponententests stellen Sie sicher, dass Sie richtig erstellen. Funktionstests stellen sicher, dass Sie das Richtige erstellen.
 
@@ -84,7 +82,7 @@ Abbildung 9–1: Testpyramide
 
 Die verschiedenen Schichten der Pyramide und ihre Größen stellen verschiedene Arten von Tests dar, und wie viele davon Sie für Ihre Anwendung schreiben sollten. Wie Sie sehen können, wird empfohlen, eine große Basis aus Komponententests zu verwenden, die von einer kleineren Menge von Integrationstests und einer noch kleineren Menge von Funktionstests unterstützt wird. Im Idealfall sollte jede Schicht nur aus Tests bestehen, die auf niedrigeren Schichten nicht ordnungsgemäß ausgeführt werden können. Behalten Sie die Testpyramide im Hinterkopf, wenn Sie sich entscheiden, welche Art von Test Sie für ein bestimmtes Szenario benötigen.
 
-### <a name="what-to-test"></a>Den Testgegenstand
+### <a name="what-to-test"></a>Der Testgegenstand
 
 Herauszufinden, was getestet werden sollte, ist ein häufiges Problem für Entwickler, die noch unerfahren im Schreiben von automatisierten Tests sind. Ein guter Startpunkt ist das Testen der bedingten Logik. An jeder Stelle, an der eine Methode mit einem Verhalten vorhanden ist, das auf einer Bedingungsanweisung basiert (if-else, switch, usw.), sollten Sie ein paar Tests erstellen, die das richtige Verhalten für bestimmte Bedingungen überprüfen. Wenn Ihr Code über Fehlerbedingungen verfügt, sollten Sie mindestens einen Test für den „besten Pfad“ durch den Code (ohne Fehler) und einen Test für den „schlechtesten Pfad“ (mit Fehlern und ungewohnten Ergebnissen) verwenden, um sicherzustellen, dass Ihre Anwendung auf Fehler wie erwartet reagiert. Letztendlich sollten Sie sich darauf konzentrieren, Dinge zu testen, die fehlschlagen können, anstatt sich auf Metriken wie Code Coverage zu konzentrieren. Allgemein ist mehr Code Coverage besser als zu wenig. Allerdings können Sie Ihre Zeit sinnvoller nutzen, wenn Sie ein paar weitere Tests für eine komplexe und unternehmenskritische Methode schreiben, anstatt Tests für Auto-Eigenschaften zu schreiben, um die Code Coverage-Metrik zu verbessern.
 
@@ -104,23 +102,23 @@ Sie können das Testframework verwenden, das Sie bevorzugen. Das xUnit-Framework
 
 Abbildung 9–3: xUnit-Testprojekt in Visual Studio hinzufügen
 
-### <a name="test-naming"></a>Benennung von Tests
+### <a name="test-naming"></a>Benennen von Tests
 
 Sie sollten Ihren Tests konsistente Namen zuweisen, die angeben, was jeder Test bewirkt. Ein effektiver Ansatz ist, Testklassen nach der Klasse und Methode zu benennen, die sie testen. Dies resultiert in vielen kleinen Testklassen, verdeutlicht jedoch, wofür jeder Test zuständig ist. Mit dem eingerichteten Testklassennamen zum Identifizieren der Klasse und Methode, die getestet werden, kann der Testmethodenname dafür verwendet werden, das zu testende Verhalten anzugeben. Dies sollte das erwartete Verhalten und alle Eingaben oder Annahmen einschließen, die dieses Verhalten verursachen. Beispiele für Testnamen:
 
-- CatalogControllerGetImage.CallsImageServiceWithId
+- `CatalogControllerGetImage.CallsImageServiceWithId`
 
-- CatalogControllerGetImage.LogsWarningGivenImageMissingException
+- `CatalogControllerGetImage.LogsWarningGivenImageMissingException`
 
-- CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
+- `CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess`
 
-- CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
+- `CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException`
 
 Eine Variante dieses Ansatzes beendet jeden Testklassennamen mit „Should“ und ändert die Zeitform:
 
-- CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
+- `CatalogControllerGetImage`**Should**`.`**Call**`ImageServiceWithId`
 
-- CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
+- `CatalogControllerGetImage`**Should**`.`**Log**`WarningGivenImageMissingException`
 
 Einige Teams finden den zweiten Ansatz für die Benennung klarer, obwohl er etwas ausführlicher ist. In jedem Fall sollten Sie versuchen, eine Namenskonvention zu verwenden, die einen Einblick zum Verhalten des Tests bietet, damit klar ist, welche Fälle fehlschlagen. Vermeiden Sie ungenaue Namen, z.B. „ControllerTests.Test1“, da diese keine Informationen bieten, wenn diese in den Testergebnissen angezeigt werden.
 
@@ -132,7 +130,7 @@ Wenn Sie eine Namenskonvention befolgen, die viele kleine Testklassen produziert
 
 Wenn viele Methoden (d.h. auch viele Testklassen) in einer Anwendungsklasse getestet werden sollen, kann es sinnvoll sein, diese in einem Ordner zu platzieren, der zu der Anwendungsklasse gehört. Diese Organisierung gleicht der Organisierung von Dateien in Ordnern. Wenn mehr als drei oder vier zusammengehörende Dateien in einem Ordner mit vielen anderen Dateien vorhanden sind, empfiehlt es sich, für diese einen Unterordner anzulegen.
 
-## <a name="unit-testing-aspnet-core-apps"></a>Komponententests bei ASP.NET Core-Apps
+## <a name="unit-testing-aspnet-core-apps"></a>Komponententests für ASP.NET Core-Apps
 
 In einer gut entworfenen ASP.NET Core-Anwendung ist der Großteil der Komplexitäts- und Geschäftslogik in Geschäftselementen und einer Vielzahl von Diensten gekapselt. Die ASP.NET Core MVC-App selbst sollte mitsamt ihrer Controller, Filter, ViewModels und Ansichten nur wenige Komponententests benötigen. Viele der Funktionen einer bestimmten Aktion befinden sich außerhalb der Aktionsmethode. Ob das Routing oder die globale Fehlerbehandlung ordnungsgemäß funktioniert, kann mit einem Komponententest nicht effektiv geprüft werden. Ebenso können alle Filter, einschließlich der Modellvalidierung und die Authentifizierung sowie die Autorisierungsfilter nicht mit Komponententests geprüft werden. Ohne diese Quellen für Verhalten sollten die meisten Aktionsmethoden unbedeutend klein sein und das meiste Ihrer Arbeit an Dienste delegieren, die unabhängig vom Controller geprüft werden, der sie verwendet.
 
@@ -173,11 +171,9 @@ public IActionResult GetImage(int id)
 
 Sowohl \_logger als auch \_imageService werden als Abhängigkeiten eingefügt. Sie können nun prüfen, ob dieselbe ID, die an die Aktionsmethode übergeben wird, an \_imageService übergeben wird, und ob die resultierenden Bytes als Teil von FileResult zurückgegeben werden. Sie können auch überprüfen, ob die Fehlerprotokollierung ordnungsgemäß erfolgt, und ob das Ergebnis „NotFound“ zurückgegeben wird, wenn das Bild fehlt, vorausgesetzt, dass dies wichtig für das Verhalten der Anwendung ist (d.h., dass dies nicht nur temporärer Code ist, der vom Entwickler hinzugefügt wurde, um ein Problem zu diagnostizieren). Die eigentliche Dateilogik wurde in einen separaten Implementierungsdienst verschoben und wurde erweitert, damit sie im Fall einer fehlenden Datei eine anwendungsspezifische Ausnahme zurückgibt. Mit einem Integrationstest können Sie diese Implementierung unabhängig testen.
 
-## <a name="integration-testing-aspnet-core-apps"></a>Integrationstests bei ASP.NET Core-Apps
+## <a name="integration-testing-aspnet-core-apps"></a>Integrationstests für ASP.NET Core-Apps
 
-Dieser Dienst verwendet „IHostingEnvironment“ auf dieselbe Weise wie der CatalogController-Code, bevor dieser in einen separaten Dienst umgestaltet wurde. Da dies der einzige Code im Controller war, der „IHostingEnvironment“ verwendet hat, wurde diese Abhängigkeit vom Konstruktor von CatalogController entfernt.
-
-Zum Überprüfen, ob dieser Dienst ordnungsgemäß funktioniert, müssen Sie eine bekannte Testbilddatei erstellen und sicherstellen, dass der Dienst diese bei einer bestimmten Eingabe zurückgibt. Achten Sie darauf, keine Pseudoobjekte für das Verhalten zu verwenden, das Sie überprüfen möchten (in diesem Fall das Lesen aus dem Dateisystem). Allerdings können Pseudoobjekte beim Einrichten von Integrationstests nützlich sein. In diesem Fall können Sie „IHostingEnvironment“ modellieren, damit „ContentRootPath“ auf den Ordner verweist, den Sie für Ihr Testbild verwenden möchten. Die vollständige funktionsfähige Integrationstestklasse wird im Folgenden dargestellt:
+Um mit einem Integrationstest zu überprüfen, ob LocalFileImageService ordnungsgemäß funktioniert, müssen Sie eine bekannte Testbilddatei erstellen und sicherstellen, dass der Dienst diese bei einer bestimmten Eingabe zurückgibt. Achten Sie darauf, keine Pseudoobjekte für das Verhalten zu verwenden, das Sie überprüfen möchten (in diesem Fall das Lesen aus dem Dateisystem). Allerdings können Pseudoobjekte beim Einrichten von Integrationstests nützlich sein. In diesem Fall können Sie „IHostingEnvironment“ modellieren, damit „ContentRootPath“ auf den Ordner verweist, den Sie für Ihr Testbild verwenden möchten. Die vollständige funktionsfähige Integrationstestklasse wird im Folgenden dargestellt:
 
 ```csharp
 public class LocalFileImageServiceGetImageBytesById
@@ -186,6 +182,7 @@ public class LocalFileImageServiceGetImageBytesById
     private readonly Mock<IHostingEnvironment> _mockEnvironment = new Mock<IHostingEnvironment>();
     private int _testImageId = 123;
     private string _testFileName = "123.png";
+
     public LocalFileImageServiceGetImageBytesById()
     {
         // create folder if necessary
@@ -194,83 +191,160 @@ public class LocalFileImageServiceGetImageBytesById
         System.IO.File.WriteAllBytes(filePath, _testBytes);
         _mockEnvironment.SetupGet<string>(m => m.ContentRootPath).Returns(GetFileDirectory());
     }
+
     private string GetFilePath(string fileName)
     {
         return Path.Combine(GetFileDirectory(), "Pics", fileName);
         }
             private string GetFileDirectory()
         {
-            var location = System.Reflection.Assembly.GetEntryAssembly().Location;
-            return Path.GetDirectoryName(location);
-        }
-
-        [Fact]
-        public void ReturnsFileContentResultGivenValidId()
-        {
-            var fileService = new LocalFileImageService(_mockEnvironment.Object);
-            var result = fileService.GetImageBytesById(_testImageId);
-            Assert.Equal(_testBytes, result);
-        }
+        var location = System.Reflection.Assembly.GetEntryAssembly().Location;
+        return Path.GetDirectoryName(location);
     }
+
+    [Fact]
+    public void ReturnsFileContentResultGivenValidId()
+    {
+        var fileService = new LocalFileImageService(_mockEnvironment.Object);
+        var result = fileService.GetImageBytesById(_testImageId);
+        Assert.Equal(_testBytes, result);
+    }
+}
 ```
 
 > [!NOTE]
-> Beachten Sie, dass der Test selbst sehr einfach ist. Der Großteil des Codes ist erforderlich, um das System zu konfigurieren und die Testinfrastruktur zu erstellen (in diesem Fall eine tatsächliche Datei, die vom Datenträger gelesen werden soll). Das ist typisch für Integrationstests, die meistens eine komplexere Einrichtung beanspruchen als Komponententests.
+> Beachten Sie, dass der Test selbst sehr einfach ist. Der Großteil des Codes ist erforderlich, um das System zu konfigurieren und die Testinfrastruktur zu erstellen (in diesem Fall eine Datei, die vom Datenträger gelesen werden soll). Das ist typisch für Integrationstests, die meistens eine komplexere Einrichtung beanspruchen als Komponententests.
 
-## <a name="functional-testing-aspnet-core-apps"></a>Funktionstests bei ASP.NET Core-Apps
+## <a name="functional-testing-aspnet-core-apps"></a>Funktionstests für ASP.NET Core-Apps
 
-Die TestServer-Klasse macht das Schreiben von Funktionstests für ASP.NET Core-Anwendungen relativ einfach. Sie konfigurieren einen TestServer mit WebHostBuilder so, wie Sie es normalerweise für Ihre Anwendung tun würden. Dieser WebHostBuilder sollte wie der echte Host Ihrer Anwendung konfiguriert werden. Sie können jedoch alle Aspekte ändern, die das Testen erleichtern. In den meisten Fällen können Sie denselben TestServer für viele Testfälle wiederverwenden. Sie können Ihn also in einer wiederverwendbaren Methode kapseln (z.B. in einer Basisklasse):
+Die TestServer-Klasse macht das Schreiben von Funktionstests für ASP.NET Core-Anwendungen relativ einfach. Sie konfigurieren eine TestServer-Klasse direkt mithilfe von WebHostBuilder (wie Sie es normalerweise für Ihre Anwendung tun) oder mit dem Typ „WebApplicationFactory“ (in Version 2.1 verfügbar). Sie sollten versuchen, einen Testhost zu verwenden, der dem Produktionshost so ähnlich wie möglich ist, damit das Verhalten der Tests dem Verhalten der App in der Produktion ähnelt. Die Klasse „WebApplicationFactory“ ist hilfreich für die ContentRoot-Konfiguration für der TestServer-Klasse, die von ASP.NET Core verwendet wird, um statische Ressourcen wie Ansichten zu finden.
 
-```csharp
-public abstract class BaseWebTest
+Sie können einfache Funktionstests erstellen, indem Sie eine Testklasse erstellen, die IClassFixture<WebApplicationFactory<TEntry>> implementiert, wobei „TEntry“ der Startklasse Ihrer Webanwendung entspricht. Mit diesen Vorkehrungen kann Ihre Testfixture einen Client mithilfe der CreateClient-Methode der Zuordnungsinstanz erstellen:
+
+```cs
+public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 {
     protected readonly HttpClient _client;
-    protected string _contentRoot;
 
-    public BaseWebTest()
+    public BaseWebTest(WebApplicationFactory<Startup> factory)
     {
-        _client = GetClient();
+        _client = factory.CreateClient();
     }
 
-    protected HttpClient GetClient()
-    {
-        var startupAssembly = typeof(Startup).GetTypeInfo().Assembly;
-        _contentRoot = GetProjectPath("src", startupAssembly);
-        var builder = new WebHostBuilder()
-        .UseContentRoot(_contentRoot)
-        .UseStartup<Startup>();
-        var server = new TestServer(builder);
-        var client = server.CreateClient();
-        return client;
-    }
+    // write tests that use _client
 }
 ```
 
-Die Methode „GetProjectPath“ gibt den physischen Pfad zum Webprojekt zurück (Beispielprojektmappe herunterladen). In diesem Fall gibt der WebHostBuilder nur an, wo sich der Inhaltsstamm für die Webanwendung befindet und verweist auf dieselbe Startup-Klasse, die die echte Webanwendung verwendet. Verwenden Sie den Standardtyp „System.Net.HttpClient“, um mit dem TestServer zu arbeiten und Anforderungen an diesen zu stellen. TestServer stellt eine nützliche CreateClient-Methode zur Verfügung, die einen vorkonfigurierten Client bereitstellt, der bereit dazu ist, Anforderungen an die Anwendung zu senden, die auf dem TestServer ausgeführt wird. Verwenden Sie diesen Client (im Basistest oben auf den geschützten Member \_client festgelegt) zum Schreiben von Funktionstests für Ihre ASP.NET Core-Anwendung:
+In vielen Fällen führen Sie zusätzliche Konfigurationen für Ihre Website durch, bevor jeder Test ausgeführt wird, z.B. das Konfigurieren der Anwendung für die Verwendung eines Datenspeichers im Arbeitsspeicher und das anschließende Seeding der Anwendung mit Testdaten. Hierzu sollten Sie eine eigene Unterklasse von WebApplicationFactory<TEntry> erstellen und die dazugehörige ConfigureWebHost-Methode außer Kraft setzen. Das folgende Beispiel stammt vom Funktionstestprojekt „eShopOnWeb“ und wird als Teil der Tests für die Hauptwebanwendung verwendet.
 
-```csharp
-public class CatalogControllerGetImage : BaseWebTest
+```cs
+using Infrastructure.Data;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.eShopWeb;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
+using Microsoft.EntityFrameworkCore;
+using Infrastructure.Identity;
+
+namespace FunctionalTests.WebRazorPages
 {
-    [Fact]
-    public async Task ReturnsFileContentResultGivenValidId()
+    public class CustomWebRazorPagesApplicationFactory<TStartup>
+    : WebApplicationFactory<Startup>
     {
-        var testFilePath = Path.Combine(_contentRoot, "pics//1.png");
-        var expectedFileBytes = File.ReadAllBytes(testFilePath);
-        var response = await _client.GetAsync("/catalog/pic/1");
-        response.EnsureSuccessStatusCode();
-        var streamResponse = await response.Content.ReadAsStreamAsync();
-        byte[] byteResult;
-        using (var ms = new MemoryStream())
+        protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
-            streamResponse.CopyTo(ms);
-            byteResult = ms.ToArray();
+            builder.ConfigureServices(services =>
+            {
+                // Create a new service provider.
+                var serviceProvider = new ServiceCollection()
+                    .AddEntityFrameworkInMemoryDatabase()
+                    .BuildServiceProvider();
+
+                // Add a database context (ApplicationDbContext) using an in-memory
+                // database for testing.
+                services.AddDbContext<CatalogContext>(options =>
+                {
+                    options.UseInMemoryDatabase("InMemoryDbForTesting");
+                    options.UseInternalServiceProvider(serviceProvider);
+                });
+
+                services.AddDbContext<AppIdentityDbContext>(options =>
+                {
+                    options.UseInMemoryDatabase("Identity");
+                    options.UseInternalServiceProvider(serviceProvider);
+                });
+
+                // Build the service provider.
+                var sp = services.BuildServiceProvider();
+
+                // Create a scope to obtain a reference to the database
+                // context (ApplicationDbContext).
+                using (var scope = sp.CreateScope())
+                {
+                    var scopedServices = scope.ServiceProvider;
+                    var db = scopedServices.GetRequiredService<CatalogContext>();
+                    var loggerFactory = scopedServices.GetRequiredService<ILoggerFactory>();
+
+                    var logger = scopedServices
+                        .GetRequiredService<ILogger<CustomWebRazorPagesApplicationFactory<TStartup>>>();
+
+                    // Ensure the database is created.
+                    db.Database.EnsureCreated();
+
+                    try
+                    {
+                        // Seed the database with test data.
+                        CatalogContextSeed.SeedAsync(db, loggerFactory).Wait();
+                    }
+                    catch (Exception ex)
+                    {
+                        logger.LogError(ex, $"An error occurred seeding the " +
+                            "database with test messages. Error: {ex.Message}");
+                    }
+                }
+            });
         }
-        Assert.Equal(expectedFileBytes, byteResult);
     }
 }
 ```
 
-Dieser Funktionstest führt den gesamten ASP.NET Core MVC-Anwendungsstapel aus, einschließlich aller Middleware, Filter, Binder, usw., die verfügbar sind. Er überprüft, ob die angegebene Route (im Beispiel oben „/catalog/pic/1“) das erwartete Bytearray für eine Datei an einem bekannten Speicherort zurückgibt. Das funktioniert, ohne dass ein echter Webserver eingerichtet werden muss, und vermeidet deshalb einen Großteil der Fehleranfälligkeit, die bei einem echten Webserver auftreten kann (z.B. Probleme mit den Einstellungen der Firewall). Funktionstests, die für den TestServer ausgeführt werden, sind in der Regel langsamer als Integrations- und Komponententests, aber deutlich schneller als Tests, die über das Netzwerk auf einem Testwebserver ausgeführt werden.
+Tests können die benutzerdefinierte WebApplicationFactory nutzen, um einen Client zu erstellen und dann mithilfe dieser Clientinstanz Anforderungen an die Anwendung zu stellen. Die Anwendung verfügt über Daten, die als Teil der Assertionen des Tests verwendet werden können. Dieser Test überprüft, ob die Startseite der Razor Pages-Anwendung „eShopOnWeb“ ordnungsgemäß geladen wird und eine Produktliste enthält, die der Anwendung als Teil des Seedings hinzugefügt wurden.
+
+```cs
+using Microsoft.eShopWeb.RazorPages;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Xunit;
+
+namespace FunctionalTests.WebRazorPages
+{
+    public class HomePageOnGet : IClassFixture<CustomWebRazorPagesApplicationFactory<Startup>>
+    {
+        public HomePageOnGet(CustomWebRazorPagesApplicationFactory<Startup> factory)
+        {
+            Client = factory.CreateClient();
+        }
+
+        public HttpClient Client { get; }
+
+        [Fact]
+        public async Task ReturnsHomePageWithProductListing()
+        {
+            // Arrange & Act
+            var response = await Client.GetAsync("/");
+            response.EnsureSuccessStatusCode();
+            var stringResponse = await response.Content.ReadAsStringAsync();
+
+            // Assert
+            Assert.Contains(".NET Bot Black Sweatshirt", stringResponse); // from seed data
+        }
+    }
+}
+```
+
+Dieser Funktionstest führt den gesamten ASP.NET Core MVC/Razor Pages-Anwendungsstapel aus, einschließlich aller Middleware, Filter, Binder usw., die verfügbar sind. Er überprüft, ob eine bestimmte Route („/“) den erwarteten Erfolgsstatuscode und die HTML-Ausgabe zurückgibt. Das funktioniert, ohne dass ein echter Webserver eingerichtet werden muss, und vermeidet deshalb einen Großteil der Fehleranfälligkeit, die bei einem echten Webserver auftreten kann (z.B. Probleme mit den Einstellungen der Firewall). Funktionstests, die für den TestServer ausgeführt werden, sind in der Regel langsamer als Integrations- und Komponententests, aber deutlich schneller als Tests, die über das Netzwerk auf einem Testwebserver ausgeführt werden. Sie sollten Funktionstests verwenden, um sicherzustellen, dass der Front-End-Stapel Ihrer Anwendung wie erwartet funktioniert. Diese Tests sind besonders hilfreich, wenn Sie Duplizierung in Ihren Controllern oder Seiten finden und Sie diese durch Hinzufügen von Filtern behandeln. Im Idealfall ändert dieses Refactoring nicht das Verhalten der Anwendung, und eine Reihe von Funktionstests überprüft, ob dies der Fall ist.
 
 >[!div class="step-by-step"]
 [Zurück](work-with-data-in-asp-net-core-apps.md)
