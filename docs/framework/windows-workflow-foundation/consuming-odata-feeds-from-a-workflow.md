@@ -123,7 +123,7 @@ WCF Data Services ist eine Komponente von [!INCLUDE[dnprdnshort](../../../includ
  **\<aktualisiert > 2010-05-19T19:37:07Z\</ aktualisiert >**  
  **\<Link Rel = "Self" Title = "Orders" Href = "Orders" / >**  
  **\<Eintrag >**  
- **\<ID >http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
+ **\<ID>http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
  **\<Typ Title = "Text" > \< /title >**  
  **\<aktualisiert > 2010-05-19T19:37:07Z\</ aktualisiert >**  
  **\<Erstellen >**  
