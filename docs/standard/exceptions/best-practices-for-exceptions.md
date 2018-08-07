@@ -12,10 +12,10 @@ ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33578079"
 ---
 # <a name="best-practices-for-exceptions"></a>Bewährte Methoden für Ausnahmen
@@ -104,17 +104,19 @@ In .NET-Implementierungen, die App-Domänen unterstützen, können Ausnahmen z.B
 
 - Wenn die Domänen keine gemeinsame Anwendungsbasis verwenden, signieren Sie die Assembly, in der die Ausnahmeinformationen enthalten sind, mit einem starken Namen und legen sie in einem globalen Assemblycache ab.
 
-## <a name="include-a-localized-description-string-in-every-exception"></a>Einschließen einer lokalisierten Beschreibungszeichenfolge in jeder Ausnahme
-
-Die für Benutzer sichtbare Fehlermeldung wird von der Beschreibungszeichenfolge der ausgelösten Ausnahme abgeleitet, nicht vom Namen der Ausnahmeklasse.
-
 ## <a name="use-grammatically-correct-error-messages"></a>Verwenden von grammatisch korrekten Fehlermeldungen
 
-Verfassen Sie klar verständliche Meldungen, und setzen Sie Satzendpunkte. Jeder Satz in einer Beschreibungszeichenfolge sollte mit einem Punkt beendet werden. Beispiel: „In der Protokolltabelle ist ein Überlauf aufgetreten.“ Dies ist ein Beispiel für eine angemessene Beschreibungszeichenfolge.
+Verfassen Sie klar verständliche Meldungen, und setzen Sie Satzendpunkte. Jeder Satz in der Zeichenfolge, der einer <xref:System.Exception.Message?displayProperty=nameWithType>-Eigenschaft zugeordnet ist, sollte mit einem Punkt enden. Beispiel: „In der Protokolltabelle ist ein Überlauf aufgetreten.“ Dies ist ein Beispiel für eine angemessene Meldungszeichenfolge.
+
+## <a name="include-a-localized-string-message-in-every-exception"></a>Einschließen einer lokalisierten Meldungszeichenfolge in jede Ausnahme
+
+Die dem Benutzer angezeigte Fehlermeldung wird von der <xref:System.Exception.Message?displayProperty=nameWithType>-Eigenschaft der ausgelösten Ausnahme abgeleitet, nicht vom Namen der Ausnahmeklasse. In der Regel können Sie der <xref:System.Exception.Message?displayProperty=nameWithType>-Eigenschaft einen Wert zuweisen, indem Sie die Meldungszeichenfolge an das `message`-Argument eines [Ausnahmekonstruktors](xref:System.Exception.%23ctor%2A) übergeben. 
+
+Sie sollten für lokalisierte Anwendungen eine lokalisierte Meldungszeichenfolge für jede Ausnahme angeben, die Ihre Anwendung ausgeben könnte. Verwenden Sie Ressourcendateien, um lokalisierte Fehlermeldungen zur Verfügung zu stellen. Weitere Informationen zum Lokalisieren von Anwendungen und Abrufen von lokalisierten Zeichenfolgen finden Sie unter [Ressourcen in Desktop-Apps](../../framework/resources/index.md) und <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Bereitstellen zusätzlicher Eigenschaften in benutzerdefinierten Ausnahmen, sofern erforderlich
 
-Geben Sie zusätzliche Eigenschaften für eine Ausnahme nur dann zusätzlich zur Beschreibungszeichenfolge an, wenn es ein programmgesteuertes Szenario gibt, in dem dieser Zusatz sinnvoll ist. Beispielsweise gibt die <xref:System.IO.FileNotFoundException> die <xref:System.IO.FileNotFoundException.FileName>-Eigenschaft an.
+Geben Sie zusätzliche Eigenschaften für eine Ausnahme nur dann neben der benutzerdefinierten Meldungszeichenfolge an, wenn es ein programmgesteuertes Szenario gibt, in dem dieser Zusatz sinnvoll ist. Beispielsweise gibt die <xref:System.IO.FileNotFoundException> die <xref:System.IO.FileNotFoundException.FileName>-Eigenschaft an.
 
 ## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>Platzieren von throw-Anweisungen so, dass die Stapelüberwachung nützlich ist
 

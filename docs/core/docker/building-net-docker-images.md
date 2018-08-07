@@ -7,10 +7,10 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827338"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Erstellen von Docker-Images für .NET Core-Anwendungen
@@ -83,6 +83,17 @@ Aktuelle Versionen jeder Variante:
 * Dieses [Beispiel zum ASP.NET Core-Docker](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) stellt ein bewährtes Muster für die Erstellung von Docker-Images für ASP.NET Core-Apps für die Produktion vor. Das Beispiel funktioniert sowohl mit Linux- als auch mit Windows-Containern.
 
 * In diesem Beispiel für .NET Core-Docker wird ein bewährtes Muster für die [Erstellung von Docker-Images für .NET Core-Apps für die Produktion](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp) vorgestellt.
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>Weiterleiten des Anforderungsschemas und der ursprünglichen IP-Adresse
+
+Proxyserver, Lastenausgleichsmodule und anderen Netzwerkgeräte verdecken häufig Informationen zu einer Anforderung, bevor diese die Container-App erreicht:
+
+* Wenn HTTPS-Anforderungen über HTTP-Proxy ausgeführt werden, geht das ursprüngliche Schema (HTTPS) verloren und muss in einem Header weitergeleitet werden.
+* Da eine App eine Anforderung über den Proxy empfängt und nicht über ihre echte Quelle im Internet oder Unternehmensnetzwerk, muss die ursprüngliche Client-IP-Adresse ebenfalls in einem Header weitergeleitet werden.
+
+Diese Informationen können im Anforderungsprozess, z.B. in Umleitungen, bei der Authentifizierung, der Linkgenerierung, der Richtlinienauswertung und der Client-Geolocation wichtig sein.
+
+Verwenden Sie Middleware für weitergeleitete Header, um das Schema und die ursprüngliche IP-Adresse an eine ASP.NET Core-Container-App weiterzuleiten. Weitere Informationen hierzu feinden Sie unter [Konfigurieren von ASP.NET Core zur Verwendung mit Proxyservern und Lastenausgleich](/aspnet/core/host-and-deploy/proxy-load-balancer).
 
 ## <a name="your-first-aspnet-core-docker-app"></a>Ihre erste Docker-App mit ASP.NET Core
 
@@ -258,7 +269,6 @@ Herzlichen Glückwunsch! Sie haben gerade:
 > * die ASP.NET-Beispiel-App lokal ausgeführt
 > * das Beispiel mit Docker für Linux-Container erstellt und ausgeführt
 > * das Beispiel mit Docker für Windows-Container erstellt und ausgeführt
-
 
 **Nächste Schritte**
 
