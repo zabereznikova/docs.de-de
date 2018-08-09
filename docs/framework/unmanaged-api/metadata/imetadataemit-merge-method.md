@@ -45,7 +45,7 @@ HRESULT Merge (
  [in] Ein Zeiger auf ein [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) Objekt, das das token erneut zuordnen angibt.  
   
  `pHandleer`  
- [in] Ein Zeiger auf ein <!--<<!--zzxref:IUnknown --> `IUnknown` >-->  `IUnknown` Objekt, das den Fehler angibt.  
+ [in] Ein Zeiger auf ein <!--<<!--zzxref:IUnknown --> `IUnknown`>--> `IUnknown` Objekt, das den Fehler angibt.  
   
 ## <a name="remarks"></a>Hinweise  
  Rufen Sie [IMetaDataEmit:: MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) die Zusammenführung von Metadaten in den Gültigkeitsbereich einer einzelnen auslösen.  
