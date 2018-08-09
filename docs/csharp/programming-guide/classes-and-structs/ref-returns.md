@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33339617"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
@@ -35,16 +35,19 @@ Zusätzlich sind Verweisrückgabewerte nicht für asynchrone Methoden zulässig.
  
 ## <a name="defining-a-ref-return-value"></a>Definieren eines ref-Rückgabewerts
 
-Sie definieren einen ref-Rückgabewert, indem Sie dem Rückgabetyp der Methodensignatur das Schlüsselwort [ref](../../language-reference/keywords/ref.md) hinzufügen. Beispielsweise gibt die folgende Signatur an, dass die `GetContactInformation`-Eigenschaft einen Verweis auf ein `Person`-Objekt an die aufrufende Funktion zurückgibt:
+Eine Methode, die einen *Verweisrückgabewert* zurückgibt, muss die beiden folgenden Bedingungen erfüllen:
+
+- Die Methodensignatur enthält das [ref](../../language-reference/keywords/ref.md)-Schlüsselwort vor den Rückgabetyp.
+- Jede [return](../../language-reference/keywords/return.md)-Anweisung im Hauptteil der Methode enthält das [ref](../../language-reference/keywords/ref.md)-Schlüsselwort vor den Namen der zurückgegebenen Instanz.
+
+Das folgende Beispiel zeigt eine Methode, die die Bedingungen erfüllt und einen Verweis auf ein `Person`-Objekt mit dem Namen `p` zurückgibt:
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
-```
-
-Darüber hinaus muss vor dem Namen des Objekts, das durch jede [return](../../language-reference/keywords/return.md)-Anweisung im Methodentext zurückgegeben wird, das Schlüsselwort [ref](../../language-reference/keywords/ref.md) stehen. Beispielsweise gibt die folgende `return`-Anweisung einen Verweis auf ein `Person`-Objekt mit dem Namen `p` zurück:
-
-```csharp
-return ref p;
+public ref Person GetContactInformation(string fname, string lname)
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>Verarbeiten eines ref-Rückgabewerts

@@ -4,10 +4,10 @@ description: Informationen zur deklarativen Programmierung mithilfe von Attribut
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
 ms.openlocfilehash: 671023f268ae78d63db8868ef6046b8f13880659
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "34312234"
 ---
 # <a name="attributes"></a>Attribute
@@ -24,7 +24,11 @@ Alle Attributklassen werden von der <xref:System.Attribute> Basisklasse abgeleit
 
 In diesem Beispiel wird `HelpAttribute` an die `Widget`-Klasse angefügt. Darüber hinaus wird der `Display`-Methode in der Klasse ein weiteres `HelpAttribute` hinzugefügt. Die öffentlichen Konstruktoren einer Attributklasse steuern die Informationen, die beim Anfügen des Attributs an eine Programmentität angegeben werden müssen. Zusätzliche Informationen können angegeben werden, indem auf öffentliche Eigenschaften mit Lese-/Schreibzugriff der Attributklasse verwiesen wird (z.B. wie der obige Verweis auf die `Topic`-Eigenschaft).
 
-Wenn per Reflektion ein bestimmtes Attribut angefordert wird, wird der Konstruktor für die Attributklasse mit den in der Programmquelle angegebenen Informationen aufgerufen, und die resultierende Attributinstanz wird zurückgegeben. Wenn zusätzliche Informationen über Eigenschaften bereitgestellt wurden, werden diese Eigenschaften auf die vorgegebenen Werte festgelegt, bevor die Attributinstanz zurückgegeben wird.
+Die durch Attribute definierten Metadaten können zur Laufzeit mittels Reflektion gelesen und bearbeitet werden. Wenn mithilfe dieser Technik ein bestimmtes Attribut angefordert wird, wird der Konstruktor für die Attributklasse mit den in der Programmquelle angegebenen Informationen aufgerufen, und die resultierende Attributinstanz wird zurückgegeben. Wenn zusätzliche Informationen über Eigenschaften bereitgestellt wurden, werden diese Eigenschaften auf die vorgegebenen Werte festgelegt, bevor die Attributinstanz zurückgegeben wird.
+
+Das folgende Codebeispiel zeigt, wie die der `Widget`-Klasse zugeordneten `HelpAttribute`-Instanzen und die dazugehörige `Display`-Methode abgerufen wird.
+
+[!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 
 >[!div class="step-by-step"]
 [Vorherige](delegates.md)
