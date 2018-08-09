@@ -6,10 +6,10 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: 65bc0439696612cd8331a9c0718efcfee83af574
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33602735"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;umfassen&gt; (Visual Basic)
@@ -23,13 +23,13 @@ Bezieht sich auf eine andere Datei, die die Typen und Member im Quellcode beschr
   
 #### <a name="parameters"></a>Parameter  
  `filename`  
- Erforderlich. Der Name der Datei mit der Dokumentation. Der Dateiname kann mit einem Pfad qualifiziert werden. Schließen Sie `filename` in doppelte Anführungszeichen ("").  
+ Erforderlich. Der Name der Datei, die die Dokumentation enthält. Der Dateiname kann mit einem Pfad qualifiziert werden. Schließen Sie `filename` in doppelte Anführungszeichen ("").  
   
  `tagpath`  
  Erforderlich. Der Pfad der Tags in `filename`, der zum Tag `name` führt. Schließen Sie den Pfad in doppelte Anführungszeichen ("").  
   
  `name`  
- Erforderlich. Der Namensbezeichner in dem Tag, das die Kommentare vorausgeht. `Name` weist ein `id`.  
+ Erforderlich. Der Namensbezeichner in dem Tag, das vor den Kommentaren befindet. `Name` hat eine `id`.  
   
  `id`  
  Erforderlich. Die ID für das Tag, das sich vor den Kommentaren befindet. Die ID muss in einfache Anführungszeichen ("").  
@@ -37,10 +37,10 @@ Bezieht sich auf eine andere Datei, die die Typen und Member im Quellcode beschr
 ## <a name="remarks"></a>Hinweise  
  Verwenden der `<include>` -Tag zum Verweisen auf Kommentare in einer anderen Datei, die beschreiben, die Typen und Member im Quellcode. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei.  
   
- Die `<include>` Tag verwendet die Empfehlung der W3C XML Path Language (XPath) Version 1.0. Weitere Informationen zu Methoden zum Anpassen Ihrer `<include>` Verwendung finden Sie unter http://www.w3.org/TR/xpath.  
+ Die `<include>` Tag verwendet die Empfehlung des W3C XML Path Language (XPath) Version 1.0. Weitere Informationen zu Möglichkeiten zum Anpassen Ihrer `<include>` Verwendung finden Sie unter http://www.w3.org/TR/xpath.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `<include>` Tag Dokumentationskommentare Mitglied aus einer Datei namens importieren `commentFile.xml`.  
+ Dieses Beispiel verwendet die `<include>` Tag zum Importieren von Dokumentationskommentaren Member aus einer Datei namens `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
