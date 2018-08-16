@@ -38,7 +38,7 @@ public class String {
 ```  
   
 ## <a name="names-of-properties"></a>Namen von Eigenschaften  
- Anders als bei anderen Membern sollten Sie Eigenschaften einen Namen geben, der eine Nominal- oder Adjektivphrase ist. Der Grund dafür ist, dass sich eine Eigenschaft auf Daten bezieht, und der Name der Eigenschaft dies widerspiegelt. Eigenschaftennamen werden immer in Pascal-Schreibweise geschrieben.  
+ Anders als andere Member sollten Eigenschaften mit Substantivphrasen oder Adjektivnamen benannt werden. Das liegt daran, dass eine Eigenschaft auf Daten verweist, und der Name der Eigenschaft gibt dies wieder. Für Eigenschaftsnamen wird immer PascalCasing verwendet.  
   
  **✓ DO**: Benennen Sie Eigenschaften mit einem Nomen, einer Nominalphrase oder einem Adjektiv.  
   
