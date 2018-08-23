@@ -1,5 +1,5 @@
 ---
-title: Mid-Anweisung
+title: Mid-Anweisung (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.MidB
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: 90b805df902dcdfebe85421583dd54e9af04bec9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602264"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754085"
 ---
 # <a name="mid-statement"></a>Mid-Anweisung
-Ersetzt eine angegebene Anzahl von Zeichen in einem `String` -Variable mit Zeichen aus einer anderen Zeichenfolge.  
+Ersetzt eine angegebene Anzahl von Zeichen in einem `String` Variable mit dem Zeichen aus einer anderen Zeichenfolge.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,13 +32,13 @@ Mid( _
   
 ## <a name="parts"></a>Teile  
  `Target`  
- Erforderlich. Name des der `String` Variable zu ändern.  
+ Erforderlich. Name des der `String` zu ändernden Variablen.  
   
  `Start`  
- Erforderlich. `Integer` Ausdruck. Die Zeichenposition in `Target` , in dem die Ersetzung von Text beginnt. `Start` verwendet einen einsbasierten Index.  
+ Erforderlich. `Integer` -Ausdruck. Die Zeichenposition in `Target` , an dem das Ersetzen des Texts beginnt. `Start` verwendet einen einsbasierten Index.  
   
  `Length`  
- Dies ist optional. `Integer` Ausdruck. Anzahl der zu ersetzenden Zeichen. Wenn nicht angegeben, alle `String` verwendet wird.  
+ Dies ist optional. `Integer` -Ausdruck. Die Anzahl der zu ersetzenden Zeichen. Wenn nicht angegeben, alle `String` verwendet wird.  
   
  `StringExpression`  
  Erforderlich. `String` Ausdruck, der Teil des ersetzt `Target`.  
@@ -52,13 +52,13 @@ Mid( _
 ## <a name="remarks"></a>Hinweise  
  Die Anzahl der Zeichen ersetzt ist immer kleiner oder gleich der Anzahl der Zeichen in `Target`.  
   
- Visual Basic verfügt über eine <xref:Microsoft.VisualBasic.Strings.Mid%2A> Funktion und eine `Mid` Anweisung. Diese Elemente, die beide auf eine angegebene Anzahl von Zeichen in eine Zeichenfolge funktionieren, aber die `Mid` Funktion gibt die Zeichen, während die `Mid` Anweisung ersetzt die Zeichen. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic verfügt über eine <xref:Microsoft.VisualBasic.Strings.Mid%2A> Funktion und ein `Mid` Anweisung. Diese Elemente beide für eine angegebene Anzahl von Zeichen in eine Zeichenfolge funktionieren, aber die `Mid` Funktionsergebnis ist die Zeichen bei der die `Mid` Anweisung ersetzt die Zeichen. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
->  Die `MidB` -Anweisung aus früheren Versionen von Visual Basic ersetzt eine Teilzeichenfolge in Bytes anstatt Zeichen. Es dient in erster Linie für das Konvertieren von Zeichenfolgen in Doppelbyte-Zeichensatz (Character Set, DBCS) Anwendungen. Alle Visual Basic-Zeichenfolgen werden in Unicode und `MidB` wird nicht mehr unterstützt.  
+>  Die `MidB` frühere Versionen von Visual Basic-Anweisung ersetzt eine Teilzeichenfolge in Byte, anstatt in Zeichen. Es dient in erster Linie für das Konvertieren von Zeichenfolgen in Doppelbyte-Zeichensatz (DBCS)-Satz Anwendungen. Alle Visual Basic-Zeichenfolgen werden in Unicode und `MidB` wird nicht mehr unterstützt.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `Mid` Anweisung, um eine angegebene Anzahl von Zeichen in einer Zeichenfolgenvariablen durch Zeichen aus einer anderen Zeichenfolge zu ersetzen.  
+ Dieses Beispiel verwendet die `Mid` Anweisung, um eine angegebene Anzahl von Zeichen in einer Zeichenfolgenvariablen durch Zeichen aus einer anderen Zeichenfolge ersetzen.  
   
  [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   

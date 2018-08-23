@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: fc41158e9a3d5d331b391f0f28701612012becf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbc0a82f82afcc59384246b58437d521d56d708b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537215"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754651"
 ---
 # <a name="overriding-the-onpaint-method"></a>Überschreiben der OnPaint-Methode
-Die grundlegenden Schritte zum Überschreiben von Ereignissen definiert, der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] identisch sind und in der folgenden Liste zusammengefasst werden.  
+Die grundlegenden Schritte zum Überschreiben von Ereignissen im definierten die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sind identisch und werden in der folgenden Liste zusammengefasst.  
   
-#### <a name="to-override-an-inherited-event"></a>Überschreiben ein geerbtes Ereignisses  
+#### <a name="to-override-an-inherited-event"></a>Zum Überschreiben eines geerbten Ereignisses.  
   
 1.  Überschreiben Sie die geschützte `On` *EventName* Methode.  
   
-2.  Rufen Sie die `On` *EventName* -Methode der Basisklasse, von der überschriebenen `On` *EventName* Methode, damit registrierte Delegaten das Ereignis empfangen.  
+2.  Rufen Sie die `On` *EventName* Methode der Basisklasse von der überschriebenen `On` *EventName* Methode, damit registrierte Delegaten das Ereignis empfangen.  
   
- Die <xref:System.Windows.Forms.Control.Paint> Ereignis wird im folgenden ausführlich erläutert, da jedes Windows Forms-Steuerelement überschreiben, muss die <xref:System.Windows.Forms.Control.Paint> Ereignis, das von der erbt <xref:System.Windows.Forms.Control>. Die Basis <xref:System.Windows.Forms.Control> Klasse weiß nicht, wie ein abgeleitetes Steuerelement gezeichnet werden muss und keine Zeichnungslogik in die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode <xref:System.Windows.Forms.Control> einfach verteilt die <xref:System.Windows.Forms.Control.Paint> Ereignis registrierten Ereignisempfänger.  
+ Die <xref:System.Windows.Forms.Control.Paint> Ereignis wird hier ausführlich erläutert, da jedes Windows Forms-Steuerelement überschreiben, muss die <xref:System.Windows.Forms.Control.Paint> -Ereignis, das es erbt <xref:System.Windows.Forms.Control>. Die Basis <xref:System.Windows.Forms.Control> Klasse weiß nicht, wie ein abgeleitetes Steuerelement gezeichnet werden muss, und bietet keine Zeichnungslogik in die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode der <xref:System.Windows.Forms.Control> einfach sendet die <xref:System.Windows.Forms.Control.Paint> Ereignis, um registrierte Ereignisempfänger.  
   
- Wenn Sie das Beispiel in durchgearbeitet [Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuerelements](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), Sie haben gelernt, dass ein Beispiel zum Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Das folgende Codefragment stammt aus dem Beispiel.  
+ Wenn Sie das Beispiel unter gearbeitet [Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuerelements](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), Sie haben gesehen, dass ein Beispiel zum Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Im folgenden Codefragment wird von diesem Beispiel abgeleitet.  
   
 ```vb  
 Public Class FirstControl  
@@ -45,7 +45,7 @@ End Class
 ```  
   
 ```csharp  
-public class FirstControl : Control{  
+public class FirstControl : Control {  
    public FirstControl() {}  
    protected override void OnPaint(PaintEventArgs e) {  
       // Call the OnPaint method of the base class.  
@@ -56,7 +56,7 @@ public class FirstControl : Control{
 }   
 ```  
   
- Die <xref:System.Windows.Forms.PaintEventArgs> Klasse enthält Daten für die <xref:System.Windows.Forms.Control.Paint> Ereignis. Er verfügt über zwei Eigenschaften, wie im folgenden Code gezeigt.  
+ Die <xref:System.Windows.Forms.PaintEventArgs> -Klasse enthält Daten für die <xref:System.Windows.Forms.Control.Paint> Ereignis. Es hat zwei Eigenschaften, wie im folgenden Code gezeigt.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -82,9 +82,9 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> ist das Rechteck gezeichnet werden, und die <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> Eigenschaft bezieht sich auf eine <xref:System.Drawing.Graphics> Objekt. Die Klassen in der <xref:System.Drawing?displayProperty=nameWithType> Namespace sind verwaltete Klassen, die Zugriff auf die Funktionalität bereitstellen [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], die neue Windows-Grafikbibliothek. Die <xref:System.Drawing.Graphics> Objekt verfügt über Methoden, die Punkte, Zeichenfolgen, Linien, Bögen, Ellipsen und vielen anderen Formen gezeichnet werden soll.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> ist das Rechteck gezeichnet werden, und die <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> Eigenschaft bezieht sich auf eine <xref:System.Drawing.Graphics> Objekt. Die Klassen in der <xref:System.Drawing?displayProperty=nameWithType> Namespace sind verwaltete Klassen, die Zugriff auf die Funktionalität bereitstellen [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], die neue Windows-Grafikbibliothek. Die <xref:System.Drawing.Graphics> Objekt verfügt über Methoden, um Punkte, Zeichenfolgen, Linien, Bögen, Ellipsen und vielen anderen Formen zu zeichnen.  
   
- Ein Steuerelement ruft seine <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode auf, wenn sie die visuelle Darstellung geändert werden muss. Diese Methode löst wiederum die <xref:System.Windows.Forms.Control.Paint> Ereignis.  
+ Ein Steuerelement ruft seine <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode auf, wenn es die visuelle Darstellung geändert werden muss. Diese Methode löst wiederum die <xref:System.Windows.Forms.Control.Paint> Ereignis.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ereignisse](../../../../docs/standard/events/index.md)  

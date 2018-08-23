@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 394059481b5081586904d2d5ea5d4a3d3e0df42b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40ba9085905869ca5d3d8f39a3d7ce11639b1504
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758892"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754467"
 ---
 # <a name="local-transactions"></a>Lokale Transaktionen
 Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] verwendet, wenn mehrere Aufgaben miteinander verbunden werden sollen, damit sie als eine einzelne Verarbeitungseinheit ausgeführt werden können. Stellen Sie sich z.&#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zum einen aktualisiert sie eine Tabelle mit Bestellinformationen. Zum anderen aktualisiert sie eine Tabelle mit Bestandsinformationen und bucht die bestellten Artikel ab. Wenn der Task entweder ein Fehler auftritt, werden beide Aktualisierungen ein Rollback ausgeführt.  
   
 ## <a name="determining-the-transaction-type"></a>Bestimmen des Transaktionstyps  
- Eine lokale Transaktion zu sein, wenn sie eine Phase hat und direkt von der Datenbank behandelt wird, wird als Transaktion behandelt. Eine Transaktion ist eine verteilte Transaktion zu sein, wenn er von einem Transaktionsmonitor koordiniert wird und verwendet für die transaktionsauflösung ausfallsichere Mechanismen (z. B. Zweiphasen-Commit) behandelt.  
+ Um eine lokale Transaktion zu sein, wenn es eine Phase hat nur und direkt von der Datenbank behandelt wird, wird als Transaktion betrachtet. In einer verteilten Transaktion zu sein, wenn er von einem Transaktionsmonitor koordiniert ist und verwendet für die transaktionsauflösung ausfallsichere Mechanismen verwenden (z. B. Zweiphasen-Commit), wird als Transaktion betrachtet.  
   
- Alle [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter verfügen jeweils über ein eigenes `Transaction`-Objekt für das Ausführen lokaler Transaktionen. Wählen Sie eine <xref:System.Data.SqlClient>-Transaktion, wenn eine Transaktion in einer SQL Server-Datenbank ausgeführt werden muss. Verwenden Sie für eine Oracle-Transaktion den <xref:System.Data.OracleClient>-Anbieter. Darüber hinaus besteht eine <xref:System.Data.Common.DbTransaction> Klasse, die zum Schreiben von anbieterunabhängigem Code, der Transaktionen erfordert.  
+ Alle [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter verfügen jeweils über ein eigenes `Transaction`-Objekt für das Ausführen lokaler Transaktionen. Wählen Sie eine <xref:System.Data.SqlClient>-Transaktion, wenn eine Transaktion in einer SQL Server-Datenbank ausgeführt werden muss. Verwenden Sie für eine Oracle-Transaktion den <xref:System.Data.OracleClient>-Anbieter. Darüber hinaus steht eine <xref:System.Data.Common.DbTransaction> -Klasse, die zum Schreiben anbieterunabhängiger Code, die Transaktionen erfordert.  
   
 > [!NOTE]
->  Transaktionen sind am effizientesten, wenn sie auf dem Server ausgeführt werden. Wenn Sie mit einer SQL Server-Datenbank arbeiten, die häufig explizite Transaktionen verwendet, empfiehlt es sich, die Transaktionen unter Verwendung der BEGIN TRANSACTION-Anweisung von Transact-SQL als gespeicherte Prozeduren zu schreiben. Weitere Informationen zum Ausführen serverseitiger Transaktionen finden Sie in der Onlinedokumentation zu SQL Server.  
+> Transaktionen sind am effizientesten, wenn sie auf dem Server ausgeführt werden. Wenn Sie mit einer SQL Server-Datenbank arbeiten, die häufig explizite Transaktionen verwendet, empfiehlt es sich, die Transaktionen unter Verwendung der BEGIN TRANSACTION-Anweisung von Transact-SQL als gespeicherte Prozeduren zu schreiben.
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>Ausführen einer Transaktion unter Verwendung einer einzelnen Verbindung  
  In [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] können Sie Transaktionen mit dem `Connection`-Objekt steuern. Zum Initiieren einer lokalen Transaktion steht Ihnen die `BeginTransaction`-Methode zur Verfügung. Nachdem Sie eine Transaktion gestartet haben, können Sie mit der `Transaction`-Eigenschaft eines `Command`-Objekts einen Befehl in dieser Transaktion eintragen. Dann können Sie für Änderungen an der Datenquelle auf Grundlage des Erfolgs oder Fehlschlags der Komponenten der Transaktion einen Commit oder Rollback ausführen.  
@@ -29,7 +29,7 @@ Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)
 > [!NOTE]
 >  Die `EnlistDistributedTransaction`-Methode darf nicht für eine lokale Transaktion verwendet werden.  
   
- Der Gültigkeitsbereich der Transaktion ist auf die Verbindung beschränkt. Im folgenden Beispiel wird eine explizite Transaktion ausgeführt, die aus zwei separaten Befehlen im `try`-Block besteht. Die Befehle führen INSERT-Anweisungen für die Production.ScrapReason-Tabelle in der SQL Server AdventureWorks-Beispieldatenbank, die ein Commit ausgeführt werden, wenn keine Ausnahmen ausgelöst werden. Wenn eine Ausnahme ausgelöst wird, führt der Code im `catch`-Block einen Rollback für die Transaktion aus. Wenn die Transaktion abgebrochen oder die Verbindung geschlossen wird, bevor die Transaktion beendet wurde, wird automatisch ein Rollback für die Transaktion ausgeführt.  
+ Der Gültigkeitsbereich der Transaktion ist auf die Verbindung beschränkt. Im folgenden Beispiel wird eine explizite Transaktion ausgeführt, die aus zwei separaten Befehlen im `try`-Block besteht. Die Befehle führen INSERT-Anweisungen für die Production.ScrapReason-Tabelle in der SQL Server AdventureWorks-Beispieldatenbank, die ein Commit ausgeführt wird, wenn keine Ausnahmen ausgelöst werden. Wenn eine Ausnahme ausgelöst wird, führt der Code im `catch`-Block einen Rollback für die Transaktion aus. Wenn die Transaktion abgebrochen oder die Verbindung geschlossen wird, bevor die Transaktion beendet wurde, wird automatisch ein Rollback für die Transaktion ausgeführt.  
   
 ## <a name="example"></a>Beispiel  
  Führen Sie diese Schritte aus, um eine Transaktion auszuführen:  

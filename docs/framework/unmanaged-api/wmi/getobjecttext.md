@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24ba4b37cc8221df4e018d172996c0910ec07f7d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459638"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754468"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText-Funktion
 Gibt eine Textrendering des Objekts in der Managed Object Format (MOF)-Syntax zurück.
@@ -45,40 +45,40 @@ HRESULT GetObjectText (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `lFlags`  
-[in] Normalerweise 0. Wenn `WBEM_FLAG_NO_FLAVORS` (oder 0 x 1) angegeben wird, sind die Qualifizierer ohne Weitergabe oder Flavor-Informationen enthalten.
+[in] Normalerweise 0. Wenn `WBEM_FLAG_NO_FLAVORS` (oder 0 x 1) angegeben wird, Qualifizierer werden ohne Weitergabe oder Art Informationen enthalten.
 
 `pstrObjectText`   
 [out] Ein Zeiger auf eine `null` auf Eintrag. Bei der Rückgabe eine neu zugeordnete `BSTR` , der eine MOF-Syntax die Darstellung des Objekts enthält.  
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Ein allgemeiner Fehler ist aufgetreten. |
+|`WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::GetObjectText](https://msdn.microsoft.com/library/aa391448(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) Methode.
 
-Der MOF-Text zurückgegeben, enthält nicht alle Informationen über das Objekt, aber nur genügend Informationen für die MOF-Compiler, um das ursprüngliche Objekt neu erstellen zu können. Beispielsweise sind keine weitergegebene Qualifizierer oder die Eigenschaften der übergeordneten Klasse enthalten.
+Der MOF-Text zurückgegeben, enthält nicht alle Informationen über das Objekt, aber nur genügend Informationen für die MOF-Compiler, um das ursprüngliche Objekt neu erstellen zu können. Beispielsweise sind keine weitergegebenen Qualifizierer oder die Eigenschaften der übergeordneten Klasse enthalten.
 
 Der folgende Algorithmus wird verwendet, um den Text der Parameter einer Methode zu rekonstruieren:
 
 1. Parameter werden in der Reihenfolge ihrer Bezeichnerwerte resequenced.
-1. Parameter, die als angegeben sind `[in]` und `[out]` einen einzelnen Parameter zusammengefasst werden.
+1. Parameter, die als angegeben sind `[in]` und `[out]` werden in einem einzigen Parameter kombiniert.
  
-`pstrObjectText` muss ein Zeiger auf eine `null` beim Aufruf der Funktion ist; es muss nicht zeigen Sie auf eine Zeichenfolge, die vor dem Methodenaufruf gültig ist, da der Zeiger wird nicht aufgehoben werden.
+`pstrObjectText` muss ein Zeiger auf eine `null` , wenn die Funktion aufgerufen wird; es muss auf eine Zeichenfolge, die vor dem Methodenaufruf gültig ist, da der Zeiger nicht freigegeben wird, nicht zu verweisen.
 
 ## <a name="requirements"></a>Anforderungen  
-**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

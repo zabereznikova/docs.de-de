@@ -1,6 +1,6 @@
 ---
 title: ExecNotificationQueryWmi-Funktion (Referenz zur nicht verwalteten API)
-description: Die ExecNotificationQueryWmi-Funktion führt eine Abfrage aus, um Ereignisse zu empfangen.
+description: ExecNotificationQueryWmi-Funktion führt eine Abfrage, um Ereignisse zu empfangen.
 ms.date: 11/06/2017
 api_name:
 - ExecNotificationQueryWmi
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462415"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754466"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi-Funktion
-Führt eine Abfrage aus, um Ereignisse zu empfangen. Der Aufruf sofort zurückgegeben, und der Aufrufer den zurückgegebenen Enumerator für Ereignisse beim Eintreffen Abfragen kann. Den zurückgegebenen Enumerator freigeben, wird die Abfrage abgebrochen.  
+Führt eine Abfrage zum Empfangen von Ereignissen. Der Aufruf sofort zurückgegeben, und der Aufrufer Abfragen kann des zurückgegebenen Enumerators für Ereignisse, deren eintreffen. Den zurückgegebenen Enumerator freigegeben wird, bricht die Abfrage ab.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -55,18 +55,18 @@ HRESULT ExecNotificationQueryWmi (
 [in] Der Text der Abfrage. Dieser Parameter darf nicht sein `null`.
 
 `lFlags`   
-[in] Eine Kombination der folgenden zwei Flags, die das Verhalten dieser Funktion zu beeinflussen. Diese Werte werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code. 
+[in] Eine Kombination der folgenden zwei Flags, die das Verhalten dieser Funktion zu beeinflussen. Diese Werte werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code. 
 
 | Konstante | Wert  | Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Das Flag wird halbsynchrone aufgerufen. Wenn dieses Flag nicht festgelegt ist, schlägt der Aufruf fehl. Grund hierfür ist Ereignisse kontinuierlich, stammen, was bedeutet, dass der Benutzer den zurückgegebenen Enumerator abrufen muss. Dieser Aufruf auf unbestimmte Zeit blockiert ist, die nicht möglich. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Die Funktion gibt einen Enumerator Vorwärtscursor. In der Regel nur vorwärts Enumeratoren werden schneller ausgeführt und belegen weniger Speicher als konventionelle Enumeratoren, aber es nicht möglich, dass Aufrufe [Klon](clone.md). |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Das Flag wird halbsynchron aufgerufen. Wenn dieses Flag nicht festgelegt ist, schlägt der Aufruf fehl. Grund hierfür ist Ereignisse kontinuierlich stammen, was bedeutet, dass der Benutzer den zurückgegebenen Enumerator abrufen muss. Dieser Aufruf auf unbestimmte Zeit blockiert wird, die unmöglich. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Die Funktion gibt einen Enumerator vorwärts gerichtete. In der Regel vorwärts-Enumeratoren sind schneller, und verwenden Sie weniger Arbeitsspeicher als konventionelle Enumeratoren, aber sie ermöglichen keine Aufrufe von [Klon](clone.md). |
 
 `pCtx`  
-[in] In der Regel wird dieser Wert ist `null`. Andernfalls ist ein Zeiger auf ein ["IWbemContext"](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) -Instanz, die vom Anbieter verwendet werden kann, das die angeforderte Ereignisse bereitstellt. 
+[in] Dieser Wert in der Regel ist `null`. Andernfalls wird ein Zeiger auf ein [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) -Instanz, die vom Anbieter verwendet werden kann, die die angeforderte Ereignisse bereitstellt. 
 
 `ppEnum`  
-[out] Wenn kein Fehler auftritt, empfängt den Zeiger auf den Enumerator, der den Aufrufer beim Abrufen von den Instanzen im Resultset der Abfrage ermöglicht. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
+[out] Wenn kein Fehler auftritt, empfängt den Zeiger auf der Enumerator, der dem Aufrufer zum Abrufen von Instanzen im Resultset der Abfrage ermöglicht. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
 
 `authLevel`  
 [in] Die Autorisierungsebene.
@@ -74,50 +74,50 @@ HRESULT ExecNotificationQueryWmi (
 `impLevel` [in] Die Ebene des Identitätswechsels.
 
 `pCurrentNamespace`   
-[in] Ein Zeiger auf ein [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) -Objekt, das den aktuellen Namespace darstellt.
+[in] Ein Zeiger auf ein [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) -Objekt, das den aktuellen Namespace darstellt.
 
 `strUser`   
-[in] Der Benutzername. Finden Sie unter der [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
+[in] Der Benutzername. Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
 
 `strPassword`   
-[in] Das Kennwort. Finden Sie unter der [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
+[in] Das Kennwort. Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
 
 `strAuthority`   
-[in] Der Domänenname des Benutzers. Finden Sie unter der [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
+[in] Der Domänenname des Benutzers. Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0 x 80041003 | Der Benutzer keine Berechtigung zum Anzeigen, eine oder mehrere Klassen, die die Funktion zurückgeben kann. |
-| `WBEM_E_FAILED` | 0 x 80041001 | Nicht angegebener Fehler ist aufgetreten. |
+| `WBEM_E_FAILED` | 0 x 80041001 | Ein Unbekannter Fehler aufgetreten. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
 | `WBEM_E_INVALID_CLASS` | 0 x 80041010 | Die Abfrage gibt eine Klasse, die nicht vorhanden ist. |
-| `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Zu viele mit einfacher Genauigkeit in die Übermittlung von Ereignissen wurde angefordert. Eine größere Abruf Toleranz muss angegeben werden. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Die Abfrage Requess kann mehr Informationen als Windows-Verwaltung bereitstellen. Dies `HRESULT` wird zurückgegeben, wenn ein Ereignis in einer Anforderung zum Abrufen aller Objekte in einem Namespace Abfrageergebnisse. |
-| `WBEM_E_INVALID_QUERY` | 0x80041017 | Die Abfrage hat einen Syntaxfehler. |
+| `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Zu viel Genauigkeit bei der Übermittlung von Ereignissen wurde angefordert. Eine größere Abruf Toleranz muss angegeben werden. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0 x 80042001 | Die Abfrage Requess kann mehr Informationen als Windows-Verwaltung bereitstellen. Dies `HRESULT` wird zurückgegeben, wenn ein Event-in einer Anforderung zum Abrufen aller Objekte in einem Namespace Abfrageergebnisse. |
+| `WBEM_E_INVALID_QUERY` | 0x80041017 | Die Abfrage musste ein Syntaxfehler aufgetreten. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | Die angeforderte Abfragesprache wird nicht unterstützt. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Die Abfrage ist zu komplex. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI wurde wahrscheinlich beendet und neu gestartet. Rufen Sie [ConnectServerWmi](connectserverwmi.md) erneut aus. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Der Remoteprozeduraufruf (RPC)-Link zwischen dem aktuellen Prozess und die WMI-ausgefallen ist. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Der Remoteprozeduraufruf-Remoteprozeduraufruf (RPC)-Link zwischen dem aktuellen Prozess und die WMI-hat Fehler. |
 | `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | Die Abfrage kann nicht analysiert werden. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemServices::ExecNotificationQuery](https://msdn.microsoft.com/library/aa392105(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemServices::ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) Methode.
 
-Nachdem die Funktion zurückgibt, der Aufrufer in regelmäßigen Abständen übergibt das zurückgegebene `ppEnum` -Objekt an die [Weiter](next.md) Funktion, um festzustellen, ob alle Ereignisse verfügbar sind.
+Nachdem die Funktion zurückgibt, der Aufrufer in regelmäßigen Abständen übergibt das zurückgegebene `ppEnum` -Objekt an die [Weiter](next.md) Funktion, um festzustellen, ob alle Ereignisse zur Verfügung stehen.
 
-Begrenzt die Anzahl der `AND` und `OR` Schlüsselwörter, die in der WQL-Abfragen verwendet werden können. Große Anzahl von WQL Schlüsselwörter in eine komplexe Abfrage kann dazu führen, dass WMI zurückzugebenden der `WBEM_E_QUOTA_VIOLATION` (oder 0x8004106c) Fehlercode als ein `HRESULT` Wert. Das Limit von WQL-Schlüsselwörter, hängt davon ab, wie komplex die Abfrage ist.
+Bestehen Einschränkungen in Bezug auf die Anzahl der `AND` und `OR` Schlüsselwörter, die in WQL-Abfragen verwendet werden können. Große Anzahl von WQL-Schlüsselwörter, die verwendet werden, in eine komplexe Abfrage kann dazu führen, dass WMI Zurückgeben der `WBEM_E_QUOTA_VIOLATION` (oder 0x8004106c) Fehlercode als ein `HRESULT` Wert. Das Limit von WQL-Schlüsselwörter, hängt davon ab, wie komplex die Abfrage ist.
 
-Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, durch Aufrufen der [GetErrorInfo](geterrorinfo.md) Funktion.
+Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, durch den Aufruf der [GetErrorInfo](geterrorinfo.md) Funktion.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

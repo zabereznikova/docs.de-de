@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429500"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754453"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream-Methode
-Erstellt einen Stream mit dem angegebenen Namen und das Format an.  
+Erstellt einen Datenstrom mit dem angegebenen Namen und Format.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,16 +51,16 @@ HRESULT CreateStream (
  [in] Das Format der Datei, die gestreamt werden.  
   
  `dwFormatFlags`  
- [in] Format-spezifische Flags in Fusion.idl definiert sind.  
+ [in] Formatspezifische-Flags in Fusion.idl definiert sind.  
   
  `ppIStream`  
- [out] Ein Zeiger auf die Adresse des zurückgegebenen [IStream](https://msdn.microsoft.com/library/aa380034.aspx) Instanz.  
+ [out] Ein Zeiger auf die Adresse des zurückgegebenen [IStream](/windows/desktop/api/objidl/nn-objidl-istream) Instanz.  
   
  `puliMaxSize`  
  [in, optional] Die maximale Größe des Streams verweist `ppIStream`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
