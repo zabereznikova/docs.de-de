@@ -2,12 +2,12 @@
 title: Verbindungszeichenfolgen
 ms.date: 03/30/2017
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: ac2c618272044ac9aaaba697f6583c9a814aa79f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ac9c3b3b0fce4d6b7e0eb74e23c07c82faf9f722
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766984"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792418"
 ---
 # <a name="connection-strings"></a>Verbindungszeichenfolgen
 Eine Verbindungszeichenfolge enthält Initialisierungsinformationen, die als Parameter von einem Datenanbieter an eine Datenquelle übergeben werden. Die Syntax ist abhängig vom Datenanbieter, und die Verbindungszeichenfolge wird beim Versuch analysiert, eine Verbindung herzustellen. Von Entity Framework verwendete Verbindungszeichenfolgen enthalten Informationen zum Herstellen einer Verbindung mit dem zugrunde liegenden ADO.NET-Datenanbieter, der Entity Framework unterstützt. Sie enthalten auch Informationen zu den erforderlichen Modell- und Zuordnungsdateien.  
@@ -30,7 +30,7 @@ Eine Verbindungszeichenfolge enthält Initialisierungsinformationen, die als Par
 |`Metadata`|Erforderlich, wenn das Schlüsselwort `Name` nicht angegeben ist. Eine durch senkrechte Striche getrennte Liste von Verzeichnissen, Dateien und Ressourcenspeicherorten, die nach Metadaten und Mappinginformationen durchsucht werden sollen. Im Folgenden finden Sie ein Beispiel dazu:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Leerzeichen zu beiden Seiten des senkrechten Strichs werden ignoriert.<br /><br /> Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.|  
 |`Name`|Der Verbindungsname kann von der Anwendung optional in einer Anwendungskonfigurationsdatei angegeben werden, die die erforderlichen Verbindungszeichenfolgen-Werte mit den Schlüsselwort-Wert-Paaren enthält. In diesem Fall können diese nicht direkt in der Verbindungszeichenfolge bereitgestellt werden. Das Schlüsselwort `Name` ist in einer Konfigurationsdatei nicht zulässig.<br /><br /> Wenn das Schlüsselwort `Name` in der Verbindungszeichenfolge nicht eingefügt wurde, ist für das Provider-Schlüsselwort ein nicht leerer Wert erforderlich.<br /><br /> Dieses Schlüsselwort und alle anderen Schlüsselwörter für Verbindungszeichenfolgen schließen sich gegenseitig aus.|  
   
- Im folgenden ist ein Beispiel für eine Verbindungszeichenfolge für die [AdventureWorks Sales-Modell](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) in der Anwendungskonfigurationsdatei gespeichert:  
+ Folgendes ist ein Beispiel für eine Verbindungszeichenfolge für die [AdventureWorks Sales-Modell](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) in der Anwendungskonfigurationsdatei gespeichert:  
   
   
   
@@ -47,7 +47,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |Option|Beschreibung|  
 |-|-|  
-|`assemblyFullName`|Der vollständige Name einer Assembly mit der eingebetteten Ressource. Der Name besteht wie folgt aus dem einfachen Namen, dem Versionsnamen, der unterstützten Kultur und dem öffentlichen Schlüssel:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Ressourcen können in jede Assembly eingebettet werden, auf die von der Anwendung zugegriffen werden kann.<br /><br /> Wenn Sie einen Platzhalter angeben (\*) für `assemblyFullName`, sucht die Entity Framework-Laufzeit in folgenden Speicherorten und in dieser Reihenfolge nach Ressourcen:<br /><br /> 1.  Die aufrufende Assembly.<br />2.  Die Assemblys, auf die verwiesen wird.<br />3.  Die Assemblys im BIN-Verzeichnis einer Anwendung.<br /><br /> Wenn sich die Dateien nicht in einem dieser Speicherorte befinden, wird eine Ausnahme ausgelöst. **Hinweis:** bei Verwendung von Platzhalterzeichen (*) hat das Entity Framework über allen Assemblys nach Ressourcen mit entsprechendem Namen gesucht werden soll. Wenn anstelle des Platzhalters der Assemblyname eingegeben wird, verbessert sich die Suchleistung.|  
+|`assemblyFullName`|Der vollständige Name einer Assembly mit der eingebetteten Ressource. Der Name besteht wie folgt aus dem einfachen Namen, dem Versionsnamen, der unterstützten Kultur und dem öffentlichen Schlüssel:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Ressourcen können in jede Assembly eingebettet werden, auf die von der Anwendung zugegriffen werden kann.<br /><br /> Wenn Sie ein Platzhalterzeichen angeben (\*) für `assemblyFullName`, die Entity Framework-Laufzeit wird nach Ressourcen in den folgenden Speicherorten und in der folgenden Reihenfolge gesucht:<br /><br /> 1.  Die aufrufende Assembly.<br />2.  Die Assemblys, auf die verwiesen wird.<br />3.  Die Assemblys im BIN-Verzeichnis einer Anwendung.<br /><br /> Wenn sich die Dateien nicht in einem dieser Speicherorte befinden, wird eine Ausnahme ausgelöst. **Hinweis:** bei Verwendung von Platzhalterzeichen (*) hat das Entity Framework, allen Assemblys für Ressourcen, mit dem richtigen Namen zu suchen. Wenn anstelle des Platzhalters der Assemblyname eingegeben wird, verbessert sich die Suchleistung.|  
 |`resourceName`|Der Name der enthaltenen Ressource, z. B. AdvendtureWorksModel.csdl. Die Metadatendienste suchen nur nach Dateien oder Ressourcen mit folgenden Erweiterungen: CSDL, SSDL oder MSL. Wenn `resourceName` nicht angegeben wurde, werden alle Metadatenressourcen geladen. Die Ressourcen sollten innerhalb einer Assembly eindeutige Namen haben. Wenn in der Assembly mehrere Dateien mit gleichem Namen in verschiedenen Verzeichnissen definiert sind, muss für den `resourceName` die Ordnerstruktur vor dem Ressourcennamen angegeben werden, z. B. Ordnername.Dateiname.csdl.<br /><br /> `resourceName` ist nicht erforderlich, wenn für `assemblyFullName` ein Platzhalter (*) angegeben wird.|  
   
 > [!NOTE]
@@ -79,7 +79,7 @@ res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.msl
 Metadata=res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/  
 ```  
   
- Im folgende Beispiel werden alle Ressourcen in den relativen Dateipfad plus geladen "Datadir\metadata\\" aus dem geladenen Assemblyspeicherort.  
+ Im folgende Beispiel werden alle Ressourcen in den relativen Pfad plus "Datadir\metadata\\" aus dem geladenen Assemblyspeicherort.  
   
 ```  
 Metadata=datadir\metadata\  
@@ -91,12 +91,12 @@ Metadata=datadir\metadata\
 Metadata=.\  
 ```  
   
-## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Unterstützung für die &#124;"DataDirectory"&#124; Ersatzzeichenfolge und die Webanwendung Root-Operator (~)  
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Unterstützung für die &#124;"DataDirectory"&#124; -Ersatzzeichenfolge und die Webanwendung Root-Operator (~)  
  `DataDirectory` und der ~-Operator in verwendet werden die <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> als Teil der `Metadata` und `Provider Connection String` Schlüsselwörter. Die <xref:System.Data.EntityClient.EntityConnection> leitet den `DataDirectory`- und den ~-Operator an <xref:System.Data.Metadata.Edm.MetadataWorkspace> bzw. den Speicheranbieter weiter.  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|Löst den relativen Pfad in Zuordnungs- und Metadatendateien auf. Dies ist der Wert, der durch die `AppDomain.SetData("DataDirectory", objValue)`-Methode festgelegt wird. Die `DataDirectory`-Ersatzzeichenfolge muss von senkrechten Strichen eingeschlossen sein, zwischen dem Namen und den senkrechten Strichen dürfen sich keine Leerzeichen befinden. Der `DataDirectory`-Name unterscheidet nicht zwischen Groß- und Kleinschreibung.<br /><br /> Wenn ein physisches Verzeichnis mit dem Namen DataDirectory`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` als ein Member der Metadatenpfadliste übergeben werden muss, sollten am Anfang und/oder am Ende des Namens Leerzeichen hinzugefügt werden, z. B.: . Eine ASP.NET-Anwendung löst &#124;"DataDirectory"&#124; , die "\<Anwendungsstamm > / App_data" Ordner.|  
+|`&#124;DataDirectory&#124;`|Löst den relativen Pfad in Zuordnungs- und Metadatendateien auf. Dies ist der Wert, der durch die `AppDomain.SetData("DataDirectory", objValue)`-Methode festgelegt wird. Die `DataDirectory` -Ersatzzeichenfolge muss von senkrechten Strichen eingeschlossen sein und dürfen sich keine Leerzeichen zwischen dem Namen und die Pipezeichen. Der `DataDirectory`-Name unterscheidet nicht zwischen Groß- und Kleinschreibung.<br /><br /> Weist auf ein physisches Verzeichnis mit dem Namen "DataDirectory" als Mitglied der Liste der Metadaten übergeben werden, wird eine oder beide Seiten des Namens Leerzeichen hinzugefügt. Beispiel: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Eine ASP.NET-Anwendung löst &#124;"DataDirectory"&#124; , die "\<Anwendungsstamm > / App_data" Ordner.|  
 |~|Löst zum Webanwendungsstamm auf. Wenn sich das Zeichen "~" am Anfang einer Zeichenfolge befindet, wird es stets als Stamm-Operator der Webanwendung (~) interpretiert, auch wenn es möglicherweise ein gültiges lokales Unterverzeichnis darstellt. Wenn auf solch ein lokales Unterverzeichnis verwiesen werden soll, sollte der Benutzer `./~` explizit übergeben.|  
   
  `DataDirectory` und der ~-Operator sollten nur am Anfang eines Pfads festgelegt werden, da sie an anderen Positionen nicht aufgelöst werden. Entity Framework versucht, `~/data` aufzulösen, behandelt `/data/~` jedoch wie einen physischen Pfad.  
