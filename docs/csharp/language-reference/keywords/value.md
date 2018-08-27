@@ -6,24 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: c8f808540385552f6222566f23251f6cbd6e86df
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 1e120d68fc4a42f24feb225f652c14525fde3d71
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959391"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931941"
 ---
-# <a name="value-c-reference"></a><span data-ttu-id="35b2e-102">value (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="35b2e-102">value (C# Reference)</span></span>
-<span data-ttu-id="35b2e-103">Das kontextabhängige Schlüsselwort `value` wird im Set-Accessor in normalen Eigenschaftendeklarationen verwendet.</span><span class="sxs-lookup"><span data-stu-id="35b2e-103">The contextual keyword `value` is used in the set accessor in ordinary property declarations.</span></span> <span data-ttu-id="35b2e-104">Es ähnelt einem Eingabeparameter einer Methode.</span><span class="sxs-lookup"><span data-stu-id="35b2e-104">It is similar to an input parameter on a method.</span></span> <span data-ttu-id="35b2e-105">Das Wort `value` verweist auf den Wert, den Clientcode der Eigenschaft zuweisen möchte.</span><span class="sxs-lookup"><span data-stu-id="35b2e-105">The word `value` references the value that client code is attempting to assign to the property.</span></span> <span data-ttu-id="35b2e-106">Im folgenden Beispiel verfügt `MyDerivedClass` über eine Eigenschaft mit dem Namen `Name`, die den Parameter `value` verwendet, um dem Unterstützungsfeld `name` eine neue Zeichenfolge zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="35b2e-106">In the following example, `MyDerivedClass` has a property called `Name` that uses the `value` parameter to assign a new string to the backing field `name`.</span></span> <span data-ttu-id="35b2e-107">Aus Sicht des Clientcodes ist der Vorgang als einfache Zuweisung geschrieben.</span><span class="sxs-lookup"><span data-stu-id="35b2e-107">From the point of view of client code, the operation is written as a simple assignment.</span></span>  
+# <a name="value-c-reference"></a><span data-ttu-id="d2192-102">value (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="d2192-102">value (C# Reference)</span></span>
+<span data-ttu-id="d2192-103">Das kontextabhängige Schlüsselwort `value` wird im Set-Accessor in normalen Eigenschaftendeklarationen verwendet.</span><span class="sxs-lookup"><span data-stu-id="d2192-103">The contextual keyword `value` is used in the set accessor in ordinary property declarations.</span></span> <span data-ttu-id="d2192-104">Es ähnelt einem Eingabeparameter einer Methode.</span><span class="sxs-lookup"><span data-stu-id="d2192-104">It is similar to an input parameter on a method.</span></span> <span data-ttu-id="d2192-105">Das Wort `value` verweist auf den Wert, den Clientcode der Eigenschaft zuweisen möchte.</span><span class="sxs-lookup"><span data-stu-id="d2192-105">The word `value` references the value that client code is attempting to assign to the property.</span></span> <span data-ttu-id="d2192-106">Im folgenden Beispiel verfügt `MyDerivedClass` über eine Eigenschaft mit dem Namen `Name`, die den Parameter `value` verwendet, um dem Unterstützungsfeld `name` eine neue Zeichenfolge zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="d2192-106">In the following example, `MyDerivedClass` has a property called `Name` that uses the `value` parameter to assign a new string to the backing field `name`.</span></span> <span data-ttu-id="d2192-107">Aus Sicht des Clientcodes ist der Vorgang als einfache Zuweisung geschrieben.</span><span class="sxs-lookup"><span data-stu-id="d2192-107">From the point of view of client code, the operation is written as a simple assignment.</span></span>  
   
  [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/value_1.cs)]  
   
- <span data-ttu-id="35b2e-108">Weitere Informationen zur Verwendung von `value` finden Sie unter [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md).</span><span class="sxs-lookup"><span data-stu-id="35b2e-108">For more information about the use of `value`, see [Properties](../../../csharp/programming-guide/classes-and-structs/properties.md).</span></span>  
+ <span data-ttu-id="d2192-108">Weitere Informationen zur Verwendung von `value` finden Sie unter [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md).</span><span class="sxs-lookup"><span data-stu-id="d2192-108">For more information about the use of `value`, see [Properties](../../../csharp/programming-guide/classes-and-structs/properties.md).</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="35b2e-109">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="35b2e-109">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="d2192-109">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="d2192-109">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="35b2e-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="35b2e-110">See Also</span></span>  
- [<span data-ttu-id="35b2e-111">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="35b2e-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="35b2e-112">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="35b2e-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="35b2e-113">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="35b2e-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="d2192-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d2192-110">See Also</span></span>
+
+- [<span data-ttu-id="d2192-111">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="d2192-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="d2192-112">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="d2192-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="d2192-113">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="d2192-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
