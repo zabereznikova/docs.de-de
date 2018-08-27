@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 55c1e79b9e8e26483c1b7374a755bf977129169b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d959c0717a3ef44dfc23c90d99ec7b83421efaa
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604405"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935950"
 ---
 # <a name="select-clause-visual-basic"></a>Select-Klausel (Visual Basic)
 Definiert das Ergebnis einer Abfrage an.  
@@ -32,28 +32,28 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  Erforderlich. Der Name des Felds in den Abfrageergebnissen zurückgegeben werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die `Select` -Klausel, um die Ergebnisse von einer Abfrage zurückzugebenden definieren. So können Sie entweder die Member des ein neuer anonymer Typ definieren, die von einer Abfrage erstellt wird, oder für die Member eines benannten Typs gelten, die von einer Abfrage zurückgegeben wird. Die `Select` -Klausel ist nicht für eine Abfrage erforderlich. Wenn kein `Select` -Klausel angegeben ist, die Abfrage gibt einen Typ basierend auf alle Mitglieder der Bereichsvariablen für den aktuellen Bereich zurück. Weitere Informationen finden Sie unter [Anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Wenn eine Abfrage einen benannten Typ erstellt, wird ein Ergebnis vom Typ zurückgegeben <xref:System.Collections.Generic.IEnumerable%601> , in dem `T` der erstellte Typ ist.  
+ Sie können die `Select` -Klausel, um zu definieren, die aus einer Abfrage zurückzugebenden Ergebnisse auf. Dadurch können Sie entweder die Mitglieder der neuen anonymen Typ definieren, die von einer Abfrage erstellt wird, oder die Member eines benannten Typs als Ziel, die von einer Abfrage zurückgegeben wird. Die `Select` Klausel ist nicht für eine Abfrage erforderlich. Wenn kein `Select` -Klausel angegeben ist, gibt die Abfrage einen Typ basierend auf alle Mitglieder der Bereichsvariablen für den aktuellen Bereich zurück. Weitere Informationen finden Sie unter [Anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Wenn eine Abfrage einen benannten Typ erstellt wird, gibt es ein Ergebnis vom Typ <xref:System.Collections.Generic.IEnumerable%601> , in denen `T` der erstellte Typ ist.  
   
- Die `Select` -Klausel kann alle Variablen im aktuellen Bereich verweisen. Dies schließt Bereichsvariablen der `From` -Klausel (oder `From` Klauseln). Es enthält auch neue Variablen mit einem Alias erstellt die `Aggregate`, `Let`, `Group By`, oder `Group Join` Klauseln oder Variablen von einer früheren `Select` -Klausel in der Abfrageausdruck. Die `Select` -Klausel kann auch statische Werte enthalten. Z. B. das folgende Codebeispiel enthält einen Abfrageausdruck, in dem die `Select` -Klausel definiert das Abfrageergebnis als ein neuer anonymer Typ mit vier Mitglieder: `ProductName`, `Price`, `Discount`, und `DiscountedPrice`. Die `ProductName` und `Price` Elementwerten stammen aus der Produkt-Bereichsvariablen, die in definiert ist die `From` Klausel. Die `DiscountedPrice` Elementwert wird berechnet, der `Let` Klausel. Die `Discount` angehört, einen statischen Wert.  
+ Die `Select` -Klausel kann auf alle Variablen im aktuellen Bereich verweisen. Dies schließt Bereichsvariablen, die der `From` Klausel (oder `From` Klauseln). Es enthält auch neuen Variablen mit einem Alias erstellt die `Aggregate`, `Let`, `Group By`, oder `Group Join` -Klauseln oder Variablen aus einer vorherigen `Select` -Klausel in der Abfrageausdruck. Die `Select` -Klausel kann auch statische Werte enthalten. Z. B. das folgende Codebeispiel enthält einen Abfrageausdruck, in dem die `Select` -Klausel definiert das Abfrageergebnis als ein neuer anonymer Typ mit vier Mitglieder: `ProductName`, `Price`, `Discount`, und `DiscountedPrice`. Die `ProductName` und `Price` Werte stammen aus der Product-Range-Variable, die in definiert ist die `From` Klausel. Die `DiscountedPrice` Memberwert wird berechnet, der `Let` Klausel. Die `Discount` Member ist ein statischer Wert.  
   
  [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
   
- Die `Select` -Klausel führt einen neuen Satz von Bereichsvariablen für nachfolgende Abfrageklauseln und vorherigen Bereichsvariablen sind nicht mehr im Gültigkeitsbereich. Der letzte `Select` -Klausel in einem Abfrageausdruck bestimmt den Rückgabewert der Abfrage. Die folgende Abfrage gibt z. B. das Unternehmen Name "und" Order ID für jede kundenbestellung für die die Summe 500 übersteigt. Die erste `Select` -Klausel kennzeichnet die Bereichsvariablen für die `Where` -Klausel und das zweite `Select` Klausel. Die zweite `Select` -Klausel kennzeichnet die Werte, die von der Abfrage als ein neuer anonymer Typ zurückgegeben.  
+ Die `Select` Klausel führt einen neuen Satz von Bereichsvariablen für nachfolgende Abfrageklauseln und vorherigen Bereichsvariablen sind nicht mehr im Gültigkeitsbereich. Die letzte `Select` -Klausel in einem Abfrageausdruck bestimmt den Rückgabewert der Abfrage. Z. B. gibt die folgende Abfrage das Unternehmen und Order-ID für jede kundenbestellung für die die Summe 500 übersteigt. Die erste `Select` -Klausel kennzeichnet die Bereichsvariablen für die `Where` -Klausel und das zweite `Select` Klausel. Die zweite `Select` -Klausel gibt die Werte, die von der Abfrage als ein neuer anonymer Typ zurückgegeben.  
   
  [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
   
- Wenn die `Select` -Klausel kennzeichnet ein einzelnes Element zurückgeben, der Abfrageausdruck gibt eine Auflistung des Typs dieses einzelnen Elements zurück. Wenn die `Select` -Klausel kennzeichnet mehrere Elemente zurückgegeben, der Abfrageausdruck gibt eine Auflistung ein neuer anonymer Typ, der auf Basis der ausgewählten Elemente zurück. Beispielsweise die folgenden beiden Abfragen zurückgeben Auflistungen von zwei verschiedenen Typen auf Grundlage der `Select` Klausel. Die erste Abfrage gibt eine Auflistung von Firmennamen als Zeichenfolgen zurück. Die zweite Abfrage gibt eine Auflistung von `Customer` Objekte, die mit den Firmennamen und Adressinformationen aufgefüllt.  
+ Wenn die `Select` -Klausel kennzeichnet ein einzelnes Element zurückgeben, der Abfrageausdruck gibt eine Auflistung vom Typ des einzelnen Elements zurück. Wenn die `Select` -Klausel kennzeichnet die mehrere Elemente zurückgegeben, der Abfrageausdruck gibt eine Auflistung ein neuer anonymer Typ, der auf Basis der ausgewählten Elemente zurück. Beispielsweise die folgenden beiden Abfragen zurück Auflistungen von zwei unterschiedliche Typen auf Grundlage der `Select` Klausel. Die erste Abfrage gibt eine Auflistung von Firmennamen einfügen als Zeichenfolgen zurück. Die zweite Abfrage gibt eine Auflistung von `Customer` Objekte, die mit dem Firmennamen und Informationen zur Adresse aufgefüllt.  
   
  [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Abfrage Ausdruck verwendet eine `From` -Klausel, um eine Bereichsvariable deklarieren `cust` für die `customers` Auflistung. Die `Select` -Klausel wählt die Kundennamen- und ID-Wert, und füllt die `CompanyName` und `CustomerID` Spalten der neuen Bereichsvariablen. Die `For Each` -Anweisung durchläuft alle zurückgegebenen Objekte und zeigt die `CompanyName` und `CustomerID` Spalten für jeden Datensatz.  
+ Der folgende Abfrageausdruck verwendet eine `From` -Klausel, um eine Bereichsvariable deklarieren `cust` für die `customers` Auflistung. Die `Select` -Klausel wählt das Customer Name und ID-Wert, und füllt die `CompanyName` und `CustomerID` Spalten der neuen Bereichsvariablen. Die `For Each` -Anweisung durchläuft alle zurückgegebenen Objekte und zeigt die `CompanyName` und `CustomerID` Spalten für jeden Datensatz.  
   
  [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Abfragen](../../../visual-basic/language-reference/queries/queries.md)  
+ [Abfragen](../../../visual-basic/language-reference/queries/index.md)  
  [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Where-Klausel](../../../visual-basic/language-reference/queries/where-clause.md)  
  [Order By-Klausel](../../../visual-basic/language-reference/queries/order-by-clause.md)  

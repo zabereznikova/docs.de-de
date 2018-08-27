@@ -3,11 +3,11 @@ title: Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))
 ms.date: 07/20/2015
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
 ms.openlocfilehash: 5d2e40da26f30a0ece570acf2fd25684d1cba40f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331086"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925584"
 ---
 # <a name="querying-xml-trees-c"></a>Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))
 Dieser Abschnitt enthält Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen.  
@@ -18,7 +18,7 @@ Dieser Abschnitt enthält Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqlte
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|description|  
+|Thema|Beschreibung |  
 |-----------|-----------------|  
 |[Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|Enthält allgemeine Beispiele für das Abfragen von XML-Strukturen.|  
 |[Projections and Transformations (LINQ to XML) (C#) (Projektionen und Transformationen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|Enthält allgemeine Beispiele für das Projizieren aus und das Transformieren in XML-Strukturen.|  

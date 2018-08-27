@@ -3,18 +3,18 @@ title: Parsen von XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
 ms.openlocfilehash: 876cfdf7bd5a82aba75d456d6d5cda57e080fdf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321703"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933981"
 ---
 # <a name="parsing-xml-c"></a>Parsen von XML (C#)
 In den Themen in diesem Abschnitt wird das Analysieren von XML-Dokumenten beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|description|  
+|Thema|Beschreibung |  
 |-----------|-----------------|  
 |[Vorgehensweise: Parsen einer Zeichenfolge (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-parse-a-string.md)|Zeigt, wie eine Zeichenfolge zum Erstellen einer XML-Struktur analysiert werden kann.|  
 |[Vorgehensweise: Laden von XML aus einer Datei (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|Zeigt, wie mit der <xref:System.Xml.Linq.XElement.Load%2A>-Methode XML-Code aus einem URI geladen werden kann.|  

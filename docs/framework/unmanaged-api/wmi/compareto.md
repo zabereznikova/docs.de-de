@@ -1,6 +1,6 @@
 ---
-title: CompareTo-Funktion (Referenz zur nicht verwalteten API)
-description: Die CompareTo-Funktion vergleicht ein Objekt in ein anderes WMI-Objekt.
+title: CompareTo-Funktionen (Referenz zur nicht verwalteten API)
+description: Die CompareTo-Funktion vergleicht ein Objekt in einen anderen WMI-Objekt.
 ms.date: 11/06/2017
 api_name:
 - CompareTo
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db4431da90842f4f96a0f09a2f28dc473d956ee3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bde25ae7455dd7fe35fe1a0a43bb2a6b560c0e3e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460407"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935007"
 ---
 # <a name="compareto-function"></a>CompareTo-Funktion
 Vergleicht ein Objekt in ein anderes Windows-Management-Objekt.  
@@ -45,51 +45,51 @@ HRESULT CompareTo (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `flags`  
-[in] Eine bitweise Kombination der Flags, die angeben, die Merkmale für den Vergleich zu berücksichtigen. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
+[in] Eine bitweise Kombination der Flags, die angeben, die Merkmale für den Vergleich zu berücksichtigen. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
 
 `pCompareTo`  
 
-[in] Das zu vergleichende Objekt. `pcompareTo` muss ein gültiger [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) -Instanz; er darf nicht `null`.
+[in] Das Objekt für den Vergleich. `pcompareTo` muss ein gültiger [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz ist nicht möglich `null`.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Nicht angegebener Fehler ist aufgetreten. |
+| `WBEM_E_FAILED` | 0 x 80041001 | Ein Unbekannter Fehler aufgetreten. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Einen zweiten Aufruf von `BeginEnumeration` wurde versucht, ohne einen zwischenzeitlichen Aufruf von [ `EndEnumeration` ](endenumeration.md). |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Einen zweiten Aufruf von `BeginEnumeration` wurde ohne einen zwischenzeitlichen Aufruf versucht [ `EndEnumeration` ](endenumeration.md). |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Die Objekte unterscheiden. |
 | `WBEM_S_SAME` | 0 | Die Objekte sind gleich basierend auf die Vergleichsflags. |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::CompareTo](https://msdn.microsoft.com/library/aa391437(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) Methode.
 
-Die Flags, die als übergeben werden können die `lEnumFlags` Argument definiert werden, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code. Sie können die einzelnen Eigenschaften Beteiligten im Vergleich angeben, indem eine bitweise Kombination der folgenden Flags angeben:
+Die Flags, die als übergeben werden können die `lEnumFlags` Argument definiert werden, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code. Sie können die einzelnen Eigenschaften, die im Vergleich zum angeben, indem eine bitweise Kombination der folgenden Flags angeben:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Ignorieren Sie die Quelle (die Server und der Namespace, dem sie stammt). |
+| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Ignorieren Sie die Quelle (die Server und der Namespace, die von dem sie stammen). |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Ignorieren Sie alle Qualifizierer (einschließlich **Schlüssel** und **dynamische**) |
-| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Ignorieren Sie die Standardwerte der Eigenschaften. Dieses Flag gilt nur für Vergleich von Klassen. |
-| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Ignorieren Sie Qualifizierern. Dieses Flag immer noch Qualifizierer Abhängigkeitslinks berücksichtigen, aber ignoriert Flavor Unterschiede wie Weitergabe Regeln und Überschreiben von Einschränkungen. |
-| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignorieren Sie Groß-/Kleinschreibung, in das Vergleichen von Zeichenfolgenwerten. Dies gilt sowohl für Zeichenfolgen und Qualifiziererwerte. Beim Vergleich von Eigenschaften-und Qualifizierer wird immer Groß-/Kleinschreibung beachtet, unabhängig davon, ob dieses Flag festgelegt ist. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Angenommen Sie, die zu vergleichenden Objekte Instanes derselben Klasse sind. Daher wird dieses Flag nur Zielinstanzen zu verglichen. Verwenden Sie diese Flags, um die Leistung zu optimieren. Wenn die Objekte nicht von derselben Klasse sind, sind die Ergebnisse nicht definiert. |
+| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Ignorieren Sie die Standardwerte von Eigenschaften. Dieses Flag gilt nur für Vergleich von Klassen verwendet werden. |
+| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Varianten von Qualifizierern ignoriert werden. Dieses Flag immer noch berücksichtigt Qualifizierer, aber ignoriert Flavor Unterschiede, z. B. weitergaberegeln und Einschränkungen beim Überschreiben. |
+| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignorieren von Groß-/Kleinschreibung im Vergleichen von Zeichenfolgenwerten. Dies gilt sowohl für Zeichenfolgen und Qualifiziererwerte. Beim Vergleich von Eigenschaften-und Qualifizierernamen wird immer Groß-/Kleinschreibung beachtet, unabhängig davon, ob dieses Flag festgelegt ist. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Wird davon ausgegangen Sie, dass die verglichenen Objekte Instanes derselben Klasse sind. Daher wird dieses Flag nur instanzbezogenen Informationen verglichen. Verwenden Sie diese Flags zum Optimieren der Leistung. Wenn die Objekte nicht von derselben Klasse vorhanden sind, sind die Ergebnisse nicht definiert. |
 
-Oder Sie können einem einzelnen zusammengesetzten Flag wie folgt angeben:
+Oder Sie können einem einzigen zusammengesetzten Flag wie folgt angeben:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Berücksichtigen Sie alle Funktionen im Vergleich. |
+|`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Berücksichtigen Sie alle Features im Vergleich. |
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603911"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933866"
 ---
 # <a name="join-clause-visual-basic"></a>Join-Klausel (Visual Basic)
-Fasst zwei Auflistungen zu einer einzelnen Auflistung zusammen. Die Join-Operation wird basierend auf übereinstimmenden Schlüsseln und verwendet die `Equals` Operator.  
+Fasst zwei Auflistungen zu einer einzelnen Auflistung zusammen. Die Join-Operation wird auf Grundlage übereinstimmender Schlüssel und verwendet die `Equals` Operator.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,30 +31,30 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>Teile  
  `element`  
- Erforderlich. Die Steuerelementvariable für die zu verknüpfende Auflistung.  
+ Erforderlich. Die Steuerelementvariable für die Sammlung verknüpft wird.  
   
  `collection`  
- Erforderlich. Die Auflistung, die mit der Auflistung auf der linken Seite des kombiniert die `Join` Operator. Ein `Join` Klausel kann geschachtelt sein, in einer anderen `Join` -Klausel, oder in einem `Group Join` Klausel.  
+ Erforderlich. Die Auflistung, die mit der Auflistung auf der linken Seite des kombiniert die `Join` Operator. Ein `Join` -Klausel kann in einer anderen geschachtelt werden `Join` -Klausel oder in einem `Group Join` Klausel.  
   
  `joinClause`  
- Dies ist optional. Eine oder mehrere zusätzliche `Join` Klauseln weiter optimieren der Abfrage.  
+ Dies ist optional. Eine oder mehrere zusätzliche `Join` -Klauseln zum weiteren Optimieren der Abfrage.  
   
  `groupJoinClause`  
- Dies ist optional. Eine oder mehrere zusätzliche `Group Join` Klauseln weiter optimieren der Abfrage.  
+ Dies ist optional. Eine oder mehrere zusätzliche `Group Join` -Klauseln zum weiteren Optimieren der Abfrage.  
   
  `key1` `Equals` `key2`  
- Erforderlich. Identifiziert die Schlüssel für die zu verknüpfenden Auflistungen. Verwenden Sie die `Equals` Operator zum Vergleichen von Schlüsseln aus der zu verknüpfenden Auflistungen. Sie können die Join-Bedingungen kombinieren, mit der `And` Operator, um mehrere Schlüssel zu identifizieren. `key1` muss aus der Auflistung auf der linken Seite von der `Join` Operator. `key2` aus der Auflistung auf der rechten Seite des muss die `Join` Operator.  
+ Erforderlich. Bezeichnet die Schlüssel für die Auflistungen verknüpft wird. Verwenden Sie die `Equals` Operator zum Vergleichen von Schlüsseln aus den zu verknüpfenden Auflistungen. Sie können den Join-Bedingungen kombinieren, mit der `And` Operator, um mehrere Schlüssel zu identifizieren. `key1` aus der Auflistung auf der linken Seite des muss die `Join` Operator. `key2` aus der Auflistung auf der rechten Seite des muss die `Join` Operator.  
   
- Die in der Joinbedingung verwendeten Schlüssel können Ausdrücke sein, die mehr als ein Element aus der Auflistung enthalten. Jeder Schlüsselausdruck kann jedoch nur die Elemente aus der entsprechenden Auflistung enthalten.  
+ Die Schlüssel für die Join-Bedingung können Ausdrücke sein, die mehr als ein Element aus der Auflistung enthalten. Jedes Schlüssel-Ausdrucks kann jedoch nur die Elemente aus der entsprechenden Auflistung enthalten.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Join` Klausel Fasst zwei Auflistungen, die basierend auf übereinstimmenden Schlüsselwerten von zu verknüpfenden Auflistungen zusammen. Die resultierende Auflistung kann eine beliebige Kombination von Werten aus der Auflistung auf der linken Seite des enthalten die `Join` Operator und der Auflistung identifiziert, der `Join` Klausel. Die Abfrage gibt nur Ergebnisse für die die Bedingung angegeben werden, indem zurück die `Equals` Operator erfüllt ist. Dies ist gleichbedeutend mit einem `INNER JOIN` in SQL.  
+ Die `Join` Klausel Fasst zwei Auflistungen, die basierend auf übereinstimmenden Werte aus den zu verknüpfenden Auflistungen zusammen. Die resultierende Auflistung kann eine beliebige Kombination von Werten aus der Auflistung auf der linken Seite des enthalten die `Join` Operator und der Auflistung identifiziert, die der `Join` Klausel. Die Abfrage gibt nur Ergebnisse für die die Bedingung, durch angegeben die `Equals` Operator erfüllt ist. Dies ist äquivalent zu einer `INNER JOIN` in SQL.  
   
- Sie können mehrere `Join` Klauseln in einer Abfrage mindestens zwei Auflistungen zu einer einzigen Auflistung zu verknüpfen.  
+ Sie können mehrere `Join` Klauseln in einer Abfrage mindestens zwei Auflistungen in einer einzelnen Auflistung zu verknüpfen.  
   
- Ausführen ein implizites Joins zum Kombinieren von Auflistungen, ohne die `Join` Klausel. Um dies zu erreichen, fügen Sie mehrere `In` Klauseln in Ihre `From` Klausel, und geben Sie einen `Where` -Klausel, die die Schlüssel identifiziert, die Sie für den Join verwenden möchten.  
+ Sie können eine implizite Verknüpfung zum Kombinieren von Sammlungen ohne Ausführen der `Join` Klausel. Zu diesem Zweck fügen Sie mehrere `In` Klauseln in Ihrem `From` Klausel, und geben Sie einen `Where` -Klausel, die die Schlüssel identifiziert, die Sie für den Join verwenden möchten.  
   
- Sie können die `Group Join` -Klausel, um Auflistungen zu einer einzelnen hierarchischen Auflistung kombinieren. Dies ist z. B. eine `LEFT OUTER JOIN` in SQL.  
+ Sie können die `Group Join` -Klausel, um Auflistungen in einer einzelnen hierarchischen Auflistung zu kombinieren. Dies ist z. B. eine `LEFT OUTER JOIN` in SQL.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Codebeispiel führt eine implizite Verknüpfung, um eine Liste von Kunden mit ihrer Bestellungen zu kombinieren.  
@@ -62,11 +62,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_1.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird verknüpft zwei Auflistungen mithilfe der `Join` Klausel.  
+ Im folgenden Codebeispiel wird joins von zwei Auflistungen mithilfe der `Join` Klausel.  
   
  [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
   
- In diesem Beispiel wird die Ausgabe ähnlich der folgenden aus:  
+ In diesem Beispiel wird eine Ausgabe ähnlich der folgenden erzeugt:  
   
  `winlogon (968), Windows Logon`  
   
@@ -75,11 +75,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  `cmd (5136), Command Window`  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird verknüpft zwei Auflistungen mithilfe der `Join` -Klausel mit zwei Schlüsselspalten.  
+ Im folgenden Codebeispiel wird joins von zwei Auflistungen mithilfe der `Join` -Klausel mit zwei Spalten.  
   
  [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
   
- Im Beispiel wird die Ausgabe ähnlich der folgenden aus:  
+ Im Beispiel wird eine Ausgabe ähnlich der folgenden erzeugt:  
   
  `winlogon (968), Windows Logon, Priority = 13`  
   
@@ -89,7 +89,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Abfragen](../../../visual-basic/language-reference/queries/queries.md)  
+ [Abfragen](../../../visual-basic/language-reference/queries/index.md)  
  [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Group Join-Klausel](../../../visual-basic/language-reference/queries/group-join-clause.md)  

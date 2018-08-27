@@ -1,6 +1,6 @@
 ---
 title: BlessIWbemServices-Funktion (Referenz zur nicht verwalteten API)
-description: Die BlessIWbemServices-Funktion gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf eine Klasse IWbemServices zuzulassen.
+description: BlessIWbemServices-Funktion gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf eine Klasse IWbemServices zulassen.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59cb20f7ccfbd0b8f9d6026c9805468613818130
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a65c3c14507b2520c69875a1bc101ce826ace7ba
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458161"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934303"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices-Funktion
-Gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf den angegebenen zugelassen [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) Klasse.   
+Gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf den angegebenen zulassen [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) Klasse.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,7 +44,7 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>Parameter
 
 `pIWbemServices`  
-[in] Ein Zeiger auf die [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) Objekt für die Berechtigungen erforderlich sind.
+[in] Ein Zeiger auf die [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) Objekt für die Berechtigungen erforderlich sind.
 
 `strUser`  
 [in] Der Benutzername.
@@ -52,7 +52,7 @@ HRESULT BlessIWbemServices (
 `strPassword`  
 [in] Das zugeordnete Kennwort `strUser`.
 
-`strAuthority` [in] Der Domänenname des Benutzers. Finden Sie unter der [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
+`strAuthority` [in] Der Domänenname des Benutzers. Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
 
 `impLevel` [in] Die Ebene des Identitätswechsels.
 
@@ -60,18 +60,18 @@ HRESULT BlessIWbemServices (
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WinError.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *"Winerror.h"* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0 x 80070057 | Ein oder mehrere Argumente sind ungültig. |
 | `E_POINTER` | 0 x 80004003 | `pIWbemServices` ist `null`. | 
-| `E_FAIL` | 0x80000008 | Nicht angegebener Fehler ist aufgetreten. |
-| `E_OUTOFMEMORY` | 0x80000002 | Ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs verfügbar. | 
+| `E_FAIL` | 0x80000008 | Ein Unbekannter Fehler aufgetreten. |
+| `E_OUTOFMEMORY` | 0x80000002 | Es steht nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs zur Verfügung. | 
 | `S_OK` | 0 | Der Funktionsaufruf war erfolgreich. | 
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

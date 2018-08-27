@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1e1efd6db6efa3a0b85d7d7794be7d3728da8c85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557510"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931539"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Erweitern von Glasframe in eine WPF-Anwendung
-In diesem Thema veranschaulicht das Erweitern der [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] Glasframe in den Clientbereich des eine Windows Presentation Foundation (WPF)-Anwendung.  
+In diesem Thema veranschaulicht das Erweitern der [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] -Glasframe in den Clientbereich einer Windows Presentation Foundation (WPF)-Anwendung.  
   
 > [!NOTE]
 >  Dieses Beispiel funktioniert nur auf einem [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]-Computer, auf dem Desktop Window Manager (DWM) mit aktiviertem Glaseffekt ausgeführt wird. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic-Edition unterstützt den transparenten Glaseffekt nicht. Bereiche, die in der Regel mit dem transparenten Glaseffekt in anderen Editionen von [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] gerendert werden, werden als nicht transparent gerendert.  
@@ -62,10 +62,10 @@ public static extern int DwmExtendFrameIntoClientArea(
         End Function  
 ```  
   
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) ist die DWM-Funktion, die den Frame in den Clientbereich erweitert. Es werden zwei Parameter benötigt; ein Fensterhandle und eine [RÄNDER](https://msdn.microsoft.com/library/bb773244.aspx)-Struktur. [RÄNDER](https://msdn.microsoft.com/library/bb773244.aspx) wird verwendet, um den DWM zu zeigen, wie weit der Frame in den Clientbereich erweitert werden soll.  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) ist die DWM-Funktion, die den Frame in den Clientbereich erweitert. Es werden zwei Parameter benötigt; ein Fensterhandle und eine [RÄNDER](/windows/desktop/api/uxtheme/ns-uxtheme-_margins)-Struktur. [RÄNDER](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) wird verwendet, um den DWM zu zeigen, wie weit der Frame in den Clientbereich erweitert werden soll.  
   
 ## <a name="example"></a>Beispiel  
- Ein Fensterhandle muss abgerufen werden, damit die [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)-Funktion verwendet werden kann. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], das Fensterhandle abgerufen werden kann, aus der <xref:System.Windows.Interop.HwndSource.Handle%2A> Eigenschaft ein <xref:System.Windows.Interop.HwndSource>. Im folgenden Beispiel der Frame auf in den Clientbereich erweitert die <xref:System.Windows.FrameworkElement.Loaded> Ereignis des Fensters.  
+ Ein Fensterhandle muss abgerufen werden, damit die [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)-Funktion verwendet werden kann. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], das das Fensterhandle aus abgerufen werden kann die <xref:System.Windows.Interop.HwndSource.Handle%2A> Eigenschaft eine <xref:System.Windows.Interop.HwndSource>. Im folgenden Beispiel der Frame auf in den Clientbereich erweitert die <xref:System.Windows.FrameworkElement.Loaded> -Ereignis des Fensters.  
   
 ```csharp  
 void OnLoaded(object sender, RoutedEventArgs e)  
@@ -109,7 +109,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 ```  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt ein einfaches Fenster, in dem der Frame in den Clientbereich erweitert wird. Der Frame wird hinter dem oberen Rand, die die beiden enthält erweitert <xref:System.Windows.Controls.TextBox> Objekte.  
+ Das folgende Beispiel zeigt ein einfaches Fenster, in dem der Frame in den Clientbereich erweitert wird. Der Frame wird hinter dem oberen Rand, der die beiden enthält erweitert <xref:System.Windows.Controls.TextBox> Objekte.  
   
 ```xaml  
 <Window x:Class="SDKSample.Window1"  
@@ -150,6 +150,6 @@ void OnLoaded(object sender, RoutedEventArgs e)
  ![In eine WPF-Anwendung erweiterter Glasframe.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>Siehe auch  
- [Desktopfenster-Manager (Übersicht)](https://msdn.microsoft.com/library/aa969540.aspx)  
- [Übersicht über die Blur Desktopfenster-Manager](https://msdn.microsoft.com/library/aa969537.aspx)  
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)
+ [Übersicht über Desktop Window Manager](/windows/desktop/dwm/dwm-overview)  
+ [Desktop Window Manager Blur-Übersicht](/windows/desktop/dwm/blur-ovw)  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

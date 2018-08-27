@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdba02feb8cacc6ab1886c12f88716184aa2a81a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 049268c29946e95ca7bb194f6cae38baf8f060f6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752428"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933529"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Zusätzliche Klassenbibliotheken und APIs
 
-Um die plattformübergreifende Entwicklung für das sich ständig weiterentwickelnde .NET Framework für unsere Kunden rechtzeitig zu verbessern oder neue Funktionalität einzuführen, werden neue Funktionen out-of-band (OOB) veröffentlicht. In diesem Thema werden die OOB-Projekte aufgeführt, für die eine Dokumentation bereitgestellt wird.  
+.NET Framework wird ständig weiterentwickelt. Um plattformübergreifende Entwicklung zu verbessern und eine neue Funktionalität einem frühen Zeitpunkt einführen, werden neue Features of-Band (OOB) veröffentlicht. In diesem Thema werden die OOB-Projekte aufgeführt, für die eine Dokumentation bereitgestellt wird.  
   
-Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen oder Implementierungen von .NET Framework entworfen. Z. B. die <xref:System.Text.CodePagesEncodingProvider> Klasse stellt codepagecodierungen uwp-apps mit .NET Framework entwickelt wurden zur Verfügung. Diese Bibliotheken werden in diesem Thema ebenfalls aufgeführt.  
+Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen oder Implementierungen von .NET Framework entworfen. Z. B. die <xref:System.Text.CodePagesEncodingProvider> -Klasse stellt codepagecodierungen für UWP-apps mit .NET Framework entwickelt wurden. Diese Bibliotheken werden in diesem Thema ebenfalls aufgeführt.  
   
 ## <a name="oob-projects"></a>OOB-Projekte
   
@@ -35,7 +35,7 @@ Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen o
   
 | Projekt | Beschreibung |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Erweitert die <xref:System.Text.EncodingProvider> Klasse, um die codepagecodierungen für apps verfügbar zu machen, die auf Uwp abzielen. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Erweitert die <xref:System.Text.EncodingProvider> Klasse, um codepagecodierungen für apps zur Verfügung stellen, die auf die universelle Windows-Plattform abzielen. |  
   
 ## <a name="private-apis"></a>Private APIs  
 
@@ -50,9 +50,9 @@ Diese APIs unterstützen die Produktinfrastruktur. Sie sind nicht für eine dire
 | [System.Net.CoreResponseData-Klasse](../../../docs/framework/additional-apis/coreresponsedata.md) |
 | [System.Net.CoreResponseData.m\_ResponseHeaders Field](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
 | [System.Net.CoreResponseData.m\_StatusCode-Feld](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
-| [System.NET.HttpWebRequest". \_AutoRedirects-Feld](../../../docs/framework/additional-apis/_autoredirects.md) |
-| [System.NET.HttpWebRequest". \_CoreResponse-Feld](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
-| [System.NET.HttpWebRequest". \_HttpResponse-Feld](../../../docs/framework/additional-apis/_httpresponse.md) |
+| [System.Net.HttpWebRequest. \_AutoRedirects-Feld](../../../docs/framework/additional-apis/_autoredirects.md) |
+| [System.Net.HttpWebRequest. \_CoreResponse-Feld](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
+| [System.Net.HttpWebRequest. \_HttpResponse-Feld](../../../docs/framework/additional-apis/_httpresponse.md) |
 | [System.Net.ServicePoint.m\_ConnectionGroupList-Feld](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
 | [System.Net.ServicePointManager.s\_ServicePointTable-Feld](../../../docs/framework/additional-apis/s_servicepointtable.md) |
 | [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |

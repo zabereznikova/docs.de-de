@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a5fccf5ea86469f14963fad8e7d2af0f7c68d2df
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107032"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933604"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -33,7 +33,7 @@ Ein standardmäßiger DOS-Pfad kann aus drei Komponenten bestehen:
 
 Wenn alle drei Komponenten vorhanden sind, ist der Pfad absolut. Wenn kein Volume oder Laufwerkbuchstabe angegeben ist, und der Name des Verzeichnisses mit dem [Verzeichnistrennzeichen](<xref:System.IO.Path.DirectorySeparatorChar>) beginnt, ist der Pfad relativ zum Stamm des aktuellen Laufwerks. Andernfalls ist der Pfad relativ zum aktuellen Verzeichnis. In der folgenden Tabelle werden mögliche Verzeichnis- und Dateipfade veranschaulicht.
 
-|Pfad  |description  |
+|Pfad  |Beschreibung   |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Ein absoluter Dateipfad aus dem Stamm vom Laufwerk „C:“ |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Ein absoluter Pfad aus dem Stamm des aktuellen Laufwerks |
@@ -63,7 +63,7 @@ UNC-Pfade (Universal Naming Convention), die für den Zugriff auf Netzwerkressou
 
 Im Folgenden werden einige Beispiele für UNC-Pfade aufgeführt:
 
-|Pfad  |description  |
+|Pfad  |Beschreibung   |
 | -- | -- |
 | `\\system07\C$\` | Das Stammverzeichnis des Laufwerks „C:“ auf `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | Die Datei „Foo.txt“ im Testverzeichnis des Volume „\\\\Server2\\Share“.|
@@ -181,7 +181,7 @@ Zusätzlich zu den Ausführungen von Trennzeichen und Segmenten, die weiter oben
 
 ## <a name="skipping-normalization"></a>Überspringen der Normalisierung
 
-Normalerweise werden alle Pfade, die an die Windows-API übergeben werden, effektiv an die [GetFullPathName-Funktion](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) übergeben und normalisiert. Es gibt eine wichtige Ausnahme: ein Gerätepfad, der mit einem Fragezeichen statt einem Punkt beginnt. Sofern der Pfad nicht mit `\\?\` beginnt (beachten Sie die Verwendung des kanonischen umgekehrten Schrägstrichs), ist er normalisiert.
+Normalerweise werden alle Pfade, die an die Windows-API übergeben werden, effektiv an die [GetFullPathName-Funktion](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) übergeben und normalisiert. Es gibt eine wichtige Ausnahme: ein Gerätepfad, der mit einem Fragezeichen statt einem Punkt beginnt. Sofern der Pfad nicht mit `\\?\` beginnt (beachten Sie die Verwendung des kanonischen umgekehrten Schrägstrichs), ist er normalisiert.
 
 Warum kann es sinnvoll sein, die Normalisierung zu überspringen? Es gibt drei wichtige Gründe:
 
@@ -196,9 +196,9 @@ Warum kann es sinnvoll sein, die Normalisierung zu überspringen? Es gibt drei w
 
 Das Überspringen der Normalisierung und MAX_PATH-Überprüfungen ist der einzige Unterschied zwischen den zwei Gerätepfadsyntaxen. Andernfalls sind sie identisch. Beachten Sie, dass Sie durch Überspringen der Normalisierung Pfade erstellen können, die für „normale“ Anwendungen schwer zu verarbeiten sind.
 
-Pfade, die mit `\\?\` beginnen, werden weiterhin normalisiert, wenn Sie sie explizit an die [GetFullPathName-Funktion](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) übergeben.
+Pfade, die mit `\\?\` beginnen, werden weiterhin normalisiert, wenn Sie sie explizit an die [GetFullPathName-Funktion](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) übergeben.
 
-Beachten Sie, dass Sie Pfade mit mehr Zeichen als `MAX_PATH` verwenden können, um [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) ohne `\\?\` abzurufen. Beliebige Pfadlängen werden bis zur maximalen Länge von Zeichenfolgen unterstützt, die Windows verarbeiten kann.
+Beachten Sie, dass Sie Pfade mit mehr Zeichen als `MAX_PATH` verwenden können, um [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) ohne `\\?\` abzurufen. Beliebige Pfadlängen werden bis zur maximalen Länge von Zeichenfolgen unterstützt, die Windows verarbeiten kann.
 
 ## <a name="case-and-the-windows-file-system"></a>Groß-/Kleinbuchstaben im Windows-Dateisystem
 

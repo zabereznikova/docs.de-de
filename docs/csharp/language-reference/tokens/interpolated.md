@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058830"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000975"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – Zeichenfolgeninterpolation (C#-Referenz)
 
@@ -39,7 +39,7 @@ Die Struktur eines Elements mit einem interpolierten Ausdruck sieht wie folgt au
 
 Elemente in eckigen Klammern sind optional. In der folgenden Tabelle wird jedes Element beschrieben:
 
-|Element|description|
+|Element|Beschreibung |
 |-------------|-----------------|
 |`interpolatedExpression`|Der Ausdruck, der zu einem Ergebnis führt, das formatiert werden soll. Die Zeichenfolgendarstellung des `null`-Ergebnisses ist <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Der konstante Ausdruck, dessen Wert die minimale Anzahl von Zeichen in einer Zeichenfolgendarstellung des Ergebnisses des interpolierten Ausdrucks definiert. Bei einem positiven Wert wird die Zeichenfolge rechtsbündig ausgerichtet. Ist der Wert negativ, wird sie linksbündig ausgerichtet. Weitere Informationen finden Sie unter [Ausrichtungskomponente](../../../standard/base-types/composite-formatting.md#alignment-component).|
@@ -88,12 +88,13 @@ Im folgenden Beispiel wird die implizite Konvertierung in <xref:System.Formattab
 
 Wenn Sie noch nicht mit der Zeichenfolgeninterpolation vertraut sind, finden Sie weitere Informationen im Schnellstart [Interpolierte Zeichenfolgen in C#](../../quick-starts/interpolated-strings.yml). Weitere Beispiele finden Sie im [Tutorial zur Zeichenfolgeninterpolation in C#](../../tutorials/string-interpolation.md).
 
-## <a name="see-also"></a>Siehe auch  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- [Kombinierte Formatierung](../../../standard/base-types/composite-formatting.md)  
- [Zeichenfolgen](../../programming-guide/strings/index.md)  
- [C#-Programmierhandbuch](../../programming-guide/index.md)  
- [C#-Sonderzeichen](index.md)  
- [C#-Referenz](../index.md)  
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [Kombinierte Formatierung](../../../standard/base-types/composite-formatting.md)
+- [Zeichenfolgen](../../programming-guide/strings/index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Sonderzeichen](index.md)
+- [C#-Referenz](../index.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: 2f614045be1b91b9c747d961cdefd526ba1bab98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe200add4e29fe4bbe0fdf335dcd94107b8ff1eb
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603521"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932591"
 ---
 # <a name="return-statement-visual-basic"></a>Return-Anweisung (Visual Basic)
-Die Steuerung an den Code, aufgerufen zurückgegeben eine `Function`, `Sub`, `Get`, `Set`, oder `Operator` Prozedur.  
+Übergibt die Steuerung an den Code, der Namen einer `Function`, `Sub`, `Get`, `Set`, oder `Operator` Verfahren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,17 +29,17 @@ Return expression
   
 ## <a name="part"></a>Segment  
  `expression`  
- Erforderlich einer `Function`, `Get`, oder `Operator` Prozedur. Der Ausdruck den Wert an den aufrufenden Code zurückgegeben werden.  
+ Muss eine `Function`, `Get`, oder `Operator` Verfahren. Ausdruck, der den Wert an den aufrufenden Code zurückgegeben werden darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- In einer `Sub` oder `Set` Prozedur, die `Return` Anweisung entspricht einer `Exit Sub` oder `Exit Property` -Anweisung und `expression` muss nicht angegeben werden.  
+ In einer `Sub` oder `Set` Verfahren der `Return` Anweisung entspricht einer `Exit Sub` oder `Exit Property` -Anweisung und `expression` muss nicht angegeben werden.  
   
- In einem `Function`, `Get`, oder `Operator` Prozedur, die `Return` -Anweisung muss enthalten `expression`, und `expression` muss in einen Datentyp, der in den Rückgabetyp der Prozedur konvertiert werden ausgewertet. In einem `Function` oder `Get` Prozedur, Sie haben auch die Alternative einen Ausdruck zuweisen, um den Namen der Prozedur, die als Rückgabewert dient, und klicken Sie dann Ausführen einer `Exit Function` oder `Exit Property` Anweisung. In einer `Operator` Verfahren verwenden Sie `Return``expression`.  
+ In einem `Function`, `Get`, oder `Operator` Verfahren der `Return` -Anweisung muss enthalten `expression`, und `expression` muss in einen Datentyp, der in den Rückgabetyp der Prozedur konvertiert werden ausgewertet. In einer `Function` oder `Get` Verfahren haben Sie auch die Alternative, den Namen der Prozedur, dient als Rückgabewert einen Ausdruck zuweisen und dann eine `Exit Function` oder `Exit Property` Anweisung. In einer `Operator` Verfahren verwenden Sie `Return expression`.  
   
  Sie können beliebig viele einschließen `Return` Anweisungen nach Bedarf in der gleichen Prozedur.  
   
 > [!NOTE]
->  Der Code in eine `Finally` Block ausgeführt wird, nachdem ein `Return` -Anweisung in einer `Try` oder `Catch` Block ist aufgetreten, aber vor, `Return` -Anweisung ausführt. Ein `Return` -Anweisung kann nicht eingefügt werden, einem `Finally` Block.  
+>  Der Code in eine `Finally` Block ausgeführt wird, nachdem eine `Return` -Anweisung in eine `Try` oder `Catch` Block ist, allerdings bevor, `Return` -Anweisung ausführt. Ein `Return` -Anweisung kann nicht eingefügt werden, einem `Finally` Block.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `Return` Anweisung mehrmals an den aufrufenden Code zurückgegeben werden soll, wenn die Prozedur keinen nichts weiter tun.  

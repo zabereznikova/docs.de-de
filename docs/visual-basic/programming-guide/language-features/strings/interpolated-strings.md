@@ -3,16 +3,16 @@ title: Interpolierte Zeichenfolgen (Visual Basic)
 ms.date: 10/31/2017
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 313e74d5ce252884f1df2479ef1db8b4b24b5cce
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653558"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930549"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Interpolierte Zeichenfolgen (Visual Basic-Referenz)
 
-Zum Erstellen von Zeichenfolgen verwendet.  Eine interpolierte Zeichenfolge sieht wie eine Vorlagenzeichenfolge aus, die *interpolierte Ausdrücke* enthält.  Eine interpolierte Zeichenfolge gibt eine Zeichenfolge zurück, die die interpolierten Ausdrücke, die sie enthält, durch deren Zeichenfolgenrepräsentation ersetzt. Diese Funktion ist in Visual Basic-14 und höher verfügbar.
+Zum Erstellen von Zeichenfolgen verwendet.  Eine interpolierte Zeichenfolge sieht wie eine Vorlagenzeichenfolge aus, die *interpolierte Ausdrücke* enthält.  Eine interpolierte Zeichenfolge gibt eine Zeichenfolge zurück, die die interpolierten Ausdrücke, die sie enthält, durch deren Zeichenfolgenrepräsentation ersetzt. Dieses Feature ist in Visual Basic 14 und höher verfügbar.
 
 Die Argumente einer interpolierten Zeichenfolge sind leichter zu verstehen als eine [Zusammengesetzte Formatzeichenfolge](../../../../standard/base-types/composite-formatting.md#composite-format-string).  Die interpolierte Zeichenfolge  
   
@@ -35,10 +35,10 @@ Dabei gilt:
 
 - *field-width* ist eine Ganzzahl mit Vorzeichen, die die Anzahl von Zeichen in einem Feld angibt. Wenn sie positiv ist, ist das Feld rechtsbündig; wenn sie negativ ist, ist es linksbündig. 
 
-- *format-string* ist eine Formatzeichenfolge, die zu dem Objekttyp passt, der formatiert wird. Z. B. für eine <xref:System.DateTime> Wert, es ist möglicherweise ein [Formatzeichenfolge Standardformatbezeichner für Datum und Uhrzeit](~/docs/standard/base-types/standard-date-and-time-format-strings.md) z. B. "D" oder "d".
+- *format-string* ist eine Formatzeichenfolge, die zu dem Objekttyp passt, der formatiert wird. Z. B. für eine <xref:System.DateTime> Wert möglicherweise eine [Formatzeichenfolge für Datum und Uhrzeit](~/docs/standard/base-types/standard-date-and-time-format-strings.md) wie z. B. "D" oder "d".
 
 > [!IMPORTANT]
-> Zwischen `$` und dem `"` am Anfang der Zeichenfolge dürfen keine Leerzeichen gesetzt werden. Auf diese Weise verursacht einen Compilerfehler.
+> Zwischen `$` und `"` am Anfang der Zeichenfolge dürfen sich keine Leerzeichen befinden. Auf diese Weise wird ein Compilerfehler verursacht.
 
  Eine interpolierte Zeichenfolge können Sie überall dort verwenden, wo Sie ein Zeichenfolgenliteral verwenden.  Die interpolierte Zeichenfolge wird immer nach ausgewertet, wenn der Code mit der interpolierten Zeichenfolge ausgeführt wird. So können Sie die Definition und die Auswertung einer interpolierten Zeichenfolge voneinander trennen.  
   
@@ -66,7 +66,7 @@ Es gibt drei implizite Typkonvertierungen aus einer interpolierten Zeichenfolge:
 
    Beachten Sie, dass die interpolierte Zeichenfolge nur mithilfe von Reflektion überprüft werden kann. Wenn sie an eine Methode zum Formatieren von Zeichenfolgen übergeben wird, wie z.B. <xref:System.Console.WriteLine(System.String)>, werden ihre Formatelemente aufgelöst und die Ergebniszeichenfolge zurückgegeben. 
 
-3. Eine interpolierte Zeichenfolge, Konvertierung einer <xref:System.FormattableString> Variable, die eine kombinierte Formatierungszeichenfolge darstellt. Das Überprüfen der zusammengesetzten Zeichenfolge und wie diese als Ergebniszeichenfolge rendert, hilft Ihnen z.B möglicherweise dabei, sich gegen einen Einschleusungsangriff zu schützen, während Sie eine Abfrage erstellen. Ein <xref:System.FormattableString> enthält auch:
+3. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.FormattableString> Variable, die eine zusammengesetzte Formatzeichenfolge repräsentiert. Das Überprüfen der zusammengesetzten Zeichenfolge und wie diese als Ergebniszeichenfolge rendert, hilft Ihnen z.B möglicherweise dabei, sich gegen einen Einschleusungsangriff zu schützen, während Sie eine Abfrage erstellen. Ein <xref:System.FormattableString> enthält außerdem:
 
       - Eine Überladung von <xref:System.FormattableString.ToString>, die eine Ergebniszeichenfolge für das <xref:System.Globalization.CultureInfo.CurrentCulture>-Element erzeugt.
       
@@ -74,7 +74,7 @@ Es gibt drei implizite Typkonvertierungen aus einer interpolierten Zeichenfolge:
       
       - Eine <xref:System.FormattableString.ToString(System.IFormatProvider)>-Methode, die eine Ergebniszeichenfolge für eine bestimmte Kultur erzeugt. 
   
-    Alle Vorkommen von doppelten geschweiften Klammern ("{{" und "}}") bleiben bestehen, bis Sie formatieren.  Alle enthaltenen interpolationsausdrücke werden in konvertiert {0}, {1}und so weiter.  
+    Alle Vorkommen von doppelten geschweiften Klammern ("{{" und "}}") als doppelten geschweiften Klammern verbleiben, bis Sie die Zeichenfolge formatieren.  Alle enthaltenen interpolationsausdrücke werden in konvertiert {0}, {1}und so weiter.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 

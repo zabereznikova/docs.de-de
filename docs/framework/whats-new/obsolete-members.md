@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94401a97a1be9453caa36259dfc5901f438eee40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b39962d2d716d88d139ccaba5f4c445dad9ef6c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508773"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999480"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Veraltete Member in .NET Framework
 In den Tabellen in diesem Artikel werden die Typmember nach Assembly geordnet aufgeführt, die in .NET Framework 4.5 und höheren Versionen veraltet sind. Über die nachfolgenden Links finden Sie eine Liste der veralteten Member und empfohlenen Alternativen in den jeweiligen Assemblys. In diesem Thema werden nicht die Member veralteter Typen aufgeführt. Eine Liste veralteter Typen finden Sie unter [Veraltete Typen](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -593,7 +593,7 @@ In den Tabellen in diesem Artikel werden die Typmember nach Assembly geordnet au
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
-|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Eigenschaft ist veraltet. Verwenden Sie zum Aktivieren von HTTP <xref:System.Net.CookieContainer> stattdessen die <!----zz <xref:System.ServiceModel.BasicHttpBinding.AllowCookies%2A?displayProperty=nameWithType> --> `System.ServiceModel.BasicHttpBinding.AllowCookies`-Eigenschaft.|  
+|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Eigenschaft ist veraltet. Verwenden Sie zum Aktivieren von dem HTTP <xref:System.Net.CookieContainer> stattdessen die <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType>-Eigenschaft.|  
 |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Peerchannelfunktion ist veraltet und wird demnächst entfernt.|  
 |<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase.ParameterInspectors%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|  
 |<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase.MessageInspectors%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|  
@@ -756,8 +756,8 @@ In den Tabellen in diesem Artikel werden die Typmember nach Assembly geordnet au
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>|Vermeiden Sie das Festlegen von <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>. Wenn Sie den .NET Framework-Speicherort als <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> übergeben haben, ist keine weitere Aktion notwendig. Definieren Sie Toolsets andernfalls stattdessen in der Registrierung oder der Konfigurationsdatei, oder fügen Sie dem <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>-Objekt des Moduls Elemente hinzu, um eine benutzerdefinierte <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>-Eigenschaft zu verwenden.|  
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|Wenn Sie den .NET Framework-Speicherort als <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> übergeben haben, können Sie einfach zum parameterlosen <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType>-Konstruktor wechseln. Andernfalls können Sie benutzerdefinierte Toolsets in der Registrierung oder der Konfigurationsdatei definieren, oder Sie können dem <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>-Objekt des Moduls Elemente hinzufügen. Verwenden Sie dann stattdessen entweder den <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType>-Konstruktor oder den <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=nameWithType>-Konstruktor.|  
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>|Vermeiden Sie das Festlegen von <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>. Wenn Sie den .NET Framework-Speicherort als <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> übergeben haben, ist keine weitere Aktion notwendig. Definieren Sie Toolsets andernfalls stattdessen in der Registrierung oder der Konfigurationsdatei, oder fügen Sie dem <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>-Objekt der Engine Elemente hinzu, um eine benutzerdefinierte <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>-Eigenschaft zu verwenden.|  
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|Wenn Sie den .NET Framework-Speicherort als <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> übergeben haben, können Sie einfach zum parameterlosen <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType>-Konstruktor wechseln. Andernfalls können Sie benutzerdefinierte Toolsets in der Registrierung oder der Konfigurationsdatei definieren, oder Sie können dem <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>-Objekt der Engine Elemente hinzufügen. Verwenden Sie dann stattdessen entweder den <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType>-Konstruktor oder den <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=nameWithType>-Konstruktor.|  
   
 <a name="BuildFW"></a>   
 ### <a name="assembly-microsoftbuildframeworkdll"></a>Assembly: Microsoft.Build.Framework.dll  
@@ -778,7 +778,7 @@ In den Tabellen in diesem Artikel werden die Typmember nach Assembly geordnet au
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
-|<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=nameWithType> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Wird nur für die Abwärtskompatibilität der Version 3.5 verwendet.|  
+|`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Wird nur für die Abwärtskompatibilität der Version 3.5 verwendet.|  
   
 <a name="visualbasic"></a>   
 ### <a name="assembly-microsoftvisualbasicdll"></a>Assembly: Microsoft.VisualBasic.dll  

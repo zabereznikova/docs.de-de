@@ -1,5 +1,5 @@
 ---
-title: My.Request-Objekt
+title: My.Request-Objekt (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWebExtension.Request
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Request object
 ms.assetid: 93d5f0e2-6b60-4a2c-8652-d90216f6ad10
-ms.openlocfilehash: 88c3a9a01b50a97b556fa94026df391248bdf912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2c43afb723944293907d0efbb4cf3cc66a40e1e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595887"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932549"
 ---
 # <a name="myrequest-object"></a>My.Request-Objekt
 Ruft das <xref:System.Web.HttpRequest>-Objekt für die angefragte Seite ab.  
@@ -23,7 +23,7 @@ Ruft das <xref:System.Web.HttpRequest>-Objekt für die angefragte Seite ab.
  Das `My.Request`-Objekt ist nur für ASP.NET-Anwendungen verfügbar.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel ruft die headerauflistung aus der `My.Request` -Objekt und verwendet die `My.Response` Objekt, das in der ASP.NET-Seite zu schreiben.  
+ Im folgenden Beispiel wird die headerauflistung aus der `My.Request` -Objekt und verwendet die `My.Response` es in die ASP.NET-Seite zu schreibende Objekt.  
   
  [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-request-object_1.aspx)]  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c50d79f402d55a2fb5e859da4d61b04eeeb6931
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579742"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932947"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kovarianz und Kontravarianz in Generika
 <a name="top"></a> Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, einen stärker abgeleiteten (spezifischeren) oder einen weniger abgeleiteten (allgemeineren) Typ zu verwenden als ursprünglich angegeben. Generische Typparameter unterstützen Kovarianz und Kontravarianz und bieten somit mehr Flexibilität beim Zuweisen und Verwenden von generischen Typen. Wenn Sie auf ein Typsystem verweisen, haben Kovarianz, Kontravarianz und Invarianz die folgenden Definitionen. In den Beispielen wird von der Basisklasse `Base` und der abgeleiteten Klasse `Derived`ausgegangen.  
@@ -33,13 +33,13 @@ ms.locfileid: "33579742"
   
      Ermöglicht die Verwendung eines generischeren (weniger stark abgeleiteten) Typs als ursprünglich angegeben.  
   
-     Sie können eine Instanz von `IEnumerable<Base>` (`IEnumerable(Of Base)` in Visual Basic) einer Variablen des Typs `IEnumerable<Derived>`zuweisen.  
+     Sie können eine Instanz von `Action<Base>` (`Action(Of Base)` in Visual Basic) einer Variablen des Typs `Action<Derived>` zuweisen.  
   
 -   `Invariance`  
   
      Bedeutet, dass nur der ursprünglich angegebene Typ verwendet werden kann. Ein invarianter generischer Typparameter ist also weder kovariant noch kontravariant.  
   
-     Sie können eine Instanz von `IEnumerable<Base>` (`IEnumerable(Of Base)` in Visual Basic) nicht einer Variablen des Typs `IEnumerable<Derived>` zuweisen oder umgekehrt.  
+     Sie können eine Instanz von `List<Base>` (`List(Of Base)` in Visual Basic) nicht einer Variablen des Typs `List<Derived>` zuweisen oder umgekehrt.  
   
  Kovariante Typparameter ermöglichen es Ihnen, Zuweisungen vorzunehmen, die normaler [Polymorphie](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md) stark ähneln, wie im folgenden Code dargestellt.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c15c554e0ec135b33d671a83b5e27d0a2a89b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444255"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930936"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue-Methode
-Aktualisiert den aktuellen assemblygültigkeitsbereich mit den Änderungen in den angegebenen Metadaten.  
+Aktualisiert den aktuellen Assemblybereich mit den Änderungen in den angegebenen Metadaten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,12 +37,12 @@ HRESULT ApplyEditAndContinue (
   
 #### <a name="parameters"></a>Parameter  
  `pImport`  
- [in] Zeiger auf eine <<!--zzxref:IUnknown --> `IUnknown`> Objekt, das die Deltametadaten aus der Datei (portable Executable)-Datei darstellt.  
+ \[in\] Zeiger auf ein [IUnknown](/cpp/atl/iunknown) Objekt, das die Deltametadaten aus der Datei (portable Executable)-Datei darstellt.
   
- Die Deltametadaten ist der Block von Metadaten, die die Änderungen enthält, die auf die Kopie der tatsächlichen Metadaten des Moduls vorgenommen wurden.  
+ Die Deltametadaten ist der Block von Metadaten mit den Änderungen, die auf die Kopie des Moduls eigentlichen Metadaten vorgenommen wurden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   

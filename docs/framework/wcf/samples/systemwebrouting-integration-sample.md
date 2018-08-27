@@ -2,23 +2,23 @@
 title: SystemWebRouting-Integrationsbeispiel
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 52b908d354771cb2b351e339881647462340b716
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 944eb8f2bd907308e60525f8917fcad826caa472
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806525"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932065"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting-Integrationsbeispiel
-In diesem Beispiel wird die Integration der Hostebene in die Klassen im <xref:System.Web.Routing>-Namespace veranschaulicht. Mit den Klassen im <xref:System.Web.Routing>-Namespace können Anwendungen URLs verwenden, die einer physischen Ressource nicht direkt entsprechen. Webrouting ermöglicht dem Entwickler, Erstellen von virtuellen Adressen für HTTP, die dann wieder an die tatsächlichen WCF-Dienste zugeordnet sind. Dies ist nützlich, wenn ein WCF-Dienst gehostet werden muss, ohne dass eine physische Datei oder Ressource erforderlich ist, oder wenn auf Dienste mit URLs zugegriffen werden muss, die keine Dateierweiterung wie .html oder .aspx enthalten. In diesem Beispiel wird veranschaulicht, wie mithilfe der <xref:System.Web.Routing.RouteTable>-Klasse virtuelle URIs erstellt werden können, die in global.asax definierten, ausgeführten Diensten zugeordnet werden. 
+In diesem Beispiel wird die Integration der Hostebene in die Klassen im <xref:System.Web.Routing>-Namespace veranschaulicht. Mit den Klassen im <xref:System.Web.Routing>-Namespace können Anwendungen URLs verwenden, die einer physischen Ressource nicht direkt entsprechen. Webrouting ermöglicht es, den Entwickler zum Erstellen von virtueller Adressen für HTTP, klicken Sie dann wieder die tatsächlichen WCF-Diensten zugeordnet sind. Dies ist nützlich, wenn ein WCF-Dienst gehostet werden muss, ohne dass eine physische Datei oder Ressource erforderlich ist, oder wenn auf Dienste mit URLs zugegriffen werden muss, die keine Dateierweiterung wie .html oder .aspx enthalten. In diesem Beispiel wird veranschaulicht, wie mithilfe der <xref:System.Web.Routing.RouteTable>-Klasse virtuelle URIs erstellt werden können, die in global.asax definierten, ausgeführten Diensten zugeordnet werden. 
 
 > [!NOTE]
 >  Die Klassen im <xref:System.Web.Routing>-Namespace können nur für Dienste verwendet werden, die über HTTP gehostet werden.  
   
-In diesem Beispiel verwendet die WCF zum Erstellen von zwei RSS-Feeds: ein `movies` feed und ein `channels` feed. Die URLs zur Aktivierung der Dienste enthalten keine Erweiterung und registriert sind, der `Application_Start` Methode der `Global` abgeleitete Klasse die <xref:System.Web.HttpApplication> Klasse.  
+In diesem Beispiel verwendet WCF, um zwei RSS-Feeds zu erstellen: eine `movies` feed und ein `channels` feed. Die URLs zur Aktivierung der Dienste enthalten keine Erweiterung und registriert sind, der `Application_Start` Methode der `Global` abgeleitete Klasse die <xref:System.Web.HttpApplication> Klasse.  
   
 > [!NOTE]
->  Dieses Beispiel funktioniert nur in Internetinformationsdienste (IIS) 7.0 und höher, wie IIS 6.0 verwendet eine andere Methode für die Unterstützung von URLs ohne Erweiterung.  
+>  Dieses Beispiel funktioniert nur in IIS (Internetinformationsdienste) 7.0 und höher, wie IIS 6.0 verwendet eine andere Methode für die Unterstützung von URLs ohne Erweiterung.  
 
 #### <a name="to-download-this-sample"></a>Dieses Beispiel herunterladen
   
@@ -26,7 +26,7 @@ In diesem Beispiel möglicherweise bereits auf Ihrem Computer installiert werden
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+ Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -38,17 +38,17 @@ In diesem Beispiel möglicherweise bereits auf Ihrem Computer installiert werden
   
      Eine Verzeichnisliste für das Beispiel wird angezeigt. Beachten Sie, dass es keine Dateien mit der Dateierweiterung SVC gibt.  
   
-3.  Fügen Sie in der Adressleiste `movies` an die URL so, dass die It liest http://localhost:[Port] / Movies und drücken Sie EINGABETASTE.  
+3.  Fügen Sie in der Adressleiste `movies` an die URL so, dass die It liest `http://localhost:[port]/movies` und drücken Sie EINGABETASTE.  
   
      Der Filmfeed (movies) wird im Browser angezeigt.  
   
-4.  Fügen Sie in der Adressleiste `channels` an die URL, also Lesevorgänge http://localhost:[Port] / channels lautet, und drücken Sie die EINGABETASTE.  
+4.  Fügen Sie in der Adressleiste `channels` an die URL ein, das ist also Lesevorgänge `http://localhost:[port]/channels` und drücken Sie EINGABETASTE.  
   
      Der Channelfeed wird im Browser angezeigt.  
   
 5.  Schließen Sie den Webbrowser, indem Sie ALT+F4 drücken.  
   
-     Wenn der Entwicklungsserver nicht beendet wurde, mit der rechten Maustaste das Symbol im Infobereich, und wählen Sie **beenden**.  
+     Wenn der Entwicklungsserver nicht beendet wurde, mit der rechten Maustaste in des Symbols im Infobereich, und wählen Sie **beenden**.  
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>So verwenden Sie dieses Beispiel, wenn es in IIS gehostet wird  
   
@@ -58,21 +58,21 @@ In diesem Beispiel möglicherweise bereits auf Ihrem Computer installiert werden
   
 3.  Erstellen Sie eine Webanwendung im Internetinformationsdienste-Manager.  
   
-    1.  Mit der rechten Maustaste im IIS-Manager, klicken Sie auf die **Default Web Site** , und wählen Sie **Hinzufügen einer Anwendung**.  
+    1.  Im IIS-Manager mit der rechten Maustaste die **Default Web Site** , und wählen Sie **Hinzufügen einer Anwendung**.  
   
     2.  Für die **Alias**, geben Sie in `WebRoutingIntegration`.  
   
-    3.  Für die **physischen Pfad**, wählen Sie den Dienstordner im Projekt.  
+    3.  Für die **physischer Pfad**, wählen Sie den Ordner "Service" innerhalb des Projekts.  
   
-    4.  Press **OK**.  
+    4.  Drücken Sie **OK**.  
   
-4.  Starten Sie die Anwendung, indem Sie die Web-Anwendung mit der rechten Maustaste und auswählen **-Anwendung verwalten** und dann **Durchsuchen**.  
+4.  Starten Sie die Anwendung, indem Sie mit der rechten Maustaste in der Web-Anwendung und auswählen **-Anwendung verwalten** und dann **Durchsuchen**.  
   
-5.  Fügen Sie in der Adressleiste `movies` an die URL, also Lesevorgänge http://localhost:[Port] / Movies und drücken Sie EINGABETASTE.  
+5.  Fügen Sie in der Adressleiste `movies` an die URL ein, das ist also Lesevorgänge `http://localhost:[port]/movies` und drücken Sie EINGABETASTE.  
   
      Der Filmfeed (movies) wird im Browser angezeigt.  
   
-6.  Fügen Sie in der Adressleiste `channels` an die URL, also Lesevorgänge http://localhost:[Port] / channels lautet, und drücken Sie die EINGABETASTE.  
+6.  Fügen Sie in der Adressleiste `channels` an die URL ein, das ist also Lesevorgänge `http://localhost:[port]/channels` und drücken Sie EINGABETASTE.  
   
      Der Channelfeed wird im Browser angezeigt.  
   
@@ -84,4 +84,4 @@ In diesem Beispiel möglicherweise bereits auf Ihrem Computer installiert werden
 >  Sie müssen die Version des Standardanwendungspools auf Aktualisieren [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] , wenn sie auf Version 2 festgelegt ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [AppFabric-Hosting und Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric-Hosting- und-persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)

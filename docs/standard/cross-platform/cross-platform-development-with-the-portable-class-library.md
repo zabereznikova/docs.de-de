@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314938"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933702"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek
 Der .NET Framework-Projekttyp "Portable Klassenbibliothek" in Visual Studio hilft Ihnen, plattformübergreifende Apps und Bibliotheken für Microsoft-Plattformen schnell und einfach zu erstellen.  
@@ -147,7 +147,7 @@ Dialogfeld "Zielplattformen ändern" in Visual Studio 2012
  ➌ Erfordert [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) Paket  
   
 > [!WARNING]
->  Sie können Fehler auftreten, wenn Sie verweisen die [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) und [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) Pakete aus einer portablen Bibliothek, die von einer Windows Phone Silverlight 8.1-app verwendet. Weitere Informationen finden Sie unter [Plattformkompatibilität und Änderungen für Windows Phone Silverlight 8.1-apps](/previous-versions/windows/apps/dn642084(v=vs.105)).  
+>  Sie können Fehler auftreten, wenn Sie verweisen die [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) und [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) Pakete aus einer portablen Bibliothek, die von einer Windows Phone Silverlight 8.1-app verwendet. Weitere Informationen finden Sie unter [Plattformkompatibilität und Änderungen für Windows Phone Silverlight 8.1-apps](https://docs.microsoft.com/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Unterstützte Typen und Members  

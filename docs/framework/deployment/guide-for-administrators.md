@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b4c2d4205e87d8be21f82eaf74b17e316d9057e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a909b7c940f22e6435fc72a370b8a4ed17d5f937
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394331"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925056"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  
@@ -124,7 +124,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  In der folgenden Tabelle werden die in Schritt 7 angegebenen Befehlszeilenoptionen beschrieben.  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |**/q**|Legt den stillen Modus fest. Es sind keine Benutzereingaben erforderlich, und es wird keine Ausgabe angezeigt.|  
 |**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Bei Verwendung dieser Option muss Configuration Manager den Neustart des Computers behandeln.|  
@@ -236,7 +236,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  Links zu ausführlichen Informationen finden Sie im nächsten Abschnitt [Downloadfehlercodes](#additional_error_codes).  
   
-|Rückgabecode|description|  
+|Rückgabecode|Beschreibung |  
 |-----------------|-----------------|  
 |0|Die Installation wurde erfolgreich abgeschlossen.|  
 |1602|Der Benutzer hat die Installation abgebrochen.|  
@@ -252,7 +252,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
 -   [Fehlercodes für URL-Moniker](http://msdn.microsoft.com/library/ms775145.aspx)  
   
--   [Fehlercodes für WinHttp](http://msdn.microsoft.com/library/aa383770.aspx)  
+-   [Fehlercodes für WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Sonstige Fehlercodes  
   

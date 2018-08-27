@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-ms.openlocfilehash: 241cbc767a3d094d664cf77f488e4154812d7516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5000f94a954994769eda2ac09404ba6a71c4639b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272681"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930363"
 ---
 # <a name="modifiers-c-reference"></a>Modifizierer (C#-Referenz)
 Modifizierer werden zum Ändern von Typ- und Typmemberdeklarationen verwendet. In diesem Abschnitt werden die C#-Modifizierer beschrieben.  
@@ -33,7 +33,8 @@ Modifizierer werden zum Ändern von Typ- und Typmemberdeklarationen verwendet. I
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|Deklariert eine Methode oder eine Zugriffsmethode, deren Implementierung durch einen überschreibenden Member in einer abgeleiteten Klasse geändert werden kann.|  
 |[volatile](../../../csharp/language-reference/keywords/volatile.md)|Gibt an, dass ein Feld im Programm z. B. vom Betriebssystem, der Hardware oder einem gleichzeitig ausgeführten Thread geändert werden kann.|  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)

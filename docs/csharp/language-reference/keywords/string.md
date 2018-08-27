@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: f92a44283e59bd80421758a63b40bc5289c3628b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 8b70f1c1dcb39dcdde6ba24a1bdcdfc3084cfc97
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172161"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929272"
 ---
 # <a name="string-c-reference"></a>string (C#-Referenz)
 Der Typ `string` stellt eine Sequenz von Null oder mehr Unicode-Zeichen dar. `string` ist ein Alias für <xref:System.String> in .NET.  
@@ -99,14 +99,15 @@ Console.WriteLine(a);
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../standard/base-types/best-practices-strings.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
- [Werttypen](../../../csharp/language-reference/keywords/value-types.md)  
- [Grundlegende Zeichenfolgenoperationen](../../../standard/base-types/basic-string-operations.md)  
- [Erstellen neuer Zeichenfolgen](../../../standard/base-types/creating-new.md)  
- [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../standard/base-types/best-practices-strings.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Werttypen](../../../csharp/language-reference/keywords/value-types.md)  
+- [Grundlegende Zeichenfolgenoperationen](../../../standard/base-types/basic-string-operations.md)  
+- [Erstellen neuer Zeichenfolgen](../../../standard/base-types/creating-new.md)  
+- [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)

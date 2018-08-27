@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 4f57149dd18deb08aa11b72d0a6d5f71b3838bd1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 362a02815cb249d57c0bd19706714df1d71644f4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960296"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929662"
 ---
 # <a name="partial-type-c-reference"></a>partial (Typ) (C#-Referenz)
 Partielle Typdefinitionen ermöglichen, dass die Definition einer Klasse, Struktur oder Schnittstelle in mehrere Dateien aufgeteilt wird.  
@@ -31,8 +31,9 @@ Partielle Typdefinitionen ermöglichen, dass die Definition einer Klasse, Strukt
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)  
- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)  
+- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)

@@ -11,32 +11,32 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 9456316f71a213905bcb50336533c4e618f5174a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651582"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934184"
 ---
 # <a name="value-types-and-reference-types"></a>Wert- und Verweistypen
-In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementiert. Die Visual Basic-Datentypen können, ob eine Variable eines bestimmten Typs eigene Daten oder ein Zeiger auf die Daten gespeichert klassifiziert werden. Wenn sie einen eigenen Datenspeicher wird ein *Werttyp*; Wenn es einen Zeiger auf die Daten an anderer Stelle im Arbeitsspeicher enthält es ein *Verweistyp*.  
+In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementiert. Die Visual Basic-Datentypen können klassifiziert werden, gemäß der gibt an, ob eine Variable eines bestimmten Typs seine eigenen Daten oder ein Zeiger auf die Daten speichert. Wenn seine eigenen Daten speichert, es ist ein *Werttyp*; Wenn sie einen Zeiger auf die Daten an anderer Stelle im Arbeitsspeicher enthält es eine *Verweistyp*.  
   
 ## <a name="value-types"></a>Werttypen  
- Ein Datentyp ist ein *Werttyp* , wenn sie die Daten in einem eigenen speicherbelegung enthält. Die folgenden: Werttypen  
+ Ein Datentyp ist ein *Werttyp* , wenn sie die Daten in eine eigene speicherbelegung enthält. Die folgenden: Werttypen  
   
 -   Alle numerischen Datentypen  
   
 -   `Boolean`, `Char` und `Date`  
   
--   Alle Strukturen, auch wenn ihre Member Verweistypen sind.  
+-   Alle Strukturen, auch wenn deren Member Verweistypen sind.  
   
--   Enumerationen, da der zugrunde liegende Typ, immer ist `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, oder `ULong`  
+-   Enumerationen, da der zugrunde liegenden Typ immer ist `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, oder `ULong`  
   
- Jede Struktur ist ein Werttyp ist, auch wenn sie Verweistypmember enthält. Aus diesem Grund Werttypen wie z. B. `Char` und `Integer` von .NET Framework-Strukturen implementiert werden.  
+ Jede Struktur ist ein Werttyp, auch wenn es sich um referenztypmember enthält. Aus diesem Grund Werttypen wie z. B. `Char` und `Integer` von .NET Framework-Strukturen implementiert werden.  
   
- Sie können einen Werttyp deklarieren, indem Sie dem reservierten Schlüsselwort, z. B. `Decimal`. Sie können auch die `New` Schlüsselwort, um einen Werttyp zu initialisieren. Dies ist besonders nützlich, wenn der Typ einen Konstruktor verfügt, der Parameter akzeptiert. Ein Beispiel hierfür ist die <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> Konstruktor, der eine neue erstellt `Decimal` Wert aus den angegebenen teilen.  
+ Sie können einen Werttyp deklarieren, indem Sie mit dem reservierten Schlüsselwort, z. B. `Decimal`. Sie können auch die `New` Schlüsselwort, um einen Werttyp zu initialisieren. Dies ist besonders nützlich, wenn der Typ einen Konstruktor verfügt, der Parameter annimmt. Ein Beispiel hierfür ist die <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> Konstruktor, der eine neue erstellt `Decimal` Wert aus den angegebenen teilen.  
   
 ## <a name="reference-types"></a>Verweistypen  
- Ein *Verweistyp* enthält einen Zeiger auf einen anderen Speicherort, der die Daten enthält. Verweistypen umfassen Folgendes:  
+ Ein *Verweistyp* enthält einen Zeiger auf einen anderen Speicherort, das Daten enthält. Verweistypen umfassen Folgendes:  
   
 -   `String`  
   
@@ -46,16 +46,16 @@ In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementi
   
 -   Delegaten  
   
- Eine Klasse ist eine *Verweistyp*. Aus diesem Grund verweisen auf Typen wie z. B. `Object` und `String` werden von unterstützt [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Klassen. Beachten Sie, dass jedes Array ein Verweistyp ist, selbst wenn ihre Elemente Werttypen sind.  
+ Eine Klasse ist eine *Verweistyp*. Aus diesem Grund verweisen auf Typen wie z. B. `Object` und `String` werden von unterstützt [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Klassen. Beachten Sie, dass jedes Array ein Verweistyp ist, auch wenn seine Member Werttypen sind.  
   
- Da jede Verweistyp eine zugrunde liegenden .NET Framework-Klasse darstellt, verwenden Sie die [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort, die Sie bei der Initialisierung. Die folgende Anweisung wird ein Array initialisiert.  
+ Da jede Verweistyp eine zugrunde liegende .NET Framework-Klasse darstellt, müssen Sie verwenden die [neuer Operator](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort, die Sie bei der Initialisierung. Die folgende Anweisung initialisiert ein Array.  
   
 ```  
 Dim totals() As Single = New Single(8) {}  
 ```  
   
 ## <a name="elements-that-are-not-types"></a>Elemente, die keine Typen sind  
- Die folgenden Programmierelemente qualifizieren wie Typen, Sie nicht, da Sie diese nicht als Datentyp für eine deklarierte Element festlegen können:  
+ Die folgenden Programmierelemente qualifiziere nicht als Typen, da Sie diese als Datentyp für eine deklarierte Element angeben können:  
   
 -   Namespaces  
   
@@ -67,14 +67,14 @@ Dim totals() As Single = New Single(8) {}
   
 -   Variablen, Konstanten und Felder  
   
-## <a name="working-with-the-object-data-type"></a>Arbeiten mit dem Object-Datentyp  
- Sie können ein Verweistyp oder ein Werttyp zu einer Variablen zuweisen der `Object` -Datentyp. Ein `Object` Variable enthält immer einen Zeiger auf die Daten, die nie die Daten selbst. Jedoch, wenn Sie einen Werttyp an Zuweisen einer `Object` -Variable ist, verhält sich, als ob es eine eigene Daten enthält. Weitere Informationen finden Sie unter [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+## <a name="working-with-the-object-data-type"></a>Arbeiten mit den Object-Datentyp  
+ Sie können entweder ein Verweistyp oder ein Werttyp zuweisen, um eine Variable vom die `Object` -Datentyp. Ein `Object` -Variable enthält immer einen Zeiger auf die Daten nie die Daten selbst. Jedoch wenn Sie einen Werttyp zum Zuweisen einer `Object` Variablen, verhält es sich, als ob es sich um seine eigenen Daten enthält. Weitere Informationen finden Sie unter [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Können Sie herausfinden, ob ein `Object` Variable dient als ein Verweistyp oder ein Werttyp durch Übergabe an die <xref:Microsoft.VisualBasic.Information.IsReference%2A> Methode in der <xref:Microsoft.VisualBasic.Information> Klasse von der <xref:Microsoft.VisualBasic?displayProperty=nameWithType> Namespace. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Gibt `True` Wenn der Inhalt der `Object` Variable steht für einen Referenztyp darstellt.  
+ Finden Sie heraus, ob ein `Object` Variablen fungiert als ein Verweistyp oder ein Werttyp durch Übergabe an die <xref:Microsoft.VisualBasic.Information.IsReference%2A> -Methode in der die <xref:Microsoft.VisualBasic.Information> Klasse von der <xref:Microsoft.VisualBasic?displayProperty=nameWithType> Namespace. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Gibt `True` Wenn den Inhalt der `Object` Variable stellt einen Verweistyp handelt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Auf NULL festlegbare Werttypen](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Konvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)  
  [Effiziente Verwendung von Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
  [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)  

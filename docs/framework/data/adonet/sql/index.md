@@ -2,12 +2,12 @@
 title: SQL Server und ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: 87e46ad9e83929e40daecc3e3af2eb1281c5ced9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb24be22ebec9a49c489ddcbff4824c4cd3cf34
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360712"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935083"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server und ADO.NET
 In diesem Abschnitt werden Funktionen und Verhaltensweisen beschrieben, die für den .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) spezifisch sind.  
@@ -36,9 +36,9 @@ In diesem Abschnitt werden Funktionen und Verhaltensweisen beschrieben, die für
  [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  Beschreibt die erforderlichen Grundbausteine, Prozesse und Techniken für das Erstellen von LINQ to SQL-Anwendungen.  
   
- Eine vollständige Dokumentation zum SQL Server-Datenbankmodul finden Sie in der SQL Server-Onlinedokumentation für die von Ihnen verwendete SQL Server-Version.  
+ Eine vollständige Dokumentation zur SQL Server-Datenbank-Engine finden Sie in der SQL Server-Onlinedokumentation für die von Ihnen verwendete SQL Server-Version.  
   
- [SQL Server Books Online (SQL Server-Onlinedokumentation)](http://msdn.microsoft.com/library/ms130214.aspx)  
+ [SQL Server Books Online (SQL Server-Onlinedokumentation)](/sql/sql-server/sql-server-technical-documentation)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

@@ -1,47 +1,26 @@
 ---
 title: Leitfaden für F#
 description: Dieses Handbuch enthält einen Überblick über die verschiedenen Lernmaterialien für F#, funktionalen Programmiersprachen, die auf .NET ausgeführt wird.
-author: jackfoxy
-ms.date: 03/19/2018
-ms.openlocfilehash: cb829e904c006467e1470752b4fe8757ca694b05
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+author: cartermp
+ms.date: 08/03/2018
+ms.openlocfilehash: d3e10b6eb99f35b8eddeaa1f0ae257dd17d5cc41
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312000"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933921"
 ---
 # <a name="f-guide"></a>Leitfaden für F#
 
-F# ist eine funktionale Programmiersprache, die auf .NET ausgeführt wird. Dank vollständiger Unterstützung von Objekten können Sie für pragmatische Lösungen zu jedem Problem die funktionale und die objektorientierte Programmierung miteinander kombinieren.
+Leitfaden für f# enthält zahlreiche Ressourcen für die Sprache f# erlernen.
 
-```fsharp
-open System // Get access to functionality in System namespace.
+## <a name="learning-f"></a>Erlernen von f# #
 
-// Function: takes a name and produces a greeting.
-let getGreeting name =
-    sprintf "Hello, %s! Isn't F# great?" name
+[F#-neuerungen](what-is-fsharp.md) wird beschrieben, was die F#-Sprache ist und welche Programmierung darin ähnelt, mit kurzen Codebeispielen. Dies wird empfohlen, wenn Sie mit f# vertraut sind.
 
-// Use the EntryPoint attribute to run the program.
-[<EntryPoint>]
-let main args =
-    // Define a list of names
-    let names = [| "Don"; "Julia"; "Xi" |]
-    
-    // Print a fun greeting for each name!
-    names
-    |> Array.map getGreeting
-    |> Array.iter (fun greeting -> printfn "%s" greeting)
+Die [Tour durch F#](tour.md) bietet einen Überblick über die wichtigsten Sprachfeatures und viele Codebeispiele. Dies wird empfohlen, wenn Sie Core F#-Funktionen in Aktion sehen möchten.
 
-    0
-```
-
-Im Fokus von F# steht die Steigerung der Produktivität. F# bietet eine umfassende Toolunterstützung mit zahlreichen modernen Features.
-
-## <a name="learning-f"></a>Learning [F#] #
-
-Die [Tour durch F#](tour.md) bietet einen Überblick über die wichtigsten Sprachfeatures und viele Codebeispiele. Sie wird für den Einstieg in F# empfohlen, um sich mit der Funktionsweise der Sprache vertraut zu machen.
-
-Lesen Sie [Erste Schritte mit F# in Visual Studio](get-started/get-started-visual-studio.md), wenn Sie für Windows entwickeln und die vollständige Visual Studio-IDE (Integraded Development Environment) nutzen möchten.
+[Erste Schritte mit f# in Visual Studio](get-started/get-started-visual-studio.md) Wenn Sie Windows gearbeitet und möchten die umfassende Visual Studio-IDE (Integrated Development Environment)-Umgebung.
 
 Lesen Sie [Erste Schritte mit F# in Visual Studio für Mac](get-started/get-started-with-visual-studio-for-mac.md), wenn Sie MacOS nutzen und eine Visual Studio-IDE verwenden möchten.
 
@@ -58,7 +37,6 @@ Lesen Sie [Erste Schritte mit F# in Visual Studio Code](get-started/get-started-
 Die [F#-Sprachreferenz](language-reference/index.md) ist die offizielle, umfassende Referenz zu allen F#-Funktionen. Jeder Artikel erklärt die Syntax und zeigt Codebeispiele. Nutzen Sie die Filterleiste im Inhaltsverzeichnis, um nach bestimmten Artikeln zu suchen.
 
 Die [Referenz zur F#-Kernbibliothek](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) (in englischer Sprache) ist die API-Referenz für die F#-Kernbibliothek.
-
 
 ## <a name="additional-guides"></a>Zusätzliche Anleitungen
 

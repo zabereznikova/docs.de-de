@@ -6,21 +6,21 @@ helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 ms.openlocfilehash: 2917a698f9aa7828c201a048f443f5941797c704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655862"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934289"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objekte und Klassen in Visual Basic
 Ein *Objekt* ist eine Kombination aus Code und Daten, die als Einheit behandelt werden kann. Ein Objekt kann ein Teil einer Anwendung sein wie ein Steuerelement oder ein Formular. Eine vollständige Anwendung kann auch ein Objekt sein.
 
-Wenn Sie eine Anwendung in Visual Basic erstellen, arbeiten Sie immer mit Objekten. Sie können Objekte, die von Visual Basic, wie z. B. Steuerelemente, Formulare und Data Access-Objekte bereitgestellt. Sie können auch Objekte aus anderen Anwendungen in Visual Basic-Anwendung verwenden. Sie können sogar eigene Objekte erstellen und für diese zusätzliche Eigenschaften und Methoden definieren. Objekte verhalten sich wie vorgefertigte Bausteine für Programme – Sie können ein Stück Code einmal schreiben und immer wieder verwenden.  
+Wenn Sie eine Anwendung in Visual Basic erstellen, arbeiten Sie ständig mit Objekten. Sie können Objekte, die von Visual Basic bereitgestellt werden, z. B. Steuerelemente, Formulare und Zugreifen auf Objekte verwenden. Sie können auch Objekte aus anderen Anwendungen in Visual Basic-Anwendung verwenden. Sie können sogar eigene Objekte erstellen und für diese zusätzliche Eigenschaften und Methoden definieren. Objekte verhalten sich wie vorgefertigte Bausteine für Programme – Sie können ein Stück Code einmal schreiben und immer wieder verwenden.  
   
 Dieses Thema beschreibt Objekte im Detail.  
 
 ## <a name="objects-and-classes"></a>Objekte und Klassen
-Jedes Objekts in Visual Basic wird definiert, indem Sie eine *Klasse*. Eine Klasse beschreibt die Variablen, Eigenschaften, Prozeduren und Ereignisse eines Objekts. Objekte sind Instanzen von Klassen. Sie können beliebig viele Objekte erstellen, die Sie benötigen, sobald Sie eine Klasse definiert haben.
+Jedes Objekt in Visual Basic wird definiert, indem eine *Klasse*. Eine Klasse beschreibt die Variablen, Eigenschaften, Prozeduren und Ereignisse eines Objekts. Objekte sind Instanzen von Klassen. Sie können beliebig viele Objekte erstellen, die Sie benötigen, sobald Sie eine Klasse definiert haben.
 
 Um die Beziehung zwischen einem Objekt und seiner Klasse zu verstehen, stellen Sie sich Ausstechformen und Kekse vor. Die Ausstechform ist die Klasse. Sie definiert die Merkmale der einzelnen Kekse, z.B. die Größe und Form. Die Klasse wird verwendet, um Objekte zu erstellen. Die Objekte sind die Kekse.
 
@@ -232,7 +232,7 @@ Achten Sie darauf, dass der Compiler die Klasse aufrufen kann, von der Ihre neue
 Eine andere Möglichkeit zur Verknüpfung von Objekten ist eine *Einschlussbeziehung*. Containerobjekte schließen andere Objekte logisch ein. Beispielsweise enthält das <xref:System.OperatingSystem>-Objekt ein <xref:System.Version>-Objekt logisch, das es durch seine <xref:System.OperatingSystem.Version%2A>-Eigenschaft zurückgibt. Beachten Sie, dass das Container-Objekt physisch kein anderes Objekt enthält.
 
 #### <a name="collections"></a>Auflistungen
-Ein bestimmter Typ des Objekteinschlusses wird dargestellt durch *Auflistungen*. Auflistungen sind Gruppen ähnlicher Objekte, die aufgelistet werden können. Visual Basic unterstützt eine spezielle Syntax in der [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) , mit der Sie durch die Elemente einer Auflistung durchlaufen werden kann. Zudem ermöglichen Auflistungen die Verwendung eines <xref:Microsoft.VisualBasic.Collection.Item%2A>-Elements zum Abrufen von Elementen anhand ihres Indexes oder anhand der Zuordnung zu einer eindeutigen Zeichenfolge. Auflistungen können einfacher verwendet werden als Arrays, denn Sie können sie zum Hinzufügen oder Entfernen von Elementen ohne Indizes verwenden. Aufgrund ihrer Benutzerfreundlichkeit werden Auflistungen häufig zum Speichern von Formularen und Steuerelementen verwendet.
+Ein bestimmter Typ des Objekteinschlusses wird dargestellt durch *Auflistungen*. Auflistungen sind Gruppen ähnlicher Objekte, die aufgelistet werden können. Visual Basic unterstützt eine spezielle Syntax in der [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) , mit der Sie die Elemente einer Auflistung zu durchlaufen. Zudem ermöglichen Auflistungen die Verwendung eines <xref:Microsoft.VisualBasic.Collection.Item%2A>-Elements zum Abrufen von Elementen anhand ihres Indexes oder anhand der Zuordnung zu einer eindeutigen Zeichenfolge. Auflistungen können einfacher verwendet werden als Arrays, denn Sie können sie zum Hinzufügen oder Entfernen von Elementen ohne Indizes verwenden. Aufgrund ihrer Benutzerfreundlichkeit werden Auflistungen häufig zum Speichern von Formularen und Steuerelementen verwendet.
 
 ## <a name="related-topics"></a>Verwandte Themen  
  [Exemplarische Vorgehensweise: Definieren von Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  

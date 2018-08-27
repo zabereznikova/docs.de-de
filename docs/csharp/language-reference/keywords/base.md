@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 94bfcbacd8c222004c1a013cc855ac8d46aab05f
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 8719ab79273701173530760ad1bec837c4f4302d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314658"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934352"
 ---
 # <a name="base-c-reference"></a>base (C#-Referenz)
 
@@ -50,7 +50,7 @@ In diesem Beispiel wird veranschaulicht, wie der aufgerufene Konstruktor der Bas
 
 ## <a name="see-also"></a>Siehe auch
 
-[C#-Referenz](../../../csharp/language-reference/index.md)  
-[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
-[this](../../../csharp/language-reference/keywords/this.md)
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [this](../../../csharp/language-reference/keywords/this.md)

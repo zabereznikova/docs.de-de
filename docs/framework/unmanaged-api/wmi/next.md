@@ -1,5 +1,5 @@
 ---
-title: Next-Funktion (Referenz zur nicht verwalteten API)
+title: Die Next-Funktion (Referenz zur nicht verwalteten API)
 description: Die nächste Funktion Retireves die nächste Eigenschaft in einer Enumeration.
 ms.date: 11/06/2017
 api_name:
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e945930a9a668d0a1c1e4c26bf3add9cc574c261
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15d470ccf9384695aa38a50c2c062c1b660fea96
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461427"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934972"
 ---
-# <a name="next-function"></a>Next-Funktion
-Ruft die nächste Eigenschaft in eine Enumeration, die mit einem Aufruf von beginnt [BeginEnumeration](beginenumeration.md).  
+# <a name="next-function"></a>Die Next-Funktion
+Ruft die nächste Eigenschaft in einer Enumeration, die mit einem Aufruf von beginnt [BeginEnumeration](beginenumeration.md).  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -48,55 +48,55 @@ HRESULT Next (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `lFlags`  
 [in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pstrName`  
-[out] Ein neues `BSTR` , die den Namen der Eigenschaft enthält. Legen Sie diesen Parameter, um `null` , wenn der Name nicht erforderlich ist.
+[out] Ein neues `BSTR` , die den Eigenschaftsnamen enthält. Sie können diesen Parameter festlegen, um `null` Wenn der Name nicht erforderlich ist.
 
 `pVal`  
-[out] Ein `VARIANT` mit dem Wert der Eigenschaft gefüllt. Legen Sie diesen Parameter, um `null` , wenn der Wert nicht erforderlich ist. Wenn die Funktion einen Fehlercode zurückgibt der `VARIANT` übergeben `pVal` ist der linke unverändert bleiben sollen. 
+[out] Ein `VARIANT` mit dem Wert der Eigenschaft gefüllt. Sie können diesen Parameter festlegen, um `null` Wenn der Wert nicht erforderlich ist. Wenn die Funktion einen Fehlercode zurückgibt. die `VARIANT` übergeben `pVal` wird links unverändert. 
 
 `pvtType`  
-[out] Ein Zeiger auf eine `CIMTYPE` Variable (eine `LONG` in dem der Typ der Eigenschaft platziert ist). Der Wert dieser Eigenschaft kann eine `VT_NULL_VARIANT`, in diesem Fall ist es erforderlich, den tatsächlichen Typ der Eigenschaft zu ermitteln. Dieser Parameter kann auch `null`. 
+[out] Ein Zeiger auf eine `CIMTYPE` Variable (eine `LONG` in dem der Typ der Eigenschaft befindet). Der Wert dieser Eigenschaft kann sein ein `VT_NULL_VARIANT`, in diesem Fall ist es erforderlich, um zu bestimmen, den tatsächlichen Typ der Eigenschaft. Dieser Parameter kann auch sein `null`. 
 
 `plFlavor`  
-[out] `null`, oder ein Wert, der Informationen auf den Ursprung der Eigenschaft empfängt. Finden Sie im Abschnitt "Hinweise ["] mögliche Werte. 
+[out] `null`, oder ein Wert, der Informationen auf den Ursprung der Eigenschaft empfängt. Finden Sie im Abschnitt "[" Hinweise "]" für die möglichen Werte. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Ein allgemeiner Fehler ist aufgetreten. |
+| `WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
 | `WBEM_E_UNEXPECTED` | 0x8004101d | Es wurde kein Aufruf von der [ `BeginEnumeration` ](beginenumeration.md) Funktion. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um eine neue Enumeration zu beginnen. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Der Remoteprozeduraufruf Schemakonflikt zwischen dem aktuellen Prozess und die Verwaltung von Windows ist fehlgeschlagen. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher zur Verfügung, um eine neue Enumeration beginnen. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Der Remoteprozeduraufruf zwischen dem aktuellen Prozess und die Windows-Verwaltung ist fehlgeschlagen. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | Es sind keine weiteren Eigenschaften in der Enumeration. |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | Es gibt keine weiteren Eigenschaften in der Enumeration. |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::Next](https://msdn.microsoft.com/library/aa391453(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next) Methode.
 
 Diese Methode gibt auch Systemeigenschaften zurück.
 
-Wenn der zugrunde liegende Typ der Eigenschaft ein Objektpfad, ein Datum oder Uhrzeit oder einem anderen Sonderform ist, enthält der zurückgegebene Typ nicht genügend Informationen. Der Aufrufer muss die Untersuchung erfolgen die `CIMTYPE` für die angegebene Eigenschaft, um festzustellen, ob die Eigenschaft einen Objektverweis, ein Datum oder Uhrzeit oder eine andere Sonderform ist.
+Wenn der zugrunde liegende Typ der Eigenschaft eines Objektpfad, ein Datum oder Uhrzeit oder einen anderen speziellen Typ ist, enthält der zurückgegebene Typ keine ausreichende Informationen. Der Aufrufer muss Untersuchen der `CIMTYPE` für die angegebene Eigenschaft aus, um festzustellen, ob die Eigenschaft einen Objektverweis, ein Datum oder Uhrzeit oder einen anderen speziellen Typ ist.
 
-Wenn `plFlavor` nicht `null`die `LONG` Wert empfängt Informationen über den Ursprung der Eigenschaft, die wie folgt:
+Wenn `plFlavor` nicht `null`, `LONG` Wert empfängt Informationen über den Ursprung der Eigenschaft, die wie folgt:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0 x 40 | Die Eigenschaft ist ein standard-Systemeigenschaft. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Für eine Klasse: die Eigenschaft wird von der übergeordneten Klasse geerbt. </br> Für eine Instanz: die Eigenschaft während der übergeordneten Klasse geerbt wurde nicht verändert von der Instanz.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Für eine Klasse: die Eigenschaft gehört der abgeleiteten Klasse. </br> Für eine Instanz: die Eigenschaft geändert wird, von der Instanz; d. h. ein Wert angegeben wurde, oder ein Qualifizierer hinzugefügt oder geändert wurde. |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0 x 40 | Die Eigenschaft ist eine standard-Systemeigenschaft. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Für eine Klasse: die Eigenschaft wird von der übergeordneten Klasse geerbt. </br> Für eine Instanz: die Eigenschaft, während von der übergeordneten Klasse geerbt wurde nicht geändert von der Instanz.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Für eine Klasse: die Eigenschaft gehört, in die abgeleitete Klasse. </br> Für eine Instanz: die Eigenschaft wird geändert, indem die Instanz d. h. ein Wert angegeben wurde, oder ein Qualifizierer hinzugefügt oder geändert wurde. |
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
