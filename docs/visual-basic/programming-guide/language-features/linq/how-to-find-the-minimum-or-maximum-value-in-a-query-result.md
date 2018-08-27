@@ -14,23 +14,23 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: f1b997272bc65a3702353f1f7db02fa330a19c21
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 252601b12e21e122c316952f8e10ce04cbe3f78e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34826889"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924481"
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Gewusst wie: Suchen des minimalen oder maximalen Werts in einem Abfrageergebnis mithilfe von LINQ (Visual Basic)
-Language-Integrated Query (LINQ) erleichtert die Datenbankinformationen zugreifen und Ausführen von Abfragen.  
+Language Integrated Query (LINQ) erleichtert den Zugriff auf Informationen und Ausführen von Abfragen.  
   
- Im folgende Beispiel wird gezeigt, wie eine neue Anwendung zu erstellen, die Abfragen für eine SQL Server-Datenbank ausführt. Bestimmt das Beispiel die minimalen und maximalen Werte für die Ergebnisse mithilfe der `Aggregate` und `Group By` Klauseln. Weitere Informationen finden Sie unter [Aggregate-Klausel](../../../../visual-basic/language-reference/queries/aggregate-clause.md) und [Group By-Klausel](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
+ Das folgende Beispiel zeigt, wie Sie eine neue Anwendung zu erstellen, die Abfragen für eine SQL Server-Datenbank ausführt. Bestimmt das Beispiel die minimalen und maximalen Werte für die Ergebnisse mithilfe der `Aggregate` und `Group By` Klauseln. Weitere Informationen finden Sie unter [Aggregate-Klausel](../../../../visual-basic/language-reference/queries/aggregate-clause.md) und [Group By-Klausel](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
- In den Beispielen in diesem Thema verwenden die Beispieldatenbank Northwind. Wenn Sie diese Datenbank nicht auf Ihrem Computer verfügen, können Sie es aus dem Microsoft Download Center herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ In die Beispielen in diesem Thema verwenden die Beispieldatenbank Northwind. Wenn Sie diese Datenbank nicht auf dem Entwicklungscomputer gespeichert haben, können Sie es aus dem Microsoft Download Center herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>So erstellen eine Verbindung mit einer Datenbank  
+### <a name="to-create-a-connection-to-a-database"></a>Um eine Verbindung mit einer Datenbank zu erstellen.  
   
 1.  Öffnen Sie in Visual Studio **Server-Explorer**/**Datenbank-Explorer** durch Klicken auf **Server-Explorer**/**Datenbank Explorer** auf die **Ansicht** Menü.  
   
@@ -38,46 +38,46 @@ Language-Integrated Query (LINQ) erleichtert die Datenbankinformationen zugreife
   
 3.  Geben Sie eine gültige Verbindung mit der Beispieldatenbank Northwind.  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Ein Projekt hinzufügen, die eine LINQ to SQL-Datei enthält.  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Zum Hinzufügen eines Projekts, das eine LINQ to SQL-Datei enthält.  
   
 1.  Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms-Anwendung** als Projekttyp.  
   
 2.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die **LINQ to SQL-Klassen** Elementvorlage.  
   
-3.  Nennen Sie die Datei `northwind.dbml`. Klicken Sie auf **Hinzufügen**. Der Object Relational Designer (O/R-Designer) wird für die Datei northwind.dbml geöffnet.  
+3.  Nennen Sie die Datei `northwind.dbml`. Klicken Sie auf **Hinzufügen**. Der Object Relational Designer (O/R Designer) wird für die Datei northwind.dbml geöffnet.  
   
 ### <a name="to-add-tables-to-query-to-the-or-designer"></a>Hinzufügen von Tabellen zu Abfragen in den O/R-Designer  
   
-1.  In **Server-Explorer**/**Datenbank-Explorer**, erweitern Sie die Verbindung mit der Datenbank Northwind. Erweitern Sie die **Tabellen** Ordner.  
+1.  In **Server-Explorer**/**Datenbank-Explorer**, erweitern Sie die Verbindung zur Northwind-Datenbank. Erweitern Sie die **Tabellen** Ordner.  
   
-     Wenn Sie im O/R-Designer geschlossen haben, können Sie es durch Doppelklicken auf die Datei northwind.dbml, die Sie zuvor hinzugefügt haben erneut öffnen.  
+     Wenn Sie den O/R-Designer geschlossen haben, können Sie sie durch Doppelklicken auf die Datei northwind.dbml, die Sie zuvor hinzugefügt haben erneut öffnen.  
   
-2.  Klicken Sie auf der Customers-Tabelle, und ziehen Sie es in den linken Bereich des Designers. Klicken Sie auf die Orders-Tabelle, und ziehen Sie es in den linken Bereich des Designers.  
+2.  Klicken Sie auf der Customers-Tabelle aus, und ziehen Sie es in den linken Bereich des Designers. Klicken Sie auf der Orders-Tabelle aus, und ziehen Sie es in den linken Bereich des Designers.  
   
-     Der Designer erstellt neue `Customer` und `Order` Objekte für das Projekt. Beachten Sie, dass der Designer Beziehungen zwischen den Tabellen erkennt automatisch und untergeordneten Eigenschaften für verwandte Objekte erstellt. Z. B. IntelliSense wird angezeigt, die `Customer` Objekt verfügt über eine `Orders` -Eigenschaft für alle Aufträge im Zusammenhang mit diesen Kunden.  
+     Der Designer erstellt neue `Customer` und `Order` Objekte für Ihr Projekt. Beachten Sie, dass der Designer Beziehungen zwischen den Tabellen erkennt und untergeordnete Eigenschaften für verknüpfte Objekte erstellt automatisch aus. Z. B. IntelliSense angezeigt, die die `Customer` Objekt verfügt über eine `Orders` -Eigenschaft für alle Bestellungen für diesen Kunden beziehen.  
   
 3.  Speichern Sie die Änderungen zu und schließen Sie den Designer.  
   
 4.  Speichern Sie das Projekt.  
   
-### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Hinzufügen von Code aus, um die Datenbank abzufragen und die Ergebnisse werden angezeigt.  
+### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Hinzufügen von Code aus, um die Datenbank abzufragen und die Ergebnisse werden angezeigt  
   
-1.  Aus der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.DataGridView> -Steuerelement auf die Standard-Windows Form für das Projekt, Form1.  
+1.  Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.DataGridView> Steuerelement auf das Standard-Windows-Formular für das Projekt, Form1.  
   
 2.  Doppelklicken Sie auf Form1, um zum Hinzufügen von Code die `Load` -Ereignis des Formulars.  
   
-3.  Wenn Sie Tabellen in den O/R-Designer hinzugefügt haben, wird der Designer hinzugefügt ein <xref:System.Data.Linq.DataContext> Objekt für das Projekt. Dieses Objekt enthält den Code, den Sie für den Zugriff auf diese Tabellen, zusätzlich zu den einzelnen Objekte und Sammlungen für jede Tabelle benötigen. Die <xref:System.Data.Linq.DataContext> Objekt für das Projekt mit der Bezeichnung wird anhand des Namens der DBML-Datei. Für dieses Projekt die <xref:System.Data.Linq.DataContext> Objekt heißt `northwindDataContext`.  
+3.  Wenn Sie Tabellen in den O/R-Designer hinzugefügt haben, wird der Designer hinzugefügt eine <xref:System.Data.Linq.DataContext> Objekt für das Projekt. Dieses Objekt enthält den Code, den Sie für den Zugriff auf diese Tabellen, zusätzlich zu einzelnen Objekte und Auflistungen für jede Tabelle benötigen. Die <xref:System.Data.Linq.DataContext> Objekt für das Projekt mit dem Namen wird anhand des Namens der DBML-Datei. Für dieses Projekt die <xref:System.Data.Linq.DataContext> Objekt mit dem Namen `northwindDataContext`.  
   
-     Erstellen eine Instanz von der <xref:System.Data.Linq.DataContext> in Ihren Code und die Abfrage die Tabellen, die vom O/R-Designer angegeben.  
+     Sie können eine Instanz von erstellen die <xref:System.Data.Linq.DataContext> in Ihrem Code und die Abfrage der Tabellen, die vom O/R-Designer angegeben.  
   
-     Fügen Sie folgenden Code, der `Load` Ereignis. Dieser Code fragt die Tabellen, die als Eigenschaften des Datenkontexts verfügbar gemacht und bestimmt die minimale und maximale Werte für die Ergebnisse ab. Das Beispiel verwendet er `Aggregate` -Klausel, um die Abfrage für ein einzelnes Ergebnis und die `Group By` -Klausel, um einen Durchschnittswert für anzeigen gruppiert die Ergebnisse.  
+     Fügen Sie den folgenden Code der `Load` Ereignis. Dieser Code fragt die Tabellen, die als Eigenschaften des Datenkontexts verfügbar gemacht werden, und bestimmt die minimalen und maximalen Werte für die Ergebnisse aus. Das Beispiel verwendet er `Aggregate` -Klausel, um die Abfrage für ein einzelnes Ergebnis, und die `Group By` -Klausel, um einen Durchschnittswert für anzeigen gruppiert die Ergebnisse.  
   
      [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-find-the-minimum-or-maximum-value-in-a-query-result_1.vb)]  
   
-4.  Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
+4.  Drücken Sie F5, um das Projekt ausführen und die Ergebnisse anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Abfragen](../../../../visual-basic/language-reference/queries/queries.md)  
+ [Abfragen](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

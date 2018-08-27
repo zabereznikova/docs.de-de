@@ -1,13 +1,13 @@
 ---
-title: LINQ to XML im Vergleich zu Andere XML-Technologies2
+title: LINQ to XML im Vergleich zu Anderen XML-Technologies2
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
 ms.openlocfilehash: 926f1a1ab49a627331a614ef68790ea289b3dcff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648423"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908075"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML im Vergleich zu anderen XML-Technologien
 In diesem Thema wird [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit den folgenden XML-Technologien verglichen: <xref:System.Xml.XmlReader>, XSLT, MSXML und XmlLite. Diese Informationen helfen Ihnen bei Ihrer Entscheidung für eine dieser Technologien.  
@@ -26,7 +26,7 @@ In diesem Thema wird [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit d
 ## <a name="linq-to-xml-vs-xslt"></a>LINQ to XML im Vergleich zu XSLT  
  Sowohl [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] als auch XSLT bieten umfangreiche Funktionen zum Transformieren von XML-Dokumenten. XSLT ist ein regelbasierter, deklarativer Ansatz. Erfahrene XSLT-Programmierer schreiben XSLT-Code unter Verwendung eines funktionalen Programmierstils, bei dem der zustandslose Ansatz im Vordergrund steht. Transformationen können mit reinen Funktionen geschrieben werden, die ohne Nebeneffekte implementiert werden. Dieser regelbasierte oder funktionale Ansatz ist vielen Entwicklern nicht bekannt, und das Erlernen dieses Ansatzes kann schwierig und zeitaufwändig sein.  
   
- XSLT kann ein sehr produktives System sein, das leistungsstarke Anwendungen erbringt. Einige große Internetunternehmen verwenden XSLT beispielsweise als Möglichkeit, HTML-Daten aus XML-Code zu generieren, der aus verschiedenen Datenspeichern zusammengestellt wird. Das verwaltete XSLT-Modul kompiliert XSLT in CLR-Code und erweist sich in einigen Szenarios sogar als leistungsfähiger als das systemeigene XSLT-Modul.  
+ XSLT kann ein sehr produktives System sein, das leistungsstarke Anwendungen erbringt. Einige große Internetunternehmen verwenden XSLT beispielsweise als Möglichkeit, HTML-Daten aus XML-Code zu generieren, der aus verschiedenen Datenspeichern zusammengestellt wird. Die verwaltete XSLT-Engine kompiliert XSLT in CLR-Code und erweist sich in einigen Szenarios sogar als leistungsfähiger als die systemeigene XSLT-Engine.  
   
  Fakt ist aber, dass Entwickler bei Verwendung von XSLT nicht auf das vorhandene C#- und Visual Basic-Wissen zurückgreifen können. Stattdessen müssen sie Code in einer anderen und komplexen Programmiersprache schreiben. Die Verwendung zweier nicht integrierter Entwicklungssysteme, wie C# (oder Visual Basic) und XSLT, führt zu Softwaresystemen, die schwieriger zu entwickeln und zu verwalten sind.  
   

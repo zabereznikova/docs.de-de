@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb7793c1c510c9b1b303e6b568f105a958c27cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578583"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42907780"
 ---
 # <a name="handling-and-raising-events"></a>Behandeln und Auslösen von Ereignissen
 Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell folgt dem Beobachter-Entwurfsmuster, mit dem sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen kann. Von einem Ereignissender wird eine Benachrichtigung erstellt, die angibt, dass ein Ereignis aufgetreten ist. Diese Benachrichtigung wird dann vom Ereignisempfänger empfangen, und eine Antwort wird definiert. In diesem Artikel werden die Hauptkomponenten des Delegatmodells, das Verwenden von Ereignissen in Anwendungen und das Implementieren von Ereignissen im Code beschrieben.  
   
- Informationen zur Ereignisbehandlung bei Windows 8.x Store-Apps finden Sie unter [Events and routed events overview (Übersicht über Ereignisse und Routingereignisse)](/previous-versions/windows/apps/hh758286(v=win.10)).  
+ Informationen zur Ereignisbehandlung bei Windows 8.x Store-Apps finden Sie unter [Events and routed events overview (Übersicht über Ereignisse und Routingereignisse)](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).  
   
 ## <a name="events"></a>Ereignisse  
  Ein Ereignis ist eine Meldung, die von einem Objekt gesendet wird, um das Auftreten einer Aktion zu signalisieren. Die Aktion kann durch Benutzerinteraktion, wie das Anklicken einer Schaltfläche, verursacht werden, oder sie kann durch eine andere Programmlogik, wie das Ändern eines Eigenschaftswerts, ausgelöst werden. Das Objekt, von dem das Ereignis ausgelöst wird, wird als *Ereignissender* bezeichnet. Dem Ereignissender ist nicht bekannt, welches Objekt oder welche Methode die ausgelösten Ereignisse empfangen (behandeln) wird. Das Ereignis ist in der Regel ein Member des Ereignissenders. Beispielsweise ist das <xref:System.Web.UI.WebControls.Button.Click>-Ereignis ein Member der Klasse <xref:System.Web.UI.WebControls.Button>, und das <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>-Ereignis ist ein Member der Klasse, von der die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle implementiert wird.  
@@ -80,7 +80,7 @@ Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell 
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|description|  
+|Titel|Beschreibung |  
 |-----------|-----------------|  
 |[Vorgehensweise: Auslösen und Behandeln von Ereignissen](../../../docs/standard/events/how-to-raise-and-consume-events.md)|In diesem Abschnitt sind Beispiele zum Auslösen und Verarbeiten von Ereignissen enthalten.|  
 |[Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|In diesem Abschnitt wird die Verwendung von Ereigniseigenschaften zum Behandeln mehrerer Ereignisse veranschaulicht.|  

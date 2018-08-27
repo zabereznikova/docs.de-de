@@ -1,5 +1,5 @@
 ---
-title: Verwendungsrichtlinien
+title: Nutzungsrichtlinien
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,31 +7,35 @@ helpviewer_keywords:
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02905c193387f78430ce1885449055060d07bf82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bd54a2325c9721ad17943ba663e7ec0c300632e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571032"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925075"
 ---
-# <a name="usage-guidelines"></a>Verwendungsrichtlinien
-Dieser Abschnitt enthält Richtlinien für die Verwendung von gemeinsamer Typen in öffentlich zugängliche-APIs. Er behandelt die Nutzung des integrierten Framework-Typen (z. B. Serialisierungsattribute) und allgemeine Operatoren überladen.  
+# <a name="usage-guidelines"></a>Nutzungsrichtlinien
+
+Dieser Abschnitt enthält Richtlinien für die Verwendung von häufig verwendeten Typen in öffentlich zugängliche-APIs. Er behandelt die direkte Verwendung von integrierten Framework-Typen (z. B. Serialisierungsattribute) und allgemeine Operatoren überladen.
   
- Die <xref:System.IDisposable?displayProperty=nameWithType> Schnittstelle wird nicht in diesem Abschnitt behandelt, aber es wird erläutert, der [Dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md) Abschnitt.  
-  
+Die <xref:System.IDisposable?displayProperty=nameWithType> Schnittstelle wird in diesem Abschnitt nicht behandelt, aber es wird erläutert, der [Dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md) Abschnitt.
+
 > [!NOTE]
->  Richtlinien und zusätzliche Informationen über andere gängige integrierte .NET Framework-Typen finden Sie unter den Referenzthemen für Folgendes: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.  
+> Richtlinien und zusätzliche Informationen über andere gängige, integrierte .NET Framework-Typen finden Sie unter den Referenzthemen für die folgenden: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Arrays](arrays.md)  
+[Attribute](attributes.md)  
+[Sammlungen](guidelines-for-collections.md)  
+[Serialisierung](serialization.md)  
+[Verwendung von System.Xml](system-xml-usage.md)  
+[Gleichheitsoperatoren](equality-operators.md)  
+
+*Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
+
+*Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Arrays](../../../docs/standard/design-guidelines/arrays.md)  
- [Attribute](../../../docs/standard/design-guidelines/attributes.md)  
- [Sammlungen](/cpp/mfc/collections)  
- [Serialisierung](../../../docs/standard/design-guidelines/serialization.md)  
- [Verwendung von System.Xml](../../../docs/standard/design-guidelines/system-xml-usage.md)  
- [Gleichheitsoperatoren](../../../docs/standard/design-guidelines/equality-operators.md)  
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
-  
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
-  
-## <a name="see-also"></a>Siehe auch  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch
+
+[Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

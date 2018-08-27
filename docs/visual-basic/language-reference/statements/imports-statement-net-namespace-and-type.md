@@ -1,5 +1,5 @@
 ---
-title: Imports-Anweisung (.NET-Namespace und Typ)
+title: Imports-Anweisung - Namespace von .NET und Datentyp (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Imports
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: ef569b0ed6428d24d019e00c500e4d4b91c83d49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0211438e8b4c02fead910dd7a32e0df9ed73ddc5
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604483"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925597"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports-Anweisung (.NET-Namespace und Typ)
-Ermöglicht das Typnamen ohne Namespacequalifikation referenziert werden.  
+Ermöglicht das Typnamen ohne namespacenennung verwiesen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,60 +39,60 @@ Imports [ aliasname = ] namespace.element
 |Begriff|Definition|  
 |---|---|  
 |`aliasname`|Dies ist optional. Ein *Importalias* oder Namen, die mit dem Code, um verweisen kann `namespace` anstelle der vollständigen Qualifizierungspfad. Finden Sie unter [deklarierte Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`namespace`|Erforderlich. Der vollqualifizierte Name des zu importierenden Namespaces. Eine Zeichenfolge von Namespaces kann auf beliebigen Ebenen geschachtelt werden.|  
-|`element`|Dies ist optional. Der Name eines Programmierelements deklarierten im Namespace. Ein Containerelement kann sein.|  
+|`namespace`|Erforderlich. Der voll gekennzeichnete Name des Namespace importiert wird. Eine Zeichenfolge von Namespaces kann zu allen Ebenen geschachtelt werden.|  
+|`element`|Dies ist optional. Der Namen eines Programmierelements, die in den Namespace deklariert werden. Alle Containerelement kann sein.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Imports` -Anweisung ermöglicht es, Typen, die in einem bestimmten Namespace direkt verwiesen wird, enthalten sind.  
+ Die `Imports` Anweisung aktiviert die Typen, die in einem angegebenen Namespace nicht direkt verwiesen werden, enthalten sind.  
   
- Sie können einen einzelnen Namespace-Namen oder eine Zeichenfolge von geschachtelten Namespaces angeben. Jeden geschachtelten Namespace wird vom nächsten höheren Ebene Namespace durch einen Punkt getrennt (`.`), wie im folgende Beispiel veranschaulicht wird.  
+ Sie können einen einzelnen Namespace-Namen oder eine Zeichenfolge von geschachtelten Namespaces angeben. Jeden geschachtelten Namespace ist aus dem nächsten höheren Ebene Namespace durch einen Punkt getrennt (`.`), wie im folgende Beispiel veranschaulicht.  
   
  `Imports System.Collections.Generic`  
   
- Jeder Quelldatei kann eine beliebige Anzahl von enthalten `Imports` Anweisungen. Diese müssen führen Sie die Option-Deklarationen, z. B. die `Option Strict` -Anweisung, und sie müssen vor stehen Deklarationen von Programmierelementen, z. B. `Module` oder `Class` Anweisungen.  
+ Jede Quelldatei kann eine beliebige Anzahl von enthalten `Imports` Anweisungen. Diese müssen führen Sie die Option-Deklarationen, z. B. die `Option Strict` -Anweisung, und sie müssen vor stehen Deklarationen von Programmierelementen, z. B. `Module` oder `Class` Anweisungen.  
   
- Sie können `Imports` nur auf Dateiebene. Dies bedeutet, dass der Deklarationskontext für den Import von eine Quelldatei muss und nicht mit Namespace, Klasse, Struktur, Modul, Schnittstelle, Prozedur oder Block.  
+ Sie können `Imports` nur auf Dateiebene. Dies bedeutet, dass der Deklarationskontext für den Import von muss eine Quelldatei und Namespace, Klasse, Struktur, Modul, Schnittstelle, Prozedur oder Block nicht möglich.  
   
- Beachten Sie, dass die `Imports` Anweisung nimmt Elemente aus anderen Projekten und Assemblys für Ihr Projekt verfügbar. Importieren von ist nicht das Festlegen eines Verweises stattfinden. Es erübrigt es sich nur um Namen zu qualifizieren, die bereits im Projekt verfügbar sind. Weitere Informationen finden Sie unter "Importieren von enthaltenen Elementen" in [Verweise auf deklarierte Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Beachten Sie, dass die `Imports` Anweisung macht nicht Elemente aus anderen Projekten und Assemblys für Ihr Projekt verfügbar. Importieren von nimmt nicht an die Stelle der Festlegen eines Verweises. Es wird lediglich entfernt die Notwendigkeit, qualifizieren Sie Namen, die bereits für Ihr Projekt verfügbar sind. Weitere Informationen finden Sie unter "Importieren von enthaltenen Elementen" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 > [!NOTE]
->  Sie können implizite definieren `Imports` -Anweisungen mithilfe der [Seite "Verweise", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Weitere Informationen finden Sie unter [wie: Hinzufügen oder Entfernen von importierten Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
+>  Sie können implizite definieren `Imports` Anweisungen durch Verwenden der [Seite "Verweise", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen oder Entfernen von importierten Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
   
 ## <a name="import-aliases"></a>Importaliase  
- Ein *Importalias* den Alias für einen Namespace oder Typ definiert. Importaliase sind nützlich, wenn Sie mithilfe der Elemente mit dem gleichen Namen, die in einem oder mehreren Namespaces deklariert werden müssen. Weitere Informationen und ein Beispiel finden Sie unter "Qualifizieren eines Elementnamens" in [Verweise auf deklarierte Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Ein *Importalias* definiert den Alias für einen Namespace oder Typ. Importaliase sind nützlich, wenn Sie Elemente verwenden, mit dem gleichen Namen, die in einem oder mehreren Namespaces deklariert werden müssen. Weitere Informationen und ein Beispiel finden Sie unter "Qualifizieren eines Elementnamens" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
- Sie sollten nicht deklarieren, ein Element auf Modulebene mit dem gleichen Namen wie `aliasname`. Wenn Sie dies tun, Visual Basic-Compiler verwendet `aliasname` nur für den deklarierten Member und nicht länger als ein Importalias erkannt.  
+ Deklarieren Sie nicht Mitglied auf Modulebene mit dem gleichen Namen wie `aliasname`. Visual Basic-Compiler wird verwendet, wenn Sie dies tun, `aliasname` nur für den deklarierten Member und nicht mehr als ein Importalias erkannt.  
   
- Obwohl die Syntax zum Deklarieren von ein Importalias verwendet wie zum Importieren einer XML-Namespacepräfix verwendet wird, unterscheiden sich die Ergebnisse. Ein Importalias kann als ein Ausdruck in Ihrem Code verwendet werden, während ein XML-Namespacepräfix nur in XML-Literalen oder XML-Achseneigenschaften als Präfix für eine qualifiziertes Element oder Attribut verwendet werden kann.  
+ Obwohl die Syntax für einen Importalias deklarieren, zum Importieren einer XML-Namespacepräfix verwendet wird, unterscheiden sich die Ergebnisse. Ein Importalias kann als ein Ausdruck in Ihrem Code verwendet werden, während ein XML-Namespacepräfix in XML-Literalen oder XML-Achseneigenschaften nur als Präfix für ein qualifiziertes Element oder Attributname verwendet werden kann.  
   
 ### <a name="element-names"></a>Elementnamen  
- Wenn Sie angeben `element`, muss darstellen einer *Containerelement*, d. h. ein Programmierelement, das andere Elemente enthalten kann. Containerelemente enthalten Klassen, Strukturen, Modulen, Schnittstellen und Enumerationen.  
+ Wenn Sie angeben `element`, muss darstellen einer *Containerelement*, d. h. ein Programmierelement, das andere Elemente enthalten kann. Container-Elemente enthalten Klassen, Strukturen, Module, Schnittstellen und Enumerationen.  
   
- Der Bereich der Elemente zur Verfügung gestellt wurden ein `Imports` Anweisung hängt davon ab, ob Sie angeben `element`. Wenn Sie nur angeben, `namespace`, alle eindeutig benannten Member dieses Namespace und Mitglieder der Containerelemente in diesem Namespace, ohne Qualifizierung verfügbar sind. Wenn Sie beide angeben `namespace` und `element`nur die Elemente dieses Elements ohne Qualifizierung verfügbar sind.  
+ Der Bereich der Elemente zur Verfügung gestellt wurden ein `Imports` Anweisung hängt davon ab, ob Sie angeben `element`. Wenn Sie nur angeben `namespace`, alle eindeutig benannte Member dieses Namespace und Mitglieder der Container-Elemente innerhalb dieses Namespace sind ohne Qualifizierung verfügbar. Wenn Sie beide angeben `namespace` und `element`, nur die Elemente des Elements ohne Qualifizierung verfügbar sind.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel gibt alle Ordner im Verzeichnis C:\ mithilfe der <xref:System.IO.DirectoryInfo> Klasse.  
+ Das folgende Beispiel gibt alle Ordner im Verzeichnis C:\ mit der <xref:System.IO.DirectoryInfo> Klasse.  
   
- Der Code hat keine `Imports` Anweisungen am Anfang der Datei. Aus diesem Grund die `DirectoryInfo`, <xref:System.Text.StringBuilder>, und <xref:Microsoft.VisualBasic.ControlChars.CrLf> Verweise mit Namespaces vollständig qualifiziert werden.  
+ Der Code weist keine `Imports` Anweisungen am Anfang der Datei. Aus diesem Grund die `DirectoryInfo`, <xref:System.Text.StringBuilder>, und <xref:Microsoft.VisualBasic.ControlChars.CrLf> Verweise mit den Namespaces alle vollständig qualifiziert werden.  
   
  [!code-vb[VbVbalrStatements#152](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_1.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel schließt `Imports` Anweisungen für die Namespaces verwiesen wird. Aus diesem Grund müssen die Typen nicht mit den Namespaces vollqualifiziert sein.  
+ Das folgende Beispiel schließt `Imports` Anweisungen für die Namespaces auf die verwiesen wird. Aus diesem Grund müssen die Typen nicht mit den Namespaces vollqualifiziert sein.  
   
  [!code-vb[VbVbalrStatements#153](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_2.vb)]  
   
  [!code-vb[VbVbalrStatements#154](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_3.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel schließt `Imports` -Anweisungen, die Aliase für die referenzierten Namespaces erstellen. Die Typen werden mit den Aliasen qualifiziert.  
+ Das folgende Beispiel schließt `Imports` -Anweisungen, die Aliase für den referenzierten Namespace zu erstellen. Die Typen werden mit den Aliasen qualifiziert.  
   
  [!code-vb[VbVbalrStatements#155](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_4.vb)]  
   
  [!code-vb[VbVbalrStatements#156](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_5.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel schließt `Imports` -Anweisungen, die Aliase für den referenzierten Typen zu erstellen. Aliase werden verwendet, um die Typen anzugeben.  
+ Das folgende Beispiel schließt `Imports` -Anweisungen, die Aliase für den referenzierten Typen erstellen. Aliase werden verwendet, um die Typen anzugeben.  
   
  [!code-vb[VbVbalrStatements#157](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_6.vb)]  
   

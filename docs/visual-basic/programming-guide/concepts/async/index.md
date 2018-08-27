@@ -3,11 +3,11 @@ title: Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone 
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
 ms.openlocfilehash: 5a0d2d40b815037e6eb3ed47c500c135ad116aaf
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753525"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925241"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))
 Sie können Leistungsengpässe vermeiden und die Reaktionsfähigkeit der Anwendung insgesamt verbessern, indem Sie asynchrone Programmierung verwenden. Allerdings können herkömmliche Verfahren zum Schreiben von asynchronen Anwendungen kompliziert sein, weshalb es schwierig ist, diese Anwendungen zu schreiben, zu debuggen und zu verwalten.  
@@ -140,14 +140,14 @@ Dim urlContents As String = Await client.GetStringAsync()
 ##  <a name="BKMK_APIAsyncMethods"></a> API-Async-Methoden  
  Sie fragen sich möglicherweise, wo Methoden wie `GetStringAsync` zu finden sind, die die asynchrone Programmierung unterstützen. .NET Framework 4.5 oder höher enthält viele Member, die mit `Async` und `Await` funktionieren. Sie können diese Member durch das Suffix "Async" erkennen, das dem Membernamen und dem Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> angefügt wird. Beispielsweise enthält die `System.IO.Stream`-Klasse Methoden wie <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A> sowie die synchronen Methoden <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> und <xref:System.IO.Stream.Write%2A>.  
   
- Die Windows-Runtime enthält außerdem viele Methoden, die Sie mit `Async` und `Await` in Windows-Apps verwenden können. Weitere Informationen und Beispielmethoden finden Sie unter [Aufrufen von asynchronen APIs in c# oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic), [asynchrone Programmierung (Windows-Runtime-apps)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)), und [von WhenAny: Überbrückung zwischen .NET Framework und Windows-Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120)).  
+ Die Windows-Runtime enthält außerdem viele Methoden, die Sie mit `Async` und `Await` in Windows-Apps verwenden können. Weitere Informationen und Beispielmethoden finden Sie unter [aufrufen asynchroner APIs in c# oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic), [asynchrone Programmierung (Windows-Runtime-apps)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)), und [WhenAny: Überbrückung zwischen .NET Framework und Windows-Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120)).  
   
 ##  <a name="BKMK_Threads"></a> Threads  
  Async-Methoden sollen nicht blockierende Vorgänge sein. Ein `Await`-Ausdruck in einer asynchronen Methode blockiert den aktuellen Thread nicht, während der abgewartete Task ausgeführt wird. Stattdessen registriert der Ausdruck den Rest der Methode als Fortsetzung und gibt die Steuerung an den Aufrufer der Async-Methode zurück.  
   
  Durch die Schlüsselwörter `Async` und `Await` werden keine zusätzlichen Threads erstellt. Async-Methoden erfordern kein Multithreading, da eine Async-Methode nicht in einem eigenen Thread ausgeführt wird. Die Methode wird im aktuellen Synchronisierungskontext ausgeführt und verwendet Zeit im Thread nur, wenn sie aktiv ist. Sie können <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> zur Verschiebung CPU-gebundener Arbeit in einen Hintergrundthread verwenden, aber ein Hintergrundthread nützt nichts bei einem Prozess, der wartet, dass Ergebnisse zur Verfügung gestellt werden.  
   
- Der auf Asynchronie basierende Ansatz der asynchronen Programmierung ist vorhandenen Ansätzen in nahezu jedem Fall vorzuziehen. Dieser Ansatz ist insbesondere besser <xref:System.ComponentModel.BackgroundWorker> für e/A-gebundene Vorgänge daran, dass der Code einfacher ist und nicht als Schutz gegen Bedingungen Rennen. In Kombination mit <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> eignet sich asynchrone Programmierung besser für CPU-gebundene Vorgänge als <xref:System.ComponentModel.BackgroundWorker>, da die asynchrone Programmierung Koordinationsdetails der Ausführung des Codes von der Arbeit trennt, die `Task.Run` an den Threadpool überträgt.  
+ Der auf Asynchronie basierende Ansatz der asynchronen Programmierung ist vorhandenen Ansätzen in nahezu jedem Fall vorzuziehen. Dieser Ansatz ist besser als <xref:System.ComponentModel.BackgroundWorker> für e/A-gebundene Vorgänge daran, dass der Code einfacher ist und nicht zum Schutz vor Racebedingungen. In Kombination mit <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> eignet sich asynchrone Programmierung besser für CPU-gebundene Vorgänge als <xref:System.ComponentModel.BackgroundWorker>, da die asynchrone Programmierung Koordinationsdetails der Ausführung des Codes von der Arbeit trennt, die `Task.Run` an den Threadpool überträgt.  
   
 ##  <a name="BKMK_AsyncandAwait"></a> Async und Await  
  Wenn Sie angeben, dass eine Methode eine Async-Methode ist, indem Sie einen [Async](../../../../visual-basic/language-reference/modifiers/async.md)-Modifizierer verwenden, aktivieren Sie die folgenden zwei Funktionen.  
@@ -225,7 +225,7 @@ Await Task_MethodAsync()
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
   
- Weitere Informationen und ein Beispiel finden Sie unter [Aufrufen von asynchronen APIs in c# oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).  
+ Weitere Informationen und ein Beispiel finden Sie unter [aufrufen asynchroner APIs in c# oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).  
   
 ##  <a name="BKMK_NamingConvention"></a> Benennungskonvention  
  Gemäß der Konvention fügen Sie die Zeichenfolge „Async“ an die Namen von Methoden an, die einen `Async`-Modifizierer besitzen.  

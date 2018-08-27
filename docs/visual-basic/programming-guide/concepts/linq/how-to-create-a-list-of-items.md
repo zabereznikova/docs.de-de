@@ -5,15 +5,15 @@ helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-ms.openlocfilehash: 3887d556c025fc667de9089f7a3bc90da8ef3f20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51adccb4a82520cf063ae26dd9596836e53c27ff
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642807"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924895"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Gewusst wie: Erstellen einer Liste von Elementen
-Der Code in diesem Thema definiert eine `Student`-Klasse und erstellt eine Liste von Instanzen der Klasse. Die Liste soll das Thema unterstützen [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Sie kann auch für jede Anwendung verwendet werden, die eine Liste von Objekten benötigt. Der Code definiert die Elemente in der Liste der Schüler mithilfe von Objektinitialisierern.  
+Der Code in diesem Thema definiert eine `Student`-Klasse und erstellt eine Liste von Instanzen der Klasse. Die Liste dient zur Unterstützung der im Themas [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Sie kann auch für jede Anwendung verwendet werden, die eine Liste von Objekten benötigt. Der Code definiert die Elemente in der Liste der Schüler mithilfe von Objektinitialisierern.  
   
 ## <a name="example"></a>Beispiel  
  Wenn Sie mit der exemplarischen Vorgehensweise arbeiten, können Sie diesen Code für die Datei "Module1.vb" des Projekts verwenden, die hier erstellt wird. Ersetzen Sie einfach die mit *** markierten Zeilen in der `Main`-Methode durch die Abfragen und Abfrageausführungen, die in der exemplarischen Vorgehensweise bereitgestellt werden.  
@@ -26,4 +26,4 @@ Der Code in diesem Thema definiert eine `Student`-Klasse und erstellt eine Liste
  [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Abfragen](../../../../visual-basic/language-reference/queries/queries.md)
+ [Abfragen](../../../../visual-basic/language-reference/queries/index.md)

@@ -1,13 +1,13 @@
 ---
-title: Aktivieren eine Datenquelle für LINQ-Querying2
+title: Aktivieren einer Datenquelle für LINQ-Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
 ms.openlocfilehash: 0904d646014fa6a0525e624bc3466dee12b3cc02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643795"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911892"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Aktivieren einer Datenquelle für LINQ-Abfragen
 Es gibt verschiedene Möglichkeiten, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zu erweitern, um die Abfrage einer beliebigen Datenquelle im [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Muster zu ermöglichen. Bei der Datenquelle kann es sich u. a. um eine Datenstruktur, einen Webdienst, ein Dateisystem oder eine Datenbank handeln. Das [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Muster erleichtert Clients das Ausführen von Abfragen für eine Datenquelle mit aktivierter [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage, da die Syntax und das Muster der Abfrage unverändert bleiben. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kann u.a. auf folgende Weisen für die Verwendung dieser Datenquellen erweitert werden:  

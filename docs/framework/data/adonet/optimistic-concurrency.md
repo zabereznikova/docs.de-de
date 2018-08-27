@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: b1395c3bd81f7f9d2f12d5b1ea2ec4b784f7aab9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0b4cdfa7bab1f41f80926b20da3e63a72a2d165d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766227"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911999"
 ---
 # <a name="optimistic-concurrency"></a>Optimistische Nebenläufigkeit
 In einer Umgebung mit mehreren Benutzern gibt es zwei Modelle für das Update von Daten in einer Datenbank: das Modell der vollständigen Parallelität und das Modell der eingeschränkten Parallelität. Das <xref:System.Data.DataSet>-Objekt unterstützt die Verwendung der vollständigen Parallelität für lange Aktivitäten, wie bei der Datenfernverarbeitung und der Interaktion mit Daten.  
@@ -30,7 +30,7 @@ In einer Umgebung mit mehreren Benutzern gibt es zwei Modelle für das Update vo
   
  Um 13:00 Uhr ruft User1 eine Zeile mit den folgenden Werten aus der Datenbank auf:  
   
- **Nachname, Vorname CustID**  
+ **CustID "LastName" FirstName**  
   
  101 Smith Bob  
   
@@ -42,7 +42,7 @@ In einer Umgebung mit mehreren Benutzern gibt es zwei Modelle für das Update vo
   
  Um 13:01 Uhr ruft User2 dieselbe Zeile ab.  
   
- Um 13:03 Uhr User2 ändert **FirstName** von "Bob", "Robert" und die Datenbank aktualisiert.  
+ Um 13:03 Uhr ändert User2 **FirstName** von "Bob" in "Robert" und die Datenbank aktualisiert.  
   
 |Spaltenname|Ursprünglicher Wert|Aktueller Wert|Wert in Datenbank|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -71,7 +71,7 @@ In einer Umgebung mit mehreren Benutzern gibt es zwei Modelle für das Update vo
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- So testen Sie eine Verletzung der vollständigen Parallelität beim Aktualisieren einer Zeile im **Table1**, würden Sie das folgende UPDATE-Anweisung ausgeben:  
+ Zum Prüfen auf eine Verletzung der vollständigen Parallelität beim Aktualisieren einer Zeile in **Table1**, geben Sie die folgende UPDATE-Anweisung:  
   
 ```  
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  Sie können bei einem Modell der vollständigen Parallelität auch weniger strenge Kriterien anwenden. Wenn Sie z. B. nur die Primärschlüsselspalten in der WHERE-Klausel verwenden, werden die Daten unabhängig davon überschrieben, ob die anderen Spalten seit der letzten Abfrage aktualisiert wurden oder nicht. Zudem besteht die Möglichkeit, eine WHERE-Klausel auf spezifische Spalten anzuwenden, sodass die Daten überschrieben werden, sofern nicht bestimmte Felder seit deren letzten Abfrage aktualisiert wurden.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Das "DataAdapter.RowUpdated"-Ereignis  
- Die **RowUpdated** -Ereignis für die <xref:System.Data.Common.DataAdapter> Objekt kann in Verbindung mit den oben, um Ihre Anwendung der Verletzung der vollständigen Parallelität bereitzustellen beschriebenen Methoden verwendet werden. **RowUpdated** tritt nach jedem Versuch zum Aktualisieren einer **"geändert"** Zeile aus einer **DataSet**. Damit können Sie spezifischen Behandlungscode hinzufügen, einschließlich Verarbeitung bei Ausnahmen, Einfügen von benutzerdefinierten Fehlerinformationen, Hinzufügen einer Wiederholungslogik usw. Die <xref:System.Data.Common.RowUpdatedEventArgs> -Objekt gibt ein **RecordsAffected** Eigenschaft enthält die Anzahl der Zeilen, die von einem bestimmten Updatebefehl für eine geänderte Zeile in einer Tabelle betroffen sind. Durch Festlegen des Update-Befehls für die vollständige Parallelität Testen der **RecordsAffected** Eigenschaft, daher gibt den Wert 0, wenn eine vollständige Parallelität verletzt wurde, weil keine Datensätze aktualisiert wurden. Wenn dies der Fall ist, wird eine Ausnahme ausgelöst. Die **RowUpdated** -Ereignis können Sie dieses Vorkommen zu behandeln und die Ausnahme verhindern, indem Sie eine entsprechende festlegen **RowUpdatedEventArgs.Status** Wert, z. B.  **UpdateStatus.SkipCurrentRow**. Weitere Informationen zu den **RowUpdated** -Ereignis finden Sie unter [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ Die **RowUpdated** Ereignis die <xref:System.Data.Common.DataAdapter> Objekt kann in Verbindung mit den Methoden, die weiter oben beschriebene, um Benachrichtigungen an Ihre Anwendung der Verletzung der vollständigen Parallelität verwendet werden. **RowUpdated** tritt nach jedem Versuch zum Aktualisieren einer **"geändert"** Zeile aus einer **DataSet**. Damit können Sie spezifischen Behandlungscode hinzufügen, einschließlich Verarbeitung bei Ausnahmen, Einfügen von benutzerdefinierten Fehlerinformationen, Hinzufügen einer Wiederholungslogik usw. Die <xref:System.Data.Common.RowUpdatedEventArgs> Objekt gibt ein **RecordsAffected** Eigenschaft, die die Anzahl der von einem bestimmten Updatebefehl für eine geänderte Zeile in einer Tabelle betroffenen Zeilen enthält. Durch Festlegen des Befehls "Update" zum Prüfen auf vollständige Parallelität verwendet, die **RecordsAffected** Eigenschaft, daher gibt der Wert 0, wenn eine vollständige Parallelität verletzt wurde, weil keine Datensätze aktualisiert wurden. Wenn dies der Fall ist, wird eine Ausnahme ausgelöst. Die **RowUpdated** Ereignis können Sie dieses Ereignis behandeln und die Ausnahme zu vermeiden, indem Sie eine geeignete Einstellung **RowUpdatedEventArgs.Status** Wert, z. B.  **UpdateStatus.SkipCurrentRow**. Weitere Informationen zu den **RowUpdated** Ereignis finden Sie unter [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
- Optional können Sie festlegen **DataAdapter.ContinueUpdateOnError** auf **"true"**, vor dem Aufruf **Update**, und in der gespeichertenFehlerinformationenreagieren**RowError** -Eigenschaft einer bestimmten Zeile, wenn die **Update** abgeschlossen ist. Weitere Informationen finden Sie unter [Zeilenfehlerinformationen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Sie können optional festlegen **DataAdapter.ContinueUpdateOnError** zu **"true"**, vor dem Aufruf **Update**, und reagieren auf die Fehlerinformationen in die gespeichert**RowError** -Eigenschaft einer bestimmten Zeile, wenn die **Update** abgeschlossen ist. Weitere Informationen finden Sie unter [Zeilenfehlerinformationen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Beispiel für eine vollständige Parallelität  
- Folgender Ausdruck ist ein einfaches Beispiel, das festlegt der **UpdateCommand** von einer **"DataAdapter"** auf vollständige Parallelität getestet und verwendet dann die **RowUpdated** Ereignis, um zu testen Verletzung der vollständigen Parallelität. Wenn eine Verletzung der vollständigen Parallelität festgestellt wird, legt die Anwendung die **RowError** der Zeile, die das Update für eine Verletzung der vollständigen Parallelität entsprechend ausgestellt wurde.  
+ Im folgenden ist ein einfaches Beispiel, die festlegt der **UpdateCommand** von einer **DataAdapter** zum Prüfen auf vollständige Parallelität verwendet, und verwendet dann die **RowUpdated** Ereignis zum Prüfen auf Verletzung der vollständigen Parallelität. Wenn eine Verletzung der vollständigen Parallelität festgestellt wird, legt die Anwendung die **RowError** der Zeile, die das Update für eine Verletzung der vollständigen Parallelität entsprechend ausgestellt wurde.  
   
- Beachten Sie, die die Parameterwerte der WHERE-Klausel des UPDATE-Befehls übergeben zugeordnet sind die **ursprünglichen** Werte der entsprechenden Spalten.  
+ Beachten Sie, die die Parameterwerte, die an die WHERE-Klausel der UPDATE-Befehl zugeordnet sind, die **ursprünglichen** Werte der entsprechenden Spalten.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -166,7 +166,7 @@ SqlDataAdapter adapter = new SqlDataAdapter(
 // The Update command checks for optimistic concurrency violations  
 // in the WHERE clause.  
 adapter.UpdateCommand = new SqlCommand("UPDATE Customers Set CustomerID = @CustomerID, CompanyName = @CompanyName " +  
-   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName, connection);  
+   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName", connection);  
 adapter.UpdateCommand.Parameters.Add(  
   "@CustomerID", SqlDbType.NChar, 5, "CustomerID");  
 adapter.UpdateCommand.Parameters.Add(  

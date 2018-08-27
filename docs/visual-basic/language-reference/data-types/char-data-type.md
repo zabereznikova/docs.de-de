@@ -10,30 +10,30 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: e672402535215ca30d19cc480e39b42b0364f137
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09b0162068bc068bd77612816626897ec4a151d9
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590808"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911966"
 ---
 # <a name="char-data-type-visual-basic"></a>Char-Datentyp (Visual Basic)
-Enthält, die vorzeichenlose 16-Bit (2-Byte) Codepunkten im Bereich von 0 bis 65535. Jede *Codepunkt*, oder Zeichencode stellt ein einzelnes Unicode-Zeichen dar.  
+Enthält unsignierten 16-Bit (2-Byte) Codepunkte im Bereich von 0 bis 65535. Jede *Codepunkt*, oder Zeichencode ein einzelnes Unicodezeichens darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `Char` -Datentyp, wenn Sie nur einen einzigen halten müssen Zeichen und nicht den Mehraufwand für `String`. In einigen Fällen können Sie `Char()`, ein Array von `Char` Elemente, um mehrere Zeichen enthalten.  
+ Verwenden der `Char` -Datentyp, wenn Sie nur eine einzige halten müssen Zeichen und ist nicht erforderlich, den Aufwand für `String`. In einigen Fällen können Sie `Char()`, ein Array von `Char` Elemente, um mehrere Zeichen enthalten.  
   
- Der Standardwert von `Char` ist das Zeichen mit einem Codepunkt 0.  
+ Der Standardwert von `Char` ist das Zeichen mit einem Codepunkt von 0.  
   
 ## <a name="unicode-characters"></a>Unicode-Zeichen  
- Die ersten 128 Codepunkte (0 bis 127) von Unicode entsprechen den Buchstaben und Symbolen auf eine US-Standardtastatur. Diese ersten 128 Codepunkte sind identisch mit denen ASCII-Zeichensatz definiert. Die zweite 128 Codepunkte (128 bis 255) darstellen Sonderzeichen enthält, z. B. lateinische Buchstaben, Akzente, Währungssymbole und Sekundenbruchteilen. Unicode verwendet die übrigen Codepunkte (256-65535) für eine Vielzahl von Symbolen, z. B. weltweite Textzeichen, diakritische Zeichen und mathematische und technische Symbole.  
+ Die ersten 128 Codepunkte (0 bis 127) von Unicode entsprechen den Buchstaben und Symbolen, die auf einer US-Standardtastatur. Diese ersten 128 Codepunkte sind identisch mit denen ASCII-Zeichensatz definiert. Die zweite 128 Codepunkte (128 – 255) stellen die Sonderzeichen enthält, z. B. lateinische Buchstaben, Akzenten, Währungssymbole und Bruchzahlen dar. Unicode verwendet die übrigen Codepunkte (256-65535) für eine Vielzahl von Symbolen, einschließlich weltweit Textzeichen, diakritische Zeichen und mathematischen und technischen Symbole.  
   
- Können Sie Methoden wie z. B. <xref:System.Char.IsDigit%2A> und <xref:System.Char.IsPunctuation%2A> auf eine `Char` Variable, deren Unicode-Klassifizierung ermitteln.  
+ Können Sie Methoden wie <xref:System.Char.IsDigit%2A> und <xref:System.Char.IsPunctuation%2A> auf eine `Char` Variable, um zu bestimmen, die Unicode-Klassifizierung.  
   
 ## <a name="type-conversions"></a>Typkonvertierungen  
- Visual Basic nicht direkt zwischen konvertiert `Char` und numerischen Typen. Können Sie die <xref:Microsoft.VisualBasic.Strings.Asc%2A> oder <xref:Microsoft.VisualBasic.Strings.AscW%2A> Funktion konvertiert eine `Char` -Wert an ein `Integer` , dessen Codepunkt darstellt. Können Sie die <xref:Microsoft.VisualBasic.Strings.Chr%2A> oder <xref:Microsoft.VisualBasic.Strings.ChrW%2A> Funktion konvertiert eine `Integer` -Wert in einen `Char` , diesen Codepunkt besitzt.  
+ Konvertiert Visual Basic nicht direkt zwischen `Char` und numerischen Typen. Können Sie die <xref:Microsoft.VisualBasic.Strings.Asc%2A> oder <xref:Microsoft.VisualBasic.Strings.AscW%2A> Funktion zum Konvertieren einer `Char` -Wert in ein `Integer` , die den Codepunkt darstellt. Können Sie die <xref:Microsoft.VisualBasic.Strings.Chr%2A> oder <xref:Microsoft.VisualBasic.Strings.ChrW%2A> Funktion zum Konvertieren einer `Integer` Wert eine `Char` , diesen Codepunkt besitzt.  
   
- Wenn die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist, müssen Sie ein Einzelzeichen ein Zeichenfolgenliteral als Identifikation des Literaltypzeichens angefügt der `Char` -Datentyp. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Wenn die typüberprüfung wechseln ([Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)) aktiviert ist, muss auf ein einzelnes Zeichen Zeichenfolgenliteral als Identifikation des Literaltypzeichens angefügt der `Char` -Datentyp. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```  
 Option Strict On  
@@ -49,11 +49,11 @@ charVar = "Z"C
   
 -   **Negative Zahlen.** `Char` ein Typ ohne Vorzeichen und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Char` für numerische Werte.  
   
--   **Interop-Überlegungen.** Wenn Sie eine mit Komponenten, die nicht für .NET Framework geschrieben wurden Schnittstelle z. B. Automatisierungs- oder COM-Objekte, denken Sie daran Zeichentypen eine andere Datenbreite (8 Bit) in anderen Umgebungen. Wenn Sie ein 8-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `Byte` anstelle von `Char` im neuen Visual Basic-Code.  
+-   **Interop-Überlegungen.** Wenn Sie eine mit Komponenten, die nicht für .NET Framework geschrieben wurden Schnittstelle z. B. Automatisierungs- oder COM-Objekte, denken Sie daran: Typen mit Zeichen eine andere Datenbreite (8 Bits) in anderen Umgebungen. Wenn Sie ein 8-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `Byte` anstelle von `Char` im neuen Visual Basic-Code.  
   
--   **Widening.** Die `Char` -Datentyp zu `String`. Dies bedeutet, Sie können konvertieren `Char` auf `String` und tritt eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
+-   **Erweiternde.** Die `Char` -Datentyp wird zu `String`. Dies bedeutet, Sie können konvertieren `Char` zu `String` , ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `C` in eine einzelne Zeichenfolge Literal wird der `Char` -Datentyp. `Char` verfügt über keine Typkennzeichen aus.  
+-   **Typzeichen.** Durch Anhängen des Literaltypzeichens `C` in eine Zeichenfolge für die einzelnen Zeichen Literal wird der `Char` -Datentyp. `Char` verfügt über keine Typkennzeichen aus.  
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Char?displayProperty=nameWithType>-Struktur.  
   
@@ -63,7 +63,7 @@ charVar = "Z"C
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
  <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
  <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
  [String-Datentyp](../../../visual-basic/language-reference/data-types/string-data-type.md)  
  [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  

@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 367991e4bbca710df54edf73179f855ff79bb56e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f168b3021ee1dbe3c82edc22fc779767c30446b8
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647617"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912012"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Gewusst wie: Konvertieren eines Objekts in einen anderen Typ in Visual Basic
 Konvertieren Sie eine `Object` Variable in einen anderen Datentyp mithilfe einer wie [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein `Object` -Variable auf einen `Integer` und ein `String`.  
+ Im folgenden Beispiel wird ein `Object` Variable eine `Integer` und `String`.  
   
 ```  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,7 +26,7 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Wenn Sie wissen, dass der Inhalt des ein `Object` -Variablen eines bestimmten Datentyps, es ist besser, die Variable in diesen Datentyp zu konvertieren. Wenn Sie weiterhin verwenden die `Object` Variable anfallen entweder *Boxing* und *unboxing* (für einen Werttyp) oder *späte Bindung* (für einen Referenztyp darstellt). Diese Vorgänge alle zusätzlichen Ausführung Zeit in Anspruch nehmen, und stellen die Leistung langsamer.  
+ Wenn Sie wissen, dass der Inhalt des ein `Object` Variablen sind eines bestimmten Datentyps, es ist besser, die die Variable in diesen Datentyp zu konvertieren. Wenn Sie weiterhin die `Object` Variablen, es fallen entweder *Boxing* und *unboxing* (für einen Werttyp) oder *späte Bindung* (für einen Verweistyp). Diese Vorgänge alle zusätzlichen Ausführung Zeit in Anspruch nehmen, und stellen die Leistung langsamer.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
@@ -35,11 +35,11 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Object>  
- [Konvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
  [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
  [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
  [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96a9672ee05cb1fe2573620bd1dea23e57339c93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: be2558e760be8519e528baeff438273c8871f320
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460840"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924468"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib-Methode
-Löst den einfachen Namen einer Typbibliothek durch den vollqualifizierten Pfad zurückgeben.  
+Löst den einfachen Namen einer Typbibliothek durch den vollständig qualifizierten Pfad zurückgeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,10 +40,10 @@ HRESULT ResolveTypeLib(
   
 #### <a name="parameters"></a>Parameter  
  `bstrSimpleName`  
- [in] Ein [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , die den einfachen Namen der Typbibliothek enthält.  
+ [in] Ein [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , die den einfachen Namen der Typbibliothek enthält.  
   
  `tlbid`  
- [in] Die in der Registrierung der Typbibliothek zugewiesene GUID.  
+ [in] Die GUID der Typbibliothek in der Registrierung zugewiesen.  
   
  `lcid`  
  [in] Die Lokalisierungs-ID der Typbibliothek.  
@@ -55,18 +55,18 @@ HRESULT ResolveTypeLib(
  [in] Die Nebenversionsnummer der Typbibliothek. Z. B. für Version *x.y*, ist die Nummer der Nebenversion *y*.  
   
  `syskind`  
- [in] Ein [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) Flag, das die betriebsumgebung identifiziert. Häufig verwendete Werte sind SYS_WIN32 und SYS_WIN64.  
+ [in] Ein [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) Flag, das die betriebsumgebung identifiziert. Häufig verwendete Werte sind SYS_WIN32 und SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- [out] Ein Zeiger auf eine [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , enthält den vollständigen Pfad der Typbibliothek mit dem Namen der `bstrSimpleName` Parameter.  
+ [out] Ein Zeiger auf eine [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , enthält den vollständigen Pfad der Typbibliothek mit dem Namen in der `bstrSimpleName` Parameter.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ResolveTypeLib` Methode wird aufgerufen, indem Sie die [LoadTypeLibWithResolver-Funktion](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) während [Tlbexp.exe (Type Library Exporter-Tool)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) verarbeiten.  
+ Die `ResolveTypeLib` Methode wird aufgerufen, indem die [LoadTypeLibWithResolver-Funktion](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) während [Tlbexp.exe (Type Library Exporter-Tool)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) verarbeiten.  
   
- Benutzerdefinierte Implementierungen dieser Schnittstelle müssen Zurückgeben einer [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , enthält den vollständigen Pfad der Typbibliothek mit dem Namen der `bstrSimpleName` Parameter.  
+ Benutzerdefinierte Implementierungen dieser Schnittstelle müssen Zurückgeben einer [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , enthält den vollständigen Pfad der Typbibliothek mit dem Namen in der `bstrSimpleName` Parameter.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** TlbRef.idl, TlbRef.h  
   
@@ -76,4 +76,4 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>Siehe auch  
  [Tlbexp-Hilfsfunktionen](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+ [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

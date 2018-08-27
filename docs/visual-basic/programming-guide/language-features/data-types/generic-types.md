@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: f86819f9bd3cbcceb4be696852655018868f4a56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a33e058b41629a2f01f2162dadd7a5f965a82548
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655596"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925552"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Generische Typen in Visual Basic (Visual Basic)
 Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst, dass es für verschiedene Datentypen dieselben Funktionalität ausführt. Wenn Sie eine generische Klasse oder Prozedur definieren, müssen Sie keine separate Version für jeden Datentyp definieren, für den Sie diese Funktionalität möglicherweise ausführen möchten.  
@@ -53,7 +53,7 @@ Schraubendrehersatz als generisches Werkzeug
   
  Wenn Sie einen generischen Typ definieren, parametrisieren Sie ihn mit mindestens einem Datentyp. Dies ermöglicht es, die Datentypen mithilfe von Code an die Anforderungen anzupassen. Im Code können Sie mehrere unterschiedliche Programmierelemente anhand des generischen Elements deklarieren, von denen jedes für eine andere Gruppe von Datentypen ausgeführt wird. Die deklarierten Elemente führen jedoch alle dieselbe Logik aus, unabhängig davon, welche Datentypen von ihnen verwendet werden.  
   
- Nehmen Sie beispielsweise an, Sie möchten eine Warteschlangeklasse erstellen und verwenden, die für einen bestimmten Datentyp, z. B. `String`, ausgeführt wird. Sie können eine solche Klasse aus deklarieren <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, wie im folgende Beispiel gezeigt.  
+ Nehmen Sie beispielsweise an, Sie möchten eine Warteschlangeklasse erstellen und verwenden, die für einen bestimmten Datentyp, z. B. `String`, ausgeführt wird. Sie können deklarieren, solche Klasse über <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, wie im folgende Beispiel gezeigt.  
   
  [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
@@ -74,10 +74,10 @@ Schraubendrehersatz als generisches Werkzeug
   
  [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- Ein vollständigeres Beispiel finden Sie unter [wie: Definieren einer Klasse, dass können bereitstellen identisch Funktionen auf unterschiedliche Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Ein vollständigeres Beispiel finden Sie unter [wie: Definieren einer Klasse, dass können geben identische Funktionen für verschiedene Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Geeignete Programmierelemente  
- Sie können generische Klassen, Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden. Beachten Sie, dass [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] mehrere generische Klassen, Strukturen und Schnittstellen definiert, die häufig verwendete generische Elemente darstellen. Die <xref:System.Collections.Generic?displayProperty=nameWithType> -Namespace stellt Wörterbücher, Listen, Warteschlangen und Stapel bereit. Bevor Sie Ihr eigenes generisches Element definieren, zu prüfen, ob bereits verfügbar ist <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ Sie können generische Klassen, Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden. Beachten Sie, dass [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] mehrere generische Klassen, Strukturen und Schnittstellen definiert, die häufig verwendete generische Elemente darstellen. Die <xref:System.Collections.Generic?displayProperty=nameWithType> Namespace stellt Wörterbücher, Listen, Warteschlangen und Stapel. Vor eigene generisches Element definieren, finden Sie, wenn es bereits in verfügbar ist <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
  Prozeduren sind keine Typen, Sie können aber generische Prozeduren definieren und verwenden. Siehe [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
@@ -125,7 +125,7 @@ Schraubendrehersatz als generisches Werkzeug
   
 -   Das Typargument muss ein *Verweistyp*oder *Werttyp*sein.  
   
- Wenn Sie mehrere Einschränkungen erzwingen müssen, verwenden Sie eine durch Trennzeichen getrennte *Einschränkungsliste* in geschweiften Klammern (`{ }`). Um ein zugänglicher Konstruktor erforderlich ist, schließen Sie die [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort in der Liste. Um festzulegen, dass ein Verweistyp erforderlich ist, fügen Sie das `Class` -Schlüsselwort ein. Um festzulegen, dass ein Werttyp erforderlich ist, fügen Sie das `Structure` -Schlüsselwort ein.  
+ Wenn Sie mehrere Einschränkungen erzwingen müssen, verwenden Sie eine durch Trennzeichen getrennte *Einschränkungsliste* in geschweiften Klammern (`{ }`). Um ein zugänglicher Konstruktor erforderlich ist, Sie enthalten die [neuer Operator](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwörter in der Liste. Um festzulegen, dass ein Verweistyp erforderlich ist, fügen Sie das `Class` -Schlüsselwort ein. Um festzulegen, dass ein Werttyp erforderlich ist, fügen Sie das `Structure` -Schlüsselwort ein.  
   
  Weitere Informationen über Einschränkungen finden Sie unter [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
@@ -151,9 +151,9 @@ Schraubendrehersatz als generisches Werkzeug
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Typzeichen](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Konvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
  [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)  

@@ -3,11 +3,11 @@ title: Leistung (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 155557f6-5d7e-4784-9d00-f42092a28857
 ms.openlocfilehash: 463075dbf1b84de1af45f7644019e49bbeca6487
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645628"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925221"
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a>Leistung (LINQ to XML) (Visual Basic)
 Dieser Abschnitt enthält Informationen über die Leistung in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], insbesondere über die Leistung von funktionaler Konstruktion und Abfragen.  
