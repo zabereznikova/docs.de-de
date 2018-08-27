@@ -1,84 +1,116 @@
 ---
-title: Erste Schritte mit Freihandeingaben
-ms.date: 03/30/2017
+title: Erstellen Sie ein InkCanvas-Steuerelement in einer WPF-app in Visual Studio
+ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - procedural code in lieu of XAML [WPF]
-- gradient brush [WPF], animating colors of
 - XAML [WPF], procedural code in lieu of
-- animation [WPF], gradient brush colors
-- brushes [WPF], animating colors of
+- InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 9a1b53d0513eeef377fe8e012a8d5d7ea3f8a984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546236"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925043"
 ---
-# <a name="getting-started-with-ink"></a><span data-ttu-id="ee495-102">Erste Schritte mit Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="ee495-102">Getting Started with Ink</span></span>
-<span data-ttu-id="ee495-103">Freihandeingaben in Ihre Anwendungen integrieren ist einfacher als je zuvor.</span><span class="sxs-lookup"><span data-stu-id="ee495-103">Incorporating digital ink into your applications is easier than ever.</span></span> <span data-ttu-id="ee495-104">Freihandeingaben wurden von wird eine begleitende COM und Windows Forms-Methode der Programmierung zum Erzielen einer vollständige Integration in die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ee495-104">Ink has evolved from being a corollary to the COM and Windows Forms method of programming to achieving full integration into the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="ee495-105">Sie müssen keine separaten SDKs oder Laufzeitbibliotheken installieren.</span><span class="sxs-lookup"><span data-stu-id="ee495-105">You do not need to install separate SDKs or runtime libraries.</span></span>  
-  
-## <a name="prerequisites"></a><span data-ttu-id="ee495-106">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="ee495-106">Prerequisites</span></span>  
- <span data-ttu-id="ee495-107">Um die folgenden Beispiele verwenden zu können, müssen Sie zuerst Microsoft Visual Studio 2005 installieren und die [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ee495-107">To use the following examples, you must first install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].</span></span> <span data-ttu-id="ee495-108">Sie sollten außerdem mit dem Schreiben von Anwendungen für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="ee495-108">You should also understand how to write applications for the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="ee495-109">Weitere Informationen zu den ersten Schritten mit der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="ee495-109">For more information about getting started with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>  
-  
-## <a name="quick-start"></a><span data-ttu-id="ee495-110">Schnellstart</span><span class="sxs-lookup"><span data-stu-id="ee495-110">Quick Start</span></span>  
- <span data-ttu-id="ee495-111">Dieser Abschnitt hilft Ihnen das Schreiben einer einfachen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung, die Freihandeingaben erfasst.</span><span class="sxs-lookup"><span data-stu-id="ee495-111">This section helps you write a simple [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that collects ink.</span></span>  
-  
- <span data-ttu-id="ee495-112">Wenn Sie dies nicht bereits getan haben, installieren Sie Microsoft Visual Studio 2005 und den [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ee495-112">If you haven't already done so, install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="ee495-113"> Anwendungen in der Regel müssen kompiliert werden, bevor Sie sie anzeigen können, selbst wenn sie vollständig aus bestehen aus [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ee495-113"> applications usually must be compiled before you can view them, even if they consist entirely of [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="ee495-114">Allerdings die [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] enthält Anwendung XamlPad, entwickelt, um den Prozess der Implementierung zu beschleunigen eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-basierte Benutzeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="ee495-114">However, the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] includes an application, XamlPad, designed to speed up the process of implementing a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-based UI.</span></span> <span data-ttu-id="ee495-115">Sie können diese Anwendung verwenden, anzeigen und Experimentieren mit der ersten einige Beispiele in diesem Dokument.</span><span class="sxs-lookup"><span data-stu-id="ee495-115">You can use that application to view and tinker with the first few samples in this document.</span></span> <span data-ttu-id="ee495-116">Der Prozess der Erstellung kompiliert Anwendungen aus [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wird weiter unten in diesem Dokument behandelt.</span><span class="sxs-lookup"><span data-stu-id="ee495-116">The process of creating compiled applications from [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is covered later in this document.</span></span>  
-  
- <span data-ttu-id="ee495-117">Um XAMLPad zu starten, klicken Sie auf die **starten** Sie im Menü **Programme**, zeigen Sie auf **Microsoft Windows SDK**, zeigen Sie auf **Tools**, und klicken Sie auf **XAMLPad**.</span><span class="sxs-lookup"><span data-stu-id="ee495-117">To launch XAMLPad, click the **Start** menu, point to **All Programs**, point to **Microsoft Windows SDK**, point to **Tools**, and click **XAMLPad**.</span></span> <span data-ttu-id="ee495-118">Klicken Sie im Bereich "Wiedergabe" rendert XAMLPad den XAML-Code im Codebereich geschrieben.</span><span class="sxs-lookup"><span data-stu-id="ee495-118">In the rendering pane, XAMLPad renders the XAML code written in the code pane.</span></span> <span data-ttu-id="ee495-119">Sie können den XAML-Code bearbeiten und die Änderungen sofort angezeigt werden, klicken Sie im Bereich "Wiedergabe".</span><span class="sxs-lookup"><span data-stu-id="ee495-119">You can edit the XAML code, and the changes immediately appear in the rendering pane.</span></span>  
-  
-#### <a name="got-ink"></a><span data-ttu-id="ee495-120">Erfasst Freihandeingabe?</span><span class="sxs-lookup"><span data-stu-id="ee495-120">Got Ink?</span></span>  
- <span data-ttu-id="ee495-121">Starten Sie Ihre erste [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung, die Freihandeingaben unterstützt:</span><span class="sxs-lookup"><span data-stu-id="ee495-121">To start your first [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that supports ink:</span></span>  
-  
-1.  <span data-ttu-id="ee495-122">Öffnen Sie Microsoft Visual Studio 2005</span><span class="sxs-lookup"><span data-stu-id="ee495-122">Open Microsoft Visual Studio 2005</span></span>  
-  
-2.  <span data-ttu-id="ee495-123">Erstellen Sie ein neues **Windows-Anwendung (WPF)**</span><span class="sxs-lookup"><span data-stu-id="ee495-123">Create a new **Windows Application (WPF)**</span></span>  
-  
-3.  <span data-ttu-id="ee495-124">Typ `<InkCanvas/>` zwischen den `<Grid>` Tags</span><span class="sxs-lookup"><span data-stu-id="ee495-124">Type `<InkCanvas/>` between the `<Grid>` tags</span></span>  
-  
-4.  <span data-ttu-id="ee495-125">Drücken Sie **F5** um Ihre Anwendung im Debugger zu starten.</span><span class="sxs-lookup"><span data-stu-id="ee495-125">Press **F5** to launch your application in the debugger</span></span>  
-  
-5.  <span data-ttu-id="ee495-126">Schreiben Sie mit einem Stift oder die Maus **Hello World** im Fenster</span><span class="sxs-lookup"><span data-stu-id="ee495-126">Using a stylus or mouse, write **hello world** in the window</span></span>  
-  
- <span data-ttu-id="ee495-127">Sie haben die Freihand-Entsprechung einer Anwendung "Hello World" mit nur 12 Tastatureingaben geschrieben.</span><span class="sxs-lookup"><span data-stu-id="ee495-127">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>  
-  
-#### <a name="spice-up-your-application"></a><span data-ttu-id="ee495-128">Interessanter gestalten Sie Ihre Anwendung</span><span class="sxs-lookup"><span data-stu-id="ee495-128">Spice Up Your Application</span></span>  
- <span data-ttu-id="ee495-129">Nehmen wir einige Funktionen von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ee495-129">Let’s take advantage of some features of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  <span data-ttu-id="ee495-130">Ersetzen Sie alles zwischen das öffnende \<Fenster > und Schließen von \</Window > RFID-Transponder durch Folgendes Markup einen Hintergrund eines Farbverlaufspinsels auf die Oberfläche des Freihand abgerufen.</span><span class="sxs-lookup"><span data-stu-id="ee495-130">Replace everything between the opening \<Window> and closing \</Window> tags with the following markup to get a gradient brush background on your inking surface.</span></span>  
-  
- [!code-xaml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
-[!code-xaml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
-  
-#### <a name="using-animation"></a><span data-ttu-id="ee495-131">Verwenden von Animationen</span><span class="sxs-lookup"><span data-stu-id="ee495-131">Using Animation</span></span>  
- <span data-ttu-id="ee495-132">Animieren Sie für unterhaltsamer wir die Farben des Farbverlaufs.</span><span class="sxs-lookup"><span data-stu-id="ee495-132">For fun, let's animate the colors of the gradient brush.</span></span> <span data-ttu-id="ee495-133">Fügen Sie die folgenden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nach dem schließenden `</InkCanvas>` Tag, aber vor der schließenden `</Page>` Tag.</span><span class="sxs-lookup"><span data-stu-id="ee495-133">Add the following [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] after the closing `</InkCanvas>` tag but before the closing `</Page>` tag.</span></span>  
-  
- [!code-xaml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
-  
-#### <a name="adding-some-code-behind-the-xaml"></a><span data-ttu-id="ee495-134">Hinzufügen von Code hinter der XAML-Code</span><span class="sxs-lookup"><span data-stu-id="ee495-134">Adding Some Code Behind the XAML</span></span>  
- <span data-ttu-id="ee495-135">Während XAML sehr Entwerfen der Benutzeroberfläche erleichtert, muss jede praktische Anwendung Code hinzufügen, um Ereignisse zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="ee495-135">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="ee495-136">Hier ist ein einfaches Beispiel, das die Freihandeingabe Reaktion auf einen Rechtsklick aus einer Maus vergrößert ein:</span><span class="sxs-lookup"><span data-stu-id="ee495-136">Here is a simple example that zooms in on the ink in response to a right-click from a mouse:</span></span>  
-  
- <span data-ttu-id="ee495-137">Legen Sie die `MouseRightButtonUp` Ereignishandler in Ihrem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="ee495-137">Set the `MouseRightButtonUp` handler in your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span></span>  
-  
- [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
-  
- <span data-ttu-id="ee495-138">Klicken Sie im Projektmappen-Explorer von Visual Studio erweitern Sie Windows1.XAML im, und öffnen Sie die Code-Behind-Datei Window1.xaml.cs oder Window1.xaml.vb bei Verwendung von Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ee495-138">In Visual Studio’s Solution Explorer, expand Windows1.xaml and open the code-behind file, Window1.xaml.cs or Window1.xaml.vb if you are using Visual Basic.</span></span> <span data-ttu-id="ee495-139">Fügen Sie den folgenden Ereignishandlercode hinzu:</span><span class="sxs-lookup"><span data-stu-id="ee495-139">Add the following event handler code:</span></span>  
-  
- [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
- [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]  
-  
- <span data-ttu-id="ee495-140">Führen Sie nun Ihre Anwendung ein.</span><span class="sxs-lookup"><span data-stu-id="ee495-140">Now, run your application.</span></span> <span data-ttu-id="ee495-141">Einige Freihandeingaben und mit der rechten Maustaste, oder eine Entsprechung von drücken und halten Sie mit einen Tablettstift ausführen.</span><span class="sxs-lookup"><span data-stu-id="ee495-141">Add some ink and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>  
-  
-#### <a name="using-procedural-code-instead-of-xaml"></a><span data-ttu-id="ee495-142">Unter Verwendung prozeduralen Codes anstelle von XAML</span><span class="sxs-lookup"><span data-stu-id="ee495-142">Using Procedural Code Instead of XAML</span></span>  
- <span data-ttu-id="ee495-143">Sie können Zugriff auf alle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Funktionen von prozeduralem Code.</span><span class="sxs-lookup"><span data-stu-id="ee495-143">You can access all [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] features from procedural code.</span></span> <span data-ttu-id="ee495-144">Hier ist eine "Hello Freihand-World"-Anwendung für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet, die keine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] überhaupt.</span><span class="sxs-lookup"><span data-stu-id="ee495-144">Here is a "Hello Ink World" application for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] that doesn’t use any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] at all.</span></span> <span data-ttu-id="ee495-145">Fügen Sie den folgenden Code in eine leere-Konsolenanwendung in Visual Studio aus.</span><span class="sxs-lookup"><span data-stu-id="ee495-145">Paste the code below into an empty Console Application in Visual Studio.</span></span> <span data-ttu-id="ee495-146">Fügen Sie Verweise auf die Assemblys PresentationCore, PresentationFramework und WindowsBase hinzu, und erstellen Sie die Anwendung durch Drücken von **F5**:</span><span class="sxs-lookup"><span data-stu-id="ee495-146">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies, and build the application by pressing **F5**:</span></span>  
-  
- [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
- [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
-  
-## <a name="see-also"></a><span data-ttu-id="ee495-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ee495-147">See Also</span></span>  
- [<span data-ttu-id="ee495-148">Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="ee495-148">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
- [<span data-ttu-id="ee495-149">Erfassen von Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="ee495-149">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
- [<span data-ttu-id="ee495-150">Schrifterkennung</span><span class="sxs-lookup"><span data-stu-id="ee495-150">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
- [<span data-ttu-id="ee495-151">Speichern von Eingabehilfen</span><span class="sxs-lookup"><span data-stu-id="ee495-151">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)
+# <a name="get-started-with-ink-in-wpf"></a><span data-ttu-id="6111c-102">Erste Schritte mit Freihandeingaben in WPF</span><span class="sxs-lookup"><span data-stu-id="6111c-102">Get Started with Ink in WPF</span></span>
+
+<span data-ttu-id="6111c-103">Windows Presentation Foundation (WPF) ist ein Freihand-Feature, das es einfach macht, Freihandeingaben in Ihre app zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="6111c-103">Windows Presentation Foundation (WPF) has an ink feature that makes it easy to incorporate digital ink into your app.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="6111c-104">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="6111c-104">Prerequisites</span></span>
+
+<span data-ttu-id="6111c-105">Verwenden Sie die folgenden Beispielen wird zuerst [installieren Sie Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).</span><span class="sxs-lookup"><span data-stu-id="6111c-105">To use the following examples, first [install Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).</span></span> <span data-ttu-id="6111c-106">Außerdem können wissen, wie Sie einfache WPF-apps zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="6111c-106">It also helps to know how to write basic WPF apps.</span></span> <span data-ttu-id="6111c-107">Erste Schritte mit WPF Hilfe finden Sie [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="6111c-107">For help getting started with WPF, see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>
+
+## <a name="quick-start"></a><span data-ttu-id="6111c-108">Schnellstart</span><span class="sxs-lookup"><span data-stu-id="6111c-108">Quick Start</span></span>
+
+<span data-ttu-id="6111c-109">In diesem Abschnitt können Sie eine einfache WPF-Anwendung zu schreiben, die Freihandeingaben erfasst.</span><span class="sxs-lookup"><span data-stu-id="6111c-109">This section helps you write a simple WPF application that collects ink.</span></span>
+
+### <a name="got-ink"></a><span data-ttu-id="6111c-110">Erfasst Freihandeingabe?</span><span class="sxs-lookup"><span data-stu-id="6111c-110">Got Ink?</span></span>
+
+<span data-ttu-id="6111c-111">Zum Erstellen einer WPF-app, die Freihandeingaben unterstützt:</span><span class="sxs-lookup"><span data-stu-id="6111c-111">To create a WPF app that supports ink:</span></span>
+
+1. <span data-ttu-id="6111c-112">Öffnen Sie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="6111c-112">Open Visual Studio.</span></span>
+
+2. <span data-ttu-id="6111c-113">Erstellen Sie ein neues **WPF-App**.</span><span class="sxs-lookup"><span data-stu-id="6111c-113">Create a new **WPF App**.</span></span>
+
+   <span data-ttu-id="6111c-114">In der **neues Projekt** Dialogfeld erweitern Sie die **installiert** > **Visual C#-** oder **Visual Basic**  >   **Windows-Desktop** Kategorie.</span><span class="sxs-lookup"><span data-stu-id="6111c-114">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="6111c-115">Wählen Sie dann die **WPF-App ((.NET Framework)** -app-Vorlage.</span><span class="sxs-lookup"><span data-stu-id="6111c-115">Then, select the **WPF App (.NET Framework)** app template.</span></span> <span data-ttu-id="6111c-116">Geben Sie einen Namen ein, und wählen Sie dann **OK**.</span><span class="sxs-lookup"><span data-stu-id="6111c-116">Enter a name, and then select **OK**.</span></span>
+
+   <span data-ttu-id="6111c-117">Visual Studio erstellt das Projekt, und *"MainWindow.xaml"* im Designer geöffnet.</span><span class="sxs-lookup"><span data-stu-id="6111c-117">Visual Studio creates the project, and *MainWindow.xaml* opens in the designer.</span></span>
+
+3. <span data-ttu-id="6111c-118">Typ `<InkCanvas/>` zwischen der `<Grid>` Tags.</span><span class="sxs-lookup"><span data-stu-id="6111c-118">Type `<InkCanvas/>` between the `<Grid>` tags.</span></span>
+
+   ![XAML-Designer mit InkCanvas-Steuerelement-tag](media/getting-started-with-ink/inkcanvas-xaml.png)
+
+4. <span data-ttu-id="6111c-120">Drücken Sie **F5** auf die Anwendung im Debugger zu starten.</span><span class="sxs-lookup"><span data-stu-id="6111c-120">Press **F5** to launch your application in the debugger.</span></span>
+
+5. <span data-ttu-id="6111c-121">Schreiben Sie mit einem Stift oder der Maus **Hallo Welt** im Fenster.</span><span class="sxs-lookup"><span data-stu-id="6111c-121">Using a stylus or mouse, write **hello world** in the window.</span></span>
+
+<span data-ttu-id="6111c-122">Sie haben die Freihand-Entsprechung einer "Hello World"-Anwendung mit nur 12 Tastatureingaben geschrieben.</span><span class="sxs-lookup"><span data-stu-id="6111c-122">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>
+
+### <a name="spice-up-your-app"></a><span data-ttu-id="6111c-123">Darstellungsschichten interessanter zu gestalten Sie Ihre App</span><span class="sxs-lookup"><span data-stu-id="6111c-123">Spice Up Your App</span></span>
+
+<span data-ttu-id="6111c-124">Lassen Sie uns einige Funktionen von WPF nutzen.</span><span class="sxs-lookup"><span data-stu-id="6111c-124">Let’s take advantage of some features of the WPF.</span></span> <span data-ttu-id="6111c-125">Ersetzen Sie alles zwischen den öffnenden und schließenden \<Fenster >-Tags mit folgendem Markup:</span><span class="sxs-lookup"><span data-stu-id="6111c-125">Replace everything between the opening and closing \<Window> tags with the following markup:</span></span>
+
+```xaml
+<Page>
+  <InkCanvas Name="myInkCanvas" MouseRightButtonUp="RightMouseUpHandler">
+    <InkCanvas.Background>
+      <LinearGradientBrush>
+        <GradientStop Color="Yellow" Offset="0.0" />
+          <GradientStop Color="Blue" Offset="0.5" />
+            <GradientStop Color="HotPink" Offset="1.0" />
+              </LinearGradientBrush>
+    </InkCanvas.Background>
+  </InkCanvas>
+</Page>
+```
+
+<span data-ttu-id="6111c-126">Dieses XAML erstellt einen Farbverlaufspinsel-Hintergrund für die Freihandoberfläche.</span><span class="sxs-lookup"><span data-stu-id="6111c-126">This XAML creates a gradient brush background on your inking surface.</span></span>
+
+![Verlaufsfarben auf Freihand-Oberfläche in WPF-app](media/getting-started-with-ink/gradient-colors.png)
+
+### <a name="add-some-code-behind-the-xaml"></a><span data-ttu-id="6111c-128">Hinzufügen von Code hinter der XAML</span><span class="sxs-lookup"><span data-stu-id="6111c-128">Add Some Code Behind the XAML</span></span>
+
+<span data-ttu-id="6111c-129">Während der XAML sehr Entwerfen der Benutzeroberfläche erleichtert, muss jeder reale Anwendung Code hinzufügen, um Ereignisse zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="6111c-129">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="6111c-130">Hier ist ein einfaches Beispiel, das auf die Freihandeingabe in Reaktion auf eine mit der rechten Maustaste in eine Maus vergrößert.</span><span class="sxs-lookup"><span data-stu-id="6111c-130">Here is a simple example that zooms in on the ink in response to a right-click from a mouse.</span></span>
+
+1. <span data-ttu-id="6111c-131">Legen Sie die `MouseRightButtonUp` Ereignishandler in Ihrem XAML:</span><span class="sxs-lookup"><span data-stu-id="6111c-131">Set the `MouseRightButtonUp` handler in your XAML:</span></span>
+
+   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+
+1. <span data-ttu-id="6111c-132">In **Projektmappen-Explorer**, erweitern Sie "MainWindow.xaml", und öffnen Sie die CodeBehind-Datei ("MainWindow.Xaml.cs" oder "MainWindow.Xaml.vb").</span><span class="sxs-lookup"><span data-stu-id="6111c-132">In **Solution Explorer**, expand MainWindow.xaml and open the code-behind file (MainWindow.xaml.cs or MainWindow.xaml.vb).</span></span> <span data-ttu-id="6111c-133">Fügen Sie den folgenden Ereignishandlercode hinzu:</span><span class="sxs-lookup"><span data-stu-id="6111c-133">Add the following event handler code:</span></span>
+
+   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+
+1. <span data-ttu-id="6111c-134">Führen Sie die Anwendung aus.</span><span class="sxs-lookup"><span data-stu-id="6111c-134">Run the application.</span></span> <span data-ttu-id="6111c-135">Einige Freihandeingaben, und klicken Sie dann mit der rechten Maustaste, oder führen Sie ein Äquivalent drücken und halten mit einem Stift.</span><span class="sxs-lookup"><span data-stu-id="6111c-135">Add some ink, and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>
+
+   <span data-ttu-id="6111c-136">Die Anzeige vergrößert jedes Mal, wenn Sie mit der rechten Maustaste klicken.</span><span class="sxs-lookup"><span data-stu-id="6111c-136">The display zooms in each time you click with the right mouse button.</span></span>
+
+### <a name="use-procedural-code-instead-of-xaml"></a><span data-ttu-id="6111c-137">Prozeduralen Code statt XAML verwenden</span><span class="sxs-lookup"><span data-stu-id="6111c-137">Use Procedural Code Instead of XAML</span></span>
+
+<span data-ttu-id="6111c-138">Sie können alle WPF-Funktionen aus prozeduralen Code zugreifen.</span><span class="sxs-lookup"><span data-stu-id="6111c-138">You can access all WPF features from procedural code.</span></span> <span data-ttu-id="6111c-139">Um eine "Hello Freihand-World"-Anwendung für WPF erstellen, die alle XAML überhaupt nicht verwendet, gehen Sie wie folgt vor.</span><span class="sxs-lookup"><span data-stu-id="6111c-139">Follow these steps to create a "Hello Ink World" application for WPF that doesn’t use any XAML at all.</span></span>
+
+1. <span data-ttu-id="6111c-140">Erstellen Sie ein neues Konsolenanwendungsprojekt in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="6111c-140">Create a new console application project in Visual Studio.</span></span>
+
+   <span data-ttu-id="6111c-141">In der **neues Projekt** Dialogfeld erweitern Sie die **installiert** > **Visual C#-** oder **Visual Basic**  >   **Windows-Desktop** Kategorie.</span><span class="sxs-lookup"><span data-stu-id="6111c-141">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="6111c-142">Wählen Sie dann die **Konsolen-App ((.NET Framework)** -app-Vorlage.</span><span class="sxs-lookup"><span data-stu-id="6111c-142">Then, select the **Console App (.NET Framework)** app template.</span></span> <span data-ttu-id="6111c-143">Geben Sie einen Namen ein, und wählen Sie dann **OK**.</span><span class="sxs-lookup"><span data-stu-id="6111c-143">Enter a name, and then select **OK**.</span></span>
+
+1. <span data-ttu-id="6111c-144">Fügen Sie den folgenden Code in der Datei Program.cs oder Program.vb-Datei ein:</span><span class="sxs-lookup"><span data-stu-id="6111c-144">Paste the following code into the Program.cs or Program.vb file:</span></span>
+
+   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+
+1. <span data-ttu-id="6111c-145">Fügen Sie Verweise auf die Assemblys PresentationCore, PresentationFramework und WindowsBase hinzu, indem Sie mit der rechten Maustaste auf **Verweise** in **Projektmappen-Explorer** und **VerweisHinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="6111c-145">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies by right-clicking on **References** in **Solution Explorer** and choosing **Add Reference**.</span></span>
+
+   ![Verweis-Manager angezeigt wird, PresentationCore und PresentationFramework getrennt](media/getting-started-with-ink/references.png)
+
+1. <span data-ttu-id="6111c-147">Erstellen Sie die Anwendung durch Drücken von **F5**.</span><span class="sxs-lookup"><span data-stu-id="6111c-147">Build the application by pressing **F5**.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="6111c-148">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6111c-148">See Also</span></span>
+
+- [<span data-ttu-id="6111c-149">Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="6111c-149">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)
+- [<span data-ttu-id="6111c-150">Erfassen von Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="6111c-150">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)
+- [<span data-ttu-id="6111c-151">Schrifterkennung</span><span class="sxs-lookup"><span data-stu-id="6111c-151">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
+- [<span data-ttu-id="6111c-152">Speichern von Eingabehilfen</span><span class="sxs-lookup"><span data-stu-id="6111c-152">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)
