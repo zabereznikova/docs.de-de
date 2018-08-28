@@ -2,12 +2,12 @@
 title: Artikel zu Vorgehensweisen (C#-Handbuch)
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
-ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549380"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999562"
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
@@ -68,7 +68,7 @@ Möglicherweise müssen Sie ein Objekt in einen anderen Typ konvertieren.
 - [Nutzen von `as` und `is` für die sichere Umwandlung in einen anderen Typ](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
 - [Definieren von Konvertierungsoperatoren für `struct`-Typen](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
 - [Identifizieren, ob ein Typ ein Typ ist, der NULL-Werte zulässt](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [Konvertieren zwischen Typen, die NULL zulassen, und Typen, die NULL nicht zulassen](../programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).
+- [Konvertieren zwischen Typen, die NULL zulassen, und Typen, die NULL nicht zulassen](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>Übereinstimmungs- und Reihenfolgenvergleiche
 
@@ -126,7 +126,7 @@ Moderne Programme verwenden häufig asynchrone Vorgänge. In den folgenden Artik
 
 - [Verbessern der asynchronen Leistung mit `System.Threading.Tasks.Task.WhenAll`](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 - [Paralleles Erstellen mehrerer Webanforderungen mit `async` und `await`](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
-- [Verwenden von Threadpools](../programming-guide/concepts/threading/how-to-use-a-thread-pool.md).
+- [Verwenden von Threadpools](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>Befehlszeilenargumente für Ihr Programm
 
