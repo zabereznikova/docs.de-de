@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569903"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931858"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapezeichen in regulären Ausdrücken
 Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine der folgenden Optionen stehen:  
@@ -36,9 +36,9 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
 ## <a name="character-escapes-in-net"></a>Escapezeichen in .NET  
  In der folgenden Tabelle sind die Escapezeichen aufgeführt, die von regulären Ausdrücken in .NET unterstützt werden.  
   
-|Zeichen oder Sequenz|description|  
+|Zeichen oder Sequenz|Beschreibung |  
 |---------------------------|-----------------|  
-|Alle Zeichen außer Folgenden:<br /><br /> sein. $ ^ { [ ( &#124; ) * + ? \|Andere als die in der Spalte **Zeichen oder Sequenz** aufgelisteten Zeichen haben keine spezielle Bedeutung in regulären Ausdrücken. Sie stehen für sich selbst.<br /><br /> Die in der Spalte **Zeichen oder Sequenz** enthaltenen Zeichen sind spezielle Sprachelemente regulärer Ausdrücke. Um diese in einem regulären Ausdruck abzugleichen, müssen sie mit Escapezeichen versehen oder in eine [positive Zeichengruppe](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) einbezogen werden. Der reguläre Ausdruck `\$\d+` oder `[$]\d+` entspricht z. B. "$1200".|  
+|Alle Zeichen außer Folgenden:<br /><br /> sein. $ ^ { [ ( &#124; ) * + ? \ |Andere als die in der Spalte **Zeichen oder Sequenz** aufgelistete Zeichen haben keine spezielle Bedeutung in regulären Ausdrücken, sie stehen für sich selbst.<br /><br /> Die in der Spalte **Zeichen oder Sequenz** enthaltenen Zeichen sind spezielle Sprachelemente regulärer Ausdrücke. Um diese in einem regulären Ausdruck abzugleichen, müssen sie mit Escapezeichen versehen oder in eine [positive Zeichengruppe](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) einbezogen werden. Der reguläre Ausdruck `\$\d+` oder `[$]\d+` entspricht z. B. "$1200".|  
 |`\a`|Entspricht dem Klingelzeichen (Warnsignal) `\u0007`.|  
 |`\b`|Entspricht in einer `[`*Zeichengruppe*`]`-Zeichenklasse einem Rücktastenzeichen `\u0008`.  (Siehe [Zeichenklassen](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Außerhalb einer Zeichenklasse ist `\b` ein Anker, der einer Wortgrenze entspricht. (Siehe [Anker](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)|  
 |`\t`|Entspricht dem Tabstoppzeichen `\u0009`.|  
@@ -61,7 +61,7 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
   
  Der reguläre Ausdruck `\G(.+)[\t|\u007c](.+)\r?\n` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\G`|Beginnen Sie den Abgleich an der Stelle, wo der letzte Abgleich geendet hat.|  
 |`(.+)`|Entspricht einem oder mehreren die oft ausgegebene Befehlszeilen  Zeichen. Dies ist die erste Erfassungsgruppe.|  

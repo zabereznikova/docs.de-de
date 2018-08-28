@@ -18,39 +18,39 @@ helpviewer_keywords:
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b0137f0f33abfdb3f03758323edeaa63ac60117
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 214243f6a8a87f4e4cc15f31be23275fff00d07d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591559"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998929"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong-Datentyp (Visual Basic)
 
-Enthält die 64-Bit (8 Byte)-Ganzzahlen ohne Vorzeichen im Bereich von 0 bis 18.446.744.073.709.551.615 (mehr als 1,84 Mal 10 ^ 19).  
+64-Bit (8 Byte)-Ganzzahlen ohne Vorzeichen im Bereich von 0 bis 18.446.744.073.709.551.615 enthält (mehr als 1,84 Mal 10 ^ 19).  
   
 ## <a name="remarks"></a>Hinweise
 
-Verwenden der `ULong` -Datentyp zu groß für Binärdaten enthalten `UInteger`, oder der größtmögliche unsigned Integer-Werte.  
+Verwenden der `ULong` Datentyp zu groß für die Binärdaten enthält `UInteger`, oder die größten möglichen unsigned Integer-Werte.  
   
 Der Standardwert von `ULong` lautet 0.
 
-## <a name="literal-assignments"></a>Literal Zuweisungen
+## <a name="literal-assignments"></a>Zuweisung von literalen
 
-Sie können deklarieren und Initialisieren einer `ULong` Variable, indem ein decimal Literal, einen hexadezimalen Literalwert ein oktales Literal Vorlagenkörpers oder (beginnend mit Visual Basic 2017) ein binäres Literal. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `ULong` befindet – sprich, wenn es kleiner als <xref:System.UInt64.MinValue?displayProperty=nameWithType> oder größer als <xref:System.UInt64.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
+Sie können deklarieren und initialisieren eine `ULong` Variable, indem Sie ihm ein dezimales Literal, ein hexadezimales Literal ein oktales Literal, zuweisen oder (beginnend mit Visual Basic 2017) ein binäres Literal. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `ULong` befindet – sprich, wenn es kleiner als <xref:System.UInt64.MinValue?displayProperty=nameWithType> oder größer als <xref:System.UInt64.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
 
 Im folgenden Beispiel werden Ganzzahlen wie 7.934.076.125, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `ULong`-Werten zugewiesen.
   
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ULong)]
 
 > [!NOTE] 
-> Verwenden Sie das Präfix `&h` oder `&H` zur Angabe einer hexadezimalen Literalwert, das Präfix `&b` oder `&B` um ein binäres Literal und das Präfix zu bezeichnen `&o` oder `&O` um ein oktales Literal zu kennzeichnen. Dezimale Literale haben kein Präfix.
+> Sie verwenden das Präfix `&h` oder `&H` um anzugeben, ein hexadezimales Literal, das Präfix `&b` oder `&B` um ein binäres Literal und das Präfix anzugeben `&o` oder `&O` um ein oktales Literal zu kennzeichnen. Dezimale Literale haben kein Präfix.
 
-Beginnend mit Visual Basic 2017, Sie können auch den Unterstrich `_`, als Ziffer Trennzeichen zum Verbessern der Lesbarkeit, wie im folgenden Beispiel dargestellt.
+Starten Visual Basic 2017, Sie können auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbessern der Lesbarkeit, wie im folgenden Beispiel gezeigt.
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Beginnend mit Visual Basic 15.5, Sie können auch das Unterstrich-Zeichen (`_`) als führende Trennzeichen zwischen Präfix und die, binäre oktalen oder hexadezimalen Ziffern. Zum Beispiel:
+Ab Visual Basic 15.5 können Sie können auch den Unterstrich (`_`) als vorangestelltes Trennzeichen zwischen Präfix und die Ziffern hexadezimalen, Binär- oder Oktalziffern. Zum Beispiel:
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -58,7 +58,7 @@ Dim number As ULong = &H_F9AC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numerische Literale zählen auch die `UL` oder `ul` [-Typzeichen](../../programming-guide\language-features\data-types/type-characters.md) zur Angabe der `ULong` -Datentyp, wie im folgenden Beispiel gezeigt.
+Numerische Literale können auch einschließen, die `UL` oder `ul` [Typzeichen](../../programming-guide\language-features\data-types/type-characters.md) zur Angabe der `ULong` -Datentyp, wie im folgenden Beispiel gezeigt.
 
 ```vb
 Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
@@ -66,24 +66,24 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>Tipps für die Programmierung
   
--   **Negative Zahlen.** Da `ULong` ein Typ ohne Vorzeichen ist es nicht darstellen kann eine negative Zahl. Bei Verwendung der unäres minus (`-`) Operator auf einen Ausdruck, der ausgewertet wird, um geben `ULong`, konvertiert den Ausdruck, der Visual Basic `Decimal` erste.  
+-   **Negative Zahlen.** Da `ULong` ein Typ ohne Vorzeichen, kann er eine negative Zahl ist keine darstellen. Bei Verwendung der unäres minus (`-`) Operator auf ein Ausdruck, der ausgewertet wird, um geben `ULong`, konvertiert den Ausdruck, der Visual Basic `Decimal` erste.  
   
--   **CLS-Kompatibilität.** Die `ULong` Datentyp ist nicht Teil der [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), d. h. CLS-kompatiblem Code kann keine Komponente verwenden, die verwendet werden.  
+-   **CLS-Kompatibilität.** Die `ULong` Datentyp ist nicht Teil der [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), damit die CLS-kompatiblem Code kann keine Komponente verwenden, der verwendet wird.  
   
--   **Interop-Überlegungen.** Wenn Sie Komponenten, die nicht für .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschriebenen Datenbreite bedenken, die z. B. Typen `ulong` können in anderen Umgebungen eine andere Datenbreite (32 Bit). Wenn Sie eine 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `UInteger` anstelle von `ULong` im verwalteten Visual Basic-Code.  
+-   **Interop-Überlegungen.** Wenn Sie anbinden, Komponenten, die nicht für .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschriebenen müssen bedenken, die Typen wie `ulong` kann in anderen Umgebungen über eine andere Datenbreite (32 Bit) verfügen. Wenn Sie ein 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `UInteger` anstelle von `ULong` in verwaltetem Visual Basic-Code.  
   
-     Darüber hinaus unterstützt Automatisierung keine 64-Bit-Ganzzahlen unter Windows 95, Windows 98, Windows ME bzw. Windows 2000. Sie können nicht übergeben, eine Visual Basic `ULong` Argument an eine Automatisierungskomponente auf diesen Plattformen.  
+     Automation unterstützt darüber hinaus keine 64-Bit-Ganzzahlen auf Windows 95, Windows 98, Windows ME oder Windows 2000. Sie können keine übergeben, eine Visual Basic `ULong` Argument an eine Automatisierungskomponente auf diesen Plattformen.  
   
--   **Widening.** Die `ULong` -Datentyp zu `Decimal`, `Single`, und `Double`. Dies bedeutet, Sie können konvertieren `ULong` keinem dieser Typen ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
+-   **Erweiternde.** Die `ULong` -Datentyp wird zu `Decimal`, `Single`, und `Double`. Dies bedeutet, Sie können konvertieren `ULong` in alle diese Typen unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Typzeichen.** Anhängen des Literaltypzeichens `UL` an ein Literal wird der `ULong` -Datentyp. `ULong` verfügt über keine Typkennzeichen aus.
+-   **Typzeichen.** Durch Anhängen des Literaltypzeichens `UL` an ein Literal wird der `ULong` -Datentyp. `ULong` verfügt über keine Typkennzeichen aus.
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt64?displayProperty=nameWithType>-Struktur.  
   
 ## <a name="see-also"></a>Siehe auch
 
  <xref:System.UInt64>  
- [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
  [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  

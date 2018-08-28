@@ -5,11 +5,11 @@ author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
 ms.openlocfilehash: 84e016e4620b73444f800b02076489012ea5e844
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753818"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001439"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktionszeit
 

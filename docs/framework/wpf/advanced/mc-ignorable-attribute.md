@@ -9,17 +9,17 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 7b8a2ef6e27bc6b25776157e59bef04b883fcb1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45b9ee94b35f368a9d0c96381083aa58c9a23f77
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546197"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998410"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable-Attribut
-Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespacepräfixe, die in einer Markupdatei gefunden können ignoriert werden, indem eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor. Die `mc:Ignorable` Attribut unterstützt Markupkompatibilität für benutzerdefinierte Namespacezuordnung und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] versionsverwaltung.  
+Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespacepräfixe, die bei der ein Markup-Datei können ignoriert werden, indem eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor. Die `mc:Ignorable` Attribut Markupkompatibilität unterstützt, für den benutzerdefinierten Namespace-Zuordnung und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] versionsverwaltung.  
   
-## <a name="xaml-attribute-usage-single-prefix"></a>Verwendung von XAML-Attributen (Präfix)  
+## <a name="xaml-attribute-usage-single-prefix"></a>XAML-Attributverwendung (einzelnes Adresspräfix)  
   
 ```  
 <object  
@@ -30,7 +30,7 @@ Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
 </object>  
 ```  
   
-## <a name="xaml-attribute-usage-two-prefixes"></a>Verwendung von XAML-Attributen (zwei Präfixe)  
+## <a name="xaml-attribute-usage-two-prefixes"></a>XAML-Attributverwendung (zwei Präfixe)  
   
 ```  
 <object  
@@ -47,23 +47,23 @@ Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
 |||  
 |-|-|  
 |*IgnorablePrefix, ignorablePrefix1 usw..*|Jede gültige Präfixzeichenfolge gemäß der XML 1.0-Spezifikation.|  
-|*ignorableUri*|Ein beliebiger gültiger URI zum Angeben eines Namespaces, gemäß der XML 1.0-Spezifikation.|  
-|*ThisElementCanBeIgnored*|Ein Element, das vom ignoriert werden sollen, kann [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Implementierungen von ereignissprozessoren, wenn der zugrunde liegende Typ aufgelöst werden kann.|  
+|*ignorableUri*|Ein beliebiger gültiger URI für das Angeben eines Namespaces, gemäß der XML 1.0-Spezifikation.|  
+|*ThisElementCanBeIgnored*|Ein Element, das vom ignoriert werden sollen, kann [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Implementierungen von ereignissprozessoren, wenn der zugrunde liegende Typ nicht aufgelöst werden kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespacepräfix ist die empfohlene Präfix Konvention, die zu verwendende Zuordnung der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Kompatibilität Namespace [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)].  
+ Die `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespace-Präfix ist die empfohlene Präfix-Konvention zu verwenden, wenn die Zuordnung der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Compatibility-Namespace [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)].  
   
- Elemente oder Attribute, in denen die Präfixteil des Elementnamens als prognostiziert `mc:Ignorable` löst keine Fehler bei der Verarbeitung einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor. Wenn dieses Attribut nicht in einen zugrunde liegenden Typ oder einen Programmiermodell aufgelöst werden konnte, wird dieses Element ignoriert. Beachten Sie jedoch, dass ignorierter Elemente möglicherweise noch weitere Analysefehler für zusätzliche Element Anforderungen generiert, die Nebeneffekte des jeweiligen Elements, das nicht verarbeitet werden. Beispielsweise kann ein bestimmtes Elementinhaltsmodell erfordern genau ein untergeordnetes Element, wenn das angegebene untergeordnete Element in wurde einer `mc:Ignorable` Präfix und das angegebene untergeordnete Element konnte nicht in einen Typ aufgelöst werden und dann die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor möglicherweise ein Fehler ausgelöst.  
+ Elemente oder Attribute, die bei der Präfixteil der Elementname als identifiziert `mc:Ignorable` löst keinen Fehler bei der Verarbeitung durch eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor. Wenn dieses Attribut nicht in einen zugrunde liegenden Typ oder einen Programmierungskonstrukt aufgelöst werden konnte, wird dieses Element ignoriert. Beachten Sie jedoch, dass das ignorierte Elemente weiterhin zusätzliche Analysefehler für zusätzliche Containerelement-Anforderungen generieren können, die Nebeneffekte des jeweiligen Elements, das nicht verarbeitet werden. Z. B. möglicherweise ein bestimmtes Elementinhaltsmodell genau ein untergeordnetes Element, jedoch wenn das angegebene untergeordnete Element in wurde einer `mc:Ignorable` Präfix und das angegebene untergeordnete Element konnte nicht in einen Typ aufgelöst werden und dann die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor möglicherweise ein Fehler ausgelöst.  
   
- `mc:Ignorable` gilt nur für Namespacezuordnungen in Bezeichnerzeichenfolgen. `mc:Ignorable` gilt nicht für Namespacezuordnungen, die in Assemblys, die angeben einer [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Namespace und eine Assembly (oder standardmäßig auf die aktuelle ausführbare Datei, wie die Assembly befinden).  
+ `mc:Ignorable` gilt nur für den Namespacezuordnungen zu Bezeichnerzeichenfolgen. `mc:Ignorable` gilt nicht für Namespacezuordnungen zu Assemblys, die angeben einer [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Namespace und eine Assembly (oder standardmäßig auf die ausführbare Datei als Assembly).  
   
- Wenn Sie implementieren eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor, wird Ihre-prozessorimplementierung muss nicht ausgelöst, analysieren oder Verarbeitungsfehlern auf typauflösung für ein Element oder Attribut, das durch ein Präfix gekennzeichnet werden, die als identifiziert wird `mc:Ignorable`. Aber Ihre-prozessorimplementierung kann weiterhin, die ein sekundäres Ergebnis eines Elements, das wegen eines Fehlers beim Laden oder verarbeitet werden, z. B. das ein untergeordnetes Element Beispiel weiter oben genannten Ausnahmen auslösen.  
+ Wenn Sie implementieren eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -Prozessor, Ihre-prozessorimplementierung muss nicht auslösen, analysieren oder zu Fehlern auf typauflösung für ein Element oder Attribut, das durch ein Präfix qualifiziert wird, die als identifiziert wird bei der Verarbeitung `mc:Ignorable`. Aber die prozessorimplementierung kann weiterhin Ausnahmen auslösen, die sekundäre eines Elements, das beim Laden oder verarbeitet werden resultieren, beispielsweise eine-untergeordnetes Element weiter oben.  
   
- Wird standardmäßig ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor ignoriert Inhalte innerhalb eines Elements wird ignoriert. Sie können jedoch ein zusätzliches Attribut angeben [MC: ProcessContent Attribut](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), kontinuierliche Verarbeitung von Inhalten innerhalb eines ignorierten Elements vom nächsten verfügbaren übergeordneten Element erforderlich.  
+ Standardmäßig eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor ignoriert den Inhalt in einem Element ignoriert. Sie können jedoch zusätzlich das Attribut angeben [MC: ProcessContent-Attribut](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), um die kontinuierliche Verarbeitung des Inhalts in einem ignoriert Element vom nächsten verfügbaren übergeordneten Element erforderlich.  
   
- Mehrere Präfixe können im Attribut, z. B. über eine oder mehrere Leerzeichen als Trennzeichen, angegeben werden: `mc:Ignorable="ignore1 ignore2"`.  
+ Mehrere Präfixe können angegeben werden, in das Attribut, wobei eine oder mehrere Leerzeichen als Trennzeichen, z. B.: `mc:Ignorable="ignore1 ignore2"`.  
   
- Die [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] -Namespace definiert, andere Elemente und Attribute, die innerhalb dieses Bereichs, der nicht dokumentiert sind die [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]. Weitere Informationen finden Sie unter [Kompatibilität-Spezifikation für XML-Markup](http://go.microsoft.com/fwlink/?LinkId=73824).  
+ Die [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] -Namespace definiert, andere Elemente und Attribute, die in diesem Bereich nicht dokumentiert sind die [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]. Weitere Informationen finden Sie unter [XML-Markup-Compatibility-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=73824).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Markup.XamlReader>  

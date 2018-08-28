@@ -4,40 +4,40 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 6be7597f1c03d8aa044eba70ef6287cfc07d9b84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 524a54443b8f2365252f11282ca29fc492bef351
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652037"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000232"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Verarbeiten der XML-Datei (Visual Basic)
-Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Informationen zum Kennzeichnen von Code finden Sie unter [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).) Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten können die ID-Zeichenfolge zum Identifizieren der entsprechenden [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Metadaten/Reflektion-Element.  
+Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Informationen dazu, wie Code mit Tags versehen werden, finden Sie unter [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md).) Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten können die ID-Zeichenfolge zum Identifizieren der entsprechenden [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Metadaten-/ Reflektionselement.  
   
  Die XML-Datei ist nicht über eine hierarchische Darstellung des Codes; Es ist eine flache Liste mit einer generierten ID für jedes Element.  
   
  Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:  
   
--   In der Zeichenfolge wird kein Leerzeichen eingefügt.  
+-   In der Zeichenfolge wird kein Leerraum platziert.  
   
--   Der erste Teil der ID-Zeichenfolge identifiziert die Art des Elements identifiziert wird, mit einem einzelnen Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Elementtypen werden verwendet.  
+-   Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet.  
   
 |Zeichen|Beschreibung|  
 |---|---|  
-|N|namespace<br /><br /> Ein Namespace können keine Dokumentationskommentare hinzugefügt, Sie können jedoch CREF-Verweise, sofern diese unterstützt wird.|  
+|N|namespace<br /><br /> Ein Namespace können keine Dokumentationskommentare hinzugefügt, Sie können jedoch CREF-Verweise hinzugefügt, wenn dies unterstützt wird.|  
 |T|Typ: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
 |F|Feld: `Dim`|  
-|P|Eigenschaft: `Property` (einschließlich Standardeigenschaften)|  
+|P|Eigenschaft: `Property` (einschließlich Eigenschaften)|  
 |M|Methode: `Sub`, `Function`, `Declare`, `Operator`|  
 |E|Ereignis: `Event`|  
-|!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Visual Basic-Compiler generiert Fehlerinformationen für Links, die nicht aufgelöst werden kann.|  
+|!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Visual Basic-Compiler generiert die Fehlerinformationen für Links, die nicht aufgelöst werden kann.|  
   
--   Der zweite Teil der `String` ist der vollqualifizierte Name des Elements, angefangen beim Stamm des Namespaces. Der Name des Elements, dessen einschließenden Typs und den Namespace werden durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie ersetzt, durch das Nummernzeichen (#). Es wird vorausgesetzt, dass kein Element mit einem Nummernzeichen direkt im Namen aufweist. Z. B. den vollqualifizierten Namen des der `String` Konstruktor wäre `System.String.#ctor`.  
+-   Der zweite Teil der `String` ist der vollqualifizierte Name des Elements im Stammverzeichnis des Namespace ab. Der Name des Elements, seiner einschließenden Typen und den Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie ersetzt durch ein Nummernzeichen (#). Es wird vorausgesetzt, dass kein Element mit einem Nummernzeichen direkt im Namen hat. Z. B. den vollqualifizierten Namen des der `String` Konstruktor wäre `System.String.#ctor`.  
   
--   Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas voneinander getrennt. Die Codierung des jedes Argument folgt direkt Codieren in eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Signatur.  
+-   Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas voneinander getrennt. Die Codierung jedes Arguments erfolgt genauso wie es in codiert wird eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Signatur.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt, wie die ID-Zeichenfolgen für eine Klasse und ihre Member generiert.  
+ Der folgende Code zeigt, wie die ID für eine Klasse Zeichenfolgen und ihre Member generiert werden.  
   
  [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   

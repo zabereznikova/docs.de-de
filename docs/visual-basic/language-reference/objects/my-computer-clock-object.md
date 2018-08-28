@@ -1,15 +1,15 @@
 ---
-title: My.Computer.Clock-Objekt
+title: My.Computer.Clock-Objekt (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Clock object
 ms.assetid: a362b270-8a1b-404a-95c8-516a60c607dd
-ms.openlocfilehash: 71387ee89557deefd050092850397214a429a021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 431610030480ce4eb54882e519a5a7f7bbffe90a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595961"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000176"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock-Objekt
 Stellt Eigenschaften für den Zugriff auf die aktuelle lokale Zeit und die koordinierte Weltzeit (entspricht UTC, Greenwich Mean Time) von der Systemuhr bereit.  

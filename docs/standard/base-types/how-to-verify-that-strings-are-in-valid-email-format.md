@@ -1,6 +1,6 @@
 ---
 title: 'Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen'
-ms.date: 03/30/2017
+ms.date: 08/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -20,25 +20,22 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 18426e655f6702844daa822921888194ed7ecb64
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172329"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753593"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen
 Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeichenfolge ein gültiges E-Mail-Format aufweist.  
 
-> [!NOTE]
->  Es wird empfohlen, die <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType>-Klasse zu verwenden, wenn die Zeichenfolge ein gültiges E-Mail-Adressformat aufweist. Übergeben Sie hierzu die E-Mail-Adresszeichenfolge an den <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>-Klassenkonstruktor. Dieser löst eine <xref:System.FormatException> aus, wenn die Zeichenfolge ein unbekanntes Format aufweist.  
-  
 ## <a name="example"></a>Beispiel  
  Im Beispiel wird eine `IsValidEmail` -Methode definiert, die `true` zurückgibt, wenn die Zeichenfolge eine gültige E-Mail-Adresse enthält und andernfalls `false` ; es wird jedoch keine andere Aktion ausgeführt.  
   
  Um die Gültigkeit der E-Mail-Adresse zu überprüfen ruft die `IsValidEmail`-Methode die <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType>-Methode mit dem regulären Ausdruck `(@)(.+)$` auf, um den Domänennamen von der E-Mail-Adresse zu trennen. Der dritte Parameter ist ein <xref:System.Text.RegularExpressions.MatchEvaluator> -Delegat, der die Methode darstellt, die den gefundenen Text verarbeitet und ersetzt. Das Muster des regulären Ausdrucks wird wie folgt interpretiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`(@)`|Das "@"-Zeichen wird als Übereinstimmung verwendet. Dies ist die erste Erfassungsgruppe.|  
 |`(.+)`|Ein- oder mehrmalige Übereinstimmung mit beliebigem Zeichen. Dies ist die zweite Erfassungsgruppe.|  
@@ -55,7 +52,7 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
   
  In diesem Beispiel kann das Muster des regulären Ausdrucks ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` wie in der folgenden Tabelle dargestellt interpretiert werden. Beachten Sie, dass der reguläre Ausdruck mit dem Flag <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> kompiliert wurde.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`^`|Starten Sie den Vergleich am Beginn der Zeichenfolge.|  
 |`(?(")`|Ermittelt, ob es sich beim ersten Zeichen um ein Anführungszeichen handelt. `(?(")` ist der Anfang eines Alternierungskonstrukts.|  

@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
-ms.openlocfilehash: a784d305549df1035b60dc8f1585655023ed3406
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8546ed0a5032d93bcf7320c96424b02b3b6d5fa3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594308"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000910"
 ---
 # <a name="xml-axis-properties-do-not-support-late-binding"></a>Die XML-Achseneigenschaften unterstützen keine späte Bindung
-Eine XML-Achseneigenschaft wurde für einen nicht typisierten Objekts verwiesen.  
+Eine XML-Achseneigenschaft wurde für ein nicht typisiertes Objekt verwiesen.  
   
  **Fehler-ID:** BC31168  
   
@@ -24,5 +24,5 @@ Eine XML-Achseneigenschaft wurde für einen nicht typisierten Objekts verwiesen.
 -   Stellen Sie sicher, dass das Objekt ein stark typisiertes ist <xref:System.Xml.Linq.XElement> Objekt vor dem verweisen auf die XML-Achseneigenschaft.  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/index.md)  
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

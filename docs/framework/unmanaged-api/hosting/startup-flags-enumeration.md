@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444229"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998902"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS-Enumeration
 Enthält Werte, die das Startverhalten der Common Language Runtime (CLR) angeben. Standardmäßig erfolgt die Garbage Collection nicht gleichzeitig, und nur die Basisklassenbibliothek wird in den domänenneutralen Bereich geladen.  
@@ -57,7 +57,7 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Gibt an, dass die gleichzeitige Garbage Collection verwendet werden soll. Wenn der Aufrufer den Serverbuild und die gleichzeitige Garbage Collection auf einem Computer mit nur einem Prozessor anfordert, werden stattdessen der Arbeitsstationsbuild und die nicht gleichzeitige Garbage Collection ausgeführt. **Hinweis:** gleichzeitige Garbagecollection wird nicht unterstützt, in Anwendungen, die den WOW64 ausgeführt werden X86 Emulator auf 64-Bit-Systemen, die Implementierung der Intel Itanium-Architektur (früher als IA-64 bezeichnet). Weitere Informationen zur Verwendung von WOW64 auf 64-Bit-Windows-Systemen, finden Sie unter [Ausführen von 32-Bit-Anwendungen](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx).|  
+|`STARTUP_CONCURRENT_GC`|Gibt an, dass die gleichzeitige Garbage Collection verwendet werden soll. Wenn der Aufrufer den Serverbuild und die gleichzeitige Garbage Collection auf einem Computer mit nur einem Prozessor anfordert, werden stattdessen der Arbeitsstationsbuild und die nicht gleichzeitige Garbage Collection ausgeführt. **Hinweis:** gleichzeitige Garbagecollection wird nicht unterstützt, in Anwendungen, die den WOW64 ausgeführt werden X86 Emulator auf 64-Bit-Systemen, die Implementierung der Intel Itanium-Architektur (früher als IA-64 bezeichnet). Weitere Informationen zur Verwendung von WOW64 auf 64-Bit-Windows-Systemen finden Sie unter [Ausführen von 32-Bit-Anwendungen](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Gibt an, dass eine Ladeprogrammoptimierung stattfinden soll.|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Gibt an, dass keine Assemblys als domänenneutral geladen werden.|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Gibt an, dass alle Assemblys als domänenneutral geladen werden.|  
@@ -71,11 +71,11 @@ typedef enum {
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|Gibt an, dass der vollständige Threadstapel nicht übergeben werden sollte, wenn die Ausführung des Threads beginnt.|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Gibt an, dass verwaltete Identitätswechsel und durch Plattformaufruf erreichte Identitätswechsel über asynchrone Punkte übergeben werden. Standardmäßig werden nur verwaltete Identitätswechsel über asynchrone Punkte übergeben.|  
 |`STARTUP_TRIM_GC_COMMIT`|Gibt an, dass von der Garbage Collection weniger belegter Speicher verwendet wird, wenn der verfügbare Systemarbeitsspeicher zu gering ist. Finden Sie unter `gcTrimCommitOnLowMemory` in [Optimierung für freigegebenes Webhosting](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
-|`STARTUP_ETW`|Gibt an, dass die Ereignisablaufverfolgung für Windows (ETW) für Common Language Runtime-Ereignisse aktiviert ist. Ab Windows Vista, ist ereignisablaufverfolgung immer aktiviert, damit dieses Flag keine Auswirkung hat. Finden Sie unter [Steuern der Protokollierung in .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Gibt an, dass die Ressourcenüberwachung der Anwendungsdomäne aktiviert ist. Finden Sie unter der <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> Eigenschaft und [ \<AppDomainResourceMonitoring >-Element](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_ETW`|Gibt an, dass die Ereignisablaufverfolgung für Windows (ETW) für Common Language Runtime-Ereignisse aktiviert ist. Ab Windows Vista können ist ereignisablaufverfolgung immer aktiviert, damit dieses Flag keine Auswirkungen hat. Finden Sie unter [Steuern der Protokollierung in .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
+|`STARTUP_ARM`|Gibt an, dass die Ressourcenüberwachung der Anwendungsdomäne aktiviert ist. Finden Sie unter den <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> Eigenschaft und [ \<AppDomainResourceMonitoring >-Element](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   

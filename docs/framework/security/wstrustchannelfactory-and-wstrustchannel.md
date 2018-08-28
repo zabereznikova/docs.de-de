@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410454"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998465"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>„WSTrustChannelFactory“ und „WSTrustChannel“
 Wenn Sie mit Windows Communication Foundation (WCF) bereits vertraut sind, wissen Sie, dass ein WCF-Client bereits verbundfähig ist. Wird ein WCF-Client mit <xref:System.ServiceModel.WSFederationHttpBinding> oder einer ähnlichen benutzerdefinierten Bindung konfiguriert, können Sie die Verbundauthentifizierung für einen Dienst aktivieren.  
@@ -34,10 +34,10 @@ Wenn Sie mit Windows Communication Foundation (WCF) bereits vertraut sind, wisse
 > [!TIP]
 >  Worin besteht der Unterschied zwischen "ActAs" und "OnBehalfOf"?  
 >   
->  Vom WS-Trust-Procotol-Standpunkt aus betrachtet:  
+>  Von der WS-Trust-Protokoll-Standpunkt aus:  
 >   
->  1.  Ein ActAs-RST-Element gibt an, dass der Anforderer ein Token wünscht, das Ansprüche zu zwei verschiedenen Entitäten enthält: den Anforderer und eine externe Entität, die vom Token im ActAs-Element dargestellt wird.  
-> 2.  Ein OnBehalfOf-RST-Element gibt an, dass der Anforderer ein Token wünscht, das nur Ansprüche zu einer Entität enthält: die externe Entität, die vom Token im OnBehalfOf-Element dargestellt wird.  
+> 1. Ein ActAs-RST-Element gibt an, dass der Anforderer ein Token wünscht, das Ansprüche zu zwei verschiedenen Entitäten enthält: den Anforderer und eine externe Entität, die vom Token im ActAs-Element dargestellt wird.  
+> 2. Ein OnBehalfOf-RST-Element gibt an, dass der Anforderer ein Token wünscht, das nur Ansprüche zu einer Entität enthält: die externe Entität, die vom Token im OnBehalfOf-Element dargestellt wird.  
 >   
 >  Die ActAs-Funktion wird üblicherweise in Szenarien verwendet, die zusammengesetzte Delegierung erfordern, wobei der Endempfänger des ausgestellten Tokens die gesamte Delegierungskette überprüfen und nicht nur den Client, sondern alle Zwischenstufen, finden kann. Dadurch kann die Zugriffssteuerung, Überwachung und andere verwandte Aktivitäten auf Grundlage der gesamten Identitätsdelegierungskette ausgeführt werden. Die ActAs-Funktion wird üblicherweise in Systemen mit mehreren Ebenen verwendet, um Informationen über Identitäten zu authentifizieren und zwischen den Ebenen zu übergeben, ohne diese Informationen an die Anwendung/Geschäftslogikebene übergeben zu müssen.  
 >   

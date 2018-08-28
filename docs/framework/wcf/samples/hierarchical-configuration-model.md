@@ -2,24 +2,24 @@
 title: Hierarchisches Konfigurationsmodell
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ce0bc69424495594e0ee9c6b950a5fa9c4d5f993
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806629"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000100"
 ---
 # <a name="hierarchical-configuration-model"></a>Hierarchisches Konfigurationsmodell
 In diesem Beispiel wird veranschaulicht, wie eine Hierarchie von Konfigurationsdateien für Dienste implementiert wird. Es wird auch gezeigt, wie Bindungen, Dienstverhalten und Endpunktverhalten von höheren Ebenen in der Hierarchie geerbt werden.  
   
 ## <a name="sample-details"></a>Beispieldetails  
- Eine der Funktionen für WCF in entwickelten [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] ist die Verbesserung des hierarchischen Konfigurationsmodells. Ein hierarchisches Konfigurationsmodell ist z. B. das Modell, das von Machine.config -> Rootweb.config -> Web.config definiert wurde. In [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] werden die Bindungen und Verhaltensweisen, die in den oberen Ebenen der Konfigurationshierarchie definiert werden, zum Dienst ohne explizite Konfiguration hinzugefügt. In diesem Beispiel wird gezeigt, wie die Dienstkonfiguration basierend auf Konfigurationselementen vereinfacht werden kann, die auf Computer- oder Anwendungsebene definiert sind.  
+ Eines der Features entwickelt für WCF in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] ist die Verbesserung des hierarchischen Konfigurationsmodells. Ein hierarchisches Konfigurationsmodell ist z. B. das Modell, das von Machine.config -> Rootweb.config -> Web.config definiert wurde. In [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] werden die Bindungen und Verhaltensweisen, die in den oberen Ebenen der Konfigurationshierarchie definiert werden, zum Dienst ohne explizite Konfiguration hinzugefügt. In diesem Beispiel wird gezeigt, wie die Dienstkonfiguration basierend auf Konfigurationselementen vereinfacht werden kann, die auf Computer- oder Anwendungsebene definiert sind.  
   
  Dieses Beispiel umfasst neun Dienste, die in drei Hierarchieebenen definiert sind. `Service1` befindet sich auf der Stammebene. `Service2` und `Service3` erben die Standardelemente von `Service1`. `Service4`, `Service5`, `Service6` und `Service7` werden auf einer dritten Ebene der Hierarchie definiert und erben die Standardelemente von `Service3`. `Service10` und `Service11` befinden sich schließlich auf einer vierten Ebene der Hierarchie.  
   
  Alle Dienste implementieren den `IDesc`-Vertrag. Nachfolgend wird die Definition der `IDesc`-Schnittstelle mit den in dieser Schnittstelle verfügbar gemachten Methoden anzeigt. Die `IDesc`-Schnittstelle wird in Service1.cs definiert.  
   
-```  
+```csharp  
 // Define a service contract  
 [ServiceContract(Namespace="http://Microsoft.Samples.ConfigHierarchicalModel")]  
 public interface IDesc  
@@ -49,7 +49,7 @@ public interface IDesc
   
     2.  In **allgemeine Eigenschaften**Option **Startprojekt**, und klicken Sie dann auf **einzelnes Startprojekt**.  
   
-    3.  Aus der **einzelnes Startprojekt** Dropdownliste, wählen **Client**.  
+    3.  Von der **einzelnes Startprojekt** Dropdown-Menü, Option **Client**.  
   
     4.  Klicken Sie auf **OK** um das Dialogfeld zu schließen.  
   
@@ -58,20 +58,20 @@ public interface IDesc
 4.  Drücken Sie STRG + F5, um den Client auszuführen.  
   
 > [!NOTE]
->  Wenn diese Schritte nicht funktionieren, stellen Sie mithilfe der folgenden Schritte sicher, dass die Umgebung ordnungsgemäß eingerichtet wurde.  
+>  Wenn Sie diese Schritte nicht funktionieren, stellen Sie sicher, dass Ihre Umgebung ordnungsgemäß eingerichtet wurde wurde mit den folgenden Schritten:  
 >   
->  1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-> 2.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-> 3.  Um das Beispiel in einer einzelnen oder Konfigurationen mit mehreren Computern ausführen, befolgen Sie die Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+> 1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](one-time-setup-procedure-for-the-wcf-samples.md).  
+> 2.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](building-the-samples.md).  
+> 3.  Folgen Sie den Anweisungen, um das Beispiel in einer einzelnen oder Konfigurationen mit mehreren Computern auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiele für AppFabric-Management](http://go.microsoft.com/fwlink/?LinkId=193960)
+ [AppFabric-Verwaltungsbeispiele](http://go.microsoft.com/fwlink/?LinkId=193960)
