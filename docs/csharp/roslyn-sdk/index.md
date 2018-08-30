@@ -3,12 +3,12 @@ title: Das .NET Compiler Platform SDK (Roslyn APIs)
 description: Erfahren Sie, wie das .NET Compiler Platform-SDK (auch als „Roslyn-APIs“ bezeichnet) verwendet wird, um den .NET-Code zu analysieren, Fehler zu erkennen und diese Fehler zu beheben.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e524cb8f2fcb5c59550932243b6586019ea7139b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fb67b1d7ff963a01696ce163fdcef0b7944dcee
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358980"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925030"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform-SDK
 
@@ -21,7 +21,7 @@ Das .NET Compiler Platform-SDK vereinfacht die Erstellung von codeabhängigen To
 
 Mit dem .NET Compiler Platform-SDK können Sie ***Analysetools*** und ***Codefehlerbehebungen*** erstellen, die Codierungsfehler finden und korrigieren. ***Analysetools*** analysieren die Syntax und Struktur des Codes und erkennen Praktiken, die korrigiert werden sollten. ***Codefehlerbehebungen*** stellen empfohlene Updates zur Behebung von Codierungsfehlern bereit, die von Analysetools gefunden werden. In der Regel werden ein Analysetool und die zugehörigen Codefehlerbehebungen in ein einzelnes Projekt gepackt. 
 
-Analysetools und Codefehlerbehebungen verwenden zur Codeanalyse statische Analysen. Sie führen den Code nicht aus oder bieten andere Vorteile in Bezug auf Tests. Sie können jedoch auf Praktiken hinweisen, die häufig zu Fehlern, Problemen bei der Codeverwaltung oder zur Validierung von Standardrichtlinien führen.
+Analysetools und Codefehlerbehebungen verwenden zur Codeanalyse statische Analysen. Sie führen den Code nicht aus oder bieten andere Vorteile in Bezug auf Tests. Sie können jedoch auf Praktiken hinweisen, die häufig zu Fehlern, zu Problemen bei der Codeverwaltung oder zur Validierung von Standardrichtlinien führen.
 
 Das .NET Compiler Platform-SDK stellt eine einzelne Gruppe von APIs zur Verfügung, mit denen Sie eine C#- oder Visual Basic-Codebasis untersuchen und analysieren können. Die Verwendung einer einzelnen Codebasis ermöglicht ein einfacheres Schreiben von Analysetools und Codefehlerbehebungen, indem die Syntax- und Semantikanalyse-APIs des .NET Compiler Platform-SDK genutzt werden. Durch den Wegfall der umfangreichen Aufgabe, die vom Compiler durchgeführte Analyse zu replizieren, können Sie sich auf die spezifischere Aufgabe konzentrieren, häufige Codierungsfehler für Ihr Projekt oder Ihre Bibliothek zu finden und zu beheben.
 
