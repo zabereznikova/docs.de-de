@@ -1,6 +1,6 @@
 ---
 title: ConnectServerWmi-Funktion (Referenz zur nicht verwalteten API)
-description: Die Funktion ConnectServerWmi verwendet DCOM für die um eine Verbindung mit einem WMI-Namespace zu erstellen.
+description: Die ConnectServerWmi-Funktion verwendet DCOM, um eine Verbindung mit einem WMI-Namespace zu erstellen.
 ms.date: 11/06/2017
 api_name:
 - ConnectServerWmi
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de8447b9b090fc7f53df23346d61932bcb4dd6ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461996"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238481"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi-Funktion
 Erstellt eine Verbindung über DCOM mit einem WMI-Namespace auf einem angegebenen Computer an.  
@@ -46,34 +46,34 @@ HRESULT ConnectServerWmi (
 ```  
 ## <a name="parameters"></a>Parameter
 
-`strNetworkResource` [in] Zeiger auf eine gültige `BSTR` , den richtigen Namespace des WMI-Objektpfad enthält. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
+`strNetworkResource` [in] Zeiger auf eine gültige `BSTR` , die den den richtigen Namespace der WMI-Objektpfad enthält. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
 
-`strUser` [in] Ein Zeiger auf eine gültige `BSTR` , die den Benutzernamen enthält. Ein `null` Wert gibt an, den aktuellen Sicherheitskontext. Wenn der Benutzer aus einer anderen Domäne als der aktuelle `strUser` kann auch die Domänen- und Benutzernamen Namen getrennt durch einen umgekehrten Schrägstrich enthalten. `strUser` kann auch werden Benutzer Benutzerprinzipalnamen (UPN) formatieren im Suhc als *userName@domainName*. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
+`strUser` [in] Ein Zeiger auf ein gültiges `BSTR` , die den Benutzernamen enthält. Ein `null` Wert gibt an, den aktuellen Sicherheitskontext. Wenn der Benutzer aus einer anderen Domäne als der aktuelle Knoten ist `strUser` kann auch die Domäne und den Namen getrennt durch einen umgekehrten Schrägstrich enthalten. `strUser` können auch werden Benutzer Benutzerprinzipalnamen (UPN) formatieren, Suhc als *userName@domainName*. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
 
-`strPassword` [in] Ein Zeiger auf eine gültige `BSTR` , der Kennwort enthält. Ein `null` gibt den aktuellen Sicherheitskontext an. Eine leere Zeichenfolge ("") gibt ein gültiges Kennwort für die Länge 0 (null) an.
+`strPassword` [in] Ein Zeiger auf ein gültiges `BSTR` , die Kennwort enthält. Ein `null` gibt den aktuellen Sicherheitskontext. Eine leere Zeichenfolge ("") gibt an, ein gültiges Kennwort für die Länge 0 (null).
 
-`strLocale` [in] Ein Zeiger auf eine gültige `BSTR` , der das richtige Gebietsschema für den Abruf von Informationen angibt. Für Microsoft-Gebietsschemabezeichner, ist das Format der Zeichenfolge "MS\_*Xxx*", wobei *Xxx* ist eine Zeichenfolge in hexadezimaler Form, der den Gebietsschemabezeichner (LCID) angibt. Wenn ein ungültiges Gebietsschema angegeben wird, gibt die Methode `WBEM_E_INVALID_PARAMETER` außer auf Windows 7, in dem das Standardgebietsschema des Servers verwendet. Wenn "null1, das aktuelle Gebietsschema verwendet wird. 
+`strLocale` [in] Ein Zeiger auf ein gültiges `BSTR` , der angibt, dass des richtigen Gebietsschemas für den Abruf von Informationen. Für Microsoft-Gebietsschemabezeichner, die das Format der Zeichenfolge ist "MS\_*Xxx*", wobei *Xxx* ist eine Zeichenfolge im hexadezimalen Format, der den Gebietsschemabezeichner (LCID) angibt. Wenn eine ungültige Gebietsschema angegeben wird, gibt die Methode `WBEM_E_INVALID_PARAMETER` außer auf Windows 7, das Standardgebietsschema des Servers ist, in denen stattdessen verwendet. Wenn "null1, das aktuelle Gebietsschema verwendet wird. 
  
-`lSecurityFlags` [in] Flags für die Übergabe an die `ConnectServerWmi` Methode. Der Wert 0 (null) für diesen Parameter im Aufruf führt `ConnectServerWmi` zurückgeben, nachdem eine Verbindung mit dem Server hergestellt wird. Dies kann führen in einer Anwendung nicht unbegrenzt reagiert, wenn der Server unterbrochen wird. Gültige Werte sind:
+`lSecurityFlags` [in] Flags, die zum Übergeben der `ConnectServerWmi` Methode. Der Wert NULL (0) für diesen Parameter im Aufruf führt `ConnectServerWmi` zurückgeben, nur, nachdem eine Verbindung mit dem Server hergestellt wird. Dadurch kann eine Anwendung, die nicht auf unbestimmte Zeit reagiert, wenn der Server beschädigt ist. Die andere gültige Werte sind:
 
 | Konstante  | Wert  | Beschreibung  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0 x 40 | Für die interne Verwendung vorgesehen. Nicht verwenden. |
-| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` Gibt innerhalb von zwei Minuten oder weniger. |
+| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` Gibt zurück, die innerhalb von zwei Minuten oder weniger. |
 
 `strAuthority` [in] Der Domänenname des Benutzers. Sie können die folgenden Werte aufweisen:
 
 | Wert | Beschreibung |
 |---------|---------|
-| leer | NTLM-Authentifizierung verwendet wird, und die NTLM-Domäne des aktuellen Benutzers verwendet. Wenn `strUser` gibt die Domäne (als empfohlenen Speicherort) darf nicht hier angegeben werden. Die Funktion gibt `WBEM_E_INVALID_PARAMETER` Wenn Sie die Domäne in beide Parameter angeben. |
-| Kerberos:*Prinzipalname* | Kerberos-Authentifizierung wird verwendet, und dieser Parameter enthält einen Kerberos-Prinzipalname. |
+| leer | NTLM-Authentifizierung verwendet wird, und die NTLM-Domäne des aktuellen Benutzers verwendet. Wenn `strUser` gibt die Domäne (der empfohlene Speicherort), dürfen nicht hier angegeben werden. Die Funktion gibt `WBEM_E_INVALID_PARAMETER` Wenn Sie die Domäne in beide Parameter angeben. |
+| Kerberos:*Prinzipalname* | Kerberos-Authentifizierung verwendet wird, und dieser Parameter enthält, ein Kerberos-Prinzipalname. |
 | NTLMDOMAIN:*Domänennamen* | NT LAN Manager-Authentifizierung wird verwendet, und dieser Parameter enthält einen NTLM-Domänennamen. |
 
 `pCtx`   
-[in] In der Regel ist dieser Parameter ist `null`. Andernfalls ist ein Zeiger auf ein ["IWbemContext"](https://msdn.microsoft.com/library/aa391465%28v=vs.85%29.aspx) Objekt, das durch einen oder mehrere dynamische Klasse Anbieter erforderlich. 
+[in] In der Regel ist dieser Parameter ist `null`. Andernfalls wird ein Zeiger auf ein [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) Objekt durch eine oder mehrere dynamische Klasse Anbieter erforderlich. 
 
 `ppNamespace`  
-[out] Wenn die Funktion zurückgibt, erhält einen Zeiger auf eine [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) Objekt an den angegebenen Namespace gebunden. Es wird festgelegt, auf `null` , wenn ein Fehler vorliegt.
+[out] Wenn die Funktion zurückgibt, erhält einen Zeiger auf ein [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) Objekt an den angegebenen Namespace gebunden. Festgelegt auf zeigen `null` , wenn ein Fehler auftritt.
 
 `impLevel`  
 [in] Die Ebene des Identitätswechsels.
@@ -83,26 +83,26 @@ HRESULT ConnectServerWmi (
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Ein allgemeiner Fehler ist aufgetreten. |
+| `WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemLocator::ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemLocator::ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx) Methode.
 
- Für den lokalen Zugriff auf den Standardnamespace `strNetworkResource` ein einfaches Objekt-Pfad: "Root\default" oder "\\.\root\default". Für den Zugriff auf die Standard-Namespace auf einem Remotecomputer von COM- oder Microsoft-kompatiblen-Netzwerken, den Computernamen enthalten: "\\Myserver\root\default". Der Computername kann auch einen DNS-Namen oder die IP-Adresse sein. Die `ConnectServerWmi` Funktion kann auch mit IPv6-Computern eine Verbindung mit einer IPv6-Adresse.
+ Für den lokalen Zugriff auf den Standardnamespace `strNetworkResource` kann ein einfaches Objekt-Pfad: "Root\default" oder "\\.\root\default". Für den Zugriff auf den Standardnamespace auf einem Remotecomputer mithilfe der COM- oder Microsoft-kompatiblen-Netzwerken, den Namen des Computers enthalten: "\\Myserver\root\default". Den Namen des Computers kann auch einen DNS-Namen oder die IP-Adresse sein. Die `ConnectServerWmi` Funktion kann auch eine Verbindung herstellen mit IPv6-Computern mit einer IPv6-Adresse.
 
-`strUser` eine leere Zeichenfolge darf nicht sein. Wenn in die Domäne angegeben ist `strAuthority`, er darf nicht auch einbezogen werden `strUser`, oder die Funktion gibt `WBEM_E_INVALID_PARAMETER`.
+`strUser` eine leere Zeichenfolge darf nicht sein. Wenn in die Domäne angegeben ist `strAuthority`, er darf nicht auch enthalten sein `strUser`, oder die Funktion gibt `WBEM_E_INVALID_PARAMETER`.
 
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

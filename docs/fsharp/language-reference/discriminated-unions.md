@@ -2,12 +2,12 @@
 title: Unterscheidungs-Union (F#)
 description: Informationen zum Verwenden von F#-Unterscheidungs-Unions.
 ms.date: 05/16/2016
-ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 3340933ac8e2b6fe0215c684691d216a28b64787
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34149074"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238523"
 ---
 # <a name="discriminated-unions"></a>Unterscheidungs-Unions
 
@@ -20,13 +20,15 @@ Unterscheidungs-Unions bieten Unterstützung für Werte, bei denen es sich um ei
 type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
-...
+
+    [ member-list ]
 ```
 
 ## <a name="remarks"></a>Hinweise
-Unterscheidungs-Unions ähneln Union-Typen in anderen Sprachen, aber es gibt Unterschiede. Wie bei einem Union-Typ in C++ oder einem Variantentyp in Visual Basic werden die im Wert gespeicherten Daten nicht korrigiert. Der Typ kann eine von mehreren unterschiedlichen Optionen sein. Im Gegensatz zu Unions in diesen anderen Sprachen, jedoch der möglichen Optionen wird jeweils ein *Fallbezeichner*. Die Fallbezeichner sind Namen für die verschiedenen möglichen Typen von Werten, die Objekte dieses Typs aufweisen können. Die Werte sind optional. Wenn keine Werte vorhanden sind, entspricht der Fall einem Enumerationsfall. Wenn Werte vorhanden sind, kann jeder Wert entweder ein einzelner Wert eines angegebenen Typs oder ein Tupel sein, das mehrere Felder gleicher oder unterschiedlicher Typen aggregiert. Sie können einem einzelnen Feld einen Namen zuweisen, der Name ist jedoch optional, selbst wenn andere Felder im gleichen Fall benannt sind.
 
-Eingabehilfen für diskriminierte Unions standardmäßig `public`.
+Unterscheidungs-Unions ähneln Union-Typen in anderen Sprachen, aber es gibt Unterschiede. Wie bei einem Union-Typ in C++ oder einem Variantentyp in Visual Basic werden die im Wert gespeicherten Daten nicht korrigiert. Der Typ kann eine von mehreren unterschiedlichen Optionen sein. Im Gegensatz zu Unions in diesen anderen Sprachen, jedoch der möglichen Optionen wird jeweils ein *Fallbezeichner*. Die Fallbezeichner sind Namen für die verschiedenen möglichen Typen von Werten, die Objekte dieses Typs aufweisen können. Die Werte sind optional. Wenn keine Werte vorhanden sind, entspricht der Fall einem Enumerationsfall. Wenn Werte vorhanden sind, kann jeder Wert entweder ein einzelner Wert eines angegebenen Typs oder ein Tupel sein, das mehrere Felder gleicher oder unterschiedlicher Typen aggregiert. Sie können einem einzelnen Feld einen Namen zuweisen, aber der Name ist optional, selbst wenn andere Felder im gleichen Fall benannt sind.
+
+Barrierefreiheit für Unterscheidungs-Unions standardmäßig `public`.
 
 Betrachten Sie zum Beispiel die folgende Deklaration eines Formtyps:
 
@@ -37,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-Der vorangehende Code deklariert eine Unterscheidungs-Union-Form, die Werte der folgenden drei Fälle haben kann: Rechteck, Kreis und Prisma. Jeder Fall hat einen anderen Satz von Feldern. Der Rechteckfall hat zwei benannte Felder, beide vom Typ `float` mit den Namen Breite und Länge. Der Kreisfall hat nur ein benanntes Feld, nämlich Radius. Der prismafall hat drei Felder zwei welche (Breite und Höhe) sind benannte Felder. Unbenannte Felder werden als anonyme Felder bezeichnet.
+Der vorangehende Code deklariert eine Unterscheidungs-Union-Form, die Werte der folgenden drei Fälle haben kann: Rechteck, Kreis und Prisma. Jeder Fall hat einen anderen Satz von Feldern. Der Rechteckfall hat zwei benannte Felder, beide vom Typ `float` mit den Namen Breite und Länge. Der Kreisfall hat nur ein benanntes Feld, nämlich Radius. Der prismafall hat drei Felder, welche (Breite und Höhe) zwei Felder mit dem Namen. Unbenannte Felder werden als anonyme Felder bezeichnet.
 
 Sie erstellen Objekte, indem Sie Werte für die benannten und anonymen Felder bereitstellen, wie in den folgenden Beispielen dargestellt.
 
@@ -78,11 +80,12 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-Normalerweise können die Fallbezeichner verwendet werden, ohne sie durch den Namen der Union zu qualifizieren. Wenn Sie soll, dass der Name immer mit dem Namen der Union qualifiziert werden, können Sie anwenden der [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) -Attribut auf die union-Typdefinition.
+Normalerweise können die Fallbezeichner verwendet werden, ohne sie durch den Namen der Union zu qualifizieren. Wenn Sie den Namen immer mit dem Namen der Union qualifiziert werden möchten, können Sie anwenden der [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) -Attribut auf die Definition der union-Typs.
 
-### <a name="unwrapping-discriminated-unions"></a>Entpacken Unterscheidungs-Unions
+### <a name="unwrapping-discriminated-unions"></a>Zum Entpacken Unterscheidungs-Unions
 
-In f# Unterscheidungs-Unions werden häufig zum in der Domäne Modellierung Umschließen eines einzelnen Typs. Es ist einfach, um den zugrunde liegenden Wert über einen Musterabgleich sowie zu extrahieren. Sie müssen nicht für einen einzelnen Fall einen Vergleichsausdruck verwenden:
+In f# Unterscheidungs-Unions werden häufig verwendet in objektorientierten domänenmodellierung für das Umschließen eines einzelnen Typs. Es ist einfach, um den zugrunde liegenden Wert über den Musterabgleich sowie zu extrahieren. Sie müssen nicht für einen einzelnen Fall einen Vergleichsausdruck zu verwenden:
+
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
 ```
@@ -98,7 +101,7 @@ let someMethodUsingShaderProgram shaderProgram =
     ..
 ```
 
-## <a name="struct-discriminated-unions"></a>Struktur Unterscheidungs-Unions
+## <a name="struct-discriminated-unions"></a>Diskriminierte Unions
 
 Ab f# 4.1, können Sie auch Unterscheidungs-Unions als Strukturen darstellen.  Dies erfolgt mit der `[<Struct>]` Attribut.
 
@@ -113,13 +116,14 @@ type Multicase =
     | Case3 of Case3 : double
 ```
 
-Da diese sind Werttypen und nicht auf Typen verweisen, sind zusätzliche Überlegungen, die im Vergleich mit dem Verweis Unterscheidungs-Unions:
+Da diese Werttypen sind und nicht auf Typen verweisen, sind zusätzliche Überlegungen, die im Vergleich mit dem Verweis Unterscheidungs-Unions:
 
 1. Sie werden als Werttypen kopiert und Werttypsemantik haben.
-2. Eine rekursive Definition können keine mit einer multicase Discriminated-Union-Struktur.
-3. Sie müssen eine multicase Struktur Discriminated Union Groß-/Kleinschreibung eindeutige Namen angeben.
+2. Eine rekursive Definition können keine mit einer multicase Discriminated Union-Struktur.
+3. Sie müssen den eindeutige Namen einer multicase Struktur Discriminated Union Groß-/Kleinschreibung angeben.
 
 ## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>Verwenden von Unterscheidungs-Unions statt Objekthierarchien
+
 Sie können oft eine Unterscheidungs-Union als einfachere Alternative zu einer kleinen Objekthierarchie verwenden. Die folgende Unterscheidungs-Union könnte z. B. statt einer `Shape`-Basisklasse verwendet werden, die abgeleitete Typen für Kreis, Quadrat usw. aufweist.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
@@ -137,6 +141,7 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 ```
 
 ## <a name="using-discriminated-unions-for-tree-data-structures"></a>Verwenden von Unterscheidungs-Unions für Datenstrukturen
+
 Unterscheidungs-Unions können rekursiv sein, d. h., dass die Union selbst im Typ eines Falles oder mehrerer Fälle enthalten sein kann. Rekursive Unterscheidungs-Unions können verwendet werden, um Strukturen zur Gestaltung von Ausdrücken in Programmiersprachen zu erstellen. Im folgenden Code wird eine rekursive Unterscheidungs-Union verwendet, um eine binäre Strukturdatenstruktur zu erstellen. Die Union besteht aus zwei Fällen: `Node`, der ein Knoten mit einem ganzzahligen Wert und linken und rechten Teilstrukturen ist, und `Tip`, der die Struktur beendet.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
@@ -158,7 +163,8 @@ Die folgenden Attribute werden häufig im Unterscheidungs-Unions angezeigt:
 * `[RequireQualifiedAccess]`
 * `[NoEquality]`
 * `[NoComparison]`
-* `[Struct]` (F# 4.1 und höher)
+* `[Struct]`
 
 ## <a name="see-also"></a>Siehe auch
+
 [F#-Sprachreferenz](index.md)
