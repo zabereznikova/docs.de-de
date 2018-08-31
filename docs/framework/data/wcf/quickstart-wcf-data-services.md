@@ -1,47 +1,57 @@
 ---
 title: Schnellstart (WCF Data Services)
-ms.date: 03/30/2017
+ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: 1a30f7e65efc65bf47abd61e5bfdfa85b58ae3a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365396"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330866"
 ---
-# <a name="quickstart-wcf-data-services"></a><span data-ttu-id="69d56-102">Schnellstart (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="69d56-102">Quickstart (WCF Data Services)</span></span>
-<span data-ttu-id="69d56-103">Dieser Schnellstart hilft dabei, sich mit vertraut [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] und [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] durch eine Reihe von Aufgaben, die in die Themen unterstützen [Einstieg](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="69d56-103">This quickstart helps you become familiar with [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] and the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] through a series of tasks that support the topics in [Getting Started](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).</span></span>  
-  
-## <a name="what-you-will-learn"></a><span data-ttu-id="69d56-104">Lernziele</span><span class="sxs-lookup"><span data-stu-id="69d56-104">What You Will Learn</span></span>  
- <span data-ttu-id="69d56-105">Die erste Aufgabe in diesem Schnellstart zeigt das Erstellen eines Datendiensts, um einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Feed aus der Northwind-Beispieldatenbank verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="69d56-105">The first task in this quickstart shows how to create a data service to expose an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed from the Northwind sample database.</span></span> <span data-ttu-id="69d56-106">In späteren Themen greifen Sie auf den [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed mit einem Webbrowser zu und erstellen eine Windows Presentation Foundation (WPF)-Clientanwendung, die den [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed mithilfe von Clientbibliotheken nutzt.</span><span class="sxs-lookup"><span data-stu-id="69d56-106">In later topics, you will access the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed by using a Web browser, and also create a Windows Presentation Foundation (WPF) client application that consumes the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed by using client libraries.</span></span>  
-  
-## <a name="prerequisites"></a><span data-ttu-id="69d56-107">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="69d56-107">Prerequisites</span></span>  
- <span data-ttu-id="69d56-108">Um diesen Schnellstart durchzuführen, müssen Sie die folgenden Komponenten installieren:</span><span class="sxs-lookup"><span data-stu-id="69d56-108">To complete this quickstart, you must install the following components:</span></span>  
-  
--   [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]  
-  
--   <span data-ttu-id="69d56-110">Eine Instanz von [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] SQL Server.</span><span class="sxs-lookup"><span data-stu-id="69d56-110">An instance of [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] SQL Server.</span></span> <span data-ttu-id="69d56-111">Dies schließt das in einer Standardinstallation von Visual Studio enthaltene SQL Server Express ein.</span><span class="sxs-lookup"><span data-stu-id="69d56-111">This includes SQL Server Express, which is included in a default installation of Visual Studio.</span></span>  
-  
--   <span data-ttu-id="69d56-112">Die Beispieldatenbank Northwind.</span><span class="sxs-lookup"><span data-stu-id="69d56-112">The Northwind sample database.</span></span> <span data-ttu-id="69d56-113">Diese Beispieldatenbank kann von der Downloadseite [Beispieldatenbanken für SQL Server](http://go.microsoft.com/fwlink/?linkid=24758)heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="69d56-113">To download this sample database, see the download page, [Sample Databases for SQL Server](http://go.microsoft.com/fwlink/?linkid=24758).</span></span>  
-  
-## <a name="wcf-data-services-quickstart-tasks"></a><span data-ttu-id="69d56-114">Aufgaben beim WCF Data Services-Schnellstart</span><span class="sxs-lookup"><span data-stu-id="69d56-114">WCF Data Services Quickstart Tasks</span></span>  
- [<span data-ttu-id="69d56-115">Erstellen des Datendiensts</span><span class="sxs-lookup"><span data-stu-id="69d56-115">Creating the Data Service</span></span>](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
- <span data-ttu-id="69d56-116">Definieren Sie die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung, definieren Sie das Datenmodell, erstellen Sie den Datendienst, und aktivieren Sie den Zugriff auf Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="69d56-116">Define the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application, define the data model, create the data service, and enable access to resources.</span></span>  
-  
- [<span data-ttu-id="69d56-117">Zugreifen auf den Dienst mit einem Webbrowser</span><span class="sxs-lookup"><span data-stu-id="69d56-117">Accessing the Service from a Web Browser</span></span>](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
- <span data-ttu-id="69d56-118">Starten Sie den Dienst aus Visual Studio, und greifen Sie auf den Dienst zu, indem Sie HTTP GET-Anforderungen über einen Webbrowser an den verfügbar gemachten Feed senden.</span><span class="sxs-lookup"><span data-stu-id="69d56-118">Start the service from Visual Studio and access the service by submitting HTTP GET requests through a Web browser to the exposed feed.</span></span>  
-  
- [<span data-ttu-id="69d56-119">Erstellen der .NET Framework-Clientanwendung</span><span class="sxs-lookup"><span data-stu-id="69d56-119">Creating the .NET Framework Client Application</span></span>](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
- <span data-ttu-id="69d56-120">Erstellen Sie eine [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] -Clientanwendung, um den [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Feed zu nutzen, binden Sie Daten an Windows-Steuerelemente, ändern Sie Daten in den gebundenen Steuerelementen, und senden Sie die Änderungen dann an den Datendienst zurück.</span><span class="sxs-lookup"><span data-stu-id="69d56-120">Create a [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] client application to consume the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, bind data to Windows controls, change data in the bound controls, and then send the changes back to the data service.</span></span>  
-  
+# <a name="quickstart-wcf-data-services"></a><span data-ttu-id="d9036-102">Schnellstart (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="d9036-102">Quickstart (WCF Data Services)</span></span>
+
+<span data-ttu-id="d9036-103">Dieser Schnellstart hilft Ihnen mit WCF Data Services vertraut machen und die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] durch eine Reihe von Aufgaben, die in die Themen unterstützen [Einstieg](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="d9036-103">This quickstart helps you become familiar with WCF Data Services and the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] through a series of tasks that support the topics in [Getting Started](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).</span></span>
+
+## <a name="what-youll-learn"></a><span data-ttu-id="d9036-104">Sie lernen Folgendes</span><span class="sxs-lookup"><span data-stu-id="d9036-104">What you'll learn</span></span>
+
+<span data-ttu-id="d9036-105">Die erste Aufgabe in diesem Schnellstart veranschaulicht das Erstellen eines Datendiensts, um einen OData-feed aus der Northwind-Beispieldatenbank verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="d9036-105">The first task in this quickstart shows how to create a data service to expose an OData feed from the Northwind sample database.</span></span> <span data-ttu-id="d9036-106">In späteren Themen greifen auf den-OData-feed mit einem Webbrowser, und Sie erstellen eine Windows Presentation Foundation (WPF)-Clientanwendung, die die OData verwendet Feeds mit Clientbibliotheken.</span><span class="sxs-lookup"><span data-stu-id="d9036-106">In later topics, you will access the OData feed by using a Web browser, and also create a Windows Presentation Foundation (WPF) client application that consumes the OData feed by using client libraries.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="d9036-107">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="d9036-107">Prerequisites</span></span>
+
+<span data-ttu-id="d9036-108">Um diesen Schnellstart durchzuführen, müssen Sie die folgenden Komponenten installieren:</span><span class="sxs-lookup"><span data-stu-id="d9036-108">To complete this quickstart, you must install the following components:</span></span>
+
+- <span data-ttu-id="d9036-109">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d9036-109">Visual Studio</span></span>
+
+- <span data-ttu-id="d9036-110">Eine Instanz von SQL Server.</span><span class="sxs-lookup"><span data-stu-id="d9036-110">An instance of SQL Server.</span></span> <span data-ttu-id="d9036-111">Dies schließt SQL Server Express in einer Standardinstallation von Visual Studio 2015 oder als Teil von aufzunehmen ist die **datenspeicherung und-Verarbeitung** arbeitsauslastung in Visual Studio 2017.</span><span class="sxs-lookup"><span data-stu-id="d9036-111">This includes SQL Server Express, which is included in a default installation of Visual Studio 2015, or as part of the **Data storage and processing** workload in Visual Studio 2017.</span></span>
+
+- <span data-ttu-id="d9036-112">Die Beispieldatenbank Northwind.</span><span class="sxs-lookup"><span data-stu-id="d9036-112">The Northwind sample database.</span></span> <span data-ttu-id="d9036-113">Diese Beispieldatenbank, finden Sie unter auf der Downloadseite des [Beispieldatenbanken für SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).</span><span class="sxs-lookup"><span data-stu-id="d9036-113">To download this sample database, see the download page, [Sample Databases for SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).</span></span>
+
+## <a name="wcf-data-services-quickstart-tasks"></a><span data-ttu-id="d9036-114">WCF Data services-Schnellstart-Aufgaben</span><span class="sxs-lookup"><span data-stu-id="d9036-114">WCF data services quickstart tasks</span></span>
+
+ [<span data-ttu-id="d9036-115">Erstellen des Datendiensts</span><span class="sxs-lookup"><span data-stu-id="d9036-115">Create the Data Service</span></span>](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+
+ <span data-ttu-id="d9036-116">Definieren Sie die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung, definieren Sie das Datenmodell, erstellen Sie den Datendienst, und aktivieren Sie den Zugriff auf Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="d9036-116">Define the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application, define the data model, create the data service, and enable access to resources.</span></span>
+
+ [<span data-ttu-id="d9036-117">Auf den Dienst über einen Webbrowser zugreifen.</span><span class="sxs-lookup"><span data-stu-id="d9036-117">Access the Service from a Web Browser</span></span>](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
+
+ <span data-ttu-id="d9036-118">Starten Sie den Dienst aus Visual Studio, und greifen Sie auf den Dienst zu, indem Sie HTTP GET-Anforderungen über einen Webbrowser an den verfügbar gemachten Feed senden.</span><span class="sxs-lookup"><span data-stu-id="d9036-118">Start the service from Visual Studio and access the service by submitting HTTP GET requests through a Web browser to the exposed feed.</span></span>
+
+ [<span data-ttu-id="d9036-119">Erstellen der .NET Framework-Clientanwendung</span><span class="sxs-lookup"><span data-stu-id="d9036-119">Create the .NET Framework Client Application</span></span>](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
+
+ <span data-ttu-id="d9036-120">Erstellen einer WPF-app für den OData-Feed zu nutzen, binden Daten an Windows-Steuerelemente, Ändern von Daten in den gebundenen Steuerelementen, und senden Sie, dass die Änderungen an den Datendienst zurück.</span><span class="sxs-lookup"><span data-stu-id="d9036-120">Create a WPF app to consume the OData feed, bind data to Windows controls, change data in the bound controls, and then send the changes back to the data service.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="69d56-121">Projektdateien einer abgeschlossenen Version des Schnellstarts können von der Seite [WCF Data Services Quickstart (OData Service and WPF Client)](http://go.microsoft.com/fwlink/?LinkId=179994) (WCF Data Services-Schnellstart (OData-Dienst und WPF-Client)) heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="69d56-121">Project files from a completed version of the quickstart can be downloaded from the [WCF Data Services Documentation Samples](http://go.microsoft.com/fwlink/?LinkId=179994) page.</span></span>  
-  
-## <a name="next-steps"></a><span data-ttu-id="69d56-122">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="69d56-122">Next Steps</span></span>  
- <span data-ttu-id="69d56-123">[Starten des Schnellstarts](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span><span class="sxs-lookup"><span data-stu-id="69d56-123">[Start the Quickstart](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="69d56-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="69d56-124">See Also</span></span>  
- [<span data-ttu-id="69d56-125">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="69d56-125">ADO.NET Entity Framework</span></span>](../../../../docs/framework/data/adonet/ef/index.md)
+> <span data-ttu-id="d9036-121">Projektdateien einer abgeschlossenen Version des Schnellstarts können von heruntergeladen werden die [WCF Data Services Documentation Samples](https://go.microsoft.com/fwlink/?LinkId=179994) Seite.</span><span class="sxs-lookup"><span data-stu-id="d9036-121">Project files from a completed version of the quickstart can be downloaded from the [WCF Data Services Documentation Samples](https://go.microsoft.com/fwlink/?LinkId=179994) page.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="d9036-122">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="d9036-122">Next steps</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="d9036-123">Starten des Schnellstarts</span><span class="sxs-lookup"><span data-stu-id="d9036-123">Start the quickstart</span></span>](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+
+## <a name="see-also"></a><span data-ttu-id="d9036-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d9036-124">See also</span></span>
+
+- [<span data-ttu-id="d9036-125">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="d9036-125">ADO.NET Entity Framework</span></span>](../../../../docs/framework/data/adonet/ef/index.md)
