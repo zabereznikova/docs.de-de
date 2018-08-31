@@ -8,25 +8,25 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 9acbc5d3388a8df0ec7d7b5326f449f092f0cb03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7266c9486524e962a859c34c9be5ab8f6d7bf7d5
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546670"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256696"
 ---
-# <a name="how-to-navigate-back-through-navigation-history"></a><span data-ttu-id="4b960-102">Vorgehensweise: Navigieren durch den Navigationsverlauf</span><span class="sxs-lookup"><span data-stu-id="4b960-102">How to: Navigate Back Through Navigation History</span></span>
-<span data-ttu-id="4b960-103">In diesem Beispiel wird veranschaulicht, wie mit den Einträgen im Navigationsverlauf navigieren.</span><span class="sxs-lookup"><span data-stu-id="4b960-103">This example illustrates how to navigate to entries in back navigation history.</span></span>  
+# <a name="how-to-navigate-back-through-navigation-history"></a><span data-ttu-id="8539b-102">Vorgehensweise: Navigieren durch den Navigationsverlauf</span><span class="sxs-lookup"><span data-stu-id="8539b-102">How to: Navigate Back Through Navigation History</span></span>
+<span data-ttu-id="8539b-103">In diesem Beispiel wird veranschaulicht, wie auf Einträge im Navigationsverlauf navigiert.</span><span class="sxs-lookup"><span data-stu-id="8539b-103">This example illustrates how to navigate to entries in back navigation history.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4b960-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4b960-104">Example</span></span>  
- <span data-ttu-id="4b960-105">Code, der aus Inhalt ausgeführt wird, die in gehostet ist ein <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame> verwenden <xref:System.Windows.Navigation.NavigationService>, oder [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] navigieren können, durch den Navigationsverlauf, einen Eintrag zu einem Zeitpunkt.</span><span class="sxs-lookup"><span data-stu-id="4b960-105">Code that is running from content that is hosted in a <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame> use <xref:System.Windows.Navigation.NavigationService>, or [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] can navigate back through navigation history, one entry at a time.</span></span>  
+## <a name="example"></a><span data-ttu-id="8539b-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8539b-104">Example</span></span>  
+ <span data-ttu-id="8539b-105">Code, der Inhalt ausgeführt wird, die in gehostet ist eine <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame> mit <xref:System.Windows.Navigation.NavigationService>, oder [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] können Rückwärtsnavigation im Navigationsverlauf, einen Eintrag zu einem Zeitpunkt.</span><span class="sxs-lookup"><span data-stu-id="8539b-105">Code that is running from content that is hosted in a <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame> using <xref:System.Windows.Navigation.NavigationService>, or [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] can navigate back through navigation history, one entry at a time.</span></span>  
   
- <span data-ttu-id="4b960-106">Navigieren durch eine Eingabe erforderlich ist, überprüft zuerst, Einträge im Navigationsverlauf, durch Überprüfung vorhanden sind die **CanGoBack** -Eigenschaft, bevor ein Eintrag zurück navigiert wird durch Aufrufen der **GoBack** Methode.</span><span class="sxs-lookup"><span data-stu-id="4b960-106">Navigating back one entry requires first checking that there are entries in back navigation history, by inspecting the **CanGoBack** property, before navigating back one entry, by calling the **GoBack** method.</span></span> <span data-ttu-id="4b960-107">Dies wird im folgenden Beispiel veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="4b960-107">This is illustrated in the following example:</span></span>  
+ <span data-ttu-id="8539b-106">Navigation eine Eingabe erforderlich ist, zuerst die Prüfung, es Einträge im Navigationsverlauf zurück, indem sind die **CanGoBack** Eigenschaft vor der Navigation einen Eintrag zurück, durch den Aufruf der **GoBack** -Methode.</span><span class="sxs-lookup"><span data-stu-id="8539b-106">Navigating back one entry requires first checking that there are entries in back navigation history, by inspecting the **CanGoBack** property, before navigating back one entry, by calling the **GoBack** method.</span></span> <span data-ttu-id="8539b-107">Dies wird im folgenden Beispiel veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="8539b-107">This is illustrated in the following example:</span></span>  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
- <span data-ttu-id="4b960-108">**CanGoBack** und **GoBack** werden durch implementiert <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, und <xref:System.Windows.Navigation.NavigationService>.</span><span class="sxs-lookup"><span data-stu-id="4b960-108">**CanGoBack** and **GoBack** are implemented by <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, and <xref:System.Windows.Navigation.NavigationService>.</span></span>  
+ <span data-ttu-id="8539b-108">**CanGoBack** und **GoBack** werden implementiert, indem <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, und <xref:System.Windows.Navigation.NavigationService>.</span><span class="sxs-lookup"><span data-stu-id="8539b-108">**CanGoBack** and **GoBack** are implemented by <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, and <xref:System.Windows.Navigation.NavigationService>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4b960-109">Beim Aufrufen **GoBack**, und es sind keine Einträge im Navigationsverlauf, ein <xref:System.InvalidOperationException> ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="4b960-109">If you call **GoBack**, and there are no entries in back navigation history, an <xref:System.InvalidOperationException> is raised.</span></span>
+>  <span data-ttu-id="8539b-109">Wenn Sie aufrufen **GoBack**, und es sind keine Einträge im Navigationsverlauf zurück, eine <xref:System.InvalidOperationException> ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="8539b-109">If you call **GoBack**, and there are no entries in back navigation history, an <xref:System.InvalidOperationException> is raised.</span></span>
