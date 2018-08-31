@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 6484da5329c8240735b7c35f506637dd01cbeda4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34c0fd239d9e08dab4a107cb8447941e7ab3ecbe
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604470"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255820"
 ---
 # <a name="let-clause-visual-basic"></a>Let-Klausel (Visual Basic)
-Berechnet einen Wert ein, und weist sie einer neuen Variablen innerhalb der Abfrage.  
+Berechnet einen Wert aus, und weist es eine neue Variable in der Abfrage.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -28,22 +28,22 @@ Let variable = expression [, ...]
   
 |Begriff|Definition|  
 |---|---|  
-|`variable`|Erforderlich. Ein Alias, der verwendet werden kann, um auf die Ergebnisse des angegebenen Ausdrucks zu verweisen.|  
-|`expression`|Erforderlich. Ein Ausdruck, der ausgewertet wird, und der angegebenen Variablen zugewiesen.|  
+|`variable`|Erforderlich. Ein Alias, der verwendet werden kann, um die Ergebnisse des angegebenen Ausdrucks zu verweisen.|  
+|`expression`|Erforderlich. Ein Ausdruck, der ausgewertet und der angegebenen Variablen zugewiesen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Let` -Klausel ermöglicht es Ihnen, berechnen Sie Werte für die einzelnen Abfrageergebnis und über einen Alias zu verweisen. Der Alias kann z. B. in anderen Klauseln verwendet werden die `Where` Klausel. Die `Let` -Klausel ermöglichen es Ihnen, eine abfrageanweisung zu erstellen, ist einfacher zu lesen, da Geben Sie einen Alias für einen Ausdrucksklausel in der Abfrage enthaltenen und ersetzen den Alias jedes Mal wird die Ausdrucksklausel verwendet werden können.  
+ Die `Let` -Klausel können Sie Werte für die einzelnen Abfrageergebnis, und verweisen sie mithilfe eines Alias zu berechnen. Der Alias kann verwendet werden in anderen Klauseln, z. B. die `Where` Klausel. Die `Let` -Klausel können Sie eine abfrageanweisung zu erstellen, ist einfacher zu lesen, da Sie geben Sie einen Alias für eine Expression-Klausel in der Abfrage enthalten, und ersetzen den Alias jedes Mal, die die Ausdrucksklausel verwendet wird, können.  
   
  Sie können eine beliebige Anzahl von einschließen `variable` und `expression` Zuweisungen in der `Let` Klausel. Trennen Sie jede Zuweisung durch ein Komma (,) ein.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird mit der `Let` -Klausel, um 10 Prozent Rabatt zu Produkten zu berechnen.  
+ Im folgenden Codebeispiel wird die `Let` -Klausel, um einen Rabatt von 10 Prozent zu Produkten zu berechnen.  
   
  [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Abfragen](../../../visual-basic/language-reference/queries/queries.md)  
+ [Abfragen](../../../visual-basic/language-reference/queries/index.md)  
  [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Where-Klausel](../../../visual-basic/language-reference/queries/where-clause.md)

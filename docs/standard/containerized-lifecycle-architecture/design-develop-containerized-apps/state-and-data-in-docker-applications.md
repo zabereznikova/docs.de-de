@@ -4,50 +4,50 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 438733b2cde1d4eff178a5fd4a4ed0bb93804f76
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105448"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257356"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
-Ein primitiver Typ, der Container ist Unveränderlichkeit. Im Vergleich zu einem virtuellen Computer nicht Container nicht mehr als einem häufiger eintreten angezeigt. Ein virtuellen Computer möglicherweise nicht in verschiedenen Formen von inaktiver Prozesse überladene CPU oder einen Datenträger voll oder fehlerhaft gemeldet. Noch, wir erwarten, dass des virtuelle Computers verfügbar sein und RAID-Laufwerke sind inzwischen, um sicherzustellen, dass das Laufwerk Fehlern Daten zu verwalten.
+Ein primitiver Typ, der Container ist Unveränderlichkeit. Im Vergleich zu einem virtuellen Computer keine Container als häufiger eintreten nicht mehr angezeigt. Ein virtuellen Computer möglicherweise in verschiedenen Formen von inaktiver Prozesse, überladene CPU oder einen vollständigen oder fehlerhaften Datenträger. Noch wir erwarten, dass des virtuelle Computers verfügbar sein und RAID-Laufwerke sind in aller Munde, um sicherzustellen, dass Laufwerksfehlern Daten zu verwalten.
 
-Allerdings sind Container vorstellen, Instanzen von Prozessen. Ein Prozess verwalten nicht permanenten Status. Obwohl ein Container in seiner lokalen Speicher schreiben kann, entspräche vorausgesetzt, dass diese Instanz auf unbestimmte Zeit kann vorausgesetzt, dass eine einzelne Kopie Arbeitsspeicher dauerhaft ist. Sie sollten davon ausgehen, dass der Container, z. B. Prozesse, doppelt vorhanden sind, abgebrochen, oder, wenn mit einem Container Orchestrator verwaltet werden, sie verschoben werden können.
+Allerdings sind Container vorstellen, Prozesse Instanzen sein. Ein Prozess verwalten nicht permanenten Status. Auch wenn ein Container für den lokalen Speicher schreiben kann, wäre vorausgesetzt, dass diese Instanz auf unbestimmte Zeit vorhanden ist gleichwertig, vorausgesetzt, dass eine einzelnen Kopie Arbeitsspeicher dauerhaft ist. Sie sollten davon ausgehen, dass der Container, z.B. Prozesse, dupliziert werden, wird abgebrochen, oder, wenn mit einem containerorchestrator verwaltet werden, sie verschoben werden können.
 
-Docker verwendet eine Funktion, die als bezeichnet ein *overlay Dateisystem* aktualisiert Sie, einen Kopie-bei-Schreibvorgang-Prozess zu implementieren, die alle speichert Informationen in das Stammdateisystem eines Containers, im Vergleich zu dem ursprungsabbild auf dem es basiert. Diese Änderungen gehen verloren, wenn der Container anschließend aus dem System gelöscht wird. Ein Container besitzt aus diesem Grund nicht persistenten Speicher standardmäßig. Obwohl es möglich, den Zustand eines Containers zu speichern, wäre Entwerfen eines Systems, um diese in Konflikt mit dem Prinzip der Container-Architektur.
+Docker verwendet die Funktion-ein *Dateisystem überlagern* einen Kopie-bei-Schreibvorgang-Prozess zu implementieren, die alle speichert Informationen auf dem Stammdateisystem der einen Container im Vergleich zum ursprünglichen Image auf dem es basiert aktualisiert. Diese Änderungen gehen verloren, wenn der Container anschließend aus dem System gelöscht wird. Ein Container, muss daher nicht beständigen Speicher benötigen standardmäßig. Obwohl es möglich, den Zustand eines Containers zu speichern, wäre in Konflikt mit dem Prinzip der Container-Architektur Entwerfen eines Systems Umgehung dieses Problems.
 
-Zum Verwalten von permanenten Daten in Docker-Anwendungen stehen allgemeine Lösungen zur Verfügung:
+Um persistente Daten in Docker-Anwendungen zu verwalten, stehen gängige Lösungen:
 
--   [**Datenvolumes**](https://docs.docker.com/engine/tutorials/dockervolumes/) diese bereitstellen, auf dem Host wie soeben erwähnt.
+-   [**Datenvolumes**](https://docs.docker.com/engine/tutorials/dockervolumes/) diese in den Host, wie soeben erwähnt eingebunden.
 
--   [**Datenvolumecontainer**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) diese freigegebenen Speicher in Containern, die mit einer externen Container, der durchlaufen kann bereitstellen.
+-   [**Datenvolumecontainer**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) diese freigegebenen Speicher in Containern, die über einen externen Container, mit der Hardwareinventurzyklus kann bieten.
 
--   [**Volume-Plug-Ins**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) diese Volumes an Remotestandorten bereitstellen langfristige Dauerhaftigkeit bereitstellen.
+-   [**Volume-Plug-Ins**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) diese Bereitstellen von Volumes an Remotestandorte, langfristige Persistenz bereitstellen.
 
--   **Remotedatenquellen** Beispiele umfassen SQL und NOSQL Datenbanken oder -Dienste wie Redis cache.
+-   **Remotedatenquellen** Beispiele umfassen die SQL- und NOSQL-Datenbanken oder zwischenspeicherdienste wie Redis.
 
--   [**Azure-Speicher**](https://docs.microsoft.com/azure/storage/) dadurch verteilbarer Geo-Plattform als Dienst (PaaS) Speicher, und bietet das beste von Containern als langfristige Dauerhaftigkeit.
+-   [**Azure-Speicher**](https://docs.microsoft.com/azure/storage/) dadurch geografisch verteilbaren Plattform als Dienst (PaaS) Speicher, können Sie das beste von Containern als langfristige Persistenz.
 
-Datenvolumes sind speziell vorgesehen, Verzeichnisse in einem oder mehreren Containern, die umgehen der [Union Dateisystem](https://docs.docker.com/v1.8/reference/glossary#union-file-system). Datenvolumes dienen zum Verwalten von Daten, unabhängig von den Lebenszyklus des Containers. Docker löscht daher nie automatisch Volumes, wenn Sie einen Container zu entfernen und auch nicht werden "Sammeln von Garbage"-Volumes, die von einem Container nicht mehr verwiesen werden. Das Hostbetriebssystem können durchsuchen und bearbeiten die Daten in beliebigen Volumes frei, dies ist nur ein weiterer Grund für die Datenvolumes nur selten zu verwenden.
+Datenvolumes sind speziell vorgesehen, Verzeichnisse innerhalb eines oder mehrerer Container, die die umgehen der [Union Dateisystem](https://docs.docker.com/glossary/?term=Union%20file%20system). Datenvolumes dienen zum Verwalten von Daten, unabhängig von der Lebenszyklus des Containers. Docker löscht daher nie automatisch Volumes, wenn Sie einen Container zu entfernen, noch werden sie zu "Sammeln von Garbage"-Volumes, die von einem Container nicht mehr referenziert werden. Host-Betriebssystem können durchsuchen und bearbeiten die Daten in ein Volume frei, dies ist nur ein weiterer Grund für die Datenvolumes nur selten zu verwenden.
 
-Ein [Volume Datencontainer](https://docs.docker.com/v1.8/userguide/dockervolumes/) stellt eine Verbesserung gegenüber regulären von Datenvolumes. Es ist im Wesentlichen eine ruhende Container, der eine oder mehrere Datenvolumes darin erstellt werden, (wie zuvor beschrieben) enthalten ist. Der Datenvolumecontainer bietet Zugriff auf Container von einem zentralen Bereitstellungspunkt aus. Der Vorteil dieser Methode des Zugriffs ist, dass sie den Speicherort der ursprünglichen Daten, machen dem Datencontainer logischen Bereitstellungspunkt abstrahiert. Darüber hinaus können den Zugriff auf die Container-Datenvolumen erstellt und zerstört werden, während die Daten in einem dedizierten Container persistent bleiben "Application"-Container.
+Ein [datenvolumecontainer](https://docs.docker.com/glossary/?term=volume) ist eine Verbesserung gegenüber regulären Datenvolumes. Es ist im Wesentlichen ein ruhende Container, die eine oder mehrere Datenvolumes darin erstellt werden, (wie zuvor beschrieben). Der Datenvolumecontainer bietet Zugriff auf Container von einem zentralen Bereitstellungspunkt aus. Der Vorteil dieser Methode des Zugriffs ist, dass sie den Speicherort der ursprünglichen Daten, sodass Datencontainer logische Bereitstellungspunkt abstrahiert. Darüber hinaus können "Application"-Container, die Zugriff auf das Datenvolumen der Container erstellt und zerstört werden, wobei die Daten dauerhaft in einem dedizierten Container werden sollen.
 
-Abbildung 4-5 zeigt, dass es sich bei regulären Docker Volumes auf Speicher aus den Containern selbst, aber innerhalb der physischen Host-Server-VM-Grenzen platziert werden können. *Docker Volumes nicht die Möglichkeit, ein Volume aus einem Host/Server-VM in eine andere verwendet haben*.
+Abbildung 4-5 zeigt, dass reguläre Docker-Volumes in Storage, aus dem Container selbst aber innerhalb der physischen Grenzen des Host-Server-VM platziert werden können. *Docker-Volumes nicht die Möglichkeit, ein Volume von einem Host/Server-VM in ein anderes verwenden, haben*.
 
 ![](./media/image5.png)
 
-Abbildung 4-5: Datenvolumes und externe Datenquellen für Container apps/Container
+Abbildung 4 – 5: Datenvolumes und externe Datenquellen für Container-apps/Container
 
-Aufgrund von nicht zum Verwalten von Daten, die gemeinsam von Containern, die auf separaten physischen Hosts ausgeführt werden können, wird empfohlen, dass keine Volumes für Geschäftsdaten zu verwenden, sofern der Docker-Host einer festen/VM, da bei Verwendung von Docker-Containern in einer Orchestrator Container werden erwartet, das Verschieben aus einem auf einen anderen Host, abhängig von den Optimierungen des Clusters ausgeführt werden.
+Aufgrund der nicht zum Verwalten von Daten, die gemeinsam von Containern, die auf separaten physischen Hosts ausgeführt werden können, wird empfohlen, keine Volumes für Geschäftsdaten zu verwenden, wenn der Docker-Host mit einer festen Host/VM ist da bei Verwendung von Docker-Container in einem Orchestrator, Container sollten von einer bis zu einem anderen Host, abhängig von der Optimierungen, die vom Cluster ausgeführt werden, verschoben werden.
 
-Daher sind reguläre Datenvolumes einen guten Mechanismus zum Arbeiten mit Ablaufverfolgungsdateien, temporären Dateien oder alle ähnlichen Konzept, das die Datenkonsistenz Business nicht beeinflusst wird, wenn, oder wenn der Container auf mehreren Hosts verschoben werden.
+Daher sind die regulären Datenvolumes gute Mechanismen für die Arbeit mit Ablaufverfolgungsdateien, temporären Dateien oder alle ähnliches Konzept, das die Konsistenz von Geschäftsdaten nicht beeinflusst wird, wenn, oder wenn Ihr Container auf mehreren Hosts verschoben werden.
 
-Volume-Plug-ins wie [Flocker](https://clusterhq.com/flocker/) Daten auf allen Hosts in einem Cluster bereitstellen. Obwohl nicht alle Volume-Plug-ins gleichermaßen erstellt werden, bieten die Volume-Plug-ins in der Regel externalisierte zuverlässige persistenten Speicher in den Containern unveränderlichen.
+[Volume-Plug-ins](https://docs.docker.com/engine/extend/plugins_volume/) Daten auf allen Hosts in einem Cluster bereitstellen. Obwohl nicht alle Volume-Plug-ins gleichermaßen erstellt werden, bieten Volume-Plug-ins in der Regel externalisierte persistente und zuverlässige Speicherung von unveränderlichen Containern.
 
-Von Remotedatenquellen und wie SQL-Datenbank, DocumentDB oder eine remote-Cache wie Redis-Caches wäre identisch entwickeln, ohne den Container. Dies ist einer der bevorzugten und bewährten, Methoden zum Speichern von Geschäftsdaten-Anwendung.
+Remotedatenquellen und-Caches wie SQL-Datenbank, DocumentDB oder ein Remotecache wie Redis wäre identisch mit der Entwicklung ohne Container. Dies ist einer der bevorzugten und bewährten Methoden zum Speichern von Geschäftsanwendungsdaten.
 
 
 >[!div class="step-by-step"]

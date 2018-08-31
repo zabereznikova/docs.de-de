@@ -2,46 +2,46 @@
 title: Signieren von gespeicherten Prozeduren in SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 98dfaa6d5293cb1ad85f70be3388fb333daef373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ef43f403a300e58a27df2de1f980dc8bcc58c02
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361077"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253643"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Signieren von gespeicherten Prozeduren in SQL Server
- Eine digitale Signatur ist ein mit dem privaten Schlüssel des Signaturgebers verschlüsselter Datenhashwert. Der private Schlüssel stellt sicher, dass die digitale Signatur für den Träger oder Besitzer eindeutig ist. Sie können gespeicherte Prozeduren, Funktionen (mit Ausnahme von Inline-Tabellenwertfunktionen), Trigger und Assemblys signieren.  
+ Eine digitale Signatur ist ein mit dem privaten Schlüssel des Signaturgebers verschlüsselter Datenhashwert. Der private Schlüssel stellt sicher, dass die digitale Signatur für den Träger oder Besitzer eindeutig ist. Sie können gespeicherte Prozeduren, Funktionen (mit Ausnahme von Inline-Tabellenwertfunktionen), Trigger und Assemblys registrieren.  
   
- Sie können gespeicherte Prozeduren mit einem Zertifikat oder einem asymmetrischen Schlüssel signieren. Gedacht ist dies für Szenarien, in denen Berechtigungen nicht über die Besitzverkettung geerbt werden können oder in denen die Besitzkette unterbrochen ist, wie bei dynamischem SQL. Anschließend können Sie erstellen einen mit dem Zertifikat zugeordneten Benutzer Benutzerberechtigungen das Zertifikat für die Objekte, die die gespeicherte Prozedur zugreifen muss.  
+ Sie können gespeicherte Prozeduren mit einem Zertifikat oder einem asymmetrischen Schlüssel signieren. Gedacht ist dies für Szenarien, in denen Berechtigungen nicht über die Besitzverkettung geerbt werden können oder in denen die Besitzkette unterbrochen ist, wie bei dynamischem SQL. Anschließend können Sie erstellen einen auf das Zertifikat zugeordneten Benutzer erteilen von Benutzerberechtigungen für die Objekte, die Zugriff auf die gespeicherte Prozedur muss für das Zertifikat.  
 
- Sie können auch eine Anmeldung für das gleiche Zertifikat erstellen und dann erforderlichen Berechtigungen auf Serverebene, die dieser Anmeldung zu gewähren, oder hinzufügen die Anmeldung an eine oder mehrere der festen Serverrollen. Dies dient zum Aktivieren der vermeiden der `TRUSTWORTHY` Datenbank-Einstellung für Szenarien, in denen Berechtigungen auf höhere Ebene erforderlich sind.  
+ Sie können auch erstellen eine Anmeldung für das gleiche Zertifikat, und klicken Sie dann alle erforderlichen Berechtigungen auf Serverebene, die dieser Anmeldung zu gewähren oder hinzufügen die Anmeldung an eine oder mehrere der festen Serverrollen. Auf diese Weise vermeiden Sie aktivieren die `TRUSTWORTHY` Datenbank-Einstellung für Szenarien, in dem Berechtigungen auf höhere Ebene benötigt werden.  
   
- Wenn die gespeicherte Prozedur ausgeführt wird, kombiniert SQL Server die Berechtigungen der Zertifikatsbenutzer und/oder Anmeldung, mit denen des Aufrufers. Im Gegensatz zu den `EXECUTE AS` -Klausel ändert nicht den Ausführungskontext der Prozedur. Integrierte Funktionen, die Anmelde- und Benutzernamen zurückgeben, geben den Namen des Aufrufers, und nicht den Namen des Zertifikatsbenutzers zurück.  
+ Wenn die gespeicherte Prozedur ausgeführt wird, kombiniert SQL Server die Berechtigungen der Zertifikatsbenutzer bzw. der Anmeldung, mit denen des Aufrufers. Im Gegensatz zu den `EXECUTE AS` -Klausel wird nicht den Ausführungskontext der Prozedur geändert. Integrierte Funktionen, die Anmelde- und Benutzernamen zurückgeben, geben den Namen des Aufrufers, und nicht den Namen des Zertifikatsbenutzers zurück.  
   
 ## <a name="creating-certificates"></a>Erstellen von Zertifikaten  
- Wenn Sie eine gespeicherte Prozedur mit einem Zertifikat oder den asymmetrischen Schlüssel, einen Datendigest, bestehend aus dem verschlüsselten Hash der Code der gespeicherten Prozedur, zusammen mit der Execute Anmelden – als Benutzer erstellt wird, mit dem privaten Schlüssel. Zur Laufzeit wird der Datenhashwert mit dem öffentlichen Schlüssel entschlüsselt und mit dem Hashwert der gespeicherten Prozedur verglichen. Ändern die Execute-wie Benutzer den Hashwert ungültig, sodass die digitale Signatur nicht mehr übereinstimmt. Ändern die gespeicherte Prozedur löscht die Signatur vollständig, die verhindert, dass eine Person, die keinen Zugriff auf den privaten Schlüssel am Code der gespeicherten Prozedur zu ändern. In beiden Fällen müssen Sie erneut anmelden die Prozedur bei jeder Änderung des Codes oder der Execute-Benutzer.  
+ Wenn Sie eine gespeicherte Prozedur mit einem Zertifikat oder asymmetrischen Schlüssels ein datenhashwert bestehend aus dem verschlüsselten Hash Code der gespeicherten Prozedur, zusammen mit der Execute Anmelden – als Benutzer erstellt wird, mit dem privaten Schlüssel. Zur Laufzeit wird der Datenhashwert mit dem öffentlichen Schlüssel entschlüsselt und mit dem Hashwert der gespeicherten Prozedur verglichen. Ändern die Execute-wie Benutzer den Hashwert ungültig, so, dass die digitale Signatur nicht mehr übereinstimmt. Ändern die gespeicherte Prozedur löscht die Signatur vollständig, die verhindert, dass eine Person, die keinen Zugriff auf den privaten Schlüssel aus Code der gespeicherten Prozedur zu ändern. In beiden Fällen Sie müssen neu signieren die Prozedur bei jeder Änderung des Codes oder die Execute-Benutzer.  
   
- Zum Signieren eines Moduls stehen zwei Schritte:  
+ Es gibt zwei notwendigen Schritten beteiligt, die zum Signieren eines Moduls:  
   
-1.  Erstellen Sie mit der Transact-SQL-`CREATE CERTIFICATE [certificateName]`-Anweisung ein Zertifikat. Diese Anweisung verfügt über mehrere Optionen, mit denen das Start- und Enddatum und ein Kennwort festgelegt werden können. Die Standardgültigkeitsdauer beträgt ein Jahr.  
+1.  Erstellen Sie mit der Transact-SQL-`CREATE CERTIFICATE [certificateName]`-Anweisung ein Zertifikat. Diese Anweisung verfügt über mehrere Optionen, mit denen das Start- und Enddatum und ein Kennwort festgelegt werden können. Die Standardgültigkeitsdauer ist ein Jahr.  
   
 1.  Signieren Sie die Prozedur mit dem Zertifikat. Verwenden Sie dazu die Transact-SQL-`ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`-Anweisung.  
 
-Nachdem das Modul signiert wurde, muss einen oder mehrere Prinzipale erstellt werden, um die zusätzlichen Berechtigungen enthalten, die dem Zertifikat zugeordnet werden sollen.  
+Nachdem das Modul signiert wurde, muss einen oder mehrere Prinzipale erstellt werden, um die zusätzlichen Berechtigungen enthalten, die mit dem Zertifikat verknüpft werden sollen.  
 
-Wenn das Modul zusätzliche Datenbankebene Berechtigungen benötigt:  
+Wenn das Modul zusätzliche auf Datenbankebene-Berechtigungen erforderlich:  
   
 1.  Erstellen Sie mit der Transact-SQL-`CREATE USER [userName] FROM CERTIFICATE [certificateName]`-Anweisung einen mit diesem Zertifikat verknüpften Datenbankbenutzer. Dieser Benutzer nur in der Datenbank vorhanden ist, und es ist nicht mit einer Anmeldung verknüpft, es sei denn, eine Anmeldung auch über das gleiche Zertifikat erstellt wurde.  
   
-1.  Gewähren Sie dem Zertifikatsbenutzer die erforderlichen Berechtigungen für die Datenbankebene.  
+1.  Erteilen Sie dem Zertifikatsbenutzer die erforderlichen Berechtigungen auf Datenbankebene.  
   
-Wenn das Modul zusätzliche auf Serverebene Berechtigungen benötigt:  
+Wenn das Modul zusätzliche auf Serverebene-Berechtigungen erforderlich:  
   
-1.  Kopieren Sie das Zertifikat an die `master` Datenbank.  
+1.  Kopieren Sie das Zertifikat auf dem `master` Datenbank.  
  
-1.  Erstellen Sie eine Anmeldung mit diesem Zertifikat mit der Transact-SQL-verknüpften `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` Anweisung.  
+1.  Erstellen Sie eine Anmeldung mit diesem Zertifikat, mit der Transact-SQL-verknüpften `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` Anweisung.  
   
-1.  Erteilen Sie die Anmeldung mit Zertifikat die erforderlichen Berechtigungen für die Serverebene.  
+1.  Erteilen Sie der Anmeldung des Zertifikats die erforderlichen Berechtigungen auf Serverebene.  
   
 > [!NOTE]  
 >  Ein Zertifikat kann keine Berechtigungen für Benutzer gewähren, die Berechtigungen hatten, die mit der DENY-Anweisung widerrufen wurden. DENY hat immer Vorrang gegenüber GRANT und verhindert, dass der Aufrufer Berechtigungen erben kann, die dem Zertifikatsbenutzer gewährt wurden.  
@@ -52,7 +52,7 @@ Wenn das Modul zusätzliche auf Serverebene Berechtigungen benötigt:
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
 |[Modulsignierung](http://go.microsoft.com/fwlink/?LinkId=98590) in SQL Server-Onlinedokumentation|Beschreibt die Modulsignierung und enthält ein Beispielszenario sowie Links zu den relevanten Transact-SQL-Themen.|  
-|[Signieren von gespeicherten Prozeduren mit einem Zertifikat](http://msdn.microsoft.com/library/bb283630.aspx) in SQL Server-Onlinedokumentation|Enthält ein Lernprogramm zum Signieren einer gespeicherten Prozedur mit einem Zertifikat.|  
+|[Signieren von gespeicherten Prozeduren mit einem Zertifikat](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) in SQL Server-Onlinedokumentation|Enthält ein Lernprogramm zum Signieren einer gespeicherten Prozedur mit einem Zertifikat.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

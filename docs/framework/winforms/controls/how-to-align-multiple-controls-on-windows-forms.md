@@ -7,26 +7,26 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 6520aef7d04694b6fcd7f50da84a2a9cea6e7b64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528589"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253223"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Gewusst wie: Ausrichten von mehreren Steuerelementen in Windows Forms
-Um das Layout der Benutzeroberfläche (UI) der Windows-basierten Anwendung zu standardisieren, können Sie Gruppen von Steuerelementen mit einem einzigen Befehl positionieren.  
+Um das Layout der Benutzeroberfläche (UI) der Windows-basierten Anwendung standardisieren möchten, können Sie eine Gruppe von Steuerelementen mit einem einzigen Befehl positionieren.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-align-multiple-controls-on-a-form"></a>Zum Ausrichten von mehreren Steuerelementen in einem Formular  
   
-1.  Öffnen Sie das Formular mit den Steuerelementen, die Sie in positionieren möchten die **Windows Forms-Designer**.  
+1.  Öffnen Sie das Formular mit den Steuerelementen positionieren möchten die **Windows Forms-Designer**.  
   
-2.  Wählen Sie die Steuerelemente, die so ausrichten, dass das erste Steuerelement ausgewählte primäres Steuerelement wird an dem die anderen ausgerichtet werden sollen.  
+2.  Wählen Sie die Steuerelemente möchten Sie abstimmen, damit das erste Steuerelement, das Sie auswählen, das primäre Steuerelement ist, das den anderen ausgerichtet werden soll.  
   
-3.  Auf der **Format** Sie im Menü **ausrichten**, und klicken Sie dann auf eine der sieben Optionen verfügbar.  
+3.  Auf der **Format** Startmenü **ausrichten**, und klicken Sie dann auf eine der sieben Optionen zur Verfügung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  

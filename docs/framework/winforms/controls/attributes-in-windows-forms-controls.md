@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: e06836e53a69394ad899bedc8e545dbff9b9c29d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 272ce198a61e0d1bbe9c44514aaf51db72f5d04c
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525777"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257922"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Attribute in Windows Forms-Steuerelementen
 Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member der benutzerdefinierten Steuerelemente und Komponenten anwenden können. Einige dieser Attribute haben Auswirkungen auf das Laufzeitverhalten einer Klasse, während andere Auswirkungen auf das Entwurfszeitverhalten haben.  
@@ -24,10 +24,10 @@ Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member d
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|Gibt den Wert an, der an eine Eigenschaft übergeben werden soll, damit die Eigenschaft den zugehörigen Wert von einer anderen Quelle abrufen kann. Dies wird als *Umgebung* bezeichnet.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|Gibt an, ob eine Eigenschaft oder ein Ereignis im Fenster **Eigenschaften** angezeigt werden soll.|  
-|<xref:System.ComponentModel.CategoryAttribute>|Gibt den Namen der Kategorie, in der Gruppe die Eigenschaft oder das Ereignis bei der Anzeige in einem <xref:System.Windows.Forms.PropertyGrid> Steuerelement festgelegt, dass <xref:System.Windows.Forms.PropertySort.Categorized> Modus.|  
+|<xref:System.ComponentModel.CategoryAttribute>|Gibt den Namen der Kategorie in der die Eigenschaft oder das Ereignis bei der Anzeige in einem <xref:System.Windows.Forms.PropertyGrid> -Steuerelement so eingestellt <xref:System.Windows.Forms.PropertySort.Categorized> Modus.|  
 |<xref:System.ComponentModel.DefaultValueAttribute>|Gibt den Standardwert für eine Eigenschaft an.|  
 |<xref:System.ComponentModel.DescriptionAttribute>|Gibt die Beschreibung einer Eigenschaft oder eines Ereignisses an.|  
-|<xref:System.ComponentModel.DisplayNameAttribute>|Gibt den Anzeigenamen für eine Eigenschaft, ein Ereignis oder eine `public``void`-Methode an, die keine Argumente akzeptiert.|  
+|<xref:System.ComponentModel.DisplayNameAttribute>|Gibt den Anzeigenamen für eine Eigenschaft, ein Ereignis oder eine `public void`-Methode an, die keine Argumente akzeptiert.|  
 |<xref:System.ComponentModel.EditorAttribute>|Gibt den Editor an, der zum Ändern einer Eigenschaft verwendet wird.|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|Gibt an, dass eine Eigenschaft oder Methode in einem Editor angezeigt werden kann.|  
 |<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Gibt das Kontextschlüsselwort für eine Klasse oder einen Member an.|  

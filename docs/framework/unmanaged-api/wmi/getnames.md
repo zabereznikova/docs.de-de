@@ -1,6 +1,6 @@
 ---
-title: "\"GetNames\"-Funktion (Referenz zur nicht verwalteten API)"
-description: Die Funktion "GetNames" Ruft die Namen der Eigenschaften eines Objekts ab.
+title: GetNames-Funktion (Referenz zur nicht verwalteten API)
+description: Die Funktion "GetNames" Ruft den Namen der Eigenschaften eines Objekts ab.
 ms.date: 11/06/2017
 api_name:
 - GetNames
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461980"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258110"
 ---
-# <a name="getnames-function"></a>"GetNames"-Funktion
-Ruft eine Teilmenge oder aller der Namen der Eigenschaften eines Objekts ab. 
+# <a name="getnames-function"></a>GetNames-Funktion
+Ruft eine Teilmenge oder alle Namen der Eigenschaften eines Objekts ab. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -47,65 +47,65 @@ HRESULT GetNames (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `wszQualifierName`  
-[in] Ein Zeiger auf eine gültige `LPCWSTR` , einen Qualifizierer-Namen, der ausgeführt wird als Teil eines Filters angibt. Weitere Informationen finden Sie unter der ["Hinweise"](#remarks) Abschnitt. Dieser Parameter kann `null` sein. 
+[in] Ein Zeiger auf ein gültiges `LPCWSTR` , einen Qualifizierer-Namen, die ausgeführt wird als Teil eines Filters angibt. Weitere Informationen finden Sie unter den ["Hinweise"](#remarks) Abschnitt. Dieser Parameter kann `null` sein. 
 
 `lFlags`  
-[in] Eine Kombination von Bitfeldern. Weitere Informationen finden Sie unter der ["Hinweise"](#remarks) Abschnitt.
+[in] Eine Kombination von Bitfeldern. Weitere Informationen finden Sie unter den ["Hinweise"](#remarks) Abschnitt.
 
 `pQualifierValue`   
-[in] Ein Zeiger auf eine gültige `VARIANT` -Struktur mit einem Filterwert initialisiert. Dieser Parameter kann `null` sein. 
+[in] Ein Zeiger auf ein gültiges `VARIANT` -Struktur mit einem Filterwert initialisiert. Dieser Parameter kann `null` sein. 
 
 `pstrNames`  
-[out] Ein `SAFEARRAY` -Struktur, die Eigenschaftsnamen enthält. Dieser Parameter muss auf den Eintrag, werden immer ein Zeiger auf `null`. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. 
+[out] Ein `SAFEARRAY` Struktur, die Eigenschaftennamen enthält. Dieser Parameter muss bei einem Eintrag sein immer ein Zeiger auf `null`. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Ein allgemeiner Fehler ist aufgetreten. |
+|`WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Eine oder mehrere Parameter sind ungültig, oder es wurde eine falsche Kombination von Flags und Parameter angegeben. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::GetNames](https://msdn.microsoft.com/library/aa391447(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) Methode.
 
-Die benannte zurückgegeben werden durch eine Kombination der Flags und Parameter gesteuert. Die Funktion kann z. B. die Namen aller Eigenschaften oder nur die Namen der Schlüsseleigenschaften zurück.  Der primäre Filter wird angegeben, der `lFlags` -Parameter, und die anderen Parameter variiert je nach es.
+Der benannte zurückgegeben werden durch eine Kombination von Flags und Parameter gesteuert. Die Funktion kann z. B. die Namen aller Eigenschaften oder nur die Namen der wichtigsten Eigenschaften zurück.  In der primäre Filter angegeben wird die `lFlags` Parameter und die anderen Parameter hängen sie.
 
-Das Flag Werte in `lFlags` Bitfelder werden
+Das Flag-Werte im `lFlags` Bitfelder werden
 
 
-Die Flags, die als übergeben werden können die `lEnumFlags` Argument sind Bitfelder, die in definiert werden die *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code.  Sie können einen Flag aus jeder Gruppe mit einem Flag aus einer anderen Gruppe kombinieren. Es gibt jedoch Flags aus der gleichen Gruppe sich gegenseitig ausschließende. 
+Die Flags, die als übergeben werden können die `lEnumFlags` Argument sind Bitfeldern, die in definierten die *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code.  Sie können einen Flag aus jeder Gruppe mit einem Flag aus einer anderen Gruppe kombinieren. Allerdings sind Flags aus der gleichen Gruppe sich gegenseitig ausschließende. 
 
 | Gruppe 1-flags |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Geben Sie alle Eigenschaftsnamen zurück. `strQualifierName` und `pQualifierVal` nicht verwendet werden. |
-| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Nur Eigenschaften, die einen Qualifizierer mit dem Namen angegeben haben Zurückgeben der `strQualifierName` Parameter. Wenn dieses Flag verwendet wird, müssen Sie angeben `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Nur Eigenschaften, die keine Qualifizierer mit dem Namen angegeben haben Zurückgeben der `strQualifierName` Parameter. Wenn dieses Flag verwendet wird, müssen Sie angeben `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Nur Eigenschaften, die einen Qualifizierer mit dem Namen angegeben haben Zurückgeben der `wszQualifierName` Parameter und auch einen Wert identisch mit dem angegeben wird, indem Sie die `pQualifierVal` Struktur. Wenn dieses Flag verwendet wird, müssen Sie beide angeben einer `wszQualifierName` und ein `pQualifierValue`. |
+| `WBEM_FLAG_ALWAYS` | 0 | Geben Sie bei allen Eigenschaftsnamen zurück. `strQualifierName` und `pQualifierVal` werden nicht verwendet. |
+| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Nur Eigenschaften, die einen Qualifizierer, der den Namen trägt Zurückgeben der `strQualifierName` Parameter. Wenn dieses Flag verwendet wird, müssen Sie angeben `strQualifierName`. |
+|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Zurückgeben von Eigenschaften, die nicht über einen Qualifizierer mit dem vom angegebenen Namen verfügen die `strQualifierName` Parameter. Wenn dieses Flag verwendet wird, müssen Sie angeben `strQualifierName`. |
+|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Nur Eigenschaften, die einen Qualifizierer, der den Namen trägt Zurückgeben der `wszQualifierName` Parameter und außerdem einen Wert, der identisch mit dem angegeben wird, indem die `pQualifierVal` Struktur. Wenn dieses Flag verwendet wird, müssen Sie angeben, sowohl eine `wszQualifierName` und `pQualifierValue`. |
 
 | Gruppe 2-flags |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Geben Sie nur die Namen von Eigenschaften, die definieren die Schlüssel, zurück. |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | Return nur Eigenschaftennamen, die Objektverweise sind. |
+|`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Zurückgeben Sie, nur die Namen der Eigenschaften, die die Schlüssel zu definieren. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Rückgabe nur Eigenschaftennamen, die Objektverweise sind. |
 
 | Gruppe 3-flags |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Geben Sie nur für den Eigenschaftennamen, die auf die am stärksten abgeleitete Klasse gehören zurück. Schließen Sie Eigenschaften aus der übergeordneten Klassen. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Geben Sie nur für den Eigenschaftennamen, die auf die übergeordneten Klassen gehören zurück. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zurückgeben von nur für den Eigenschaftennamen, die am stärksten abgeleitete Klasse angehören. Ausschließen von Eigenschaften aus der übergeordneten Klassen. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Zurückgeben von nur für den Eigenschaftennamen, die die übergeordneten Klassen angehören. |
 |`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Geben Sie nur die Namen der Systemeigenschaften zurück. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Geben Sie nur die Namen von Eigenschaften nicht zum System zurück. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Geben Sie nur die Namen der Eigenschaften, die nicht zum System zurück. |
 
-Die Funktion weist immer einen neuen `SAFEARRAY` zurückgibt `WBEM_S_NO_ERROR`, und `pstrNames` immer festgelegt ist, um darauf zu verweisen. Das zurückgegebene Array kann 0 Elemente verfügen, wenn keine Eigenschaften mit den angegebenen Filtern übereinstimmen. Wenn die Funktion einen Wert, außer zurückgibt `WBM_S_NO_ERROR`, ein neues `SAFEARRAY` Struktur wird nicht zurückgegeben.
+Die Funktion weist immer einen neuen `SAFEARRAY` zurückgegeben `WBEM_S_NO_ERROR`, und `pstrNames` ist immer festgelegt, um darauf zu verweisen. Das zurückgegebene Array kann 0 Elemente verfügen, wenn keine Eigenschaften mit den angegebenen Filtern übereinstimmen. Wenn die Funktion einen Wert zurückgibt, die als `WBM_S_NO_ERROR`, ein neues `SAFEARRAY` Struktur wird nicht zurückgegeben.
  
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

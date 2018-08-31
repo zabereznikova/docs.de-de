@@ -1,5 +1,5 @@
 ---
-title: Object Data Type
+title: Objekt-Datentyp (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Object
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: e9b1da5a88c12e0d883c3afe63be98c3fa3e9173
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94d3ddcf71194eb69a2d26bcdf549aaf693e46e6
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591620"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255705"
 ---
 # <a name="object-data-type"></a>Object Data Type
-Enthält die Adressen, die auf Objekte verweisen. Sie können Verweistyp (Zeichenfolge, Array, Klasse oder Schnittstelle) zuweisen, um eine `Object` Variable. Ein `Object` Variable kann auch auf Daten mit einem beliebigen Werttyp verweisen (numeric, `Boolean`, `Char`, `Date`, Struktur oder Enumeration).  
+Enthält die Adressen, die auf Objekte verweisen. Sie können den Verweistyp (Zeichenfolge, Array, Klasse oder Schnittstelle) zuweisen, um eine `Object` Variable. Ein `Object` Variablen finden Sie auch die Daten eines beliebigen Werttyps (numerisch, `Boolean`, `Char`, `Date`, Struktur oder Enumeration).  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Object` -Datentyp kann auf Daten eines beliebigen Datentyps, einschließlich jede Objektinstanz, die die Anwendung erkennt zeigen. Verwendung `Object` , wenn Sie nicht zur Kompilierzeit wissen welchen Datentyp die Variable möglicherweise zeigen Sie auf.  
+ Die `Object` -Datentyp kann auf Daten eines beliebigen Datentyps, einschließlich Objektinstanzen der Anwendung erkannt zeigen. Verwendung `Object` , wenn Sie nicht zur Kompilierzeit wissen welchen Datentyp die Variable möglicherweise zeigen Sie auf.  
   
  Der Standardwert von `Object` ist `Nothing` (ein null-Verweis).  
   
 ## <a name="data-types"></a>Datentypen  
- Sie können eine Variable, eine Konstante oder ein Ausdruck eines beliebigen Datentyps zum Zuweisen einer `Object` Variable. Zum Ermitteln des Datentyps einer `Object` Variable aktuell verweist, können Sie mithilfe der <xref:System.Type.GetTypeCode%2A> Methode der <xref:System.Type?displayProperty=nameWithType> Klasse. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie können eine Variable, eine Konstante oder ein Ausdruck eines beliebigen Datentyps, Zuweisen einer `Object` Variable. Um zu bestimmen, den Datentyp einer `Object` -Variable aktuell verweist, können Sie mit der <xref:System.Type.GetTypeCode%2A> -Methode der der <xref:System.Type?displayProperty=nameWithType> Klasse. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```  
 Dim myObject As Object  
@@ -35,29 +35,29 @@ Dim datTyp As Integer
 datTyp = Type.GetTypeCode(myObject.GetType())  
 ```  
   
- Die `Object` -Datentyp ist ein Verweistyp. Visual Basic behandelt jedoch eine `Object` -Variable als ein Werttyp, wenn sie auf Daten eines Werttyps verweist.  
+ Die `Object` Datentyp ein Verweistyp ist. Visual Basic jedoch behandelt eine `Object` -Variable als einen Werttyp, wenn sie auf die Daten eines Werttyps verweist.  
   
 ## <a name="storage"></a>Speicher  
- Der Datentyp verweist, eine `Object` Variable enthält nicht dem Datenwert selbst, sondern einen Zeiger auf den Wert. Es verwendet vier Bytes immer im Arbeitsspeicher des Computers, aber dies schließt nicht den Speicher für die Daten, die den Wert der Variablen darstellt. Aufgrund der Code, der den Zeiger verwendet wird, um die Daten zu suchen `Object` -Variablen, die Werttypen sind etwas langsamer als explizit typisierte Variablen zugreifen.  
+ Beliebige Datentyp verweist, eine `Object` sind keine enthalten dem Datenwert selbst, sondern stattdessen ein Zeiger auf den Wert. Sie verwendet stets die vier Bytes im Arbeitsspeicher des Computers, aber dies schließt nicht den Speicher für die Daten, die den Wert der Variablen darstellt. Aufgrund der Code, der den Zeiger verwendet, um die Daten zu suchen `Object` Variablen, die Werttypen sind etwas langsamer als explizit typisierte Variablen zugreifen.  
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Interop-Überlegungen.** Wenn Sie Komponenten, die nicht für .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschriebenen Datenbreite sollten Sie bedenken, dass Zeigertypen in anderen Umgebungen nicht mit Visual Basic kompatibel sind `Object` Typ.  
+-   **Interop-Überlegungen.** Wenn Sie anbinden, Komponenten, die nicht für .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschriebenen müssen bedenken, dass Zeigertypen in anderen Umgebungen nicht mit den Visual Basic kompatibel sind `Object` Typ.  
   
--   **Leistung:** Eine Variable, die Sie deklarieren die `Object` flexibel genug, um einen Verweis auf ein beliebiges Objekt enthalten ist. Jedoch, wenn Sie eine Methode oder Eigenschaft für eine solche Variable aufrufen, immer anfallen *späte Bindung* (Laufzeit). Gezwungen *frühe Bindung* (zum Zeitpunkt der Kompilierung) und zu einer besseren Leistung, deklarieren Sie die Variable mit einem bestimmten Klassennamen, oder es in den betreffenden Datentyp umwandeln.  
+-   **Leistung:** Eine Variable, die Sie deklarieren, mit der `Object` flexibel genug, um einen Verweis auf ein Objekt enthalten ist. Jedoch beim Aufrufen einer Methode oder Eigenschaft auf eine solche Variable immer fallen *späte Bindung* (Laufzeit). Um zu erzwingen *frühe Bindung* (zum Zeitpunkt der Kompilierung) und eine bessere Leistung, deklarieren Sie die Variable mit einem bestimmten Klassennamen oder in der bestimmten Datentyp umzuwandeln.  
   
-     Wenn Sie eine Objektvariable deklarieren, verwenden Sie beispielsweise einen bestimmten Klassentyp versucht <xref:System.OperatingSystem>, anstatt das generalisierte `Object` Typ. Verwenden Sie zudem die spezifischste Klasse verfügbar sind, z. B. <xref:System.Windows.Forms.TextBox> anstelle von <xref:System.Windows.Forms.Control>, sodass Sie die Eigenschaften und Methoden zugreifen können. In der Regel können Sie die **Klassen** in Liste der **Objektkatalog** verfügbaren Klassennamen gefunden.  
+     Beim Deklarieren einer Objektvariablen, versuchen Sie es an einen bestimmten Klassentyp, z.B. <xref:System.OperatingSystem>, anstatt die generalisierte `Object` Typ. Verwenden Sie außerdem die spezifischste Klasse verfügbar sind, z. B. <xref:System.Windows.Forms.TextBox> anstelle von <xref:System.Windows.Forms.Control>, sodass Sie dessen Eigenschaften und Methoden zugreifen können. In der Regel können Sie die **Klassen** Liste der **Objektkatalog** verfügbaren Klassennamen zu finden.  
   
--   **Widening.** Alle Datentypen und alle Verweistypen erweitert werden, um die `Object` -Datentyp. Dies bedeutet, Sie können einen beliebigen Typ zu konvertieren `Object` ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
+-   **Erweiternde.** Alle Datentypen und alle Verweistypen werden erweitert, um die `Object` -Datentyp. Dies bedeutet, Sie können einen beliebigen Typ zu konvertieren `Object` unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
-     Allerdings, wenn die Konvertierung zwischen Werttypen und `Object`, Visual Basic führt Vorgänge aufgerufen *Boxing* und *unboxing*, die Ausführung verlangsamt bilden.  
+     Allerdings, wenn die Konvertierung zwischen Werttypen und `Object`, Visual Basic führt Operationen mit Bezeichnung *Boxing* und *unboxing*, die Ausführung langsamer stellen.  
   
 -   **Typzeichen.** `Object` hat kein literal-Typzeichen oder Bezeichner-Typzeichen.  
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Object?displayProperty=nameWithType> Klasse.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht eine `Object` Variable verweist auf eine Objektinstanz.  
+ Das folgende Beispiel veranschaulicht eine `Object` Variable, die auf eine Objektinstanz verweisen.  
   
 ```  
 Dim objDb As Object  
@@ -68,7 +68,7 @@ objDb = myCollection.Item(1)
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Object>  
- [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
  [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  

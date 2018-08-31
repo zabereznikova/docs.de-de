@@ -10,20 +10,20 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 903acaa7493dc83fd6bf50f5a578a067c15e6294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca989c1cd7baa1eaeb10c65bd9ebef8e400968c3
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365721"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255221"
 ---
 # <a name="query-projections-wcf-data-services"></a>Abfrageprojektionen (WCF Data Services)
-Die Projektion stellt einen Mechanismus in der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] reduzieren die Datenmenge im Feed zurückgegeben, die von einer Abfrage durch angeben, die nur bestimmte Eigenschaften einer Entität in der Antwort zurückgegeben werden. Weitere Informationen finden Sie unter [OData: Select System Query Option ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
+Projektion stellt einen Mechanismus in der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] reduzieren die Datenmenge im Feed zurückgegeben, die von einer Abfrage, indem Sie angeben, die nur bestimmte Eigenschaften einer Entität in der Antwort zurückgegeben werden. Weitere Informationen finden Sie unter [OData: Select System Query Option ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
   
  In diesem Thema wird beschrieben, wie eine Abfrageprojektion definiert wird, welche Anforderungen Entitäts- und Nichtentitätstypen erfüllen müssen, wie projizierte Ergebnisse aktualisiert werden, wie projizierte Typen erstellt werden und was bei Projektionen zu berücksichtigen ist.  
   
 ## <a name="defining-a-query-projection"></a>Definieren einer Abfrageprojektion  
- Sie können auf eine Abfrage einer Projektionsklausel hinzufügen, entweder mithilfe der `$select` -Abfrageoption in einem URI oder mithilfe der [wählen](~/docs/csharp/language-reference/keywords/select-clause.md) -Klausel ([wählen](~/docs/visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in einer LINQ-Abfrage. Zurückgegebene Entitätsdaten können auf dem Client entweder in Entitätstypen oder in Nicht-Entitätstypen projiziert werden. In den Beispielen in diesem Thema wird gezeigt, wie die `select`-Klausel in einer LINQ-Abfrage verwendet wird.  
+ Sie können auf eine Abfrage eine Projektionsklausel hinzufügen, indem Sie entweder die `$select` -Abfrageoption in einem URI oder mithilfe der [wählen](~/docs/csharp/language-reference/keywords/select-clause.md) Klausel ([wählen](~/docs/visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in einer LINQ-Abfrage. Zurückgegebene Entitätsdaten können auf dem Client entweder in Entitätstypen oder in Nicht-Entitätstypen projiziert werden. In den Beispielen in diesem Thema wird gezeigt, wie die `select`-Klausel in einer LINQ-Abfrage verwendet wird.  
   
 > [!IMPORTANT]
 >  Im Datendienst können Datenverluste auftreten, wenn Sie Updates speichern, die an projizierten Typen vorgenommen wurden. Weitere Informationen finden Sie unter [Überlegungen zur Projektion](#considerations).  
@@ -35,7 +35,7 @@ Die Projektion stellt einen Mechanismus in der [!INCLUDE[ssODataFull](../../../.
   
 -   Wenn der Typ über eine Eigenschaft mit dem Namen `ID` verfügt.  
   
--   Wenn der Typ hat eine Eigenschaft namens *Typ*`ID`, wobei *Typ* ist der Name des Typs.  
+-   Wenn der Typ besitzt eine Eigenschaft namens *Typ*`ID`, wobei *Typ* ist der Name des Typs.  
   
  In der Standardeinstellung gilt, wenn Sie Projektabfrageergebnisse in einen auf dem Client definierten Typ projizieren, dann müssen die in der Projektion angeforderten Eigenschaften im Clienttyp vorhanden sein. Wenn Sie jedoch den Wert `true` für die <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A>-Eigenschaft des <xref:System.Data.Services.Client.DataServiceContext>-Kontexts angeben, müssen die in der Projektion angegebenen Eigenschaften nicht im Clienttyp vorhanden sein.  
   
@@ -47,8 +47,8 @@ Die Projektion stellt einen Mechanismus in der [!INCLUDE[ssODataFull](../../../.
 ### <a name="creating-projected-types"></a>Erstellen von projizierten Typen  
  Im folgenden Beispiel wird eine anonyme LINQ-Abfrage verwendet, die die adressenbezogenen Eigenschaften des `Customers`-Typs in einen neuen `CustomerAddress`-Typ projiziert, der auf dem Client definiert und als Entitätstyp deklariert wurde:  
   
- [!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#selectcustomeraddressspecific)]
- [!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#selectcustomeraddressspecific)]  
+ [!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#selectcustomeraddressspecific)]
+ [!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#selectcustomeraddressspecific)]  
   
  In diesem Beispiel wird das Objektinitialisierermuster statt eines Konstruktoraufrufs verwendet, um eine neue Instanz des `CustmerAddress`-Typs zu erstellen. Beim Projizieren in Entitätstypen werden Konstruktoren nicht unterstützt, beim Projizieren in Nicht-Entitätstypen und anonyme Typen können sie jedoch verwendet werden. Da `CustomerAddress` ein Entitätstyp ist, können Änderungen vorgenommen werden und an den Datendienst zurückgesendet werden.  
   
@@ -56,16 +56,40 @@ Die Projektion stellt einen Mechanismus in der [!INCLUDE[ssODataFull](../../../.
   
  Die <xref:System.Data.Services.Client.MergeOption>-Einstellungen des <xref:System.Data.Services.Client.DataServiceContext>-Kontexts werden während der Abfrageprojektion zur Identitätsauflösung verwendet. Wenn eine Instanz des `Customer`-Typs bereits im <xref:System.Data.Services.Client.DataServiceContext>-Kontext vorhanden ist, dann folgt eine Instanz von `CustomerAddress` mit der gleichen Identität dem Identitätsauflösungsregelsatz vom <xref:System.Data.Services.Client.MergeOption>.  
   
- In der folgenden Tabelle wird das Verhalten beim Projizieren von Ergebnissen in Entitäts- und Nichtentitätstypen beschrieben:  
-  
-|Aktion|Entitätstyp|Nicht-Entitätstyp|  
-|------------|-----------------|----------------------|  
-|Erstellen einer neuen projizierten Instanz mit Initialisierern, wie im folgenden Beispiel:<br /><br /> [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
- [!code-vb[Astoria Northwind Client#ProjectWithInitializer](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]|Unterstützt|Unterstützt|  
-|Erstellen einer neuen projizierten Instanz mit Konstruktoren, wie im folgenden Beispiel:<br /><br /> [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
- [!code-vb[Astoria Northwind Client#ProjectWithConstructor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]|Es wird eine Ausnahme vom Typ <xref:System.NotSupportedException> ausgelöst.|Unterstützt|  
-|Verwenden der Projektion, um einen Eigenschaftswert, wie im folgenden Beispiel, zu transformieren:<br /><br /> [!code-csharp[Astoria Northwind Client#ProjectWithTransform](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
- [!code-vb[Astoria Northwind Client#ProjectWithTransform](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]<br /><br /> Diese Transformation wird für Entitätstypen nicht unterstützt, da sie zu Verwirrung und potenziell zum Überschreiben von Daten in der Datenquelle führen kann, die zu einer anderen Entität gehören.|Es wird eine Ausnahme vom Typ <xref:System.NotSupportedException> ausgelöst.|Unterstützt|  
+Im folgenden wird die Verhalten beim Projizieren von Ergebnissen in Entitäts- und nicht entitätsbezogenen Typen beschrieben:  
+
+**Erstellen einer neuen projizierten Instanz mit Initialisierern**
+
+- Beispiel:
+
+   [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
+   [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
+
+- Entitätstyp: unterstützt
+
+- Nicht-Entitätstyp: unterstützt
+
+**Erstellen einer neuen projizierten Instanz mit Konstruktoren**
+
+- Beispiel: 
+
+   [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
+   [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]
+
+- Entitätstyp: ein <xref:System.NotSupportedException> ausgelöst wird.
+
+- Nicht-Entitätstyp: unterstützt
+
+**Projektion verwenden, um einen Eigenschaftswert zu transformieren.**
+
+- Beispiel:
+
+   [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
+   [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
+   
+- Entitätstyp: Diese Transformation wird nicht unterstützt, für die Entitätstypen, da dies kann zu Verwirrung und potenziell zum Überschreiben von Daten in der Datenquelle, die zu einer anderen Entität gehört. Es wird eine Ausnahme vom Typ <xref:System.NotSupportedException> ausgelöst.
+
+- Nicht-Entitätstyp: unterstützt  
   
 <a name="considerations"></a>   
 ## <a name="projection-considerations"></a>Überlegungen zur Projektion  
@@ -83,7 +107,7 @@ Die Projektion stellt einen Mechanismus in der [!INCLUDE[ssODataFull](../../../.
   
 -   Abfragen mit Abfrageprojektionen für den Client werden übersetzt, sodass die `$select`-Abfrageoption im Anforderungs-URI verwendet wird. Wenn eine Abfrage mit Projektion für eine frühere Version von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ausgeführt wird, welche die `$select`-Abfrageoption nicht unterstützt, wird ein Fehler zurückgegeben. Dies kann auch geschehen, wenn die <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>-Eigenschaft des <xref:System.Data.Services.DataServiceBehavior>-Objekts für den Datendienst auf den Wert <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> festgelegt wird. Weitere Informationen finden Sie unter [Datendienst-Versionskontrolle](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Projekt Abfrageergebnisse](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Projekts Abfrageergebnisse](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
