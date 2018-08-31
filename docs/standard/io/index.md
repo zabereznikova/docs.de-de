@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105653"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254311"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. Im .NET Framework enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
@@ -120,7 +120,7 @@ Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Wi
 ## <a name="isolated-storage"></a>Isolierte Speicherung  
  Isolierte Speicherung ist ein Mechanismus zur Datenspeicherung, der Isolation und Sicherheit gewährleistet. Dies wird durch die Definition standardisierter Verknüpfungen von Code mit gespeicherten Daten ermöglicht. Der Speicher enthält ein virtuelles Dateisystem, das nach Benutzer, Assembly und Domäne (optional) isoliert ist. Ein isolierter Speicher ist besonders nützlich, wenn Ihre Anwendung keine Berechtigung für den Zugriff auf Benutzerdateien hat. Sie können die Einstellungen oder Dateien für die Anwendung so speichern, dass eine Kontrolle durch die Sicherheitsrichtlinien des Computers gewährleistet ist.  
   
- Die isolierte Speicherung ist für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im [Windows.Storage](/uwp/api/Windows.Storage)-Namespace. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)).  
+ Die isolierte Speicherung ist für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im [Windows.Storage](/uwp/api/Windows.Storage)-Namespace. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
  Die folgenden Klassen werden häufig zum Implementieren isolierter Speicher verwendet:  
   
@@ -139,7 +139,7 @@ Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Wi
   
 -   Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen im [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx)-Namespace der [!INCLUDE[wrt](../../../includes/wrt-md.md)], z. B. [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) und [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
--   Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)).  
+-   Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Verwenden Sie asynchrone Methoden, wie <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A>, um zu verhindern, dass UI-Threads blockiert werden.  
   
@@ -147,12 +147,12 @@ Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Wi
   
  Sie können .NET Framework-Streams in Windows-Runtime-Streams konvertieren und umgekehrt, falls erforderlich. Weitere Informationen finden Sie unter [Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) oder [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
- Weitere Informationen zu E/A-Vorgängen in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App finden Sie unter [Schnellstart: Lesen und Schreiben von Dateien](/previous-versions/windows/apps/hh758325(v=win.10)).  
+ Weitere Informationen zu E/A-Vorgängen in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App finden Sie unter [Schnellstart: Lesen und Schreiben von Dateien](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).  
   
 ## <a name="io-and-security"></a>E/A und Sicherheit  
  Wenn Sie die Klassen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, müssen die Sicherheitsanforderungen des Betriebssystems erfüllt sein, z. B. Zugriffssteuerungslisten (ACLs), um den Zugriff auf Dateien und Verzeichnisse zu steuern. Dies gilt zusätzlich zu anderen <xref:System.Security.Permissions.FileIOPermission>-Anforderungen. ACLs können programmgesteuert verwaltet werden. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
- Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](../../../docs/standard/io/isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)) für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps.  
+ Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](../../../docs/standard/io/isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps.  
   
  Eine Sicherheitsüberprüfung wird nur beim Erstellen des Streams ausgeführt. Übergeben Sie daher keinen geöffneten Stream an weniger vertrauenswürdigen Code oder an Anwendungsdomänen.  
   
