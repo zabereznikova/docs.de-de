@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad5862064966ccae4c313e7fa3d982ec9abbbcd2
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494175"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332186"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Nachrichtensicherheit durch gegenseitige Zertifikate
-Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst und die Clients im nachrichtensicherheitsmodus gesichert. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert.  
+Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst und Client mit der nachrichtensicherheitsmodus gesichert werden. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert.  
   
  Dieses Szenario ist interoperabel, da es WS-Sicherheit mit dem X.509-Zertifikatstokenprofil verwendet.  
   
@@ -109,7 +109,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst 
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Konfiguration  
- Der Client wird wie folgt konfiguriert. Ein Clientzertifikat muss angegeben werden, mithilfe der [ \<ClientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Darüber hinaus wird das Dienstzertifikat mithilfe angegeben die [ \<DefaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+ Der Client wird wie folgt konfiguriert. Ein Clientzertifikat muss angegeben werden, mithilfe der [ \<ClientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Darüber hinaus wird das Dienstzertifikat mit angegeben die [ \<DefaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -162,5 +162,5 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst 
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [Vorgehensweise: Erstellen und Installieren von temporären Zertifikaten in WCF für die Transportsicherheit während der Entwicklung](http://go.microsoft.com/fwlink/?LinkId=244264)
+ [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [Vorgehensweise: Erstellen und installieren temporärer Zertifikate in WCF für Transportsicherheit bei der Entwicklung](https://go.microsoft.com/fwlink/?LinkId=244264)

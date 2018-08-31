@@ -6,28 +6,28 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 0c2828215527a285943a79920de51fa42fe7a8a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69845d1d75f81042bbeb20ee6b1015f5c2f53b81
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559891"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332093"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>Gewusst wie: Animieren von Größenänderungen mithilfe von Keyframes
 In diesem Beispiel wird das Animieren von Größenänderungen mithilfe von Keyframes veranschaulicht.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> Klasse zum Animieren der <xref:System.Windows.Media.ArcSegment.Size%2A> Eigenschaft ein <xref:System.Windows.Media.ArcSegment>. In dieser Animation werden drei Keyframes folgendermaßen verwendet:  
+ Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> -Klasse zum Animieren der <xref:System.Windows.Media.ArcSegment.Size%2A> Eigenschaft eine <xref:System.Windows.Media.ArcSegment>. In dieser Animation werden drei Keyframes folgendermaßen verwendet:  
   
-1.  Bei der ersten halben Sekunde der Animation verwendet eine Instanz von der <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> Klasse, um die Größe des Bogens allmählich erhöhen. Lineare Keyframes wie <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> einen smooth linearen Übergang zwischen den Werten zu erstellen.  
+1.  In der ersten halben Sekunde der Animation ist, wird eine Instanz von der <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> Klasse, um die Größe des Bogens graduell zu erhöhen. Lineare Keyframes wie <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> einen glatten, linearen Übergang zwischen Werten zu erstellen.  
   
-2.  Am Ende der nächsten halben Sekunde wird eine Instanz von der <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> Klasse, um die Größe des Bogens abrupt zu erhöhen. Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> erstellen Sie einen plötzlichen Sprünge zwischen Werten, d. h., die größenveränderung der plötzlich auftreten und nicht feine.  
+2.  Am Ende der nächsten halben Sekunde wird eine Instanz von der <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> Klasse, um die Größe des Bogens abrupt zu erhöhen. Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> abrupte Sprünge zwischen Werten, d. h. erstellen, die die größenveränderung der treten plötzlich und sind nicht feine.  
   
-3.  Über den letzten zwei Sekunden nutzt eine Instanz von der <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> Klasse, um die Größe des Bogens zu erhöhen. Spline-Keyframes wie <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> erstellen Sie einen variablen Übergang zwischen Werten, die von der <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> Eigenschaft. In diesem Beispiel wächst die Größe des Bogens zunächst nur langsam und steigt dann exponentiell zum Ende des Zeitabschnitts.  
+3.  Über die letzten zwei Sekunden wird eine Instanz der dem <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> Klasse, um die Größe des Bogens zu erhöhen. Spline-Keyframes wie <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> erzeugen einen variablen Übergang zwischen Werten, die von der <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> Eigenschaft. In diesem Beispiel wächst die Größe des Bogens zunächst nur langsam und steigt dann exponentiell zum Ende des Zeitabschnitts.  
   
  [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   
- Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>  

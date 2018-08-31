@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db818f638898da6379ce4dadfada8eccc3adeb12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455418"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332746"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo-Funktion
 Ruft den letzten Fehlercode ab, der von einer der Funktionen mit starkem Namen ausgelöst wurde.  
   
- Diese Funktion ist veraltet.  
+ Diese Funktion wurde als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,13 +39,13 @@ HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der letzte com-Fehlercode festlegen, indem eine der Funktionen mit starkem Namen.  
+ Der letzte com-Fehlercode von einer der Funktionen mit starkem Namen festgelegt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die meisten Methoden mit starkem Namen zurückgeben ein einfachen `true` oder `false` Angabe der erfolgreichen Beendigung. Verwenden der `StrongNameErrorInfo` Funktion, um einen HRESULT-Wert abzurufen, der angibt, den letzten Fehler, die von Funktionen mit starkem Namen generiert.  
+ Die meisten Methoden mit starkem Namen zurückgeben, eine einfache `true` oder `false` Angabe für die erfolgreiche Ausführung. Verwenden der `StrongNameErrorInfo` Funktion, die einen HRESULT-Wert abzurufen, der angibt, den letzten Fehler, die von Funktionen mit starkem Namen generiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** StrongName.h  
   
@@ -54,4 +54,4 @@ HRESULT StrongNameErrorInfo ();
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Starke Namen von globalen statischen Funktionen](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+ [Starke Namen – globale statistische Funktionen](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

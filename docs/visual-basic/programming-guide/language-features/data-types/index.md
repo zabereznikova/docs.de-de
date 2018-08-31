@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 855e32463284604fc27d4b73331ae48967dddefb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650451"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330944"
 ---
 # <a name="data-types-in-visual-basic"></a>Datentypen in Visual Basic
 Der *Datentyp* eines Programmierelements weist darauf hin, welche Art von Daten es enthalten kann, und wie es diese Daten speichert. Datentypen gelten für alle Werte, die im Arbeitsspeicher des Computers gespeichert werden oder an der Auswertung eines Ausdrucks teilnehmen können. Jeder Variablen-, Literal-, Konstanten-, Enumerations-, Eigenschafts-, Prozedurparameter-, Prozedurarguments- und Prozedurrückgabewert hat einen Datentyp.  
@@ -32,7 +32,7 @@ Der *Datentyp* eines Programmierelements weist darauf hin, welche Art von Daten 
 |Prozedurargument|Im aufrufenden Code; jedes Argument ist ein Programmierelement, das bereits deklariert wurde, oder ein deklarierte Elemente enthaltender Ausdruck.<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
 |Prozedurrückgabewert|In einer [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md) oder [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
   
- Eine Liste der Visual Basic-Datentypen finden Sie unter [Data Type Summary (Visual Basic)](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Eine Liste der Visual Basic-Datentypen finden Sie unter [Data Type Summary (Visual Basic)](../../../../visual-basic/language-reference/data-types/index.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Typzeichen](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
@@ -40,9 +40,9 @@ Der *Datentyp* eines Programmierelements weist darauf hin, welche Art von Daten 
  [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
  [Generische Typen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
  [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Konvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Tupel](tuples.md)     
  [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
  [Effiziente Verwendung von Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

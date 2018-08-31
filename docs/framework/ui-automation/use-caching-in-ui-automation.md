@@ -11,16 +11,16 @@ ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cf01a695de4078df1f59b68742bc19fd4b8b9024
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f948f95250b078d5af90506359a3b92f9c85601
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401329"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331914"
 ---
 # <a name="use-caching-in-ui-automation"></a>Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In diesem Abschnitt wird gezeigt, wie ein Zwischenspeichern von <xref:System.Windows.Automation.AutomationElement> -Eigenschaften und Steuerelementmustern implementiert wird.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "33401329"
   
 5.  Legen Sie die <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> -Eigenschaft auf <xref:System.Windows.Automation.AutomationElementMode.None> fest, wenn Sie die Effizienz dadurch steigern möchten, dass auf das Abrufen eines vollständigen Verweises auf Objekte verzichtet wird. (Dadurch wird es unmöglich, aktuelle Werte aus diesen Objekten abzurufen.)  
   
-6.  Aktivieren Sie die Anforderung mit <xref:System.Windows.Automation.CacheRequest.Activate%2A> innerhalb einer `using` Block (`Using` in Microsoft Visual Basic .NET).).  
+6.  Aktivieren Sie die Anforderung mithilfe von <xref:System.Windows.Automation.CacheRequest.Activate%2A> innerhalb einer `using` Block (`Using` in Microsoft Visual Basic .NET).  
   
- Deaktivieren Sie nach dem Abrufen von <xref:System.Windows.Automation.AutomationElement> -Objekten oder dem Abonnieren von Ereignissen die Anforderung, indem Sie <xref:System.Windows.Automation.CacheRequest.Pop%2A> verwenden (wenn <xref:System.Windows.Automation.CacheRequest.Push%2A> verwendet wurde) oder indem Sie das durch <xref:System.Windows.Automation.CacheRequest.Activate%2A>erstellte Objekt löschen. (Verwenden <xref:System.Windows.Automation.CacheRequest.Activate%2A> in einem `using` Block (`Using` in Microsoft Visual Basic .NET).).  
+ Deaktivieren Sie nach dem Abrufen von <xref:System.Windows.Automation.AutomationElement> -Objekten oder dem Abonnieren von Ereignissen die Anforderung, indem Sie <xref:System.Windows.Automation.CacheRequest.Pop%2A> verwenden (wenn <xref:System.Windows.Automation.CacheRequest.Push%2A> verwendet wurde) oder indem Sie das durch <xref:System.Windows.Automation.CacheRequest.Activate%2A>erstellte Objekt löschen. (Verwenden <xref:System.Windows.Automation.CacheRequest.Activate%2A> in einem `using` Block (`Using` in Microsoft Visual Basic .NET).  
   
 ### <a name="cache-automationelement-properties"></a>Zwischenspeichern von AutomationElement-Eigenschaften  
   

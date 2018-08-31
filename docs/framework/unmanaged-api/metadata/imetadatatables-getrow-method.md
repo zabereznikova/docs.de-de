@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 954b4df6b341e18c5a995b57541a72e236278c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d24dbcbdd8b0ed0736f7b59564cf72dffaa5a8f8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449594"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331332"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow-Methode
-Ruft die Zeile im angegebenen Zeilenindex, in der Tabelle am angegebenen Index ab.  
+Ruft die Zeile am angegebenen Zeilenindex, in der Tabelle auf den Index der angegebenen Tabelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,19 +39,19 @@ HRESULT GetRow (
   
 #### <a name="parameters"></a>Parameter  
  `ixTbl`  
- [in] Der Index der Tabelle, aus der die Zeile abgerufen wird.  
+ [in] Der Index des in der Tabelle, aus der die Zeile abgerufen werden.  
   
  `rid`  
- [in] Der Index der Zeile abgerufen.  
+ [in] Der Index der abzurufenden Zeile.  
   
  `ppRow`  
  [out] Ein Zeiger auf einen Zeiger auf die Zeile.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Verwendung dieser Methode wird nicht empfohlen, da er keine konsistente Ergebnisse zurückgibt. Informationen über die GUID-Tabelle finden Sie unter der Common Language Infrastructure (CLI)-Dokumentation, insbesondere in "Partition II: Metadata Definition and Semantics". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+ Die Verwendung von dieser Methode wird nicht empfohlen, da es keine konsistente Ergebnisse zurückgibt. Informationen über den GUID-Tabelle finden Sie unter der Common Language Infrastructure (CLI)-Dokumentation, besonders in "Partition II: Metadata Definition and Semantics". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](https://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](https://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   

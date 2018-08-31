@@ -9,12 +9,12 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: 3615ab1f9a9076b8db0e5fde1e5bd4a1a804f3bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671553b496520f2c2ac3fea90b1514a6cdf1764a
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538527"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331760"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel-Steuerelement (Windows Forms)
 Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement ordnet seinen Inhalt in einem Raster an. Da das Layout sowohl zur Entwurfszeit als auch zur Laufzeit ausgeführt wird, kann es sich dynamisch ändern, wenn sich die Anwendungsumgebung ändert. Dadurch können sich die Steuerelemente im Bereich proportional in der Größe anpassen, sodass sie auf Änderungen wie die Größenanpassung des übergeordneten Steuerelements oder eine durch Lokalisierung veränderte Textlänge reagieren.  
@@ -38,15 +38,15 @@ Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement ordnet seinen Inh
  [Gewusst wie: Erstellen von in der Größe veränderbaren Windows Forms für die Dateneingabe](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)  
  Veranschaulicht die Verwendung eines <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements zum Erstellen eines Formulars, das ordnungsgemäß auf die Größenänderung reagiert.  
   
-1.  [Vorgehensweise: Ausrichten und Strecken eines Steuerelements in einem TableLayoutPanel-Steuerelement](http://msdn.microsoft.com/library/ms171688\(v=vs.110\))  
+1.  [Vorgehensweise: Ausrichten und Strecken eines Steuerelements in einem TableLayoutPanel-Steuerelement](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2.  [Vorgehensweise: Überspannen von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement](http://msdn.microsoft.com/library/ms171687\(v=vs.110\))  
+2.  [Vorgehensweise: Überspannen von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3.  [Vorgehensweise: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement](http://msdn.microsoft.com/library/ms171686\(v=vs.110\))  
+3.  [Vorgehensweise: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4.  [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](http://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
+4.  [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](https://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement.  
   
@@ -60,4 +60,4 @@ Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement ordnet seinen Inh
  [Lokalisierung](../../../../docs/standard/globalization-localization/localization.md)  
  Bietet eine Übersicht über Themen zur Lokalisierung.  
   
- Siehe auch [Lokalisieren von Anwendungen](http://msdn.microsoft.com/library/z68135h5\(v=vs.110\)) oder [Lokalisieren von Anwendungen](http://msdn.microsoft.com/library/z68135h5\(v=vs.120\))
+ Siehe auch [Localizing Applications](https://msdn.microsoft.com/library/z68135h5\(v=vs.110\)) oder [Lokalisieren von Anwendungen](https://msdn.microsoft.com/library/z68135h5\(v=vs.120\))

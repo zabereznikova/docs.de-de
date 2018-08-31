@@ -2,17 +2,17 @@
 title: Übersicht über LINQ to XML-Achsen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: 9164dcff118c5fa3d15a5fe673b2174a4002e9d6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d7d881564abfdaba6cb7efa8fb92849e48c6fa4c
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000308"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332173"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>Übersicht über LINQ to XML-Achsen (Visual Basic)
 Nachdem Sie eine XML-Struktur erstellt oder ein XML-Dokument in eine XML-Struktur geladen haben, können Sie durch Abfragen der XML-Struktur nach Elementen und Attributen suchen und deren Werte abrufen. Das Abrufen von Auflistungen erfolgt über die *Achsenmethoden*, auch kurz *Achsen* genannt. Einige der Achsen sind Methoden in der <xref:System.Xml.Linq.XElement>-Klasse und in der <xref:System.Xml.Linq.XDocument>-Klasse, die <xref:System.Collections.Generic.IEnumerable%601>-Auflistungen zurückgeben. Bei einigen Achsen handelt es sich um Erweiterungsmethoden in der <xref:System.Xml.Linq.Extensions>-Klasse. Die Achsen, die als Erweiterungsmethode implementiert werden, arbeiten mit Auflistungen und geben Auflistungen zurück.  
   
- Wie unter [Übersicht über die XElement-Klasse](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec) beschrieben wird, stellt ein <xref:System.Xml.Linq.XElement>-Objekt einen einzelnen Elementknoten dar. Der Inhalt eines Elements kann komplex sein (dies wird mitunter als strukturierter Inhalt bezeichnet), es kann sich bei dem Element aber auch um ein einfaches Element handeln. Ein einfaches Element kann leer sein oder einen Wert enthalten. Wenn der Knoten strukturierten Inhalt enthält, können Sie mit den verschiedenen Achsenmethoden Enumerationen der Nachfolgerelemente abrufen. Die am häufigsten verwendeten Achsenmethoden sind <xref:System.Xml.Linq.XContainer.Elements%2A> und <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+ Wie unter [Übersicht über die XElement-Klasse](https://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec) beschrieben wird, stellt ein <xref:System.Xml.Linq.XElement>-Objekt einen einzelnen Elementknoten dar. Der Inhalt eines Elements kann komplex sein (dies wird mitunter als strukturierter Inhalt bezeichnet), es kann sich bei dem Element aber auch um ein einfaches Element handeln. Ein einfaches Element kann leer sein oder einen Wert enthalten. Wenn der Knoten strukturierten Inhalt enthält, können Sie mit den verschiedenen Achsenmethoden Enumerationen der Nachfolgerelemente abrufen. Die am häufigsten verwendeten Achsenmethoden sind <xref:System.Xml.Linq.XContainer.Elements%2A> und <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
  Neben den Achsenmethoden, die Auflistungen zurückgeben, gibt es zwei weitere Methoden, die häufig in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen eingesetzt werden. Die <xref:System.Xml.Linq.XContainer.Element%2A>-Methode gibt ein einzelnes <xref:System.Xml.Linq.XElement> zurück. Die <xref:System.Xml.Linq.XElement.Attribute%2A>-Methode gibt ein einzelnes <xref:System.Xml.Linq.XAttribute> zurück.  
   

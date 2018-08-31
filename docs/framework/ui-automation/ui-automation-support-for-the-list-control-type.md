@@ -9,16 +9,16 @@ ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f715f183642af6e98079171f41c0e76318052809
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 015eb38038f85621d027ef82118bf4133a45917a
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410376"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332838"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den List-Steuerelementtyp
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Informationen über [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Unterstützung für den Steuerelementtyp „List“. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]umfasst ein Steuerelementtyp eine Reihe von Bedingungen, die ein Steuerelement erfüllen muss, damit die <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> -Eigenschaft verwendet werden kann. Die Bedingungen schließen bestimmte Richtlinien für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaftswerte und Steuerelementmuster ein.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33410376"
 |Steuerelementansicht|Inhaltsansicht|  
 |------------------|------------------|  
 |Enthält die Elemente, die Steuerelementen entsprechen.|Entfernt redundante Informationen aus der Struktur, sodass Hilfstechnologien den kleinsten Satz von für den Endbenutzer sinnvollen Informationen verwenden.|  
-|Liste<br /><br /> -DataItem (0 oder mehr)<br />-"ListItem" (0 oder mehr)<br />-Gruppe (0 oder mehr)<br />-ScrollBar (0, 1 oder 2)|Liste<br /><br /> -DataItem (0 oder mehr)<br />-"ListItem" (0 oder mehr)<br />-Gruppe (0 oder mehr)|  
+|Liste<br /><br /> -DataItem (0 oder mehr)<br />-ListItem (0 oder mehr)<br />-Gruppe (0 oder mehr)<br />-ScrollBar (0, 1 oder 2)|Liste<br /><br /> -DataItem (0 oder mehr)<br />-ListItem (0 oder mehr)<br />-Gruppe (0 oder mehr)|  
   
  Die Steuerelementansicht für ein Steuerelement, das den Steuerelementtyp „List“ implementiert (z. B. ein Listensteuerelement), umfasst die folgenden Elemente:  
   
@@ -57,13 +57,13 @@ ms.locfileid: "33410376"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
- Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften, deren Werte oder Definitionen für Listensteuerelemente besonders relevant sind. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie in [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften, deren Werte oder Definitionen für Listensteuerelemente besonders relevant sind. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Hinweise|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Siehe Hinweise.|Wenn das Listensteuerelement über einen klickbaren Punkt verfügt (ein Punkt, auf den geklickt werden kann, damit die Liste den Fokus erhält), muss dieser Punkt durch diese Eigenschaft verfügbar gemacht werden.<br /><br /> Wenn der Wert des der `IsOffScreen` Eigenschaft ist "true", und klicken Sie dann die <xref:System.Windows.Automation.NoClickablePointException> ausgelöst werden soll.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Siehe Hinweise.|Wenn das Listensteuerelement über einen klickbaren Punkt verfügt (ein Punkt, auf den geklickt werden kann, damit die Liste den Fokus erhält), muss dieser Punkt durch diese Eigenschaft verfügbar gemacht werden.<br /><br /> Wenn der Wert des der `IsOffScreen` Eigenschaft ist "true", und dann die <xref:System.Windows.Automation.NoClickablePointException> ausgelöst.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Siehe Hinweise.|Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Siehe Hinweise.|Der Wert der Eigenschaft „Name“ eines Listensteuerelements sollte die Kategorie der Optionen vermitteln, die dem Benutzer zur Auswahl zur Verfügung stehen. Diese Eigenschaft ruft ihren Namen in der Regel aus einer statischen Textbezeichnung ab. Wenn keine statische Textbezeichnung vorhanden ist, muss der Anwendungsentwickler einen Wert für die Eigenschaft „Name“ verfügbar machen.<br /><br /> Nur wenn das Steuerelement innerhalb der Teilstruktur eines anderen Steuerelements verwendet wird, ist diese Eigenschaft für Listensteuerelemente nicht erforderlich.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Siehe Hinweise.|Wenn eine statische Textbezeichnung vorhanden ist, muss diese Eigenschaft einen Verweis auf das entsprechende Steuerelement verfügbar machen.|  

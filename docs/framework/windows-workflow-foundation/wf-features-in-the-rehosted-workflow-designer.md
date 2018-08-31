@@ -2,21 +2,21 @@
 title: Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 9476249a657d009deba190a3db4726f50b2d7747
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0afc9f0a6254b0df1e0c6e724ec5b3cfd1f86d0
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520145"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332772"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
-Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführt wurden viele neue Features, einschließlich einiger Erweiterungen für den Workflow-Designer. In diesem Thema wird erörtert, welche dieser Funktionen im neu gehosteten Designer bzw. derzeit überhaupt nicht unterstützt werden.  
+Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführt wurden viele neue Features, einschließlich einiger Erweiterungen für die Workflow-Designer-Erfahrung. In diesem Thema wird erörtert, welche dieser Funktionen im neu gehosteten Designer bzw. derzeit überhaupt nicht unterstützt werden.  
   
 > [!NOTE]
->  Eine Liste aller von der neuen Windows Workflow Foundation (WF)-Funktionen in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], einschließlich Entitäten, die nicht mit Designer erneutes hosten verbunden sind, finden Sie unter [Neuigkeiten in Windows Workflow Foundation in .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+>  Eine Liste aller von der neuen Windows Workflow Foundation (WF)-Funktionen in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], einschließlich derer, die unabhängig von Designer betreffen, finden Sie unter [Neuigkeiten in Windows Workflow Foundation in .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="activities"></a>Aktivitäten  
- Die integrierte Aktivitätsbibliothek enthält neue Aktivitäten und neue Funktionen für vorhandene Aktivitäten. Alle diese neuen Aktivitäten werden im neu gehosteten Designer unterstützt. Weitere Informationen zu diesen neuen Aktivitäten finden Sie unter der [Aktivitäten](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) Abschnitt [Neuigkeiten in Windows Workflow Foundation in .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+ Die integrierte Aktivitätsbibliothek enthält neue Aktivitäten und neue Funktionen für vorhandene Aktivitäten. Alle diese neuen Aktivitäten werden im neu gehosteten Designer unterstützt. Weitere Informationen über diese neuen Aktivitäten finden Sie unter den [Aktivitäten](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) Abschnitt [Neuigkeiten in Windows Workflow Foundation in .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="c-expressions"></a>C#-Ausdrücke  
  Vor [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] konnten alle Ausdrücke in Workflows nur in Visual Basic geschrieben werden. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] werden Visual Basic-Ausdrücke nur für Projekte verwendet, die mit Visual Basic erstellt wurden. Visual C#-Projekte verwenden jetzt die Programmiersprache C# für Ausdrücke. Beim Erstellen von Workflows in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] wird ein voll funktionaler C#-Ausdrucks-Editor mit Funktionen wie IntelliSense und der Hervorhebung grammatikalischer Fehler bereitgestellt. Die in früheren Versionen erstellten C#-Workflowprojekte, die Visual Basic-Ausdrücke verwenden, sind weiterhin funktionsfähig.  
@@ -27,7 +27,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
 ## <a name="new-designer-capabilities"></a>Neue Designer-Funktionen  
   
 ### <a name="designer-search"></a>Designer-Suche  
- Die [Schnellsuche](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) und [in Dateien suchen](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) Funktionen eingeführt, mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] werden im neu gehosteten Designer nicht unterstützt. Die `Toolbox`-Suche wird im neu gehosteten Designer unterstützt. Weitere Informationen zu diesen Funktionen finden Sie unter [Designer-Suche](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).  
+ Die [Schnellsuche](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) und [in Dateien suchen](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) Features eingeführt, mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] werden im neu gehosteten Designer nicht unterstützt. Die `Toolbox`-Suche wird im neu gehosteten Designer unterstützt. Weitere Informationen zu diesen Funktionen finden Sie unter [Designer-Suche](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).  
   
 > [!WARNING]
 >  [Schnellsuche](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) und [in Dateien suchen](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) werden im neu gehosteten Designer nicht unterstützt.  
@@ -37,7 +37,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
   
  Das folgende Bildschirmfoto zeigt das Kontextmenü des Variablen- und Argument-Designers.  
   
- ![Variable und das Kontextmenü Argument-Designers](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")  
+ ![Variablen und das Kontextmenü für den Argument-Designers](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")  
   
 ### <a name="auto-surround-with-sequence"></a>Automatisches Umschließen mit Sequenz  
  Da ein Workflow oder bestimmte Containeraktivitäten (z. B. <xref:System.Activities.Statements.NoPersistScope>) nur eine einzelne Textkörperaktivität enthalten können, musste der Entwickler zum Hinzufügen einer zweiten Aktivität die erste Aktivität löschen, eine <xref:System.Activities.Statements.Sequence>-Aktivität hinzufügen und der Sequenzaktivität dann beide Aktivitäten hinzufügen. Wenn der Designeroberfläche ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eine zweite Aktivität hinzugefügt wird, wird automatisch eine `Sequence`-Aktivität erstellt, um beide Aktivitäten zu umschließen. Diese Funktion wird im neu gehosteten Designer unterstützt.  
@@ -55,7 +55,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
   
  Das folgende Bildschirmfoto zeigt die Schaltfläche zum Schwenken, die sich in der unteren rechten Ecke des Workflow-Designers befindet.  
   
- ![Schaltfläche zum Schwenken im Workflow-Designer](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")  
+ ![Schaltfläche "Schwenken" im Workflow-Designer](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")  
   
  Die mittlere Maustaste oder die LEERTASTE kann ebenfalls verwendet werden, um den Workflow-Designer zu schwenken.  
   
@@ -65,9 +65,9 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
  Mehrere ausgewählte Aktivitäten können auch im Designer gezogen und abgelegt und über das Kontextmenü bearbeitet werden.  
   
 ### <a name="outline-view-of-workflow-items"></a>Gliederungsansicht der Workflowelemente  
- Um das Navigieren in hierarchischen Workflows zu erleichtern, werden die Komponenten eines Workflows in einer strukturähnlichen Gliederungsansicht angezeigt. Die Gliederungsansicht wird angezeigt, der **Dokumentgliederung** anzeigen. Wählen Sie zum Öffnen dieser Sicht in Visual Studio in der oberen Menüleiste **Ansicht**, **Weitere Fenster**, **Dokumentgliederung**, oder drücken Sie STRG + W + u Wenn Sie auf einen Knoten in der Gliederungsansicht klicken, wechseln Sie automatisch zur entsprechenden Aktivität im Workflow-Designer, und die Gliederungsansicht wird aktualisiert, um die im Designer ausgewählten Aktivitäten anzuzeigen. Diese Funktion wird im neu gehosteten Designer unterstützt.  
+ Um das Navigieren in hierarchischen Workflows zu erleichtern, werden die Komponenten eines Workflows in einer strukturähnlichen Gliederungsansicht angezeigt. Die Gliederungsansicht wird angezeigt, der **Dokumentgliederung** anzeigen. Wählen Sie zum Öffnen dieser Sicht in Visual Studio in der oberen Menüleiste **Ansicht**, **Other Windows**, **Dokumentgliederung**, oder drücken Sie STRG-W, U. Wenn Sie auf einen Knoten in der Gliederungsansicht klicken, wechseln Sie automatisch zur entsprechenden Aktivität im Workflow-Designer, und die Gliederungsansicht wird aktualisiert, um die im Designer ausgewählten Aktivitäten anzuzeigen. Diese Funktion wird im neu gehosteten Designer unterstützt.  
   
- Der folgende Screenshot des abgeschlossenen Workflows aus dem [Lernprogramm für erste Schritte](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) zeigt die Gliederungsansicht ein sequenzieller Workflow.  
+ Das folgende Bildschirmfoto des abgeschlossenen Workflows aus der [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) zeigt die Gliederungsansicht mit einem sequenziellen Workflow.  
   
  ![Gliederungsansicht im Workflow-Designer](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")  
   
@@ -79,7 +79,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
   
  Das folgende Bildschirmfoto zeigt die Anfügepunkte, die sichtbar werden, wenn eine Aktivität aus der Toolbox gezogen wird.  
   
- ![Flussdiagramm-Startknoten mit Punkten Flussdiagramms](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")  
+ ![Flussdiagramm der Startknoten mit AutoVerbinden Punkte](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")  
   
  Aktivitäten können auch auf Verbindungen zwischen Flussdiagrammknoten und -zuständen gezogen werden, um den Knoten automatisch zwischen zwei anderen Knoten einzufügen. Das folgende Bildschirmfoto zeigt die hervorgehobene Verbindungslinie, auf die Aktivitäten aus der Toolbox gezogen und abgelegt werden können.  
   
@@ -111,7 +111,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
  Die Hintergrundvalidierung zur Entwurfszeit wird im neu gehosteten Designer unterstützt.  
   
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>Der Ansichtszustand wird an einem separaten Ort in XAML-Dateien gespeichert  
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] werden die Ansichtszustandsinformationen für einen Workflow an vielen verschiedenen Orten in der XAML-Datei gespeichert. Dies ist für Entwickler, die XAML direkt lesen oder Code zum Entfernen von Ansichtszustandsinformationen schreiben möchten, ungünstig. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], die Informationen zum Ansichtszustand in der XAML-Datei als separates Element in der XAML-Datei serialisiert wird.  Entwickler können problemlos suchen und bearbeiten die Ansichtszustandsinformationen aus einer Aktivität oder den Ansichtszustand vollständig entfernen.  
+ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] werden die Ansichtszustandsinformationen für einen Workflow an vielen verschiedenen Orten in der XAML-Datei gespeichert. Dies ist für Entwickler, die XAML direkt lesen oder Code zum Entfernen von Ansichtszustandsinformationen schreiben möchten, ungünstig. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], die Informationen zum Ansichtszustand in der XAML-Datei als separates Element in der XAML-Datei serialisiert wird.  Entwickler können leicht finden und bearbeiten die Ansichtszustandsinformationen einer Aktivität oder den Ansichtszustand vollständig entfernen.  
   
  Diese Funktion wird im neu gehosteten Workflow-Designer unterstützt.  
   
@@ -122,7 +122,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
  Zusätzlich zu den Entwicklungsmodellen für sequenzielle oder Flussdiagramm-Workflows umfasst diese Version Zustandsautomatworkflows und Vertrag zuerst-Workflowdienste.  
   
 ### <a name="state-machine-workflows"></a>Zustandsautomatworkflows  
- Zustandsautomatworkflows wurden als Teil von .NET Framework 4.0.1 in eingeführt der [Microsoft .NET Framework 4 Plattformupdate 1](http://go.microsoft.com/fwlink/?LinkID=215092). Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aktualisiert. Updates umfassen:  
+ Zustandsautomatworkflows wurden als Teil der .NET Framework 4.0.1, im eingeführt, die die [Microsoft .NET Framework 4 Plattformupdate 1](https://go.microsoft.com/fwlink/?LinkID=215092). Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aktualisiert. Updates umfassen:  
   
 1.  Festlegen von Haltepunkten für Zustände  
   
@@ -132,14 +132,14 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
   
 4.  Aktivitäten, die zum Erstellen von Zustandsautomatworkflows verwendet werden, darunter: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> und <xref:System.Activities.Statements.Transition>  
   
- Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomat-Workflow aus dem [Lernprogramm für erste Schritte](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) Schritt [wie: Erstellen Sie einen Zustandsautomatworkflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).  
+ Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomatworkflow aus der [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) Schritt [Vorgehensweise: Erstellen Sie einen Statuscomputerworkflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).  
   
- ![Abgeschlossener Zustandsautomatworkflow](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Abgeschlossener Zustandsautomatenworkflow](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
- Weitere Informationen zum Erstellen von Zustandsautomatworkflows, finden Sie unter [Zustandsautomatworkflows](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md). Zustandsautomatworkflows werden im neu gehosteten Designer unterstützt.  
+ Weitere Informationen zum Erstellen der Zustandsautomatworkflows finden Sie unter [Statusmechanismus-Workflows](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md). Zustandsautomatworkflows werden im neu gehosteten Designer unterstützt.  
   
 ### <a name="contract-first-workflow-development"></a>Vertrag zuerst-Workflowentwicklung  
- Tool für die Vertrag zuerst-Workflowentwicklung kann der Entwickler ein Vertrags in Code zuerst entwerfen und dann mit wenigen Klicks in Visual Studio generieren automatisch eine Aktivitätsvorlage in der Toolbox, die jeden Vorgang darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zum Entwickeln von Vertrag zuerst-Workflow, finden Sie unter [Vorgehensweise: Erstellen eines Workflowdiensts, der einem vorhandenen Dienstvertrag nutzt](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+ Das Tool zur Webentwicklung Vertrag zuerst-Workflowentwicklung ermöglicht den Entwickler, die zuerst Entwerfen eines Vertrags in Code generieren Sie dann, mit ein paar Mausklicks in Visual Studio automatisch eine Aktivitätsvorlage in der Toolbox, die jeden Vorgang darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zum Entwickeln von Vertrag zuerst-Workflowdiensten, finden Sie unter [Vorgehensweise: Erstellen eines Workflowdiensts, das Verarbeiten eines vorhandenen Dienstvertrags](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 > [!WARNING]
 >  Die Vertrag zuerst-Workflowentwicklung wird im Workflow-Designer nicht unterstützt.

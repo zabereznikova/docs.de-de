@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 20bf9b263a349f327f12d1f3c7753fb9f34436e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e844a673f1a60d5a151a6ae612d4af7a6712eef4
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654215"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332551"
 ---
 # <a name="collection-initializers-visual-basic"></a>Auflistungsinitialisierer (Visual Basic)
 *Auflistungsinitialisierer* stellen eine gekürzte Syntax bereit, mit der Sie eine Auflistung erstellen und mit einem anfänglichen Satz von Werten auffüllen können. Auflistungsinitialisierer sind nützlich beim Erstellen einer Auflistung aus einem Satz unbekannter Werte, z.B. eine Liste von Menüoptionen oder Kategorien, ein ursprünglicher Satz numerischer Werte, eine statische Liste von Zeichenfolgen wie Tag- oder Monatsnamen oder geografische Orte, z.B. eine Liste von Staaten, die für eine Überprüfung verwendet werden.  
   
- Weitere Informationen über Auflistungen finden Sie unter [Auflistungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
+ Weitere Informationen über Auflistungen finden Sie unter [Auflistungen](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
  Sie identifizieren einen Auflistungsinitialisierer durch Gebrauch des Schlüsselworts `From`, gefolgt von Klammern (`{}`). Dies hat eine Ähnlichkeit mit der Arrayliteralsyntax, die unter [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md) beschrieben ist. Die folgenden Beispiele stellen unterschiedliche Möglichkeiten für die Verwendung von Auflistungsinitialisierern für die Erstellung von Auflistungen dar.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33654215"
 |[Gewusst wie: Erstellen einer Auflistung für einen Auflistungsinitialisierer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Zeigt, wie die Verwendung eines Auflistungsinitialisierers ermöglicht wird, indem eine `Add`-Methode in eine Auflistungsklasse eingefügt wird, die `IEnumerable` implementiert.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sammlungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Sammlungen](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md)  

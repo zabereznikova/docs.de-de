@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 3c642a2a0eccc5a2b08cee71ca719515b115b2f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529924"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332506"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView-Steuerelement (Windows Forms)
 Das `DataGridView`-Steuerelement ermöglicht die flexible Anzeige von Daten in tabellarischer Form. Sie können das `DataGridView`-Steuerelement verwenden, um schreibgeschützte Ansichten mit kleinen Datenmengen anzuzeigen, oder Sie können es skalieren, um bearbeitbare Ansichten von sehr umfangreichen Datasets anzuzeigen.  
@@ -73,7 +73,7 @@ Das `DataGridView`-Steuerelement ermöglicht die flexible Anzeige von Daten in t
  [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
  Beschreibt, in welcher Weise das `DataGridView`-Steuerelement verbessert wurde, das das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt.  
   
- Siehe auch [mithilfe des Designers mit dem DataGridView-Steuerelement von Windows Forms](http://msdn.microsoft.com/library/ms171593\(v=vs.110\)).  
+ Siehe auch [mithilfe des Designers mit dem DataGridView-Steuerelement in Windows Forms](using-the-designer-with-the-windows-forms-datagridview-control.md).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  

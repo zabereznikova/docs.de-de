@@ -2,12 +2,12 @@
 title: Grundlegende Validierung
 ms.date: 03/30/2017
 ms.assetid: ba1343cc-aaab-4ade-b0c0-1dd5063bf4ad
-ms.openlocfilehash: db7db339d0b7bfd756d8ba22fb8488b8f7ecfa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74d99e2d426e9ea5701fad80418fdf019112cc9e
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514081"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332732"
 ---
 # <a name="basic-validation"></a>Grundlegende Validierung
 Dieses Beispiel besteht aus einer Aktivität, `CreateProduct`, die überprüft, ob ihr `Cost`-Argument kleiner oder gleich ihrem `Price`-Argument ist.  
@@ -40,6 +40,6 @@ Dieses Beispiel besteht aus einer Aktivität, `CreateProduct`, die überprüft, 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\BasicValidation`
