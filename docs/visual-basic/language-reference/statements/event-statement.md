@@ -19,11 +19,11 @@ helpviewer_keywords:
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 ms.openlocfilehash: 5ae25cbca73f7c8e767cad0ac332d77c306724a1
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245432"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256803"
 ---
 # <a name="event-statement"></a>Event-Anweisung
 Deklariert ein benutzerdefiniertes Ereignis.  
@@ -56,7 +56,7 @@ End Event
   
 ## <a name="parts"></a>Teile  
   
-|Segment|Description|  
+|Segment|Beschreibung|  
 |---|---|  
 |`attrlist`|Dies ist optional. Liste der Attribute, die für dieses Ereignis gelten. Mehrere Attribute werden durch Kommas getrennt. Setzen Sie die [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern ("`<`"und"`>`").|  
 |`accessmodifier`|Dies ist optional. Gibt an, welcher Code auf dieses Ereignis zugreifen kann. Einer der folgenden Werte ist möglich:<br /><br /> -   [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md)– jeglicher Code, der das Element zugreifen kann, das ihn deklariert, kann darauf zugreifen.<br />-   [Geschützte](../../../visual-basic/language-reference/modifiers/protected.md)– nur Code innerhalb seiner Klasse oder einer abgeleiteten Klasse, die darauf zugreifen kann.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)– nur Code in der gleichen Assembly, die darauf zugreifen kann.<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)– nur Code innerhalb des Elements, das ihn deklariert, kann darauf zugreifen.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-nur Code in der Klasse des Ereignisses, einer abgeleiteten Klasse oder derselben Assembly, die darauf zugreifen kann. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md)-nur Code in der Klasse des Ereignisses oder einer abgeleiteten Klasse in der gleichen Assembly, die darauf zugreifen kann.|  

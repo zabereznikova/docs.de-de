@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457554"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254352"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Framework-Apps oder Apps bereitgestellt, die großen Datenmengen wie Dateien oder Datenbanken verarbeiten. Die Tipps stammen aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code, und dieser Artikel enthält mehrere reale Beispiele aus dem C#-Compiler.  
@@ -23,7 +23,7 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
   
  Wenn Ihre Endbenutzer mit der App interagieren, erwarten sie, dass die App reaktionsfähig ist.  Eingaben oder Befehlsverarbeitung sollten nie blockiert sein.  Die Hilfe sollte schnell angezeigt oder geschlossen werden, wenn der Benutzer die Eingabe fortsetzt.  Ihre App sollte vermeiden, den UI-Thread mit langen Berechnungen zu blockieren, die Ihre App langsam machen.  
   
- Weitere Informationen zu Roslyn-Compiler, finden Sie auf der [Dotnet/Roslyn](https://github.com/dotnet/roslyn) Repository auf GitHub.
+ Weitere Informationen zu Roslyn-Compiler, finden Sie auf die [Dotnet/Roslyn](https://github.com/dotnet/roslyn) -Repository auf GitHub.
  <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>Reine Tatsachen  
@@ -196,7 +196,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...  
 ```  
   
- Die erste Version von `WriteFormattedDocComment()` hat ein Array, mehrere untergeordnete Zeichenfolgen und eine abgeschnittene Zeichenfolge zusammen mit einem leeren `params`-Array zugeordnet.  Sie hat außerdem geprüft, ob `"///"` vorhanden ist.  Der überarbeitete Code verwendet nur die Indizierung und ordnet nichts zu.  Er findet das erste Zeichen, das kein Leerzeichen ist, und prüft dann Zeichen für Zeichen, ob die Zeichenfolge mit `"///"` beginnt.  Der neue Code verwendet `IndexOfFirstNonWhiteSpaceChar` anstelle von <xref:System.String.TrimStart%2A>, um den ersten Index (nach einem angegebenen Startindex) zurückzugeben, in dem ein Zeichen vorkommt, das kein Leerzeichen ist.  Die Korrektur ist nicht vollständig, aber Sie können sehen, wie Sie ähnliche Korrekturen für eine vollständige Lösung anwenden können.  Durch Anwendung dieses Ansatzes im gesamten Code können Sie alle Zuordnungen in `WriteFormattedDocComment()` entfernen.  
+ Die erste Version von `WriteFormattedDocComment()` hat ein Array, mehrere untergeordnete Zeichenfolgen und eine abgeschnittene Zeichenfolge zusammen mit einem leeren `params`-Array zugeordnet.  Sie hat außerdem geprüft, ob `"///"` vorhanden ist.  Der überarbeitete Code verwendet nur die Indizierung und ordnet nichts zu.  Er findet das erste Zeichen, das kein Leerzeichen ist, und prüft dann Zeichen für Zeichen, ob die Zeichenfolge mit `"///"` beginnt.  Der neue Code verwendet `IndexOfFirstNonWhiteSpaceChar` anstelle von <xref:System.String.TrimStart%2A> um den ersten Index (nach einem angegebenen Startindex) zurückzugeben, in dem ein nicht-Leerzeichen auftritt.  Die Korrektur ist nicht vollständig, aber Sie können sehen, wie Sie ähnliche Korrekturen für eine vollständige Lösung anwenden können.  Durch Anwendung dieses Ansatzes im gesamten Code können Sie alle Zuordnungen in `WriteFormattedDocComment()` entfernen.  
   
  **Beispiel 4: StringBuilder**  
   
@@ -277,7 +277,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Diese einfache Zwischenspeicherstrategie entspricht einem guten Cachedesign, da sie über eine Größenbeschränkung verfügt.  Jetzt ist jedoch mehr Code als im Original vorhanden, was höhere Wartungskosten bedeutet.  Sie sollten die Zwischenspeicherstrategie nur übernehmen, wenn Sie ein Leistungsproblem gefunden haben und PerfView gezeigt hat, dass <xref:System.Text.StringBuilder>-Zuordnungen einen signifikanten Beitrag dazu leisten.  
   
 ### <a name="linq-and-lambdas"></a>LINQ und Lambdas  
- Die Verwendung von LINQ- (Language-Integrated Query) und Lambdaausdrücken ist ein hervorragendes Beispiel für die Verwendung produktiver Funktionen, die Sie später möglicherweise umschreiben müssen, wenn sich der Code deutlich auf die Leistung auswirkt.  
+Language Integrated Query (LINQ), zusammen mit Lambda-Ausdrücke, ist ein Beispiel für eine produktivitätsfunktion. Allerdings ihre Verwendung kann erhebliche Auswirkungen auf die Leistung im Laufe der Zeit haben, und möglicherweise, dass der Code neu geschrieben werden sollen.
   
  **Example 5: Lambdas, List\<T> und IEnumerable\<T>**  
   
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- In der ersten Zeile schließt der [Lambda-Ausdruck](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name`[über](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) die lokale Variable `name`.  Das bedeutet, dass zusätzlich zum Zuordnen eines Objekts für den[Delegaten](~/docs/csharp/language-reference/keywords/delegate.md), den `predicate` speichert, der Code eine statische Klasse zuordnet, um die Umgebung zu speichern, die den Wert von `name` erfasst.  Der Compiler generiert Code wie den folgenden:  
+ In der ersten Zeile der [Lambda-Ausdruck](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [geschlossen](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) die lokale Variable `name`.  Das bedeutet, dass zusätzlich zum Zuordnen eines Objekts für den[Delegaten](~/docs/csharp/language-reference/keywords/delegate.md), den `predicate` speichert, der Code eine statische Klasse zuordnet, um die Umgebung zu speichern, die den Wert von `name` erfasst.  Der Compiler generiert Code wie den folgenden:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -412,7 +412,7 @@ class Compilation { /*...*/
   
  **Korrektur für Beispiel 6**  
   
- Zum Entfernen der abgeschlossenen <xref:System.Threading.Tasks.Task> Zuweisung, können Sie die Task-Objekt, mit dem abgeschlossenen Ergebnis Zwischenspeichern:  
+ Zum Entfernen der abgeschlossenen <xref:System.Threading.Tasks.Task> Zuordnung können Sie im Task-Objekt, mit dem abgeschlossenen Ergebnis Zwischenspeichern:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -462,12 +462,12 @@ class Compilation { /*...*/
 -   Es dreht sich alles um Zuordnungen: Hier hat das Compilerplattformteam die meiste Zeit mit der Optimierung der Leistung der neuen Compiler verbracht.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Video mit einer Darstellung der in diesem Thema](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [Video der Präsentation zu diesem Thema](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [Einführung in die Leistungsprofilerstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Leistung](../../../docs/framework/performance/index.md)  
- [Tipps zur Leistungssteigerung von .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone Performance Analysetool](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Ermitteln von Anwendungsengpässen mit Visual Studio-Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
- [Channel 9 PerfView-Lernprogramme](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [Tipps zur Leistungssteigerung auf hoher Ebene](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [Dotnet/Roslyn-Repository auf GitHub](https://github.com/dotnet/roslyn)
+ [Leistungstipps für .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone-Leistungsanalysetools](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Aufspüren von Anwendungsengpässen mit Visual Studio-Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Channel 9 PerfView-tutorials](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [Allgemeine Leistungstipps](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [Dotnet/Roslyn-Repositorys auf GitHub](https://github.com/dotnet/roslyn)

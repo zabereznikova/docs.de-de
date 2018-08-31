@@ -9,34 +9,34 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: d4351e88de896f366ae2c4050f0e1c32aa0188a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdfbe59ef779de242e32be11ca28c84f68437240
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527498"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253720"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Gewusst wie: Erstellen von untergeordneten MDI-Formularen
-Untergeordnete MDI-Formulare sind ein wesentliches Element des [Multiple Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), wie diese Formulare den Mittelpunkt der Benutzerinteraktion sind.  
+Untergeordnete MDI-Formulare sind ein wesentliches Element der [Multiple Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), wie diese Formulare den Mittelpunkt der Benutzerinteraktion sind.  
   
  Im folgenden Verfahren erstellen Sie ein untergeordnetes MDI-Formular, das ein <xref:System.Windows.Forms.RichTextBox>-Steuerelement anzeigt, das den meisten Textverarbeitungsprogrammen ähnelt. Durch Ersetzen des <xref:System.Windows.Forms>-Steuerelements durch andere Steuerelementen (z. B. das <xref:System.Windows.Forms.DataGridView>-Steuerelement oder eine Kombination von Steuerelementen können Sie untergeordnete MDI-Fenster (und durch Erweiterung auch MDI-Anwendungen) mit vielfältigen Möglichkeiten erstellen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-create-mdi-child-forms"></a>So erstellen Sie untergeordnete MDI-Formulare  
   
-1.  Erstellen Sie ein neues Windows Forms-Projekt. In **im Eigenschaftenfenster** für das Formular festgelegt seine <xref:System.Windows.Forms.Form.IsMdiContainer%2A> Eigenschaft `true`, und die zugehörige `WindowsState` Eigenschaft `Maximized`.  
+1.  Erstellen Sie ein neues Windows Forms-Projekt. In **der Eigenschaften Windows** legen Sie für das Formular seine <xref:System.Windows.Forms.Form.IsMdiContainer%2A> Eigenschaft, um `true`, und die zugehörige `WindowsState` Eigenschaft, um `Maximized`.  
   
      Dies kennzeichnet das Formular als MDI-Container für untergeordnete Fenster.  
   
 2.  Ziehen Sie ein <xref:System.Windows.Forms.MenuStrip>-Steuerelement aus der `Toolbox` in das Formular. Legen Sie dessen `Text` Eigenschaft **Datei**.  
   
-3.  Klicken Sie auf die Auslassungspunkte (...) neben dem **Elemente** -Eigenschaft, und klicken Sie auf **hinzufügen** um zwei untergeordnete Menüelemente der Toolleiste hinzuzufügen. Legen Sie die `Text` -Eigenschaft für diese Elemente **neu** und **Fenster**.  
+3.  Klicken Sie auf die Auslassungspunkte (...) neben dem **Elemente** -Eigenschaft, und klicken Sie auf **hinzufügen** um zwei untergeordnete Menüelemente der Toolleiste hinzuzufügen. Legen Sie die `Text` -Eigenschaft für diese Elemente auf **neu** und **Fenster**.  
   
-4.  In **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, zeigen Sie auf **hinzufügen**, und wählen Sie dann **neues Element hinzufügen**.  
+4.  In **Projektmappen-Explorer**, mit der rechten Maustaste in des Projekts, zeigen Sie auf **hinzufügen**, und wählen Sie dann **neues Element hinzufügen**.  
   
-5.  In der **neues Element hinzufügen** wählen Sie im Dialogfeld **Windows Form** (in Visual Basic oder Visual c#) oder **Windows Forms-Anwendung (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) aus der  **Vorlagen** Bereich. In der **Namen** Feld, nennen Sie das Formular **Form2**. Klicken Sie auf die **öffnen** Schaltfläche, um das Formular zum Projekt hinzuzufügen.  
+5.  In der **neues Element hinzufügen** wählen Sie im Dialogfeld **Windows Form** (in Visual Basic oder Visual c#) oder **Windows Forms-Anwendung (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) aus der  **Vorlagen** Bereich. In der **Namen** benennen Sie das Formular **Form2**. Klicken Sie auf die **öffnen** , um das Formular zum Projekt hinzuzufügen.  
   
     > [!NOTE]
     >  Das untergeordnete MDI-Formular, das Sie in diesem Schritt erstellten haben, ist ein Standard-Windows Form. Als solches besitzt es eine Eigenschaft <xref:System.Windows.Forms.Form.Opacity%2A>, mit der Sie die Transparenz des Formulars steuern können. Allerdings wurde die Eigenschaft <xref:System.Windows.Forms.Form.Opacity%2A> für Fenster der obersten Ebene entwickelt. Verwenden Sie sie nicht mit untergeordneten MDI-Formularen, da Darstellungsprobleme auftreten können.  
@@ -45,15 +45,15 @@ Untergeordnete MDI-Formulare sind ein wesentliches Element des [Multiple Documen
   
      Die **Windows Forms-Designer** wird geöffnet und zeigt **Form2**.  
   
-6.  Aus der **Toolbox**, ziehen Sie eine **RichTextBox** Steuerelement dem Formular.  
+6.  Von der **Toolbox**, ziehen Sie eine **RichTextBox** -Steuerelement auf das Formular.  
   
-7.  In der **Eigenschaften** legen die `Anchor` Eigenschaft, um **Top, Left** und die `Dock` Eigenschaft, um **füllen**.  
+7.  In der **Eigenschaften** legen die `Anchor` Eigenschaft **oberen, linken** und die `Dock` Eigenschaft **füllen**.  
   
      Dies bewirkt, dass das <xref:System.Windows.Forms.RichTextBox>-Steuerelement den Bereich des untergeordneten MDI-Formulars selbst dann vollständig ausgefüllt, wenn die Größe des Formulars geändert wird.  
   
-8.  Doppelklicken klicken Sie auf die **neu** Menüelement zum Erstellen einer <xref:System.Windows.Forms.Control.Click> -Ereignishandler.  
+8.  Doppelklicken dem **neu** Menüelement zum Erstellen einer <xref:System.Windows.Forms.Control.Click> -Ereignishandler.  
   
-9. Fügen Sie Code ähnlich der folgenden Optionen, um ein neues untergeordnetes MDI-Formular zu erstellen, wenn der Benutzer klickt auf die **neu** Menüelement.  
+9. Fügen Sie Code wie folgt, um ein neues untergeordnetes MDI-Formular zu erstellen, wenn der Benutzer klickt auf die **neu** Menüelement.  
   
     > [!NOTE]
     >  Im folgenden Beispiel verarbeitet der Ereignishandler das <xref:System.Windows.Forms.Control.Click>-Ereignis für `MenuItem2`. Beachten Sie, abhängig von den gegebenheiten Ihrer Anwendungsarchitektur Ihr **neu** Menüelement möglicherweise nicht `MenuItem2`.  
@@ -97,11 +97,11 @@ Untergeordnete MDI-Formulare sind ein wesentliches Element des [Multiple Documen
     #include "Form2.h"  
     ```  
   
-10. In der Dropdownliste am oberen Rand der **Eigenschaften** Fenster, wählen Sie die Menüleiste, die entspricht der **Datei** Menüleiste, und legen die <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> Eigenschaft, um das Fenster <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. In der Dropdownliste am oberen Rand der **Eigenschaften** Fenster, wählen Sie die Menüleiste, die entspricht, der **Datei** Menüleiste, und legen die <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> Eigenschaft, um das Fenster <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-     Dadurch kann die **Fenster** -Menü, um eine Liste der geöffneten untergeordneten MDI-Fenster mit einem Häkchen neben dem aktiven untergeordneten Fenster verwalten.  
+     Dadurch werden die **Fenster** Menü, um eine Liste der geöffneten untergeordneten MDI-Fenster mit einem Häkchen neben dem aktiven untergeordneten Fenster verwalten.  
   
-11. Drücken Sie F5, um die Anwendung auszuführen. Durch Auswahl **neu** aus der **Datei** im Menü Erstellen Sie neue untergeordnete MDI-Formulare, die behalten in den Überblick über sind die **Fenster** Menüelement.  
+11. Drücken Sie F5, um die Anwendung auszuführen. Durch Auswahl **neu** aus der **Datei** im Menü Erstellen Sie neue untergeordnete MDI-Formulare, die bleiben im Überblick darüber, sind die **Fenster** Menüelement.  
   
     > [!NOTE]
     >  Wenn ein untergeordnetes MDI-Formular eine Komponente <xref:System.Windows.Forms.MainMenu> (in der Regel mit einer Menüstruktur aus Menüelementen) besitzt und innerhalb eines übergeordneten MDI-Formulars geöffnet wird, das eine Komponente <xref:System.Windows.Forms.MainMenu> (in der Regel mit einer Menüstruktur aus Menüelementen) besitzt, werden die Menüelemente automatisch zusammengeführt, wenn Sie die Eigenschaft <xref:System.Windows.Forms.MenuItem.MergeType%2A> (und optional die Eigenschaft <xref:System.Windows.Forms.MenuItem.MergeOrder%2A>) festgelegt haben. Legen Sie die Eigenschaft <xref:System.Windows.Forms.MenuItem.MergeType%2A> -beider <xref:System.Windows.Forms.MainMenu>-Komponenten sowie alle Menüelemente des untergeordneten Formulars auf <xref:System.Windows.Forms.MenuMerge.MergeItems> fest. Legen Sie außerdem die Eigenschaft <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> so fest, dass die Menüelemente aus beiden Menüs in der gewünschten Reihenfolge angezeigt werden. Bedenken Sie außerdem, dass beim Schließen eines übergeordneten MDI-Formulars jedes untergeordnete MDI-Formular ein Ereignis <xref:System.Windows.Forms.Form.Closing> auslöst, bevor das Ereignis <xref:System.Windows.Forms.Form.Closing> für das übergeordnete MDI-Formular ausgelöst wird. Durch das Abbrechen des <xref:System.Windows.Forms.Form.Closing>-Ereignisses eines untergeordneten MDI-Formulars wird nicht verhindert, dass das <xref:System.Windows.Forms.Form.Closing>-Ereignis des übergeordneten MDI-Formulars ausgelöst wird. Allerdings ist das <xref:System.ComponentModel.CancelEventArgs>-Argument für das <xref:System.Windows.Forms.Form.Closing>-Ereignis des übergeordneten MDI-Formulars jetzt auf `true` festgelegt. Sie können erzwingen, dass das übergeordnete MDI-Element und alle untergeordneten MDI-Formulare geschlossen werden, indem Sie das <xref:System.ComponentModel.CancelEventArgs>-Argument auf `false` festlegen.  

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 751794746e26bd8f0ec2cd6db2f62876e78674e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b6a217e2212bb900d7ba83ccdd9cb00d30454baf
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460274"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253053"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver-Funktion
-Lädt eine Typbibliothek und verwendet den angegebenen [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) intern referenzierte Typbibliotheken aufgelöst.  
+Lädt eine Typbibliothek und verwendet die angegebene [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) intern referenzierte Typbibliotheken aufgelöst.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,13 +41,13 @@ HRESULT LoadTypeLibWithResolver(
  [in] Der Dateipfad der Typbibliothek.  
   
  `regkind`  
- [in] Ein [REGKIND Enumeration](https://msdn.microsoft.com/library/windows/desktop/ms221159.aspx) Flag, das steuert, wie die Typbibliothek registriert wird. Folgende Werte sind möglich:  
+ [in] Ein [REGKIND Enumeration](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) Flag, das steuert, wie die Typbibliothek registriert wird. Die Werte sind möglich:  
   
 -   `REGKIND_DEFAULT`: Verwenden Sie Standardverhalten für die Registrierung.  
   
 -   `REGKIND_REGISTER`: Diese Typbibliothek zu registrieren.  
   
--   `REGKIND_NONE`: Diese Typbibliothek keine nicht registriert werden.  
+-   `REGKIND_NONE`: Sie diese Typbibliothek nicht registriert.  
   
  `pTlbResolver`  
  [in] Ein Zeiger auf die Implementierung der [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  
@@ -56,7 +56,7 @@ HRESULT LoadTypeLibWithResolver(
  [out] Ein Verweis auf die Typbibliothek, die geladen wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Einer der HRESULT-Werte, die in der folgenden Tabelle aufgeführt.  
+ Einer der in der folgenden Tabelle aufgeführten HRESULT-Werte.  
   
 |Rückgabewert|Bedeutung|  
 |------------------|-------------|  
@@ -67,25 +67,25 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_IOERROR`|Die Funktion konnte nicht in die Datei schreiben.|  
 |`TYPE_E_REGISTRYACCESS`|Die Systemdatenbank für die Registrierung konnte nicht geöffnet werden.|  
 |`TYPE_E_INVALIDSTATE`|Die Typbibliothek konnte nicht geöffnet werden.|  
-|`TYPE_E_CANTLOADLIBRARY`|Die Typbibliothek oder DLL konnte nicht geladen werden.|  
+|`TYPE_E_CANTLOADLIBRARY`|Die Typbibliothek oder einer DLL konnte nicht geladen werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [Tlbexp.exe (Type Library Exporter-Tool)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) Aufrufe der `LoadTypeLibWithResolver` Funktion während der Konvertierung der Assembly in eine Bibliothek.  
+ Die [Tlbexp.exe (Type Library Exporter-Tool)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) Aufrufe der `LoadTypeLibWithResolver` Funktion während der Konvertierung der Assembly in den Typ in der Bibliothek.  
   
- Diese Funktion lädt die angegebene Typbibliothek mit minimalen Zugriff auf die Registrierung. Anschließend überprüft die Funktion die Typbibliothek für Typbibliotheken intern auf die verwiesen wird, von die jede geladen und der übergeordnete Typ-Bibliothek hinzugefügt werden muss.  
+ Diese Funktion lädt die angegebene Typbibliothek mit minimalen Zugriff auf die Registrierung. Die Funktion überprüft dann die Typbibliothek für Typbibliotheken intern auf die verwiesen wird, von die jede geladen und der übergeordnete Typ-Bibliothek hinzugefügt werden muss.  
   
- Bevor eine referenzierte Typbibliothek geladen werden kann, muss seine Verweispfad für die Datei in einen vollständigen Pfad aufgelöst werden. Dies erfolgt über die [ResolveTypeLib-Methode](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) , die vom bereitgestellt der [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), der übergeben wird, der `pTlbResolver` Parameter.  
+ Bevor eine referenzierte Typbibliothek geladen werden kann, muss die Verweis-Dateipfad in einen vollständigen Dateipfad aufgelöst werden. Dies erfolgt über die [ResolveTypeLib-Methode](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) , erfolgt über die [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), im übergeben wird die `pTlbResolver` Parameter.  
   
- Wenn Sie der vollständigen Dateipfad der Typbibliothek, auf die verwiesen wird, bekannt ist, die `LoadTypeLibWithResolver` Funktion lädt und übergeordneten Typbibliothek, erstellen eine kombinierte master Typbibliothek referenzierten Typbibliothek hinzugefügt.  
+ Wenn Sie der vollständigen Pfad der Typbibliothek, auf die verwiesen wird, bekannt ist, die `LoadTypeLibWithResolver` Funktion lädt und die Bibliothek mit übergeordneten, erstellen eine kombinierte master Typbibliothek die referenzierte Bibliothek hinzugefügt.  
   
- Nachdem die Funktion aufgelöst und alle Typbibliotheken intern auf die verwiesen wird lädt, gibt es einen Verweis auf master aufgelöst Typbibliothek in die `pptlib` Parameter.  
+ Nachdem die Funktion aufgelöst und alle intern Typbibliotheken lädt, gibt es einen Verweis auf master aufgelöst Typbibliothek in der `pptlib` Parameter.  
   
- Die `LoadTypeLibWithResolver` Funktion wird in der Regel aufgerufen, indem die [Tlbexp.exe (Type Library Exporter-Tool)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), die eigene interne ausgeben [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) Implementierung in der `pTlbResolver` Parameter.  
+ Die `LoadTypeLibWithResolver` Funktion ist in der Regel aufgerufen, indem die [Tlbexp.exe (Type Library Exporter-Tool)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), die stellt eine eigene, interne [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) -Implementierung in der `pTlbResolver` der Parameter.  
   
- Beim Aufrufen `LoadTypeLibWithResolver` direkt, geben Sie an Ihre eigenen [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) Implementierung.  
+ Wenn Sie aufrufen `LoadTypeLibWithResolver` direkt, geben Sie an Ihre eigenen [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) Implementierung.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** TlbRef.h  
   
@@ -95,4 +95,4 @@ HRESULT LoadTypeLibWithResolver(
   
 ## <a name="see-also"></a>Siehe auch  
  [Tlbexp-Hilfsfunktionen](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx-Funktion](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)
+ [LoadTypeLibEx-Funktion](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

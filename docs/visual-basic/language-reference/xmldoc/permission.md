@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 4fafebf94be350951672f01f2d17bd00d4bab69a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcec5d968f5d0c5400c28e772df151b164888a47
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601994"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257434"
 ---
 # <a name="ltpermissiongt-visual-basic"></a>&lt;Berechtigung&gt; (Visual Basic)
 Gibt eine erforderliche Berechtigung für das Element an.  
@@ -29,7 +29,7 @@ Gibt eine erforderliche Berechtigung für das Element an.
  Eine Beschreibung des Zugriffs auf den Member  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `<permission>` -Tag, um den Zugriff auf ein Element zu dokumentieren. Verwenden der <xref:System.Security.PermissionSet> Klasse, um den Zugriff auf ein Element anzugeben.  
+ Verwenden der `<permission>` Tag, um den Zugriff auf einen Member dokumentieren. Verwenden der <xref:System.Security.PermissionSet> Klasse, um den Zugriff auf ein Element anzugeben.  
   
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
   
@@ -39,4 +39,4 @@ Gibt eine erforderliche Berechtigung für das Element an.
  [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)

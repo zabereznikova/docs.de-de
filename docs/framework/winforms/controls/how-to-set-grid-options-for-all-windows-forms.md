@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 663e816cdc31ed7854f7ebd060bffcfa5b85f475
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1779752cea467cbd7ee25235821ca99fc5cbdb5
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535024"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253351"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Gewusst wie: Festlegen von Rasteroptionen für alle Windows Forms
-Sie verwendet werden, in der Visual Studio-Entwicklungsumgebung arbeiten, können Sie Einstellungen für die Formulare und die Arbeit mit Projekten in Windows Forms-Designer festlegen.  
+Wie Sie mit der Arbeit in der Visual Studio-Entwicklungsumgebung werden verwendet, können Sie Einstellungen für die Formulare und Projekte, mit denen, die Sie zusammenarbeiten, im Windows Forms-Designer festlegen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-set-global-windows-forms-options"></a>Festlegen von Optionen für globale Windows Forms  
   
-1.  Aus der **Tools** klicken Sie im Menü **Optionen**.  
+1.  Von der **Tools** , wählen Sie im Menü **Optionen**.  
   
-2.  Im linken Bereich des der **Optionen** (Dialogfeld), klicken Sie auf **Windows Forms-Designer**.  
+2.  Im linken Bereich die **Optionen** Dialogfeld klicken Sie auf **Windows Forms-Designer**.  
   
-     Im rechten Bereich unter der **Layouteinstellungen** Überschrift können setzen Sie die standardmäßige rastereinstellungen für alle neuen Formulare, die Sie erstellen. Diese Einstellungen umfassen die Rastergröße der gibt an, ob Steuerelemente darauf ausgerichtet, und gibt an, ob es standardmäßig aktiviert ist. Darüber hinaus können Sie auswählen zwischen **SnapToGrid** und **Ausrichtungslinien** Layoutmodi. Weitere Informationen über Ausrichtungslinien finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     Klicken Sie im rechten Bereich unter der **Layouteinstellungen** Überschrift können legen Sie die standardmäßige Einstellungen für alle neuen Formulare, die Sie erstellen. Diese Einstellungen umfassen die Größe des Rasters gibt an, ob Steuerelemente darauf ausgerichtet, und gibt an, ob es standardmäßig aktiviert ist. Darüber hinaus können Sie auswählen zwischen **SnapToGrid** und **Ausrichtungslinien** Layoutmodi. Weitere Informationen zu Ausrichtungslinien, finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
