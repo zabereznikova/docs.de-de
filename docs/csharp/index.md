@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 15c10d8891e87ab241104e6aa760c221e8b9e249
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 2f888fbc063799e258040edf5116fc02e3f9a668
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472373"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332252"
 ---
 # <a name="c-guide"></a>Leitfaden für C#
 
@@ -66,6 +66,6 @@ Der Leitfaden für C# ist in mehrere Abschnitte unterteilt. Sie können diese na
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-[.NET-Entwicklung](https://msdn.microsoft.com/library/ff361664)  
-[C#-Beispiele](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+* [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
+* [.NET-Entwicklung](https://msdn.microsoft.com/library/ff361664)  
+* [C#-Beispiele](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  

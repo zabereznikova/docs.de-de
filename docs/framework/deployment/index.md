@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2686d0db966192606656167d6e505f34ded333f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38ed31748560292753789e38595a5e30f6ea08a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396528"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404607"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Bereitstellen von .NET Framework und Anwendungen
 Dieser Artikel hilft Ihnen dabei, mit der Bereitstellung des .NET Framework mit Ihrer Anwendung zu beginnen. Die meisten der Informationen sind für Entwickler, OEM- und Organisationsadministratoren vorgesehen. Benutzer, die .NET Framework auf ihren Computern installieren möchten, sollten die Informationen unter [Installieren von .NET Framework](~/docs/framework/install/index.md) lesen.  
@@ -58,13 +58,13 @@ Dieser Artikel hilft Ihnen dabei, mit der Bereitstellung des .NET Framework mit 
   
 -   Bereitstellen von .NET Framework (für OEMs und Administratoren):  
   
-    -   [Windows Assessment and Deployment Kit (ADK)](http://go.microsoft.com/fwlink/p/?LinkId=254976)  
+    -   [Windows Assessment and Deployment Kit (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)  
   
     -   [Administratorhandbuch](../../../docs/framework/deployment/guide-for-administrators.md)  
   
  **Wartung**  
   
--   Allgemeine Informationen finden Sie im [.NET Framework-Blog](http://go.microsoft.com/fwlink/p/?LinkId=254977).  
+-   Allgemeine Informationen finden Sie im [.NET Framework-Blog](https://go.microsoft.com/fwlink/p/?LinkId=254977).  
   
 -   [Erkennen von Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
   
@@ -153,7 +153,7 @@ Dieser Artikel hilft Ihnen dabei, mit der Bereitstellung des .NET Framework mit 
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|description|  
+|Titel|Beschreibung |  
 |-----------|-----------------|  
 |[So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Beschreibt, wie die Common Language Runtime ermittelt, welche Assembly zur Erfüllung einer Bindungsanforderung verwendet wird.|  
 |[Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können.|  

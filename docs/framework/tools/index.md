@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4034a23b076bc0f3041f09dc4756646a926d6915
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314684"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332519"
 ---
 # <a name="net-framework-tools"></a>.NET Framework-Tools
 Die .NET Framework-Tools erleichtern Ihnen das Erstellen, Bereitstellen und Verwalten von Anwendungen und Komponenten für .NET Framework.  
@@ -129,7 +129,7 @@ Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden a
  Unterstützt das Lokalisieren von Ressourcen der Benutzeroberfläche (RESX- oder RESOURCES-Dateien), die von Windows Forms verwendet werden. Sie können die Zeichenfolgen übersetzen und anschließend die Steuerelemente in der Größe anpassen, verschieben oder ausblenden, um die lokalisierten Zeichenfolgen anzupassen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Extras](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [Extras](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
  Enthält Tools, z.B. das IsXPS-Konformitätstool (isXPS.exe) und Leistungsprofilerstellungstools.  
   
  [Windows Communication Foundation-Tools](../../../docs/framework/wcf/tools.md)  

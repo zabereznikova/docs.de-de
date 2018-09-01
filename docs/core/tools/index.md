@@ -4,12 +4,12 @@ description: Dies ist ein Überblick über die Tools und Funktionen der .NET Cor
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.openlocfilehash: e6519ef560026899344c7fc36d91c2409cf1df9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ef69f98171da98b50aae4cdd2f5f88f37ad0c63
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217931"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403405"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)
 
@@ -119,7 +119,6 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-
 ---
 
 ### <a name="driver"></a>Treiber
@@ -140,7 +139,7 @@ Die Argumente, die Sie in der Befehlszeile übergeben, sind die Argumente für d
 
 ### <a name="options"></a>Optionen
 
-Die Optionen, die Sie in der Befehlszeile übergeben, sind die Optionen für den aufgerufenen Befehl. Wenn Sie z.B. `dotnet publish --output /build_output` ausführen, werden die `--output`-Option und ihr Wert an den `publish`-Befehl übergeben. 
+Die Optionen, die Sie in der Befehlszeile übergeben, sind die Optionen für den aufgerufenen Befehl. Wenn Sie z.B. `dotnet publish --output /build_output` ausführen, werden die `--output`-Option und ihr Wert an den `publish`-Befehl übergeben.
 
 ## <a name="migration-from-projectjson"></a>Migration von project.json
 
@@ -148,5 +147,5 @@ Wenn Sie Preview 2-Tools verwendet haben, um *project.json*-basierte Projekte zu
 
 ## <a name="see-also"></a>Siehe auch
 
- [dotnet/CLI GitHub Repository (dotnet/CLI-GitHub-Repository)](https://github.com/dotnet/cli/)  
- [.NET Core installation guide (.NET Core-Installationshandbuch)](https://aka.ms/dotnetcoregs)  
+* [dotnet/CLI GitHub Repository (dotnet/CLI-GitHub-Repository)](https://github.com/dotnet/cli/)  
+* [.NET Core installation guide (.NET Core-Installationshandbuch)](https://aka.ms/dotnetcoregs)  

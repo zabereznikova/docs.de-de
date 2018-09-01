@@ -2,12 +2,12 @@
 title: Asynchrone Programmierung mit „async“ und „await“ (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: b1797a6d37728021820f5dfa5c01a7ee0c972f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38247969260fecd2fe527efb1ddb0c097fa2a47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339098"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390232"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Asynchrone Programmierung mit Async und Await (C#)
 Sie können Leistungsengpässe vermeiden und die Reaktionsfähigkeit der Anwendung insgesamt verbessern, indem Sie asynchrone Programmierung verwenden. Allerdings können herkömmliche Verfahren zum Schreiben von asynchronen Anwendungen kompliziert sein, weshalb es schwierig ist, diese Anwendungen zu schreiben, zu debuggen und zu verwalten.  
@@ -140,7 +140,7 @@ Weitere Informationen zur Ablaufsteuerung finden Sie unter [Ablaufsteuerung in a
 ##  <a name="BKMK_APIAsyncMethods"></a> API-Async-Methoden  
  Sie fragen sich möglicherweise, wo Methoden wie `GetStringAsync` zu finden sind, die die asynchrone Programmierung unterstützen. .NET Framework 4.5 oder höher und .NET Core enthalten viele Member, die mit `async` und `await` funktionieren. Sie können sie durch das Suffix „Async“ erkennen, das dem Membernamen und dem Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> angefügt wird. Beispielsweise enthält die `System.IO.Stream`-Klasse Methoden wie <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A> sowie die synchronen Methoden <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> und <xref:System.IO.Stream.Write%2A>.  
   
- Die Windows-Runtime enthält außerdem viele Methoden, die Sie mit `async` und `await` in Windows-Apps verwenden können. Weitere Informationen finden Sie unter [Threading und asynchrone Programmierung](/windows/uwp/threading-async/) für die UWP-Entwicklung und unter [Asynchrone Programmierung (Windows Store-Apps)](/previous-versions/windows/apps/hh464924(v=win.10)) sowie unter [Schnellstart: Aufrufen asynchroner APIs in C# oder Visual Basic](/previous-versions/windows/apps/hh452713(v=win.10)), falls Sie frühere Versionen der Windows-Runtime verwenden.  
+ Die Windows-Runtime enthält außerdem viele Methoden, die Sie mit `async` und `await` in Windows-Apps verwenden können. Weitere Informationen finden Sie unter [Threading und asynchrone Programmierung](/windows/uwp/threading-async/) für die UWP-Entwicklung und unter [Asynchrone Programmierung (Windows Store-Apps)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) sowie unter [Schnellstart: Aufrufen asynchroner APIs in C# oder Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10)), falls Sie frühere Versionen der Windows-Runtime verwenden.  
   
 ##  <a name="BKMK_Threads"></a> Threads  
 Async-Methoden sollen nicht blockierende Vorgänge sein. Ein `await`-Ausdruck in einer asynchronen Methode blockiert den aktuellen Thread nicht, während der abgewartete Task ausgeführt wird. Stattdessen registriert der Ausdruck den Rest der Methode als Fortsetzung und gibt die Steuerung an den Aufrufer der Async-Methode zurück.  
@@ -235,7 +235,7 @@ Asynchrone APIs in der Windows-Runtime-Programmierung weisen einen der folgenden
   
 ##  <a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele (Visual Studio)  
   
-|Titel|description|Beispiel|  
+|Titel|Beschreibung |Beispiel|  
 |-----------|-----------------|------------|  
 |[Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Zeigt, wie eine synchrone WPF-Projektmappe in eine asynchrone WPF-Projektmappe konvertiert wird. Die Anwendung lädt eine Reihe von Websites herunter.|[Async Sample: Accessing the Web Walkthrough](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Asynchrones Beispiel: Aufrufen der exemplarischen Vorgehensweise)|  
 |[Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Fügt der vorherigen exemplarischen Vorgehensweise <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> hinzu. Bei Verwendung von `WhenAll` werden alle Downloads gleichzeitig gestartet.||  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254311"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394333"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. Im .NET Framework enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
@@ -137,13 +137,13 @@ Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Wi
   
  Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden:  
   
--   Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen im [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx)-Namespace der [!INCLUDE[wrt](../../../includes/wrt-md.md)], z. B. [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) und [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen im [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx)-Namespace der [!INCLUDE[wrt](../../../includes/wrt-md.md)], z. B. [StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) und [StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
 -   Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Verwenden Sie asynchrone Methoden, wie <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A>, um zu verhindern, dass UI-Threads blockiert werden.  
   
--   Die auf einem Pfad basierenden Komprimierungstypen <xref:System.IO.Compression.ZipFile> und <xref:System.IO.Compression.ZipFileExtensions> sind nicht verfügbar. Verwenden Sie stattdessen die Typen im [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx)-Namespace.  
+-   Die auf einem Pfad basierenden Komprimierungstypen <xref:System.IO.Compression.ZipFile> und <xref:System.IO.Compression.ZipFileExtensions> sind nicht verfügbar. Verwenden Sie stattdessen die Typen im [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx)-Namespace.  
   
  Sie können .NET Framework-Streams in Windows-Runtime-Streams konvertieren und umgekehrt, falls erforderlich. Weitere Informationen finden Sie unter [Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) oder [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   

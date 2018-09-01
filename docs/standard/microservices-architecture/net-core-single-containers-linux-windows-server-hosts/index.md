@@ -4,16 +4,16 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Ber
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 56c41a51cddeca6c74b09710f9536195a6a88904
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404498"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388627"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Bereitstellen von einzelnen auf Containern basierenden .NET Core-Webanwendungen auf Linux- oder Windows Nano Server-Hosts
 
-_Sie können Docker-Container für die monolithische Bereitstellung von einfachen Webanwendungen verwenden. Dies verbessert die fortlaufende Integration und die fortlaufenden Bereitstellungspipelines und unterstützt Sie bei der erfolgreichen Bereitstellung in der Produktion. Sie müssen sich nie wieder fragen, warum die Anwendung auf Ihrem Computer aber nicht in der Produktion funktioniert._
+_Sie können Docker-Container für die monolithische Bereitstellung von einfachen Webanwendungen verwenden. Dies verbessert die fortlaufende Integration und die fortlaufenden Bereitstellungspipelines und unterstützt Sie bei der erfolgreichen Bereitstellung in der Produktion. Sie müssen sich nie wieder fragen, warum die Anwendung auf Ihrem Computer, aber nicht in der Produktion funktioniert._
 
 Eine auf Microservices basierende Architektur hat viele Vorteile, die jedoch eine erhöhte Komplexität mit sich bringen. In manchen Fällen sind die Kosten der ausschlaggebende Faktor und nicht die Vorteile, und eine monolithische Bereitstellung einer Anwendung, die in einem oder in wenigen Containern ausgeführt wird, ist eine bessere Option.
 
@@ -41,7 +41,7 @@ Die [eShopWeb](https://github.com/dotnet-architecture/eShopOnContainers/tree/mas
 
 Die Anwendung verwendet eine SQL Server-Datenbank für den Katalogspeicher. In auf Containern basierten Bereitstellungen kann diese monolithische Anwendung auf denselben Datenspeicher wie die auf Microservices basierte Anwendung zugreifen. Die Anwendung wird dafür konfiguriert, SQL Server in einem Container neben der monolithischen Anwendung auszuführen. In einer Produktionsumgebung wird SQL Server auf einem Hochverfügbarkeitscomputer außerhalb des Docker-Hosts ausgeführt. Zur Vereinfachung wird empfohlen, SQL Server in einer Entwicklungs- oder Testumgebung in einem eigenen Container auszuführen.
 
-Die anfänglich festgelegten Features ermöglichen nur das Durchsuchen des Katalogs. Updates aktivieren die vollständige Featuregruppe der Containeranwendung. Eine erweiterte Architektur mit einer monolithischen Webanwendung wird im E-Book [ASP.NET Web Application architecture practices (Methoden zur ASP.NET-Webanwendungarchitektur)](https://aka.ms/webappebook) und der dazugehörenden [eShopOnWeb-Beispielanwendung](http://aka.ms/WebAppArchitecture) beschrieben.
+Die anfänglich festgelegten Features ermöglichen nur das Durchsuchen des Katalogs. Updates aktivieren die vollständige Featuregruppe der Containeranwendung. Eine erweiterte Architektur mit einer monolithischen Webanwendung wird im E-Book [ASP.NET Web Application architecture practices (Methoden zur ASP.NET-Webanwendungarchitektur)](https://aka.ms/webappebook) und der dazugehörenden [eShopOnWeb-Beispielanwendung](https://aka.ms/WebAppArchitecture) beschrieben.
 
 ## <a name="docker-support"></a>Docker-Unterstützung
 

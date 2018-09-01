@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07b19c062d314fe3280d9ebed818b484ff9d1b13
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314749"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387772"
 ---
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
 
@@ -69,7 +69,7 @@ Gehen Sie beim Entwickeln von .NET Framework-Apps oder -Komponenten folgenderma�
 
 1. Wenn sie nicht bereits auf dem Betriebssystem vorinstalliert ist, installieren Sie die für die App erforderliche Version von .NET Framework. Die neueste Produktionsversion ist .NET Framework 4.7.2, die mit dem Windows 10-Update vom 10. April 2018 vorinstalliert wird und in älteren Versionen des Windows-Betriebssystems zum Download verfügbar ist. Informationen zu den Systemanforderungen von .NET Framework finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md). Informationen zum Installieren anderer Versionen von .NET Framework finden Sie im [Installationshandbuch](../../../docs/framework/install/guide-for-developers.md). Zusätzliche .NET Framework-Pakete werden Out-of-Band freigegeben, das bedeutet, dass sie auf fortlaufender Basis außerhalb aller regulären oder geplanten Freigabezyklen freigegeben werden. Weitere Informationen zu diesen Paketen finden Sie unter [.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
-2. Wählen Sie die von .NET Framework unterstützten Sprachen aus, die Sie zur Entwicklung von Apps verwenden möchten. Es stehen mehrere Sprachen zur Verfügung, darunter [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) und C++/CLI von Microsoft. (Programmiersprachen, die Ihnen ermöglichen, Apps für .NET Framework zu entwickeln, erfüllen die [CLI-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=199862).)
+2. Wählen Sie die von .NET Framework unterstützten Sprachen aus, die Sie zur Entwicklung von Apps verwenden möchten. Es stehen mehrere Sprachen zur Verfügung, darunter [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) und C++/CLI von Microsoft. (Programmiersprachen, die Ihnen ermöglichen, Apps für .NET Framework zu entwickeln, erfüllen die [CLI-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=199862).)
 
 3. Wählen Sie die Entwicklungsumgebung aus, die Sie zum Erstellen der Apps verwenden möchten und die von der von Ihnen gewählten Programmiersprachen unterstützt werden, und installieren Sie sie. Die integrierte Microsoft-Entwicklungsumgebung (IDE) für .NET Framework-Apps ist [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Es stehen verschiedene Editionen zur Verfügung.
 
@@ -77,7 +77,7 @@ Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgericht
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-| Titel | description |
+| Titel | Beschreibung  |
 | ----- |------------ |
 | [Übersicht](../../../docs/framework/get-started/overview.md) | Enthält ausführliche Informationen für Entwickler, die Apps für .NET Framework erstellen. |
 | [Installationshandbuch](../../../docs/framework/install/index.md) | Stellt Informationen zum Installieren von .NET Framework bereit. |  

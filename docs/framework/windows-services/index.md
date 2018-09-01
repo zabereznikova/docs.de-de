@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 manager: douge
-ms.openlocfilehash: af6e4bf7697b3139f6809295737fdd0d90b7f013
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7fb148b96d5ff9804bcb0bb7c842c475c0f117
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512267"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385980"
 ---
 # <a name="developing-windows-service-applications"></a>Entwickeln von Windows-Dienstanwendungen
 Über Microsoft Visual Studio oder das Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK können Dienste problemlos erstellt werden, indem eine Anwendung erstellt und als Dienst installiert wird. Dieser Anwendungstyp wird als Windows-Dienst bezeichnet. Mit Frameworkfeatures können Sie Dienste erstellen, diese installieren, starten, beenden oder auch auf andere Weise deren Verhalten steuern.  
@@ -48,5 +48,5 @@ ms.locfileid: "33512267"
  <xref:System.ServiceProcess.ServiceInstaller>  
  Beschreibt die Features der <xref:System.ServiceProcess.ServiceInstaller>-Klasse, die zusammen mit der <xref:System.ServiceProcess.ServiceProcessInstaller>-Klasse zum Installieren und Deinstallieren Ihres Diensts verwendet wird  
   
- [NIB: Erstellen von Projekten aus Vorlagen](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ [NIB: Erstellen von Projekten aus Vorlagen](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
  Beschreibt die Projekttypen, die in diesem Kapitel verwendet werden und wie Sie aus Ihnen wählen

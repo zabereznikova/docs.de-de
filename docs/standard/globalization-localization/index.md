@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35250998"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419146"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalisieren und Lokalisieren von .NET-Anwendungen
-Die Entwicklung einer [weltweit einsetzbaren Anwendung](http://msdn.microsoft.com/goglobal/bb978433.aspx), einschließlich einer Anwendung, die in eine oder mehrere Sprachen lokalisiert werden kann, umfasst drei Schritte: Globalisierung, Prüfung der Lokalisierbarkeit und Lokalisierung.  
+Die Entwicklung einer [weltweit einsetzbaren Anwendung](https://msdn.microsoft.com/goglobal/bb978433.aspx), einschließlich einer Anwendung, die in eine oder mehrere Sprachen lokalisiert werden kann, umfasst drei Schritte: Globalisierung, Prüfung der Lokalisierbarkeit und Lokalisierung.  
   
  [Globalisierung](../../../docs/standard/globalization-localization/globalization.md)  
  Dieser Schritt umfasst den Entwurf und die Codierung einer Anwendung, die kultur- und sprachneutral ist und die lokalisierten Benutzeroberflächen und regionalen Daten für alle Benutzer unterstützt. Er umfasst das Treffen von Entwurfs- und Programmierungsentscheidungen, die nicht auf kulturspezifischen Annahmen basieren. Während eine globalisierte Anwendung nicht lokalisiert wird, wird sie dennoch so entworfen und geschrieben, dass sie anschließend relativ einfach in eine oder mehrere Sprachen lokalisiert werden kann.  
