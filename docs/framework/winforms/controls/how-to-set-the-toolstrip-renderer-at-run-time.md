@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
-ms.openlocfilehash: 893f6a10afeadee8142bf4df2d8929b59480bcb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98a027cb8cd913e3e2d00db16fc2f527159a1c87
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534179"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391659"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Gewusst wie: Festlegen des ToolStrip-Renderers zur Laufzeit
 Sie können die Darstellung des <xref:System.Windows.Forms.ToolStrip>-Steuerelements anpassen, indem Sie eine benutzerdefinierte `ProfessionalColorTable`-Klasse erstellen.  
@@ -48,7 +48,7 @@ Sie können die Darstellung des <xref:System.Windows.Forms.ToolStrip>-Steuerelem
   
 -   Verweise auf die Assemblys "System.Design", "System.Drawing" und "System.Windows.Forms".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.ToolStripManager>  

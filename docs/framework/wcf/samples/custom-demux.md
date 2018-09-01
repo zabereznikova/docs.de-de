@@ -2,15 +2,15 @@
 title: Benutzerdefinierter Demux
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1542743a6e1658bad162d7ee9ca73e6b9b0444e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805563"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395660"
 ---
 # <a name="custom-demux"></a>Benutzerdefinierter Demux
-In diesem Beispiel wird veranschaulicht, wie MSMQ-Nachrichtenheader unterschiedlichen Dienstvorgängen zugeordnet werden können, damit Windows Communication Foundation (WCF), bei denen services <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> besteht keine Einschränkung auf die Verwendung eines einzigen Dienstvorgangs aus, wie in der [ Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) und [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) Beispiele.  
+In diesem Beispiel wird veranschaulicht, wie MSMQ-Nachrichtenheader unterschiedlichen Dienstvorgängen zugeordnet werden können, damit Windows Communication Foundation (WCF), Verwendung von services <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sind nicht nur eines einzigen Dienstvorgangs verwenden, wie in der [ Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) und [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) Beispiele.  
   
  Der Dienst ist in diesem Beispiel eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten in Warteschlangen empfängt.  
   
@@ -109,7 +109,7 @@ public static void Main()
  Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben.  
   
 > [!NOTE]
->  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die WCF-Endpunktadresse gibt ein msmq.formatname-Schema und verwendet "localhost" für den lokalen Computer. Dem Schema folgt eine ordnungsgemäß entsprechend den Namens- und Adressierungsrichtlinien des MSMQ-Formats formatierte Warteschlangenadresse.  
+>  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die WCF-Endpunktadresse gibt ein msmq.formatname-Schema, und verwendet "localhost" für den lokalen Computer. Dem Schema folgt eine ordnungsgemäß entsprechend den Namens- und Adressierungsrichtlinien des MSMQ-Formats formatierte Warteschlangenadresse.  
   
 ```xml  
 <appSettings>  
@@ -119,7 +119,7 @@ public static void Main()
 ```  
   
 > [!NOTE]
->  Dieses Beispiel erfordert die Installation von [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=95143).  
+>  Dieses Beispiel erfordert die Installation von [Message Queuing-](https://go.microsoft.com/fwlink/?LinkId=95143).  
   
  Starten Sie den Dienst, und führen Sie den Client aus.  
   
@@ -154,23 +154,23 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist. Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt. Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen. Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:  
   
     1.  Öffnen Sie Server-Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Erweitern Sie die **Funktionen** Registerkarte.  
+    2.  Erweitern Sie die **Features** Registerkarte.  
   
     3.  Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.  
   
     4.  Überprüfen Sie die **transaktional** Feld.  
   
-    5.  Geben Sie `ServiceModelSamplesTransacted` als Namen für die neue Warteschlange.  
+    5.  Geben Sie `ServiceModelSamplesTransacted` als Name der neuen Warteschlange.  
   
 3.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-4.  Um das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
@@ -189,10 +189,10 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
 ## <a name="see-also"></a>Siehe auch  
  [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=95143)
+ [Message Queuing-](https://go.microsoft.com/fwlink/?LinkId=95143)

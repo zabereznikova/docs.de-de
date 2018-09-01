@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: c3cede1eb90b963f4c0b567a8df48925bca9b02d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0595bcbd3dcae7977c8734b7d3858df2412c962
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494828"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395305"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat
-Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Foundation (WCF) mit der <xref:System.ServiceModel.WSHttpBinding> Klasse, die transportsicherheit verwendet, müssen Sie auch einen Port konfigurieren, mit einem x. 509-Zertifikat. Wenn Sie keinen selbst gehosteten Dienst erstellen, können Sie Ihren Dienst auch über Internetinformationsdienste (IIS) hosten. Weitere Informationen finden Sie unter [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Foundation (WCF) mit der <xref:System.ServiceModel.WSHttpBinding> Klasse, die transportsicherheit verwendet, müssen Sie auch einen Port mit einem x. 509-Zertifikat. Wenn Sie keinen selbst gehosteten Dienst erstellen, können Sie Ihren Dienst auch über Internetinformationsdienste (IIS) hosten. Weitere Informationen finden Sie unter [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Welches Tool zum Konfigurieren eines Anschlusses verwendet wird, hängt vom Betriebssystem des Computers ab.  
   
- Verwenden Sie unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)] das HttpCfg.exe-Tool. Unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ist dieses Tool bereits installiert. Mit [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Sie können das Tool herunterladen [Windows XP Service Pack 2-Supporttools](http://go.microsoft.com/fwlink/?LinkId=88606). Weitere Informationen finden Sie unter [Httpcfg-Übersicht](http://go.microsoft.com/fwlink/?LinkId=88605). Die [Dokumentation der Windows-Supporttools](http://go.microsoft.com/fwlink/?LinkId=94840) erklärt die Syntax der Tools "Httpcfg.exe".  
+ Verwenden Sie unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)] das HttpCfg.exe-Tool. Unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ist dieses Tool bereits installiert. Mit [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Sie können das Tool unter [Windows XP Service Pack 2-Supporttools](https://go.microsoft.com/fwlink/?LinkId=88606). Weitere Informationen finden Sie unter [Httpcfg-Übersicht](https://go.microsoft.com/fwlink/?LinkId=88605). Die [Dokumentation der Windows-Supporttools](https://go.microsoft.com/fwlink/?LinkId=94840) erklärt die Syntax für das Httpcfg.exe-Tool.  
   
  Verwenden Sie unter [!INCLUDE[wv](../../../../includes/wv-md.md)] das bereits installierte Tool Netsh.exe.  
   
@@ -41,7 +41,7 @@ Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Founda
   
 ### <a name="to-determine-how-ports-are-configured"></a>So ermitteln Sie, wie Anschlüsse konfiguriert sind  
   
-1.  In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)], verwenden Sie die Tools "HttpCfg.exe" zum Anzeigen der aktuellen Portkonfiguration mithilfe der **Abfrage** und **Ssl** gewechselt wird, wie im folgenden Beispiel gezeigt.  
+1.  In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)], verwenden Sie das HttpCfg.exe-Tool zum Anzeigen der aktuellen Anschlusskonfiguration mithilfe der **Abfrage** und **Ssl** wechselt, wie im folgenden Beispiel gezeigt.  
   
     ```  
     httpcfg query ssl  
@@ -55,9 +55,9 @@ Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Founda
   
 ### <a name="to-get-a-certificates-thumbprint"></a>So rufen Sie den Fingerabdruck eines Zertifikats ab  
   
-1.  Verwenden Sie das Zertifikats-MMC-Snap-In, um nach einem X.509-Zertifikat zu suchen, das eine bestimmte Clientauthentifizierungsfunktion aufweist. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Verwenden Sie das Zertifikats-MMC-Snap-In, um nach einem X.509-Zertifikat zu suchen, das eine bestimmte Clientauthentifizierungsfunktion aufweist. Weitere Informationen finden Sie unter [How to: View Certificates with the MMC Snap-in (Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-In)](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Greifen Sie auf den Fingerabdruck des Zertifikats zu. Weitere Informationen finden Sie unter [wie: Abrufen des Fingerabdrucks eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Greifen Sie auf den Fingerabdruck des Zertifikats zu. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Kopieren Sie den Fingerabdruck des Zertifikats in einen Texteditor, beispielsweise den Windows-Editor.  
   
@@ -73,7 +73,7 @@ Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Founda
   
     -   Die **-i** Switch verfügt über die Syntax der `IP`:`port` und weist das Tool, um das Zertifikat auf den Anschluss 8012 des Computers festzulegen. Optional können Sie die vier Nullen vor der Nummer auch durch die tatsächliche IP-Adresse des Computers ersetzen.  
   
-    -   Die **-h** Switch gibt den Fingerabdruck des Zertifikats.  
+    -   Die **-h** Option gibt den Fingerabdruck des Zertifikats an.  
   
 2.  Verwenden Sie unter [!INCLUDE[wv](../../../../includes/wv-md.md)] das Netsh.exe-Tool, wie im folgenden Beispiel gezeigt:  
   
@@ -81,11 +81,11 @@ Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Founda
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   Die **"CertHash"** Parameter gibt den Fingerabdruck des Zertifikats.  
+    -   Die **Certhash** Parameter gibt den Fingerabdruck des Zertifikats.  
   
-    -   Die **IP-Port lautet** Parameter gibt die IP-Adresse und den Port an, und wie funktioniert die **-i** -Schalter des Tools "Httpcfg.exe" beschrieben.  
+    -   Die **Ipport** Parameter gibt an, die IP-Adresse und den Port und funktioniert genauso wie die **-i** -Schalter des Httpcfg.exe-Tools, beschrieben.  
   
-    -   Die **Appid** Parameter ist eine GUID, die mit die besitzende Anwendung identifiziert werden kann.  
+    -   Die **Appid** -Parameter ist eine GUID, die verwendet werden kann, um die besitzende Anwendung zu identifizieren.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>So binden Sie ein SSL-Zertifikat an eine Anschlussnummer und unterstützen Clientzertifikate  
   
@@ -111,7 +111,7 @@ Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Founda
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)], verwenden Sie die Tools "HttpCfg.exe" mit der **löschen** und **Ssl** Schlüsselwörter. Verwenden der **-i** Switch an, die `IP`:`port` Anzahl, und die **-h** Switch den Fingerabdruck angegeben.  
+2.  In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)], verwenden Sie das HttpCfg.exe-Tool, mit der **löschen** und **Ssl** Schlüsselwörter. Verwenden der **-i** verwenden, um anzugeben der `IP`:`port` Zahl ist, und die **-h** verwenden, um den Fingerabdruck anzugeben.  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

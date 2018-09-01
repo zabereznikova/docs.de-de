@@ -2,18 +2,18 @@
 title: Einfaches Beispiel
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 67c626dfa511251043da81e025aab20578be3016
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c99b4955dcc00015d54391dcb509b312190ddab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502137"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392249"
 ---
 # <a name="basic-sample"></a>Einfaches Beispiel
 In diesem Beispiel wird erläutert, wie ein Dienst sichtbar gemacht wird und wie nach einem sichtbaren Dienst gesucht und dieser aufgerufen wird. Dieses Beispiel besteht aus zwei Projekten: Dienst und Client.  
   
 > [!NOTE]
->  In diesem Beispiel wird die Suche in Code implementiert.  Ein Beispiel, die Ermittlung in der Konfiguration implementiert werden, finden Sie unter [Konfiguration](../../../../docs/framework/wcf/samples/configuration-sample.md).  
+>  In diesem Beispiel wird die Suche in Code implementiert.  Ein Beispiel, das in der Konfiguration Suche implementiert, finden Sie unter [Konfiguration](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
 ## <a name="service"></a>Dienst  
  Dies ist eine einfache Rechnerdienstimplementierung. Der mit der Suche verbundene Code befindet sich in `Main`. Dort wird dem Diensthost ein <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hinzugefügt, und es wird wie im folgenden Code dargestellt ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> hinzugefügt.  
@@ -82,7 +82,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1.  In diesem Beispiel werden HTTP-Endpunkte verwendet. Zur Ausführung des Beispiels müssen die richtigen URL-ACLs hinzugefügt werden. Weitere Informationen finden Sie unter [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  In diesem Beispiel werden HTTP-Endpunkte verwendet. Zur Ausführung des Beispiels müssen die richtigen URL-ACLs hinzugefügt werden. Weitere Informationen finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Öffnen Sie Basic.sln mit [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], und erstellen Sie das Beispiel.  
   
@@ -97,7 +97,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  
   

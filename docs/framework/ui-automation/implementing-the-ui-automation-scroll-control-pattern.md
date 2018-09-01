@@ -9,22 +9,22 @@ ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 8553bbf192a619ab5877e362b1642007432c8c64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a32d0684aa42eb5d12f200541f6daf22d3989cc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399540"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389327"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implementieren des Scroll-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.IScrollProvider>, einschließlich Informationen über Ereignisse und Eigenschaften. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
   
  Das <xref:System.Windows.Automation.ScrollPattern> -Steuerelementmuster dient zur Unterstützung eines Steuerelements, das als bildlauffähiger Container für eine Auflistung von untergeordneten Objekten fungiert. Es ist nicht erforderlich, dass das Steuerelement Bildlaufleisten verwendet, um die Bildlauffunktionen zu unterstützen, obwohl dies häufig der Fall ist.  
   
- ![Bildlauf für Steuerelemente ohne Schiebeleisten. ] (../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
+ ![Scrollen Sie nach Steuerelemente ohne Schiebeleisten. ](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
 Beispiel für ein Bildlaufsteuerelement, das keine Bildlaufleisten verwendet  
   
  Beispiele für Steuerelemente, die dieses Steuerelement implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
@@ -41,7 +41,7 @@ Beispiel für ein Bildlaufsteuerelement, das keine Bildlaufleisten verwendet
   
 -   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> und <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> sind unabhängig von der <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
   
--   Wenn <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` ist, dann muss <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> auf 100 % und <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> auf <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Wenn <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` ist, dann muss <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> ebenso auf 100 % und <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> auf <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Dadurch kann ein Benutzeroberflächenautomatisierungs-Client diese Eigenschaftswerte innerhalb der <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> -Methode verwenden, während zugleich eine [Racebedingung](http://support.microsoft.com/default.aspx?scid=kb;en-us;317723) vermieden wird, wenn eine Richtung aktiviert wird, die für den Client für einen Bildlauf nicht von Interesse ist.  
+-   Wenn <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` ist, dann muss <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> auf 100 % und <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> auf <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Wenn <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` ist, dann muss <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> ebenso auf 100 % und <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> auf <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Dadurch, dass einen Benutzeroberflächenautomatisierungs-Client diese Eigenschaftswerte innerhalb der <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> Methode zugleich eine [Racebedingung](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) Wenn eine Richtung der Client nicht interessiert ist Durchführen eines Bildlaufs aktiviert wird.  
   
 -   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> ist gebietsschemaspezifisch. Bei der Einstellung „HorizontalScrollPercent = 100,0“ muss die Bildlaufposition des Steuerelements auf das Äquivalent seiner äußersten rechten Position für Sprachen wie Englisch festgelegt werden, die von links nach rechts gelesen werden. Für Sprachen wie Arabisch, die von rechts nach links gelesen werden, muss die Bildlaufposition bei der Einstellung „HorizontalScrollPercent = 100,0“ auf der äußerste linke Position festgelegt werden.  
   

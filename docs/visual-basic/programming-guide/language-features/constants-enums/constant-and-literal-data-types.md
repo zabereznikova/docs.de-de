@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
 ms.openlocfilehash: 1d030f8058cd497212c20bca8f064f2bedc99fce
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999926"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389560"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Konstanten und literale Datentypen (Visual Basic)
 Ein Literal ist ein Wert, der als sich selbst und nicht als der Wert einer Variablen oder das Ergebnis eines Ausdrucks, z. B. die Zahl 3 oder die Zeichenfolge "Hello" ausgedrückt wird. Eine Konstante ist, einen aussagekräftigen Namen, der tritt an die Stelle eines Literals und behält den gleichen Wert in der gesamten Anwendung, im Gegensatz zu einer Variablen, deren Wert ändern kann.  

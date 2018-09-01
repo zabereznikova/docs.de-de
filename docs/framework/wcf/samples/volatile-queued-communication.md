@@ -2,12 +2,12 @@
 title: Flüchtige Kommunikation unter Verwendung von Warteschlangen
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: b03bfff66cb9bed7ea9f1514d25096cf6b79f88a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508035"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394019"
 ---
 # <a name="volatile-queued-communication"></a>Flüchtige Kommunikation unter Verwendung von Warteschlangen
 In diesem Beispiel wird veranschaulicht, wie eine flüchtige Kommunikation unter Verwendung von Warteschlangen über Message Queuing (MSMQ)-Transport durchgeführt wird. In diesem Beispiel wird <xref:System.ServiceModel.NetMsmqBinding> verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -82,7 +82,7 @@ public static void Main()
  Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben. Der Endpunkt für den Dienst wird im Abschnitt system.serviceModel der Konfigurationsdatei definiert und gibt die `netMsmqBinding`-Bindung an.  
   
 > [!NOTE]
->  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet, wenn eine Warteschlange mithilfe von <xref:System.Messaging> erstellt wird. Die Windows Communication Foundation (WCF)-Endpunktadresse gibt ein net.msmq:-Schema an und verwendet "Localhost" als lokalen Computer sowie Schrägstriche im Pfad.  
+>  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet, wenn eine Warteschlange mithilfe von <xref:System.Messaging> erstellt wird. Die Windows Communication Foundation (WCF)-Endpunktadresse gibt ein net.msmq:-Schema an und verwendet "Localhost" für den lokalen Computer sowie Schrägstriche im Pfad.  
   
  Die Zusicherungen und die Dauerhaftigkeit oder Flüchtigkeit von Nachrichten werden ebenfalls in der Konfiguration angegeben.  
   
@@ -156,13 +156,13 @@ Stock Tick zzz9:43.3
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für die MSMQ-transportsicherheit <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` standardmäßig der Authentifizierungsmodus festgelegt ist, um `Windows` und die Schutzebene festgelegt ist, um `Sign`. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory-Integrationsoption für MSMQ muss installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
+ Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für MSMQ-transportsicherheit: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` standardmäßig der Authentifizierungsmodus festgelegt ist, um `Windows` und die Schutzebene auf `Sign`. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory-Integrationsoption für MSMQ muss installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>So führen Sie das Beispiel auf einem Computer aus, der sich in einer Arbeitsgruppe befindet oder über keine Active Directory-Integration verfügt  
   
@@ -223,7 +223,7 @@ Stock Tick zzz9:43.3
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   

@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Nachverfolgung
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: a025c23f967b0a8f2c387aa581536233ddb70a76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c986d9845bb76219ad8b0657a3a7252aaaf4c6cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518003"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392542"
 ---
 # <a name="custom-tracking"></a>Benutzerdefinierte Nachverfolgung
 Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Nachverfolgungskomponente erstellt und der Inhalt der Nachverfolgungsdaten in die Konsole geschrieben wird. Außerdem wird veranschaulicht, wie mit benutzerdefinierten Daten aufgefüllte <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte ausgegeben werden. Die konsolenbasierte Nachverfolgungskomponente filtert die vom Workflow ausgegebenen <xref:System.Activities.Tracking.TrackingRecord>-Objekte mit einem im Code erstellten Nachverfolgungsprofilobjekt.  
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
   
 -   Die <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte werden erstellt und mit benutzerdefinierten Daten aufgefüllt, die mit dem Datensatz ausgegeben werden sollen.  
   
--   Die <xref:System.Activities.Tracking.CustomTrackingRecord> wird ausgegeben, durch Aufrufen der Nachverfolgungsmethode des der <xref:System.Activities.ActivityContext>.  
+-   Die <xref:System.Activities.Tracking.CustomTrackingRecord> wird durch Aufrufen der Nachverfolgungsmethode des ausgegeben, die <xref:System.Activities.ActivityContext>.  
   
  Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte innerhalb einer benutzerdefinierten Aktivität ausgegeben werden.  
   
@@ -144,9 +144,9 @@ context.Track(customRecord);
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überwachen der AppFabric-Beispiele](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b213285b3c533488cfa48198951275925c0e37ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93377f82992b8d7d55b21b53abfd7d7c2e9e620b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436185"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394894"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx-Methode
 Generiert ein neues öffentliches/privates Schlüsselpaar mit der angegebenen Schlüsselgröße für die Verwendung der starken Namen an.  
@@ -41,12 +41,12 @@ HRESULT StrongNameKeyGenEx (
   
 #### <a name="parameters"></a>Parameter  
  `wszKeyContainer`  
- [in] Der angeforderte Schlüsselcontainer-Name. `wszKeyContainer` muss entweder eine leere Zeichenfolge oder Null, um einen temporären Namen zu generieren.  
+ [in] Der angeforderte Schlüsselcontainer-Name. `wszKeyContainer` muss entweder eine nicht leere Zeichenfolge oder Null, um einen temporären Namen zu generieren.  
   
  `dwFlags`  
  [in] Ein Wert, der angibt, ob der Schlüssel verlassen registriert. Die folgenden Werte werden unterstützt:  
   
--   0 x 00000000 – wird verwendet, wenn `wszKeyContainer` ist null, um einen temporären Schlüsselcontainernamen zu generieren.  
+-   0 x 00000000 - wird verwendet, wenn `wszKeyContainer` null ist, um einen temporären Schlüsselcontainernamen zu generieren.  
   
 -   0 x 00000001 (`SN_LEAVE_KEY`) – gibt an, dass der Schlüssel registriert werden soll.  
   
@@ -54,21 +54,21 @@ HRESULT StrongNameKeyGenEx (
  [in] Die angeforderte Größe des Schlüssels in Bits.  
   
  `ppbKeyBlob`  
- [out] Das zurückgegebene öffentlichen/privaten Schlüsselpaar.  
+ [out] Das zurückgegebene öffentliches/privates Schlüsselpaar.  
   
  `pcbKeyBlob`  
- [out] Die Größe in Bytes, der `ppbKeyBlob`.  
+ [out] Die Größe in Bytes, des `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
- Die .NET Framework-Versionen 1.0 und 1.1 erfordern eine `dwKeySize` von 1024 Bit zum Signieren einer Assembly mit einem starken Namen, Version 2.0 fügt 2048-Bit-Schlüssel unterstützt.  
+ Die .NET Framework-Versionen 1.0 und 1.1 erfordert eine `dwKeySize` von 1024 Bit zum Signieren einer Assembly mit einem starken Namen, Version 2.0 bietet 2048-Bit-Schlüssel unterstützt.  
   
- Nachdem der Schlüssel abgerufen wurden, sollten Sie Aufrufen der [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) Methode, um den belegten Speicher freizugeben.  
+ Nachdem der Schlüssel abgerufen werden, sollten Sie Aufrufen der [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) Methode, um den belegten Arbeitsspeicher freizugeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: a89caad51f098e17bca1a5ba3df600a6dbf1dd9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495157"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396332"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Konfigurieren der WS-Atomic-Transaktion-Unterstützung
 In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unterstützung mit dem WS-AT-Konfigurationshilfsprogramm konfigurieren können.  
@@ -21,11 +21,11 @@ In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unter
   
  Auf das Befehlszeilenfenster kann in dem Windows SDK-Installationspfad "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation" zugegriffen werden.  
   
- Weitere Informationen über das Befehlszeilentool "" finden Sie unter [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
+ Weitere Informationen zum Befehlszeilentool finden Sie unter [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
   
- Ausgeführtes Betriebssystem [!INCLUDE[wxp](../../../../includes/wxp-md.md)] oder [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Sie können das MMC-Snap-in zugreifen, navigieren Sie zur **Steuerelement Systemsteuerung/Verwaltung/Komponentendienste**, mit der rechten Maustaste **Arbeitsplatz**, und Auswählen von **Eigenschaften**. Dies ist die gleiche Position, an der Sie den Microsoft Distributed Transaction Coordinator (MSDTC) konfigurieren können. Für die Konfiguration verfügbare Optionen sind unter gruppiert die **WS-AT-** Registerkarte. Wenn Sie Windows Vista oder [!INCLUDE[lserver](../../../../includes/lserver-md.md)], das MMC-Snap-in finden Sie auf der **starten** Schaltfläche und eingeben `dcomcnfg.exe` in der **Suche** Feld. Wenn die MMC geöffnet ist, navigieren Sie zu der **arbeitsplatz\distributed Transaction coordinator\lokaler DTC** Knoten mit der rechten Maustaste, und wählen Sie **Eigenschaften**. Für die Konfiguration verfügbare Optionen sind unter gruppiert die **WS-AT-** Registerkarte.  
+ Wenn Sie ausführen [!INCLUDE[wxp](../../../../includes/wxp-md.md)] oder [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Sie können das MMC-Snap-in zugreifen, durch Navigieren zu **Steuerelement Systemsteuerung/Verwaltung/Komponentendienste**der rechten Maustaste auf **Arbeitsplatz**, und Auswählen von **Eigenschaften**. Dies ist die gleiche Position, an der Sie den Microsoft Distributed Transaction Coordinator (MSDTC) konfigurieren können. Optionen für die Konfiguration verfügbar werden gruppiert, unter dem **WS-AT** Registerkarte. Wenn Sie Windows Vista ausführen oder [!INCLUDE[lserver](../../../../includes/lserver-md.md)], das MMC-Snap-in finden Sie durch Klicken auf die **starten** Schaltfläche und eingeben `dcomcnfg.exe` in die **Suche** Feld. Wenn Sie die MMC geöffnet ist, navigieren Sie zu der **Meine arbeitsplatz\distributed Transaction coordinator\lokaler DTC** -Knoten mit der rechten Maustaste, und wählen Sie **Eigenschaften**. Optionen für die Konfiguration verfügbar werden gruppiert, unter dem **WS-AT** Registerkarte.  
   
- Weitere Informationen über das Snap-in finden Sie unter der [WS-AtomicTransaction-Konfiguration-MMC-Snap-in](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
+ Weitere Informationen über das Snap-in finden Sie unter den [WS-AtomicTransaction Konfiguration-MMC-Snap-in](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
   
  Zum Aktivieren der Benutzeroberfläche des Tools müssen Sie zuerst die Datei WsatUI.dll im folgenden Pfad registrieren:  
   
@@ -52,11 +52,11 @@ In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unter
  Im folgenden Beispiel werden die Schritte zum Einrichten einer Vertrauensstellung zwischen zwei Computern, A und B, beschrieben.  
   
 ### <a name="creating-and-exporting-certificates"></a>Erstellen und Exportieren von Zertifikaten  
- Für dieses Verfahren ist das MMC-Zertifikat-Snap-In erforderlich. Öffnen Sie zum Zugriff auf das Snap-In das Menü "Start/Ausführen", geben Sie "mmc" im Eingabefeld ein, und klicken Sie auf "OK". Klicken Sie auf die **Konsole1** Fenster, navigieren Sie zu **Datei/hinzufügen / entfernen** Snap-in, klicken Sie auf Hinzufügen, und wählen Sie **Zertifikate** aus der **Verfügbare eigenständige -Snap-Ins** Liste. Wählen Sie abschließend **Computerkonto** verwalten, und klicken Sie auf **OK**. Die **Zertifikate** Knoten befindet sich in der Snap-In-Konsole.  
+ Für dieses Verfahren ist das MMC-Zertifikat-Snap-In erforderlich. Öffnen Sie zum Zugriff auf das Snap-In das Menü "Start/Ausführen", geben Sie "mmc" im Eingabefeld ein, und klicken Sie auf "OK". Klicken Sie auf die **Konsole1** Fenster, navigieren Sie zu **Datei/hinzufügen und entfernen** -Snap-in, klicken Sie auf Hinzufügen, und wählen **Zertifikate** aus der **Verfügbare eigenständige -Snap-Ins** Liste. Wählen Sie zum Schluss **Computerkonto** verwalten, und klicken Sie auf **OK**. Die **Zertifikate** Knoten in der Snap-In-Konsole angezeigt wird.  
   
- Sie müssen bereits die erforderlichen Zertifikate besitzen, um Vertrauensstellungen einzurichten. Informationen zum Erstellen und Installieren neuer Zertifikate, bevor die folgenden Schritte aus, finden Sie unter [Vorgehensweise: Erstellen und installieren temporärer Clientzertifikate in WCF während der Entwicklung](http://go.microsoft.com/fwlink/?LinkId=158925).  
+ Sie müssen bereits die erforderlichen Zertifikate besitzen, um Vertrauensstellungen einzurichten. Weitere Informationen zum Erstellen und Installieren neuer Zertifikate, bevor die folgenden Schritte aus, finden Sie unter [Vorgehensweise: Erstellen und installieren temporärer Clientzertifikate in WCF während der Entwicklung](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
-1.  Importieren Sie auf Computer A mit dem MMC-Zertifikat-Snap-In das vorhandene Zertifikat (certA) in den Speicher LocalMachine\MY (Persönlicher Knoten) und LocalMachine\ROOT (Knoten der vertrauenswürdigen Stammzertifizierungsstelle). Klicken Sie zum Importieren eines Zertifikats zu einem bestimmten Knoten mit der rechten Maustaste des Knotens, und wählen Sie **alle Aufgaben/importieren**.  
+1.  Importieren Sie auf Computer A mit dem MMC-Zertifikat-Snap-In das vorhandene Zertifikat (certA) in den Speicher LocalMachine\MY (Persönlicher Knoten) und LocalMachine\ROOT (Knoten der vertrauenswürdigen Stammzertifizierungsstelle). Klicken Sie zum Importieren eines Zertifikats zu einem bestimmten Knoten, mit der rechten Maustaste des Knotens, und wählen Sie **alle Aufgaben/importieren**.  
   
 2.  Erstellen oder erhalten Sie auf Computer B mit dem MMC-Zertifikat-Snap-In ein Zertifikat (certB) mit einem privaten Schlüssel, und importieren Sie es in den Speicher LocalMachine\MY (Persönlicher Knoten) und LocalMachine\ROOT (Knoten der vertrauenswürdigen Stammzertifizierungsstelle).  
   
@@ -75,9 +75,9 @@ In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unter
 ### <a name="configuring-msdtc-to-use-certificates"></a>Konfigurieren von MSDTC für die Verwendung von Zertifikaten  
  Da der WS-AT-Protokolldienst als Client und Server fungiert, muss er eingehende Verbindungen abhören und ausgehende Verbindungen initiieren. Sie müssen daher MSDTC so konfigurieren, dass bekannt ist, welche Zertifikate bei der Kommunikation mit externen Programmen verwendet werden müssen und welche Zertifikate beim Annehmen eingehender Kommunikation autorisiert werden müssen.  
   
- Sie können dies mit dem MMC-WS-AT-Snap-In konfigurieren. Weitere Informationen zu diesem Tool finden Sie unter der [WS-AtomicTransaction-Konfiguration-MMC-Snap-in](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) Thema. In den folgenden Schritten wird beschrieben, wie Sie eine Vertrauensstellung zwischen zwei Computern einrichten, auf denen MSDTC ausgeführt wird.  
+ Sie können dies mit dem MMC-WS-AT-Snap-In konfigurieren. Weitere Informationen zu diesem Tool finden Sie unter den [WS-AtomicTransaction Konfiguration-MMC-Snap-in](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) Thema. In den folgenden Schritten wird beschrieben, wie Sie eine Vertrauensstellung zwischen zwei Computern einrichten, auf denen MSDTC ausgeführt wird.  
   
-1.  Konfigurieren Sie die Einstellungen von Computer A. Wählen Sie für "Endpunktzertifikat" certa aus. Wählen Sie für "Autorisierte Zertifikate" certb aus.  
+1.  Konfigurieren Sie die Einstellungen von Computer A. Wählen Sie für "Endpunktzertifikat" CertA aus. Wählen Sie für "Autorisierte Zertifikate" certb aus.  
   
 2.  Konfigurieren Sie die Einstellungen von Computer B. Wählen Sie für "Endpunktzertifikat" CertB aus. Wählen Sie für "Autorisierte Zertifikate" certa aus.  
   
@@ -89,22 +89,22 @@ In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unter
 >  Falls sich der Name des Computers ändert, z. B. wenn ein Arbeitsgruppencomputer Mitglied einer Domäne wird, müssen Sie Zertifikate neu ausstellen oder DNS-Suffixe manuell konfigurieren.  
   
 ## <a name="security"></a>Sicherheit  
- Da einige Einstellungen für MSDTC und WS-AT in der Registrierung unter HKLM\Software\Microsoft\MSDTC bzw. unter HKLM\Software\Microsoft\WSAT gespeichert werden, müssen Sie sicherstellen, dass diese Registrierungsschlüssel gesichert sind, sodass nur Administratoren darauf schreiben können. Die Registrierungs-Editor-Tool, mit der Maustaste des Schlüssels zu sichern, und wählen Sie **Berechtigung** an die entsprechende Zugriffssteuerung festzulegen. Für die Systemsicherheit und -integrität ist es entscheidend, dass wichtige Schlüssel für Benutzer mit weniger Rechten schreibgeschützt sind.  
+ Da einige Einstellungen für MSDTC und WS-AT in der Registrierung unter HKLM\Software\Microsoft\MSDTC bzw. unter HKLM\Software\Microsoft\WSAT gespeichert werden, müssen Sie sicherstellen, dass diese Registrierungsschlüssel gesichert sind, sodass nur Administratoren darauf schreiben können. Die Registrierungs-Editor-Tool, mit der Maustaste des Schlüssels zu sichern, und wählen Sie **Berechtigung** auf die entsprechende Zugriffssteuerung festzulegen. Für die Systemsicherheit und -integrität ist es entscheidend, dass wichtige Schlüssel für Benutzer mit weniger Rechten schreibgeschützt sind.  
   
  Beim Bereitstellen von MSDTC muss der Administrator sicherstellen, dass der gesamte MSDTC-Datenaustausch gesichert ist. Isolieren Sie bei einer Arbeitsgruppenbereitstellung die Transaktionsinfrastruktur von böswilligen Benutzern; sichern Sie bei einer Clusterbereitstellung die Clusterregistrierung.  
   
 ## <a name="tracing"></a>Ablaufverfolgung  
- Der WS-AT-Protokoll unterstützt integriert, Transaktion, die bestimmte Ablaufverfolgung, aktiviert und verwaltet werden kann mithilfe des der [WS-AtomicTransaction-Konfiguration-MMC-Snap-in](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) Tool.  Ablaufverfolgungen können Daten einschließen, die unter anderem den Zeitpunkt einer Eintragung für eine bestimmte Transaktion, den Zeitpunkt an dem die Transaktion ihren Endstatus erreicht und das Ergebnis, das jede Transaktionseintragung empfangen hat, angeben. Alle ablaufverfolgungen können angezeigt werden, mithilfe der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) Tool.  
+ Die WS-AT-Protokolldienst unterstützt integrierte, Transaktion, die Ablaufverfolgung aktiviert und verwaltet werden kann durch Verwendung von, der [WS-AtomicTransaction Konfiguration-MMC-Snap-in](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) Tool.  Ablaufverfolgungen können Daten einschließen, die unter anderem den Zeitpunkt einer Eintragung für eine bestimmte Transaktion, den Zeitpunkt an dem die Transaktion ihren Endstatus erreicht und das Ergebnis, das jede Transaktionseintragung empfangen hat, angeben. Alle ablaufverfolgungen können angezeigt werden, mithilfe der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) Tool.  
   
  Der WS-AT-Protokolldienst unterstützt auch integrierte ServiceModel-Ablaufverfolgung über die ETW-Ablaufverfolgungssitzung. Dies bietet ausführlichere, kommunikationsspezifische Ablaufverfolgungen zusätzlich zu den vorhandenen Transaktionsablaufverfolgungen.  Führen Sie die folgenden Schritte aus, um diese zusätzlichen Ablaufverfolgungen zu aktivieren:  
   
-1.  Öffnen der **Start/ausführen** Menü, geben Sie "Regedit" im Eingabefeld, und wählen Sie **OK**.  
+1.  Öffnen der **starten/ausführen** Menü, geben Sie "Regedit" in das Eingabefeld, und wählen Sie **OK**.  
   
 2.  In der **Registrierungs-Editor**, navigieren Sie zum folgenden Ordner im linken Bereich Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
   
 3.  Klicken Sie mit der rechten Maustaste auf die `ServiceModelDiagnosticTracing` Wert im rechten Bereich, und wählen Sie **ändern**.  
   
-4.  In der **Wertdaten** Eingabefeld, geben Sie einen der folgenden gültigen Werte an die Ablaufverfolgungsebene, Sie aktivieren möchten.  
+4.  In der **Wertdaten** Eingabefeld, geben Sie einen der folgenden gültigen Werte an das Level der Ablaufverfolgung, Sie aktivieren möchten.  
   
 -   0: Aus  
   

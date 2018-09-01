@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 69c807bdc052dda9e62216aa1611b4a6b2155a27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cc50b2564d295f1c81feacdeb52008f9f0004adc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762812"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396625"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Beispiele für die Abfrageausdruckssyntax: Projektion
-In den Beispielen in diesem Thema wird gezeigt, wie mithilfe der `Select` Methode und die `From … From …` Schlüsselwörter zum Abfragen der [AdventureWorks Sales-Modell](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) mithilfe der Abfrageausdruckssyntax Abfragen. `From … From …` ist die abfragebasierte Entsprechung der `SelectMany`-Methode. Für das in den Beispielen verwendete AdventureWorks Sales-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der AdventureWorks-Beispieldatenbank zurückgegriffen.  
+In die Beispielen in diesem Thema wird gezeigt, wie mit der `Select` Methode und die `From … From …` Schlüsselwörter zum Abfragen der [AdventureWorks Sales-Modell](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) mithilfe der Abfrageausdruckssyntax Abfragen. `From … From …` ist die abfragebasierte Entsprechung der `SelectMany`-Methode. Für das in den Beispielen verwendete AdventureWorks Sales-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der AdventureWorks-Beispieldatenbank zurückgegriffen.  
   
- In den Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
+ In die Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -40,7 +40,7 @@ In den Beispielen in diesem Thema wird gezeigt, wie mithilfe der `Select` Method
  [!code-csharp[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectanonymoustypes)]
  [!code-vb[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectanonymoustypes)]  
   
-## <a name="from--from--selectmany"></a>Von... Von... ("SelectMany")  
+## <a name="from--from--selectmany"></a>Von... Von... (SelectMany)  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird `From … From …` (das Äquivalent der <xref:System.Linq.Enumerable.SelectMany%2A>-Methode) verwendet, um alle Aufträge auszuwählen, bei denen `TotalDue` kleiner als 500,00 ist.  

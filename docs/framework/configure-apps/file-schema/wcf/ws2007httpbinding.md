@@ -2,12 +2,12 @@
 title: '&lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 6531e35cbed56029a8f772f0cd63aad521a166ef
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9e47bae28be6f42858fabb5b0648b60415bb5cbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759087"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392757"
 ---
 # <a name="ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt;
 Definiert eine interoperable Bindung, die Unterstützung für die entsprechenden Versionen der Bindungselemente <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> und <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> bereitstellt.  
@@ -69,7 +69,7 @@ textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
 |`maxBufferPoolSize`|Die maximale Pufferpoolgröße dieser Bindung. Der Standardwert ist 524.288 Byte (512 × 1.024). Viele Teile von Windows Communication Foundation (WCF) verwenden Puffer. Das Erstellen und Zerstören von Puffern bei jeder Verwendung ist kostspielig. Dasselbe gilt für die Garbage Collection für Puffer. Bei Pufferpools können Sie dem Pool einen Puffer entnehmen, diesen verwenden und nach der Verwendung wieder in den Pool zurückgeben. Dadurch wird der Aufwand beim Erstellen und Zerstören von Puffern vermieden.|  
 |`maxReceivedMessageSize`|Die maximale Nachrichtengröße in Byte einschließlich Header, die von einem mit dieser Bindung konfigurierten Kanal empfangen werden kann. Der Absender einer Nachricht, die diese Grenze überschreitet, erhält einen SOAP-Fehler. Der Empfänger verwirft die Nachricht und erstellt einen Eintrag des Ereignisses im Ablaufverfolgungsprotokoll. Der Standard ist 65536.|  
 |`messageEncoding`|Definiert den Encoder, der verwendet wird, um die SOAP-Nachricht zu codieren. Folgende Werte sind gültig:<br /><br /> -   `Text`: Verwenden Sie einen textnachrichtenencoder.<br />-   `Mtom`: Verwenden eines Encoders Message Transmission Organisation Mechanism 1.0 (MTOM).<br /><br /> Die Standardeinstellung ist `Text`.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSMessageEncoding>.|  
-|`name`|Der Konfigurationsname der Bindung. Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zur Standardkonfiguration und namenlos Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Der Konfigurationsname der Bindung. Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |`proxyAddress`|Ein URI, der die Adresse des HTTP-Proxys angibt. Wenn `useSystemWebProxy` `true` ist, muss diese Einstellung `null` lauten. Die Standardeinstellung ist `null`.|  
 |`receiveTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
@@ -83,8 +83,8 @@ textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiert die Beschränkungen bezüglich der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert sind. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[reliableSession](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Gibt an, ob zuverlässige Sitzungen zwischen Kanalendpunkten aufgebaut werden.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiert die Beschränkungen bezüglich der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert sind. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[reliableSession](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Gibt an, ob zuverlässige Sitzungen zwischen Kanalendpunkten aufgebaut werden.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -139,5 +139,5 @@ textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
  <xref:System.ServiceModel.Configuration.WS2007HttpBindingElement>  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

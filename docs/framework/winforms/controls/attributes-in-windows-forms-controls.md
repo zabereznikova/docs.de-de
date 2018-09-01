@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 272ce198a61e0d1bbe9c44514aaf51db72f5d04c
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257922"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390541"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Attribute in Windows Forms-Steuerelementen
 Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member der benutzerdefinierten Steuerelemente und Komponenten anwenden können. Einige dieser Attribute haben Auswirkungen auf das Laufzeitverhalten einer Klasse, während andere Auswirkungen auf das Entwurfszeitverhalten haben.  
@@ -63,5 +63,5 @@ Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member d
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Attribute>  
  [Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
- [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Erweitern der Entwurfszeitunterstützung](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5bb3d48d33333e888200bc607d3a193482f0336
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 00e425b56ae555b153685b5af0ac58b6ab4c335b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433652"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391645"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>ICLRStrongName::StrongNameTokenFromAssemblyEx-Methode
 Erstellt ein Token mit starkem Namen aus der angegebenen Assemblydatei und gibt den öffentlichen Schlüssel, den das Token darstellt.  
@@ -41,7 +41,7 @@ HRESULT StrongNameTokenFromAssemblyEx (
   
 #### <a name="parameters"></a>Parameter  
  `wszFilePath`  
- [in] Der Pfad zur Datei (portable Executable)-Datei für die Assembly.  
+ [in] Der Pfad zu der PE (portable Executable)-Datei für die Assembly.  
   
  `ppbStrongNameToken`  
  [out] Das zurückgegebene strong Name-Token.  
@@ -53,18 +53,18 @@ HRESULT StrongNameTokenFromAssemblyEx (
  [out] Der zurückgegebene öffentliche Schlüssel.  
   
  `pcbPublicKeyBlob`  
- [out] Die Größe in Bytes, des öffentlichen Schlüssels.  
+ [out] Die Größe in Byte des öffentlichen Schlüssels.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
- Ein starker Name-Token ist die Kurzform eines öffentlichen Schlüssels. Das Token ist ein 64-Bit-Hash, der aus dem öffentlichen Schlüssel zum Signieren der Assembly erstellt wird. Das Token ist ein Teil des starken Namens für die Assembly und kann aus den Metadaten der Assembly gelesen werden.  
+ Ein starker Name-Token ist die Kurzform für einen öffentlichen Schlüssel. Das Token ist ein 64-Bit-Hash, der aus dem öffentlichen Schlüssel zum Signieren der Assembly erstellt wird. Das Token ist ein Bestandteil des starken Namens für die Assembly, und Sie können aus den Metadaten der Assembly gelesen werden.  
   
- Nachdem der Schlüssel abgerufen und das Token wird erstellt, Sie sollten Aufrufen der [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) Methode, um den belegten Speicher freizugeben.  
+ Nachdem der Schlüssel wird abgerufen, und das Token erstellt wird, sollten Sie rufen die [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) Methode, um den belegten Arbeitsspeicher freizugeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   

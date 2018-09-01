@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1daf42c2-c9f4-4cda-b291-7641b9c6d3fe
-ms.openlocfilehash: babe923132d8322ec81caae2a94678afea2a8095
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 556b1cc31f42cecc19492412120b31da83eff609
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354222"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397447"
 ---
 # <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>Beispiele für die Abfrageausdruckssyntax: Einschränkung (LINQ to DataSet)
 In den Beispielen in diesem Thema wird gezeigt, wie Sie mithilfe der <xref:System.Linq.Enumerable.Where%2A>-Methode und der Abfrageausdruckssyntax ein <xref:System.Data.DataSet> abfragen können.  
   
- Die `FillDataSet` in diesen Beispielen verwendete Methode angegeben, [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
+ Die `FillDataSet` in diesen Beispielen verwendete Methode angegeben ist, im [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
   
  In den Beispielen in diesem Thema wird auf die Tabellen <legacyBold>Contact</legacyBold>, <legacyBold>Address</legacyBold>, <legacyBold>Product</legacyBold>, <legacyBold>SalesOrderHeader</legacyBold> und <legacyBold>SalesOrderDetail</legacyBold> in der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank zurückgegriffen.  
   
- In den Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
+ In die Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
   
 [!code-csharp[DP LINQ to DataSetExamples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]        
   
@@ -54,4 +54,4 @@ In den Beispielen in diesem Thema wird gezeigt, wie Sie mithilfe der <xref:Syste
 ## <a name="see-also"></a>Siehe auch  
  [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  [Beispiele für LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [Übersicht über Standardabfrageoperatoren](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [Übersicht über Standardabfrageoperatoren](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

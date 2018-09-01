@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
-ms.openlocfilehash: 5e2707463fd3cb9a5761805bc335104486ac44d7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6a1f4d13a75f787730d6155161296c3307b845f6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767569"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395352"
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>Beispiele für die methodenbasierte Abfragesyntax: Partitionierung
-In den Beispielen in diesem Thema wird gezeigt, wie mithilfe der <xref:System.Linq.Enumerable.Skip%2A>, und <xref:System.Linq.Enumerable.Take%2A> Methoden zum Abfragen der [AdventureWorks Sales-Modell](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) mithilfe der Abfrageausdruckssyntax Abfragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
+In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.Skip%2A>, und <xref:System.Linq.Enumerable.Take%2A> Methoden zum Abfragen der [AdventureWorks Sales-Modell](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) mithilfe der Abfrageausdruckssyntax Abfragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
   
- In den Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
+ In die Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  

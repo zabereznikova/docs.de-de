@@ -9,12 +9,12 @@ helpviewer_keywords:
 - menus [Windows Forms], setting margins
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
-ms.openlocfilehash: d85df6eb053105a00f3a8a936d0239f68b7030df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 872139fd234bafb303168d906c6ec96ce7b1611c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530354"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388496"
 ---
 # <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Gewusst wie: Konfigurieren des Aktivierungs- und Bildrands von MenuStrip
 Sie können eine <xref:System.Windows.Forms.MenuStrip>-Instanz anpassen, indem Sie die <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A>- und die <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A>-Eigenschaft in verschiedenen Kombinationen festlegen.  
@@ -30,7 +30,7 @@ Sie können eine <xref:System.Windows.Forms.MenuStrip>-Instanz anpassen, indem S
   
 -   Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.MenuStrip>  

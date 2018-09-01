@@ -2,12 +2,12 @@
 title: Benutzerdefiniertes Binden von zuverlässigen Sitzungen über HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: d470a4e0af655a8a7895c1db6c2699796f3db933
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb23dc6e6e2e13d759d29584ed6a990ae769ac8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502946"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389893"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Benutzerdefiniertes Binden von zuverlässigen Sitzungen über HTTPS
 In diesem Beispiel wird die Verwendung der SSL-Transportsicherheit mit zuverlässigen Sitzungen veranschaulicht. Zuverlässige Sitzungen implementieren das WS-ReliableMessaging-Protokoll. Durch das Erstellen von WS-Sicherheit über zuverlässige Sitzungen können Sie eine sichere zuverlässige Sitzung erreichen. In einigen Fällen werden Sie jedoch die Verwendung der HTTP-Transportsicherheit mit SSL vorziehen.  
@@ -17,14 +17,14 @@ In diesem Beispiel wird die Verwendung der SSL-Transportsicherheit mit zuverläs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
 ## <a name="sample-details"></a>Beispieldetails  
  SSL stellt sicher, dass die Pakete selbst sicher sind. Beachten Sie unbedingt, dass dies sich vom Sichern der zuverlässigen Sitzung mit WS-Secure Conversation unterscheidet.  
   
- Zum Verwenden einer zuverlässigen Sitzung über HTTPS müssen Sie eine benutzerdefinierte Bindung erstellen. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst. Eine benutzerdefinierte Bindung wird mit dem Bindungselement der zuverlässigen Sitzung erstellt und die [ \<HttpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md). Die folgende Konfiguration bezieht sich auf die benutzerdefinierte Bindung.  
+ Zum Verwenden einer zuverlässigen Sitzung über HTTPS müssen Sie eine benutzerdefinierte Bindung erstellen. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert. Eine benutzerdefinierte Bindung wird mit dem Bindungselement für zuverlässige Sitzung erstellt und die [ \<HttpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md). Die folgende Konfiguration bezieht sich auf die benutzerdefinierte Bindung.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -70,7 +70,7 @@ In diesem Beispiel wird die Verwendung der SSL-Transportsicherheit mit zuverläs
 </configuration>  
 ```  
   
- Die Programm-Codes in diesem Beispiel ist identisch mit der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) Dienst. Sie müssen ein Zertifikat erstellen und es mithilfe des Assistenten für Webserverzertifikate zuweisen, bevor Sie das Beispiel erstellen und ausführen. Durch die Endpunktdefinition und Bindungsdefinition in den Einstellungen der Konfigurationsdatei wird die Verwendung der benutzerdefinierten Bindung aktiviert, wie in der folgenden Beispielkonfiguration für den Client dargestellt.  
+ Der Programmcode im Beispiel ist identisch mit der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) Service. Sie müssen ein Zertifikat erstellen und es mithilfe des Assistenten für Webserverzertifikate zuweisen, bevor Sie das Beispiel erstellen und ausführen. Durch die Endpunktdefinition und Bindungsdefinition in den Einstellungen der Konfigurationsdatei wird die Verwendung der benutzerdefinierten Bindung aktiviert, wie in der folgenden Beispielkonfiguration für den Client dargestellt.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -100,9 +100,9 @@ In diesem Beispiel wird die Verwendung der SSL-Transportsicherheit mit zuverläs
 </configuration>  
 ```  
   
- Für die angegebene Adresse wird das https:// schema verwendet.  
+ Für die angegebene Adresse wird das https:// Schema verwendet.  
   
- Da die in diesem Beispiel verwendete Zertifikat ein mit Makecert.exe erstelltes Testzertifikat ist, wird eine sicherheitswarnung angezeigt, wenn Sie versuchen, eine Https-Zugriff: Adresse, z. B. https://localhost/servicemodelsamples/service.svc, in Ihrem Browser. Damit wird den Windows Communication Foundation (WCF)-Client mit einem vorhandenen Testzertifikat arbeiten, wurde an den Client, um die sicherheitswarnung zu unterdrücken zusätzlicher Code hinzugefügt. Dieser Code und die begleitende Klasse sind bei der Verwendung von Produktionszertifikaten nicht erforderlich.  
+ Da das in diesem Beispiel verwendete Zertifikat ein mit Makecert.exe erstelltes Testzertifikat ist, wird eine sicherheitswarnung angezeigt, wenn Sie versuchen, eine Https-Zugriff: Adresse, z. B. https://localhost/servicemodelsamples/service.svc, in Ihrem Browser. Damit den Windows Communication Foundation (WCF)-Client mit einem vorhandenen Testzertifikat arbeiten kann, wurde an den Client, um die sicherheitswarnung zu unterdrücken, zusätzlicher Code hinzugefügt. Dieser Code und die begleitende Klasse sind bei der Verwendung von Produktionszertifikaten nicht erforderlich.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  
@@ -128,12 +128,12 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Stellen Sie sicher, dass Sie ausgeführt haben die [Installationsanweisungen für Internetinformationsdienste (Internet Information Services, IIS) Server Zertifikat](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3.  Stellen Sie sicher, dass Sie ausgeführt haben die [Installationsanweisungen zu Serverzertifikaten (Internet Information Services, IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
   
 4.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-5.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Siehe auch

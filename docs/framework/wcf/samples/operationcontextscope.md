@@ -2,15 +2,15 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: f3dd9c8e83b0840ff68b060889421d60b734d964
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09ead071c5d8320452724edbb1c7f7f5e0124421
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505143"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395003"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
-Im OperationContextScope-Beispiel veranschaulicht das Senden von zusätzlichen Informationen auf einen Header mit Windows Communication Foundation (WCF)-Aufruf. In diesem Beispiel sind Server und Client Konsolenanwendungen.  
+Im OperationContextScope-Beispiel wird veranschaulicht, wie zusätzliche Informationen für einen Windows Communication Foundation (WCF)-Aufruf verwenden von Headern gesendet werden. In diesem Beispiel sind Server und Client Konsolenanwendungen.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -55,7 +55,7 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- Dies ist die Clientimplementierung, die der Proxy von generierten verwendet [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) für die Kommunikation mit dem Remotedienst. Zuerst werden zwei Proxyobjekte von `MessageHeaderReaderClient` erstellt.  
+ Dies ist die Clientimplementierung, die die vom generierten Proxy verwendet [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) für die Kommunikation mit dem Remotedienst. Zuerst werden zwei Proxyobjekte von `MessageHeaderReaderClient` erstellt.  
   
 ```  
 //Create two clients to the remote service.  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- Der Client erstellt dann OperationContextScope und bewertet ihn zu `client1`. <xref:System.ServiceModel.Channels.MessageHeader> wird ein <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> hinzugefügt, und es wird ein Aufruf auf beiden Clients aufgerufen. Es wird sichergestellt, dass der Header gesendet wird, nur auf `client1` und nicht unter `client2` durch Überprüfen des Rückgabewerts aus den `RetrieveHeader` aufrufen.  
+ Der Client erstellt dann OperationContextScope und bewertet ihn zu `client1`. <xref:System.ServiceModel.Channels.MessageHeader> wird ein <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> hinzugefügt, und es wird ein Aufruf auf beiden Clients aufgerufen. Wird sichergestellt, dass die Header gesendet wird, nur auf `client1` und nicht in `client2` durch Überprüfen des Rückgabewerts aus den `RetrieveHeader` aufrufen.  
   
 ```  
 using (new OperationContextScope(client1.InnerChannel))  
@@ -115,18 +115,18 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  
   

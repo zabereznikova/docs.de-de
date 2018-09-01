@@ -2,17 +2,17 @@
 title: Suchproxybeispiel
 ms.date: 03/30/2017
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-ms.openlocfilehash: e9cbfcb717f502a849d4d508d13df6c00b95db58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fc0680bc6b61a6fe1b4b141c8b1e5081df5a124
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503183"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393020"
 ---
 # <a name="discovery-proxy-sample"></a>Suchproxybeispiel
 In diesem Beispiel wird gezeigt, wie eine Implementierung eines Suchproxys erstellt wird, um Informationen zu vorhandenen Diensten zu speichern, und wie Clients Informationen von diesem Proxy abfragen können. Dieses Beispiel umfasst drei Projekte:  
   
--   **Dienst**: eine einfache Windows Communication Foundation (WCF)-rechnerdienst, der sich der beim suchproxy registriert.  
+-   **Dienst**: einen einfachen rechnerdienst von Windows Communication Foundation (WCF), der sich beim suchproxy registriert.  
   
 -   **Suchproxy**: die Implementierung eines suchproxydiensts.  
   
@@ -26,7 +26,7 @@ In diesem Beispiel wird gezeigt, wie eine Implementierung eines Suchproxys erste
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   

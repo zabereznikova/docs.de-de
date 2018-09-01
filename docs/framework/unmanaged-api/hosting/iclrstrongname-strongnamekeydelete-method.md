@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e9cd423bd351d9e4b12f21fe3a4a52c9909b7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2515eb0e33a033e78843d68754d3175e91165dff
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432059"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388786"
 ---
 # <a name="iclrstrongnamestrongnamekeydelete-method"></a>ICLRStrongName::StrongNameKeyDelete-Methode
 Löscht den angegebenen Schlüsselcontainer.  
@@ -37,16 +37,16 @@ HRESULT StrongNameKeyDelete (
   
 #### <a name="parameters"></a>Parameter  
  `wszKeyContainer`  
- [in] Der Name des Schlüsselcontainers zu löschen.  
+ [in] Der Name des Containers mit dem Schlüssel zu löschen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der [ICLRStrongName:: StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) Methode, um ein öffentliches/privates Schlüsselpaar in einen Container zu importieren.  
+ Verwenden der [ICLRStrongName:: StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) Methode, um ein öffentliches/privates Schlüsselpaar in einem Container zu importieren.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   

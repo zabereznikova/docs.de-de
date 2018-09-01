@@ -2,12 +2,12 @@
 title: Validierung von Aktivitätsbeziehungen
 ms.date: 03/30/2017
 ms.assetid: 6f11a34e-ed67-4bce-88ce-7e96bbb4d052
-ms.openlocfilehash: e6dd0e6a7b48444073ebae378e21c1b45977a1f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50f08118fb5ad4d9b8fe809e7ab3cc5d57f28149
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515107"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394684"
 ---
 # <a name="activity-relationships-validation"></a>Validierung von Aktivitätsbeziehungen
 Dieses Beispiel besteht aus drei Aktivitäten: `CreateCity`, `CreateState` und `CreateCountry`. `CreateCity` muss sich innerhalb einer `CreateState`-Aktivität befinden, und `CreateState` muss sich innerhalb einer `CreateCountry`-Aktivität befinden. Für dieses Beispiel ist die Validierungslogik in Code für die `CreateState`-Aktivität und in XAML für die `CreateCity`-Aktivität. Beide Einschränkungen weisen das gleiche Verhalten auf.  
@@ -38,6 +38,6 @@ Dieses Beispiel besteht aus drei Aktivitäten: `CreateCity`, `CreateState` und `
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis:  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ActivityRelationships`

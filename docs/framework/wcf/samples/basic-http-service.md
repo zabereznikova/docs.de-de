@@ -2,26 +2,26 @@
 title: Einfacher HTTP-Dienst
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 0f93b43a08f586e99d8a49379cfb2e283ff7918d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808857"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390379"
 ---
 # <a name="basic-http-service"></a>Einfacher HTTP-Dienst
-In diesem Beispiel wird veranschaulicht, wie einen HTTP-basierter, RPC-basierter Dienst - bzw. BYOD bezeichnet als "POX" (Plain Old XML)-Dienst – mithilfe der Windows Communication Foundation (WCF)-REST-Programmiermodells implementiert wird. Dieses Beispiel besteht aus zwei Komponenten: einem selbst gehosteten WCF-HTTP-Dienst (Service.cs) und einer Konsolenanwendung (Program.cs), die den Dienst erstellt und es aufruft.  
+In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter, RPC-basierte Service – auch bezeichnet als "POX" (Plain Old XML)-Dienst mithilfe des Windows Communication Foundation (WCF)-REST-Programmiermodells implementiert wird. In diesem Beispiel besteht aus zwei Komponenten: einem selbst gehosteten WCF-HTTP-Dienst (Service.cs) und eine Konsolenanwendung (Program.cs), die der Dienst erstellt und Aufrufe durchführt.  
   
 ## <a name="sample-details"></a>Beispieldetails  
- Der WCF-Dienst macht 2 Vorgänge `EchoWithGet` und `EchoWithPost`, die als Eingabe übergebene Zeichenfolge zurückgibt.  
+ Der WCF-Dienst macht 2 Vorgänge `EchoWithGet` und `EchoWithPost`, womit die Zeichenfolge, die als Eingabe übergeben wurde.  
   
  An den `EchoWithGet`-Vorgang wird das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut angehängt. Das bedeutet, dass der Vorgang HTTP-`GET`-Anforderungen verarbeitet. Da das <xref:System.ServiceModel.Web.WebGetAttribute> eine <xref:System.UriTemplate> nicht explizit angibt, erwartet der Vorgang, dass die Eingabezeichenfolge mit einem Abfragezeichenfolgenparameter namens `s` übergeben wird. Beachten Sie, dass das Format des vom Dienst erwarteten URIs mit der <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A>-Eigenschaft angepasst werden kann.  
   
  An den `EchoWithPost`-Vorgang wird das <xref:System.ServiceModel.Web.WebInvokeAttribute>-Attribut angehängt. Das bedeutet, dass es sich dabei nicht um einen `GET`-Vorgang handelt (er hat Nebenwirkungen). Da das <xref:System.ServiceModel.Web.WebInvokeAttribute> eine `Method` nicht explizit angibt, verarbeitet der Vorgang HTTP-`POST`-Anforderungen, bei denen die Zeichenfolge im Anforderungstext enthalten ist (z. B. im XML-Format). Beachten Sie, dass die HTTP-Methode und das Format des URIs für die Anforderung mit der <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A>-Eigenschaft bzw. der <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate>-Eigenschaft angepasst werden können.  
   
- Die Datei App.config konfiguriert den WCF-Dienst mit einem Standard-<xref:System.ServiceModel.Description.WebHttpEndpoint>, für den die <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A>-Eigenschaft auf `true` festgelegt ist. Daher erstellt die WCF-Infrastruktur für eine automatische HTML-basierte Hilfeseite unter `http://localhost:8000/Customers/help` , Informationen zum HTTP-Anforderungen an den Dienst zu erstellen und nutzen die HTTP-Antwort des Diensts bereitstellt.  
+ Die Datei App.config konfiguriert den WCF-Dienst mit einem Standard-<xref:System.ServiceModel.Description.WebHttpEndpoint>, für den die <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A>-Eigenschaft auf `true` festgelegt ist. Daher erstellt die WCF-Infrastruktur für eine automatische HTML-basierte Hilfeseite unter `http://localhost:8000/Customers/help` , Informationen zum HTTP-Anforderungen an den Dienst zu erstellen und nutzen Sie die HTTP-Antwort des Diensts bereitstellt.  
   
- Datei "Program.cs" wird veranschaulicht, wie eine WCF-Kanalfactory Aufrufe an den Dienst und die Antworten verarbeiten verwendet werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, mit anderen .NET Framework-Klassen wie <xref:System.Net.HttpWebRequest> und <xref:System.Net.WebClient> auf den Dienst zuzugreifen. Weitere Beispiele im SDK (z. B. die [automatische Formatauswahl](../../../../docs/framework/wcf/samples/automatic-format-selection.md) Beispiel und [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel) zeigen, wie Sie diese Klassen verwenden, um die Kommunikation mit einem WCF-Dienst.  
+ "Program.cs" wird veranschaulicht, wie eine WCF-Kanalfactory Aufrufe an den Dienst und die Antworten verarbeiten verwendet werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, mit anderen .NET Framework-Klassen wie <xref:System.Net.HttpWebRequest> und <xref:System.Net.WebClient> auf den Dienst zuzugreifen. In anderen Beispielen im SDK (z. B. die [automatische Formatauswahl](../../../../docs/framework/wcf/samples/automatic-format-selection.md) Beispiel und [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel) zeigen, wie Sie diese Klassen verwenden, um die Kommunikation mit einem WCF-Dienst.  
   
  Das Beispiel umfasst einen selbst gehosteten Dienst und einen Client, die in einer Konsolenanwendung ausgeführt werden. Während die Konsolenanwendung ausgeführt wird, sendet der Client Anforderungen an den Dienst und schreibt die in den Antworten enthaltenen wichtigen Informationen in das Konsolenfenster.  
   
@@ -38,7 +38,7 @@ In diesem Beispiel wird veranschaulicht, wie einen HTTP-basierter, RPC-basierter
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   

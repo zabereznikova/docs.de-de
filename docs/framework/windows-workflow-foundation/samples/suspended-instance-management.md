@@ -2,12 +2,12 @@
 title: Angehaltene Instanzverwaltung
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 8e8bb40b22633aa83b7a70ee94f37cefe48ba68e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519222"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394599"
 ---
 # <a name="suspended-instance-management"></a>Angehaltene Instanzverwaltung
 In diesem Beispiel wird veranschaulicht, wie Workflowinstanzen, die angehalten wurden, verwaltet werden.  Die Standardaktion für <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> ist `AbandonAndSuspend`. Dies bedeutet, dass nicht behandelte Ausnahmen, die von einer Workflowinstanz ausgelöst werden, die im <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, standardmäßig dazu führen, dass die Instanz aus dem Speicher verworfen (abgebrochen) und dass die dauerhafte/persistente Version der Instanz als angehalten markiert wird. Eine angehaltene Workflowinstanz kann erst ausgeführt werden, nachdem sie fortgesetzt wurde.  
@@ -32,7 +32,7 @@ In diesem Beispiel wird veranschaulicht, wie Workflowinstanzen, die angehalten w
   
 2.  Richten Sie die SQL Server-Datenbank ein.  
   
-    1.  Aus einer [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] Eingabeaufforderung führen Sie "setup.cmd" im Beispielverzeichnis SuspendedInstanceManagement, geschieht Folgendes:  
+    1.  Aus einem [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] Eingabeaufforderung den Befehl "setup.cmd" aus dem Beispielverzeichnis SuspendedInstanceManagement, was Folgendes geschieht:  
   
         1.  Erstellung einer Persistenzdatenbank mit SQL Server Express. Wenn die Persistenzdatenbank bereits vorhanden ist, dann wird diese gelöscht und neu erstellt.  
   
@@ -44,7 +44,7 @@ In diesem Beispiel wird veranschaulicht, wie Workflowinstanzen, die angehalten w
   
     1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], mit der rechten Maustaste die **SampleWorkflowApp** Projekt, und klicken Sie auf **als Startprojekt festlegen**.  
   
-    2.  Kompilieren und führen Sie die SampleWorkflowApp durch Drücken von **F5**. Dadurch wird die erforderliche Warteschlange erstellt.  
+    2.  Kompilieren und ausführen, drücken Sie die SampleWorkflowApp **F5**. Dadurch wird die erforderliche Warteschlange erstellt.  
   
     3.  Drücken Sie **EINGABETASTE** um die SampleWorkflowApp zu beenden.  
   
@@ -52,13 +52,13 @@ In diesem Beispiel wird veranschaulicht, wie Workflowinstanzen, die angehalten w
   
     5.  Erweitern Sie **Dienste und Anwendungen**, **Message Queuing-**, **Private Warteschlangen**.  
   
-    6.  Klicken Sie mit der rechten Maustaste auf die **ReceiveTx** Warteschlange eingefügt, und wählen Sie **Eigenschaften**.  
+    6.  Klicken Sie mit der rechten Maustaste auf die **ReceiveTx** in die Warteschlange ein, und wählen Sie **Eigenschaften**.  
   
-    7.  Wählen Sie die **Sicherheit** Registerkarte und ermöglichen **"Jeder"** Berechtigungen zum **Nachricht empfangen**, **Peek Message**, und  **Nachricht senden**.  
+    7.  Wählen Sie die **Sicherheit** Registerkarte und ermöglichen **jeder** Berechtigungen, zu **empfangen von Nachrichten**, **Nachricht einsehen**, und  **Nachricht senden**.  
   
 4.  Führen Sie nun das Beispiel aus.  
   
-    1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], führen Sie das Projekt "sampleworkflowapp" erneut ohne debugging drücken Sie **STRG + F5**. Zwei Endpunktadressen werden im Konsolenfenster ausgegeben: eine für den Anwendungsendpunkt und die andere vom <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Daraufhin wird eine Workflowinstanz erstellt, und Überwachungsdatensätze für diese Instanz werden im Konsolenfenster angezeigt. Die Workflowinstanz löst eine Ausnahme aus, die bewirkt, dass die Instanz angehalten und abgebrochen wird.  
+    1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], führen Sie das Projekt "sampleworkflowapp" erneut aus, ohne debugging drücken **STRG + F5**. Zwei Endpunktadressen werden im Konsolenfenster ausgegeben: eine für den Anwendungsendpunkt und die andere vom <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Daraufhin wird eine Workflowinstanz erstellt, und Überwachungsdatensätze für diese Instanz werden im Konsolenfenster angezeigt. Die Workflowinstanz löst eine Ausnahme aus, die bewirkt, dass die Instanz angehalten und abgebrochen wird.  
   
     2.  Das Befehlszeilenprogramm kann dann verwendet werden, um weitere Aktionen für diese Instanzen auszuführen. Die Syntax für Befehlszeilenargumente ist wie folgt:  
   
@@ -81,6 +81,6 @@ In diesem Beispiel wird veranschaulicht, wie Workflowinstanzen, die angehalten w
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

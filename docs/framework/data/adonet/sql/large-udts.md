@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 3c74bed67069740354b36891db73ed80b952f0c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a57bf400288c11e5ba651515feba42437b93148f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362723"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389574"
 ---
 # <a name="large-udts"></a>Große UDTs
 Mithilfe benutzerdefinierter Typen (User-Defined Types, UDTs) können Entwickler das Skalartypsystem des Servers erweitern, indem sie CLR (Common Language Runtime)-Objekte in einer SQL Server-Datenbank speichern. UDTs können mehrere Elemente enthalten und Verhaltensweisen aufweisen, wodurch sie sich von den herkömmlichen Aliasdatentypen unterscheiden, die nur aus einem SQL Server-Systemdatentyp bestehen.  
@@ -24,7 +24,7 @@ Mithilfe benutzerdefinierter Typen (User-Defined Types, UDTs) können Entwickler
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-1.  [Benutzerdefinierte CLR-Typen](http://go.microsoft.com/fwlink/?LinkId=98366)  
+1.  [Benutzerdefinierte CLR-Typen](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Abrufen von UDT-Schemas mit 'GetSchema'  
  Die <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>-Methode von <xref:System.Data.SqlClient.SqlConnection> gibt Informationen zum Datenbankschema in einer <xref:System.Data.DataTable> zurück. Weitere Informationen finden Sie unter [SQL Server-Schemaauflistungen](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
@@ -41,7 +41,7 @@ Mithilfe benutzerdefinierter Typen (User-Defined Types, UDTs) können Entwickler
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT-Instanz|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|Der dreiteilige Name angegeben wird, als *Database.SchemaName.TypeName*.|  
+|`DataTypeName`|`SqlDbType.VarBinary`|Der dreiteilige Name als *Database.SchemaName.TypeName*.|  
 |`IsLong`|Unterschiedlich|Unterschiedlich|  
   
 ## <a name="sqldatareader-considerations"></a>Überlegungen zu "SqlDataReader"  
@@ -136,4 +136,4 @@ End Using
  [Abrufen von Datenbankschemainformationen](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

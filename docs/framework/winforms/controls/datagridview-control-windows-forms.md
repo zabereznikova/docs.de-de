@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
 ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332506"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397218"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView-Steuerelement (Windows Forms)
 Das `DataGridView`-Steuerelement ermöglicht die flexible Anzeige von Daten in tabellarischer Form. Sie können das `DataGridView`-Steuerelement verwenden, um schreibgeschützte Ansichten mit kleinen Datenmengen anzuzeigen, oder Sie können es skalieren, um bearbeitbare Ansichten von sehr umfangreichen Datasets anzuzeigen.  

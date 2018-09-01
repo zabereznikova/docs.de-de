@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: c58f64dba0bceb4a35c67e16193a6627837436e0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c1ebe2d735924c559f450f4041884dc9845e4fe0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767127"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396084"
 ---
 # <a name="adding-data-to-a-datatable"></a>Hinzufügen von Daten zu einer "DataTable"
-Nachdem Sie eine <xref:System.Data.DataTable> erstellt und deren Struktur mithilfe von Spalten und Einschränkungen definiert haben, können Sie der Tabelle neue Datenzeilen hinzufügen. Dazu deklarieren Sie eine neue Variable als <xref:System.Data.DataRow>-Typ. Ein neues **DataRow** Objekt wird zurückgegeben, wenn Sie rufen die <xref:System.Data.DataTable.NewRow%2A> Methode. Die **DataTable** erstellt dann die **DataRow** Objekt basierend auf der Struktur der Tabelle, gemäß der <xref:System.Data.DataColumnCollection>.  
+Nachdem Sie eine <xref:System.Data.DataTable> erstellt und deren Struktur mithilfe von Spalten und Einschränkungen definiert haben, können Sie der Tabelle neue Datenzeilen hinzufügen. Dazu deklarieren Sie eine neue Variable als <xref:System.Data.DataRow>-Typ. Ein neues **DataRow** Objekt wird zurückgegeben, beim Aufrufen der <xref:System.Data.DataTable.NewRow%2A> Methode. Die **DataTable** erstellt dann die **DataRow** Objekt entsprechend der Struktur der Tabelle gemäß den <xref:System.Data.DataColumnCollection>.  
   
- Im folgenden Beispiel wird veranschaulicht, wie eine neue Zeile durch Aufrufen der **NewRow** Methode.  
+ Im folgende Beispiel wird veranschaulicht, wie zum Erstellen einer neuen Zeile durch Aufrufen der **NewRow** Methode.  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Nachdem Daten in die neue Zeile eingefügt werden die **hinzufügen** Methode wird verwendet, um die Zeile zum Hinzufügen der <xref:System.Data.DataRowCollection>, wie im folgenden Code gezeigt.  
+ Nachdem die Daten in der neuen Zeile eingefügt werden die **hinzufügen** Methode dient zum Hinzufügen der Zeile, die <xref:System.Data.DataRowCollection>, wie im folgenden Code gezeigt.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- Sie können auch aufrufen, die **hinzufügen** Methode, um eine neue Zeile hinzuzufügen, durch die Übergabe in einem Array von Werten als typisierte <xref:System.Object>, wie im folgenden Beispiel gezeigt.  
+ Sie können auch aufrufen, die **hinzufügen** Methode, um eine neue Zeile hinzuzufügen, durch die Übergabe in einem Array von Werten, die als typisierte <xref:System.Object>, wie im folgenden Beispiel gezeigt.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -59,7 +59,7 @@ workTable.Rows.Add(new Object[] {1, "Smith"});
   
  Übergibt ein Array von Werten als **Objekt**, zu der **hinzufügen** Methode erstellt eine neue Zeile in der Tabelle und als Spaltenwerte werden auf die Werte im Objektarray. Beachten Sie, dass Werte in dem Array nacheinander den Spalten zugeordnet werden, und zwar in der Reihenfolge, in der sie in der Tabelle vorkommen.  
   
- Im folgenden Beispiel wird 10 Zeilen auf das neu erstellte **Kunden** Tabelle.  
+ Im folgenden Beispiel wird 10 Zeilen, auf das neu erstellte **Kunden** Tabelle.  
   
 ```vb  
 Dim workRow As DataRow  
@@ -91,4 +91,4 @@ for (int i = 0; i <= 9; i++)
  <xref:System.Data.DataRowCollection>  
  <xref:System.Data.DataTable>  
  [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

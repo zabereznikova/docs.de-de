@@ -2,18 +2,18 @@
 title: Verbundbeispiel
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 49a13b292a627c054510a10445e1e64ab869162c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806847"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389487"
 ---
 # <a name="federation-sample"></a>Verbundbeispiel
 Dieses Beispiel veranschaulicht die Verbundsicherheit.  
   
 ## <a name="sample-details"></a>Beispieldetails  
- Windows Communication Foundation (WCF) bietet Unterstützung für die Bereitstellung von verbundsicherheitsarchitekturen durch die `wsFederationHttpBinding`. Die `wsFederationHttpBinding` bietet eine sichere, zuverlässige und interoperable Bindung, die die Verwendung von HTTP als den zugrunde liegenden Transportmechanismus für die Anforderungs-Antwort-Kommunikation umfasst, während Text und XML als Übertragungsformate für die Codierung verwendet werden. Weitere Informationen zu Verbunds in WCF, finden Sie unter [Verbund](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF) bietet Unterstützung für die Bereitstellung von verbundsicherheitsarchitekturen durch die `wsFederationHttpBinding`. Die `wsFederationHttpBinding` bietet eine sichere, zuverlässige und interoperable Bindung, die die Verwendung von HTTP als den zugrunde liegenden Transportmechanismus für die Anforderungs-Antwort-Kommunikation umfasst, während Text und XML als Übertragungsformate für die Codierung verwendet werden. Weitere Informationen über den Verbund in WCF finden Sie unter [Verbund](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Das Szenario besteht aus 4 Einheiten:  
   
@@ -82,7 +82,7 @@ Dieses Beispiel veranschaulicht die Verbundsicherheit.
  In den folgenden Anweisungen finden Sie Informationen zum Einrichten und Ausführen dieses Beispiels.  
   
 > [!NOTE]
->  Sie benötigen Schreibzugriff auf die **"Wwwroot"** Verzeichnis zum Ausführen dieses Beispiels.  
+>  Sie benötigen Schreibberechtigungen für die **"Wwwroot"** Verzeichnis zum Ausführen dieses Beispiels.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
@@ -91,7 +91,7 @@ Dieses Beispiel veranschaulicht die Verbundsicherheit.
     > [!NOTE]
     >  Die Batchdatei "Setup.bat" ist dafür ausgelegt, von einer Windows SDK-Eingabeaufforderung ausgeführt zu werden. Die MSSDK-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer Windows SDK-Eingabeaufforderung festgelegt. Bei [!INCLUDE[wv](../../../../includes/wv-md.md)] müssen Sie sicherstellen, dass IIS 6.0-Verwaltungskompatibilität installiert ist, da das Setup die IIS-Administratorskripts verwendet. Das Ausführen des Setupskripts über [!INCLUDE[wv](../../../../includes/wv-md.md)] erfordert Administratorrechte.  
   
-2.  Öffnen Sie die Datei FederationSample.sln in Visual Studio, und wählen Sie **Projektmappe** aus der **erstellen** Menü. Dadurch werden die allgemeinen Projektdateien, der Bookstore-Dienst, Bookstore-STS und HomeRealm STS erstellt und in IIS bereitgestellt. Auf diese Weise wird auch die Buchhandlungsclientanwendung erstellt, und die ausführbare Datei "BookStoreClient.exe" wird im Ordner "FederationSample\BookStoreClient\bin\Debug" gespeichert.  
+2.  Öffnen Sie die Datei FederationSample.sln in Visual Studio, und wählen Sie **Projektmappe** aus der **erstellen** im Menü. Dadurch werden die allgemeinen Projektdateien, der Bookstore-Dienst, Bookstore-STS und HomeRealm STS erstellt und in IIS bereitgestellt. Auf diese Weise wird auch die Buchhandlungsclientanwendung erstellt, und die ausführbare Datei "BookStoreClient.exe" wird im Ordner "FederationSample\BookStoreClient\bin\Debug" gespeichert.  
   
 3.  Doppelklicken Sie auf "BookStoreClient.exe". Das Fenster "BookStoreClient" wird angezeigt.  
   
@@ -113,7 +113,7 @@ Dieses Beispiel veranschaulicht die Verbundsicherheit.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   

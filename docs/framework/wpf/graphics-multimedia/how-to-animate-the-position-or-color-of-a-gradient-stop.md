@@ -12,32 +12,32 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-ms.openlocfilehash: 2eb528127c8aa66976788ec1f4e5362ca3a1ef26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcbb546b64810416d3f7dbe052da77b7bc941e7a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558667"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395322"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Gewusst wie: Animieren der Position oder Farbe eines Farbverlaufunterbrechungspunkts
-In diesem Beispiel wird gezeigt, wie zum Animieren der <xref:System.Windows.Media.GradientStop.Color%2A> und <xref:System.Windows.Media.GradientStop.Offset%2A> von <xref:System.Windows.Media.GradientStop> Objekte.  
+Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.GradientStop.Color%2A> und <xref:System.Windows.Media.GradientStop.Offset%2A> von <xref:System.Windows.Media.GradientStop> Objekte.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine Animation drei Farbverlaufsstopps innerhalb einer <xref:System.Windows.Media.LinearGradientBrush>. Das Beispiel verwendet drei Animationen, von die jedes einen anderen Farbverlaufsstopps animiert.  
+ Das folgende Beispiel erstellt eine Animation drei Farbverlaufstopps in einem <xref:System.Windows.Media.LinearGradientBrush>. Im Beispiel werden drei Animationen, von die jede eine unterschiedliche Farbverlaufsunterbrechungspunkte verwendet:  
   
--   Die erste Animation eine <xref:System.Windows.Media.Animation.DoubleAnimation>, erstellt eine Animation des ersten Farbverlaufsstopps <xref:System.Windows.Media.GradientStop.Offset%2A> von 0,0 bis 1,0, und klicken Sie dann auf 0,0 sichern. Daher die erste im Farbverlauf verändert sich von der linken Seite auf die rechte Seite des Rechtecks-Farbe aus, und klicken Sie dann auf die linke Seite zurück.  
+-   Der ersten Animation, einer <xref:System.Windows.Media.Animation.DoubleAnimation>, erstellt eine Animation die ersten Farbverlaufsstopps <xref:System.Windows.Media.GradientStop.Offset%2A> von 0,0 bis 1,0 und wieder auf 0,0 setzen. Daher wird die erste Farbe im Farbverlauf verändert sich von der linken Seite auf die rechte Seite des Rechtecks, und klicken Sie dann auf der linken Seite zurück.  
   
--   Die zweite Animation eine <xref:System.Windows.Media.Animation.ColorAnimation>, erstellt eine Animation des zweiten Farbverlaufsstopps <xref:System.Windows.Media.GradientStop.Color%2A> aus <xref:System.Windows.Media.Colors.Purple%2A> auf <xref:System.Windows.Media.Colors.Yellow%2A> und dann zurück in <xref:System.Windows.Media.Colors.Purple%2A>. Daher ändert sich die mittlere Farbe im Verlauf von Violett, Gelb und zurück in Violett.  
+-   Die zweite Animation, einer <xref:System.Windows.Media.Animation.ColorAnimation>, des zweiten Farbverlaufsstopps animiert <xref:System.Windows.Media.GradientStop.Color%2A> aus <xref:System.Windows.Media.Colors.Purple%2A> zu <xref:System.Windows.Media.Colors.Yellow%2A> und dann zurück zur <xref:System.Windows.Media.Colors.Purple%2A>. Daher ändert sich die mittlere Farbe im Farbverlauf von Violett, Gelb und zurück in Violett.  
   
--   Die dritte Animation, eine andere <xref:System.Windows.Media.Animation.ColorAnimation>, wird die Durchlässigkeit des dritten Farbverlaufsstopps des <xref:System.Windows.Media.GradientStop.Color%2A> mit-1 und dann wieder. Daher wird die dritte Farbe im Farbverlauf ausgeblendet, und klicken Sie dann erneut wird nicht transparent.  
+-   Der dritte Animation, einer anderen <xref:System.Windows.Media.Animation.ColorAnimation>, wird die Durchlässigkeit des des dritten Farbverlaufsstopps <xref:System.Windows.Media.GradientStop.Color%2A> durch 1 und anschließend wieder. Daher wird die dritte Farbe im Farbverlauf verblasst, und klicken Sie dann erneut wird nicht transparent.  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/GradientStopAnimationExample.xaml#graphicsmmgradientanimationexampleswholepage)]  
   
- Obwohl in diesem Beispiel verwendet eine <xref:System.Windows.Media.LinearGradientBrush>, der Prozess entspricht dem für die Animation <xref:System.Windows.Media.GradientStop> Objekte innerhalb einer <xref:System.Windows.Media.RadialGradientBrush>.  
+ Obwohl dieses Beispiel verwendet eine <xref:System.Windows.Media.LinearGradientBrush>, der Prozess ist identisch für die Animation <xref:System.Windows.Media.GradientStop> Objekte innerhalb einer <xref:System.Windows.Media.RadialGradientBrush>.  
   
- Weitere Beispiele finden Sie unter der [Pinsel Beispiel](http://go.microsoft.com/fwlink/?LinkID=159973).  
+ Weitere Beispiele finden Sie unter den [Pinselbeispiel](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Media.GradientStop>  

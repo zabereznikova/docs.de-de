@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Ermitteln untergeordneter Elemente anhand der Position (
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
 ms.openlocfilehash: 9f18da12786b4c44dc21e54c8d5020f49ef9ecb6
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754218"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390785"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Ermitteln untergeordneter Elemente anhand der Position (XPath-LINQ to XML) (Visual Basic)
 Es kann passieren, dass Sie Elemente anhand ihrer Position ermitteln, also z. B. das zweite oder das dritte bis fünfte Element finden möchten.  

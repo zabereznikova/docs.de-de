@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d895524d36895ad087f7394fcc3380573355eaad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498689"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392029"
 ---
 # <a name="securing-messages-using-message-security"></a>Sichern von Nachrichten mithilfe der Nachrichtensicherheit
-Dieser Abschnitt beschreibt die WCF-nachrichtensicherheit Verwendung <xref:System.ServiceModel.NetMsmqBinding>.  
+Dieser Abschnitt beschreibt die WCF-nachrichtensicherheit bei Verwendung <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
->  In diesem Thema lesen, wird empfohlen, vor dem Lesen Sie [Schlüsselbegriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+>  In diesem Thema lesen, es wird empfohlen, vor Sie lesen [Sicherheitskonzepte](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
  Die folgende Abbildung zeigt ein konzeptionelles Modell einer warteschlangenkommunikation mithilfe von WCF. Anhand dieser Abbildung und der Terminologie werden  
   
@@ -23,11 +23,11 @@ Dieser Abschnitt beschreibt die WCF-nachrichtensicherheit Verwendung <xref:Syste
   
  ![In der Warteschlange Anwendungsdiagramm](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Warteschlange-Abbildung")  
   
- Beim Senden von Nachrichten über WCF in die Warteschlange eingereiht, wird die WCF-Nachricht als Text der Nachricht Message Queuing (MSMQ) angefügt. Mit der Transportsicherheit wird die gesamte MSMQ-Nachricht gesichert, mit der Nachrichtensicherheit (oder SOAP-Sicherheit) hingegen wird nur der Textkörper der MSMQ-Nachricht gesichert.  
+ Beim Senden von Nachrichten mithilfe von WCF in die Warteschlange eingereiht, wird die WCF-Nachricht als Text der Nachricht Message Queuing (MSMQ) angefügt. Mit der Transportsicherheit wird die gesamte MSMQ-Nachricht gesichert, mit der Nachrichtensicherheit (oder SOAP-Sicherheit) hingegen wird nur der Textkörper der MSMQ-Nachricht gesichert.  
   
- Das Kernkonzept der Nachrichtensicherheit besteht darin, dass der Client die Nachricht für die empfangende Anwendung (Dienst) sichert. Im Gegensatz dazu sichert der Client bei der Transportsicherheit die Nachricht für die Zielwarteschlange. Folglich spielt MSMQ keine beim Sichern der WCF-Nachricht mit nachrichtensicherheit.  
+ Das Kernkonzept der Nachrichtensicherheit besteht darin, dass der Client die Nachricht für die empfangende Anwendung (Dienst) sichert. Im Gegensatz dazu sichert der Client bei der Transportsicherheit die Nachricht für die Zielwarteschlange. Daher spielt MSMQ keine beim Sichern der WCF-Nachricht unter Verwendung der nachrichtensicherheit.  
   
- WCF-nachrichtensicherheit hinzugefügt die WCF-Nachricht, die Integration in vorhandene Sicherheitsinfrastrukturen, z. B. ein Zertifikat oder das Kerberos-Protokoll Security-Header.  
+ WCF-nachrichtensicherheit hinzugefügt Sicherheitsheader, um die WCF-Nachricht, die in vorhandene Sicherheitsinfrastrukturen, z. B. ein Zertifikat oder das Kerberos-Protokoll integriert.  
   
 ## <a name="message-credential-type"></a>Anmeldeinformationstypen für Nachrichten  
  Bei der Verwendung der Nachrichtensicherheit können der Dienst und der Client Anmeldeinformationen bereitstellen, um sich gegenseitig zu authentifizieren. Sie können die Nachrichtensicherheit auswählen, indem Sie den <xref:System.ServiceModel.NetMsmqBinding.Security%2A>-Modus auf `Message` oder `Both` (d. h. Transport- und Nachrichtensicherheit werden verwendet) festlegen.  
@@ -43,7 +43,7 @@ Dieser Abschnitt beschreibt die WCF-nachrichtensicherheit Verwendung <xref:Syste
   
  Da im Fall von Warteschlangen nicht immer eine Verbindung hergestellt ist, sind der Client und der Dienst möglicherweise nicht zur selben Zeit online. Daher müssen der Client und der Dienst Zertifikate out-of-band austauschen. Insbesondere der Client, bei dem sich das Dienstzertifikat (das mit einer Zertifizierungsstelle verkettet sein kann) im vertrauenswürdigen Speicher befindet, muss verlässlich mit dem richtigen Dienst kommunizieren. Zur Authentifizierung des Clients gleicht der Dienst das X.509-Zertifikat, das an die Nachricht angehängt ist, mit dem Zertifikat in seinem Speicher ab, um die Echtzeit des Clients zu überprüfen. Auch hier muss das Zertifikat mit einer Zertifizierungsstelle verkettet sein.  
   
- Auf einem Computer unter Windows befinden sich die Zertifikate in verschiedenen Arten von Speichern. Weitere Informationen zu den verschiedenen speichern, finden Sie unter [Zertifikatspeichern](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Auf einem Computer unter Windows befinden sich die Zertifikate in verschiedenen Arten von Speichern. Weitere Informationen zu den verschiedenen speichern finden Sie unter [Zertifikatspeichern](https://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Der Windows-Anmeldeinformationstyp für Nachrichten verwendet das Kerberos-Protokoll.  
@@ -54,7 +54,7 @@ Dieser Abschnitt beschreibt die WCF-nachrichtensicherheit Verwendung <xref:Syste
   
  Wenn dieser Anmeldeinformationstyp verwendet wird, muss der Dienst unter dem SERVICE-Konto ausgeführt werden.  
   
- Das Kerberos-Protokoll wird standardmäßig bei der Auswahl von Nachrichtenanmeldeinformationen verwendet. Weitere Informationen finden Sie unter [Kerberos untersuchen, das Protokoll für verteilte Sicherheit in Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
+ Das Kerberos-Protokoll wird standardmäßig bei der Auswahl von Nachrichtenanmeldeinformationen verwendet. Weitere Informationen finden Sie unter [Exploring Kerberos, das Protokoll für verteilte Sicherheit unter Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
   
 ### <a name="username-password"></a>Benutzernamenkennwort (Username Password)  
  Mit dieser Eigenschaft kann sich der Client beim Server durch Angabe eines Benutzernamenkennworts im Sicherheitsheader der Nachricht authentifizieren.  

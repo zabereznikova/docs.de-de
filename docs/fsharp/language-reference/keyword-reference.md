@@ -1,95 +1,96 @@
 ---
 title: Schlüsselwortreferenz (F#)
-description: Suchen Sie Links zu Informationen über alle f#-Schlüsselwörter.
+description: Links zu Informationen über alle von der F#-Schlüsselwörter.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7d8a2bf667f5303cc19e8d4279e433efca25c294
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: 18bf5f00cdd5250c0fbd503d096e5415a8b9feea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33840888"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396872"
 ---
 # <a name="keyword-reference"></a>Schlüsselwortreferenz
 
 Dieses Thema enthält Links zu Informationen über alle F#-Schlüsselwörter.
 
-## <a name="f-keyword-table"></a>Table-Schlüsselwort [F#]
+## <a name="f-keyword-table"></a>Tabelle der F#-Schlüsselwort
 
-Die folgende Tabelle zeigt alle F#-Schlüsselwörter in alphabetischer Reihenfolge, zusammen mit kurzen Beschreibungen und Links zu relevanten Themen, die Weitere Informationen enthalten.
+Die folgende Tabelle zeigt alle F#-Schlüsselwörter in alphabetischer Reihenfolge, sowie kurze Beschreibungen und Links zu relevanten Themen, die Informationen enthalten.
 
 |Stichwort|Link|Beschreibung|
 |-------|----|-----------|
-|`abstract`|[Mitglieder](members/index.md)<br /><br />[Abstrakte Klassen](abstract-classes.md)|Gibt eine Methode, die keine Implementierung entweder im Typ aufweist, in dem sie deklariert ist, oder die ist virtuell und einer standardmäßigen Implementierung.|
-|`and`|[`let` Bindungen](functions/let-bindings.md)<br /><br />[Mitglieder](members/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|Wechselseitig rekursive Bindungen in Eigenschaftendeklarationen sowie mit mehrere Einschränkungen für generische Parameter verwendet.|
+|`abstract`|[Mitglieder](members/index.md)<br /><br />[Abstrakte Klassen](abstract-classes.md)|Gibt eine Methode, die entweder verfügt über keine Implementierung des Typs in der sie deklariert wird, oder ist virtuell und verfügt über eine Standardimplementierung.|
+|`and`|[`let` Bindungen](functions/let-bindings.md)<br /><br />[Mitglieder](members/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|In der sich gegenseitig rekursiver Bindungen, Eigenschaftendeklarationen und mehrere Einschränkungen für generische Parameter verwendet.|
 |`as`|[Klassen](classes.md)<br /><br />[Mustervergleich](Pattern-Matching.md)|Verwendet, um dem aktuelle Klassenobjekt ein Objekt benennen. Auch verwendet zum Benennen einer gesamten Muster in einem Mustervergleich.|
 |`assert`|[Assertionen](assertions.md)|Zum Überprüfen von Code während des Debuggens verwendet.|
 |`base`|[Klassen](classes.md)<br /><br />[Vererbung](inheritance.md)|Als Name des Objekts Basisklasse verwendet.|
-|`begin`|[Ausführliche Syntax](verbose-syntax.md)|Gibt an den Anfang eines Codeblocks, in ausführlicher Syntax.|
+|`begin`|[Ausführliche Syntax](verbose-syntax.md)|Gibt an den Anfang ein Codeblock, in ausführlicher Syntax.|
 |`class`|[Klassen](classes.md)|In ausführlicher Syntax gibt den Anfang einer Klassendefinition.|
 |`default`|[Mitglieder](members/index.md)|Zeigt eine Implementierung einer abstrakten Methode an. zusammen mit einer abstrakten Methodendeklaration verwendet, um eine virtuelle Methode zu erstellen.|
 |`delegate`|[Delegaten](delegates.md)|Wird verwendet, um einen Delegaten zu deklarieren.|
-|`do`|[do-Bindungen](functions/do-bindings.md)<br /><br />[Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)<br /><br />[Schleifen: `for...in`-Ausdruck](loops-for-in-expression.md)<br /><br />[Schleifen: `while...do`-Ausdruck](loops-while-do-expression.md)|In Schleifenkonstrukte oder zum Ausführen von imperativen Codes verwendet.|
-|`done`|[Ausführliche Syntax](verbose-syntax.md)|In ausführlicher Syntax gibt das Ende eines Codeblocks in einem Schleifenausdruck.|
-|`downcast`|[Umwandlung und Konvertierungen](casting-and-conversions.md)|Verwendet, um auf einen Typ zu konvertieren, der in der Vererbungskette kleiner ist.|
-|`downto`|[Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)|In einem `for` Ausdruck, der bei der Inventur in umgekehrter Reihenfolge verwendet.|
-|`elif`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)|Bedingte Verzweigung verwendet. Kurzform von `else if`.|
+|`do`|[do-Bindungen](functions/do-bindings.md)<br /><br />[Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)<br /><br />[Schleifen: `for...in`-Ausdruck](loops-for-in-expression.md)<br /><br />[Schleifen: `while...do`-Ausdruck](loops-while-do-expression.md)|In Schleifenkonstrukte oder zum Ausführen von imperativem Code verwendet.|
+|`done`|[Ausführliche Syntax](verbose-syntax.md)|Gibt an das Ende eines Codeblocks in einem Ausdruck der Schleife, in ausführlicher Syntax.|
+|`downcast`|[Umwandlung und Konvertierungen](casting-and-conversions.md)|Verwendet, um auf einen Typ zu konvertieren, die in der Vererbungskette niedriger ist.|
+|`downto`|[Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)|In einem `for` Ausdruck, der verwendet wird, wenn in umgekehrter Reihenfolge zu zählen.|
+|`elif`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)|Bedingte Verzweigung verwendet. Eine Kurzform des `else if`.|
 |`else`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)|Bedingte Verzweigung verwendet.|
-|`end`|[Strukturen](structures.md)<br /><br />[Unterscheidbare Unions](discriminated-unions.md)<br /><br />[Datensätze](records.md)<br /><br />[Typerweiterungen](type-extensions.md)<br /><br />[Ausführliche Syntax](verbose-syntax.md)|Gibt an das Ende eines Abschnitts Memberdefinitionen, Typdefinitionen und Erweiterungen.<br /><br />In ausführlicher Syntax verwendet, um das Ende eines Codeblocks anzugeben, die mit beginnt die `begin` Schlüsselwort.|
-|`exception`|[Ausnahmebehandlung](exception-handling/index.md)<br /><br />[Ausnahmetypen](exception-handling/exception-types.md)|Wird verwendet, um einen Ausnahmetyp zu deklarieren.|
-|`extern`|[Externe Funktionen](functions/external-functions.md)|Gibt an, dass ein Programmelement deklariert in einem anderen binären oder Assembly definiert ist.|
+|`end`|[Strukturen](structures.md)<br /><br />[Unterscheidbare Unions](discriminated-unions.md)<br /><br />[Datensätze](records.md)<br /><br />[Typerweiterungen](type-extensions.md)<br /><br />[Ausführliche Syntax](verbose-syntax.md)|Gibt an das Ende eines Abschnitts von Memberdefinitionen, in Typdefinitionen und Erweiterungen des Typs ist.<br /><br />In ausführlicher Syntax verwendet, um das Ende eines Codeblocks anzugeben, die mit beginnt die `begin` Schlüsselwort.|
+|`exception`|[Ausnahmebehandlung](exception-handling/index.md)<br /><br />[Ausnahmetypen](exception-handling/exception-types.md)|Verwendet, um ein Ausnahmetyp deklariert.|
+|`extern`|[Externe Funktionen](functions/external-functions.md)|Gibt an, dass ein deklariertes Programmelement in einem anderen binären oder einer Assembly definiert ist.|
 |`false`|[Primitive Typen](primitive-types.md)|Als ein boolesches Literal verwendet.|
-|`finally`|[Ausnahmen: Der `try...finally`-Ausdruck](exception-handling/the-try-finally-expression.md)|Zusammen mit `try` einen Codeblock einführen, die ausgeführt wird, unabhängig davon, ob eine Ausnahme auftritt.|
-|`fixed`|[feste](fixed.md)|Verwendet einen Zeiger auf den Stapel, um zu verhindern, dass der Garbage Collection "anheften".|
-|`for`|[Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)<br /><br />[Schleifen: for...in-Ausdruck](loops-for-in-expression.md)|Verwendet in Schleifenkonstrukte.|
-|`fun`|[Lambda-Ausdrücke: Das `fun` Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md)|In Lambda-Ausdrücke, auch bekannt als anonyme Funktionen verwendet.|
-|`function`|[Vergleichsausdrücke](match-expressions.md)<br /><br />[Lambda-Ausdrücke: Das Fun-Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md)|Als Alternative zu kürzeren verwendet die `fun` Schlüsselwort und ein `match` Ausdruck in einem Lambda-Ausdruck, der einen Mustervergleich für ein einzelnes Argument verfügt.|
-|`global`|[Namespaces](namespaces.md)|Der Namespace der obersten Ebene .NET verweisen auf verwendet.|
-|`if`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)|Bedingte Verzweigung Konstrukte verwendet.|
-|`in`|[Schleifen: for...in-Ausdruck](loops-for-in-expression.md)<br /><br />[Ausführliche Syntax](verbose-syntax.md)|Verwendet für Sequenzausdrücke und ausführliche Syntax zum Ausdrücken von Bindungen zu trennen.|
-|`inherit`|[Vererbung](inheritance.md)|Wird verwendet, um eine Basisklasse oder die Basisschnittstelle anzugeben.|
-|`inline`|[Funktionen](functions/index.md)<br /><br />[Inlinefunktionen](functions/inline-functions.md)|Verwendet, um eine Funktion anzugeben, die direkt in der aufrufenden Code integriert werden sollten.|
-|`interface`|[Schnittstellen](interfaces.md)|Deklarieren und Implementieren von Schnittstellen verwendet.|
-|`internal`|[Zugriffssteuerung](access-control.md)|Verwendet, um anzugeben, dass ein Element sichtbar ist innerhalb einer Assembly, aber nicht außerhalb davon.|
-|`lazy`|[Verzögerte Berechnungen](lazy-computations.md)|Wird verwendet, um eine Berechnung anzugeben, die ausgeführt werden soll, nur, wenn ein Ergebnis benötigt wird.|
-|`let`|[`let` Bindungen](functions/let-bindings.md)|Zum zuordnen, oder binden Sie einen Namen auf einen Wert oder eine Funktion verwendet.|
-|`let!`|[Asynchrone Workflows](asynchronous-workflows.md)<br /><br />[Berechnungsausdrücke](computation-expressions.md)|Verwendet in asynchrone Workflows einen Namen für das Ergebnis von eine asynchrone Berechnung zu binden oder in anderen Berechnungsausdrücke verwendet, um einen Namen zu einem Ergebnis zu binden, die Berechnung Typ aufweist.|
-|`match`|[Vergleichsausdrücke](match-expressions.md)|Verwendet zum Verzweigen durch Vergleichen eines Werts mit einem Muster.|
-|`member`|[Mitglieder](members/index.md)|Wird verwendet, um einer Eigenschaft oder Methode in einen Typ deklarieren.|
-|`module`|[Module](modules.md)|Wird verwendet, um einen Namen mit einer Gruppe von verwandten Typen, Werte und Funktionen, um logisch aus anderem Code zu trennen zuzuordnen.|
-|`mutable`|[let-Bindungen](functions/let-bindings.md)|Verwendet, um eine Variable, d. h. einen Wert zu deklarieren, die geändert werden können.|
-|`namespace`|[Namespaces](namespaces.md)|Wird verwendet, um einen Namen mit einer Gruppe von verwandten Typen und Module, um logisch aus anderem Code zu trennen zuzuordnen.|
+|`finally`|[Ausnahmen: Der `try...finally`-Ausdruck](exception-handling/the-try-finally-expression.md)|Wird zusammen mit `try` Einführung ein Codeblocks, der ausgeführt wird, unabhängig davon, ob eine Ausnahme auftritt.|
+|`fixed`|[behoben](fixed.md)|Verwendet einen Zeiger auf dem Stapel, um zu verhindern, dass der Garbage Collection "anheften".|
+|`for`|[Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)<br /><br />[Schleifen: for...in-Ausdruck](loops-for-in-expression.md)|In Schleifenkonstrukte verwendet.|
+|`fun`|[Lambdaausdrücke: Das `fun` Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md)|In Lambda-Ausdrücke, auch bekannt als anonyme Funktionen verwendet.|
+|`function`|[Vergleichsausdrücke](match-expressions.md)<br /><br />[Lambdaausdrücke: Das Fun-Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md)|Als die kürzere Alternative verwendet die `fun` Schlüsselwort und `match` Ausdruck in einen Lambda-Ausdruck, der einen Musterabgleich für ein einzelnes Argument verfügt.|
+|`global`|[Namespaces](namespaces.md)|Verwendet, um den Namespace der obersten Ebene .NET zu verweisen.|
+|`if`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)|Bedingte Verzweigungen Konstrukte verwendet.|
+|`in`|[Schleifen: for...in-Ausdruck](loops-for-in-expression.md)<br /><br />[Ausführliche Syntax](verbose-syntax.md)|Verwendet von für Sequenzausdrücke und in ausführlicher Syntax zum Ausdrücken von Bindungen zu trennen.|
+|`inherit`|[Vererbung](inheritance.md)|Dient zum Angeben von einer Basisklasse oder die Basisschnittstelle.|
+|`inline`|[Funktionen](functions/index.md)<br /><br />[Inlinefunktionen](functions/inline-functions.md)|Verwendet, um anzugeben, dass ein, die direkt in der aufrufenden Code integriert werden soll.|
+|`interface`|[Schnittstellen](interfaces.md)|Sie deklarieren und Implementieren von Schnittstellen verwendet.|
+|`internal`|[Zugriffssteuerung](access-control.md)|Verwendet, um anzugeben, dass ein Element sichtbar ist innerhalb einer Assembly außerhalb davon hingegen nicht.|
+|`lazy`|[Verzögerte Berechnungen](lazy-computations.md)|Verwendet, um eine Berechnung angeben, die ausgeführt werden soll, nur, wenn ein Ergebnis benötigt wird.|
+|`let`|[`let` Bindungen](functions/let-bindings.md)|Zum Verknüpfen oder zu binden, einen Namen auf einen Wert oder die Funktion verwendet.|
+|`let!`|[Asynchrone Workflows](asynchronous-workflows.md)<br /><br />[Berechnungsausdrücke](computation-expressions.md)|Verwendet in asynchrone Workflows, um einen Namen auf das Ergebnis eine asynchrone Berechnung zu binden, oder, im anderen Berechnungsausdrücken verwendet, um einen Namen an ein Ergebnis zu binden, der den Typ der Berechnung wird.|
+|`match`|[Vergleichsausdrücke](match-expressions.md)|Mit der Verzweigung von Vergleichen eines Werts mit einem Muster.|
+|`match!`|[Berechnungsausdrücke](computation-expressions.md#match)|Verwendet, um Inline einen Aufruf zu einer Berechnung Ausdruck und das Muster auf ihr Ergebnis.|
+|`member`|[Mitglieder](members/index.md)|Zum Deklarieren einer Eigenschaft oder Methode in einen Objekttyp verwendet.|
+|`module`|[Module](modules.md)|Wird verwendet, um einen Namen mit einer Gruppe von verwandten Typen, Werte und Funktionen, damit sie von anderem Code logisch getrennt zuzuordnen.|
+|`mutable`|[let-Bindungen](functions/let-bindings.md)|Wird verwendet, um eine Variable, d. h., einen Wert zu deklarieren, die geändert werden können.|
+|`namespace`|[Namespaces](namespaces.md)|Wird verwendet, um einen Namen mit einer Gruppe von verwandten Typen und Module, damit sie von anderem Code logisch getrennt zuzuordnen.|
 |`new`|[Konstruktoren](members/constructors.md)<br /><br />[Einschränkungen](generics/constraints.md)|Wird verwendet, um zu deklarieren, definieren Sie, oder rufen Sie einen Konstruktor, der erstellt oder ein Objekt erstellen kann.<br /><br />Auch verwendet in Einschränkungen für generische Typparameter, um anzugeben, dass ein Typ einen bestimmten Konstruktor besitzen muss.|
-|`not`|[Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|Eigentlich kein Schlüsselwort. Allerdings `not struct` in Kombination wird als Einschränkung eines generischen Parameters verwendet.|
-|`null`|[NULL-Werte](values/null-values.md)<br /><br />[Einschränkungen](generics/constraints.md)|Gibt das Fehlen eines Objekts an.<br /><br />Auch verwendet in den Einschränkungen für generische Typparameter.|
+|`not`|[Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|Eigentlich kein Schlüsselwort. Allerdings `not struct` in Kombination dient als Einschränkung eines generischen Parameters.|
+|`null`|[NULL-Werte](values/null-values.md)<br /><br />[Einschränkungen](generics/constraints.md)|Gibt das Fehlen eines Objekts an.<br /><br />Auch verwendet in Einschränkungen für generische Typparameter.|
 |`of`|[Unterscheidbare Unions](discriminated-unions.md)<br /><br />[Delegaten](delegates.md)<br /><br />[Ausnahmetypen](exception-handling/exception-types.md)|In Unterscheidungs-Unions, um den Typ der Kategorien von Werten anzugeben, und klicken Sie in Deklarationen von Delegaten und der Ausnahme verwendet.|
-|`open`|[Importdeklarationen: Das `open`-Schlüsselwort](import-declarations-the-open-keyword.md)|Verwendet, um den Inhalt von einem Namespace oder Modul ohne Qualifizierung verfügbar zu machen.|
-|`or`|[Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|Mit wahrheitsbedingungen verwendet wird, als boolescher Wert `or` Operator. Entspricht "||`.<br /><br />Auch verwendet in Membereinschränkungen.|
-|`override`|[Mitglieder](members/index.md)|Verwendet eine Version einer abstrakten oder virtuellen Methode implementiert, die von der Basisversion abweicht.|
-|`private`|[Zugriffssteuerung](access-control.md)|Schränkt den Zugriff auf einen Member für Code in den gleichen Typ oder Modul an.|
+|`open`|[Importdeklarationen: Das `open`-Schlüsselwort](import-declarations-the-open-keyword.md)|Verwendet, um den Inhalt von einem Namespace oder Modul ohne Qualifikation verfügbar zu machen.|
+|`or`|[Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|Mit booleschen Bedingungen verwendet werden, als booleschen `or` Operator. Entspricht '||`.<br /><br />Auch verwendet in Membereinschränkungen.|
+|`override`|[Mitglieder](members/index.md)|Verwendet, um eine Version einer abstrakten oder virtuellen Methode zu implementieren, der die Basisversion unterscheidet.|
+|`private`|[Zugriffssteuerung](access-control.md)|Schränkt den Zugriff auf einen Member auf Code in den gleichen Typ oder Modul an.|
 |`public`|[Zugriffssteuerung](access-control.md)|Ermöglicht den Zugriff auf einen Member von außerhalb des Typs.|
-|`rec`|[Funktionen](functions/index.md)|Verwendet, um anzugeben, dass eine Funktion rekursiv ist.|
-|`return`|[Asynchrone Workflows](Asynchronous-Workflows.md)<br /><br />[Berechnungsausdrücke](computation-expressions.md)|Zum Angeben eines Werts, geben Sie als Ergebnis eines Ausdrucks für die Berechnung verwendet.|
-|`return!`|[Berechnungsausdrücke](computation-expressions.md)<br /><br />[Asynchrone Workflows](asynchronous-workflows.md)|Verwendet, um einen Ausdruck für die Berechnung anzugeben, dass bei der Auswertung enthält das Ergebnis des enthaltenden Berechnungsausdrucks.|
-|`select`|[Abfrageausdrücke](query-expressions.md)|Verwendet in Abfrageausdrücken an, welche Felder oder Spalten zu extrahieren. Beachten Sie, dass dies ein Kontextabhängiges Schlüsselwort, d. h. es ist nicht tatsächlich ein reserviertes Wort und es nur verhält sich wie ein Schlüsselwort im entsprechenden Kontext.|
-|`static`|[Mitglieder](members/index.md)|Wird verwendet, um anzugeben, eine Methode oder Eigenschaft, die ohne eine Instanz eines Typs aufgerufen werden kann oder ein Wertemember, die von allen Instanzen eines Typs gemeinsam genutzt wird.|
-|`struct`|[Strukturen](structures.md)<br /><br />[Einschränkungen](generics/constraints.md)|Wird verwendet, um einen Strukturtyp zu deklarieren.<br /><br />Auch verwendet in den Einschränkungen für generische Typparameter.<br /><br />Für die Kompatibilität mit OCaml in Moduldefinitionen verwendet.|
-|`then`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Konstruktoren](members/constructors.md)|In bedingten Ausdrücken verwendet.<br /><br />Verwendet auch Nebeneffekte nach Objektkonstruktion ausgeführt.|
-|`to`|[Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)|Verwendet `for` Schleifen, um einen Bereich anzugeben.|
+|`rec`|[Funktionen](functions/index.md)|Wird verwendet, um anzugeben, dass eine Funktion rekursiv ist.|
+|`return`|[Asynchrone Workflows](Asynchronous-Workflows.md)<br /><br />[Berechnungsausdrücke](computation-expressions.md)|Damit wird einen Wert, der als Ergebnis eines Ausdrucks für die Berechnung bereitgestellt angegeben.|
+|`return!`|[Berechnungsausdrücke](computation-expressions.md)<br /><br />[Asynchrone Workflows](asynchronous-workflows.md)|Verwendet, um einen Ausdruck für die Berechnung anzugeben, dass bei der Auswertung, stellt das Ergebnis des Berechnungsausdrucks enthält.|
+|`select`|[Abfrageausdrücke](query-expressions.md)|In Abfrageausdrücken verwendet, an welche Felder oder Spalten zu extrahieren. Beachten Sie, dass dies ein Kontextschlüsselwort, d. h., es ist dabei nicht um ein reserviertes Wort und es nur verhält sich wie ein Schlüsselwort in den entsprechenden Kontext.|
+|`static`|[Mitglieder](members/index.md)|Damit wird angegeben, eine Methode oder Eigenschaft, die ohne eine Instanz eines Typs aufgerufen werden kann oder einem Wertmember, die von allen Instanzen eines Typs gemeinsam genutzt wird.|
+|`struct`|[Strukturen](structures.md)<br /><br />[Einschränkungen](generics/constraints.md)|Wird verwendet, um einen Strukturtyp zu deklarieren.<br /><br />Auch verwendet in Einschränkungen für generische Typparameter.<br /><br />Für die Kompatibilität mit OCaml in Moduldefinitionen verwendet.|
+|`then`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Konstruktoren](members/constructors.md)|In bedingten Ausdrücken verwendet.<br /><br />Auch verwendet, um Nebeneffekte nach der objekterstellung.|
+|`to`|[Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)|Verwendet `for` Schleifen auf, um einen Bereich anzugeben.|
 |`true`|[Primitive Typen](primitive-types.md)|Als ein boolesches Literal verwendet.|
-|`try`|[Ausnahmen: Der try...with-Ausdruck](exception-handling/the-try-with-expression.md)<br /><br />[Ausnahmen: Wiederholen Sie dann... try...finally-Ausdruck](exception-handling/the-try-finally-expression.md)|Verwendet, um einen Codeblock einführen, die möglicherweise eine Ausnahme generiert. Zusammen mit `with` oder `finally`.|
+|`try`|[Ausnahmen: Der try...with-Ausdruck](exception-handling/the-try-with-expression.md)<br /><br />[Ausnahmen: Der Versuch... try...finally-Ausdruck](exception-handling/the-try-finally-expression.md)|Verwendet, um einen Codeblock vorgestellt, die möglicherweise eine Ausnahme generiert. Wird zusammen mit `with` oder `finally`.|
 |`type`|[F#-Typen](fsharp-types.md)<br /><br />[Klassen](classes.md)<br /><br />[Datensätze](records.md)<br /><br />[Strukturen](structures.md)<br /><br />[Enumerationen](enumerations.md)<br /><br />[Unterscheidbare Unions](discriminated-unions.md)<br /><br />[Typabkürzungen](type-abbreviations.md)<br /><br />[Maßeinheiten](units-of-measure.md)|Zum Deklarieren einer Klasse, Datensatz, Struktur, Unterscheidungs-Union, Enumerationstyp, Maßeinheit, oder geben Sie die Abkürzung verwendet.|
 |`upcast`|[Umwandlung und Konvertierungen](casting-and-conversions.md)|Verwendet, um auf einen Typ zu konvertieren, der in der Vererbungskette höher ist.|
 |`use`|[Ressourcenverwaltung: Das `use`-Schlüsselwort](resource-management-the-use-keyword.md)|Anstelle von `let` für Werte, die erfordern `Dispose` , aufgerufen werden, um Ressourcen freizugeben.|
-|`use!`|[Berechnungsausdrücke](computation-expressions.md)<br /><br />[Asynchrone Workflows](asynchronous-workflows.md)|Anstelle von `let!` in asynchronen Workflows und anderen Berechnungsausdrücken für Werte, die erfordern `Dispose` , aufgerufen werden, um Ressourcen freizugeben.|
-|`val`|[Explizite Felder: Das `val`-Schlüsselwort](members/explicit-fields-the-val-keyword.md)<br /><br />[Signaturen](signatures.md)<br /><br />[Mitglieder](members/index.md)|In einer Signatur zum Angeben eines Werts oder in einem Typ deklariert ein Element im eingeschränkten Situationen verwendet.|
-|`void`|[Primitive Typen](primitive-types.md)|Gibt den `void` Typ. Verwendet bei der Interaktion mit anderen .NET-Sprachen.|
-|`when`|[Einschränkungen](generics/constraints.md)|Verwendet für wahrheitsbedingungen (*Wenn Wächter*) auf musterübereinstimmungen und eine Einschränkungsklausel für einen generischen Typparameter einzuführen.|
+|`use!`|[Berechnungsausdrücke](computation-expressions.md)<br /><br />[Asynchrone Workflows](asynchronous-workflows.md)|Anstelle von `let!` in asynchrone Workflows und anderen Berechnungsausdrücken für Werte, die erfordern `Dispose` , aufgerufen werden, um Ressourcen freizugeben.|
+|`val`|[Explizite Felder: Das `val`-Schlüsselwort](members/explicit-fields-the-val-keyword.md)<br /><br />[Signaturen](signatures.md)<br /><br />[Mitglieder](members/index.md)|Verwendet in einer Signatur zum Angeben eines Werts oder in einem Typ um einen Member, in bestimmten Situationen deklarieren.|
+|`void`|[Primitive Typen](primitive-types.md)|Gibt an, die .NET `void` Typ. Verwendet bei der Interaktion mit anderen .NET-Sprachen.|
+|`when`|[Einschränkungen](generics/constraints.md)|Für die booleschen Bedingungen verwendet (*beim schützt*) bei musterübereinstimmungen und eine Einschränkungsklausel für einen generischen Typparameter einzuführen.|
 |`while`|[Schleifen: `while...do`-Ausdruck](loops-while-do-expression.md)|Führt eine Schleifenkonstruktion.|
-|`with`|[Vergleichsausdrücke](match-expressions.md)<br /><br />[Objektausdrücke](object-expressions.md)<br /><br />[Kopieren und Aktualisieren von Datensatzausdrücken](copy-and-update-record-expressions.md)<br /><br />[Typerweiterungen](type-extensions.md)<br /><br />[Ausnahmen: Der `try...with`-Ausdruck](exception-handling/the-try-with-expression.md)|Zusammen mit den `match` Schlüsselwort in Mustervergleichsausdrücken. Auch verwendet in Objektausdrücke, Datensatz von Ausdrücken und typerweiterungen Memberdefinitionen einzuführen und Ausnahmehandler einzuführen.|
-|`yield`|[Sequenzen](sequences.md)|Verwendet in einem Sequenzausdruck zur Erzeugung eines Werts für eine Sequenz.|
-|`yield!`|[Berechnungsausdrücke](computation-expressions.md)<br /><br />[Asynchrone Workflows](asynchronous-workflows.md)|Verwendet in einen Ausdruck für die Berechnung auf das Ergebnis eines Ausdrucks für die angegebene Berechnung an eine Auflistung von Ergebnissen für den enthaltenden Berechnungsausdrucks angefügt werden soll.|
+|`with`|[Vergleichsausdrücke](match-expressions.md)<br /><br />[Objektausdrücke](object-expressions.md)<br /><br />[Kopieren und Aktualisieren von Datensatzausdrücken](copy-and-update-record-expressions.md)<br /><br />[Typerweiterungen](type-extensions.md)<br /><br />[Ausnahmen: Der `try...with`-Ausdruck](exception-handling/the-try-with-expression.md)|Wird zusammen mit den `match` Schlüsselwort in musterabgleichsausdrücken. Auch verwendet in Object-Ausdrücke, Kopieren von Datensatzausdrücken und Erweiterungen des Typs, Memberdefinitionen einführen und Ausnahmehandler einführen.|
+|`yield`|[Sequenzen](sequences.md)|In einem Sequenzausdruck verwendet, um einen Wert für eine Sequenz zu erzeugen.|
+|`yield!`|[Berechnungsausdrücke](computation-expressions.md)<br /><br />[Asynchrone Workflows](asynchronous-workflows.md)|In einem Berechnungsausdruck verwendet zum fügen Sie des Ergebnis eines Ausdrucks für die angegebene Berechnung auf eine Auflistung von Ergebnissen für den enthaltenden Ausdruck für die Berechnung.|
 
-Die folgenden Token sind in f# reserviert werden, da sie Schlüsselwörter in der Sprache mit OCaml sind:
+Die folgenden Token sind in f# reserviert werden, da sie in der Sprache mit OCaml Schlüsselwörter sind:
 
 * `asr`
 * `land`
@@ -100,9 +101,9 @@ Die folgenden Token sind in f# reserviert werden, da sie Schlüsselwörter in de
 * `mod`
 * `sig`
 
-Bei Verwendung der `--mlcompatibility` (Compileroption), die oben aufgeführten Schlüsselwörter stehen zur Verwendung als Bezeichner.
+Bei Verwendung der `--mlcompatibility` -Compileroption verwenden, die oben aufgeführten Schlüsselwörter stehen zur Verwendung als Bezeichner.
 
-Die folgenden Token sind als Schlüsselwörter für zukünftige Erweiterungen der Programmiersprache f# reserviert:
+Die folgenden Token werden als Schlüsselwörter für die zukünftige Erweiterung der Sprache f# reserviert:
 
 * `atomic`
 * `break`

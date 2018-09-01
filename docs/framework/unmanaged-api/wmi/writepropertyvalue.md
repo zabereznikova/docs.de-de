@@ -1,6 +1,6 @@
 ---
 title: WritePropertyValue-Funktion (Referenz zur nicht verwalteten API)
-description: Die Funktion WritePropertyValue schreibt Bytes auf eine Eigenschaft an.
+description: Die Funktion WritePropertyValue schreibt Bytes in eine Eigenschaft an.
 ms.date: 11/06/2017
 api_name:
 - WritePropertyValue
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461083"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393906"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue-Funktion
-Schreibt eine angegebene Anzahl von Bytes an eine Eigenschaft, die durch ein Eigenschaftshandle identifiziert.
+Schreibt eine angegebene Anzahl von Bytes in eine Eigenschaft, die durch ein Eigenschaftshandle identifiziert.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -46,37 +46,37 @@ HRESULT WritePropertyValue (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) Instanz.
 
 `lHandle`  
-[in] Eine ganze Zahl, die das Handle enthält, das diese Eigenschaft kennzeichnet. Das Handle abgerufen werden kann, durch Aufrufen der [GetPropertyHandle](getpropertyhandle.md) Funktion.   
+[in] Eine ganze Zahl, die das Handle enthält, das diese Eigenschaft identifiziert. Das Handle abgerufen werden kann, durch den Aufruf der [GetPropertyHandle](getpropertyhandle.md) Funktion.   
 
 `lNumBytes`  
-[in] Die Anzahl der Bytes, die der Eigenschaft geschrieben wird. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
+[in] Die Anzahl der Bytes, die auf die Eigenschaft geschrieben werden. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
 
 `pHandle`   
 [out] Ein Zeiger auf das Bytearray, das Daten enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
-|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Ein Typenkonflikt aufgetreten ist. |
+|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Es ist ein Typenkonflikt aufgetreten. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::WritePropertyValue](https://msdn.microsoft.com/library/aa391783(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) Methode.
 
 Mit dieser Funktion können Sie die Zeichenfolge "und" alle anderen nicht - festgelegt`DWORD` oder nicht-`QWORD` Daten.
 
-Für Eigenschaftswerte Objektressourcen `lNumBytes` müssen die richtigen Datengröße des Eigenschaftentyps angegeben werden. Für Zeichenfolge-Eigenschaftswerte `lNumBytes` muss die Länge der angegebenen Zeichenfolge in Bytes und die Zeichenfolge selbst muss eine Länge in Bytes, und mit einem Null-Abschlusszeichen folgen.
+Keine Zeichenfolge darstellen Eigenschaftswerte `lNumBytes` müssen die richtigen Datengröße des Eigenschaftentyps angegeben werden. Für Zeichenfolgen-Eigenschaftswerten `lNumBytes` muss die Länge der angegebenen Zeichenfolge in Bytes und die Zeichenfolge selbst muss ein sogar Länge in Bytes und eine Null-Terminierungszeichen folgen.
 
 ## <a name="requirements"></a>Anforderungen  
-**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

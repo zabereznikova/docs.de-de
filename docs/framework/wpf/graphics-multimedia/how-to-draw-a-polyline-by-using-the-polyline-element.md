@@ -8,35 +8,35 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: 2abfa29f7aca4bfc8c5f91e36fd974093a98a9e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d065d3cead1ed9746a9615ce2bb6d3ec4cbd614d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561760"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394415"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Gewusst wie: Zeichnen einer Polylinie mithilfe des Polylinien-Elements
-In diesem Beispiel wird gezeigt, wie zum Zeichnen einer Polylinie, also eine Reihe von miteinander verbundenen Linien mit dem <xref:System.Windows.Shapes.Polyline> Element.  
+Dieses Beispiel zeigt, wie Sie das Zeichnen einer Polylinie, wird eine Reihe von miteinander verbundenen Linien mit dem <xref:System.Windows.Shapes.Polyline> Element.  
   
- Erstellen Sie zum Zeichnen einer Polylinie ein <xref:System.Windows.Shapes.Polyline> Element- und verwenden seiner <xref:System.Windows.Shapes.Polyline.Points%2A> Eigenschaft, um die Form Scheitelpunkte anzugeben. Verwenden Sie abschließend die <xref:System.Windows.Shapes.Shape.Stroke%2A> und <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Eigenschaften beschreiben die Polylinie gliedern, da eine Linie ohne einen Strich nicht sichtbar ist.  
+ Zum Zeichnen einer Polylinie erstellen Sie eine <xref:System.Windows.Shapes.Polyline> -Element, und verwenden die <xref:System.Windows.Shapes.Polyline.Points%2A> Eigenschaft, um die Form Scheitelpunkte anzugeben. Verwenden Sie abschließend die <xref:System.Windows.Shapes.Shape.Stroke%2A> und <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Eigenschaften, die beschreiben des Polyline-Objekt zu beschreiben, da eine Zeile ohne einen Strich nicht sichtbar ist.  
   
 > [!NOTE]
->  Da die <xref:System.Windows.Shapes.Polyline> Element ist keine geschlossene Form der <xref:System.Windows.Shapes.Shape.Fill%2A> Eigenschaft hat keine Auswirkung, auch wenn Sie die Kontur der Form absichtlich schließen. So erstellen eine geschlossene Form mit einer <xref:System.Windows.Shapes.Shape.Fill%2A>, verwenden Sie eine <xref:System.Windows.Shapes.Polygon> Element.  
+>  Da die <xref:System.Windows.Shapes.Polyline> Element ist keine geschlossene Form, die <xref:System.Windows.Shapes.Shape.Fill%2A> Eigenschaft hat keine Auswirkungen, auch wenn Sie absichtlich die Formkontur schließen. Erstellen Sie eine geschlossene Form mit einer <xref:System.Windows.Shapes.Shape.Fill%2A>, verwenden Sie eine <xref:System.Windows.Shapes.Polygon> Element.  
   
- Im folgende Beispiel zeichnet zwei <xref:System.Windows.Shapes.Polyline> Elemente innerhalb einer <xref:System.Windows.Controls.Canvas>.  
+ Das folgende Beispiel zeichnet zwei <xref:System.Windows.Shapes.Polyline> Elemente innerhalb einer <xref:System.Windows.Controls.Canvas>.  
   
 ## <a name="example"></a>Beispiel  
- In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], gültiger Syntax für Punkte ist eine durch Leerzeichen getrennte Liste von Paaren von durch Trennzeichen getrennten x- und y-Koordinate.  
+ In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], gültiger Syntax für Punkte ist eine durch Leerzeichen getrennte Liste von durch Trennzeichen getrennte x und y-Koordinate-Paaren.  
   
  [!code-xaml[drawingwithshapeelements#PolylineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
   
- Obwohl in diesem Beispiel verwendet eine <xref:System.Windows.Controls.Canvas> die Polylinien, können Sie eine Polylinie konvertiert Elemente (und alle anderen Formelemente) mit allen <xref:System.Windows.Controls.Panel> oder <xref:System.Windows.Controls.Control> , die nicht-Text-Inhalt unterstützt.  
+ Obwohl dieses Beispiel verwendet eine <xref:System.Windows.Controls.Canvas> die Polylinien, können Sie Polyline-Elemente (und alle anderen Formelemente) mit einem <xref:System.Windows.Controls.Panel> oder <xref:System.Windows.Controls.Control> , die nicht-Text-Inhalt unterstützt.  
   
- Dieses Beispiel ist Teil eines umfangreicheren Beispiels. Das vollständige Beispiel finden Sie unter [Form-Elemente-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160037).  
+ Dieses Beispiel ist Teil eines umfangreicheren Beispiels. Das vollständige Beispiel finden Sie unter [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Shapes.Polyline>  
  <xref:System.Windows.Shapes.Polygon>  
  <xref:System.Windows.Shapes.Shape>  
- [Beispiel für Form-Elemente](http://go.microsoft.com/fwlink/?LinkID=160037)  
+ [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037)  
  [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)

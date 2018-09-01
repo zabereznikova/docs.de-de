@@ -2,19 +2,19 @@
 title: 'Gewusst wie: Aufrufen einer Delegatenmethode (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: aca87dd9fa1990d44c99aab7753f2fd7d508adc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fea3ddbc9fb553041671713a64e4b866ee38b50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646951"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392437"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Gewusst wie: Aufrufen einer Delegatenmethode (Visual Basic)
-Dieses Beispiel zeigt, wie eine Methode mit einem Delegaten zuordnen und anschließend diese Methode über den Delegaten aufrufen.  
+Dieses Beispiel zeigt, wie Sie eine Methode mit einem Delegaten zuweisen, und rufen danach diese Methode über den Delegaten.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Erstellen des Delegaten und dem entsprechenden Verfahren  
+### <a name="create-the-delegate-and-matching-procedures"></a>Erstellen des Delegaten und die entsprechenden Verfahren  
   
-1.  Erstellen Sie einen Delegaten mit dem Namen `MySubDelegate`.  
+1.  Erstellen Sie einen Delegaten, mit dem Namen `MySubDelegate`.  
   
     ```  
     Delegate Sub MySubDelegate(ByVal x As Integer)  
@@ -30,7 +30,7 @@ Dieses Beispiel zeigt, wie eine Methode mit einem Delegaten zuordnen und anschli
     End Class  
     ```  
   
-3.  Definieren Sie eine Methode, erstellt eine Instanz des Delegaten und ruft die Methode, die der Delegat durch Aufrufen der integriertes zugeordneten `Invoke` Methode.  
+3.  Definieren Sie eine Methode, erstellt eine Instanz des Delegaten und ruft die Methode dem Delegaten zugeordnet sind, durch Aufrufen der integriertes `Invoke` Methode.  
   
     ```  
     Protected Sub DelegateTest()  
@@ -46,4 +46,4 @@ Dieses Beispiel zeigt, wie eine Methode mit einem Delegaten zuordnen und anschli
  [Delegate-Anweisung](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
  [Delegaten](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Multithreadanwendungen](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)
+ [Multithreadanwendungen](https://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)

@@ -10,16 +10,16 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4b846dfdd7c19a515c759fbeac1762cb47ca8876
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258576"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395477"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Übersicht über TextPattern und eingebettete Objekte
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In dieser Übersicht wird beschrieben, wie von der [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] eingebettete Objekte oder untergeordnete Elemente innerhalb eines Textdokuments oder Containers verfügbar gemacht werden.  
   
@@ -46,7 +46,7 @@ Beispiel für einen Textstream mit eingebetteten Objekten und deren Bereichsabsc
   
  Wenn der Inhalt eines Textbereichs durchlaufen werden muss, ist eine Reihe von Hintergrundschritten erforderlich, um die <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> -Methode erfolgreich auszuführen.  
   
-1.  Der Textbereich ist normalisiert. Dies bedeutet, dass dieser auf einen degenerierten Bereich am <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> -Endpunkt reduziert ist, wodurch der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkt überflüssig wird. Dieser Schritt ist erforderlich, um Mehrdeutigkeit in Situationen, in denen ein Textbereich umfasst <xref:System.Windows.Automation.Text.TextUnit> Grenzen: z. B. "{die U} RL [ http://www.microsoft.com ](http://www.microsoft.com) ist in den Text eingebettet", "{" und "}" werden der Text Endpunkte des Textbereichs.  
+1.  Der Textbereich ist normalisiert. Dies bedeutet, dass dieser auf einen degenerierten Bereich am <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> -Endpunkt reduziert ist, wodurch der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkt überflüssig wird. Dieser Schritt ist erforderlich, um Mehrdeutigkeit in Situationen, in denen ein Textbereich umfasst <xref:System.Windows.Automation.Text.TextUnit> Grenzen: z. B. "{die U} RL [ http://www.microsoft.com ](https://www.microsoft.com) ist in den Text eingebettet", "{" und "}" werden der Text Endpunkte des Textbereichs.  
   
 2.  Der resultierende Bereich wird im <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> zurück an den Anfang der angeforderten <xref:System.Windows.Automation.Text.TextUnit> -Grenze verschoben.  
   
@@ -71,7 +71,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 ### <a name="hyperlink"></a>Link  
  **Beispiel 1: Ein Textbereich, der einen eingebetteten Textlink enthält**  
   
- {Die URL [ http://www.microsoft.com ](http://www.microsoft.com) ist in den Text eingebettet}.  
+ {Die URL [ http://www.microsoft.com ](https://www.microsoft.com) ist in den Text eingebettet}.  
   
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
@@ -92,7 +92,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
   
  **Beispiel 3: ein Textbereich, der den Inhalt eines Textcontainers nur teilweise enthält. Der Textcontainer enthält einen eingebetteten Textlink, der nicht Teil des Textbereichs ist.**  
   
- {Die URL} [ http://www.microsoft.com ](http://www.microsoft.com) ist in den Text eingebettet.  
+ {Die URL} [ http://www.microsoft.com ](https://www.microsoft.com) ist in den Text eingebettet.  
   
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
@@ -159,4 +159,4 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
  [Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [Durchlaufen von Text mit Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern-Suche und Auswahl-Beispiel](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [TextPattern-Suche und Auswahl-Beispiel](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

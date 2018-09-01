@@ -2,12 +2,12 @@
 title: TCP-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 9f08864c1d5139160ac25e0733ddcfc1c8557ad9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c10cc1edfb06d55fc8a59a32bf905c95b20a19dc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807405"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396102"
 ---
 # <a name="tcp-activation"></a>TCP-Aktivierung
 In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Process Activation Services (WAS) zum Aktivieren eines Diensts verwendet, der über das net.tcp-Protokoll kommuniziert. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -20,7 +20,7 @@ In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Pr
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
   
@@ -142,17 +142,17 @@ Press <ENTER> to terminate client.
   
 1.  Stellen Sie sicher, dass [!INCLUDE[iisver](../../../../includes/iisver-md.md)] installiert ist. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] ist für die WAS-Aktivierung erforderlich.  
   
-2.  Achten Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Achten Sie darauf durchgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-     Darüber hinaus müssen Sie die WCF-HTTP-Aktivierung-Komponenten installieren:  
+     Darüber hinaus müssen Sie die WCF-nicht-HTTP-Aktivierung-Komponenten installieren:  
   
-    1.  Aus der **starten** Menü wählen **Systemsteuerung**.  
+    1.  Von der **starten** Menü wählen **Systemsteuerung**.  
   
     2.  Wählen Sie **Programme und Funktionen**.  
   
     3.  Klicken Sie auf **aktivieren oder Deaktivieren von Windows-Komponenten**.  
   
-    4.  Erweitern Sie die **Microsoft .NET Framework 3.0** Knoten, und überprüfen Sie die **Windows Communication Foundation-nicht-HTTP-Aktivierung** Funktion.  
+    4.  Erweitern Sie die **Microsoft .NET Framework 3.0** Knoten und überprüfen Sie die **Windows Communication Foundation-nicht-HTTP-Aktivierung** Feature.  
   
 3.  Konfigurieren Sie WAS für die Unterstützung der TCP-Aktivierung.  
   
@@ -175,11 +175,11 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  Dieser Befehl ist eine einzelne Textzeile. Dieser Befehl aktiviert die Anwendung/servicemodelsamples darauf zugegriffen werden beide http://localhost/servicemodelsamples und TCP://localhost//servicemodelsamples.  
+        >  Dieser Befehl ist eine einzelne Textzeile. Dieser Befehl aktiviert die Anwendung/servicemodelsamples darauf zugegriffen werden kann sowohl http://localhost/servicemodelsamples und TCP://localhost//servicemodelsamples.  
   
 4.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-5.  Um das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
      Entfernen Sie die net.tcp-Sitebindung, die für dieses Beispiel hinzugefügt wurde.  
   
@@ -206,4 +206,4 @@ Press <ENTER> to terminate client.
         >  Dieser Befehl muss als eine Textzeile eingegeben werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [AppFabric-Hosting und Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

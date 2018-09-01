@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-ms.openlocfilehash: 7a2ce452a1e55d0b01245c4eb7f43056031b9e2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94abd36affdccec1d01c030fcff4c6de93ca6c72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533912"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395380"
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>Gewusst wie: Ausführen eines Vorgangs im Hintergrund
 Gibt es einen Vorgang, der bis zu seinem Abschluss eine lange Zeit in Anspruch nimmt, und Sie möchten keine Verzögerungen in der Benutzeroberfläche verursachen, können Sie die <xref:System.ComponentModel.BackgroundWorker>-Klasse dazu verwenden, den Vorgang über einen anderen Thread auszuführen.  
@@ -27,7 +27,7 @@ Gibt es einen Vorgang, der bis zu seinem Abschluss eine lange Zeit in Anspruch n
   
  Visual Studio bietet umfassende Unterstützung für diese Aufgabe.  
   
- Siehe auch [Exemplarische Vorgehensweise: Ausführen eines Vorgangs im Hintergrund](http://msdn.microsoft.com/library/ms233672\(v=vs.110\)).  
+ Siehe auch [Exemplarische Vorgehensweise: Ausführen eines Vorgangs im Hintergrund](walkthrough-running-an-operation-in-the-background.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[System.ComponentModel.BackgroundWorker.Example#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#1)]
@@ -38,7 +38,7 @@ Gibt es einen Vorgang, der bis zu seinem Abschluss eine lange Zeit in Anspruch n
   
 -   Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ComponentModel.BackgroundWorker>  

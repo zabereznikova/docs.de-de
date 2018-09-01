@@ -9,16 +9,16 @@ ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: fa898064a3b2930499a5d3b4a8c409f562162e34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0a64c87aadef98e7e838ec9aefb89bfb17034d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410253"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392202"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den DataGrid-Steuerelementtyp
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Informationen über [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Unterstützung für den Steuerelementtyp „DataGrid“. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]umfasst ein Steuerelementtyp eine Reihe von Bedingungen, die ein Steuerelement erfüllen muss, damit die `ControlType` -Eigenschaft verwendet werden kann. Die Bedingungen schließen bestimmte Richtlinien für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaftswerte und Steuerelementmuster ein.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33410253"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
- In der folgenden Tabelle werden die Eigenschaften aufgelistet, deren Werte oder Definitionen für Datenratser-Steuerelemente besonders relevant sind. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie in [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ In der folgenden Tabelle werden die Eigenschaften aufgelistet, deren Werte oder Definitionen für Datenratser-Steuerelemente besonders relevant sind. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 |Eigenschaft|Wert|Hinweise|  
 |--------------|-----------|-----------|  
@@ -103,7 +103,7 @@ ms.locfileid: "33410253"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur – Steuerelementansicht|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur – Inhaltsansicht|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem „Name“ (Invoke)</li><li>HeaderItem „Änderungsdatum“ (Invoke)</li><li>HeaderItem „Größe“ (Invoke)</li></ul></li><li>Gruppe "Contoso" (TableItem, GridItem, SelectionItem, Tabelle *, Grid\*)<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "Accounts Payable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Gruppe "Contoso" (TableItem, GridItem, SelectionItem, Tabelle *, Grid\*)<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "Accounts Payable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|  
+|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem „Name“ (Invoke)</li><li>HeaderItem „Änderungsdatum“ (Invoke)</li><li>HeaderItem „Größe“ (Invoke)</li></ul></li><li>Gruppe "Contoso" (TableItem, GridItem, SelectionItem, Table *, Grid\*)<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "Accounts Payable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Gruppe "Contoso" (TableItem, GridItem, SelectionItem, Table *, Grid\*)<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "Accounts Payable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|  
   
  *Im vorangehenden Beispiel ist ein Datenraster (DataGrid) gezeigt, das mehrere Ebenen von Steuerelementen enthält. Das Gruppensteuerelement („Contoso“) enthält zwei Datenelement-Steuerelemente („Accounts Receivable.doc“ und „Accounts Payable.doc“). Ein DataGrid/GridItem-Paar ist unabhängig von einem Paar auf einer anderen Ebene. Die Datenelement-Steuerelemente (DataItem) unter einer Gruppe können auch, statt als einfache Datenelemente, als ListItem-Steuerelementtyp verfügbar gemacht werden, wodurch sie deutlicher als auswählbare Objekte dargestellt werden können. Dieses Beispiel enthält nicht die Unterelemente der gruppierten Datenelemente.  
   

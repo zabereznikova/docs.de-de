@@ -2,17 +2,17 @@
 title: Einstellungsprozess
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519762"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396319"
 ---
 # <a name="hiring-process"></a>Einstellungsprozess
 In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten sowie zwei als Workflowdienste gehostete Workflows implementiert werden. Diese Workflows sind Teil der IT-Infrastruktur des fiktionalen Unternehmens Contoso, Inc.  
   
- Der `HiringRequest`-Workflowprozess (implementiert als <xref:System.Activities.Statements.Flowchart>) erfordert eine Autorisierung durch mehrere Manager in der Organisation. Um dieses Ziel zu erreichen, verwendet der Workflow bestehende Dienste in der Organisation (in unserem Fall, posteingangsdienst sowie ein datenorganisationsdienst als einfaches Windows Communication Foundation (WCF)-Dienste implementiert).  
+ Der `HiringRequest`-Workflowprozess (implementiert als <xref:System.Activities.Statements.Flowchart>) erfordert eine Autorisierung durch mehrere Manager in der Organisation. Um dieses Ziel zu erreichen, verwendet der Workflow bestehende Dienste in der Organisation (in unserem Fall, ein posteingangsdienst sowie ein Organisationsdaten-Dienst, der als einfache Windows Communication Foundation (WCF)-Dienste implementiert).  
   
  Mit dem `ResumeRequest`-Workflow (implementiert als <xref:System.Activities.Statements.Sequence>) wird eine Stellenausschreibung auf der externen Website der Personalabteilung von Contoso veröffentlicht, und die eingehenden Lebensläufe werden verwaltet. Die Stellenausschreibung ist auf der externen Website des Unternehmens abrufbar, bis ein diesbezüglich festgelegter Zeitraum abgelaufen ist oder sie von einem Mitarbeiter von Contoso entfernt wird.  
   
@@ -53,7 +53,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -112,14 +112,14 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
 |-------------|-----------------|-------------|  
 |Flussdiagramm|Der Geschäftsprozess wird als Flussdiagramm dargestellt. Die Darstellung als Flussdiagramm entspricht der möglichen Darstellung des Prozesses durch ein Unternehmen auf einem Whiteboard.|HiringRequestService|  
 |Workflowdienste|Das Flussdiagramm mit der Prozessdefinition wird in einem Dienst gehostet (in diesem Beispiel wird der Dienst in einer Konsolenanwendung gehostet).|HiringRequestService|  
-|Messagingaktivitäten|Messagingaktivitäten werden im Flussdiagramm auf zweierlei Weise verwendet:<br /><br /> -Um Informationen vom Benutzer (zum Empfangen von der Entscheidungen sowie diesbezüglicher Informationen in den einzelnen Genehmigungsschritten) zu erhalten.<br />-, Mit anderen Diensten (InboxService und OrgDataService, Verwendung über Dienstverweise) zu interagieren.|HiringRequestService|  
-|Inhaltsbasierte Korrelation|Genehmigungsnachrichten werden mit der ID-Eigenschaft der Stellenausschreibung korreliert:<br /><br /> – Wenn ein Prozess gestartet wird, wird das Korrelationshandle mit der ID der Anforderung initialisiert.<br />-Eingehende genehmigungsnachrichten korreliert die ID (der erste Parameter jeder Genehmigungsnachricht ist die ID der Anforderung).|HiringRequestService/ResumeRequestService|  
-|Benutzerdefinierte Aktivitäten (deklarativ und codebasiert)|Dieses Beispiel enthält verschiedene benutzerdefinierte Aktivitäten:<br /><br /> -   `SaveActionTracking`: Diese Aktivität gibt einen benutzerdefinierten <xref:System.Activities.Tracking.TrackingRecord> (mit <xref:System.Activities.NativeActivityContext.Track%2A>). Diese Aktivität wurde durch Erweiterung der <xref:System.Activities.NativeActivity> mit imperativem Code erstellt.<br />-   `GetEmployeesByPositionTypes`: Diese Aktivität empfängt eine Liste von Positionstyp IDs und gibt eine Liste der Personen, denen dieser Stelle bei Contoso zurück. Diese Aktivität wurde deklarativ (mit dem Aktivitätsdesigner) erstellt.<br />-   `SaveHiringRequestInfo`: Mit dieser Aktivität speichert die Informationen von einem `HiringRequest` (mit `HiringRequestRepository.Save`). Diese Aktivität wurde durch Erweiterung der <xref:System.Activities.CodeActivity> mit imperativem Code erstellt.|HiringRequestService|  
+|Messagingaktivitäten|Messagingaktivitäten werden im Flussdiagramm auf zweierlei Weise verwendet:<br /><br /> -Um Informationen über Benutzer (Ermitteln der Entscheidungen sowie diesbezüglicher Informationen in den einzelnen Genehmigungsschritten empfangen) zu erhalten.<br />-So mit anderen Diensten (InboxService und OrgDataService, Verwendung über Dienstverweise) zu interagieren.|HiringRequestService|  
+|Inhaltsbasierte Korrelation|Genehmigungsnachrichten werden mit der ID-Eigenschaft der Stellenausschreibung korreliert:<br /><br /> – Wenn ein Prozess gestartet wird, wird das Korrelationshandle mit der ID der Anforderung initialisiert.<br />– ID (der erste Parameter jeder Genehmigungsnachricht ist die ID der Anforderung) korreliert eingehende genehmigungsnachrichten.|HiringRequestService/ResumeRequestService|  
+|Benutzerdefinierte Aktivitäten (deklarativ und codebasiert)|Dieses Beispiel enthält verschiedene benutzerdefinierte Aktivitäten:<br /><br /> -   `SaveActionTracking`: Diese Aktivität gibt einen benutzerdefinierten <xref:System.Activities.Tracking.TrackingRecord> (mit <xref:System.Activities.NativeActivityContext.Track%2A>). Diese Aktivität wurde durch Erweiterung der <xref:System.Activities.NativeActivity> mit imperativem Code erstellt.<br />-   `GetEmployeesByPositionTypes`: Diese Aktivität empfängt eine Liste der Stellen-IDs und gibt eine Liste der Personen, die von dieser Stelle bei Contoso haben. Diese Aktivität wurde deklarativ (mit dem Aktivitätsdesigner) erstellt.<br />-   `SaveHiringRequestInfo`: Diese Aktivität speichert die Informationen von einem `HiringRequest` (mit `HiringRequestRepository.Save`). Diese Aktivität wurde durch Erweiterung der <xref:System.Activities.CodeActivity> mit imperativem Code erstellt.|HiringRequestService|  
 |Vom System bereitgestellte SQL Server-Persistenz|Die <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Instanz, die als Host für die Prozessdefinition des Flussdiagramms fungiert, ist für die Verwendung der vom System bereitgestellten SQL Server-Persistenz konfiguriert.|HiringRequestService/ResumeRequestService|  
 |Benutzerdefinierte Nachverfolgung|Das Beispiel enthält einen benutzerdefinierten Überwachungsteilnehmer, mit dem der Verlauf eines `HiringRequestProcess` (welche Aktion wurde wann von wem ausgeführt) gespeichert wird. Der Quellcode ist im Ordner für die Überwachung von HiringRequestService gespeichert.|HiringRequestService|  
 |ETW-Überwachung|Die vom System bereitgestellte ETW-Überwachung wird in der Datei App.config im Dienst HiringRequestService konfiguriert.|HiringRequestService|  
 |Komposition von Aktivitäten|Die Prozessdefinition verwendet die freie Komposition von <xref:System.Activities.Activity>. Das Flussdiagramm enthält verschiedene aufeinanderfolgende sowie parallele Aktivitäten, die wiederum andere Aktivitäten enthalten usw.|HiringRequestService|  
-|Parallele Aktivitäten|-   <xref:System.Activities.Statements.ParallelForEach%601> wird verwendet, um im Posteingang des CEO und Personalvorständen parallel (wartet auf beiden Personalvorstände Genehmigungsschritt) zu registrieren.<br />-   <xref:System.Activities.Statements.Parallel> wird verwendet, um einige Bereinigungsaufgaben in den Abschluss- und Ablehnungsschritten führen.|HiringRequestService|  
+|Parallele Aktivitäten|-   <xref:System.Activities.Statements.ParallelForEach%601> wird verwendet, um im Posteingang des Firmenchefs sowie der Personalvorständen parallel (wartet auf beiden Personalvorstände Genehmigungsschritt) zu registrieren.<br />-   <xref:System.Activities.Statements.Parallel> wird verwendet, um verschiedene Aufgaben für die Bereinigung in den Abschluss- und Ablehnungsschritten Schritten ausführen|HiringRequestService|  
 |Abbruch des Modells|Im Flussdiagramm wird mit <xref:System.Activities.Statements.CancellationScope> ein Abbruchverhalten erstellt (im vorliegenden Fall werden einige Bereinigungsaufgaben ausgeführt.).|HiringRequestService|  
 |Kundenpersistenzteilnehmer|Mit `HiringRequestPersistenceParticipant` werden Daten aus einer Workflowvariablen in einer Tabelle erfasst, die in der Personaldatenbank von Contoso gespeichert ist.|HiringRequestService|  
 |Workflowdienste|`ResumeRequestService` wird unter Verwendung von Workflowdiensten implementiert. Die Definition des Workflows sowie Informationen zum Dienst sind in ResumeRequestService.xamlx enthalten. Der Dienst ist für die Verwendung von Persistenz und Überwachung konfiguriert.|ResumeRequestService|  
@@ -131,7 +131,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
 ## <a name="data-storage"></a>Datenspeicher  
  Die Daten werden in einer SQL Server-Datenbank mit dem Namen `ContosoHR` gespeichert. (Das Skript zum Erstellen der Datenbank befindet sich im Ordner `DbSetup`.) Workflowinstanzen werden in einer SQL Server-Datenbank mit dem Namen `InstanceStore` gespeichert. (Die Skripts zum Erstellen des Instanzspeichers sind Teil von [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].)  
   
- Beide Datenbanken werden erstellt, indem Skript "Setup.cmd" aus einer Visual Studio-Eingabeaufforderung ausführen.  
+ Beide Datenbanken werden durch Ausführen des Skripts Setup.cmd an einer Eingabeaufforderung von Visual Studio erstellt.  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
   
@@ -149,9 +149,9 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 1.  Führen Sie Visual Studio als Administrator aus. Öffnen Sie HiringRequest.sln.  
   
-2.  Mit der rechten Maustaste in der Projektmappe in **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**.  
+2.  Mit der rechten Maustaste in der Lösung in **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**.  
   
-3.  Wählen Sie die Option **mehrere Startprojekte** und legen Sie die **CareersWebSite**, **InternalClient**, **HiringRequestService**, und **ResumeRequestService** auf **starten**. Lassen Sie **ContosoHR**, **InboxService**, und **OrgService** None.  
+3.  Wählen Sie die Option **mehrere Startprojekte** und legen Sie die **CareersWebSite**, **InternalClient**, **HiringRequestService**, und **ResumeRequestService** zu **starten**. Lassen Sie **ContosoHR**, **InboxService**, und **OrgService** mit "None".  
   
 4.  Erstellen Sie die Projektmappe, indem Sie STRG+UMSCHALT+B drücken. Vergewissern Sie sich, dass der Build erfolgreich erstellt wurde.  
   
@@ -169,9 +169,9 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 6.  Mit der rechten Maustaste **CareersWebSite** in der Projektmappe, und wählen **in Browser anzeigen**.  
   
-7.  Navigieren Sie zurück zu den `InternalClient` durch Rechtsklicken auf **InternalClient** in der Projektmappe auswählen und **in Browser anzeigen**.  
+7.  Navigieren Sie zurück zu den `InternalClient` mit der rechten Maustaste **InternalClient** in der Projektmappe auswählen und **in Browser anzeigen**.  
   
-8.  Wechseln Sie zu der **JobPostings** Abschnitt, indem Sie auf die **Job Postings** Link im oberen Menü Posteingang. Sie können dieses Szenario hier detailliert verfolgen.  
+8.  Wechseln Sie zu der **JobPostings** Abschnitt, indem Sie auf die **Stellenausschreibungen** Link im oberen Menü Posteingang. Sie können dieses Szenario hier detailliert verfolgen.  
   
 ## <a name="scenarios"></a>Szenarien  
   
@@ -179,7 +179,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 1.  Michael Alexander (Softwareentwickler) möchte eine neue Stelle für einen Softwareentwickler ausschreiben, der über mindestens 3 Jahre C#-Erfahrung verfügen muss und mit Tests in der technischen Entwicklungsabteilung betraut werden soll.  
   
-2.  Nach dem Erstellen die Anforderung wird in Alexanders Posteingang angezeigt (klicken Sie auf **aktualisieren** , wenn die Anforderung nicht angezeigt wird) auf Peter Brehms Genehmigung, wer Michael Manager wartet.  
+2.  Nach dem Erstellen die Anforderung wird in Alexanders Posteingang angezeigt (klicken Sie auf **aktualisieren** , wenn die Anforderung nicht angezeigt wird) erwartet Brehm genehmigt, Michael-Manager ist.  
   
 3.  Peter Brehm regt eine Änderung an der Ausschreibung an. Er ist der Ansicht, dass für die Stelle 5 Jahre C#-Erfahrung erforderlich sind und teilt dies Michael Alexander in einer Anmerkung mit.  
   
@@ -195,17 +195,17 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 ### <a name="start-resume-request"></a>Erfassung von Lebensläufen  
   
-1.  Jetzt die stellenausschreibung wartet auf eine externe Website veröffentlicht werden, auf dem Personen anwenden können (sehen Sie auf der **Job Postings** Link). Die Stellenausschreibung wird derzeit von einem Mitarbeiter der Personalabteilung abschließend bearbeitet und anschließend veröffentlicht.  
+1.  Die stellenausschreibung wartet jetzt auf eine externe Website bereitgestellt wird, Interessenten können sich bewerben (Sie sehen, die Sie auf die **Stellenausschreibungen** Link). Die Stellenausschreibung wird derzeit von einem Mitarbeiter der Personalabteilung abschließend bearbeitet und anschließend veröffentlicht.  
   
-2.  Personalabteilung möchte die stellenausschreibung bearbeiten (durch Klicken auf die **bearbeiten** Link) durch ein Timeout von 60 Minuten festlegen (in der Realität, liegt möglicherweise Tage oder Wochen). Der Gültigkeitszeitraum ermöglicht das Entfernen der Stellenausschreibung von der externen Website nach Ablauf eines bestimmten Zeitraums.  
+2.  Personalabteilung möchte die stellenausschreibung bearbeiten (durch Klicken auf die **bearbeiten** Link) durch ein Timeout von 60 Minuten festlegen (in der Praxis möglicherweise Tage oder Wochen). Der Gültigkeitszeitraum ermöglicht das Entfernen der Stellenausschreibung von der externen Website nach Ablauf eines bestimmten Zeitraums.  
   
-3.  Nachdem die bearbeitete stellenausschreibung gespeichert haben, erscheint in der **Receiving Resumes** Registerkarte (Aktualisierung der Webseite, um die neue stellenausschreibung anzuzeigen).  
+3.  Nachdem die bearbeitete stellenausschreibung gespeichert wurde, erscheint in der **Receiving Resumes** Registerkarte (Aktualisieren Sie die Webseite, um die neue stellenausschreibung anzuzeigen).  
   
 ### <a name="collecting-resumes"></a>Erfassen von Lebensläufen  
   
 1.  Die Stellenausschreibung soll auf der externen Website angezeigt werden. Interessenten können sich nun auf die Stelle bewerben und ihren Lebenslauf einreichen.  
   
-2.  Wenn Sie auf der stellenausschreibungen zurückkehren, können Sie "anzeigen Lebensläufe", die bisher gesammelt wurden.  
+2.  Wenn Sie auf der stellenausschreibungen zurückkehren, können Sie "anzeigen wird fortgesetzt", die bisher erfasst wurden.  
   
 3.  Die Erfassung von Lebensläufen kann von der Personalabteilung auch beendet werden (etwa nachdem die Stelle wunschgemäß besetzt wurde).  
   
@@ -215,7 +215,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 2.  Überprüfen Sie Folgendes, falls die Projektmappe nicht erstellt werden kann:  
   
-    -   Der Verweis auf `ContosoHR` ist sowohl die `InternalClient` oder `CareersWebSite` Projekte.  
+    -   Der Verweis auf `ContosoHR` nicht fehlt die `InternalClient` oder `CareersWebSite` Projekte.  
   
 3.  Überprüfen Sie Folgendes, falls die Projektmappe nicht ausgeführt werden kann:  
   

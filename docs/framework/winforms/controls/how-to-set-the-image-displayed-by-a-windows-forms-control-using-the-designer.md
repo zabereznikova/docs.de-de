@@ -9,28 +9,28 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: b3625510028d5941173848849ab915f56260577a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9491c7eee7dee197e9a3b91d35bc7f71f4e956
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532784"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392627"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes mithilfe des Designers
-Einige Windows Forms-Steuerelemente können Bilder anzuzeigen. Das Bild kann ein Symbol, das den Zweck des Steuerelements, wie z. B. auf eine Schaltfläche, ein Datenträgersymbol verdeutlicht die **speichern** Befehl. Das Symbol kann auch ein Hintergrundbild auf dem Steuerelement den gewünschten Stil sein.  
+Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Das Bild kann ein Symbol, das den Zweck des Steuerelements, z. B. auf eine Schaltfläche, ein Datenträgersymbol wird ermittelt, werden die **speichern** Befehl. Alternativ kann das Symbol ein Hintergrundbild auf dem Steuerelement der gewünschten Eindruck sein.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Das von einem Steuerelement angezeigte Bild festlegen  
   
-1.  In der **Eigenschaften** wählen die **Image** oder **BackgroundImage** Eigenschaft des Steuerelements, klicken Sie dann auf die Schaltfläche mit den Auslassungszeichen ()  
+1.  In der **Eigenschaften** wählen Sie im Fenster der **Image** oder **BackgroundImage** -Eigenschaft des Steuerelements, klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten ()  
   
-     ![Bildschirmabbildung von VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")  
+     ![VisualStudioEllipsesButton-bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")  
   
-     ) zum Anzeigen der **Ressource auswählen** (Dialogfeld).  
+     ) zum Anzeigen der **Ressource auswählen** Dialogfeld.  
   
-2.  Wählen Sie das Bild, das Sie anzeigen möchten.  
+2.  Wählen Sie das Bild, die, das Sie anzeigen möchten.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Drawing.Image.FromFile%2A>  

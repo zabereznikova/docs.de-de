@@ -2,17 +2,17 @@
 title: '&lt;peerAuthentication&gt;-Element'
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: db544b1bbf46d0656b763d5be769d9521a299f1a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4fb8cc4989313afa3ef16c90b54e0feae1ccb71d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749815"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390331"
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt;-Element
 Gibt die Authentifizierungsoptionen für Peer-to-Peer-Clients an.  
   
- Weitere Informationen zur Peer-zu-Peer-Programmierung finden Sie unter [Peer-zu-Peer-Netzwerken](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Weitere Informationen zur Peer-zu-Peer-Programmierung finden Sie unter [Peer-zu-Peer-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
  \<system.ServiceModel>  
 \<behaviors>  
@@ -43,7 +43,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |`customCertificateValidatorType`|Optionale Zeichenfolge. Ein Typ und eine Assembly, die zum Überprüfen eines benutzerdefinierten Typs verwendet werden. Das Attribut muss festgelegt werden, wenn für `certificateValidationMode` der Wert `Custom` festgelegt wurde.|  
 |`certifcateValidationMode`|Optionale Enumeration. Gibt einen der drei für die Überprüfung von Anmeldeinformationen verwendeten Modi an. Wenn dies auf `Custom` festgelegt wurde, muss auch ein `customCertificateValidator` bereitgestellt werden. Die Standardeinstellung ist `ChainTrust`.|  
 |`revocationMode`|Optionale Enumeration. Einer der Modi zum Prüfen auf eine Liste gesperrter Zertifikate. Die Standardeinstellung ist `Online`.|  
-|`trustedStoreLocation`|Optionale Enumeration. Einer der beiden Systemspeicherorte: `LocalMachine` oder `CurrentUser`. Dieser Wert wird verwendet, wenn ein Dienstzertifikat mit dem Client ausgehandelt wird. Validierung gegen das **vertrauenswürdige Personen** am angegebenen Speicherort zu speichern. Die Standardeinstellung ist `CurrentUser`.|  
+|`trustedStoreLocation`|Optionale Enumeration. Einer der beiden Systemspeicherorte: `LocalMachine` oder `CurrentUser`. Dieser Wert wird verwendet, wenn ein Dienstzertifikat mit dem Client ausgehandelt wird. Validierung wird ausgeführt, für die **vertrauenswürdige Personen** am angegebenen Speicherort zu speichern. Die Standardeinstellung ist `CurrentUser`.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType-Attribut  
   
@@ -110,6 +110,6 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Peer-to-Peer-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Peerkanal Nachrichtenauthentifizierung](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Benutzerdefinierter Peerkanal-Authentifizierung](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Peerkanal-Nachrichtenauthentifizierung](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Benutzerdefinierter Peerkanal-Authentifizierung](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Sichern von Peerkanalanwendungen](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

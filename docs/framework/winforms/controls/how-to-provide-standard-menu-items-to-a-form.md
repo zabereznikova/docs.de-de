@@ -9,19 +9,19 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-ms.openlocfilehash: b118392d089bf28edee1496e0e11ed24d263202a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf43d27ed728d11b5cde5b9250cfc4614077ed94
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533331"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395708"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>Gewusst wie: Bereitstellen von Standardmenüelementen für ein Formular
 Mit dem <xref:System.Windows.Forms.MenuStrip>-Steuerelement können Sie ein Standardmenü für Formulare bereitstellen.  
   
- Es gibt umfassende Unterstützung für dieses Feature in Visual Studio.  
+ Bietet umfassende Unterstützung für dieses Feature in Visual Studio.  
   
- Siehe auch [Exemplarische Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](http://msdn.microsoft.com/library/ms233662\(v=vs.110\)).  
+ Siehe auch [Exemplarische Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](walkthrough-providing-standard-menu-items-to-a-form.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird veranschaulicht, wie mit dem <xref:System.Windows.Forms.MenuStrip>-Steuerelement ein Formular mit Standardmenü erstellt wird. Menüelementauswahlen werden in einem <xref:System.Windows.Forms.StatusStrip>-Steuerelement angezeigt.  
@@ -34,7 +34,7 @@ Mit dem <xref:System.Windows.Forms.MenuStrip>-Steuerelement können Sie ein Stan
   
 -   Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.MenuStrip>  

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: 474057801cb1a1883282e435faa9d7a85870102c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d7f37acb2c0e09a0a9104a0bb7bd90b2d324a4d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551777"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396170"
 ---
 # <a name="listbox-how-to-topics"></a>Gewusst-wie-Themen zu ListBox
-Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.ListBox> -Steuerelement zum Anzeigen von auswählbarer Listen von Elementen.  
+Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.ListBox> -Steuerelement ausgewählt werden Listen von Elementen angezeigt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Binden eines Listenfelds an Daten](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
  [Abrufen eines ListBoxItem](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [Vorgehensweise: Hinzufügen von Daten zu einem ItemsControl](http://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
+ [Vorgehensweise: Hinzufügen von Daten zu einem ItemsControl-Element](https://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
  [Verbessern der Bildlaufleistung eines Listenfelds](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
 ## <a name="reference"></a>Referenz  

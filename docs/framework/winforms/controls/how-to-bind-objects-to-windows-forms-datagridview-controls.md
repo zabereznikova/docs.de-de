@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], object binding
 - object binding [Windows Forms], DataGridView control
 ms.assetid: cb8f29fa-577e-4e2b-883f-3a01c6189b9c
-ms.openlocfilehash: 9580812be4e15a0b925c5737dc6dfe0e0fdaf407
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 142009bb2c845384c19e5999896afbfa2ebd0a3c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530106"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397068"
 ---
 # <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Gewusst wie: Binden von Objekten an das DataGridView-Steuerelement in Windows Forms
 Im folgenden Codebeispiel wird gezeigt, wie eine Auflistung von Objekten so an ein <xref:System.Windows.Forms.DataGridView>-Steuerelement gebunden wird, dass jedes Objekt als eine separate Zeile angezeigt wird. Das Beispiel zeigt darüber hinaus, wie eine Eigenschaft mit einem Enumerationstyp in einer <xref:System.Windows.Forms.DataGridViewComboBoxColumn> angezeigt wird, sodass die Dropdownliste des Kombinationsfelds die Enumerationswerte enthält.  
@@ -28,7 +28,7 @@ Im folgenden Codebeispiel wird gezeigt, wie eine Auflistung von Objekten so an e
   
 -   Verweise auf die Assemblys "System" und "System.Windows.Forms".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.DataGridView>  

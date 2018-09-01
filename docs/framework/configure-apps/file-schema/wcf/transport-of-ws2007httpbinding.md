@@ -2,11 +2,12 @@
 title: '&lt;transport&gt; von &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 3be9d4e64e63b32156cb64257f5bed8230cee3aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35af47551f742b0e48220611a874605fb752b626
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396796"
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; von &lt;ws2007HttpBinding&gt;
 Definiert die Authentifizierungseinstellungen für den HTTP-Transport.  
@@ -70,7 +71,7 @@ transport clientCredentialType =
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Stellt die Sicherheitsfunktionen des der [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) Element.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Gibt die Sicherheitsfunktionen von der [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) Element.|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.HttpTransportSecurity>  
@@ -80,5 +81,5 @@ transport clientCredentialType =
  [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

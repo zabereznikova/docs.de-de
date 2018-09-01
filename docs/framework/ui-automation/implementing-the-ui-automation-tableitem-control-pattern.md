@@ -9,25 +9,25 @@ ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e28ac8762c2c3a58a282b92da2b0a2dfadf32dbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db94a1a4588c2f889da8adb1cb3e47e208ce1211
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398969"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393716"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>Implementieren des TableItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Richtlinien und Konventionen zum Implementieren von <xref:System.Windows.Automation.Provider.ITableItemProvider>, einschließlich Informationen über Ereignisse und Eigenschaften. Links zu zusätzlichen Referenzen sind am Ende dieser Übersicht aufgelistet.  
   
- Die <xref:System.Windows.Automation.TableItemPattern> -Steuerelementmuster wird verwendet, um untergeordnete Steuerelemente von Containern zu unterstützen, implementieren <xref:System.Windows.Automation.Provider.ITableProvider>. Zugriff auf Funktionen einzelner Zellen wird bereitgestellt, von der erforderlichen gleichzeitigen Implementierung von <xref:System.Windows.Automation.Provider.IGridItemProvider>. Dieses Steuerelementmuster ist analog zu <xref:System.Windows.Automation.Provider.IGridItemProvider> mit dem Unterschied, dass jedes implementieren Steuerelement <xref:System.Windows.Automation.Provider.ITableItemProvider> muss programmgesteuert die Beziehung zwischen der einzelnen Zelle und deren Zeilen- und verfügbar machen. Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Die <xref:System.Windows.Automation.TableItemPattern> -Steuerelementmuster wird verwendet, um untergeordnete Steuerelemente von Containern zu unterstützen, implementieren <xref:System.Windows.Automation.Provider.ITableProvider>. Der Zugriff auf Funktionen einzelner Zellen wird bereitgestellt, durch die erforderlichen gleichzeitigen Implementierung von <xref:System.Windows.Automation.Provider.IGridItemProvider>. Dieses Steuerelementmuster ist analog zu <xref:System.Windows.Automation.Provider.IGridItemProvider> mit dem Unterschied, dass jedes implementieren Steuerelement <xref:System.Windows.Automation.Provider.ITableItemProvider> müssen, die Beziehung zwischen den einzelnen Zelle und die Zeilen- und programmgesteuert verfügbar machen. Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
   
--   Verwandte Rasterfunktionen finden Sie unter [implementieren das GridItem-Steuerelementmusters der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md).  
+-   Funktionen des zugehörigen Rasters-Element, finden Sie unter [implementieren das GridItem-Steuerelementmusters der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md).  
   
 <a name="Required_Members_for_ITableItemProvider"></a>   
 ## <a name="required-members-for-itableitemprovider"></a>Erforderliche Member für ITableItemProvider  

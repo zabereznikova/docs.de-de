@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
 ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933741"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393601"
 ---
 # <a name="xaml-in-wpf"></a>XAML in WPF
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Dies ist eine Markupsprache für die deklarative Anwendung programmieren. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aXAML-prozessorimplementierung implementiert und bietet Unterstützung für XAML-Sprache. Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Typen werden implementiert, sodass sie den erforderlichen Typ für eine XAML-Darstellung sichern bereitstellen können. Sie können im Allgemeinen erstellen Sie den Großteil Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Benutzeroberfläche der Anwendung im XAML-Markup.  

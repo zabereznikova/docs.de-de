@@ -9,18 +9,18 @@ ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cdf663b2989ccf93fa9bb6742bfb491a691dea02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0346b70b4400c5f7a8d282d945e029701973dad1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399037"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393467"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>Implementieren des ScrollItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Dieses Thema enthält Richtlinien und Konventionen für das Implementieren der <xref:System.Windows.Automation.Provider.IScrollItemProvider>, einschließlich Informationen über Eigenschaften, Methoden und Ereignisse. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
+ Dieses Thema enthält Richtlinien und Konventionen für das Implementieren der <xref:System.Windows.Automation.Provider.IScrollItemProvider>, einschließlich Informationen zu Eigenschaften, Methoden und Ereignisse. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
   
  Die <xref:System.Windows.Automation.ScrollItemPattern> -Steuerelementmuster wird verwendet, um einzelne untergeordnete Steuerelemente von Containern zu unterstützen, implementieren <xref:System.Windows.Automation.Provider.IScrollProvider>. Dieses Steuerelementmuster dient als Kommunikationskanal zwischen einem untergeordneten Steuerelement und dessen Container, um sicherzustellen, dass der Container den aktuell sichtbaren Inhalt (oder die Region) innerhalb des Viewports ändern kann, um das untergeordnete Steuerelement anzuzeigen. Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33399037"
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
  Beachten Sie beim Implementieren des ScrollItem-Steuerelementmusters die folgenden Richtlinien und Konventionen:  
   
--   In einem Window- oder Canvas-Steuerelement enthaltene Elemente müssen die IScrollItemProvider-Schnittstelle nicht implementieren. Als Alternative können jedoch diese müssen verfügbar machen eines gültigen Speicherort für die <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>. Dadurch kann eine Benutzeroberflächenautomatisierungs-Clientanwendung zum Verwenden der <xref:System.Windows.Automation.ScrollPattern> -steuerelementmustermethoden im Container auf das untergeordnete Element anzuzeigen.  
+-   In einem Window- oder Canvas-Steuerelement enthaltene Elemente müssen die IScrollItemProvider-Schnittstelle nicht implementieren. Als Alternative können jedoch, sie müssen zur Verfügung stellen eines gültigen Speicherort für die <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>. Dadurch kann eine Benutzeroberflächenautomatisierungs-Clientanwendung verwendet die <xref:System.Windows.Automation.ScrollPattern> -steuerelementmustermethoden im Container auf das untergeordnete Element anzuzeigen.  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>   
 ## <a name="required-members-for-iscrollitemprovider"></a>Erforderliche Member für IScrollItemProvider  

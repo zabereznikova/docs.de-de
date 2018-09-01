@@ -8,16 +8,16 @@ ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 571d94c7654038c7ea47721caa35c41d31983016
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02244043d802029364c7a725940f03ecdd21f573
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410048"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391511"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In diesem Thema werden Steuerelementtypen und ihre zugeordneten Steuerelementmuster aufgeführt.  
   
@@ -52,14 +52,14 @@ ms.locfileid: "33410048"
 |Bild|Keiner|Rasterelement, Tabellenelement|Aufrufen, Auswahlelement|  
 |Liste|Keiner|Raster, mehrere Ansichten, Scroll, Auswahl|Tabelle|  
 |Listenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Aufrufen, Ein-/ausschalten, Wert|Keiner|  
-|Menü|Keiner|Keine|Keiner|  
+|Menü|Keiner|Keiner|Keiner|  
 |Menüleiste|Keiner|Erweitern Reduzieren, Andocken, Transformation|Keiner|  
 |Menübefehl|Keiner|Erweitern Reduzieren, Aufrufen, Auswahlelement, Ein-/ausschalten|Keiner|  
 |Bereich|Keiner|Andocken Scroll, Transformation|Fenster|  
 |Statusanzeige|Keiner|Bereichswert, Wert|Keiner|  
 |Radio Button|SelectionItem|Keiner|Ein-/ausschalten|  
 |Bildlaufleiste|Keiner|Bereichswert|Scroll|  
-|Trennzeichen|Keiner|Keine|Keiner|  
+|Trennzeichen|Keiner|Keiner|Keiner|  
 |Slider|Keiner|Bereichswert, Auswahl, Wert|Keiner|  
 |Spinner|Keiner|Bereichswert, Auswahl, Wert|Keiner|  
 |Unterteilte Schaltfläche|Aufrufen, Erweitern Reduzieren|Keiner|Keiner|  
@@ -69,7 +69,7 @@ ms.locfileid: "33410048"
 |Tabelle|Raster, Rasterelement, Tabelle, Tabellenelement|Keiner|Keiner|  
 |Text|Keiner|Rasterelement, Tabellenelement, Text|Wert|  
 |Ziehpunkt|Transformation|Keiner|Keiner|  
-|Titelleiste|Keiner|Keine|Keiner|  
+|Titelleiste|Keiner|Keiner|Keiner|  
 |Symbolleiste|Keiner|Andocken, Erweitern Reduzieren, Transformation|Keiner|  
 |QuickInfo|Keiner|Text, Fenster|Keiner|  
 |Struktur|Keiner|Scroll, Auswahl|Keiner|  

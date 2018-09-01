@@ -2,12 +2,12 @@
 title: SystemWebRouting-Integrationsbeispiel
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 944eb8f2bd907308e60525f8917fcad826caa472
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 95372d6052690af30042061d623b6004699c21d9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258003"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394432"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting-Integrationsbeispiel
 In diesem Beispiel wird die Integration der Hostebene in die Klassen im <xref:System.Web.Routing>-Namespace veranschaulicht. Mit den Klassen im <xref:System.Web.Routing>-Namespace können Anwendungen URLs verwenden, die einer physischen Ressource nicht direkt entsprechen. Webrouting ermöglicht es, den Entwickler zum Erstellen von virtueller Adressen für HTTP, klicken Sie dann wieder die tatsächlichen WCF-Diensten zugeordnet sind. Dies ist nützlich, wenn ein WCF-Dienst gehostet werden muss, ohne dass eine physische Datei oder Ressource erforderlich ist, oder wenn auf Dienste mit URLs zugegriffen werden muss, die keine Dateierweiterung wie .html oder .aspx enthalten. In diesem Beispiel wird veranschaulicht, wie mithilfe der <xref:System.Web.Routing.RouteTable>-Klasse virtuelle URIs erstellt werden können, die in global.asax definierten, ausgeführten Diensten zugeordnet werden. 
@@ -26,7 +26,7 @@ In diesem Beispiel möglicherweise bereits auf Ihrem Computer installiert werden
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+ Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -84,4 +84,4 @@ In diesem Beispiel möglicherweise bereits auf Ihrem Computer installiert werden
 >  Sie müssen die Version des Standardanwendungspools auf Aktualisieren [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] , wenn sie auf Version 2 festgelegt ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [AppFabric-Hosting- und-persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)
