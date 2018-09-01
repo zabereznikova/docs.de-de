@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: fb48ae39d269f21a7120ecf143dc4c4680efe39d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a070800ea15c5a7f16b52ca69c7e454c92618e1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499088"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384927"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation-Sicherheit
-Die Themen in diesem Abschnitt beschreiben die Windows Communication Foundation (WCF)--Sicherheitsfunktionen und ihre Verwendung zur Sicherung von Nachrichten.  
+Die Themen in diesem Abschnitt wird beschrieben, Sicherheitsfunktionen von Windows Communication Foundation (WCF) und deren Verwendung zur Sicherung von Nachrichten.  
   
- Weitere Informationen zu Windows Server AppFabric und Sicherheit, finden Sie unter [Sicherheit Modell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ Weitere Informationen zu Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheit-Modell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -37,7 +37,7 @@ Die Themen in diesem Abschnitt beschreiben die Windows Communication Foundation 
  Eine sicherheitsorientierte Ansicht der Bindungen, einschließlich Themen, die veranschaulichen, wie benutzerdefinierte Sicherheitsbindungen erstellt werden.  
   
  [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- Beschreibt, wie Nachrichten mithilfe von WCF-Sicherheitsfunktionen zu sichern.  
+ Beschreibt, wie Nachrichten mithilfe von WCF-Sicherheitsfunktionen zu schützen.  
   
  [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Veranschaulicht allgemeine Authentifizierungsaufgaben.  

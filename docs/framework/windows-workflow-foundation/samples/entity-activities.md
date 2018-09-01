@@ -2,24 +2,24 @@
 title: Entitätsaktivitäten
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-ms.openlocfilehash: 96301c15b849749299e744a435068c3ec9be2e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519135"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385803"
 ---
 # <a name="entity-activities"></a>Entitätsaktivitäten
-In diesem Beispiel wird gezeigt, wie das ADO.NET Entity Framework mit Windows Workflow Foundation zu verwenden, um den Datenzugriff zu vereinfachen.  
+Dieses Beispiel zeigt, wie Sie das ADO.NET Entity Framework mit Windows Workflow Foundation zu verwenden, um den Datenzugriff zu vereinfachen.  
   
- Das ADO.NET Entity Framework ermöglicht es Entwicklern, in Form von domänenspezifischen Objekten, Eigenschaften und Beziehungen, z. B. Kunden, Bestellungen, Bestelldetails und den Beziehungen zwischen diesen Entitäten, mit Daten zu arbeiten. Das ADO.NET Entity Framework ermöglicht dies, indem eine Abstraktionsebene bereitgestellt wird, die das Programmieren mit einem konzeptionellen Anwendungsmodell anstelle des direkten Programmierens mit einem Speicherschema ermöglicht. Weitere Informationen zu der ADO.NET Entity Framework finden Sie unter [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ Das ADO.NET Entity Framework ermöglicht es Entwicklern, in Form von domänenspezifischen Objekten, Eigenschaften und Beziehungen, z. B. Kunden, Bestellungen, Bestelldetails und den Beziehungen zwischen diesen Entitäten, mit Daten zu arbeiten. Das ADO.NET Entity Framework ermöglicht dies, indem eine Abstraktionsebene bereitgestellt wird, die das Programmieren mit einem konzeptionellen Anwendungsmodell anstelle des direkten Programmierens mit einem Speicherschema ermöglicht. Weitere Informationen zu den ADO.NET Entity Framework finden Sie unter [ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Beispieldetails  
  In diesem Beispiel wird die Datenbank `Northwind` verwendet; es umfasst Skripts zum Erstellen und Entfernen der Datenbank `Northwind` (Setup.cmd und Cleanup.cmd). Die Projekte in diesem Beispiel umfassen ein Entity Data Model auf Grundlage der Datenbank `Northwind`. Sie finden das Modell, indem Sie die Datei `Northwind.edmx` öffnen, die im Projekt enthalten ist. Dies ist das Modell, das die Form der Objekte definiert, auf die mit dem ADO.NET Entity Framework zugegriffen werden kann.  
   
  Die folgenden Aktivitäten sind in diesem Beispiel enthalten:  
   
--   `EntitySQLQuery`: Mit der `EntitySQLQuery`-Aktivität können Sie Objekte aus der Datenbank auf Grundlage einer Entity SQL-Abfragezeichenfolge abrufen. Entity SQL ist eine speicherunabhängige Sprache, die SQL ähnlich ist und es Ihnen, Abfragen auf Grundlage des konzeptionellen Modells und der Entitäten anzugeben, die ein Teil des Modells oder der Domäne sind. Weitere Informationen über Entity SQL-Sprache finden Sie unter [Entity SQL-Sprache](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: Mit der `EntitySQLQuery`-Aktivität können Sie Objekte aus der Datenbank auf Grundlage einer Entity SQL-Abfragezeichenfolge abrufen. Entity SQL ist eine speicherunabhängige Sprache, die SQL ähnlich ist und es Ihnen, Abfragen auf Grundlage des konzeptionellen Modells und der Entitäten anzugeben, die ein Teil des Modells oder der Domäne sind. Weitere Informationen über Entity SQL Sprache finden Sie unter [Entity SQL-Sprache](https://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: Mit dieser Aktivität können Sie Objekte aus der Datenbank auf Grundlage einer LINQ-Abfrage oder eines Prädikats abrufen.  
   
@@ -227,7 +227,7 @@ return new ObjectContextScope
   
 2.  Navigieren Sie in dem neuen Eingabeaufforderungsfenster zum Ordner "EntityActivities\CS".  
   
-3.  Typ `setup.cmd` , und drücken Sie die EINGABETASTE.  
+3.  Typ `setup.cmd` und drücken Sie EINGABETASTE.  
   
 #### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
   
@@ -245,13 +245,13 @@ return new ObjectContextScope
   
 2.  Navigieren Sie in dem neuen Eingabeaufforderungsfenster zum Ordner "EntityActivities\CS".  
   
-3.  Typ `cleanup.cmd` , und drücken Sie die EINGABETASTE.  
+3.  Typ `cleanup.cmd` und drücken Sie EINGABETASTE.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

@@ -2,22 +2,22 @@
 title: Überbrückung und Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804390"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389067"
 ---
 # <a name="bridging-and-error-handling"></a>Überbrückung und Fehlerbehandlung
-Dieses Beispiel veranschaulicht die Verwendung des Windows Communication Foundation (WCF)-Routingdienst zum Überbrücken von Kommunikation zwischen einem Client und einem Dienst mit unterschiedliche Bindungen verwendet. In diesem Beispiel wird auch gezeigt, wie ein Sicherungsdienst für Failoverszenarien verwendet wird. Der Routingdienst ist eine WCF-Komponente, die integrieren ein inhaltsbasierten Routers in die Anwendung aufnehmen vereinfacht. In diesem Beispiel wird die standard-WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst.  
+In diesem Beispiel wird veranschaulicht, wie der Windows Communication Foundation (WCF)-Routingdienst zum Überbrücken von Kommunikation zwischen einem Client und ein Dienst, andere Bindungen verwendet wird. In diesem Beispiel wird auch gezeigt, wie ein Sicherungsdienst für Failoverszenarien verwendet wird. Der Routingdienst ist eine WCF-Komponente, die es einfach macht, ein inhaltsbasierten Routers in Ihre Anwendung einbinden. In diesem Beispiel wird die standard-WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
   
@@ -39,7 +39,7 @@ Dieses Beispiel veranschaulicht die Verwendung des Windows Communication Foundat
   
 2.  Drücken Sie F5 oder STRG+UMSCHALT+B in Visual Studio.  
   
-    1.  Wenn Sie möchten die notwendigen Projekte automatisch gestartet, wenn Sie F5 drücken, mit der rechten Maustaste in der Projektmappe, wählen Sie **Eigenschaften**, und klicken Sie in der **Startprojekt** Knoten unter **allgemeine Eigenschaften**Option **mehrere Startprojekte**, und legen Sie alle Projekte auf **starten**.  
+    1.  Wenn Sie möchten die erforderlichen Projekte automatisch gestartet, wenn Sie F5 drücken, mit der rechten Maustaste in der Projektmappe, wählen Sie **Eigenschaften**, und klicken Sie in der **Startprojekt** Knoten unter **allgemeine Eigenschaften**Option **mehrere Startprojekte**, und legen Sie alle Projekte auf **starten**.  
   
     2.  Wenn Sie das Projekt mit STRG+UMSCHALT+B erstellen, müssen Sie die folgenden Anwendungen starten:  
   
@@ -70,4 +70,4 @@ Dieses Beispiel veranschaulicht die Verwendung des Windows Communication Foundat
  Contoso möchte einen interoperablen Dienstendpunkt für die Umgebung bereitstellen und gleichzeitig die interne Leistung optimieren. Aus diesem Grund werden die Dienste über einen Endpunkt mithilfe von BasicHttpBinding für die Umgebung verfügbar gemacht, während intern der Routingdienst für die Überbrückung der Verbindung mit dem Endpunkt verwendet wird. Dies erfolgt mithilfe der vom Dienst verwendeten NetTcpBinding. Weiterhin soll das Dienstangebot von Contoso gegenüber temporären Ausfällen der Produktionsdienste tolerant sein. Aus diesem Grund werden mehrere Endpunkte hinter dem Routerdienst virtualisiert, und bei einem Fehler erfolgt mithilfe der Fehlerbehandlungsfunktionen ein automatischer Wechsel zu den Sicherungsendpunkten, wenn erforderlich.  
   
 ## <a name="see-also"></a>Siehe auch  
- [AppFabric-Hosting und Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

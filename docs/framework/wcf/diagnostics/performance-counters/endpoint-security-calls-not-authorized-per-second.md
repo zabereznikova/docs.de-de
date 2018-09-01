@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c8a1547b-986b-45c1-b302-dea0cd4b516d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0fd7c3ab7abcc374c4ef89f9f5a0650647cf97a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cefdd7480c7d0e9475b1883e603d9db1f287d4a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33471702"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386623"
 ---
 # <a name="endpoint-security-calls-not-authorized-per-second"></a>Endpunkt: Nicht autorisierte Sicherheitsaufrufe pro Sekunde
 Indikatorname: Security Calls Not Authorized Per Second.  
@@ -19,6 +19,6 @@ Indikatorname: Security Calls Not Authorized Per Second.
   
  Dieser Indikator wird erhöht, wenn die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A>-Methode `false` zurückgibt.  
   
- Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.  
+ Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.  
   
  (N 1 - N 0)/( (D 1 - D 0)/F)

@@ -2,12 +2,12 @@
 title: Lernen durch exemplarische Vorgehensweisen
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 028bd2af9ba88136e5955c6776b0d765af20fca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362220"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385457"
 ---
 # <a name="learning-by-walkthroughs"></a>Lernen durch exemplarische Vorgehensweisen
 Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumentation stellt mehrere exemplarische Vorgehensweisen bereit. Dieser Abschnitt behandelt allgemeine Aspekte der exemplarischen Vorgehensweisen (einschließlich Fehlerbehebung) und bietet Links zu Vorgehensweisen für Einsteiger, die mehr über [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfahren möchten.  
@@ -30,16 +30,16 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
 ## <a name="general"></a>Allgemein  
  Die folgenden Informationen betreffen diese exemplarischen Vorgehensweisen im Allgemeinen:  
   
--   Umgebung: Jede [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Exemplarische Vorgehensweise verwendet Visual Studio als die integrierte Entwicklungsumgebung (IDE).  
+-   Umgebung: Jede [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exemplarischen Vorgehensweise wird Visual Studio verwendet, als die integrierte Entwicklungsumgebung (IDE).  
   
--   SQL-Module: Diese exemplarischen Vorgehensweisen werden für die Implementierung mit SQL Server Express geschrieben. Wenn Sie nicht über SQL Server Express verfügen, können Sie diese Lösung kostenlos herunterladen. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   SQL-Engines: Diese exemplarischen Vorgehensweisen werden für die Implementierung mit SQL Server Express geschrieben. Wenn Sie nicht über SQL Server Express verfügen, können Sie diese Lösung kostenlos herunterladen. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
     >  Exemplarische Vorgehensweisen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwenden einen Dateinamen als Verbindungszeichenfolge. Einfach einen Dateinamen anzugeben ist eine Annehmlichkeit, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für SQL Server Express-Benutzer bereitstellt. Achten Sie stets auf Sicherheitsprobleme. Weitere Informationen finden Sie unter [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Exemplarische Vorgehensweisen erfordern in der Regel die Beispieldatenbank Northwind. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Die angezeigten Dialogfelder und Menübefehle in exemplarischen Vorgehensweisen angezeigten unterscheiden sich von den in der Hilfe beschriebenen, je nach den aktiven Einstellungen oder der Visual Studio-Edition. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   Die angezeigten Dialogfelder und Menübefehle, die Sie in den exemplarischen Vorgehensweisen finden Sie möglicherweise je nach den aktiven Einstellungen oder Visual Studio-Edition in der Hilfe beschriebenen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 -   Für exemplarische Vorgehensweisen, die sich auf Szenarien mit mehreren Ebenen beziehen, muss sich ein Server auf einem Computer befinden, der sich vom Entwicklungscomputer unterscheidet. Außerdem müssen Sie über die entsprechenden Zugriffsrechte für den Server verfügen.  
   
@@ -53,24 +53,24 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>So prüfen oder ändern Sie die Datenbankanmeldung  
   
-1.  Auf der Windows **starten** Sie im Menü **Programme**, **Microsoft SQL Server 2005**, zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
+1.  Klicken Sie auf der Windows **starten** , zeigen Sie auf **Programme**, **Microsoft SQL Server 2005**, zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Im linken Bereich des der **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
+2.  Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
   
-3.  Im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie auf die **anmelden** Registerkarte, und überprüfen Sie, wie die Anmeldung mit dem Server anmelden.  
+4.  Klicken Sie auf die **anmelden** Registerkarte, und überprüfen Sie, wie Sie möchten melden Sie sich an den Server.  
   
      In den meisten Fällen **Lokales System** funktioniert.  
   
-     Wenn Sie eine Änderung vorzunehmen, klicken Sie auf **Neustart** den Dienst neu starten.  
+     Wenn Sie eine Änderung vornehmen, klicken Sie auf **Neustart** den Dienst neu starten.  
   
 ### <a name="protocols"></a>Protokolle  
- Unter Umständen wurden die Protokolle für den Anwendungszugriff auf die Datenbank nicht ordnungsgemäß festgelegt. Z. B. die **Named Pipes** -Protokolls, das für exemplarische Vorgehensweisen in erneuter [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ist nicht standardmäßig aktiviert.  
+ Unter Umständen wurden die Protokolle für den Anwendungszugriff auf die Datenbank nicht ordnungsgemäß festgelegt. Z. B. die **Named Pipes** Protokoll, das für die exemplarischen Vorgehensweisen in erforderlich ist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ist nicht standardmäßig aktiviert.  
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>So aktivieren Sie das Named Pipes-Protokoll  
   
-1.  Im linken Bereich des der **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server 2005-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für SQLEXPRESS**.  
+1.  Im linken Bereich die **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server 2005-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für SQLEXPRESS**.  
   
 2.  Stellen Sie im rechten Bereich sicher, dass die **Named Pipes** -Protokoll aktiviert ist. Wenn sie nicht der Fall ist, mit der rechten Maustaste **Namenspipes** , und klicken Sie dann auf **aktivieren**.  
   
@@ -81,9 +81,9 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
   
 ##### <a name="to-stop-and-restart-the-service"></a>So beenden Sie den Dienst und starten ihn neu  
   
-1.  Im linken Bereich des der **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
+1.  Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
   
-2.  Im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **beenden**.  
+2.  Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **beenden**.  
   
 3.  Mit der rechten Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Neustart**.  
   

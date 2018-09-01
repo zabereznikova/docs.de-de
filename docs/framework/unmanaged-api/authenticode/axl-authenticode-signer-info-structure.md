@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 81c0f8b4-ce35-4716-8651-b642d40648a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd07707b5a80ec0980fc50b27caddf0a24398fd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4b9f54c7c57d122ac1214b9f31cc4e1d1cddd71c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400444"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392178"
 ---
 # <a name="axlauthenticodesignerinfo-structure"></a>AXL_AUTHENTICODE_SIGNER_INFO-Struktur
 Definiert Informationen zum Signaturgeber für Authenticode.  
@@ -38,7 +38,7 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`pwszHash`|Der Hash.|  
 |`pwszDescription`|Hierbei handelt es sich um die Beschreibung.|  
 |`pwszDescriptionUrl`|Die URL der Beschreibung.|  
-|`pChainContext`|Der Chaincontext des Signaturgebers. Finden Sie unter der [CERT_CONTEXT](http://msdn.microsoft.com/library/windows/desktop/aa377189.aspx) Struktur.|  
+|`pChainContext`|Der Chaincontext des Signaturgebers. Finden Sie unter den [CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context) Struktur.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

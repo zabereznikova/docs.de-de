@@ -2,22 +2,22 @@
 title: Richtlinienaktivität in .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
-ms.openlocfilehash: 52f0cdd3714367598c83f72e2a8203c2ae27eb4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d8983f2f1d3f75beffeacfff4b673f6c23c4204
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518899"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390127"
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Richtlinienaktivität in .NET Framework 4.5
-Die Policy4-Aktivität ermöglicht Windows Workflow Foundation in [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Objekte in Windows Workflow Foundation in zu verwendende [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) direkt mithilfe der WF 3.5 gehörende ist Regelmodul. Mit dieser Aktivität können Sie <xref:System.Workflow.Activities.Rules.RuleSet> für WF 3.5 erstellen und ausführen. Weitere Informationen zu WF 3.5-Regelmodul als Bestandteil von Windows Workflow Foundation, lesen Sie die Einführung in das Windows Workflow Foundation-Regelmodul. Weitere Informationen zum Migrieren von Regeln für WF in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], lesen Sie [Migrationsanleitung](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+Die Policy4-Aktivität ermöglicht, Windows Workflow Foundation in [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Objekte in Windows Workflow Foundation in zu verwendende [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) direkt unter Verwendung der Regel-Engine, die in WF 3.5 geliefert wird. Mit dieser Aktivität können Sie <xref:System.Workflow.Activities.Rules.RuleSet> für WF 3.5 erstellen und ausführen. Lesen Sie Sie für Weitere Informationen zu WF 3.5 Regelmodul als Bestandteil von Windows Workflow Foundation Einführung in das Windows Workflow Foundation-Regelmodul. Weitere Informationen zum Migrieren von Regeln in WF in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], lesen Sie [Migrationsanleitung](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Rules-Policy4`  
   
@@ -25,8 +25,8 @@ Die Policy4-Aktivität ermöglicht Windows Workflow Foundation in [!INCLUDE[netf
   
 |Projektname|Beschreibung|Hauptdateien|  
 |------------------|-----------------|----------------|  
-|Policy4|Enthält die Policy4-Aktivität und den zugehörigen [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Designer.|**Policy4.cs**: Policy4-Aktivitätsdefinition.<br /><br /> **PolicyDesigner.xaml**: benutzerdefinierter Designer für die Policy4-Aktivität. Er verwendet den Regeleditor ([RuleSetDialog Class](http://go.microsoft.com/fwlink/?LinkId=150378)) von [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Regelmodul.|  
-|ImperativeCodeClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer Policy4-Anwendung mit imperativem C#-Code konfiguriert und ausführt (kein [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Designer wird verwendet).|**ApplyDiscount.rules**: Datei mit dem [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Regeldefinitionen.<br /><br /> **Order.cs**: Typ, der einen kundenbestellung darstellt. Regeln werden auf Objekte dieses Typs angewendet.<br /><br /> **Datei "Program.cs"**: konfiguriert und führt einen Workflow, der eine Policy4-Aktivität in Instanzen von Order-Objekten ApplyDiscount.rules definierte Regeln angewendet wurde.<br /><br /> **"App.config"**: Konfigurationsdatei mit dem Pfad der Regeldatei.|  
+|Policy4|Enthält die Policy4-Aktivität und den zugehörigen [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Designer.|**Policy4.cs**: die Definition der Policy4-Aktivität.<br /><br /> **PolicyDesigner.xaml**: benutzerdefinierter Designer für die Policy4-Aktivität. Er verwendet den Regeleditor ([RuleSetDialog-Klasse](https://go.microsoft.com/fwlink/?LinkId=150378)) von [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Regel-Engine.|  
+|ImperativeCodeClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer Policy4-Anwendung mit imperativem C#-Code konfiguriert und ausführt (kein [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Designer wird verwendet).|**ApplyDiscount.rules**: Datei mit [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Regeldefinitionen.<br /><br /> **Order.cs**: Typ, der einen kundenbestellung darstellt. Regeln werden auf Objekte dieses Typs angewendet.<br /><br /> **"Program.cs"**: konfiguriert und führt einen Workflow aus, die eine Policy4-Aktivität in ApplyDiscount.rules auf Instanzen von Order-Objekte definierte Regeln anwenden.<br /><br /> **Datei "App.config"**: Konfigurationsdatei mit dem Pfad der Regeldatei.|  
 |DesignerClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer Policy4-Anwendung im [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Designer konfiguriert und ausführt.|**Sequence1.XAML**: sequenzieller Workflow, der eine Policy4-Aktivität verwendet, um regelauswertungen durchzuführen.<br /><br /> `Program.cs`: Führt eine Instanz des in "Sequence1.xaml" definierten Workflows aus.|  
   
 ## <a name="the-policy4-activity"></a>Policy4-Aktivität  
@@ -46,14 +46,14 @@ public class Policy4Activity<TResult>: NativeActivity<TResult>
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|RuleSet|Die WF [RuleSet-Klasse](http://go.microsoft.com/fwlink/?LinkId=150379) für .NET Framework 3.5 ausgewertet werden soll, wenn die Aktivität ausgeführt wird.|  
-|TargetObject|Das Objekt, mit dem die Regeln in der [RuleSet-Klasse](http://go.microsoft.com/fwlink/?LinkId=150379) ausgewertet werden.|  
-|ValidationError|Die Liste der Überprüfungsfehler, die zurückgegeben werden, indem Sie die [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Regelmodul für .NET Framework 3.5 bei der Überprüfung der [RuleSet-Klasse](http://go.microsoft.com/fwlink/?LinkId=150379) für das Zielobjekt vor der Ausführung.|  
+|RuleSet|Die WF [RuleSet-Klasse](https://go.microsoft.com/fwlink/?LinkId=150379) für .NET Framework 3.5 ausgewertet werden soll, wenn die Aktivität ausgeführt wird.|  
+|TargetObject|Das Objekt, für die die Regeln in der [RuleSet-Klasse](https://go.microsoft.com/fwlink/?LinkId=150379) ausgewertet werden.|  
+|ValidationError|Die Liste der Validierungsfehler, die zurückgegeben werden, indem die [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Regelmodul für .NET Framework 3.5 bei der Überprüfung der [RuleSet-Klasse](https://go.microsoft.com/fwlink/?LinkId=150379) für das Zielobjekt vor der Ausführung.|  
   
 ## <a name="policy4-activity-designer"></a>Policy4-Aktivitätsdesigner  
- Der Policy4-Designer ermöglicht es, eine Policy4-Aktivität zu konfigurieren, ohne Code zu schreiben. Nach dem Erstellen der Projektmappe kann gefunden werden in der Toolbox im Abschnitt **Microsoft.Samples.Activities.Rules**.  
+ Der Policy4-Designer ermöglicht es, eine Policy4-Aktivität zu konfigurieren, ohne Code zu schreiben. Nach dem Erstellen der Projektmappe, es finden Sie in der Toolbox im Abschnitt **Microsoft.Samples.Activities.Rules**.  
   
- Mit dem WF-Designer können Sie ein Zielobjekt und ein RuleSet konfigurieren. Wenn die **Regelsatz bearbeiten** Schaltfläche geklickt wird, wird die WF [RuleSetDialog Class](http://go.microsoft.com/fwlink/?LinkId=150378) für [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] wird angezeigt. Dieses Dialogfeld ist der neu gehostete [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]-Regel-Editor. Verwenden Sie den Editor, um die Regeln zu erstellen und zu bearbeiten, die die Policy4-Aktivität ausführt.  
+ Mit dem WF-Designer können Sie ein Zielobjekt und ein RuleSet konfigurieren. Wenn die **Regelsatz bearbeiten** Schaltfläche geklickt wird, wird der WF [RuleSetDialog-Klasse](https://go.microsoft.com/fwlink/?LinkId=150378) für [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] wird angezeigt. Dieses Dialogfeld ist der neu gehostete [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]-Regel-Editor. Verwenden Sie den Editor, um die Regeln zu erstellen und zu bearbeiten, die die Policy4-Aktivität ausführt.  
   
 ## <a name="using-this-sample"></a>Verwenden dieses Beispiels  
  Zum Ausführen dieses Beispiels ist keine spezielle Einrichtung erforderlich. Öffnen Sie einfach die Projektmappe in Visual Studio, und drücken Sie F5, um die Anwendung auszuführen.  
@@ -64,7 +64,7 @@ public class Policy4Activity<TResult>: NativeActivity<TResult>
   
 1.  Öffnen Sie mit [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] die Projektmappendatei "Policy4Sample.sln".  
   
-2.  In **Projektmappen-Explorer**, mit der rechten Maustaste die **ImperativeCodeClientSample** Projekt, und wählen Sie dann **als Startprojekt festlegen**.  
+2.  In **Projektmappen-Explorer**, mit der rechten Maustaste die **ImperativeCodeClientSample** und wählen Sie dann **als Startprojekt festlegen**.  
   
 3.  Drücken Sie zum Ausführen des Projekts STRG+F5.  
   

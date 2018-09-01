@@ -1,6 +1,6 @@
 ---
 title: BlessIWbemServicesObject-Funktion (Referenz zur nicht verwalteten API)
-description: Die BlessIWbemServicesObject-Funktion gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf ein Objekt IWbemServices zulassen
+description: BlessIWbemServicesObject-Funktion gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf ein Objekt IWbemServices zulassen
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServicesObject
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1380d03d4456e0695777775ae786a19982d691b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457918"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394977"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject-Funktion
-Gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf ein angegebenes zugelassen [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) Objekt.   
+Gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf ein angegebenes zulassen [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) Objekt.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -52,7 +52,7 @@ HRESULT BlessIWbemServicesObject (
 `strPassword`  
 [in] Das zugeordnete Kennwort `strUser`.
 
-`strAuthority` [in] Der Domänenname des Benutzers. Finden Sie unter der [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
+`strAuthority` [in] Der Domänenname des Benutzers. Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
 
 `impLevel` [in] Die Ebene des Identitätswechsels.
 
@@ -60,18 +60,18 @@ HRESULT BlessIWbemServicesObject (
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WinError.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *"Winerror.h"* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0 x 80070057 | Ein oder mehrere Argumente sind ungültig. |
 | `E_POINTER` | 0 x 80004003 | `pIWbemServices` ist `null`. | 
-| `E_FAIL` | 0x80000008 | Nicht angegebener Fehler ist aufgetreten. |
-| `E_OUTOFMEMORY` | 0x80000002 | Ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs verfügbar. | 
+| `E_FAIL` | 0x80000008 | Ein Unbekannter Fehler aufgetreten. |
+| `E_OUTOFMEMORY` | 0x80000002 | Es steht nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs zur Verfügung. | 
 | `S_OK` | 0 | Der Funktionsaufruf war erfolgreich. | 
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

@@ -2,20 +2,20 @@
 title: 'Entwurfsmuster: Listenbasiertes Veröffentlichen-Abonnieren'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: ee05be76607975bd771c0e6f83c242ad944251df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506531"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387545"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Entwurfsmuster: Listenbasiertes Veröffentlichen-Abonnieren
-In diesem Beispiel wird veranschaulicht, die als Windows Communication Foundation (WCF) Programm implementierte listenbasierte Veröffentlichen-Abonnieren-Muster.  
+Dieses Beispiel veranschaulicht das listenbasierte Veröffentlichen-Abonnieren-Muster, die als ein Windows Communication Foundation (WCF)-Programm implementiert.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- Das listenbasierte Veröffentlichen-Abonnieren-Entwurfsmuster wird in der Publikation "Microsoft Patterns & Practices" unter beschriebenen [Integrationsmuster](http://go.microsoft.com/fwlink/?LinkId=95894). Das Veröffentlichen-Abonnieren-Muster übergibt Informationen an eine Auflistung von Empfängern, die ein Informationsthema abonniert haben. Listenbasiertes Veröffentlichen-Abonnieren verwaltet eine Liste von Abonnenten. Wenn für die Veröffentlichung bestimmte Informationen vorhanden sind, wird jedem Abonnenten auf der Liste ein Exemplar geschickt. Dieses Beispiel veranschaulicht ein dynamisches listenbasiertes Veröffentlichen-Abonnieren-Muster, das von Kunden nach Bedarf abonniert und abbestellt werden kann.  
+ Das listenbasierte Veröffentlichen-Abonnieren-Entwurfsmuster wird in der Microsoft Patterns & Practices-Veröffentlichung beschrieben [Integrationsmuster](https://go.microsoft.com/fwlink/?LinkId=95894). Das Veröffentlichen-Abonnieren-Muster übergibt Informationen an eine Auflistung von Empfängern, die ein Informationsthema abonniert haben. Listenbasiertes Veröffentlichen-Abonnieren verwaltet eine Liste von Abonnenten. Wenn für die Veröffentlichung bestimmte Informationen vorhanden sind, wird jedem Abonnenten auf der Liste ein Exemplar geschickt. Dieses Beispiel veranschaulicht ein dynamisches listenbasiertes Veröffentlichen-Abonnieren-Muster, das von Kunden nach Bedarf abonniert und abbestellt werden kann.  
   
  Das Beispiel für listenbasiertes Veröffentlichen-Abonnieren besteht aus einem Client, einem Dienst und einem Datenquellenprogramm. Es können mehrere Clients und mehrere Datenquellenprogramme ausgeführt werden. Clients abonnieren den Dienst, empfangen Benachrichtigungen und bestellen den Dienst ab. Datenquellprogramme senden Informationen an den Dienst, die für alle aktuellen Abonnenten veröffentlicht werden sollte.  
   
@@ -112,25 +112,25 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>So richten Sie das Beispiel ein und erstellen es  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
-1.  Testen Sie, ob Sie den Dienst mithilfe eines Browsers durch Eingabe der folgenden Adresse zugreifen können: http://localhost/servicemodelsamples/service.svc. Als Antwort sollte eine Bestätigungsseite angezeigt werden.  
+1.  Prüfen Sie, ob Sie den Dienst, der über einen Browser unter Eingabe der folgenden Adresse zugreifen können: http://localhost/servicemodelsamples/service.svc. Als Antwort sollte eine Bestätigungsseite angezeigt werden.  
   
 2.  Führen Sie Client.exe aus \client\bin\\, unter dem sprachspezifischen Ordner. Im Clientkonsolenfenster wird die Clientaktivität angezeigt. Starten Sie mehrere Clients.  
   
-3.  Führen Sie Datasource.exe von \datasource\bin\\, unter dem sprachspezifischen Ordner. Die Datenquellenaktivität wird im Konsolenfenster angezeigt. Sobald die Datenquelle Informationen an den Dienst sendet, sollten diese an jeden Client übergeben werden.  
+3.  Führen Sie Datasource.exe aus \datasource\bin\\, unter dem sprachspezifischen Ordner. Die Datenquellenaktivität wird im Konsolenfenster angezeigt. Sobald die Datenquelle Informationen an den Dienst sendet, sollten diese an jeden Client übergeben werden.  
   
-4.  Wenn der Client, Datenquelle und Dienstprogramme nicht miteinander kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Wenn der Client, Datenquelle und Dienstprogramme nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-machines"></a>So führen Sie das Beispiel computerübergreifend aus  
   
 1.  Einrichten des Dienstrechners:  
   
-    1.  Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis namens "ServiceModelSamples". Die Batchdatei Setupvroot.bat aus der [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) zum Erstellen des festplattenverzeichnisses und des virtuellen Verzeichnisses verwendet werden können.  
+    1.  Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis namens "ServiceModelSamples". Die Batchdatei "Setupvroot.bat" aus der [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) kann zum Erstellen des festplattenverzeichnisses und des virtuellen Verzeichnisses verwendet werden.  
   
     2.  Kopieren Sie die Dienstprogrammdateien aus %SystemDrive%\Inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis "ServiceModelSamples" auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Verzeichnis \bin einfügen.  
   
@@ -157,7 +157,7 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
   

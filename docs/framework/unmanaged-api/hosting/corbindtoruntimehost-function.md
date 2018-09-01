@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c1d83b32402343f3cd2b5403e328698abd6a930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1952121a6c0c735926944c839c3c7e8a8db5fb53
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436214"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396830"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost-Funktion
 Ermöglicht es Hosts, eine angegebene Version der Common Language Runtime (CLR) in einen Prozess zu laden.  
@@ -47,7 +47,7 @@ HRESULT CorBindToRuntimeHost (
  `pwszVersion`  
  [in] Eine Zeichenfolge, welche die Version der zu ladenden CLR beschreibt.  
   
- Eine Versionsnummer in .NET Framework besteht aus vier Teilen, die durch Punkte getrennt: *"Hauptversion.Nebenversion.Build.Revision" vorliegen*. Die als `pwszVersion` übergebene Zeichenfolge muss mit dem Buchstaben "v" beginnen, auf den die ersten drei Teile der Versionsnummer folgen (z. B. "v1.0.1529").  
+ Eine Versionsnummer in .NET Framework besteht aus vier Teilen, die durch Punkte getrennt sind: *"Hauptversion.Nebenversion.Build.Revision"*. Die als `pwszVersion` übergebene Zeichenfolge muss mit dem Buchstaben "v" beginnen, auf den die ersten drei Teile der Versionsnummer folgen (z. B. "v1.0.1529").  
   
  Einige Versionen der CLR werden mit einer Richtlinienanweisung installiert, welche die Kompatibilität mit früheren Versionen der CLR angibt. In der Standardeinstellung wertet das Startmodul `pwszVersion` anhand von Richtlinienanweisungen aus und lädt die neueste Version der Common Language Runtime, die mit der angeforderten Version kompatibel ist. Ein Host kann erzwingen, dass das Startmodul die Richtlinienauswertung überspringt und genau die in `pwszVersion` angegebene Version lädt, indem für `startupFlags` der Wert STARTUP_LOADER_SAFEMODE übergeben wird.  
   
@@ -56,10 +56,10 @@ HRESULT CorBindToRuntimeHost (
  `pwszBuildFlavor`  
  [in] Eine Zeichenfolge, die angibt, ob der Serverbuild oder der Arbeitsstationsbuild der CLR geladen werden soll. Gültige Werte sind `svr` und `wks`. Der Serverbuild wurde so optimiert, dass mehrere Prozessoren zur Ausführung der Garbage Collection genutzt werden können. Der Arbeitsstationsbuild wurde für die Ausführung von Clientanwendungen auf einem Computer mit einem einzelnen Prozessor optimiert.  
   
- Wenn `pwszBuildFlavor` auf festgelegt ist null, wird das Arbeitsstationsbuild geladen. Bei Ausführung auf einem Computer mit einem Prozessor wird immer das Arbeitsstationsbuild geladen, selbst wenn `pwszBuildFlavor` festgelegt ist, um `svr`. Jedoch wenn `pwszBuildFlavor` auf festgelegt ist `svr` und gleichzeitige Garbagecollection angegeben wird (finden Sie in der Beschreibung der `startupFlags` Parameter), das Serverbuild geladen wird.  
+ Wenn `pwszBuildFlavor` nastaven NA hodnotu null, das Arbeitsstationsbuild geladen wird. Bei Ausführung auf einem Computer mit einem Prozessor wird immer das Arbeitsstationsbuild geladen, auch wenn `pwszBuildFlavor` nastaven NA hodnotu `svr`. Jedoch wenn `pwszBuildFlavor` nastaven NA hodnotu `svr` und die gleichzeitige Garbagecollection angegeben wird (finden Sie in der Beschreibung der `startupFlags` Parameter), wird das Serverbuild geladen.  
   
 > [!NOTE]
->  Die gleichzeitige Garbage Collection wird nicht in Anwendungen unterstützt, die den WOW64 x86-Emulator auf 64-Bit-Systemen mit einer Implementierung der Intel Itanium-Architektur (früher als IA-64 bezeichnet) ausführen. Weitere Informationen zur Verwendung von WOW64 auf 64-Bit-Windows-Systemen, finden Sie unter [Ausführen von 32-Bit-Anwendungen](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx).  
+>  Die gleichzeitige Garbage Collection wird nicht in Anwendungen unterstützt, die den WOW64 x86-Emulator auf 64-Bit-Systemen mit einer Implementierung der Intel Itanium-Architektur (früher als IA-64 bezeichnet) ausführen. Weitere Informationen zur Verwendung von WOW64 auf 64-Bit-Windows-Systemen finden Sie unter [Ausführen von 32-Bit-Anwendungen](/windows/desktop/WinProg64/running-32-bit-applications).  
   
  `pwszHostConfigFile`  
  [in] Der Name einer Hostkonfigurationsdatei, welche die zu ladende Version der CLR angibt. Wenn der Dateiname keinen vollqualifizierten Pfad enthält, wird angenommen, dass sich die Datei in demselben Verzeichnis befindet wie die ausführbare Datei, die den Aufruf ausgeführt hat.  
@@ -68,7 +68,7 @@ HRESULT CorBindToRuntimeHost (
  [in] Für zukünftige Erweiterungen reserviert.  
   
  `startupFlags`  
- [in] Ein Satz von Flags, welche die gleichzeitige Garbage Collection, domänenneutralen Code und das Verhalten des `pwszVersion`-Parameters steuern. Wenn kein Flag festgelegt ist, gilt als Standardwert die Einzeldomäne. Eine Liste der unterstützten Werte finden Sie unter der [STARTUP_FLAGS-Enumeration](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
+ [in] Ein Satz von Flags, welche die gleichzeitige Garbage Collection, domänenneutralen Code und das Verhalten des `pwszVersion`-Parameters steuern. Wenn kein Flag festgelegt ist, gilt als Standardwert die Einzeldomäne. Eine Liste der unterstützten Werte finden Sie unter den [STARTUP_FLAGS-Enumeration](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
   
  `rclsid`  
  [in] Die `CLSID` der Co-Klasse, die entweder implementiert die [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) oder [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) Schnittstelle. Unterstützte Werte sind "CLSID_CorRuntimeHost" oder "CLSID_CLRRuntimeHost".  
@@ -80,9 +80,9 @@ HRESULT CorBindToRuntimeHost (
  [out] Ein Schnittstellenzeiger auf die Version der Common Language Runtime, die geladen wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.idl  
+ **Header:** mscoree  
   
  **Bibliothek:** "Mscoree.dll"  
   

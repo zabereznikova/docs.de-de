@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 338120932b0bcbe390332515856aaeaa3bc34a56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461697"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385908"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot-Methode
-Durchläuft die verwalteten Frames auf dem Stapel für den angegebenen Thread und sendet die Informationen an den Profiler in einem Rückruf.  
+Durchläuft die verwalteten Frames im Stapel für den angegebenen Thread und sendet die Informationen an den Profiler in einem Rückruf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,64 +43,64 @@ HRESULT DoStackSnapshot(
  `thread`  
  [in] Die ID des Zielthreads.  
   
- Übergeben von null in `thread` ergibt sich eine Momentaufnahme des aktuellen Threads. Wenn eine `ThreadID` von ein anderen Thread übergeben wird, hält dieser Thread, führt die Momentaufnahme und setzt die common Language Runtime (CLR).  
+ Übergeben von null in `thread` ergibt sich eine Momentaufnahme des aktuellen Threads. Wenn eine `ThreadID` von ein anderen Thread übergeben, die common Language Runtime (CLR) hält dieser Thread erstellt eine Momentaufnahme und fortgesetzt wird.  
   
  `callback`  
- [in] Ein Zeiger auf die Implementierung der [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) Methode, die von der CLR, um den Profiler Informationen über jeden verwalteten Frame und die Ausführung von nicht verwalteten Frames bereitzustellen aufgerufen wird.  
+ [in] Ein Zeiger auf die Implementierung der [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) -Methode, die von der CLR, geben Sie den Profiler mit Informationen über jeden verwalteten Frame und die Ausführung von nicht verwalteten Frames aufgerufen wird.  
   
  Die `StackSnapshotCallback` Methode wird vom Profilerwriter implementiert.  
   
  `infoFlags`  
- [in] Der Wert der [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) -Enumeration, die gibt die Menge der Daten für jeden Frame von zu übergebenden `StackSnapshotCallback`.  
+ [in] Der Wert der [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) -Enumeration, die gibt an, die Menge der Daten für jeden Frame von zu übergebenden `StackSnapshotCallback`.  
   
  `clientData`  
- [in] Ein Zeiger auf die Clientdaten, die direkt über, um übergeben wird die `StackSnapshotCallback` Rückruffunktion.  
+ [in] Ein Zeiger auf die Clientdaten, die direkt, um übergeben wird die `StackSnapshotCallback` Callback-Funktion.  
   
  `context`  
- [in] Ein Zeiger auf eine Win32- `CONTEXT` -Struktur, die verwendet wird, um den Stackwalk zu starten. Die Win32 `CONTEXT` Struktur enthält die Werte der CPU-Register und den Zustand der CPU zu einem bestimmten Zeitpunkt darstellt.  
+ [in] Ein Zeiger auf eine Win32- `CONTEXT` -Struktur, die verwendet wird, um den Stackwalk zu starten. Die Win32 `CONTEXT` Struktur enthält Werte, der die CPU-Register und stellt den Zustand der CPU zu einem bestimmten Zeitpunkt dar.  
   
- Bestimmen des Installationsorts für den Stackwalk zu beginnen, wenn der Anfang des Stapels nicht verwalteten Hilfscode ist CLR Startwerts; Andernfalls ist der Ausgangswert ignoriert. Für einen asynchronen Durchlauf muss kein Ausgangswert angegeben werden. Wenn Sie einen synchronen Durchlauf durchführen, ist kein Ausgangswert erforderlich.  
+ Die CLR Bestimmen des Installationsorts für den Stackwalk zu beginnen, ist der Anfang des Stapels nicht verwalteter Hilfscode Startwerts; Andernfalls wird der Ausgangswert ignoriert. Ein Ausgangswert muss für einen asynchronen Durchlauf angegeben werden. Wenn Sie einen synchronen Durchlauf durchführen, ist kein Ausgangswert erforderlich.  
   
- Die `context` Parameter ist nur gültig, wenn das COR_PRF_SNAPSHOT_CONTEXT-Flag, in übergeben wurde der `infoFlags` Parameter.  
+ Die `context` Parameter ist nur gültig, wenn das Flag COR_PRF_SNAPSHOT_CONTEXT übergebene der `infoFlags` Parameter.  
   
  `contextSize`  
  [in] Die Größe des der `CONTEXT` -Struktur, die verweist die `context` Parameter.  
   
 ## <a name="remarks"></a>Hinweise  
- Übergeben von null `thread` ergibt sich eine Momentaufnahme des aktuellen Threads. Momentaufnahmen können von anderen Threads erstellt werden, nur, wenn der Zielthread zu dem Zeitpunkt unterbrochen wurde.  
+ Übergeben von null `thread` ergibt sich eine Momentaufnahme des aktuellen Threads. Momentaufnahmen können von anderen Threads erstellt werden, nur dann, wenn der Zielthread zur Zeit angehalten wird.  
   
- Wenn der Profiler den Stapel zu durchlaufen möchte, ruft er `DoStackSnapshot`. Bevor die CLR über diesen Aufruf zurückgegeben wird, ruft der `StackSnapshotCallback` mehrere Male einmal für jeden verwalteten Frame (oder die Ausführung von nicht verwalteten Frames) auf dem Stapel. Wenn bei der nicht verwalteten Frames auftreten, müssen Sie sie selbst durchlaufen.  
+ Wenn Sie möchte, dass der Profiler den Stapel zu durchlaufen, ruft er `DoStackSnapshot`. Bevor die CLR von diesem Aufruf zurückkehrt, ruft Ihre `StackSnapshotCallback` mehrfach, einmal für jeden verwalteten Frame (oder die Ausführung von nicht verwalteten Frames) auf dem Stapel. Wenn nicht verwalteter Frames gefunden werden, müssen Sie sie selbst durchlaufen.  
   
- Die Reihenfolge, in dem der Stapel durchlaufen wird, ist in umgekehrter Reihenfolge wie die Frames auf dem Stapel abgelegt wurden: Frame (zuletzt verschoben) zuerst, Hauptframe (zuerst verschoben) von anderen zuletzt Blattelemente.  
+ Die Reihenfolge, in dem der Stapel durchgelaufen wird, ist die Umkehrung des wie die Frames auf dem Stapel abgelegt wurden: zuletzt Blattelemente der Frame (letzte verschoben) ersten, main (zuerst verschoben).  
   
- Weitere Informationen dazu, wie Sie den Profiler zum Durchlaufen verwalteter Stapel programmieren, finden Sie unter [Stackwalk in .NET Framework 2.0 Profiler: Grundlagen und mehr](http://go.microsoft.com/fwlink/?LinkId=73638).  
+ Weitere Informationen dazu, wie Sie den Profiler zum Durchlaufen verwalteter Stapel programmieren, finden Sie unter [Profiler Durchlaufen von Stapeln im .NET Framework 2.0: Basics and Beyond](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
  Ein Stackwalk kann synchron oder asynchron sein, wie in den folgenden Abschnitten erläutert.  
   
 ## <a name="synchronous-stack-walk"></a>Synchroner Stackwalk  
- Ein synchroner Stackwalk umfasst das Durchlaufen des Stapels für den aktuellen Thread als Antwort auf einen Rückruf. Das seeding oder anhalten, ist nicht erforderlich.  
+ Ein synchroner Stackwalk umfasst den Stapel des aktuellen Threads in Reaktion auf einen Rückruf zu durchlaufen. Das seeding oder angehalten ist nicht erforderlich.  
   
- Stellen Sie einen synchronen Aufruf durch, wenn als Antwort auf die CLR einen Aufruf der des Profilers [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (oder [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) Methoden, rufen Sie `DoStackSnapshot` Durchlaufen des Stapels für die aktuellen Thread. Dies ist nützlich, wenn Sie der Stapel bei einer Benachrichtigung wie z. B. illustriert anzeigen möchten [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). Rufen Sie einfach `DoStackSnapshot` innerhalb Ihrer `ICorProfilerCallback` Methode, und übergeben null in der `context` und `thread` Parameter.  
+ Sie stellen einen synchronen Aufruf durch, wenn als Reaktion auf die CLR einen Aufruf der Ihres Profilers [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (oder [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md))-Methoden aufrufen, Sie `DoStackSnapshot` Durchlaufen des Stapels für die aktuellen Thread. Dies ist nützlich, wenn Sie möchten, finden Sie unter der Stapel bei einer Benachrichtigung wie sieht [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). Rufen Sie einfach `DoStackSnapshot` innerhalb Ihrer `ICorProfilerCallback` -Methode und übergeben null in der `context` und `thread` Parameter.  
   
-## <a name="asynchronous-stack-walk"></a>Asynchrone Stackwalk  
- Ein asynchroner Stackwalk umfasst das Durchlaufen des Stapels von einem anderen Thread oder das Durchlaufen des aktuellen Threads nicht als Reaktion auf einen Rückruf, sondern durch den aktuellen Thread Anweisungszeiger hijacking. Ein asynchrone Walk erfordert einen Ausgangswert ist der Anfang des Stapels nicht verwaltetem Code, der nicht Teil einer Plattform ist aufrufen (PInvoke) oder COM-Aufruf jedoch Hilfscode in die CLR selbst. Beispielsweise ist Code, Just-in-Time (JIT) kompilieren oder Garbage Collection ausführt, Hilfscode.  
+## <a name="asynchronous-stack-walk"></a>Asynchroner Stapeldurchlauf  
+ Ein asynchroner Stapeldurchlauf umfasst den Stapel eines anderen Threads zu durchlaufen oder das Durchlaufen des Stapels für den aktuellen Thread nicht in der Antwort auf einen Rückruf, jedoch über den Anweisungszeiger des aktuellen Threads hijacking. Asynchroner Durchlauf erfordert einen Ausgangswert ist der Anfang des Stapels nicht verwalteter Code, der nicht Teil einer Plattform ist Plattformaufruf (PInvoke) oder COM-Aufruf, aber Hilfscode in der CLR selbst. Code, der just-in-Time (JIT) Kompilierung oder Garbage Collection ist z. B. Hilfscode.  
   
- Sie erhalten einen Ausgangswert an, indem Sie direkt durch das Anhalten des Zielthreads, und durchlaufen einen Stapel selbst, bis Sie den obersten gefunden Frame verwaltet. Nachdem der Zielthread angehalten wird, erhalten Sie aktuelle Registerkontext der Zielthread. Als Nächstes zu bestimmen, ob der Registerkontext durch Aufrufen von nicht verwaltetem Code zeigt [ICorProfilerInfo:: GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) – Wenn zurückgegeben wird ein `FunctionID` gleich 0 (null), wird der Frame nicht verwaltetem Code. Durchlaufen Sie jetzt den Stapel, bis Sie den ersten verwalteten Frame zu erreichen, und berechnen Sie den Ausgangswert Kontext auf Grundlage des Registerkontexts für diesen Rahmen.  
+ Sie erhalten einen Ausgangswert an, indem Sie den Zielthread direkt anhalten von und seinen Stapel durchlaufen selbst bis Sie den obersten finden verwalteten Frame. Nachdem der Zielthread angehalten wird, erhalten Sie aktuellen Registerkontext in den Zielthread an. Als Nächstes zu bestimmen, ob der Registerkontext auf nicht verwalteten Code durch den Aufruf zeigt [ICorProfilerInfo:: GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) – Wenn zurückgegeben wird ein `FunctionID` gleich 0 (null) ist, wird der Frame nicht verwaltetem Code. Führen Sie nun den Stapel, bis Sie den ersten verwalteten Frame erreichen, und klicken Sie dann die Seed-Kontext, der basierend auf der Registerkontext für diesen Frame zu berechnen.  
   
- Rufen Sie `DoStackSnapshot` mit den Ausgangswert Kontext auf den asynchronen Stackwalk zu beginnen. Wenn Sie keinen Ausgangswert angeben `DoStackSnapshot` verwalteten Frames am oberen Ende des Stapels überspringen und folglich erhalten Sie einen unvollständige Stackwalk. Wenn Sie einen Ausgangswert angeben, muss er auf JIT-kompilierten oder Native Image Generator (Ngen.exe) zeigen-generierter Code; andernfalls `DoStackSnapshot` gibt den Fehlercode CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX zurück.  
+ Rufen Sie `DoStackSnapshot` mit den Kontext Ihres Ausgangswerts, um den asynchronen Stackwalk zu beginnen. Wenn Sie keinen Ausgangswert angeben `DoStackSnapshot` verwalteten Frames an der Spitze des Stapels überspringen und, folglich erhalten Sie einen unvollständiger Stackwalk. Wenn Sie einen Ausgangswert angeben, müssen sie zeigen Sie auf die JIT-Kompilierung oder Native Image Generator (Ngen.exe)-Code generiert andernfalls `DoStackSnapshot` gibt den Fehlercode CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX zurück.  
   
- Asynchrone Stackwalks können Sie bequem Deadlocks verursachen oder zugriffsverletzungen, es sei denn, Sie die folgenden Richtlinien beachten:  
+ Asynchroner Stapeldurchläufe können leicht dazu führen, dass Deadlocks oder zugriffsverletzungen, es sei denn, Sie die folgenden Richtlinien beachten:  
   
--   Wenn Sie direkt über Threads anhalten, denken Sie daran, dass nur ein Thread, der nicht verwalteten Code ausgeführt hat ein anderer Thread angehalten werden kann.  
+-   Wenn Sie direkt über Threads anhalten, denken Sie daran, dass nur ein Thread, der nie verwalteten Code ausgeführt hat einen anderen Thread anhalten kann.  
   
--   Immer-block in Ihre [ICorProfilerCallback:: ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) Rückruf bis Stackwalk des betreffenden Threads abgeschlossen ist.  
+-   Immer-block in Ihre [ICorProfilerCallback:: ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) Rückruf bis zum Abschluss der Stapeldurchlauf dieses Threads.  
   
--   Aufrechterhalten Sie eine Sperre kann nicht werden, während der Profiler in eine CLR-Funktion aufruft, die eine Garbagecollection auslösen können. Halten Sie also keine Sperre der Besitzerthread ein Aufrufs vorgenommen werden kann, das eine Garbagecollection auslöst.  
+-   Führen Sie keine Sperre, während Ihr Profiler an eine CLR-Funktion aufruft, die eine Garbagecollection auslösen können. D. h. keine Sperre, wenn der belegende Thread einen Aufruf durchführen kann, der eine Garbagecollection auslöst.  
   
- Zudem besteht ein Risiko von Deadlocks beim Aufrufen `DoStackSnapshot` von einem anderen Thread, die der Profiler erstellt hat, damit Sie den Stapel eines separaten Zielthreads durchlaufen können. Beim ersten erstellten Thread wechselt bestimmte `ICorProfilerInfo*` Methoden (einschließlich `DoStackSnapshot`), die CLR wird pro Thread, CLR-spezifische Initialisierung auf diesem Thread ausgeführt. Wenn der Profiler den Zielthread angehalten wurde, dessen Stapel zu durchlaufen werden soll, und Zielthread aufgetreten ist, eine Sperre für die Durchführung dieser threadspezifischen Initialisierung erforderlich verfügen, wird ein Deadlock auftreten. Um diese Deadlocks zu vermeiden, stellen Sie in einen ersten Aufruf `DoStackSnapshot` aus dem Thread erstellt mit dem Profiler zum Durchlaufen ein separaten Zielthread, aber den Zielthread nicht zunächst anhalten. Diese ersten Aufruf wird sichergestellt, dass die threadspezifische Initialisierung ohne Deadlock abgeschlossen werden kann. Wenn `DoStackSnapshot` erfolgreich ist, und gibt mindestens einen Frame nach diesem Punkt werden sie alle Zielthread und Aufruf anzuhalten, Profiler erstellte Thread sicher `DoStackSnapshot` , den Stapel der Zielthread zu durchlaufen.  
+ Es gibt auch Risiko eines Deadlocks Aufrufen `DoStackSnapshot` von einem Thread, der Ihr Profiler erstellt wurde, damit Sie den Stapel des einen separaten Zielthread zu durchlaufen können. Beim ersten erstellten Thread gibt bestimmte `ICorProfilerInfo*` Methoden (einschließlich `DoStackSnapshot`), die CLR wird pro Thread, CLR-spezifische-Initialisierung auf diesem Thread ausgeführt. Wenn Ihr Profiler den Zielthread angehalten hat, dessen Stapel, die Sie durchlaufen möchten, und Zielthread aufgetreten ist, eine Sperre für diese Initialisierung pro Thread durchführen besitzen, wird ein Deadlock auftreten. Um diese Deadlocks zu vermeiden, stellen Sie einen anfänglichen Aufruf in `DoStackSnapshot` aus Ihrem Profiler erstellte Thread durchlaufen ein separaten Thread, als Zielplattform halten den Zielthread nicht zuerst. Diese ersten Aufruf wird sichergestellt, dass die Initialisierung pro Thread ohne Deadlock durchführen kann. Wenn `DoStackSnapshot` erfolgreich ist, und meldet Sie mindestens einen Frame nach diesem Punkt, sie werden alle Zielthread und der Aufruf angehalten, Profiler erstellte Thread sicher `DoStackSnapshot` auf den Stapel Zielthread zu durchlaufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536760"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384953"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl-Steuerelement (Windows Forms)
 Mit `TabControl` in Windows Forms werden mehrere Registerkarten wie Karteireiter in einem Notizbuch oder Reiter in einem Satz von Ordnern in einem Aktenschrank angezeigt. Die Registerkarten können Bilder und weitere Steuerelemente enthalten. Verwenden Sie `TabControl`, um Eigenschaftenseiten zu erstellen.  
@@ -36,7 +36,7 @@ Mit `TabControl` in Windows Forms werden mehrere Registerkarten wie Karteireiter
  [Gewusst wie: Deaktivieren von Registerkarten](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
  Erläutert, wie der Zugriff auf eine Registerkarte (möglicherweise auf Grundlage von Benutzeranmeldeinformationen) eingeschränkt werden kann.  
   
- Siehe auch [wie: Hinzufügen und Entfernen von Registerkarten mit Windows Forms TabControl mithilfe des Designers](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte mithilfe des Designers](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
+ Siehe auch [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten mit dem Windows Forms TabControl-Steuerelement mit den Designer](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte mithilfe des Designers](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.TabControl>-Klasse  

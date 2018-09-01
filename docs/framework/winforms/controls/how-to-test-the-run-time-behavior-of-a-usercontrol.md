@@ -8,67 +8,67 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: ac846840f7d420da63f6bfe3db3772d7bf6cc730
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40ec136a86b52dcb007d15d5a2917212745961f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539604"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392902"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Gewusst wie: Testen des Laufzeitverhaltens eines UserControl
-Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie dessen Laufzeitverhalten zu testen. Sie können eine separate Windows-basiertes Anwendungsprojekt erstellen und platzieren Sie das Steuerelement auf einen Testformular, aber dieses Verfahren ist. Eine Möglichkeit schnellere und einfachere, ist die Verwendung der **UserControl-Testcontainer** von Visual Studio bereitgestellt werden. Dieser Testcontainer wird direkt aus Ihrem Windows-Steuerelementbibliothek-Projekt gestartet.  
+Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie dessen Laufzeitverhalten zu testen. Können einen separaten Windows-basiertes Anwendungsprojekt zu erstellen und das Steuerelement auf einem Testformular, aber dieses Verfahren ist unpraktisch. Eine schnellere und einfachere Möglichkeit ist die Verwendung der **UserControl-Testcontainer** von Visual Studio bereitgestellt. Dieser Testcontainer, die direkt über das Windows-Steuerelementbibliothek-Projekt wird gestartet.  
   
 > [!IMPORTANT]
->  Für den Testcontainer laden Ihre <xref:System.Windows.Forms.UserControl>, das Steuerelement muss über mindestens einen öffentlichen Konstruktor verfügen.  
+>  Für den Testcontainer beim Laden Ihrer <xref:System.Windows.Forms.UserControl>, muss das Steuerelement über mindestens einen öffentlichen Konstruktor haben.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 > [!NOTE]
 >  Ein Visual C++-Steuerelement kann nicht getestet werden, mithilfe der **UserControl-Testcontainer**.  
   
-### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Zum Testen des Laufzeitverhaltens eines UserControl  
+### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>So testen Sie das Laufzeitverhalten eines UserControl  
   
-1.  Erstellen Sie eine Windows-Steuerelementbibliothek-Projekt namens **TestContainerExample**. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Erstellen Sie ein Windows-Steuerelementbibliothek-Projekt namens **TestContainerExample**. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
-2.  In der **Windows Forms-Designer**, ziehen Sie eine <xref:System.Windows.Forms.Label> -Steuerelement aus der **Toolbox** auf das Steuerelement-Entwurfsoberfläche.  
+2.  In der **Windows Forms-Designer**, ziehen Sie eine <xref:System.Windows.Forms.Label> -Steuerelement aus der **Toolbox** auf der Entwurfsoberfläche des Steuerelements.  
   
-3.  Drücken Sie F5, um das Projekt erstellen und Ausführen der **UserControl-Testcontainer**. Der Testcontainer wird mit Ihrem <xref:System.Windows.Forms.UserControl> in der **Vorschau** Bereich.  
+3.  Drücken Sie F5, um das Projekt erstellen und Ausführen der **UserControl-Testcontainer**. Der Testcontainer wird mit Ihrem <xref:System.Windows.Forms.UserControl> in die **Vorschau** Bereich.  
   
-4.  Wählen Sie die <xref:System.Windows.Forms.Control.BackColor%2A> angezeigten Eigenschaft der <xref:System.Windows.Forms.PropertyGrid> Steuerelement rechts neben der **Vorschau** Bereich. Ändern Sie dessen Wert in `ControlDark`. Beachten Sie, dass das Steuerelement in einer dunkleren Farbe ändert. Wiederholen Sie den anderen Eigenschaftswerte ändern, und beobachten Sie die Auswirkung auf das Steuerelement.  
+4.  Wählen Sie die <xref:System.Windows.Forms.Control.BackColor%2A> angezeigten Eigenschaft der <xref:System.Windows.Forms.PropertyGrid> Steuerelement rechts neben der **Vorschau** Bereich. Ändern Sie seinen Wert auf `ControlDark`. Beachten Sie, dass das Steuerelement zu einer dunkleren Farbe geändert. Versuchen Sie es anderen Eigenschaftswerte ändern, und beobachten die Auswirkungen auf das Steuerelement.  
   
-5.  Klicken Sie auf die **Fill-Benutzersteuerelement andocken** Kontrollkästchen unten die **Vorschau** Bereich. Beachten Sie, dass das Steuerelement skaliert wird, um den Bereich zu füllen. Die Größe des Testcontainers und beachten Sie, dass das Steuerelement mit dem Bereich angepasst wird.  
+5.  Klicken Sie auf die **Fill-Benutzersteuerelement andocken** Kontrollkästchen unten die **Vorschau** Bereich. Beachten Sie, dass das Steuerelement skaliert wird, um den Bereich zu füllen. Ändern der Größe des Testcontainers, und beobachten Sie, dass das Steuerelement mit dem Bereich angepasst wird.  
   
-6.  Schließen Sie den Testcontainer an.  
+6.  Schließen Sie den Testcontainer.  
   
-7.  Fügen Sie ein anderes Benutzersteuerelement, das **TestContainerExample** Projekt. Einzelheiten finden Sie in [NIB: Vorgehensweise: Hinzufügen von vorhandenen Elementen zu einem Projekt](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Fügen Sie einen anderen benutzerdefinierten Steuerelements, sodass die **TestContainerExample** Projekt. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen von vorhandenen Elementen zu einem Projekt](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
-8.  In der **Windows Forms-Designer**, ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Steuerelement-Entwurfsoberfläche.  
+8.  In der **Windows Forms-Designer**, ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf der Entwurfsoberfläche des Steuerelements.  
   
 9. Drücken Sie F5, um das Projekt erstellen, und führen Sie den Testcontainer aus.  
   
-10. Klicken Sie auf die **Benutzersteuerelement auswählen** <xref:System.Windows.Forms.ComboBox> Wechsel zwischen den beiden Benutzersteuerelemente.  
+10. Klicken Sie auf die **Benutzersteuerelement auswählen** <xref:System.Windows.Forms.ComboBox> zwischen den beiden Steuerelementen wechseln.  
   
-## <a name="testing-user-controls-from-another-project"></a>Benutzersteuerelemente aus einem anderen Projekt testen  
- Sie können die Benutzersteuerelemente als andere Projekte in Ihrem aktuellen Projekt Testcontainer testen.  
+## <a name="testing-user-controls-from-another-project"></a>Testen von Benutzersteuerelementen aus einem anderen Projekt  
+ Sie können Steuerelemente aus anderen Projekten in Test-Container des aktuellen Projekts testen.  
   
-#### <a name="to-test-user-controls-from-another-project"></a>So testen Sie Benutzersteuerelemente aus einem anderen Projekt  
+#### <a name="to-test-user-controls-from-another-project"></a>Um Steuerelemente aus einem anderen Projekt zu testen.  
   
-1.  Erstellen Sie eine Windows-Steuerelementbibliothek-Projekt namens **TestContainerExample2**. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Erstellen Sie ein Windows-Steuerelementbibliothek-Projekt namens **TestContainerExample2**. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
-2.  In der **Windows Forms-Designer**, ziehen Sie eine <xref:System.Windows.Forms.RadioButton> -Steuerelement aus der **Toolbox** auf das Steuerelement-Entwurfsoberfläche.  
+2.  In der **Windows Forms-Designer**, ziehen Sie eine <xref:System.Windows.Forms.RadioButton> -Steuerelement aus der **Toolbox** auf der Entwurfsoberfläche des Steuerelements.  
   
-3.  Drücken Sie F5, um das Projekt erstellen, und führen Sie den Testcontainer aus. Der Testcontainer wird mit Ihrem <xref:System.Windows.Forms.UserControl> in der **Vorschau** Bereich.  
+3.  Drücken Sie F5, um das Projekt erstellen, und führen Sie den Testcontainer aus. Der Testcontainer wird mit Ihrem <xref:System.Windows.Forms.UserControl> in die **Vorschau** Bereich.  
   
-4.  Klicken Sie auf die **laden** Schaltfläche.  
+4.  Klicken Sie auf die **Load** Schaltfläche.  
   
-5.  In der **öffnen** Dialogfeld Feld, navigieren Sie zu **TestContainerExample**.dll, die Sie im vorherigen Verfahren erstellt haben. Wählen Sie **TestContainerExample**DLL-Datei, und klicken Sie auf die **öffnen** Schaltfläche, um die Benutzersteuerelemente zu laden.  
+5.  In der **öffnen** Dialogfeld zu **TestContainerExample**DLL-Datei, die Sie in der vorherigen Prozedur erstellt. Wählen Sie **TestContainerExample**DLL-Datei, und klicken Sie auf die **öffnen** Schaltfläche, um die Steuerelemente zu laden.  
   
-6.  Verwenden der **Benutzersteuerelement auswählen** <xref:System.Windows.Forms.ComboBox> So wechseln Sie zwischen die beiden Benutzersteuerelemente aus der **TestContainerExample** Projekt.  
+6.  Verwenden der **Benutzersteuerelement auswählen** <xref:System.Windows.Forms.ComboBox> zum Wechseln zwischen den beiden Steuerelementen aus der **TestContainerExample** Projekt.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.UserControl>  
  [Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [Benutzersteuerelement-Designer](http://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+ [Benutzersteuerelement-Designer](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

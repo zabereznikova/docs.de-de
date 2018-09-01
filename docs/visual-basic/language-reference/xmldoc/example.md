@@ -5,12 +5,12 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 8c09ab934ee7457fdff39a63c58f2546cda4d643
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2de91d828fd9706b66f4c810486e54e2d3062de0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598549"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384230"
 ---
 # <a name="ltexamplegt-visual-basic"></a>&lt;Beispiel&gt; (Visual Basic)
 Gibt ein Beispiel für das Element an.  
@@ -26,7 +26,7 @@ Gibt ein Beispiel für das Element an.
  Eine Beschreibung des Codebeispiels.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `<example>` -Tag kann ein Beispiel zur Verwendung einer Methode oder anderen Bibliothekmembers angegeben. Dies schließt im Allgemeinen die Verwendung des [\<code](../../../visual-basic/language-reference/xmldoc/code.md)-Tags ein.  
+ Die `<example>` -Tag können Sie ein Beispiel zur Verwendung einer Methode oder anderen Bibliothekmembers angegeben. Dies schließt im Allgemeinen die Verwendung des [\<code](../../../visual-basic/language-reference/xmldoc/code.md)-Tags ein.  
   
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
   
@@ -36,4 +36,4 @@ Gibt ein Beispiel für das Element an.
  [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)

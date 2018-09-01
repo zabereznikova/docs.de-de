@@ -2,12 +2,12 @@
 title: Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 6994632c88b4ac67c9340fc95f07687d99917933
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a57e8facdd0ece7223ec780a9ef22a1be7c53221
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766633"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386362"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)
 In diesem Abschnitt werden Informationen über die Language-Integrated Query (LINQ)-Standardabfrageoperatoren bereitgestellt, die in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen unterstützt bzw. nicht unterstützt werden. Viele der LINQ-Standardabfrageoperatoren verfügen über eine überladene Version, der ein ganzzahliges Argument übergeben werden kann. Das ganzzahlige Argument entspricht einem nullbasierten Index in der Sequenz, die bearbeiteten ist ein <xref:System.Collections.Generic.IEqualityComparer%601>, oder <xref:System.Collections.Generic.IComparer%601>. Sofern nicht anders angegeben, werden diese überladenen Versionen der LINQ-Standardabfrageoperatoren nicht unterstützt, und bei ihrer Verwendung wird eine Ausnahme ausgelöst.  
@@ -37,7 +37,7 @@ In diesem Abschnitt werden Informationen über die Language-Integrated Query (LI
 |<xref:System.Linq.Queryable.Join%2A>|Nicht unterstützt|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>Methoden für Mengen  
- Die meisten Methoden werden in unterstützt LINQ-Set [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Abfragen, mit Ausnahme solcher, bei denen ein <xref:System.Collections.Generic.EqualityComparer%601>. Weitere Informationen finden Sie unter [Standardabfrageoperatoren in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Set-Methoden aufgeführt.  
+ Die meisten Methoden werden in unterstützt LINQ-Set [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Abfragen, davon ausgenommen sind die, mit denen ein <xref:System.Collections.Generic.EqualityComparer%601>. Weitere Informationen finden Sie unter [Standardabfrageoperatoren in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Set-Methoden aufgeführt.  
   
 |Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -59,7 +59,7 @@ In diesem Abschnitt werden Informationen über die Language-Integrated Query (LI
 |<xref:System.Linq.Queryable.Union%2A>|Nicht unterstützt|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>Sortiermethoden  
- Die meisten der LINQ-Sortiermethoden werden in unterstützt [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], davon ausgenommen sind die, die akzeptieren ein <xref:System.Collections.Generic.IComparer%601>, da der Vergleich mit der Datenquelle übersetzt werden kann. Weitere Informationen finden Sie unter [Standardabfrageoperatoren in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Sortierungsmethoden aufgeführt.  
+ Die meisten der LINQ-Sortiermethoden werden unterstützt [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], davon ausgenommen sind die, die akzeptieren ein <xref:System.Collections.Generic.IComparer%601>, da der Vergleich für die Datenquelle übersetzt werden kann. Weitere Informationen finden Sie unter [Standardabfrageoperatoren in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Sortierungsmethoden aufgeführt.  
   
 |Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -74,7 +74,7 @@ In diesem Abschnitt werden Informationen über die Language-Integrated Query (LI
 |<xref:System.Linq.Queryable.Reverse%2A>|Nicht unterstützt|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>Gruppierungsmethoden  
- Die meisten der LINQ-Gruppierungsmethoden werden in unterstützt [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], davon ausgenommen sind die, die akzeptieren ein <xref:System.Collections.Generic.IEqualityComparer%601>, da der Vergleich mit der Datenquelle übersetzt werden kann. Weitere Informationen finden Sie unter [Standardabfrageoperatoren in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Gruppierungsmethoden aufgeführt.  
+ Die meisten der LINQ-Gruppierungsmethoden werden unterstützt, [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], davon ausgenommen sind die, die akzeptieren ein <xref:System.Collections.Generic.IEqualityComparer%601>, da der Vergleich für die Datenquelle übersetzt werden kann. Weitere Informationen finden Sie unter [Standardabfrageoperatoren in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Gruppierungsmethoden aufgeführt.  
   
 |Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -145,7 +145,7 @@ In diesem Abschnitt werden Informationen über die Language-Integrated Query (LI
 |<xref:System.Linq.Queryable.Sum%2A>|Nicht unterstützt|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Typmethoden  
- Die LINQ-Standardabfrageoperatoren, die mit CLR-Typkonvertierung und Testen zusammenhängen, werden im [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] unterstützt. Nur CLR-Typen, die den konzeptionellen Modelltypen zugeordnet werden, werden in LINQ to Entities unterstützt. Eine Liste der Typen des konzeptionellen Modells, finden Sie unter [konzeptionellen Modell Typen (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Typmethoden aufgeführt.  
+ Die LINQ-Standardabfrageoperatoren, die mit CLR-Typkonvertierung und Testen zusammenhängen, werden im [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] unterstützt. Nur CLR-Typen, die den konzeptionellen Modelltypen zugeordnet werden, werden in LINQ to Entities unterstützt. Eine Liste der Typen des konzeptionellen Modells, finden Sie unter [konzeptionelle Modelltypen (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Typmethoden aufgeführt.  
   
 |Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  

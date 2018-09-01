@@ -2,12 +2,12 @@
 title: Nachrichteninspektoren
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 05dbee820a002feb1f2a1672220be0c4a397f952
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 253be4d13649d4f6394aad1bb002f5cd555d8af2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508994"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385843"
 ---
 # <a name="message-inspectors"></a>Nachrichteninspektoren
 In diesem Beispiel wird veranschaulicht, wie Client- und Dienstnachrichteninspektoren implementiert und konfiguriert werden.  
@@ -202,7 +202,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>Verhalten  
- Nachrichteninspektoren sind Erweiterungen zur Clientlaufzeit oder der Dispatchlaufzeit. Solche Erweiterungen werden mithilfe von konfiguriert *Verhalten*. Eine Verhaltensweise ist eine Klasse, die das Verhalten der Dienstmodelllaufzeit ändert, indem sie die Standardkonfiguration ändert oder Erweiterungen (wie Nachrichteninspektoren) hinzufügt.  
+ Nachrichteninspektoren sind Erweiterungen zur Clientlaufzeit oder der Dispatchlaufzeit. Diese Erweiterungen werden mithilfe von konfiguriert *Verhaltensweisen*. Eine Verhaltensweise ist eine Klasse, die das Verhalten der Dienstmodelllaufzeit ändert, indem sie die Standardkonfiguration ändert oder Erweiterungen (wie Nachrichteninspektoren) hinzufügt.  
   
  Bei der folgenden `SchemaValidationBehavior`-Klasse handelt es sich um die Verhaltensweise, mit der der Nachrichteninspektor dieses Beispiels zur Client- oder Dispatchlaufzeit hinzugefügt wird. Die Implementierung ist in beiden Fällen ganz einfach. In <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> und <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> wird der Nachrichteninspektor erstellt und zur <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A>-Auflistung der entsprechenden Laufzeit hinzugefügt.  
   
@@ -259,7 +259,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 >  Diese bestimmte Verhaltensweise tritt nicht als Attribut auf und kann deshalb nicht deklarativ zu einem Vertragstyp eines Diensttyps hinzugefügt werden. Diese Entscheidung wurde absichtlich getroffen, da die Schemaauflistung nicht in einer Attributdeklaration geladen werden kann und für den Verweis auf einen gesonderten Konfigurationsspeicherort (z. B. auf die Anwendungseinstellungen) in diesem Attribut müsste ein Konfigurationselement erstellt werden, dass nicht mit der restlichen Dienstmodellkonfiguration konsistent ist. Deshalb kann diese Verhaltensweise nur zwingend über Code und eine Erweiterung der Dienstmodellkonfiguration hinzugefügt werden.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>Hinzufügen des Nachrichteninspektors durch Konfiguration  
- Für das Konfigurieren einer benutzerdefinierten Verhaltensweise an einem Endpunkt in der Anwendungskonfigurationsdatei, benötigt das Dienstmodell Implementierungen, um eine Konfiguration erstellen *Erweiterungselement* dargestellt, die von einer abgeleiteten Klasse <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>. Diese Erweiterung muss dann zum Konfigurationsabschnitt für Erweiterungen des Dienstmodells hinzugefügt werden, wie für die folgende in diesem Abschnitt erläuterte Erweiterung gezeigt.  
+ Für ein benutzerdefiniertes Verhalten eines Endpunkts in der Anwendungskonfigurationsdatei konfigurieren, benötigt das Dienstmodell Implementierungen, die zum Erstellen einer Konfiguration *Erweiterungselement* dargestellt durch eine Klasse, die von abgeleiteten <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>. Diese Erweiterung muss dann zum Konfigurationsabschnitt für Erweiterungen des Dienstmodells hinzugefügt werden, wie für die folgende in diesem Abschnitt erläuterte Erweiterung gezeigt.  
   
 ```xml  
 <system.serviceModel>  
@@ -398,18 +398,18 @@ catch (Exception e)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
   

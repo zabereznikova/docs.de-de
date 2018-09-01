@@ -1,5 +1,5 @@
 ---
-title: My.Computer.FileSystem-Objekt
+title: My.Computer.FileSystem-Objekt (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - FileSystem module
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 111dde90912e586c92da4ed9f5be50d15a75485b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594369"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390927"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem-Objekt
 Stellt Eigenschaften und Methoden für die Arbeit mit Laufwerken, Dateien und Verzeichnissen bereit.  
@@ -28,7 +28,7 @@ Stellt Eigenschaften und Methoden für die Arbeit mit Laufwerken, Dateien und Ve
  Weitere Informationen finden Sie unter [Dateizugriff mit Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
->  Sie können auch die Klassen in der <xref:System.IO?displayProperty=nameWithType> Namespace zur Bearbeitung der Laufwerke, Dateien und Verzeichnisse.  
+>  Sie können auch die Klassen in der <xref:System.IO?displayProperty=nameWithType> Namespace zum Arbeiten mit Laufwerken, Dateien und Verzeichnisse.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  

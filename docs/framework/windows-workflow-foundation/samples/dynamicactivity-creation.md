@@ -2,12 +2,12 @@
 title: DynamicActivity-Erstellung
 ms.date: 03/30/2017
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-ms.openlocfilehash: 93435be69f90ca0b74dae6b934cb145fabb7afff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 270066fafd5c71b2a720ca305433159c172872aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518101"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385260"
 ---
 # <a name="dynamicactivity-creation"></a>DynamicActivity-Erstellung
 In diesem Beispiel werden zwei unterschiedliche Möglichkeiten zum Erstellen einer Aktivität mithilfe der <xref:System.Activities.DynamicActivity>-Aktivität zur Laufzeit veranschaulicht.  
@@ -112,7 +112,7 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- Der XAML-Code kann mithilfe von [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] visuell erstellt werden. Wenn es in einem Visual Studio-Projekt enthalten ist, achten Sie darauf, dass "Buildvorgang" auf "None" zu verhindern, dass es zu kompilierende festgelegt wird. Der XAML-Code kann dann mithilfe des folgenden Aufrufs dynamisch geladen werden.  
+ Der XAML-Code kann mithilfe von [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] visuell erstellt werden. Wenn es in einem Visual Studio-Projekt enthalten ist, achten Sie darauf, dass Sie legen Sie dessen "Buildvorgang" auf "None" um zu verhindern, das kompiliert wird. Der XAML-Code kann dann mithilfe des folgenden Aufrufs dynamisch geladen werden.  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
@@ -143,6 +143,6 @@ Console.WriteLine("The average calculated using the code activity is = " + resul
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`

@@ -2,12 +2,12 @@
 title: Transaktionen und Parallelität
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: 9ea136a34c478f3619c81ad3cbbae0765fb99374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365266"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386684"
 ---
 # <a name="transactions-and-concurrency"></a>Transaktionen und Parallelität
 Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehlen, die als Paket ausgeführt werden. Mit Transaktionen können Sie mehrere Operationen in einem Arbeitsschritt zusammenfassen. Wenn an einer Stelle in der Transaktion ein Fehler auftritt, kann für alle Updates ein Rollback zum Zustand vor der Transaktion ausgeführt werden.  
@@ -29,7 +29,7 @@ Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehl
  Beschreibt die Ausführung von verteilten Transaktionen in ADO.NET.  
   
  [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- Beschreibt <xref:System.Transactions> Integration mit SQL Server für das Arbeiten mit verteilten Transaktionen.  
+ Beschreibt <xref:System.Transactions> Integration in SQL Server für die Arbeit mit verteilten Transaktionen.  
   
  [Vollständige Parallelität](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Beschreibt die vollständige und die eingeschränkte Parallelität und wie Sie auf Parallelitätsverletzungen testen können.  
@@ -40,4 +40,4 @@ Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehl
  [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

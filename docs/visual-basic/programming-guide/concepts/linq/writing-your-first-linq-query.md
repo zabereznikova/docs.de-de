@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 44fbf35ee4ab5a0c4763269808f0817a33d05b40
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998436"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387633"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Schreiben der ersten LINQ-Abfrage (Visual Basic)
 Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in einer dedizierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für verschiedene Arten von Datenquellen, z. B. SQL für relationale Datenbanken und XQuery für XML entwickelt. Dadurch für den Entwickler der Anwendung finden Sie eine neue Abfragesprache für jeden Typ von Datenquelle oder Datenformat, das unterstützt wird.  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Weitere Informationen zum Erstellen bestimmter Typen von Datenquellen finden Sie in der Dokumentation der verschiedenen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter. (Eine Liste dieser Anbieter wird, finden Sie unter [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) Die Grundregel ist einfach: eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Datenquelle ist jedes Objekt, das die generische unterstützt <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder eine Schnittstelle, die von ihr erbt.  
+ Weitere Informationen zum Erstellen bestimmter Typen von Datenquellen finden Sie in der Dokumentation der verschiedenen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter. (Eine Liste dieser Anbieter wird, finden Sie unter [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) Die Grundregel ist einfach: eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Datenquelle ist jedes Objekt, das die generische unterstützt <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder eine Schnittstelle, die von ihr erbt.  
   
 > [!NOTE]
 >  Typen wie <xref:System.Collections.ArrayList> , die nicht generische unterstützen <xref:System.Collections.IEnumerable> Schnittstelle kann auch verwendet werden, als [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] -Datenquellen. Ein Beispiel für die Verwendung einer <xref:System.Collections.ArrayList>, finden Sie unter [Vorgehensweise: Abfragen von ArrayList mit LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  

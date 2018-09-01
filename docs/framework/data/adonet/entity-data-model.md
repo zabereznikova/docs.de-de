@@ -2,12 +2,12 @@
 title: Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: bb3c529a19ca96ea5695061fb1b612f9179899be
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e76527b497434ada06762fcab931522fffa2a16b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765242"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385593"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur unabhängig von der gespeicherten Form beschreiben. Das EDM ist aus dem 1976 von Peter Chen beschriebenen Entitätsbeziehungsmodell ausgeliehen, baut aber auch auf dem Entitätsbeziehungsmodell auf und erweitert seine herkömmliche Verwendung.  
@@ -17,7 +17,7 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
  Ein `conceptual model` ist eine bestimmte Darstellung der Datenstruktur als Entitäten und Beziehungen und wird im Allgemeinen in einer domänenspezifischen Sprache (DSL) definiert, die die Konzepte des EDM implementiert. [Konzeptionelle Schemadefinitionssprache (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) ist ein Beispiel einer solchen domänenspezifischen Sprache. In einem konzeptionellen Modell beschriebene Entitäten und Beziehungen können als Abstraktionen von Objekten und Zuordnungen in einer Anwendung betrachtet werden. Dadurch können sich Entwickler ohne Beachtung des Speicherschemas auf das konzeptionelle Modell konzentrieren und Code mit dem Schwerpunkt auf Effizienz und Verwaltbarkeit schreiben. In der Zwischenzeit können sich Speicherschema-Designer auf die Effizienz von Datenzugriff, Speicherung und Skalierbarkeit konzentrieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- In den Themen dieses Abschnitts werden die Konzepte des Entity Data Model erläutert. Jede DSL, die das EDM implementiert, sollte die hier beschriebenen Konzepte enthalten. Beachten Sie, dass die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) mithilfe von CSDL um konzeptionelle Modelle zu definieren. Weitere Informationen finden Sie unter [CSDL-Spezifikation](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
+ In den Themen dieses Abschnitts werden die Konzepte des Entity Data Model erläutert. Jede DSL, die das EDM implementiert, sollte die hier beschriebenen Konzepte enthalten. Beachten Sie, dass die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) CSDL wird verwendet, um konzeptionelle Modelle zu definieren. Weitere Informationen finden Sie unter [CSDL-Spezifikation](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
   
  [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
@@ -62,6 +62,6 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
  [Einschränkung der referenziellen Integrität](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
- [Übersicht über die EDMX-Datei](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
+ [Übersicht über die EDMX-Datei](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [CSDL-Spezifikation](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)
