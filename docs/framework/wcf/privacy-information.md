@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: e278b28e5c0015eeab549b04d3870dfa247a57ed
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 9c2a8d89fc62f8e3e0ce17f13604a6ba05df1a6f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33808870"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395064"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation-Datenschutzinformationen
 Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Bei der Erstellung einer Anwendung mithilfe von Windows Communication Foundation (WCF), Version 3.0, kann Ihre Anwendung Datenschutz der Endbenutzer beeinträchtigen. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. WCF sendet nicht an Microsoft aus Ihrer Anwendung Informationen, sofern Ihnen oder dem Endbenutzer Sie uns senden möchten.  
@@ -402,5 +402,5 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Die WSDL (Web Services Description Language) enthält eine Definition des Anschlusses. Jeder Anschluss verfügt über eine Endpunktadresse und eine Bindung, die die von der Anwendung verwendeten Dienste darstellt. Das Verfügbarmachen der WSDL kann mithilfe der Konfiguration deaktiviert werden. Auf dem Computer werden keine Informationen beibehalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)

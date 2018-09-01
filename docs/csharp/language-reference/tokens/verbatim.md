@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf8735894594acab31586e539f90e426db97f24
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 7dbab5a743b4f9fed759210e8410cd6e3459efac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33289177"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385632"
 ---
 # <a name="-c-reference"></a>@ (C#-Referenz)
 
@@ -74,7 +74,8 @@ Das Sonderzeichen `@` dient als ausführlicher Bezeichner. Er wird wie folgt ver
 
    [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim4.cs#1)]
 
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Sonderzeichen](../../../csharp/language-reference/tokens/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Sonderzeichen](../../../csharp/language-reference/tokens/index.md)

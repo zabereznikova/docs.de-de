@@ -2,12 +2,12 @@
 title: '&lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: f6d3085ce999caad7e605341ecdb6d7099da3590
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 31db3e8e8e441c8496c5e711702111394755a90b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32751921"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389525"
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 Stellt eine Bindung, die ein Windows Communication Foundation (WCF)-Dienst zum Konfigurieren und Verfügbarmachen von Endpunkten, die über HTTP kommunizieren können. Bei Verwendung mit einem Duplexvertrag wird WebSockets verwendet; andernfalls wird HTTP verwendet.  
@@ -87,7 +87,7 @@ Stellt eine Bindung, die ein Windows Communication Foundation (WCF)-Dienst zum K
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung. Dieses Element ist vom Typ `NetHttpSecurityElement`.|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -184,5 +184,5 @@ Stellt eine Bindung, die ein Windows Communication Foundation (WCF)-Dienst zum K
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

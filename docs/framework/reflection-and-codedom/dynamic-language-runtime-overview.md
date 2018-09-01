@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09cd345daffa2418b33f032e8bab47c81e2a8526
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 5a4645efc9276429cbdb0812f1ca501c89ea5dbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33397285"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393766"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Übersicht über die Dynamic Language Runtime
 Die *Dynamic Language Runtime* (DLR) ist eine Runtimeumgebung, die der Common Language Runtime (CLR) eine Reihe von Diensten für dynamische Sprachen hinzufügt. Die DLR vereinfacht es, dynamische Sprachen für die Ausführung auf dem .NET Framework zu entwickeln und statisch typisierten Sprachen dynamische Funktionen hinzuzufügen.  
@@ -52,7 +52,7 @@ Die *Dynamic Language Runtime* (DLR) ist eine Runtimeumgebung, die der Common La
   
 -   IronPython. Als Open-Source-Software auf der [GitHub](https://github.com/IronLanguages/ironpython2)-Website verfügbar.  
   
--   IronRuby Als Open-Source-Software auf der [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044)-Website verfügbar.  
+-   IronRuby Als Open-Source-Software auf der [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044)-Website verfügbar.  
   
 ## <a name="primary-dlr-advantages"></a>Wesentliche Vorteile der DLR  
  Die Verwendung der DLR bietet die folgenden Vorteile:  
@@ -80,7 +80,7 @@ DLR-Architektur
   
  Die DLR fügt der CLR eine Reihe von Diensten hinzu, um dynamische Sprachen besser zu unterstützen. Einige dieser Dienste sind:  
   
--   Ausdrucksbaumstrukturen. Die DLR verwendet Ausdrucksbaumstrukturen, um Sprachsemantik darzustellen. Zu diesem Zweck hat die DLR LINQ-Ausdrucksbaumstrukturen erweitert, um die Ablaufsteuerung, Zuweisung und andere Knoten für die Sprachmodellierung. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
+-   Ausdrucksbaumstrukturen. Die DLR verwendet Ausdrucksbaumstrukturen, um Sprachsemantik darzustellen. Zu diesem Zweck hat die DLR LINQ-Ausdrucksbaumstrukturen erweitert, um die Ablaufsteuerung, Zuweisung und andere Knoten für die Sprachmodellierung. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
   
 -   Zwischenspeichern der Aufrufwebsite. Eine *dynamische Aufrufwebsite* ist ein Ort im Code, an dem Sie einen Vorgang wie `a + b` oder `a.b()` auf dynamischen Objekten ausführen können. Die DLR speichert die Eigenschaften von `a` und `b` (normalerweise die Typen dieser Objekte) sowie Informationen über den Vorgang. Wenn solch ein Vorgang zuvor ausgeführt wurde, ruft die DLR alle nötigen Informationen aus dem Cache für den schnellen Versand ab.  
   
@@ -95,5 +95,5 @@ DLR-Architektur
  <xref:System.Dynamic.ExpandoObject>  
  <xref:System.Dynamic.DynamicObject>  
  [Common Language Runtime](../../../docs/standard/clr.md)  
- [Ausdrucksbaumstrukturen](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Ausdrucksbaumstrukturen](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
  [Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
