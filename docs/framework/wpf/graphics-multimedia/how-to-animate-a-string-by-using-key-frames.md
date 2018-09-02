@@ -6,29 +6,29 @@ helpviewer_keywords:
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-ms.openlocfilehash: 5219ce11667c84d3ceca380d5a4ddd52695736b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b55afd5938073a326789e67b66fec9cfce12015
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561058"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403124"
 ---
-# <a name="how-to-animate-a-string-by-using-key-frames"></a><span data-ttu-id="4b716-102">Gewusst wie: Animieren einer Zeichenfolge mithilfe von Keyframes</span><span class="sxs-lookup"><span data-stu-id="4b716-102">How to: Animate a String by Using Key Frames</span></span>
-<span data-ttu-id="4b716-103">In diesem Beispiel wird gezeigt, wie eine Zeichenfolge animiert in diesem Beispiel wird die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft von einem <xref:System.Windows.Controls.Button> mithilfe von Keyframes.</span><span class="sxs-lookup"><span data-stu-id="4b716-103">This example shows how to animate a string, which in this example is the <xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.Button> control, by using key frames.</span></span>  
+# <a name="how-to-animate-a-string-by-using-key-frames"></a><span data-ttu-id="2093c-102">Gewusst wie: Animieren einer Zeichenfolge mithilfe von Keyframes</span><span class="sxs-lookup"><span data-stu-id="2093c-102">How to: Animate a String by Using Key Frames</span></span>
+<span data-ttu-id="2093c-103">Dieses Beispiel zeigt, wie Sie eine Zeichenfolge, animieren, die in diesem Beispiel wird die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft eine <xref:System.Windows.Controls.Button> -Steuerelement, mithilfe von Keyframes.</span><span class="sxs-lookup"><span data-stu-id="2093c-103">This example shows how to animate a string, which in this example is the <xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.Button> control, by using key frames.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4b716-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4b716-104">Example</span></span>  
- <span data-ttu-id="4b716-105">Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> Klasse zum Animieren der <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft eine <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="4b716-105">The following example uses the <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> class to animate the <xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.Button>.</span></span>  
+## <a name="example"></a><span data-ttu-id="2093c-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2093c-104">Example</span></span>  
+ <span data-ttu-id="2093c-105">Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> -Klasse zum Animieren der <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft eine <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="2093c-105">The following example uses the <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> class to animate the <xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.Button>.</span></span>  
   
- <span data-ttu-id="4b716-106">Alle Keyframes in diesem Beispiel verwenden Sie eine Instanz von der <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> Klasse, da eine Zeichenfolge mit Keyframes erstellte Animation nur diskrete Keyframes verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="4b716-106">All the key frames in this example use an instance of the <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> class because a string animation that is created with key frames can only use discrete key frames.</span></span> <span data-ttu-id="4b716-107">Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> erstellen Sie einen plötzlichen Sprünge zwischen Werten, d. h., Änderungen an der Animation schnell ausgeführt und sind nicht feine.</span><span class="sxs-lookup"><span data-stu-id="4b716-107">Discrete key frames like <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> create sudden jumps between values, that is, changes to the animation occur quickly and are not subtle.</span></span>  
+ <span data-ttu-id="2093c-106">Alle Keyframes in diesem Beispiel verwenden Sie eine Instanz von der <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> Klasse, da die Animation einer Zeichenfolge, die mit Keyframes erstellt wird nur diskrete Keyframes verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="2093c-106">All the key frames in this example use an instance of the <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> class because a string animation that is created with key frames can only use discrete key frames.</span></span> <span data-ttu-id="2093c-107">Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> abrupte Sprünge zwischen Werten, d. h. erstellen, Änderungen an der Animation schnell erfolgen und nicht subtil.</span><span class="sxs-lookup"><span data-stu-id="2093c-107">Discrete key frames like <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> create sudden jumps between values, that is, changes to the animation occur quickly and are not subtle.</span></span>  
   
  [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
   
- <span data-ttu-id="4b716-108">Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](http://go.microsoft.com/fwlink/?LinkID=160012).</span><span class="sxs-lookup"><span data-stu-id="4b716-108">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
+ <span data-ttu-id="2093c-108">Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012).</span><span class="sxs-lookup"><span data-stu-id="2093c-108">For the complete sample, see [KeyFrame Animation Sample](https://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b716-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4b716-109">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2093c-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2093c-109">See Also</span></span>  
  <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>  
  <xref:System.Windows.Controls.ContentControl.Content%2A>  
  <xref:System.Windows.Controls.Button>  
  <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>  
- [<span data-ttu-id="4b716-110">Übersicht über Keyframe-Animationen</span><span class="sxs-lookup"><span data-stu-id="4b716-110">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [<span data-ttu-id="4b716-111">Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)</span><span class="sxs-lookup"><span data-stu-id="4b716-111">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+ [<span data-ttu-id="2093c-110">Übersicht über Keyframe-Animationen</span><span class="sxs-lookup"><span data-stu-id="2093c-110">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="2093c-111">Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)</span><span class="sxs-lookup"><span data-stu-id="2093c-111">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
