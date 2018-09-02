@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 664785bc97574eff73dc1c2be64f407641df6b00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccb16a0996386f3518bc52e95c1892c56e8bbad2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484568"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420831"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung
 Dieses Thema beschreibt, wie Sie vertrauliche Informationen davor schützen, verfügbar gemacht zu werden, sowie nützliche Tipps zur Verwendung von WebHost.  
@@ -86,9 +86,9 @@ Dieses Thema beschreibt, wie Sie vertrauliche Informationen davor schützen, ver
   
  Die Änderungen sind nur wirksam, wenn die Anwendung gestartet oder neu gestartet wird. Ein Ereignis wird beim Start protokolliert, wenn beide Attribute auf `true` festgelegt werden. Ein Ereignis wird außerdem protokolliert, wenn `logKnownPii` auf `true` festgelegt wird, `enableLoggingKnownPii` jedoch `false` ist.  
   
- Weitere Informationen zur PII-Protokollierung finden Sie unter [PII Sicherheitssperre](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) Beispiel.  
+ Weitere Informationen zur PII-Protokollierung finden Sie unter [Sperre der PII-Sicherheit](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) Beispiel.  
   
- Der Computeradministrator und der Anwendungsbereitsteller sollten diese beiden Schalter mit großer Vorsicht verwenden. Wenn die PII-Protokollierung aktiviert ist, werden Sicherheitsschlüssel und PII protokolliert. Wenn sie deaktiviert ist, werden vertrauliche und anwendungsspezifische Daten immer noch in Nachrichtenheadern und -texten protokolliert. Eine ausführlichere Erläuterung auf Datenschutz und Schutz von PII verfügbar gemacht wird, finden Sie unter [Datenschutz](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ Der Computeradministrator und der Anwendungsbereitsteller sollten diese beiden Schalter mit großer Vorsicht verwenden. Wenn die PII-Protokollierung aktiviert ist, werden Sicherheitsschlüssel und PII protokolliert. Wenn sie deaktiviert ist, werden vertrauliche und anwendungsspezifische Daten immer noch in Nachrichtenheadern und -texten protokolliert. Eine ausführlichere Erläuterung zum Datenschutz und zum Schutz von PII verfügbar gemacht wird, finden Sie unter [Benutzerdatenschutz](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
  Außerdem wird die IP-Adresse des Nachrichtenabsenders einmal pro Verbindung bei verbindungsorientierten Transporten und einmal pro Nachricht bei anderen Übertragungen protokolliert. Dies geschieht ohne Bestätigung durch den Absender. Diese Protokollierung erfolgt jedoch nur auf den Ablaufverfolgungsebenen "Information" oder "Ausführlich", die nicht die Standard- oder empfohlenen Ablaufverfolgungsebenen für die Produktion sind, außer für das Livedebuggen.  
   

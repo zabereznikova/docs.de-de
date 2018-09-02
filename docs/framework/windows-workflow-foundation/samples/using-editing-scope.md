@@ -2,12 +2,12 @@
 title: Verwenden des Bearbeitungsbereichs
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 67b79ebe558578ca612d59d48eb7ee291a6db501
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517390"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419983"
 ---
 # <a name="using-editing-scope"></a>Verwenden des Bearbeitungsbereichs
 In diesem Beispiel wird veranschaulicht, wie eine Gruppe von Änderungen stapelverarbeitet wird, sodass diese in einer einzigen automatischen Einheit rückgängig gemacht werden können. Die von einem Aktivitätsdesigner vorgenommenen Änderungen werden standardmäßig automatisch in das Rückgängig/Wiederholen-System integriert.  
@@ -26,7 +26,7 @@ In diesem Beispiel wird veranschaulicht, wie eine Gruppe von Änderungen stapelv
   
 1.  Erstellen Sie das Beispiel, und führen Sie es aus. Verwenden Sie dann die Schaltflächen links, um den Workflow zu ändern.  
   
-2.  Klicken Sie auf **Bearbeitungsbereich öffnen**.  
+2.  Klicken Sie auf **Öffnen des Bearbeitungsbereichs**.  
   
     1.  Dieser Befehl ruft <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> auf, womit ein Bearbeitungsbereich erstellt und auf den Bearbeitungsstapel verschoben wird.  
   
@@ -39,6 +39,6 @@ In diesem Beispiel wird veranschaulicht, wie eine Gruppe von Änderungen stapelv
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

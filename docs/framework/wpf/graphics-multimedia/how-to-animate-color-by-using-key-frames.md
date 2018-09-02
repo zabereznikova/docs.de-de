@@ -9,30 +9,30 @@ helpviewer_keywords:
 - animation [WPF], colors with key frames
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
-ms.openlocfilehash: 7d89a1f9c24c93bd6b05265092bde09e8cf6eff5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb09a54df3d99e05e89ec0f3d9f17b0e9fe78647
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560331"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419076"
 ---
 # <a name="how-to-animate-color-by-using-key-frames"></a>Gewusst wie: Animieren von Color mithilfe von Keyframes
-In diesem Beispiel wird gezeigt, wie zum Animieren der <xref:System.Windows.Media.SolidColorBrush.Color%2A> von einem <xref:System.Windows.Media.SolidColorBrush> mithilfe von Keyframes.  
+Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.SolidColorBrush.Color%2A> von einem <xref:System.Windows.Media.SolidColorBrush> mithilfe von Keyframes.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames> Klasse zum Animieren der <xref:System.Windows.Media.SolidColorBrush.Color%2A> Eigenschaft eine <xref:System.Windows.Media.SolidColorBrush>. In dieser Animation werden drei Keyframes folgendermaßen verwendet:  
+ Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames> -Klasse zum Animieren der <xref:System.Windows.Media.SolidColorBrush.Color%2A> Eigenschaft eine <xref:System.Windows.Media.SolidColorBrush>. In dieser Animation werden drei Keyframes folgendermaßen verwendet:  
   
-1.  Bei den ersten zwei Sekunden verwendet eine Instanz der <xref:System.Windows.Media.Animation.LinearColorKeyFrame> Klasse allmählich die Farbe von Grün in Rot ändern. Lineare Keyframes wie <xref:System.Windows.Media.Animation.LinearColorKeyFrame> einen smooth linearen Übergang zwischen den Werten zu erstellen.  
+1.  In den ersten zwei Sekunden wird eine Instanz von der <xref:System.Windows.Media.Animation.LinearColorKeyFrame> Klasse, um die Farbe allmählich von Grün zu Rot zu ändern. Lineare Keyframes wie <xref:System.Windows.Media.Animation.LinearColorKeyFrame> einen glatten, linearen Übergang zwischen Werten zu erstellen.  
   
-2.  Am Ende der nächsten halben Sekunde wird eine Instanz von der <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> Klasse, um die Farbe schnell von Rot über Gelb zu ändern. Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> dabei plötzliche Änderungen zwischen Werten, d. h. erstellen, die Farbe ändern, in diesem Teil der Animation schnell ausgeführt und ist nicht feine.  
+2.  Am Ende der nächsten halben Sekunde wird eine Instanz von der <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> Klasse, um die Farbe schnell von Rot über Gelb zu ändern. Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> abrupte Veränderungen zwischen Werten, d. h. erstellen, die farbveränderung in diesem Teil der Animation tritt schnell auf und ist.  
   
-3.  In den letzten zwei Sekunden wird eine Instanz der der <xref:System.Windows.Media.Animation.SplineColorKeyFrame> Klasse so ändern Sie die Farbe erneut, diesmal von Gelb zu Grün. Spline-Keyframes wie <xref:System.Windows.Media.Animation.SplineColorKeyFrame> erstellen Sie einen variablen Übergang zwischen Werten, die von der <xref:System.Windows.Media.Animation.SplineColorKeyFrame.KeySpline%2A> Eigenschaft. In diesem Beispiel beginnt die Farbveränderung zunächst langsam und beschleunigt dann exponentiell im letzten Bereich des Zeitabschnitts.  
+3.  In den letzten zwei Sekunden wird eine Instanz von der <xref:System.Windows.Media.Animation.SplineColorKeyFrame> Klasse, um die Farbe erneut zu ändern – in diesem Fall von Gelb zu Grün. Spline-Keyframes wie <xref:System.Windows.Media.Animation.SplineColorKeyFrame> erzeugen einen variablen Übergang zwischen Werten, die von der <xref:System.Windows.Media.Animation.SplineColorKeyFrame.KeySpline%2A> Eigenschaft. In diesem Beispiel beginnt die Farbveränderung zunächst langsam und beschleunigt dann exponentiell im letzten Bereich des Zeitabschnitts.  
   
  [!code-csharp[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/ColorAnimationUsingKeyFramesExample.cs#coloranimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/coloranimationusingkeyframesexample.vb#coloranimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ColorAnimationUsingKeyFramesExample.xaml#coloranimationusingkeyframeswholepage)]  
   
- Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Media.SolidColorBrush.Color%2A>  

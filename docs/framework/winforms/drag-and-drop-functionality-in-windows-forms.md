@@ -5,15 +5,15 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: c43d5ad9203afad67601d9e36447db7c49a5a98e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539399"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452985"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Drag & Drop-Funktionen in Windows Forms
-Windows Forms umfasst eine Reihe von Methoden, Ereignissen und Klassen, die das Drag & Drop-Verhalten implementieren. Dieses Thema enthält eine Übersicht über die Drag & Drop-Unterstützung in Windows Forms.  Siehe auch [Drag-and-Drop-Operationen und Unterstützung der Zwischenablage](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+Windows Forms umfasst eine Reihe von Methoden, Ereignissen und Klassen, die das Drag & Drop-Verhalten implementieren. Dieses Thema enthält eine Übersicht über die Drag & Drop-Unterstützung in Windows Forms.  Siehe auch [Drag & Drop-Operationen und Unterstützung der Zwischenablage](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Ausführen von Drag & Drop-Vorgängen  
  Um einen Drag & Drop-Vorgang auszuführen, verwenden Sie die <xref:System.Windows.Forms.Control.DoDragDrop%2A>-Methode der <xref:System.Windows.Forms.Control>-Klasse. Weitere Informationen, wie ein Drag & Drop-Vorgang ausgeführt wird, finden Sie unter <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Um das Rechteck abzurufen, über das der Mauszeiger gezogen werden muss, bevor ein Drag & Drop-Vorgang beginnt, verwenden Sie die <xref:System.Windows.Forms.SystemInformation.DragSize%2A>-Eigenschaft der <xref:System.Windows.Forms.SystemInformation>-Klasse.  

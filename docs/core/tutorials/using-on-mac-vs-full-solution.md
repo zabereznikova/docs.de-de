@@ -4,12 +4,12 @@ description: Dieses Thema führt Sie durch die Erstellung einer .NET Core-Lösun
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314697"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457042"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac
 
@@ -95,7 +95,7 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
            public void IgnoreCasing()
            {
                var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
-   
+
                Assert.NotEqual(2, wordCount);
            }
        }
@@ -117,7 +117,7 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
    ![Andocksymbol des Panels Komponententest](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. Klicken Sie auf die Schaltfläche **Alle ausführen**.
-   
+
    Der Test schlägt fehl, was das richtige Ergebnis ist. Die Testmethode behauptet, dass bei Bereitstellen der Zeichenfolge „Jack jack“ an die `GetWordCount`-Methode nicht zwei Instanzen von `inputString` „Jack“ zurückgegeben werden. Da die Wortschreibweise in der `GetWordCount`-Methode ausgelagert wurde, werden zwei Instanzen zurückgegeben. Die Assertion, dass 2 *nicht gleich* 2 ist, schlägt fehl. Dies ist das richtige Ergebnis, und die Logik unseres Tests funktioniert.
 
    ![Test fehlgeschlagen](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
@@ -135,8 +135,8 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
    [InlineData(0, "Ting", "Does not appear in the string.")]
    [InlineData(1, "Ting", "Ting appears once.")]
    [InlineData(2, "Ting", "Ting appears twice with Ting.")]
-   public void CountInstancesCorrectly(int count, 
-                                       string searchWord, 
+   public void CountInstancesCorrectly(int count,
+                                       string searchWord,
                                        string inputString)
    {
        Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
@@ -145,7 +145,7 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
    ```
 
    Die Methode `CountInstancesCorrectly` überprüft, ob die Methode `GetWordCount` ordnungsgemäß zählt. Die Methode `InlineData` bietet eine Anzahl, einen Suchbegriff und eine Eingabezeichenfolge zur Überprüfung an. Die Testmethode wird für jede Datenzeile einmal ausgeführt. Beachten Sie nochmals, dass Sie zunächst mit `Assert.NotEqual` einen Fehler behaupten, selbst wenn Sie wissen, dass die Zahlen in den Daten korrekt sind und die Werte mit der von der `GetWordCount`-Methode zurückgegebenen Anzahl übereinstimmen. Den Test absichtlich fehlschlagen zu lassen, mag zunächst wie Zeitverschwendung erscheinen, aber dies ist eine wichtige Überprüfung der Logik des Tests. Wenn Sie auf eine Testmethode stoßen, die erfolgreich ist, wenn Sie erwarten, dass ein Fehler auftritt, haben Sie einen Fehler in der Logik des Tests gefunden. Es lohnt sich, diesen Aufwand jedes Mal zu tätigen, wenn Sie eine Testmethode erstellen.
-   
+
 1. Speichern Sie die Datei, und führen Sie die Tests erneut aus. Der Test der Schreibweise ist erfolgreich, aber die drei Tests der Anzahl schlagen fehl. Dies ist genau das, was Sie erwarten.
 
    ![Test fehlgeschlagen](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
@@ -192,4 +192,4 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
 
 ## <a name="see-also"></a>Siehe auch
 
-[Versionsanmerkungen für Visual Studio 2017 für Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
+* [Versionsanmerkungen für Visual Studio 2017 für Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)

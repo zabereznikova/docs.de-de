@@ -9,16 +9,16 @@ ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ae5bed64eafee5317d3f97aa7b05615535e9c9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c099d3e367bb037e61912d0c14fac9136985f6c1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410227"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420089"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Struktur-Steuerelementtyp
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Informationen über [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Unterstützung für den Steuerelementtyp „Tree“. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]umfasst ein Steuerelementtyp eine Reihe von Bedingungen, die ein Steuerelement erfüllen muss, damit die <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> -Eigenschaft verwendet werden kann. Die Bedingungen schließen bestimmte Richtlinien für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaftswerte und Steuerelementmuster ein.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33410227"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Das Struktursteuerelement ist in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur immer enthalten.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Das Struktursteuerelement ist in der Steuerelementansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur immer enthalten.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Siehe Hinweise.|Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Siehe Hinweise.|Wenn dem Sturktursteuerelement eine Bezeichnung zugeordnet wurde, wird von dieser Eigenschaft ein <xref:System.Windows.Automation.AutomationElement> für diese Bezeichnung zurückgegeben. Andernfalls wird die Eigenschaft einen null-Verweis zurückgeben (`Nothing` in Microsoft Visual Basic .NET).).|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Siehe Hinweise.|Wenn dem Sturktursteuerelement eine Bezeichnung zugeordnet wurde, wird von dieser Eigenschaft ein <xref:System.Windows.Automation.AutomationElement> für diese Bezeichnung zurückgegeben. Andernfalls wird die Eigenschaft einen null-Verweis zurückgegeben (`Nothing` in Microsoft Visual Basic .NET).|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|„Struktur“|Lokalisierte Zeichenfolge für den Steuerelementtyp „Tree“.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Siehe Hinweise.|Der Wert der Eigenschaft „Name“ eines Struktursteuerelements entspricht normalerweise dem Text, durch den das Steuerelement bezeichnet wird. Wenn keine Textbezeichnung vorhanden ist, muss der Anwendungsentwickler einen Wert für diese Eigenschaft angeben.|  
   

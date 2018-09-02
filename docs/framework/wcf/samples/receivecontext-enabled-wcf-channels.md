@@ -2,12 +2,12 @@
 title: ReceiveContext-aktivierte WCF-Kanäle
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
-ms.openlocfilehash: 3e5ac914ae4d0c97ed617ea4a8d5a893ec740179
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502933"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442745"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>ReceiveContext-aktivierte WCF-Kanäle
 In diesem Beispiel wird die Nützlichkeit WCF-Kanälen mit Aktivierung von <xref:System.ServiceModel.Channels.ReceiveContext> erläutert. Im Beispiel wird ein Dienst für die Suche nach dem Produkt von zwei Zahlen mithilfe eines NetMSMQ-Kanals implementiert.  
@@ -19,7 +19,7 @@ In diesem Beispiel wird die Nützlichkeit WCF-Kanälen mit Aktivierung von <xref
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis:  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\ReceiveContextProductGenerator`  
   
@@ -29,25 +29,25 @@ In diesem Beispiel wird die Nützlichkeit WCF-Kanälen mit Aktivierung von <xref
   
     1.  So installieren Sie MSMQ unter [!INCLUDE[lserver](../../../../includes/lserver-md.md)]  
   
-        1.  In **Server-Manager**, klicken Sie auf **Funktionen**.  
+        1.  In **Server-Manager**, klicken Sie auf **Features**.  
   
         2.  Im rechten Bereich unter **Featureübersicht**, klicken Sie auf **Features hinzufügen**.  
   
-        3.  Erweitern Sie im jetzt geöffneten Fenster **Message Queuing**.  
+        3.  Erweitern Sie im angezeigten Fenster **Message Queuing-**.  
   
         4.  Erweitern Sie **Message Queuing-Dienste**.  
   
-        5.  Klicken Sie auf **Verzeichnisdienstintegration** (für Computer Mitglied einer Domäne), und klicken Sie dann auf **HTTP-Unterstützung**.  
+        5.  Klicken Sie auf **Verzeichnisdienstintegration** (bei Computern mit einer Domäne verknüpft ist), und klicken Sie dann auf **HTTP-Unterstützung**.  
   
         6.  Klicken Sie auf **Weiter**, und klicken Sie dann auf **installieren**.  
   
     2.  So installieren Sie MSMQ unter [!INCLUDE[wv](../../../../includes/wv-md.md)]  
   
-        1.  Open **in der Systemsteuerung**.  
+        1.  Open **Systemsteuerung**.  
   
         2.  Klicken Sie auf **Programme** und dann unter **Programme und Funktionen**, klicken Sie auf **Windows-Funktionen ein- oder ausschalten**.  
   
-        3.  Erweitern Sie **Microsoft Message Queue (MSMQ) Server**, erweitern Sie **Microsoft Message Queue (MSMQ)-serverkernkomponenten**, und wählen Sie dann die Kontrollkästchen für die Message Queuing-Funktionen installieren:  
+        3.  Erweitern Sie **Microsoft Message Queue (MSMQ) Server**, erweitern Sie **Microsoft Message Queue (MSMQ) Server Core**, und wählen Sie dann die Kontrollkästchen für die Message Queuing-Funktionen installieren:  
   
             -   Message Queuing Server  
   

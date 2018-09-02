@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Form [Visual Basic], printing
 ms.assetid: df963bf6-3ee1-49f4-8b2e-1d95d1beb0be
-ms.openlocfilehash: 5f8e620fce2b85d3f3cdb66bf80967f8eb281361
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 723524c7c9876d353624ad47d504ea2528a31cfe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590012"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422726"
 ---
 # <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>Gewusst wie: Drucken eines Formulars mithilfe der PrintForm-Komponente (Visual Basic)
 Mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Komponente können Sie schnell ein Bild eines Formulars genau so drucken, wie es auf dem Bildschirm angezeigt wird, ohne eine <xref:System.Drawing.Printing.PrintDocument> -Komponente zu verwenden. Die folgenden Vorgehensweisen zeigen das Ausgeben eines Formulars auf einem Drucker, in einem Druckvorschaufenster und in einer Encapsulated PostScript-Datei.  
   
- Die PowerPack-Steuerelemente sind nicht mehr in Visual Studio enthalten, Sie können sie jedoch aus dem [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=25169)herunterladen.  
+ Die PowerPack-Steuerelemente sind nicht mehr in Visual Studio enthalten, aber Sie können sie aus der [Downloadcenter](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ### <a name="to-print-a-form-to-the-default-printer"></a>So drucken Sie ein Formular auf dem Standarddrucker  
   
@@ -24,7 +24,7 @@ Mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Kompone
   
 2.  Legen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> auf <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>fest.  
   
-3.  Fügen Sie den folgenden Code in den passenden Ereignishandler (z. B. in der `Click` -Ereignishandler für ein **Drucken**`Button`).  
+3.  Fügen Sie den folgenden Code in die entsprechenden Ereignishandler (z. B. in der `Click` -Ereignishandler für ein **Drucken**`Button`).  
   
     ```  
     PrintForm1.Print()  
@@ -38,7 +38,7 @@ Mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Kompone
   
 2.  Legen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> auf <xref:System.Drawing.Printing.PrintAction.PrintToPreview>fest.  
   
-3.  Fügen Sie den folgenden Code in den passenden Ereignishandler (z. B. in der `Click` -Ereignishandler für ein **Drucken**`Button`).  
+3.  Fügen Sie den folgenden Code in die entsprechenden Ereignishandler (z. B. in der `Click` -Ereignishandler für ein **Drucken**`Button`).  
   
     ```  
     PrintForm1.Print()  
@@ -56,7 +56,7 @@ Mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Kompone
   
      Wenn Sie diesen Schritt überspringen, wird der Benutzer zur Laufzeit zur Eingabe eines Dateinamens aufgefordert.  
   
-4.  Fügen Sie den folgenden Code in den passenden Ereignishandler (z. B. in der `Click` -Ereignishandler für ein **Drucken**`Button`).  
+4.  Fügen Sie den folgenden Code in die entsprechenden Ereignishandler (z. B. in der `Click` -Ereignishandler für ein **Drucken**`Button`).  
   
     ```  
     PrintForm1.Print()  

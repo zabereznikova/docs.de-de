@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: c785cc69289440918f45974c711ae0b112130c5d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762409"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423702"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Ausführen einer XPath-Abfrage für ein DataSet
-Die Beziehung zwischen einem synchronisierten <xref:System.Data.DataSet> und <xref:System.Xml.XmlDataDocument> bietet die Möglichkeit zum Verwenden von XML-Diensten, z. B. die XML Path Language (XPath)-Abfrage, die auf die **XmlDataDocument** und bestimmte Funktionen ausführen können Komfortabler Zugriff auf die **DataSet** direkt. Z. B. statt der **wählen** Methode eine <xref:System.Data.DataTable> beim Navigieren von Beziehungen zu anderen Tabellen in eine **DataSet**, können Sie eine XPath-Abfrage ausführen, auf ein **XmlDataDocument**  synchronisiertes der **DataSet**, um eine Liste von XML-Elementen in Form von erhalten eine <xref:System.Xml.XmlNodeList>. Die Knoten in der **XmlNodeList**, umgewandelt als <xref:System.Xml.XmlElement> Knoten, klicken Sie dann auf übergeben werden kann die **GetRowFromElement** Methode der **XmlDataDocument**Übereinstimmung zurückgegeben <xref:System.Data.DataRow> Verweise auf die Zeilen der Tabelle in der synchronisierten **DataSet**.  
+Die Beziehung zwischen einem synchronisierten <xref:System.Data.DataSet> und <xref:System.Xml.XmlDataDocument> können Sie zum Verwenden von XML-Dienste, z. B. der Abfrage XML Path Language (XPath), die Zugriff auf die **XmlDataDocument** und bestimmte Funktionen ausführen können einfacher als der Zugriff auf die **DataSet** direkt. Z. B. statt der **wählen** -Methode der ein <xref:System.Data.DataTable> Navigieren in Beziehungen zu anderen Tabellen im eine **DataSet**, können Sie eine XPath-Abfrage ausführen, auf eine **XmlDataDocument**  synchronisiertes der **DataSet**, um eine Liste von XML-Elementen in Form von erhalten eine <xref:System.Xml.XmlNodeList>. Die Knoten in der **XmlNodeList**, umgewandelte <xref:System.Xml.XmlElement> Knoten, klicken Sie dann an übergeben werden kann die **GetRowFromElement** -Methode der der **XmlDataDocument**, um übereinstimmende zurückzugeben <xref:System.Data.DataRow> Verweise auf die Zeilen der Tabelle im synchronisierten **DataSet**.  
   
- Im folgenden Codebeispiel wird eine XPath-Abfrage für Elemente der zweiten Unterebene ausgeführt. Die **DataSet** wird mit drei Tabellen ausgefüllt: **Kunden**, **Aufträge**, und **OrderDetails**. Im Beispiel wird zunächst eine hierarchische Beziehung zwischen erstellt die **Kunden** und **Aufträge** Tabellen, und zwischen den **Aufträge** und **OrderDetails** Tabellen. Eine XPath-Abfrage ausgeführt, um zurückgeben ein **XmlNodeList** von **Kunden** Knoten bei einem zwei Ebenen untergeordneten **OrderDetails** Knoten verfügt über eine **"ProductID"** Knoten mit dem Wert 43 verfügt. Im Wesentlichen wird im Beispiel die XPath-Abfrage verwenden, um zu bestimmen, welche Kunden das Produkt bestellt haben, die verfügt die **"ProductID"** 43 verfügt.  
+ Im folgenden Codebeispiel wird eine XPath-Abfrage für Elemente der zweiten Unterebene ausgeführt. Die **DataSet** mit drei Tabellen gefüllt: **Kunden**, **Bestellungen**, und **OrderDetails**. In diesem Beispiel wird zunächst eine hierarchische Beziehung zwischen erstellt die **Kunden** und **Bestellungen** Tabellen, und zwischen den **Bestellungen** und **OrderDetails** Tabellen. Wird zum Zurückgeben eine XPath-Abfrage ausgeführt ein **XmlNodeList** von **Kunden** Knoten bei einem "Enkel" **OrderDetails** Knoten verfügt über eine **"ProductID"** Knoten mit dem Wert 43. Im Wesentlichen wird im Beispiel die XPath-Abfrage verwenden, um zu bestimmen, welche Kunden das Produkt bestellt haben, die die **"ProductID"** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -103,4 +103,4 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>Siehe auch  
  [DataSet- und XmlDataDocument-Synchronisierung](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

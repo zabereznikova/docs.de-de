@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: dfea0b0eb4b133308f10b523a659cc00f87252b8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 596cab4494ef3ba200fd0a046d7935f648fb7c4f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755072"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422187"
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
-Entfernt die angegebene Sicherheitsschlüssel-Tokenhandler aus der Auflistung Tokenhandler an.  
+Entfernt den angegebene Sicherheitstoken-Handler aus der Auflistung der Tokenhandler.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -39,7 +39,7 @@ Entfernt die angegebene Sicherheitsschlüssel-Tokenhandler aus der Auflistung To
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Der CLR-Typname der der Tokenhandler entfernt werden soll. Weitere Informationen zum Angeben der `type` -Attribut angegeben wird, finden Sie unter [benutzerdefinierte Typverweise](http://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Erforderlich.|  
+|Typ|Die CLR-Typnamen, der die token-Handler entfernt werden soll. Weitere Informationen zur Vorgehensweise beim Angeben der `type` Attribut, finden Sie unter [benutzerdefinierte Typverweise](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keiner  
@@ -51,7 +51,7 @@ Entfernt die angegebene Sicherheitsschlüssel-Tokenhandler aus der Auflistung To
 |[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Gibt eine Auflistung von sicherheitstokenhandlern, die mit dem Endpunkt registriert sind.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende XML zeigt die Verwendung der `<add>` und `<remove>` Elemente der Standardhandler für Sitzung token mit einer benutzerdefinierten-Sitzung Tokenhandler ersetzen. Der XML-Code stammt aus dem `ClaimsAwareWebFarm` Beispiel.  
+ Das folgende XML zeigt die Verwendung der `<add>` und `<remove>` Elementen, die dem Sicherheitstoken Standardhandler für Sitzung durch einen benutzerdefinierten sitzungentokenhandlers ersetzen. Der XML-Code stammt aus dem `ClaimsAwareWebFarm` Beispiel.  
   
 ```xml  
 <securityTokenHandlers>  

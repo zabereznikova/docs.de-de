@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: e6779f7d8be1cf795aeb4956b0fc257c9cb7a482
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 542437b419547ffd00dff193546b6d29cdc7e63a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760228"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424190"
 ---
 # <a name="handling-datatable-events"></a>Behandeln von DataTable-Ereignissen
 Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit, die von einer Anwendung verarbeitet werden können. Eine Beschreibung dieser `DataTable`-Ereignisse finden Sie in der folgenden Tabelle:  
@@ -83,4 +83,4 @@ Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit
  [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [Behandeln von DataAdapter-Ereignissen](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  [Handling DataSet Events (Behandeln von DataSet-Ereignissen)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

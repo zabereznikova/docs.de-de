@@ -2,12 +2,12 @@
 title: Externe Aktivitätsvalidierung
 ms.date: 03/30/2017
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
-ms.openlocfilehash: 1ceb1d2b2f7e8926479fa4c53cfb82a5cdb3a83f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4805bec3deed0779b02687b11dd487e673802925
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517799"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423893"
 ---
 # <a name="external-activity-validation"></a>Externe Aktivitätsvalidierung
 In diesem Beispiel wird gezeigt, wie einer integrierten Aktivität Validierungslogik hinzugefügt wird, die Sie nicht erstellt haben. Mit der Validierungslogik wird erzwungen, dass für alle im Workflow vorhandenen <xref:System.Activities.Statements.If>-Aktivitäten entweder die <xref:System.Activities.Statements.If.Then%2A>-Eigenschaft oder die <xref:System.Activities.Statements.If.Else%2A>-Eigenschaft festgelegt wird. Darüber hinaus wird mit der Validierungslogik geprüft, ob alle <xref:System.Activities.Statements.Pick>-Aktivitäten im Workflow mehr als eine Verzweigung aufweisen. Wenn das nicht der Fall ist, wird eine Warnung ausgegeben.  
@@ -31,6 +31,6 @@ In diesem Beispiel wird gezeigt, wie einer integrierten Aktivität Validierungsl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ExternalActivityValidation`

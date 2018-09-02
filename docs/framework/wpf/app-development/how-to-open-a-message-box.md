@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Öffnen Sie ein Meldungsfeld'
+title: 'Vorgehensweise: Öffnen eines Meldungsfelds'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - message boxes [WPF], opening
 - opening message boxes [WPF]
 ms.assetid: acaad17f-af43-4eca-a004-f1c9e7c6f292
-ms.openlocfilehash: dd79d69c9b1b54c5158b58ee2f1675e7d11a386a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f05190030ed6324917348fa1926abd5385e30f7e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545635"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425811"
 ---
-# <a name="how-to-open-a-message-box"></a>Vorgehensweise: Öffnen Sie ein Meldungsfeld
-In diesem Beispiel wird gezeigt, wie ein Meldungsfeld geöffnet wird.  
+# <a name="how-to-open-a-message-box"></a>Vorgehensweise: Öffnen eines Meldungsfelds
+Dieses Beispiel zeigt, wie ein Meldungsfeld geöffnet wird.  
   
 ## <a name="example"></a>Beispiel  
- Ein Meldungsfeld wird eine vorgefertigte modales Dialogfeld zum Anzeigen von Informationen für Benutzer. Ein Meldungsfeld geöffnet wird, durch Aufrufen der statischen <xref:System.Windows.MessageBox.Show%2A> Methode der <xref:System.Windows.MessageBox> Klasse. Wenn <xref:System.Windows.MessageBox.Show%2A> wird aufgerufen, die Nachricht ist mit einer Zeichenfolgenparameter übergeben. Verschiedene Überladungen der <xref:System.Windows.MessageBox.Show%2A> ermöglichen Ihnen das Konfigurieren, wie ein Meldungsfeld angezeigt wird (siehe <xref:System.Windows.MessageBox>).  
+ Ein Meldungsfeld wird eine vorgefertigte modales Dialogfeld für die Anzeige von Informationen für Benutzer. Ein Meldungsfeld wird geöffnet, durch Aufrufen der statischen <xref:System.Windows.MessageBox.Show%2A> Methode der <xref:System.Windows.MessageBox> Klasse. Wenn <xref:System.Windows.MessageBox.Show%2A> wird aufgerufen, wird die Meldung übergeben mit einem String-Parameter. Mehrere Überladungen der <xref:System.Windows.MessageBox.Show%2A> können Sie konfigurieren, wie ein Meldungsfeld angezeigt wird (siehe <xref:System.Windows.MessageBox>).  
   
  [!code-csharp[MessageBoxSnippets#MessageBoxShow1CODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show1Window.xaml.cs#messageboxshow1code)]
  [!code-vb[MessageBoxSnippets#MessageBoxShow1CODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show1window.xaml.vb#messageboxshow1code)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MessageBox-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160023)
+ [MessageBox-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160023)

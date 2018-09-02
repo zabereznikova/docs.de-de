@@ -9,44 +9,44 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: d767f42f8c836995064623b4aca15c86c98ec643
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e31d22cd7502ffd405af23bd1fabe8685190221
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651849"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424009"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Verweise und die Imports-Anweisung (Visual Basic)
-Sie können externe Objekte verfügbar machen zu Ihrem Projekt durch Auswahl der **Verweis hinzufügen** Befehl der **Projekt** im Menü. Verweise in Visual Basic können auf Assemblys verweisen, die entsprechen Typbibliotheken jedoch mehr Informationen enthalten.  
+Können Sie externe Objekte verfügbar machen zu Ihrem Projekt durch Auswählen der **Verweis hinzufügen** Befehl die **Projekt** Menü. Verweise in Visual Basic können auf Assemblys verweisen, die ähneln Typbibliotheken jedoch mehr Informationen enthalten.  
   
-## <a name="the-imports-statement"></a>Imports-Anweisung  
- Assemblys umfassen einen oder mehrere Namespaces. Wenn Sie einen Verweis auf eine Assembly hinzufügen, können Sie auch Hinzufügen einer `Imports` Anweisung, um ein Modul, das die Sichtbarkeit von dieser Assembly Namespaces innerhalb des Moduls gesteuert. Die `Imports` Anweisung stellt einen Kontextbereich, die nur den Teil des Namespaces erforderlich, geben Sie einen eindeutigen Verweis verwenden kann.  
+## <a name="the-imports-statement"></a>Die Imports-Anweisung  
+ Assemblys enthalten einen oder mehrere Namespaces. Wenn Sie einen Verweis auf eine Assembly hinzufügen, können Sie auch Hinzufügen einer `Imports` Anweisung, um ein Modul, das die Sichtbarkeit dieses Namespaces innerhalb des Moduls gesteuert. Die `Imports` Anweisung stellt einen Kontextbereich mit der Sie nur den Teil des Namespace erforderlich, geben Sie einen eindeutigen Verweis verwenden kann.  
   
- Die `Imports` Anweisung hat folgende Syntax:  
+ Die `Imports` Anweisung weist die folgende Syntax:  
   
  `Imports` [`|``Aliasname` =] `Namespace`  
   
- `Aliasname` bezieht sich auf einen kurzen Namen, den Sie innerhalb des Codes verwenden können, um auf einen importierten Namespace zu verweisen. `Namespace` ist ein Namespace ist verfügbar, entweder durch einen Projektverweis, durch eine Definition innerhalb des Projekts oder durch einen vorherigen `Imports` Anweisung.  
+ `Aliasname` bezieht sich auf einen kurzen Namen, die, den Sie im Code verwenden können, um zu einem importierten Namespace zu verweisen. `Namespace` ist ein Namespace, die zur Verfügung, entweder durch einen Projektverweis, über eine Definition innerhalb des Projekts oder durch eine vorherige `Imports` Anweisung.  
   
- Ein Modul kann eine beliebige Anzahl von enthalten `Imports` Anweisungen. Müssen sie nach allen stehen `Option` Anweisungen, falls vorhanden, jedoch vor jedem anderen Code.  
+ Ein Modul kann eine beliebige Anzahl von enthalten `Imports` Anweisungen. Müssen sie nach jedem stehen `Option` -Anweisungen, falls vorhanden, jedoch vor jedem anderen Code.  
   
 > [!NOTE]
->  Verwechseln Sie nicht die Projektverweise mit der `Imports` Anweisung oder der `Declare` Anweisung. Projektverweise stellen externe Objekte, z. B. Objekte in Assemblys, Visual Basic-Projekte zur Verfügung. Die `Imports` -Anweisung wird verwendet, um den Zugriff auf Projektverweise vereinfachen, jedoch keinen Zugriff auf diese Objekte. Die `Declare` Anweisung wird verwendet, um einen Verweis auf eine externe Prozedur in einer Dynamic Link Library (DLL) zu deklarieren.  
+>  Verwechseln Sie nicht die Projektverweise mit den `Imports` Anweisung oder der `Declare` Anweisung. Projekt-verweisen, an dem externe Objekte, z. B. Objekte, die in Assemblys, Visual Basic-Projekte zur Verfügung stellen. Die `Imports` Anweisung wird verwendet, um den Zugriff auf die Projektverweise vereinfachen, aber ermöglicht keinen Zugriff auf diese Objekte. Die `Declare` -Anweisung verwendet, um einen Verweis auf eine externe Prozedur in einer Dynamic Link Library (DLL) zu deklarieren.  
   
-## <a name="using-aliases-with-the-imports-statement"></a>Verwenden von Aliasen mit der Imports-Anweisung  
- Die `Imports` Anweisung erleichtert es Zugriff auf Methoden von Klassen durch den Wegfall um explizit die vollqualifizierten Namen von verweisen. Aliase können Sie nur einen Teil eines Namespace einen benutzerfreundlicheren Namen zuweisen. Beispielsweise ist der Wagenrücklauf/Zeilenvorschub Sequenz, die bewirkt, dass ein einzelnes Stück Text, der in mehreren Zeilen angezeigt werden Teil der <xref:Microsoft.VisualBasic.ControlChars> Modul in die <xref:Microsoft.VisualBasic?displayProperty=nameWithType> Namespace. Um diese Konstante in einem Programm ohne Alias zu verwenden, müssten Sie den folgenden Code eingeben:  
+## <a name="using-aliases-with-the-imports-statement"></a>Using-Aliase mit der Importanweisung  
+ Die `Imports` Anweisung erleichtert es, Methoden der Klassen für den Datenzugriff durch den Wegfall um explizit die vollqualifizierten Namen von verweisen. Aliase können Sie nur einen Teil eines Namespace einen aussagekräftigeren Namen zuweisen. Beispielsweise ist der Wagenrücklauf/Zeilenvorschub Sequenz, die bewirkt, dass ein einzelnes Stück Text auf mehrere Zeilen angezeigt werden Teil der <xref:Microsoft.VisualBasic.ControlChars> -Modul in die <xref:Microsoft.VisualBasic?displayProperty=nameWithType> Namespace. Um diese Konstante in einem Programm ohne Alias verwenden, müssen Sie den folgenden Code eingeben:  
   
  [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
   
- `Imports` Anweisungen muss immer die ersten Zeilen, die unmittelbar nach einem `Option` Anweisungen in einem Modul. Das folgende Codefragment zeigt, wie zum Importieren und einen Alias Zuweisen der <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> Modul:  
+ `Imports` Anweisungen muss immer die ersten Zeilen, die unmittelbar nach einem `Option` Anweisungen in einem Modul. Das folgende Codefragment zeigt, wie zum Importieren und weisen Sie einen Alias für die <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> Modul:  
   
  [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
   
- Zukünftige Verweise auf diesen Namespace können deutlich kürzer sein:  
+ Zukünftige Verweise für diesen Namespace können wesentlich kürzer sein:  
   
  [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
   
- Wenn ein `Imports` -Anweisung keines Aliasnamens, in den importierten Namespace definierte Elementen können im Modul ohne Qualifizierung verwendet werden. Wenn der Aliasname angegeben wird, muss sie für Namen, die in diesem Namespace enthaltenen als Qualifizierer verwendet werden.  
+ Wenn ein `Imports` -Anweisung keinen Aliasnamen, die in den importierten Namespace definierten Elemente in das Modul ohne Qualifikation verwendet werden können. Wenn der Aliasname angegeben wird, muss sie für Namen, die in diesem Namespace enthaltenen als Qualifizierer verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.ControlChars>  
@@ -54,5 +54,5 @@ Sie können externe Objekte verfügbar machen zu Ihrem Projekt durch Auswahl der
    
  [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
  [Assemblys und der globale Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
+ [Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
  [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

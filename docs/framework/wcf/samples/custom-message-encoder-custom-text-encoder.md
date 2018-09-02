@@ -2,22 +2,22 @@
 title: 'Benutzerdefinierter Nachrichtenencoder: Benutzerdefinierter Textencoder'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808064"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418825"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Benutzerdefinierter Nachrichtenencoder: Benutzerdefinierter Textencoder
-In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierter textnachrichtenencoder mit Windows Communication Foundation (WCF) implementiert.  
+In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierter textnachrichtenencoder mit Windows Communication Foundation (WCF) implementiert wird.  
   
 > [!WARNING]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
@@ -41,14 +41,14 @@ In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierter textnachr
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>Nachrichtenencoder-Factory und der Nachrichtenencoder  
- Wenn der <xref:System.ServiceModel.ServiceHost> oder der Clientkanal geöffnet wird, erstellt die Entwurfszeit-Komponente `CustomTextMessageBindingElement` die `CustomTextMessageEncoderFactory`. Die Factory erstellt den `CustomTextMessageEncoder`. Der Nachrichtenencoder operiert sowohl im Streamingmodus als auch im Puffermodus. Er verwendet den <xref:System.Xml.XmlReader> und <xref:System.Xml.XmlWriter> zum Schreiben bzw. Lesen der Nachrichten. Im Gegensatz zu den optimierten XML-Readern und-Writern von WCF, die nur UTF-8, UTF-16 und Big-Endean Unicode unterstützen unterstützen diese Reader und Writer alle plattformunterstützten Codierungen.  
+ Wenn der <xref:System.ServiceModel.ServiceHost> oder der Clientkanal geöffnet wird, erstellt die Entwurfszeit-Komponente `CustomTextMessageBindingElement` die `CustomTextMessageEncoderFactory`. Die Factory erstellt den `CustomTextMessageEncoder`. Der Nachrichtenencoder operiert sowohl im Streamingmodus als auch im Puffermodus. Er verwendet den <xref:System.Xml.XmlReader> und <xref:System.Xml.XmlWriter> zum Schreiben bzw. Lesen der Nachrichten. Im Gegensatz zu den optimierten XML-Reader und Writer von WCF an, die nur UTF-8, UTF-16 und Big-Endean Unicode unterstützen unterstützen diese Reader und Writer alle plattformunterstützten Codierungen.  
   
  Das folgende Codebeispiel zeigt den benutzerdefinierten Textnachrichtenencoder (CustomTextMessageEncoder).  
   
@@ -191,9 +191,9 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>Nachrichtencodierungs-Bindungselement  
- Die Bindungselemente ermöglichen die Konfiguration des WCF-Laufzeitstapels. Um den benutzerdefinierten Nachrichtenencoder in einer WCF-Anwendung verwenden, ein Binding-Element ist erforderlich, die Nachrichtenencoder-Factory mit den entsprechenden Einstellungen auf der entsprechenden Ebene im Stapel zur Laufzeit erstellt.  
+ Die Bindungselemente ermöglichen die Konfiguration des WCF-Laufzeit-Stapels. Um den benutzerdefinierten Nachrichtenencoder in einer WCF-Anwendung verwenden zu können, ein Binding-Element ist erforderlich, die Nachrichtenencoder-Factory mit den entsprechenden Einstellungen auf der entsprechenden Ebene im Stapel zur Laufzeit erstellt.  
   
- `CustomTextMessageBindingElement` wird von der Basisklasse <xref:System.ServiceModel.Channels.BindingElement> abgeleitet und erbt von der <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>-Klasse. Dadurch wird anderen WCF-Komponenten auf diesem Bindungselement als ein nachrichtencodierungs-Bindungselement erkannt. Die Implementierung von <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> gibt eine Instanz der entsprechenden Nachrichtenencoder-Factory mit entsprechenden Einstellungen zurück.  
+ `CustomTextMessageBindingElement` wird von der Basisklasse <xref:System.ServiceModel.Channels.BindingElement> abgeleitet und erbt von der <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>-Klasse. Dadurch können andere WCF-Komponenten dieses Bindungselement als ein nachrichtencodierungs-Bindungselement erkannt. Die Implementierung von <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> gibt eine Instanz der entsprechenden Nachrichtenencoder-Factory mit entsprechenden Einstellungen zurück.  
   
  `CustomTextMessageBindingElement` macht Einstellungen für `MessageVersion`, `ContentType` und `Encoding` durch Eigenschaften verfügbar. Der Encoder unterstützt sowohl die Soap11Addressing- als auch die Soap12Addressing1-Version. Als Standard ist Soap11Addressing1 eingestellt. Der Standardwert von `ContentType` lautet "text/xml". Die `Encoding`-Eigenschaft ermöglicht es Ihnen, den Wert der gewünschten Zeichencodierung festzulegen. Der Beispielclient und-Dienst verwendet die ISO-8859-1 (latein1)-zeichencodierung, die von nicht unterstützt die <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> von WCF.  
   
@@ -211,7 +211,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
 ## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>Hinzufügen von Metadaten-Unterstützung zum Nachrichtencodierungs-Bindungselement  
  Jeder Typ, der aus <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> abgeleitet wird, ist für die Aktualisierung der Version der SOAP-Bindung im für den Dienst generierten WSDL-Dokument verantwortlich. Dies erfolgt durch Implementierung der `ExportEndpoint`-Methode in der <xref:System.ServiceModel.Description.IWsdlExportExtension>-Schnittstelle und anschließende Änderung des generierten WSDL. In diesem Beispiel verwendet `CustomTextMessageBindingElement` die WSDL-Exportlogik aus `TextMessageEncodingBinidngElement`.  
   
- Für dieses Beispiel wird die Clientkonfiguration per Hand konfiguriert. Sie können Svcutil.exe nicht zur Generierung der Clientkonfiguration verwenden, da `CustomTextMessageBindingElement` keine Richtlinienassertion zur Beschreibung seines Verhaltens exportiert. Sie sollten im Allgemeinen die <xref:System.ServiceModel.Description.IPolicyExportExtension>-Schnittstelle auf einem benutzerdefinierten Bindungselement implementieren, um eine benutzerdefinierte Richtlinienassertion zu exportieren, die das Verhalten oder die Funktion beschreibt, die vom Bindungselement implementiert wurde. Ein Beispiel für ein benutzerdefiniertes Bindungselement eine Richtlinienassertion zu exportieren, finden Sie unter der [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
+ Für dieses Beispiel wird die Clientkonfiguration per Hand konfiguriert. Sie können Svcutil.exe nicht zur Generierung der Clientkonfiguration verwenden, da `CustomTextMessageBindingElement` keine Richtlinienassertion zur Beschreibung seines Verhaltens exportiert. Sie sollten im Allgemeinen die <xref:System.ServiceModel.Description.IPolicyExportExtension>-Schnittstelle auf einem benutzerdefinierten Bindungselement implementieren, um eine benutzerdefinierte Richtlinienassertion zu exportieren, die das Verhalten oder die Funktion beschreibt, die vom Bindungselement implementiert wurde. Ein Beispiel eine Richtlinienassertion für ein benutzerdefiniertes Bindungselement zu exportieren, finden Sie unter den [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
   
 ## <a name="message-encoding-binding-configuration-handler"></a>Bindungskonfigurationshandler zur Nachrichtencodierung  
  Im vorherigen Abschnitt wird gezeigt, wie der benutzerdefinierte Textnachrichtenencoder programmgesteuert verwendet wird. `CustomTextMessageEncodingBindingSection` implementiert einen Konfigurationshandler, der es Ihnen ermöglicht, die Verwendung eines benutzerdefinierten Textnachrichtenencoders innerhalb einer Konfigurationsdatei festzulegen. Die `CustomTextMessageEncodingBindingSection`-Klasse wird aus der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse abgeleitet. Die `BindingElementType`-Eigenschaft informiert das Konfigurationssystem über den Typ des für diesen Abschnitt zu erstellenden Bindungselements.  

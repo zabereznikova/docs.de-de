@@ -1,6 +1,6 @@
 ---
 title: DeleteMethod-Funktion (Referenz zur nicht verwalteten API)
-description: Die DeleteMethod-Funktion löscht die angegebene Methode aus der Definition einer CIM-Klasse.
+description: DeleteMethod-Funktion löscht die angegebene Methode aus der Definition einer CIM-Klasse.
 ms.date: 11/06/2017
 api_name:
 - DeleteMethod
@@ -16,11 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421788"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod-Funktion
 Löscht die angegebene Methode aus der Definition einer CIM-Klasse.
@@ -43,14 +44,14 @@ HRESULT Delete (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `wszName`  
-[in] Der Name der Methode, die aus der Tabelle zu entfernen. `wszName` muss ein Zeiger auf eine gültige `LPCWSTR`.
+[in] Der Name der Methode, die aus der Tabelle zu entfernen. `wszName` muss ein Zeiger auf ein gültiges `LPCWSTR`.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
@@ -60,12 +61,12 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::DeleteMethod](https://msdn.microsoft.com/library/aa391439(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) Methode.
 
-Löschen der Methode nicht unterstützt. für [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Zeiger, die auf das CIM-Instanzen verweisen.
+Löschen der Methode wird nicht unterstützt, für die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeigern, die auf das CIM-Instanzen verweisen.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 44c67470def430a9ba924483899f0db6a9c798a2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d66b74f06abe6b337c24859c444f7a8c2aa52c13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999908"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421522"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert (Visual Basic)
 Wenn Sie eine Klasse, Modul oder der Struktur, die Mitglieder von Ganzzahltypen ohne Vorzeichen enthält verwenden, können Sie diese Mitglieder mit Visual Basic zugreifen.  
@@ -75,7 +75,7 @@ Wenn Sie eine Klasse, Modul oder der Struktur, die Mitglieder von Ganzzahltypen 
     >  Anruf nicht verwaltetem Code, z. B. die Windows-Anwendungsprogrammierschnittstelle (API), macht Ihren Code auf potenzielle Sicherheitsrisiken.  
   
     > [!IMPORTANT]
-    >  Die Windows-API aufruft, erfordert eine Berechtigung nicht verwalteten Code die Ausführung in teilweise vertrauenswürdigen Umgebungen auswirken. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.SecurityPermission> und [Codezugriffsberechtigungen](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Die Windows-API aufruft, erfordert eine Berechtigung nicht verwalteten Code die Ausführung in teilweise vertrauenswürdigen Umgebungen auswirken. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.SecurityPermission> und [Codezugriffsberechtigungen](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  

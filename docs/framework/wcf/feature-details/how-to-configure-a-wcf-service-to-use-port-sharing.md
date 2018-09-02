@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 0a3aca2bac546c9142137afc025133bc1154ff90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2715e319772e4e0ae4cb38f3dbd1dd5133a2eef3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495241"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43451609"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Vorgehensweise: Konfigurieren eines Windows Communication Foundation-Dienstes zum Durchführen der Anschlussfreigabe
-Die einfachste Möglichkeit zum net.tcp://-Anschlussfreigabe in der Windows Communication Foundation (WCF)-Anwendung zu verwenden ist, um einen Dienst mit verfügbar zu machen die <xref:System.ServiceModel.NetTcpBinding>.  
+Die einfachste Möglichkeit zur Verwendung von net.tcp://-Anschlussfreigabe in der Windows Communication Foundation (WCF)-Anwendung wird zum Bereitstellen eines Diensts mithilfe der <xref:System.ServiceModel.NetTcpBinding>.  
   
  Diese Bindung verfügt über eine <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>-Eigenschaft, die festlegt, ob die net.tcp://-Anschlussfreigabe für den mit dieser Bindung zu konfigurierenden Dienst aktiviert ist.  
   
@@ -21,7 +21,7 @@ Die einfachste Möglichkeit zum net.tcp://-Anschlussfreigabe in der Windows Comm
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>So aktivieren Sie die net.tcp://-Anschlussfreigabe für eine NetTcpBinding im Code  
   
-1.  Erstellen Sie einen Dienst implementiert einen Vertrag mit dem Namen `IMyService` und Aufruf der `MyService`,.  
+1.  Erstellen Sie einen Dienst zum Implementieren der eines Vertrags mit dem Namen `IMyService` und nennen Sie sie `MyService`,.  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -61,5 +61,5 @@ Die einfachste Möglichkeit zum net.tcp://-Anschlussfreigabe in der Windows Comm
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Net.TCP-Portfreigabe](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Net.TCP-Portfreigabe](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
  [Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

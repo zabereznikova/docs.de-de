@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566651"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423243"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten
 Die in .NET Framework-XAML-Diensten implementierten XAML-Reader und XAML-Writer basieren auf dem Entwurfskonzept eines XAML-Knotenstreams. Der XAML-Knotenstream ist eine Konzeptualisierung eines Satzes von XAML-Knoten. In dieser Konzeptualisierung arbeitet ein XAML-Prozessor die Struktur der Knotenbeziehungen in der XAML einzeln ab. Dabei ist immer nur ein aktueller Datensatz oder eine aktuelle Position in einem geöffneten XAML-Knotenstream vorhanden, und viele Aspekte der APIs melden nur die von dieser Position verfügbaren Informationen. Der aktuelle Knoten in einem XAML-Knotenstream kann als Objekt, Member oder Wert beschrieben werden. Indem Sie XAML als einen XAML-Knotenstream behandeln, können XAML-Reader mit XAML-Writern kommunizieren und ein Programm aktivieren, um die Inhalte eines XAML-Knotenstreams während eines Ladepfad- oder Speicherpfadvorgangs, an dem XAML beteiligt ist, anzuzeigen, mit diesen zu interagieren oder sie zu verändern. Der API-Entwurf von XAML-Readern und -Writern und das Konzept des XAML-Knotenstreams ähneln früheren verwandten Reader- und Writerentwürfen und -konzepten, z. B. dem [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] und den <xref:System.Xml.XmlReader> - und <xref:System.Xml.XmlWriter> -Klassen. In diesem Thema werden XAML-Knotenstreamkonzepte erläutert, und es wird beschrieben, wie Sie Routinen schreiben können, die mit XAML-Darstellungen auf XAML-Knotenebene interagieren.  
@@ -80,7 +80,7 @@ while (xxr.Read()) {
  Es gibt andere Möglichkeiten als eine XAML-Knotenschleife, um mit einer XAML-Darstellung zu arbeiten. Es könnte z. B. ein XAML-Reader vorhanden sein, der einen indizierten Knoten lesen kann oder insbesondere direkt über `x:Name`, über `x:Uid`oder über andere Bezeichner auf Knoten zugreift. .NET Framework-XAML-Dienste bieten keine vollständige Implementierung, sondern stellen ein vorgeschlagenes Muster über Dienste und Unterstützungstypen bereit. Weitere Informationen finden Sie unter <xref:System.Xaml.IXamlIndexingReader> und <xref:System.Xaml.XamlNodeList>.  
   
 > [!TIP]
->  Microsoft bietet auch eine Out-of-Band-Version an, die als Microsoft XAML Toolkit bezeichnet wird. Diese Out-of-Band-Version befindet sich noch in den Vorabveröffentlichungsphasen. Wenn Sie jedoch bereit sind, mit Vorabveröffentlichungskomponenten zu arbeiten, finden Sie im Microsoft XAML Toolkit mehrere interessante Ressourcen für XAML-Tools und die statische Analyse von XAML. Das Microsoft XAML Toolkit bietet eine XAML-DOM-API, Unterstützung für die FxCop-Analyse und einen XAML-Schemakontext für Silverlight. Weitere Informationen finden Sie unter [Microsoft XAML Toolkit](http://code.msdn.microsoft.com/XAML).  
+>  Microsoft bietet auch eine Out-of-Band-Version an, die als Microsoft XAML Toolkit bezeichnet wird. Diese Out-of-Band-Version befindet sich noch in den Vorabveröffentlichungsphasen. Wenn Sie jedoch bereit sind, mit Vorabveröffentlichungskomponenten zu arbeiten, finden Sie im Microsoft XAML Toolkit mehrere interessante Ressourcen für XAML-Tools und die statische Analyse von XAML. Das Microsoft XAML Toolkit bietet eine XAML-DOM-API, Unterstützung für die FxCop-Analyse und einen XAML-Schemakontext für Silverlight. Weitere Informationen finden Sie unter [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML).  
   
 <a name="working_with_the_current_node"></a>   
 ## <a name="working-with-the-current-node"></a>Arbeiten mit dem aktuellen Code  

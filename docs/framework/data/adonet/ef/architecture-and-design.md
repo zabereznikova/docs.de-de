@@ -2,15 +2,15 @@
 title: Architektur und Entwurf
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: c2e8ff5f21a2941d75b21915552e6935a1423978
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766867"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419603"
 ---
 # <a name="architecture-and-design"></a>Architektur und Entwurf
-Das SQL-Generierungsmodul im die [Beispielanbieter](http://go.microsoft.com/fwlink/?LinkId=180616) wird als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt implementiert. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.  
+Das SQL-Generierungsmodul im der [Beispielanbieter](https://go.microsoft.com/fwlink/?LinkId=180616) wird implementiert, als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.  
   
  Die Knoten der Struktur werden von unten nach oben verarbeitet. Zuerst wird eine Zwischenstruktur erzeugt: SqlSelectStatement oder SqlBuilder, die beide ISqlFragment implementieren. Danach wird die SQL-Zeichenfolgenanweisung aus dieser Struktur erzeugt. Es gibt zwei Gründe für die Zwischenstruktur:  
   
@@ -25,7 +25,7 @@ Das SQL-Generierungsmodul im die [Beispielanbieter](http://go.microsoft.com/fwli
  In der zweiten Phase, während die tatsächliche Zeichenfolge erzeugt wird, werden Aliase umbenannt.  
   
 ## <a name="data-structures"></a>Datenstrukturen  
- In diesem Abschnitt wird erläutert, die verwendeten Typen die [Beispielanbieter](http://go.microsoft.com/fwlink/?LinkId=180616) , dass Sie zum Erstellen einer SQL-Anweisung verwenden.  
+ In diesem Abschnitt wird erläutert, die Typen in der [Beispielanbieter](https://go.microsoft.com/fwlink/?LinkId=180616) , zum Erstellen einer SQL­Anweisung zu verwenden.  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  In diesem Abschnitt werden die Klassen behandelt, die die ISqlFragment-Schnittstelle implementieren. Diese dient zwei Zwecken:  
@@ -52,7 +52,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement stellt eine kanonische SQL SELECT-Anweisung der Form "SELECT... VON.. WHERE... GRUPPIEREN SIE NACH... ORDER BY".  
+ SqlSelectStatement stellt eine kanonische SQL SELECT-Anweisung der Form "SELECT... VON.. WHERE... GRUPPIEREN SIE NACH... SORTIERT NACH".  
   
  Jede der SQL-Klauseln wird durch einen StringBuilder dargestellt. Außerdem überwacht es, ob "Distinct" angegeben wurde und es sich um die Anweisung auf oberster Ebene handelt. Wenn es sich nicht um die Anweisung auf oberster Ebene handelt, wird die ORDER BY-Klausel weggelassen, es sei denn, die Anweisung verfügt auch über eine TOP-Klausel.  
   
@@ -212,13 +212,13 @@ private bool IsParentAJoin{get}
 ### <a name="input-alias-redirecting"></a>Eingabealiasumleitung  
  Die Eingabealiasumleitung erfolgt mithilfe der Symboltabelle.  
   
- Um eingabealiasumleitung zu erläutern, finden Sie im ersten Beispiel [Generieren von SQL aus Befehlsstrukturen – Best Practices](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  Dort musste "a" in der Projektion zu "b" umgeleitet werden.  
+ Um eine Erklärung der eingabealiasumleitung finden Sie im ersten Beispiel in [Generieren von SQL aus Befehlsstrukturen – Best Practices](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  Dort musste "a" in der Projektion zu "b" umgeleitet werden.  
   
  Wenn ein SqlSelectStatement-Objekt erstellt wird, wird der Block, der als Eingabe für den Knoten dient, in die From-Eigenschaft des SqlSelectStatements eingefügt. Ein Symbol (<symbol_b>) wird auf Grundlage des Eingabebindungsnamens ("b") erstellt, um diesen Block darzustellen, und "AS  " +  <symbol_b> werden an die From-Klausel angefügt.  Das Symbol wird außerdem der FromExtents-Eigenschaft hinzugefügt.  
   
  Das Symbol wird auch zur Symboltabelle hinzugefügt, um den Eingabebindungsnamen damit zu verknüpfen ("b", <symbol_b>).  
   
- Wenn ein nachfolgender Knoten dieses SqlSelectStatement wiederverwendet, fügt es der Symboltabelle einen Eintrag hinzu, um seinen Eingabebindungsnamen mit diesem Symbol zu verknüpfen. In unserem Beispiel würde der DbProjectExpression mit dem eingabebindungsnamen "a" das SqlSelectStatement wiederverwenden und hinzufügen ("a", \< Symbol_b >) der Tabelle.  
+ Wenn ein nachfolgender Knoten dieses SqlSelectStatement wiederverwendet, fügt es der Symboltabelle einen Eintrag hinzu, um seinen Eingabebindungsnamen mit diesem Symbol zu verknüpfen. In unserem Beispiel würde der DbProjectExpression mit dem eingabebindungsnamen "a" das SqlSelectStatement wiederverwenden und hinzufügen ("a", \< Symbol_b >) auf die Tabelle.  
   
  Wenn Ausdrücke auf den Eingabebindungsnamen des Knotens verweisen, der das SqlSelectStatement wiederverwendet, wird dieser Verweis mithilfe der Symboltabelle in das richtige umgeleitete Symbol aufgelöst. Wenn "a" von "a.x" beim Zugriff auf DbVariableReferenceExpression, der "a" darstellt, aufgelöst wird, wird es in das Symbol <symbol_b> aufgelöst.  
   
@@ -324,7 +324,7 @@ ORDER BY sk1, sk2, ...
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>  
 ```  
   
- Wobei \<LeftSqlSelectStatement > und \<RightSqlSelectStatement > SqlSelectStatements, die durch den Zugriff auf jede der Eingaben ermittelt werden und \<SetOp > ist der entsprechende Vorgang (z. B. UNION ALL).  
+ Wo \<LeftSqlSelectStatement > und \<RightSqlSelectStatement > sqlselectstatements, die abgerufen werden, indem Sie zu jeder der Eingaben und \<SetOp > ist der entsprechende Vorgang (z. B. UNION ALL).  
   
 ### <a name="dbscanexpression"></a>DbScanExpression  
  Wenn in einem Joinkontext (als Eingabe für einen Join, der ein linkes untergeordnetes Element eines anderen Joins ist) darauf zugegriffen wird, gibt DbScanExpression einen SqlBuilder mit dem SQL-Zielcode für das entsprechende Ziel zurück, der entweder aus einer definierenden Abfrage, einer Tabelle oder einer Ansicht besteht. Andernfalls wird ein neues SqlSelectStatement erstellt, bei dem das FROM-Feld so festgelegt wird, dass es dem entsprechenden Ziel entspricht.  

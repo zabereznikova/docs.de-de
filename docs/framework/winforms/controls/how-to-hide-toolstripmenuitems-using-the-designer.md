@@ -6,33 +6,33 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: b0018516b9ac337cea3716c4b2eddc6eb859dbb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37371269ef9db929573efff0a8e62c86a51b2c35
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534365"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423873"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Gewusst wie: Ausblenden von ToolStripMenuItems mithilfe des Designers
-Ausblenden von Menüelementen ist eine Möglichkeit zum Steuern der Benutzeroberfläche (UI) Ihrer Anwendung, und Benutzerbefehle einschränken. Häufig, sollten Sie ein ganzes Menü auszublenden, wenn alle Menüelemente im auf ihm nicht verfügbar sind. Dies ist weniger verwirrend für den Benutzer. Darüber hinaus empfiehlt sowohl ausblenden und deaktivieren das Menü oder Menüelement, wie durch das bloße Ausblenden nicht den Benutzer verhindert den Zugriff auf einen Menübefehl über eine Tastenkombination. Weitere Informationen zum Deaktivieren von Menüelementen, finden Sie unter [Vorgehensweise: Deaktivieren von ToolStripMenuItems mithilfe des Designers](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md).  
+Ausblenden von Menüelementen ist eine Möglichkeit, die Benutzeroberfläche (UI) Ihrer Anwendung steuern und User-Befehle zu beschränken. Häufig möchten ein ganzes Menü ausblenden, wenn alle Menüelemente im auf nicht verfügbar sind. Dies führt zu weniger ablenkungen für den Benutzer. Darüber hinaus empfiehlt sowohl ausblenden und deaktivieren Sie das Menü oder Menüelement, da allein durch das Ausblenden den Benutzer den Zugriff auf einen Menübefehl mit einer Tastenkombination nicht verhindert wird. Weitere Informationen zum Deaktivieren von Menüelementen, finden Sie unter [Vorgehensweise: Deaktivieren von ToolStripMenuItems mithilfe des Designers](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-hide-a-top-level-menu-and-its-submenu-items"></a>So blenden Sie ein Menü der obersten Ebene und seine Untermenüelemente aus  
+### <a name="to-hide-a-top-level-menu-and-its-submenu-items"></a>Um ein Menü der obersten Ebene und seine Untermenüelemente auszublenden.  
   
-1.  Wählen Sie das Menüelement der obersten Ebene, und legen seine <xref:System.Windows.Forms.ToolStripItem.Visible%2A> oder <xref:System.Windows.Forms.ToolStripItem.Available%2A> Eigenschaft `false`.  
+1.  Wählen Sie das Menüelement der obersten Ebene, und legen dessen <xref:System.Windows.Forms.ToolStripItem.Visible%2A> oder <xref:System.Windows.Forms.ToolStripItem.Available%2A> Eigenschaft `false`.  
   
-     Wenn Sie das Menüelement der obersten Ebene ausblenden, werden auch alle Menüelemente in diesem Menü ausgeblendet. Außer auf Klicken die <xref:System.Windows.Forms.MenuStrip> nach Einstellung <xref:System.Windows.Forms.ToolStripItem.Visible%2A> zu `false`, die gesamte Menüelement der obersten Ebene und seine Untermenüelemente verschwinden aus dem Formular dargestellt wird daher die Auswirkungen zur Laufzeit Ihre Aktion. Um die ausgeblendeten Menüelement der obersten Ebene zur Entwurfszeit anzuzeigen, klicken Sie auf die <xref:System.Windows.Forms.MenuStrip> in der **Komponentenleiste**im **Dokumentgliederung**, oder am Anfang des Eigenschaftenrasters.  
+     Wenn Sie das Menüelement der obersten Ebene ausblenden, werden auch alle Menüelemente in diesem Menü ausgeblendet. Wenn Sie irgendwo anders als auf klicken Sie auf die <xref:System.Windows.Forms.MenuStrip> nach dem Festlegen <xref:System.Windows.Forms.ToolStripItem.Visible%2A> zu `false`, die gesamte Menüelement der obersten Ebene und seine Untermenüelemente, die aus dem Formular zeigt Ihnen daher die Auswirkungen der Laufzeit Ihrer Aktion ausgeblendet werden. Um die ausgeblendeten Menüelement der obersten Ebene zur Entwurfszeit anzuzeigen, klicken Sie auf die <xref:System.Windows.Forms.MenuStrip> in die **Komponentenleiste**im **Dokumentgliederung**, bzw. im oberen Bereich des Eigenschaftenrasters.  
   
 > [!NOTE]
->  Sie werden nur selten ein gesamtes Menü außer mehrere untergeordnete Menüs mit Document Interface (MDI) in einem Szenario mit Zusammenführen ausblenden.  
+>  Sie werden nur selten ein ganzes Menü mit Ausnahme von mehrere untergeordnete Menüs mit Document Interface (MDI) in einem Szenario mit Zusammenführen ausblenden.  
   
-### <a name="to-hide-a-submenu-item"></a>So blenden Sie ein Untermenüelement aus  
+### <a name="to-hide-a-submenu-item"></a>So blenden Sie ein Untermenüelement aus.  
   
-1.  Wählen Sie das Untermenüelement, und legen seine <xref:System.Windows.Forms.ToolStripItem.Visible%2A> Eigenschaft `false`.  
+1.  Wählen Sie das Untermenüelement, und legen Sie dessen <xref:System.Windows.Forms.ToolStripItem.Visible%2A> Eigenschaft `false`.  
   
-     Wenn Sie ein Untermenüelement ausblenden, wird er auf das Formular zur Entwurfszeit angezeigt, damit Sie problemlos zur Bearbeitung auswählen können. Es werden tatsächlich zur Laufzeit ausgeblendet.  
+     Wenn Sie ein Untermenüelement ausblenden, bleibt es auf das Formular zur Entwurfszeit angezeigt, damit Sie es einfach für die weitere Bearbeitung auswählen können. Es werden tatsächlich zur Laufzeit ausgeblendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.ToolStripItem.Visible%2A>  

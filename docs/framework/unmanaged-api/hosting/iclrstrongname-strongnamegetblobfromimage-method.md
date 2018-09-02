@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5b4ef7777c9d45c2d255cc2915f8c4ccdeef4a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd6cb0116e1080a68c91df365cc7dd1485b21791
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432608"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421540"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>ICLRStrongName::StrongNameGetBlobFromImage-Methode
-Ruft eine binäre Darstellung des Assemblyabbilds an der angegebenen Speicheradresse.  
+Ruft eine binäre Darstellung des Assembly-Images an der angegebenen Speicheradresse ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,22 +40,22 @@ HRESULT StrongNameGetBlobFromImage (
   
 #### <a name="parameters"></a>Parameter  
  `pbBase`  
- [in] Die Speicheradresse des zugeordneten Assemblymanifests.  
+ [in] Die Speicheradresse des Assemblymanifests zugeordnet werden soll.  
   
  `dwLength`  
- [in] Die Größe in Bytes, der das Abbild `pbBase`.  
+ [in] Die Größe in Bytes, der das Bild am `pbBase`.  
   
  `pbBlob`  
  [in] Ein Puffer, die binäre Darstellung des Bilds enthält.  
   
  `pcbBlob`  
- [in, out] Die maximale Größe in Bytes, des angeforderten `pbBlob`. Nach der Rückgabe der tatsächlichen Größe in Bytes, der `pbBlob`.  
+ [in, out] Die maximale Größe in Bytes, des angeforderten `pbBlob`. Bei der Rückgabe die tatsächliche Größe in Bytes der `pbBlob`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   

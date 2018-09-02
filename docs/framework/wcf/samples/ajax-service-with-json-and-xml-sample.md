@@ -2,24 +2,24 @@
 title: Beispiel für AJAX-Dienst mit JSON und XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 32964c287b0064daf529aa4c1e28f0927d29a6d5
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1beb89c11fccefec24ccbebc3fe30033a646718d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807344"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452689"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Beispiel für AJAX-Dienst mit JSON und XML
-Dieses Beispiel veranschaulicht, wie Windows Communication Foundation (WCF) verwenden, um ein Dienst Asynchronous JavaScript and XML (AJAX) zu erstellen, der JavaScript Objekt Notation (JSON) oder XML-Daten zurückgibt. Sie können auf einen AJAX-Dienst zugreifen, indem Sie JavaScript-Code in einem Webbrowserclient verwenden. Dieses Beispiel baut auf den [einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md) Beispiel.  
+In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF) zu verwenden, um einen Dienst Asynchronous JavaScript and XML (AJAX) zu erstellen, der entweder JavaScript Object Notation (JSON) oder XML-Daten zurückgibt. Sie können auf einen AJAX-Dienst zugreifen, indem Sie JavaScript-Code in einem Webbrowserclient verwenden. Dieses Beispiel baut auf den [einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md) Beispiel.  
   
- Im Gegensatz zu den anderen AJAX-Beispielen werden in diesem Beispiel ASP.NET AJAX und das <xref:System.Web.UI.ScriptManager>-Steuerelement nicht verwendet. Mit einigen zusätzlichen Konfigurationseinstellungen WCF AJAX-Dienst können von jeder HTML-Seite über JavaScript zugegriffen werden, und dieses Szenario wird hier dargestellt. Ein Beispiel der Verwendung von WCF mit ASP.NET AJAX finden Sie unter [AJAX-Beispielen](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ Im Gegensatz zu den anderen AJAX-Beispielen werden in diesem Beispiel ASP.NET AJAX und das <xref:System.Web.UI.ScriptManager>-Steuerelement nicht verwendet. Klicken Sie mit einigen zusätzlichen Konfigurationseinstellungen kann WCF AJAX-Dienst können von jeder HTML-Seite über JavaScript zugegriffen werden, und dieses Szenario ist hier dargestellt. Ein Beispiel der Verwendung von WCF mit ASP.NET AJAX finden Sie unter [AJAX-Beispielen](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
   
  In diesem Beispiel wird gezeigt, wie der Antworttyp eines Vorgangs zwischen JSON und XML umgeschaltet wird. Diese Funktion ist unabhängig davon verfügbar, ob der Dienst für den Zugriff durch ASP.NET AJAX oder eine HTML/JavaScript-Clientseite konfiguriert wurde.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- Um die Verwendung von Nicht-ASP.NET AJAX-Clients zu aktivieren, verwenden Sie <xref:System.ServiceModel.Activation.WebServiceHostFactory> (nicht <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) in der SVC-Datei. <xref:System.ServiceModel.Activation.WebServiceHostFactory> fügt dem Dienst einen <xref:System.ServiceModel.Description.WebHttpEndpoint>-Standardendpunkt hinzu. Der Endpunkt wird auf einer leeren Adresse relativ zur SVC-Datei konfiguriert; Dies bedeutet, dass die Adresse des Diensts http://localhost/ServiceModelSamples/service.svc, mit Ausnahme des Vorgangsnamens keine zusätzlichen Suffixe.  
+ Um die Verwendung von Nicht-ASP.NET AJAX-Clients zu aktivieren, verwenden Sie <xref:System.ServiceModel.Activation.WebServiceHostFactory> (nicht <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) in der SVC-Datei. <xref:System.ServiceModel.Activation.WebServiceHostFactory> fügt dem Dienst einen <xref:System.ServiceModel.Description.WebHttpEndpoint>-Standardendpunkt hinzu. Der Endpunkt wird an einer leeren Adresse relativ zur SVC-Datei konfiguriert; Dies bedeutet, dass die Adresse des Diensts http://localhost/ServiceModelSamples/service.svc, mit Ausnahme des Vorgangsnamens keine zusätzlichen Suffixe.  
   
 ```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
@@ -38,9 +38,9 @@ Dieses Beispiel veranschaulicht, wie Windows Communication Foundation (WCF) verw
 </system.serviceModel>  
 ```  
   
- Das Standarddatenformat für <xref:System.ServiceModel.Description.WebHttpEndpoint> ist XML, während das Standarddatenformat für <xref:System.ServiceModel.Description.WebScriptEndpoint> ist "JSON". Weitere Informationen finden Sie unter [Erstellen von WCF AJAX-Diensten ohne ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).  
+ Das Standarddatenformat für <xref:System.ServiceModel.Description.WebHttpEndpoint> ist XML und das Standarddatenformat für <xref:System.ServiceModel.Description.WebScriptEndpoint> ist JSON. Weitere Informationen finden Sie unter [Erstellen von WCF AJAX-Diensten ohne ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).  
   
- Der Dienst im folgenden Beispiel ist ein standard-WCF-Dienst mit zwei Vorgängen. Beide Vorgänge erfordern den <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped>-Textstil beim <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut oder <xref:System.ServiceModel.Web.WebInvokeAttribute>-Attribut. Dieser Textstil ist typisch für das `webHttp`-Verhalten und hat keinen Einfluss auf den JSON/XML-Datenformatwechsel.  
+ Der Dienst im folgenden Beispiel wird eine standard-WCF-Dienst mit zwei Vorgängen. Beide Vorgänge erfordern den <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped>-Textstil beim <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut oder <xref:System.ServiceModel.Web.WebInvokeAttribute>-Attribut. Dieser Textstil ist typisch für das `webHttp`-Verhalten und hat keinen Einfluss auf den JSON/XML-Datenformatwechsel.  
 
 ```csharp
 [OperationContract]  
@@ -48,7 +48,7 @@ Dieses Beispiel veranschaulicht, wie Windows Communication Foundation (WCF) verw
 MathResult DoMathXml(double n1, double n2);  
 ```
 
- Das Format der Antwort für den Vorgang angegeben wird, als XML-Daten, die Standardeinstellung ist für die [ \<WebHttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) Verhalten. Es wird jedoch empfohlen, das Antwortformat explizit festzulegen.  
+ Das Format der Antwort für den Vorgang angegeben ist, als XML, wobei der Standardwert ist für die [ \<WebHttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) Verhalten. Es wird jedoch empfohlen, das Antwortformat explizit festzulegen.  
   
  Der andere Vorgang verwendet das `WebInvokeAttribute`-Attribut und gibt explizit JSON statt XML als Antwortformat an.  
 
@@ -58,9 +58,9 @@ MathResult DoMathXml(double n1, double n2);
 MathResult DoMathJson(double n1, double n2);  
 ```
 
- Beachten Sie, dass in beiden Fällen der Vorgänge einen komplexen Typ zurückgeben `MathResult`, also einen standard WCF-Vertrags-Datentyp.  
+ Beachten Sie, dass die Vorgänge in beiden Fällen geben einen komplexen Typ zurück `MathResult`, dies ist ein standard-WCF-Datenvertragstyp.  
   
- Der Client Webseite XmlAjaxClientPage.htm enthält JavaScript-Code, der eine der oben beschriebenen beiden Vorgänge aufruft, klickt der Benutzer die **Berechnung (JSON zurückgeben) ausführen** oder **Berechnung (XML zurückgeben) ausführen**  Schaltflächen auf der Seite. Im zum Aufrufen des Diensts verwendeten Code wird ein JSON-Text erstellt und mit HTTP-POST gesendet. Die Anforderung wird in JavaScript manuell erstellt, im Gegensatz zu den [einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md) Beispiel und den anderen Beispielen, die mithilfe von ASP.NET AJAX.  
+ Die Webseite XmlAjaxClientPage.htm enthält JavaScript-Code, der eines der oben beschriebenen beiden Vorgänge aufruft, klickt der Benutzer die **führen Berechnung (JSON zurückgeben)** oder **Berechnung (XML zurückgeben) ausführen**  Schaltflächen auf der Seite. Im zum Aufrufen des Diensts verwendeten Code wird ein JSON-Text erstellt und mit HTTP-POST gesendet. Die Anforderung wird manuell in JavaScript erstellt, im Gegensatz zu den [einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md) Beispiel und den anderen Beispielen, die mithilfe von ASP.NET AJAX.  
 
 ```csharp
 // Create HTTP request  
@@ -99,13 +99,13 @@ xmlHttp.onreadystatechange=function(){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\XmlAjaxService`  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Erstellen Sie die Projektmappe XmlAjaxService.sln, wie in beschrieben [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

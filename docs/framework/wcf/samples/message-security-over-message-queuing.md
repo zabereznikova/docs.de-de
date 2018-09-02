@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 25a06ac7c13f0abe0f1e8bf27fe117aa9cf038bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7bb69fa40637629e416336a893f98277cb6ed08
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507821"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419687"
 ---
 # <a name="message-security-over-message-queuing"></a>Nachrichtensicherheit über Message Queuing
 Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherheit mit X.509v3-Zertifikatauthentifizierung für den Client verwendet wird, und die eine Serverauthentifizierung mit dem X.509v3-Zertifikat des Servers über MSMQ erfordert. Nachrichtensicherheit wird manchmal vorgezogen, um sicherzustellen, dass die Nachrichten im MSMQ-Speicher verschlüsselt bleiben und die Anwendung ihre eigene Authentifizierung der Nachricht ausführt.  
@@ -18,19 +18,19 @@ Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherhe
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist. Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt. Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen. Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:  
   
     1.  Öffnen Sie Server-Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Erweitern Sie die **Funktionen** Registerkarte.  
+    2.  Erweitern Sie die **Features** Registerkarte.  
   
     3.  Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.  
   
     4.  Überprüfen Sie die **transaktional** Feld.  
   
-    5.  Geben Sie `ServiceModelSamplesTransacted` als Namen für die neue Warteschlange.  
+    5.  Geben Sie `ServiceModelSamplesTransacted` als Name der neuen Warteschlange.  
   
 3.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
@@ -47,7 +47,7 @@ Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherhe
   
 4.  Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-5.  Wenn Client und Dienst nicht miteinander kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
@@ -57,9 +57,9 @@ Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherhe
   
 3.  Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer. Kopieren Sie die Dateien "Setup.bat", "Cleanup.bat" und "ImportServiceCert.bat" ebenfalls auf den Client.  
   
-4.  Führen Sie auf dem Server `setup.bat service` aus. Ausführen `setup.bat` mit der `service` Argument wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in eine Datei "Service.cer" exportiert exportiert.  
+4.  Führen Sie auf dem Server `setup.bat service` aus. Ausführung `setup.bat` mit der `service` Argument wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in die Datei Service.cer exportiert.  
   
-5.  Bearbeiten des Diensts service.exe.config entsprechend den neuen Zertifikatnamen (in der `findValue` Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) die ist identisch mit den vollqualifizierten Domänennamen des Computers.  
+5.  Bearbeiten Sie service.exe.config des Diensts, um den neuen Zertifikatnamen (im der `findValue` -Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) die ist identisch mit den vollständig qualifizierten Domänennamen des Computers.  
   
 6.  Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
   
@@ -75,14 +75,14 @@ Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherhe
   
 12. Starten Sie auf dem Dienstcomputer Service.exe an einer Eingabeaufforderung.  
   
-13. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung. Wenn Client und Dienst nicht miteinander kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 -   Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
     > [!NOTE]
-    >  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispielen, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser - trustedpeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="requirements"></a>Anforderungen  
  Für dieses Beispiel ist es erforderlich, dass MSMQ installiert ist und ausgeführt wird.  
@@ -90,12 +90,12 @@ Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherhe
 ## <a name="demonstrates"></a>Veranschaulicht  
  Der Client verschlüsselt die Nachricht mit dem öffentlichen Schlüssel des Diensts und signiert sie mit seinem eigenen Zertifikat. Der Dienst, der die Nachricht aus der Warteschlange liest, authentifiziert das Clientzertifikat mit dem Zertifikat in seinem Speicher für vertrauenswürdige Personen. Anschließend entschlüsselt er die Nachricht und leitet sie an den Dienstvorgang weiter.  
   
- Da die Windows Communication Foundation (WCF)-Nachricht als Nutzlast im Text der MSMQ-Nachricht vorgenommen wird, bleibt der Text im MSMQ-Speicher verschlüsselt. Dadurch wird sichergestellt, dass die Nachricht von unerwünschter Seite aus eingesehen werden kann. Beachten Sie, dass es für MSMQ selbst keine Rolle spielt, ob die enthaltene Nachricht verschlüsselt ist.  
+ Da die Windows Communication Foundation (WCF)-Nachricht als Nutzlast im Text der MSMQ-Nachricht übertragen wird, bleibt der Text im MSMQ-Speicher verschlüsselt. Dadurch wird sichergestellt, dass die Nachricht von unerwünschter Seite aus eingesehen werden kann. Beachten Sie, dass es für MSMQ selbst keine Rolle spielt, ob die enthaltene Nachricht verschlüsselt ist.  
   
  Im Beispiel wird veranschaulicht, wie gegenseitige Authentifizierung auf Nachrichtenebene mit MSMQ verwendet werden kann. Die Zertifikate werden "Out-of-Band" ausgetauscht. Dies ist bei Anwendungen in einer Warteschlange stets der Fall, da der Dienst und der Client nicht zum selben Zeitpunkt aktiv sein müssen.  
   
 ## <a name="description"></a>Beschreibung  
- Im Beispielcode für Client und Dienst sind identisch mit der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Sample mit folgendem Unterschied. Der Vorgangsvertrag ist mit einer Schutzebene versehen, die anzeigt, dass die Nachricht signiert und verschlüsselt werden muss.  
+ Der Beispielcode für Client und Dienst sind identisch mit der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel, bei dem einen Unterschied. Der Vorgangsvertrag ist mit einer Schutzebene versehen, die anzeigt, dass die Nachricht signiert und verschlüsselt werden muss.  
 
 ```csharp
 // Define a service contract.   
@@ -169,7 +169,7 @@ public interface IOrderProcessor
   
  Beachten Sie, dass der Sicherheitsmodus auf "Nachricht" und der ClientCredentialType auf "Zertifikat" festgelegt werden.  
   
- Die Dienstkonfiguration enthält ein Dienstverhalten, das die Anmeldeinformationen des Diensts angibt, die beim Authentifizieren des Diensts durch den Client verwendet werden. Der Antragstellername des Server-Zertifikat ist angegeben, der `findValue` Attribut in der [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+ Die Dienstkonfiguration enthält ein Dienstverhalten, das die Anmeldeinformationen des Diensts angibt, die beim Authentifizieren des Diensts durch den Client verwendet werden. Der Serverzertifikat-Antragstellername wird angegeben, der `findValue` -Attribut in der [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -302,7 +302,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
 -   Installieren des Clientzertifikats in den Serverspeicher für vertrauenswürdige Zertifikate.  
   
-     Die folgende Zeile in der Batchdatei kopiert das Clientzertifikat in den Speicher TrustedPeople des Servers, damit der Server selbst entscheiden kann, was vertrauenswürdig ist. Für ein Zertifikat im Speicher TrustedPeople als vertrauenswürdig eingestuft werden, von einem Windows Communication Foundation (WCF)-Dienst installiert ist, muss der Clientzertifikat-Validierungsmodus auf festgelegt werden `PeerOrChainTrust` oder `PeerTrust` Wert. Wie dies mithilfe einer Konfigurationsdatei durchgeführt werden kann, wurde im vorherigen Dienstkonfigurationsbeispiel gezeigt.  
+     Die folgende Zeile in der Batchdatei kopiert das Clientzertifikat in den Speicher TrustedPeople des Servers, damit der Server selbst entscheiden kann, was vertrauenswürdig ist. Für ein Zertifikat im TrustedPeople-Speicher als vertrauenswürdig eingestuft werden, von einem Windows Communication Foundation (WCF)-Dienst installiert ist, muss der Clientzertifikat-Validierungsmodus auf festgelegt werden `PeerOrChainTrust` oder `PeerTrust` Wert. Wie dies mithilfe einer Konfigurationsdatei durchgeführt werden kann, wurde im vorherigen Dienstkonfigurationsbeispiel gezeigt.  
   
     ```bat
     echo ************  
@@ -325,7 +325,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     Die Variable %SERVER_NAME% gibt den Servernamen an. Das Zertifikat wird im LocalMachine-Speicher gespeichert. Wenn die setupbatchdatei mit einem dienstargument ausgeführt wird (z. B. `setup.bat service`) enthält die %server_name% den vollqualifizierten Domänennamen des Computers. Andernfalls standardmäßig wird "localhost"  
+     Die Variable %SERVER_NAME% gibt den Servernamen an. Das Zertifikat wird im LocalMachine-Speicher gespeichert. Wenn die setupbatchdatei mit einem dienstargument ausgeführt wird (z. B. `setup.bat service`) enthält die %server_name% den vollqualifizierten Domänennamen des Computers. Andernfalls wird standardmäßig "localhost"  
   
 -   Installieren des Serverzertifikats im Clientspeicher für vertrauenswürdige Zertifikate.  
   
@@ -343,7 +343,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
   

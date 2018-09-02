@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 726444e1decb3e03989317431e1f8c4a5fc4a697
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c109615b9a0eb61d18f7f44e3248d2b24934ee5f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540289"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420526"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Gewusst wie: Ändern von Tastatureingaben in ein Standardsteuerelement
 Windows Forms bietet die Möglichkeit, Tastatureingaben zu nutzen und zu ändern. Nutzen einer Taste bezieht sich auf die Behandlung einer Taste innerhalb einer Methode oder eines Ereignishandlers, sodass andere Methoden und Ereignisse weiter unten in der Meldungswarteschlange den Tastenwert nicht empfangen. Ändern einer Taste bezieht sich auf ein Ändern des Werts einer Taste, sodass Methoden und Ereignishandler weiter unten in der Meldungswarteschlange einen anderen Tastenwert empfangen. In diesem Thema wird gezeigt, wie Sie diese Aufgaben ausführen.  
@@ -49,7 +49,7 @@ Windows Forms bietet die Möglichkeit, Tastatureingaben zu nutzen und zu ändern
   
 -   Überschreiben Sie eine <xref:System.Windows.Forms.Control>-Methode, von der Windows-Meldungen verarbeitet werden, suchen Sie die Meldung WM_KEYDOWN oder WM_SYSKEYDOWN, und legen Sie die <xref:System.Windows.Forms.Message.WParam%2A>-Eigenschaft des <xref:System.Windows.Forms.Message>-Parameters auf den <xref:System.Windows.Forms.Keys>-Wert fest, der den neuen Wert der Nicht-Zeichentaste darstellt.  
   
-     Im folgenden Codebeispiel wird veranschaulicht, wie Sie die <xref:System.Windows.Forms.Control.PreProcessMessage%2A>-Methode eines Steuerelements überschreiben, um die Tasten F1 bis F9 zu erkennen und jede Betätigung der Taste F3 in F1 zu ändern. Weitere Informationen zu <xref:System.Windows.Forms.Control> Methoden, die Sie überschreiben können, um tastaturmeldungen abzufangen, finden Sie [Benutzereingaben in einer Windows Forms-Anwendung](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md) und [Funktionsweise von Tastatureingaben](../../../docs/framework/winforms/how-keyboard-input-works.md).  
+     Im folgenden Codebeispiel wird veranschaulicht, wie Sie die <xref:System.Windows.Forms.Control.PreProcessMessage%2A>-Methode eines Steuerelements überschreiben, um die Tasten F1 bis F9 zu erkennen und jede Betätigung der Taste F3 in F1 zu ändern. Weitere Informationen zu <xref:System.Windows.Forms.Control> Methoden, die Sie zum Abfangen von tastaturmeldungen überschreiben können, finden Sie unter [Benutzereingaben in Windows Forms-Anwendungen](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md) und [Funktionsweise von Tastatureingaben](../../../docs/framework/winforms/how-keyboard-input-works.md).  
   
      [!code-csharp[System.Windows.Forms.KeyBoardInput#12](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#12)]
      [!code-vb[System.Windows.Forms.KeyBoardInput#12](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#12)]  
@@ -65,7 +65,7 @@ Windows Forms bietet die Möglichkeit, Tastatureingaben zu nutzen und zu ändern
   
 -   Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tastatureingaben in einer Windows Forms-Anwendung](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  

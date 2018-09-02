@@ -2,15 +2,15 @@
 title: Suche und FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495319"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423322"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Suche und FindCriteria
-Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste zu ermitteln, und ist eine der Hauptaktionen bei der Suche. Beim Durchführen einer Suche wird eine WS-Discovery-Probe-Nachricht über das Netzwerk gesendet. Dienste, die die angegebenen Kriterien erfüllen, antworten mit WS-Discovery-ProbeMatch-Nachrichten. Weitere Informationen zu Discovery-Nachrichten finden Sie unter der [WS-Discovery-Spezifikation](http://go.microsoft.com/fwlink/?LinkID=122347).  
+Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste zu ermitteln, und ist eine der Hauptaktionen bei der Suche. Beim Durchführen einer Suche wird eine WS-Discovery-Probe-Nachricht über das Netzwerk gesendet. Dienste, die die angegebenen Kriterien erfüllen, antworten mit WS-Discovery-ProbeMatch-Nachrichten. Weitere Informationen zu Suchnachrichten finden Sie unter den [WS-Ermittlungsspezifikation](https://go.microsoft.com/fwlink/?LinkID=122347).  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  Die <xref:System.ServiceModel.Discovery.DiscoveryClient>-Klasse stellt den Mechanismus zur Durchführung von Suchvorgängen bereit und ermöglicht eine einfache Durchführung von Suchclientvorgängen. Sie enthält eine <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>-Methode, die eine synchrone (blockierende) Suche ausführt, und eine <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A>-Methode, die eine asynchrone (nicht blockierende) Suche initiiert. Beide Methoden verwenden einen <xref:System.ServiceModel.Discovery.FindCriteria>-Parameter und stellen dem Benutzer Ergebnisse über ein <xref:System.ServiceModel.Discovery.FindResponse>-Objekt bereit.  
@@ -28,7 +28,7 @@ Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste z
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> führt einen grundlegenden Zeichenfolgenvergleich aus, bei dem die Groß-/Kleinschreibung beachtet wird.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> ermittelt Übereinstimmungen nach Segmenten getrennt durch "/". Eine Suche nach http://contoso/building1 Übereinstimmung mit dem Bereich http://contoso/building/floor1. Beachten Sie, die sie nicht übereinstimmen http://contoso/building100 weil die letzten beiden Segmente nicht übereinstimmen.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> ermittelt Übereinstimmungen nach Segmenten, getrennt durch "/". Eine Suche nach http://contoso/building1 Übereinstimmung mit dem Bereich http://contoso/building/floor1. Beachten Sie, die sie nicht übereinstimmen http://contoso/building100 , weil die letzten beiden Segmente nicht übereinstimmen.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> ermittelt für Bereiche Übereinstimmungen nach Segmenten unter Verwendung einer LDAP-URL.  
   

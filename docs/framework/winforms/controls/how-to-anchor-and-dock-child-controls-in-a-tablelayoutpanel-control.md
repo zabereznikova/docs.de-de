@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: eee67d739de13b125aa1eb8ee86de19ba645a2f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad09c30b2118a08f4249433c4f531e5bcef4acd5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529096"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418951"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement
 Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement unterstützt die <xref:System.Windows.Forms.Control.Anchor%2A>- und die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft in seinen untergeordneten Steuerelementen.  
@@ -37,7 +37,7 @@ Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement unterstützt die 
   
 5.  Ändern Sie den Wert der <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaft des <xref:System.Windows.Forms.Button>-Steuerelements in `Top, Left`. Das <xref:System.Windows.Forms.Button>-Steuerelement wird so verschoben, dass es die ober linke Ecke der Zelle einnimmt.  
   
-6.  Wiederholen Sie Schritt 5 mit einem Wert von `Top, Right` zum Verschieben der <xref:System.Windows.Forms.Button> Steuerelement in der oberen rechten Ecke der Zelle. Wiederholen Sie diesen Schritt mit den Werten `Bottom, Left` und `Bottom, Right`.  
+6.  Wiederholen Sie Schritt 5 mit dem Wert des `Top, Right` zum Verschieben der <xref:System.Windows.Forms.Button> Steuerelement auf der oberen rechten Ecke der Zelle. Wiederholen Sie diesen Schritt mit den Werten `Bottom, Left` und `Bottom, Right`.  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>So strecken Sie ein untergeordnetes Steuerelement in einer TableLayoutPanel-Zelle  
   
@@ -82,7 +82,7 @@ Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement unterstützt die 
   
 -   Verweise auf die Assemblys "System", "System.Data", "System.Drawing" und "System.Windows.Forms".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.TableLayoutPanel>  

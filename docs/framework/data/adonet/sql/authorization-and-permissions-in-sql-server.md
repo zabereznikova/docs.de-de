@@ -2,12 +2,12 @@
 title: Autorisierung und Berechtigungen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: bddbbd7eac29d33801042276e5f4ca9a05a83c1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364222"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424146"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorisierung und Berechtigungen in SQL Server
 Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähren, damit die Benutzer auch auf die Datenbankobjekte zugreifen können. Jedes sicherungsfähige Objekt verfügt über Berechtigungen, die einem Prinzipal mithilfe von Berechtigungsanweisungen gewährt werden können.  
@@ -56,7 +56,7 @@ Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähr
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Berechtigungen](http://msdn.microsoft.com/library/ms191291.aspx) in SQL Server-Onlinedokumentation|Enthält Themen, in denen die Berechtigungshierarchie, Katalogsichten und Berechtigungen fester Serverrollen und fester Datenbankrollen beschrieben werden.|  
+|[Berechtigungen](/sql/relational-databases/security/permissions-database-engine)|Enthält Themen, in denen die Berechtigungshierarchie, Katalogsichten und Berechtigungen fester Serverrollen und fester Datenbankrollen beschrieben werden.|
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -64,4 +64,4 @@ Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähr
  [Authentifizierung in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Server- und Datenbankrollen in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [Objektbesitz und Trennung von Benutzer und Schema in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

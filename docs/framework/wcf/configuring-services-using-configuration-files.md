@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 19ba0e585dfdd2ee47781b04a3d1a5bbdba60371
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807432"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419743"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurieren von Diensten mit Konfigurationsdateien
-Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Konfigurationsdatei bietet Ihnen die Flexibilität der Bereitstellung von Endpunkt und Dienst dienstverhaltensdaten Bereitstellung statt zur Entwurfszeit. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
+Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Konfigurationsdatei bietet Ihnen die Flexibilität für die Bereitstellung von Endpunkt und die Daten zum Dienst zum Zeitpunkt der Bereitstellung statt zur Entwurfszeit. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
   
- Ein WCF-Dienst ist konfigurierbar mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Konfiguration Technologie. Am häufigsten werden XML-Elemente in die Datei "Web.config" für eine Internetinformationsdienste (Internet Information Services, IIS)-Website hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen für die Kommunikation mit dem Dienst verwendeten Adressen) für einzelne Computer. WCF umfasst darüber hinaus mehrere vom System bereitgestellte Elemente, mit die Sie die grundlegendsten Funktionen eines Diensts auswählen können. Beginnend mit [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF bietet eine neue Konfiguration Standardmodell, die die WCF--konfigurationsanforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Common Language Runtime den Dienst automatisch mit Standardendpunkten und standardmäßige Bindung/benutzerdefiniertem Verhalten. In der Praxis ist das Schreiben einer Konfiguration einen großen Teil der Programmierung von WCF-Anwendungen.  
+ Ein WCF-Dienst ist konfigurierbar mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Configuration-Technologie. In den meisten Fällen werden die XML-Elemente in die Datei "Web.config" für eine Website (Internet Information Services, IIS) hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen für die Kommunikation mit dem Dienst verwendeten Adressen) für einzelne Computer. WCF umfasst darüber hinaus mehrere vom System bereitgestellte Elemente, mit die Sie schnell die grundlegenden Features für einen Dienst auswählen können. Beginnend mit [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF enthält ein neues Standard-Konfigurationsmodell, das WCF-konfigurationsanforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime automatisch Ihren Dienst mit einigen Standardendpunkte und standardmäßige Bindung/benutzerdefiniertem Verhalten. In der Praxis ist das Schreiben einer Konfiguration einem wesentlichen Teil der WCF-Anwendungen zu programmieren.  
   
- Weitere Informationen finden Sie unter [Konfigurieren von Bindungen für Dienste](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Eine Liste von der äußersten häufig Elemente verwendet, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../docs/framework/wcf/system-provided-bindings.md). Weitere Informationen zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Weitere Informationen finden Sie unter [Konfigurieren von Bindungen für Dienste](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Eine Liste der mit den am häufigsten verwendeten Elemente, finden Sie unter [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Beim Bereitstellen paralleler Szenarien, in denen zwei verschiedene Versionen eines Diensts bereitgestellt werden, müssen bei Verweisen in Konfigurationsdateien partielle Assemblynamen angegeben werden. Dies liegt daran, dass die Konfigurationsdatei gemeinsam von allen Versionen eines Diensts verwendet wird und dass diese Dienste ggf. unter unterschiedlichen Versionen von .NET Framework ausgeführt werden.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config und App.config  
- WCF verwendet das Konfigurationssystem System.Configuration der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ WCF verwendet das Konfigurationssystem System.Configuration über die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Konfiguration eines Diensts in Visual Studio, verwenden Sie eine Datei "Web.config" oder eine Datei "App.config", um die Einstellungen anzugeben. Die Wahl der Konfigurationsdatei wird durch die Hostumgebung des Diensts bestimmt. Wenn Sie den Dienst in IIS hosten, verwenden Sie eine Web.config-Datei. Bei einer anderen Hostumgebung verwenden Sie eine App.config-Datei.  
+ Wenn einen Dienst in Visual Studio zu konfigurieren, verwenden Sie entweder eine Datei "Web.config" oder eine Datei "App.config", um die Einstellungen anzugeben. Die Wahl der Konfigurationsdatei wird durch die Hostumgebung des Diensts bestimmt. Wenn Sie den Dienst in IIS hosten, verwenden Sie eine Web.config-Datei. Bei einer anderen Hostumgebung verwenden Sie eine App.config-Datei.  
   
- In Visual Studio wird die Datei "App.config" zum Erstellen der Datei für die endgültige Konfiguration verwendet. Der tatsächlich für die Konfigurationsdatei verwendete Name hängt vom Assemblynamen ab. Einer Assembly mit dem Namen "Cohowinery.exe" ist beispielsweise die Konfigurationsdatei namens "Cohowinery.exe.config" zugeordnet. Sie müssen jedoch nur die Datei App.config ändern. An dieser Datei vorgenommene Änderungen werden bei der Kompilierung automatisch an die tatsächliche Anwendungskonfigurationsdatei weitergegeben.  
+ In Visual Studio wird die Datei "App.config" verwendet, um die endgültige Konfiguration-Datei zu erstellen. Der tatsächlich für die Konfigurationsdatei verwendete Name hängt vom Assemblynamen ab. Einer Assembly mit dem Namen "Cohowinery.exe" ist beispielsweise die Konfigurationsdatei namens "Cohowinery.exe.config" zugeordnet. Sie müssen jedoch nur die Datei App.config ändern. An dieser Datei vorgenommene Änderungen werden bei der Kompilierung automatisch an die tatsächliche Anwendungskonfigurationsdatei weitergegeben.  
   
- Bei Verwendung einer App.config-Datei führt das Konfigurationssystem den Inhalt dieser Datei mit dem Inhalt der Datei Machine.config zusammen, sobald die Anwendung gestartet und die Konfiguration übernommen wird. Dieser Mechanismus ermöglicht es, computerweite Einstellungen in der Datei Machine.config zu definieren. Die Datei App.config kann verwendet werden, um Einstellungen in der Datei Machine.config zu überschreiben. Sie können Einstellungen in der Datei Machine.config aber auch sperren, sodass diese verwendet werden. Im Fall der Datei Web.config führt das Konfigurationssystem den Inhalt aller Web.config-Dateien in allen Verzeichnissen zur schließlich verwendeten Konfiguration im Anwendungsverzeichnis zusammen. Weitere Informationen zu Konfiguration und die Einstellung der Priorität, finden Sie in Themen in der <xref:System.Configuration> Namespace.  
+ Bei Verwendung einer App.config-Datei führt das Konfigurationssystem den Inhalt dieser Datei mit dem Inhalt der Datei Machine.config zusammen, sobald die Anwendung gestartet und die Konfiguration übernommen wird. Dieser Mechanismus ermöglicht es, computerweite Einstellungen in der Datei Machine.config zu definieren. Die Datei App.config kann verwendet werden, um Einstellungen in der Datei Machine.config zu überschreiben. Sie können Einstellungen in der Datei Machine.config aber auch sperren, sodass diese verwendet werden. Im Fall der Datei Web.config führt das Konfigurationssystem den Inhalt aller Web.config-Dateien in allen Verzeichnissen zur schließlich verwendeten Konfiguration im Anwendungsverzeichnis zusammen. Weitere Informationen zur Konfiguration und der Priorität der Einstellungen finden Sie unter Themen in der <xref:System.Configuration> Namespace.  
   
 ## <a name="major-sections-of-the-configuration-file"></a>Hauptabschnitte der Konfigurationsdatei  
  Die Hauptabschnitte der Konfigurationsdatei umfassen folgende Elemente:  
@@ -80,7 +80,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
   
 -   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
-### <a name="the-endpoint-element"></a>Die \<Endpoint >-Element  
+### <a name="the-endpoint-element"></a>Die \<Endpunkt >-Element  
  Jeder Endpunkt benötigt eine Adresse, eine Bindung und einen Vertrag. Diese Elemente werden durch die folgenden Attribute dargestellt:  
   
 -   `address`. Gibt den Uniform Resource Identifier (URI) des Diensts an. Er kann als absolute Adresse oder als eine zur Basisadresse des Diensts relative Adresse angegeben werden. Eine leere Zeichenfolge zeigt an, dass der Endpunkt unter der Basisadresse verfügbar ist. Diese Basisadresse wird bei der Erstellung des <xref:System.ServiceModel.ServiceHost> für den Dienst angegeben.  
@@ -91,7 +91,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
   
 -   `contract`. Gibt die Schnittstelle an, die den Vertrag definiert. Das ist die Schnittstelle, die im CLR-Typ (Common Language Runtime) implementiert ist, der vom `name` -Attribut des `service` -Elements angegeben wird.  
   
--   [\<Endpunkt >-Elementverweis](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<Endpunkt >-Elementverweis](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>Die \<Bindings >-Element  
  Das `bindings` -Element enthält die Spezifikationen für alle Bindungen, die von jedem in einem Dienst definierten Endpunkt verwendet werden können.  
@@ -101,11 +101,11 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
 ### <a name="the-binding-element"></a>Die \<Bindung >-Element  
  Das `binding` -Elemente, die im `bindings` -Element enthalten sind, können entweder eine der systemeigenen Bindungen (siehe [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) oder eine benutzerdefinierte Bindung (siehe [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)) sein. Das `binding` -Element verfügt über ein `name` -Attribut, das eine Beziehung zwischen der Bindung und dem Endpunkt herstellt, der im `bindingConfiguration` -Attribut des `endpoint` -Elements angegeben ist. Wenn kein Name angegeben wird, entspricht die Bindung der Standardbindung für diesen Bindungstyp.  
   
- Weitere Informationen zum Konfigurieren von Diensten und Clients finden Sie unter [Konfigurieren von Windows Communication Foundation-Anwendungen](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ Weitere Informationen zum Konfigurieren von Diensten und Clients finden Sie unter [Konfigurieren von Windows Communication Foundation-Anwendungen](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
  [\<binding>](../../../docs/framework/misc/binding.md)  
   
-### <a name="the-behaviors-element"></a>Die \<Behaviors >-Element  
+### <a name="the-behaviors-element"></a>Die \<Verhaltensweisen >-Element  
  Dies ist ein Containerelement für die `behavior` -Elemente, die das Verhalten eines Diensts definieren.  
   
  [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
@@ -116,7 +116,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
  [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Gewusst wie: Verwenden von Bindungs- und Verhaltenskonfigurationen  
- WCF erleichtert das gleiche zwischen Endpunkten, die mithilfe eines Verweissystems in der Konfiguration. Statt einem Endpunkt direkt Konfigurationswerte zuzuweisen, werden bindungsrelevante Konfigurationswerte in `bindingConfiguration` -Elementen des `<binding>` -Abschnitts gruppiert. Eine Bindungskonfiguration ist eine benannte Gruppe von Einstellungen einer Bindung. Endpunkte können dann mithilfe des Namens auf eine `bindingConfiguration` verweisen.  
+ WCF erleichtert die Konfigurationen zwischen Endpunkten, die mithilfe eines Verweissystems in der Konfiguration gemeinsam zu verwenden. Statt einem Endpunkt direkt Konfigurationswerte zuzuweisen, werden bindungsrelevante Konfigurationswerte in `bindingConfiguration` -Elementen des `<binding>` -Abschnitts gruppiert. Eine Bindungskonfiguration ist eine benannte Gruppe von Einstellungen einer Bindung. Endpunkte können dann mithilfe des Namens auf eine `bindingConfiguration` verweisen.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -148,7 +148,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
 </configuration>  
 ```  
   
- Das `name` -Attribut der `bindingConfiguration` wird im `<binding>` -Element festgelegt. Die `name` muss eine eindeutige Zeichenfolge im Bereich des Bindungstyps sein – in diesem Fall die [< BasicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), oder ein leerer Wert, um auf die standardbindung zu verweisen. Der Endpunkt wird mit der Konfiguration verknüpft, indem das `bindingConfiguration` -Attribut auf diese Zeichenfolge festgelegt wird.  
+ Das `name` -Attribut der `bindingConfiguration` wird im `<binding>` -Element festgelegt. Die `name` muss eine eindeutige Zeichenfolge im Bereich des Bindungstyps sein – in diesem Fall die [< BasicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), oder ein leerer Wert, auf die standardbindung zu verweisen. Der Endpunkt wird mit der Konfiguration verknüpft, indem das `bindingConfiguration` -Attribut auf diese Zeichenfolge festgelegt wird.  
   
  Eine `behaviorConfiguration` wird genauso implementiert, wie das folgende Beispiel zeigt.  
   
@@ -222,7 +222,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
   
  Der Dienst unter ~\Child\Service.svc wird sowohl das serviceDebug-Verhalten als auch das serviceMetadata-Verhalten berücksichtigen. Der Dienst unter ~\Service.svc berücksichtigt lediglich das serviceDebug-Verhalten. Die beiden Verhaltensauflistungen mit demselben Namen (in diesem Fall einer leeren Zeichenfolge) werden zusammengeführt.  
   
- Sie können verhaltensauflistungen auch löschen, indem die \<deaktivieren >-Tag oder einzelne Verhaltensweisen aus der Auflistung mithilfe der \<entfernen > Tag. Die folgenden beiden Konfigurationen führen beispielsweise dazu, dass der untergeordnete Dienst lediglich das serviceMetadata-Verhalten verwendet:  
+ Sie können verhaltensauflistungen auch löschen, mit der \<Löschen >-Tag und einzelne Verhaltensweisen mit aus der Auflistung entfernt die \<entfernen > Tag. Die folgenden beiden Konfigurationen führen beispielsweise dazu, dass der untergeordnete Dienst lediglich das serviceMetadata-Verhalten verwendet:  
   
 ```xml  
 <configuration>  
@@ -264,6 +264,6 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
   
 ## <a name="see-also"></a>Siehe auch  
  [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md)  
- [Konfigurieren von Windows Communication Foundation-Anwendungen](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Konfigurieren von Windows Communication Foundation-Anwendungen](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
  [\<binding>](../../../docs/framework/misc/binding.md)

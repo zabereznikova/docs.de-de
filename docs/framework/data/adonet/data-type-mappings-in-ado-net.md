@@ -2,12 +2,12 @@
 title: Datentypzuordnungen in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 1064f3be7f2548337b5dd6653c76b70a04fad980
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aba1eb4fdaaf43d66337ca764fe01b7d3f4624bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757670"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423662"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Datentypzuordnungen in ADO.NET
 .NET Framework basiert auf dem allgemeinen Typsystem, das definiert, wie Typen in der Laufzeit deklariert, verwendet und verwaltet werden. Es besteht aus Werttypen und Verweistypen, die alle vom <xref:System.Object>-Basistyp abgeleitet sind. Bei Datenquellen wird über den Datenanbieter auf den Datentyp geschlossen, wenn dieser nicht explizit angegeben ist. Ein <xref:System.Data.DataSet>-Objekt ist z. B. von keiner bestimmten Datenquelle abhängig. Daten in einem `DataSet` werden aus einer Datenquelle abgerufen, und Änderungen werden mithilfe eines `DataAdapter` in die Datenquelle übernommen. Wenn daher ein `DataAdapter`-Objekt eine <xref:System.Data.DataTable> in einem `DataSet` mit Werten aus einer Datenquelle füllt, entsprechen die Datentypen der Spalten in der `DataTable` [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datentypen und nicht speziellen Datentypen des[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieters, der zum Herstellen der Verbindung mit der Datenquelle verwendet wird.  
@@ -40,5 +40,5 @@ ms.locfileid: "32757670"
  [Konfigurieren von Parametern und Parameterdatentypen](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [Allgemeines Typsystem](../../../../docs/standard/base-types/common-type-system.md)  
- [Konvertieren von Typen](http://msdn.microsoft.com/library/6038316e-bdaf-4f55-8006-407f591ce156)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Konvertieren von Typen](https://msdn.microsoft.com/library/6038316e-bdaf-4f55-8006-407f591ce156)  
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

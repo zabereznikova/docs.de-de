@@ -2,18 +2,18 @@
 title: Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358406"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421576"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 Eines der Hauptkonzepte der SQL Server-Sicherheit besteht darin, dass die Besitzer von Objekten unwiderrufbare Berechtigungen für deren Verwaltung besitzen. Es ist nicht möglich, dem Besitzer eines Objekts dessen Privilegien zu entziehen, und Sie können auch keine Besitzer aus der Datenbank entfernen, wenn diese Objekte in der Datenbank besitzen.  
   
 ## <a name="user-schema-separation"></a>Trennung von Benutzer und Schema  
- Durch die Trennung von Benutzer und Schema können die Berechtigungen für Datenbankobjekte flexibler verwaltet werden. Ein *Schema* ist ein benannter Container für Datenbankobjekte, wodurch Sie zum Gruppieren von Objekten in separaten Namespaces. So enthält die <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank z. B. Schemas wie <legacyBold>Production</legacyBold>, <legacyBold>Sales</legacyBold> und <legacyBold>HumanResources</legacyBold>.  
+ Durch die Trennung von Benutzer und Schema können die Berechtigungen für Datenbankobjekte flexibler verwaltet werden. Ein *Schema* ist ein benannter Container für Datenbankobjekte, die Sie zum Gruppieren von Objekten in separaten Namespaces ermöglicht. So enthält die <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank z. B. Schemas wie <legacyBold>Production</legacyBold>, <legacyBold>Sales</legacyBold> und <legacyBold>HumanResources</legacyBold>.  
   
  Die vierteilige Benennungssyntax zum Verweisen auf Objekte gibt den Schemanamen an.  
   
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Trennung von Benutzer und Schema](http://msdn.microsoft.com/library/ms190387.aspx) in SQL Server-Onlinedokumentation|Beschreibt die Änderungen, die die Trennung von Benutzer und Schema zur Folge hat. Enthält Informationen zum neuen Verhalten, seinen Auswirkungen auf den Objektbesitz, zu Katalogsichten und zu Berechtigungen.|  
+|[Trennung des Benutzerschemas](https://msdn.microsoft.com/library/ms190387.aspx) in SQL Server-Onlinedokumentation|Beschreibt die Änderungen, die die Trennung von Benutzer und Schema zur Folge hat. Enthält Informationen zum neuen Verhalten, seinen Auswirkungen auf den Objektbesitz, zu Katalogsichten und zu Berechtigungen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -63,4 +63,4 @@ Server.Database.DatabaseSchema.DatabaseObject
  [Authentifizierung in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Server- und Datenbankrollen in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [Autorisierung und Berechtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

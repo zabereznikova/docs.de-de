@@ -6,97 +6,95 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: d446ab84cfe135e56483b8b309b696f7f15044fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 488d51e748ea17b09e61b982db7abadc34f8e311
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540045"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442797"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten
-Wenn die Komponenten von einem Projekt in der gerade geöffneten Projektmappe definiert sind, werden sie automatisch in angezeigt der **Toolbox**, keine Aktion erforderlich. Sie können auch manuell Auffüllen der **Toolbox** mit den benutzerdefinierten Komponenten mithilfe der [Choose Toolbox Items Dialog Box (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), aber die **Toolbox** berücksichtigt der Elemente in der Projektmappe erstellen Sie Ausgaben mit den folgenden Merkmalen:  
+Wenn die Komponenten von einem Projekt in der aktuell geöffneten Projektmappe definiert sind, werden sie automatisch in angezeigt der **Toolbox**, keine Aktion erforderlich. Sie können auch manuell Auffüllen der **Toolbox** mit den benutzerdefinierten Komponenten mithilfe der [Choose Toolbox Items Dialog Box (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), aber die **Toolbox** berücksichtigt der Elemente in der Projektmappe Buildausgaben Sie mit folgenden Merkmalen:  
   
 -   Implementiert <xref:System.ComponentModel.IComponent>;  
   
--   Verfügt nicht über <xref:System.ComponentModel.ToolboxItemAttribute> festgelegt `false`;  
+-   Keine <xref:System.ComponentModel.ToolboxItemAttribute> festgelegt `false`;  
   
--   Verfügt nicht über <xref:System.ComponentModel.DesignTimeVisibleAttribute> festgelegt `false`.  
+-   Keine <xref:System.ComponentModel.DesignTimeVisibleAttribute> festgelegt `false`.  
   
 > [!NOTE]
->  Die **Toolbox** Verweis Ketten zu erkennen, werden nicht befolgt werden, damit keine Elemente angezeigt werden, die nicht von einem Projekt in der Projektmappe erstellt werden.  
+>  Die **Toolbox** Verweisketten, werden nicht befolgt werden, damit es keine Elemente angezeigt werden, die von einem Projekt in der Projektmappe nicht erstellt werden.  
   
  In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie eine benutzerdefinierte Komponente automatisch in angezeigt wird der **Toolbox** , nachdem die Komponente erstellt wird. In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
 -   Erstellen ein Windows Forms-Projekt.  
   
--   Erstellen eine benutzerdefinierte Komponente.  
+-   Erstellen eine benutzerdefinierte Komponente an.  
   
--   Erstellen eine Instanz einer benutzerdefinierten Komponente.  
+-   Erstellen einer Instanz einer benutzerdefinierten Komponente.  
   
--   Entladen und erneutes Laden einer benutzerdefinierten Komponente.  
+-   Entladen und das erneute Laden einer benutzerdefinierten Komponente.  
   
  Wenn Sie fertig sind, sehen Sie, den **Toolbox** wird aufgefüllt, mit einer Komponente, die Sie erstellt haben.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Erstellen des Projekts  
  Im ersten Schritt wird das Projekt erstellt und das Formular eingerichtet.  
   
 #### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
-1.  Erstellen Sie ein Windows-basiertes Anwendungsprojekt mit dem Namen `ToolboxExample`.  
-  
-     Weitere Informationen finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines neuen Windows Forms-Anwendungsprojekts)](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Erstellen Sie ein Windows-basierten Anwendung mit dem Namen `ToolboxExample` (**Datei** > **neu** > **Projekt**  >  **Visual C#-** oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).  
   
 2.  Fügen Sie dem Projekt eine neue Komponente hinzu. Rufen sie `DemoComponent`.  
   
-     Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen neuer Projektelemente](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen neuer Projektelemente](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
   
 3.  Erstellen Sie das Projekt.  
   
-4.  Aus der **Tools** Menü klicken Sie auf die **Optionen** Element. Klicken Sie auf **allgemeine** unter der **Windows Forms-Designer** Element und sicherstellen, dass die **AutoToolboxPopulate** Option wird festgelegt, um **"true"**.  
+4.  Von der **Tools** Menü klicken Sie auf die **Optionen** Element. Klicken Sie auf **allgemeine** unter der **Windows Forms-Designer** Element aus, und stellen sicher, dass die **AutoToolboxPopulate** Option wird festgelegt, um **"true"**.  
   
 ## <a name="creating-an-instance-of-a-custom-component"></a>Erstellen einer Instanz einer benutzerdefinierten Komponente  
- Der nächste Schritt besteht, eine Instanz der benutzerdefinierten Komponente auf dem Formular zu erstellen. Da die **Toolbox** automatisch die Konten für die neue Komponente, dies ist genauso einfach wie beliebige andere Komponenten oder Steuerelemente erstellen.  
+ Der nächste Schritt ist eine Instanz der benutzerdefinierten Komponente auf dem Formular zu erstellen. Da die **Toolbox** automatisch Konten für die neue Komponente, dies ist so einfach wie das Erstellen einer anderen Komponente oder Steuerelement.  
   
 #### <a name="to-create-an-instance-of-a-custom-component"></a>Zum Erstellen einer Instanz einer benutzerdefinierten Komponente  
   
-1.  Öffnen Sie das Formular des Projekts in der **Forms-Designer**.  
+1.  Öffnen Sie das Formular des Projekts in der **Formulardesigner**.  
   
 2.  In der **Toolbox**, klicken Sie auf die neue Registerkarte **ToolboxExample-Komponenten**.  
   
-     Sobald Sie auf die Registerkarte "klicken, sehen Sie **DemoComponent**.  
+     Sobald Sie die Registerkarte klicken, wird Ihnen **DemoComponent**.  
   
     > [!NOTE]
-    >  Aus Leistungsgründen Komponenten im Bereich automatisch aufgefüllt, der die **Toolbox** benutzerdefinierte Bitmaps werden nicht angezeigt und die <xref:System.Drawing.ToolboxBitmapAttribute> wird nicht unterstützt. Zum Anzeigen eines Symbols für eine benutzerdefinierte Komponente in der **Toolbox**, verwenden Sie die **Toolboxelemente auswählen** (Dialogfeld), um die Komponente zu laden.  
+    >  Aus Leistungsgründen Komponenten in den automatisch ausgefüllten Bereich des der **Toolbox** zeigen keine benutzerdefinierten Bitmaps, und die <xref:System.Drawing.ToolboxBitmapAttribute> wird nicht unterstützt. Zum Anzeigen eines Symbols für eine benutzerdefinierte Komponente in der **Toolbox**, verwenden Sie die **Toolboxelemente auswählen** (Dialogfeld), laden Sie die Komponente.  
   
-3.  Ziehen Sie die Komponente auf dem Formular aus.  
+3.  Ziehen Sie die Komponente auf das Formular.  
   
      Eine Instanz der Komponente erstellt und hinzugefügt werden, um die **Komponentenleiste**.  
   
-## <a name="unloading-and-reloading-a-custom-component"></a>Entladen und erneutes Laden einer benutzerdefinierten Komponente  
- Die **Toolbox** berücksichtigt die Komponenten in jedem geladenen Projekt entspricht, und bei einem Projekt entladen wurde, entfernen Sie Verweise auf Komponenten des Projekts.  
+## <a name="unloading-and-reloading-a-custom-component"></a>Entladen und Neuladen einer benutzerdefinierten Komponente  
+ Die **Toolbox** berücksichtigt die Komponenten in jedem geladenen Projekt, und wenn ein Projekt entladen wird, entfernt Verweise auf das Projekt die Komponenten.  
   
-#### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>Experimentieren Sie mit dem Effekt in der Toolbox des Entladens und erneuten Laden von Komponenten  
+#### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>Experimentieren Sie mit dem Effekt in der Toolbox entladen und Neuladen von Komponenten  
   
 1.  Entladen Sie das Projekt aus der Projektmappe.  
   
-     Weitere Informationen zu Projekte entladen, finden Sie unter [NIB: Gewusst: entladen und erneutes Laden von Projekten](http://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Wenn Sie aufgefordert werden, speichern, wählen Sie **Ja**.  
+     Weitere Informationen zum Entladen von Projekten finden Sie unter [Gewusst wie: entladen und erneute Laden Projekte](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Wenn Sie aufgefordert werden, um zu speichern, wählen Sie **Ja**.  
   
 2.  Fügen Sie einen neuen **Windows-Anwendung** Projekt der Projektmappe. Öffnen Sie das Formular in der **Designer**.  
   
-     Die **ToolboxExample-Komponenten** Registerkarte aus dem vorherigen Projekt ist nicht mehr vorhanden.  
+     Die **ToolboxExample-Komponenten** Registerkarte aus dem vorherigen Projekt ist jetzt nicht mehr vorhanden.  
   
-3.  Zum erneuten Laden der `ToolboxExample` Projekt.  
+3.  Erneutes Laden der `ToolboxExample` Projekt.  
   
-     Die **ToolboxExample-Komponenten** Registerkarte jetzt wird erneut angezeigt.  
+     Die **ToolboxExample-Komponenten** Registerkarte wird wieder angezeigt.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Diese exemplarische Vorgehensweise veranschaulicht, die die **Toolbox** berücksichtigt Komponenten eines Projekts, aber die **Toolbox** ist auch Steuerelemente. Experimentieren Sie eigene benutzerdefinierte Steuerelemente durch Hinzufügen und entfernen Projekte in der Projektmappe aus.  
+ In dieser exemplarischen Vorgehensweise wird veranschaulicht, dass die **Toolbox** berücksichtigt Komponenten eines Projekts, aber die **Toolbox** ist auch Steuerelemente. Experimentieren Sie mit Ihren eigenen benutzerdefinierten Steuerelementen durch Hinzufügen und Entfernen von Projekten aus Ihrer Projektmappe.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Vorgehensweise: Ändern von Registerkarten der Toolbox](http://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [Dialogfeld „Toolboxelemente auswählen“ (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Vorgehensweise: Ändern von Registerkarten der Toolbox](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [Dialogfeld „Toolboxelemente auswählen“ (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
  [Einfügen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

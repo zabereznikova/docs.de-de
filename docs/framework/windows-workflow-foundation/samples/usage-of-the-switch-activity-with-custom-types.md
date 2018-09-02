@@ -2,15 +2,15 @@
 title: Verwenden der switch-Aktivität mit benutzerdefinierten Typen
 ms.date: 03/30/2017
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
-ms.openlocfilehash: 2b6f3109324064cb5e746de9c61e5a70c4c4d60b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b24a03573b31f3fb1c34d4aa6e03bc11f5b25455
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517880"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423564"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>Verwenden der switch-Aktivität mit benutzerdefinierten Typen
-Dieses Beispiel zeigt, wie eine <xref:System.Activities.Statements.Switch%601>-Aktivität aktiviert wird, um zur Laufzeit einen benutzerdefinierten komplexen Typ auszuwerten. In den meisten herkömmlichen prozeduralen Programmiersprachen wird eine [wechseln](http://go.microsoft.com/fwlink/?LinkId=180521) -Anweisung wählt eine Ausführungslogik basierend auf der bedingten Auswertung einer Variablen. Normalerweise wird eine `switch`-Anweisung auf einen Ausdruck angewendet, der statisch ausgewertet werden kann. In C# bedeutet dies z. B., dass nur primitive Typen wie <xref:System.Boolean>, <xref:System.Int32> oder <xref:System.String> und Enumerationstypen unterstützt werden.  
+Dieses Beispiel zeigt, wie eine <xref:System.Activities.Statements.Switch%601>-Aktivität aktiviert wird, um zur Laufzeit einen benutzerdefinierten komplexen Typ auszuwerten. In den meisten herkömmlichen prozeduralen Programmiersprachen wird eine [wechseln](https://go.microsoft.com/fwlink/?LinkId=180521) -Anweisung wählt eine Ausführungslogik, die auf Grundlage der bedingten Auswertung einer Variable. Normalerweise wird eine `switch`-Anweisung auf einen Ausdruck angewendet, der statisch ausgewertet werden kann. In C# bedeutet dies z. B., dass nur primitive Typen wie <xref:System.Boolean>, <xref:System.Int32> oder <xref:System.String> und Enumerationstypen unterstützt werden.  
   
  Um die switch-Funktion für eine benutzerdefinierte Klasse zu aktivieren, muss Logik zur Auswertung des komplexen benutzerdefinierten Typs zur Laufzeit implementiert werden. In diesem Beispiel wird veranschaulicht, wie die switch-Funktion für einen benutzerdefinierten komplexen Typ mit dem Namen `Person` aktiviert wird.  
   
@@ -107,11 +107,11 @@ Dieses Beispiel zeigt, wie eine <xref:System.Activities.Statements.Switch%601>-A
   
 -   **Person.cs**: definiert die `Person` Klasse.  
   
--   **PersonConverter.cs**: der Typkonverter für das `Person` Klasse.  
+-   **PersonConverter.cs**: der Typkonverter für die `Person` Klasse.  
   
--   **Sequence.XAML**: ein Workflow, über die `Person` Typ.  
+-   **Sequence.XAML**: ein Workflow, der über wechselt die `Person` Typ.  
   
--   **Datei "Program.cs"**: die main-Funktion, die der Workflow ausgeführt wird.  
+-   **"Program.cs"**: die main-Funktion, die der Workflow ausgeführt wird.  
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
@@ -126,7 +126,7 @@ Dieses Beispiel zeigt, wie eine <xref:System.Activities.Statements.Switch%601>-A
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   

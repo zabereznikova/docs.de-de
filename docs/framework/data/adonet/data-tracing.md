@@ -2,15 +2,15 @@
 title: Datenablaufverfolgung in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 6dd385cd58d1c8400c45139492d84e6ca4fe1bd7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 037db6f4e5695e00401c81e1490953efe2fc9b99
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758502"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421098"
 ---
 # <a name="data-tracing-in-adonet"></a>Datenablaufverfolgung in ADO.NET
-ADO.NET bietet integrierte Datenablaufverfolgungsfunktionen, die von den .NET-Datenanbietern für SQL Server, Oracle, OLE DB und ODBC sowie ADO.NET unterstützt wird <xref:System.Data.DataSet>, und die SQL Server-Netzwerkprotokolle.  
+ADO.NET bietet integrierte Datenablaufverfolgungsfunktionen, die von den .NET-Datenanbietern für SQL Server, Oracle, OLE DB und ODBC sowie ADO.NET unterstützt wird <xref:System.Data.DataSet>, und den SQL Server-Netzwerkprotokollen.  
   
  Die Ablaufverfolgung von Aufrufen der Datenzugriffs-API kann bei der Diagnose der folgenden Probleme helfen:  
   
@@ -26,12 +26,12 @@ ADO.NET bietet integrierte Datenablaufverfolgungsfunktionen, die von den .NET-Da
   
  Zur Unterstützung verschiedener Ablaufverfolgungstechnologien ist die Ablaufverfolgung erweiterbar, sodass Entwickler eine Ablaufverfolgung für Probleme auf jeder Ebene des Anwendungsstapels ausführen können. Obwohl die Ablaufverfolgung nicht auf ADO.NET beschränkt ist, nutzen Microsoft-Anbieter die Vorteile generalisierter Ablaufverfolgungs- und Instrumentierungs-APIs.  
   
- Weitere Informationen zum Festlegen und Konfigurieren der verwalteten Ablaufverfolgung in ADO.NET finden Sie unter [Tracing Data Access](http://msdn.microsoft.com/library/hh880086.aspx).  
+ Weitere Informationen zum Festlegen und Konfigurieren der verwalteten Ablaufverfolgung in ADO.NET finden Sie unter [Tracing Data Access](https://msdn.microsoft.com/library/hh880086.aspx).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse  
- In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server, Datenzugriff tracing ([Datenzugriffsablaufverfolgung](http://msdn.microsoft.com/library/hh880086.aspx)) wurde aktualisiert, um einfacher mit Diagnoseinformationen, z. B. Verbindungsfehlern, aus korreliert erleichtern die Serverzertifikat konnektivitätsringpuffer und den anwendungsbezogenen Leistungsinformationen in das Protokoll für erweiterte Ereignisse. Informationen zum Auswerten der erweiterten Ereignisprotokolle finden Sie unter [View Event Session Data](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server, Datenzugriff tracing ([Datenzugriffs-Ablaufverfolgung](https://msdn.microsoft.com/library/hh880086.aspx)) wurde aktualisiert, um einfacher Clientereignissen zu Diagnoseinformationen, z. B. Verbindungsfehlern, aus zu erleichtern die die Serververbindung Klingeln und Informationen zur Anwendungsleistung im Protokoll für erweiterte Ereignisse. Informationen zum Lesen des Protokolls für erweiterte Ereignisse finden Sie unter [View Event Session Data](https://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
   
- Für Verbindungsvorgänge sendet ADO.NET eine Clientverbindungs-ID. Wenn die Verbindung fehlschlägt, können Sie dem konnektivitätsringpuffer zugreifen ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](http://go.microsoft.com/fwlink/?LinkId=207752)) und suchen Sie nach der `ClientConnectionID` Feld und Abrufen von Diagnoseinformationen über die Verbindungsfehler. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn eine Verbindung fehlschlägt, bevor das Voranmeldungspaket gesendet wird, wird keine Clientverbindungs-ID generiert). Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie finden die Clientverbindungs-ID auch in der Zielausgabe für erweiterte Ereignisse, wenn die `client_connection_id`-Aktion den Ereignissen in einer Sitzung für erweiterte Ereignisse hinzugefügt wurde. Sie können die Ablaufverfolgung für den Datenzugriff aktivieren, den Verbindungsbefehl erneut ausführen und das `ClientConnectionID`-Feld in der Datenzugriffs-Ablaufverfolgung beobachten, wenn Sie weitere Diagnoseinformationen zum Clienttreiber benötigen.  
+ Für Verbindungsvorgänge sendet ADO.NET eine Clientverbindungs-ID. Wenn die Verbindung fehlschlägt, können Sie auf den verbindungsringpuffer zugreifen ([Behandlung von Konnektivitätsproblemen in SQL Server 2008 mit dem Konnektivitätsringpuffer](https://go.microsoft.com/fwlink/?LinkId=207752)) und suchen Sie die `ClientConnectionID` Feld und Diagnoseinformationen zum Abrufen der Verbindungsfehler. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn eine Verbindung fehlschlägt, bevor das Voranmeldungspaket gesendet wird, wird keine Clientverbindungs-ID generiert). Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie finden die Clientverbindungs-ID auch in der Zielausgabe für erweiterte Ereignisse, wenn die `client_connection_id`-Aktion den Ereignissen in einer Sitzung für erweiterte Ereignisse hinzugefügt wurde. Sie können die Ablaufverfolgung für den Datenzugriff aktivieren, den Verbindungsbefehl erneut ausführen und das `ClientConnectionID`-Feld in der Datenzugriffs-Ablaufverfolgung beobachten, wenn Sie weitere Diagnoseinformationen zum Clienttreiber benötigen.  
   
  Sie können die Clientverbindungs-ID programmgesteuert abrufen, indem Sie die `SqlConnection.ClientConnectionID`-Eigenschaft verwenden.  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
 ## <a name="see-also"></a>Siehe auch  
  [Netzwerkablaufverfolgung in .NET Framework](../../../../docs/framework/network-programming/network-tracing.md)  
  [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

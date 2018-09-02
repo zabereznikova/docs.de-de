@@ -10,17 +10,17 @@ helpviewer_keywords:
 - data binding [Windows Forms], DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
-ms.openlocfilehash: 4ef9e97745c1c5d7a240e4b07b753b72644c6c15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4064ef26ee550c02ac8825ac4c1a417472b64de6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531130"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419921"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Gewusst wie: Binden von Daten an das DataGridView-Steuerelement in Windows Forms
 Das <xref:System.Windows.Forms.DataGridView>-Steuerelement unterstützt das Standard-Datenbindungsmodell von Windows Forms und ermöglicht so die Bindung an eine Vielzahl von Datenquellen. In den meisten Fällen erfolgt jedoch eine Bindung an eine <xref:System.Windows.Forms.BindingSource>-Komponente, die die Details der Interaktion mit der Datenquelle verwaltet. Die <xref:System.Windows.Forms.BindingSource>-Komponente kann eine beliebige Windows Forms-Datenquelle darstellen und bietet Ihnen viel Flexibilität bei der Auswahl oder Änderung des Speicherorts Ihrer Daten. Weitere Informationen zu den Datenquellen, die von unterstützt die <xref:System.Windows.Forms.DataGridView> steuern, finden Sie unter [Übersicht über das DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
   
- Visual Studio bietet umfassende Unterstützung für diese Aufgabe.  Siehe auch [Vorgehensweise: Binden von Daten an das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](http://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).  
+ Visual Studio bietet umfassende Unterstützung für diese Aufgabe.  Siehe auch [Vorgehensweise: Binden von Daten an das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).  
   
 ## <a name="procedure"></a>Prozedur  
   
@@ -50,7 +50,7 @@ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement unterstützt das Stan
   
 -   Verweise auf die Assemblys "System", "System.Windows.Forms", "System.Data" und "System.XML".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Das Speichern vertraulicher Informationen (z. B. eines Kennworts) innerhalb der Verbindungszeichenfolge kann die Sicherheit einer Anwendung beeinträchtigen. Der Zugriff auf eine Datenbank lässt sich mithilfe der Windows-Authentifizierung (wird auch als integrierte Sicherheit bezeichnet) sicherer steuern. Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md).  

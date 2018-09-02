@@ -1,15 +1,15 @@
 ---
-title: JOIN-Operationen (Visual Basic)
+title: Verknüpfungsvorgänge (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 4f375946b69eadb885873889b28790730943a3d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7d6592f0dee221eb2f6fb3a2f2c484064364ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645602"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425373"
 ---
-# <a name="join-operations-visual-basic"></a>JOIN-Operationen (Visual Basic)
+# <a name="join-operations-visual-basic"></a>Verknüpfungsvorgänge (Visual Basic)
 Eine *Verknüpfung* zweier Datenquellen entspricht der Zuordnung von Objekten einer Datenquelle zu den Objekten einer anderen Datenquelle, die ein Attribut gemeinsam haben.  
   
  Die Verknüpfung stellt für Abfragen einen wichtigen Vorgang dar, die auf Datenquellen ausgerichtet sind, deren Beziehungen zueinander nicht direkt verfolgt werden können. Bei der objektorientierten Programmierung könnte dies eine nicht modellierte Korrelation zwischen Objekten bedeuten, z. B. die entgegengesetzte Richtung einer unidirektionalen Beziehung. Ein Beispiel einer unidirektionalen Beziehung ist die Klasse "Kunde" mit der Eigenschaft vom Typ "Ort", während die Klasse "Ort" keine Eigenschaft besitzt, die einer Auflistung von "Kunde"-Objekten entspricht. Wenn Sie eine Liste von "Ort"-Objekten besitzen und alle Kunden in den einzelnen Orten finden möchten, könnten Sie eine Join-Operation verwenden, um diese zu finden.  
@@ -31,7 +31,7 @@ Eine *Verknüpfung* zweier Datenquellen entspricht der Zuordnung von Objekten ei
  <xref:System.Linq>  
  [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Formulieren von Joins und produktübergreifenden Abfragen](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [Formulieren von Joins und produktübergreifenden Abfragen](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
  [Join-Klausel](../../../../visual-basic/language-reference/queries/join-clause.md)  
  [Vorgehensweise: Verknüpfen des Inhalts Unterschiedlicher Dateien (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
  [Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

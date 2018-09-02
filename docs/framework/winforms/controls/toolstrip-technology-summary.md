@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: c4f7b13590457623bbdfd6e4c07317f3a0285fd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541910"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421907"
 ---
 # <a name="toolstrip-technology-summary"></a>Zusammenfassung der ToolStrip-Technologie
 In diesem Thema sind Informationen zum `ToolStrip`-Steuerelement und den Klassen zusammengefasst, die seine Verwendung unterstützen.  
@@ -63,31 +63,31 @@ In diesem Thema sind Informationen zum `ToolStrip`-Steuerelement und den Klassen
 ### <a name="task-dialog-boxes"></a>Aufgabendialogfelder  
  Wenn Sie in Visual Studio im Designer auf das Smarttag eines Steuerelements klicken, wird eine Aufgabenliste für den einfachen Zugriff auf viele häufig verwendete Befehle angezeigt.  
   
--   [MenuStrip-Aufgaben (Dialogfeld)](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [MenuStrip-Aufgaben (Dialogfeld)](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
--   [ToolStrip-Aufgaben (Dialogfeld)](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [ToolStrip-Aufgaben (Dialogfeld)](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
   
--   [ContextMenuStrip-Aufgaben (Dialogfeld)](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
+-   [ContextMenuStrip-Aufgaben (Dialogfeld)](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
   
--   [StatusStrip-Aufgaben (Dialogfeld)](http://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
+-   [StatusStrip-Aufgaben (Dialogfeld)](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
   
--   [Dialogfeld für "ToolStripContainer-Aufgaben"](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
+-   [ToolStripContainer-Aufgaben (Dialogfeld)](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
   
 ### <a name="items-collection-editors"></a>Elementauflistungs-Editoren  
- In Visual Studio, wenn Sie auf **Elemente bearbeiten** für den Task aus, oder mit der rechten Maustaste das Steuerelement, und wählen **Elemente bearbeiten** klicken Sie im Kontextmenü der auflistungs-Editor für das Steuerelement angezeigt wird. Mithilfe von Auflistungs-Editoren können Sie Elemente zum Steuerelement hinzufügen, aus dem Steuerelement entfernen und die im Steuerelement enthaltenen Elemente neu anordnen. Zudem können Sie die Eigenschaften für das Steuerelement und für die Elemente des Steuerelements anzeigen und ändern.  
+ In Visual Studio, wenn Sie auf **Elemente bearbeiten** für den Task aus, oder mit der rechten Maustaste den-Steuerelement, und wählen **Elemente bearbeiten** im Kontextmenü die Option, wird der auflistungs-Editor für das Steuerelement angezeigt. Mithilfe von Auflistungs-Editoren können Sie Elemente zum Steuerelement hinzufügen, aus dem Steuerelement entfernen und die im Steuerelement enthaltenen Elemente neu anordnen. Zudem können Sie die Eigenschaften für das Steuerelement und für die Elemente des Steuerelements anzeigen und ändern.  
   
--   [MenuStrip-Elementauflistungs-Editor](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [MenuStrip-Elementauflistungs-Editor](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [StatusStrip-Elementauflistungs-Editor](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   [StatusStrip-Elementauflistungs-Editor](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
   
--   [ContextMenuStrip-Elementauflistungs-Editor](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   [ContextMenuStrip-Elementauflistungs-Editor](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
   
--   [ToolStrip-Elementauflistungs-Editor](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [ToolStrip-Elementauflistungs-Editor](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
 ## <a name="hosting-controls"></a>Hosten von Steuerelementen  
  Die <xref:System.Windows.Forms.ToolStripControlHost>-Klasse bietet integrierte Wrapper für die Steuerelemente <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> und <xref:System.Windows.Forms.ToolStripProgressBar>. Sie können auch beliebige andere vorhandene Steuerelemente oder COM-Steuerelemente in einem <xref:System.Windows.Forms.ToolStripControlHost> hosten.  
   
- Ein Beispiel zum Hosten von Steuerelementen finden Sie unter [wie: Umschließen eines Windows Forms-Steuerelements ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
+ Ein Beispiel für das Steuerelement zu hosten, finden Sie unter [wie: Umschließen eines Windows Forms-Steuerelements ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
   
 ## <a name="rendering"></a>Rendern  
  <xref:System.Windows.Forms.ToolStrip>-Klassen implementieren ein Renderingschema, das sich von anderen Windows Forms-Steuerelementen erheblich unterscheidet. Mit diesem Schema können Formatvorlagen und Designs ganz einfach angewendet werden.  
@@ -104,17 +104,17 @@ In diesem Thema sind Informationen zum `ToolStrip`-Steuerelement und den Klassen
 ## <a name="rafting-and-docking"></a>Rafting und Andocken  
  Sie können <xref:System.Windows.Forms.ToolStrip>-Steuerelemente per Rafting andocken, andocken oder absolut positionieren. <xref:System.Windows.Forms.ToolStrip>-Elemente werden vom <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> des Containers angeordnet.  
   
- *Rafting* ist die Möglichkeit von Symbolleisten, horizontalen oder vertikalen Abstand gemeinsam verwenden. Eine Windows-Formular kann ein <xref:System.Windows.Forms.ToolStripContainer> besitzen, das auf der linken, rechten, oberen und unteren Seite des Formulars wiederum Bereiche zum Positionieren und Rafting von <xref:System.Windows.Forms.ToolStrip>-, <xref:System.Windows.Forms.MenuStrip>- und <xref:System.Windows.Forms.StatusStrip>-Steuerelementen aufweist. Mehrere <xref:System.Windows.Forms.ToolStrip>-Steuerelemente werden vertikal gestapelt, wenn sie im linken oder rechten <xref:System.Windows.Forms.ToolStripContainer> abgelegt werden. Wenn Sie sie im oberen oder unteren <xref:System.Windows.Forms.ToolStripContainer> ablegen, werden sie horizontal gestapelt. Sie können das zentrale <xref:System.Windows.Forms.ToolStripContentPanel> von <xref:System.Windows.Forms.ToolStripContainer> verwenden, um herkömmliche Steuerelemente auf dem Formular zu positionieren.  
+ *Rafting* ist die Möglichkeit von Symbolleisten, horizontalen oder vertikalen Speicherplatz freizugeben. Eine Windows-Formular kann ein <xref:System.Windows.Forms.ToolStripContainer> besitzen, das auf der linken, rechten, oberen und unteren Seite des Formulars wiederum Bereiche zum Positionieren und Rafting von <xref:System.Windows.Forms.ToolStrip>-, <xref:System.Windows.Forms.MenuStrip>- und <xref:System.Windows.Forms.StatusStrip>-Steuerelementen aufweist. Mehrere <xref:System.Windows.Forms.ToolStrip>-Steuerelemente werden vertikal gestapelt, wenn sie im linken oder rechten <xref:System.Windows.Forms.ToolStripContainer> abgelegt werden. Wenn Sie sie im oberen oder unteren <xref:System.Windows.Forms.ToolStripContainer> ablegen, werden sie horizontal gestapelt. Sie können das zentrale <xref:System.Windows.Forms.ToolStripContentPanel> von <xref:System.Windows.Forms.ToolStripContainer> verwenden, um herkömmliche Steuerelemente auf dem Formular zu positionieren.  
   
  Einige oder alle <xref:System.Windows.Forms.ToolStripContainer>-Steuerelemente sind zur Entwurfszeit direkt auswählbar und können gelöscht werden. Ein <xref:System.Windows.Forms.ToolStripContainer> ist erweiterbar und reduzierbar und passt seine Größe an die darin enthaltenen Steuerelemente an.  
   
- *Andocken* ist die Angabe der einfachen Position eines Steuerelements auf Links, rechts, oberen oder Unterseite des Formulars.  
+ *Andocken* bezeichnet die Angabe der einfachen Position eines Steuerelements, auf die Links, rechts, oben oder Unterseite des Formulars.  
   
  Der Vorteil des Raftings gegenüber dem Andocken ist, dass <xref:System.Windows.Forms.ToolStrip>-, <xref:System.Windows.Forms.MenuStrip>- und <xref:System.Windows.Forms.StatusStrip>-Steuerelemente den horizontalen oder vertikalen Bereich gemeinsam mit anderen Steuerelementen nutzen können.  
   
  Die meisten der <xref:System.Windows.Forms.ToolStrip>-Steuerelemente können wie andere Steuerelemente auf dem Formular angedockt werden, anstatt sie per Rafting anzudocken. Sie können zudem angeben, dass ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement auf dem Formular frei positioniert werden kann, indem Sie es aus seinem <xref:System.Windows.Forms.ToolStripContainer> entfernen und für seine `Dock`-Eigenschaft den Wert `None` festlegen. Sie können auch seine absolute Position angeben, indem Sie die entsprechende <xref:System.Windows.Forms.Control.Location%2A>-Eigenschaft festlegen. Finden Sie unter [Vorgehensweise: Verschieben eines ToolStrip aus einem ToolStripContainer auf ein Formular](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
   
- Verwenden Sie ein oder mehrere <xref:System.Windows.Forms.ToolStripPanel>-Steuerelemente zum Erhöhen der Flexibilität, insbesondere für MDI-Anwendungen (Multiple Document Interface), oder für den Fall, dass Sie kein <xref:System.Windows.Forms.ToolStripContainer> benötigen. Ein <xref:System.Windows.Forms.ToolStripPanel> stellt einen andockbaren Bereich für die Suche und das Rafting von <xref:System.Windows.Forms.ToolStrip>-Steuerelementen bereit. Herkömmliche Steuerelemente sind hiervon jedoch ausgeschlossen. Standardmäßig die <xref:System.Windows.Forms.ToolStripPanel> erscheint nicht in den Designer **Toolbox**, aber Sie können es dort ablegen, indem Sie mit der rechten Maustaste die **Toolbox**, und klicken Sie dann auf **Elemente auswählen**. Sie können auch wie bei jeder anderen Klasse programmgesteuert auf <xref:System.Windows.Forms.ToolStripPanel> zugreifen.  
+ Verwenden Sie ein oder mehrere <xref:System.Windows.Forms.ToolStripPanel>-Steuerelemente zum Erhöhen der Flexibilität, insbesondere für MDI-Anwendungen (Multiple Document Interface), oder für den Fall, dass Sie kein <xref:System.Windows.Forms.ToolStripContainer> benötigen. Ein <xref:System.Windows.Forms.ToolStripPanel> stellt einen andockbaren Bereich für die Suche und das Rafting von <xref:System.Windows.Forms.ToolStrip>-Steuerelementen bereit. Herkömmliche Steuerelemente sind hiervon jedoch ausgeschlossen. Standardmäßig die <xref:System.Windows.Forms.ToolStripPanel> wird im Designer nicht angezeigt **Toolbox**, aber Sie können es dort ablegen, indem Sie mit der rechten Maustaste die **Toolbox**, und klicken Sie dann auf **Elemente auswählen**. Sie können auch wie bei jeder anderen Klasse programmgesteuert auf <xref:System.Windows.Forms.ToolStripPanel> zugreifen.  
   
  Bei <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> und <xref:System.Windows.Forms.StatusStrip> können Elemente überlaufen. Dies ist mit der Art und Weise vergleichbar, in der sich Elemente auf den Microsoft Office-Symbolleisten verhalten.  
   

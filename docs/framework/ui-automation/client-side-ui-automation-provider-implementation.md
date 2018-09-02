@@ -9,16 +9,16 @@ ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0e1a8e6820d70e4c50599056e31563f7f792f6d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2873fc18d5eb18160bf361b07af2bf12eef32e4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400106"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422222"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementierung eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Mehrere verschiedene [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Frameworks werden innerhalb von [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] -Betriebssystemen verwendet, darunter [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]und [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] macht Informationen zu Benutzeroberflächenelementen für Clients verfügbar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] selbst unterscheidet jedoch nicht zwischen den unterschiedlichen Steuerelementtypen, die in diesen Frameworks vorhanden sind, und den Techniken, die benötigt werden, um Informationen aus ihnen zu extrahieren. Diese Aufgabe wird Objekten, die als Anbieter bezeichnet werden, überlassen. Ein Anbieter extrahiert Informationen aus einem bestimmen Steuerelement und übergibt diese Informationen an [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], durch die diese dem Client in konsistenter Form präsentiert werden.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33400106"
   
  [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] Stellt Anbieter für Standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] und Windows Forms-Steuerelemente. Zusätzlich ermöglicht ein Fallbackanbieter teilweise [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Unterstützung für alle Steuerelemente, die ihre Informationen nicht von einem anderen serverseitigen Anbieter oder Proxy erhalten, sondern über eine [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] -Implementierung verfügen. Diese Anbieter werden automatisch geladen und sind für Clientanwendungen verfügbar.  
   
- Weitere Informationen zur Unterstützung für [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] und Windows Forms-Steuerelemente finden Sie unter [UI-Automatisierung-Unterstützung für Standardsteuerelemente](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ Weitere Informationen zur Unterstützung für [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] und Windows Forms-Steuerelementen, finden Sie unter [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   
  Anwendungen können auch andere clientseitige Anbieter registrieren.  
   

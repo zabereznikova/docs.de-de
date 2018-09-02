@@ -2,12 +2,12 @@
 title: Beispiel für Ankündigungen
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: ee58a2fef970fa3e7936e2fc26a9e7fd31633347
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500037"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425401"
 ---
 # <a name="announcements-sample"></a>Beispiel für Ankündigungen
 In diesem Beispiel wird die Verwendung der Ankündigungsfunktionalität der Discovery-Funktion erläutert. Ankündigungen ermöglichen es Diensten, Ankündigungsmeldungen mit Metadaten zum Dienst zu senden. Standardmäßig wird als Ankündigung "hello" gesendet, wenn der Dienst startet, und "bye", wenn der Dienst beendet wird. Diese Ankündigungen können per Multicast oder von Punkt zu Punkt gesendet werden. Das folgende Beispiel besteht aus zwei Projekten, Service und Client.  
@@ -68,7 +68,7 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1.  Dieses Beispiel verwendet die HTTP-Endpunkte und Ausführung dieser Beispiele, die richtige URL-ACLs hinzugefügt werden ausführliche Informationen finden Sie [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) Details. Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  Dieses Beispiel verwendet die HTTP-Endpunkte und Ausführung dieser Beispiel, die richtige URL-ACLs hinzugefügt werden finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Details. Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Erstellen Sie die Projektmappe.  
   
@@ -83,7 +83,7 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
   

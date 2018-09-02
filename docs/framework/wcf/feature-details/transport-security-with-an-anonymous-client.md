@@ -7,27 +7,27 @@ dev_langs:
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3acea654cc84ede4b264c2db3ae6e9d042f4f5cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499179"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418382"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Transportsicherheit mit einem anonymen Client
-Dieses Windows Communication Foundation (WCF)-Szenario verwendet transportsicherheit (HTTPS), um Vertraulichkeit und Integrität sicherzustellen. Der Server muss mit einem SSL-Zertifikat authentifiziert werden, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen. Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.  
+Das Windows Communication Foundation (WCF)-Szenario verwendet transportsicherheit (HTTPS), um Vertraulichkeit und Integrität sicherzustellen. Der Server muss mit einem SSL-Zertifikat authentifiziert werden, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen. Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.  
   
  Eine beispielanwendung finden Sie unter [WS-Transportsicherheit](../../../../docs/framework/wcf/samples/ws-transport-security.md). Weitere Informationen zur transportsicherheit finden Sie unter [Transport Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
  Weitere Informationen zur Verwendung eines Zertifikats mit einem Dienst finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) und [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
- ![Mithilfe der transportsicherheit mit einem anonymen Client](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")  
+ ![Mit der transportsicherheit mit einem anonymen Client](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")  
   
 |Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Sicherheitsmodus|Transport|  
 |Interoperabilität|Mit vorhandenen Webdiensten und Webclients|  
-|Authentifizierung (Server)<br /><br /> Authentifizierung (Client)|Ja<br /><br /> Anwendungsebene (keine WCF-Unterstützung)|  
+|Authentifizierung (Server)<br /><br /> Authentifizierung (Client)|Ja<br /><br /> Die Anwendungsebene (keine WCF-Unterstützung)|  
 |Integrität|Ja|  
 |Vertraulichkeit|Ja|  
 |Transport|HTTPS|  
@@ -120,4 +120,4 @@ Dieses Windows Communication Foundation (WCF)-Szenario verwendet transportsicher
  [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [WS-Transportsicherheit](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
  [Übersicht über die Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

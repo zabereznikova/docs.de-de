@@ -9,51 +9,51 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 2dd048fb074d1ec5bb7bc0a67f196d5d51281545
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528476"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422548"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms
-Die meisten Formulare werden durch Hinzufügen von Steuerelementen auf die Oberfläche des Formulars entworfen, um eine Benutzeroberfläche (UI) zu definieren. Ein *Steuerelement* ist eine Komponente in einem Formular zum Anzeigen von Informationen oder annehmen von Benutzereingaben verwendet. Weitere Informationen zu Steuerelementen finden Sie unter [Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/index.md).  
+Die meisten Formulare werden durch Hinzufügen der Steuerelemente auf die Oberfläche des Formulars entworfen, um eine Benutzeroberfläche (UI) zu definieren. Ein *Steuerelement* ist eine Komponente in einem Formular zum Anzeigen von Informationen oder Benutzereingaben akzeptieren. Weitere Informationen zu Steuerelementen, finden Sie unter [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-draw-a-control-on-a-form"></a>Zum Zeichnen eines Steuerelements in einem Formular  
   
-1.  Öffnen Sie das Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Öffnen Sie das Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
-2.  In der **Toolbox**, klicken Sie auf das Steuerelement dem Formular hinzufügen möchten.  
+2.  In der **Toolbox**, klicken Sie auf das Steuerelement zum Formular hinzufügen möchten.  
   
-3.  Klicken Sie auf der linken oberen Ecke des Steuerelements befinden soll, und ziehen Sie in der unteren rechten Ecke des Steuerelements befinden soll, auf dem Formular.  
+3.  Klicken Sie auf dem Formular klicken Sie auf der linken oberen Ecke des Steuerelements abgelegt werden sollen, und ziehen Sie in der unteren rechten Ecke des Steuerelements abgelegt werden sollen.  
   
-     Das Steuerelement wird in das Formular mit der angegebenen Position und Größe hinzugefügt.  
+     Das Steuerelement wird zum Formular mit der angegebenen Position und Größe hinzugefügt.  
   
     > [!NOTE]
-    >  Jedes Steuerelement verfügt über eine Standardgröße definiert. Sie können ein Steuerelement zum Formular in Standardgröße des Steuerelements hinzufügen, indem Sie ziehen es aus der **Toolbox** in das Formular.  
+    >  Jedes Steuerelement verfügt über eine Standardgröße definiert. Sie können ein Steuerelement zum Formular in Standardgröße des Steuerelements hinzufügen, durch Ziehen aus dem **Toolbox** auf das Formular.  
   
 ### <a name="to-drag-a-control-to-a-form"></a>Ziehen Sie ein Steuerelement zu einem Formular  
   
-1.  Öffnen Sie das Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Öffnen Sie das Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
-2.  In der **Toolbox**, klicken Sie auf das Steuerelement, Sie möchten, und ziehen Sie es in Ihr Formular.  
+2.  In der **Toolbox**, klicken Sie auf das Steuerelement, Sie möchten, und ziehen Sie es in Ihrem Formular.  
   
      Das Steuerelement wird dem Formular an der angegebenen Position in der Standardgröße hinzugefügt.  
   
     > [!NOTE]
-    >  Sie können ein Steuerelement in Doppelklicken Sie auf die **Toolbox** der oberen linken Ecke des Formulars in der Standardgröße hinzuzufügen.  
+    >  Sie können ein Steuerelement in Doppelklicken Sie auf die **Toolbox** der oberen linken Ecke des Formulars in der Standardgröße hinzufügen.  
   
-     Sie können auch Steuerelemente dynamisch zu einem Formular zur Laufzeit hinzufügen. Im folgenden Codebeispiel eine <xref:System.Windows.Forms.TextBox> Steuerelement wird dem Formular hinzugefügt werden bei einem <xref:System.Windows.Forms.Button> Steuerelement geklickt wird.  
+     Sie können auch Steuerelemente dynamisch zu einem Formular zur Laufzeit hinzufügen. Das folgende Codebeispiel zeigt eine <xref:System.Windows.Forms.TextBox> Steuerelement wird dem Formular hinzugefügt werden bei einer <xref:System.Windows.Forms.Button> -Steuerelement geklickt wird.  
   
     > [!NOTE]
     >  Das folgende Verfahren erfordert das Vorhandensein eines Formulars mit einem **Schaltfläche** Steuerelement `Button1`, bereits platziert ist.  
   
-### <a name="to-add-a-control-to-a-form-programmatically"></a>Programmgesteuertes Hinzufügen des Steuerelements zu einem Formular  
+### <a name="to-add-a-control-to-a-form-programmatically"></a>So ein Formular ein Steuerelement programmgesteuert hinzu  
   
-1.  In der Methode, die der Schaltfläche behandelt `Click` Ereignisses innerhalb der Formularklasse Code einfügen, die etwa wie folgt einen Verweis auf die Steuerelementvariable hinzufügen festlegen, welches Steuerelement `Location`, und fügen Sie das Steuerelement.  
+1.  In der Methode, die der Schaltfläche verarbeitet `Click` Ereignissatz innerhalb der Formularklasse Code einfügen, die etwa wie folgt einen Verweis auf die Steuerelementvariable Hinzufügen des Steuerelements `Location`, und fügen Sie das Steuerelement.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -87,7 +87,7 @@ Die meisten Formulare werden durch Hinzufügen von Steuerelementen auf die Oberf
     >  Sie können auch Code zum Initialisieren der anderen Eigenschaften des Steuerelements hinzufügen.  
   
     > [!IMPORTANT]
-    >  Sie können den lokalen Computer über das Netzwerk ein Sicherheitsrisiko verfügbar zu machen, durch Verweisen auf ein böswilliger `UserControl`. Dies ist nur relevant, wenn ein böswilliger Benutzer, erstellen ein schädliches benutzerdefiniertes Steuerelement, indem Sie versehentlich zu Ihrem Projekt hinzufügen.  
+    >  Sie können den lokalen Computer ein Sicherheitsrisiko dar, über das Netzwerk verfügbar zu machen, durch Verweisen auf ein böswilliger `UserControl`. Dies wäre nur ein Problem, wenn ein böswilliger Benutzer erstellt ein schädliches benutzerdefiniertes Steuerelement, indem Sie versehentlich zu Ihrem Projekt hinzufügen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  

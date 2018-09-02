@@ -8,32 +8,32 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 3df8f6eaee72ebdd6cbd03d0bdfde5a7d2270129
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98ed6d4e10d0eb80b99a36172980fcb33186c8ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526529"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419201"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Gewusst wie: Bereitstellen von Hilfe in einer Windows-Anwendung
-Können Sie von der <xref:System.Windows.Forms.HelpProvider> Komponente Hilfethemen in einer Hilfedatei bestimmten Steuerelementen in Windows Forms zuzuordnen. Die Hilfedatei kann entweder im Format HTML oder HTMLHelp 1.x oder höher vorliegen.  
+Sie verwenden können, der die <xref:System.Windows.Forms.HelpProvider> Komponente, um Hilfethemen in einer Hilfedatei bestimmten Steuerelementen in Windows Forms zuzuordnen. Die Hilfedatei kann entweder im Format HTML oder HTMLHelp 1.x oder höher vorliegen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-provide-help"></a>So wird die Hilfe verfügbar  
   
-1.  Aus der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.HelpProvider> -Komponente in Ihr Formular.  
+1.  Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.HelpProvider> Ihrem Formular.  
   
      Die Komponente befindet sich anschließend auf der Taskleiste unten im Windows Forms-Designer.  
   
-2.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> -Eigenschaft auf die CHM, col- oder HTML-Hilfedatei.  
+2.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> -Eigenschaft auf die CHM-, col- oder htm-Hilfedatei.  
   
-3.  Wählen Sie ein anderes Steuerelement, Sie haben auf dem Formular, und in, der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> Eigenschaft.  
+3.  Wählen Sie ein anderes Steuerelement, die Sie in das Formular, und in der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> Eigenschaft.  
   
-     Dies ist die Zeichenfolge, die durch Übergeben der <xref:System.Windows.Forms.HelpProvider> -Komponente in der Hilfedatei, die die entsprechenden Hilfethema aufzurufen.  
+     Dies ist die Zeichenfolge, die durch Übergeben der <xref:System.Windows.Forms.HelpProvider> Komponente, an der Hilfe-Datei in das entsprechende Hilfethema aufzurufen.  
   
-4.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> Eigenschaft auf den Wert der <xref:System.Windows.Forms.HelpNavigator> Enumeration.  
+4.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> Eigenschaft mit einem Wert, der die <xref:System.Windows.Forms.HelpNavigator> Enumeration.  
   
      Dies bestimmt die Art, wie die **HelpKeyword**-Eigenschaft an das Hilfesystem übergeben wird. In der folgenden Tabelle werden die möglichen Einstellungen und ihre Beschreibungen aufgeführt.  
   
@@ -46,14 +46,14 @@ Können Sie von der <xref:System.Windows.Forms.HelpProvider> Komponente Hilfethe
     |TableOfContents|Gibt an, dass das Inhaltsverzeichnis der HTML 1.0-Hilfedatei angezeigt wird.|  
     |Topic|Gibt an, dass das Thema angezeigt wird, auf das durch die angegebene URL verwiesen wird.|  
   
- Zur Laufzeit durch Drücken von F1 Wenn das Steuerelement – für die Sie festgelegt haben die **HelpKeyword** und **HelpNavigator** Eigenschaften – hat den Fokus öffnet die Hilfedatei, die Sie zugeordnet sind, <xref:System.Windows.Forms.HelpProvider> Komponente.  
+ Zur Laufzeit durch Drücken von F1 bei der das Steuerelement, für die Sie festgelegt haben die **HelpKeyword** und **HelpNavigator** Eigenschaften – hat Fokus öffnet die Hilfedatei, die Sie zugeordnet sind, <xref:System.Windows.Forms.HelpProvider> Komponente.  
   
  Momentan unterstützt die **HelpNamespace**-Eigenschaft Hilfedateien in folgenden drei Formaten: HTMLHelp 1.x, HTMLHelp 2.0 und HTML. Dies bedeutet, dass Sie die **HelpNamespace**-Eigenschaft auf eine http://-Adresse (z. B. eine Webseite) festlegen können. Daraufhin wird im Standardbrowser die Webseite mit der Zeichenfolge geöffnet, die in der als Anker verwendeten **HelpKeyword**-Eigenschaft angegeben ist. Der Anker wird verwendet, um zu einem bestimmten Teil einer HTML-Seite zu springen.  
   
 > [!IMPORTANT]
 >  Überprüfen Sie alle von einem Client gesendeten Informationen sorgfältig, bevor Sie diese in der Anwendung verwenden. Böswillige Benutzer könnten versuchen, ausführbare Skripts, SQL-Anweisungen oder anderen Code zu senden oder einzuschleusen. Bevor Sie die Eingabe eines Benutzers anzeigen, diese in einer Datenbank speichern oder damit arbeiten, müssen Sie sicherstellen, dass diese keine potenziell unsicheren Informationen enthält. Ein sehr gebräuchlicher Weg zur Überprüfung der von einem Benutzer übermittelten Eingaben ist die Verwendung eines regulären Ausdrucks, um nach Schlüsselwörtern wie SCRIPT zu suchen.  
   
- Sie können auch die <xref:System.Windows.Forms.HelpProvider> Komponente zum Anzeigen der kontextbezogenen Hilfe, auch wenn Sie diese so konfiguriert, dass die Hilfedateien für die Steuerelemente in Windows Forms angezeigt haben. Weitere Informationen finden Sie unter [Gewusst wie: Anzeigen der kontextbezogenen Hilfe](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ Sie können auch die <xref:System.Windows.Forms.HelpProvider> Komponente zum Anzeigen der kontextbezogenen Hilfe, selbst wenn Sie so konfiguriert, dass die Hilfedateien für die auf Windows Forms-Steuerelemente anzuzeigen. Weitere Informationen finden Sie unter [Gewusst wie: Anzeigen der kontextbezogenen Hilfe](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gewusst wie: Anzeigen der kontextbezogenen Hilfe](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  

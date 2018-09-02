@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7d1f7ba1a0384ed93932733f12aa3306e16b790
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 983c38567667da911132217dcfda37c009dc833c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393918"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423484"
 ---
 # <a name="clr-etw-events"></a>CLR-ETW-Ereignisse
 Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Windows-Ereignisse (ETW). Jedes Ereignis verfügt über ein zugeordnetes Schlüsselwort und die Ebene, die im Thema [CLR-ETW-Schlüsselwörter und-Ebenen](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) beschrieben werden. Die CLR verfügt über zwei Anbieter für die Ereignisse:  
@@ -62,8 +62,8 @@ Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Win
  Erfasst Informationen, die mit anderen Ereignissen zur Generierung von Stackablaufverfolgungen verwendet werden, nachdem ein Ereignis eingetreten ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbessertes Debugging und Leistungsoptimierung mit ETW](http://go.microsoft.com/fwlink/?LinkId=179696)  
- [Blog für Windows-Leistung](http://go.microsoft.com/fwlink/?LinkId=179509)  
+ [Verbessertes Debugging und Leistungsoptimierung mit ETW](https://go.microsoft.com/fwlink/?LinkId=179696)  
+ [Windows Performance-Blog](https://go.microsoft.com/fwlink/?LinkId=179509)  
  [Controlling .NET Framework Logging (Steuern der Protokollierung in .NET Framework)](../../../docs/framework/performance/controlling-logging.md)  
  [CLR ETW Providers (CLR-ETW-Anbieter)](../../../docs/framework/performance/clr-etw-providers.md)  
  [CLR ETW Keywords and Levels (CLR-ETW-Schlüsselwörter und -Ebenen)](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  

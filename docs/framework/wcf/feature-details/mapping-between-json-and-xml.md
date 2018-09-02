@@ -2,12 +2,12 @@
 title: Zuordnung zwischen JSON und XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931468"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421722"
 ---
 # <a name="mapping-between-json-and-xml"></a>Zuordnung zwischen JSON und XML
 Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erzeugten Reader und Writer stellen eine XML API über JSON (JavaScript Object Notation)-Inhalte bereit. JSON codiert Daten mit einer Teilmenge der Objektliterale von JavaScript. Der Reader und Writer, die von dieser Factory erzeugten werden auch verwendet, wenn JSON-Inhalt wird gesendet oder Empfangen von Windows Communication Foundation (WCF)-Anwendungen, die mit der <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> oder <xref:System.ServiceModel.WebHttpBinding>.  
@@ -38,7 +38,7 @@ Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erz
  Wenn die JSON-Nachricht im Beispiel wird von WCF empfangen und protokolliert, werden Sie darüber hinaus das vorstehende Protokoll Folgendes XML-Fragment angezeigt.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Zuordnung zwischen JSON und dem XML-Infoset  
- Formal, die Zuordnung zwischen JSON wie im ist [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (außer mit gewissen Einschränkungen gelockert und andere Einschränkungen hinzugefügt wurden) und die XML-Infoset (und nicht Text-XML-) als beschriebenen [XML-Informationen Legen Sie](http://go.microsoft.com/fwlink/?LinkId=98809) . Finden Sie unter diesem Thema finden Sie die Definitionen der *Informationselemente* und Feldern in [eckigen Klammern].  
+ Formal, die Zuordnung zwischen JSON wie im ist [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (außer mit gewissen Einschränkungen gelockert und andere Einschränkungen hinzugefügt wurden) und die XML-Infoset (und nicht Text-XML-) als beschriebenen [XML-Informationen Legen Sie](https://go.microsoft.com/fwlink/?LinkId=98809) . Finden Sie unter diesem Thema finden Sie die Definitionen der *Informationselemente* und Feldern in [eckigen Klammern].  
   
  Ein leeres JSON-Dokument wird ein leeres XML-Dokument zugeordnet, und ein leeres XML-Dokument wird ein leeres JSON-Dokument zugeordnet. Klicken Sie auf die Zuordnung von XML zu JSON sind Leerzeichen vorhergehende und nachfolgende Leerzeichen nach dem Dokument nicht zulässig.  
   

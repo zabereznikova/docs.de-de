@@ -2,12 +2,12 @@
 title: "\"Key\" kann nicht gelöscht werden, da er Unterschüssel enthält"
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
-ms.openlocfilehash: a6ebf050453b599710c696920d8c4bcd2c92ad92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33638899"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419003"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>"Key" kann nicht gelöscht werden, da er Unterschüssel enthält
 Der Schlüssel kann nicht gelöscht werden, da er Unterschüssel enthält.  
@@ -19,5 +19,5 @@ Der Schlüssel kann nicht gelöscht werden, da er Unterschüssel enthält.
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
  [Gewusst wie: Löschen von Registrierungsschlüsseln](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
- [Lesen und Schreiben in die Registrierung mithilfe der My (Visual Basic)](http://msdn.microsoft.com/library/1309ad05-5bef-401f-970a-2f6455873b79)  
- [Problembehandlung: Bearbeiten der Registrierungs (Visual Basic)](http://msdn.microsoft.com/library/6ca24f55-3697-4017-b687-9de45858af4c)
+ [Lesen und Schreiben in die Registrierung mithilfe meiner (Visual Basic)](https://msdn.microsoft.com/library/1309ad05-5bef-401f-970a-2f6455873b79)  
+ [Problembehandlung: Bearbeiten der Registrierung (Visual Basic)](https://msdn.microsoft.com/library/6ca24f55-3697-4017-b687-9de45858af4c)

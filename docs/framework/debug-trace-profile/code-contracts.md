@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365877"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425755"
 ---
 # <a name="code-contracts"></a>Codeverträge
 Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Objektinvarianten im Code festzulegen. Vorbedingungen sind Anforderungen, die beim Eingeben einer Methode oder Eigenschaft erfüllt werden müssen. Nachbedingungen beschreiben Erwartungen zu dem Zeitpunkt, zu dem die Methode oder der Eigenschaftencode beendet wird. Objektinvarianten beschreiben den erwarteten Zustand für eine Klasse, die in einem einwandfreien Zustand ist.  
@@ -35,7 +35,7 @@ Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Obje
   
  Die meisten Methoden in der Vertragsklasse werden bedingt kompiliert. Das heißt, dass der Compiler nur dann Aufrufe dieser Methoden ausgibt, wenn Sie mithilfe der `#define`-Direktive ein Sonderzeichen (CONTRACTS_FULL) definieren. CONTRACTS_FULL ermöglicht das Schreiben von Verträgen in den Code ohne Verwendung von `#ifdef`-Direktiven. Sie können unterschiedliche Builds erstellen, von denen einige Verträge enthalten und andere keine Verträge enthalten.  
   
- Tools und detaillierte Anweisungen zur Verwendung von Codeverträgen finden Sie auf der MSDN DevLabs-Website unter [Codeverträge](http://go.microsoft.com/fwlink/?LinkId=152461).  
+ Tools und detaillierte Anweisungen zur Verwendung von Codeverträgen finden Sie auf der MSDN DevLabs-Website unter [Codeverträge](https://go.microsoft.com/fwlink/?LinkId=152461).  
   
 ## <a name="preconditions"></a>Vorbedingungen  
  Sie können Vorbedingungen mit der <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>-Methode ausdrücken. Vorbedingungen geben den Zustand beim Aufrufen einer Methode an. Sie werden im Allgemeinen zum Angeben gültiger Parameterwerte verwendet. Auf alle Member, die in Vorbedingungen erwähnt werden, muss mindestens wie auf die Methode selbst zugegriffen werden können. Andernfalls wird die Vorbedingung möglicherweise nicht von allen Aufrufern einer Methode verstanden. Die Bedingung darf keine Nebeneffekte haben. Das Laufzeitverhalten fehlerhafter Vorbedingungen wird durch die Laufzeitanalyse bestimmt.  

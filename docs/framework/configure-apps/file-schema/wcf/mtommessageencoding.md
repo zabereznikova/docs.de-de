@@ -2,12 +2,12 @@
 title: '&lt;mtomMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: 25990e5583ba1daca378af40e7e56953c95b4a66
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 380aa162d2bb55ac968bdd057a4bb45b2ea6abfe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746817"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452626"
 ---
 # <a name="ltmtommessageencodinggt"></a>&lt;mtomMessageEncoding&gt;
 Gibt die Codierungs- und Nachrichtenversionierung an, die für SOAP MTOM-basierte (Message Transmission Optimization Mechanism) Nachrichten verwendet wird.  
@@ -46,7 +46,7 @@ Gibt die Codierungs- und Nachrichtenversionierung an, die für SOAP MTOM-basiert
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

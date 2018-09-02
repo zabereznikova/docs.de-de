@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: a701a516a93cf94f76950b7b1b1c7f3a9b41214e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a8dcd0a835bb669b669d5a510e01142c85ea07a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505843"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421223"
 ---
 # <a name="discovery-security-sample"></a>Beispiel für Ermittlungssicherheit
-Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang beteiligt sind, sicher sein müssen. Die Erweiterung der Sicherheit von Suchmeldungen mindert das Risiko für verschiedene Angriffe (Meldungsänderung, Denial of Service, Wiederholung, Spoofing). In diesem Beispiel werden benutzerdefinierte Kanäle implementiert, die Meldungssignaturen mit dem kompakten Signaturformat berechnen und verifizieren. (Dies wird in Abschnitt 8.2 der WS-Discovery-Spezifikation beschrieben.) Das Beispiel unterstützt sowohl die [Discovery-Spezifikation von 2005](http://go.microsoft.com/fwlink/?LinkId=177912) und [Version 1.1](http://go.microsoft.com/fwlink/?LinkId=179677).  
+Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang beteiligt sind, sicher sein müssen. Die Erweiterung der Sicherheit von Suchmeldungen mindert das Risiko für verschiedene Angriffe (Meldungsänderung, Denial of Service, Wiederholung, Spoofing). In diesem Beispiel werden benutzerdefinierte Kanäle implementiert, die Meldungssignaturen mit dem kompakten Signaturformat berechnen und verifizieren. (Dies wird in Abschnitt 8.2 der WS-Discovery-Spezifikation beschrieben.) Das Beispiel unterstützt die [Discovery-Spezifikation von 2005](https://go.microsoft.com/fwlink/?LinkId=177912) und [Version 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
   
  Der benutzerdefinierte Kanal wird an die oberste Stelle des vorhandenen Kanalstapels für Ermittlungs- und Ankündigungsendpunkte gesetzt. Auf diese Weise wird ein Signaturheader für jede gesendete Meldung übernommen. Die Signatur wird im Hinblick auf empfangene Meldungen überprüft. Wenn die Signatur nicht übereinstimmt oder die Meldungen nicht über eine Signatur verfügen, werden sie verworfen. Im Beispiel werden Zertifikate verwendet, um Meldungen zu signieren und zu überprüfen.  
   
@@ -39,7 +39,7 @@ Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang 
 > [!NOTE]
 >  Die `PrefixList` wurde dem Protokoll der Discovery-Version 2008 hinzugefügt.  
   
- Im Beispiel werden die erweiterten Signaturelemente bestimmt, um die Signatur zu berechnen. Wie in der WS-Discovery-Spezifikation gefordert, wird eine XML-Signatur (`SignedInfo`) mit dem `ds`-Namespacepräfix erstellt. In der Signatur wird auf den Text und auf alle Header in Ermittlungs- und Adressierungsnamespaces verwiesen, damit diese nicht manipuliert werden können. Jedes referenzierte Element wird mit der exklusiven Kanonisierung transformiert (http://www.w3.org/2001/10/xml-exc-c14n# ), und klicken Sie dann ein SHA-1-Digestwert berechnet wird (http://www.w3.org/2000/09/xmldsig#sha1 ). Grundlage aller referenzierten Elemente und deren digestwerte, die ist Signaturwert mithilfe des RSA-Algorithmus (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
+ Im Beispiel werden die erweiterten Signaturelemente bestimmt, um die Signatur zu berechnen. Wie in der WS-Discovery-Spezifikation gefordert, wird eine XML-Signatur (`SignedInfo`) mit dem `ds`-Namespacepräfix erstellt. In der Signatur wird auf den Text und auf alle Header in Ermittlungs- und Adressierungsnamespaces verwiesen, damit diese nicht manipuliert werden können. Jedes referenzierte Element transformiert wird, mit der exklusiven Kanonisierung (http://www.w3.org/2001/10/xml-exc-c14n# ), und klicken Sie dann ein SHA-1-Digest-Wert wird berechnet (http://www.w3.org/2000/09/xmldsig#sha1 ). Auf der Grundlage aller referenzierten Elemente und deren digestwerte, die ist Signaturwert mithilfe des RSA-Algorithmus (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
  Die Meldungen werden mit einem vom Client angegebenen Zertifikat signiert. Bei der Erstellung des Bindungselements müssen Speicherort, Name und Zertifikatantragstellername angegeben werden. Die `KeyId` in der kompakten Signatur stellt den Schlüsselbezeichner des Signaturtokens dar und ist die Schlüsselkennung des Antragstellers (SKI) des Signaturtokens oder, wenn der SKI nicht vorhanden ist, ein SHA-1-Hash des öffentlichen Schlüssels des Signaturtokens.  
   
@@ -51,11 +51,11 @@ Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang 
   
 -   **DiscoverySecurityChannels**: eine Bibliothek, die die sichere Bindung verfügbar macht. Die Bibliothek berechnet und überprüft die kompakte Signatur für ausgehende/eingehende Meldungen.  
   
--   **Dienst**: Verfügbarmachen von ICalculatorService-Vertrag Dienst selbst gehostet. Der Dienst wird als erkennbar markiert. Der Benutzer gibt die Details des Zertifikats an, mit dem Meldungen signiert werden. Dazu werden Speicherort, Name und Antragsstellername oder andere eindeutige Bezeichner für das Zertifikat sowie der Speicher, in dem sich die Clientzertifikate befinden, angegeben. (Clientzertifikate sind Zertifikate, mit denen die Signatur auf eingehende Meldungen überprüft werden.) Auf Grundlage dieser Details wird ein UdpDiscoveryEndpoint mit zusätzlicher Sicherheit erstellt und verwendet.  
+-   **Dienst**: einen Dienst verfügbar machen ICalculatorService-Vertrag selbst gehostet. Der Dienst wird als erkennbar markiert. Der Benutzer gibt die Details des Zertifikats an, mit dem Meldungen signiert werden. Dazu werden Speicherort, Name und Antragsstellername oder andere eindeutige Bezeichner für das Zertifikat sowie der Speicher, in dem sich die Clientzertifikate befinden, angegeben. (Clientzertifikate sind Zertifikate, mit denen die Signatur auf eingehende Meldungen überprüft werden.) Auf Grundlage dieser Details wird ein UdpDiscoveryEndpoint mit zusätzlicher Sicherheit erstellt und verwendet.  
   
--   **Client**: Diese Klasse versucht, einen ICalculatorService zu ermitteln und Methoden für den Dienst aufzurufen. Es wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> mit erweiterter Sicherheit erstellt, mit dem die Meldungen signiert und überprüft werden.  
+-   **Client**: Diese Klasse versucht, einen ICalculatorService zu ermitteln und Aufrufen von Methoden für den Dienst. Es wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> mit erweiterter Sicherheit erstellt, mit dem die Meldungen signiert und überprüft werden.  
   
--   **AnnouncementListener**: ein selbst gehosteter Dienst, der für Online- und offlineankündigungen lauscht und den sicheren ankündigungsendpunkt verwendet.  
+-   **AnnouncementListener**: ein selbst gehosteter Dienst, der auf Online- und offlineankündigungen lauscht und den sicheren ankündigungsendpunkt verwendet.  
   
 > [!NOTE]
 >  Wenn Setup.bat mehrmals ausgeführt wird, werden Sie vom Zertifikat-Manager dazu aufgefordert, ein Zertifikat auszuwählen, das hinzugefügt werden soll, da es doppelte Zertifikate gibt. In diesem Fall muss Setup.bat abgebrochen und Cleanup.bat aufgerufen werden, da die Duplikate bereits erstellt wurden. Sie werden außerdem von Cleanup.bat dazu aufgefordert, ein Zertifikat auszuwählen, das gelöscht werden soll. Wählen Sie ein Zertifikat aus der Liste aus, und führen Sie weiterhin Cleanup.bat aus, bis keine Zertifikate mehr verbleiben.  
@@ -73,7 +73,7 @@ Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   

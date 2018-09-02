@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - client area [Visual Basic], printing
 ms.assetid: c06c9c0e-bc07-48cd-9596-e29a2ff96236
-ms.openlocfilehash: 361db89f0880a03273aac7fc36b5c5faa825486f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2f13d1ec151a5fd1967b522a601e0e19de04cbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583990"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419283"
 ---
 # <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a>Gewusst wie: Drucken des Clientbereichs eines Formulars (Visual Basic)
 Mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Komponente können Sie schnell ein Bild eines Formulars drucken, ohne eine <xref:System.Drawing.Printing.PrintDocument> -Komponente zu verwenden. Die folgende Vorgehensweise zeigt, wie nur der Clientbereich eines Formulars gedruckt wird, ohne Titelleiste, Rahmen und Scrollleisten.  
   
- Die PowerPack-Steuerelemente sind nicht mehr in Visual Studio enthalten, Sie können sie jedoch aus dem [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=25169)herunterladen.  
+ Die PowerPack-Steuerelemente sind nicht mehr in Visual Studio enthalten, aber Sie können sie aus der [Downloadcenter](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ### <a name="to-print-the-client-area-of-a-form"></a>So drucken Sie den Clientbereich eines Formulars  
   
@@ -24,7 +24,7 @@ Mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Kompone
   
 2.  Legen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> auf <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>fest.  
   
-3.  Fügen Sie den folgenden Code in den passenden Ereignishandler (z. B. in der `Click` -Ereignishandler für ein **Drucken**`Button`).  
+3.  Fügen Sie den folgenden Code in die entsprechenden Ereignishandler (z. B. in der `Click` -Ereignishandler für ein **Drucken**`Button`).  
   
     ```  
     PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption.ClientAreaOnly)  

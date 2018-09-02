@@ -1,16 +1,16 @@
 ---
-title: My.Computer.Clipboard-Objekt
+title: My.Computer.Clipboard-Objekt (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 484f676070a1447067304dba1795d799c046dec6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f44908668fc48e8a45cd6f2dc686f3bb7ba4f67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595159"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418362"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard-Objekt
 Stellt Methoden zur Bearbeitung der Zwischenablage bereit.  
@@ -21,7 +21,7 @@ Stellt Methoden zur Bearbeitung der Zwischenablage bereit.
  Weitere Informationen finden Sie unter [Speichern von Daten in der Zwischenablage und Lesen aus der Zwischenablage](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
   
 > [!NOTE]
->  Sie können auch die Methoden der <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> Klasse, um die Zwischenablage zu bearbeiten.  
+>  Sie können auch Methoden zum Verwenden der <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> Klasse, um die Zwischenablage zu bearbeiten.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
