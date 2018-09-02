@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: e21b31805eb0b840866313f16cc85ea33c84e515
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8162dfc898f7965d65de918d2a5b1f7afbfdf9b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537124"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400848"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -34,7 +34,7 @@ ms.locfileid: "33537124"
  [Gewusst wie: Auslösen von Menüereignissen für Symbolleistenschaltflächen](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Bietet Anweisungen zum Schreiben von Code, in dem interpretiert wird, auf welche Schaltfläche ein Benutzer in einem `ToolBar`-Steuerelement geklickt hat.  
   
- Siehe auch [wie: Definieren eines Symbols für eine Symbolleiste Schaltfläche mithilfe des Designers](http://msdn.microsoft.com/library/ms233659\(v=vs.110\)), [wie: Hinzufügen von Schaltflächen, eine Symbolleisten-Steuerelement mithilfe des Designers](http://msdn.microsoft.com/library/ms233650\(v=vs.110\)).  
+ Siehe auch [wie: Definieren eines Symbols für eine Symbolleisten-Schaltfläche mithilfe der Designer](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement mithilfe der Designer](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.ToolBar>-Klasse  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 96697fa54b569b6d1ce092ebfc76ef593f2ac66f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539152"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401595"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Erstellen von Ereignishandlern in Windows Forms
 Ein Ereignishandler stellt eine Prozedur in Ihrem Code dar, mit der festgelegt wird, welche Aktionen beim Eintreten eines bestimmten Ereignisses durchgeführt werden. Dies bezieht sich beispielsweise auf jene Fälle bei denen der Benutzer auf eine Schaltfläche klickt oder eine Meldungswarteschlange eine Meldung empfängt. Wenn ein Ereignis ausgelöst wird, werden der Ereignishandler oder jene Handler ausgeführt, die das betreffende Ereignis empfangen. Ereignisse lassen sich mehreren Handlern zuweisen. Außerdem können die Methoden, die besondere Ereignisse verwalten, dynamisch geändert werden. Sie können zum Erstellen von Ereignishandlern auch den Windows Forms-Designer verwenden.  
@@ -34,7 +34,7 @@ Ein Ereignishandler stellt eine Prozedur in Ihrem Code dar, mit der festgelegt w
  [Ereignisreihenfolge in Windows Forms](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Beschreibt die Reihenfolge, in der Ereignisse in den Windows Forms-Steuerelementen ausgelöst werden.  
   
- [Vorgehensweise: Erstellen von Ereignishandlner mithilfe des Designers](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [Vorgehensweise: Erstellen von Ereignishandlner mithilfe des Designers](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
  Beschreibt, wie der Windows Forms-Designer zum Erstellen von Ereignishandlern verwendet wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

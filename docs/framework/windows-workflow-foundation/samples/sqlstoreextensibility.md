@@ -2,12 +2,12 @@
 title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-ms.openlocfilehash: 37c83a9c1062fe074e41ec5db211fd513355c045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518485"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408764"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 In diesem Beispiel werden die Verwendung und die Konfiguration von höher gestuften Eigenschaften im SQL-Workflowinstanzspeicher veranschaulicht. Beim SQL-Workflowinstanzspeicher handelt es sich um die SQL-basierte Implementierung eines Instanzspeichers. Diese ermöglicht einer Instanz das Speichern und Laden von Zuständen in eine bzw. aus einer SQL Server- oder SQL Server Express-Datenbank. Die Speichererweiterbarkeitsfunktion ermöglicht es Benutzern, Eigenschaften zu definieren, die im Instanzspeicher gespeichert werden. Diese Eigenschaften werden in einer höher gestuften Eigenschaftenansicht angezeigt, die es Benutzern ermöglicht, sie abzufragen.  
@@ -48,19 +48,19 @@ In diesem Beispiel werden die Verwendung und die Konfiguration von höher gestuf
     > [!WARNING]
     >  Wenn Sie die Datenbank auf einer nicht standardmäßigen Instanz von SQL Server installiert haben, aktualisieren Sie vor dem Erstellen der Projektmappe die Verbindungszeichenfolge im Code.  
   
-3.  Führen Sie das Beispiel mit Administratorrechten aus, navigieren Sie zur Bin-Verzeichnis des Projekts (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], mit der rechten Maustaste SqlStoreExtensibility.exe und Auswählen von **als ausführen Administrator**.  
+3.  Führen Sie das Beispiel mit Administratorrechten empfängerrollenbildschirm Bin-Verzeichnis des Projekts (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) im [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], mit der rechten Maustaste SqlStoreExtensibility.exe und Auswählen von **Ausführen als Administrator**.  
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>So überprüfen Sie die ordnungsgemäße Funktionsfähigkeit des Beispiels  
   
-1.  Verwenden Sie SQL Server Management Studio zum Anzeigen des Inhalts der instanztabelle dazu **Datenbanken**, **InstanceStore**, und klicken Sie dann  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** im Objekt-Explorer mit der Maustaste **System.ServiceModel.Activities.DurableInstancing.InstanceTable** und auswählen **Wählen Sie die oberste 1000 Zeilen**. Weitere Informationen zu SQL Server Management Studio finden Sie unter [Einführung in SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Verwenden Sie SQL Server Management Studio, um den Inhalt der instanztabelle dazu anzeigen **Datenbanken**, **InstanceStore**, und klicken Sie dann  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** im Objekt-Explorer mit der Maustaste **System.ServiceModel.Activities.DurableInstancing.InstanceTable** , und wählen Sie  **Wählen Sie die ersten 1000 Zeilen**. Weitere Informationen zu SQL Server Management Studio, finden Sie unter [Einführung in SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Achten Sie auf die aufgeführten Workflowinstanzen.  
   
 3.  Führen Sie an einer [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Eingabeaufforderung das Skript "QueryInstanceStore.cmd" aus, das sich im Beispielverzeichnis ("\WF\Basic\Persistence\SqlStoreExtensibility") befindet.  
   
-4.  Beobachten der Wert dieses Indikators angezeigt wird, klicken Sie unter **CountStatus**.  
+4.  Beobachten der Wert dieses Indikators angezeigt **CountStatus**.  
   
-5.  Führen Sie das Skript einige Male, finden Sie unter der **CountStats** -Wert ändert.  
+5.  Führen Sie das Skript einige Male, finden Sie unter den **CountStats** -Wert ändert.  
   
 6.  Drücken Sie die EINGABETASTE, um die Workflowanwendung zu beenden.  
   
@@ -73,11 +73,11 @@ In diesem Beispiel werden die Verwendung und die Konfiguration von höher gestuf
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
 ## <a name="see-also"></a>Siehe auch  
  [Workflowpersistenz](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [AppFabric-Hosting und Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

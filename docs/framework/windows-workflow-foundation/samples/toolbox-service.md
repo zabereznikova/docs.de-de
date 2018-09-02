@@ -2,12 +2,12 @@
 title: Toolboxdienst
 ms.date: 03/30/2017
 ms.assetid: 742212d0-445e-41ed-9739-9ee848ce7f1b
-ms.openlocfilehash: 0b3ea56d28d202bd8356fea1783b6675a708631d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b21f10c763f3f82591f947eb4cc48cf90f4ac79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516190"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406461"
 ---
 # <a name="toolbox-service"></a>Toolboxdienst
 Dieses Beispiel veranschaulicht, wie die [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Toolboxaktivitäten auf Grundlage des Kontexts des Workflows aktualisiert werden. Das Beispiel enthält einen Workflow, der den Toolboxinhalt danach ändert, ob eine benutzerdefinierte Aktivität ausgewählt wird.  
@@ -39,19 +39,19 @@ public interface IActivityToolboxService
   
 3.  Öffnen Sie die Datei "Workflow.xaml".  
   
-4.  Hinzufügen einer **CustomActivity** per Drag & Drop aus der Toolbox. Beachten Sie, die eine zusätzliche Toolboxkategorie: **neue WF-Kategorie** mit einer zusätzlichen Aktivität **zuweisen**.  
+4.  Hinzufügen einer **CustomActivity** per Drag & Drop aus der Toolbox. Beachten Sie, die eine zusätzliche Toolboxkategorie: **neue WF-Kategorie** mit einer zusätzlichen Aktivität **weisen**.  
   
 5.  Deaktivieren Sie nun die **CustomActivity** durch eine andere Aktivität hinein ziehen.  
   
-6.  Das Element **zuweisen** in der Kategorie **neue WF-Kategorie** in der Toolbox wird jetzt entfernt. Da es in der Kategorie keine Elemente mehr gibt, wird auch die Kategorie entfernt.  
+6.  Das Element **weisen** in der Kategorie **neue WF-Kategorie** in der Toolbox wird jetzt entfernt. Da es in der Kategorie keine Elemente mehr gibt, wird auch die Kategorie entfernt.  
   
-7.  Wählen Sie die **CustomActivity** erneut und die Kategorie und **zuweisen** Aktivität wieder hinzugefügt wird.  
+7.  Wählen Sie die **CustomActivity** erneut und die Kategorie und **weisen** Aktivität wieder hinzugefügt wird.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\IActivityToolboxService`

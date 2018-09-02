@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 57ed6045ca0ea9f9579640839e8198716cf79fe0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: daa8097bc5dfee203f988915b1e4a8bdcd2c50e0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760881"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408083"
 ---
 # <a name="finding-rows"></a>Suchen von Zeilen
-Mithilfe der <xref:System.Data.DataView.Find%2A>-Methode und der <xref:System.Data.DataView.FindRows%2A>-Methode von <xref:System.Data.DataView> kann nach Zeilen anhand deren Sortierschlüsselwerten gesucht werden. Die Groß-/Kleinschreibung der Suche nach Werten in der **suchen** und **FindRows** Methoden richtet sich nach der **CaseSensitive** Eigenschaft des zugrunde liegenden <xref:System.Data.DataTable>. Suchwerte müssen vollständig mit den vorhandenen Sortierschlüsselwerten übereinstimmen, um ein Ergebnis zurückzugeben.  
+Mithilfe der <xref:System.Data.DataView.Find%2A>-Methode und der <xref:System.Data.DataView.FindRows%2A>-Methode von <xref:System.Data.DataView> kann nach Zeilen anhand deren Sortierschlüsselwerten gesucht werden. Die Groß-/Kleinschreibung der Suche Werte in der **finden** und **FindRows** Methoden richtet sich nach der **CaseSensitive** Eigenschaft des zugrunde liegenden <xref:System.Data.DataTable>. Suchwerte müssen vollständig mit den vorhandenen Sortierschlüsselwerten übereinstimmen, um ein Ergebnis zurückzugeben.  
   
- Die **suchen** Methode gibt eine ganze Zahl mit dem Index für die <xref:System.Data.DataRowView> , die mit die Suchkriterien übereinstimmt. Wenn mehr als eine Zeile mit die Suchkriterien entsprechen, die nur der Index der ersten übereinstimmenden entspricht **DataRowView** zurückgegeben wird. Wenn keine Übereinstimmungen gefunden werden, **suchen** gibt-1 zurück.  
+ Die **finden** Methode gibt eine ganze Zahl, durch den Index des dem <xref:System.Data.DataRowView> , die den Suchkriterien entspricht. Wenn mehr als eine Zeile mit die Suchkriterien entsprechen, nur der Index der ersten übereinstimmenden entspricht **DataRowView** zurückgegeben wird. Wenn keine Übereinstimmungen gefunden werden, **finden** gibt-1 zurück.  
   
- Um Suchergebnisse zurückzugeben, die mehrere Zeilen entsprechen, verwenden die **FindRows** Methode. **FindRows** funktioniert wie die **suchen** Methode, mit der Ausnahme zurückgegeben, eine **DataRowView** Array, das alle übereinstimmenden Zeilen in verweist auf die **"DataView"**. Wenn keine Übereinstimmungen gefunden werden, die **DataRowView** Array leer sein wird.  
+ Verwenden, um Ergebnisse zurückzugeben, die mehrere Zeilen entsprechen den **FindRows** Methode. **FindRows** funktioniert wie die **finden** -Methode, mit dem Unterschied, dass die It gibt eine **DataRowView** Array, das alle übereinstimmenden Zeilen in verweist auf die **DataView**. Wenn keine Übereinstimmungen gefunden werden, die **DataRowView** Array leer sein wird.  
   
- Verwenden der **suchen** oder **FindRows** Methoden müssen Sie eine Sortierung angeben bestellen Sie hierfür entweder **ApplyDefaultSort** auf **"true"** oder mithilfe der **Sortieren** Eigenschaft. Wenn keine Sortierreihenfolge angegeben wurde, wird eine Ausnahme ausgelöst.  
+ Verwenden der **finden** oder **FindRows** Methoden müssen Sie eine Sortierung angeben bestellen, entweder durch Festlegen **ApplyDefaultSort** zu **"true"** oder mithilfe der **Sortierreihenfolge** Eigenschaft. Wenn keine Sortierreihenfolge angegeben wurde, wird eine Ausnahme ausgelöst.  
   
- Die **suchen** und **FindRows** Methoden akzeptieren ein Array von Werten als Eingabe, dessen Länge der Anzahl der Spalten in der Sortierreihenfolge entspricht. Wenn eine einzelne Spalte sortiert wird, kann ein einzelner Wert übergeben werden. Wenn eine Sortierreihenfolge mehrere Spalten enthält, wird ein Objektarray übergeben. Beachten Sie, dass für eine Sortierung für mehrere Spalten die Werte im Objektarray die Reihenfolge der Spalten im angegebenen entsprechen müssen die **sortieren** Eigenschaft von der **"DataView"**.  
+ Die **finden** und **FindRows** Methoden akzeptieren ein Array von Werten als Eingabe, dessen Länge der Anzahl der Spalten in der Sortierreihenfolge entspricht. Wenn eine einzelne Spalte sortiert wird, kann ein einzelner Wert übergeben werden. Wenn eine Sortierreihenfolge mehrere Spalten enthält, wird ein Objektarray übergeben. Beachten Sie, dass für eine Sortierung für mehrere Spalten die Werte im Objektarray die Reihenfolge der im angegebenen Spalten übereinstimmen müssen die **Sortierreihenfolge** Eigenschaft der **"DataView"**.  
   
- Das folgende Codebeispiel zeigt die **suchen** für aufgerufene Methode einen **"DataView"** mit einer einzelnen Spalte Sortierreihenfolge.  
+ Das folgende Codebeispiel zeigt die **finden** für aufgerufene Methode eine **DataView** mit einer einzelnen Spalte Sortierreihenfolge.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -55,7 +55,7 @@ else
     custView[rowIndex]["CompanyName"].ToString());  
 ```  
   
- Wenn Ihre **sortieren** -Eigenschaft mehrere Spalten angibt, müssen Sie ein Objektarray mit den Suchwerten für jede Spalte in der Reihenfolge, angegeben durch Übergeben der **sortieren** -Eigenschaft wie im folgenden Codebeispiel wird.  
+ Wenn Ihre **Sortierreihenfolge** -Eigenschaft mehrere Spalten angibt, müssen Sie ein Objektarray mit den Suchwerten für jede Spalte in der vom angegebenen Reihenfolge übergeben die **sortieren** -Eigenschaft wie im folgenden Codebeispiel wird.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -97,4 +97,4 @@ else
  <xref:System.Data.DataTable>  
  <xref:System.Data.DataView>  
  [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

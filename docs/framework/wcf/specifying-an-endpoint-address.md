@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: f7e2253c527cbb2b6f21b222b1e9691c2ecff01f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 718a0c086181546ba7b7fb3b31fce0732dd99382
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809117"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401766"
 ---
 # <a name="specifying-an-endpoint-address"></a>Angeben einer Endpunktadresse
 Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über dessen Endpunkte. Jeder <xref:System.ServiceModel.Description.ServiceEndpoint> enthält eine <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, eine <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> und einen <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Der Vertrag gibt an, welche Vorgänge verfügbar sind. Die Bindung gibt an, wie eine Kommunikation mit dem Dienst stattfindet, und die Adresse gibt an, wo sich der Dienst befindet. Jeder Endpunkt muss eine eindeutige Adresse haben. Die Endpunktadresse wird durch die <xref:System.ServiceModel.EndpointAddress>-Klasse dargestellt, die einen Uniform Resource Identifier (URI) enthält, der die Adresse des Diensts darstellt, eine <xref:System.ServiceModel.EndpointAddress.Identity%2A>, die die Sicherheitsidentität des Diensts darstellt, und eine Auflistung der optionalen <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Die optionalen Header stellen zusätzliche, ausführlichere Adressinformationen bereit, um den Endpunkt zu identifizieren oder mit ihm zu interagieren. Die Header können beispielsweise angeben, wie eine eingehende Nachricht zu bearbeiten ist, wohin der Endpunkt eine Antwortnachricht senden sollte, oder welche Instanz eines Diensts für die Bearbeitung einer eingehenden Nachricht verwendet werden soll, wenn mehrere Instanzen verfügbar sind.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Definition einer Endpunktadresse  
- In WCF ein <xref:System.ServiceModel.EndpointAddress> Modelliert eine endpunktreferenz (EPR), wie in der WS-Adressierungsstandard definiert.  
+ In WCF ein <xref:System.ServiceModel.EndpointAddress> Modelliert einen Endpunktverweis (EPR), wie in der WS-Adressierungsstandard definiert.  
   
- Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Beispielsweise diese URI "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" besteht aus den folgenden vier Teilen:  
+ Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Z. B. diesen URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` besteht aus folgenden vier Teilen:  
   
 -   Schema: http:  
   
--   Computer: www.fabrikam.com  
+-   Computer: `www.fabrikam.com`  
   
 -   (Optional) Port: 322  
   
@@ -36,16 +36,16 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
   
  Es gibt zwei Möglichkeiten, Endpunktadressen für einen Dienst in WCF anzugeben. Sie können eine absolute Adresse für jeden dem Dienst zugeordneten Endpunkt angeben, oder Sie können eine Basisadresse für den <xref:System.ServiceModel.ServiceHost> eines Diensts bereitstellen und dann eine relativ zu dieser Basisadresse definierte Adresse für jeden dem Dienst zugeordneten Endpunkt angeben. Sie können mit jedem dieser Verfahren entweder im Code oder in der Konfiguration die Endpunktadressen für einen Dienst angeben. Wenn Sie keine relative Adresse angeben, verwendet der Dienst die Basisadresse. Sie können für einen Dienst auch mehrere Adressen angeben, jedoch ist für jeden Dienst nur eine Basisadresse für jeden Transport zulässig. Wenn Sie mehrere Endpunkte haben, von denen jeder mit einer anderen Bindung konfiguriert ist, müssen deren Adressen eindeutig sein. Endpunkte, die die gleiche Bindung, aber verschiedene Verträge verwenden, können die gleiche Adresse verwenden.  
   
- Wenn Sie in IIS hosten, verwalten Sie die <xref:System.ServiceModel.ServiceHost>-Instanz nicht selbst. Für einen in IIS gehosteten Dienst ist die Basisadresse immer die in der SVC-Datei angegebene Adresse. Daher müssen Sie relative Endpunktadressen für IIS-gehostete Dienstendpunkte verwenden. Die Angabe einer voll qualifizierten Endpunktadresse kann zu Fehlern bei der Bereitstellung des Diensts führen. Weitere Informationen finden Sie unter [Bereitstellen eines WCF-Diensts (englischsprachig)](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
+ Wenn Sie in IIS hosten, verwalten Sie die <xref:System.ServiceModel.ServiceHost>-Instanz nicht selbst. Für einen in IIS gehosteten Dienst ist die Basisadresse immer die in der SVC-Datei angegebene Adresse. Daher müssen Sie relative Endpunktadressen für IIS-gehostete Dienstendpunkte verwenden. Die Angabe einer voll qualifizierten Endpunktadresse kann zu Fehlern bei der Bereitstellung des Diensts führen. Weitere Informationen finden Sie unter [Bereitstellen eines IIS-gehosteten WCF-Diensts](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definieren von Endpunktadressen in der Konfiguration  
- Verwenden Sie zum Definieren eines Endpunkts in einer Konfigurationsdatei der [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.  
+ Verwenden Sie zum Definieren eines Endpunkts in einer Konfigurationsdatei das [ \<Endpunkt >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   
- Bei der <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> -Methode aufgerufen wird, (d. h., wenn die Hostinganwendung versucht, den Dienst zu starten), sucht das System für eine [ \<Service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) Element mit einem Namensattribut, der angibt, "UE. Samples.HelloService". Wenn die [ \<Service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) Element gefunden wird, das System lädt die angegebene Klasse und Endpunkte, die bereitgestellt werden, in der Konfigurationsdatei Endpunktdefinitionen erstellt. Dieser Mechanismus erlaubt Ihnen, mit nur zwei Zeilen Code einen Dienst zu laden und zu starten, ohne dass die Bindungs- und Adressierungsinformationen im Code enthalten sein müssen. Der Vorteil dieses Ansatzes zeigt sich darin, dass diese Änderungen ohne Neukompilierung oder erneute Bereitstellung der Anwendung durchgeführt werden können.  
+ Wenn die <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> (d. h., wenn die hostanwendung versucht, den Dienst starten)-Methode aufgerufen wird, sucht das System nach einer [ \<Service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) Element mit einem Namensattribut, der angibt, "UE. Samples.HelloService". Wenn die [ \<Service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) Element gefunden wird, wird das System die angegebene Klasse geladen und erstellt Endpunkte mithilfe der in der Konfigurationsdatei bereitgestellten Endpunktdefinitionen. Dieser Mechanismus erlaubt Ihnen, mit nur zwei Zeilen Code einen Dienst zu laden und zu starten, ohne dass die Bindungs- und Adressierungsinformationen im Code enthalten sein müssen. Der Vorteil dieses Ansatzes zeigt sich darin, dass diese Änderungen ohne Neukompilierung oder erneute Bereitstellung der Anwendung durchgeführt werden können.  
   
- Die optionalen Header in deklariert eine [ \<Header >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Im folgenden ist ein Beispiel für die Elemente verwendet, um die Endpunkte für einen Dienst in einer Konfigurationsdatei angeben, die zwischen zwei Headern unterscheidet: "Gold"-Clients von http://tempuri1.org/ und "Standard"-Clients von http://tempuri2.org/. Der Client Aufrufen dieses Diensts benötigen die entsprechenden [ \<Header >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) in der Konfigurationsdatei.  
+ Die optionalen Header werden in deklariert eine [ \<Header >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Folgendes ist ein Beispiel für die Elemente verwendet, um die Endpunkte für einen Dienst in einer Konfigurationsdatei angeben, die zwischen zwei Headern unterscheidet: "Gold"-Clients von `http://tempuri1.org/` und "Standard"-Clients von `http://tempuri2.org/`. Der Client, der diesen Dienst aufruft, müssen die entsprechenden [ \<Header >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) in der Konfigurationsdatei.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -80,7 +80,7 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
 ## <a name="using-default-endpoints"></a>Verwenden von Standardendpunkten  
  Wenn im Code oder in der Konfiguration keine Endpunkte angegeben sind, stellt die Runtime Standardendpunkte bereit, indem ein Standardendpunkt für alle Basisadressen in jedem Dienstvertrag, der vom Dienst implementiert wird, hinzugefügt wird. Die Basisadresse kann im Code oder in der Konfiguration angegeben werden, und die Standardendpunkte werden hinzugefügt, wenn <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> auf dem <xref:System.ServiceModel.ServiceHost> aufgerufen wird.  
   
- Wenn Endpunkte explizit bereitgestellt werden, können die Standardpunkte dennoch hinzugefügt werden, indem <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> auf dem <xref:System.ServiceModel.ServiceHost> aufgerufen wird, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. Weitere Informationen zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Wenn Endpunkte explizit bereitgestellt werden, können die Standardpunkte dennoch hinzugefügt werden, indem <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> auf dem <xref:System.ServiceModel.ServiceHost> aufgerufen wird, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.EndpointAddress>  

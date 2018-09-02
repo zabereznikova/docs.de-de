@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8232691c697c51b5a480a68c6d952f294a63460
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 938044a4e932139eb8a4d0a5d2f998cbc6f193cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460226"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405526"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next-Funktion
-Ruft den nächsten Qualifizierer in einer Enumeration, die durch einen Aufruf gestartet der [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) Funktion.   
+Ruft ab, der nächsten Qualifizierer in einer Enumeration, die durch einen Aufruf gestartet hat die [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) Funktion.   
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -47,42 +47,42 @@ HRESULT QualifierSet_Next (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`   
-[in] Ein Zeiger auf ein [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) Instanz.
 
 `lFlags`   
 [in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pstrName`   
-[out] Der Name des Qualifizierers. Wenn `null`, dieser Parameter wird ignoriert, andernfalls `pstrName` sollte nicht auf eine gültige verweisen `BSTR` oder tritt ein Speicherverlust auf. Wenn nicht null ist, die Funktion immer ein neues ordnet `BSTR` bei Rückgabe `WBEM_S_NO_ERROR`.
+[out] Der Name des Qualifizierers. Wenn `null`, dieser Parameter wird ignoriert, andernfalls `pstrName` sollten verweist nicht auf einen gültigen `BSTR` oder ein Speicherverlust auftritt. Wenn nicht null ist, die Funktion immer eine neue zuordnet `BSTR` Wenn gibt `WBEM_S_NO_ERROR`.
 
 `pVal`   
 [out] Bei erfolgreicher Ausführung der Wert für den Qualifizierer. Wenn die Funktion fehlschlägt, die `VARIANT` verweist `pVal` wird nicht geändert. Wenn dieser Parameter ist `null`, der Parameter wird ignoriert.
 
 `plFlavor`   
-[out] Ein Zeiger auf einen Long-Wert, der die Qualifizierertyp empfängt. Dieser Parameter kann sein, wenn Flavor-Informationen nicht erwünscht ist, `null`. 
+[out] Ein Zeiger auf einen Long-Wert, der die Qualifizierertyp empfängt. Dieser Parameter kann sein, wenn der Typ-Informationen nicht gewünscht ist, `null`. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Der Aufrufer nicht aufrufen [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um eine neue Enumeration zu beginnen. |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | Keine weitere Qualifizierer befinden sich in der Enumeration. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher zur Verfügung, um eine neue Enumeration beginnen. |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | Keine weitere Qualifizierer bleiben in der Enumeration. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemQualifierSet::Next](https://msdn.microsoft.com/library/aa391870(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemQualifierSet::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) Methode.
 
-Rufen Sie die `QualifierSet_Next` Funktion mehrmals, um alle Qualifizierer erst die Funktionsrückgabe aufzählen `WBEM_S_NO_MORE_DATA`. Um die Enumeration frühzeitig zu beenden, rufen Sie die [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) Funktion.
+Rufen Sie die `QualifierSet_Next` Funktion mehrmals, um alle Qualifizierer erst die Funktionsrückgabe aufzählen `WBEM_S_NO_MORE_DATA`. Um die Enumeration zu einem frühen Zeitpunkt zu beenden, rufen Sie die [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) Funktion.
 
 Die Reihenfolge der Qualifizierer, die zurückgegeben werden, während der Enumeration ist nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

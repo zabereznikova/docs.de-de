@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Get-Funktion (Referenz zur nicht verwalteten API)
-description: Die Funktion QualifierSet_Get Ruft einen benannten Qualifizierer ab.
+description: Die QualifierSet_Get-Funktion ruft einen benannten Qualifizierers ab.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Get
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458646"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415393"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get-Funktion
-Ruft den angegebenen benannten Qualifizierer ab.  
+Ruft den angegebenen benannten Qualifizierers ab.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -47,23 +47,23 @@ HRESULT QualifierSet_Get (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`   
-[in] Ein Zeiger auf ein [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) Instanz.
 
 `wszName`   
-[in] Der Name des Qualifizierers der, deren Wert angefordert wird.
+[in] Der Name des Qualifizierers, deren Wert angefordert wird.
 
 `lFlags`   
 [in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pVal`   
-[out] Bei erfolgreicher Ausführung, den richtigen Typ und Wert für den Qualifizierer. Wenn die Funktion fehlschlägt, die `VARIANT` verweist `pVal` wird nicht geändert. Wenn dieser Parameter ist `null`, der Parameter wird ignoriert.
+[out] Bei erfolgreicher Ausführung den richtigen Typ und Wert für den Qualifizierer. Wenn die Funktion fehlschlägt, die `VARIANT` verweist `pVal` wird nicht geändert. Wenn dieser Parameter ist `null`, der Parameter wird ignoriert.
 
 `plFlavor`   
-[out] Ein Zeiger auf einen Long-Wert, der die Qualifizierer Flavor Bits für den Qualifizierer des angeforderten empfängt. Dieser Parameter kann sein, wenn Flavor-Informationen nicht erwünscht ist, `null`. 
+[out] Ein Zeiger auf einen Long-Wert, der die Qualifizierer Flavor-Bits für den Qualifizierer des angeforderten empfängt. Dieser Parameter kann sein, wenn der Typ-Informationen nicht gewünscht ist, `null`. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
@@ -73,10 +73,10 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemQualifierSet::Get](https://msdn.microsoft.com/library/aa391867(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

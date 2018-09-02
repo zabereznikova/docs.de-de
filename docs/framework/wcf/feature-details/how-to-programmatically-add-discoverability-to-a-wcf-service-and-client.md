@@ -2,21 +2,21 @@
 title: 'Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495482"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408258"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client
-In diesem Thema wird erläutert, wie einen Windows Communication Foundation (WCF)-Dienst erkennbar gemacht wird. Es basiert auf der [Selbsthosting](http://go.microsoft.com/fwlink/?LinkId=145523) Beispiel.  
+In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation (WCF)-Dienst erkennbar zu machen. Es basiert auf der [Selbsthosting](https://go.microsoft.com/fwlink/?LinkId=145523) Beispiel.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>So konfigurieren Sie das vorhandene Beispiel unter "Selbst gehostete Dienste" für die Suche  
   
 1.  Öffnen Sie in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] die entsprechende Projektmappe (Self-Host). Das Beispiel befindet sich im Verzeichnis "TechnologySamples\Basic\Service\Hosting\SelfHost".  
   
-2.  Fügen Sie dem Dienstprojekt einen Verweis auf `System.ServiceModel.Discovery.dll` hinzu. Sie sehen eine Fehlermeldung angezeigt "System. ServiceModel.Discovery.dll oder eine seiner Abhängigkeiten erfordert eine höhere Version von der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] als die im Projekt... " Wenn Sie diese Meldung angezeigt wird, mit der rechten Maustaste des Projekts im Projektmappen-Explorer, und wählen Sie **Eigenschaften**. In der **Projekteigenschaften** Fenster, stellen Sie sicher, dass die **Zielframework** ist [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2.  Fügen Sie dem Dienstprojekt einen Verweis auf `System.ServiceModel.Discovery.dll` hinzu. Sie möglicherweise eine Fehlermeldung angezeigt "System. ServiceModel.Discovery.dll oder eine ihrer Abhängigkeiten erfordert eine höhere Version von der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] als die im Projekt... " Wenn diese Meldung angezeigt wird, mit der rechten Maustaste in des Projekts im Projektmappen-Explorer, und wählen Sie **Eigenschaften**. In der **Projekteigenschaften** Fenster, stellen Sie sicher, dass die **Zielframework** ist [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3.  Öffnen Sie die Datei "Service.cs", und fügen Sie die folgende `using`-Anweisung hinzu.  
   
@@ -60,7 +60,7 @@ In diesem Thema wird erläutert, wie einen Windows Communication Foundation (WCF
   
 2.  Fügen Sie einen Verweis auf `System.ServiceModel.dll` und `System.ServiceModel.Discovery.dll` hinzu.  
   
-3.  Kopieren Sie die Dateien "GeneratedClient.cs" und "App.config" aus dem vorhandenen Clientprojekt in das neue DiscoveryClientApp-Projekt. Maustaste Sie dazu die Dateien in der **Projektmappen-Explorer**Option **Kopie**, und wählen Sie dann die **DiscoveryClientApp** -Projekts mit der rechten Maustaste, und wählen Sie **Einfügen**.  
+3.  Kopieren Sie die Dateien "GeneratedClient.cs" und "App.config" aus dem vorhandenen Clientprojekt in das neue DiscoveryClientApp-Projekt. Dazu, mit der Maustaste der Dateien in die **Projektmappen-Explorer**Option **Kopie**, und wählen Sie dann die **DiscoveryClientApp** -Projekts mit der rechten Maustaste, und wählen Sie **Einfügen**.  
   
 4.  Öffnen Sie die Datei Program.cs.  
   
@@ -92,7 +92,7 @@ In diesem Thema wird erläutert, wie einen Windows Communication Foundation (WCF
     }  
     ```  
   
-     Dies teilt WCF, die die <xref:System.ServiceModel.Discovery.DiscoveryClient> Klasse sollten den standardmäßigen UDP-suchendpunkt zum Senden und Empfangen von Suchmeldungen verwenden.  
+     Diese teilt WCF, die die <xref:System.ServiceModel.Discovery.DiscoveryClient> Klasse sollte den standardmäßigen UDP-suchendpunkt zum Senden und Empfangen von Suchmeldungen verwenden.  
   
 8.  Rufen Sie in der nächsten Zeile die <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>-Methode auf, und geben Sie eine <xref:System.ServiceModel.Discovery.FindCriteria>-Instanz an, die den zu suchenden Dienstvertrag enthält. Geben Sie in diesem Fall `ICalculator` an.  
   
@@ -124,7 +124,7 @@ In diesem Thema wird erläutert, wie einen Windows Communication Foundation (WCF
   
      Diese Methode verwendet die von `FindCalculatorServiceAddress` zurückgegebene Endpunktadresse zum Aufrufen des Rechnerdiensts.  
   
-11. Erstellen Sie innerhalb der `InvokeCalculatorService`-Methode eine Instanz der `CalculatorServiceClient`-Klasse. Diese Klasse wird definiert, indem Sie die [Selbsthosting](http://go.microsoft.com/fwlink/?LinkId=145523) Beispiel. Sie wurde mithilfe von "Svcutil.exe" generiert.  
+11. Erstellen Sie innerhalb der `InvokeCalculatorService`-Methode eine Instanz der `CalculatorServiceClient`-Klasse. Diese Klasse wird definiert, durch die [Selbsthosting](https://go.microsoft.com/fwlink/?LinkId=145523) Beispiel. Sie wurde mithilfe von "Svcutil.exe" generiert.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ In diesem Thema wird erläutert, wie einen Windows Communication Foundation (WCF
     ```  
   
 ## <a name="example"></a>Beispiel  
- Es folgt eine Auflistung des Codes für dieses Beispiel. Dieser Code basiert auf der [Selbsthosting](http://go.microsoft.com/fwlink/?LinkId=145523) Beispiel nur die Dateien, die geändert werden, werden aufgeführt. Weitere Informationen zu dem Beispiel Selbsthosting finden Sie unter [Setupanweisungen](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ Es folgt eine Auflistung des Codes für dieses Beispiel. Da dieser Code basiert die [Selbsthosting](https://go.microsoft.com/fwlink/?LinkId=145523) Beispiel nur die geänderten Dateien werden aufgeführt. Weitere Informationen über das Self-Hosting-Beispiel finden Sie unter [Setupanweisungen](https://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

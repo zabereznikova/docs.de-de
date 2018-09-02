@@ -2,12 +2,12 @@
 title: Empfohlene Vorgehensweisen für die Persistenz
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: 68164cc937c1c718df39c96c3d6ac490ab025fae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520187"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404689"
 ---
 # <a name="persistence-best-practices"></a>Empfohlene Vorgehensweisen für die Persistenz
 In diesem Dokument werden empfohlene Vorgehensweisen für Entwurf und Konfiguration von Workflows bezüglich der Workflowpersistenz behandelt.  
@@ -21,7 +21,7 @@ In diesem Dokument werden empfohlene Vorgehensweisen für Entwurf und Konfigurat
   
  Bei Workflows, die über einen langen Zeitraum ausgelastet sind, wird empfohlen, die Workflowinstanz in diesem Zeitraum regelmäßig persistent zu speichern. Hierzu können Sie <xref:System.Activities.Statements.Persist>-Aktivitäten in der Abfolge von Aktivitäten einfügen, durch die die Workflowinstanz ausgelastet ist. Bei einer Wiederherstellung der Anwendungsdomäne oder einem Ausfall des Hosts oder Computers wird das System dann nicht wieder auf den Anfang des Auslastungszeitraums zurückgesetzt. Bedenken Sie, dass das Hinzufügen von <xref:System.Activities.Statements.Persist>-Aktivitäten zum Workflow zu Leistungseinbußen führen kann.  
   
- Windows Server AppFabric erleichtert die Konfiguration und Verwendung von Persistenz erheblich. Weitere Informationen finden Sie unter [Windows Server App Fabric-Persistenz](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server AppFabric erleichtert die Konfiguration und Verwendung von Persistenz erheblich. Weitere Informationen finden Sie unter [Windows Server App Fabric-Persistenz](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Konfiguration von Skalierbarkeitsparametern  
  Die Einstellungen der folgenden Parameter hängen von den Anforderungen an die Skalierbarkeit und Leistung ab:  

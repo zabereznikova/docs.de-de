@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 3446b6b8eeb646fa8929efa10366cb6a83627eae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652011"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402614"
 ---
 # <a name="visual-basic-language-features"></a>Funktionen von Visual Basic
-In den folgenden Themen vorstellen und besprechen die grundlegenden Komponenten von Visual Basic, einer objektorientierten Programmiersprache. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Visual Basic unterstützt wie jede moderne Programmiersprache eine Reihe von allgemeine Programmierungskonstrukte und Sprachelemente.  
+In den folgenden Themen vorgestellt, und es erläutert die wesentlichen Komponenten von Visual Basic, einer objektorientierten Programmiersprache. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Wie jede moderne Programmiersprache unterstützt Visual Basic eine Reihe gebräuchlicher Programmierkonstrukte und Sprachelemente.  
   
- Wenn Sie bereits in anderen Sprachen programmiert haben, wird Ihnen vieles in diesem Abschnitt bekannt vorkommen. Während die meisten Konstrukte in anderen Sprachen vergleichbar sind, führt Visual Basic Charakter ereignisgesteuerte einige feine Unterschiede.  
+ Wenn Sie bereits in anderen Sprachen programmiert haben, wird Ihnen vieles in diesem Abschnitt bekannt vorkommen. Während die meisten Konstrukte ähneln denen in anderen Sprachen sind, führt der ereignisgesteuerten Natur von Visual Basic einige feine Unterschiede.  
   
- Wenn Sie noch keine Erfahrung mit dem Programmieren haben, erhalten Sie in diesem Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code. Nachdem Sie die Grundlagen verstanden haben, können Sie leistungsstarke Anwendungen, die mit Visual Basic erstellen.  
+ Wenn Sie noch keine Erfahrung mit dem Programmieren haben, erhalten Sie in diesem Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code. Wenn Sie die Grundlagen verstanden haben, können Sie leistungsstarke Anwendungen, die mithilfe von Visual Basic erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -78,7 +78,7 @@ In den folgenden Themen vorstellen und besprechen die grundlegenden Komponenten 
  Dieser Artikel enthält Links zu Themen, in denen die Verwendung von XML in Visual Basic beschrieben wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Sammlungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Sammlungen](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  Dieser Artikel beschreibt einige der Auflistungstypen, die von .NET Framework bereitgestellt werden. Veranschaulicht, wie einfache Auflistungen und Auflistungen von Schlüssel-Wert-Paaren verwendet werden.  
   
  [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254352"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418964"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Framework-Apps oder Apps bereitgestellt, die großen Datenmengen wie Dateien oder Datenbanken verarbeiten. Die Tipps stammen aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code, und dieser Artikel enthält mehrere reale Beispiele aus dem C#-Compiler.  
@@ -38,7 +38,7 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
  Sie sollten Leistungsziele für wichtige Kundenerfahrungen oder -szenarien in Ihrer App festlegen und Tests schreiben, um die Leistung zu messen.  Untersuchen Sie fehlschlagende Tests, indem Sie die wissenschaftliche Methode anwenden: Verwenden Sie Profile, um Ihnen die Richtung zu weisen, stellen Sie Hypothesen auf, worin das Problem bestehen könnte, und testen Sie Ihre Hypothese mit einem Experiment oder einer Codeänderung.  Richten Sie Baselineleistungsmessungen über die Zeit mit regelmäßigen Tests ein, damit Sie Änderungen isolieren können, die Leistungsregressionen verursachen.  Wenn Sie die Leistungsarbeit auf eine rigorose Weise angehen, verschwenden Sie keine Zeit mit Codeaktualisierungen, die Sie nicht benötigen.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Tatsache 3: Gute Tools machen einen großen Unterschied.  
- Mit guten Tools können Sie schnell einen Drilldown in die größten Leistungsprobleme (CPU, Speicher oder Datenträger) ausführen und den Code finden, der diese Engpässe verursacht.  Microsoft bietet eine Reihe von Leistungstools wie [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone Analysis Tool](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) und [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ Mit guten Tools können Sie schnell einen Drilldown in die größten Leistungsprobleme (CPU, Speicher oder Datenträger) ausführen und den Code finden, der diese Engpässe verursacht.  Microsoft bietet eine Reihe von Leistungstools wie [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone Analysis Tool](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) und [PerfView](https://www.microsoft.com/download/details.aspx?id=28567).  
   
  PerfView ist ein kostenloses und erstaunlich leistungsstarkes Tool, mit dem Sie sich auf tiefliegende Probleme wie Datenträger-E/A, GC-Ereignisse und Arbeitsspeicher konzentrieren können.  Sie erfassen leistungsrelevante Ereignisse der [Ereignisablaufverfolgung für Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (Event Tracing for Windows, ETW) und zeigen auf einfache Weise Informationen pro App, pro Prozess, pro Stapel und pro Thread an.  PerfView zeigt Ihnen, wie viel und welche Art von Speicher Ihre App zuweist und welche Funktionen oder Aufrufstapel zu welchem Anteil der Speicherbelegungen beitragen. Einzelheiten finden Sie in den umfassenden Hilfethemen, Demos und Videos, die mit dem Tool ausgeliefert werden (zum Beispiel die [PerfView-Tutorials](http://channel9.msdn.com/Series/PerfView-Tutorial) auf Channel 9).  
   
@@ -281,7 +281,7 @@ Language Integrated Query (LINQ), zusammen mit Lambda-Ausdrücke, ist ein Beispi
   
  **Example 5: Lambdas, List\<T> und IEnumerable\<T>**  
   
- Dieses Beispiel verwendet [LINQ und Funktionsformatcode](http://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx), um ein Symbol im Modell des Compilers anhand einer Namenszeichenfolge zu finden:  
+ Dieses Beispiel verwendet [LINQ und Funktionsformatcode](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx), um ein Symbol im Modell des Compilers anhand einer Namenszeichenfolge zu finden:  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- In der ersten Zeile der [Lambda-Ausdruck](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [geschlossen](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) die lokale Variable `name`.  Das bedeutet, dass zusätzlich zum Zuordnen eines Objekts für den[Delegaten](~/docs/csharp/language-reference/keywords/delegate.md), den `predicate` speichert, der Code eine statische Klasse zuordnet, um die Umgebung zu speichern, die den Wert von `name` erfasst.  Der Compiler generiert Code wie den folgenden:  
+ In der ersten Zeile der [Lambda-Ausdruck](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [geschlossen](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) die lokale Variable `name`.  Das bedeutet, dass zusätzlich zum Zuordnen eines Objekts für den[Delegaten](~/docs/csharp/language-reference/keywords/delegate.md), den `predicate` speichert, der Code eine statische Klasse zuordnet, um die Umgebung zu speichern, die den Wert von `name` erfasst.  Der Compiler generiert Code wie den folgenden:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -362,7 +362,7 @@ public Symbol FindMatchingSymbol(string name)
  Dieser Code verwendet keine LINQ-Erweiterungsmethoden, Lambdas oder Enumeratoren und verursacht keine Zuordnungen.  Es gibt keine Zuordnungen, weil der Compiler sehen kann, dass die `symbols`-Auflistung eine <xref:System.Collections.Generic.List%601> ist und den resultierenden Enumerator (eine Struktur) an eine lokale Variable des richtigen Typs binden kann, um ein Boxing zu vermeiden.  Die ursprüngliche Version dieser Funktion war ein hervorragendes Beispiel für die Ausdrucksstärke von C# und die Produktivität von .NET Framework.  Diese neue und effizientere Version behält diese Qualitäten bei, ohne komplexen Code hinzuzufügen, der gewartet werden muss.  
   
 ### <a name="async-method-caching"></a>Zwischenspeichern der Async-Methode  
- Das nächste Beispiel zeigt ein typisches Problem, wenn Sie versuchen, zwischengespeicherte Ergebnisse in einer [Async](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)-Methode zu verwenden.  
+ Das nächste Beispiel zeigt ein typisches Problem, wenn Sie versuchen, zwischengespeicherte Ergebnisse in einer [Async](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)-Methode zu verwenden.  
   
  **Beispiel 6: Zwischenspeichern in Async-Methoden**  
   
@@ -465,9 +465,9 @@ class Compilation { /*...*/
  [Video der Präsentation zu diesem Thema](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [Einführung in die Leistungsprofilerstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Leistung](../../../docs/framework/performance/index.md)  
- [Leistungstipps für .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone-Leistungsanalysetools](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Aufspüren von Anwendungsengpässen mit Visual Studio-Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Leistungstipps für .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone-Leistungsanalysetools](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Aufspüren von Anwendungsengpässen mit Visual Studio-Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
  [Channel 9 PerfView-tutorials](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [Allgemeine Leistungstipps](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [Allgemeine Leistungstipps](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
  [Dotnet/Roslyn-Repositorys auf GitHub](https://github.com/dotnet/roslyn)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
-ms.openlocfilehash: ee6c5583718f871c96929d659fe4a681528b27ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b4db06eedc0ada7c34f3ba6f6c80b783866bed2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538235"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404156"
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView-Steuerelement (Windows Forms)
 Mit dem `TreeView`-Steuerelement in Windows Forms wird eine Hierarchie von Knoten angezeigt, die mit der Anzeige der Dateien und Ordner im linken Bereich des Windows Explorer-Features von Windows-Betriebssystemen vergleichbar ist.  
@@ -38,10 +38,10 @@ Mit dem `TreeView`-Steuerelement in Windows Forms wird eine Hierarchie von Knote
   
  [Gewusst wie: Anfügen eines Kontextmenüs an einen Strukturansichtsknoten](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
  Veranschaulicht, wie einem Knoten einer Strukturansicht ein Kontextmenü hinzugefügt wird.  
+
+Siehe auch [Vorgehensweise: Hinzufügen und Entfernen von Knoten mit der Windows Forms TreeView-Steuerelement mithilfe des Designers](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md), und [Vorgehensweise: Anfügen eines Kontextmenüs an einen TreeNode mithilfe des Designers](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md).  
   
- Siehe auch [wie: Hinzufügen und Entfernen von Knoten mit dem Windows Forms TreeView-Steuerelement mithilfe des Designers](http://msdn.microsoft.com/library/ms233651\(v=vs.110\)), [wie: Anfügen eines Kontextmenüs an einen TreeNode mithilfe des Designers](http://msdn.microsoft.com/library/ms171708\(v=vs.110\)).  
-  
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.TreeView>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

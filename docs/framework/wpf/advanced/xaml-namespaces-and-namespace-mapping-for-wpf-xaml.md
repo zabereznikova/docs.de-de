@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: dbf9c9c16488a58a07aa29d16b3d00dd83c7c232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e93d3cd417d0d075fcebb8327ec51799884f8d6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549395"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416110"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML-Namespaces und Namespacezuordnung für WPF-XAML
 Diesem Thema bietet weitere Erläuterungen zu Vorhandensein und Zweck der beiden XAML-Namespacezuordnungen, die häufig im Stammelement einer WPF XAML-Datei zu finden sind. Es wird ebenfalls beschrieben, wie Sie ähnliche Zuordnungen für Elemente in Ihrem eigenen Code und/oder separaten Assemblys erstellen können.  
@@ -50,9 +50,9 @@ Diesem Thema bietet weitere Erläuterungen zu Vorhandensein und Zweck der beiden
   
  `clr-namespace:` Der CLR-Namespace, der innerhalb der Assembly deklariert ist, die die öffentlichen Typen enthält, welche als Elemente verfügbar gemacht werden sollen.  
   
- `assembly=` Die Assembly, die einige oder alle der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Namespaces enthält, auf die verwiesen wird. Dieser Wert ist in der Regel nur der Name der Assembly, nicht der Pfad zu ihr, und er schließt nicht die Erweiterung (z.B. .dll oder .exe) ein. Der Pfad zu dieser Assembly muss als Projektreferenz in der Projektdatei hergestellt werden, die das zuzuordnende XAML enthält. Zum Integrieren von versionsverwaltung und Signierung mit starkem Namen, die `assembly` Wert kann eine Zeichenfolge sein, gemäß der Definition von <xref:System.Reflection.AssemblyName>, statt der einfachen Zeichenfolgennamens.  
+ `assembly=` Die Assembly, die einige oder alle der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Namespaces enthält, auf die verwiesen wird. Dieser Wert ist in der Regel nur der Name der Assembly, nicht der Pfad zu ihr, und er schließt nicht die Erweiterung (z.B. .dll oder .exe) ein. Der Pfad zu dieser Assembly muss als Projektreferenz in der Projektdatei hergestellt werden, die das zuzuordnende XAML enthält. Um Versionierung und Signierung mit starkem Namen, integrieren den `assembly` Wert kann eine Zeichenfolge gemäß <xref:System.Reflection.AssemblyName>, anstatt den einfachen Namen.  
   
- Beachten Sie, dass als Trennzeichen zwischen `clr-namespace`-Token und dessen Wert ein Doppelpunkt (:) verwendet wird, während der `assembly`-Token von seinem Wert mit einem Gleichheitszeichen (=) getrennt ist. Das zwischen diesen beiden Token zu verwendende Zeichen ist ein Semikolon. Darüber hinaus dürfen an keiner Stelle der Deklaration Leerzeichen verwendet werden.  
+ Beachten Sie, dass als Trennzeichen zwischen `clr-namespace`-Token und dessen Wert ein Doppelpunkt (:) verwendet wird, während der `assembly`-Token von seinem Wert mit einem Gleichheitszeichen (=) getrennt ist. Das zwischen diesen beiden Token zu verwendende Zeichen ist ein Semikolon. Darüber hinaus enthalten Sie keine Leerstellen an einer beliebigen Stelle in der Deklaration.  
   
 ### <a name="a-basic-custom-mapping-example"></a>Ein Beispiel für einfache benutzerdefinierte Zuordnung  
  Der folgende Code definiert eine benutzerdefinierte Beispielklasse:  
@@ -106,9 +106,9 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Zuordnen von CLR-Namespaces zu XML-Namespaces in einer Assembly  
- WPF definiert ein CLR-Attribut, das von XAML-Prozessoren verwendet wird, um mehrere CLR-Namespaces einem einzigen XAML-Namespace zuzuordnen. Dieses Attribut <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, befindet sich auf Assemblyebene im Quellcode, der die Assembly erzeugt. Der Quellcode der WPF-Assembly verwendet dieses Attribut, um verschiedene üblichen Namespaces, z. B. zuzuordnen <xref:System.Windows> und <xref:System.Windows.Controls>, zu der [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] Namespace.  
+ WPF definiert ein CLR-Attribut, das von XAML-Prozessoren verwendet wird, um mehrere CLR-Namespaces einem einzigen XAML-Namespace zuzuordnen. Dieses Attribut <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, befindet sich auf der Assemblyebene im Quellcode, der die Assembly erzeugt. Der Quellcode der WPF-Assembly verwendet dieses Attribut, um die verschiedenen allgemeinen Namespaces wie z. B. zuzuordnen <xref:System.Windows> und <xref:System.Windows.Controls>, zu der [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] Namespace.  
   
- Die <xref:System.Windows.Markup.XmlnsDefinitionAttribute> akzeptiert zwei Parameter: den Namen der XML-/ XAML-Namespace und den Namen der CLR-Namespace. Mehrere <xref:System.Windows.Markup.XmlnsDefinitionAttribute> können vorhanden sein, um mehrere CLR-Namespaces in der gleichen XML-Namespace zuzuordnen. Sind diese einmal zugeordnet, kann in der CodeBehind-Seite der partiellen Klasse auf Mitglieder dieser Namespaces auf Wunsch auch ohne vollqualifizierten Bezeichner durch Angabe des entsprechenden `using`-Statements verwiesen werden. Weitere Informationen finden Sie unter <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
+ Die <xref:System.Windows.Markup.XmlnsDefinitionAttribute> akzeptiert zwei Parameter: den Namen der XML/XAML-Namespace und Name des CLR-Namespaces. Mehr als eine <xref:System.Windows.Markup.XmlnsDefinitionAttribute> kann vorhanden sein, um mehrere CLR-Namespaces demselben XML-Namespace zuzuordnen. Sind diese einmal zugeordnet, kann in der CodeBehind-Seite der partiellen Klasse auf Mitglieder dieser Namespaces auf Wunsch auch ohne vollqualifizierten Bezeichner durch Angabe des entsprechenden `using`-Statements verwiesen werden. Weitere Informationen finden Sie unter <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Designer-Namespaces und andere Präfixe aus XAML-Vorlagen  
  Wenn Sie mit Entwicklungsumgebungen und/oder Entwurfstools für WPF-XAML arbeiten, werden Sie bemerken, dass es im XAML-Markup weitere definierte XAML-Namespaces/Präfixe gibt.  
@@ -118,24 +118,24 @@ End Namespace
  Ein anderes Präfix, dessen Zuordnung Sie möglicherweise sehen können, ist `mc:`. `mc:` dient der Markupkompatibilität. Dabei wird ein Markup-Kompatibilitätsmuster wiederverwendet, das nicht unbedingt XAML-spezifisch ist. In gewissem Umfang können die Markupkompatibilitäts-Funktionen verwendet werden, um XAML zwischen Frameworks oder grenzübergreifend mit unterstützenden Implementierungen auszutauschen, zwischen verschiedenen XAML-Schema-Kontexten zu arbeiten, Kompatibilität für eingeschränkte Modi in Designern bereitzustellen, und so weiter. Weitere Informationen zu Markupkompatibilitätskonzepten und deren Bezug auf WPF finden Sie unter [Markupkompatibilität (mc:) – Sprachfeatures](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF und Laden von Assemblys  
- Der XAML-Schemakontext für WPF integriert, das WPF-Anwendungsmodell, was wiederum das Konzept CLR definierte <xref:System.AppDomain>. Die folgende Sequenz beschreibt, wie XAML-Schemakontext interpretiert wie Assemblys geladen werden oder Suchen von Typen zur Laufzeit oder zur Entwurfszeit basierend auf den WPF-Verwendung von <xref:System.AppDomain> und anderen Faktoren.  
+ Der XAML-Schemakontext für WPF-Integration mit dem WPF-Anwendungsmodell, die wiederum die CLR definierte Konzept von <xref:System.AppDomain>. Die folgende Sequenz beschreibt, wie XAML-Schemakontext interpretiert, wie Assemblys geladen werden oder finden von Typen zur Laufzeit oder Entwurfszeit basierend auf der WPF-Verwendung von <xref:System.AppDomain> und anderen Faktoren.  
   
-1.  Durchlaufen der <xref:System.AppDomain>, suchen Sie für eine bereits geladene Assembly, die alle Aspekte des Namens übereinstimmt, beginnend mit den zuletzt geladene Assembly.  
+1.  Durchlaufen der <xref:System.AppDomain>, Suchen nach einer bereits geladenen Assembly mit allen Aspekten des Namens, des zuletzt geladenen Assembly wird gestartet.  
   
 2.  Wenn der Name qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
   
 3.  Wenn der Kurzname und das öffentliche Schlüsseltoken eines qualifizierten Namens mit der Assembly übereinstimmen, aus der das Markup geladen wurde, gib diese Assembly zurück.  
   
-4.  Verwenden der Kurzname und Token des öffentlichen Schlüssels Aufrufen <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+4.  Verwenden Sie zum Aufrufen der Kurzname und das Token des öffentlichen Schlüssels <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 5.  Wenn der Name nicht qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  Loose XAML verwendet Schritt 3 nicht, da es nicht aus Assemblys geladen wird.  
   
- Kompilierte XAML für WPF (über XamlBuildTask generiert) verwendet nicht die bereits geladenen Assemblys aus <xref:System.AppDomain> (Schritt 1). Darüber hinaus sollte der aus XamlBuildTask resultierende Name nie unqualifiziert sein, weshalb Schritt 5 hier nicht anwendbar ist.  
+ Kompilierte XAML für WPF (mithilfe XamlBuildTask generiert) verwendet nicht die bereits geladenen Assemblys aus <xref:System.AppDomain> (Schritt 1). Darüber hinaus sollte der aus XamlBuildTask resultierende Name nie unqualifiziert sein, weshalb Schritt 5 hier nicht anwendbar ist.  
   
  Kompiliertes BAML (mit PresentationBuildTask generiert) verwendet alle Schritte, obwohl auch BAML keine unqualifizierten Assemblynamen enthalten sollte.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu XML-Namespaces](http://go.microsoft.com/fwlink/?LinkId=98069)  
+ [Grundlegendes zu XML-Namespaces](https://go.microsoft.com/fwlink/?LinkId=98069)  
  [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

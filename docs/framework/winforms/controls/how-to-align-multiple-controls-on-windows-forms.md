@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253223"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417116"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Gewusst wie: Ausrichten von mehreren Steuerelementen in Windows Forms
 Um das Layout der Benutzeroberfläche (UI) der Windows-basierten Anwendung standardisieren möchten, können Sie eine Gruppe von Steuerelementen mit einem einzigen Befehl positionieren.  

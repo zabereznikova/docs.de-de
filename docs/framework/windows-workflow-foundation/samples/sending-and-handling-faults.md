@@ -2,12 +2,12 @@
 title: Senden und Behandeln von Fehlern
 ms.date: 03/30/2017
 ms.assetid: 98e8e04d-2ac9-4a33-ae08-462f757a7a14
-ms.openlocfilehash: 6796b4daccd88adc3bd006f454ce96ca155fbcb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 896f209e7daeeab2bb33c1fde15298aae96c8776
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516125"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406657"
 ---
 # <a name="sending-and-handling-faults"></a>Senden und Behandeln von Fehlern
 In diesem Beispiel wird veranschaulicht, wie die <xref:System.ServiceModel.Activities.SendReply>-Messagingaktivität und <xref:System.ServiceModel.Activities.ReceiveReply>-Messagingaktivität verwendet werden, um erwartete und unerwartete Fehler zu senden und zu empfangen. In diesem Szenario führt die erste Clientanforderung zu einem erwarteten Fehler, der in der <xref:System.ServiceModel.Activities.Send.KnownTypes%2A>-Auflistung enthalten ist. Die nächsten Clientanforderungen führen zu unerwarteten Fehlern, bevor die abschließende Anforderung erfolgreich ist.  
@@ -22,7 +22,7 @@ In diesem Beispiel wird veranschaulicht, wie die <xref:System.ServiceModel.Activ
   
 4.  Führen Sie das Dienstprojekt aus.  
   
-    1.  In **Projektmappen-Explorer**, mit der rechten Maustaste die `FaultService` Projekt, und wählen Sie **als Startprojekt festlegen**.  
+    1.  In **Projektmappen-Explorer**, mit der rechten Maustaste die `FaultService` Projekt, und wählen **als Startprojekt festlegen**.  
   
     2.  Drücken Sie STRG+F5.  
   
@@ -32,7 +32,7 @@ In diesem Beispiel wird veranschaulicht, wie die <xref:System.ServiceModel.Activ
   
 7.  Führen Sie das Clientprojekt aus.  
   
-    1.  In **Projektmappen-Explorer**, mit der rechten Maustaste die `FaultClient` Projekt, und wählen Sie **als Startprojekt festlegen**.  
+    1.  In **Projektmappen-Explorer**, mit der rechten Maustaste die `FaultClient` Projekt, und wählen **als Startprojekt festlegen**.  
   
     2.  Drücken Sie STRG+F5.  
   
@@ -41,6 +41,6 @@ In diesem Beispiel wird veranschaulicht, wie die <xref:System.ServiceModel.Activ
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Faults`

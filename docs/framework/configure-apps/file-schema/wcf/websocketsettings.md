@@ -2,12 +2,12 @@
 title: '&lt;webSocketSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 84aee31b6c15beb32732f89eae7c3d176f57971d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e5f34dca83c8d3d08d27fb72bee5af2a89ac6b9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754836"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416427"
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.  
@@ -67,7 +67,7 @@ Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.
 |\<netHttpBinding>|Gibt das NetHttpBinding-Element an.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die \<WebSocketSettings > Element.  
+ Das folgende Beispiel zeigt, wie Sie mit der \<WebSocketSettings > Element.  
   
 ```xml  
 <netHttpBinding>  
@@ -92,5 +92,5 @@ Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -2,12 +2,12 @@
 title: Permanente Verzögerung
 ms.date: 03/30/2017
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
-ms.openlocfilehash: 5307b8144e17f91cd3ba8c2e385492f86c167820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a7692e28d60232913ae5d11a90025e59664c0e5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516021"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406575"
 ---
 # <a name="durable-delay"></a>Permanente Verzögerung
 In diesem Beispiel wird veranschaulicht, wie eine permanente Verzögerung verwendet wird, eine Verzögerung, die den Workflow während der Verzögerung auf einem permanenten Gerät beibehält. Der Beispielworkflow enthält zwei Meldungen an die Konsole, die durch eine Verzögerung getrennt sind. Wenn die Verzögerung ausgelöst wird, wird der Workflow entladen und verbleibt 5 Sekunden im Workflowinstanzspeicher, bevor er erneut in den Speicher geladen wird.  
@@ -17,7 +17,7 @@ In diesem Beispiel wird veranschaulicht, wie eine permanente Verzögerung verwen
   
  Die folgende Liste enthält das Setup des Workflowdiensthosts während der Initialisierung.  
   
-1.  Erstellt einen Diensthost mit der Adresse (http://localhost:8080/Client).  
+1.  Erstellt einen Diensthost mit einer Adresse (http://localhost:8080/Client).  
   
 2.  Erstellt einen Endpunkt im Diensthost, um Kommunikation mit der <xref:System.ServiceModel.Activities.Receive>-Aktivität im Workflow zu aktivieren.  
   
@@ -45,7 +45,7 @@ In diesem Beispiel wird veranschaulicht, wie eine permanente Verzögerung verwen
   
     5.  Führen Sie Setup.cmd aus.  
   
-2.  Führen Sie [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] mit erhöhten Berechtigungen, indem Sie mit der rechten Maustaste die [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] und wählen Sie dann **als Administrator ausführen**.  
+2.  Führen Sie [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] mithilfe erhöhter Berechtigungen mit der rechten Maustaste die [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] und wählen Sie dann **als Administrator ausführen**.  
   
 3.  Öffnen Sie die Projektmappendatei "Delay.sln".  
   
@@ -66,6 +66,6 @@ In diesem Beispiel wird veranschaulicht, wie eine permanente Verzögerung verwen
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelay`

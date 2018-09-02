@@ -2,22 +2,22 @@
 title: Einrichtung der Massenkopierbeispiele
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: cb4e92529c8e68bd7e47e5943f7e79dcc97603e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71daf489fdf5e7e12594e798bc3ac01b1c76b027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362438"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402375"
 ---
 # <a name="bulk-copy-example-setup"></a>Einrichtung der Massenkopierbeispiele
 Mit der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse können Daten nur in SQL Server-Tabellen geschrieben werden. In diesem Thema gezeigten Codebeispiele verwenden die SQL Server-Beispieldatenbank, **AdventureWorks**. Um Änderungen an den vorhandenen Tabellen zu vermeiden, schreiben die Codebeispiele in Tabellen, die zunächst erstellt werden müssen.  
   
- Die **BulkCopyDemoMatchingColumns** und **"BulkCopyDemoDifferentColumns"** Tabellen basieren beide auf der **AdventureWorks** **Production.Products**  Tabelle. In Codebeispielen, die diese Tabellen verwenden, Daten hinzugefügt, aus der **Production.Products** Tabelle einer dieser Beispieltabellen. Die **"BulkCopyDemoDifferentColumns"** Tabelle wird verwendet, wenn das Beispiel zum Zuordnen von Spalten aus den Quelldaten in die Zieltabelle; veranschaulicht. **BulkCopyDemoMatchingColumns** wird für die meisten anderen Beispiele verwendet.  
+ Die **"BulkCopyDemoMatchingColumns"** und **"BulkCopyDemoDifferentColumns"** Tabellen basieren beide auf die **AdventureWorks** **Production.Products**  Tabelle. In Codebeispielen, die diese Tabellen verwenden, Daten hinzugefügt werden, aus der **Production.Products** Tabelle an eines dieser Beispieltabellen. Die **"BulkCopyDemoDifferentColumns"** Tabelle wird verwendet, wenn das Beispiel veranschaulicht, wie Sie die Spalten aus den Quelldaten der Zieltabelle zuordnen **"BulkCopyDemoMatchingColumns"** wird für die meisten anderen Beispiele verwendet.  
   
- In einigen Codebeispielen wird veranschaulicht, wie mit einer <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse in mehrere Tabellen geschrieben werden kann. Für diese Beispiele der **"BulkCopyDemoOrderHeader"** und **"BulkCopyDemoOrderDetail"** Tabellen werden als Zieltabellen verwendet. Diese Tabellen basieren auf der **Sales.SalesOrderHeader** und **Sales.SalesOrderDetail** in Tabellen **AdventureWorks**.  
+ In einigen Codebeispielen wird veranschaulicht, wie mit einer <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse in mehrere Tabellen geschrieben werden kann. Für diese Beispiele die **"BulkCopyDemoOrderHeader"** und **BulkCopyDemoOrderDetail** Tabellen werden als Zieltabellen verwendet. Diese Tabellen basieren auf der **Sales.SalesOrderHeader** und **Sales.SalesOrderDetail** Tabellen in **AdventureWorks**.  
   
 > [!NOTE]
->  Die **"SqlBulkCopy"** -Codebeispiele dienen zum Veranschaulichen der Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn sich die Quell- und die Zieltabelle in derselben SQL Server-Instanz befinden, lassen sich die Daten einfacher und schneller mit einer Transact-SQL-`INSERT … SELECT`-Anweisung kopieren.  
+>  Die **"SqlBulkCopy"** Codebeispiele werden bereitgestellt, um die Syntax für die Verwendung zu demonstrieren **"SqlBulkCopy"** nur. Wenn sich die Quell- und die Zieltabelle in derselben SQL Server-Instanz befinden, lassen sich die Daten einfacher und schneller mit einer Transact-SQL-`INSERT … SELECT`-Anweisung kopieren.  
   
 ## <a name="table-setup"></a>Einrichten der Tabellen  
  Zum Erstellen der Tabellen, die für das ordnungsgemäße Ausführen der Codebeispiele erforderlich sind, müssen Sie die folgenden Transact-SQL-Anweisungen in einer SQL Server-Datenbank ausführen:  
@@ -83,4 +83,4 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>Siehe auch  
  [Massenkopiervorgänge in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

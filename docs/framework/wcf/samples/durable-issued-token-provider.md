@@ -2,22 +2,22 @@
 title: Dauerhaft ausgestellter Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7def23a00e42e134d8c0b9bd911710917681ad31
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807550"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404876"
 ---
 # <a name="durable-issued-token-provider"></a>Dauerhaft ausgestellter Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von einem benutzerdefinierten Client ausgestellt wird.  
   
 ## <a name="discussion"></a>Diskussion  
- Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um der Sicherheitsinfrastruktur Anmeldeinformationen bereitzustellen. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
+ Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um der Sicherheitsinfrastruktur Anmeldeinformationen angeben. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
   
 -   Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem der integrierte Tokenanbieter nicht umgehen kann.  
   
--   Wenn geben Sie eine eigene benutzerdefinierte Mechanismen zur Transformation angibt, bis die Anmeldeinformationen ab dem Punkt, der Benutzer die Details, wenn der WCF-Client die Anmeldeinformationen verwendet werden sollen.  
+-   Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Client die Anmeldeinformationen verwendet werden sollen.  
   
 -   Wenn Sie ein benutzerdefiniertes Token erstellen.  
   
@@ -27,7 +27,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
 -   Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.  
   
--   Wie ausgestellte Token zwischengespeichert und für den WCF-Client bereitgestellt werden können.  
+-   Wie ausgestellte Token zwischengespeichert und an den WCF-Client bereitgestellt werden können.  
   
 -   Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.  
   
@@ -36,7 +36,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- In diesem Beispiel macht die ICalculator-Vertrag mit dem [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Das folgende Codebeispiel zeigt die Konfiguration dieser Bindung auf dem Client.  
+ In diesem Beispiel macht den ICalculator-Vertrag mit dem [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Das folgende Codebeispiel zeigt die Konfiguration dieser Bindung auf dem Client.  
   
 ```xml  
 <bindings>
@@ -110,7 +110,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
  Der Sicherheitstokendienst (STS, Security Token Service) macht mit Standard-wsHttpBinding einen einzelnen Endpunkt verfügbar. Der STS reagiert auf eine Tokenanforderung von Clients. Wenn der Client mit einem Windows-Konto authentifiziert wird, gibt der STS ein Token mit dem Benutzernamen des Clients als Anspruch im herausgegebenen Token heraus. Beim Erstellen des Tokens signiert der STS das Token mit dem privaten Schlüssel, der dem CN=STS-Zertifikat zugeordnet ist. Außerdem wird ein symmetrischer Schlüssel erstellt und mit dem öffentlichen Schlüssel verschlüsselt, der dem CN=localhost-Zertifikat zugeordnet ist. Beim Zurückgeben des Tokens an den Client gibt der STS auch den symmetrischen Schlüssel zurück. Der Client stellt das herausgegebene Token für den Rechnerdienst bereit und beweist, dass der symmetrische Schlüssel bekannt ist, indem die Nachricht mit diesem Schlüssel signiert wird.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Benutzerdefinierte Clientanmeldeinformationen und Tokenanbieter  
- Die folgenden Schritte zeigen das Entwickeln eines benutzerdefinierten tokenanbieters, dass das ausgestellte Token zwischenspeichert und WCF integriert: Sicherheit.  
+ Die folgenden Schritte zeigen, wie Sie die Entwicklung eines benutzerdefinierten tokenanbieters, dass das ausgestellte Token zwischenspeichert, und integrieren mit WCF: Sicherheit.  
   
 #### <a name="to-develop-a-custom-token-provider"></a>So entwickeln Sie einen benutzerdefinierten Tokenanbieter  
   
@@ -235,7 +235,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
 1.  Führen Sie die Datei "Setup.cmd" aus, um die erforderlichen Zertifikate zu erstellen.  
   
-2.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md). Stellen Sie sicher, dass alle Projekte in der Projektmappe erstellt werden (Shared, RSTRSTR, Service, SecurityTokenService und Client).  
+2.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md). Stellen Sie sicher, dass alle Projekte in der Projektmappe erstellt werden (Shared, RSTRSTR, Service, SecurityTokenService und Client).  
   
 3.  Stellen Sie sicher, dass Service.exe und SecurityTokenService.exe mit Administratorrechten ausgeführt werden.  
   
@@ -250,7 +250,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   

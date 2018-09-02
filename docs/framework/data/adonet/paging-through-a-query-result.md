@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 73475f8521b4112929339cc7f1116e36ffebedb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d86095586af273f62980fcf8ddf10804b1cfa5a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358967"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406809"
 ---
 # <a name="paging-through-a-query-result"></a>Paging durch ein Abfrageergebnis
 Beim Paging durch ein Abfrageergebnis werden die Ergebnisse einer Abfrage in kleineren Untergruppen von Daten oder Seiten zurückgegeben. Dies ist eine allgemein übliche Vorgehensweise, um einem Benutzer Ergebnisse in kleinen Blöcken anzuzeigen, die sich leicht verwalten lassen.  
   
- Die **"DataAdapter"** bietet die Möglichkeit zum Zurückgeben von nur einer Seite mit Daten, die über Überladungen des der **füllen** Methode. Allerdings dies möglicherweise nicht die beste Wahl für umfangreiche Abfrageergebnisse durchgehen, da Sie zwar die **"DataAdapter"** füllt das Ziel <xref:System.Data.DataTable> oder <xref:System.Data.DataSet> mit nur den angeforderten Datensätzen, die Ressourcen zum Zurückgeben der gesamte Abfrage werden weiterhin verwendet. Geben Sie zusätzliche Kriterien für Ihre Abfrage ein, um eine Seite mit Daten von einer Datenquelle ohne die Ressourcen zurückzugeben, die zum Zurückgeben der gesamten Abfrage erforderlich sind, sodass nur die erforderlichen Zeilen zurückgegeben werden.  
+ Die **DataAdapter** stellt eine Funktion bereit, für die Rückgabe nur einer Seite mit Daten über Überladungen der **füllen** Methode. Aber dies ist möglicherweise nicht die beste Wahl für das paging durch umfangreiche Abfrageergebnisse, da zwar die **DataAdapter** füllt das Ziel <xref:System.Data.DataTable> oder <xref:System.Data.DataSet> mit nur den angeforderten Datensätzen, die Ressourcen zurückgegeben der weiterhin werden die gesamte Abfrage verwendet. Geben Sie zusätzliche Kriterien für Ihre Abfrage ein, um eine Seite mit Daten von einer Datenquelle ohne die Ressourcen zurückzugeben, die zum Zurückgeben der gesamten Abfrage erforderlich sind, sodass nur die erforderlichen Zeilen zurückgegeben werden.  
   
- Verwenden der **füllen** Geben Sie die Methode zum Zurückgeben einer Seite der Daten, eine **StartRecord** Parameter, für den ersten Datensatz auf der Seite der Daten, und ein **MaxRecords** -Parameter, für die Anzahl der die Datensätze in die Seite der Daten.  
+ Verwenden der **füllen** Methode zum Zurückgeben einer Seite der Daten angeben einer **StartRecord** Parameter für den ersten Datensatz auf der Seite der Daten, und ein **MaxRecords** Parameter die Anzahl der Zeichnet auf der Seite der Daten.  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie die **füllen** Methode, um die erste Seite eines Abfrageergebnisses zurückzugeben, wobei fünf Datensätze ist die Seitengröße.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit der **füllen** -Methode zur Rückgabe der ersten Seite des Abfrageergebnisses eines, in dem fünf Datensätze ist der Seitengröße.  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -46,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- Im vorherigen Beispiel der **DataSet** gefüllt wird nur mit fünf Datensätzen, aber die gesamte **Aufträge** Tabelle zurückgegeben. Zum Auffüllen der **DataSet** mit diesen fünf Datensätzen, aber nur fünf Datensätze zurückzugeben, verwenden Sie die TOP und WHERE-Klauseln in der SQL-Anweisung, wie im folgenden Codebeispiel wird.  
+ Im vorherigen Beispiel die **DataSet** wird nur mit fünf Datensätzen, aber die gesamte gefüllt **Bestellungen** Tabelle zurückgegeben. Zum Ausfüllen der **DataSet** mit diesen fünf Datensätzen, aber nur fünf Datensätze zurückzugeben, verwenden Sie die TOP und WHERE-Klauseln in der SQL-Anweisung, wie im folgenden Codebeispiel wird.  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -83,7 +83,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- Die nächste Seite mit Datensätzen durch die Überladung der zurückzugebenden der **füllen** Methode, die **StartRecord** und **MaxRecords** Parameter, erhöhen Sie den aktuellen Datensatzindex durch die Seitengröße und Ausfüllen der Tabelle. Denken Sie daran, dass der Datenbankserver alle Abfrageergebnisse zurückgibt, selbst wenn nur eine Seite mit Datensätzen hinzugefügt wird die **DataSet**. Im folgenden Codebeispiel wird der Inhalt der Tabellenzeilen gelöscht, bevor sie mit der nächsten Seite mit Daten gefüllt werden. Möglicherweise soll eine bestimmte Anzahl zurückgegebener Zeilen in einem lokalen Cache beibehalten werden, um die Anzahl der Schleifen zum Datenbankserver zu reduzieren.  
+ Zurückgeben die nächste Seite von Datensätzen, die mithilfe der Überladung von der **füllen** Methode, die **StartRecord** und **MaxRecords** Parameter inkrementiert den aktuellen Datensatzindex durch die Seitengröße und Füllen der Tabelle. Beachten Sie, dass der Datenbankserver alle Abfrageergebnisse zurückgibt, obwohl nur eine Seite mit Datensätzen hinzugefügt wird die **DataSet**. Im folgenden Codebeispiel wird der Inhalt der Tabellenzeilen gelöscht, bevor sie mit der nächsten Seite mit Daten gefüllt werden. Möglicherweise soll eine bestimmte Anzahl zurückgegebener Zeilen in einem lokalen Cache beibehalten werden, um die Anzahl der Schleifen zum Datenbankserver zu reduzieren.  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -125,4 +125,4 @@ adapter.Fill(dataSet, "Orders");
   
 ## <a name="see-also"></a>Siehe auch  
  [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

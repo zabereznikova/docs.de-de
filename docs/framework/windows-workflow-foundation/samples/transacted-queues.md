@@ -2,15 +2,15 @@
 title: Transaktive Warteschlangen
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-ms.openlocfilehash: b125158a113079d87eb6926393d5a2b5fe326824
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519680"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408814"
 ---
 # <a name="transacted-queues"></a>Transaktive Warteschlangen
-Dieses Beispiel zeigt die Vorgehensweise beim Integrieren von Warteschlangen und Transaktionen in Windows Workflow Foundation (WF), zuverlässige und skalierbare Dienste zu erstellen. Ein <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` wird im clientworkflow verwendet, zum Senden der Nachricht an eine Warteschlange unter einer Transaktion mithilfe der <xref:System.ServiceModel.NetMsmqBinding>. Ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> wird auf dem Server verwendet, um Meldungen von der Warteschlange zu empfangen und den Zustand des Workflows unter der gleichen Transaktion zu aktualisieren.  
+Dieses Beispiel zeigt, wie Sie Warteschlangen und Transaktionen in Windows Workflow Foundation (WF) zum Erstellen von zuverlässiger und skalierbarer Diensten integrieren. Ein <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` wird im clientworkflow verwendet, zum Senden der Nachricht an eine Warteschlange unter einer Transaktion mithilfe der <xref:System.ServiceModel.NetMsmqBinding>. Ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> wird auf dem Server verwendet, um Meldungen von der Warteschlange zu empfangen und den Zustand des Workflows unter der gleichen Transaktion zu aktualisieren.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
  <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive> und inhaltsbasierte Korrelation.  
@@ -24,7 +24,7 @@ Dieses Beispiel zeigt die Vorgehensweise beim Integrieren von Warteschlangen und
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Installieren und konfigurieren Sie MSMQ. Finden Sie unter [Installieren von Message Queuing](http://go.microsoft.com/fwlink/?LinkId=178526) Details.  
+1.  Installieren und konfigurieren Sie MSMQ. Finden Sie unter [Installieren von Message Queuing](https://go.microsoft.com/fwlink/?LinkId=178526) Details.  
   
 2.  Stellen Sie sicher, dass MSDTC ausgeführt wird, indem Sie den folgenden Befehl in einer Befehlszeile ausführen. `net start msdtc`  
   
@@ -35,6 +35,6 @@ Dieses Beispiel zeigt die Vorgehensweise beim Integrieren von Warteschlangen und
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedQueues`

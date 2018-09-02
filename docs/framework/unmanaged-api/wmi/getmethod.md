@@ -1,6 +1,6 @@
 ---
 title: GetMethod-Funktion (Referenz zur nicht verwalteten API)
-description: GetMethod-Funktion ruft Informationen zu einer Methode ab.
+description: GetMethod-Funktion ruft Informationen über eine Methode ab.
 ms.date: 11/06/2017
 api_name:
 - GetMethod
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a913de0ff20fba51295fd8282b58e3953be9bba2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460446"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405072"
 ---
 # <a name="getmethod-function"></a>GetMethod-Funktion
 Ruft Informationen über die angegebene Methode ab.
@@ -47,23 +47,23 @@ HRESULT GetMethod (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `wszName`  
-[in] Der Methodenname. Dieser Parameter darf nicht sein `null` muss einem gültigen zeigen `LPCWSTR`.
+[in] Name der Methode. Dieser Parameter darf nicht sein `null` und muss auf einen gültigen zeigen `LPCWSTR`.
 
 `lFlags`  
 [in] Reserviert. Dieser Parameter muss 0 sein.
 
 `ppInSignature`   
-[out] Ein Zeiger auf die Adresse des ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) -Instanz, die in Paramteers an die Methode beschreibt. Dieser Parameter wird ignoriert, wenn er, um festgelegt ist `null`. 
+[out] Ein Zeiger auf die Adresse einer [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz, die in Paramteers an die Methode beschreibt. Dieser Parameter wird ignoriert, wenn sie, um festgelegt ist `null`. 
 
 `ppOutSignature`  
-[out] Ein Zeiger auf die Adresse des ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz, die die Out-Parameter an die Methode beschreibt. Dieser Parameter wird ignoriert, wenn er, um festgelegt ist `null`. 
+[out] Ein Zeiger auf die Adresse einer [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz, die Out-Parameter an die Methode beschreibt. Dieser Parameter wird ignoriert, wenn sie, um festgelegt ist `null`. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
@@ -73,14 +73,14 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::GetMethod](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) Methode.
 
-Verwaltung von Windows können festlegen, die [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Zeiger auf `null` Wenn die Methode keine in-Parameter hat.
+Windows-Verwaltung können festlegen, die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeiger auf `null` Wenn die Methode keine in-Parameter.
 
-In `ppInSignature` und `ppOutSignature` beschreiben "" in und out-Parameter, jeweils als Eigenschaften in einem `IWbemClassObject` Instanz der Systemklasse [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx). Die Eigenschaften im `ppInsignature` heißen **Param *** n*, wobei *n* ist die Position des Parameters in der Methodensignatur (z. B. `Param1`, `Param2`usw..). Die Eigenschaften im `ppOutSignature` sind auch mit dem Namen **Param *** n*, und der Rückgabewert lautet **ReturnValue**. Weitere Informationen und ein Beispiel finden Sie unter [IWbemClassObject::GetMethod Methode](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx).
+In `ppInSignature` und `ppOutSignature` beschreiben in- und out-Parameter als Eigenschaften in einem `IWbemClassObject` Instanz der Systemklasse [_Parameters](/windows/desktop/WmiSdk/--parameters). Die Eigenschaften im `ppInsignature` heißen **Param *** n*, wobei *n* ist die Position des Parameters in der Methodensignatur (z. B. `Param1`, `Param2`usw..). Die Eigenschaften im `ppOutSignature` werden auch als **Param *** n*, und der Rückgabewert ist mit dem Namen **ReturnValue**. Weitere Informationen und ein Beispiel finden Sie unter [IWbemClassObject::GetMethod Methode](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
 ## <a name="requirements"></a>Anforderungen  
-**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: erstellen eine Windows Forms-Anwendung über die Befehlszeile'
+title: 'Gewusst wie: erstellen eine Windows Forms-Anwendung über die Befehlszeile'
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe7c1eddd67e678e7086d948efb854a6b4b52f6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539490"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400379"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Vorgehensweise: erstellen eine Windows Forms-Anwendung über die Befehlszeile
-In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen. Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe auch [Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Gewusst wie: erstellen eine Windows Forms-Anwendung über die Befehlszeile
+In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen. Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe auch [Exemplarische Vorgehensweise: Erstellen eines einfachen Windows-Formulars](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
 ## <a name="procedure"></a>Prozedur  
   
@@ -44,9 +44,9 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
 4.  Fügen Sie der Klasse eine `Main`-Method hinzu.  
   
-    1.  Anwenden der <xref:System.STAThreadAttribute> zu C#- `Main` Methode an der Windows Forms-Anwendung ist eine Singlethread-Apartment. (Das Attribut ist nicht in Visual Basic erforderlich, da Windows Forms-Anwendungen mit Visual Basic verwenden ein Singlethread-Apartment-Modell standardmäßig entwickelt.)  
+    1.  Anwenden der <xref:System.STAThreadAttribute> zur c#- `Main` Methode an der Windows Forms-Anwendung ist eine Singlethread-Apartment. (Das Attribut ist nicht in Visual Basic erforderlich, da Windows Forms-Anwendungen mit Visual Basic verwenden ein Singlethread-Apartment-Modell in der Standardeinstellung entwickelt.)  
   
-    2.  Rufen Sie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> auf Betriebssystem-Formatvorlagen für Ihre Anwendung gelten.  
+    2.  Rufen Sie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> Betriebssystem Stile für Ihre Anwendung anwenden.  
   
     3.  Erstellen Sie eine Instanz des Formulars, und führen Sie diese aus.  
   
@@ -59,16 +59,16 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
 2.  Kompilieren Sie das Formular.  
   
-    -   Wenn Sie c# verwenden, geben Sie ein: `csc form1.cs`  
+    -   Wenn Sie c# verwenden, geben Sie: `csc form1.cs`  
   
          `-or-`  
   
-    -   Wenn Sie Visual Basic verwenden, geben Sie: `vbc form1.vb`  
+    -   Wenn Sie Visual Basic verwenden, geben Sie ein: `vbc form1.vb`  
   
 3.  Geben Sie an der Eingabeaufforderung: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Hinzufügen eines Steuerelements und Behandeln eines Ereignisses  
- Anhand der vorherigen Schritte wurde veranschaulicht, wie Sie ein einfaches Windows Form erstellen, das kompiliert und ausgeführt wird. Im nächsten Verfahren wird erläutert, wie Sie ein Steuerelement erstellen und es dem Formular hinzufügen und wie Sie ein Ereignis für das Steuerelement behandeln. Weitere Informationen zu den Steuerelementen, die Sie zu Windows Forms hinzufügen können, finden Sie unter [Windows Forms-Steuerelementen](../../../docs/framework/winforms/controls/index.md).  
+ Anhand der vorherigen Schritte wurde veranschaulicht, wie Sie ein einfaches Windows Form erstellen, das kompiliert und ausgeführt wird. Im nächsten Verfahren wird erläutert, wie Sie ein Steuerelement erstellen und es dem Formular hinzufügen und wie Sie ein Ereignis für das Steuerelement behandeln. Weitere Informationen zu den Steuerelementen, die Sie zu Windows Forms hinzufügen können, finden Sie unter [Windows Forms-Steuerelemente](../../../docs/framework/winforms/controls/index.md).  
   
  Zusätzlich zu dem Wissen, wie Windows Forms-Anwendungen erstellt werden, sollten Sie auch wissen, wie ereignisbasierte Programmierung geht und wie Benutzereingaben behandelt werden. Weitere Informationen finden Sie unter [Erstellen von Ereignishandlern in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), und [Behandeln von Benutzereingaben](../../../docs/framework/winforms/controls/handling-user-input.md)  
   

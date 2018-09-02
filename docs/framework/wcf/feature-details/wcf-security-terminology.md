@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72a2ea1393daa7435ae233d1e420cf88b6f5b6af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508305"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402415"
 ---
 # <a name="wcf-security-terminology"></a>WCF-Sicherheitsterminologie
 Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung sind, sind möglicherweise nicht allgemein bekannt. In diesem Thema werden daher einige Sicherheitsbegriffe kurz erläutert, ohne alle Facetten des jeweiligen Begriffs zu beleuchten.  
   
- Weitere Informationen zu in Windows Communication Foundation (WCF)-Dokumentation verwendeten Begriffen finden Sie unter [grundlegenden Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Weitere Informationen zu den in Windows Communication Foundation (WCF)-Dokumentation verwendeten Begriffe finden Sie unter [grundlegenden Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  Zugriffssteuerungsliste  
  Eine Liste mit den Arten von Sicherheitsschutz, der auf ein Objekt angewendet wird. (Ein Objekt kann eine Datei, ein Prozess, ein Ereignis oder ein sonstiges Element sein, die über einen Sicherheitsdeskriptor verfügen.) Ein Eintrag in einer Zugriffssteuerungsliste wird als Access Control Entry (ACE) bezeichnet. Es gibt zwei Typen von Zugriffssteuerungslisten: freigegebene Zugriffssteuerungslisten und Systemzugriffssteuerungslisten.  
@@ -30,10 +30,10 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Die Kontrolle des Zugriffs auf und der Rechte für eine Ressource, Beispielsweise können die Mitglieder einer Gruppe eine Datei lesen, während die Mitglieder einer anderen Gruppe diese auch bearbeiten dürfen.  
   
  Zertifizierungsstellenzertifikat  
- Identifiziert die Zertifizierungsstelle, die Zertifikate zur Authentifizierung von Clients und Servern ausstellt, die von diesen angefordert werden. Da sie einen öffentlichen Schlüssel, der in digitalen Signaturen verwendet enthält, es wird auch bezeichnet als eine *Signaturzertifikat*. Wenn die Zertifizierungsstelle eine Stammzertifizierungsstelle handelt, kann das Zertifizierungsstellenzertifikat auf bezeichnet werden, als ein *Stammzertifikat*. In einigen Fällen auch bekannt als ein *Websitezertifikat*.  
+ Identifiziert die Zertifizierungsstelle, die Zertifikate zur Authentifizierung von Clients und Servern ausstellt, die von diesen angefordert werden. Da es sich um einen öffentlichen Schlüssel, der in digitalen Signaturen verwendet enthält, es wird auch bezeichnet als eine *Signaturzertifikat*. Wenn die Zertifizierungsstelle eine Stammzertifizierungsstelle handelt, das ZS-Zertifikat kann bezeichnet werden als eine *Stammzertifikat*. Manchmal auch als bezeichnet ein *Websitezertifikats*.  
   
  Zertifizierungsstellenhierarchie  
- Eine Zertifizierungsstellenhierarchie enthält mehrere Zertifizierungsstellen. Es ist so konzipiert, dass für jede Zertifizierungsstelle von der Zertifizierungsstelle auf einer höheren Ebene der Hierarchie bis zum Anfang der Hierarchie, auch bekannt als zertifiziert ist die *Stammzertifizierungsstelle*, erreicht ist.  
+ Eine Zertifizierungsstellenhierarchie enthält mehrere Zertifizierungsstellen. Es ist so konzipiert, dass jede Zertifizierungsstelle von der Zertifizierungsstelle auf einer höheren Ebene der Hierarchie bis zum Anfang der Hierarchie, auch bekannt als zertifiziert ist die *Stammzertifizierungsstelle*, erreicht wird.  
   
  certificate  
  Eine digital signierte Anweisung mit Informationen über eine Entität und ihren öffentlichen Schlüssel, die zwei Informationen verbindet. Zertifikate werden von vertrauenswürdigen Organisationen (oder Entitäten) ausgestellt, die auch als Zertifizierungsstellen bezeichnet werden, nachdem die Zertifizierungsstelle die vorgegebene Identität überprüft hat.  
@@ -65,7 +65,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Ein Paar aus einem öffentlichen und einem privaten Schlüssel für die Verschlüsselung von Sitzungsschlüsseln zum sicheren Speichern und Austauschen mit anderen Benutzern.  
   
  hash  
- Ein numerischer Wert fester Größe, der durch Anwendung einer mathematischen Funktion (siehe Hashalgorithmus) auf eine beliebige Datenmenge ermittelt wird. Die Daten enthalten normalerweise zufällige Werte, bekannt als ein *Nonce*. Dienst und Client steuern eine Nonce zum Austausch bei, um die Komplexität des Ergebnisses zu erhöhen. Das Ergebnis ist auch bekannt als ein *Nachrichtenübersicht*. Das Senden eines Hashwerts ist sicherer als der Einsatz sensibler Daten wie Kennwörter, auch wenn diese verschlüsselt sind. Sender und Empfänger müssen sich auf einen Hashalgorithmus und Nonces verständigen, um den Hashalgorithmus nach dem Empfang überprüfen zu können.  
+ Ein numerischer Wert fester Größe, der durch Anwendung einer mathematischen Funktion (siehe Hashalgorithmus) auf eine beliebige Datenmenge ermittelt wird. Die Daten enthalten normalerweise zufällige Daten, bekannt als eine *Nonce*. Dienst und Client steuern eine Nonce zum Austausch bei, um die Komplexität des Ergebnisses zu erhöhen. Das Ergebnis ist auch bekannt als eine *Nachrichtenhash*. Das Senden eines Hashwerts ist sicherer als der Einsatz sensibler Daten wie Kennwörter, auch wenn diese verschlüsselt sind. Sender und Empfänger müssen sich auf einen Hashalgorithmus und Nonces verständigen, um den Hashalgorithmus nach dem Empfang überprüfen zu können.  
   
  Hashalgorithmus  
  Ein Algorithmus zur Erzeugung eines Hashwerts aus Daten, beispielsweise aus einer Nachricht oder aus einem Sitzungsschlüssel. Typische Hashalgorithmen sind MD2, MD4, MD5 und SHA-1.  
@@ -92,7 +92,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Der Cryptographic Message Syntax (CMS)-Standard. Eine allgemeine Syntax für Daten, bei denen Kryptografie eingesetzt werden könnte, beispielsweise digitale Signaturen und Verschlüsselungen. Außerdem wird damit eine Syntax zur Verteilung von Zertifikaten oder Zertifikatsperrlisten und anderen Nachrichtenattributen wie Zeitstempeln bereitgestellt.  
   
  Klartext  
- Eine unverschlüsselte Nachricht. Nur-Text-Nachrichten werden manchmal als *Klartext* Nachrichten.  
+ Eine unverschlüsselte Nachricht. Nachrichten werden manchmal als *Klartext* Nachrichten.  
   
  Berechtigung  
  Das Recht eines Benutzers zur Durchführung verschiedener Systemvorgänge wie Herunterfahren des Systems, Laden von Gerätetreibern oder Ändern der Systemzeit. Das Zugriffstoken eines Benutzers enthält eine Liste der Berechtigungen des Benutzers oder der Benutzergruppe.  
@@ -175,10 +175,10 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Die Software, die entscheidet, ob eine Datei als vertrauenswürdig eingestuft wird. Diese Entscheidung basiert auf dem Zertifikat, das der Datei zugeordnet ist.  
   
  Benutzerprinzipalname (UPN)  
- Einen Benutzerkontonamen (auch bezeichnet als das *Benutzeranmeldename*) und ein Domänenname zur Identifizierung der Domäne, in dem sich das Benutzerkonto befindet. Dies ist das Standardverfahren für die Anmeldung an einer Windows-Domäne. Das Format lautet: someone@example.com (wie bei einer e-Mail-Adresse).  
+ Einen Benutzerkontonamen an (auch bezeichnet als die *Benutzeranmeldename*) und ein Domänenname zur Identifizierung der Domäne, in dem sich das Benutzerkonto befindet. Dies ist das Standardverfahren für die Anmeldung an einer Windows-Domäne. Das Format lautet: someone@example.com (wie bei einer e-Mail-Adresse).  
   
 > [!NOTE]
->  Zusätzlich zu den standard-UPN-Format akzeptiert WCF UPNs früherer Format, z. B. cohowinery.com\someone.  
+>  Abgesehen von standard akzeptiert WCF UPNs kompatiblen Format, z. B. cohowinery.com\someone.  
   
  X.509  
  Ein international anerkannter Zertifikatstandard zur Definition erforderlicher Bestandteile.  
@@ -186,4 +186,4 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
 ## <a name="see-also"></a>Siehe auch  
  [Wesentliche Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md)  
  [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

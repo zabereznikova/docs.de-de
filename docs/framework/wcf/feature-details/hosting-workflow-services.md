@@ -2,15 +2,15 @@
 title: Hosten von Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: b42dd42b9697d87d7721fc5edc2dfde01f1d37c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932832"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416364"
 ---
 # <a name="hosting-workflow-services"></a>Hosten von Workflowdiensten
-Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagieren kann. Workflowdienste verwenden die WCF-Messaginginfrastruktur und werden daher auf ähnliche Weise gehostet. Wie WCF-Dienste können Workflowdienste in allen verwalteten Anwendungen, unter Internet Information Services (IIS) oder unter Windows Process Activation Services (WAS) gehostet werden. Darüber hinaus können Workflowdienste unter Windows Server AppFabric gehostet werden. Weitere Informationen zu Windows Server AppFabric finden Sie unter [Dokumentation zu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=196494), und [AppFabric-Hostingkonzepte](http://go.microsoft.com/fwlink/?LinkId=196495). Weitere Informationen über die verschiedenen Möglichkeiten zum Hosten von WCF finden Sie unter Services [Hostingdienste](../../../../docs/framework/wcf/hosting-services.md).
+Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagieren kann. Workflowdienste verwenden die WCF-Messaginginfrastruktur und werden daher auf ähnliche Weise gehostet. Wie WCF-Dienste können Workflowdienste in allen verwalteten Anwendungen, unter Internet Information Services (IIS) oder unter Windows Process Activation Services (WAS) gehostet werden. Darüber hinaus können Workflowdienste unter Windows Server AppFabric gehostet werden. Weitere Informationen zu Windows Server AppFabric finden Sie unter [Dokumentation zu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=196494), und [AppFabric-Hostingkonzepte](https://go.microsoft.com/fwlink/?LinkId=196495). Weitere Informationen über die verschiedenen Möglichkeiten zum Hosten von WCF finden Sie unter Services [Hostingdienste](../../../../docs/framework/wcf/hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Hosten in einer verwalteten Anwendung
  Verwenden Sie die <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse, um einen Workflowdienst in einer verwalteten Anwendung zu hosten. Mit dem <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Konstruktor können Sie eine Singleton-Workflowdienstinstanz, eine Workflowdienstdefinition oder eine Aktivität angeben, die die Workflowmessagingaktivitäten verwendet. Aufrufen von <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> bewirkt, dass der Dienst für eingehende Nachrichten zu lauschen.
@@ -51,7 +51,7 @@ Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagi
  Verweise auf benutzerdefinierte Aktivitäten hinzugefügt werden müssen die <`Assemblies`>-Abschnitt unter <`System.Web.Compilation`>, damit sie in der Anwendungsdomäne geladen werden und der XAML-Deserialisierer die Typen finden kann. Diese Einstellungen können auf Anwendungsebene oder in der Web.config-Stammdatei vorgenommen werden, falls die Einstellungen für alle Anwendungen auf dem Computer übernommen werden sollen.
 
 ## <a name="deployment"></a>Bereitstellung
- Das Webbereitstellungstool wurde erstellt, um die Bereitstellung zu vereinfachen. Mit dem Tool können Sie Anwendungen zwischen IIS 6.0 und IIS 7.0 migrieren, Serverfarmen synchronisieren und Webanwendungen verpacken, archivieren und bereitstellen. Weitere Informationen finden Sie unter [MS-Bereitstellungstool](http://go.microsoft.com/fwlink/?LinkId=178690).
+ Das Webbereitstellungstool wurde erstellt, um die Bereitstellung zu vereinfachen. Mit dem Tool können Sie Anwendungen zwischen IIS 6.0 und IIS 7.0 migrieren, Serverfarmen synchronisieren und Webanwendungen verpacken, archivieren und bereitstellen. Weitere Informationen finden Sie unter [MS-Bereitstellungstool](https://go.microsoft.com/fwlink/?LinkId=178690).
 
 ## <a name="see-also"></a>Siehe auch
 

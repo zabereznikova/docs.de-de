@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: ba04b904930f2393022ea4ca6276cef95e51d833
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 108411269067dc4b19b585b991dffbd78f2bb23f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539951"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405098"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog-Komponente (Windows Forms)
-Die <xref:System.Windows.Forms.OpenFileDialog>-Komponente von Windows Forms ist ein vorkonfiguriertes Dialogfeld. Er ist der gleiche **Dateiöffnungsmodus** (Dialogfeld), die von Windows-Betriebssystems verfügbar gemacht werden. Die Vererbung erfolgt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.  
+Die <xref:System.Windows.Forms.OpenFileDialog>-Komponente von Windows Forms ist ein vorkonfiguriertes Dialogfeld. Dies entspricht dem **geöffnete Datei** (Dialogfeld), die von der Windows-Betriebssystem verfügbar gemacht werden. Die Vererbung erfolgt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die OpenFileDialog-Komponente](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
@@ -33,5 +33,5 @@ Die <xref:System.Windows.Forms.OpenFileDialog>-Komponente von Windows Forms ist 
  [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
- [Erforderlicher Code für Windows Forms-Dialogfelder](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ [Erforderlicher Code für Windows Forms-Dialogfelder](https://go.microsoft.com/fwlink/?LinkID=102575)  
  Beschreibt die Dialogfeldsteuerelemente und Komponenten von Windows Forms sowie den Code, der zum Ausführen ihrer grundlegenden Funktionen erforderlich ist. (Technischer Artikel der MSDN Online Library)

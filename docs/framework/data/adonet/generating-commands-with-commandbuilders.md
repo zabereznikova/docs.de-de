@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: 752cccc9e10dd3056817945d1f9f5f3cf7d84227
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766282"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415762"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generieren von Befehlen mit CommandBuilder-Objekten
 Wenn die `SelectCommand`-Eigenschaft dynamisch zur Laufzeit angegeben wird, z. B. mit einem Abfragetool, in dem der Benutzer einen Textbefehl eingibt, sind Sie zur Entwurfszeit u. U. nicht in der Lage, den entsprechenden `InsertCommand`, `UpdateCommand` oder `DeleteCommand` anzugeben. Wenn Ihre <xref:System.Data.DataTable> einer einzelnen Datenbanktabelle zugeordnet ist oder aus einer solchen generiert wurde, können Sie mithilfe des <xref:System.Data.Common.DbCommandBuilder>-Objekts automatisch den `DeleteCommand`, den `InsertCommand` und den `UpdateCommand` des <xref:System.Data.Common.DbDataAdapter> generieren.  
@@ -23,9 +23,9 @@ Wenn die `SelectCommand`-Eigenschaft dynamisch zur Laufzeit angegeben wird, z. 
   
  Bei einer Zuordnung zu einem `DataAdapter` generiert der <xref:System.Data.Common.DbCommandBuilder> automatisch die Eigenschaften `InsertCommand`, `UpdateCommand` und `DeleteCommand` des `DataAdapter`, sofern es sich um NULL-Verweise handelt. Wenn für eine Eigenschaft bereits ein `Command` vorhanden ist, wird der vorhandene `Command` verwendet.  
   
- Datenbankansichten, die durch das Verknüpfen von zwei oder mehr Datenbanken erstellt wurden, werden nicht als eine einzelne Datenbanktabelle betrachtet. In dieser Instanz können Sie den <xref:System.Data.Common.DbCommandBuilder> nicht zum automatischen Generieren von Befehlen verwenden; Sie müssen die Befehle explizit angeben. Informationen zum explizit festlegen Befehle zum Auflösen von Updates für eine `DataSet` zurück an die Datenquelle finden Sie unter [Aktualisieren von Datenquellen mit "DataAdapters"](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+ Datenbankansichten, die durch das Verknüpfen von zwei oder mehr Datenbanken erstellt wurden, werden nicht als eine einzelne Datenbanktabelle betrachtet. In dieser Instanz können Sie den <xref:System.Data.Common.DbCommandBuilder> nicht zum automatischen Generieren von Befehlen verwenden; Sie müssen die Befehle explizit angeben. Informationen zum expliziten Festlegen von Befehlen zum Aktualisieren einer `DataSet` zurück an die Datenquelle finden Sie unter [Aktualisieren von Datenquellen mit "DataAdapters"](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
- Unter Umständen möchten Sie der aktualisierten Zeile eines `DataSet` erneut Ausgabeparameter zuordnen. Eine allgemeine Aufgabe wäre das Abrufen des Werts eines automatisch generierten Identitätsfelds oder Timestamps aus der Datenquelle. Standardmäßig werden den Spalten in einer aktualisierten Zeile vom <xref:System.Data.Common.DbCommandBuilder> keine Ausgabeparameter zugeordnet. In diesem Fall müssen Sie den Befehl explizit angeben. Ein Beispiel der Zuordnung eines automatisch generierten Identitätsfelds an eine Spalte einer eingefügten Zeile finden Sie unter [Abrufen von Identity- oder Autonumber-Werten](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+ Unter Umständen möchten Sie der aktualisierten Zeile eines `DataSet` erneut Ausgabeparameter zuordnen. Eine allgemeine Aufgabe wäre das Abrufen des Werts eines automatisch generierten Identitätsfelds oder Timestamps aus der Datenquelle. Standardmäßig werden den Spalten in einer aktualisierten Zeile vom <xref:System.Data.Common.DbCommandBuilder> keine Ausgabeparameter zugeordnet. In diesem Fall müssen Sie den Befehl explizit angeben. Ein Beispiel für die Zuordnung eines automatisch generierten Identitätsfelds zu einer Spalte einer eingefügten Zeile, finden Sie unter [Abrufen von Identity- oder Autonumber-Werten](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
   
 ## <a name="rules-for-automatically-generated-commands"></a>Regeln für automatisch generierte Befehle  
  Die folgende Tabelle enthält die Regeln für das Generieren von automatisch generierten Befehlen.  
@@ -37,7 +37,7 @@ Wenn die `SelectCommand`-Eigenschaft dynamisch zur Laufzeit angegeben wird, z. 
 |`DeleteCommand`|Löscht Zeilen in der Datenquelle für alle Zeilen in der Tabelle, die den `RowState`-Wert <xref:System.Data.DataRowState.Deleted> aufweisen. Löscht alle Zeilen, deren Spaltenwerte den Primärschlüssel-Spaltenwerten der Zeile entsprechen und bei denen die übrigen Spalten in der Datenquelle den ursprünglichen Werten der Zeile entsprechen. Weitere Informationen finden Sie unter "Vollständiges Parallelitätsmodell für Updates und Löschvorgänge" weiter unten in diesem Thema.|  
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>Vollständiges Parallelitätsmodell für Updates und Löschvorgänge  
- Die Logik zum Generieren von Befehlen für Update- und DELETE-Anweisungen automatisch basiert auf *vollständige Parallelität*– d. h. Datensätze werden nicht für die Bearbeitung gesperrt und kann von anderen Benutzern oder Prozessen jederzeit geändert werden. Da ein Datensatz nach der Rückgabe aus der SELECT-Anweisung und vor der Ausführung der UPDATE- oder DELETE-Anweisung ggf. geändert wurde, enthält die automatisch generierte UPDATE- oder DELETE-Anweisung eine WHERE-Klausel, die angibt, dass eine Zeile nur dann aktualisiert wird, wenn sie alle ursprünglichen Werte enthält und nicht aus der Datenquelle gelöscht wurde. Hierdurch wird vermieden, dass neue Daten überschrieben werden. In Fällen, in denen ein automatisch generierter Updatebefehl versucht, eine Zeile zu aktualisieren, die gelöscht wurde oder nicht die ursprünglichen Werte im <xref:System.Data.DataSet> enthält, hat der Befehl keine Auswirkungen auf Datensätze, und es wird eine <xref:System.Data.DBConcurrencyException> ausgelöst.  
+ Die Logik für das Generieren von Befehlen für Update- und DELETE-Anweisungen automatisch basiert auf *optimistische Parallelität*–, also die Datensätze werden nicht für die Bearbeitung gesperrt und kann von anderen Benutzern oder Prozessen jederzeit geändert werden. Da ein Datensatz nach der Rückgabe aus der SELECT-Anweisung und vor der Ausführung der UPDATE- oder DELETE-Anweisung ggf. geändert wurde, enthält die automatisch generierte UPDATE- oder DELETE-Anweisung eine WHERE-Klausel, die angibt, dass eine Zeile nur dann aktualisiert wird, wenn sie alle ursprünglichen Werte enthält und nicht aus der Datenquelle gelöscht wurde. Hierdurch wird vermieden, dass neue Daten überschrieben werden. In Fällen, in denen ein automatisch generierter Updatebefehl versucht, eine Zeile zu aktualisieren, die gelöscht wurde oder nicht die ursprünglichen Werte im <xref:System.Data.DataSet> enthält, hat der Befehl keine Auswirkungen auf Datensätze, und es wird eine <xref:System.Data.DBConcurrencyException> ausgelöst.  
   
  Wenn UPDATE oder DELETE unabhängig von den ursprünglichen Werten ausgeführt werden sollen, muss der `UpdateCommand` für den `DataAdapter` explizit festgelegt und die automatische Befehlsgenerierung damit außer Kraft gesetzt werden.  
   
@@ -112,4 +112,4 @@ adapter.Fill(custDS, "Customers");
  [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Ausführen eines Befehls](../../../../docs/framework/data/adonet/executing-a-command.md)  
  [DbConnection, DbCommand und DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

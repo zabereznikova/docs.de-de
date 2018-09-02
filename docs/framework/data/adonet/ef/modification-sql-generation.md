@@ -2,17 +2,17 @@
 title: Generierung von Änderungen in SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071951"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417246"
 ---
 # <a name="modification-sql-generation"></a>Generierung von Änderungen in SQL
 In diesem Abschnitt wird erläutert, wie ein SQL-Änderungsgenerierungsmodul für den Anbieter (von SQL:1999-kompatiblen Datenbanken) entwickelt wird. Mit diesem Modul wird eine Änderungsbefehlsstruktur in die entsprechenden INSERT-, UPDATE- oder DELETE-Anweisungen von SQL übersetzt.  
   
- Informationen zur SQL-Generierung für select-Anweisungen finden Sie unter [SQL-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
+ Weitere Informationen zu SQL-Generierung für select-Anweisungen, finden Sie unter [SQL-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
   
 ## <a name="overview-of-modification-command-trees"></a>Übersicht über Änderungsbefehlsstrukturen  
  Das SQL-Änderungsgenerierungsmodul generiert datenbankspezifische SQL-Änderungsanweisungen anhand einer bestimmten eingegebenen DbModificationCommandTree.  
@@ -25,11 +25,11 @@ In diesem Abschnitt wird erläutert, wie ein SQL-Änderungsgenerierungsmodul fü
   
 -   DbDeleteCommandTree  
   
- DbModificationCommandTree und ihre Implementierung, die erstellt werden, indem die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] immer einen einzelne Zeile Vorgang darstellen. In diesem Abschnitt werden diese Typen mit ihren Einschränkungen in .NET Framework 3.5 beschrieben.  
+ DbModificationCommandTree und ihre Implementierung, die erstellt werden, indem die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] stellen immer einen einzelne Zeile Vorgang dar. In diesem Abschnitt werden diese Typen mit ihren Einschränkungen in .NET Framework 3.5 beschrieben.  
   
  ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree verfügt über eine Zieleigenschaft, die den Zielsatz für den Änderungsvorgang darstellt. Die Ausdruckseigenschaft des Ziels, mit der der Eingabesatz definiert wird, ist immer DbScanExpression.  Ein DbScanExpression kann entweder eine Tabelle oder Sicht darstellen, oder ein Satz von Daten mit einer Abfrage definierten ist Metadateneigenschaft "Defining Query" des Ziels nicht Null.  
+ DbModificationCommandTree verfügt über eine Zieleigenschaft, die den Zielsatz für den Änderungsvorgang darstellt. Die Ausdruckseigenschaft des Ziels, mit der der Eingabesatz definiert wird, ist immer DbScanExpression.  Ein DbScanExpression kann entweder darstellen, eine Tabelle oder Sicht, oder ein Satz von Daten mit einer Abfrage definierten ist die Metadateneigenschaft "Defining Query" des Ziels nicht Null.  
   
  Ein DbScanExpression, der eine Abfrage darstellt, kann nur dann einen Anbieter als Änderungsziel erreichen, wenn der Satz im Modell mit einer definierenden Abfrage definiert wurde, jedoch keine Funktion für den entsprechenden Änderungsvorgang bereitgestellt wurde. Anbieter (z. B. SqlClient) können ein solches Szenario möglicherweise nicht unterstützen.  
   
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Generierung von Änderungen in SQL im Beispielanbieter  
- Die [Entity Framework-Beispielanbieter](http://go.microsoft.com/fwlink/?LinkId=180616) veranschaulicht die Komponenten von ADO.NET-Datenanbietern,, die Unterstützung der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Beim Ziel handelt es sich um eine SQL Server 2005-Datenbank. Die Implementierung erfolgt als übergeordneter Wrapper des ADO.NET 2.0-Datenanbieters System.Data.SqlClient.  
+ Die [Entity Framework Sample Provider](https://go.microsoft.com/fwlink/?LinkId=180616) veranschaulicht die Komponenten von ADO.NET-Datenanbietern,, die Unterstützung der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Beim Ziel handelt es sich um eine SQL Server 2005-Datenbank. Die Implementierung erfolgt als übergeordneter Wrapper des ADO.NET 2.0-Datenanbieters System.Data.SqlClient.  
   
  Das SQL-Änderungsgenerierungsmodul des Beispielanbieters (das sich in der Datei SQL Generation\DmlSqlGenerator.cs befindet) erstellt mit einer eingegebenen DbModificationCommandTree eine einzelne SQL-Änderungsanweisung, möglicherweise gefolgt von einer Auswahlanweisung, um einen Reader zurückzugeben, sofern dies durch die DbModificationCommandTree festgelegt wurde. Beachten Sie, dass die Form der generierten Befehle von der SQL Server-Zieldatenbank abhängig ist.  
   
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Generieren eines SQL-Insert-Befehls  
  Der generierte Einfügebefehl folgt für eine bestimmte DbInsertCommandTree im Beispielanbieter einer der beiden folgenden Einfügevorlagen.  
   
- Die erste Vorlage verfügt über einen Befehl, mit dem der Einfügevorgang mithilfe der Werte in der Liste mit SetClauses durchgeführt werden kann, sowie über eine SELECT-Anweisung, um die in der Returning-Eigenschaft für die eingefügte Zeile angegebenen Eigenschaften zurückzugeben, sofern die Returning-Eigenschaft nicht NULL ist. Das prädikatelement "\@ @ROWCOUNT > 0" ist "true", wenn eine Zeile eingefügt wurde. Das prädikatelement "KeyMemberI = KeyValueI &#124; scope_identity()" nimmt die Form "KeyMemberI = SCOPE_IDENTITY()" "nur, wenn KeyMemeberI ein Speicher generierter Schlüssel ist, da scope_identity() den letzten Identitätswert eingefügt () eine Identität zurückgibt Speicher generierte) Identitätsspalte.  
+ Die erste Vorlage verfügt über einen Befehl, mit dem der Einfügevorgang mithilfe der Werte in der Liste mit SetClauses durchgeführt werden kann, sowie über eine SELECT-Anweisung, um die in der Returning-Eigenschaft für die eingefügte Zeile angegebenen Eigenschaften zurückzugeben, sofern die Returning-Eigenschaft nicht NULL ist. Das prädikatelement "\@ @ROWCOUNT > 0" ist true, wenn eine Zeile eingefügt wurde. Das prädikatelement "KeyMemberI = KeyValueI &#124; SCOPE_IDENTITY()-Funktion" nimmt die Form "KeyMemberI = SCOPE_IDENTITY()" "nur, wenn KeyMemeberI einen vom Speicher generierte Schlüssel ist, da SCOPE_IDENTITY()-Funktion gibt, den letzten Identitätswert, der in einer Identität (eingefügt zurück die Spalte im Speicher generierte).  
   
 ```  
 -- first insert Template  

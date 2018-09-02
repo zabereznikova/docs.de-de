@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 4fc9a787aa03af311ed219f0831a4d0e41544be8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363392"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416707"
 ---
 # <a name="polling-in-console-applications"></a>Abrufen in Konsolenanwendungen
 Mithilfe asynchroner Vorgänge in ADO.NET können Sie zeitaufwändige Datenbankvorgänge in einem Thread initiieren, während andere Aufgaben in einem anderen Thread ausgeführt werden. In den meisten Szenarien gelangen Sie jedoch schließlich an einen Punkt, an dem die Anwendung nicht weiter ausgeführt werden kann, bis der Datenbankvorgang abgeschlossen ist. In solchen Fällen kann durch Abrufen des asynchronen Vorgangs ermittelt werden, ob der Vorgang abgeschlossen ist oder nicht.  
@@ -18,7 +18,7 @@ Mithilfe asynchroner Vorgänge in ADO.NET können Sie zeitaufwändige Datenbankv
  Mithilfe der <xref:System.IAsyncResult.IsCompleted%2A>-Eigenschaft kann der Status des Vorgangs (abgeschlossen oder nicht) festgestellt werden.  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Konsolenanwendung aktualisiert die Daten innerhalb der **AdventureWorks** Beispieldatenbank, die Verwendung eines asynchronen Vorgangs. Zum Emulieren eines Vorgangs mit langer Laufzeit wird in diesem Beispiel eine WAITFOR-Anweisung im Befehlstext eingefügt. In der Regel wird eine verlangsamte Ausführung der Befehle nicht beabsichtigt. In diesem Fall vereinfacht eine solche Vorgehensweise jedoch die Veranschaulichung asynchronen Verhaltens.  
+ Die folgende Konsolenanwendung aktualisiert Daten in die **AdventureWorks** Beispieldatenbank, die Verwendung eines asynchronen Vorgangs. Zum Emulieren eines Vorgangs mit langer Laufzeit wird in diesem Beispiel eine WAITFOR-Anweisung im Befehlstext eingefügt. In der Regel wird eine verlangsamte Ausführung der Befehle nicht beabsichtigt. In diesem Fall vereinfacht eine solche Vorgehensweise jedoch die Veranschaulichung asynchronen Verhaltens.  
   
 ```vb  
 Imports System  
@@ -192,4 +192,4 @@ class Class1
   
 ## <a name="see-also"></a>Siehe auch  
  [Asynchrone Vorgänge](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

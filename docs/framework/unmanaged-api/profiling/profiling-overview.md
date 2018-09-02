@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934950"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416959"
 ---
 # <a name="profiling-overview"></a>Übersicht über die Profilerstellung
 <a name="top"></a> Ein Profiler ist ein Tool, das die Ausführung einer anderen Anwendung überwacht. Ein Common Language Runtime (CLR)-Profiler ist eine Dynamic Link Library (DLL), die aus Funktionen besteht, die mithilfe der Profilerstellungs-API Meldungen von der CLR empfangen und an diese senden. Die Profiler-DLL wird zur Laufzeit von der CLR geladen.  
@@ -209,7 +209,7 @@ Profilerstellungsarchitektur
 ### <a name="stack-snapshot"></a>Stapelmomentaufnahme  
  Unter einer Stapelmomentaufnahme versteht man die Überwachung eines Threadstapels zu einem bestimmten Zeitpunkt. Die Profilerstellungs-API unterstützt die Überwachung von verwalteten Funktionen im Stapel, überlässt jedoch die Überwachung nicht verwalteter Funktionen dem Stackwalker des Profilers.  
   
- Weitere Informationen dazu, wie Sie den Profiler zum Durchlaufen verwalteter Stapel programmieren, finden Sie die [ICorProfilerInfo2:: DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) Methode in dieser Dokumentation und [Profiler Durchlaufen von Stapeln im .NET Framework 2.0: Grundlagen und mehr](http://go.microsoft.com/fwlink/?LinkId=73638).
+ Weitere Informationen dazu, wie Sie den Profiler zum Durchlaufen verwalteter Stapel programmieren, finden Sie die [ICorProfilerInfo2:: DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) Methode in dieser Dokumentation und [Profiler Durchlaufen von Stapeln im .NET Framework 2.0: Grundlagen und mehr](https://go.microsoft.com/fwlink/?LinkId=73638).
   
 ### <a name="shadow-stack"></a>Schattenstapel  
  Die allzu häufige Verwendung der Momentaufnahmemethode kann schnell zu Leistungseinbußen führen. Wenn stapelüberwachungen werden sollen, Ihr Profiler sollten stattdessen erstellen Sie mit einem Schattenstapel mithilfe der [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), und [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) ausnahmerückrufen. Der Schattenstapel ist immer aktuell und kann schnell in den Speicher kopiert werden, wenn eine Stapelmomentaufnahme benötigt wird.  

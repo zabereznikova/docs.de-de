@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: 8fe9580114d6e21e698687ba398d60c0af72d57f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e402f9835f3ca03ac0632d7202000fa3208ed6e3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537137"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403512"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog-Komponente (Windows Forms)
 Die <xref:System.Windows.Forms.SaveFileDialog>-Komponente von Windows Forms ist ein vorkonfiguriertes Dialogfeld. Sie entspricht dem in Windows verwendeten Standarddialogfeld "Datei speichern". Die Vererbung erfolgt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.  
@@ -33,5 +33,5 @@ Die <xref:System.Windows.Forms.SaveFileDialog>-Komponente von Windows Forms ist 
  [Dialogfeld-Steuerelemente und -Komponenten](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
  Beschreibt eine Gruppe von Steuerelementen und Komponenten, mit denen Benutzer Standardinteraktionen mit der Anwendung oder dem System ausführen können.  
   
- [Erforderlicher Code für Windows Forms-Dialogfelder](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ [Erforderlicher Code für Windows Forms-Dialogfelder](https://go.microsoft.com/fwlink/?LinkID=102575)  
  Beschreibt die Dialogfeldsteuerelemente und Komponenten von Windows Forms sowie den Code, der zum Ausführen ihrer grundlegenden Funktionen erforderlich ist. (Technischer Artikel der MSDN Online Library)

@@ -1,13 +1,13 @@
 ---
-title: + (Verketten von Zeichenfolgen) (Entity SQL)
+title: + (Verketten) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
-ms.openlocfilehash: 1826d1267f0ee5ad8320cf1d1ab36f87adf765a5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a1785d590c5f7fcc443856180d516bb40cfc28e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764553"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408473"
 ---
 # <a name="-string-concatenation-entity-sql"></a>+ (Zeichenfolgenverkettung) (Entity SQL)
 Verkettet zwei Zeichenfolgen.  
@@ -28,7 +28,7 @@ expression + expression
 ## <a name="example"></a>Beispiel  
  Die folgende Entity SQL-Abfrage verwendet den Operator "+", um zwei Zeichenfolgen zu verketten. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1.  Verwenden Sie das Verfahren in [Vorgehensweise: Ausführen einer Abfrage, gibt PrimitiveType-Ergebnisse](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  Führen Sie die Verfahren in [wie: Ausführen einer Abfrage, gibt PrimitiveType-Ergebnisse](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery` -Methode:  
   
@@ -36,4 +36,4 @@ expression + expression
   
 ## <a name="see-also"></a>Siehe auch  
  [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Konzeptionelle Modelltypen (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)
+ [Konzeptionelle Modelltypen (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)

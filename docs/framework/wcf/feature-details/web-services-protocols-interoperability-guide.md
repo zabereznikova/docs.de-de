@@ -2,103 +2,103 @@
 title: Handbuch für die Interoperabilität von Webdienstprotokollen
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 1ee8b485d8a46d2599958db2c71f4a6e84875169
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da5014292a8ebfcea48a7b6e1a0cdfd014b09961
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506606"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403643"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Handbuch für die Interoperabilität von Webdienstprotokollen
-Windows Communication Foundation (WCF) wird eine Anzahl von Webdienstprotokollen implementiert. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. Dieses Thema enthält eine Liste von Webdienstprotokollen, die von die WCF implementiert. In den weiteren Themen dieses Abschnitts finden Sie ausführlichere Informationen zur Implementierung der einzelnen unterstützten Protokolle.  
+Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen implementiert. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. Dieses Thema enthält eine Liste von Webdienstprotokollen, die von die WCF implementiert. In den weiteren Themen dieses Abschnitts finden Sie ausführlichere Informationen zur Implementierung der einzelnen unterstützten Protokolle.  
   
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Von WCF implementierte Webdienstprotokolle  
- WCF bietet Unterstützung für Web Services (WS)-infrastrukturprotokollen über Kanäle und Web services Anwendungsprotokolle mithilfe der Vertragsfunktion. Die Interoperabilität von Anwendungsprotokollen wird mithilfe von XML Schema Description Language 1.0 (XSD) und Web Services Description Language (WSDL) 1.1 erzielt.  
+ WCF bietet Unterstützung für Web Services (WS)-infrastrukturprotokollen über Kanäle und Anwendungsprotokolle mithilfe der Vertragsfunktion-Webdienste. Die Interoperabilität von Anwendungsprotokollen wird mithilfe von XML Schema Description Language 1.0 (XSD) und Web Services Description Language (WSDL) 1.1 erzielt.  
   
- Die Interoperabilität von Infrastrukturprotokollen wird mittels der WS-*-Spezifikationen bereitgestellt. WCF--Kanäle bieten Unterstützung für eine Reihe von WS -\* infrastrukturprotokollen. WCF-Kanäle werden mithilfe von Bindungselementen konfiguriert. In den folgenden Tabellen enthalten eine vollständige Liste der WS-\* infrastrukturprotokollen von verschiedenen Elementen der WCF-Bindung implementiert.  
+ Die Interoperabilität von Infrastrukturprotokollen wird mittels der WS-*-Spezifikationen bereitgestellt. WCF--Kanäle bieten Unterstützung für eine Reihe von WS -\* infrastrukturprotokollen. WCF-Kanäle werden mithilfe von Bindungselementen konfiguriert. Die folgenden Tabellen enthalten die vollständige Liste der WS-\* infrastrukturprotokollen, die von verschiedenen Elemente der WCF-Bindung implementiert.  
   
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> unterstützt die in der folgenden Tabelle aufgeführten Spezifikationen:  
   
 |Spezifikation/Dokument|Link|  
 |-----------------------------|----------|  
-|HTTP 1.1|[RFC 2616](http://go.microsoft.com/fwlink/?LinkId=90372)|  
-|SOAP 1.1 HTTP-Bindung|[Simple Object Access Protocol (SOAP) 1.1](http://go.microsoft.com/fwlink/?LinkId=90520), Abschnitt 7|  
-|SOAP 1,2 HTTP-Bindung|[SOAP-Version 1.2, Teil 2: Zusätze (zweite Ausgabe)](http://go.microsoft.com/fwlink/?LinkId=95329), Abschnitt 7|  
+|HTTP 1.1|[RFC 2616](https://go.microsoft.com/fwlink/?LinkId=90372)|  
+|SOAP 1.1 HTTP-Bindung|[Simple Object Access Protocol (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=90520), Abschnitt 7|  
+|SOAP 1,2 HTTP-Bindung|[SOAP-Version 1.2, Teil 2: Zusätze (zweite Ausgabe)](https://go.microsoft.com/fwlink/?LinkId=95329), Abschnitt 7|  
   
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> unterstützen die in der folgenden Tabelle aufgeführten Spezifikationen:  
   
 |Spezifikation/Dokument|Link|  
 |-----------------------------|----------|  
-|XML|[Extensible Markup Language (XML) 1.0 (vierte Ausgabe)](http://go.microsoft.com/fwlink/?LinkId=15139)|  
-|SOAP 1,1|[Simple Object Access Protocol (SOAP) 1.1](http://go.microsoft.com/fwlink/?LinkId=96687)|  
-|SOAP 1.2 Core|[SOAP-Version 1.2, Teil 1: Messagingframework (zweite Ausgabe)](http://go.microsoft.com/fwlink/?LinkId=94664)|  
-|WS-Adressierung 2004/08|[Web Services Addressing (WS-Adressierung)](http://go.microsoft.com/fwlink/?LinkId=81239)|  
-|W3C Web Services Addressing 1.0 - Core|[Web Services Addressing 1.0 – Core](http://go.microsoft.com/fwlink/?LinkId=96688)|  
-|W3C Web Services Addressing 1.0 - SOAP-Bindung|[Web Services Addressing 1.0 – SOAP-Bindung](http://go.microsoft.com/fwlink/?LinkId=96689)|  
-|W3C Web Services Addressing 1.0 - WSDL-Bindung*|[Web Services Addressing 1.0 – WSDL-Bindung](http://go.microsoft.com/fwlink/?LinkId=96690)|  
+|XML|[Extensible Markup Language (XML) 1.0 (Fourth Edition)](https://go.microsoft.com/fwlink/?LinkId=15139)|  
+|SOAP 1,1|[Simple Object Access Protocol (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=96687)|  
+|SOAP 1.2 Core|[SOAP Version 1.2, Teil 1: Messagingframework (zweite Ausgabe)](https://go.microsoft.com/fwlink/?LinkId=94664)|  
+|WS-Adressierung 2004/08|[Web Services Addressing (WS-Adressierung)](https://go.microsoft.com/fwlink/?LinkId=81239)|  
+|W3C Web Services Addressing 1.0 - Core|[Webdienste-Adressierung 1.0 - Core](https://go.microsoft.com/fwlink/?LinkId=96688)|  
+|W3C Web Services Addressing 1.0 - SOAP-Bindung|[Web Services Addressing 1.0 – SOAP-Bindung](https://go.microsoft.com/fwlink/?LinkId=96689)|  
+|W3C Web Services Addressing 1.0 - WSDL-Bindung*|[Web Services Addressing 1.0 – WSDL-Bindung](https://go.microsoft.com/fwlink/?LinkId=96690)|  
 |W3C Web Services Addressing 1.0 – Metadaten|[Web Services Addressing 1.0 – Metadaten](http://www.w3.org/TR/ws-addr-metadata/)|  
-|WSDL SOAP1.1-Bindung|[Web Services Description Language (WSDL) 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)|  
-|WSDL SOAP1.2-Bindung|[WSDL 1.1-Bindungserweiterung für SOAP 1.2](http://go.microsoft.com/fwlink/?LinkId=96691)|  
+|WSDL SOAP1.1-Bindung|[Web Services Description Language (WSDL) 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)|  
+|WSDL SOAP1.2-Bindung|[WSDL 1.1-Bindungserweiterung für SOAP 1.2](https://go.microsoft.com/fwlink/?LinkId=96691)|  
   
  <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> unterstützt die in der folgenden Tabelle aufgeführten Spezifikationen:  
   
 |Spezifikation/Dokument|Link|  
 |-----------------------------|----------|  
-|XOP|[XML-Binärdatei optimiert, Verpacken](http://go.microsoft.com/fwlink/?LinkId=96714)|  
-|MTOM + SOAP1.2-Bindung|[SOAP-Nachrichten-Übertragungsoptimierungsmechanismus](http://go.microsoft.com/fwlink/?LinkId=96713)|  
-|MTOM SOAP 1.1-Bindung|[SOAP 1.1-Bindung für MTOM 1.0](http://go.microsoft.com/fwlink/?LinkId=96712)|  
+|XOP|[XML-Binärdatei optimiert, Verpacken](https://go.microsoft.com/fwlink/?LinkId=96714)|  
+|MTOM + SOAP1.2-Bindung|[SOAP-Nachrichten-Übertragungsoptimierungsmechanismus](https://go.microsoft.com/fwlink/?LinkId=96713)|  
+|MTOM SOAP 1.1-Bindung|[SOAP 1.1-Bindung für MTOM 1.0](https://go.microsoft.com/fwlink/?LinkId=96712)|  
 |MTOM WS-Richtlinienassertionen|Veröffentlichung steht noch aus|  
   
  <xref:System.ServiceModel.Channels.SecurityBindingElement> unterstützt die in der folgenden Tabelle aufgeführten Spezifikationen:  
   
 |Spezifikation/Dokument|Link|  
 |-----------------------------|----------|  
-|WSS: SOAP-Nachrichtensicherheit 1,0|[Webdienstesicherheit: SOAP Message Security 1.0](http://go.microsoft.com/fwlink/?LinkId=94684)|  
-|WSS: Username Token Profile 1.0|[Web Services Security UsernameToken Profile 1.0](http://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> erfordern Password/@Type= PasswordText zugewiesen (Standard)|  
-|WSS: X.509 Token Profile 1.0|[Web Services Security x. 509-Zertifikatstokenprofil](http://go.microsoft.com/fwlink/?LinkId=95335)|  
-|WSS: SAML 1.1 Token Profile 1,0|[Webdienstesicherheit: SAML-Tokenprofil](http://go.microsoft.com/fwlink/?LinkId=96693)|  
-|WSS: SOAP-Nachrichtensicherheit 1.1|[Webdienstesicherheit: SOAP-Nachrichtensicherheit 1.1](http://go.microsoft.com/fwlink/?LinkId=91240)|  
-|WSS: Username Token Profile 1.1|[Web Services Security UsernameToken Profile 1.1](http://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> Implementieren Sie keine kennwortbasierte Schlüsselableitung;<br /><br /> erfordern Password/@Type= PasswordText zugewiesen (Standard)|  
-|WSS: X509 Token Profile 1.1|[Web Services Security x. 509-Zertifikatstokenprofil 1.1](http://go.microsoft.com/fwlink/?LinkId=95332)|  
-|WSS: Kerberos Token Profile 1.1|[Web Services Security Kerberos Token Profile 1.1](http://go.microsoft.com/fwlink/?LinkId=95333)|  
-|WSS: SAML 1.1 Token Profile 1.1|[Web Services Security SAML-Tokenprofil 1.1](http://go.microsoft.com/fwlink/?LinkId=96694)|  
-|WS-Secure Conversation|[Webdienste sichere Konversationssprache](http://go.microsoft.com/fwlink/?LinkId=95317)|  
-|WS-Trust 1.4 (möglicherweise in englischer Sprache)|[Web Services Trust-Sprache](http://go.microsoft.com/fwlink/?LinkId=169514)|  
-|WS-SecurityPolicy 2005/07|[Webdienste sichere Konversationssprache](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Wurde gemäß den an das OASIS WS-SX Technical Committee übermittelten Fehlerberichten geändert.<br /><br /> [WS-Sx-Nachricht](http://go.microsoft.com/fwlink/?LinkId=96700)|  
+|WSS: SOAP-Nachrichtensicherheit 1,0|[Webdienstesicherheit: SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
+|WSS: Username Token Profile 1.0|[Web Services Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> erfordern Password/@Type= PasswordText zugewiesen (Standard)|  
+|WSS: X.509 Token Profile 1.0|[Web Services Security x. 509-Zertifikatstokenprofil](https://go.microsoft.com/fwlink/?LinkId=95335)|  
+|WSS: SAML 1.1 Token Profile 1,0|[Webdienstesicherheit: SAML-Tokenprofil](https://go.microsoft.com/fwlink/?LinkId=96693)|  
+|WSS: SOAP-Nachrichtensicherheit 1.1|[Webdienstesicherheit: SOAP-Nachrichtensicherheit 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
+|WSS: Username Token Profile 1.1|[Web Services Security-Tokenprofil 1.1](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> Implementieren Sie keine kennwortbasierte Schlüsselableitung;<br /><br /> erfordern Password/@Type= PasswordText zugewiesen (Standard)|  
+|WSS: X509 Token Profile 1.1|[Web Services Security x. 509-Zertifikatstokenprofil 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
+|WSS: Kerberos Token Profile 1.1|[Web Services Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
+|WSS: SAML 1.1 Token Profile 1.1|[Web Services Security SAML Token Profile 1,1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
+|WS-Secure Conversation|[Webdienste sichere Konversationssprache](https://go.microsoft.com/fwlink/?LinkId=95317)|  
+|WS-Trust 1.4 (möglicherweise in englischer Sprache)|[Webdienste: Trust-Sprache](https://go.microsoft.com/fwlink/?LinkId=169514)|  
+|WS-SecurityPolicy 2005/07|[Webdienste sichere Konversationssprache](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Wurde gemäß den an das OASIS WS-SX Technical Committee übermittelten Fehlerberichten geändert.<br /><br /> [WS-Sx-Nachricht](https://go.microsoft.com/fwlink/?LinkId=96700)|  
 |WS-ReliableMessaging 1.1|[Protokoll für zuverlässiges Messaging, Version 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> unterstützt die in der folgenden Tabelle aufgeführten Spezifikationen:  
   
 |Spezifikation/Dokument|Link|  
 |-----------------------------|----------|  
-|WS-Coordination|[Web Services Koordinierung](http://go.microsoft.com/fwlink/?LinkId=95324)|  
-|WS-AtomicTransaction|[Atomic-Transaktion-Webdienste](http://go.microsoft.com/fwlink/?LinkId=95323)|  
+|WS-Coordination|[Webdienste: Koordinierung](https://go.microsoft.com/fwlink/?LinkId=95324)|  
+|WS-AtomicTransaction|[Webdienste: Atomic Transaction](https://go.microsoft.com/fwlink/?LinkId=95323)|  
   
  Die <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, und <xref:System.ServiceModel.Description.MetadataResolver> Klassen bieten Unterstützung für die folgenden Metadatenspezifikationen:  
   
--   [XML Schema Part 1: Strukturen 2. Ausgabe](http://go.microsoft.com/fwlink/?LinkId=3536)  
+-   [XML-Schemateil 1: Strukturen 2. Ausgabe](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML Schema Part 2: Datentypen Second Edition](http://go.microsoft.com/fwlink/?LinkId=40138)  
+-   [XML-Schemateil 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)  
+-   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS-Policy 1.2](http://go.microsoft.com/fwlink/?LinkId=96705)  
+-   [WS-Richtlinie 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=96706)  
+-   [WS-Richtlinie 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-PolicyAttachment 1.2](http://go.microsoft.com/fwlink/?LinkId=96707)  
+-   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
+-   [WS-MetadataExchange-1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [WS-Transfer Get für den Metadatenabruf von](http://go.microsoft.com/fwlink/?LinkId=96708)  
+-   [WS-Transfer Get zum Abrufen von Metadaten](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
  Darüber hinaus werden die folgenden Interoperabilitätsprofile in WCF implementiert:  
   
--   [Basic Profile 1.1](http://go.microsoft.com/fwlink/?LinkId=69313)  
+-   [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [Einfache SOAP-Bindung 1.0](http://go.microsoft.com/fwlink/?LinkId=96710)  
+-   [Einfache SOAP-Bindung von 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [Basic Security Profile 1.0 arbeiten Entwurf](http://go.microsoft.com/fwlink/?LinkId=96711)  
+-   [Basic Security Profile 1.0 arbeiten Entwurf](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Durch vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  

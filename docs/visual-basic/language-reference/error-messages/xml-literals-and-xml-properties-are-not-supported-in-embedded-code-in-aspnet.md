@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: 559889587b30418dc2fe2860cfbf90f91605c668
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 893fdb1b9b3b5ace6b869c7b64ce7483ff523023
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594841"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403324"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>XML-Literale und XML-Eigenschaften werden in eingebettetem Code in ASP.NET nicht unterstützt
-XML-Literale und XML-Eigenschaften werden in eingebettetem Code in ASP.NET nicht unterstützt. Verschieben Sie den Code zum Code-Behind, zur Verwendung von XML-Funktionen.  
+XML-Literale und XML-Eigenschaften werden in eingebettetem Code in ASP.NET nicht unterstützt. Verschieben Sie den Code auf Code-Behind, zur Verwendung von XML-Funktionen.  
   
- Ein XML-Literal oder eine XML-Achseneigenschaft in eingebettetem Code definiert ist (`<%= =>`) in einer ASP.NET-Datei.  
+ Ein XML-Literal oder eine XML-Achseneigenschaft wird innerhalb des eingebetteten Codes definiert (`<%= =>`) in einer ASP.NET-Datei.  
   
  **Fehler-ID:** BC31200  
   
@@ -27,5 +27,5 @@ XML-Literale und XML-Eigenschaften werden in eingebettetem Code in ASP.NET nicht
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Literale](../../../visual-basic/language-reference/xml-literals/index.md)  
- [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/index.md)  
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

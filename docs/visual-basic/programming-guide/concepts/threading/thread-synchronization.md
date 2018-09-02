@@ -2,12 +2,12 @@
 title: Threadsynchronisierung (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3278ed1e98f71e11d47f55a0d4cb50f44ae02027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655090"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406623"
 ---
 # <a name="thread-synchronization-visual-basic"></a>Threadsynchronisierung (Visual Basic)
 In den folgenden Abschnitten werden Funktionen und Klassen beschrieben, die zum Synchronisieren des Zugriffs auf Ressourcen in Multithreadanwendungen verwendet werden können.  
@@ -26,8 +26,8 @@ In den folgenden Abschnitten werden Funktionen und Klassen beschrieben, die zum 
   
 -   [Empfohlene Vorgehensweise für das verwaltete Threading](../../../../standard/threading/managed-threading-best-practices.md)  
   
-## <a name="the-lock-and-synclock-keywords"></a>Die Sperre und SyncLock-Schlüsselwörter  
- Visual Basic `SyncLock` Anweisung um sicherzustellen, dass ein Codeblock bis zum Abschluss ohne Unterbrechung ausgeführt wird von anderen Threads verwendet werden kann. Dies geschieht durch das Abrufen einer Sperre für gegenseitigen Ausschluss für ein bestimmtes Objekt für die Dauer des Codeblocks.  
+## <a name="the-lock-and-synclock-keywords"></a>Die lock- und SyncLock-Schlüsselwörter  
+ Die Visual Basic `SyncLock` Anweisung kann verwendet werden, stellen Sie sicher, dass ein Codeblock bis zum Abschluss ohne Unterbrechung ausgeführt wird. durch andere Threads. Dies geschieht durch das Abrufen einer Sperre für gegenseitigen Ausschluss für ein bestimmtes Objekt für die Dauer des Codeblocks.  
   
  Einer `SyncLock`-Anweisung wird ein Objekt als Argument zugewiesen, gefolgt von einem Codeblock, der nur von einem Thread ausgeführt werden soll. Zum Beispiel:  
   
@@ -147,7 +147,6 @@ End Module
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [Multithreadanwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
  [SyncLock-Anweisung](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
  [Mutexe](../../../../standard/threading/mutexes.md)  
  [Interlocked-Vorgänge](../../../../standard/threading/interlocked-operations.md)  

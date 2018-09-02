@@ -2,12 +2,12 @@
 title: Erste Schritte mit f# in Visual Studio
 description: Erfahren Sie, wie Sie f# in Visual Studio verwenden.
 ms.date: 07/03/2018
-ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874714"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415733"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Erste Schritte mit f# in Visual Studio
 
@@ -47,7 +47,7 @@ Es ist in dieser Funktion, die wir Aufrufen der `square` Funktion mit dem Argume
 
 ## <a name="running-your-code"></a>Ausführen des Codes
 
-Sie können den Code auszuführen und Ergebnisse angezeigt, durch Drücken von **Strg + f5**.  Dies führt die Anwendung ohne Debuggen und ermöglicht es Ihnen, um die Ergebnisse anzuzeigen.  Alternativ können Sie auch die **Debuggen** Menü der obersten Ebene in Visual Studio, und wählen Sie **Starten ohne Debugging**.
+Sie können den Code auszuführen und Ergebnisse angezeigt, durch Drücken von **STRG**+**F5**.  Dies führt das Programm ohne Debuggen und ermöglicht Ihnen, um die Ergebnisse anzuzeigen.  Alternativ können Sie auch die **Debuggen** Menü der obersten Ebene in Visual Studio, und wählen Sie **Starten ohne Debugging**.
 
 Sie sollten jetzt sehen, dass die folgenden im Konsolenfenster anzuzeigen, die Visual Studio eingeblendet wird, wird ausgegeben:
 
@@ -62,4 +62,8 @@ Herzlichen Glückwunsch!  Sie haben Ihr erste F#-Projekt in Visual Studio erstel
 Wenn Sie nicht bereits getan haben, sehen Sie sich die [Einführung in f#](../tour.md), die behandelt einige der wichtigsten Funktionen der Sprache f#.  Es wird bieten Ihnen einen Überblick über einige der Funktionen von f# und bieten reichlich Codebeispiele, die Sie in Visual Studio kopieren und ausführen können.  Es gibt auch einige hervorragenden externe Ressourcen, die Sie verwenden können, im gerätekatalog dargestellt die [Leitfaden für f#](../index.md).
 
 ## <a name="see-also"></a>Siehe auch
- [Einführung in f#](../tour.md) [F#-Sprachreferenz](../language-reference/index.md) [Typrückschluss](../language-reference/type-inference.md) [Symbol und dem Operator-Referenz](../language-reference/symbol-and-operator-reference/index.md)
+
+- [Einführung in F#](../tour.md)
+- [F#-Sprachreferenz](../language-reference/index.md)
+- [Typrückschluss](../language-reference/type-inference.md)
+- [Symbol und dem Operator-Referenz](../language-reference/symbol-and-operator-reference/index.md)

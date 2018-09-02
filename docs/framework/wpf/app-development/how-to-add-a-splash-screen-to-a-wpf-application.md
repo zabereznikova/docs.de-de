@@ -1,53 +1,50 @@
 ---
 title: 'Gewusst wie: Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung'
-ms.date: 03/30/2017
+ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
 - startup window [WPF]
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 06d6cb7c5a5081d3b6c4979ab50e1caaa726acbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46efa041736870c5c0f08baa321ef0dc53cacc0d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547000"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402925"
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Gewusst wie: Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung
-In diesem Thema wird gezeigt, wie ein Startfenster hinzufügen oder *Begrüßungsbildschirm*, um eine Windows Presentation Foundation (WPF)-Anwendung.  
-  
-### <a name="to-add-an-existing-image-as-a-splash-screen"></a>So fügen Sie einem vorhandenen Image als Begrüßungsbildschirm hinzu  
-  
-1.  Erstellen Sie oder suchen Sie ein Bild, das Sie für den Begrüßungsbildschirm verwenden möchten. Sie können jedes Bildformat verwenden, die von der Windows Imaging-Komponente (WIC) unterstützt wird. Sie können z. B. BMP, GIF, JPEG, PNG und TIFF-Format verwenden.  
-  
-2.  Fügen Sie die Abbilddatei der WPF-Anwendungsprojekt. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen von vorhandenen Elementen zu einem Projekt](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
-  
-3.  Wählen Sie im Projektmappen-Explorer das Abbild aus.  
-  
-4.  Klicken Sie im Fenster Eigenschaften auf den Dropdownpfeil für die **Buildvorgang** Eigenschaft.  
-  
-5.  Wählen Sie **SplashScreen** aus der Dropdown-Liste.  
-  
-    > [!NOTE]
-    >  Wenn Sie nicht sehen die **SplashScreen** aktivieren, sollten Sie unbedingt die Verwendung von [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] SP1 oder höher.  
-  
-6.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
-  
-     Splash-Bildschirm wird in der Mitte des Bildschirms, und klicken Sie dann ausgeblendet wird, wenn das Hauptanwendungsfenster angezeigt wird.  
-  
-### <a name="to-remove-the-splash-screen-from-an-application"></a>So entfernen Sie den Begrüßungsbildschirm aus einer Anwendung  
-  
-1.  Wählen Sie im Projektmappen-Explorer die des Begrüßungsbildschirms.  
-  
-2.  Legen Sie im Fenster Eigenschaften die **Buildvorgang** auf **keine**.  
-  
-### <a name="to-remove-the-splash-screen-from-an-application"></a>So entfernen Sie den Begrüßungsbildschirm aus einer Anwendung  
-  
--   Löschen Sie im Projektmappen-Explorer die des Begrüßungsbildschirms.  
-  
--   Schließen Sie das Bild des Begrüßungsbildschirms aus dem Projekt ein.  
-  
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.SplashScreen>  
- [NIB: Vorgehensweise: Hinzufügen von vorhandenen Elementen zu einem Projekt](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
+
+In diesem Thema wird gezeigt, wie einem Startfenster hinzufügen oder *Begrüßungsbildschirm*, an eine Windows Presentation Foundation (WPF)-Anwendung.
+
+## <a name="to-add-an-existing-image-as-a-splash-screen"></a>So fügen Sie ein vorhandenes Image als eines Begrüßungsbildschirms hinzu
+
+1.  Erstellen Sie oder suchen Sie ein Bild, das Sie für den Begrüßungsbildschirm verwenden möchten. Sie können jedes Bildformat verwenden, die von der Windows Imaging Component (WIC) unterstützt wird. Beispielsweise können Sie die BMP, GIF, JPEG, PNG und TIFF-Format verwenden.
+
+2.  Fügen Sie die Imagedatei dem Projekt WPF-Anwendung.
+
+3.  In **Projektmappen-Explorer**, wählen Sie das Image.
+
+4.  Klicken Sie im Eigenschaftenfenster auf die Dropdown-Pfeil für die **Buildvorgang** Eigenschaft.
+
+5.  Wählen Sie **SplashScreen** aus der Dropdown-Liste.
+
+6.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
+
+     Das Image des Begrüßungsbildschirms wird in der Mitte des Bildschirms, und klicken Sie dann ausgeblendet wird, wenn das Hauptanwendungsfenster angezeigt wird.
+
+## <a name="to-exclude-the-splash-screen-from-build"></a>Den Begrüßungsbildschirm aus Build ausschließen
+
+1.  In **Projektmappen-Explorer**, wählen Sie das Image des Begrüßungsbildschirms.
+
+2.  In der **Eigenschaften** legen die **Buildvorgang** zu **keine**.
+
+## <a name="to-remove-the-splash-screen-from-an-application"></a>So entfernen Sie den Begrüßungsbildschirm von einer Anwendung
+
+In **Projektmappen-Explorer**, löschen Sie das Image des Begrüßungsbildschirms.
+
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Windows.SplashScreen>
+- [Vorgehensweise: Hinzufügen von vorhandenen Elementen zu einem Projekt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: f1c56ed83fa214cf781a833e05642635ac24b0c5
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753499"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404670"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Gewusst wie: Hosten und Ausführen eines grundlegenden Windows Communication Foundation-Diensts
 Dies ist die Dritte von sechs Aufgaben, die zum Erstellen einer WCF-Anwendung erforderlich sind. Eine Übersicht über alle sechs Aufgaben finden Sie im Artikel [Getting Started Tutorial (Tutorial: Erste Schritte)](../../../docs/framework/wcf/getting-started-tutorial.md).  
@@ -151,7 +151,7 @@ Dies ist die Dritte von sechs Aufgaben, die zum Erstellen einer WCF-Anwendung er
   
     2.  Schritt 2: Erstellt eine Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse zum Hosten des Diensts. Der Konstruktor akzeptiert zwei Parameter: den Typ der Klasse, die den Dienstvertrag implementiert, und die Basisadresse des Diensts.  
   
-    3.  Schritt 3: Erstellt eine neue <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanz. Ein Dienstendpunkt setzt sich aus einer Adresse, einer Bindung und einem Dienstvertrag zusammen. Der <xref:System.ServiceModel.Description.ServiceEndpoint>-Konstruktor akzeptiert daher den Schnittstellentyp des Dienstvertrags, eine Bindung und eine Adresse. Der Dienstvertrag ist `ICalculator`, den Sie definiert haben und im Diensttyp implementieren. Die in diesem Beispiel verwendete Bindung ist <xref:System.ServiceModel.WSHttpBinding>. Dies ist eine integrierte Bindung, die für die Verbindung mit Endpunkten verwendet wird, die den WS-*-Spezifikationen entsprechen. Weitere Informationen zu WCF-Bindungen finden Sie unter [WCF Bindings Overview (Übersicht über WCF-Bindungen)](../../../docs/framework/wcf/bindings-overview.md). Die Adresse wird an die Basisadresse angefügt, um den Endpunkt zu identifizieren. Die in diesem Code angegebene Adresse ist „CalculatorService“, also ist die vollqualifizierte Adresse für den Endpunkt `"http://localhost:8000/GettingStarted/CalculatorService"`. Das Hinzufügen eines Dienstendpunkts ist unter Verwendung von .NET Framework 4.0 oder höher optional. Wenn im Code oder in der Konfiguration keine Endpunkte hinzugefügt wurden, fügt WCF in diesen Versionen einen Standardendpunkt für jede Kombination aus Basisadresse und Vertrag hinzu, die vom Dienst implementiert wurden. Weitere Informationen zu Standardendpunkten finden Sie unter [Specifying an Endpoint Address (Angeben einer Endpunktadresse)](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  Schritt 3: Erstellt eine neue <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanz. Ein Dienstendpunkt setzt sich aus einer Adresse, einer Bindung und einem Dienstvertrag zusammen. Der <xref:System.ServiceModel.Description.ServiceEndpoint>-Konstruktor akzeptiert daher den Schnittstellentyp des Dienstvertrags, eine Bindung und eine Adresse. Der Dienstvertrag ist `ICalculator`, den Sie definiert haben und im Diensttyp implementieren. Die in diesem Beispiel verwendete Bindung ist <xref:System.ServiceModel.WSHttpBinding>. Dies ist eine integrierte Bindung, die für die Verbindung mit Endpunkten verwendet wird, die den WS-*-Spezifikationen entsprechen. Weitere Informationen zu WCF-Bindungen finden Sie unter [WCF Bindings Overview (Übersicht über WCF-Bindungen)](../../../docs/framework/wcf/bindings-overview.md). Die Adresse wird an die Basisadresse angefügt, um den Endpunkt zu identifizieren. In diesem Code angegebene Adresse ist "CalculatorService", daher ist die vollqualifizierte Adresse für den Endpunkt `"http://localhost:8000/GettingStarted/CalculatorService"`.  
   
         > [!IMPORTANT]
         >  Das Hinzufügen eines Dienstendpunkts ist optional, wenn .NET Framework 4 oder höher verwendet wird. Wenn im Code oder in der Konfiguration keine Endpunkte hinzugefügt wurden, fügt WCF in diesen Versionen einen Standardendpunkt für jede Kombination aus Basisadresse und Vertrag hinzu, die vom Dienst implementiert wurden. Weitere Informationen zu Standardendpunkten finden Sie unter [Specifying an Endpoint Address (Angeben einer Endpunktadresse)](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -160,6 +160,12 @@ Dies ist die Dritte von sechs Aufgaben, die zum Erstellen einer WCF-Anwendung er
   
     5.  Schritt 5: Öffnet den <xref:System.ServiceModel.ServiceHost>, um auf eingehende Nachrichten zu lauschen. Der Code wartet darauf, dass der Benutzer die EINGABETASTE drückt. Wenn dies nicht erfolgt, wird die App sofort geschlossen und der Dienst heruntergefahren. Beachten Sie auch, dass ein try/catch-Block verwendet wird. Nachdem der <xref:System.ServiceModel.ServiceHost> instanziiert wurde, wird der gesamte sonstige Code in einen try/catch-Block eingefügt. Weitere Informationen zum sicheren Abfangen von Ausnahmen, die von <xref:System.ServiceModel.ServiceHost> ausgelöst werden, finden Sie unter [Avoiding Problems with the Using Statement (Umgehen von Problemen mit der Using-Anweisung)](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
+> [!IMPORTANT]
+> Bearbeiten Sie die Datei "App.config" im GettingStartedLib entsprechend die Änderungen im Code vorgenommen: 
+> 1. Ändern Sie Zeile 14 `<service name="GettingStartedLib.CalculatorService">`
+> 2. Ändern Sie Zeile 17 in `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+> 3. Ändern Sie Zeile 22 in `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+        
 ### <a name="to-verify-the-service-is-working"></a>So überprüfen Sie, ob der Dienst funktioniert  
   
 1.  Führen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] die GettingStartedHost-Konsolenanwendung aus. Beim Ausführen unter [!INCLUDE[wv](../../../includes/wv-md.md)] und höher muss der Dienst mit Administratorrechten ausgeführt werden. Da Visual Studio mit Administratorrechten ausgeführt wurde, wird auch GettingStartedHost mit Administratorrechten ausgeführt. Sie können auch eine neue Eingabeaufforderung mit Administratorrechten starten und "service.exe" damit ausführen.  

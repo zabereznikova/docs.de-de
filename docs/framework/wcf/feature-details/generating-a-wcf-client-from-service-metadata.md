@@ -2,12 +2,12 @@
 title: Generieren eines WCF-Clients aus Dienstmetadaten
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 78804eb7f4139280e7d72c5a45aa0ae4cc3c2d77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027927"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403691"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generieren eines WCF-Clients aus Dienstmetadaten
 In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe verwendet werden, um aus Metadatendokumenten Clients zu generieren.  
@@ -18,9 +18,9 @@ In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe 
   
 -   MEX-Anforderung an die angegebene Adresse mit angefügtem `/mex`  
   
--   DISCO-Anforderung (mithilfe der [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) von ASP.NET Web Services) an die angegebene Adresse.  
+-   DISCO-Anforderung (mit der [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) von ASP.NET-Webdiensten) an die angegebene Adresse.  
   
- Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL (Web Services Description Language)-Datei oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird generiert, durch die Aneinanderreihung von Benutzername, "\@", und fügen einen vollständig qualifizierten Domänennamen (FQDN). Allerdings für Active Directory registrierte Benutzer dieses Format ist ungültig und der UPN, der das Tool generiert verursacht einen Fehler bei der Kerberos-Authentifizierung mit der folgenden Fehlermeldung: **der Anmeldeversuch ist fehlgeschlagen.** Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell berichtigen.  
+ Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL (Web Services Description Language)-Datei oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird generiert, durch die Verkettung von des mit dem namens "\@" und das anschließende hinzufügen einen vollständig qualifizierten Domänennamen (FQDN). Allerdings für Active Directory registrierte Benutzer dieses Format ist ungültig und der UPN, der das Tool generiert verursacht einen Fehler bei der Kerberos-Authentifizierung die folgende Fehlermeldung angezeigt: **der Anmeldeversuch ist fehlgeschlagen.** Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell berichtigen.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
@@ -47,7 +47,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/ Language:\<Language >**|Gibt die Programmiersprache an, die zur Codegenerierung verwendet werden soll. Sie können entweder einen in der Datei Machine.config registrierten Sprachnamen oder den vollqualifizierten Namen einer Klasse angeben, der von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet ist.<br /><br /> Werte: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Standard: csharp<br /><br /> Kurzform: `/l`.<br /><br /> Weitere Informationen finden Sie unter [CodeDom-Anbieters ab Klasse](http://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/ Language:\<Sprache >**|Gibt die Programmiersprache an, die zur Codegenerierung verwendet werden soll. Sie können entweder einen in der Datei Machine.config registrierten Sprachnamen oder den vollqualifizierten Namen einer Klasse angeben, der von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet ist.<br /><br /> Werte: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Standard: csharp<br /><br /> Kurzform: `/l`.<br /><br /> Weitere Informationen finden Sie unter [CodeDomProvider-Klasse](https://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Auswählen eines Namespace für den Client  
   
